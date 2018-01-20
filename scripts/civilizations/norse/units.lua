@@ -466,3 +466,32 @@ DefineUnitType("unit-norse-barracks", {
 --		"help", "basic-norse-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-norse-lumber-mill", {
+	Name = "Lumber Mill",
+	Parent = "unit-template-lumber-mill",
+	Civilization = "norse",
+	Description = "A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques.",
+	Image = {"file", "norse/buildings/lumber_mill.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/lumber_mill_shadow.png", "size", {96, 96}},
+	Animations = "animations-active-building",
+	Icon = "icon-norse-lumber-mill",
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-smithy", {
+	Parent = "unit-template-smithy",
+	Civilization = "norse",
+	Description = "Norse smiths work in these structures to produce swords and other war-gear that warriors bring into battle..",
+	Image = {"file", "norse/buildings/smithy.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/smithy_shadow.png", "size", {96, 96}},
+	Icon = "icon-norse-smithy",
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+

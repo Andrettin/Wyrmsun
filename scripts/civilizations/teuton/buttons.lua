@@ -239,7 +239,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
 	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
-	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-iron-shield",
@@ -247,7 +247,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
-	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
@@ -255,7 +255,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup-research",
 	Description = "+12 Damage for Catapults.",
-	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
@@ -263,7 +263,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup-research",
 	Description = "+12 Damage for Catapults.",
-	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
@@ -271,7 +271,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-pike",
 	Allowed = "check-single-research",
 	Key = "k", Hint = "Research Pi~!ke", Popup = "popup-research",
 	Description = "+2 Damage for Spearmen. Allows Pikes to be sold at the Market.",
-	ForUnit = {"unit-teuton-lumber-mill"}
+	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
@@ -279,7 +279,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Research Bodkin ~!Arrow", Popup = "popup-research",
 	Description = "+2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
-	ForUnit = {"unit-teuton-lumber-mill"}
+	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
 DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
@@ -287,7 +287,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
 	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
-	ForUnit = {"unit-teuton-lumber-mill"}
+	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-suebi-coinage",

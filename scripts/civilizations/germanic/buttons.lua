@@ -108,7 +108,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Research Broad S~!word", Popup = "popup-research",
 	Description = "+2 Damage for swordwielders. Allows Broad Swords to be sold at the Market.",
-	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-germanic-smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-bronze-shield",
@@ -116,7 +116,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Bronze ~!Shield", Popup = "popup-research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Bronze Shields to be sold at the Market.",
-	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit-germanic-smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
@@ -124,8 +124,8 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Long ~!Spear", Popup = "popup-research",
 	Description = "+2 Damage for Spearmen. Allows Long Spears to be sold at the Market.",
---	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
-	ForUnit = {"unit-teuton-lumber-mill"}
+--	ForUnit = {"unit-germanic-carpenters-shop", "unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
+	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 })
   
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
@@ -133,7 +133,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Research Barbed ~!Arrow", Popup = "popup-research",
 	Description = "+2 Damage for archers, strongholds and guard towers. Allows Barbed Arrows to be sold at the Market.",
-	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
+	ForUnit = {"unit-germanic-carpenters-shop", "unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 })
   
 -- Deities ----------------------------------------------------------

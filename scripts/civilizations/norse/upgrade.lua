@@ -54,11 +54,19 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
+	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-norse-lumber-mill"}
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
+	{"apply-to", "unit-teuton-lumber-mill"}, {"convert-to", "unit-norse-lumber-mill"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-norse-smithy"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-smithy"}, {"convert-to", "unit-norse-smithy"}
 )
 
 DefineModifier("upgrade-norse-civilization",

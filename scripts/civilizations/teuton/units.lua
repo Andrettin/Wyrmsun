@@ -1105,7 +1105,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 DefineUnitType("unit-teuton-smithy", {
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
-	Description = "It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
+	Description = "It is in these smithies that Teutonic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
 	Image = {"file", "teuton/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-smithy",

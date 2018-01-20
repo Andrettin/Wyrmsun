@@ -26,15 +26,15 @@
 --
 
 DefineDependency("unit-teuton-archer",
-	{"unit-teuton-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("unit-teuton-gunpowder-infantry",
-	{"unit-teuton-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
+	{"unit-teuton-smithy", "upgrade-gunpowder"}, "or", {"unit-latin-smithy", "upgrade-gunpowder"}, "or", {"unit-norse-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
 )
 
 DefineDependency("unit-teuton-guard-tower",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}
+	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("unit-teuton-wall",
@@ -42,7 +42,7 @@ DefineDependency("unit-teuton-wall",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
+	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-norse-smithy", "unit-norse-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("upgrade-teuton-spatha",
@@ -74,11 +74,11 @@ DefineDependency("upgrade-teuton-bodkin-arrow",
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",
-	{"unit-teuton-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}
+	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"unit-norse-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}
 )
 
 DefineDependency("unit-teuton-stronghold",
@@ -86,7 +86,7 @@ DefineDependency("unit-teuton-stronghold",
 )
 
 DefineDependency("upgrade-teuton-coinage",
-	{"unit-teuton-smithy"}, "or", {"unit-latin-smithy"}, "or", {"upgrade-mercenary-company"}
+	{"unit-teuton-smithy"}, "or", {"unit-latin-smithy"}, "or", {"unit-norse-smithy"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefineDependency("upgrade-teuton-alchemy",
@@ -98,7 +98,7 @@ DefinePredependency("unit-teuton-stables",
 )
 
 DefineDependency("unit-teuton-stables",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
 )
 
 DefinePredependency("unit-teuton-swordsman",
@@ -114,7 +114,7 @@ DefinePredependency("unit-teuton-ritter",
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}, "or", {"upgrade-mercenary-company"}
+	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}, "or", {"unit-norse-smithy", "unit-teuton-stables"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-teuton-town-hall",
@@ -129,16 +129,20 @@ DefinePredependency("unit-teuton-barracks",
 	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
 )
 
+DefinePredependency("unit-teuton-lumber-mill",
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
+)
+
 DefinePredependency("unit-teuton-smithy",
-	{"upgrade-latin-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
 )
 
 DefineDependency("unit-teuton-temple",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-market",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-university",
@@ -150,9 +154,9 @@ DefineDependency("unit-teuton-priest",
 )
 
 DefineDependency("unit-teuton-dock",
-	{"unit-teuton-lumber-mill"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-kogge",
-	{"unit-teuton-lumber-mill"}, "or", {"upgrade-trading-company"}
+	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}, "or", {"upgrade-trading-company"}
 )

@@ -30,9 +30,7 @@
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-norse-swordsman",
 	Key = "w", Hint = "Train S~!wordsman", Popup = "popup-unit",
-	ForUnit = {
-		"unit-norse-barracks"
-	}
+	ForUnit = {"unit-norse-barracks"}
 })
 
 -- Buildings -----------------------------------------------------
@@ -55,6 +53,18 @@ DefineButton( { Pos = 3, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
 
+DefineButton( { Pos = 4, Level = 1,
+	Action = "build", Value = "unit-norse-lumber-mill",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
+DefineButton( { Pos = 5, Level = 1,
+	Action = "build", Value = "unit-norse-smithy",
+	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+  
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",

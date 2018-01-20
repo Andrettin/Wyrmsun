@@ -540,7 +540,17 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Smithy") == false) then
 			AddTrigger("tip-smithy",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-latin-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-smithy")) then
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-latin-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-smithy"
+						)
+					) then
 						return true
 					else
 						return false
@@ -771,7 +781,15 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Lumber Mill") == false) then
 			AddTrigger("tip-lumber-mill",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-lumber-mill" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-lumber-mill")) then
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-lumber-mill"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-goblin-lumber-mill"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-lumber-mill"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-lumber-mill"
+						)
+					) then
 						return true
 					else
 						return false

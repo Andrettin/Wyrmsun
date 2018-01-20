@@ -62,6 +62,17 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-norse-lumber-mill",
+	Size = {46, 38},
+	File = "norse/icons/lumber_mill.png"
+})
+
+DefineIcon({
+	Name = "icon-norse-smithy",
+	Size = {46, 38},
+	File = "norse/icons/smithy.png"
+})
+DefineIcon({
 	Name = "icon-norse-runewriting",
 	Size = {46, 38},
 	File = "norse/icons/runewriting.png"

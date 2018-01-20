@@ -51,6 +51,7 @@ Units = {
 	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
 	"unit-norse-town-hall",
 	"unit-norse-farm", "unit-norse-barracks",
+	"unit-norse-lumber-mill", "unit-norse-smithy",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",

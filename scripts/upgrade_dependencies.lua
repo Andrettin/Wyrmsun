@@ -55,6 +55,7 @@ DefineDependency("upgrade-iron-tipped-wood-plow",
 	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-germanic-smithy"},
 	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-goblin-smithy"},
 	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-latin-smithy"},
+	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-norse-smithy"},
 	"or", {"upgrade-wood-plow", "upgrade-ironworking", "unit-teuton-smithy"}
 )
 
@@ -64,6 +65,7 @@ DefineDependency("upgrade-iron-plow",
 	"or", {"upgrade-iron-tipped-wood-plow", "unit-germanic-smithy"},
 	"or", {"upgrade-iron-tipped-wood-plow", "unit-goblin-smithy"},
 	"or", {"upgrade-iron-tipped-wood-plow", "unit-latin-smithy"},
+	"or", {"upgrade-iron-tipped-wood-plow", "unit-norse-smithy"},
 	"or", {"upgrade-iron-tipped-wood-plow", "unit-teuton-smithy"}
 )
 
@@ -158,18 +160,21 @@ DefineDependency("unit-elixir-of-vitality",
 
 DefineDependency("unit-short-sword",
 	{"unit-germanic-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"},
 	"or", {"unit-latin-smithy"}
 )
 
 DefineDependency("unit-broad-sword",
 	{"unit-germanic-smithy", "upgrade-germanic-broad-sword"},
+	"or", {"unit-norse-smithy", "upgrade-germanic-broad-sword"},
 	"or", {"unit-teuton-smithy", "upgrade-germanic-broad-sword"},
 	"or", {"unit-latin-smithy", "upgrade-germanic-broad-sword"}
 )
 
 DefineDependency("unit-spatha",
-	{"unit-teuton-smithy", "upgrade-teuton-spatha"},
+	{"unit-norse-smithy", "upgrade-teuton-spatha"},
+	"or", {"unit-teuton-smithy", "upgrade-teuton-spatha"},
 	"or", {"unit-latin-smithy", "upgrade-teuton-spatha"}
 )
 
@@ -214,6 +219,7 @@ DefineDependency("unit-hammer",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 
@@ -228,6 +234,7 @@ DefineDependency("unit-mining-pick",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 
@@ -235,6 +242,7 @@ DefineDependency("unit-short-spear",
 	{"unit-dwarven-lumber-mill"},
 	"or", {"unit-germanic-carpenters-shop"},
 	"or", {"unit-goblin-lumber-mill"},
+	"or", {"unit-norse-lumber-mill"},
 	"or", {"unit-teuton-lumber-mill"}
 )
 
@@ -242,12 +250,14 @@ DefineDependency("unit-long-spear",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-long-spear"},
 	"or", {"unit-germanic-carpenters-shop", "upgrade-germanic-long-spear"},
 	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-long-spear"},
+	"or", {"unit-norse-lumber-mill", "upgrade-germanic-long-spear"},
 	"or", {"unit-teuton-lumber-mill", "upgrade-germanic-long-spear"}
 )
 
 DefineDependency("unit-pike",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-pike"},
 	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-pike"},
+	"or", {"unit-norse-lumber-mill", "upgrade-teuton-pike"},
 	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-pike"}
 )
 
@@ -275,23 +285,28 @@ DefineDependency("unit-hand-cannon",
 	{"unit-brising-smithy", "upgrade-gunpowder"},
 	"or", {"unit-dwarven-smithy", "upgrade-gunpowder"},
 	"or", {"unit-goblin-smithy", "upgrade-gunpowder"},
+	"or", {"unit-latin-smithy", "upgrade-gunpowder"},
+	"or", {"unit-norse-smithy", "upgrade-gunpowder"},
 	"or", {"unit-teuton-smithy", "upgrade-gunpowder"}
 )
 
 DefineDependency("unit-wooden-shield",
 	{"unit-germanic-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"},
 	"or", {"unit-latin-smithy"}
 )
 
 DefineDependency("unit-bronze-shield",
 	{"unit-germanic-smithy", "upgrade-germanic-bronze-shield"},
+	"or", {"unit-norse-smithy", "upgrade-germanic-bronze-shield"},
 	"or", {"unit-teuton-smithy", "upgrade-germanic-bronze-shield"},
 	"or", {"unit-latin-smithy", "upgrade-germanic-bronze-shield"}
 )
 
 DefineDependency("unit-iron-shield",
 	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"},
+	"or", {"unit-norse-smithy", "upgrade-teuton-iron-shield"},
 	"or", {"unit-latin-smithy", "upgrade-teuton-iron-shield"}
 )
 
@@ -308,7 +323,8 @@ DefineDependency("unit-goblin-embossed-shield",
 )
 
 DefineDependency("unit-kite-shield",
-	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"}
+	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"},
+	"or", {"unit-norse-smithy", "upgrade-teuton-iron-shield"}
 )
 
 DefineDependency("unit-round-shield",
@@ -343,23 +359,27 @@ DefineDependency("unit-horn",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 
 DefineDependency("unit-arrows",
 	{"unit-germanic-carpenters-shop"},
 	"or", {"unit-goblin-lumber-mill"},
+	"or", {"unit-norse-lumber-mill"},
 	"or", {"unit-teuton-lumber-mill"}
 )
 
 DefineDependency("unit-barbed-arrows",
 	{"unit-germanic-carpenters-shop", "upgrade-germanic-barbed-arrow"},
 	"or", {"unit-goblin-lumber-mill", "upgrade-goblin-barbed-arrow"},
+	"or", {"unit-norse-lumber-mill", "upgrade-germanic-barbed-arrow"},
 	"or", {"unit-teuton-lumber-mill", "upgrade-germanic-barbed-arrow"}
 )
 
 DefineDependency("unit-bodkin-arrows",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-bodkin-arrow"},
+	"or", {"unit-norse-lumber-mill", "upgrade-teuton-bodkin-arrow"},
 	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-bodkin-arrow"}
 )
 
@@ -369,6 +389,7 @@ DefineDependency("unit-crown",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 
@@ -378,6 +399,7 @@ DefineDependency("unit-amulet",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 
@@ -387,6 +409,7 @@ DefineDependency("unit-ring",
 	"or", {"unit-germanic-smithy"},
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
+	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"}
 )
 

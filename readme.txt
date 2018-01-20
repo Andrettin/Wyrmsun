@@ -63,6 +63,8 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Norse Farm (graphics by Jinn).
 - Added Norse War Lodge (graphics by Jinn).
+- Added Norse Lumber Mill (graphics by Jinn).
+- Added Norse Smithy (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 3.2.1

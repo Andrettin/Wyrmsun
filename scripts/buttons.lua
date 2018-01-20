@@ -217,6 +217,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-germanic-temple",
 		"unit-norse-town-hall",
 		"unit-norse-farm", "unit-norse-barracks",
+		"unit-norse-lumber-mill", "unit-norse-smithy",
 		"unit-teuton-town-hall", -- "unit-teuton-stronghold",
 		"unit-teuton-farm", "unit-teuton-barracks",
 		"unit-teuton-lumber-mill", "unit-teuton-smithy", "unit-teuton-stables",
@@ -1788,6 +1789,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-ring",
 		"unit-germanic-smithy",
 		"unit-goblin-smithy",
 		"unit-latin-smithy",
+		"unit-norse-smithy",
 		"unit-teuton-smithy"
 	}
 })
@@ -1800,6 +1802,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-furniture",
 		"unit-dwarven-lumber-mill",
 		"unit-germanic-carpenters-shop",
 		"unit-goblin-lumber-mill",
+		"unit-norse-lumber-mill",
 		"unit-teuton-lumber-mill"
 	}
 })
@@ -1936,7 +1939,13 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-wood-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
 	Key = "p", Hint = "Research Wood ~!Plow", Popup = "popup-research",
-	ForUnit = {"unit-dwarven-lumber-mill", "unit-germanic-carpenters-shop", "unit-goblin-lumber-mill", "unit-teuton-lumber-mill"}
+	ForUnit = {
+		"unit-dwarven-lumber-mill",
+		"unit-germanic-carpenters-shop",
+		"unit-goblin-lumber-mill",
+		"unit-norse-lumber-mill",
+		"unit-teuton-lumber-mill"
+	}
 } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-iron-tipped-wood-plow",
@@ -1944,7 +1953,13 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
 	Key = "p", Hint = "Research Iron-Tipped Wood ~!Plow", Popup = "popup-research",
-	ForUnit = {"unit-dwarven-lumber-mill", "unit-germanic-carpenters-shop", "unit-goblin-lumber-mill", "unit-teuton-lumber-mill"}
+	ForUnit = {
+		"unit-dwarven-lumber-mill",
+		"unit-germanic-carpenters-shop",
+		"unit-goblin-lumber-mill",
+		"unit-norse-lumber-mill",
+		"unit-teuton-lumber-mill"
+	}
 } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
@@ -1952,7 +1967,13 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
 	Key = "p", Hint = "Research Iron ~!Plow", Popup = "popup-research",
-	ForUnit = {"unit-dwarven-lumber-mill", "unit-germanic-carpenters-shop", "unit-goblin-lumber-mill", "unit-teuton-lumber-mill"}
+	ForUnit = {
+		"unit-dwarven-lumber-mill",
+		"unit-germanic-carpenters-shop",
+		"unit-goblin-lumber-mill",
+		"unit-norse-lumber-mill",
+		"unit-teuton-lumber-mill"
+	}
 } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
@@ -1965,6 +1986,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
 		"unit-germanic-smithy",
 		"unit-goblin-smithy",
 		"unit-latin-smithy",
+		"unit-norse-smithy",
 		"unit-teuton-smithy"
 	}
 } )
