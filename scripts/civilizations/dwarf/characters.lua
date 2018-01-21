@@ -186,6 +186,78 @@ DefineCharacter("vindalf", {
 	Deities = {"thor", "tyr"}
 })
 
+DefineCharacter("bafur", {
+	Name = "Bafur",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Bafur was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("bifur", {
+	Name = "Bifur",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Bifur was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("bombor", {
+	Name = "Bombor",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Bombor was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("dain", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+	Name = "Dain",
+	Gender = "male",
+	Type = "unit-dwarven-runemaster",
+	Civilization = "dwarf",
+	Description = "In Norse mythology, Dain was a mastersmith who was one of the dwarves who crafted the mighty fetter Gleipnir.", -- him having partook in Gleipnir's crafting is not in the source given above
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("nain", {
+	Name = "Nain",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Nain was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("nar", {
+	Name = "Nar",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Nar was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("niping", {
+	Name = "Niping",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Niping was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
+DefineCharacter("nori", {
+	Name = "Nori",
+	Gender = "male",
+	Type = "unit-dwarven-runesmith",
+	Civilization = "dwarf",
+	Background = "In Norse mythology, Nori was one of the dwarves who crafted the mighty fetter Gleipnir.",
+	Deities = {"odin", "tyr"}
+})
+
 DefineCharacter("dvalin", {
 	Name = "Dvalin",
 	Gender = "male",

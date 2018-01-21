@@ -25,56 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("thjodrorir-speaks-of-kvasir", {
+DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire-to-kill-thjodrorir", {
 	Nodes = {
 		{
-			"speaker", "character", "thjodrorir",
-			"text", "I had a fateful dream last night... in it, the mighty Hroptatyr told me of a wise elf, Kvasir."
+			"speaker", "character", "fjalar",
+			"text", "Minstrels from far and wide have told us stories of Thjodrorir, the wisest of the dwarves."
 		},
 		{
-			"speaker", "character", "modsognir",
-			"text", "An elf...?"
+			"speaker", "character", "galar",
+			"text", "Aye. It is said that he has complete grasp of the truth of all things, giving direct and precise answers to any inquiries made of them. Even those who seek not the facts, but help in deciding the best course of action are aided by Thjodrorir's wisdom. He asks them the right questions back, so that they may find the answers to their troubles inside themselves."
 		},
 		{
-			"speaker", "character", "thjodrorir",
-			"text", "The elves are creatures whose body proportions are slender than those of gnomes, and yet they are incredibly tall... more so than the greatest of dwarves! They are not deities, but mortals like us, though they worship their own strange elf-gods. The elves live in their own world, Alfheim, which is secluded from ours. All this Hroptatyr showed to me."
+			"speaker", "character", "fjalar",
+			"text", "To have such wisdom... it would give us a gift with words greater than that of any poet alive, and more insightfulness than any sage possesses."
 		},
 		{
-			"speaker", "character", "thjodrorir",
-			"text", "Some time ago our gods, the Aesir, fought a brutal war against the elf-gods, who are known as the Vanir. With neither side being able to achieve victory upon the other, they decided to make peace. To seal the agreement, the gods of both groups spat upon a sacred jar... and when all that was done, they decided to not waste the powerful assembly of divine saliva, and gave it to a wise elf - Kvasir - to drink."
+			"speaker", "character", "galar",
+			"text", "There is a way, my dear brother. If we brew his blood into mead and drank it..."
 		},
 		{
-			"speaker", "character", "thjodrorir",
-			"text", "The result was that Kvasir became even wiser, perhaps the wisest of any mortal. Having drunk the divine mixture, Kvasir gained the ability to see the rifts that link the different worlds, and use them to go from one to another, and even beyond, to the realms of the gods... He became a planewalker! As an elf he was bound to the Vanir, and yet he was to live among the Aesir, thus symbolizing the peace."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "He drank the saliva? This is the first time I learn of these elves, and already they seem disgusting..."
-		},
-		{
-			"speaker", "character", "thjodrorir",
-			"text", "A small price to pay for the great wisdom received!"
-		},
-		{
-			"speaker", "character", "thjodrorir",
-			"text", "When Kvasir learned of our people, he decided to visit our homeworld, Nidavellir, and share his knowledge with dwarvenkind. He was invited by the brothers Fjalar and Galar to their hall, but ever since he has been missing. This does not bode well, and Hroptatyr desires us to seek the truth of Kvasir's fate."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "If the gods will it, then we must find out what happened to Kvasir."
-		},
-		{
-			"speaker", "character", "durin",
-			"text", "So it is decided, then. Modsognir, give me the order and I will lead a group of our warriors to the brothers' hall."
+			"speaker", "character", "fjalar",
+			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a renowned sage... a dangerous feat, but one which shall be extremely rewarding. We must invite him, then, to our hall, and ask Thjodrorir to share his knowledge with us. He shall share more than he expects!",
+			"option-effects", {
+				function(s)
+					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-thjodrorir")
+				end
+			}
 		}
 	}
 })
 
-DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
+DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire-to-kill-kvasir", {
 	Nodes = {
 		{
 			"speaker", "character", "fjalar",
-			"text", "Some of our people have met a strange being, who claims to be an elf called Kvasir. Already he has become famous for his wisdom, which he seeks to share with dwarvenkind."
+			"text", "Minstrels from far and wide have told us stories of Kvasir, the wisest of the gods."
 		},
 		{
 			"speaker", "character", "galar",
@@ -90,7 +75,11 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire", {
 		},
 		{
 			"speaker", "character", "fjalar",
-			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a powerful being... a dangerous feat, but one which shall be extremely rewarding. We must invite him, then, to our hall, and ask Kvasir to share his knowledge with us. He shall share more than he expects!",
+			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a powerful being... a dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it? It is said to be a mystical rainbow bridge... We must find it if we are ever to reach Kvasir."
+		},
+		{
+			"speaker", "character", "galar",
+			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")

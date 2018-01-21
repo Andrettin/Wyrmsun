@@ -470,14 +470,10 @@ DefineCivilization("dwarf", {
 		"male", "Augthaol", -- from Battle for Wesnoth
 		"male", "Aurvang", -- dwarf from Norse mythology
 		"male", "Austri", -- dwarf from Norse mythology (name means "the Eastern"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
-		"male", "Bafur", -- dwarf from Norse mythology
 		"male", "Bari", -- dwarf from Norse mythology
 		"male", "Berling", -- dwarf from Norse mythology
 		"male", "Bibung", -- dwarf from Norse mythology
-		"male", "Bifur", -- dwarf from Norse mythology
-		"male", "Bombor", -- dwarf from Norse mythology
 		"male", "Burin", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
-		"male", "Dain", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 		"male", "Delling", -- dwarf from Norse mythology
 		"male", "Delling", -- dwarf from Norse mythology
 		"male", "Dolgthvari", -- dwarf from Norse mythology
@@ -618,7 +614,6 @@ DefineCivilization("dwarf", {
 		"male", "Loni", -- dwarf from Norse mythology
 		"male", "Mjodvitnir", -- dwarf from Norse mythology
 		"male", "Nabbi", -- dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
-		"male", "Nain", -- dwarf from Norse mythology
 		"male", "Naraithil", -- from Battle for Wesnoth
 		"male", "Naraithing", -- from Battle for Wesnoth
 		"male", "Naraithol", -- from Battle for Wesnoth
@@ -654,9 +649,7 @@ DefineCivilization("dwarf", {
 		"male", "Neglur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Nidi", -- dwarf from Norse mythology
 		"male", "Nidjung", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
-		"male", "Niping", -- dwarf from Norse mythology
 		"male", "Nordri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
-		"male", "Nori", -- dwarf from Norse mythology
 		"male", "Nyi", -- dwarf from Norse mythology
 		"male", "Nyr", -- dwarf from Norse mythology
 		"male", "Nyrad", -- dwarf from Norse mythology
