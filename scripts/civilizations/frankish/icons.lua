@@ -202,6 +202,6 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-sigibert",
 	Size = {46, 38},
-	File = "teuton/icons/sigibert.png"
+	File = "frankish/icons/sigibert.png"
 })
 
