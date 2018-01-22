@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Lumber Mill (graphics by Jinn).
 - Added Norse Smithy (graphics by Jinn).
 
+* Scenarios
+- The Hlesing Tribe no longer starts off at war with other Germanic tribes in the Thunraz's Servant scenario.
+
 -----------------------------------------------------------------------
 - 3.2.1
 -----------------------------------------------------------------------

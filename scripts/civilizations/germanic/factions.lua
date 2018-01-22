@@ -69,10 +69,7 @@ DefineFaction("hlesing-tribe", {
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-faction-jarling-tribe",
 	DefaultAI = "passive",
-	Background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey.",
-	HistoricalDiplomacyStates = {
-		-1101, "hersing-tribe", "war"
-	}
+	Background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
 })
 
 DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
@@ -100,10 +97,7 @@ DefineFaction("jarling-tribe", {
 	Type = "tribe",
 	Colors = {"yellow"},
 	FactionUpgrade = "upgrade-faction-jarling-tribe",
-	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic.",
-	HistoricalDiplomacyStates = {
-		-1101, "hlesing-tribe", "war"
-	}
+	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
 })
 
 DefineFaction("karling-tribe", {
@@ -123,10 +117,7 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	Type = "tribe",
 	Colors = {"red", "white"},
 	FactionUpgrade = "upgrade-faction-skeldung-tribe",
---	DefaultAI = "sea-attack",
-	HistoricalDiplomacyStates = {
-		-1101, "hlesing-tribe", "war"
-	}
+--	DefaultAI = "sea-attack"
 })
 
 DefineFaction("thielung-tribe", {
@@ -135,10 +126,7 @@ DefineFaction("thielung-tribe", {
 	Type = "tribe",
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-faction-thielung-tribe",
-	Background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years.",
-	HistoricalDiplomacyStates = {
-		-1101, "hlesing-tribe", "war"
-	}
+	Background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years."
 })
 
 DefineFaction("thralling-tribe", {
@@ -161,8 +149,5 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 --	DefaultAI = "sea-attack",
 	HistoricalCapitals = {
 		-2800, "sigtun"
-	},
-	HistoricalDiplomacyStates = {
-		-1101, "hlesing-tribe", "war"
 	}
 })
