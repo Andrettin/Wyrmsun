@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.2.2
 -----------------------------------------------------------------------
 
+* Abilities
+- Decreased the duration of the Terror spell from 500 cycles to 200.
+
 * Buildings
 - Added Norse Farm (graphics by Jinn).
 - Added Norse War Lodge (graphics by Jinn).
