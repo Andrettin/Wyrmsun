@@ -134,6 +134,346 @@ DefineCivilization("neutral", {
 			"unit-class", "infantry", 3
 		}
 	},
+	AiBuildingTemplates = {
+		{
+			"unit-class", "barracks",
+			"priority", 1000
+		},
+		{
+			"unit-class", "smithy",
+			"priority", 990
+		},
+		{
+			"unit-class", "barracks",
+			"priority", 980
+		},
+		{
+			"unit-class", "lumber-mill",
+			"priority", 970
+		},
+		{
+			"unit-class", "market",
+			"priority", 960
+		},
+		{
+			"unit-class", "masons-shop",
+			"priority", 950
+		},
+		{
+			"unit-class", "stronghold",
+			"priority", 940
+		},
+		{
+			"unit-class", "stables",
+			"priority", 930
+		},
+		--[[
+		{
+			"unit-class", "fortress",
+			"priority", 920
+		},
+		--]]
+		{
+			"unit-class", "temple",
+			"priority", 910
+		},
+		{
+			"unit-class", "university",
+			"priority", 900
+		},
+		{
+			"unit-class", "barracks",
+			"priority", 890
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 880
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 879
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 878
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 877
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 876
+		},
+		{
+			"unit-class", "banner",
+			"priority", 875
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 874
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 873
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 872
+		},
+		--[[
+		{
+			"unit-class", "eyrie",
+			"priority", 870
+		},
+		--]]
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 860
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 859
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 858
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 857
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 856
+		},
+		{
+			"unit-class", "banner",
+			"priority", 855
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 854
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 853
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 852
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 851
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 850
+		},
+		{
+			"unit-class", "banner",
+			"priority", 849
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 848
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 847
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 846
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 845
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 844
+		},
+		{
+			"unit-class", "banner",
+			"priority", 843
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 842
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 841
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 840
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 839
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 838
+		},
+		{
+			"unit-class", "banner",
+			"priority", 837
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 836
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 835
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 834
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 833
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 832
+		},
+		{
+			"unit-class", "banner",
+			"priority", 831
+		},
+		{
+			"unit-class", "barracks",
+			"priority", 830
+		},
+		{
+			"unit-class", "barracks",
+			"priority", 820
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 810
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 809
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 808
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 807
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 806
+		},
+		{
+			"unit-class", "banner",
+			"priority", 805
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 804
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 803
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 802
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 801
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 800
+		},
+		{
+			"unit-class", "banner",
+			"priority", 799
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 798
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 797
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 796
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 795
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 794
+		},
+		{
+			"unit-class", "banner",
+			"priority", 793
+		},
+		--[[
+		{
+			"unit-class", "watch-tower",
+			"priority", 792
+		},
+		{
+			"unit-class", "heavy-tower",
+			"priority", 791
+		},
+		--]]
+		{
+			"unit-class", "banner",
+			"priority", 790
+		},
+		{
+			"unit-class", "watch-tower",
+			"priority", 789
+		},
+		{
+			"unit-class", "guard-tower",
+			"priority", 788
+		},
+		{
+			"unit-class", "banner",
+			"priority", 787
+		}
+	},
 	ShipNames = {
 		"Naglfar", -- ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.

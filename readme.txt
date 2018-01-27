@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Decreased the duration of the Terror spell from 500 cycles to 200.
 
+* AI
+- Improved the AI building construction.
+
 * Buildings
 - Added Norse Farm (graphics by Jinn).
 - Added Norse War Lodge (graphics by Jinn).
