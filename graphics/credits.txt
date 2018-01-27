@@ -1098,6 +1098,7 @@
 /graphics/norse/icons/thor.png (by Exidelo) (licensed under the CC0)
 /graphics/norse/icons/tyr.png (by Jinn) (licensed under the CC0)
 /graphics/norse/icons/veteran_swordsman.png (by Jinn) (licensed under the CC0)
+/graphics/norse/units/swordsman.png (by Gregor-Mack, b_o and Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/orc/icons/sea_orc.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/shaman.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/spearthrower.png (by Jinn) (licensed under the CC0)
