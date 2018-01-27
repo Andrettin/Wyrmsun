@@ -105,6 +105,11 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
 )
 
+DefinePredependency("unit-dwarven-wall",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
 DefineDependency("unit-dwarven-wall",
 	{"upgrade-dwarven-masonry"}
 )
@@ -120,7 +125,8 @@ DefineDependency("unit-dwarven-ballista",
 )
 
 DefinePredependency("unit-dwarven-yale-pen",
-	{"upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0}
+	{"upgrade-dwarven-civilization", "upgrade-faction-goldhoof-clan", 0, "upgrade-faction-eikinskjaldi-clan", 0, "upgrade-faction-joruvellir", 0, "upgrade-faction-yawning-yales", 0},
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-yale-pen",
@@ -155,12 +161,49 @@ DefineDependency("unit-joruvellir-yale-rider",
 	{"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}, "or", {"upgrade-mercenary-company"}
 )
 
+DefinePredependency("unit-dwarven-town-hall",
+	{"upgrade-dwarven-civilization"}
+)
+
+DefinePredependency("unit-dwarven-mushroom-farm",
+	{"upgrade-dwarven-civilization"}
+)
+
+DefinePredependency("unit-dwarven-barracks",
+	{"upgrade-dwarven-civilization"}
+)
+
+DefinePredependency("unit-dwarven-lumber-mill",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
+DefinePredependency("unit-dwarven-masons-shop",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
+DefinePredependency("unit-dwarven-temple",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
 DefineDependency("unit-dwarven-temple",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefinePredependency("unit-dwarven-market",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
+)
+
 DefineDependency("unit-dwarven-market",
 	{"unit-dwarven-lumber-mill"}
+)
+
+DefinePredependency("unit-dwarven-academy",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-academy",
@@ -169,6 +212,11 @@ DefineDependency("unit-dwarven-academy",
 
 DefineDependency("unit-dwarven-witness",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+)
+
+DefinePredependency("unit-dwarven-dock",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefineDependency("unit-dwarven-dock",
@@ -201,9 +249,15 @@ DefinePredependency("unit-brising-miner",
 )
 
 DefinePredependency("unit-dwarven-smithy",
-	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
+	{"upgrade-dwarven-civilization", "upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0},
+	"or", {"upgrade-gnomish-civilization"}
 )
 
 DefinePredependency("unit-brising-smithy",
 	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
+)
+
+DefinePredependency("unit-dwarven-sentry-tower",
+	{"upgrade-dwarven-civilization"},
+	"or", {"upgrade-gnomish-civilization"}
 )

@@ -61,7 +61,7 @@ local land_funcs = {
 	end,
 
 	function()
-		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Suebi/Teuton for the next step
+		if (AiGetRace() == "germanic") then -- if is Germanic, wait until becomes Anglo-Saxon/Frankish/Gothic/Norse/Suebi/Teuton for the next step
 			return true;
 		end
 	end,
@@ -97,8 +97,6 @@ local land_funcs = {
 
 	function() return AiSet(GetAiUnitType("worker"), 45) end,
 	
-	-- Everything researched...
-
 	function() return true end,
 }
 

@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Improved the AI building construction.
+- Increased the distance AI units will go to react to an attack.
 
 * Buildings
 - Added Norse Farm (graphics by Jinn).
@@ -74,6 +75,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - The Hlesing Tribe no longer starts off at war with other Germanic tribes in the Thunraz's Servant scenario.
+
+* Units
+- Added unit graphics for the Norse Swordsman.
 
 -----------------------------------------------------------------------
 - 3.2.1
