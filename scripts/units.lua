@@ -3694,6 +3694,7 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	Costs = {"time", 70, "copper", 800, "lumber", 0},
 	BasicDamage = 18,
 	Missile = "missile-bullet",
+	FireMissile = "missile-bullet",
 	MaxAttackRange = 4,
 	Accuracy = 7,
 	Priority = 55,

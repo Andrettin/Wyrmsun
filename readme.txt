@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Lumber Mill (graphics by Jinn).
 - Added Norse Smithy (graphics by Jinn).
 
+* Heroes
+- Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
+
 * Scenarios
 - The Hlesing Tribe no longer starts off at war with other Germanic tribes in the Thunraz's Servant scenario.
 
