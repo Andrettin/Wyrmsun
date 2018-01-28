@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Improved the AI building construction.
 - Increased the distance AI units will go to react to an attack.
+- The AI now uses only mercenary camps that are currently visible to it (previously it could use mercenary camps it had previously explored even if they weren't currently visible).
 
 * Buildings
 - Added Norse Farm (graphics by Jinn).
