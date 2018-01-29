@@ -33,7 +33,7 @@
 
 DefineUnitType("unit-ettin", {
 	Name = "Ettin",
-	Parent = "unit-template-heroic-infantry",
+	Parent = "unit-template-infantry",
 	Civilization = "ettin",
 	Description = "The massive ettins lord over Jotunheim, striking terror into the hearts of smaller creatures such as orcs and ogres.",
 	Image = {"file", "ettin/units/ettin.png", "size", {144, 144}},
@@ -43,18 +43,23 @@ DefineUnitType("unit-ettin", {
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
 	},
-	HitPoints = 120, -- +30 HP
-	BasicDamage = 16, -- +4 damage
+	HitPoints = 120, -- +60 HP
+	BasicDamage = 16, -- +7 damage
 	Armor = 6, -- +4 armor
 	Accuracy = 8, -- -2 accuracy
 	Evasion = 8, -- -2 evasion
 	Speed = 8, -- -2 speed
 	BonusAgainstBuildings = 50,
 	Demand = 3,
+	Strength = 13,
+	Points = 100,
+	Level = 3,
 --	Corpse = "unit-dwarven-dead-body",
 	BluntDamage = true,
 	Giant = true,
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	Inventory = true,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
+	AiDrops = {"unit-crown", "unit-boots", "unit-horn", "unit-amulet", "unit-ring", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	Sounds = {
 		"selected", "basic-orc-voices-selected",
 		"acknowledge", "basic-orc-voices-selected",
