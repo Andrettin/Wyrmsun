@@ -40,5 +40,10 @@ DefineFaction("vana-tribe", {
 	Type = "tribe",
 	Colors = {"blue", "cyan"},
 	DefaultAI = "passive",
-	Adjective = "Vana"
+	Adjective = "Vana",
+	HistoricalResources = {
+		-3000, "copper", 0,
+		-3000, "lumber", 0,
+		-3000, "stone", 0,
+	}
 })

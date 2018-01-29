@@ -58,8 +58,13 @@ DefineFaction("hersing-tribe", {
 	Type = "tribe",
 	Colors = {"white"},
 	FactionUpgrade = "upgrade-faction-skeldung-tribe",
-	DefaultAI = "hersing-tribe",
-	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
+	DefaultAI = "passive",
+	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl.",
+	HistoricalResources = {
+		-3000, "copper", 0,
+		-3000, "lumber", 0,
+		-3000, "stone", 0,
+	}
 })
 
 DefineFaction("hlesing-tribe", {
@@ -107,7 +112,12 @@ DefineFaction("karling-tribe", {
 	Colors = {"brown"},
 	FactionUpgrade = "upgrade-faction-karling-tribe",
 	DefaultAI = "passive",
-	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
+	Background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants.",
+	HistoricalResources = {
+		-3000, "copper", 0,
+		-3000, "lumber", 0,
+		-3000, "stone", 0,
+	}
 })
 
 DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -136,7 +146,12 @@ DefineFaction("thralling-tribe", {
 	Colors = {"black"},
 	FactionUpgrade = "upgrade-faction-thralling-tribe",
 	DefaultAI = "passive",
-	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
+	Background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls.",
+	HistoricalResources = {
+		-3000, "copper", 0,
+		-3000, "lumber", 0,
+		-3000, "stone", 0,
+	}
 })
 
 DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
