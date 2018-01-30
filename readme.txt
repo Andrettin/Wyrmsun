@@ -70,10 +70,10 @@ https://github.com/Andrettin/Wyrmsun
 - The AI now recruits mercenaries as substitutes of units it would otherwise train, instead of recruiting any mercenaries available.
 
 * Buildings
-- Added Norse Farm (graphics by Jinn).
-- Added Norse War Lodge (graphics by Jinn).
-- Added Norse Lumber Mill (graphics by Jinn).
-- Added Norse Smithy (graphics by Jinn).
+- Added Norse Farm.
+- Added Norse War Lodge.
+- Added Norse Lumber Mill.
+- Added Norse Smithy.
 
 * Heroes
 - Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added unit graphics for the Norse Swordsman.
 - Gunpowder infantry units and the Latin Javelineer can now use the Precise Shot ability properly.
+- Added new icons for the Goblin Barbarian and the Goblin Warlord.
 
 -----------------------------------------------------------------------
 - 3.2.1

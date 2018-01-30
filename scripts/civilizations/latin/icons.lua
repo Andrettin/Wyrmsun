@@ -26,6 +26,24 @@
 --
 
 DefineIcon({
+	Name = "icon-latin-legionary",
+	Size = {46, 38},
+	File = "latin/icons/legionary.png"
+})
+
+DefineIcon({
+	Name = "icon-latin-veteran-legionary",
+	Size = {46, 38},
+	File = "latin/icons/veteran_legionary.png"
+})
+
+DefineIcon({
+	Name = "icon-latin-centurion",
+	Size = {46, 38},
+	File = "latin/icons/centurion.png"
+})
+
+DefineIcon({
 	Name = "icon-latin-javelineer",
 	Size = {46, 38},
 	File = "latin/icons/javelineer.png"
