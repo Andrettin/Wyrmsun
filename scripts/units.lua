@@ -3702,6 +3702,8 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	PierceDamage = true,
 	WeaponClasses = {"gun"},
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
+	CanCastSpell = {"spell-precise-shot"},
+	AutoCastActive = {"spell-precise-shot"},
 	Gender = "male",
 	RequirementsString = "Smithy and Gunpowder"
 } )

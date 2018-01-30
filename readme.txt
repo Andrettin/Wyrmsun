@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added unit graphics for the Norse Swordsman.
+- Gunpowder infantry units and the Latin Javelineer can now use the Precise Shot ability properly.
 
 -----------------------------------------------------------------------
 - 3.2.1

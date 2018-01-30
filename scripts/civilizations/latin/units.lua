@@ -51,6 +51,9 @@ DefineUnitType("unit-latin-javelineer", {
 	PierceDamage = true,
 	RequirementsString = "Lumber Mill",
 	AiDrops = {"unit-pilum", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
+	CanCastSpell = {"spell-precise-shot"},
+	AutoCastActive = {"spell-precise-shot"},
 	Sounds = {
 		"fire-missile", "throw-weapon",
 		"dead", "basic-human-voices-dead"
