@@ -1747,6 +1747,14 @@ DefineLanguageWord("Þarmr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þegn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Free Subject", "Free Man"}, -- source gives the German "freier Untertan, freier Mann" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þegna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Þjôđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "old-norse",
 	Type = "noun",

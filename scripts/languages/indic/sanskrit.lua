@@ -563,6 +563,13 @@ DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
+DefineLanguageWord("Tákman", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Offspring", "Child"}, -- source gives the German "Abkömmling, Kind" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Tanákti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "sanskrit",
 	Type = "verb",

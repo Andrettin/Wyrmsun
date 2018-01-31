@@ -838,6 +838,13 @@ DefineLanguageWord("Tharm", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Þarma"}
 })
 
+DefineLanguageWord("Thegan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Warrior", "Hero"}, -- source gives the German "Krieger, Held" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þegna"}
+})
+
 DefineLanguageWord("Thioda", { -- source also gives the alternative form "Thiod"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "old-saxon",
 	Type = "noun",

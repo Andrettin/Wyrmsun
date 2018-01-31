@@ -2038,6 +2038,14 @@ DefineLanguageWord("Þearm", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þegn", { -- source gives "þeg(e)n" and the alternative form "þên"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Nobleman", "Warrior", "Hero", "Servant"}, -- source gives the German "Edelmann, Krieger, Held, Diener" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þegna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Þéod", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "old-english",
 	Type = "noun",
