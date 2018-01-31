@@ -61,7 +61,7 @@ DefineUnitType("unit-norse-veteran-swordsman", {
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "norse",
 	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
-	Image = {"file", "norse/units/swordsman.png", "size", {72, 72}},
+	Image = {"file", "norse/units/veteran_swordsman.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-norse-veteran-swordsman",
 	HairColor = "brown",
 	DefaultEquipment = {
@@ -91,7 +91,7 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "norse",
 	Description = "The hersirs were the Norse chieftains, going forth into battle in their shining war-gear.",
-	Image = {"file", "norse/units/swordsman.png", "size", {72, 72}},
+	Image = {"file", "norse/units/veteran_swordsman.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-norse-heroic-swordsman",
 	HairColor = "brown",
 	DefaultEquipment = {

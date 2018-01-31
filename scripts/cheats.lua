@@ -162,20 +162,30 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
 		AddMessage("Player " .. message_player .. " has " .. Players[message_player].NumBuildingsUnderConstruction .. " under construction buildings.")
-	elseif (str == "piety") then
-		local priest_type = GetFactionClassUnitType("priest", GetPlayerData(GetThisPlayer(), "Faction"))
-		if (priest_type) then
-			unit = CreateUnit(priest_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+	elseif (str == "shield wall") then
+		local infantry_type = GetFactionClassUnitType("infantry", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (infantry_type) then
+			unit = CreateUnit(infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
+	elseif (str == "swordskill") then
+		local veteran_infantry_type = GetFactionClassUnitType("veteran-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (veteran_infantry_type) then
+			unit = CreateUnit(veteran_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
 	elseif (str == "artemis") then
-		local shooter_infantry_type = GetFactionClassUnitType("shooter", GetPlayerData(GetThisPlayer(), "Faction"))
-		if (shooter_infantry_type) then
-			unit = CreateUnit(shooter_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		local shooter_type = GetFactionClassUnitType("shooter", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (shooter_type) then
+			unit = CreateUnit(shooter_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
 	elseif (str == "fire and steel") then
 		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
 			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+		end
+	elseif (str == "piety") then
+		local priest_type = GetFactionClassUnitType("priest", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (priest_type) then
+			unit = CreateUnit(priest_type, GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 		end
 	elseif (str == "archimedes") then
 		local siege_engine_type = GetFactionClassUnitType("siege-engine", GetPlayerData(GetThisPlayer(), "Faction"))

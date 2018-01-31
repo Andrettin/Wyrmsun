@@ -82,7 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Hlesing Tribe no longer starts off at war with other Germanic tribes in the Thunraz's Servant scenario.
 
 * Units
-- Added unit graphics for the Norse Swordsman.
+- Added unit graphics for the Norse Swordsman and the Norse Veteran Swordsman.
 - Gunpowder infantry units and the Latin Javelineer can now use the Precise Shot ability properly.
 - Added new icons for the Goblin Barbarian and the Goblin Warlord.
 
