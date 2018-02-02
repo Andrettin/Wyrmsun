@@ -48,6 +48,8 @@ Units = {
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-greek-civilization",
 	"upgrade-norse-civilization",
+	"upgrade-faction-dane-tribe", "upgrade-faction-geat-tribe", "upgrade-faction-gute-tribe", "upgrade-faction-sitone-tribe", "upgrade-faction-swede-tribe",
+	"upgrade-faction-denmark", "upgrade-faction-gautland", "upgrade-faction-gotland", "upgrade-faction-norway", "upgrade-faction-sweden",
 	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
 	"unit-norse-town-hall",
 	"unit-norse-farm", "unit-norse-barracks",

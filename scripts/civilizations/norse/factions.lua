@@ -25,28 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	Name = "Sitone Tribe",
-	Civilization = "norse", -- correct?
-	Type = "tribe",
-	Colors = {"brown"},
-	DefaultAI = "sea-attack"
-})
-
-DefineFaction("swede-tribe", {
-	Name = "Swede Tribe",
-	Civilization = "norse",
-	Type = "tribe",
-	Colors = {"blue", "yellow"},
-	DefaultAI = "sea-attack"
-})
+-- Tribes
 
 DefineFaction("dane-tribe", {
 	Name = "Dane Tribe",
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-dane-tribe"
 	-- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
@@ -56,7 +43,8 @@ DefineFaction("geat-tribe", {
 	Type = "tribe",
 	Colors = {"teal"},
 	DefaultAI = "sea-attack",
---	DevelopsFrom = {"goth-tribe"}
+--	DevelopsFrom = {"goth-tribe"},
+	FactionUpgrade = "upgrade-faction-geat-tribe"
 })
 
 DefineFaction("gute-tribe", {
@@ -64,10 +52,29 @@ DefineFaction("gute-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"cyan"},
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-gute-tribe"
 })
 
--- polities
+DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Name = "Sitone Tribe",
+	Civilization = "norse", -- correct?
+	Type = "tribe",
+	Colors = {"brown"},
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-sitone-tribe"
+})
+
+DefineFaction("swede-tribe", {
+	Name = "Swede Tribe",
+	Civilization = "norse",
+	Type = "tribe",
+	Colors = {"blue", "yellow"},
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-swede-tribe"
+})
+
+-- Polities
 
 DefineFaction("denmark", {
 	Name = "Denmark",
@@ -75,7 +82,8 @@ DefineFaction("denmark", {
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-denmark"
 })
 
 DefineFaction("gautland", {
@@ -84,7 +92,8 @@ DefineFaction("gautland", {
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-gautland"
 })
 
 DefineFaction("gotland", {
@@ -93,7 +102,8 @@ DefineFaction("gotland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "duchy", -- correct?
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-gotland"
 })
 
 DefineFaction("halogaland", {
@@ -102,7 +112,8 @@ DefineFaction("halogaland", {
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-norway"
 })
 
 DefineFaction("holmgard", {
@@ -110,7 +121,8 @@ DefineFaction("holmgard", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue"},
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-sweden"
 })
 
 DefineFaction("hordaland", {
@@ -119,7 +131,8 @@ DefineFaction("hordaland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-norway"
 })
 
 DefineFaction("norway", {
@@ -128,7 +141,8 @@ DefineFaction("norway", {
 	Type = "polity",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-norway"
 })
 
 DefineFaction("orkney", { -- Earldom of Orkney
@@ -144,7 +158,8 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"head-of-state", "male", "monarchy", "duchy", "Earl",
 		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	FactionUpgrade = "upgrade-faction-norway"
 })
 
 DefineFaction("scania", {
@@ -153,7 +168,9 @@ DefineFaction("scania", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack"
+	DefaultAI = "sea-attack",
+	Adjective = "Scanian",
+	FactionUpgrade = "upgrade-faction-denmark"
 })
 
 DefineFaction("sweden", {
@@ -163,5 +180,6 @@ DefineFaction("sweden", {
 	Colors = {"blue", "yellow"},
 	DefaultTier = "kingdom",
 	DefaultAI = "sea-attack",
-	Adjective = "Swedish"
+	Adjective = "Swedish",
+	FactionUpgrade = "upgrade-faction-sweden"
 })
