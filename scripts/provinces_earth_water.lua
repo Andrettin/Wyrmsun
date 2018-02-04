@@ -163,7 +163,7 @@ DefineProvince("Lake Vattern", {
 	World = "earth",
 	Water = true,
 	CulturalNames = {
-		"norse", "Lake Vättern"
+		"norse", "Lake Vattern" -- "Vättern"
 	}
 })
 
@@ -171,7 +171,7 @@ DefineProvince("Lake Wener", { -- Source: William R. Shepherd, "Historical Atlas
 	World = "earth",
 	Water = true,
 	CulturalNames = {
-		"norse", "Lake Vänern"
+		"norse", "Lake Vanern" -- "Vänern"
 	}
 })
 
