@@ -33,6 +33,14 @@ DefineButton( { Pos = 1, Level = 0,
 	ForUnit = {"unit-norse-barracks"}
 })
 
+-- Mercenaries ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-norse-swordsman",
+	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
 -- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1,

@@ -179,6 +179,8 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"Vindobona", "Vienna",
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
 		"Theodoric", "Dietrich", -- "Dietrich" is the German form of the Gothic name Theodoric
+		-- Proto-Germanic
+		"Karla", "Karl",
 		-- Old High German
 		"Karal", "Karl",
 		-- Frankish Personal Names

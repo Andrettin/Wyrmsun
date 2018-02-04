@@ -75,8 +75,14 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Lumber Mill.
 - Added Norse Smithy.
 
+* Factions
+- Added the Jomsvikings mercenary faction.
+
 * Heroes
 - Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
+
+* Maps
+- Mercenary Camps are now present in forest random maps.
 
 * Scenarios
 - The Hlesing Tribe no longer starts off at war with other Germanic tribes in the Thunraz's Servant scenario.
@@ -85,6 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added unit graphics for the Norse Swordsman and the Norse Veteran Swordsman.
 - Gunpowder infantry units and the Latin Javelineer can now use the Precise Shot ability properly.
 - Added new icons for the Goblin Barbarian and the Goblin Warlord.
+- Unit epithets (e.g. "the Wise") now remain in place even after changing civilizations.
 
 -----------------------------------------------------------------------
 - 3.2.1

@@ -183,3 +183,15 @@ DefineFaction("sweden", {
 	Adjective = "Swedish",
 	FactionUpgrade = "upgrade-faction-sweden"
 })
+
+-- Mercenary Companies
+
+DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 94.
+	Name = "Jomsvikings",
+	Civilization = "norse",
+	Type = "mercenary-company",
+	Colors = {"blue"},
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-dane-tribe",
+	Description = "The Jomsvikings were a group of warriors and pirates based in Jomsburg."
+})
