@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse War Lodge.
 - Added Norse Lumber Mill.
 - Added Norse Smithy.
+- Players who attack a mercenary camp will now lose access to it.
 
 * Factions
 - Added the Jomsvikings mercenary faction (Norse).
