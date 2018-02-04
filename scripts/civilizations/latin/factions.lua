@@ -187,3 +187,13 @@ DefineFaction("hermaistes-apolloniastes-poseidoniastes", { -- Source: Tenney Fra
 		-113, "upgrade-deity-poseidon", true
 	}
 })
+
+-- Mercenary Companies
+
+DefineFaction("mamertines", {
+	Name = "Mamertines",
+	Civilization = "latin",
+	Type = "mercenary-company",
+	Colors = {"red"},
+	DefaultTier = "duchy"
+})
