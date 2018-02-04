@@ -195,3 +195,12 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	FactionUpgrade = "upgrade-faction-dane-tribe",
 	Description = "The Jomsvikings were a group of warriors and pirates based in Jomsburg."
 })
+
+DefineFaction("varangian-guard", {
+	Name = "Varangian Guard",
+	Civilization = "norse",
+	Type = "mercenary-company",
+	Colors = {"red"},
+	DefaultTier = "duchy",
+	FactionUpgrade = "upgrade-faction-swede-tribe"
+})

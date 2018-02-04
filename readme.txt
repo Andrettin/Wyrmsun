@@ -78,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Added the Jomsvikings mercenary faction (Norse).
 - Added the Mamertines mercenary faction (Latin).
+- Added the Varangian Guard mercenary faction (Norse).
 
 * Heroes
 - Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
