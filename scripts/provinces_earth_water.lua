@@ -67,14 +67,6 @@ DefineProvince("Bay of Biscay", {
 	Water = true
 })
 
-DefineProvince("Black Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	World = "earth",
-	Water = true,
-	CulturalNames = {
-		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineProvince("Bristol Channel", { -- Source: "Limits of Oceans and Seas", 1953, p. 13. (see corrections as well)
 	World = "earth",
 	Water = true
@@ -100,11 +92,6 @@ DefineProvince("Eastern Mediterranean Sea", { -- Source: "Limits of Oceans and S
 	Water = true
 })
 
-DefineProvince("Gulf of Bothnia", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	World = "earth",
-	Water = true
-})
-
 DefineProvince("Gulf of Finland", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 	World = "earth",
 	Water = true
@@ -121,20 +108,6 @@ DefineProvince("Inner Seas", { -- Source: "Limits of Oceans and Seas", 1953, p. 
 })
 
 DefineProvince("Ionian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-	World = "earth",
-	Water = true
-})
-
-DefineProvince("Irish Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
-	World = "earth",
-	Water = true,
-	CulturalNames = {
-		"celt", "Hibernian Ocean",
-		"latin", "Hibernian Ocean"
-	}
-})
-
-DefineProvince("Kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 	World = "earth",
 	Water = true
 })
@@ -167,36 +140,16 @@ DefineProvince("Lake Vattern", {
 	}
 })
 
-DefineProvince("Lake Wener", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
-	World = "earth",
-	Water = true,
-	CulturalNames = {
-		"norse", "Lake Vanern" -- "Vänern"
-	}
-})
-
 --[[
 DefineProvince("Libyan Sea", {
 	World = "earth",
 	Water = true
 })
-
 --]]
+
 DefineProvince("Ligurian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
 	World = "earth",
 	Water = true
-})
-
-DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
-	World = "earth",
-	Water = true,
-	CulturalNames = {
-		"germanic", "German Ocean",
---		"goth", "German Ocean",
-		"latin", "German Ocean", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
---		"norse", "German Ocean",
---		"teuton", "German Ocean" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
 })
 
 DefineProvince("Sea of Azov", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
@@ -243,5 +196,3 @@ DefineProvince("White Sea", {
 	World = "earth",
 	Water = true
 })
-
--- The Straits of Gibraltar were known as "Niorvasund" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

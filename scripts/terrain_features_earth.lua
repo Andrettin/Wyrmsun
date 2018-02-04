@@ -73,6 +73,16 @@ DefineTerrainFeature("baltic-sea", { -- Source: http://www.euratlas.net/history/
 	}
 })
 
+DefineTerrainFeature("black-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
+	Name = "Black Sea",
+	TerrainType = "shallow-water",
+	World = "earth",
+	Color = {0, 104, 136},
+	CulturalNames = {
+		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineTerrainFeature("cantabrian-mountains", {
 	Name = "Cantabrian Mountains",
 	TerrainType = "rock", -- mountains
@@ -178,7 +188,7 @@ DefineTerrainFeature("guadiana-river", {
 	}
 })
 
-DefineTerrainFeature("gulf-of-bothnia", { -- Source: http://www.euratlas.net/history/europe/1/index.html
+DefineTerrainFeature("gulf-of-bothnia", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 	Name = "Gulf of Bothnia",
 	TerrainType = "shallow-water",
 	World = "earth",
@@ -200,16 +210,6 @@ DefineTerrainFeature("irish-sea", { -- Source: "Limits of Oceans and Seas", 1953
 	}
 })
 
-DefineTerrainFeature("kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	Name = "Kattegat",
-	TerrainType = "shallow-water",
-	World = "earth",
-	Color = {16, 144, 120},
-	CulturalNames = {
-		"norse", "Kattegat"
-	}
-})
-
 DefineTerrainFeature("lake-neusiedl", {
 	Name = "Lake Neusiedl",
 	TerrainType = "shallow-water",
@@ -228,6 +228,13 @@ DefineTerrainFeature("march-river", {
 	CulturalNames = {
 		"teuton", "March River"
 	}
+})
+
+DefineTerrainFeature("mediterranean-sea", {
+	Name = "Mediterranean Sea",
+	TerrainType = "shallow-water",
+	World = "earth",
+	Color = {0, 144, 104}
 })
 
 DefineTerrainFeature("minho-river", {
@@ -321,6 +328,16 @@ DefineTerrainFeature("skagerrak", { -- Source: "Limits of Oceans and Seas", 1953
 	Color = {0, 120, 144},
 	CulturalNames = {
 		"norse", "Skagerrak"
+	}
+})
+
+DefineTerrainFeature("strait-of-gibraltar", {
+	Name = "Strait of Gibraltar",
+	TerrainType = "shallow-water",
+	World = "earth",
+	Color = {0, 104, 144},
+	CulturalNames = {
+		"norse", "Niorvasund" -- the Straits of Gibraltar were known as "Niorvasund" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.
 	}
 })
 
