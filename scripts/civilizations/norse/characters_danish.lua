@@ -316,7 +316,7 @@ DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heims
 })
 
 DefineCharacter("vatte", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
-	Name = "Vätte",
+	Name = "Vatte", -- "Vätte"
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
