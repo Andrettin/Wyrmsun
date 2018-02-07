@@ -1358,7 +1358,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackFromTransporter = "only", Transport = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrison Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonTraining = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}
@@ -1917,7 +1917,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Transported Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackFromTransporter = "only", Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrison Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonTraining = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}

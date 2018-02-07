@@ -75,7 +75,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Lumber Mill.
 - Added Norse Smithy.
 - Players who attack a mercenary camp will now lose access to it.
-- Barracks buildings can now be garrisoned by up to one unit, which gains experience while within the barracks.
 
 * Factions
 - Added the Jomsvikings mercenary faction (Norse).
