@@ -1357,6 +1357,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {TownHall = "false", CanStore = "leather"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {AttackFromTransporter = "only", Transport = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Garrison Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {GarrisonTraining = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1766,8 +1772,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BluntResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Transport = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Transport = "only", Building = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonedRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Garrisoned Range Bonus: +"), String(TypeVar("GarrisonedRangeBonus", "Value"))), Font = wyr.preferences.PopupDescriptionFont}}
@@ -1903,6 +1912,15 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "leather", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackFromTransporter = "only", Transport = "only", Building = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Transported Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackFromTransporter = "only", Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Garrison Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {GarrisonTraining = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ImproveIncomes = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}

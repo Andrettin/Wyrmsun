@@ -178,6 +178,21 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-chest",
 	}
 })
 
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-garrison",
+	Action = "button", Value = 1,
+	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
+	Key = "g", Hint = "View ~!Garrison", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-barracks",
+		"unit-germanic-barracks",
+		"unit-norse-barracks",
+		"unit-teuton-barracks",
+		"unit-dwarven-barracks",
+		"unit-gnomish-barracks",
+		"unit-goblin-mess-hall"
+	}
+})
+
 DefineButton( { Pos = 15, Level = 0, Icon = "icon-book-red",
 	Action = "button", Value = 3,
 	Allowed = "check-has-sub-buttons",
