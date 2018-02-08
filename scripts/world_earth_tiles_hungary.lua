@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({528, 118}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Bratislava",
-		"teuton", "Presburg"
-	}
-})
-
-DefineWorldMapTile({534, 120}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Aquincum",
-		"magyar", "Buda"
-	}
-})
-
 DefineWorldMapTile({536, 127}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -52,10 +36,8 @@ DefineWorldMapTile({536, 127}, {
 DefineWorldMapTile({545, 122}, {
 	World = "earth",
 	CulturalSettlementNames = {
+		"romanian", "Cluj",
 		"teuton", "Klausenburg"
-	},
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Cluj"
 	}
 })
 
@@ -63,12 +45,5 @@ DefineWorldMapTile({545, 126}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({547, 125}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

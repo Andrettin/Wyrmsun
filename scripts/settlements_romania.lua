@@ -30,7 +30,7 @@ DefineSettlement("apulum", {
 	MapTemplate = "earth",
 	Position = {4374, 1001},
 	CulturalNames = {
-		"latin", "Apulum"
+		"latin", "Apulum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalOwners = {
 		107, "rome", -- Dacia (where Apulum was located) was acquired by Rome in 107 AD and lost in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

@@ -461,6 +461,26 @@ DefineSettlement("nuremberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("oldenburg", {
+	Name = "Oldenburg",
+	MapTemplate = "earth",
+	Position = {4027, 839},
+	CulturalNames = {
+		"teuton", "Oldenburg"
+	},
+	HistoricalOwners = {
+		-3950, "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "chauci-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "lombard-tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "holy-rome" -- part of the Duchy of Saxony within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalBuildings = {
+		-3950, -3000, "farm",
+		-264, -0, "farm"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("paderborn", {
 	Name = "Paderborn",
 	MapTemplate = "earth",
