@@ -384,6 +384,7 @@ DefineUnitType("unit-template-sapient-unit", {
 	Intelligence = 10,
 	Charisma = 10,
 	organic = true,
+	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
 	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
 

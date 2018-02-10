@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
+- Added cooldown for recruiting heroes.
 
 * Maps
 - Mercenary Camps are now present in forest random maps.
@@ -95,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 - Gunpowder infantry units and the Latin Javelineer can now use the Precise Shot ability properly.
 - Added new icons for the Goblin Barbarian and the Goblin Warlord.
 - Unit epithets (e.g. "the Wise") now remain in place even after changing civilizations.
+- Units now start with 0 mana.
 
 -----------------------------------------------------------------------
 - 3.2.1
