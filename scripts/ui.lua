@@ -54,24 +54,24 @@ if not (ui_loaded_first_time) then
 	if (CanAccessFile("ui/health2.png")) then
 		DefineSprites({Name = "sprite-health", File = "ui/health2.png", Offset = {0, -4}, Size = {31, 4}})
 
-		DefineDecorations({Index = "HitPoints", HideNeutral = false, CenterX = true, ShowOpponent = true,
+		DefineDecorations({Index = "HitPoints", HideNeutral = false, CenterX = true, ShowOpponent = true, ShowOnlySelected = true,
 			OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-health"}}})
 	end
 
 	if (CanAccessFile("ui/mana2.png")) then
 		DefineSprites({Name = "sprite-mana", File = "ui/mana2.png", Offset = {0, -1}, Size = {31, 4}})
 
-		DefineDecorations({Index = "Mana", ShowWhenNull = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-		DefineDecorations({Index = "Transport", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
-		DefineDecorations({Index = "Research", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
-		DefineDecorations({Index = "Training", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
-		DefineDecorations({Index = "UpgradeTo", HideNeutral = true, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "Mana", ShowWhenNull = true, HideNeutral = true, CenterX = true, ShowOnlySelected = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "Transport", HideNeutral = true, CenterX = true, ShowOnlySelected = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "Research", HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "Training", HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "UpgradeTo", HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, should fix later
 			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = false, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		else
 			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		end
-		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
+		DefineDecorations({Index = "CarryResource", HideNeutral = true, CenterX = true, ShowOnlySelected = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	end
 	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-blessing", File = "ui/status_effects/blessing.png", Offset = {1, 1}, Size = {16, 16}})

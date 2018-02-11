@@ -102,6 +102,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused minecarts to get stuck after harvesting metal rocks.
 - Increased minecart costs from 200 Copper and 200 Lumber to 300 Copper and 300 Lumber.
 - Fixed issue which in certain circumstances required the player to repeatedly re-issue harvest resource orders to minecarts.
+- The bars for health, mana, resources carried, and units transported are now shown only for selected units.
 
 -----------------------------------------------------------------------
 - 3.2.1
