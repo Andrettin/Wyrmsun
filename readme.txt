@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Increased the distance AI units will go to react to an attack.
 - The AI now uses only mercenary camps that are currently visible to it (previously it could use any mercenary camps it had previously explored even if they weren't currently visible).
 - The AI now recruits mercenaries as substitutes of units it would otherwise train, instead of recruiting any mercenaries available.
+- The AI now makes use of minecarts.
 
 * Buildings
 - Added Norse Farm.
@@ -97,6 +98,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added new icons for the Goblin Barbarian and the Goblin Warlord.
 - Unit epithets (e.g. "the Wise") now remain in place even after changing civilizations.
 - Units now start with 0 mana.
+- Fixed an issue which caused minecarts to get stuck after harvesting metal rocks.
+- Minecarts can now be salvaged (like buildings).
 
 -----------------------------------------------------------------------
 - 3.2.1

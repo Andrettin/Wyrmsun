@@ -42,11 +42,11 @@ DefineSettlement("gradisca", {
 })
 
 DefineSettlement("gorz", {
-	Name = "Görz",
+	Name = "Gorz",
 	MapTemplate = "earth",
 	Position = {4151, 1003},
 	CulturalNames = {
-		"teuton", "Görz"
+		"teuton", "Gorz" -- "Görz"
 	},
 	HistoricalOwners = {
 		1815, "austria" -- Görz was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.

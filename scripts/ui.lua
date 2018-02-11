@@ -1142,10 +1142,28 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "salvage"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "salvage"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "salvage", Building = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
 								_("Salvage this building for "),
+								String(
+									Div(
+										Mul(
+											ActiveUnitVar("SalvageFactor"),
+											ActiveUnitVar("HitPoints")
+										),
+										ActiveUnitVar("HitPoints", "Max")
+									)
+								)
+							),
+							"% of the resources used to construct it"
+						),
+						MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "salvage", Building = "false"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								_("Salvage this unit for "),
 								String(
 									Div(
 										Mul(

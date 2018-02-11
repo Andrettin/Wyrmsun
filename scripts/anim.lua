@@ -1416,6 +1416,14 @@ DefineAnimations("animations-raft", {
 	Death = BuildingStill,
 })
 
+MinecartMining = {
+	"frame 0", "wait 4", "frame 5", "wait 5",
+	"frame 0", "wait 5", "frame 5", "wait 5",
+	"frame 0", "wait 5", "frame 5", "wait 5",
+	"frame 0",
+	"wait 1",
+}
+
 DefineAnimations("animations-minecart", {
 	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
 	Move = {
@@ -1446,6 +1454,13 @@ DefineAnimations("animations-minecart", {
 		"frame 0", "goto end",
 		"label end", "unbreakable end", "wait 1",
 	},
+	Harvest_gold = MinecartMining,
+	Harvest_silver = MinecartMining,
+	Harvest_copper = MinecartMining,
+	Harvest_iron = MinecartMining,
+	Harvest_mithril = MinecartMining,
+	Harvest_diamonds = MinecartMining,
+	Harvest_emeralds = MinecartMining,
 	Death = {
 		"unbreakable begin", "frame 10", "wait 3", "frame 15", "wait 3", "frame 20", "wait 3", "frame 25", "wait 100",
 		"frame 25", "unbreakable end", "wait 1",

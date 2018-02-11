@@ -56,6 +56,14 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-unload",
 	}
 })
 
+DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
+	Action = "salvage",
+	Key = "delete", Hint = "Salvage Unit (~<Del~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-minecart"
+	}
+})
+
 -- Worker Commands ------------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",

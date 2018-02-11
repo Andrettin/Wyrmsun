@@ -411,6 +411,7 @@ DefineUnitType("unit-minecart", {
 	Priority = 55,
 	Points = 50,
 	Demand = 1,
+	SalvageFactor = 75,
 	Type = "land",
 	Coward = true,
 	RightMouseAction = "harvest",
