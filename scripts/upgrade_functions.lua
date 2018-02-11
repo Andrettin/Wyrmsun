@@ -146,7 +146,17 @@ function ApplyTechLevels()
 			return true
 		elseif ((GetArrayIncludes(agrarian_upgrades, technology) or GetUpgradeData(technology, "Class") == "writing") and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)" or TechLevel[player + 1] == "Civilized (Gunpowder)")) then
 			return true
-		elseif ((GetArrayIncludes(iron_upgrades, technology) or GetUpgradeData(technology, "Class") == "mathematics" or GetUpgradeData(technology, "Class") == "philosophy" or GetUpgradeData(technology, "Class") == "alchemy" or GetUpgradeData(technology, "Class") == "gunpowder") and TechLevel[player + 1] == "Civilized (Gunpowder)") then
+		elseif (
+			(
+				GetArrayIncludes(iron_upgrades, technology)
+				or GetUpgradeData(technology, "Class") == "mathematics"
+				or GetUpgradeData(technology, "Class") == "philosophy"
+				or GetUpgradeData(technology, "Class") == "alchemy"
+				or GetUpgradeData(technology, "Class") == "gunpowder"
+				or GetUpgradeData(technology, "Class") == "engineering"
+			)
+			and TechLevel[player + 1] == "Civilized (Gunpowder)"
+		) then
 			return true
 		else
 			return false

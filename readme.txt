@@ -101,6 +101,7 @@ https://github.com/Andrettin/Wyrmsun
 - Minecarts can now be salvaged (like buildings).
 - Fixed an issue which caused minecarts to get stuck after harvesting metal rocks.
 - Increased minecart costs from 200 Copper and 200 Lumber to 300 Copper and 300 Lumber.
+- Fixed issue which in certain circumstances required the player to repeatedly re-issue harvest resource orders to minecarts.
 
 -----------------------------------------------------------------------
 - 3.2.1
