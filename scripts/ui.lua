@@ -56,6 +56,7 @@ if not (ui_loaded_first_time) then
 
 		DefineDecorations({Index = "HitPoints", HideNeutral = false, CenterX = true, ShowOpponent = true, ShowOnlySelected = true,
 			OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-health"}}})
+		DefineDecorations({Index = "Build", HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-health"}}})
 	end
 
 	if (CanAccessFile("ui/mana2.png")) then
