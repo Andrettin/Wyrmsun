@@ -878,7 +878,6 @@ DefineUnitType("unit-dwarven-thane", {
 	},
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
-	CanCastSpell = {"spell-axe-twirl"},
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
