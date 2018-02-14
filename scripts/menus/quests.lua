@@ -310,15 +310,15 @@ function addQuestIcon(quest, menu, x, y)
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
 	local tooltip = GetQuestData(quest, "Name") .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
-	if (GetQuestData(quest, "HighestCompletedDifficulty") >= 1) then
+	if (GetQuestData(quest, "HighestCompletedDifficulty") >= DifficultyEasy) then
 		tooltip = tooltip .. "\nHighest Completed Difficulty: "
-		if (GetQuestData(quest, "HighestCompletedDifficulty") == 1) then
+		if (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyEasy) then
 			tooltip = tooltip .. "Easy"
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 2) then
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyNormal) then
 			tooltip = tooltip .. "Normal"
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 3) then
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyHard) then
 			tooltip = tooltip .. "Hard"
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 4) then
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyBrutal) then
 			tooltip = tooltip .. "Brutal"
 		end
 	end

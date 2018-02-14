@@ -501,9 +501,9 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 															NorthernWastelandsEnemy(2, 47)
 															NorthernWastelandsEnemy(52, 47)
 															NorthernWastelandsEnemy(2, 33)
-															if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+															if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 																NorthernWastelandsEnemy(54, 2)
-															elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+															elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 																NorthernWastelandsEnemy(54, 2)
 																NorthernWastelandsEnemy(54, 65)
 															end

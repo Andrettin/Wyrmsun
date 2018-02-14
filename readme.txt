@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI now uses only mercenary camps that are currently visible to it (previously it could use any mercenary camps it had previously explored even if they weren't currently visible).
 - The AI now recruits mercenaries as substitutes of units it would otherwise train, instead of recruiting any mercenaries available.
 - The AI now makes use of minecarts.
+- The AI no longer receives extra resources per second under the Hard and Brutal difficulties, instead receiving bonus resources when harvesting.
 
 * Buildings
 - Added Norse Farm.

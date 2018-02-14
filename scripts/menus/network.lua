@@ -177,7 +177,7 @@ function RunJoiningMapMenu(s)
 	difficulty:setVisible(false)
 	difficulty_label:setVisible(false)
 	difficulty:setSelected(1)
-	GameSettings.Difficulty = 2
+	GameSettings.Difficulty = DifficultyNormal
 
 	local OldPresentMap = PresentMap
 	PresentMap = function(desc, nplayers, w, h, id)
@@ -421,7 +421,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	difficulty:setSelected(1)
 	difficulty:setVisible(false)
 	difficulty_label:setVisible(false)
-	GameSettings.Difficulty = 2
+	GameSettings.Difficulty = DifficultyNormal
 	ServerSetupState.Difficulty = GameSettings.Difficulty
 
 	local updatePlayers = addPlayersList(menu, numplayers)

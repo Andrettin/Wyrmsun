@@ -343,11 +343,11 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
-				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
@@ -370,11 +370,11 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
-				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
@@ -397,11 +397,11 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 3)
-				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
-				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
@@ -424,11 +424,11 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
@@ -451,11 +451,11 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-				elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)

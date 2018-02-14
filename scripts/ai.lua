@@ -110,15 +110,15 @@ function AiDifficultyForce(num, units, reset_force)
 end
 
 function AiDifficultySleep(cycles)
-	if (GameSettings.Difficulty == 1) then
+	if (GameSettings.Difficulty == DifficultyEasy) then
 		return AiSleep(5 * cycles)
---	elseif (GameSettings.Difficulty == 2) then
+--	elseif (GameSettings.Difficulty == DifficultyNormal) then
 --		return AiSleep(math.floor(1.25 * cycles))
-	elseif (GameSettings.Difficulty == 2) then
+	elseif (GameSettings.Difficulty == DifficultyNormal) then
 		return AiSleep(math.floor(cycles))
-	elseif (GameSettings.Difficulty == 3) then
+	elseif (GameSettings.Difficulty == DifficultyHard) then
 		return AiSleep(math.floor(cycles / 2))
-	elseif (GameSettings.Difficulty == 4) then
+	elseif (GameSettings.Difficulty == DifficultyBrutal) then
 		return AiSleep(math.floor(cycles / 3))
 	end
 	return AiSleep(cycles)
@@ -168,15 +168,6 @@ end
 function AiLoop(loop_funcs, indexes)
 	local playerIndex = AiPlayer() + 1
 	
-	-- Some AI cheating for harder levels
-	if (Players[AiPlayer()]:IsAllied(ThisPlayer) == false or IsNetworkGame()) then
-		if (GameSettings.Difficulty == 3) then
-			AiCheat(50, 35, 25)
-		elseif (GameSettings.Difficulty == 4) then
-			AiCheat(100, 75, 50)
-		end
-	end
-
 	while (true) do
 		local ret = loop_funcs[indexes[playerIndex]]()
 		if (ret) then

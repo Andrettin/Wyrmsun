@@ -54,7 +54,7 @@ function AiKobolds()
 	end
 	
 	ai_call_counter[AiPlayer()] = ai_call_counter[AiPlayer()] + 1
-	if (GameSettings.Difficulty == 1 and (ai_call_counter[AiPlayer()] % 50) ~= 0) then -- on easy difficulty, the AI is slower to do things
+	if (GameSettings.Difficulty == DifficultyEasy and (ai_call_counter[AiPlayer()] % 50) ~= 0) then -- on easy difficulty, the AI is slower to do things
 		return;
 	end
 	

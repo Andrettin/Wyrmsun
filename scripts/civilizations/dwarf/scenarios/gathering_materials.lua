@@ -54,13 +54,13 @@ if (LoadedGame == false) then
 	
 	unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 	IncreaseUnitLevel(unit, 1)
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		IncreaseUnitLevel(unit, 1)
 	end
 	SetUnitVariable(unit, "Active", false)
 	
 	-- extra units for defense
-	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+	if (GameSettings.Difficulty >= DifficultyNormal) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
@@ -72,7 +72,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+	if (GameSettings.Difficulty >= DifficultyHard) then -- if difficulty is hard or higher
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
@@ -84,7 +84,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
@@ -109,13 +109,13 @@ if (LoadedGame == false) then
 	
 	unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 	IncreaseUnitLevel(unit, 1)
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		IncreaseUnitLevel(unit, 1)
 	end
 	SetUnitVariable(unit, "Active", false)
 	
 	-- extra units for defense
-	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+	if (GameSettings.Difficulty >= DifficultyNormal) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
@@ -127,7 +127,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+	if (GameSettings.Difficulty >= DifficultyHard) then -- if difficulty is hard or higher
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
@@ -139,7 +139,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
@@ -165,13 +165,13 @@ if (LoadedGame == false) then
 	
 	unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 	IncreaseUnitLevel(unit, 1)
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		IncreaseUnitLevel(unit, 1)
 	end
 	SetUnitVariable(unit, "Active", false)
 		
 	-- extra units for defense
-	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+	if (GameSettings.Difficulty >= DifficultyNormal) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
@@ -183,7 +183,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+	if (GameSettings.Difficulty >= DifficultyHard) then -- if difficulty is hard or higher
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
@@ -195,7 +195,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
 		SetUnitVariable(unit, "Active", false)
 	end
-	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})

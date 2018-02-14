@@ -27,7 +27,7 @@
 
 if (LoadedGame == false) then
 	local transporter
-	if (GameSettings.Difficulty == 3) then -- if the difficulty is hard, add two goblin watch towers to guard the glyphs
+	if (GameSettings.Difficulty == DifficultyHard) then -- if the difficulty is hard, add two goblin watch towers to guard the glyphs
 		transporter = CreateUnit("unit-goblin-watch-tower", 2, {43, 50})
 		if (transporter) then
 			unit = CreateUnitInTransporter("unit-goblin-archer", 2, transporter)
@@ -41,7 +41,7 @@ if (LoadedGame == false) then
 		end
 	end
 	
-	if (GameSettings.Difficulty == 4) then -- if the difficulty is brutal, add four goblin guard towers to guard the glyphs, garrisoned by goblin headhunters
+	if (GameSettings.Difficulty == DifficultyBrutal) then -- if the difficulty is brutal, add four goblin guard towers to guard the glyphs, garrisoned by goblin headhunters
 		transporter = CreateUnit("unit-goblin-guard-tower", 2, {43, 50})
 		if (transporter) then
 			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)

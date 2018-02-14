@@ -30,19 +30,19 @@ if (LoadedGame == false) then
 	SetPlayerData(2, "Name", "Fjalar and Galar")
 
 	if (GrandStrategy == false) then
-		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
+		if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
+		elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
+		elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
 	end

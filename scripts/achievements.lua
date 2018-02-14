@@ -120,7 +120,7 @@ DefineAchievement("safe-passage", {
 	Description = "Destroy the raiders during the A Bargain is Struck quest on Hard difficulty or higher.",
 	PlayerColor = "green",
 	Unobtainable = true, -- it is obtainable only through a trigger
-	Difficulty = 3
+	Difficulty = DifficultyHard
 })
 
 DefineAchievement("rugnurs-bravery", {

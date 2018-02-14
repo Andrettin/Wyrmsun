@@ -31,7 +31,7 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
 	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
 	
-	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower, add a raft
+	if (GameSettings.Difficulty <= DifficultyNormal) then -- if the difficulty is normal or lower, add a raft
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, {14, 32})
 	end
 end
@@ -464,7 +464,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
 												SetUnitVariable(unit, "Active", false)
-												if (GameSettings.Difficulty == 3) then -- if difficulty is hard
+												if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 													SetUnitVariable(unit, "Active", false)
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
@@ -474,7 +474,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
-												elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+												elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 													SetUnitVariable(unit, "Active", false)
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
