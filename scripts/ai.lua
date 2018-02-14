@@ -54,7 +54,18 @@ DefineAiHelper(
 	{"unit-equiv", "unit-dwarven-town-hall",
 	"unit-dwarven-stronghold"},
 	{"unit-equiv", "unit-goblin-town-hall",
-	"unit-goblin-stronghold"}
+	"unit-goblin-stronghold"},
+	
+	{"unit-equiv", "unit-dwarven-miner",
+	"unit-dwarven-skilled-miner"},
+	{"unit-equiv", "unit-dwarven-miner",
+	"unit-dwarven-expert-miner"},
+	{"unit-equiv", "unit-dwarven-miner",
+	"unit-dwarven-runesmith"},
+	{"unit-equiv", "unit-dwarven-miner",
+	"unit-dwarven-runemaster"},
+	{"unit-equiv", "unit-dwarven-miner",
+	"unit-dwarven-arcanister"}
 )
 
 --

@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI now recruits mercenaries as substitutes of units it would otherwise train, instead of recruiting any mercenaries available.
 - The AI now makes use of minecarts.
 - The AI no longer receives extra resources per second under the Hard and Brutal difficulties, instead receiving bonus resources when harvesting.
+- Fixed issue which caused the dwarven AI to train too many workers in the late game.
 
 * Buildings
 - Added Norse Farm.
