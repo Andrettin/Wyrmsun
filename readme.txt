@@ -78,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Lumber Mill.
 - Added Norse Smithy.
 - Players who attack a mercenary camp will now lose access to it.
+- Fixed issue which caused the settlement of a Settlement Site to not be loaded properly when loading a saved game.
 
 * Factions
 - Added the Jomsvikings mercenary faction (Norse).
