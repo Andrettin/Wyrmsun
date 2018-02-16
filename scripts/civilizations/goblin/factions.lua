@@ -75,6 +75,16 @@ DefineFaction("khag-tribe", {
 			"force-type", "land-force",
 			"priority", 100,
 			"unit-class", "infantry", 4
+		},
+		{
+			"force-type", "naval-force",
+			"priority", 100,
+			"unit-class", "siege-warship", 1
+		},
+		{
+			"force-type", "air-force",
+			"priority", 100,
+			"unit-class", "flying-rider", 1
 		}
 	}
 })
@@ -97,6 +107,16 @@ DefineFaction("lggi-tribe", {
 			"priority", 100,
 			"unit-class", "infantry", 1,
 			"unit-class", "spearman", 1
+		},
+		{
+			"force-type", "naval-force",
+			"priority", 100,
+			"unit-class", "siege-warship", 1
+		},
+		{
+			"force-type", "air-force",
+			"priority", 100,
+			"unit-class", "flying-rider", 1
 		}
 	}
 })

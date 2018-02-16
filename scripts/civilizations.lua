@@ -45,6 +45,7 @@ DefineCivilization("neutral", {
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
 	},
+	ForceTypeWeights = {"land-force", 3, "naval-force", 1, "air-force", 1},
 	ForceTemplates = {
 		{
 			"force-type", "land-force",
@@ -132,6 +133,16 @@ DefineCivilization("neutral", {
 			"force-type", "land-force",
 			"priority", 100,
 			"unit-class", "infantry", 3
+		},
+		{
+			"force-type", "naval-force",
+			"priority", 100,
+			"unit-class", "siege-warship", 3
+		},
+		{
+			"force-type", "air-force",
+			"priority", 100,
+			"unit-class", "flying-rider", 3
 		}
 	},
 	AiBuildingTemplates = {
