@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI now makes use of minecarts.
 - The AI no longer receives extra resources per second under the Hard and Brutal difficulties, instead receiving bonus resources when harvesting.
 - Fixed issue which caused the dwarven AI to train too many workers in the late game.
+- Fixed issue which caused the AI to produce luxury resources even before it had a market.
 
 * Buildings
 - Added Norse Farm.
