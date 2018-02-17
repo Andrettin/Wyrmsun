@@ -4223,7 +4223,6 @@ DefineUnitType("unit-template-farm", {
 	ButtonPos = 2,
 	ButtonKey = "f",
 	ButtonHint = "Build ~!Farm",
-	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
 	ResourceDemand = {"furniture", 1, "leather", 1},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
