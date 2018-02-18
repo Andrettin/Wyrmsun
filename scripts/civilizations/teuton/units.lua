@@ -132,7 +132,7 @@ DefineUnitType("unit-teuton-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -145,7 +145,6 @@ DefineUnitType("unit-teuton-swordsman", {
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-saxon-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -169,21 +168,21 @@ DefineUnitType("unit-teuton-swordsman", {
 		{
 			"variation-id", "black-hair",
 			"icon", "icon-saxon-swordsman-black-hair",
-			"hair-color", "black",
+			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
 			"icon", "icon-saxon-swordsman-red-hair",
-			"hair-color", "red",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
@@ -294,7 +293,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -307,7 +306,6 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-veteran-saxon-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -328,21 +326,21 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		{
 			"variation-id", "black-hair",
 			"icon", "icon-veteran-saxon-swordsman-black-hair",
-			"hair-color", "black",
+			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-veteran-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
 			"icon", "icon-veteran-saxon-swordsman-red-hair",
-			"hair-color", "red",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
@@ -453,7 +451,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -466,7 +464,6 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-heroic-saxon-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -489,21 +486,21 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		{
 			"variation-id", "black-hair",
 			"icon", "icon-heroic-saxon-swordsman-black-hair",
-			"hair-color", "black",
+			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 2
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-heroic-saxon-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "red-hair",
 			"icon", "icon-heroic-saxon-swordsman-red-hair",
-			"hair-color", "red",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},

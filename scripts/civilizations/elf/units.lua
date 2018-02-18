@@ -57,7 +57,6 @@ DefineUnitType("unit-elven-swordsman", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	HairColor = "blond",
 	Costs = {"time", 50, "copper", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
@@ -101,7 +100,6 @@ DefineUnitType("unit-elven-priest", {
 		{"layer", "pants", "file", "human/units/pants.png"},
 		{"layer", "boots", "file", "teuton/units/leather_shoes.png"}
 	},
-	HairColor = "gray",
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-kvasir",
 	DefaultEquipment = {

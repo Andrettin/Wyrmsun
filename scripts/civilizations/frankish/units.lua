@@ -38,7 +38,7 @@ DefineUnitType("unit-frank-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -52,7 +52,6 @@ DefineUnitType("unit-frank-swordsman", {
 	},
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-swordsman-brown-hair",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -69,27 +68,26 @@ DefineUnitType("unit-frank-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
-			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-frank-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-swordsman-gray-hair",
-			"hair-color", "gray",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"weight", 1
 		},
 		{
 			"variation-id", "red-hair",
-			"hair-color", "red",
 			"icon", "icon-frank-swordsman-red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
@@ -198,7 +196,7 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -212,7 +210,6 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 	},
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-veteran-swordsman-brown-hair",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -227,27 +224,26 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
-			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-frank-veteran-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-veteran-swordsman-gray-hair",
-			"hair-color", "gray",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"weight", 1
 		},
 		{
 			"variation-id", "red-hair",
-			"hair-color", "red",
 			"icon", "icon-frank-veteran-swordsman-red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
@@ -356,7 +352,7 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm.png"},
 		{"layer", "right-hand", "file", "human/units/right_hand.png"},
@@ -370,7 +366,6 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 	},
 	Animations = "animations-melee-unit-new",
 	Icon = "icon-frank-heroic-swordsman-brown-hair",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -387,27 +382,26 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
-			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-frank-heroic-swordsman-blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-heroic-swordsman-gray-hair",
-			"hair-color", "gray",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"weight", 1
 		},
 		{
 			"variation-id", "red-hair",
-			"hair-color", "red",
 			"icon", "icon-frank-heroic-swordsman-red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},

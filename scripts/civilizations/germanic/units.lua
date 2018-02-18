@@ -488,7 +488,7 @@ DefineUnitType("unit-germanic-spearman", {
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/hair_warrior.png"},
+		{"layer", "hair", "file", "human/units/brown_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/right_arm_spear.png"},
 		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
@@ -504,7 +504,6 @@ DefineUnitType("unit-germanic-spearman", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	HairColor = "light-brown",
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -518,24 +517,24 @@ DefineUnitType("unit-germanic-spearman", {
 		{
 			"layer", "hair",
 			"variation-id", "black-hair",
-			"hair-color", "black",
+			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "blond-hair",
-			"hair-color", "blond",
+			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray"
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 		},
 		{
 			"layer", "hair",
 			"variation-id", "red-hair",
-			"hair-color", "red",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
