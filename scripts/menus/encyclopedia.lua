@@ -463,7 +463,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_string = ""
 	local tooltip_name = ""
 	local tooltip_civilization = ""
-	local hair_color = ""
 	if (string.find(unit_name, "unit") ~= nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
@@ -477,7 +476,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
-		hair_color = GetUnitTypeData(unit_name, "HairColor")
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
@@ -507,9 +505,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
-		end
-		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
-			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
 		end
 	elseif (state == "deities") then
 		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
@@ -564,7 +559,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			playercolor = "gray"
 		end
 		b = PlayerColorImageButton("", playercolor)
-		b:setHairColor(hair_color)
 	else
 		b = ImageButton(tooltip_name)
 	end
@@ -633,7 +627,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local faction
 	local tooltip_name = ""
 	local tooltip_civilization = ""
-	local hair_color = ""
 	if (string.find(unit_name, "unit") ~= nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
@@ -647,7 +640,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
-		hair_color = GetUnitTypeData(unit_name, "HairColor")
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
@@ -678,9 +670,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
-		end
-		if (GetCharacterData(unit_name, "HairVariation") ~= "") then
-			hair_color = string.gsub(GetCharacterData(unit_name, "HairVariation"), "%-hair", "")
 		end
 	elseif (state == "deities") then
 		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
@@ -723,7 +712,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local menu_image = PlayerColorImageButton("", playercolor)
 		menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 		menu:add(menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
-		menu_image:setHairColor(hair_color)
 		menu_image:setNormalImage(encyclopedia_icon)
 		menu_image:setPressedImage(encyclopedia_icon_pressed)
 		menu_image:setDisabledImage(encyclopedia_icon_disabled)

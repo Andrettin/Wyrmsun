@@ -32,7 +32,6 @@ DefineUnitType("unit-norse-swordsman", {
 	Description = "Feared throughout northern coasts, Norse swordsmen are mighty warriors.",
 	Image = {"file", "norse/units/swordsman.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-norse-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -63,7 +62,6 @@ DefineUnitType("unit-norse-veteran-swordsman", {
 	Description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts.",
 	Image = {"file", "norse/units/veteran_swordsman.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-norse-veteran-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},
@@ -93,7 +91,6 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 	Description = "The hersirs were the Norse chieftains, going forth into battle in their shining war-gear.",
 	Image = {"file", "norse/units/veteran_swordsman.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-norse-heroic-swordsman",
-	HairColor = "brown",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},

@@ -414,7 +414,6 @@ function Event(speaker, event_description, player, options, option_effects, even
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
-			b:setHairColor(GetUnitVariable(speaker, "HairColor"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
 			event_icon = CIcon:Get(event_icon).G
@@ -544,7 +543,7 @@ function Tip(tip_name, tip_description)
 	end
 end
 
-function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
+function GenericDialog(title, message, tooltip, icon, player_color)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	end
@@ -570,9 +569,6 @@ function GenericDialog(title, message, tooltip, icon, player_color, hair_color)
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageButton("", player_color)
-		if (hair_color and hair_color ~= "" and hair_color ~= "default") then
-			icon_widget:setHairColor(hair_color)
-		end
 		menu:add(icon_widget, 105, 48)
 		icon_widget:setNormalImage(icon_graphics)
 		icon_widget:setPressedImage(icon_graphics)
