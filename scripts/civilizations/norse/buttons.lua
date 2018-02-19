@@ -78,6 +78,7 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-norse-wooden-wall",
 	Key = "p", Hint = "Build ~!Palisade", Popup = "popup-building",
 	ForUnit = {
 		"unit-teuton-worker",
+		"unit-germanic-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
