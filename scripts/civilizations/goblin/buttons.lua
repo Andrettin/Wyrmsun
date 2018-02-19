@@ -199,7 +199,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-goblin-banner",
 	ForUnit = {"unit-goblin-worker"}
 })
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-goblin-wall",
+DefineButton( { Pos = 2, Level = 4, Icon = "icon-goblin-wall",
 	Action = "build", Value = "unit-goblin-wall",
 	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
 	ForUnit = {

@@ -186,3 +186,11 @@ DefineUnitType("unit-norse-smithy", {
 	}
 } )
 
+DefineUnitType("unit-norse-palisade", {
+	Parent = "unit-template-palisade",
+	Civilization = "neutral", -- so that other civilizations can build the palisade
+	TerrainType = "norse-palisade",
+	Image = {"file", "norse/buildings/wooden_wall.png", "size", {32, 32}},
+	Icon = "icon-norse-wooden-wall",
+	Description = "Cheaper and easier to construct than stone walls, palisades are often constructed to defend a temporary fort, settlement or if stonemasons aren't readily available."
+} )

@@ -54,6 +54,7 @@ Units = {
 	"unit-norse-town-hall",
 	"unit-norse-farm", "unit-norse-barracks",
 	"unit-norse-lumber-mill", "unit-norse-smithy",
+	"unit-norse-palisade",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",
@@ -4704,6 +4705,32 @@ DefineUnitType("unit-template-dock", {
 	}
 } )
 
+DefineUnitType("unit-template-palisade", {
+	Name = "Palisade",
+	Class = "palisade",
+	Animations = "animations-building",
+	Costs = {"time", 30, "copper", 20, "lumber", 30},
+	Construction = "construction-land-1x1",
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+	HitPoints = 100,
+	DrawLevel = 39,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 5, Missile = "missile-none",
+	Priority = 0, AnnoyComputerFactor = 45,
+	Points = 1,
+--	Corpse = "unit-destroyed-1x1-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true, Wall = true,
+	BuilderOutside = true,
+	HiddenInEditor = true,
+	Sounds = {
+		"dead", "building-destroyed"
+	}
+} )
+
 DefineUnitType("unit-template-wall", {
 	Name = "Wall",
 	Class = "wall",
@@ -4711,7 +4738,7 @@ DefineUnitType("unit-template-wall", {
 	Costs = {"time", 30, "copper", 40, "stone", 60},
 	Construction = "construction-land-1x1",
 	RepairHp = 4,
-	RepairCosts = {"copper", 1, "lumber", 1},
+	RepairCosts = {"copper", 1, "stone", 1},
 	HitPoints = 200,
 	DrawLevel = 39,
 	TileSize = {1, 1}, BoxSize = {31, 31},

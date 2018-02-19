@@ -1122,7 +1122,7 @@ DefineButton( { Pos = 14, Level = 1, Icon = "icon-railroad",
 	}
 })
 
-DefineButton( { Pos = 2, Level = 4, Icon = "icon-copper-mine",
+DefineButton( { Pos = 3, Level = 4, Icon = "icon-copper-mine",
 	Action = "build", Value = "unit-copper-mine",
 	Key = "c", Hint = "Build ~!Copper Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1135,7 +1135,7 @@ DefineButton( { Pos = 2, Level = 4, Icon = "icon-copper-mine",
 	}
 })
 
-DefineButton( { Pos = 3, Level = 4, Icon = "icon-silver-mine",
+DefineButton( { Pos = 4, Level = 4, Icon = "icon-silver-mine",
 	Action = "build", Value = "unit-silver-mine",
 	Key = "v", Hint = "Build Si~!lver Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1148,7 +1148,7 @@ DefineButton( { Pos = 3, Level = 4, Icon = "icon-silver-mine",
 	}
 })
 
-DefineButton( { Pos = 4, Level = 4, Icon = "icon-gold-mine",
+DefineButton( { Pos = 5, Level = 4, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
 	Key = "g", Hint = "Build ~!Gold Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1161,7 +1161,7 @@ DefineButton( { Pos = 4, Level = 4, Icon = "icon-gold-mine",
 	}
 })
 
-DefineButton( { Pos = 5, Level = 4, Icon = "icon-diamond-mine",
+DefineButton( { Pos = 6, Level = 4, Icon = "icon-diamond-mine",
 	Action = "build", Value = "unit-diamond-mine",
 	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1174,7 +1174,7 @@ DefineButton( { Pos = 5, Level = 4, Icon = "icon-diamond-mine",
 	}
 })
 
-DefineButton( { Pos = 6, Level = 10, Icon = "icon-emerald-mine", -- unreachable level so that the mine is buildable, but the button doesn't actually appear
+DefineButton( { Pos = 7, Level = 10, Icon = "icon-emerald-mine", -- unreachable level so that the mine is buildable, but the button doesn't actually appear
 	Action = "build", Value = "unit-emerald-mine",
 	Key = "e", Hint = "Build ~!Emerald Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1187,7 +1187,7 @@ DefineButton( { Pos = 6, Level = 10, Icon = "icon-emerald-mine", -- unreachable 
 	}
 })
 
-DefineButton( { Pos = 6, Level = 4, Icon = "icon-iron-mine",
+DefineButton( { Pos = 7, Level = 4, Icon = "icon-iron-mine",
 	Action = "build", Value = "unit-iron-mine",
 	Key = "i", Hint = "Build ~!Iron Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1200,7 +1200,7 @@ DefineButton( { Pos = 6, Level = 4, Icon = "icon-iron-mine",
 	}
 })
 
-DefineButton( { Pos = 7, Level = 4, Icon = "icon-mithril-mine",
+DefineButton( { Pos = 8, Level = 4, Icon = "icon-mithril-mine",
 	Action = "build", Value = "unit-mithril-mine",
 	Key = "m", Hint = "Build ~!Mithril Mine", Popup = "popup-building",
 	ForUnit = {
@@ -1213,7 +1213,7 @@ DefineButton( { Pos = 7, Level = 4, Icon = "icon-mithril-mine",
 	}
 })
 
-DefineButton( { Pos = 8, Level = 4,
+DefineButton( { Pos = 9, Level = 4,
 	Action = "build", Value = "unit-yale-hunting-lodge",
 	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
 	ForUnit = {

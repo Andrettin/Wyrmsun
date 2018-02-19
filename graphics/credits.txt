@@ -1138,6 +1138,7 @@
 /graphics/terrain/ice.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/limestone_rock.png (by Exidelo) (licensed under the CC0)
 /graphics/terrain/mud.png (by Jinn) (licensed under the CC0)
+/graphics/terrain/norse_wooden_wall.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/pine_tree.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/terrain/pine_tree_autumn.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/terrain/pine_tree_snow.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

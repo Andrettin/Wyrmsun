@@ -227,14 +227,15 @@ DefineButton( { Pos = 12, Level = 1, Icon = "icon-dwarven-academy",
 	}
 })
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-dwarven-wall",
+DefineButton( { Pos = 2, Level = 4, Icon = "icon-dwarven-wall",
 	Action = "build", Value = "unit-dwarven-wall",
 	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
 	}
 })
 

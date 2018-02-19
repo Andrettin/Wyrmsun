@@ -1283,7 +1283,6 @@ DefineUnitType("unit-teuton-wall", {
 	Civilization = "teuton",
 	TerrainType = "teuton-wall",
 	Image = {"file", "teuton/buildings/wall.png", "size", {32, 32}},
-	Shadow = {"file", "teuton/buildings/wall_shadow.png", "size", {32, 32}},
 	Icon = "icon-teuton-wall",
 	Description = "Teuton stonemasons build sturdy walls, fortifying their cities and strongholds from enemy attack."
 } )

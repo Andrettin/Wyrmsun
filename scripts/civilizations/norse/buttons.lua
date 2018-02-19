@@ -73,6 +73,18 @@ DefineButton( { Pos = 5, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
   
+DefineButton( { Pos = 1, Level = 4, Icon = "icon-norse-wooden-wall",
+	Action = "build", Value = "unit-norse-palisade",
+	Key = "p", Hint = "Build ~!Palisade", Popup = "popup-building",
+	ForUnit = {
+		"unit-teuton-worker",
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
+	}
+})
+
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",

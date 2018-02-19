@@ -80,6 +80,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Smithy.
 - Players who attack a mercenary camp will now lose access to it.
 - Fixed issue which caused the settlement of a Settlement Site to not be loaded properly when loading a saved game.
+- Added Palisade, which is cheaper and less sturdy than walls, and costs lumber instead of stone.
+- The graphics of the Teuton Wall have been reworked.
+- The destroyed graphics for the Dwarven Wall have been reworked.
 
 * Factions
 - Added the Jomsvikings mercenary faction (Norse).
