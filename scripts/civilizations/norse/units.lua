@@ -192,5 +192,5 @@ DefineUnitType("unit-norse-palisade", {
 	TerrainType = "norse-palisade",
 	Image = {"file", "norse/buildings/wooden_wall.png", "size", {32, 32}},
 	Icon = "icon-norse-wooden-wall",
-	Description = "Cheaper and easier to construct than stone walls, palisades are often constructed to defend a temporary fort, settlement or if stonemasons aren't readily available."
+	Description = "Cheaper and easier to construct than stone walls, palisades are often built to defend a temporary camp, or if stonemasons aren't readily available."
 } )
