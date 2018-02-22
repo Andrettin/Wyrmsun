@@ -34,6 +34,7 @@ Units = {
 	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
 	"upgrade-latin-civilization",
+	"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion",
 	"unit-latin-javelineer",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-germanic-civilization",
@@ -4947,7 +4948,7 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-goblin-thief", 6, "unit-goblin-swordsman", 4, "unit-goblin-spearman", 4, "unit-goblin-archer", 3, "unit-goblin-gunpowder-infantry", 3, "unit-goblin-war-machine", 1, "unit-goblin-glider", 1,
 		"unit-kobold-footpad", 4,
 		"unit-ettin", 1,
-		"unit-latin-javelineer", 3,
+		"unit-latin-legionary", 4, "unit-latin-javelineer", 3,
 		"unit-norse-swordsman", 4
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},

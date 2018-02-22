@@ -31,6 +31,86 @@
 --	NOTE: Save can generate this table.
 --
 
+DefineUnitType("unit-latin-legionary", {
+	Name = "Legionary",
+	Parent = "unit-template-infantry",
+	Civilization = "latin",
+	Description = "Roman infantry is renowned for its discipline and adaptability. Fighting in tight formations, the Roman legions are a force to be reckoned with.",
+	Image = {"file", "latin/units/legionary.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-latin-legionary",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	Armor = 3, -- +1 armor
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Sounds = {
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-latin-veteran-legionary", {
+	Name = "Veteran Legionary",
+	Parent = "unit-template-veteran-infantry",
+	Civilization = "latin",
+	Description = "With the engagement of the Roman legions in multiple battlefields, the surviving legionaries become hardened by the experience, learning how to best avoid death at the hands of the their enemies.",
+	Image = {"file", "latin/units/legionary.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-latin-veteran-legionary",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	Armor = 3, -- +1 armor
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Sounds = {
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-latin-centurion", {
+	Name = "Centurion",
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "latin",
+	Description = "A centurion commands a \"centuria\" - a unit of legionaries which in principle contains a hundred soldiers, though in practice the number varies.",
+	Image = {"file", "latin/units/legionary.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-latin-centurion",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+	Armor = 3, -- +1 armor
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	Sounds = {
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+})
+
 DefineUnitType("unit-latin-javelineer", {
 	Name = "Javelineer",
 	Parent = "unit-template-archer",

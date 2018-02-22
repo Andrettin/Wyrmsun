@@ -110,7 +110,8 @@ DefineModifier("upgrade-teuton-spatha",
 	{"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-norse-swordsman"}, {"apply-to", "unit-norse-veteran-swordsman"}, {"apply-to", "unit-norse-heroic-swordsman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-horse"}
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-horse"},
+	{"apply-to", "unit-latin-legionary"}, {"apply-to", "unit-latin-veteran-legionary"}, {"apply-to", "unit-latin-centurion"}
 )
 
 DefineModifier("upgrade-teuton-pike",
@@ -129,7 +130,8 @@ DefineModifier("upgrade-teuton-iron-shield",
 	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-horse"}
+	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-horse"},
+	{"apply-to", "unit-latin-legionary"}, {"apply-to", "unit-latin-veteran-legionary"}, {"apply-to", "unit-latin-centurion"}
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",

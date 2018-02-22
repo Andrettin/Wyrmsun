@@ -110,6 +110,7 @@ https://github.com/Andrettin/Wyrmsun
 - Increased minecart costs from 200 Copper and 200 Lumber to 300 Copper and 300 Lumber.
 - Fixed issue which in certain circumstances required the player to repeatedly re-issue harvest resource orders to minecarts.
 - The mana bar overlay is now only shown if the unit has a spell it can cast.
+- Added the Latin Legionary, Veteran Legionary and Centurion.
 
 -----------------------------------------------------------------------
 - 3.2.1

@@ -28,7 +28,7 @@
 DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
 	Name = "Caesar",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman",
+	Type = "unit-latin-centurion",
 	Civilization = "latin",
 	Faction = "rome",
 	Date = -58, -- De Bello Gallico was written 58-52 BC
@@ -39,7 +39,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Name = "Marcus",
 	ExtraName = "Aurelius",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- emperor
+	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	Date = 121, -- born on 26 April 121
@@ -58,7 +58,7 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Name = "Lucius",
 	ExtraName = "Verus",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- emperor
+	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
 	Date = 161, -- became co-emperor in 161
@@ -72,7 +72,7 @@ DefineCharacter("furius-victorinus", { -- Source: "Ancient Warfare VII.6", 2013,
 	Name = "Furius",
 	ExtraName = "Victorinus",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- Praetorian prefect
+	Type = "unit-latin-centurion", -- Praetorian prefect
 	Civilization = "latin",
 	Faction = "rome"
 })
@@ -81,7 +81,7 @@ DefineCharacter("marcus-claudius-fronto", { -- Source: "Ancient Warfare VII.6", 
 	Name = "Marcus", -- given in the source as "M. Claudius Fronto"
 	ExtraName = "Claudius Fronto", -- given in the source as "M. Claudius Fronto"
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- senior officer
+	Type = "unit-latin-centurion", -- senior officer
 	Civilization = "latin",
 	Faction = "rome"
 })
@@ -90,7 +90,7 @@ DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VI
 	Name = "Tiberius",
 	ExtraName = "Claudius Pompeianus",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- general
+	Type = "unit-latin-centurion", -- general
 	Civilization = "latin",
 	Faction = "rome"
 })

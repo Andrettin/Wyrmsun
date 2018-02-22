@@ -59,6 +59,12 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-latin-stables",
 
 -- Units --------------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-latin-legionary",
+	Key = "l", Hint = "Train ~!Legionary", Popup = "popup-unit",
+	ForUnit = {"unit-latin-barracks"}
+})
+
 DefineButton( { Pos = 3, Level = 0,
 	Action = "train-unit", Value = "unit-latin-javelineer",
 	Key = "j", Hint = "Train ~!Javelineer", Popup = "popup-unit",
@@ -67,8 +73,28 @@ DefineButton( { Pos = 3, Level = 0,
 
 -- Mercenaries ---------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-latin-legionary",
+	Key = "l", Hint = "Hire ~!Legionary", Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+})
+
 DefineButton( { Pos = 3, Level = 0,
 	Action = "train-unit", Value = "unit-latin-javelineer",
 	Key = "j", Hint = "Hire ~!Javelineer", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
+})
+
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-latin-veteran-legionary",
+	Key = "l", Hint = "Upgrade to Veteran ~!Legionary", Popup = "popup-unit",
+	ForUnit = {"unit-latin-legionary"}
+})
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-latin-centurion",
+	Key = "c", Hint = "Upgrade to ~!Centurion", Popup = "popup-unit",
+	ForUnit = {"unit-latin-centurion"}
 })
