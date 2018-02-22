@@ -96,5 +96,5 @@ DefineButton( { Pos = 1, Level = 2,
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-latin-centurion",
 	Key = "c", Hint = "Upgrade to ~!Centurion", Popup = "popup-unit",
-	ForUnit = {"unit-latin-centurion"}
+	ForUnit = {"unit-latin-veteran-legionary"}
 })
