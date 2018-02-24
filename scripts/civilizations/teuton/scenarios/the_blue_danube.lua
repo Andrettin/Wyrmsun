@@ -37,27 +37,23 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
 	
+	SetPlayerData(0, "Faction", "bavarian-tribe")
 	SetPlayerData(1, "Faction", "rome")
+	SetPlayerData(1, "Allow", "upgrade-teuton-masonry", "R")
 	
-	if (GrandStrategy == false) then
-		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(0, "Faction", "bavarian-tribe")
+	unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		
-		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-catapult", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitVariable(unit, "Active", false)
-	end
+	unit = CreateUnit("unit-latin-javelineer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-latin-javelineer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-teuton-catapult", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 end
 
 -- The Blue Danube introduction
