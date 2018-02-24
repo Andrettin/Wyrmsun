@@ -91,7 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Fixed issue which caused Gunpowder Infantry heroes who equipped items that granted fire damage to shoot a fire arrow instead of a bullet.
-- Added cooldown for recruiting heroes.
+- Added one-minute cooldown for recruiting heroes.
 
 * Maps
 - Mercenary Camps are now present in forest random maps.
