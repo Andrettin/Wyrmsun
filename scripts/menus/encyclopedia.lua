@@ -246,28 +246,8 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 			civilization_y = civilization_y + 1
 		end
 	end
-
-	if (state == "units") then
-		menu:addLabel("~<" .. _("Encyclopedia") .. ": " .. _("Units") .. "~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "buildings") then
-		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "technologies") then
-		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "items") then
-		menu:addLabel("~<Encyclopedia: Items~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "item_prefixes") then
-		menu:addLabel("~<Encyclopedia: Magic Prefixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "item_suffixes") then
-		menu:addLabel("~<Encyclopedia: Magic Suffixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "runic_suffixes") then
-		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "heroes") then
-		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "deities") then
-		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "unique_items") then
-		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
-	end
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, state)
 
 --	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -425,27 +405,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		end
 	end
 
-	if (state == "units") then
-		menu:addLabel("~<Encyclopedia: Units~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "buildings") then
-		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "technologies") then
-		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "items") then
-		menu:addLabel("~<Encyclopedia: Items~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "item_prefixes") then
-		menu:addLabel("~<Encyclopedia: Magic Prefixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "item_suffixes") then
-		menu:addLabel("~<Encyclopedia: Magic Suffixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "runic_suffixes") then
-		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "heroes") then
-		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "deities") then
-		menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*-2)
-	elseif (state == "unique_items") then
-		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
-	end
+	AddTopEncyclopediaLabel(menu, offx, offy, state)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() menu:stop(); end)
@@ -744,13 +704,13 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 		end
 		if (GetUnitTypeData(unit_name, "Class") ~= "") then
-			unit_type_class = _("Class:") .. " " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Description") ~= "") then
-			description = _("Description:") .. " " .. _(GetUnitTypeData(unit_name, "Description")) .. "\n\n"
+			description = _("Description") .. ": " .. _(GetUnitTypeData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
-			quote = _("Quote:") .. " " .. _(GetUnitTypeData(unit_name, "Quote")) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(GetUnitTypeData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Item") == false and GetUnitTypeStatsString(unit_name) ~= "") then
 			local costs_string = ""
@@ -775,34 +735,34 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				costs_string = costs_string .. GetUnitTypeData(unit_name, "Demand") .. " Food"
 			end
 			if (costs_string ~= "") then
-				effects = _("Costs:") .. " " .. costs_string .. ".\n\n"
+				effects = _("Costs") .. ": " .. costs_string .. ".\n\n"
 			end
-			effects = effects .. _("Stats:") .. " " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
+			effects = effects .. _("Stats") .. ": " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
 		elseif (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
 			effects = _("Effects:") .. " " .. GetItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Background") ~= "") then
-			background = _("Background:") .. " " .. _(GetUnitTypeData(unit_name, "Background")) .. "\n\n"
+			background = _("Background") .. ": " .. _(GetUnitTypeData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (GetUpgradeData(unit_name, "Civilization") ~= "" and GetUpgradeData(unit_name, "Civilization") ~= "neutral") then
-			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display")) .. "\n\n"
+			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetUpgradeData(unit_name, "Faction") ~= "") then
-				faction = _("Faction:") .. " " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = _("Faction") .. ": " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetUpgradeData(unit_name, "Class") ~= "") then
-			unit_type_class = _("Class:") .. " " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Description ~= "") then
-			description = _("Description:") .. " " .. _(CUpgrade:Get(unit_name).Description) .. "\n\n"
+			description = _("Description") .. ": " .. _(CUpgrade:Get(unit_name).Description) .. "\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Quote ~= "") then
-			quote = _("Quote:") .. " " .. _(CUpgrade:Get(unit_name).Quote) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(CUpgrade:Get(unit_name).Quote) .. "\n\n"
 		end
 		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-			effects = _("Effects:") .. " " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
-			applies_to = _("Available For:") .. " "
+			effects = _("Effects") .. ": " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
+			applies_to = _("Available For") .. ": "
 			local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
 			table.sort(applies_to_items)
 			for i=1,table.getn(applies_to_items) do
@@ -823,35 +783,35 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			applies_to = applies_to .. ".\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Background ~= "") then
-			background = _("Background:") .. " " .. _(CUpgrade:Get(unit_name).Background) .. "\n\n"
+			background = _("Background") .. ": " .. _(CUpgrade:Get(unit_name).Background) .. "\n\n"
 		end
 	elseif (state == "heroes") then
 		if (GetCharacterData(unit_name, "Civilization") ~= "") then
-			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
+			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetCharacterData(unit_name, "Faction") ~= "") then
-				faction = _("Faction:") .. " " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = _("Faction") .. ": " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetCharacterData(unit_name, "Type") ~= "") then
-			unit_type_type = _("Type:") .. " " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
+			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = _("Description:") .. " " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
+			description = _("Description") .. ": " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Quote") ~= "") then
-			quote = _("Quote:") .. " " .. _(GetCharacterData(unit_name, "Quote")) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(GetCharacterData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Background") ~= "") then
-			background = _("Background:") .. " " .. _(GetCharacterData(unit_name, "Background")) .. "\n\n"
+			background = _("Background") .. ": " .. _(GetCharacterData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "deities") then
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
-			description = description .. _("Pantheon:") .. " " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
+			description = description .. _("Pantheon") .. ": " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "HomePlane") ~= "") then
-			description = description .. _("Home Plane:") .. " " .. _(GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name")) .. "\n\n"
+			description = description .. _("Home Plane") .. ": " .. _(GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name")) .. "\n\n"
 		end
-		description = description .. _("Rank:") .. " "
+		description = description .. _("Rank") .. ": "
 		if (GetDeityData(unit_name, "Major")) then
 			description = description .. _("Major") .. "\n\n"
 		else
@@ -861,7 +821,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local domains = GetDeityData(unit_name, "Domains")
 		table.sort(domains)
 		if (table.getn(domains) > 0) then
-			description = description .. _("Portfolio:") .. " "
+			description = description .. _("Portfolio") .. ": "
 			for i=1,table.getn(domains) do
 				description = description .. _(GetDeityDomainData(domains[i], "Name"))
 				if (i < table.getn(domains)) then
@@ -874,7 +834,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local civilizations = GetDeityData(unit_name, "Civilizations")
 		table.sort(civilizations)
 		if (table.getn(civilizations) > 0) then
-			description = description .. _("Civilizations:") .. " "
+			description = description .. _("Civilizations") .. ": "
 			for i=1,table.getn(civilizations) do
 				description = description .. _(GetCivilizationData(civilizations[i], "Display"))
 				if (i < table.getn(civilizations)) then
@@ -892,7 +852,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		table.sort(alternate_names)
 		if (table.getn(alternate_names) > 0) then
-			description = description .. _("Alternate Names:") .. " "
+			description = description .. _("Alternate Names") .. ": "
 			for i=1,table.getn(alternate_names) do
 				description = description .. _(alternate_names[i])
 				if (i < table.getn(alternate_names)) then
@@ -905,7 +865,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local abilities = GetDeityData(unit_name, "Abilities")
 		table.sort(abilities)
 		if (table.getn(abilities) > 0) then
-			description = description .. _("Spells:") .. " "
+			description = description .. _("Spells") .. ": "
 			for i=1,table.getn(abilities) do
 				description = description .. _(GetUpgradeData(abilities[i], "Name"))
 				if (i < table.getn(abilities)) then
@@ -916,38 +876,38 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		
 		if (GetDeityData(unit_name, "Description") ~= "") then
-			description = description .. _("Description:") .. " " .. _(GetDeityData(unit_name, "Description")) .. "\n\n"
+			description = description .. _("Description") .. ": " .. _(GetDeityData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "Quote") ~= "") then
-			quote = _("Quote:") .. " " .. _(GetDeityData(unit_name, "Quote")) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(GetDeityData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "Background") ~= "") then
-			background = _("Background:") .. " " .. _(GetDeityData(unit_name, "Background")) .. "\n\n"
+			background = _("Background") .. ": " .. _(GetDeityData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "unique_items") then
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
-			unit_type_type = _("Type:") .. " " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
+			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Set") ~= "") then
-			unit_type_type = unit_type_type .. _("Set:") .. " " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
+			unit_type_type = unit_type_type .. _("Set") .. ": " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
-			description = _("Description:") .. " " .. _(GetUniqueItemData(unit_name, "Description")) .. "\n\n"
+			description = _("Description") .. ": " .. _(GetUniqueItemData(unit_name, "Description")) .. "\n\n"
 			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") ~= "") then
 				description = description .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description")) .. "\n\n"
 			end
 		end
 		if (GetUniqueItemData(unit_name, "MagicLevel") > 0) then
-			effects = _("Magic Level:") .. " " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
+			effects = _("Magic Level") .. ": " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
 		end
 		if (GetUniqueItemEffectsString(unit_name) ~= "") then
-			effects = effects .. _("Effects:") .. " " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
+			effects = effects .. _("Effects") .. ": " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
-			quote = _("Quote:") .. " " .. _(GetUniqueItemData(unit_name, "Quote")) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(GetUniqueItemData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Background") ~= "") then
-			background = _("Background:") .. " " .. _(GetUniqueItemData(unit_name, "Background")) .. "\n\n"
+			background = _("Background") .. ": " .. _(GetUniqueItemData(unit_name, "Background")) .. "\n\n"
 			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") ~= "") then
 				background = background .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background")) .. "\n\n"
 			end
@@ -1009,7 +969,7 @@ function RunEncyclopediaTextsMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
-	menu:addLabel("~<Encyclopedia: Texts~>", offx + 320, offy + 104 + 36*-2)
+	AddTopEncyclopediaLabel(menu, offx, offy, "texts")
 
 	local texts = GetTexts()
 	local text_y = -1
@@ -1339,7 +1299,8 @@ function RunEncyclopediaPlanesMenu()
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Planes~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "planes", 2)
 
 	local potential_planes = GetPlanes()
 	local planes = {}
@@ -1389,7 +1350,7 @@ function OpenEncyclopediaPlaneEntry(plane)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. GetPlaneData(plane, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. _(GetPlaneData(plane, "Name")) .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1421,9 +1382,9 @@ function OpenEncyclopediaPlaneEntry(plane)
 		end
 		table.sort(fauna_species)
 		if (table.getn(sapient_species) > 0) then
-			description = description .. "Sapient Inhabitants: "
+			description = description .. _("Sapient Inhabitants") .. ": "
 			for i = 1, table.getn(sapient_species) do
-				description = description .. GetPluralForm(GetSpeciesData(sapient_species[i], "Name"))
+				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
 				if (i < table.getn(sapient_species)) then
 					description = description .. ", "
 				end
@@ -1431,9 +1392,9 @@ function OpenEncyclopediaPlaneEntry(plane)
 			description = description .. "\n\n"
 		end
 		if (table.getn(fauna_species) > 0) then
-			description = description .. "Fauna: "
+			description = description .. _("Fauna") .. ": "
 			for i = 1, table.getn(fauna_species) do
-				description = description .. GetPluralForm(fauna_species[i])
+				description = description .. _(GetPluralForm(fauna_species[i]))
 				if (i < table.getn(fauna_species)) then
 					description = description .. ", "
 				end
@@ -1443,10 +1404,10 @@ function OpenEncyclopediaPlaneEntry(plane)
 	end
 	
 	if (GetPlaneData(plane, "Description") ~= "") then
-		description = description .. "Description: " .. GetPlaneData(plane, "Description")
+		description = description .. _("Description") .. ": " .. GetPlaneData(plane, "Description")
 	end
 	if (GetPlaneData(plane, "Background") ~= "") then
-		description = description .. "\n\nBackground: " .. GetPlaneData(plane, "Background")
+		description = description .. "\n\n" .. _("Background") .. ": " .. GetPlaneData(plane, "Background")
 	end
 	l:setCaption(description)
 			
@@ -1511,7 +1472,8 @@ function RunEncyclopediaWorldsMenu()
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "worlds", 2)
 
 	local potential_worlds = GetWorlds()
 	local worlds = {}
@@ -1561,7 +1523,7 @@ function OpenEncyclopediaWorldEntry(world)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. GetWorldData(world, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. _(GetWorldData(world, "Name")) .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1570,7 +1532,7 @@ function OpenEncyclopediaWorldEntry(world)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
 	if (GetWorldData(world, "Plane") ~= "") then
-		description = "Plane: " .. GetPlaneData(GetWorldData(world, "Plane"), "Name") .. "\n\n"
+		description = _("Plane") .. ": " .. _(GetPlaneData(GetWorldData(world, "Plane"), "Name")) .. "\n\n"
 	end
 	local species = GetWorldData(world, "Species")
 	table.sort(species)
@@ -1595,9 +1557,9 @@ function OpenEncyclopediaWorldEntry(world)
 		end
 		table.sort(fauna_species)
 		if (table.getn(sapient_species) > 0) then
-			description = description .. "Sapient Inhabitants: "
+			description = description .. _("Sapient Inhabitants") .. ": "
 			for i = 1, table.getn(sapient_species) do
-				description = description .. GetPluralForm(GetSpeciesData(sapient_species[i], "Name"))
+				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
 				if (i < table.getn(sapient_species)) then
 					description = description .. ", "
 				end
@@ -1605,9 +1567,9 @@ function OpenEncyclopediaWorldEntry(world)
 			description = description .. "\n\n"
 		end
 		if (table.getn(fauna_species) > 0) then
-			description = description .. "Fauna: "
+			description = description .. _("Fauna") .. ": "
 			for i = 1, table.getn(fauna_species) do
-				description = description .. GetPluralForm(fauna_species[i])
+				description = description .. _(GetPluralForm(fauna_species[i]))
 				if (i < table.getn(fauna_species)) then
 					description = description .. ", "
 				end
@@ -1616,10 +1578,10 @@ function OpenEncyclopediaWorldEntry(world)
 		end		
 	end
 	if (GetWorldData(world, "Description") ~= "") then
-		description = description .. "Description: " .. GetWorldData(world, "Description")
+		description = description .. _("Description") .. ": " .. _(GetWorldData(world, "Description"))
 	end
 	if (GetWorldData(world, "Background") ~= "") then
-		description = description .. "\n\nBackground: " .. GetWorldData(world, "Background")
+		description = description .. "\n\n" .. _("Background") .. ": " .. _(GetWorldData(world, "Background"))
 	end
 	l:setCaption(description)
 			
@@ -1686,7 +1648,8 @@ function RunEncyclopediaGameConceptsMenu()
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Game Concepts~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "game_concepts", height_offset)
 
 	local game_concept_x = 0
 	if (GetTableSize(game_concepts) > 20) then
@@ -1742,7 +1705,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
 	if (game_concepts[game_concept_key].Description ~= nil) then
-		description = "Description: " .. game_concepts[game_concept_key].Description
+		description = _("Description") .. ": " .. game_concepts[game_concept_key].Description
 	end
 	l:setCaption(description)
 			
@@ -1769,7 +1732,8 @@ function RunEncyclopediaCivilizationsMenu()
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Civilizations~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "civilizations", height_offset)
 
 	local potential_civilizations = GetCivilizations()
 	local civilizations = {}
@@ -1852,13 +1816,13 @@ function OpenEncyclopediaCivilizationEntry(civilization)
 		description = description .. "\n\n"
 	end
 	if (GetCivilizationData(civilization, "Description") ~= "") then
-		description = description .. "Description: " .. GetCivilizationData(civilization, "Description") .. "\n\n"
+		description = description .. _("Description") .. ": " .. _(GetCivilizationData(civilization, "Description")) .. "\n\n"
 	end
 	if (GetCivilizationData(civilization, "Quote") ~= "") then
-		description = description .. "Quote: " .. GetCivilizationData(civilization, "Quote") .. "\n\n"
+		description = description .. _("Quote") .. ": " .. _(GetCivilizationData(civilization, "Quote")) .. "\n\n"
 	end
 	if (GetCivilizationData(civilization, "Background") ~= "") then
-		description = description .. "Background: " .. GetCivilizationData(civilization, "Background") .. "\n\n"
+		description = description .. _("Background") .. ": " .. _(GetCivilizationData(civilization, "Background")) .. "\n\n"
 	end
 	l:setCaption(description)
 			
@@ -1884,7 +1848,8 @@ function RunEncyclopediaFactionsCivilizationMenu()
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Factions~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "factions", height_offset)
 
 	local potential_civilizations = GetCivilizations()
 	local civilizations = {}
@@ -1948,7 +1913,8 @@ function RunEncyclopediaFactionsMenu(civilization)
 	else
 		height_offset = 2
 	end
-	menu:addLabel("~<Encyclopedia: Factions~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	AddTopEncyclopediaLabel(menu, offx, offy, "factions", height_offset)
 	
 	local potential_factions = GetCivilizationData(civilization, "Factions")
 	local factions = {}
@@ -2015,13 +1981,13 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 		description = description .. "Effects: " .. effects .. ".\n\n"
 	end
 	if (GetFactionData(faction, "Description") ~= "") then
-		description = description .. "Description: " .. GetFactionData(faction, "Description") .. "\n\n"
+		description = description .. _("Description") .. ": " .. _(GetFactionData(faction, "Description")) .. "\n\n"
 	end
 	if (GetFactionData(faction, "Quote") ~= "") then
-		description = description .. "Quote: " .. GetFactionData(faction, "Quote") .. "\n\n"
+		description = description .. _("Quote") .. ": " .. _(GetFactionData(faction, "Quote")) .. "\n\n"
 	end
 	if (GetFactionData(faction, "Background") ~= "") then
-		description = description .. "Background: " .. GetFactionData(faction, "Background") .. "\n\n"
+		description = description .. _("Background") .. ": " .. _(GetFactionData(faction, "Background")) .. "\n\n"
 	end
 	l:setCaption(description)
 			
@@ -2090,4 +2056,47 @@ function GetUnitBackground(unit_name, state)
 	end
 	
 	return "ui/backgrounds/wyrm.png"
+end
+
+function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
+	if not (height_offset) then
+		height_offset = 2
+	end
+
+	local top_label_string = "~<" .. _("Encyclopedia") .. ": "
+	if (state == "buildings") then
+		top_label_string = top_label_string .. _("Buildings")
+	elseif (state == "civilizations") then
+		top_label_string = top_label_string .. _("Civilizations")
+	elseif (state == "deities") then
+		top_label_string = top_label_string .. _("Deities")
+	elseif (state == "factions") then
+		top_label_string = top_label_string .. _("Factions")
+	elseif (state == "game_concepts") then
+		top_label_string = top_label_string .. _("Game Concepts")
+	elseif (state == "heroes") then
+		top_label_string = top_label_string .. _("Heroes")
+	elseif (state == "items") then
+		top_label_string = top_label_string .. _("Items")
+	elseif (state == "item_prefixes") then
+		top_label_string = top_label_string .. _("Magic Prefixes")
+	elseif (state == "item_suffixes") then
+		top_label_string = top_label_string .. _("Magic Suffixes")
+	elseif (state == "planes") then
+		top_label_string = top_label_string .. _("Planes")
+	elseif (state == "runic_suffixes") then
+		top_label_string = top_label_string .. _("Runic Suffixes")
+	elseif (state == "technologies") then
+		top_label_string = top_label_string .. _("Technologies")
+	elseif (state == "texts") then
+		top_label_string = top_label_string .. _("Texts")
+	elseif (state == "unique_items") then
+		top_label_string = top_label_string .. _("Uniques")
+	elseif (state == "units") then
+		top_label_string = top_label_string .. _("Units")
+	elseif (state == "worlds") then
+		top_label_string = top_label_string .. _("Worlds")
+	end
+	top_label_string = top_label_string .. "~>"
+	menu:addLabel(top_label_string, offx + 320, offy + 104 + 36 * (-4 + height_offset), nil, true)
 end

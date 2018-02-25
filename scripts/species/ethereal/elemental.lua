@@ -88,6 +88,12 @@ DefineSpecies("ice-elemental", {
 	Sapient = true
 })
 
+DefineSpecies("phoenix", {
+	Name = "Phoenix",
+	HomePlane = "muspelheim",
+	Sapient = true
+})
+
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
 	HomePlane = "nun",

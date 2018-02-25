@@ -36,14 +36,29 @@ msgstr "Ácido"
 msgid "Afternoon"
 msgstr "Tarde"
 
+msgid "Air Elementals"
+msgstr "Elementais do Ar"
+
 msgid "~<ALT~>-click to defend a unit"
 msgstr "~<ALT~>-clique para defender uma unidade"
+
+msgid "Angels"
+msgstr "Anjos"
+
+msgid "Antelopes"
+msgstr "Antílopes"
 
 msgid "Arcanister"
 msgstr "Arcanista"
 
+msgid "Archangels"
+msgstr "Arcanjos"
+
 msgid "Archer"
 msgstr "Arqueiro"
+
+msgid "Armadillos"
+msgstr "Tatus"
 
 msgid "Armor"
 msgstr "Armadura"
@@ -60,6 +75,12 @@ msgstr "~!Atacar"
 msgid "Axefighter"
 msgstr "Machadeiro"
 
+msgid "Background"
+msgstr "Pano de Fundo"
+
+msgid "Background:"
+msgstr "Pano de Fundo:"
+
 msgid "Ballista"
 msgstr "Balista"
 
@@ -72,8 +93,41 @@ msgstr "Bárbaro"
 msgid "Barracks"
 msgstr "Quartel"
 
+msgid "Basilisk"
+msgstr "Basilisco"
+
+msgid "Basilisks"
+msgstr "Basiliscos"
+
+msgid "Bats"
+msgstr "Morcegos"
+
+msgid "Bears"
+msgstr "Ursos"
+
+msgid "Beavers"
+msgstr "Castores"
+
+msgid "Bee"
+msgstr "Abelha"
+
+msgid "Bees"
+msgstr "Abelhas"
+
+msgid "Birds"
+msgstr "Pássaros"
+
+msgid "Bisons"
+msgstr "Bisões"
+
 msgid "Black"
 msgstr "Preto"
+
+msgid "Blood Bat"
+msgstr "Morcego de Sangue"
+
+msgid "Blood Bats"
+msgstr "Morcegos de Sangue"
 
 msgid "Blue"
 msgstr "Azul"
@@ -81,11 +135,17 @@ msgstr "Azul"
 msgid "Boar"
 msgstr "Javali"
 
+msgid "Boars"
+msgstr "Javalis"
+
 msgid "Brising Clan"
 msgstr "Clã Brising"
 
 msgid "Brown"
 msgstr "Marrom"
+
+msgid "Bugs"
+msgstr "Insetos"
 
 msgid "Build Carpente~!r's Shop"
 msgstr "Construir Oficina de Carpintei~!ro"
@@ -114,6 +174,18 @@ msgstr "Construir Estrutura (~!B)"
 msgid "Build ~!War Lodge"
 msgstr "Construir Alojamento de Guerra (~!W)"
 
+msgid "~!Buildings"
+msgstr "Construções (~!B)"
+
+msgid "Buildings"
+msgstr "Construções"
+
+msgid "Camel"
+msgstr "Camelo"
+
+msgid "Camels"
+msgstr "Camelos"
+
 msgid "~!Cancel"
 msgstr "~!Cancelar"
 
@@ -132,14 +204,38 @@ msgstr "Catapulta"
 msgid "Cavern Entrance"
 msgstr "Entrada de Caverna"
 
+msgid "Centaur"
+msgstr "Centauro"
+
+msgid "Centaurs"
+msgstr "Centauros"
+
+msgid "Centurion"
+msgstr "Centurião"
+
+msgid "Champion"
+msgstr "Campeão"
+
 msgid "Chieftain's Hall"
 msgstr "Salão do Chefe"
+
+msgid "Chimpanzees"
+msgstr "Chimpanzés"
 
 msgid "Choose Your Faction"
 msgstr "Escolha sua Facção"
 
+msgid "~!Civilizations"
+msgstr "~!Civilizações"
+
+msgid "Civilizations"
+msgstr "Civilizações"
+
 msgid "Class:"
 msgstr "Classe:"
+
+msgid "Class"
+msgstr "Classe"
 
 msgid "Cleric"
 msgstr "Clérigo"
@@ -153,6 +249,9 @@ msgstr "Carvão"
 msgid "Coal Mine"
 msgstr "Mina de Carvão"
 
+msgid "Cog"
+msgstr "Coca"
+
 msgid "Copper"
 msgstr "Cobre"
 
@@ -162,8 +261,17 @@ msgstr "Mina de Cobre"
 msgid "~!Continue"
 msgstr "~!Continuar"
 
+msgid "Cows"
+msgstr "Vacas"
+
 msgid "Cred~!its"
 msgstr "Créd~!itos"
+
+msgid "Crocodiles"
+msgstr "Crocodilos"
+
+msgid "Crows"
+msgstr "Corvos"
 
 msgid "~<CTRL~>-click to stand ground after moving"
 msgstr "~<CTRL~>-clique para defender terreno após mover"
@@ -180,6 +288,9 @@ msgstr "Azul-Piscina"
 msgid "Cycle:"
 msgstr "Ciclo:"
 
+msgid "Cyclops"
+msgstr "Cíclope"
+
 msgid "Damage"
 msgstr "Dano"
 
@@ -189,11 +300,23 @@ msgstr "Dano:"
 msgid "Dawn"
 msgstr "Amanhecer"
 
+msgid "Deers"
+msgstr "Cervos"
+
 msgid "Default Color:"
 msgstr "Cor Padrão:"
 
+msgid "~!Deities"
+msgstr "~!Divindades"
+
+msgid "Deities"
+msgstr "Divindades"
+
 msgid "Deity"
 msgstr "Divindade"
+
+msgid "Demons"
+msgstr "Demônios"
 
 msgid "Derro Tribe"
 msgstr "Tribo Derro"
@@ -201,8 +324,35 @@ msgstr "Tribo Derro"
 msgid "Dim"
 msgstr "Burro"
 
+msgid "Djinns"
+msgstr "Gênios"
+
 msgid "Dock"
 msgstr "Doca"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Description:"
+msgstr "Descrição:"
+
+msgid "Dragon"
+msgstr "Dragão"
+
+msgid "Dragons"
+msgstr "Dragões"
+
+msgid "Dread Bat"
+msgstr "Morcego do Terror"
+
+msgid "Dread Bats"
+msgstr "Morcegos do Terror"
+
+msgid "Drudge"
+msgstr "Trabalhador"
+
+msgid "Ducks"
+msgstr "Patos"
 
 msgid "Duelist"
 msgstr "Duelista"
@@ -213,17 +363,44 @@ msgstr "Pôr do Sol"
 msgid "Dwarf"
 msgstr "Anão"
 
+msgid "Dwarves"
+msgstr "Anões"
+
 msgid "Dwarven Units"
 msgstr "Unidades Anãs"
 
+msgid "Eagles"
+msgstr "Águias"
+
 msgid "Early Night"
 msgstr "Noite"
+
+msgid "Earth"
+msgstr "Terra"
+
+msgid "Earth Elementals"
+msgstr "Elementais da Terra"
 
 msgid "~!Edit Map"
 msgstr "~!Editar Mapa"
 
 msgid "Effects:"
 msgstr "Efeitos:"
+
+msgid "Elephants"
+msgstr "Elefantes"
+
+msgid "Elf"
+msgstr "Elfo"
+
+msgid "Elves"
+msgstr "Elfos"
+
+msgid "Elysium"
+msgstr "Elísio"
+
+msgid "~<Encyclopedia~>"
+msgstr "~<Enciclopédia~>"
 
 msgid "En~!cyclopedia"
 msgstr "En~!ciclopédia"
@@ -252,6 +429,12 @@ msgstr "Evasão:"
 msgid "E~!xit Program"
 msgstr "Sair do Programa (~!X)"
 
+msgid "~!Factions"
+msgstr "~!Facções"
+
+msgid "Factions"
+msgstr "Facções"
+
 msgid "Farm"
 msgstr "Fazenda"
 
@@ -267,11 +450,20 @@ msgstr "Encontrar Unidade com Level Up Disponível"
 msgid "Fire"
 msgstr "Fogo"
 
+msgid "Fire Elementals"
+msgstr "Elementais do Fogo"
+
+msgid "Flies"
+msgstr "Moscas"
+
 msgid "Food Cost:"
 msgstr "Custo de Comida:"
 
 msgid "Food Supply:"
 msgstr "Suprimento de Comida:"
+
+msgid "Footpad"
+msgstr "Salteador"
 
 msgid "Forge"
 msgstr "Forja"
@@ -285,8 +477,20 @@ msgstr "Franco"
 msgid "Frankish Units"
 msgstr "Unidades Francas"
 
+msgid "Frog"
+msgstr "Sapo"
+
+msgid "Frogs"
+msgstr "Sapos"
+
 msgid "Fugla Forge"
 msgstr "Forja Fugla"
+
+msgid "~!Game Concepts"
+msgstr "Conceitos do Jo~!go"
+
+msgid "Game Concepts"
+msgstr "Conceitos do Jogo"
 
 msgid "General Units"
 msgstr "Unidades Gerais"
@@ -297,11 +501,20 @@ msgstr "Germânico"
 msgid "Germanic Units"
 msgstr "Unidades Germânicas"
 
+msgid "Giraffes"
+msgstr "Girafas"
+
+msgid "Glider"
+msgstr "Planador"
+
 msgid "Glyph"
 msgstr "Glifo"
 
 msgid "Gnome"
 msgstr "Gnomo"
+
+msgid "Gnomes"
+msgstr "Gnomos"
 
 msgid "Gnomish"
 msgstr "Gnomo"
@@ -317,6 +530,9 @@ msgstr "Unidades Gnomas"
 
 msgid "Goat"
 msgstr "Bode"
+
+msgid "Goats"
+msgstr "Bodes"
 
 msgid "Goblin Units"
 msgstr "Unidades Goblins"
@@ -354,6 +570,9 @@ msgstr "Verde"
 msgid "Gryphon"
 msgstr "Grifo"
 
+msgid "Gryphons"
+msgstr "Grifos"
+
 msgid "Gryphon Rider"
 msgstr "Cavaleiro de Grifo"
 
@@ -372,11 +591,35 @@ msgstr "Coletar Recurso (~!H)"
 msgid "Headhunter"
 msgstr "Caçador de Cabeças"
 
+msgid "Heaven"
+msgstr "Céu"
+
+msgid "Hedgehogs"
+msgstr "Porcos-Espinho"
+
+msgid "Hell"
+msgstr "Inferno"
+
 msgid "Herbalist"
 msgstr "Herbalista"
 
 msgid "Herminone Tribe"
 msgstr "Tribo Herminona"
+
+msgid "~!Heroes"
+msgstr "~!Heróis"
+
+msgid "Heroes"
+msgstr "Heróis"
+
+msgid "Hippogryph"
+msgstr "Hipogrifo"
+
+msgid "Hippogryphs"
+msgstr "Hipogrifos"
+
+msgid "Hippopotamuses"
+msgstr "Hipopótamos"
 
 msgid "Hit Points"
 msgstr "Vida"
@@ -386,6 +629,39 @@ msgstr "Vida:"
 
 msgid "Horse"
 msgstr "Cavalo"
+
+msgid "Horse Lord"
+msgstr "Senhor Cavaleiro"
+
+msgid "Horse Rider"
+msgstr "Cavaleiro"
+
+msgid "Horses"
+msgstr "Cavalos"
+
+msgid "Human"
+msgstr "Humano"
+
+msgid "Humans"
+msgstr "Humanos"
+
+msgid "Hydra"
+msgstr "Hídra"
+
+msgid "Hydras"
+msgstr "Hídras"
+
+msgid "Hyena"
+msgstr "Hiena"
+
+msgid "Hyenas"
+msgstr "Hienas"
+
+msgid "Ice Elementals"
+msgstr "Elementais do Gelo"
+
+msgid "Imps"
+msgstr "Diabinhos"
 
 msgid "Impaler"
 msgstr "Impalador"
@@ -399,11 +675,35 @@ msgstr "Inteligente"
 msgid "Istaevone Tribe"
 msgstr "Tribo Istaevona"
 
+msgid "~!Items"
+msgstr "~!Ítens"
+
+msgid "Items"
+msgstr "Ítens"
+
+msgid "Ixthala Demons"
+msgstr "Demônios Ixthala"
+
+msgid "Javelineer"
+msgstr "Atirador de Lança"
+
+msgid "Kangaroo"
+msgstr "Canguru"
+
+msgid "Kangaroos"
+msgstr "Cangurus"
+
 msgid "Knight"
 msgstr "Cavaleiro"
 
 msgid "Knight Lord"
 msgstr "Senhor Cavaleiro"
+
+msgid "Koala"
+msgstr "Coala"
+
+msgid "Koalas"
+msgstr "Coalas"
 
 msgid "Kobold Units"
 msgstr "Unidades Kobolds"
@@ -420,11 +720,20 @@ msgstr "Unidades Latinas"
 msgid "Left-click to center"
 msgstr "Clique com o botão esquerdo do mouse para centralizar"
 
+msgid "Legionary"
+msgstr "Legionário"
+
+msgid "Lemurs"
+msgstr "Lemures"
+
 msgid "Level"
 msgstr "Nível"
 
 msgid "Level:"
 msgstr "Nível:"
+
+msgid "Lizards"
+msgstr "Lagartos"
 
 msgid "Load Game"
 msgstr "Carregar Jogo"
@@ -453,17 +762,35 @@ msgstr "Madeira:"
 msgid "Lumber Mill"
 msgstr "Serraria"
 
+msgid "Magic P~!refixes"
+msgstr "P~!refixos Mágicos"
+
+msgid "Magic Prefixes"
+msgstr "Prefixos Mágicos"
+
+msgid "Magic ~!Suffixes"
+msgstr "~!Sufixos Mágicos"
+
+msgid "Magic Suffixes"
+msgstr "Sufixos Mágicos"
+
 msgid "Magnate"
 msgstr "Magnata"
 
 msgid "Map ~!Editor"
 msgstr "~!Editor de Mapas"
 
+msgid "Marsupial Mouses"
+msgstr "Ratos Marsupiais"
+
 msgid "Master at Arms"
 msgstr "Mestre de Armas"
 
 msgid "Master-at-Arms"
 msgstr "Mestre de Armas"
+
+msgid "Material Plane"
+msgstr "Plano Material"
 
 msgid "Mead Hall"
 msgstr "Salão de Hidromel"
@@ -486,8 +813,26 @@ msgstr "Carro de Mina"
 msgid "Miner"
 msgstr "Mineiro"
 
+msgid "Minotaur"
+msgstr "Minotauro"
+
+msgid "Minotaurs"
+msgstr "Minotauros"
+
+msgid "Monkey"
+msgstr "Macaco"
+
+msgid "Monkeys"
+msgstr "Macacos"
+
 msgid "Morning"
 msgstr "Manhã"
+
+msgid "Mouse"
+msgstr "Camundongo"
+
+msgid "Mouses"
+msgstr "Camundongos"
 
 msgid "~!Move"
 msgstr "~!Mover"
@@ -510,8 +855,17 @@ msgstr "Nórdico"
 msgid "Norse Units"
 msgstr "Unidades Nórdicas"
 
+msgid "Ogre"
+msgstr "Ogro"
+
+msgid "Ogres"
+msgstr "Ogros"
+
 msgid "Old"
 msgstr "Velho"
+
+msgid "Olympus"
+msgstr "Olimpo"
 
 msgid "~!Options"
 msgstr "~!Opções"
@@ -519,8 +873,47 @@ msgstr "~!Opções"
 msgid "Orange"
 msgstr "Laranja"
 
+msgid "Ostrich"
+msgstr "Avestruz"
+
+msgid "Ostriches"
+msgstr "Avestruzes"
+
+msgid "Owls"
+msgstr "Corujas"
+
+msgid "Panther"
+msgstr "Pantera"
+
+msgid "Panthers"
+msgstr "Panteras"
+
+msgid "Parrot"
+msgstr "Papagaio"
+
+msgid "Parrots"
+msgstr "Papagaios"
+
+msgid "Passenger Pigeons"
+msgstr "Pombos-Passageiro"
+
 msgid "Pathfinder"
 msgstr "Desbravador"
+
+msgid "Pegasus"
+msgstr "Pégaso"
+
+msgid "Pegasuses"
+msgstr "Pégasos"
+
+msgid "Pelicans"
+msgstr "Pelicanos"
+
+msgid "Phoenix"
+msgstr "Fênix"
+
+msgid "Phoenixes"
+msgstr "Fênixes"
 
 msgid "Pink"
 msgstr "Rosa"
@@ -528,8 +921,23 @@ msgstr "Rosa"
 msgid "Pious"
 msgstr "Pio"
 
-msgid "Glider"
-msgstr "Planador"
+msgid "Plane"
+msgstr "Plano"
+
+msgid "P~!lanes"
+msgstr "P~!lanos"
+
+msgid "Planes"
+msgstr "Planos"
+
+msgid "Platypus"
+msgstr "Ornitorrinco"
+
+msgid "Platypuses"
+msgstr "Ornitorrincos"
+
+msgid "Possums"
+msgstr "Gambás"
 
 msgid "~!Previous Menu"
 msgstr "Menu Anterior (~!P)"
@@ -543,6 +951,15 @@ msgstr "Roxo"
 msgid "~!Quests"
 msgstr "Missões (~!Q)"
 
+msgid "Rabbits"
+msgstr "Coelhos"
+
+msgid "Raccoon"
+msgstr "Guaxinim"
+
+msgid "Raccoons"
+msgstr "Guaxinims"
+
 msgid "Radioactive"
 msgstr "Radioativo"
 
@@ -554,6 +971,9 @@ msgstr "Alcance:"
 
 msgid "Rat"
 msgstr "Rato"
+
+msgid "Rats"
+msgstr "Ratos"
 
 msgid "Recruit"
 msgstr "Recruta"
@@ -567,6 +987,12 @@ msgstr "Conserta~!r"
 msgid "~!Replay Game"
 msgstr "~!Rever Jogo"
 
+msgid "Rhinoceros"
+msgstr "Rinoceronte"
+
+msgid "Rhinoceroses"
+msgstr "Rinocerontes"
+
 msgid "Right-click to see encyclopedia"
 msgstr "Clique com o botão direito do mouse para ver a enciclopédia"
 
@@ -575,6 +1001,24 @@ msgstr "Mestre de Runas"
 
 msgid "Runesmith"
 msgstr "Ferreiro de Runas"
+
+msgid "Runic Suffix~!es"
+msgstr "Sufixos Rúnicos (~!E)"
+
+msgid "Runic Suffixes"
+msgstr "Sufixos Rúnicos"
+
+msgid "Salamander"
+msgstr "Salamandra"
+
+msgid "Salamanders"
+msgstr "Salamandras"
+
+msgid "Sapient Inhabitants"
+msgstr "Habitantes Sapientes"
+
+msgid "Sapient Inhabitants:"
+msgstr "Habitantes Sapientes:"
 
 msgid "Scavenger"
 msgstr "Catador"
@@ -633,8 +1077,32 @@ msgstr "Tribo Skeldunga"
 msgid "Skilled Miner"
 msgstr "Mineiro Proficiente"
 
+msgid "Slasher"
+msgstr "Cortador"
+
+msgid "Sloths"
+msgstr "Bichos-Preguiça"
+
+msgid "Slugs"
+msgstr "Lesmas"
+
 msgid "Smithy"
 msgstr "Ferraria"
+
+msgid "Snail"
+msgstr "Caracól"
+
+msgid "Snails"
+msgstr "Caracóis"
+
+msgid "Snake"
+msgstr "Cobra"
+
+msgid "Snakes"
+msgstr "Cobras"
+
+msgid "Songbirds"
+msgstr "Passaros Cantores"
 
 msgid "Spearman"
 msgstr "Lanceiro"
@@ -644,6 +1112,12 @@ msgstr "Velocidade"
 
 msgid "Speed:"
 msgstr "Veloc.:"
+
+msgid "Squirrel"
+msgstr "Esquilo"
+
+msgid "Squirrels"
+msgstr "Esquilos"
 
 msgid "Stables"
 msgstr "Estábulos"
@@ -669,6 +1143,9 @@ msgstr "Forte"
 msgid "Stronghold"
 msgstr "Forte"
 
+msgid "Succubuses"
+msgstr "Súcubos"
+
 msgid "Suebi"
 msgstr "Suevo"
 
@@ -681,8 +1158,20 @@ msgstr "Mercenários Surghan"
 msgid "Swordsman"
 msgstr "Espadachim"
 
+msgid "Sylphs"
+msgstr "Sílfides"
+
+msgid "Tartarus"
+msgstr "Tártaro"
+
 msgid "Teal"
 msgstr "Verde-Azulado"
+
+msgid "~!Technologies"
+msgstr "~!Tecnologias"
+
+msgid "Technologies"
+msgstr "Tecnologias"
 
 msgid "Teuton"
 msgstr "Teutão"
@@ -692,6 +1181,12 @@ msgstr "Teutônico"
 
 msgid "Teutonic Units"
 msgstr "Unidades Teutônicas"
+
+msgid "Te~!xts"
+msgstr "Te~!xtos"
+
+msgid "Texts"
+msgstr "Textos"
 
 msgid "The Scepter of Fire"
 msgstr "O Cetro de Fogo"
@@ -704,6 +1199,9 @@ msgstr "Bandido"
 
 msgid "Thunderer"
 msgstr "Bota-Trovão"
+
+msgid "Tortoises"
+msgstr "Cágados"
 
 msgid "Town Hall"
 msgstr "Prefeitura"
@@ -723,6 +1221,15 @@ msgstr "Transporte"
 msgid "Unicorn"
 msgstr "Unicórnio"
 
+msgid "Unicorns"
+msgstr "Unicórnios"
+
+msgid "U~!niques"
+msgstr "Ú~!nicos"
+
+msgid "Uniques"
+msgstr "Únicos"
+
 msgid "~<Units:~>"
 msgstr "~<Unidades:~>"
 
@@ -731,6 +1238,12 @@ msgstr "~!Unidades"
 
 msgid "Units"
 msgstr "Unidades"
+
+msgid "Valkyries"
+msgstr "Valquírias"
+
+msgid "Veteran Legionary"
+msgstr "Legionário Veterano"
 
 msgid "Veteran Swordsman"
 msgstr "Espadachim Veterano"
@@ -756,8 +1269,14 @@ msgstr "Máquina de Guerra"
 msgid "Watch Tower"
 msgstr "Torre de Vigia"
 
+msgid "Water Elementals"
+msgstr "Elementais da Água"
+
 msgid "Weak"
 msgstr "Fraco"
+
+msgid "Weasels"
+msgstr "Doninhas"
 
 msgid "White"
 msgstr "Branco"
@@ -768,14 +1287,35 @@ msgstr "Testemunha"
 msgid "Wolf"
 msgstr "Lobo"
 
+msgid "Wolves"
+msgstr "Lobos"
+
+msgid "Wombats"
+msgstr "Vombates"
+
 msgid "Worker"
 msgstr "Trabalhador"
+
+msgid "~!Worlds"
+msgstr "Mundos (~!W)"
+
+msgid "Worlds"
+msgstr "Mundos"
+
+msgid "Worm"
+msgstr "Minhoca"
+
+msgid "Worms"
+msgstr "Minhocas"
 
 msgid "Wyrm"
 msgstr "Vorme"
 
+msgid "Wyrms"
+msgstr "Vormes"
+
 msgid "Yale Lord"
-msgstr "Senhor dos Yales"
+msgstr "Senhor Cavaleiro de Yale"
 
 msgid "Yale Rider"
 msgstr "Cavaleiro de Yale"
