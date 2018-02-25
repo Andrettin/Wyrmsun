@@ -39,6 +39,12 @@ msgstr "Tarde"
 msgid "~<ALT~>-click to defend a unit"
 msgstr "~<ALT~>-clique para defender uma unidade"
 
+msgid "Arcanister"
+msgstr "Arcanista"
+
+msgid "Archer"
+msgstr "Arqueiro"
+
 msgid "Armor"
 msgstr "Armadura"
 
@@ -54,6 +60,15 @@ msgstr "~!Atacar"
 msgid "Axefighter"
 msgstr "Machadeiro"
 
+msgid "Ballista"
+msgstr "Balista"
+
+msgid "Ballista Warship"
+msgstr "Navio de Guerra de Balista"
+
+msgid "Barbarian"
+msgstr "Bárbaro"
+
 msgid "Barracks"
 msgstr "Quartel"
 
@@ -62,6 +77,12 @@ msgstr "Preto"
 
 msgid "Blue"
 msgstr "Azul"
+
+msgid "Boar"
+msgstr "Javali"
+
+msgid "Brising Clan"
+msgstr "Clã Brising"
 
 msgid "Brown"
 msgstr "Marrom"
@@ -99,6 +120,9 @@ msgstr "~!Cancelar"
 msgid "Cancel (~<Esc~>)"
 msgstr "Cancelar (~<Esc~>)"
 
+msgid "Caravan"
+msgstr "Caravana"
+
 msgid "Carpenter's Shop"
 msgstr "Oficina de Carpinteiro"
 
@@ -117,6 +141,9 @@ msgstr "Escolha sua Facção"
 msgid "Class:"
 msgstr "Classe:"
 
+msgid "Cleric"
+msgstr "Clérigo"
+
 msgid "Click on an empty space to attack-move"
 msgstr "Clique em um espaço vazio para atacar-mover"
 
@@ -134,6 +161,9 @@ msgstr "Mina de Cobre"
 
 msgid "~!Continue"
 msgstr "~!Continuar"
+
+msgid "Cred~!its"
+msgstr "Créd~!itos"
 
 msgid "~<CTRL~>-click to stand ground after moving"
 msgstr "~<CTRL~>-clique para defender terreno após mover"
@@ -165,17 +195,26 @@ msgstr "Cor Padrão:"
 msgid "Deity"
 msgstr "Divindade"
 
+msgid "Derro Tribe"
+msgstr "Tribo Derro"
+
 msgid "Dim"
 msgstr "Burro"
 
 msgid "Dock"
 msgstr "Doca"
 
+msgid "Duelist"
+msgstr "Duelista"
+
 msgid "Dusk"
 msgstr "Pôr do Sol"
 
 msgid "Dwarf"
 msgstr "Anão"
+
+msgid "Dwarven Units"
+msgstr "Unidades Anãs"
 
 msgid "Early Night"
 msgstr "Noite"
@@ -188,6 +227,21 @@ msgstr "Efeitos:"
 
 msgid "En~!cyclopedia"
 msgstr "En~!ciclopédia"
+
+msgid "Encyclopedia"
+msgstr "Enciclopédia"
+
+msgid "Executioner"
+msgstr "Carrasco"
+
+msgid "Expert Miner"
+msgstr "Mineiro Perito"
+
+msgid "Explorer"
+msgstr "Explorador"
+
+msgid "Ettin Units"
+msgstr "Unidades Ettins"
 
 msgid "Evasion"
 msgstr "Evasão"
@@ -225,11 +279,32 @@ msgstr "Forja"
 msgid "Fortress"
 msgstr "Fortaleza"
 
+msgid "Frankish"
+msgstr "Franco"
+
+msgid "Frankish Units"
+msgstr "Unidades Francas"
+
 msgid "Fugla Forge"
 msgstr "Forja Fugla"
 
+msgid "General Units"
+msgstr "Unidades Gerais"
+
+msgid "Germanic"
+msgstr "Germânico"
+
+msgid "Germanic Units"
+msgstr "Unidades Germânicas"
+
 msgid "Glyph"
 msgstr "Glifo"
+
+msgid "Gnome"
+msgstr "Gnomo"
+
+msgid "Gnomish"
+msgstr "Gnomo"
 
 msgid "Gnomish Caravan"
 msgstr "Caravana Gnoma"
@@ -237,14 +312,35 @@ msgstr "Caravana Gnoma"
 msgid "Gnomish Recruit"
 msgstr "Recruta Gnomo"
 
+msgid "Gnomish Units"
+msgstr "Unidades Gnomas"
+
+msgid "Goat"
+msgstr "Bode"
+
+msgid "Goblin Units"
+msgstr "Unidades Goblins"
+
 msgid "Gold"
 msgstr "Ouro"
 
 msgid "Gold:"
 msgstr "Ouro:"
 
+msgid "Goldhoof Clan"
+msgstr "Clã Casco-de-Ouro"
+
 msgid "Gold Mine"
 msgstr "Mina de Ouro"
+
+msgid "Goth"
+msgstr "Godo"
+
+msgid "Gothic"
+msgstr "Gótico"
+
+msgid "Gothic Units"
+msgstr "Unidades Góticas"
 
 msgid "~!Grand Strategy Game"
 msgstr "Jogo de ~!Grande Estratégia"
@@ -255,11 +351,29 @@ msgstr "Cinza"
 msgid "Green"
 msgstr "Verde"
 
+msgid "Gryphon"
+msgstr "Grifo"
+
+msgid "Gryphon Rider"
+msgstr "Cavaleiro de Grifo"
+
+msgid "Guard"
+msgstr "Guarda"
+
 msgid "Guard Tower"
 msgstr "Torre de Guarda"
 
+msgid "Gunpowder Infantry"
+msgstr "Infantaria de Pólvora"
+
 msgid "~!Harvest Resource"
 msgstr "Coletar Recurso (~!H)"
+
+msgid "Headhunter"
+msgstr "Caçador de Cabeças"
+
+msgid "Herbalist"
+msgstr "Herbalista"
 
 msgid "Herminone Tribe"
 msgstr "Tribo Herminona"
@@ -270,6 +384,12 @@ msgstr "Vida"
 msgid "Hit Points:"
 msgstr "Vida:"
 
+msgid "Horse"
+msgstr "Cavalo"
+
+msgid "Impaler"
+msgstr "Impalador"
+
 msgid "Ingaevone Tribe"
 msgstr "Tribo Ingaevona"
 
@@ -279,8 +399,23 @@ msgstr "Inteligente"
 msgid "Istaevone Tribe"
 msgstr "Tribo Istaevona"
 
+msgid "Knight"
+msgstr "Cavaleiro"
+
+msgid "Knight Lord"
+msgstr "Senhor Cavaleiro"
+
+msgid "Kobold Units"
+msgstr "Unidades Kobolds"
+
 msgid "Late Night"
 msgstr "Madrugada"
+
+msgid "Latin"
+msgstr "Latino"
+
+msgid "Latin Units"
+msgstr "Unidades Latinas"
 
 msgid "Left-click to center"
 msgstr "Clique com o botão esquerdo do mouse para centralizar"
@@ -318,8 +453,17 @@ msgstr "Madeira:"
 msgid "Lumber Mill"
 msgstr "Serraria"
 
+msgid "Magnate"
+msgstr "Magnata"
+
 msgid "Map ~!Editor"
 msgstr "~!Editor de Mapas"
+
+msgid "Master at Arms"
+msgstr "Mestre de Armas"
+
+msgid "Master-at-Arms"
+msgstr "Mestre de Armas"
 
 msgid "Mead Hall"
 msgstr "Salão de Hidromel"
@@ -332,6 +476,12 @@ msgstr "Clique com o botão do meio do mouse para acompanhar"
 
 msgid "Midnight"
 msgstr "Meia-Noite"
+
+msgid "Militia"
+msgstr "Milícia"
+
+msgid "Minecart"
+msgstr "Carro de Mina"
 
 msgid "Miner"
 msgstr "Mineiro"
@@ -354,6 +504,12 @@ msgstr "Fazenda de Cogumelos"
 msgid "~!New Map"
 msgstr "~!Novo Mapa"
 
+msgid "Norse"
+msgstr "Nórdico"
+
+msgid "Norse Units"
+msgstr "Unidades Nórdicas"
+
 msgid "Old"
 msgstr "Velho"
 
@@ -363,11 +519,17 @@ msgstr "~!Opções"
 msgid "Orange"
 msgstr "Laranja"
 
+msgid "Pathfinder"
+msgstr "Desbravador"
+
 msgid "Pink"
 msgstr "Rosa"
 
 msgid "Pious"
 msgstr "Pio"
+
+msgid "Glider"
+msgstr "Planador"
 
 msgid "~!Previous Menu"
 msgstr "Menu Anterior (~!P)"
@@ -393,6 +555,9 @@ msgstr "Alcance:"
 msgid "Rat"
 msgstr "Rato"
 
+msgid "Recruit"
+msgstr "Recruta"
+
 msgid "Red"
 msgstr "Vermelho"
 
@@ -405,6 +570,18 @@ msgstr "~!Rever Jogo"
 msgid "Right-click to see encyclopedia"
 msgstr "Clique com o botão direito do mouse para ver a enciclopédia"
 
+msgid "Runemaster"
+msgstr "Mestre de Runas"
+
+msgid "Runesmith"
+msgstr "Ferreiro de Runas"
+
+msgid "Scavenger"
+msgstr "Catador"
+
+msgid "Scout"
+msgstr "Batedor"
+
 msgid "Select Map"
 msgstr "Selecionar Mapa"
 
@@ -414,8 +591,20 @@ msgstr "~!Selecionar Mapa"
 msgid "S~!elect Map"
 msgstr "S~!elecionar Mapa"
 
+msgid "Sentry Tower"
+msgstr "Torre de Sentinela"
+
 msgid "Set ~!Rally Point"
 msgstr "Colocar Ponto de Encont~!ro"
+
+msgid "Shadowguard"
+msgstr "Guarda das Sombras"
+
+msgid "Shadowstalker"
+msgstr "Perseguidor das Sombras"
+
+msgid "Shaman"
+msgstr "Xamã"
 
 msgid "~<SHIFT~>-click to make waypoints"
 msgstr "~<SHIFT~>-clique para fazer waypoints"
@@ -441,8 +630,14 @@ msgstr "Jogo de Um Jogador (~!S)"
 msgid "Skeldung Tribe"
 msgstr "Tribo Skeldunga"
 
+msgid "Skilled Miner"
+msgstr "Mineiro Proficiente"
+
 msgid "Smithy"
 msgstr "Ferraria"
+
+msgid "Spearman"
+msgstr "Lanceiro"
 
 msgid "Speed"
 msgstr "Velocidade"
@@ -453,11 +648,17 @@ msgstr "Veloc.:"
 msgid "Stables"
 msgstr "Estábulos"
 
+msgid "Steelclad"
+msgstr "Encouraçado"
+
 msgid "Stone"
 msgstr "Pedra"
 
 msgid "Stone:"
 msgstr "Pedra:"
+
+msgid "Stonelord"
+msgstr "Senhor da Pedra"
 
 msgid "~!Stop"
 msgstr "Parar (~!S)"
@@ -468,11 +669,41 @@ msgstr "Forte"
 msgid "Stronghold"
 msgstr "Forte"
 
+msgid "Suebi"
+msgstr "Suevo"
+
+msgid "Suebi Units"
+msgstr "Unidades Suevas"
+
+msgid "Surghan Mercenaries"
+msgstr "Mercenários Surghan"
+
+msgid "Swordsman"
+msgstr "Espadachim"
+
 msgid "Teal"
 msgstr "Verde-Azulado"
 
+msgid "Teuton"
+msgstr "Teutão"
+
+msgid "Teutonic"
+msgstr "Teutônico"
+
+msgid "Teutonic Units"
+msgstr "Unidades Teutônicas"
+
 msgid "The Scepter of Fire"
 msgstr "O Cetro de Fogo"
+
+msgid "Thief"
+msgstr "Ladrão"
+
+msgid "Thug"
+msgstr "Bandido"
+
+msgid "Thunderer"
+msgstr "Bota-Trovão"
 
 msgid "Town Hall"
 msgstr "Prefeitura"
@@ -486,11 +717,23 @@ msgstr "Característica"
 msgid "Trait:"
 msgstr "Carac.:"
 
+msgid "Transport"
+msgstr "Transporte"
+
 msgid "Unicorn"
 msgstr "Unicórnio"
 
 msgid "~<Units:~>"
 msgstr "~<Unidades:~>"
+
+msgid "~!Units"
+msgstr "~!Unidades"
+
+msgid "Units"
+msgstr "Unidades"
+
+msgid "Veteran Swordsman"
+msgstr "Espadachim Veterano"
 
 msgid "Violet"
 msgstr "Violeta"
@@ -504,6 +747,9 @@ msgstr "Salão de Guerra"
 msgid "War Lodge"
 msgstr "Alojamento de Guerra"
 
+msgid "Warlord"
+msgstr "Senhor da Guerra"
+
 msgid "War Machine"
 msgstr "Máquina de Guerra"
 
@@ -516,8 +762,23 @@ msgstr "Fraco"
 msgid "White"
 msgstr "Branco"
 
+msgid "Witness"
+msgstr "Testemunha"
+
+msgid "Wolf"
+msgstr "Lobo"
+
 msgid "Worker"
 msgstr "Trabalhador"
+
+msgid "Wyrm"
+msgstr "Vorme"
+
+msgid "Yale Lord"
+msgstr "Senhor dos Yales"
+
+msgid "Yale Rider"
+msgstr "Cavaleiro de Yale"
 
 msgid "Yellow"
 msgstr "Amarelo"

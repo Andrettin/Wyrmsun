@@ -248,7 +248,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 	end
 
 	if (state == "units") then
-		menu:addLabel("~<Encyclopedia: Units~>", offx + 320, offy + 104 + 36*-2)
+		menu:addLabel("~<" .. _("Encyclopedia") .. ": " .. _("Units") .. "~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "buildings") then
 		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "technologies") then
@@ -468,7 +468,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
-		tooltip_name = GetUnitTypeData(unit_name, "Name")
+		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
 		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
@@ -632,7 +632,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
-		tooltip_name = GetUnitTypeData(unit_name, "Name")
+		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
 		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
@@ -738,19 +738,19 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local background = ""
 	if (string.find(unit_name, "unit") ~= nil) then
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "" and GetUnitTypeData(unit_name, "Civilization") ~= "neutral") then
-			civilization = "Civilization: " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
+			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetUnitTypeData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = _("Faction:") .. " " .. _(GetFactionData(GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetUnitTypeData(unit_name, "Class") ~= "") then
-			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class:") .. " " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Description") ~= "") then
-			description = "Description: " .. GetUnitTypeData(unit_name, "Description") .. "\n\n"
+			description = _("Description:") .. " " .. _(GetUnitTypeData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
-			quote = "Quote: " .. GetUnitTypeData(unit_name, "Quote") .. "\n\n"
+			quote = _("Quote:") .. " " .. _(GetUnitTypeData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Item") == false and GetUnitTypeStatsString(unit_name) ~= "") then
 			local costs_string = ""
@@ -775,34 +775,34 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				costs_string = costs_string .. GetUnitTypeData(unit_name, "Demand") .. " Food"
 			end
 			if (costs_string ~= "") then
-				effects = "Costs: " .. costs_string .. ".\n\n"
+				effects = _("Costs:") .. " " .. costs_string .. ".\n\n"
 			end
-			effects = effects .. "Stats: " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
+			effects = effects .. _("Stats:") .. " " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
 		elseif (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
-			effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
+			effects = _("Effects:") .. " " .. GetItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Background") ~= "") then
-			background = "Background: " .. GetUnitTypeData(unit_name, "Background") .. "\n\n"
+			background = _("Background:") .. " " .. _(GetUnitTypeData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (GetUpgradeData(unit_name, "Civilization") ~= "" and GetUpgradeData(unit_name, "Civilization") ~= "neutral") then
-			civilization = "Civilization: " .. GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display") .. "\n\n"
+			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetUpgradeData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = _("Faction:") .. " " .. _(GetFactionData(GetUpgradeData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetUpgradeData(unit_name, "Class") ~= "") then
-			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class:") .. " " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Description ~= "") then
-			description = "Description: " .. CUpgrade:Get(unit_name).Description .. "\n\n"
+			description = _("Description:") .. " " .. _(CUpgrade:Get(unit_name).Description) .. "\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Quote ~= "") then
-			quote = "Quote: " .. CUpgrade:Get(unit_name).Quote .. "\n\n"
+			quote = _("Quote:") .. " " .. _(CUpgrade:Get(unit_name).Quote) .. "\n\n"
 		end
 		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-			effects = "Effects: " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
-			applies_to = "Available For: "
+			effects = _("Effects:") .. " " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
+			applies_to = _("Available For:") .. " "
 			local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
 			table.sort(applies_to_items)
 			for i=1,table.getn(applies_to_items) do
@@ -823,46 +823,47 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			applies_to = applies_to .. ".\n\n"
 		end
 		if (CUpgrade:Get(unit_name).Background ~= "") then
-			background = "Background: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
+			background = _("Background:") .. " " .. _(CUpgrade:Get(unit_name).Background) .. "\n\n"
 		end
 	elseif (state == "heroes") then
 		if (GetCharacterData(unit_name, "Civilization") ~= "") then
-			civilization = "Civilization: " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
+			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetCharacterData(unit_name, "Faction") ~= "") then
-				faction = "Faction: " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
+				faction = _("Faction:") .. " " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
 			end
 		end
 		if (GetCharacterData(unit_name, "Type") ~= "") then
-			unit_type_type = "Type: " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
+			unit_type_type = _("Type:") .. " " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = "Description: " .. GetCharacterData(unit_name, "Description") .. "\n\n"
+			description = _("Description:") .. " " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Quote") ~= "") then
-			quote = "Quote: " .. GetCharacterData(unit_name, "Quote") .. "\n\n"
+			quote = _("Quote:") .. " " .. _(GetCharacterData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Background") ~= "") then
-			background = "Background: " .. GetCharacterData(unit_name, "Background") .. "\n\n"
+			background = _("Background:") .. " " .. _(GetCharacterData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "deities") then
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
-			description = description .. "Pantheon: " .. GetDeityData(unit_name, "Pantheon") .. "\n\n"
+			description = description .. _("Pantheon:") .. " " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "HomePlane") ~= "") then
-			description = description .. "Home Plane: " .. GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name") .. "\n\n"
+			description = description .. _("Home Plane:") .. " " .. _(GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name")) .. "\n\n"
 		end
+		description = description .. _("Rank:") .. " "
 		if (GetDeityData(unit_name, "Major")) then
-			description = description .. "Rank: Major\n\n"
+			description = description .. _("Major") .. "\n\n"
 		else
-			description = description .. "Rank: Minor\n\n"
+			description = description .. _("Minor") .. "\n\n"
 		end
 		
 		local domains = GetDeityData(unit_name, "Domains")
 		table.sort(domains)
 		if (table.getn(domains) > 0) then
-			description = description .. "Portfolio: "
+			description = description .. _("Portfolio:") .. " "
 			for i=1,table.getn(domains) do
-				description = description .. GetDeityDomainData(domains[i], "Name")
+				description = description .. _(GetDeityDomainData(domains[i], "Name"))
 				if (i < table.getn(domains)) then
 					description = description .. ", "
 				end
@@ -873,9 +874,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local civilizations = GetDeityData(unit_name, "Civilizations")
 		table.sort(civilizations)
 		if (table.getn(civilizations) > 0) then
-			description = description .. "Civilizations: "
+			description = description .. _("Civilizations:") .. " "
 			for i=1,table.getn(civilizations) do
-				description = description .. GetCivilizationData(civilizations[i], "Display")
+				description = description .. _(GetCivilizationData(civilizations[i], "Display"))
 				if (i < table.getn(civilizations)) then
 					description = description .. ", "
 				end
@@ -891,9 +892,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		table.sort(alternate_names)
 		if (table.getn(alternate_names) > 0) then
-			description = description .. "Alternate Names: "
+			description = description .. _("Alternate Names:") .. " "
 			for i=1,table.getn(alternate_names) do
-				description = description .. alternate_names[i]
+				description = description .. _(alternate_names[i])
 				if (i < table.getn(alternate_names)) then
 					description = description .. ", "
 				end
@@ -904,9 +905,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local abilities = GetDeityData(unit_name, "Abilities")
 		table.sort(abilities)
 		if (table.getn(abilities) > 0) then
-			description = description .. "Spells: "
+			description = description .. _("Spells:") .. " "
 			for i=1,table.getn(abilities) do
-				description = description .. GetUpgradeData(abilities[i], "Name")
+				description = description .. _(GetUpgradeData(abilities[i], "Name"))
 				if (i < table.getn(abilities)) then
 					description = description .. ", "
 				end
@@ -915,40 +916,40 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		
 		if (GetDeityData(unit_name, "Description") ~= "") then
-			description = description .. "Description: " .. GetDeityData(unit_name, "Description") .. "\n\n"
+			description = description .. _("Description:") .. " " .. _(GetDeityData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "Quote") ~= "") then
-			quote = "Quote: " .. GetDeityData(unit_name, "Quote") .. "\n\n"
+			quote = _("Quote:") .. " " .. _(GetDeityData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetDeityData(unit_name, "Background") ~= "") then
-			background = "Background: " .. GetDeityData(unit_name, "Background") .. "\n\n"
+			background = _("Background:") .. " " .. _(GetDeityData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "unique_items") then
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
-			unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
+			unit_type_type = _("Type:") .. " " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Set") ~= "") then
-			unit_type_type = unit_type_type .. "Set: " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
+			unit_type_type = unit_type_type .. _("Set:") .. " " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Description") ~= "") then
-			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
+			description = _("Description:") .. " " .. _(GetUniqueItemData(unit_name, "Description")) .. "\n\n"
 			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") ~= "") then
-				description = description .. GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") .. "\n\n"
+				description = description .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description")) .. "\n\n"
 			end
 		end
 		if (GetUniqueItemData(unit_name, "MagicLevel") > 0) then
-			effects = "Magic Level: " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
+			effects = _("Magic Level:") .. " " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
 		end
 		if (GetUniqueItemEffectsString(unit_name) ~= "") then
-			effects = effects .. "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
+			effects = effects .. _("Effects:") .. " " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
-			quote = "Quote: " .. GetUniqueItemData(unit_name, "Quote") .. "\n\n"
+			quote = _("Quote:") .. " " .. _(GetUniqueItemData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (GetUniqueItemData(unit_name, "Background") ~= "") then
-			background = "Background: " .. GetUniqueItemData(unit_name, "Background") .. "\n\n"
+			background = _("Background:") .. " " .. _(GetUniqueItemData(unit_name, "Background")) .. "\n\n"
 			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") ~= "") then
-				background = background .. GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") .. "\n\n"
+				background = background .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background")) .. "\n\n"
 			end
 		end
 	end
