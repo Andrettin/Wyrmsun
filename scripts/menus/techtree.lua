@@ -43,7 +43,8 @@ function RunTechTreeMenu(civilization_number)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	local civilization_dd
-	local civilization_list = GetAvailableCivilizationsTechTree()
+	local civilization_ident_list = GetAvailableCivilizationIdentsTechTree()
+	local civilization_list = GetAvailableCivilizationNamesTechTree()
 --	local button_quantity = 0
 
 	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
@@ -52,8 +53,7 @@ function RunTechTreeMenu(civilization_number)
 	civilization_dd:setSelected(civilization_number)
 	civilization_dd:setSize(152, 20)
 
-	local civilization = string.gsub(civilization_list[civilization_number + 1], "Human %- ", "")
-	civilization = string.lower(civilization)
+	local civilization = civilization_ident_list[civilization_number + 1]
 
 	if (RunningScenario == false) then
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -320,24 +320,43 @@ function RunTechTreeMenu(civilization_number)
 	menu:run()
 end
 
-function GetAvailableCivilizationsTechTree()
+function GetAvailableCivilizationIdentsTechTree()
+	local function compare_civilization(a, b)
+		if (GetCivilizationData(a, "Species") ~= GetCivilizationData(b, "Species")) then
+			return GetCivilizationData(a, "Species") < GetCivilizationData(b, "Species")
+		else
+			return a < b
+		end
+	end
+	
 	local civilization_list = {}
 	
 	local civilizations = GetCivilizations()
 	for i=1,table.getn(civilizations) do
 		if (GetCivilizationData(civilizations[i], "Playable")) then
-			local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
-			local playable_civilization = GetCivilizationData(civilizations[i], "Display")
-			if (playable_civilization_species ~= playable_civilization) then
-				table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
-			else
-				table.insert(civilization_list, _(playable_civilization))
-			end
+			table.insert(civilization_list, civilizations[i])
 		end
 	end
 	
-	table.sort(civilization_list)
+	table.sort(civilization_list, compare_civilization)
 
+	return civilization_list
+end
+
+function GetAvailableCivilizationNamesTechTree()
+	local civilization_list = {}
+	
+	local civilizations = GetAvailableCivilizationIdentsTechTree()
+	for i=1,table.getn(civilizations) do
+		local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
+		local playable_civilization = GetCivilizationData(civilizations[i], "Display")
+		if (GetCivilizationData(civilizations[i], "Species") ~= civilizations[i]) then -- if the civilization isn't named after the species, show the species in the name
+			table.insert(civilization_list, _(playable_civilization_species) .. " - " .. _(playable_civilization))
+		else
+			table.insert(civilization_list, _(playable_civilization))
+		end
+	end
+	
 	return civilization_list
 end
 

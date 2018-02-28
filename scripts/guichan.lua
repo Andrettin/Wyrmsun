@@ -975,6 +975,7 @@ function RunSinglePlayerCustomGameMenu()
 
 	-- create the scenario and faction lists
 	local scenario_list = {}
+	local civilization_ident_list = {"Map Default"}
 	local civilization_list = {_("Map Default")}
 	local faction_ident_list = {"Map Default"}
 	local faction_list = {_("Map Default")}
@@ -1056,10 +1057,8 @@ function RunSinglePlayerCustomGameMenu()
 					end
 				end
 			end
-			if (civilization_list[race:getSelected() + 1] ~= _("Map Default")) then
-				local chosen_civilization = civilization_list[race:getSelected() + 1]
-				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-				chosen_civilization = string.lower(chosen_civilization)
+			if (civilization_ident_list[race:getSelected() + 1] ~= "Map Default") then
+				local chosen_civilization = civilization_ident_list[race:getSelected() + 1]
 				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
 			end
 			GameSettings.Resources = resources:getSelected()
@@ -1232,9 +1231,7 @@ function RunSinglePlayerCustomGameMenu()
 		faction_ident_list = {"Map Default"}
 		faction_list = {_("Map Default")}
 		
-		local new_civilization = civilization_list[race:getSelected() + 1]
-		new_civilization = string.gsub(new_civilization, "Human %- ", "")
-		new_civilization = string.lower(new_civilization)
+		local new_civilization = civilization_ident_list[race:getSelected() + 1]
 		
 		if (race:getSelected() > 0) then
 			for i=1,table.getn(GetFactions(new_civilization)) do
@@ -1294,6 +1291,15 @@ function RunSinglePlayerCustomGameMenu()
 	end
 
 	function BuildCivilizationList()
+		local function compare_civilization(a, b)
+			if (GetCivilizationData(a, "Species") ~= GetCivilizationData(b, "Species")) then
+				return GetCivilizationData(a, "Species") < GetCivilizationData(b, "Species")
+			else
+				return a < b
+			end
+		end
+	
+		civilization_ident_list = {}
 		civilization_list = {}
 		
 		local civilizations = GetCivilizations()
@@ -1310,18 +1316,23 @@ function RunSinglePlayerCustomGameMenu()
 					and (civilizations[i] ~= "dutch" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
 					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
 				) then
-					local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
-					local playable_civilization = GetCivilizationData(civilizations[i], "Display")
-					if (playable_civilization_species ~= playable_civilization) then
-						table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
-					else
-						table.insert(civilization_list, _(playable_civilization))
-					end
+					table.insert(civilization_ident_list, civilizations[i])
 				end
 			end
 		end
 		
-		table.sort(civilization_list)
+		table.sort(civilization_ident_list, compare_civilization)
+		for i=1,table.getn(civilization_ident_list) do
+			local playable_civilization_species = CapitalizeString(GetCivilizationData(civilization_ident_list[i], "Species"))
+			local playable_civilization = GetCivilizationData(civilization_ident_list[i], "Display")
+			if (playable_civilization_species ~= playable_civilization) then
+				table.insert(civilization_list, _(playable_civilization_species) .. " - " .. _(playable_civilization))
+			else
+				table.insert(civilization_list, _(playable_civilization))
+			end
+		end
+		
+		table.insert(civilization_ident_list, 1, "Map Default")
 		table.insert(civilization_list, 1, _("Map Default"))
 		
 		
