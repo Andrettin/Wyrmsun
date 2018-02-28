@@ -1,14 +1,14 @@
 function RunHelpMenu()
   local menu = WarGameMenu(panel(1))
 
-  menu:addLabel("Help Menu", 128, 11)
+  menu:addLabel(_("Help Menu"), 128, 11)
   menu:addFullButton(_("En~!cyclopedia"), "c", 16, 40 + 36*0,
     function() RunEncyclopediaMenu() end)
-  menu:addFullButton("~!Hotkeys", "h", 16, 40 + 36*1,
+  menu:addFullButton(_("~!Hotkeys"), "h", 16, 40 + 36*1,
     function() RunKeystrokeHelpMenu() end)
 --  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
 --    function() RunTipsMenu() end)
-  menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 128 - (224 / 2), 248,
+  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 128 - (224 / 2), 248,
     function() menu:stop() end)
 
   menu:run(false)
@@ -88,8 +88,8 @@ function RunKeystrokeHelpMenu()
   s:setContent(c)
   menu:add(s, 16, 60)
 
-  menu:addLabel("Hotkey Menu", 352 / 2, 11)
-  menu:addFullButton("Previous Menu (~<Esc~>)", "escape",
+  menu:addLabel(_("Hotkey Menu"), 352 / 2, 11)
+  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape",
     (352 / 2) - (224 / 2), 352 - 40, function() menu:stop() end)
 
   menu:run(false)
@@ -167,7 +167,7 @@ function RunTipsMenu()
   local menu = WarGameMenu(panel(2))
   menu:resize(288, 256)
 
-  menu:addLabel("Tips", 144, 11)
+  menu:addLabel(_("Tips"), 144, 11)
 
   local l = MultiLineLabel()
   l:setFont(Fonts["game"])
@@ -199,16 +199,16 @@ function RunTipsMenu()
   l:updateCaption()
 
   local showtips = {}
-  showtips = menu:addImageCheckBox("Show tips when starting", 14, 256 - 75,
+  showtips = menu:addImageCheckBox(_("Show tips when starting"), 14, 256 - 75,
     function()
       wyr.preferences.ShowTips = showtips:isMarked()
       SavePreferences()
     end)
   showtips:setMarked(wyr.preferences.ShowTips)
 
-  menu:addHalfButton("~!Next Tip", "n", 14, 256 - 40,
+  menu:addHalfButton(_("~!Next Tip"), "n", 14, 256 - 40,
     function() l:nextTip(); l:updateCaption() end)
-  menu:addHalfButton("~!Close", "c", 168, 256 - 40,
+  menu:addHalfButton(_("~!Close"), "c", 168, 256 - 40,
     function() l:nextTip(); menu:stop() end)
 
   menu:run(false)

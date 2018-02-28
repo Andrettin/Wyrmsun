@@ -113,7 +113,7 @@ function RunCampaignMenu()
 	end
 	
 	local function UpdateCampaignDescription()
-			faction_name = "Faction: " .. GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name") .. " (" .. GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display") .. ")"
+			faction_name = _("Faction:").. " " .. GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name") .. " (" .. GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display") .. ")"
 	
 			highest_completed_difficulty = "Highest Completed Difficulty: "
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyEasy) then
@@ -128,7 +128,7 @@ function RunCampaignMenu()
 				highest_completed_difficulty = highest_completed_difficulty .. "None"
 			end
 			
-			campaign_description:setCaption(faction_name .. "\n\n" .. "Description: " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
+			campaign_description:setCaption(faction_name .. "\n\n" .. _("Description: ") .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
 	end
 	

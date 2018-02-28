@@ -166,7 +166,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	hero_civilization:setSelected(0)
 	CivilizationChanged()
 	
-	menu:addHalfButton("Crea~!te", "t", 20 + 48, 352 - 40 * 2,
+	menu:addHalfButton(_("Crea~!te"), "t", 20 + 48, 352 - 40 * 2,
 		function()
 			local hero_ident = hero_name:getText()
 			if (hero_family_name:getText() ~= "") then
@@ -201,12 +201,12 @@ function CustomHeroCreationMenu(world, quest_menu)
 			end
 		end
 	)
-	menu:addHalfButton("New ~!Name", "n", 130 + 48, 352 - 40 * 2,
+	menu:addHalfButton(_("New ~!Name"), "n", 130 + 48, 352 - 40 * 2,
 		function()
 			GenerateNewHeroName()
 		end
 	)
-	menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), 352 - 40 * 1,
+	menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), 352 - 40 * 1,
 		function()
 			menu:stop()
 		end

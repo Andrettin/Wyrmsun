@@ -74,9 +74,9 @@ function addAchievementIcon(achievement, menu, x, y)
 		function()
 			PlaySound("click")
 			local achievement_menu = WarGameMenu(panel(2))
-			achievement_menu:setSize(288, 256)
+			achievement_menu:setSize(288, 280)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
-			achievement_menu:addLabel(GetAchievementData(achievement, "Name"), (achievement_menu:getWidth() / 2), 11)
+			achievement_menu:addLabel(_(GetAchievementData(achievement, "Name")), (achievement_menu:getWidth() / 2), 11)
 			
 			local achievement_menu_image = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
 			achievement_menu:add(achievement_menu_image, (achievement_menu:getWidth() / 2) - 23, 48)
@@ -94,13 +94,13 @@ function addAchievementIcon(achievement, menu, x, y)
 			l:setLineWidth(achievement_menu:getWidth() - 28)
 			achievement_menu:add(l, 14, 112)
 			
-			local description = GetAchievementData(achievement, "Description")
+			local description = _(GetAchievementData(achievement, "Description"))
 			if (GetAchievementData(achievement, "ProgressMax") > 0) then
-				description = description .. "\n\nProgress: " .. GetAchievementData(achievement, "Progress") .. "/" .. GetAchievementData(achievement, "ProgressMax")
+				description = description .. "\n\n" .. _("Progress:") .. " " .. GetAchievementData(achievement, "Progress") .. "/" .. GetAchievementData(achievement, "ProgressMax")
 			end
 			l:setCaption(description)
 			
-			achievement_menu:addFullButton("~!Close", "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
+			achievement_menu:addFullButton(_("~!Close"), "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
 				function()
 					achievement_menu:stop()
 				end)
@@ -116,6 +116,6 @@ function addAchievementIcon(achievement, menu, x, y)
 	b:setBorderSize(0)
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(GetAchievementData(achievement, "Name"))
+	b:setTooltip(_(GetAchievementData(achievement, "Name")))
 	return b
 end

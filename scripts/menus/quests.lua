@@ -203,10 +203,10 @@ function RunQuestMenu(world)
 
 				confirm:resize(288,128)
 
-				confirm:addLabel("Delete " .. GetCurrentCustomHero(), 288 / 2, 11)
-				confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+				confirm:addLabel(_("Delete ") .. GetCurrentCustomHero(), 288 / 2, 11)
+				confirm:addLabel(_("Are you sure?") .. " This cannot be undone.", 288 / 2, 45, Fonts["game"])
 
-				confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 					function()
 						DeleteCustomHero(GetCurrentCustomHero())
 						confirm:stop()
@@ -214,7 +214,7 @@ function RunQuestMenu(world)
 					end
 				)
 
-				confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
 					function() confirm:stop() end
 				)
 
@@ -262,11 +262,11 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			local quest_description = GetQuestData(quest, "Description")
+			local quest_description = _(GetQuestData(quest, "Description"))
 			l:setCaption(quest_description)
 			
 			if (GetQuestData(quest, "Map") ~= "") then
-				quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
+				quest_menu:addFullButton(_("~!Play Quest"), "p", 176 - (224 / 2), 352 - 40 * 2,
 					function()
 						RunningScenario = true
 						SetCurrentQuest(quest)
@@ -292,7 +292,7 @@ function addQuestIcon(quest, menu, x, y)
 					end
 				)
 			end
-			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
+			quest_menu:addFullButton(_("~!Close"), "c", 176 - (224 / 2), 352 - 40 * 1,
 				function()
 					quest_menu:stop()
 				end
@@ -309,17 +309,17 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	local tooltip = GetQuestData(quest, "Name") .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
+	local tooltip = _(GetQuestData(quest, "Name")) .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
 	if (GetQuestData(quest, "HighestCompletedDifficulty") >= DifficultyEasy) then
 		tooltip = tooltip .. "\nHighest Completed Difficulty: "
 		if (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyEasy) then
-			tooltip = tooltip .. "Easy"
+			tooltip = tooltip .. _("Easy")
 		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyNormal) then
-			tooltip = tooltip .. "Normal"
+			tooltip = tooltip .. _("Normal")
 		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyHard) then
-			tooltip = tooltip .. "Hard"
+			tooltip = tooltip .. _("Hard")
 		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyBrutal) then
-			tooltip = tooltip .. "Brutal"
+			tooltip = tooltip .. _("Brutal")
 		end
 	end
 	b:setTooltip(tooltip)
@@ -361,7 +361,7 @@ function Briefing(quest)
 	menu:add(sw, Video.Width / 2 - (l:getWidth() / 2), 80 * Video.Height / 480)
 
 	if (table.getn(GetQuestData(quest, "Objectives")) > 0) then
-		menu:addLabel("Objectives:", 372 * Video.Width / 640, 306 * Video.Height / 480, Fonts["large"], false)
+		menu:addLabel(_("Objectives:"), 372 * Video.Width / 640, 306 * Video.Height / 480, Fonts["large"], false)
 
 		local objectives = ""
 		table.foreachi(GetQuestData(quest, "Objectives"), function(k,v) objectives = objectives .. v .. "\n" end)

@@ -50,7 +50,7 @@ function ErrorMenu(errmsg)
   menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Error:", 144, 11)
+  menu:addLabel(_("Error:"), 144, 11)
 
   local l = MultiLineLabel(errmsg)
   l:setFont(Fonts["large"])
@@ -75,17 +75,17 @@ function addPlayersList(menu, numplayers)
   local sy = Video.Height / 20
   local numplayers_text
 
-  menu:writeLargeText("Players", sx * 11, sy*3)
+  menu:writeLargeText(_("Players"), sx * 11, sy*3)
   for i=1,8 do
-    players_name[i] = menu:writeText("Player"..i, sx * 11, sy*4 + i*18)
-    players_state[i] = menu:writeText("Preparing", sx * 11 + 80, sy*4 + i*18)
+    players_name[i] = menu:writeText(_("Player")..i, sx * 11, sy*4 + i*18)
+    players_state[i] = menu:writeText(_("Preparing"), sx * 11 + 80, sy*4 + i*18)
   end
-  numplayers_text = menu:writeText("Open slots : " .. numplayers - 1, sx *11, sy*4 + 144)
+  numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144)
 
   local function updatePlayers()
     local connected_players = 0
     local ready_players = 0
-    players_state[1]:setCaption("Creator")
+    players_state[1]:setCaption(_("Creator"))
     players_name[1]:setCaption(Hosts[0].PlyName)
     for i=2,8 do
       if Hosts[i-1].PlyName == "" then
@@ -95,14 +95,14 @@ function addPlayersList(menu, numplayers)
         connected_players = connected_players + 1
         if ServerSetupState.Ready[i-1] == 1 then
           ready_players = ready_players + 1
-          players_state[i]:setCaption("Ready")
+          players_state[i]:setCaption(_("Ready"))
         else
-          players_state[i]:setCaption("Preparing")
+          players_state[i]:setCaption(_("Preparing"))
         end
         players_name[i]:setCaption(Hosts[i-1].PlyName)
      end
     end
-    numplayers_text:setCaption("Open slots : " .. numplayers - 1 - connected_players)
+    numplayers_text:setCaption(_("Open slots") .. " : " .. numplayers - 1 - connected_players)
     numplayers_text:adjustSize()
     return (connected_players > 0 and ready_players == connected_players)
   end
@@ -121,9 +121,9 @@ function RunJoiningMapMenu(s)
 	local d
 
 
-	menu = WarMenu("Joining Game: Map")
+	menu = WarMenu(_("Joining Game: Map"))
 
-	menu:writeLargeText("Map", sx, sy*3)
+	menu:writeLargeText(_("Map"), sx, sy*3)
 	menu:writeText(_("Name:"), sx, sy*3+30)
 	descr = menu:writeText(description, sx+70, sy*3+30)
 	menu:writeText(_("File:"), sx, sy*3+50)
@@ -131,22 +131,22 @@ function RunJoiningMapMenu(s)
 	menu:writeText(_("Players:"), sx, sy*3+70)
 	players = menu:writeText(numplayers, sx+70, sy*3+70)
 
-	local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, function() end)
+	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120, function() end)
 	fow:setMarked(true)
 	ServerSetupState.FogOfWar = 1
 	fow:setEnabled(true)
 	fow:setMarked(int2bool(ServerSetupState.FogOfWar))
-	local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, function() end)
+	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150, function() end)
 	revealmap:setEnabled(true)
 	revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-	local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, function() end)
+	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180, function() end)
 	no_randomness:setEnabled(true)
 	no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-	local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, function() end)
+	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210, function() end)
 	computer_opponents:setEnabled(true)
 	computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 
-	menu:writeText("Civilization:", sx, sy*11)
+	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
 	local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
 		function(dd)
@@ -163,14 +163,14 @@ function RunJoiningMapMenu(s)
 		end)
 	race:setSize(190, 20)
 
-	menu:writeText("Resources:", sx, sy*11+50)
-	local resources = menu:addDropDown({"Map Default", "Low", "Medium", "High"}, sx + 100, sy*11+50,
+	menu:writeText(_("Resources:"), sx, sy*11+50)
+	local resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100, sy*11+50,
 		function(dd) end)
 	resources:setSize(190, 20)
 	resources:setEnabled(false)
 
-	local difficulty_label = menu:writeText("Difficulty:", sx, sy * 11 + 75)
-	local difficulty = menu:addDropDown({"Easy", "Normal", "Hard", "Brutal"}, sx + 100, sy * 11 + 75,
+	local difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75)
+	local difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100, sy * 11 + 75,
 		function(dd) end)
 	difficulty:setSize(190, 20)
 	difficulty:setEnabled(false)
@@ -194,7 +194,7 @@ function RunJoiningMapMenu(s)
 	local function readycb(dd)
 		LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
 	end
-	menu:addImageCheckBox("Ready", sx*11, sy*14, readycb)
+	menu:addImageCheckBox(_("Ready"), sx*11, sy*14, readycb)
 
 	local updatePlayersList = addPlayersList(menu, numplayers)
 
@@ -232,7 +232,7 @@ function RunJoiningMapMenu(s)
 				menu:stop()
 			end
 		elseif (state == 10) then -- ccs_unreachable
-			ErrorMenu("Cannot reach server")
+			ErrorMenu(_("Cannot reach server"))
 			menu:stop()
 		end
 	end
@@ -251,12 +251,12 @@ function RunJoiningGameMenu(server_address, s)
   menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Connecting to " .. server_address, 144, 11)
+  menu:addLabel(_("Connecting to") .. " " .. server_address, 144, 11)
 
   local percent = 0
 
   local sb = StatBoxWidget(258, 30)
-  sb:setCaption("Connecting...")
+  sb:setCaption(_("Connecting..."))
   sb:setPercent(percent)
   menu:add(sb, 15, 38)
   sb:setBackgroundColor(dark)
@@ -272,29 +272,29 @@ function RunJoiningGameMenu(server_address, s)
       RunJoiningMapMenu()
       menu:stop(0)
     elseif (state == 4) then -- ccs_badmap
-      ErrorMenu("Map not available")
+      ErrorMenu(_("Map not available"))
       menu:stop(1)
     elseif (state == 10) then -- ccs_unreachable
       ErrorMenu("Cannot reach server")
       menu:stop(1)
     elseif (state == 12) then -- ccs_nofreeslots
-      ErrorMenu("Server is full")
+      ErrorMenu(_("Server is full"))
       menu:stop(1)
     elseif (state == 13) then -- ccs_serverquits
-      ErrorMenu("Server gone")
+      ErrorMenu(_("Server gone"))
       menu:stop(1)
     elseif (state == 16) then -- ccs_incompatibleengine
-      ErrorMenu("Incompatible engine version")
+      ErrorMenu(_("Incompatible engine version"))
       menu:stop(1)
     elseif (state == 17) then -- ccs_incompatiblenetwork
-      ErrorMenu("Incompatible network version")
+      ErrorMenu(_("Incompatible network version"))
       menu:stop(1)
     end
   end
   local listener = LuaActionListener(checkconnection)
   menu:addLogicCallback(listener)
 
-  menu:addHalfButton("Cancel (~<Esc~>)", "escape", 92, 80,
+  menu:addHalfButton(_("Cancel (~<Esc~>)"), "escape", 92, 80,
     function() menu:stop(1) end)
 
   return menu:run()
@@ -306,7 +306,7 @@ function RunJoinIpMenu()
 	menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
 	menu:setDrawMenusUnder(true)
 
-	menu:addLabel("Enter server IP-address:", 144, 11)
+	menu:addLabel(_("Enter server IP-address:"), 144, 11)
 	local server = menu:addTextInputField("localhost", 40, 38, 212)
 
 	menu:addHalfButton("~!OK", "o", 24, 80,
@@ -338,9 +338,9 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local difficulty_label
 	local d
 
-	menu = WarMenu("Create Multiplayer game")
+	menu = WarMenu(_("Create Multiplayer game"))
 
-	menu:writeLargeText("Map", sx, sy*3)
+	menu:writeLargeText(_("Map"), sx, sy*3)
 	menu:writeText(_("Name:"), sx, sy*3+30)
 	descr = menu:writeText(description, sx+70, sy*3+30)
 	menu:writeText(_("File:"), sx, sy*3+50)
@@ -353,20 +353,20 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		NetworkServerResyncClients()
 		GameSettings.NoFogOfWar = not dd:isMarked()
 	end
-	local fow = menu:addImageCheckBox("Fog of War", sx, sy*3+120, fowCb)
+	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120, fowCb)
 	fow:setMarked(true)
 	local function revealMapCb(dd)
 		ServerSetupState.RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.RevealMap = bool2int(dd:isMarked())
 	end
-	local revealmap = menu:addImageCheckBox("Reveal Map", sx, sy*3+150, revealMapCb)
+	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150, revealMapCb)
 	local function no_randomnessCb(dd)
 		ServerSetupState.NoRandomness = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.NoRandomness = dd:isMarked()
 	end
-	local no_randomness = menu:addImageCheckBox("No Randomness", sx, sy*3+180, no_randomnessCb)
+	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180, no_randomnessCb)
 	no_randomness:setMarked(false)
 	
 	ServerSetupState.Opponents = 0
@@ -380,10 +380,10 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		difficulty:setVisible(ServerSetupState.Opponents > 0)
 		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
 	end
-	local computer_opponents = menu:addImageCheckBox("Computer Opponents", sx, sy*3+210, computer_opponentsCb)
+	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210, computer_opponentsCb)
 	computer_opponents:setMarked(false)
 
-	menu:writeText("Civilization:", sx, sy*11)
+	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
 	d = menu:addDropDown(civilization_list, sx + 100, sy*11,
 		function(dd)
@@ -410,7 +410,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		end)
 	d:setSize(190, 20)
 
-	difficulty_label = menu:writeText("Difficulty:", sx, sy * 11 + 75)
+	difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75)
 	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100, sy * 11 + 75,
 		function(dd)
 			GameSettings.Difficulty = dd:getSelected() + 1
@@ -624,7 +624,7 @@ function RunCreateMultiGameMenu(s)
 	end
   end
   
-  menu:addFullButton("~!Create Game", "c", sx,  sy*11,
+  menu:addFullButton(_("~!Create Game"), "c", sx,  sy*11,
     function(s)
 --      if (browser:getSelected() < 0) then
 --        return
@@ -660,7 +660,7 @@ function RunMultiPlayerGameMenu(s)
 	InitGameSettings()
 	InitNetwork1()
 
-	menu:addLabel("~<Multiplayer Network Game~>", offx + 640/2 + 12, offy + 192)
+	menu:addLabel(_("~<Multiplayer Network Game~>"), offx + 640/2 + 12, offy + 192)
 
 	menu:writeText(_("Nickname :"), 208 + offx, 264 + offy)
 	nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298, 260 + offy)

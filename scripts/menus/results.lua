@@ -60,31 +60,31 @@ function RunResultsMenu()
 
 	local line_spacing = (432 - bottom_offset - description_offset) / c
 	local player_name_spacing = 104 / c
-	menu:addLabel("Outcome", offx + 106, offy + top_offset)
+	menu:addLabel(_("Outcome"), offx + 106, offy + top_offset)
 --	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
-	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large"])
+	menu:addLabel(_(result), offx + 106, offy + top_offset + 21, Fonts["large"])
 
-	menu:addLabel("Units", offx + 50, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Buildings", offx + 140, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Copper", offx + 230, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Lumber", offx + 320, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Stone", offx + 410, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Units"), offx + 50, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Buildings"), offx + 140, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Copper"), offx + 230, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Lumber"), offx + 320, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Stone"), offx + 410, offy + bottom_offset, Fonts["large"], true)
 --	menu:addLabel("Oil", offx + 410, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Kills", offx + 500, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel("Razings", offx + 590, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Kills"), offx + 500, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Razings"), offx + 590, offy + bottom_offset, Fonts["large"], true)
 
 	c = 0
 	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive and GetPlayerData(ThisPlayer.Index, "HasContactWith", i)) then
 			local name = _(GetPlayerData(i, "Name"))
 			if (ThisPlayer.Index == i) then
-				name = name .. " - You"
+				name = name .. " - " .. _("You")
 			elseif (ThisPlayer:IsAllied(Players[i])) then
-				name = name .. " - Ally"
+				name = name .. " - " .. _("Ally")
 			elseif (ThisPlayer:IsEnemy(Players[i])) then
-				name = name .. " - Enemy"
+				name = name .. " - " .. _("Enemy")
 			else
-				name = name .. " - Neutral"
+				name = name .. " - " .. _("Neutral")
 			end
 			menu:addLabel(name, offx + 320,
 				offy + bottom_offset + description_offset + player_name_spacing + line_spacing * c + 5,

@@ -89,15 +89,15 @@ local function RunEditorNewMapMenu()
 	local offy = (Video.Height - 480) / 2
 	local tilesets = editor_tilesets
 
-	menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
+	menu:addLabel(_("Map Description:"), offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
 	local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
-	menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
+	menu:addLabel(_("Terrain:"), offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
 	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
 	dropDownTileset:setSize(152, 20)
 
-	menu:addLabel("Width:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+	menu:addLabel(_("Width:"), offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
 	local mapSizex = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 3, 60)
-	menu:addLabel("Height:", offx + 208, offy + 104 + 32 * 4, Fonts["game"], false)
+	menu:addLabel(_("Height:"), offx + 208, offy + 104 + 32 * 4, Fonts["game"], false)
 	local mapSizey = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 4, 60)
 
 	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
@@ -153,23 +153,23 @@ local function RunEditorLoadMapMenu(is_mod)
 	-- update label content
 	local function MapChanged()
 		if not (is_mod) then
-			labelDescription:setCaption("Name: " .. _(mapinfo.description))
+			labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
 			labelDescription:adjustSize()
 
-			labelMapName:setCaption("File: " .. string.sub(mapname, 6))
+			labelMapName:setCaption(_("File:") .. " " .. string.sub(mapname, 6))
 			labelMapName:adjustSize()
 		
-			labelNbPlayer:setCaption("Players: " .. mapinfo.nplayers)
+			labelNbPlayer:setCaption(_("Players:") .. " " .. mapinfo.nplayers)
 			labelNbPlayer:adjustSize()
 
-			labelMapSize:setCaption("Size: " .. mapinfo.w .. " x " .. mapinfo.h)
+			labelMapSize:setCaption(_("Size:") .. " " .. mapinfo.w .. " x " .. mapinfo.h)
 			labelMapSize:adjustSize()
 		else
 			if (modname ~= "") then
-				labelDescription:setCaption("Name: " .. _(mapinfo.description))
+				labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
 				labelDescription:adjustSize()
 
-				labelMapName:setCaption("File: " .. string.sub(modname, 6))
+				labelMapName:setCaption(_("File:") .. " " .. string.sub(modname, 6))
 				edit_button:setEnabled(true)
 			else
 				labelDescription:setCaption("")
@@ -276,7 +276,7 @@ function RunEditorSaveMap(browser, name, menu, save_as_mod)
 			confirm:addLabel("Cannot save mod to file:", 300 / 2, 11)
 		end
 		confirm:addLabel(browser.path .. name, 300 / 2, 31)
-		confirm:addHalfButton("~!OK", "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
+		confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
 		confirm:run(false)
 	else
 		if not (save_as_mod) then
@@ -301,7 +301,7 @@ function RunEditorSaveMenu(save_as_mod)
 			end
 		end
 		if not (map_has_person_player) then
-			GenericDialog("Error", "A map needs to have at least one person player.")
+			GenericDialog(_("Error"), _("A map needs to have at least one person player."))
 			return
 		end
 	end
@@ -311,9 +311,9 @@ function RunEditorSaveMenu(save_as_mod)
 	menu:resize(384, 256)
 
 	if not (save_as_mod) then
-		menu:addLabel("Save Map", 384 / 2, 11)
+		menu:addLabel(_("Save Map"), 384 / 2, 11)
 	else
-		menu:addLabel("Save as Mod", 384 / 2, 11)
+		menu:addLabel(_("Save as Mod"), 384 / 2, 11)
 	end
 
 	local t
@@ -338,7 +338,7 @@ function RunEditorSaveMenu(save_as_mod)
 	browser:setActionCallback(cb)
 
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27, function() menu:stop() end)
-	menu:addHalfButton("~!Save", "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Save"), "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
 	function()
 		local name = t:getText()
 		-- check for an empty string
@@ -358,13 +358,13 @@ function RunEditorSaveMenu(save_as_mod)
 			local confirm = WarGameMenu(panel(3))
 			confirm:resize(300,120)
 			confirm:addLabel(name, 300 / 2, 11)
-			confirm:addLabel("File exists, are you sure ?", 300 / 2, 31)
-			confirm:addHalfButton("~!Yes", "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
+			confirm:addLabel(_("File exists, are you sure?"), 300 / 2, 31)
+			confirm:addHalfButton(_("~!Yes"), "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
 			function()
 				confirm:stop()
 				RunEditorSaveMap(browser, name, menu, save_as_mod)
 			end)
-			confirm:addHalfButton("~!No", "n", 3 * (300 / 3) - 116, 120 - 16 - 27, function() confirm:stop() end)
+			confirm:addHalfButton(_("~!No"), "n", 3 * (300 / 3) - 116, 120 - 16 - 27, function() confirm:stop() end)
 			confirm:run(false)
 		else
 			RunEditorSaveMap(browser, name, menu, save_as_mod)
@@ -415,7 +415,7 @@ function RunEditorPlayerProperties()
 	local sizeY = 352
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel("Player Properties", sizeX / 2, 11)
+	menu:addLabel(_("Player Properties"), sizeX / 2, 11)
 
 	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
 	local civilization_names = GetCivilizations(true)
@@ -578,18 +578,18 @@ function RunEditorMapProperties()
 	local sizeY = 256
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel("Map Properties", sizeX / 2, 11)
+	menu:addLabel(_("Map Properties"), sizeX / 2, 11)
 
-	menu:addLabel("Map Name: ", 45, 11 + 36, nil, false)
+	menu:addLabel(_("Map Name:") .. " ", 45, 11 + 36, nil, false)
 	local desc = menu:addTextInputField(Map.Info.Description, 15, 36 * 2, 350)
 
-	menu:addLabel("Size: " .. Map.Info.MapWidth .. " x " .. Map.Info.MapHeight, 45, 36 * 3, nil, false)
+	menu:addLabel(_("Size:") .. " " .. Map.Info.MapWidth .. " x " .. Map.Info.MapHeight, 45, 36 * 3, nil, false)
 --	menu:addLabel("Size : ", 15, 36 * 3, nil, false)
 --	local sizeX = menu:addTextInputField(Map.Info.MapWidth, 75, 36 * 3, 50)
 --	menu:addLabel(" x ", 130, 36 * 3, nil, false)
 --	local sizeY = menu:addTextInputField(Map.Info.MapHeight, 160, 36 * 3, 50)
 
-	menu:addHalfButton("~!OK", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+	menu:addHalfButton(_("~!OK"), "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
 		function()
 			Map.Info.Description = desc:getText()
 			-- TODO : Add others properties
@@ -606,11 +606,11 @@ end
 function RunEditorCustomDataProperties()
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel("Custom Data Properties", 128, 11)
+	menu:addLabel(_("Custom Data Properties"), 128, 11)
 
-	menu:addFullButton("Custom ~!Factions", "f", 16, 40 + 35 * 0, RunEditorFactionProperties)
+	menu:addFullButton(_("Custom ~!Factions"), "f", 16, 40 + 35 * 0, RunEditorFactionProperties)
 
-	menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 16, 40 + 35 * 6,
+	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 16, 40 + 35 * 6,
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -625,7 +625,7 @@ function RunEditorFactionProperties()
 	local sizeY = 352
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel("Custom Factions", sizeX / 2, 11)
+	menu:addLabel(_("Custom Factions"), sizeX / 2, 11)
 
 	local faction_type_list = {"tribe", "polity"}
 	local color_list = GetPlayerColors()
@@ -782,11 +782,11 @@ function RunEditorFactionProperties()
 				function()
 					local faction_ident = NameToIdent(faction_name:getText())
 					if (faction_name:getText() == "") then
-						GenericDialog("Error", "The faction's name cannot be empty.")
+						GenericDialog(_("Error"), _("The faction's name cannot be empty."))
 					elseif (GetArrayIncludes(faction_list[current_civilization:getSelected() + 1], faction_ident) or GetArrayIncludes(GetFactions(), faction_ident)) then
-						GenericDialog("Error", "There is already another faction with that name.")
+						GenericDialog(_("Error"), _("There is already another faction with that name."))
 					elseif (IsNameValidForWord(faction_name:getText()) == false) then
-						GenericDialog("Error", "The faction's name is invalid.")
+						GenericDialog(_("Error"), _("The faction's name is invalid."))
 					else
 						local new_faction_id = table.getn(faction_list[current_civilization:getSelected() + 1]) + 1
 						faction_list[current_civilization:getSelected() + 1][new_faction_id] = faction_ident
@@ -803,7 +803,7 @@ function RunEditorFactionProperties()
 					end
 				end
 			)
-			sub_menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), sub_sizeY - 40 * 1,
+			sub_menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), sub_sizeY - 40 * 1,
 				function()
 					sub_menu:stop()
 				end
@@ -812,16 +812,16 @@ function RunEditorFactionProperties()
 		end
 	)
 	
-	delete_faction_button = menu:addHalfButton("~!Delete", "d", 130 + 48, sizeY - 36 * 2,
+	delete_faction_button = menu:addHalfButton(_("~!Delete"), "d", 130 + 48, sizeY - 36 * 2,
 		function()
 			local confirm = WarGameMenu(panel(4))
 
 			confirm:resize(288,128)
 
-			confirm:addLabel("Delete " .. faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1], 288 / 2, 11)
-			confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+			confirm:addLabel(_("Delete") .. " " .. faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1], 288 / 2, 11)
+			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2, 45, Fonts["game"])
 
-			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 				function()
 					DeleteModFaction(faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
 					RemoveElementFromArray(civilization_factions[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
@@ -832,7 +832,7 @@ function RunEditorFactionProperties()
 				end
 			)
 
-			confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
 				function() confirm:stop() end
 			)
 
@@ -842,7 +842,7 @@ function RunEditorFactionProperties()
 	
 	CivilizationChanged()
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 36 * 1,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 36 * 1,
 		function()
 			for i=1,table.getn(faction_list) do
 				for j=1,table.getn(faction_list[i]) do
@@ -875,21 +875,21 @@ end
 function RunInEditorMenu()
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel("Editor Menu", 128, 11)
+	menu:addLabel(_("Editor Menu"), 128, 11)
 
-	menu:addFullButton("Save Map (~<F11~>)", "f11", 16, 40, function() RunEditorSaveMenu(false); end)
+	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16, 40, function() RunEditorSaveMenu(false); end)
 --	local buttonEditorLoad = -- To be removed when enabled.
 --	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
-	menu:addFullButton("Save as ~!Mod", "m", 16, 40 + 35 * 1, function() RunEditorSaveMenu(true); end)
-	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
-	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
-	menu:addFullButton("Custom ~!Data", "d", 16, 40 + 35 * 4, RunEditorCustomDataProperties)
+	menu:addFullButton(_("Save as ~!Mod"), "m", 16, 40 + 35 * 1, function() RunEditorSaveMenu(true); end)
+	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
+	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
+	menu:addFullButton(_("Custom ~!Data"), "d", 16, 40 + 35 * 4, RunEditorCustomDataProperties)
 
 --	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
-	menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 35 * 5,
+	menu:addFullButton(_("E~!xit to Menu"), "x", 16, 40 + 35 * 5,
 		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
-	menu:addFullButton("Return to Editor (~<Esc~>)", "escape", 16, 40 + 35 * 6,
+	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16, 40 + 35 * 6,
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -1040,9 +1040,9 @@ function EditUnitProperties()
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (resourceValue and tonumber(resourceValue:getText()) == nil) then
-				GenericDialog("Error", "The resource amount must be a number.")
+				GenericDialog(_("Error"), _("The resource amount must be a number."))
 			elseif (hp_value and tonumber(hp_value:getText()) == nil) then
-				GenericDialog("Error", "The hit points must be a number.")
+				GenericDialog(_("Error"), _("The hit points must be a number."))
 			else
 				if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") and unique_list[unit_unique:getSelected() + 1] == "") then
 					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique", unique_list[unit_unique:getSelected() + 1])
@@ -1127,18 +1127,18 @@ function EditorCreateUnitType()
 --	parent_unit_type:setSelected(GetElementIndexFromArray(unit_types_list, "") - 1)
 	parent_unit_type:setSelected(0)
 			
-	menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sizeY - 40 * 2,
+	menu:addFullButton(_("Crea~!te"), "t", 176 - (224 / 2), sizeY - 40 * 2,
 		function()
 			if (string.sub(unit_type_ident:getText(), 0, 5) ~= "unit-") then
-				GenericDialog("Error", "The unit type's ident must begin with \"unit-\".")
+				GenericDialog(_("Error"), _("The unit type's ident must begin with") .. "\"unit-\".")
 			elseif (unit_type_ident:getText() == "") then
-				GenericDialog("Error", "The unit type's ident cannot be empty.")
+				GenericDialog(_("Error"), _("The unit type's ident cannot be empty."))
 			elseif (GetArrayIncludes(GetUnitTypes(), unit_type_ident:getText())) then
-				GenericDialog("Error", "There is already another unit type with that ident.")
+				GenericDialog(_("Error"), _("There is already another unit type with that ident."))
 			elseif (IsNameValidForWord(unit_type_ident:getText()) == false) then
-				GenericDialog("Error", "The unit type's ident is invalid.")
+				GenericDialog(_("Error"), _("The unit type's ident is invalid."))
 			elseif (IsNameValidForWord(unit_type_name:getText()) == false) then
-				GenericDialog("Error", "The unit type's name is invalid.")
+				GenericDialog(_("Error"), _("The unit type's name is invalid."))
 			else
 				local unit_type_definition = {
 					Name = unit_type_name:getText(),
@@ -1167,7 +1167,7 @@ function EditorCreateUnitType()
 			end
 		end
 	)
-	menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), sizeY - 40 * 1,
+	menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), sizeY - 40 * 1,
 		function()
 			menu:stop()
 		end
@@ -1238,10 +1238,10 @@ function EditUnitTypeProperties(unit_type)
 
 			confirm:resize(288,128)
 
-			confirm:addLabel("Delete " .. GetUnitTypeName(unit_type), 288 / 2, 11)
-			confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+			confirm:addLabel(_("Delete") .. " " .. GetUnitTypeName(unit_type), 288 / 2, 11)
+			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2, 45, Fonts["game"])
 
-			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 				function()
 					DeleteModUnitType(unit_type)
 					confirm:stop()
@@ -1249,7 +1249,7 @@ function EditUnitTypeProperties(unit_type)
 				end
 			)
 
-			confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
 				function() confirm:stop() end
 			)
 
@@ -1313,7 +1313,7 @@ function EditUnitTypePropertiesMain(unit_type)
 	
 	faction:setSelected(GetElementIndexFromArray(faction_list, GetUnitTypeData(unit_type, "Faction")) - 1)
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			local unit_type_definition = {}
 
@@ -1410,7 +1410,7 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		icon:setSelected(GetElementIndexFromArray(icon_list, GetUnitTypeData(unit_type, "Icon")) - 1)
 	end
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			local graphic_width = 0
 			local graphic_height = 0
@@ -1444,17 +1444,17 @@ function EditUnitTypePropertiesGraphics(unit_type)
 			end
 
 			if (tonumber(frame_width_value:getText()) == nil) then
-				GenericDialog("Error", "The frame width must be a number.")
+				GenericDialog(_("Error"), "The frame width must be a number.")
 			elseif (tonumber(frame_height_value:getText()) == nil) then
-				GenericDialog("Error", "The frame height must be a number.")
+				GenericDialog(_("Error"), "The frame height must be a number.")
 			elseif (graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
-				GenericDialog("Error", "The image graphic's width (" .. graphic_width .. ") must be divisible by the frame width.")
+				GenericDialog(_("Error"), "The image graphic's width (" .. graphic_width .. ") must be divisible by the frame width.")
 			elseif (graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
-				GenericDialog("Error", "The image graphic's height (" .. graphic_height .. ") must be divisible by the frame height.")
+				GenericDialog(_("Error"), "The image graphic's height (" .. graphic_height .. ") must be divisible by the frame height.")
 			elseif (shadow_graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
-				GenericDialog("Error", "The shadow image graphic's width (" .. shadow_graphic_width .. ") must be divisible by the frame width.")
+				GenericDialog(_("Error"), "The shadow image graphic's width (" .. shadow_graphic_width .. ") must be divisible by the frame width.")
 			elseif (shadow_graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
-				GenericDialog("Error", "The shadow image graphic's height (" .. shadow_graphic_height .. ") must be divisible by the frame height.")
+				GenericDialog(_("Error"), "The shadow image graphic's height (" .. shadow_graphic_height .. ") must be divisible by the frame height.")
 			else
 				local unit_type_definition = {}
 
@@ -1564,33 +1564,33 @@ function EditUnitTypePropertiesStats(unit_type)
 	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (tonumber(hp_value:getText()) == nil) then
-				GenericDialog("Error", "The hit points must be a number.")
+				GenericDialog(_("Error"), "The hit points must be a number.")
 			elseif (tonumber(basic_damage_value:getText()) == nil) then
-				GenericDialog("Error", "The basic damage must be a number.")
+				GenericDialog(_("Error"), "The basic damage must be a number.")
 			elseif (tonumber(armor_value:getText()) == nil) then
-				GenericDialog("Error", "The armor must be a number.")
+				GenericDialog(_("Error"), "The armor must be a number.")
 			elseif (tonumber(accuracy_value:getText()) == nil) then
-				GenericDialog("Error", "The accuracy must be a number.")
+				GenericDialog(_("Error"), "The accuracy must be a number.")
 			elseif (tonumber(evasion_value:getText()) == nil) then
-				GenericDialog("Error", "The evasion must be a number.")
+				GenericDialog(_("Error"), "The evasion must be a number.")
 			elseif (tonumber(range_value:getText()) == nil) then
-				GenericDialog("Error", "The range must be a number.")
+				GenericDialog(_("Error"), "The range must be a number.")
 			elseif (tonumber(sight_value:getText()) == nil) then
-				GenericDialog("Error", "The sight must be a number.")
+				GenericDialog(_("Error"), "The sight must be a number.")
 			elseif (tonumber(speed_value:getText()) == nil) then
-				GenericDialog("Error", "The speed must be a number.")
+				GenericDialog(_("Error"), "The speed must be a number.")
 			elseif (tonumber(critical_strike_chance_value:getText()) == nil) then
-				GenericDialog("Error", "The critical strike chance must be a number.")
+				GenericDialog(_("Error"), "The critical strike chance must be a number.")
 			elseif (tonumber(backstab_value:getText()) == nil) then
-				GenericDialog("Error", "The backstab bonus must be a number.")
+				GenericDialog(_("Error"), "The backstab bonus must be a number.")
 			elseif (tonumber(bonus_against_mounted_value:getText()) == nil) then
-				GenericDialog("Error", "The bonus against mounted must be a number.")
+				GenericDialog(_("Error"), "The bonus against mounted must be a number.")
 			elseif (tonumber(thorns_damage_value:getText()) == nil) then
-				GenericDialog("Error", "The thorns damage must be a number.")
+				GenericDialog(_("Error"), "The thorns damage must be a number.")
 			elseif (tonumber(day_sight_range_bonus_value:getText()) == nil) then
-				GenericDialog("Error", "The day sight bonus must be a number.")
+				GenericDialog(_("Error"), "The day sight bonus must be a number.")
 			elseif (tonumber(night_sight_range_bonus_value:getText()) == nil) then
-				GenericDialog("Error", "The night sight bonus must be a number.")
+				GenericDialog(_("Error"), "The night sight bonus must be a number.")
 			else
 				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
 					local unit_type_definition = {}
@@ -1767,19 +1767,19 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (tonumber(time_cost_value:getText()) == nil) then
-				GenericDialog("Error", "The time cost must be a number.")
+				GenericDialog(_("Error"), "The time cost must be a number.")
 			elseif (tonumber(copper_cost_value:getText()) == nil) then
-				GenericDialog("Error", "The copper cost must be a number.")
+				GenericDialog(_("Error"), "The copper cost must be a number.")
 			elseif (tonumber(lumber_cost_value:getText()) == nil) then
-				GenericDialog("Error", "The lumber cost must be a number.")
+				GenericDialog(_("Error"), "The lumber cost must be a number.")
 			elseif (tonumber(stone_cost_value:getText()) == nil) then
-				GenericDialog("Error", "The stone cost must be a number.")
+				GenericDialog(_("Error"), "The stone cost must be a number.")
 			elseif (tonumber(copper_processing_value:getText()) == nil) then
-				GenericDialog("Error", "The copper processing must be a number.")
+				GenericDialog(_("Error"), "The copper processing must be a number.")
 			elseif (tonumber(lumber_processing_value:getText()) == nil) then
-				GenericDialog("Error", "The lumber processing must be a number.")
+				GenericDialog(_("Error"), "The lumber processing must be a number.")
 			elseif (tonumber(stone_processing_value:getText()) == nil) then
-				GenericDialog("Error", "The stone processing must be a number.")
+				GenericDialog(_("Error"), "The stone processing must be a number.")
 			else
 				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
 					local unit_type_definition = {}
@@ -1934,10 +1934,10 @@ function EditUnitTypePropertiesTraining(unit_type)
 	menu:addLabel(_("Hint:"), 10, 12 + 36 * 4, Fonts["game"], false)
 	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 180)
 
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (tonumber(button_pos_value:getText()) == nil) then
-				GenericDialog("Error", "The button pos must be a number.")
+				GenericDialog(_("Error"), "The button pos must be a number.")
 			else
 				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
 					local unit_type_definition = {}
@@ -2029,7 +2029,7 @@ function EditUnitTypePropertiesSounds(unit_type)
 	dead_sound:setSize(236, 20)
 	dead_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "dead")) - 1)
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
 				local unit_type_definition = {}

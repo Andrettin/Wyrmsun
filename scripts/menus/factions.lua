@@ -94,7 +94,7 @@ function ChooseFaction(old_civilization, old_faction)
 		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
 	end
 
-	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
+	local ok_button = menu:addFullButton(_("~!OK"), "o", 16, 248 - (36 * 0),
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)

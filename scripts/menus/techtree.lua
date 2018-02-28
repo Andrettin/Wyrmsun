@@ -47,7 +47,7 @@ function RunTechTreeMenu(civilization_number)
 	local civilization_list = GetAvailableCivilizationNamesTechTree()
 --	local button_quantity = 0
 
-	menu:addLabel("~<Civilization:~>", offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
+	menu:addLabel(_("~<Civilization:~>"), offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
 	civilization_dd = menu:addDropDown(civilization_list, offx + 244, offy + 10 + 15,
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
@@ -58,6 +58,8 @@ function RunTechTreeMenu(civilization_number)
 	if (RunningScenario == false) then
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
+	
+		
 	
 	function addTechItemIcon(unit, menu, x, y, playercolor)
 		local unit_name = ""
@@ -87,7 +89,7 @@ function RunTechTreeMenu(civilization_number)
 				local tech_menu = WarGameMenu(panel(5))
 				tech_menu:setSize(352, 352)
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
-				tech_menu:addLabel(unit_name, 176, 11)
+				tech_menu:addLabel(_(unit_name), 176, 11)
 				local tech_menu_image = PlayerColorImageButton("", playercolor)
 				tech_menu:add(tech_menu_image, 153, 48)
 				tech_menu_image:setNormalImage(techicon)
@@ -103,7 +105,7 @@ function RunTechTreeMenu(civilization_number)
 				l:setSize(324, 208)
 				l:setLineWidth(324)
 				tech_menu:add(l, 14, 112)
-				l:setCaption(tech_description)
+				l:setCaption(_(tech_description))
 
 				tech_menu:addFullButton(_("~!Close"), "c", 176 - (224 / 2), 352 - 40 * 1,
 					function()
@@ -121,7 +123,7 @@ function RunTechTreeMenu(civilization_number)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		b:setFrameImage(Preference.IconFrameG)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)
-		b:setTooltip(unit_name)
+		b:setTooltip(_(unit_name))
 		return b
 	end
 

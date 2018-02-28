@@ -2,11 +2,11 @@ function RunDiplomacyMenu()
 	local menu = WarGameMenu(panel(5))
 	menu:resize(352, 352)
 
-	menu:addLabel("Diplomacy", 176, 11)
+	menu:addLabel(_("Diplomacy"), 176, 11)
 
-	menu:addLabel("Allied", 136, 30, Fonts["game"])
-	menu:addLabel("Enemy", 196, 30, Fonts["game"])
-	menu:addLabel("Shared Vision", 286, 30, Fonts["game"])
+	menu:addLabel(_("Allied"), 136, 30, Fonts["game"])
+	menu:addLabel(_("Enemy"), 196, 30, Fonts["game"])
+	menu:addLabel(_("Shared Vision"), 286, 30, Fonts["game"])
 
 	local allied = {}
 	local enemy = {}
@@ -54,7 +54,7 @@ function RunDiplomacyMenu()
 		end
 	end
 
-	menu:addHalfButton("~!OK", "o", 75, 352 - 40,
+	menu:addHalfButton(_("~!OK"), "o", 75, 352 - 40,
 	function()
 		for j=1,table.getn(allied) do
 			local i = allied[j].index

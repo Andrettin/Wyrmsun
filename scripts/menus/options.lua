@@ -125,12 +125,12 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:addCentered(b, offx + 224, offy + 36 * 2 + 6)
 
   local effectscheckbox = {}
-  effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 1.5,
+  effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 1.5,
     function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
   effectscheckbox:setMarked(IsEffectsEnabled())
   effectscheckbox:adjustSize()
 
-  b = Label("Music Volume")
+  b = Label(_("Music Volume"))
   b:setFont(CFont:Get("game"))
   b:adjustSize();
   menu:add(b, offx + 16, offy + 36 * 3)
@@ -160,7 +160,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
 
 	local musiccheckbox = {}
-	musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 3.5,
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then
@@ -210,13 +210,13 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
   --]]
 
   local ckey = {}
-  ckey = menu:addImageCheckBox("Show Hotkeys", offx + 16, offy + 26 * 1,
+  ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16, offy + 26 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
   ckey:adjustSize()
 
   local mouse_grabbing = {}
-  mouse_grabbing = menu:addImageCheckBox("Mouse Grabbing", offx + 16, offy + 26 * 2,
+  mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 26 * 2,
     function()
         wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
         SetGrabMouse(wyr.preferences.GrabMouse)
@@ -227,7 +227,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
   mouse_grabbing:adjustSize()
 
   local reverse_mouse_wheel_scrolling = {}
-  reverse_mouse_wheel_scrolling = menu:addImageCheckBox("Reverse Mousewheel Scrolling", offx + 16, offy + 26 * 3,
+  reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16, offy + 26 * 3,
     function()
         wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
         SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
@@ -265,7 +265,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
   l:adjustSize()
   menu:addCentered(l, offx + 224, offy + 36 * 4 + 6)
 
-  menu:addLabel("Mouse Scroll Speed", offx + 16, offy + (36 * 5), CFont:Get("game"), false)
+  menu:addLabel(_("Mouse Scroll Speed"), offx + 16, offy + (36 * 5), CFont:Get("game"), false)
 
   local mousescrollspeed = {}
   -- slider button to decrease slider value
@@ -290,7 +290,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
   l:adjustSize()
   menu:addCentered(l, offx + 224, offy + 36 * 6 + 6)
 
-  menu:addLabel("Key Scroll Speed", offx + 16, offy + (36 * 7), CFont:Get("game"), false)
+  menu:addLabel(_("Key Scroll Speed"), offx + 16, offy + (36 * 7), CFont:Get("game"), false)
 
   local keyscrollspeed = {}
   -- slider button to decrease slider value
@@ -397,7 +397,7 @@ function RunGameplayOptionsMenu()
 	local offx = (Video.Width - 352) / 2
 	local offy = (Video.Height - 352) / 2
 	local b
-	local hotkey_setup_list = {"Default", "Position-Based", "Position-Based (except Commands)"}
+	local hotkey_setup_list = {_("Default"), _("Position-Based"), _("Position-Based (except Commands)")}
 	local hotkey_setup_dd
 
 	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
@@ -681,12 +681,12 @@ function RunVideoOptionsMenu()
 	menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
 
 	local effectscheckbox = {}
-	effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+	effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 3.5,
 		function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
 	effectscheckbox:setMarked(IsEffectsEnabled())
 	effectscheckbox:adjustSize()
 
-	b = Label("Music Volume")
+	b = Label(_("Music Volume"))
 	b:setFont(CFont:Get("game"))
 	b:adjustSize();
 	menu:add(b, offx + 16, offy + 36 * 5)
@@ -716,7 +716,7 @@ function RunVideoOptionsMenu()
 	menu:addCentered(b, offx + 224, offy + 36 * 6 + 6)
 
 	local musiccheckbox = {}
-	musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 5.5,
+	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 5.5,
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then

@@ -35,15 +35,15 @@ function RunConfirmErase(name, menu)
   confirm:resize(300,120)
 
   confirm:addLabel(name, 300 / 2, 11)
-  confirm:addLabel("File exists, are you sure?", 300 / 2, 31)
+  confirm:addLabel(_("File exists, are you sure?"), 300 / 2, 31)
 
-  confirm:addHalfButton("~!Yes", "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
+  confirm:addHalfButton(_("~!Yes"), "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
     function()
         confirm:stop()
         RunSaveGame(name, menu)
     end)
 
-  confirm:addHalfButton("~!No", "n", 3 * (300 / 3) - 116, 120 - 16 - 27,
+  confirm:addHalfButton(_("~!No"), "n", 3 * (300 / 3) - 116, 120 - 16 - 27,
     function() confirm:stop() end)
 
   confirm:run(false)
@@ -53,7 +53,7 @@ function RunSaveMenu()
   local menu = WarGameMenu(panel(3))
   menu:resize(384, 256)
 
-  menu:addLabel("Save Game", 384 / 2, 11)
+  menu:addLabel(_("Save Game"), 384 / 2, 11)
 
   local t = menu:addTextInputField("game.sav",
     (384 - 300 - 18) / 2, 11 + 24, 318)
@@ -65,7 +65,7 @@ function RunSaveMenu()
   end
   browser:setActionCallback(cb)
 
-  menu:addHalfButton("~!Save", "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
+  menu:addHalfButton(_("~!Save"), "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
     function()
       local name = t:getText()
       -- check for an empty string
