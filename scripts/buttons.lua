@@ -43,7 +43,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	ForUnit = {
 		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "english-group", "frankish-group", "suebi-group", "teuton-group",
 		"unit-dwarven-ballista", "unit-dwarven-ballista-warship", "dwarf-group",
-		"unit-goblin-war-machine", "goblin-group"
+		"unit-goblin-war-machine", "unit-goblin-warship", "goblin-group"
 	}
 })
 

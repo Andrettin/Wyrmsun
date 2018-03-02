@@ -38,7 +38,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-goblin-war-machine"
+		"unit-goblin-war-machine", "unit-goblin-warship"
 	}
 } )
 
@@ -47,7 +47,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-1"},
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-goblin-war-machine"
+		"unit-goblin-war-machine", "unit-goblin-warship"
 	}
 } )
 
@@ -56,7 +56,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-catapult-projectile-2"},
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-goblin-war-machine"
+		"unit-goblin-war-machine", "unit-goblin-warship"
 	}
 } )
 
@@ -85,6 +85,12 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-goblin-gunpowder-infantry",
 	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
 	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
 	ForUnit = {"unit-goblin-mess-hall"}
+})
+
+DefineButton( { Pos = 2, Level = 0,
+	Action = "train-unit", Value = "unit-goblin-warship",
+	Key = "w", Hint = "Build ~!Warship", Popup = "popup-unit",
+	ForUnit = {"unit-goblin-dock"}
 })
 
 -- Mercenaries --------------------------------------------------------
@@ -245,7 +251,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup-research",
-	Description = "+12 Damage for War Machines.",
+	Description = "+12 Damage for War Machines and +5 Damage for Warships.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -253,7 +259,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup-research",
-	Description = "+12 Damage for War Machines.",
+	Description = "+12 Damage for War Machines and +5 Damage for Warships.",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
@@ -316,7 +322,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for War Machines. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for War Machines and Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-goblin-academy"}
 } )

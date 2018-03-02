@@ -613,6 +613,8 @@
 /graphics/goblin/units/transport_ship_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/units/transport_ship_water.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/units/transport_ship_water_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/goblin/units/warship.png (by Jinn) (licensed under the CC0)
+/graphics/goblin/units/warship_water.png (by Jinn) (licensed under the CC0)
 /graphics/goth/icons/horse_lord_beardless.png (by Exidelo) (licensed under the CC0)
 /graphics/goth/icons/horse_lord_black_hair.png (by Exidelo) (licensed under the CC0)
 /graphics/goth/icons/horse_lord_blond_hair.png (by Exidelo) (licensed under the CC0)

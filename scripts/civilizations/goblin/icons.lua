@@ -194,6 +194,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-warship",
+	Size = {46, 38},
+	File = "goblin/icons/warship.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-glider",
 	Size = {46, 38},
 	File = "goblin/icons/glider.png"

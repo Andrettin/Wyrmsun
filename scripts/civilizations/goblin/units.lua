@@ -639,6 +639,23 @@ DefineUnitType("unit-goblin-transport-ship", {
 	}
 })
 
+DefineUnitType("unit-goblin-warship", {
+	Name = "Warship",
+	Parent = "unit-template-siege-warship",
+	Civilization = "goblin",
+	Description = "Goblin boat-builders take great pride in their work, seeking to construct warships that are fast as well as deadly.",
+	Image = {"file", "goblin/units/warship.png", "size", {100, 100}},
+	LightImage = {"file", "goblin/units/warship_water.png"},
+	Icon = "icon-goblin-warship",
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	BluntDamage = true,
+	SideAttack = false,
+	Sounds = {
+		"help", "basic-goblin-voices-help"
+	}
+})
+
 DefineUnitType("unit-goblin-town-hall", {
 	Name = "Town Hall",
 	Parent = "unit-template-town-hall",
