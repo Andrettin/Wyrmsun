@@ -107,28 +107,28 @@ function RunCampaignMenu()
 	for i=1,table.getn(campaign_ident_list) do
 		local campaign_name = GetCampaignData(campaign_ident_list[i], "Name")
 		if not (GetQuestData(campaign_ident_list[i], "Completed")) then
-			campaign_name = campaign_name .. " ~<(!)~>"
+			campaign_name = _(campaign_name) .. " ~<(!)~>"
 		end
 		table.insert(campaign_list, campaign_name)
 	end
 	
 	local function UpdateCampaignDescription()
-			faction_name = _("Faction:").. " " .. GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name") .. " (" .. GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display") .. ")"
+			faction_name = _("Faction:").. " " .. _(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name")) .. " (" .. _(GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display")) .. ")"
 	
-			highest_completed_difficulty = "Highest Completed Difficulty: "
+			highest_completed_difficulty = _("Highest Completed Difficulty: ")
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyEasy) then
-				highest_completed_difficulty = highest_completed_difficulty .. "Easy"
+				highest_completed_difficulty = highest_completed_difficulty .. _("Easy")
 			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyNormal) then
-				highest_completed_difficulty = highest_completed_difficulty .. "Normal"
+				highest_completed_difficulty = highest_completed_difficulty .. _("Normal")
 			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyHard) then
-				highest_completed_difficulty = highest_completed_difficulty .. "Hard"
+				highest_completed_difficulty = highest_completed_difficulty .. _("Hard")
 			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyBrutal) then
-				highest_completed_difficulty = highest_completed_difficulty .. "Brutal"
+				highest_completed_difficulty = highest_completed_difficulty .. _("Brutal")
 			else
-				highest_completed_difficulty = highest_completed_difficulty .. "None"
+				highest_completed_difficulty = highest_completed_difficulty .. _("None")
 			end
 			
-			campaign_description:setCaption(faction_name .. "\n\n" .. _("Description: ") .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description") .. "\n\n" .. highest_completed_difficulty)
+			campaign_description:setCaption(faction_name .. "\n\n" .. _("Description: ") .. _(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")) .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
 	end
 	
