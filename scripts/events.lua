@@ -269,38 +269,38 @@ end
 function ProcessEventString(event_string)
 	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED") ~= nil) then
 		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "He")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("He"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "She")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("She"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", "It")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("It"))
 		end
 	end
 	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN") ~= nil) then
 		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "he")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("he"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "she")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("she"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", "it")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("it"))
 		end
 	end
 	if (string.find(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN") ~= nil) then
 		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "his")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("his"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "her")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("her"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", "its")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("its"))
 		end
 	end
 	if (string.find(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN") ~= nil) then
 		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "him")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("him"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "her")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("her"))
 		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", "it")
+			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("it"))
 		end
 	end
 	if (string.find(event_string, "TRIGGER_HERO") ~= nil) then
@@ -308,47 +308,47 @@ function ProcessEventString(event_string)
 	end
 	
 	if (string.find(event_string, "HEAD_OF_STATE_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "HEAD_OF_STATE_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "head-of-state", "male"))
+		event_string = string.gsub(event_string, "HEAD_OF_STATE_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "head-of-state", "male")))
 	end
 
 	if (string.find(event_string, "HEAD_OF_GOVERNMENT_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "HEAD_OF_GOVERNMENT_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "head-of-government", "male"))
+		event_string = string.gsub(event_string, "HEAD_OF_GOVERNMENT_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "head-of-government", "male")))
 	end
 
 	if (string.find(event_string, "EDUCATION_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "EDUCATION_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "education-minister", "male"))
+		event_string = string.gsub(event_string, "EDUCATION_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "education-minister", "male")))
 	end
 
 	if (string.find(event_string, "FINANCE_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "FINANCE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "finance-minister", "male"))
+		event_string = string.gsub(event_string, "FINANCE_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "finance-minister", "male")))
 	end
 
 	if (string.find(event_string, "FOREIGN_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "FOREIGN_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "foreign-minister", "male"))
+		event_string = string.gsub(event_string, "FOREIGN_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "foreign-minister", "male")))
 	end
 
 	if (string.find(event_string, "INTELLIGENCE_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "INTELLIGENCE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "intelligence-minister", "male"))
+		event_string = string.gsub(event_string, "INTELLIGENCE_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "intelligence-minister", "male")))
 	end
 
 	if (string.find(event_string, "INTERIOR_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "INTERIOR_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "interior-minister", "male"))
+		event_string = string.gsub(event_string, "INTERIOR_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "interior-minister", "male")))
 	end
 
 	if (string.find(event_string, "JUSTICE_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "JUSTICE_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "justice-minister", "male"))
+		event_string = string.gsub(event_string, "JUSTICE_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "justice-minister", "male")))
 	end
 
 	if (string.find(event_string, "WAR_MINISTER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "WAR_MINISTER_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "war-minister", "male"))
+		event_string = string.gsub(event_string, "WAR_MINISTER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "war-minister", "male")))
 	end
 
 	if (string.find(event_string, "GOVERNOR_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "GOVERNOR_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "governor", "male"))
+		event_string = string.gsub(event_string, "GOVERNOR_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "governor", "male")))
 	end
 
 	if (string.find(event_string, "MAYOR_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "MAYOR_TITLE", GetPlayerData(trigger_player, "CharacterTitle", "mayor", "male"))
+		event_string = string.gsub(event_string, "MAYOR_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "mayor", "male")))
 	end
 
 	return event_string
@@ -407,7 +407,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			menu:add(l, 14, 112)
 		end
 		
-		l:setCaption(_(ProcessEventString(event_description)))
+		l:setCaption(ProcessEventString(_(event_description)))
 
 		local b
 		if (type(speaker) == "number") then
@@ -456,7 +456,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			)
 			
 			if (arg.OptionTooltips ~= nil) then
-				option_b:setTooltip(_(ProcessEventString(arg.OptionTooltips[i])))
+				option_b:setTooltip(ProcessEventString(_(arg.OptionTooltips[i])))
 			end
 		end
 		
@@ -517,7 +517,7 @@ function Tip(tip_name, tip_description)
 		SavePreferences()
 	end
 			
-	menu:addHalfButton("~!Close", "c", 288 / 2 - (106 / 2), 256 - 40,
+	menu:addHalfButton(_("~!Close"), "c", 288 / 2 - (106 / 2), 256 - 40,
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
@@ -590,7 +590,7 @@ function GenericDialog(title, message, tooltip, icon, player_color)
 	end
 	l:setCaption(_(message))
 
-	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
+	local ok_button = menu:addFullButton(_("~!OK"), "o", 16, 248 - (36 * 0),
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)

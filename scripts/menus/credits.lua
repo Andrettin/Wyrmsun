@@ -210,6 +210,7 @@ function RunShowCreditsMenu()
 		"  Rey",
 		_("Translation"),
 		"  Battle for Wesnoth Team",
+		"  BeWorld2018",
 		"  Dmitry Shamshurin",
 		"  dragut",
 		"  Franco514",
