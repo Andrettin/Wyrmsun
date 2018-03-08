@@ -87,13 +87,6 @@ DefineWorldMapTile({511, 110}, {
 	}
 })
 
-DefineWorldMapTile({512, 103}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Schwerin"
-	}
-})
-
 DefineWorldMapTile({515, 109}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -119,13 +112,6 @@ DefineWorldMapTile({522, 106}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"teuton", "Küstrin"
-	}
-})
-
-DefineWorldMapTile({523, 102}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"teuton", "Kolberg"
 	}
 })
 

@@ -158,7 +158,7 @@ DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-norse-veteran-swordsman",
 	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
-	ForUnit = {"unit-norse-swordsman"}
+	ForUnit = {"unit-norse-swordsman", "unit-slavic-swordsman"}
 })
 
 DefineButton( { Pos = 1, Level = 2,

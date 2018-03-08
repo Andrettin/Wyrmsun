@@ -57,6 +57,20 @@ DefineSettlement("gniezno", {
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
+DefineSettlement("kolberg", {
+	Name = "Kolberg",
+	MapTemplate = "earth",
+	Position = {4223, 806},
+	CulturalNames = {
+		"teuton", "Kolberg"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("konigsberg", {
 	Name = "Konigsberg",
 	MapTemplate = "earth",

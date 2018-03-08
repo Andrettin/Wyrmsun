@@ -56,6 +56,8 @@ Units = {
 	"unit-norse-farm", "unit-norse-barracks",
 	"unit-norse-lumber-mill", "unit-norse-smithy",
 	"unit-norse-palisade",
+	"upgrade-slavic-civilization",
+	"unit-slavic-swordsman",
 	"upgrade-teuton-civilization",
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",
@@ -4774,6 +4776,7 @@ Load("scripts/civilizations/suebi/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
 Load("scripts/civilizations/norse/units.lua")
 Load("scripts/civilizations/latin/units.lua")
+Load("scripts/civilizations/slav/units.lua")
 
 -- Other civilizations' units
 
@@ -4949,7 +4952,8 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-kobold-footpad", 4,
 		"unit-ettin", 1,
 		"unit-latin-legionary", 4, "unit-latin-javelineer", 3,
-		"unit-norse-swordsman", 4
+		"unit-norse-swordsman", 4,
+		"unit-slavic-swordsman", 4
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {

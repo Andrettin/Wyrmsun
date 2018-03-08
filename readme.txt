@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Goblin Warship.
+- Added Slavic Swordsman.
 
 -----------------------------------------------------------------------
 - 3.3.0

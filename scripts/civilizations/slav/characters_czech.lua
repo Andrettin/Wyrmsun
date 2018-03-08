@@ -67,7 +67,7 @@ DefineCharacter("humprecht-cernin-of-chudenice", { -- Source: Alena Ježková, "
 	Name = "Humprecht", -- Imperial envoy to Venice
 	ExtraName = "Černín of Chudenice",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-slavic-swordsman",
 	Civilization = "slav",
 	Date = 1669 -- Had the Černín Palace built in Prague for him in 1669
 })

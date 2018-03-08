@@ -379,6 +379,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-teuton-priest",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
+		"unit-slavic-swordsman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
@@ -836,6 +837,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-teuton-priest",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
+		"unit-slavic-swordsman",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
@@ -883,6 +885,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-teuton-priest",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
+		"unit-slavic-swordsman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
 		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
@@ -943,6 +946,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
 		"unit-teuton-priest",
 		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
+		"unit-slavic-swordsman",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
@@ -2090,5 +2094,6 @@ Load("scripts/civilizations/goth/buttons.lua")
 Load("scripts/civilizations/kobold/buttons.lua")
 Load("scripts/civilizations/latin/buttons.lua")
 Load("scripts/civilizations/norse/buttons.lua")
+Load("scripts/civilizations/slav/buttons.lua")
 Load("scripts/civilizations/suebi/buttons.lua")
 Load("scripts/civilizations/teuton/buttons.lua")

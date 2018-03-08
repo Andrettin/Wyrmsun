@@ -430,6 +430,7 @@ Load("scripts/civilizations/greek/upgrade.lua")
 Load("scripts/civilizations/kobold/upgrade.lua")
 Load("scripts/civilizations/latin/upgrade.lua")
 Load("scripts/civilizations/norse/upgrade.lua")
+Load("scripts/civilizations/slav/upgrade.lua")
 Load("scripts/civilizations/suebi/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")
 

@@ -577,6 +577,20 @@ DefineSettlement("scheidungen", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("schwerin", {
+	Name = "Schwerin",
+	MapTemplate = "earth",
+	Position = {4093, 827},
+	CulturalNames = {
+		"teuton", "Schwerin"
+	},
+	HistoricalOwners = {
+	},
+	HistoricalBuildings = {
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("straubing", {
 	Name = "Straubing",
 	MapTemplate = "earth",

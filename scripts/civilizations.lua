@@ -3650,10 +3650,19 @@ DefineCivilization("slav", {
 	Visible = false,
 	Species = "human",
 	Language = "proto-slavic",
-	ParentCivilization = "teuton", -- so that it can use Teuton units and buildings
+	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Adjective = "Slavic",
 	Playable = false,
 	DefaultColor = "blue",
+	CivilizationUpgrade = "upgrade-slavic-civilization",
+	UnitSounds = {
+		"selected", "basic-greek-voices-selected-group",
+		"acknowledge", "basic-greek-voices-acknowledge",
+--		"attack", "basic-greek-voices-attack",
+		"ready", "basic-greek-voices-ready",
+		"help", "basic-english-voices-help",
+		"help-town", "basic-english-voices-help-town"
+	},
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	},

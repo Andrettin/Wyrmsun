@@ -102,7 +102,7 @@ DefineDependency("unit-teuton-stables",
 )
 
 DefinePredependency("unit-teuton-swordsman",
-	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade-norse-civilization", 0}
+	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-spearman",
@@ -122,19 +122,19 @@ DefinePredependency("unit-teuton-town-hall",
 )
 
 DefinePredependency("unit-teuton-farm",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-barracks",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-lumber-mill",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-smithy",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefineDependency("unit-teuton-temple",

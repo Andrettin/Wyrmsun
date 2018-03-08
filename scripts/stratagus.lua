@@ -598,6 +598,7 @@ function StandardTriggers()
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-slavic-swordsman"
 						)
 					) then
 						return true
