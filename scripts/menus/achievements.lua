@@ -74,7 +74,7 @@ function addAchievementIcon(achievement, menu, x, y)
 		function()
 			PlaySound("click")
 			local achievement_menu = WarGameMenu(panel(2))
-			achievement_menu:setSize(288, 280)
+			achievement_menu:setSize(288, 256)
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
 			achievement_menu:addLabel(_(GetAchievementData(achievement, "Name")), (achievement_menu:getWidth() / 2), 11)
 			
