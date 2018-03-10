@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.3.1
 -----------------------------------------------------------------------
 
+* Quests
+- Fixed issue which caused a crash when starting the A Bargain is Struck quest.
+
 * Units
 - Added Goblin Warship.
 - Added Slavic Swordsman.

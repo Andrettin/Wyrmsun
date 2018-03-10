@@ -26,10 +26,10 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-lumber-mill", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-stronghold", "F")
 	
 	if (GameSettings.Difficulty <= DifficultyNormal) then -- if the difficulty is normal or lower, add a raft
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, {14, 32})
