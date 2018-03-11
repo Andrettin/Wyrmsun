@@ -98,8 +98,6 @@ function RunEncyclopediaMenu()
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function()
-			Worlds = nil;
-			CivilizationsEncyclopedia = nil;
 			menu:stop();
 		end
 	)
@@ -914,6 +912,18 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	end
 	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. background)
+
+	local has_family_tree_button = false
+	if (state == "heroes") then
+		--[[
+		menu:addFullButton(_("~!Family Tree"), "f", offx + 208, offy + 104 + (36 * 8),
+			function()
+				RunFamilyTreeMenu(unit_name);
+			end
+		)
+		has_family_tree_button = true
+		--]]
+	end
 	
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
@@ -929,6 +939,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 
 	local chapter_x
 	local chapter_y = 8
+	if (has_family_tree_button) then
+		chapter_y = 7
+	end
 	if (chapter_references == 1) then
 		chapter_x = 0
 	elseif (chapter_references == 2) then

@@ -1459,6 +1459,7 @@ Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
 Load("scripts/menus/factions.lua")
+Load("scripts/menus/family_tree.lua")
 Load("scripts/menus/custom_hero.lua")
 
 SetGrabMouse(wyr.preferences.GrabMouse)

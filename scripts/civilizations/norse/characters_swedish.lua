@@ -28,7 +28,7 @@
 DefineCharacter("vana", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 227.
 	Name = "Vana",
 	Gender = "female",
-	Type = "unit-germanic-archer",
+	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	-- from Vanaland/Vanaheim
 	-- wife of Svegðir's
