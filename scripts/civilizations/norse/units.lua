@@ -116,7 +116,7 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 })
 
 DefineUnitType("unit-norse-longship", {
-	Name = "Longship",
+	Name = "Longship", -- called "Langskip" in Old Norse; Source: Richard W. Unger, "Warships and Cargo Ships in Medieval Europe", 1981, p. 242.
 	Parent = "unit-template-siege-warship",
 	Civilization = "teuton", -- so that it will be buildable by the Teutons, Suebi and etc. as well
 	Description = "Longships are the terror of the Baltic and North Seas, and beyond. Fast, elegant and deadly, they are often used for quick incursions and raids.",
