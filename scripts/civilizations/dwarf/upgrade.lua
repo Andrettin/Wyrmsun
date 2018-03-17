@@ -106,14 +106,14 @@ DefineUpgrade("upgrade-dwarven-ballista-bolt-1", {
 	Parent = "upgrade-broadhead-ballista-bolt",
 	Icon = "icon-dwarven-ballista-bolt-2",
 	Civilization = "dwarf",
-	Description = "While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +12 Damage for Ballistas."
+	Description = "While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships."
 })
 
 DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
 	Parent = "upgrade-penetrating-ballista-bolt",
 	Icon = "icon-dwarven-ballista-bolt-3",
 	Civilization = "dwarf",
-	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +12 Damage for Ballistas."
+	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships."
 })
 
 DefineUpgrade("upgrade-dwarven-masonry", {

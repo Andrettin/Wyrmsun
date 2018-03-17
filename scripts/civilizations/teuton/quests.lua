@@ -144,7 +144,7 @@ DefineQuest("the-razing-of-opitergium", {
 DefineQuest("moving-into-galicia", { -- happened in 411 AD
 	Name = "Moving into Galicia",
 	Icon = "icon-teuton-town-hall",
-	Description = "Times are changing. The Roman Empire, once invincible, is now falling prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to take on this opportunity, moving into the Roman province of Galicia...\n\nMap: Braga",
+	Description = "Times are changing. The Roman Empire, once invincible, has fallen prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to take use opportunity, and move into the Roman province of Galicia...\n\nMap: Braga",
 	RequiredQuest = "the-razing-of-opitergium",
 	World = "earth",
 	Civilization = "suebi",

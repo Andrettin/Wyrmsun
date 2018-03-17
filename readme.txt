@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added Goblin Warship.
 - Added Slavic Swordsman.
+- Added Norse Longship (also available for the Anglo-Saxons, Franks, Goths, Suebi and Teutons).
 
 -----------------------------------------------------------------------
 - 3.3.0

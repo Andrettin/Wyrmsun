@@ -172,6 +172,16 @@ DefineCampaign("the-first-marcomannic-war", {
 --]]
 
 --[[
+DefineCampaign("moving-into-galicia", {
+	Name = "Moving into Galicia",
+	Description = "Times are changing. The Roman Empire, once invincible, has fallen prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to use this opportunity, move into the Roman province of Galicia...",
+	Faction = "rome",
+	StartYear = 411,
+	MapTemplates = {
+		"earth", {3616, 975}, {256, 256}
+	}
+})
+
 DefineCampaign("the-founding-of-francia", {
 	Name = "The Founding of Francia",
 	Description = "The Frankish chieftain Chlodwig has come to power with the burning ambition to expand his lands. Bordering hardened Roman remnants and warlike tribes, the path he seeks will have to be paved in blood...",

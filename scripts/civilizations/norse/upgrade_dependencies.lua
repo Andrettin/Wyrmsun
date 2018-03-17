@@ -29,6 +29,11 @@ DefinePredependency("unit-norse-swordsman",
 	{"upgrade-norse-civilization"}
 )
 
+DefineDependency("unit-norse-longship",
+	{"unit-norse-smithy", "unit-norse-lumber-mill", "upgrade-engineering"},
+	"or", {"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}
+)
+
 DefinePredependency("unit-norse-town-hall",
 	{"upgrade-norse-civilization"}
 )

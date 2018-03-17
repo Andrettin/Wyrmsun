@@ -1101,8 +1101,8 @@ DefineProvince("Douro", {
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "suebi", "suebi-tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		486, "suebi", "galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		411, "suebi", "suebi-tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		486, "suebi", "galicia", -- Suebic kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {

@@ -69,6 +69,7 @@ DefineSettlement("cadiz", {
 	Name = "Cadiz",
 	MapTemplate = "earth",
 	Position = {3699, 1218},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Cadiz",
 		"latin", "Gades",
@@ -108,6 +109,7 @@ DefineSettlement("cartagena", {
 	Name = "New Carthage",
 	MapTemplate = "earth",
 	Position = {3816, 1191},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Cartagena",
 		"latin", "New Carthage",
@@ -130,9 +132,10 @@ DefineSettlement("cordoba", {
 	Name = "Cordoba",
 	MapTemplate = "earth",
 	Position = {3730, 1183},
+	Major = true,
 	CulturalNames = {
 		"castillian", "Cordoba",
-		"latin", "Corduba"
+		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-197, "rome", -- Corduba was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -204,8 +207,8 @@ DefineSettlement("malaga", {
 	MapTemplate = "earth",
 	Position = {3739, 1211},
 	CulturalNames = {
-		"castillian", "Malaga", -- "Málaga"
-		"latin", "Malaca"
+		"castillian", "Malaga", -- "Málaga"; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-201, "rome", -- Malaca was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -336,8 +339,8 @@ DefineSettlement("tarragona", {
 	MapTemplate = "earth",
 	Position = {3881, 1108},
 	CulturalNames = {
-		"castillian", "Tarragona",
-		"latin", "Tarraco"
+		"castillian", "Tarragona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "Tarraco" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-201, "rome", -- Tarraco was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -357,8 +360,8 @@ DefineSettlement("toledo", {
 	Position = {3756, 1139},
 	Major = true,
 	CulturalNames = {
-		"castillian", "Toledo",
-		"latin", "Toletum"
+		"castillian", "Toledo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-197, "rome", -- Toletum was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -397,9 +400,10 @@ DefineSettlement("valencia", {
 	Name = "Valencia",
 	MapTemplate = "earth",
 	Position = {3833, 1148},
+	Major = true,
 	CulturalNames = {
-		"castillian", "Valencia",
-		"latin", "Valentia"
+		"castillian", "Valencia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-201, "rome", -- Valentia was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -419,7 +423,8 @@ DefineSettlement("zaragoza", {
 	Position = {3824, 1103},
 	Major = true,
 	CulturalNames = {
-		"castillian", "Zaragoza"
+		"castillian", "Zaragoza",
+		"latin", "Caesaraugusta"
 	},
 	HistoricalOwners = {
 		395, "rome", -- Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

@@ -650,7 +650,6 @@ DefineUnitType("unit-goblin-warship", {
 	Missile = "missile-catapult-sandstone-rock",
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
-	SideAttack = false,
 	Sounds = {
 		"help", "basic-goblin-voices-help"
 	}

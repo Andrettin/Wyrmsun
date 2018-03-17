@@ -38,7 +38,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult"
+		"unit-teuton-catapult",
+		"unit-norse-longship"
 	}
 } )
 
@@ -47,7 +48,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-1"},
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult"
+		"unit-teuton-catapult",
+		"unit-norse-longship"
 	}
 } )
 
@@ -56,7 +58,8 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-2"},
 	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult"
+		"unit-teuton-catapult",
+		"unit-norse-longship"
 	}
 } )
 
@@ -254,7 +257,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup-research",
-	Description = "+12 Damage for Catapults.",
+	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
@@ -262,7 +265,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup-research",
-	Description = "+12 Damage for Catapults.",
+	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
@@ -309,7 +312,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
+	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults and Longships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
 	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
 	ForUnit = {"unit-teuton-university"}
 } )

@@ -59,36 +59,6 @@ DefineWorldMapTile({464, 141}, {
 	}
 })
 
-DefineWorldMapTile({466, 148}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Córdova" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
-DefineWorldMapTile({467, 151}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Málaga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
-DefineWorldMapTile({468, 142}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Toledo" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
 DefineWorldMapTile({469, 141}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -106,40 +76,10 @@ DefineWorldMapTile({470, 150}, {
 	}
 })
 
-DefineWorldMapTile({477, 137}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Zaragoza"
-	}
-})
-
-DefineWorldMapTile({478, 144}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Valencia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
 DefineWorldMapTile({481, 135}, {
 	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "castillian", "spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69.
-	}
-})
-
-DefineWorldMapTile({483, 138}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Tarraco" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Tarragona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 	}
 })
 

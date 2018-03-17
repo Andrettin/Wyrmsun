@@ -95,10 +95,12 @@ DefineSettlement("oporto", {
 		"portuguese", "Oporto"
 	},
 	HistoricalOwners = {
+		-138, "rome", -- Oporto's area was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		{411, 12, 31}, "suebi-tribe", -- Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		1150, "portugal" -- Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
-		1150, 0, "town-hall",
+		-138, 0, "town-hall",
 		1911, 0, "university" -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}

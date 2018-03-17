@@ -44,6 +44,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-norse-longship",
+	Size = {46, 38},
+	File = "norse/icons/longship.png"
+})
+
+DefineIcon({
 	Name = "icon-norse-town-hall",
 	Size = {46, 38},
 	File = "norse/icons/town_hall.png"

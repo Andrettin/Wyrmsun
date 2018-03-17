@@ -41,7 +41,8 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	Action = "attack-ground",
 	Key = "g", Hint = "Attack ~!Ground", Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "english-group", "frankish-group", "suebi-group", "teuton-group",
+		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "english-group", "frankish-group", "goth-group", "norse-group", "suebi-group", "teuton-group",
+		"unit-norse-longship",
 		"unit-dwarven-ballista", "unit-dwarven-ballista-warship", "dwarf-group",
 		"unit-goblin-war-machine", "unit-goblin-warship", "goblin-group"
 	}

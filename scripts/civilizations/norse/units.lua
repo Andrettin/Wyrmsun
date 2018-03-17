@@ -115,6 +115,22 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 	}
 })
 
+DefineUnitType("unit-norse-longship", {
+	Name = "Longship",
+	Parent = "unit-template-siege-warship",
+	Civilization = "teuton", -- so that it will be buildable by the Teutons, Suebi and etc. as well
+	Description = "Longships are the terror of the Baltic and North Seas, and beyond. Fast, elegant and deadly, they are often used for quick incursions and raids.",
+	Image = {"file", "norse/units/longship.png", "size", {100, 100}},
+	LightImage = {"file", "norse/units/longship_water.png"},
+	Icon = "icon-norse-longship",
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	BluntDamage = true,
+	Sounds = {
+--		"help", "basic-norse-voices-help"
+	}
+})
+
 DefineUnitType("unit-norse-town-hall", {
 	Name = "Chieftain's Hall",
 	Parent = "unit-template-town-hall",
