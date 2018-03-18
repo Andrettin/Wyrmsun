@@ -36,7 +36,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 
 	local hero_civilization_list = {}
 	if (world == "earth") then
-		--table.insert(hero_civilization_list, "Anglo-Saxon")
+--		table.insert(hero_civilization_list, "Anglo-Saxon")
 		table.insert(hero_civilization_list, "Frankish")
 		table.insert(hero_civilization_list, "Germanic")
 --		table.insert(hero_civilization_list, "Goth")

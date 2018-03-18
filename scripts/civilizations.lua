@@ -3289,7 +3289,7 @@ DefineCivilization("etruscan", {
 
 DefineCivilization("goth", {
 	Display = "Goth",
-	Visible = false,
+	Visible = true,
 	Species = "human",
 	Language = "gothic",
 	ParentCivilization = "teuton",
@@ -3519,12 +3519,11 @@ DefineCivilization("minoan", {
 
 DefineCivilization("norse", {
 	Display = "Norse",
-	Visible = false,
+	Visible = true,
 	Species = "human",
 	Language = "old-norse",
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
-	Playable = false,
 	DefaultColor = "blue",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade-norse-civilization",

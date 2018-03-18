@@ -126,8 +126,7 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	FactionUpgrade = "upgrade-faction-skeldung-tribe",
---	DefaultAI = "sea-attack"
+	FactionUpgrade = "upgrade-faction-skeldung-tribe"
 })
 
 DefineFaction("thielung-tribe", {
@@ -161,7 +160,6 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
 	FactionUpgrade = "upgrade-faction-yngling-tribe",
---	DefaultAI = "sea-attack",
 	HistoricalCapitals = {
 		-2800, "sigtun"
 	}

@@ -27,52 +27,62 @@
 
 DefineUpgrade("upgrade-faction-dane-tribe", {
 	Name = "Dane Tribe",
-	EffectsString = "+1 Damage and +1 Armor for Swordsmen"
+	EffectsString = "+1 Damage and +1 Armor for Swordsmen",
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-geat-tribe", {
 	Name = "Geat Tribe",
-	EffectsString = "+2 Damage for Swordsmen"
+	EffectsString = "+2 Damage for Swordsmen",
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-gute-tribe", {
 	Name = "Gute Tribe",
-	EffectsString = "+1 Damage and +1 Accuracy for Swordsmen"
+	EffectsString = "+1 Damage and +1 Accuracy for Swordsmen",
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-sitone-tribe", {
 	Name = "Sitone Tribe",
-	EffectsString = "+2 Accuracy for Archers"
+	EffectsString = "+2 Accuracy for Archers",
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-swede-tribe", {
 	Name = "Swede Tribe",
-	EffectsString = "+2 Damage for Archers"
+	EffectsString = "+2 Damage for Archers",
+	RequirementsString = "Ironworking"
 })
 
 DefineUpgrade("upgrade-faction-denmark", {
 	Name = "Denmark",
-	EffectsString = "+1 Damage and +1 Armor for Swordsmen"
+	EffectsString = "+1 Damage and +1 Armor for Swordsmen",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-gautland", {
 	Name = "Gautland",
-	EffectsString = "+2 Damage for Swordsmen"
+	EffectsString = "+2 Damage for Swordsmen",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-gotland", {
 	Name = "Gotland",
-	EffectsString = "+1 Damage and +1 Accuracy for Swordsmen"
+	EffectsString = "+1 Damage and +1 Accuracy for Swordsmen",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-norway", {
 	Name = "Norway",
-	EffectsString = "+2 Accuracy for Swordsmen"
+	EffectsString = "+2 Accuracy for Swordsmen",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineUpgrade("upgrade-faction-sweden", {
 	Name = "Sweden",
-	EffectsString = "+2 Damage for Archers"
+	EffectsString = "+2 Damage for Archers",
+	RequirementsString = "Writing and Masonry"
 })
 
 DefineModifier("upgrade-faction-dane-tribe",

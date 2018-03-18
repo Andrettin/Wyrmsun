@@ -16409,7 +16409,6 @@ SetPlayerData(3, "Resources", "copper", 10000)
 SetPlayerData(3, "Resources", "lumber", 6000)
 SetPlayerData(3, "Resources", "stone", 3000)
 SetPlayerData(3, "RaceName", "dwarf")
---SetAiType(3, "sea-attack")
 SetAiType(3, "land-attack")
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 

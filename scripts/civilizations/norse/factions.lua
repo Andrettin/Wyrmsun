@@ -32,8 +32,9 @@ DefineFaction("dane-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DefaultAI = "sea-attack",
-	FactionUpgrade = "upgrade-faction-dane-tribe"
+	FactionUpgrade = "upgrade-faction-dane-tribe",
+	Icon = "icon-flag-blue-lion-on-yellow",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thralling-tribe"}
 	-- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
@@ -42,9 +43,9 @@ DefineFaction("geat-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"teal"},
-	DefaultAI = "sea-attack",
---	DevelopsFrom = {"goth-tribe"},
-	FactionUpgrade = "upgrade-faction-geat-tribe"
+	FactionUpgrade = "upgrade-faction-geat-tribe",
+	Icon = "icon-flag-yellow-lion-on-cyan",
+	DevelopsFrom = {"asa-tribe", "goth-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("gute-tribe", {
@@ -52,8 +53,9 @@ DefineFaction("gute-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"cyan"},
-	DefaultAI = "sea-attack",
-	FactionUpgrade = "upgrade-faction-gute-tribe"
+	FactionUpgrade = "upgrade-faction-gute-tribe",
+	Icon = "icon-flag-old-austria",
+	DevelopsFrom = {"asa-tribe", "goth-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -61,8 +63,9 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	Civilization = "norse", -- correct?
 	Type = "tribe",
 	Colors = {"brown"},
-	DefaultAI = "sea-attack",
-	FactionUpgrade = "upgrade-faction-sitone-tribe"
+	FactionUpgrade = "upgrade-faction-sitone-tribe",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
 DefineFaction("swede-tribe", {
@@ -70,8 +73,9 @@ DefineFaction("swede-tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
-	DefaultAI = "sea-attack",
-	FactionUpgrade = "upgrade-faction-swede-tribe"
+	FactionUpgrade = "upgrade-faction-swede-tribe",
+	Icon = "icon-flag-yellow-lion-on-cyan",
+	DevelopsFrom = {"asa-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
 -- Polities
@@ -82,9 +86,9 @@ DefineFaction("scania", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	Adjective = "Scanian",
 	FactionUpgrade = "upgrade-faction-denmark",
+	Icon = "icon-flag-habsburg",
 	DevelopsFrom = {"dane-tribe", "swede-tribe"}
 })
 
@@ -94,8 +98,8 @@ DefineFaction("denmark", {
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-denmark",
+	Icon = "icon-flag-blue-lion-on-yellow",
 	DevelopsFrom = {"dane-tribe", "scania"}
 })
 
@@ -105,8 +109,8 @@ DefineFaction("gautland", {
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-gautland",
+	Icon = "icon-flag-yellow-lion-on-cyan",
 	DevelopsFrom = {"geat-tribe"}
 })
 
@@ -116,8 +120,8 @@ DefineFaction("gotland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "duchy", -- correct?
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-gotland",
+	Icon = "icon-flag-old-austria",
 	DevelopsFrom = {"gute-tribe"}
 })
 
@@ -127,8 +131,8 @@ DefineFaction("halogaland", {
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-five-red-birds-on-yellow",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
@@ -139,6 +143,7 @@ DefineFaction("holmgard", {
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-sweden",
+	Icon = "icon-flag-five-black-birds-on-purple",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
@@ -148,8 +153,8 @@ DefineFaction("hordaland", {
 	Type = "polity",
 	Colors = {"cyan"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-five-orange-birds-on-black",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
@@ -166,8 +171,8 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"head-of-state", "male", "monarchy", "duchy", "Earl",
 		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-cyan-lion-on-red",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
@@ -177,8 +182,8 @@ DefineFaction("norway", {
 	Type = "polity",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-cyan-lion-on-red",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe", "halogaland", "hordaland", "orkney"}
 })
 
@@ -188,9 +193,9 @@ DefineFaction("sweden", {
 	Type = "polity",
 	Colors = {"blue", "yellow"},
 	DefaultTier = "kingdom",
-	DefaultAI = "sea-attack",
 	Adjective = "Swedish",
 	FactionUpgrade = "upgrade-faction-sweden",
+	Icon = "icon-flag-yellow-lion-on-cyan",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe", "gautland", "scania"}
 })
 

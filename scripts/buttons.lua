@@ -323,6 +323,21 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 	}
 } )
 
+DefineButton( { Pos = 16, Level = 5, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+} )
+
 -- General Cancel Buttons ------------------------------------------------------
 
 DefineButton( { Pos = 16, Level = 9, Icon = "icon-cancel",
@@ -1502,9 +1517,235 @@ DefineButton( { Pos = 14, Level = 2,
 	}
 })
 
-DefineButton( { Pos = 15, Level = 2,
+DefineButton( { Pos = 15, Level = 2, Icon = "icon-right-arrow",
+	Action = "button", Value = 5,
+	Allowed = "check-has-sub-buttons",
+	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 1, Level = 5,
 	Action = "faction", Value = -1,
 	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 2, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 3, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 4, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 5, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 6, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 8, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 9, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 10, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 11, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 12, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 13, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 14, Level = 5,
+	Action = "faction", Value = -1,
+	Key = "", Hint = "", Popup = "popup-research",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
+DefineButton( { Pos = 15, Level = 5, Icon = "icon-left-arrow",
+	Action = "button", Value = 2,
+	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",

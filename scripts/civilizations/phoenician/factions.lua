@@ -37,8 +37,7 @@ DefineFaction("carthage", {
 	Name = "Carthage",
 	Civilization = "phoenician",
 	Type = "polity",
-	Colors = {"black"},
-	DefaultAI = "sea-attack"
+	Colors = {"black"}
 })
 
 DefineFaction("phoenicia", {
@@ -46,7 +45,6 @@ DefineFaction("phoenicia", {
 	Civilization = "phoenician",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultAI = "sea-attack",
 	HistoricalCapitals = {
 		0, "tyre"
 	}
