@@ -72,7 +72,7 @@ DefineSettlement("lisbon", {
 	Major = true,
 	CulturalNames = {
 		"latin", "Olisipo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"portuguese", "Lisbon"
+		"portuguese", "Lisbon" -- "Lisboa"
 	},
 	HistoricalOwners = {
 		-138, "rome", -- Olisipo was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

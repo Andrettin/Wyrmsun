@@ -283,7 +283,7 @@ DefineSettlement("vienna", {
 		"celt", "Vindobona",
 		"gaul", "Vindobona",
 		"latin", "Vindobona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Vienna" -- Wien
+		"teuton", "Vienna" -- "Wien"
 	},
 	HistoricalOwners = {
 		10, "rome", -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

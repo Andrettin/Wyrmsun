@@ -53,9 +53,6 @@ DefineLanguage("old-norse", {
 		"Moder", "Mothir",
 		"Skeldu", "Skjold", -- "Skjöldr"
 		"Thrahila", "Thrall",
-		-- Proto-Germanic Settlement Names
-		"Ansugardiz", "Asgard",
-		"Segiztuna", "Sigtun",
 		-- "Runic" (Northwest Germanic?) Personal Names
 		"Hlewagastiz", "Hliugast", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.2b.
 		-- Old English Personal Names
@@ -175,8 +172,6 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"indefinite", "genitive", "no-number", "no-gender", "en"
 	},
 	NameTranslations = {
-		"Mediolanum", "Mailand",
-		"Vindobona", "Vienna",
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
 		"Theodoric", "Dietrich", -- "Dietrich" is the German form of the Gothic name Theodoric
 		-- Proto-Germanic
@@ -267,9 +262,7 @@ DefineLanguage("english", {
 		"Abbodesbyrig", "Abbotsbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Aegelesburg", "Aylesbury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Aegelesford", "Aylesford", -- Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Aethelingaig", "Athelney", -- Æthelingaig -> Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Alre", "Aller", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ambresbyrig", "Amesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Andeferas", "Andover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Apuldre", "Appledore", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Arwe", "Orwell", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -279,35 +272,7 @@ DefineLanguage("english", {
 		"Bancornaburg", "Bangor", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bardanstapol", "Barnstaple", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Basengum", "Basing", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bathum", "Bath", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Bebbanburg", "Bamburgh", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Cantwaraburg", "Canterbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Cirenceaster", "Cirencester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Cisseceaster", "Chichester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Colneceaster", "Colchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Dofras", "Dover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Dornwaraceaster", "Dorchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Dunholm", "Durham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Eoforwic", "York", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Escanceaster", "Exeter", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Gleawanceaster", "Gloucester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Godmunddingaham", "Goodmanham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Grantanbrycg", "Cambridge", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Gyruum", "Jarrow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Haestingaceaster", "Hastings", -- Hæstingaceaster -> Hastings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Hrofesceaster", "Rochester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Legaceaster", "Chester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Ligoraceaster", "Leicester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Lindcylene", "Lincoln", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Loidis", "Leeds", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Lunden", "London", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"Pefenesea", "Pevensey", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"Reculf", "Reculver", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"Sanctae Albanes", "St. Albans", -- Sanctæ Albanes -> St. Albans; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"Searoburg", "Salisbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"Searuburh", "Salisbury", -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 115.
-		"Witanceaster", "Winchester", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		-- German Personal Names
 		"Bernhard", "Bernard",
 		"Franz", "Francis",
@@ -319,8 +284,6 @@ DefineLanguage("english", {
 		"Peter", "Peter",
 		"Wilhelm", "William",
 		-- German Settlement Names
-		"Hannover", "Hanover",
-		"Wien", "Vienna",
 		"Württemberg", "Wurtemberg",
 		-- Portuguese Personal Names
 		"Bernardo", "Bernard",
@@ -331,9 +294,7 @@ DefineLanguage("english", {
 		"Henrique", "Henry",
 		"Joao", "John", -- João -> John
 		"Luis", "Lewis", -- Luís -> Lewis
-		"Pedro", "Peter",
-		-- Portuguese Settlement Names
-		"Lisboa", "Lisbon"
+		"Pedro", "Peter"
 	}
 })
 
