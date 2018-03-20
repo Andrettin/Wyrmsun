@@ -109,6 +109,9 @@ DefineSettlement("leidre", {
 	MapTemplate = "earth",
 	Position = {4112, 784},
 	Major = true,
+	Cores = {
+		"dane-tribe"
+	},
 	CulturalNames = {
 		"germanic", "Leidre", -- should be a rendering of Lejre in Proto-Germanic instead
 		"norse", "Leidre"

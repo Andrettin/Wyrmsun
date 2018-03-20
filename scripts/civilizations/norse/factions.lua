@@ -80,6 +80,17 @@ DefineFaction("swede-tribe", {
 
 -- Polities
 
+DefineFaction("agder", {
+	Name = "Agder",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+})
+
 DefineFaction("scania", {
 	Name = "Scania",
 	Civilization = "norse",
@@ -100,7 +111,15 @@ DefineFaction("denmark", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-denmark",
 	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"dane-tribe", "scania"}
+	DevelopsFrom = {"dane-tribe", "scania"},
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "dane-tribe")) then
+				return false
+			end
+		end
+		return true
+	end
 })
 
 DefineFaction("gautland", {
@@ -133,6 +152,17 @@ DefineFaction("halogaland", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+})
+
+DefineFaction("hedmark", {
+	Name = "Hedmark",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-five-purple-birds-on-green",
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
@@ -176,6 +206,34 @@ DefineFaction("orkney", { -- Earldom of Orkney
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
+DefineFaction("vestfold", {
+	Name = "Vestfold",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-five-red-birds-on-yellow",
+	DevelopsFrom = {"sitone-tribe", "swede-tribe"},
+	HistoricalDiplomacyStates = {
+		841, "agder", "alliance" -- Halfdan the Black and Olaf Geirstad-Alf, brothers, were apparently friendly or allied since they divided a kingdom between themselves in 841 without war; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	}
+})
+
+DefineFaction("vingulmark", {
+	Name = "Vingulmark",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-habsburg",
+	DevelopsFrom = {"sitone-tribe", "swede-tribe"},
+	HistoricalDiplomacyStates = {
+		{841, 9, 1}, "agder", "war" -- Halfdan the Black, king of Agder, attacked Vingulmark with an army in the autumn of 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	}
+})
+
 DefineFaction("norway", {
 	Name = "Norway",
 	Civilization = "norse",
@@ -184,7 +242,15 @@ DefineFaction("norway", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe", "halogaland", "hordaland", "orkney"}
+	DevelopsFrom = {"sitone-tribe", "swede-tribe", "agder", "halogaland", "hedmark", "hordaland", "orkney", "vestfold", "vingulmark"},
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "agder" or GetPlayerData(i, "Faction") == "halogaland" or GetPlayerData(i, "Faction") == "hedmark" or GetPlayerData(i, "Faction") == "hordaland" or GetPlayerData(i, "Faction") == "vestfold" or GetPlayerData(i, "Faction") == "vingulmark")) then
+				return false
+			end
+		end
+		return true
+	end
 })
 
 DefineFaction("sweden", {
@@ -196,7 +262,15 @@ DefineFaction("sweden", {
 	Adjective = "Swedish",
 	FactionUpgrade = "upgrade-faction-sweden",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe", "gautland", "scania"}
+	DevelopsFrom = {"sitone-tribe", "swede-tribe", "gautland", "scania"},
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "swede-tribe") then
+				return false
+			end
+		end
+		return true
+	end
 })
 
 -- Mercenary Companies

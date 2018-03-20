@@ -4126,18 +4126,6 @@ DefineProvince("Venetia", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineProvince("Vestfold", {
-	World = "earth",
-	CulturalNames = {
-		"norse", "Vestfold"
-	},
---	SettlementLocation = {509, 87}, -- Tønsberg
-	Claims = {
-		"norse", "norway"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
 DefineProvince("Vinnytska", {
 	World = "earth",
 	CulturalNames = {

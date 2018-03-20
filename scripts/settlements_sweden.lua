@@ -35,7 +35,8 @@ DefineSettlement("goteborg", {
 		"norse", "Goteborg" -- "Göteborg"
 	},
 	Cores = {
---		"goth-tribe"
+--		"goth-tribe",
+		"geat-tribe"
 	},
 	HistoricalOwners = {
 		{-2800, 12, 30}, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
@@ -118,6 +119,9 @@ DefineSettlement("stockholm", {
 	MapTemplate = "earth",
 	Position = {4253, 693},
 	Major = true,
+	Cores = {
+		"swede-tribe"
+	},
 	CulturalNames = {
 		"germanic", "Stukkahulma", -- tentative rendering of "Stockholm" in Proto-Germanic
 		"norse", "Stockholm"
@@ -185,6 +189,9 @@ DefineSettlement("visby", {
 	MapTemplate = "earth",
 	Position = {4259, 736},
 	Major = true,
+	Cores = {
+		"gute-tribe"
+	},
 	CulturalNames = {
 		"norse", "Visby"
 	},

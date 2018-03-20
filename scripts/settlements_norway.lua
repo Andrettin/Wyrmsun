@@ -25,6 +25,68 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSettlement("arendal", {
+	Name = "Arendal",
+	MapTemplate = "earth",
+	Position = {4048, 708},
+	Major = true,
+	CulturalNames = {
+		"norse", "Arendal"
+	},
+	Cores = {
+		"agder",
+		"norway"
+	},
+	HistoricalOwners = {
+		841, "agder" -- Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	},
+	HistoricalBuildings = {
+		841, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("gjerstad", {
+	Name = "Gjerstad",
+	MapTemplate = "earth",
+	Position = {4069, 702},
+	CulturalNames = {
+		"norse", "Geirstadir" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
+	},
+	Cores = {
+		"norway",
+		"vestfold"
+	},
+	HistoricalOwners = {
+		824, "vestfold" -- Geirstadir was the main residence of king Olaf of Vestfold; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	},
+	HistoricalBuildings = {
+		824, 0, "farm" -- Geirstadir was a farm; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("hamar", {
+	Name = "Hamar",
+	MapTemplate = "earth",
+	Position = {4089, 666},
+	Major = true,
+	CulturalNames = {
+		"norse", "Hamar"
+	},
+	Cores = {
+		"hedmark",
+		"norway"
+	},
+	HistoricalOwners = {
+		841, "hedmark", -- the kingdom of Hedmark was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 262-263.
+	},
+	HistoricalBuildings = {
+		841, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("oslo", {
 	Name = "Oslo",
 	MapTemplate = "earth",
@@ -33,9 +95,36 @@ DefineSettlement("oslo", {
 	CulturalNames = {
 		"norse", "Oslo"
 	},
+	Cores = {
+		"norway",
+		"vingulmark"
+	},
 	HistoricalOwners = {
+		824, "vingulmark", -- Gandalf became king of Vingulmark when Gudrod Yngling died; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
 	},
 	HistoricalBuildings = {
+		824, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
+DefineSettlement("tonsberg", {
+	Name = "Tonsberg",
+	MapTemplate = "earth",
+	Position = {4074, 698},
+	Major = true,
+	CulturalNames = {
+		"norse", "Tonsberg" -- "Tønsberg"
+	},
+	Cores = {
+		"norway",
+		"vestfold"
+	},
+	HistoricalOwners = {
+		841, "vestfold" -- the kingdom of Vestfold was in existence when Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+	},
+	HistoricalBuildings = {
+		841, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

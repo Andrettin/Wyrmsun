@@ -215,15 +215,26 @@ DefineCharacter("alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	-- ruled over (at least) Vingulmark
 })
 
-DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
 	Name = "Gandalf",
-	ExtraName = "of Vingulmark", -- to differentiate him
 	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman", -- king
 	Civilization = "norse",
-	-- ruled over Vingulmark
-	Father = "alfgeir"
-	-- he lived during Olaf Geirstad-Alf Yngling's reign
+	Faction = "vingulmark", -- ruled over Vingulmark
+	Father = "alfgeir",
+	Date = 824, -- became king of Vingulmark when Gudrod Yngling died
+	HistoricalTitles = {
+		"head-of-state", 824, 0, "vingulmark"
+	},
+	HistoricalLocations = {
+		824, "earth", "oslo"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("eystein-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.

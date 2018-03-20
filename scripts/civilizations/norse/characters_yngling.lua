@@ -179,12 +179,19 @@ DefineCharacter("alric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
+	Faction = "swede-tribe",
 	Father = "agne-yngling",
 	Quote = "\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "swede-tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("eric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
@@ -193,10 +200,17 @@ DefineCharacter("eric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
+	Faction = "swede-tribe",
 	Father = "agne-yngling",
 	Quote = "\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	-- Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
@@ -205,13 +219,20 @@ DefineCharacter("alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
+	Faction = "swede-tribe",
 	Father = "alric-yngling",
 	Mother = "dagrid-dagling",
 	Quote = "\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine",
 	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "swede-tribe" -- was king of Sweden together with his brother Yngve, and Alf's son who succeeded them
-	}
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+			return true
+		end
+		return false
+	end
 	-- married Bera
 })
 
@@ -475,7 +496,7 @@ DefineCharacter("halfdan-the-mild-yngling", { -- Source: Snorri Sturlson, "Heims
 	-- his chief house was Holtar (in Vestfold, Norway)
 })
 
-DefineCharacter("gudrod-the-magnificent-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+DefineCharacter("gudrod-the-magnificent-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260, 262.
 	Name = "Gudrod",
 	ExtraName = "the Magnificent", -- also knowns as "the Hunter"
 	FamilyName = "Yngling",
@@ -486,6 +507,7 @@ DefineCharacter("gudrod-the-magnificent-yngling", { -- Source: Snorri Sturlson, 
 	Father = "halfdan-the-mild-yngling",
 	Mother = "hlif", -- presumably, since Hlif was married to Halfdan
 	-- died murdered by a man under the orders of his wife Aasa
+	DeathDate = 824, -- Halfdan the Black was one year old when Gudrod died
 	Quote = "\"Gudrod is gone to his long rest,\nDespite of all his haughty pride,\nA traitor's spear has pierced his side\"\n- Thiodolf of Huine"
 	-- married to Alfhild, and after her death married Aasa (daughter of Harald Redbeard)
 	-- described as proud
@@ -496,13 +518,28 @@ DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heim
 	ExtraName = "Geirstad-Alf",
 	FamilyName = "Yngling",
 	Gender = "male",
-	Type = "unit-norse-swordsman",
+	Type = "unit-norse-heroic-swordsman", -- king
 	Civilization = "norse",
-	-- his father ruled over Vestfold
+	Faction = "vestfold",
+	-- king of Vestfold
 	Father = "gudrod-the-magnificent-yngling",
 	Mother = "alfhild",
 	Trait = "upgrade-strong", -- described as remarkably handsome, very strong and large of growth
-	Quote = "\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine"
+	Quote = "\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine",
+	-- Olaf was 20 years old when his father Gudrod died, so he would have been born in 804
+	Date = 824, -- date his father died, and thus when his reign over Vestfold began
+	HistoricalTitles = {
+		"head-of-state", 824, 0, "vestfold"
+	},
+	HistoricalLocations = {
+		824, "earth", "tonsberg"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "vestfold" or GetPlayerData(trigger_player, "Faction") == "norway") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-262.
@@ -510,14 +547,29 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 	ExtraName = "the Black",
 	FamilyName = "Yngling",
 	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
+	Type = "unit-norse-heroic-swordsman", -- king
 	Civilization = "norse",
+	Faction = "agder",
 	-- his father ruled over Vestfold
 	Father = "gudrod-the-magnificent-yngling",
 	Mother = "aasa",
 	HairVariation = "black-hair",
+	-- began his reign when he was 18 years old, so he would have been born in 823
 	Date = 841, -- reign began
-	DeathDate = 863 -- reign ended
+	DeathDate = 863, -- reign ended
+	Trait = "upgrade-strong", -- described as stout and strong
+	HistoricalTitles = {
+		"head-of-state", 841, 863, "agder"
+	},
+	HistoricalLocations = {
+		841, "earth", "arendal" -- became king of Agder in 841, and Arendal seems like a reasonably good location to place him
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "agder" or GetPlayerData(trigger_player, "Faction") == "norway") then
+			return true
+		end
+		return false
+	end
 })
 
 DefineCharacter("rognvald-mountain-high-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.

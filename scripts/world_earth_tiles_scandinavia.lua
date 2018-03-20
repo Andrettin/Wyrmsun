@@ -39,13 +39,6 @@ DefineWorldMapTile({496, 88}, {
 	}
 })
 
-DefineWorldMapTile({504, 89}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"norse", "Arendal"
-	}
-})
-
 DefineWorldMapTile({508, 86}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -58,13 +51,6 @@ DefineWorldMapTile({509, 75}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Trondheim"
-	}
-})
-
-DefineWorldMapTile({509, 87}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"norse", "Tønsberg"
 	}
 })
 
@@ -86,13 +72,6 @@ DefineWorldMapTile({512, 73}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"norse", "Steinkjet"
-	}
-})
-
-DefineWorldMapTile({512, 83}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"norse", "Hamar"
 	}
 })
 
