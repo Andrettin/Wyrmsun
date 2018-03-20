@@ -256,6 +256,149 @@ DefineCharacter("hogne-eysteinson", { -- Source: Snorri Sturlson, "Heimskringla"
 	-- he lived during Olaf Geirstad-Alf Yngling's reign
 })
 
+DefineCharacter("sigtryg-eysteinson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 262-263.
+	Name = "Sigtryg",
+	Gender = "male",
+	Type = "unit-norse-heroic-swordsman", -- king
+	Civilization = "norse",
+	Faction = "hedmark",
+	Father = "eystein-the-great",
+	Date = 841, -- was king with residence in Hedmark during Halfdan the Black's reign in Agder
+	HistoricalTitles = {
+		"head-of-state", 841, 0, "hedmark"
+	},
+	HistoricalLocations = {
+		841, "earth", "hamar"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("eystein-eysteinson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 263.
+	Name = "Eystein",
+	Gender = "male",
+	Type = "unit-norse-heroic-swordsman", -- king
+	Civilization = "norse",
+	Faction = "hedmark",
+	Father = "eystein-the-great",
+	-- became king of Hedmark after Halfdan the Black killed his brother Sigtryg
+	Date = 841,
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "hedmark"
+	},
+	HistoricalLocations = {
+		841, "earth", "hamar"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("gudbrand", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 263.
+	Name = "Gudbrand",
+	Gender = "male",
+	Type = "unit-norse-heroic-swordsman", -- hersir
+	Civilization = "norse",
+	Faction = "hedmark", -- was either allied or subject to king Eystein of Hedmark
+	Date = 841, -- was hersir of his valley during Halfdan the Black's reign
+	HistoricalLocations = {
+		841, "earth", "hamar"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("guttorm-gudbrandson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 263.
+	Name = "Guttorm",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "hedmark", -- his father was either allied or subject to king Eystein of Hedmark
+	Father = "gudbrand",
+	Date = 841, -- fought against Halfdan the Black during the latter's reign
+	HistoricalLocations = {
+		841, "earth", "hamar"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
+			return true
+		end
+		return false
+	end
+	-- described as one of the finest men of the Uplands
+})
+
+DefineCharacter("halvard-skalk", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 263.
+	Name = "Halvard",
+	ExtraName = "Skalk",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "hedmark", -- relation of king Eystein of Hedmark
+	Date = 841, -- was alive during Halfdan the Black's reign
+	HistoricalLocations = {
+		841, "earth", "hamar"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("harald-goldbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	Name = "Harald",
+	ExtraName = "Goldbeard",
+	Gender = "male",
+	Type = "unit-norse-heroic-swordsman", -- king in Sogn
+	Civilization = "norse",
+	Faction = "sogn",
+	Date = 841, -- was king in Sogn during Halfdan the Black's reign in Agder
+	HistoricalTitles = {
+		"head-of-state", 841, 0, "sogn"
+	},
+	HistoricalLocations = {
+		841, "earth", "hermansverk"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "sogn") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("ragnhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	Name = "Ragnhild",
+	Gender = "female",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "sogn", -- her father was king in Sogn
+	Father = "harald-goldbeard",
+	Date = 841, -- was alive during Halfdan the Black's reign
+--	HistoricalLocations = {
+--		841, "earth", "hermansverk"
+--	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "sogn") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("thiodolf-of-huine", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227, 261.
 	Name = "Thiodolf",
 	ExtraName = "of Huine",

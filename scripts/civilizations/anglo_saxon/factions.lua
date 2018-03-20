@@ -150,7 +150,7 @@ DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	FactionUpgrade = "upgrade-faction-bernicia",
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
-	DevelopsFrom = {"bernice-tribe", "angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"bernice-tribe"}
 })
 
 DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -162,7 +162,7 @@ DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	FactionUpgrade = "upgrade-faction-deira",
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
-	DevelopsFrom = {"dere-tribe", "lindisfaran-tribe", "angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"dere-tribe", "lindisfaran-tribe"}
 })
 
 DefineFaction("east-anglia", {
@@ -209,7 +209,7 @@ DefineFaction("kent", {
 	FactionUpgrade = "upgrade-faction-kent",
 	Description = "",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"cantware-tribe", "jute-tribe"},
+	DevelopsFrom = {"cantware-tribe"},
 	HistoricalUpgrades = {
 		597, "upgrade-deity-christian-god", true, -- king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 --		616, "upgrade-deity-christian-god", false -- king Eadbald of Kent was openly pagan; he acceeded in 616 AD; later, however, he accepted Christianity; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 112.
@@ -226,7 +226,7 @@ DefineFaction("mercia", {
 	FactionUpgrade = "upgrade-faction-mercia",
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England.",
-	DevelopsFrom = {"mierce-tribe", "lindisfaran-tribe", "angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"mierce-tribe", "lindisfaran-tribe"}
 })
 
 DefineFaction("middle-anglia", {

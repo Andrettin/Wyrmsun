@@ -71,6 +71,9 @@ DefineSettlement("novgorod", {
 	MapTemplate = "earth",
 	Position = {4551, 714},
 	Major = true,
+	Cores = {
+		"holmgard"
+	},
 	CulturalNames = {
 		"germanic", "Hulmagardiz", -- "Hulmagárdiz"; tentative Proto-Germanic rendering of Holmgard; see language data
 		"norse", "Holmgard",

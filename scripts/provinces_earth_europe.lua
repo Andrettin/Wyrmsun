@@ -1700,18 +1700,6 @@ DefineProvince("Hanover", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineProvince("Hedmark", {
-	World = "earth",
-	CulturalNames = {
-		"norse", "Hedmark"
-	},
---	SettlementLocation = {512, 83}, -- Hamar
-	Claims = {
-		"norse", "norway"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
 DefineProvince("Hesse", {
 	World = "earth",
 	CulturalNames = {

@@ -206,6 +206,17 @@ DefineFaction("orkney", { -- Earldom of Orkney
 	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
 })
 
+DefineFaction("sogn", {
+	Name = "Sogn",
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-norway",
+	Icon = "icon-flag-yellow-lion-on-cyan",
+	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+})
+
 DefineFaction("vestfold", {
 	Name = "Vestfold",
 	Civilization = "norse",
@@ -242,10 +253,10 @@ DefineFaction("norway", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe", "agder", "halogaland", "hedmark", "hordaland", "orkney", "vestfold", "vingulmark"},
+	DevelopsFrom = {"sitone-tribe", "swede-tribe", "agder", "halogaland", "hedmark", "hordaland", "orkney", "sogn", "vestfold", "vingulmark"},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "agder" or GetPlayerData(i, "Faction") == "halogaland" or GetPlayerData(i, "Faction") == "hedmark" or GetPlayerData(i, "Faction") == "hordaland" or GetPlayerData(i, "Faction") == "vestfold" or GetPlayerData(i, "Faction") == "vingulmark")) then
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "agder" or GetPlayerData(i, "Faction") == "halogaland" or GetPlayerData(i, "Faction") == "hedmark" or GetPlayerData(i, "Faction") == "hordaland" or GetPlayerData(i, "Faction") == "sogn" or GetPlayerData(i, "Faction") == "vestfold" or GetPlayerData(i, "Faction") == "vingulmark")) then
 				return false
 			end
 		end
@@ -265,7 +276,7 @@ DefineFaction("sweden", {
 	DevelopsFrom = {"sitone-tribe", "swede-tribe", "gautland", "scania"},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "swede-tribe") then
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "swede-tribe")) then
 				return false
 			end
 		end

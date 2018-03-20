@@ -87,6 +87,27 @@ DefineSettlement("hamar", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
+DefineSettlement("hermansverk", {
+	Name = "Hermansverk",
+	MapTemplate = "earth",
+	Position = {3981, 653},
+	Major = true,
+	CulturalNames = {
+		"norse", "Hermansverk"
+	},
+	Cores = {
+		"norway",
+		"sogn"
+	},
+	HistoricalOwners = {
+		841, "sogn", -- the kingdom of Sogn was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	},
+	HistoricalBuildings = {
+		841, 0, "town-hall"
+	},
+	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+})
+
 DefineSettlement("oslo", {
 	Name = "Oslo",
 	MapTemplate = "earth",
