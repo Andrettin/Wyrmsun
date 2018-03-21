@@ -237,6 +237,63 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 	end
 })
 
+DefineCharacter("hysing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	Name = "Hysing",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "vingulmark", -- his father ruled over Vingulmark
+	Father = "gandalf-of-vingulmark",
+	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	HistoricalLocations = {
+		841, "earth", "oslo"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("helsing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	Name = "Helsing",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "vingulmark", -- his father ruled over Vingulmark
+	Father = "gandalf-of-vingulmark",
+	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	HistoricalLocations = {
+		841, "earth", "oslo"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("hake-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 265.
+	Name = "Hake",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "vingulmark", -- his father ruled over Vingulmark
+	Father = "gandalf-of-vingulmark",
+	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	HistoricalLocations = {
+		841, "earth", "oslo"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
+			return true
+		end
+		return false
+	end
+})
+
 DefineCharacter("eystein-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
 	Name = "Eystein",
 	ExtraName = "the Great",
@@ -388,11 +445,51 @@ DefineCharacter("ragnhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Faction = "sogn", -- her father was king in Sogn
 	Father = "harald-goldbeard",
 	Date = 841, -- was alive during Halfdan the Black's reign
---	HistoricalLocations = {
---		841, "earth", "hermansverk"
---	},
+	HistoricalLocations = {
+		841, "earth", "hermansverk"
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "sogn") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("atle-the-small", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
+	Name = "Atle",
+	ExtraName = "the Small",
+	Gender = "male",
+	Type = "unit-norse-heroic-swordsman", -- earl
+	Civilization = "norse",
+	Faction = "agder", -- friend of king Halfdan the Black
+	Date = 841, -- was earl during Halfdan the Black's reign
+	HistoricalLocations = {
+		841, "earth", "arendal"
+		-- set to administrate Sogn for Halfdan the Black after the latter took possession of that kingdom
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "agder" or GetPlayerData(trigger_player, "Faction") == "sogn") then
+			return true
+		end
+		return false
+	end
+})
+
+DefineCharacter("olver-the-wise", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 264-265.
+	Name = "Olver",
+	ExtraName = "the Wise",
+	Gender = "male",
+	Type = "unit-norse-swordsman",
+	Civilization = "norse",
+	Faction = "agder", -- foster-father of king Halfdan the Black
+	Trait = "upgrade-wise",
+	Date = 841, -- was alive during Halfdan the Black's reign
+	HistoricalLocations = {
+		841, "earth", "arendal"
+	},
+	Conditions = function(s)
+		if (GetPlayerData(trigger_player, "Faction") == "agder") then
 			return true
 		end
 		return false
