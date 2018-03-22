@@ -63,6 +63,12 @@ https://github.com/Andrettin/Wyrmsun
 * Civilizations
 - The Norse civilization is now playable.
 
+* Scenarios
+- Fixed issue which caused a unit killed through effects like bleeding to not count for the completion of quest objectives.
+
+* Units
+- Fixed issue which caused units to not be granted experience if they killed another unit through effects like bleeding.
+
 -----------------------------------------------------------------------
 - 3.3.1
 -----------------------------------------------------------------------
