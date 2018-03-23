@@ -1535,6 +1535,88 @@ DefineUnitType("unit-dwarven-witness", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-annalist", {
+	Name = "Annalist",
+	Parent = "unit-template-veteran-priest",
+	Civilization = "dwarf",
+	Description = "Dwarven annalists are the historians of their ancient and proud race. They are few in number, and their very existence is not generally known to the other peoples of Nidavellir.",
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
+		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm.png"},
+		{"layer", "clothing", "file", "dwarf/units/robe.png"},
+		{"layer", "hair", "file", "dwarf/units/gray_hair_warrior.png"},
+		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-annalist",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
+	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-loremaster", {
+	Name = "Loremaster",
+	Parent = "unit-template-high-priest",
+	Civilization = "dwarf",
+	Description = "Loremasters are the sages of the dwarven race. Their counsel is greatly valued by war-leaders and chieftains, and they are viewed with awe by ordinary dwarves, for they alone have plumbed the deepest and most closely-held secrets of dwarven knowledge. It is said that where a loremaster stands, there is the soul of the dwarves.",
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
+		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm.png"},
+		{"layer", "clothing", "file", "dwarf/units/robe.png"},
+		{"layer", "hair", "file", "dwarf/units/gray_hair_warrior.png"},
+		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-loremaster",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
+	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-dwarven-gryphon-rider", {
 	Name = "Gryphon Rider",
 	Parent = "unit-template-flying-rider",

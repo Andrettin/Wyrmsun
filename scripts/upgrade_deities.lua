@@ -362,7 +362,7 @@ DefineModifier("upgrade-deity-hel",
 	{"Mana", 20},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"},
-	{"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-dwarven-annalist"}, {"apply-to", "unit-dwarven-loremaster"},
 	{"apply-to", "unit-goblin-shaman"}
 )
 
@@ -371,7 +371,10 @@ DefineModifier("upgrade-deity-hel",
 )
 
 DefineModifier("upgrade-deity-hel", -- dummy upgrade modifier to change starting abilities
-	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-goblin-shaman"}
+	{"apply-to", "unit-germanic-priest"},
+	{"apply-to", "unit-teuton-priest"},
+	{"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-dwarven-annalist"}, {"apply-to", "unit-dwarven-loremaster"},
+	{"apply-to", "unit-goblin-shaman"}
 )
 
 DefineModifier("upgrade-deity-odin",
@@ -387,7 +390,9 @@ DefineModifier("upgrade-deity-odin",
 )
 
 DefineModifier("upgrade-deity-odin", -- dummy upgrade modifier to change starting abilities/variations
-	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-germanic-priest"},
+	{"apply-to", "unit-teuton-priest"},
+	{"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-dwarven-annalist"}, {"apply-to", "unit-dwarven-loremaster"},
 	{"apply-to", "unit-teuton-temple"}
 )
 
@@ -412,7 +417,9 @@ DefineModifier("upgrade-deity-thor",
 )
 
 DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
-	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"},
+	{"apply-to", "unit-germanic-priest"},
+	{"apply-to", "unit-teuton-priest"},
+	{"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-dwarven-annalist"}, {"apply-to", "unit-dwarven-loremaster"},
 	{"apply-to", "unit-teuton-temple"}
 )
 
@@ -433,5 +440,7 @@ DefineModifier("upgrade-deity-tyr",
 )
 
 DefineModifier("upgrade-deity-tyr", -- dummy upgrade modifier to change starting abilities
-	{"apply-to", "unit-germanic-priest"}, {"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-dwarven-witness"}
+	{"apply-to", "unit-germanic-priest"},
+	{"apply-to", "unit-teuton-priest"},
+	{"apply-to", "unit-dwarven-witness"}, {"apply-to", "unit-dwarven-annalist"}, {"apply-to", "unit-dwarven-loremaster"}
 )

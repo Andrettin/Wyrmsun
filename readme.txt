@@ -68,6 +68,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused units to not be granted experience if they killed another unit through effects like bleeding.
+- Added the dwarven Stalwart and Sentinel (upgrades of the Guard).
+- Added the dwarven Annalist and Loremaster (upgrades of the Witness).
 
 -----------------------------------------------------------------------
 - 3.3.1

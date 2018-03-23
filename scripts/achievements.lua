@@ -108,7 +108,7 @@ DefineAchievement("the-treasures-of-svarinshaug", {
 
 DefineAchievement("the-lay-of-alvis", {
 	Name = "The Lay of Alvis",
-	Icon = "icon-dwarven-witness",
+	Icon = "icon-dwarven-loremaster",
 	Description = "Complete the The Dripping Hall, The Deep, The Burner and The Weaver of Dreams quests.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-dripping-hall", "the-deep", "the-burner", "the-weaver-of-dreams"}

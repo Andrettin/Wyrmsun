@@ -444,7 +444,7 @@ DefineQuest("andvaris-gold", {
 
 DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	Name = "Kill Kvasir",
-	Icon = "icon-dwarven-witness",
+	Icon = "icon-dwarven-loremaster",
 	PlayerColor = "black",
 	Unobtainable = true,
 	CompletionEffects = function(s)

@@ -379,7 +379,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
@@ -735,7 +735,7 @@ DefineButton( { Pos = 8, Level = 2, Icon = "icon-toughness",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-joruvellir-explorer",
 		"unit-dwarven-thunderer",
-		"unit-dwarven-witness",
+		"unit-dwarven-loremaster",
 		"unit-surghan-mercenary-thane",
 		"unit-germanic-worker",
 		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
@@ -779,7 +779,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-ethereal-vision",
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-joruvellir-explorer",
 		"unit-dwarven-thunderer",
---		"unit-dwarven-witness",
+--		"unit-dwarven-loremaster",
 		"unit-surghan-mercenary-thane",
 --		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest",
@@ -811,14 +811,14 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit",
 	Key = "h", Hint = "Learn ~!Healing", Popup = "popup-learn-ability",
-	ForUnit = {"unit-dwarven-witness"}
+	ForUnit = {"unit-dwarven-loremaster"}
 })
 
 DefineButton( { Pos = 2, Level = 2, Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
 	Key = "r", Hint = "Learn P~!recision", Popup = "popup-learn-ability",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-loremaster"}
 })
 --]]
 
@@ -837,7 +837,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -885,7 +885,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-dwarven-gryphon-rider",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -943,7 +943,7 @@ DefineButton( { Pos = 16, Level = 3, Icon = "icon-cancel",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-dwarven-gryphon-rider",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -985,7 +985,11 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-far-sight",
 	Action = "cast-spell", Value = "spell-far-sight",
 	Description = "Reveals an area",
 	Key = "f", Hint = "~!Far Sight", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-terror",
@@ -999,42 +1003,71 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit",
 	Key = "h", Hint = "~!Healing", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-elven-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-shocking-grasp",
 	Action = "cast-spell", Value = "spell-shocking-grasp",
 	Description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds",
 	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
 	Description = "Inspires an organic unit to deal 50% more damage",
 	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-wither",
 	Action = "cast-spell", Value = "spell-wither",
 	Description = "Causes an organic unit to deal 50% less damage",
 	Key = "w", Hint = "~!Wither", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness", "unit-goblin-shaman"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-elven-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-goblin-shaman"
+	}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-blessing",
 	Action = "cast-spell", Value = "spell-blessing",
 	Description = "Blesses an organic unit to deal 50% more damage and to evade 50% better",
 	Key = "b", Hint = "~!Blessing", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-elven-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
 	Key = "r", Hint = "P~!recision", Popup = "popup-commands",
-	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-witness"}
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-elven-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",

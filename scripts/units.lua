@@ -127,7 +127,7 @@ Units = {
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 	"unit-dwarven-thunderer",
 	"unit-dwarven-yale-rider", "unit-dwarven-yale-lord", "unit-dwarven-ballista",
-	"unit-dwarven-witness", 
+	"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 	"unit-dwarven-gryphon-rider",
 	"unit-dwarven-transport-ship", "unit-dwarven-ballista-warship",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold",

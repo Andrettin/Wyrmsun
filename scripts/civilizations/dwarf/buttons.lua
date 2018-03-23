@@ -546,7 +546,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -564,7 +564,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -583,7 +583,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -602,7 +602,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-hel",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-dwarven-witness",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -945,6 +945,18 @@ DefineButton( { Pos = 2, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
 	Key = "g", Hint = "Upgrade to ~!Gryphon Rider", Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-pathfinder", "unit-joruvellir-pathfinder"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-dwarven-annalist",
+	Key = "u", Hint = "~!Upgrade to Annalist", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-witness"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-dwarven-loremaster",
+	Key = "u", Hint = "~!Upgrade to Loremaster", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-annalist"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-stronghold",

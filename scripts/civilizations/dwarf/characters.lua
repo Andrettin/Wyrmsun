@@ -121,7 +121,7 @@ DefineCharacter("galar", {
 DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 17; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 66.
 	Name = "Thjodrorir",
 	Gender = "male",
-	Type = "unit-dwarven-witness",
+	Type = "unit-dwarven-loremaster",
 	Civilization = "dwarf",
 	Description = "A wise loremaster, Thjodrorir possesses knowledge of many powerful charms.",
 	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>.",
@@ -261,7 +261,7 @@ DefineCharacter("nori", {
 DefineCharacter("dvalin", {
 	Name = "Dvalin",
 	Gender = "male",
-	Type = "unit-dwarven-witness",
+	Type = "unit-dwarven-loremaster",
 	Civilization = "dwarf",
 	Background = "In Norse mythology, Dvalin was a dwarf who taught knowledge of the runes to his fellow members of that kin.",
 	HairVariation = "gray-hair",
@@ -273,7 +273,7 @@ DefineCharacter("dvalin", {
 DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 144-145; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
 	Name = "Alvis",
 	Gender = "male",
-	Type = "unit-dwarven-witness",
+	Type = "unit-dwarven-loremaster",
 	Civilization = "dwarf",
 	Background = "In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
 	HairVariation = "gray-hair",
