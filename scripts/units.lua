@@ -123,7 +123,7 @@ Units = {
 	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 	"unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-	"unit-dwarven-guard",
+	"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 	"unit-dwarven-thunderer",
 	"unit-dwarven-yale-rider", "unit-dwarven-yale-lord", "unit-dwarven-ballista",
@@ -3621,6 +3621,41 @@ DefineUnitType("unit-template-spearman", {
 	}
 })
 
+DefineUnitType("unit-template-veteran-spearman", {
+	Name = "Veteran Spearman",
+	Parent = "unit-template-spearman",
+	Class = "veteran-spearman",
+	Costs = {"time", 75, "copper", 600, "lumber", 150},
+	Strength = 12,
+	Dexterity = 12,
+	Intelligence = 11,
+	Charisma = 11,
+	HitPoints = 75,
+	BasicDamage = 6,
+	Points = 75,
+	Level = 2,
+	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
+	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
+})
+
+DefineUnitType("unit-template-heroic-spearman", {
+	Name = "Heroic Spearman",
+	Parent = "unit-template-veteran-spearman",
+	Class = "heroic-spearman",
+	Costs = {"time", 100, "copper", 800, "lumber", 200},
+	Strength = 13,
+	Dexterity = 12,
+	Intelligence = 12,
+	Charisma = 12,
+	HitPoints = 90,
+	BasicDamage = 7,
+	Points = 100,
+	Level = 3,
+	Inventory = true,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
+	AiDrops = {"unit-crown"}
+})
+
 DefineUnitType("unit-template-archer", {
 	Name = "Shooter",
 	Parent = "unit-template-sapient-unit",
@@ -3937,6 +3972,32 @@ DefineUnitType("unit-template-priest", {
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
 	}
+} )
+
+DefineUnitType("unit-template-veteran-priest", {
+	Name = "Veteran Priest",
+	Parent = "unit-template-priest",
+	Class = "veteran-priest",
+	Costs = {"time", 120, "copper", 1050},
+	Intelligence = 13,
+	Charisma = 13,
+	HitPoints = 50,
+	Points = 90,
+	Level = 2,
+	Mana = {Enable = true, Max = 380, Value = 380, Increase = 1}
+} )
+
+DefineUnitType("unit-template-high-priest", {
+	Name = "High Priest",
+	Parent = "unit-template-veteran-priest",
+	Class = "high-priest",
+	Costs = {"time", 160, "copper", 1400},
+	Intelligence = 14,
+	Charisma = 14,
+	HitPoints = 60,
+	Points = 120,
+	Level = 3,
+	Mana = {Enable = true, Max = 570, Value = 570, Increase = 1}
 } )
 
 DefineUnitType("unit-template-flying-rider", {

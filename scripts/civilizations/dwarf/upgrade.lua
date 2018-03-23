@@ -169,13 +169,13 @@ DefineModifier("upgrade-dwarven-great-axe",
 DefineModifier("upgrade-dwarven-long-spear",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-guard"}
+	{"apply-to", "unit-dwarven-guard"}, {"apply-to", "unit-dwarven-stalwart"}, {"apply-to", "unit-dwarven-sentinel"}
 )
 
 DefineModifier("upgrade-dwarven-pike",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-guard"}
+	{"apply-to", "unit-dwarven-guard"}, {"apply-to", "unit-dwarven-stalwart"}, {"apply-to", "unit-dwarven-sentinel"}
 )
 
 DefineModifier("upgrade-dwarven-shield-1",
@@ -183,7 +183,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-guard"},
+	{"apply-to", "unit-dwarven-guard"}, {"apply-to", "unit-dwarven-stalwart"}, {"apply-to", "unit-dwarven-sentinel"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
@@ -195,7 +195,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-guard"},
+	{"apply-to", "unit-dwarven-guard"}, {"apply-to", "unit-dwarven-stalwart"}, {"apply-to", "unit-dwarven-sentinel"},
 	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-joruvellir-yale-rider"}, {"apply-to", "unit-joruvellir-yale-lord"},
 	{"apply-to", "unit-brising-militia"},

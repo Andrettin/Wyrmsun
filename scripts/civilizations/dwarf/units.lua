@@ -979,6 +979,99 @@ DefineUnitType("unit-dwarven-guard", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-stalwart", {
+	Name = "Stalwart",
+	Parent = "unit-template-veteran-spearman",
+	Civilization = "dwarf",
+	Description = "The wiles of experience and training turn guards into worthy soldiers. These stalwart troops are equipped to match their skills, and can hold their ground against all but the most visceral assault. It is a dangerous thing to lose a foothold to one such as these, for it will not be easily reprised.",
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm_shield.png"},
+		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_spear.png"},
+		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/brown_hair_warrior.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
+		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-stalwart",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 80,
+	Armor = 2,
+	Corpse = "unit-dwarven-dead-body",
+	PierceDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"weight", 4
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-dwarven-sentinel", {
+	Name = "Sentinel",
+	Parent = "unit-template-heroic-spearman",
+	Civilization = "dwarf",
+	Description = "Champions among their fellow troops, the dwarven sentinels form the bulwark of their battle lines. Leading a direct assault against a line that they fortify is often out of the question; it tends toward being suicidal, rather than merely ineffectual. These dwarves are masters of the melee, and can hold a patch of earth with the singleminded tenacity of an oak.",
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm_shield.png"},
+		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_spear.png"},
+		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/brown_hair_warrior.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
+		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-sentinel",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 95,
+	Armor = 2,
+	Corpse = "unit-dwarven-dead-body",
+	PierceDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "brown-hair",
+			"weight", 2
+		},
+		{
+			"variation-id", "brown-hair",
+			"weight", 2,
+			"icon", "icon-dwarven-sentinel-open-mouth"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-dwarven-scout", {
 	Name = "Scout",
 	Parent = "unit-template-archer",

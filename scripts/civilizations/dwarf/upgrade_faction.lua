@@ -237,7 +237,7 @@ DefineModifier("upgrade-faction-shorbear-clan",
 DefineModifier("upgrade-faction-whitesteel-clan",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-guard"}
+	{"apply-to", "unit-dwarven-guard"}, {"apply-to", "unit-dwarven-stalwart"}, {"apply-to", "unit-dwarven-sentinel"}
 )
 
 DefineModifier("upgrade-faction-joruvellir",

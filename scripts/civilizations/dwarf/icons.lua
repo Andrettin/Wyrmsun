@@ -164,6 +164,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-stalwart",
+	Size = {46, 38},
+	File = "dwarf/icons/stalwart.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-sentinel",
+	Size = {46, 38},
+	File = "dwarf/icons/sentinel.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-sentinel-open-mouth",
+	Size = {46, 38},
+	File = "dwarf/icons/sentinel_open_mouth.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-scout",
 	Size = {46, 38},
 	File = "dwarf/icons/dwarven_scout.png"
@@ -341,6 +359,18 @@ DefineIcon({
 	Name = "icon-dwarven-witness",
 	Size = {46, 38},
 	File = "dwarf/icons/witness.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-annalist",
+	Size = {46, 38},
+	File = "dwarf/icons/annalist.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-loremaster",
+	Size = {46, 38},
+	File = "dwarf/icons/loremaster.png"
 })
 
 DefineIcon({

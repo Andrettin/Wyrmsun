@@ -349,7 +349,7 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Baglur",
 	Gender = "male",
-	Type = "unit-dwarven-steelclad", -- Stalwart
+	Type = "unit-dwarven-stalwart",
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
 	Description = "Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan.",

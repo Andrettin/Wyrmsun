@@ -541,7 +541,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-odin",
 	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Incompatible with the Thor major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
+		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
@@ -559,7 +559,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-thor",
 	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Incompatible with the Hroptatyr major deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
+		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
@@ -578,7 +578,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-tyr",
 	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables Inspire spell for Witnesses. Incompatible with the Hel minor deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
+		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
@@ -597,7 +597,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-hel",
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Witnesses. Incompatible with the Tyr minor deity.",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
+		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 		"unit-dwarven-thunderer",
 		"unit-dwarven-gryphon-rider",
@@ -903,6 +903,18 @@ DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-joruvellir-yale-lord",
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup-unit",
 	ForUnit = {"unit-joruvellir-yale-rider"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-dwarven-stalwart",
+	Key = "u", Hint = "~!Upgrade to Stalwart", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-guard"}
+} )
+
+DefineButton( { Pos = 1, Level = 2,
+	Action = "experience-upgrade-to", Value = "unit-dwarven-sentinel",
+	Key = "u", Hint = "~!Upgrade to Sentinel", Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-stalwart"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,

@@ -150,7 +150,7 @@ if (GrandStrategyYear >= 500) then
 end
 
 if (GrandStrategyYear >= 534) then
-	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 4) -- 4 Dwarven Stalwarts
+	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-stalwart", 4) -- 4 Dwarven Stalwarts
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 1) -- Hamel
 end
 

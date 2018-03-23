@@ -54,7 +54,7 @@ DefineCharacter("draupnir", { -- Source: Henry Adams Bellows (transl.), "The Poe
 DefineCharacter("eikinskjaldi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 7-8.
 	Name = "Eikinskjaldi",
 	Gender = "male",
-	Type = "unit-dwarven-guard",
+	Type = "unit-dwarven-sentinel",
 	Civilization = "dwarf",
 	Faction = "goldhoof-clan",
 	Description = "Eikinskjaldi was one of the Goldhoof dwarves who moved from Svarinshaug to Joruvellir under the leadership of Draupnir. His descendants formed their own clan in the desert sands he had moved to.",
