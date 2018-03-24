@@ -371,6 +371,7 @@ DefineUnitType("unit-goblin-spearman", {
 	Speed = 11,
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	ButtonKey = "i",
 	ButtonHint = "Train ~!Impaler",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},

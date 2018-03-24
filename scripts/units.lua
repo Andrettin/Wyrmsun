@@ -3611,7 +3611,6 @@ DefineUnitType("unit-template-spearman", {
 	Armor = 1,
 	WeaponClasses = {"spear"},
 	PierceDamage = true,
-	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	ButtonPos = 2,
@@ -3634,7 +3633,6 @@ DefineUnitType("unit-template-veteran-spearman", {
 	BasicDamage = 6,
 	Points = 75,
 	Level = 2,
-	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
 })
 

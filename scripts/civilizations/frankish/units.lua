@@ -533,6 +533,7 @@ DefineUnitType("unit-frank-spearman", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
