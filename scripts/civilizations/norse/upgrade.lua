@@ -70,7 +70,11 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
+	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-norse-temple"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-temple"}, {"convert-to", "unit-norse-temple"}
 )
 
 DefineModifier("upgrade-norse-civilization",
@@ -78,7 +82,15 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-norse-dock"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-dock"}, {"convert-to", "unit-norse-dock"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-watch-tower"}, {"convert-to", "unit-norse-watch-tower"}
 )
 
 DefineModifier("upgrade-norse-civilization",

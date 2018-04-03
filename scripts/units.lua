@@ -56,6 +56,9 @@ Units = {
 	"unit-norse-town-hall",
 	"unit-norse-farm", "unit-norse-barracks",
 	"unit-norse-lumber-mill", "unit-norse-smithy",
+	"unit-norse-temple",
+	"unit-norse-watch-tower",
+	"unit-norse-dock",
 	"unit-norse-palisade",
 	"upgrade-slavic-civilization",
 	"unit-slavic-swordsman",
@@ -341,7 +344,8 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-dock" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-dock" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-dock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-dock" }
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-dock" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-dock" }
 			}
 		}
 	end

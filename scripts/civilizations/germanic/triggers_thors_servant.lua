@@ -64,7 +64,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		if (hlesing_player == -1) then
 			return false
 		end
-		unit = CreateUnit("unit-teuton-watch-tower", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
+		unit = CreateUnit("unit-norse-watch-tower", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})
 		local players_around = GetPlayersAroundUnit(unit, 128)
 		unit = CreateUnitInTransporter("unit-germanic-archer", hlesing_player, unit)
 		unit = CreateUnit("unit-germanic-warrior", hlesing_player, {4089 - EarthStartX, 745 - EarthStartY})

@@ -202,6 +202,47 @@ DefineUnitType("unit-norse-smithy", {
 	}
 } )
 
+DefineUnitType("unit-norse-temple", {
+	Name = "Temple",
+	Parent = "unit-template-temple",
+	Civilization = "norse",
+	Description = "Within Norse temples the worship of their gods is conducted, as are their traditional rituals.",
+	Image = {"file", "norse/buildings/temple.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/temple_shadow.png", "size", {96, 96}},
+	Icon = "icon-norse-temple",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-watch-tower", {
+	Name = "Watch Tower",
+	Parent = "unit-template-watch-tower",
+	Civilization = "norse",
+	Description = "Sentinels in these wooden towers keep watch to see whether enemies approach.",
+	Image = {"file", "norse/buildings/watch_tower.png", "size", {64, 64}},
+	Shadow = {"file", "norse/buildings/watch_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-norse-watch-tower",
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-dock", {
+	Name = "Dock",
+	Parent = "unit-template-dock",
+	Civilization = "norse",
+	Description = "The Norse are a seafaring people par excellence. Their skilled shipwrights take great pride in the elegant ships they construct, and which sail to a myriad shores.",
+	Image = {"file", "norse/buildings/dock.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/dock_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-norse-dock",
+	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-norse-palisade", {
 	Parent = "unit-template-palisade",
 	Civilization = "neutral", -- so that other civilizations can build the palisade

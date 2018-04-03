@@ -79,6 +79,24 @@ DefineButton( { Pos = 5, Level = 1,
 	ForUnit = {"unit-teuton-worker"}
 })
   
+DefineButton( { Pos = 8, Level = 1,
+	Action = "build", Value = "unit-norse-temple",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
+DefineButton( { Pos = 10, Level = 1,
+	Action = "build", Value = "unit-norse-watch-tower",
+	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
+DefineButton( { Pos = 11, Level = 1,
+	Action = "build", Value = "unit-norse-dock",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
 DefineButton( { Pos = 1, Level = 4, Icon = "icon-norse-wooden-wall",
 	Action = "build", Value = "unit-norse-palisade",
 	Key = "p", Hint = "Build ~!Palisade", Popup = "popup-building",
@@ -99,7 +117,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
 	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor major deity.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
@@ -107,7 +125,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
 	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin major deity.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",

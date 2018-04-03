@@ -41,6 +41,7 @@ DefineModifier("upgrade-holy-order",
 	{"Supply", 4}, -- holy orders' temples produce food, to allow them to train units despite not having farms
 	{"OwnershipInfluenceRange", -2}, -- holy orders' temples shouldn't have an influence range, so that they can be a part of other factions' territory
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-norse-temple"},
 	{"apply-to", "unit-dwarven-temple"},
 	{"apply-to", "unit-goblin-temple"}
 )
@@ -48,6 +49,7 @@ DefineModifier("upgrade-holy-order",
 DefineModifier("upgrade-holy-order", -- holy orders' temples "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-norse-temple"},
 	{"apply-to", "unit-dwarven-temple"},
 	{"apply-to", "unit-goblin-temple"}
 )
@@ -59,7 +61,8 @@ DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock f
 
 DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
 	{"unit-stock", "unit-teuton-priest", 2},
-	{"apply-to", "unit-teuton-temple"}
+	{"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-norse-temple"}
 )
 
 DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
@@ -89,6 +92,7 @@ DefineModifier("upgrade-trading-company",
 	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-norse-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}
 )
@@ -104,6 +108,7 @@ DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships 
 	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-norse-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}
 )

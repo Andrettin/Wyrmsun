@@ -244,3 +244,13 @@ DefineCampaign("the-fall-of-mercia", {
 	}
 })
 --]]
+
+DefineCampaign("halfdan-the-black", {
+	Name = "Halfdan the Black",
+	Description = "When Halfdan the Black was but a year old, his father was murdered and his mother forced to flee to her father's kingdom of Agder. Now eighteen years old, Halfdan has succeeded his grandfather to that realm...",
+	Faction = "agder",
+	StartYear = 841,
+	MapTemplates = {
+		"earth", {3944, 622}, {256, 256}
+	}
+})

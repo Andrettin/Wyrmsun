@@ -93,7 +93,7 @@ DefineDependency("upgrade-work-heimskringla",
 )
 
 DefineDependency("upgrade-work-historiae-vinlandiae-antiquae",
-	{"upgrade-norse-civilization", "unit-teuton-dock"}
+	{"upgrade-norse-civilization", "unit-norse-dock"}
 )
 
 DefineDependency("upgrade-work-reginsmol",

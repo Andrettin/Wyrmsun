@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.3.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Norse Dock, Temple and Watch Tower.
+
 * Civilizations
 - The Norse civilization is now playable.
 

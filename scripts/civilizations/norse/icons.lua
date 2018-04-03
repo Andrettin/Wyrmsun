@@ -80,6 +80,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-norse-temple",
+	Size = {46, 38},
+	File = "norse/icons/temple.png"
+})
+
+DefineIcon({
+	Name = "icon-norse-dock",
+	Size = {46, 38},
+	File = "norse/icons/dock.png"
+})
+
+DefineIcon({
+	Name = "icon-norse-watch-tower",
+	Size = {46, 38},
+	File = "norse/icons/watch_tower.png"
+})
+
+DefineIcon({
 	Name = "icon-norse-wooden-wall",
 	Size = {46, 38},
 	File = "norse/icons/wooden_wall.png"

@@ -53,3 +53,23 @@ DefinePredependency("unit-norse-lumber-mill",
 DefinePredependency("unit-norse-smithy",
 	{"upgrade-norse-civilization"}
 )
+
+DefinePredependency("unit-norse-temple",
+	{"upgrade-norse-civilization"}
+)
+
+DefineDependency("unit-norse-temple",
+	{"unit-norse-lumber-mill"}
+)
+
+DefinePredependency("unit-norse-dock",
+	{"upgrade-norse-civilization"}
+)
+
+DefineDependency("unit-norse-dock",
+	{"unit-norse-lumber-mill"}
+)
+
+DefinePredependency("unit-norse-watch-tower",
+	{"upgrade-norse-civilization"}
+)

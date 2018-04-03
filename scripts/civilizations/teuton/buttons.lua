@@ -104,21 +104,27 @@ DefineButton( { Pos = 7, Level = 0,
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup-unit",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
 	Key = "l", Hint = "Train C~!leric", Popup = "popup-unit",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 1, Level = 0,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
 	Key = "l", Hint = "Hire C~!leric", Popup = "popup-unit",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
+})
+
+DefineButton( { Pos = 1, Level = 0,
+	Action = "train-unit", Value = "unit-teuton-kogge",
+	Key = "c", Hint = "Build ~!Cog", Popup = "popup-unit",
+	ForUnit = {"unit-teuton-dock", "unit-norse-dock"}
 })
 
 -- Mercenaries ---------------------------------------------------------
@@ -324,7 +330,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-christianity",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
 	Description = "Choose Christianity as your religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
   
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
@@ -355,7 +361,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
 	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 8, Level = 0, Icon = "icon-tyr",
@@ -378,14 +384,14 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
 	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
 	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities.",
-	ForUnit = {"unit-teuton-temple"}
+	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
@@ -526,7 +532,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 	Action = "upgrade-to", Value = "unit-teuton-guard-tower",
 	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
-	ForUnit = {"unit-teuton-watch-tower"}
+	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
 } )
 
 DefineButton( { Pos = 1, Level = 2,
