@@ -38,7 +38,7 @@ DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 })
 
 DefineCharacter("gylog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 238.
-	Name = "Gylög",
+	Name = "Gylog", -- "Gylög"
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
