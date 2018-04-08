@@ -74,7 +74,19 @@ DefineModifier("upgrade-work-fafnismol",
 	{"KnowledgeWarfare", 1}
 )
 
+DefineModifier("upgrade-work-heimskringla",
+	{"KnowledgeWarfare", 3}
+)
+
+DefineModifier("upgrade-work-historiae-vinlandiae-antiquae",
+	{"KnowledgeWarfare", 3}
+)
+
 DefineModifier("upgrade-work-reginsmol",
+	{"KnowledgeWarfare", 1}
+)
+
+DefineModifier("upgrade-work-ynglingatal",
 	{"KnowledgeWarfare", 1}
 )
 
