@@ -243,7 +243,6 @@ DefineCampaign("the-fall-of-mercia", {
 		"earth", {3627, 695}, {256, 256}
 	}
 })
---]]
 
 DefineCampaign("halfdan-the-black", {
 	Name = "Halfdan the Black",
@@ -254,3 +253,4 @@ DefineCampaign("halfdan-the-black", {
 		"earth", {3944, 622}, {256, 256}
 	}
 })
+--]]
