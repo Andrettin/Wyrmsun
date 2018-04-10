@@ -1771,36 +1771,36 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 	for i=0,(PlayerMax - 2) do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local faction_type = "tribe"
-			if (TechLevel[i + 1] == "Civilized (Gunpowder)" or TechLevel[i + 1] == "Civilized (Iron)" or TechLevel[i + 1] == "Civilized (Bronze)") then
+			if (GameSettings.TechLevel == CivilizedGunpowderTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel) then
 				faction_type = "polity"
 			end
 			
 			local possible_civilizations = {}
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("anglo-saxon") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("anglo-saxon") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "anglo-saxon")
 			end
 			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and HasCivilizationAvailableFactions("dwarf")) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("english") and (TechLevel[i + 1] == "Civilized (Iron)" or TechLevel[i + 1] == "Civilized (Gunpowder)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("english") and (GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "english")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("frankish") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("frankish") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "frankish")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("germanic") and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("germanic") and (GameSettings.TechLevel == "" or GameSettings.TechLevel == AgrarianBronzeTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("goth") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("goth") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "goth")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("norse") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)" or TechLevel[i + 1] == "Civilized (Gunpowder)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("norse") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "norse")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("suebi") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("suebi") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "suebi")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("teuton") and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)" or TechLevel[i + 1] == "Civilized (Gunpowder)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("teuton") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "teuton")
 			end
 			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("gnome")) then -- allow gnomes in elven forests since there is no elven civilization yet

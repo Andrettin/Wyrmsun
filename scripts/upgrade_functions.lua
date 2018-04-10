@@ -89,15 +89,6 @@ InitFuncs:add(function()
 end)
 
 function ApplyTechLevels()
-	for j=0,(PlayerMax - 1) do
-		if (TechLevel[j + 1] == "" and j ~= GetThisPlayer()) then
-			TechLevel[j + 1] = TechLevel[GetThisPlayer() + 1]
-		end
-		if (MaxTechLevel[j + 1] == "" and j ~= GetThisPlayer()) then
-			MaxTechLevel[j + 1] = MaxTechLevel[GetThisPlayer() + 1]
-		end
-	end
-
 	local default_law_upgrades = {
 		"upgrade-free-workers"
 	}
@@ -142,9 +133,9 @@ function ApplyTechLevels()
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
 		if (GetArrayIncludes(default_law_upgrades, technology)) then
 			return true
-		elseif ((GetArrayIncludes(bronze_upgrades, technology) or GetUpgradeData(technology, "Class") == "ironworking") and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)" or TechLevel[player + 1] == "Civilized (Gunpowder)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
+		elseif ((GetArrayIncludes(bronze_upgrades, technology) or GetUpgradeData(technology, "Class") == "ironworking") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
 			return true
-		elseif ((GetArrayIncludes(agrarian_upgrades, technology) or GetUpgradeData(technology, "Class") == "writing") and (TechLevel[player + 1] == "Civilized (Bronze)" or TechLevel[player + 1] == "Civilized (Iron)" or TechLevel[player + 1] == "Civilized (Gunpowder)")) then
+		elseif ((GetArrayIncludes(agrarian_upgrades, technology) or GetUpgradeData(technology, "Class") == "writing") and (GameSettings.TechLevel == CivilizedBronzeTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then
 			return true
 		elseif (
 			(
@@ -155,7 +146,7 @@ function ApplyTechLevels()
 				or GetUpgradeData(technology, "Class") == "gunpowder"
 				or GetUpgradeData(technology, "Class") == "engineering"
 			)
-			and TechLevel[player + 1] == "Civilized (Gunpowder)"
+			and GameSettings.TechLevel == CivilizedGunpowderTechLevel
 		) then
 			return true
 		else
@@ -164,11 +155,11 @@ function ApplyTechLevels()
 	end
 	
 	local function IsTechnologyOverMaxTechLevel(technology, player)
-		if (GetArrayIncludes(iron_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
+		if (GetArrayIncludes(iron_upgrades, technology) and (GameSettings.MaxTechLevel == AgrarianBronzeTechLevel or GameSettings.MaxTechLevel == CivilizedBronzeTechLevel)) then -- if max tech level is bronze or lower, iron technologies should not be researchable
 			return true
-		elseif (GetArrayIncludes(civilized_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)")) then
+		elseif (GetArrayIncludes(civilized_upgrades, technology) and (GameSettings.MaxTechLevel == AgrarianBronzeTechLevel or GameSettings.MaxTechLevel == AgrarianIronTechLevel)) then
 			return true
-		elseif (GetArrayIncludes(gunpowder_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)" or MaxTechLevel[player + 1] == "Civilized (Iron)")) then
+		elseif (GetArrayIncludes(gunpowder_upgrades, technology) and (GameSettings.MaxTechLevel == AgrarianBronzeTechLevel or GameSettings.MaxTechLevel == CivilizedBronzeTechLevel or GameSettings.MaxTechLevel == AgrarianIronTechLevel or GameSettings.MaxTechLevel == CivilizedIronTechLevel)) then
 			return true
 		else
 			return false
@@ -185,7 +176,7 @@ function ApplyTechLevels()
 			
 			local PlayerUnitFlag = {}
 			for j=0,(PlayerMax - 1) do
-				if (MaxTechLevel[j + 1] ~= "" and IsTechnologyOverMaxTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then
+				if (GameSettings.MaxTechLevel ~= NoTechLevel and IsTechnologyOverMaxTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then
 					PlayerUnitFlag[j + 1] = "F"
 				else
 					PlayerUnitFlag[j + 1] = GetPlayerData(j, "Allow", unitName)

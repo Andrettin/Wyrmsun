@@ -72,14 +72,6 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
-		
-		if (MaxTechLevel[GetThisPlayer() + 1] == "") then -- set AI max tech level to Agrarian (Iron)
-			for i=0,(PlayerMax - 1) do
-				if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-					MaxTechLevel[i + 1] = "Agrarian (Iron)"
-				end
-			end
-		end
 	end
 	
 	-- create allied Germanic forces

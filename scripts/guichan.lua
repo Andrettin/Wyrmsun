@@ -692,8 +692,8 @@ function InitGameSettings()
 	GameSettings.Tileset = nil
 	GameSettings.NoRandomness = false
 	GameSettings.NoTimeOfDay = false
-	TechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
-	MaxTechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
+	GameSettings.TechLevel = NoTechLevel
+	GameSettings.MaxTechLevel = NoTechLevel
 end
 InitGameSettings()
 
@@ -982,7 +982,9 @@ function RunSinglePlayerCustomGameMenu()
 	local world_list = { }
 	local game_type_list = { }
 	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)"), _("Civilized (Gunpowder)")}
+	local tech_level_enum_list = {NoTechLevel, AgrarianBronzeTechLevel, AgrarianIronTechLevel, CivilizedBronzeTechLevel, CivilizedIronTechLevel, CivilizedGunpowderTechLevel}
 	local max_tech_level_list = {_("Map Default")}
+	local max_tech_level_enum_list = {NoTechLevel}
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
 	
@@ -1070,16 +1072,8 @@ function RunSinglePlayerCustomGameMenu()
 			GameSettings.Opponents = opponents:getSelected()
 			GameSettings.Difficulty = difficulty:getSelected() + 1
 			GameSettings.GameType = gametype:getSelected() - 1
-			if (tech_level:getSelected() > 0) then
-				for i=1,mapinfo.nplayers do
-					TechLevel[i] = tech_level_list[tech_level:getSelected() + 1]
-				end
-			end
-			if (max_tech_level:getSelected() > 0) then
-				for i=1,mapinfo.nplayers do
-					MaxTechLevel[i] = max_tech_level_list[max_tech_level:getSelected() + 1]
-				end
-			end
+			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
+			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 			GameSettings.NoRandomness = wyr.preferences.NoRandomness
 			GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 
@@ -1235,7 +1229,7 @@ function RunSinglePlayerCustomGameMenu()
 		
 		if (race:getSelected() > 0) then
 			for i=1,table.getn(GetFactions(new_civilization)) do
-				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)"))) then
+				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel)) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel))) then
 					if (GetFactionData(GetFactions(new_civilization)[i], "Playable")) then
 						table.insert(faction_ident_list, GetFactions(new_civilization)[i])
 						table.insert(faction_list, _(GetFactionData(GetFactions(new_civilization)[i], "Name")))
@@ -1269,20 +1263,26 @@ function RunSinglePlayerCustomGameMenu()
 
 	function TechLevelChanged()
 		max_tech_level_list = {_("Map Default")}
+		max_tech_level_enum_list = {NoTechLevel}
 		
-		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)") then
+		if (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel) then
 			table.insert(max_tech_level_list, _("Agrarian (Bronze)"))
+			table.insert(max_tech_level_enum_list, AgrarianBronzeTechLevel)
 		end
-		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)") then
+		if (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel) then
 			table.insert(max_tech_level_list, _("Agrarian (Iron)"))
+			table.insert(max_tech_level_enum_list, AgrarianIronTechLevel)
 		end
-		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)") then
+		if (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel) then
 			table.insert(max_tech_level_list, _("Civilized (Bronze)"))
+			table.insert(max_tech_level_enum_list, CivilizedBronzeTechLevel)
 		end
-		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)") then
+		if (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel) then
 			table.insert(max_tech_level_list, _("Civilized (Iron)"))
+			table.insert(max_tech_level_enum_list, CivilizedIronTechLevel)
 		end
 		table.insert(max_tech_level_list, _("Civilized (Gunpowder)"))
+		table.insert(max_tech_level_enum_list, CivilizedGunpowderTechLevel)
 		
 		max_tech_level:setList(max_tech_level_list)
 		max_tech_level:setSize(152, 20)
@@ -1306,15 +1306,15 @@ function RunSinglePlayerCustomGameMenu()
 		for i=1,table.getn(civilizations) do
 			if (GetCivilizationData(civilizations[i], "Playable")) then
 				if (
-					(civilizations[i] ~= "germanic" or tech_level_list[tech_level:getSelected() + 1] == "Map Default" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)")
-					and (civilizations[i] ~= "anglo-saxon" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "frankish" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "goth" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "norse" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
-					and (civilizations[i] ~= "suebi" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-					and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
-					and (civilizations[i] ~= "dutch" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
-					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Gunpowder)")
+					(civilizations[i] ~= "germanic" or tech_level_enum_list[tech_level:getSelected() + 1] == NoTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel)
+					and (civilizations[i] ~= "anglo-saxon" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel)
+					and (civilizations[i] ~= "frankish" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel)
+					and (civilizations[i] ~= "goth" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel)
+					and (civilizations[i] ~= "norse" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel)
+					and (civilizations[i] ~= "suebi" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel)
+					and (civilizations[i] ~= "teuton" or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel)
+					and (civilizations[i] ~= "dutch" or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel)
+					and (civilizations[i] ~= "english" or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel)
 				) then
 					table.insert(civilization_ident_list, civilizations[i])
 				end
