@@ -1328,3 +1328,6 @@ msgstr "Tribo Ynglinga"
 
 msgid "Your Faction:"
 msgstr "Sua Facção:"
+
+msgid "Not enough resources to build %s"
+msgstr "Faltam recursos para construir %s"
