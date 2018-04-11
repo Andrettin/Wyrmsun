@@ -13,12 +13,12 @@ function RunSaveGame(name, menu)
 		if (SaveGame(name) == -1) then
 			local confirm = WarGameMenu(panel(3))
 			confirm:resize(300,120)
-			confirm:addLabel("Cannot save game to file:", 300 / 2, 11)
+			confirm:addLabel(_("Cannot save game to file:"), 300 / 2, 11)
 			confirm:addLabel(name, 300 / 2, 31)
-			confirm:addHalfButton("~!OK", "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
+			confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
 			confirm:run(false)
 		else
-			UI.StatusLine:Set("Saved game to: " .. name)
+			UI.StatusLine:Set(_("Saved game to:") .. " " .. name)
 			menu:stop()
 		end
 	else
