@@ -2376,12 +2376,20 @@ function GenerateRandomMap(arg)
 end
 
 function SetRawTile(x, y, tile_type)
+	if (LoadedGame) then
+		return;
+	end
+	
 	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
 		RawTiles[y+1][x+1] = tile_type
 	end
 end
 
 function RawTile(x, y)
+	if (LoadedGame) then
+		return "";
+	end
+	
 	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
 		return RawTiles[y+1][x+1]
 	elseif (x < 0 and y >= 0 and y < Map.Info.MapHeight and RawTiles[y+1][0+1] ~= "Wall") then
@@ -3324,6 +3332,10 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 end
 
 function AdjustTransitions(min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return;
+	end
+	
 	for x=min_x,max_x do
 		for y=min_y,max_y do
 			-- convert buildable land tiles adjacent to water tiles into rough land
@@ -3601,6 +3613,10 @@ function CleanHexTiles()
 end
 
 function ConvertHexTiles()
+	if (LoadedGame) then
+		return;
+	end
+	
 	local hex_indent = false
 	for x=0,(table.getn(HexTiles[1]) - 1) do
 		for y=0,(table.getn(HexTiles) - 1) do
