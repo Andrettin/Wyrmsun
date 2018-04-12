@@ -2162,8 +2162,6 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-stone",
 	}
 })
 
--- Units --------------------------------------------------------------
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 3, Icon = "icon-labor",
