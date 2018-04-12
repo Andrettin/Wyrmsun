@@ -41,33 +41,6 @@
 --  DefineAiHelper(list)
 --
 
-DefineAiHelper(
-	--
-	-- Equivalence of units for the resource manager.
-	--
-	{"unit-equiv", "unit-latin-town-hall",
-	"unit-teuton-stronghold"},
-	{"unit-equiv", "unit-norse-town-hall",
-	"unit-teuton-stronghold"},
-	{"unit-equiv", "unit-teuton-town-hall",
-	"unit-teuton-stronghold"},
-	{"unit-equiv", "unit-dwarven-town-hall",
-	"unit-dwarven-stronghold"},
-	{"unit-equiv", "unit-goblin-town-hall",
-	"unit-goblin-stronghold"},
-	
-	{"unit-equiv", "unit-dwarven-miner",
-	"unit-dwarven-skilled-miner"},
-	{"unit-equiv", "unit-dwarven-miner",
-	"unit-dwarven-expert-miner"},
-	{"unit-equiv", "unit-dwarven-miner",
-	"unit-dwarven-runesmith"},
-	{"unit-equiv", "unit-dwarven-miner",
-	"unit-dwarven-runemaster"},
-	{"unit-equiv", "unit-dwarven-miner",
-	"unit-dwarven-arcanister"}
-)
-
 --
 --  Get unit type of this class for the current AI's civilization
 --
@@ -165,15 +138,6 @@ function DebugMessage(message)
 	message = "Game cycle(" .. GameCycle .. "):".. message
 --	AddMessage(message)
 	DebugPrint(message .. "\n")
-end
-
-function AiCheat(copper, lumber, stone)
-	if (copper == nil) then copper = 0 end
-	if (lumber == nil) then lumber = 0 end
-	if (stone == nil) then stone = 0 end
-	SetPlayerData(AiPlayer(), "Resources", "copper", GetPlayerData(AiPlayer(), "Resources", "copper") + copper)
-	SetPlayerData(AiPlayer(), "Resources", "lumber", GetPlayerData(AiPlayer(), "Resources", "lumber") + lumber)
-	SetPlayerData(AiPlayer(), "Resources", "stone", GetPlayerData(AiPlayer(), "Resources", "stone") + stone)
 end
 
 function AiLoop(loop_funcs, indexes)

@@ -1468,6 +1468,8 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
+Load("scripts/ai_helper.lua") -- load the AI helper after the mods
+
 -- load heroes after the DLCs and mods, so that they can use mod-specific items
 LoadingPersistentHeroes = true
 if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes were saved before
