@@ -168,7 +168,7 @@ msgid "~<Achievements~>"
 msgstr "~<Accomplissements~>"
 
 msgid "~!Previous Menu"
-msgstr "~!Retour"
+msgstr "Retour (~!P)"
 
 msgid "Progress:"
 msgstr "Progression:"
@@ -214,7 +214,7 @@ msgid "~!Scenarios"
 msgstr "~!Scénarios"
 
 msgid "~!Start Scenario"
-msgstr "~!Commencer Scénario"
+msgstr "Commencer ~!Scénario"
 
 msgid "~<Single Player Game Setup~>"
 msgstr "~<Paramétrages en Joueur Solo~>"
@@ -281,7 +281,7 @@ msgid "Variation:"
 msgstr "Variante:"
 
 msgid "Crea~!te"
-msgstr "Crée~!r"
+msgstr "Créer (~!T)"
 
 msgid "New ~!Name"
 msgstr "~!Nom"
@@ -321,10 +321,10 @@ msgid "Size:"
 msgstr "Taille:"
 
 msgid "~!Select Map"
-msgstr "~!Choisir Carte"
+msgstr "Choi~!sir Carte"
 
 msgid "~!Select Mod"
-msgstr "~!Choisir Mod"
+msgstr "Choi~!sir Mod"
 
 msgid "~!Edit Map"
 msgstr "~!Editer Carte"
@@ -333,7 +333,7 @@ msgid "~!Edit Mod"
 msgstr "~!Editer Mod"
 
 msgid "~!Load Map"
-msgstr "~!Charger Carte"
+msgstr "Charger Carte (~!L)"
 
 msgid "Load ~!Mod"
 msgstr "Charger ~!Mod"
@@ -399,7 +399,7 @@ msgid "The faction's name is invalid."
 msgstr "Le nom de la faction est invalide."
 
 msgid "~!Delete"
-msgstr "~!Supprimer"
+msgstr "Supprimer (~!D)"
 
 msgid "Delete"
 msgstr "Supprimer"
@@ -423,7 +423,7 @@ msgid "Custom ~!Data"
 msgstr "~!Données Personnalisées"
 
 msgid "E~!xit to Menu"
-msgstr "Q~!uitter vers le Menu"
+msgstr "Quitter vers le Menu (~!X)"
 
 msgid "Return to Editor (~<Esc~>)"
 msgstr "Retour vers Editeur (~<Esc~>)"
@@ -480,7 +480,7 @@ msgid "Properties"
 msgstr "Propriétés"
 
 msgid "~!Main Properties"
-msgstr "Propriétés ~!Principales"
+msgstr "Propriétés Principales (~!M)"
 
 msgid "~!Graphics"
 msgstr "~!Graphismes"
@@ -635,7 +635,7 @@ msgid "Alternate Names"
 msgstr "Noms Alternatifs"
 
 msgid "~!Buildings"
-msgstr "~!Constructions"
+msgstr "Constructions (~!B)"
 
 msgid "~!Deities"
 msgstr "~!Divinité"
@@ -644,7 +644,7 @@ msgid "Deities"
 msgstr "Divinité"
 
 msgid "~!Game Concepts"
-msgstr "~!Concept du Jeu"
+msgstr "Concept du Jeu (~!G)"
 
 msgid "Game Concepts"
 msgstr "Concept du Jeu"
@@ -659,7 +659,7 @@ msgid "Items"
 msgstr "Articles"
 
 msgid "~!Items"
-msgstr "~!Articles"
+msgstr "Art~!icles"
 
 msgid "Magic P~!refixes"
 msgstr "P~!refixes Magique"
@@ -674,7 +674,7 @@ msgid "Magic Suffixes"
 msgstr "Suffixes Magique"
 
 msgid "P~!lanes"
-msgstr "Plans"
+msgstr "P~!lans"
 
 msgid "Runic Suffixes"
 msgstr "Runic Suffixes"
@@ -750,7 +750,7 @@ msgid "Attack ~!Ground"
 msgstr "Attaque au sol (~!G)"
 
 msgid "~!Unload"
-msgstr "~!Décharger"
+msgstr "Décharger (~!U)"
 
 msgid "Salvage Unit (~<Del~>)"
 msgstr "Recycler l'unité (~<Del~>)"
@@ -759,25 +759,25 @@ msgid "~!Repair"
 msgstr "~!Réparer"
 
 msgid "~!Harvest Resource"
-msgstr "~!Récolter Ressources"
+msgstr "Récolter Ressources (~!H)"
 
 msgid "Return with ~!Goods"
-msgstr "Retourner avec les Dieux"
+msgstr "Retourner avec les Dieux (~!G)"
 
 msgid "~!Build Structure"
-msgstr "Construire ~!Structure"
+msgstr "Construire Structure (~!S)"
 
 msgid "Set ~!Rally Point"
 msgstr "Point de ~!Ralliement"
 
 msgid "~!Found a Faction"
-msgstr "~!Trouver une Faction"
+msgstr "Trouver une ~!Faction"
 
 msgid "The Aedui have been crushed, victory is ours!"
 msgstr "Les Aedui ont été écrasés, la victoire est nôtre !"
 
 msgid  "~!Buy Items"
-msgstr "~!Acheter Articles"
+msgstr "Acheter Articles (~!B)"
 
 msgid "Enact a ~!Law"
 msgstr "Promulguer une ~!loi"
@@ -798,10 +798,10 @@ msgid "Cancel Construction (~<Esc~>)"
 msgstr "Annuler (~<Esc~>)"
 
 msgid "Choose ~!Upgrade"
-msgstr "Mise à niveau ~!U"
+msgstr "Mise à niveau (~!U)"
 
 msgid "Learn ~!Mace Mastery"
-msgstr "~!Maîtrisse de la Masse"
+msgstr "Maîtrisse de la ~!Masse"
 
 msgid "Mace Mastery is a passive ability that increases damage with maces by 2"
 msgstr "La maîtrisse de la Masse est une capacité passive qui augmente les dégâts avec masses par 2"
@@ -825,19 +825,19 @@ msgid "Gun Mastery is a passive ability that increases damage with guns by 2"
 msgstr "La maîtrise des armes est une capacité passive qui augmente les dégâts avec des armes à feu de 2"
 
 msgid "Learn A~!xe Mastery"
-msgstr "Maîtrisse de l'~!Axe"
+msgstr "Maîtrisse de l'A~!xe"
 
 msgid "Axe Mastery is a passive ability that increases damage with axes by 2"
 msgstr "La maîtrise de la hache est une capacité passive qui augmente les dégâts avec les axes de 2"
 
 msgid "Learn S~!word Mastery"
-msgstr "Maîtrisse de l'Epéé (~!w)"
+msgstr "Maîtrisse de l'Epéé (~!W)"
 
 msgid "Sword Mastery is a passive ability that increases damage with swords by 2"
 msgstr "La maîtrise de l'épée est une capacité passive qui augmente les dégâts avec les épées de 2"
 
 msgid "Learn S~!pear Mastery"
-msgstr "Maîtrisse de la Lance (~!p)"
+msgstr "Maîtrisse de la Lance (~!P)"
 
 msgid "Spear Mastery is a passive ability that increases damage with spears by 2"
 msgstr "La maîtrise de la lance est une capacité passive qui augmente les dégâts avec les lances de 2"
@@ -879,7 +879,7 @@ msgid "Precise Shot is an active ability which deals a critical hit. Only usable
 msgstr "Le tir précis est une capacité active qui inflige un coup critique. Utilisable uniquement avec des armes à distance"
 
 msgid "Learn Punctu~!re"
-msgstr "Maîtrisse de la ponction"
+msgstr "Maît~!risse de la ponction"
 
 msgid "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks"
 msgstr "La ponction est une capacité active qui fait saigner la cible pendant une certaine durée. Seulement utilisable avec des armes de mêlée capables de faire des attaques de poussée"
@@ -891,7 +891,7 @@ msgid "Leadership Aura is an aura ability that increases the damage of nearby fr
 msgstr "L'Aura de Leadership est une capacité d'aura qui augmente de 10% les dégâts infligés par les unités amies proches."
 
 msgid "Learn T~!oughness"
-msgstr "Apprendre la Dureté (~!o)"
+msgstr "Apprendre la Dureté (~!O)"
 
 msgid "Toughness is a passive ability that increases HP by 10"
 msgstr "La ténacité est une capacité passive qui augmente HP de 10"
@@ -918,7 +918,7 @@ msgid "Heals an organic unit"
 msgstr "Soigne une unité biologique"
 
 msgid "Shoc~!king Grasp"
-msgstr "Prise de choc (~!k)"
+msgstr "Prise de choc (~!K)"
 
 msgid "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds"
 msgstr "Inflige des dégâts de foudre à la mêlée à une unité, la laissant étourdie pendant quelques secondes"
@@ -945,7 +945,7 @@ msgid "P~!recision"
 msgstr "P~!récision"
 
 msgid "Stu~!n"
-msgstr "Etourdir (~!n)"
+msgstr "Etourdir (~!N)"
 
 msgid "Does a stunning attack on a target, leaving it paralyzed for a few moments"
 msgstr "Fait une attaque stupéfiante sur une cible, la laissant paralysée pendant quelques instants"
@@ -960,7 +960,7 @@ msgid "P~!recise Shot"
 msgstr "Tir P~!récis"
 
 msgid "Build Mine~!cart"
-msgstr "Chartiot"
+msgstr "~!Chartiot"
 
 msgid "Build ~!Caravan"
 msgstr "~!Caravanne"
@@ -969,10 +969,10 @@ msgid "Build R~!oad"
 msgstr "R~!oute"
 
 msgid  "Build ~!Railroad"
-msgstr "Chemin de fer (~!R)"
+msgstr "Chemin de fe~!r"
 
 msgid "Build Carpente~!r's Shop"
-msgstr "Atelier de Charpentier"
+msgstr "Atelier de Charpentie~!r"
 
 msgid "Build ~!Copper Mine"
 msgstr "Mine de ~!Cuivre"
@@ -981,16 +981,16 @@ msgid "Build ~!Diamond Mine"
 msgstr "Mine de ~!Diamants"
 
 msgid "Build ~!Gold Mine"
-msgstr "Mine d'~!Or"
+msgstr "Mine d'Or (~!G)"
 
 msgid "Build Si~!lver Mine"
-msgstr "Mine d'~!Argent"
+msgstr "Mine d'Argent (~!L)"
 
 msgid "Build ~!Emerald Mine"
 msgstr "Mine d'émeraude (~!E)"
 
 msgid "Build ~!Iron Mine"
-msgstr "Mine de fer (~!I)"
+msgstr "M~!ine de fer"
 
 msgid "Build ~!Mithril Mine"
 msgstr "Mine de ~!Mithril"
@@ -3480,7 +3480,7 @@ msgid "Custom Hero:"
 msgstr "Héro personnalisé:"
 
 msgid "C~!ustom Game"
-msgstr "Parti~!e solo"
+msgstr "Partie solo (~!C)"
 
 msgid "~!Multiplayer Game"
 msgstr "~!Multijoueur"
@@ -3492,10 +3492,10 @@ msgid "Load Game"
 msgstr "Charger un jeu"
 
 msgid "E~!xit"
-msgstr "~!Quitter"
+msgstr "Quitter (~!X)"
 
 msgid "~!Close"
-msgstr "~!Fermer"
+msgstr "Fermer (~!C)"
 
 msgid "~!Restart Mission"
 msgstr "~!Recommencer la Mission"
@@ -3504,13 +3504,13 @@ msgid "~!Quit Mission"
 msgstr "~!Quitter la Mission"
 
 msgid "E~!xit to Desktop"
-msgstr "Q~!uitter vers le Bureau"
+msgstr "Quitter vers le Bureau (~!X)"
 
 msgid "Are you sure?"
 msgstr "Etes-vous sur?"
 
 msgid "~!Save"
-msgstr "~!Enregistrer"
+msgstr "Enregi~!strer"
 
 msgid "Save Game"
 msgstr "Enregistrer la partie"
