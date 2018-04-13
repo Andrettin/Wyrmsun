@@ -1177,7 +1177,7 @@ function RunSinglePlayerCustomGameMenu()
 		for i=1,table.getn(maps) do
 			MapWorld = ""
 			GetMapInfo(maps[i])
-			if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
+			if (_(MapWorld) == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == _("Custom"))) then
 				if (mapinfo.npersonplayers > 0) then
 					local map_description = _(mapinfo.description)
 					if (map_description == "") then
@@ -1205,10 +1205,10 @@ function RunSinglePlayerCustomGameMenu()
 					or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
 				)
 				and (
-					_(MapWorld) == _(world_list[world:getSelected() + 1])
+					_(MapWorld) == world_list[world:getSelected() + 1]
 					or (
 						MapWorld == ""
-						and world_list[world:getSelected() + 1] == "Custom"
+						and world_list[world:getSelected() + 1] == _("Custom")
 					)
 				)
 			) then
