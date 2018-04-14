@@ -78,12 +78,6 @@ DefineUpgrade("upgrade-teuton-catapult-projectile-2", {
 	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +12 Damage for Catapults, +5 Damage for Longships."
 })
 
-DefineUpgrade("upgrade-teuton-masonry", {
-	Parent = "upgrade-masonry",
-	Civilization = "teuton",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
-})
-
 DefineUpgrade("upgrade-teuton-coinage", {
 	Parent = "upgrade-coinage",
 	Civilization = "teuton",
@@ -165,29 +159,6 @@ DefineModifier("upgrade-teuton-catapult-projectile-2",
 	{"BasicDamage", 5},
 	{"Points", 10},
 	{"apply-to", "unit-norse-longship"}
-)
-
-DefineModifier("upgrade-teuton-masonry",
-	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
-	{"SalvageFactor", -25},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
-	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
-	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
-	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-latin-town-hall"},
-	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
-	{"apply-to", "unit-latin-smithy"},
-	{"apply-to", "unit-latin-stables"},
-	{"apply-to", "unit-norse-town-hall"},
-	{"apply-to", "unit-norse-farm"}, {"apply-to", "unit-norse-barracks"},
-	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
-	{"apply-to", "unit-norse-temple"},
-	{"apply-to", "unit-norse-watch-tower"},
-	{"apply-to", "unit-norse-dock"}
 )
 
 DefineModifier("upgrade-teuton-coinage",

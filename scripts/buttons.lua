@@ -2272,6 +2272,26 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
 	}
 } )
 
+DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
+	Action = "research", Value = "upgrade-masonry",
+	Allowed = "check-single-research",
+	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
+	ForUnit = {
+		"unit-goblin-lumber-mill",
+		"unit-norse-lumber-mill",
+		"unit-teuton-lumber-mill"
+	}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
+	Action = "research", Value = "upgrade-masonry",
+	Allowed = "check-single-research",
+	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
+	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
+	ForUnit = {"unit-dwarven-masons-shop"}
+} )
+
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
 	Action = "research", Value = "upgrade-ironworking",
 	Allowed = "check-single-research",

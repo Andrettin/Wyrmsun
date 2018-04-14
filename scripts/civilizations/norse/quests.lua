@@ -105,7 +105,7 @@ DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 	Description = "A master builder has proposed to us to remake our hall in Leidre anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources.",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Allow", "upgrade-teuton-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "leidre") and GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "leidre") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
+		if (GetPlayerData(trigger_player, "Allow", "upgrade-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "leidre") and GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "leidre") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
 			return true
 		end
 		return false

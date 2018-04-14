@@ -93,9 +93,7 @@ function ApplyTechLevels()
 		"upgrade-free-workers"
 	}
 	local agrarian_upgrades = {
-		"upgrade-dwarven-masonry",
-		"upgrade-teuton-masonry",
-		"upgrade-goblin-masonry"
+		"upgrade-masonry"
 	}
 	local civilized_upgrades = {
 		"upgrade-dwarven-runewriting",

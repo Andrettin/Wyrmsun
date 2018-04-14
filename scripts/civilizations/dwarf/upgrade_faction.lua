@@ -384,17 +384,17 @@ DefineDependency("upgrade-faction-whitesteel-clan",
 )
 
 DefineDependency("upgrade-faction-joruvellir",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
+	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-kal-kartha",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
+	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-knalga",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
+	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-lyr",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"}
+	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
 )

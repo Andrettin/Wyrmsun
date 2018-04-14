@@ -34,11 +34,11 @@ DefineDependency("unit-teuton-gunpowder-infantry",
 )
 
 DefineDependency("unit-teuton-guard-tower",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-teuton-masonry"}
+	{"unit-teuton-lumber-mill", "upgrade-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-masonry"}
 )
 
 DefineDependency("unit-teuton-wall",
-	{"upgrade-teuton-masonry"}
+	{"upgrade-masonry"}
 )
 
 DefineDependency("unit-teuton-catapult",
@@ -82,7 +82,7 @@ DefineDependency("upgrade-teuton-catapult-projectile-2",
 )
 
 DefineDependency("unit-teuton-stronghold",
-	{"unit-teuton-barracks", "upgrade-teuton-masonry"}, "or", {"unit-norse-barracks", "upgrade-teuton-masonry"}, "or", {"unit-latin-barracks", "upgrade-teuton-masonry"}
+	{"unit-teuton-barracks", "upgrade-masonry"}, "or", {"unit-norse-barracks", "upgrade-masonry"}, "or", {"unit-latin-barracks", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-teuton-coinage",

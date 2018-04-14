@@ -451,109 +451,109 @@ DefineDependency("upgrade-faction-saxon-tribe",
 )
 
 DefineDependency("upgrade-faction-austria",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-baden",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-bavaria",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-brabant",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-brandenburg",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-bremen",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-brunswick",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-carinthia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-cologne",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"upgrade-teuton-writing", "upgrade-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-drenthe",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-franconia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-friesland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-hesse",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-holland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-holy-rome", -- must be Christian
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "upgrade-deity-christian-god"}
+	{"upgrade-teuton-writing", "upgrade-masonry", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-lombardy",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-magdeburg",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"upgrade-teuton-writing", "upgrade-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-mecklenburg",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-netherlands",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-overijssel",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-prussia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry", "unit-teuton-stronghold", "unit-teuton-barracks"}
+	{"upgrade-teuton-writing", "upgrade-masonry", "unit-teuton-stronghold", "unit-teuton-barracks"}
 )
 
 DefineDependency("upgrade-faction-saxony",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-swabia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-switzerland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-thuringia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-westphalia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-wurtemberg",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

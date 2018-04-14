@@ -42,7 +42,7 @@ if (LoadedGame == false) then
 
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+		SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 		SetPlayerData(0, "Faction", "suebi-tribe")
 		
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

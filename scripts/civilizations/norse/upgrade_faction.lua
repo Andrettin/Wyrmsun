@@ -184,21 +184,21 @@ DefineDependency("upgrade-faction-swede-tribe",
 )
 
 DefineDependency("upgrade-faction-denmark",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-gautland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-gotland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-norway",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-sweden",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

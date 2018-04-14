@@ -230,21 +230,21 @@ DefineDependency("upgrade-faction-goth-tribe",
 )
 
 DefineDependency("upgrade-faction-burgundy",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-gothia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-ostrogothia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-vandalia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-visigothia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

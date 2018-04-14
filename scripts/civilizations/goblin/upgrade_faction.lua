@@ -194,25 +194,25 @@ DefineModifier("upgrade-faction-tenebris",
 )
 
 DefineDependency("upgrade-faction-aurvang",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-driftwood",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-ezmarria",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-myridia",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-stilgar",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-tenebris",
-	{"upgrade-goblin-writing", "upgrade-goblin-masonry"}
+	{"upgrade-goblin-writing", "upgrade-masonry"}
 )

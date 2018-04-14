@@ -1123,7 +1123,7 @@ DefineCivilization("dwarf", {
 		-1, "upgrade-dwarven-broad-axe", true, -- bronze age technologies had already been obtained by the dwarves by this point
 		-1, "upgrade-dwarven-shield-1", true, -- bronze age technologies had already been obtained by the dwarves by this point
 		-1, "upgrade-dwarven-sharp-throwing-axe", true, -- bronze age technologies had already been obtained by the dwarves by this point
-		25, "upgrade-dwarven-masonry", true, -- dwarves already had castles built of stone masonry by then
+		25, "upgrade-masonry", true, -- dwarves already had castles built of stone masonry by then
 		25, "upgrade-gunpowder", true, -- dwarves already had gunpowder by then (as seen by them having thunderes in The Sceptre of Fire)
 		400, "upgrade-dwarven-coinage", true, -- the dwarves should already have Coinage technology by then
 		550, "upgrade-ironworking", true,
@@ -1161,7 +1161,7 @@ DefineCivilization("elf", {
 	Background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore.",
 	HistoricalUpgrades = {
 		550, "upgrade-teuton-writing", true, -- should be changed later
-		550, "upgrade-teuton-masonry", true -- should be changed later
+		550, "upgrade-masonry", true -- should be changed later
 	},
 	PersonalNames = {
 		"male", "Aendan",
@@ -2572,7 +2572,7 @@ DefineCivilization("teuton", {
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		800, "upgrade-teuton-writing", true,
-		800, "upgrade-teuton-masonry", true,
+		800, "upgrade-masonry", true,
 		919, "upgrade-deity-christian-god", true, -- the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1249, "upgrade-gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
@@ -3343,7 +3343,7 @@ DefineCivilization("greek", {
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-1400, "upgrade-teuton-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+		-1400, "upgrade-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 	--[[
 	SettlementNames = {

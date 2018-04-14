@@ -111,12 +111,6 @@ DefineUpgrade("upgrade-goblin-catapult-projectile-2", {
 	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +12 Damage for War Machines and +5 Damage for Warships."
 })
 
-DefineUpgrade("upgrade-goblin-masonry", {
-	Parent = "upgrade-masonry",
-	Civilization = "goblin",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
-})
-
 DefineUpgrade("upgrade-goblin-coinage", {
 	Parent = "upgrade-coinage",
 	Civilization = "goblin",
@@ -214,19 +208,6 @@ DefineModifier("upgrade-goblin-catapult-projectile-2",
 	{"BasicDamage", 5},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-warship"}
-)
-
-DefineModifier("upgrade-goblin-masonry",
-	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
-	{"SalvageFactor", -25},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
-	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
-	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
-	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-market"},
-	{"apply-to", "unit-goblin-academy"},
-	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"},
-	{"apply-to", "unit-goblin-dock"}
 )
 
 DefineModifier("upgrade-goblin-coinage",

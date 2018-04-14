@@ -35,9 +35,7 @@ DefineDependency("unit-mithril-mine",
 )
 
 DefineDependency("unit-road",
-	{"upgrade-dwarven-masonry"},
-	"or", {"upgrade-goblin-masonry"},
-	"or", {"upgrade-teuton-masonry"}
+	{"upgrade-masonry"}
 )
 
 DefineDependency("unit-railroad",
@@ -76,15 +74,13 @@ DefineDependency("upgrade-mathematics",
 )
 
 DefineDependency("upgrade-engineering",
-	{"upgrade-mathematics", "upgrade-dwarven-masonry", "upgrade-ironworking"},
-	"or", {"upgrade-mathematics", "upgrade-goblin-masonry", "upgrade-ironworking"},
-	"or", {"upgrade-mathematics", "upgrade-teuton-masonry", "upgrade-ironworking"}
+	{"upgrade-mathematics", "upgrade-masonry", "upgrade-ironworking"}
 )
 
 DefineDependency("upgrade-architecture",
-	{"upgrade-dwarven-runewriting", "upgrade-dwarven-masonry"},
-	"or", {"upgrade-goblin-writing", "upgrade-goblin-masonry"},
-	"or", {"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-dwarven-runewriting", "upgrade-masonry"},
+	"or", {"upgrade-goblin-writing", "upgrade-masonry"},
+	"or", {"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-philosophy",

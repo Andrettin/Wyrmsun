@@ -986,11 +986,11 @@ DefineUnitType("unit-teuton-town-hall", {
 			"animations", "animations-germanic-town-hall",
 			"construction", "construction-germanic-town-hall",
 			"type-name", "Chieftain's Hall",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "town-hall",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1029,11 +1029,11 @@ DefineUnitType("unit-teuton-farm", {
 			"file", "germanic/buildings/farm.png",
 			"shadow-file", "germanic/buildings/farm_shadow.png",
 			"icon", "icon-germanic-farm",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "farm",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1060,11 +1060,11 @@ DefineUnitType("unit-teuton-barracks", {
 			"file", "germanic/buildings/barracks.png",
 			"shadow-file", "germanic/buildings/barracks_shadow.png",
 			"icon", "icon-germanic-barracks",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "barracks",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1088,11 +1088,11 @@ DefineUnitType("unit-teuton-lumber-mill", {
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "lumber-mill",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1114,11 +1114,11 @@ DefineUnitType("unit-teuton-smithy", {
 			"file", "germanic/buildings/smithy.png",
 			"shadow-file", "germanic/buildings/smithy_shadow.png",
 			"icon", "icon-germanic-smithy",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "smithy",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1141,11 +1141,11 @@ DefineUnitType("unit-teuton-stables", {
 			"file", "germanic/buildings/stables.png",
 			"shadow-file", "germanic/buildings/stables_shadow.png",
 			"icon", "icon-germanic-stables",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "stables",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1198,11 +1198,11 @@ DefineUnitType("unit-teuton-market", {
 			"file", "germanic/buildings/market.png",
 			"shadow-file", "germanic/buildings/market_shadow.png",
 			"icon", "icon-germanic-market",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "market",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {
@@ -1267,11 +1267,11 @@ DefineUnitType("unit-teuton-dock", {
 			"file", "germanic/buildings/dock.png",
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
-			"upgrade-forbidden", "upgrade-teuton-masonry"
+			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
 			"variation-id", "dock",
-			"upgrade-required", "upgrade-teuton-masonry"
+			"upgrade-required", "upgrade-masonry"
 		}
 	},
 	Sounds = {

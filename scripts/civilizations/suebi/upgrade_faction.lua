@@ -133,5 +133,5 @@ DefineDependency("upgrade-faction-suebi-tribe",
 )
 
 DefineDependency("upgrade-faction-galicia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

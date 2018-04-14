@@ -58,11 +58,11 @@ DefineDependency("upgrade-goblin-embossed-shield",
 )
 
 DefineDependency("unit-goblin-guard-tower",
-	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}
+	{"unit-goblin-lumber-mill", "upgrade-masonry"}
 )
 
 DefineDependency("unit-goblin-wall",
-	{"upgrade-goblin-masonry"}
+	{"upgrade-masonry"}
 )
 
 DefinePredependency("unit-goblin-war-machine",
@@ -110,7 +110,7 @@ DefineDependency("unit-goblin-dock",
 )
 
 DefineDependency("unit-goblin-stronghold",
-	{"unit-goblin-mess-hall", "upgrade-goblin-masonry"}
+	{"unit-goblin-mess-hall", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-goblin-bodkin-arrow",

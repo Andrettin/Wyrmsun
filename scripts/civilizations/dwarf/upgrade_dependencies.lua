@@ -90,7 +90,7 @@ DefineDependency("upgrade-dwarven-ballista-bolt-2",
 )
 
 DefineDependency("unit-dwarven-stronghold",
-	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}, "or", {"unit-gnomish-barracks", "upgrade-dwarven-masonry"}
+	{"unit-dwarven-barracks", "upgrade-masonry"}, "or", {"unit-gnomish-barracks", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-dwarven-coinage",
@@ -102,7 +102,7 @@ DefineDependency("upgrade-dwarven-alchemy",
 )
 
 DefineDependency("unit-dwarven-guard-tower",
-	{"unit-dwarven-lumber-mill", "upgrade-dwarven-masonry"}
+	{"unit-dwarven-lumber-mill", "upgrade-masonry"}
 )
 
 DefinePredependency("unit-dwarven-wall",
@@ -111,7 +111,7 @@ DefinePredependency("unit-dwarven-wall",
 )
 
 DefineDependency("unit-dwarven-wall",
-	{"upgrade-dwarven-masonry"}
+	{"upgrade-masonry"}
 )
 
 DefinePredependency("unit-dwarven-ballista",

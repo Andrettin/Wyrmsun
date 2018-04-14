@@ -116,13 +116,6 @@ DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
 	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships."
 })
 
-DefineUpgrade("upgrade-dwarven-masonry", {
-	Parent = "upgrade-masonry",
-	Civilization = "dwarf",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
-	Costs = {"time", 250, "copper", 900, "lumber", 0, "stone", 1500}
-})
-
 DefineUpgrade("upgrade-dwarven-coinage", {
 	Parent = "upgrade-coinage",
 	Civilization = "dwarf",
@@ -240,22 +233,6 @@ DefineModifier("upgrade-dwarven-ballista-bolt-2",
 	{"BasicDamage", 5},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista-warship"}
-)
-
-DefineModifier("upgrade-dwarven-masonry",
-	{"HitPoints", 20, "Percent"},
-	{"Armor", 5},
-	{"SalvageFactor", -25},
-	{"Points", 10},
-	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
-	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
-	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
-	{"apply-to", "unit-dwarven-masons-shop"},
-	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
-	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-market"},
-	{"apply-to", "unit-dwarven-academy"},
-	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
-	{"apply-to", "unit-dwarven-dock"}
 )
 
 DefineModifier("upgrade-dwarven-coinage",

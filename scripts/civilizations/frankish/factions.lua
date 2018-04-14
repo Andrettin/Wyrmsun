@@ -116,7 +116,7 @@ DefineFaction("francia", {
 	},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
-		0, "upgrade-teuton-masonry", true,
+		0, "upgrade-masonry", true,
 		565, "upgrade-teuton-coinage", true -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 	},
 	HistoricalCapitals = {

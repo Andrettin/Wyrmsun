@@ -215,25 +215,25 @@ DefineDependency("upgrade-faction-ubii-tribe",
 )
 
 DefineDependency("upgrade-faction-francia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-austrasia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-burgundia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-east-francia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-neustria",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-salia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

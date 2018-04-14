@@ -41,7 +41,7 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		if not (GrandStrategy) then
-			SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+			SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 			SetPlayerData(rome_player, "Allow", "unit-teuton-catapult", "F")
 			SetPlayerData(rome_player, "Allow", "unit-teuton-stronghold", "F")
 		end

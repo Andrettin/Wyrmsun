@@ -39,7 +39,7 @@ if (LoadedGame == false) then
 	
 	SetPlayerData(0, "Faction", "bavarian-tribe")
 	SetPlayerData(1, "Faction", "rome")
-	SetPlayerData(1, "Allow", "upgrade-teuton-masonry", "R")
+	SetPlayerData(1, "Allow", "upgrade-masonry", "R")
 	
 	unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	SetUnitVariable(unit, "Active", false)

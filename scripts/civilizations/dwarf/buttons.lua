@@ -469,14 +469,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
-	Action = "research", Value = "upgrade-dwarven-masonry",
-	Allowed = "check-single-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
-	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	ForUnit = {"unit-dwarven-masons-shop"}
-} )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-coinage",
 	Action = "research", Value = "upgrade-dwarven-coinage",
 	Allowed = "check-single-research",

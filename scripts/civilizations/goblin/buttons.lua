@@ -295,14 +295,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
-	Action = "research", Value = "upgrade-goblin-masonry",
-	Allowed = "check-single-research",
-	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
-	ForUnit = {"unit-goblin-lumber-mill"}
-} )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-coinage",
 	Action = "research", Value = "upgrade-goblin-coinage",
 	Allowed = "check-single-research",

@@ -188,8 +188,9 @@ DefineUpgrade("upgrade-ironworking", {
 DefineUpgrade("upgrade-masonry", {
 	Name = "Masonry",
 	Class = "masonry",
+	Civilization = "neutral",
 	Icon = "icon-masonry",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.",
+	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
 	Costs = {"time", 250, "copper", 900, "lumber", 1000, "stone", 500}
 })
 
@@ -328,6 +329,45 @@ DefineModifier("upgrade-mathematics",
 
 DefineModifier("upgrade-engineering", -- dummy upgrade modifier to change the variation
 	{"apply-to", "unit-gold-mine"}
+)
+
+DefineModifier("upgrade-masonry",
+	{"HitPoints", 20, "Percent"},
+	{"Armor", 5},
+	{"SalvageFactor", -25},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
+	{"apply-to", "unit-dwarven-masons-shop"},
+	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-market"},
+	{"apply-to", "unit-dwarven-academy"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
+	{"apply-to", "unit-dwarven-dock"},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
+	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
+	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-market"},
+	{"apply-to", "unit-goblin-academy"},
+	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"},
+	{"apply-to", "unit-goblin-dock"},
+	{"apply-to", "unit-latin-town-hall"},
+	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-smithy"},
+	{"apply-to", "unit-latin-stables"},
+	{"apply-to", "unit-norse-town-hall"},
+	{"apply-to", "unit-norse-farm"}, {"apply-to", "unit-norse-barracks"},
+	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
+	{"apply-to", "unit-norse-temple"},
+	{"apply-to", "unit-norse-watch-tower"},
+	{"apply-to", "unit-norse-dock"},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
+	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-dock"}
 )
 
 DefineModifier("upgrade-architecture",

@@ -161,7 +161,7 @@ DefineFaction("burgundy", {
 	DevelopsFrom = {"burgundian-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
-		0, "upgrade-teuton-masonry", true
+		0, "upgrade-masonry", true
 	},
 	HistoricalCapitals = {
 		411, "worms" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
@@ -190,7 +190,7 @@ DefineFaction("ostrogothia", {
 	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepidae-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
-		0, "upgrade-teuton-masonry", true
+		0, "upgrade-masonry", true
 	}
 })
 
@@ -205,7 +205,7 @@ DefineFaction("vandalia", {
 	DevelopsFrom = {"vandal-tribe", "lugii-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
-		0, "upgrade-teuton-masonry", true
+		0, "upgrade-masonry", true
 	}
 })
 
@@ -220,7 +220,7 @@ DefineFaction("visigothia", {
 	DevelopsFrom = {"visigoth-tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
-		0, "upgrade-teuton-masonry", true
+		0, "upgrade-masonry", true
 	},
 	HistoricalCapitals = {
 		486, "toulouse"

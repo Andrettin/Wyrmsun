@@ -360,39 +360,39 @@ DefineDependency("upgrade-faction-teuton-tribe",
 )
 
 DefineDependency("upgrade-faction-bernicia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-deira",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-east-anglia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-essex",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-jutland",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-kent",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-mercia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-middle-anglia",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-middlesex",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-northumbria",
@@ -400,9 +400,9 @@ DefineDependency("upgrade-faction-northumbria",
 )
 
 DefineDependency("upgrade-faction-sussex",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-faction-wessex",
-	{"upgrade-teuton-writing", "upgrade-teuton-masonry"}
+	{"upgrade-teuton-writing", "upgrade-masonry"}
 )

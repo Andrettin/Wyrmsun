@@ -147,7 +147,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
 	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
@@ -166,7 +166,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-barracks",
 	Action = "build", Value = "unit-teuton-barracks",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
 	Key = "b", Hint = "Build ~!Barracks", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
@@ -179,7 +179,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
 	Action = "build", Value = "unit-teuton-lumber-mill",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
@@ -288,14 +288,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = "Research Bodkin ~!Arrow", Popup = "popup-research",
 	Description = "+2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
-	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
-} )
-
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
-	Action = "research", Value = "upgrade-teuton-masonry",
-	Allowed = "check-single-research",
-	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
 	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
