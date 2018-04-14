@@ -4175,7 +4175,10 @@ DefineUnitType("unit-template-siege-warship", {
 	CanDock = true,
 	GroundAttack = true,
 	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
-	RequirementsString = "Lumber Mill, Smithy and Engineering"
+	RequirementsString = "Lumber Mill, Smithy and Engineering",
+	Sounds = {
+		"fire-missile", "catapult-attack"
+	}
 })
 
 DefineUnitType("unit-template-town-hall", {

@@ -999,8 +999,10 @@ DefineAnimations("animations-kobold-dead-body", {
 })
 
 DefineAnimations("animations-dead-sea-body", {
-  Death = {"unbreakable begin", "frame 30", "wait 100", "frame 30", "wait 100",
-    "frame 30", "unbreakable end", "wait 1",},
+	Death = {
+		"unbreakable begin", "frame 30", "wait 100", "frame 30", "wait 100",
+		"frame 30", "unbreakable end", "wait 1",
+	}
 })
 
 DefineAnimations("animations-destroyed-place", {
@@ -1477,7 +1479,7 @@ DefineAnimations("animations-transport-ship", {
 DefineAnimations("animations-siege-warship", {
 	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
 	Move = ShipMove,
-	Attack = {"unbreakable begin", "frame 0", "attack", "sound catapult-attack", "wait 119", "frame 0", "unbreakable end", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 119", "frame 0", "unbreakable end", "wait 1",},
 	Death = {"unbreakable begin", "frame 5", "wait 50", "frame 10", "wait 50", "frame 10", "unbreakable end", "wait 1",}
 })
 
