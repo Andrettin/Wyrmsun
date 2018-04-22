@@ -57,7 +57,7 @@ Units = {
 	"unit-norse-town-hall",
 	"unit-norse-farm", "unit-norse-barracks",
 	"unit-norse-lumber-mill", "unit-norse-smithy",
-	"unit-norse-temple",
+	"unit-norse-temple", "unit-norse-market",
 	"unit-norse-watch-tower",
 	"unit-norse-dock",
 	"unit-norse-palisade",
@@ -333,6 +333,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-market" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-market" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-market" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-market" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-market" }
 			}
 		}

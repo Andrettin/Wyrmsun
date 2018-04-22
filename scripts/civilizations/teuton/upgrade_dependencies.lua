@@ -145,8 +145,12 @@ DefineDependency("unit-teuton-temple",
 	{"unit-teuton-lumber-mill"}
 )
 
+DefinePredependency("unit-teuton-market",
+	{"upgrade-norse-civilization", 0}
+)
+
 DefineDependency("unit-teuton-market",
-	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
+	{"unit-teuton-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-university",

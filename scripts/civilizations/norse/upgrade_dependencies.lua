@@ -70,6 +70,14 @@ DefineDependency("unit-norse-dock",
 	{"unit-norse-lumber-mill"}
 )
 
+DefinePredependency("unit-norse-market",
+	{"upgrade-norse-civilization"}
+)
+
+DefineDependency("unit-norse-market",
+	{"unit-norse-lumber-mill"}
+)
+
 DefinePredependency("unit-norse-watch-tower",
 	{"upgrade-norse-civilization"}
 )

@@ -210,7 +210,21 @@ DefineUnitType("unit-norse-temple", {
 	Image = {"file", "norse/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "norse/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-temple",
-	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	RequirementsString = "Lumber Mill",
+	Sounds = {
+--		"help", "basic-norse-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-norse-market", {
+	Parent = "unit-template-market",
+	Civilization = "norse",
+	Description = "Norse traders are active throughout the North and Baltic Seas, bringing a varied assortment of goods to market.",
+	Image = {"file", "norse/buildings/market.png", "size", {96, 96}},
+	Shadow = {"file", "norse/buildings/market_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-norse-market",
+	RequirementsString = "Lumber Mill",
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
 	}
@@ -237,7 +251,7 @@ DefineUnitType("unit-norse-dock", {
 	Image = {"file", "norse/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "norse/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-norse-dock",
-	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	RequirementsString = "Lumber Mill",
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
 	}

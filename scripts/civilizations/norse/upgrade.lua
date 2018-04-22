@@ -78,7 +78,11 @@ DefineModifier("upgrade-norse-civilization",
 )
 
 DefineModifier("upgrade-norse-civilization",
-	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
+	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-norse-market"}
+)
+
+DefineModifier("upgrade-norse-civilization",
+	{"apply-to", "unit-teuton-market"}, {"convert-to", "unit-norse-market"}
 )
 
 DefineModifier("upgrade-norse-civilization",

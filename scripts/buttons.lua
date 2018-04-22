@@ -139,6 +139,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-norse-town-hall",
 		"unit-norse-barracks",
 		"unit-norse-temple", "unit-norse-dock",
+		"unit-norse-market",
 		"unit-norse-watch-tower",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
 		"unit-teuton-barracks",
@@ -183,6 +184,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-chest",
 	Key = "b", Hint = "~!Buy Items", Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -229,6 +231,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-norse-town-hall",
 		"unit-norse-farm", "unit-norse-barracks",
 		"unit-norse-lumber-mill", "unit-norse-smithy",
+		"unit-norse-market",
 		"unit-norse-temple",
 		"unit-norse-watch-tower",
 		"unit-norse-dock",
@@ -306,6 +309,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-gnomish-town-hall",
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1152,6 +1156,7 @@ DefineButton( { Pos = 1, Level = 0,
 	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1915,6 +1920,7 @@ DefineButton( { Pos = 1, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1926,6 +1932,7 @@ DefineButton( { Pos = 2, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1937,6 +1944,7 @@ DefineButton( { Pos = 3, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1948,6 +1956,7 @@ DefineButton( { Pos = 4, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1959,6 +1968,7 @@ DefineButton( { Pos = 5, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1970,6 +1980,7 @@ DefineButton( { Pos = 6, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1981,6 +1992,7 @@ DefineButton( { Pos = 7, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -1992,6 +2004,7 @@ DefineButton( { Pos = 8, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2003,6 +2016,7 @@ DefineButton( { Pos = 9, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2014,6 +2028,7 @@ DefineButton( { Pos = 10, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2025,6 +2040,7 @@ DefineButton( { Pos = 11, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2036,6 +2052,7 @@ DefineButton( { Pos = 12, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2047,6 +2064,7 @@ DefineButton( { Pos = 13, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2058,6 +2076,7 @@ DefineButton( { Pos = 14, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2069,6 +2088,7 @@ DefineButton( { Pos = 15, Level = 2,
 	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
 	ForUnit = {
 		"unit-germanic-market",
+		"unit-norse-market",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
@@ -2125,6 +2145,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-lumber",
 		"unit-dwarven-market",
 		"unit-germanic-market",
 		"unit-goblin-market",
+		"unit-norse-market",
 		"unit-teuton-market"
 	}
 })
@@ -2136,6 +2157,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stone",
 		"unit-dwarven-market",
 		"unit-germanic-market",
 		"unit-goblin-market",
+		"unit-norse-market",
 		"unit-teuton-market"
 	}
 })
@@ -2147,6 +2169,7 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-lumber",
 		"unit-dwarven-market",
 		"unit-germanic-market",
 		"unit-goblin-market",
+		"unit-norse-market",
 		"unit-teuton-market"
 	}
 })
@@ -2158,6 +2181,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-stone",
 		"unit-dwarven-market",
 		"unit-germanic-market",
 		"unit-goblin-market",
+		"unit-norse-market",
 		"unit-teuton-market"
 	}
 })

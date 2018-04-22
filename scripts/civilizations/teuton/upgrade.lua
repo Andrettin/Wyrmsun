@@ -172,7 +172,8 @@ DefineModifier("upgrade-teuton-coinage",
 
 DefineModifier("upgrade-teuton-coinage",
 	{"TradeCost", -5},
-	{"apply-to", "unit-teuton-market"}
+	{"apply-to", "unit-teuton-market"},
+	{"apply-to", "unit-norse-market"}
 )
 
 DefineModifier("upgrade-teuton-writing",
@@ -191,6 +192,7 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-norse-town-hall"},
 	{"apply-to", "unit-norse-barracks"},
 	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
+	{"apply-to", "unit-norse-market"},
 	{"apply-to", "unit-norse-temple"}
 )
 
