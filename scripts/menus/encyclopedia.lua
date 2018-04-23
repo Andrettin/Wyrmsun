@@ -49,7 +49,7 @@ function RunEncyclopediaMenu()
 	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
 	menu:addFullButton(_("~!Buildings"), "b", offx + 208 + (113 * -1), offy + 104 + 36*-1,
-		function() RunEncyclopediaUnitsMenu("buildings") end)
+		function() RunEncyclopediaUnitsCivilizationMenu("buildings") end)
 
 	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*0,
 		function() RunEncyclopediaCivilizationsMenu() end)

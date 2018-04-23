@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Civilizations
 - The Norse civilization is now playable.
 
+* Miscellaneous
+- Building entries in the encyclopedia are now separated by civilization (as occurs with units and technologies).
+
 * Scenarios
 - Fixed issue which caused a unit killed through effects like bleeding to not count for the completion of quest objectives.
 
