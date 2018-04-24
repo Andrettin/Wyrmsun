@@ -543,7 +543,7 @@ function Tip(tip_name, tip_description)
 	end
 end
 
-function GenericDialog(title, message, tooltip, icon, player_color)
+function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	end
@@ -551,9 +551,14 @@ function GenericDialog(title, message, tooltip, icon, player_color)
 	local menu
 	local icon_graphics
 	
+	if (not frame) then
+		frame = 0
+	end
+	
 	if (icon) then
 		icon_graphics = CIcon:Get(icon).G
 	end
+	
 	
 	if (GameRunning or Editor.Running ~= EditorNotRunning) then
 		menu = WarGameMenu(panel(1))
@@ -565,11 +570,15 @@ function GenericDialog(title, message, tooltip, icon, player_color)
 	menu:addLabel(_(title), 128, 11)
 	
 	if (icon) then
+		local icon_x_origin = (frame * icon_graphics:getWidth()) % icon_graphics:getGraphicWidth()
+		local icon_y_origin = math.floor((frame * icon_graphics:getWidth()) / icon_graphics:getGraphicWidth()) * icon_graphics:getHeight()
+		
 		if not (player_color) then
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageButton("", player_color)
 		menu:add(icon_widget, 105, 48)
+		icon_widget:setImageOrigin(icon_x_origin, icon_y_origin)
 		icon_widget:setNormalImage(icon_graphics)
 		icon_widget:setPressedImage(icon_graphics)
 		icon_widget:setDisabledImage(icon_graphics)
