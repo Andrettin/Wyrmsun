@@ -5,6 +5,8 @@
 /graphics/dwarf/buildings/ballista_tower_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/barracks.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/barracks_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/cannon_tower.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/cannon_tower_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/dock.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/dock_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/guard_tower.png (by Jinn) (licensed under the CC0)
