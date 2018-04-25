@@ -274,34 +274,18 @@ function DefineUnitType(unit_type, data)
 		data.BuildingRules = {
 			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-ettin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" }
+				"distance", { Distance = 3, DistanceType = ">", Class = "town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
 			}
 		}
 	elseif (smithy) then
 		data.BuildingRules = {
 			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-ettin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
 
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
@@ -330,21 +314,13 @@ function DefineUnitType(unit_type, data)
 	elseif (market) then
 		data.BuildingRules = {
 			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-market" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-market" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-market" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-market" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-market" }
+				"distance", { Distance = 3, DistanceType = ">", Class = "market" }
 			}
 		}
 	elseif (dock) then
 		data.BuildingRules = {
 			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-dock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-dock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-dock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-dock" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-norse-dock" }
+				"distance", { Distance = 3, DistanceType = ">", Class = "dock" }
 			}
 		}
 	end
