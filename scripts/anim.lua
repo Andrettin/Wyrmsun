@@ -933,6 +933,12 @@ DefineAnimations("animations-guard-tower", {
 	Attack = {"unbreakable begin", "frame 0", "attack", "wait 59", "frame 0", "unbreakable end", "wait 1",},
 })
 
+DefineAnimations("animations-heavy-tower", {
+	Still = BuildingStill,
+	Upgrade = {"frame 1", "wait 4", "frame 1", "wait 1",},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 150", "frame 0", "unbreakable end", "wait 1",},
+})
+
 local ActiveBuildingStill = {
 	"label start",
 	"if-var v.InsideCount.Value >= 1 active",

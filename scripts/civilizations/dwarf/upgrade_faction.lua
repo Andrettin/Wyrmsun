@@ -286,7 +286,7 @@ DefineModifier("upgrade-faction-knalga",
 DefineModifier("upgrade-faction-lyr",
 	{"Armor", 5}, -- Thrymgjol bonus
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}, {"apply-to", "unit-dwarven-ballista-tower"}
 )
 
 DefineModifier("upgrade-faction-lyr",

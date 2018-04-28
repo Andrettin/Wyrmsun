@@ -2,6 +2,8 @@
 /graphics/dwarf/buildings/academy.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/academy_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/ballista_tower.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/ballista_tower_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/dwarf/buildings/ballista_tower_extra_1_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/ballista_tower_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/barracks.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/buildings/barracks_shadow.png (by Jinn) (licensed under the CC0)

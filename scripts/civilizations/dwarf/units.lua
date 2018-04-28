@@ -2070,6 +2070,26 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-ballista-tower", {
+	Name = "Ballista Tower",
+	Parent = "unit-template-heavy-tower",
+	Civilization = "dwarf",
+	Description = "A marvel of dwarven engineering, ballista towers make dwarven settlements nigh-impregnable.",
+	Image = {"file", "dwarf/buildings/ballista_tower.png", "size", {64, 64}},
+	Shadow = {"file", "dwarf/buildings/ballista_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-dwarven-ballista-tower",
+	Costs = {"lumber", 0, "stone", 900},
+	RepairCosts = {"lumber", 0},
+	Missile = "missile-dwarven-ballista-bolt",
+	FireMissile = "missile-flaming-dwarven-ballista-bolt",
+	FireResistance = 20,
+	PierceDamage = true,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
 DefineUnitType("unit-dwarven-market", {
 	Parent = "unit-template-market",
 	Civilization = "dwarf",

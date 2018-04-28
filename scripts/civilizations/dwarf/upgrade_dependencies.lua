@@ -105,6 +105,11 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-masonry"}
 )
 
+DefineDependency("unit-dwarven-ballista-tower",
+	{"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "upgrade-masonry"},
+	"or", {"unit-dwarven-lumber-mill", "unit-brising-smithy", "upgrade-masonry"}
+)
+
 DefinePredependency("unit-dwarven-wall",
 	{"upgrade-dwarven-civilization"},
 	"or", {"upgrade-gnomish-civilization"}

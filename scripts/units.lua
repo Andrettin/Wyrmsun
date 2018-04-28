@@ -138,7 +138,7 @@ Units = {
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-masons-shop",
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 	"unit-dwarven-academy",
-	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
+	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower",
 	"unit-dwarven-dock",
 	"unit-dwarven-wall",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
@@ -4031,6 +4031,7 @@ DefineUnitType("unit-template-siege-engine", {
 --	BasicDamage = 75,
 	BasicDamage = 60,
 	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
 	MinAttackRange = 2, MaxAttackRange = 8,
 	Accuracy = 8,
 	Evasion = 2,
@@ -4062,6 +4063,7 @@ DefineUnitType("unit-template-catapult", {
 	Parent = "unit-template-siege-engine",
 	Accuracy = 7,
 	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
 	BonusAgainstBuildings = 25
 })
 
@@ -4138,7 +4140,9 @@ DefineUnitType("unit-template-siege-warship", {
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 8,
 	Armor = 10,
-	BasicDamage = 35, Missile = "missile-catapult-sandstone-rock",
+	BasicDamage = 35,
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
 	MaxAttackRange = 4,
 	Accuracy = 8,
 	Evasion = 5,
@@ -4658,6 +4662,48 @@ DefineUnitType("unit-template-guard-tower", {
 	}
 } )
 
+DefineUnitType("unit-template-heavy-tower", {
+	Name = "Heavy Tower",
+	Parent = "unit-template-building",
+	Class = "heavy-tower",
+	Animations = "animations-heavy-tower",
+	Costs = {"time", 190, "copper", 1000, "lumber", 450, "stone", 450},
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
+	Construction = "construction-land",
+	HitPoints = 267, -- 320 with masonry
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 9,
+	OwnershipInfluenceRange = 4,
+	Armor = 5,
+	BasicDamage = 40,
+	MinAttackRange = 2,	MaxAttackRange = 7,
+	Accuracy = 8,
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	Priority = 60, AnnoyComputerFactor = 70,
+	Points = 250,
+	Corpse = "unit-destroyed-2x2-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true,
+	DetectCloak = true,
+	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	BurnPercent = 50,
+	BurnDamageRate = 1,
+	RequirementsString = "Lumber Mill, Smithy and Masonry",
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Sounds = {
+		"selected", "tower-selected",
+--		"acknowledge", "dwarven-sentry-tower-acknowledge",
+		"ready", "tower-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
 DefineUnitType("unit-template-market", {
 	Name = "Market",
 	Parent = "unit-template-building",
@@ -4725,7 +4771,7 @@ DefineUnitType("unit-template-dock", {
 	BuilderOutside = true,
 	ShoreBuilding = true,
 	GivesResource = "trade",
-	CanStore = {"trade"},
+	CanStore = {"trade", "oil"},
 	CanHarvest = true,
 	Inexhaustible = true,
 	IncreasesLuxuryDemand = true,

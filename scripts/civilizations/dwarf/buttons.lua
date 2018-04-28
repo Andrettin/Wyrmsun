@@ -425,7 +425,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-1",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Research Broadhead Ballista ~!Bolt", Popup = "popup-research",
-	Description = "+12 Damage for Ballistas, +5 Damage for Ballista Warships.",
+	Description = "+12 Damage for Ballistas, +5 Damage for Ballista Warships and Ballista Towers.",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -433,7 +433,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Action = "research", Value = "upgrade-dwarven-ballista-bolt-2",
 	Allowed = "check-single-research",
 	Key = "b", Hint = "Research Penetrating Ballista ~!Bolt", Popup = "popup-research",
-	Description = "+12 Damage for Ballistas, +5 Damage for Ballista Warships.",
+	Description = "+12 Damage for Ballistas, +5 Damage for Ballista Warships and Ballista Towers.",
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -962,6 +962,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 	Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
 	Allowed = "check-upgrade-to",
 	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
+	ForUnit = {"unit-dwarven-sentry-tower"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-ballista-tower",
+	Action = "upgrade-to", Value = "unit-dwarven-ballista-tower",
+	Allowed = "check-upgrade-to",
+	Key = "b", Hint = "Upgrade to ~!Ballista Tower", Popup = "popup-building",
 	ForUnit = {"unit-dwarven-sentry-tower"}
 } )
 
