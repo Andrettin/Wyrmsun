@@ -4716,7 +4716,7 @@ DefineUnitType("unit-template-cannon-tower", {
 	BluntDamage = true,
 	RequirementsString = "Lumber Mill, Smithy, Masonry, Engineering and Gunpowder",
 	Sounds = {
-		"fire-missile", "thunderstick"
+		"fire-missile", "dragonstick"
 	}
 } )
 

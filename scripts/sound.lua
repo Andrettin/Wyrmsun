@@ -479,7 +479,7 @@ SetSoundRange("building-destroyed", 32)
 MakeSound("ship-selected",
 	"misc/ship_selected.wav"
 )
-SetSoundRange("ship-move", 32)
+SetSoundRange("ship-selected", 32)
 MakeSound("ship-move",
 	"misc/ship_move.wav"
 )
@@ -612,6 +612,9 @@ SetSoundRange("catapult-attack", 32)
 
 MakeSound("thunderstick", "missiles/thunderstick.wav")
 SetSoundRange("thunderstick", 32)
+
+MakeSound("dragonstick", "missiles/dragonstick.wav")
+SetSoundRange("dragonstick", 32)
 
 MakeSound("bow-hit", "missiles/bow_hit.wav")
 SetSoundRange("bow-hit", 32)

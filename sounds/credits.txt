@@ -25,6 +25,7 @@ Battle for Wesnoth Team:
 /sounds/missiles/club.wav (licensed under the GPL 2.0)
 /sounds/missiles/dagger.wav (licensed under the GPL 2.0)
 /sounds/missiles/dart.wav (licensed under the GPL 2.0)
+/sounds/missiles/dragonstick.wav (licensed under the GPL 2.0)
 /sounds/missiles/fist.wav (licensed under the GPL 2.0)
 /sounds/missiles/mace.wav (licensed under the GPL 2.0)
 /sounds/missiles/miss-1.wav (licensed under the GPL 2.0)
