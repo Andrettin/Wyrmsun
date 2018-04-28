@@ -343,7 +343,7 @@ DefineModifier("upgrade-masonry",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
 	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-dwarven-academy"},
-	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}, {"apply-to", "unit-dwarven-ballista-tower"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}, {"apply-to", "unit-dwarven-ballista-tower"}, {"apply-to", "unit-dwarven-cannon-tower"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
 	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
@@ -384,7 +384,7 @@ DefineModifier("upgrade-architecture",
 	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
 	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-dwarven-academy"},
-	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}, {"apply-to", "unit-dwarven-ballista-tower"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}, {"apply-to", "unit-dwarven-ballista-tower"}, {"apply-to", "unit-dwarven-cannon-tower"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-ettin-town-hall"},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
@@ -448,6 +448,10 @@ DefineModifier("upgrade-philosophy",
 	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
 --	{"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-mercenary-camp"}
+)
+
+DefineModifier("upgrade-gunpowder",
+	{"apply-to", "unit-dwarven-ballista-tower"}, {"convert-to", "unit-dwarven-cannon-tower"}
 )
 
 -- Load the faction type upgrades

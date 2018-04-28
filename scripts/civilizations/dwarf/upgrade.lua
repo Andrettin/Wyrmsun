@@ -270,5 +270,5 @@ DefineModifier("upgrade-dwarven-alchemy",
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 4},
 	{"Points", 5},
-	{"apply-to", "unit-dwarven-ballista"}, {"apply-to", "unit-dwarven-ballista-warship"}
+	{"apply-to", "unit-dwarven-ballista"}, {"apply-to", "unit-dwarven-ballista-warship"}, {"apply-to", "unit-dwarven-ballista-tower"}
 )

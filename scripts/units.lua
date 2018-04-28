@@ -138,7 +138,7 @@ Units = {
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-masons-shop",
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 	"unit-dwarven-academy",
-	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower",
+	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower", "unit-dwarven-cannon-tower",
 	"unit-dwarven-dock",
 	"unit-dwarven-wall",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
@@ -4692,7 +4692,7 @@ DefineUnitType("unit-template-heavy-tower", {
 	Drops = {"unit-wood-pile", "unit-stone-pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	RequirementsString = "Lumber Mill, Smithy and Masonry",
+	RequirementsString = "Lumber Mill, Smithy, Engineering and Masonry",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
@@ -4700,6 +4700,22 @@ DefineUnitType("unit-template-heavy-tower", {
 		"ready", "tower-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
+DefineUnitType("unit-template-cannon-tower", {
+	Name = "Cannon Tower",
+	Parent = "unit-template-heavy-tower",
+	Class = "cannon-tower",
+	BasicDamage = 65,
+	Accuracy = 9,
+	Missile = "missile-flaming-catapult-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	Points = 300,
+	BluntDamage = true,
+	RequirementsString = "Lumber Mill, Smithy, Masonry, Engineering and Gunpowder",
+	Sounds = {
 		"fire-missile", "catapult-attack"
 	}
 } )

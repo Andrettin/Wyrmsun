@@ -247,7 +247,7 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-masons-shop",
 		"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 		"unit-dwarven-academy",
-		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower",
+		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower", "unit-dwarven-cannon-tower",
 		"unit-dwarven-dock",
 		"unit-brising-smithy",
 		"unit-joruvellir-yale-pen",
@@ -2385,9 +2385,18 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-gunpowder",
 	Description = "Allows gunpowder infantry.",
 	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
 	ForUnit = {
-		"unit-dwarven-academy",
 		"unit-goblin-academy",
 		"unit-teuton-university"
+	}
+} )
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-gunpowder",
+	Action = "research", Value = "upgrade-gunpowder",
+	Allowed = "check-single-research",
+	Description = "Allows gunpowder infantry and upgrades Ballista Towers to Cannon Towers.",
+	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
+	ForUnit = {
+		"unit-dwarven-academy"
 	}
 } )
 

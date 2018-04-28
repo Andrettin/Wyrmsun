@@ -2090,6 +2090,25 @@ DefineUnitType("unit-dwarven-ballista-tower", {
 	}
 } )
 
+DefineUnitType("unit-dwarven-cannon-tower", {
+	Name = "Cannon Tower",
+	Parent = "unit-template-cannon-tower",
+	Civilization = "dwarf",
+	Description = "With the advent of gunpowder, dwarven engineers were quick to make use of it for defensive purposes.",
+	Image = {"file", "dwarf/buildings/cannon_tower.png", "size", {64, 64}},
+	Shadow = {"file", "dwarf/buildings/cannon_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-dwarven-cannon-tower",
+	Costs = {"lumber", 0, "stone", 900},
+	RepairCosts = {"lumber", 0},
+	Missile = "missile-flaming-catapult-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	FireResistance = 20,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
 DefineUnitType("unit-dwarven-market", {
 	Parent = "unit-template-market",
 	Civilization = "dwarf",

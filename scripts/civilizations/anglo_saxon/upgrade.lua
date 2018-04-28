@@ -32,7 +32,7 @@ DefineUpgrade("upgrade-anglo-saxon-civilization", {
 DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
 )
-  
+
 DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
 )

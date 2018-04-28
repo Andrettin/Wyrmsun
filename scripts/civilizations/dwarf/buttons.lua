@@ -972,6 +972,13 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-ballista-tower",
 	ForUnit = {"unit-dwarven-sentry-tower"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-cannon-tower",
+	Action = "upgrade-to", Value = "unit-dwarven-cannon-tower",
+	Allowed = "check-upgrade-to",
+	Key = "c", Hint = "Upgrade to ~!Cannon Tower", Popup = "popup-building",
+	ForUnit = {"unit-dwarven-sentry-tower"}
+} )
+
 -- Special Abilities ------------------------------------------------------
 
 --DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-throwing-axe",

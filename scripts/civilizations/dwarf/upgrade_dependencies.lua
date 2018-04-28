@@ -105,9 +105,22 @@ DefineDependency("unit-dwarven-guard-tower",
 	{"unit-dwarven-lumber-mill", "upgrade-masonry"}
 )
 
+DefinePredependency("unit-dwarven-ballista-tower",
+	{"upgrade-gunpowder", 0}
+)
+
 DefineDependency("unit-dwarven-ballista-tower",
-	{"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "upgrade-masonry"},
-	"or", {"unit-dwarven-lumber-mill", "unit-brising-smithy", "upgrade-masonry"}
+	{"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "upgrade-masonry", "upgrade-engineering"},
+	"or", {"unit-dwarven-lumber-mill", "unit-brising-smithy", "upgrade-masonry", "upgrade-engineering"}
+)
+
+DefinePredependency("unit-dwarven-cannon-tower",
+	{"upgrade-gunpowder"}
+)
+
+DefineDependency("unit-dwarven-cannon-tower",
+	{"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "upgrade-masonry", "upgrade-engineering", "upgrade-gunpowder"},
+	"or", {"unit-dwarven-lumber-mill", "unit-brising-smithy", "upgrade-masonry", "upgrade-engineering", "upgrade-gunpowder"}
 )
 
 DefinePredependency("unit-dwarven-wall",

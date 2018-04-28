@@ -196,7 +196,6 @@ DefineCivilization("neutral", {
 			"unit-class", "barracks",
 			"priority", 890
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 880
@@ -205,7 +204,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 879
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 879
+		},
 		{
 			"unit-class", "banner",
 			"priority", 878
@@ -222,7 +224,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 875
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 874
@@ -231,7 +232,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 873
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 873
+		},
 		{
 			"unit-class", "banner",
 			"priority", 872
@@ -242,7 +246,6 @@ DefineCivilization("neutral", {
 			"priority", 870
 		},
 		--]]
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 860
@@ -251,7 +254,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 859
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 859
+		},
 		{
 			"unit-class", "banner",
 			"priority", 858
@@ -268,7 +274,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 855
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 854
@@ -277,7 +282,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 853
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 853
+		},
 		{
 			"unit-class", "banner",
 			"priority", 852
@@ -294,7 +302,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 849
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 848
@@ -303,7 +310,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 847
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 847
+		},
 		{
 			"unit-class", "banner",
 			"priority", 846
@@ -320,7 +330,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 843
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 842
@@ -329,7 +338,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 841
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 841
+		},
 		{
 			"unit-class", "banner",
 			"priority", 840
@@ -346,7 +358,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 837
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 836
@@ -355,7 +366,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 835
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 835
+		},
 		{
 			"unit-class", "banner",
 			"priority", 834
@@ -380,7 +394,6 @@ DefineCivilization("neutral", {
 			"unit-class", "barracks",
 			"priority", 820
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 810
@@ -389,7 +402,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 809
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 809
+		},
 		{
 			"unit-class", "banner",
 			"priority", 808
@@ -406,7 +422,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 805
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 804
@@ -415,7 +430,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 803
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 803
+		},
 		{
 			"unit-class", "banner",
 			"priority", 802
@@ -432,7 +450,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 799
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 798
@@ -441,7 +458,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 797
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 797
+		},
 		{
 			"unit-class", "banner",
 			"priority", 796
@@ -458,7 +478,6 @@ DefineCivilization("neutral", {
 			"unit-class", "banner",
 			"priority", 793
 		},
-		--[[
 		{
 			"unit-class", "watch-tower",
 			"priority", 792
@@ -467,7 +486,10 @@ DefineCivilization("neutral", {
 			"unit-class", "heavy-tower",
 			"priority", 791
 		},
-		--]]
+		{
+			"unit-class", "cannon-tower",
+			"priority", 791
+		},
 		{
 			"unit-class", "banner",
 			"priority", 790
