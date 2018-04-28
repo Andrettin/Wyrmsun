@@ -210,6 +210,12 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "guard-tower") then
 					tech_icon_x = 9
 					tech_icon_y = 3
+				elseif (GetUnitTypeData(unitName, "Class") == "heavy-tower") then
+					tech_icon_x = 9
+					tech_icon_y = 6
+				elseif (GetUnitTypeData(unitName, "Class") == "cannon-tower") then
+					tech_icon_x = 9
+					tech_icon_y = 8
 				else
 					tech_allowed = false
 				end
