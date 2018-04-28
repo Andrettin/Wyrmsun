@@ -2100,12 +2100,9 @@ DefineUnitType("unit-dwarven-cannon-tower", {
 	Icon = "icon-dwarven-cannon-tower",
 	Costs = {"lumber", 0, "stone", 900},
 	RepairCosts = {"lumber", 0},
-	Missile = "missile-flaming-catapult-rock",
-	FireMissile = "missile-flaming-catapult-rock",
 	FireResistance = 20,
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town",
-		"fire-missile", "catapult-attack"
+		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
