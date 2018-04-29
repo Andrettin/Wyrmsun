@@ -1165,6 +1165,7 @@ DefineCivilization("elf", {
 	Adjective = "Elven",
 	Playable = false,
 	DefaultColor = "teal",
+	CivilizationUpgrade = "upgrade-elven-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
 		"stop", "icon-germanic-wooden-oblong-shield",
@@ -1188,7 +1189,7 @@ DefineCivilization("elf", {
 	PersonalNames = {
 		"male", "Aendan",
 		"male", "Amadrieriand", -- from Battle for Wesnoth
-		"male", "Amáril", -- from Battle for Wesnoth
+		"male", "Amaril", -- "Amáril"; from Battle for Wesnoth
 		"male", "Amelad", -- from Battle for Wesnoth
 		"male", "Ameldor", -- from Battle for Wesnoth
 		"male", "Amendel", -- from Battle for Wesnoth
@@ -1200,13 +1201,13 @@ DefineCivilization("elf", {
 		"male", "Amiol", -- from Battle for Wesnoth
 		"male", "Amiorion", -- from Battle for Wesnoth
 		"male", "Amithrarion", -- from Battle for Wesnoth
-		"male", "Amóldor", -- from Battle for Wesnoth
+		"male", "Amoldor", -- "Amóldor"; from Battle for Wesnoth
 		"male", "Amorfimir", -- from Battle for Wesnoth
 		"male", "Amorfir", -- from Battle for Wesnoth
 		"male", "Amowyn", -- from Battle for Wesnoth
 		"male", "Amulas", -- from Battle for Wesnoth
 		"male", "Amundil", -- from Battle for Wesnoth
-		"male", "Anán", -- from Battle for Wesnoth
+		"male", "Anan", -- "Anán"; from Battle for Wesnoth
 		"male", "Anebrin", -- from Battle for Wesnoth
 		"male", "Anebrir", -- from Battle for Wesnoth
 		"male", "Anémbor", -- from Battle for Wesnoth
@@ -1223,7 +1224,7 @@ DefineCivilization("elf", {
 		"male", "Anorfing", -- from Battle for Wesnoth
 		"male", "Anundil", -- from Battle for Wesnoth
 		"male", "Asaeri",
-		"male", "Belán", -- from Battle for Wesnoth
+		"male", "Belan", -- "Belán"; from Battle for Wesnoth
 		"male", "Belandil", -- from Battle for Wesnoth
 		"male", "Belarandel", -- from Battle for Wesnoth
 		"male", "Belel", -- from Battle for Wesnoth
@@ -1235,17 +1236,17 @@ DefineCivilization("elf", {
 		"male", "Beliril", -- from Battle for Wesnoth
 		"male", "Belithraldor", -- from Battle for Wesnoth
 		"male", "Belithrawyn", -- from Battle for Wesnoth
-		"male", "Belólad", -- from Battle for Wesnoth
-		"male", "Belómir", -- from Battle for Wesnoth
+		"male", "Belolad", -- "Belólad"; from Battle for Wesnoth
+		"male", "Belomir", -- "Belómir"; from Battle for Wesnoth
 		"male", "Belondel", -- from Battle for Wesnoth
 		"male", "Belyrion", -- from Battle for Wesnoth
 		"male", "Cadriembor", -- from Battle for Wesnoth
 		"male", "Cadrieriand", -- from Battle for Wesnoth
-		"male", "Cálad", -- from Battle for Wesnoth
+		"male", "Calad", -- "Cálad"; from Battle for Wesnoth
 		"male", "Caladrielas", -- from Battle for Wesnoth
-		"male", "Calándel", -- from Battle for Wesnoth
+		"male", "Calandel", -- "Calándel"; from Battle for Wesnoth
 		"male", "Caldur", -- from Battle for Wesnoth
-		"male", "Cáldur", -- from Battle for Wesnoth
+		"male", "Caldur", -- "Cáldur"; from Battle for Wesnoth
 		"male", "Calebrindel", -- from Battle for Wesnoth
 		"male", "Calebrindir", -- from Battle for Wesnoth
 		"male", "Calénduil", -- from Battle for Wesnoth
@@ -1253,9 +1254,9 @@ DefineCivilization("elf", {
 		"male", "Calil-Gawyn", -- from Battle for Wesnoth
 		"male", "Calioriand", -- from Battle for Wesnoth
 		"male", "Caliril", -- from Battle for Wesnoth
-		"male", "Calónduil", -- from Battle for Wesnoth
+		"male", "Calonduil", -- "Calónduil"; from Battle for Wesnoth
 		"male", "Caloril", -- from Battle for Wesnoth
-		"male", "Cándir", -- from Battle for Wesnoth
+		"male", "Candir", -- Cándir"; from Battle for Wesnoth
 		"male", "Canduil", -- from Battle for Wesnoth
 		"male", "Caraldur", -- from Battle for Wesnoth
 		"male", "Carang", -- from Battle for Wesnoth
@@ -1264,7 +1265,7 @@ DefineCivilization("elf", {
 		"male", "Celang", -- from Battle for Wesnoth
 		"male", "Celaral", -- from Battle for Wesnoth
 		"male", "Celarandil", -- from Battle for Wesnoth
-		"male", "Celáriand", -- from Battle for Wesnoth
+		"male", "Celariand", -- "Celáriand"; from Battle for Wesnoth
 		"male", "Celebririon", -- from Battle for Wesnoth
 		"male", "Celelas", -- from Battle for Wesnoth
 		"male", "Celendel", -- from Battle for Wesnoth
@@ -1274,8 +1275,8 @@ DefineCivilization("elf", {
 		"male", "Celior", -- from Battle for Wesnoth
 		"male", "Celiorion", -- from Battle for Wesnoth
 		"male", "Celong", -- from Battle for Wesnoth
-		"male", "Celór", -- from Battle for Wesnoth
-		"male", "Celóril", -- from Battle for Wesnoth
+		"male", "Celor", -- "Celór"; from Battle for Wesnoth
+		"male", "Celoril", -- "Celóril"; from Battle for Wesnoth
 		"male", "Celorion", -- from Battle for Wesnoth
 		"male", "Celundir", -- from Battle for Wesnoth
 		"male", "Celuwyn", -- from Battle for Wesnoth
@@ -1291,24 +1292,24 @@ DefineCivilization("elf", {
 		"male", "Col", -- from Battle for Wesnoth
 		"male", "Corfil", -- from Battle for Wesnoth
 		"male", "Corfildur", -- from Battle for Wesnoth
-		"male", "Cówyn", -- from Battle for Wesnoth
+		"male", "Cowyn", -- "Cówyn"; from Battle for Wesnoth
 		"male", "Crintil",
 		"male", "Cun", -- from Battle for Wesnoth
 		"male", "Cundir", -- from Battle for Wesnoth
 		"male", "Cylas", -- from Battle for Wesnoth
 		"male", "Dain",
-		"male", "Delán", -- from Battle for Wesnoth
-		"male", "Delánd", -- from Battle for Wesnoth
+		"male", "Delan", -- "Delán"; from Battle for Wesnoth
+		"male", "Deland", -- "Delánd"; from Battle for Wesnoth
 		"male", "Delandel", -- from Battle for Wesnoth
 		"male", "Delaraldur", -- from Battle for Wesnoth
-		"male", "Deláril", -- from Battle for Wesnoth
+		"male", "Delaril", -- "Deláril"; from Battle for Wesnoth
 		"male", "Delawyn", -- from Battle for Wesnoth
 		"male", "Deléng", -- from Battle for Wesnoth
 		"male", "Delilmaldor", -- from Battle for Wesnoth
 		"male", "Deliol", -- from Battle for Wesnoth
 		"male", "Delithrar", -- from Battle for Wesnoth
 		"male", "Deliwyn", -- from Battle for Wesnoth
-		"male", "Delóldor", -- from Battle for Wesnoth
+		"male", "Deloldor", -- "Delóldor"; from Battle for Wesnoth
 		"male", "Delorfilad", -- from Battle for Wesnoth
 		"male", "Delorfilith", -- from Battle for Wesnoth
 		"male", "Delorion", -- from Battle for Wesnoth
@@ -1316,7 +1317,7 @@ DefineCivilization("elf", {
 		"male", "Ealin",
 		"male", "Eäradriendel", -- from Battle for Wesnoth
 		"male", "Eäradrier", -- from Battle for Wesnoth
-		"male", "Eäránduil", -- from Battle for Wesnoth
+		"male", "Earanduil", -- "Eäránduil"; from Battle for Wesnoth
 		"male", "Eäraralad", -- from Battle for Wesnoth
 		"male", "Eärebrindel", -- from Battle for Wesnoth
 		"male", "Eäréldor", -- from Battle for Wesnoth
@@ -1329,9 +1330,9 @@ DefineCivilization("elf", {
 		"male", "Eäryriand", -- from Battle for Wesnoth
 		"male", "Egil", -- elven archer from Norse mythology, brother of Slagfid and Volund
 		"male", "Eladrieng", -- from Battle for Wesnoth
-		"male", "Elálith", -- from Battle for Wesnoth
-		"male", "Elánd", -- from Battle for Wesnoth
-		"male", "Elándil", -- from Battle for Wesnoth
+		"male", "Elalith", -- "Elálith"; from Battle for Wesnoth
+		"male", "Eland", -- "Elánd"; from Battle for Wesnoth
+		"male", "Elandil", -- "Elándil"; from Battle for Wesnoth
 		"male", "Elebrildor", -- from Battle for Wesnoth
 		"male", "Elebrindel", -- from Battle for Wesnoth
 		"male", "Elebriril", -- from Battle for Wesnoth
@@ -1344,7 +1345,7 @@ DefineCivilization("elf", {
 		"male", "Eliomir", -- from Battle for Wesnoth
 		"male", "Eliondil", -- from Battle for Wesnoth
 		"male", "Elolas", -- from Battle for Wesnoth
-		"male", "Elólas", -- from Battle for Wesnoth
+		"male", "Elolas", -- "Elólas"; from Battle for Wesnoth
 		"male", "Elor", -- from Battle for Wesnoth
 		"male", "Elorfilad", -- from Battle for Wesnoth
 		"male", "Elradrien", -- from Battle for Wesnoth
@@ -1360,7 +1361,7 @@ DefineCivilization("elf", {
 		"male", "Elval", -- from Battle for Wesnoth
 		"male", "Elvandir", -- from Battle for Wesnoth
 		"male", "Elvaramir", -- from Battle for Wesnoth
-		"male", "Elváwyn", -- from Battle for Wesnoth
+		"male", "Elvawyn", -- "Elváwyn"; from Battle for Wesnoth
 		"male", "Elvebrind", -- from Battle for Wesnoth
 		"male", "Elvebrindel", -- from Battle for Wesnoth
 		"male", "Elvélith", -- from Battle for Wesnoth
@@ -1371,11 +1372,11 @@ DefineCivilization("elf", {
 		"male", "Elvilmaril", -- from Battle for Wesnoth
 		"male", "Elvioldur", -- from Battle for Wesnoth
 		"male", "Elvombor", -- from Battle for Wesnoth
-		"male", "Elvónduil", -- from Battle for Wesnoth
+		"male", "Elvonduil", -- "Elvónduil"; from Battle for Wesnoth
 		"male", "Elvorfimir", -- from Battle for Wesnoth
 		"male", "Elvorfiriand", -- from Battle for Wesnoth
 		"male", "Elvorfiril", -- from Battle for Wesnoth
-		"male", "Elvóriand", -- from Battle for Wesnoth
+		"male", "Elvoriand", -- "Elvóriand"; from Battle for Wesnoth
 		"male", "Elvund", -- from Battle for Wesnoth
 		"male", "Elyldor", -- from Battle for Wesnoth
 		"male", "Elyrion", -- from Battle for Wesnoth
@@ -1393,15 +1394,15 @@ DefineCivilization("elf", {
 		"male", "Eowimbor", -- from Battle for Wesnoth
 		"male", "Eowiomir", -- from Battle for Wesnoth
 		"male", "Eowithrawyn", -- from Battle for Wesnoth
-		"male", "Eowóldur", -- from Battle for Wesnoth
+		"male", "Eowoldur", -- "Eowóldur"; from Battle for Wesnoth
 		"male", "Eoworfildor", -- from Battle for Wesnoth
-		"male", "Eowówyn", -- from Battle for Wesnoth
+		"male", "Eowowyn", -- "Eowówyn"; from Battle for Wesnoth
 		"male", "Eowylas", -- from Battle for Wesnoth
 		"male", "Erlornas",
 		"male", "Fadriendel", -- from Battle for Wesnoth
 		"male", "Fandel", -- from Battle for Wesnoth
 		"male", "Farandir", -- from Battle for Wesnoth
-		"male", "Fáwyn", -- from Battle for Wesnoth
+		"male", "Fawyn", -- "Fáwyn"; from Battle for Wesnoth
 		"male", "Fendel", -- from Battle for Wesnoth
 		"male", "Fer", -- from Battle for Wesnoth
 		"male", "Filman", -- from Battle for Wesnoth
@@ -1414,8 +1415,8 @@ DefineCivilization("elf", {
 		"male", "Gaelir",
 		"male", "Gaenlar",
 		"male", "Galadrieldor", -- from Battle for Wesnoth
-		"male", "Galálad", -- from Battle for Wesnoth
-		"male", "Galálas", -- from Battle for Wesnoth
+		"male", "Galalad", -- "Galálad"; from Battle for Wesnoth
+		"male", "Galalas", -- "Galálas"; from Battle for Wesnoth
 		"male", "Galalith", -- from Battle for Wesnoth
 		"male", "Galar", -- from Battle for Wesnoth
 		"male", "Galelas", -- from Battle for Wesnoth
@@ -1429,7 +1430,7 @@ DefineCivilization("elf", {
 		"male", "Galur", -- from Battle for Wesnoth
 		"male", "Galurion", -- from Battle for Wesnoth
 		"male", "Gambor", -- from Battle for Wesnoth
-		"male", "Gán", -- from Battle for Wesnoth
+		"male", "Gan", -- "Gán"; from Battle for Wesnoth
 		"male", "Ganduil", -- from Battle for Wesnoth
 		"male", "Garaldor", -- from Battle for Wesnoth
 		"male", "Gararil", -- from Battle for Wesnoth
@@ -1442,7 +1443,7 @@ DefineCivilization("elf", {
 		"male", "Githralad", -- from Battle for Wesnoth
 		"male", "Gladriendil", -- from Battle for Wesnoth
 		"male", "Glal", -- from Battle for Wesnoth
-		"male", "Glámbor", -- from Battle for Wesnoth
+		"male", "Glambor", -- "Glámbor"; from Battle for Wesnoth
 		"male", "Glandil", -- from Battle for Wesnoth
 		"male", "Glarang", -- from Battle for Wesnoth
 		"male", "Glararil", -- from Battle for Wesnoth
@@ -1452,9 +1453,9 @@ DefineCivilization("elf", {
 		"male", "Glinan",
 		"male", "Glindur",
 		"male", "Glior", -- from Battle for Wesnoth
-		"male", "Glólas", -- from Battle for Wesnoth
+		"male", "Glolas", -- "Glólas"; from Battle for Wesnoth
 		"male", "Gloldor", -- from Battle for Wesnoth
-		"male", "Glómir", -- from Battle for Wesnoth
+		"male", "Glomir", -- "Glómir"; from Battle for Wesnoth
 		"male", "Glon", -- from Battle for Wesnoth
 		"male", "Glul", -- from Battle for Wesnoth
 		"male", "Golad", -- from Battle for Wesnoth
@@ -1464,7 +1465,7 @@ DefineCivilization("elf", {
 		"male", "Gymbor", -- from Battle for Wesnoth
 		"male", "Gyn", -- from Battle for Wesnoth
 		"male", "Harariand", -- from Battle for Wesnoth
-		"male", "Háriand", -- from Battle for Wesnoth
+		"male", "Hariand", -- "Háriand"; from Battle for Wesnoth
 		"male", "Hebril", -- from Battle for Wesnoth
 		"male", "Hemir", -- from Battle for Wesnoth
 		"male", "Hénduil", -- from Battle for Wesnoth
@@ -1481,7 +1482,7 @@ DefineCivilization("elf", {
 		"male", "Hyrion", -- from Battle for Wesnoth
 		"male", "Hywyn", -- from Battle for Wesnoth
 		"male", "Isadrieng", -- from Battle for Wesnoth
-		"male", "Isándir", -- from Battle for Wesnoth
+		"male", "Isandir", -- "Isándir"; from Battle for Wesnoth
 		"male", "Isarandel", -- from Battle for Wesnoth
 		"male", "Isarar", -- from Battle for Wesnoth
 		"male", "Iselas", -- from Battle for Wesnoth
@@ -1489,9 +1490,9 @@ DefineCivilization("elf", {
 		"male", "Isilmandel", -- from Battle for Wesnoth
 		"male", "Isirion", -- from Battle for Wesnoth
 		"male", "Isithral", -- from Battle for Wesnoth
-		"male", "Isól", -- from Battle for Wesnoth
-		"male", "Isóndel", -- from Battle for Wesnoth
-		"male", "Isóng", -- from Battle for Wesnoth
+		"male", "Isol", -- "Isól"; from Battle for Wesnoth
+		"male", "Isondel", -- "Isóndel"; from Battle for Wesnoth
+		"male", "Isong", -- "Isóng"; from Battle for Wesnoth
 		"male", "Isorfilad", -- from Battle for Wesnoth
 		"male", "Isorfindir", -- from Battle for Wesnoth
 		"male", "Isuwyn", -- from Battle for Wesnoth
@@ -1509,26 +1510,26 @@ DefineCivilization("elf", {
 		"male", "Legithralith", -- from Battle for Wesnoth
 		"male", "Legorfindil", -- from Battle for Wesnoth
 		"male", "Legorfirion", -- from Battle for Wesnoth
-		"male", "Legówyn", -- from Battle for Wesnoth
+		"male", "Legowyn", -- "Legówyn"; from Battle for Wesnoth
 		"male", "Legyl", -- from Battle for Wesnoth
 		"male", "Legyn", -- from Battle for Wesnoth
 		"male", "Linduilas", -- from Battle for Wesnoth
-		"male", "Lómadrieril", -- from Battle for Wesnoth
-		"male", "Lómarand", -- from Battle for Wesnoth
+		"male", "Lomadrieril", -- "Lómadrieril"; from Battle for Wesnoth
+		"male", "Lomarand", -- "Lómarand"; from Battle for Wesnoth
 		"male", "Lomarfel",
-		"male", "Lómariand", -- from Battle for Wesnoth
-		"male", "Lómebrilad", -- from Battle for Wesnoth
-		"male", "Lómebrind", -- from Battle for Wesnoth
-		"male", "Lómémbor", -- from Battle for Wesnoth
-		"male", "Lómilmaril", -- from Battle for Wesnoth
-		"male", "Lómiriand", -- from Battle for Wesnoth
-		"male", "Lómorfindil", -- from Battle for Wesnoth
-		"male", "Lómowyn", -- from Battle for Wesnoth
+		"male", "Lomariand", -- "Lómariand"; from Battle for Wesnoth
+		"male", "Lomebrilad", -- "Lómebrilad"; from Battle for Wesnoth
+		"male", "Lomebrind", -- "Lómebrind"; from Battle for Wesnoth
+		"male", "Lomembor", -- "Lómémbor"; from Battle for Wesnoth
+		"male", "Lomilmaril", -- "Lómilmaril"; from Battle for Wesnoth
+		"male", "Lomiriand", -- "Lómiriand"; from Battle for Wesnoth
+		"male", "Lomorfindil", -- "Lómorfindil"; from Battle for Wesnoth
+		"male", "Lomowyn", -- "Lómowyn"; from Battle for Wesnoth
 		"male", "Losnin",
 		"male", "Lyndar",
 		"male", "Madrieril", -- from Battle for Wesnoth
 		"male", "Maldur", -- from Battle for Wesnoth
-		"male", "Mánduil", -- from Battle for Wesnoth
+		"male", "Manduil", -- "Mánduil"; from Battle for Wesnoth
 		"male", "Maraldur", -- from Battle for Wesnoth
 		"male", "Mebrin", -- from Battle for Wesnoth
 		"male", "Méng", -- from Battle for Wesnoth
@@ -1537,20 +1538,20 @@ DefineCivilization("elf", {
 		"male", "Miomir", -- from Battle for Wesnoth
 		"male", "Mithrand", -- from Battle for Wesnoth
 		"male", "Mondir", -- from Battle for Wesnoth
-		"male", "Móndir", -- from Battle for Wesnoth
+		"male", "Mondir", -- "Móndir"; from Battle for Wesnoth
 		"male", "Morfilas", -- from Battle for Wesnoth
 		"male", "Morfin", -- from Battle for Wesnoth
 		"male", "Morfiriand", -- from Battle for Wesnoth
 		"male", "Mylith", -- from Battle for Wesnoth
 		"male", "Nadrieldor", -- from Battle for Wesnoth
 		"male", "Nalith", -- from Battle for Wesnoth
-		"male", "Nán", -- from Battle for Wesnoth
+		"male", "Nan", -- "Nán"; from Battle for Wesnoth
 		"male", "Nél", -- from Battle for Wesnoth
 		"male", "Nil-Galas", -- from Battle for Wesnoth
 		"male", "Nil-Galith", -- from Battle for Wesnoth
 		"male", "Nil-Gar", -- from Battle for Wesnoth
 		"male", "Nilmar", -- from Battle for Wesnoth
-		"male", "Nóndel", -- from Battle for Wesnoth
+		"male", "Nondel", -- "Nóndel"; from Battle for Wesnoth
 		"male", "Norfildor", -- from Battle for Wesnoth
 		"male", "Norfilith", -- from Battle for Wesnoth
 		"male", "Norfindil", -- from Battle for Wesnoth
@@ -1564,7 +1565,7 @@ DefineCivilization("elf", {
 		"male", "Parariand", -- from Battle for Wesnoth
 		"male", "Pilmalad", -- from Battle for Wesnoth
 		"male", "Pindir", -- from Battle for Wesnoth
-		"male", "Pór", -- from Battle for Wesnoth
+		"male", "Por", -- "Pór"; from Battle for Wesnoth
 		"male", "Porfildur", -- from Battle for Wesnoth
 		"male", "Pumbor", -- from Battle for Wesnoth
 		"male", "Pyldur", -- from Battle for Wesnoth
@@ -1573,13 +1574,13 @@ DefineCivilization("elf", {
 		"male", "Réndir", -- from Battle for Wesnoth
 		"male", "Rilmandil", -- from Battle for Wesnoth
 		"male", "Rithrandil", -- from Battle for Wesnoth
-		"male", "Ról", -- from Battle for Wesnoth
-		"male", "Róldor", -- from Battle for Wesnoth
+		"male", "Rol", -- "Ról"; from Battle for Wesnoth
+		"male", "Roldor", -- "Róldor"; from Battle for Wesnoth
 		"male", "Roldur", -- from Battle for Wesnoth
-		"male", "Róldur", -- from Battle for Wesnoth
+		"male", "Roldur", -- "Róldur"; from Battle for Wesnoth
 		"male", "Rorfilad", -- from Battle for Wesnoth
 		"male", "Rorfindil", -- from Battle for Wesnoth
-		"male", "Rówyn", -- from Battle for Wesnoth
+		"male", "Rowyn", -- "Rówyn"; from Battle for Wesnoth
 		"male", "Ryn", -- from Battle for Wesnoth
 		"male", "Sadrielas", -- from Battle for Wesnoth
 		"male", "Salira",
@@ -1588,13 +1589,13 @@ DefineCivilization("elf", {
 		"male", "Sénd", -- from Battle for Wesnoth
 		"male", "Sil-Gal", -- from Battle for Wesnoth
 		"male", "Slagfid", -- from Norse mythology, brother of Egil and Volund
-		"male", "Sólad", -- from Battle for Wesnoth
+		"male", "Solad", -- "Sólad"; from Battle for Wesnoth
 		"male", "Sorfind", -- from Battle for Wesnoth
-		"male", "Sóriand", -- from Battle for Wesnoth
+		"male", "Soriand", -- "Sóriand"; from Battle for Wesnoth
 		"male", "Tadriendir", -- from Battle for Wesnoth
 		"male", "Taral", -- from Battle for Wesnoth
 		"male", "Taraldur", -- from Battle for Wesnoth
-		"male", "Táriand", -- from Battle for Wesnoth
+		"male", "Tariand", -- "Táriand"; from Battle for Wesnoth
 		"male", "Tendel", -- from Battle for Wesnoth
 		"male", "Téwyn", -- from Battle for Wesnoth
 		"male", "Thradrieriand", -- from Battle for Wesnoth
@@ -1611,8 +1612,8 @@ DefineCivilization("elf", {
 		"male", "Thrion", -- from Battle for Wesnoth
 		"male", "Thrithran", -- from Battle for Wesnoth
 		"male", "Throlas", -- from Battle for Wesnoth
-		"male", "Thrón", -- from Battle for Wesnoth
-		"male", "Thróng", -- from Battle for Wesnoth
+		"male", "Thron", -- "Thrón"; from Battle for Wesnoth
+		"male", "Throng", -- "Thróng"; from Battle for Wesnoth
 		"male", "Thrund", -- from Battle for Wesnoth
 		"male", "Thryriand", -- from Battle for Wesnoth
 		"male", "Til-Gan", -- from Battle for Wesnoth
@@ -1632,23 +1633,23 @@ DefineCivilization("elf", {
 		"male", "Tinond", -- from Battle for Wesnoth
 		"male", "Tinorfind", -- from Battle for Wesnoth
 		"male", "Tinorfiriand", -- from Battle for Wesnoth
-		"male", "Tinóriand", -- from Battle for Wesnoth
+		"male", "Tinoriand", -- "Tinóriand"; from Battle for Wesnoth
 		"male", "Tinowyn", -- from Battle for Wesnoth
 		"male", "Tinun", -- from Battle for Wesnoth
 		"male", "Tinyl", -- from Battle for Wesnoth
 		"male", "Tion", -- from Battle for Wesnoth
 		"male", "Tolas", -- from Battle for Wesnoth
 		"male", "Torfildur", -- from Battle for Wesnoth
-		"male", "Tówyn", -- from Battle for Wesnoth
+		"male", "Towyn", -- "Tówyn"; from Battle for Wesnoth
 		"male", "Tylad", -- from Battle for Wesnoth
 		"male", "Unadrieldor", -- from Battle for Wesnoth
 		"male", "Unadrier", -- from Battle for Wesnoth
-		"male", "Unál", -- from Battle for Wesnoth
+		"male", "Unal", -- "Unál"; from Battle for Wesnoth
 		"male", "Unalas", -- from Battle for Wesnoth
-		"male", "Unálas", -- from Battle for Wesnoth
+		"male", "Unalas", -- "Unálas"; from Battle for Wesnoth
 		"male", "Unaraldur", -- from Battle for Wesnoth
 		"male", "Unaril", -- from Battle for Wesnoth
-		"male", "Unárion", -- from Battle for Wesnoth
+		"male", "Unarion", -- "Unárion"; from Battle for Wesnoth
 		"male", "Unebrin", -- from Battle for Wesnoth
 		"male", "Unebrind", -- from Battle for Wesnoth
 		"male", "Uneldor", -- from Battle for Wesnoth
@@ -1656,9 +1657,9 @@ DefineCivilization("elf", {
 		"male", "Unil-Gan", -- from Battle for Wesnoth
 		"male", "Uniolith", -- from Battle for Wesnoth
 		"male", "Unioril", -- from Battle for Wesnoth
-		"male", "Unólith", -- from Battle for Wesnoth
+		"male", "Unolith", -- "Unólith"; from Battle for Wesnoth
 		"male", "Unombor", -- from Battle for Wesnoth
-		"male", "Unóndel", -- from Battle for Wesnoth
+		"male", "Unondel", -- "Unóndel"; from Battle for Wesnoth
 		"male", "Unondir", -- from Battle for Wesnoth
 		"male", "Unorfildor", -- from Battle for Wesnoth
 		"male", "Unorfiril", -- from Battle for Wesnoth
@@ -1667,19 +1668,19 @@ DefineCivilization("elf", {
 		"male", "Uradredia",
 		"male", "Uradrielas", -- from Battle for Wesnoth
 		"male", "Uradrierion", -- from Battle for Wesnoth
-		"male", "Urálas", -- from Battle for Wesnoth
-		"male", "Urálith", -- from Battle for Wesnoth
+		"male", "Uralas", -- "Urálas"; from Battle for Wesnoth
+		"male", "Uralith", -- "Urálith"; from Battle for Wesnoth
 		"male", "Urambor", -- from Battle for Wesnoth
 		"male", "Urér", -- from Battle for Wesnoth
 		"male", "Uril-Gambor", -- from Battle for Wesnoth
 		"male", "Urilmalith", -- from Battle for Wesnoth
-		"male", "Uróldor", -- from Battle for Wesnoth
+		"male", "Uroldor", -- "Uróldor"; from Battle for Wesnoth
 		"male", "Urorfildor", -- from Battle for Wesnoth
 		"male", "Urul", -- from Battle for Wesnoth
 		"male", "Urymir", -- from Battle for Wesnoth
-		"male", "Válad", -- from Battle for Wesnoth
-		"male", "Ván", -- from Battle for Wesnoth
-		"male", "Vándel", -- from Battle for Wesnoth
+		"male", "Valad", -- "Válad"; from Battle for Wesnoth
+		"male", "Van", -- "Ván"; from Battle for Wesnoth
+		"male", "Vandel", -- "Vándel"; from Battle for Wesnoth
 		"male", "Vandir", -- from Battle for Wesnoth
 		"male", "Varalas", -- from Battle for Wesnoth
 		"male", "Vararion", -- from Battle for Wesnoth
@@ -1690,8 +1691,8 @@ DefineCivilization("elf", {
 		"male", "Velon",
 		"male", "Vilith", -- from Battle for Wesnoth
 		"male", "Vol", -- from Battle for Wesnoth
-		"male", "Vólas", -- from Battle for Wesnoth
-		"male", "Vóldur", -- from Battle for Wesnoth
+		"male", "Volas", -- "Vólas"; from Battle for Wesnoth
+		"male", "Voldur", -- "Vóldur"; from Battle for Wesnoth
 		"male", "Vondel", -- from Battle for Wesnoth
 		"male", "Vorfin", -- from Battle for Wesnoth
 		"male", "Vorfindil", -- from Battle for Wesnoth
@@ -2366,7 +2367,7 @@ DefineCivilization("orc", {
 	},
 	--[[
 	SettlementNames = {
-		"Barag Gór", -- from Battle for Wesnoth
+		"Barag Gor", -- "Barag Gór"; from Battle for Wesnoth
 		"Bitok", -- from Battle for Wesnoth
 		"Borstep", -- from Battle for Wesnoth
 		"Lmarig", -- from Battle for Wesnoth
