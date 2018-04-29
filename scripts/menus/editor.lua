@@ -122,9 +122,9 @@ local function RunEditorNewMapMenu()
 			if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
 				LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
 			else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
-				for i=1,table.getn(Mods) do
-					if (CanAccessFile(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-						LoadTileModels(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+				for i=1,table.getn(wyr.preferences.EnabledMods) do
+					if (CanAccessFile(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+						LoadTileModels(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
 						break
 					end
 				end

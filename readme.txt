@@ -63,7 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Norse Dock, Market, Temple and Watch Tower.
 - Added Dwarven Ballista Tower, an individual upgrade of their Sentry Tower.
-- Added Dwarven Cannon Tower, a technology upgrade of their Ballista Tower. Researching Gunpowder converts Ballista Towers into Cannon Towers.
+- Added Dwarven Cannon Tower, a technological upgrade of their Ballista Tower. Researching Gunpowder converts Ballista Towers into Cannon Towers.
 
 * Civilizations
 - The Norse civilization is now playable.

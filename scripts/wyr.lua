@@ -128,15 +128,17 @@ end
 function LoadCivilizationUI(civilization)
 	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"
-	if not (CanAccessFile(ui_file)) then
-		for i=1,table.getn(Mods) do
-			local mod_path = tostring(string.gsub(Mods[i], "info.lua", ""))
+	
+	-- see if there is an override for the file in the enabled mods
+	for i = 1, table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms") == nil) then
+			local mod_path = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
 			if (CanAccessFile(mod_path .. "scripts/civilizations/" .. civilization .. "/ui.lua")) then
 				ui_file = mod_path .. "scripts/civilizations/" .. civilization .. "/ui.lua"
 			end
 		end
-	
 	end
+	
 	if (CanAccessFile(ui_file)) then
 		Load(ui_file)
 	end
