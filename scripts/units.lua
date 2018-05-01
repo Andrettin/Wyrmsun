@@ -34,6 +34,7 @@ Units = {
 	"upgrade-masonry",
 	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
+	"upgrade-elven-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion",
 	"unit-latin-javelineer",
