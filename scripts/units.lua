@@ -5076,7 +5076,7 @@ DefineUnitType("unit-dungeon-wall", {
 	Name = "Dungeon Wall",
 	TerrainType = "dungeon-wall",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
-	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
+	Animations = "animations-building", Icon = "icon-english-lumber-mill",
 	Costs = {"time", 30, "copper", 40, "stone", 60},
 	Construction = "construction-land-1x1",
 	RepairHp = 4,

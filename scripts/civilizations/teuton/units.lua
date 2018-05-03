@@ -1077,9 +1077,9 @@ DefineUnitType("unit-teuton-lumber-mill", {
 	Parent = "unit-template-lumber-mill",
 	Civilization = "teuton",
 	Description = "A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques.",
-	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
-	Shadow = {"file", "teuton/buildings/lumber_mill_shadow.png", "size", {96, 96}},
-	Icon = "icon-teuton-lumber-mill",
+	Image = {"file", "english/buildings/lumber_mill.png", "size", {96, 96}},
+	Shadow = {"file", "english/buildings/lumber_mill_shadow.png", "size", {96, 96}},
+	Icon = "icon-english-lumber-mill",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{

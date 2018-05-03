@@ -1320,6 +1320,7 @@ end
 Load("scripts/civilizations/celt/icons.lua")
 Load("scripts/civilizations/dwarf/icons.lua")
 Load("scripts/civilizations/elf/icons.lua")
+Load("scripts/civilizations/english/icons.lua")
 Load("scripts/civilizations/ettin/icons.lua")
 Load("scripts/civilizations/frankish/icons.lua")
 Load("scripts/civilizations/germanic/icons.lua")

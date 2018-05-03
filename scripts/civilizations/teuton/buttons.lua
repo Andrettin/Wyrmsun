@@ -177,7 +177,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-teuton-lumber-mill",
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-english-lumber-mill",
 	Action = "build", Value = "unit-teuton-lumber-mill",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2018 by Andrettin
+--      (c) Copyright 2016-2018 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,31 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUnitType("unit-slavic-swordsman", {
-	Name = "Swordsman",
-	Parent = "unit-template-infantry",
-	Civilization = "slav",
-	Description = "Proud and valiant, Slavic swordsmen hone their swordsmanship with dedication to prepare for the battles to come.",
-	Image = {"file", "russian/units/warrior_varangian_era.png", "size", {72, 72}},
-	Animations = "animations-melee-unit", Icon = "icon-russian-warrior-varangian-era",
-	DefaultEquipment = {
-		{"weapon", "unit-short-sword"},
-		{"shield", "unit-wooden-shield"},
-		{"boots", "unit-boots"}
-	},
-	Corpse = "unit-human-dead-body",
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
-	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
-	Sounds = {
---		"selected", "basic-norse-voices-selected-group",
---		"acknowledge", "basic-norse-voices-acknowledge",
---		"ready", "basic-norse-voices-ready",
---		"help", "basic-norse-voices-help",
-		"dead", "basic-human-voices-dead",
-		"hit", "sword-attack",
-		"miss", "attack-miss"
-	}
-} )
+DefineIcon({
+	Name = "icon-english-lumber-mill",
+	Size = {46, 38},
+	File = "english/icons/lumber_mill.png"
+})
