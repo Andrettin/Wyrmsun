@@ -65,9 +65,11 @@ DefineSettlement("pola", {
 		"teuton", "Pola"
 	},
 	HistoricalOwners = {
+		1477, "venice", -- Pola was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1815, "austria" -- Pola was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
+		1477, 1815, "farm",
 		1815, 0, "guard-tower" -- Pola had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "west-and-central-europe"}
@@ -85,6 +87,7 @@ DefineSettlement("trieste", {
 	},
 	HistoricalOwners = {
 		-27, "rome", -- Tergeste existed and was in Roman possession at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		1477, "austria", -- Trieste was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1719, "austria" -- Trieste was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 464.
 	},
 	HistoricalBuildings = {

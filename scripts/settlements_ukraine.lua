@@ -34,8 +34,11 @@ DefineSettlement("kiev", {
 		"slav", "Kiev"
 	},
 	HistoricalOwners = {
+		1560, "lithuania", -- Kiev was a Lithuanian possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		1560, 0, "town-hall"
 	},
 	Regions = {"eurasia", "europe"}
 })

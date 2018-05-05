@@ -51,11 +51,12 @@ DefineSettlement("temesvar", {
 	CulturalNames = {
 	},
 	HistoricalOwners = {
-		1815, "austria" -- Temesvar was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1566, "turkey" -- Temesvar became an Ottoman possession in 1566; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		1815, 0, "stronghold", -- Temesvar had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1566, 1815, "town-hall",
 		1759, 0, "market", "temisvarer-privilegierte-handelskompagnie" -- "Temisvarer privilegierte Handelskompagnie" founded in 1759, with triple direction in Vienna, Trieste and Temesvar; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
+		1815, 0, "stronghold", -- Temesvar had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })

@@ -31,3 +31,11 @@ DefineFaction("aestui-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Type = "tribe",
 	Colors = {"green"}
 })
+
+DefineFaction("lithuania", {
+	Name = "Lithuania",
+	Civilization = "baltic",
+	Type = "polity",
+	DefaultTier = "grand-duchy",
+	Colors = {"red", "white"}
+})

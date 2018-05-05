@@ -86,6 +86,7 @@ DefineSettlement("bologna", {
 	},
 	HistoricalOwners = {
 		-189, "rome", -- Bononia founded as a colony in 189 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1477, "papal-states", -- Bologna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "papal-states" -- Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
@@ -105,7 +106,8 @@ DefineSettlement("brindisi", {
 	},
 	HistoricalOwners = {
 		161, "rome", -- Brundisium was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1494, "sicily" -- Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1494, "sicily", -- Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1560, "spain" -- Brindisi was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		161, 0, "farm"
@@ -192,12 +194,14 @@ DefineSettlement("florence", {
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
+		-750, "etruscan-tribe", -- Florence's area was Etruscan territory in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1926, p. 5.
 		-264, "rome", -- Florence's area was a part of Roman territory in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "rome", -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1477, "florence", -- Florence was a Florentine possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-750, 0, "town-hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -247,7 +251,9 @@ DefineSettlement("milan", {
 	},
 	HistoricalOwners = {
 		161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1477, "milan", -- Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "milan", -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1560, "spain", -- Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1815, "austria", -- Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -270,6 +276,8 @@ DefineSettlement("modena", {
 	},
 	HistoricalOwners = {
 		-183, "rome", -- Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-100, "rome", -- Mutina was a Roman possession about 100 BC; Source: William R. Shepherd, "Historical Atlas", 1926, p. 29.
+		1477, "modena", -- Modena was a Modenese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "modena"
 	},
 	HistoricalBuildings = {
@@ -291,7 +299,8 @@ DefineSettlement("naples", {
 	HistoricalOwners = {
 		-264, "rome", -- Neapolis/Naples was a part of Roman territory in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1204, "sicily", -- Naples was a part of the Kingdom of the Two Sicilies c. 1204; Source: William R. Shepherd, "Historical Atlas", 1911, p. 73.
-		1494, "sicily" -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1494, "sicily", -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1560, "spain" -- Naples was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall",
@@ -362,7 +371,8 @@ DefineSettlement("palermo", {
 	HistoricalOwners = {
 		-550, "phoenicia", -- Panormus was a Phoenician settlement c. 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-241, "rome", -- Palermo's area was acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1494, "sicily" -- Palermo was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1494, "sicily", -- Palermo was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1560, "spain" -- Palermo was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		-550, 0, "town-hall",
@@ -420,13 +430,12 @@ DefineSettlement("ravenna", {
 	HistoricalOwners = {
 		161, "rome", -- Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "ostrogothia", -- Ravenna was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1477, "papal-states", -- Ravenna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "papal-states" -- Ravenna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		161, 526, "farm",
-		526, 1494, "town-hall",
-		768, 1494, "temple", -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1494, 0, "temple"
+		161, 768, "farm",
+		768, 0, "temple" -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -522,6 +531,7 @@ DefineSettlement("venice", {
 	HistoricalOwners = {
 		-500, "venetian-tribe", -- Venice's area was territory of the Venetians in the 500-100 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		-222, "rome", -- Venice's area was acquired by Rome in 222 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1477, "venice", -- Venice was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "venice", -- Venice was part of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		1815, "austria" -- Venice was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
@@ -541,6 +551,7 @@ DefineSettlement("verona", {
 	},
 	HistoricalOwners = {
 		161, "rome", -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1477, "venice", -- Verona was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "venice", -- Verona was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		1815, "austria" -- Verona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
