@@ -80,6 +80,7 @@ DefineSettlement("hamar", {
 	},
 	HistoricalOwners = {
 		841, "hedmark", -- the kingdom of Hedmark was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 262-263.
+		1560, "denmark" -- Hamar's area was a Danish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		841, 0, "town-hall"

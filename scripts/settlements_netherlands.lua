@@ -37,6 +37,9 @@ DefineSettlement("amsterdam", {
 		-264, "batavian-tribe", -- Amsterdam's area was territory of the Batavians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		486, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain", -- Amsterdam was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1648, "netherlands", -- Amsterdam was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		-- Amsterdam ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		1815, "netherlands" -- Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -75,6 +78,9 @@ DefineSettlement("leeuwarden", {
 	HistoricalOwners = {
 		-264, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain", -- Leeuwarden's area was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1648, "netherlands", -- Leeuwarden's area was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		-- Leeuwarden's area ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		1815, "netherlands" -- Leeuwarden's area was part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {

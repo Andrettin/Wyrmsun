@@ -31,11 +31,14 @@ DefineSettlement("helsinki", {
 	Position = {4407, 675},
 	Major = true,
 	CulturalNames = {
-		"finnish", "Helsinki"
+		"finnish", "Helsinki",
+		"norse", "Helsingfors"
 	},
 	HistoricalOwners = {
+		1560, "sweden" -- Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })

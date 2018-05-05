@@ -90,7 +90,8 @@ DefineSettlement("tournai", {
 	HistoricalOwners = {
 		481, "frank-tribe", -- Tournai was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Tournai was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "salia" -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "salia", -- Tornacum went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1560, "spain" -- Tournai's area was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		481, 0, "town-hall"
