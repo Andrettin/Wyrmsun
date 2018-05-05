@@ -15,7 +15,7 @@
     <ul>
       <li>Retro-style graphics</li>
       <li>3 playable civilizations, and a number of non-playable ones</li>
-      <li>23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies</li>
+      <li>Scenarios playable on a huge map</li>
       <li>Dozens of units, buildings and technologies</li>
       <li>Personal names and traits for units</li>
       <li>Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up</li>
@@ -24,18 +24,13 @@
       <li>Normal, magic-enchanted and unique items drop from enemies</li>
       <li>Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets</li>
       <li>Dozens of maps of real and fictional locations to choose from, as well as random maps</li>
-      <li>Living environment, with fauna reproduction and predation</li>
       <li>Very moddable game, with mod-loading capability built in</li>
-      <li>Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level</li>
       <li>In-game encyclopedia, allowing players to learn more about the units, buildings and other elements of the game, as well as their historical and mythological sources of inspiration</li>
     </ul>
   </description>
   <screenshots>
     <screenshot type="default">
       <image>https://andrettin.github.io/screenshots/screen_dwarven_settlement.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://andrettin.github.io/screenshots/screen_grain_farm.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://andrettin.github.io/</url>
