@@ -102,7 +102,10 @@ DefineFaction("jarling-tribe", {
 	Type = "tribe",
 	Colors = {"yellow"},
 	FactionUpgrade = "upgrade-faction-jarling-tribe",
-	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic."
+	Background = "In Norse mythology, Jarl (rendered in Proto-Germanic as Erala) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of warriors. Unlike his treatment of his other sons, Rig revealed himself to Jarl as his father, and taught him the art of runes and magic.",
+	HistoricalCapitals = {
+		{-1600, 12, 30}, "aarhus"
+	}
 })
 
 DefineFaction("karling-tribe", {

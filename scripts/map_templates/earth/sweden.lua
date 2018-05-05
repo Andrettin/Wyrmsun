@@ -109,6 +109,7 @@ SetMapTemplateResource("earth", "unit-iron-deposit", {4335, 547}) -- Iron deposi
 
 -- Västervik
 SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+SetMapTemplateUnit("earth", "unit-revealer", "thielung-tribe", {4265, 741}, -1101, -1100) -- needs to be in the map template, to set the player's start view to the correct location
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)

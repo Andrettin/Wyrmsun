@@ -256,6 +256,28 @@ DefineSettlement("fulda", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("hamburg", {
+	Name = "Hamburg",
+	MapTemplate = "earth",
+	Position = {4065, 828},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Hamburg"
+	},
+	Cores = {
+		"saxon-tribe",
+		"germany", -- Hamburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Hamburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalOwners = {
+		-264, "saxon-tribe" -- Hamburg's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalBuildings = {
+		-264, 0, "town-hall"
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("hanover", {
 	Name = "Hanover",
 	MapTemplate = "earth",

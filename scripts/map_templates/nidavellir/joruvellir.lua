@@ -29,3 +29,5 @@ SetMapTemplateResource("nidavellir", "unit-yale-cave", {777, 343})
 SetMapTemplateResource("nidavellir", "unit-yale-cave", {778, 358})
 SetMapTemplateResource("nidavellir", "unit-yale-cave", {815, 347})
 SetMapTemplateResource("nidavellir", "unit-yale-cave", {760, 362})
+
+SetMapTemplateUnit("nidavellir", "unit-revealer", "goldhoof-clan", {784, 339}, -2800, -2799) -- needs to be in the map template, to set the player's start view to the correct location
