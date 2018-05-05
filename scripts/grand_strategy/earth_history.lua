@@ -1320,8 +1320,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Croatia", "turkish", "turkey")
 	SetProvinceOwner("Bosnia", "turkish", "turkey")
 	
-	SetProvinceOwner("Posen", "slav", "poland")
-	
 	SetProvinceOwner("Dobruja", "turkish", "turkey")
 end
 

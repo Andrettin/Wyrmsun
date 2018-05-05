@@ -135,7 +135,8 @@ DefineSettlement("besancon", {
 		395, "rome", -- Besançon was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "burgundy", -- Besançon's area was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		486, "burgundy", -- Besançon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia" -- Vesontio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "burgundia", -- Vesontio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1560, "spain" -- Besançon was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		-71, 0, "town-hall",
@@ -229,6 +230,9 @@ DefineSettlement("cahors", {
 	CulturalNames = {
 		"french", "Cahors"
 	},
+	Cores = {
+		"france"
+	},
 	HistoricalOwners = {
 		1560, "france" -- Cahors' area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -245,9 +249,14 @@ DefineSettlement("cambrai", {
 	CulturalNames = {
 		"french", "Cambrai"
 	},
+	Cores = {
+		"france"
+	},
 	HistoricalOwners = {
 		481, "frank-tribe", -- Cambray's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia" -- Cambray was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		{486, 12, 30}, "francia", -- Cambray was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "spain", -- Cambray was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1668, "france" -- Cambray became a French possession in 1668-1679; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
 		{486, 12, 30}, 0, "farm"
@@ -448,11 +457,15 @@ DefineSettlement("metz", {
 		"frankish", "Mettis",
 		"french", "Metz"
 	},
+	Cores = {
+		"france"
+	},
 	HistoricalOwners = {
 		395, "rome", -- Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Metz was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Metz was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia" -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "austrasia", -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1648, "france" -- Metz was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
 		395, 0, "town-hall",
@@ -552,6 +565,7 @@ DefineSettlement("nice", {
 		480, "visigothia", -- Nice's area became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		526, "ostrogothia", -- Nice was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		561, "burgundia", -- Nicea went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1477, "savoy", -- Nice's area was a Savoyard possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "savoy" -- Nice was a possession of the Duchy of Savoy in 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
@@ -953,11 +967,15 @@ DefineSettlement("verdun", {
 	CulturalNames = {
 		"french", "Verdun"
 	},
+	Cores = {
+		"france"
+	},
 	HistoricalOwners = {
 		395, "rome", -- Verdun was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Verdun's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Verdun's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia" -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		561, "austrasia", -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		1648, "france" -- Verdun was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Verdun was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

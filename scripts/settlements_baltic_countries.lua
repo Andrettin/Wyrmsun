@@ -71,6 +71,7 @@ DefineSettlement("tallinn", {
 	},
 	HistoricalOwners = {
 		-9000, "uralic-tribe", -- the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1561, "sweden" -- Reval became a Swedish possession in 1561; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
 		-9000, 0, "town-hall"

@@ -33,6 +33,10 @@ DefineSettlement("augsburg", {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Augsburg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
+	Cores = {
+		"germany", -- Augsburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Augsburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		170, "rome", -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		172, "",
@@ -56,10 +60,13 @@ DefineSettlement("berlin", {
 	Cores = {
 		"semnone-tribe",
 		"suebi-tribe",
-		"brandenburg"
+		"brandenburg",
+		"germany" -- Berlin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		-- "holy-rome" -- Berlin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
-		-264, "semnone-tribe" -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "semnone-tribe", -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1648, "brandenburg" -- Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall"
@@ -95,7 +102,8 @@ DefineSettlement("bremen", {
 	Cores = {
 		"chauci-tribe",
 		"bremen",
-		"holy-rome"
+		"germany", -- Bremen was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Bremen was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-264, "chauci-tribe", -- Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -116,6 +124,10 @@ DefineSettlement("cologne", {
 		"french", "Cologne",
 		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Cologne" -- "Köln"
+	},
+	Cores = {
+		"germany", -- Cologne was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Cologne was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-50, "rome", -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -231,6 +243,10 @@ DefineSettlement("fulda", {
 	CulturalNames = {
 		"teuton", "Fulda"
 	},
+	Cores = {
+		"germany", -- Fulda was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Fulda was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		526, "thuringian-tribe", -- Fulda's area was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
@@ -251,7 +267,8 @@ DefineSettlement("hanover", {
 	Cores = {
 		"lombard-tribe",
 		"brunswick",
-		"holy-rome"
+		"germany", -- Hanover was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Hanover was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-264, "lombard-tribe" -- Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -272,7 +289,9 @@ DefineSettlement("kiel", {
 	},
 	Cores = {
 		"hersing-tribe",
-		"teuton-tribe"
+		"teuton-tribe",
+		"germany", -- Kiel was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Kiel was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-2800, "asa-tribe",
@@ -324,6 +343,10 @@ DefineSettlement("konstanz", {
 	CulturalNames = {
 		"teuton", "Konstanz"
 	},
+	Cores = {
+		"germany", -- Konstanz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Konstanz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		561, "austrasia", -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1815, "baden" -- Constance was a possession of the Grand Duchy of Baden in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -343,7 +366,9 @@ DefineSettlement("lubeck", {
 		"teuton", "Lubeck" -- "Lübeck"
 	},
 	Cores = {
-		"saxon-tribe"
+		"saxon-tribe",
+		"germany", -- Lübeck was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Lübeck was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -364,11 +389,14 @@ DefineSettlement("magdeburg", {
 	},
 	Cores = {
 		"cherusci-tribe",
+		"germany", -- Magdeburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		"magdeburg",
-		"holy-rome"
+		"holy-rome" -- Magdeburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
-		-264, "cherusci-tribe" -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "cherusci-tribe", -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1648, "magdeburg", -- Magdeburg was a Magdeburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1680, "brandenburg" -- Magdeburg became a Brandenburgian possession in 1680; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
 	},
@@ -384,6 +412,10 @@ DefineSettlement("mainz", {
 		"french", "Mayence",
 		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Mainz"
+	},
+	Cores = {
+		"germany", -- Mainz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Mainz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-50, "rome", -- Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -431,6 +463,8 @@ DefineSettlement("munster", {
 		"teuton", "Munster" -- "Münster"
 	},
 	Cores = {
+		"germany", -- Münster was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome", -- Münster was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 --		"westphalia"
 	},
 	HistoricalOwners = {
@@ -451,6 +485,10 @@ DefineSettlement("nuremberg", {
 	CulturalNames = {
 		"teuton", "Nuremberg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
+	Cores = {
+		"germany", -- Nuremberg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Nuremberg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		161, "hermunduri-tribe", -- the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1815, "bavaria" -- Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -467,6 +505,10 @@ DefineSettlement("oldenburg", {
 	Position = {4027, 839},
 	CulturalNames = {
 		"teuton", "Oldenburg"
+	},
+	Cores = {
+		"germany", -- Oldenburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Oldenburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		-3950, "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
@@ -523,6 +565,10 @@ DefineSettlement("regensburg", {
 		"teuton", "Regensburg"
 		-- Ratisbon
 	},
+	Cores = {
+		"germany", -- Regensburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Regensburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		172, "",
@@ -552,11 +598,13 @@ DefineSettlement("rostock", {
 		"teuton", "Rostock"
 	},
 	Cores = {
+		"germany",
 		"mecklenburg"
 	},
 	HistoricalOwners = {
 	},
 	HistoricalBuildings = {
+		1419, 0, "university" -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -583,6 +631,10 @@ DefineSettlement("schwerin", {
 	Position = {4093, 827},
 	CulturalNames = {
 		"teuton", "Schwerin"
+	},
+	Cores = {
+		"germany", -- Schwerin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Schwerin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 	},
@@ -657,6 +709,10 @@ DefineSettlement("trier", {
 		"french", "Treves", -- "Trèves"
 		"teuton", "Trier"
 	},
+	Cores = {
+		"germany", -- Trier was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Trier was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
 		395, "rome", -- Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "frank-tribe", -- Trèves was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -681,6 +737,10 @@ DefineSettlement("worms", {
 	CulturalNames = {
 		"latin", "Borbetomagus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Worms"
+	},
+	Cores = {
+		"germany",
+		"holy-rome"
 	},
 	HistoricalOwners = {
 		395, "rome", -- Worms was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

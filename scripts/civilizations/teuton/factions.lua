@@ -114,6 +114,7 @@ DefineFaction("bavaria", {
 	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	FactionUpgrade = "upgrade-faction-bavaria",
 	Icon = "icon-flag-five-white-birds-on-red",
+	Adjective = "Bavarian",
 	DevelopsFrom = {"bavarian-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Duchy",
@@ -188,6 +189,7 @@ DefineFaction("franconia", { -- represents the German region, so it uses base Te
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	FactionUpgrade = "upgrade-faction-franconia",
 	Icon = "icon-flag-five-purple-birds-on-green",
+	Adjective = "Franconian",
 	DevelopsFrom = {"frank-tribe"}
 })
 
@@ -213,6 +215,7 @@ DefineFaction("hesse", {
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	FactionUpgrade = "upgrade-faction-hesse",
 	Icon = "icon-flag-cyan-lion-on-red",
+	Adjective = "Hessian",
 	DevelopsFrom = {"frank-tribe", "ubii-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
@@ -270,6 +273,7 @@ DefineFaction("prussia", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-prussia",
 	Icon = "icon-flag-five-black-birds-on-purple",
+	Adjective = "Prussian",
 	DevelopsFrom = {"brandenburg"}
 })
 
@@ -281,6 +285,7 @@ DefineFaction("thuringia", {
 	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
 	FactionUpgrade = "upgrade-faction-thuringia",
 	Icon = "icon-flag-yellow-lion-on-cyan",
+	Adjective = "Thuringian",
 	DevelopsFrom = {"thuringian-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
@@ -295,6 +300,7 @@ DefineFaction("westphalia", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-westphalia",
 	Icon = "icon-flag-cyan-lion-on-red",
+	Adjective = "Westphalian",
 	DevelopsFrom = {"saxon-tribe"}
 })
 
@@ -306,6 +312,7 @@ DefineFaction("saxony", {
 	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	FactionUpgrade = "upgrade-faction-saxony",
 	Icon = "icon-flag-red-lion-on-green",
+	Adjective = "Saxon",
 	DevelopsFrom = {"saxon-tribe", "cherusci-tribe", "varini-tribe", "brandenburg", "bremen", "brunswick", "magdeburg", "mecklenburg"},
 	Titles = {
 		"monarchy", "duchy", "Duchy",
@@ -316,6 +323,26 @@ DefineFaction("saxony", {
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")
+
+DefineFaction("germany", {
+	Name = "Germany",
+	Civilization = "teuton",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "kingdom",
+	FactionUpgrade = "upgrade-faction-holy-rome",
+	Icon = "icon-flag-five-orange-birds-on-black",
+	Adjective = "German",
+	DevelopsFrom = {"austria", "bavaria", "brandenburg", "cologne", "franconia", "hesse", "prussia", "saxony", "swabia"}, -- must either be one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor or German king/emperor, or an electorate
+	Conditions = function(s)
+		for i=0,(PlayerMax - 2) do
+			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi")) then
+				return false
+			end
+		end
+		return true
+	end
+})
 
 DefineFaction("holy-rome", {
 	Name = "Holy Rome",

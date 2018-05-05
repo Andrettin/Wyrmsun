@@ -35,8 +35,11 @@ DefineSettlement("gdansk", {
 		"teuton", "Danzig"
 	},
 	HistoricalOwners = {
+		1560, "poland", -- Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -51,8 +54,11 @@ DefineSettlement("gniezno", {
 		"teuton", "Gnesen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalOwners = {
+		1560, "poland", -- Gniezno's area was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -64,9 +70,15 @@ DefineSettlement("kolberg", {
 	CulturalNames = {
 		"teuton", "Kolberg"
 	},
+	Cores = {
+		"germany", -- Kolberg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Kolberg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
+		1648, "brandenburg" -- Kolberg became a Brandenburgian possession in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
+		1648, 0, "farm"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -83,9 +95,12 @@ DefineSettlement("konigsberg", {
 		"prussia"
 	},
 	HistoricalOwners = {
+		1560, "prussia", -- Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1618, "brandenburg" -- Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
-		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		1544, 0, "university", -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -98,10 +113,16 @@ DefineSettlement("krakow", {
 	CulturalNames = {
 		"slav", "Krakow"
 	},
+	Cores = {
+		"poland"
+	},
 	HistoricalOwners = {
+		1560, "poland", -- Cracow was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		1364, 0, "university", -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		1560, 0, "town-hall"
 	},
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
@@ -116,8 +137,11 @@ DefineSettlement("poznan", {
 		"teuton", "Posen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalOwners = {
+		1560, "poland", -- Posen was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
+		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -131,9 +155,15 @@ DefineSettlement("szczecin", {
 		"slav", "Szczecin",
 		"teuton", "Stettin"
 	},
+	Cores = {
+		"germany", -- Stettin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Stettin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
 	HistoricalOwners = {
+		1648, "sweden" -- Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
+		1648, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

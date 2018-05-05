@@ -97,6 +97,15 @@ DefineFaction("poland", {
 	Icon = "icon-flag-five-white-birds-on-red"
 })
 
+DefineFaction("poland-lithuania", {
+	Name = "Poland-Lithuania",
+	Civilization = "slav",
+	Type = "polity",
+	Colors = {"red", "white"},
+	DefaultTier = "kingdom",
+	Icon = "icon-flag-five-white-birds-on-red"
+})
+
 DefineFaction("russia", {
 	Name = "Russia",
 	Civilization = "slav",

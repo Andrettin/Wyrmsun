@@ -2529,9 +2529,6 @@ DefineProvince("Mecklenburg", {
 		-3950, "basque",
 		-264, "teuton"
 	},
-	HistoricalModifiers = {
-		1419, "upgrade-university", true -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
