@@ -33,6 +33,14 @@ DefineFaction("florence", {
 	DefaultTier = "duchy"
 })
 
+DefineFaction("genoa", {
+	Name = "Genoa",
+	Civilization = "italian",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "duchy"
+})
+
 DefineFaction("italy", {
 	Name = "Italy",
 	Civilization = "italian",
@@ -107,6 +115,14 @@ DefineFaction("siena", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "duchy"
+})
+
+DefineFaction("tuscany", {
+	Name = "Tuscany",
+	Civilization = "italian",
+	Type = "polity",
+	Colors = {"orange"},
+	DefaultTier = "grand-duchy"
 })
 
 DefineFaction("venice", {

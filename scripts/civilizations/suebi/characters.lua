@@ -38,6 +38,9 @@ DefineCharacter("ariovistus", {
 	HistoricalTitles = {
 		"head-of-state", -71, -54, "suebi-tribe"
 	},
+	HistoricalLocations = {
+		-71, "earth", "besancon" -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe") then
 			return true

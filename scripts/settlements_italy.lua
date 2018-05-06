@@ -123,6 +123,7 @@ DefineSettlement("caralis", {
 	MapTemplate = "earth",
 	Position = {4047, 1155},
 	CulturalNames = {
+		"italian", "Cagliari",
 		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
@@ -144,7 +145,7 @@ DefineSettlement("cosa", {
 	},
 	HistoricalOwners = {
 		-273, "rome", -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		1815, "florence" -- Cosa's area was part of the Grand Duchy of Tuscany in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
+		1815, "tuscany" -- Cosa's area was part of the Grand Duchy of Tuscany in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
 	},
 	HistoricalBuildings = {
 		-273, 0, "farm"
@@ -213,6 +214,29 @@ DefineSettlement("florence", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
+DefineSettlement("genoa", {
+	Name = "Genoa",
+	MapTemplate = "earth",
+	Position = {4042, 1035},
+	Major = true,
+	CulturalNames = {
+		"italian", "Genoa",
+		"latin", "Genua" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	Cores = {
+		"genoa"
+	},
+	HistoricalOwners = {
+		-154, "rome", -- Genua became a Roman possession in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1494, "genoa", -- Genoa was a possession of the Republic of Genoa about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		1815, "sardinia" -- Genoa was a possession of the Kingdom of Sardinia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	},
+	HistoricalBuildings = {
+		-154, 0, "town-hall"
+	},
+	Regions = {"europe", "italy", "west-and-central-europe"}
+})
+
 DefineSettlement("hatria", {
 	Name = "Hatria",
 	MapTemplate = "earth",
@@ -259,7 +283,7 @@ DefineSettlement("milan", {
 		"teuton", "Milan" -- Mailand
 	},
 	HistoricalOwners = {
-		161, "rome", -- Mediolanum was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-191, "rome", -- Mediolanium became a Roman possession in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1477, "milan", -- Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		1494, "milan", -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		1560, "spain", -- Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
@@ -267,7 +291,7 @@ DefineSettlement("milan", {
 		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall",
+		-191, 0, "town-hall",
 		768, 0, "temple", -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},

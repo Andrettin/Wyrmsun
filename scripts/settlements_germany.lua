@@ -43,8 +43,8 @@ DefineSettlement("augsburg", {
 		1815, "bavaria" -- Augsburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "town-hall",
-		1815, 0, "town-hall"
+		170, 172, "farm",
+		1815, 0, "farm"
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -111,6 +111,7 @@ DefineSettlement("bremen", {
 		526, "saxon-tribe" -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
+		-264, 0, "town-hall",
 		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
@@ -519,7 +520,7 @@ DefineSettlement("nuremberg", {
 		1815, "bavaria" -- Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall"
+		161, 0, "farm"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -605,7 +606,7 @@ DefineSettlement("regensburg", {
 	HistoricalBuildings = {
 		170, 172, "guard-tower",
 		175, 526, "guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		526, 0, "town-hall",
+		526, 739, "farm",
 		739, 0, "temple" -- Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
 	HistoricalUnits = {

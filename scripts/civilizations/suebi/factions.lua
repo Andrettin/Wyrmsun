@@ -36,6 +36,7 @@ DefineFaction("suebi-tribe", {
 	DevelopsFrom = {"asa-tribe", "herminone-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"},
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	HistoricalDiplomacyStates = {
+		-71, "aedui-tribe", "war", -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-55, "ubii-tribe", "overlord" -- the Ubii were tributaries of the Suebi in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
 	}
 })

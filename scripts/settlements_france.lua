@@ -129,14 +129,14 @@ DefineSettlement("avignon", {
 DefineSettlement("besancon", {
 	Name = "Besancon",
 	MapTemplate = "earth",
-	Position = {3973, 978},
+	Position = {3977, 978},
 	Major = true,
 	CulturalNames = {
 		"frankish", "Vesontio",
 		"french", "Besancon" -- "Besançon"
 	},
 	HistoricalOwners = {
-		-71, "sequani-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "sequani-tribe", -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		395, "rome", -- Besançon was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "burgundy", -- Besançon's area was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		486, "burgundy", -- Besançon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -149,6 +149,11 @@ DefineSettlement("besancon", {
 		395, 0, "temple", -- Besançon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+	},
+	HistoricalUnits = {
+		 -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
+		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -836,7 +841,7 @@ DefineSettlement("strassburg", {
 		-- Prévôt des maréchaux existent in Strasbourg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	HistoricalUnits = {
-		-61, -58, "unit-suebi-swordsman", 135000, "suebi-tribe" -- 135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915.
+		-61, -58, "unit-suebi-swordsman", 135000, "suebi-tribe" -- 135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}

@@ -35,37 +35,10 @@ DefineWorldMapTile({502, 127}, {
 	}
 })
 
-DefineWorldMapTile({505, 129}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Genua"
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Genoa"
-	}
-})
-
 DefineWorldMapTile({505, 135}, {
 	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "italian", "italy", "Monte Cinto" -- Source: "Philip's International School Atlas", 2006, p. 70
-	}
-})
-
-DefineWorldMapTile({505, 144}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"italian", "italy", "Cagliari"
-	}
-})
-
-DefineWorldMapTile({506, 136}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
