@@ -3842,6 +3842,17 @@ DefineCivilization("turkish", {
 	Playable = false
 })
 
+DefineCivilization("aztec", {
+	Display = "Aztec",
+	Visible = false,
+	Species = "human",
+	ParentCivilization = "greek",
+	Adjective = "Aztec",
+	Playable = false,
+	HistoricalUpgrades = {
+	}
+})
+
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
 
 -- deity civilizations

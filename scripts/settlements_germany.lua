@@ -66,7 +66,8 @@ DefineSettlement("berlin", {
 	},
 	HistoricalOwners = {
 		-264, "semnone-tribe", -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1648, "brandenburg" -- Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1648, "brandenburg", -- Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1815, "prussia" -- Berlin was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		-264, 0, "town-hall"
@@ -418,9 +419,11 @@ DefineSettlement("magdeburg", {
 	HistoricalOwners = {
 		-264, "cherusci-tribe", -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1648, "magdeburg", -- Magdeburg was a Magdeburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1680, "brandenburg" -- Magdeburg became a Brandenburgian possession in 1680; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1680, "brandenburg", -- Magdeburg became a Brandenburgian possession in 1680; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1815, "prussia" -- Magdeburg was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
+		-264, 0, "town-hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -571,6 +574,7 @@ DefineSettlement("passau", {
 	},
 	HistoricalOwners = {
 		526, "bavarian-tribe", -- Passau's area was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1815, "bavaria" -- Passau was a part of the Kingdom of Bavaria in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		739, 0, "temple" -- Passau became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
@@ -624,6 +628,7 @@ DefineSettlement("rostock", {
 		"mecklenburg"
 	},
 	HistoricalOwners = {
+		1815, "mecklenburg" -- Rostock was part of the Grand Duchy of Mecklenburg-Schwerin in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1419, 0, "university" -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -715,6 +720,7 @@ DefineSettlement("tauberbischofsheim", {
 	},
 	HistoricalOwners = {
 		526, "francia", -- Tauberbischofsheim's area was a part of Francia in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1815, "baden" -- Tauberbischofsheim was part of the Grand Duchy of Baden in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		754, 0, "temple" -- the abbey of Tauberbischofsheim existed as of 754; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
@@ -789,7 +795,8 @@ DefineSettlement("zulpich", {
 	},
 	HistoricalOwners = {
 		481, "frank-tribe", -- Zülpich's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia" -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		{486, 12, 30}, "francia", -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1815, "prussia" -- Zülpich's area was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		{486, 12, 30}, 0, "farm"

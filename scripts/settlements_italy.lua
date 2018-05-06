@@ -34,7 +34,8 @@ DefineSettlement("aleria", {
 		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
-		161, "rome" -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "rome", -- Aleria was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1789, "france" -- Aleria's area was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
 		161, 0, "farm"
@@ -65,10 +66,12 @@ DefineSettlement("ariminum", {
 	MapTemplate = "earth",
 	Position = {4123, 1044},
 	CulturalNames = {
+		"italian", "Rimini", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		"latin", "Ariminum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-268, "rome" -- Ariminum founded as a colony in 268 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-268, "rome", -- Ariminum founded as a colony in 268 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "papal-states" -- Rimini was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
 		-268, 0, "farm"
@@ -123,7 +126,8 @@ DefineSettlement("caralis", {
 		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
-		161, "rome" -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "rome", -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1815, "sardinia" -- Caralis was part of the Kingdom of Sardinia in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
 	},
 	HistoricalBuildings = {
 		161, 0, "farm"
@@ -139,7 +143,8 @@ DefineSettlement("cosa", {
 		"latin", "Cosa" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-273, "rome" -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-273, "rome", -- Cosa founded as a colony in 273 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1815, "florence" -- Cosa's area was part of the Grand Duchy of Tuscany in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
 	},
 	HistoricalBuildings = {
 		-273, 0, "farm"
@@ -173,10 +178,12 @@ DefineSettlement("firmum", {
 	MapTemplate = "earth",
 	Position = {4151, 1064},
 	CulturalNames = {
+		"italian", "Fermo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		"latin", "Firmum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-264, "rome" -- Firmum founded as a colony in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-264, "rome", -- Firmum founded as a colony in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "papal-states" -- Fermo was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
 		-264, 0, "farm"
@@ -211,10 +218,12 @@ DefineSettlement("hatria", {
 	MapTemplate = "earth",
 	Position = {4156, 1076},
 	CulturalNames = {
+		"italian", "Atri", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		"latin", "Hatria" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-298, "rome" -- Hatria founded as a colony in 298 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-298, "rome", -- Hatria founded as a colony in 298 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "sicily" -- Atri was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
 		-298, 0, "farm"
@@ -317,7 +326,8 @@ DefineSettlement("novum-castrum", {
 		"latin", "Novum Castrum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-283, "rome" -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-283, "rome", -- Novum Castrum founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "papal-states" -- Novum Castrum's area was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
 		-283, 0, "farm"
@@ -474,10 +484,12 @@ DefineSettlement("sena-gallica", {
 	MapTemplate = "earth",
 	Position = {4138, 1052},
 	CulturalNames = {
+		"italian", "Sinigaglia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		"latin", "Sena Gallica" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	},
 	HistoricalOwners = {
-		-283, "rome" -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-283, "rome", -- Sena Gallica founded as a colony in 283 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		1494, "papal-states" -- Sinigaglia was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
 		-283, 0, "farm"

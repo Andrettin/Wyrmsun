@@ -34,6 +34,8 @@ DefineSettlement("budweis", {
 		"teuton", "Budweis"
 	},
 	HistoricalOwners = {
+		1477, "bohemia", -- Budweis' area was a Bohemian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1526, "austria", -- Budweis' area became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1815, "austria" -- Budweis was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -85,6 +87,8 @@ DefineSettlement("prague", {
 	HistoricalOwners = {
 		-9, "marcomanni-tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 		526, "bavarian-tribe", -- Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1477, "bohemia", -- Prague was a Bohemian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1526, "austria", -- Prague became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1815, "austria" -- Prague was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {

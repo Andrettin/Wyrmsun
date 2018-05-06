@@ -35,6 +35,9 @@ DefineSettlement("brunn", {
 		"teuton", "Brunn" -- "Brünn"
 	},
 	HistoricalOwners = {
+		1477, "hungary", -- Brünn was a Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1490, "bohemia", -- Brünn was reunited with Bohemia in 1490; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1526, "austria", -- Brünn became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1815, "austria" -- Brünn was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
@@ -69,14 +72,15 @@ DefineSettlement("olmutz", {
 		"teuton", "Olmutz" -- "Olmütz"
 	},
 	HistoricalOwners = {
-		1560, "austria", -- Olmütz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1477, "hungary", -- Olmütz was a Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1490, "bohemia", -- Olmütz was reunited with Bohemia in 1490; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		1526, "austria", -- Olmütz became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1815, "austria" -- Olmütz was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1560, 1815, "town-hall",
-		1581, 1815, "university", -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-		1815, 0, "stronghold", -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		1815, 0, "university"
+		1581, 0, "university", -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		1815, 0, "stronghold" -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })

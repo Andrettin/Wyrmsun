@@ -36,7 +36,8 @@ DefineSettlement("gdansk", {
 	},
 	HistoricalOwners = {
 		1560, "poland", -- Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1815, "prussia" -- Dantzic was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1560, 0, "town-hall"
@@ -55,7 +56,8 @@ DefineSettlement("gniezno", {
 	},
 	HistoricalOwners = {
 		1560, "poland", -- Gniezno's area was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1815, "prussia" -- Gnesen was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1560, 0, "town-hall"
@@ -75,7 +77,8 @@ DefineSettlement("kolberg", {
 		"holy-rome" -- Kolberg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
-		1648, "brandenburg" -- Kolberg became a Brandenburgian possession in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1648, "brandenburg", -- Kolberg became a Brandenburgian possession in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1815, "prussia" -- Kolberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1648, 0, "farm"
@@ -96,11 +99,12 @@ DefineSettlement("konigsberg", {
 	},
 	HistoricalOwners = {
 		1560, "prussia", -- Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1618, "brandenburg" -- Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1618, "brandenburg", -- Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1815, "prussia" -- Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1544, 0, "university", -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-		1560, 0, "town-hall"
+		1544, 0, "town-hall",
+		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })
@@ -118,11 +122,12 @@ DefineSettlement("krakow", {
 	},
 	HistoricalOwners = {
 		1560, "poland", -- Cracow was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1846, "austria" -- Cracow became an Austrian possession in 1846; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1364, 0, "university", -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1560, 0, "town-hall"
+		1364, 0, "town-hall",
+		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
@@ -138,7 +143,8 @@ DefineSettlement("poznan", {
 	},
 	HistoricalOwners = {
 		1560, "poland", -- Posen was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania" -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		1815, "prussia" -- Posen was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1560, 0, "town-hall"
@@ -160,7 +166,8 @@ DefineSettlement("szczecin", {
 		"holy-rome" -- Stettin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
-		1648, "sweden" -- Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1648, "sweden", -- Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		1815, "prussia" -- Stettin was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
 		1648, 0, "town-hall"

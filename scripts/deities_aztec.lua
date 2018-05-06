@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017-2018 by Andrettin
+--      (c) Copyright 2018 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,28 +25,30 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("france", {
-	Name = "France",
-	Civilization = "french",
-	Type = "polity",
-	Colors = {"blue", "white"},
-	DefaultTier = "kingdom"
+DefineDeity("huitzilopochtli", { -- Source: Edward E. Calnek, "The Historical Validity of the Codex Xolotl", 1973, p. 424.
+	Name = "Huitzilopochtli",
+	Civilizations = {"aztec"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Major = true,
+	Domains = {}
+	-- according to myth, Huitzilopochtli was born in Cohuatepec (near Tula)
 })
 
-DefineFaction("belgium", {
-	Name = "Belgium",
-	Civilization = "french",
-	Type = "polity",
-	Colors = {"yellow", "red", "black"},
-	DefaultTier = "kingdom"
+DefineDeity("tezcatlipoca", { -- Source: Jerome A. Offner, "A Reassessment of the Extent and Structuring of the Empire of Techotlalatzin, Fourteenth Century Ruler of Texcoco", 1979, p. 233.
+	Name = "Tezcatlipoca",
+	Civilizations = {"aztec"}, -- worshipped by the Huitznahuaque and the Tlailotlaque
+	Religions = {"paganism"},
+	Gender = "male",
+	Major = true,
+	Domains = {}
 })
 
--- Holy Orders
-
-DefineFaction("cistercian-order", {
-	Name = "Cistercian Order",
-	Civilization = "french",
-	Type = "holy-order",
-	Colors = {"blue"},
-	DefaultTier = "duchy"
+DefineDeity("tlaloc", { -- Source: Jerome A. Offner, "A Reassessment of the Extent and Structuring of the Empire of Techotlalatzin, Fourteenth Century Ruler of Texcoco", 1979, p. 233.
+	Name = "Tlaloc",
+	Civilizations = {"aztec"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Major = true,
+	Domains = {"water", "earth"} -- deity of rain, earth and water
 })
