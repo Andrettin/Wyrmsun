@@ -101,6 +101,13 @@ DefineMissileType("missile-flaming-catapult-rock", {
 	ImpactMissile = "missile-impact", SplashFactor = 4
 })
   
+DefineMissileType("missile-cannon-ball", {
+	File = "missiles/cannon_ball.png", Size = {32, 32}, Frames = 3, NumDirections = 1,
+	ImpactSound = "explosion",
+	DrawLevel = 44, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
+	ImpactMissile = "missile-impact", SplashFactor = 4
+})
+
 DefineMissileType("missile-slime-glob", {
 	File = "missiles/slime_glob.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
 	ImpactSound = "squishy-attack",

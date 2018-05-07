@@ -790,6 +790,23 @@ DefineUnitType("unit-goblin-guard-tower", {
 	}
 } )
 
+DefineUnitType("unit-goblin-catapult-tower", {
+	Name = "Catapult Tower",
+	Parent = "unit-template-heavy-tower",
+	Civilization = "goblin",
+	Description = "Goblin engineers' passion for destructive contraptions comes well in use in the defense of goblin settlements, with their design of the catapult tower.",
+	Image = {"file", "goblin/buildings/catapult_tower.png", "size", {64, 64}},
+	Shadow = {"file", "goblin/buildings/catapult_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-goblin-catapult-tower",
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	BluntDamage = true,
+	Sounds = {
+		"help", "basic-goblin-voices-help-town",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
 DefineUnitType("unit-goblin-market", {
 	Parent = "unit-template-market",
 	Civilization = "goblin",

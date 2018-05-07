@@ -378,6 +378,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-guard-tower",
 	ForUnit = {"unit-goblin-watch-tower"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-catapult-tower",
+	Action = "upgrade-to", Value = "unit-goblin-catapult-tower",
+	Allowed = "check-upgrade-to",
+	Key = "c", Hint = "Upgrade to ~!Catapult Tower", Popup = "popup-building",
+	ForUnit = {"unit-goblin-watch-tower"}
+} )
+
 DefineButton( { Pos = 1, Level = 2, Icon = "icon-goblin-barbarian",
 	Action = "experience-upgrade-to", Value = "unit-goblin-barbarian",
 	Key = "u", Hint = "~!Upgrade to Barbarian", Popup = "popup-unit",

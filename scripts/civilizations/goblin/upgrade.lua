@@ -195,13 +195,13 @@ DefineModifier("upgrade-goblin-catapult-projectile-1",
 DefineModifier("upgrade-goblin-catapult-projectile-1",
 	{"BasicDamage", 5},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-warship"}
+	{"apply-to", "unit-goblin-warship"}, {"apply-to", "unit-goblin-catapult-tower"}
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-2",
 	{"BasicDamage", 12},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-war-machine"}
+	{"apply-to", "unit-goblin-war-machine"}, {"apply-to", "unit-goblin-catapult-tower"}
 )
 
 DefineModifier("upgrade-goblin-catapult-projectile-2",
@@ -242,5 +242,5 @@ DefineModifier("upgrade-goblin-alchemy",
 DefineModifier("upgrade-goblin-alchemy",
 	{"FireDamage", 4},
 	{"Points", 5},
-	{"apply-to", "unit-goblin-war-machine"}, {"apply-to", "unit-goblin-warship"}
+	{"apply-to", "unit-goblin-war-machine"}, {"apply-to", "unit-goblin-warship"}, {"apply-to", "unit-goblin-catapult-tower"}
 )
