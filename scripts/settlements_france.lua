@@ -151,7 +151,10 @@ DefineSettlement("besancon", {
 		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	HistoricalUnits = {
-		 -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-- some troops to defend against the Suebi, if necessary
+		-71, -61, "unit-teuton-swordsman", 4000, "sequani-tribe",
+		-71, -61, "unit-teuton-archer", 2000, "sequani-tribe",
+		-- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
@@ -317,6 +320,10 @@ DefineSettlement("clermont-ferrand", {
 		-71, 0, "town-hall"
 		-- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
+	HistoricalUnits = {
+		-71, -61, "unit-teuton-swordsman", 4000, "arverni-tribe",
+		-71, -61, "unit-teuton-archer", 2000, "arverni-tribe"
+	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
@@ -338,6 +345,11 @@ DefineSettlement("dijon", {
 	},
 	HistoricalBuildings = {
 		-71, 0, "town-hall"
+	},
+	HistoricalUnits = {
+		-- some troops to defend against the Suebi
+		-71, -61, "unit-teuton-swordsman", 4000, "aedui-tribe",
+		-71, -61, "unit-teuton-archer", 2000, "aedui-tribe"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
