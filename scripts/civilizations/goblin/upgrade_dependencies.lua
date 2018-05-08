@@ -61,7 +61,7 @@ DefineDependency("unit-goblin-guard-tower",
 	{"unit-goblin-lumber-mill", "upgrade-masonry"}
 )
 
-DefineDependency("unit-goblin-cataput-tower",
+DefineDependency("unit-goblin-catapult-tower",
 	{"unit-goblin-lumber-mill", "unit-goblin-smithy", "upgrade-masonry", "upgrade-engineering"}
 )
 
