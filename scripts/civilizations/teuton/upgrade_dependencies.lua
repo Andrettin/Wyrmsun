@@ -74,7 +74,7 @@ DefineDependency("upgrade-teuton-bodkin-arrow",
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",
-	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-norse-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",

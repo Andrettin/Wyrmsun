@@ -154,9 +154,6 @@ DefineSettlement("besancon", {
 		-- some troops to defend against the Suebi, if necessary
 		-71, -61, "unit-teuton-swordsman", 4000, "sequani-tribe",
 		-71, -61, "unit-teuton-archer", 2000, "sequani-tribe",
-		-- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
-		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -310,7 +307,7 @@ DefineSettlement("clermont-ferrand", {
 		"french", "Clermont-Ferrand"
 	},
 	HistoricalOwners = {
-		-71, "arverni-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "arverni-tribe", -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		481, "visigothia", -- Clermont-Ferrand's area was a Visigothic possession in the 481-507 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		486, "visigothia", -- Clermont was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Arverni went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.

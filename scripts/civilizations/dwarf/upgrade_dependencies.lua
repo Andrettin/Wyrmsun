@@ -82,7 +82,7 @@ DefineDependency("upgrade-dwarven-bearded-throwing-axe",
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-1",
-	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-2",

@@ -122,7 +122,7 @@ DefineDependency("upgrade-goblin-bodkin-arrow",
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-1",
-	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
+	{"unit-goblin-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefineDependency("upgrade-goblin-catapult-projectile-2",

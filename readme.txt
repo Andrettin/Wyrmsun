@@ -80,6 +80,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the dwarven Stalwart and Sentinel (upgrades of the Guard).
 - Added the dwarven Annalist and Loremaster (upgrades of the Witness).
 
+* Upgrades
+- The siege weapon projectile upgrades now require Engineering, as the siege weapons themselves do.
+
 -----------------------------------------------------------------------
 - 3.3.1
 -----------------------------------------------------------------------

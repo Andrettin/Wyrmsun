@@ -67,7 +67,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 DefineUpgrade("upgrade-teuton-catapult-projectile-1", {
 	Parent = "upgrade-catapult-granite-projectile",
 	Civilization = "teuton",
-	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	RequirementsString = "Carpenter's Shop/Lumber Mill and Engineering",
 	Description = "As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +12 Damage for Catapults, +5 Damage for Longships."
 })
 

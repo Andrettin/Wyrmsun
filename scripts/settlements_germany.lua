@@ -303,6 +303,33 @@ DefineSettlement("hanover", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
+DefineSettlement("karlsruhe", {
+	Name = "Karlsruhe",
+	MapTemplate = "earth",
+	Position = {4031, 940},
+	Major = true,
+	CulturalNames = {
+		"teuton", "Karlsruhe"
+	},
+	Cores = {
+		"baden",
+		"germany", -- Karlsruhe was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"holy-rome" -- Karlsruhe was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalOwners = {
+		-- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-71, "suebi-tribe" -- Ariovistus and his people came from the Upper Rhine; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+	},
+	HistoricalBuildings = {
+		-71, 0, "town-hall"
+	},
+	HistoricalUnits = {
+		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
+		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+	},
+	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+})
+
 DefineSettlement("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",

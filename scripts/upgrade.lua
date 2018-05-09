@@ -113,18 +113,18 @@ DefineUpgrade("upgrade-siege-projectile-1", {
 })
 
 DefineUpgrade("upgrade-catapult-granite-projectile", {
-	Name = "Catapult Granite Projectile",
+	Name = "Granite Catapult Projectile",
 	Parent = "upgrade-siege-projectile-1",
 	Icon = "icon-catapult-projectile-2",
 	Costs = {"time", 250, "copper", 1000, "stone", 500},
-	RequirementsString = "Lumber Mill"
+	RequirementsString = "Lumber Mill and Engineering"
 })
 
 DefineUpgrade("upgrade-broadhead-ballista-bolt", {
 	Name = "Broadhead Ballista Bolt",
 	Parent = "upgrade-siege-projectile-1",
 	Costs = {"time", 250, "copper", 1000, "lumber", 500},
-	RequirementsString = "Lumber Mill"
+	RequirementsString = "Lumber Mill and Engineering"
 })
 
 DefineUpgrade("upgrade-siege-projectile-2", {
@@ -133,7 +133,7 @@ DefineUpgrade("upgrade-siege-projectile-2", {
 })
 
 DefineUpgrade("upgrade-catapult-metal-projectile", {
-	Name = "Catapult Metal Projectile",
+	Name = "Metal Catapult Projectile",
 	Parent = "upgrade-siege-projectile-2",
 	Icon = "icon-catapult-projectile-3",
 	Costs = {"time", 250, "copper", 4000},
