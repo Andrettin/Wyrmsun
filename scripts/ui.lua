@@ -176,6 +176,11 @@ local max_damage = 	Add(
 	)
 )
 
+UI.MapArea.X = 0
+UI.MapArea.Y = 16
+UI.MapArea.EndX = Video.Width - 1
+UI.MapArea.EndY = Video.Height - 176 - 1
+
 UI.InfoPanel.X = 162
 UI.InfoPanel.Y = Video.Height - 186
 
@@ -299,12 +304,20 @@ b.Y = 16 + 12 + 38 + 24
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
+local hero_button_x = 0
+local hero_button_y = 0
 for i = 0, 3 do
 	b = CUIButton:new()
-	b.X = Video.Width - 12 - 46
-	b.Y = 16 + 12 + (38 * (2 + i)) + (24 * (2 + i))
+	b.X = Video.Width - 12 - (46 * (1 + hero_button_x)) - (24 * hero_button_x)
+	b.Y = 16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y))
 	b.Style = FindButtonStyle("icon")
 	UI.HeroUnitButtons[i] = b
+	hero_button_y = hero_button_y + 1
+	
+	if ((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) >= UI.MapArea.EndY) then
+		hero_button_x = hero_button_x + 1
+		hero_button_y = 0
+	end
 end
 
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
@@ -340,11 +353,6 @@ AddButtonPanelButton(185, 140)
 UI.ButtonPanel.X = Video.Width - 243
 UI.ButtonPanel.Y = Video.Height - 186
 UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
-
-UI.MapArea.X = 0
-UI.MapArea.Y = 16
-UI.MapArea.EndX = Video.Width - 1
-UI.MapArea.EndY = Video.Height - 176 - 1
 
 UI.Minimap.X = 17
 UI.Minimap.Y = Video.Height - 156
