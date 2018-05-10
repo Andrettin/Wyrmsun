@@ -42,7 +42,7 @@ if (LoadedGame == false) then
 	SetPlayerData(2, "Resources", "stone", 0)
 	SetAiType(2, "passive")
 	
-	SetPlayerData(GetFactionPlayer("Sequani Tribe"), "Allow", "unit-germanic-barracks", "F")
+	SetPlayerData(GetFactionPlayer("Sequani Tribe"), "Allow", "unit-teuton-barracks", "F")
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -52,20 +52,18 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-teuton-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	end
 	
-	if (GrandStrategy == false or GrandStrategyEventMap) then
-		SetDiplomacy(0, "allied", 2)
-		SetSharedVision(0, true, 2)
-		SetDiplomacy(2, "allied", 0)
-		SetSharedVision(2, true, 0)
-	end
+	SetDiplomacy(0, "allied", 2)
+	SetSharedVision(0, true, 2)
+	SetDiplomacy(2, "allied", 0)
+	SetSharedVision(2, true, 0)
 end
 
 -- The Battle of Magetobria introduction

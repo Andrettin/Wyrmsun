@@ -25,20 +25,36 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("ariovistus-enters-gaul",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("ariovistus", i) ~= nil and GetFactionExists("sequani-tribe") and GetFactionExists("arverni-tribe") and GetFactionExists("aedui-tribe")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
+DefineQuest("ariovistus-ambition", {
+	Name = "Ariovistus' Ambition",
+	Icon = "icon-suebi-swordsman",
+	PlayerColor = "black",
+	CompletionEffects = function(s)
+		CallDialogue("ariovistus-conquers-gaul", trigger_player)
 	end,
-	function() 
-		CallDialogue("ariovistus-enters-gaul", trigger_player)
-		return false
-	end
-)
-
-Load("scripts/civilizations/suebi/triggers_marcomanni.lua")
+	FailEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "ariovistus-ambition") then
+			CallDialogue("campaign-defeat", trigger_player)
+		end
+	end,
+	Objectives = {
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Defeat the Aedui",
+			"faction", "aedui-tribe"
+		},
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Defeat the Sequani",
+			"faction", "sequani-tribe"
+		},
+		{
+			"objective-type", "destroy-faction",
+			"objective-string", "Defeat the Arverni",
+			"faction", "arverni-tribe"
+		}
+	},
+	ObjectiveStrings = {"- Ariovistus must survive"},
+	HeroesMustSurvive = {"ariovistus"},
+	Unobtainable = true
+})
