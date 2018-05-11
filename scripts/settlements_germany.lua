@@ -120,7 +120,7 @@ DefineSettlement("bremen", {
 DefineSettlement("cologne", {
 	Name = "Cologne",
 	MapTemplate = "earth",
-	Position = {3998, 887},
+	Position = {3994, 896},
 	Major = true,
 	CulturalNames = {
 		"french", "Cologne",
@@ -459,7 +459,7 @@ DefineSettlement("magdeburg", {
 DefineSettlement("mainz", {
 	Name = "Mainz",
 	MapTemplate = "earth",
-	Position = {4029, 911},
+	Position = {4026, 912},
 	Major = true,
 	CulturalNames = {
 		"french", "Mayence",
@@ -788,7 +788,7 @@ DefineSettlement("trier", {
 DefineSettlement("worms", {
 	Name = "Worms",
 	MapTemplate = "earth",
-	Position = {4033, 920},
+	Position = {4027, 920},
 	Major = true,
 	CulturalNames = {
 		"latin", "Borbetomagus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
