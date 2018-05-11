@@ -39,6 +39,23 @@ DefineDialogue("ariovistus-enters-gaul", {
 	}
 })
 
+DefineDialogue("ariovistus-claims-victory-over-the-aedui", {
+	Nodes = {
+		{
+			"speaker", "character", "ariovistus",
+			"text", "The Aedui settlement lies in ruins. Our allies, the Sequani, thanked us for our efforts... but failed to recognize the new reality in Gaul. Our arms were the deciding factor in the battle against the Aedui, and our strength grants us the right to be the arbiters of Gaul. The Sequani refused to grant us a portion of their land, territory we are in much need of to support the Harude newcomers who have come over the Rhine to reinforce us. War it must be then!",
+			"option-effects", {
+				function(s)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("sequani-tribe"))
+					SetDiplomacy(GetFactionPlayer("sequani-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("arverni-tribe"))
+					SetDiplomacy(GetFactionPlayer("arverni-tribe"), "enemy", trigger_player)
+				end
+			}
+		}
+	}
+})
+
 DefineDialogue("ariovistus-conquers-gaul", {
 	Nodes = {
 		{
