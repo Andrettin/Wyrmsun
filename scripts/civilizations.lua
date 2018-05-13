@@ -2593,6 +2593,8 @@ DefineCivilization("teuton", {
 		"Traun" -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
 	},
 	HistoricalUpgrades = {
+		-500, "upgrade-ironworking", true,
+		-500, "upgrade-teuton-iron-shield", true,
 		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		800, "upgrade-teuton-writing", true,
 		800, "upgrade-masonry", true,
