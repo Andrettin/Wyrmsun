@@ -276,6 +276,7 @@
 /graphics/elf/icons/kvasir.png (by Exidelo) (licensed under the CC0)
 /graphics/elf/units/elf_body_warrior.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/elf/units/elf_hair.png (by Jinn) (licensed under the CC0)
+/graphics/elf/units/swordsman.png (by Gregor-Mack and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/english/buildings/lumber_mill.png (by Jinn) (licensed under the CC0)
 /graphics/english/buildings/lumber_mill_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/ettin/icons/ettin.png (by Jinn) (licensed under the CC0)

@@ -212,6 +212,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-slavic-swordsman", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	elseif (str == "lodbrok") then
 		unit = CreateUnit("unit-norse-longship", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+	elseif (str == "volund") then
+		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	else
 		return false
 	end
