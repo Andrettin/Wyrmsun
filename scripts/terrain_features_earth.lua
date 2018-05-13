@@ -300,6 +300,7 @@ DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",
 	World = "earth",
+	Color = {0, 128, 212},
 	CulturalNames = {
 		"latin", "Rhenus River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Rhine River"

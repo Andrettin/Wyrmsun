@@ -818,7 +818,7 @@ DefineSettlement("soissons", {
 DefineSettlement("strassburg", {
 	Name = "Strasbourg",
 	MapTemplate = "earth",
-	Position = {4012, 947},
+	Position = {4010, 945},
 	Major = true,
 	CulturalNames = {
 		"celt", "Argentoratum",
