@@ -527,6 +527,13 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-catapult-tower",
+	Action = "upgrade-to", Value = "unit-teuton-catapult-tower",
+	Allowed = "check-upgrade-to",
+	Key = "c", Hint = "Upgrade to ~!Catapult Tower", Popup = "popup-building",
+	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
+} )
+
 DefineButton( { Pos = 1, Level = 2,
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
 	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",

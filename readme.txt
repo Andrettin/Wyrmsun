@@ -64,7 +64,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added Norse Dock, Market, Temple and Watch Tower.
 - Added Dwarven Ballista Tower, an individual upgrade of their Sentry Tower.
 - Added Dwarven Cannon Tower, a technological upgrade of their Ballista Tower. Researching Gunpowder converts Ballista Towers into Cannon Towers.
-- Added Goblin Cataput Tower, an individual upgrade of their Watch Tower.
+- Added Goblin Catapult Tower, an individual upgrade of their Watch Tower.
+- Added Teuton Catapult Tower, an individual upgrade of their Watch Tower.
 
 * Civilizations
 - The Norse civilization is now playable.
@@ -74,6 +75,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - Fixed issue which caused a unit killed through effects like bleeding to not count for the completion of quest objectives.
+
+* Terrain
+- The Snow terrain transitions have been reworked.
 
 * Units
 - Fixed issue which caused units to not be granted experience if they killed another unit through effects like bleeding.

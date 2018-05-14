@@ -368,7 +368,7 @@ DefineModifier("upgrade-masonry",
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}, {"apply-to", "unit-teuton-catapult-tower"},
 	{"apply-to", "unit-teuton-dock"}
 )
 
@@ -410,7 +410,7 @@ DefineModifier("upgrade-architecture",
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}, {"apply-to", "unit-teuton-catapult-tower"},
 	{"apply-to", "unit-teuton-dock"}
 )
 

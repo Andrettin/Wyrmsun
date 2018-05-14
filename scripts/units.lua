@@ -91,7 +91,7 @@ Units = {
 	"unit-teuton-farm", "unit-teuton-barracks",
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
 	"unit-teuton-stables", "unit-teuton-temple", "unit-teuton-market", "unit-teuton-university",
-	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
+	"unit-teuton-watch-tower", "unit-teuton-guard-tower", "unit-teuton-catapult-tower",
 	"unit-teuton-dock",
 	"unit-teuton-wall",
 	"upgrade-teuton-spatha", "upgrade-frank-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",

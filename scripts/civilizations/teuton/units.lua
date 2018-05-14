@@ -1251,6 +1251,23 @@ DefineUnitType("unit-teuton-guard-tower", {
 	}
 } )
 
+DefineUnitType("unit-teuton-catapult-tower", {
+	Name = "Catapult Tower",
+	Parent = "unit-template-heavy-tower",
+	Civilization = "teuton",
+	Description = "With the discovery of new engineering methods, the construction of a catapult tower became possible. Enhancing the defense of settlements, it throws heavy projectiles that smash nearby enemy groups.",
+	Image = {"file", "teuton/buildings/catapult_tower.png", "size", {64, 64}},
+	Shadow = {"file", "teuton/buildings/catapult_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-teuton-catapult-tower",
+	Missile = "missile-catapult-sandstone-rock",
+	FireMissile = "missile-flaming-catapult-rock",
+	BluntDamage = true,
+	Sounds = {
+--		"help", "basic-teuton-voices-help-town",
+		"fire-missile", "catapult-attack"
+	}
+} )
+
 DefineUnitType("unit-teuton-dock", {
 	Name = "Dock",
 	Parent = "unit-template-dock",

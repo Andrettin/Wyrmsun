@@ -37,6 +37,10 @@ DefineDependency("unit-teuton-guard-tower",
 	{"unit-teuton-lumber-mill", "upgrade-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-masonry"}
 )
 
+DefineDependency("unit-teuton-catapult-tower",
+	{"unit-teuton-lumber-mill", "unit-teuton-smithy", "upgrade-masonry", "upgrade-engineering"}
+)
+
 DefineDependency("unit-teuton-wall",
 	{"upgrade-masonry"}
 )
