@@ -8,4 +8,4 @@ ApplyMapTemplate("earth", 4010, 980)
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
-CreatePlayers(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, true, true, false, true, nil, nil, false, true)
+CreatePlayers(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1, true, false, true, nil, nil, false, true)

@@ -5,5 +5,5 @@ else
 end
 
 if (LoadedGame == false) then
-	GenerateValley(nil, "random", true)
+	GenerateValley(nil, "random")
 end

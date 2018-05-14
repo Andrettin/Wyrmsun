@@ -1755,7 +1755,7 @@ function CreateDecorations()
 	end
 end
 
-function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map, no_raw_tile)
+function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starting_gold_mine, player_civilizations, player_buildings, water_map, no_raw_tile)
 	local settlement_units = {}
 	local uncount = GetUnits(PlayerNumNeutral)
 	for unit1 = 1,table.getn(uncount) do 
@@ -1776,37 +1776,37 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			end
 			
 			local possible_civilizations = {}
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("anglo-saxon") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("anglo-saxon") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "anglo-saxon")
 			end
-			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and HasCivilizationAvailableFactions("dwarf")) then
+			if (HasCivilizationAvailableFactions("dwarf")) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("english") and (GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("english") and (GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "english")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("frankish") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("frankish") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "frankish")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("germanic") and (GameSettings.TechLevel == "" or GameSettings.TechLevel == AgrarianBronzeTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("germanic") and (GameSettings.TechLevel == "" or GameSettings.TechLevel == AgrarianBronzeTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("goth") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("goth") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "goth")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("norse") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("norse") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "norse")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("suebi") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("suebi") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "suebi")
 			end
-			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("teuton") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("teuton") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedGunpowderTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "teuton")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and HasCivilizationAvailableFactions("gnome")) then -- allow gnomes in elven forests since there is no elven civilization yet
+			if (GetPlayerData(i, "AiEnabled") and HasCivilizationAvailableFactions("gnome")) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
-			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and HasCivilizationAvailableFactions("goblin")) then
+			if (HasCivilizationAvailableFactions("goblin")) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
@@ -2034,11 +2034,6 @@ function GenerateRandomMap(arg)
 			symmetric = true
 		end
 		
-		local mixed_civilizations = false
-		if (arg.MixedCivilizations) then
-			mixed_civilizations = true
-		end
-		
 		if (arg.WaterLayout ~= nil) then
 			local block_size = 16
 			if (Map.Info.MapWidth > Map.Info.MapHeight) then
@@ -2244,7 +2239,7 @@ function GenerateRandomMap(arg)
 			end
 		end
 		
-		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
+		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
 
 		if (arg.RoughLandQuantity == "high") then
 			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
@@ -3976,7 +3971,7 @@ function CreateStartingBuilding(player, building_type)
 	end
 end
 
-function GenerateValley(direction, lake_quantity, mixed_civilizations)
+function GenerateValley(direction, lake_quantity)
 	CleanRawTiles()
 	
 	if (direction == nil) then
@@ -3994,7 +3989,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, mixed_civilizations, true, false, true, nil, nil, false)
+		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, true, false, true, nil, nil, false)
 		
 		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
 		
@@ -4002,7 +3997,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), mixed_civilizations, true, false, true, nil, nil, false)
+		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), true, false, true, nil, nil, false)
 		
 		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
 		
@@ -5945,7 +5940,7 @@ function GenerateCave(town_halls, symmetric)
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, true, town_halls, symmetric, true, nil, nil, false)
+	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, town_halls, symmetric, true, nil, nil, false)
 
 	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 

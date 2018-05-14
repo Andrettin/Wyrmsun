@@ -13,7 +13,7 @@ if (LoadedGame == false) then
 		end
 	end
 		
-	CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, false, true, false, true, nil, nil)
+	CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, true, false, true, nil, nil)
 
 	for y=0,(Map.Info.MapHeight - 1) do
 		SetRawTile(0, y, "Water")
