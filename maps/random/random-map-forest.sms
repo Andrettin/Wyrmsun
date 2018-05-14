@@ -6,7 +6,6 @@ end
 
 if (LoadedGame == false) then
 	GenerateRandomMap({
-		MixedCivilizations = true,
 		MercenaryCamp = true,
 		RockQuantity = "low",
 		TreeQuantity = "high",

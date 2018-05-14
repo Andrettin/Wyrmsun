@@ -3,7 +3,6 @@ LoadTileModels("scripts/tilesets/swamp.lua")
 if (LoadedGame == false) then
 	GenerateRandomMap({
 		Symmetric = true,
-		MixedCivilizations = true,
 		MercenaryCamp = true,
 		RockQuantity = "low",
 		TreeQuantity = "medium",
