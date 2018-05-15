@@ -1067,6 +1067,14 @@ DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Leiba", { -- source also gives the alternative form "laipa"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Remnant"}, -- source gives the German "Überbleibsel"
+	DerivesFrom = {"proto-germanic", "noun", "Laibô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-high-german",
 	Type = "verb",

@@ -627,6 +627,14 @@ DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Leibe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Remnant"}, -- source gives the German "Überbleibsel"
+	DerivesFrom = {"old-high-german", "noun", "Leiba"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
 	Type = "verb",

@@ -1007,6 +1007,12 @@ DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Come"}
 })
 
+DefineLanguageWord("Laibô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Remnant"} -- source gives the German "Überbleibsel"
+})
+
 DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
 	Language = "proto-germanic",
 	Type = "verb",

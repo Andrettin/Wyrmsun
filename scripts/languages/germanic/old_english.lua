@@ -1270,6 +1270,14 @@ DefineLanguageWord("Lǣran", { -- causative verb; Source: Sean Crist, "An Analys
 	Meanings = {"Teach"}
 })
 
+DefineLanguageWord("Lâf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Laibô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Lagu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 9.
 	Language = "old-english",
 	Type = "noun",

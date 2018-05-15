@@ -337,6 +337,14 @@ DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Lauda"}
 })
 
+DefineLanguageWord("Lâva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Laibô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Lond", { -- source also gives the alternative form "Land"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "old-frisian",
 	Type = "noun",

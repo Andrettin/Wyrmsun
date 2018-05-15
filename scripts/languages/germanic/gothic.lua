@@ -847,6 +847,14 @@ DefineLanguageWord("Lagg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
+DefineLanguageWord("Laiba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Remnant"}, -- source gives the German "Überbleibsel"
+	DerivesFrom = {"proto-germanic", "noun", "Laibô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Laílōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "gothic",
 	Type = "verb",

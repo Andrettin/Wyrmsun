@@ -1192,6 +1192,14 @@ DefineLanguageWord("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
+DefineLanguageWord("Leif", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Remnant"}, -- source gives the German "Überbleibsel"
+	DerivesFrom = {"proto-germanic", "noun", "Laibô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",

@@ -531,7 +531,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 })
 
 DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Fridleif", -- "Fridleifr"
+	Name = "Frithulaibo", -- "Fridleifr" in the original; this is a tentative Proto-Germanic rendering of the name
 	-- prefix is likely the Old Norse word "Friđr"
 --	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
