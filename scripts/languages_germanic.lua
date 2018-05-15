@@ -47,6 +47,7 @@ DefineLanguage("old-norse", {
 		"Branda", "Brand",
 		"Erala", "Jarl",
 		"Fader", "Fathir",
+		"Frithulaibo", "Fridleif", -- "Fridleifr"
 		"Gudawulfa", "Gudolf",
 		"Karla", "Karl",
 		"Magan", "Magi",
