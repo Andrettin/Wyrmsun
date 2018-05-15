@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Building entries in the encyclopedia are now separated by civilization (as occurs with units and technologies).
+- Ctrl-clicking resource sell buttons now toggles the autosale of that resource.
 
 * Scenarios
 - Fixed issue which caused a unit killed through effects like bleeding to not count for the completion of quest objectives.
