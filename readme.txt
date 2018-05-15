@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused units to not be granted experience if they killed another unit through effects like bleeding.
 - Added the dwarven Stalwart and Sentinel (upgrades of the Guard).
 - Added the dwarven Annalist and Loremaster (upgrades of the Witness).
+- Unit epithets are now properly saved for save games.
 
 * Upgrades
 - The siege weapon projectile upgrades now require Engineering, as the siege weapons themselves do.
