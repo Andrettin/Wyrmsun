@@ -703,5 +703,3 @@ local NidavellirEvents = {
 		OptionTooltips = {"Fight the goblin thieves", "-500 Copper\n-1 Prestige"}
 	}
 }
-	
-AddEventTable(NidavellirEvents)

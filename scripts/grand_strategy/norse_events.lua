@@ -395,5 +395,3 @@ local NorseEvents = {
 		OptionTooltips = {"-300 Copper\n-2 Research"}
 	}
 }
-	
-AddEventTable(NorseEvents)

@@ -41,5 +41,3 @@ local LatinEvents = {
 		OptionTooltips = {"War with the Suebi Tribe", ""}
 	}
 }
-	
-AddEventTable(LatinEvents)

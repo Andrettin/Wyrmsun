@@ -545,5 +545,3 @@ local TeutonEvents = {
 		OptionTooltips = {"+1 Research"}
 	}
 }
-	
-AddEventTable(TeutonEvents)

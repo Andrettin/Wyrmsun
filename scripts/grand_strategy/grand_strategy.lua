@@ -32,7 +32,6 @@ EventFaction = nil
 EventProvince = nil
 SecondEventProvince = nil
 GrandStrategyWorld = ""
-PopulationGrowthThreshold = 2000
 MonthsPerTurn = 12
 
 function RunGrandStrategyGameSetupMenu()

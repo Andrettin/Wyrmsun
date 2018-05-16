@@ -1,14 +1,3 @@
-
-LoadFactions("Nidavellir")
-
-LoadProvinces("Nidavellir")
-
-MercenaryGroups = {
-	unit_surghan_mercenary_steelclad = 4
-}
-
-LoadEvents("Nidavellir")
-
 if (GrandStrategyYear >= -2970) then -- estimated date
 	GrandStrategyEvents.TheMeadOfWisdom = nil -- should be placed at an earlier date
 	GrandStrategyEvents.TheTreasuresOfSvarinshaug = nil -- should be placed at an earlier date

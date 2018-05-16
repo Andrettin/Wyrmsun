@@ -36,24 +36,6 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
 			}
-		},
-		Russia = {
-			Name = "Russia",
-			Units = {
-				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
-			}
-		},
-		Sweden = {
-			Name = "Sweden",
-			Units = {
-				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
-			}
-		},
-		Ukraine = {
-			Name = "Ukraine",
-			Units = {
-				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
-			}
 		}
 	}
 	

@@ -460,5 +460,3 @@ local GermanicEvents = {
 		OptionTooltips = {"+1 Research\n+1 Prestige"}
 	}
 }
-	
-AddEventTable(GermanicEvents)

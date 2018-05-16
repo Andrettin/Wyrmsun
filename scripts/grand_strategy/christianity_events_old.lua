@@ -626,5 +626,3 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige"}
 	}
 }
-	
-AddEventTable(ChristianityEvents)

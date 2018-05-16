@@ -171,30 +171,6 @@ local EarthEvents = {
 		},
 		OptionTooltips = {"+1 Research"}
 	},
-	TheAbolitionOfSerfdomRussia = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
-		Name = "The Abolition of Serfdom",
-		Description = "Serfdom has finally been abolished in Russia, paving the way for the modernization of agriculture.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "russia"
-				-- should have more conditions, such as technology-related upgrades
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		RequiredEvents = {
-			TheUlozhenieLawCode = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 100)
-			end
-		},
-		OptionTooltips = {"+100 Research"}
-	},
 	MateriauxPourLHistoireDeLHomme = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
 		Name = "Matériaux pour l'histoire de l'homme",
 		Description = "A new periodical has been founded in France, the Matériaux pour l'histoire positive et philosophique de l'homme, which preoccupies itself with research on prehistory.",
@@ -219,5 +195,3 @@ local EarthEvents = {
 		OptionTooltips = {"+1 Research"}
 	}
 }
-	
-AddEventTable(EarthEvents)

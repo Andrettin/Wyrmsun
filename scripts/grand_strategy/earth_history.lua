@@ -1349,9 +1349,6 @@ end
 if (GrandStrategyYear >= 1859) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 	GrandStrategyEvents.OnTheOriginOfSpecies = nil
 end
-if (GrandStrategyYear >= 1861) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
-	GrandStrategyEvents.TheAbolitionOfSerfdomRussia = nil
-end
 
 if (GrandStrategyYear >= 1863) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 	GrandStrategyEvents.AntiquityOfMan = nil

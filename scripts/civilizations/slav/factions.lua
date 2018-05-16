@@ -111,7 +111,11 @@ DefineFaction("russia", {
 	Civilization = "slav",
 	Type = "polity",
 	Colors = {"blue", "red"},
-	DefaultTier = "empire"
+	DefaultTier = "empire",
+	HistoricalUpgrades = {
+		1861, "upgrade-serfdom", false, -- serfdom was abolished in Russia in 1861; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
+		1861, "upgrade-free-workers", true
+	}
 })
 
 DefineFaction("serbia", {

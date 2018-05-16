@@ -127,16 +127,4 @@ function LoadFactions(world)
 			}
 		}
 	}
-	
-	local civilizations = GetCivilizations()
-	for i=1,table.getn(civilizations) do
-		local factions = GetFactions(civilizations[i])
-		for j=1,table.getn(factions) do
-			local faction_name = factions[j]
-			local key = string.gsub(faction_name, "-", "_")
-			Factions[key] = {}
-			Factions[key]["Name"] = faction_name
-			Factions[key]["Civilization"] = civilizations[i]
-		end
-	end
 end
