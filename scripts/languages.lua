@@ -29,6 +29,10 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
+DefineLanguage("hittite", {
+	Name = "Hittite"
+})
+
 DefineLanguage("illyrian", {
 	Name = "Illyrian"
 })

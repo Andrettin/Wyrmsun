@@ -58,6 +58,7 @@ DefineUpgrade("upgrade-serfdom", {
 		"frankish", 200,
 		"goth", 200,
 		"norse", 200,
+		"slav", 200,
 		"suebi", 200,
 		"teuton", 200
 	}
