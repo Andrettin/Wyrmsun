@@ -304,14 +304,16 @@ b.Y = 16 + 12 + 38 + 24
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
+UI.InventoryButtons:clear()
+
 local hero_button_x = 0
 local hero_button_y = 0
-for i = 0, 3 do
+for i = 1, 12 do
 	b = CUIButton:new()
 	b.X = Video.Width - 12 - (46 * (1 + hero_button_x)) - (24 * hero_button_x)
 	b.Y = 16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y))
 	b.Style = FindButtonStyle("icon")
-	UI.HeroUnitButtons[i] = b
+	UI.HeroUnitButtons:push_back(b)
 	hero_button_y = hero_button_y + 1
 	
 	if ((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) >= UI.MapArea.EndY) then

@@ -194,7 +194,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Character", "durstorn")
 
 		unit = CreateUnit("unit-dwarven-pathfinder", 0, {6, 5}) -- Noiraran
-		AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
+		AcquireTrait(unit, "upgrade-intelligent") -- was loyal and intelligent in Wesnoth
 		SetUnitVariable(unit, "Name", "Noiraran")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
 		AcquireTrait(unit, "upgrade-quick") -- was loyal and quick in Wesnoth

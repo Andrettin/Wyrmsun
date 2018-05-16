@@ -26,12 +26,6 @@ WorldMapResources = {
 }
 --]]
 
-LoadFactions("Earth")
-
-LoadProvinces("Earth")
-
-LoadEvents("Earth")
-
 if (GrandStrategyYear >= -38000) then
 	-- Upper Paleolithic begins around 38,000 BC, and during this period use by modern humans of stone and bone projectile tips became widespread (); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 111.
 end
@@ -45,7 +39,7 @@ if (GrandStrategyYear >= -30000) then
 end
 
 if (GrandStrategyYear >= -16000) then
-	-- The Late Glacial of Denmark ends about 16,000 BC, and the region surrounding the later settlement of Tybrind Vig (in the coast of the Danish island of Fyn) is formed; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 141.
+	-- the Late Glacial of Denmark ends about 16,000 BC, and the region surrounding the later settlement of Tybrind Vig (in the coast of the Danish island of Fyn) is formed; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 141.
 end
 
 if (GrandStrategyYear >= -10000) then
@@ -669,7 +663,7 @@ if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 
 	SetProvinceOwner("Sardinia", "latin", "rome")
 end
 
-if (GrandStrategyYear >= -229) then -- The cities of Dyrrhachium and Apollonia were acquired by Rome in 229 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -229) then -- the cities of Dyrrhachium and Apollonia were acquired by Rome in 229 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Albania", "latin", "rome")
 end
 
@@ -701,7 +695,7 @@ end
 if (GrandStrategyYear >= -175) then
 	-- Huns defeated the Massagetae in 175 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 	
-	-- Iazyges found a kingdom after 175 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
+	-- the Iazyges founded a kingdom after 175 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
 if (GrandStrategyYear >= -154) then -- Liguria acquired by Rome in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
