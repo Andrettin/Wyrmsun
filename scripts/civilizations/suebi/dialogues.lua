@@ -33,6 +33,8 @@ DefineDialogue("ariovistus-enters-gaul", {
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "ariovistus-ambition")
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSettlementData("dijon", "PosX") - EarthStartX, GetSettlementData("dijon", "PosY") - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
+					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
 		}
@@ -48,8 +50,13 @@ DefineDialogue("ariovistus-claims-victory-over-the-aedui", {
 				function(s)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("sequani-tribe"))
 					SetDiplomacy(GetFactionPlayer("sequani-tribe"), "enemy", trigger_player)
+					SetSharedVision(trigger_player, false, GetFactionPlayer("sequani-tribe"))
+					SetSharedVision(GetFactionPlayer("sequani-tribe"), false, trigger_player)
+					
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("arverni-tribe"))
 					SetDiplomacy(GetFactionPlayer("arverni-tribe"), "enemy", trigger_player)
+					SetSharedVision(trigger_player, false, GetFactionPlayer("arverni-tribe"))
+					SetSharedVision(GetFactionPlayer("arverni-tribe"), false, trigger_player)
 				end
 			}
 		}

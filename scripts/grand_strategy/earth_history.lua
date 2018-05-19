@@ -1141,7 +1141,7 @@ if (GrandStrategyYear >= 900) then
 end
 
 if (GrandStrategyYear >= 911) then
-	-- Scandinavian warlord Rollo converted to Christianity and was granted the estuary of the Seine as a fiefdom (which would be later known as Normandy), becoming the first duke of Normandy; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
+	-- Scandinavian warlord Rollo converted to Christianity and was granted the estuary of the Seine as a fiefdom (which would be later known as Normandy), becoming the first duke of Normandy in 911; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
 if (GrandStrategyYear >= 919) then
@@ -1210,7 +1210,7 @@ if (GrandStrategyYear >= 1015) then
 end
 
 if (GrandStrategyYear >= 1026) then
-	GrandStrategyEvents.TempleAtUpsalConverted = nil -- Temple at Upsal converted into a church by laf the Swede at about 1026; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
+	GrandStrategyEvents.TempleAtUpsalConverted = nil -- Temple at Upsal converted into a church by Olaf the Swede at about 1026; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
 end
 
 if (GrandStrategyYear >= 1027) then

@@ -304,7 +304,7 @@ b.Y = 16 + 12 + 38 + 24
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
-UI.InventoryButtons:clear()
+UI.HeroUnitButtons:clear()
 
 local hero_button_x = 0
 local hero_button_y = 0
