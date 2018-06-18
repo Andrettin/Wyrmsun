@@ -66,6 +66,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added Dwarven Cannon Tower, a technological upgrade of their Ballista Tower. Researching Gunpowder converts Ballista Towers into Cannon Towers.
 - Added Goblin Catapult Tower, an individual upgrade of their Watch Tower.
 - Added Teuton Catapult Tower, an individual upgrade of their Watch Tower.
+- Added Goblin Mason's Shop.
+- Added Teuton Mason's Shop.
 
 * Civilizations
 - The Norse civilization is now playable.

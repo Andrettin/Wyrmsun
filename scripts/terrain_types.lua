@@ -401,11 +401,54 @@ DefineTerrainType("ice", {
 	}
 })
 
+DefineTerrainType("ford", {
+	Name = "Ford",
+	Color = {0, 128, 192},
+	Flags = {"land", "no-building"},
+	InnerBorderTerrains = {"snow", "mud", "dirt", "dry-mud", "desert-sand", "cave-floor", "rockbound-cave-floor", "ice"},
+	Graphics = "terrain/ford.png",
+	SolidTiles = {17, 20, 23},
+	AdjacentTransitionTiles = {
+		"any", "north", 33,
+		"any", "north", 36,
+		"any", "north", 39,
+		"any", "south", 1,
+		"any", "south", 4,
+		"any", "south", 7,
+		"any", "west", 18,
+		"any", "west", 21,
+		"any", "west", 24,
+		"any", "east", 16,
+		"any", "east", 19,
+		"any", "east", 22,
+		"any", "northwest-outer", 65,
+		"any", "northwest-outer", 67,
+		"any", "northeast-outer", 64,
+		"any", "northeast-outer", 66,
+		"any", "southwest-outer", 49,
+		"any", "southwest-outer", 51,
+		"any", "southeast-outer", 48,
+		"any", "southeast-outer", 50,
+		"any", "northwest-inner", 34,
+		"any", "northwest-inner", 37,
+		"any", "northeast-inner", 32,
+		"any", "northeast-inner", 35,
+		"any", "southwest-inner", 2,
+		"any", "southwest-inner", 5,
+		"any", "southeast-inner", 0,
+		"any", "southeast-inner", 3,
+		"any", "northwest-southeast-inner", 80,
+		"any", "northwest-southeast-inner", 96,
+		"any", "northeast-southwest-inner", 81,
+		"any", "northeast-southwest-inner", 97
+	}
+})
+
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
 	Color = {0, 128, 255},
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice"},
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
 	Overlay = true,
 	Flags = {"water"},
 	AllowSingle = true,
@@ -487,7 +530,7 @@ DefineTerrainType("shallow-water", {
 DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
 	Character = "y",
-	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow", "ice"},
+	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow", "ice", "ford"},
 	Overlay = true,
 	Flags = {"water"},
 	Graphics = "terrain/gray_shallow_water.png",
@@ -533,7 +576,7 @@ DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Character = "h",
 	Color = {32, 32, 0},
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice"},
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
@@ -617,7 +660,7 @@ DefineTerrainType("floor", {
 	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow", "ice"},
+	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow", "ice", "ford"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
 	AdjacentTransitionTiles = {
@@ -1601,7 +1644,7 @@ DefineTerrainType("teuton-wall", {
 
 DefineTerrainType("border", {
 	Name = "Border",
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "desert-sand", "snow", "ice"},
+	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "desert-sand", "snow", "ice", "ford"},
 	Overlay = true,
 	AllowSingle = true,
 	Hidden = true,

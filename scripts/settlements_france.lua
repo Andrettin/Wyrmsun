@@ -152,8 +152,8 @@ DefineSettlement("besancon", {
 	},
 	HistoricalUnits = {
 		-- some troops to defend against the Suebi, if necessary
-		-71, -61, "unit-teuton-swordsman", 4000, "sequani-tribe",
-		-71, -61, "unit-teuton-archer", 2000, "sequani-tribe",
+		-71, -61, "unit-teuton-swordsman", 6000, "sequani-tribe",
+		-71, -61, "unit-teuton-archer", 3000, "sequani-tribe",
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -318,8 +318,8 @@ DefineSettlement("clermont-ferrand", {
 		-- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	HistoricalUnits = {
-		-71, -61, "unit-teuton-swordsman", 4000, "arverni-tribe",
-		-71, -61, "unit-teuton-archer", 2000, "arverni-tribe"
+		-71, -61, "unit-teuton-swordsman", 6000, "arverni-tribe",
+		-71, -61, "unit-teuton-archer", 3000, "arverni-tribe"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
@@ -345,8 +345,8 @@ DefineSettlement("dijon", {
 	},
 	HistoricalUnits = {
 		-- some troops to defend against the Suebi
-		-71, -61, "unit-teuton-swordsman", 4000, "aedui-tribe",
-		-71, -61, "unit-teuton-archer", 2000, "aedui-tribe"
+		-71, -61, "unit-teuton-swordsman", 6000, "aedui-tribe",
+		-71, -61, "unit-teuton-archer", 3000, "aedui-tribe"
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })

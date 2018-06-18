@@ -1126,6 +1126,18 @@ DefineUnitType("unit-teuton-smithy", {
 	}
 } )
 
+DefineUnitType("unit-teuton-masons-shop", {
+	Parent = "unit-template-masons-shop",
+	Civilization = "teuton",
+	Description = "Stonemasons work the stone gathered from quarries.",
+	Image = {"file", "teuton/buildings/masons_shop.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/masons_shop_shadow.png", "size", {96, 96}},
+	Icon = "icon-teuton-masons-shop",
+	Sounds = {
+--		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-teuton-stables", {
 	Parent = "unit-template-stables",
 	Civilization = "teuton",

@@ -128,7 +128,6 @@ DefineCampaign("the-second-punic-war", {
 })
 --]]
 
---[[
 DefineCampaign("ariovistus-ambition", {
 	Name = "Ariovistus' Ambition",
 	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
@@ -139,6 +138,7 @@ DefineCampaign("ariovistus-ambition", {
 	}
 })
 
+--[[
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",

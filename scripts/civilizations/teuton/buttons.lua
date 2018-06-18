@@ -189,7 +189,13 @@ DefineButton( { Pos = 5, Level = 1,
 	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
-  
+
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-teuton-masons-shop",
+	Action = "build", Value = "unit-teuton-masons-shop",
+	Key = "n", Hint = "Build Maso~!n's Shop", Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+})
+
 DefineButton( { Pos = 7, Level = 1,
 	Action = "build", Value = "unit-teuton-stables",
 	Key = "e", Hint = "Build Stabl~!es", Popup = "popup-building",

@@ -750,6 +750,18 @@ DefineUnitType("unit-goblin-smithy", {
 	}
 })
 
+DefineUnitType("unit-goblin-masons-shop", {
+	Parent = "unit-template-masons-shop",
+	Civilization = "goblin",
+	Description = "Goblin stonemasons take advantage of the abundant stone sources in the caves their people tend to dwell, making use of them for various ends.",
+	Image = {"file", "goblin/buildings/masons_shop.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/masons_shop_shadow.png", "size", {96, 96}},
+	Icon = "icon-goblin-masons-shop",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-goblin-temple", {
 	Name = "Temple",
 	Parent = "unit-template-temple",

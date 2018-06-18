@@ -237,7 +237,8 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-norse-dock",
 		"unit-teuton-town-hall", -- "unit-teuton-stronghold",
 		"unit-teuton-farm", "unit-teuton-barracks",
-		"unit-teuton-lumber-mill", "unit-teuton-smithy", "unit-teuton-stables",
+		"unit-teuton-lumber-mill", "unit-teuton-smithy", "unit-teuton-masons-shop",
+		"unit-teuton-stables",
 		"unit-teuton-temple", "unit-teuton-university",
 		"unit-teuton-market", "unit-teuton-dock",
 		"unit-teuton-watch-tower", "unit-teuton-guard-tower", "unit-teuton-catapult-tower",
@@ -256,7 +257,9 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 		"unit-gnomish-barracks",
 		"unit-gnomish-farm",
 		"unit-goblin-town-hall", -- "unit-goblin-stronghold",
-		"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-market", "unit-goblin-academy",
+		"unit-goblin-mess-hall", "unit-goblin-farm",
+		"unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-masons-shop",
+		"unit-goblin-temple", "unit-goblin-market", "unit-goblin-academy",
 		"unit-goblin-watch-tower", "unit-goblin-guard-tower", "unit-goblin-catapult-tower",
 		"unit-goblin-dock",
 		"unit-goblin-banner",
@@ -2296,24 +2299,16 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-iron-plow",
 	}
 } )
 
-DefineButton( { Pos = 8, Level = 0, Icon = "icon-masonry",
-	Action = "research", Value = "upgrade-masonry",
-	Allowed = "check-single-research",
-	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
-	ForUnit = {
-		"unit-goblin-lumber-mill",
-		"unit-norse-lumber-mill",
-		"unit-teuton-lumber-mill"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
 	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
-	ForUnit = {"unit-dwarven-masons-shop"}
+	ForUnit = {
+		"unit-dwarven-masons-shop",
+		"unit-goblin-masons-shop",
+		"unit-teuton-masons-shop"
+	}
 } )
 
 DefineButton( { Pos = 7, Level = 0, Icon = "icon-anvil",
