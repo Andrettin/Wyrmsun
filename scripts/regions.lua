@@ -70,7 +70,7 @@ DefineRegion("czechoslovakia", {
 DefineRegion("england", {
 	Name = "England",
 	HistoricalPopulation = {
-		1401, 4000000, -- 4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 4000000, -- 4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 5000000 -- 5 million people lived in England around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
@@ -104,7 +104,7 @@ DefineRegion("europe", {
 DefineRegion("france", {
 	Name = "France",
 	HistoricalPopulation = {
-		1401, 21000000, -- 21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 21000000, -- 21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 17000000 -- 17 million people lived in France around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
@@ -119,7 +119,7 @@ DefineRegion("gaul", {
 DefineRegion("germany-netherlands", {
 	Name = "Germany-Netherlands",
 	HistoricalPopulation = {
-		1401, 15000000, -- 15 million people lived in Germany-Netherlands during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 15000000, -- 15 million people lived in Germany-Netherlands during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 20000000 -- 20 million people lived in Germany-Netherlands around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
@@ -135,7 +135,7 @@ DefineRegion("iberia", {
 	Name = "Iberia",
 	HistoricalPopulation = {
 		-27, 6000000, -- 6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
-		1401, 6000000, -- 6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 6000000, -- 6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 10000000 -- 10 million people lived in Spain-Portugal around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
@@ -144,7 +144,7 @@ DefineRegion("italy", {
 	Name = "Italy",
 	HistoricalPopulation = {
 		-27, 14000000, -- 14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
-		1401, 11000000, -- 11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 11000000, -- 11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 13000000 -- 13 million people lived in Italy around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
@@ -181,7 +181,7 @@ DefineRegion("roman-danube", {
 DefineRegion("scandinavia", {
 	Name = "Scandinavia",
 	HistoricalPopulation = {
-		1401, 2000000, -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1301, 2000000, -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 2000000 -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
 })
