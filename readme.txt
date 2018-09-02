@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 * Civilizations
 - The Norse civilization is now playable.
 
+* Map Editor
+- Fixed issue which caused prefix/suffix for certain item types to be reset when opening up their properties.
+
 * Miscellaneous
 - Building entries in the encyclopedia are now separated by civilization (as occurs with units and technologies).
 - Ctrl-clicking resource sell buttons now toggles the autosale of that resource.

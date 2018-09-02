@@ -1035,7 +1035,9 @@ function EditUnitProperties()
 	menu:addLabel(_("Hit Points:"), (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
 	local hp_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints"), sizeX - 60 - 10, 11 + 36 * 7, 60)
 	
-	UniqueChanged()
+	if (GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") ~= "") then
+		UniqueChanged()
+	end
 
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()

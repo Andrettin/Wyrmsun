@@ -472,7 +472,7 @@ DefineUniqueItem("daliborka", { -- Source: Alena Ježková, "77 Prague Legends",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
 	Suffix = ?,
-	Background = "Daliborka was a prison tower in Prague, named after its most renowned capative, Dalibor of Kozajedy."
+	Background = "Daliborka was a prison tower in Prague, named after its most renowned captive, Dalibor of Kozajedy."
 } )
 
 DefineUniqueItem("the-white-tower", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
