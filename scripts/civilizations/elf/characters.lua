@@ -71,7 +71,7 @@ DefineCharacter("widia", { -- son of Weland (Völund); Source: Paul Beekman Tayl
 })
 
 DefineCharacter("argante", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.
-	Name = "Argante", -- Elven Queen whom King Arthur met; described as beautiful
+	Name = "Argante", -- elven queen whom King Arthur met; described as beautiful
 	Gender = "female",
 	Type = "unit-elven-swordsman",
 	Civilization = "elf"

@@ -98,7 +98,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	end
 })
 
-DefineCharacter("galar", {
+DefineCharacter("galar", { -- dwarf from Norse mythology who, with the help of his brother Fjalar, brew Kvasir's blood into the Mead of Poetry
 	Name = "Galar",
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be an alchemist

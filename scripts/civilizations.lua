@@ -897,7 +897,6 @@ DefineCivilization("dwarf", {
 		"male", "Frag", -- dwarf from Norse mythology
 		"male", "Frar", -- dwarf from Norse mythology
 		"male", "Fundin", -- dwarf from Norse mythology
-		"male", "Galar", -- dwarf from Norse mythology who, with the help of his brother Fjalar, brew Kvasir's blood into the Mead of Poetry
 		"male", "Ginnar", -- dwarf from Norse mythology
 		"male", "Glamaithil", -- from Battle for Wesnoth
 		"male", "Glamaithis", -- from Battle for Wesnoth
