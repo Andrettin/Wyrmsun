@@ -1126,7 +1126,7 @@ DefineCivilization("dwarf", {
 		"male", "Vig", -- dwarf from Norse mythology
 		"male", "Vigdvalin", -- "Víg-dvalinn"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
 		"male", "Virfir", -- dwarf from Norse mythology
-		"male", "Vit", -- dwarf from Norse mythology
+		"male", "Vit" -- dwarf from Norse mythology
 	},
 	--[[
 	SettlementNames = {
