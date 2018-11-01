@@ -157,7 +157,8 @@ SetDamageMissile("missile-hit")
 --  Uncomment next, to reveal the complete map.
 --RevealMap()
 
-SetFogOfWarGraphics("tilesets/fogofwar.png")
+SetFogOfWarGraphics("tilesets/fogofwar.png", {32, 32})
+SetFogOfWarGraphics("tilesets/fogofwar_64.png", {64, 64})
 
 -------------------------------------------------------------------------------
 
