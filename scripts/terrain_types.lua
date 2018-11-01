@@ -1642,6 +1642,15 @@ DefineTerrainType("teuton-wall", {
 	}
 })
 
+DefineTerrainType("plains-overland", {
+	Name = "Plains",
+	Buildable = true,
+	Flags = {"land", "grass"},
+	Graphics = "terrain/overland/plains.png",
+	PixelTileSize = {64, 64},
+	SolidTiles = {0, 1, 2, 3, 4}
+})
+
 DefineTerrainType("border", {
 	Name = "Border",
 	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "desert-sand", "snow", "ice", "ford"},
