@@ -195,136 +195,137 @@ function RunGameSoundOptionsMenu()
 end
 
 function AddPreferences(menu, offx, offy, centerx, bottom)
-  local l
+	local l
 
-  l = menu:addLabel(_("Preferences"), 176, 11)
+	l = menu:addLabel(_("Preferences"), 176, 11)
 
-  --[[
-  local fog = {}
-  fog = menu:addImageCheckBox("Fog of War", offx + 16, offy + 26 * 0,
-    function() SetFogOfWar(fog:isMarked()) end)
-  fog:setMarked(GetFogOfWar())
-  if (IsReplayGame() or IsNetworkGame()) then
-    fog:setEnabled(false)
-  end
-  --]]
+	--[[
+	local fog = {}
+	fog = menu:addImageCheckBox("Fog of War", offx + 16, offy + 26 * 0,
+		function() SetFogOfWar(fog:isMarked()) end)
+	fog:setMarked(GetFogOfWar())
+	if (IsReplayGame() or IsNetworkGame()) then
+		fog:setEnabled(false)
+	end
+	--]]
 
-  local ckey = {}
-  ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16, offy + 26 * 1,
-    function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
-  ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
-  ckey:adjustSize()
+	local ckey = {}
+	ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16, offy + 26 * 1,
+		function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
+	ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
+	ckey:adjustSize()
 
-  local mouse_grabbing = {}
-  mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 26 * 2,
-    function()
-        wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
-        SetGrabMouse(wyr.preferences.GrabMouse)
-        SavePreferences()
-    end
-  )
-  mouse_grabbing:setMarked(GetGrabMouse())
-  mouse_grabbing:adjustSize()
+	local mouse_grabbing = {}
+	mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 26 * 2,
+		function()
+			wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
+			SetGrabMouse(wyr.preferences.GrabMouse)
+			SavePreferences()
+		end
+	)
+	mouse_grabbing:setMarked(GetGrabMouse())
+	mouse_grabbing:adjustSize()
+	mouse_grabbing:setTooltip(_("Ensures the mouse will be kept within the game's window"))
 
-  local reverse_mouse_wheel_scrolling = {}
-  reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16, offy + 26 * 3,
-    function()
-        wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
-        SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
-        SavePreferences()
-    end
-  )
-  reverse_mouse_wheel_scrolling:setMarked(wyr.preferences.MouseScrollSpeedDefault < 0)
-  reverse_mouse_wheel_scrolling:adjustSize()
+	local reverse_mouse_wheel_scrolling = {}
+	reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16, offy + 26 * 3,
+		function()
+			wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
+			SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
+			SavePreferences()
+		end
+	)
+	reverse_mouse_wheel_scrolling:setMarked(wyr.preferences.MouseScrollSpeedDefault < 0)
+	reverse_mouse_wheel_scrolling:adjustSize()
 
-  l = Label(_("Game Speed"))
-  l:setFont(CFont:Get("game"))
-  l:adjustSize()
-  menu:add(l, offx + 16, offy + 36 * 3)
+	l = Label(_("Game Speed"))
+	l:setFont(CFont:Get("game"))
+	l:adjustSize()
+	menu:add(l, offx + 16, offy + 36 * 3)
 
-  local gamespeed = {}
-  -- slider button to decrease slider value
-  gamespeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
+	local gamespeed = {}
+	-- slider button to decrease slider value
+	gamespeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
 
-  -- slider button to decrease slider value
-  gamespeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
+	-- slider button to decrease slider value
+	gamespeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
 
-  -- slider itself
-  gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, offy + 36 * 3.5, function() SetGameSpeed(gamespeed:getValue()) end)
+	-- slider itself
+	gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, offy + 36 * 3.5, function() SetGameSpeed(gamespeed:getValue()) end)
 
-  -- set the value so the game saves it
-  gamespeed:setValue(GetGameSpeed())
+	-- set the value so the game saves it
+	gamespeed:setValue(GetGameSpeed())
 
-  l = Label("slow")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize()
-  menu:addCentered(l, offx + 32, offy + 36 * 4 + 6)
+	l = Label("slow")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize()
+	menu:addCentered(l, offx + 32, offy + 36 * 4 + 6)
 
-  l = Label("fast")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize()
-  menu:addCentered(l, offx + 224, offy + 36 * 4 + 6)
+	l = Label("fast")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize()
+	menu:addCentered(l, offx + 224, offy + 36 * 4 + 6)
 
-  menu:addLabel(_("Mouse Scroll Speed"), offx + 16, offy + (36 * 5), CFont:Get("game"), false)
+	menu:addLabel(_("Mouse Scroll Speed"), offx + 16, offy + (36 * 5), CFont:Get("game"), false)
 
-  local mousescrollspeed = {}
-  -- slider button to decrease slider value
-  mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	local mousescrollspeed = {}
+	-- slider button to decrease slider value
+	mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
-  -- slider button to decrease slider value
-  mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	-- slider button to decrease slider value
+	mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
-  -- slider itself
-  mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, offy + 36 * 5.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	-- slider itself
+	mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, offy + 36 * 5.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
-  -- set the value so the game saves it
-  mousescrollspeed:setValue(GetMouseScrollSpeed())
+	-- set the value so the game saves it
+	mousescrollspeed:setValue(GetMouseScrollSpeed())
 
-  l = Label("slow")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize()
-  menu:addCentered(l, offx + 32, offy + 36 * 6 + 6)
+	l = Label("slow")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize()
+	menu:addCentered(l, offx + 32, offy + 36 * 6 + 6)
 
-  l = Label("fast")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize()
-  menu:addCentered(l, offx + 224, offy + 36 * 6 + 6)
+	l = Label("fast")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize()
+	menu:addCentered(l, offx + 224, offy + 36 * 6 + 6)
 
-  menu:addLabel(_("Key Scroll Speed"), offx + 16, offy + (36 * 7), CFont:Get("game"), false)
+	menu:addLabel(_("Key Scroll Speed"), offx + 16, offy + (36 * 7), CFont:Get("game"), false)
 
-  local keyscrollspeed = {}
-  -- slider button to decrease slider value
-  keyscrollspeed = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() - .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	local keyscrollspeed = {}
+	-- slider button to decrease slider value
+	keyscrollspeed = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() - .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
-  -- slider button to increase slider value
-  keyscrollspeed = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() + .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	-- slider button to increase slider value
+	keyscrollspeed = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() + .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
-  -- slider itself
-  keyscrollspeed = menu:addImageSlider(1, 10, 172, 18, offx + 41, offy + 36 * 7.5, function() SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	-- slider itself
+	keyscrollspeed = menu:addImageSlider(1, 10, 172, 18, offx + 41, offy + 36 * 7.5, function() SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
-  -- set the value so the game saves it
-  keyscrollspeed:setValue(GetKeyScrollSpeed())
+	-- set the value so the game saves it
+	keyscrollspeed:setValue(GetKeyScrollSpeed())
 
-  l = Label("slow")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize();
-  menu:addCentered(l, offx + 32, offy + 36 * 8 + 6)
+	l = Label("slow")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize();
+	menu:addCentered(l, offx + 32, offy + 36 * 8 + 6)
 
-  l = Label("fast")
-  l:setFont(CFont:Get("small"))
-  l:adjustSize()
-  menu:addCentered(l, offx + 224, offy + 36 * 8 + 6)
+	l = Label("fast")
+	l:setFont(CFont:Get("small"))
+	l:adjustSize()
+	menu:addCentered(l, offx + 224, offy + 36 * 8 + 6)
 
-  menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
-    function()
-      wyr.preferences.FogOfWar = GetFogOfWar()
-      wyr.preferences.ShowCommandKey = UI.ButtonPanel.ShowCommandKey
-      wyr.preferences.GameSpeed = GetGameSpeed()
-      wyr.preferences.MouseScrollSpeed = GetMouseScrollSpeed()
-      wyr.preferences.KeyScrollSpeed = GetKeyScrollSpeed()
-      SavePreferences()
-      menu:stop()
-    end)
+	menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
+		function()
+			wyr.preferences.FogOfWar = GetFogOfWar()
+			wyr.preferences.ShowCommandKey = UI.ButtonPanel.ShowCommandKey
+			wyr.preferences.GameSpeed = GetGameSpeed()
+			wyr.preferences.MouseScrollSpeed = GetMouseScrollSpeed()
+			wyr.preferences.KeyScrollSpeed = GetKeyScrollSpeed()
+			SavePreferences()
+			menu:stop()
+		end)
 end
 
 function RunPreferencesMenu()
@@ -485,6 +486,7 @@ function RunGameplayOptionsMenu()
 		end
 	)
 	b:setMarked(wyr.preferences.GrabMouse)
+	b:setTooltip(_("Ensures the mouse will be kept within the game's window"))
 
 	b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*3 + 14,
 		function()
