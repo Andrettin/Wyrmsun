@@ -1582,6 +1582,22 @@ function LoadHeroes()
 	end
 end
 
+function LoadDataFiles(directory)
+	-- load the data files
+	local fileslist = ListFilesInDirectory(directory)
+	for i, f in ipairs(fileslist) do
+		if (string.find(f, ".cfg")) then
+			Load(directory .. f)
+		end
+	end
+	
+	-- load files in subdirectories as well
+	local subdirs = ListDirsInDirectory(directory)
+	for i, f in ipairs(subdirs) do
+		LoadDataFiles(directory .. f .. "/")
+	end
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
@@ -1906,5 +1922,7 @@ Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 Load("scripts/texts.lua")
 Load("scripts/ui.lua")
+
+LoadDataFiles("data/")
 
 DebugPrint("... ready!\n")

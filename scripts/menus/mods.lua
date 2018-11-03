@@ -205,7 +205,13 @@ function LoadMods()
 			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
 			Load(wyr.preferences.EnabledMods[i])
 			table.insert(MapDirectories, tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "maps/")))
-			Load(tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main")))
+			local mod_main_lua_file = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main"))
+			if (CanAccessFile(mod_main_lua_file)) then
+				Load(mod_main_lua_file)
+			end
+			if (CanAccessFile(ModPath .. "data/")) then
+				LoadDataFiles(ModPath .. "data/")
+			end
 		end
 	end
 	
@@ -234,6 +240,9 @@ function LoadDLCs()
 			if (string.find(f, "main.lua")) then
 				ModPath = "dlcs/" .. dirlist[j]
 				Load(ModPath .. f)
+				if (CanAccessFile(ModPath .. "data/")) then
+					LoadDataFiles(ModPath .. "data/")
+				end
 			elseif (string.find(f, "oaml.defs")) then
 				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
 			end

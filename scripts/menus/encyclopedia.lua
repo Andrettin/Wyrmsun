@@ -176,7 +176,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 	elseif (state == "heroes") then
 		local heroes = GetCharacters()
 		for i = 1, table.getn(heroes) do
-			if (GetCharacterData(heroes[i], "BaseIcon") ~= "" and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
+			if (GetCharacterData(heroes[i], "IsUsable") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
 				local element_civilization = GetCharacterData(heroes[i], "Civilization")
 				if (element_civilization == "") then
 					element_civilization = "neutral"
