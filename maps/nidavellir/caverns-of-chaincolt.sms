@@ -153,7 +153,7 @@ if (GrandStrategy == false) then
 	end
 
 	-- Bandits
-	unit = CreateUnit("unit-dwarven-town-hall", 1, {11, 50})
+	unit = CreateUnit("unit-dwarven-town-hall", 1, {10, 49})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 61})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {7, 54})
 	unit = CreateUnit("unit-dwarven-steelclad", 1, {11, 50})
