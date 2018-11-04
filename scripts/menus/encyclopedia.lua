@@ -64,7 +64,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaGameConceptsMenu() end)
 
 	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*4,
-		function() RunEncyclopediaUnitsMenu("heroes") end)
+		function() RunEncyclopediaUnitsCivilizationMenu("heroes") end)
 
 	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("items") end)
@@ -352,7 +352,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		table.sort(heroes, compare_hero)
 		
 		for i = 1, table.getn(heroes) do
-			if (GetCharacterData(heroes[i], "IsUsable") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "" or GetCharacterData(heroes[i], "Quote") ~= "")) then
+			if (GetCharacterData(heroes[i], "IsUsable") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "" or GetCharacterData(heroes[i], "Quote") ~= "") and GetCharacterData(heroes[i], "Civilization") == civilization) then
 				addEncyclopediaIcon(heroes[i], state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0

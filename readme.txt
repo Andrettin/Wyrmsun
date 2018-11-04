@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Encyclopedia
 - Added encyclopedia entries for any hero that has a description, background or quote, even if they don't have a special icon.
+- Hero encyclopedia entries are now categorized by civilization.
 
 * Quests
 - Fixed issue which caused the "Closing the Gates" and "Gathering Materials" quests to hang when being started.
