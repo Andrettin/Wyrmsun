@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.4.1
 -----------------------------------------------------------------------
 
+* Encyclopedia
+- Added encyclopedia entries for any hero that has a description, background or quote, even if they don't have a special icon.
+
 * Quests
 - Fixed issue which caused the "Closing the Gates" and "Gathering Materials" quests to hang when being started.
 

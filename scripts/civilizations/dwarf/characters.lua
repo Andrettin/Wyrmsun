@@ -263,7 +263,7 @@ DefineCharacter("dvalin", {
 	Gender = "male",
 	Type = "unit-dwarven-loremaster",
 	Civilization = "dwarf",
-	Background = "In Norse mythology, Dvalin was a dwarf who taught knowledge of the runes to his fellow members of that kin.",
+	Background = "In Norse mythology, Dvalin was a dwarf who taught knowledge of the runes to his fellow dwarves.",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
 	Deities = {"odin", "tyr"}
@@ -275,7 +275,7 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-dwarven-loremaster",
 	Civilization = "dwarf",
-	Background = "In the ~<Alvismol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
+	Background = "In the ~<Alvissmol~>, Alvis is an extremely knowledgeable dwarf who desires to marry Thor's daughter. His name means \"all-knowing\" or \"all-wise\".",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
 	Deities = {"odin", "tyr"}
