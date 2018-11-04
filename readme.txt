@@ -61,7 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Quests
-- Fixed issue which caused the "Closing the Gates" quest to hang when being started.
+- Fixed issue which caused the "Closing the Gates" and "Gathering Materials" quests to hang when being started.
 
 * User Interface
 - Added tooltip to describe what the Mouse Grabbing option does.
