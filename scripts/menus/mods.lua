@@ -204,13 +204,24 @@ function LoadMods()
 			ModName = ""
 			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
 			Load(wyr.preferences.EnabledMods[i])
-			table.insert(MapDirectories, tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "maps/")))
-			local mod_main_lua_file = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main"))
-			if (CanAccessFile(mod_main_lua_file)) then
-				Load(mod_main_lua_file)
+			
+			local has_required_dependencies = true
+			if (ModDependencies ~= nil) then
+				for i=1,table.getn(ModDependencies) do
+					if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+						has_required_dependencies = false
+					end
+				end
 			end
-			if (CanAccessFile(ModPath .. "data/")) then
-				LoadDataFiles(ModPath .. "data/")
+			if (has_required_dependencies) then
+				table.insert(MapDirectories, tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "maps/")))
+				local mod_main_lua_file = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main"))
+				if (CanAccessFile(mod_main_lua_file)) then
+					Load(mod_main_lua_file)
+				end
+				if (CanAccessFile(ModPath .. "data/")) then
+					LoadDataFiles(ModPath .. "data/")
+				end
 			end
 		end
 	end
