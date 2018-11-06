@@ -793,8 +793,19 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetCharacterData(unit_name, "Type") ~= "") then
 			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
+		local deities = GetCharacterData(unit_name, "Deities")
+		if (table.getn(deities) > 0) then
+			description = description .. _("Deities") .. ": "
+			for i=1,table.getn(deities) do
+				description = description .. _(GetDeityData(deities[i], "Name"))
+				if (i < table.getn(deities)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = _("Description") .. ": " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
+			description = description .. _("Description") .. ": " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Quote") ~= "") then
 			quote = _("Quote") .. ": " .. _(GetCharacterData(unit_name, "Quote")) .. "\n\n"
