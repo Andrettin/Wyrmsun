@@ -1642,6 +1642,15 @@ DefineTerrainType("teuton-wall", {
 	}
 })
 
+DefineTerrainType("dark-plains-overland", {
+	Name = "Dark Plains",
+	Buildable = true,
+	Flags = {"land", "grass"},
+	Graphics = "terrain/overland/dark_plains.png",
+	PixelTileSize = {64, 64},
+	SolidTiles = {0, 1, 2, 3, 4}
+})
+
 DefineTerrainType("plains-overland", {
 	Name = "Plains",
 	Buildable = true,
