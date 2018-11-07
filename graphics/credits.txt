@@ -922,7 +922,7 @@
 /graphics/neutral/icons/furniture.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/galerix_exilis.png (by Mrmo Tarius) (licensed under the CC0)
 /graphics/neutral/icons/garrison.png (by Jinn) (licensed under the CC0)
-/graphics/neutral/icons/giant_spider.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/giant_spider.png (by Jinn and Gregor-Mack) (licensed under the CC0)
 /graphics/neutral/icons/goat.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/gold.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/gryphon.png (by Jinn) (licensed under the CC0)
