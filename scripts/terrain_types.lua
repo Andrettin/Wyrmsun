@@ -448,7 +448,7 @@ DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
 	Color = {0, 128, 255},
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
 	Overlay = true,
 	Flags = {"water"},
 	AllowSingle = true,
@@ -530,7 +530,7 @@ DefineTerrainType("shallow-water", {
 DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
 	Character = "y",
-	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow", "ice", "ford"},
+	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow", "ice", "ford"},
 	Overlay = true,
 	Flags = {"water"},
 	Graphics = "terrain/gray_shallow_water.png",
@@ -576,7 +576,7 @@ DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Character = "h",
 	Color = {32, 32, 0},
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
@@ -765,7 +765,7 @@ DefineTerrainType("gold-pile", {
 DefineTerrainType("dungeon-wall", {
 	Name = "Dungeon Wall",
 	Buildable = true,
-	BaseTerrains = {"floor", "cave-floor"},
+	BaseTerrainTypes = {"floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable", "air-unpassable"},
 	AllowSingle = true,
@@ -964,7 +964,7 @@ DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
 	Character = "v",
 	Color = {32, 32, 32},
-	BaseTerrains = {"rockbound-cave-floor", "cave-floor", "snow"},
+	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
 	Graphics = "terrain/cave_wall.png",
@@ -1007,7 +1007,7 @@ DefineTerrainType("rock", {
 	Name = "Rock",
 	Character = "k",
 	Color = {128, 128, 128},
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock.png",
@@ -1053,7 +1053,7 @@ DefineTerrainType("rock", {
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
 	Color = {128, 160, 128},
-	BaseTerrains = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
@@ -1107,7 +1107,7 @@ DefineTerrainType("limestone-rock", {
 DefineTerrainType("rock-snow", {
 	Name = "Rock (Snow)",
 	Color = {160, 128, 160},
-	BaseTerrains = {"snow"},
+	BaseTerrainTypes = {"snow"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/rock_snow.png",
@@ -1153,7 +1153,7 @@ DefineTerrainType("rock-snow", {
 DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
 	Character = "i",
-	BaseTerrains = {"grass"},
+	BaseTerrainTypes = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/fairlimbed_tree.png",
@@ -1184,7 +1184,7 @@ DefineTerrainType("flamefood-tree", {
 	Name = "Flamefood Tree",
 	Character = "l",
 	Color = {128, 128, 0},
-	BaseTerrains = {"dry-mud"},
+	BaseTerrainTypes = {"dry-mud"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/flamefood_tree.png",
@@ -1213,7 +1213,7 @@ DefineTerrainType("pine-tree", {
 	Name = "Pine Tree",
 	Character = "t",
 	Color = {0, 128, 0},
-	BaseTerrains = {"grass"},
+	BaseTerrainTypes = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/pine_tree.png",
@@ -1241,7 +1241,7 @@ DefineTerrainType("pine-tree", {
 DefineTerrainType("pine-tree-snow", {
 	Name = "Pine Tree (Snow)",
 	Color = {64, 128, 64},
-	BaseTerrains = {"snow"},
+	BaseTerrainTypes = {"snow"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	Graphics = "terrain/pine_tree_snow.png",
@@ -1268,7 +1268,7 @@ DefineTerrainType("pine-tree-snow", {
 
 DefineTerrainType("road", {
 	Name = "Road",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "road", "stone-floor"},
 	AllowSingle = true,
@@ -1329,7 +1329,7 @@ DefineTerrainType("road", {
 
 DefineTerrainType("railroad", { -- also represents tramways when linking a settlement's buildings
 	Name = "Railroad",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "railroad"},
 	AllowSingle = true,
@@ -1390,7 +1390,7 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 
 DefineTerrainType("norse-palisade", {
 	Name = "Palisade",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1454,7 +1454,7 @@ DefineTerrainType("norse-palisade", {
 DefineTerrainType("dwarven-wall", {
 	Name = "Wall",
 	Color = {128, 160, 160},
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1518,7 +1518,7 @@ DefineTerrainType("dwarven-wall", {
 DefineTerrainType("goblin-wall", {
 	Name = "Wall",
 	Color = {160, 128, 128},
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1581,7 +1581,7 @@ DefineTerrainType("goblin-wall", {
 
 DefineTerrainType("teuton-wall", {
 	Name = "Wall",
-	BaseTerrains = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
@@ -1642,27 +1642,9 @@ DefineTerrainType("teuton-wall", {
 	}
 })
 
-DefineTerrainType("dark-plains-overland", {
-	Name = "Dark Plains",
-	Buildable = true,
-	Flags = {"land", "grass"},
-	Graphics = "terrain/overland/dark_plains.png",
-	PixelTileSize = {64, 64},
-	SolidTiles = {0, 1, 2, 3, 4}
-})
-
-DefineTerrainType("plains-overland", {
-	Name = "Plains",
-	Buildable = true,
-	Flags = {"land", "grass"},
-	Graphics = "terrain/overland/plains.png",
-	PixelTileSize = {64, 64},
-	SolidTiles = {0, 1, 2, 3, 4}
-})
-
 DefineTerrainType("border", {
 	Name = "Border",
-	BaseTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "desert-sand", "snow", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "dry-mud", "grass", "desert-sand", "snow", "ice", "ford"},
 	Overlay = true,
 	AllowSingle = true,
 	Hidden = true,
