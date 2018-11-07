@@ -1540,6 +1540,8 @@
 /graphics/tilesets/world/terrain/scrub_forest_3.png (by Jinn) (licensed under the CC0)
 /graphics/tilesets/world/terrain/scrub_forest_4.png (by Jinn) (licensed under the CC0)
 /graphics/tilesets/fogofwar.png (by Jinn) (licensed under the CC0)
+/graphics/troll/icons/warrior.png (by Jinn) (licensed under the CC0)
+/graphics/troll/icons/warrior_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/ui/backgrounds/gnashorn.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gnashorn_profile.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gnashorn_small.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
