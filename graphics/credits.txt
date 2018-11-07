@@ -796,6 +796,7 @@
 /graphics/neutral/buildings/mithril_mine.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/mithril_mine_light.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/mithril_mine_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/buildings/police_box.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/portal.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/portal_purple.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/railroad.png (by Jinn) (licensed under the CC0)
