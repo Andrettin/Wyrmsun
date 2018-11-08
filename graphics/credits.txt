@@ -1545,6 +1545,7 @@
 /graphics/troll/icons/warrior_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/troll/units/corpse.png (by Jinn) (licensed under the CC0)
 /graphics/troll/units/warrior.png (by Jinn) (licensed under the CC0)
+/graphics/troll/units/worker.png (by Jinn) (licensed under the CC0)
 /graphics/ui/backgrounds/gnashorn.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gnashorn_profile.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
 /graphics/ui/backgrounds/gnashorn_small.png (drawing by Tanja Nov) (proprietary and used for Wyrmsun with permission)
