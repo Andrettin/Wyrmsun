@@ -1161,6 +1161,7 @@
 /graphics/suebi/units/suebi_shield.png (by Jinn) (licensed under the CC0)
 /graphics/suebi/units/suebi_warrior.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/terrain/overland/dark_plains.png (by Jinn) (licensed under the CC0)
+/graphics/terrain/overland/ocean.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/overland/plains.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/overland/scrub_forest.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/border_player_color.png (by Jinn) (licensed under the CC0)
