@@ -2387,7 +2387,7 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
 DefineUnitType("unit-dwarven-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/dwarven_corpse.png", "size", {72, 72}},
-	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2435,7 +2435,7 @@ DefineUnitType("unit-goblin-dead-body", {
 DefineUnitType("unit-human-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
-	Animations = "animations-dwarven-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2452,6 +2452,22 @@ DefineUnitType("unit-kobold-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
 	Animations = "animations-kobold-dead-body", Icon = "icon-dwarven-miner",
+	HitPoints = 255,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Vanishes = true,
+	Detritus = true,
+	Sounds = {}
+} )
+
+DefineUnitType("unit-troll-dead-body", {
+	Name = "Dead Body",
+	Image = {"file", "troll/units/corpse.png", "size", {72, 72}},
+	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -4897,7 +4913,7 @@ DefineUnitType("unit-orc-spearthrower", {
 	Missile = "missile-javelin",
 	WeaponClasses = {"javelin"},
 	PierceDamage = true,
-	Corpse = "unit-dwarven-dead-body",
+--	Corpse = "unit-dwarven-dead-body",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",

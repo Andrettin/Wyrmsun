@@ -54,7 +54,7 @@ DefineUnitType("unit-ettin", {
 	Strength = 13,
 	Points = 100,
 	Level = 3,
---	Corpse = "unit-dwarven-dead-body",
+--	Corpse = "unit-troll-dead-body",
 	BluntDamage = true,
 	Giant = true,
 	Inventory = true,

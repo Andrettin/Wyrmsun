@@ -984,9 +984,11 @@ DefineAnimations("animations-tree-stump", {
 	}
 })
 
-DefineAnimations("animations-dwarven-dead-body", {
-  Death = {"unbreakable begin", "frame 0", "wait 200", "frame 5", "wait 200", "frame 10", "wait 200",
-    "frame 15", "wait 200", "frame 15", "unbreakable end", "wait 1",},
+DefineAnimations("animations-dead-body", {
+	Death = {
+		"unbreakable begin", "frame 0", "wait 200", "frame 5", "wait 200", "frame 10", "wait 200",
+		"frame 15", "wait 200", "frame 15", "unbreakable end", "wait 1",
+	},
 })
 
 DefineAnimations("animations-gnomish-dead-body", {
