@@ -1468,6 +1468,9 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
+LoadDataFiles("wyr/history/")
+GenerateHistory()
+
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
 
 -- load heroes after the DLCs and mods, so that they can use mod-specific items
@@ -1479,6 +1482,7 @@ else
 	LoadHeroes() -- load persistent heroes
 end
 LoadingPersistentHeroes = false
+
 
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
