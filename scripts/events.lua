@@ -303,6 +303,52 @@ function ProcessEventString(event_string)
 			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("it"))
 		end
 	end
+	if (string.find(event_string, "TRIGGER_HERO_MAJOR_DEITY") ~= nil) then
+		local hero_deities = GetCharacterData(trigger_hero, "Deities")
+		for i = 1,table.getn(hero_deities) do
+			if (GetDeityData(hero_deities[i], "Major")) then
+				event_string = string.gsub(event_string, "TRIGGER_HERO_MAJOR_DEITY", GetDeityData(hero_deities[i], "Name"))
+				break
+			end
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1_GOD_GODDESS") ~= nil) then
+		local hero_deities = GetCharacterData(trigger_hero, "Deities")
+		for i = 1,table.getn(hero_deities) do
+			if (GetDeityData(hero_deities[i], "Major") == false) then
+				local god_goddess = ""
+				if (GetDeityData(hero_deities[i], "Gender") == "female") then
+					god_goddess = _("Goddess")
+				else
+					god_goddess = _("God")
+				end
+				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_GOD_GODDESS", god_goddess)
+				break
+			end
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1") ~= nil) then
+		local hero_deities = GetCharacterData(trigger_hero, "Deities")
+		for i = 1,table.getn(hero_deities) do
+			if (GetDeityData(hero_deities[i], "Major") == false) then
+				local deity_domains = GetDeityData(hero_deities[i], "Domains")
+				for j = 1,table.getn(deity_domains) do
+					event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1", GetDeityDomainData(deity_domains[j], "Name"))
+					break
+				end
+				break
+			end
+		end
+	end
+	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1") ~= nil) then
+		local hero_deities = GetCharacterData(trigger_hero, "Deities")
+		for i = 1,table.getn(hero_deities) do
+			if (GetDeityData(hero_deities[i], "Major") == false) then
+				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1", GetDeityData(hero_deities[i], "Name"))
+				break
+			end
+		end
+	end
 	if (string.find(event_string, "TRIGGER_HERO") ~= nil) then
 		event_string = string.gsub(event_string, "TRIGGER_HERO", GetCharacterData(trigger_hero, "Name"))
 	end

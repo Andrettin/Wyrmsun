@@ -784,6 +784,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			background = _("Background") .. ": " .. _(CUpgrade:Get(unit_name).Background) .. "\n\n"
 		end
 	elseif (state == "heroes") then
+		trigger_hero = unit_name
+	
 		if (GetCharacterData(unit_name, "Civilization") ~= "") then
 			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
 			if (GetCharacterData(unit_name, "Faction") ~= "") then
@@ -805,13 +807,13 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			description = description .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = description .. _("Description") .. ": " .. _(GetCharacterData(unit_name, "Description")) .. "\n\n"
+			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(GetCharacterData(unit_name, "Quote")) .. "\n\n"
+			quote = _("Quote") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Quote"))) .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(GetCharacterData(unit_name, "Background")) .. "\n\n"
+			background = _("Background") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Background"))) .. "\n\n"
 		end
 	elseif (state == "deities") then
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
