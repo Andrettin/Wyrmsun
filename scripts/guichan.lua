@@ -1468,7 +1468,9 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
+LoadingHistory = true
 LoadDataFiles("wyr/history/")
+LoadingHistory = false
 GenerateHistory()
 
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
