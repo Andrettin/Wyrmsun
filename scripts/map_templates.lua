@@ -128,36 +128,6 @@ DefineMapTemplate("jotunheim", {
 	}
 })
 
-DefineMapTemplate("nidavellir", {
-	Name = "Nidavellir",
-	World = "nidavellir",
-	Width = 984,
-	Height = 728,
-	TerrainImage = "scripts/map_templates/nidavellir.png",
-	OverlayTerrainImage = "scripts/map_templates/nidavellir_overlay.png",
-	GeneratedNeutralUnits = {
-		"unit-gold-deposit", 4,
-		"unit-silver-deposit", 4,
-		"unit-copper-deposit", 4,
-		"unit-iron-deposit", 12,
-		"unit-mithril-deposit", 1,
-		"unit-diamond-deposit", 1,
-		"unit-yale-cave", 8,
-		"unit-tree-stump", 16,
-		"unit-snigill", 64,
-		"unit-slime", 32,
---		"unit-blood-bat", 16,
---		"unit-dread-bat", 8,
---		"unit-gryphon", 8,
-		"unit-wyrm", 4
-	},
-	PlayerLocationGeneratedNeutralUnits = {
-		"unit-copper-deposit", 1,
-		"unit-wood-pile", 16,
-		"unit-stone-pile", 16
-	}
-})
-
 DefineMapTemplate("nidavellir-underground", {
 	Name = "Nidavellir Underground",
 	World = "nidavellir",
