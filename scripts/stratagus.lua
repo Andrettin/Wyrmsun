@@ -1582,6 +1582,16 @@ function LoadHeroes()
 	end
 end
 
+function LoadDataDirectories(directory)
+	local data_directories = {"terrain_types", "unit_types", "map_templates", "characters"}
+	
+	for i = 1, table.getn(data_directories) do
+		if (CanAccessFile(directory .. data_directories[i] .. "/")) then
+			LoadDataFiles(directory .. data_directories[i] .. "/")
+		end
+	end
+end
+
 function LoadDataFiles(directory)
 	-- load the data files
 	local fileslist = ListFilesInDirectory(directory)
@@ -1923,6 +1933,6 @@ Load("scripts/achievements.lua")
 Load("scripts/texts.lua")
 Load("scripts/ui.lua")
 
-LoadDataFiles("data/")
+LoadDataDirectories("data/")
 
 DebugPrint("... ready!\n")

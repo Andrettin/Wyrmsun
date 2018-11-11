@@ -195,9 +195,8 @@ function LoadMods()
 	ModPath = ""
 	Mods = nil
 	Mods = {}
-	local mod_list = {}
   
-	for i=1,table.getn(wyr.preferences.EnabledMods) do
+	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
 			Load(wyr.preferences.EnabledMods[i])
 		else
@@ -220,7 +219,7 @@ function LoadMods()
 					Load(mod_main_lua_file)
 				end
 				if (CanAccessFile(ModPath .. "data/")) then
-					LoadDataFiles(ModPath .. "data/")
+					LoadDataDirectories(ModPath .. "data/")
 				end
 			end
 		end
@@ -252,7 +251,7 @@ function LoadDLCs()
 				ModPath = "dlcs/" .. dirlist[j]
 				Load(ModPath .. f)
 				if (CanAccessFile(ModPath .. "data/")) then
-					LoadDataFiles(ModPath .. "data/")
+					LoadDataDirectories(ModPath .. "data/")
 				end
 			elseif (string.find(f, "oaml.defs")) then
 				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
