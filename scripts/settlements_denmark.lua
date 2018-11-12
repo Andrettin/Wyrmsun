@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("aarhus", {
+DefineSite("aarhus", {
 	Name = "Aarhus",
 	MapTemplate = "earth",
 	Position = {4064, 777},
@@ -54,7 +54,7 @@ DefineSettlement("aarhus", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("brodrene-gram", {
+DefineSite("brodrene-gram", {
 	Name = "Brodrene Gram", -- in southern Jutland
 	MapTemplate = "earth",
 	Position = {4051, 790},
@@ -70,7 +70,7 @@ DefineSettlement("brodrene-gram", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("egtved", {
+DefineSite("egtved", {
 	Name = "Egtved",
 	MapTemplate = "earth",
 	Position = {4055, 781},
@@ -84,7 +84,7 @@ DefineSettlement("egtved", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("legard", {
+DefineSite("legard", {
 	Name = "Legard", -- in northwestern Jutland
 	MapTemplate = "earth",
 	Position = {4034, 752},
@@ -104,7 +104,7 @@ DefineSettlement("legard", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("leidre", {
+DefineSite("leidre", {
 	Name = "Leidre",
 	MapTemplate = "earth",
 	Position = {4112, 784},
@@ -129,7 +129,7 @@ DefineSettlement("leidre", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("store-tyrrestrup", {
+DefineSite("store-tyrrestrup", {
 	Name = "Store Tyrrestrup",
 	MapTemplate = "earth",
 	Position = {4070, 743},
@@ -147,7 +147,7 @@ DefineSettlement("store-tyrrestrup", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("vejle", {
+DefineSite("vejle", {
 	Name = "Vejle",
 	MapTemplate = "earth",
 	Position = {4058, 779},

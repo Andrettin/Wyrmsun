@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("arachotus", {
+DefineSite("arachotus", {
 	Name = "Arachotus",
 	MapTemplate = "earth",
 	Position = {5328, 1314},
@@ -42,7 +42,7 @@ DefineSettlement("arachotus", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("bactra", {
+DefineSite("bactra", {
 	Name = "Bactra",
 	MapTemplate = "earth",
 	Position = {5358, 1209},
@@ -59,7 +59,7 @@ DefineSettlement("bactra", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("bagistana", {
+DefineSite("bagistana", {
 	Name = "Bagistana",
 	MapTemplate = "earth",
 	Position = {4918, 1277},
@@ -75,7 +75,7 @@ DefineSettlement("bagistana", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("cazaca", {
+DefineSite("cazaca", {
 	Name = "Cazaca",
 	MapTemplate = "earth",
 	Position = {4901, 1209},
@@ -92,7 +92,7 @@ DefineSettlement("cazaca", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("cyropolis", {
+DefineSite("cyropolis", {
 	Name = "Cyropolis",
 	MapTemplate = "earth",
 	Position = {5395, 1153},
@@ -108,7 +108,7 @@ DefineSettlement("cyropolis", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("ecbatana", {
+DefineSite("ecbatana", {
 	Name = "Ecbatana",
 	MapTemplate = "earth",
 	Position = {4958, 1246},
@@ -127,7 +127,7 @@ DefineSettlement("ecbatana", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("harmozia", {
+DefineSite("harmozia", {
 	Name = "Harmozia",
 	MapTemplate = "earth",
 	Position = {5124, 1429},
@@ -144,7 +144,7 @@ DefineSettlement("harmozia", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("pasargadae", {
+DefineSite("pasargadae", {
 	Name = "Pasargadae",
 	MapTemplate = "earth",
 	Position = {5085, 1386},
@@ -161,7 +161,7 @@ DefineSettlement("pasargadae", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("persepolis", {
+DefineSite("persepolis", {
 	Name = "Persepolis",
 	MapTemplate = "earth",
 	Position = {5040, 1371},
@@ -177,7 +177,7 @@ DefineSettlement("persepolis", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("rhagae", {
+DefineSite("rhagae", {
 	Name = "Rhagae",
 	MapTemplate = "earth",
 	Position = {5018, 1237},
@@ -194,7 +194,7 @@ DefineSettlement("rhagae", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("susa", {
+DefineSite("susa", {
 	Name = "Susa",
 	MapTemplate = "earth",
 	Position = {4935, 1313},
@@ -214,7 +214,7 @@ DefineSettlement("susa", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("tarua", {
+DefineSite("tarua", {
 	Name = "Tarua",
 	MapTemplate = "earth",
 	Position = {5106, 1405},

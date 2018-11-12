@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("fiume", {
+DefineSite("fiume", {
 	Name = "Fiume",
 	MapTemplate = "earth",
 	Position = {4171, 1015},
@@ -47,7 +47,7 @@ DefineSettlement("fiume", {
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("narona", {
+DefineSite("narona", {
 	Name = "Narona",
 	MapTemplate = "earth",
 	Position = {4242, 1068},
@@ -63,7 +63,7 @@ DefineSettlement("narona", {
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("zagreb", {
+DefineSite("zagreb", {
 	Name = "Zagreb",
 	MapTemplate = "earth",
 	Position = {4204, 1005},

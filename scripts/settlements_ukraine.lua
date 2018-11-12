@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("kiev", {
+DefineSite("kiev", {
 	Name = "Kiev",
 	MapTemplate = "earth",
 	Position = {4532, 905},
@@ -43,7 +43,7 @@ DefineSettlement("kiev", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("zaporizhzhya", {
+DefineSite("zaporizhzhya", {
 	Name = "Zaporizhzhya",
 	MapTemplate = "earth",
 	Position = {4642, 959},

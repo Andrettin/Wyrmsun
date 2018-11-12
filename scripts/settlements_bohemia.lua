@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("budweis", {
+DefineSite("budweis", {
 	Name = "Budweis",
 	MapTemplate = "earth",
 	Position = {4167, 937},
@@ -44,7 +44,7 @@ DefineSettlement("budweis", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("jilova", {
+DefineSite("jilova", {
 	Name = "Jilova",
 	MapTemplate = "earth",
 	Position = {4169, 913},
@@ -57,7 +57,7 @@ DefineSettlement("jilova", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("kutna-hora", {
+DefineSite("kutna-hora", {
 	Name = "Kutna Hora",
 	MapTemplate = "earth",
 	Position = {4194, 927},
@@ -71,7 +71,7 @@ DefineSettlement("kutna-hora", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("prague", {
+DefineSite("prague", {
 	Name = "Prague",
 	MapTemplate = "earth",
 	Position = {4169, 908},

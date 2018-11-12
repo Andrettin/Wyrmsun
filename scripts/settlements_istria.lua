@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("gradisca", {
+DefineSite("gradisca", {
 	Name = "Gradisca",
 	MapTemplate = "earth",
 	Position = {4147, 1004},
@@ -41,7 +41,7 @@ DefineSettlement("gradisca", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("gorz", {
+DefineSite("gorz", {
 	Name = "Gorz",
 	MapTemplate = "earth",
 	Position = {4151, 1003},
@@ -57,7 +57,7 @@ DefineSettlement("gorz", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("pola", {
+DefineSite("pola", {
 	Name = "Pola",
 	MapTemplate = "earth",
 	Position = {4155, 1027},
@@ -75,7 +75,7 @@ DefineSettlement("pola", {
 	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineSettlement("trieste", {
+DefineSite("trieste", {
 	Name = "Trieste",
 	MapTemplate = "earth",
 	Position = {4154, 1009},

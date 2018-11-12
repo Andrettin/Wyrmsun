@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("geneva", {
+DefineSite("geneva", {
 	Name = "Geneva",
 	MapTemplate = "earth",
 	Position = {3982, 997},
@@ -46,7 +46,7 @@ DefineSettlement("geneva", {
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("martigny", {
+DefineSite("martigny", {
 	Name = "Martigny",
 	MapTemplate = "earth",
 	Position = {3996, 999},
@@ -65,7 +65,7 @@ DefineSettlement("martigny", {
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("vindonissa", {
+DefineSite("vindonissa", {
 	Name = "Vindonissa",
 	MapTemplate = "earth",
 	Position = {4029, 969},

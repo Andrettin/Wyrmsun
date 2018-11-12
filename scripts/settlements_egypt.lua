@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("abu-simbel", {
+DefineSite("abu-simbel", {
 	Name = "Abu Simbel",
 	MapTemplate = "earth",
 	Position = {4554, 1542},
@@ -41,7 +41,7 @@ DefineSettlement("abu-simbel", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("abydos", {
+DefineSite("abydos", {
 	Name = "Abydos",
 	MapTemplate = "earth",
 	Position = {4565, 1456},
@@ -60,7 +60,7 @@ DefineSettlement("abydos", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("heliopolis", {
+DefineSite("heliopolis", {
 	Name = "Heliopolis",
 	MapTemplate = "earth",
 	Position = {4554, 1362},
@@ -80,7 +80,7 @@ DefineSettlement("heliopolis", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("karnak", {
+DefineSite("karnak", {
 	Name = "Karnak",
 	MapTemplate = "earth",
 	Position = {4588, 1460},
@@ -99,7 +99,7 @@ DefineSettlement("karnak", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("memphis", {
+DefineSite("memphis", {
 	Name = "Memphis",
 	MapTemplate = "earth",
 	Position = {4546, 1363},
@@ -123,7 +123,7 @@ DefineSettlement("memphis", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("momemphis", {
+DefineSite("momemphis", {
 	Name = "Momemphis",
 	MapTemplate = "earth",
 	Position = {4543, 1350},
@@ -140,7 +140,7 @@ DefineSettlement("momemphis", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("napata", {
+DefineSite("napata", {
 	Name = "Napata",
 	MapTemplate = "earth",
 	Position = {4564, 1624},
@@ -156,7 +156,7 @@ DefineSettlement("napata", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("pelusium", {
+DefineSite("pelusium", {
 	Name = "Pelusium",
 	MapTemplate = "earth",
 	Position = {4579, 1340},
@@ -174,7 +174,7 @@ DefineSettlement("pelusium", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("sais", {
+DefineSite("sais", {
 	Name = "Sais",
 	MapTemplate = "earth",
 	Position = {4540, 1340},
@@ -195,7 +195,7 @@ DefineSettlement("sais", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("syene", {
+DefineSite("syene", {
 	Name = "Syene",
 	MapTemplate = "earth",
 	Position = {4589, 1498},
@@ -216,7 +216,7 @@ DefineSettlement("syene", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("tanis", {
+DefineSite("tanis", {
 	Name = "Tanis",
 	MapTemplate = "earth",
 	Position = {4566, 1342},
@@ -236,7 +236,7 @@ DefineSettlement("tanis", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("tentyris", {
+DefineSite("tentyris", {
 	Name = "Tentyris",
 	MapTemplate = "earth",
 	Position = {4581, 1456},
@@ -255,7 +255,7 @@ DefineSettlement("tentyris", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("thebes-egypt", {
+DefineSite("thebes-egypt", {
 	Name = "Thebes",
 	MapTemplate = "earth",
 	Position = {4582, 1466},
@@ -278,7 +278,7 @@ DefineSettlement("thebes-egypt", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("this", {
+DefineSite("this", {
 	Name = "This",
 	MapTemplate = "earth",
 	Position = {4563, 1450},

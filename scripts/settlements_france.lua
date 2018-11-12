@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amiens", {
+DefineSite("amiens", {
 	Name = "Amiens",
 	MapTemplate = "earth",
 	Position = {3888, 913},
@@ -48,7 +48,7 @@ DefineSettlement("amiens", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("antibes", {
+DefineSite("antibes", {
 	Name = "Antibes",
 	MapTemplate = "earth",
 	Position = {3995, 1056},
@@ -66,7 +66,7 @@ DefineSettlement("antibes", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("arles", {
+DefineSite("arles", {
 	Name = "Arles",
 	MapTemplate = "earth",
 	Position = {3948, 1053},
@@ -87,7 +87,7 @@ DefineSettlement("arles", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("autun", {
+DefineSite("autun", {
 	Name = "Autun",
 	MapTemplate = "earth",
 	Position = {3933, 981},
@@ -107,7 +107,7 @@ DefineSettlement("autun", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("avignon", {
+DefineSite("avignon", {
 	Name = "Avignon",
 	MapTemplate = "earth",
 	Position = {3952, 1045},
@@ -126,7 +126,7 @@ DefineSettlement("avignon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("besancon", {
+DefineSite("besancon", {
 	Name = "Besancon",
 	MapTemplate = "earth",
 	Position = {3977, 978},
@@ -158,7 +158,7 @@ DefineSettlement("besancon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("bordeaux", {
+DefineSite("bordeaux", {
 	Name = "Bordeaux",
 	MapTemplate = "earth",
 	Position = {3826, 1029},
@@ -189,7 +189,7 @@ DefineSettlement("bordeaux", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("bourges", {
+DefineSite("bourges", {
 	Name = "Bourges",
 	MapTemplate = "earth",
 	Position = {3894, 975},
@@ -216,7 +216,7 @@ DefineSettlement("bourges", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("brest", {
+DefineSite("brest", {
 	Name = "Brest",
 	MapTemplate = "earth",
 	Position = {3735, 945},
@@ -237,7 +237,7 @@ DefineSettlement("brest", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("cahors", {
+DefineSite("cahors", {
 	Name = "Cahors",
 	MapTemplate = "earth",
 	Position = {3875, 1033},
@@ -256,7 +256,7 @@ DefineSettlement("cahors", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("cambrai", {
+DefineSite("cambrai", {
 	Name = "Cambrai",
 	MapTemplate = "earth",
 	Position = {3917, 903},
@@ -278,7 +278,7 @@ DefineSettlement("cambrai", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("chalons", {
+DefineSite("chalons", {
 	Name = "Chalons",
 	MapTemplate = "earth",
 	Position = {3947, 941},
@@ -297,7 +297,7 @@ DefineSettlement("chalons", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("clermont-ferrand", {
+DefineSite("clermont-ferrand", {
 	Name = "Clermont-Ferrand",
 	MapTemplate = "earth",
 	Position = {3909, 1006},
@@ -324,7 +324,7 @@ DefineSettlement("clermont-ferrand", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("dijon", {
+DefineSite("dijon", {
 	Name = "Dijon",
 	MapTemplate = "earth",
 	Position = {3955, 972},
@@ -351,7 +351,7 @@ DefineSettlement("dijon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("embrun", {
+DefineSite("embrun", {
 	Name = "Embrun",
 	MapTemplate = "earth",
 	Position = {3985, 1033},
@@ -369,7 +369,7 @@ DefineSettlement("embrun", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("ferrieres", {
+DefineSite("ferrieres", {
 	Name = "Ferrieres",
 	MapTemplate = "earth",
 	Position = {3898, 956},
@@ -386,7 +386,7 @@ DefineSettlement("ferrieres", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("grenoble", {
+DefineSite("grenoble", {
 	Name = "Grenoble",
 	MapTemplate = "earth",
 	Position = {3969, 1018},
@@ -405,7 +405,7 @@ DefineSettlement("grenoble", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("langres", {
+DefineSite("langres", {
 	Name = "Langres",
 	MapTemplate = "earth",
 	Position = {3958, 963},
@@ -424,7 +424,7 @@ DefineSettlement("langres", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("lyon", {
+DefineSite("lyon", {
 	Name = "Lyon",
 	MapTemplate = "earth",
 	Position = {3947, 1006},
@@ -452,7 +452,7 @@ DefineSettlement("lyon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("marseilles", {
+DefineSite("marseilles", {
 	Name = "Marseilles",
 	MapTemplate = "earth",
 	Position = {3963, 1061},
@@ -479,7 +479,7 @@ DefineSettlement("marseilles", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("metz", {
+DefineSite("metz", {
 	Name = "Metz",
 	MapTemplate = "earth",
 	Position = {3981, 931},
@@ -505,7 +505,7 @@ DefineSettlement("metz", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("molsheim", {
+DefineSite("molsheim", {
 	Name = "Molsheim",
 	MapTemplate = "earth",
 	Position = {4010, 948},
@@ -522,7 +522,7 @@ DefineSettlement("molsheim", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("montpellier", {
+DefineSite("montpellier", {
 	Name = "Montpellier",
 	MapTemplate = "earth",
 	Position = {3924, 1054},
@@ -539,7 +539,7 @@ DefineSettlement("montpellier", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("nantes", {
+DefineSite("nantes", {
 	Name = "Nantes",
 	MapTemplate = "earth",
 	Position = {3804, 972},
@@ -562,7 +562,7 @@ DefineSettlement("nantes", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("narbonne", {
+DefineSite("narbonne", {
 	Name = "Narbonne",
 	MapTemplate = "earth",
 	Position = {3913, 1062},
@@ -583,7 +583,7 @@ DefineSettlement("narbonne", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("nice", {
+DefineSite("nice", {
 	Name = "Nice",
 	MapTemplate = "earth",
 	Position = {4006, 1051},
@@ -609,7 +609,7 @@ DefineSettlement("nice", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("orleans", {
+DefineSite("orleans", {
 	Name = "Orleans",
 	MapTemplate = "earth",
 	Position = {3884, 961},
@@ -631,7 +631,7 @@ DefineSettlement("orleans", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("paris", {
+DefineSite("paris", {
 	Name = "Paris",
 	MapTemplate = "earth",
 	Position = {3891, 937},
@@ -661,7 +661,7 @@ DefineSettlement("paris", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("perpignan", {
+DefineSite("perpignan", {
 	Name = "Perpignan",
 	MapTemplate = "earth",
 	Position = {3907, 1077},
@@ -679,7 +679,7 @@ DefineSettlement("perpignan", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("poitiers", {
+DefineSite("poitiers", {
 	Name = "Poitiers",
 	MapTemplate = "earth",
 	Position = {3845, 990},
@@ -704,7 +704,7 @@ DefineSettlement("poitiers", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("reims", {
+DefineSite("reims", {
 	Name = "Reims",
 	MapTemplate = "earth",
 	Position = {3930, 926},
@@ -732,7 +732,7 @@ DefineSettlement("reims", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("rodez", {
+DefineSite("rodez", {
 	Name = "Rodez",
 	MapTemplate = "earth",
 	Position = {3895, 1030},
@@ -751,7 +751,7 @@ DefineSettlement("rodez", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("rouen", {
+DefineSite("rouen", {
 	Name = "Rouen",
 	MapTemplate = "earth",
 	Position = {3871, 926},
@@ -772,7 +772,7 @@ DefineSettlement("rouen", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("sens", {
+DefineSite("sens", {
 	Name = "Sens",
 	MapTemplate = "earth",
 	Position = {3911, 958},
@@ -793,7 +793,7 @@ DefineSettlement("sens", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("soissons", {
+DefineSite("soissons", {
 	Name = "Soissons",
 	MapTemplate = "earth",
 	Position = {3915, 923},
@@ -815,7 +815,7 @@ DefineSettlement("soissons", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("strassburg", {
+DefineSite("strassburg", {
 	Name = "Strasbourg",
 	MapTemplate = "earth",
 	Position = {4010, 945},
@@ -856,7 +856,7 @@ DefineSettlement("strassburg", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("toul", {
+DefineSite("toul", {
 	Name = "Toul",
 	MapTemplate = "earth",
 	Position = {3969, 948},
@@ -876,7 +876,7 @@ DefineSettlement("toul", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("toulon", {
+DefineSite("toulon", {
 	Name = "Toulon",
 	MapTemplate = "earth",
 	Position = {3974, 1065},
@@ -894,7 +894,7 @@ DefineSettlement("toulon", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("toulouse", {
+DefineSite("toulouse", {
 	Name = "Toulouse",
 	MapTemplate = "earth",
 	Position = {3867, 1048},
@@ -924,7 +924,7 @@ DefineSettlement("toulouse", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("tours", {
+DefineSite("tours", {
 	Name = "Tours",
 	MapTemplate = "earth",
 	Position = {3857, 971},
@@ -949,7 +949,7 @@ DefineSettlement("tours", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("troyes", {
+DefineSite("troyes", {
 	Name = "Troyes",
 	MapTemplate = "earth",
 	Position = {3923, 952},
@@ -972,7 +972,7 @@ DefineSettlement("troyes", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("uzes", {
+DefineSite("uzes", {
 	Name = "Uzes",
 	MapTemplate = "earth",
 	Position = {3941, 1044},
@@ -990,7 +990,7 @@ DefineSettlement("uzes", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("valence", {
+DefineSite("valence", {
 	Name = "Valence",
 	MapTemplate = "earth",
 	Position = {3952, 1026},
@@ -1010,7 +1010,7 @@ DefineSettlement("valence", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("verdun", {
+DefineSite("verdun", {
 	Name = "Verdun",
 	MapTemplate = "earth",
 	Position = {3957, 927},
@@ -1033,7 +1033,7 @@ DefineSettlement("verdun", {
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
 })
 
-DefineSettlement("vienne", {
+DefineSite("vienne", {
 	Name = "Vienne",
 	MapTemplate = "earth",
 	Position = {3959, 1012},

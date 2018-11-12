@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amesbury", {
+DefineSite("amesbury", {
 	Name = "Amesbury",
 	MapTemplate = "earth",
 	Position = {3798, 883},
@@ -43,7 +43,7 @@ DefineSettlement("amesbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("athelney", {
+DefineSite("athelney", {
 	Name = "Athelney",
 	MapTemplate = "earth",
 	Position = {3774, 887},
@@ -61,7 +61,7 @@ DefineSettlement("athelney", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("bamburgh", {
+DefineSite("bamburgh", {
 	Name = "Bamburgh",
 	MapTemplate = "earth",
 	Position = {3800, 784},
@@ -83,7 +83,7 @@ DefineSettlement("bamburgh", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("bath", {
+DefineSite("bath", {
 	Name = "Bath",
 	MapTemplate = "earth",
 	Position = {3781, 879},
@@ -105,7 +105,7 @@ DefineSettlement("bath", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("bitterne", {
+DefineSite("bitterne", {
 	Name = "Bitterne",
 	MapTemplate = "earth",
 	Position = {3810, 889},
@@ -126,7 +126,7 @@ DefineSettlement("bitterne", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("brancaster", {
+DefineSite("brancaster", {
 	Name = "Brancaster",
 	MapTemplate = "earth",
 	Position = {3853, 843},
@@ -147,7 +147,7 @@ DefineSettlement("brancaster", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("bristol", {
+DefineSite("bristol", {
 	Name = "Bristol",
 	MapTemplate = "earth",
 	Position = {3782, 878},
@@ -166,7 +166,7 @@ DefineSettlement("bristol", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("cambridge", {
+DefineSite("cambridge", {
 	Name = "Cambridge",
 	MapTemplate = "earth",
 	Position = {3845, 861},
@@ -189,7 +189,7 @@ DefineSettlement("cambridge", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("canterbury", {
+DefineSite("canterbury", {
 	Name = "Canterbury",
 	MapTemplate = "earth",
 	Position = {3866, 880},
@@ -213,7 +213,7 @@ DefineSettlement("canterbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("carlisle", {
+DefineSite("carlisle", {
 	Name = "Carlisle",
 	MapTemplate = "earth",
 	Position = {3773, 800},
@@ -235,7 +235,7 @@ DefineSettlement("carlisle", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("castor-near-norwich", {
+DefineSite("castor-near-norwich", {
 	Name = "Castor near Norwich",
 	MapTemplate = "earth",
 	Position = {3868, 850},
@@ -256,7 +256,7 @@ DefineSettlement("castor-near-norwich", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("chester", {
+DefineSite("chester", {
 	Name = "Chester",
 	MapTemplate = "earth",
 	Position = {3774, 837},
@@ -279,7 +279,7 @@ DefineSettlement("chester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("chichester", {
+DefineSite("chichester", {
 	Name = "Chichester",
 	MapTemplate = "earth",
 	Position = {3821, 890},
@@ -302,7 +302,7 @@ DefineSettlement("chichester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("cirencester", {
+DefineSite("cirencester", {
 	Name = "Cirencester",
 	MapTemplate = "earth",
 	Position = {3796, 874},
@@ -324,7 +324,7 @@ DefineSettlement("cirencester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("colchester", {
+DefineSite("colchester", {
 	Name = "Colchester",
 	MapTemplate = "earth",
 	Position = {3860, 866},
@@ -347,7 +347,7 @@ DefineSettlement("colchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("corbridge", {
+DefineSite("corbridge", {
 	Name = "Corbridge",
 	MapTemplate = "earth",
 	Position = {3794, 797},
@@ -372,7 +372,7 @@ DefineSettlement("corbridge", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("deorham", {
+DefineSite("deorham", {
 	Name = "Deorham",
 	MapTemplate = "earth",
 	Position = {3781, 877},
@@ -389,7 +389,7 @@ DefineSettlement("deorham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("dorchester", {
+DefineSite("dorchester", {
 	Name = "Dorchester",
 	MapTemplate = "earth",
 	Position = {3785, 894},
@@ -411,7 +411,7 @@ DefineSettlement("dorchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("dover", {
+DefineSite("dover", {
 	Name = "Dover",
 	MapTemplate = "earth",
 	Position = {3866, 884},
@@ -433,7 +433,7 @@ DefineSettlement("dover", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("dunwich", {
+DefineSite("dunwich", {
 	Name = "Dunwich",
 	MapTemplate = "earth",
 	Position = {3874, 859},
@@ -452,7 +452,7 @@ DefineSettlement("dunwich", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("durham", {
+DefineSite("durham", {
 	Name = "Durham",
 	MapTemplate = "earth",
 	Position = {3806, 802},
@@ -471,7 +471,7 @@ DefineSettlement("durham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("durolipons", {
+DefineSite("durolipons", {
 	Name = "Durolipons",
 	MapTemplate = "earth",
 	Position = {3838, 859},
@@ -491,7 +491,7 @@ DefineSettlement("durolipons", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("edinburgh", {
+DefineSite("edinburgh", {
 	Name = "Edinburgh",
 	MapTemplate = "earth",
 	Position = {3766, 775},
@@ -513,7 +513,7 @@ DefineSettlement("edinburgh", {
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
 })
 
-DefineSettlement("exeter", {
+DefineSite("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
 	Position = {3759, 893},
@@ -536,7 +536,7 @@ DefineSettlement("exeter", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("farnham", {
+DefineSite("farnham", {
 	Name = "Farnham",
 	MapTemplate = "earth",
 	Position = {3821, 883},
@@ -555,7 +555,7 @@ DefineSettlement("farnham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("glasgow", {
+DefineSite("glasgow", {
 	Name = "Glasgow",
 	MapTemplate = "earth",
 	Position = {3741, 777},
@@ -576,7 +576,7 @@ DefineSettlement("glasgow", {
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
 })
 
-DefineSettlement("glastonbury", {
+DefineSite("glastonbury", {
 	Name = "Glastonbury",
 	MapTemplate = "earth",
 	Position = {3778, 884},
@@ -593,7 +593,7 @@ DefineSettlement("glastonbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("gloucester", {
+DefineSite("gloucester", {
 	Name = "Gloucester",
 	MapTemplate = "earth",
 	Position = {3784, 874},
@@ -616,7 +616,7 @@ DefineSettlement("gloucester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("goodmanham", {
+DefineSite("goodmanham", {
 	Name = "Goodmanham",
 	MapTemplate = "earth",
 	Position = {3825, 820},
@@ -634,7 +634,7 @@ DefineSettlement("goodmanham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("hastings", {
+DefineSite("hastings", {
 	Name = "Hastings",
 	MapTemplate = "earth",
 	Position = {3859, 887},
@@ -652,7 +652,7 @@ DefineSettlement("hastings", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("heathfield", {
+DefineSite("heathfield", {
 	Name = "Heathfield",
 	MapTemplate = "earth",
 	Position = {3821, 827},
@@ -669,7 +669,7 @@ DefineSettlement("heathfield", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("hereford", {
+DefineSite("hereford", {
 	Name = "Hereford",
 	MapTemplate = "earth",
 	Position = {3775, 863},
@@ -687,7 +687,7 @@ DefineSettlement("hereford", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("hexham", {
+DefineSite("hexham", {
 	Name = "Hexham",
 	MapTemplate = "earth",
 	Position = {3791, 798},
@@ -706,7 +706,7 @@ DefineSettlement("hexham", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("jarrow", {
+DefineSite("jarrow", {
 	Name = "Jarrow",
 	MapTemplate = "earth",
 	Position = {3807, 797},
@@ -726,7 +726,7 @@ DefineSettlement("jarrow", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("kingston", {
+DefineSite("kingston", {
 	Name = "Kingston",
 	MapTemplate = "earth",
 	Position = {3838, 878},
@@ -743,7 +743,7 @@ DefineSettlement("kingston", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("leicester", {
+DefineSite("leicester", {
 	Name = "Leicester",
 	MapTemplate = "earth",
 	Position = {3815, 850},
@@ -766,7 +766,7 @@ DefineSettlement("leicester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("lincoln", {
+DefineSite("lincoln", {
 	Name = "Lincoln",
 	MapTemplate = "earth",
 	Position = {3825, 837},
@@ -792,7 +792,7 @@ DefineSettlement("lincoln", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("leeds", {
+DefineSite("leeds", {
 	Name = "Leeds",
 	MapTemplate = "earth",
 	Position = {3804, 822},
@@ -811,7 +811,7 @@ DefineSettlement("leeds", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("lichfield", {
+DefineSite("lichfield", {
 	Name = "Lichfield",
 	MapTemplate = "earth",
 	Position = {3797, 849},
@@ -830,7 +830,7 @@ DefineSettlement("lichfield", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("london", {
+DefineSite("london", {
 	Name = "London",
 	MapTemplate = "earth",
 	Position = {3839, 873},
@@ -863,7 +863,7 @@ DefineSettlement("london", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("malmesbury", {
+DefineSite("malmesbury", {
 	Name = "Malmesbury",
 	MapTemplate = "earth",
 	Position = {3794, 879},
@@ -882,7 +882,7 @@ DefineSettlement("malmesbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("nursling", {
+DefineSite("nursling", {
 	Name = "Nursling",
 	MapTemplate = "earth",
 	Position = {3808, 889},
@@ -900,7 +900,7 @@ DefineSettlement("nursling", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("ockley", {
+DefineSite("ockley", {
 	Name = "Ockley",
 	MapTemplate = "earth",
 	Position = {3836, 883},
@@ -917,7 +917,7 @@ DefineSettlement("ockley", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("old-sarum", {
+DefineSite("old-sarum", {
 	Name = "Old Sarum",
 	MapTemplate = "earth",
 	Position = {3798, 885},
@@ -938,7 +938,7 @@ DefineSettlement("old-sarum", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("oundle", {
+DefineSite("oundle", {
 	Name = "Oundle",
 	MapTemplate = "earth",
 	Position = {3816, 854},
@@ -956,7 +956,7 @@ DefineSettlement("oundle", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("pevensey", {
+DefineSite("pevensey", {
 	Name = "Pevensey",
 	MapTemplate = "earth",
 	Position = {3848, 889},
@@ -978,7 +978,7 @@ DefineSettlement("pevensey", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("reading", {
+DefineSite("reading", {
 	Name = "Reading",
 	MapTemplate = "earth",
 	Position = {3817, 876},
@@ -996,7 +996,7 @@ DefineSettlement("reading", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("reculver", {
+DefineSite("reculver", {
 	Name = "Reculver",
 	MapTemplate = "earth",
 	Position = {3868, 879},
@@ -1020,7 +1020,7 @@ DefineSettlement("reculver", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("richborough", {
+DefineSite("richborough", {
 	Name = "Richborough",
 	MapTemplate = "earth",
 	Position = {3870, 881},
@@ -1041,7 +1041,7 @@ DefineSettlement("richborough", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("ripon", {
+DefineSite("ripon", {
 	Name = "Ripon",
 	MapTemplate = "earth",
 	Position = {3828, 816},
@@ -1061,7 +1061,7 @@ DefineSettlement("ripon", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("rochester", {
+DefineSite("rochester", {
 	Name = "Rochester",
 	MapTemplate = "earth",
 	Position = {3850, 879},
@@ -1084,7 +1084,7 @@ DefineSettlement("rochester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("saint-albans", {
+DefineSite("saint-albans", {
 	Name = "St. Albans",
 	MapTemplate = "earth",
 	Position = {3832, 870},
@@ -1106,7 +1106,7 @@ DefineSettlement("saint-albans", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("salisbury", {
+DefineSite("salisbury", {
 	Name = "Salisbury",
 	MapTemplate = "earth",
 	Position = {3799, 886},
@@ -1127,7 +1127,7 @@ DefineSettlement("salisbury", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("sherborne", {
+DefineSite("sherborne", {
 	Name = "Sherborne",
 	MapTemplate = "earth",
 	Position = {3783, 891},
@@ -1145,7 +1145,7 @@ DefineSettlement("sherborne", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("silchester", {
+DefineSite("silchester", {
 	Name = "Silchester",
 	MapTemplate = "earth",
 	Position = {3814, 878},
@@ -1166,7 +1166,7 @@ DefineSettlement("silchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("sitomagus", {
+DefineSite("sitomagus", {
 	Name = "Sitomagus",
 	MapTemplate = "earth",
 	Position = {3875, 857},
@@ -1186,7 +1186,7 @@ DefineSettlement("sitomagus", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("southampton", {
+DefineSite("southampton", {
 	Name = "Southampton",
 	MapTemplate = "earth",
 	Position = {3808, 888},
@@ -1203,7 +1203,7 @@ DefineSettlement("southampton", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("speen", {
+DefineSite("speen", {
 	Name = "Speen",
 	MapTemplate = "earth",
 	Position = {3809, 877},
@@ -1224,7 +1224,7 @@ DefineSettlement("speen", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("vindogladia", {
+DefineSite("vindogladia", {
 	Name = "Vindogladia",
 	MapTemplate = "earth",
 	Position = {3794, 889},
@@ -1244,7 +1244,7 @@ DefineSettlement("vindogladia", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("wearmouth", {
+DefineSite("wearmouth", {
 	Name = "Wearmouth",
 	MapTemplate = "earth",
 	Position = {3807, 799},
@@ -1262,7 +1262,7 @@ DefineSettlement("wearmouth", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("whitby", {
+DefineSite("whitby", {
 	Name = "Whitby",
 	MapTemplate = "earth",
 	Position = {3825, 809},
@@ -1280,7 +1280,7 @@ DefineSettlement("whitby", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("whithorn", {
+DefineSite("whithorn", {
 	Name = "Whithorn",
 	MapTemplate = "earth",
 	Position = {3739, 802},
@@ -1299,7 +1299,7 @@ DefineSettlement("whithorn", {
 	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
 })
 
-DefineSettlement("wilton", {
+DefineSite("wilton", {
 	Name = "Wilton",
 	MapTemplate = "earth",
 	Position = {3796, 885},
@@ -1317,7 +1317,7 @@ DefineSettlement("wilton", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("winchester", {
+DefineSite("winchester", {
 	Name = "Winchester",
 	MapTemplate = "earth",
 	Position = {3810, 885},
@@ -1341,7 +1341,7 @@ DefineSettlement("winchester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("winwaedsfield", {
+DefineSite("winwaedsfield", {
 	Name = "Winwaedsfield",
 	MapTemplate = "earth",
 	Position = {3803, 820},
@@ -1359,7 +1359,7 @@ DefineSettlement("winwaedsfield", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("worcester", {
+DefineSite("worcester", {
 	Name = "Worcester",
 	MapTemplate = "earth",
 	Position = {3788, 861},
@@ -1378,7 +1378,7 @@ DefineSettlement("worcester", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("york", {
+DefineSite("york", {
 	Name = "York",
 	MapTemplate = "earth",
 	Position = {3815, 819},

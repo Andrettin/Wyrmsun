@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("antrea", {
+DefineSite("antrea", {
 	Name = "Antrea",
 	MapTemplate = "earth",
 	Position = {4503, 660},
@@ -40,7 +40,7 @@ DefineSettlement("antrea", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("azov", {
+DefineSite("azov", {
 	Name = "Azov",
 	MapTemplate = "earth",
 	Position = {4735, 979},
@@ -66,7 +66,7 @@ DefineSettlement("azov", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("novgorod", {
+DefineSite("novgorod", {
 	Name = "Novgorod",
 	MapTemplate = "earth",
 	Position = {4551, 714},
@@ -92,7 +92,7 @@ DefineSettlement("novgorod", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("pskov", {
+DefineSite("pskov", {
 	Name = "Pskov",
 	MapTemplate = "earth",
 	Position = {4480, 732},
@@ -109,7 +109,7 @@ DefineSettlement("pskov", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("rostov-on-don", {
+DefineSite("rostov-on-don", {
 	Name = "Rostov-on-Don",
 	MapTemplate = "earth",
 	Position = {4738, 970},
@@ -136,7 +136,7 @@ DefineSettlement("rostov-on-don", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("saint-petersburg", {
+DefineSite("saint-petersburg", {
 	Name = "Saint Petersburg",
 	MapTemplate = "earth",
 	Position = {4529, 682},
@@ -153,7 +153,7 @@ DefineSettlement("saint-petersburg", {
 	Regions = {"eurasia", "europe"}
 })
 
-DefineSettlement("viborg", {
+DefineSite("viborg", {
 	Name = "Viborg",
 	MapTemplate = "earth",
 	Position = {4495, 665},

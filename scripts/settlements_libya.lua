@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("ammonium", {
+DefineSite("ammonium", {
 	Name = "Ammonium",
 	MapTemplate = "earth",
 	Position = {4431, 1385},
@@ -41,7 +41,7 @@ DefineSettlement("ammonium", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("barca", {
+DefineSite("barca", {
 	Name = "Barca",
 	MapTemplate = "earth",
 	Position = {4332, 1306},
@@ -59,7 +59,7 @@ DefineSettlement("barca", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("cyrene", {
+DefineSite("cyrene", {
 	Name = "Cyrene",
 	MapTemplate = "earth",
 	Position = {4342, 1301},

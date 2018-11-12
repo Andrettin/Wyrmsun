@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("florianopolis", {
+DefineSite("florianopolis", {
 	Name = "Florianopolis",
 	MapTemplate = "earth",
 	Position = {2732, 2674}, -- is actually in the island of Santa Catharina, but there's not enough space there for a settlement
@@ -43,7 +43,7 @@ DefineSettlement("florianopolis", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("laguna", {
+DefineSite("laguna", {
 	Name = "Laguna",
 	MapTemplate = "earth",
 	Position = {2664, 2756},
@@ -64,7 +64,7 @@ DefineSettlement("laguna", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("porto-alegre", {
+DefineSite("porto-alegre", {
 	Name = "Porto Alegre",
 	MapTemplate = "earth",
 	Position = {2675, 2733},
@@ -85,7 +85,7 @@ DefineSettlement("porto-alegre", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("recife", {
+DefineSite("recife", {
 	Name = "Recife",
 	MapTemplate = "earth",
 	Position = {3046, 2224},
@@ -110,7 +110,7 @@ DefineSettlement("recife", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("rio-grande", {
+DefineSite("rio-grande", {
 	Name = "Rio Grande",
 	MapTemplate = "earth",
 	Position = {2652, 2779},
@@ -131,7 +131,7 @@ DefineSettlement("rio-grande", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("rio-de-janeiro", {
+DefineSite("rio-de-janeiro", {
 	Name = "Rio de Janeiro",
 	MapTemplate = "earth",
 	Position = {2856, 2569},
@@ -162,7 +162,7 @@ DefineSettlement("rio-de-janeiro", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("salvador", {
+DefineSite("salvador", {
 	Name = "Salvador",
 	MapTemplate = "earth",
 	Position = {2964, 2343},
@@ -183,7 +183,7 @@ DefineSettlement("salvador", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("sao-paulo", {
+DefineSite("sao-paulo", {
 	Name = "Sao Paulo",
 	MapTemplate = "earth",
 	Position = {2752, 2583},

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("simferopol", {
+DefineSite("simferopol", {
 	Name = "Simferopol",
 	MapTemplate = "earth",
 	Position = {4615, 1024},

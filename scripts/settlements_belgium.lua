@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("duisburg", {
+DefineSite("duisburg", {
 	Name = "Duisburg",
 	MapTemplate = "earth",
 	Position = {3944, 890},
@@ -41,7 +41,7 @@ DefineSettlement("duisburg", {
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("echternach", {
+DefineSite("echternach", {
 	Name = "Echternach",
 	MapTemplate = "earth",
 	Position = {3967, 911},
@@ -61,7 +61,7 @@ DefineSettlement("echternach", {
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("tongres", {
+DefineSite("tongres", {
 	Name = "Tongres",
 	MapTemplate = "earth",
 	Position = {3966, 884},
@@ -83,7 +83,7 @@ DefineSettlement("tongres", {
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("tournai", {
+DefineSite("tournai", {
 	Name = "Tournai",
 	MapTemplate = "earth",
 	Position = {3918, 896},

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34, 241.
+DefineSite("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 33-34, 241.
 	Name = "Eljudnir",
 	MapTemplate = "niflheim",
 	Position = {225, 132},

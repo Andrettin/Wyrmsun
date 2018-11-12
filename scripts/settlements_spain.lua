@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("barcelona", {
+DefineSite("barcelona", {
 	Name = "Barcelona",
 	MapTemplate = "earth",
 	Position = {3887, 1104},
@@ -47,7 +47,7 @@ DefineSettlement("barcelona", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("burgos", {
+DefineSite("burgos", {
 	Name = "Burgos",
 	MapTemplate = "earth",
 	Position = {3756, 1083},
@@ -65,7 +65,7 @@ DefineSettlement("burgos", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("cadiz", {
+DefineSite("cadiz", {
 	Name = "Cadiz",
 	MapTemplate = "earth",
 	Position = {3699, 1218},
@@ -87,7 +87,7 @@ DefineSettlement("cadiz", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("calahorra", {
+DefineSite("calahorra", {
 	Name = "Calahorra",
 	MapTemplate = "earth",
 	Position = {3798, 1088},
@@ -105,7 +105,7 @@ DefineSettlement("calahorra", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("cartagena", {
+DefineSite("cartagena", {
 	Name = "New Carthage",
 	MapTemplate = "earth",
 	Position = {3816, 1191},
@@ -128,7 +128,7 @@ DefineSettlement("cartagena", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("cordoba", {
+DefineSite("cordoba", {
 	Name = "Cordoba",
 	MapTemplate = "earth",
 	Position = {3730, 1183},
@@ -149,7 +149,7 @@ DefineSettlement("cordoba", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("gerona", {
+DefineSite("gerona", {
 	Name = "Gerona",
 	MapTemplate = "earth",
 	Position = {3902, 1093},
@@ -168,7 +168,7 @@ DefineSettlement("gerona", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("granada", {
+DefineSite("granada", {
 	Name = "Granada",
 	MapTemplate = "earth",
 	Position = {3758, 1201},
@@ -185,7 +185,7 @@ DefineSettlement("granada", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("lerida", {
+DefineSite("lerida", {
 	Name = "Lerida",
 	MapTemplate = "earth",
 	Position = {3854, 1110},
@@ -202,7 +202,7 @@ DefineSettlement("lerida", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("malaga", {
+DefineSite("malaga", {
 	Name = "Malaga",
 	MapTemplate = "earth",
 	Position = {3739, 1211},
@@ -221,7 +221,7 @@ DefineSettlement("malaga", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("merida", {
+DefineSite("merida", {
 	Name = "Merida",
 	MapTemplate = "earth",
 	Position = {3688, 1167},
@@ -240,7 +240,7 @@ DefineSettlement("merida", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("munda", {
+DefineSite("munda", {
 	Name = "Munda",
 	MapTemplate = "earth",
 	Position = {3731, 1193},
@@ -258,7 +258,7 @@ DefineSettlement("munda", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("murcia", {
+DefineSite("murcia", {
 	Name = "Murcia",
 	MapTemplate = "earth",
 	Position = {3812, 1186},
@@ -276,7 +276,7 @@ DefineSettlement("murcia", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("orihuela", {
+DefineSite("orihuela", {
 	Name = "Orihuela",
 	MapTemplate = "earth",
 	Position = {3819, 1184},
@@ -294,7 +294,7 @@ DefineSettlement("orihuela", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("saguntum", {
+DefineSite("saguntum", {
 	Name = "Saguntum",
 	MapTemplate = "earth",
 	Position = {3831, 1144},
@@ -314,7 +314,7 @@ DefineSettlement("saguntum", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("seville", {
+DefineSite("seville", {
 	Name = "Seville",
 	MapTemplate = "earth",
 	Position = {3703, 1195},
@@ -334,7 +334,7 @@ DefineSettlement("seville", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("tarragona", {
+DefineSite("tarragona", {
 	Name = "Tarragona",
 	MapTemplate = "earth",
 	Position = {3881, 1108},
@@ -354,7 +354,7 @@ DefineSettlement("tarragona", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("toledo", {
+DefineSite("toledo", {
 	Name = "Toledo",
 	MapTemplate = "earth",
 	Position = {3756, 1139},
@@ -375,7 +375,7 @@ DefineSettlement("toledo", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("tortosa", {
+DefineSite("tortosa", {
 	Name = "Tortosa",
 	MapTemplate = "earth",
 	Position = {3855, 1120},
@@ -396,7 +396,7 @@ DefineSettlement("tortosa", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("valencia", {
+DefineSite("valencia", {
 	Name = "Valencia",
 	MapTemplate = "earth",
 	Position = {3833, 1148},
@@ -417,7 +417,7 @@ DefineSettlement("valencia", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("zaragoza", {
+DefineSite("zaragoza", {
 	Name = "Zaragoza",
 	MapTemplate = "earth",
 	Position = {3824, 1103},

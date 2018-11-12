@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("acthna", {
+DefineSite("acthna", {
 	Name = "Acthna",
 	MapTemplate = "nidavellir",
 	Position = {378, 198},
@@ -47,7 +47,7 @@ DefineSettlement("acthna", {
 	Regions = {}
 })
 
-DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
+DefineSite("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
 	Name = "Aurvang",
 	MapTemplate = "nidavellir",
 	Position = {750, 277},
@@ -69,7 +69,7 @@ DefineSettlement("aurvang", { -- Aurvang settlement site; Aurvang is a region ra
 	Regions = {}
 })
 
-DefineSettlement("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
+DefineSite("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
 	Name = "Chaincolt",
 	MapTemplate = "nidavellir-underground",
 	Position = {468, 193},
@@ -95,7 +95,7 @@ DefineSettlement("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire 
 	Regions = {}
 })
 
-DefineSettlement("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
+DefineSite("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
 	Name = "Chaincolt Gates",
 	MapTemplate = "nidavellir-underground",
 	Position = {472, 225},
@@ -113,7 +113,7 @@ DefineSettlement("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of
 	Regions = {}
 })
 
-DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Dreadskull",
 	MapTemplate = "nidavellir",
 --	Position = {669, 298},
@@ -131,7 +131,7 @@ DefineSettlement("dreadskull", { -- Dreadskull tribe settlement site; this is th
 	Regions = {}
 })
 
-DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
+DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
 	MapTemplate = "island-of-the-lizard-god",
 	Position = {59, 117},
@@ -161,7 +161,7 @@ DefineSettlement("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Regions = {}
 })
 
-DefineSettlement("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+DefineSite("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
 	Name = "Gnana",
 	MapTemplate = "nidavellir",
 --	Position = {329, 221},
@@ -183,7 +183,7 @@ DefineSettlement("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "A
 	Regions = {}
 })
 
-DefineSettlement("joruvellir", { -- Joruvellir settlement site; Joruvellir is a region rather than a settlement, but we have no name for a settlement there yet
+DefineSite("joruvellir", { -- Joruvellir settlement site; Joruvellir is a region rather than a settlement, but we have no name for a settlement there yet
 	Name = "Joruvellir",
 	MapTemplate = "nidavellir",
 	Position = {784, 339},
@@ -197,7 +197,7 @@ DefineSettlement("joruvellir", { -- Joruvellir settlement site; Joruvellir is a 
 	Regions = {}
 })
 
-DefineSettlement("khag", { -- Khag tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+DefineSite("khag", { -- Khag tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Khag",
 	MapTemplate = "nidavellir",
 	Position = {243, 218},
@@ -214,7 +214,7 @@ DefineSettlement("khag", { -- Khag tribe settlement site; this is the name of a 
 	Regions = {}
 })
 
-DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Lggi",
 	MapTemplate = "nidavellir",
 	Position = {800, 285},
@@ -231,7 +231,7 @@ DefineSettlement("lggi", { -- Lggi tribe settlement site; this is the name of a 
 	Regions = {}
 })
 
-DefineSettlement("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
+DefineSite("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
 	Name = "Pypo's Camp",
 	MapTemplate = "nidavellir",
 	Position = {442, 263},
@@ -249,7 +249,7 @@ DefineSettlement("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Regions = {}
 })
 
-DefineSettlement("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
+DefineSite("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
 	Name = "Rugnur's Outpost",
 	MapTemplate = "nidavellir",
 	Position = {465, 239},
@@ -268,7 +268,7 @@ DefineSettlement("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of
 	Regions = {}
 })
 
-DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
+DefineSite("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
 	Name = "Shorbear Hold",
 	MapTemplate = "nidavellir",
 	Position = {515, 223},
@@ -290,7 +290,7 @@ DefineSettlement("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of F
 	Regions = {}
 })
 
-DefineSettlement("svarinshaug", {
+DefineSite("svarinshaug", {
 	Name = "Svarinshaug",
 	MapTemplate = "nidavellir",
 	Position = {691, 193},
@@ -307,7 +307,7 @@ DefineSettlement("svarinshaug", {
 	Regions = {}
 })
 
-DefineSettlement("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
+DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Wildfang",
 	MapTemplate = "nidavellir",
 	Position = {613, 208},

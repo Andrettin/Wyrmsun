@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amathus", {
+DefineSite("amathus", {
 	Name = "Amathus",
 	MapTemplate = "earth",
 	Position = {4594, 1257},
@@ -41,7 +41,7 @@ DefineSettlement("amathus", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("citium", {
+DefineSite("citium", {
 	Name = "Citium",
 	MapTemplate = "earth",
 	Position = {4604, 1252},

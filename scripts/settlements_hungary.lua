@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("buda", {
+DefineSite("buda", {
 	Name = "Buda",
 	MapTemplate = "earth",
 	Position = {4268, 966},
@@ -52,7 +52,7 @@ DefineSettlement("buda", {
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("pest", {
+DefineSite("pest", {
 	Name = "Pest",
 	MapTemplate = "earth",
 	Position = {4274, 968},

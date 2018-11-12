@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("bratislava", {
+DefineSite("bratislava", {
 	Name = "Bratislava",
 	MapTemplate = "earth",
 	Position = {4227, 950},
@@ -49,7 +49,7 @@ DefineSettlement("bratislava", {
 	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("kremnica", {
+DefineSite("kremnica", {
 	Name = "Kremnica",
 	MapTemplate = "earth",
 	Position = {4275, 935},

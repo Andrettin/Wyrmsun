@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("anyang", {
+DefineSite("anyang", {
 	Name = "Anyang",
 	MapTemplate = "earth",
 	Position = {6460, 1237},

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("agad", {
+DefineSite("agad", {
 	Name = "Agad",
 	MapTemplate = "earth",
 	Position = {4841, 1290},
@@ -44,7 +44,7 @@ DefineSettlement("agad", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("amida", {
+DefineSite("amida", {
 	Name = "Amida",
 	MapTemplate = "earth",
 	Position = {4709, 1188},
@@ -62,7 +62,7 @@ DefineSettlement("amida", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("arbela", {
+DefineSite("arbela", {
 	Name = "Arbela",
 	MapTemplate = "earth",
 	Position = {4841, 1224},
@@ -81,7 +81,7 @@ DefineSettlement("arbela", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("assur", {
+DefineSite("assur", {
 	Name = "Assur",
 	MapTemplate = "earth",
 	Position = {4823, 1233},
@@ -99,7 +99,7 @@ DefineSettlement("assur", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("babylon", {
+DefineSite("babylon", {
 	Name = "Babylon",
 	MapTemplate = "earth",
 	Position = {4848, 1300},
@@ -121,7 +121,7 @@ DefineSettlement("babylon", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("borsippa", {
+DefineSite("borsippa", {
 	Name = "Borsippa",
 	MapTemplate = "earth",
 	Position = {4842, 1300},
@@ -141,7 +141,7 @@ DefineSettlement("borsippa", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("calchu", {
+DefineSite("calchu", {
 	Name = "Calchu",
 	MapTemplate = "earth",
 	Position = {4825, 1224},
@@ -159,7 +159,7 @@ DefineSettlement("calchu", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("circesium", {
+DefineSite("circesium", {
 	Name = "Circesium",
 	MapTemplate = "earth",
 	Position = {4752, 1245},
@@ -176,7 +176,7 @@ DefineSettlement("circesium", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dur-ilu", {
+DefineSite("dur-ilu", {
 	Name = "Dur-Ilu",
 	MapTemplate = "earth",
 	Position = {4919, 1323},
@@ -194,7 +194,7 @@ DefineSettlement("dur-ilu", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dur-kurigalzu", {
+DefineSite("dur-kurigalzu", {
 	Name = "Dur-Kurigalzu",
 	MapTemplate = "earth",
 	Position = {4853, 1294},
@@ -213,7 +213,7 @@ DefineSettlement("dur-kurigalzu", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dur-sharukin", {
+DefineSite("dur-sharukin", {
 	Name = "Dur-Sharukin",
 	MapTemplate = "earth",
 	Position = {4829, 1208},
@@ -231,7 +231,7 @@ DefineSettlement("dur-sharukin", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("eridu", {
+DefineSite("eridu", {
 	Name = "Eridu",
 	MapTemplate = "earth",
 	Position = {4902, 1343},
@@ -251,7 +251,7 @@ DefineSettlement("eridu", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("haran", {
+DefineSite("haran", {
 	Name = "Haran",
 	MapTemplate = "earth",
 	Position = {4726, 1205},
@@ -269,7 +269,7 @@ DefineSettlement("haran", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("holwan", {
+DefineSite("holwan", {
 	Name = "Holwan",
 	MapTemplate = "earth",
 	Position = {4924, 1261},
@@ -287,7 +287,7 @@ DefineSettlement("holwan", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("kutha", {
+DefineSite("kutha", {
 	Name = "Kutha",
 	MapTemplate = "earth",
 	Position = {4847, 1297},
@@ -306,7 +306,7 @@ DefineSettlement("kutha", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("lagash", {
+DefineSite("lagash", {
 	Name = "Lagash",
 	MapTemplate = "earth",
 	Position = {4891, 1326},
@@ -326,7 +326,7 @@ DefineSettlement("lagash", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("larsam", {
+DefineSite("larsam", {
 	Name = "Larsam",
 	MapTemplate = "earth",
 	Position = {4883, 1336},
@@ -346,7 +346,7 @@ DefineSettlement("larsam", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("nineveh", {
+DefineSite("nineveh", {
 	Name = "Nineveh",
 	MapTemplate = "earth",
 	Position = {4828, 1214},
@@ -366,7 +366,7 @@ DefineSettlement("nineveh", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("nippur", {
+DefineSite("nippur", {
 	Name = "Nippur",
 	MapTemplate = "earth",
 	Position = {4865, 1311},
@@ -386,7 +386,7 @@ DefineSettlement("nippur", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("nisibis", {
+DefineSite("nisibis", {
 	Name = "Nisibis",
 	MapTemplate = "earth",
 	Position = {4788, 1204},
@@ -404,7 +404,7 @@ DefineSettlement("nisibis", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("reseph", {
+DefineSite("reseph", {
 	Name = "Reseph",
 	MapTemplate = "earth",
 	Position = {4722, 1238},
@@ -423,7 +423,7 @@ DefineSettlement("reseph", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("shinpurla", {
+DefineSite("shinpurla", {
 	Name = "Shinpurla",
 	MapTemplate = "earth",
 	Position = {4902, 1334},
@@ -442,7 +442,7 @@ DefineSettlement("shinpurla", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("sippar", {
+DefineSite("sippar", {
 	Name = "Sippar",
 	MapTemplate = "earth",
 	Position = {4835, 1286},
@@ -461,7 +461,7 @@ DefineSettlement("sippar", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("tadmor", {
+DefineSite("tadmor", {
 	Name = "Tadmor",
 	MapTemplate = "earth",
 	Position = {4709, 1256},
@@ -481,7 +481,7 @@ DefineSettlement("tadmor", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("thapsacus", {
+DefineSite("thapsacus", {
 	Name = "Thapsacus",
 	MapTemplate = "earth",
 	Position = {4709, 1231},
@@ -502,7 +502,7 @@ DefineSettlement("thapsacus", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("upi", {
+DefineSite("upi", {
 	Name = "Upi",
 	MapTemplate = "earth",
 	Position = {4848, 1271},
@@ -522,7 +522,7 @@ DefineSettlement("upi", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("ur", {
+DefineSite("ur", {
 	Name = "Ur",
 	MapTemplate = "earth",
 	Position = {4895, 1345},
@@ -543,7 +543,7 @@ DefineSettlement("ur", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("uruk", {
+DefineSite("uruk", {
 	Name = "Uruk",
 	MapTemplate = "earth",
 	Position = {4879, 1333},

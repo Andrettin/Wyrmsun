@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("calchedon", {
+DefineSite("calchedon", {
 	Name = "Calchedon",
 	MapTemplate = "earth",
 	Position = {4502, 1114},
@@ -41,7 +41,7 @@ DefineSettlement("calchedon", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dascylium", {
+DefineSite("dascylium", {
 	Name = "Dascylium",
 	MapTemplate = "earth",
 	Position = {4495, 1129},
@@ -57,7 +57,7 @@ DefineSettlement("dascylium", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("sardis", {
+DefineSite("sardis", {
 	Name = "Sardis",
 	MapTemplate = "earth",
 	Position = {4474, 1170},
@@ -76,7 +76,7 @@ DefineSettlement("sardis", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("troy", {
+DefineSite("troy", {
 	Name = "Troy",
 	MapTemplate = "earth",
 	Position = {4437, 1140},

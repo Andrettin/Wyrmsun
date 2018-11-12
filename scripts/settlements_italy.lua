@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("aleria", {
+DefineSite("aleria", {
 	Name = "Aleria",
 	MapTemplate = "earth",
 	Position = {4055, 1090},
@@ -43,7 +43,7 @@ DefineSettlement("aleria", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("aquileia", {
+DefineSite("aquileia", {
 	Name = "Aquileia",
 	MapTemplate = "earth",
 	Position = {4143, 1004},
@@ -61,7 +61,7 @@ DefineSettlement("aquileia", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("ariminum", {
+DefineSite("ariminum", {
 	Name = "Ariminum",
 	MapTemplate = "earth",
 	Position = {4123, 1044},
@@ -79,7 +79,7 @@ DefineSettlement("ariminum", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("bologna", {
+DefineSite("bologna", {
 	Name = "Bologna",
 	MapTemplate = "earth",
 	Position = {4096, 1034},
@@ -99,7 +99,7 @@ DefineSettlement("bologna", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("brindisi", {
+DefineSite("brindisi", {
 	Name = "Brindisi",
 	MapTemplate = "earth",
 	Position = {4245, 1123},
@@ -118,7 +118,7 @@ DefineSettlement("brindisi", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("caralis", {
+DefineSite("caralis", {
 	Name = "Caralis",
 	MapTemplate = "earth",
 	Position = {4047, 1155},
@@ -136,7 +136,7 @@ DefineSettlement("caralis", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("cosa", {
+DefineSite("cosa", {
 	Name = "Cosa",
 	MapTemplate = "earth",
 	Position = {4095, 1081},
@@ -153,7 +153,7 @@ DefineSettlement("cosa", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("cremona", {
+DefineSite("cremona", {
 	Name = "Cremona",
 	MapTemplate = "earth",
 	Position = {4067, 1021},
@@ -174,7 +174,7 @@ DefineSettlement("cremona", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("firmum", {
+DefineSite("firmum", {
 	Name = "Firmum",
 	MapTemplate = "earth",
 	Position = {4151, 1064},
@@ -192,7 +192,7 @@ DefineSettlement("firmum", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("florence", {
+DefineSite("florence", {
 	Name = "Florence",
 	MapTemplate = "earth",
 	Position = {4095, 1054},
@@ -214,7 +214,7 @@ DefineSettlement("florence", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("genoa", {
+DefineSite("genoa", {
 	Name = "Genoa",
 	MapTemplate = "earth",
 	Position = {4042, 1035},
@@ -237,7 +237,7 @@ DefineSettlement("genoa", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("hatria", {
+DefineSite("hatria", {
 	Name = "Hatria",
 	MapTemplate = "earth",
 	Position = {4156, 1076},
@@ -255,7 +255,7 @@ DefineSettlement("hatria", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("luni-sul-mignone", {
+DefineSite("luni-sul-mignone", {
 	Name = "Luni sul Mignone",
 	MapTemplate = "earth",
 	Position = {4111, 1087},
@@ -272,7 +272,7 @@ DefineSettlement("luni-sul-mignone", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("milan", {
+DefineSite("milan", {
 	Name = "Milan",
 	MapTemplate = "earth",
 	Position = {4049, 1013},
@@ -298,7 +298,7 @@ DefineSettlement("milan", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("modena", {
+DefineSite("modena", {
 	Name = "Modena",
 	MapTemplate = "earth",
 	Position = {4089, 1032},
@@ -319,7 +319,7 @@ DefineSettlement("modena", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("naples", {
+DefineSite("naples", {
 	Name = "Naples",
 	MapTemplate = "earth",
 	Position = {4163, 1116},
@@ -342,7 +342,7 @@ DefineSettlement("naples", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("novum-castrum", {
+DefineSite("novum-castrum", {
 	Name = "Novum Castrum",
 	MapTemplate = "earth",
 	Position = {4154, 1070},
@@ -359,7 +359,7 @@ DefineSettlement("novum-castrum", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("oderzo", {
+DefineSite("oderzo", {
 	Name = "Oderzo",
 	MapTemplate = "earth",
 	Position = {4122, 1005},
@@ -376,7 +376,7 @@ DefineSettlement("oderzo", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("paestum", {
+DefineSite("paestum", {
 	Name = "Paestum",
 	MapTemplate = "earth",
 	Position = {4181, 1127},
@@ -392,7 +392,7 @@ DefineSettlement("paestum", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("palermo", {
+DefineSite("palermo", {
 	Name = "Palermo",
 	MapTemplate = "earth",
 	Position = {4141, 1181},
@@ -415,7 +415,7 @@ DefineSettlement("palermo", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("piacenza", {
+DefineSite("piacenza", {
 	Name = "Piacenza",
 	MapTemplate = "earth",
 	Position = {4056, 1028},
@@ -436,7 +436,7 @@ DefineSettlement("piacenza", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("poggiomarino", {
+DefineSite("poggiomarino", {
 	Name = "Poggiomarino",
 	MapTemplate = "earth",
 	Position = {4170, 1119},
@@ -453,7 +453,7 @@ DefineSettlement("poggiomarino", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("ravenna", {
+DefineSite("ravenna", {
 	Name = "Ravenna",
 	MapTemplate = "earth",
 	Position = {4114, 1035},
@@ -474,7 +474,7 @@ DefineSettlement("ravenna", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("rome", {
+DefineSite("rome", {
 	Name = "Rome",
 	MapTemplate = "earth",
 	Position = {4126, 1096},
@@ -503,7 +503,7 @@ DefineSettlement("rome", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("sena-gallica", {
+DefineSite("sena-gallica", {
 	Name = "Sena Gallica",
 	MapTemplate = "earth",
 	Position = {4138, 1052},
@@ -521,7 +521,7 @@ DefineSettlement("sena-gallica", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("spoletum", {
+DefineSite("spoletum", {
 	Name = "Spoletum",
 	MapTemplate = "earth",
 	Position = {4127, 1074},
@@ -537,7 +537,7 @@ DefineSettlement("spoletum", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("syracuse", {
+DefineSite("syracuse", {
 	Name = "Syracuse",
 	MapTemplate = "earth",
 	Position = {4184, 1204},
@@ -555,7 +555,7 @@ DefineSettlement("syracuse", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("venice", {
+DefineSite("venice", {
 	Name = "Venice",
 	MapTemplate = "earth",
 	Position = {4121, 1009},
@@ -577,7 +577,7 @@ DefineSettlement("venice", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSettlement("verona", {
+DefineSite("verona", {
 	Name = "Verona",
 	MapTemplate = "earth",
 	Position = {4090, 1014},

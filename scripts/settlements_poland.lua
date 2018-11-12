@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("gdansk", {
+DefineSite("gdansk", {
 	Name = "Gdansk",
 	MapTemplate = "earth",
 	Position = {4265, 812},
@@ -45,7 +45,7 @@ DefineSettlement("gdansk", {
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
-DefineSettlement("gniezno", {
+DefineSite("gniezno", {
 	Name = "Gniezno",
 	MapTemplate = "earth",
 	Position = {4248, 853},
@@ -65,7 +65,7 @@ DefineSettlement("gniezno", {
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
-DefineSettlement("kolberg", {
+DefineSite("kolberg", {
 	Name = "Kolberg",
 	MapTemplate = "earth",
 	Position = {4223, 806},
@@ -86,7 +86,7 @@ DefineSettlement("kolberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("konigsberg", {
+DefineSite("konigsberg", {
 	Name = "Konigsberg",
 	MapTemplate = "earth",
 	Position = {4302, 804},
@@ -109,7 +109,7 @@ DefineSettlement("konigsberg", {
 	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineSettlement("krakow", {
+DefineSite("krakow", {
 	Name = "Krakow",
 	MapTemplate = "earth",
 	Position = {4293, 907},
@@ -132,7 +132,7 @@ DefineSettlement("krakow", {
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
 })
 
-DefineSettlement("poznan", {
+DefineSite("poznan", {
 	Name = "Poznan",
 	MapTemplate = "earth",
 	Position = {4225, 855},
@@ -152,7 +152,7 @@ DefineSettlement("poznan", {
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
 
-DefineSettlement("szczecin", {
+DefineSite("szczecin", {
 	Name = "Szczecin",
 	MapTemplate = "earth",
 	Position = {4170, 829},

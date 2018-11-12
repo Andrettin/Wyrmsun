@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("asuncion", {
+DefineSite("asuncion", {
 	Name = "Asuncion",
 	MapTemplate = "earth",
 	Position = {2527, 2634},
@@ -47,7 +47,7 @@ DefineSettlement("asuncion", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("bahia-blanca", {
+DefineSite("bahia-blanca", {
 	Name = "Bahia Blanca",
 	MapTemplate = "earth",
 	Position = {2418, 2928},
@@ -67,7 +67,7 @@ DefineSettlement("bahia-blanca", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("buenos-aires", {
+DefineSite("buenos-aires", {
 	Name = "Buenos Aires",
 	MapTemplate = "earth",
 	Position = {2510, 2835},
@@ -89,7 +89,7 @@ DefineSettlement("buenos-aires", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("corrientes", {
+DefineSite("corrientes", {
 	Name = "Corrientes",
 	MapTemplate = "earth",
 	Position = {2501, 2673},
@@ -110,7 +110,7 @@ DefineSettlement("corrientes", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("montevideo", {
+DefineSite("montevideo", {
 	Name = "Montevideo",
 	MapTemplate = "earth",
 	Position = {2561, 2842},
@@ -133,7 +133,7 @@ DefineSettlement("montevideo", {
 	Regions = {"america", "south-america"}
 })
 
-DefineSettlement("santa-fe", {
+DefineSite("santa-fe", {
 	Name = "Santa Fe",
 	MapTemplate = "earth",
 	Position = {2457, 2768},

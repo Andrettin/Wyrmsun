@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("apulum", {
+DefineSite("apulum", {
 	Name = "Apulum",
 	MapTemplate = "earth",
 	Position = {4374, 1001},
@@ -43,7 +43,7 @@ DefineSettlement("apulum", {
 	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineSettlement("temesvar", {
+DefineSite("temesvar", {
 	Name = "Temesvar",
 	MapTemplate = "earth",
 	Position = {4318, 1011},

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("goteborg", {
+DefineSite("goteborg", {
 	Name = "Gothenburg",
 	MapTemplate = "earth",
 	Position = {4104, 725},
@@ -50,7 +50,7 @@ DefineSettlement("goteborg", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("malmo", {
+DefineSite("malmo", {
 	Name = "Malmo",
 	MapTemplate = "earth",
 	Position = {4136, 783},
@@ -79,7 +79,7 @@ DefineSettlement("malmo", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("roma-gotland", {
+DefineSite("roma-gotland", {
 	Name = "Roma",
 	MapTemplate = "earth",
 	Position = {4259, 739},
@@ -95,7 +95,7 @@ DefineSettlement("roma-gotland", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("sigtun", {
+DefineSite("sigtun", {
 	Name = "Sigtun",
 	MapTemplate = "earth",
 	Position = {4243, 692},
@@ -114,7 +114,7 @@ DefineSettlement("sigtun", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("stockholm", {
+DefineSite("stockholm", {
 	Name = "Stockholm",
 	MapTemplate = "earth",
 	Position = {4253, 693},
@@ -137,7 +137,7 @@ DefineSettlement("stockholm", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("torsburgen", {
+DefineSite("torsburgen", {
 	Name = "Torsburgen",
 	MapTemplate = "earth",
 	Position = {4265, 741},
@@ -153,7 +153,7 @@ DefineSettlement("torsburgen", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("uppsala", {
+DefineSite("uppsala", {
 	Name = "Uppsala",
 	MapTemplate = "earth",
 	Position = {4241, 684},
@@ -170,7 +170,7 @@ DefineSettlement("uppsala", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("vastervik", {
+DefineSite("vastervik", {
 	Name = "Vastervik",
 	MapTemplate = "earth",
 	Position = {4218, 734},
@@ -184,7 +184,7 @@ DefineSettlement("vastervik", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("visby", {
+DefineSite("visby", {
 	Name = "Visby",
 	MapTemplate = "earth",
 	Position = {4259, 736},
@@ -204,7 +204,7 @@ DefineSettlement("visby", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("vitemolla", {
+DefineSite("vitemolla", {
 	Name = "Vitemolla",
 	MapTemplate = "earth",
 	Position = {4161, 780},

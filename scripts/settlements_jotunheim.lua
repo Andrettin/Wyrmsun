@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
+DefineSite("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 90.
 	Name = "Geirrod's Hall",
 	MapTemplate = "jotunheim",
 	Position = {710, 335}, -- Geirrod's hall is located in mountains and near a river

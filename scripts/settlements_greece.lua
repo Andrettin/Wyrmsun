@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("aghia-irini", {
+DefineSite("aghia-irini", {
 	Name = "Aghia Irini",
 	MapTemplate = "earth",
 	Position = {4393, 1191},
@@ -44,7 +44,7 @@ DefineSettlement("aghia-irini", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("amyclae", {
+DefineSite("amyclae", {
 	Name = "Amyclae",
 	MapTemplate = "earth",
 	Position = {4348, 1206},
@@ -60,7 +60,7 @@ DefineSettlement("amyclae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("aphidnae", {
+DefineSite("aphidnae", {
 	Name = "Aphidnae",
 	MapTemplate = "earth",
 	Position = {4382, 1179},
@@ -77,7 +77,7 @@ DefineSettlement("aphidnae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("argos", {
+DefineSite("argos", {
 	Name = "Argos",
 	MapTemplate = "earth",
 	Position = {4357, 1191},
@@ -93,7 +93,7 @@ DefineSettlement("argos", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("athens", {
+DefineSite("athens", {
 	Name = "Athens",
 	MapTemplate = "earth",
 	Position = {4380, 1183},
@@ -119,7 +119,7 @@ DefineSettlement("athens", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("byzantium", {
+DefineSite("byzantium", {
 	Name = "Byzantium",
 	MapTemplate = "earth",
 	Position = {4498, 1114},
@@ -138,7 +138,7 @@ DefineSettlement("byzantium", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("corinth", {
+DefineSite("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",
 	Position = {4360, 1186},
@@ -158,7 +158,7 @@ DefineSettlement("corinth", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("coulas", {
+DefineSite("coulas", {
 	Name = "Coulas",
 	MapTemplate = "earth",
 	Position = {4366, 1172},
@@ -174,7 +174,7 @@ DefineSettlement("coulas", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("delos", {
+DefineSite("delos", {
 	Name = "Delos",
 	MapTemplate = "earth",
 	Position = {4414, 1197},
@@ -193,7 +193,7 @@ DefineSettlement("delos", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("delphi", {
+DefineSite("delphi", {
 	Name = "Delphi",
 	MapTemplate = "earth",
 	Position = {4352, 1172},
@@ -209,7 +209,7 @@ DefineSettlement("delphi", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("dicte", {
+DefineSite("dicte", {
 	Name = "Dicte",
 	MapTemplate = "earth",
 	Position = {4420, 1247},
@@ -225,7 +225,7 @@ DefineSettlement("dicte", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("eleusis", {
+DefineSite("eleusis", {
 	Name = "Eleusis",
 	MapTemplate = "earth",
 	Position = {4374, 1181},
@@ -242,7 +242,7 @@ DefineSettlement("eleusis", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("epidaurus", {
+DefineSite("epidaurus", {
 	Name = "Epidaurus",
 	MapTemplate = "earth",
 	Position = {4366, 1190},
@@ -259,7 +259,7 @@ DefineSettlement("epidaurus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("gerenia", {
+DefineSite("gerenia", {
 	Name = "Gerenia",
 	MapTemplate = "earth",
 	Position = {4344, 1206},
@@ -275,7 +275,7 @@ DefineSettlement("gerenia", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("ialysus", {
+DefineSite("ialysus", {
 	Name = "Ialysus",
 	MapTemplate = "earth",
 	Position = {4480, 1220},
@@ -291,7 +291,7 @@ DefineSettlement("ialysus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("iolcus", {
+DefineSite("iolcus", {
 	Name = "Iolcus",
 	MapTemplate = "earth",
 	Position = {4363, 1150},
@@ -307,7 +307,7 @@ DefineSettlement("iolcus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("itanus", {
+DefineSite("itanus", {
 	Name = "Itanus",
 	MapTemplate = "earth",
 	Position = {4437, 1247},
@@ -323,7 +323,7 @@ DefineSettlement("itanus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("knossos", {
+DefineSite("knossos", {
 	Name = "Knossos",
 	MapTemplate = "earth",
 	Position = {4410, 1245},
@@ -341,7 +341,7 @@ DefineSettlement("knossos", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("krisa", {
+DefineSite("krisa", {
 	Name = "Krisa",
 	MapTemplate = "earth",
 	Position = {4351, 1172},
@@ -358,7 +358,7 @@ DefineSettlement("krisa", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("mycenae", {
+DefineSite("mycenae", {
 	Name = "Mycenae",
 	MapTemplate = "earth",
 	Position = {4358, 1188},
@@ -375,7 +375,7 @@ DefineSettlement("mycenae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("orchomenus", {
+DefineSite("orchomenus", {
 	Name = "Orchomenus",
 	MapTemplate = "earth",
 	Position = {4360, 1172},
@@ -391,7 +391,7 @@ DefineSettlement("orchomenus", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("pagasae", {
+DefineSite("pagasae", {
 	Name = "Pagasae",
 	MapTemplate = "earth",
 	Position = {4361, 1152},
@@ -407,7 +407,7 @@ DefineSettlement("pagasae", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("phylakopi", {
+DefineSite("phylakopi", {
 	Name = "Phylakopi",
 	MapTemplate = "earth",
 	Position = {4396, 1212},
@@ -426,7 +426,7 @@ DefineSettlement("phylakopi", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("sicyon", {
+DefineSite("sicyon", {
 	Name = "Sicyon",
 	MapTemplate = "earth",
 	Position = {4356, 1183},
@@ -442,7 +442,7 @@ DefineSettlement("sicyon", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("thebes", {
+DefineSite("thebes", {
 	Name = "Thebes",
 	MapTemplate = "earth",
 --	Position = {4369, 1176},
@@ -461,7 +461,7 @@ DefineSettlement("thebes", {
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
 
-DefineSettlement("tiryns", {
+DefineSite("tiryns", {
 	Name = "Tiryns",
 	MapTemplate = "earth",
 	Position = {4359, 1191},

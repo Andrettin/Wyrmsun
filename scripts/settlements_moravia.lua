@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("brunn", {
+DefineSite("brunn", {
 	Name = "Brno",
 	MapTemplate = "earth",
 	Position = {4206, 936},
@@ -46,7 +46,7 @@ DefineSettlement("brunn", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("doubravnik", {
+DefineSite("doubravnik", {
 	Name = "Doubravnik",
 	MapTemplate = "earth",
 	Position = {4212, 924},
@@ -62,7 +62,7 @@ DefineSettlement("doubravnik", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("olmutz", {
+DefineSite("olmutz", {
 	Name = "Olomouc",
 	MapTemplate = "earth",
 	Position = {4232, 921},
@@ -85,7 +85,7 @@ DefineSettlement("olmutz", {
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
 
-DefineSettlement("velehrad", {
+DefineSite("velehrad", {
 	Name = "Velehrad",
 	MapTemplate = "earth",
 	Position = {4234, 931},

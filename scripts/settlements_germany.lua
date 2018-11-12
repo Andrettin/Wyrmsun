@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("augsburg", {
+DefineSite("augsburg", {
 	Name = "Augsburg",
 	MapTemplate = "earth",
 	Position = {4090, 942},
@@ -49,7 +49,7 @@ DefineSettlement("augsburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("berlin", {
+DefineSite("berlin", {
 	Name = "Berlin",
 	MapTemplate = "earth",
 	Position = {4145, 853},
@@ -75,7 +75,7 @@ DefineSettlement("berlin", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("bernstorf", { -- Bernstorf, Bavaria
+DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	Name = "Bernstorf",
 	MapTemplate = "earth",
 	Position = {4104, 946},
@@ -92,7 +92,7 @@ DefineSettlement("bernstorf", { -- Bernstorf, Bavaria
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("bremen", {
+DefineSite("bremen", {
 	Name = "Bremen",
 	MapTemplate = "earth",
 	Position = {4044, 841},
@@ -117,7 +117,7 @@ DefineSettlement("bremen", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("cologne", {
+DefineSite("cologne", {
 	Name = "Cologne",
 	MapTemplate = "earth",
 	Position = {3992, 897},
@@ -150,7 +150,7 @@ DefineSettlement("cologne", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("eichstatt", {
+DefineSite("eichstatt", {
 	Name = "Eichstatt",
 	MapTemplate = "earth",
 	Position = {4092, 926},
@@ -166,7 +166,7 @@ DefineSettlement("eichstatt", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("eining", {
+DefineSite("eining", {
 	Name = "Eining",
 	MapTemplate = "earth",
 	Position = {4104, 936},
@@ -183,7 +183,7 @@ DefineSettlement("eining", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("eresburg", {
+DefineSite("eresburg", {
 	Name = "Eresburg",
 	MapTemplate = "earth",
 	Position = {4043, 879},
@@ -201,7 +201,7 @@ DefineSettlement("eresburg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("flensburg", {
+DefineSite("flensburg", {
 	Name = "Flensburg",
 	MapTemplate = "earth",
 	Position = {4054, 802},
@@ -222,7 +222,7 @@ DefineSettlement("flensburg", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("freising", {
+DefineSite("freising", {
 	Name = "Freising",
 	MapTemplate = "earth",
 	Position = {4114, 947},
@@ -238,7 +238,7 @@ DefineSettlement("freising", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("fulda", {
+DefineSite("fulda", {
 	Name = "Fulda",
 	MapTemplate = "earth",
 	Position = {4058, 895},
@@ -258,7 +258,7 @@ DefineSettlement("fulda", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("hamburg", {
+DefineSite("hamburg", {
 	Name = "Hamburg",
 	MapTemplate = "earth",
 	Position = {4065, 828},
@@ -280,7 +280,7 @@ DefineSettlement("hamburg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("hanover", {
+DefineSite("hanover", {
 	Name = "Hanover",
 	MapTemplate = "earth",
 	Position = {4063, 855},
@@ -303,7 +303,7 @@ DefineSettlement("hanover", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("karlsruhe", {
+DefineSite("karlsruhe", {
 	Name = "Karlsruhe",
 	MapTemplate = "earth",
 	Position = {4031, 940},
@@ -330,7 +330,7 @@ DefineSettlement("karlsruhe", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("kiel", {
+DefineSite("kiel", {
 	Name = "Kiel",
 	MapTemplate = "earth",
 	Position = {4068, 811},
@@ -371,7 +371,7 @@ DefineSettlement("kiel", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("konnenberg", {
+DefineSite("konnenberg", {
 	Name = "Konnenberg",
 	MapTemplate = "earth",
 	Position = {4045, 857},
@@ -387,7 +387,7 @@ DefineSettlement("konnenberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("konstanz", {
+DefineSite("konstanz", {
 	Name = "Konstanz",
 	MapTemplate = "earth",
 	Position = {4051, 965},
@@ -408,7 +408,7 @@ DefineSettlement("konstanz", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("lubeck", {
+DefineSite("lubeck", {
 	Name = "Lubeck",
 	MapTemplate = "earth",
 	Position = {4083, 821},
@@ -430,7 +430,7 @@ DefineSettlement("lubeck", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("magdeburg", {
+DefineSite("magdeburg", {
 	Name = "Magdeburg",
 	MapTemplate = "earth",
 	Position = {4104, 861},
@@ -456,7 +456,7 @@ DefineSettlement("magdeburg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("mainz", {
+DefineSite("mainz", {
 	Name = "Mainz",
 	MapTemplate = "earth",
 	Position = {4022, 913},
@@ -490,7 +490,7 @@ DefineSettlement("mainz", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("mittelberg", {
+DefineSite("mittelberg", {
 	Name = "Mittelberg",
 	MapTemplate = "earth",
 	Position = {4101, 882},
@@ -507,7 +507,7 @@ DefineSettlement("mittelberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("munster", {
+DefineSite("munster", {
 	Name = "Munster",
 	MapTemplate = "earth",
 	Position = {3992, 865},
@@ -531,7 +531,7 @@ DefineSettlement("munster", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("nuremberg", {
+DefineSite("nuremberg", {
 	Name = "Nuremberg",
 	MapTemplate = "earth",
 	Position = {4087, 930},
@@ -552,7 +552,7 @@ DefineSettlement("nuremberg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("oldenburg", {
+DefineSite("oldenburg", {
 	Name = "Oldenburg",
 	MapTemplate = "earth",
 	Position = {4027, 839},
@@ -576,7 +576,7 @@ DefineSettlement("oldenburg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("paderborn", {
+DefineSite("paderborn", {
 	Name = "Paderborn",
 	MapTemplate = "earth",
 	Position = {4033, 873},
@@ -593,7 +593,7 @@ DefineSettlement("paderborn", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("passau", {
+DefineSite("passau", {
 	Name = "Passau",
 	MapTemplate = "earth",
 	Position = {4149, 945},
@@ -610,7 +610,7 @@ DefineSettlement("passau", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("regensburg", {
+DefineSite("regensburg", {
 	Name = "Regensburg",
 	MapTemplate = "earth",
 	Position = {4116, 932},
@@ -643,7 +643,7 @@ DefineSettlement("regensburg", {
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("rostock", {
+DefineSite("rostock", {
 	Name = "Rostock",
 	MapTemplate = "earth",
 	Position = {4126, 817},
@@ -664,7 +664,7 @@ DefineSettlement("rostock", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("scheidungen", {
+DefineSite("scheidungen", {
 	Name = "Scheidungen",
 	MapTemplate = "earth",
 	Position = {4107, 873},
@@ -680,7 +680,7 @@ DefineSettlement("scheidungen", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("schwerin", {
+DefineSite("schwerin", {
 	Name = "Schwerin",
 	MapTemplate = "earth",
 	Position = {4093, 827},
@@ -698,7 +698,7 @@ DefineSettlement("schwerin", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("straubing", {
+DefineSite("straubing", {
 	Name = "Straubing",
 	MapTemplate = "earth",
 	Position = {4124, 934},
@@ -721,7 +721,7 @@ DefineSettlement("straubing", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("syburg", {
+DefineSite("syburg", {
 	Name = "Syburg",
 	MapTemplate = "earth",
 	Position = {4019, 876},
@@ -739,7 +739,7 @@ DefineSettlement("syburg", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("tauberbischofsheim", {
+DefineSite("tauberbischofsheim", {
 	Name = "Tauberbischofsheim",
 	MapTemplate = "earth",
 	Position = {4044, 922},
@@ -756,7 +756,7 @@ DefineSettlement("tauberbischofsheim", {
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("trier", {
+DefineSite("trier", {
 	Name = "Trier",
 	MapTemplate = "earth",
 	Position = {3993, 917},
@@ -785,7 +785,7 @@ DefineSettlement("trier", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("worms", {
+DefineSite("worms", {
 	Name = "Worms",
 	MapTemplate = "earth",
 	Position = {4026, 922},
@@ -814,7 +814,7 @@ DefineSettlement("worms", {
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("zulpich", {
+DefineSite("zulpich", {
 	Name = "Zulpich",
 	MapTemplate = "earth",
 	Position = {3996, 896},

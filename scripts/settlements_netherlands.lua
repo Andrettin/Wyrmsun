@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amsterdam", {
+DefineSite("amsterdam", {
 	Name = "Amsterdam",
 	MapTemplate = "earth",
 	Position = {3952, 858},
@@ -50,7 +50,7 @@ DefineSettlement("amsterdam", {
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("franeker", {
+DefineSite("franeker", {
 	Name = "Franeker",
 	MapTemplate = "earth",
 	Position = {3966, 837},
@@ -67,7 +67,7 @@ DefineSettlement("franeker", {
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("leeuwarden", {
+DefineSite("leeuwarden", {
 	Name = "Leeuwarden",
 	MapTemplate = "earth",
 	Position = {3968, 837},
@@ -89,7 +89,7 @@ DefineSettlement("leeuwarden", {
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("wijk-bij-duurstede", {
+DefineSite("wijk-bij-duurstede", {
 	Name = "Wijk bij Duurstede",
 	MapTemplate = "earth",
 	Position = {3959, 866},

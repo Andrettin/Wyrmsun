@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("braga", {
+DefineSite("braga", {
 	Name = "Braga",
 	MapTemplate = "earth",
 	Position = {3651, 1096},
@@ -45,7 +45,7 @@ DefineSettlement("braga", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("coimbra", {
+DefineSite("coimbra", {
 	Name = "Coimbra",
 	MapTemplate = "earth",
 	Position = {3639, 1133},
@@ -65,7 +65,7 @@ DefineSettlement("coimbra", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("lisbon", {
+DefineSite("lisbon", {
 	Name = "Lisbon",
 	MapTemplate = "earth",
 	Position = {3632, 1166},
@@ -86,7 +86,7 @@ DefineSettlement("lisbon", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("oporto", {
+DefineSite("oporto", {
 	Name = "Oporto",
 	MapTemplate = "earth",
 	Position = {3645, 1113},
@@ -106,7 +106,7 @@ DefineSettlement("oporto", {
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
 
-DefineSettlement("tres-minas", {
+DefineSite("tres-minas", {
 	Name = "Tres Minas",
 	MapTemplate = "earth",
 	Position = {3665, 1095},

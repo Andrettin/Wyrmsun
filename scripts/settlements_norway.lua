@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("arendal", {
+DefineSite("arendal", {
 	Name = "Arendal",
 	MapTemplate = "earth",
 	Position = {4048, 708},
@@ -46,7 +46,7 @@ DefineSettlement("arendal", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("gjerstad", {
+DefineSite("gjerstad", {
 	Name = "Gjerstad",
 	MapTemplate = "earth",
 	Position = {4069, 702},
@@ -66,7 +66,7 @@ DefineSettlement("gjerstad", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("hamar", {
+DefineSite("hamar", {
 	Name = "Hamar",
 	MapTemplate = "earth",
 	Position = {4089, 666},
@@ -88,7 +88,7 @@ DefineSettlement("hamar", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("hermansverk", {
+DefineSite("hermansverk", {
 	Name = "Hermansverk",
 	MapTemplate = "earth",
 	Position = {3981, 653},
@@ -109,7 +109,7 @@ DefineSettlement("hermansverk", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("oslo", {
+DefineSite("oslo", {
 	Name = "Oslo",
 	MapTemplate = "earth",
 	Position = {4085, 682},
@@ -130,7 +130,7 @@ DefineSettlement("oslo", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSettlement("tonsberg", {
+DefineSite("tonsberg", {
 	Name = "Tonsberg",
 	MapTemplate = "earth",
 	Position = {4074, 698},

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("armagh", {
+DefineSite("armagh", {
 	Name = "Armagh",
 	MapTemplate = "earth",
 	Position = {3691, 810},
@@ -42,7 +42,7 @@ DefineSettlement("armagh", {
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("dublin", {
+DefineSite("dublin", {
 	Name = "Dublin",
 	MapTemplate = "earth",
 	Position = {3696, 834},
@@ -62,7 +62,7 @@ DefineSettlement("dublin", {
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSettlement("waterford", {
+DefineSite("waterford", {
 	Name = "Waterford",
 	MapTemplate = "earth",
 	Position = {3678, 858},

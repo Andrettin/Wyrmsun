@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("mitau", {
+DefineSite("mitau", {
 	Name = "Mitau",
 	MapTemplate = "earth",
 	Position = {4378, 763},
@@ -42,7 +42,7 @@ DefineSettlement("mitau", {
 	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineSettlement("riga", {
+DefineSite("riga", {
 	Name = "Riga",
 	MapTemplate = "earth",
 	Position = {4392, 750},
@@ -60,7 +60,7 @@ DefineSettlement("riga", {
 	Regions = {"europe", "west-and-central-europe"}
 })
 
-DefineSettlement("tallinn", {
+DefineSite("tallinn", {
 	Name = "Tallinn",
 	MapTemplate = "earth",
 	Position = {4402, 697},

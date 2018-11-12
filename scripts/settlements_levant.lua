@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("akko", {
+DefineSite("akko", {
 	Name = "Akko",
 	MapTemplate = "earth",
 	Position = {4638, 1299},
@@ -43,7 +43,7 @@ DefineSettlement("akko", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("aphek", {
+DefineSite("aphek", {
 	Name = "Aphek",
 	MapTemplate = "earth",
 	Position = {4653, 1301},
@@ -62,7 +62,7 @@ DefineSettlement("aphek", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("aroer", {
+DefineSite("aroer", {
 	Name = "Aroer",
 	MapTemplate = "earth",
 	Position = {4655, 1331},
@@ -81,7 +81,7 @@ DefineSettlement("aroer", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("arpad", {
+DefineSite("arpad", {
 	Name = "Arpad",
 	MapTemplate = "earth",
 	Position = {4683, 1216},
@@ -99,7 +99,7 @@ DefineSettlement("arpad", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("arvad", {
+DefineSite("arvad", {
 	Name = "Arvad",
 	MapTemplate = "earth",
 	Position = {4657, 1255},
@@ -117,7 +117,7 @@ DefineSettlement("arvad", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("ascalon", {
+DefineSite("ascalon", {
 	Name = "Ascalon",
 	MapTemplate = "earth",
 	Position = {4626, 1328},
@@ -138,7 +138,7 @@ DefineSettlement("ascalon", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("baalbec", {
+DefineSite("baalbec", {
 	Name = "Baalbec",
 	MapTemplate = "earth",
 	Position = {4665, 1273},
@@ -158,7 +158,7 @@ DefineSettlement("baalbec", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("beersheba", {
+DefineSite("beersheba", {
 	Name = "Beersheba",
 	MapTemplate = "earth",
 	Position = {4630, 1338},
@@ -177,7 +177,7 @@ DefineSettlement("beersheba", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("berothai", {
+DefineSite("berothai", {
 	Name = "Berothai",
 	MapTemplate = "earth",
 	Position = {4649, 1277},
@@ -195,7 +195,7 @@ DefineSettlement("berothai", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("bethel", {
+DefineSite("bethel", {
 	Name = "Bethel",
 	MapTemplate = "earth",
 	Position = {4642, 1322},
@@ -214,7 +214,7 @@ DefineSettlement("bethel", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("bethshean", {
+DefineSite("bethshean", {
 	Name = "Bethshean",
 	MapTemplate = "earth",
 	Position = {4646, 1309},
@@ -233,7 +233,7 @@ DefineSettlement("bethshean", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("biblah", {
+DefineSite("biblah", {
 	Name = "Biblah",
 	MapTemplate = "earth",
 	Position = {4671, 1264},
@@ -252,7 +252,7 @@ DefineSettlement("biblah", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("bosrah", {
+DefineSite("bosrah", {
 	Name = "Bosrah",
 	MapTemplate = "earth",
 	Position = {4667, 1310},
@@ -271,7 +271,7 @@ DefineSettlement("bosrah", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("byblos", {
+DefineSite("byblos", {
 	Name = "Byblos",
 	MapTemplate = "earth",
 	Position = {4652, 1272},
@@ -290,7 +290,7 @@ DefineSettlement("byblos", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("carchemish", {
+DefineSite("carchemish", {
 	Name = "Carchemish",
 	MapTemplate = "earth",
 	Position = {4704, 1209},
@@ -311,7 +311,7 @@ DefineSettlement("carchemish", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("damascus", {
+DefineSite("damascus", {
 	Name = "Damascus",
 	MapTemplate = "earth",
 	Position = {4666, 1279},
@@ -337,7 +337,7 @@ DefineSettlement("damascus", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dan", {
+DefineSite("dan", {
 	Name = "Dan",
 	MapTemplate = "earth",
 	Position = {4651, 1290},
@@ -357,7 +357,7 @@ DefineSettlement("dan", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("dor", {
+DefineSite("dor", {
 	Name = "Dor",
 	MapTemplate = "earth",
 	Position = {4635, 1307},
@@ -378,7 +378,7 @@ DefineSettlement("dor", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("ekron", {
+DefineSite("ekron", {
 	Name = "Ekron",
 	MapTemplate = "earth",
 	Position = {4630, 1326},
@@ -397,7 +397,7 @@ DefineSettlement("ekron", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("elath", {
+DefineSite("elath", {
 	Name = "Elath",
 	MapTemplate = "earth",
 	Position = {4637, 1375},
@@ -416,7 +416,7 @@ DefineSettlement("elath", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("ezion-geber", {
+DefineSite("ezion-geber", {
 	Name = "Ezion-Geber",
 	MapTemplate = "earth",
 	Position = {4638, 1369},
@@ -435,7 +435,7 @@ DefineSettlement("ezion-geber", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("gaza", {
+DefineSite("gaza", {
 	Name = "Gaza",
 	MapTemplate = "earth",
 	Position = {4621, 1334},
@@ -460,7 +460,7 @@ DefineSettlement("gaza", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("gilboa", {
+DefineSite("gilboa", {
 	Name = "Gilboa",
 	MapTemplate = "earth",
 	Position = {4645, 1311},
@@ -480,7 +480,7 @@ DefineSettlement("gilboa", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("gilgal", {
+DefineSite("gilgal", {
 	Name = "Gilgal",
 	MapTemplate = "earth",
 	Position = {4647, 1323},
@@ -499,7 +499,7 @@ DefineSettlement("gilgal", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("hamath", {
+DefineSite("hamath", {
 	Name = "Hamath",
 	MapTemplate = "earth",
 	Position = {4674, 1244},
@@ -521,7 +521,7 @@ DefineSettlement("hamath", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("hazor", {
+DefineSite("hazor", {
 	Name = "Hazor",
 	MapTemplate = "earth",
 	Position = {4628, 1325},
@@ -541,7 +541,7 @@ DefineSettlement("hazor", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("hebron", {
+DefineSite("hebron", {
 	Name = "Hebron",
 	MapTemplate = "earth",
 	Position = {4638, 1330},
@@ -562,7 +562,7 @@ DefineSettlement("hebron", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("heshbon", {
+DefineSite("heshbon", {
 	Name = "Heshbon",
 	MapTemplate = "earth",
 	Position = {4655, 1325},
@@ -581,7 +581,7 @@ DefineSettlement("heshbon", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("jabesh", {
+DefineSite("jabesh", {
 	Name = "Jabesh",
 	MapTemplate = "earth",
 	Position = {4654, 1315},
@@ -601,7 +601,7 @@ DefineSettlement("jabesh", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("jericho", {
+DefineSite("jericho", {
 	Name = "Jericho",
 	MapTemplate = "earth",
 	Position = {4647, 1322},
@@ -623,7 +623,7 @@ DefineSettlement("jericho", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("jerusalem", {
+DefineSite("jerusalem", {
 	Name = "Jerusalem",
 	MapTemplate = "earth",
 	Position = {4642, 1327},
@@ -647,7 +647,7 @@ DefineSettlement("jerusalem", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("jezreel", {
+DefineSite("jezreel", {
 	Name = "Jezreel",
 	MapTemplate = "earth",
 	Position = {4649, 1310},
@@ -666,7 +666,7 @@ DefineSettlement("jezreel", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("joppa", {
+DefineSite("joppa", {
 	Name = "Joppa",
 	MapTemplate = "earth",
 	Position = {4630, 1320},
@@ -689,7 +689,7 @@ DefineSettlement("joppa", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("kadesh", {
+DefineSite("kadesh", {
 	Name = "Kadesh",
 	MapTemplate = "earth",
 	Position = {4667, 1264},
@@ -709,7 +709,7 @@ DefineSettlement("kadesh", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("kadesh-barnea", {
+DefineSite("kadesh-barnea", {
 	Name = "Kadesh Barnea",
 	MapTemplate = "earth",
 	Position = {4630, 1359},
@@ -726,7 +726,7 @@ DefineSettlement("kadesh-barnea", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("kadesh-naphtali", {
+DefineSite("kadesh-naphtali", {
 	Name = "Kadesh Naphtali",
 	MapTemplate = "earth",
 	Position = {4649, 1293},
@@ -746,7 +746,7 @@ DefineSettlement("kadesh-naphtali", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("khatmar", {
+DefineSite("khatmar", {
 	Name = "Khatmar",
 	MapTemplate = "earth",
 	Position = {4693, 1223},
@@ -764,7 +764,7 @@ DefineSettlement("khatmar", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("megiddo", {
+DefineSite("megiddo", {
 	Name = "Megiddo",
 	MapTemplate = "earth",
 	Position = {4639, 1305},
@@ -789,7 +789,7 @@ DefineSettlement("megiddo", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("samaria", {
+DefineSite("samaria", {
 	Name = "Samaria",
 	MapTemplate = "earth",
 	Position = {4643, 1317},
@@ -809,7 +809,7 @@ DefineSettlement("samaria", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("selah", {
+DefineSite("selah", {
 	Name = "Selah",
 	MapTemplate = "earth",
 	Position = {4645, 1358},
@@ -828,7 +828,7 @@ DefineSettlement("selah", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("shechem", {
+DefineSite("shechem", {
 	Name = "Shechem",
 	MapTemplate = "earth",
 	Position = {4643, 1313},
@@ -850,7 +850,7 @@ DefineSettlement("shechem", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("shiloh", {
+DefineSite("shiloh", {
 	Name = "Shiloh",
 	MapTemplate = "earth",
 	Position = {4640, 1321},
@@ -872,7 +872,7 @@ DefineSettlement("shiloh", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("shunem", {
+DefineSite("shunem", {
 	Name = "Shunem",
 	MapTemplate = "earth",
 	Position = {4649, 1306},
@@ -891,7 +891,7 @@ DefineSettlement("shunem", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("sidon", {
+DefineSite("sidon", {
 	Name = "Sidon",
 	MapTemplate = "earth",
 	Position = {4648, 1279},
@@ -910,7 +910,7 @@ DefineSettlement("sidon", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("tyre", {
+DefineSite("tyre", {
 	Name = "Tyre",
 	MapTemplate = "earth",
 	Position = {4642, 1291},

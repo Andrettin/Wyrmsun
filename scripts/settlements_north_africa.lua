@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("carthage", {
+DefineSite("carthage", {
 	Name = "Carthage",
 	MapTemplate = "earth",
 	Position = {4071, 1209},
@@ -43,7 +43,7 @@ DefineSettlement("carthage", {
 	Regions = {"africa"}
 })
 
-DefineSettlement("utica", {
+DefineSite("utica", {
 	Name = "Utica",
 	MapTemplate = "earth",
 	Position = {4070, 1205},

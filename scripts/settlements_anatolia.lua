@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("amisus", {
+DefineSite("amisus", {
 	Name = "Amisus",
 	MapTemplate = "earth",
 	Position = {4663, 1106},
@@ -44,7 +44,7 @@ DefineSettlement("amisus", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("milid", {
+DefineSite("milid", {
 	Name = "Milid",
 	MapTemplate = "earth",
 	Position = {4711, 1172},
@@ -61,7 +61,7 @@ DefineSettlement("milid", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("phaselis", {
+DefineSite("phaselis", {
 	Name = "Phaselis",
 	MapTemplate = "earth",
 	Position = {4534, 1216},
@@ -80,7 +80,7 @@ DefineSettlement("phaselis", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("sinope", {
+DefineSite("sinope", {
 	Name = "Sinope",
 	MapTemplate = "earth",
 	Position = {4637, 1092},
@@ -100,7 +100,7 @@ DefineSettlement("sinope", {
 	Regions = {"asia"}
 })
 
-DefineSettlement("tarsus", {
+DefineSite("tarsus", {
 	Name = "Tarsus",
 	MapTemplate = "earth",
 	Position = {4632, 1208},

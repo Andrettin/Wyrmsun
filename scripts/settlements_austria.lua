@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSettlement("adelsberg", {
+DefineSite("adelsberg", {
 	Name = "Adelsberg",
 	MapTemplate = "earth",
 	Position = {4163, 1005},
@@ -41,7 +41,7 @@ DefineSettlement("adelsberg", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("bruck", {
+DefineSite("bruck", {
 	Name = "Bruck",
 	MapTemplate = "earth",
 	Position = {4183, 972},
@@ -57,7 +57,7 @@ DefineSettlement("bruck", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("carnuntum", {
+DefineSite("carnuntum", {
 	Name = "Carnuntum",
 	MapTemplate = "earth",
 	Position = {4224, 955},
@@ -79,7 +79,7 @@ DefineSettlement("carnuntum", {
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
-DefineSettlement("cilli", {
+DefineSite("cilli", {
 	Name = "Cilli",
 	MapTemplate = "earth",
 	Position = {4183, 997},
@@ -95,7 +95,7 @@ DefineSettlement("cilli", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("gastein", {
+DefineSite("gastein", {
 	Name = "Gastein",
 	MapTemplate = "earth",
 	Position = {4135, 977},
@@ -111,7 +111,7 @@ DefineSettlement("gastein", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("gossensass", {
+DefineSite("gossensass", {
 	Name = "Gossensass",
 	MapTemplate = "earth",
 	Position = {4095, 983},
@@ -131,7 +131,7 @@ DefineSettlement("gossensass", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("graz", {
+DefineSite("graz", {
 	Name = "Graz",
 	MapTemplate = "earth",
 	Position = {4190, 981},
@@ -151,7 +151,7 @@ DefineSettlement("graz", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("innsbruck", {
+DefineSite("innsbruck", {
 	Name = "Innsbruck",
 	MapTemplate = "earth",
 	Position = {4102, 972},
@@ -169,7 +169,7 @@ DefineSettlement("innsbruck", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("klagenfurt", {
+DefineSite("klagenfurt", {
 	Name = "Klagenfurt",
 	MapTemplate = "earth",
 	Position = {4166, 987},
@@ -187,7 +187,7 @@ DefineSettlement("klagenfurt", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("linz", {
+DefineSite("linz", {
 	Name = "Linz",
 	MapTemplate = "earth",
 	Position = {4162, 949},
@@ -205,7 +205,7 @@ DefineSettlement("linz", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("ljubljana", {
+DefineSite("ljubljana", {
 	Name = "Ljubljana",
 	MapTemplate = "earth",
 	Position = {4170, 1000},
@@ -225,7 +225,7 @@ DefineSettlement("ljubljana", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
 
-DefineSettlement("marburg", {
+DefineSite("marburg", {
 	Name = "Marburg",
 	MapTemplate = "earth",
 	Position = {4213, 988},
@@ -242,7 +242,7 @@ DefineSettlement("marburg", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("salzburg", {
+DefineSite("salzburg", {
 	Name = "Salzburg",
 	MapTemplate = "earth",
 	Position = {4135, 960},
@@ -264,7 +264,7 @@ DefineSettlement("salzburg", {
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
-DefineSettlement("trent", {
+DefineSite("trent", {
 	Name = "Trent",
 	MapTemplate = "earth",
 	Position = {4095, 1000},
@@ -280,7 +280,7 @@ DefineSettlement("trent", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSettlement("vienna", {
+DefineSite("vienna", {
 	Name = "Vienna",
 	MapTemplate = "earth",
 	Position = {4212, 953},
@@ -313,7 +313,7 @@ DefineSettlement("vienna", {
 	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
 })
 
-DefineSettlement("villach", {
+DefineSite("villach", {
 	Name = "Villach",
 	MapTemplate = "earth",
 	Position = {4155, 988},
