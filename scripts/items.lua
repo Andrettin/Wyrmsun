@@ -169,6 +169,16 @@ DefineUnitType("unit-great-axe", {
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-club", {
+	Name = "Club",
+	Parent = "unit-template-item",
+	Costs = {"copper", 100},
+	Image = {"file", "neutral/items/club.png", "size", {32, 32}},
+	Icon = "icon-club",
+	ItemClass = "mace",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-hammer", {
 	Name = "Hammer",
 	Parent = "unit-template-item",

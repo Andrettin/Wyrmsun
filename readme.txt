@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.4.2
 -----------------------------------------------------------------------
 
+* Items
+- Added Club weapon.
+
 * Modding
 - Made substantial progress in allowing for separation between scripts and data. Terrain types can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod is now parsed automatically by the game on start.
 

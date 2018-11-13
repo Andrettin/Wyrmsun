@@ -4334,6 +4334,7 @@ DefineUnitType("unit-template-barracks", {
 	ButtonKey = "b",
 	ButtonHint = "Build ~!Barracks",
 	ResourceDemand = {"furniture", 3, "leather", 3},
+	AiDrops = {"unit-club"},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "barracks-selected",
@@ -4421,7 +4422,7 @@ DefineUnitType("unit-template-smithy", {
 	ButtonPos = 5,
 	ButtonKey = "s",
 	ButtonHint = "Build ~!Smithy",
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-crown", "unit-amulet", "unit-ring"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-crown", "unit-amulet", "unit-ring"},
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls or mines",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
@@ -4775,7 +4776,7 @@ DefineUnitType("unit-template-market", {
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	AiDrops = {"unit-crown", "unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
