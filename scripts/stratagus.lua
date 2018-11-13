@@ -1582,8 +1582,51 @@ function LoadHeroes()
 	end
 end
 
+function LoadData()
+	LoadDataDirectories("data/")
+	
+	local dlc_dirs = ListDirsInDirectory("dlcs/")
+	for i, f in ipairs(dlc_dirs) do
+		ModPath = "dlcs/" .. f .. "/"
+		if (CanAccessFile(ModPath .. "data/")) then
+			LoadDataDirectories(ModPath .. "data/")
+		end
+	end
+	
+	for i = 1, table.getn(wyr.preferences.EnabledMods) do
+		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
+			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
+			Load(wyr.preferences.EnabledMods[i])
+			
+			local has_required_dependencies = true
+			if (ModDependencies ~= nil) then
+				for i=1,table.getn(ModDependencies) do
+					if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+						has_required_dependencies = false
+					end
+				end
+			end
+			if (has_required_dependencies) then
+				if (CanAccessFile(ModPath .. "data/")) then
+					LoadDataDirectories(ModPath .. "data/")
+				end
+			end
+		end
+	end
+	
+	ModPath = ""
+end
+
 function LoadDataDirectories(directory)
 	local data_directories = {"terrain_types", "unit_types", "map_templates", "characters"}
+	
+	-- load the data files directly in the main data directory
+	local fileslist = ListFilesInDirectory(directory)
+	for i, f in ipairs(fileslist) do
+		if (string.find(f, ".cfg")) then
+			Load(directory .. f)
+		end
+	end
 	
 	for i = 1, table.getn(data_directories) do
 		if (CanAccessFile(directory .. data_directories[i] .. "/")) then
@@ -1902,13 +1945,13 @@ Load("scripts/abilities.lua")
 Load("scripts/spells.lua")
 Load("scripts/terrain_types.lua")
 Load("scripts/world_map_terrain_types.lua")
-Load("scripts/deity_domains.lua")
 Load("scripts/planes.lua")
 Load("scripts/worlds.lua")
 Load("scripts/species.lua")
 Load("scripts/units.lua")
 Load("scripts/upgrade.lua")
 Load("scripts/ability_dependencies.lua")
+Load("scripts/deity_domains.lua")
 Load("scripts/religions.lua")
 Load("scripts/deities.lua")
 Load("scripts/wyr.lua")
@@ -1932,7 +1975,5 @@ Load("scripts/events.lua")
 Load("scripts/achievements.lua")
 Load("scripts/texts.lua")
 Load("scripts/ui.lua")
-
-LoadDataDirectories("data/")
 
 DebugPrint("... ready!\n")

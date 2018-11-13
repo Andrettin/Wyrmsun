@@ -28,196 +28,235 @@
 -- The Five Classical Elements
 
 DefineDeityDomain("air", {
-	Name = "Air"
+	Name = "Air",
+	Upgrade = "upgrade-deity-domain-air"
 })
 
 DefineDeityDomain("earth", {
-	Name = "Earth"
+	Name = "Earth",
+	Upgrade = "upgrade-deity-domain-earth"
 })
 
 DefineDeityDomain("fire", {
-	Name = "Fire"
+	Name = "Fire",
+	Upgrade = "upgrade-deity-domain-fire"
 })
 
 DefineDeityDomain("water", {
-	Name = "Water"
+	Name = "Water",
+	Upgrade = "upgrade-deity-domain-water"
 })
 
 DefineDeityDomain("aether", {
-	Name = "Aether"
+	Name = "Aether",
+	Upgrade = "upgrade-deity-domain-aether"
 })
 
 -- Chinese Elements (which aren't present in the classical ones)
 
 DefineDeityDomain("metal", {
-	Name = "Metal"
+	Name = "Metal",
+	Upgrade = "upgrade-deity-domain-metal"
 })
 
 DefineDeityDomain("wood", {
-	Name = "Wood"
+	Name = "Wood",
+	Upgrade = "upgrade-deity-domain-wood"
 })
 
 -- Other Elements
 
 DefineDeityDomain("ice", {
-	Name = "Ice"
+	Name = "Ice",
+	Upgrade = "upgrade-deity-domain-ice"
 })
 
 DefineDeityDomain("lightning", {
 	Name = "Lightning",
-	Abilities = {"upgrade-shocking-grasp"}
+	Abilities = {"upgrade-shocking-grasp"},
+	Upgrade = "upgrade-deity-domain-lightning"
 })
 
 -- Chaos and Order
 
 DefineDeityDomain("chaos", {
 	Name = "Chaos",
-	Abilities = {"upgrade-terror"}
+	Abilities = {"upgrade-terror"},
+	Upgrade = "upgrade-deity-domain-chaos"
 })
 
 DefineDeityDomain("order", {
-	Name = "Order"
+	Name = "Order",
+	Upgrade = "upgrade-deity-domain-order"
 })
 
 -- Life and Death
 
 DefineDeityDomain("death", {
 	Name = "Death",
-	Abilities = {"upgrade-wither"}
+	Abilities = {"upgrade-wither"},
+	Upgrade = "upgrade-deity-domain-death"
 })
 
 DefineDeityDomain("life", {
 	Name = "Life",
-	Abilities = {"upgrade-healing"}
+	Abilities = {"upgrade-healing"},
+	Upgrade = "upgrade-deity-domain-life"
 })
 
 -- Darkness and Light (Yin and Yang)
 
 DefineDeityDomain("darkness", {
 	Name = "Darkness",
-	Abilities = {"upgrade-terror"}
+	Abilities = {"upgrade-terror"},
+	Upgrade = "upgrade-deity-domain-darkness"
 })
 
 DefineDeityDomain("light", {
-	Name = "Light"
+	Name = "Light",
+	Upgrade = "upgrade-deity-domain-light"
 })
 
 -- Sun and Moon
 
 DefineDeityDomain("sun", {
-	Name = "Sun"
+	Name = "Sun",
+	Upgrade = "upgrade-deity-domain-sun"
 })
 
 DefineDeityDomain("moon", {
-	Name = "Moon"
+	Name = "Moon",
+	Upgrade = "upgrade-deity-domain-moon"
 })
 
 -- Four Cardinal Virtues
 
 DefineDeityDomain("courage", {
 	Name = "Courage",
-	Abilities = {"upgrade-inspire"}
+	Abilities = {"upgrade-inspire"},
+	Upgrade = "upgrade-deity-domain-courage"
 })
 
 DefineDeityDomain("justice", {
 	Name = "Justice",
-	Abilities = {"upgrade-inspire"}
+	Abilities = {"upgrade-inspire"},
+	Upgrade = "upgrade-deity-domain-justice"
 })
 
 DefineDeityDomain("temperance", {
-	Name = "Temperance"
+	Name = "Temperance",
+	Upgrade = "upgrade-deity-domain-temperance"
 })
 
 DefineDeityDomain("wisdom", {
 	Name = "Wisdom",
-	Abilities = {"upgrade-far-sight"}
+	Abilities = {"upgrade-far-sight"},
+	Upgrade = "upgrade-deity-domain-wisdom"
 })
 
 -- Three Theological Virtues
 
 DefineDeityDomain("charity", {
 	Name = "Charity",
-	Abilities = {"upgrade-healing"}
+	Abilities = {"upgrade-healing"},
+	Upgrade = "upgrade-deity-domain-charity"
 })
 
 DefineDeityDomain("faith", {
 	Name = "Faith",
-	Abilities = {"upgrade-blessing"}
+	Abilities = {"upgrade-blessing"},
+	Upgrade = "upgrade-deity-domain-faith"
 })
 
 DefineDeityDomain("hope", {
-	Name = "Hope"
+	Name = "Hope",
+	Upgrade = "upgrade-deity-domain-hope"
 })
 
 -- Other Virtues
 
 DefineDeityDomain("love", {
-	Name = "Love"
+	Name = "Love",
+	Upgrade = "upgrade-deity-domain-love"
 })
 
 -- Seven Sins
 
 DefineDeityDomain("envy", {
-	Name = "Envy"
+	Name = "Envy",
+	Upgrade = "upgrade-deity-domain-envy"
 })
 
 DefineDeityDomain("gluttony", {
-	Name = "Gluttony"
+	Name = "Gluttony",
+	Upgrade = "upgrade-deity-domain-gluttony"
 })
 
 DefineDeityDomain("greed", {
-	Name = "Greed"
+	Name = "Greed",
+	Upgrade = "upgrade-deity-domain-greed"
 })
 
 DefineDeityDomain("lust", {
-	Name = "Lust"
+	Name = "Lust",
+	Upgrade = "upgrade-deity-domain-lust"
 })
 
 DefineDeityDomain("pride", {
-	Name = "Pride"
+	Name = "Pride",
+	Upgrade = "upgrade-deity-domain-pride"
 })
 
 DefineDeityDomain("sloth", {
-	Name = "Sloth"
+	Name = "Sloth",
+	Upgrade = "upgrade-deity-domain-sloth"
 })
 
 DefineDeityDomain("wrath", {
 	Name = "Wrath",
-	Abilities = {"upgrade-terror"}
+	Abilities = {"upgrade-terror"},
+	Upgrade = "upgrade-deity-domain-wrath"
 })
 
 -- Other Sins
 
 DefineDeityDomain("fear", {
 	Name = "Fear",
-	Abilities = {"upgrade-terror"}
+	Abilities = {"upgrade-terror"},
+	Upgrade = "upgrade-deity-domain-fear"
 })
 
 -- Skills
 
 DefineDeityDomain("archery", {
 	Name = "Archery",
-	Abilities = {"upgrade-precision"}
+	Abilities = {"upgrade-precision"},
+	Upgrade = "upgrade-deity-domain-archery"
 })
 
 DefineDeityDomain("magic", {
-	Name = "Magic"
+	Name = "Magic",
+	Upgrade = "upgrade-deity-domain-magic"
 })
 
 DefineDeityDomain("metalworking", {
-	Name = "Metalworking"
+	Name = "Metalworking",
+	Upgrade = "upgrade-deity-domain-metalworking"
 })
 
 DefineDeityDomain("poetry", {
-	Name = "Poetry"
+	Name = "Poetry",
+	Upgrade = "upgrade-deity-domain-poetry"
 })
 
 DefineDeityDomain("warfare", {
 	Name = "Warfare",
-	Abilities = {"upgrade-inspire"}
+	Abilities = {"upgrade-inspire"},
+	Upgrade = "upgrade-deity-domain-warfare"
 })
 
 DefineDeityDomain("watch", {
 	Name = "Watch",
-	Abilities = {"upgrade-precision"}
+	Abilities = {"upgrade-precision"},
+	Upgrade = "upgrade-deity-domain-watch"
 })

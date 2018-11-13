@@ -177,6 +177,12 @@ DefineUpgrade("upgrade-deity-domain-wrath", {
 	Name = "Wrath"
 })
 
+-- Other Sins
+
+DefineUpgrade("upgrade-deity-domain-fear", {
+	Name = "Fear"
+})
+
 -- Skills
 
 DefineUpgrade("upgrade-deity-domain-archery", {

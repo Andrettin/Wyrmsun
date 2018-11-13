@@ -307,7 +307,14 @@ function ProcessEventString(event_string)
 		local hero_deities = GetCharacterData(trigger_hero, "Deities")
 		for i = 1,table.getn(hero_deities) do
 			if (GetDeityData(hero_deities[i], "Major")) then
-				event_string = string.gsub(event_string, "TRIGGER_HERO_MAJOR_DEITY", GetDeityData(hero_deities[i], "Name"))
+				local deity_name = ""
+				if (GetCharacterData(trigger_hero, "Civilization") ~= "") then
+					deity_name = GetDeityData(hero_deities[i], "CulturalName", GetCharacterData(trigger_hero, "Civilization"))
+				end
+				if (deity_name == "") then
+					deity_name = GetDeityData(hero_deities[i], "Name")
+				end
+				event_string = string.gsub(event_string, "TRIGGER_HERO_MAJOR_DEITY", deity_name)
 				break
 			end
 		end
@@ -344,7 +351,14 @@ function ProcessEventString(event_string)
 		local hero_deities = GetCharacterData(trigger_hero, "Deities")
 		for i = 1,table.getn(hero_deities) do
 			if (GetDeityData(hero_deities[i], "Major") == false) then
-				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1", GetDeityData(hero_deities[i], "Name"))
+				local deity_name = ""
+				if (GetCharacterData(trigger_hero, "Civilization") ~= "") then
+					deity_name = GetDeityData(hero_deities[i], "CulturalName", GetCharacterData(trigger_hero, "Civilization"))
+				end
+				if (deity_name == "") then
+					deity_name = GetDeityData(hero_deities[i], "Name")
+				end
+				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1", deity_name)
 				break
 			end
 		end

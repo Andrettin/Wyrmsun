@@ -34,5 +34,6 @@ DefineDeity("christian-god", {
 	Major = true,
 --	Icon = "icon-christianity",
 	Domains = {"charity", "faith", "hope"},
+	DeityUpgrade = "upgrade-deity-christian-god",
 	HolyOrders = {"cistercian-order"}
 })

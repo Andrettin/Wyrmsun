@@ -35,6 +35,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Major = true,
 	Icon = "icon-odin",
 	Domains = {"aether", "magic", "wisdom"},
+	DeityUpgrade = "upgrade-deity-odin",
 	CharacterUpgrade = "upgrade-character-deity",
 	CulturalNames = {
 		"anglo-saxon", "Woden",
@@ -58,6 +59,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Major = true,
 	Icon = "icon-thor",
 	Domains = {"air", "lightning", "order"},
+	DeityUpgrade = "upgrade-deity-thor",
 	CulturalNames = {
 		"anglo-saxon", "Thunor", -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 --		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
@@ -119,6 +121,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Gender = "male",
 	Icon = "icon-tyr",
 	Domains = {"warfare"}, -- god of war, law and justice
+	DeityUpgrade = "upgrade-deity-tyr",
 	CulturalNames = {
 		"anglo-saxon", "Tiw", -- "Tīw"; Old English name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"frankish", "Ziu",
@@ -231,6 +234,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 	Gender = "male",
 	Icon = "icon-heimdall",
 	Domains = {"watch"},
+	DeityUpgrade = "upgrade-deity-heimdall",
 	CulturalNames = {
 		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley"); see language data
 	},
@@ -246,6 +250,7 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 	Gender = "female",
 	Icon = "icon-hel",
 	Domains = {"death"},
+	DeityUpgrade = "upgrade-deity-hel",
 	CulturalNames = {
 --		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data
 		"frankish", "Hella",

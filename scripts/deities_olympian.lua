@@ -33,6 +33,7 @@ DefineDeity("poseidon", {
 	Gender = "male",
 	Major = true,
 	Domains = {"water"},
+	DeityUpgrade = "upgrade-deity-poseidon",
 	CulturalNames = {
 		"latin", "Neptune"
 	}
@@ -44,7 +45,8 @@ DefineDeity("apollo", {
 	Civilizations = {"greek", "latin"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"sun"}
+	Domains = {"sun"},
+	DeityUpgrade = "upgrade-deity-apollo"
 })
 
 DefineDeity("hermes", {
@@ -54,6 +56,7 @@ DefineDeity("hermes", {
 	Religions = {"paganism"},
 	Gender = "male",
 --	Domains = {"air"},
+	DeityUpgrade = "upgrade-deity-hermes",
 	CulturalNames = {
 		"latin", "Mercury"
 	},
