@@ -441,7 +441,8 @@ DefineButton( { Pos = 1, Level = 2, Icon = "icon-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-learn-ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2",
 	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister"
+		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
+		"unit-dwarven-loremaster"
 	}
 } )
 

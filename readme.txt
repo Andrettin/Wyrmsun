@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.4.2
 -----------------------------------------------------------------------
 
+* Abilities
+- Dwarven loremasters can now learn the Mace Mastery ability.
+
 * Items
 - Added Club weapon.
 
