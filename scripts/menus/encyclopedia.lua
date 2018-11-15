@@ -806,6 +806,32 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 			description = description .. "\n\n"
 		end
+		description = description .. "Level: " .. GetCharacterData(unit_name, "Level") .. "\n\n"
+		local abilities = GetCharacterData(unit_name, "Abilities")
+		if (table.getn(abilities) > 0) then
+			local displayed_abilities = {}
+			local displayed_ability_count = {}
+			for i = 1, table.getn(abilities) do
+				local ability_name = _(GetUpgradeData(abilities[i], "Name"))
+				if (GetArrayIncludes(displayed_abilities, ability_name) == false) then
+					table.insert(displayed_abilities, ability_name)
+					table.insert(displayed_ability_count, 1)
+				else
+					displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] = displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] + 1
+				end
+			end
+			description = description .. _("Abilities") .. ": "
+			for i = 1, table.getn(displayed_abilities) do
+				description = description .. displayed_abilities[i]
+				if (displayed_ability_count[i] > 1) then
+					description = description .. " (x" .. tostring(displayed_ability_count[i]) .. ")"
+				end
+				if (i < table.getn(displayed_abilities)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
 			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
 		end

@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Dwarven loremasters can now learn the Mace Mastery ability.
 
+* Heroes
+- Hero encyclopedia entries now display their level and acquired abilities.
+
 * Items
 - Added Club weapon.
 
