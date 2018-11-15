@@ -141,23 +141,28 @@ function RunModsMenu(selected_mod)
 			Load(mods[selected_mod + 1] .. "info.lua")
 		end
 
+		local mod_description = ""
 		if (ModName ~= "") then
-			menu:addMultiLineLabel(_("Name: " .. ModName), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+			mod_description = mod_description .. _("Name") .. ": " .. _(ModName) .. "\n\n"
 		end
 
 		if (ModDescription ~= "") then
-			menu:addMultiLineLabel(_("Description: " .. ModDescription), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+			mod_description = mod_description .. _("Description: " .. ModDescription) .. "\n\n"
 		end
 
 		if (ModDependencies ~= nil) then
-			local dependencies_string = "Dependencies: "
+			local dependencies_string = _("Dependencies") .. ": "
 			for i=1,table.getn(ModDependencies) do
-				dependencies_string = dependencies_string .. ModDependencies[i]
+				dependencies_string = dependencies_string .. _(ModDependencies[i])
 				if (i < table.getn(ModDependencies)) then
 					dependencies_string = dependencies_string .. ", "
 				end
 			end
-			menu:addLabel(_(dependencies_string), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*2.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+			mod_description = mod_description .. dependencies_string .. "\n\n"
+		end
+
+		if (mod_description ~= "") then
+			menu:addMultiLineLabel(mod_description, ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 		end
 
 		local enabled_label
