@@ -820,6 +820,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 					displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] = displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] + 1
 				end
 			end
+			table.sort(displayed_abilities)
 			description = description .. _("Abilities") .. ": "
 			for i = 1, table.getn(displayed_abilities) do
 				description = description .. displayed_abilities[i]
