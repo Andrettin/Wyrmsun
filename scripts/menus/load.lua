@@ -1,6 +1,12 @@
 function LoadGame(s)
 	LoadGameFile = nil
 	local loop = true
+	
+	for key, value in pairs(CustomPlayerData) do
+		for i = 1, table.getn(CustomPlayerData[key].Objectives) do
+			table.remove(CustomPlayerData[key].Objectives, i)
+		end
+	end
 
 	while (loop) do
 		InitGameVariables()
