@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Hero encyclopedia entries now display their level and acquired abilities.
+- Hero encyclopedia entries now support displaying their birth dates.
 
 * Items
 - Added Club weapon.

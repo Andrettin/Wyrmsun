@@ -821,7 +821,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 			end
 			table.sort(displayed_abilities)
-			description = description .. _("Abilities") .. ": "
+			description = description .. _("Acquired Abilities") .. ": "
 			for i = 1, table.getn(displayed_abilities) do
 				description = description .. displayed_abilities[i]
 				if (displayed_ability_count[i] > 1) then
@@ -832,6 +832,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 			end
 			description = description .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "BirthDate") ~= "") then
+			description = description .. _("Birth Date") .. ": " .. GetCharacterData(unit_name, "BirthDate") .. "\n\n"
 		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
 			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
