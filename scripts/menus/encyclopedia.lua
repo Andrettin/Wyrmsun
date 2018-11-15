@@ -577,7 +577,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 
 	local menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name, state)))
 	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offy = (Video.Height - 600) / 2
 
 	local encyclopedia_icon
 	local encyclopedia_icon_frame = 0
@@ -959,7 +959,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local has_family_tree_button = false
 	if (state == "heroes") then
 		--[[
-		menu:addFullButton(_("~!Family Tree"), "f", offx + 208, offy + 104 + (36 * 8),
+		menu:addFullButton(_("~!Family Tree"), "f", offx + 208, offy + 104 + (36 * 11),
 			function()
 				RunFamilyTreeMenu(unit_name);
 			end
@@ -981,9 +981,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	end
 
 	local chapter_x
-	local chapter_y = 8
+	local chapter_y = 11
 	if (has_family_tree_button) then
-		chapter_y = 7
+		chapter_y = 10
 	end
 	if (chapter_references == 1) then
 		chapter_x = 0
@@ -1008,7 +1008,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 12),
 		function() menu:stop(); end)
 	menu:run()
 end
