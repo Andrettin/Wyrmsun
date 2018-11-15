@@ -40,8 +40,7 @@ function RunModsMenu(selected_mod)
 
 	-- load the mods
 	local mods = {}
-	for mod_dir_i=1,table.getn(ModDirectories) do
-	  
+	for mod_dir_i = 1, table.getn(ModDirectories) do
 		local i
 		local f
 		local u = 1
@@ -52,15 +51,9 @@ function RunModsMenu(selected_mod)
 			Map.Info.Description = ""
 			if (string.find(f, ".smp")) then
 				local mod_location = ModDirectories[mod_dir_i] .. f
-				Load(mod_location)
 				mod_location = tostring(string.gsub(mod_location, ".smp", ".sms"))
 				if (GetArrayIncludes(mods, mod_location) == false) then
-					mods[table.getn(mods) + 1] = mod_location
-					if (Map.Info.Description ~= "") then
-						table.insert(mod_list, Map.Info.Description)
-					else
-						table.insert(mod_list, mod_location)
-					end
+					table.insert(mods, mod_location)
 				end
 			end
 		end
@@ -80,38 +73,53 @@ function RunModsMenu(selected_mod)
 				ModName = ""
 				Map.Info.Description = ""
 				if (string.find(f, "info.lua")) then
-					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
-					Load(mod_location)
-					if (GetArrayIncludes(mod_list, ModName) == false) then
-						mods[table.getn(mods) + 1] = mod_location
-						table.insert(mod_list, ModName)
+					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j]
+					if (GetArrayIncludes(mod_list, mod_location) == false) then
+						table.insert(mods, mod_location)
 					end
 				elseif (string.find(f, ".smp")) then
 					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
-					Load(mod_location)
 					mod_location = tostring(string.gsub(mod_location, ".smp", ".sms"))
-					if (GetArrayIncludes(mods, mod_location) == false) then
-						mods[table.getn(mods) + 1] = mod_location
-						if (Map.Info.Description ~= "") then
-							table.insert(mod_list, Map.Info.Description)
-						else
-							table.insert(mod_list, mod_location)
-						end
+					if (GetArrayIncludes(mods, dirlist[j] .. f) == false) then
+						table.insert(mods, mod_location)
 					end
 				end
 			end
 		end
 	end
+	
+	mods = SortModList(mods)
+	
+	for i = 1, table.getn(mods) do
+		ModName = ""
+		Map.Info.Description = ""
+		
+		if (string.find(mods[i], ".sms")) then
+			Load(tostring(string.gsub(mods[i], ".sms", ".smp")))
+			if (Map.Info.Description ~= "") then
+				table.insert(mod_list, Map.Info.Description)
+			else
+				table.insert(mod_list, mods[i])
+			end
+		else
+			Load(mods[i] .. "info.lua")
+			table.insert(mod_list, ModName)
+		end
+	end
 			
 	menu:addLabel(_("~<Mods~>"), offx + 176, offy + 1)
 --	menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
-	mod_dd = menu:addDropDown(mod_list, offx + 8 + 42, offy + 55 + 26*0,
+	mod_dd = menu:addDropDown(mod_list, Video.Width / 2 - (300 / 2), offy + 55 + 26*0,
 		function(dd)
 			ModName = ""
 			ModDescription = ""
 			ModDependencies = nil
 			Map.Info.Description = ""
-			Load(mods[mod_dd:getSelected() + 1])
+			if (string.find(mods[mod_dd:getSelected() + 1], ".sms")) then
+				Load(mods[mod_dd:getSelected() + 1])
+			else
+				Load(mods[mod_dd:getSelected() + 1] .. "info.lua")
+			end
 			if (Map.Info.Description ~= "") then
 				ModName = Map.Info.Description
 			end
@@ -119,13 +127,23 @@ function RunModsMenu(selected_mod)
 			RunModsMenu(mod_dd:getSelected())
 		end
 	)
-	mod_dd:setSize(252, 20)
+	mod_dd:setSize(300, 20)
 	if (table.getn(mod_list) > 0) then
 		mod_dd:setSelected(selected_mod)
 		ModName = ""
 		ModDescription = ""
 		ModDependencies = nil
-		Load(mods[selected_mod + 1])
+		Map.Info.Description = ""
+		if (string.find(mods[selected_mod + 1], ".sms")) then
+			Load(tostring(string.gsub(mods[selected_mod + 1], ".sms", ".smp")))
+			ModName = Map.Info.Description
+		else
+			Load(mods[selected_mod + 1] .. "info.lua")
+		end
+
+		if (ModName ~= "") then
+			menu:addMultiLineLabel(_("Name: " .. ModName), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+		end
 
 		if (ModDescription ~= "") then
 			menu:addMultiLineLabel(_("Description: " .. ModDescription), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
@@ -139,7 +157,7 @@ function RunModsMenu(selected_mod)
 					dependencies_string = dependencies_string .. ", "
 				end
 			end
-			menu:addLabel(_(dependencies_string), Video.Width / 2, offy + 34 + 60*2.5, Fonts["game"], true)
+			menu:addLabel(_(dependencies_string), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*2.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
 		end
 
 		local enabled_label
@@ -157,13 +175,23 @@ function RunModsMenu(selected_mod)
 					SavePreferences()
 					if (string.find(mods[selected_mod + 1], ".sms")) then
 						DisableMod(mods[selected_mod + 1])
+					else
+						RemoveElementFromArray(ModDirectories, mods[mod_dd:getSelected() + 1] .. "mods/")
 					end
 				else
 					local has_required_dependencies = true
 					if (ModDependencies ~= nil) then
-						for i=1,table.getn(ModDependencies) do
-							if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+						for i = 1, table.getn(ModDependencies) do
+							local has_dependency = false
+							for j = 1, table.getn(wyr.preferences.EnabledMods) do
+								if (string.find(wyr.preferences.EnabledMods[j], "/" .. ModDependencies[i] .. "/", - (string.len(ModDependencies[i]) + 2))) then
+									has_dependency = true
+									break
+								end
+							end
+							if (has_dependency == false) then
 								has_required_dependencies = false
+								break
 							end
 						end
 					end
@@ -172,6 +200,8 @@ function RunModsMenu(selected_mod)
 						SavePreferences()
 						if (string.find(mods[selected_mod + 1], ".sms")) then
 							Load(mods[selected_mod + 1])
+						else
+							table.insert(ModDirectories, mods[mod_dd:getSelected() + 1] .. "mods/") -- get submods
 						end
 					end
 				end
@@ -195,26 +225,46 @@ function LoadMods()
 	ModPath = ""
 	Mods = nil
 	Mods = {}
+	
+	for i = 1, table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], "info.lua")) then
+			wyr.preferences.EnabledMods[i] = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "")) -- for backwards compatibility
+		end
+	end
+	
+	wyr.preferences.EnabledMods = SortModList(wyr.preferences.EnabledMods)
+	SavePreferences()
   
 	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
 			Load(wyr.preferences.EnabledMods[i])
 		else
 			ModName = ""
-			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
-			Load(wyr.preferences.EnabledMods[i])
+			ModPath = wyr.preferences.EnabledMods[i]
+			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
 			if (ModDependencies ~= nil) then
-				for i=1,table.getn(ModDependencies) do
-					if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+				for j = 1, table.getn(ModDependencies) do
+					local has_dependency = false
+					for k = 1, table.getn(wyr.preferences.EnabledMods) do
+						if (string.find(wyr.preferences.EnabledMods[k], "/" .. ModDependencies[j] .. "/", - (string.len(ModDependencies[j]) + 2))) then
+							has_dependency = true
+							break
+						end
+					end
+					if (has_dependency == false) then
 						has_required_dependencies = false
+						break
 					end
 				end
 			end
 			if (has_required_dependencies) then
-				table.insert(MapDirectories, tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "maps/")))
-				local mod_main_lua_file = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main"))
+				table.insert(MapDirectories, wyr.preferences.EnabledMods[i] .. "maps/")
+				if (CanAccessFile(wyr.preferences.EnabledMods[i] .. "mods/")) then
+					table.insert(ModDirectories, wyr.preferences.EnabledMods[i] .. "mods/")
+				end
+				local mod_main_lua_file = wyr.preferences.EnabledMods[i] .. "main.lua"
 				if (CanAccessFile(mod_main_lua_file)) then
 					Load(mod_main_lua_file)
 				end
@@ -254,6 +304,53 @@ function LoadDLCs()
 	end
 	
 	ModPath = ""
+end
+
+function SortModList(mod_list)
+	local function compare_mods(a, b)
+		if (string.find(a, ".sms") ~= nil) then
+			return true
+		elseif (string.find(b, ".sms") ~= nil) then
+			return false
+		end
+		
+		local mod_a_path = ""
+		local mod_a_dependencies = {}
+		local mod_b_path = ""
+		local mod_b_dependencies = {}
+		
+		ModPath = ""
+		ModDependencies = {}
+		Load(a .. "info.lua")
+		mod_a_path = ModPath
+		mod_a_dependencies = ModDependencies
+		
+		ModPath = ""
+		ModDependencies = {}
+		Load(b .. "info.lua")
+		mod_b_path = ModPath
+		mod_b_dependencies = ModDependencies
+		ModPath = ""
+		ModDependencies = {}
+		
+		if (string.len(mod_b_path) > string.len(mod_a_path) and string.find(mod_b_path, mod_a_path) ~= nil) then
+			return true
+		elseif (string.len(mod_a_path) > string.len(mod_b_path) and string.find(mod_a_path, mod_b_path) ~= nil) then
+			return false
+		end
+		
+		for i = 1, table.getn(mod_a_dependencies) do
+			if (string.find(mod_b_path, "/" .. mod_a_dependencies[i] .. "/", - (string.len(mod_a_dependencies[i]) + 2)) ~= nil) then -- mod b is a dependency of mod a
+				return false
+			end
+		end
+		
+		return a < b
+	end
+	
+	table.sort(mod_list, compare_mods)
+	
+	return mod_list
 end
 
 function ReloadMods() -- used after the editor runs, to reload mods made in the map editor

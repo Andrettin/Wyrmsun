@@ -1595,14 +1595,22 @@ function LoadData()
 	
 	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
-			Load(wyr.preferences.EnabledMods[i])
+			ModPath = wyr.preferences.EnabledMods[i]
+			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
 			if (ModDependencies ~= nil) then
-				for i=1,table.getn(ModDependencies) do
-					if (GetArrayIncludes(wyr.preferences.EnabledMods, ModDependencies[i]) == false) then
+				for j = 1, table.getn(ModDependencies) do
+					local has_dependency = false
+					for k = 1, table.getn(wyr.preferences.EnabledMods) do
+						if (string.find(wyr.preferences.EnabledMods[k], "/" .. ModDependencies[j] .. "/", - (string.len(ModDependencies[j]) + 2))) then
+							has_dependency = true
+							break
+						end
+					end
+					if (has_dependency == false) then
 						has_required_dependencies = false
+						break
 					end
 				end
 			end
@@ -1618,7 +1626,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"terrain_types", "unit_types", "map_templates", "characters"}
+	local data_directories = {"terrain_types", "unit_types", "calendars", "map_templates", "characters"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)

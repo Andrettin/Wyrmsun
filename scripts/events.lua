@@ -31,7 +31,7 @@ function EventTriggers()
 	-- load a triggers.lua file in an enabled mod, if present
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
 		if (string.find(wyr.preferences.EnabledMods[i], ".sms") == nil) then
-			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
+			ModPath = wyr.preferences.EnabledMods[i]
 			if (CanAccessFile(ModPath .. "scripts/triggers.lua")) then
 				Load(ModPath .. "scripts/triggers.lua")
 			end
