@@ -103,7 +103,7 @@ DefineCharacter("ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- correct?
-	Date = 405, -- born
+	StartDate = 405, -- born
 	DeathDate = 472, -- died
 	Deities = {"christian-god"}
 })

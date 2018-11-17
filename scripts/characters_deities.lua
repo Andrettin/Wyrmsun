@@ -31,7 +31,7 @@ DefineCharacter("gathaarl", {
 	Type = "unit-goblin-warlord",
 	Faction = "hel", -- lives in Niflheim
 	Deity = "gathaarl",
-	Date = -3000,
+	StartDate = -3000,
 	DeathDate = 3000,
 	Trait = "upgrade-vicious",
 	Level = 50,

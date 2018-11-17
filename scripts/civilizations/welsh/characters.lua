@@ -163,7 +163,7 @@ DefineCharacter("gildas", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "welsh", -- British monk
-	Date = 547, -- wrote "De Excidio et Conquestu Britanniae" a bit before 547
+	StartDate = 547, -- wrote "De Excidio et Conquestu Britanniae" a bit before 547
 	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-de-excidio-et-conquestu-britanniae"}
 })
@@ -206,7 +206,7 @@ DefineCharacter("solomon-of-powys", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Civilization = "welsh",
 	Faction = "powys",
 	Father = "cynan",
-	Date = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
+	StartDate = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	HistoricalTitles = {
 		"head-of-state", 613, 0, "powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	},
@@ -224,7 +224,7 @@ DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
 	Faction = "gwynedd",
-	Date = 632,
+	StartDate = 632,
 	DeathDate = 633, -- killed by Oswald of Bernicia in 633
 	ViolentDeath = true,
 	HistoricalTitles = {
@@ -244,7 +244,7 @@ DefineCharacter("cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
 	Faction = "gwynedd",
-	Date = 654, -- went with Penda to attack Oswiu of Bernicia
+	StartDate = 654, -- went with Penda to attack Oswiu of Bernicia
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "gwynedd") then
 			return true

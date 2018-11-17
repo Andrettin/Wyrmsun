@@ -91,7 +91,7 @@ DefineCharacter("perctarit", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
-	Date = 678, -- was king of the Lombards as of 678
+	StartDate = 678, -- was king of the Lombards as of 678
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then
@@ -137,7 +137,7 @@ DefineCharacter("desiderius", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "teuton",
 	Faction = "lombardy",
-	Date = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
+	StartDate = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 772, 0, "lombardy" -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court

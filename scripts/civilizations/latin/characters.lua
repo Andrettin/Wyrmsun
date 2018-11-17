@@ -31,7 +31,7 @@ DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war 
 	Type = "unit-latin-centurion",
 	Civilization = "latin",
 	Faction = "rome",
-	Date = -58, -- De Bello Gallico was written 58-52 BC
+	StartDate = -58, -- De Bello Gallico was written 58-52 BC
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
@@ -42,7 +42,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
-	Date = 121, -- born on 26 April 121
+	StartDate = 121, -- born on 26 April 121
 	DeathDate = 180, -- died on 17 March 180, of smallpox or cancer
 	Trait = "upgrade-dutiful", -- placed strong importance on doing one's duty in his "Meditations"
 	AuthoredWorks = {"upgrade-work-meditations"},
@@ -61,7 +61,7 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
 	Faction = "rome",
-	Date = 161, -- became co-emperor in 161
+	StartDate = 161, -- became co-emperor in 161
 	DeathDate = 168, -- died (apparently) in 168 of a stroke
 	HistoricalTitles = {
 		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
@@ -101,7 +101,7 @@ DefineCharacter("syagrius", { -- Source: William R. Shepherd, "Historical Atlas"
 	Type = "unit-teuton-knight-lord",
 	Civilization = "latin",
 	Faction = "rome",
-	Date = 486, -- was ruling his "kingdom" in 486
+	StartDate = 486, -- was ruling his "kingdom" in 486
 	DeathDate = {486, 12, 30}, -- lost the "kingdom" to the Franks in 486
 	HistoricalLocations = {
 		486, "earth", "soissons"
@@ -119,7 +119,7 @@ DefineCharacter("agatho", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 679, -- pope as of 679.10
+	StartDate = 679, -- pope as of 679.10
 	Deities = {"christian-god"}
 })
 
@@ -128,7 +128,7 @@ DefineCharacter("pope-sergius-i", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = {699, 11, 21}, -- pope as of 695.11.21
+	StartDate = {699, 11, 21}, -- pope as of 695.11.21
 	-- pope as of 699/700
 	Deities = {"christian-god"}
 })
@@ -138,7 +138,7 @@ DefineCharacter("pope-gregory-ii", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 719, -- pope as of the spring of 719
+	StartDate = 719, -- pope as of the spring of 719
 	Deities = {"christian-god"}
 })
 
@@ -147,7 +147,7 @@ DefineCharacter("pope-gregory-iii", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 732, -- pope as of 732
+	StartDate = 732, -- pope as of 732
 	-- pope as of 735
 	Deities = {"christian-god"}
 })
@@ -157,7 +157,7 @@ DefineCharacter("pope-zacharias", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 751, -- pope as of 751
+	StartDate = 751, -- pope as of 751
 	Deities = {"christian-god"}
 })
 
@@ -166,6 +166,6 @@ DefineCharacter("pope-stephen-ii", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",
-	Date = 752, -- pope as of 752
+	StartDate = 752, -- pope as of 752
 	Deities = {"christian-god"}
 })

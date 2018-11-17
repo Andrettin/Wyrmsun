@@ -132,7 +132,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 		local younger_siblings = {}
 		for i = 1, table.getn(potential_character_siblings) do
 			if (GetCharacterData(potential_character_siblings[i], "IsUsable")) then
-				if (GetCharacterData(potential_character_siblings[i], "Year") < GetCharacterData(character, "Year")) then
+				if (GetCharacterData(potential_character_siblings[i], "BirthYear") < GetCharacterData(character, "BirthYear")) then
 					table.insert(older_siblings, potential_character_siblings[i])
 				else
 					table.insert(younger_siblings, potential_character_siblings[i])

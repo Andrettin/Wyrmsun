@@ -36,7 +36,7 @@ DefineCharacter("modsognir", { -- one of the earliest dwarven leaders
 	Icon = "icon-modsognir",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-mighty",
-	Date = -3000,
+	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
@@ -64,7 +64,7 @@ DefineCharacter("durin", {
 	Icon = "icon-durin",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
-	Date = -3000,
+	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	HistoricalLocations = {
@@ -87,7 +87,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Description = "The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
-	Date = -3000,
+	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
@@ -107,7 +107,7 @@ DefineCharacter("galar", { -- dwarf from Norse mythology who, with the help of h
 	Description = "The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
-	Date = -3000,
+	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
@@ -127,7 +127,7 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	Background = "In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. This he sang before the doors of the god Delling, to bring might for the gods, glory for the elves and wisdom for Odin. Thjodrorir is mentioned in the ~<Hovamol~>.",
 	HairVariation = "gray-hair",
 	Trait = "upgrade-wise",
-	Date = -3000,
+	StartDate = -3000,
 	-- worships deities: Hroptatyr (Odin) and Delling
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
@@ -309,7 +309,7 @@ DefineCharacter("regin", {
 	Background = "In Norse mythology, Regin was a skilled dwarven smith and the brother of the dragon Fafnir.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-intelligent",
-	Date = 561, -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
+	StartDate = 561, -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 	DeathDate = 566,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"}
@@ -327,7 +327,7 @@ DefineCharacter("thursagan", { -- from Battle for Wesnoth: The Sceptre of Fire; 
 	Trait = "upgrade-strong",
 	Icon = "icon-thursagan",
 	HairVariation = "gray-hair",
-	Date = -1,
+	StartDate = -1,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
@@ -357,7 +357,7 @@ DefineCharacter("baglur", { -- from Battle for Wesnoth: The Sceptre of Fire; vet
  	Icon = "icon-baglur",
 	Trait = "upgrade-resilient",
 	HairVariation = "gray-hair",
-	Date = -1,
+	StartDate = -1,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
@@ -383,7 +383,7 @@ DefineCharacter("durstorn", { -- from Battle for Wesnoth: The Sceptre of Fire; c
 	Icon = "icon-durstorn",
 	Trait = "upgrade-strong",
 	HairVariation = "brown-hair",
-	Date = -1,
+	StartDate = -1,
 	DeathDate = 35, -- died in 35 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
@@ -408,7 +408,7 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	Faction = "shorbear-clan",
-	Date = -1,
+	StartDate = -1,
 	DeathDate = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 	ViolentDeath = true,
 	Deities = {"odin", "tyr"},
@@ -437,7 +437,7 @@ DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; lea
 	HeroicIcon = "icon-rugnur-older",
 	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
 	HairVariation = "brown-hair",
-	Date = 25,
+	StartDate = 25,
 	DeathDate = 40, -- died in 40 AD of a violent death
 	ViolentDeath = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
@@ -461,7 +461,7 @@ DefineCharacter("noiraran", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Faction = "norlund-clan",
 	Trait = "upgrade-intelligent",
 	Level = 2,
-	Date = 25,
+	StartDate = 25,
 	DeathDate = 40, -- presumably died in 40 AD of a violent death
 	ViolentDeath = true,
 	Deities = {"thor", "tyr"},
@@ -484,7 +484,7 @@ DefineCharacter("kuhnar", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Civilization = "dwarf",
 	Faction = "norlund-clan",
 	Trait = "upgrade-strong",
-	Date = 25,
+	StartDate = 25,
 	DeathDate = 40, -- presumably died in 40 AD of a violent death
 	ViolentDeath = true,
 	Deities = {"odin", "tyr"},

@@ -69,7 +69,7 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	Date = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
+	StartDate = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathDate = 472, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -90,7 +90,7 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	Date = 472,
+	StartDate = 472,
 	DeathDate = 474, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -128,7 +128,7 @@ DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "ostrogoth-tribe",
-	Date = 454, -- born (was 8 years old in 462 AD)
+	StartDate = 454, -- born (was 8 years old in 462 AD)
 	DeathDate = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "theodemer-amelung",
 	Deities = {"christian-god"},

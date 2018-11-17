@@ -222,7 +222,7 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 	Civilization = "norse",
 	Faction = "vingulmark", -- ruled over Vingulmark
 	Father = "alfgeir",
-	Date = 824, -- became king of Vingulmark when Gudrod Yngling died
+	StartDate = 824, -- became king of Vingulmark when Gudrod Yngling died
 	HistoricalTitles = {
 		"head-of-state", 824, 0, "vingulmark"
 	},
@@ -244,7 +244,7 @@ DefineCharacter("hysing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla
 	Civilization = "norse",
 	Faction = "vingulmark", -- his father ruled over Vingulmark
 	Father = "gandalf-of-vingulmark",
-	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
 		841, "earth", "oslo"
 	},
@@ -263,7 +263,7 @@ DefineCharacter("helsing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "norse",
 	Faction = "vingulmark", -- his father ruled over Vingulmark
 	Father = "gandalf-of-vingulmark",
-	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
 		841, "earth", "oslo"
 	},
@@ -282,7 +282,7 @@ DefineCharacter("hake-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 	Faction = "vingulmark", -- his father ruled over Vingulmark
 	Father = "gandalf-of-vingulmark",
-	Date = 841, -- was alive during king Halfdan the Black's reign in Agder
+	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
 		841, "earth", "oslo"
 	},
@@ -320,7 +320,7 @@ DefineCharacter("sigtryg-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "norse",
 	Faction = "hedmark",
 	Father = "eystein-the-great",
-	Date = 841, -- was king with residence in Hedmark during Halfdan the Black's reign in Agder
+	StartDate = 841, -- was king with residence in Hedmark during Halfdan the Black's reign in Agder
 	HistoricalTitles = {
 		"head-of-state", 841, 0, "hedmark"
 	},
@@ -343,7 +343,7 @@ DefineCharacter("eystein-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 	Faction = "hedmark",
 	Father = "eystein-the-great",
 	-- became king of Hedmark after Halfdan the Black killed his brother Sigtryg
-	Date = 841,
+	StartDate = 841,
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "hedmark"
 	},
@@ -364,7 +364,7 @@ DefineCharacter("gudbrand", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-norse-heroic-swordsman", -- hersir
 	Civilization = "norse",
 	Faction = "hedmark", -- was either allied or subject to king Eystein of Hedmark
-	Date = 841, -- was hersir of his valley during Halfdan the Black's reign
+	StartDate = 841, -- was hersir of his valley during Halfdan the Black's reign
 	HistoricalLocations = {
 		841, "earth", "hamar"
 	},
@@ -383,7 +383,7 @@ DefineCharacter("guttorm-gudbrandson", { -- Source: Snorri Sturlson, "Heimskring
 	Civilization = "norse",
 	Faction = "hedmark", -- his father was either allied or subject to king Eystein of Hedmark
 	Father = "gudbrand",
-	Date = 841, -- fought against Halfdan the Black during the latter's reign
+	StartDate = 841, -- fought against Halfdan the Black during the latter's reign
 	HistoricalLocations = {
 		841, "earth", "hamar"
 	},
@@ -403,7 +403,7 @@ DefineCharacter("halvard-skalk", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Faction = "hedmark", -- relation of king Eystein of Hedmark
-	Date = 841, -- was alive during Halfdan the Black's reign
+	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
 		841, "earth", "hamar"
 	},
@@ -422,7 +422,7 @@ DefineCharacter("harald-goldbeard", { -- Source: Snorri Sturlson, "Heimskringla"
 	Type = "unit-norse-heroic-swordsman", -- king in Sogn
 	Civilization = "norse",
 	Faction = "sogn",
-	Date = 841, -- was king in Sogn during Halfdan the Black's reign in Agder
+	StartDate = 841, -- was king in Sogn during Halfdan the Black's reign in Agder
 	HistoricalTitles = {
 		"head-of-state", 841, 0, "sogn"
 	},
@@ -444,7 +444,7 @@ DefineCharacter("ragnhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "norse",
 	Faction = "sogn", -- her father was king in Sogn
 	Father = "harald-goldbeard",
-	Date = 841, -- was alive during Halfdan the Black's reign
+	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
 		841, "earth", "hermansverk"
 	},
@@ -463,7 +463,7 @@ DefineCharacter("atle-the-small", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Type = "unit-norse-heroic-swordsman", -- earl
 	Civilization = "norse",
 	Faction = "agder", -- friend of king Halfdan the Black
-	Date = 841, -- was earl during Halfdan the Black's reign
+	StartDate = 841, -- was earl during Halfdan the Black's reign
 	HistoricalLocations = {
 		841, "earth", "arendal"
 		-- set to administrate Sogn for Halfdan the Black after the latter took possession of that kingdom
@@ -484,7 +484,7 @@ DefineCharacter("olver-the-wise", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	Faction = "agder", -- foster-father of king Halfdan the Black
 	Trait = "upgrade-wise",
-	Date = 841, -- was alive during Halfdan the Black's reign
+	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
 		841, "earth", "arendal"
 	},
@@ -714,7 +714,7 @@ DefineCharacter("swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "norway",
-	Date = 1177, -- reign began
+	StartDate = 1177, -- reign began
 	DeathDate = 1203, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 1177, 1203, "norway"
@@ -748,7 +748,7 @@ DefineCharacter("kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "orkney",
-	Date = 1129, -- was made Earl of Orkney
+	StartDate = 1129, -- was made Earl of Orkney
 	Father = "koll",
 	HistoricalTitles = {
 		"head-of-state", 1129, 0, "orkney"
@@ -772,7 +772,7 @@ DefineCharacter("hakon-hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "norway",
-	Date = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
+	StartDate = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "hakon",
 	HistoricalTitles = {
 		"head-of-state", 1261, 0, "norway"

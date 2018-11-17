@@ -89,7 +89,7 @@ DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces 
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "saxon-tribe",
-	Date = 772,
+	StartDate = 772,
 	-- led a Saxon rising in 782; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
@@ -122,7 +122,7 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- noble, and during his reign horses were made a main element of the Saxon military; duke
 	Civilization = "teuton",
-	Date = 919, -- reign began
+	StartDate = 919, -- reign began
 	DeathDate = 936, -- reign ended
 	Deities = {"christian-god"},
 	HistoricalTitles = {

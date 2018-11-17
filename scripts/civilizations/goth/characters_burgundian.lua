@@ -66,7 +66,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
-	Date = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
+	StartDate = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathDate = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	-- Fichtner gives him as dying in 436, however
 	ViolentDeath = true, -- presumably
@@ -237,7 +237,7 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
-	Date = 437, -- Gundioc became king of the Burgundians in 437 AD; as given by both Davies and Fichtner
+	StartDate = 437, -- Gundioc became king of the Burgundians in 437 AD; as given by both Davies and Fichtner
 	DeathDate = 474, -- end of reign; as given by both Davies and Fichtner
 	Father = "gundahar", -- from Gibica's line (so presumably a child of Gundahar's); as given by Davies
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
@@ -259,7 +259,7 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
-	Date = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	StartDate = 474, -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathDate = 480, -- end of reign
 	Father = "gundioc", -- from Gibica's line (so presumably a child of Gundioc's)
 	Deities = {"christian-god"},
@@ -282,7 +282,7 @@ DefineCharacter("clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-pious",
-	Date = 474, -- born
+	StartDate = 474, -- born
 	DeathDate = 545, -- died
 	Father = "chilperic",
 	Deities = {"christian-god"},
@@ -317,7 +317,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-wise",
-	Date = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	StartDate = 480, -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	-- Fichtner gives his reign as beginning 474, however; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	DeathDate = 516, -- end of reign
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
@@ -371,7 +371,7 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Civilization = "goth",
 	Faction = "burgundy",
 	Trait = "upgrade-pious",
-	Date = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	StartDate = 516, -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathDate = 523, -- died in 523; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Father = "gundobad", -- son of Gundobad; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Deities = {"christian-god"},
@@ -393,7 +393,7 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
-	Date = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	StartDate = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	-- Fichtner also gives him (as Godomar) as being the Burgundian king from 523 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	DeathDate = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	ViolentDeath = true,

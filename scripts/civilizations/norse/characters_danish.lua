@@ -395,7 +395,7 @@ DefineCharacter("margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	Faction = "denmark",
-	Date = 1387, -- the three northern crowns devolved to her in 1387 AD
+	StartDate = 1387, -- the three northern crowns devolved to her in 1387 AD
 	HistoricalTitles = {
 		"head-of-state", 1387, 0, "denmark", -- the three northern crowns devolved to her in 1387 AD
 		"head-of-state", 1387, 0, "sweden",

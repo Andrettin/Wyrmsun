@@ -79,7 +79,7 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Faction = "francia",
 	Description = "Chlodwig was the founder of the Frankish kingdom.",
 	Father = "merovech",
-	Date = 481, -- his reign began in 481
+	StartDate = 481, -- his reign began in 481
 	DeathDate = 511, -- died in 511
 	HistoricalFactions = {
 		481, "frank-tribe",
@@ -345,7 +345,7 @@ DefineCharacter("bobo-of-auvergne", { -- Source: Archibald R. Lewis, "The Dukes 
 	Type = "unit-frank-knight-lord", -- duke
 	Civilization = "frankish",
 	Faction = "francia",
-	Date = 639, -- Frankish duke of Auvergne in 639
+	StartDate = 639, -- Frankish duke of Auvergne in 639
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
@@ -374,7 +374,7 @@ DefineCharacter("agilbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-priest",
 	Civilization = "frankish",
 	Faction = "francia", -- correct? was bishop of Paris
-	Date = 663, -- attended a synod in Streoneshalh, in Northumbria, in 663
+	StartDate = 663, -- attended a synod in Streoneshalh, in Northumbria, in 663
 	-- became bishop of Paris in 667 or 668
 	DeathDate = 679, -- remained bishop of Paris for at least twelve years
 	Deities = {"christian-god"}
@@ -405,7 +405,7 @@ DefineCharacter("pepin-of-herstal", { -- Source: "Medieval Warfare V.2", 2013, p
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace of Austrasia
 	Civilization = "frankish",
 	Faction = "austrasia",
-	Date = 675,
+	StartDate = 675,
 	-- won the battle of Tertry, in 687, and as a result enjoyed supremacy in all of Francia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
 	DeathDate = 714, -- died in 714; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
 	HistoricalTitles = {
@@ -425,7 +425,7 @@ DefineCharacter("dagobert-ii-of-austrasia", { -- Source: Frank Stenton, "Anglo-S
 	Type = "unit-frank-knight-lord", -- king
 	Civilization = "frankish",
 	Faction = "austrasia",
-	Date = 678, -- was king of Austrasia as of 678
+	StartDate = 678, -- was king of Austrasia as of 678
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
 			return true
@@ -470,7 +470,7 @@ DefineCharacter("charles-martel", { -- Charles Martel; Source: "Medieval Warfare
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace
 	Civilization = "frankish",
 	Faction = "francia",
-	Date = 718,
+	StartDate = 718,
 	DeathDate = 741, -- died in 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	HistoricalTitles = {
 		"head-of-government", 718, 741, "francia" -- became Mayor of the Palace of Francia in 718
@@ -506,7 +506,7 @@ DefineCharacter("pepin-the-short", { -- Source: "Medieval Warfare V.2", 2013, p.
 	Civilization = "frankish",
 	Faction = "francia",
 	Father = "charles-martel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 169-170.
-	Date = 751,
+	StartDate = 751,
 	DeathDate = 768, -- died in 768
 	HistoricalTitles = {
 		"head-of-state", 751, 768, "francia" -- became king of the Franks in 751; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.

@@ -86,7 +86,7 @@ DefineCharacter("witiza", { -- Source: Archibald R. Lewis, "The Dukes in the Reg
 	Civilization = "goth",
 	Faction = "visigothia",
 	Deities = {"christian-god"},
-	Date = 700, -- reign began
+	StartDate = 700, -- reign began
 	DeathDate = 710, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 700, 710, "visigothia" -- Visigothic king, reigning 700-710

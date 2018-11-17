@@ -31,7 +31,7 @@ DefineCharacter("pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	Type = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
 	Faction = "untersberg",
-	Date = -1,
+	StartDate = -1,
 	DeathDate = 40, -- last we hear of him
 	Quote = "\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg",
 	HistoricalTitles = {

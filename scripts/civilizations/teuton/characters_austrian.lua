@@ -31,7 +31,7 @@ DefineCharacter("adalram", { -- Source: James Westfall Thompson, "Medieval Germa
 	Type = "unit-teuton-priest", -- Archbishop of Salzburg
 	Civilization = "teuton",
 	Deities = {"christian-god"},
-	Date = 821, -- Archbishop of Salzburg from 821 on
+	StartDate = 821, -- Archbishop of Salzburg from 821 on
 	DeathDate = 836, -- Archbishop of Salzburg until 836
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "bavaria" or GetPlayerData(trigger_player, "Faction") == "austria") then
@@ -49,7 +49,7 @@ DefineCharacter("peter-von-salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	Type = "unit-teuton-ritter", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1789, -- born
+	StartDate = 1789, -- born
 	DeathDate = 1858, -- died
 	Deities = {"christian-god"}
 })
@@ -61,7 +61,7 @@ DefineCharacter("wilhelmina-von-salzgeber", { -- Source: Waltraud Heindl, "Josep
 	Type = "unit-teuton-archer", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1801, -- born
+	StartDate = 1801, -- born
 	DeathDate = 1860, -- died
 	Deities = {"christian-god"}
 	-- married to Peter von Salzgeber
@@ -74,7 +74,7 @@ DefineCharacter("joseph-anton-von-lasser", { -- Source: Waltraud Heindl, "Joseph
 	Type = "unit-teuton-ritter", -- bureaucrat in the Allgemeinen Hofkammer, in 1848 a deputy in the Austrian Reichstag and in the Frankfurter Parliament; was minister without portfolio in the 1860s during the government of the Archduke Rainer-Mensdorff-Pouilly; was governor of Tyrol; in the 1870s he was a liberal deputy
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1814, -- born
+	StartDate = 1814, -- born
 	DeathDate = 1879, -- died
 	Deities = {"christian-god"}
 })
@@ -86,7 +86,7 @@ DefineCharacter("leopold-hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	Type = "unit-teuton-ritter", -- bureaucrat of the Finanzlandesdirektion in Prague; later bureaucrat of the Hofkammerprokuratur of Vienna; in the 1860s professor of political sciences in the University of Vienna and was head (Leiter) of the Department of Education (Unterrichtsdepartement) (which was in effect the education ministry) during the government of Prince (Fürst) Karl Auersperg
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1818, -- born
+	StartDate = 1818, -- born
 	DeathDate = 1891, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -102,7 +102,7 @@ DefineCharacter("wilhelmina-the-younger-von-salzgeber", { -- Source: Waltraud He
 	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1821, -- born
+	StartDate = 1821, -- born
 	DeathDate = 1896, -- died
 	Deities = {"christian-god"}
 	-- married to Josef Russegger
@@ -115,7 +115,7 @@ DefineCharacter("josef-russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	Type = "unit-teuton-ritter", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1853, -- knighted (became "Ritter von Russegger")
+	StartDate = 1853, -- knighted (became "Ritter von Russegger")
 	Deities = {"christian-god"}
 })
 
@@ -126,7 +126,7 @@ DefineCharacter("von-pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	Type = "unit-teuton-ritter", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1848, -- became Minister-President of Austria in 1848
+	StartDate = 1848, -- became Minister-President of Austria in 1848
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-government", 1848, 1848, "austria" -- was Minister-President of Austria during 1848
@@ -140,7 +140,7 @@ DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Jose
 	Type = "unit-teuton-knight-lord", -- Emperor of Austria
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1830, -- born (became Emperor in 1848, when he was 18 years old)
+	StartDate = 1830, -- born (became Emperor in 1848, when he was 18 years old)
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 1848, 0, "austria" -- became Emperor of Austria in 1848
@@ -154,7 +154,7 @@ DefineCharacter("victor-andrian-werburg", { -- Source: Waltraud Heindl, "Josephi
 	Type = "unit-teuton-swordsman", -- member of the Tyrolese provincial diet
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1850, -- published "Austria and Her Future" ("Österreich und dessen Zukunft") anonymously in 1850
+	StartDate = 1850, -- published "Austria and Her Future" ("Österreich und dessen Zukunft") anonymously in 1850
 	Deities = {"christian-god"},
 --	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
 	-- a "conservative thinker"
@@ -167,7 +167,7 @@ DefineCharacter("franz-seraph-stadion", { -- Source: Waltraud Heindl, "Josephini
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1806, -- born
+	StartDate = 1806, -- born
 	DeathDate = 1853, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -183,7 +183,7 @@ DefineCharacter("alexander-von-bach", { -- Source: Waltraud Heindl, "Josephinisc
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1813, -- born
+	StartDate = 1813, -- born
 	DeathDate = 1893, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -212,7 +212,7 @@ DefineCharacter("anton-hye-von-glunek", { -- Source: Waltraud Heindl, "Josephini
 	Type = "unit-teuton-ritter", -- was a liberal member of the Juridico-political Reading Club before 1848; from 1857 to 1867 was a section chief in the Ministry of Justice
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
+	StartDate = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"justice-minister", 1867, 1867, "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
@@ -226,7 +226,7 @@ DefineCharacter("adolph-pratobevera-von-wiesborn",  { -- Source: Waltraud Heindl
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
+	StartDate = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"justice-minister", 1861, 1862, "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
@@ -241,7 +241,7 @@ DefineCharacter("johann-baptist-von-hoffinger", { -- Source: Waltraud Heindl, "J
 	Type = "unit-teuton-ritter", -- Ministerialsekretär in the Police Ministry (Polizeiministerium), at least during the 1867-1869 period
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1867,
+	StartDate = 1867,
 	Deities = {"christian-god"}
 	-- Knight (Ritter)
 })
@@ -264,7 +264,7 @@ DefineCharacter("bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandar
 	Type = "unit-teuton-ritter", -- had the title of Graf (Count)
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1852, -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
+	StartDate = 1852, -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"governor", 1852, 0, "Tyrol" -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
@@ -278,7 +278,7 @@ DefineCharacter("georg-von-toggenburg", { -- Source: Waltraud Heindl, "Josephini
 	Type = "unit-teuton-ritter", -- had the title of Knight (Ritter)
 	Civilization = "teuton",
 	Faction = "austria",
-	Date = 1860, -- became Statthalter of Venice
+	StartDate = 1860, -- became Statthalter of Venice
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"governor", 1860, 1866, "Venetia" -- was Statthalter (governor) of Venice from 1860 to 1866

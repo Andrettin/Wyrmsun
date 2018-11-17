@@ -51,7 +51,7 @@ DefineCharacter("ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
-	Date = 547, -- became king of Bernicia
+	StartDate = 547, -- became king of Bernicia
 	HistoricalTitles = {
 		"head-of-state", 547, 0, "bernicia" -- first king of Bernicia
 	},
@@ -89,7 +89,7 @@ DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
-	Date = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
+	StartDate = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
 	Father = "ida", -- the source says that his son Æthelfrith was grandson of Ida
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
@@ -110,7 +110,7 @@ DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
-	Date = 593, -- beginning of reign
+	StartDate = 593, -- beginning of reign
 	DeathDate = 616, -- died in battle against Rædwald
 	ViolentDeath = true,
 	Father = "aethelric",
@@ -155,7 +155,7 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Father = "aelle",
-	Date = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
+	StartDate = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
 	DeathDate = {632, 10, 12}, -- died on the 12th of October 632 in battle against Cadwallon of Gwynedd, at Hatfield
 	ViolentDeath = true,
 	-- married Æthelberg in 625
@@ -178,7 +178,7 @@ DefineCharacter("raedwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "east-anglia",
-	Date = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
+	StartDate = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", 616, 0, "east-anglia" -- king of East Anglia
@@ -270,7 +270,7 @@ DefineCharacter("birinus", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- priest, and first bishop in Wessex
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 635, -- baptized the West Saxon king Cynegils in 635
+	StartDate = 635, -- baptized the West Saxon king Cynegils in 635
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
@@ -322,7 +322,7 @@ DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
-	Date = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
+	StartDate = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
 	DeathDate = 654, -- died fighting against Oswiu of Bernicia; died in the autumn of 654
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -344,7 +344,7 @@ DefineCharacter("osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "deira",
-	Date = 632,
+	StartDate = 632,
 	DeathDate = 633, -- died fighting against Cadwallon in the summer of 633
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -366,7 +366,7 @@ DefineCharacter("eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
 	Father = "aethelfrith",
-	Date = 632,
+	StartDate = 632,
 	DeathDate = 633, -- killed in 633 while visiting Cadwallon to sue for peace
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -407,7 +407,7 @@ DefineCharacter("oswald-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon E
 	Civilization = "anglo-saxon",
 	Faction = "bernicia",
 	Father = "aethelfrith", -- he was a brother of Eanfrith's, so presumably also a son of Æthelfrith
-	Date = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
+	StartDate = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
 	DeathDate = 641, -- defeated and killed by Penda of Mercia at Maserfelth (likely Oswestry in Shropshire) on the 5h of August 641
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -491,7 +491,7 @@ DefineCharacter("oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "aethelfrith", -- he was a brother of Oswald's, so also of Eanfrith's, and as such likely also a son of Æthelfrith
-	Date = 641,
+	StartDate = 641,
 	DeathDate = 670,
 	Background = "Oswiu unified the kingdoms of Bernicia and Deira into Northumbria in 654 AD.",
 	Deities = {"christian-god"},
@@ -515,7 +515,7 @@ DefineCharacter("cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 635, -- was already king when he was baptized in 635 by Birinus
+	StartDate = 635, -- was already king when he was baptized in 635 by Birinus
 	HistoricalTitles = {
 		"head-of-state", 635, 0, "wessex" -- king of Wessex
 	},
@@ -575,7 +575,7 @@ DefineCharacter("oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Father = "osric",
-	Date = 641,
+	StartDate = 641,
 	DeathDate = 651, -- died as a result of Oswiu of Bernicia's invasion of Deira in 651 AD
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -597,7 +597,7 @@ DefineCharacter("aethelwald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Civilization = "anglo-saxon",
 	Faction = "deira",
 	Father = "oswald-of-bernicia",
-	Date = 651,
+	StartDate = 651,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 651, 0, "deira" -- was chosen by the Deirans as their king upon the demise of Oswine; he was under the protection of Penda of Mercia (apparently) from his accession
@@ -616,7 +616,7 @@ DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "east-anglia",
-	Date = 654,
+	StartDate = 654,
 	DeathDate = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -677,7 +677,7 @@ DefineCharacter("cuthbert-of-lindisfarne", { -- Source: Frank Stenton, "Anglo-Sa
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 651, -- became a novice in Melrose in 651
+	StartDate = 651, -- became a novice in Melrose in 651
 	-- moved to Lindisfarne in 664
 	-- was elected bishop of Hexham in 684, being consecrated on the 26th of March 685
 	-- retired from the world in 687
@@ -699,7 +699,7 @@ DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Civilization = "anglo-saxon",
 	Faction = "middle-anglia",
 	Father = "penda",
-	Date = 653, -- was ruling the Middle Angles in 653 when he was baptized
+	StartDate = 653, -- was ruling the Middle Angles in 653 when he was baptized
 	DeathDate = 656, -- murdered in the spring of 656
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -723,7 +723,7 @@ DefineCharacter("alhflaed", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "oswiu", -- Oswiu of Bernicia
-	Date = 653, -- married Peada in 653
+	StartDate = 653, -- married Peada in 653
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -739,7 +739,7 @@ DefineCharacter("deusdedit", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-priest", -- archbishop
 	Civilization = "anglo-saxon",
 	Faction = "kent",
-	Date = 654, -- became archbishop of Canterbury in the spring of 654
+	StartDate = 654, -- became archbishop of Canterbury in the spring of 654
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
@@ -756,7 +756,7 @@ DefineCharacter("wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Father = "penda",
-	Date = 657, -- beginning of reign
+	StartDate = 657, -- beginning of reign
 	DeathDate = 674, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -778,7 +778,7 @@ DefineCharacter("wine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 660, -- became bishop of Winchester around 660
+	StartDate = 660, -- became bishop of Winchester around 660
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
@@ -794,7 +794,7 @@ DefineCharacter("hild-of-streoneshalh", { -- Source: Frank Stenton, "Anglo-Saxon
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 663, -- was abbess of a monastery in Streoneshalh, in Northumbria, in 663
+	StartDate = 663, -- was abbess of a monastery in Streoneshalh, in Northumbria, in 663
 	Deities = {"christian-god"},
 	-- was related to king Oswiu of Northumbria
 	Conditions = function(s)
@@ -811,7 +811,7 @@ DefineCharacter("wilfrid", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria", -- from Northumbria
-	Date = 663, -- participated in a synod in Streoneshalh, in Northumbria, in 663
+	StartDate = 663, -- participated in a synod in Streoneshalh, in Northumbria, in 663
 	-- predominated over the whole Northumbrian church in the 669-677 period
 	-- expelled from Northumbria in 677
 	-- was restored to his see in York in 679.10 by Rome, but this decision was not obeyed in Northumbria
@@ -835,7 +835,7 @@ DefineCharacter("egbert-of-kent", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "kent",
-	Date = 667, -- was king of Kent as of 667
+	StartDate = 667, -- was king of Kent as of 667
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 667, 0, "kent" -- was king of Kent as of 667
@@ -854,7 +854,7 @@ DefineCharacter("wighard", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- archbishop
 	Civilization = "anglo-saxon",
 	Faction = "kent",
-	Date = 667, -- became archbishop of Canterbury in 667
+	StartDate = 667, -- became archbishop of Canterbury in 667
 	DeathDate = 667, -- died very soon after becoming archbishop, when he was sent to Rome to be consecrated, and died of plague
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -871,7 +871,7 @@ DefineCharacter("leuthere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 670, -- became bishop of Winchester in 670 (consecrated by archbishop Theodore of Canterbury)
+	StartDate = 670, -- became bishop of Winchester in 670 (consecrated by archbishop Theodore of Canterbury)
 	DeathDate = 676, -- succeeded by Hæddi as bishop of Winchester in 676
 	-- nephew of Agilbert
 	Deities = {"christian-god"},
@@ -890,7 +890,7 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "oswiu",
-	Date = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
+	StartDate = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
 	DeathDate = {685, 5, 20}, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -914,7 +914,7 @@ DefineCharacter("benedict-biscop", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Type = "unit-teuton-priest", -- founder of monasteries
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 674, -- founded a monastery at Wearmouth in 674, with the land being given by king Ecgfrith of Northumbria
+	StartDate = 674, -- founded a monastery at Wearmouth in 674, with the land being given by king Ecgfrith of Northumbria
 	DeathDate = 689, -- died in 689
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -931,7 +931,7 @@ DefineCharacter("haeddi", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 676, -- became bishop of Winchester in 676, succeeding Leuthere
+	StartDate = 676, -- became bishop of Winchester in 676, succeeding Leuthere
 	-- friend of archbishop Theodore of Canterbury
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -948,7 +948,7 @@ DefineCharacter("bosa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 677, -- became bishop of Deira (with seat in York) in 677
+	StartDate = 677, -- became bishop of Deira (with seat in York) in 677
 	DeathDate = 705, -- died in 705
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -965,7 +965,7 @@ DefineCharacter("eata", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 677, -- became bishop of Bernicia in 677
+	StartDate = 677, -- became bishop of Bernicia in 677
 	DeathDate = 686, -- died just before Wilfrid's return to Northumbria in 686
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -998,7 +998,7 @@ DefineCharacter("aethelred-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	Father = "penda", -- presumably, since he was Wulfhere of Mercia's brother
-	Date = 678, -- defeated Ecgfrith of Northumbria in a battle close to the Trent river in 678
+	StartDate = 678, -- defeated Ecgfrith of Northumbria in a battle close to the Trent river in 678
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
@@ -1014,7 +1014,7 @@ DefineCharacter("aethelwalh", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "sussex",
-	Date = 681, -- was king of the South Saxons as of 681
+	StartDate = 681, -- was king of the South Saxons as of 681
 	DeathDate = 686, -- died in 686, having been killed by Cædwalla
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1051,7 +1051,7 @@ DefineCharacter("berhtwald-of-mercia", { -- probably not the same Berhtwald as t
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
 	-- nephew of king Æthelred of Mercia
-	Date = 685, -- gave forty hides (a measure of land area) to abbot Aldhelm in 685
+	StartDate = 685, -- gave forty hides (a measure of land area) to abbot Aldhelm in 685
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "mercia") then
@@ -1067,7 +1067,7 @@ DefineCharacter("aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- abbot, and later bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 685, -- received forty hides (a measure of land area) from Berhtwald in 685
+	StartDate = 685, -- received forty hides (a measure of land area) from Berhtwald in 685
 	-- became bishop at Sherborne in 705, having previously been abbot of Malmesbury
 	DeathDate = 709, -- died in 709/710
 	Deities = {"christian-god"},
@@ -1087,7 +1087,7 @@ DefineCharacter("aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "oswiu",
-	Date = {685, 5, 20},
+	StartDate = {685, 5, 20},
 	DeathDate = 704, -- died on 704.12
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1107,7 +1107,7 @@ DefineCharacter("caedwalla", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
 	Faction = "wessex", -- West Saxon exile
-	Date = 686, -- killed king Aethelwalh of Sussex in 686
+	StartDate = 686, -- killed king Aethelwalh of Sussex in 686
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
@@ -1123,7 +1123,7 @@ DefineCharacter("john-of-beverley", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 686, -- succeeded Eata as bishop of Hexham
+	StartDate = 686, -- succeeded Eata as bishop of Hexham
 	-- moved to York in 705
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -1140,7 +1140,7 @@ DefineCharacter("swithberht", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria", -- received consecration from Wilfrid of Northumbria
-	Date = 692, -- was consecrated bishop with seat at Wijk bij Duurstede in 692/693
+	StartDate = 692, -- was consecrated bishop with seat at Wijk bij Duurstede in 692/693
 	-- partook in a mission to Frisia
 	Deities = {"christian-god"},
 	HistoricalLocations = {
@@ -1160,7 +1160,7 @@ DefineCharacter("berhtwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-teuton-priest", -- abbot, and later archbishop
 	Civilization = "anglo-saxon",
 	Faction = "kent",
-	Date = {692, 7, 1}, -- became archbishop of Canterbury on 692.7.1, having previously been abbot of Reculver
+	StartDate = {692, 7, 1}, -- became archbishop of Canterbury on 692.7.1, having previously been abbot of Reculver
 	DeathDate = 731, -- died in 731
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -1177,7 +1177,7 @@ DefineCharacter("willibrord", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria", -- from Northumbria
-	Date = 695, -- was the leader of the mission to Frisia as of 695
+	StartDate = 695, -- was the leader of the mission to Frisia as of 695
 	-- became bishop of Frisia on 695.11.21, being consecrated by pope Sergius I
 	DeathDate = 739, -- died in 739 in the monastery of Echternach
 	Deities = {"christian-god"},
@@ -1195,7 +1195,7 @@ DefineCharacter("wihtred", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "kent",
-	Date = 695,
+	StartDate = 695,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 695, 0, "kent" -- king of Kent as of 695
@@ -1216,7 +1216,7 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Faction = "northumbria",
 	Father = "aldfrith",
 	Trait = "upgrade-cruel", -- described as wild, irreligious and tyrannical to his noble subjects
-	Date = 697, -- began to rule in 705, when he was eight years old
+	StartDate = 697, -- began to rule in 705, when he was eight years old
 	DeathDate = 716, -- murdered in 716
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -1237,7 +1237,7 @@ DefineCharacter("waldhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "essex",
-	Date = 704, -- was bishop of London as of 704
+	StartDate = 704, -- was bishop of London as of 704
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "middlesex" or GetPlayerData(trigger_player, "Faction") == "essex") then
@@ -1253,7 +1253,7 @@ DefineCharacter("cenred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
-	Date = 704,
+	StartDate = 704,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 704, 0, "mercia" -- king of Mercia as of 704/705
@@ -1289,7 +1289,7 @@ DefineCharacter("beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Type = "unit-teuton-heroic-swordsman", -- ealdorman
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 711, -- defeated a Pictish army in the Scottish central plain in 711
+	StartDate = 711, -- defeated a Pictish army in the Scottish central plain in 711
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1306,7 +1306,7 @@ DefineCharacter("wynfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
 	-- born just before 675
-	Date = 716, -- was the head of the monastic school at a monastery in Nursling in 716, when he left it to go perform missionary work in Frisia
+	StartDate = 716, -- was the head of the monastic school at a monastery in Nursling in 716, when he left it to go perform missionary work in Frisia
 	-- his mission to Frisia was cancelled due to the pagan Frisians reconquering land from the Franks in 717 
 	-- on 722.11.30 he was consecrated as bishop to the Germans by the pope
 	-- became archbishop in 732 (though without a permanent seat)
@@ -1327,7 +1327,7 @@ DefineCharacter("daniel", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 718, -- was the bishop of Winchester as of 718
+	StartDate = 718, -- was the bishop of Winchester as of 718
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
@@ -1345,7 +1345,7 @@ DefineCharacter("willibald", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Faction = "wessex", -- was from eastern Wessex
 	Deities = {"christian-god"},
 	-- brother of Wynbald and Waldburg
-	Date = 720, -- began a pilgrimage to the Middle East in 720 with his brother Wynbald and their father
+	StartDate = 720, -- began a pilgrimage to the Middle East in 720 with his brother Wynbald and their father
 	-- returned to Rome in 730
 	-- became a priest in 740
 	-- became bishop of Eichstätt in 741
@@ -1366,7 +1366,7 @@ DefineCharacter("wynbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Faction = "wessex", -- was from eastern Wessex
 	Deities = {"christian-god"},
 	-- brother of Willibald and Waldburg
-	Date = 720, -- began a pilgrimage to the Middle East in 720 with his brother Willibald and their father
+	StartDate = 720, -- began a pilgrimage to the Middle East in 720 with his brother Willibald and their father
 	-- by 750 had become the head of a double monastery at Heidenheim together with his sister Waldburg
 	DeathDate = 761, -- died in 761
 	Deities = {"christian-god"},
@@ -1384,7 +1384,7 @@ DefineCharacter("ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 729,
+	StartDate = 729,
 	DeathDate = 737,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1404,7 +1404,7 @@ DefineCharacter("tatwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- abbot, and later archbishop
 	Civilization = "anglo-saxon",
 	Faction = "kent", -- archbishop of Canterbury, but he was Mercian
-	Date = 731, -- became archbishop of Canterbury in 731, having previously been abbot of Breedon, Leicestershire
+	StartDate = 731, -- became archbishop of Canterbury in 731, having previously been abbot of Breedon, Leicestershire
 	DeathDate = 734, -- died in 734
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -1421,7 +1421,7 @@ DefineCharacter("bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon",
 	Faction = "northumbria", -- studied at a Northumbrian monastery
-	Date = 703, -- wrote "De Temporibus" in 703
+	StartDate = 703, -- wrote "De Temporibus" in 703
 	-- wrote "De Temporum Ratione" in 725
 	-- wrote "Historia Ecclesiastica Venerabilis Bedae" in 731 AD
 	Deities = {"christian-god"},
@@ -1440,7 +1440,7 @@ DefineCharacter("eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 737,
+	StartDate = 737,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 737, 758, "northumbria" -- succeeded Ceolwulf as king of Northumbria, withdrew from public life in 758, becoming a clerk under his brother Egbert, the archbishop of York
@@ -1497,7 +1497,7 @@ DefineCharacter("egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Faction = "northumbria",
 	Deities = {"christian-god"},
 	-- was Eadberht of Northumbria's brother
-	Date = 734, -- was bishop of York in 734, when Bede wrote a letter to him
+	StartDate = 734, -- was bishop of York in 734, when Bede wrote a letter to him
 	-- became archbishop of York in 735, having been previously bishop of York
 	DeathDate = 767, -- his kinsman Æthelberht became archbishop of York in 767
 	Conditions = function(s)
@@ -1513,7 +1513,7 @@ DefineCharacter("leofwine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-priest", -- bishop, and later missionary
 	Civilization = "anglo-saxon",
-	Date = 747, -- was a bishop who worked with Boniface in 747
+	StartDate = 747, -- was a bishop who worked with Boniface in 747
 	-- later went to perform missionary work in Frisia
 	-- eventually came to be regarded as a saint
 	Deities = {"christian-god"}
@@ -1559,7 +1559,7 @@ DefineCharacter("waldburg", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Faction = "wessex",
 	Deities = {"christian-god"},
 	-- sister of Willibald and Wynbald
-	Date = 750, -- by 750 had become the head of a double monastery at Heidenheim together with her brother Willibald
+	StartDate = 750, -- by 750 had become the head of a double monastery at Heidenheim together with her brother Willibald
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -1575,7 +1575,7 @@ DefineCharacter("leofgyth", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "wessex", -- her father was a West Saxon
 	Father = "dynne",
-	Date = 754, -- was abbess of Tauberbischofsheim as of 754
+	StartDate = 754, -- was abbess of Tauberbischofsheim as of 754
 	DeathDate = 780, -- died in 780
 	Deities = {"christian-god"},
 	Conditions = function(s)
@@ -1593,7 +1593,7 @@ DefineCharacter("aethelwald-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 759,
+	StartDate = 759,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 759, 765, "northumbria" -- became king of Northumbria in 759, lost the throne to Alhred six years later
@@ -1612,7 +1612,7 @@ DefineCharacter("alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 765,
+	StartDate = 765,
 	DeathDate = 774, -- end of reign
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1633,7 +1633,7 @@ DefineCharacter("aluberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Deities = {"christian-god"},
-	Date = 767, -- became bishop of the Old Saxons in 767, being consecrated at York
+	StartDate = 767, -- became bishop of the Old Saxons in 767, being consecrated at York
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -1648,7 +1648,7 @@ DefineCharacter("aethelberht-of-york", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Type = "unit-teuton-priest", -- archbishop
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 767, -- became archbishop of York in 767
+	StartDate = 767, -- became archbishop of York in 767
 	DeathDate = 780, -- resigned as archbishop in 780
 	Deities = {"christian-god"},
 	HistoricalLocations = {
@@ -1669,7 +1669,7 @@ DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Civilization = "anglo-saxon",
 	Faction = "francia",
 	Deities = {"christian-god"},
-	Date = 767, -- became encharged with the direction of the school of York in 767
+	StartDate = 767, -- became encharged with the direction of the school of York in 767
 	-- moved from England to the court of Charlemagne in 782, and received the abbeys of Ferrières and St. Lupus at Troyes
 	-- received the greater abbey of St. Martin at Tours from Charlemagne in 796
 	DeathDate = 804, -- died in 804
@@ -1709,7 +1709,7 @@ DefineCharacter("aethelred-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "aethelwald-moll",
-	Date = 774,
+	StartDate = 774,
 	DeathDate = 796, -- murdered
 	ViolentDeath = true,
 	Deities = {"christian-god"},
@@ -1733,7 +1733,7 @@ DefineCharacter("aelfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 779, -- expelled Æthelred Moll from Northumbria
+	StartDate = 779, -- expelled Æthelred Moll from Northumbria
 	DeathDate = 788,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1754,7 +1754,7 @@ DefineCharacter("willehad", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Deities = {"christian-god"},
-	Date = 780, -- went to preach to the Saxons between the Elbe and the Weser at the behest of Charlemagne in 780
+	StartDate = 780, -- went to preach to the Saxons between the Elbe and the Weser at the behest of Charlemagne in 780
 	-- became bishop of Bremen in 785
 	DeathDate = 789,
 	Conditions = function(s)
@@ -1771,7 +1771,7 @@ DefineCharacter("offa-of-mercia", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
-	Date = 792,
+	StartDate = 792,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 792, 0, "mercia" -- was king of Mercia in 792 when Æthelred Moll married a daughter of his
@@ -1790,7 +1790,7 @@ DefineCharacter("eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
-	Date = 801,
+	StartDate = 801,
 	DeathDate = 810, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1811,7 +1811,7 @@ DefineCharacter("cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "mercia",
-	Date = 801,
+	StartDate = 801,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 801, 0, "mercia" -- was king of Mercia in 801 when Eardwulf of Northumbria invaded it
@@ -1831,7 +1831,7 @@ DefineCharacter("sigulf-of-ferrieres", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Civilization = "anglo-saxon",
 	Faction = "francia",
 	Deities = {"christian-god"},
-	Date = 804, -- succeeded Alcuin to the abbey of Ferrières when he died in 804
+	StartDate = 804, -- succeeded Alcuin to the abbey of Ferrières when he died in 804
 	HistoricalLocations = {
 		804, "earth", "ferrieres"
 	},
@@ -1850,7 +1850,7 @@ DefineCharacter("frithugisl", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Civilization = "anglo-saxon",
 	Faction = "francia",
 	Deities = {"christian-god"},
-	Date = 804, -- succeeded Alcuin to the greater abbey of St. Martin at Tours when he died in 804
+	StartDate = 804, -- succeeded Alcuin to the greater abbey of St. Martin at Tours when he died in 804
 	HistoricalLocations = {
 		804, "earth", "tours"
 	},
@@ -1869,7 +1869,7 @@ DefineCharacter("eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Civilization = "anglo-saxon",
 	Faction = "northumbria",
 	Father = "eardwulf",
-	Date = 810,
+	StartDate = 810,
 	DeathDate = 840,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -1890,7 +1890,7 @@ DefineCharacter("wulfred", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Civilization = "anglo-saxon",
 	Faction = "kent",
 	Deities = {"christian-god"},
-	Date = 811, -- archbishop of Canterbury in 811
+	StartDate = 811, -- archbishop of Canterbury in 811
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "kent" or GetPlayerData(trigger_player, "Faction") == "englaland") then
 			return true
@@ -1905,7 +1905,7 @@ DefineCharacter("egbert-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 829,
+	StartDate = 829,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 829, 0, "wessex" -- was king of Wessex in 829 when Eanred of Northumbria submitted to him
@@ -1924,7 +1924,7 @@ DefineCharacter("swithun", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-teuton-priest", -- bishop
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 858, -- was bishop at Winchester as of 858
+	StartDate = 858, -- was bishop at Winchester as of 858
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "wessex") then
@@ -1940,7 +1940,7 @@ DefineCharacter("aethelbald-of-wessex", { -- Source: Frank Stenton, "Anglo-Saxon
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
 	Faction = "wessex",
-	Date = 858,
+	StartDate = 858,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 858, 0, "wessex" -- was king of Wessex as of 858
@@ -1959,7 +1959,7 @@ DefineCharacter("ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "anglo-saxon",
-	Date = 1002, -- massacred the Danes in 1002
+	StartDate = 1002, -- massacred the Danes in 1002
 	Deities = {"christian-god"}
 })
 
@@ -1971,7 +1971,7 @@ DefineCharacter("nicolas-breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "anglo-saxon", -- English?
 	Faction = "england",
 	Deities = {"christian-god"},
-	Date = 1154, -- elected Pope
+	StartDate = 1154, -- elected Pope
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "england") then
 			return true

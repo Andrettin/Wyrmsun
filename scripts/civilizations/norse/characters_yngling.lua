@@ -527,7 +527,7 @@ DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heim
 	Trait = "upgrade-strong", -- described as remarkably handsome, very strong and large of growth
 	Quote = "\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine",
 	-- Olaf was 20 years old when his father Gudrod died, so he would have been born in 804
-	Date = 824, -- date his father died, and thus when his reign over Vestfold began
+	StartDate = 824, -- date his father died, and thus when his reign over Vestfold began
 	HistoricalTitles = {
 		"head-of-state", 824, 0, "vestfold"
 	},
@@ -555,7 +555,7 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 	Mother = "aasa",
 	HairVariation = "black-hair",
 	-- began his reign when he was 18 years old, so he would have been born in 823
-	Date = 841, -- reign began
+	StartDate = 841, -- reign began
 	DeathDate = 863, -- reign ended
 	Trait = "upgrade-strong", -- described as stout and strong
 	HistoricalTitles = {

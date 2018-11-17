@@ -32,7 +32,7 @@ DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	Type = "unit-teuton-swordsman",
 	Civilization = "gael",
 	Faction = "argyll",
-	Date = 574, -- became king
+	StartDate = 574, -- became king
 	-- attacked the Bernicians in 603 AD
 	HistoricalTitles = {
 		"head-of-state", 574, 0, "argyll"
@@ -51,7 +51,7 @@ DefineCharacter("aidan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Type = "unit-teuton-priest",
 	Civilization = "gael", -- monk from Iona, a northern Irish or Pictish monastery
 	Faction = "northumbria",
-	Date = 634, -- arrived in 634 in Northumbria with a group of monks, and they went to live in the island of Lindisfarne
+	StartDate = 634, -- arrived in 634 in Northumbria with a group of monks, and they went to live in the island of Lindisfarne
 	DeathDate = 651, -- died
 	Deities = {"christian-god"}
 })
@@ -62,7 +62,7 @@ DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Type = "unit-teuton-priest",
 	Civilization = "gael", -- monk from Iona, a northern Irish or Pictish monastery
 	Faction = "northumbria",
-	Date = 651, -- succeeded Aidan
+	StartDate = 651, -- succeeded Aidan
 	DeathDate = 660, -- died; as given on page 122, on page 120 Stenton gives him as having lived until 661
 	Deities = {"christian-god"}
 })
@@ -75,7 +75,7 @@ DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Civilization = "gael",
 	Faction = "pict-tribe",
 	-- son of the king of Strathclyde
-	Date = 672,
+	StartDate = 672,
 	DeathDate = 693, -- died
 	HistoricalTitles = {
 		"head-of-state", 672, 693, "pict-tribe" -- became king of the Picts in 672
@@ -93,7 +93,7 @@ DefineCharacter("dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "gael",
-	Date = 825, -- wrote "De Mensura Orbis Terrae"
+	StartDate = 825, -- wrote "De Mensura Orbis Terrae"
 	Deities = {"christian-god"},
 	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
 })

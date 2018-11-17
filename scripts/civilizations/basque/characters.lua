@@ -31,7 +31,7 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-priest",
 	Civilization = "basque",
 	Faction = "gylfing-tribe",
-	Date = -2800,
+	StartDate = -2800,
 	DeathDate = {-2800, 12, 30},
 	Level = 3, -- chieftain/king
 	HistoricalTitles = {

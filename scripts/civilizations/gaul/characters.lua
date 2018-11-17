@@ -31,7 +31,7 @@ DefineCharacter("ambiorix", { -- Source: H. H. Howorth, "The Ethnology of German
 	Type = "unit-teuton-swordsman",
 	Civilization = "gaul",
 	Faction = "eburones-tribe",
-	Date = -54,
+	StartDate = -54,
 	HistoricalTitles = {
 		"head-of-state", -54, 0, "eburones-tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
 	},
@@ -49,7 +49,7 @@ DefineCharacter("cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germ
 	Type = "unit-teuton-swordsman",
 	Civilization = "gaul",
 	Faction = "eburones-tribe",
-	Date = -54,
+	StartDate = -54,
 	DeathDate = -53, -- poisoned himself after the Romans devastated the lands of his people
 	ViolentDeath = true,
 	Trait = "upgrade-old",
@@ -68,7 +68,7 @@ DefineCharacter("indutiomarus", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Type = "unit-teuton-swordsman",
 	Civilization = "gaul",
 	Faction = "treviri-tribe",
-	Date = -54,
+	StartDate = -54,
 	HistoricalTitles = {
 		"head-of-state", -54, 0, "treviri-tribe" -- was chieftain of the Treviri in 54 BC
 	},

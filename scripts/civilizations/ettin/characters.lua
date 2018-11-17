@@ -41,7 +41,7 @@ DefineCharacter("geirrod-ettin", { -- Source: Kevin Crossley-Holland, "The Norse
 	Type = "unit-ettin",
 	Civilization = "ettin",
 	Faction = "geirrodung-clan",
-	Date = -1101, -- should be present for Thialfi's scenario
+	StartDate = -1101, -- should be present for Thialfi's scenario
 	HistoricalLocations = {
 		-1101, "jotunheim", "geirrods-hall"
 	}

@@ -31,7 +31,7 @@ DefineCharacter("otakar-i-premysl", { -- Source: James Westfall Thompson, "Medie
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- king
 	Civilization = "slav",
-	Date = 1198, -- reign began
+	StartDate = 1198, -- reign began
 	DeathDate = 1230, -- reign ended
 	HistoricalTitles = {
 		"head-of-state", 1198, 1230, "bohemia" -- king of Bohemia in 1198-1230
@@ -45,7 +45,7 @@ DefineCharacter("agnes-premyslovna", { -- Source: Alena Ježková, "77 Prague Le
 	Type = "unit-teuton-priest", -- mother superior of a cloister
 	Civilization = "slav",
 	Father = "otakar-i-premysl", -- youngest daughter of the Czech king Přemysl Otakar I
-	Date = 1231, -- founded the St. Agnes' Cloister (in Prague) in 1231, and became its mother superior
+	StartDate = 1231, -- founded the St. Agnes' Cloister (in Prague) in 1231, and became its mother superior
 	HistoricalLocations = {
 --		1231, "earth", "prague"
 	}
@@ -56,7 +56,7 @@ DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- emperor/king
 	Civilization = "slav",
-	Date = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
+	StartDate = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
 	DeathDate = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
 	HistoricalTitles = {
 		"head-of-state", 0, 1378, "bohemia"
@@ -69,5 +69,5 @@ DefineCharacter("humprecht-cernin-of-chudenice", { -- Source: Alena Ježková, "
 	Gender = "male",
 	Type = "unit-slavic-swordsman",
 	Civilization = "slav",
-	Date = 1669 -- Had the Černín Palace built in Prague for him in 1669
+	StartDate = 1669 -- Had the Černín Palace built in Prague for him in 1669
 })

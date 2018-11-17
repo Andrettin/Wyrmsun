@@ -31,7 +31,7 @@ DefineCharacter("radbod", { -- Frisian ruler defeated by Charles Martel in 718; 
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
 	Faction = "frisian-tribe",
-	Date = 704,
+	StartDate = 704,
 	HistoricalTitles = {
 		"head-of-state", 704, 0, "frisian-tribe" -- king of the Frisians as of 716; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
 	},

@@ -71,7 +71,7 @@ DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Gender = "male",
 	Type = "unit-gothic-horse-lord",
 	Civilization = "goth",
-	Date = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
+	StartDate = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
 	DeathDate = 493, -- was put to death by Theoderic in 493 AD
 	ViolentDeath = true,
 	Deities = {"christian-god"}
@@ -82,7 +82,7 @@ DefineCharacter("tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Date = 489,
+	StartDate = 489,
 	DeathDate = 493, -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
 	Deities = {"christian-god"}
 })

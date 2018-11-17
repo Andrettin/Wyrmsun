@@ -264,7 +264,7 @@ DefineCharacter("eric-red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
-	Date = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
+	StartDate = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
 })
 
 DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
@@ -273,7 +273,7 @@ DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
-	Date = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
+	StartDate = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
 })
 
 DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
@@ -282,7 +282,7 @@ DefineCharacter("biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "heriulf-bardson",
-	Date = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
+	StartDate = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
 })
 
 DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 162-163.
@@ -291,7 +291,7 @@ DefineCharacter("leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "eric-red",
-	Date = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
+	StartDate = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
 	-- Leif named three countries he found: Hellaland (a plain of flat slaty stones), Markland (a wooded country with many cliffs of white sand) and Vinland (a country with vines and grapes)
 })
 
@@ -301,7 +301,7 @@ DefineCharacter("thorwald", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
 	Father = "eric-red", -- presumably, since he was Leif's brother
-	Date = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
+	StartDate = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
 	-- Thorwald named a headland Kialarness
 	-- Thorwald died in an attack from the Skraelings (probably Indians), and was buried at a place named Crossness
 })
@@ -312,7 +312,7 @@ DefineCharacter("arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
-	Date = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
+	StartDate = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
 })
 
 DefineCharacter("sturla-thordarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 188.
@@ -332,7 +332,7 @@ DefineCharacter("snorri-sturlson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 	Father = "sturla-thordarson",
 	Trait = "upgrade-ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
-	Date = 1178, -- born in 1178 at Hvam, in western Iceland
+	StartDate = 1178, -- born in 1178 at Hvam, in western Iceland
 	DeathDate = 1241, -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
 	ViolentDeath = true
 })
@@ -353,7 +353,7 @@ DefineCharacter("henry-of-greenland", { -- Source: Snorri Sturlson, "Heimskringl
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
-	Date = 1389 -- appointed Bishop of Greenland
+	StartDate = 1389 -- appointed Bishop of Greenland
 })
 
 DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -362,7 +362,7 @@ DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
-	Date = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
+	StartDate = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
 })
 
 DefineCharacter("andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -379,7 +379,7 @@ DefineCharacter("endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	Deities = {"christian-god"},
-	Date = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
+	StartDate = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
 	Father = "andreas"
 })
 
@@ -390,7 +390,7 @@ DefineCharacter("magnus-eyolfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- correct?
 	Deities = {"christian-god"},
-	Date = 1477 -- was bishop of Skalholt (in Iceland) in 1477
+	StartDate = 1477 -- was bishop of Skalholt (in Iceland) in 1477
 })
 
 DefineCharacter("thormod-torfaeus", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
@@ -399,7 +399,7 @@ DefineCharacter("thormod-torfaeus", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-teuton-priest", -- put as a priest since there isn't any other unit type more appropriate for a writer
 	Civilization = "norse",
-	Date = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
+	StartDate = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
 	AuthoredWorks = {"upgrade-work-historiae-vinlandiae-antiquae"}
 })
 
@@ -410,7 +410,7 @@ DefineCharacter("hans-egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Type = "unit-teuton-priest",
 	Civilization = "norse",
 	Deities = {"christian-god"},
-	Date = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
+	StartDate = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
 })
 
 Load("scripts/civilizations/norse/characters_danish.lua")
