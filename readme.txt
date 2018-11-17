@@ -72,6 +72,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
+- The current date within a scenario is now displayed (only for the Scenario mode).
+- The minimum resolution for the game is now 1024.
 
 * Modding
 - Made substantial progress in allowing for separation between scripts and data. Terrain types can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod is now parsed automatically by the game on start.
