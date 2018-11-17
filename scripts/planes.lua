@@ -33,7 +33,7 @@ DefinePlane("aethermaw", { -- from Battle for Wesnoth
 DefinePlane("asgard", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116.
 	Name = "Asgard",
 	Description = "The plane of Asgard is the home of the deities known as the Aesir. Their worshipers who died in battle go to Asgard in the afterlife, becoming einherjar at Valhalla and Folkvang.",
-	TimeOfDaySeconds = 0, -- always day
+	HoursPerDay = 0, -- always day
 	EmpoweredDeityDomains = {"order"}
 })
 
