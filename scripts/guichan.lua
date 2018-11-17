@@ -1469,7 +1469,7 @@ LoadDLCs()
 LoadMods()
 
 DefiningData = true
-LoadData() -- only initialize the data by ident, but don't actually process its data
+LoadData() -- only initialize the data by ident, but don't actually process it
 DefiningData = false
 LoadData() -- process the data
 
