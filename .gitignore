@@ -9,6 +9,7 @@ temp/
 wyr/
 crash.dmp
 launcher.exe
+lua51.dll
 oaml.log
 screen*.png
 SDL.dll
