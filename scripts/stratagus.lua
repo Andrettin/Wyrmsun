@@ -1896,6 +1896,18 @@ local defaultPreferences = {
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
 
+local function UpdateObsoletePreferences()
+	-- enforce minimum resolution
+	if (wyr.preferences.VideoWidth < 1024) then
+		wyr.preferences.VideoWidth = 1024
+	end
+	if (wyr.preferences.VideoHeight < 600) then
+		wyr.preferences.VideoHeight = 600
+	end
+end
+
+UpdateObsoletePreferences()
+
 SetDoubleClickDelay(wyr.preferences.DoubleClickDelayInMs)
 SetEffectsEnabled(wyr.preferences.EffectsEnabled)
 SetEffectsVolume(wyr.preferences.EffectsVolume)
