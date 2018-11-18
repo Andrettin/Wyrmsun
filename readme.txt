@@ -72,7 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
-- The current day and month within a scenario is now displayed.
+- The current day and month within a scenario is now displayed. The Germanic and Anglo-Saxon civilizations use the Anglo-Saxon calendar for month names.
 - The minimum resolution for the game is now 1024.
 
 * Modding

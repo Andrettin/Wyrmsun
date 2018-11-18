@@ -32,11 +32,9 @@ EventFaction = nil
 EventProvince = nil
 SecondEventProvince = nil
 GrandStrategyWorld = ""
-MonthsPerTurn = 12
 
 function RunGrandStrategyGameSetupMenu()
 	GrandStrategyYear = 0
-	GrandStrategyMonth = 0
 	GrandStrategyFaction = nil
 	Attacker = ""
 	Defender = ""
@@ -243,15 +241,6 @@ function EndTurn()
 	end
 
 	DoGrandStrategyTurn()
-
-	GrandStrategyMonth = GrandStrategyMonth + MonthsPerTurn;
-	if (GrandStrategyMonth >= 12) then
-		GrandStrategyMonth = 0;
-		GrandStrategyYear = GrandStrategyYear + 1;
-		if (GrandStrategyYear == 0) then -- the year 0 AD didn't exist
-			GrandStrategyYear = GrandStrategyYear + 1;
-		end
-	end
 
 	-- AI diplomacy
 	for key, value in pairs(Factions) do
@@ -865,20 +854,9 @@ function CanDeclareWar(faction_from, faction_to)
 	return true
 end
 
-function GetYearString(year, civilization)
-	if (civilization ~= nil and GetCivilizationData(civilization, "CalendarStartingYear") ~= 0) then
-		year = year - 1 + GetCivilizationData(civilization, "CalendarStartingYear")
-	end
-
+function GetYearString(year)
 	local year_label = "AD"
-	if (civilization ~= nil and GetCivilizationData(civilization, "YearLabel") ~= "") then
-		year_label = GetCivilizationData(civilization, "YearLabel")
-	end
-
 	local negative_year_label = "BC"
-	if (civilization ~= nil and GetCivilizationData(civilization, "NegativeYearLabel") ~= "") then
-		negative_year_label = GetCivilizationData(civilization, "NegativeYearLabel")
-	end
 
 	if (year >= 0) then
 		return year .. " " .. year_label
