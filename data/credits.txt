@@ -1,0 +1,2 @@
+/data/calendars/years_wesnoth.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/data/characters/dwarves/durstorns_clan.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
