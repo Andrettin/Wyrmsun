@@ -1587,15 +1587,15 @@ function LoadData()
 	
 	local dlc_dirs = ListDirsInDirectory("dlcs/")
 	for i, f in ipairs(dlc_dirs) do
-		ModPath = "dlcs/" .. f .. "/"
-		if (CanAccessFile(ModPath .. "data/")) then
-			LoadDataDirectories(ModPath .. "data/")
+		CMod:SetCurrentModPath("dlcs/" .. f .. "/")
+		if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
+			LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
 		end
 	end
 	
 	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			ModPath = wyr.preferences.EnabledMods[i]
+			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
 			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
@@ -1615,18 +1615,18 @@ function LoadData()
 				end
 			end
 			if (has_required_dependencies) then
-				if (CanAccessFile(ModPath .. "data/")) then
-					LoadDataDirectories(ModPath .. "data/")
+				if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
+					LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
 				end
 			end
 		end
 	end
 	
-	ModPath = ""
+	CMod:SetCurrentModPath("")
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"terrain_types", "unit_types", "calendars", "map_templates", "characters"}
+	local data_directories = {"icons", "terrain_types", "unit_types", "calendars", "map_templates", "characters"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)

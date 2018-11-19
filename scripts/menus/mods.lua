@@ -224,10 +224,9 @@ function RunModsMenu(selected_mod)
 	return menu:run()
 end
 
-ModPath = ""
 Mods = {}
 function LoadMods()
-	ModPath = ""
+	CMod:SetCurrentModPath("")
 	Mods = nil
 	Mods = {}
 	
@@ -245,7 +244,7 @@ function LoadMods()
 			Load(wyr.preferences.EnabledMods[i])
 		else
 			ModName = ""
-			ModPath = wyr.preferences.EnabledMods[i]
+			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
 			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
@@ -277,11 +276,11 @@ function LoadMods()
 		end
 	end
 	
-	ModPath = ""
+	CMod:SetCurrentModPath("")
 end
 
 function LoadDLCs()
-	ModPath = ""
+	CMod:SetCurrentModPath("")
 	
 	local i
 	local f
@@ -300,15 +299,15 @@ function LoadDLCs()
 		local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "main.lua")) then
-				ModPath = "dlcs/" .. dirlist[j]
-				Load(ModPath .. f)
+				CMod:SetCurrentModPath("dlcs/" .. dirlist[j])
+				Load(CMod:GetCurrentModPath() .. f)
 			elseif (string.find(f, "oaml.defs")) then
 				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
 			end
 		end
 	end
 	
-	ModPath = ""
+	CMod:SetCurrentModPath("")
 end
 
 function SortModList(mod_list)
@@ -324,18 +323,18 @@ function SortModList(mod_list)
 		local mod_b_path = ""
 		local mod_b_dependencies = {}
 		
-		ModPath = ""
+		CMod:SetCurrentModPath("")
 		ModDependencies = {}
 		Load(a .. "info.lua")
-		mod_a_path = ModPath
+		mod_a_path = CMod:GetCurrentModPath()
 		mod_a_dependencies = ModDependencies
 		
-		ModPath = ""
+		CMod:SetCurrentModPath("")
 		ModDependencies = {}
 		Load(b .. "info.lua")
-		mod_b_path = ModPath
+		mod_b_path = CMod:GetCurrentModPath()
 		mod_b_dependencies = ModDependencies
-		ModPath = ""
+		CMod:SetCurrentModPath("")
 		ModDependencies = {}
 		
 		if (string.len(mod_b_path) > string.len(mod_a_path) and string.find(mod_b_path, mod_a_path) ~= nil) then
