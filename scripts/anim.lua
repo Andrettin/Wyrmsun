@@ -992,18 +992,24 @@ DefineAnimations("animations-dead-body", {
 })
 
 DefineAnimations("animations-gnomish-dead-body", {
-  Death = {"unbreakable begin", "frame 0", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
-    "frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",},
+	Death = {
+		"unbreakable begin", "frame 0", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
+		"frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",
+	},
 })
 
 DefineAnimations("animations-goblin-dead-body", {
-  Death = {"unbreakable begin", "frame 5", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
-    "frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",},
+	Death = {
+		"unbreakable begin", "frame 5", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
+		"frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",
+	},
 })
 
 DefineAnimations("animations-kobold-dead-body", {
-  Death = {"unbreakable begin", "frame 10", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
-    "frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",},
+	Death = {
+		"unbreakable begin", "frame 10", "wait 200", "frame 15", "wait 200", "frame 20", "wait 200",
+		"frame 25", "wait 200", "frame 25", "unbreakable end", "wait 1",
+	},
 })
 
 DefineAnimations("animations-dead-sea-body", {
