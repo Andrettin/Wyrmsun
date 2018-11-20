@@ -387,14 +387,14 @@ DefineButton( { Pos = 9, Level = 0, Icon = "icon-heimdall",
 
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
+	Key = "l", Hint = "Worship He~!l", Popup = "popup-research",
 	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hella", Popup = "popup-research",
+	Key = "l", Hint = "Worship He~!lla", Popup = "popup-research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
 	Description = "Choose Hella as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Ziu minor deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -402,7 +402,7 @@ DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 
 DefineButton( { Pos = 10, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Halja", Popup = "popup-research",
+	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup-research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-gothic-civilization"},
 	Description = "Choose Halja as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Tyr minor deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -496,7 +496,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-heimdall",
 
 DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hella", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship He~!lla", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Hella as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Ziu minor deity.",
 	ForUnit = {
@@ -515,7 +515,7 @@ DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
 
 DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Halja", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Halja as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Tyr minor deity.",
 	ForUnit = {

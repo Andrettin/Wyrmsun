@@ -338,7 +338,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-gathaarl",
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Allowed = "check-single-research",
-	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-research",
+	Key = "l", Hint = "Worship He~!l", Popup = "popup-research",
 	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Shamans. Allows new magic affixes for items sold at the Market.",
 	ForUnit = {"unit-goblin-temple"}
 })
@@ -358,7 +358,7 @@ DefineButton( { Pos = 9, Level = 2, Icon = "icon-gathaarl",
 
 DefineButton( { Pos = 10, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Hel", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship He~!l", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-gathaarl"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Shamans.",
 	ForUnit = {

@@ -173,7 +173,7 @@ DefineButton( { Pos = 8, Level = 0, Icon = "icon-heimdall",
 DefineButton( { Pos = 9, Level = 0, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Allowed = "check-single-research",
-	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-research",
+	Key = "l", Hint = "Worship Ha~!ljo", Popup = "popup-research",
 	Description = "Choose Haljo as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Tiwaz minor deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
@@ -230,7 +230,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-heimdall",
   
 DefineButton( { Pos = 13, Level = 2, Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "h", Hint = "Worship ~!Haljo", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship Ha~!ljo", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Haljo as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Haimadala and Tiwaz minor deities.",
 	ForUnit = {
