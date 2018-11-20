@@ -1626,7 +1626,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"icons", "terrain_types", "unit_types", "calendars", "map_templates", "characters"}
+	local data_directories = {"icons", "sounds", "missile_types", "terrain_types", "unit_types", "calendars", "map_templates", "characters"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)
