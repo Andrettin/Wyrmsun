@@ -2132,7 +2132,7 @@ DefineUnitType("unit-dwarven-academy", {
 	Name = "Academy",
 	Parent = "unit-template-university",
 	Civilization = "dwarf",
-	Description = "Though strongly bound to tradition, dwarves also possess inquisite minds. In their academies, scholars seek to understand the mysteries of nature.",
+	Description = "Though strongly bound to tradition, dwarves also possess inquisitive minds. In their academies, scholars seek to understand the mysteries of nature.",
 	Image = {"file", "dwarf/buildings/academy.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/academy_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-academy",
