@@ -65,6 +65,15 @@ DefineButton( { Pos = 16, Level = 0, Icon = "icon-salvage",
 	}
 })
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-enter",
+	Action = "enter-map-layer",
+	Key = "e", Hint = "~!Enter Map Layer", Popup = "popup-commands",
+	AlwaysShow = true,
+	ForUnit = {
+		"unit-cavern-entrance", "unit-portal"
+	}
+})
+
 -- Worker Commands ------------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",

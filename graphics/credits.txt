@@ -911,6 +911,8 @@
 /graphics/neutral/icons/deadly_precision.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/eagle_eye.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/engineering.png (by Exidelo) (licensed under the CC0)
+/graphics/neutral/icons/enter.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/enter_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/ethereal_vision.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/ethereal_vision_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/ethereal_vision_extra_2.png (by Jinn) (licensed under the CC0)

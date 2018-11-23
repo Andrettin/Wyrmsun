@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Dwarven loremasters can now learn the Mace Mastery ability.
 
+* Buildings
+- Added "Enter Map Layer" button for Cavern Entrances and Portals, which changes the current map layer to the one the building leads to.
+
 * Heroes
 - Hero encyclopedia entries now display their level and acquired abilities.
 - Hero encyclopedia entries now support displaying their birth dates.

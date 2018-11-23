@@ -456,6 +456,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-enter",
+	Size = {46, 38},
+	File = "neutral/icons/enter.png"
+})
+
+DefineIcon({
 	Name = "icon-build-basic-structure",
 	Size = {46, 38},
 	File = "neutral/icons/build_basic_structure.png"
