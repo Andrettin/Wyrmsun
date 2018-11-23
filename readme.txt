@@ -85,6 +85,9 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
 
+* Units
+- Fixed issue which caused flying units to prefer moving over roads and railroads, despite receiving no benefit from them.
+
 -----------------------------------------------------------------------
 - 3.4.1
 -----------------------------------------------------------------------
