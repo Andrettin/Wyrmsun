@@ -4128,7 +4128,7 @@ DefineUnitType("unit-template-transport-ship", {
 	Demand = 2,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	RightMouseAction = "harvest",
-	CanTransport = {"LandUnit", "only", "Fauna", "false"},
+	CanTransport = {"LandUnit", "only"},
 	SideAttack = true,
 	CanDock = true,
 	AttackFromTransporter = true,

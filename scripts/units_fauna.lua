@@ -648,7 +648,6 @@ DefineUnitType("unit-horse", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 6,
 	Flesh = true,
 	Herbivore = true,
@@ -749,7 +748,6 @@ DefineUnitType("unit-goat", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 5,
 	Coward = true,
 	Flesh = true,
@@ -860,7 +858,6 @@ DefineUnitType("unit-boar", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 5,
 	Flesh = true,
 	Herbivore = true,
@@ -914,7 +911,6 @@ DefineUnitType("unit-wolf", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 5,
 	PeopleAversion = true,
 	Predator = true,
@@ -980,7 +976,6 @@ DefineUnitType("unit-gryphon", {
 	PeopleAversion = true,
 	Flesh = true,
 	Carnivore = true,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	PierceDamage = true,
 	PersonalNames = {
 		"female", "Kaasa", -- female gryphon name in Battle for Wesnoth
@@ -1076,7 +1071,6 @@ DefineUnitType("unit-wyrm", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	Level = 3,
 	PeopleAversion = true,
 	Predator = true,
