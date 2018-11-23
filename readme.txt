@@ -4305,4 +4305,4 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 # Credits
 ############################################################
-(see in-game credits and the /graphics/credits.txt, /music/credits.txt and /sounds/credits.txt files)
+(see in-game credits and the /data/credits.txt, /graphics/credits.txt, /music/credits.txt and /sounds/credits.txt files)
