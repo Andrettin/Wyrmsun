@@ -90,30 +90,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-clothing",
-	Size = {46, 38},
-	File = "neutral/icons/clothing.png"
-})
-
-DefineIcon({
-	Name = "icon-scale-mail",
-	Size = {46, 38},
-	File = "neutral/icons/scale_mail.png"
-})
-
-DefineIcon({
-	Name = "icon-chainmail",
-	Size = {46, 38},
-	File = "neutral/icons/chainmail.png"
-})
-
-DefineIcon({
-	Name = "icon-plate-mail",
-	Size = {46, 38},
-	File = "neutral/icons/plate_mail.png"
-})
-
-DefineIcon({
 	Name = "icon-amulet",
 	Size = {46, 38},
 	File = "neutral/icons/amulet.png"
@@ -477,12 +453,6 @@ DefineIcon({
 	Name = "icon-right-arrow",
 	Size = {46, 38},
 	File = "neutral/icons/right_arrow.png"
-})
-
-DefineIcon({
-	Name = "icon-enter",
-	Size = {46, 38},
-	File = "neutral/icons/enter.png"
 })
 
 DefineIcon({
