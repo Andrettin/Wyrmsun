@@ -86,7 +86,7 @@ DefineAchievement("the-mightiest-made", {
 	Icon = "icon-modsognir",
 	Description = "Reach level 10 with Modsognir.",
 	PlayerColor = "red",
-	Character = "Modsognir",
+	Character = "modsognir",
 	CharacterLevel = 10
 })
 
@@ -128,7 +128,7 @@ DefineAchievement("rugnurs-bravery", {
 	Icon = "icon-rugnur-older",
 	Description = "Upgrade Rugnur to a Stonelord.",
 	PlayerColor = "red",
-	Character = "Rugnur",
+	Character = "rugnur",
 	CharacterType = "unit-dwarven-thane"
 })
 

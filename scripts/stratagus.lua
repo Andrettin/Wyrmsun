@@ -1951,6 +1951,10 @@ if not (CanAccessFile("preferences.lua")) then
 end
 
 --- Uses Stratagus Library path!
+DefiningData = true
+LoadData() -- only initialize the data by ident, but don't actually process it
+DefiningData = false
+
 Load("scripts/dlc_file_equivalencies.lua")
 Load("scripts/icons.lua")
 Load("scripts/languages.lua")

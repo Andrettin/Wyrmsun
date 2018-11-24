@@ -426,31 +426,4 @@ DefineCharacter("glonoin", { -- from Battle for Wesnoth: The Sceptre of Fire; ch
 	end
 })
 
-DefineCharacter("rugnur", { -- from Battle for Wesnoth: The Sceptre of Fire; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
-	Name = "Rugnur",
-	Gender = "male",
-	Type = "unit-dwarven-axefighter",
-	Civilization = "dwarf",
-	Faction = "norlund-clan",
-	Description = "Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch.",
-	Icon = "icon-rugnur",
-	HeroicIcon = "icon-rugnur-older",
-	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
-	HairVariation = "brown-hair",
-	StartDate = 25,
-	DeathDate = 40, -- died in 40 AD of a violent death
-	ViolentDeath = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	Deities = {"odin", "tyr"},
-	HistoricalLocations = {
-		25, "nidavellir", "rugnurs-outpost" -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "norlund-clan") then
-			return true
-		end
-		return false
-	end
-})
-
 Load("scripts/civilizations/dwarf/characters_joruvellir.lua")
