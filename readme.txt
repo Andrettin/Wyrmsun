@@ -92,6 +92,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Pressing CTRL+L now returns the player to the previous map layer they were in.
+- Hovering the mouse over resource amounts will now also display the tooltip for the respective resource (previously the tooltip was only displayed if hovering the mouse over the resource's icon). This also applies to the food and score amounts.
 
 -----------------------------------------------------------------------
 - 3.4.1
