@@ -91,6 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - Pressing CTRL+L now returns the player to the previous map layer they were in.
 - Hovering the mouse over resource amounts will now also display the tooltip for the respective resource (previously the tooltip was only displayed if hovering the mouse over the resource's icon). This also applies to the food and score amounts.
+- A text string is now displayed at the top of the screen delineating which "age" the player is currently in (e.g. Bronze Age). This changes automatically depending on which upgrades are researched. For instance, when the player researches Ironworking they will change from the Bronze Age to the Iron Age.
 
 -----------------------------------------------------------------------
 - 3.4.1
