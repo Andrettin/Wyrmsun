@@ -369,25 +369,25 @@ UI.StatusLine.Font = Fonts["game"]
 -- copper
 UI.Resources[1].G = CGraphic:New("ui/resources/copper.png", 14, 14)
 UI.Resources[1].IconFrame = 0
-UI.Resources[1].IconX = 154 + 0
+UI.Resources[1].IconX = 154 + (75 * 0)
 UI.Resources[1].IconY = 0
-UI.Resources[1].TextX = 154 + 0 + 18
+UI.Resources[1].TextX = 154 + (75 * 0) + 18
 UI.Resources[1].TextY = 1
 
 -- lumber
 UI.Resources[2].G = CGraphic:New("ui/resources/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
-UI.Resources[2].IconX = 154 + 75
+UI.Resources[2].IconX = 154 + (75 * 1)
 UI.Resources[2].IconY = 0
-UI.Resources[2].TextX = 154 + 75 + 18
+UI.Resources[2].TextX = 154 + (75 * 1) + 18
 UI.Resources[2].TextY = 1
 
 -- stone
 UI.Resources[5].G = CGraphic:New("ui/resources/stone.png", 14, 14)
 UI.Resources[5].IconFrame = 0
-UI.Resources[5].IconX = 154 + 150
+UI.Resources[5].IconX = 154 + (75 * 2)
 UI.Resources[5].IconY = 0
-UI.Resources[5].TextX = 154 + 150 + 18
+UI.Resources[5].TextX = 154 + (75 * 2) + 18
 UI.Resources[5].TextY = 1
 
 -- oil
@@ -460,8 +460,14 @@ UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
 UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 
-UI.TimePanel.X = Video.Width * 50 / 100
-UI.TimePanel.Y = 1
+UI.TimePanel.TextX = 154 + (75 * 4) + 18
+UI.TimePanel.TextY = 1
+
+--UI.MonthPanel.TextX = 154 + (75 * 6) + 18
+--UI.MonthPanel.TextY = 1
+
+--UI.DatePanel.TextX = 154 + (75 * 7) + 18
+--UI.DatePanel.TextY = 1
 
 UI.MenuButton.X = 26
 UI.MenuButton.Y = 1
