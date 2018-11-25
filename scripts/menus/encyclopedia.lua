@@ -833,9 +833,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 			description = description .. "\n\n"
 		end
-		if (GetCharacterData(unit_name, "BirthDate") ~= "") then
-			description = description .. _("Birth Date") .. ": " .. GetCharacterData(unit_name, "BirthDate") .. "\n\n"
-		end
+--		if (GetCharacterData(unit_name, "BirthDate") ~= "") then
+--			description = description .. _("Birth Date") .. ": " .. GetCharacterData(unit_name, "BirthDate") .. "\n\n"
+--		end
 		if (GetCharacterData(unit_name, "Description") ~= "") then
 			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
 		end

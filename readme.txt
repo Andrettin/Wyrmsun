@@ -68,7 +68,6 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Hero encyclopedia entries now display their level and acquired abilities.
-- Hero encyclopedia entries now support displaying their birth dates.
 - Fixed issue which caused Norse and Latin heroes to not be selectable to play an Earth quest with.
 - Fixed issue which caused fauna heroes to have inventories.
 - Fauna heroes can now enter transport ships.
