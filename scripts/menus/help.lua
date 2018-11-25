@@ -21,6 +21,7 @@ local keystrokes = {
   {"Alt-G", "- toggle grab mouse"},
   {"Alt-H", "- help menu"},
   {"Alt-I", "- find idle worker"},
+  {"Ctrl-L", "- return to previous map layer"},
   {"Alt-M", "- game menu"},
   {"Ctrl-M", "- mute music"},
   {"Ctrl-P", "- pause game"},

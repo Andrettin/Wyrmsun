@@ -90,6 +90,9 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Fixed issue which caused flying units to prefer moving over roads and railroads, despite receiving no benefit from them.
 
+* User Interface
+- Pressing CTRL+L now returns the player to the previous map layer they were in.
+
 -----------------------------------------------------------------------
 - 3.4.1
 -----------------------------------------------------------------------
