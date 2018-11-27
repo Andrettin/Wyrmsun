@@ -534,6 +534,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-stronghold",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-guard-tower",
 	Action = "upgrade-to", Value = "unit-teuton-guard-tower",
+	Allowed = "check-upgrade-to",
 	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
 	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
 } )
