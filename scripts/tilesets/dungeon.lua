@@ -60,11 +60,11 @@ DefineTileset("name", "Dungeon",
     {}},								-- 070
   "solid", { "cave-wall", "land", "rock", "unpassable", "air-unpassable",
     { 151, 151, 151, 151}},					-- 080
-  "solid", { "dungeon-wall", "land", "human", "wall", "unpassable", "air-unpassable",
+  "solid", { "dungeon-wall", "land", "wall", "unpassable", "air-unpassable",
     {  16, 18, 19, 20,   0,  16, 18, 19, 20,   0, 464, 465, 466, 467}},	-- 090
   "solid", { "unused",
     {}},								-- 0A0
-  "solid", { "dungeon-wall", "land", "human", "wall", "unpassable", "air-unpassable",
+  "solid", { "dungeon-wall", "land", "wall", "unpassable", "air-unpassable",
     {  17, 21, 22, 23,   0,  17, 21, 22, 23,   0, 464, 465, 466, 467}},	-- 0B0
   "solid", { "unused",
     {}},								-- 0C0
@@ -193,7 +193,7 @@ DefineTileset("name", "Dungeon",
     { 105, 105},							-- 7D0
     {},									-- 7E0
     {}},								-- 7F0
-  "mixed", { "dungeon-wall", "gold-pile", "land", "human", "wall", "unpassable", "air-unpassable",
+  "mixed", { "dungeon-wall", "gold-pile", "land", "wall", "unpassable", "air-unpassable",
     {  17, 21, 22, 23,   0,  17, 21, 22, 23,   0,  464, 465, 466, 467},	-- 800
     {  16, 18, 19, 20,   0,  16, 18, 19, 20,   0,  464, 465, 466, 467},	-- 810
     {  17, 21, 22, 23,   0,  17, 21, 22, 23,   0,  464, 465, 466, 467},	-- 820
