@@ -952,6 +952,8 @@
 /graphics/neutral/icons/leadership.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/leadership_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/leather.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/leather_armor.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/leather_armor_with_belt.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/left_arrow.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/level_up.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/long_swordsman.png (by Jinn) (licensed under the CC0)
