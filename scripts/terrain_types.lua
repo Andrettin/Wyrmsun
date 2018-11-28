@@ -25,49 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineTerrainType("dirt", {
-	Name = "Dirt",
-	Character = "d",
-	Color = {192, 128, 0},
-	Flags = {"land", "dirt"},
-	Graphics = "terrain/dirt.png",
-	SolidTiles = {17, 20, 23},
-	AdjacentTransitionTiles = {
-		"any", "north", 33,
-		"any", "north", 36,
-		"any", "north", 39,
-		"any", "south", 1,
-		"any", "south", 4,
-		"any", "south", 7,
-		"any", "west", 18,
-		"any", "west", 21,
-		"any", "west", 24,
-		"any", "east", 16,
-		"any", "east", 19,
-		"any", "east", 22,
-		"any", "northwest-outer", 65,
-		"any", "northwest-outer", 67,
-		"any", "northeast-outer", 64,
-		"any", "northeast-outer", 66,
-		"any", "southwest-outer", 49,
-		"any", "southwest-outer", 51,
-		"any", "southeast-outer", 48,
-		"any", "southeast-outer", 50,
-		"any", "northwest-inner", 34,
-		"any", "northwest-inner", 37,
-		"any", "northeast-inner", 32,
-		"any", "northeast-inner", 35,
-		"any", "southwest-inner", 2,
-		"any", "southwest-inner", 5,
-		"any", "southeast-inner", 0,
-		"any", "southeast-inner", 3,
-		"any", "northwest-southeast-inner", 80,
-		"any", "northwest-southeast-inner", 96,
-		"any", "northeast-southwest-inner", 81,
-		"any", "northeast-southwest-inner", 97
-	}
-})
-
 DefineTerrainType("mud", {
 	Name = "Mud",
 	Character = "m",
