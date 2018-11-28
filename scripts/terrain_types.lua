@@ -1209,35 +1209,6 @@ DefineTerrainType("flamefood-tree", {
 	}
 })
 
-DefineTerrainType("pine-tree", {
-	Name = "Pine Tree",
-	Character = "t",
-	Color = {0, 128, 0},
-	BaseTerrainTypes = {"grass"},
-	Overlay = true,
-	Flags = {"land", "forest", "unpassable"},
-	Graphics = "terrain/pine_tree.png",
-	Resource = "lumber",
-	SolidTiles = {18},
-	DestroyedTiles = {16, 32, 48},
-	TransitionTiles = {
-		"any", "north", 2,
-		"any", "south", 34,
-		"any", "west", 17,
-		"any", "east", 19,
-		"any", "northwest-outer", 1,
-		"any", "northeast-outer", 3,
-		"any", "southwest-outer", 33,
-		"any", "southeast-outer", 35,
-		"any", "northwest-inner", 10,
-		"any", "northeast-inner", 11,
-		"any", "southwest-inner", 26,
-		"any", "southeast-inner", 27,
-		"any", "northwest-southeast-inner", 30,
-		"any", "northeast-southwest-inner", 14
-	}
-})
-
 DefineTerrainType("pine-tree-snow", {
 	Name = "Pine Tree (Snow)",
 	Color = {64, 128, 64},
