@@ -88,7 +88,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for season-specific terrain graphics.
 - Dirt, Grass and Dry Mud tiles now become Snow ones during winter.
 - Mud tiles now become Ice ones during winter.
-- Pine Tree tiles now become Snow Pine Tree ones during winter.
+- Pine Tree tiles now become Snow Pine Tree ones during winter, and Autumn Pine Tree tiles during autumn.
 - Rock tiles now become Snow Rock ones during winter.
 
 * Units
