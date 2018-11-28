@@ -214,59 +214,6 @@ DefineTerrainType("dry-mud", {
 	}
 })
 
-DefineTerrainType("grass", {
-	Name = "Grass",
-	Character = "g",
-	Color = {0, 192, 0},
-	Buildable = true,
-	Flags = {"land", "grass"},
-	OuterBorderTerrains = {"dirt", "dry-mud"},
-	Graphics = "terrain/grass.png",
-	SolidTiles = {1, 2, 3},
-	AdjacentTransitionTiles = {
-		"any", "north", 22,
-		"any", "north", 24,
-		"any", "north", 26,
-		"any", "south", 28,
-		"any", "south", 30,
-		"any", "south", 32,
-		"any", "west", 21,
-		"any", "west", 23,
-		"any", "west", 25,
-		"any", "east", 29,
-		"any", "east", 31,
-		"any", "east", 33,
-		"any", "northwest-outer", 7,
-		"any", "northwest-outer", 9,
-		"any", "northwest-outer", 11,
-		"any", "northeast-outer", 8,
-		"any", "northeast-outer", 10,
-		"any", "northeast-outer", 12,
-		"any", "southwest-outer", 14,
-		"any", "southwest-outer", 16,
-		"any", "southwest-outer", 18,
-		"any", "southeast-outer", 15,
-		"any", "southeast-outer", 17,
-		"any", "southeast-outer", 19,
-		"any", "northwest-inner", 43,
-		"any", "northwest-inner", 45,
-		"any", "northwest-inner", 47,
-		"any", "northeast-inner", 42,
-		"any", "northeast-inner", 44,
-		"any", "northeast-inner", 46,
-		"any", "southwest-inner", 36,
-		"any", "southwest-inner", 38,
-		"any", "southwest-inner", 40,
-		"any", "southeast-inner", 35,
-		"any", "southeast-inner", 37,
-		"any", "southeast-inner", 39,
-		"any", "northwest-southeast-inner", 51,
-		"any", "northwest-southeast-inner", 52,
-		"any", "northeast-southwest-inner", 49,
-		"any", "northeast-southwest-inner", 50
-	}
-})
-
 DefineTerrainType("desert-sand", {
 	Name = "Desert Sand",
 	Color = {255, 255, 0},
@@ -314,11 +261,6 @@ DefineTerrainType("desert-sand", {
 
 DefineTerrainType("snow", {
 	Name = "Snow",
-	Character = "s",
-	Color = {255, 255, 255},
-	Buildable = true,
-	Flags = {"land", "mud"},
-	OuterBorderTerrains = {"grass", "dirt", "dry-mud", "mud", "desert-sand", "cave-floor", "rockbound-cave-floor"},
 	Graphics = "terrain/snow.png",
 	SolidTiles = {17, 20, 23},
 	AdjacentTransitionTiles = {
