@@ -86,8 +86,9 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
 - Added support for season-specific terrain graphics.
-- Dirt, Grass and Dry Mud tiles now become Snow tiles during winter.
-- Pine Tree tiles become Snow Pine Tree tiles during winter.
+- Dirt, Grass and Dry Mud tiles now become Snow ones during winter.
+- Mud tiles now become Ice ones during winter.
+- Pine Tree tiles become Snow Pine Tree ones during winter.
 
 * Units
 - Fixed issue which caused flying units to prefer moving over roads and railroads, despite receiving no benefit from them.
