@@ -1476,7 +1476,7 @@ LoadData() -- process the data
 LoadingHistory = true
 LoadDataFiles("wyr/history/")
 LoadingHistory = false
-GenerateHistory()
+--GenerateHistory()
 
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
 

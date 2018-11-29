@@ -165,3 +165,4 @@ BuildTilesetTables()
 
 Load("scripts/scripts.lua")
 GameSettings.Inside = true
+SetTimeOfDay(0)
