@@ -401,7 +401,7 @@ function RunGameplayOptionsMenu()
 	local hotkey_setup_list = {_("Default"), _("Position-Based"), _("Position-Based (except Commands)")}
 	local hotkey_setup_dd
 
-	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
+	menu:addLabel(_("~<Gameplay Options~>"), offx + 176, offy + 1)
 
 	--[[
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
@@ -628,7 +628,7 @@ function RunVideoOptionsMenu()
 	local fullscreen_dd
 	local fullscreen = Video.FullScreen
 
-	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
+	menu:addLabel(_("~<Video and Audio Options~>"), offx + 176, offy + 1)
 	menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
 	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
 	function(dd)
