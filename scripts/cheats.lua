@@ -154,9 +154,9 @@ function HandleCheats(str)
 			end
 		end
 	elseif (str == "alsvid") then
-		SetTimeOfDay(2)
+		SetTimeOfDay(3) -- sets the time of day to morning in the default schedule
 	elseif (string.sub(str, 0, 6) == "alsvid") then
-		SetTimeOfDay(2, tonumber(string.sub(str, 8)))
+		SetTimeOfDay(3, tonumber(string.sub(str, 8)))
 	elseif (string.sub(str, 0, 7) == "bifrost") then
 		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then

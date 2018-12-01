@@ -460,8 +460,8 @@ UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
 UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 
-UI.TimePanel.TextX = 154 + (75 * 4)
-UI.TimePanel.TextY = 1
+UI.TimeOfDayPanel.TextX = 154 + (75 * 4)
+UI.TimeOfDayPanel.TextY = 1
 
 --UI.AgePanel.IconFrame = 0
 --UI.AgePanel.IconX = 154 + (75 * 5)
