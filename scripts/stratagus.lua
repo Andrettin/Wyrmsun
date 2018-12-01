@@ -1626,7 +1626,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"icons", "sounds", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "terrain_types", "animations", "unit_types", "calendars", "map_templates", "characters", "ages", "buttons"}
+	local data_directories = {"icons", "sounds", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "terrain_types", "planes", "worlds", "animations", "unit_types", "calendars", "map_templates", "characters", "ages", "buttons"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)
@@ -1969,8 +1969,6 @@ Load("scripts/abilities.lua")
 Load("scripts/spells.lua")
 Load("scripts/terrain_types.lua")
 Load("scripts/world_map_terrain_types.lua")
-Load("scripts/planes.lua")
-Load("scripts/worlds.lua")
 Load("scripts/species.lua")
 Load("scripts/units.lua")
 Load("scripts/upgrade.lua")

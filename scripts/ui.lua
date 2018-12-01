@@ -559,8 +559,12 @@ else
 end
 
 -- Surface Layer Map Layer Buttons
-UI.SurfaceLayerButtons:at(0).Style = FindButtonStyle("world-earth")
-UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-jotunheim")
+if (UI.SurfaceLayerButtons:size() >= 1) then
+	UI.SurfaceLayerButtons:at(0).Style = FindButtonStyle("world-earth")
+end
+if (UI.SurfaceLayerButtons:size() >= 2) then
+	UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-jotunheim")
+end
 
 UpdateSurfaceLayerButtons()
 
