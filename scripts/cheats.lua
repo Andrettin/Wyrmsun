@@ -157,6 +157,18 @@ function HandleCheats(str)
 		SetTimeOfDay("morning")
 	elseif (string.sub(str, 0, 6) == "alsvid") then
 		SetTimeOfDay("morning", tonumber(string.sub(str, 8)))
+	elseif (str == "dream of spring") then
+		SetSeason("spring")
+	elseif (string.sub(str, 0, 15) == "dream of spring") then
+		SetSeason("spring", tonumber(string.sub(str, 17)))
+	elseif (str == "summer child") then
+		SetSeason("summer")
+	elseif (string.sub(str, 0, 12) == "summer child") then
+		SetSeason("summer", tonumber(string.sub(str, 14)))
+	elseif (str == "winds of winter") then
+		SetSeason("winter")
+	elseif (string.sub(str, 0, 15) == "winds of winter") then
+		SetSeason("winter", tonumber(string.sub(str, 17)))
 	elseif (string.sub(str, 0, 7) == "bifrost") then
 		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
