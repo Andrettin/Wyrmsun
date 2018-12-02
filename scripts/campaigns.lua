@@ -29,7 +29,7 @@ DefineCampaign("on-the-vanaquisl", {
 	Name = "On the Vanaquisl",
 	Description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands...",
 	Faction = "asa-tribe",
-	StartYear = -3000,
+	StartDate = {-3000, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"earth", {4588, 834}, {256, 256}
 	}
@@ -39,7 +39,7 @@ DefineCampaign("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
 	Faction = "brising-clan",
-	StartYear = -3000,
+	StartDate = {-3000, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"nidavellir", {475, 90}, {256, 256},
 		"nidavellir-underground", {475, 90}, {256, 256}
@@ -51,7 +51,7 @@ DefineCampaign("westward-migration", {
 	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
 	Faction = "asa-tribe",
 	RequiredQuests = {"on-the-vanaquisl"},
-	StartYear = -2900,
+	StartDate = {-2900, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"earth", {4369, 609}, {256, 256}
 	}
@@ -61,7 +61,7 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
 	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
 	Faction = "goldhoof-clan",
-	StartYear = -2800,
+	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"nidavellir", {655, 155}, {256, 256},
 		"nidavellir-underground", {655, 155}, {256, 256}
@@ -73,7 +73,7 @@ DefineCampaign("the-settlement-of-scandinavia", {
 	Description = "After a long journey, the Asa reach lands ripe for settlement.",
 	Faction = "asa-tribe",
 	RequiredQuests = {"westward-migration"},
-	StartYear = -2800,
+	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"earth", {4022, 667}, {256, 256}
 	}
@@ -99,7 +99,7 @@ DefineCampaign("heimdalls-progeny", {
 	Name = "Haimadala's Progeny",
 	Description = "The young warrior Erala believes his true father to be the god Haimadala. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets off to establish a hall and gather followers...", -- in the original myth his parents were "Fathir" and "Mothir"; "Fadēr" is the word which gave origin to "Fathir", while "Môder" gave origin to "Mothir"
 	Faction = "jarling-tribe",
-	StartYear = -1600, -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
+	StartDate = {-1600, SyncRand(12) + 1, 1}, -- the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
 	MapTemplates = {
 		"earth", {4022, 667}, {256, 256}
 	}
@@ -109,7 +109,7 @@ DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",
 	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
 	Faction = "thielung-tribe",
-	StartYear = -1101, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
+	StartDate = {-1101, SyncRand(12) + 1, 1}, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
 	MapTemplates = {
 		"earth", {4022, 667}, {256, 256},
 		"jotunheim", {679, 304}, {64, 64}
