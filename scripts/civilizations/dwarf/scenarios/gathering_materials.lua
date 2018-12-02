@@ -222,15 +222,6 @@ if (LoadedGame == false) then
 	CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
 end
 
--- show coal in the UI
-UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
-UI.Resources[6].G:Load()
-UI.Resources[6].IconFrame = 0
-UI.Resources[6].IconX = 154 + 225
-UI.Resources[6].IconY = 0
-UI.Resources[6].TextX = 154 + 225 + 18
-UI.Resources[6].TextY = 1
-
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
 AddTrigger("gathering-materials-rugnur-dies",
 	function()

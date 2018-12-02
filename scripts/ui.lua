@@ -398,20 +398,22 @@ UI.Resources[5].TextY = 1
 --UI.Resources[3].TextX = 154 + 150 + 18
 --UI.Resources[3].TextY = 1
 
--- coal
---UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
---UI.Resources[6].IconFrame = 0
---UI.Resources[6].IconX = 154 + 150
---UI.Resources[6].IconY = 0
---UI.Resources[6].TextX = 154 + 150 + 18
---UI.Resources[6].TextY = 1
-
--- Hide Coal (should not show up in normal scenarios)
-if (UI.Resources[6].G) then
-	UI.Resources[6].G = nil
+if (GetCurrentQuest() == "gathering-materials") then
+	-- coal
+	UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
+	UI.Resources[6].IconFrame = 0
+	UI.Resources[6].IconX = 154 + (75 * 3)
+	UI.Resources[6].IconY = 0
+	UI.Resources[6].TextX = 154 + (75 * 3) + 18
+	UI.Resources[6].TextY = 1
+else
+	-- Hide Coal (should not show up in normal scenarios)
+	if (UI.Resources[6].G) then
+		UI.Resources[6].G = nil
+	end
+	UI.Resources[6].TextX = -1
+	UI.Resources[6].TextY = -1
 end
-UI.Resources[6].TextX = -1
-UI.Resources[6].TextY = -1
 
 -- food
 if (CanAccessFile("ui/resources/food.png")) then
@@ -463,7 +465,11 @@ UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 UI.AgePanel.IconFrame = 0
 UI.AgePanel.IconX = Video.Width --154 + (75 * 4)
 UI.AgePanel.IconY = Video.Height --0
-UI.AgePanel.TextX = 154 + (75 * 3.5)
+if (GetCurrentQuest() == "gathering-materials") then
+	UI.AgePanel.TextX = 154 + (75 * 4) -- to make space for coal
+else
+	UI.AgePanel.TextX = 154 + (75 * 3.5)
+end
 UI.AgePanel.TextY = 1
 
 UI.TimeOfDayPanel.TextX = 154 + (75 * 5.5)
