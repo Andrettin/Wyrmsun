@@ -2880,21 +2880,21 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
-				}, 
-				{ 	Margin = {1, 1},
-					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
-				},
-				{ 	TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {ChildResources = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = ResourceConversionRates("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = ResourceImproveIncomes("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
-				},
+			{	HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			{ 	Condition = {ChildResources = "only"}, HighlightColor = "yellow",
+				More = {"Text", {Text = ResourceConversionRates("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
+				More = {"Text", {Text = ResourceImproveIncomes("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
+			},
 		}	
 	})
 end

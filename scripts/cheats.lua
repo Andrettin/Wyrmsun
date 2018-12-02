@@ -228,6 +228,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	elseif (str == "vingethor") then
 		unit = CreateUnit("unit-dwarven-gryphon-rider", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+	elseif (str == "tyr") then
+		unit = CreateUnit("unit-norse-swordsman", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 	else
 		return false
 	end
