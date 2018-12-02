@@ -105,7 +105,8 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Domains = {"sun"}, -- goddess of the sun
 	CulturalNames = {
 		"frankish", "Sunna",
-		"germanic", "Sunon", -- "Sunōn"; a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/ . Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2. The Sun was worshipped as a major deity in the Bronze Age in Scandinavia; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, p. 205.
+		"germanic", "Sunon", -- "Sunōn"; a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+		-- Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2. The Sun was worshipped as a major deity in the Bronze Age in Scandinavia; Source: Nils-Axel Mörner, Bob G. Lind and Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, p. 205.
 		"suebi", "Sunna",
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
@@ -272,8 +273,8 @@ DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brothe
 	Gender = "male"
 })
 
-DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the Vanir to seal their truce; survives Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 78-79, 83.
-	Name = "Honir", -- "Hœnir"
+DefineDeity("hoenir", { -- Long-legged god; indecisive; sent by the Aesir to the Vanir to seal their truce; survives Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 78-79, 83.
+	Name = "Hoenir", -- "Hœnir"
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
@@ -395,7 +396,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"archery"},
-	Description = "Ull is a god archery and skiing. He is the son of Sif. He dwells in Ydalir." -- his dwelling-place name is "Ýdalir" in Old Norse; Ull's father is unknown
+	Description = "Ull is a god archery and skiing. He is the son of Sif, and dwells in Ydalir." -- his dwelling-place name is "Ýdalir" in Old Norse; Ull's father is unknown
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.

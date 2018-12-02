@@ -78,10 +78,10 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
 - The minimum resolution for the game is now 1024.
-- Seasons can now pass in-game, in a manner reminiscent of the time of day system. Each year takes about one real-time hour to pass. Currently the seasons are purely cosmetic, with their only effect being terrain graphics changing. Days are shorter during winter and nights longer, while for summer it is the other way around.
+- Seasons can now pass in-game, in a manner reminiscent of the time of day system. Each year takes about one real-time hour to pass. Currently the seasons are mostly cosmetic, causing the terrain graphics to change. Additionally, days are shorter during winter and nights longer, while for summer it is the other way around.
 
 * Modding
-- Made substantial progress in allowing for separation between scripts and data. Animations, buttons, characters, icons, map templates, missile types, sounds, terrain types, unit types, sounds can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod is now parsed automatically by the game on start.
+- Made substantial progress in allowing for separation between scripts and data. Animations, buttons, characters, icons, map templates, missile types, sounds, terrain types and unit types can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod are now parsed automatically by the game on start.
 
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
