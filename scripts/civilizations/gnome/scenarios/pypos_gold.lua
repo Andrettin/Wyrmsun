@@ -40,7 +40,7 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "Active", false)
 	AcquireTrait(unit, "upgrade-old")
 	
-	SetTimeOfDay(7) -- the scenario happens in a gloomy evening in Autumn
+	SetTimeOfDay("dusk") -- the scenario happens in a gloomy evening in Autumn
 end
 
 RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your rivals")
