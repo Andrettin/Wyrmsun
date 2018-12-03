@@ -153,10 +153,22 @@ function HandleCheats(str)
 				end
 			end
 		end
+	elseif (str == "dawn") then
+		SetTimeOfDay("dawn")
+	elseif (string.sub(str, 0, 4) == "dawn") then
+		SetTimeOfDay("dawn", tonumber(string.sub(str, 6)))
 	elseif (str == "alsvid") then
 		SetTimeOfDay("morning")
 	elseif (string.sub(str, 0, 6) == "alsvid") then
 		SetTimeOfDay("morning", tonumber(string.sub(str, 8)))
+	elseif (str == "dusk") then
+		SetTimeOfDay("dusk")
+	elseif (string.sub(str, 0, 4) == "dusk") then
+		SetTimeOfDay("dusk", tonumber(string.sub(str, 6)))
+	elseif (str == "nightly terrors") then
+		SetTimeOfDay("midnight")
+	elseif (string.sub(str, 0, 15) == "nightly terrors") then
+		SetTimeOfDay("midnight", tonumber(string.sub(str, 17)))
 	elseif (str == "dream of spring") then
 		SetSeason("spring")
 	elseif (string.sub(str, 0, 15) == "dream of spring") then
