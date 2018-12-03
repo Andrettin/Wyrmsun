@@ -181,6 +181,12 @@ function HandleCheats(str)
 		SetSeason("winter")
 	elseif (string.sub(str, 0, 15) == "winds of winter") then
 		SetSeason("winter", tonumber(string.sub(str, 17)))
+	elseif (str == "king of the galactic seas") then
+		SetTimeOfDaySchedule("neptunian-schedule")
+		SetSeasonSchedule("neptunian-schedule")
+	elseif (string.sub(str, 0, 25) == "king of the galactic seas") then
+		SetTimeOfDaySchedule("neptunian-schedule", tonumber(string.sub(str, 27)))
+		SetSeasonSchedule("neptunian-schedule", tonumber(string.sub(str, 27)))
 	elseif (string.sub(str, 0, 7) == "bifrost") then
 		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
