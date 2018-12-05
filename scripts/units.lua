@@ -346,7 +346,6 @@ DefineUnitType("unit-template-unit", {
 	Animations = "animations-melee-unit-new",
 	DrawLevel = 40,
 	SelectableByRectangle = true,
-	ButtonLevel = 0,
 	ButtonPopup = "popup-unit"
 })
 
@@ -360,7 +359,7 @@ DefineUnitType("unit-template-building", {
 	VisibleUnderFog = true,
 	SelectableByRectangle = true,
 	SalvageFactor = 75,
-	ButtonLevel = 1,
+	ButtonLevel = "build-structure-level",
 	ButtonPopup = "popup-building"
 })
 
@@ -4253,7 +4252,7 @@ DefineUnitType("unit-template-stronghold", {
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	PierceDamage = true,
-	ButtonLevelForTransporter = 1,
+	ButtonLevelForTransporter = "garrison-level",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},

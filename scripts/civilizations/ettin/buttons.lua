@@ -27,7 +27,7 @@
 
 -- Buildings -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1,
+DefineButton( { Pos = 1, Level = "build-structure-level",
 	Action = "build", Value = "unit-ettin-town-hall",
 	Key = "h", Hint = "Build Mead ~!Hall", Popup = "popup-building",
 	ForUnit = {
@@ -36,7 +36,7 @@ DefineButton( { Pos = 1, Level = 1,
 
 -- Mercenaries
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-ettin",
 	Key = "e", Hint = "Hire ~!Ettin", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}

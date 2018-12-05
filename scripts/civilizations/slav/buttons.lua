@@ -27,7 +27,7 @@
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-slavic-swordsman",
 	Key = "w", Hint = "Train S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-norse-barracks"}
@@ -35,7 +35,7 @@ DefineButton( { Pos = 1, Level = 0,
 
 -- Mercenaries ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-slavic-swordsman",
 	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}

@@ -27,13 +27,13 @@
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-norse-swordsman",
 	Key = "w", Hint = "Train S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-norse-barracks"}
 })
 
-DefineButton( { Pos = 2, Level = 0,
+DefineButton( { Pos = 2,
 	Action = "train-unit", Value = "unit-norse-longship",
 	Key = "l", Hint = "Build ~!Longship", Popup = "popup-unit",
 	ForUnit = {"unit-norse-dock", "unit-teuton-dock"}
@@ -41,7 +41,7 @@ DefineButton( { Pos = 2, Level = 0,
 
 -- Mercenaries ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-norse-swordsman",
 	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
@@ -49,61 +49,61 @@ DefineButton( { Pos = 1, Level = 0,
 
 -- Buildings -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 1,
+DefineButton( { Pos = 1, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-town-hall",
 	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 2, Level = 1,
+DefineButton( { Pos = 2, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-farm",
 	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 3, Level = 1,
+DefineButton( { Pos = 3, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-barracks",
 	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 4, Level = 1,
+DefineButton( { Pos = 4, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-lumber-mill",
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 5, Level = 1,
+DefineButton( { Pos = 5, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-smithy",
 	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
-DefineButton( { Pos = 8, Level = 1,
+DefineButton( { Pos = 8, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-temple",
 	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 9, Level = 1,
+DefineButton( { Pos = 9, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-market",
 	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 10, Level = 1,
+DefineButton( { Pos = 10, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-watch-tower",
 	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 11, Level = 1,
+DefineButton( { Pos = 11, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-dock",
 	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 1, Level = 4, Icon = "icon-norse-wooden-wall",
+DefineButton( { Pos = 1, Level = "build-structure-level-2", Icon = "icon-norse-wooden-wall",
 	Action = "build", Value = "unit-norse-palisade",
 	Key = "p", Hint = "Build ~!Palisade", Popup = "popup-building",
 	ForUnit = {
@@ -118,7 +118,7 @@ DefineButton( { Pos = 1, Level = 4, Icon = "icon-norse-wooden-wall",
 
 -- Deities ----------------------------------------------------------
 
-DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
+DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
@@ -126,7 +126,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-odin",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
+DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
@@ -134,7 +134,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-thor",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",
+DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-learn-ability",
 	Description = "Choose Odin as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thor major deity.",
@@ -143,7 +143,7 @@ DefineButton( { Pos = 10, Level = 2, Icon = "icon-odin",
 	}
 })
 
-DefineButton( { Pos = 11, Level = 2, Icon = "icon-thor",
+DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
 	Description = "Choose Thor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Odin major deity.",
@@ -152,7 +152,7 @@ DefineButton( { Pos = 11, Level = 2, Icon = "icon-thor",
 	}
 })
 
-DefineButton( { Pos = 12, Level = 2, Icon = "icon-tyr",
+DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
@@ -163,7 +163,7 @@ DefineButton( { Pos = 12, Level = 2, Icon = "icon-tyr",
 	}
 })
 
-DefineButton( { Pos = 13, Level = 2, Icon = "icon-heimdall",
+DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
 	Key = "d", Hint = "Worship Heim~!dall", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
@@ -173,7 +173,7 @@ DefineButton( { Pos = 13, Level = 2, Icon = "icon-heimdall",
 	}
 })
 
-DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
+DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!l", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
@@ -185,13 +185,13 @@ DefineButton( { Pos = 14, Level = 2, Icon = "icon-hel",
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 2,
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-norse-veteran-swordsman",
 	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
 	ForUnit = {"unit-norse-swordsman", "unit-slavic-swordsman"}
 })
 
-DefineButton( { Pos = 1, Level = 2,
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-norse-heroic-swordsman",
 	Key = "h", Hint = "Upgrade to ~!Hersir", Popup = "popup-unit",
 	ForUnit = {"unit-norse-veteran-swordsman"}

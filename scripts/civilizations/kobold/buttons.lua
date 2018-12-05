@@ -27,7 +27,7 @@
 
 -- Mercenaries
 
-DefineButton( { Pos = 1, Level = 0,
+DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-kobold-footpad",
 	Key = "f", Hint = "Hire ~!Footpad", Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
@@ -35,13 +35,13 @@ DefineButton( { Pos = 1, Level = 0,
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-kobold-slasher",
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-slasher",
 	Action = "experience-upgrade-to", Value = "unit-kobold-slasher",
 	Key = "u", Hint = "~!Upgrade to Slasher", Popup = "popup-unit",
 	ForUnit = {"unit-kobold-footpad"}
 } )
 
-DefineButton( { Pos = 1, Level = 2, Icon = "icon-kobold-champion",
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-champion",
 	Action = "experience-upgrade-to", Value = "unit-kobold-champion",
 	Key = "u", Hint = "~!Upgrade to Champion", Popup = "popup-unit",
 	ForUnit = {"unit-kobold-slasher"}

@@ -27,7 +27,7 @@
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 4, Level = 0,
+DefineButton( { Pos = 4,
 	Action = "train-unit", Value = "unit-gothic-horse-rider",
 	Key = "d", Hint = "Train Horse Ri~!der", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
@@ -35,13 +35,13 @@ DefineButton( { Pos = 4, Level = 0,
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 2, Level = 2,
+DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-gothic-horse-rider",
 	Key = "r", Hint = "Upgrade to Horse ~!Rider", Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman"}
 } )
 
-DefineButton( { Pos = 1, Level = 2,
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-gothic-horse-lord",
 	Key = "u", Hint = "~!Upgrade to Horse Lord", Popup = "popup-unit",
 	ForUnit = {"unit-gothic-horse-rider"}

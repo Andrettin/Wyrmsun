@@ -39,7 +39,6 @@ DefineUnitType("unit-template-item", {
 	NumDirections = 1,
 	Item = true,
 	ButtonPopup = "popup-item",
-	ButtonLevel = 0,
 	Sounds = {
 		"selected", "click"
 	} 
