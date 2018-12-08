@@ -84,6 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 * Modding
 - Made substantial progress in allowing for separation between scripts and data. Animations, buttons, characters, icons, map templates, missile types, sounds, terrain types and unit types can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod are now parsed automatically by the game on start.
 
+* Quests
+- Quests will no longer fail if they require researching a given upgrade, and you have lost the building that researches it but still have workers to rebuild the structure.
+
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
 - Added support for season-specific terrain graphics.

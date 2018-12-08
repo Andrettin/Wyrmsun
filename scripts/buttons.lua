@@ -1820,7 +1820,7 @@ DefineButton( { Pos = 5, Icon = "icon-quest",
 })
 
 DefineButton( { Pos = 6, Icon = "icon-quest",
-	Action = "quest", Value = "quest-level",
+	Action = "quest", Value = 1,
 	Key = "", Hint = "Quest", Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
