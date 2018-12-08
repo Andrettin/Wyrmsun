@@ -56,6 +56,7 @@ DefineSpell("spell-far-sight",
 	"manacost", 70,
 	"range", "infinite",
 	"target", "position",
+	"stackable", false,
 	"action", {
 		{"summon", "unit-type", "unit-ethereal-revealer", "time-to-live", 50},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}

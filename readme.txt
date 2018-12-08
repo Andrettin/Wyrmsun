@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Abilities
 - Dwarven loremasters can now learn the Mace Mastery ability.
+- If multiple priests are selected and are then instructed to cast Far Sight, only one of them will cast the spell now. Previously all selected priests able to cast the spell would do so, despite that providing no additional benefit.
 
 * Buildings
 - Added "Enter Map Layer" button for Cavern Entrances and Portals, which changes the current map layer to the one the building leads to.
