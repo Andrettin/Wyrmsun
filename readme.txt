@@ -93,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which caused flying units to prefer moving over roads and railroads, despite receiving no benefit from them.
+- If a unit which has an ability with autocast active is selected, and you right-click another unit, the selected unit will use its ability on the right-clicked unit if the latter fits the autocast conditions. For example, if you select a hero who has the Stun ability on autocast, and then right-click an enemy, your hero will now use Stun on the enemy instead of attacking.
 
 * User Interface
 - Pressing CTRL+L now returns the player to the previous map layer they were in.
