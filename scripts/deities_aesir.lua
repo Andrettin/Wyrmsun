@@ -110,7 +110,7 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 		"suebi", "Sunna",
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
-	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed to carry the sun in her chariot with the horses Arvak and Alsvid." --  In truth, however (within the game's universe), Sol is linked to the abstract concept of a sun, rather than to a particular one
+	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed to carry the sun in her chariot with the horses Arvak and Alsvid." --  in truth, however (within the game's universe), Sol is linked to the abstract concept of a sun, rather than to a particular one
 })
 
 DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.

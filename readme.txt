@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused Norse and Latin heroes to not be selectable to play an Earth quest with.
 - Fixed issue which caused fauna heroes to have inventories.
 - Fauna heroes can now enter transport ships.
+- Fixed issue which caused custom heroes to be recruitable at game start even if they were picked to start the game with.
 
 * Items
 - Added Club weapon.
