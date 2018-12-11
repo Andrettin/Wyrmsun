@@ -884,6 +884,7 @@
 /graphics/neutral/icons/architecture.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/attack_ground.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/axe_mastery.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/bat.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/blessing.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/boar.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/bodkin_arrow.png (by Jinn) (licensed under the CC0)
