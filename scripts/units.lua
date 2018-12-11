@@ -3229,6 +3229,7 @@ DefineUnitType("unit-template-worker", {
 	ButtonPos = 1,
 	ButtonKey = "w",
 	ButtonHint = "Train ~!Worker",
+	AiDrops = {"unit-christmas-hat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -3440,6 +3441,7 @@ DefineUnitType("unit-template-militia", {
 	CanAttack = true,
 	CanTargetLand = true,
 	Flesh = true,
+	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3480,6 +3482,7 @@ DefineUnitType("unit-template-merchant", {
 	ButtonKey = "m",
 	ButtonHint = "Train ~!Merchant",
 	Trader = true,
+	AiDrops = {"unit-christmas-hat"},
 	CanGatherResources = {
 		{
 			"resource-id", "trade",
@@ -3549,6 +3552,7 @@ DefineUnitType("unit-template-infantry", {
 	CanCastSpell = {"spell-stun"},
 	AutoCastActive = {"spell-stun"},
 	ButtonPos = 1,
+	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3680,6 +3684,7 @@ DefineUnitType("unit-template-archer", {
 	AttackFromTransporter = true,
 	ButtonPos = 3,
 	RequirementsString = "Lumber Mill",
+	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3779,6 +3784,7 @@ DefineUnitType("unit-template-thief", {
 	HiddenOwnership = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
+	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3820,7 +3826,7 @@ DefineUnitType("unit-template-cavalry", {
 	Flesh = true,
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	ButtonPos = 4,
-	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
+	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3899,7 +3905,7 @@ DefineUnitType("unit-template-spear-cavalry", {
 	Flesh = true,
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	ButtonPos = 4,
-	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"},
+	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -3958,7 +3964,7 @@ DefineUnitType("unit-template-priest", {
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
 	ButtonPos = 1,
 	RequirementsString = "Any Deity or Religion",
-	AiDrops = {"unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
+	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"step", "step-dirt",
@@ -4031,7 +4037,7 @@ DefineUnitType("unit-template-flying-rider", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonPos = 6,
-	AiDrops = {"unit-horn", "unit-crown", "unit-amulet", "unit-ring"},
+	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-crown", "unit-amulet", "unit-ring"},
 	Sounds = {
 	}
 } )
@@ -4215,7 +4221,7 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonHint = "Build Town ~!Hall",
 	ResourceDemand = {"jewelry", 5, "furniture", 5, "leather", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	BuildingRulesString = "Must be built on a Settlement Site",
 	Sounds = {
@@ -4775,8 +4781,8 @@ DefineUnitType("unit-template-market", {
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
-	AiDrops = {"unit-crown", "unit-amulet", "unit-ring"},
+	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"selected", "market-selected",
