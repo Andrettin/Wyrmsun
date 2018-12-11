@@ -273,7 +273,29 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		if not (state == "items") then
 			units_table = Units
 		else
+			local function compare_items(a, b)
+				if (GetUnitTypeData(a, "ItemSlotId") ~= GetUnitTypeData(b, "ItemSlotId")) then
+					if (GetUnitTypeData(b, "ItemSlotId") == -1 and GetUnitTypeData(a, "ItemSlotId") ~= -1) then
+						return true
+					elseif (GetUnitTypeData(b, "ItemSlotId") ~= -1 and GetUnitTypeData(a, "ItemSlotId") == -1) then
+						return false
+					elseif (GetUnitTypeData(b, "ItemSlotId") ~= -1 and GetUnitTypeData(a, "ItemSlotId") ~= -1) then
+						return GetUnitTypeData(a, "ItemSlotId") < GetUnitTypeData(b, "ItemSlotId")
+					end
+				end
+				
+				if (GetUnitTypeData(a, "ItemClass") ~= GetUnitTypeData(b, "ItemClass")) then
+					return GetUnitTypeData(a, "ItemClass") < GetUnitTypeData(b, "ItemClass")
+				elseif (GetUnitTypeData(a, "Costs", "copper") ~= GetUnitTypeData(b, "Costs", "copper")) then
+					return GetUnitTypeData(a, "Costs", "copper") < GetUnitTypeData(b, "Costs", "copper")
+				else
+					return GetUnitTypeData(a, "Name") < GetUnitTypeData(b, "Name")
+				end
+			end
+			
 			units_table = GetItems()
+			
+			table.sort(units_table, compare_items)
 		end
 		for i, unitName in ipairs(units_table) do
 			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
