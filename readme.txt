@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added Club weapon.
+- Added Christmas Hat. This item appears only during winter.
 
 * Miscellaneous
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
