@@ -379,13 +379,6 @@ DefineDependency("unit-bodkin-arrows",
 	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-bodkin-arrow"}
 )
 
-DefineDependency("unit-christmas-hat",
-	{"upgrade-deity-christian-god"},
-	"or", {"upgrade-deity-odin"},
-	"or", {"upgrade-deity-thor"},
-	"or", {"upgrade-deity-gathaarl"}
-)
-
 DefineDependency("unit-crown",
 	{"unit-brising-smithy"},
 	"or", {"unit-dwarven-smithy"},
