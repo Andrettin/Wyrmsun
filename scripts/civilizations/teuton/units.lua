@@ -1133,6 +1133,19 @@ DefineUnitType("unit-teuton-masons-shop", {
 	Image = {"file", "teuton/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-masons-shop",
+	Variations = {
+		{
+			"variation-id", "masons-shop",
+			"file", "germanic/buildings/masons_shop.png",
+			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
+			"icon", "icon-germanic-masons-shop",
+			"upgrade-forbidden", "upgrade-masonry"
+		},
+		{
+			"variation-id", "masons-shop",
+			"upgrade-required", "upgrade-masonry"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
