@@ -87,7 +87,7 @@ DefineTerrainType("desert-sand", {
 	Character = "e",
 --	Buildable = true,
 	Flags = {"land", "no-building", "dirt", "desert"},
-	InnerBorderTerrains = {"dirt", "dry-mud", "cave-floor"},
+	InnerBorderTerrains = {"dirt", "dry-mud", "cave-floor", "mud"},
 	Graphics = "terrain/desert_sand.png",
 	SolidTiles = {17, 20, 23},
 	AdjacentTransitionTiles = {
