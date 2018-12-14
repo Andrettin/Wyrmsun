@@ -1139,6 +1139,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"file", "germanic/buildings/masons_shop.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
+			"construction", "construction-land-active",
 			"upgrade-forbidden", "upgrade-masonry"
 		},
 		{
