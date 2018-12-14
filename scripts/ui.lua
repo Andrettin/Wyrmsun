@@ -2690,24 +2690,24 @@ if not (ui_loaded_first_time) then
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				-- Upgrade Requirements (if the upgrade is disallowed)
-				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", ResearchedUpgrade = "false"},
+				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {RequirementsString = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Already Acquired
-				{ 	Margin = {1, 1}, Condition = {ResearchedUpgrade = "only"},
+				{ 	Margin = {1, 1}, Condition = {UpgradeResearched = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ResearchedUpgrade = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {UpgradeResearched = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Costs
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", ResearchedUpgrade = "false"},
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {FactionUpgrade = "false", ResearchedUpgrade = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
@@ -2759,24 +2759,24 @@ if not (ui_loaded_first_time) then
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 			}, 
 			-- Upgrade Requirements (if the upgrade is disallowed)
-			{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", ResearchedUpgrade = "false"},
+			{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", UpgradeResearched = "false"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
-			{ 	Condition = {RequirementsString = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+			{ 	Condition = {RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 				More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			-- Already Acquired
-			{ 	Margin = {1, 1}, Condition = {Ability = "false", ResearchedUpgrade = "only"},
+			{ 	Margin = {1, 1}, Condition = {Ability = "false", UpgradeResearched = "only"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
-			{ 	Condition = {Ability = "false", ResearchedUpgrade = "only"}, HighlightColor = "yellow",
+			{ 	Condition = {Ability = "false", UpgradeResearched = "only"}, HighlightColor = "yellow",
 				More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			-- Other Information
-			{ 	Margin = {1, 1}, Condition = {Ability = "only", ResearchedUpgrade = "false"}, 
+			{ 	Margin = {1, 1}, Condition = {Ability = "only", UpgradeResearched = "false"}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
-			{ 	Condition = {Ability = "only", ResearchedUpgrade = "false"}, HighlightColor = "yellow",
+			{ 	Condition = {Ability = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 				More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
 			{ 	Condition = {Ability = "only"}, Margin = {1, 1}, 
@@ -2889,6 +2889,16 @@ if not (ui_loaded_first_time) then
 			{ 	TextColor = "white", HighlightColor = "yellow",
 				More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 			},
+			--[[
+			{ 	Condition = {ButtonValue = "copper", ResearchedUpgradeClass = "coinage"}, HighlightColor = "yellow",
+				More = {"Text", {Text = Concat(_("Currency: "),
+						function()
+							return GetPlayerData(GetThisPlayer(), "Currency")
+						end
+					),
+					Font = wyr.preferences.PopupDescriptionFont}}
+			},
+			--]]
 			{ 	Condition = {ChildResources = "only"}, HighlightColor = "yellow",
 				More = {"Text", {Text = ResourceConversionRates("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
 			},

@@ -2602,6 +2602,7 @@ DefineCivilization("anglo-saxon", {
 	Adjective = "Anglo-Saxon",
 	DefaultColor = "red",
 	Calendar = "anglo-saxon-calendar",
+	Currency = "scilling",
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
@@ -3307,6 +3308,7 @@ DefineCivilization("goth", {
 	CivilizationUpgrade = "upgrade-gothic-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
+	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
 	DefaultColor = "black",
 	UnitSounds = {

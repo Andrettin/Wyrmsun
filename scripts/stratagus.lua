@@ -1626,7 +1626,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"icons", "sounds", "button_levels", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "terrain_types", "planes", "worlds", "animations", "unit_types", "calendars", "map_templates", "characters", "ages", "buttons"}
+	local data_directories = {"icons", "sounds", "button_levels", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "terrain_types", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "map_templates", "characters", "ages", "buttons"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)

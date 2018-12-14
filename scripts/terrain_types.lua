@@ -85,7 +85,6 @@ DefineTerrainType("desert-sand", {
 	Name = "Desert Sand",
 	Color = {255, 255, 0},
 	Character = "e",
---	Buildable = true,
 	Flags = {"land", "no-building", "dirt", "desert"},
 	InnerBorderTerrains = {"dirt", "dry-mud", "cave-floor", "mud"},
 	Graphics = "terrain/desert_sand.png",
