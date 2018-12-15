@@ -463,7 +463,7 @@ DefineDependency("upgrade-item-suffix-of-the-beaver",
 )
 
 DefineDependency("upgrade-item-suffix-of-betrayal",
-	{"upgrade-deity-domain-envy"}, "or", {"upgrade-deity-domain-greed"}
+	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-envy"}, "or", {"upgrade-deity-domain-greed"}
 )
 
 DefineDependency("upgrade-item-suffix-of-carpentry",
@@ -535,7 +535,7 @@ DefineDependency("upgrade-item-suffix-of-replenishment",
 )
 
 DefineDependency("upgrade-item-suffix-of-the-serpent",
-	{"upgrade-deity-domain-envy"}
+	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-envy"}
 )
 
 DefineDependency("upgrade-item-suffix-of-slaughter",
@@ -579,7 +579,7 @@ DefineDependency("upgrade-item-suffix-of-thorns",
 )
 
 DefineDependency("upgrade-item-suffix-of-trickery",
-	{"upgrade-deity-domain-chaos"}
+	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-chaos"}
 )
 
 DefineDependency("upgrade-item-suffix-of-victory",

@@ -229,7 +229,7 @@ DefineDependency("unit-dwarven-academy",
 )
 
 DefineDependency("unit-dwarven-witness",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
 )
 
 DefinePredependency("unit-dwarven-dock",

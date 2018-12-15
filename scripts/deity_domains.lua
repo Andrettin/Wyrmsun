@@ -81,7 +81,6 @@ DefineDeityDomain("lightning", {
 
 DefineDeityDomain("chaos", {
 	Name = "Chaos",
-	Abilities = {"upgrade-terror"},
 	Upgrade = "upgrade-deity-domain-chaos"
 })
 
@@ -247,6 +246,12 @@ DefineDeityDomain("metalworking", {
 DefineDeityDomain("poetry", {
 	Name = "Poetry",
 	Upgrade = "upgrade-deity-domain-poetry"
+})
+
+DefineDeityDomain("trickery", {
+	Name = "Trickery",
+	Abilities = {"upgrade-slow-ability"},
+	Upgrade = "upgrade-deity-domain-trickery"
 })
 
 DefineDeityDomain("warfare", {

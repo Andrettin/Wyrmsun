@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added "Enter Map Layer" button for Cavern Entrances and Portals, which changes the current map layer to the one the building leads to.
 
+* Deities
+- Added Loki major deity for the Dwarves and the Norse. Loki provides a 50% Backstab Bonus to sword and axe infantry, and the Slow spell for priests.
+
 * Heroes
 - Hero encyclopedia entries now display their level and acquired abilities.
 - Fixed issue which caused Norse and Latin heroes to not be selectable to play an Earth quest with.

@@ -1032,6 +1032,17 @@ DefineButton( { Pos = 4, Icon = "icon-shocking-grasp",
 	}
 })
 
+DefineButton( { Pos = 4, Icon = "icon-slow",
+	Action = "cast-spell", Value = "spell-slow",
+	Description = "Slows a target unit",
+	Key = "w", Hint = "Slo~!w", Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-priest",
+		"unit-teuton-priest",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
+	}
+})
+
 DefineButton( { Pos = 5, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
 	Description = "Inspires an organic unit to deal 50% more damage",

@@ -322,11 +322,13 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247. Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 41-42.
 	Name = "Loki",
 	Pantheon = "Aesir",
-	Civilizations = {"ettin", "norse"}, -- during Ragnarok, he was on the same side as the giants
+	Civilizations = {"dwarf", "ettin", "norse"}, -- during Ragnarok, he was on the same side as the giants
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"chaos", "envy"},
+	Icon = "icon-loki",
+	Domains = {"trickery", "chaos", "envy"},
+	DeityUpgrade = "upgrade-deity-loki",
 	Description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir. He is the father of Hel."
 })
 

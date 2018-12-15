@@ -53,6 +53,10 @@ DefineDependency("upgrade-shocking-grasp",
 	{"upgrade-deity-thor"}
 )
 
+DefineDependency("upgrade-slow-ability",
+	{"upgrade-deity-loki"}
+)
+
 DefineDependency("upgrade-terror",
 	{"upgrade-deity-gathaarl"}
 )

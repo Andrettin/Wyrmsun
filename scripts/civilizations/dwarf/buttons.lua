@@ -499,7 +499,7 @@ DefineButton( { Pos = 5, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-research",
-	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Thor major deity.",
+	Description = "Choose Hroptatyr as your major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Thor and Loki major deities.",
 	ForUnit = {"unit-dwarven-temple"}
 })
   
@@ -507,11 +507,19 @@ DefineButton( { Pos = 6, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
-	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr major deity.",
+	Description = "Choose Thor as your major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr and Loki major deities.",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
-DefineButton( { Pos = 7, Icon = "icon-tyr",
+DefineButton( { Pos = 7, Icon = "icon-loki",
+	Action = "research", Value = "upgrade-deity-loki",
+	Allowed = "check-single-research",
+	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-research",
+	Description = "Choose Loki as your major deity. +50% Backstab Bonus for Axefighters, enables Slow spell for Witnesses. Allows new magic affixes for items sold at the Market. Incompatible with the Hroptatyr and Thor major deities.",
+	ForUnit = {"unit-dwarven-temple"}
+})
+
+DefineButton( { Pos = 8, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Allowed = "check-single-research",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
@@ -519,7 +527,7 @@ DefineButton( { Pos = 7, Icon = "icon-tyr",
 	ForUnit = {"unit-dwarven-temple"}
 })
 
-DefineButton( { Pos = 8, Icon = "icon-hel",
+DefineButton( { Pos = 9, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Allowed = "check-single-research",
 	Key = "l", Hint = "Worship He~!l", Popup = "popup-research",
@@ -530,7 +538,7 @@ DefineButton( { Pos = 8, Icon = "icon-hel",
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup-learn-ability",
-	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Incompatible with the Thor major deity.",
+	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Incompatible with the Thor and Loki major deities.",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
@@ -551,7 +559,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
-	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Incompatible with the Hroptatyr major deity.",
+	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Incompatible with the Hroptatyr and Loki major deities.",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
@@ -569,10 +577,31 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
 
-DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
+DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-loki",
+	Action = "learn-ability", Value = "upgrade-deity-loki",
+	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-learn-ability",
+	Description = "Choose Loki as your hero's major deity. +50% Backstab Bonus for Axefighters, enables Slow spell for Witnesses. Incompatible with the Hroptatyr and Thor major deities.",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
+		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
+		"unit-dwarven-thunderer",
+		"unit-dwarven-gryphon-rider",
+		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
+		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
+		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
+		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
+	}
+})
+
+DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
-	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables Inspire spell for Witnesses. Incompatible with the Hel minor deity.",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -591,10 +620,10 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
   
-DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
+DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!l", Popup = "popup-learn-ability",
-	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
+	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Witnesses. Incompatible with the Tyr minor deity.",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",

@@ -176,17 +176,20 @@ DefineSpell("spell-shocking-grasp",
 DefineSpell("spell-slow",
 	"showname", "Slow",
 	"manacost", 50,
-	"range", 10,
+	"range", 6,
 	"target", "unit",
-	"action", {{"adjust-variable", {Slow = 1000, Haste = 0}},
-		{"spawn-missile", "missile", "missile-magic-effect",
-			"start-point", {"base", "target"}}},
+	"action", {
+		{"adjust-variable", {Slow = 1000, Haste = 0}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
 	"condition", {
 		"Building", "false",
-		"Slow", {ExactValue = 0}},
---	"sound-when-cast", "slow",
-	"autocast", {"range", 10, "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 10, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
+		"Slow", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-slow-ability",
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
 DefineSpell("spell-terror",

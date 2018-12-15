@@ -897,9 +897,9 @@ DefineUnitType("unit-teuton-priest", {
 	Corpse = "unit-human-dead-body",
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	StartingAbilities = {"upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-wither"},
-	CanCastSpell = {"spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-wither"},
-	AutoCastActive = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-wither"},
+	StartingAbilities = {"upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
+	CanCastSpell = {"spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
+	AutoCastActive = {"spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	RequirementsString = "Any Deity or Religion",
 	Variations = {
@@ -907,7 +907,8 @@ DefineUnitType("unit-teuton-priest", {
 			"variation-id", "cleric",
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
-			"upgrade-forbidden", "upgrade-deity-thor"
+			"upgrade-forbidden", "upgrade-deity-thor",
+			"upgrade-forbidden", "upgrade-deity-loki"
 		},
 		{
 			"variation-id", "gudjan",
@@ -1193,7 +1194,8 @@ DefineUnitType("unit-teuton-temple", {
 			"variation-id", "church",
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
-			"upgrade-forbidden", "upgrade-deity-thor"
+			"upgrade-forbidden", "upgrade-deity-thor",
+			"upgrade-forbidden", "upgrade-deity-loki"
 		},
 		{
 			"variation-id", "germanic-temple",

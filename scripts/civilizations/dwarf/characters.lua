@@ -89,7 +89,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Trait = "upgrade-cruel",
 	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	Deities = {"odin", "tyr"},
+	Deities = {"loki", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
 			return true
@@ -109,7 +109,7 @@ DefineCharacter("galar", { -- dwarf from Norse mythology who, with the help of h
 	Trait = "upgrade-cruel",
 	StartDate = -3000,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	Deities = {"odin", "tyr"},
+	Deities = {"loki", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
 			return true

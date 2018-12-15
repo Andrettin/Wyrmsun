@@ -34,7 +34,7 @@ DefinePredependency("upgrade-deity-heimdall",
 )
 
 DefineDependency("upgrade-deity-heimdall",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
 )
 
 DefinePredependency("upgrade-deity-hel",
@@ -42,7 +42,7 @@ DefinePredependency("upgrade-deity-hel",
 )
 
 DefineDependency("upgrade-deity-hel",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-gathaarl"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-gathaarl"}
 )
 
 DefinePredependency("upgrade-deity-odin",
@@ -53,10 +53,14 @@ DefinePredependency("upgrade-deity-thor",
 	{"upgrade-english-civilization", 0}
 )
 
+DefinePredependency("upgrade-deity-loki",
+	{"upgrade-english-civilization", 0}
+)
+
 DefinePredependency("upgrade-deity-tyr",
 	{"upgrade-english-civilization", 0}
 )
 
 DefineDependency("upgrade-deity-tyr",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
 )

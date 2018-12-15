@@ -140,6 +140,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-loki",
+	Size = {46, 38},
+	File = "norse/icons/loki.png"
+})
+
+DefineIcon({
 	Name = "icon-tyr",
 	Size = {46, 38},
 	File = "norse/icons/tyr.png"
