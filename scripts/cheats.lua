@@ -181,6 +181,12 @@ function HandleCheats(str)
 		SetSeason("winter")
 	elseif (string.sub(str, 0, 15) == "winds of winter") then
 		SetSeason("winter", tonumber(string.sub(str, 17)))
+	elseif (str == "fly me to the moon") then
+		SetTimeOfDaySchedule("lunar-schedule")
+		SetSeasonSchedule("lunar-schedule")
+	elseif (string.sub(str, 0, 18) == "fly me to the moon") then
+		SetTimeOfDaySchedule("lunar-schedule", tonumber(string.sub(str, 20)))
+		SetSeasonSchedule("lunar-schedule", tonumber(string.sub(str, 20)))
 	elseif (str == "king of the galactic seas") then
 		SetTimeOfDaySchedule("neptunian-schedule")
 		SetSeasonSchedule("neptunian-schedule")

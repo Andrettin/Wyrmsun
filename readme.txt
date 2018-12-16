@@ -82,14 +82,13 @@ https://github.com/Andrettin/Wyrmsun
 - Added Christmas Hat. This item appears only during winter.
 
 * Miscellaneous
-- Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
-- The minimum resolution for the game is now 1024.
 - Seasons can now pass in-game, in a manner reminiscent of the time of day system. Each year takes about one real-time hour to pass. Currently the seasons are mostly cosmetic, causing the terrain graphics to change. Additionally, days are shorter during winter and nights longer, while for summer it is the other way around.
 
 * Modding
 - Made substantial progress in allowing for separation between scripts and data. Animations, buttons, characters, icons, map templates, missile types, sounds, terrain types and unit types can now be defined in data files (.cfg), placed within the /data/ folder. The .cfg files within the /data/ folder (or in a subfolder within it) of a mod are now parsed automatically by the game on start.
 
 * Quests
+- Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
 - Quests will no longer fail if they require researching a given upgrade, and you have lost the building that researches it but still have workers to rebuild the structure.
 
 * Terrain
@@ -106,6 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 - Bats, blood bats and dread bats are now selectable and have icons.
 
 * User Interface
+- The minimum resolution for the game is now 1024.
 - Pressing CTRL+L now returns the player to the previous map layer they were in.
 - Hovering the mouse over resource amounts will now also display the tooltip for the respective resource (previously the tooltip was only displayed if hovering the mouse over the resource's icon). This also applies to the food and score amounts.
 - A text string is now displayed at the top of the screen delineating which "age" the player is currently in (e.g. Bronze Age). This changes automatically depending on which upgrades are researched. For instance, when the player researches Ironworking they will change from the Bronze Age to the Iron Age.
