@@ -465,18 +465,16 @@ UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 UI.AgePanel.IconFrame = 0
 UI.AgePanel.IconX = Video.Width --154 + (75 * 4)
 UI.AgePanel.IconY = Video.Height --0
-if (GetCurrentQuest() == "gathering-materials") then
-	UI.AgePanel.TextX = 154 + (75 * 4) -- to make space for coal
-else
-	UI.AgePanel.TextX = 154 + (75 * 3.5)
-end
+UI.AgePanel.TextX = 154 + (75 * 5)
 UI.AgePanel.TextY = 1
 
-UI.TimeOfDayPanel.TextX = 154 + (75 * 5.5)
-UI.TimeOfDayPanel.TextY = 1
+UI.TimeOfDayPanel.IconFrame = 0
+UI.TimeOfDayPanel.IconX = 154 + (75 * 4) + (18 * 0)
+UI.TimeOfDayPanel.IconY = 0
 
-UI.SeasonPanel.TextX = 154 + (75 * 7)
-UI.SeasonPanel.TextY = 1
+UI.SeasonPanel.IconFrame = 0
+UI.SeasonPanel.IconX = 154 + (75 * 4) + (18 * 1)
+UI.SeasonPanel.IconY = 0
 
 --UI.DatePanel.TextX = 154 + (75 * 7)
 --UI.DatePanel.TextY = 1
