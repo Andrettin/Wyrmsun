@@ -462,12 +462,6 @@ UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
 UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 
-UI.AgePanel.IconFrame = 0
-UI.AgePanel.IconX = Video.Width --154 + (75 * 4)
-UI.AgePanel.IconY = Video.Height --0
-UI.AgePanel.TextX = 154 + (75 * 5)
-UI.AgePanel.TextY = 1
-
 UI.TimeOfDayPanel.IconFrame = 0
 UI.TimeOfDayPanel.IconX = 154 + (75 * 4) + (18 * 0)
 UI.TimeOfDayPanel.IconY = 0
@@ -475,6 +469,12 @@ UI.TimeOfDayPanel.IconY = 0
 UI.SeasonPanel.IconFrame = 0
 UI.SeasonPanel.IconX = 154 + (75 * 4) + (18 * 1)
 UI.SeasonPanel.IconY = 0
+
+UI.AgePanel.IconFrame = 0
+UI.AgePanel.IconX = 154 + (75 * 5)
+UI.AgePanel.IconY = 0
+UI.AgePanel.TextX = 154 + (75 * 5) + 18
+UI.AgePanel.TextY = 1
 
 --UI.DatePanel.TextX = 154 + (75 * 7)
 --UI.DatePanel.TextY = 1
