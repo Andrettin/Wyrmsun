@@ -98,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - Mud tiles now become Ice ones during winter.
 - Pine Tree tiles now become Snow Pine Tree ones during winter, and Autumn Pine Tree tiles during autumn.
 - Rock tiles now become Snow Rock ones during winter.
+- Added snow version for the Flamefood Tree.
 
 * Units
 - Fixed issue which caused flying units to prefer moving over roads and railroads, despite receiving no benefit from them.

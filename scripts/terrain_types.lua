@@ -851,63 +851,6 @@ DefineTerrainType("fairlimbed-tree", {
 	}
 })
 
-DefineTerrainType("flamefood-tree", {
-	Name = "Flamefood Tree",
-	Character = "l",
-	Color = {128, 128, 0},
-	BaseTerrainTypes = {"dry-mud"},
-	Overlay = true,
-	Flags = {"land", "forest", "unpassable"},
-	Graphics = "terrain/flamefood_tree.png",
-	Resource = "lumber",
-	SolidTiles = {18},
-	DestroyedTiles = {16},
-	TransitionTiles = {
-		"any", "north", 2,
-		"any", "south", 34,
-		"any", "west", 17,
-		"any", "east", 19,
-		"any", "northwest-outer", 1,
-		"any", "northeast-outer", 3,
-		"any", "southwest-outer", 33,
-		"any", "southeast-outer", 35,
-		"any", "northwest-inner", 10,
-		"any", "northeast-inner", 11,
-		"any", "southwest-inner", 26,
-		"any", "southeast-inner", 27,
-		"any", "northwest-southeast-inner", 30,
-		"any", "northeast-southwest-inner", 14
-	}
-})
-
-DefineTerrainType("pine-tree-snow", {
-	Name = "Pine Tree (Snow)",
-	Color = {64, 128, 64},
-	BaseTerrainTypes = {"snow"},
-	Overlay = true,
-	Flags = {"land", "forest", "unpassable"},
-	Graphics = "terrain/pine_tree_snow.png",
-	Resource = "lumber",
-	SolidTiles = {18},
-	DestroyedTiles = {16, 32, 48},
-	TransitionTiles = {
-		"any", "north", 2,
-		"any", "south", 34,
-		"any", "west", 17,
-		"any", "east", 19,
-		"any", "northwest-outer", 1,
-		"any", "northeast-outer", 3,
-		"any", "southwest-outer", 33,
-		"any", "southeast-outer", 35,
-		"any", "northwest-inner", 10,
-		"any", "northeast-inner", 11,
-		"any", "southwest-inner", 26,
-		"any", "southeast-inner", 27,
-		"any", "northwest-southeast-inner", 30,
-		"any", "northeast-southwest-inner", 14
-	}
-})
-
 DefineTerrainType("road", {
 	Name = "Road",
 	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
