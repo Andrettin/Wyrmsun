@@ -766,6 +766,27 @@ DefineUnitType("unit-germanic-barracks", {
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	Variations = {
+		{
+			"variation-id", "barracks",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow-winter",
+			"file", "germanic/buildings/barracks_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow",
+			"file", "germanic/buildings/barracks_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}

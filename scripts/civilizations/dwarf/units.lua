@@ -1927,6 +1927,27 @@ DefineUnitType("unit-dwarven-barracks", {
 	ButtonHint = "Build ~!War Hall",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	Variations = {
+		{
+			"variation-id", "barracks",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow-winter",
+			"file", "dwarf/buildings/barracks_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow",
+			"file", "dwarf/buildings/barracks_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

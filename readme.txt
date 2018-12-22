@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Added "Enter Map Layer" button for Cavern Entrances and Portals, which changes the current map layer to the one the building leads to.
+- Added snowy variations for the Germanic War Lodge and the Dwarven War Hall.
 
 * Deities
 - Added Loki major deity for the Dwarves and the Norse. Loki provides a 50% Backstab Bonus to sword and axe infantry, and the Slow spell for priests.
