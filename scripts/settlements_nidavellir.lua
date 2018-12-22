@@ -292,8 +292,8 @@ DefineSite("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (H
 
 DefineSite("svarinshaug", {
 	Name = "Svarinshaug",
-	MapTemplate = "nidavellir",
-	Position = {691, 193},
+	MapTemplate = "svarinshaug",
+	Position = {-1, -1},
 	Major = true,
 	CulturalNames = {
 		"dwarf", "Svarinshaug"

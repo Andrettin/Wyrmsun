@@ -100,6 +100,7 @@ NidavellirStartY = 132
 SetMapTemplateResource("nidavellir", "unit-gold-deposit", {485, 119}) -- gold deposit for Andvari's clan
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
+--[[
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")
 Load("scripts/map_templates/nidavellir/chaincolt_foothills.lua")
 Load("scripts/map_templates/nidavellir/chaincolt_shore.lua")
@@ -111,17 +112,22 @@ Load("scripts/map_templates/nidavellir/goblin_bridge.lua")
 Load("scripts/map_templates/nidavellir/gryphon_mountain.lua")
 Load("scripts/map_templates/nidavellir/high_pass.lua")
 Load("scripts/map_templates/nidavellir/highbrook_pass.lua")
+--]]
 Load("scripts/map_templates/nidavellir/joruvellir.lua")
+--[[
 Load("scripts/map_templates/nidavellir/knalgan_marches.lua")
 Load("scripts/map_templates/nidavellir/northern_foothills.lua")
 Load("scripts/map_templates/nidavellir/ofnirs_valley.lua")
 Load("scripts/map_templates/nidavellir/outskirts_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/peaceful_valley.lua")
 Load("scripts/map_templates/nidavellir/shorbear_hills.lua")
+--]]
 Load("scripts/map_templates/nidavellir/svarinshaug.lua")
+--[[
 Load("scripts/map_templates/nidavellir/swamp_of_dread.lua")
 Load("scripts/map_templates/nidavellir/west_gate_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/wildlands.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")
+--]]
 
 Load("scripts/map_templates/nidavellir/island_of_the_lizard_god.lua")
