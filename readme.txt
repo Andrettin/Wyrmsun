@@ -46,15 +46,16 @@ See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
 
-For the source code of the Stratagus engine itself, see:
-https://github.com/Wargus/stratagus
-
 Wyrmsun's data repository can be found here:
 https://github.com/Andrettin/Wyrmsun
 
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 3.5.1
+-----------------------------------------------------------------------
 
 -----------------------------------------------------------------------
 - 3.5.0
