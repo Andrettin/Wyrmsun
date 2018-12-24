@@ -112,9 +112,6 @@ Load("scripts/map_templates/nidavellir/goblin_bridge.lua")
 Load("scripts/map_templates/nidavellir/gryphon_mountain.lua")
 Load("scripts/map_templates/nidavellir/high_pass.lua")
 Load("scripts/map_templates/nidavellir/highbrook_pass.lua")
---]]
-Load("scripts/map_templates/nidavellir/joruvellir.lua")
---[[
 Load("scripts/map_templates/nidavellir/knalgan_marches.lua")
 Load("scripts/map_templates/nidavellir/northern_foothills.lua")
 Load("scripts/map_templates/nidavellir/ofnirs_valley.lua")

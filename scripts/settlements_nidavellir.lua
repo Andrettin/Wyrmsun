@@ -185,8 +185,8 @@ DefineSite("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "Among t
 
 DefineSite("joruvellir", { -- Joruvellir settlement site; Joruvellir is a region rather than a settlement, but we have no name for a settlement there yet
 	Name = "Joruvellir",
-	MapTemplate = "nidavellir",
-	Position = {784, 339},
+	MapTemplate = "joruvellir",
+	Position = {-1, -1},
 	Major = true,
 	CulturalNames = {
 		"dwarf", "Joruvellir"

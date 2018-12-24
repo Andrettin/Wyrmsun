@@ -38,18 +38,3 @@ SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitnin
 
 SetMapTemplateLayerConnector("svarinshaug", "unit-cavern-entrance", {-1, -1}, 1)
 SetMapTemplateLayerConnector("svarinshaug-underground", "unit-cavern-entrance", {-1, -1}, 0)
-
-SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-miner", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-scout", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-yale-rider", "goldhoof-clan", {706, 222}, -2800, -2799)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-witness", "goldhoof-clan", {706, 222}, -2800, -2799)

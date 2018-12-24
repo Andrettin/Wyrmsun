@@ -44,11 +44,11 @@ DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 					SetPlayerData(trigger_player, "AcceptQuest", "a-home-in-the-fields-of-sand")
 					unit = FindUnit("unit-revealer", trigger_player)
 					if not (unit) then
-						unit = CreateUnit("unit-revealer", trigger_player, {784 - NidavellirStartX, 339 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0))
+						unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY")}, GetSiteData("joruvellir", "MapLayer"))
 					end
 					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetMapLayer("material-plane", "nidavellir", 0))
-					CenterMap(784 - NidavellirStartX, 339 - NidavellirStartY)
+					ChangeCurrentMapLayer(GetSiteData("joruvellir", "MapLayer"))
+					CenterMap(GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY"))
 				end
 			}
 		},
