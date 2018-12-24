@@ -46,15 +46,16 @@ See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
 
-For the source code of the Stratagus engine itself, see:
-https://github.com/Wargus/stratagus
-
 Wyrmsun's data repository can be found here:
 https://github.com/Andrettin/Wyrmsun
 
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 3.5.1
+-----------------------------------------------------------------------
 
 -----------------------------------------------------------------------
 - 3.5.0
@@ -110,7 +111,7 @@ https://github.com/Andrettin/Wyrmsun
 - Bats, blood bats and dread bats are now selectable and have icons.
 
 * User Interface
-- The minimum resolution for the game is now 1024.
+- The minimum resolution width for the game is now 1024.
 - Pressing CTRL+L now returns the player to the previous map layer they were in.
 - Hovering the mouse over resource amounts will now also display the tooltip for the respective resource (previously the tooltip was only displayed if hovering the mouse over the resource's icon). This also applies to the food and score amounts.
 - A text string is now displayed at the top of the screen delineating which "age" the player is currently in (e.g. Bronze Age). This changes automatically depending on which upgrades are researched. For instance, when the player researches Ironworking they will change from the Bronze Age to the Iron Age.
