@@ -1632,7 +1632,7 @@ function LoadDataDirectories(directory)
 	local fileslist = ListFilesInDirectory(directory)
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
-			Load(directory .. f)
+			LoadConfigFile(directory .. f)
 		end
 	end
 	
@@ -1648,7 +1648,7 @@ function LoadDataFiles(directory)
 	local fileslist = ListFilesInDirectory(directory)
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
-			Load(directory .. f)
+			LoadConfigFile(directory .. f)
 		end
 	end
 	
