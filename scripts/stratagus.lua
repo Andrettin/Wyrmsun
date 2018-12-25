@@ -35,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "3.5.1"
+wyrmsun.Version = "3.5.2"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2018 by Andrettin"
@@ -1632,7 +1632,7 @@ function LoadDataDirectories(directory)
 	local fileslist = ListFilesInDirectory(directory)
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
-			Load(directory .. f)
+			LoadConfigFile(directory .. f)
 		end
 	end
 	
@@ -1648,7 +1648,7 @@ function LoadDataFiles(directory)
 	local fileslist = ListFilesInDirectory(directory)
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
-			Load(directory .. f)
+			LoadConfigFile(directory .. f)
 		end
 	end
 	
