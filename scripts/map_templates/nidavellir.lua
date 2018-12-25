@@ -91,9 +91,6 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "earth")
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {-1, -1}, 0)
 
---NidavellirStartX = 404
---NidavellirStartY = 74
---NidavellirStartX = 362
 NidavellirStartX = 525
 NidavellirStartY = 132
 
