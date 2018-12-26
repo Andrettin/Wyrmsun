@@ -416,6 +416,7 @@ DefineButton( { Pos = 13, Icon = "icon-level-up",
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
@@ -440,7 +441,8 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2.",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
-		"unit-dwarven-loremaster"
+		"unit-dwarven-loremaster",
+		"unit-troll-warrior"
 	}
 } )
 
@@ -574,6 +576,7 @@ DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
@@ -605,6 +608,7 @@ DefineButton( { Pos = 3, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
@@ -637,6 +641,7 @@ DefineButton( { Pos = 4, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
@@ -675,7 +680,8 @@ DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-goblin-warlord",
 		"unit-kobold-champion",
 		"unit-ettin",
-		"unit-elven-swordsman"
+		"unit-elven-swordsman",
+		"unit-troll-warrior"
 	}
 } )
 
@@ -771,6 +777,7 @@ DefineButton( { Pos = 8, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat", "unit-gryphon"
 	}
 } )
@@ -811,7 +818,8 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-goblin-magnate",
 --		"unit-kobold-champion",
 		"unit-ettin",
---		"unit-elven-swordsman", "unit-elven-priest"
+--		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior"
 	}
 } )
 --]]
@@ -877,6 +885,7 @@ DefineButton( { Pos = 16, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-ettin",
 		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	} 
 } )
@@ -922,7 +931,8 @@ DefineButton( { Pos = 14, Icon = "icon-inventory",
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-wyrm",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest"
+		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior"
 	}
 } )
 
@@ -985,7 +995,8 @@ DefineButton( { Pos = 16, Level = "inventory-level", Icon = "icon-cancel",
 		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 		"unit-wyrm",
 		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest"
+		"unit-elven-swordsman", "unit-elven-priest",
+		"unit-troll-warrior"
 	} 
 } )
 
@@ -1109,7 +1120,8 @@ DefineButton( { Pos = 6, Icon = "icon-stun",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-warlord",
 		"unit-kobold-champion",
-		"unit-ettin"
+		"unit-ettin",
+		"unit-troll-warrior"
 	}
 })
 

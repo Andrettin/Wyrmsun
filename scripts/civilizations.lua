@@ -3034,6 +3034,7 @@ DefineCivilization("troll", {
 	Adjective = "Troll",
 	Playable = false,
 	DefaultColor = "green",
+	CivilizationUpgrade = "upgrade-troll-civilization",
 	PersonalNames = {
 		"male", "Ag", -- "Äg"; from Battle for Wesnoth
 		"male", "Agh", -- from Battle for Wesnoth

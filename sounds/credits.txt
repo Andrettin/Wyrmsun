@@ -65,6 +65,9 @@ Battle for Wesnoth Team:
 /sounds/orc/basic_voices/orc-die-1.wav (licensed under the GPL 2.0)
 /sounds/orc/basic_voices/orc-die-2.wav (licensed under the GPL 2.0)
 /sounds/orc/basic_voices/orc-die-3.wav (licensed under the GPL 2.0)
+/sounds/troll/basic_voices/troll-die-1.wav (licensed under the GPL 2.0)
+/sounds/troll/basic_voices/troll-die-2.wav (licensed under the GPL 2.0)
+/sounds/troll/basic_voices/troll-die-3.wav (licensed under the GPL 2.0)
 /sounds/ui/click.wav (licensed under the GPL 2.0)
 
 b_o:

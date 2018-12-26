@@ -48,7 +48,13 @@ AddTrigger("aurvangling-goblins-sighted",
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("aurvangling-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (uncount[unit1] and GetUnitVariable(uncount[unit1], "PosX") >= (569 - NidavellirStartX) and GetUnitVariable(uncount[unit1], "PosX") <= (780 - NidavellirStartX) and GetUnitVariable(uncount[unit1], "PosY") >= (224 - NidavellirStartY) and GetUnitVariable(uncount[unit1], "PosY") <= (339 - NidavellirStartY)) then
+					if (
+						uncount[unit1]
+						and GetUnitVariable(uncount[unit1], "PosX") >= GetMapTemplateData("aurvang", "MapStartPosX")
+						and GetUnitVariable(uncount[unit1], "PosX") <= GetMapTemplateData("aurvang", "MapEndPosX")
+						and GetUnitVariable(uncount[unit1], "PosY") >= GetMapTemplateData("aurvang", "MapStartPosY")
+						and GetUnitVariable(uncount[unit1], "PosY") <= GetMapTemplateData("aurvang", "MapEndPosY")
+					) then
 						if (GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}, GetUnitVariable(uncount[unit1], "MapLayer")) > 0) then
 							trigger_player = i
 							return true
@@ -68,7 +74,7 @@ AddTrigger("aurvangling-goblins-sighted",
 AddTrigger("joruvellir-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "any", {738 - NidavellirStartX, 309 - NidavellirStartY}, {838 - NidavellirStartX, 385 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "any", {GetMapTemplateData("joruvellir", "MapStartPosX"), GetMapTemplateData("joruvellir", "MapStartPosY")}, {GetMapTemplateData("joruvellir", "MapEndPosX"), GetMapTemplateData("joruvellir", "MapEndPosY")}, GetMapLayer("material-plane", "nidavellir", 0)) > 0) then
 				trigger_player = i
 				return true
 			end
@@ -84,7 +90,7 @@ AddTrigger("joruvellir-sighted",
 AddTrigger("joruvellir-hall-completed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "unit-dwarven-town-hall", {754 - NidavellirStartX, 323 - NidavellirStartY}, {822 - NidavellirStartX, 374 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "unit-dwarven-town-hall", {GetSiteData("joruvellir", "MapCenterPosX") - 16, GetSiteData("joruvellir", "MapCenterPosY") - 16}, {GetSiteData("joruvellir", "MapCenterPosX") + 16, GetSiteData("joruvellir", "MapCenterPosY") + 16}, GetSiteData("joruvellir", "MapLayer")) > 0) then
 				trigger_player = i
 				return true
 			end

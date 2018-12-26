@@ -314,5 +314,3 @@ DefineCharacter("regin", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"}
 })
-
-Load("scripts/civilizations/dwarf/characters_joruvellir.lua")

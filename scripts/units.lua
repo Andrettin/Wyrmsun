@@ -188,7 +188,6 @@ Units = {
 	"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 	"unit-elven-swordsman", "unit-elven-priest", 
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
-	"upgrade-ettin-civilization",
 	"unit-ettin",
 	"unit-ettin-town-hall",
 	"unit-caravan",
@@ -5084,7 +5083,8 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-ettin", 1,
 		"unit-latin-legionary", 4, "unit-latin-javelineer", 3,
 		"unit-norse-swordsman", 4,
-		"unit-slavic-swordsman", 4
+		"unit-slavic-swordsman", 4,
+		"unit-troll-warrior", 2
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {

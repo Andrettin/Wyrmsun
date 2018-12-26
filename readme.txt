@@ -100,6 +100,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
 - Quests will no longer fail if they require researching a given upgrade, and you have lost the building that researches it but still have workers to rebuild the structure.
 
+* Scenarios
+- The Nidavellir map is now randomly-generated.
+
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
 - Added support for season-specific terrain graphics.
