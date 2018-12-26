@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Game;StrategyGame;
-Exec=wyrmgus -d /usr/share/wyrmsun
+Exec=wyrmsun
 GenericName=Mythologic realtime-strategy game
 GenericName[de]=Mythologisches Echtzeitstrategiespiel
 Icon=wyrmsun
