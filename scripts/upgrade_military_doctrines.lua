@@ -69,7 +69,8 @@ DefineModifier("upgrade-shield-wall",
 	{"apply-to", "unit-slavic-swordsman"},
 	{"apply-to", "unit-goblin-militia"},
 	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"},
-	{"apply-to", "unit-goblin-spearman"}
+	{"apply-to", "unit-goblin-spearman"},
+	{"apply-to", "unit-troll-warrior"}
 )
 
 DefineModifier("upgrade-shield-wall",
@@ -95,7 +96,8 @@ DefineModifier("upgrade-svinfylking",
 	{"apply-to", "unit-slavic-swordsman"},
 	{"apply-to", "unit-goblin-militia"},
 	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"},
-	{"apply-to", "unit-goblin-spearman"}
+	{"apply-to", "unit-goblin-spearman"},
+	{"apply-to", "unit-troll-warrior"}
 )
 
 DefineModifier("upgrade-svinfylking",
