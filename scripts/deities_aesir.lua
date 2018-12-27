@@ -27,7 +27,7 @@
 
 DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	Name = "Odin",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
@@ -51,7 +51,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 
 DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	Name = "Thor",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
@@ -73,7 +73,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 
 DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
 	Name = "Frigg",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -89,7 +89,7 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 
 DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	Name = "Seaxneat",
-	Pantheon = "Aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but we don't know if he was actually considered one of the Aesir
+	Pantheon = "aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but we don't know if he was actually considered one of the Aesir
 	Civilizations = {"anglo-saxon"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -98,7 +98,7 @@ DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 
 DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 5-6, 250.
 	Name = "Sol",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"frankish", "germanic", "norse", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -115,7 +115,7 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 
 DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.
 	Name = "Tyr",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir); also allowed for the Goths since otherwise they would have too few minor deities
 	Religions = {"paganism"},
@@ -136,7 +136,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
 	Name = "Aegir",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -145,7 +145,7 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 
 DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
 	Name = "Balder",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon", "norse"},
 	Religions = {"paganism"},
@@ -159,7 +159,7 @@ DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder 
 
 DefineDeity("bragi", { -- son of Odin and husband of Idun; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 50.
 	Name = "Bragi",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -169,7 +169,7 @@ DefineDeity("bragi", { -- son of Odin and husband of Idun; Source: Kevin Crossle
 
 DefineDeity("delling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 5; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 66.
 	Name = "Delling",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"dwarf", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -179,7 +179,7 @@ DefineDeity("delling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 
 DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241.
 	Name = "Eir",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -188,7 +188,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 
 DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Eostre",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
@@ -197,7 +197,7 @@ DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 
 DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 49.
 	Name = "Forseti",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -207,7 +207,7 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 
 DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
 	Name = "Fulla",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse", "frankish", "suebi", "teuton"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -220,7 +220,7 @@ DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The
 
 DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
 	Name = "Gefion",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -229,7 +229,7 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 
 DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig (the progenitor of the three races of man in Norse mythology); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxvii-xxviii, 244.
 	Name = "Heimdall",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"germanic", "anglo-saxon", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -244,7 +244,7 @@ DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig 
 
 DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	Name = "Hel",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "niflheim",
 	Civilizations = {"anglo-saxon", "dwarf", "ettin", "frankish", "germanic", "goblin", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also included for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells; Hel is referred to as a giantess in the Hamthesmol, stanza 17, so it makes sense for her to be an ettin deity
 	Religions = {"paganism"},
@@ -267,7 +267,7 @@ DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeologic
 
 DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brother Balder; returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 	Name = "Hod",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male"
@@ -275,7 +275,7 @@ DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brothe
 
 DefineDeity("hoenir", { -- Long-legged god; indecisive; sent by the Aesir to the Vanir to seal their truce; survives Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 78-79, 83.
 	Name = "Hoenir", -- "Hœnir"
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -284,7 +284,7 @@ DefineDeity("hoenir", { -- Long-legged god; indecisive; sent by the Aesir to the
 
 DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Hretha",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
@@ -293,7 +293,7 @@ DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 
 DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 107-109.
 	Name = "Idun",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
@@ -303,7 +303,7 @@ DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of y
 
 DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known as Fjorgyn; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 241-242.
 	Name = "Jord",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -312,7 +312,7 @@ DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known 
 
 DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
 	Name = "Lofn",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -321,7 +321,7 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 
 DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247. Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 41-42.
 	Name = "Loki",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"dwarf", "ettin", "norse"}, -- during Ragnarok, he was on the same side as the giants
 	Religions = {"paganism"},
 	Gender = "male",
@@ -334,7 +334,7 @@ DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambi
 
 DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with the Vanir, but was killed by the latter; his head was preserved by Odin and put by Mimir's Well; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
 	Name = "Mimir",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -343,7 +343,7 @@ DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with th
 
 DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
 	Name = "Nanna",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -351,7 +351,7 @@ DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Cross
 
 DefineDeity("ring", { -- Odin's mistress; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
 	Name = "Ring",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -359,7 +359,7 @@ DefineDeity("ring", { -- Odin's mistress; Source: Kevin Crossley-Holland, "The N
 
 DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
 	Name = "Saga",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -367,7 +367,7 @@ DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Sou
 
 DefineDeity("sif", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxxi, 48-49, 198-199, 249.
 	Name = "Sif",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	HomePlane = "asgard",
 	Civilizations = {"dwarf", "norse"}, -- available for dwarves due to her connection (though small) with them in the Norse myth
 	Religions = {"paganism"},
@@ -377,7 +377,7 @@ DefineDeity("sif", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 
 DefineDeity("sjofn", { -- inspired human passion; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
 	Name = "Sjofn",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -385,7 +385,7 @@ DefineDeity("sjofn", { -- inspired human passion; Source: Kevin Crossley-Holland
 
 DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 250.
 	Name = "Syn",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -393,7 +393,7 @@ DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Hollan
 
 DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 50.
 	Name = "Ull",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -403,7 +403,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 	Name = "Var",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
@@ -411,7 +411,7 @@ DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes tho
 
 DefineDeity("vor", { -- nothing could be kept hidden from her; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
 	Name = "Vor",
-	Pantheon = "Aesir",
+	Pantheon = "aesir",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"

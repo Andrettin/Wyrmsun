@@ -27,7 +27,7 @@
 
 DefineDeity("poseidon", {
 	Name = "Poseidon",
-	Pantheon = "Olympian",
+	Pantheon = "olympian",
 	Civilizations = {"greek", "latin"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -41,7 +41,7 @@ DefineDeity("poseidon", {
 
 DefineDeity("apollo", {
 	Name = "Apollo",
-	Pantheon = "Olympian",
+	Pantheon = "olympian",
 	Civilizations = {"greek", "latin"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -51,7 +51,7 @@ DefineDeity("apollo", {
 
 DefineDeity("hermes", {
 	Name = "Hermes",
-	Pantheon = "Olympian",
+	Pantheon = "olympian",
 	Civilizations = {"greek", "latin"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -65,7 +65,7 @@ DefineDeity("hermes", {
 
 DefineDeity("roma", { -- goddess who is a personification of the city of Rome; Source: "Ancient Warfare VII.6", 2013, p. 19.
 	Name = "Roma",
-	Pantheon = "Olympian",
+	Pantheon = "olympian",
 	Civilizations = {"latin"},
 	Religions = {"paganism"},
 	Gender = "female"

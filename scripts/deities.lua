@@ -56,7 +56,7 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 
 DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
-	Pantheon = "Goblin",
+	Pantheon = "goblin",
 	HomePlane = "niflheim",
 	Civilizations = {"goblin"},
 	Religions = {"paganism"},

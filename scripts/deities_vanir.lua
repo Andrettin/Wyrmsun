@@ -27,7 +27,7 @@
 
 DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 45.
 	Name = "Frey",
-	Pantheon = "Vanir",
+	Pantheon = "vanir",
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Frey an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
@@ -42,7 +42,7 @@ DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980
 
 DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 46-47.
 	Name = "Freyja",
-	Pantheon = "Vanir",
+	Pantheon = "vanir",
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Freyja an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
@@ -59,7 +59,7 @@ DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical 
 
 DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 7; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 81-82.
 	Name = "Gullveig",
-	Pantheon = "Vanir",
+	Pantheon = "vanir",
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Gullveig an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
@@ -70,7 +70,7 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 
 DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
 	Name = "Kvasir",
-	Pantheon = "Vanir",
+	Pantheon = "vanir",
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Kvasir an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
@@ -83,7 +83,7 @@ DefineDeity("kvasir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 19
 
 DefineDeity("nerthus", { -- same etymological root as Njord, likely originally the same deity; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 44, 47.
 	Name = "Nerthus",
-	Pantheon = "Vanir", -- since Njord is a part of the Vanir
+	Pantheon = "vanir", -- since Njord is a part of the Vanir
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "suebi", "teuton"}, -- worshipped by the Langobards
 	Religions = {"paganism"},
@@ -94,7 +94,7 @@ DefineDeity("nerthus", { -- same etymological root as Njord, likely originally t
 
 DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 54.
 	Name = "Njord",
-	Pantheon = "Vanir",
+	Pantheon = "vanir",
 	HomePlane = "vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Njord an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
@@ -108,7 +108,7 @@ DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The
 
 DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Name = "Eloh",
-	Pantheon = "Vanir", -- since she is an elven deity
+	Pantheon = "vanir", -- since she is an elven deity
 	HomePlane = "vanaheim",
 	Civilizations = {"elf"},
 	Religions = {"paganism"},
