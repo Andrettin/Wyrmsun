@@ -31,28 +31,16 @@ Load("scripts/deities_baltic.lua")
 Load("scripts/deities_celtic.lua")
 Load("scripts/deities_christianity.lua")
 Load("scripts/deities_egyptian.lua")
-Load("scripts/deities_olympian.lua")
 Load("scripts/deities_slavic.lua")
-Load("scripts/deities_titan.lua")
 Load("scripts/deities_vanir.lua")
 
 --[[
 DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the Barbarian World, vol. 1, p. 108
-	Civilization = "indo-european",
+	Civilizations = {"indo-european"},
 	Gender = "male",
 	Major = true
 })
 --]]
-
-DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 200-201.
-	Name = "Gaia",
-	Civilizations = {"ettin", "greek"},
-	Religions = {"paganism"},
-	Gender = "female",
-	Major = true,
-	Domains = {"earth", "chaos"},
---	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshipers are the ettins of Jotunheim, to whom she appeared in ages past."
-})
 
 DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
