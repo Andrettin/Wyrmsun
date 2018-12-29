@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.2
 -----------------------------------------------------------------------
 
+* Upgrades
+- Added Sailing upgrade, which increases speed for ships. The starting speed for ships has been accordingly toned down, so that the final speed is the same as before. Sailing is researched at the Dock.
+
 -----------------------------------------------------------------------
 - 3.5.1
 -----------------------------------------------------------------------

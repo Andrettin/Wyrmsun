@@ -59,8 +59,6 @@ function RunTechTreeMenu(civilization_number)
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
 	
-		
-	
 	function addTechItemIcon(unit, menu, x, y, playercolor)
 		local unit_name = ""
 		local tech_description
@@ -273,6 +271,9 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUpgradeData(unitName, "Class") == "coinage") then
 					tech_icon_x = 5
 					tech_icon_y = 5
+				elseif (GetUpgradeData(unitName, "Class") == "sailing") then
+					tech_icon_x = 5
+					tech_icon_y = 7
 				elseif (GetUpgradeData(unitName, "Class") == "writing") then
 					tech_icon_x = 5
 					tech_icon_y = 4
@@ -322,7 +323,7 @@ function RunTechTreeMenu(civilization_number)
 		end
 	end
 	
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 10),
 		function() SetPlayerData(GetThisPlayer(), "RaceName", "gnome"); menu:stop(); end)
 
 	menu:run()

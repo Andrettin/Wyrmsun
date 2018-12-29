@@ -111,7 +111,8 @@ function ApplyTechLevels()
 		"upgrade-wood-plow",
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
-		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow"
+		"upgrade-goblin-broad-sword", "upgrade-goblin-long-spear", "upgrade-goblin-rimmed-shield", "upgrade-goblin-barbed-arrow",
+		"upgrade-sailing"
 	}
 	local iron_upgrades = {
 		"upgrade-ironworking",
