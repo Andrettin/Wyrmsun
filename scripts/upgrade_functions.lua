@@ -123,7 +123,8 @@ function ApplyTechLevels()
 		"upgrade-dwarven-great-axe", "upgrade-dwarven-pike", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 		"upgrade-goblin-long-sword", "upgrade-goblin-pike", "upgrade-goblin-embossed-shield", "upgrade-goblin-bodkin-arrow",
-		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2"
+		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
+		"upgrade-celestial-navigation"
 	}
 	local gunpowder_upgrades = {
 		"upgrade-gunpowder"
