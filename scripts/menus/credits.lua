@@ -47,6 +47,7 @@ function RunShowCreditsMenu()
 		"  Russell Smith",
 		"  a-detiste",
 		"  Akien",
+		"  BeWorld2018",
 		"  Chris Beck (iceiceice)",
 		"  DinkyDyeAussie",
 		"  Dmitry Marakasov",
