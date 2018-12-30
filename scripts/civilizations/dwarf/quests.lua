@@ -406,7 +406,7 @@ DefineQuest("andvaris-gold", {
 	Conditions = function(s)
 		if (
 			GetFactionExists("oinling-clan", true) -- Andvari's clan must exist
-			and GetNumUnitsAt(trigger_player, "any", {490 - 256 - NidavellirStartX, 107 - 256 - NidavellirStartY}, {490 + 256 - NidavellirStartX, 107 + 256 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) > 0 -- the player must be within a certain distance of Andvari's holding
+			and GetNumUnitsAt(trigger_player, "any", {GetSiteData("andvaris-falls", "MapCenterPosX") - 256, GetSiteData("andvaris-falls", "MapCenterPosY") - 256}, {GetSiteData("andvaris-falls", "MapCenterPosX") + 256, GetSiteData("andvaris-falls", "MapCenterPosY") + 256}, GetSiteData("andvaris-falls", "MapLayer")) > 0 -- the player must be within a certain distance of Andvari's holding
 		) then
 			return true
 		end
@@ -420,7 +420,7 @@ DefineQuest("andvaris-gold", {
 	CompletionEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
-		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0))
+		unit = CreateUnit("unit-ring", PlayerNumNeutral, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")
 		else
@@ -434,9 +434,12 @@ DefineQuest("andvaris-gold", {
 	Rewards = "+10,000 Copper, Magic Ring",
 	Objectives = {
 		{
-			"objective-type", "destroy-faction",
-			"objective-string", "Destroy the Oinling Clan",
-			"faction", "oinling-clan"
+			"objective-type", "destroy-units",
+			"objective-string", "Destroy the Oinling Clan's Mead Hall",
+			"quantity", 1,
+			"settlement", "andvaris-falls",
+			"unit-type", "unit-dwarven-town-hall",
+			"unit-type", "unit-dwarven-stronghold"
 		}
 	},
 	Competitive = true

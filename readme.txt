@@ -57,6 +57,13 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.2
 -----------------------------------------------------------------------
 
+* Quests
+- The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
+
+* Scenarios
+- The Nidavellir map is now randomly-generated.
+- The trigger which creates the Oinling Clan now gives a Mead Hall for it as well.
+
 * Units
 - The starting speed for ships has been toned down, so that the final speed after researching the new upgrades is still the same as before.
 
@@ -106,9 +113,6 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed issue which caused quest objectives to keep being displayed when loading a save game from within a quest.
 - Quests will no longer fail if they require researching a given upgrade, and you have lost the building that researches it but still have workers to rebuild the structure.
-
-* Scenarios
-- The Nidavellir map is now randomly-generated.
 
 * Terrain
 - Fixed issue which caused walls to regrow when destroyed if built on top of cleared forests.
