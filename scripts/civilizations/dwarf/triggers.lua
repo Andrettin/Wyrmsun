@@ -49,7 +49,7 @@ AddTrigger("oin-leaves",
 		if (GetFactionExists("oinling-clan")) then
 			return false
 		end
-		if ( -- if Andvari's Falls are empty, but there are certain Dwarven structures within a certain range of it
+		if ( -- if Andvari's Falls are empty, but there are certain dwarven structures within a certain range of it
 			GetNumUnitsAt(-2, "any", {490 - 16 - NidavellirStartX, 107 - 16 - NidavellirStartY}, {490 + 16 - NidavellirStartX, 107 + 16 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0)) == 0
 			and (490 - NidavellirStartX) > 0
 			and (107 - NidavellirStartY) > 0
