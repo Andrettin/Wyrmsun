@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("acthna", {
-	Name = "Acthna",
-	MapTemplate = "nidavellir",
-	Position = {378, 198},
-	Major = true,
-	CulturalNames = {
-		"gnome", "Acthna"
-	},
-	Cores = {
-		"acthnic-tribe",
-		"acthna"
-	},
-	HistoricalOwners = {
-		-3000, "acthnic-tribe", -- maybe should be later?
-		1, "acthna" -- maybe should be at another date?
-	},
-	HistoricalBuildings = {
-		-3000, 0, "town-hall"
-	},
-	Regions = {}
-})
-
 DefineSite("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
 	Name = "Chaincolt",
 	MapTemplate = "nidavellir-underground",
