@@ -102,10 +102,36 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 	
 		local modsognir_player = GetUnitVariable(FindHero("modsognir"), "Player")
 		local modsognir_building = nil
-
-		unit = CreateUnit("unit-revealer", trigger_player, {704 - NidavellirStartX, 177 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 0))
+		
+		-- create revealers at the cavern entrances between Svarinshaug and Svarinshaug Underground
+		local cavern_entrance_x
+		local cavern_entrance_y
+		local cavern_entrance_z
+		uncount = GetUnits(PlayerNumNeutral)
+		for unit1 = 1,table.getn(uncount) do 
+			if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Ident") == "unit-cavern-entrance") then
+				if (
+					GetUnitVariable(uncount[unit1], "MapLayer") == GetSiteData("svarinshaug", "MapLayer")
+					and GetUnitVariable(uncount[unit1], "PosX") >= (GetSiteData("svarinshaug", "MapCenterPosX") - 24)
+					and GetUnitVariable(uncount[unit1], "PosX") < (GetSiteData("svarinshaug", "MapCenterPosX") + 24)
+					and GetUnitVariable(uncount[unit1], "PosY") >= (GetSiteData("svarinshaug", "MapCenterPosY") - 24)
+					and GetUnitVariable(uncount[unit1], "PosY") < (GetSiteData("svarinshaug", "MapCenterPosY") + 24)
+				) then
+					cavern_entrance_x = GetUnitVariable(uncount[unit1], "PosX") + 1
+					cavern_entrance_y = GetUnitVariable(uncount[unit1], "PosY") + 1
+					cavern_entrance_z = GetUnitVariable(uncount[unit1], "MapLayer")
+				end
+			end
+		end
+		
+		if (cavern_entrance_x == nil or cavern_entrance_y == nil or cavern_entrance_z == nil) then
+			return false -- no point in trying again if there is no cavern entrance leading to Svarinshaug
+		end
+		
+		unit = CreateUnit("unit-revealer", trigger_player, {cavern_entrance_x, cavern_entrance_y}, cavern_entrance_z)
 		SetUnitVariable(unit, "TTL", 600)
-		unit = CreateUnit("unit-revealer", trigger_player, {704 - NidavellirStartX, 177 - NidavellirStartY}, GetMapLayer("material-plane", "nidavellir", 1))
+					
+		unit = CreateUnit("unit-revealer", trigger_player, {cavern_entrance_x, cavern_entrance_y}, GetMapLayer("material-plane", "nidavellir", 1))
 		SetUnitVariable(unit, "TTL", 600)
 		
 		uncount = GetUnits(modsognir_player)
@@ -114,8 +140,8 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 				if (modsognir_building == nil) then
 					modsognir_building = uncount[unit1]
 				else
-					local old_pos_difference = math.abs(GetUnitVariable(modsognir_building, "PosX") - (704 - NidavellirStartX)) + math.abs(GetUnitVariable(modsognir_building, "PosY") - (177 - NidavellirStartY))
-					local new_pos_difference = math.abs(GetUnitVariable(uncount[unit1], "PosX") - (704 - NidavellirStartX)) + math.abs(GetUnitVariable(uncount[unit1], "PosY") - (177 - NidavellirStartY))
+					local old_pos_difference = math.abs(GetUnitVariable(modsognir_building, "PosX") - cavern_entrance_x) + math.abs(GetUnitVariable(modsognir_building, "PosY") - cavern_entrance_y)
+					local new_pos_difference = math.abs(GetUnitVariable(uncount[unit1], "PosX") - cavern_entrance_x) + math.abs(GetUnitVariable(uncount[unit1], "PosY") - cavern_entrance_y)
 					if (new_pos_difference < old_pos_difference) then
 						modsognir_building = uncount[unit1]
 					end
