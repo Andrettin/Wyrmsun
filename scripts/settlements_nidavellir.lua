@@ -47,28 +47,6 @@ DefineSite("acthna", {
 	Regions = {}
 })
 
-DefineSite("aurvang", { -- Aurvang settlement site; Aurvang is a region rather than a settlement, but we have no name for a settlement there yet
-	Name = "Aurvang",
-	MapTemplate = "nidavellir",
-	Position = {750, 277},
-	Major = true,
-	CulturalNames = {
-		"dwarf", "Aurvang",
-		"goblin", "Aurvang"
-	},
-	Cores = {
-		"aurvangling-tribe",
-		"aurvang"
-	},
-	HistoricalOwners = {
-		-3000, "aurvangling-tribe"
-	},
-	HistoricalBuildings = {
-		-3000, 0, "town-hall"
-	},
-	Regions = {}
-})
-
 DefineSite("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
 	Name = "Chaincolt",
 	MapTemplate = "nidavellir-underground",
@@ -157,42 +135,6 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	HistoricalUnits = { -- some units for defense
 		600, 0, "unit-goblin-swordsman", 3000, "driftwood",
 		600, 0, "unit-goblin-archer", 2000, "driftwood"
-	},
-	Regions = {}
-})
-
-DefineSite("gnana", { -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
-	Name = "Gnana",
-	MapTemplate = "nidavellir",
---	Position = {329, 221},
-	Position = {355, 209},
-	Major = true,
-	CulturalNames = {
-		"gnome", "Gnana"
-	},
-	Cores = {
-		"untersberg"
-	},
-	HistoricalOwners = {
-		-3000, "sagan-tribe", -- maybe should be later?
-		1, "untersberg" -- maybe should be at another date?
-	},
-	HistoricalBuildings = {
-		-3000, 0, "town-hall"
-	},
-	Regions = {}
-})
-
-DefineSite("joruvellir", { -- Joruvellir settlement site; Joruvellir is a region rather than a settlement, but we have no name for a settlement there yet
-	Name = "Joruvellir",
-	MapTemplate = "joruvellir",
-	Position = {-1, -1},
-	Major = true,
-	CulturalNames = {
-		"dwarf", "Joruvellir"
-	},
-	Cores = {
-		"joruvellir"
 	},
 	Regions = {}
 })
@@ -286,23 +228,6 @@ DefineSite("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (H
 	},
 	HistoricalBuildings = {
 		24, 35, "stronghold", "shorbear-hold"
-	},
-	Regions = {}
-})
-
-DefineSite("svarinshaug", {
-	Name = "Svarinshaug",
-	MapTemplate = "svarinshaug",
-	Position = {-1, -1},
-	Major = true,
-	CulturalNames = {
-		"dwarf", "Svarinshaug"
-	},
-	HistoricalOwners = {
-		-2999, "brising-clan"
-	},
-	HistoricalBuildings = {
-		-2999, 0, "town-hall"
 	},
 	Regions = {}
 })
