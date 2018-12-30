@@ -29,16 +29,16 @@
 --SetMapTemplateHero("nidavellir-underground", "fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
 --SetMapTemplateHero("nidavellir-underground", "galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
 
-SetMapTemplateUnit("nidavellir", "unit-wyrm", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
-SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {640, 118})
+SetMapTemplateUnit("nidavellir", "unit-wyrm", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
+SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "svafning-tribe", {-1, -1})
 
 SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
@@ -51,7 +51,6 @@ SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tri
 SetMapTemplateUnit("nidavellir-underground", "unit-kobold-footpad", "fafning-tribe", {-1, -1}, 561, 566)
 SetMapTemplateHero("nidavellir-underground", "fafnir", "fafning-tribe", {-1, -1}, 561, 566) -- Sigibert's campaign begins in 561; Sigibert's encounter with Fafnir (in which the latter was killed) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 
---[[
 SetMapTemplateHero("nidavellir", "goin", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "goinling-tribe", {-1, -1})
@@ -84,14 +83,11 @@ SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
 SetMapTemplateUnit("nidavellir", "unit-kobold-footpad", "moinling-tribe", {-1, -1})
---]]
 
 --SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "asgard")
 --SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {-1, -1}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "earth")
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {-1, -1}, 0)
-
-SetMapTemplateResource("nidavellir", "unit-gold-deposit", {485, 119}) -- gold deposit for Andvari's clan
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 --[[
