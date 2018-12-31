@@ -255,7 +255,7 @@ DefineButton( { Pos = 16, Icon = "icon-salvage",
 		"unit-goblin-dock",
 		"unit-goblin-banner",
 		"unit-gold-mine", "unit-silver-mine", "unit-copper-mine", "unit-iron-mine", "unit-mithril-mine",
---		"unit-coal-mine",
+		"unit-coal-mine",
 		"unit-diamond-mine", "unit-emerald-mine",
 		"unit-yale-hunting-lodge",
 		"unit-mercenary-camp"

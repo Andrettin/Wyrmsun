@@ -972,6 +972,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-coal-deposit",
+	Size = {46, 38},
+	File = "neutral/icons/coal_deposit.png"
+})
+
+DefineIcon({
 	Name = "icon-coal-mine",
 	Size = {46, 38},
 	File = "neutral/icons/coal_mine.png"

@@ -204,7 +204,7 @@ Units = {
 	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
 	"unit-iron-deposit", "unit-iron-mine",
 	"unit-mithril-deposit", "unit-mithril-mine",
-	"unit-coal-mine",
+	"unit-coal-deposit", "unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
 	"unit-yale-cave", "unit-yale-hunting-lodge",
@@ -300,6 +300,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
@@ -788,31 +789,29 @@ DefineUnitType("unit-mithril-mine", {
 	RequirementsString = "Ironworking"
 } )
 
+DefineUnitType("unit-coal-deposit", {
+	Name = "Coal Deposit",
+	Parent = "unit-template-deposit",
+	Description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place.",
+	Image = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
+	Icon = "icon-coal-deposit",
+	GivesResource = "coal"
+} )
+
 DefineUnitType("unit-coal-mine", {
 	Name = "Coal Mine",
-	Parent = "unit-template-building",
+	Parent = "unit-template-mine",
+	Class = "coal-mine",
+	Civilization = "neutral",
 	Description = "Coal is a valuable heating material.",
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
-	Animations = "animations-active-building", Icon = "icon-coal-mine",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"time", 150},
-	Construction = "construction-land2",
-	HitPoints = 25500,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	Armor = 20, Missile = "missile-none",
-	Priority = 0,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	GivesResource = "coal", CanHarvest = true,
-	MaxHarvesters = 10,
-	Sounds = {
-		"selected", "gold-mine-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
-		"dead", "building-destroyed"
-	}
+	Shadow = {"file", "neutral/buildings/coal_mine_shadow.png", "size", {96, 96}},
+	Icon = "icon-coal-mine",
+	Costs = {"time", 200, "lumber", 2050},
+	BuildingRules = { "and", { "ontop", { Type = "unit-coal-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	GivesResource = "coal",
+	BuildingRulesString = "Must be built on top of a Coal Deposit"
 } )
 
 DefineUnitType("unit-diamond-deposit", {

@@ -296,7 +296,7 @@ AddTrigger("gathering-materials-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {512, 512}) >= 2) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-deposit", {0, 0}, {512, 512}) >= 2) then
 			for i=0, (PlayerMax - 2) do
 				if (
 					GetPlayerData(i, "RaceName") == "dwarf"
@@ -413,7 +413,7 @@ AddTrigger("gathering-materials-coal-found",
 		local uncount = 0
 		uncount = GetUnits(PlayerNumNeutral)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-coal-mine") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-coal-deposit") then
 				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()

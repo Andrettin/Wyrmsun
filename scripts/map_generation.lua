@@ -1317,7 +1317,7 @@ function CreateCoalMines(coal_mine_number, coal_quantity, min_x, max_x, min_y, m
 		Count = coal_mine_number
 		while (Count > 0) do
 			local coal_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-			unit = CreateUnit("unit-coal-mine", PlayerNumNeutral, {coal_mine_spawn_point[1], coal_mine_spawn_point[2]})
+			unit = CreateUnit("unit-coal-deposit", PlayerNumNeutral, {coal_mine_spawn_point[1], coal_mine_spawn_point[2]})
 			SetResourcesHeld(unit, coal_quantity)
 			Count = Count - 1
 			if (symmetric) then
@@ -1331,15 +1331,15 @@ function CreateCoalMines(coal_mine_number, coal_quantity, min_x, max_x, min_y, m
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
 
-				unit = CreateUnit("unit-coal-mine", PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData("unit-coal-mine", "TileWidth") - 1), coal_mine_spawn_point[2]})
+				unit = CreateUnit("unit-coal-deposit", PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData("unit-coal-deposit", "TileWidth") - 1), coal_mine_spawn_point[2]})
 				SetResourcesHeld(unit, coal_quantity)
 				Count = Count - 1
 
-				unit = CreateUnit("unit-coal-mine", PlayerNumNeutral, {coal_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-coal-mine", "TileHeight") - 1) })
+				unit = CreateUnit("unit-coal-deposit", PlayerNumNeutral, {coal_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-coal-deposit", "TileHeight") - 1) })
 				SetResourcesHeld(unit, coal_quantity)
 				Count = Count - 1
 
-				unit = CreateUnit("unit-coal-mine", PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData("unit-coal-mine", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-coal-mine", "TileHeight") - 1) })
+				unit = CreateUnit("unit-coal-deposit", PlayerNumNeutral, {mirrored_tile_x - (GetUnitTypeData("unit-coal-deposit", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-coal-deposit", "TileHeight") - 1) })
 				SetResourcesHeld(unit, coal_quantity)
 				Count = Count - 1
 			end
@@ -2999,7 +2999,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 				RandomY = SyncRand(max_y - min_y + 1) + min_y
 			end
 			
-			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-norse-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-norse-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			
 			if (unit_quantity < 1) then
 				local space_available = true

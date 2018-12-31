@@ -735,6 +735,7 @@
 /graphics/neutral/buildings/cavern_entrance.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/cavern_entrance_brown.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/cavern_entrance_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/buildings/coal_deposit.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/coal_mine.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/copper_deposit.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/buildings/copper_deposit_shadow.png (by Jinn) (licensed under the CC0)

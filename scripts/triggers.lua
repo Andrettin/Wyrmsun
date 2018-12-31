@@ -105,7 +105,7 @@ AddTrigger("expert-miner",
 				percent_chance = 4
 			elseif (GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") > 0) then
 				percent_chance = 2
-			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-iron-mine") > 0) then
+			elseif (GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-iron-mine") > 0 or GetPlayerData(i, "UnitTypesCount", "unit-coal-mine") > 0) then
 				percent_chance = 1
 			end
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) < percent_chance and GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "Resources", "copper") >= 600 and (GetPlayerData(i, "Supply") - GetPlayerData(i, "Demand")) >= GetUnitTypeData(GetFactionClassUnitType("expert-miner", GetPlayerData(i, "Faction")), "Demand")) then
