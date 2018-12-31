@@ -25,52 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
-	Name = "Odin",
-	Pantheon = "aesir",
-	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Major = true,
-	Icon = "icon-odin",
-	Domains = {"aether", "magic", "wisdom"},
-	DeityUpgrade = "upgrade-deity-odin",
-	CharacterUpgrade = "upgrade-character-deity",
-	CulturalNames = {
-		"anglo-saxon", "Woden",
-		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
-		"frankish", "Wodan",
-		"germanic", "Wodanaz", -- "Wōđanaz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
-		"suebi", "Wodan",
-		"teuton", "Wodan" -- Old High German name for the deity, as seen in the second Merseburg charm; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
-	},
---	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
-	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). As Woden, the royal house of Deira claimed him as their ancestor."
-})
-
-DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
-	Name = "Thor",
-	Pantheon = "aesir",
-	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Major = true,
-	Icon = "icon-thor",
-	Domains = {"air", "lightning", "order"},
-	DeityUpgrade = "upgrade-deity-thor",
-	CulturalNames = {
-		"anglo-saxon", "Thunor", -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
---		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
-		"frankish", "Thunor",
-		"germanic", "Thunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
-		"suebi", "Thunor",
-		"teuton", "Thunor" -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
-	},
-	Description = "Thor is the son of Odin and Jord, and is married to Sif. He is the foremost protector of the Aesir, using his massive throwing hammer to keep Asgard's enemies at bay. Given his power over the weather, Thor is also worshiped as a fertility god."
-})
-
 DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
 	Name = "Frigg",
 	Pantheon = "aesir",
@@ -111,27 +65,6 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
 	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed to carry the sun in her chariot with the horses Arvak and Alsvid." --  in truth, however (within the game's universe), Sol is linked to the abstract concept of a sun, rather than to a particular one
-})
-
-DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 48-49.
-	Name = "Tyr",
-	Pantheon = "aesir",
-	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "dwarf", "frankish", "germanic", "goth", "norse", "suebi", "teuton"}, -- available for the dwarves since he is connected to dwarves in Norse myths (though it is rather a small connection, with Tyr helping the gods bind Fenrir with the dwarven fetter Gleipnir); also allowed for the Goths since otherwise they would have too few minor deities
-	Religions = {"paganism"},
-	Gender = "male",
-	Icon = "icon-tyr",
-	Domains = {"warfare"}, -- god of war, law and justice
-	DeityUpgrade = "upgrade-deity-tyr",
-	CulturalNames = {
-		"anglo-saxon", "Tiw", -- "Tīw"; Old English name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
-		"frankish", "Ziu",
-		"germanic", "Tiwaz", -- "Tīwaz"; Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
-		"norse", "Tyr", -- "Týr"; Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
-		"suebi", "Ziu",
-		"teuton", "Ziu" -- Old High German name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
-	},
-	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand while the Aesir chain the beast with the dwarven fetter Gleipnir."
 })
 
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
@@ -227,44 +160,6 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 	Domains = {"earth"} -- goddess of fertility
 })
 
-DefineDeity("heimdall", { -- the horn Gjall belongs to him; identified with Rig (the progenitor of the three races of man in Norse mythology); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxvii-xxviii, 244.
-	Name = "Heimdall",
-	Pantheon = "aesir",
-	Civilizations = {"germanic", "anglo-saxon", "norse"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Icon = "icon-heimdall",
-	Domains = {"watch"},
-	DeityUpgrade = "upgrade-deity-heimdall",
-	CulturalNames = {
-		"germanic", "Haimadala" -- tentative rendering of "Heimdall" in Proto-Germanic (assuming "dallr" to have the same etymological origin as "dalr", the Old Norse word for "valley"); see language data
-	},
-	Description = "Heimdall is the watchman of the Aesir, his hall Himinbjorg guarding the gates to Asgard. He is believed to be the son of nine mothers."
-})
-
-DefineDeity("hel", { -- Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
-	Name = "Hel",
-	Pantheon = "aesir",
-	HomePlane = "niflheim",
-	Civilizations = {"anglo-saxon", "dwarf", "ettin", "frankish", "germanic", "goblin", "goth", "norse", "suebi", "teuton"}, -- no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also included for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells; Hel is referred to as a giantess in the Hamthesmol, stanza 17, so it makes sense for her to be an ettin deity
-	Religions = {"paganism"},
-	Gender = "female",
-	Icon = "icon-hel",
-	Domains = {"death"},
-	DeityUpgrade = "upgrade-deity-hel",
-	CulturalNames = {
---		"anglo-saxon", "Hell", -- Old English cognate of Old Norse "Hel"; see language data
-		"frankish", "Hella",
---		"frisian", "Helle", -- the alternative "hille" is also given; Old Frisian cognate of Old Norse "Hel"; see language data
-		"germanic", "Haljo", -- "Haljô", means both the underworld and the goddess of the underworld in Proto-Germanic, according to August Fick
-		"goth", "Halja", -- Gothic cognate of Old Norse "Hel"; see language data
---		"saxon", "Hellja", -- the alternative form "hell" is also given; Old Saxon cognate of Old Norse "Hel"; see language data
-		"suebi", "Hella",
-		"teuton", "Hella" -- Old High German cognate of Old Norse "Hel"; see language data
-	},
-	Description = "Hel is a goddess of death who dwells in Niflheim. Half of her is alive, while the other half is corpse-like. Hel is the daughter of Loki."
-})
-
 DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brother Balder; returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
 	Name = "Hod",
 	Pantheon = "aesir",
@@ -317,19 +212,6 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"lust"}
-})
-
-DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247. Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 41-42.
-	Name = "Loki",
-	Pantheon = "aesir",
-	Civilizations = {"dwarf", "ettin", "norse"}, -- during Ragnarok, he was on the same side as the giants
-	Religions = {"paganism"},
-	Gender = "male",
-	Major = true,
-	Icon = "icon-loki",
-	Domains = {"trickery", "chaos", "envy"},
-	DeityUpgrade = "upgrade-deity-loki",
-	Description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir. He is the father of Hel."
 })
 
 DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with the Vanir, but was killed by the latter; his head was preserved by Odin and put by Mimir's Well; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.

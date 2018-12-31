@@ -1,5 +1,6 @@
 /data/calendars/years_wesnoth.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/characters/dwarves/durstorns_clan.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/characters/dwarves/shorbear_clan.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/data/deities/goblin/gathaarl.cfg (by the Tyrant Team) (licensed under the GPL 2.0)
 /data/map_templates/aethermaw.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/planes/aethermaw.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)

@@ -42,25 +42,6 @@ DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the
 })
 --]]
 
-DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
-	Name = "Gathaarl",
-	Pantheon = "goblin",
-	HomePlane = "niflheim",
-	Civilizations = {"goblin"},
-	Religions = {"paganism"},
-	Domains = {"chaos", "earth", "wrath"},
-	DeityUpgrade = "upgrade-deity-gathaarl",
-	CharacterUpgrade = "upgrade-character-deity",
-	Gender = "male",
-	Major = true,
-	Icon = "icon-gathaarl",
-	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
-	-- neutral alignment (actually "neutral -")
-	-- prefers offerings of food and weapons
-	-- offering description from Tyrant: "dissolved in a cloud of green smoke"
-	-- related upbringing text from Tyrant: "You learn to rejoice in the thrill of battle, that you should multiply to cover the earth, and that you should raise great totems to the glory of Gathaarl and the Goblin Spirits."
-})
-
 DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 	Name = "Griknagh",
 	HomePlane = "niflheim",
