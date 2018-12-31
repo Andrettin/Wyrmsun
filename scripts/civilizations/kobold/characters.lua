@@ -25,55 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("fafnir", {
-	Name = "Fafnir",
-	Gender = "male",
-	Type = "unit-wyrm",
-	Civilization = "kobold",
-	Faction = "fafning-tribe",
-	Description = "Fafnir is said to have originally been a greedy dwarf, the son of Hreidmar and brother of Regin. Through potent magics he is believed to have transformed himself into a wyrm.",
-	Icon = "icon-wyrm-vicious",
-	Trait = "upgrade-vicious"
-})
-
-DefineCharacter("goin", { -- wyrm/dragon in Norse mythology
-	Name = "Goin",
-	Gender = "male",
-	Type = "unit-wyrm",
-	Civilization = "kobold",
-	Faction = "goinling-tribe"
-})
-
-DefineCharacter("grabak", { -- wyrm/dragon in Norse mythology
-	Name = "Grabak",
-	Gender = "male",
-	Type = "unit-wyrm",
-	Civilization = "kobold",
-	Faction = "grabakling-tribe"
-})
-
-DefineCharacter("grafvitnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
-	Name = "Grafvitnir", -- means "the Gnawing Wolf" in Old Norse
-	Gender = "male",
-	Type = "unit-wyrm",
-	Civilization = "kobold",
-	Faction = "grafvitning-tribe"
-})
-
 DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
 	Name = "Grafvolluth", -- means "the Field Gnawer" in Old Norse
 	Gender = "male",
 	Type = "unit-wyrm",
 	Civilization = "kobold",
 	Faction = "grafvolling-tribe"
-})
-
-DefineCharacter("moin", { -- wyrm/dragon in Norse mythology
-	Name = "Moin",
-	Gender = "male",
-	Type = "unit-wyrm",
-	Civilization = "kobold",
-	Faction = "moinling-tribe"
 })
 
 DefineCharacter("ofnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.

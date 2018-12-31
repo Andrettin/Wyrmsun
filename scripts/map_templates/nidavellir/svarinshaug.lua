@@ -25,16 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateHero("svarinshaug-underground", "grafvitnir", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-SetMapTemplateUnit("svarinshaug-underground", "unit-kobold-footpad", "grafvitning-tribe", {15, 15}, -3000, -2999)
-
 SetMapTemplateLayerConnector("svarinshaug", "unit-cavern-entrance", {-1, -1}, 1)
 SetMapTemplateLayerConnector("svarinshaug-underground", "unit-cavern-entrance", {-1, -1}, 0)
