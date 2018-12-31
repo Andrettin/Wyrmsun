@@ -12,9 +12,6 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid ""
-msgstr ""
-
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/abilities.lua
 
 msgid "Axe Mastery"
@@ -700,17 +697,11 @@ msgstr "Longue lance"
 msgid "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies."
 msgstr "Avec l'allongement des lances, les soldats qui utilisent ces armes ont une plus grande portée contre leurs ennemis."
 
-msgid "Great Axe"
-msgstr "Grande hache"
-
 msgid "Long Sword"
 msgstr "Longue épée"
 
 msgid "Broad Sword and Ironworking"
 msgstr "Epée large et Travail du fer"
-
-msgid "Broad Axe"
-msgstr "Hache large"
 
 msgid "Broad Sword"
 msgstr "Epée large"
@@ -765,6 +756,9 @@ msgstr "Charrue à bois"
 
 msgid "While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."
 msgstr "Alors qu'au début de l'agriculture, les semences étaient simplement réparties sur le sol, l'invention de la charrue permet aux agriculteurs de créer plus facilement des sillons où les semences seraient plantées. Cela a permis de cultiver des sols plus lourds et la plantation sur de plus grandes surfaces est devenue une possibilité plus pratique.\n\nEffet: +1 d'approvisionnement alimentaire pour les fermes."
+
+msgid "Iron Tipped Wood Plow"
+msgstr "Charrue à bois à pointe de fer"
 
 msgid "Iron-Tipped Wood Plow"
 msgstr "Charrue à bois à pointe de fer"
@@ -863,8 +857,6 @@ msgstr "Retour (~!P)"
 
 msgid "Progress:"
 msgstr "Progression:"
-
-"The Settlement of Scandinavia"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/stratagus.lua
 
@@ -1528,10 +1520,10 @@ msgid "Quick"
 msgstr "Rapide"
 
 msgid "Reckless"
-msgstr ""
+msgstr "Téméraire"
 
 msgid "Resilient"
-msgstr ""
+msgstr "Résilient"
 
 msgid "Slow"
 msgstr "Lent"
@@ -2001,9 +1993,6 @@ msgstr "Ecriture (~!W)"
 msgid "Research ~!Wood Plow"
 msgstr "Charrue à bois (~!W)"
 
-msgid "Wood Plow"
-msgstr "Charrue à bois"
-
 msgid "Research Wood Plow"
 msgstr "Charrue à bois"
 
@@ -2282,9 +2271,6 @@ msgstr "Or restant:"
 msgid "Train"
 msgstr "Former"
 
-msgid "Processing"
-msgstr "En développement"
-
 msgid "Level:"
 msgstr "Niveau:"
 
@@ -2306,9 +2292,6 @@ msgstr "Raids: "
 msgid "Mugging: "
 msgstr "Agression: "
 
-msgid "Click to accept quest"
-msgstr "Cliquer pour accepter la quête"
-
 msgid "~!Play Quest"
 msgstr "~!Commencer la Quête"
 
@@ -2323,6 +2306,47 @@ msgstr "~!Construire une Structure"
 
 msgid "Cancel Construction (~<Esc~>)"
 msgstr "Annuler (~<Esc~>)"
+
+# https://github.com/Andrettin/Wyrmsun/blob/master/scripts/ui.lua
+
+msgid "Processing"
+msgstr "En développement"
+
+msgid "Click to accept quest"
+msgstr "Cliquer pour accepter la quête"
+
+msgid "Salvage this building for "
+msgstr "Récupérer ce bâtiment pour "
+
+msgid "Salvage this unit for "
+msgstr "Récupérer cette unité pour "
+
+msgid "~<ALT~>-click to defend a unit"
+msgstr "~<ALT~>-cliquez pour défendre une unité"
+
+msgid "~<SHIFT~>-click to make waypoints"
+msgstr "~<SHIFT~>-cliquez pour fabriquer un point de passage"
+
+msgid "~<CTRL~>-click to stand ground after moving"
+msgstr "~<CTRL~>-cliquez pour rester debout après avoir bougé"
+
+msgid "Click on an empty space to attack-move"
+msgstr "cliquez pour sur un espace libre pour bouger/attaquer"
+
+msgid "~<CTRL~>-click to toggle auto-repair of damaged buildings"
+msgstr ""
+
+msgid "~<CTRL~>-click to toggle autocast"
+msgstr ""
+
+msgid "~<CTRL~>-click to toggle the automatic sale of the resource"
+msgstr ""
+
+msgid "Click to change the current map layer to the one this building connects to"
+msgstr ""
+
+msgid "Hint: You can press ~<CTRL~>-~!L to return to the previous map layer"
+msgstr ""
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/menus/help.lua
 
@@ -2647,6 +2671,80 @@ msgstr "+2 points de dégâts pour les lanceurs de hache"
 msgid "+10 HP for Miners, +5 Armor for Towers, +50% Research Speed for Smithies"
 msgstr "+10 HP pour les mineurs, +5 Armure pour les Tours, +50% vitesse de recherche pour les Forges"
 
+msgid "Surghan Mercenaries"
+msgstr "Mercenaires Surghan"
+
+msgid "Yawning Yales"
+msgstr "Bâillement d'Yales"
+
+msgid "Smithy and Ironworking"
+msgstr "Forge et Travail du fer"
+
+msgid "Writing and Masonry"
+msgstr "Ecriture et Massonerie"
+
+msgid "War Hall and Ironworking"
+msgstr "Salle de guerre et Travail du fer"
+
+# https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/dwarf/upgrade.lua
+
+msgid "Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Broad Axes to be sold at the Market."
+msgstr "Les forgerons nains travaillent dur pour améliorer les armes des soldats et, avec le perfectionnement des techniques de forge, l'élargissement des lames de haches devient possible.\n\nEffet: +2 dégâts pour les combattans avec hache et les cavaliers en  Yale. Permet à les Haches larges d'être vendus au marché."
+
+msgid "Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters and Yale Riders. Allows Great Axes to be sold at the Market."
+msgstr "D'autres innovations dans la forge naine permettent de rendre les haches plus robustes et souvent de porter des doubles lames.\n\nEffet: +2 points de dégâts pour les combattans avec hache et les cavaliers en  Yale. Permet la vente de grands haches au marché."
+
+msgid "Broad Axe and Ironworking"
+msgstr "Hache large et Travail du fer"
+
+msgid "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards. Allows Long Spears to be sold at the Market."
+msgstr "Avec l'allongement de la lance, les soldats qui utilisent ces armes ont une plus grande portée contre leurs ennemis. Effet: +2 points de dégâts pour les gardes. Permet aux longues lances d'être vendues au marché."
+
+msgid "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards. Allows Pikes to be sold at the Market."
+msgstr "Beaucoup plus longues que les lances précédentes, les piques peuvent être mortels s’ils sont utilisés par des groupes de soldats disciplinés.\n\nEffet: +2 points de dégâts pour les gardes. Permet aux piques d'être vendus au marché."
+
+msgid "Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Heater Shields to be sold at the Market."
+msgstr "Les boucliers antérieurs n'offraient qu'un degré de protection minimal. Avec le développement des boucliers chauffants, les soldats nains ont plus de chances de survivre au combat.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Heater Shields to be sold at the Market."
+
+msgid "Heater Shield and Ironworking"
+msgstr "Bouclier Médieval et Ttravail du fer"
+
+msgid "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Thrymgjol Shields to be sold at the Market."
+msgstr ""
+
+msgid "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."
+msgstr ""
+
+msgid "\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)"
+msgstr ""
+
+msgid "As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Sharp Throwing Axes to be sold at the Market."
+msgstr "Au fur et à mesure que leur savoir-faire progresse, les artisans nains deviennent capables d'améliorer la hache de lancer de base pour avoir des lames plus tranchantes.\n\nEffet: +2 de dégâts des éclaireurs, des cavaliers de Gryphon, des bastions et des tours de garde. Permet de vendre des haches de lancer tranchantes au marché."
+
+msgid  "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Bearded Throwing Axes to be sold at the Market."
+msgstr "Le 'roulement' des axes de projection en prolongeant le bas de leurs pales est une innovation qui les rend encore plus meurtriers lorsqu'ils sont lancés.\n\nEffet: +2 de dégâts pour les éclaireurs, les cavaliers de Gryphon, les bastions et les tours de garde. Permet de vendre des haches à lancer barbu au marché."
+
+msgid "Sharp Throwing Axe and Ironworking"
+msgstr "Hache de lancer tranchante et Travail du fer"
+
+msgid "While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships and Ballista Towers."
+msgstr "Alors que les premiers boulons de baliste nains étaient à peine plus que des troncs d’arbres taillés pour avoir un effet plus pénétrant, ces boulons présentent une large tête en métal capable de trancher de la même manière les ennemis et les structures.\n\n+12 dégâts pour les balistes, +5 dégâts pour les navires de guerre et les tours de balistes."
+
+msgid "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships and Ballista Towers."
+msgstr "Bien que le pouvoir de coupe des boulons à tête large soit un progrès considérable par rapport aux boulons précédents, il était encore loin d’être idéal. Au lieu de cela, les boules de baliste pénétrantes ne coupent pas leurs cibles, mais concentrent leur puissance sur un seul point, maximisant ainsi le pouvoir de perforation et leur capacité à percer les murs ennemis..\n\nEffet: +12 dégâts pour les balistes, +5 dégâts pour les navires de guerre et les tours de balistes."
+
+msgid "Runewriting"
+msgstr "Ecriture runique"
+
+msgid "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market."
+msgstr "Le système d'écriture runique nain aurait été inventé par le savant nain Dvalin.\n\nEffet: + 10% de vitesse de recherche pour les bâtiments. Permet aux livres et aux parchemins d'être vendus au marché."
+
+msgid "In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."
+msgstr "Dans le poétique Edda's ~<Hovamol~>, Dvalin est mentionné comme étant celui qui a conféré la connaissance des runes aux nains."
+
+msgid "Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Gryphon Riders, Bastions and Guard Towers, +4 Fire Damage for Ballistas and Ballista Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
+msgstr "Une fois l’écriture élaborée, les observations sur les substances fondamentales qui composent le monde pourraient être notées et transmises plus facilement. Cela a conduit à l’apparition de la discipline de l’alchimie, mêlant postulations ésotériques, scientifiques et philosophiques sur les éléments à partir desquels le monde matériel est composé.\n\nEffet: +1 de dégâts d'incendie pour les éclaireurs, les cavaliers de Gryphon, les bastions et les tours de garde, +4 de dégâts d'incendie pour les balistes et les navires de guerre balistes. Permet de nouveaux affixes magiques pour les objets vendus au marché. Permet de vendre des potions et des élixirs au marché."
+
 # scripts/civilizations/dwarf/dialogues_the_first_dwarves.lua
 
 msgid "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
@@ -2774,58 +2872,58 @@ msgstr "Au fil du temps, les Marcomanni abandonnèrent leur ancien nom et en ado
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/dwarf/quests.lua
 
 msgid "The Dripping Hall"
-msgstr ""
+msgstr "La salle des gouttes"
 
 msgid "We call the sky \"the dripping hall\", for the water that falls from it from time to time. The loremaster Alvis asks you to train a gryphon rider, so that we may better explore the skies."
-msgstr ""
+msgstr "Nous appelons le ciel \"le couloir dégoulinant\", pour l’eau qui en tombe de temps en temps. Le loremaster Alvis vous demande de former un cavalier de griffon afin que nous puissions mieux explorer le ciel."
 
 msgid "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest."
-msgstr ""
+msgstr "Sélectionnez une salle de guerre puis cliquez sur le bouton Former un cavalier de Gryphon pour former l'unité requise pour cette quête."
 
 msgid "The Gleamer"
-msgstr ""
+msgstr "Le Glaneur"
 
 msgid "We call our moon \"the Gleamer\", for its reflection of light, and our sun \"Dvalin's Deceiver\", for the dangers Dvalin faced during the day outside the safety of our underground homes. The loremaster Alvis asks you to instigate our sages to discover the secrets of the moon, the sun and the stars."
 msgstr ""
 
 msgid "Select a Temple and then click on the Research Astrology button to research the technology required for this quest."
-msgstr ""
+msgstr "Sélectionnez un temple, puis cliquez sur le bouton Astrologie pour rechercher la technologie requise pour cette quête."
 
 msgid "The Day's Refuge"
-msgstr ""
+msgstr "Le refuge du jour"
 
 msgid "We call the calm \"the day's refuge\", for the peace and safety enjoyed under the earth in our homes. The loremaster Alvis asks you to promote the invention of a system of writing, so that we may write treatises and learn more about the art of diplomacy and peace-making."
-msgstr ""
+msgstr "Nous appelons le calme \"le refuge du jour\", pour la paix et la sécurité dont nous jouissons sous terre dans nos maisons. Le maître d'hôtel Alvis vous demande de promouvoir l'invention d'un système d'écriture, afin que nous puissions écrire des traités et en apprendre davantage sur l'art de la diplomatie et du rétablissement de la paix."
 
 msgid "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest."
-msgstr ""
+msgstr "Sélectionnez un bastion puis cliquez sur le bouton Rechercher dans la recherche pour rechercher la technologie requise pour cette quête."
 
 msgid "The Deep"
-msgstr ""
+msgstr "L'abîme"
 
 msgid "We call the sea \"the deep\", for the profoundity of its waters. The loremaster Alvis asks you to build a ship, so that we may better explore the seas."
-msgstr ""
+msgstr "Nous appelons la mer "l'abîme", pour la profondeur de ses eaux. Le maître d'hôtel Alvis vous demande de construire un navire afin que nous puissions mieux explorer les mers."
 
 msgid "Select a Dock and then click on the Build Transport button to build the ship required for this quest."
-msgstr ""
+msgstr "Sélectionnez un quai puis cliquez sur le bouton Construire le transport pour construire le vaisseau requis pour cette quête."
 
 msgid "The Burner"
-msgstr ""
+msgstr "Le brûleur"
 
 msgid "We call fire \"the burner\", for the damage it inflicts on the body. The loremaster Alvis asks you to instigate our sages to discover the secrets of making potent flammable liquids."
-msgstr ""
+msgstr "Nous appelons le feu \"le brûleur\", pour les dégâts qu'il inflige au corps. Le maître d'hôtel Alvis vous demande d'inviter nos sages à découvrir les secrets de la fabrication de puissants liquides inflammables."
 
 msgid "Select an Academy and then click on the Research Alchemy button to research the technology required for this quest."
-msgstr ""
+msgstr "Sélectionnez une académie, puis cliquez sur le bouton Rechercher l'alchimie pour rechercher la technologie requise pour cette quête."
 
 msgid "The Weaver of Dreams"
-msgstr ""
+msgstr "Le tisserand des Rêves"
 
 msgid "We call the night \"the weaver of dreams\", for the figments wrought into our minds as we sleep at night. The loremaster Alvis asks you to build a temple, so that we may train priests skilled in discerning visions from the dreamworld."
-msgstr ""
+msgstr "Nous appelons la nuit \"le tisserand des rêves\", pour les produits fabriqués dans notre esprit alors que nous dormons la nuit. Le maître d'hôtel Alvis vous demande de construire un temple afin que nous puissions former des prêtres qualifiés pour discerner les visions du monde onirique."
 
 msgid "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest."
-msgstr ""
+msgstr "Sélectionnez un mineur, appuyez sur le bouton Construire la structure puis cliquez sur le bouton Construire le temple pour créer la structure requise pour cette quête."
 
 msgid "+1000 Copper, +1000 Lumber, +500 Stone"
 msgstr "+1000 Cuivre, +1000 Bois, +500 Pierre"
@@ -2846,7 +2944,7 @@ msgid "The Bastion will become the Shorbear Hold unique building"
 msgstr "Le Bastion deviendra le bâtiment unique du Fort de Shorbear"
 
 msgid "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion."
-msgstr ""
+msgstr "Sélectionnez le garde mangé de Shorbear Hold, puis cliquez sur le bouton Mettre à niveau pour le transformer en bastion."
 
 msgid "A Bargain is Struck"
 msgstr "Marché conclu"
@@ -3586,7 +3684,7 @@ msgid "Skilled Miner"
 msgstr "Mineur qualifié"
 
 msgid "Dwarven miners who become experienced in their craft can harvest metals more efficiently than others."
-msgstr ""
+msgstr "Les mineurs nains qui acquièrent de l'expérience dans leur métier peuvent récolter des métaux plus efficacement que d'autres."
 
 msgid "Expert Miner"
 msgstr "Mineur expert"
@@ -3643,7 +3741,7 @@ msgid "Thunderer"
 msgstr ""
 
 msgid "Yale Rider"
-msgstr "Monteur de Yale"
+msgstr "Cavalier de Yale"
 
 msgid "Yale Lord"
 msgstr "Seigneur des Yale"
@@ -3678,14 +3776,77 @@ msgstr "Scierie"
 msgid "Sentry Tower"
 msgstr "Tour de sentinelle"
 
+msgid "In these solid towers dwarves keep watch of threats approaching their settlements."
+msgstr "Dans ces tours solides, les nains surveillent les menaces qui approchent de leurs colonies."
+
 msgid "Smithy"
 msgstr "Forge"
+
+msgid "Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths."
+msgstr "La forge est une compétence très prisée dans la société naine, amenant beaucoup à se consacrer à cette profession. Les forgerons nains sont réputés pour leurs compétences et leur métier attire de nombreux clients étrangers. Les plus prestigieux métallurgistes nains sont des forgerond de runes."
+
+msgid "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire"
+msgstr ""
+
+msgid "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals."
+msgstr ""
 
 msgid "Guard Tower"
 msgstr "Tour de garde"
 
+msgid "Often garrisoned by dwarven scouts, these towers are an essential part of a dwarven settlement's sturdy defenses."
+msgstr "Souvent mises en garnison par des éclaireurs nains, ces tours constituent un élément essentiel des solides défenses d'une colonisation naine."
+
+msgid "Ballista Tower"
+msgstr "Tour de baliste"
+
+msgid "A marvel of dwarven engineering, ballista towers make dwarven settlements nigh-impregnable."
+msgstr "Merveille d'ingénierie naine, les tours à balistes rendent les colonies naines presque imprenables."
+
+msgid "Cannon Tower"
+msgstr "Tour à canon"
+
+msgid "With the advent of gunpowder, dwarven engineers were quick to make use of it for defensive purposes."
+msgstr "Avec l'avènement de la poudre à canon, les ingénieurs nains l'ont rapidement utilisée à des fins défensives."
+
 msgid "Academy"
 msgstr "Académie"
+
+msgid "Though strongly bound to tradition, dwarves also possess inquisitive minds. In their academies, scholars seek to understand the mysteries of nature."
+msgstr "Bien que fortement liés à la tradition, les nains possèdent également un esprit curieux. Dans leurs académies, les érudits cherchent à comprendre les mystères de la nature."
+
+msgid "Commerce is an important part of the dwarven quotidian. Not only are various metals exchanged, but vital supplies of wood are traded to underground settlements."
+msgstr "Le commerce est une partie importante du quotidien des nains. Non seulement différents métaux sont échangés, mais des approvisionnements essentiels en bois sont également échangés vers des établissements souterrains."
+
+msgid "Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike."
+msgstr "Bien que les nains nautiques soient peu nombreux, la construction de navires nains est un métier raffiné. Ils construisent des navires solides, capables de braver les océans et les rivières souterraines."
+
+msgid "Masters of stonecraft, dwarves erect mighty walls in the protection of their settlements. The fabled gate Thrymgjol, built by the sons of the dwarf Solblindi, is said to provide the strongest protection of all."
+msgstr ""
+
+msgid "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."
+msgstr ""
+
+msgid "Dwarven temples are built as underground vaults, where they keep their mystic texts. The temple vault has many layers, with only dwarven sages of the highest caliber being granted access to the deepest ones."
+msgstr "Les temples nains sont construits comme des caves souterraines, où ils conservent leurs textes mystiques. La voûte du temple comporte de nombreuses couches, seuls les sages nains du plus haut calibre ayant accès aux plus profonds."
+
+msgid "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond."
+msgid "Ces scélérats vont louer leurs haches au plus offrant, sans poser de questions. Ils ont pris part à un certain nombre de combats, le plus dangereux d'entre eux étant la poursuite d'un groupe de nains dans l'antre du Wyrm Svafnir et au-delà."
+
+msgid "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"
+msgstr "\"Ce doit être un de ces mercenaires Surghan. Je parie que ces Shinsplitters en ont embauché plus. C'est une mauvaise nouvelle pour nous, car ce sont des guerriers endurcis et endurcis au combat.\"\n- Baglur, guerrier Norlund à la retraite"
+
+msgid "Cannot be built close to town halls"
+msgstr "Ne peut pas être construit à proximité des mairies"
+
+msgid "Although the underground dwarves shun mounted combat, their wild hill-dwelling kin cherish it as a noble tradition. The mobility given by the yale is crucial for traversing their homelands' hills and peaks. Dwarves have been breeding yales since time immemorial, the animals being valuable not only as mounts, but also as beasts of carry."
+msgstr ""
+
+msgid "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the ~<Voluspo~> they are called \"the masters of the rocks\"."
+msgstr "Les nains sont fortement associés à la pierre dans la mythologie nordique, s'installant dans des collines rocheuses et des grottes rocheuses. Dans le ~<Voluspo~>, ils sont appelés \"les maîtres des rochers\"."
+
+msgid "Dwarven construction makes heavy use of stone as a material, so that the existence of a mason's shop in a settlement is all the more important."
+msgstr "La construction naine utilise beaucoup la pierre comme matériau, de sorte que l'existence d'un atelier de maçon dans une colonie est d'autant plus importante."
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/norse/units.lua
 
@@ -3770,7 +3931,7 @@ msgid "Worship ~!Odin"
 msgstr "Culte ~!Odin"
 
 msgid "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor or Loki major deities."
-msgstr ""
+msgstr "Choisissez Odin comme divinité majeure. +2 aux dégâts des archers, active le sortilège de vision éloignée pour les Gudjans. Permet de nouveaux affixes magiques pour les objets vendus au marché. Incompatible avec la religion chrétienne ou avec les divinités majeures de Thor ou de Loki."
 
 msgid "Worship ~!Thor"
 msgstr "Culte ~!Thor"
@@ -4186,6 +4347,9 @@ msgstr "Tribut Venetian"
 
 msgid "The Scepter of Fire"
 msgstr "Le Sceptre du Feu"
+
+msgid "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\""
+msgstr "\"Le pays audacieux de la bannière de Untersberg\n ne vient pas de sa propre terre;\nIl vient du nain, sombre et vieux\nfait par la main d'un forgeron de rune.\""
 
 msgid "Thursagan's Book"
 msgstr "Livre de Thursagan"
@@ -5485,6 +5649,12 @@ msgstr "Glyphe"
 
 msgid "~!Attack"
 msgstr "~!Attaquer"
+
+msgid "~!Patrol"
+msgstr "~!Patrouiller"
+
+msgid "S~!tand ground"
+msgstr "Arre~!ter"
 
 msgid "Earth"
 msgstr "Terre"
@@ -7597,7 +7767,7 @@ msgid "Autosave"
 msgstr "Sauvegarde automatique"
 
 msgid "~<Event: %s~>"
-msgstr "~<Evènement : %s~>"
+msgstr "~<Evènement: %s~>"
 
 msgid "Applying \"%s\" Map Template Terrain"
 msgstr ""
@@ -7630,7 +7800,7 @@ msgid "Timed out"
 msgstr "Temps dépassé"
 
 msgid "%s acquired through contact with %s"
-msgstr ""
+msgstr "%s acquis au contact de %s"
 
 msgid "New quests available"
 msgstr "Nouvelles quêtes disponibles"
@@ -7656,23 +7826,23 @@ msgstr ""
 msgid "Your units have been revealed!"
 msgstr ""
 
-msgid "%s changed their diplomatic stance with us to Neutral"
-msgstr ""
+msgid "%s change leur diplomatie envers nous en Neutreance with us to Neutral"
+msgstr "%S change leur diplomatie envers nous en Neutrel"
 
 msgid "%s changed their diplomatic stance with us to Ally"
-msgstr ""
+msgstr "%s change leur diplomatie envers nous en Allié"
 
 msgid "%s changed their diplomatic stance with us to Enemy"
-msgstr ""
+msgstr "%s change leur diplomatie envers nous en Ennemie"
 
 msgid "%s changed their diplomatic stance with us to Crazy"
-msgstr ""
+msgstr "%s change leur diplomatie envers nous en Folie"
 
 msgid "%s is now sharing vision with us"
-msgstr ""
+msgstr "%s partage maintenant sa vision avec nous"
 
 msgid "%s is no longer sharing vision with us"
-msgstr ""
+msgstr "%s ne partage plus sa vision avec nous"
 
 msgid "No sync info for this replay !"
 msgstr ""
@@ -7728,8 +7898,29 @@ msgstr "Chargement des décorations \"%s\""
 msgid "Loading Unit \"%s\""
 msgstr "Chargement de l'unité \"%s\""
 
+msgid "Autumn"
+msgstr "Autômne"
 
+msgid "Spring"
+msgstr "Printemps"
 
+msgid "Summer"
+msgstr "Été"
 
+msgid "Winter"
+msgstr "Hiver"
 
+msgid "Bronze Age"
+msgstr "L'Âge de bronze"
 
+msgid "The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."
+msgstr "Le chef d'une des premières tribus naines, Modsognir est un puissant guerrier."
+
+msgid "In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."
+msgstr "Dans la mythologie nordique, Modsognir apparaît dans le ~<Voluspo~> comme le premier et le plus puissant des nains."
+
+msgid "Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."
+msgstr "Durin est un vaillant guerrier nain et un fidèle vassal du chef Modsognir."
+
+msgid "In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves and the deputy of Modsognir."
+msgstr "Dans la mythologie nordique, Durin apparaît dans le ~<Voluspo~> comme l'un des premiers nains et le député de Modsognir."
