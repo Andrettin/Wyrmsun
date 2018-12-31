@@ -73,8 +73,13 @@ AddTrigger("a-rocky-home-yales-hunted",
 	end
 )
 
+local last_grafvitning_attack_cycle = 0
 AddTrigger("grafvitning-kobolds-send-attacker",
 	function()
+		if ((GameCycle - last_grafvitning_attack_cycle) < 1800) then -- wait a minute between each Grafvitning attack
+			return false
+		end
+
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "grafvitning-tribe" and GetPlayerData(i, "UnitTypesAiActiveCount", "unit-kobold-footpad") >= 1 and FindHero("modsognir") ~= nil and FindHero("durin") ~= nil and FindHero("modsognir", i) == nil and FindHero("durin", i) == nil) then
 				local modsognir_player = GetUnitVariable(FindHero("modsognir"), "Player")
@@ -154,6 +159,8 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 			SetUnitVariable(unit, "TTL", 600)
 			OrderUnit(trigger_player, GetUnitVariable(attacker_unit, "Ident"), {GetUnitVariable(attacker_unit, "PosX"), GetUnitVariable(attacker_unit, "PosY")}, GetUnitVariable(attacker_unit, "MapLayer"), {GetUnitVariable(modsognir_building, "PosX"), GetUnitVariable(modsognir_building, "PosY")}, GetUnitVariable(modsognir_building, "MapLayer"), "attack")
 		end
+
+		last_grafvitning_attack_cycle = GameCycle
 
 		return true
 	end
