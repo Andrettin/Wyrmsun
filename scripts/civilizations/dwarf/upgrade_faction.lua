@@ -368,7 +368,7 @@ DefineDependency("upgrade-faction-oinling-clan",
 )
 
 DefineDependency("upgrade-faction-shadowcharm-clan",
-	{"unit-dwarven-barracks"}
+	{"unit-dwarven-temple", "upgrade-deity-loki"}
 )
 
 DefineDependency("upgrade-faction-shinsplitter-clan",

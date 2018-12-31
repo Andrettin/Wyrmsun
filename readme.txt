@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - The Coal Mine is now built upon a deposit like the other mines.
 - Added snowy graphics for the dwarven Mead Hall and Bastion.
 
+* Factions
+- Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.
+
 * Quests
 - The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
 
