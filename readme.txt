@@ -57,6 +57,10 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.2
 -----------------------------------------------------------------------
 
+* Buildings
+- The Coal Mine is now built upon a deposit like the other mines.
+- Added snowy graphics for the dwarven Mead Hall and Bastion.
+
 * Quests
 - The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
 

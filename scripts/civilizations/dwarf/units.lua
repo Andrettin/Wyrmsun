@@ -1789,37 +1789,63 @@ DefineUnitType("unit-dwarven-town-hall", {
 	DropSpells = {"spell-joruvellir-allegiance"},
 	Variations = {
 		{
-			"variation-id", "dwarf",
+			"variation-id", "mead-hall",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
 			"upgrade-forbidden", "upgrade-faction-lyr",
 			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
 			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
-			"upgrade-forbidden", "upgrade-faction-joruvellir"
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
-			"variation-id", "brising",
+			"variation-id", "mead-hall-snow-winter",
+			"file", "dwarf/buildings/town_hall_snow.png",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "mead-hall-snow",
+			"file", "dwarf/buildings/town_hall_snow.png",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "brising-mead-hall",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
 			"upgrade-required", "upgrade-faction-brising-clan"
 		},
 		{
-			"variation-id", "brising",
+			"variation-id", "brising-mead-hall",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
 			"upgrade-required", "upgrade-faction-lyr"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
 			"upgrade-required", "upgrade-faction-goldhoof-clan"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
 			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
 			"upgrade-required", "upgrade-faction-joruvellir"
 		}
@@ -1852,37 +1878,63 @@ DefineUnitType("unit-dwarven-stronghold", {
 	DropSpells = {"spell-joruvellir-allegiance"},
 	Variations = {
 		{
-			"variation-id", "dwarf",
+			"variation-id", "bastion",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
 			"upgrade-forbidden", "upgrade-faction-lyr",
 			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
 			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
-			"upgrade-forbidden", "upgrade-faction-joruvellir"
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
-			"variation-id", "brising",
+			"variation-id", "bastion-snow-winter",
+			"file", "dwarf/buildings/stronghold_snow.png",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "bastion-snow",
+			"file", "dwarf/buildings/stronghold_snow.png",
+			"upgrade-forbidden", "upgrade-faction-brising-clan",
+			"upgrade-forbidden", "upgrade-faction-lyr",
+			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
+			"upgrade-forbidden", "upgrade-faction-eikinskjaldi-clan",
+			"upgrade-forbidden", "upgrade-faction-joruvellir",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "brising-bastion",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
 			"upgrade-required", "upgrade-faction-brising-clan"
 		},
 		{
-			"variation-id", "brising",
+			"variation-id", "brising-bastion",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
 			"upgrade-required", "upgrade-faction-lyr"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
 			"upgrade-required", "upgrade-faction-goldhoof-clan"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
 			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
 		},
 		{
-			"variation-id", "joruvellir",
+			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
 			"upgrade-required", "upgrade-faction-joruvellir"
 		}
