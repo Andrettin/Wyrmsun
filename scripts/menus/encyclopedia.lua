@@ -467,7 +467,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
-		tooltip_name = CUpgrade:Get(unit_name).Name
+		tooltip_name = _(CUpgrade:Get(unit_name).Name)
 		if (civilization ~= "") then
 			if (faction ~= "") then
 				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
@@ -630,7 +630,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
-		tooltip_name = CUpgrade:Get(unit_name).Name
+		tooltip_name = _(CUpgrade:Get(unit_name).Name)
 		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
