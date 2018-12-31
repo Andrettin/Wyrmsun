@@ -73,6 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - The starting speed for ships has been toned down, so that the final speed after researching the new upgrades is still the same as before.
+- Slimes now deal acid damage, which ignores armor.
+- Increased the amount of experience slimes give when killed.
 
 * Upgrades
 - Added Sailing upgrade, which increases speed for ships and is researched at the Dock.
