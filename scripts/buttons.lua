@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2001-2018 by Vladi Belperchinov-Shabanski, Lutz Sammer,
+--      (c) Copyright 2001-2019 by Vladi Belperchinov-Shabanski, Lutz Sammer,
 --                                 Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
