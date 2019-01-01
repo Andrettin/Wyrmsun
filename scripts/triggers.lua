@@ -123,7 +123,7 @@ AddTrigger("expert-miner",
 			{"~!Yes", "~!No"},
 			{function(s)
 				local town_hall = FindUnit("town_hall", trigger_player, true)
-				unit = CreateUnit(GetFactionClassUnitType("expert-miner", GetPlayerData(trigger_player, "Faction")), trigger_player, {GetUnitVariable(town_hall, "PosX"), GetUnitVariable(town_hall, "PosY")})
+				unit = CreateUnit(GetFactionClassUnitType("expert-miner", GetPlayerData(trigger_player, "Faction")), trigger_player, {GetUnitVariable(town_hall, "PosX"), GetUnitVariable(town_hall, "PosY")}, GetUnitVariable(town_hall, "MapLayer"))
 				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 600)
 			end,
 			function(s)
