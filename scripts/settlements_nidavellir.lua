@@ -25,32 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("chaincolt", { -- from Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
-	Name = "Chaincolt",
-	MapTemplate = "nidavellir-underground",
-	Position = {468, 193},
-	Major = true,
-	CulturalNames = {
-		"dwarf", "Chaincolt"
-	},
-	Cores = {
---		"norlund-clan"
-	},
-	HistoricalOwners = {
-		25, "norlund-clan"
-	},
-	HistoricalBuildings = {
-		25, 0, "stronghold",
-		25, 0, "farm",
-		25, 0, "farm",
-		25, 0, "farm"
-	},
-	HistoricalResources = {
-		0, 0, "unit-gold-deposit", 0
-	},
-	Regions = {}
-})
-
 DefineSite("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
 	Name = "Chaincolt Gates",
 	MapTemplate = "nidavellir-underground",
