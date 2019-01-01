@@ -25,8 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- 457, 182
-
 -- Situation as of The Sceptre of Fire (which begins 25 YW)
 
 --[[

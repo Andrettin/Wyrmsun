@@ -25,11 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- 450, 213
+SetMapTemplateLayerConnector("caverns-of-chaincolt-gates", "unit-cavern-entrance", {11, 16}, 1)
+SetMapTemplateLayerConnector("caverns-of-chaincolt-gates-underground", "unit-cavern-entrance", {13, 14}, 0)
 
-SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {459, 228}, 1)
-SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {459, 228}, 0)
-
+--[[
 -- stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
 SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {453, 218})
 SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {459, 224})
@@ -155,3 +154,4 @@ SetMapTemplateTileTerrain("nidavellir-underground", "road", {489, 218}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {489, 219}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {489, 220}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {489, 221}, 25)
+--]]
