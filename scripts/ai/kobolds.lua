@@ -36,7 +36,7 @@ local kobold_funcs = {
 	function() return AiWaitForce(1) end,
 	function() return AiAttackWithForce(1) end,
 
-	function() return (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 9) end, -- returns true (meaning it doesn't go forward in the loop) while the player still has a substantial number of AI active infantry units
+	function() return (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 1) end, -- returns true (meaning it doesn't go forward in the loop) while the player still has an AI active infantry unit
 	
 	function() return (GetPlayerData(AiPlayer(), "TotalNumUnitsConstructed") == 0) end, -- if the tribe no longer has any units, stop spawning new ones
 	

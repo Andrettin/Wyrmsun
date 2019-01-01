@@ -50,6 +50,7 @@ AddTrigger("aurvangling-goblins-sighted",
 				for unit1 = 1,table.getn(uncount) do 
 					if (
 						uncount[unit1]
+						and GetUnitVariable(uncount[unit1], "Ident") == "unit-goblin-archer"
 						and GetUnitVariable(uncount[unit1], "PosX") >= GetMapTemplateData("aurvang", "MapStartPosX")
 						and GetUnitVariable(uncount[unit1], "PosX") <= GetMapTemplateData("aurvang", "MapEndPosX")
 						and GetUnitVariable(uncount[unit1], "PosY") >= GetMapTemplateData("aurvang", "MapStartPosY")
