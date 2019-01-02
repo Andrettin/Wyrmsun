@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.
 
+* Map
+- Improved the performance of the forest regeneration code.
+
 * Quests
 - The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
 
