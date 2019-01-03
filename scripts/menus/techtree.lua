@@ -277,6 +277,9 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUpgradeData(unitName, "Class") == "celestial-navigation") then
 					tech_icon_x = 4
 					tech_icon_y = 7
+				elseif (GetUpgradeData(unitName, "Class") == "compass") then
+					tech_icon_x = 4
+					tech_icon_y = 8
 				elseif (GetUpgradeData(unitName, "Class") == "writing") then
 					tech_icon_x = 5
 					tech_icon_y = 4

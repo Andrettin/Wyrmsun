@@ -82,6 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Sailing upgrade, which increases speed for ships and is researched at the Dock.
 - Added Celestial Navigation upgrade, which increases speed for ships and is researched at the Dock.
+- Added Compass upgrade, which increases speed for ships and is researched at the Dock.
 
 -----------------------------------------------------------------------
 - 3.5.1

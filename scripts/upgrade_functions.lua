@@ -127,7 +127,8 @@ function ApplyTechLevels()
 		"upgrade-celestial-navigation"
 	}
 	local gunpowder_upgrades = {
-		"upgrade-gunpowder"
+		"upgrade-gunpowder",
+		"upgrade-compass"
 	}
 	
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
