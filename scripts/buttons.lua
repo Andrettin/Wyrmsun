@@ -2251,7 +2251,7 @@ DefineButton( { Pos = 9, Icon = "icon-shield-wall",
 	Action = "research", Value = "upgrade-shield-wall",
 	Allowed = "check-single-research",
 	Description = "+2 Armor for infantry. Incompatible with Svinfylking.",
-	Key = "w", Hint = "Develop Shield ~!Wall", Popup = "popup-research",
+	Key = "h", Hint = "Develop S~!hield Wall", Popup = "popup-research",
 	ForUnit = {
 		"unit-latin-barracks",
 		"unit-germanic-barracks",
