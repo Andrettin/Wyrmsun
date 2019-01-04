@@ -57,12 +57,15 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.2
 -----------------------------------------------------------------------
 
+* Abilities
+- Added the Barkskin ability, which increases armor by 4 for the target unit.
+
 * Buildings
 - The Coal Mine is now built upon a deposit like the other mines.
 - Added snowy graphics for the dwarven Mead Hall and Bastion.
 
 * Deities
-- Added the Frey major deity for the Germanics and the Norse. Frey grants +1 damage to archers, and the Barkskin spell to priests.
+- Added the Frey major deity for the Germanics and the Norse. Frey grants +1 damage to archers, and the Barkskin ability to priests.
 
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.

@@ -82,6 +82,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-barkskin", File = "ui/status_effects/barkskin.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-wither", File = "ui/status_effects/wither.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
@@ -98,6 +99,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-precision", 0}}})
 	DefineDecorations({Index = "Slow", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
+	DefineDecorations({Index = "Barkskin", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {16, 0}, Method = {"static-sprite", {"sprite-barkskin", 0}}})
 	DefineDecorations({Index = "Stun", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-stun", 0}}})
 	DefineDecorations({Index = "Bleeding", ShowOpponent = true, ShowWhenMax = true,
