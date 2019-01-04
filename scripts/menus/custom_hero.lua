@@ -123,7 +123,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 				and GetUnitTypeData(unitName, "Class") ~= "priest"
 				and GetUnitTypeData(unitName, "Class") ~= "thief" -- no dagger units yet
 				and GetUnitTypeData(unitName, "Level") == 1
-				and GetUnitTypeData(unitName, "organic")
+				and GetUnitTypeData(unitName, "Organic")
 			) then
 				table.insert(hero_class_ident_list, unitName)
 				if (GetUnitTypeData(unitName, "Faction") ~= "") then

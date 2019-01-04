@@ -371,7 +371,7 @@ DefineUnitType("unit-template-sapient-unit", {
 	Dexterity = 10,
 	Intelligence = 10,
 	Charisma = 10,
-	organic = true,
+	Organic = true,
 	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
 	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
@@ -1328,7 +1328,7 @@ DefineUnitType("unit-tree-stump", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
-	CanTransport = {"organic", "only", "Mounted", "false"},
+	CanTransport = {"Organic", "only", "Mounted", "false"},
 	SaveCargo = true,
 	StartingResources = {200},
 	GivesResource = "lumber", CanHarvest = true,
@@ -1381,7 +1381,7 @@ DefineUnitType("unit-hole", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	MaxOnBoard = 1,
-	CanTransport = {"organic", "only", "Mounted", "false"},
+	CanTransport = {"Organic", "only", "Mounted", "false"},
 	SaveCargo = true,
 	Sounds = {
 		"selected", "click",
@@ -4250,7 +4250,7 @@ DefineUnitType("unit-template-stronghold", {
 	Priority = 37, AnnoyComputerFactor = 40,
 	Points = 600,
 	MaxOnBoard = 3,
-	CanTransport = {"LandUnit", "only", "organic", "only", "Fauna", "false"},
+	CanTransport = {"LandUnit", "only", "Organic", "only", "Fauna", "false"},
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	AttackFromTransporter = true,
@@ -4617,7 +4617,7 @@ DefineUnitType("unit-template-watch-tower", {
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	DetectCloak = true,
 	MaxOnBoard = 1,
-	CanTransport = {"LandUnit", "only", "organic", "only", "Fauna", "false"},
+	CanTransport = {"LandUnit", "only", "Organic", "only", "Fauna", "false"},
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	BuilderOutside = true,
@@ -4667,7 +4667,7 @@ DefineUnitType("unit-template-guard-tower", {
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	DetectCloak = true,
 	MaxOnBoard = 1,
-	CanTransport = {"LandUnit", "only", "organic", "only", "Fauna", "false"},
+	CanTransport = {"LandUnit", "only", "Organic", "only", "Fauna", "false"},
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	PierceDamage = true,

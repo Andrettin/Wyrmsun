@@ -95,7 +95,7 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 		local attacker_unit = nil
 		local uncount = GetUnits(trigger_player)
 		for unit1 = 1,table.getn(uncount) do
-			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm" and GetUnitVariable(uncount[unit1], "Active") and GetUnitVariable(uncount[unit1], "Idle")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm" and GetUnitVariable(uncount[unit1], "Active") and GetUnitVariable(uncount[unit1], "Idle")) then
 				attacker_unit = uncount[unit1]
 				break
 			end
@@ -173,7 +173,7 @@ AddTrigger("grafvitning-kobolds-attack-modsognirs-clan",
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("grafvitning-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 						local unit_quantity = GetNumUnitsAt(i, "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}, GetUnitVariable(uncount[unit1], "MapLayer"))
 						if (unit_quantity > 0) then
 							trigger_player = i

@@ -989,14 +989,14 @@ function EditUnitProperties()
 		end
 	end	
 
-	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
+	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 		menu:addLabel(_("Unit Trait"), sizeX / 2, 11 + (36 * 3))
 		unit_trait = menu:addDropDown(display_trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
 		unit_trait:setSize(120, 20)
 		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) - 1)
 	end
 
-	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
+	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
 		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0) then
 			unit_prefix_label = menu:addLabel(_("Prefix"), sizeX / 4, 11 + (36 * 3))
 			unit_prefix = menu:addDropDown(display_prefix_list, (sizeX / 4) - 60, 11 + (36 * 4), function(dd) end)
@@ -1053,12 +1053,12 @@ function EditUnitProperties()
 				if (table.getn(unique_list) <= 1 or unique_list[unit_unique:getSelected() + 1] == "") then
 					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name", name_value:getText())
 				end
-				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
+				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 					if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
 						AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
 					end
 				end
-				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
+				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
 					if (table.getn(unique_list) == 1 or unique_list[unit_unique:getSelected() + 1] == "") then
 						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
 							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])

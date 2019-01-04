@@ -393,7 +393,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Experience") == false) then
 			AddTrigger("tip-experience",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitBoolFlag(GetSelectedUnits()[1], "organic") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitBoolFlag(GetSelectedUnits()[1], "Organic") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
 						return true
 					else
 						return false
@@ -1368,7 +1368,7 @@ function FindUnit(unit_type, player, random_unit, last_unit, settlement)
 	
 	if (last_unit) then
 		for unit1 = table.getn(uncount), 1, -1 do
-			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) or unit_type == "any") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built") and (settlement == nil or GetUnitVariable(uncount[unit1], "Settlement") == settlement)) then
 					return uncount[unit1]
 				end
@@ -1376,7 +1376,7 @@ function FindUnit(unit_type, player, random_unit, last_unit, settlement)
 		end
 	else
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) or unit_type == "any") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == unit_type or (unit_type == "town_hall" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) or (unit_type == "any_organic" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) or unit_type == "any") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") > 0 and GetUnitVariable(uncount[unit1], "Built") and (settlement == nil or GetUnitVariable(uncount[unit1], "Settlement") == settlement)) then
 					if (random_unit) then
 						table.insert(units_found, uncount[unit1])

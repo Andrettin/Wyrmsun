@@ -31,7 +31,7 @@ DefineUnitType("unit-template-fauna-unit", {
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 2,
 	Charisma = 2,
-	organic = true,
+	Organic = true,
 	Fauna = true,
 	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
 	Traits = {"upgrade-clumsy", "upgrade-dextrous", "upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak"}

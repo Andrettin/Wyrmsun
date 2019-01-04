@@ -113,7 +113,7 @@ AddTrigger("westward-migration-natives-sighted",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetFactionExists("uralic-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("uralic-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
 						if (unit_quantity > 0) then
 							trigger_player = i
@@ -212,7 +212,7 @@ AddTrigger("northwards-to-the-sea-natives-sighted",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("ertebolle-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
 						if (unit_quantity > 0) then
 							trigger_player = i
@@ -252,7 +252,7 @@ AddTrigger("the-settlement-of-scandinavia-gylfings-sighted",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("gylfing-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("gylfing-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))
 						if (unit_quantity > 0) then
 							trigger_player = i

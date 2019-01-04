@@ -631,16 +631,16 @@ DefinePanelContents(
 			Component1 = "Value", Component2 = "Max"}
 		}
 	},
-	{ Pos = {70, 45}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "false"},
+	{ Pos = {70, 45}, Condition = {ShowOpponent = false, HideNeutral = true, Organic = "only", Mana = "false"},
 		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
 	},
-	{ Pos = {67, 50}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "false"},
+	{ Pos = {67, 50}, Condition = {ShowOpponent = false, HideNeutral = true, Organic = "only", Mana = "false"},
 		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XPRequired"))), Font = "small"}}
     },
-	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
+	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, Organic = "only", Mana = "only"},
 		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
 	},
-	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
+	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, Organic = "only", Mana = "only"},
 		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XPRequired"))), Font = "small"}}
     },
 	--[[
@@ -913,16 +913,16 @@ DefinePanelContents(
   Contents = {
 -- Unit caracteristics
 
-	{ Pos = {3, 72}, Condition = {organic = "only"},
+	{ Pos = {3, 72}, Condition = {Organic = "only"},
 		More = {"Text", {Text = _("Level:")}}
 	},
-	{ Pos = {51, 72}, Condition = {organic = "only"},
+	{ Pos = {51, 72}, Condition = {Organic = "only"},
 		More = {"Text", {Text = String(ActiveUnitVar("Level"))}}
 	},
-	{ Pos = {9, 103}, Condition = {organic = "only"},
+	{ Pos = {9, 103}, Condition = {Organic = "only"},
 		More = {"Text", {Text = _("Trait:")}}
 	},
-	{ Pos = {76, 103}, Condition = {organic = "only"},
+	{ Pos = {76, 103}, Condition = {Organic = "only"},
 		More = {"Text", {Text = UnitTrait("Active")}}
 	},
 	{ Pos = {9, 130}, Condition = {},

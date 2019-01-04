@@ -260,7 +260,7 @@ AddTrigger("the-home-of-the-boii-vandals-found",
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Vandal Tribe"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
 						player = GetFactionPlayer("Marcomanni Tribe")
@@ -277,7 +277,7 @@ AddTrigger("the-home-of-the-boii-vandals-found",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Vandal Tribe"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
@@ -323,7 +323,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Suebi Tribe"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
 						player = GetFactionPlayer("Marcomanni Tribe")
@@ -340,7 +340,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Suebi Tribe"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
@@ -387,7 +387,7 @@ AddTrigger("the-home-of-the-boii-lombards-found",
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Lombard Tribe"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
 						player = GetFactionPlayer("Marcomanni Tribe")
@@ -404,7 +404,7 @@ AddTrigger("the-home-of-the-boii-lombards-found",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Lombard Tribe"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 

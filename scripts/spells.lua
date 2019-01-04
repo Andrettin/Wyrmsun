@@ -42,7 +42,7 @@ DefineSpell("spell-blessing",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Blessing", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
@@ -75,7 +75,7 @@ DefineSpell("spell-healing",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"HitPoints", {MaxValuePercent = 100}
 	},
@@ -95,7 +95,7 @@ DefineSpell("spell-herbal-cure",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"HitPoints", {MaxValuePercent = 100}
 	},
@@ -114,7 +114,7 @@ DefineSpell("spell-inspire",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Inspire", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
@@ -146,7 +146,7 @@ DefineSpell("spell-precision",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Precision", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
@@ -202,7 +202,7 @@ DefineSpell("spell-terror",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Terror", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
@@ -221,7 +221,7 @@ DefineSpell("spell-wither",
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Wither", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
@@ -277,7 +277,7 @@ DefineSpell("spell-stun",
 		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false"
 	},
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
@@ -295,7 +295,7 @@ DefineSpell("spell-precise-shot",
 		{"spawn-missile", "missile", "missile-none", "start-point", {"base", "caster"}, "use-unit-var", "always-critical"}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false"
 	},
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
@@ -314,7 +314,7 @@ DefineSpell("spell-puncture",
 		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
 	},
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"thrusting-weapon", "only"
 	},
@@ -361,7 +361,7 @@ DefineSpell("spell-acthnic-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"faction-equivalent", "acthnic-tribe"
 	},
@@ -380,7 +380,7 @@ DefineSpell("spell-anglo-saxon-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "anglo-saxon"
 	},
@@ -399,7 +399,7 @@ DefineSpell("spell-frank-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "frankish"
 	},
@@ -418,7 +418,7 @@ DefineSpell("spell-goth-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "goth"
 	},
@@ -437,7 +437,7 @@ DefineSpell("spell-norse-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "norse"
 	},
@@ -456,7 +456,7 @@ DefineSpell("spell-suebi-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "suebi"
 	},
@@ -475,7 +475,7 @@ DefineSpell("spell-teuton-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"civilization-equivalent", "teuton"
 	},
@@ -495,7 +495,7 @@ DefineSpell("spell-detachment",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"faction-unit", "only"
 	},
@@ -514,7 +514,7 @@ DefineSpell("spell-joruvellir-allegiance",
 	"range", 0,
 	"target", "self",
 	"condition", {
-		"organic", "only",
+		"Organic", "only",
 		"Building", "false",
 		"faction-equivalent", "goldhoof-clan"
 	},
