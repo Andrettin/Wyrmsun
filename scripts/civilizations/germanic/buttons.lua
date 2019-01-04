@@ -142,7 +142,7 @@ DefineButton( { Pos = 5, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-research",
-	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz major deity.",
+	Description = "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz and Fraujaz major deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
@@ -150,11 +150,11 @@ DefineButton( { Pos = 6, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-single-research",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-research",
-	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz major deity.",
+	Description = "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz and Fraujaz major deities.",
 	ForUnit = {"unit-germanic-temple"}
 })
 
-DefineButton( { Pos = 7, Icon = "icon-tyr",
+DefineButton( { Pos = 8, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Allowed = "check-single-research",
 	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-research",
@@ -162,7 +162,7 @@ DefineButton( { Pos = 7, Icon = "icon-tyr",
 	ForUnit = {"unit-germanic-temple"}
 })
 
-DefineButton( { Pos = 8, Icon = "icon-heimdall",
+DefineButton( { Pos = 9, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Allowed = "check-single-research",
 	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-research",
@@ -170,7 +170,7 @@ DefineButton( { Pos = 8, Icon = "icon-heimdall",
 	ForUnit = {"unit-germanic-temple"}
 })
 
-DefineButton( { Pos = 9, Icon = "icon-hel",
+DefineButton( { Pos = 10, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Allowed = "check-single-research",
 	Key = "l", Hint = "Worship Ha~!ljo", Popup = "popup-research",
@@ -181,7 +181,7 @@ DefineButton( { Pos = 9, Icon = "icon-hel",
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup-learn-ability",
-	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Thunraz major deity.",
+	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Thunraz and Fraujaz major deities.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -193,7 +193,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup-learn-ability",
-	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Incompatible with the Wodanaz major deity.",
+	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Incompatible with the Wodanaz and Fraujaz major deities.",
 	ForUnit = {
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
@@ -202,7 +202,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
 
-DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
+DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship Tiwa~!z", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
@@ -215,7 +215,7 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
   
-DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
+DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
 	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
@@ -228,7 +228,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
   
-DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
+DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship Ha~!ljo", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},

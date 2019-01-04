@@ -341,7 +341,7 @@ DefineModifier("upgrade-deity-christian-god",
 
 DefineModifier("upgrade-deity-christian-god",
 	{"remove-upgrade", "upgrade-deity-apollo"}, {"remove-upgrade", "upgrade-deity-hermes"}, {"remove-upgrade", "upgrade-deity-poseidon"},
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-hel"}, {"remove-upgrade", "upgrade-deity-tyr"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-hel"}, {"remove-upgrade", "upgrade-deity-tyr"}
 )
 
 DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
@@ -402,7 +402,7 @@ DefineModifier("upgrade-deity-odin",
 )
 
 DefineModifier("upgrade-deity-odin",
-	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
 DefineModifier("upgrade-deity-odin", -- dummy upgrade modifier to change starting abilities/variations
@@ -429,7 +429,7 @@ DefineModifier("upgrade-deity-thor",
 )
 
 DefineModifier("upgrade-deity-thor",
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
 DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
@@ -447,7 +447,7 @@ DefineModifier("upgrade-deity-loki",
 )
 
 DefineModifier("upgrade-deity-loki",
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-christian-god"}
 )
 
 DefineModifier("upgrade-deity-loki", -- dummy upgrade modifier to change starting abilities/variations

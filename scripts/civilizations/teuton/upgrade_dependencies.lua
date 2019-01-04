@@ -162,7 +162,7 @@ DefineDependency("unit-teuton-university",
 )
 
 DefineDependency("unit-teuton-priest",
-	{"upgrade-deity-christian-god"}, "or", {"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-christian-god"}, "or", {"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefinePredependency("unit-teuton-dock",

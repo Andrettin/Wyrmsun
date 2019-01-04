@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - The Coal Mine is now built upon a deposit like the other mines.
 - Added snowy graphics for the dwarven Mead Hall and Bastion.
 
+* Deities
+- Added the Frey major deity for the Germanics and the Norse. Frey grants +1 damage to archers, and the Barkskin spell to priests.
+
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.
 

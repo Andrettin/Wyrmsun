@@ -355,14 +355,14 @@ DefineButton( { Pos = 7, Icon = "icon-thor",
 	ForUnit = {"unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 9, Icon = "icon-tyr",
+DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
 	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
-DefineButton( { Pos = 9, Icon = "icon-tyr",
+DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
@@ -370,7 +370,7 @@ DefineButton( { Pos = 9, Icon = "icon-tyr",
 	ForUnit = {"unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 9, Icon = "icon-tyr",
+DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "w", Hint = "Worship Ti~!w", Popup = "popup-research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
@@ -378,21 +378,21 @@ DefineButton( { Pos = 9, Icon = "icon-tyr",
 	ForUnit = {"unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 10, Icon = "icon-heimdall",
+DefineButton( { Pos = 11, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
 	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
 	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
-DefineButton( { Pos = 11, Icon = "icon-hel",
+DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!l", Popup = "popup-research",
 	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
-DefineButton( { Pos = 11, Icon = "icon-hel",
+DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!lla", Popup = "popup-research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
@@ -400,7 +400,7 @@ DefineButton( { Pos = 11, Icon = "icon-hel",
 	ForUnit = {"unit-teuton-temple"}
 })
 
-DefineButton( { Pos = 11, Icon = "icon-hel",
+DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup-research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-gothic-civilization"},

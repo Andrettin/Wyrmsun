@@ -101,27 +101,27 @@ DefineModifier("upgrade-item-suffix-of-thurs",
 )
 
 DefineDependency("upgrade-item-suffix-of-aedi",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefineDependency("upgrade-item-suffix-of-ergi",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefineDependency("upgrade-item-suffix-of-os",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefineDependency("upgrade-item-suffix-of-othola",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefineDependency("upgrade-item-suffix-of-sigel",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 DefineDependency("upgrade-item-suffix-of-thurs",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
+	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
 local runic_suffixes = GetRunicSuffixes()

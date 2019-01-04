@@ -122,7 +122,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
-	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor or Loki major deities.",
+	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor, Loki or Frey major deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
@@ -130,22 +130,21 @@ DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
-	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin or Loki major deities.",
+	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Loki or Frey major deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 8, Icon = "icon-loki",
 	Action = "research", Value = "upgrade-deity-loki",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-research",
-	Description = "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin or Thor major deities.",
-	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
+	Description = "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Thor or Frey major deities.",
+	ForUnit = {"unit-norse-temple"}
 })
 
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-learn-ability",
-	Description = "Choose Odin as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thor or Loki major deities.",
+	Description = "Choose Odin as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thor, Loki or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
 	}
@@ -154,7 +153,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
-	Description = "Choose Thor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Odin or Loki major deities.",
+	Description = "Choose Thor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Odin, Loki or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
 	}
@@ -163,13 +162,13 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-loki",
 	Action = "learn-ability", Value = "upgrade-deity-loki",
 	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-learn-ability",
-	Description = "Choose Loki as your hero's major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Incompatible with the Christianity religion or with the Odin or Thor major deities.",
+	Description = "Choose Loki as your hero's major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Incompatible with the Christianity religion or with the Odin, Thor or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
 	}
 })
 
-DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
+DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
 	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
@@ -180,7 +179,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
 
-DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
+DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
 	Key = "d", Hint = "Worship Heim~!dall", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
@@ -190,7 +189,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 	}
 })
 
-DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
+DefineButton( { Pos = 15, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!l", Popup = "popup-learn-ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},

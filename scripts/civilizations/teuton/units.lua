@@ -908,7 +908,8 @@ DefineUnitType("unit-teuton-priest", {
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
-			"upgrade-forbidden", "upgrade-deity-loki"
+			"upgrade-forbidden", "upgrade-deity-loki",
+			"upgrade-forbidden", "upgrade-deity-frey"
 		},
 		{
 			"variation-id", "gudjan",
@@ -1219,7 +1220,8 @@ DefineUnitType("unit-teuton-temple", {
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
-			"upgrade-forbidden", "upgrade-deity-loki"
+			"upgrade-forbidden", "upgrade-deity-loki",
+			"upgrade-forbidden", "upgrade-deity-frey"
 		},
 		{
 			"variation-id", "germanic-temple",
