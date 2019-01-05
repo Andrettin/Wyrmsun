@@ -216,4 +216,6 @@ BuildTilesetTables()
 
 Load("scripts/scripts.lua")
 GameSettings.Inside = true
-SetTimeOfDaySchedule("")
+if (LoadedGame == false) then
+	SetTimeOfDaySchedule("")
+end

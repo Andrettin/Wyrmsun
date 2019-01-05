@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map
 - Improved the performance of the forest regeneration code.
+- Fixed issue which occurred when loading a saved game of certain quests (e.g. "The Wyrm", "Caverns of Flame").
 
 * Quests
 - The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
