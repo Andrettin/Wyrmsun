@@ -84,7 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - The trigger which creates the Oinling Clan now gives a Mead Hall for it as well.
 
 * Units
-- The starting speed for ships has been toned down, so that the final speed after researching the new upgrades is still the same as before.
+- The starting speed for ships has been toned down, so that the final speed after researching the new Sailing and Celestial Navigation upgrades is still the same as before.
 - Slimes now deal acid damage, which ignores armor.
 - Increased the amount of experience slimes give when killed.
 
