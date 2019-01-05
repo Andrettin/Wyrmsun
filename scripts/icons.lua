@@ -282,12 +282,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-barkskin",
-	Size = {46, 38},
-	File = "neutral/icons/barkskin.png"
-})
-
-DefineIcon({
 	Name = "icon-blessing",
 	Size = {46, 38},
 	File = "neutral/icons/blessing.png"

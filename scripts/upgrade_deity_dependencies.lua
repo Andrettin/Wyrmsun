@@ -61,6 +61,10 @@ DefinePredependency("upgrade-deity-frey",
 	{"upgrade-english-civilization", 0}
 )
 
+DefinePredependency("upgrade-deity-freyja",
+	{"upgrade-english-civilization", 0}
+)
+
 DefinePredependency("upgrade-deity-tyr",
 	{"upgrade-english-civilization", 0}
 )

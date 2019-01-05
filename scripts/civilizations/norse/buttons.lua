@@ -122,7 +122,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
-	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor, Loki or Frey major deities.",
+	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
@@ -130,14 +130,15 @@ DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
-	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Loki or Frey major deities.",
+	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 8, Icon = "icon-loki",
 	Action = "research", Value = "upgrade-deity-loki",
+	Allowed = "check-single-research",
 	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-research",
-	Description = "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Thor or Frey major deities.",
+	Description = "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Thor, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple"}
 })
 

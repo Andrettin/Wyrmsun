@@ -58,7 +58,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Abilities
-- Added the Barkskin ability, which increases armor by 4 for the target unit.
+- Added the Barkskin ability, which increases armor by 2 for the target unit.
+- Added the Regeneration ability, which causes the target unit to slowly regenerate hit points.
 
 * Buildings
 - The Coal Mine is now built upon a deposit like the other mines.
@@ -66,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Deities
 - Added the Frey major deity for the Germanics and the Norse. Frey grants +1 damage to archers, and the Barkskin ability to priests.
+- Added the Freyja minor deity for the Germanics and the Norse. Freyja grants +20 damage and the Regeneration ability to priests.
 
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.

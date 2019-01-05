@@ -897,9 +897,9 @@ DefineUnitType("unit-teuton-priest", {
 	Corpse = "unit-human-dead-body",
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	StartingAbilities = {"upgrade-barkskin", "upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
-	CanCastSpell = {"spell-barkskin", "spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AutoCastActive = {"spell-barkskin", "spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
+	StartingAbilities = {"upgrade-barkskin", "upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
+	CanCastSpell = {"spell-barkskin", "spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
+	AutoCastActive = {"spell-barkskin", "spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	RequirementsString = "Any Deity or Religion",
 	Variations = {
