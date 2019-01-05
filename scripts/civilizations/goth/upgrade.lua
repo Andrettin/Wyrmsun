@@ -102,5 +102,5 @@ DefineModifier("upgrade-gothic-civilization",
 )
 
 DefineModifier("upgrade-gothic-civilization",
-	{"remove-upgrade", "upgrade-deity-heimdall"}
+	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
 )

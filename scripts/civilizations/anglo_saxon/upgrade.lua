@@ -92,3 +92,7 @@ DefineModifier("upgrade-anglo-saxon-civilization",
 DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
+
+DefineModifier("upgrade-teuton-civilization",
+	{"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
+)

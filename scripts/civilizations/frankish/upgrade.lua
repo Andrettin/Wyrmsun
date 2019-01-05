@@ -129,7 +129,7 @@ DefineModifier("upgrade-frankish-civilization",
 )
 
 DefineModifier("upgrade-frankish-civilization",
-	{"remove-upgrade", "upgrade-deity-heimdall"}
+	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
 )
 
 DefineModifier("upgrade-frank-spatha",

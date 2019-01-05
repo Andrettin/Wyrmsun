@@ -280,5 +280,5 @@ DefineModifier("upgrade-teuton-civilization",
 )
 
 DefineModifier("upgrade-teuton-civilization",
-	{"remove-upgrade", "upgrade-deity-heimdall"}
+	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
 )
