@@ -32,25 +32,6 @@
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-ethereal-revealer", {})
 
-DefineSpell("spell-blessing",
-	"showname", "Blessing",
-	"manacost", 50,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Blessing = 1000, Wither = 0}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Organic", "only",
-		"Blessing", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-blessing",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
-)
-
 DefineSpell("spell-far-sight",
 	"showname", "Far Sight",
 	"manacost", 70,
@@ -104,25 +85,6 @@ DefineSpell("spell-herbal-cure",
 	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )
 
-DefineSpell("spell-inspire",
-	"showname", "Inspire",
-	"manacost", 25,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Inspire = 1000, Wither = 0}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Organic", "only",
-		"Inspire", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-inspire",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only", "Blessing", {ExactValue = 0}}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only", "Blessing", {ExactValue = 0}}}
-)
-
 DefineSpell("spell-portent",
 	"showname", "Portent",
 	"manacost", 70,
@@ -134,100 +96,6 @@ DefineSpell("spell-portent",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-portent"
-)
-
-DefineSpell("spell-precision",
-	"showname", "Precision",
-	"manacost", 50,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Precision = 1000}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Organic", "only",
-		"Precision", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-precision",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "alliance", "only"}}
-)
-
-DefineSpell("spell-shocking-grasp",
-	"showname", "Shocking Grasp",
-	"manacost", 50,
-	"range", 1,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Stun = 200}},
-		{"spawn-missile", "missile", "missile-impact-lightning", "start-point", {"base", "target"}},
-		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "lightning-damage", 7}
-	},
-	"condition", {
-		"Building", "false"
-	},
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
-	"depend-upgrade", "upgrade-shocking-grasp"
-)
-
-DefineSpell("spell-slow",
-	"showname", "Slow",
-	"manacost", 50,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Slow = 1000, Haste = 0}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Building", "false",
-		"Slow", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-slow-ability",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
-)
-
-DefineSpell("spell-terror",
-	"showname", "Terror",
-	"manacost", 50,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Terror = 200}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Organic", "only",
-		"Terror", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-terror",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
-)
-
-DefineSpell("spell-wither",
-	"showname", "Wither",
-	"manacost", 50,
-	"range", 6,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Wither = 1000, Blessing = 0, Inspire = 0}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
-	},
-	"condition", {
-		"Organic", "only",
-		"Wither", {ExactValue = 0}
-	},
-	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-wither",
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
 DefineSpell("spell-war-machine-spear-attack",
@@ -264,63 +132,6 @@ DefineSpell("spell-axe-twirl",
 --	},
 	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}},
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
-)
-
-DefineSpell("spell-stun",
-	"showname", "Stun",
-	"manacost", 50,
-	"range", 1,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Stun = 200}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
-	},
-	"condition", {
-		"Organic", "only",
-		"Building", "false"
-	},
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
-	"depend-upgrade", "upgrade-stun"
-)
-
-DefineSpell("spell-precise-shot",
-	"showname", "Precise Shot",
-	"manacost", 50,
-	"range", 5,
-	"target", "unit",
-	"action", {
---		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"spawn-missile", "missile", "missile-none", "start-point", {"base", "caster"}, "use-unit-var", "always-critical"}
-	},
-	"condition", {
-		"Organic", "only",
-		"Building", "false"
-	},
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}},
-	"depend-upgrade", "upgrade-precise-shot"
-)
-
-DefineSpell("spell-puncture",
-	"showname", "Puncture",
-	"manacost", 50,
-	"range", 1,
-	"target", "unit",
-	"action", {
-		{"adjust-variable", {Bleeding = 1000}},
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
-	},
-	"condition", {
-		"Organic", "only",
-		"Building", "false",
-		"thrusting-weapon", "only"
-	},
-	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
-	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
-	"depend-upgrade", "upgrade-puncture"
 )
 
 -- scroll/book spells
