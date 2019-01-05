@@ -1,10 +1,6 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("person", "person", "computer", "computer", "computer", "computer")
-else
-	DefinePlayerTypes("person", "person", "person", "person", "person", "person")
-end
+DefinePlayerTypes("person", "person", "computer", "computer", "computer", "computer")
 PresentMap("Caverns of Flame", 2, 68, 68, 1)
 MapWorld = "Nidavellir"
 MapAttacker = 0

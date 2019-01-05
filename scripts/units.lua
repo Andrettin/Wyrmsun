@@ -2059,7 +2059,7 @@ function VolcanicCraterSpit(unit) -- this is called every second
 			if (SyncRand(2) == 0) then
 				local target_x = GetUnitVariable(unit,"PosX") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileWidth") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")
 				local target_y = GetUnitVariable(unit,"PosY") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileHeight") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")
-				OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {target_x, target_y}, GetUnitVariable(uncount[unit1], "MapLayer"), "attack-ground")
+				OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, GetUnitVariable(unit, "MapLayer"), {target_x, target_y}, GetUnitVariable(unit, "MapLayer"), "attack-ground")
 			else
 				if (GetNumUnitsAt(PlayerNumNeutral, "unit-miasma", {0, 0}, {512, 512}, GetUnitVariable(unit, "MapLayer")) < GetNumUnitsAt(PlayerNumNeutral, "unit-volcanic-crater", {0, 0}, {512, 512}, GetUnitVariable(unit, "MapLayer"))) then
 					CreateUnit("unit-miasma", PlayerNumNeutral, {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, GetUnitVariable(unit, "MapLayer"))

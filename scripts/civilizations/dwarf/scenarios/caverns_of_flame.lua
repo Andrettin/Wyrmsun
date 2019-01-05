@@ -28,6 +28,8 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(1, "Faction", "shinsplitter-clan")
+	
 	-- create extra defensive troops for the goblins
 	unit = CreateUnit("unit-goblin-spearman", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
 	SetUnitVariable(unit, "Active", false)

@@ -134,9 +134,7 @@ SetPlayerData(0, "Resources", "copper", 2000)
 SetPlayerData(0, "Resources", "lumber", 2000)
 SetPlayerData(0, "Resources", "stone", 2000)
 SetPlayerData(0, "Resources", "oil", 0)
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetPlayerData(0, "Faction", "norlund-clan")
-end
+SetPlayerData(0, "Faction", "norlund-clan")
 SetAiType(0, "land-attack")
 SetStartView(1, 30, 1)
 SetPlayerData(1, "RaceName", "dwarf")
@@ -144,9 +142,6 @@ SetPlayerData(1, "Resources", "copper", 10000)
 SetPlayerData(1, "Resources", "lumber", 10000)
 SetPlayerData(1, "Resources", "stone", 10000)
 SetPlayerData(1, "Resources", "oil", 0)
-if (GrandStrategy == false or GrandStrategyEventMap) then
-	SetPlayerData(1, "Faction", "shinsplitter-clan")
-end
 SetAiType(1, "land-attack")
 SetStartView(2, 54, 8)
 SetPlayerData(2, "RaceName", "goblin")
@@ -193,7 +188,7 @@ unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {59, 39})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {59, 39})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {59, 39})
 	
-if (GrandStrategy == false) then
+if not (GrandStrategy) then
 	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {36, 46})
 	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {36, 47})
 	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {37, 46})
@@ -328,149 +323,6 @@ if (GrandStrategy == false) then
 	SetDiplomacy(4, "enemy", 1)
 	SetDiplomacy(5, "enemy", 0)
 	SetDiplomacy(5, "enemy", 1)
-elseif (GrandStrategyEventMap) then
-	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {36, 46})
-	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {36, 47})
-	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {37, 46})
-	unit = CreateUnit("unit-glyph", PlayerNumNeutral, {37, 47})
-
-	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {30, 8})
-		SetUnitVariable(unit, "Character", "rugnur")
-	end
-
-	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {30, 8})
-		SetUnitVariable(unit, "Character", "baglur")
-	end
-
-	-- Thursagan
-	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
-		unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {30, 8})
-		SetUnitVariable(unit, "Character", "thursagan")
-	end
-
-	-- Norlund units
-	CreateProvinceUnits("Caverns of Chaincolt", 0, 1, false, true)
-	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
-
-	unit = CreateUnit("unit-goblin-town-hall", 2, {53, 7})
-	unit = CreateUnit("unit-goblin-warlord", 2, {54, 8}) -- orcish warlord
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-worker", 2, {54, 8})
-
-	unit = CreateUnit("unit-goblin-town-hall", 3, {11, 10})
-	unit = CreateUnit("unit-goblin-warlord", 3, {12, 10}) -- orcish warlord
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-worker", 3, {12, 10})
-
-	unit = CreateUnit("unit-goblin-town-hall", 4, {11, 31})
-	unit = CreateUnit("unit-goblin-warlord", 4, {12, 32}) -- troll warrior
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 4, {34, 42}) -- troll
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 4, {30, 48}) -- orcish warrior
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 4, {32, 50}) -- orcish warrior
-	SetUnitVariable(unit, "Active", false)
-	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		unit = CreateUnit("unit-goblin-barbarian", 4, {34, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {30, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {32, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		unit = CreateUnit("unit-goblin-barbarian", 4, {34, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {30, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {32, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {34, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {30, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {32, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {34, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {30, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 4, {32, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-	end
-	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
-	unit = CreateUnit("unit-goblin-banner", 4, {17, 27})
-	unit = CreateUnit("unit-goblin-banner", 4, {19, 28})
-	unit = CreateUnit("unit-goblin-banner", 4, {4, 39})
-	unit = CreateUnit("unit-goblin-banner", 4, {7, 42})
-
-	unit = CreateUnit("unit-goblin-town-hall", 5, {53, 31})
-	unit = CreateUnit("unit-goblin-warlord", 5, {56, 32}) -- troll warrior
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 5, {38, 42}) -- troll
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 5, {42, 48}) -- orcish warrior
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-barbarian", 5, {40, 50}) -- orcish warrior
-	SetUnitVariable(unit, "Active", false)
-	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
-		unit = CreateUnit("unit-goblin-barbarian", 5, {38, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {42, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {40, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		unit = CreateUnit("unit-goblin-barbarian", 5, {38, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {42, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {40, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {38, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {42, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {40, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {38, 42}) -- troll
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {42, 48}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-goblin-barbarian", 5, {40, 50}) -- orcish warrior
-		SetUnitVariable(unit, "Active", false)
-	end
-	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
-	unit = CreateUnit("unit-goblin-banner", 5, {47, 33})
-	unit = CreateUnit("unit-goblin-banner", 5, {50, 28})
-
-	SetDiplomacy(0, "enemy", 1)
-	SetDiplomacy(0, "enemy", 2)
-	SetDiplomacy(0, "enemy", 3)
-	SetDiplomacy(0, "enemy", 4)
-	SetDiplomacy(0, "enemy", 5)
-	SetDiplomacy(1, "enemy", 0)
-	SetDiplomacy(1, "enemy", 2)
-	SetDiplomacy(1, "enemy", 3)
-	SetDiplomacy(1, "enemy", 4)
-	SetDiplomacy(1, "enemy", 5)
-	SetDiplomacy(2, "enemy", 0)
-	SetDiplomacy(2, "enemy", 1)
-	SetDiplomacy(3, "enemy", 0)
-	SetDiplomacy(3, "enemy", 1)
-	SetDiplomacy(4, "enemy", 0)
-	SetDiplomacy(4, "enemy", 1)
-	SetDiplomacy(5, "enemy", 0)
-	SetDiplomacy(5, "enemy", 1)
-	
-	if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-		SetDiplomacy(4, "neutral", 0)
-		SetDiplomacy(5, "neutral", 0)
-	end
 end
 
 CreateNeutralBuildings("unit-volcanic-crater", 16, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false) -- to make the map seem more volcanic until lava tiles are implemented
@@ -478,11 +330,3 @@ CreateNeutralBuildings("unit-volcanic-crater", 16, 0, Map.Info.MapWidth - 2, 0, 
 CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 
 CreateCritters()
-
--- in grand strategy mode, give the defender two guard towers if a stronghold is built
-if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-	if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {18, 27})
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {8, 38})
-	end
-end
