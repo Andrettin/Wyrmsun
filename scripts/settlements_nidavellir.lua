@@ -91,23 +91,6 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Regions = {}
 })
 
-DefineSite("khag", { -- Khag tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
-	Name = "Khag",
-	MapTemplate = "nidavellir",
-	Position = {243, 218},
-	Major = true,
-	CulturalNames = {
-		"goblin", "Khag"
-	},
-	HistoricalOwners = {
-		-3000, "khag-tribe"
-	},
-	HistoricalBuildings = {
-		-3000, 0, "town-hall"
-	},
-	Regions = {}
-})
-
 DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Lggi",
 	MapTemplate = "nidavellir",
