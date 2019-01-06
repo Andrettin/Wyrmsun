@@ -11,11 +11,11 @@ function RunSaveGame(name, menu)
 	wyr.preferences = nil
 	if (menu ~= nil) then
 		if (SaveGame(name) == -1) then
-			local confirm = WarGameMenu(panel(3))
-			confirm:resize(300,120)
-			confirm:addLabel(_("Cannot save game to file:"), 300 / 2, 11)
-			confirm:addLabel(name, 300 / 2, 31)
-			confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
+			local confirm = WarGameMenu(panel(4))
+			confirm:resize(288,128)
+			confirm:addLabel(_("Cannot save game to file:"), 288 / 2, 11)
+			confirm:addLabel(name, 288 / 2, 31)
+			confirm:addHalfButton(_("~!OK"), "o", 1 * (288 / 3), 128 - 16 - 27, function() confirm:stop() end)
 			confirm:run(false)
 		else
 			UI.StatusLine:Set(_("Saved game to:") .. " " .. name)
@@ -30,20 +30,20 @@ function RunSaveGame(name, menu)
 end
 
 function RunConfirmErase(name, menu)
-  local confirm = WarGameMenu(panel(3))
+  local confirm = WarGameMenu(panel(4))
 
-  confirm:resize(300,120)
+  confirm:resize(288,128)
 
-  confirm:addLabel(name, 300 / 2, 11)
-  confirm:addLabel(_("File exists, are you sure?"), 300 / 2, 31)
+  confirm:addLabel(name, 288 / 2, 11)
+  confirm:addLabel(_("File exists, are you sure?"), 288 / 2, 31)
 
-  confirm:addHalfButton(_("~!Yes"), "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
+  confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 128 - 16 - 27,
     function()
         confirm:stop()
         RunSaveGame(name, menu)
     end)
 
-  confirm:addHalfButton(_("~!No"), "n", 3 * (300 / 3) - 116, 120 - 16 - 27,
+  confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 128 - 16 - 27,
     function() confirm:stop() end)
 
   confirm:run(false)
