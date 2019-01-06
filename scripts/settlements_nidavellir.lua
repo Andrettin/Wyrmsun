@@ -25,24 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("chaincolt-gates", { -- from Battle for Wesnoth: The Sceptre of Fire (Closing the Gates)
-	Name = "Chaincolt Gates",
-	MapTemplate = "nidavellir-underground",
-	Position = {472, 225},
-	CulturalNames = {
---		"dwarf", "Chaincolt Gates"
-	},
-	Cores = {
-	},
-	HistoricalOwners = {
-		25, "norlund-clan"
-	},
-	HistoricalBuildings = {
-		25, 0, "guard-tower"
-	},
-	Regions = {}
-})
-
 DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Dreadskull",
 	MapTemplate = "nidavellir",

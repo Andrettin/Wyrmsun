@@ -29,14 +29,6 @@ SetMapTemplateLayerConnector("caverns-of-chaincolt-gates", "unit-cavern-entrance
 SetMapTemplateLayerConnector("caverns-of-chaincolt-gates-underground", "unit-cavern-entrance", {13, 14}, 0)
 
 --[[
--- stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {453, 218})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {459, 224})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {464, 216})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {467, 228})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {473, 237})
-SetMapTemplateUnit("nidavellir-underground", "unit-glyph", "", {480, 232})
-
 SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {460, 226}, 25)
 SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {464, 228}, 25)
 SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {462, 224}, 25)
