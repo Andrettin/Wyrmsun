@@ -80,7 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with the size and graphics of the save game confirmation dialog.
 
 * Quests
-- The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop besides the destroyed hall.
+- The Andvari's Gold side-quest now requires the destruction of the Oinling Clan's Mead Hall, instead of the destruction of the entire clan. The magic ring will drop beside the destroyed hall.
 
 * Scenarios
 - The Nidavellir map is now randomly-generated.
