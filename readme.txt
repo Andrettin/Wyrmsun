@@ -72,7 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.
 
-* Map
+* Maps
 - Improved the performance of the forest regeneration code.
 - Fixed issue which occurred when loading a saved game of certain quests (e.g. "The Wyrm", "Caverns of Flame").
 
