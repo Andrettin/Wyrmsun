@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Deities
 - Added the Frey major deity for the Germanics and the Norse. Frey grants +1 damage to archers, and the Barkskin ability to priests.
-- Added the Freyja minor deity for the Germanics and the Norse. Freyja grants +20 damage and the Regeneration ability to priests.
+- Added the Freyja minor deity for the Germanics and the Norse. Freyja grants +20 mana and the Regeneration ability to priests.
 
 * Factions
 - Founding the dwarven Shadowcharm Clan now requires having built a Temple, and having Loki as a worshipped deity.
