@@ -3663,7 +3663,7 @@ DefineUnitType("unit-template-archer", {
 	Speed = 10,
 	HitPoints = 40,
 	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 5,
+	SightRange = 6,
 	BasicDamage = 9,
 	Missile = "missile-arrow",
 	FireMissile = "missile-flaming-arrow",

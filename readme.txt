@@ -60,6 +60,13 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Increased Barkskin's armor bonus from 2 to 4.
 
+* Units
+- Archers and scouts now have a sight range of 6 rather than 5.
+
+* Upgrades
+- Added the Composite Bow technology, which increases archer damage by 2.
+- Added the Longbow technology, which increases archer range by 1.
+
 -----------------------------------------------------------------------
 - 3.5.2
 -----------------------------------------------------------------------

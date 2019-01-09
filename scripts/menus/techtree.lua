@@ -250,6 +250,18 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUpgradeData(unitName, "Class") == "ranged-projectile-2") then
 					tech_icon_x = 7
 					tech_icon_y = 5
+				elseif (GetUpgradeData(unitName, "Class") == "composite-bow") then
+					tech_icon_x = 8
+					tech_icon_y = 4
+					if (civilization == "dwarf") then
+						tech_allowed = false
+					end
+				elseif (GetUpgradeData(unitName, "Class") == "longbow") then
+					tech_icon_x = 8
+					tech_icon_y = 5
+					if (civilization == "dwarf") then
+						tech_allowed = false
+					end
 				elseif (GetUpgradeData(unitName, "Class") == "siege-projectile-1") then
 					tech_icon_x = 1
 					tech_icon_y = 4

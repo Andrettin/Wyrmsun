@@ -2137,7 +2137,7 @@ DefineButton( { Pos = 9, Icon = "icon-ring",
 	}
 })
 
-DefineButton( { Pos = 9, Icon = "icon-furniture",
+DefineButton( { Pos = 13, Icon = "icon-furniture",
 	Action = "produce-resource", Value = "furniture",
 	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup-commands",
 	Description = "Allows workers to transform Lumber into Furniture in this building",
