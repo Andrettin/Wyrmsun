@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("a-rocky-home-introduction",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function() 
-		CallDialogue("a-rocky-home-introduction", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("a-rocky-home-mead-hall-built",
 	function()
 		for i=0,(PlayerMax - 2) do
