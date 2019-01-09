@@ -1075,6 +1075,7 @@
 /graphics/neutral/items/potion_purple.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/items/potion_red.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/items/potion_teal.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/sack.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/items/scepter.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/items/trap.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/items/wyrm_heart.png (by Exidelo) (licensed under the CC0)
