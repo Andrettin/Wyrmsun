@@ -2093,6 +2093,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Raiding = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Raiding: "), String(TypeVar("Raiding","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -2424,6 +2427,16 @@ if not (ui_loaded_first_time) then
 							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						Concat(
+							Concat(_("Range:"), " "),
+							If(GreaterThan(UnitVar("AttackRange", "Change"), 0), "+", "")
+						),
+						String(UnitVar("AttackRange", "Change"))
+					),
+					Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}

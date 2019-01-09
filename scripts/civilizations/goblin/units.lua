@@ -410,7 +410,7 @@ DefineUnitType("unit-goblin-archer", {
 	PierceDamage = true,
 	ButtonKey = "a",
 	ButtonHint = "Train ~!Archer",
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -447,7 +447,7 @@ DefineUnitType("unit-goblin-headhunter", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -483,7 +483,7 @@ DefineUnitType("unit-goblin-shadowstalker", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -681,7 +681,7 @@ DefineUnitType("unit-goblin-stronghold", {
 	Icon = "icon-goblin-stronghold",
 	Trains = {"unit-goblin-worker"},
 	RequirementsString = "Mess Hall and Masonry",
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
@@ -713,7 +713,7 @@ DefineUnitType("unit-goblin-mess-hall", {
 	Trains = {"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider"},
 	ButtonKey = "m",
 	ButtonHint = "Build ~!Mess Hall",
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
@@ -727,7 +727,7 @@ DefineUnitType("unit-goblin-lumber-mill", {
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-lumber-mill",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
@@ -827,7 +827,7 @@ DefineUnitType("unit-goblin-market", {
 	Shadow = {"file", "goblin/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-market",
 	TradeCost = 25, -- -5% trade cost
-	SoldUnits = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	SoldUnits = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-composite-bow", "unit-longbow", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

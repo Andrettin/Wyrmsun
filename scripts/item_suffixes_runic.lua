@@ -29,7 +29,7 @@ DefineUpgrade("upgrade-item-suffix-of-aedi", {
 	Name = "of Aedi", -- "Aedi" (untransliterated: "æði") is a Norse rune meaning "frenzy"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
-	ItemSuffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
+	ItemSuffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
 	MagicLevel = 1
 })
 
@@ -53,7 +53,7 @@ DefineUpgrade("upgrade-item-suffix-of-othola", {
 	Name = "of Othola", -- "Othola" (untransliterated: "óþola") is a Norse rune meaning "restlessness"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	MagicSuffix = true,
 	RunicAffix = true,
-	ItemSuffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
+	ItemSuffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing-axe", "thrusting-sword", "horn"},
 	MagicLevel = 2
 })
 

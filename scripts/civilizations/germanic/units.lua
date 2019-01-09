@@ -647,7 +647,7 @@ DefineUnitType("unit-germanic-archer", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	RequirementsString = "Carpenter's Shop",
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -765,7 +765,7 @@ DefineUnitType("unit-germanic-barracks", {
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	Variations = {
 		{
 			"variation-id", "barracks",
@@ -802,7 +802,7 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 	Icon = "icon-germanic-carpenters-shop",
 	ButtonKey = "r",
 	ButtonHint = "Build Carpente~!r's Shop",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-arrows", "unit-barbed-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
@@ -845,7 +845,7 @@ DefineUnitType("unit-germanic-market", {
 	Shadow = {"file", "germanic/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-market",
 	RequirementsString = "Carpenter's Shop",
-	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}

@@ -168,7 +168,7 @@ DefineUnitType("unit-norse-barracks", {
 	Shadow = {"file", "norse/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-barracks",
 	Trains = {"unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
 	}
@@ -183,7 +183,7 @@ DefineUnitType("unit-norse-lumber-mill", {
 	Shadow = {"file", "norse/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Animations = "animations-active-building",
 	Icon = "icon-norse-lumber-mill",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
 	}
@@ -224,7 +224,7 @@ DefineUnitType("unit-norse-market", {
 	Shadow = {"file", "norse/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-norse-market",
 	RequirementsString = "Lumber Mill",
-	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
 	}
