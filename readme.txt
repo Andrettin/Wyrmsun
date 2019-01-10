@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed crash when changing resolution.
+- A message is now shown when the age of the player's faction has changed.
 
 * Units
 - Archers and scouts now have a sight range of 6 rather than 5.
