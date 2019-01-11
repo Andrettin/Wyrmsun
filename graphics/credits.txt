@@ -85,6 +85,7 @@
 /graphics/dwarf/icons/gryphon_rider_brown_hair.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/gryphon_rider_red_hair.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/guard.png (by Jinn) (licensed under the GPL 2.0)
+/graphics/dwarf/icons/infusion.png (by Exidelo) (licensed under the CC0)
 /graphics/dwarf/icons/loremaster.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/militia.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/miner.png (by Jinn) (licensed under the CC0)
