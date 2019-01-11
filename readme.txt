@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash when changing resolution.
 - A message is now shown when the age of the player's faction has changed.
 
+* Scenarios
+- Readded the Shorbear Hills to Nidavellir.
+
 * Units
 - Archers and scouts now have a sight range of 6 rather than 5.
 

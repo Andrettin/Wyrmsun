@@ -127,28 +127,6 @@ DefineSite("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire 
 	Regions = {}
 })
 
-DefineSite("shorbear-hold", { -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
-	Name = "Shorbear Hold",
-	MapTemplate = "nidavellir",
-	Position = {515, 223},
-	Major = true,
-	CulturalNames = {
-		"dwarf", "Shorbear Hold"
-	},
-	Cores = {
-		"shorbear-clan"
-	},
-	HistoricalOwners = {
-		24, "shorbear-clan",
-		35, "norlund-clan",
-		40, ""
-	},
-	HistoricalBuildings = {
-		24, 35, "stronghold", "shorbear-hold"
-	},
-	Regions = {}
-})
-
 DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Wildfang",
 	MapTemplate = "nidavellir",

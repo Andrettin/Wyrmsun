@@ -30,8 +30,6 @@
 --SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {499, 209}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {499, 209}, 0)
 
-SetMapTemplateResource("nidavellir", "unit-yale-cave", {522, 230}) -- it seems sensible to have a yale cave in the Shorbear Hills; hill dwarves should be some of the dwarven clans that use yales the most, so they should have some wild yales nearby
-
 SetMapTemplateHero("nidavellir", "rugnur", "norlund-clan", {499, 209}, 34, 35)
 SetMapTemplateUnit("nidavellir", "unit-gnomish-duelist", "norlund-clan", {499, 209}, 34, 35) -- Gnomish Envoy
 SetMapTemplateHero("nidavellir", "baglur", "norlund-clan", {499, 209}, 34, 35)
