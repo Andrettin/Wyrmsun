@@ -59,7 +59,7 @@ msgid "S~!how Credits"
 msgstr "Li~!sta Twórców"
 
 msgid "E~!xit Program"
-msgstr "Wyjdź z Gry (~!X)
+msgstr "Wyjdź z Gry (~!X)"
 
 msgid "~!Previous Menu"
 msgstr "~!Poprzednie Menu"
