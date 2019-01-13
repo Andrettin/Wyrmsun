@@ -13,6 +13,7 @@ lua51.dll
 oaml.log
 screen*.png
 SDL.dll
+SDL2.dll
 stderr.txt
 stdout.txt
 stratagus.exe

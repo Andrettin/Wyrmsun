@@ -2019,6 +2019,27 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
+	Variations = {
+		{
+			"variation-id", "lumber-mill",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "lumber-mill-snow-winter",
+			"file", "dwarf/buildings/lumber_mill_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "lumber-mill-snow",
+			"file", "dwarf/buildings/lumber_mill_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2057,6 +2078,27 @@ DefineUnitType("unit-dwarven-masons-shop", {
 	Costs = {"time", 165, "copper", 660, "lumber", 0, "stone", 1485},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
+	Variations = {
+		{
+			"variation-id", "masons-shop",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow-winter",
+			"file", "dwarf/buildings/masons_shop_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow",
+			"file", "dwarf/buildings/masons_shop_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2143,6 +2185,27 @@ DefineUnitType("unit-dwarven-guard-tower", {
 	HitPoints = 325, -- 390 with masonry
 	HackDamage = true,
 	PierceDamage = false,
+	Variations = {
+		{
+			"variation-id", "guard-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "guard-tower-snow-winter",
+			"file", "dwarf/buildings/guard_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "guard-tower-snow",
+			"file", "dwarf/buildings/guard_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "throwing-axe"
@@ -2163,6 +2226,27 @@ DefineUnitType("unit-dwarven-ballista-tower", {
 	FireMissile = "missile-flaming-dwarven-ballista-bolt",
 	FireResistance = 20,
 	PierceDamage = true,
+	Variations = {
+		{
+			"variation-id", "ballista-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "ballista-tower-snow-winter",
+			"file", "dwarf/buildings/ballista_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "ballista-tower-snow",
+			"file", "dwarf/buildings/ballista_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "catapult-attack"
@@ -2180,6 +2264,27 @@ DefineUnitType("unit-dwarven-cannon-tower", {
 	Costs = {"lumber", 0, "stone", 900},
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
+	Variations = {
+		{
+			"variation-id", "cannon-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "cannon-tower-snow-winter",
+			"file", "dwarf/buildings/cannon_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "cannon-tower-snow",
+			"file", "dwarf/buildings/cannon_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2196,6 +2301,27 @@ DefineUnitType("unit-dwarven-market", {
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	SoldUnits = {"unit-runesmiths-hammer", "unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-thrusting-sword", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-wool-shoes", "unit-furry-wool-shoes"},
+	Variations = {
+		{
+			"variation-id", "market",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "market-snow-winter",
+			"file", "dwarf/buildings/market_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "market-snow",
+			"file", "dwarf/buildings/market_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2210,6 +2336,27 @@ DefineUnitType("unit-dwarven-academy", {
 	Shadow = {"file", "dwarf/buildings/academy_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-academy",
 	RequirementsString = "Writing",
+	Variations = {
+		{
+			"variation-id", "academy",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "academy-snow-winter",
+			"file", "dwarf/buildings/academy_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "academy-snow",
+			"file", "dwarf/buildings/academy_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2227,6 +2374,27 @@ DefineUnitType("unit-dwarven-dock", {
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 --	Drops = {"unit-stone-pile"},
+	Variations = {
+		{
+			"variation-id", "dock",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dock-snow-winter",
+			"file", "dwarf/buildings/dock_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dock-snow",
+			"file", "dwarf/buildings/dock_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

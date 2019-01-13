@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.4
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Reworked the dependency code to make it both more flexible and more performant.
+
 -----------------------------------------------------------------------
 - 3.5.3
 -----------------------------------------------------------------------
