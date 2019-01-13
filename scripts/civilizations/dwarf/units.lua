@@ -1958,6 +1958,27 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Variations = {
+		{
+			"variation-id", "mushroom-farm",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "mushroom-farm-snow-winter",
+			"file", "dwarf/buildings/mushroom_farm_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "mushroom-farm-snow",
+			"file", "dwarf/buildings/mushroom_farm_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2062,6 +2083,27 @@ DefineUnitType("unit-dwarven-smithy", {
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-runesmiths-hammer", "unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-hand-cannon", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
+	Variations = {
+		{
+			"variation-id", "smithy",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow-winter",
+			"file", "dwarf/buildings/smithy_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow",
+			"file", "dwarf/buildings/smithy_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -2162,6 +2204,27 @@ DefineUnitType("unit-dwarven-sentry-tower", {
 	HitPoints = 250, -- 300 with masonry
 	Construction = "construction-dwarven-sentry-tower",
 	ButtonHint = "Build Sentry ~!Tower",
+	Variations = {
+		{
+			"variation-id", "sentry-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "sentry-tower-snow-winter",
+			"file", "dwarf/buildings/sentry_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "sentry-tower-snow",
+			"file", "dwarf/buildings/sentry_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
