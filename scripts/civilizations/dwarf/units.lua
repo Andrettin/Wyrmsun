@@ -2167,6 +2167,27 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	ButtonHint = "Build ~!Yale Pen",
 	Drops = {"unit-stone-pile", "unit-yale"},
 	BuildingRulesString = "Cannot be built close to town halls",
+	Variations = {
+		{
+			"variation-id", "yale-pen",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "yale-pen-snow-winter",
+			"file", "dwarf/buildings/yale_pen_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "yale-pen-snow",
+			"file", "dwarf/buildings/yale_pen_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"selected", "yale-pen-selected",
 		"help", "basic-dwarf-voices-help-town"
@@ -2185,6 +2206,27 @@ DefineUnitType("unit-dwarven-temple", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	Drops = {"unit-stone-pile"},
+	Variations = {
+		{
+			"variation-id", "temple",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "temple-snow-winter",
+			"file", "dwarf/buildings/temple_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "temple-snow",
+			"file", "dwarf/buildings/temple_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

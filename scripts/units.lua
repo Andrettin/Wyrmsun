@@ -1297,14 +1297,34 @@ DefineUnitType("unit-yale-hunting-lodge", {
 	BuildingRulesString = "Must be built on top of a Yale Cave",
 	Variations = {
 		{
-			"variation-id", "general",
+			"variation-id", "yale-hunting-lodge",
 			"upgrade-forbidden", "upgrade-dwarven-civilization"
 		},
 		{
-			"variation-id", "dwarf",
+			"variation-id", "dwarven-yale-hunting-lodge",
 			"file", "dwarf/buildings/yale_hunting_lodge.png",
 			"icon", "icon-dwarven-yale-hunting-lodge",
-			"upgrade-required", "upgrade-dwarven-civilization"
+			"upgrade-required", "upgrade-dwarven-civilization",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dwarven-yale-hunting-lodge-snow-winter",
+			"file", "dwarf/buildings/yale_hunting_lodge_snow.png",
+			"icon", "icon-dwarven-yale-hunting-lodge",
+			"upgrade-required", "upgrade-dwarven-civilization",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dwarven-yale-hunting-lodge-snow",
+			"file", "dwarf/buildings/yale_hunting_lodge_snow.png",
+			"icon", "icon-dwarven-yale-hunting-lodge",
+			"upgrade-required", "upgrade-dwarven-civilization",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {

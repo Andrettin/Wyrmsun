@@ -57,6 +57,8 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.4
 -----------------------------------------------------------------------
 
+* Buildings
+- Added snow variations for all dwarven buildings that lacked them.
 * Miscellaneous
 - Reworked the dependency code to make it both more flexible and more performant.
 
