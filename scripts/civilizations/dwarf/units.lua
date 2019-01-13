@@ -1826,13 +1826,53 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"variation-id", "brising-mead-hall",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
-			"upgrade-required", "upgrade-faction-brising-clan"
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "brising-mead-hall",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
 			"icon", "icon-brising-town-hall",
-			"upgrade-required", "upgrade-faction-lyr"
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "brising-mead-hall-snow-winter",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brising-mead-hall-snow-winter",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brising-mead-hall-snow",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "brising-mead-hall-snow",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "joruvellir-mead-hall",
@@ -1915,13 +1955,53 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"variation-id", "brising-bastion",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
-			"upgrade-required", "upgrade-faction-brising-clan"
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "brising-bastion",
 			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
 			"icon", "icon-brising-stronghold",
-			"upgrade-required", "upgrade-faction-lyr"
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "brising-bastion-snow-winter",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brising-bastion-snow-winter",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brising-bastion-snow",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-faction-brising-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "brising-bastion-snow",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-faction-lyr",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "joruvellir-bastion",

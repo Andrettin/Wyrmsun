@@ -59,6 +59,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Added snow variations for all dwarven buildings that lacked them.
+- Added snow variations for the Brising Smithy, Mead Hall and Bastion.
+
 * Miscellaneous
 - Reworked the dependency code to make it both more flexible and more performant.
 

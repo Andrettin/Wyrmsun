@@ -79,5 +79,26 @@ DefineUnitType("unit-brising-smithy", {
 	Shadow = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-brising-smithy",
 	ResearchSpeedBonus = 50, -- +50% Research Speed Bonus
+	Variations = {
+		{
+			"variation-id", "smithy",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow-winter",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_snow.png",
+			"terrain", "snow"
+		}
+	},
 	AiDrops = {"unit-brising-round-shield"}
 } )
