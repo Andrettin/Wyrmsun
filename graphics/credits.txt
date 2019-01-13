@@ -1725,6 +1725,7 @@
 /graphics/ui/status_effects/blessing.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/dehydration.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/dehydration_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/ui/status_effects/infusion.png (by Exidelo) (licensed under the CC0)
 /graphics/ui/status_effects/inspire.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/inspire_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/ui/status_effects/leadership.png (by Jinn) (licensed under the CC0)
