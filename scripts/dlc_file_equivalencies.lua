@@ -26,9 +26,12 @@
 --
 
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "dwarf/buildings/town_hall.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png", "dwarf/buildings/town_hall_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png", "dwarf/buildings/stronghold.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png", "dwarf/buildings/stronghold_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "dwarf/buildings/smithy.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "dwarf/buildings/smithy_shadow.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy_snow.png", "dwarf/buildings/smithy_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_expert_miner.png", "dwarf/icons/expert_miner.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_militia.png", "dwarf/icons/militia.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_miner.png", "dwarf/icons/miner.png")
@@ -79,9 +82,12 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png", "teuton/units/ritter_shield.png")
 
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png", "dwarf/buildings/town_hall.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png", "dwarf/buildings/town_hall_snow.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png", "dwarf/buildings/stronghold.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png", "dwarf/buildings/stronghold_snow.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "dwarf/buildings/yale_pen.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "dwarf/buildings/yale_pen_shadow.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_snow.png", "dwarf/buildings/yale_pen_snow.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_black_hair.png", "dwarf/icons/dwarven_scout_black_hair.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_black_hair_beardless.png", "dwarf/icons/dwarven_scout_black_hair.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_scout_blond_hair.png", "dwarf/icons/dwarven_scout_blond_hair.png")

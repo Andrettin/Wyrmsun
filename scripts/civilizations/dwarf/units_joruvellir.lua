@@ -420,4 +420,25 @@ DefineUnitType("unit-joruvellir-yale-pen", {
 	Shadow = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "size", {96, 96}},
 	Icon = "icon-joruvellir-yale-pen",
 --	Costs = {"time", 135, "copper", 900, "lumber", 540, "stone", 270} -- 10% cheaper
+	Variations = {
+		{
+			"variation-id", "yale-pen",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "yale-pen-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "yale-pen-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_snow.png",
+			"terrain", "snow"
+		}
+	},
 } )

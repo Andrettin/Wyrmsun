@@ -1877,17 +1877,71 @@ DefineUnitType("unit-dwarven-town-hall", {
 		{
 			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
-			"upgrade-required", "upgrade-faction-goldhoof-clan"
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
-			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "joruvellir-mead-hall",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png",
-			"upgrade-required", "upgrade-faction-joruvellir"
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "joruvellir-mead-hall-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png",
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -2006,17 +2060,71 @@ DefineUnitType("unit-dwarven-stronghold", {
 		{
 			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
-			"upgrade-required", "upgrade-faction-goldhoof-clan"
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
-			"upgrade-required", "upgrade-faction-eikinskjaldi-clan"
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "joruvellir-bastion",
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png",
-			"upgrade-required", "upgrade-faction-joruvellir"
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow-winter",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-goldhoof-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-eikinskjaldi-clan",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "joruvellir-bastion-snow",
+			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png",
+			"upgrade-required", "upgrade-faction-joruvellir",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
