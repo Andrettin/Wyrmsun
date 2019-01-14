@@ -1545,6 +1545,12 @@ function PersistencyUpdates()
 	
 	local last_version = tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", "")))
 	
+	if (last_version < 354 and wyr.preferences.GameSpeed == 60) then -- fix to wrong default game speed before version 3.5.4
+		wyr.preferences.GameSpeed = 30
+		SetGameSpeed(wyr.preferences.GameSpeed)
+		SavePreferences()
+	end
+	
 	if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
 		wyr.preferences.LastVersionPlayed = wyrmsun.Version
 		SavePreferences()

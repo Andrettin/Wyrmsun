@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Reworked the dependency code to make it both more flexible and more performant.
+- Fixed the value default game speed setting (used when starting the game for the first time).
 
 -----------------------------------------------------------------------
 - 3.5.3
