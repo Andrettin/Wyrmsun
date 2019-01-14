@@ -63,7 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added snow variations for the Joruvellir Yale Pen, Mead Hall and Bastion.
 
 * Miscellaneous
-- Reworked the dependency code to make it both more flexible and more performant.
+- Reworked the dependency code to make it more flexible, and also to improve its performance.
 - Fixed the value default game speed setting (used when starting the game for the first time). Please note that the game speed preferences can be changed in-game.
 
 -----------------------------------------------------------------------
