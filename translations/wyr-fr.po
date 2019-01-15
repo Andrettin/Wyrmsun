@@ -99,7 +99,7 @@ msgstr "La colonisation de la Scandinavie"
 
 msgid "Complete the On the Vanaquisl, Westward Migration and The Settlement of Scandinavia scenarios."
 msgstr ""
-"Terminer les scénarios : Sur le Vanaquisl, Migration vers l'ouest et La "
+"Terminer les scénarios Sur le Vanaquisl, Migration vers l'ouest et La "
 "colonisation de la Scandinavie."
 
 msgid "Haimadala's Progeny"
@@ -118,13 +118,13 @@ msgid "The First Marcomannic War"
 msgstr "La Première Guerre Marcomannic"
 
 msgid "Complete the The Sack of Iuvavum and The Razing of Opitergium missions."
-msgstr "Terminer les missions : Le Sac d'Iuvavum et La Rasage d'Opitergium."
+msgstr "Terminer les missions Le sac d'Iuvavum et Le rasage d'Opitergium."
 
 msgid "The Conquest of Galicia"
-msgstr "La Conquête de la Galice"
+msgstr "La conquête de la Galice"
 
 msgid "Complete the Moving into Galicia mission."
-msgstr "Terminer la mission du déplacement vers Galice."
+msgstr "Terminer la mission du déplacement vers la Galice."
 
 msgid "The Blue Danube"
 msgstr "Le Danube Bleu"
@@ -136,7 +136,7 @@ msgid "Complete the The First Dwarves scenario."
 msgstr "Terminer le scénario des premiers nains."
 
 msgid "The Mightiest Made"
-msgstr "Le plus Puissant Fait"
+msgstr "Le plus puissant fait"
 
 msgid "Reach level 10 with Modsognir."
 msgstr "Atteindre le niveau 10 avec Modsognir."
@@ -151,49 +151,49 @@ msgid "The Treasures of Svarinshaug"
 msgstr "Les Trésors de Svarinshaug"
 
 msgid "Complete the The Mastersmith Brothers, The Ring of Riches, The Thunder Hammer and The Magnificent Spear quests."
-msgstr "Terminer les quêtes : The Mastersmith Brothers, The Ring of Riches, The Thunder Hammer and The Magnificent."
+msgstr "Terminer les quêtes Les frères Maître-forgeron, L'anneau des richesses, Le marteau du tonnerre et La lance magnifique."
 
 msgid "The Lay of Alvis"
-msgstr "La laîque d'Alvis"
+msgstr "La laïque d'Alvis"
 
 msgid "Complete the The Dripping Hall, The Deep, The Burner and The Weaver of Dreams quests."
-msgstr "Terminer les quêtes : The Dripping Hall, The Deep, The Burner et The Weaver of Dreams."
+msgstr "Terminer les quêtes La salle des gouttes, L'abîme, Le brûleur et Le tisserand des rêves."
 
 msgid "Safe Passage"
-msgstr "Passage Sécurisé"
+msgstr "Passage sécurisé"
 
 msgid "Destroy the raiders during the A Bargain is Struck quest on Hard difficulty or higher."
-msgstr "Détruire les raiders pendant la quête -A Bargain is Struck- au moins en mode difficile."
+msgstr "Détruire les raiders pendant la quête Marché conclu au moins en mode difficile."
 
 msgid "Rugnur's Bravery"
-msgstr "Bravour de Rugnur"
+msgstr "Bravoure de Rugnur"
 
 msgid "Upgrade Rugnur to a Stonelord."
-msgstr "Améliorer Rugnur vers un siegneur de pierre (StoneLord)."
+msgstr "Améliorer Rugnur en un seigneur de pierre (StoneLord)."
 
 msgid "The Scepter of Fire"
 msgstr "Le Sceptre de Feu"
 
 msgid "Complete the A Bargain is Struck, Closing the Gates, Searching for the Runecrafter, Gathering Materials, Hills of the Shorbear Clan, The Wyrm and Caverns of Flame missions."
-msgstr "Termier les missions : A Bargain is Struck, Closing the Gates, Searching for the Runecrafter, Gathering Materials, Hills of the Shorbear Clan, The Wyrm and Caverns of Flame."
+msgstr "Terminer les missions Marché conclu, Fermeture des portes, Recherche du forgeron de runes, Rassembler les matériaux, Les collines du clan Shorbear, The Wyrm et Cavernes ardentes."
 
 msgid "Paragon"
 msgstr "Parangon"
 
 msgid "Reach level 10 with any custom hero."
-msgstr "Atteindre le niveau 10 avec n'importe quel héro personnélisé."
+msgstr "Atteindre le niveau 10 avec n'importe quel héro personnalisé."
 
 msgid "Legend"
 msgstr "Légende"
 
 msgid "Reach level 20 with any custom hero."
-msgstr "Atteindre le niveau 20 avec n'importe quel héro personnélisé."
+msgstr "Atteindre le niveau 20 avec n'importe quel héro personnalisé."
 
 msgid "Demigod"
-msgstr "Demi-Dieu"
+msgstr "Demi-dieu"
 
 msgid "Reach level 100 with any custom hero."
-msgstr "Atteindre le niveau 100 avec n'importe quel héro personnélisé."
+msgstr "Atteindre le niveau 100 avec n'importe quel héro personnalisé."
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/buttons.lua
 
@@ -210,10 +210,10 @@ msgid "~!Repair"
 msgstr "~!Réparer"
 
 msgid "~!Harvest Resource"
-msgstr "Récolter Ressources (~!H)"
+msgstr "Récolter ressources (~!H)"
 
 msgid "Return with ~!Goods"
-msgstr "Retourner avec les dieux (~!G)"
+msgstr "Retourner avec les marchandises (~!G)"
 
 msgid "~!Build Structure"
 msgstr "Construire une structure (~!B)"
@@ -361,7 +361,7 @@ msgid "Learn T~!oughness"
 msgstr "Apprendre la ténacité (~!O)"
 
 msgid "Toughness is a passive ability that increases HP by 10"
-msgstr "La ténacité est une capacité passive qui augmente HP de 10"
+msgstr "La ténacité est une capacité passive qui augmente PV de 10"
 
 msgid "Open ~!Inventory"
 msgstr "Ouvrir ~!inventaire"
@@ -512,7 +512,7 @@ msgid "Enact ~!Free Workers"
 msgstr "Travailleurs libres (~!F)"
 
 msgid "-100 Copper cost for workers, -1 worker gathering rate. Removes Free Workers."
-msgstr "-100 de cuivre pour les travailleurs, -1 taux de collecte des travailleurs. Supprime les incoccupés."
+msgstr "-100 de cuivre pour les travailleurs, -1 taux de collecte des travailleurs. Supprime les inoccupés."
 
 msgid "Enact ~!Serfdom"
 msgstr "~!Servage"
@@ -521,13 +521,13 @@ msgid "Develop Shield ~!Wall"
 msgstr "Développe le bouclier mural (~!W)"
 
 msgid "+2 Armor for infantry. Incompatible with Svinfylking."
-msgstr "+2 dommage pour l'infanterie. Incompatible avec Svinfylking."
+msgstr "+2 armure pour l'infanterie. Incompatible avec Svinfylking."
 
 msgid "Develop Svin~!fylking"
 msgstr "Développe Svin~!fylking"
 
 msgid "+2 Damage for infantry. Incompatible with Shield Wall."
-msgstr "+2 dommage pour l'infanterie. Incompatible avec les murs."
+msgstr "+2 dégâts pour l'infanterie. Incompatible avec les murs."
 
 msgid "Research Wood ~!Plow"
 msgstr "Charrue à bois (~!P)"
@@ -1321,7 +1321,7 @@ msgid "Stone:"
 msgstr "Pierre :"
 
 msgid "Damage:"
-msgstr "Dommage :"
+msgstr "Dégâts :"
 
 msgid "Map Properties"
 msgstr "Propriétés de la carte"
@@ -1405,13 +1405,13 @@ msgid "Work"
 msgstr "Travail"
 
 msgid "Hit Points:"
-msgstr "Points de dommage :"
+msgstr "Points de dégât :"
 
 msgid "The resource amount must be a number."
 msgstr "La quantité de ressource doit être un nombre."
 
 msgid "The hit points must be a number."
-msgstr "Les points de dommage doivent être un nombre."
+msgstr "Les points de dégât doivent être un nombre."
 
 msgid "Create Unit Type"
 msgstr "Créer une unité"
@@ -2014,14 +2014,14 @@ msgstr "Convertir au christianisme"
 
 msgid "Choose Christianity as your religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities."
 msgstr ""
-"Choisissez le christianisme comme religion. +10 cv, +20 mana et active les "
+"Choisissez le christianisme comme religion. +10 PV, +20 mana et active les "
 "sorts de soins et de bénédiction pour les pasteurs. Permet de nouveaux "
 "affixes magiques pour les articles vendus au marché. Incompatible avec les "
 "divinités païennes."
 
 msgid "Choose Christianity as your hero's religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Incompatible with any pagan deities."
 msgstr ""
-"Choisissez le christianisme comme religion pour votre héros. +10 cv, +20 mana "
+"Choisissez le christianisme comme religion pour votre héros. +10 PV, +20 mana "
 "et active les sorts de soins et de bénédiction pour les pasteurs. "
 "Incompatible avec les divinités païennes."
 
@@ -2041,7 +2041,7 @@ msgid "Research S~!patha"
 msgstr "É~!pée longue"
 
 msgid "+2 Damage for swordwielders. Allows Spathas to be sold at the Market."
-msgstr "+2 dommage pour les épéistes. Permet de les vendre au marché."
+msgstr "+2 dégâts pour les épéistes. Permet de les vendre au marché."
 
 msgid "Research Iron ~!Shield"
 msgstr "Bouclier en fer (~!S)"
@@ -2053,7 +2053,7 @@ msgid "Research Granite ~!Catapult Projectile"
 msgstr "Projectile de ~!catapulte en granite"
 
 msgid "+12 Damage for Catapults."
-msgstr "+12 dommage pour les catapultes."
+msgstr "+12 dégâts pour les catapultes."
 
 msgid "Research Metal ~!Catapult Projectile"
 msgstr "Projectile de ~!catapulte en métal"
@@ -2086,7 +2086,7 @@ msgid "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cos
 msgstr "+10% de bonus de traitement de cuivre, d'argent et d'or pour les Smithies. -5% Coût du commerce pour les marchés."
 
 msgid "Writing"
-msgstr "Ecriture"
+msgstr "Écriture"
 
 msgid "Iron Plow"
 msgstr "Charrue en fer"
@@ -2229,7 +2229,7 @@ msgid "Food Cost:"
 msgstr "Entretien :"
 
 msgid "~!Move"
-msgstr "~!Déplacer"
+msgstr "Déplacer (~!M)"
 
 msgid "Build C~!arpenter's Shop"
 msgstr "Magasin du ch~!arpentier"
@@ -2283,7 +2283,7 @@ msgid "Build Railroad"
 msgstr "Chemin de fer"
 
 msgid "Build Maso~!n's Shop"
-msgstr "Maison du Maço~!n"
+msgstr "Maison du maço~!n"
 
 msgid "Build ~!Yale Pen"
 msgstr "Enclos de ~!Yale"
@@ -2379,7 +2379,7 @@ msgid "Mugging: "
 msgstr "Agression : "
 
 msgid "~!Play Quest"
-msgstr "~!Commencer la quête"
+msgstr "Commencer la quête (~!P)"
 
 msgid "Build For~!um"
 msgstr "For~!um"
@@ -2390,7 +2390,7 @@ msgstr "~!Hôtel de ville"
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/ui.lua
 
 msgid "Processing"
-msgstr "En développement"
+msgstr "En fonctionnement"
 
 msgid "Click to accept quest"
 msgstr "Cliquer pour accepter la quête"
@@ -2578,7 +2578,7 @@ msgid "Many units can learn new abilities when leveling up. These provide them w
 msgstr ""
 "De nombreuses unités peuvent apprendre de nouvelles capacités lors des "
 "montées de niveau. Celles-ci leur fournissent une forme de bénéfice, comme "
-"l'augmentation des dommages."
+"l'augmentation des dégâts."
 
 msgid "Accuracy/Evasion"
 msgstr "Précision/Évasion"
@@ -2661,7 +2661,7 @@ msgid "Ite~!ms"
 msgstr "Art~!icles"
 
 msgid "Items can be picked up by units with an inventory (persistent heroes as well as organic units of level 3 and higher). Items come in several different types, such as weapons, shields, boots, rings and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units and buildings, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are often better than magic items, but not necessarily. Items that are neither magic nor unique will disappear five minutes after being dropped.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources."
-msgstr "Les objets peuvent être ramassés par des unités avec un inventaire (héros persistants ainsi que des unités organiques de niveau 3 et plus). Les objets viennent dans plusieurs types différents, tels que des armes, des boucliers, des bottes, des bagues et des potions. Les unités peuvent équiper des armes d'une classe particulière (c'est-à-dire que les Axefighters peuvent équiper des haches), et les unités non à distance peuvent également équiper des boucliers. Toute unité peut porter des bottes ou boire des potions; ce dernier peut être utilisé comme une mise sous tension par des unités qui n'ont pas d'inventaire. Equiper un objet remplacera les bonus des technologies d'armes par ceux de l'objet.\n\nLes objets sont généralement abandonnés par les unités et les bâtiments contrôlés par l'IA, et possèdent une chance d'avoir un affixe magique. Ces préfixes et suffixes affectent les statistiques de l'objet, en changeant ses dégâts, son armure et d'autres valeurs. De plus, les objets uniques ont également une chance de tomber. Les objets uniques sont souvent meilleurs que les objets magiques, mais pas nécessairement. Les objets qui ne sont ni magiques ni uniques disparaîtront cinq minutes après avoir été lâchés.\n\nEn dehors des objets, les unités peuvent également récupérer des power-ups. Ceux-ci ne sont pas limités aux unités avec des stocks, et effectueront des effets tels que la restauration de HP, provoquant un effet de statut ou fournissant des ressources."
+msgstr "Les objets peuvent être ramassés par des unités avec un inventaire (héros persistants ainsi que des unités organiques de niveau 3 et plus). Les objets viennent dans plusieurs types différents, tels que des armes, des boucliers, des bottes, des bagues et des potions. Les unités peuvent équiper des armes d'une classe particulière (c'est-à-dire que les Axefighters peuvent équiper des haches), et les unités non à distance peuvent également équiper des boucliers. Toute unité peut porter des bottes ou boire des potions ; ce dernier peut être utilisé comme une mise sous tension par des unités qui n'ont pas d'inventaire. Équiper un objet remplacera les bonus des technologies d'armes par ceux de l'objet.\n\nLes objets sont généralement abandonnés par les unités et les bâtiments contrôlés par l'IA, et possèdent une chance d'avoir un affixe magique. Ces préfixes et suffixes affectent les statistiques de l'objet, en changeant ses dégâts, son armure et d'autres valeurs. De plus, les objets uniques ont également une chance de tomber. Les objets uniques sont souvent meilleurs que les objets magiques, mais pas nécessairement. Les objets qui ne sont ni magiques ni uniques disparaîtront cinq minutes après avoir été lâchés.\n\nEn dehors des objets, les unités peuvent également récupérer des power-ups. Ceux-ci ne sont pas limités aux unités avec des stocks, et effectueront des effets tels que la restauration de PV, provoquant un effet de statut ou fournissant des ressources."
 
 msgid "Kno~!wledge"
 msgstr "Connaissance (~!w)"
@@ -2731,7 +2731,7 @@ msgstr ""
 "Old: -1 Sight, -1 Vitesse\n"
 "Quick: +1 Speed\n"
 "Reckless: -1 Evasion\n"
-"Resilient: +5 HP\n"
+"Resilient: +5 PV\n"
 "Lenteur: -1 Speed\n"
 "Force: +1 points de dégâts \n"
 "Vicieux: +2 Damage\n"
@@ -2754,7 +2754,7 @@ msgstr "Salle de guerre (~!W)"
 # scripts/civilizations/dwarf/upgrade_faction.lua
 
 msgid "+10 HP for Miners, +1 Damage for Axefighters, +50% Research Speed for Smithies"
-msgstr "+10 points de vie pour les mineurs, +1 point de dégâts pour les attaques axiales, + 50% de vitesse de recherche pour les Smithies"
+msgstr "+10 PV pour les mineurs, +1 point de dégâts pour les attaques axiales, + 50% de vitesse de recherche pour les Smithies"
 
 msgid "+1 Damage for Yale Riders, +1 Armor for Axefighters"
 msgstr ""
@@ -2786,14 +2786,14 @@ msgid "+1 Damage for Yale Riders and Scouts"
 msgstr "+1 points de dégâts pour les cavaliers en Yale et les éclaireurs"
 
 msgid "-5 HP and +3 Damage for Axefighters"
-msgstr "-5 HP et +3 points de dégâts pour les lanceurs de hache"
+msgstr "-5 PV et +3 points de dégâts pour les lanceurs de hache"
 
 msgid "+2 Damage for Axefighters"
 msgstr "+2 points de dégâts pour les lanceurs de hache"
 
 msgid "+10 HP for Miners, +5 Armor for Towers, +50% Research Speed for Smithies"
 msgstr ""
-"+10 HP pour les mineurs, +5 Armure pour les tours, +50% vitesse de recherche "
+"+10 PV pour les mineurs, +5 Armure pour les tours, +50% vitesse de recherche "
 "pour les forges"
 
 msgid "Surghan Mercenaries"
@@ -2960,7 +2960,7 @@ msgstr ""
 
 msgid "In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."
 msgstr ""
-"Dans la poésie d'Edda ~<Hovamol~>, Dvalin est mentionné comme étant celui "
+"Dans l'Edda poétique ~<Hovamol~>, Dvalin est mentionné comme étant celui "
 "qui a conféré la connaissance des runes aux nains."
 
 msgid ""
@@ -3098,13 +3098,13 @@ msgid "- Destroy Aquileia's Forum"
 msgstr "- Détruire le forum d'Aquileia"
 
 msgid "The Sack of Iuvavum"
-msgstr "Le Sac d'Iuvavum"
+msgstr "Le sac d'Iuvavum"
 
 msgid "Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.\n\nMap: Salzburg"
 msgstr "Presque deux siècles après l'époque de Marbod, le chef des Marcomans Ballomar a rassemblé plus d'une douzaine de tribus germaniques dans une alliance pour envahir l'Empire romain.\n\nCarte : Salzbourg"
 
 msgid "The Razing of Opitergium"
-msgstr "La Rasage d'Opitergium"
+msgstr "Le rasage d'Opitergium"
 
 msgid "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo"
 msgstr "Laissant derrière eux une traînée de destruction, les Marcomans ont maintenant atteint l'Italie et assiégé la ville romaine d'Opitergium.\n\nCarte : Oderzo"
@@ -3168,7 +3168,7 @@ msgid "Select an Academy and then click on the Research Alchemy button to resear
 msgstr "Sélectionnez une académie, puis cliquez sur le bouton Rechercher l'alchimie pour rechercher la technologie requise pour cette quête."
 
 msgid "The Weaver of Dreams"
-msgstr "Le tisserand des Rêves"
+msgstr "Le tisserand des rêves"
 
 msgid "We call the night \"the weaver of dreams\", for the figments wrought into our minds as we sleep at night. The loremaster Alvis asks you to build a temple, so that we may train priests skilled in discerning visions from the dreamworld."
 msgstr "Nous appelons la nuit \"le tisserand des rêves\", pour les produits fabriqués dans notre esprit alors que nous dormons la nuit. Le maître d'hôtel Alvis vous demande de construire un temple afin que nous puissions former des prêtres qualifiés pour discerner les visions du monde onirique."
@@ -3222,7 +3222,7 @@ msgid "Rugnur and his brave companions, having spent two years harvesting materi
 msgstr ""
 
 msgid "Hills of the Shorbear Clan"
-msgstr "Les Collines du clan Shorbear"
+msgstr "Les collines du clan Shorbear"
 
 msgid "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills"
 msgstr ""
@@ -3656,7 +3656,7 @@ msgid "The sun is scorching in these parts, and it will be worse in the desert. 
 msgstr "Le soleil brûle dans ces régions, et ce sera pire dans le désert. Il serait préférable de le traverser pendant la nuit."
 
 msgid "Hint: Organic units suffer from dehydration in desert tiles, which slowly depletes their HP. The effect can be avoided by journeying through the desert at night, and some units (like wyrms) are immune to it. Units are not affected by dehydration in their player's own territory."
-msgstr "Astuce: Les unités organiques souffrent de déshydratation dans les tuiles du désert, ce qui épuise lentement leur HP. L'effet peut être évité en voyageant à travers le désert la nuit, et certaines unités (comme les wyrms) sont à l'abri. Les unités ne sont pas affectées par la déshydratation dans le territoire de leur joueur."
+msgstr "Astuce: Les unités organiques souffrent de déshydratation dans les tuiles du désert, ce qui épuise lentement leurs PV. L'effet peut être évité en voyageant à travers le désert la nuit, et certaines unités (comme les wyrms) sont à l'abri. Les unités ne sont pas affectées par la déshydratation dans le territoire de leur joueur."
 
 msgid "The foundations of our new settlement have been laid. After a long journey, we can finally rejoice in the safety our new dwelling!"
 msgstr "Les bases de notre nouveau règlement ont été posées. Après un long voyage, nous pouvons enfin nous réjouir de la sécurité de notre nouvelle habitation!"
@@ -3771,16 +3771,16 @@ msgid "Have 4000 Copper"
 msgstr "Détenir 4000 de cuivre "
 
 msgid "The Thunder Hammer"
-msgstr "Le Marteau du Tonnerre"
+msgstr "Le marteau du tonnerre"
 
 msgid "The mastersmiths Brokk and Eitri have spoken of their desire to craft a magnificent hammer, stronger than any other. To do so they will require plenty of metal, however."
-msgstr "Les maîtres forgerons Brokk et Eitri ont parlé de leur désir de fabriquer un magnifique marteau, plus costaux que tout autre. Cependant pour ce faire, ils auront besoin de beaucoup de métal.é
+msgstr "Les maîtres forgerons Brokk et Eitri ont parlé de leur désir de fabriquer un magnifique marteau, plus costaux que tout autre. Cependant pour ce faire, ils auront besoin de beaucoup de métal."
 
 msgid "Gather 4000 Copper"
 msgstr "Récolter 4000 de cruivre"
 
 msgid "The Magnificent Spear"
-msgstr "La lance Magnifique"
+msgstr "La lance magnifique"
 
 msgid "Ivaldi and his sons are of a mind to craft a wondrous spear, for which they will need a significant amount of materials."
 msgstr "Ivaldi et ses fils sont déterminés à fabriquer une lance merveilleuse, pour laquelle ils auront besoin d'une quantité importante de matériaux."
@@ -3903,7 +3903,7 @@ msgid "Select Game"
 msgstr "Sélectionner un jeu"
 
 msgid "Save Replay"
-msgstr "Enregistrer un Replay"
+msgstr "Enregistrer un replay"
 
 msgid "Magic Level"
 msgstr "Niveau de magie"
@@ -3941,7 +3941,7 @@ msgid "Dwarven runesmiths are renowned throughout Nidavellir for their craft. Th
 msgstr "Les forgerons de rune nains sont réputés tout au long de Nidavellir pour leur métier. Ils sculptent des runes mystérieuses dans les armes et les armures qu'ils fabriquent, leur insufflant de la puissance."
 
 msgid "Stonelord"
-msgstr "Siegneur des pierres"
+msgstr "Seigneur des pierres"
 
 msgid "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug."
 msgstr "Vêtus d'une armure étincelante, ces nains ressemblent à des rois sous les montagnes. Ils manient la hache avec une habileté magistrale, et bien que lents sur leurs pieds, ces nains sont un témoignage de la prouesse de leurs proches. Les seigneurs du Seigneur peuvent donner un pouvoir politique varié, allant des chefs locaux aux dirigeants des royaumes. Modsognir, le chef légendaire qui mena sa tribu contre les périls de Svarinshaug, fut l'un des premiers seigneurs."
@@ -4025,7 +4025,7 @@ msgid "Smithy"
 msgstr "Forge"
 
 msgid "Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths."
-msgstr "La forge est une compétence très prisée dans la société naine, amenant beaucoup à se consacrer à cette profession. Les forgerons nains sont réputés pour leurs compétences et leur métier attire de nombreux clients étrangers. Les plus prestigieux métallurgistes nains sont des forgerond de runes."
+msgstr "La forge est une compétence très prisée dans la société naine, amenant beaucoup à se consacrer à cette profession. Les forgerons nains sont réputés pour leurs compétences et leur métier attire de nombreux clients étrangers. Les plus prestigieux métallurgistes nains sont des forgerons de runes."
 
 msgid "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire"
 msgstr ""
@@ -4143,7 +4143,7 @@ msgid "Cheaper and easier to construct than stone walls, palisades are often bui
 msgstr "Moins chères et plus faciles à construire que des murs en pierre, les palissades sont souvent construites pour défendre un camp temporaire ou si les tailleurs de pierre ne sont pas facilement disponibles."
 
 msgid "Chieftain's Hall"
-msgstr "Salle Chef de clan"
+msgstr "Salle chef de clan"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/norse/buttons.lua
 
@@ -4403,7 +4403,7 @@ msgid "Research Broad S~!word"
 msgstr "Glaive (~!w)"
 
 msgid "+2 Damage for swordwielders. Allows Broad Swords to be sold at the Market."
-msgstr "+2 Dommages pour les swordwielders. Permet de vendre les grandes épées au marché."
+msgstr "+2 dégâts pour les swordwielders. Permet de vendre les grandes épées au marché."
 
 msgid "Research Bronze ~!Shield"
 msgstr "Bouclier en bronze (~!S)"
@@ -4882,10 +4882,10 @@ msgid "File exists, are you sure?"
 msgstr "Fichier existant, êtes-vous sûr ?"
 
 msgid "~!Load"
-msgstr "~!Charger"
+msgstr "Charger (~!L)"
 
 msgid "~!Load Game"
-msgstr "~!Charger un jeu"
+msgstr "Charger un jeu (~!L)"
 
 msgid "~!Replay Game"
 msgstr "~!Revoir une partie"
@@ -4909,13 +4909,13 @@ msgid "Cred~!its"
 msgstr "Créd~!its"
 
 msgid "S~!how Credits"
-msgstr "Montrer crédits"
+msgstr "Montrer crédits(~!H)"
 
 msgid "E~!xit Program"
-msgstr "Sortir du programme"
+msgstr "Sortir du programme (~!X)"
 
 msgid "~!Hotkeys"
-msgstr "~!Raccourcis Clavier"
+msgstr "Raccourcis Clavier (~!H)"
 
 msgid "~<Quests~>"
 msgstr "~<Quêtes~>"
@@ -4945,7 +4945,7 @@ msgid "~!Cancel Game"
 msgstr "Annuler jeu (~!C)"
 
 msgid "Choose Your Faction"
-msgstr "Choisir votre faction"
+msgstr "Choisissez votre faction"
 
 msgid "Default Color:"
 msgstr "Couleur par défaut :"
@@ -4954,7 +4954,7 @@ msgid "~!Gameplay Options"
 msgstr "Options du jeu (~!G)"
 
 msgid "Hotkey Menu"
-msgstr "Menu des Raccourcis"
+msgstr "Menu des raccourcis"
 
 msgid "Hotkey Setup:"
 msgstr "Raccourcis :"
@@ -5023,7 +5023,7 @@ msgid "Key Scroll Speed"
 msgstr "Vitesse du clavier"
 
 msgid "Mouse Scroll Speed"
-msgstr "Vitesse de la Souris"
+msgstr "Vitesse de la souris"
 
 msgid "Reverse Mousewheel Scrolling"
 msgstr "Inverser la molette de la souris"
@@ -5576,9 +5576,8 @@ msgstr "Navire de guerre de siège"
 msgid "Stronghold"
 msgstr "Forteresse"
 
-#, fuzzy
 msgid "Mason's Shop"
-msgstr "La maison du maçon"
+msgstr "Maison du maçon"
 
 msgid "Yale Pen"
 msgstr "Enclos de Yale"
@@ -7817,10 +7816,10 @@ msgid "Gained %d %s"
 msgstr "Aquerir %d %s"
 
 msgid "%s healed for %d HP"
-msgstr "%s guéri de %d point de vie"
+msgstr "%s guéri de %d PV"
 
 msgid "%s suffered a %d HP loss"
-msgstr "%s a subit une perte de vie de %d"
+msgstr "%s a subit une perte de PV de %d"
 
 msgid "%s has been slowed"
 msgstr "%s a été ralenti"
@@ -7991,7 +7990,7 @@ msgid "Replay got out of sync !"
 msgstr ""
 
 msgid "End of replay"
-msgstr ""
+msgstr "Fin du replay"
 
 msgid "Loading Script \"%s\"\n"
 msgstr "Chargement du script \"%s\"\n"
@@ -8009,7 +8008,7 @@ msgid "%s's level-up choices have been reset."
 msgstr ""
 
 msgid "%s has identified the %s!"
-msgstr ""
+msgstr "%s a identifié le %s!"
 
 msgid "%s has leveled up!"
 msgstr "%s a été amélioré !"
