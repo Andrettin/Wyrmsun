@@ -310,6 +310,8 @@ DefineUnitType("unit-dwarven-runesmith", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	CanCastSpell = {"spell-infusion"},
+	AutoCastActive = {"spell-infusion"},
 	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
@@ -396,6 +398,8 @@ DefineUnitType("unit-dwarven-runemaster", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	CanCastSpell = {"spell-infusion"},
+	AutoCastActive = {"spell-infusion"},
 	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
@@ -482,6 +486,8 @@ DefineUnitType("unit-dwarven-arcanister", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	CanCastSpell = {"spell-infusion"},
+	AutoCastActive = {"spell-infusion"},
 	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{

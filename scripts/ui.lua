@@ -83,6 +83,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-barkskin", File = "ui/status_effects/barkskin.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-infusion", File = "ui/status_effects/infusion.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-wither", File = "ui/status_effects/wither.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
@@ -91,6 +92,8 @@ if not (ui_loaded_first_time) then
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
+	DefineDecorations({Index = "Infusion", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-infusion", 0}}})
 	DefineDecorations({Index = "Blessing", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-blessing", 0}}})
 	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,

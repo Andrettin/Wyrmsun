@@ -3410,7 +3410,8 @@ DefineUnitType("unit-template-journeyman-smith", {
 	Points = 55,
 	Level = 2,
 	JewelryGatheringBonus = 2,
-	Coward = false
+	Coward = false,
+	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1}
 } )
 
 DefineUnitType("unit-template-master-smith", {
@@ -3423,7 +3424,8 @@ DefineUnitType("unit-template-master-smith", {
 	Points = 70,
 	Level = 3,
 	Inventory = true,
-	JewelryGatheringBonus = 4
+	JewelryGatheringBonus = 4,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1}
 } )
 
 DefineUnitType("unit-template-grandmaster-smith", {
@@ -3435,7 +3437,8 @@ DefineUnitType("unit-template-grandmaster-smith", {
 	BasicDamage = 12,
 	Points = 85,
 	Level = 4,
-	JewelryGatheringBonus = 6
+	JewelryGatheringBonus = 6,
+	Mana = {Enable = true, Max = 300, Value = 300, Increase = 1}
 } )
 
 DefineUnitType("unit-template-militia", {

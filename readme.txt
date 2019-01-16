@@ -57,6 +57,10 @@ https://github.com/Andrettin/Wyrmsun
 - 3.5.5
 -----------------------------------------------------------------------
 
+* Abilities
+- Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
+- Fixed the tooltip of the Barkskin ability to correctly reflect that it increases armor by 4.
+
 -----------------------------------------------------------------------
 - 3.5.4
 -----------------------------------------------------------------------
