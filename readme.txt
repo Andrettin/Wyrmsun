@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
 - Fixed the tooltip of the Barkskin ability to correctly reflect that it increases armor by 4.
 
+* Scenarios
+- Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
+
 -----------------------------------------------------------------------
 - 3.5.4
 -----------------------------------------------------------------------

@@ -54,7 +54,12 @@ DefineFaction("grafvitning-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	Colors = {"black"},
-	DefaultAI = "kobolds"
+	DefaultAI = "kobolds",
+	HistoricalDiplomacyStates = {
+		-- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
+		-3000, "goinling-tribe", "alliance", 
+		-3000, "grabakling-tribe", "alliance"
+	}
 })
 
 DefineFaction("grafvolling-tribe", {
@@ -74,7 +79,10 @@ DefineFaction("moinling-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	Colors = {"orange"},
-	DefaultAI = "kobolds"
+	DefaultAI = "kobolds",
+	HistoricalDiplomacyStates = {
+		-3000, "grafvitning-tribe", "alliance" -- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
+	}
 })
 
 DefineFaction("ofning-tribe", {
