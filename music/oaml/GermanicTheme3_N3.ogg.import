@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GermanicTheme3_N3.ogg-042e0368c15a1afc2e01d194b8a2c629.oggstr"
+
+[deps]
+
+source_file="res://music/oaml/GermanicTheme3_N3.ogg"
+dest_files=[ "res://.import/GermanicTheme3_N3.ogg-042e0368c15a1afc2e01d194b8a2c629.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

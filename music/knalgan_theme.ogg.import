@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/knalgan_theme.ogg-f7e2965b8105326bf46465ff61ce32ba.oggstr"
+
+[deps]
+
+source_file="res://music/knalgan_theme.ogg"
+dest_files=[ "res://.import/knalgan_theme.ogg-f7e2965b8105326bf46465ff61ce32ba.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

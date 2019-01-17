@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/frantic.ogg-1a486c81fdbdbd5771c6c94417abd149.oggstr"
+
+[deps]
+
+source_file="res://music/frantic.ogg"
+dest_files=[ "res://.import/frantic.ogg-1a486c81fdbdbd5771c6c94417abd149.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

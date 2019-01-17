@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/civ_male_march_1.wav-697d1c6c67d88e8c58c13124367cca1e.sample"
+
+[deps]
+
+source_file="res://sounds/latin/basic_voices/civ_male_march_1.wav"
+dest_files=[ "res://.import/civ_male_march_1.wav-697d1c6c67d88e8c58c13124367cca1e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

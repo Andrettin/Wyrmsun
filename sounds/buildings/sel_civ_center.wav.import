@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sel_civ_center.wav-d7607376f64e6d8c3162ad8add281f98.sample"
+
+[deps]
+
+source_file="res://sounds/buildings/sel_civ_center.wav"
+dest_files=[ "res://.import/sel_civ_center.wav-d7607376f64e6d8c3162ad8add281f98.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

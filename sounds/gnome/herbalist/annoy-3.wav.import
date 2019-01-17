@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/annoy-3.wav-e96113328f9894ada10311d9002c3faa.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/herbalist/annoy-3.wav"
+dest_files=[ "res://.import/annoy-3.wav-e96113328f9894ada10311d9002c3faa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

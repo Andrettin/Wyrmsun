@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/need-farms.wav-e5f0e67ec2c95f1233544e06d6e81c12.sample"
+
+[deps]
+
+source_file="res://sounds/goblin/basic_voices/need-farms.wav"
+dest_files=[ "res://.import/need-farms.wav-e5f0e67ec2c95f1233544e06d6e81c12.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

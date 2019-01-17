@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/portent-1.wav-85b25f9bdcbcabe0406115ec8ce08832.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/herbalist/portent-1.wav"
+dest_files=[ "res://.import/portent-1.wav-85b25f9bdcbcabe0406115ec8ce08832.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tree-chopping-1.wav-56e99f9c47fd94ad5fdd5cfa9c1101a8.sample"
+
+[deps]
+
+source_file="res://sounds/misc/tree_chopping/tree-chopping-1.wav"
+dest_files=[ "res://.import/tree-chopping-1.wav-56e99f9c47fd94ad5fdd5cfa9c1101a8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

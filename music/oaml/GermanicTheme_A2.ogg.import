@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GermanicTheme_A2.ogg-410a5857df8b13f35bbb4b3ae980d747.oggstr"
+
+[deps]
+
+source_file="res://music/oaml/GermanicTheme_A2.ogg"
+dest_files=[ "res://.import/GermanicTheme_A2.ogg-410a5857df8b13f35bbb4b3ae980d747.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

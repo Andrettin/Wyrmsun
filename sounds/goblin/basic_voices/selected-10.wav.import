@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/selected-10.wav-11861e646eca5180d3d247db7e62fe9c.sample"
+
+[deps]
+
+source_file="res://sounds/goblin/basic_voices/selected-10.wav"
+dest_files=[ "res://.import/selected-10.wav-11861e646eca5180d3d247db7e62fe9c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

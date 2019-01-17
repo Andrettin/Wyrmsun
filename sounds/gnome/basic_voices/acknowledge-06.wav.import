@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/acknowledge-06.wav-7ad9c2e02a46e72118ac49874765768b.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/basic_voices/acknowledge-06.wav"
+dest_files=[ "res://.import/acknowledge-06.wav-7ad9c2e02a46e72118ac49874765768b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

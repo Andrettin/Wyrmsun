@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/acknowledge-02.wav-5af7f9f6f7df927a09a0c1e7296554d8.sample"
+
+[deps]
+
+source_file="res://sounds/goblin/basic_voices/acknowledge-02.wav"
+dest_files=[ "res://.import/acknowledge-02.wav-5af7f9f6f7df927a09a0c1e7296554d8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

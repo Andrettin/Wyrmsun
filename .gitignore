@@ -2,6 +2,7 @@
 ## Wyrmsun Preferences and other User Data
 #################
 ## Ignore temporary files and user data
+.import/
 conversion_maps/
 dlcs/
 mods/

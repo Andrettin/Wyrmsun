@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/legends_of_the_north.ogg-5e8e96d4392b3b15da63f137d00c668a.oggstr"
+
+[deps]
+
+source_file="res://music/legends_of_the_north.ogg"
+dest_files=[ "res://.import/legends_of_the_north.ogg-5e8e96d4392b3b15da63f137d00c668a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

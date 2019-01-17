@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/northern_mountains.ogg-73fd8a9d27bf9c5a11bf56690712dfc6.oggstr"
+
+[deps]
+
+source_file="res://music/northern_mountains.ogg"
+dest_files=[ "res://.import/northern_mountains.ogg-73fd8a9d27bf9c5a11bf56690712dfc6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

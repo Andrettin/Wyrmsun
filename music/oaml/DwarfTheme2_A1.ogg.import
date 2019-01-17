@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DwarfTheme2_A1.ogg-ed8b5a5cebde2d0e49599195f0bacb14.oggstr"
+
+[deps]
+
+source_file="res://music/oaml/DwarfTheme2_A1.ogg"
+dest_files=[ "res://.import/DwarfTheme2_A1.ogg-ed8b5a5cebde2d0e49599195f0bacb14.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

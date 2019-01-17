@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GermanicLose_A.ogg-e6638d6ed73f293d2837191f8d5bf02b.oggstr"
+
+[deps]
+
+source_file="res://music/oaml/GermanicLose_A.ogg"
+dest_files=[ "res://.import/GermanicLose_A.ogg-e6638d6ed73f293d2837191f8d5bf02b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

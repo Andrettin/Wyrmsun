@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/complete_tower.wav-3d72f4e4c5ebee351fba1e05030710c3.sample"
+
+[deps]
+
+source_file="res://sounds/buildings/complete_tower.wav"
+dest_files=[ "res://.import/complete_tower.wav-3d72f4e4c5ebee351fba1e05030710c3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

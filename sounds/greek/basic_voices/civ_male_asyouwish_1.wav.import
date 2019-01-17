@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/civ_male_asyouwish_1.wav-ebf552c8afbe28ff90f28e3ba3274f43.sample"
+
+[deps]
+
+source_file="res://sounds/greek/basic_voices/civ_male_asyouwish_1.wav"
+dest_files=[ "res://.import/civ_male_asyouwish_1.wav-ebf552c8afbe28ff90f28e3ba3274f43.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

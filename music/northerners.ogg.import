@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/northerners.ogg-9e11605239e70589b0631ed84153a651.oggstr"
+
+[deps]
+
+source_file="res://music/northerners.ogg"
+dest_files=[ "res://.import/northerners.ogg-9e11605239e70589b0631ed84153a651.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

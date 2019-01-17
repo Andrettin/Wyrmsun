@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ship_move.wav-8c5ce567d2e5beedca4414a159a1c7ee.sample"
+
+[deps]
+
+source_file="res://sounds/misc/ship_move.wav"
+dest_files=[ "res://.import/ship_move.wav-8c5ce567d2e5beedca4414a159a1c7ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

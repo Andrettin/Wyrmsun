@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/1.wav-1778ff40377f15c5adc08133b1e99d03.sample"
+
+[deps]
+
+source_file="res://sounds/misc/building_explosion/1.wav"
+dest_files=[ "res://.import/1.wav-1778ff40377f15c5adc08133b1e99d03.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

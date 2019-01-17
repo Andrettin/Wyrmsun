@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sel_market.wav-6972fbbac0bb7768d3d3a6d26ed60624.sample"
+
+[deps]
+
+source_file="res://sounds/buildings/sel_market.wav"
+dest_files=[ "res://.import/sel_market.wav-6972fbbac0bb7768d3d3a6d26ed60624.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

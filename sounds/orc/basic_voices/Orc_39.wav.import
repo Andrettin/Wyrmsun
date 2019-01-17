@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Orc_39.wav-8a1247e3c22cfe2469d7660c7ee53c4b.sample"
+
+[deps]
+
+source_file="res://sounds/orc/basic_voices/Orc_39.wav"
+dest_files=[ "res://.import/Orc_39.wav-8a1247e3c22cfe2469d7660c7ee53c4b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

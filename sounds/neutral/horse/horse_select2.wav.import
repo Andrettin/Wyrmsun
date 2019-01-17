@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/horse_select2.wav-7acf0afdc8073aa14a7b4dc0d09102af.sample"
+
+[deps]
+
+source_file="res://sounds/neutral/horse/horse_select2.wav"
+dest_files=[ "res://.import/horse_select2.wav-7acf0afdc8073aa14a7b4dc0d09102af.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

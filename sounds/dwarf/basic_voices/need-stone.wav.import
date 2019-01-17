@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/need-stone.wav-6b8a8df58171e6e086502b8730b4e701.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/basic_voices/need-stone.wav"
+dest_files=[ "res://.import/need-stone.wav-6b8a8df58171e6e086502b8730b4e701.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

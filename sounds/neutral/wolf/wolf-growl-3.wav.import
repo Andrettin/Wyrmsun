@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wolf-growl-3.wav-7e6fd325d9e5ac73f450506db1e0fbf7.sample"
+
+[deps]
+
+source_file="res://sounds/neutral/wolf/wolf-growl-3.wav"
+dest_files=[ "res://.import/wolf-growl-3.wav-7e6fd325d9e5ac73f450506db1e0fbf7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

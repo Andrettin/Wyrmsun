@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/siege_of_laurelmor.ogg-2366823f5820c57956714614a9596e0f.oggstr"
+
+[deps]
+
+source_file="res://music/siege_of_laurelmor.ogg"
+dest_files=[ "res://.import/siege_of_laurelmor.ogg-2366823f5820c57956714614a9596e0f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

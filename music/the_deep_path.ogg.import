@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/the_deep_path.ogg-d76bbc45bd7587d3774e8a4915095690.oggstr"
+
+[deps]
+
+source_file="res://music/the_deep_path.ogg"
+dest_files=[ "res://.import/the_deep_path.ogg-d76bbc45bd7587d3774e8a4915095690.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

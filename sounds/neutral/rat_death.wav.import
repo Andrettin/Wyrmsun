@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rat_death.wav-4d317310dadf4f8cc31b5e2bf631e9a0.sample"
+
+[deps]
+
+source_file="res://sounds/neutral/rat_death.wav"
+dest_files=[ "res://.import/rat_death.wav-4d317310dadf4f8cc31b5e2bf631e9a0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/troll-die-1.wav-b5d0f53efdb6161b927754795433b846.sample"
+
+[deps]
+
+source_file="res://sounds/troll/basic_voices/troll-die-1.wav"
+dest_files=[ "res://.import/troll-die-1.wav-b5d0f53efdb6161b927754795433b846.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

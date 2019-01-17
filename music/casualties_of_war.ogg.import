@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/casualties_of_war.ogg-b02734938548ab50a5df200ca09fb4f9.oggstr"
+
+[deps]
+
+source_file="res://music/casualties_of_war.ogg"
+dest_files=[ "res://.import/casualties_of_war.ogg-b02734938548ab50a5df200ca09fb4f9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shieldimpmetal_213.wav-4c163f23f612ceaf75c737535803f3cc.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/shield_metal/shieldimpmetal_213.wav"
+dest_files=[ "res://.import/shieldimpmetal_213.wav-4c163f23f612ceaf75c737535803f3cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

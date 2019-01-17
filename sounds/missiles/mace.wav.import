@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mace.wav-837930684764a8836c06921756a0c124.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/mace.wav"
+dest_files=[ "res://.import/mace.wav-837930684764a8836c06921756a0c124.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

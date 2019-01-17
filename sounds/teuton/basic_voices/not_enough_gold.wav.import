@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/not_enough_gold.wav-4d0ddf866522dbf4c5d6b452e214df57.sample"
+
+[deps]
+
+source_file="res://sounds/teuton/basic_voices/not_enough_gold.wav"
+dest_files=[ "res://.import/not_enough_gold.wav-4d0ddf866522dbf4c5d6b452e214df57.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

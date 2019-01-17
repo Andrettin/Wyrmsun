@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ready-2.wav-c24f2cd971b771a162ce60c3ebca9f62.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/basic_voices/ready-2.wav"
+dest_files=[ "res://.import/ready-2.wav-c24f2cd971b771a162ce60c3ebca9f62.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
