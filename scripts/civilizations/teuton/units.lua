@@ -1312,7 +1312,29 @@ DefineUnitType("unit-teuton-stables", {
 			"file", "germanic/buildings/stables.png",
 			"shadow-file", "germanic/buildings/stables_shadow.png",
 			"icon", "icon-germanic-stables",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "stables-snow-winter",
+			"file", "germanic/buildings/stables_snow.png",
+			"shadow-file", "germanic/buildings/stables_shadow.png",
+			"icon", "icon-germanic-stables",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "stables-snow",
+			"file", "germanic/buildings/stables_snow.png",
+			"shadow-file", "germanic/buildings/stables_shadow.png",
+			"icon", "icon-germanic-stables",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "stables",

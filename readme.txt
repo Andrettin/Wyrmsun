@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Norse players now require not only the Spatha upgrade, but also Sailing and either Shield Wall or Svinfylking to enter the Viking Age.
 
 * Buildings
+- All Germanic buildings now have snowy variations.
 - The Teutonic Mason's Shop now correctly uses its active animations.
 - The Germanic Stables graphics now use semi-transparent shadows, as the other buildings do.
 

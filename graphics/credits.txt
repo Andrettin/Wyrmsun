@@ -334,6 +334,8 @@
 /graphics/germanic/buildings/smithy_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/smithy_snow.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/stables.png (by Exidelo and Jinn) (licensed under the GPL 2.0)
+/graphics/germanic/buildings/stables_shadow.png (by Exidelo and Jinn) (licensed under the GPL 2.0)
+/graphics/germanic/buildings/stables_snow.png (by Exidelo and Jinn) (licensed under the GPL 2.0)
 /graphics/germanic/buildings/temple.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/temple_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/germanic/buildings/temple_snow.png (by Jinn) (licensed under the CC0)
