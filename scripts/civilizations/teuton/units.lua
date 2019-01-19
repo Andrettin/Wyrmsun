@@ -988,7 +988,35 @@ DefineUnitType("unit-teuton-town-hall", {
 			"animations", "animations-germanic-town-hall",
 			"construction", "construction-germanic-town-hall",
 			"type-name", "Chieftain's Hall",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow-winter",
+			"file", "germanic/buildings/town_hall_snow.png",
+			"shadow-file", "germanic/buildings/town_hall_shadow.png",
+			"icon", "icon-germanic-town-hall",
+			"animations", "animations-germanic-town-hall",
+			"construction", "construction-germanic-town-hall",
+			"type-name", "Chieftain's Hall",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow",
+			"file", "germanic/buildings/town_hall_snow.png",
+			"shadow-file", "germanic/buildings/town_hall_shadow.png",
+			"icon", "icon-germanic-town-hall",
+			"animations", "animations-germanic-town-hall",
+			"construction", "construction-germanic-town-hall",
+			"type-name", "Chieftain's Hall",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "town-hall",
@@ -1186,7 +1214,29 @@ DefineUnitType("unit-teuton-smithy", {
 			"file", "germanic/buildings/smithy.png",
 			"shadow-file", "germanic/buildings/smithy_shadow.png",
 			"icon", "icon-germanic-smithy",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow-winter",
+			"file", "germanic/buildings/smithy_snow.png",
+			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"icon", "icon-germanic-smithy",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow",
+			"file", "germanic/buildings/smithy_snow.png",
+			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"icon", "icon-germanic-smithy",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "smithy",
@@ -1298,8 +1348,32 @@ DefineUnitType("unit-teuton-temple", {
 			"shadow-file", "germanic/buildings/temple_shadow.png",
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
-			"upgrade-forbidden", "upgrade-deity-christian-god"
-		}
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "germanic-temple-snow-winter",
+			"file", "germanic/buildings/temple_snow.png",
+			"shadow-file", "germanic/buildings/temple_shadow.png",
+			"icon", "icon-germanic-temple",
+			"type-name", "Temple",
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "germanic-temple-snow",
+			"file", "germanic/buildings/temple_snow.png",
+			"shadow-file", "germanic/buildings/temple_shadow.png",
+			"icon", "icon-germanic-temple",
+			"type-name", "Temple",
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain", "snow"
+		},
 	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
