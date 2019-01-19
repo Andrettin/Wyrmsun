@@ -749,6 +749,27 @@ DefineUnitType("unit-germanic-farm", {
 	Image = {"file", "germanic/buildings/farm.png", "size", {64, 64}},
 	Shadow = {"file", "germanic/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-germanic-farm",
+	Variations = {
+		{
+			"variation-id", "farm",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "farm-snow-winter",
+			"file", "germanic/buildings/farm_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "farm-snow",
+			"file", "germanic/buildings/farm_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"selected", "corral-selected",
 		"ready", "corral-ready",
@@ -803,6 +824,27 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 	ButtonKey = "r",
 	ButtonHint = "Build Carpente~!r's Shop",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows"},
+	Variations = {
+		{
+			"variation-id", "carpenters-shop",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow-winter",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
@@ -846,6 +888,27 @@ DefineUnitType("unit-germanic-market", {
 	Animations = "animations-building", Icon = "icon-germanic-market",
 	RequirementsString = "Carpenter's Shop",
 	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	Variations = {
+		{
+			"variation-id", "market",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "market-snow-winter",
+			"file", "germanic/buildings/market_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "market-snow",
+			"file", "germanic/buildings/market_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
@@ -860,6 +923,27 @@ DefineUnitType("unit-germanic-dock", {
 	Shadow = {"file", "germanic/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-dock",
 	RequirementsString = "Carpenter's Shop",
+	Variations = {
+		{
+			"variation-id", "dock",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dock-snow-winter",
+			"file", "germanic/buildings/dock_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dock-snow",
+			"file", "germanic/buildings/dock_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}

@@ -1031,7 +1031,29 @@ DefineUnitType("unit-teuton-farm", {
 			"file", "germanic/buildings/farm.png",
 			"shadow-file", "germanic/buildings/farm_shadow.png",
 			"icon", "icon-germanic-farm",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "farm-snow-winter",
+			"file", "germanic/buildings/farm_snow.png",
+			"shadow-file", "germanic/buildings/farm_shadow.png",
+			"icon", "icon-germanic-farm",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "farm-snow",
+			"file", "germanic/buildings/farm_snow.png",
+			"shadow-file", "germanic/buildings/farm_shadow.png",
+			"icon", "icon-germanic-farm",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "farm",
@@ -1109,12 +1131,36 @@ DefineUnitType("unit-teuton-lumber-mill", {
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{
-			"variation-id", "lumber-mill",
+			"variation-id", "carpenters-shop",
 			"file", "germanic/buildings/carpenters_shop.png",
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow-winter",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
+			"icon", "icon-germanic-carpenters-shop",
+			"type-name", "Carpenter's Shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
+			"icon", "icon-germanic-carpenters-shop",
+			"type-name", "Carpenter's Shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "lumber-mill",
@@ -1166,7 +1212,31 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
 			"construction", "construction-land-active",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow-winter",
+			"file", "germanic/buildings/masons_shop_snow.png",
+			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
+			"icon", "icon-germanic-masons-shop",
+			"construction", "construction-land-active",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow",
+			"file", "germanic/buildings/masons_shop_snow.png",
+			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
+			"icon", "icon-germanic-masons-shop",
+			"construction", "construction-land-active",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "masons-shop",
@@ -1252,7 +1322,29 @@ DefineUnitType("unit-teuton-market", {
 			"file", "germanic/buildings/market.png",
 			"shadow-file", "germanic/buildings/market_shadow.png",
 			"icon", "icon-germanic-market",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "market-snow-winter",
+			"file", "germanic/buildings/market_snow.png",
+			"shadow-file", "germanic/buildings/market_shadow.png",
+			"icon", "icon-germanic-market",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "market-snow",
+			"file", "germanic/buildings/market_snow.png",
+			"shadow-file", "germanic/buildings/market_shadow.png",
+			"icon", "icon-germanic-market",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "market",
@@ -1338,7 +1430,29 @@ DefineUnitType("unit-teuton-dock", {
 			"file", "germanic/buildings/dock.png",
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dock-snow-winter",
+			"file", "germanic/buildings/dock_snow.png",
+			"shadow-file", "germanic/buildings/dock_shadow.png",
+			"icon", "icon-germanic-dock",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dock-snow",
+			"file", "germanic/buildings/dock_snow.png",
+			"shadow-file", "germanic/buildings/dock_shadow.png",
+			"icon", "icon-germanic-dock",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "dock",
