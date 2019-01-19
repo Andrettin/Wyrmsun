@@ -1205,13 +1205,14 @@ DefineUnitType("unit-teuton-masons-shop", {
 	Image = {"file", "teuton/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-masons-shop",
+	Animations = "animations-active-building",
+	Construction = "construction-land-active",
 	Variations = {
 		{
 			"variation-id", "masons-shop",
 			"file", "germanic/buildings/masons_shop.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
-			"construction", "construction-land-active",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
@@ -1221,7 +1222,6 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"file", "germanic/buildings/masons_shop_snow.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
-			"construction", "construction-land-active",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1234,7 +1234,6 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"file", "germanic/buildings/masons_shop_snow.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
-			"construction", "construction-land-active",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "snow"
 		},
