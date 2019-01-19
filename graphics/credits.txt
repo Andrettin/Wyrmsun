@@ -94,6 +94,7 @@
 /graphics/dwarf/icons/flag_red_hammer_on_silver.png (by Exidelo) (licensed under the CC0)
 /graphics/dwarf/icons/flag_silver_hammer_on_red.png (by Exidelo) (licensed under the CC0)
 /graphics/dwarf/icons/flag_yellow_hammer_on_purple.png (by Exidelo) (licensed under the CC0)
+/graphics/dwarf/icons/geomancer.png (by Exidelo) (licensed under the CC0)
 /graphics/dwarf/icons/great_axe.png (by Exidelo) (licensed under the CC0)
 /graphics/dwarf/icons/gryphon_rider.png (by Jinn) (licensed under the CC0)
 /graphics/dwarf/icons/gryphon_rider_brown_hair.png (by Jinn) (licensed under the CC0)
