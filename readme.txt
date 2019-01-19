@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Ages
 - Norse players now require not only the Spatha upgrade, but also Sailing and either Shield Wall or Svinfylking to enter the Viking Age.
 
+* Items
+- Bows now have specific graphics for when they are on the ground.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
