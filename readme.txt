@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The Teutonic Mason's Shop now correctly uses its active animations.
+- The Germanic Stables graphics now use semi-transparent shadows, as the other buildings do.
 
 * Items
 - Bows now have specific graphics for when they are on the ground.
