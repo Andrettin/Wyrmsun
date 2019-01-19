@@ -988,7 +988,35 @@ DefineUnitType("unit-teuton-town-hall", {
 			"animations", "animations-germanic-town-hall",
 			"construction", "construction-germanic-town-hall",
 			"type-name", "Chieftain's Hall",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow-winter",
+			"file", "germanic/buildings/town_hall_snow.png",
+			"shadow-file", "germanic/buildings/town_hall_shadow.png",
+			"icon", "icon-germanic-town-hall",
+			"animations", "animations-germanic-town-hall",
+			"construction", "construction-germanic-town-hall",
+			"type-name", "Chieftain's Hall",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow",
+			"file", "germanic/buildings/town_hall_snow.png",
+			"shadow-file", "germanic/buildings/town_hall_shadow.png",
+			"icon", "icon-germanic-town-hall",
+			"animations", "animations-germanic-town-hall",
+			"construction", "construction-germanic-town-hall",
+			"type-name", "Chieftain's Hall",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "town-hall",
@@ -1031,7 +1059,29 @@ DefineUnitType("unit-teuton-farm", {
 			"file", "germanic/buildings/farm.png",
 			"shadow-file", "germanic/buildings/farm_shadow.png",
 			"icon", "icon-germanic-farm",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "farm-snow-winter",
+			"file", "germanic/buildings/farm_snow.png",
+			"shadow-file", "germanic/buildings/farm_shadow.png",
+			"icon", "icon-germanic-farm",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "farm-snow",
+			"file", "germanic/buildings/farm_snow.png",
+			"shadow-file", "germanic/buildings/farm_shadow.png",
+			"icon", "icon-germanic-farm",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "farm",
@@ -1109,12 +1159,36 @@ DefineUnitType("unit-teuton-lumber-mill", {
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{
-			"variation-id", "lumber-mill",
+			"variation-id", "carpenters-shop",
 			"file", "germanic/buildings/carpenters_shop.png",
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow-winter",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
+			"icon", "icon-germanic-carpenters-shop",
+			"type-name", "Carpenter's Shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "carpenters-shop-snow",
+			"file", "germanic/buildings/carpenters_shop_snow.png",
+			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
+			"icon", "icon-germanic-carpenters-shop",
+			"type-name", "Carpenter's Shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "lumber-mill",
@@ -1140,7 +1214,29 @@ DefineUnitType("unit-teuton-smithy", {
 			"file", "germanic/buildings/smithy.png",
 			"shadow-file", "germanic/buildings/smithy_shadow.png",
 			"icon", "icon-germanic-smithy",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow-winter",
+			"file", "germanic/buildings/smithy_snow.png",
+			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"icon", "icon-germanic-smithy",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow",
+			"file", "germanic/buildings/smithy_snow.png",
+			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"icon", "icon-germanic-smithy",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "smithy",
@@ -1159,14 +1255,37 @@ DefineUnitType("unit-teuton-masons-shop", {
 	Image = {"file", "teuton/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-masons-shop",
+	Animations = "animations-active-building",
+	Construction = "construction-land-active",
 	Variations = {
 		{
 			"variation-id", "masons-shop",
 			"file", "germanic/buildings/masons_shop.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
 			"icon", "icon-germanic-masons-shop",
-			"construction", "construction-land-active",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow-winter",
+			"file", "germanic/buildings/masons_shop_snow.png",
+			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
+			"icon", "icon-germanic-masons-shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow",
+			"file", "germanic/buildings/masons_shop_snow.png",
+			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
+			"icon", "icon-germanic-masons-shop",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "masons-shop",
@@ -1193,7 +1312,29 @@ DefineUnitType("unit-teuton-stables", {
 			"file", "germanic/buildings/stables.png",
 			"shadow-file", "germanic/buildings/stables_shadow.png",
 			"icon", "icon-germanic-stables",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "stables-snow-winter",
+			"file", "germanic/buildings/stables_snow.png",
+			"shadow-file", "germanic/buildings/stables_shadow.png",
+			"icon", "icon-germanic-stables",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "stables-snow",
+			"file", "germanic/buildings/stables_snow.png",
+			"shadow-file", "germanic/buildings/stables_shadow.png",
+			"icon", "icon-germanic-stables",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "stables",
@@ -1229,8 +1370,32 @@ DefineUnitType("unit-teuton-temple", {
 			"shadow-file", "germanic/buildings/temple_shadow.png",
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
-			"upgrade-forbidden", "upgrade-deity-christian-god"
-		}
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "germanic-temple-snow-winter",
+			"file", "germanic/buildings/temple_snow.png",
+			"shadow-file", "germanic/buildings/temple_shadow.png",
+			"icon", "icon-germanic-temple",
+			"type-name", "Temple",
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "germanic-temple-snow",
+			"file", "germanic/buildings/temple_snow.png",
+			"shadow-file", "germanic/buildings/temple_shadow.png",
+			"icon", "icon-germanic-temple",
+			"type-name", "Temple",
+			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"terrain", "snow"
+		},
 	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
@@ -1252,7 +1417,29 @@ DefineUnitType("unit-teuton-market", {
 			"file", "germanic/buildings/market.png",
 			"shadow-file", "germanic/buildings/market_shadow.png",
 			"icon", "icon-germanic-market",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "market-snow-winter",
+			"file", "germanic/buildings/market_snow.png",
+			"shadow-file", "germanic/buildings/market_shadow.png",
+			"icon", "icon-germanic-market",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "market-snow",
+			"file", "germanic/buildings/market_snow.png",
+			"shadow-file", "germanic/buildings/market_shadow.png",
+			"icon", "icon-germanic-market",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "market",
@@ -1338,7 +1525,29 @@ DefineUnitType("unit-teuton-dock", {
 			"file", "germanic/buildings/dock.png",
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
-			"upgrade-forbidden", "upgrade-masonry"
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dock-snow-winter",
+			"file", "germanic/buildings/dock_snow.png",
+			"shadow-file", "germanic/buildings/dock_shadow.png",
+			"icon", "icon-germanic-dock",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dock-snow",
+			"file", "germanic/buildings/dock_snow.png",
+			"shadow-file", "germanic/buildings/dock_shadow.png",
+			"icon", "icon-germanic-dock",
+			"upgrade-forbidden", "upgrade-masonry",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "dock",

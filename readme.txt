@@ -61,6 +61,17 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
 - Fixed the tooltip of the Barkskin ability to correctly reflect that it increases armor by 4.
 
+* Ages
+- Norse players now require not only the Spatha upgrade, but also Sailing and either Shield Wall or Svinfylking to enter the Viking Age.
+
+* Buildings
+- All Germanic buildings now have snowy variations.
+- The Teutonic Mason's Shop now correctly uses its active animations.
+- The Germanic Stables graphics now use semi-transparent shadows, as the other buildings do.
+
+* Items
+- Bows now have specific graphics for when they are on the ground.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
