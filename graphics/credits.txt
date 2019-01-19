@@ -1022,6 +1022,7 @@
 /graphics/neutral/icons/ring.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/sailing.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/salvage.png (by Exidelo) (licensed under the CC0)
+/graphics/neutral/icons/sandblast.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/scale_mail.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/scouting.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/shocking_grasp.png (by Jinn) (licensed under the CC0)
