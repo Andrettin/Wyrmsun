@@ -135,13 +135,13 @@ DefineButtonStyle("network-gnome", {
 	TextAlign = "Center",
 	TextPos = {40, 4},
 	Default = {
-		File = "gnome/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+		File = "interface/default/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "gnome/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		File = "interface/default/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {42, 6},
 	},

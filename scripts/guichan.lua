@@ -159,7 +159,7 @@ function AddMenuHelpers(menu)
 		local g_bln
 		local g_blp
 		local g_blg
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "gnome" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			g_bln = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
 			g_blp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
 			g_blg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
@@ -167,6 +167,10 @@ function AddMenuHelpers(menu)
 			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
 			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
 			g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+			g_bln = CGraphic:New("interface/default/button_large_normal.png")
+			g_blp = CGraphic:New("interface/default/button_large_pressed.png")
+			g_blg = CGraphic:New("interface/default/button_large_grayed.png")
 		else
 			g_bln = CGraphic:New("interface/dwarven/button_large_normal.png")
 			g_blp = CGraphic:New("interface/dwarven/button_large_pressed.png")
@@ -193,7 +197,7 @@ function AddMenuHelpers(menu)
 		local g_bsn
 		local g_bsp
 		local g_bsg
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "gnome" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			g_bsn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-normal.png")
 			g_bsp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-pressed.png")
 			g_bsg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-grayed.png")
@@ -201,6 +205,10 @@ function AddMenuHelpers(menu)
 			g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
 			g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
 			g_bsg = CGraphic:New("germanic/ui/widgets/button-small-grayed.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+			g_bsn = CGraphic:New("interface/default/button_small_normal.png")
+			g_bsp = CGraphic:New("interface/default/button_small_pressed.png")
+			g_bsg = CGraphic:New("interface/default/button_small_grayed.png")
 		else
 			g_bsn = CGraphic:New("interface/dwarven/button_small_normal.png")
 			g_bsp = CGraphic:New("interface/dwarven/button_small_pressed.png")
