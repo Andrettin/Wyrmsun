@@ -758,6 +758,7 @@
 /graphics/missiles/magic.png (by Jinn) (licensed under the CC0)
 /graphics/missiles/metal_arrow.png (by b_o) (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/missiles/red_cross.png (by the Bos Wars Team) (licensed under the GPL 2.0)
+/graphics/missiles/rock_shard.png (by Exidelo) (licensed under the CC0)
 /graphics/missiles/siege_projectile_impact.png (by Cuzco and Jinn) (licensed under the CC0)
 /graphics/missiles/slime_glob.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/missiles/small_fire.png (by Mikodrak and Jinn) (licensed under the CC0)
