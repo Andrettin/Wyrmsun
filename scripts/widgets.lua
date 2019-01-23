@@ -35,13 +35,13 @@ DefineButtonStyle("main-dwarf", {
 	TextAlign = "Center",
 	TextPos = {50, 0},
 	Default = {
-		File = "dwarf/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "dwarf/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51, 1},
 	},
@@ -55,13 +55,13 @@ DefineButtonStyle("network-dwarf", {
 	TextAlign = "Center",
 	TextPos = {40, 4},
 	Default = {
-		File = "dwarf/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+		File = "interface/dwarven/button_thin_small_normal.png", Size = {80, 20}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "dwarf/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		File = "interface/dwarven/button_thin_small_pressed.png", Size = {80, 20}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {42, 6},
 	},
@@ -115,13 +115,13 @@ DefineButtonStyle("main-gnome", {
 	TextAlign = "Center",
 	TextPos = {50, 0},
 	Default = {
-		File = "dwarf/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "dwarf/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51, 1},
 	},
@@ -135,13 +135,13 @@ DefineButtonStyle("network-gnome", {
 	TextAlign = "Center",
 	TextPos = {40, 4},
 	Default = {
-		File = "gnome/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+		File = "interface/default/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "gnome/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		File = "interface/default/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {42, 6},
 	},
@@ -257,12 +257,12 @@ DefineButtonStyle("world-nidavellir", {
 	TextAlign = "Center",
 	TextPos = {10, 0},
 	Default = {
-		File = "dwarf/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+		File = "interface/dwarven/radio_normal_selected.png", Size = {19, 19}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "dwarf/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+		File = "interface/dwarven/radio_pressed_selected.png", Size = {19, 19}, Frame = 0
 	}
 })

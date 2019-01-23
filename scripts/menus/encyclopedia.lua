@@ -461,9 +461,9 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
 			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
 		else
-			encyclopedia_icon = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
-			encyclopedia_icon_pressed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
-			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
+			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
+			encyclopedia_icon_pressed = CGraphic:New("interface/default/button_large_pressed.png")
+			encyclopedia_icon_grayed = CGraphic:New("interface/default/button_large_grayed.png")
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
@@ -625,8 +625,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
 			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
 		else
-			encyclopedia_icon = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
-			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
+			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
+			encyclopedia_icon_grayed = CGraphic:New("interface/default/button_large_grayed.png")
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
