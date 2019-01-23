@@ -1174,6 +1174,7 @@
 /graphics/neutral/units/snail_purple_brown_shell.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/snail_teal_green_shell.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/unicorn.png (by b_o and Mrmo Tarius) (licensed under the CC0)
+/graphics/neutral/units/water_elemental.png (by Gecimen) (licensed under the CC0)
 /graphics/neutral/units/wolf.png (by Jinn and Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/neutral/units/worm.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/wyrm.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
