@@ -1,0 +1,4 @@
+/fonts/berenika.ttf (by wmk69) (licensed under the SIL Open Font License)
+/fonts/berenika_bold.ttf (by wmk69) (licensed under the SIL Open Font License)
+/fonts/berenika_bold_oblique.ttf (by wmk69) (licensed under the SIL Open Font License)
+/fonts/berenika_oblique.ttf (by wmk69) (licensed under the SIL Open Font License)
