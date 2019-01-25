@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Wyrmsun"
-run/main_scene="res://Wyrmsun.tscn"
+run/main_scene="res://menu.tscn"
 config/icon="res://graphics/ui/icons/wyrmsun_icon_128.png"
 
 [importer_defaults]
