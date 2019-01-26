@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://large_button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://exit_button.gd" type="Script" id=3]
+[ext_resource path="res://scripts/exit_button.gd" type="Script" id=3]
 
 [node name="menu" type="Control"]
 

@@ -3,7 +3,7 @@
 [ext_resource path="res://graphics/interface/default/button_large_normal.png" type="Texture" id=1]
 [ext_resource path="res://graphics/interface/default/button_large_pressed.png" type="Texture" id=2]
 [ext_resource path="res://graphics/interface/default/button_large_grayed.png" type="Texture" id=3]
-[ext_resource path="res://button.gd" type="Script" id=4]
+[ext_resource path="res://scripts/button.gd" type="Script" id=4]
 [ext_resource path="res://fonts/berenika.tres" type="DynamicFont" id=5]
 
 [node name="large_button" type="TextureButton"]
