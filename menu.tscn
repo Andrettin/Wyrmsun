@@ -21,7 +21,7 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
-[node name="large_button" parent="." instance=ExtResource( 2 )]
+[node name="exit_button" parent="." instance=ExtResource( 2 )]
 
 margin_left = 208.0
 margin_top = 428.0

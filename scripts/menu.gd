@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 var wyrmgus_thread = Thread.new()
 var wyrmgus = WyrmgusModule.new()
