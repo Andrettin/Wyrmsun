@@ -14,6 +14,11 @@ config/name="Wyrmsun"
 run/main_scene="res://menu.tscn"
 config/icon="res://graphics/ui/icons/wyrmsun_icon_128.png"
 
+[display]
+
+mouse_cursor/custom_image="res://graphics/cursors/dwarven/dwarven_gauntlet.png"
+mouse_cursor/custom_image_hotspot=Vector2( 2, 0 )
+
 [importer_defaults]
 
 texture={

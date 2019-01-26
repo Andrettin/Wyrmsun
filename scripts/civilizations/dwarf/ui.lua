@@ -30,9 +30,9 @@
 DefineCursor({
 	Name = "cursor-point",
 	Race = "dwarf",
-	File = "dwarf/ui/cursors/dwarven_gauntlet.png",
+	File = "cursors/dwarven/dwarven_gauntlet.png",
 	HotSpot = {3, 1},
-	Size = {28, 32}
+	Size = {32, 32}
 })
 
 UI.NormalFontColor = "white"

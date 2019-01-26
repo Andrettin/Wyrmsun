@@ -1024,9 +1024,9 @@ if not (ui_loaded_first_time) then
 	DefineCursor({
 		Name = "cursor-point",
 		Race = "any",
-		File = "dwarf/ui/cursors/dwarven_gauntlet.png",
+		File = "cursors/dwarven/dwarven_gauntlet.png",
 		HotSpot = {3, 1},
-		Size = {28, 32}
+		Size = {32, 32}
 	})
 	
 	DefineCursor({

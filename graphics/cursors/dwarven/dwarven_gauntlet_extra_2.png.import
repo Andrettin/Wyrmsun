@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dwarven_gauntlet_extra_7.png-1c57bc4a84451a9d2465ac07d8c6f3cf.stex"
+path="res://.import/dwarven_gauntlet_extra_2.png-e5940bc92c668b50119ff35d5037ab26.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_7.png"
-dest_files=[ "res://.import/dwarven_gauntlet_extra_7.png-1c57bc4a84451a9d2465ac07d8c6f3cf.stex" ]
+source_file="res://graphics/cursors/dwarven/dwarven_gauntlet_extra_2.png"
+dest_files=[ "res://.import/dwarven_gauntlet_extra_2.png-e5940bc92c668b50119ff35d5037ab26.stex" ]
 
 [params]
 
