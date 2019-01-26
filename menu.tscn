@@ -29,6 +29,6 @@ margin_right = 432.0
 margin_bottom = 456.0
 script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
-button_text = "Exit"
+button_text = "E[color=#f4e020]x[/color]it"
 
 
