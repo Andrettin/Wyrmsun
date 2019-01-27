@@ -1,46 +1,55 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scripts/menu.gd" type="Script" id=1]
-[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scripts/exit_button.gd" type="Script" id=3]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=4]
+[ext_resource path="res://scripts/screen.gd" type="Script" id=1]
+[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/backgrounds/wyrm.png" type="Texture" id=3]
+[ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=6]
+[ext_resource path="res://scripts/exit_button.gd" type="Script" id=7]
 
-[node name="menu" type="Control"]
+[node name="main_menu" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 640.0
-margin_bottom = 480.0
+margin_right = 648.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="exit_button" parent="." instance=ExtResource( 2 )]
+[node name="background" parent="." instance=ExtResource( 2 )]
 
-margin_left = 208.0
-margin_top = 428.0
-margin_right = 432.0
-margin_bottom = 456.0
-script = ExtResource( 3 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
-button_text = "E~!xit"
+texture = ExtResource( 3 )
 
-[node name="encyclopedia_button" parent="." instance=ExtResource( 2 )]
+[node name="menu_area" parent="." instance=ExtResource( 4 )]
+
+[node name="encyclopedia_button" parent="menu_area" instance=ExtResource( 5 )]
 
 margin_left = 208.0
 margin_top = 356.0
 margin_right = 432.0
 margin_bottom = 384.0
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
 button_text = "En~!cyclopedia"
 target_scene = "encyclopedia_menu"
+
+[node name="exit_button" parent="menu_area" instance=ExtResource( 5 )]
+
+margin_left = 208.0
+margin_top = 428.0
+margin_right = 432.0
+margin_bottom = 456.0
+script = ExtResource( 7 )
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
+button_text = "E~!xit"
 
 

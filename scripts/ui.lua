@@ -129,7 +129,7 @@ if not (ui_loaded_first_time) then
 end
 
 LoadingBarSetBackgrounds({
-	GetBackground("ui/backgrounds/gnashorn.png"), GetBackground("ui/backgrounds/gryphon.png"), GetBackground("ui/backgrounds/gullinburst.png"), GetBackground("ui/backgrounds/wyrm.png"), GetBackground("ui/backgrounds/yale.png")
+	GetBackground("backgrounds/gnashorn.png"), GetBackground("backgrounds/gryphon.png"), GetBackground("backgrounds/gullinburst.png"), GetBackground("backgrounds/wyrm.png"), GetBackground("backgrounds/yale.png")
 })
 
 --
