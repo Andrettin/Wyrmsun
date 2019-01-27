@@ -16,14 +16,9 @@ func _ready():
 		find_pos = text.find(character_highlight_markdown, find_pos + String("[color=" + highlight_color + "]").length() + character_highlight_markdown.length())
 	text = text.replace(character_highlight_markdown, "")
 	
-	var text_shadow = text
-	text_shadow = text_shadow.replace("[color=" + highlight_color + "]", "")
-	text_shadow = text_shadow.replace("[/color]", "")
-	hovered_text = "[center][color=" + highlight_color + "]" + text_shadow + "[/color][/center]"
+	hovered_text = "[center][color=" + highlight_color + "]" + text + "[/color][/center]"
 	text = "[center]" + text + "[/center]"
-	text_shadow = "[center]" + text_shadow + "[/center]"
 	self.find_node("button_text").bbcode_text = text
-	self.find_node("button_text_shadow").bbcode_text = text_shadow
 	
 	self.connect("draw", self, "check_set_text_display_pressed")
 	
@@ -34,12 +29,10 @@ func check_set_text_display_pressed():
 	if (display_pressed_text == false and self.get_draw_mode() == DRAW_PRESSED):
 		display_pressed_text = true
 		self.find_node("button_text").rect_position += Vector2(2, 2)
-		self.find_node("button_text_shadow").rect_position += Vector2(2, 2)
 		self.find_node("button_text").bbcode_text = hovered_text
 	elif (display_pressed_text == true and self.get_draw_mode() != DRAW_PRESSED):
 		display_pressed_text = false
 		self.find_node("button_text").rect_position -= Vector2(2, 2)
-		self.find_node("button_text_shadow").rect_position -= Vector2(2, 2)
 		self.find_node("button_text").bbcode_text = text #this is necessary because the mouse counts as not having exited while the button is pressed, regardless of mouse position
 
 func display_text_hovered():

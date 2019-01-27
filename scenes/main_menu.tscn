@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/backgrounds/cosmos.png" type="Texture" id=3]
 [ext_resource path="res://graphics/interface/wyrmsun_logo_1_8th.png" type="Texture" id=4]
 [ext_resource path="res://scripts/logo.gd" type="Script" id=5]
-[ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=8]
-[ext_resource path="res://scripts/exit_button.gd" type="Script" id=9]
+[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/version_label.gd" type="Script" id=7]
+[ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=10]
+[ext_resource path="res://scripts/exit_button.gd" type="Script" id=11]
 
 [node name="main_menu" type="Control"]
 
@@ -51,9 +53,19 @@ stretch_mode = 4
 script = ExtResource( 5 )
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="menu_area" parent="." instance=ExtResource( 6 )]
+[node name="version_label" parent="logo" instance=ExtResource( 6 )]
 
-[node name="single_player_game_button" parent="menu_area" instance=ExtResource( 7 )]
+margin_left = 678.0
+margin_top = 230.0
+margin_right = 902.0
+margin_bottom = 254.0
+bbcode_text = "v1.0.0"
+text = "v1.0.0"
+script = ExtResource( 7 )
+
+[node name="menu_area" parent="." instance=ExtResource( 8 )]
+
+[node name="single_player_game_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 212.0
@@ -61,7 +73,7 @@ margin_right = 432.0
 margin_bottom = 240.0
 button_text = "~!Single Player Game"
 
-[node name="multiplayer_game_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="multiplayer_game_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 248.0
@@ -69,7 +81,7 @@ margin_right = 432.0
 margin_bottom = 276.0
 button_text = "~!Multiplayer Game"
 
-[node name="achievements_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="achievements_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 284.0
@@ -77,7 +89,7 @@ margin_right = 432.0
 margin_bottom = 312.0
 button_text = "~!Achievements"
 
-[node name="options_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="options_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 320.0
@@ -85,7 +97,7 @@ margin_right = 432.0
 margin_bottom = 348.0
 button_text = "~!Options"
 
-[node name="map_editor_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="map_editor_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 356.0
@@ -93,7 +105,7 @@ margin_right = 432.0
 margin_bottom = 384.0
 button_text = "Map ~!Editor"
 
-[node name="mods_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="mods_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 392.0
@@ -101,18 +113,18 @@ margin_right = 432.0
 margin_bottom = 420.0
 button_text = "Mo~!ds"
 
-[node name="encyclopedia_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="encyclopedia_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 428.0
 margin_right = 432.0
 margin_bottom = 456.0
-script = ExtResource( 8 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
 button_text = "En~!cyclopedia"
 target_scene = "encyclopedia_menu"
 
-[node name="credits_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="credits_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 464.0
@@ -120,13 +132,13 @@ margin_right = 432.0
 margin_bottom = 492.0
 button_text = "Cred~!its"
 
-[node name="exit_button" parent="menu_area" instance=ExtResource( 7 )]
+[node name="exit_button" parent="menu_area" instance=ExtResource( 9 )]
 
 margin_left = 208.0
 margin_top = 500.0
 margin_right = 432.0
 margin_bottom = 528.0
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
 button_text = "E~!xit"
 
