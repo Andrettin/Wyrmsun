@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gryphon_profile.png-07d66d5e3689d60b393c1586ba0a722a.stex"
+path="res://.import/gryphon_profile.png-71cc16cec72cf1a63ddd04c9ef91d920.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gryphon_profile.png"
-dest_files=[ "res://.import/gryphon_profile.png-07d66d5e3689d60b393c1586ba0a722a.stex" ]
+source_file="res://graphics/backgrounds/gryphon_profile.png"
+dest_files=[ "res://.import/gryphon_profile.png-71cc16cec72cf1a63ddd04c9ef91d920.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yale_profile.png-c6dac18e489af4eb7c080b9ffef718b7.stex"
+path="res://.import/wyrm.png-f470b788d61a318e2786c4960de58154.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/yale_profile.png"
-dest_files=[ "res://.import/yale_profile.png-c6dac18e489af4eb7c080b9ffef718b7.stex" ]
+source_file="res://graphics/backgrounds/wyrm.png"
+dest_files=[ "res://.import/wyrm.png-f470b788d61a318e2786c4960de58154.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

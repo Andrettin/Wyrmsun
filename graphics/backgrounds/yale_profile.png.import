@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gnashorn.png-eca974c06429c4807ef6ec0a0ff26940.stex"
+path="res://.import/yale_profile.png-a530924bb8b25707b29062dd722b0e43.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gnashorn.png"
-dest_files=[ "res://.import/gnashorn.png-eca974c06429c4807ef6ec0a0ff26940.stex" ]
+source_file="res://graphics/backgrounds/yale_profile.png"
+dest_files=[ "res://.import/yale_profile.png-a530924bb8b25707b29062dd722b0e43.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

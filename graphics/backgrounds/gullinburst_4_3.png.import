@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yale_4_3.png-3bdb8768de5a06d57220098d3420e294.stex"
+path="res://.import/gullinburst_4_3.png-6acb1b7d7c390f81ab2bd7908fac299e.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/yale_4_3.png"
-dest_files=[ "res://.import/yale_4_3.png-3bdb8768de5a06d57220098d3420e294.stex" ]
+source_file="res://graphics/backgrounds/gullinburst_4_3.png"
+dest_files=[ "res://.import/gullinburst_4_3.png-6acb1b7d7c390f81ab2bd7908fac299e.stex" ]
 
 [params]
 

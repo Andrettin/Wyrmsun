@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wyrm_profile.png-efbba5d41b919013e4a77d83faf78cf6.stex"
+path="res://.import/yale_4_3.png-4f1c27f1e3e287f3d0330b2297368f64.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/wyrm_profile.png"
-dest_files=[ "res://.import/wyrm_profile.png-efbba5d41b919013e4a77d83faf78cf6.stex" ]
+source_file="res://graphics/backgrounds/yale_4_3.png"
+dest_files=[ "res://.import/yale_4_3.png-4f1c27f1e3e287f3d0330b2297368f64.stex" ]
 
 [params]
 

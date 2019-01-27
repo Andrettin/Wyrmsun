@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yale.png-08063d24701008eea2ff9734a9cc32dc.stex"
+path="res://.import/gullinburst.png-63e393d76404da3cbbbe5a5de16a9443.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/yale.png"
-dest_files=[ "res://.import/yale.png-08063d24701008eea2ff9734a9cc32dc.stex" ]
+source_file="res://graphics/backgrounds/gullinburst.png"
+dest_files=[ "res://.import/gullinburst.png-63e393d76404da3cbbbe5a5de16a9443.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

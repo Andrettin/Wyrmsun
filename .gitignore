@@ -25,28 +25,6 @@ run.sh
 linux_readme.txt
 *.lnk
 
-## Content used by Wyrmsun with permission, but which isn't licensed under an open-source license
-graphics/ui/backgrounds/gnashorn.png
-graphics/ui/backgrounds/gnashorn_4_3.png
-graphics/ui/backgrounds/gnashorn_profile.png
-graphics/ui/backgrounds/gnashorn_small.png
-graphics/ui/backgrounds/gryphon.png
-graphics/ui/backgrounds/gryphon_4_3.png
-graphics/ui/backgrounds/gryphon_profile.png
-graphics/ui/backgrounds/gryphon_small.png
-graphics/ui/backgrounds/gullinburst.png
-graphics/ui/backgrounds/gullinburst_4_3.png
-graphics/ui/backgrounds/gullinburst_profile.png
-graphics/ui/backgrounds/gullinburst_small.png
-graphics/ui/backgrounds/wyrm.png
-graphics/ui/backgrounds/wyrm_4_3.png
-graphics/ui/backgrounds/wyrm_profile.png
-graphics/ui/backgrounds/wyrm_small.png
-graphics/ui/backgrounds/yale.png
-graphics/ui/backgrounds/yale_4_3.png
-graphics/ui/backgrounds/yale_profile.png
-graphics/ui/backgrounds/yale_small.png
-
 ## Steam Workshop Mod Uploader
 CSteamworks.dll
 ModCreator.exe

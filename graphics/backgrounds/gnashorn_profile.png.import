@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gullinburst_4_3.png-d9645e8ce8ae359dad5f79aa145399f6.stex"
+path="res://.import/gnashorn_profile.png-92c7d26e6baadd0946322048ef5f416d.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gullinburst_4_3.png"
-dest_files=[ "res://.import/gullinburst_4_3.png-d9645e8ce8ae359dad5f79aa145399f6.stex" ]
+source_file="res://graphics/backgrounds/gnashorn_profile.png"
+dest_files=[ "res://.import/gnashorn_profile.png-92c7d26e6baadd0946322048ef5f416d.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

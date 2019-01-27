@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gnashorn_4_3.png-890be6d429e96387bcc123ac18158d91.stex"
+path="res://.import/wyrm_profile.png-f2b7a6276865de6435f244bdb80e2661.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gnashorn_4_3.png"
-dest_files=[ "res://.import/gnashorn_4_3.png-890be6d429e96387bcc123ac18158d91.stex" ]
+source_file="res://graphics/backgrounds/wyrm_profile.png"
+dest_files=[ "res://.import/wyrm_profile.png-f2b7a6276865de6435f244bdb80e2661.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

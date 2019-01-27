@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gnashorn_profile.png-16500687cd3081b75f2f14bf64918a43.stex"
+path="res://.import/gryphon_4_3.png-6bbef060631b165ad696a77b8d13f8c2.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gnashorn_profile.png"
-dest_files=[ "res://.import/gnashorn_profile.png-16500687cd3081b75f2f14bf64918a43.stex" ]
+source_file="res://graphics/backgrounds/gryphon_4_3.png"
+dest_files=[ "res://.import/gryphon_4_3.png-6bbef060631b165ad696a77b8d13f8c2.stex" ]
 
 [params]
 

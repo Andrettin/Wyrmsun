@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gryphon.png-6dc73c48aed089425e96ca8a717b3e4c.stex"
+path="res://.import/yale.png-a6b06a372cb2de2b36509b1ff29430f2.stex"
 
 [deps]
 
-source_file="res://graphics/ui/backgrounds/gryphon.png"
-dest_files=[ "res://.import/gryphon.png-6dc73c48aed089425e96ca8a717b3e4c.stex" ]
+source_file="res://graphics/backgrounds/yale.png"
+dest_files=[ "res://.import/yale.png-a6b06a372cb2de2b36509b1ff29430f2.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
