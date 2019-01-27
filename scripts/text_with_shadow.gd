@@ -1,7 +1,13 @@
 extends RichTextLabel
 
 func _ready():
-	self.find_node("text_shadow").rect_clip_content = self.rect_clip_content
+	var text_shadow_node = self.find_node("text_shadow")
+	text_shadow_node.rect_clip_content = self.rect_clip_content
+	self.connect("resized", self, "update_size")
+	update_size()
+
+func update_size():
+	self.find_node("text_shadow").rect_size.x = self.rect_size.x - 2
 
 func _set(property, value):
 	if (property == "bbcode_text"):

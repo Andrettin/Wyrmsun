@@ -142,4 +142,16 @@ script = ExtResource( 11 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
 button_text = "E~!xit"
 
+[node name="copyright_label" parent="." instance=ExtResource( 6 )]
+
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -42.0
+margin_right = 0.0
+margin_bottom = -18.0
+bbcode_text = "[center]Copyright (c) 2013-2019 by Andrettin[/center]"
+text = "Copyright (c) 2013-2019 by Andrettin"
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
 
