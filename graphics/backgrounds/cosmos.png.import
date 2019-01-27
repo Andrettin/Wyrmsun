@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Menu_background_with_title.png-b8fba0704e9b400975a51a7c6181c1fd.stex"
+path="res://.import/cosmos.png-124e850b6dc0033f5c9facd3e8494eb1.stex"
 
 [deps]
 
-source_file="res://graphics/ui/Menu_background_with_title.png"
-dest_files=[ "res://.import/Menu_background_with_title.png-b8fba0704e9b400975a51a7c6181c1fd.stex" ]
+source_file="res://graphics/backgrounds/cosmos.png"
+dest_files=[ "res://.import/cosmos.png-124e850b6dc0033f5c9facd3e8494eb1.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
