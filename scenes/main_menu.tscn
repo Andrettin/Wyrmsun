@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
-[ext_resource path="res://large_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/exit_button.gd" type="Script" id=3]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=4]
 
 [node name="menu" type="Control"]
 
@@ -19,7 +20,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Rect", "Size Flags" ]
 
 [node name="exit_button" parent="." instance=ExtResource( 2 )]
 
@@ -30,5 +31,16 @@ margin_bottom = 456.0
 script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
 button_text = "E~!xit"
+
+[node name="encyclopedia_button" parent="." instance=ExtResource( 2 )]
+
+margin_left = 208.0
+margin_top = 356.0
+margin_right = 432.0
+margin_bottom = 384.0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
+button_text = "En~!cyclopedia"
+target_scene = "encyclopedia_menu"
 
 
