@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wyrmsun_logo_monochromatic.png-b7181c03fe19b6a7f9eca0ff4ec31ce6.stex"
+path="res://.import/wyrmsun_logo_1_8th.png-6cf200c5c8bafbc16a9de4c2157e89b5.stex"
 
 [deps]
 
-source_file="res://graphics/ui/wyrmsun_logo_monochromatic.png"
-dest_files=[ "res://.import/wyrmsun_logo_monochromatic.png-b7181c03fe19b6a7f9eca0ff4ec31ce6.stex" ]
+source_file="res://graphics/interface/wyrmsun_logo_1_8th.png"
+dest_files=[ "res://.import/wyrmsun_logo_1_8th.png-6cf200c5c8bafbc16a9de4c2157e89b5.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
