@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/selected-4.wav-a73ff35f55fa09770c5ee817e8fdf13e.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/basic_voices/selected-4.wav"
+dest_files=[ "res://.import/selected-4.wav-a73ff35f55fa09770c5ee817e8fdf13e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

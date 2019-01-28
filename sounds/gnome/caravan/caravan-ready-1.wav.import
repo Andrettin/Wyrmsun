@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/caravan-ready-1.wav-c56333e67932d010da65b766257503bd.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/caravan/caravan-ready-1.wav"
+dest_files=[ "res://.import/caravan-ready-1.wav-c56333e67932d010da65b766257503bd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

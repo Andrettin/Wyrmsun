@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scavenger-annoyed-1.wav-498598fa8a60591dacbe03d2bb38aab5.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/scavenger/scavenger-annoyed-1.wav"
+dest_files=[ "res://.import/scavenger-annoyed-1.wav-498598fa8a60591dacbe03d2bb38aab5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

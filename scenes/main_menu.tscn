@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/backgrounds/cosmos.png" type="Texture" id=3]
-[ext_resource path="res://graphics/interface/wyrmsun_logo_1_8th.png" type="Texture" id=4]
+[ext_resource path="res://graphics/interface/wyrmsun_logo_1_16th.png" type="Texture" id=4]
 [ext_resource path="res://scripts/logo.gd" type="Script" id=5]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/version_label.gd" type="Script" id=7]
@@ -39,9 +39,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = -56.0
-margin_right = 775.0
-margin_bottom = 251.0
+margin_right = 387.0
+margin_bottom = 154.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -55,13 +54,14 @@ _sections_unfolded = [ "Rect", "Size Flags" ]
 
 [node name="version_label" parent="logo" instance=ExtResource( 6 )]
 
-margin_left = 678.0
-margin_top = 230.0
-margin_right = 902.0
-margin_bottom = 254.0
+margin_left = 338.0
+margin_top = 115.0
+margin_right = 466.0
+margin_bottom = 139.0
 bbcode_text = "v1.0.0"
 text = "v1.0.0"
 script = ExtResource( 7 )
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="menu_area" parent="." instance=ExtResource( 8 )]
 
@@ -120,7 +120,7 @@ margin_top = 428.0
 margin_right = 432.0
 margin_bottom = 456.0
 script = ExtResource( 10 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "En~!cyclopedia"
 target_scene = "encyclopedia_menu"
 
@@ -139,7 +139,7 @@ margin_top = 500.0
 margin_right = 432.0
 margin_bottom = 528.0
 script = ExtResource( 11 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "E~!xit"
 
 [node name="copyright_label" parent="." instance=ExtResource( 6 )]

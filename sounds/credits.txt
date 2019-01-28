@@ -6,6 +6,7 @@ Battle for Wesnoth Team:
 /sounds/human/basic_voices/human-die-1.wav (licensed under the GPL 2.0)
 /sounds/human/basic_voices/human-die-2.wav (licensed under the GPL 2.0)
 /sounds/human/basic_voices/human-die-3.wav (licensed under the GPL 2.0)
+/sounds/interface/click.wav (licensed under the GPL 2.0)
 /sounds/misc/explosion.wav (licensed under the GPL 2.0)
 /sounds/misc/fanfare_short.wav (licensed under the GPL 2.0)
 /sounds/misc/gold_coins.wav (licensed under the GPL 2.0)
@@ -68,7 +69,6 @@ Battle for Wesnoth Team:
 /sounds/troll/basic_voices/troll-die-1.wav (licensed under the GPL 2.0)
 /sounds/troll/basic_voices/troll-die-2.wav (licensed under the GPL 2.0)
 /sounds/troll/basic_voices/troll-die-3.wav (licensed under the GPL 2.0)
-/sounds/ui/click.wav (licensed under the GPL 2.0)
 
 b_o:
 /sounds/buildings/yalepen.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
@@ -634,12 +634,12 @@ Wildfire Games (http://www.wildfiregames.com/):
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav (licensed under the GPL 2.0)
+/sounds/interface/placement_error.wav (licensed under the GPL 2.0)
+/sounds/interface/placement_success.wav (licensed under the GPL 2.0)
 /sounds/misc/building_construction.wav (licensed under the GPL 2.0)
 /sounds/misc/burning.wav (licensed under the GPL 2.0)
 /sounds/misc/building_explosion/1.wav (licensed under the GPL 2.0)
 /sounds/misc/building_explosion/2.wav (licensed under the GPL 2.0)
-/sounds/ui/placement_error.wav (licensed under the GPL 2.0)
-/sounds/ui/placement_success.wav (licensed under the GPL 2.0)
 
 Sounds in the Public Domain:
 /sounds/misc/tree_chopping/tree-chopping-1.wav

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bat_flapping.wav-9485bed1f7c1c9804f5b5fa09cf41495.sample"
+
+[deps]
+
+source_file="res://sounds/neutral/bat_flapping.wav"
+dest_files=[ "res://.import/bat_flapping.wav-9485bed1f7c1c9804f5b5fa09cf41495.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

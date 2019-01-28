@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/acknowledgement_01.wav-73fc03eaf1ed74a04e9f412770f76e09.sample"
+
+[deps]
+
+source_file="res://sounds/english/basic_voices/acknowledgement_01.wav"
+dest_files=[ "res://.import/acknowledgement_01.wav-73fc03eaf1ed74a04e9f412770f76e09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/axe.wav-af18e439da93bb18abf05b127c186b25.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/axe.wav"
+dest_files=[ "res://.import/axe.wav-af18e439da93bb18abf05b127c186b25.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

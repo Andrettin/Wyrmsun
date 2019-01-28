@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mine_metal_19.wav-f3d1403892aa3cd46980582074a9d473.sample"
+
+[deps]
+
+source_file="res://sounds/misc/metal_mining/mine_metal_19.wav"
+dest_files=[ "res://.import/mine_metal_19.wav-f3d1403892aa3cd46980582074a9d473.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

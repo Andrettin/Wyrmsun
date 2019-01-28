@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ballista-ready.wav-dd7097e4bf3567e0dba14c8f35e80ac9.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/ballista/ballista-ready.wav"
+dest_files=[ "res://.import/ballista-ready.wav-dd7097e4bf3567e0dba14c8f35e80ac9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

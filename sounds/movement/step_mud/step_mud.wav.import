@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/step_mud.wav-d374a18f405583203cd0ded20657757f.sample"
+
+[deps]
+
+source_file="res://sounds/movement/step_mud/step_mud.wav"
+dest_files=[ "res://.import/step_mud.wav-d374a18f405583203cd0ded20657757f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

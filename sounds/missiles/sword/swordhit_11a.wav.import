@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/swordhit_11a.wav-36eb35942230230b597fca47bfa347b4.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/sword/swordhit_11a.wav"
+dest_files=[ "res://.import/swordhit_11a.wav-36eb35942230230b597fca47bfa347b4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

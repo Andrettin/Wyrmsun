@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/magic-holy-1.wav-7bc41162c4285ae33e9b6527dbce0675.sample"
+
+[deps]
+
+source_file="res://sounds/misc/magic-holy-1.wav"
+dest_files=[ "res://.import/magic-holy-1.wav-7bc41162c4285ae33e9b6527dbce0675.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

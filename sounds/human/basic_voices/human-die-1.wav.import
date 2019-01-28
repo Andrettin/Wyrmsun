@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/human-die-1.wav-ba3d6f6c36d866075f3b593c94226373.sample"
+
+[deps]
+
+source_file="res://sounds/human/basic_voices/human-die-1.wav"
+dest_files=[ "res://.import/human-die-1.wav-ba3d6f6c36d866075f3b593c94226373.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dagger.wav-b967026c6d49906df3c204953a334331.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/dagger.wav"
+dest_files=[ "res://.import/dagger.wav-b967026c6d49906df3c204953a334331.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/annoy-06.wav-3e7bd74a7a706e1205d6e184308f3d13.sample"
+
+[deps]
+
+source_file="res://sounds/goblin/basic_voices/annoy-06.wav"
+dest_files=[ "res://.import/annoy-06.wav-3e7bd74a7a706e1205d6e184308f3d13.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

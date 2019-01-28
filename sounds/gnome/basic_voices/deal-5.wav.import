@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/deal-5.wav-02436711791e0b5f488ad93348eceee0.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/basic_voices/deal-5.wav"
+dest_files=[ "res://.import/deal-5.wav-02436711791e0b5f488ad93348eceee0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

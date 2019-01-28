@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dragonstick.wav-f0bb020170b5841f51475734467d71b5.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/dragonstick.wav"
+dest_files=[ "res://.import/dragonstick.wav-f0bb020170b5841f51475734467d71b5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

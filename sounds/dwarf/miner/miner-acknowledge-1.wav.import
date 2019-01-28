@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/miner-acknowledge-1.wav-a5ac7b1419a994e03454bccd1d758d47.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/miner/miner-acknowledge-1.wav"
+dest_files=[ "res://.import/miner-acknowledge-1.wav-a5ac7b1419a994e03454bccd1d758d47.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

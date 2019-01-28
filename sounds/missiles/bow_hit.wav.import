@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bow_hit.wav-ee9da80ba99566d45dc3d5a80202ec7a.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/bow_hit.wav"
+dest_files=[ "res://.import/bow_hit.wav-ee9da80ba99566d45dc3d5a80202ec7a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

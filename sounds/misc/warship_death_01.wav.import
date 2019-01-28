@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/warship_death_01.wav-50d97e80bc12b310e2fd7b36a430c8cd.sample"
+
+[deps]
+
+source_file="res://sounds/misc/warship_death_01.wav"
+dest_files=[ "res://.import/warship_death_01.wav-50d97e80bc12b310e2fd7b36a430c8cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

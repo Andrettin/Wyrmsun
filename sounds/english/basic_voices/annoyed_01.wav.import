@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/annoyed_01.wav-d53d58c65acf151b65473f5e9d9c953c.sample"
+
+[deps]
+
+source_file="res://sounds/english/basic_voices/annoyed_01.wav"
+dest_files=[ "res://.import/annoyed_01.wav-d53d58c65acf151b65473f5e9d9c953c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/civ_male_fight_1.wav-ff9b8ce4fec3fbbaef4ad7152fd00e77.sample"
+
+[deps]
+
+source_file="res://sounds/latin/basic_voices/civ_male_fight_1.wav"
+dest_files=[ "res://.import/civ_male_fight_1.wav-ff9b8ce4fec3fbbaef4ad7152fd00e77.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

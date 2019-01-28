@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://graphics/interface/default/button_large_normal.png" type="Texture" id=1]
 [ext_resource path="res://graphics/interface/default/button_large_pressed.png" type="Texture" id=2]
 [ext_resource path="res://graphics/interface/default/button_large_grayed.png" type="Texture" id=3]
 [ext_resource path="res://scripts/button.gd" type="Script" id=4]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/interface/click.wav" type="AudioStream" id=6]
 
 [node name="large_button" type="TextureButton"]
 
@@ -29,12 +30,26 @@ texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
 texture_disabled = ExtResource( 3 )
 script = ExtResource( 4 )
-_sections_unfolded = [ "Rect", "Textures" ]
+_sections_unfolded = [ "Rect", "Textures", "Theme" ]
 button_text = ""
 
 [node name="button_text" parent="." instance=ExtResource( 5 )]
 
 margin_top = 4.0
 margin_bottom = 28.0
+
+[node name="button_sound_player" type="AudioStreamPlayer2D" parent="."]
+
+position = Vector2( 112, 14 )
+scale = Vector2( 3.475, 0.4 )
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 

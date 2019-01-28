@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/annoy3.wav-d1cd5fb40d2ec75694447dd127e77130.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/basic_voices/annoy3.wav"
+dest_files=[ "res://.import/annoy3.wav-d1cd5fb40d2ec75694447dd127e77130.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

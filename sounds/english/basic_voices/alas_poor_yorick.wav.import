@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alas_poor_yorick.wav-8718ee5daff9c723e8b0afa90043d544.sample"
+
+[deps]
+
+source_file="res://sounds/english/basic_voices/alas_poor_yorick.wav"
+dest_files=[ "res://.import/alas_poor_yorick.wav-8718ee5daff9c723e8b0afa90043d544.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/selected-3.wav-e8bdbc96779c1520ce0f9f4c0576030d.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/basic_voices/selected-3.wav"
+dest_files=[ "res://.import/selected-3.wav-e8bdbc96779c1520ce0f9f4c0576030d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/annoy-2.wav-00e87c97954c91429fc9388dbe8f9230.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/basic_voices/annoy-2.wav"
+dest_files=[ "res://.import/annoy-2.wav-00e87c97954c91429fc9388dbe8f9230.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

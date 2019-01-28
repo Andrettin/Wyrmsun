@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yale-rider-ready.wav-11610829d9d9e2db9aee6a8ff35383ce.sample"
+
+[deps]
+
+source_file="res://sounds/dwarf/yale_rider/yale-rider-ready.wav"
+dest_files=[ "res://.import/yale-rider-ready.wav-11610829d9d9e2db9aee6a8ff35383ce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

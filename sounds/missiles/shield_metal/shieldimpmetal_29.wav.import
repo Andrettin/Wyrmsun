@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shieldimpmetal_29.wav-b945c5c57f846fced740f2028290732b.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/shield_metal/shieldimpmetal_29.wav"
+dest_files=[ "res://.import/shieldimpmetal_29.wav-b945c5c57f846fced740f2028290732b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

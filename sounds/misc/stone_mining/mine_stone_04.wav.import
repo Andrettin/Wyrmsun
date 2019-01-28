@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mine_stone_04.wav-75c905bb35170b75273def03b6bd9cb3.sample"
+
+[deps]
+
+source_file="res://sounds/misc/stone_mining/mine_stone_04.wav"
+dest_files=[ "res://.import/mine_stone_04.wav-75c905bb35170b75273def03b6bd9cb3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spear-miss.wav-6262813f2a1f4d70bc27dd3f35e61076.sample"
+
+[deps]
+
+source_file="res://sounds/missiles/spear-miss.wav"
+dest_files=[ "res://.import/spear-miss.wav-6262813f2a1f4d70bc27dd3f35e61076.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

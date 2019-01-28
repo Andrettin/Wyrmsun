@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/heal-done-1.wav-683d8f4f503be00590d776b5d5ec2dd0.sample"
+
+[deps]
+
+source_file="res://sounds/gnome/herbalist/heal-done-1.wav"
+dest_files=[ "res://.import/heal-done-1.wav-683d8f4f503be00590d776b5d5ec2dd0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
