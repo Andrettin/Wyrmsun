@@ -35,7 +35,8 @@ func check_set_text_display_pressed():
 	elif (display_pressed_text == true and self.get_draw_mode() != DRAW_PRESSED):
 		display_pressed_text = false
 		self.find_node("button_text").rect_position -= Vector2(2, 2)
-		self.find_node("button_text").bbcode_text = text #this is necessary because the mouse counts as not having exited while the button is pressed, regardless of mouse position
+		if (!self.is_hovered()):
+			self.find_node("button_text").bbcode_text = text #this is necessary because the mouse counts as not having exited while the button is pressed, regardless of mouse position
 
 func display_text_hovered():
 	self.find_node("button_text").bbcode_text = hovered_text
