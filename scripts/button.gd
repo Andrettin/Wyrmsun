@@ -8,7 +8,7 @@ var text = ""
 var hovered_text = ""
 
 func _ready():
-	self.connect("pressed", self.find_node("button_sound_player"), "play")
+	self.connect("pressed", self.find_node("button_audio_player"), "play")
 	
 	text = self.button_text
 	var find_pos = text.find(character_highlight_markdown)

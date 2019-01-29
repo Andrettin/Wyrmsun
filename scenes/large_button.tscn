@@ -38,7 +38,7 @@ button_text = ""
 margin_top = 4.0
 margin_bottom = 28.0
 
-[node name="button_sound_player" type="AudioStreamPlayer2D" parent="."]
+[node name="button_audio_player" type="AudioStreamPlayer2D" parent="."]
 
 position = Vector2( 112, 14 )
 scale = Vector2( 3.475, 0.4 )
