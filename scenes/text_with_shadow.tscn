@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://fonts/berenika.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/berenika_16.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/text_with_shadow.gd" type="Script" id=2]
 
 [node name="text_with_shadow" type="RichTextLabel"]

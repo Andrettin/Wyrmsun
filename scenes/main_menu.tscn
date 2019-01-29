@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=10]
 [ext_resource path="res://scripts/exit_button.gd" type="Script" id=11]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=12]
 
 [node name="main_menu" type="Control"]
 
@@ -150,6 +151,7 @@ anchor_bottom = 1.0
 margin_top = -42.0
 margin_right = 0.0
 margin_bottom = -18.0
+custom_fonts/normal_font = ExtResource( 12 )
 bbcode_text = "[center]Copyright (c) 2013-2019 by Andrettin[/center]"
 text = "Copyright (c) 2013-2019 by Andrettin"
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
