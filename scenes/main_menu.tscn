@@ -72,7 +72,9 @@ margin_left = 208.0
 margin_top = 212.0
 margin_right = 432.0
 margin_bottom = 240.0
+script = ExtResource( 10 )
 button_text = "~!Single Player Game"
+target_scene = "single_player_game_menu"
 
 [node name="multiplayer_game_button" parent="menu_area" instance=ExtResource( 9 )]
 

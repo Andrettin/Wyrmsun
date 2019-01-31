@@ -33,11 +33,11 @@ texture = ExtResource( 3 )
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 5 )]
 
 margin_left = 208.0
-margin_top = 428.0
+margin_top = 464.0
 margin_right = 432.0
-margin_bottom = 456.0
+margin_bottom = 492.0
 script = ExtResource( 6 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "custom_constants", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "main_menu"
 
