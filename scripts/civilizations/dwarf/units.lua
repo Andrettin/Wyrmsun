@@ -2686,12 +2686,16 @@ DefineUnitType("unit-dwarven-dock", {
 			"terrain", "dry-mud",
 			"terrain", "grass",
 			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water",
 			"season", "winter"
 		},
 		{
 			"variation-id", "dock-snow",
 			"file", "dwarf/buildings/dock_snow.png",
-			"terrain", "snow"
+			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water"
 		}
 	},
 	Sounds = {

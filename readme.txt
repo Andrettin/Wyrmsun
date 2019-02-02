@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - All Germanic buildings now have snowy variations.
 - The Teutonic Mason's Shop now correctly uses its active animations.
 - The Germanic Stables graphics now use semi-transparent shadows, as the other buildings do.
+- Teuton buildings now have snowy variations.
 
 * Items
 - Bows now have specific graphics for when they are on the ground.
