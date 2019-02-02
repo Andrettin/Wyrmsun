@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=7]
 
-[node name="single_player_game_menu" type="Control"]
+[node name="scenario_menu" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -33,70 +33,23 @@ texture = ExtResource( 3 )
 
 [node name="menu_title" parent="menu_area" instance=ExtResource( 5 )]
 
-anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -640.0
-margin_top = 151.0
+margin_top = 68.0
 margin_right = 0.0
-margin_bottom = 175.0
-bbcode_text = "[center][color=#f4e020]Single Player Game[/color][/center]"
-text = "Single Player Game"
+margin_bottom = 92.0
+bbcode_text = "[center][color=#f4e020]Scenarios[/color][/center]"
+text = "Scenarios"
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
-
-[node name="scenarios_button" parent="menu_area" instance=ExtResource( 6 )]
-
-margin_left = 208.0
-margin_top = 212.0
-margin_right = 432.0
-margin_bottom = 240.0
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
-button_text = "~!Scenarios"
-
-[node name="quests_button" parent="menu_area" instance=ExtResource( 6 )]
-
-margin_left = 208.0
-margin_top = 248.0
-margin_right = 432.0
-margin_bottom = 276.0
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
-button_text = "~!Quests"
-
-[node name="custom_game_button" parent="menu_area" instance=ExtResource( 6 )]
-
-margin_left = 208.0
-margin_top = 284.0
-margin_right = 432.0
-margin_bottom = 312.0
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
-button_text = "C~!ustom Game"
-
-[node name="load_game_button" parent="menu_area" instance=ExtResource( 6 )]
-
-margin_left = 208.0
-margin_top = 320.0
-margin_right = 432.0
-margin_bottom = 348.0
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
-button_text = "~!Load Game"
-
-[node name="tech_tree_button" parent="menu_area" instance=ExtResource( 6 )]
-
-margin_left = 208.0
-margin_top = 356.0
-margin_right = 432.0
-margin_bottom = 384.0
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
-button_text = "~!Tech Tree"
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 6 )]
 
 margin_left = 208.0
-margin_top = 392.0
+margin_top = 464.0
 margin_right = 432.0
-margin_bottom = 420.0
+margin_bottom = 492.0
 script = ExtResource( 7 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
-target_scene = "main_menu"
+target_scene = "single_player_game_menu"
 
 
