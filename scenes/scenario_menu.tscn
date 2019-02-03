@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=7]
+[ext_resource path="res://scenes/dropdown.tscn" type="PackedScene" id=8]
 
 [node name="scenario_menu" type="Control"]
 
@@ -15,7 +16,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 640.0
-margin_bottom = 480.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -40,6 +41,15 @@ margin_bottom = 92.0
 bbcode_text = "[center][color=#f4e020]Scenarios[/color][/center]"
 text = "Scenarios"
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="start_scenario_button" parent="menu_area" instance=ExtResource( 6 )]
+
+margin_left = 208.0
+margin_top = 428.0
+margin_right = 432.0
+margin_bottom = 456.0
+_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
+button_text = "~!Start Scenario"
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 6 )]
 
