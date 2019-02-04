@@ -44,6 +44,8 @@ wyrmsun.Copyright = "Copyright (c) 2013-2019 by Andrettin"
 --  Config-Part
 -------------------------------------------------------------------------------
 
+Map = CMap.Map
+
 MapDirectories = {"maps/"}
 ModDirectories = {"mods/"}
 

@@ -28,9 +28,9 @@
 SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 -- Global useful objects for menus  ----------
-dark = Color(38, 38, 78)
-clear = Color(200, 200, 120)
-black = Color(0, 0, 0)
+dark = gcn.Color(38, 38, 78)
+clear = gcn.Color(200, 200, 120)
+black = gcn.Color(0, 0, 0)
 
 bckground = CGraphic:New("backgrounds/cosmos.png")
 bckground:Load()
@@ -153,9 +153,9 @@ function AddMenuHelpers(menu)
 
 	function menu:addFullButton(caption, hotkey, x, y, callback)
 		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		local g_bln
 		local g_blp
 		local g_blg
@@ -191,9 +191,9 @@ function AddMenuHelpers(menu)
 
 	function menu:addHalfButton(caption, hotkey, x, y, callback)
 		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		local g_bsn
 		local g_bsp
 		local g_bsg
@@ -237,9 +237,9 @@ function AddMenuHelpers(menu)
 
 	function menu:addImageLeftSliderButton(caption, hotkey, x, y, callback)
 		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		local g_lslider_n
 		local g_lslider_p
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
@@ -289,9 +289,9 @@ function AddMenuHelpers(menu)
   
 	function menu:addImageRightSliderButton(caption, hotkey, x, y, callback)
 		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		local g_rslider_n
 		local g_rslider_p
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
@@ -475,9 +475,9 @@ function AddMenuHelpers(menu)
 
 	function menu:addImageCheckBox(caption, x, y, callback) -- DinkyDyeAussie's new function
 		local b = ImageCheckBox(caption)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		-- new functions to display checkbox graphics
 		local g_checkbox_off
 		local g_checkbox_off2
@@ -530,9 +530,9 @@ function AddMenuHelpers(menu)
 
 	function menu:addImageRadioButton(caption, group, x, y, callback)
 		local b = ImageRadioButton(caption, group)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 		local g_radio_off
 		local g_radio_off2
 		local g_radio_on

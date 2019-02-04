@@ -218,8 +218,8 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	
-	CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
-	CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
+	CreateCoalMines(1, 12500, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapWidth - 3, CMap.Map.Info.MapHeight / 2, CMap.Map.Info.MapHeight - 3, false)
+	CreateCoalMines(1, 12500, 0, CMap.Map.Info.MapWidth / 2, 0, CMap.Map.Info.MapHeight / 2, false)
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail

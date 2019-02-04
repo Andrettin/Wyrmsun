@@ -349,7 +349,7 @@ function Briefing(quest)
 	local t = GetQuestData(quest, "Briefing")
 	t = "\n\n\n\n\n\n\n\n\n\n" .. t .. "\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	local sw = ScrollingWidget(320, 170 * Video.Height / 480)
-	sw:setBackgroundColor(Color(0,0,0,0))
+	sw:setBackgroundColor(gcn.Color(0,0,0,0))
 	sw:setSpeed(0.28)
 	local l = MultiLineLabel(t)
 	l:setFont(Fonts["large"])

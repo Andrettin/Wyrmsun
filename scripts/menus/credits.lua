@@ -273,7 +273,7 @@ function RunShowCreditsMenu()
 
 	local sw = ScrollingWidget(328, 275)
 	menu:add(sw, offx + 140, offy + 80)
-	sw:setBackgroundColor(Color(0,0,0,0))
+	sw:setBackgroundColor(gcn.Color(0,0,0,0))
 	sw:setActionCallback(function() sw:restart() end)
 	for i,f in ipairs(credits) do
 		sw:add(Label(f), 0, 24 * (i - 1) + 275)

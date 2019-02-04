@@ -561,9 +561,9 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)
 		b:setTooltip(tooltip_string)
 	else
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
+		b:setBaseColor(gcn.Color(0,0,0,0))
+		b:setForegroundColor(gcn.Color(0,0,0,0))
+		b:setBackgroundColor(gcn.Color(0,0,0,0))
 	end
 	return b
 end
