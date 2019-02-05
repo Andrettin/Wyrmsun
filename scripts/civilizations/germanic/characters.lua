@@ -312,29 +312,6 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	}
 })
 
-DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Wodanaz", -- Proto-Germanic name of Odin
-	-- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
-	Gender = "male",
-	Type = "unit-germanic-chieftain", -- chieftain
-	Civilization = "germanic",
-	Faction = "asa-tribe",
-	Trait = "upgrade-wise",
-	HairVariation = "gray-hair",
-	StartDate = -3000,
-	DeathDate = {-2800, 12, 30},
-	Father = "friallaf",
-	Deities = {"odin", "tyr"},
-	HistoricalLocations = {
-		-3000, "earth", "azov",
-		-2900, "earth", "novgorod",
-		-2800, "earth", "kiel"
-	},
-	HistoricalTitles = {
-		"head-of-state", -3000, -2800, "asa-tribe"
-	}
-})
-
 DefineCharacter("frigida", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Frigida", -- "Frígídá"; wife of Vóden; euhemerized version of Frigg; had "second sight"
 	Gender = "female",
