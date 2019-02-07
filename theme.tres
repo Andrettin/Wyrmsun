@@ -1,7 +1,14 @@
-[gd_resource type="Theme" load_steps=3 format=2]
+[gd_resource type="Theme" load_steps=4 format=2]
 
 [ext_resource path="res://dropdown.tres" type="StyleBox" id=1]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 
 [resource]
 
@@ -22,7 +29,7 @@ OptionButton/styles/pressed = ExtResource( 1 )
 PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
 PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
-PopupMenu/colors/font_color_hover = Color( 0.878431, 0.878431, 0.878431, 1 )
+PopupMenu/colors/font_color_hover = Color( 0.956863, 0.878431, 0.12549, 1 )
 PopupMenu/constants/hseparation = 4
 PopupMenu/constants/vseparation = 0
 PopupMenu/fonts/font = null
@@ -31,9 +38,9 @@ PopupMenu/icons/radio_checked = null
 PopupMenu/icons/radio_unchecked = null
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = ExtResource( 1 )
+PopupMenu/styles/hover = SubResource( 1 )
 PopupMenu/styles/panel = ExtResource( 1 )
 PopupMenu/styles/panel_disabled = ExtResource( 1 )
 PopupMenu/styles/separator = null
-_sections_unfolded = [ "OptionButton", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/constants", "PopupMenu/styles", "Resource" ]
+_sections_unfolded = [ "Label/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/icons", "PopupMenu/styles", "Resource" ]
 
