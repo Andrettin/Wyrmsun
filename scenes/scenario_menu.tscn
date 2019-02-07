@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=7]
 [ext_resource path="res://scenes/dropdown.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/scenario_dropdown.gd" type="Script" id=9]
 
 [node name="scenario_menu" type="Control"]
 
@@ -61,5 +62,16 @@ script = ExtResource( 7 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "single_player_game_menu"
+
+[node name="dropdown" parent="menu_area" instance=ExtResource( 8 )]
+
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -120.0
+margin_top = 140.0
+margin_right = 120.0
+margin_bottom = 158.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
 
 
