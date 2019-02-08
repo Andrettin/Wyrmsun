@@ -5,7 +5,7 @@
 [ext_resource path="res://graphics/interface/default/button_large_grayed.png" type="Texture" id=3]
 [ext_resource path="res://scripts/button.gd" type="Script" id=4]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sounds/interface/click.wav" type="AudioStream" id=6]
+[ext_resource path="res://scenes/button_audio_player.tscn" type="PackedScene" id=6]
 
 [node name="large_button" type="TextureButton"]
 
@@ -38,18 +38,14 @@ button_text = ""
 margin_top = 4.0
 margin_bottom = 28.0
 
-[node name="button_audio_player" type="AudioStreamPlayer2D" parent="."]
+[node name="button_audio_player" parent="." instance=ExtResource( 6 )]
 
-position = Vector2( 112, 14 )
-scale = Vector2( 3.475, 0.4 )
-stream = ExtResource( 6 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
-_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+[connection signal="draw" from="." to="." method="check_set_text_display_pressed"]
+
+[connection signal="mouse_entered" from="." to="." method="display_text_hovered"]
+
+[connection signal="mouse_exited" from="." to="." method="display_text_not_hovered"]
+
+[connection signal="pressed" from="." to="button_audio_player" method="play"]
 
 

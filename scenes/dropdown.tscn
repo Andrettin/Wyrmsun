@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/dropdown.gd" type="Script" id=2]
+[ext_resource path="res://scenes/button_audio_player.tscn" type="PackedScene" id=3]
 
 [node name="dropdown" type="OptionButton"]
 
@@ -29,6 +30,15 @@ align = 0
 items = [  ]
 selected = -1
 script = ExtResource( 2 )
-_sections_unfolded = [ "Grow Direction", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Grow Direction", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
+
+[node name="dropdown_audio_player" parent="." instance=ExtResource( 3 )]
+
+position = Vector2( 150, 9 )
+scale = Vector2( 4.7, 0.3 )
+
+[connection signal="item_selected" from="." to="." method="item_selected_sound"]
+
+[connection signal="pressed" from="." to="dropdown_audio_player" method="play"]
 
 

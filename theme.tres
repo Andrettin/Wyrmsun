@@ -1,7 +1,17 @@
-[gd_resource type="Theme" load_steps=4 format=2]
+[gd_resource type="Theme" load_steps=6 format=2]
 
 [ext_resource path="res://dropdown.tres" type="StyleBox" id=1]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=2]
+
+[sub_resource type="LargeTexture" id=2]
+
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
+
+[sub_resource type="LargeTexture" id=3]
+
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -30,12 +40,12 @@ PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
 PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
 PopupMenu/colors/font_color_hover = Color( 0.956863, 0.878431, 0.12549, 1 )
-PopupMenu/constants/hseparation = 4
+PopupMenu/constants/hseparation = 2
 PopupMenu/constants/vseparation = 0
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
-PopupMenu/icons/radio_checked = null
-PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/radio_checked = SubResource( 2 )
+PopupMenu/icons/radio_unchecked = SubResource( 3 )
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
 PopupMenu/styles/hover = SubResource( 1 )

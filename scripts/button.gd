@@ -8,8 +8,6 @@ var text = ""
 var hovered_text = ""
 
 func _ready():
-	self.connect("pressed", self.find_node("button_audio_player"), "play")
-	
 	text = self.button_text
 	var find_pos = text.find(character_highlight_markdown)
 	while (find_pos != -1):
@@ -21,11 +19,6 @@ func _ready():
 	hovered_text = "[center][color=" + highlight_color + "]" + text + "[/color][/center]"
 	text = "[center]" + text + "[/center]"
 	self.find_node("button_text").bbcode_text = text
-	
-	self.connect("draw", self, "check_set_text_display_pressed")
-	
-	self.connect("mouse_entered", self, "display_text_hovered")
-	self.connect("mouse_exited", self, "display_text_not_hovered")
 	
 func check_set_text_display_pressed():
 	if (display_pressed_text == false and self.get_draw_mode() == DRAW_PRESSED):

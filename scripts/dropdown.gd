@@ -1,4 +1,4 @@
 extends OptionButton
 
-func _ready():
-	pass
+func item_selected_sound(var id):
+	self.find_node("dropdown_audio_player").play()

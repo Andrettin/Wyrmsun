@@ -63,13 +63,13 @@ _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme",
 button_text = "~!Previous Menu"
 target_scene = "single_player_game_menu"
 
-[node name="dropdown" parent="menu_area" instance=ExtResource( 8 )]
+[node name="scenario_dropdown" parent="menu_area" instance=ExtResource( 8 )]
 
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -120.0
+margin_left = -135.0
 margin_top = 140.0
-margin_right = 120.0
+margin_right = 135.0
 margin_bottom = 158.0
 script = ExtResource( 9 )
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
