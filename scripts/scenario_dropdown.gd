@@ -1,6 +1,10 @@
 extends "res://scripts/dropdown.gd"
 
+var campaigns = []
+
 func _ready():
-	var campaigns = wyrmgus.wyrmgus.get_campaigns()
+	self.campaigns = wyrmgus.wyrmgus.get_campaigns()
+	
 	for campaign in campaigns:
-		self.add_item(campaign.get_name())
+		var campaign_name = campaign.get_name()
+		self.add_item(campaign_name)
