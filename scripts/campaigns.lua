@@ -25,27 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCampaign("on-the-vanaquisl", {
-	Name = "On the Vanaquisl",
-	Description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands...",
-	Faction = "asa-tribe",
-	StartDate = {-3000, SyncRand(12) + 1, 1},
-	MapTemplates = {
-		"earth", {4588, 834}, {256, 256}
-	}
-})
-
-DefineCampaign("the-first-dwarves", {
-	Name = "The First Dwarves",
-	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
-	Faction = "brising-clan",
-	StartDate = {-3000, SyncRand(12) + 1, 1},
-	MapTemplates = {
-		"nidavellir", {0, 0}, {256, 256},
-		"nidavellir-underground", {0, 0}, {256, 256}
-	}
-})
-
 DefineCampaign("westward-migration", {
 	Name = "Westward Migration",
 	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
