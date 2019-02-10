@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=7]
-[ext_resource path="res://scenes/dropdown.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scripts/scenario_dropdown.gd" type="Script" id=9]
+[ext_resource path="res://scripts/start_scenario_button.gd" type="Script" id=7]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=8]
+[ext_resource path="res://scenes/dropdown.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/scenario_dropdown.gd" type="Script" id=10]
 
 [node name="scenario_menu" type="Control"]
 
@@ -49,6 +50,7 @@ margin_left = 208.0
 margin_top = 428.0
 margin_right = 432.0
 margin_bottom = 456.0
+script = ExtResource( 7 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Start Scenario"
 
@@ -58,12 +60,12 @@ margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "single_player_game_menu"
 
-[node name="scenario_dropdown" parent="menu_area" instance=ExtResource( 8 )]
+[node name="scenario_dropdown" parent="menu_area" instance=ExtResource( 9 )]
 
 anchor_left = 0.5
 anchor_right = 0.5
@@ -71,7 +73,9 @@ margin_left = -135.0
 margin_top = 140.0
 margin_right = 135.0
 margin_bottom = 158.0
-script = ExtResource( 9 )
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
+script = ExtResource( 10 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
+
+[connection signal="item_selected" from="menu_area/scenario_dropdown" to="menu_area/scenario_dropdown" method="item_selected_changed"]
 
 

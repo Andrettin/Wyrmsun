@@ -8,6 +8,8 @@ var text = ""
 var hovered_text = ""
 
 func _ready():
+	self.connect("draw", self, "check_set_text_display_pressed")
+	
 	text = self.button_text
 	var find_pos = text.find(character_highlight_markdown)
 	while (find_pos != -1):

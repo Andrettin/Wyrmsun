@@ -40,8 +40,6 @@ margin_bottom = 28.0
 
 [node name="button_audio_player" parent="." instance=ExtResource( 6 )]
 
-[connection signal="draw" from="." to="." method="check_set_text_display_pressed"]
-
 [connection signal="mouse_entered" from="." to="." method="display_text_hovered"]
 
 [connection signal="mouse_exited" from="." to="." method="display_text_not_hovered"]

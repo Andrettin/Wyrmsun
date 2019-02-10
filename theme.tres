@@ -3,17 +3,17 @@
 [ext_resource path="res://dropdown.tres" type="StyleBox" id=1]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=2]
 
+[sub_resource type="LargeTexture" id=1]
+
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
+
 [sub_resource type="LargeTexture" id=2]
 
 flags = 0
 _data = [ Vector2( 0, 0 ) ]
 
-[sub_resource type="LargeTexture" id=3]
-
-flags = 0
-_data = [ Vector2( 0, 0 ) ]
-
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="StyleBoxEmpty" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -44,11 +44,11 @@ PopupMenu/constants/hseparation = 2
 PopupMenu/constants/vseparation = 0
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
-PopupMenu/icons/radio_checked = SubResource( 2 )
-PopupMenu/icons/radio_unchecked = SubResource( 3 )
+PopupMenu/icons/radio_checked = SubResource( 1 )
+PopupMenu/icons/radio_unchecked = SubResource( 2 )
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = SubResource( 1 )
+PopupMenu/styles/hover = SubResource( 3 )
 PopupMenu/styles/panel = ExtResource( 1 )
 PopupMenu/styles/panel_disabled = ExtResource( 1 )
 PopupMenu/styles/separator = null
