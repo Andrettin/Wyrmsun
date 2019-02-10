@@ -21,3 +21,7 @@ func item_selected_changed(var id):
 	var selected_campaign_ident = selected_campaign.get_ident()
 	wyrmgus.set_current_campaign(selected_campaign_ident)
 	
+	var description_text = "Description: " + selected_campaign.get_description()
+	var description_label = self.get_parent().find_node("scenario_description_label")
+	description_label.bbcode_text = description_text
+	

@@ -38,7 +38,7 @@ DefineCampaign("westward-migration", {
 
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
-	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
+	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and find a new home.",
 	Faction = "goldhoof-clan",
 	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {

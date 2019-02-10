@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=8]
 [ext_resource path="res://scenes/dropdown.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/scenario_dropdown.gd" type="Script" id=10]
+[ext_resource path="res://scenes/radio_button.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/no_randomness_radio_button.gd" type="Script" id=12]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=13]
 
 [node name="scenario_menu" type="Control"]
 
@@ -75,6 +78,25 @@ margin_right = 135.0
 margin_bottom = 158.0
 script = ExtResource( 10 )
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
+
+[node name="no_randomness_radio_button" parent="menu_area" instance=ExtResource( 11 )]
+
+margin_left = 480.0
+margin_top = 283.0
+margin_right = 621.0
+margin_bottom = 302.0
+text = "No Randomness"
+script = ExtResource( 12 )
+
+[node name="scenario_description_label" parent="menu_area" instance=ExtResource( 5 )]
+
+margin_left = 32.0
+margin_top = 176.0
+margin_right = 608.0
+margin_bottom = 392.0
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_text = "Scenario Description"
+text = "Scenario Description"
 
 [connection signal="item_selected" from="menu_area/scenario_dropdown" to="menu_area/scenario_dropdown" method="item_selected_changed"]
 

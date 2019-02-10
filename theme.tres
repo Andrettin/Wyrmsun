@@ -1,7 +1,44 @@
-[gd_resource type="Theme" load_steps=6 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
-[ext_resource path="res://dropdown.tres" type="StyleBox" id=1]
-[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=2]
+[ext_resource path="res://graphics/interface/dwarven/radio_normal_selected.png" type="Texture" id=1]
+[ext_resource path="res://graphics/interface/dwarven/radio_normal_unselected.png" type="Texture" id=2]
+[ext_resource path="res://dropdown.tres" type="StyleBox" id=3]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 
 [sub_resource type="LargeTexture" id=1]
 
@@ -22,7 +59,23 @@ content_margin_bottom = -1.0
 
 [resource]
 
-default_font = ExtResource( 2 )
+default_font = ExtResource( 4 )
+CheckBox/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = ExtResource( 1 )
+CheckBox/icons/radio_checked = ExtResource( 1 )
+CheckBox/icons/radio_unchecked = ExtResource( 2 )
+CheckBox/icons/unchecked = ExtResource( 2 )
+CheckBox/styles/disabled = SubResource( 4 )
+CheckBox/styles/focus = SubResource( 5 )
+CheckBox/styles/hover = SubResource( 6 )
+CheckBox/styles/normal = SubResource( 7 )
+CheckBox/styles/pressed = SubResource( 8 )
 OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
@@ -31,11 +84,11 @@ OptionButton/constants/arrow_margin = 2
 OptionButton/constants/hseparation = 2
 OptionButton/fonts/font = null
 OptionButton/icons/arrow = null
-OptionButton/styles/disabled = ExtResource( 1 )
-OptionButton/styles/focus = ExtResource( 1 )
-OptionButton/styles/hover = ExtResource( 1 )
-OptionButton/styles/normal = ExtResource( 1 )
-OptionButton/styles/pressed = ExtResource( 1 )
+OptionButton/styles/disabled = ExtResource( 3 )
+OptionButton/styles/focus = ExtResource( 3 )
+OptionButton/styles/hover = ExtResource( 3 )
+OptionButton/styles/normal = ExtResource( 3 )
+OptionButton/styles/pressed = ExtResource( 3 )
 PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
 PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
@@ -49,8 +102,8 @@ PopupMenu/icons/radio_unchecked = SubResource( 2 )
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
 PopupMenu/styles/hover = SubResource( 3 )
-PopupMenu/styles/panel = ExtResource( 1 )
-PopupMenu/styles/panel_disabled = ExtResource( 1 )
+PopupMenu/styles/panel = ExtResource( 3 )
+PopupMenu/styles/panel_disabled = ExtResource( 3 )
 PopupMenu/styles/separator = null
-_sections_unfolded = [ "Label/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/icons", "PopupMenu/styles", "Resource" ]
+_sections_unfolded = [ "CheckBox", "CheckBox/icons", "CheckBox/styles", "CheckButton", "CheckButton/styles", "Label/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/icons", "PopupMenu/styles", "Resource" ]
 
