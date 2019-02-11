@@ -1434,12 +1434,46 @@ DefineUnitType("unit-cavern-entrance", {
 	Building = true,
 	Variations = {
 		{
-			"variation-id", "gray"
+			"variation-id", "gray",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "gray-snow-winter",
+			"file", "neutral/buildings/cavern_entrance_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "gray-snow",
+			"file", "neutral/buildings/cavern_entrance_snow.png",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "brown",
 			"file", "neutral/buildings/cavern_entrance_brown.png",
-			"icon", "icon-cavern-entrance-brown"
+			"icon", "icon-cavern-entrance-brown",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "brown-snow-winter",
+			"file", "neutral/buildings/cavern_entrance_brown_snow.png",
+			"icon", "icon-cavern-entrance-brown",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brown-snow",
+			"file", "neutral/buildings/cavern_entrance_brown_snow.png",
+			"icon", "icon-cavern-entrance-brown",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
