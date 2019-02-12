@@ -713,7 +713,28 @@ DefineUnitType("unit-copper-deposit", {
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-copper-deposit",
-	GivesResource = "copper"
+	GivesResource = "copper",
+	Variations = {
+		{
+			"variation-id", "copper-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "copper-deposit-snow-winter",
+			"file", "neutral/buildings/copper_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "copper-deposit-snow",
+			"file", "neutral/buildings/copper_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-copper-mine", {
@@ -732,7 +753,28 @@ DefineUnitType("unit-copper-mine", {
 	ButtonPos = 10,
 	ButtonKey = "c",
 	ButtonHint = "Build ~!Copper Mine",
-	BuildingRulesString = "Must be built on top of a Copper Deposit"
+	BuildingRulesString = "Must be built on top of a Copper Deposit",
+	Variations = {
+		{
+			"variation-id", "copper-mine",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "copper-mine-snow-winter",
+			"file", "neutral/buildings/copper_mine_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "copper-mine-snow",
+			"file", "neutral/buildings/copper_mine_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-iron-deposit", {
@@ -794,9 +836,30 @@ DefineUnitType("unit-coal-deposit", {
 	Parent = "unit-template-deposit",
 	Description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/coal_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-coal-deposit",
-	GivesResource = "coal"
+	GivesResource = "coal",
+	Variations = {
+		{
+			"variation-id", "coal-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "coal-deposit-snow-winter",
+			"file", "neutral/buildings/coal_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "coal-deposit-snow",
+			"file", "neutral/buildings/coal_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-coal-mine", {
@@ -811,7 +874,28 @@ DefineUnitType("unit-coal-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-coal-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "coal",
-	BuildingRulesString = "Must be built on top of a Coal Deposit"
+	BuildingRulesString = "Must be built on top of a Coal Deposit",
+	Variations = {
+		{
+			"variation-id", "coal-mine",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "coal-mine-snow-winter",
+			"file", "neutral/buildings/coal_mine_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "coal-mine-snow",
+			"file", "neutral/buildings/coal_mine_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-diamond-deposit", {
