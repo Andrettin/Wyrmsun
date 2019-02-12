@@ -1543,6 +1543,27 @@ DefineUnitType("unit-yale-cave", {
 	Icon = "icon-yale-cave",
 	GivesResource = "leather",
 	SpawnUnits = {"unit-yale"},
+	Variations = {
+		{
+			"variation-id", "yale-cave",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "yale-cave-snow-winter",
+			"file", "neutral/buildings/yale_cave_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "yale-cave-snow",
+			"file", "neutral/buildings/yale_cave_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"selected", "yale-pen-selected"
 	}
@@ -1565,7 +1586,25 @@ DefineUnitType("unit-yale-hunting-lodge", {
 	Variations = {
 		{
 			"variation-id", "yale-hunting-lodge",
-			"upgrade-forbidden", "upgrade-dwarven-civilization"
+			"upgrade-forbidden", "upgrade-dwarven-civilization",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "yale-hunting-lodge-snow-winter",
+			"file", "neutral/buildings/yale_hunting_lodge_snow.png",
+			"upgrade-forbidden", "upgrade-dwarven-civilization",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "yale-hunting-lodge-snow",
+			"file", "neutral/buildings/yale_hunting_lodge_snow.png",
+			"upgrade-forbidden", "upgrade-dwarven-civilization",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "dwarven-yale-hunting-lodge",
