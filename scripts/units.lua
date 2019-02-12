@@ -741,7 +741,28 @@ DefineUnitType("unit-silver-deposit", {
 	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-silver-deposit",
-	GivesResource = "silver"
+	GivesResource = "silver",
+	Variations = {
+		{
+			"variation-id", "silver-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "silver-deposit-snow-winter",
+			"file", "neutral/buildings/silver_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "silver-deposit-snow",
+			"file", "neutral/buildings/silver_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-silver-mine", {
@@ -760,7 +781,28 @@ DefineUnitType("unit-silver-mine", {
 	ButtonPos = 11,
 	ButtonKey = "v",
 	ButtonHint = "Build Sil~!ver Mine",
-	BuildingRulesString = "Must be built on top of a Silver Deposit"
+	BuildingRulesString = "Must be built on top of a Silver Deposit",
+	Variations = {
+		{
+			"variation-id", "silver-mine",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "silver-mine-snow-winter",
+			"file", "neutral/buildings/silver_mine_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "silver-mine-snow",
+			"file", "neutral/buildings/silver_mine_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-copper-deposit", {
@@ -910,7 +952,28 @@ DefineUnitType("unit-mithril-deposit", {
 	Image = {"file", "neutral/buildings/mithril_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/mithril_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-mithril-deposit",
-	GivesResource = "mithril"
+	GivesResource = "mithril",
+	Variations = {
+		{
+			"variation-id", "mithril-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "mithril-deposit-snow-winter",
+			"file", "neutral/buildings/mithril_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "mithril-deposit-snow",
+			"file", "neutral/buildings/mithril_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-mithril-mine", {
@@ -927,7 +990,28 @@ DefineUnitType("unit-mithril-mine", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-mithril-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "mithril",
 	BuildingRulesString = "Must be built on top of a Mithril Deposit",
-	RequirementsString = "Ironworking"
+	RequirementsString = "Ironworking",
+	Variations = {
+		{
+			"variation-id", "mithril-mine",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "mithril-mine-snow-winter",
+			"file", "neutral/buildings/mithril_mine_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "mithril-mine-snow",
+			"file", "neutral/buildings/mithril_mine_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-coal-deposit", {
