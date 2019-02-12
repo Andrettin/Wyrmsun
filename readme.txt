@@ -69,6 +69,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Teutonic Mason's Shop now correctly uses its active animations.
 - The Germanic Stables graphics now use semi-transparent shadows, as the other buildings do.
 - Teuton buildings now have snowy variations.
+- Copper, Silver, Gold, Iron, Mithril and Coal Deposits and Mines now have snowy variations.
+- The Mercenary Camp, Settlement Site, Yale Cave and Yale Hunting Lodge buildings now have snowy variations.
 
 * Items
 - Bows now have specific graphics for when they are on the ground.
