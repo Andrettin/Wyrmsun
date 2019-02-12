@@ -575,6 +575,27 @@ DefineUnitType("unit-settlement-site", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Indestructible = true,
+	Variations = {
+		{
+			"variation-id", "settlement-site",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "settlement-site-snow-winter",
+			"file", "neutral/buildings/settlement_site_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "settlement-site-snow",
+			"file", "neutral/buildings/settlement_site_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -5449,6 +5470,27 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-troll-warrior", 2
 	},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Variations = {
+		{
+			"variation-id", "mercenary-camp",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "mercenary-camp-snow-winter",
+			"file", "neutral/buildings/mercenary_camp_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "mercenary-camp-snow",
+			"file", "neutral/buildings/mercenary_camp_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "barracks-acknowledge",
