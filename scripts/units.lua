@@ -642,7 +642,28 @@ DefineUnitType("unit-gold-deposit", {
 	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-gold-deposit",
-	GivesResource = "gold"
+	GivesResource = "gold",
+	Variations = {
+		{
+			"variation-id", "gold-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "gold-deposit-snow-winter",
+			"file", "neutral/buildings/gold_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "gold-deposit-snow",
+			"file", "neutral/buildings/gold_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-gold-mine", {
@@ -665,14 +686,50 @@ DefineUnitType("unit-gold-mine", {
 	BuildingRulesString = "Must be built on top of a Gold Deposit",
 	Variations = {
 		{
-			"variation-id", "default",
-			"upgrade-forbidden", "upgrade-engineering"
+			"variation-id", "gold-mine",
+			"upgrade-forbidden", "upgrade-engineering",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
 		},
 		{
-			"variation-id", "rail",
+			"variation-id", "gold-mine-snow-winter",
+			"file", "neutral/buildings/gold_mine_snow.png",
+			"upgrade-forbidden", "upgrade-engineering",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "gold-mine-snow",
+			"file", "neutral/buildings/gold_mine_snow.png",
+			"upgrade-forbidden", "upgrade-engineering",
+			"terrain", "snow"
+		},
+		{
+			"variation-id", "rail-gold-mine",
 			"file", "neutral/buildings/gold_mine_rail.png",
 			"light-file", "neutral/buildings/gold_mine_rail_light.png",
-			"upgrade-required", "upgrade-engineering"
+			"upgrade-required", "upgrade-engineering",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "rail-gold-mine-snow-winter",
+			"file", "neutral/buildings/gold_mine_rail_snow.png",
+			"upgrade-required", "upgrade-engineering",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "rail-gold-mine-snow",
+			"file", "neutral/buildings/gold_mine_rail_snow.png",
+			"upgrade-required", "upgrade-engineering",
+			"terrain", "snow"
 		}
 	}
 } )
@@ -784,7 +841,28 @@ DefineUnitType("unit-iron-deposit", {
 	Image = {"file", "neutral/buildings/iron_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/iron_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-iron-deposit",
-	GivesResource = "iron"
+	GivesResource = "iron",
+	Variations = {
+		{
+			"variation-id", "iron-deposit",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "iron-deposit-snow-winter",
+			"file", "neutral/buildings/iron_deposit_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "iron-deposit-snow",
+			"file", "neutral/buildings/iron_deposit_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-iron-mine", {
@@ -801,7 +879,28 @@ DefineUnitType("unit-iron-mine", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-iron-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "iron",
 	BuildingRulesString = "Must be built on top of a Iron Deposit",
-	RequirementsString = "Ironworking"
+	RequirementsString = "Ironworking",
+	Variations = {
+		{
+			"variation-id", "iron-mine",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "iron-mine-snow-winter",
+			"file", "neutral/buildings/iron_mine_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "iron-mine-snow",
+			"file", "neutral/buildings/iron_mine_snow.png",
+			"terrain", "snow"
+		}
+	}
 } )
 
 DefineUnitType("unit-mithril-deposit", {
