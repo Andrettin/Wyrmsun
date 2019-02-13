@@ -5,6 +5,27 @@
 [ext_resource path="res://dropdown.tres" type="StyleBox" id=3]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=4]
 
+[sub_resource type="StyleBoxEmpty" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
 [sub_resource type="StyleBoxEmpty" id=4]
 
 content_margin_left = -1.0
@@ -19,38 +40,17 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="LargeTexture" id=6]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="LargeTexture" id=7]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
 
 [sub_resource type="StyleBoxEmpty" id=8]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
-[sub_resource type="LargeTexture" id=1]
-
-flags = 0
-_data = [ Vector2( 0, 0 ) ]
-
-[sub_resource type="LargeTexture" id=2]
-
-flags = 0
-_data = [ Vector2( 0, 0 ) ]
-
-[sub_resource type="StyleBoxEmpty" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -71,11 +71,11 @@ CheckBox/icons/checked = ExtResource( 1 )
 CheckBox/icons/radio_checked = ExtResource( 1 )
 CheckBox/icons/radio_unchecked = ExtResource( 2 )
 CheckBox/icons/unchecked = ExtResource( 2 )
-CheckBox/styles/disabled = SubResource( 4 )
-CheckBox/styles/focus = SubResource( 5 )
-CheckBox/styles/hover = SubResource( 6 )
-CheckBox/styles/normal = SubResource( 7 )
-CheckBox/styles/pressed = SubResource( 8 )
+CheckBox/styles/disabled = SubResource( 1 )
+CheckBox/styles/focus = SubResource( 2 )
+CheckBox/styles/hover = SubResource( 3 )
+CheckBox/styles/normal = SubResource( 4 )
+CheckBox/styles/pressed = SubResource( 5 )
 OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
@@ -97,11 +97,11 @@ PopupMenu/constants/hseparation = 2
 PopupMenu/constants/vseparation = 0
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
-PopupMenu/icons/radio_checked = SubResource( 1 )
-PopupMenu/icons/radio_unchecked = SubResource( 2 )
+PopupMenu/icons/radio_checked = SubResource( 6 )
+PopupMenu/icons/radio_unchecked = SubResource( 7 )
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = SubResource( 3 )
+PopupMenu/styles/hover = SubResource( 8 )
 PopupMenu/styles/panel = ExtResource( 3 )
 PopupMenu/styles/panel_disabled = ExtResource( 3 )
 PopupMenu/styles/separator = null
