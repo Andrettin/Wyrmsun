@@ -40,7 +40,7 @@ if not (ui_loaded_first_time) then
 		if (CanAccessFile(background_image)) then -- check if can access the background image
 			return background_image
 		else -- substitute the image for another, if it isn't present
-			return "graphics/dwarf/ui/the_first_dwarves.png"
+			return "graphics/backgrounds/the_first_dwarves.png"
 		end
 		
 		return 

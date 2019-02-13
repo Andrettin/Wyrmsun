@@ -62,11 +62,11 @@ function panel(n)
 		}
 	else
 		panels = {
-			"dwarf/ui/panel_1.png",
-			"dwarf/ui/panel_2.png",
-			"dwarf/ui/panel_3.png",
-			"dwarf/ui/panel_4.png",
-			"dwarf/ui/panel_5.png"
+			"interface/dwarven/panel_1.png",
+			"interface/dwarven/panel_2.png",
+			"interface/dwarven/panel_3.png",
+			"interface/dwarven/panel_4.png",
+			"interface/dwarven/panel_5.png"
 		}
 	end
 	return panels[n]
