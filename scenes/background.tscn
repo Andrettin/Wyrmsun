@@ -4,10 +4,8 @@
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -16,6 +14,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 expand = true
 stretch_mode = 7
-_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
 
