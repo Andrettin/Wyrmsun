@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/statusline_1366.png-2b2d9595736c1fdfedfce520d9bbb589.stex"
+path="res://.import/statusline_1366.png-8e37a3b66822f41f30c2935756398b97.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/statusline_1366.png"
-dest_files=[ "res://.import/statusline_1366.png-2b2d9595736c1fdfedfce520d9bbb589.stex" ]
+source_file="res://graphics/interface/dwarven/statusline_1366.png"
+dest_files=[ "res://.import/statusline_1366.png-8e37a3b66822f41f30c2935756398b97.stex" ]
 
 [params]
 

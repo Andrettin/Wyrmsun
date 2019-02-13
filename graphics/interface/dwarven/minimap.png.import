@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minimap.png-2542d0448769e65bff8316382b512d54.stex"
+path="res://.import/minimap.png-a091f24809b38922022fce3c80e60ba4.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/minimap.png"
-dest_files=[ "res://.import/minimap.png-2542d0448769e65bff8316382b512d54.stex" ]
+source_file="res://graphics/interface/dwarven/minimap.png"
+dest_files=[ "res://.import/minimap.png-a091f24809b38922022fce3c80e60ba4.stex" ]
 
 [params]
 

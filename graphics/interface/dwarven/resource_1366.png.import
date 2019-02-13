@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/resource_1366.png-dd78e5c4cc998030ed5a8122b1923f48.stex"
+path="res://.import/resource_1366.png-a76a9f839fa11b30492833fecb4d50f6.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/resource_1366.png"
-dest_files=[ "res://.import/resource_1366.png-dd78e5c4cc998030ed5a8122b1923f48.stex" ]
+source_file="res://graphics/interface/dwarven/resource_1366.png"
+dest_files=[ "res://.import/resource_1366.png-a76a9f839fa11b30492833fecb4d50f6.stex" ]
 
 [params]
 

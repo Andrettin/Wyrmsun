@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menubutton.png-09af0da94ba5d107a4efa4f8a9d2e0e4.stex"
+path="res://.import/menubutton.png-34af25c194be92859992ec9645b9d1da.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/menubutton.png"
-dest_files=[ "res://.import/menubutton.png-09af0da94ba5d107a4efa4f8a9d2e0e4.stex" ]
+source_file="res://graphics/interface/dwarven/menubutton.png"
+dest_files=[ "res://.import/menubutton.png-34af25c194be92859992ec9645b9d1da.stex" ]
 
 [params]
 

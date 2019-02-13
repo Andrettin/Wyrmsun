@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/the_first_dwarves.png-a6cf3bf85079a97587dcefff403ff343.stex"
+path="res://.import/the_first_dwarves.png-3749e90a3e2588afd2cd0305eb2be644.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/the_first_dwarves.png"
-dest_files=[ "res://.import/the_first_dwarves.png-a6cf3bf85079a97587dcefff403ff343.stex" ]
+source_file="res://graphics/backgrounds/the_first_dwarves.png"
+dest_files=[ "res://.import/the_first_dwarves.png-3749e90a3e2588afd2cd0305eb2be644.stex" ]
 
 [params]
 

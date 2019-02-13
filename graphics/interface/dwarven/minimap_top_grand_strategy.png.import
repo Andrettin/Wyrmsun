@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minimap_top_grand_strategy.png-1c2d1d324021037ec3f397fbf5b10d61.stex"
+path="res://.import/minimap_top_grand_strategy.png-9b447d2d9e5b007b2c6f433fd6aa5ac6.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/minimap_top_grand_strategy.png"
-dest_files=[ "res://.import/minimap_top_grand_strategy.png-1c2d1d324021037ec3f397fbf5b10d61.stex" ]
+source_file="res://graphics/interface/dwarven/minimap_top_grand_strategy.png"
+dest_files=[ "res://.import/minimap_top_grand_strategy.png-9b447d2d9e5b007b2c6f433fd6aa5ac6.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buttonpanel_1200.png-44279b6c7952eb6f6af1f6cfbdc2ea5e.stex"
+path="res://.import/buttonpanel_1200.png-0d457ff5bab70408a018b9361dc593d8.stex"
 
 [deps]
 
-source_file="res://graphics/dwarf/ui/buttonpanel_1200.png"
-dest_files=[ "res://.import/buttonpanel_1200.png-44279b6c7952eb6f6af1f6cfbdc2ea5e.stex" ]
+source_file="res://graphics/interface/dwarven/buttonpanel_1200.png"
+dest_files=[ "res://.import/buttonpanel_1200.png-0d457ff5bab70408a018b9361dc593d8.stex" ]
 
 [params]
 
