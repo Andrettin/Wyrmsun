@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Copper, Silver, Gold, Iron, Mithril and Coal Deposits and Mines now have snowy variations.
 - The Mercenary Camp, Settlement Site, Yale Cave and Yale Hunting Lodge buildings now have snowy variations.
 
+* Editor
+- Fixed crash which occurred when creating new cave and dungeon maps in the editor.
+
 * Items
 - Bows now have specific graphics for when they are on the ground.
 
