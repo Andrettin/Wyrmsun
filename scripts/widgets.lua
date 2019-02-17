@@ -75,13 +75,13 @@ DefineButtonStyle("main-germanic", {
 	TextAlign = "Center",
 	TextPos = {50, 0},
 	Default = {
-		File = "germanic/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/germanic/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "germanic/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/germanic/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51, 1},
 	},
@@ -95,13 +95,13 @@ DefineButtonStyle("network-germanic", {
 	TextAlign = "Center",
 	TextPos = {40, 4},
 	Default = {
-		File = "germanic/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+		File = "interface/germanic/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "germanic/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		File = "interface/germanic/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {42, 6},
 	},
@@ -221,13 +221,13 @@ DefineButtonStyle("world-earth", {
 	TextAlign = "Center",
 	TextPos = {10, 0},
 	Default = {
-		File = "germanic/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+		File = "interface/germanic/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "germanic/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+		File = "interface/germanic/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
 	}
 })
 
