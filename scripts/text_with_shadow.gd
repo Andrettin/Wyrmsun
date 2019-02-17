@@ -12,3 +12,5 @@ func _set(property, value):
 		text_shadow = text_shadow.replace("[color=#f4e020]", "")
 		text_shadow = text_shadow.replace("[/color]", "")
 		self.find_node("text_shadow").bbcode_text = text_shadow
+	elif (property == "text"):
+		self.find_node("text_shadow").text = value

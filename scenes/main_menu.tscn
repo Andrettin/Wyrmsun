@@ -128,7 +128,9 @@ margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
+script = ExtResource( 8 )
 button_text = "Cred~!its"
+target_scene = "credits_menu"
 
 [node name="exit_button" parent="menu_area" instance=ExtResource( 7 )]
 
