@@ -44,7 +44,7 @@ wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
 function panel(n)
 	local panels = {}
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 		panels = {
 			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_1.png",
 			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_2.png",
@@ -59,6 +59,14 @@ function panel(n)
 			"germanic/ui/panel_3.png",
 			"germanic/ui/panel_4.png",
 			"germanic/ui/panel_5.png"
+		}
+	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+		panels = {
+			"interface/dwarven/panel_1.png",
+			"interface/dwarven/panel_2.png",
+			"interface/dwarven/panel_3.png",
+			"interface/dwarven/panel_4.png",
+			"interface/dwarven/panel_5.png"
 		}
 	else
 		panels = {
