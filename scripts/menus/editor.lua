@@ -433,11 +433,11 @@ function RunEditorPlayerProperties()
 		player_properties[i]["Faction"] = GetPlayerData(i-1, "Faction")
 		player_properties[i]["AI"] = 0
 		for j = 1,table.getn(ais) do
-			if (ais[j] == Players[i-1].AiName) then player_properties[i].AI = j-1 end
+			if (ais[j] == CPlayer:GetPlayer(i-1).AiName) then player_properties[i].AI = j-1 end
 		end
-		player_properties[i]["Copper"] = Players[i-1].Resources[1]
-		player_properties[i]["Lumber"] = Players[i-1].Resources[2]
-		player_properties[i]["Stone"] = Players[i-1].Resources[5]
+		player_properties[i]["Copper"] = CPlayer:GetPlayer(i-1).Resources[1]
+		player_properties[i]["Lumber"] = CPlayer:GetPlayer(i-1).Resources[2]
+		player_properties[i]["Stone"] = CPlayer:GetPlayer(i-1).Resources[5]
 		table.insert(player_list, "Player " .. i)
 	end
 	
@@ -548,12 +548,12 @@ function RunEditorPlayerProperties()
 			for i = 0,(PlayerMax - 2) do
 				if (i < table.getn(player_properties)) then
 					Map.Info.PlayerType[i] = player_properties[i + 1].Type + 2
-					Players[i].Race = GetCivilizationID(player_properties[i + 1].Civilization)
+					CPlayer:GetPlayer(i).Race = GetCivilizationID(player_properties[i + 1].Civilization)
 					SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
-					Players[i].AiName = ais[player_properties[i + 1].AI + 1]
-					Players[i].Resources[1] = player_properties[i + 1].Copper
-					Players[i].Resources[2] = player_properties[i + 1].Lumber
-					Players[i].Resources[5] = player_properties[i + 1].Stone
+					CPlayer:GetPlayer(i).AiName = ais[player_properties[i + 1].AI + 1]
+					CPlayer:GetPlayer(i).Resources[1] = player_properties[i + 1].Copper
+					CPlayer:GetPlayer(i).Resources[2] = player_properties[i + 1].Lumber
+					CPlayer:GetPlayer(i).Resources[5] = player_properties[i + 1].Stone
 				else
 					break
 				end

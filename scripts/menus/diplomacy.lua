@@ -14,10 +14,10 @@ function RunDiplomacyMenu()
 	local j = 0
 
 	for i=0,(PlayerMax - 2) do
-		if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and CPlayer:GetThisPlayer().Index ~= i and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
+		if (CPlayer:GetPlayer(i).Type ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and CPlayer:GetThisPlayer().Index ~= i and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
 			j = j + 1
 
-			local l = Label(_(Players[i].Name))
+			local l = Label(_(CPlayer:GetPlayer(i).Name))
 			l:setFont(Fonts["game"])
 			l:adjustSize()
 			menu:add(l, 16, (18 * j) + 26)
@@ -34,7 +34,7 @@ function RunDiplomacyMenu()
 					enemycb:setMarked(false)
 				end
 			end)
-			alliedcb:setMarked(CPlayer:GetThisPlayer():IsAllied(Players[i]))
+			alliedcb:setMarked(CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)))
 			allied[j] = alliedcb
 			allied[j].index = i
 
@@ -49,7 +49,7 @@ function RunDiplomacyMenu()
 
 			sharedvisioncb = menu:addImageCheckBox("", 276, (18 * j) + 23,
 			function() end)
-			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():IsSharedVision(Players[i]))
+			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)))
 			sharedvision[j] = sharedvisioncb
 		end
 	end
@@ -61,7 +61,7 @@ function RunDiplomacyMenu()
 
 			-- allies
 			if (allied[j]:isMarked() and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(Players[i]) == false or
+				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
 					CPlayer:GetThisPlayer():IsEnemy(i)) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "allied", i)
 				end
@@ -69,12 +69,12 @@ function RunDiplomacyMenu()
 
 			-- enemies
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(Players[i]) or
+				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
 					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "enemy", i)
-					if (Players[i].Type == PlayerComputer and Players[i]:IsEnemy(GetThisPlayer()) == false) then
+					if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
 						SetDiplomacy(i, "enemy", CPlayer:GetThisPlayer().Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
-						if (Players[i].Type == PlayerComputer and Players[i]:IsSharedVision(CPlayer:GetThisPlayer())) then
+						if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsSharedVision(CPlayer:GetThisPlayer())) then
 							SetSharedVision(i, false, CPlayer:GetThisPlayer().Index)
 						end
 					end
@@ -83,7 +83,7 @@ function RunDiplomacyMenu()
 
 			-- neutral
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(Players[i]) or
+				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
 					CPlayer:GetThisPlayer():IsEnemy(i)) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "neutral", i)
 				end
@@ -91,7 +91,7 @@ function RunDiplomacyMenu()
 
 			-- crazy
 			if (allied[j]:isMarked() and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(Players[i]) == false or
+				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
 					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "crazy", i)
 				end
@@ -99,11 +99,11 @@ function RunDiplomacyMenu()
 
 			-- shared vision
 			if (sharedvision[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsSharedVision(Players[i]) == false) then
+				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)) == false) then
 					SetSharedVision(CPlayer:GetThisPlayer().Index, true, i)
 				end
 			else
-				if (CPlayer:GetThisPlayer():IsSharedVision(Players[i])) then
+				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i))) then
 					SetSharedVision(CPlayer:GetThisPlayer().Index, false, i)
 				end
 			end

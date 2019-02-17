@@ -74,7 +74,7 @@ DefineQuest("the-sack-of-iuvavum", {
 	Conditions = function(s)
 		local rome_player = GetFactionPlayer("rome")
 		if (
-			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
+			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and CPlayer:GetPlayer(trigger_player):IsEnemy(CPlayer:GetPlayer(rome_player))
 			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0)
 		) then
 			return true
@@ -98,7 +98,7 @@ DefineQuest("the-razing-of-opitergium", {
 	Conditions = function(s)
 		local rome_player = GetFactionPlayer("rome")
 		if (
-			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and Players[trigger_player]:IsEnemy(Players[rome_player])
+			GetPlayerData(trigger_player, "RaceName") == "suebi" and rome_player ~= nil and CPlayer:GetPlayer(trigger_player):IsEnemy(CPlayer:GetPlayer(rome_player))
 			and (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0 or GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) > 0)
 		) then
 			return true

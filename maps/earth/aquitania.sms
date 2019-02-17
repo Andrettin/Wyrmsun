@@ -93,11 +93,11 @@ if (LoadedGame == false) then
 
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 		end
 	end
 

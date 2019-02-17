@@ -45,7 +45,7 @@ local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-t
 
 if (LoadedGame == false) then
 	-- create raft in the nearest coast tile to the Bavarian settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[0].StartPos.x, Players[0].StartPos.y)
+	local nearest_coast = FindNearestTerrainFlagTile("coast", CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y)
 	if (nearest_coast ~= nil) then
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 	end

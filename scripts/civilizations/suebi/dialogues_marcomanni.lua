@@ -60,7 +60,7 @@ DefineDialogue("aquileia-destroyed", {
 						SetDiplomacy(trigger_player, "neutral", rome_player)
 						SetDiplomacy(rome_player, "neutral", trigger_player)
 						for i=0,(PlayerMax - 2) do
-							if (Players[i]:IsAllied(Players[trigger_player])) then
+							if (CPlayer:GetPlayer(i):IsAllied(CPlayer:GetPlayer(trigger_player))) then
 								SetDiplomacy(rome_player, "neutral", i)
 								SetDiplomacy(i, "neutral", rome_player)
 							end

@@ -29,6 +29,7 @@ DefineCivilization("neutral", {
 	Display = "Neutral",
 	Visible = false,
 	Playable = false,
+	Interface = "dwarven",
 	Adjective = "Neutral",
 	DefaultColor = "gray",
 	ButtonIcons = {
@@ -671,6 +672,7 @@ DefineCivilization("dwarf", {
 	Visible = true,
 	Species = "dwarf",
 	ParentCivilization = "neutral",
+	Interface = "dwarven",
 	Language = "dwarven",
 	Adjective = "Dwarven",
 	DefaultColor = "red",
@@ -1172,10 +1174,10 @@ DefineCivilization("elf", {
 		"return-goods", "icon-germanic-return-goods"
 	},
 	UIFillers = {
-		"germanic/ui/filler_bottom.png", 380, -181,
-		"germanic/ui/resource.png", 0, 0,
-		"germanic/ui/buttonpanel.png", -256, -200,
-		"germanic/ui/infopanel.png", 0, -200
+		"interface/germanic/filler_bottom.png", 380, -181,
+		"interface/germanic/resource.png", 0, 0,
+		"interface/germanic/buttonpanel.png", -256, -200,
+		"interface/germanic/infopanel.png", 0, -200
 	},
 	Description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare.",
 	Background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore.",
@@ -1769,6 +1771,7 @@ DefineCivilization("germanic", {
 	Visible = true,
 	Species = "human",
 	ParentCivilization = "neutral",
+	Interface = "germanic",
 	Language = "proto-germanic",
 	Adjective = "Germanic",
 	DefaultColor = "orange",
@@ -1783,10 +1786,10 @@ DefineCivilization("germanic", {
 		"return-goods", "icon-germanic-return-goods"
 	},
 	UIFillers = {
-		"germanic/ui/filler_bottom.png", 380, -181,
-		"germanic/ui/resource.png", 0, 0,
-		"germanic/ui/buttonpanel.png", -256, -200,
-		"germanic/ui/infopanel.png", 0, -200
+		"interface/germanic/filler_bottom.png", 380, -181,
+		"interface/germanic/resource.png", 0, 0,
+		"interface/germanic/buttonpanel.png", -256, -200,
+		"interface/germanic/infopanel.png", 0, -200
 	},
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking.",
 	PersonalNames = {
@@ -2814,7 +2817,7 @@ DefineCivilization("frankish", {
 	--]]
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"germanic/ui/resource.png", 0, 0,
+		"interface/germanic/resource.png", 0, 0,
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	}
@@ -3876,10 +3879,10 @@ DefineCivilization("aesir", {
 		"return-goods", "icon-germanic-return-goods"
 	},
 	UIFillers = {
-		"germanic/ui/filler_bottom.png", 380, -181,
-		"germanic/ui/resource.png", 0, 0,
-		"germanic/ui/buttonpanel.png", -256, -200,
-		"germanic/ui/infopanel.png", 0, -200
+		"interface/germanic/filler_bottom.png", 380, -181,
+		"interface/germanic/resource.png", 0, 0,
+		"interface/germanic/buttonpanel.png", -256, -200,
+		"interface/germanic/infopanel.png", 0, -200
 	},
 	HistoricalUpgrades = { -- give the Aesir iron weapons and armor from the beginning
 		0, "upgrade-ironworking", true,

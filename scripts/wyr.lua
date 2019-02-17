@@ -64,11 +64,11 @@ function CreateUnit(unittype, player, pos, z)
 --		return OldCreateUnit(unittype, player, pos)
 --	end
 
-	if (Players[player].Type == PlayerNobody) then
+	if (CPlayer:GetPlayer(player).Type == PlayerNobody) then
 		return nil
 	end
 
-	if (Players[player].Type ~= PlayerNeutral) then
+	if (CPlayer:GetPlayer(player).Type ~= PlayerNeutral) then
 		unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"))
 	end
 
@@ -80,11 +80,11 @@ function CreateUnitOnTop(unittype, player, on_top)
 		return OldCreateUnitOnTop(unittype, player, on_top)
 	end
 
-	if (Players[player].Type == PlayerNobody) then
+	if (CPlayer:GetPlayer(player).Type == PlayerNobody) then
 		return nil
 	end
 
-	if (Players[player].Type ~= PlayerNeutral) then
+	if (CPlayer:GetPlayer(player).Type ~= PlayerNeutral) then
 		unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"))
 	end
 

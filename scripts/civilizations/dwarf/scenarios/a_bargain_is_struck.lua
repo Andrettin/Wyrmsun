@@ -44,7 +44,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 			return false
 		end
 		for i=0, (PlayerMax - 2) do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not CPlayer:GetPlayer(i):IsEnemy(CPlayer:GetPlayer(GetCivilizationPlayer("gnome"))) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -71,7 +71,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
 		local rugnur = FindHero("rugnur")
 		local pypo_i = FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player)
-		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+		unit = CreateUnit("unit-revealer", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y})
 		Event(
 			"",
 			"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\n\nSo now I tell from whence it came -\nThe Fire-scepter great -\nAnd of the makers of the same,\nTheir tale I now relate...",
@@ -240,13 +240,13 @@ AddTrigger("a-bargain-is-struck-introduction",
 																														player,
 																														{"~!Continue"},
 																														{function(s)
-																															unit = CreateUnit("unit-gnomish-duelist", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
+																															unit = CreateUnit("unit-gnomish-duelist", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y}) -- gnomish envoy who holds the ruby
 																															SetUnitVariable(unit, "Active", false)
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-duelist", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
 																															end
-																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															unit = CreateUnit("unit-gnomish-caravan", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
@@ -254,7 +254,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															local transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
-																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															unit = CreateUnit("unit-gnomish-caravan", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
@@ -262,7 +262,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
-																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															unit = CreateUnit("unit-gnomish-caravan", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
@@ -270,7 +270,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
-																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
+																															unit = CreateUnit("unit-gnomish-caravan", player, {CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x, CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-caravan", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, 0, {47, 8}, 0, "move")
@@ -346,7 +346,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 									SetDiplomacy(gnomish_monarch_player, "enemy", player)
 									SetDiplomacy(player, "enemy", gnomish_monarch_player)
 
-									Players[GetFactionPlayer("Shinsplitter Clan")].Type = PlayerNeutral
+									CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).Type = PlayerNeutral
 
 									KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
 								end}
@@ -394,7 +394,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 					end
 				end
 				SavePreferences()
-				unit = CreateUnit("unit-revealer", player, {Players[bandit_player].StartPos.x, Players[bandit_player].StartPos.y})
+				unit = CreateUnit("unit-revealer", player, {CPlayer:GetPlayer(bandit_player).StartPos.x, CPlayer:GetPlayer(bandit_player).StartPos.y})
 				
 				local raider_leader = FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"))
 				
@@ -445,15 +445,15 @@ AddTrigger("a-bargain-is-struck-introduction",
 											{"~!Continue"},
 											{function(s)
 												-- create bandits
-												local bandit_x = (Players[gnomish_monarch_player].StartPos.x + Players[player].StartPos.x) / 2
-												local bandit_y = (Players[gnomish_monarch_player].StartPos.y + Players[player].StartPos.y) / 2
+												local bandit_x = (CPlayer:GetPlayer(gnomish_monarch_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2
+												local bandit_y = (CPlayer:GetPlayer(gnomish_monarch_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2
 												SetDiplomacy(bandit_player, "enemy", gnomish_monarch_player)
 												SetDiplomacy(bandit_player, "enemy", player)
 												SetDiplomacy(gnomish_monarch_player, "enemy", bandit_player)
 												SetDiplomacy(player, "enemy", bandit_player)
 
 												local second_bandit_player = FindUnusedPlayerSlot()
-												Players[second_bandit_player].Type = PlayerComputer
+												CPlayer:GetPlayer(second_bandit_player).Type = PlayerComputer
 
 												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 												SetUnitVariable(unit, "Active", false)
@@ -462,7 +462,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 												SetUnitVariable(unit, "Active", false)
 
-												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(CPlayer:GetPlayer(bandit_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2, (CPlayer:GetPlayer(bandit_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2})
 												SetUnitVariable(unit, "Active", false)
 												if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
@@ -472,7 +472,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 													SetUnitVariable(unit, "Active", false)
 
-													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(CPlayer:GetPlayer(bandit_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2, (CPlayer:GetPlayer(bandit_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
 												elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
@@ -494,11 +494,11 @@ AddTrigger("a-bargain-is-struck-introduction",
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 													SetUnitVariable(unit, "Active", false)
 
-													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(CPlayer:GetPlayer(bandit_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2, (CPlayer:GetPlayer(bandit_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
-													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(CPlayer:GetPlayer(bandit_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2, (CPlayer:GetPlayer(bandit_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
-													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(CPlayer:GetPlayer(bandit_player).StartPos.x + CPlayer:GetPlayer(player).StartPos.x) / 2, (CPlayer:GetPlayer(bandit_player).StartPos.y + CPlayer:GetPlayer(player).StartPos.y) / 2})
 													SetUnitVariable(unit, "Active", false)
 												end
 
