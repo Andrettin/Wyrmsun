@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slider-bar-normal.png-2b2d5e5184297770cfadbff17f6e7537.stex"
+path="res://.import/slider-bar-normal.png-09183b033f72bb251bbbf08a5d2f54cb.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/slider-bar-normal.png"
-dest_files=[ "res://.import/slider-bar-normal.png-2b2d5e5184297770cfadbff17f6e7537.stex" ]
+source_file="res://graphics/interface/germanic/slider-bar-normal.png"
+dest_files=[ "res://.import/slider-bar-normal.png-09183b033f72bb251bbbf08a5d2f54cb.stex" ]
 
 [params]
 

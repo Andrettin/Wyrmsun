@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right-arrow-normal.png-e2bb3661d7e9846c32608b09b4406c43.stex"
+path="res://.import/right-arrow-normal.png-b434187f6358cd97b67217f5b6be0dc2.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/right-arrow-normal.png"
-dest_files=[ "res://.import/right-arrow-normal.png-e2bb3661d7e9846c32608b09b4406c43.stex" ]
+source_file="res://graphics/interface/germanic/right-arrow-normal.png"
+dest_files=[ "res://.import/right-arrow-normal.png-b434187f6358cd97b67217f5b6be0dc2.stex" ]
 
 [params]
 

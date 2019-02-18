@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/radio-normal-selected.png-5f5c57588bc14930f5ea4023ca1257f3.stex"
+path="res://.import/radio-normal-selected.png-34a4379cd08b02da549d5fae1b8a63e1.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/radio-normal-selected.png"
-dest_files=[ "res://.import/radio-normal-selected.png-5f5c57588bc14930f5ea4023ca1257f3.stex" ]
+source_file="res://graphics/interface/germanic/radio-normal-selected.png"
+dest_files=[ "res://.import/radio-normal-selected.png-34a4379cd08b02da549d5fae1b8a63e1.stex" ]
 
 [params]
 

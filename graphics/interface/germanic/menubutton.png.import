@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menubutton.png-8bfa866270ffd6f7863af8eca8a297e4.stex"
+path="res://.import/menubutton.png-02585c8f5efaeef0f32ac029c64c95e4.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/menubutton.png"
-dest_files=[ "res://.import/menubutton.png-8bfa866270ffd6f7863af8eca8a297e4.stex" ]
+source_file="res://graphics/interface/germanic/menubutton.png"
+dest_files=[ "res://.import/menubutton.png-02585c8f5efaeef0f32ac029c64c95e4.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button-large-pressed.png-47bd821cef3dca10926981db8db538f3.stex"
+path="res://.import/button-large-pressed.png-bf9182bc4556f6954d7a5f4bd7ca04de.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/button-large-pressed.png"
-dest_files=[ "res://.import/button-large-pressed.png-47bd821cef3dca10926981db8db538f3.stex" ]
+source_file="res://graphics/interface/germanic/button-large-pressed.png"
+dest_files=[ "res://.import/button-large-pressed.png-bf9182bc4556f6954d7a5f4bd7ca04de.stex" ]
 
 [params]
 

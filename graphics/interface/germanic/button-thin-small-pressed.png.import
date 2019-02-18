@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button-thin-small-pressed.png-d57577ebf748d255b9925f9a62217e32.stex"
+path="res://.import/button-thin-small-pressed.png-ec834b3069877108bf8a45a97de23be2.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/button-thin-small-pressed.png"
-dest_files=[ "res://.import/button-thin-small-pressed.png-d57577ebf748d255b9925f9a62217e32.stex" ]
+source_file="res://graphics/interface/germanic/button-thin-small-pressed.png"
+dest_files=[ "res://.import/button-thin-small-pressed.png-ec834b3069877108bf8a45a97de23be2.stex" ]
 
 [params]
 

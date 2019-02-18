@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left-arrow-pressed.png-70eb06c178851f16963230b3612cf100.stex"
+path="res://.import/left-arrow-pressed.png-eabd77be9d06d77694607cf25a8fa0ad.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/left-arrow-pressed.png"
-dest_files=[ "res://.import/left-arrow-pressed.png-70eb06c178851f16963230b3612cf100.stex" ]
+source_file="res://graphics/interface/germanic/left-arrow-pressed.png"
+dest_files=[ "res://.import/left-arrow-pressed.png-eabd77be9d06d77694607cf25a8fa0ad.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minimap_extra_1.png-f1f577e5dad0d0e56756b0319afb6cee.stex"
+path="res://.import/minimap_extra_1.png-2f8ceb9db2c708487d0d6e058d14791c.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/minimap_extra_1.png"
-dest_files=[ "res://.import/minimap_extra_1.png-f1f577e5dad0d0e56756b0319afb6cee.stex" ]
+source_file="res://graphics/interface/germanic/minimap_extra_1.png"
+dest_files=[ "res://.import/minimap_extra_1.png-2f8ceb9db2c708487d0d6e058d14791c.stex" ]
 
 [params]
 

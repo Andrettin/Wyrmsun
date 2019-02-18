@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/radio-pressed-unselected.png-c6dbc2d647a73b6b843b2805036f2122.stex"
+path="res://.import/radio-pressed-unselected.png-36d0b590f41e6273980b82e4d8a8d928.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/radio-pressed-unselected.png"
-dest_files=[ "res://.import/radio-pressed-unselected.png-c6dbc2d647a73b6b843b2805036f2122.stex" ]
+source_file="res://graphics/interface/germanic/radio-pressed-unselected.png"
+dest_files=[ "res://.import/radio-pressed-unselected.png-36d0b590f41e6273980b82e4d8a8d928.stex" ]
 
 [params]
 

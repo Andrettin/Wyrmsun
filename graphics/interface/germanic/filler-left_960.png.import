@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/filler-left_960.png-13b0601bbabc095aa57834f457247bc0.stex"
+path="res://.import/filler-left_960.png-3ae3ac9bd6292ec65c5e4c7f3034ed37.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/filler-left_960.png"
-dest_files=[ "res://.import/filler-left_960.png-13b0601bbabc095aa57834f457247bc0.stex" ]
+source_file="res://graphics/interface/germanic/filler-left_960.png"
+dest_files=[ "res://.import/filler-left_960.png-3ae3ac9bd6292ec65c5e4c7f3034ed37.stex" ]
 
 [params]
 

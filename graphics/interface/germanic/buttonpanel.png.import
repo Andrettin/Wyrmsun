@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buttonpanel.png-ca5daafdb755548519f6a8dfd87b2434.stex"
+path="res://.import/buttonpanel.png-2bd2df730f7ee9da38f8a3d9fe586fd8.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/buttonpanel.png"
-dest_files=[ "res://.import/buttonpanel.png-ca5daafdb755548519f6a8dfd87b2434.stex" ]
+source_file="res://graphics/interface/germanic/buttonpanel.png"
+dest_files=[ "res://.import/buttonpanel.png-2bd2df730f7ee9da38f8a3d9fe586fd8.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel_5.png-8a2f3794b2c2c3b83abe718dea50c5b2.stex"
+path="res://.import/panel_5.png-12eb58663b4b88a5689ebaedc7c85de4.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/panel_5.png"
-dest_files=[ "res://.import/panel_5.png-8a2f3794b2c2c3b83abe718dea50c5b2.stex" ]
+source_file="res://graphics/interface/germanic/panel_5.png"
+dest_files=[ "res://.import/panel_5.png-12eb58663b4b88a5689ebaedc7c85de4.stex" ]
 
 [params]
 

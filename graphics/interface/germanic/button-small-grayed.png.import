@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button-small-grayed.png-cd171b6324013639be6c968bb2ce2e0e.stex"
+path="res://.import/button-small-grayed.png-ce89e357f17176773e1c93b88bf34b49.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/button-small-grayed.png"
-dest_files=[ "res://.import/button-small-grayed.png-cd171b6324013639be6c968bb2ce2e0e.stex" ]
+source_file="res://graphics/interface/germanic/button-small-grayed.png"
+dest_files=[ "res://.import/button-small-grayed.png-ce89e357f17176773e1c93b88bf34b49.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minimap_top_grand_strategy.png-d0d8ef7e9d2e466ee0ca85fa9cad70a9.stex"
+path="res://.import/minimap_top_grand_strategy.png-6fd16653ff1ca21e2983926f21904377.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/minimap_top_grand_strategy.png"
-dest_files=[ "res://.import/minimap_top_grand_strategy.png-d0d8ef7e9d2e466ee0ca85fa9cad70a9.stex" ]
+source_file="res://graphics/interface/germanic/minimap_top_grand_strategy.png"
+dest_files=[ "res://.import/minimap_top_grand_strategy.png-6fd16653ff1ca21e2983926f21904377.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left-arrow-normal.png-2c656d503e09c6da4e9f32bb83a906ee.stex"
+path="res://.import/left-arrow-normal.png-228e5a7dfb38c83bee3e8506f0c0ff1c.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/left-arrow-normal.png"
-dest_files=[ "res://.import/left-arrow-normal.png-2c656d503e09c6da4e9f32bb83a906ee.stex" ]
+source_file="res://graphics/interface/germanic/left-arrow-normal.png"
+dest_files=[ "res://.import/left-arrow-normal.png-228e5a7dfb38c83bee3e8506f0c0ff1c.stex" ]
 
 [params]
 

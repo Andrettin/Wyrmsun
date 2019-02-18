@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/up-arrow-normal.png-5039640f00edf92600346a883350ffaa.stex"
+path="res://.import/up-arrow-normal.png-5d674f3784cf2e1420bb79d2151db7fb.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/up-arrow-normal.png"
-dest_files=[ "res://.import/up-arrow-normal.png-5039640f00edf92600346a883350ffaa.stex" ]
+source_file="res://graphics/interface/germanic/up-arrow-normal.png"
+dest_files=[ "res://.import/up-arrow-normal.png-5d674f3784cf2e1420bb79d2151db7fb.stex" ]
 
 [params]
 

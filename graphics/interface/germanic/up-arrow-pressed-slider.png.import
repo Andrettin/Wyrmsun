@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/up-arrow-pressed-slider.png-ec83cd625d969341fb19116bdfaf5e42.stex"
+path="res://.import/up-arrow-pressed-slider.png-c73659bff5250668309f7715fb5465ad.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/up-arrow-pressed-slider.png"
-dest_files=[ "res://.import/up-arrow-pressed-slider.png-ec83cd625d969341fb19116bdfaf5e42.stex" ]
+source_file="res://graphics/interface/germanic/up-arrow-pressed-slider.png"
+dest_files=[ "res://.import/up-arrow-pressed-slider.png-c73659bff5250668309f7715fb5465ad.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slider-knob.png-259aab63d31df6cc4f41bd34d110fcd2.stex"
+path="res://.import/slider-knob.png-be3acb3b0c87e59cb59c801ea1158332.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/slider-knob.png"
-dest_files=[ "res://.import/slider-knob.png-259aab63d31df6cc4f41bd34d110fcd2.stex" ]
+source_file="res://graphics/interface/germanic/slider-knob.png"
+dest_files=[ "res://.import/slider-knob.png-be3acb3b0c87e59cb59c801ea1158332.stex" ]
 
 [params]
 

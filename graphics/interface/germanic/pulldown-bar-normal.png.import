@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pulldown-bar-normal.png-c60cd0fdc7e77697e46925bd5fdccc7b.stex"
+path="res://.import/pulldown-bar-normal.png-03e0bc7dff860095ade2b23b3fbf9ac2.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/widgets/pulldown-bar-normal.png"
-dest_files=[ "res://.import/pulldown-bar-normal.png-c60cd0fdc7e77697e46925bd5fdccc7b.stex" ]
+source_file="res://graphics/interface/germanic/pulldown-bar-normal.png"
+dest_files=[ "res://.import/pulldown-bar-normal.png-03e0bc7dff860095ade2b23b3fbf9ac2.stex" ]
 
 [params]
 

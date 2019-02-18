@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/statusline_1400.png-dcd0a3acde0dfb06da7d03d2b7fe052b.stex"
+path="res://.import/statusline_1400.png-8f897d8ec586a7860e1a86c982de5821.stex"
 
 [deps]
 
-source_file="res://graphics/germanic/ui/statusline_1400.png"
-dest_files=[ "res://.import/statusline_1400.png-dcd0a3acde0dfb06da7d03d2b7fe052b.stex" ]
+source_file="res://graphics/interface/germanic/statusline_1400.png"
+dest_files=[ "res://.import/statusline_1400.png-8f897d8ec586a7860e1a86c982de5821.stex" ]
 
 [params]
 
