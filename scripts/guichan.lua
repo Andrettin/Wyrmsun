@@ -1398,7 +1398,6 @@ function BuildProgramStartMenu()
 	end
 
 	local menu = WarMenu()
-	current_menu = menu
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
