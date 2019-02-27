@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function DefineIcon(arg)
-	local icon = CIcon:New(arg.Name)
-	icon.G = CPlayerColorGraphic:New(arg.File, arg.Size[1], arg.Size[2])
-	if (arg.Frame) then
-		icon.Frame = arg.Frame
-	else
-		icon.Frame = 0
-	end
-end
-
 DefineIcon({
 	Name = "icon-christianity",
 	Size = {46, 38},
