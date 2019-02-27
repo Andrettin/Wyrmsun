@@ -496,23 +496,26 @@ Load("scripts/upgrade_faction.lua")
 Load("scripts/upgrade_dependencies.lua")
 
 -- miscellaneous individual upgrades
-local misc_individual_upgrades = {
-	{"upgrade-child", "Child"},
-	{"upgrade-bee-child", "Bee Child"},
-	{"upgrade-gryphon-child", "Gryphon Child"},
-	{"upgrade-wyrm-child", "Wyrm Child"}
-}
 
-for i = 1,table.getn(misc_individual_upgrades) do
-	u = CUpgrade:New(misc_individual_upgrades[i][1])
-	u.Name = misc_individual_upgrades[i][2]
-	u.Icon = Icons["icon-level-up"]
-	for j = 1,7 do
-		u.Costs[j - 1] = 0
-	end
-	u.Ability = false
-	DefineAllow(misc_individual_upgrades[i][1], "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-end
+DefineUpgrade("upgrade-child", {
+	Name = "Child",
+	Icon = "icon-level-up"
+})
+
+DefineUpgrade("upgrade-bee-child", {
+	Name = "Bee Child",
+	Icon = "icon-level-up"
+})
+
+DefineUpgrade("upgrade-gryphon-child", {
+	Name = "Gryphon Child",
+	Icon = "icon-level-up"
+})
+
+DefineUpgrade("upgrade-wyrm-child", {
+	Name = "Wyrm Child",
+	Icon = "icon-level-up"
+})
 
 DefineModifier("upgrade-child",
 	{"BasicDamage", -2}
