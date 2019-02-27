@@ -8,6 +8,7 @@
 /graphics/backgrounds/the_first_dwarves.png (by Brian Brickwagon Jennings) (licensed under the GPL 2.0)
 /graphics/backgrounds/wyrm.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/wyrm_profile.png (drawing by Tanja Nov) (licensed under the CC0)
+/graphics/backgrounds/wyrmsun.png (by Jinn) (licensed under the CC0)
 /graphics/backgrounds/yale.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/yale_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/celt/buildings/farm.png (by Jinn) (licensed under the CC0)
