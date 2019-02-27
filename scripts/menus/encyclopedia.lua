@@ -444,8 +444,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
 		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
@@ -458,8 +458,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
-			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
+			encyclopedia_icon = CGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
 			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
 			encyclopedia_icon_pressed = CGraphic:New("interface/default/button_large_pressed.png")
@@ -474,8 +474,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetCharacterData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
 		tooltip_name = GetCharacterData(unit_name, "FullName")
@@ -487,8 +487,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetDeityData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
 		tooltip_name = GetDeityData(unit_name, "Name")
@@ -496,8 +496,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")
@@ -608,8 +608,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
 		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
@@ -622,8 +622,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
-			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
+			encyclopedia_icon = CGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
 			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
 			encyclopedia_icon_grayed = CGraphic:New("interface/default/button_large_grayed.png")
@@ -639,8 +639,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetCharacterData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
 		tooltip_name = GetCharacterData(unit_name, "FullName")
@@ -652,8 +652,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CIcon:Get(GetDeityData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetDeityData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
 		tooltip_name = GetDeityData(unit_name, "Name")
@@ -661,8 +661,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).G
-		encyclopedia_icon_frame = CIcon:Get(GetUniqueItemData(unit_name, "Icon")).Frame
+		encyclopedia_icon = CGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
 		tooltip_name = GetUniqueItemData(unit_name, "Name")

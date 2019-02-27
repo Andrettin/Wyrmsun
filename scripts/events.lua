@@ -472,12 +472,12 @@ function Event(speaker, event_description, player, options, option_effects, even
 
 		local b
 		if (type(speaker) == "number") then
-			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
+			event_icon = CGraphic:Get(GetIconData(GetUnitVariable(speaker, "Icon"), "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
-			event_icon = CIcon:Get(event_icon).G
+			event_icon = CGraphic:Get(GetIconData(event_icon, "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153, 48)
@@ -617,7 +617,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	end
 	
 	if (icon) then
-		icon_graphics = CIcon:Get(icon).G
+		icon_graphics = CGraphic:Get(GetIconData(icon, "File"))
 	end
 	
 	

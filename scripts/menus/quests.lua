@@ -234,13 +234,13 @@ function RunQuestMenu(world)
 end
 
 function addQuestIcon(quest, menu, x, y)
-	local quest_icon_frame = CIcon:Get(GetQuestData(quest, "Icon")).Frame
+	local quest_icon_frame = GetIconData(GetQuestData(quest, "Icon"), "Frame")
 	local questicon
 	local b
 	if (GetQuestData(quest, "Completed")) then
 		questicon = CIcon:Get(GetQuestData(quest, "Icon")).GScale
 	else
-		questicon = CIcon:Get(GetQuestData(quest, "Icon")).G
+		questicon = CGraphic:Get(GetIconData(GetQuestData(quest, "Icon"), "File"))
 	end
 	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
 	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
