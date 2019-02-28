@@ -61,7 +61,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	end
 
 	local character_icon_frame = GetIconData(GetCharacterData(character, "Icon"), "Frame")
-	local character_icon = CGraphic:Get(GetIconData(GetCharacterData(character, "Icon"), "File"))
+	local character_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(character, "Icon"), "File"))
 	local character_civilization = GetCharacterData(character, "Civilization")
 	local character_faction = GetCharacterData(character, "Faction")
 	local playercolor = "gray"

@@ -62,7 +62,7 @@ end
 
 function addAchievementIcon(achievement, menu, x, y)
 	local achievement_icon_frame = GetIconData(GetAchievementData(achievement, "Icon"), "Frame")
-	local achievement_icon = CGraphic:Get(GetIconData(GetAchievementData(achievement, "Icon"), "File"))
+	local achievement_icon = CPlayerColorGraphic:Get(GetIconData(GetAchievementData(achievement, "Icon"), "File"))
 	local b = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)

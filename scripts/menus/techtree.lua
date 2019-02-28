@@ -67,12 +67,12 @@ function RunTechTreeMenu(civilization_number)
 		if (string.find(unit, "upgrade-") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
-			techicon = CGraphic:Get(GetIconData(GetUnitTypeData(unit, "Icon"), "File"))
+			techicon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit, "Icon"), "File"))
 			techicon_frame = GetIconData(GetUnitTypeData(unit, "Icon"), "Frame")
 		else
 			unit_name = CUpgrade:Get(unit).Name
 			tech_description = CUpgrade:Get(unit).Description
-			techicon = CGraphic:Get(GetIconData(GetUpgradeData(unit, "Icon"), "File"))
+			techicon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit, "Icon"), "File"))
 			techicon_frame = GetIconData(GetUpgradeData(unit, "Icon"), "Frame")
 		end
 		local b

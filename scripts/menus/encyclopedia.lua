@@ -444,7 +444,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
@@ -458,7 +458,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
 			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
@@ -474,7 +474,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
@@ -487,7 +487,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -496,7 +496,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -608,7 +608,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
@@ -622,7 +622,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
 			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
@@ -639,7 +639,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
@@ -652,7 +652,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -661,7 +661,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
 		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
