@@ -8,10 +8,14 @@ dlcs/
 mods/
 temp/
 wyr/
+*.exe
+*.lnk
 crash.dmp
 launcher.exe
+linux_readme.txt
 lua51.dll
 oaml.log
+run.sh
 screen*.png
 SDL.dll
 SDL2.dll
@@ -21,9 +25,6 @@ stratagus.exe
 wyrmsun.exe
 wyrmsun32
 wyrmsun64
-run.sh
-linux_readme.txt
-*.lnk
 
 ## Steam Workshop Mod Uploader
 CSteamworks.dll
