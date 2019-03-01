@@ -60,7 +60,9 @@ margin_left = 208.0
 margin_top = 284.0
 margin_right = 432.0
 margin_bottom = 312.0
+script = ExtResource( 6 )
 button_text = "~!Achievements"
+target_scene = "achievements_menu"
 
 [node name="options_button" parent="menu_area" instance=ExtResource( 5 )]
 

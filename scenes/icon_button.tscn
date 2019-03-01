@@ -52,6 +52,4 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="icon" parent="." instance=ExtResource( 4 )]
 
-[connection signal="draw" from="." to="." method="update_icon_position"]
-
 
