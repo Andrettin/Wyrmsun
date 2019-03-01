@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/backgrounds/wyrmsun_sepia.png" type="Texture" id=3]
+[ext_resource path="res://graphics/backgrounds/wyrmsun.png" type="Texture" id=4]
+
+[node name="start_screen" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="background" parent="." instance=ExtResource( 2 )]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Visibility" ]
+
+[node name="starting_background" parent="." instance=ExtResource( 2 )]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Rect", "Size Flags", "Visibility" ]
+
+[node name="splash_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[node name="sepia_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="splash_timer" to="sepia_timer" method="start"]
+
+

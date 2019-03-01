@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Wyrmsun"
-run/main_scene="res://scenes/main_menu.tscn"
+run/main_scene="res://scenes/start_screen.tscn"
 config/icon="res://graphics/ui/icons/wyrmsun_icon_64.png"
 
 [autoload]

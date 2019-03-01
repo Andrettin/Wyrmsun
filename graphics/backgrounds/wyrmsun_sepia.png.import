@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cosmos.png-124e850b6dc0033f5c9facd3e8494eb1.stex"
+path="res://.import/wyrmsun_sepia.png-1b756d69e932124a05f27ce35ef86a03.stex"
 
 [deps]
 
-source_file="res://graphics/backgrounds/cosmos.png"
-dest_files=[ "res://.import/cosmos.png-124e850b6dc0033f5c9facd3e8494eb1.stex" ]
+source_file="res://graphics/backgrounds/wyrmsun_sepia.png"
+dest_files=[ "res://.import/wyrmsun_sepia.png-1b756d69e932124a05f27ce35ef86a03.stex" ]
 
 [params]
 

@@ -1,4 +1,3 @@
-/graphics/backgrounds/cosmos.png (by Cuzco) (licensed under the CC0)
 /graphics/backgrounds/gnashorn.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gnashorn_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gryphon.png (drawing by Tanja Nov) (licensed under the CC0)
@@ -9,6 +8,7 @@
 /graphics/backgrounds/wyrm.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/wyrm_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/wyrmsun.png (by Jinn) (licensed under the CC0)
+/graphics/backgrounds/wyrmsun_sepia.png (by Jinn) (licensed under the CC0)
 /graphics/backgrounds/yale.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/yale_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/celt/buildings/farm.png (by Jinn) (licensed under the CC0)
