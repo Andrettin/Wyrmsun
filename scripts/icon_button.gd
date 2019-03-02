@@ -29,3 +29,5 @@ func set_tooltip(tooltip):
 	self.hint_tooltip = tooltip
 	self.icon_node.hint_tooltip = tooltip
 	
+func set_icon_transparency(transparency):
+	self.icon_node.modulate.a = transparency

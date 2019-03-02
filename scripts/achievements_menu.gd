@@ -23,6 +23,9 @@ func _ready():
 		
 		achievement_button.set_graphics(graphics_file)
 		achievement_button.set_player_color(achievement.get_player_color())
+		achievement_button.set_tooltip(achievement.get_name())
+		if (!achievement.is_obtained()):
+			achievement_button.set_icon_transparency(0.33)
 		
 		achievement_button.rect_position.x = 23 + 4 + (54 * item_x)
 		achievement_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
