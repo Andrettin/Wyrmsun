@@ -28,7 +28,6 @@ texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Rect", "Textures" ]
-player_color = ""
 
 [node name="background" type="ColorRect" parent="."]
 

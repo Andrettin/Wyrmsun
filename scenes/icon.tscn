@@ -26,6 +26,5 @@ texture = ExtResource( 2 )
 stretch_mode = 0
 script = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Mouse", "Rect", "Visibility" ]
-player_color = ""
 
 

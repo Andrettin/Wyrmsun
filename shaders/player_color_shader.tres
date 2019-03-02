@@ -4,6 +4,7 @@
 
 [resource]
 
+resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource( 1 )
 shader_param/source_player_color_1 = Color( 0, 0, 0, 1 )

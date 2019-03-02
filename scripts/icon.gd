@@ -1,23 +1,23 @@
 extends TextureRect
 
-export var player_color = ""
+var source_player_color
+var target_player_color
 
 func _ready():
-	var material = self.get_material()
-	var source_player_color = wyrmgus.player_colors["violet"]
-	for i in range(0, wyrmgus.player_color_shades):
-		material.set_shader_param("source_player_color_" + str(i + 1), source_player_color[i])
-	
-	if (!self.player_color.empty()):
-		self.apply_player_color()
+	self.source_player_color = wyrmgus.get_player_color("violet")
 
 func set_player_color(player_color):
-	self.player_color = player_color
-	if (!self.player_color.empty()):
+	self.target_player_color = player_color
+	if (self.target_player_color):
 		self.apply_player_color()
 	
 func apply_player_color():
 	var material = self.get_material()
-	var target_player_color = wyrmgus.player_colors[self.player_color]
-	for i in range(0, wyrmgus.player_color_shades):
-		material.set_shader_param("target_player_color_" + str(i + 1), target_player_color[i])
+	var source_colors = self.source_player_color.get_colors()
+	var target_colors = self.target_player_color.get_colors()
+	var color_count = min(source_colors.size(), target_colors.size())
+	
+	for i in range(0, color_count):
+		material.set_shader_param("source_player_color_" + str(i + 1), source_colors[i])
+		material.set_shader_param("target_player_color_" + str(i + 1), target_colors[i])
+	
