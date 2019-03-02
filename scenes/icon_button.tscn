@@ -81,6 +81,10 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 [node name="icon" parent="." instance=ExtResource( 5 )]
 
 material = SubResource( 1 )
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 50.0
+margin_bottom = 42.0
 
 [node name="button_audio_player" parent="." instance=ExtResource( 7 )]
 
