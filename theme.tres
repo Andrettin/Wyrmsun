@@ -105,5 +105,11 @@ PopupMenu/styles/hover = SubResource( 8 )
 PopupMenu/styles/panel = ExtResource( 3 )
 PopupMenu/styles/panel_disabled = ExtResource( 3 )
 PopupMenu/styles/separator = null
-_sections_unfolded = [ "CheckBox", "CheckBox/icons", "CheckBox/styles", "CheckButton", "CheckButton/styles", "Label/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/icons", "PopupMenu/styles", "Resource" ]
+TooltipLabel/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0.1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = null
+_sections_unfolded = [ "CheckBox", "CheckBox/icons", "CheckBox/styles", "CheckButton", "CheckButton/styles", "Label/colors", "OptionButton", "OptionButton/colors", "OptionButton/constants", "OptionButton/fonts", "OptionButton/icons", "OptionButton/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/constants", "PopupMenu/icons", "PopupMenu/styles", "Resource", "TooltipLabel", "TooltipLabel/colors", "TooltipLabel/constants", "TooltipLabel/fonts", "TooltipPanel", "TooltipPanel/styles" ]
 

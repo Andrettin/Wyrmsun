@@ -24,3 +24,8 @@ func set_graphics(file_path):
 func set_player_color(player_color):
 	var player_color_name = player_color.get_name()
 	self.icon_node.set_player_color(player_color)
+
+func set_tooltip(tooltip):
+	self.hint_tooltip = tooltip
+	self.icon_node.hint_tooltip = tooltip
+	
