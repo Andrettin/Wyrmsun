@@ -3,6 +3,11 @@ extends Control
 var achievements = []
 
 func _ready():
+	var command = "if not (IsMusicPlaying()) then"
+	command += "\nPlayMusicName(\"MenuTheme\")"
+	command += "\nend"
+	wyrmgus.lua_command(command)
+	
 	self.achievements = wyrmgus.get_achievements()
 	var menu_area_node = self.find_node("menu_area")
 	

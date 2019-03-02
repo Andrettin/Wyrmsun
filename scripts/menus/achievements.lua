@@ -26,7 +26,6 @@
 --
 
 function RunAchievementsMenu()
-
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
