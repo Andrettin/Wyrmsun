@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/radio_button.gd" type="Script" id=2]
 
 [node name="radio_button" type="CheckBox"]
 
@@ -24,6 +25,7 @@ shortcut = null
 group = null
 flat = false
 align = 0
+script = ExtResource( 2 )
 _sections_unfolded = [ "Rect", "Theme", "custom_icons", "custom_styles" ]
 
 

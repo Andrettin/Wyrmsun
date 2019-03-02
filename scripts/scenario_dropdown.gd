@@ -3,6 +3,8 @@ extends "res://scripts/dropdown.gd"
 var campaigns = []
 
 func _ready():
+	._ready()
+	
 	var potential_campaigns = wyrmgus.get_campaigns()
 	for campaign in potential_campaigns:
 		if (!campaign.is_available()):

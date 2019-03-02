@@ -5,6 +5,7 @@ var icon_node
 
 func _ready():
 	self.connect("draw", self, "update_icon_position")
+	self.connect("pressed", audio_player, "play_sound_file", ["res://sounds/interface/click.wav"])
 	self.icon_node = self.find_node("icon")
 
 func update_icon_position():

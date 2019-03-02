@@ -1,4 +1,7 @@
 extends OptionButton
 
+func _ready():
+	self.connect("pressed", audio_player, "play_sound_file", ["res://sounds/interface/click.wav"])
+
 func item_selected_sound(var id):
-	self.find_node("dropdown_audio_player").play()
+	audio_player.play_sound_file("res://sounds/interface/click.wav")

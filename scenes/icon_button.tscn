@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://graphics/ui/icon_frame.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://scripts/icon_button.gd" type="Script" id=4]
 [ext_resource path="res://scenes/icon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://shaders/player_color_shader.shader" type="Shader" id=6]
-[ext_resource path="res://scenes/button_audio_player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -85,12 +84,5 @@ margin_left = 4.0
 margin_top = 4.0
 margin_right = 50.0
 margin_bottom = 42.0
-
-[node name="button_audio_player" parent="." instance=ExtResource( 7 )]
-
-position = Vector2( 27, 23 )
-scale = Vector2( 0.85, 0.7 )
-
-[connection signal="pressed" from="." to="button_audio_player" method="play"]
 
 

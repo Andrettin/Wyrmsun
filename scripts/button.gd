@@ -9,6 +9,7 @@ var hovered_text = ""
 
 func _ready():
 	self.connect("draw", self, "check_set_text_display_pressed")
+	self.connect("pressed", audio_player, "play_sound_file", ["res://sounds/interface/click.wav"])
 	
 	text = self.button_text
 	var find_pos = text.find(character_highlight_markdown)

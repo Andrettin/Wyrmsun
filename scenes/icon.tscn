@@ -25,6 +25,6 @@ theme = ExtResource( 2 )
 texture = ExtResource( 3 )
 stretch_mode = 0
 script = ExtResource( 4 )
-_sections_unfolded = [ "Material", "Mouse", "Rect", "Theme", "Visibility" ]
+_sections_unfolded = [ "Grow Direction", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
 
 
