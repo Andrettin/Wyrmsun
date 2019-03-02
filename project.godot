@@ -23,6 +23,8 @@ audio_player="*res://scripts/audio_player.gd"
 
 mouse_cursor/custom_image="res://graphics/cursors/dwarven/dwarven_gauntlet.png"
 mouse_cursor/custom_image_hotspot=Vector2( 2, 0 )
+mouse_cursor/tooltip_position_offset=Vector2( 32, 34 )
+
 
 [importer_defaults]
 
