@@ -29,6 +29,7 @@ func _ready():
 		achievement_button.set_graphics(graphics_file)
 		achievement_button.set_player_color(achievement.get_player_color())
 		achievement_button.set_tooltip(achievement.get_name())
+		achievement_button.connect("pressed", self, "show_achievement_dialog", [achievement])
 		if (!achievement.is_obtained()):
 			achievement_button.set_icon_transparency(0.33)
 		
@@ -40,3 +41,8 @@ func _ready():
 		if (item_x > 9):
 			item_x = 1
 			item_y = item_y + 1
+
+func show_achievement_dialog(achievement):
+	var achievement_dialog = load("res://scenes/achievement_dialog.tscn").instance()
+	self.add_child(achievement_dialog)
+	achievement_dialog.set_achievement(achievement)

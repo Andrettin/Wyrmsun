@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/achievement_dialog.gd" type="Script" id=1]
+[ext_resource path="res://scenes/panel_2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=5]
+
+[node name="achievement_dialog" type="Control"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -128.0
+margin_right = 144.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
+
+[node name="panel" parent="." instance=ExtResource( 2 )]
+
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
+
+[node name="title_label" parent="panel" instance=ExtResource( 3 )]
+
+anchor_right = 1.0
+margin_top = 11.0
+margin_right = 0.0
+margin_bottom = 35.0
+bbcode_text = "[center]Achievement Name[/center]"
+text = "Achievement Name"
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="description_label" parent="panel" instance=ExtResource( 3 )]
+
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 112.0
+margin_right = -14.0
+margin_bottom = -48.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_text = "Achievement Description"
+text = "Achievement Description"
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="close_button" parent="panel" instance=ExtResource( 5 )]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -40.0
+margin_right = 112.0
+margin_bottom = -12.0
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures", "Theme" ]
+button_text = "~!Close"
+
+[connection signal="pressed" from="panel/close_button" to="." method="queue_free"]
+
+
