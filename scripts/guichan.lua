@@ -1421,8 +1421,6 @@ function BuildProgramStartMenu()
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
 --	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
 --		function() RunReplayGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
-		function() RunAchievementsMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
 		function() RunOptionsMenu(); menu:stop(1) end)
 	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
@@ -1470,7 +1468,6 @@ Load("scripts/menus/network.lua")
 Load("scripts/menus/campaign.lua")
 Load("scripts/menus/techtree.lua")
 Load("scripts/menus/quests.lua")
-Load("scripts/menus/achievements.lua")
 Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
