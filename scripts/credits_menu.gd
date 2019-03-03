@@ -5,6 +5,9 @@ var credits_text_node
 var credits_text_shadow_node
 
 func _ready():
+	var command = "SetMusicCondition(10, 1)"
+	wyrmgus.lua_command(command)
+	
 	self.credits_text_node = self.find_node("credits_text")
 	self.credits_text_shadow_node = self.credits_text_node.find_node("text_shadow")
 	
@@ -234,7 +237,6 @@ func _ready():
 	self.credits_text_node.text += "\n  tolua++ Copyright by Codenix"
 	self.credits_text_node.text += "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	
-
 func _process(delta):
 	var v_scroll = self.credits_text_node.get_v_scroll()
 	if (v_scroll.value < v_scroll.max_value):
@@ -242,3 +244,6 @@ func _process(delta):
 		v_scroll.value += value_change
 		self.credits_text_shadow_node.get_v_scroll().value += value_change
 	
+func clean_up():
+	var command = "SetMusicCondition(10, 0)"
+	wyrmgus.lua_command(command)

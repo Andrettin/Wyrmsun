@@ -1429,10 +1429,6 @@ function BuildProgramStartMenu()
 		function() RunModsMenu(0); menu:stop(1) end)
 	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
 		function() RunEncyclopediaMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
-
-	menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
-		function() menu:stop() end)
 
 	return menu:run()
 end
@@ -1457,7 +1453,6 @@ Load("scripts/menus/save.lua")
 Load("scripts/menus/replay.lua")
 Load("scripts/menus/options.lua")
 Load("scripts/menus/editor.lua")
-Load("scripts/menus/credits.lua")
 Load("scripts/menus/game.lua")
 Load("scripts/menus/help.lua")
 Load("scripts/menus/objectives.lua")

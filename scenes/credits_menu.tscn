@@ -53,4 +53,6 @@ bbcode_text = ""
 text = ""
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
+[connection signal="tree_exiting" from="." to="." method="clean_up"]
+
 
