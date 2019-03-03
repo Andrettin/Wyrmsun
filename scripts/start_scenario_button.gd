@@ -1,7 +1,6 @@
 extends "res://scripts/button.gd"
 
 func _ready():
-	._ready()
 	self.connect("pressed", self, "start_scenario")
 
 func start_scenario():
