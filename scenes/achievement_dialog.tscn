@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://shortcut_c.tres" type="ShortCut" id=7]
 
-[node name="achievement_dialog" type="Control"]
+[node name="achievement_dialog" type="Popup"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -24,8 +24,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+popup_exclusive = true
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Pause", "Popup", "Rect", "Theme", "Visibility" ]
 
 [node name="panel" parent="." instance=ExtResource( 2 )]
 

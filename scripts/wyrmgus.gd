@@ -111,4 +111,3 @@ func initialize_player_colors():
 		Color("30350b"),
 		Color("181a05")
 	]
-	

@@ -9,7 +9,7 @@ func _ready():
 	wyrmgus.lua_command(command)
 	
 	self.achievements = wyrmgus.get_achievements()
-	var menu_area_node = self.find_node("menu_area")
+	var menu_area = self.find_node("menu_area")
 	
 	var item_x = 1
 	var item_y = 1
@@ -18,7 +18,7 @@ func _ready():
 			continue
 		
 		var achievement_button = load("res://scenes/icon_button.tscn").instance()
-		menu_area_node.add_child(achievement_button)
+		menu_area.add_child(achievement_button)
 		
 		var graphics_file = achievement.get_icon().get_file()
 		if (graphics_file.find("dlcs/") != -1):
@@ -41,8 +41,9 @@ func _ready():
 		if (item_x > 9):
 			item_x = 1
 			item_y = item_y + 1
-
+	
 func show_achievement_dialog(achievement):
 	var achievement_dialog = load("res://scenes/achievement_dialog.tscn").instance()
 	self.add_child(achievement_dialog)
 	achievement_dialog.set_achievement(achievement)
+	achievement_dialog.popup()
