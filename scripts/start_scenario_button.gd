@@ -1,6 +1,10 @@
 extends "res://scripts/button.gd"
 
-func _pressed():
+func _ready():
+	._ready()
+	self.connect("pressed", self, "start_scenario")
+
+func start_scenario():
 	var command = "RunningScenario = true"
 	command += "\nGetMapInfo(\"scripts/map_templates/campaign.smp\")"
 	command += "\nGameSettings.NoRandomness = wyr.preferences.NoRandomness"

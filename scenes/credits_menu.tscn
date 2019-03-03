@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/credits_menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/backgrounds/wyrmsun_sepia.png" type="Texture" id=3]
 [ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=6]
-[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://shortcut_p.tres" type="ShortCut" id=6]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=7]
+[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=8]
 
 [node name="credits_menu" type="Control"]
 
@@ -35,12 +36,13 @@ margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
-script = ExtResource( 6 )
+shortcut = ExtResource( 6 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "main_menu"
 
-[node name="credits_text" parent="menu_area" instance=ExtResource( 7 )]
+[node name="credits_text" parent="menu_area" instance=ExtResource( 8 )]
 
 anchor_right = 1.0
 margin_left = 156.0

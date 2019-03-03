@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/backgrounds/wyrmsun_sepia.png" type="Texture" id=2]
@@ -6,10 +6,13 @@
 [ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=6]
-[ext_resource path="res://scripts/exit_button.gd" type="Script" id=7]
-[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=8]
-[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=9]
-[ext_resource path="res://scripts/version_label.gd" type="Script" id=10]
+[ext_resource path="res://shortcut_a.tres" type="ShortCut" id=7]
+[ext_resource path="res://shortcut_c.tres" type="ShortCut" id=8]
+[ext_resource path="res://shortcut_x.tres" type="ShortCut" id=9]
+[ext_resource path="res://scripts/exit_button.gd" type="Script" id=10]
+[ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=11]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=12]
+[ext_resource path="res://scripts/version_label.gd" type="Script" id=13]
 
 [node name="main_menu" type="Control"]
 
@@ -60,6 +63,7 @@ margin_left = 208.0
 margin_top = 284.0
 margin_right = 432.0
 margin_bottom = 312.0
+shortcut = ExtResource( 7 )
 script = ExtResource( 6 )
 button_text = "~!Achievements"
 target_scene = "achievements_menu"
@@ -94,6 +98,7 @@ margin_left = 208.0
 margin_top = 428.0
 margin_right = 432.0
 margin_bottom = 456.0
+shortcut = ExtResource( 8 )
 script = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "En~!cyclopedia"
@@ -115,11 +120,12 @@ margin_left = 208.0
 margin_top = 500.0
 margin_right = 432.0
 margin_bottom = 528.0
-script = ExtResource( 7 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
+shortcut = ExtResource( 9 )
+script = ExtResource( 10 )
+_sections_unfolded = [ "Anchor", "Margin", "Mouse", "Pause", "Rect", "Size Flags", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "E~!xit"
 
-[node name="copyright_label" parent="." instance=ExtResource( 8 )]
+[node name="copyright_label" parent="." instance=ExtResource( 11 )]
 
 anchor_top = 1.0
 anchor_right = 1.0
@@ -127,12 +133,12 @@ anchor_bottom = 1.0
 margin_top = -42.0
 margin_right = 0.0
 margin_bottom = -18.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 12 )
 bbcode_text = "[center]Copyright (c) 2013-2019 by Andrettin[/center]"
 text = "Copyright (c) 2013-2019 by Andrettin"
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="version_label" parent="." instance=ExtResource( 8 )]
+[node name="version_label" parent="." instance=ExtResource( 11 )]
 
 anchor_left = 1.0
 anchor_top = 1.0
@@ -144,7 +150,7 @@ margin_right = -18.0
 margin_bottom = -18.0
 bbcode_text = "v1.0.0"
 text = "v1.0.0"
-script = ExtResource( 10 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 
