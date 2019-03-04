@@ -24,24 +24,27 @@ void fragment()
 {
 	vec4 color = texture(TEXTURE, UV);
 	
-	if (color.rgb == source_player_color_1.rgb) {
-		color.rgb = target_player_color_1.rgb;
-	} else if (color.rgb == source_player_color_2.rgb) {
-		color.rgb = target_player_color_2.rgb;
-	} else if (color.rgb == source_player_color_3.rgb) {
-		color.rgb = target_player_color_3.rgb;
-	} else if (color.rgb == source_player_color_4.rgb) {
-		color.rgb = target_player_color_4.rgb;
-	} else if (color.rgb == source_player_color_5.rgb) {
-		color.rgb = target_player_color_5.rgb;
-	} else if (color.rgb == source_player_color_6.rgb) {
-		color.rgb = target_player_color_6.rgb;
-	} else if (color.rgb == source_player_color_7.rgb) {
-		color.rgb = target_player_color_7.rgb;
-	} else if (color.rgb == source_player_color_8.rgb) {
-		color.rgb = target_player_color_8.rgb;
-	} else if (color.rgb == source_player_color_9.rgb) {
-		color.rgb = target_player_color_9.rgb;
+	// if there are valid player source colors
+	if (source_player_color_1.rgb != vec3(0, 0, 0)) {
+		if (color.rgb == source_player_color_1.rgb) {
+			color.rgb = target_player_color_1.rgb;
+		} else if (color.rgb == source_player_color_2.rgb) {
+			color.rgb = target_player_color_2.rgb;
+		} else if (color.rgb == source_player_color_3.rgb) {
+			color.rgb = target_player_color_3.rgb;
+		} else if (color.rgb == source_player_color_4.rgb) {
+			color.rgb = target_player_color_4.rgb;
+		} else if (color.rgb == source_player_color_5.rgb) {
+			color.rgb = target_player_color_5.rgb;
+		} else if (color.rgb == source_player_color_6.rgb) {
+			color.rgb = target_player_color_6.rgb;
+		} else if (color.rgb == source_player_color_7.rgb) {
+			color.rgb = target_player_color_7.rgb;
+		} else if (color.rgb == source_player_color_8.rgb) {
+			color.rgb = target_player_color_8.rgb;
+		} else if (color.rgb == source_player_color_9.rgb) {
+			color.rgb = target_player_color_9.rgb;
+		}
 	}
 	
     COLOR = vec4(color.rgb, 1);
