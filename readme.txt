@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Green slimes now possess a new icon.
+- Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
