@@ -82,8 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
 * Units
-- Green slimes now possess a new icon.
+- Green Slimes now possess a new icon.
 - Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
+- New icon for the Goblin Militia.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
