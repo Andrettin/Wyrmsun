@@ -1,4 +1,4 @@
-extends WyrmgusModule
+extends Wyrmgus
 
 var wyrmgus_thread
 
