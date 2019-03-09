@@ -25,57 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesPhylum("demonia", {
-	Name = "Demonia",
-	Kingdom = "aetheria"
-})
-
-DefineSpeciesClass("acedia", {
-	Name = "Acedia", -- "sloth" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("avaritia", {
-	Name = "Avaritia", -- "greed" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("gula", {
-	Name = "Gula", -- "gluttony" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("invidia", {
-	Name = "Invidia", -- "envy" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("ira", {
-	Name = "Ira", -- "wrath" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("luxuria", {
-	Name = "Luxuria", -- "lust" in Latin
-	Phylum = "demonia"
-})
-
-DefineSpeciesClass("superbia", {
-	Name = "Superbia", -- "pride" in Latin
-	Phylum = "demonia"
-})
-
 DefineSpecies("imp", {
 	Name = "Imp",
-	-- Class: Invidia
+	Category = "invidia",
 	HomePlane = "hell",
 	Sapient = true
 })
 
 DefineSpecies("ixthala-demon", { -- from Wesnoth
 	Name = "Ixthala Demon",
-	-- Class: Ira
---	Category = "ixthala",
+	Category = "ira",
+--	Category = "ixthala", -- genus
 --	ScientificName = "ignis",
 	HomePlane = "hell",
 	Sapient = true
@@ -83,7 +43,7 @@ DefineSpecies("ixthala-demon", { -- from Wesnoth
 
 DefineSpecies("succubus", {
 	Name = "Succubus",
-	-- Class: Luxuria
+	Category = "luxuria",
 	HomePlane = "hell",
 	Sapient = true
 })

@@ -46,13 +46,6 @@ function DefineSpecies(species, data)
 	OldDefineSpecies(species, data)
 end
 
-DefineSpeciesPhylum("chordata", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
-	Name = "Chordata",
-	Kingdom = "animalia",
-	Subkingdom = "bilateria",
-	Infrakingdom = "deuterostomia"
-})
-
 DefineSpecies("bee", {
 	Name = "Bee",
 	Homeworld = "earth",

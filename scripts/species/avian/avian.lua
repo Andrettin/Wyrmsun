@@ -25,29 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesClass("aves", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174371
-	Name = "Aves",
-	Phylum = "chordata",
-	Subphylum = "vertebrata",
-	Infraphylum = "gnathostomata",
-	Superclass = "tetrapoda"
-})
-
-DefineSpeciesOrder("accipitriformes", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=823961
-	Name = "Accipitriformes",
-	Class = "aves"
-})
-
-DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175280
-	Name = "Accipitridae",
-	Order = "accipitriformes"
-})
-
-DefineSpeciesGenus("haliaeetus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175418
-	Name = "Haliaeetus",
-	Family = "accipitridae"
-})
-
 DefineSpecies("archaeopteryx", {
 	Name = "Archaeopteryx",
 	Homeworld = "earth",

@@ -25,59 +25,37 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesPhylum("elementia", {
-	Name = "Elementia",
-	Kingdom = "aetheria"
-})
-
-DefineSpeciesClass("aer", {
-	Name = "Aer", -- "air" in Latin
-	Phylum = "elementia"
-})
-
-DefineSpeciesClass("aqua", {
-	Name = "Aqua", -- "water" in Latin
-	Phylum = "elementia"
-})
-
-DefineSpeciesClass("ignis", {
-	Name = "Ignis", -- "fire" in Latin
-	Phylum = "elementia"
-})
-
-DefineSpeciesClass("terra", {
-	Name = "Terra", -- "earth" in Latin
-	Phylum = "elementia"
-})
-
 DefineSpecies("air-elemental", {
 	Name = "Air Elemental",
+	Category = "aer",
 	HomePlane = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("djinn", {
 	Name = "Djinn",
-	-- Class: Aer
+	Category = "aer",
 	HomePlane = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("earth-elemental", {
 	Name = "Earth Elemental",
+	Category = "terra",
 	HomePlane = "tartarus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("efreet", {
 	Name = "Efreet",
-	-- Class: Ignis
+	Category = "ignis",
 	HomePlane = "hades", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("fire-elemental", {
 	Name = "Fire Elemental",
+	Category = "ignis",
 	HomePlane = "muspelheim",
 	Sapient = true
 })
@@ -90,12 +68,14 @@ DefineSpecies("ice-elemental", {
 
 DefineSpecies("phoenix", {
 	Name = "Phoenix",
+	Category = "ignis",
 	HomePlane = "muspelheim",
 	Sapient = true
 })
 
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
+	Category = "aqua",
 	HomePlane = "nun",
 	Sapient = true
 })

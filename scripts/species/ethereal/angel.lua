@@ -25,11 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesPhylum("angelia", {
-	Name = "Angelia",
-	Kingdom = "aetheria"
-})
-
 DefineSpecies("angel", {
 	Name = "Angel",
 	HomePlane = "heaven",
@@ -41,4 +36,3 @@ DefineSpecies("archangel", {
 	HomePlane = "heaven",
 	Sapient = true
 })
-

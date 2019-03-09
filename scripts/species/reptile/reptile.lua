@@ -25,45 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesClass("reptilia", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173747
-	Name = "Reptilia",
-	Phylum = "chordata",
-	Subphylum = "vertebrata",
-	Infraphylum = "gnathostomata",
-	Superclass = "tetrapoda"
-})
-
-DefineSpeciesOrder("saurischia", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Saurischia
-	Name = "Saurischia",
-	Class = "reptilia"
-})
-
-DefineSpeciesOrder("synapsida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Synapsida+(awaiting+allocation)
-	Name = "Synapsida",
-	Class = "reptilia"
-})
-
-DefineSpeciesFamily("synapsida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=116313
-	Name = "Synapsida",
-	Order = "synapsida"
-})
-
-DefineSpeciesFamily("tyrannosauridae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=116228
-	Name = "Tyrannosauridae",
-	Order = "saurischia"
-})
-
-DefineSpeciesGenus("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
-	Name = "Adelobasileus",
-	Family = "synapsida"
-})
-	
-DefineSpeciesGenus("tyrannosaurus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=38613
-	Name = "Tyrannosaurus",
-	CommonName = "Tyrannosaur",
-	Family = "tyrannosauridae"
-})
-
 DefineSpecies("edaphosaurus", {
 	Name = "Edaphosaurus",
 	Homeworld = "earth",
