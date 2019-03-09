@@ -25,36 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("proboscidea", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Proboscidea",
-	Class = "mammalia"
-})
-
-DefineSpeciesFamily("gomphotheriidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
-	Name = "Gomphotheriidae",
-	Order = "proboscidea"
-})
-
-DefineSpeciesGenus("eritherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
-	Name = "Eritherium",
---	Order = "proboscidea"
-})
-
-DefineSpeciesGenus("gomphotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 50-51.
-	Name = "Gomphotherium",
-	Family = "gomphotheriidae"
-})
-
-DefineSpeciesGenus("numidotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
-	Name = "Numidotherium",
---	Order = "proboscidea"
-})
-
-DefineSpeciesGenus("tetralophodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 50-51.
-	Name = "Tetralophodon",
-	Family = "gomphotheriidae"
-})
-
 DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
 	Name = "Eritherium", -- Eritherium azzouzorum
 	Category = "eritherium",

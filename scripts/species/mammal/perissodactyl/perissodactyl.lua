@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("perissodactyla", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180687
-	Name = "Perissodactyla",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
-DefineSpeciesFamily("chalicotheriidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Chalicotheriidae",
-	Order = "perissodactyla"
-})
-
-DefineSpeciesFamily("tapiridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Tapiridae",
-	Order = "perissodactyla"
-})
-
-DefineSpeciesGenus("chalicotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 52.
-	Name = "Chalicotherium",
-	Family = "chalicotheriidae"
-})
-
 DefineSpecies("palaeotherium", {
 	Name = "Palaeotherium",
 	Homeworld = "earth",

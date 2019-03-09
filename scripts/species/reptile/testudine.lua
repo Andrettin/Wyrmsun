@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("testudines", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=56475
-	Name = "Testudines",
-	Class = "reptilia"
-})
-
-DefineSpeciesFamily("testudinidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37739
-	Name = "Testudinidae",
-	Order = "testudines",
-	Suborder = "cryptodira",
-	Superfamily = "testudinoidea"
-})
-
-DefineSpeciesGenus("cheirogaster", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 35; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039
-	Name = "Cheirogaster",
---	Order = "testudines"
-})
-
-DefineSpeciesGenus("geochelone", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173853
-	Name = "Geochelone",
-	Family = "testudinidae"
-})
-
 DefineSpecies("cheirogaster-bolivari", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 35.
 	Name = "Cheirogaster", -- Giant Tortoise
 	Category = "cheirogaster", -- on page 18 the species is given as "Geochelone bolivari" (with a reconstruction being provided), but on page 35 the same reconstruction is assigned to the Cheirogaster genus, of fossils "found in the Bolívar street"; furthermore, in fossilworks.org (http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039) there is no entry for a Geochelone bolivari, but there is a Cheirogaster bolivari
