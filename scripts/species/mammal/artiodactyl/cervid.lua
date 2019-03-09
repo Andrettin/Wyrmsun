@@ -25,27 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("cervidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180693
-	Name = "Cervidae",
-	Order = "artiodactyla"
-})
-
-DefineSpeciesGenus("cervus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180694
-	Name = "Cervus",
-	Family = "cervidae",
-	Subfamily = "cervinae"
-})
-
-DefineSpeciesGenus("heteroprox", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
-	Name = "Heteroprox",
-	Family = "cervidae"
-})
-
-DefineSpeciesGenus("procervulus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
-	Name = "Procervulus",
-	Family = "cervidae"
-})
-
 DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
 	Name = "Heteroprox", -- Heteroprox moralesi
 	Category = "heteroprox",

@@ -25,41 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("bovidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180704
-	Name = "Bovidae",
-	Order = "artiodactyla"
-})
-
-DefineSpeciesGenus("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
-	Name = "Aragoral",
-	Family = "bovidae",
-	Subfamily = "caprinae"
-})
-
-DefineSpeciesGenus("bos", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183837
-	Name = "Bos",
-	Family = "bovidae",
-	Subfamily = "bovinae"
-})
-	
-DefineSpeciesGenus("capra", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180714
-	Name = "Capra",
-	Family = "bovidae",
-	Subfamily = "caprinae"
-})
-	
-DefineSpeciesGenus("eale", {
-	Name = "Eale",
-	CommonName = "Yale",
-	Family = "bovidae",
-	Subfamily = "caprinae"
-})
-	
-DefineSpeciesGenus("tethytragus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 60-61.
-	Name = "Tethytragus",
-	Family = "bovidae"
-})
-
 DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
 	Name = "Aragoral",
 	Category = "aragoral",

@@ -25,23 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("gryphidae", {
-	Name = "Gryphidae",
-	Order = "accipitriformes"
-})
-
-DefineSpeciesGenus("gryphus", {
-	Name = "Gryphus", -- "gryphon" in Latin
-	CommonName = "Gryphon",
-	Family = "gryphidae"
-})
-
-DefineSpeciesGenus("hippogryphus", {
-	Name = "Hippogryphus", -- rendering of "hippogryph" in Latin
-	CommonName = "Hippogryph",
-	Family = "gryphidae"
-})
-
 DefineSpecies("gryphon", {
 	Name = "Gryphon",
 	Category = "gryphus",

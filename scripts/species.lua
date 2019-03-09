@@ -29,23 +29,6 @@
 
 -- Note: When assigning species to fictional worlds, it is best to keep all species of the same genus in a single world.
 
-if (OldDefineSpecies == nil) then
-	OldDefineSpecies = DefineSpecies
-end
-
-function DefineSpecies(species, data)
-	if (data.Genus ~= nil) then
-		local preliminary_data = {}
-		if (data.Genus ~= nil) then -- define just with the genus first, so that it can be used for the name pattern assignment
-			preliminary_data.Genus = data.Genus
-		end
-		OldDefineSpecies(species, preliminary_data)
-		data.Genus = nil
-	end
-	
-	OldDefineSpecies(species, data)
-end
-
 DefineSpecies("bee", {
 	Name = "Bee",
 	Homeworld = "earth",

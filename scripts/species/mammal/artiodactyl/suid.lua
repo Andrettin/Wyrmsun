@@ -25,41 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("suidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180720
-	Name = "Suidae",
-	Order = "artiodactyla"
-})
-
-DefineSpeciesGenus("bunolistriodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
-	Name = "Bunolistriodon",
-	Family = "suidae",
-	Subfamily = "listriodontinae"
-})
-
-DefineSpeciesGenus("conohyus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
-	Name = "Conohyus",
-	Family = "suidae",
-	Subfamily = "tetraconodontinae"
-})
-
-DefineSpeciesGenus("microstonyx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
-	Name = "Microstonyx",
-	Family = "suidae"
-})
-
-DefineSpeciesGenus("seta", { -- fictional genus
-	Name = "Seta",
-	Family = "suidae"
-})
-
-DefineSpeciesGenus("sus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180721
-	Name = "Sus",
-	CommonName = "Pig",
-	Family = "suidae",
-	Subfamily = "suinae",
-	Tribe = "suini"
-})
-
 DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
 	Name = "Bunolistriodon", -- Bunolistriodon lockarti
 	Category = "bunolistriodon",
