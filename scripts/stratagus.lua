@@ -88,8 +88,6 @@ SetTitleScreens(
 SetGameName("wyr")
 SetFullGameName(wyrmsun.Name)
 
-SetMenuRace("dwarf")
-
 SetSelectionStyle("corners")
 Preference.ShowSightRange = false
 Preference.ShowAttackRange = false
