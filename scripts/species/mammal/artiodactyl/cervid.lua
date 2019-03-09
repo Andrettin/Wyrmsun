@@ -48,8 +48,8 @@ DefineSpeciesGenus("procervulus", { -- Source: Mauricio Antón and Jorge Morales
 
 DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
 	Name = "Heteroprox", -- Heteroprox moralesi
-	Genus = "heteroprox",
-	Species = "moralesi",
+	Category = "heteroprox",
+	ScientificName = "Heteroprox moralesi",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
@@ -63,8 +63,8 @@ DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Mora
 
 DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
 	Name = "Procervulus", -- Procervulus dichotomus
-	Genus = "procervulus",
-	Species = "dichotomus",
+	Category = "procervulus",
+	ScientificName = "Procervulus dichotomus",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
@@ -77,8 +77,8 @@ DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge M
 
 DefineSpecies("deer", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180695
 	Name = "Deer", -- Red Deer
-	Genus = "cervus",
-	Species = "elaphus",
+	Category = "cervus",
+	ScientificName = "Cervus elaphus",
 	Homeworld = "earth",
 	EvolvesFrom = {"heteroprox-moralesi", "procervulus-dichotomus"}, -- earlier cervids
 	Era = "holocene",

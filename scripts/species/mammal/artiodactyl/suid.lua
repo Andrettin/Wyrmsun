@@ -62,8 +62,8 @@ DefineSpeciesGenus("sus", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 
 DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
 	Name = "Bunolistriodon", -- Bunolistriodon lockarti
-	Genus = "bunolistriodon",
-	Species = "lockarti",
+	Category = "bunolistriodon",
+	ScientificName = "Bunolistriodon lockarti",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
@@ -77,8 +77,8 @@ DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge 
 
 DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
 	Name = "Conohyus", -- Conohyus simorrense
-	Genus = "conohyus",
-	Species = "simorrense",
+	Category = "conohyus",
+	ScientificName = "Conohyus simorrense",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
@@ -93,8 +93,8 @@ DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Mora
 
 DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
 	Name = "Microstonyx", -- Microstonyx major
-	Genus = "microstonyx",
-	Species = "major",
+	Category = "microstonyx",
+	ScientificName = "Microstonyx major",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
@@ -108,8 +108,8 @@ DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morale
 
 DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
 	Name = "Boar",
-	Genus = "sus",
-	Species = "scrofa",
+	Category = "sus",
+	ScientificName = "Sus scrofa",
 	Homeworld = "earth",
 	Terrains = {"grass"},
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
@@ -119,8 +119,8 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 
 DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mythology) Gullinbursti
 	Name = "Gullinbursti",
-	Genus = "seta", -- "bristle" in Latin
-	Species = "aurea", -- "golden" in Latin
+	Category = "seta",
+	ScientificName = "Seta aurea", -- "seta" means "bristle" in Latin; "aurea" means "golden" in Latin
 	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "mud"}, -- should be dark dirt instead of dry-mud and mud
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids

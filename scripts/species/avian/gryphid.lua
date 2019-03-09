@@ -44,8 +44,8 @@ DefineSpeciesGenus("hippogryphus", {
 
 DefineSpecies("gryphon", {
 	Name = "Gryphon",
-	Genus = "gryphus",
-	Species = "leo", -- "lion" in Latin
+	Category = "gryphus",
+	ScientificName = "Gryphus leo", -- "leo" means "lion" in Latin
 	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock", "snow"}, -- should be dark dirt instead of dry mud and mud
 	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
@@ -56,8 +56,8 @@ DefineSpecies("gryphon", {
 
 DefineSpecies("hippogryph", {
 	Name = "Hippogryph",
-	Genus = "hippogryphus",
-	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
+	Category = "hippogryphus",
+	ScientificName = "Hippogryphus equus", -- "equus" means "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
 	Homeworld = "alfheim",
 	Terrains = {"grass", "dirt", "fairlimbed-tree", "rock"},
 	EvolvesFrom = {"hoatzin"}, -- the Hippogryph has a common ancestor with eagles

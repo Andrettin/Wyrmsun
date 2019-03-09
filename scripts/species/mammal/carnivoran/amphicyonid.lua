@@ -49,8 +49,8 @@ DefineSpeciesGenus("magericyon", { -- Source: Mauricio Antón and Jorge Morales,
 
 DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
 	Name = "Giant Amphicyon", -- Amphicyon giganteus
-	Genus = "amphicyon",
-	Species = "giganteus",
+	Category = "amphicyon",
+	ScientificName = "Amphicyon giganteus",
 	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle Miocene
@@ -62,8 +62,8 @@ DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Mora
 
 DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 42-43.
 	Name = "Amphicyon", -- Amphicyon major
-	Genus = "amphicyon",
-	Species = "major",
+	Category = "amphicyon",
+	ScientificName = "Amphicyon major",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
@@ -79,8 +79,8 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 
 DefineSpecies("daphoenodon-superbus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
 	Name = "Daphoenodon", -- Daphoenodon superbus
-	Genus = "daphoenodon",
-	Species = "superbus",
+	Category = "daphoenodon",
+	ScientificName = "Daphoenodon superbus",
 	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Lower Miocene
@@ -91,9 +91,9 @@ DefineSpecies("daphoenodon-superbus", { -- Source: Mauricio Antón and Jorge Mor
 })
 
 DefineSpecies("magericyon-anceps", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 43.
-	Name = "Magericyon", -- Magericyon anceps
-	Genus = "magericyon",
-	Species = "anceps", -- "cutting" in Latin
+	Name = "Magericyon",
+	Category = "magericyon",
+	ScientificName = "Magericyon anceps", -- "anceps" means "cutting" in Latin
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},

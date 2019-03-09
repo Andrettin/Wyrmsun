@@ -48,8 +48,8 @@ DefineSpeciesGenus("simocyon", { -- Source: Mauricio Antón and Jorge Morales, "
 
 DefineSpecies("amphictis-ambiguus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 40.
 	Name = "Amphictis",
-	Genus = "amphictis",
-	Species = "ambiguus",
+	Category = "amphictis",
+	ScientificName = "Amphictis ambiguus",
 	Homeworld = "earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
@@ -63,8 +63,8 @@ DefineSpecies("amphictis-ambiguus", { -- Source: Mauricio Antón and Jorge Moral
 
 DefineSpecies("magerictis-imperialensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 40-41.
 	Name = "Magerictis", -- Magerictis imperialensis
-	Genus = "magerictis",
-	Species = "imperialensis",
+	Category = "magerictis",
+	ScientificName = "Magerictis imperialensis",
 	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
 	Era = "miocene", -- Middle Miocene
@@ -76,8 +76,8 @@ DefineSpecies("magerictis-imperialensis", { -- Source: Mauricio Antón and Jorge
 
 DefineSpecies("simocyon-batalleri", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 41.
 	Name = "Simocyon", -- Simocyon batalleri
-	Genus = "simocyon",
-	Species = "batalleri",
+	Category = "simocyon",
+	ScientificName = "Simocyon batalleri",
 	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
 	Era = "miocene", -- Upper Miocene

@@ -83,8 +83,8 @@ DefineSpecies("ischyromys", {
 
 DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37.
 	Name = "Megacricetodon", -- Megacricetodon collongensis
-	Genus = "megacricetodon",
-	Species = "collongensis",
+	Category = "megacricetodon",
+	ScientificName = "Megacricetodon collongensis",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"ischyromys"},
@@ -122,8 +122,8 @@ DefineSpecies("mouse", {
 
 DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
 	Name = "Rat",
-	Genus = "rattus",
-	Species = "norvegicus",
+	Category = "rattus",
+	ScientificName = "Rattus norvegicus",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "cave-floor", "rockbound-cave-floor"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
@@ -132,8 +132,8 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 
 DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
 	Name = "Squirrel", -- Eurasian Red Squirrel
-	Genus = "sciurus",
-	Species = "vulgaris",
+	Category = "sciurus",
+	ScientificName = "Sciurus vulgaris",
 	Homeworld = "earth",
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"

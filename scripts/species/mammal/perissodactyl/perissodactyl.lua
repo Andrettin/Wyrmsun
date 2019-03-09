@@ -73,8 +73,8 @@ DefineSpecies("indricotherium", {
 
 DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 52.
 	Name = "Chalicotherium", -- Chalicotherium grande
-	Genus = "chalicotherium",
-	Species = "grande",
+	Category = "chalicotherium",
+	ScientificName = "Chalicotherium grande",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},

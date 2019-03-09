@@ -57,8 +57,8 @@ DefineSpeciesGenus("tetralophodon", { -- Source: Mauricio Antón and Jorge Moral
 
 DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
 	Name = "Eritherium", -- Eritherium azzouzorum
-	Genus = "eritherium",
-	Species = "azzouzorum",
+	Category = "eritherium",
+	ScientificName = "Eritherium azzouzorum",
 	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
 	Era = "paleocene",
@@ -71,8 +71,8 @@ DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Mo
 
 DefineSpecies("numidotherium-koholense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
 	Name = "Numidotherium", -- Numidotherium koholense
-	Genus = "numidotherium",
-	Species = "koholense",
+	Category = "numidotherium",
+	ScientificName = "Numidotherium koholense",
 	Homeworld = "earth",
 	EvolvesFrom = {"eritherium-azzouzorum"}, -- earlier proboscid
 	Era = "eocene", -- Middle Eocene
@@ -91,8 +91,8 @@ DefineSpecies("phiomia", {
 
 DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 50-51.
 	Name = "Gomphotherium", -- Gomphotherium angustidens
-	Genus = "gomphotherium",
-	Species = "angustidens",
+	Category = "gomphotherium",
+	ScientificName = "Gomphotherium angustidens",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
@@ -108,8 +108,8 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 
 DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 50-51.
 	Name = "Tetralophodon", -- Tetralophodon longirostris
-	Genus = "tetralophodon",
-	Species = "longirostris",
+	Category = "tetralophodon",
+	ScientificName = "Tetralophodon longirostris",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids

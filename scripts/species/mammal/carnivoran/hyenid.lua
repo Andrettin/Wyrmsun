@@ -38,8 +38,8 @@ DefineSpeciesGenus("protictitherium", { -- Source: Mauricio Antón and Jorge Mor
 
 DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39.
 	Name = "Protictitherium", -- Protictitherium crassum
-	Genus = "protictitherium",
-	Species = "crassum",
+	Category = "protictitherium",
+	ScientificName = "Protictitherium crassum",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},

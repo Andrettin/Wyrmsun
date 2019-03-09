@@ -43,8 +43,8 @@ DefineSpeciesGenus("indarctos", { -- Source: Mauricio Antón and Jorge Morales, 
 
 DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 44-45.
 	Name = "Hemicyon", -- Hemicyon sansaniense
-	Genus = "hemicyon",
-	Species = "sansaniense",
+	Category = "hemicyon",
+	ScientificName = "Hemicyon sansaniense",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},

@@ -90,8 +90,8 @@ DefineSpecies("hoatzin", {
 
 DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
 	Name = "Eagle", -- Bald Eagle
-	Genus = "haliaeetus",
-	Species = "leucocephalus",
+	Category = "haliaeetus",
+	ScientificName = "Haliaeetus leucocephalus",
 	Homeworld = "earth",
 --	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"hoatzin"},

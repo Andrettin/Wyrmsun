@@ -75,8 +75,8 @@ DefineSpeciesGenus("schizaelurus", { -- Source: Mauricio Antón and Jorge Morale
 
 DefineSpecies("proailurus-lemanensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 46.
 	Name = "Proailurus", -- Proailurus lemanensis
-	Genus = "proailurus",
-	Species = "lemanensis",
+	Category = "proailurus",
+	ScientificName = "Proailurus lemanensis",
 	Homeworld = "earth",
 	EvolvesFrom = {"nimravus"}, -- earlier feliform
 	Era = "oligocene", -- Upper Oligocene
@@ -88,8 +88,8 @@ DefineSpecies("proailurus-lemanensis", { -- Source: Mauricio Antón and Jorge Mo
 
 DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46-47.
 	Name = "Felis", -- Felis attica
-	Genus = "felis",
-	Species = "attica",
+	Category = "felis",
+	ScientificName = "Felis attica",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
@@ -103,8 +103,8 @@ DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "M
 
 DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 48-49.
 	Name = "Machairodus", -- Machairodus aphanistus
-	Genus = "machairodus",
-	Species = "aphanistus",
+	Category = "machairodus",
+	ScientificName = "Machairodus aphanistus",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
@@ -120,8 +120,8 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 
 DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 48-49.
 	Name = "Pristinosmilus", -- Pristinosmilus ogygia
-	Genus = "pristinosmilus",
-	Species = "ogygia",
+	Category = "pristinosmilus",
+	ScientificName = "Pristinosmilus ogygia",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
@@ -137,8 +137,8 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 
 DefineSpecies("pseudaelurus-quadridentatus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46, 48.
 	Name = "Pseudaelurus", -- Pseudaelurus quadridentatus
-	Genus = "pseudaelurus",
-	Species = "quadridentatus",
+	Category = "pseudaelurus",
+	ScientificName = "Pseudaelurus quadridentatus",
 	Homeworld = "earth",
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene", -- Middle Miocene
@@ -152,8 +152,8 @@ DefineSpecies("pseudaelurus-quadridentatus", { -- Source: Mauricio Antón and Jo
 
 DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46-47.
 	Name = "Schizaelurus", -- Schizaelurus lorteti
-	Genus = "schizaelurus",
-	Species = "lorteti",
+	Category = "schizaelurus",
+	ScientificName = "Schizaelurus lorteti",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
@@ -168,8 +168,8 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 
 DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183803
 	Name = "Lion",
-	Genus = "panthera",
-	Species = "leo",
+	Category = "panthera",
+	ScientificName = "Panthera leo",
 	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
 	Era = "holocene",
@@ -186,8 +186,8 @@ DefineSpecies("sabertooth", {
 
 DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805
 	Name = "Tiger",
-	Genus = "panthera",
-	Species = "tigris",
+	Category = "panthera",
+	ScientificName = "Panthera tigris",
 	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
 	Era = "holocene",

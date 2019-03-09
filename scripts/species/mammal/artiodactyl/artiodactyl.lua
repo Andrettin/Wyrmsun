@@ -103,7 +103,7 @@ DefineSpecies("diacodexis", {
 
 DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
 	Name = "Helohyus",
-	Genus = "helohyus",
+	Category = "helohyus",
 	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "phenacodus"},
 	Era = "eocene",
@@ -114,8 +114,8 @@ DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
 	Name = "Cainotherium",
-	Genus = "cainotherium",
-	Species = "miocaenicum",
+	Category = "cainotherium",
+	ScientificName = "Cainotherium miocaenicum",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
@@ -126,8 +126,8 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 
 DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
 	Name = "Dorcatherium", -- Dorcatherium crassum
-	Genus = "dorcatherium",
-	Species = "crassum",
+	Category = "dorcatherium",
+	ScientificName = "Dorcatherium crassum",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
@@ -141,8 +141,8 @@ DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Mor
 
 DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
 	Name = "Ilingoceros",
-	Genus = "ilingoceros",
-	Species = "alexandrae", -- type species of the Ilingoceros genus
+	Category = "ilingoceros",
+	ScientificName = "Ilingoceros alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene",
@@ -161,8 +161,8 @@ DefineSpecies("megaloceros", {
 
 DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
 	Name = "Micromeryx", -- Micromeryx azanzae
-	Genus = "micromeryx",
-	Species = "azanzae",
+	Category = "micromeryx",
+	ScientificName = "Micromeryx azanzae",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
@@ -177,8 +177,8 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 
 DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
 	Name = "Micromeryx Soriae", -- Micromeryx soriae
-	Genus = "micromeryx",
-	Species = "soriae",
+	Category = "micromeryx",
+	ScientificName = "Micromeryx soriae",
 	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Upper Vallensian
@@ -188,8 +188,8 @@ DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morale
 
 DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 64-65.
 	Name = "Triceromeryx",
-	Genus = "triceromeryx",
-	Species = "pachecoi",
+	Category = "triceromeryx",
+	ScientificName = "Triceromeryx pachecoi",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},

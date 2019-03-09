@@ -320,8 +320,8 @@ DefineSpecies("triceratops", {
 
 DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=54833 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1206683
 	Name = "Tyrannosaurus Rex",
-	Genus = "tyrannosaurus",
-	Species = "rex",
+	Category = "tyrannosaurus",
+	ScientificName = "Tyrannosaurus rex",
 	Homeworld = "earth",
 	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
 	Era = "cretaceous",
@@ -374,8 +374,8 @@ DefineSpecies("thrinaxodon", {
 
 DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
 	Name = "Adelobasileus",
-	Genus = "adelobasileus",
-	Species = "cromptoni",
+	Category = "adelobasileus",
+	ScientificName = "Adelobasileus cromptoni",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt"}, -- correct?
 	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
@@ -406,7 +406,7 @@ DefineSpecies("hydra", {
 
 DefineSpecies("saurian", { -- from Wesnoth
 	Name = "Saurian",
-	Species = "sapiens",
+--	ScientificName = "? sapiens",
 --	Homeworld = ?
 	Sapient = true
 	-- sapient species evolved from dinosaurs

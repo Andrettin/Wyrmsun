@@ -80,6 +80,11 @@ DefineSpeciesGenus("nanus", {
 	Family = "hominidae"
 })
 
+DefineSpeciesGenus("ogrus", {
+	Name = "Ogrus",
+	CommonName = "Ogroid"
+})
+
 DefineSpeciesGenus("orcus", {
 	Name = "Orcus", -- "orc" in Latin
 	CommonName = "Orcoid"
@@ -124,8 +129,8 @@ DefineSpecies("chimpanzee", {
 
 DefineSpecies("australopithecus", {
 	Name = "Australopithecus",
-	Genus = "australopithecus",
-	Species = "afarensis", -- the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
+	Category = "australopithecus",
+	ScientificName = "Australopithecus afarensis", -- the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
 	Homeworld = "earth",
 	EvolvesFrom = {"dryopithecus"},
 	Prehistoric = true,
@@ -134,8 +139,8 @@ DefineSpecies("australopithecus", {
 
 DefineSpecies("cyclops", {
 	Name = "Cyclops",
-	Genus = "gigans", -- "giant" in Latin; cyclops are of the same genus as ettins
-	Species = "cyclops",
+	Category = "gigans", -- "gigans" means "giant" in Latin; cyclops are of the same genus as ettins
+	ScientificName = "Gigans cyclops",
 	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
@@ -143,8 +148,8 @@ DefineSpecies("cyclops", {
 
 DefineSpecies("derro", {
 	Name = "Derro",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "detrimenti", -- "detrimental" in Latin
+	Category = "gnomus", -- "gnome" in Latin
+	ScientificName = "Gnomus detrimenti", -- "detrimenti" means "detrimental" in Latin
 	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
@@ -154,8 +159,8 @@ DefineSpecies("derro", {
 
 DefineSpecies("dwarf", {
 	Name = "Dwarf",
-	Genus = "nanus", -- "dwarf" in Latin
-	Species = "sapiens",
+	Category = "nanus", -- "dwarf" in Latin
+	ScientificName = "Nanus sapiens",
 	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
@@ -165,8 +170,8 @@ DefineSpecies("dwarf", {
 
 DefineSpecies("elf", {
 	Name = "Elf",
-	Genus = "alfus", -- "elf" in Latin
-	Species = "sapiens",
+	Category = "alfus", -- "elf" in Latin
+	ScientificName = "Alfus sapiens",
 	Homeworld = "alfheim",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
 	Era = "holocene",
@@ -175,8 +180,8 @@ DefineSpecies("elf", {
 
 DefineSpecies("ettin", {
 	Name = "Ettin",
-	Genus = "gigans", -- "giant" in Latin
-	Species = "sapiens",
+	Category = "gigans", -- "gigans" means "giant" in Latin
+	ScientificName = "Gigans sapiens",
 	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
@@ -184,8 +189,8 @@ DefineSpecies("ettin", {
 
 DefineSpecies("gnome", {
 	Name = "Gnome",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "sapiens",
+	Category = "gnomus", -- "gnome" in Latin
+	ScientificName = "Gnomus sapiens",
 	Homeworld = "nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Era = "holocene",
@@ -195,8 +200,8 @@ DefineSpecies("gnome", {
 
 DefineSpecies("goblin", {
 	Name = "Goblin",
-	Genus = "gobelinus", -- "goblin" in Latin
-	Species = "brevis", -- "small"/"short" in Latin (as it is smaller than a hobgoblin)
+	Category = "gobelinus", -- "goblin" in Latin
+	ScientificName = "Gobelinus brevis", -- "small"/"short" in Latin (as it is smaller than a hobgoblin)
 	Homeworld = "nidavellir",
 	Era = "holocene",
 	Sapient = true
@@ -204,8 +209,8 @@ DefineSpecies("goblin", {
 
 DefineSpecies("hobgoblin", {
 	Name = "Hobgoblin",
-	Genus = "gobelinus", -- "goblin" in Latin
-	Species = "magnus", -- "big" in Latin" (as it is bigger than a goblin)
+	Category = "gobelinus", -- "goblin" in Latin
+	ScientificName = "Gobelinus magnus", -- "big" in Latin" (as it is bigger than a goblin)
 	Homeworld = "nidavellir",
 	Era = "holocene",
 	Sapient = true
@@ -213,8 +218,8 @@ DefineSpecies("hobgoblin", {
 
 DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
 	Name = "Human",
-	Genus = "homo",
-	Species = "sapiens",
+	Category = "homo",
+	ScientificName = "Homo sapiens",
 	Homeworld = "earth",
 	EvolvesFrom = {"australopithecus"}, -- possibly
 	Era = "holocene",
@@ -223,7 +228,8 @@ DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 
 DefineSpecies("ogre", {
 	Name = "Ogre",
-	Species = "sapiens",
+	Category = "ogrus",
+	ScientificName = "Ogrus sapiens",
 	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
@@ -231,8 +237,8 @@ DefineSpecies("ogre", {
 
 DefineSpecies("orc", {
 	Name = "Orc",
-	Genus = "orcus", -- "orc" in Latin
-	Species = "sapiens",
+	Category = "orcus", -- "orc" in Latin
+	ScientificName = "Orcus sapiens",
 	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true

@@ -190,7 +190,7 @@ DefineSpeciesGenus("zalambdalestes", { -- Source: http://fossilworks.org/bridge.
 
 DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
 	Name = "Alphadon",
-	Genus = "alphadon",
+	Category = "alphadon",
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
@@ -201,8 +201,8 @@ DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39892 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1010900
 	Name = "Crusafontia",
-	Genus = "crusafontia",
-	Species = "cuencana", -- type species of the Crusafontia genus
+	Category = "crusafontia",
+	ScientificName = "Crusafontia cuencana", -- type species of the Crusafontia genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
@@ -213,8 +213,8 @@ DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 
 DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
 	Name = "Leptictidium",
-	Genus = "leptictidium",
-	Species = "auderiense", -- type species of the Leptictidium genus
+	Category = "leptictidium",
+	ScientificName = "Leptictidium auderiense", -- type species of the Leptictidium genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "eocene",
@@ -225,8 +225,8 @@ DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=ta
 
 DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
 	Name = "Megazostrodon",
-	Genus = "megazostrodon",
-	Species = "rudnerae", -- type species of the Megazostrodon genus
+	Category = "megazostrodon",
+	ScientificName = "Megazostrodon rudnerae", -- type species of the Megazostrodon genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "jurassic",
@@ -237,8 +237,8 @@ DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=t
 
 DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
 	Name = "Zalambdalestes",
-	Genus = "zalambdalestes",
-	Species = "lechei", -- type species of the Zalambdalestes genus
+	Category = "zalambdalestes",
+	ScientificName = "Zalambdalestes lechei", -- type species of the Zalambdalestes genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
@@ -557,8 +557,8 @@ DefineSpecies("uintathere", {
 
 DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67606
 	Name = "Repenomamus Giganticus",
-	Genus = "repenomamus",
-	Species = "giganticus",
+	Category = "repenomamus",
+	ScientificName = "Repenomamus giganticus",
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
@@ -569,8 +569,8 @@ DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/brid
 
 DefineSpecies("galerix-exilis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37.
 	Name = "Galerix", -- Galerix exilis
-	Genus = "galerix",
-	Species = "exilis",
+	Category = "galerix",
+	ScientificName = "Galerix exilis",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)

@@ -47,8 +47,8 @@ DefineSpeciesGenus("rhinoceros", { -- Source: http://www.itis.gov/servlet/Single
 
 DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 54-55.
 	Name = "Aceratherium", -- Aceratherium incisivum
-	Genus = "aceratherium",
-	Species = "incisivum",
+	Category = "aceratherium",
+	ScientificName = "Aceratherium incisivum",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
@@ -62,8 +62,8 @@ DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge M
 
 DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 54-55.
 	Name = "Hispanotherium", -- Madrilenian Hispanotherium
-	Genus = "hispanotherium",
-	Species = "matritense",
+	Category = "hispanotherium",
+	ScientificName = "Hispanotherium matritense",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
@@ -79,8 +79,8 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 
 DefineSpecies("rhinoceros-unicornis", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625005
 	Name = "Rhinoceros", -- One-Horned Rhinoceros
-	Genus = "rhinoceros",
-	Species = "unicornis",
+	Category = "rhinoceros",
+	ScientificName = "Rhinoceros unicornis",
 	Homeworld = "earth",
 	EvolvesFrom = {"aceratherium-incisivum", "hispanotherium-matritense"}, -- earlier Rhinocerotids
 	Era = "holocene",

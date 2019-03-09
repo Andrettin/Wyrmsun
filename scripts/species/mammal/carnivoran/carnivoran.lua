@@ -97,8 +97,8 @@ DefineSpeciesGenus("nimravus", { -- Source: http://fossilworks.org/bridge.pl?act
 
 DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38.
 	Name = "Eomellivora",
-	Genus = "eomellivora",
-	Species = "wimani",
+	Category = "eomellivora",
+	ScientificName = "Eomellivora wimani",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}, -- common ancestor with Amphicyon, which was also a carnivoran
@@ -124,7 +124,7 @@ DefineSpecies("chapalmalania", {
 
 DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
-	Genus = "nimravus",
+	Category = "nimravus",
 	Homeworld = "earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 --	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
