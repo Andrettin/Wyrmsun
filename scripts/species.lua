@@ -91,6 +91,4 @@ Load("scripts/species/reptile/reptile.lua")
 Load("scripts/species/avian/avian.lua")
 Load("scripts/species/mammal/mammal.lua")
 
-Load("scripts/species/tree.lua")
-
 Load("scripts/species/ethereal/ethereal.lua") -- ethereal beings (that is, ones made of pure magic substance)

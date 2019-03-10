@@ -140,13 +140,3 @@ DefineSpecies("wyvern", {
 	Homeworld = "jotunheim",
 	ChildUpgrade = "upgrade-child"
 })
-
-DefineSpecies("kobold", {
-	Name = "Kobold",
-	Category = "koboldus",
-	ScientificName = "Koboldus sapiens",
-	Homeworld = "nidavellir",
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
-	Sapient = true
-	-- Kobolds believe that they are descendants of wyrms, but in truth they share a common ancestor
-})

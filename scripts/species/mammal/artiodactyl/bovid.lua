@@ -81,11 +81,3 @@ DefineSpecies("yale", {
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
-
-DefineSpecies("minotaur", {
-	Name = "Minotaur",
---	Family = "bovidae",
-	Homeworld = "jotunheim",
-	Era = "holocene",
-	Sapient = true
-})
