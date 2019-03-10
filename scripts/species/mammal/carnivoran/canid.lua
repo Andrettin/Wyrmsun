@@ -25,11 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("canidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Canidae",
-	Order = "carnivora"
-})
-
 DefineSpecies("osteoborus", {
 	Name = "Osteoborus",
 	Homeworld = "earth",

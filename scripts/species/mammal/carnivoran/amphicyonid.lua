@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("amphicyonidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, 32-33, 42-43.
-	Name = "Amphicyonidae",
-	Order = "carnivora",
-	Suborder = "caniformia" -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41266
-})
-
-DefineSpeciesGenus("amphicyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 42-43.
-	Name = "Amphicyon",
-	Family = "amphicyonidae", -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
-	Subfamily = "amphicyoninae" -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
-})
-
-DefineSpeciesGenus("daphoenodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
-	Name = "Daphoenodon",
-	Family = "amphicyonidae"
-})
-
-DefineSpeciesGenus("magericyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 43.
-	Name = "Magericyon",
-	Family = "amphicyonidae"
-})
-
 DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
 	Name = "Giant Amphicyon", -- Amphicyon giganteus
 	Category = "amphicyon",

@@ -25,29 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("draconidae", {
-	Name = "Draconidae",
-	Order = "saurischia"
-})
-
-DefineSpeciesGenus("draco", {
-	Name = "Draco", -- "dragon" in Latin
-	CommonName = "Dragon",
-	Family = "draconidae"
-})
-
-DefineSpeciesGenus("koboldus", {
-	Name = "Koboldus",
-	CommonName = "Kobold",
-	Family = "draconidae"
-})
-
-DefineSpeciesGenus("vurmus", {
-	Name = "Vurmus", -- tentative rendering of "wyrm" in Latin
-	CommonName = "Wyrm",
-	Family = "draconidae"
-})
-
 DefineSpecies("black-dragon", {
 	Name = "Black Dragon",
 	Category = "draco",

@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("ursidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Ursidae",
-	Order = "carnivora"
-})
-
-DefineSpeciesGenus("hemicyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 44-45.
-	Name = "Hemicyon",
-	Family = "ursidae",
-	Subfamily = "hemicyoninae"
-})
-
-DefineSpeciesGenus("indarctos", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 44-45.
-	Name = "Indarctos",
-	Family = "ursidae"
-})
-
 DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 44-45.
 	Name = "Hemicyon", -- Hemicyon sansaniense
 	Category = "hemicyon",

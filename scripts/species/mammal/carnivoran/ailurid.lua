@@ -25,27 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("ailuridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=726241
-	Name = "Ailuridae",
-	Order = "carnivora",
-	Suborder = "caniformia"
-})
-
-DefineSpeciesGenus("amphictis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 40.
-	Name = "Amphictis",
-	Family = "ailuridae"
-})
-
-DefineSpeciesGenus("magerictis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 40-41.
-	Name = "Magerictis",
-	Family = "ailuridae"
-})
-
-DefineSpeciesGenus("simocyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 41.
-	Name = "Simocyon",
-	Family = "ailuridae"
-})
-
 DefineSpecies("amphictis-ambiguus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 40.
 	Name = "Amphictis",
 	Category = "amphictis",
