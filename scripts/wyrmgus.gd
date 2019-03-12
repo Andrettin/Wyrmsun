@@ -4,6 +4,7 @@ var wyrmgus_thread
 
 func _ready():
 	if (self.wyrmgus_thread == null):
+		self.set_oaml_module(music_player.oaml_module)
 		self.wyrmgus_thread = Thread.new()
 		self.wyrmgus_thread.start(self, "run_")
 

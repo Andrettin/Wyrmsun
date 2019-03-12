@@ -5,8 +5,7 @@ var credits_text_node
 var credits_text_shadow_node
 
 func _ready():
-	var command = "SetMusicCondition(10, 1)"
-	wyrmgus.lua_command(command)
+	music_player.oaml_module.set_condition(10, 1)
 	
 	self.credits_text_node = self.find_node("credits_text")
 	self.credits_text_shadow_node = self.credits_text_node.find_node("text_shadow")
@@ -245,5 +244,4 @@ func _process(delta):
 		self.credits_text_shadow_node.get_v_scroll().value += value_change
 	
 func clean_up():
-	var command = "SetMusicCondition(10, 0)"
-	wyrmgus.lua_command(command)
+	music_player.oaml_module.set_condition(10, 0)

@@ -21,14 +21,12 @@ enum Category {
 	Worlds
 }
 
+#the current category
 var category = -1
 
 #entries for the current category
 var entries = []
 
-func _ready():
-	pass
-	
 func set_category(category_ident):
 	self.entries = []
 	
