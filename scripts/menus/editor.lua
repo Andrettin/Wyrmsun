@@ -1871,7 +1871,7 @@ function EditUnitTypePropertiesTraining(unit_type)
 	local potential_unit_type_list = GetUnitTypes()
 	local unit_type_list = {}
 	for i=1,table.getn(potential_unit_type_list) do
-		if (GetUnitTypeData(potential_unit_type_list[i], "Icon") ~= "" and GetUnitTypeData(potential_unit_type_list[i], "Vanishes") == false and GetUnitTypeData(potential_unit_type_list[i], "HiddenInEditor") == false) then
+		if (GetUnitTypeData(potential_unit_type_list[i], "Icon") ~= "" and GetUnitTypeData(potential_unit_type_list[i], "Vanishes") == false and GetUnitTypeData(potential_unit_type_list[i], "Hidden") == false) then
 			table.insert(unit_type_list, potential_unit_type_list[i])
 		end
 	end

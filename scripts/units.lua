@@ -3556,7 +3556,7 @@ DefineUnitType("unit-revealer", {
 	NonSolid = true,
 	Revealer = true,
 	DetectCloak = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {}
 } )
 
@@ -3574,7 +3574,7 @@ DefineUnitType("unit-ethereal-revealer", {
 	NonSolid = true,
 	Revealer = true,
 	DetectCloak = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	EtherealVision = 1,
 	Sounds = {}
 } )
@@ -5241,7 +5241,7 @@ DefineUnitType("unit-template-palisade", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Wall = true,
 	BuilderOutside = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"dead", "building-destroyed"
 	}
@@ -5267,7 +5267,7 @@ DefineUnitType("unit-template-wall", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Wall = true,
 	BuilderOutside = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	RequirementsString = "Masonry",
 	Sounds = {
 		"dead", "building-destroyed"
@@ -5304,7 +5304,7 @@ DefineUnitType("unit-orc-spearthrower", {
 	WeaponClasses = {"javelin"},
 	PierceDamage = true,
 --	Corpse = "unit-dwarven-dead-body",
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -5339,7 +5339,7 @@ DefineUnitType("unit-orc-sea-orc", {
 	CanTargetLand = true,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -5370,7 +5370,7 @@ DefineUnitType("unit-orc-shaman", {
 	CanAttack = true,
 	CanTargetLand = true,
 	BluntDamage = true,
-	HiddenInEditor = true
+	Hidden = true
 } )
 
 DefineUnitType("unit-water-elemental", {
@@ -5393,7 +5393,7 @@ DefineUnitType("unit-water-elemental", {
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
@@ -5425,7 +5425,7 @@ DefineUnitType("unit-long-swordsman", {
 	WeaponClasses = {"sword"},
 	HackDamage = true,
 	NumDirections = 1,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "basic-human-voices-dead"
@@ -5522,7 +5522,7 @@ DefineUnitType("unit-dungeon-wall", {
 	Type = "land",
 	Indestructible = true, Building = true, VisibleUnderFog = true, Wall = true,
 	BuilderOutside = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"dead", "building-destroyed"
 	}
@@ -5554,7 +5554,7 @@ DefineUnitType("unit-road", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	RequirementsString = "Masonry",
 	Sounds = {
 		"dead", "building-destroyed"
@@ -5587,7 +5587,7 @@ DefineUnitType("unit-railroad", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	RequirementsString = "Engineering",
 	Sounds = {
 		"dead", "building-destroyed"

@@ -599,7 +599,7 @@ DefineUnitType("unit-germanic-spearman", {
 			"item-equipped", "unit-goblin-embossed-shield"
 		}
 	},
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",

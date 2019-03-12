@@ -75,7 +75,7 @@ DefineUnitType("unit-bee", {
 	Insect = true,
 	Herbivore = true,
 	PierceDamage = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -109,7 +109,7 @@ DefineUnitType("unit-fly", {
 	Insect = true,
 	Detritivore = true,	
 	PierceDamage = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -142,7 +142,7 @@ DefineUnitType("unit-bug", {
 	Coward = true,
 	Insect = true,
 	Herbivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -176,7 +176,7 @@ DefineUnitType("unit-worm", {
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -219,7 +219,7 @@ DefineUnitType("unit-snail", {
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -262,7 +262,7 @@ DefineUnitType("unit-slug", {
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Variations = {
 		{
 			"variation-id", "brown",
@@ -324,7 +324,7 @@ DefineUnitType("unit-snigill", {
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -365,7 +365,7 @@ DefineUnitType("unit-frog", {
 	RandomMovementDistance = 1,
 	Flesh = true,
 	Insectivore = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Variations = {
 		{
 			"variation-id", "green"
@@ -1294,7 +1294,7 @@ DefineUnitType("unit-bird", {
 	Flesh = true,
 	Insectivore = true,
 	PierceDamage = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Variations = {
 		{
 			"variation-id", "brown"
@@ -1352,7 +1352,7 @@ DefineUnitType("unit-crow", {
 	Insectivore = true,
 	Detritivore = true,	
 	PierceDamage = true,
-	HiddenInEditor = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "crow-selected",
 		"acknowledge", "crow-selected",

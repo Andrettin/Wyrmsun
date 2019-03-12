@@ -667,7 +667,7 @@ DefineCivilization("dutch", { -- information for later use
 --]]
 
 DefineCivilization("dwarf", {
-	Display = "Dwarf",
+	Display = "Dwarven",
 	Species = "dwarf",
 	ParentCivilization = "neutral",
 	Interface = "dwarven",
@@ -1154,7 +1154,7 @@ DefineCivilization("dwarf", {
 })
 
 DefineCivilization("elf", {
-	Display = "Elf",
+	Display = "Elven",
 	Hidden = true,
 	Species = "elf",
 	ParentCivilization = "neutral",
