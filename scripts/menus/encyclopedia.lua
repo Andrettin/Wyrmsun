@@ -25,11 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function GetGenusCommonName(genus)
-	if (genus ~= "" and GetSpeciesGenusData(genus, "CommonName") ~= "") then
-		return GetSpeciesGenusData(genus, "CommonName")
+function GetSpeciesCategoryCommonName(category)
+	if (category ~= "" and GetSpeciesCategoryData(category, "CommonName") ~= "") then
+		return GetSpeciesCategoryData(category, "CommonName")
 	else
-		return CapitalizeString(genus)
+		return CapitalizeString(category)
 	end
 end
 
@@ -106,7 +106,6 @@ function RunEncyclopediaMenu()
 end
 
 function RunEncyclopediaUnitsCivilizationMenu(state)
-
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
@@ -1442,18 +1441,18 @@ function OpenEncyclopediaPlaneEntry(plane)
 	if (table.getn(species) > 0) then
 		local sapient_species = {}
 		local fauna_species = {}
-		local fauna_genuses = {}
+		local fauna_species_categories = {}
 		for i = 1, table.getn(species) do
 			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
 				if (GetSpeciesData(species[i], "Sapient")) then
 					table.insert(sapient_species, species[i])
 				else
-					local genus = GetGenusCommonName(GetSpeciesData(species[i], "Genus"))
-					if (genus == "" or GetArrayIncludes(fauna_genuses, genus) == false) then
+					local species_category = GetSpeciesCategoryCommonName(GetSpeciesData(species[i], "Category"))
+					if (species_category == "" or GetArrayIncludes(fauna_species_categories, species_category) == false) then
 						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
-						table.insert(fauna_genuses, genus)
+						table.insert(fauna_species_categories, species_category)
 					else
-						fauna_species[GetElementIndexFromArray(fauna_genuses, genus)] = genus
+						fauna_species[GetElementIndexFromArray(fauna_species_categories, species_category)] = species_category
 					end
 				end
 			end
@@ -1617,18 +1616,18 @@ function OpenEncyclopediaWorldEntry(world)
 	if (table.getn(species) > 0) then
 		local sapient_species = {}
 		local fauna_species = {}
-		local fauna_genuses = {}
+		local fauna_species_categories = {}
 		for i = 1, table.getn(species) do
 			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
 				if (GetSpeciesData(species[i], "Sapient")) then
 					table.insert(sapient_species, species[i])
 				else
-					local genus = GetGenusCommonName(GetSpeciesData(species[i], "Genus"))
-					if (genus == "" or GetArrayIncludes(fauna_genuses, genus) == false) then
+					local species_category = GetSpeciesCategoryCommonName(GetSpeciesData(species[i], "Category"))
+					if (species_category == "" or GetArrayIncludes(fauna_species_categories, species_category) == false) then
 						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
-						table.insert(fauna_genuses, genus)
+						table.insert(fauna_species_categories, species_category)
 					else
-						fauna_species[GetElementIndexFromArray(fauna_genuses, genus)] = genus
+						fauna_species[GetElementIndexFromArray(fauna_species_categories, species_category)] = species_category
 					end
 				end
 			end
