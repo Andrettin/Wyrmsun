@@ -17,7 +17,7 @@ config/icon="res://graphics/ui/icons/wyrmsun_icon_64.png"
 [autoload]
 
 audio_player="*res://scripts/audio_player.gd"
-music_player="*res://scripts/music_player.gd"
+music_player="*res://scenes/music_player.tscn"
 wyrmgus="*res://scripts/wyrmgus.gd"
 encyclopedia="*res://scripts/encyclopedia.gd"
 
