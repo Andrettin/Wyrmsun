@@ -31,7 +31,7 @@ DefineCivilization("neutral", {
 	Playable = false,
 	Interface = "dwarven",
 	Adjective = "Neutral",
-	DefaultColor = "gray",
+	DefaultPlayerColor = "gray",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -673,7 +673,7 @@ DefineCivilization("dwarf", {
 	Interface = "dwarven",
 	Language = "dwarven",
 	Adjective = "Dwarven",
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	CivilizationUpgrade = "upgrade-dwarven-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1161,7 +1161,7 @@ DefineCivilization("elf", {
 --	Language = "elven",
 	Adjective = "Elven",
 	Playable = false,
-	DefaultColor = "teal",
+	DefaultPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-elven-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
@@ -1708,7 +1708,7 @@ DefineCivilization("ettin", {
 --	Language = "ettin",
 	Adjective = "Ettin",
 	Playable = false,
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-ettin-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1770,7 +1770,7 @@ DefineCivilization("germanic", {
 	Interface = "germanic",
 	Language = "proto-germanic",
 	Adjective = "Germanic",
-	DefaultColor = "orange",
+	DefaultPlayerColor = "orange",
 	Calendar = "anglo-saxon-calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
 	ButtonIcons = {
@@ -1821,7 +1821,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	ParentCivilization = "germanic",
 	Adjective = "Celtic",
 	Playable = false,
-	DefaultColor = "green",
+	DefaultPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-celt-civilization",
 	Calendar = "gregorian-calendar",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
@@ -1851,7 +1851,7 @@ DefineCivilization("gnome", {
 	Language = "gnomish",
 	Adjective = "Gnomish",
 	Playable = false,
-	DefaultColor = "blue",
+	DefaultPlayerColor = "blue",
 	CivilizationUpgrade = "upgrade-gnomish-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
@@ -1873,7 +1873,7 @@ DefineCivilization("goblin", {
 	Language = "goblin",
 	Interface = "goblin",
 	Adjective = "Goblin",
-	DefaultColor = "teal",
+	DefaultPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-goblin-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1924,7 +1924,7 @@ DefineCivilization("kobold", {
 	Language = "kobold",
 	Adjective = "Kobold",
 	Playable = false,
-	DefaultColor = "violet",
+	DefaultPlayerColor = "violet",
 	CivilizationUpgrade = "upgrade-kobold-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1957,7 +1957,7 @@ DefineCivilization("minotaur", {
 	ParentCivilization = "neutral",
 	Adjective = "Minotaur",
 	Playable = false,
-	DefaultColor = "red"
+	DefaultPlayerColor = "red"
 })
 
 DefineCivilization("orc", {
@@ -1967,7 +1967,7 @@ DefineCivilization("orc", {
 	ParentCivilization = "goblin",
 	Adjective = "Orc",
 	Playable = false,
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
@@ -2372,7 +2372,7 @@ DefineCivilization("teuton", {
 	Language = "high-german",
 	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
-	DefaultColor = "yellow",
+	DefaultPlayerColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2594,7 +2594,7 @@ DefineCivilization("anglo-saxon", {
 	Language = "old-english",
 	ParentCivilization = "teuton",
 	Adjective = "Anglo-Saxon",
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	Calendar = "anglo-saxon-calendar",
 	Currency = "scilling",
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
@@ -2643,7 +2643,7 @@ DefineCivilization("english", {
 	Language = "english",
 	ParentCivilization = "anglo-saxon",
 	Adjective = "English",
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	CivilizationUpgrade = "upgrade-english-civilization",
 	DevelopsFrom = {"anglo-saxon"},
 	Calendar = "gregorian-calendar",
@@ -2779,7 +2779,7 @@ DefineCivilization("frankish", {
 	Language = "old-frankish",
 	ParentCivilization = "teuton",
 	Adjective = "Frankish",
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2818,7 +2818,7 @@ DefineCivilization("suebi", {
 	Language = "old-high-german",
 	ParentCivilization = "teuton",
 	Adjective = "Suebi",
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2844,7 +2844,7 @@ DefineCivilization("gaul", {
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gaul",
 	Playable = false,
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
@@ -2859,7 +2859,7 @@ DefineCivilization("briton", {
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Briton",
 	Playable = false,
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	Calendar = "gregorian-calendar",
 	PersonalNames = {
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
@@ -2887,7 +2887,7 @@ DefineCivilization("welsh", {
 	ParentCivilization = "briton",
 	Adjective = "Welsh",
 	Playable = false,
-	DefaultColor = "green",
+	DefaultPlayerColor = "green",
 	PersonalNames = {
 		"female", "Aranrhod", -- daughter of Dôn; Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 143.
 		"female", "Branwen", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 130.
@@ -2942,7 +2942,7 @@ DefineCivilization("gael", {
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gael",
 	Playable = false,
-	DefaultColor = "green",
+	DefaultPlayerColor = "green",
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
@@ -2958,7 +2958,7 @@ DefineCivilization("ogre", {
 	ParentCivilization = "orc",
 	Adjective = "Ogre",
 	Playable = false,
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	PersonalNames = {
 		"male", "Akoark", -- from Battle for Wesnoth
 		"male", "Akort", -- from Battle for Wesnoth
@@ -3025,7 +3025,7 @@ DefineCivilization("troll", {
 	ParentCivilization = "orc",
 	Adjective = "Troll",
 	Playable = false,
-	DefaultColor = "green",
+	DefaultPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-troll-civilization",
 	PersonalNames = {
 		"male", "Ag", -- "Äg"; from Battle for Wesnoth
@@ -3096,7 +3096,7 @@ DefineCivilization("latin", {
 	ParentCivilization = "teuton",
 	Adjective = "Latin",
 	Playable = false,
-	DefaultColor = "red",
+	DefaultPlayerColor = "red",
 	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-latin-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.",
@@ -3301,7 +3301,7 @@ DefineCivilization("goth", {
 	Calendar = "gregorian-calendar",
 	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	UnitSounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",
@@ -3474,7 +3474,7 @@ DefineCivilization("egyptian", {
 	ParentCivilization = "greek",
 	Adjective = "Egyptian",
 	Playable = false,
-	DefaultColor = "yellow",
+	DefaultPlayerColor = "yellow",
 	CivilizationUpgrade = "upgrade-egyptian-civilization",
 	PersonalNames = {
 		"male", "Amenofis", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
@@ -3534,7 +3534,7 @@ DefineCivilization("norse", {
 	Language = "old-norse",
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
-	DefaultColor = "blue",
+	DefaultPlayerColor = "blue",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade-norse-civilization",
 	Calendar = "norse-calendar",
@@ -3616,7 +3616,7 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 	ParentCivilization = "germanic",
 	Adjective = "Iberian",
 	Playable = false,
-	DefaultColor = "brown",
+	DefaultPlayerColor = "brown",
 	Calendar = "gregorian-calendar"
 })
 
@@ -3649,7 +3649,7 @@ DefineCivilization("phoenician", {
 	ParentCivilization = "persian",
 	Adjective = "Phoenician",
 	Playable = false,
-	DefaultColor = "black",
+	DefaultPlayerColor = "black",
 	HistoricalUpgrades = {
 		-1100, "upgrade-celestial-navigation", true, -- around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
 	}
@@ -3676,7 +3676,7 @@ DefineCivilization("slav", {
 	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Adjective = "Slavic",
 	Playable = false,
-	DefaultColor = "blue",
+	DefaultPlayerColor = "blue",
 	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-slavic-civilization",
 	UnitSounds = {
@@ -3759,7 +3759,7 @@ DefineCivilization("treant", {
 	ParentCivilization = "neutral",
 	Adjective = "Treant",
 	Playable = false,
-	DefaultColor = "green",
+	DefaultPlayerColor = "green",
 	PersonalNames = {
 		"male", "Bludebalmen", -- from Battle for Wesnoth
 		"male", "Boladrumbadrum", -- from Battle for Wesnoth
@@ -3853,7 +3853,7 @@ DefineCivilization("aesir", {
 	ParentCivilization = "neutral",
 	Language = "old-norse",
 	Adjective = "Aesir",
-	DefaultColor = "blue",
+	DefaultPlayerColor = "blue",
 	Playable = false,
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",

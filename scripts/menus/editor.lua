@@ -794,7 +794,7 @@ function RunEditorFactionProperties()
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id] = {}
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Name = faction_name:getText()
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Type = "tribe"
-						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Color = GetCivilizationData(civilization_ident_list[current_civilization:getSelected() + 1], "DefaultColor")
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Color = GetCivilizationData(civilization_ident_list[current_civilization:getSelected() + 1], "DefaultPlayerColor")
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].FactionUpgrade = ""
 						faction_properties[current_civilization:getSelected() + 1][new_faction_id].ParentFaction = ""
 						table.insert(civilization_factions[current_civilization:getSelected() + 1], faction_ident)

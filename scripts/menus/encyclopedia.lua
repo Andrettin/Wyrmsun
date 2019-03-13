@@ -254,7 +254,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 end
 
 function RunEncyclopediaUnitsMenu(state, civilization)
-
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
@@ -533,7 +532,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		if (civilization ~= "" and faction ~= "") then
 			playercolor = GetFactionData(faction, "Color")
 		elseif (civilization ~= "") then
-			playercolor = GetCivilizationData(civilization, "DefaultColor")
+			playercolor = GetCivilizationData(civilization, "DefaultPlayerColor")
 		else
 			playercolor = "gray"
 		end
@@ -681,7 +680,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (civilization ~= "" and faction ~= "") then
 			playercolor = GetFactionData(faction, "Color")
 		elseif (civilization ~= "") then
-			playercolor = GetCivilizationData(civilization, "DefaultColor")
+			playercolor = GetCivilizationData(civilization, "DefaultPlayerColor")
 		else
 			playercolor = "gray"
 		end

@@ -125,7 +125,7 @@ function RunTechTreeMenu(civilization_number)
 		return b
 	end
 
-	local playercolor = GetCivilizationData(civilization, "DefaultColor")
+	local playercolor = GetCivilizationData(civilization, "DefaultPlayerColor")
 
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil) then

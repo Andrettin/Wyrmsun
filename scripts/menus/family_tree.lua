@@ -68,7 +68,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	if (character_faction ~= "") then
 			playercolor = GetFactionData(character_faction, "Color")
 	elseif (character_civilization ~= "") then
-			playercolor = GetCivilizationData(character_civilization, "DefaultColor")
+			playercolor = GetCivilizationData(character_civilization, "DefaultPlayerColor")
 	end
 	character_icon:Load()
 	local character_icon_x_origin = (character_icon_frame * 46) % character_icon:getGraphicWidth()
