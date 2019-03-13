@@ -29,6 +29,8 @@ func _ready():
 	
 	for civilization in self.civilizations:
 		var civilization_button = load("res://scenes/large_button.tscn").instance()
+		civilization_button.set_script(load("res://scripts/encyclopedia_category_civilization_button.gd"))
+		civilization_button.civilization = civilization
 		menu_area.add_child(civilization_button)
 		
 		civilization_button.rect_position.x = 208 + (113 * item_x)

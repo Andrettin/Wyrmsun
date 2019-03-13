@@ -24,6 +24,9 @@ enum Category {
 #the current category
 var category = -1
 
+#the current civilization
+var civilization
+
 #entries for the current category
 var entries = []
 
