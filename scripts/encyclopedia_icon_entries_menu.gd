@@ -10,7 +10,7 @@ func _ready():
 		
 	var menu_area = self.find_node("menu_area")
 	
-	var item_x = 1
+	var item_x = 0
 	var item_y = 1
 	for entry in encyclopedia.entries:
 		if (entry.get_civilization() != encyclopedia.civilization):
@@ -32,8 +32,8 @@ func _ready():
 		entry_button.rect_position.x = 23 + 4 + (54 * item_x)
 		entry_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
 		
-		item_x = item_x + 1
+		item_x += 1
 		
-		if (item_x > 9):
-			item_x = 1
-			item_y = item_y + 1
+		if (item_x > 10):
+			item_x = 0
+			item_y += 1

@@ -9,7 +9,7 @@ func _ready():
 	self.achievements = wyrmgus.get_achievements()
 	var menu_area = self.find_node("menu_area")
 	
-	var item_x = 1
+	var item_x = 0
 	var item_y = 1
 	for achievement in self.achievements:
 		if (achievement.is_hidden()):
@@ -34,11 +34,11 @@ func _ready():
 		achievement_button.rect_position.x = 23 + 4 + (54 * item_x)
 		achievement_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
 		
-		item_x = item_x + 1
+		item_x += 1
 		
 		if (item_x > 9):
-			item_x = 1
-			item_y = item_y + 1
+			item_x = 0
+			item_y += 1
 	
 func show_achievement_dialog(achievement):
 	var achievement_dialog = load("res://scenes/achievement_dialog.tscn").instance()
