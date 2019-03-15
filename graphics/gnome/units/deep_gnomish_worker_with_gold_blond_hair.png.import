@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/deep_gnomish_worker_with_gold_blond_hair.png-7a9554cb5b1a23f8cafe85d3cb076f63.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
@@ -14,6 +17,7 @@ dest_files=[ "res://.import/deep_gnomish_worker_with_gold_blond_hair.png-7a9554c
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=false
@@ -23,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false
