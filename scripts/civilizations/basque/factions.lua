@@ -29,14 +29,14 @@ DefineFaction("maglemose-tribe", { -- Scandinavian pre-Indo-Europeans are very u
 	Name = "Maglemose Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"}
+	PrimaryColors = {"red", "white"}
 })
 
 DefineFaction("kongemose-tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Name = "Kongemose Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"}
+	PrimaryColors = {"red", "white"}
 	-- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
@@ -44,7 +44,7 @@ DefineFaction("ertebolle-tribe", { -- based on the Ertebolle culture of Zealand 
 	Name = "Ertebolle Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"}
+	PrimaryColors = {"red", "white"}
 	-- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
@@ -52,7 +52,7 @@ DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Z
 	Name = "Funnelbeaker Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"violet"},
+	PrimaryColors = {"violet"},
 	-- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	HistoricalUpgrades = {
 		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
@@ -63,7 +63,7 @@ DefineFaction("gylfing-tribe", { -- Scandinavian pre-Indo-Europeans are very unl
 	Name = "Gylfing Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"green", "teal"},
+	PrimaryColors = {"green", "teal"},
 	HistoricalUpgrades = {
 		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
 	}
@@ -73,34 +73,34 @@ DefineFaction("cardialware-tribe", {
 	Name = "Cardialware Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("bellbeaker-tribe", {
 	Name = "Bellbeaker Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("linearware-tribe", {
 	Name = "Linearware Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("sauveterrian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
 	Name = "Sauveterrian Tribe",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("castelnovian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
 	Name = "Castelnovian Tribe",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
-	Colors = {"white"}
+	PrimaryColors = {"white"}
 	-- succeeded the Sauveterrian culture
 })

@@ -852,7 +852,7 @@ function RunEditorFactionProperties()
 						Name = faction_properties[i][j].Name,
 						Type = faction_properties[i][j].Type,
 						ParentFaction = faction_properties[i][j].ParentFaction,
-						Colors = {faction_properties[i][j].Color},
+						PrimaryColors = {faction_properties[i][j].Color},
 						FactionUpgrade = faction_properties[i][j].FactionUpgrade,
 						Mod = Map.Info.Filename
 					}

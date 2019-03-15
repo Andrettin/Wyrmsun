@@ -29,7 +29,7 @@ DefineFaction("moldavia", {
 	Name = "Moldavia",
 	Civilization = "romanian",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -44,7 +44,7 @@ DefineFaction("romania", {
 	Name = "Romania",
 	Civilization = "romanian",
 	Type = "polity",
-	Colors = {"yellow", "blue", "red"},
+	PrimaryColors = {"yellow", "blue", "red"},
 	DefaultTier = "kingdom"
 })
 
@@ -52,7 +52,7 @@ DefineFaction("transylvania", {
 	Name = "Transylvania",
 	Civilization = "romanian",
 	Type = "polity",
-	Colors = {"cyan"},
+	PrimaryColors = {"cyan"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -67,7 +67,7 @@ DefineFaction("wallachia", {
 	Name = "Wallachia",
 	Civilization = "romanian",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"

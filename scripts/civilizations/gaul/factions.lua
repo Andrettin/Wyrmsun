@@ -29,14 +29,14 @@ DefineFaction("aedui-tribe", {
 	Name = "Aedui Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("arverni-tribe", {
 	Name = "Arverni Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	HistoricalDiplomacyStates = {
 		-71, "aedui-tribe", "war" -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	}
@@ -46,21 +46,21 @@ DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	Name = "Caerasi Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"white"}
+	PrimaryColors = {"white"}
 })
 
 DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Condrusi Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	Name = "Eburones Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 --	Description = "The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them.",
 	HistoricalCapitals = {
 		-54, "tongres" -- in 54 the capital of the Eburones was Aduatuca
@@ -71,49 +71,49 @@ DefineFaction("helvetii-tribe", {
 	Name = "Helvetii Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"violet"} -- another color, perhaps?
+	PrimaryColors = {"violet"} -- another color, perhaps?
 })
 
 DefineFaction("ligurian-tribe", {
 	Name = "Ligurian Tribe",
 	Civilization = "gaul", -- were they really Celts?
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("menapii-tribe", {
 	Name = "Menapii Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
 	Name = "Nervii Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"orange"}
+	PrimaryColors = {"orange"}
 })
 
 DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Poemanni Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"red"}
+	PrimaryColors = {"red"}
 })
 
 DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Segni Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"blue"}
+	PrimaryColors = {"blue"}
 })
 
 DefineFaction("sequani-tribe", {
 	Name = "Sequani Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"pink", "red"},
+	PrimaryColors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
 		-71, "aedui-tribe", "war", -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-71, "arverni-tribe", "alliance"
@@ -124,7 +124,7 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	Name = "Treviri Tribe",
 	Civilization = "gaul", -- a Belgic tribe
 	Type = "tribe",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	HistoricalDiplomacyStates = {
 		-54, "condrusi-tribe", "overlord", -- in 54 BC the Condrusi were clients of the Treviri
 		-54, "eburones-tribe", "overlord" -- in 54 BC the Eburones were clients of the Treviri
@@ -135,14 +135,14 @@ DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 	Name = "Tribocci Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("turone-tribe", {
 	Name = "Turone Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"cyan"}
+	PrimaryColors = {"cyan"}
 })
 
 
@@ -151,33 +151,33 @@ DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; 
 	Name = "Astures Tribe",
 	Civilization = "gaul", -- correct?
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("boii-tribe", {
 	Name = "Boii Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("cantabri-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Cantabri Tribe",
 	Civilization = "gaul", -- correct?
 	Type = "tribe",
-	Colors = {"orange"}
+	PrimaryColors = {"orange"}
 })
 
 DefineFaction("cotini-tribe", {
 	Name = "Cotini Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"teal"}
+	PrimaryColors = {"teal"}
 })
 
 DefineFaction("norici-tribe", {
 	Name = "Norici Tribe",
 	Civilization = "gaul",
 	Type = "tribe",
-	Colors = {"white"} -- another color, perhaps?
+	PrimaryColors = {"white"} -- another color, perhaps?
 })

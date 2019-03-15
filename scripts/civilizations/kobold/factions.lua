@@ -29,7 +29,7 @@ DefineFaction("fafning-tribe", {
 	Name = "Fafning Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"purple"},
+	PrimaryColors = {"purple"},
 	DefaultAI = "passive"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("goinling-tribe", {
 	Name = "Goinling Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"white"},
+	PrimaryColors = {"white"},
 	DefaultAI = "kobolds"
 })
 
@@ -45,7 +45,7 @@ DefineFaction("grabakling-tribe", {
 	Name = "Grabakling Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"white"},
+	PrimaryColors = {"white"},
 	DefaultAI = "kobolds"
 })
 
@@ -53,7 +53,7 @@ DefineFaction("grafvitning-tribe", {
 	Name = "Grafvitning Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultAI = "kobolds",
 	HistoricalDiplomacyStates = {
 		-- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
@@ -66,7 +66,7 @@ DefineFaction("grafvolling-tribe", {
 	Name = "Grafvolling Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultAI = "kobolds",
 	HistoricalDiplomacyStates = {
 		600, "driftwood", "war", -- the natives of the Island of the Kobold God are hostile to the newcomers to the island and the Driftwood shipwrecks
@@ -78,7 +78,7 @@ DefineFaction("moinling-tribe", {
 	Name = "Moinling Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	DefaultAI = "kobolds",
 	HistoricalDiplomacyStates = {
 		-3000, "grafvitning-tribe", "alliance" -- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
@@ -89,7 +89,7 @@ DefineFaction("ofning-tribe", {
 	Name = "Ofning Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"violet"},
+	PrimaryColors = {"violet"},
 	DefaultAI = "kobolds"
 })
 
@@ -97,14 +97,14 @@ DefineFaction("shellscale-tribe", {
 	Name = "Shellscale Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"blue"}
+	PrimaryColors = {"blue"}
 })
 
 DefineFaction("svafning-tribe", {
 	Name = "Svafning Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	DefaultAI = "kobolds"
 })
 
@@ -114,7 +114,7 @@ DefineFaction("sellscale-company", {
 	Name = "Sellscale Company",
 	Civilization = "kobold",
 	Type = "mercenary-company",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultTier = "duchy",
 	Description = "The Sellscale Company was founded by a group of kobold warriors, veterans from the Bone War. Unable to readapt to civilian life, they decided to make use of their military skills for profit."
 })

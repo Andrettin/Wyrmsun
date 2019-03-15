@@ -29,7 +29,7 @@ DefineFaction("ampsivarii-tribe", {
 	Name = "Ampsivarii Tribe",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
-	Colors = {"cyan"},
+	PrimaryColors = {"cyan"},
 	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
@@ -39,7 +39,7 @@ DefineFaction("batavian-tribe", {
 	Name = "Batavian Tribe",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	FactionUpgrade = "upgrade-faction-batavian-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
@@ -49,7 +49,7 @@ DefineFaction("chamavi-tribe", {
 	Name = "Chamavi Tribe",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
-	Colors = {"pink"},
+	PrimaryColors = {"pink"},
 	FactionUpgrade = "upgrade-faction-chamavi-tribe",
 	Icon = "icon-flag-five-orange-birds-on-black",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
@@ -59,7 +59,7 @@ DefineFaction("chatti-tribe", {
 	Name = "Chatti Tribe",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 	FactionUpgrade = "upgrade-faction-chatti-tribe",
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
@@ -69,7 +69,7 @@ DefineFaction("sugambri-tribe", {
 	Name = "Sugambri Tribe",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	FactionUpgrade = "upgrade-faction-sugambri-tribe",
 	Icon = "icon-flag-five-black-birds-on-purple",
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
@@ -79,7 +79,7 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	Name = "Ubii Tribe",
 	Civilization = "frankish",
 	Type = "tribe",
-	Colors = {"purple"},
+	PrimaryColors = {"purple"},
 	FactionUpgrade = "upgrade-faction-ubii-tribe",
 	Icon = "icon-flag-habsburg",
 	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
@@ -90,7 +90,7 @@ DefineFaction("frank-tribe", {
 	Name = "Frank Tribe",
 	Civilization = "frankish",
 	Type = "tribe",
-	Colors = {"green", "orange"},
+	PrimaryColors = {"green", "orange"},
 	FactionUpgrade = "upgrade-faction-frank-tribe",
 	Icon = "icon-flag-old-austria",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
@@ -106,7 +106,7 @@ DefineFaction("francia", {
 	Civilization = "frankish",
 	ParentFaction = "frank-tribe",
 	Type = "polity",
-	Colors = {"green", "orange"},
+	PrimaryColors = {"green", "orange"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-francia",
 	Icon = "icon-flag-old-austria",
@@ -138,7 +138,7 @@ DefineFaction("austrasia", {
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
-	Colors = {"pink"},
+	PrimaryColors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
 	FactionUpgrade = "upgrade-faction-austrasia",
 	Icon = "icon-flag-five-black-birds-on-purple",
@@ -157,7 +157,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-east-francia",
 	Icon = "icon-flag-five-white-birds-on-red",
@@ -178,7 +178,7 @@ DefineFaction("neustria", {
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-neustria",
 	Icon = "icon-flag-five-orange-birds-on-black",
@@ -197,7 +197,7 @@ DefineFaction("salia", {
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
-	Colors = {"pink"},
+	PrimaryColors = {"pink"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-salia",
 	Icon = "icon-flag-five-red-birds-on-yellow",
@@ -213,7 +213,7 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-burgundia",
 	Icon = "icon-flag-five-purple-birds-on-green",

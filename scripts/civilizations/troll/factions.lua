@@ -29,7 +29,7 @@ DefineFaction("ironwood", { -- area where trolls lived in the Norse myths
 	Name = "Ironwood",
 	Civilization = "troll",
 	Type = "tribe",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultTier = "kingdom"
 	-- Ironwood Trolls have a strong tradition of (usually female) seers, from whom even elves sometimes seek help
 })

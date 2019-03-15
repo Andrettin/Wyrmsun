@@ -29,21 +29,21 @@ DefineFaction("budini-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Name = "Budini Tribe",
 	Civilization = "slav", -- accurate?
 	Type = "tribe",
-	Colors = {"blue"}
+	PrimaryColors = {"blue"}
 })
 
 DefineFaction("venedae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Venedae Tribe",
 	Civilization = "slav",
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("bohemia", {
 	Name = "Bohemia",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "duchy",
 	HistoricalTiers = {
 		1086, "kingdom" -- Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
@@ -57,7 +57,7 @@ DefineFaction("croatia", {
 	Name = "Croatia",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"blue", "red"},
+	PrimaryColors = {"blue", "red"},
 	DefaultTier = "kingdom"
 })
 
@@ -65,7 +65,7 @@ DefineFaction("moravia", {
 	Name = "Moravia",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "duchy",
 	HistoricalDiplomacyStates = {
 		874, "bohemia", "overlord", -- The Bohemian duke Bořivoj recognized the overlorship of Svatopluk of Moravia in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
@@ -77,7 +77,7 @@ DefineFaction("muscovy", {
 	Name = "Muscovy",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -92,7 +92,7 @@ DefineFaction("poland", {
 	Name = "Poland",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"red", "white"},
+	PrimaryColors = {"red", "white"},
 	DefaultTier = "kingdom",
 	Icon = "icon-flag-five-white-birds-on-red"
 })
@@ -101,7 +101,7 @@ DefineFaction("poland-lithuania", {
 	Name = "Poland-Lithuania",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"red", "white"},
+	PrimaryColors = {"red", "white"},
 	DefaultTier = "kingdom",
 	Icon = "icon-flag-five-white-birds-on-red"
 })
@@ -110,7 +110,7 @@ DefineFaction("russia", {
 	Name = "Russia",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"blue", "red"},
+	PrimaryColors = {"blue", "red"},
 	DefaultTier = "empire",
 	HistoricalUpgrades = {
 		1861, "upgrade-serfdom", false, -- serfdom was abolished in Russia in 1861; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.
@@ -122,7 +122,7 @@ DefineFaction("serbia", {
 	Name = "Serbia",
 	Civilization = "slav",
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "duchy", "Principality"

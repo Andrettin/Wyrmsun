@@ -29,7 +29,7 @@ DefineFaction("suebi-tribe", {
 	Name = "Suebi Tribe",
 	Civilization = "suebi",
 	Type = "tribe",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-suebi-tribe",
 	Icon = "icon-flag-green-lion-on-purple",
@@ -47,7 +47,7 @@ DefineFaction("alamanni-tribe", {
 	Name = "Alamanni Tribe",
 	Civilization = "suebi",
 	Type = "tribe",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	FactionUpgrade = "upgrade-faction-alamanni-tribe",
 	Icon = "icon-flag-blue-lion-on-yellow",
 	DevelopsFrom = {"suebi-tribe"}
@@ -58,7 +58,7 @@ DefineFaction("buri-tribe", {
 	Civilization = "suebi", -- accurate?
 	ParentFaction = "suebi-tribe", -- accurate?
 	Type = "tribe",
-	Colors = {"violet"},
+	PrimaryColors = {"violet"},
 	FactionUpgrade = "upgrade-faction-buri-tribe",
 	Icon = "icon-flag-red-lion-on-green",
 	DevelopsFrom = {"suebi-tribe"}
@@ -68,7 +68,7 @@ DefineFaction("hermunduri-tribe", {
 	Name = "Hermunduri Tribe",
 	Civilization = "suebi", -- accurate?
 	Type = "tribe",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
 	Icon = "icon-flag-habsburg",
 	DevelopsFrom = {"suebi-tribe"},
@@ -82,7 +82,7 @@ DefineFaction("marcomanni-tribe", {
 	Name = "Marcomanni Tribe",
 	Civilization = "suebi",
 	Type = "tribe",
-	Colors = {"orange", "red"}, -- change to a better one?
+	PrimaryColors = {"orange", "red"}, -- change to a better one?
 	FactionUpgrade = "upgrade-faction-marcomanni-tribe",
 	Icon = "icon-flag-cyan-lion-on-red",
 	DevelopsFrom = {"suebi-tribe"},
@@ -101,7 +101,7 @@ DefineFaction("quadi-tribe", {
 	Civilization = "suebi",
 	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
 	DevelopsFrom = {"suebi-tribe"}, -- the Quadi were a Suebic tribe
@@ -120,7 +120,7 @@ DefineFaction("semnone-tribe", {
 	Name = "Semnone Tribe",
 	Civilization = "suebi",
 	Type = "tribe",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	FactionUpgrade = "upgrade-faction-semnone-tribe",
 	Icon = "icon-flag-green-lion-on-purple",
 	DevelopsFrom = {"suebi-tribe"}
@@ -130,7 +130,7 @@ DefineFaction("thuringian-tribe", {
 	Name = "Thuringian Tribe",
 	Civilization = "suebi",
 	Type = "tribe",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	FactionUpgrade = "upgrade-faction-thuringian-tribe",
 	Icon = "icon-flag-yellow-lion-on-cyan",
 	DevelopsFrom = {"hermunduri-tribe"}
@@ -140,7 +140,7 @@ DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Name = "Galicia",
 	Civilization = "suebi",
 	Type = "polity",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-galicia",
 	Icon = "icon-flag-green-lion-on-purple",

@@ -31,7 +31,7 @@ DefineFaction("crimea", {
 	Name = "Crimea",
 	Civilization = "turkish",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Khanate"
@@ -46,6 +46,6 @@ DefineFaction("turkey", {
 	Name = "Turkey",
 	Civilization = "turkish",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "empire"
 })

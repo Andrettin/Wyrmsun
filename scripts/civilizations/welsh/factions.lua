@@ -31,7 +31,7 @@ DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	Name = "Deheubarth",
 	Civilization = "welsh", -- it was a Welsh kingdom
 	Type = "polity",
-	Colors = {"black"},
+	PrimaryColors = {"black"},
 	DefaultTier = "kingdom"
 })
 
@@ -39,7 +39,7 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 	Name = "Dyfed",
 	Civilization = "welsh",
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "duchy",
 	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed
 	Titles = {
@@ -51,7 +51,7 @@ DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Name = "Elmet",
 	Civilization = "welsh",
 	Type = "polity",
-	Colors = {"teal"},
+	PrimaryColors = {"teal"},
 	DefaultTier = "kingdom"
 })
 
@@ -59,7 +59,7 @@ DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	Name = "Gwent Is Coed",
 	Civilization = "welsh", -- it was a Welsh lordship
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
@@ -70,7 +70,7 @@ DefineFaction("gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Name = "Gwynedd",
 	Civilization = "welsh",
 	Type = "polity",
-	Colors = {"blue"},
+	PrimaryColors = {"blue"},
 	DefaultTier = "kingdom"
 })
 
@@ -78,6 +78,6 @@ DefineFaction("powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Name = "Powys",
 	Civilization = "welsh",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "kingdom"
 })

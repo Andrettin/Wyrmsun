@@ -29,14 +29,14 @@ DefineFaction("magyar-tribe", {
 	Name = "Magyar Tribe",
 	Civilization = "magyar",
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("hungary", {
 	Name = "Hungary",
 	Civilization = "magyar",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"magyar-tribe"}
 })

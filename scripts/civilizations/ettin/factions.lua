@@ -29,7 +29,7 @@ DefineFaction("geirrodung-clan", {
 	Name = "Geirrodung Clan",
 	Civilization = "ettin",
 	Type = "tribe",
-	Colors = {"red", "orange", "fire"},
+	PrimaryColors = {"red", "orange", "fire"},
 	DefaultAI = "passive",
 	Description = "The brutal ettin Geirrod possesses a magnificent hall in Jotunheim, where he, his kin and his followers dwell.",
 	HistoricalResources = {
@@ -45,7 +45,7 @@ DefineFaction("greedstone-company", {
 	Name = "Greedstone Company",
 	Civilization = "ettin",
 	Type = "mercenary-company",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 	DefaultTier = "duchy",
 	Description = "The Greedstone warriors lend their fists for gold, doing a good deal of dirty work for the ettin kingdoms. Merchant guilds are also keen to employ them, specially to destroy settlements of escaped orc slaves and recapture their inhabitants."
 })

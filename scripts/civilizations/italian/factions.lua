@@ -29,7 +29,7 @@ DefineFaction("florence", {
 	Name = "Florence",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	DefaultTier = "duchy"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("genoa", {
 	Name = "Genoa",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "duchy"
 })
 
@@ -45,7 +45,7 @@ DefineFaction("italy", {
 	Name = "Italy",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"green", "red"},
+	PrimaryColors = {"green", "red"},
 	DefaultTier = "kingdom"
 })
 
@@ -53,7 +53,7 @@ DefineFaction("milan", {
 	Name = "Milan",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	DefaultTier = "duchy"
 })
 
@@ -61,7 +61,7 @@ DefineFaction("modena", {
 	Name = "Modena",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 	DefaultTier = "duchy"
 })
 
@@ -69,7 +69,7 @@ DefineFaction("papal-states", {
 	Name = "Papal States",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		0, "rome"
@@ -80,7 +80,7 @@ DefineFaction("parma", {
 	Name = "Parma",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "duchy"
 })
 
@@ -88,7 +88,7 @@ DefineFaction("sardinia", {
 	Name = "Sardinia",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 	DefaultTier = "kingdom"
 })
 
@@ -96,7 +96,7 @@ DefineFaction("savoy", {
 	Name = "Savoy",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "duchy",
 	Adjective = "Savoyard"
 })
@@ -105,7 +105,7 @@ DefineFaction("sicily", {
 	Name = "Sicily",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "duchy"
 })
 
@@ -113,7 +113,7 @@ DefineFaction("siena", {
 	Name = "Siena",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"green"},
+	PrimaryColors = {"green"},
 	DefaultTier = "duchy"
 })
 
@@ -121,7 +121,7 @@ DefineFaction("tuscany", {
 	Name = "Tuscany",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"orange"},
+	PrimaryColors = {"orange"},
 	DefaultTier = "grand-duchy"
 })
 
@@ -129,7 +129,7 @@ DefineFaction("venice", {
 	Name = "Venice",
 	Civilization = "italian",
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	HistoricalGovernmentTypes = {
 		919, "monarchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.

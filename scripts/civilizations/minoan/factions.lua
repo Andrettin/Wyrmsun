@@ -29,35 +29,35 @@ DefineFaction("minoan-tribe", {
 	Name = "Minoan Tribe",
 	Civilization = "minoan",
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("impressedware-tribe", {
 	Name = "Impressedware Tribe",
 	Civilization = "minoan", -- were they really culturally related to the Minoans? At least Minoan culture is a better fit for this pre-Indo-European culture than Basque, since they lived on the Aegean
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("lepenskivir-tribe", { -- Lepenski Vir culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 175.
 	Name = "Lepenskivir Tribe",
 	Civilization = "minoan", -- not actually Minoan, but a pre-Indo-European people as well
 	Type = "tribe",
-	Colors = {"purple"}
+	PrimaryColors = {"purple"}
 })
 
 DefineFaction("paintedware-tribe", {
 	Name = "paintedware-tribe",
 	Civilization = "minoan", -- were they really culturally related to the Minoans? At least Minoan culture is a better fit for this pre-Indo-European culture than Basque, since they lived in the Balkans (closer to Crete than to the European Atlantic shores)
 	Type = "tribe",
-	Colors = {"orange"}
+	PrimaryColors = {"orange"}
 })
 
 DefineFaction("starcevo-tribe", { -- Starčevo culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 177-178.
 	Name = "Starcevo Tribe",
 	Civilization = "minoan", -- not actually Minoan, but a pre-Indo-European people as well
 	Type = "tribe",
-	Colors = {"black"}
+	PrimaryColors = {"black"}
 	-- the Starčevo people possessed knowledge of farming and pottery c. 6000 BC
 })
 
@@ -67,7 +67,7 @@ DefineFaction("crete", { -- Minoans
 	Name = "Crete",
 	Civilization = "minoan",
 	Type = "polity",
-	Colors = {"yellow"},
+	PrimaryColors = {"yellow"},
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"minoan-tribe"},
 	HistoricalUpgrades = {

@@ -29,35 +29,35 @@ DefineFaction("cauci-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 	Name = "Cauci Tribe",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
-	Colors = {"yellow"}
+	PrimaryColors = {"yellow"}
 })
 
 DefineFaction("darini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Darini Tribe",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 DefineFaction("gangani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Gangani Tribe",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
-	Colors = {"black"}
+	PrimaryColors = {"black"}
 })
 
 DefineFaction("hibernii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Hibernii Tribe",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
-	Colors = {"green"}
+	PrimaryColors = {"green"}
 })
 
 DefineFaction("scot-tribe", {
 	Name = "Scot Tribe",
 	Civilization = "gael",
 	Type = "tribe",
-	Colors = {"brown"}
+	PrimaryColors = {"brown"}
 })
 
 -- Polities
@@ -66,7 +66,7 @@ DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Name = "Argyll",
 	Civilization = "gael", -- founded by Irish settlers
 	Type = "polity",
-	Colors = {"purple"},
+	PrimaryColors = {"purple"},
 	DefaultTier = "kingdom"
 })
 
@@ -74,7 +74,7 @@ DefineFaction("dalriada", { -- Source: William R. Shepherd, "Historical Atlas", 
 	Name = "Dalriada",
 	Civilization = "gael", -- Scottish kingdom
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "kingdom"
 })
 
@@ -82,7 +82,7 @@ DefineFaction("ireland", { -- Source: William R. Shepherd, "Historical Atlas", 1
 	Name = "Ireland",
 	Civilization = "gael",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "kingdom"
 })
 
@@ -90,7 +90,7 @@ DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Name = "Meath",
 	Civilization = "gael", -- it was an Irish kingdom
 	Type = "polity",
-	Colors = {"red"},
+	PrimaryColors = {"red"},
 	DefaultTier = "kingdom"
 })
 
@@ -98,6 +98,6 @@ DefineFaction("scotland-celtic", { -- Source: William R. Shepherd, "Historical A
 	Name = "Scotland",
 	Civilization = "gael",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	DefaultTier = "kingdom"
 })

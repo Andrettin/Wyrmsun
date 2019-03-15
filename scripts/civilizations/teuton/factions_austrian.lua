@@ -29,7 +29,7 @@ DefineFaction("austria", {
 	Name = "Austria",
 	Civilization = "teuton",
 	Type = "polity",
-	Colors = {"white", "red"},
+	PrimaryColors = {"white", "red"},
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-austria",
 	Icon = "icon-flag-old-austria",
@@ -78,7 +78,7 @@ DefineFaction("carinthia", {
 	Name = "Carinthia", -- "Kärnten"
 	Civilization = "teuton",
 	Type = "polity",
-	Colors = {"brown"},
+	PrimaryColors = {"brown"},
 	FactionUpgrade = "upgrade-faction-carinthia",
 	Icon = "icon-flag-five-orange-birds-on-black",
 	DefaultTier = "duchy", -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -91,7 +91,7 @@ DefineFaction("kaiserliche-privilegierte-orientalische-kompagnie", { -- Source: 
 	Name = "Privileged Imperial Oriental Company",
 	Civilization = "teuton",
 	Type = "trading-company",
-	Colors = {"white"},
+	PrimaryColors = {"white"},
 	DefaultTier = "barony",
 --	Description = "The \"Kaiserliche privilegierte orientalische Kompagnie\", or Privileged Imperial Oriental Company, is an Austrian trading company founded on its Adriatic possessions. It engages in trade not only along the Adriatic coast itself, but also with the eastern Mediterranean.",
 	HistoricalDiplomacyStates = {
@@ -103,7 +103,7 @@ DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Iva
 	Name = "Main Commercial Company of Trieste and Fiume",
 	Civilization = "teuton",
 	Type = "trading-company",
-	Colors = {"white"},
+	PrimaryColors = {"white"},
 	DefaultTier = "barony",
 --	Description = "The \"Haubt-Handlungs-Compagnie von Triest und Fiume\", or Main Commercial Company of Trieste and Fiume, is an Austrian trading company founded on those two cities. It engages heavily in trade and manufacturing.",
 	HistoricalDiplomacyStates = {
@@ -115,7 +115,7 @@ DefineFaction("temisvarer-privilegierte-handelskompagnie", { -- Source: Ivan Erc
 	Name = "Privileged Temesvaran Trading Company",
 	Civilization = "teuton",
 	Type = "trading-company",
-	Colors = {"white"},
+	PrimaryColors = {"white"},
 	DefaultTier = "barony",
 --	Description = "The \"Temisvarer privilegierte Handelskompagnie\", or Privileged Temesvaran Trading Company, is an Austrian trading company with triple headquarters in Vienna, Trieste and Temesvar. It specializes in connecting the fertile lands of the Danube with the Adriatic Sea, bringing livestock and agricultural goods to port and selling foreign imports along the Danube.",
 	HistoricalDiplomacyStates = {
