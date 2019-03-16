@@ -3,8 +3,8 @@ extends "res://scripts/icon_buttons_menu.gd"
 var achievements = []
 
 func _ready():
-	if (!music_player.oaml_module.is_playing()):
-		music_player.oaml_module.play_track("MenuTheme")
+	if (!music_player.is_playing()):
+		music_player.play_track("MenuTheme")
 		
 	self.achievements = wyrmgus.get_achievements()
 	
