@@ -25,8 +25,15 @@ func _ready():
 			graphics_file = "res://graphics/" + graphics_file
 		
 		entry_button.set_graphics(graphics_file)
-		entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
-		entry_button.set_tooltip(entry.get_name())
+		var tooltip_text = entry.get_name()
+		var faction = entry.get_faction()
+		if (faction != null):
+			entry_button.set_player_color(faction.get_primary_color())
+			tooltip_text += " (" + faction.get_name() + ")"
+		else:
+			entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
+			
+		entry_button.set_tooltip(tooltip_text)
 		
 		icon_buttons.push_back(entry_button)
 		

@@ -74,9 +74,9 @@ function ChooseFaction(old_civilization, old_faction)
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
 		if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
-			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "PrimaryColor"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
 		else
-			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
+			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "PrimaryColor"))))
 		end
 	end)
 	faction_dd:setSize(152, 20)
@@ -89,9 +89,9 @@ function ChooseFaction(old_civilization, old_faction)
 	l:setLineWidth(228)
 	menu:add(l, 14, 3 + (32 * 4))
 	if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
-		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "PrimaryColor"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
 	else
-		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
+		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "PrimaryColor"))))
 	end
 
 	local ok_button = menu:addFullButton(_("~!OK"), "o", 16, 248 - (36 * 0),

@@ -66,7 +66,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	local character_faction = GetCharacterData(character, "Faction")
 	local playercolor = "gray"
 	if (character_faction ~= "") then
-			playercolor = GetFactionData(character_faction, "Color")
+			playercolor = GetFactionData(character_faction, "PrimaryColor")
 	elseif (character_civilization ~= "") then
 			playercolor = GetCivilizationData(character_civilization, "DefaultPlayerColor")
 	end

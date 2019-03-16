@@ -530,7 +530,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
-			playercolor = GetFactionData(faction, "Color")
+			playercolor = GetFactionData(faction, "PrimaryColor")
 		elseif (civilization ~= "") then
 			playercolor = GetCivilizationData(civilization, "DefaultPlayerColor")
 		else
@@ -678,7 +678,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
-			playercolor = GetFactionData(faction, "Color")
+			playercolor = GetFactionData(faction, "PrimaryColor")
 		elseif (civilization ~= "") then
 			playercolor = GetCivilizationData(civilization, "DefaultPlayerColor")
 		else
@@ -2052,7 +2052,7 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 		effects = GetUpgradeData(GetFactionData(faction, "FactionUpgrade"), "EffectsString")
 	end
 	local description = ""
-	description = "Color: " .. CapitalizeString(GetFactionData(faction, "Color")) .. "\n\n"
+	description = "Color: " .. CapitalizeString(GetFactionData(faction, "PrimaryColor")) .. "\n\n"
 	if (effects ~= "") then
 		description = description .. "Effects: " .. effects .. ".\n\n"
 	end

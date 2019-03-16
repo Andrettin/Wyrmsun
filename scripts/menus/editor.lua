@@ -651,7 +651,7 @@ function RunEditorFactionProperties()
 			faction_properties[i][j] = {}
 			faction_properties[i][j].Name = GetFactionData(faction_list[i][j], "Name")
 			faction_properties[i][j].Type = GetFactionData(faction_list[i][j], "Type")
-			faction_properties[i][j].Color = GetFactionData(faction_list[i][j], "Color")
+			faction_properties[i][j].Color = GetFactionData(faction_list[i][j], "PrimaryColor")
 			faction_properties[i][j].FactionUpgrade = GetFactionData(faction_list[i][j], "FactionUpgrade")
 			faction_properties[i][j].ParentFaction = GetFactionData(faction_list[i][j], "ParentFaction")
 		end

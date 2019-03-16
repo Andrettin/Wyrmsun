@@ -23,7 +23,6 @@ func set_graphics(file_path):
 	self.icon_node.texture = load(file_path)
 	
 func set_player_color(player_color):
-	var player_color_name = player_color.get_name()
 	self.icon_node.set_player_color(player_color)
 
 func set_tooltip(tooltip):

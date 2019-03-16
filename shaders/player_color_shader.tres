@@ -3,9 +3,7 @@
 [ext_resource path="res://shaders/player_color_shader.shader" type="Shader" id=1]
 
 [resource]
-
 resource_local_to_scene = true
-render_priority = 0
 shader = ExtResource( 1 )
 shader_param/source_player_color_1 = Color( 0, 0, 0, 1 )
 shader_param/source_player_color_2 = Color( 0, 0, 0, 1 )
@@ -25,5 +23,30 @@ shader_param/target_player_color_6 = null
 shader_param/target_player_color_7 = null
 shader_param/target_player_color_8 = null
 shader_param/target_player_color_9 = null
-_sections_unfolded = [ "Resource", "shader_param" ]
+shader_param/source_hair_color_1 = null
+shader_param/source_hair_color_2 = null
+shader_param/source_hair_color_3 = null
+shader_param/source_hair_color_4 = null
+shader_param/source_hair_color_5 = null
+shader_param/source_hair_color_6 = null
+shader_param/source_hair_color_7 = null
+shader_param/source_hair_color_8 = null
+shader_param/source_hair_color_9 = null
+shader_param/source_hair_color_10 = null
+shader_param/source_hair_color_11 = null
+shader_param/source_hair_color_12 = null
+shader_param/source_hair_color_13 = null
+shader_param/target_hair_color_1 = null
+shader_param/target_hair_color_2 = null
+shader_param/target_hair_color_3 = null
+shader_param/target_hair_color_4 = null
+shader_param/target_hair_color_5 = null
+shader_param/target_hair_color_6 = null
+shader_param/target_hair_color_7 = null
+shader_param/target_hair_color_8 = null
+shader_param/target_hair_color_9 = null
+shader_param/target_hair_color_10 = null
+shader_param/target_hair_color_11 = null
+shader_param/target_hair_color_12 = null
+shader_param/target_hair_color_13 = null
 
