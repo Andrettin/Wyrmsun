@@ -10,46 +10,30 @@
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=8]
 
 [node name="achievements_menu" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Pause", "Rect", "Size Flags" ]
 
 [node name="background" parent="." instance=ExtResource( 2 )]
-
 texture = ExtResource( 3 )
 
 [node name="menu_area" parent="." instance=ExtResource( 4 )]
 
 [node name="menu_title" parent="menu_area" instance=ExtResource( 5 )]
-
 anchor_right = 1.0
 margin_top = 68.0
 margin_right = 0.0
 margin_bottom = 92.0
 bbcode_text = "[center][color=#f4e020]Achievements[/color][/center]"
 text = "Achievements"
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 6 )]
-
 margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
 shortcut = ExtResource( 7 )
 script = ExtResource( 8 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "main_menu"
-
 

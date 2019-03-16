@@ -1,4 +1,4 @@
-extends Control
+extends "res://scripts/icon_buttons_menu.gd"
 
 var achievements = []
 
@@ -7,10 +7,10 @@ func _ready():
 		music_player.oaml_module.play_track("MenuTheme")
 		
 	self.achievements = wyrmgus.get_achievements()
+	
 	var menu_area = self.find_node("menu_area")
 	
-	var item_x = 0
-	var item_y = 1
+	var icon_buttons = []
 	for achievement in self.achievements:
 		if (achievement.is_hidden()):
 			continue
@@ -31,14 +31,9 @@ func _ready():
 		if (!achievement.is_obtained()):
 			achievement_button.set_icon_transparency(0.33)
 		
-		achievement_button.rect_position.x = 23 + 4 + (54 * item_x)
-		achievement_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
+		icon_buttons.push_back(achievement_button)
 		
-		item_x += 1
-		
-		if (item_x > 9):
-			item_x = 0
-			item_y += 1
+	place_icon_buttons(icon_buttons)
 	
 func show_achievement_dialog(achievement):
 	var achievement_dialog = load("res://scenes/achievement_dialog.tscn").instance()

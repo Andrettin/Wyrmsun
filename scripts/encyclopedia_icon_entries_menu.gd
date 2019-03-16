@@ -1,4 +1,4 @@
-extends Control
+extends "res://scripts/icon_buttons_menu.gd"
 
 func _ready():
 	var command = "if (RunningScenario == false) then"
@@ -10,8 +10,7 @@ func _ready():
 		
 	var menu_area = self.find_node("menu_area")
 	
-	var item_x = 0
-	var item_y = 1
+	var icon_buttons = []
 	for entry in encyclopedia.entries:
 		if (entry.get_civilization() != encyclopedia.civilization):
 			continue
@@ -29,11 +28,6 @@ func _ready():
 		entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
 		entry_button.set_tooltip(entry.get_name())
 		
-		entry_button.rect_position.x = 23 + 4 + (54 * item_x)
-		entry_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
+		icon_buttons.push_back(entry_button)
 		
-		item_x += 1
-		
-		if (item_x > 10):
-			item_x = 0
-			item_y += 1
+	place_icon_buttons(icon_buttons)

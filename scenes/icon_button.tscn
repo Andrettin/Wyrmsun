@@ -8,9 +8,7 @@
 [ext_resource path="res://shaders/player_color_shader.shader" type="Shader" id=6]
 
 [sub_resource type="ShaderMaterial" id=1]
-
 resource_local_to_scene = true
-render_priority = 0
 shader = ExtResource( 6 )
 shader_param/source_player_color_1 = Color( 0, 0, 0, 1 )
 shader_param/source_player_color_2 = Color( 0, 0, 0, 1 )
@@ -30,59 +28,53 @@ shader_param/target_player_color_6 = null
 shader_param/target_player_color_7 = null
 shader_param/target_player_color_8 = null
 shader_param/target_player_color_9 = null
-_sections_unfolded = [ "Resource", "shader_param" ]
+shader_param/source_hair_color_1 = null
+shader_param/source_hair_color_2 = null
+shader_param/source_hair_color_3 = null
+shader_param/source_hair_color_4 = null
+shader_param/source_hair_color_5 = null
+shader_param/source_hair_color_6 = null
+shader_param/source_hair_color_7 = null
+shader_param/source_hair_color_8 = null
+shader_param/source_hair_color_9 = null
+shader_param/source_hair_color_10 = null
+shader_param/source_hair_color_11 = null
+shader_param/source_hair_color_12 = null
+shader_param/source_hair_color_13 = null
+shader_param/target_hair_color_1 = null
+shader_param/target_hair_color_2 = null
+shader_param/target_hair_color_3 = null
+shader_param/target_hair_color_4 = null
+shader_param/target_hair_color_5 = null
+shader_param/target_hair_color_6 = null
+shader_param/target_hair_color_7 = null
+shader_param/target_hair_color_8 = null
+shader_param/target_hair_color_9 = null
+shader_param/target_hair_color_10 = null
+shader_param/target_hair_color_11 = null
+shader_param/target_hair_color_12 = null
+shader_param/target_hair_color_13 = null
 
 [node name="icon_button" type="TextureButton"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 46.0
 margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 script = ExtResource( 4 )
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
 [node name="background" type="ColorRect" parent="."]
-
 show_behind_parent = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 50.0
 margin_bottom = 42.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0, 0, 1 )
-_sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="icon" parent="." instance=ExtResource( 5 )]
-
 material = SubResource( 1 )
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 50.0
 margin_bottom = 42.0
-
 
