@@ -85,6 +85,7 @@ DefineUnitType("unit-ettin-town-hall", {
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
 	SpawnUnits = {"unit-ettin"},
+	Hidden = true, -- as it does not have its own graphics
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
