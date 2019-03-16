@@ -1,8 +1,6 @@
 extends Control
 
 func place_icon_buttons(icon_buttons):
-	var menu_area = self.find_node("menu_area")
-	
 	var item_x = 0
 	var item_y = 1
 	for icon_button in icon_buttons:

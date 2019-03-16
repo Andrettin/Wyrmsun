@@ -10,49 +10,37 @@
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=8]
 
 [node name="credits_menu" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Mouse", "Rect", "Size Flags" ]
 
 [node name="background" parent="." instance=ExtResource( 2 )]
-
 texture = ExtResource( 3 )
 
 [node name="menu_area" parent="." instance=ExtResource( 4 )]
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 5 )]
-
 margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
 shortcut = ExtResource( 6 )
 script = ExtResource( 7 )
-_sections_unfolded = [ "Anchor", "Margin", "Pause", "Rect", "Textures", "Theme", "custom_constants", "custom_styles" ]
 button_text = "~!Previous Menu"
 target_scene = "main_menu"
 
 [node name="credits_text" parent="menu_area" instance=ExtResource( 8 )]
-
 anchor_right = 1.0
 margin_left = 156.0
 margin_top = 80.0
 margin_right = -156.0
-margin_bottom = 405.0
+margin_bottom = 430.0
 bbcode_text = ""
 text = ""
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="credits_scroll_timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
 
 [connection signal="tree_exiting" from="." to="." method="clean_up"]
-
-
+[connection signal="timeout" from="credits_scroll_timer" to="." method="scroll_text"]

@@ -1,6 +1,5 @@
 extends Control
 
-var credits_text_lines = []
 var credits_text_node
 var credits_text_shadow_node
 
@@ -236,10 +235,10 @@ func _ready():
 	self.credits_text_node.text += "\n  tolua++ Copyright by Codenix"
 	self.credits_text_node.text += "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	
-func _process(delta):
+func scroll_text():
 	var v_scroll = self.credits_text_node.get_v_scroll()
 	if (v_scroll.value < v_scroll.max_value):
-		var value_change = min(delta * 25, v_scroll.max_value - v_scroll.value)
+		var value_change = min(1, v_scroll.max_value - v_scroll.value)
 		v_scroll.value += value_change
 		self.credits_text_shadow_node.get_v_scroll().value += value_change
 	
