@@ -30,7 +30,7 @@ func _ready():
 	self.credits_text_node.text += "\n  Chris Beck (iceiceice)"
 	self.credits_text_node.text += "\n  DinkyDyeAussie"
 	self.credits_text_node.text += "\n  Dmitry Marakasov"
-	self.credits_text_node.text += "\n  marcelofg55"
+	self.credits_text_node.text += "\n  Marcelo Fernandez (marcelofg55)"
 	self.credits_text_node.text += "\n  Morel Bérenger"
 	self.credits_text_node.text += "\n  Spfnym"
 	self.credits_text_node.text += "\n  Szunti"
@@ -226,6 +226,8 @@ func _ready():
 	self.credits_text_node.text += "\n  zenorogue"
 	
 	self.credits_text_node.text += "\nThird Party Code"
+	self.credits_text_node.text += "\n  Godot Copyright by Juan Linietsky, Ariel Manzur and the Godot Engine contributors"
+	self.credits_text_node.text += "\n  OAML Copyright by Marcelo Fernandez (marcelofg55)"
 	self.credits_text_node.text += "\n  SDL Copyright by Sam Lantinga"
 	self.credits_text_node.text += "\n  ZLIB Copyright by Jean-loup Gailly and Mark Adler"
 	self.credits_text_node.text += "\n  PNG Copyright by Glenn Randers-Pehrson"
