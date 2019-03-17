@@ -339,7 +339,7 @@ function Briefing(quest)
 	local menu = WarMenu(nil, briefing_background)
 	
 	if (GetQuestData(quest, "BriefingMusic") ~= "") then
-		PlayMusic(GetQuestData(quest, "BriefingMusic"))
+		PlayMusicName(GetQuestData(quest, "BriefingMusic"))
 	else
 		StopMusic()
 	end	
