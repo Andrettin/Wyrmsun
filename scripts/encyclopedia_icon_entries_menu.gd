@@ -10,12 +10,17 @@ func _ready():
 		
 	var menu_area = self.find_node("menu_area")
 	
+	var menu_title = menu_area.find_node("menu_title")
+	menu_title.bbcode_text = "[center][color=#f4e020]Encyclopedia: " + encyclopedia.get_category_name() + " (" + encyclopedia.civilization.get_name() + ")[/color][/center]"
+	
 	var icon_buttons = []
 	for entry in encyclopedia.entries:
 		if (entry.get_civilization() != encyclopedia.civilization):
 			continue
 		
 		var entry_button = load("res://scenes/icon_button.tscn").instance()
+		entry_button.set_script(load("res://scripts/encyclopedia_entry_button.gd"))
+		entry_button.entry = entry
 		menu_area.add_child(entry_button)
 		
 		var graphics_file = entry.get_icon().get_file()

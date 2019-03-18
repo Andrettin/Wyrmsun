@@ -30,6 +30,9 @@ var civilization
 #entries for the current category
 var entries = []
 
+#the current entry
+var entry
+
 func set_category(category_ident):
 	self.entries = []
 	
@@ -52,3 +55,9 @@ func is_category_separated_by_civilization():
 		return true
 	else:
 		return false
+
+func open_entry(entry):
+	self.entry = entry
+	
+	if (self.category == Category.Buildings):
+		get_tree().change_scene("res://scenes/encyclopedia_building_entry_menu.tscn")
