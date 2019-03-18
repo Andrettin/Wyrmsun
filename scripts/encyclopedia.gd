@@ -59,5 +59,4 @@ func is_category_separated_by_civilization():
 func open_entry(entry):
 	self.entry = entry
 	
-	if (self.category == Category.Buildings):
-		get_tree().change_scene("res://scenes/encyclopedia_building_entry_menu.tscn")
+	get_tree().change_scene("res://scenes/encyclopedia_entry_menu.tscn")
