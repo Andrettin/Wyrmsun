@@ -933,7 +933,7 @@ DefineUnitType("unit-iron-mine", {
 	Parent = "unit-template-mine",
 	Class = "iron-mine",
 	Civilization = "neutral",
-	Description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working metals like copper, silver or gold.",
+	Description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working more malleable metals like copper, silver or gold.",
 	Image = {"file", "neutral/buildings/iron_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/iron_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/iron_mine_light.png"},
