@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineText("The P~!oetic Edda", {
+DefineText("the-poetic-edda", {
+	Name = "The P~!oetic Edda",
 	Translator = "Henry Adams Bellows",
 	Year = 1936,
 	Publisher = "Princeton: Princeton University Press",

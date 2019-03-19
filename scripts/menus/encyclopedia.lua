@@ -1049,14 +1049,15 @@ function RunEncyclopediaTextsMenu()
 
 	local texts = GetTexts()
 	local text_y = -1
-	for i, text_name in ipairs(texts) do
+	for i, text_ident in ipairs(texts) do
+		local text_name = GetTextData(text_ident, "Name")
 		local text_hotkey = ""		
 		if (string.find(_(text_name), "~!") ~= nil) then
 			text_hotkey = string.sub(string.match(_(text_name), "~!%a"), 3)
 			text_hotkey = string.lower(text_hotkey)
 		end
 		menu:addFullButton(text_name, text_hotkey, offx + 208, offy + 104 + 36*text_y,
-			function() OpenEncyclopediaText(text_name); end)
+			function() OpenEncyclopediaText(text_ident); end)
 		text_y = text_y + 1
 	end
 

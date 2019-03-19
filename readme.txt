@@ -54,8 +54,11 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 3.5.5
+- 4.0.0
 -----------------------------------------------------------------------
+
+* Major
+- Overhauled the game's code, porting it to Godot as a C++ module.
 
 * Abilities
 - Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
@@ -88,6 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
+- Overhauled the game's UI to make use of Godot's UI toolkit.
 
 -----------------------------------------------------------------------
 - 3.5.4
