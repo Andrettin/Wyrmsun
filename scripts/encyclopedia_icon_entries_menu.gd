@@ -12,14 +12,18 @@ func _ready():
 	
 	var menu_title_label = menu_area.find_node("menu_title")
 	var menu_title_text = "[center][color=#f4e020]Encyclopedia: " + encyclopedia.get_category_name()
-	if (encyclopedia.civilization.is_hidden() == false):
+	if (encyclopedia.civilization != null and encyclopedia.civilization.is_hidden() == false):
 		menu_title_text += " (" + encyclopedia.civilization.get_name() + ")"
 	menu_title_text += "[/color][/center]"
 	menu_title_label.bbcode_text = menu_title_text
 	
+	var previous_menu_button = menu_area.find_node("previous_menu_button")
+	if (encyclopedia.is_category_separated_by_civilization() == false):
+		previous_menu_button.target_scene = "encyclopedia_menu" #return to the main encyclopedia menu instead, if the current category doesn't divide entries by civilization
+	
 	var icon_buttons = []
 	for entry in encyclopedia.entries:
-		if (entry.get_civilization() != encyclopedia.civilization):
+		if (encyclopedia.civilization != null and entry.get_civilization() != encyclopedia.civilization):
 			continue
 		
 		var entry_button = load("res://scenes/icon_button.tscn").instance()

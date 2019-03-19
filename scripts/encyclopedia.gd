@@ -35,18 +35,25 @@ var entry
 
 func set_category(category_ident):
 	self.entries = []
+	var potential_entries = []
 	
 	if (category_ident == "buildings"):
 		self.category = Category.Buildings
-		var potential_entries = wyrmgus.get_building_unit_types()
+		potential_entries = wyrmgus.get_building_unit_types()
 		
-		for potential_entry in potential_entries:
-			if (!potential_entry.is_hidden()):
-				self.entries.push_back(potential_entry)
+	elif (category_ident == "texts"):
+		self.category = Category.Texts
+		#potential_entries = wyrmgus.get_literary_texts()
+			
+	for potential_entry in potential_entries:
+		if (!potential_entry.is_hidden()):
+			self.entries.push_back(potential_entry)
 			
 func get_category_name():
 	if (self.category == Category.Buildings):
 		return "Buildings"
+	elif (self.category == Category.Texts):
+		return "Texts"
 	else:
 		return ""
 	

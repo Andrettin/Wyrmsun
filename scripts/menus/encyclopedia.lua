@@ -1084,7 +1084,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	else
 		height_offset = 2
 	end
-	local title = encyclopedia_entry_menu:addLabel("~<" .. text_name .. "~>", Video.Width / 2, offy + 104 + 36*(-4 + height_offset), nil, true)
+	local title = encyclopedia_entry_menu:addLabel("~<" .. GetTextData(text_name, "Name") .. "~>", Video.Width / 2, offy + 104 + 36*(-4 + height_offset), nil, true)
 	title:adjustSize()
 	title:setAlignment(MultiLineLabel.CENTER)
 
