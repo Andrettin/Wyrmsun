@@ -505,7 +505,7 @@ UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
 -- Plane Map Layer Buttons
 
-local material_plane_id = GetPlaneData("material-plane", "ID")
+local material_plane_id = GetPlaneData("material-plane", "Index")
 --if (GetMapLayer("material-plane", "alfheim", 0) ~= -1 or GetMapLayer("material-plane", "earth", 0) ~= -1 or GetMapLayer("material-plane", "jotunheim", 0) ~= -1 or GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
 if (GetMapLayer("material-plane", "", 0) ~= -1) then
 	UI.PlaneButtons:at(material_plane_id).X = 16 + (19  * 0)
@@ -516,7 +516,7 @@ else
 	UI.PlaneButtons:at(material_plane_id).Y = -1
 end
 
-local asgard_id = GetPlaneData("asgard", "ID")
+local asgard_id = GetPlaneData("asgard", "Index")
 if (GetMapLayer("asgard", "", 0) ~= -1) then
 	UI.PlaneButtons:at(asgard_id).X = 16 + (19  * 1)
 	UI.PlaneButtons:at(asgard_id).Y = Video.Height - 178
@@ -526,7 +526,7 @@ else
 	UI.PlaneButtons:at(asgard_id).Y = -1
 end
 
-local niflheim_id = GetPlaneData("niflheim", "ID")
+local niflheim_id = GetPlaneData("niflheim", "Index")
 if (GetMapLayer("niflheim", "", 0) ~= -1) then
 	UI.PlaneButtons:at(niflheim_id).X = 16 + (19  * 2)
 	UI.PlaneButtons:at(niflheim_id).Y = Video.Height - 178
@@ -538,7 +538,7 @@ end
 
 -- World Map Layer Buttons
 
-local earth_id = GetWorldData("earth", "ID")
+local earth_id = GetWorldData("earth", "Index")
 if (GetMapLayer("material-plane", "earth", 0) ~= -1) then
 	UI.WorldButtons:at(earth_id).X = 16 + (19  * 0)
 	UI.WorldButtons:at(earth_id).Y = Video.Height - 23
@@ -548,7 +548,7 @@ else
 	UI.WorldButtons:at(earth_id).Y = -1
 end
 
-local nidavellir_id = GetWorldData("nidavellir", "ID")
+local nidavellir_id = GetWorldData("nidavellir", "Index")
 if (GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
 	UI.WorldButtons:at(nidavellir_id).X = 16 + (19  * 1)
 	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23
@@ -558,7 +558,7 @@ else
 	UI.WorldButtons:at(nidavellir_id).Y = -1
 end
 
-local jotunheim_id = GetWorldData("jotunheim", "ID")
+local jotunheim_id = GetWorldData("jotunheim", "Index")
 if (GetMapLayer("material-plane", "jotunheim", 0) ~= -1) then
 	UI.WorldButtons:at(jotunheim_id).X = 16 + (19  * 2)
 	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23
