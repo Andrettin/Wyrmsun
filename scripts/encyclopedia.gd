@@ -43,7 +43,7 @@ func set_category(category_ident):
 		
 	elif (category_ident == "texts"):
 		self.category = Category.Texts
-		#potential_entries = wyrmgus.get_literary_texts()
+		potential_entries = wyrmgus.get_literary_texts()
 			
 	for potential_entry in potential_entries:
 		if (!potential_entry.is_hidden()):
