@@ -83,10 +83,6 @@
 Load("scripts/texts/the_poetic_edda.lua")
 
 DefineText("the-sceptre-of-fire", {
-	Name = "The ~!Sceptre of Fire",
-	Author = "Joseph Simmons (turin)",
-	Year = 2007,
-	CopyrightNotice = "This text has been released under the GNU General Public License version 2 by its author. See license.txt for more details on the license.",
 	Chapters = {
 		{
 			"name", "The Sceptre of Fire",

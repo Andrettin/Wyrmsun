@@ -73,16 +73,6 @@ DefineBoolFlags("MetalImprove", "LumberImprove", "OilImprove", "StoneImprove")
 --  Note, some of those values are overridden by user preferences,
 --  see preferences.lua
 
---  Enter your default title screen.
-SetTitleScreens(
--- FIXME: No good title image yet
---  {Image = "ui/title.png", Music = "music/battle_theme_a.ogg", Timeout = 20}
-)
-
--------------------------------------------------------------------------------
---	Music play list -	Insert your titles here
--------------------------------------------------------------------------------
-
 --  Set the game name. It's used so we can mantain different savegames
 --  and setting. Might also be used for multiplayer.
 SetGameName("wyr")
@@ -1632,7 +1622,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns"}
+	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)

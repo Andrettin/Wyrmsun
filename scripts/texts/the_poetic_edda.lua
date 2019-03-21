@@ -26,11 +26,6 @@
 --
 
 DefineText("the-poetic-edda", {
-	Name = "The P~!oetic Edda",
-	Translator = "Henry Adams Bellows",
-	Year = 1936,
-	Publisher = "Princeton: Princeton University Press",
-	CopyrightNotice = "This text is in the public domain in the United States because it was not renewed in a timely fashion as required at the time by copyright law. It is also in the public domain in Austria, as the copyright has expired in the country of origin (the United States) and the last surviving author has died more than 70 years ago (in 1939).",
 	Chapters = {
 		{
 			"name", "Acknowledgement",
