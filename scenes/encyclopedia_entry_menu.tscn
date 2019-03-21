@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/icon_button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=7]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=8]
-[ext_resource path="res://shortcut_p.tres" type="ShortCut" id=9]
+[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=9]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=10]
 
 [node name="encyclopedia_entry_menu" type="Control"]

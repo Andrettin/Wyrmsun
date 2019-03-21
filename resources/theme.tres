@@ -2,7 +2,7 @@
 
 [ext_resource path="res://graphics/interface/dwarven/radio_normal_selected.png" type="Texture" id=1]
 [ext_resource path="res://graphics/interface/dwarven/radio_normal_unselected.png" type="Texture" id=2]
-[ext_resource path="res://dropdown.tres" type="StyleBox" id=3]
+[ext_resource path="res://resources/dropdown.tres" type="StyleBox" id=3]
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=1]

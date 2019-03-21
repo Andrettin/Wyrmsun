@@ -5,10 +5,10 @@
 [ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=5]
-[ext_resource path="res://shortcut_b.tres" type="ShortCut" id=6]
+[ext_resource path="res://resources/shortcuts/shortcut_b.tres" type="ShortCut" id=6]
 [ext_resource path="res://scripts/view_encyclopedia_category_button.gd" type="Script" id=7]
-[ext_resource path="res://shortcut_x.tres" type="ShortCut" id=8]
-[ext_resource path="res://shortcut_p.tres" type="ShortCut" id=9]
+[ext_resource path="res://resources/shortcuts/shortcut_x.tres" type="ShortCut" id=8]
+[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=9]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=10]
 
 [node name="encyclopedia_menu" type="Control"]

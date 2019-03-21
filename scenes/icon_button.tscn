@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://graphics/ui/icon_frame.png" type="Texture" id=2]
 [ext_resource path="res://graphics/ui/icon_frame_pressed.png" type="Texture" id=3]
 [ext_resource path="res://scripts/icon_button.gd" type="Script" id=4]
