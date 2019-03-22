@@ -28,6 +28,7 @@ func update_entry_icon_button():
 		graphics_file = "res://graphics/" + graphics_file
 	
 	entry_icon_button.set_graphics(graphics_file)
+	
 	var faction = entry.get_faction()
 	if (faction != null):
 		entry_icon_button.set_player_color(faction.get_primary_color())

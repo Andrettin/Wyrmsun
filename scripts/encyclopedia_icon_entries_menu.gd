@@ -39,12 +39,12 @@ func _ready():
 		
 		entry_button.set_graphics(graphics_file)
 		var tooltip_text = entry.get_name()
-		if (entry.has_method("get_faction") and entry.has_method("get_civilization")):
+		if (entry.has_method("get_faction")):
 			var faction = entry.get_faction()
 			if (faction != null):
 				entry_button.set_player_color(faction.get_primary_color())
 				tooltip_text += " (" + faction.get_name() + ")"
-			else:
+			elif (encyclopedia.civilization != null):
 				entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
 			
 		entry_button.set_tooltip(tooltip_text)
