@@ -242,7 +242,6 @@ func scroll_text():
 	if (v_scroll.value < v_scroll.max_value):
 		var value_change = min(1, v_scroll.max_value - v_scroll.value)
 		v_scroll.value += value_change
-		self.credits_text_shadow_node.get_v_scroll().value += value_change
 	
 func clean_up():
 	music_player.set_condition(10, 0)

@@ -136,11 +136,14 @@ func next_button_pressed():
 func change_page(page):
 	self.current_page = page
 	
+	var entry_description_label = self.find_node("entry_description")
+	
 	if (page.get_number() == 1):
 		#this is the first page, so show the information on the literary text as well
 		update_entry_description()
 	else:
-		var entry_description_label = self.find_node("entry_description")
 		entry_description_label.bbcode_text = page.get_text()
+		entry_description_label.update_for_scroll_bar()
 	
+	entry_description_label.get_v_scroll().value = 0
 	update_previous_and_next_buttons()

@@ -60,6 +60,7 @@ custom_fonts/italics_font = ExtResource( 7 )
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_text = "Entry Description"
 text = "Entry Description"
+scroll_active = true
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 9 )]
 anchor_left = 0.5
