@@ -65,20 +65,26 @@ func update_entry_description():
 		
 	if (entry.is_class("CLiteraryText")):
 		if (entry.get_author().empty() == false):
-			entry_description_text += "Author:" + " " + entry.get_author() + "\n\n"
+			if (entry.get_main_text() == null or entry.get_author() != entry.get_main_text().get_author()):
+				entry_description_text += "Author:" + " " + entry.get_author() + "\n\n"
 			
 		if (entry.get_translator().empty() == false):
-			entry_description_text += "Translator:" + " " + entry.get_translator() + "\n\n"
+			if (entry.get_main_text() == null or entry.get_translator() != entry.get_main_text().get_translator()):
+				entry_description_text += "Translator:" + " " + entry.get_translator() + "\n\n"
 	
 		if (entry.get_publisher().empty() == false):
-			entry_description_text += "Publisher:" + " " + entry.get_publisher() + "\n\n"
+			if (entry.get_main_text() == null or entry.get_publisher() != entry.get_main_text().get_publisher()):
+				entry_description_text += "Publisher:" + " " + entry.get_publisher() + "\n\n"
 	
-		entry_description_text += "Year of Publication:" + " " + str(entry.get_year()) + "\n\n"
+		if (entry.get_main_text() == null or entry.get_publication_year() != entry.get_main_text().get_publication_year()):
+			entry_description_text += "Year of Publication:" + " " + str(entry.get_publication_year()) + "\n\n"
 	
 		if (entry.get_copyright_notice().empty() == false):
-			entry_description_text += "Copyright Notice:" + " " + entry.get_copyright_notice() + "\n\n"
+			if (entry.get_main_text() == null or entry.get_copyright_notice() != entry.get_main_text().get_copyright_notice()):
+				entry_description_text += "Copyright Notice:" + " " + entry.get_copyright_notice() + "\n\n"
 			
-		entry_description_text += "\n\n" + self.current_page.get_text()
+		if (self.current_page != null):
+			entry_description_text += "\n\n" + self.current_page.get_text()
 	
 	entry_description_label.bbcode_text = entry_description_text
 
