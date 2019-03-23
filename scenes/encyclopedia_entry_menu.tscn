@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/encyclopedia_entry_menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://scenes/menu_area.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/text_with_shadow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/icon_button.tscn" type="PackedScene" id=6]
-[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=7]
-[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=8]
-[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=9]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=10]
+[ext_resource path="res://fonts/berenika_oblique_14.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=8]
+[ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=10]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=11]
 
 [node name="encyclopedia_entry_menu" type="Control"]
 anchor_right = 1.0
@@ -20,6 +21,15 @@ script = ExtResource( 1 )
 texture = ExtResource( 3 )
 
 [node name="menu_area" parent="." instance=ExtResource( 4 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+rect_min_size = Vector2( 800, 600 )
 
 [node name="menu_title" parent="menu_area" instance=ExtResource( 5 )]
 anchor_right = 1.0
@@ -41,15 +51,17 @@ margin_bottom = -186.0
 
 [node name="entry_description" parent="menu_area" instance=ExtResource( 5 )]
 anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 32.0
 margin_top = 140.0
 margin_right = -32.0
-margin_bottom = 500.0
-custom_fonts/normal_font = ExtResource( 7 )
+margin_bottom = -100.0
+custom_fonts/italics_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 8 )
 bbcode_text = "Entry Description"
 text = "Entry Description"
 
-[node name="previous_menu_button" parent="menu_area" instance=ExtResource( 8 )]
+[node name="previous_menu_button" parent="menu_area" instance=ExtResource( 9 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -58,8 +70,8 @@ margin_left = -112.0
 margin_top = -64.0
 margin_right = 112.0
 margin_bottom = -36.0
-shortcut = ExtResource( 9 )
-script = ExtResource( 10 )
+shortcut = ExtResource( 10 )
+script = ExtResource( 11 )
 button_text = "~!Previous Menu"
 target_scene = "encyclopedia_icon_entries_menu"
 
@@ -85,3 +97,5 @@ margin_right = 27.0
 margin_bottom = -27.0
 file_path = "res://graphics/neutral/icons/right_arrow.png"
 
+[connection signal="pressed" from="menu_area/previous_button" to="." method="previous_button_pressed"]
+[connection signal="pressed" from="menu_area/next_button" to="." method="next_button_pressed"]

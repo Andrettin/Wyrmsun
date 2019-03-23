@@ -76,8 +76,9 @@ func update_entry_description():
 			if (entry.get_main_text() == null or entry.get_publisher() != entry.get_main_text().get_publisher()):
 				entry_description_text += "Publisher:" + " " + entry.get_publisher() + "\n\n"
 	
-		if (entry.get_main_text() == null or entry.get_publication_year() != entry.get_main_text().get_publication_year()):
-			entry_description_text += "Year of Publication:" + " " + str(entry.get_publication_year()) + "\n\n"
+		if (entry.get_publication_year() != 0):
+			if (entry.get_main_text() == null or entry.get_publication_year() != entry.get_main_text().get_publication_year()):
+				entry_description_text += "Year of Publication:" + " " + str(entry.get_publication_year()) + "\n\n"
 	
 		if (entry.get_copyright_notice().empty() == false):
 			if (entry.get_main_text() == null or entry.get_copyright_notice() != entry.get_main_text().get_copyright_notice()):
@@ -96,12 +97,30 @@ func update_previous_and_next_buttons():
 	if (entry.is_class("CLiteraryText")):
 		if (self.current_page == null or self.current_page.get_previous_page() == null):
 			previous_button.hide()
+		else:
+			previous_button.show()
+			previous_button.set_tooltip("Previous Page")
 			
 		if (self.current_page == null or self.current_page.get_next_page() == null):
 			next_button.hide()
+		else:
+			next_button.show()
+			next_button.set_tooltip("Next Page")
 	else:
 		previous_button.hide()
 		next_button.hide()
+		
+func previous_button_pressed():
+	var entry = encyclopedia.entry
+	if (entry.is_class("CLiteraryText")):
+		if (self.current_page.get_previous_page() != null):
+			change_page(self.current_page.get_previous_page())
+
+func next_button_pressed():
+	var entry = encyclopedia.entry
+	if (entry.is_class("CLiteraryText")):
+		if (self.current_page.get_next_page() != null):
+			change_page(self.current_page.get_next_page())
 
 func change_page(page):
 	self.current_page = page
