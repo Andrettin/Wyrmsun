@@ -81,14 +81,3 @@
 
 --Load("scripts/texts/the_ethnology_of_germany.lua")
 Load("scripts/texts/the_poetic_edda.lua")
-
-DefineText("the-sceptre-of-fire", {
-	Chapters = {
-		{
-			"name", "The Sceptre of Fire",
-			"text", {
-				"The land of Wesnoth's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\n\nSo now I tell from whence it came -\nThe Fire-sceptre great -\nAnd of the makers of the same,\nTheir tale I now relate..."
-			}
-		}
-	}
-})

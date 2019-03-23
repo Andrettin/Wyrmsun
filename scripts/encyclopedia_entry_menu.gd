@@ -27,6 +27,14 @@ func update_entry_icon_button():
 	var entry = encyclopedia.entry
 	
 	var entry_icon_button = self.find_node("entry_icon_button")
+	
+	if (entry.is_class("CLiteraryText")):
+		#expand the text to encompass the place where the icon button normally is for literary texts, so that there is enough space for a given page
+		var entry_description_label = self.find_node("entry_description")
+		entry_description_label.margin_top = entry_icon_button.rect_position.y
+		entry_icon_button.hide()
+		return
+	
 	entry_icon_button.set_tooltip(entry.get_name())
 	var graphics_file = entry.get_icon().get_file()
 	if (graphics_file.find("dlcs/") != -1):
@@ -85,7 +93,10 @@ func update_entry_description():
 				entry_description_text += "Copyright Notice:" + " " + entry.get_copyright_notice() + "\n\n"
 			
 		if (self.current_page != null):
-			entry_description_text += "\n\n" + self.current_page.get_text()
+			if (entry_description_text.empty() == false):
+				#add a bit of separation between the description and the text of the page itself
+				entry_description_text += "\n\n"
+			entry_description_text += self.current_page.get_text()
 	
 	entry_description_label.bbcode_text = entry_description_text
 
