@@ -7,7 +7,7 @@ func _ready():
 	command += "\nend"
 	command += "\nend"
 	wyrmgus.lua_command(command)
-		
+	
 	var menu_area = self.find_node("menu_area")
 	
 	var menu_title_label = menu_area.find_node("menu_title")
@@ -39,13 +39,12 @@ func _ready():
 		
 		entry_button.set_graphics(graphics_file)
 		var tooltip_text = entry.get_name()
-		if (entry.has_method("get_faction")):
+		if (entry.has_method("get_faction") and entry.get_faction() != null):
 			var faction = entry.get_faction()
-			if (faction != null):
-				entry_button.set_player_color(faction.get_primary_color())
-				tooltip_text += " (" + faction.get_name() + ")"
-			elif (encyclopedia.civilization != null):
-				entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
+			entry_button.set_player_color(faction.get_primary_color())
+			tooltip_text += " (" + faction.get_name() + ")"
+		elif (encyclopedia.civilization != null):
+			entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
 			
 		entry_button.set_tooltip(tooltip_text)
 		

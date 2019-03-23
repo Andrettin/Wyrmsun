@@ -2,11 +2,15 @@ extends TextureButton
 
 var icon_pressed_display = false
 var icon_node
+export var file_path = ""
 
 func _ready():
 	self.connect("draw", self, "update_icon_position")
 	self.connect("pressed", audio_player, "play_sound_file", ["res://sounds/interface/click.wav"])
 	self.icon_node = self.find_node("icon")
+	
+	if (self.file_path.empty() == false):
+		self.set_graphics(self.file_path)
 
 func update_icon_position():
 	if (!icon_node):

@@ -2,6 +2,7 @@
 /data/characters/dwarves/durstorns_clan.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/characters/dwarves/shorbear_clan.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/deities/goblin/gathaarl.cfg (by the Tyrant Team) (licensed under the GPL 2.0)
+/data/literary_texts/the_sceptre_of_fire.cfg (by Joseph Simmons) (licensed under the GPL 2.0)
 /data/map_templates/aethermaw.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/map_templates/nidavellir/caverns_of_chaincolt_city.cfg (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
 /data/map_templates/nidavellir/caverns_of_chaincolt_city.png (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
