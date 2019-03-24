@@ -87,9 +87,9 @@ func update_entry_description():
 			if (entry.get_main_text() == null or entry.get_publication_year() != entry.get_main_text().get_publication_year()):
 				entry_description_text += "Year of Publication:" + " " + str(entry.get_publication_year()) + "\n\n"
 	
-		if (entry.get_copyright_notice().empty() == false):
-			if (entry.get_main_text() == null or entry.get_copyright_notice() != entry.get_main_text().get_copyright_notice()):
-				entry_description_text += "Copyright Notice:" + " " + entry.get_copyright_notice() + "\n\n"
+		if (entry.get_license().empty() == false):
+			if (entry.get_main_text() == null or entry.get_license() != entry.get_main_text().get_license()):
+				entry_description_text += "License:" + " " + entry.get_license() + "\n\n"
 			
 		if (self.current_page != null):
 			if (entry_description_text.empty() == false):
@@ -157,6 +157,7 @@ func add_subentry_buttons():
 	
 	var menu_area = self.find_node("menu_area")
 	
+	var x_offset = (menu_area.rect_size.x - 640) / 2
 	var item_x = 0
 	var item_y = 6
 	for subentry in subentries:
@@ -168,7 +169,7 @@ func add_subentry_buttons():
 		menu_area.add_child(subentry_button)
 		subentry_button.set_entry(subentry)
 		
-		subentry_button.rect_position.x = 23 + 4 + (54 * item_x)
+		subentry_button.rect_position.x = x_offset + 23 + 4 + (54 * item_x)
 		subentry_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
 		
 		item_x += 1
