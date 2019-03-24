@@ -17,11 +17,17 @@ func _ready():
 	menu_title.bbcode_text = "[center][color=#f4e020]" + encyclopedia.entry.get_name() + "[/color][/center]"
 	
 	if (entry.is_class("CLiteraryText")):
+		if (entry.get_main_text() != null):
+			var previous_menu_button = self.find_node("previous_menu_button")
+			previous_menu_button.target_scene = ""
+			previous_menu_button.connect("pressed", encyclopedia, "open_entry", [entry.get_main_text()])
+		
 		self.current_page = entry.get_first_page()
 	
 	update_entry_icon_button()
 	update_entry_description()
 	update_previous_and_next_buttons()
+	add_subentry_buttons()
 
 func update_entry_icon_button():
 	var entry = encyclopedia.entry
@@ -140,3 +146,33 @@ func change_page(page):
 	
 	entry_description_label.get_v_scroll().value = 0
 	update_previous_and_next_buttons()
+
+func add_subentry_buttons():
+	var entry = encyclopedia.entry
+	var subentries = []
+	if (entry.is_class("CLiteraryText")):
+		subentries = entry.get_sections()
+	else:
+		return
+	
+	var menu_area = self.find_node("menu_area")
+	
+	var item_x = 0
+	var item_y = 6
+	for subentry in subentries:
+		if (subentry.get_icon() == null):
+			continue #temporary while there are still Lua-defined sections for literary texts, without icons
+		
+		var subentry_button = load("res://scenes/icon_button.tscn").instance()
+		subentry_button.set_script(load("res://scripts/encyclopedia_entry_button.gd"))
+		menu_area.add_child(subentry_button)
+		subentry_button.set_entry(subentry)
+		
+		subentry_button.rect_position.x = 23 + 4 + (54 * item_x)
+		subentry_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
+		
+		item_x += 1
+		
+		if (item_x > 10):
+			item_x = 0
+			item_y += 1

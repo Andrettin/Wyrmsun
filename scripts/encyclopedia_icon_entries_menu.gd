@@ -28,25 +28,8 @@ func _ready():
 		
 		var entry_button = load("res://scenes/icon_button.tscn").instance()
 		entry_button.set_script(load("res://scripts/encyclopedia_entry_button.gd"))
-		entry_button.entry = entry
 		menu_area.add_child(entry_button)
-		
-		var graphics_file = entry.get_icon().get_file()
-		if (graphics_file.find("dlcs/") != -1):
-			graphics_file = "res://" + graphics_file
-		else:
-			graphics_file = "res://graphics/" + graphics_file
-		
-		entry_button.set_graphics(graphics_file)
-		var tooltip_text = entry.get_name()
-		if (entry.has_method("get_faction") and entry.get_faction() != null):
-			var faction = entry.get_faction()
-			entry_button.set_player_color(faction.get_primary_color())
-			tooltip_text += " (" + faction.get_name() + ")"
-		elif (encyclopedia.civilization != null):
-			entry_button.set_player_color(encyclopedia.civilization.get_default_player_color())
-			
-		entry_button.set_tooltip(tooltip_text)
+		entry_button.set_entry(entry)
 		
 		icon_buttons.push_back(entry_button)
 		
