@@ -80,4 +80,3 @@
 	--]]
 
 --Load("scripts/texts/the_ethnology_of_germany.lua")
-Load("scripts/texts/the_poetic_edda.lua")
