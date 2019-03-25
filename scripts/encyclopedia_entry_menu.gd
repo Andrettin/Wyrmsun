@@ -27,7 +27,6 @@ func _ready():
 	update_entry_icon_button()
 	update_entry_description()
 	update_previous_and_next_buttons()
-	add_subentry_buttons()
 
 func update_entry_icon_button():
 	var entry = encyclopedia.entry
@@ -96,8 +95,19 @@ func update_entry_description():
 				#add a bit of separation between the description and the text of the page itself
 				entry_description_text += "\n\n"
 			entry_description_text += self.current_page.get_text()
-	
+			
+		#draw a table of contents for subsections of the literary text for the last page of the literary text
+		var sections = entry.get_sections()
+		if (sections.empty() == false and (self.current_page == null or self.current_page.get_next_page() == null)):
+			entry_description_text += "\n\n" + "Table of Contents" + "\n"
+			
+			for section in sections:
+				entry_description_text += "\n[url=literary_text:" + section.get_ident() + "]"
+				entry_description_text += section.get_name()
+				entry_description_text += "[/url]"
+		
 	entry_description_label.bbcode_text = entry_description_text
+	entry_description_label.connect("meta_clicked", encyclopedia, "open_entry_link")
 
 func update_previous_and_next_buttons():
 	var entry = encyclopedia.entry
@@ -146,34 +156,3 @@ func change_page(page):
 	
 	entry_description_label.get_v_scroll().value = 0
 	update_previous_and_next_buttons()
-
-func add_subentry_buttons():
-	var entry = encyclopedia.entry
-	var subentries = []
-	if (entry.is_class("CLiteraryText")):
-		subentries = entry.get_sections()
-	else:
-		return
-	
-	var menu_area = self.find_node("menu_area")
-	
-	var x_offset = (menu_area.rect_size.x - 640) / 2
-	var item_x = 0
-	var item_y = 6
-	for subentry in subentries:
-		if (subentry.get_icon() == null):
-			continue #temporary while there are still Lua-defined sections for literary texts, without icons
-		
-		var subentry_button = load("res://scenes/icon_button.tscn").instance()
-		subentry_button.set_script(load("res://scripts/encyclopedia_entry_button.gd"))
-		menu_area.add_child(subentry_button)
-		subentry_button.set_entry(subentry)
-		
-		subentry_button.rect_position.x = x_offset + 23 + 4 + (54 * item_x)
-		subentry_button.rect_position.y = 10 + 4 + (36 * 1.5) + (46 * item_y)
-		
-		item_x += 1
-		
-		if (item_x > 10):
-			item_x = 0
-			item_y += 1

@@ -34,6 +34,9 @@ var entries = []
 var entry
 
 func set_category(category_ident):
+	if (category_ident == get_category_ident()):
+		return
+	
 	self.entries = []
 	var potential_entries = []
 	
@@ -52,6 +55,14 @@ func set_category(category_ident):
 		if (!potential_entry.is_hidden()):
 			self.entries.push_back(potential_entry)
 			
+func get_category_ident():
+	if (self.category == Category.Buildings):
+		return "buildings"
+	elif (self.category == Category.Texts):
+		return "texts"
+	else:
+		return ""
+	
 func get_category_name():
 	if (self.category == Category.Buildings):
 		return "Buildings"
@@ -70,3 +81,26 @@ func open_entry(entry):
 	self.entry = entry
 	
 	get_tree().change_scene("res://scenes/encyclopedia_entry_menu.tscn")
+
+func open_entry_link(entry_link):
+	var link_array = entry_link.split(":")
+	var entry_type_ident = link_array[0]
+	var entry_ident = link_array[1]
+	entry_ident = entry_ident.replace("_", "-")
+	
+	var entry
+	if (entry_type_ident == "literary_text"):
+		entry = wyrmgus.get_literary_text(entry_ident)
+	
+	var category_ident = get_category_ident_for_entry(entry)
+	set_category(category_ident)
+	if (entry.has_method("get_civilization")):
+		self.civilization = entry.get_civilization()
+	else:
+		self.civilization = null
+		
+	open_entry(entry)
+	
+func get_category_ident_for_entry(entry):
+	if (entry.is_class("CLiteraryText")):
+		return "texts"
