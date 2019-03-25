@@ -27,6 +27,7 @@ func _ready():
 	update_entry_icon_button()
 	update_entry_description()
 	update_previous_and_next_buttons()
+	update_page_number_visibility()
 
 func update_entry_icon_button():
 	var entry = encyclopedia.entry
@@ -154,5 +155,25 @@ func change_page(page):
 		entry_description_label.bbcode_text = page.get_text()
 		entry_description_label.update_for_scroll_bar()
 	
+	update_page_number()
 	entry_description_label.get_v_scroll().value = 0
 	update_previous_and_next_buttons()
+
+func update_page_number_visibility():
+	var page_number_label = self.find_node("page_number")
+	
+	var entry = encyclopedia.entry
+	if (entry.is_class("CLiteraryText")):
+		page_number_label.visible = true
+		update_page_number()
+	else:
+		page_number_label.visible = false
+	
+func update_page_number():
+	var entry = encyclopedia.entry
+	var page_number_label = self.find_node("page_number")
+	if (self.current_page != null):
+		var page_number = (entry.get_initial_page() - 1) + self.current_page.get_number()
+		page_number_label.bbcode_text = "[center]" + str(page_number) + "[/center]"
+	else:
+		page_number_label.bbcode_text = ""

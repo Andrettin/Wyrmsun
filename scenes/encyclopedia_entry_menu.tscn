@@ -98,5 +98,16 @@ margin_right = 27.0
 margin_bottom = -27.0
 file_path = "res://graphics/neutral/icons/right_arrow.png"
 
+[node name="page_number" parent="menu_area" instance=ExtResource( 5 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -28.0
+margin_right = 112.0
+margin_bottom = -4.0
+
 [connection signal="pressed" from="menu_area/previous_button" to="." method="previous_button_pressed"]
 [connection signal="pressed" from="menu_area/next_button" to="." method="next_button_pressed"]
