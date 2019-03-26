@@ -172,8 +172,13 @@ func update_page_number_visibility():
 func update_page_number():
 	var entry = encyclopedia.entry
 	var page_number_label = self.find_node("page_number")
-	if (self.current_page != null):
+	if (entry.is_page_numbering_enabled() and self.current_page != null):
 		var page_number = (entry.get_initial_page_number() - 1) + self.current_page.get_number()
-		page_number_label.bbcode_text = "[center]" + str(page_number) + "[/center]"
+		var page_number_text = ""
+		if (entry.has_lowercase_roman_numeral_page_numbering()):
+			page_number_text = wyrmgus.number_to_roman_numeral(page_number).to_lower()
+		else:
+			page_number_text = str(page_number)
+		page_number_label.bbcode_text = "[center]" + page_number_text + "[/center]"
 	else:
 		page_number_label.bbcode_text = ""
