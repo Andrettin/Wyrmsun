@@ -1,0 +1,8 @@
+[gd_resource type="ShortCut" load_steps=2 format=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_right"
+
+[resource]
+shortcut = SubResource( 1 )
+

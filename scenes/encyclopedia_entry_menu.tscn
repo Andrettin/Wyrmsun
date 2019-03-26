@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/encyclopedia_entry_menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=10]
 [ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=11]
+[ext_resource path="res://resources/shortcuts/shortcut_left.tres" type="ShortCut" id=12]
+[ext_resource path="res://resources/shortcuts/shorcut_right.tres" type="ShortCut" id=13]
 
 [node name="encyclopedia_entry_menu" type="Control"]
 anchor_right = 1.0
@@ -85,6 +87,7 @@ margin_left = -27.0
 margin_top = -73.0
 margin_right = 27.0
 margin_bottom = -27.0
+shortcut = ExtResource( 12 )
 file_path = "res://graphics/neutral/icons/left_arrow.png"
 
 [node name="next_button" parent="menu_area" instance=ExtResource( 6 )]
@@ -96,6 +99,7 @@ margin_left = -27.0
 margin_top = -73.0
 margin_right = 27.0
 margin_bottom = -27.0
+shortcut = ExtResource( 13 )
 file_path = "res://graphics/neutral/icons/right_arrow.png"
 
 [node name="page_number" parent="menu_area" instance=ExtResource( 5 )]
