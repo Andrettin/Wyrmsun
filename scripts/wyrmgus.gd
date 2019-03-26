@@ -4,6 +4,9 @@ var wyrmgus_thread
 
 func _ready():
 	if (self.wyrmgus_thread == null):
+		#replace the default pointing hand cursor with the Wyrmsun cursor as well
+		Input.set_custom_mouse_cursor(load("res://graphics/cursors/dwarven/dwarven_gauntlet.png"), Input.CURSOR_POINTING_HAND, Vector2(2, 0))
+		
 		self.connect("time_of_day_changed", music_player, "time_of_day_changed", [], CONNECT_DEFERRED)
 		
 		#if the player is hitting or being hit increment the tension to our music by one

@@ -28,6 +28,10 @@ func _ready():
 	update_entry_description()
 	update_previous_and_next_buttons()
 	update_page_number_visibility()
+	
+	if (entry.is_class("CLiteraryText") and encyclopedia.last_page and entry.get_last_page() != null):
+		change_page(entry.get_last_page())
+		encyclopedia.last_page = false
 
 func update_entry_icon_button():
 	var entry = encyclopedia.entry
@@ -116,32 +120,48 @@ func update_previous_and_next_buttons():
 	var next_button = self.find_node("next_button")
 	
 	if (entry.is_class("CLiteraryText")):
-		if (self.current_page == null or self.current_page.get_previous_page() == null):
-			previous_button.hide()
+		if ((self.current_page == null or self.current_page.get_previous_page() == null) and entry.get_previous_section() == null and entry.get_main_text() == null):
+			previous_button.visible = false
 		else:
-			previous_button.show()
+			previous_button.visible = true
 			previous_button.set_tooltip("Previous Page")
 			
-		if (self.current_page == null or self.current_page.get_next_page() == null):
-			next_button.hide()
+		if ((self.current_page == null or self.current_page.get_next_page() == null) and entry.get_next_section() == null and entry.get_sections().empty() == true and (entry.get_main_text() == null or entry.get_main_text().get_next_section() == null)):
+			next_button.visible = false
 		else:
-			next_button.show()
+			next_button.visible = true
 			next_button.set_tooltip("Next Page")
 	else:
-		previous_button.hide()
-		next_button.hide()
+		previous_button.visible = false
+		next_button.visible = false
 		
 func previous_button_pressed():
 	var entry = encyclopedia.entry
 	if (entry.is_class("CLiteraryText")):
-		if (self.current_page.get_previous_page() != null):
+		if (self.current_page != null and self.current_page.get_previous_page() != null):
 			change_page(self.current_page.get_previous_page())
+		elif (entry.get_previous_section() != null):
+			encyclopedia.last_page = true
+			var new_entry = entry.get_previous_section()
+			#set to the last subsection within the previous section
+			while (new_entry.get_sections().empty() == false):
+				new_entry = new_entry.get_sections().back()
+			encyclopedia.open_entry(new_entry)
+		elif (entry.get_main_text() != null):
+			encyclopedia.last_page = true
+			encyclopedia.open_entry(entry.get_main_text())
 
 func next_button_pressed():
 	var entry = encyclopedia.entry
 	if (entry.is_class("CLiteraryText")):
-		if (self.current_page.get_next_page() != null):
+		if (self.current_page != null and self.current_page.get_next_page() != null):
 			change_page(self.current_page.get_next_page())
+		elif (entry.get_sections().empty() == false):
+			encyclopedia.open_entry(entry.get_sections().front())
+		elif (entry.get_next_section() != null):
+			encyclopedia.open_entry(entry.get_next_section())
+		elif (entry.get_main_text() != null and entry.get_main_text().get_next_section() != null):
+			encyclopedia.open_entry(entry.get_main_text().get_next_section())
 
 func change_page(page):
 	self.current_page = page
@@ -168,6 +188,7 @@ func update_page_number_visibility():
 		update_page_number()
 	else:
 		page_number_label.visible = false
+		sqrt(page_number_label)
 	
 func update_page_number():
 	var entry = encyclopedia.entry

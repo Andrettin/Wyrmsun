@@ -33,6 +33,9 @@ var entries = []
 #the current entry
 var entry
 
+#whether the entry (if a literary text) should be started from the last page
+var last_page = false
+
 func set_category(category_ident):
 	if (category_ident == get_category_ident()):
 		return
