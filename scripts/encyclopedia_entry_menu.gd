@@ -1,4 +1,4 @@
-extends Control
+extends Popup
 
 #the current page, if the entry is a literary text
 var current_page
@@ -16,7 +16,10 @@ func _ready():
 	command += "\nend"
 	command += "\nend"
 	wyrmgus.lua_command(command)
-		
+	
+	var entry_description_label = self.find_node("entry_description")
+	entry_description_label.connect("meta_clicked", encyclopedia, "open_entry_link", [self])
+	
 func change_entry(entry):
 	self.entry = entry
 	
@@ -111,7 +114,6 @@ func update_entry_description():
 				entry_description_text += "[/url]"
 		
 	entry_description_label.bbcode_text = entry_description_text
-	entry_description_label.connect("meta_clicked", encyclopedia, "open_entry_link", [self])
 
 func update_previous_and_next_buttons():
 	var previous_button = self.find_node("previous_button")

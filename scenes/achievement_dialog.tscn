@@ -9,7 +9,6 @@
 [ext_resource path="res://resources/shortcuts/shortcut_c.tres" type="ShortCut" id=7]
 
 [node name="achievement_dialog" type="Popup"]
-
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -18,32 +17,20 @@ margin_left = -144.0
 margin_top = -128.0
 margin_right = 144.0
 margin_bottom = 128.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 popup_exclusive = true
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Pause", "Popup", "Rect", "Theme", "Visibility" ]
 
 [node name="panel" parent="." instance=ExtResource( 2 )]
 
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
-
 [node name="title_label" parent="panel" instance=ExtResource( 3 )]
-
 anchor_right = 1.0
 margin_top = 11.0
 margin_right = 0.0
 margin_bottom = 35.0
 bbcode_text = "[center]Achievement Name[/center]"
 text = "Achievement Name"
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="icon_button" parent="panel" instance=ExtResource( 4 )]
-
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -27.0
@@ -52,7 +39,6 @@ margin_right = 27.0
 margin_bottom = 46.0
 
 [node name="description_label" parent="panel" instance=ExtResource( 3 )]
-
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
@@ -62,10 +48,8 @@ margin_bottom = -48.0
 custom_fonts/normal_font = ExtResource( 5 )
 bbcode_text = "Achievement Description"
 text = "Achievement Description"
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Margin", "Mouse", "Pause", "Rect", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="close_button" parent="panel" instance=ExtResource( 6 )]
-
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -75,9 +59,6 @@ margin_top = -40.0
 margin_right = 112.0
 margin_bottom = -12.0
 shortcut = ExtResource( 7 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures", "Theme" ]
 button_text = "~!Close"
 
 [connection signal="pressed" from="panel/close_button" to="." method="queue_free"]
-
-

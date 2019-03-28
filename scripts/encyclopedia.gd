@@ -81,6 +81,7 @@ func open_entry(entry, origin_scene):
 	var entry_menu = load("res://scenes/encyclopedia_entry_menu.tscn").instance()
 	entry_menu.origin_scene = origin_scene
 	get_tree().get_root().add_child(entry_menu)
+	entry_menu.popup()
 	entry_menu.change_entry(entry)
 
 func open_entry_link(entry_link, origin_scene):
