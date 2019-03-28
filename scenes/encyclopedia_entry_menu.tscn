@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/encyclopedia_entry_menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
@@ -10,9 +10,8 @@
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=8]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=10]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=11]
-[ext_resource path="res://resources/shortcuts/shortcut_left.tres" type="ShortCut" id=12]
-[ext_resource path="res://resources/shortcuts/shorcut_right.tres" type="ShortCut" id=13]
+[ext_resource path="res://resources/shortcuts/shortcut_left.tres" type="ShortCut" id=11]
+[ext_resource path="res://resources/shortcuts/shorcut_right.tres" type="ShortCut" id=12]
 
 [node name="encyclopedia_entry_menu" type="Control"]
 anchor_right = 1.0
@@ -74,9 +73,7 @@ margin_top = -64.0
 margin_right = 112.0
 margin_bottom = -36.0
 shortcut = ExtResource( 10 )
-script = ExtResource( 11 )
 button_text = "~!Previous Menu"
-target_scene = "encyclopedia_icon_entries_menu"
 
 [node name="previous_button" parent="menu_area" instance=ExtResource( 6 )]
 anchor_left = 0.2
@@ -87,7 +84,7 @@ margin_left = -27.0
 margin_top = -73.0
 margin_right = 27.0
 margin_bottom = -27.0
-shortcut = ExtResource( 12 )
+shortcut = ExtResource( 11 )
 file_path = "res://graphics/neutral/icons/left_arrow.png"
 
 [node name="next_button" parent="menu_area" instance=ExtResource( 6 )]
@@ -99,7 +96,7 @@ margin_left = -27.0
 margin_top = -73.0
 margin_right = 27.0
 margin_bottom = -27.0
-shortcut = ExtResource( 13 )
+shortcut = ExtResource( 12 )
 file_path = "res://graphics/neutral/icons/right_arrow.png"
 
 [node name="page_number" parent="menu_area" instance=ExtResource( 5 )]
@@ -113,5 +110,6 @@ margin_top = -28.0
 margin_right = 112.0
 margin_bottom = -4.0
 
+[connection signal="pressed" from="menu_area/previous_menu_button" to="." method="exit_entry_menu"]
 [connection signal="pressed" from="menu_area/previous_button" to="." method="previous_button_pressed"]
 [connection signal="pressed" from="menu_area/next_button" to="." method="next_button_pressed"]

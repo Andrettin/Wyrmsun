@@ -30,9 +30,6 @@ var civilization
 #entries for the current category
 var entries = []
 
-#the current entry
-var entry
-
 #whether the entry (if a literary text) should be started from the last page
 var last_page = false
 
@@ -80,12 +77,13 @@ func is_category_separated_by_civilization():
 	else:
 		return false
 
-func open_entry(entry):
-	self.entry = entry
-	
-	get_tree().change_scene("res://scenes/encyclopedia_entry_menu.tscn")
+func open_entry(entry, origin_scene):
+	var entry_menu = load("res://scenes/encyclopedia_entry_menu.tscn").instance()
+	entry_menu.origin_scene = origin_scene
+	get_tree().get_root().add_child(entry_menu)
+	entry_menu.change_entry(entry)
 
-func open_entry_link(entry_link):
+func open_entry_link(entry_link, origin_scene):
 	var link_array = entry_link.split(":")
 	var entry_type_ident = link_array[0]
 	var entry_ident = link_array[1]
@@ -102,7 +100,7 @@ func open_entry_link(entry_link):
 	else:
 		self.civilization = null
 		
-	open_entry(entry)
+	open_entry(entry, origin_scene)
 	
 func get_category_ident_for_entry(entry):
 	if (entry.is_class("CLiteraryText")):

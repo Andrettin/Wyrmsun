@@ -27,4 +27,4 @@ func set_entry(entry):
 	set_tooltip(tooltip_text)
 
 func open_entry():
-	encyclopedia.open_entry(self.entry)
+	encyclopedia.open_entry(self.entry, get_tree().current_scene)

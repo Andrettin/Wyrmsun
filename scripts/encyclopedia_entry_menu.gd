@@ -1,6 +1,13 @@
 extends Control
 
+#the current page, if the entry is a literary text
 var current_page
+
+#the entry for the menu
+var entry
+
+#the scene which originated the creation of this one
+var origin_scene
 
 func _ready():
 	var command = "if (RunningScenario == false) then"
@@ -9,19 +16,15 @@ func _ready():
 	command += "\nend"
 	command += "\nend"
 	wyrmgus.lua_command(command)
+		
+func change_entry(entry):
+	self.entry = entry
 	
 	var menu_area = self.find_node("menu_area")
-	var entry = encyclopedia.entry
-	
 	var menu_title = menu_area.find_node("menu_title")
-	menu_title.bbcode_text = "[center][color=#f4e020]" + encyclopedia.entry.get_name() + "[/color][/center]"
+	menu_title.bbcode_text = "[center][color=#f4e020]" + entry.get_name() + "[/color][/center]"
 	
 	if (entry.is_class("CLiteraryText")):
-		if (entry.get_main_text() != null):
-			var previous_menu_button = self.find_node("previous_menu_button")
-			previous_menu_button.target_scene = ""
-			previous_menu_button.connect("pressed", encyclopedia, "open_entry", [entry.get_main_text()])
-		
 		self.current_page = entry.get_first_page()
 	
 	update_entry_icon_button()
@@ -34,8 +37,6 @@ func _ready():
 		encyclopedia.last_page = false
 
 func update_entry_icon_button():
-	var entry = encyclopedia.entry
-	
 	var entry_icon_button = self.find_node("entry_icon_button")
 	
 	entry_icon_button.set_tooltip(entry.get_name())
@@ -54,8 +55,6 @@ func update_entry_icon_button():
 		entry_icon_button.set_player_color(encyclopedia.civilization.get_default_player_color())
 
 func update_entry_description():
-	var entry = encyclopedia.entry
-	
 	var entry_description_label = self.find_node("entry_description")
 	var entry_description_text = ""
 	
@@ -112,10 +111,9 @@ func update_entry_description():
 				entry_description_text += "[/url]"
 		
 	entry_description_label.bbcode_text = entry_description_text
-	entry_description_label.connect("meta_clicked", encyclopedia, "open_entry_link")
+	entry_description_label.connect("meta_clicked", encyclopedia, "open_entry_link", [self])
 
 func update_previous_and_next_buttons():
-	var entry = encyclopedia.entry
 	var previous_button = self.find_node("previous_button")
 	var next_button = self.find_node("next_button")
 	
@@ -136,7 +134,6 @@ func update_previous_and_next_buttons():
 		next_button.visible = false
 		
 func previous_button_pressed():
-	var entry = encyclopedia.entry
 	if (entry.is_class("CLiteraryText")):
 		if (self.current_page != null and self.current_page.get_previous_page() != null):
 			change_page(self.current_page.get_previous_page())
@@ -146,22 +143,29 @@ func previous_button_pressed():
 			#set to the last subsection within the previous section
 			while (new_entry.get_sections().empty() == false):
 				new_entry = new_entry.get_sections().back()
-			encyclopedia.open_entry(new_entry)
+			change_entry(new_entry)
 		elif (entry.get_main_text() != null):
 			encyclopedia.last_page = true
-			encyclopedia.open_entry(entry.get_main_text())
+			if (origin_scene.get("entry") == entry.get_main_text()):
+				origin_scene.change_entry(entry.get_main_text())
+				exit_entry_menu()
+			else:
+				change_entry(entry.get_main_text())
 
 func next_button_pressed():
-	var entry = encyclopedia.entry
 	if (entry.is_class("CLiteraryText")):
 		if (self.current_page != null and self.current_page.get_next_page() != null):
 			change_page(self.current_page.get_next_page())
 		elif (entry.get_sections().empty() == false):
-			encyclopedia.open_entry(entry.get_sections().front())
+			encyclopedia.open_entry(entry.get_sections().front(), self)
 		elif (entry.get_next_section() != null):
-			encyclopedia.open_entry(entry.get_next_section())
+			change_entry(entry.get_next_section())
 		elif (entry.get_main_text() != null and entry.get_main_text().get_next_section() != null):
-			encyclopedia.open_entry(entry.get_main_text().get_next_section())
+			if (origin_scene.get("entry") == entry.get_main_text()):
+				origin_scene.change_entry(entry.get_main_text().get_next_section())
+				exit_entry_menu()
+			else:
+				change_entry(entry.get_main_text().get_next_section())
 
 func change_page(page):
 	self.current_page = page
@@ -182,7 +186,6 @@ func change_page(page):
 func update_page_number_visibility():
 	var page_number_label = self.find_node("page_number")
 	
-	var entry = encyclopedia.entry
 	if (entry.is_class("CLiteraryText")):
 		page_number_label.visible = true
 		update_page_number()
@@ -190,7 +193,6 @@ func update_page_number_visibility():
 		page_number_label.visible = false
 	
 func update_page_number():
-	var entry = encyclopedia.entry
 	var page_number_label = self.find_node("page_number")
 	if (entry.is_page_numbering_enabled() and self.current_page != null):
 		var page_number = (entry.get_initial_page_number() - 1) + self.current_page.get_number()
@@ -202,3 +204,7 @@ func update_page_number():
 		page_number_label.bbcode_text = "[center]" + page_number_text + "[/center]"
 	else:
 		page_number_label.bbcode_text = ""
+
+func exit_entry_menu():
+	queue_free()
+	get_parent().remove_child(self)
