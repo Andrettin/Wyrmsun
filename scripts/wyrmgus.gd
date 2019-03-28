@@ -4,8 +4,8 @@ var wyrmgus_thread
 
 func _ready():
 	if (self.wyrmgus_thread == null):
-		#replace the default pointing hand cursor with the Wyrmsun cursor as well
-		Input.set_custom_mouse_cursor(load("res://graphics/cursors/dwarven/dwarven_gauntlet.png"), Input.CURSOR_POINTING_HAND, Vector2(2, 0))
+		#replace the default pointing hand cursor with the Wyrmsun magnifying glass cursor
+		Input.set_custom_mouse_cursor(load("res://graphics/ui/cursors/magnifying_glass.png"), Input.CURSOR_POINTING_HAND, Vector2(11, 11))
 		
 		self.connect("time_of_day_changed", music_player, "time_of_day_changed", [], CONNECT_DEFERRED)
 		
