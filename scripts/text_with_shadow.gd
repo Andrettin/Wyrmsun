@@ -24,7 +24,15 @@ func _set(property, value):
 		text_shadow = text_shadow.replace("[color=#f4e020]", "")
 		text_shadow = text_shadow.replace("[/color]", "")
 		self.find_node("text_shadow").bbcode_text = text_shadow
+		
+		#add color to links
+		if (value.find("[url=") != -1):
+			value = value.replace("[url=", "[color=#78b5d5][url=")
+			value = value.replace("[/url]", "[/url][/color]")
+			
+		bbcode_text = value
 		update_for_scroll_bar()
+		return true
 	elif (property == "text"):
 		self.find_node("text_shadow").text = value
 		update_for_scroll_bar()
