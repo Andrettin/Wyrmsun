@@ -1047,7 +1047,7 @@ DefineUnitType("unit-wyrm", {
 	Species = "wyrm",
 	Description = "These enormous draconic creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors. Some tribes go as far as living near a wyrm's lair, keeping it harmless by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds.",
 	Quote = "\"More wyrms there are beneath the ash\nThan an unwise fool would think\"\n- Dwarven Traditional Poetry",
-	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",
+	Background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The [url=literary_text:grimnismol]Grimnismol[/url] includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon.",
 	Image = {"file", "neutral/units/wyrm.png", "size", {110, 108}},
 	Animations = "animations-wyrm", Icon = "icon-wyrm",
 	Costs = {"time", 250, "copper", 2500},
