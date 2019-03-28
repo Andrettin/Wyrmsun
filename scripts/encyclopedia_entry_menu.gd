@@ -188,7 +188,6 @@ func update_page_number_visibility():
 		update_page_number()
 	else:
 		page_number_label.visible = false
-		sqrt(page_number_label)
 	
 func update_page_number():
 	var entry = encyclopedia.entry

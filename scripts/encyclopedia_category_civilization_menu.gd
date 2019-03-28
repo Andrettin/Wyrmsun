@@ -20,6 +20,8 @@ func _ready():
 		if (civilization and !self.civilizations.has(civilization)):
 			self.civilizations.push_back(entry.get_civilization())
 			
+	self.civilizations.sort_custom(self, "sort_civilizations")
+			
 	var item_x = 0
 	if (self.civilizations.size() > 20):
 		item_x = -2
@@ -47,3 +49,6 @@ func _ready():
 			item_y = -2
 		else:
 			item_y += 1
+
+func sort_civilizations(a, b):
+	return a.get_name() < b.get_name()
