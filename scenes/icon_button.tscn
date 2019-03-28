@@ -58,6 +58,7 @@ shader_param/target_hair_color_13 = null
 [node name="icon_button" type="TextureButton"]
 margin_right = 46.0
 margin_bottom = 38.0
+focus_mode = 0
 theme = ExtResource( 1 )
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )

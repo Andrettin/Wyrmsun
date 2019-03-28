@@ -38,7 +38,7 @@ func change_entry(entry):
 	if (entry.is_class("CLiteraryText") and encyclopedia.last_page and entry.get_last_page() != null):
 		change_page(entry.get_last_page())
 		encyclopedia.last_page = false
-
+	
 func update_entry_icon_button():
 	var entry_icon_button = self.find_node("entry_icon_button")
 	
