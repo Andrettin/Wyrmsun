@@ -76,7 +76,7 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Civilization = "dwarf",
 	RequirementsString = "Heater Shield and Ironworking",
 	Description = "As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Guards and Yale Riders. Allows Thrymgjol Shields to be sold at the Market.",
-	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
+	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the [url=literary_text:svipdagsmol]Svipdagsmol[/url] of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
 	Quote = "\"Thrymgjol they call it; 'twas made by the three,\nThe sons of Solblindi;\nAnd fast as a fetter the farer it holds,\nWhoever shall lift the latch.\"\n- Dwarven Traditional Poetry (The Warder)",
 	Item = "unit-thrymgjol-shield"
 })

@@ -973,7 +973,7 @@ DefineUnitType("unit-teuton-town-hall", {
 	Civilization = "teuton",
 	Description = "The rathaus, or town hall, is the political center of Teuton settlements.",
 --	Background = "The appearance of the Rathaus is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
-	Background = "The appearance of the Town Hall is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
+	Background = "The appearance of this building is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",

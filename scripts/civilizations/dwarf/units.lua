@@ -880,7 +880,7 @@ DefineUnitType("unit-dwarven-thane", {
 	Civilization = "dwarf",
 	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug.",
 	Quote = "\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry",
-	Background = "In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them.",
+	Background = "In Norse mythology, the dwarven leader Modsognir appears in the [url=literary_text:voluspo]Voluspo[/url] as one of the first dwarves and the mightiest of them.",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
 	DefaultEquipment = {
@@ -1090,7 +1090,7 @@ DefineUnitType("unit-dwarven-scout", {
 	Civilization = "dwarf",
 --	Description = "Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. These scouts were instrumental for pathfinding during the migration of the group of dwarves led by Dvalin, who left the Heart Mountains, passed through swamps, and finally established themselves in a desert.", -- use the latter part of this for the pathfinder
 	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
---	Background = "In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
+--	Background = "In Norse mythology, there is a mention in the [url=literary_text:voluspo]Voluspo[/url] of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-weapon-thrower", Icon = "icon-dwarven-scout",
 	DefaultEquipment = {
@@ -1782,7 +1782,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Parent = "unit-template-town-hall",
 	Civilization = "dwarf",
 	Description = "The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr.",
-	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>.",
+	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the [url=literary_text:voluspo]Voluspo[/url] it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the [url=literary_text:svipdagsmol]Svipdagsmol[/url].",
 	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-town-hall",
@@ -2307,7 +2307,7 @@ DefineUnitType("unit-dwarven-masons-shop", {
 	Parent = "unit-template-masons-shop",
 	Civilization = "dwarf",
 	Description = "Dwarven construction makes heavy use of stone as a material, so that the existence of a mason's shop in a settlement is all the more important.",
-	Background = "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the ~<Voluspo~> they are called \"the masters of the rocks\".",
+	Background = "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the [url=literary_text:voluspo]Voluspo[/url] they are called \"the masters of the rocks\".",
 	Image = {"file", "dwarf/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-masons-shop",
@@ -2710,7 +2710,7 @@ DefineUnitType("unit-dwarven-wall", {
 	Image = {"file", "dwarf/buildings/wall.png", "size", {32, 32}},
 	Icon = "icon-dwarven-wall",
 	Description = "Masters of stonecraft, dwarves erect mighty walls in the protection of their settlements. The fabled gate Thrymgjol, built by the sons of the dwarf Solblindi, is said to provide the strongest protection of all.",
-	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
+	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the [url=literary_text:svipdagsmol]Svipdagsmol[/url] of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
 	HitPoints = 250 -- +50 HP
 } )
 
