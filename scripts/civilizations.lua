@@ -1815,7 +1815,7 @@ DefineCivilization("germanic", {
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
-	Display = "Celt",
+	Display = "Celtic",
 	Species = "human",
 	Language = "proto-celtic",
 	ParentCivilization = "germanic",
@@ -1845,7 +1845,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 })
 
 DefineCivilization("gnome", {
-	Display = "Gnome",
+	Display = "Gnomish",
 	Species = "gnome",
 	ParentCivilization = "dwarf",
 	Language = "gnomish",
