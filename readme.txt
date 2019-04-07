@@ -41,7 +41,7 @@ Getting Wyrmsun on Steam (http://store.steampowered.com/app/370070) provides you
 
 The Stratagus engine, as well as the code and story elements included in Wyrmsun are distributed under the GPL 2.0 license. For the licenses of the graphics, sounds and music, look in the /graphics/credits.txt, /sounds/credits.txt and /music/credits.txt files.
 
-See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-SA 3.0 license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
+See the gpl_v2.txt file for the text of the GPL 2.0. The contents of the CC-BY-SA 3.0 license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
 
 Wyrmsun uses a modified version of the Stratagus engine, and its source code can be found here:
 https://github.com/Andrettin/Wyrmgus
