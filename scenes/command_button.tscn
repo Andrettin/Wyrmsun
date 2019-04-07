@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/theme.tres" type="Theme" id=1]
+[ext_resource path="res://graphics/ui/command_button_frame.png" type="Texture" id=2]
+[ext_resource path="res://scripts/icon_button.gd" type="Script" id=3]
+[ext_resource path="res://scenes/icon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shaders/player_color_shader.shader" type="Shader" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/source_player_color_1 = Color( 0, 0, 0, 1 )
+shader_param/source_player_color_2 = Color( 0, 0, 0, 1 )
+shader_param/source_player_color_3 = null
+shader_param/source_player_color_4 = null
+shader_param/source_player_color_5 = null
+shader_param/source_player_color_6 = null
+shader_param/source_player_color_7 = null
+shader_param/source_player_color_8 = null
+shader_param/source_player_color_9 = null
+shader_param/target_player_color_1 = null
+shader_param/target_player_color_2 = null
+shader_param/target_player_color_3 = null
+shader_param/target_player_color_4 = null
+shader_param/target_player_color_5 = null
+shader_param/target_player_color_6 = null
+shader_param/target_player_color_7 = null
+shader_param/target_player_color_8 = null
+shader_param/target_player_color_9 = null
+shader_param/source_hair_color_1 = null
+shader_param/source_hair_color_2 = null
+shader_param/source_hair_color_3 = null
+shader_param/source_hair_color_4 = null
+shader_param/source_hair_color_5 = null
+shader_param/source_hair_color_6 = null
+shader_param/source_hair_color_7 = null
+shader_param/source_hair_color_8 = null
+shader_param/source_hair_color_9 = null
+shader_param/source_hair_color_10 = null
+shader_param/source_hair_color_11 = null
+shader_param/source_hair_color_12 = null
+shader_param/source_hair_color_13 = null
+shader_param/target_hair_color_1 = null
+shader_param/target_hair_color_2 = null
+shader_param/target_hair_color_3 = null
+shader_param/target_hair_color_4 = null
+shader_param/target_hair_color_5 = null
+shader_param/target_hair_color_6 = null
+shader_param/target_hair_color_7 = null
+shader_param/target_hair_color_8 = null
+shader_param/target_hair_color_9 = null
+shader_param/target_hair_color_10 = null
+shader_param/target_hair_color_11 = null
+shader_param/target_hair_color_12 = null
+shader_param/target_hair_color_13 = null
+
+[node name="command_button" type="TextureButton"]
+margin_right = 56.0
+margin_bottom = 46.0
+focus_mode = 0
+theme = ExtResource( 1 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 51.0
+margin_bottom = 42.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="icon" parent="." instance=ExtResource( 4 )]
+material = SubResource( 1 )
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 50.0
+margin_bottom = 42.0
+
