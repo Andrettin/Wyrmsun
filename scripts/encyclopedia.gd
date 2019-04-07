@@ -58,8 +58,12 @@ func set_category(category_ident):
 func get_category_ident():
 	if (self.category == Category.Buildings):
 		return "buildings"
+	elif (self.category == Category.Items):
+		return "items"
 	elif (self.category == Category.Texts):
 		return "texts"
+	elif (self.category == Category.Units):
+		return "units"
 	else:
 		return ""
 	
