@@ -51,4 +51,13 @@ func _ready():
 			item_y += 1
 
 func sort_civilizations(a, b):
-	return a.get_name() < b.get_name()
+	if (a.get_ident() == b.get_ident()):
+		return false
+	
+	if (a.get_ident() == "neutral" or b.get_ident() == "neutral"):
+		if (a.get_ident() == "neutral"):
+			return true
+		else:
+			return false
+	else:
+		return a.get_name() < b.get_name()
