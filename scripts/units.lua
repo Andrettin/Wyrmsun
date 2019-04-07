@@ -559,6 +559,7 @@ DefineUnitType("unit-template-base-deposit", {
 DefineUnitType("unit-settlement-site", {
 	Name = "Settlement Site",
 	Parent = "unit-template-building",
+	Civilization = "neutral",
 	Description = "A site which is a prime spot for establishing a settlement.",
 	Image = {"file", "neutral/buildings/settlement_site.png", "size", {128, 128}},
 	Shadow = {"file", "neutral/buildings/settlement_site_shadow.png", "size", {128, 128}},
@@ -659,6 +660,7 @@ DefineUnitType("unit-template-mine", {
 DefineUnitType("unit-gold-deposit", {
 	Name = "Gold Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
@@ -758,6 +760,7 @@ DefineUnitType("unit-gold-mine", {
 DefineUnitType("unit-silver-deposit", {
 	Name = "Silver Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
@@ -829,6 +832,7 @@ DefineUnitType("unit-silver-mine", {
 DefineUnitType("unit-copper-deposit", {
 	Name = "Copper Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
@@ -900,6 +904,7 @@ DefineUnitType("unit-copper-mine", {
 DefineUnitType("unit-iron-deposit", {
 	Name = "Iron Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/iron_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/iron_deposit_shadow.png", "size", {96, 96}},
@@ -969,6 +974,7 @@ DefineUnitType("unit-iron-mine", {
 DefineUnitType("unit-mithril-deposit", {
 	Name = "Mithril Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Mithril deposits contain deep veins of extremely valuable mithril, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/mithril_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/mithril_deposit_shadow.png", "size", {96, 96}},
@@ -1038,6 +1044,7 @@ DefineUnitType("unit-mithril-mine", {
 DefineUnitType("unit-coal-deposit", {
 	Name = "Coal Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/coal_deposit_shadow.png", "size", {96, 96}},
@@ -1105,6 +1112,7 @@ DefineUnitType("unit-coal-mine", {
 DefineUnitType("unit-diamond-deposit", {
 	Name = "Diamond Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 	Description = "Diamond deposits contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/diamond_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
@@ -1131,11 +1139,13 @@ DefineUnitType("unit-diamond-mine", {
 DefineUnitType("unit-emerald-deposit", {
 	Name = "Emerald Deposit",
 	Parent = "unit-template-deposit",
+	Civilization = "neutral",
 --	Description = "Emerald deposits contain deep sources of emeralds, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/emerald_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-emerald-deposit",
-	GivesResource = "emeralds"
+	GivesResource = "emeralds",
+	Hidden = true
 } )
 
 DefineUnitType("unit-emerald-mine", {
@@ -1151,7 +1161,8 @@ DefineUnitType("unit-emerald-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-emerald-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "emeralds",
-	BuildingRulesString = "Must be built on top of an Emerald Deposit"
+	BuildingRulesString = "Must be built on top of an Emerald Deposit",
+	Hidden = true
 } )
 
 DefineUnitType("unit-gold-rock", {
@@ -1558,6 +1569,7 @@ DefineUnitType("unit-template-hunting-lodge", {
 DefineUnitType("unit-yale-cave", {
 	Name = "Yale Cave",
 	Parent = "unit-template-lair",
+	Civilization = "neutral",
 	Description = "Yales shelter in the caves and under the cliffs of the rocky world of Nidavellir.",
 	Image = {"file", "neutral/buildings/yale_cave.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/yale_cave_shadow.png", "size", {96, 96}},
@@ -5241,7 +5253,6 @@ DefineUnitType("unit-template-palisade", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Wall = true,
 	BuilderOutside = true,
-	Hidden = true,
 	Sounds = {
 		"dead", "building-destroyed"
 	}
@@ -5267,7 +5278,6 @@ DefineUnitType("unit-template-wall", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true, Wall = true,
 	BuilderOutside = true,
-	Hidden = true,
 	RequirementsString = "Masonry",
 	Sounds = {
 		"dead", "building-destroyed"
@@ -5554,7 +5564,6 @@ DefineUnitType("unit-road", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
-	Hidden = true,
 	RequirementsString = "Masonry",
 	Sounds = {
 		"dead", "building-destroyed"
@@ -5587,7 +5596,6 @@ DefineUnitType("unit-railroad", {
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	BuilderOutside = true,
-	Hidden = true,
 	RequirementsString = "Engineering",
 	Sounds = {
 		"dead", "building-destroyed"
