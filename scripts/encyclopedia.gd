@@ -94,15 +94,26 @@ func open_entry_link(entry_link, origin_scene):
 	if (entry_type_ident == "literary_text"):
 		entry = wyrmgus.get_literary_text(entry_ident)
 	
-	var category_ident = get_category_ident_for_entry(entry)
-	set_category(category_ident)
-	if (entry.has_method("get_civilization")):
-		self.civilization = entry.get_civilization()
-	else:
-		self.civilization = null
+	set_category_and_civilization_from_entry(entry)
 		
 	open_entry(entry, origin_scene)
 	
 func get_category_ident_for_entry(entry):
 	if (entry.is_class("CLiteraryText")):
 		return "texts"
+	elif (entry.is_class("CUnitType")):
+		if (entry.is_unit()):
+			return "units"
+		elif (entry.is_building()):
+			return "buildings"
+		if (entry.is_item()):
+			return "items"
+
+func set_category_and_civilization_from_entry(entry):
+	var category_ident = get_category_ident_for_entry(entry)
+	set_category(category_ident)
+	if (entry.has_method("get_civilization")):
+		self.civilization = entry.get_civilization()
+	else:
+		self.civilization = null
+	

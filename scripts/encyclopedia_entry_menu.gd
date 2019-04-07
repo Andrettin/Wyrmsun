@@ -76,7 +76,31 @@ func update_entry_description():
 	if (entry.has_method("get_background") and entry.get_background().empty() == false):
 		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
 		
-	if (entry.is_class("CLiteraryText")):
+	if (entry.is_class("CUnitType")):
+		var cost_strings = get_cost_strings(entry)
+		var first_cost = true
+		for cost_string in cost_strings:
+			if (first_cost):
+				entry_description_text += tr("Costs") + ": "
+				first_cost = false
+			else:
+				entry_description_text += ", "
+			entry_description_text += cost_string
+		if (!first_cost): #the costs string was written, so add a period to it
+			entry_description_text += ".\n\n"
+		
+		var stat_strings = get_stat_strings(entry)
+		var first_stat = true
+		for stat_string in stat_strings:
+			if (first_stat):
+				entry_description_text += tr("Stats") + ": "
+				first_stat = false
+			else:
+				entry_description_text += ", "
+			entry_description_text += stat_string
+		if (!first_stat): #the stats string was written, so add a period to it
+			entry_description_text += ".\n\n"
+	elif (entry.is_class("CLiteraryText")):
 		if (entry.get_author().empty() == false):
 			if (entry.get_main_text() == null or entry.get_author() != entry.get_main_text().get_author()):
 				entry_description_text += "Author:" + " " + entry.get_author() + "\n\n"
@@ -207,6 +231,59 @@ func update_page_number():
 	else:
 		page_number_label.bbcode_text = ""
 
+func get_cost_strings(entry):
+	var cost_strings = []
+	if (entry.get_copper_cost() > 0):
+		cost_strings.push_back(str(entry.get_copper_cost()) + " " + tr("Copper"))
+	if (entry.get_lumber_cost() > 0):
+		cost_strings.push_back(str(entry.get_lumber_cost()) + " " + tr("Lumber"))
+	if (entry.get_stone_cost() > 0):
+		cost_strings.push_back(str(entry.get_stone_cost()) + " " + tr("Stone"))
+	if (entry.get_coal_cost() > 0):
+		cost_strings.push_back(str(entry.get_coal_cost()) + " " + tr("Coal"))
+	return cost_strings
+
+func get_stat_strings(entry):
+	var stat_strings = []
+	if (entry.get_damage() > 0):
+		stat_strings.push_back(str(entry.get_damage()) + " " + tr("Damage"))
+	if (!entry.is_indestructible()):
+		if (entry.get_hit_points() > 0):
+			stat_strings.push_back(str(entry.get_hit_points()) + " " + tr("Hit Points"))
+		if (entry.get_armor() > 0):
+			stat_strings.push_back(str(entry.get_armor()) + " " + tr("Armor"))
+		if (entry.get_fire_resistance() > 0):
+			stat_strings.push_back(str(entry.get_fire_resistance()) + "% " + tr("Fire Resistance"))
+	if (entry.get_range() > 0):
+		stat_strings.push_back(str(entry.get_range()) + " " + tr("Range"))
+	if (entry.get_terrain_type() == null):
+		if (entry.get_sight() > 0):
+			stat_strings.push_back(str(entry.get_sight()) + " " + tr("Sight"))
+	if (entry.get_accuracy() > 0):
+		stat_strings.push_back(str(entry.get_accuracy()) + " " + tr("Accuracy"))
+	if (!entry.is_indestructible()):
+		if (entry.get_evasion() > 0):
+			stat_strings.push_back(str(entry.get_evasion()) + " " + tr("Evasion"))
+	if (entry.get_food_supply() > 0):
+		stat_strings.push_back(str(entry.get_food_supply()) + " " + tr("Food Supply"))
+	if (entry.get_garrisoned_range_bonus() > 0):
+		stat_strings.push_back(str(entry.get_garrisoned_range_bonus()) + " " + tr("Garrisoned Range Bonus"))
+	if (entry.get_research_speed_bonus() > 0):
+		stat_strings.push_back(str(entry.get_research_speed_bonus()) + "% " + tr("Research Speed Bonus"))
+	if (entry.get_ownership_influence_range() > 0):
+		stat_strings.push_back(str(entry.get_ownership_influence_range()) + " " + tr("Ownership Influence Range"))
+	if (entry.get_speed_bonus() > 0):
+		stat_strings.push_back(str(entry.get_speed_bonus()) + " " + tr("Speed Bonus"))
+		
+	if (entry.is_indestructible()):
+		stat_strings.push_back(tr("Indestructible"))
+	if (entry.has_regeneration_aura()):
+		stat_strings.push_back(tr("Regeneration Aura"))
+		
+	return stat_strings
+
 func exit_entry_menu():
+	if (origin_scene.get("entry")):
+		encyclopedia.set_category_and_civilization_from_entry(origin_scene.get("entry"))
 	queue_free()
 	get_parent().remove_child(self)
