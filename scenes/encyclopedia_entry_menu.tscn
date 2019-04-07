@@ -10,10 +10,11 @@
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=8]
 [ext_resource path="res://scenes/large_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=10]
-[ext_resource path="res://resources/shortcuts/shortcut_left.tres" type="ShortCut" id=11]
-[ext_resource path="res://resources/shortcuts/shorcut_right.tres" type="ShortCut" id=12]
+[ext_resource path="res://resources/shortcuts/shortcut_v.tres" type="ShortCut" id=11]
+[ext_resource path="res://resources/shortcuts/shortcut_n.tres" type="ShortCut" id=12]
 
 [node name="encyclopedia_entry_menu" type="Popup"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 popup_exclusive = true
@@ -76,29 +77,29 @@ margin_bottom = -36.0
 shortcut = ExtResource( 10 )
 button_text = "~!Previous Menu"
 
-[node name="previous_button" parent="menu_area" instance=ExtResource( 6 )]
+[node name="previous_button" parent="menu_area" instance=ExtResource( 9 )]
 anchor_left = 0.2
 anchor_top = 1.0
 anchor_right = 0.2
 anchor_bottom = 1.0
-margin_left = -27.0
-margin_top = -73.0
-margin_right = 27.0
-margin_bottom = -27.0
+margin_left = -112.0
+margin_top = -64.0
+margin_right = 112.0
+margin_bottom = -36.0
 shortcut = ExtResource( 11 )
-file_path = "res://graphics/neutral/icons/left_arrow.png"
+button_text = "Pre~!vious Page"
 
-[node name="next_button" parent="menu_area" instance=ExtResource( 6 )]
+[node name="next_button" parent="menu_area" instance=ExtResource( 9 )]
 anchor_left = 0.8
 anchor_top = 1.0
 anchor_right = 0.8
 anchor_bottom = 1.0
-margin_left = -27.0
-margin_top = -73.0
-margin_right = 27.0
-margin_bottom = -27.0
+margin_left = -112.0
+margin_top = -64.0
+margin_right = 112.0
+margin_bottom = -36.0
 shortcut = ExtResource( 12 )
-file_path = "res://graphics/neutral/icons/right_arrow.png"
+button_text = "~!Next Page"
 
 [node name="page_number" parent="menu_area" instance=ExtResource( 5 )]
 visible = false
