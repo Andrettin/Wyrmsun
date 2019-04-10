@@ -67,6 +67,9 @@ func update_entry_description():
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
 	
+	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
+		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
+	
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
 		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
 	

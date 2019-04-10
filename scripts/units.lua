@@ -3804,7 +3804,7 @@ DefineUnitType("unit-template-master-smith", {
 DefineUnitType("unit-template-grandmaster-smith", {
 	Name = "Grandmaster Smith",
 	Parent = "unit-template-master-smith",
-	Class = "master-smith",
+	Class = "grandmaster-smith",
 	Costs = {"copper", 1350},
 	HitPoints = 75,
 	BasicDamage = 12,
