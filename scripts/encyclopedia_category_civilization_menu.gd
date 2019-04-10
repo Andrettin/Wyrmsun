@@ -42,7 +42,7 @@ func _ready():
 			civilization_name = "General"
 		else:
 			civilization_name = civilization.get_name()
-		civilization_button.set_button_text(civilization_name + " Buildings")
+		civilization_button.set_button_text(civilization_name + " " + encyclopedia.get_category_name())
 		
 		if (item_y > 6):
 			item_x += 2

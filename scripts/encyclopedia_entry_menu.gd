@@ -75,9 +75,6 @@ func update_entry_description():
 	
 	if (entry.has_method("get_quote") and entry.get_quote().empty() == false):
 		entry_description_text += "Quote:" + " " + entry.get_quote() + "\n\n"
-	
-	if (entry.has_method("get_background") and entry.get_background().empty() == false):
-		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
 		
 	if (entry.is_class("CUnitType")):
 		var cost_strings = get_cost_strings(entry)
@@ -139,6 +136,9 @@ func update_entry_description():
 				entry_description_text += "\n[url=literary_text:" + section.get_ident() + "]"
 				entry_description_text += section.get_name()
 				entry_description_text += "[/url]"
+	
+	if (entry.has_method("get_background") and entry.get_background().empty() == false):
+		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
 		
 	entry_description_label.bbcode_text = entry_description_text
 
@@ -244,29 +244,44 @@ func get_cost_strings(entry):
 		cost_strings.push_back(str(entry.get_stone_cost()) + " " + tr("Stone"))
 	if (entry.get_coal_cost() > 0):
 		cost_strings.push_back(str(entry.get_coal_cost()) + " " + tr("Coal"))
+	if (entry.get_food_demand() > 0):
+		cost_strings.push_back(str(entry.get_food_demand()) + " " + tr("Food"))
 	return cost_strings
 
 func get_stat_strings(entry):
 	var stat_strings = []
-	if (entry.get_damage() > 0):
-		stat_strings.push_back(str(entry.get_damage()) + " " + tr("Damage"))
 	if (!entry.is_indestructible()):
 		if (entry.get_hit_points() > 0):
 			stat_strings.push_back(str(entry.get_hit_points()) + " " + tr("Hit Points"))
+	if (entry.get_mana() > 0):
+		stat_strings.push_back(str(entry.get_mana()) + " " + tr("Mana"))
+	if (entry.get_damage() > 0):
+		stat_strings.push_back(str(entry.get_damage()) + " " + tr("Damage"))
+	if (entry.get_acid_damage() > 0):
+		stat_strings.push_back(str(entry.get_acid_damage()) + " " + tr("Acid Damage"))
+	if (entry.get_fire_damage() > 0):
+		stat_strings.push_back(str(entry.get_fire_damage()) + " " + tr("Fire Damage"))
+	if (!entry.is_indestructible()):
 		if (entry.get_armor() > 0):
 			stat_strings.push_back(str(entry.get_armor()) + " " + tr("Armor"))
 		if (entry.get_fire_resistance() > 0):
 			stat_strings.push_back(str(entry.get_fire_resistance()) + "% " + tr("Fire Resistance"))
-	if (entry.get_range() > 0):
+	if (entry.get_range() > 0 and entry.can_attack()):
 		stat_strings.push_back(str(entry.get_range()) + " " + tr("Range"))
 	if (entry.get_terrain_type() == null):
 		if (entry.get_sight() > 0):
 			stat_strings.push_back(str(entry.get_sight()) + " " + tr("Sight"))
-	if (entry.get_accuracy() > 0):
+	if (entry.get_accuracy() > 0 and entry.can_attack()):
 		stat_strings.push_back(str(entry.get_accuracy()) + " " + tr("Accuracy"))
 	if (!entry.is_indestructible()):
 		if (entry.get_evasion() > 0):
 			stat_strings.push_back(str(entry.get_evasion()) + " " + tr("Evasion"))
+	if (entry.get_speed() > 0):
+		stat_strings.push_back(str(entry.get_speed()) + " " + tr("Speed"))
+	if (entry.get_day_sight_bonus() != 0):
+		stat_strings.push_back(str(entry.get_day_sight_bonus()) + " " + tr("Day Sight Bonus"))
+	if (entry.get_night_sight_bonus() != 0):
+		stat_strings.push_back(str(entry.get_night_sight_bonus()) + " " + tr("Night Sight Bonus"))
 	if (entry.get_food_supply() > 0):
 		stat_strings.push_back(str(entry.get_food_supply()) + " " + tr("Food Supply"))
 	if (entry.get_garrisoned_range_bonus() > 0):

@@ -43,13 +43,18 @@ func set_category(category_ident):
 	if (category_ident == "buildings"):
 		self.category = Category.Buildings
 		potential_entries = wyrmgus.get_building_unit_types()
-		
+	elif (category_ident == "items"):
+		self.category = Category.Items
+		potential_entries = wyrmgus.get_item_unit_types()
 	elif (category_ident == "texts"):
 		self.category = Category.Texts
 		var literary_texts = wyrmgus.get_literary_texts()
 		for literary_text in literary_texts:
 			if (literary_text.get_main_text() == null):
 				potential_entries.push_back(literary_text)
+	elif (category_ident == "units"):
+		self.category = Category.Units
+		potential_entries = wyrmgus.get_unit_unit_types()
 			
 	for potential_entry in potential_entries:
 		if (!potential_entry.is_hidden()):
@@ -70,13 +75,17 @@ func get_category_ident():
 func get_category_name():
 	if (self.category == Category.Buildings):
 		return "Buildings"
+	elif (self.category == Category.Items):
+		return "Items"
 	elif (self.category == Category.Texts):
 		return "Texts"
+	elif (self.category == Category.Units):
+		return "Units"
 	else:
 		return ""
 	
 func is_category_separated_by_civilization():
-	if (self.category == Category.Buildings):
+	if (self.category == Category.Buildings || self.category == Category.Units):
 		return true
 	else:
 		return false
