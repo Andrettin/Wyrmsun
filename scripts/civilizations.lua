@@ -3291,7 +3291,7 @@ DefineCivilization("etruscan", {
 })
 
 DefineCivilization("goth", {
-	Display = "Goth",
+	Display = "Gothic",
 	Species = "human",
 	Language = "gothic",
 	ParentCivilization = "teuton",
@@ -3669,7 +3669,7 @@ DefineCivilization("phrygian", {
 })
 
 DefineCivilization("slav", {
-	Display = "Slav",
+	Display = "Slavic",
 	Hidden = true,
 	Species = "human",
 	Language = "proto-slavic",
