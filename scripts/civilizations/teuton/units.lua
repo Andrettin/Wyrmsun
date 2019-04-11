@@ -36,7 +36,7 @@ DefineUnitType("unit-teuton-worker", {
 	Parent = "unit-template-worker",
 	Civilization = "teuton",
 --	Description = "Hardworking and robust, buras are the lifeblood of germanic society, tending the fields and performing most of the manual labor required.",
---	Quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula",
+--	Quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- [url=literary_text:rigsthula]Rigsthula[/url]",
 --	Background = "\"Bûra\" is a Proto-Germanic word for \"peasant\" or \"farmer\".",
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",

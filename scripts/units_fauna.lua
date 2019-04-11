@@ -638,7 +638,7 @@ DefineUnitType("unit-horse", {
 	Species = "horse",
 	Civilization = "neutral",
 	Description = "Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes.",
-	Quote = "\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- Grimnismol (Grimnir)", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+	Quote = "\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- [url=literary_text:grimnismol]Grimnismol[/url] (Grimnir)", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 	Image = {"file", "neutral/units/horse.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-horse",
 	Strength = 14,
