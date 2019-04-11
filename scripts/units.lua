@@ -2919,6 +2919,7 @@ DefineUnitType("unit-scepter-of-fire", {
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
+	Hidden = true,
 	Sounds = {
 		"selected", "click",
 		"used", "gold-coins"
@@ -3311,6 +3312,7 @@ DefineUnitType("unit-gryphon-feather", {
 	Type = "land",
 	NumDirections = 1,	
 	Item = true,
+	Hidden = true,
 	Sounds = {}
 } )
 

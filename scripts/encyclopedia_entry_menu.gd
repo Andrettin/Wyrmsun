@@ -93,10 +93,15 @@ func update_entry_description():
 		var first_stat = true
 		for stat_string in stat_strings:
 			if (first_stat):
-				entry_description_text += tr("Stats") + ": "
+				if (entry.is_item()):
+					entry_description_text += tr("Effects") + ": "
+				else:
+					entry_description_text += tr("Stats") + ": "
 				first_stat = false
 			else:
 				entry_description_text += ", "
+			if (entry.is_item() and !stat_string.begins_with("-")):
+				entry_description_text += "+" #denote that the item's effect is a bonus
 			entry_description_text += stat_string
 		if (!first_stat): #the stats string was written, so add a period to it
 			entry_description_text += ".\n\n"
@@ -251,7 +256,7 @@ func get_cost_strings(entry):
 func get_stat_strings(entry):
 	var stat_strings = []
 	if (!entry.is_indestructible()):
-		if (entry.get_hit_points() > 0):
+		if (entry.get_hit_points() > 0 and !entry.is_item()):
 			stat_strings.push_back(str(entry.get_hit_points()) + " " + tr("Hit Points"))
 	if (entry.get_mana() > 0):
 		stat_strings.push_back(str(entry.get_mana()) + " " + tr("Mana"))

@@ -57,8 +57,12 @@ func set_category(category_ident):
 		potential_entries = wyrmgus.get_unit_unit_types()
 			
 	for potential_entry in potential_entries:
-		if (!potential_entry.is_hidden()):
-			self.entries.push_back(potential_entry)
+		if (potential_entry.is_hidden()):
+			continue
+		if (potential_entry.get_ident().begins_with("unit-template-")): #ignore unit type templates
+			continue
+			
+		self.entries.push_back(potential_entry)
 			
 func get_category_ident():
 	if (self.category == Category.Buildings):
