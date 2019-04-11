@@ -104,7 +104,9 @@ func open_entry_link(entry_link, origin_scene):
 	entry_ident = entry_ident.replace("_", "-")
 	
 	var entry
-	if (entry_type_ident == "literary_text"):
+	if (entry_type_ident == "building" || entry_type_ident == "item" || entry_type_ident == "unit"):
+		entry = wyrmgus.get_unit_type(entry_ident)
+	elif (entry_type_ident == "literary_text"):
 		entry = wyrmgus.get_literary_text(entry_ident)
 	
 	set_category_and_civilization_from_entry(entry)

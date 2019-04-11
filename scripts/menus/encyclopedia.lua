@@ -48,9 +48,6 @@ function RunEncyclopediaMenu()
 	
 	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
-	menu:addFullButton(_("~!Buildings"), "b", offx + 208 + (113 * -1), offy + 104 + 36*-1,
-		function() RunEncyclopediaUnitsCivilizationMenu("buildings") end)
-
 	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*0,
 		function() RunEncyclopediaCivilizationsMenu() end)
 
@@ -86,9 +83,6 @@ function RunEncyclopediaMenu()
 
 	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
-
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*3,
-		function() RunEncyclopediaUnitsCivilizationMenu("units") end)
 
 	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)

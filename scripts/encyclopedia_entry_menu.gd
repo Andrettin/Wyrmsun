@@ -266,7 +266,7 @@ func get_stat_strings(entry):
 			stat_strings.push_back(str(entry.get_armor()) + " " + tr("Armor"))
 		if (entry.get_fire_resistance() > 0):
 			stat_strings.push_back(str(entry.get_fire_resistance()) + "% " + tr("Fire Resistance"))
-	if (entry.get_range() > 0 and entry.can_attack()):
+	if (entry.get_range() > 1 and entry.can_attack()):
 		stat_strings.push_back(str(entry.get_range()) + " " + tr("Range"))
 	if (entry.get_terrain_type() == null):
 		if (entry.get_sight() > 0):
@@ -282,6 +282,10 @@ func get_stat_strings(entry):
 		stat_strings.push_back(str(entry.get_day_sight_bonus()) + " " + tr("Day Sight Bonus"))
 	if (entry.get_night_sight_bonus() != 0):
 		stat_strings.push_back(str(entry.get_night_sight_bonus()) + " " + tr("Night Sight Bonus"))
+	if (entry.get_charge_bonus() > 0):
+		stat_strings.push_back(str(entry.get_charge_bonus()) + "% " + tr("Charge Bonus"))
+	if (entry.get_backstab_bonus() > 0):
+		stat_strings.push_back(str(entry.get_backstab_bonus()) + "% " + tr("Backstab Bonus"))
 	if (entry.get_food_supply() > 0):
 		stat_strings.push_back(str(entry.get_food_supply()) + " " + tr("Food Supply"))
 	if (entry.get_garrisoned_range_bonus() > 0):
@@ -295,6 +299,8 @@ func get_stat_strings(entry):
 		
 	if (entry.is_indestructible()):
 		stat_strings.push_back(tr("Indestructible"))
+	if (entry.has_leadership_aura()):
+		stat_strings.push_back(tr("Leadership Aura"))
 	if (entry.has_regeneration_aura()):
 		stat_strings.push_back(tr("Regeneration Aura"))
 		
