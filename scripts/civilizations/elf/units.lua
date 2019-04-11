@@ -98,6 +98,7 @@ DefineUnitType("unit-elven-priest", {
 	BluntDamage = true,
 	ButtonKey = "p",
 	ButtonHint = "Train ~!Priest",
+	Hidden = true,
 	StartingAbilities = {"upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
