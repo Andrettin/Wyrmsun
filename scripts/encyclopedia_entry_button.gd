@@ -23,6 +23,8 @@ func set_entry(entry):
 		tooltip_text += " (" + faction.get_name() + ")"
 	elif (encyclopedia.civilization != null):
 		set_player_color(encyclopedia.civilization.get_default_player_color())
+	else:
+		set_player_color(wyrmgus.get_civilization("neutral").get_default_player_color())
 		
 	set_tooltip(tooltip_text)
 

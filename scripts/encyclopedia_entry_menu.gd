@@ -56,6 +56,8 @@ func update_entry_icon_button():
 		entry_icon_button.set_player_color(faction.get_primary_color())
 	elif (encyclopedia.civilization != null):
 		entry_icon_button.set_player_color(encyclopedia.civilization.get_default_player_color())
+	else:
+		entry_icon_button.set_player_color(wyrmgus.get_civilization("neutral").get_default_player_color())
 
 func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")
@@ -144,6 +146,9 @@ func update_entry_description():
 	
 	if (entry.has_method("get_background") and entry.get_background().empty() == false):
 		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
+		
+	while (entry_description_text.ends_with("\n")):
+		entry_description_text = entry_description_text.trim_suffix("\n") #remove unnecessary newlines at the end
 		
 	entry_description_label.bbcode_text = entry_description_text
 
