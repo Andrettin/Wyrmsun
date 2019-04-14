@@ -63,14 +63,16 @@ func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")
 	var entry_description_text = ""
 	
+	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
+		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
+	elif (entry.has_method("get_item_class") and entry.get_item_class() != null):
+		entry_description_text += "Class:" + " " + entry.get_item_class().get_name() + "\n\n"
+	
 	if (entry.has_method("get_civilization") and entry.get_civilization() != null and entry.get_civilization().is_hidden() == false):
 		entry_description_text += "Civilization:" + " " + entry.get_civilization().get_name() + "\n\n"
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
-	
-	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
-		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
 	
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
 		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
@@ -265,14 +267,14 @@ func get_stat_strings(entry):
 			stat_strings.push_back(str(entry.get_hit_points()) + " " + tr("Hit Points"))
 	if (entry.get_mana() > 0):
 		stat_strings.push_back(str(entry.get_mana()) + " " + tr("Mana"))
-	if (entry.get_damage() > 0):
+	if (entry.get_damage() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and (entry.get_item_class().get_slot().is_weapon() or entry.get_item_class().get_slot().is_arrows()))):
 		stat_strings.push_back(str(entry.get_damage()) + " " + tr("Damage"))
 	if (entry.get_acid_damage() > 0):
 		stat_strings.push_back(str(entry.get_acid_damage()) + " " + tr("Acid Damage"))
 	if (entry.get_fire_damage() > 0):
 		stat_strings.push_back(str(entry.get_fire_damage()) + " " + tr("Fire Damage"))
 	if (!entry.is_indestructible()):
-		if (entry.get_armor() > 0):
+		if (entry.get_armor() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and entry.get_item_class().get_slot().is_shield())):
 			stat_strings.push_back(str(entry.get_armor()) + " " + tr("Armor"))
 		if (entry.get_fire_resistance() > 0):
 			stat_strings.push_back(str(entry.get_fire_resistance()) + "% " + tr("Fire Resistance"))
@@ -286,7 +288,7 @@ func get_stat_strings(entry):
 	if (!entry.is_indestructible()):
 		if (entry.get_evasion() > 0):
 			stat_strings.push_back(str(entry.get_evasion()) + " " + tr("Evasion"))
-	if (entry.get_speed() > 0):
+	if (entry.get_speed() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and entry.get_item_class().get_slot().is_boots())):
 		stat_strings.push_back(str(entry.get_speed()) + " " + tr("Speed"))
 	if (entry.get_day_sight_bonus() != 0):
 		stat_strings.push_back(str(entry.get_day_sight_bonus()) + " " + tr("Day Sight Bonus"))

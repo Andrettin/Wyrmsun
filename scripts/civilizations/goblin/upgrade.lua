@@ -84,7 +84,7 @@ DefineUpgrade("upgrade-goblin-barbed-arrow", {
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "goblin",
 	Description = "An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Barbed Arrows to be sold at the Market.",
-	Arrows = true,
+	ItemSlot = "arrows",
 	Item = "unit-barbed-arrows"
 })
 
@@ -95,7 +95,7 @@ DefineUpgrade("upgrade-goblin-bodkin-arrow", {
 	Civilization = "goblin",
 	RequirementsString = "Barbed Arrow and Ironworking",
 	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
-	Arrows = true,
+	ItemSlot = "arrows",
 	Item = "unit-bodkin-arrows"
 })
 

@@ -87,7 +87,7 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
 	Description = "As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Sharp Throwing Axes to be sold at the Market.",
-	Weapon = true,
+	ItemSlot = "weapon",
 	Item = "unit-sharp-throwing-axe"
 })
 
@@ -98,7 +98,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Civilization = "dwarf",
 	RequirementsString = "Sharp Throwing Axe and Ironworking",
 	Description = "The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Gryphon Riders, Bastions and Guard Towers. Allows Bearded Throwing Axes to be sold at the Market.",
-	Weapon = true,
+	ItemSlot = "weapon",
 	Item = "unit-bearded-throwing-axe"
 })
 

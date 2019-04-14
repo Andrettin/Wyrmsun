@@ -46,6 +46,7 @@ func set_category(category_ident):
 	elif (category_ident == "items"):
 		self.category = Category.Items
 		potential_entries = wyrmgus.get_item_unit_types()
+		potential_entries.sort_custom(self, "sort_items")
 	elif (category_ident == "texts"):
 		self.category = Category.Texts
 		var literary_texts = wyrmgus.get_literary_texts()
@@ -136,3 +137,22 @@ func set_category_and_civilization_from_entry(entry):
 	else:
 		self.civilization = null
 	
+func sort_items(a, b):
+	var item_class_a = a.get_item_class()
+	var item_class_b = b.get_item_class()
+	if (item_class_a != item_class_b and item_class_a != null and item_class_b != null):
+		var item_slot_a = item_class_a.get_slot()
+		var item_slot_b = item_class_b.get_slot()
+		if (item_slot_a != item_slot_b):
+			if (item_slot_a == null and item_slot_b != null):
+				return false
+			elif (item_slot_a != null and item_slot_b == null):
+				return true
+			elif (item_slot_a != null and item_slot_b != null):
+				return item_slot_a.get_name() < item_slot_b.get_name()
+		else:
+			return item_class_a.get_name() < item_class_b.get_name()
+	if (a.get_copper_cost() != b.get_copper_cost()):
+		return a.get_copper_cost() < b.get_copper_cost()
+	else:
+		return a.get_name() < b.get_name()

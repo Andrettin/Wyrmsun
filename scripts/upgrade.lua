@@ -28,7 +28,7 @@
 DefineUpgrade("upgrade-melee-weapon-1", {
 	Name = "Melee Weapon 1",
 	Class = "melee-weapon-1",
-	Weapon = true
+	ItemSlot = "weapon"
 })
 
 DefineUpgrade("upgrade-broad-sword", {
@@ -46,7 +46,7 @@ DefineUpgrade("upgrade-broad-axe", {
 DefineUpgrade("upgrade-melee-weapon-2", {
 	Name = "Melee Weapon 2",
 	Class = "melee-weapon-2",
-	Weapon = true
+	ItemSlot = "weapon"
 })
 
 DefineUpgrade("upgrade-long-sword", {
@@ -67,7 +67,7 @@ DefineUpgrade("upgrade-long-spear", {
 	Class = "long-spear",
 	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.",
 	Icon = "icon-long-spear",
-	Weapon = true,
+	ItemSlot = "weapon",
 	Costs = {"time", 200, "copper", 400, "lumber", 400}
 })
 
@@ -76,7 +76,7 @@ DefineUpgrade("upgrade-pike", {
 	Class = "pike",
 	Description = "Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.",
 	Icon = "icon-pike",
-	Weapon = true,
+	ItemSlot = "weapon",
 	Costs = {"time", 250, "copper", 1200, "lumber", 1200},
 	RequirementsString = "Long Spear and Ironworking"
 })
@@ -84,14 +84,14 @@ DefineUpgrade("upgrade-pike", {
 DefineUpgrade("upgrade-bronze-shield", {
 	Name = "Bronze Shield",
 	Class = "bronze-shield",
-	Shield = true,
+	ItemSlot = "shield",
 	Costs = {"time", 200, "copper", 300, "lumber", 900}
 })
 
 DefineUpgrade("upgrade-iron-shield", {
 	Name = "Iron Shield",
 	Class = "iron-shield",
-	Shield = true,
+	ItemSlot = "shield",
 	Costs = {"time", 250, "copper", 900, "lumber", 1500}
 })
 

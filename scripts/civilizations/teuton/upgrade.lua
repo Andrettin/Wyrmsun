@@ -60,7 +60,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Civilization = "teuton",
 	RequirementsString = "Barbed Arrow and Ironworking",
 	Description = "Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
-	Arrows = true,
+	ItemSlot = "arrows",
 	Item = "unit-bodkin-arrows"
 })
 
