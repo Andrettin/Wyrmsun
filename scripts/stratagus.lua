@@ -646,7 +646,7 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Guard Tower", "The Guard Tower provides you with extended vision, as well as space for two units to garrison inside. Ranged units garrisoned in a Guard Tower can perform attacks from within.")
+					Tip("Guard Tower", "The Guard Tower provides you with extended vision, as well as space for a unit to garrison inside. Not only do Guard Towers possess an attack of their own, but ranged units garrisoned in a Guard Tower can perform attacks from within.")
 					return false
 				end
 			)
