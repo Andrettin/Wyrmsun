@@ -93,22 +93,21 @@ func update_entry_description():
 		if (!first_cost): #the costs string was written, so add a period to it
 			entry_description_text += ".\n\n"
 		
-		var stat_strings = get_stat_strings(entry)
-		var first_stat = true
-		for stat_string in stat_strings:
-			if (first_stat):
-				if (entry.is_item()):
-					entry_description_text += tr("Effects") + ": "
+		if (entry.has_method("get_stat_strings")):
+			var stat_strings = entry.get_stat_strings()
+			var first_stat = true
+			for stat_string in stat_strings:
+				if (first_stat):
+					if (entry.is_item()):
+						entry_description_text += tr("Effects") + ": "
+					else:
+						entry_description_text += tr("Stats") + ": "
+					first_stat = false
 				else:
-					entry_description_text += tr("Stats") + ": "
-				first_stat = false
-			else:
-				entry_description_text += ", "
-			if (entry.is_item() and !stat_string.begins_with("-")):
-				entry_description_text += "+" #denote that the item's effect is a bonus
-			entry_description_text += stat_string
-		if (!first_stat): #the stats string was written, so add a period to it
-			entry_description_text += ".\n\n"
+					entry_description_text += ", "
+				entry_description_text += stat_string
+			if (!first_stat): #the stats string was written, so add a period to it
+				entry_description_text += ".\n\n"
 	elif (entry.is_class("CLiteraryText")):
 		if (entry.get_author().empty() == false):
 			if (entry.get_main_text() == null or entry.get_author() != entry.get_main_text().get_author()):
@@ -259,64 +258,6 @@ func get_cost_strings(entry):
 	if (entry.get_food_demand() > 0):
 		cost_strings.push_back(str(entry.get_food_demand()) + " " + tr("Food"))
 	return cost_strings
-
-func get_stat_strings(entry):
-	var stat_strings = []
-	if (!entry.is_indestructible()):
-		if (entry.get_hit_points() > 0 and !entry.is_item()):
-			stat_strings.push_back(str(entry.get_hit_points()) + " " + tr("Hit Points"))
-	if (entry.get_mana() > 0):
-		stat_strings.push_back(str(entry.get_mana()) + " " + tr("Mana"))
-	if (entry.get_damage() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and (entry.get_item_class().get_slot().is_weapon() or entry.get_item_class().get_slot().is_arrows()))):
-		stat_strings.push_back(str(entry.get_damage()) + " " + tr("Damage"))
-	if (entry.get_acid_damage() > 0):
-		stat_strings.push_back(str(entry.get_acid_damage()) + " " + tr("Acid Damage"))
-	if (entry.get_fire_damage() > 0):
-		stat_strings.push_back(str(entry.get_fire_damage()) + " " + tr("Fire Damage"))
-	if (!entry.is_indestructible()):
-		if (entry.get_armor() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and entry.get_item_class().get_slot().is_shield())):
-			stat_strings.push_back(str(entry.get_armor()) + " " + tr("Armor"))
-		if (entry.get_fire_resistance() > 0):
-			stat_strings.push_back(str(entry.get_fire_resistance()) + "% " + tr("Fire Resistance"))
-	if (entry.get_range() > 1 and entry.can_attack()):
-		stat_strings.push_back(str(entry.get_range()) + " " + tr("Range"))
-	if (entry.get_terrain_type() == null):
-		if (entry.get_sight() > 0):
-			stat_strings.push_back(str(entry.get_sight()) + " " + tr("Sight"))
-	if (entry.get_accuracy() > 0 and entry.can_attack()):
-		stat_strings.push_back(str(entry.get_accuracy()) + " " + tr("Accuracy"))
-	if (!entry.is_indestructible()):
-		if (entry.get_evasion() > 0):
-			stat_strings.push_back(str(entry.get_evasion()) + " " + tr("Evasion"))
-	if (entry.get_speed() > 0 or (entry.get_item_class() != null and entry.get_item_class().get_slot() != null and entry.get_item_class().get_slot().is_boots())):
-		stat_strings.push_back(str(entry.get_speed()) + " " + tr("Speed"))
-	if (entry.get_day_sight_bonus() != 0):
-		stat_strings.push_back(str(entry.get_day_sight_bonus()) + " " + tr("Day Sight Bonus"))
-	if (entry.get_night_sight_bonus() != 0):
-		stat_strings.push_back(str(entry.get_night_sight_bonus()) + " " + tr("Night Sight Bonus"))
-	if (entry.get_charge_bonus() > 0):
-		stat_strings.push_back(str(entry.get_charge_bonus()) + "% " + tr("Charge Bonus"))
-	if (entry.get_backstab_bonus() > 0):
-		stat_strings.push_back(str(entry.get_backstab_bonus()) + "% " + tr("Backstab Bonus"))
-	if (entry.get_food_supply() > 0):
-		stat_strings.push_back(str(entry.get_food_supply()) + " " + tr("Food Supply"))
-	if (entry.get_garrisoned_range_bonus() > 0):
-		stat_strings.push_back(str(entry.get_garrisoned_range_bonus()) + " " + tr("Garrisoned Range Bonus"))
-	if (entry.get_research_speed_bonus() > 0):
-		stat_strings.push_back(str(entry.get_research_speed_bonus()) + "% " + tr("Research Speed Bonus"))
-	if (entry.get_ownership_influence_range() > 0):
-		stat_strings.push_back(str(entry.get_ownership_influence_range()) + " " + tr("Ownership Influence Range"))
-	if (entry.get_speed_bonus() > 0):
-		stat_strings.push_back(str(entry.get_speed_bonus()) + " " + tr("Speed Bonus"))
-		
-	if (entry.is_indestructible()):
-		stat_strings.push_back(tr("Indestructible"))
-	if (entry.has_leadership_aura()):
-		stat_strings.push_back(tr("Leadership Aura"))
-	if (entry.has_regeneration_aura()):
-		stat_strings.push_back(tr("Regeneration Aura"))
-		
-	return stat_strings
 
 func exit_entry_menu():
 	if (origin_scene.get("entry")):
