@@ -1,4 +1,4 @@
-extends Control
+extends "res://scripts/button_list_menu.gd"
 
 var civilizations = []
 
@@ -22,12 +22,7 @@ func _ready():
 			
 	self.civilizations.sort_custom(self, "sort_civilizations")
 			
-	var item_x = 0
-	if (self.civilizations.size() > 20):
-		item_x = -2
-	elif (self.civilizations.size() > 10):
-		item_x = -1
-	var item_y = -2
+	var buttons = []
 	
 	for civilization in self.civilizations:
 		var civilization_button = load("res://scenes/large_button.tscn").instance()
@@ -35,8 +30,6 @@ func _ready():
 		civilization_button.civilization = civilization
 		menu_area.add_child(civilization_button)
 		
-		civilization_button.rect_position.x = 208 + (113 * item_x)
-		civilization_button.rect_position.y = 104 + (36 * (item_y + 2))
 		var civilization_name
 		if (civilization.get_ident() == "neutral"):
 			civilization_name = "General"
@@ -44,11 +37,9 @@ func _ready():
 			civilization_name = civilization.get_name()
 		civilization_button.set_button_text(civilization_name + " " + encyclopedia.get_category_name())
 		
-		if (item_y > 6):
-			item_x += 2
-			item_y = -2
-		else:
-			item_y += 1
+		buttons.push_back(civilization_button)
+		
+	place_buttons(buttons)
 
 func sort_civilizations(a, b):
 	if (a.get_ident() == b.get_ident()):
