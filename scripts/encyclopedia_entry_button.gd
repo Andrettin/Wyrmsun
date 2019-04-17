@@ -1,4 +1,4 @@
-extends "res://scripts/icon_button.gd"
+extends "res://scripts/button.gd"
 
 var entry
 
@@ -8,25 +8,7 @@ func _ready():
 func set_entry(entry):
 	self.entry = entry
 	
-	var graphics_file = entry.get_icon().get_file()
-	if (graphics_file.find("dlcs/") != -1):
-		graphics_file = "res://" + graphics_file
-	else:
-		graphics_file = "res://graphics/" + graphics_file
-	
-	set_graphics(graphics_file)
-	
-	var tooltip_text = entry.get_name()
-	if (entry.has_method("get_faction") and entry.get_faction() != null):
-		var faction = entry.get_faction()
-		set_player_color(faction.get_primary_color())
-		tooltip_text += " (" + faction.get_name() + ")"
-	elif (encyclopedia.civilization != null):
-		set_player_color(encyclopedia.civilization.get_default_player_color())
-	else:
-		set_player_color(wyrmgus.get_civilization("neutral").get_default_player_color())
-		
-	set_tooltip(tooltip_text)
+	set_button_text(entry.get_name())
 
 func open_entry():
 	encyclopedia.open_entry(self.entry, get_tree().current_scene)

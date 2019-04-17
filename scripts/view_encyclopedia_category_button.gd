@@ -11,4 +11,7 @@ func change_scene():
 		get_tree().change_scene("res://scenes/encyclopedia_category_civilization_menu.tscn")
 	else:
 		encyclopedia.civilization = null
-		get_tree().change_scene("res://scenes/encyclopedia_icon_entries_menu.tscn")
+		if (encyclopedia.does_category_use_button_lists()):
+			get_tree().change_scene("res://scenes/encyclopedia_button_entries_menu.tscn")
+		else:
+			get_tree().change_scene("res://scenes/encyclopedia_icon_entries_menu.tscn")

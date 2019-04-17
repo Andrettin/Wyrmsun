@@ -42,6 +42,10 @@ func change_entry(entry):
 func update_entry_icon_button():
 	var entry_icon_button = self.find_node("entry_icon_button")
 	
+	if (encyclopedia.does_category_use_button_lists()):
+		entry_icon_button.visible = false
+		return
+	
 	entry_icon_button.set_tooltip(entry.get_name())
 	var graphics_file = entry.get_icon().get_file()
 	if (graphics_file.find("dlcs/") != -1):
@@ -74,6 +78,9 @@ func update_entry_description():
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
 	
+	if (entry.has_method("get_plane") and entry.get_plane() != null):
+		entry_description_text += tr("Plane") + ": " + entry.get_plane().get_name() + "\n\n"
+		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
 		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
 	

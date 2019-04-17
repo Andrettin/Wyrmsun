@@ -47,6 +47,9 @@ func set_category(category_ident):
 		self.category = Category.Items
 		potential_entries = wyrmgus.get_item_unit_types()
 		potential_entries.sort_custom(self, "sort_items")
+	elif (category_ident == "planes"):
+		self.category = Category.Planes
+		potential_entries = wyrmgus.get_planes()
 	elif (category_ident == "texts"):
 		self.category = Category.Texts
 		var literary_texts = wyrmgus.get_literary_texts()
@@ -56,6 +59,9 @@ func set_category(category_ident):
 	elif (category_ident == "units"):
 		self.category = Category.Units
 		potential_entries = wyrmgus.get_unit_unit_types()
+	elif (category_ident == "worlds"):
+		self.category = Category.Worlds
+		potential_entries = wyrmgus.get_worlds()
 			
 	for potential_entry in potential_entries:
 		if (potential_entry.is_hidden()):
@@ -70,10 +76,14 @@ func get_category_ident():
 		return "buildings"
 	elif (self.category == Category.Items):
 		return "items"
+	elif (self.category == Category.Planes):
+		return "planes"
 	elif (self.category == Category.Texts):
 		return "texts"
 	elif (self.category == Category.Units):
 		return "units"
+	elif (self.category == Category.Worlds):
+		return "worlds"
 	else:
 		return ""
 	
@@ -82,15 +92,25 @@ func get_category_name():
 		return "Buildings"
 	elif (self.category == Category.Items):
 		return "Items"
+	elif (self.category == Category.Planes):
+		return "Planes"
 	elif (self.category == Category.Texts):
 		return "Texts"
 	elif (self.category == Category.Units):
 		return "Units"
+	elif (self.category == Category.Worlds):
+		return "Worlds"
 	else:
 		return ""
 	
 func is_category_separated_by_civilization():
 	if (self.category == Category.Buildings || self.category == Category.Units):
+		return true
+	else:
+		return false
+
+func does_category_use_button_lists():
+	if (self.category == Category.Planes || self.category == Category.Worlds):
 		return true
 	else:
 		return false
@@ -121,6 +141,8 @@ func open_entry_link(entry_link, origin_scene):
 func get_category_ident_for_entry(entry):
 	if (entry.is_class("CLiteraryText")):
 		return "texts"
+	elif (entry.is_class("CPlane")):
+		return "planes"
 	elif (entry.is_class("CUnitType")):
 		if (entry.is_unit()):
 			return "units"
@@ -128,6 +150,8 @@ func get_category_ident_for_entry(entry):
 			return "buildings"
 		if (entry.is_item()):
 			return "items"
+	elif (entry.is_class("CWorld")):
+		return "worlds"
 
 func set_category_and_civilization_from_entry(entry):
 	var category_ident = get_category_ident_for_entry(entry)
