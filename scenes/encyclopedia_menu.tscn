@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/backgrounds/wyrmsun_sepia.png" type="Texture" id=2]
@@ -9,10 +9,11 @@
 [ext_resource path="res://scripts/view_encyclopedia_category_button.gd" type="Script" id=7]
 [ext_resource path="res://resources/shortcuts/shortcut_i.tres" type="ShortCut" id=8]
 [ext_resource path="res://resources/shortcuts/shortcut_x.tres" type="ShortCut" id=9]
-[ext_resource path="res://resources/shortcuts/shortcut_w.tres" type="ShortCut" id=10]
+[ext_resource path="res://resources/shortcuts/shortcut_l.tres" type="ShortCut" id=10]
 [ext_resource path="res://resources/shortcuts/shortcut_u.tres" type="ShortCut" id=11]
-[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=12]
-[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=13]
+[ext_resource path="res://resources/shortcuts/shortcut_w.tres" type="ShortCut" id=12]
+[ext_resource path="res://resources/shortcuts/shortcut_p.tres" type="ShortCut" id=13]
+[ext_resource path="res://scripts/change_scene_button.gd" type="Script" id=14]
 
 [node name="encyclopedia_menu" type="Control"]
 anchor_right = 1.0
@@ -90,7 +91,7 @@ margin_top = 284.0
 margin_right = 545.0
 margin_bottom = 312.0
 focus_mode = 2
-shortcut = ExtResource( 10 )
+shortcut = ExtResource( 12 )
 script = ExtResource( 7 )
 button_text = "~!Worlds"
 encyclopedia_category = "worlds"
@@ -100,8 +101,8 @@ margin_left = 208.0
 margin_top = 464.0
 margin_right = 432.0
 margin_bottom = 492.0
-shortcut = ExtResource( 12 )
-script = ExtResource( 13 )
+shortcut = ExtResource( 13 )
+script = ExtResource( 14 )
 button_text = "~!Previous Menu"
 target_scene = "main_menu"
 

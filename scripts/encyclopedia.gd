@@ -133,6 +133,10 @@ func open_entry_link(entry_link, origin_scene):
 		entry = wyrmgus.get_unit_type(entry_ident)
 	elif (entry_type_ident == "literary_text"):
 		entry = wyrmgus.get_literary_text(entry_ident)
+	elif (entry_type_ident == "plane"):
+		entry = wyrmgus.get_plane(entry_ident)
+	elif (entry_type_ident == "world"):
+		entry = wyrmgus.get_world(entry_ident)
 	
 	set_category_and_civilization_from_entry(entry)
 		

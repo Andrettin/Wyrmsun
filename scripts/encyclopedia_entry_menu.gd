@@ -79,7 +79,45 @@ func update_entry_description():
 		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
 	
 	if (entry.has_method("get_plane") and entry.get_plane() != null):
-		entry_description_text += tr("Plane") + ": " + entry.get_plane().get_name() + "\n\n"
+		entry_description_text += tr("Plane") + ": [url=plane:" + entry.get_plane().get_ident() + "]" + entry.get_plane().get_name() + "[/url]\n\n"
+		
+	if (entry.has_method("get_species")):
+		var species_list = entry.get_species()
+		if (species_list.size() > 0):
+			var sapient_species_list = wyrmgus.get_sapient_species_from_list(species_list)
+			var fauna_species_list = wyrmgus.get_fauna_species_from_list(species_list, true)
+			if (sapient_species_list.size() > 0):
+				entry_description_text += tr("Sapient Inhabitants") + ": "
+				
+				var sapient_species_name_list = []
+				for sapient_species in sapient_species_list:
+					sapient_species_name_list.push_back(sapient_species.get_name_plural())
+				sapient_species_name_list.sort()
+				
+				var first_sapient_species = true
+				for sapient_species_name in sapient_species_name_list:
+					if (first_sapient_species):
+						first_sapient_species = false
+					else:
+						entry_description_text += ", "
+					entry_description_text += sapient_species_name
+					
+				entry_description_text += "\n\n"
+					
+			if (fauna_species_list.size() > 0):
+				entry_description_text += tr("Fauna") + ": "
+				
+				var fauna_species_name_list = wyrmgus.get_succint_species_string_list(fauna_species_list)
+				
+				var first = true
+				for species_name in fauna_species_name_list:
+					if (first):
+						first = false
+					else:
+						entry_description_text += ", "
+					entry_description_text += species_name
+					
+				entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
 		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
