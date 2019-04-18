@@ -29,13 +29,6 @@
 
 -- Note: When assigning species to fictional worlds, it is best to keep all species of the same genus in a single world.
 
-DefineSpecies("bug", {
-	Name = "Bug",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
 Load("scripts/species/fish/fish.lua")
 Load("scripts/species/amphibian/amphibian.lua")
 Load("scripts/species/reptile/reptile.lua")
