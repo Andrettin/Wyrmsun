@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
-	Name = "Mesohippus",
-	Category = "mesohippus",
-	Homeworld = "earth",
-	EvolvesFrom = {"palaeotherium"},
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- ground dwelling browser
-})
 
 DefineSpecies("anchitherium-alberdiae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
 	Name = "Alberd Anchitherium", -- Anchitherium alberdiae
@@ -119,26 +109,6 @@ DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling browser
-})
-
-DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
-	Name = "Horse",
-	Category = "equus",
-	ScientificName = "Equus caballus",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("pegasus", {
-	Name = "Pegasus",
-	Category = "pegasus",
-	Homeworld = "alfheim",
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
-	-- in Wyrmsun, the wings of pegasuses are not avian, having fur instead of feathers
 })
 
 DefineSpecies("sleipnir", {
