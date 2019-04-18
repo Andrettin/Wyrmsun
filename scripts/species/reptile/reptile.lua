@@ -73,13 +73,6 @@ DefineSpecies("dryosaurus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("lizard", {
-	Name = "Lizard",
-	Homeworld = "earth",
-	EvolvesFrom = {"petrolacosaurus", "thadeosaurus"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("ornithosuchus", {
 	Name = "Ornithosuchus",
 	Homeworld = "earth",
@@ -101,13 +94,6 @@ DefineSpecies("scelidosaurus", {
 	Homeworld = "earth",
 	EvolvesFrom = {"edaphosaurus", "petrolacosaurus", "sphenacodon", "thadeosaurus"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("snake", {
-	Name = "Snake",
-	Homeworld = "earth",
-	EvolvesFrom = {"petrolacosaurus", "thadeosaurus"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -353,5 +339,3 @@ DefineSpecies("saurian", { -- from Wesnoth
 	Sapient = true
 	-- sapient species evolved from dinosaurs
 })
-
-Load("scripts/species/reptile/testudine.lua")

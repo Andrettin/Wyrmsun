@@ -91,13 +91,6 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	-- had teeth adapted to a fibrous diet
 })
 
-DefineSpecies("elephant", {
-	Name = "Elephant",
-	Homeworld = "earth",
-	EvolvesFrom = {"phiomia"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("mammoth", {
 	Name = "Mammoth",
 	Homeworld = "earth",

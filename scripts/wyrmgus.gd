@@ -45,40 +45,49 @@ func get_succint_species_string_list(species_list):
 		list_changed = false
 		var category_counts = {}
 		for species in species_list:
-			var category = null
-			if (species.has_method("get_upper_category")):
-				category = species.get_upper_category()
-			elif (species.has_method("get_category")):
-				category = species.get_category()
+			var categories = null
+			if (species.has_method("get_all_upper_categories")):
+				categories = species.get_all_upper_categories()
+			elif (species.has_method("get_all_categories")):
+				categories = species.get_all_categories()
 			
-			if (category != null):
-				if (!category_counts.has(category)):
-					category_counts[category] = 0
-				
-				category_counts[category] += 1
+			if (categories.empty() == false):
+				for category in categories:
+					if (!category_counts.has(category)):
+						category_counts[category] = 0
+					category_counts[category] += 1
 				
 		var new_list = []
+		#pick the category with the smallest count out of those with counts greater than 10
+		var chosen_category = null
+		var chosen_category_count = -1
 		for category in category_counts.keys():
-			if (category_counts.get(category) > 10):
-				new_list.push_back(category)
-				list_changed = true
+			var category_count = category_counts.get(category)
+			if (category_count <= 10):
+				continue
+			if (chosen_category == null or category_count < chosen_category_count):
+				chosen_category = category
+				chosen_category_count = category_count
+		if (chosen_category != null):
+			new_list.push_back(chosen_category)
+			list_changed = true
 				
-		for species in species_list:
-			var category = null
-			if (species.has_method("get_upper_category")):
-				category = species.get_upper_category()
-			elif (species.has_method("get_category")):
-				category = species.get_category()
+			for species in species_list:
+				var categories = null
+				if (species.has_method("get_all_upper_categories")):
+					categories = species.get_all_upper_categories()
+				elif (species.has_method("get_all_categories")):
+					categories = species.get_all_categories()
+					
+				if (categories.empty() == false and categories.has(chosen_category)):
+					continue #ignore species (or species categories) whose (upper) categories are in the list
+					
+				if (new_list.has(species)):
+					continue #avoid duplicates, which could happen due to the category insertion algorithm
+					
+				new_list.push_back(species)
 				
-			if (category != null and new_list.has(category)):
-				continue #ignore species (or species categories) whose (upper) category is in the list
-				
-			if (new_list.has(species)):
-				continue #avoid duplicates, which could happen due to the category insertion algorithm
-			
-			new_list.push_back(species)
-			
-		species_list = new_list
+			species_list = new_list
 		
 	var species_string_list = []
 	for species in species_list:

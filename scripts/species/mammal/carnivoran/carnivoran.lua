@@ -65,22 +65,5 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	-- ground dwelling carnivore
 })
 
-DefineSpecies("raccoon", {
-	Name = "Raccoon",
-	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("seal", {
-	Name = "Seal",
-	Homeworld = "earth",
-	Terrains = {"snow", "ice"},
-	EvolvesFrom = {},
-	ChildUpgrade = "upgrade-child"
-})
-
 Load("scripts/species/mammal/carnivoran/ailurid.lua")
-Load("scripts/species/mammal/carnivoran/canid.lua")
 Load("scripts/species/mammal/carnivoran/felid.lua")
-Load("scripts/species/mammal/carnivoran/ursid.lua")

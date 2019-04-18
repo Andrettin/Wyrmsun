@@ -33,32 +33,11 @@ DefineSpecies("plesiadapis", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("lemur", {
-	Name = "Lemur",
-	Homeworld = "earth",
-	EvolvesFrom = {"plesiadapis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("monkey", {
-	Name = "Monkey",
-	Homeworld = "earth",
-	EvolvesFrom = {"plesiadapis"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("dryopithecus", {
 	Name = "Dryopithecus",
 	Homeworld = "earth",
 	EvolvesFrom = {"plesiadapis"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("chimpanzee", {
-	Name = "Chimpanzee",
-	Homeworld = "earth",
-	EvolvesFrom = {"dryopithecus"},
 	ChildUpgrade = "upgrade-child"
 })
 

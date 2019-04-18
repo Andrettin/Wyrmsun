@@ -168,18 +168,3 @@ DefineSpecies("hylonomus", {
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
-
-DefineSpecies("frog", {
-	Name = "Frog",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("salamander", {
-	Name = "Salamander",
-	Homeworld = "earth",
-	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
-	ChildUpgrade = "upgrade-child"
-})

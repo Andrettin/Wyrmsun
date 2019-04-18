@@ -108,32 +108,11 @@ DefineSpecies("chriacus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("marsupial-mouse", {
-	Name = "Marsupial Mouse",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("miacis", {
 	Name = "Miacis",
 	Homeworld = "earth",
 	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("possum", {
-	Name = "Possum",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("rabbit", {
-	Name = "Rabbit",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -153,39 +132,11 @@ DefineSpecies("thylacinus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("weasel", {
-	Name = "Weasel",
-	Homeworld = "earth",
-	EvolvesFrom = {"miacis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("kangaroo", {
-	Name = "Kangaroo",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("koala", {
-	Name = "Koala",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("procoptodon", {
 	Name = "Procoptodon",
 	Homeworld = "earth",
 	EvolvesFrom = {"marsupial-mouse", "possum"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("wombat", {
-	Name = "Wombat",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -285,13 +236,6 @@ DefineSpecies("poebrodon", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("camel", {
-	Name = "Camel",
-	Homeworld = "earth",
-	EvolvesFrom = {"poebrodon"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("hyaenodon", {
 	Name = "Hyaenodon",
 	Homeworld = "earth",
@@ -308,25 +252,11 @@ DefineSpecies("metacheiromys", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("armadillo", {
-	Name = "Armadillo",
-	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("glyptotherium", {
 	Name = "Glyptotherium",
 	Homeworld = "earth",
 	EvolvesFrom = {"metacheiromys"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hedgehog", {
-	Name = "Hedgehog",
-	Homeworld = "earth",
-	EvolvesFrom = {"zalambdalestes"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -338,25 +268,11 @@ DefineSpecies("megatherium", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("sloth", {
-	Name = "Sloth",
-	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("steropodon", {
 	Name = "Steropodon",
 	Homeworld = "earth",
 	EvolvesFrom = {"megazostrodon"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("platypus", {
-	Name = "Platypus",
-	Homeworld = "earth",
-	EvolvesFrom = {"steropodon"},
 	ChildUpgrade = "upgrade-child"
 })
 

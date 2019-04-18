@@ -132,34 +132,6 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	-- lived in Spain
 })
 
-DefineSpecies("antelope", {
-	Name = "Antelope",
-	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("bison", {
-	Name = "Bison",
-	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("giraffe", {
-	Name = "Giraffe",
-	Homeworld = "earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hippopotamus", {
-	Name = "Hippopotamus",
-	Homeworld = "earth",
-	EvolvesFrom = {"helohyus"},
-	ChildUpgrade = "upgrade-child"
-})
-
 Load("scripts/species/mammal/artiodactyl/bovid.lua")
 Load("scripts/species/mammal/artiodactyl/cervid.lua")
 Load("scripts/species/mammal/artiodactyl/suid.lua")
