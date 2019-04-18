@@ -292,30 +292,6 @@ DefineSpecies("camel", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("bat", {
-	Name = "Bat",
-	Homeworld = "earth",
-	Terrains = {"cave-floor", "rockbound-cave-floor"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("blood-bat", {
-	Name = "Blood Bat",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("dread-bat", {
-	Name = "Dread Bat",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("hyaenodon", {
 	Name = "Hyaenodon",
 	Homeworld = "earth",

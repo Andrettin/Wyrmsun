@@ -29,57 +29,8 @@
 
 -- Note: When assigning species to fictional worlds, it is best to keep all species of the same genus in a single world.
 
-DefineSpecies("bee", {
-	Name = "Bee",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
 DefineSpecies("bug", {
 	Name = "Bug",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("fly", {
-	Name = "Fly",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("slime", {
-	Name = "Slime",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("slug", {
-	Name = "Slug",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("snail", {
-	Name = "Snail",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("snigill", {
-	Name = "Snigill",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("worm", {
-	Name = "Worm",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
