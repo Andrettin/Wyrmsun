@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function GetSpeciesCategoryCommonName(category)
-	if (category ~= "" and GetSpeciesCategoryData(category, "CommonName") ~= "") then
-		return GetSpeciesCategoryData(category, "CommonName")
-	else
-		return CapitalizeString(category)
-	end
-end
-
 function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 
@@ -69,9 +61,6 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * -1), offy + 104 + 36*8,
-		function() RunEncyclopediaPlanesMenu() end)
-
 	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
@@ -80,9 +69,6 @@ function RunEncyclopediaMenu()
 
 	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
-
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
-		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function()
@@ -949,277 +935,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	menu:run()
 end
 
-function RunEncyclopediaPlanesMenu()
-
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "planes", 2)
-
-	local potential_planes = GetPlanes()
-	local planes = {}
-	
-	for i = 1, table.getn(potential_planes) do
-		if (GetPlaneData(potential_planes[i], "Description") ~= "") then
-			table.insert(planes, potential_planes[i])
-		end
-	end
-	table.sort(planes)
-
-	local plane_x = 0
-	if (GetTableSize(planes) > 20) then
-		plane_x = -2
-	elseif (GetTableSize(planes) > 10) then
-		plane_x = -1
-	end
-	local plane_y = -3
-
-	for i=1,table.getn(planes) do
-		menu:addFullButton(_(GetPlaneData(planes[i], "Name")), "", offx + 208 + (113 * plane_x), offy + 104 + (36 * (plane_y + height_offset)),
-			function() OpenEncyclopediaPlaneEntry(planes[i]); end)
-
-		if (plane_y > 5 or (plane_y > 4 and Video.Height < 600)) then
-			plane_x = plane_x + 2
-			plane_y = -3
-		else
-			plane_y = plane_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function OpenEncyclopediaPlaneEntry(plane)
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. _(GetPlaneData(plane, "Name")) .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64, Video.Height / 2)
-	l:setLineWidth(Video.Width - 64)
-	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
-	local description = ""
-	
-	local species = GetPlaneData(plane, "Species")
-	table.sort(species)
-	if (table.getn(species) > 0) then
-		local sapient_species = {}
-		local fauna_species = {}
-		local fauna_species_categories = {}
-		for i = 1, table.getn(species) do
-			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
-				if (GetSpeciesData(species[i], "Sapient")) then
-					table.insert(sapient_species, species[i])
-				else
-					local species_category = GetSpeciesCategoryCommonName(GetSpeciesData(species[i], "Category"))
-					if (species_category == "" or GetArrayIncludes(fauna_species_categories, species_category) == false) then
-						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
-						table.insert(fauna_species_categories, species_category)
-					else
-						fauna_species[GetElementIndexFromArray(fauna_species_categories, species_category)] = species_category
-					end
-				end
-			end
-		end
-		table.sort(fauna_species)
-		if (table.getn(sapient_species) > 0) then
-			description = description .. _("Sapient Inhabitants") .. ": "
-			for i = 1, table.getn(sapient_species) do
-				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
-				if (i < table.getn(sapient_species)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		if (table.getn(fauna_species) > 0) then
-			description = description .. _("Fauna") .. ": "
-			for i = 1, table.getn(fauna_species) do
-				description = description .. _(GetPluralForm(fauna_species[i]))
-				if (i < table.getn(fauna_species)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end		
-	end
-	
-	if (GetPlaneData(plane, "Description") ~= "") then
-		description = description .. _("Description") .. ": " .. GetPlaneData(plane, "Description")
-	end
-	if (GetPlaneData(plane, "Background") ~= "") then
-		description = description .. "\n\n" .. _("Background") .. ": " .. GetPlaneData(plane, "Background")
-	end
-	l:setCaption(description)
-	
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
-function RunEncyclopediaWorldsMenu()
-
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of world entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "worlds", 2)
-
-	local potential_worlds = GetWorlds()
-	local worlds = {}
-	
-	for i = 1, table.getn(potential_worlds) do
-		if (GetWorldData(potential_worlds[i], "Description") ~= "") then
-			table.insert(worlds, potential_worlds[i])
-		end
-	end
-	table.sort(worlds)
-
-	local world_x = 0
-	if (GetTableSize(worlds) > 20) then
-		world_x = -2
-	elseif (GetTableSize(worlds) > 10) then
-		world_x = -1
-	end
-	local world_y = -3
-
-	for i=1,table.getn(worlds) do
-		menu:addFullButton(_(GetWorldData(worlds[i], "Name")), "", offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
-			function() OpenEncyclopediaWorldEntry(worlds[i]); end)
-
-		if (world_y > 5 or (world_y > 4 and Video.Height < 600)) then
-			world_x = world_x + 2
-			world_y = -3
-		else
-			world_y = world_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function OpenEncyclopediaWorldEntry(world)
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. _(GetWorldData(world, "Name")) .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64, Video.Height / 2)
-	l:setLineWidth(Video.Width - 64)
-	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
-	local description = ""
-	if (GetWorldData(world, "Plane") ~= "") then
-		description = _("Plane") .. ": " .. _(GetPlaneData(GetWorldData(world, "Plane"), "Name")) .. "\n\n"
-	end
-	local species = GetWorldData(world, "Species")
-	table.sort(species)
-	if (table.getn(species) > 0) then
-		local sapient_species = {}
-		local fauna_species = {}
-		local fauna_species_categories = {}
-		for i = 1, table.getn(species) do
-			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
-				if (GetSpeciesData(species[i], "Sapient")) then
-					table.insert(sapient_species, species[i])
-				else
-					local species_category = GetSpeciesCategoryCommonName(GetSpeciesData(species[i], "Category"))
-					if (species_category == "" or GetArrayIncludes(fauna_species_categories, species_category) == false) then
-						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
-						table.insert(fauna_species_categories, species_category)
-					else
-						fauna_species[GetElementIndexFromArray(fauna_species_categories, species_category)] = species_category
-					end
-				end
-			end
-		end
-		table.sort(fauna_species)
-		if (table.getn(sapient_species) > 0) then
-			description = description .. _("Sapient Inhabitants") .. ": "
-			for i = 1, table.getn(sapient_species) do
-				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
-				if (i < table.getn(sapient_species)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		if (table.getn(fauna_species) > 0) then
-			description = description .. _("Fauna") .. ": "
-			for i = 1, table.getn(fauna_species) do
-				description = description .. _(GetPluralForm(fauna_species[i]))
-				if (i < table.getn(fauna_species)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end		
-	end
-	if (GetWorldData(world, "Description") ~= "") then
-		description = description .. _("Description") .. ": " .. _(GetWorldData(world, "Description"))
-	end
-	if (GetWorldData(world, "Background") ~= "") then
-		description = description .. "\n\n" .. _("Background") .. ": " .. _(GetWorldData(world, "Background"))
-	end
-	l:setCaption(description)
-	
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
 function RunEncyclopediaGameConceptsMenu()
 
 	if (RunningScenario == false) then
@@ -1670,16 +1385,12 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Magic Prefixes")
 	elseif (state == "item_suffixes") then
 		top_label_string = top_label_string .. _("Magic Suffixes")
-	elseif (state == "planes") then
-		top_label_string = top_label_string .. _("Planes")
 	elseif (state == "runic_suffixes") then
 		top_label_string = top_label_string .. _("Runic Suffixes")
 	elseif (state == "technologies") then
 		top_label_string = top_label_string .. _("Technologies")
 	elseif (state == "unique_items") then
 		top_label_string = top_label_string .. _("Uniques")
-	elseif (state == "worlds") then
-		top_label_string = top_label_string .. _("Worlds")
 	end
 	top_label_string = top_label_string .. "~>"
 	menu:addLabel(top_label_string, offx + 320, offy + 104 + 36 * (-4 + height_offset), nil, true)
