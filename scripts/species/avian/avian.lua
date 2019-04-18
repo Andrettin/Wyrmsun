@@ -150,19 +150,9 @@ DefineSpecies("phorusrhacus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("roc", {
-	Name = "Roc",
-	Homeworld = "jotunheim",
-	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
-	Era = "holocene",
-	ChildUpgrade = "upgrade-gryphon-child"
-})
-
 DefineSpecies("songbird", {
 	Name = "Songbird",
 	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
-
-Load("scripts/species/avian/gryphid.lua") -- mythical gryphons

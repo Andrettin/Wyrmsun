@@ -83,5 +83,4 @@ DefineSpecies("seal", {
 Load("scripts/species/mammal/carnivoran/ailurid.lua")
 Load("scripts/species/mammal/carnivoran/canid.lua")
 Load("scripts/species/mammal/carnivoran/felid.lua")
-Load("scripts/species/mammal/carnivoran/hyenid.lua")
 Load("scripts/species/mammal/carnivoran/ursid.lua")

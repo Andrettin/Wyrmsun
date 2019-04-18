@@ -346,25 +346,6 @@ DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi
 	-- scansorial insectivore
 })
 
-DefineSpecies("basilisk", {
-	Name = "Basilisk",
-	Homeworld = "alfheim",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("crocodile", {
-	Name = "Crocodile",
-	Homeworld = "earth",
-	EvolvesFrom = {"deinosuchus"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hydra", {
-	Name = "Hydra",
-	Homeworld = "jotunheim",
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("saurian", { -- from Wesnoth
 	Name = "Saurian",
 --	ScientificName = "? sapiens",
@@ -374,4 +355,3 @@ DefineSpecies("saurian", { -- from Wesnoth
 })
 
 Load("scripts/species/reptile/testudine.lua")
-Load("scripts/species/reptile/draconid.lua") -- mythical dragons and dragon-like creatures
