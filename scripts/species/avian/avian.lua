@@ -65,33 +65,6 @@ DefineSpecies("hoatzin", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
-	Name = "Eagle", -- Bald Eagle
-	Category = "haliaeetus",
-	ScientificName = "Haliaeetus leucocephalus",
-	Homeworld = "earth",
---	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
-	EvolvesFrom = {"hoatzin"},
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("bird", {
-	Name = "Bird",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud", "snow", "ice"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("crow", {
-	Name = "Crow",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("diatryma", {
 	Name = "Diatryma",
 	Homeworld = "earth",
@@ -100,59 +73,10 @@ DefineSpecies("diatryma", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("duck", {
-	Name = "Duck",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("ostrich", {
-	Name = "Ostrich",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("owl", {
-	Name = "Owl",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("parrot", {
-	Name = "Parrot",
-	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("passenger-pigeon", {
-	Name = "Passenger Pigeon",
-	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("pelican", {
-	Name = "Pelican",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("phorusrhacus", {
 	Name = "Phorusrhacus",
 	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("songbird", {
-	Name = "Songbird",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })

@@ -65,7 +65,7 @@ func get_succint_species_string_list(species_list):
 			var category_count = category_counts.get(category)
 			if (category_count <= 10):
 				continue
-			if (chosen_category == null or category_count < chosen_category_count):
+			if (chosen_category == null or category_count < chosen_category_count or category.get_rank().get_index() > chosen_category.get_rank().get_index()): #give priority to categories of lower ranks
 				chosen_category = category
 				chosen_category_count = category_count
 		if (chosen_category != null):
