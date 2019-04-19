@@ -25,44 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguage("old-latin", {
-	Name = "Old Latin",
-	Family = "italic"
-})
-
-DefineLanguage("latin", {
-	Name = "Latin",
-	Family = "italic"
-})
-
-DefineLanguage("late-latin", {
-	Name = "Late Latin",
-	Family = "italic"
-})
-
-DefineLanguage("medieval-latin", {
-	Name = "Medieval Latin",
-	Family = "italic"
-})
-
-DefineLanguage("old-italian", {
-	Name = "Old Italian",
-	Family = "italic"
-})
-
-DefineLanguage("italian", {
-	Name = "Italian",
-	Family = "italic"
-})
-
-DefineLanguage("gallo-romance", {
-	Name = "Gallo-Romance",
-	Family = "italic"
-})
-
 DefineLanguage("old-french", {
 	Name = "Old French",
-	Family = "italic",
 	NameTranslations = {
 		-- Old Frankish Settlement Names
 		"Haim", "Ham"
@@ -71,7 +35,6 @@ DefineLanguage("old-french", {
 
 DefineLanguage("french", {
 	Name = "French",
-	Family = "italic",
 	NameTranslations = {
 		-- Old French Settlement Names
 		"Ham", "Le Hamel",
@@ -92,29 +55,8 @@ DefineLanguage("french", {
 	}
 })
 
-DefineLanguage("liegeois", { -- should be a dialect instead of its own language
-	Name = "Liègeois",
-	Family = "italic"
-})
-
-DefineLanguage("old-provencal", {
-	Name = "Old Provençal",
-	Family = "italic"
-})
-
-DefineLanguage("provencal", {
-	Name = "Provençal",
-	Family = "italic"
-})
-
-DefineLanguage("old-castillian", {
-	Name = "Old Castillian",
-	Family = "italic"
-})
-
 DefineLanguage("castillian", {
 	Name = "Castillian",
-	Family = "italic",
 	NameTranslations = {
 		-- Latin Settlement Names
 		"Burgiorum", "Burgos", -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
@@ -129,37 +71,11 @@ DefineLanguage("castillian", {
 	}
 })
 
-DefineLanguage("old-portuguese", {
-	Name = "Old Portuguese",
-	Family = "italic"
-})
-
 DefineLanguage("portuguese", {
 	Name = "Portuguese",
-	Family = "italic",
 	NameTranslations = {
 		-- Latin Settlement Names
 		"Bracara", "Braga",
 		"Olisipo", "Lisbon"
 	}
-})
-
-DefineLanguage("catalan", {
-	Name = "Catalan",
-	Family = "italic"
-})
-
-DefineLanguage("oscan", {
-	Name = "Oscan",
-	Family = "italic"
-})
-
-DefineLanguage("romanian", {
-	Name = "Romanian",
-	Family = "italic"
-})
-
-DefineLanguage("umbrian", {
-	Name = "Umbrian",
-	Family = "italic"
 })

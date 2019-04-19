@@ -18,6 +18,7 @@ enum Category {
 	Texts,
 	Uniques,
 	Units,
+	Words,
 	Worlds
 }
 
@@ -82,6 +83,8 @@ func get_category_ident():
 		return "texts"
 	elif (self.category == Category.Units):
 		return "units"
+	elif (self.category == Category.Words):
+		return "words"
 	elif (self.category == Category.Worlds):
 		return "worlds"
 	else:
@@ -98,6 +101,8 @@ func get_category_name():
 		return "Texts"
 	elif (self.category == Category.Units):
 		return "Units"
+	elif (self.category == Category.Words):
+		return "Words"
 	elif (self.category == Category.Worlds):
 		return "Worlds"
 	else:
@@ -135,6 +140,8 @@ func open_entry_link(entry_link, origin_scene):
 		entry = wyrmgus.get_literary_text(entry_ident)
 	elif (entry_type_ident == "plane"):
 		entry = wyrmgus.get_plane(entry_ident)
+	elif (entry_type_ident == "word"):
+		entry = wyrmgus.get_word(entry_ident)
 	elif (entry_type_ident == "world"):
 		entry = wyrmgus.get_world(entry_ident)
 	
@@ -154,6 +161,8 @@ func get_category_ident_for_entry(entry):
 			return "buildings"
 		if (entry.is_item()):
 			return "items"
+	elif (entry.is_class("CWord")):
+		return "words"
 	elif (entry.is_class("CWorld")):
 		return "worlds"
 

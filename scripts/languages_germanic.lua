@@ -25,19 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguage("proto-germanic", {
-	Name = "Proto-Germanic",
-	Family = "germanic"
-})
-
-DefineLanguage("northwest-germanic", {
-	Name = "Northwest Germanic",
-	Family = "germanic"
-})
-
 DefineLanguage("old-norse", {
 	Name = "Old Norse",
-	Family = "germanic",
 	NameTranslations = {
 		-- Gothic Personal Names
 		"Airmanareiks", "Jormunrek", -- "Jǫrmunrekr" is the Old Norse equivalent of the Gothic name "Airmanareiks; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
@@ -61,62 +50,8 @@ DefineLanguage("old-norse", {
 	}
 })
 
-DefineLanguage("old-danish", {
-	Name = "Old Danish",
-	Family = "germanic",
-	DialectOf = "old-norse"
-})
-
-DefineLanguage("danish", {
-	Name = "Danish",
-	Family = "germanic"
-})
-
-DefineLanguage("old-swedish", {
-	Name = "Old Swedish",
-	Family = "germanic",
-	DialectOf = "old-norse"
-})
-
-DefineLanguage("swedish", {
-	Name = "Swedish",
-	Family = "germanic"
-})
-
-DefineLanguage("norwegian", {
-	Name = "Norwegian",
-	Family = "germanic"
-})
-
-DefineLanguage("old-icelandic", {
-	Name = "Old Icelandic",
-	Family = "germanic",
-	DialectOf = "old-norse"
-})
-
-DefineLanguage("faroese", {
-	Name = "Faroese",
-	Family = "germanic"
-})
-
-DefineLanguage("elfdalian", {
-	Name = "Elfdalian",
-	Family = "germanic"
-})
-
-DefineLanguage("icelandic", {
-	Name = "Icelandic",
-	Family = "germanic"
-})
-
-DefineLanguage("west-germanic", {
-	Name = "West Germanic",
-	Family = "germanic"
-})
-
 DefineLanguage("old-high-german", {
 	Name = "Old High German",
-	Family = "germanic",
 	NameTranslations = {
 		-- Proto-Germanic
 		"Karla", "Karal"
@@ -125,7 +60,6 @@ DefineLanguage("old-high-german", {
 
 DefineLanguage("middle-high-german", {
 	Name = "Middle High German",
-	Family = "germanic",
 	NameTranslations = {
 		"Airmanareiks", "Ermenrich" -- "Ermenrîch" is the Middle High German equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 	}
@@ -133,7 +67,6 @@ DefineLanguage("middle-high-german", {
 
 DefineLanguage("high-german", { -- define High German early to prevent some type name generation weirdnesses
 	Name = "High German",
-	Family = "germanic",
 	AdjectiveEndings = {
 		"no-article", "nominative", "singular", "masculine", "er",
 		"no-article", "nominative", "singular", "feminine", "e",
@@ -184,54 +117,8 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 	}
 })
 
-DefineLanguage("bavarian", {
-	Name = "Bavarian",
-	Family = "germanic"
-})
-
-DefineLanguage("tyrolean", {
-	Name = "Tyrolean",
-	Family = "germanic"
-})
-
-DefineLanguage("old-saxon", {
-	Name = "Old Saxon",
-	Family = "germanic"
-})
-
-DefineLanguage("middle-low-german", {
-	Name = "Middle Low German",
-	Family = "germanic"
-})
-
-DefineLanguage("old-frankish", {
-	Name = "Old Frankish",
-	Family = "germanic"
-})
-
-DefineLanguage("middle-dutch", {
-	Name = "Middle Dutch",
-	Family = "germanic"
-})
-
-DefineLanguage("dutch", {
-	Name = "Dutch",
-	Family = "germanic"
-})
-
-DefineLanguage("old-flemish", { -- should be a dialect instead?
-	Name = "Old Flemish",
-	Family = "germanic"
-})
-
-DefineLanguage("old-frisian", {
-	Name = "Old Frisian",
-	Family = "germanic"
-})
-
 DefineLanguage("old-english", {
 	Name = "Old English",
-	Family = "germanic",
 	NameTranslations = {
 		-- Gothic
 		"Airmanareiks", "Eormenric", -- "Eormenrîc" is the Old English equivalent of the Gothic name "Airmanareiks"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
@@ -240,14 +127,8 @@ DefineLanguage("old-english", {
 	}
 })
 
-DefineLanguage("middle-english", {
-	Name = "Middle English",
-	Family = "germanic"
-})
-
 DefineLanguage("english", {
 	Name = "English",
-	Family = "germanic",
 	NounEndings = {
 		"singular", "genitive", "no-word-junction", "'s",
 		"singular", "genitive", "compound", "s",
@@ -298,19 +179,3 @@ DefineLanguage("english", {
 		"Pedro", "Peter"
 	}
 })
-
-DefineLanguage("gothic", {
-	Name = "Gothic",
-	Family = "germanic"
-})
-
-DefineLanguage("crimean-gothic", {
-	Name = "Crimean Gothic",
-	Family = "germanic"
-})
-
-DefineLanguage("burgundian", {
-	Name = "Burgundian",
-	Family = "germanic"
-})
-
