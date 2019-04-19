@@ -42,7 +42,6 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 })
 
 Load("scripts/species/mammal/carnivoran/amphicyonid.lua")
-Load("scripts/species/mammal/carnivoran/ursid.lua")
 
 DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
