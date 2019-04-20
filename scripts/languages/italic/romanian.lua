@@ -32,28 +32,9 @@ DefineLanguageWord("Bătalie", { -- Source: Carl D. Buck, "Words for 'Battle,' '
 	DerivesFrom = {"latin", "noun", "Battālia"}
 })
 
-DefineLanguageWord("Luptă", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "romanian",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"latin", "noun", "Lucta"}
-})
-
 DefineLanguageWord("Oaste", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
 	Language = "romanian",
 	Type = "noun",
 	Meanings = {"Army"},
 	DerivesFrom = {"late-latin", "noun", "Hostis"}
-})
-
-DefineLanguageWord("Ostaś", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
-	Language = "romanian",
-	Type = "noun",
-	Meanings = {"Soldier"}
-})
-
-DefineLanguageWord("Soldat", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
-	Language = "romanian",
-	Type = "noun",
-	Meanings = {"Soldier"}
 })

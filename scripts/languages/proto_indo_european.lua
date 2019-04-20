@@ -271,12 +271,6 @@ DefineLanguageWord("Oh", { -- source gives "oH-"; Source: Winfred P. Lehmann, "A
 	Meanings = {}
 })
 
-DefineLanguageWord("Perkṷus", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 35.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {"Oak"}
-})
-
 DefineLanguageWord("Pryx", { -- source gives "pr-y-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "adjective", -- correct?

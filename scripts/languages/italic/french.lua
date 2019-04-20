@@ -197,12 +197,6 @@ DefineLanguageWord("Gruyer", {
 	DerivesFrom = {"gallo-romance", "noun", "Grodiarius"} -- Source: http://www.cnrtl.fr/definition/gruyer
 })
 
-DefineLanguageWord("Guerre", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
-	Language = "french",
-	Type = "noun",
-	Meanings = {"War"}
-})
-
 DefineLanguageWord("Hameau", {
 	Language = "french",
 	Type = "noun",
@@ -245,13 +239,6 @@ DefineLanguageWord("Jardin", {
 	Type = "noun",
 	Meanings = {"Garden"},
 	DerivesFrom = {"old-frankish", "noun", "Gart"} -- Source: http://www.cnrtl.fr/definition/jardin
-})
-
-DefineLanguageWord("Lutte", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "french",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"latin", "noun", "Lucta"}
 })
 
 DefineLanguageWord("Marais", {

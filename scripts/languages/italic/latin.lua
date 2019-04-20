@@ -364,12 +364,6 @@ DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
 })
 
-DefineLanguageWord("Lucta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Wrestling Match"}
-})
-
 DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "latin",
 	Type = "noun",
@@ -479,13 +473,6 @@ DefineLanguageWord("Pugnus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'Wa
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Fist"}
-})
-
-DefineLanguageWord("Quercus", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 35.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Oak"},
-	DerivesFrom = {"proto-indo-european", "noun", "Perkṷus"}
 })
 
 DefineLanguageWord("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

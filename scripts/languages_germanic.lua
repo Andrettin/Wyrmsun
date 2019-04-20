@@ -67,44 +67,6 @@ DefineLanguage("middle-high-german", {
 
 DefineLanguage("high-german", { -- define High German early to prevent some type name generation weirdnesses
 	Name = "High German",
-	AdjectiveEndings = {
-		"no-article", "nominative", "singular", "masculine", "er",
-		"no-article", "nominative", "singular", "feminine", "e",
-		"no-article", "nominative", "singular", "neuter", "es",
-		"no-article", "nominative", "plural", "no-gender", "e",
-		"no-article", "accusative", "singular", "masculine", "en",
-		"no-article", "accusative", "singular", "feminine", "e",
-		"no-article", "accusative", "singular", "neuter", "es",
-		"no-article", "accusative", "plural", "no-gender", "e",
-		"no-article", "dative", "singular", "masculine", "em",
-		"no-article", "dative", "singular", "feminine", "er",
-		"no-article", "dative", "singular", "neuter", "em",
-		"no-article", "dative", "plural", "no-gender", "en",
-		"no-article", "genitive", "singular", "masculine", "en",
-		"no-article", "genitive", "singular", "feminine", "er",
-		"no-article", "genitive", "singular", "neuter", "en",
-		"no-article", "genitive", "plural", "no-gender", "er",
-		"definite", "nominative", "singular", "masculine", "e",
-		"definite", "nominative", "singular", "feminine", "e",
-		"definite", "nominative", "singular", "neuter", "e",
-		"definite", "nominative", "plural", "no-gender", "en",
-		"definite", "accusative", "singular", "masculine", "en",
-		"definite", "accusative", "singular", "feminine", "e",
-		"definite", "accusative", "singular", "neuter", "e",
-		"definite", "accusative", "plural", "no-gender", "en",
-		"definite", "dative", "no-number", "no-gender", "en",
-		"definite", "genitive", "no-number", "no-gender", "en",
-		"indefinite", "nominative", "singular", "masculine", "er",
-		"indefinite", "nominative", "singular", "feminine", "e",
-		"indefinite", "nominative", "singular", "neuter", "es",
-		"indefinite", "nominative", "plural", "no-gender", "en",
-		"indefinite", "accusative", "singular", "masculine", "en",
-		"indefinite", "accusative", "singular", "feminine", "e",
-		"indefinite", "accusative", "singular", "neuter", "es",
-		"indefinite", "accusative", "plural", "no-gender", "en",
-		"indefinite", "dative", "no-number", "no-gender", "en",
-		"indefinite", "genitive", "no-number", "no-gender", "en"
-	},
 	NameTranslations = {
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name "Airmanareiks"
 		"Theodoric", "Dietrich", -- "Dietrich" is the German form of the Gothic name Theodoric
@@ -129,15 +91,6 @@ DefineLanguage("old-english", {
 
 DefineLanguage("english", {
 	Name = "English",
-	NounEndings = {
-		"singular", "genitive", "no-word-junction", "'s",
-		"singular", "genitive", "compound", "s",
-		"plural", "nominative", "s",
-		"plural", "accusative", "s",
-		"plural", "dative", "s",
-		"plural", "genitive", "no-word-junction", "s'",
-		"plural", "genitive", "compound", "s"
-	},
 	NameTranslations = {
 		-- Old English Settlement Names
 		"Abbandun", "Abingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.

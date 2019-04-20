@@ -151,12 +151,6 @@ DefineLanguageWord("Netjery", { -- Source: Claude Traunecker, "Os Deuses do Egit
 	Meanings = {"Divine", "Ritualized"}
 })
 
-DefineLanguageWord("Ntr", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {"God"}
-})
-
 DefineLanguageWord("Nun", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
 	Language = "egyptian",
 	Type = "noun",
@@ -167,12 +161,6 @@ DefineLanguageWord("Ren", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Name"}
-})
-
-DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
-	Language = "egyptian",
-	Type = "noun",
-	Meanings = {"Force"} -- apparently
 })
 
 DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 76.

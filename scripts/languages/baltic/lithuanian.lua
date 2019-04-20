@@ -217,13 +217,6 @@ DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {}
 })
 
-DefineLanguageWord("Perkúnas", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26, 34-35.
-	Language = "lithuanian",
-	Type = "noun",
-	Meanings = {"Thunder"},
-	DerivesFrom = {"proto-indo-european", "noun", "Perkṷus"}
-})
-
 DefineLanguageWord("Peszti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "lithuanian",
 	Type = "verb",

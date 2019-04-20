@@ -1665,14 +1665,6 @@ DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "verb", "Steig"}
 })
 
-DefineLanguageWord("Stokkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Tree Trunk", "Pile", "Block"}, -- source gives the German "Baumstamm, Pfahl, Block"
-	Gender = "masculine",
-	DerivesFrom = {"proto-germanic", "noun", "Stukka"}
-})
-
 DefineLanguageWord("Stǫpull", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
 	Language = "old-norse",
 	Type = "noun",

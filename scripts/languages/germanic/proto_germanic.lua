@@ -1494,13 +1494,6 @@ DefineLanguageWord("Stijôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Stukka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Stick"}, -- source gives the German "Stock"
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Sumara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "proto-germanic",
 	Type = "noun",

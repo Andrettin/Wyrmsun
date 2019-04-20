@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("L'ufte", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "albanian",
-	Type = "noun",
-	Meanings = {"War", "Battle"},
-	DerivesFrom = {"latin", "noun", "Lucta"}
-})
-
-DefineLanguageWord("Niza", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
-	Language = "albanian",
-	Type = "noun",
-	Meanings = {"Battle"}
-	-- according to the source, the word is of Turkish origin
-})
-
 DefineLanguageWord("Ushtār", { -- source also gives the alternative form "ushϵtār"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
 	Language = "albanian",
 	Type = "noun",
