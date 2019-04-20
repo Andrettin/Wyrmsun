@@ -31,12 +31,6 @@ DefineLanguageWord("Ἄχμων", { -- Source: August Fick and Alf Torp, "Wortsc
 	Meanings = {"Anvil"} -- source gives the German "Ambos" (sic) as the meaning
 })
 
-DefineLanguageWord("Aegi", { -- appears in the name of a goat
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Goat"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
-})
-
 DefineLanguageWord("Ákmōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 3.2.2.
 	Language = "greek",
 	Type = "noun",
@@ -69,18 +63,6 @@ DefineLanguageWord("Ἀυτή", { -- Source: Carl D. Buck, "Words for 'Battle,' 
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cry", "Battle-Cry", "Battle"}
-})
-
-DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Come"} -- apparently, but not entirely clear from source
-})
-
-DefineLanguageWord("Basilikē", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Royal Hall", "Large Public Hall", "Church"}
 })
 
 DefineLanguageWord("Χαροπός", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -169,12 +151,6 @@ DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Nominative = "Égō"
 })
 
-DefineLanguageWord("Ekklēsía", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Congregation", "Christian Congregation", "Church"}
-})
-
 DefineLanguageWord("Éphūn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "greek",
 	Type = "noun",
@@ -213,12 +189,6 @@ DefineLanguageWord("Γηραλέος", { -- Source: August Fick and Alf Torp, "W
 	Meanings = {"Old"} -- source gives the German "alt" as the meaning
 })
 
-DefineLanguageWord("Hēélios", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Sun"}
-})
-
 DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "verb",
@@ -251,7 +221,7 @@ DefineLanguageWord("Ídmen", { -- this is the plural first person present; Sourc
 DefineLanguageWord("Κώμη", { -- Fick gives "Χώμη" instead; Source: Arnold H. Price, "Early Places Ending in -heim as Warrior Club Settlements and the Role of Soc in the Germanic Administration of Justice", 1981, p. 194; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Village"} -- as given by Price; Fick also gives the German "Dorf" as the meaning
+	Meanings = {"Village"} -- as given by Price; Fick likewise gives the German "Dorf" as the meaning
 })
 
 DefineLanguageWord("Κῶμος", { -- Source: Arnold H. Price, "Early Places Ending in -heim as Warrior Club Settlements and the Role of Soc in the Germanic Administration of Justice", 1981, p. 194.
@@ -273,18 +243,6 @@ DefineLanguageWord("Κότος", { -- Source: Carl D. Buck, "Words for 'Battle,'
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Wrath"}
-})
-
-DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Cage"}
-})
-
-DefineLanguageWord("Kyriakón", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"That which belongs to the Lord", "That House of the Lord", "Church"}
 })
 
 DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
@@ -326,23 +284,11 @@ DefineLanguageWord("Μάρη", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Hand"} -- source gives the German "Hand" as the meaning
 })
 
-DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"More"}
-})
-
 DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Reward", "Payment of a Soldier"},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Muîa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Midge"}
 })
 
 DefineLanguageWord("Naûs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
@@ -353,12 +299,6 @@ DefineLanguageWord("Naûs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 		"singular", "accusative", "Nêa",
 		"singular", "genitive", "Nēós"
 	}
-})
-
-DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"New"}
 })
 
 DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -402,12 +342,6 @@ DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Number = 8
 })
 
-DefineLanguageWord("Ōlénē", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Elbow"}
-})
-
 DefineLanguageWord("Ὁμιλέω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
 	Language = "greek",
 	Type = "verb",
@@ -440,34 +374,16 @@ DefineLanguageWord("Ὀφρύς", { -- Source: August Fick and Alf Torp, "Wortsc
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"Straight"}
-})
-
 DefineLanguageWord("Ὄρνυμι", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Stir Up", "Incite"}
 })
 
-DefineLanguageWord("Pan", { -- appears in the name of a goat
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"All"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
-})
-
 DefineLanguageWord("Πάλλω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Swing", "Brandish"}
-})
-
-DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 2.9.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Father"}
 })
 
 DefineLanguageWord("Πελεμίζω", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 7.
@@ -487,12 +403,6 @@ DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Type = "verb",
 	Meanings = {"Examine"},
 	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"}
-})
-
-DefineLanguageWord("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Oak"}
 })
 
 DefineLanguageWord("Pheídomai", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -518,12 +428,6 @@ DefineLanguageWord("Pī́on", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"}
 })
 
-DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"Floating"}
-})
-
 DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -543,18 +447,6 @@ DefineLanguageWord("Πύργος", { -- Source: T. C. Donkin, "An Etymological D
 	Language = "greek",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Shadow"}
-})
-
-DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Climb"}
 })
 
 DefineLanguageWord("Στῑ́α", { -- source also gives the alternative form "στῖον"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
@@ -603,18 +495,6 @@ DefineLanguageWord("Thḗsato", { -- this is apparently the past participle, si
 	Participles = {
 		"past", "Thḗsato"
 	}
-})
-
-DefineLanguageWord("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Daughter"}
-})
-
-DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Door"}
 })
 
 DefineLanguageWord("Τρέχω", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.

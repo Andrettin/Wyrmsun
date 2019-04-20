@@ -181,12 +181,6 @@ DefineLanguageWord("Gʷyxwos", { -- source gives "gʷyXw-os"; Source: Winfred P.
 	Meanings = {}
 })
 
-DefineLanguageWord("Kel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
-	Language = "proto-indo-european",
-	Type = "verb",
-	Meanings = {"Raise"} -- source gives the German "erheben" as the meaning
-})
-
 DefineLanguageWord("Keld", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "proto-indo-european",
 	Type = "noun", -- correct?
@@ -328,24 +322,6 @@ DefineLanguageWord("Ve", { -- source also gives the alternative form "Ves"; Sour
 DefineLanguageWord("Vekero", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "proto-indo-european",
 	Type = "noun", -- correct?
-	Meanings = {}
-})
-
-DefineLanguageWord("Vel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-indo-european", -- apparently
-	Type = "verb",
-	Meanings = {"Rip"} -- source gives the German "reißen"
-})
-
-DefineLanguageWord("Vl̥po", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-indo-european",
-	Type = "noun",
 	Meanings = {}
 })
 

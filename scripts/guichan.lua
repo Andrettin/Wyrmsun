@@ -1429,6 +1429,9 @@ function BuildProgramStartMenu()
 		function() RunModsMenu(0); menu:stop(1) end)
 	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
 		function() RunEncyclopediaMenu(); menu:stop(1) end)
+		
+	menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
+		function() menu:stop() end)
 
 	return menu:run()
 end
