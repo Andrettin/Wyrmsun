@@ -25,22 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Acthna", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 158.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {"Subterranean Fire"}
-})
-
 DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {"Mountain"}
-})
-
-DefineLanguageWord("Leffas", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 159.
-	Language = "gnomish",
-	Type = "noun",
-	Meanings = {"Plant Soul", "Stone Soul", "Tree Soul"}
 })
 
 DefineLanguageWord("Unter", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
