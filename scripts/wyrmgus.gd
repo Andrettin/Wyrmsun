@@ -12,13 +12,31 @@ func _ready():
 		#if the player is hitting or being hit increment the tension to our music by one
 		self.connect("unit_hit", music_player, "add_tension", [1], CONNECT_DEFERRED)
 		
+		update_user_directory()
+		
 		self.set_oaml_module(music_player)
+		
 		self.wyrmgus_thread = Thread.new()
 		self.wyrmgus_thread.start(self, "run_")
 
 #we need this function because starting a function in a new thread with Godot requires that function to take a parameter (i.e. userdata), which the run() function in Wyrmgus does not
 func run_(userdata):
 	self.run()
+	
+func update_user_directory():
+	#set the user directory for Wyrmsun in the documents folder
+	var user_directory = Directory.new()
+	var user_directory_path = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS) + "/" + ProjectSettings.get_setting("application/config/name")
+	if (!user_directory.dir_exists(user_directory_path)):
+		var result = user_directory.make_dir_recursive(user_directory_path)
+		if (result != OK):
+			printerr("Error creating \"" + user_directory_path + "\" directory: " + str(result))
+			return
+	var result = user_directory.open(user_directory_path)
+	if (result != OK):
+		printerr("Error Directory::change_dir error for path \"" + user_directory_path + "\": " + str(result))
+		return
+	self.set_user_directory(user_directory.get_current_dir())
 	
 #gets the sapient species from a species list
 func get_sapient_species_from_list(species_list):
