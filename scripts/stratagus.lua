@@ -1578,6 +1578,20 @@ function LoadHeroes()
 	end
 end
 
+function LoadModulesDirectory(module_dir)
+	local module_dirs = ListDirsInDirectory(module_dir)
+	for i, f in ipairs(module_dirs) do
+		local current_dir = module_dir .. f .. "/"
+		CMod:SetCurrentModPath(current_dir)
+		if (CanAccessFile(current_dir .. "data/")) then
+			LoadDataDirectories(current_dir .. "data/")
+		end
+		if (CanAccessFile(current_dir .. "modules/")) then
+			LoadModulesDirectory(current_dir .. "modules/") -- load submodules
+		end
+	end
+end
+
 function LoadData()
 	LoadDataDirectories("data/")
 	
@@ -1588,6 +1602,8 @@ function LoadData()
 			LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
 		end
 	end
+	
+	LoadModulesDirectory("modules/")
 	
 	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then

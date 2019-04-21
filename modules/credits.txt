@@ -1,0 +1,5 @@
+/modules/battle_for_wesnoth/ (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/modules/battle_for_wesnoth/modules/liberty/ (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/modules/battle_for_wesnoth/modules/the_sceptre_of_fire/ (by Joseph Simmons and the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/modules/battle_for_wesnoth/modules/under_the_burning_suns/ (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/modules/tyrant/ (by the Tyrant Team) (licensed under the GPL 2.0)
