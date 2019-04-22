@@ -691,43 +691,7 @@ DefineCivilization("dwarf", {
 	},
 	Description = "Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them.",
 	PersonalNames = {
-		"female", "Gneissus", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
 		"male", "Ai", -- dwarf from Norse mythology who was a settler of Joruvellir
-		"male", "Aigaithas", -- from Battle for Wesnoth
-		"male", "Aigaithil", -- from Battle for Wesnoth
-		"male", "Aigaithing", -- from Battle for Wesnoth
-		"male", "Aigaithol", -- from Battle for Wesnoth
-		"male", "Aigalas", -- from Battle for Wesnoth
-		"male", "Aigaling", -- from Battle for Wesnoth
-		"male", "Aigalis", -- from Battle for Wesnoth
-		"male", "Aigalol", -- from Battle for Wesnoth
-		"male", "Aigalsil", -- from Battle for Wesnoth
-		"male", "Aigatas", -- from Battle for Wesnoth
-		"male", "Aigatis", -- from Battle for Wesnoth
-		"male", "Aigatlos", -- from Battle for Wesnoth
-		"male", "Aigatsil", -- from Battle for Wesnoth
-		"male", "Aigatsol", -- from Battle for Wesnoth
-		"male", "Aigatus", -- from Battle for Wesnoth
-		"male", "Aigcatas", -- from Battle for Wesnoth
-		"male", "Aigcatil", -- from Battle for Wesnoth
-		"male", "Aigcating", -- from Battle for Wesnoth
-		"male", "Aigcatis", -- from Battle for Wesnoth
-		"male", "Aigcatsil", -- from Battle for Wesnoth
-		"male", "Aigcatsol", -- from Battle for Wesnoth
-		"male", "Aigcatus", -- from Battle for Wesnoth
-		"male", "Aigdring", -- from Battle for Wesnoth
-		"male", "Aigdris", -- from Battle for Wesnoth
-		"male", "Aigdrlos", -- from Battle for Wesnoth
-		"male", "Aigdrsil", -- from Battle for Wesnoth
-		"male", "Aigdrsol", -- from Battle for Wesnoth
-		"male", "Aigduras", -- from Battle for Wesnoth
-		"male", "Aigdurlos", -- from Battle for Wesnoth
-		"male", "Aigdursol", -- from Battle for Wesnoth
-		"male", "Aiglondur", -- dwarven hero in Battle for Wesnoth: The Hammer of Thursagan
-		"male", "Aigthaing", -- from Battle for Wesnoth
-		"male", "Aigthais", -- from Battle for Wesnoth
-		"male", "Aigthasil", -- from Battle for Wesnoth
-		"male", "Aigthaus", -- from Battle for Wesnoth
 		"male", "Alaithas", -- from Battle for Wesnoth
 		"male", "Alaithis", -- from Battle for Wesnoth
 		"male", "Alaithlos", -- from Battle for Wesnoth
@@ -799,7 +763,6 @@ DefineCivilization("dwarf", {
 		"male", "Andursol", -- from Battle for Wesnoth
 		"male", "Andurus", -- from Battle for Wesnoth
 		"male", "Andvari", -- dwarf from Norse mythology who possessed a lot of gold, including a golden ring (Andvaranaut) which was stolen by Loki; was possibly one of the settlers of Joruvellir; son of Oin
-		"male", "Angarthing", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Anthaas", -- from Battle for Wesnoth
 		"male", "Anthaing", -- from Battle for Wesnoth
 		"male", "Anthais", -- from Battle for Wesnoth
@@ -844,7 +807,6 @@ DefineCivilization("dwarf", {
 		"male", "Bari", -- dwarf from Norse mythology
 		"male", "Berling", -- dwarf from Norse mythology
 		"male", "Bibung", -- dwarf from Norse mythology
-		"male", "Burin", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
 		"male", "Delling", -- dwarf from Norse mythology
 		"male", "Delling", -- dwarf from Norse mythology
 		"male", "Dolgthvari", -- dwarf from Norse mythology
@@ -870,7 +832,6 @@ DefineCivilization("dwarf", {
 		"male", "Dulcatol", -- from Battle for Wesnoth
 		"male", "Dulcatsil", -- from Battle for Wesnoth
 		"male", "Dulcatsol", -- from Battle for Wesnoth
-		"male", "Dulcatulos", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Duldril", -- from Battle for Wesnoth
 		"male", "Duldris", -- from Battle for Wesnoth
 		"male", "Duldrlos", -- from Battle for Wesnoth
@@ -886,8 +847,6 @@ DefineCivilization("dwarf", {
 		"male", "Dulthasil", -- from Battle for Wesnoth
 		"male", "Dulthasol", -- from Battle for Wesnoth
 		"male", "Dulthaus", -- from Battle for Wesnoth
-		"male", "Durahn", -- "Durâhn"; from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
-		"male", "Dursil", -- dwarf from Battle for Wesnoth: The Rise of Wesnoth
 		"male", "Eggerich", -- dwarf from German sagas
 		"male", "Fal", -- dwarf from Norse mythology
 		"male", "Fid", -- dwarf from Norse mythology
@@ -927,7 +886,6 @@ DefineCivilization("dwarf", {
 		"male", "Glamthasil", -- from Battle for Wesnoth
 		"male", "Glamthasol", -- from Battle for Wesnoth
 		"male", "Glamthaus", -- from Battle for Wesnoth
-		"male", "Glinar", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Gloin", -- dwarf from Norse mythology
 		"male", "Glomin", -- from Battle for Wesnoth
 		"male", "Goldemar", -- dwarf from German sagas
@@ -962,8 +920,6 @@ DefineCivilization("dwarf", {
 		"male", "Gomthalos", -- from Battle for Wesnoth
 		"male", "Gomthasol", -- from Battle for Wesnoth
 		"male", "Grerr", -- dwarf from Norse mythology
-		"male", "Grimnir", -- dwarven pathfinder from Battle for Wesnoth: Under the Burning Suns
-		"male", "Hamel", -- dwarf from Battle for Wesnoth: Northern Rebirth and Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Hannar", -- "Hannarr"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
 		"male", "Har", -- dwarf from Norse mythology
 		"male", "Haur", -- dwarf from Norse mythology
@@ -973,11 +929,8 @@ DefineCivilization("dwarf", {
 		"male", "Hugstari", -- dwarf from Norse mythology
 		"male", "Ingi", -- dwarf from Norse mythology
 		"male", "Iri", -- dwarf from Norse mythology
-		"male", "Isuldan", -- from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
 		"male", "Jari", -- dwarf from Norse mythology
-		"male", "Karrag", -- dwarf from Battle for Wesnoth: The Hammer of Thursagan
 		"male", "Kili", -- dwarf from Norse mythology
-		"male", "Kinan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Laurin", -- dwarf from German sagas
 		"male", "Lit", -- dwarf from Norse mythology
 		"male", "Lofar", -- dwarf from Norse mythology who was a descendant of the settlers of Joruvellir
@@ -1016,7 +969,6 @@ DefineCivilization("dwarf", {
 		"male", "Narthalos", -- from Battle for Wesnoth
 		"male", "Narthaol", -- from Battle for Wesnoth
 		"male", "Nefi", -- dwarf from Norse mythology
-		"male", "Neglur", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Nidi", -- dwarf from Norse mythology
 		"male", "Nidjung", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
 		"male", "Nordri", -- dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
@@ -1024,7 +976,6 @@ DefineCivilization("dwarf", {
 		"male", "Nyr", -- dwarf from Norse mythology
 		"male", "Nyrad", -- dwarf from Norse mythology
 		"male", "Oin", -- dwarf from Norse mythology who was the father of Andvari
-		"male", "Olurf", -- dwarf from Battle for Wesnoth: The Legend of Wesmere
 		"male", "Ori", -- dwarf from Norse mythology
 		"male", "Pelaithas", -- from Battle for Wesnoth
 		"male", "Pelaithil", -- from Battle for Wesnoth
@@ -1065,8 +1016,6 @@ DefineCivilization("dwarf", {
 		"male", "Pelthasil", -- from Battle for Wesnoth
 		"male", "Radsvid", -- dwarf from Norse mythology
 		"male", "Rekk", -- dwarf from Norse mythology
-		"male", "Relgorn", -- dwarf from Battle for Wesnoth: Heir to the Throne and Battle for Wesnoth: Delfador's Memoirs
-		"male", "Rynan", -- dwarf from Battle for Wesnoth: The Sceptre of Fire
 		"male", "Skavid", -- dwarf from Norse mythology
 		"male", "Skirvir", -- dwarf from Norse mythology
 		"male", "Solblindi", -- dwarf from Norse mythology
@@ -1074,7 +1023,6 @@ DefineCivilization("dwarf", {
 		"male", "Svarin", -- dwarf from Norse mythology
 		"male", "Sviar", -- dwarf from Norse mythology
 		"male", "Sviur", -- dwarf from Norse mythology
-		"male", "Theganli", -- dwarf from Battle for Wesnoth: The Sceptre of Fire; jeweler of Durstorn's clan
 		"male", "Thekk", -- dwarf from Norse mythology
 		"male", "Thorin", -- dwarf from Norse mythology
 		"male", "Thrain", -- dwarf from Norse mythology
@@ -1115,7 +1063,6 @@ DefineCivilization("dwarf", {
 		"male", "Triththasol", -- from Battle for Wesnoth
 		"male", "Triththaus", -- from Battle for Wesnoth
 		"male", "Tuta", -- dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 645.
-		"male", "Ulrek", -- dwarf from Battle for Wesnoth: Delfador's Memoirs
 		"male", "Uni", -- dwarf from Norse mythology
 		"male", "Vali", -- dwarf from Norse mythology
 		"male", "Var", -- dwarf from Norse mythology
@@ -1129,7 +1076,6 @@ DefineCivilization("dwarf", {
 	--[[
 	SettlementNames = {
 		"Dwarven Doors", -- from Battle for Wesnoth
-		"Kal Kartha", -- from Battle for Wesnoth: The Hammer of Thursagan
 		"Knalga", -- from Battle for Wesnoth
 		"Lyr"
 	},

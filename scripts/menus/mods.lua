@@ -226,7 +226,7 @@ end
 
 Mods = {}
 function LoadMods()
-	CMod:SetCurrentModPath("")
+	CModule:SetCurrentPath("")
 	Mods = nil
 	Mods = {}
 	
@@ -244,7 +244,7 @@ function LoadMods()
 			Load(wyr.preferences.EnabledMods[i])
 		else
 			ModName = ""
-			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
+			CModule:SetCurrentPath(wyr.preferences.EnabledMods[i])
 			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
@@ -276,11 +276,11 @@ function LoadMods()
 		end
 	end
 	
-	CMod:SetCurrentModPath("")
+	CModule:SetCurrentPath("")
 end
 
 function LoadDLCs()
-	CMod:SetCurrentModPath("")
+	CModule:SetCurrentPath("")
 	
 	local i
 	local f
@@ -299,15 +299,15 @@ function LoadDLCs()
 		local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "main.lua")) then
-				CMod:SetCurrentModPath("dlcs/" .. dirlist[j])
-				Load(CMod:GetCurrentModPath() .. f)
+				CModule:SetCurrentPath("dlcs/" .. dirlist[j])
+				Load(CModule:GetCurrentPath() .. f)
 			elseif (string.find(f, "oaml.defs")) then
 				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
 			end
 		end
 	end
 	
-	CMod:SetCurrentModPath("")
+	CModule:SetCurrentPath("")
 end
 
 function SortModList(mod_list)
@@ -323,18 +323,18 @@ function SortModList(mod_list)
 		local mod_b_path = ""
 		local mod_b_dependencies = {}
 		
-		CMod:SetCurrentModPath("")
+		CModule:SetCurrentPath("")
 		ModDependencies = {}
 		Load(a .. "info.lua")
-		mod_a_path = CMod:GetCurrentModPath()
+		mod_a_path = CModule:GetCurrentPath()
 		mod_a_dependencies = ModDependencies
 		
-		CMod:SetCurrentModPath("")
+		CModule:SetCurrentPath("")
 		ModDependencies = {}
 		Load(b .. "info.lua")
-		mod_b_path = CMod:GetCurrentModPath()
+		mod_b_path = CModule:GetCurrentPath()
 		mod_b_dependencies = ModDependencies
-		CMod:SetCurrentModPath("")
+		CModule:SetCurrentPath("")
 		ModDependencies = {}
 		
 		if (string.len(mod_b_path) > string.len(mod_a_path) and string.find(mod_b_path, mod_a_path) ~= nil) then

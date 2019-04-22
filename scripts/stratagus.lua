@@ -1578,36 +1578,42 @@ function LoadHeroes()
 	end
 end
 
-function LoadModulesDirectory(module_dir)
-	local module_dirs = ListDirsInDirectory(module_dir)
+function LoadModulesDirectory(module_dir, is_absolute)
+	local module_dirs
+	if (is_absolute) then
+		module_dirs = ListDirsInDirectory(module_dir, true)
+	else
+		module_dirs = ListDirsInDirectory(module_dir)
+	end
 	for i, f in ipairs(module_dirs) do
 		local current_dir = module_dir .. f .. "/"
-		CMod:SetCurrentModPath(current_dir)
+		CModule:SetCurrentPath(current_dir)
 		if (CanAccessFile(current_dir .. "data/")) then
-			LoadDataDirectories(current_dir .. "data/")
+			LoadDataDirectories(current_dir .. "data/", is_absolute)
 		end
 		if (CanAccessFile(current_dir .. "modules/")) then
-			LoadModulesDirectory(current_dir .. "modules/") -- load submodules
+			LoadModulesDirectory(current_dir .. "modules/", is_absolute) -- load submodules
 		end
 	end
 end
 
 function LoadData()
-	LoadDataDirectories("data/")
+	LoadDataDirectories("data/", false)
 	
 	local dlc_dirs = ListDirsInDirectory("dlcs/")
 	for i, f in ipairs(dlc_dirs) do
-		CMod:SetCurrentModPath("dlcs/" .. f .. "/")
-		if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
-			LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
+		CModule:SetCurrentPath("dlcs/" .. f .. "/")
+		if (CanAccessFile(CModule:GetCurrentPath() .. "data/")) then
+			LoadDataDirectories(CModule:GetCurrentPath() .. "data/", false)
 		end
 	end
 	
-	LoadModulesDirectory("modules/")
+	LoadModulesDirectory("modules/", false)
+	LoadModulesDirectory(GetUserDirectory() .. "/modules/", true)
 	
 	for i = 1, table.getn(wyr.preferences.EnabledMods) do
 		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
+			CModule:SetCurrentPath(wyr.preferences.EnabledMods[i])
 			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
 			
 			local has_required_dependencies = true
@@ -1627,21 +1633,26 @@ function LoadData()
 				end
 			end
 			if (has_required_dependencies) then
-				if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
-					LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
+				if (CanAccessFile(CModule:GetCurrentPath() .. "data/")) then
+					LoadDataDirectories(CModule:GetCurrentPath() .. "data/", false)
 				end
 			end
 		end
 	end
 	
-	CMod:SetCurrentModPath("")
+	CModule:SetCurrentPath("")
 end
 
-function LoadDataDirectories(directory)
-	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "language_families", "languages", "word_types", "grammatical_genders", "words", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
+function LoadDataDirectories(directory, is_absolute)
+	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "language_families", "languages", "word_types", "grammatical_genders", "words", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "civilizations", "factions", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
 	
 	-- load the data files directly in the main data directory
-	local fileslist = ListFilesInDirectory(directory)
+	local fileslist
+	if (is_absolute) then
+		fileslist = ListFilesInDirectory(directory, true)
+	else
+		fileslist = ListFilesInDirectory(directory)
+	end
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
 			LoadConfigFile(directory .. f)
@@ -1650,14 +1661,19 @@ function LoadDataDirectories(directory)
 	
 	for i = 1, table.getn(data_directories) do
 		if (CanAccessFile(directory .. data_directories[i] .. "/")) then
-			LoadDataFiles(directory .. data_directories[i] .. "/")
+			LoadDataFiles(directory .. data_directories[i] .. "/", is_absolute)
 		end
 	end
 end
 
-function LoadDataFiles(directory)
+function LoadDataFiles(directory, is_absolute)
 	-- load the data files
-	local fileslist = ListFilesInDirectory(directory)
+	local fileslist
+	if (is_absolute) then
+		fileslist = ListFilesInDirectory(directory, true)
+	else
+		fileslist = ListFilesInDirectory(directory)
+	end
 	for i, f in ipairs(fileslist) do
 		if (string.find(f, ".cfg")) then
 			LoadConfigFile(directory .. f)
@@ -1665,9 +1681,14 @@ function LoadDataFiles(directory)
 	end
 	
 	-- load files in subdirectories as well
-	local subdirs = ListDirsInDirectory(directory)
+	local subdirs
+	if (is_absolute) then
+		subdirs = ListDirsInDirectory(directory, true)
+	else
+		subdirs = ListDirsInDirectory(directory)
+	end
 	for i, f in ipairs(subdirs) do
-		LoadDataFiles(directory .. f .. "/")
+		LoadDataFiles(directory .. f .. "/", is_absolute)
 	end
 end
 

@@ -31,11 +31,11 @@ function EventTriggers()
 	-- load a triggers.lua file in an enabled mod, if present
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
 		if (string.find(wyr.preferences.EnabledMods[i], ".sms") == nil) then
-			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
-			if (CanAccessFile(CMod:GetCurrentModPath() .. "scripts/triggers.lua")) then
-				Load(CMod:GetCurrentModPath() .. "scripts/triggers.lua")
+			CModule:SetCurrentPath(wyr.preferences.EnabledMods[i])
+			if (CanAccessFile(CModule:GetCurrentPath() .. "scripts/triggers.lua")) then
+				Load(CModule:GetCurrentPath() .. "scripts/triggers.lua")
 			end
-			CMod:SetCurrentModPath("")
+			CModule:SetCurrentPath("")
 		end
 	end
 
