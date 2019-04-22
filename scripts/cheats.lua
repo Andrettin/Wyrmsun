@@ -256,6 +256,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-norse-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "trollheim") then
 		unit = CreateUnit("unit-troll-warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+	elseif (str == "lion wings") then
+		unit = CreateUnit("unit-gryphon", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	else
 		return false
 	end
