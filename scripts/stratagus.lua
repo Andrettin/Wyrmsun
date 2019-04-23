@@ -1644,7 +1644,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory, is_absolute)
-	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "language_families", "languages", "word_types", "grammatical_genders", "words", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "civilizations", "factions", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
+	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "language_families", "languages", "word_types", "grammatical_genders", "words", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist
