@@ -361,7 +361,7 @@ DefineQuest("fafnirs-hoard", {
 	Description = "Andvari's gold hoard has been taken by the kobolds who care for the wyrm Fafnir. If you and Regin are to recover the gold, you must enter Fafnir's perilous domain and slay the giant beast.",
 	World = "nidavellir",
 	Civilization = "dwarf",
---	QuestGiver = "Regin",
+--	QuestGiver = "regin",
 	Area = "Gnitaheith",
 	StartSpeech = "Andvari's gold hoard was taken by a group of treacherous kobolds, who took it to the lair of their wyrm, Fafnir. To recover the precious metal, we must enter the wyrm's lair.",
 	InProgressSpeech = "Fafnir is a vicious creature - be on your guard!",
