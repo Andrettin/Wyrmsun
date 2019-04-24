@@ -148,7 +148,7 @@ function HandleCheats(str)
 		}
 		for i, unitName in ipairs(bronze_upgrades) do
 			for j=0,PlayerMax - 2 do
-				if (CPlayer:GetPlayer(j).Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
+				if (GetPlayerData(j, "Type") ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
 					SetPlayerData(j, "Allow", unitName, "R")
 				end
 			end
@@ -197,67 +197,67 @@ function HandleCheats(str)
 		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
-		AddMessage("Player " .. message_player .. " has " .. CPlayer:GetPlayer(message_player).NumBuildingsUnderConstruction .. " under construction buildings.")
+		AddMessage("Player " .. message_player .. " has " .. GetPlayerData(message_player, "NumBuildingsUnderConstruction") .. " under construction buildings.")
 	elseif (str == "shield wall") then
 		local infantry_type = GetFactionClassUnitType("infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (infantry_type) then
-			unit = CreateUnit(infantry_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(infantry_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "swordskill") then
 		local veteran_infantry_type = GetFactionClassUnitType("veteran-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (veteran_infantry_type) then
-			unit = CreateUnit(veteran_infantry_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(veteran_infantry_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "artemis") then
 		local shooter_type = GetFactionClassUnitType("shooter", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (shooter_type) then
-			unit = CreateUnit(shooter_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(shooter_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "fire and steel") then
 		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
-			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "piety") then
 		local priest_type = GetFactionClassUnitType("priest", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (priest_type) then
-			unit = CreateUnit(priest_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(priest_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "archimedes") then
 		local siege_engine_type = GetFactionClassUnitType("siege-engine", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (siege_engine_type) then
-			unit = CreateUnit(siege_engine_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(siege_engine_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "ahoy") then
 		local transport_ship_type = GetFactionClassUnitType("transport-ship", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (transport_ship_type) then
-			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "skidbladnir") then
 		local siege_warship_type = GetFactionClassUnitType("siege-warship", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (siege_warship_type) then
-			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		end
 	elseif (str == "jotun") then
-		unit = CreateUnit("unit-ettin", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-ettin", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "backstab") then
-		unit = CreateUnit("unit-goblin-thief", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-goblin-thief", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "marius") then
-		unit = CreateUnit("unit-latin-legionary", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-latin-legionary", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "peruns shield") then
-		unit = CreateUnit("unit-slavic-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-slavic-swordsman", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "lodbrok") then
-		unit = CreateUnit("unit-norse-longship", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-norse-longship", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "volund") then
-		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "vingethor") then
-		unit = CreateUnit("unit-dwarven-gryphon-rider", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-dwarven-gryphon-rider", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "tyr") then
-		unit = CreateUnit("unit-norse-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-norse-swordsman", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "trollheim") then
-		unit = CreateUnit("unit-troll-warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-troll-warrior", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "lion wings") then
-		unit = CreateUnit("unit-gryphon", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit("unit-gryphon", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	else
 		return false
 	end

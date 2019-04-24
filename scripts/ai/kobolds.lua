@@ -29,7 +29,7 @@ local ai_call_counter = {}
 
 local kobold_funcs = {
 	function()
-		unit = CreateUnit("unit-kobold-footpad", AiPlayer(), {CPlayer:GetPlayer(AiPlayer()).StartPos.x, CPlayer:GetPlayer(AiPlayer()).StartPos.y}, CPlayer:GetPlayer(AiPlayer()).StartMapLayer)
+		unit = CreateUnit("unit-kobold-footpad", AiPlayer(), {GetPlayerData(AiPlayer(), "StartPosX"), GetPlayerData(AiPlayer(), "StartPosY")}, CPlayer:GetPlayer(AiPlayer()).StartMapLayer)
 		return false;
 	end,
 	function() return AiForce(1, {GetAiUnitType("infantry"), 1}, true) end,
