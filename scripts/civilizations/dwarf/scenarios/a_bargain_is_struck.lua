@@ -44,7 +44,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 			return false
 		end
 		for i=0, (PlayerMax - 2) do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not CPlayer:GetPlayer(i):IsEnemy(CPlayer:GetPlayer(GetCivilizationPlayer("gnome"))) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not GetPlayerData(i, "IsEnemy", GetCivilizationPlayer("gnome")) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -346,7 +346,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 									SetDiplomacy(gnomish_monarch_player, "enemy", player)
 									SetDiplomacy(player, "enemy", gnomish_monarch_player)
 
-									CPlayer:GetPlayer(GetFactionPlayer("shinsplitter-clan")).Type = PlayerNeutral
+									SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Type", PlayerNeutral)
 
 									KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
 								end}
@@ -453,7 +453,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(player, "enemy", bandit_player)
 
 												local second_bandit_player = FindUnusedPlayerSlot()
-												CPlayer:GetPlayer(second_bandit_player).Type = PlayerComputer
+												SetPlayerData(second_bandit_player, "Type", PlayerComputer)
 
 												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 												SetUnitVariable(unit, "Active", false)

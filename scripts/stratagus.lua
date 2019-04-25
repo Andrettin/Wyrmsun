@@ -1240,24 +1240,52 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (CPlayer:GetPlayer(i).Type == PlayerPerson or CPlayer:GetPlayer(i).Type == PlayerComputer) and (CPlayer:GetPlayer(player):IsAllied(CPlayer:GetPlayer(i)) == false or CPlayer:GetPlayer(i):IsAllied(CPlayer:GetPlayer(player)) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity") and GetPlayerData(player, "HasContactWith", i)) then
-			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
-			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine") - GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(i, "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(i, "UnitTypesCount", "unit-yale-hunting-lodge")
-			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then
-				total_units = total_units - GetPlayerData(i, "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")))
-			end
-			if (total_units > 0) then
-				rival_count = rival_count + 1
-			end
+		if (IsRivalOf(player, i)) then
+			rival_count = rival_count + 1
 		end
 	end
 	return rival_count
 end
 
+function IsRivalOf(player, other_player)
+	if (player == other_player) then
+		return false
+	end
+
+	if (GetPlayerData(other_player, "Type") ~= PlayerPerson and GetPlayerData(other_player, "Type") ~= PlayerComputer) then
+		return false
+	end
+
+	if (GetPlayerData(player, "IsAllied", other_player) == true and GetPlayerData(other_player, "IsAllied", player) == true) then
+		return false
+	end
+	
+	if (GetPlayerData(other_player, "Faction") ~= "" and GetFactionData(GetPlayerData(other_player, "Faction"), "Type") ~= "tribe" and GetFactionData(GetPlayerData(other_player, "Faction"), "Type") ~= "polity") then
+		return false
+	end
+	
+	if (GetPlayerData(player, "HasContactWith", other_player) == false) then
+		return false
+	end
+	
+	local total_units = GetPlayerData(other_player, "TotalNumUnitsConstructed") - GetPlayerData(other_player, "UnitTypesCount", "unit-goblin-glider")
+	total_units = total_units - GetPlayerData(other_player, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(other_player, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(other_player, "UnitTypesCount", "unit-copper-mine") - GetPlayerData(other_player, "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(other_player, "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(other_player, "UnitTypesCount", "unit-yale-hunting-lodge")
+
+	if (GetCivilizationClassUnitType("farm", GetPlayerData(other_player, "RaceName")) ~= nil) then
+		total_units = total_units - GetPlayerData(other_player, "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(other_player, "RaceName")))
+	end
+
+	if (total_units <= 0) then
+		return false
+	end
+	
+	return true
+end
+
 function GetNumAllies(player)
 	local ally_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and CPlayer:GetPlayer(player):IsAllied(CPlayer:GetPlayer(i)) and CPlayer:GetPlayer(i):IsAllied(CPlayer:GetPlayer(player))) then
+		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and GetPlayerData(player, "IsAllied", i) and GetPlayerData(i, "IsAllied", player)) then
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
 				ally_count = ally_count + 1
 			end

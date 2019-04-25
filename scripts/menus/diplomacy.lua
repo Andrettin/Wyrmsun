@@ -14,10 +14,10 @@ function RunDiplomacyMenu()
 	local j = 0
 
 	for i=0,(PlayerMax - 2) do
-		if (GetPlayerData(i, "Type") ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and CPlayer:GetThisPlayer().Index ~= i and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
+		if (GetPlayerData(i, "Type") ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and GetThisPlayer() ~= i and GetPlayerData(GetThisPlayer(), "HasContactWith", i)) then
 			j = j + 1
 
-			local l = Label(_(CPlayer:GetPlayer(i).Name))
+			local l = Label(_(GetPlayerData(i, "Name")))
 			l:setFont(Fonts["game"])
 			l:adjustSize()
 			menu:add(l, 16, (18 * j) + 26)
@@ -34,7 +34,7 @@ function RunDiplomacyMenu()
 					enemycb:setMarked(false)
 				end
 			end)
-			alliedcb:setMarked(CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)))
+			alliedcb:setMarked(GetPlayerData(GetThisPlayer(), "IsAllied", i))
 			allied[j] = alliedcb
 			allied[j].index = i
 
@@ -44,12 +44,12 @@ function RunDiplomacyMenu()
 					alliedcb:setMarked(false)
 				end
 			end)
-			enemycb:setMarked(CPlayer:GetThisPlayer():IsEnemy(i))
+			enemycb:setMarked(GetPlayerData(GetThisPlayer(), "IsEnemy", i))
 			enemy[j] = enemycb
 
 			sharedvisioncb = menu:addImageCheckBox("", 276, (18 * j) + 23,
 			function() end)
-			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)))
+			sharedvisioncb:setMarked(GetPlayerData(GetThisPlayer(), "IsSharedVision", i))
 			sharedvision[j] = sharedvisioncb
 		end
 	end
@@ -61,21 +61,19 @@ function RunDiplomacyMenu()
 
 			-- allies
 			if (allied[j]:isMarked() and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
-					CPlayer:GetThisPlayer():IsEnemy(i)) then
-					SetDiplomacy(CPlayer:GetThisPlayer().Index, "allied", i)
+				if (GetPlayerData(GetThisPlayer(), "IsAllied", i) == false or GetPlayerData(GetThisPlayer(), "IsEnemy", i)) then
+					SetDiplomacy(GetThisPlayer(), "allied", i)
 				end
 			end
 
 			-- enemies
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
-					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
-					SetDiplomacy(CPlayer:GetThisPlayer().Index, "enemy", i)
-					if (GetPlayerData(i, "Type") == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
-						SetDiplomacy(i, "enemy", CPlayer:GetThisPlayer().Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
-						if (GetPlayerData(i, "Type") == PlayerComputer and CPlayer:GetPlayer(i):IsSharedVision(CPlayer:GetThisPlayer())) then
-							SetSharedVision(i, false, CPlayer:GetThisPlayer().Index)
+				if (GetPlayerData(GetThisPlayer(), "IsAllied", i) or GetPlayerData(GetThisPlayer(), "IsEnemy", i) == false) then
+					SetDiplomacy(GetThisPlayer(), "enemy", i)
+					if (GetPlayerData(i, "Type") == PlayerComputer and GetPlayerData(i, "IsEnemy", GetThisPlayer()) == false) then
+						SetDiplomacy(i, "enemy", GetThisPlayer()) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
+						if (GetPlayerData(i, "Type") == PlayerComputer and GetPlayerData(i, "IsSharedVision", GetThisPlayer())) then
+							SetSharedVision(i, false, GetThisPlayer())
 						end
 					end
 				end
@@ -83,28 +81,26 @@ function RunDiplomacyMenu()
 
 			-- neutral
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
-					CPlayer:GetThisPlayer():IsEnemy(i)) then
-					SetDiplomacy(CPlayer:GetThisPlayer().Index, "neutral", i)
+				if (GetPlayerData(GetThisPlayer(), "IsAllied", i) or GetPlayerData(GetThisPlayer(), "IsEnemy", i)) then
+					SetDiplomacy(GetThisPlayer(), "neutral", i)
 				end
 			end
 
 			-- crazy
 			if (allied[j]:isMarked() and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
-					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
-					SetDiplomacy(CPlayer:GetThisPlayer().Index, "crazy", i)
+				if (GetPlayerData(GetThisPlayer(), "IsAllied", i) == false or GetPlayerData(GetThisPlayer(), "IsEnemy", i) == false) then
+					SetDiplomacy(GetThisPlayer(), "crazy", i)
 				end
 			end
 
 			-- shared vision
 			if (sharedvision[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)) == false) then
-					SetSharedVision(CPlayer:GetThisPlayer().Index, true, i)
+				if (GetPlayerData(GetThisPlayer(), "IsSharedVision", i) == false) then
+					SetSharedVision(GetThisPlayer(), true, i)
 				end
 			else
-				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i))) then
-					SetSharedVision(CPlayer:GetThisPlayer().Index, false, i)
+				if (GetPlayerData(GetThisPlayer(), "IsSharedVision", i)) then
+					SetSharedVision(GetThisPlayer(), false, i)
 				end
 			end
 		end

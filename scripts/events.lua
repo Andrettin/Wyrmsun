@@ -64,7 +64,7 @@ function EventTriggers()
 					{"~!OK"},
 					{function(s)
 						local greebo_player = FindUnusedPlayerSlot()
-						CPlayer:GetPlayer(greebo_player).Type = PlayerComputer
+						SetPlayerData(greebo_player, "Type", PlayerComputer)
 						local greebo_spawnpoint = FindAppropriateTileTypeSpawnPoint("Rock")
 						unit = CreateUnit("unit-goblin-banner", greebo_player, greebo_spawnpoint)
 						unit = CreateUnit("unit-goblin-spearman", greebo_player, greebo_spawnpoint)
