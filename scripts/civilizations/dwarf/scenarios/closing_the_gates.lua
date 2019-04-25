@@ -135,11 +135,11 @@ AddTrigger("closing-the-gates-introduction",
 	end,
 	function() 
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-			event_player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
+			event_player = GetFactionPlayer("shinsplitter-clan")
 		end
 
-		unit = CreateUnit("unit-revealer", player, {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y})
+		unit = CreateUnit("unit-revealer", player, {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY")})
 		Event(
 			"",
 			"Next in our story, Rugnur retreated into the caves of Knalga. But the Shinsplitters pressed on, and would enter the caves shortly.",
@@ -165,7 +165,7 @@ AddTrigger("closing-the-gates-introduction",
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+							FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 							"I see ye have sent a messenger to the city. Good idea, but will it really help? We have more troops and more provisions, and we are going to enter those caves and kill ye!",
 							event_player,
 							{"~!Continue"},
@@ -177,7 +177,7 @@ AddTrigger("closing-the-gates-introduction",
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+									FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 									"Ha! I thought as much. Well then, surrender!",
 									event_player,
 									{"~!Continue"},
@@ -189,7 +189,7 @@ AddTrigger("closing-the-gates-introduction",
 										{"~!Continue"},
 										{function(s)
 										Event(
-											FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+											FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 											"Unconditional.",
 											event_player,
 											{"~!Continue"},
@@ -219,7 +219,7 @@ AddTrigger("closing-the-gates-introduction",
 															possible_options = {"~!Continue"}
 														end
 														Event(
-															FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+															FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 															"Cease yer meddling, old dwarf! Rugnur is in charge here, and it is he who will bargain with us.",
 															event_player,
 															possible_options,
@@ -261,7 +261,7 @@ AddTrigger("closing-the-gates-introduction",
 																					{"~!Continue"},
 																					{function(s)
 																					Event(
-																						FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+																						FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 																						"Have ye made up yer mind yet about surrendering? If ye will not give up, prepare for battle!",
 																						event_player,
 																						{"~!Continue"},
@@ -354,8 +354,8 @@ AddTrigger("closing-the-gates-glyphs-activated",
 	end,
 	function()
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-			event_player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
+			event_player = GetFactionPlayer("shinsplitter-clan")
 		end
 
 		Event(
@@ -371,7 +371,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindUnit("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan")),
+					FindUnit("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan")),
 					"Agh! Well, ye have defeated me for now, but eventually ye will have to exit these caves, to give Pypo back his jewel. And when ye do, we will be ready for ye.",
 					event_player,
 					{"~!Continue"},
@@ -658,7 +658,7 @@ AddTrigger("closing-the-gates-shinsplitter-victory",
 		return false
 	end,
 	function() 
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
 			if (GrandStrategy) then
 				ChangeFactionResource("dwarf", "norlund-clan", "copper", -10000)
 				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000)

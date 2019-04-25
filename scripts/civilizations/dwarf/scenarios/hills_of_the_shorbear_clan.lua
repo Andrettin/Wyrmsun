@@ -476,19 +476,19 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 		return false
 	end,
 	function()
-		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
-			OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {2, 70}, 0, {8, 64}, 0, "move")
+		if (GetFactionPlayer("shinsplitter-clan") ~= GetThisPlayer()) then
+			OrderUnit(GetFactionPlayer("shinsplitter-clan"), "unit-dwarven-thane", {2, 70}, 0, {8, 64}, 0, "move")
 		end
 
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-			event_player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
+			event_player = GetFactionPlayer("shinsplitter-clan")
 		elseif (GetThisPlayer() == GetFactionPlayer("Shorbear Clan")) then
 			event_player = GetFactionPlayer("Shorbear Clan")
 		end
 
 		Event(
-			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 			"Aha! I've spent years looking for ye Norlunds, but now I've found ye! Prepare to die!",
 			event_player,
 			{"~!Continue"},
@@ -512,7 +512,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 						{"~!Continue"},
 						{function(s)
 						Event(
-							FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+							FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 							"I see. So ye don't have the ruby?",
 							event_player,
 							{"~!Continue"},
@@ -524,7 +524,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 								{"~!Continue"},
 								{function(s)
 								Event(
-									FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+									FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 									"How about this - I help ye defeat them, and ye let me keep the ruby when we have?",
 									event_player,
 									{"~!Continue"},
@@ -547,8 +547,8 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitters-arrive",
 												event_player,
 												{"~!Continue"},
 												{function(s)
-													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your rivals")
-													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
+													RemovePlayerObjective(GetFactionPlayer("shinsplitter-clan"), "- Defeat your rivals")
+													AddPlayerObjective(GetFactionPlayer("shinsplitter-clan"), "- Defeat the Norlunds")
 												end}
 											)
 											end}
@@ -958,7 +958,7 @@ AddTrigger("hills-of-the-shorbear-clan-new-objectives",
 																											{"~!Continue"},
 																											{function(s)
 																											Event(
-																												FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+																												FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 																												"Come out, Norlunds, and surrender! Or die in that cave, yer choice.",
 																												player,
 																												{"~!Continue"},
@@ -1112,9 +1112,9 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-ending",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")) then
-			if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1) then
-				player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetFactionPlayer("shinsplitter-clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")) then
+			if (GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "TotalNumUnitsConstructed") < 1) then
+				player = GetFactionPlayer("shinsplitter-clan")
 				return true
 			end
 		end
@@ -1167,9 +1167,9 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")) then
+		if (GetFactionPlayer("shinsplitter-clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("shinsplitter-clan"), "- Defeat the Norlunds")) then
 			if (GetNumUnitsAt(0, "any", {0, 0}, {512, 512}) < 1) then
-				player = GetFactionPlayer("Shinsplitter Clan")
+				player = GetFactionPlayer("shinsplitter-clan")
 				return true
 			end
 		end

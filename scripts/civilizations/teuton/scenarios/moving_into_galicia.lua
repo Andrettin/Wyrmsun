@@ -45,11 +45,11 @@ if (LoadedGame == false) then
 		SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 		SetPlayerData(0, "Faction", "suebi-tribe")
 		
-		unit = CreateUnit("unit-suebi-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-suebi-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 	end
 end

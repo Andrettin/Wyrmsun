@@ -33,16 +33,16 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Faction", "annwn")
 	SetPlayerData(1, "Name", "Annwn (Hafgan)")
 	
-	unit = CreateUnit("unit-elven-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-elven-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Character", "arawn")
 
-	unit = CreateUnit("unit-elven-swordsman", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-elven-swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Character", "hafgan")
 	SetUnitVariable(unit, "Active", false)
 	
-	unit = CreateUnit("unit-elven-swordsman", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-elven-swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-elven-swordsman", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-elven-swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 end
 

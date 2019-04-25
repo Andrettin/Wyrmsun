@@ -14,7 +14,7 @@ function RunDiplomacyMenu()
 	local j = 0
 
 	for i=0,(PlayerMax - 2) do
-		if (CPlayer:GetPlayer(i).Type ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and CPlayer:GetThisPlayer().Index ~= i and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
+		if (GetPlayerData(i, "Type") ~= PlayerNobody and GetPlayerData(i, "RaceName") ~= "neutral" and CPlayer:GetThisPlayer().Index ~= i and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
 			j = j + 1
 
 			local l = Label(_(CPlayer:GetPlayer(i).Name))
@@ -72,9 +72,9 @@ function RunDiplomacyMenu()
 				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
 					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "enemy", i)
-					if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
+					if (GetPlayerData(i, "Type") == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
 						SetDiplomacy(i, "enemy", CPlayer:GetThisPlayer().Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
-						if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsSharedVision(CPlayer:GetThisPlayer())) then
+						if (GetPlayerData(i, "Type") == PlayerComputer and CPlayer:GetPlayer(i):IsSharedVision(CPlayer:GetThisPlayer())) then
 							SetSharedVision(i, false, CPlayer:GetThisPlayer().Index)
 						end
 					end

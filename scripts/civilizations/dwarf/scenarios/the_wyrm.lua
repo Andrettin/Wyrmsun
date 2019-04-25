@@ -228,9 +228,9 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 	end,
 	function() 
 		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
-		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
+		if (GetFactionPlayer("shinsplitter-clan") ~= GetThisPlayer()) then
 			uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+			uncount = GetUnits(GetFactionPlayer("shinsplitter-clan"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Idle") and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
 					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {27, 63}, 0, "attack")
@@ -270,7 +270,7 @@ AddTrigger("the-wyrm-norlunds-move-to-smithy",
 		local uncount = 0
 		uncount = GetUnits("any")
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-brising-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("Shinsplitter Clan")) then
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-brising-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("shinsplitter-clan")) then
 				smithy = uncount[unit1]
 			end
 		end
@@ -351,7 +351,7 @@ AddTrigger("the-wyrm-surghan-mercenary-sighted",
 			return false
 		end
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		uncount = GetUnits(GetFactionPlayer("shinsplitter-clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") then
 				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
@@ -573,11 +573,11 @@ AddTrigger("the-wyrm-victory",
 						if (player == GetThisPlayer() and GrandStrategy == false) then
 							SetQuestCompleted("the-wyrm", GameSettings.Difficulty)
 						end
-					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
+					elseif (GetFactionPlayer("shinsplitter-clan") == GetThisPlayer()) then
 						Event(
 							"",
 							"The dwarves of the Norlund clan have disappeared into some nearby tunnel!",
-							GetFactionPlayer("Shinsplitter Clan"),
+							GetFactionPlayer("shinsplitter-clan"),
 							{"~!Continue"},
 							{function(s)
 								ActionDefeat()

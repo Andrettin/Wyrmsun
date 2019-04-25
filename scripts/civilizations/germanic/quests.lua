@@ -425,8 +425,8 @@ DefineQuest("master-of-metal", {
 	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
-		unit = CreateUnit("unit-germanic-worker", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", trigger_player, {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")})
+		unit = CreateUnit("unit-germanic-worker", trigger_player, {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")})
 	end,
 	Rewards = "+1000 Copper, +2 Buras",
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",

@@ -45,18 +45,18 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Sequani Tribe"), "Allow", "unit-teuton-barracks", "F")
 	
 	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-suebi-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-suebi-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-teuton-swordsman", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+		unit = CreateUnit("unit-teuton-swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-teuton-archer", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+		unit = CreateUnit("unit-teuton-archer", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 	end
 	

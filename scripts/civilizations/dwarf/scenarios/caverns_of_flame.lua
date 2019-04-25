@@ -69,42 +69,42 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-goblin-archer", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-spearman", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-spearman", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-goblin-archer", 5, {CPlayer:GetPlayer(5).StartPos.x, CPlayer:GetPlayer(5).StartPos.y})
+	unit = CreateUnit("unit-goblin-archer", 5, {GetPlayerData(5, "StartPosX"), GetPlayerData(5, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 	
 	-- the goblins should be allied with one another
@@ -310,167 +310,167 @@ AddTrigger("caverns-of-flame-shinsplitters-caught-up",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1 and (GameCycle > 750 or (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan") and GameCycle > 350))) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "TotalNumUnitsConstructed") < 1 and (GameCycle > 750 or (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan") and GameCycle > 350))) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function()
-		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y})
+		unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		OrderUnit(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y}, 0, {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7}, 0, "move")
+		OrderUnit(GetFactionPlayer("shinsplitter-clan"), "unit-dwarven-thane", {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY")}, 0, {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7}, 0, "move")
 			
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-			event_player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
+			event_player = GetFactionPlayer("shinsplitter-clan")
 		end
 
 		Event(
-			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 			"We have caught up to the Norlunds. Now, prepare to destroy them!",
 			event_player,
 			{"~!Continue"},
 			{function(s)
 			if (GrandStrategy == false) then
-				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 1)
-				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 1)
-				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
-				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
 				end
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 1)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 2)
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 2)
 				end
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 3)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 3)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 3)
-				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 3)
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
-					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
-					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 3)
 				end
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
 				end
-				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
-				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+				unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 				SetUnitVariable(unit, "Active", false)
 				SetUnitVariable(unit, "CustomAIState", 4)
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
-					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y + 7})
+					unit = CreateUnit("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), {GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosX"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "StartPosY") + 7})
 					SetUnitVariable(unit, "Active", false)
 					SetUnitVariable(unit, "CustomAIState", 4)
 				end
 			end
-			RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your rivals")
-			AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
+			RemovePlayerObjective(GetFactionPlayer("shinsplitter-clan"), "- Defeat your rivals")
+			AddPlayerObjective(GetFactionPlayer("shinsplitter-clan"), "- Defeat the Norlunds")
 			Event(
 				FindHero("rugnur"),
 				"Thursagan! The Shinsplitters are right on our tail; what should we do?",
@@ -550,11 +550,11 @@ AddTrigger("caverns-of-flame-shinsplitter-chase",
 
 		-- make the Shinsplitter units attack (send a first wave of Surghan units, and then a subsequent wave of Shinsplitter units)
 		uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+		uncount = GetUnits(GetFactionPlayer("shinsplitter-clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Idle")) then
 				if (GetUnitVariable(uncount[unit1],"CustomAIState") == 1 or (GetUnitVariable(uncount[unit1],"CustomAIState") == 2 and GameCycle >= 2500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 3 and GameCycle >= 3500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 4 and GameCycle >= 4500)) then
-					OrderUnit(GetFactionPlayer("Shinsplitter Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, 0, "attack")
+					OrderUnit(GetFactionPlayer("shinsplitter-clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, 0, "attack")
 				end
 			end
 		end
@@ -688,7 +688,7 @@ AddTrigger("caverns-of-flame-shinsplitters-acknowledge-eruption",
 		PlaySound("rumble")
 
 		Event(
-			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 			"Wait, what's going on? The volcano is going to erupt! Everyone, try to get out of these caves!",
 			player,
 			{"~!Continue"},
@@ -716,27 +716,27 @@ AddTrigger("caverns-of-flame-shinsplitters-eruption-death",
 		PlaySound("rumble")
 
 		local event_player = player
-		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
-			event_player = GetFactionPlayer("Shinsplitter Clan")
+		if (GetThisPlayer() == GetFactionPlayer("shinsplitter-clan")) then
+			event_player = GetFactionPlayer("shinsplitter-clan")
 		end
 		
 		Event(
-			FindUnit("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan")),
+			FindUnit("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan")),
 			"Aghh!! The volcano is erupting, and now our exit has been blocked off!!",
 			event_player,
 			{"~!Continue"},
 			{function(s)
-				KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {512, 512})
-				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {512, 512})
-				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {512, 512})
-				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Shinsplitter Clan"), GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-axefighter", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-steelclad", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-thane", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-scout", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-pathfinder", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-pathfinder"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-explorer", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-explorer"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-yale-rider", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-yale-rider"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-yale-lord", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-yale-lord"), {0, 0}, {512, 512})
+				KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {512, 512})
+				KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {512, 512})
+				KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("shinsplitter-clan"), GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {512, 512})
 			end}
 		)
 		return false
@@ -748,7 +748,7 @@ AddTrigger("caverns-of-flame-ending",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+		if (GetPlayerData(GetFactionPlayer("shinsplitter-clan"), "TotalNumUnitsConstructed") < 1 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -855,10 +855,10 @@ AddTrigger("caverns-of-flame-ending",
 		Event(
 			"",
 			"Thus exploded the volcano, obliterating our valiant kin. The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund clan.",
-			GetFactionPlayer("Shinsplitter Clan"),
+			GetFactionPlayer("shinsplitter-clan"),
 			{"~!Continue"},
 			{function(s)
-				if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
+				if (GetFactionPlayer("shinsplitter-clan") == GetThisPlayer()) then
 					ActionDefeat()
 				end
 			end}

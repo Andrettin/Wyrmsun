@@ -39,18 +39,18 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
 	SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
 	
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Character", "modsognir")
-	unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Character", "durin")
-	unit = CreateUnit("unit-dwarven-steelclad", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-dwarven-steelclad", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 	
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-brising-miner", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit-brising-miner", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit-brising-miner", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit-brising-miner", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit-brising-miner", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your rivals")

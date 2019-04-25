@@ -106,7 +106,7 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 			"text", "A ship, they say of dwarven making, and used by the gods themselves. I had never seen such a sturdy vessel before... The sacred men tell me that its purpose is to take me to another world, the realm of the giants, through a magic passage near my island that can only be seen with the ship's magic. Once there I shall slay the ettin Geirrod, who has given much trouble to the few friends the gods have in the giants' realm. I, Thunraz's hammer, shall bring the monster his end!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")}, GetMapLayer("material-plane", "earth", 0))
 					SetUnitVariable(unit, "Unique", "skidbladnir")
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
