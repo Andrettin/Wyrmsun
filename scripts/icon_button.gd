@@ -22,9 +22,24 @@ func update_icon_position():
 	elif (self.icon_pressed_display == true and self.get_draw_mode() != DRAW_PRESSED):
 		self.icon_pressed_display = false
 		self.icon_node.rect_position -= Vector2(1, 1)
+		
+func set_icon(icon):
+	set_graphics(icon.get_file())
 
 func set_graphics(file_path):
-	self.icon_node.texture = load(file_path)
+	if (file_path.find(wyrmgus.get_user_directory()) == -1):
+		if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
+			file_path = "res://" + file_path
+		else:
+			file_path = "res://graphics/" + file_path
+		self.icon_node.texture = load(file_path)
+	else:
+		#for images that don't have import files, we need to do it a bit differently
+		var image = Image.new()
+		image.load(file_path)
+		var texture = ImageTexture.new()
+		texture.create_from_image(image)
+		self.icon_node.texture = texture
 	
 func set_player_color(player_color):
 	self.icon_node.set_player_color(player_color)

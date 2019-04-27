@@ -47,13 +47,7 @@ func update_entry_icon_button():
 		return
 	
 	entry_icon_button.set_tooltip(entry.get_name())
-	var graphics_file = entry.get_icon().get_file()
-	if (graphics_file.find("dlcs/") != -1):
-		graphics_file = "res://" + graphics_file
-	else:
-		graphics_file = "res://graphics/" + graphics_file
-	
-	entry_icon_button.set_graphics(graphics_file)
+	entry_icon_button.set_icon(entry.get_icon())
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		var faction = entry.get_faction()

@@ -17,10 +17,5 @@ func set_achievement(achievement):
 	description_label.bbcode_text = description_text
 	
 	var icon_button = self.find_node("icon_button")
-	var graphics_file = achievement.get_icon().get_file()
-	if (graphics_file.find("dlcs/") != -1):
-		graphics_file = "res://" + graphics_file
-	else:
-		graphics_file = "res://graphics/" + graphics_file
-	icon_button.set_graphics(graphics_file)
+	icon_button.set_icon(achievement.get_icon())
 	icon_button.set_player_color(achievement.get_player_color())

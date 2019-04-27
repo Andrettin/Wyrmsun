@@ -18,13 +18,7 @@ func _ready():
 		var achievement_button = load("res://scenes/icon_button.tscn").instance()
 		menu_area.add_child(achievement_button)
 		
-		var graphics_file = achievement.get_icon().get_file()
-		if (graphics_file.find("dlcs/") != -1):
-			graphics_file = "res://" + graphics_file
-		else:
-			graphics_file = "res://graphics/" + graphics_file
-		
-		achievement_button.set_graphics(graphics_file)
+		achievement_button.set_icon(achievement.get_icon())
 		achievement_button.set_player_color(achievement.get_player_color())
 		achievement_button.set_tooltip(achievement.get_name())
 		achievement_button.connect("pressed", self, "show_achievement_dialog", [achievement])

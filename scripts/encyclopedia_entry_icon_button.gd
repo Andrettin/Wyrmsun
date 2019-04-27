@@ -8,13 +8,7 @@ func _ready():
 func set_entry(entry):
 	self.entry = entry
 	
-	var graphics_file = entry.get_icon().get_file()
-	if (graphics_file.find("dlcs/") != -1):
-		graphics_file = "res://" + graphics_file
-	else:
-		graphics_file = "res://graphics/" + graphics_file
-	
-	set_graphics(graphics_file)
+	set_icon(entry.get_icon())
 	
 	var tooltip_text = entry.get_name()
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
