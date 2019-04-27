@@ -25,6 +25,17 @@ func update_icon_position():
 		
 func set_icon(icon):
 	set_graphics(icon.get_file())
+	
+	#if there is more than one icon in the image, set only the rectangle to which the icon belongs as its image
+	if (icon.get_size() != self.icon_node.texture.get_size()):
+		var rect_pos = Vector2(0, 0)
+		rect_pos.x = int((icon.get_frame() % int(self.icon_node.texture.get_width() / icon.get_size().x)) * icon.get_size().x)
+		rect_pos.y = int(int(icon.get_frame() / int(self.icon_node.texture.get_width() / icon.get_size().x)) * icon.get_size().y)
+		var rect = Rect2(rect_pos, icon.get_size())
+		var image = self.icon_node.texture.get_data().get_rect(rect)
+		var texture = ImageTexture.new()
+		texture.create_from_image(image)
+		self.icon_node.texture = texture
 
 func set_graphics(file_path):
 	if (file_path.find(wyrmgus.get_user_directory()) == -1):

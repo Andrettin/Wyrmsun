@@ -44,6 +44,9 @@ func set_category(category_ident):
 	if (category_ident == "buildings"):
 		self.category = Category.Buildings
 		potential_entries = wyrmgus.get_building_unit_types()
+	elif (category_ident == "heroes"):
+		self.category = Category.Heroes
+		potential_entries = wyrmgus.get_characters()
 	elif (category_ident == "items"):
 		self.category = Category.Items
 		potential_entries = wyrmgus.get_item_unit_types()
@@ -60,6 +63,8 @@ func set_category(category_ident):
 	elif (category_ident == "units"):
 		self.category = Category.Units
 		potential_entries = wyrmgus.get_unit_unit_types()
+	elif (category_ident == "words"):
+		self.category = Category.Words
 	elif (category_ident == "worlds"):
 		self.category = Category.Worlds
 		potential_entries = wyrmgus.get_worlds()
@@ -69,12 +74,16 @@ func set_category(category_ident):
 			continue
 		if (potential_entry.get_ident().begins_with("unit-template-")): #ignore unit type templates
 			continue
+		if (potential_entry.has_method("is_usable") and potential_entry.is_usable() == false):
+			continue
 			
 		self.entries.push_back(potential_entry)
 			
 func get_category_ident():
 	if (self.category == Category.Buildings):
 		return "buildings"
+	elif (self.category == Category.Heroes):
+		return "heroes"
 	elif (self.category == Category.Items):
 		return "items"
 	elif (self.category == Category.Planes):
@@ -93,6 +102,8 @@ func get_category_ident():
 func get_category_name():
 	if (self.category == Category.Buildings):
 		return "Buildings"
+	elif (self.category == Category.Heroes):
+		return "Heroes"
 	elif (self.category == Category.Items):
 		return "Items"
 	elif (self.category == Category.Planes):
@@ -109,13 +120,13 @@ func get_category_name():
 		return ""
 	
 func is_category_separated_by_civilization():
-	if (self.category == Category.Buildings || self.category == Category.Units):
+	if (self.category == Category.Buildings || self.category == Category.Heroes || self.category == Category.Units):
 		return true
 	else:
 		return false
 
 func does_category_use_button_lists():
-	if (self.category == Category.Planes || self.category == Category.Worlds):
+	if (self.category == Category.Planes || self.category == Category.Words || self.category == Category.Worlds):
 		return true
 	else:
 		return false
@@ -150,7 +161,9 @@ func open_entry_link(entry_link, origin_scene):
 	open_entry(entry, origin_scene)
 	
 func get_category_ident_for_entry(entry):
-	if (entry.is_class("CLiteraryText")):
+	if (entry.is_class("CCharacter")):
+		return "heroes"
+	elif (entry.is_class("CLiteraryText")):
 		return "texts"
 	elif (entry.is_class("CPlane")):
 		return "planes"

@@ -61,6 +61,27 @@ func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")
 	var entry_description_text = ""
 	
+	var name_word = null
+	if (entry.has_method("get_name_word")):
+		name_word = entry.get_name_word()
+	entry_description_text += tr("Name") + ": "
+	if (name_word != null):
+		entry_description_text += "[url=word:" + name_word.get_ident() + "]"
+	entry_description_text += entry.get_name()
+	if (name_word != null):
+		entry_description_text += "[/url]"
+	entry_description_text += "\n\n"
+	
+	if (entry.has_method("get_family_name") and entry.get_family_name().empty() == false):
+		var family_name_word = entry.get_family_name_word()
+		entry_description_text += tr("Family Name") + ": "
+		if (family_name_word != null):
+			entry_description_text += "[url=word:" + family_name_word.get_ident() + "]"
+		entry_description_text += entry.get_family_name()
+		if (family_name_word != null):
+			entry_description_text += "[/url]"
+		entry_description_text += "\n\n"
+	
 	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
 		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
 	elif (entry.has_method("get_item_class") and entry.get_item_class() != null):
@@ -183,6 +204,12 @@ func update_entry_description():
 				entry_description_text += "\n[url=literary_text:" + section.get_ident() + "]"
 				entry_description_text += section.get_name()
 				entry_description_text += "[/url]"
+	elif (entry.is_class("CWord")):
+		entry_description_text += tr("Language") + ": " + entry.get_language().get_name() + "\n\n"
+		if (entry.get_type() != null):
+			entry_description_text += tr("Type") + ": " + entry.get_type().get_name() + "\n\n"
+		if (entry.get_gender() != null):
+			entry_description_text += tr("Grammatical Gender") + ": " + entry.get_gender().get_name() + "\n\n"
 	
 	if (entry.has_method("get_background") and entry.get_background().empty() == false):
 		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
