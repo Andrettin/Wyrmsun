@@ -2,6 +2,8 @@ extends Wyrmgus
 
 var wyrmgus_thread
 
+var icon_textures = {} #hold references to the icon textures, to keep them loaded, mapped to the icons they pertain to
+
 func _ready():
 	if (self.wyrmgus_thread == null):
 		#replace the default pointing hand cursor with the Wyrmsun magnifying glass cursor
@@ -15,6 +17,8 @@ func _ready():
 		update_user_directory()
 		
 		self.set_oaml_module(music_player)
+		
+		self.connect("initialized", self, "load_icons", [], CONNECT_DEFERRED)
 		
 		self.wyrmgus_thread = Thread.new()
 		self.wyrmgus_thread.start(self, "run_")
@@ -37,7 +41,29 @@ func update_user_directory():
 		printerr("Error Directory::change_dir error for path \"" + user_directory_path + "\": " + str(result))
 		return
 	self.set_user_directory(user_directory.get_current_dir())
-	
+
+func load_icons():
+	for icon in get_icons():
+		var icon_texture = null
+		var file_path = icon.get_file()
+		if (file_path.find(wyrmgus.get_user_directory()) == -1):
+			if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
+				file_path = "res://" + file_path
+			else:
+				file_path = "res://graphics/" + file_path
+			icon_texture = load(file_path)
+		else:
+			#for images that don't have import files, we need to do it a bit differently
+			var image = Image.new()
+			image.load(file_path)
+			var texture = ImageTexture.new()
+			texture.create_from_image(image)
+			icon_texture = texture
+		self.icon_textures[icon] = icon_texture
+		
+func get_icon_texture(icon):
+	return self.icon_textures.get(icon, null)
+
 #gets the sapient species from a species list
 func get_sapient_species_from_list(species_list):
 	var sapient_species_list = []

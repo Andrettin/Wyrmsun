@@ -104,32 +104,6 @@ DefineCharacter("aethelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	end
 })
 
-DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 78.
-	Name = "Aethelfrith", -- "Æthelfrith"
-	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- king
-	Civilization = "anglo-saxon",
-	Faction = "bernicia",
-	StartDate = 593, -- beginning of reign
-	DeathDate = 616, -- died in battle against Rædwald
-	ViolentDeath = true,
-	Father = "aethelric",
-	Description = "Aethelfrith was the king of Bernicia between 593 and 616. He simultaneously ruled over Deira, and is famed for his defeat of the Britons at Chester. Aethelfrith came to a tragic end at the hands of Raedwald of East Anglia in 616, being killed in battle.",
-	Deities = {"odin", "tyr"},
-	HistoricalTitles = {
-		"head-of-state", 593, 616, "bernicia", -- king of Bernicia
-		"head-of-state", 593, 616, "deira"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "bernicia" or GetPlayerData(trigger_player, "Faction") == "northumbria") then
-			return true
-		end
-		return false
-	end
-	-- married the daughter of the Deiran king Ælle
-	-- at some point between 613 and 616, he defeated the Britons at Chester; before the battle of Chester, Æthelfrith's warriors killed a group of British monks who stemmed from the monastery of Bangor Iscoed, and had come to pray for the Briton forces; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77-78
-})
-
 DefineCharacter("ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Ceawlin",
 	Gender = "male",

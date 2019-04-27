@@ -1525,6 +1525,8 @@ function GameStarting()
 	end
 end
 
+Initialized()
+
 if (Editor.Running == EditorCommandLine) then
 	if (CliMapName and CliMapName ~= "") then
 		StartEditor(CliMapName, false)

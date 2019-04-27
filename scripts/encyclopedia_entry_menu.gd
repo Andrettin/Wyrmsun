@@ -25,7 +25,14 @@ func change_entry(entry):
 	
 	var menu_area = self.find_node("menu_area")
 	var menu_title = menu_area.find_node("menu_title")
-	menu_title.bbcode_text = "[center][color=#f4e020]" + entry.get_name() + "[/color][/center]"
+	var entry_title
+	if (entry.has_method("get_anglicized_name")):
+		entry_title = entry.get_anglicized_name()
+	elif (entry.has_method("get_full_name")):
+		entry_title = entry.get_full_name()
+	else:
+		entry_title = entry.get_name()
+	menu_title.bbcode_text = "[center][color=#f4e020]" + entry_title + "[/color][/center]"
 	
 	if (entry.is_class("CLiteraryText")):
 		self.current_page = entry.get_first_page()
@@ -61,19 +68,29 @@ func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")
 	var entry_description_text = ""
 	
+	var entry_name
+	if (entry.has_method("get_anglicized_name")):
+		entry_name = entry.get_anglicized_name()
+	else:
+		entry_name = entry.get_name()
+	
 	var name_word = null
 	if (entry.has_method("get_name_word")):
 		name_word = entry.get_name_word()
+		if (name_word != null and name_word.get_meanings().empty() == true):
+			name_word = null #don't show links for words without meanings
 	entry_description_text += tr("Name") + ": "
 	if (name_word != null):
 		entry_description_text += "[url=word:" + name_word.get_ident() + "]"
-	entry_description_text += entry.get_name()
+	entry_description_text += entry_name
 	if (name_word != null):
 		entry_description_text += "[/url]"
 	entry_description_text += "\n\n"
 	
 	if (entry.has_method("get_family_name") and entry.get_family_name().empty() == false):
 		var family_name_word = entry.get_family_name_word()
+		if (family_name_word != null and family_name_word.get_meanings().empty() == true):
+			family_name_word = null #don't show links for words without meanings
 		entry_description_text += tr("Family Name") + ": "
 		if (family_name_word != null):
 			entry_description_text += "[url=word:" + family_name_word.get_ident() + "]"
@@ -93,8 +110,66 @@ func update_entry_description():
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
 	
+	if (entry.has_method("get_unit_type") and entry.get_unit_type() != null):
+		entry_description_text += tr("Unit Type") + ": [url=unit:" + entry.get_unit_type().get_ident() + "]" + entry.get_unit_type().get_name() + "[/url]\n\n"
+		
+	if (entry.has_method("get_level")):
+		entry_description_text += tr("Level") + ": " + str(entry.get_level()) + "\n\n"
+		
 	if (entry.has_method("get_plane") and entry.get_plane() != null):
 		entry_description_text += tr("Plane") + ": [url=plane:" + entry.get_plane().get_ident() + "]" + entry.get_plane().get_name() + "[/url]\n\n"
+	
+	if (entry.is_class("CCharacter")):
+		if (entry.has_method("get_father") and entry.get_father() != null):
+			entry_description_text += tr("Father") + ": "
+			var father = entry.get_father()
+			if (father.is_usable()):
+				entry_description_text += "[url=character:" + father.get_ident() + "]"
+			entry_description_text += father.get_full_name()
+			if (father.is_usable()):
+				entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
+		if (entry.has_method("get_mother") and entry.get_mother() != null and entry.get_mother().is_usable()):
+			entry_description_text += tr("Mother") + ": "
+			var mother = entry.get_mother()
+			if (mother.is_usable()):
+				entry_description_text += "[url=character:" + mother.get_ident() + "]"
+			entry_description_text += mother.get_full_name()
+			if (mother.is_usable()):
+				entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
+			
+		var siblings = entry.get_siblings()
+		if (siblings.empty() == false):
+			entry_description_text += tr("Siblings") + ": "
+			var first_sibling = true
+			for sibling in siblings:
+				if (first_sibling):
+					first_sibling = false
+				else:
+					entry_description_text += ", "
+				if (sibling.is_usable()):
+					entry_description_text += "[url=character:" + sibling.get_ident() + "]"
+				entry_description_text += sibling.get_full_name()
+				if (sibling.is_usable()):
+					entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
+			
+		var children = entry.get_children()
+		if (children.empty() == false):
+			entry_description_text += tr("Children") + ": "
+			var first_child = true
+			for child in children:
+				if (first_child):
+					first_child = false
+				else:
+					entry_description_text += ", "
+				if (child.is_usable()):
+					entry_description_text += "[url=character:" + child.get_ident() + "]"
+				entry_description_text += child.get_full_name()
+				if (child.is_usable()):
+					entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_species")):
 		var species_list = entry.get_species()
@@ -133,6 +208,42 @@ func update_entry_description():
 					entry_description_text += species_name
 					
 				entry_description_text += "\n\n"
+		
+	if (entry.has_method("get_deities")):
+		var deities = entry.get_deities()
+		if (deities.empty() == false):
+			entry_description_text += tr("Deities") + ": "
+			var first_deity = true
+			for deity in deities:
+				if (first_deity):
+					first_deity = false
+				else:
+					entry_description_text += ", "
+				entry_description_text += deity.get_name()
+			entry_description_text += "\n\n"
+		
+	if (entry.has_method("get_abilities")):
+		var abilities = entry.get_abilities()
+		if (abilities.empty() == false):
+			entry_description_text += tr("Learned Abilities") + ": "
+			var displayed_abilities = []
+			var displayed_ability_count = {}
+			for ability in abilities:
+				if (!displayed_abilities.has(ability)):
+					displayed_abilities.push_back(ability)
+					displayed_ability_count[ability] = 1
+				else:
+					displayed_ability_count[ability] += 1
+			var first_ability = true
+			for ability in displayed_abilities:
+				if (first_ability):
+					first_ability = false
+				else:
+					entry_description_text += ", "
+				entry_description_text += ability.get_name()
+				if (displayed_ability_count.get(ability) > 1):
+					entry_description_text += " (x" + str(displayed_ability_count.get(ability)) + ")"
+			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
 		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
@@ -210,6 +321,32 @@ func update_entry_description():
 			entry_description_text += tr("Type") + ": " + entry.get_type().get_name() + "\n\n"
 		if (entry.get_gender() != null):
 			entry_description_text += tr("Grammatical Gender") + ": " + entry.get_gender().get_name() + "\n\n"
+			
+		if (entry.get_meanings().empty() == false):
+			entry_description_text += tr("Meanings") + ": "
+			var first_meaning = true
+			for meaning in entry.get_meanings():
+				if (first_meaning):
+					first_meaning = false
+				else:
+					entry_description_text += ", "
+				entry_description_text += "\"" + meaning + "\""
+			entry_description_text += "\n\n"
+			
+		if (entry.is_personal_name()):
+			entry_description_text += "Personal Name\n\n"
+		if (entry.is_family_name()):
+			entry_description_text += "Family Name\n\n"
+			
+		var specimen_name_species = entry.get_specimen_name_species()
+		for species in specimen_name_species:
+			entry_description_text += species.get_name() + " Name\n\n"
+			
+		if (entry.is_ship_name()):
+			entry_description_text += "Ship Name\n\n"
+			
+		if (entry.is_settlement_name()):
+			entry_description_text += "Settlement Name\n\n"
 	
 	if (entry.has_method("get_background") and entry.get_background().empty() == false):
 		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"

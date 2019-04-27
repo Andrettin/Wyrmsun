@@ -162,7 +162,7 @@ DefineCharacter("pope-zacharias", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 })
 
 DefineCharacter("pope-stephen-ii", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 171.
-	Name = "Zacharias",
+	Name = "Stephen",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- pope
 	Civilization = "latin",

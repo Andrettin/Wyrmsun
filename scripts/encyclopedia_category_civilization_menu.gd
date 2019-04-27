@@ -17,8 +17,13 @@ func _ready():
 	
 	for entry in encyclopedia.entries:
 		var civilization = entry.get_civilization()
-		if (civilization and !self.civilizations.has(civilization)):
-			self.civilizations.push_back(entry.get_civilization())
+		if (civilization == null):
+			continue
+		if (self.civilizations.has(civilization)):
+			continue
+		if (civilization.is_hidden() and civilization.get_ident() != "neutral"):
+			continue
+		self.civilizations.push_back(entry.get_civilization())
 			
 	self.civilizations.sort_custom(self, "sort_civilizations")
 			

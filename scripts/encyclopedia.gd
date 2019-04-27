@@ -47,6 +47,7 @@ func set_category(category_ident):
 	elif (category_ident == "heroes"):
 		self.category = Category.Heroes
 		potential_entries = wyrmgus.get_characters()
+		potential_entries.sort_custom(self, "sort_characters")
 	elif (category_ident == "items"):
 		self.category = Category.Items
 		potential_entries = wyrmgus.get_item_unit_types()
@@ -147,6 +148,8 @@ func open_entry_link(entry_link, origin_scene):
 	var entry
 	if (entry_type_ident == "building" || entry_type_ident == "item" || entry_type_ident == "unit"):
 		entry = wyrmgus.get_unit_type(entry_ident)
+	elif (entry_type_ident == "character"):
+		entry = wyrmgus.get_character(entry_ident)
 	elif (entry_type_ident == "literary_text"):
 		entry = wyrmgus.get_literary_text(entry_ident)
 	elif (entry_type_ident == "plane"):
@@ -187,6 +190,17 @@ func set_category_and_civilization_from_entry(entry):
 	else:
 		self.civilization = null
 	
+func sort_characters(a, b):
+	if (a.get_faction() != b.get_faction()):
+		if (a.get_faction() != null and b.get_faction() == null):
+			return true
+		elif (a.get_faction() == null and b.get_faction() != null):
+			return false
+		else:
+			return a.get_faction().get_name() < b.get_faction().get_name()
+	else:
+		return a.get_name() < b.get_name()
+
 func sort_items(a, b):
 	var item_class_a = a.get_item_class()
 	var item_class_b = b.get_item_class()

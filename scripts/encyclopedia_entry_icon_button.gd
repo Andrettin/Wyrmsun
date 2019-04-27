@@ -10,7 +10,13 @@ func set_entry(entry):
 	
 	set_icon(entry.get_icon())
 	
-	var tooltip_text = entry.get_name()
+	var tooltip_text = ""
+	
+	if (entry.has_method("get_full_name")):
+		tooltip_text += entry.get_full_name()
+	else:
+		tooltip_text += entry.get_name()
+	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		var faction = entry.get_faction()
 		set_player_color(faction.get_primary_color())

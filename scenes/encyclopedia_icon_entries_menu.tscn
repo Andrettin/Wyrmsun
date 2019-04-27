@@ -28,10 +28,14 @@ bbcode_text = "[center][color=#f4e020]Encyclopedia[/color][/center]"
 text = "Encyclopedia"
 
 [node name="previous_menu_button" parent="menu_area" instance=ExtResource( 6 )]
-margin_left = 208.0
-margin_top = 464.0
-margin_right = 432.0
-margin_bottom = 492.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -112.0
+margin_top = -64.0
+margin_right = 112.0
+margin_bottom = -36.0
 shortcut = ExtResource( 7 )
 script = ExtResource( 8 )
 button_text = "~!Previous Menu"

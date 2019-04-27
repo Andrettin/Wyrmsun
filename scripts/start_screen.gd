@@ -1,6 +1,8 @@
 extends Control
 
 func _ready():
+	wyrmgus.connect("initialized", self.find_node("splash_timer"), "start", [], CONNECT_DEFERRED)
+	
 	self.find_node("sepia_timer").connect("timeout", self, "update_background")
 
 func update_background():

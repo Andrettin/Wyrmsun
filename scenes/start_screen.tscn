@@ -20,7 +20,6 @@ texture = ExtResource( 4 )
 
 [node name="splash_timer" type="Timer" parent="."]
 one_shot = true
-autostart = true
 
 [node name="sepia_timer" type="Timer" parent="."]
 wait_time = 0.01
