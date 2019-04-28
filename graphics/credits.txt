@@ -1,5 +1,7 @@
 /graphics/backgrounds/gnashorn.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gnashorn_profile.png (drawing by Tanja Nov) (licensed under the CC0)
+/graphics/backgrounds/goblin_victory.png (by Jinn) (licensed under the CC0)
+/graphics/backgrounds/goblin_victory_sepia.png (by Jinn) (licensed under the CC0)
 /graphics/backgrounds/gryphon.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gryphon_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gullinburst.png (drawing by Tanja Nov) (licensed under the CC0)
