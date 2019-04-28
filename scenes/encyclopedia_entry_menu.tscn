@@ -14,7 +14,6 @@
 [ext_resource path="res://resources/shortcuts/shortcut_n.tres" type="ShortCut" id=12]
 
 [node name="encyclopedia_entry_menu" type="Popup"]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 popup_exclusive = true

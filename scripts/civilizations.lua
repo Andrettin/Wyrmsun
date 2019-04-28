@@ -1821,6 +1821,7 @@ DefineCivilization("goblin", {
 	Adjective = "Goblin",
 	DefaultPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-goblin-civilization",
+	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
