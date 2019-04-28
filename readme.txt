@@ -79,6 +79,9 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - Fixed crash which occurred when creating new cave and dungeon maps in the editor.
 
+* Encyclopedia
+- Encyclopedia entries can now link to each other.
+
 * Items
 - Bows now have specific graphics for when they are on the ground.
 
@@ -89,10 +92,11 @@ https://github.com/Andrettin/Wyrmsun
 - Green Slimes now possess a new icon.
 - Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
 - New icon for the Goblin Militia.
-- Elven swordsmen now the same sight range at day and night.
+- Elven swordsmen now have the same sight range at day and night.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
+- Added a goblin victory background made by Jinn.
 - Overhauled the game's UI to make use of Godot's UI toolkit.
 
 -----------------------------------------------------------------------
