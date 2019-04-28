@@ -112,7 +112,7 @@ DefineFaction("francia", {
 	Icon = "icon-flag-old-austria",
 	DevelopsFrom = {"frank-tribe"},
 	MinisterTitles = {
-		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+		"head-of-government", "", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
 	HistoricalUpgrades = {
 		0, "upgrade-teuton-writing", true, -- polities must have writing
@@ -145,7 +145,7 @@ DefineFaction("austrasia", {
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
-		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+		"head-of-government", "", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
 	HistoricalCapitals = {
 		0, "reims"
@@ -185,7 +185,7 @@ DefineFaction("neustria", {
 	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
-		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+		"head-of-government", "", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	},
 	HistoricalCapitals = {
 		0, "paris"
