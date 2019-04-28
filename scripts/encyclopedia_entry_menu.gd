@@ -246,10 +246,10 @@ func update_entry_description():
 			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
-		entry_description_text += "Description:" + " " + entry.get_description() + "\n\n"
+		entry_description_text += "Description:" + " " + wyrmgus.process_dynamic_string(entry.get_description(), entry) + "\n\n"
 	
 	if (entry.has_method("get_quote") and entry.get_quote().empty() == false):
-		entry_description_text += "Quote:" + " " + entry.get_quote() + "\n\n"
+		entry_description_text += "Quote:" + " " + wyrmgus.process_dynamic_string(entry.get_quote(), entry) + "\n\n"
 		
 	if (entry.is_class("CUnitType")):
 		var cost_strings = get_cost_strings(entry)

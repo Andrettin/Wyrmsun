@@ -63,6 +63,53 @@ func load_icons():
 		
 func get_icon_texture(icon):
 	return self.icon_textures.get(icon, null)
+	
+func process_dynamic_string(string, context_element):
+	if (context_element.get_class() == "CCharacter"):
+		if (string.find("HERO_MAJOR_DEITY") != -1):
+			var deities = context_element.get_deities()
+			if (deities.empty() == false):
+				var major_deity = null
+				for deity in deities:
+					if (deity.is_major()):
+						major_deity = deity
+						break
+				if (major_deity != null):
+					var deity_name = ""
+					if (context_element.get_civilization() != null):
+						deity_name = major_deity.get_cultural_name(context_element.get_civilization())
+					if (deity_name.empty()):
+						deity_name = major_deity.get_name()
+					string = string.replace("HERO_MAJOR_DEITY", deity_name)
+		if (string.find("HERO_MINOR_DEITY_1_DOMAIN_1") != -1):
+			var deities = context_element.get_deities()
+			if (deities.empty() == false):
+				var minor_deity = null
+				for deity in deities:
+					if (deity.is_major() == false):
+						minor_deity = deity
+						break
+				if (minor_deity != null):
+					var deity_domains = minor_deity.get_domains()
+					if (deity_domains.empty() == false):
+						var deity_domain = deity_domains.front()
+						string = string.replace("HERO_MINOR_DEITY_1_DOMAIN_1", deity_domain.get_name())
+		if (string.find("HERO_MINOR_DEITY_1") != -1):
+			var deities = context_element.get_deities()
+			if (deities.empty() == false):
+				var minor_deity = null
+				for deity in deities:
+					if (!deity.is_major()):
+						minor_deity = deity
+						break
+				if (minor_deity != null):
+					var deity_name = ""
+					if (context_element.get_civilization() != null):
+						deity_name = minor_deity.get_cultural_name(context_element.get_civilization())
+					if (deity_name.empty()):
+						deity_name = minor_deity.get_name()
+					string = string.replace("HERO_MINOR_DEITY_1", deity_name)
+	return string
 
 #gets the sapient species from a species list
 func get_sapient_species_from_list(species_list):

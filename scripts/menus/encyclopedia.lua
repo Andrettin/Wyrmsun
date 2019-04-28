@@ -748,65 +748,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	elseif (state == "heroes") then
 		trigger_hero = unit_name
 	
-		if (GetCharacterData(unit_name, "Civilization") ~= "") then
-			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
-			if (GetCharacterData(unit_name, "Faction") ~= "") then
-				faction = _("Faction") .. ": " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
-			end
-		end
-		if (GetCharacterData(unit_name, "Type") ~= "") then
-			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
-		end
-		local deities = GetCharacterData(unit_name, "Deities")
-		if (table.getn(deities) > 0) then
-			description = description .. _("Deities") .. ": "
-			for i=1,table.getn(deities) do
-				description = description .. _(GetDeityData(deities[i], "Name"))
-				if (i < table.getn(deities)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		description = description .. "Level: " .. GetCharacterData(unit_name, "Level") .. "\n\n"
-		local abilities = GetCharacterData(unit_name, "Abilities")
-		if (table.getn(abilities) > 0) then
-			local displayed_abilities = {}
-			local displayed_ability_count = {}
-			for i = 1, table.getn(abilities) do
-				local ability_name = _(GetUpgradeData(abilities[i], "Name"))
-				if (GetArrayIncludes(displayed_abilities, ability_name) == false) then
-					table.insert(displayed_abilities, ability_name)
-					table.insert(displayed_ability_count, 1)
-				else
-					displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] = displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] + 1
-				end
-			end
-			table.sort(displayed_abilities)
-			description = description .. _("Acquired Abilities") .. ": "
-			for i = 1, table.getn(displayed_abilities) do
-				description = description .. displayed_abilities[i]
-				if (displayed_ability_count[i] > 1) then
-					description = description .. " (x" .. tostring(displayed_ability_count[i]) .. ")"
-				end
-				if (i < table.getn(displayed_abilities)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
 --		if (GetCharacterData(unit_name, "BirthDate") ~= "") then
 --			description = description .. _("Birth Date") .. ": " .. GetCharacterData(unit_name, "BirthDate") .. "\n\n"
 --		end
-		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Quote"))) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Background"))) .. "\n\n"
-		end
 	elseif (state == "deities") then
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
 			description = description .. _("Pantheon") .. ": " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
