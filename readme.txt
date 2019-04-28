@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 - Green Slimes now possess a new icon.
 - Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
 - New icon for the Goblin Militia.
+- Elven swordsmen now the same sight range at day and night.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.

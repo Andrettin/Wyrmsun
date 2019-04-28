@@ -46,8 +46,6 @@ DefineUnitType("unit-elven-swordsman", {
 	},
 	Costs = {"time", 50, "copper", 600},
 	Corpse = "unit-human-dead-body",
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
