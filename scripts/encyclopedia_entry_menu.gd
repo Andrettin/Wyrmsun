@@ -333,14 +333,26 @@ func update_entry_description():
 				entry_description_text += "\"" + meaning + "\""
 			entry_description_text += "\n\n"
 			
-		if (entry.is_personal_name()):
-			entry_description_text += "Personal Name\n\n"
+		var personal_name_genders = entry.get_personal_name_genders()
+		if (!personal_name_genders.empty()):
+			if (personal_name_genders.size() == wyrmgus.get_genders().size()): #the name is used for all genders
+				entry_description_text += "Personal Name\n\n"
+			else:
+				for gender in personal_name_genders:
+					entry_description_text += gender.get_name() + " Personal Name\n\n"
+				
 		if (entry.is_family_name()):
 			entry_description_text += "Family Name\n\n"
 			
 		var specimen_name_species = entry.get_specimen_name_species()
 		for species in specimen_name_species:
-			entry_description_text += species.get_name() + " Name\n\n"
+			var specimen_name_genders = entry.get_specimen_name_genders(species)
+			if (!specimen_name_genders.empty()):
+				if (specimen_name_genders.size() == species.get_genders().size()): #the name is used for all genders of the species
+					entry_description_text += species.get_name() + " Name\n\n"
+				else:
+					for gender in specimen_name_genders:
+						entry_description_text += gender.get_name() + " " + species.get_name() + " Name\n\n"
 			
 		if (entry.is_ship_name()):
 			entry_description_text += "Ship Name\n\n"

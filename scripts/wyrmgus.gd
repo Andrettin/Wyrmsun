@@ -81,7 +81,7 @@ func process_dynamic_string(string, context_element):
 					if (deity_name.empty()):
 						deity_name = major_deity.get_name()
 					string = string.replace("HERO_MAJOR_DEITY", deity_name)
-		if (string.find("HERO_MINOR_DEITY_1_DOMAIN_1") != -1):
+		if (string.find("HERO_MINOR_DEITY_1") != -1):
 			var deities = context_element.get_deities()
 			if (deities.empty() == false):
 				var minor_deity = null
@@ -90,25 +90,23 @@ func process_dynamic_string(string, context_element):
 						minor_deity = deity
 						break
 				if (minor_deity != null):
-					var deity_domains = minor_deity.get_domains()
-					if (deity_domains.empty() == false):
-						var deity_domain = deity_domains.front()
-						string = string.replace("HERO_MINOR_DEITY_1_DOMAIN_1", deity_domain.get_name())
-		if (string.find("HERO_MINOR_DEITY_1") != -1):
-			var deities = context_element.get_deities()
-			if (deities.empty() == false):
-				var minor_deity = null
-				for deity in deities:
-					if (!deity.is_major()):
-						minor_deity = deity
-						break
-				if (minor_deity != null):
-					var deity_name = ""
-					if (context_element.get_civilization() != null):
-						deity_name = minor_deity.get_cultural_name(context_element.get_civilization())
-					if (deity_name.empty()):
-						deity_name = minor_deity.get_name()
-					string = string.replace("HERO_MINOR_DEITY_1", deity_name)
+					if (string.find("HERO_MINOR_DEITY_1_DOMAIN_1") != -1):
+						var deity_domains = minor_deity.get_domains()
+						if (deity_domains.empty() == false):
+							var deity_domain = deity_domains.front()
+							string = string.replace("HERO_MINOR_DEITY_1_DOMAIN_1", deity_domain.get_name())
+					if (string.find("HERO_MINOR_DEITY_1_GOD_GODDESS") != -1):
+						if (minor_deity.get_gender().get_ident() == "female"):
+							string = string.replace("HERO_MINOR_DEITY_1_GOD_GODDESS", tr("Goddess"))
+						else:
+							string = string.replace("HERO_MINOR_DEITY_1_GOD_GODDESS", tr("God"))
+					if (string.find("HERO_MINOR_DEITY_1") != -1):
+						var deity_name = ""
+						if (context_element.get_civilization() != null):
+							deity_name = minor_deity.get_cultural_name(context_element.get_civilization())
+						if (deity_name.empty()):
+							deity_name = minor_deity.get_name()
+						string = string.replace("HERO_MINOR_DEITY_1", deity_name)
 	return string
 
 #gets the sapient species from a species list
