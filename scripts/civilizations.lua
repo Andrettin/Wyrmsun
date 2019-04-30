@@ -2962,57 +2962,7 @@ DefineCivilization("troll", {
 	Adjective = "Troll",
 	Playable = false,
 	DefaultPlayerColor = "green",
-	CivilizationUpgrade = "upgrade-troll-civilization",
-	PersonalNames = {
-		"male", "Ga", -- from Battle for Wesnoth
-		"male", "Gah", -- from Battle for Wesnoth
-		"male", "Gark", -- from Battle for Wesnoth
-		"male", "Gnarf", -- from Battle for Wesnoth
-		"male", "Grar", -- from Battle for Wesnoth
-		"male", "Grokk", -- from Battle for Wesnoth
-		"male", "Grumph", -- from Battle for Wesnoth
-		"male", "Gulk", -- from Battle for Wesnoth
-		"male", "Hak", -- from Battle for Wesnoth
-		"male", "Hask", -- from Battle for Wesnoth
-		"male", "Hoth", -- from Battle for Wesnoth
-		"male", "Hug Bah", -- from Battle for Wesnoth
-		"male", "Hu Kah", -- from Battle for Wesnoth
-		"male", "Kak", -- from Battle for Wesnoth
-		"male", "Krak", -- from Battle for Wesnoth
-		"male", "Krug", -- from Battle for Wesnoth
-		"male", "Kub", -- from Battle for Wesnoth
-		"male", "Kuh", -- from Battle for Wesnoth
-		"male", "Lok", -- from Battle for Wesnoth
-		"male", "Luk", -- from Battle for Wesnoth
-		"male", "Nak", -- from Battle for Wesnoth
-		"male", "Nuk Kar", -- from Battle for Wesnoth
-		"male", "Pag", -- from Battle for Wesnoth
-		"male", "Reck", -- from Battle for Wesnoth
-		"male", "Rok", -- from Battle for Wesnoth
-		"male", "Ruk", -- from Battle for Wesnoth
-		"male", "Sark", -- from Battle for Wesnoth
-		"male", "Shak", -- from Battle for Wesnoth
-		"male", "Shuf", -- from Battle for Wesnoth
-		"male", "Stuh", -- from Battle for Wesnoth
-		"male", "Targ", -- from Battle for Wesnoth
-		"male", "Thog", -- from Battle for Wesnoth
-		"male", "Thruf", -- from Battle for Wesnoth
-		"male", "Thur", -- from Battle for Wesnoth
-		"male", "Tohg", -- from Battle for Wesnoth
-		"male", "Torg", -- from Battle for Wesnoth
-		"male", "Trok", -- from Battle for Wesnoth
-		"male", "Tsok", -- from Battle for Wesnoth
-		"male", "Tuh", -- from Battle for Wesnoth
-		"male", "Tuk Ruh", -- from Battle for Wesnoth
-		"male", "Ugg", -- from Battle for Wesnoth
-		"male", "Üh", -- from Battle for Wesnoth
-		"male", "Urg", -- from Battle for Wesnoth
-		"male", "Urgh", -- from Battle for Wesnoth
-		"male", "Urk", -- from Battle for Wesnoth
-		"male", "Vak", -- from Battle for Wesnoth
-		"male", "Zog", -- from Battle for Wesnoth
-		"male", "Zuug" -- from Battle for Wesnoth
-	}
+	CivilizationUpgrade = "upgrade-troll-civilization"
 })
 
 DefineCivilization("latin", {
