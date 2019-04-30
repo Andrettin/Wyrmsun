@@ -26,9 +26,7 @@ func change_entry(entry):
 	var menu_area = self.find_node("menu_area")
 	var menu_title = menu_area.find_node("menu_title")
 	var entry_title
-	if (entry.has_method("get_anglicized_name")):
-		entry_title = entry.get_anglicized_name()
-	elif (entry.has_method("get_full_name")):
+	if (entry.has_method("get_full_name")):
 		entry_title = entry.get_full_name()
 	else:
 		entry_title = entry.get_name()
@@ -86,12 +84,6 @@ func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")
 	var entry_description_text = ""
 	
-	var entry_name
-	if (entry.has_method("get_anglicized_name")):
-		entry_name = entry.get_anglicized_name()
-	else:
-		entry_name = entry.get_name()
-	
 	var name_word = null
 	if (entry.has_method("get_name_word")):
 		name_word = entry.get_name_word()
@@ -100,7 +92,7 @@ func update_entry_description():
 	entry_description_text += tr("Name") + ": "
 	if (name_word != null):
 		entry_description_text += "[url=word:" + name_word.get_ident() + "]"
-	entry_description_text += entry_name
+	entry_description_text += entry.get_name()
 	if (name_word != null):
 		entry_description_text += "[/url]"
 	entry_description_text += "\n\n"
@@ -117,6 +109,11 @@ func update_entry_description():
 			entry_description_text += "[/url]"
 		entry_description_text += "\n\n"
 	
+	if (entry.has_method("get_anglicized_name") and entry.get_anglicized_name() != entry.get_name()):
+		entry_description_text += tr("Anglicized Name") + ": "
+		entry_description_text += entry.get_anglicized_name()
+		entry_description_text += "\n\n"
+		
 	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
 		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
 	elif (entry.has_method("get_item_class") and entry.get_item_class() != null):
