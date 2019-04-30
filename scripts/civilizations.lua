@@ -2969,6 +2969,7 @@ DefineCivilization("troll", {
 	Display = "Troll",
 	Hidden = true,
 	Species = "troll",
+	language = "troll",
 	ParentCivilization = "orc",
 	Adjective = "Troll",
 	Playable = false,
