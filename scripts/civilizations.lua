@@ -2969,23 +2969,13 @@ DefineCivilization("troll", {
 	Display = "Troll",
 	Hidden = true,
 	Species = "troll",
-	language = "troll",
+	Language = "troll",
 	ParentCivilization = "orc",
 	Adjective = "Troll",
 	Playable = false,
 	DefaultPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-troll-civilization",
 	PersonalNames = {
-		"male", "Ag", -- "Äg"; from Battle for Wesnoth
-		"male", "Agh", -- from Battle for Wesnoth
-		"male", "Bog Ah", -- "Bog Äh" from Battle for Wesnoth
-		"male", "Borb", -- from Battle for Wesnoth
-		"male", "Brag", -- from Battle for Wesnoth
-		"male", "Brag Goh", -- from Battle for Wesnoth
-		"male", "Brok", -- from Battle for Wesnoth
-		"male", "Dak", -- from Battle for Wesnoth
-		"male", "Drog", -- from Battle for Wesnoth
-		"male", "Frok", -- from Battle for Wesnoth
 		"male", "Ga", -- from Battle for Wesnoth
 		"male", "Gah", -- from Battle for Wesnoth
 		"male", "Gark", -- from Battle for Wesnoth
