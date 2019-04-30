@@ -94,6 +94,9 @@ https://github.com/Andrettin/Wyrmsun
 - New icon for the Goblin Militia.
 - Elven swordsmen now have the same sight range at day and night.
 
+* Upgrades
+- The Architecture icon has been updated.
+
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
 - Added a goblin victory background made by Jinn.

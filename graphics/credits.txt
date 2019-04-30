@@ -967,7 +967,7 @@
 /graphics/neutral/icons/air_mastery.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/amulet.png (by Vladislav "iDreamRunner") (licensed under the CC0)
 /graphics/neutral/icons/anvil.png (by Jinn) (licensed under the CC0)
-/graphics/neutral/icons/architecture.png (by Exidelo) (licensed under the CC0)
+/graphics/neutral/icons/architecture.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/neutral/icons/attack_ground.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/axe_mastery.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/barkskin.png (by Exidelo) (licensed under the CC0)
