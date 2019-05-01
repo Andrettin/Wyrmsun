@@ -363,7 +363,7 @@ func update_entry_description():
 		for species in specimen_name_species:
 			var specimen_name_genders = entry.get_specimen_name_genders(species)
 			if (!specimen_name_genders.empty()):
-				if (specimen_name_genders.size() == species.get_genders().size()): #the name is used for all genders of the species
+				if (specimen_name_genders.size() == wyrmgus.get_genders().size()): #the name is used for all genders
 					entry_description_text += species.get_name() + " Name\n\n"
 				else:
 					for gender in specimen_name_genders:

@@ -1067,11 +1067,6 @@ DefineUnitType("unit-wyrm", {
 	PierceDamage = true,
 	DehydrationImmunity = 1,
 	Drops = {"unit-wyrm-heart"},
-	PersonalNames = {
-		"Jormungand", -- Wyrm/dragon in Norse mythology
-		"Ladon", -- Wyrm/dragon in Greek mythology
-		"Svafnir" -- Wyrm/dragon in Norse mythology
-	},
 	Variations = {
 		--[[
 		{

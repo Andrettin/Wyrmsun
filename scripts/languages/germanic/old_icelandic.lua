@@ -37,12 +37,6 @@ DefineLanguageWord("Ar", { -- appears in the horse name "Arvak"; Source: Henry A
 	Meanings = {"Early"} -- presumably, given that "Arvak" means "Early Waker"
 })
 
-DefineLanguageWord("Bak", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Back"} -- Grabak means "Gray-Back"
-})
-
 DefineLanguageWord("Blær", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 71.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -160,24 +154,6 @@ DefineLanguageWord("Gnjóstr", { -- appears in the name of a male goat; Source: 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Goin", { -- name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {}
-})
-
-DefineLanguageWord("Gra", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "adjective",
-	Meanings = {"Gray"} -- Grabak means "Gray-Back"
-})
-
-DefineLanguageWord("Graf", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Gnawer"}
-})
-
 DefineLanguageWord("Gráni", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -218,18 +194,6 @@ DefineLanguageWord("Hófnir", { -- appears in the horse name "Falhofnír"; Sourc
 	Meanings = {"Hoof"} -- presumably, given that "Falhofnír" means "barrel-hoof" or "hollow-hoof"
 })
 
-DefineLanguageWord("Hogg", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Tearer"} -- Nidhogg means "Corpse Tearer"
-})
-
-DefineLanguageWord("Jormungand", { -- name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -266,28 +230,10 @@ DefineLanguageWord("Melnir", { -- Henry Adams Bellows (transl.), "The Poetic Edd
 	Gender = "masculine" -- as given by Cleasby
 })
 
-DefineLanguageWord("Moin", { -- name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Mylnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {"Biter"}
-})
-
-DefineLanguageWord("Nid", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Corpse"} -- Nidhogg means "Corpse Tearer"
-})
-
-DefineLanguageWord("Ofnir", { -- name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Bewilderer"}
 })
 
 DefineLanguageWord("Rati", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 483.
@@ -392,12 +338,6 @@ DefineLanguageWord("Suðrœnar", { -- is this the plural inflection of the adjec
 	Meanings = {"Southern"}
 })
 
-DefineLanguageWord("Svafnir", { -- name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Sleep-Bringer"}
-})
-
 DefineLanguageWord("Svathilfari", { -- name of a horse; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 159, 196.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -489,19 +429,6 @@ DefineLanguageWord("Vingskornir", { -- name of a horse; Source: Henry Adams Bell
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Vitnir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 713.
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- poetic
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Volluth", { -- appears in the name of a wyrm in Norse mythology
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Field"}
 })
 
 -- Compounds

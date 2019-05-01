@@ -56,7 +56,6 @@ Load("scripts/civilizations/gnome/characters.lua")
 Load("scripts/civilizations/goblin/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/greek/characters.lua")
-Load("scripts/civilizations/kobold/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/persian/characters.lua")
@@ -141,25 +140,6 @@ DefineCharacter("groa", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Trait = "upgrade-wise",
 	HistoricalLocations = {
 		-3000, "niflheim", "eljudnir"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "hel") then
-			return true
-		end
-		return false
-	end
-})
-
-DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Niflheim
-	Name = "Nidhogg",
-	Gender = "male",
-	Type = "unit-wyrm",
-	Faction = "hel",
-	StartDate = -3000,
-	DeathDate = 3000,
-	Trait = "upgrade-vicious",
-	HistoricalLocations = {
-		-3000, "niflheim", {101, 164}
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then
