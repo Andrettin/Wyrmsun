@@ -672,13 +672,6 @@ DefineLanguageWord("Glotta", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
 })
 
-DefineLanguageWord("Gnîsta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "old-norse",
-	Type = "verb",
-	Meanings = {"Make a Grating Sound Through Hard Brushing", "Gnash the Teeth"}, -- source gives the German "durch hartes Anstreifen einen knirschenden Laut bewirken" and "die Zähne knirschen" as the meanings
-	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
-})
-
 DefineLanguageWord("Godahus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
 	Language = "old-norse",
 	Type = "noun",

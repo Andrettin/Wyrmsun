@@ -146,14 +146,6 @@ DefineLanguageWord("Gnísta", { -- Source: Richard Cleasby and Gudbrand Vigfusso
 	Replaces = {"old-norse", "verb", "Gnîsta"} -- presumably
 })
 
-DefineLanguageWord("Gnjóstr", { -- appears in the name of a male goat; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 207, 625.
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Gnasher"}, -- presumably, since Tanngnjóstr means "Teeth-gnasher"
-	DerivesFrom = {"old-norse", "verb", "Gnîsta"}, -- presumably, since "gnísta" presumably does
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Gráni", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -180,12 +172,6 @@ DefineLanguageWord("Gyllir", { -- a horse name; Source: Henry Adams Bellows (tra
 	Language = "old-icelandic",
 	Type = "adjective",
 	Meanings = {"Golden"}
-})
-
-DefineLanguageWord("Heidrun", { -- name of a female goat
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Hófnir", { -- appears in the horse name "Falhofnír"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 139.

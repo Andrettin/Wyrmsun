@@ -121,12 +121,6 @@ DefineLanguageWord("Dheʔ", { -- source also gives the alternative form "dhē"; 
 	Meanings = {"Place"}
 })
 
-DefineLanguageWord("Dont", { -- source gives "dont-"; source also gives the alternative form "dijt-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Éḱwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "noun",
@@ -149,12 +143,6 @@ DefineLanguageWord("Ĝhutó", { -- this is the partiple; Source: August Fick and
 	Language = "proto-indo-european",
 	Type = "verb",
 	Meanings = {"Call"} -- source gives the German "rufen" as the meaning
-})
-
-DefineLanguageWord("Ghni", { -- source gives "ghni-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Gʷem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

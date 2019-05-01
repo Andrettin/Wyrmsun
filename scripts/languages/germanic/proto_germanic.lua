@@ -639,13 +639,6 @@ DefineLanguageWord("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Gnid", { -- source also gives the alternative forms "gnîdan" and "gnaid"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Rub"}, -- source gives the German "reiben" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
-})
-
 DefineLanguageWord("Gôm", { -- source also gives the forms "Gam" and "Gim"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
 	Language = "proto-germanic",
 	Type = "noun",

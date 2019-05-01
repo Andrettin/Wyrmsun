@@ -370,6 +370,7 @@ func update_entry_description():
 			entry_description_text += entry.get_derives_from().get_name()
 			if (should_show_word_link(entry.get_derives_from())):
 				entry_description_text += "[/url]"
+			entry_description_text += " (" + entry.get_derives_from().get_language().get_name() + ")"
 			entry_description_text += "\n\n"
 			
 		var personal_name_genders = entry.get_personal_name_genders()
