@@ -768,13 +768,6 @@ DefineUnitType("unit-goat", {
 	Flesh = true,
 	Herbivore = true,
 	BluntDamage = true,
-	PersonalNames = {
-		"Aegipan", -- Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
-		"female", "Amaltheia", -- Amaltheia was a female goat from Greek mythology who fed child Zeus
-		"female", "Heidrun", -- Heidrun was a female goat from Norse mythology
-		"male", "Tanngnjost", -- Tanngnjóstr was one of Thor's male goats; the name means "teeth-gnasher"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
-		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
-	},
 	Sounds = {
 		"selected", "goat",
 		"acknowledge", "goat",
