@@ -87,8 +87,8 @@ func update_entry_description():
 	var name_word = null
 	if (entry.has_method("get_name_word")):
 		name_word = entry.get_name_word()
-		if (name_word != null and name_word.get_meanings().empty() == true):
-			name_word = null #don't show links for words without meanings
+		if (name_word != null and !should_show_word_link(name_word)):
+			name_word = null #don't show links for words without meanings or compound elements, and which derive from no other words
 	entry_description_text += tr("Name") + ": "
 	if (name_word != null):
 		entry_description_text += "[url=word:" + name_word.get_ident() + "]"
@@ -99,7 +99,7 @@ func update_entry_description():
 	
 	if (entry.has_method("get_family_name") and entry.get_family_name().empty() == false):
 		var family_name_word = entry.get_family_name_word()
-		if (family_name_word != null and family_name_word.get_meanings().empty() == true):
+		if (family_name_word != null and !should_show_word_link(family_name_word)):
 			family_name_word = null #don't show links for words without meanings
 		entry_description_text += tr("Family Name") + ": "
 		if (family_name_word != null):
@@ -348,6 +348,30 @@ func update_entry_description():
 				entry_description_text += "\"" + meaning + "\""
 			entry_description_text += "\n\n"
 			
+		if (entry.get_compound_elements().empty() == false):
+			entry_description_text += tr("Compound Elements") + ": "
+			var first_compound_element = true
+			for compound_element in entry.get_compound_elements():
+				if (first_compound_element):
+					first_compound_element = false
+				else:
+					entry_description_text += ", "
+				if (should_show_word_link(compound_element)):
+					entry_description_text += "[url=word:" + compound_element.get_ident() + "]"
+				entry_description_text += compound_element.get_name()
+				if (should_show_word_link(compound_element)):
+					entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
+			
+		if (entry.get_derives_from() != null):
+			entry_description_text += tr("Derives From") + ": "
+			if (should_show_word_link(entry.get_derives_from())):
+				entry_description_text += "[url=word:" + entry.get_derives_from().get_ident() + "]"
+			entry_description_text += entry.get_derives_from().get_name()
+			if (should_show_word_link(entry.get_derives_from())):
+				entry_description_text += "[/url]"
+			entry_description_text += "\n\n"
+			
 		var personal_name_genders = entry.get_personal_name_genders()
 		if (!personal_name_genders.empty()):
 			if (personal_name_genders.size() == wyrmgus.get_genders().size()): #the name is used for all genders
@@ -494,3 +518,6 @@ func exit_entry_menu():
 		encyclopedia.set_category_and_civilization_from_entry(origin_scene.get("entry"))
 	queue_free()
 	get_parent().remove_child(self)
+
+func should_show_word_link(word):
+	return !word.get_meanings().empty() or !word.get_compound_elements().empty() or word.get_derives_from() != null
