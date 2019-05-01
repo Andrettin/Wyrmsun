@@ -1122,41 +1122,6 @@ DefineCivilization("elf", {
 	},
 	PersonalNames = {
 		"male", "Aendan",
-		"male", "Amadrieriand", -- from Battle for Wesnoth
-		"male", "Amaril", -- "Amáril"; from Battle for Wesnoth
-		"male", "Amelad", -- from Battle for Wesnoth
-		"male", "Ameldor", -- from Battle for Wesnoth
-		"male", "Amendel", -- from Battle for Wesnoth
-		"male", "Ameng", -- from Battle for Wesnoth
-		"male", "Amilmaldur", -- from Battle for Wesnoth
-		"male", "Amilmalith", -- from Battle for Wesnoth
-		"male", "Amilmandir", -- from Battle for Wesnoth
-		"male", "Amind", -- from Battle for Wesnoth
-		"male", "Amiol", -- from Battle for Wesnoth
-		"male", "Amiorion", -- from Battle for Wesnoth
-		"male", "Amithrarion", -- from Battle for Wesnoth
-		"male", "Amoldor", -- "Amóldor"; from Battle for Wesnoth
-		"male", "Amorfimir", -- from Battle for Wesnoth
-		"male", "Amorfir", -- from Battle for Wesnoth
-		"male", "Amowyn", -- from Battle for Wesnoth
-		"male", "Amulas", -- from Battle for Wesnoth
-		"male", "Amundil", -- from Battle for Wesnoth
-		"male", "Anan", -- "Anán"; from Battle for Wesnoth
-		"male", "Anebrin", -- from Battle for Wesnoth
-		"male", "Anebrir", -- from Battle for Wesnoth
-		"male", "Anembor", -- "Anémbor"; from Battle for Wesnoth
-		"male", "Anenduil", -- "Anénduil"; from Battle for Wesnoth
-		"male", "Anerion", -- from Battle for Wesnoth
-		"male", "Anilad", -- from Battle for Wesnoth
-		"male", "Anil-Gawyn", -- from Battle for Wesnoth
-		"male", "Anilmambor", -- from Battle for Wesnoth
-		"male", "Anilmariand", -- from Battle for Wesnoth
-		"male", "Anior", -- from Battle for Wesnoth
-		"male", "Anithranduil", -- from Battle for Wesnoth
-		"male", "Anol", -- from Battle for Wesnoth
-		"male", "Anon", -- from Battle for Wesnoth
-		"male", "Anorfing", -- from Battle for Wesnoth
-		"male", "Anundil", -- from Battle for Wesnoth
 		"male", "Asaeri",
 		"male", "Belan", -- "Belán"; from Battle for Wesnoth
 		"male", "Belandil", -- from Battle for Wesnoth
