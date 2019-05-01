@@ -369,35 +369,6 @@ DefineQuest("fafnirs-hoard", {
 	Hidden = true
 })
 
-DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesnoth: Northern Rebirth (Infested Caves)
-	Name = "Mushroom Fields",
-	Icon = "icon-dwarven-mushroom-farm",
-	Description = "The harsh soil of Nidavellir supports little life. Long ago, our people learned how to grow mushrooms as a nutritive source of sustenance, which has allowed us to survive and multiply. We would do well to build a few mushroom farms to support ourselves here.",
-	World = "nidavellir",
-	Civilization = "dwarf",
-	PlayerColor = "red",
-	Conditions = function(s)
---		if (GetPlayerData(trigger_player, "Faction") == "knalga") then
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and CheckDependency(trigger_player, "unit-dwarven-mushroom-farm")) then -- allow for all Dwarven factions for now, since they don't have many quests
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
-	end,
-	Rewards = "+1500 Copper",
-	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
-	Objectives = {
-		{
-			"objective-type", "build-units",
-			"objective-string", "Build 3 Mushroom Farms",
-			"quantity", 3,
-			"unit-type", "unit-dwarven-mushroom-farm"
-		}
-	}
-})
-
 DefineQuest("andvaris-gold", {
 	Name = "Andvari's Gold",
 	Icon = "icon-ring",
