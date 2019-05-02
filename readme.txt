@@ -85,6 +85,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Bows now have specific graphics for when they are on the ground.
 
+* Quests
+- The quest icon has been updated.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
