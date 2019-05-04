@@ -166,7 +166,7 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 	Hint = "Select a worker, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Farm",
 			"quantity", 1,
 			"unit-class", "farm"

@@ -85,28 +85,28 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 	ObjectiveStrings = {"- Wodanaz must survive"},
 	Objectives = {
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Chieftain's Hall in Ahvoosa (Aarhus)",
 			"quantity", 1,
 			"unit-class", "town-hall",
 			"settlement", "aarhus"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Chieftain's Hall in Leidre",
 			"quantity", 1,
 			"unit-class", "town-hall",
 			"settlement", "leidre"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Chieftain's Hall in Malmo",
 			"quantity", 1,
 			"unit-class", "town-hall",
 			"settlement", "malmo"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Chieftain's Hall in Stukkahulma (Stockholm)",
 			"quantity", 1,
 			"unit-class", "town-hall",
@@ -575,7 +575,7 @@ DefineQuest("thors-servant-thors-temple", {
 	end,
 	Objectives = {
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build-units",
 			"objective-string", "Build a Temple in Gotland",
 			"quantity", 1,
 			"unit-class", "temple",
