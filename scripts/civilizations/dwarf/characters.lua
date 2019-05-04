@@ -228,24 +228,6 @@ DefineCharacter("alvis", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Deities = {"odin", "tyr"}
 })
 
-DefineCharacter("andvari", {
-	Name = "Andvari",
-	Gender = "male",
-	Type = "unit-dwarven-runemaster",
-	Civilization = "dwarf",
-	Faction = "oinling-clan",
-	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
-	Trait = "upgrade-ambitious",
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	Deities = {"odin", "tyr"},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "oinling-clan") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("regin", {
 	Name = "Regin",
 	Gender = "male",
