@@ -1872,6 +1872,21 @@ DefineButton( { Pos = 7, Icon = "icon-quest",
 	}
 })
 
+DefineButton( { Pos = 8, Icon = "icon-quest",
+	Action = "quest", Value = 3,
+	Key = "", Hint = "Quest", Popup = "popup-commands",
+	ForUnit = {
+		"unit-latin-town-hall",
+		"unit-germanic-town-hall",
+		"unit-norse-town-hall",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-ettin-town-hall",
+		"unit-gnomish-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold"
+	}
+})
+
 -- Hero Recruitment Buttons
 
 DefineButton( { Pos = 9,

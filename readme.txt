@@ -87,6 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The quest icon has been updated.
+- Players can now have up to four quests at the same time, instead of three.
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
