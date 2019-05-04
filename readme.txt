@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 - Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
 - New icon for the Goblin Militia.
 - Elven swordsmen now have the same sight range at day and night.
+- Revamped fauna unit name generation, so that if a given fauna species lacks enough proper names, they will use the names of the closest-related group of species available. For example: yales lack their own proper names, but there are defined proper names for goats (mainly from mythological goats in Norse legends); since both yales and goats are caprine species, yales have access to caprine proper names, and thus can use goat names for their name generation. Another example: the various types of bats have no proper names defined for them. They will go up in their species group tree, until they reach one which has enough proper names; in the case of bats that their closest-related species group with enough proper names is that of mammals, so they will use the proper names that have been defined for all mammal species. This pretty much ensures that all animals will have proper names, and that the names will be as sensible for their species as possible.
 
 * Upgrades
 - The Architecture icon has been updated.
