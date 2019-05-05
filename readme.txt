@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 - Copper, Silver, Gold, Iron, Mithril and Coal Deposits and Mines now have snowy variations.
 - The Mercenary Camp, Settlement Site, Yale Cave and Yale Hunting Lodge buildings now have snowy variations.
 - Fixed the Guard Tower tip information (it did not reflect that the guard tower can now only garrison one unit, but has an attack of its own).
+- Fixed issue which caused dock graphics to not revert from their snowy variations after winter had passed.
 
 * Editor
 - Fixed crash which occurred when creating new cave and dungeon maps in the editor.

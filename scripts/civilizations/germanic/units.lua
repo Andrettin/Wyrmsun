@@ -989,26 +989,12 @@ DefineUnitType("unit-germanic-dock", {
 	Variations = {
 		{
 			"variation-id", "dock",
-			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "dock-snow-winter",
 			"file", "germanic/buildings/dock_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water",
 			"season", "winter"
-		},
-		{
-			"variation-id", "dock-snow",
-			"file", "germanic/buildings/dock_snow.png",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water"
 		}
 	},
 	Sounds = {

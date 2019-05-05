@@ -1783,7 +1783,6 @@ DefineUnitType("unit-teuton-dock", {
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
 			"upgrade-forbidden", "upgrade-masonry",
-			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
 		},
 		{
@@ -1792,49 +1791,18 @@ DefineUnitType("unit-teuton-dock", {
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
 			"upgrade-forbidden", "upgrade-masonry",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water",
 			"season", "winter"
-		},
-		{
-			"variation-id", "dock-snow",
-			"file", "germanic/buildings/dock_snow.png",
-			"shadow-file", "germanic/buildings/dock_shadow.png",
-			"icon", "icon-germanic-dock",
-			"upgrade-forbidden", "upgrade-masonry",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water"
 		},
 		{
 			"variation-id", "dock",
 			"upgrade-required", "upgrade-masonry",
-			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
 		},
 		{
 			"variation-id", "dock-snow-winter",
 			"file", "teuton/buildings/dock_snow.png",
 			"upgrade-required", "upgrade-masonry",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water",
 			"season", "winter"
-		},
-		{
-			"variation-id", "dock-snow",
-			"file", "teuton/buildings/dock_snow.png",
-			"upgrade-required", "upgrade-masonry",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water"
 		}
 	},
 	Sounds = {
