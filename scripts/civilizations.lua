@@ -1791,26 +1791,20 @@ DefineCivilization("goblin", {
 	},
 	Description = "Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy...",
 	PersonalNames = {
-		"male", "Belragor", -- invented by Jesse Crider
 		"male", "Dran",
 		"male", "Erdog",
 		"male", "Gashnok",
-		"male", "Grogor-Tuk",
 		"male", "Hrugt",
 		"male", "Kardur",
 		"male", "Kartrog",
-		"male", "Myrtos", -- invented by Jesse Crider
 		"male", "Odrun",
 		"male", "Orhtib",
 		"male", "Ozdul",
-		"male", "Panok",
-		"male", "Pruol",
 		"male", "Sbrak",
 		"male", "Sdrul",
 		"male", "Uhmit",
 		"male", "Urdum",
 		"male", "Utrub",
-		"male", "Vrag",
 		"male", "Vrunt",
 		"male", "Zhuk",
 		"male", "Zuzerd"
