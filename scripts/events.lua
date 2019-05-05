@@ -438,6 +438,10 @@ function Event(speaker, event_description, player, options, option_effects, even
 			local b = ImageWidget(event_image)
 			menu:add(b, 0, 0)
 		end
+		
+		if (table.getn(options) == 1 and options[1] == "") then
+			options[1] = "~!Continue"
+		end
 
 		for i=1,table.getn(options) do
 			local option_hotkey = ""		

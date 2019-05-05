@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("oin-leaves", {
-	Nodes = {
-		{
-			"text", "According to the latest gossip, it seems that the dwarf Oin moved with his kin and retainers to settle near a waterfall."
-		}
-	}
-})
-
-DefineDialogue("andvaris-gold-is-ours", {
-	Nodes = {
-		{
-			"text", "We have successfully raided Andvari's holding and obtained his gold. We even found a ring which seems particularly valuable. Andvari spoke a curse upon us for getting the ring... Ramblings of an impoverished dwarf."
-		}
-	}
-})
-
 Load("scripts/civilizations/dwarf/dialogues_a_home_in_the_fields_of_sand.lua")
 Load("scripts/civilizations/dwarf/dialogues_island_of_the_lizard_god.lua")
 Load("scripts/civilizations/dwarf/dialogues_the_first_dwarves.lua")
