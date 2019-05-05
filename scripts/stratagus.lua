@@ -1672,7 +1672,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory, is_absolute)
-	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "genders", "language_families", "languages", "word_types", "grammatical_genders", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "words", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "quests", "ages", "buttons", "historical_units", "triggers", "campaigns", "literary_texts"}
+	local data_directories = {"conversible_colors", "icons", "sounds", "button_levels", "genders", "language_families", "languages", "word_types", "grammatical_genders", "times_of_day", "time_of_day_schedules", "seasons", "season_schedules", "unit_classes", "item_slots", "item_classes", "missile_types", "spells", "terrain_types", "species_category_ranks", "species_categories", "species", "words", "planes", "worlds", "animations", "calendars", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "quests", "ages", "buttons", "historical_units", "dialogues", "triggers", "campaigns", "literary_texts"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist
@@ -2022,7 +2022,6 @@ Load("scripts/languages.lua")
 Load("scripts/civilizations.lua")
 Load("scripts/music.lua")
 Load("scripts/sound.lua")
-Load("scripts/dialogues.lua")
 Load("scripts/missiles.lua")
 Load("scripts/constructions.lua")
 Load("scripts/upgrade_functions.lua")
@@ -2048,6 +2047,7 @@ Load("scripts/unique_items.lua")
 Load("scripts/map_templates.lua")
 Load("scripts/settlements.lua")
 Load("scripts/characters.lua")
+Load("scripts/dialogues.lua")
 Load("scripts/quests.lua")
 Load("scripts/map_template_data.lua")
 Load("scripts/pathways.lua")

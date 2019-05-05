@@ -45,7 +45,7 @@ DefineAnimations("animations-goblin-spearman", {
 })
 
 --
--- Goblin Swordsman / Greebo
+-- Goblin Swordsman
 --
 
 local GoblinSwordsmanStill = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate", "label taunt", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 60", "wait 6", "frame 65", "wait 6", "frame 0", "label no-rotate", "wait 1",}
