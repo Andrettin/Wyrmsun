@@ -1,0 +1,5 @@
+/source/graphics/units/dwarven/CapeTex.tif (by Kwaliti) (licensed under the CC0)
+/source/graphics/units/dwarven/DwarfGeomancer.max (by Kwaliti) (licensed under the CC0)
+/source/graphics/units/dwarven/DwarfMiner.max (by Kwaliti) (licensed under the CC0)
+/source/graphics/units/dwarven/DwarfMinerTex.tif (by Kwaliti) (licensed under the CC0)
+/source/graphics/units/dwarven/GeomancerTex.tif (by Kwaliti) (licensed under the CC0)
