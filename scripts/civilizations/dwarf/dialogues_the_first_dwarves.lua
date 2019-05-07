@@ -25,38 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("a-rocky-home-introduction", {
-	Nodes = {
-		{
-			"text", "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "My clansfolk, this rocky hill seems like a promising place to build our place of dwelling. And if we are to survive here, we will need food and materials to build shelters for our people."
-		},
-		{
-			"speaker", "character", "durin",
-			"text", "Aye. There are plenty of yales here, we should hunt some. I saw a yale cave to the southeast when we were on our way here."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "There are many perils laying about. We need to be ready quickly.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
-					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
-				end
-			}
-		},
-		{
-			"text", "Hint: Select a Miner, press the Build Structure button and then click on the Build Mead Hall button to build the structure required for this quest. The Mead Hall can only be built on a Settlement Site."
-		},
-		{
-			"text", "Hint: Select a Miner and then right-click on a Yale Cave to build a Yale Hunting Lodge."
-		}
-	}
-})
-
 DefineDialogue("a-rocky-home-mead-hall-built", {
 	Nodes = {
 		{
