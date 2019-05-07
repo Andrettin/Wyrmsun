@@ -14,6 +14,8 @@ func _ready():
 		#if the player is hitting or being hit increment the tension to our music by one
 		self.connect("unit_hit", music_player, "add_tension", [1], CONNECT_DEFERRED)
 		
+		self.connect("dialogue_called", self, "show_dialogue_panel", [], CONNECT_DEFERRED)
+		
 		update_user_directory()
 		
 		self.set_oaml_module(music_player)
@@ -108,6 +110,13 @@ func process_dynamic_string(string, context_element):
 							deity_name = minor_deity.get_name()
 						string = string.replace("HERO_MINOR_DEITY_1", deity_name)
 	return string
+
+func show_dialogue_panel(dialogue):
+	var dialogue_panel = load("res://scenes/dialogue_panel.tscn").instance()
+	get_tree().get_root().add_child(dialogue_panel)
+	dialogue_panel.set_dialogue(dialogue)
+	dialogue_panel.popup()
+
 
 #gets the sapient species from a species list
 func get_sapient_species_from_list(species_list):
