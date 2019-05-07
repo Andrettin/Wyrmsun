@@ -4,6 +4,8 @@ var wyrmgus_thread
 
 var icon_textures = {} #hold references to the icon textures, to keep them loaded, mapped to the icons they pertain to
 
+var paused_game_dialog_count = 0 #the count of dialogs the presence of which pauses the game
+
 func _ready():
 	if (self.wyrmgus_thread == null):
 		#replace the default pointing hand cursor with the Wyrmsun magnifying glass cursor
@@ -111,7 +113,18 @@ func process_dynamic_string(string, context_element):
 						string = string.replace("HERO_MINOR_DEITY_1", deity_name)
 	return string
 
+func increment_paused_game_dialog_count():
+	if (self.game_paused == false):
+		self.game_paused = true
+	paused_game_dialog_count += 1
+
+func decrement_paused_game_dialog_count():
+	paused_game_dialog_count -= 1
+	if (paused_game_dialog_count == 0):
+		self.game_paused = false
+
 func show_dialogue_panel(dialogue):
+	self.increment_paused_game_dialog_count()
 	var dialogue_panel = load("res://scenes/dialogue_panel.tscn").instance()
 	get_tree().get_root().add_child(dialogue_panel)
 	dialogue_panel.set_dialogue(dialogue)

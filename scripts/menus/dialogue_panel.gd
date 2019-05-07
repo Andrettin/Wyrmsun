@@ -18,6 +18,7 @@ func set_dialogue(dialogue):
 	
 func update_for_new_dialogue_node(dialogue_node, speaker_unit):
 	if (dialogue_node == null):
+		wyrmgus.decrement_paused_game_dialog_count()
 		queue_free()
 		return
 	
@@ -68,21 +69,22 @@ func update_for_new_dialogue_node(dialogue_node, speaker_unit):
 		option_button.set_button_text(button_text)
 		var hotkey_find_pos = button_text.find(hotkey_markdown)
 		if (hotkey_find_pos != -1):
-			var hotkey = button_text.substr(hotkey_find_pos + hotkey_markdown.length(), 1)
-			var shortcut = load("res://resources/shortcuts/shortcut_" + hotkey + ".tres").instance()
+			var hotkey = button_text.substr(hotkey_find_pos + hotkey_markdown.length(), 1).to_lower()
+			var shortcut = load("res://resources/shortcuts/shortcut_" + hotkey + ".tres")
 			option_button.shortcut = shortcut
 		option_button.hint_tooltip = option.get_tooltip()
 		panel.add_child(option_button)
 		option_buttons.push_back(option_button)
 		option_button.connect("pressed", self, "do_option_effect", [option])
+		var default_button_size = option_button.rect_size
 		option_button.anchor_left = 0.5
 		option_button.anchor_right = 0.5
 		option_button.anchor_top = 1
 		option_button.anchor_bottom = 1
-		option_button.margin_left = option_button.rect_size.x / 2 * -1
-		option_button.margin_right = option_button.rect_size.x / 2
-		option_button.margin_bottom = -12 - option_button.rect_size.y * (options.size() - option_index)
-		option_button.margin_top = option_button.margin_bottom - option_button.rect_size.y
+		option_button.margin_left = default_button_size.x / 2 * -1
+		option_button.margin_right = default_button_size.x / 2
+		option_button.margin_bottom = -12 - default_button_size.y * (options.size() - 1 - option_index)
+		option_button.margin_top = option_button.margin_bottom - default_button_size.y
 		
 		option_index += 1
 		
