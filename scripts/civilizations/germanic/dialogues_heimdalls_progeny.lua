@@ -25,33 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("jarl-speaks-of-his-destiny", {
-	Nodes = {
-		{
-			"speaker", "character", "erala",
-			"text", "Something tells me... I have seen it in my dreams, I know it! My true father was not the man who raised me, but the mighty god Haimadala. I am not like others. I have a singular destiny."
-		},
-		{
-			"speaker", "character", "erala",
-			"text", "In this house my foster father taught me the art of war. It is a nice dwelling, but the time has come for something greater... not just a house, but a hall. From it I shall gather followers to establish my rule over vast lands."
-		},
-		{
-			"speaker", "character", "erala",
-			"text", "I will need workers to build my hall. There are two tribes nearby, the Karlings and the Thrahilings. Their people could build me a hall, hopefully willingly, but I must be prepared for resistance."
-		},
-		{
-			"speaker", "character", "erala",
-			"text", "The Karlings are diligent farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls-progeny")
-					SetPlayerData(trigger_player, "AcceptQuest", "jarls-hall")
-				end
-			}
-		}
-	}
-})
-
 DefineDialogue("jarl-meets-the-thrallings", {
 	Nodes = {
 		{
@@ -135,31 +108,6 @@ DefineDialogue("thrallings-subjugated", {
 	}
 })
 
-DefineDialogue("jarl-meets-the-karlings", {
-	Nodes = {
-		{
-			"speaker", "character", "karla",
-			"text", "These lands belong to me and my sons. What do you wish?"
-		},
-		{
-			"speaker", "character", "erala",
-			"text", "I am Erala, a mighty warrior. Your people are good farmers, but they need protection. Submit to me and I will make you safe."
-		},
-		{
-			"speaker", "character", "karla",
-			"text", "We need no one to guard us. Our arrows are enough to counter any threat.",
-			"options", {"Subjugate them", "Leave them alone"},
-			"option-effects", {
-				function(s)
-					CallDialogue("jarl-attacks-the-karlings", trigger_player)
-				end,
-				function(s)
-				end
-			}
-		}
-	}
-})
-
 DefineDialogue("jarl-attacks-the-karlings", {
 	Nodes = {
 		{
@@ -226,77 +174,6 @@ DefineDialogue("karlings-subjugated", {
 						end
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "subjugate-the-karlings")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("jarls-hall-is-complete", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 24.
-	Nodes = {
-		{
-			"speaker", "character", "erala",
-			"text", "The hall is complete! My destiny starts now."
-		},
-		{
-			"speaker", "character", "erala",
-			"text", "I will need a group of loyal retainers. Once my buras have gathered enough resources, I should begin training brave warriors in the art of the sword."
-		},
-		{
-			"text", "Hint: You can acquire side-quests in your Chieftain's Hall, and train new workers there should you need them. If you lack the Food supply to train more units, build farms with your existing workers."
-		},
-		{
-			"text", "Hint: Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "jarls-retainers")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("jarl-desires-karling-subjugation", {
-	Nodes = {
-		{
-			"speaker", "character", "erala",
-			"text", "Now that I have gathered an ensemble of warriors, the Karlings will be no match for me. They will accept my overlordship - or perish.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "subjugate-the-karlings")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("jarl-considers-the-hersings", {
-	Nodes = {
-		{
-			"speaker", "character", "erala",
-			"text", "The last threat to my power in this peninsula are the Hersings to our south. They are a powerful clan, it would be better to seek an alliance than to face their warriors in battle.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "neutralize-the-hersings")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("jarl-meets-the-hersings", {
-	Nodes = {
-		{
-			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "hersing-tribe",
-			"text", "Welcome to the lands of the chieftain Hersir. What do you desire with us?",
-			"options", {"Seek an alliance", "Threaten them"},
-			"option-effects", {
-				function(s)
-					CallDialogue("jarl-seeks-an-alliance-with-the-hersings", trigger_player)
-				end,
-				function(s)
-					CallDialogue("jarl-threatens-the-hersings", trigger_player)
 				end
 			}
 		}

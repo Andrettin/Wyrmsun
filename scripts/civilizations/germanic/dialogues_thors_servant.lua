@@ -47,20 +47,6 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 	}
 })
 
-DefineDialogue("thialfi-settles-gotland", {
-	Nodes = {
-		{
-			"speaker", "character", "thialfi",
-			"text", "At last, my hall is complete. But it is not enough. I am pledged to Thunraz, and if this is my dwelling, then there must also be a temple to the god on this island.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant-thors-temple")
-				end
-			}
-		}
-	}
-})
-
 DefineDialogue("thors-servant-temple-complete", {
 	Nodes = {
 		{

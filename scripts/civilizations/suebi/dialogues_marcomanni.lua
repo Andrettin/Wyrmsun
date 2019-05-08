@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("the-first-marcomannic-war-introduction", {
-	Nodes = {
-		{
-			"text", "Almost two centuries after Marbod conquered Bohemia for the Marcomanni, their chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire. Attracted by the southern riches, the tribal alliance seeks to plunder its way to northern Italy. Once the coastal city of Aquileia has been razed, Marcomanni control of the Alpine lands will be secure."
-		},
-		{
-			"text", "Hint: Hover the mouse over a building to see the name of its settlement.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-first-marcomannic-war")
-				end
-			}
-		}
-	}
-})
-
 DefineDialogue("aquileia-destroyed", {
 	Nodes = {
 		{

@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCampaign("a-home-in-the-fields-of-sand", {
-	Name = "A Home in the Fields of Sand",
-	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and find a new home.",
-	Faction = "goldhoof-clan",
-	StartDate = {-2800, SyncRand(12) + 1, 1},
-	MapTemplates = {
-		"nidavellir", {0, 0}, {256, 256},
-		"nidavellir-underground", {0, 0}, {256, 256}
-	}
-})
-
 --[[
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",

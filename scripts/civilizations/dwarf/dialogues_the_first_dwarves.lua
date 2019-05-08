@@ -25,25 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("a-rocky-home-mead-hall-built", {
-	Nodes = {
-		{
-			"speaker", "unit", "unit-brising-miner",
-			"text", "The mead hall is built, my chieftain."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "Hmm. That's some good craftsmanship. And now we can begin harvesting the materials we need."
-		},
-		{
-			"text", "Hint: You can acquire side-quests in your Mead Hall, and train new Miners there should you need them. If you lack the Food supply to train more units, build farms with your existing miners."
-		},
-		{
-			"text", "Hint: You can harvest stone from Stone Piles, as well as from rock tiles."
-		}
-	}
-})
-
 DefineDialogue("a-rocky-home-yales-hunted", {
 	Nodes = {
 		{
@@ -90,43 +71,6 @@ DefineDialogue("grafvitning-kobolds-attack-modsognirs-clan", {
 					SetDiplomacy(GetFactionPlayer("grafvitning-tribe"), "enemy", trigger_player)
 				end
 			}
-		}
-	}
-})
-
-DefineDialogue("modsognirs-clan-kills-a-kobold", {
-	Nodes = {
-		{
-			"speaker", "character", "durin",
-			"text", "Damn scaly beast!"
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "The kobolds claim these stonelands as their own. There are many other kobold territories, however, and us dwarves have only these rocks to call home. If our settlement in Svarinshaug is destroyed, we will go extinct."
-		},
-		{
-			"speaker", "character", "durin",
-			"text", "Ye speak truly, Modsognir. But perhaps we can agree to some form of peace with the creatures?"
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "It would be no use. If they attacked us on sight, they hold Svarinshaug to be sacred ground and would never let us live here. Many kobold tribes build their homes around a wyrm's lair, serving the colossal beast who resides within. This is likely the case here, with these kobolds living somewhere below us. The entrance to the lower level should be nearby..."
-		},
-		{
-			"speaker", "character", "durin",
-			"text", "A dire situation, if true. Our clan has never fought a wyrm before."
-		},
-		{
-			"speaker", "character", "modsognir",
-			"text", "Either way, the survival of our clan requires that we root the kobolds out. Ready our warriors!",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-slaying-of-grafvitnir")
-				end
-			}
-		},
-		{
-			"text", "Hint: Some maps have multiple surface layers. Select a unit and then right-click on a Cavern Entrance to go to another surface layer."
 		}
 	}
 })
