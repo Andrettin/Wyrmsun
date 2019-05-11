@@ -1757,10 +1757,7 @@ DefineCivilization("gnome", {
 		"stand-ground", "icon-germanic-stand-ground",
 		"return-goods", "icon-dwarven-return-goods"
 	},
-	Description = "Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards.",
-	PersonalNames = {
-		"male", "Rubezahl"
-	}
+	Description = "Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."
 })
 
 DefineCivilization("goblin", {
@@ -1832,14 +1829,7 @@ DefineCivilization("kobold", {
 		"interface/goblin/buttonpanel.png", -256, -200,
 		"interface/goblin/infopanel.png", 0, -200
 	},
-	Description = "Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".",
-	PersonalNames = {
-		"Hodeke", -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
-		"Hoidike", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-		"Napfhans", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
-		"Pumphut", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
-		"Shellycoat", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
-	}
+	Description = "Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\"."
 })
 
 DefineCivilization("minotaur", {
