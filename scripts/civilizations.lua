@@ -644,9 +644,9 @@ DefineCivilization("neutral", {
 --[[
 DefineCivilization("dutch", { -- information for later use
 	Display = "Dutch",
+	ParentCivilization = "teuton",
 	Playable = false,
 	Species = "human",
-	ParentCivilization = "teuton",
 	Language = "dutch",
 	Adjective = "Dutch",
 	DevelopsFrom = {"teuton"},
@@ -662,8 +662,8 @@ DefineCivilization("dutch", { -- information for later use
 
 DefineCivilization("dwarf", {
 	Display = "Dwarven",
-	Species = "dwarf",
 	ParentCivilization = "neutral",
+	Species = "dwarf",
 	Interface = "dwarven",
 	Language = "dwarven",
 	Adjective = "Dwarven",
@@ -1092,11 +1092,11 @@ DefineCivilization("dwarf", {
 
 DefineCivilization("elf", {
 	Display = "Elven",
-	Hidden = true,
-	Species = "elf",
 	ParentCivilization = "neutral",
+	Species = "elf",
 	Language = "elven",
 	Adjective = "Elven",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-elven-civilization",
@@ -1605,9 +1605,9 @@ DefineCivilization("elf", {
 
 DefineCivilization("ettin", {
 	Display = "Ettin",
-	Species = "ettin",
 	ParentCivilization = "neutral",
---	Language = "ettin",
+	Species = "ettin",
+	Language = "ettin",
 	Adjective = "Ettin",
 	Playable = false,
 	DefaultPlayerColor = "black",
@@ -1664,10 +1664,10 @@ DefineCivilization("ettin", {
 
 DefineCivilization("germanic", {
 	Display = "Germanic",
-	Species = "human",
 	ParentCivilization = "neutral",
-	Interface = "germanic",
+	Species = "human",
 	Language = "proto-germanic",
+	Interface = "germanic",
 	Adjective = "Germanic",
 	DefaultPlayerColor = "orange",
 	Calendar = "anglo-saxon-calendar",
@@ -1715,9 +1715,9 @@ DefineCivilization("germanic", {
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
 	Display = "Celtic",
+	ParentCivilization = "germanic",
 	Species = "human",
 	Language = "proto-celtic",
-	ParentCivilization = "germanic",
 	Adjective = "Celtic",
 	Playable = false,
 	DefaultPlayerColor = "green",
@@ -1743,8 +1743,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 
 DefineCivilization("gnome", {
 	Display = "Gnomish",
-	Species = "gnome",
 	ParentCivilization = "dwarf",
+	Species = "gnome",
 	Language = "gnomish",
 	Adjective = "Gnomish",
 	Playable = false,
@@ -1762,8 +1762,8 @@ DefineCivilization("gnome", {
 
 DefineCivilization("goblin", {
 	Display = "Goblin",
-	Species = "goblin",
 	ParentCivilization = "neutral",
+	Species = "goblin",
 	Language = "goblin",
 	Interface = "goblin",
 	Adjective = "Goblin",
@@ -1808,8 +1808,8 @@ DefineCivilization("goblin", {
 
 DefineCivilization("kobold", {
 	Display = "Kobold",
-	Species = "kobold",
 	ParentCivilization = "neutral",
+	Species = "kobold",
 	Language = "kobold",
 	Adjective = "Kobold",
 	Playable = false,
@@ -1834,20 +1834,21 @@ DefineCivilization("kobold", {
 
 DefineCivilization("minotaur", {
 	Display = "Minotaur",
-	Hidden = true,
-	Species = "minotaur",
 	ParentCivilization = "neutral",
+	Species = "minotaur",
 	Adjective = "Minotaur",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "red"
 })
 
 DefineCivilization("orc", {
 	Display = "Orc",
-	Hidden = true,
-	Species = "orc",
 	ParentCivilization = "goblin",
+	Species = "orc",
+	Language = "orcish",
 	Adjective = "Orc",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "red",
 	ButtonIcons = {
@@ -2000,9 +2001,9 @@ DefineCivilization("orc", {
 
 DefineCivilization("teuton", {
 	Display = "Teuton",
+	ParentCivilization = "germanic",
 	Species = "human",
 	Language = "high-german",
-	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
 	DefaultPlayerColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
@@ -2222,9 +2223,9 @@ DefineCivilization("teuton", {
 
 DefineCivilization("anglo-saxon", {
 	Display = "Anglo-Saxon",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "old-english",
-	ParentCivilization = "teuton",
 	Adjective = "Anglo-Saxon",
 	DefaultPlayerColor = "red",
 	Calendar = "anglo-saxon-calendar",
@@ -2271,9 +2272,9 @@ DefineCivilization("anglo-saxon", {
 
 DefineCivilization("english", {
 	Display = "English",
+	ParentCivilization = "anglo-saxon",
 	Species = "human",
 	Language = "english",
-	ParentCivilization = "anglo-saxon",
 	Adjective = "English",
 	DefaultPlayerColor = "red",
 	CivilizationUpgrade = "upgrade-english-civilization",
@@ -2407,9 +2408,9 @@ DefineCivilization("english", {
 
 DefineCivilization("frankish", {
 	Display = "Frankish",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "old-frankish",
-	ParentCivilization = "teuton",
 	Adjective = "Frankish",
 	DefaultPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-frankish-civilization",
@@ -2442,9 +2443,9 @@ DefineCivilization("frankish", {
 
 DefineCivilization("suebi", {
 	Display = "Suebi",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "old-high-german",
-	ParentCivilization = "teuton",
 	Adjective = "Suebi",
 	DefaultPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
@@ -2466,11 +2467,11 @@ DefineCivilization("suebi", {
 
 DefineCivilization("gaul", {
 	Display = "Gaul",
-	Hidden = true,
+	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Species = "human",
 	Language = "gaulish",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gaul",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "black",
 	Calendar = "gregorian-calendar",
@@ -2481,11 +2482,11 @@ DefineCivilization("gaul", {
 
 DefineCivilization("briton", {
 	Display = "Briton",
-	Hidden = true,
+	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Species = "human",
 	Language = "british",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Briton",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "red",
 	Calendar = "gregorian-calendar",
@@ -2509,11 +2510,11 @@ DefineCivilization("briton", {
 
 DefineCivilization("welsh", {
 	Display = "Welsh",
-	Hidden = true,
+	ParentCivilization = "briton",
 	Species = "human",
 	Language = "welsh",
-	ParentCivilization = "briton",
 	Adjective = "Welsh",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "green",
 	PersonalNames = {
@@ -2564,11 +2565,11 @@ DefineCivilization("welsh", {
 
 DefineCivilization("gael", {
 	Display = "Gael",
-	Hidden = true,
+	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Species = "human",
 	Language = "irish",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gael",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "green",
 	Calendar = "gregorian-calendar",
@@ -2581,9 +2582,10 @@ DefineCivilization("gael", {
 
 DefineCivilization("ogre", {
 	Display = "Ogre",
+	ParentCivilization = "orc",
 	Hidden = true,
 	Species = "ogre",
-	ParentCivilization = "orc",
+	Language = "ogre",
 	Adjective = "Ogre",
 	Playable = false,
 	DefaultPlayerColor = "red",
@@ -2648,11 +2650,11 @@ DefineCivilization("ogre", {
 
 DefineCivilization("troll", {
 	Display = "Troll",
-	Hidden = true,
+	ParentCivilization = "orc",
 	Species = "troll",
 	Language = "troll",
-	ParentCivilization = "orc",
 	Adjective = "Troll",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-troll-civilization"
@@ -2660,9 +2662,9 @@ DefineCivilization("troll", {
 
 DefineCivilization("latin", {
 	Display = "Latin",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "latin",
-	ParentCivilization = "teuton",
 	Adjective = "Latin",
 	Playable = false,
 	DefaultPlayerColor = "red",
@@ -2771,19 +2773,21 @@ DefineCivilization("latin", {
 
 DefineCivilization("castillian", {
 	Display = "Castillian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "latin",
+	Species = "human",
+	Language = "castillian",
 	Adjective = "Castillian",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("french", {
 	Display = "French",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "latin",
+	Species = "human",
+	Language = "french",
 	Adjective = "French",
+	Hidden = true,
 	Playable = false,
 	--[[
 	SettlementNames = {
@@ -2798,19 +2802,21 @@ DefineCivilization("french", {
 
 DefineCivilization("italian", {
 	Display = "Italian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "latin",
+	Species = "human",
+	Language = "italian",
 	Adjective = "Italian",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("portuguese", {
 	Display = "Portuguese",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "latin",
+	Species = "human",
+	Language = "portuguese",
 	Adjective = "Portuguese",
+	Hidden = true,
 	Playable = false,
 	UnitClassNames = {
 		"farm", "Macacos" -- farm in Rio de Janeiro; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
@@ -2819,31 +2825,32 @@ DefineCivilization("portuguese", {
 
 DefineCivilization("romanian", {
 	Display = "Romanian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "latin",
+	Species = "human",
+	Language = "romanian",
 	Adjective = "Romanian",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
 	Display = "Basque",
-	Hidden = true,
+	ParentCivilization = "germanic",
 	Species = "human",
 	Language = "basque",
-	ParentCivilization = "germanic",
 	Adjective = "Basque",
+	Hidden = true,
 	Playable = false,
 	Calendar = "gregorian-calendar"
 })
 
 DefineCivilization("etruscan", {
 	Display = "Etruscan",
-	Hidden = true,
+	ParentCivilization = "latin",
 	Species = "human",
 	Language = "etruscan",
-	ParentCivilization = "latin",
 	Adjective = "Etruscan",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-750, "upgrade-architecture", true -- the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
@@ -2852,9 +2859,9 @@ DefineCivilization("etruscan", {
 
 DefineCivilization("goth", {
 	Display = "Gothic",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "gothic",
-	ParentCivilization = "teuton",
 	Adjective = "Gothic",
 	CivilizationUpgrade = "upgrade-gothic-civilization",
 	DevelopsFrom = {"germanic"},
@@ -2877,11 +2884,11 @@ DefineCivilization("goth", {
 
 DefineCivilization("greek", {
 	Display = "Greek",
-	Hidden = true,
+	ParentCivilization = "latin",
 	Species = "human",
 	Language = "greek",
-	ParentCivilization = "latin",
 	Adjective = "Greek",
+	Hidden = true,
 	Playable = false,
 	CivilizationUpgrade = "upgrade-greek-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
@@ -2980,10 +2987,10 @@ DefineCivilization("greek", {
 
 DefineCivilization("assyrian", {
 	Display = "Assyrian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Assyrian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
@@ -2993,10 +3000,10 @@ DefineCivilization("assyrian", {
 
 DefineCivilization("babylonian", {
 	Display = "Babylonian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Babylonian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
@@ -3006,10 +3013,10 @@ DefineCivilization("babylonian", {
 
 DefineCivilization("chinese", {
 	Display = "Chinese",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Chinese",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		1044, "upgrade-gunpowder", true -- gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
@@ -3018,10 +3025,11 @@ DefineCivilization("chinese", {
 
 DefineCivilization("egyptian", {
 	Display = "Egyptian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
+	Language = "egyptian",
 	Adjective = "Egyptian",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "yellow",
 	CivilizationUpgrade = "upgrade-egyptian-civilization"
@@ -3029,20 +3037,20 @@ DefineCivilization("egyptian", {
 
 DefineCivilization("hebrew", {
 	Display = "Hebrew",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Hebrew",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("hittite", {
 	Display = "Hittite",
-	Hidden = true,
-	Species = "human",
---	Language = "hittite",
 	ParentCivilization = "greek",
+	Species = "human",
+	Language = "hittite",
 	Adjective = "Hittite",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -3051,11 +3059,11 @@ DefineCivilization("hittite", {
 
 DefineCivilization("illyrian", {
 	Display = "Illyrian",
-	Hidden = true,
+	ParentCivilization = "greek",
 	Species = "human",
 	Language = "illyrian",
-	ParentCivilization = "greek",
 	Adjective = "Illyrian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -3064,19 +3072,19 @@ DefineCivilization("illyrian", {
 
 DefineCivilization("minoan", {
 	Display = "Minoan",
-	Hidden = true,
+	ParentCivilization = "greek",
 	Species = "human",
 	Language = "minoan",
-	ParentCivilization = "greek",
 	Adjective = "Minoan",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("norse", {
 	Display = "Norse",
+	ParentCivilization = "teuton",
 	Species = "human",
 	Language = "old-norse",
-	ParentCivilization = "teuton",
 	Adjective = "Norse",
 	DefaultPlayerColor = "blue",
 	DevelopsFrom = {"germanic"},
@@ -3112,11 +3120,11 @@ DefineCivilization("norse", {
 
 DefineCivilization("baltic", {
 	Display = "Baltic",
-	Hidden = true,
-	Species = "human",
---	Language = "lithuanian",
 	ParentCivilization = "norse",
+	Species = "human",
+	Language = "lithuanian",
 	Adjective = "Baltic",
+	Hidden = true,
 	Playable = false,
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
@@ -3126,22 +3134,22 @@ DefineCivilization("baltic", {
 
 DefineCivilization("uralic", {
 	Display = "Uralic",
-	Hidden = true,
+	ParentCivilization = "germanic",
 	Species = "human",
 	Language = "proto-uralic",
-	ParentCivilization = "germanic",
 	Adjective = "Uralic",
+	Hidden = true,
 	Playable = false,
 	Calendar = "gregorian-calendar"
 })
 
 DefineCivilization("finnish", {
 	Display = "Finnish",
-	Hidden = true,
+	ParentCivilization = "norse",
 	Species = "human",
 	Language = "finnish",
-	ParentCivilization = "norse",
 	Adjective = "Finnish",
+	Hidden = true,
 	Playable = false,
 	DevelopsFrom = {"uralic"},
 	Calendar = "gregorian-calendar"
@@ -3149,10 +3157,10 @@ DefineCivilization("finnish", {
 
 DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, such as the Oretanians
 	Display = "Iberian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "germanic",
+	Species = "human",
 	Adjective = "Iberian",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "brown",
 	Calendar = "gregorian-calendar"
@@ -3160,11 +3168,11 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 
 DefineCivilization("magyar", {
 	Display = "Magyar",
-	Hidden = true,
-	Species = "human",
---	Language = "hungarian",
 	ParentCivilization = "teuton",
+	Species = "human",
+	Language = "hungarian",
 	Adjective = "Magyar",
+	Hidden = true,
 	Playable = false,
 	DevelopsFrom = {"uralic"},
 	Calendar = "gregorian-calendar"
@@ -3172,20 +3180,20 @@ DefineCivilization("magyar", {
 
 DefineCivilization("persian", {
 	Display = "Persian",
-	Hidden = true,
+	ParentCivilization = "greek",
 	Species = "human",
 	Language = "avestan",
-	ParentCivilization = "greek",
 	Adjective = "Persian",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("phoenician", {
 	Display = "Phoenician",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "persian",
+	Species = "human",
 	Adjective = "Phoenician",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "black",
 	HistoricalUpgrades = {
@@ -3195,11 +3203,11 @@ DefineCivilization("phoenician", {
 
 DefineCivilization("phrygian", {
 	Display = "Phrygian",
-	Hidden = true,
+	ParentCivilization = "greek",
 	Species = "human",
 	Language = "phrygian",
-	ParentCivilization = "greek",
 	Adjective = "Phrygian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -3208,11 +3216,11 @@ DefineCivilization("phrygian", {
 
 DefineCivilization("slav", {
 	Display = "Slavic",
-	Hidden = true,
+	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Species = "human",
 	Language = "proto-slavic",
-	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Adjective = "Slavic",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "blue",
 	Calendar = "gregorian-calendar",
@@ -3266,10 +3274,10 @@ DefineCivilization("slav", {
 
 DefineCivilization("sumerian", {
 	Display = "Sumerian",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Sumerian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
@@ -3279,11 +3287,11 @@ DefineCivilization("sumerian", {
 
 DefineCivilization("thracian", {
 	Display = "Thracian",
-	Hidden = true,
+	ParentCivilization = "greek",
 	Species = "human",
 	Language = "thracian",
-	ParentCivilization = "greek",
 	Adjective = "Thracian",
+	Hidden = true,
 	Playable = false,
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -3292,10 +3300,11 @@ DefineCivilization("thracian", {
 
 DefineCivilization("treant", {
 	Display = "Treant",
-	Hidden = true,
-	Species = "treant",
 	ParentCivilization = "neutral",
+	Species = "treant",
+	Language = "treant",
 	Adjective = "Treant",
+	Hidden = true,
 	Playable = false,
 	DefaultPlayerColor = "green",
 	PersonalNames = {
@@ -3363,19 +3372,20 @@ DefineCivilization("treant", {
 
 DefineCivilization("turkish", {
 	Display = "Turkish",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek", -- so that it can use Greek/Latin units and buildings
+	Species = "human",
+	Language = "turkish",
 	Adjective = "Turkish",
+	Hidden = true,
 	Playable = false
 })
 
 DefineCivilization("aztec", {
 	Display = "Aztec",
-	Hidden = true,
-	Species = "human",
 	ParentCivilization = "greek",
+	Species = "human",
 	Adjective = "Aztec",
+	Hidden = true,
 	Playable = false
 })
 
@@ -3385,11 +3395,11 @@ DefineCivilization("aztec", {
 
 DefineCivilization("aesir", {
 	Display = "Aesir",
-	Hidden = true,
 	ParentCivilization = "neutral",
 	Language = "old-norse",
 	Adjective = "Aesir",
 	DefaultPlayerColor = "blue",
+	Hidden = true,
 	Playable = false,
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
