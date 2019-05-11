@@ -1,3 +1,7 @@
+/source/graphics/buildings/elven/farm/ElfFarm.fbx (by Kwaliti) (licensed under the CC0)
+/source/graphics/buildings/elven/farm/ElfFarm.max (by Kwaliti) (licensed under the CC0)
+/source/graphics/buildings/elven/farm/ElfShingle.tif (by Kwaliti) (licensed under the CC0)
+/source/graphics/buildings/elven/farm/ElfWall.tif (by Kwaliti) (licensed under the CC0)
 /source/graphics/units/dwarven/CapeTex.tif (by Kwaliti) (licensed under the CC0)
 /source/graphics/units/dwarven/DwarfGeomancer.max (by Kwaliti) (licensed under the CC0)
 /source/graphics/units/dwarven/DwarfMiner.max (by Kwaliti) (licensed under the CC0)
