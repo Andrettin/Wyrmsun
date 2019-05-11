@@ -1877,26 +1877,6 @@ DefineCivilization("orc", {
 		"interface/dwarven/infopanel.png", 0, -200
 	},
 	PersonalNames = {
-		"male", "Bart", -- from Battle for Wesnoth
-		"male", "Borg", -- from Battle for Wesnoth
-		"male", "Bunk", -- from Battle for Wesnoth
-		"male", "Burg", -- from Battle for Wesnoth
-		"male", "Erik", -- from Battle for Wesnoth
-		"male", "Gagar", -- from Battle for Wesnoth
-		"male", "Gagor", -- from Battle for Wesnoth
-		"male", "Galo", -- from Battle for Wesnoth
-		"male", "Ganak", -- from Battle for Wesnoth
-		"male", "Gank", -- from Battle for Wesnoth
-		"male", "Gaol", -- from Battle for Wesnoth
-		"male", "Garag", -- from Battle for Wesnoth
-		"male", "Gigor", -- from Battle for Wesnoth
-		"male", "Ginak", -- from Battle for Wesnoth
-		"male", "Ging", -- from Battle for Wesnoth
-		"male", "Gink", -- from Battle for Wesnoth
-		"male", "Girt", -- from Battle for Wesnoth
-		"male", "Gong", -- from Battle for Wesnoth
-		"male", "Gork", -- from Battle for Wesnoth
-		"male", "Gort", -- from Battle for Wesnoth
 		"male", "Hadash", -- from Battle for Wesnoth
 		"male", "Hadish", -- from Battle for Wesnoth
 		"male", "Hadush", -- from Battle for Wesnoth
