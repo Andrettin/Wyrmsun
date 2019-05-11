@@ -1897,14 +1897,6 @@ DefineCivilization("orc", {
 		"male", "Gong", -- from Battle for Wesnoth
 		"male", "Gork", -- from Battle for Wesnoth
 		"male", "Gort", -- from Battle for Wesnoth
-		"male", "Gruk", -- from Battle for Wesnoth
-		"male", "Grulo", -- from Battle for Wesnoth
-		"male", "Grunk", -- from Battle for Wesnoth
-		"male", "Gruol", -- from Battle for Wesnoth
-		"male", "Grurg", -- from Battle for Wesnoth
-		"male", "Grurk", -- from Battle for Wesnoth
-		"male", "Grurt", -- from Battle for Wesnoth
-		"male", "Gruurk", -- from Battle for Wesnoth
 		"male", "Hadash", -- from Battle for Wesnoth
 		"male", "Hadish", -- from Battle for Wesnoth
 		"male", "Hadush", -- from Battle for Wesnoth
