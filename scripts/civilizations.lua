@@ -2427,10 +2427,6 @@ DefineCivilization("frankish", {
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	},
-	PersonalNames = {
-		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
-	},
 	--[[
 	SettlementNames = {
 		"Haim" -- the French settlement names "Le Hamel", "Hamelet", "Hamelin" and "Hem" come from or have the same origin as the Old French "ham", which in turn comes from Old Frankish "haim"; Source: http://www.cnrtl.fr/definition/hameau
@@ -2789,11 +2785,6 @@ DefineCivilization("french", {
 	ParentCivilization = "latin",
 	Adjective = "French",
 	Playable = false,
-	PersonalNames = {
-		"male", "Bellaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Bonnaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Renaud" -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-	},
 	--[[
 	SettlementNames = {
 		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
@@ -3033,12 +3024,7 @@ DefineCivilization("egyptian", {
 	Adjective = "Egyptian",
 	Playable = false,
 	DefaultPlayerColor = "yellow",
-	CivilizationUpgrade = "upgrade-egyptian-civilization",
-	PersonalNames = {
-		"male", "Amenofis", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
-		"male", "Isi", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
-		"male", "Seti" -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
-	}
+	CivilizationUpgrade = "upgrade-egyptian-civilization"
 })
 
 DefineCivilization("hebrew", {
@@ -3390,9 +3376,7 @@ DefineCivilization("aztec", {
 	Species = "human",
 	ParentCivilization = "greek",
 	Adjective = "Aztec",
-	Playable = false,
-	HistoricalUpgrades = {
-	}
+	Playable = false
 })
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
