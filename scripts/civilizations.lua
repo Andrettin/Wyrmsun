@@ -1725,9 +1725,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Calendar = "gregorian-calendar",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
-		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
-		"male", "Tigernonos", -- Proto-Celtic version of the Welsh name "Teyrnon"; means "great lord"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 126.
 		
 		-- some Briton/Gaul names, so that the Celtic name list is bigger
 		"male", "Ambiorix",
@@ -2823,11 +2821,7 @@ DefineCivilization("italian", {
 	Species = "human",
 	ParentCivilization = "latin",
 	Adjective = "Italian",
-	Playable = false,
-	PersonalNames = {
-		"male", "Alessandro",
-		"male", "Giovanni"
-	}
+	Playable = false
 })
 
 DefineCivilization("portuguese", {
@@ -2894,10 +2888,6 @@ DefineCivilization("goth", {
 		"ready", "basic-germanic-voices-ready",
 		"help", "basic-germanic-voices-help",
 		"help-town", "basic-germanic-voices-help-town"
-	},
-	PersonalNames = {
-		-- Burgundian names
-		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
 	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
