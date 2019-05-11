@@ -1877,67 +1877,11 @@ DefineCivilization("orc", {
 		"interface/dwarven/infopanel.png", 0, -200
 	},
 	PersonalNames = {
-		"male", "Bagar", -- from Battle for Wesnoth
-		"male", "Barag", -- from Battle for Wesnoth
-		"male", "Barbag", -- from Battle for Wesnoth
 		"male", "Bart", -- from Battle for Wesnoth
-		"male", "Bik", -- from Battle for Wesnoth
-		"male", "Bilg", -- from Battle for Wesnoth
-		"male", "Bilo", -- from Battle for Wesnoth
-		"male", "Binak", -- from Battle for Wesnoth
-		"male", "Bink", -- from Battle for Wesnoth
-		"male", "Biol", -- from Battle for Wesnoth
-		"male", "Birt", -- from Battle for Wesnoth
-		"male", "Bogar", -- from Battle for Wesnoth
-		"male", "Bogor", -- from Battle for Wesnoth
-		"male", "Bok", -- from Battle for Wesnoth
-		"male", "Bolg", -- from Battle for Wesnoth
-		"male", "Bong", -- from Battle for Wesnoth
 		"male", "Borg", -- from Battle for Wesnoth
-		"male", "Bork", -- from Battle for Wesnoth
-		"male", "Bort", -- from Battle for Wesnoth
-		"male", "Buk", -- from Battle for Wesnoth
-		"male", "Bunak", -- from Battle for Wesnoth
-		"male", "Bung", -- from Battle for Wesnoth
 		"male", "Bunk", -- from Battle for Wesnoth
-		"male", "Burag", -- from Battle for Wesnoth
 		"male", "Burg", -- from Battle for Wesnoth
-		"male", "Burk", -- from Battle for Wesnoth
-		"male", "Buurk", -- from Battle for Wesnoth
-		"male", "Eradash", -- from Battle for Wesnoth
-		"male", "Eradish", -- from Battle for Wesnoth
-		"male", "Eragdish", -- from Battle for Wesnoth
-		"male", "Eragdush", -- from Battle for Wesnoth
-		"male", "Eragor", -- from Battle for Wesnoth
-		"male", "Eranak", -- from Battle for Wesnoth
-		"male", "Erang", -- from Battle for Wesnoth
-		"male", "Erarag", -- from Battle for Wesnoth
-		"male", "Erarg", -- from Battle for Wesnoth
-		"male", "Erart", -- from Battle for Wesnoth
-		"male", "Erigdush", -- from Battle for Wesnoth
 		"male", "Erik", -- from Battle for Wesnoth
-		"male", "Erinak", -- from Battle for Wesnoth
-		"male", "Eriol", -- from Battle for Wesnoth
-		"male", "Erirag", -- from Battle for Wesnoth
-		"male", "Erirbag", -- from Battle for Wesnoth
-		"male", "Erirg", -- from Battle for Wesnoth
-		"male", "Erirt", -- from Battle for Wesnoth
-		"male", "Erishnak", -- from Battle for Wesnoth
-		"male", "Eriurk", -- from Battle for Wesnoth
-		"male", "Erogdish", -- from Battle for Wesnoth
-		"male", "Erogdush", -- from Battle for Wesnoth
-		"male", "Erok", -- from Battle for Wesnoth
-		"male", "Erong", -- from Battle for Wesnoth
-		"male", "Eronk", -- from Battle for Wesnoth
-		"male", "Erorbag", -- from Battle for Wesnoth
-		"male", "Erudish", -- from Battle for Wesnoth
-		"male", "Erudush", -- from Battle for Wesnoth
-		"male", "Erugar", -- from Battle for Wesnoth
-		"male", "Erulo", -- from Battle for Wesnoth
-		"male", "Erunk", -- from Battle for Wesnoth
-		"male", "Eruol", -- from Battle for Wesnoth
-		"male", "Erurag", -- from Battle for Wesnoth
-		"male", "Eruurk", -- from Battle for Wesnoth
 		"male", "Gagar", -- from Battle for Wesnoth
 		"male", "Gagor", -- from Battle for Wesnoth
 		"male", "Galo", -- from Battle for Wesnoth
@@ -1945,7 +1889,6 @@ DefineCivilization("orc", {
 		"male", "Gank", -- from Battle for Wesnoth
 		"male", "Gaol", -- from Battle for Wesnoth
 		"male", "Garag", -- from Battle for Wesnoth
-		"male", "Gashnak", -- from Battle for Wesnoth
 		"male", "Gigor", -- from Battle for Wesnoth
 		"male", "Ginak", -- from Battle for Wesnoth
 		"male", "Ging", -- from Battle for Wesnoth
@@ -1954,14 +1897,6 @@ DefineCivilization("orc", {
 		"male", "Gong", -- from Battle for Wesnoth
 		"male", "Gork", -- from Battle for Wesnoth
 		"male", "Gort", -- from Battle for Wesnoth
-		"male", "Grok", -- from Battle for Wesnoth
-		"male", "Grolg", -- from Battle for Wesnoth
-		"male", "Grong", -- from Battle for Wesnoth
-		"male", "Gronk", -- from Battle for Wesnoth
-		"male", "Grorag", -- from Battle for Wesnoth
-		"male", "Grorg", -- from Battle for Wesnoth
-		"male", "Grork", -- from Battle for Wesnoth
-		"male", "Grort", -- from Battle for Wesnoth
 		"male", "Gruk", -- from Battle for Wesnoth
 		"male", "Grulo", -- from Battle for Wesnoth
 		"male", "Grunk", -- from Battle for Wesnoth
@@ -1974,7 +1909,6 @@ DefineCivilization("orc", {
 		"male", "Hadish", -- from Battle for Wesnoth
 		"male", "Hadush", -- from Battle for Wesnoth
 		"male", "Hagar", -- from Battle for Wesnoth
-		"male", "Hagdush", -- from Battle for Wesnoth
 		"male", "Hak", -- from Battle for Wesnoth
 		"male", "Halg", -- from Battle for Wesnoth
 		"male", "Hank", -- from Battle for Wesnoth
@@ -2012,22 +1946,12 @@ DefineCivilization("orc", {
 		"male", "Hurk", -- from Battle for Wesnoth
 		"male", "Hushnak", -- from Battle for Wesnoth
 		"male", "Huurk", -- from Battle for Wesnoth
-		"male", "Pagdish", -- from Battle for Wesnoth
 		"male", "Pagor", -- from Battle for Wesnoth
 		"male", "Palg", -- from Battle for Wesnoth
 		"male", "Paol", -- from Battle for Wesnoth
-		"male", "Parag", -- from Battle for Wesnoth
-		"male", "Pashnak", -- from Battle for Wesnoth
-		"male", "Pidush", -- from Battle for Wesnoth
-		"male", "Pigdish", -- from Battle for Wesnoth
-		"male", "Pigdush", -- from Battle for Wesnoth
 		"male", "Pilg", -- from Battle for Wesnoth
 		"male", "Pinak", -- from Battle for Wesnoth
 		"male", "Pink", -- from Battle for Wesnoth
-		"male", "Pirbag", -- from Battle for Wesnoth
-		"male", "Podash", -- from Battle for Wesnoth
-		"male", "Podish", -- from Battle for Wesnoth
-		"male", "Polg", -- from Battle for Wesnoth
 		"male", "Porg", -- from Battle for Wesnoth
 		"male", "Pork", -- from Battle for Wesnoth
 		"male", "Port", -- from Battle for Wesnoth
@@ -2035,25 +1959,17 @@ DefineCivilization("orc", {
 		"male", "Pralo", -- from Battle for Wesnoth
 		"male", "Prang", -- from Battle for Wesnoth
 		"male", "Praol", -- from Battle for Wesnoth
-		"male", "Prarag", -- from Battle for Wesnoth
-		"male", "Prarbag", -- from Battle for Wesnoth
 		"male", "Prarg", -- from Battle for Wesnoth
 		"male", "Prark", -- from Battle for Wesnoth
 		"male", "Prart", -- from Battle for Wesnoth
-		"male", "Praurk", -- from Battle for Wesnoth
 		"male", "Prigar", -- from Battle for Wesnoth
 		"male", "Prigor", -- from Battle for Wesnoth
 		"male", "Prilg", -- from Battle for Wesnoth
 		"male", "Prilo", -- from Battle for Wesnoth
 		"male", "Prinak", -- from Battle for Wesnoth
 		"male", "Priol", -- from Battle for Wesnoth
-		"male", "Prirbag", -- from Battle for Wesnoth
 		"male", "Prirg", -- from Battle for Wesnoth
 		"male", "Prirt", -- from Battle for Wesnoth
-		"male", "Priurk", -- from Battle for Wesnoth
-		"male", "Prodash", -- from Battle for Wesnoth
-		"male", "Prodish", -- from Battle for Wesnoth
-		"male", "Prodush", -- from Battle for Wesnoth
 		"male", "Prolg", -- from Battle for Wesnoth
 		"male", "Prolo", -- from Battle for Wesnoth
 		"male", "Prong", -- from Battle for Wesnoth
@@ -2079,39 +1995,22 @@ DefineCivilization("orc", {
 		"male", "Rinak", -- from Battle for Wesnoth
 		"male", "Rink", -- from Battle for Wesnoth
 		"male", "Rirg", -- from Battle for Wesnoth
-		"male", "Rirk", -- from Battle for Wesnoth
 		"male", "Rok", -- from Battle for Wesnoth
 		"male", "Rolo", -- from Battle for Wesnoth
-		"male", "Ronak", -- from Battle for Wesnoth
-		"male", "Rudash", -- from Battle for Wesnoth
-		"male", "Rugar", -- from Battle for Wesnoth
 		"male", "Rung", -- from Battle for Wesnoth
 		"male", "Ruol", -- from Battle for Wesnoth
-		"male", "Rurag", -- from Battle for Wesnoth
-		"male", "Rushnak", -- from Battle for Wesnoth
-		"male", "Vadash", -- from Battle for Wesnoth
-		"male", "Vadish", -- from Battle for Wesnoth
-		"male", "Vadush", -- from Battle for Wesnoth
-		"male", "Vak", -- from Battle for Wesnoth
 		"male", "Valo", -- from Battle for Wesnoth
 		"male", "Vank", -- from Battle for Wesnoth
-		"male", "Varag", -- from Battle for Wesnoth
-		"male", "Varbag", -- from Battle for Wesnoth
-		"male", "Vigar", -- from Battle for Wesnoth
-		"male", "Vigdish", -- from Battle for Wesnoth
 		"male", "Vigor", -- from Battle for Wesnoth
 		"male", "Vilg", -- from Battle for Wesnoth
 		"male", "Vilo", -- from Battle for Wesnoth
-		"male", "Virag", -- from Battle for Wesnoth
 		"male", "Virt", -- from Battle for Wesnoth
-		"male", "Vonak", -- from Battle for Wesnoth
 		"male", "Vong", -- from Battle for Wesnoth
 		"male", "Vorg", -- from Battle for Wesnoth
 		"male", "Vork", -- from Battle for Wesnoth
 		"male", "Vourk", -- from Battle for Wesnoth
 		"male", "Vralo", -- from Battle for Wesnoth
 		"male", "Vrang", -- from Battle for Wesnoth
-		"male", "Vrarg", -- from Battle for Wesnoth
 		"male", "Vrart", -- from Battle for Wesnoth
 		"male", "Vrik", -- from Battle for Wesnoth
 		"male", "Vrolo", -- from Battle for Wesnoth
@@ -2120,8 +2019,6 @@ DefineCivilization("orc", {
 		"male", "Vrung", -- from Battle for Wesnoth
 		"male", "Vrurg", -- from Battle for Wesnoth
 		"male", "Vrurt", -- from Battle for Wesnoth
-		"male", "Vruurk", -- from Battle for Wesnoth
-		"male", "Vudish", -- from Battle for Wesnoth
 		"male", "Vuk", -- from Battle for Wesnoth
 		"male", "Vulg", -- from Battle for Wesnoth
 		"male", "Vulo", -- from Battle for Wesnoth
