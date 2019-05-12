@@ -79,22 +79,6 @@ DefineSite("malmo", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSite("roma-gotland", {
-	Name = "Roma",
-	MapTemplate = "earth",
-	Position = {4259, 739},
-	CulturalNames = {
-		"norse", "Roma"
-	},
-	HistoricalOwners = {
-		{1164, 9, 9}, "cistercian-order"
-	},
-	HistoricalBuildings = {
-		{1164, 9, 9}, 0, "temple", "cistercian-order" -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
 DefineSite("sigtun", {
 	Name = "Sigtun",
 	MapTemplate = "earth",
@@ -110,29 +94,6 @@ DefineSite("sigtun", {
 	},
 	HistoricalBuildings = {
 		{-2800, 12, 30}, 0, "temple" -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineSite("stockholm", {
-	Name = "Stockholm",
-	MapTemplate = "earth",
-	Position = {4253, 693},
-	Major = true,
-	Cores = {
-		"swede-tribe"
-	},
-	CulturalNames = {
-		"germanic", "Stukkahulma", -- tentative rendering of "Stockholm" in Proto-Germanic
-		"norse", "Stockholm"
-	},
-	HistoricalOwners = {
-		{-2800, 12, 30}, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		{-2800, 12, 30}, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -166,40 +127,6 @@ DefineSite("uppsala", {
 	HistoricalBuildings = {
 		1164, 1477, "temple", -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
 		1477, 0, "university" -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineSite("vastervik", {
-	Name = "Vastervik",
-	MapTemplate = "earth",
-	Position = {4218, 734},
-	CulturalNames = {
-		"norse", "Vastervik" -- "Västervik"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
-DefineSite("visby", {
-	Name = "Visby",
-	MapTemplate = "earth",
-	Position = {4259, 736},
-	Major = true,
-	Cores = {
-		"gute-tribe"
-	},
-	CulturalNames = {
-		"norse", "Visby"
-	},
-	HistoricalOwners = {
-		1560, "denmark" -- Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1560, 0, "town-hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

@@ -51,17 +51,6 @@ DefineCampaign("heimdalls-progeny", {
 	}
 })
 
-DefineCampaign("thors-servant", {
-	Name = "Thunraz's Servant",
-	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Now a grown man, during a dream he heard the deity command him to sail to an undiscovered island...",
-	Faction = "thielung-tribe",
-	StartDate = {-1101, SyncRand(12) + 1, 1}, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
-	MapTemplates = {
-		"earth", {4022, 667}, {256, 256},
-		"jotunheim", {679, 304}, {64, 64}
-	}
-})
-
 --[[
 DefineCampaign("the-second-punic-war", {
 	Name = "The Second Punic War",

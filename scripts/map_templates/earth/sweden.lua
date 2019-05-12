@@ -108,8 +108,8 @@ SetMapTemplateResource("earth", "unit-iron-deposit", {4335, 547}) -- Iron deposi
 -- a man was buried in the Bredarör cairn at Kivik in c. 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 84.
 
 -- Västervik
-SetMapTemplateHero("earth", "thialfi", "thielung-tribe", {4218, 734}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
-SetMapTemplateUnit("earth", "unit-revealer", "thielung-tribe", {4265, 741}, -1101, -1100) -- needs to be in the map template, to set the player's start view to the correct location
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thielung-tribe", {4218, 734}, -1101, -1100)
-SetMapTemplateUnit("earth", "unit-germanic-transport-ship", "thielung-tribe", {4218, 734}, -1101, -1100)
+SetMapTemplateHero("scandinavia", "thialfi", "thielung-tribe", {156, 250}, -1101, -1100) -- in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+SetMapTemplateUnit("scandinavia", "unit-revealer", "thielung-tribe", {179, 255}, -1101, -1100) -- needs to be in the map template, to set the player's start view to the correct location
+SetMapTemplateUnit("scandinavia", "unit-germanic-worker", "thielung-tribe", {156, 250}, -1101, -1100)
+SetMapTemplateUnit("scandinavia", "unit-germanic-worker", "thielung-tribe", {156, 250}, -1101, -1100)
+SetMapTemplateUnit("scandinavia", "unit-germanic-transport-ship", "thielung-tribe", {156, 250}, -1101, -1100)
