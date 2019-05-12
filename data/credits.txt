@@ -1,2 +1,4 @@
+/data/map_templates/earth/europe.png (GM1530 Scenarios) (licensed under the GPL 2.0+)
+/data/map_templates/earth/europe_overlay.png (GM1530 Scenarios) (licensed under the GPL 2.0+)
 /data/map_templates/earth/scandinavia.png (GM1530 Scenarios) (licensed under the GPL 2.0+)
 /data/map_templates/earth/scandinavia_overlay.png (GM1530 Scenarios) (licensed under the GPL 2.0+)
