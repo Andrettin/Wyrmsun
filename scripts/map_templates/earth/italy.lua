@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- some coastline changes, to make it easier for ships to reach Trieste
-SetMapTemplateTileTerrain("earth", "shallow-water", {4145, 1008})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4147, 1013})
-
 -- Aquileia
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario
 SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4143, 1005}, 170, 171) -- some buildings for Aquileia for The First Marcomannic War scenario

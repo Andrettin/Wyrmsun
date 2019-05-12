@@ -36,4 +36,4 @@
 -- the migration from Gotland mentioned in the Guta saga, if it is real, likely occurred c. 475-550 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvi-xxvii.
 
 -- portal near Gotland for Thialfi to use
-SetMapTemplateLayerConnector("scandinavia", "unit-water-portal", {210, 237}, "jotunheim")
+SetMapTemplateLayerConnector("scandinavia", "unit-water-portal", {198, 222}, "jotunheim")

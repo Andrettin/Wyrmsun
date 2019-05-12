@@ -30,10 +30,8 @@
 EarthStartX = 4022
 EarthStartY = 667
 
-Load("scripts/map_templates/earth/asia_minor.lua")
 Load("scripts/map_templates/earth/austria.lua")
 Load("scripts/map_templates/earth/bohemia.lua")
-Load("scripts/map_templates/earth/croatia.lua")
 Load("scripts/map_templates/earth/denmark.lua")
 Load("scripts/map_templates/earth/france.lua")
 Load("scripts/map_templates/earth/germany.lua")
@@ -46,7 +44,6 @@ Load("scripts/map_templates/earth/portugal.lua")
 Load("scripts/map_templates/earth/romania.lua")
 Load("scripts/map_templates/earth/russia.lua")
 Load("scripts/map_templates/earth/slovakia.lua")
-Load("scripts/map_templates/earth/south_america.lua")
 Load("scripts/map_templates/earth/spain.lua")
 Load("scripts/map_templates/earth/sweden.lua")
 Load("scripts/map_templates/earth/ukraine.lua")

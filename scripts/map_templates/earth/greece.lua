@@ -25,37 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- some coastline fixes
-SetMapTemplateTileTerrain("earth", "shallow-water", {4334, 1175})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4335, 1176})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4336, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4336, 1176})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4337, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4338, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4340, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4340, 1176})
-
-SetMapTemplateTileTerrain("earth", "shallow-water", {4361, 1163})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4362, 1161})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4362, 1163})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4363, 1160})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4363, 1162})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4363, 1163})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4374, 1172})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4375, 1172})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4376, 1172})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4376, 1173})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4377, 1172})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4377, 1173})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4377, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4378, 1173})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4378, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4378, 1175})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4380, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4381, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4383, 1174})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4383, 1176})
-
 -- Diolkos railed way was built in the 6th century BC, during or after the time of Corinth's tyrant Periander (which is c. 600 BC), linking the two parts of the Isthmus of Corinth; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, pp. 10-12.
 SetMapTemplateTileTerrain("earth", "railroad", {4362, 1184}, -600)
 SetMapTemplateTileTerrain("earth", "railroad", {4362, 1185}, -600)
