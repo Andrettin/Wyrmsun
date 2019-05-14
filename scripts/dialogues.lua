@@ -28,6 +28,7 @@
 player = 0
 
 DefineDialogue("campaign-victory", {
+	CampaignVictoryDialogue = true,
 	Nodes = {
 		{
 			"text", "You have completed the scenario! You may now choose to end the game here, or to pursue a full conquest of your world.",
@@ -45,6 +46,7 @@ DefineDialogue("campaign-victory", {
 })
 
 DefineDialogue("campaign-defeat", {
+	CampaignDefeatDialogue = true,
 	Nodes = {
 		{
 			"text", "You have failed the scenario... But the game need not end. You still have forces standing, and you may choose to pursue a full conquest of your world instead of the scenario's objectives.",
