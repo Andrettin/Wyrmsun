@@ -25,35 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("aarhus", {
-	Name = "Aarhus",
-	MapTemplate = "earth",
-	Position = {4064, 777},
-	Major = true,
-	CulturalNames = {
-		"germanic", "Ahvoosa", -- tentative rendering of "Aarhus" in Proto-Germanic
-		"norse", "Aarhus"
-	},
-	Cores = {
-		"charude-tribe",
-		"jute-tribe"
-	},
-	HistoricalOwners = {
-		-5800, "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
-		{-2800, 12, 30}, "asa-tribe",
-		-1600, "",
-		{-1600, 12, 30}, "jarling-tribe",
-		1560, "denmark" -- Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-5800, 0, "town-hall"
-	},
-	HistoricalUnits = {
-		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "ertebolle-tribe"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
 DefineSite("brodrene-gram", {
 	Name = "Brodrene Gram", -- in southern Jutland
 	MapTemplate = "earth",
