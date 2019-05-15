@@ -161,26 +161,6 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 	}
 })
 
-DefineCampaign("the-heirs-return", {
-	Name = "The Heir's Return",
-	Description = "Upon the death of Aelle of Deira, his kingdom was taken over by the monarch of Bernicia. Aelle's son Edwin, then only a child, was taken in secret to another realm for the sake of his survival. After nearly twenty years of exile, Edwin has gathered an army, seeking to recover his birthright...",
-	Faction = "deira",
-	StartYear = 616,
-	MapTemplates = {
-		"earth", {3627, 695}, {256, 256}
-	}
-})
-
-DefineCampaign("the-fall-of-mercia", {
-	Name = "The Fall of Mercia",
-	Description = "For decades has Mercia enjoyed supremacy in England. Sensing an opportunity, king Egbert of Wessex desires to strike hard and fast into Mercian territory, and break their overlordship over the other southern English kingdoms forever.",
-	Faction = "wessex",
-	StartYear = 825,
-	MapTemplates = {
-		"earth", {3627, 695}, {256, 256}
-	}
-})
-
 DefineCampaign("halfdan-the-black", {
 	Name = "Halfdan the Black",
 	Description = "When Halfdan the Black was but a year old, his father was murdered and his mother forced to flee to her father's kingdom of Agder. Now eighteen years old, Halfdan has succeeded his grandfather to that realm...",

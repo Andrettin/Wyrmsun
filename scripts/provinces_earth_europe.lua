@@ -526,7 +526,7 @@ DefineProvince("Bosnia", {
 DefineProvince("Brandenburg", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Brandenburg"
+		"teuton", "Brandenburg",
 		"suebi", "Semnonia"
 	},
 --	SettlementLocation = {518, 106}, -- Berlin

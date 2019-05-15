@@ -1317,30 +1317,6 @@ DefineSite("wilton", {
 	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSite("winchester", {
-	Name = "Winchester",
-	MapTemplate = "earth",
-	Position = {3810, 885},
-	Major = true,
-	CulturalNames = {
-		"anglo-saxon", "Wintanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
-		"briton", "Verita Belgarum",
-		"celt", "Verita Belgarum",
-		"english", "Winchester",
-		"latin", "Verita Belgarum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-	},
-	HistoricalOwners = {
-		410, "rome", -- Verita Belgarum/Winchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "wessex", -- Winchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-		1560, "england" -- Winchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		410, 0, "town-hall",
-		660, 0, "temple" -- Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
-	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
-})
-
 DefineSite("winwaedsfield", {
 	Name = "Winwaedsfield",
 	MapTemplate = "earth",
