@@ -27,8 +27,8 @@
 
 DefineProvince("Alentejo", {
 	World = "earth",
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Alentejo"
+	CulturalNames = {
+		"portuguese", "Alentejo"
 	},
 --	SettlementLocation = {457, 146}, -- Evora
 	Claims = {
@@ -82,11 +82,9 @@ DefineProvince("Alsace", {
 DefineProvince("Andalusia", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Farther Baetica"
-	},
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Andalusia",
-		"castillian", "spain", "Andalusia"
+		"latin", "Farther Baetica",
+		"portuguese", "Andalusia",
+		"castillian", "Andalusia"
 	},
 --	SettlementLocation = {466, 148}, -- Cordoba
 	HistoricalOwners = {
@@ -119,9 +117,7 @@ DefineProvince("Aquitaine", {
 	World = "earth",
 	CulturalNames = {
 		"latin", "Aquitania",
-	},
-	FactionCulturalNames = {
-		"french", "france", "Aquitaine"
+		"french", "Aquitaine"
 	},
 --	SettlementLocation = {484, 131}, -- Toulouse
 	Claims = {
@@ -155,11 +151,9 @@ DefineProvince("Aquitaine", {
 DefineProvince("Aragon", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Hither Baetica"
-	},
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Aragon",
-		"castillian", "spain", "Aragon"
+		"latin", "Hither Baetica",
+		"portuguese", "Aragon",
+		"castillian", "Aragon"
 	},
 --	SettlementLocation = {477, 137}, -- Zaragoza
 	Claims = {
@@ -230,8 +224,8 @@ DefineProvince("Astrakhan", {
 
 DefineProvince("Asturias", {
 	World = "earth",
-	FactionCulturalNames = {
-		"castillian", "spain", "Asturias"
+	CulturalNames = {
+		"castillian", "Asturias"
 	},
 --	SettlementLocation = {463, 132}, -- Oviedo
 	Claims = {
@@ -317,10 +311,6 @@ DefineProvince("Bavaria", {
 		"latin", "Raetia",
 		"teuton", "Bavaria"
 	},
-	FactionCulturalNames = {
-		"teuton", "bavaria", "Bavaria",
-		"teuton", "bavarian-tribe", "Bavaria"
-	},
 --	SettlementLocation = {514, 116}, -- Regensburg
 	Claims = {
 		"teuton", "bavarian-tribe",
@@ -358,8 +348,8 @@ DefineProvince("Bavaria", {
 
 DefineProvince("Beira", {
 	World = "earth",
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Beira"
+	CulturalNames = {
+		"portuguese", "Beira"
 	},
 --	SettlementLocation = {453, 145}, -- Lisbon
 	Claims = {
@@ -380,11 +370,8 @@ DefineProvince("Beira", {
 DefineProvince("Belgium", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Belgica"
-	},
-	FactionCulturalNames = {
-		"frankish", "francia", "Austrasia",
-		"frankish", "frank-tribe", "Austrasia"
+		"latin", "Belgica",
+		"frankish", "Austrasia"
 	},
 --	SettlementLocation = {492, 111}, -- Brussels
 	Claims = {
@@ -412,8 +399,8 @@ DefineProvince("Belgium", {
 
 DefineProvince("Berry", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {487, 122}, -- Bourges
 	Claims = {
@@ -477,11 +464,8 @@ DefineProvince("Bohemia", {
 		"germanic", "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"latin", "Boiohaemum",
 		"slav", "Bohemia",
-		"teuton", "Bohemia" -- Böhmen
-	},
-	FactionCulturalNames = {
-		"suebi", "marcomanni-tribe", "Marcomannia",
-		"suebi", "suebi-tribe", "Marcomannia"
+		"teuton", "Bohemia", -- Böhmen
+		"suebi", "Marcomannia"
 	},
 --	SettlementLocation = {520, 113}, -- Prague
 	Claims = {
@@ -543,10 +527,7 @@ DefineProvince("Brandenburg", {
 	World = "earth",
 	CulturalNames = {
 		"teuton", "Brandenburg"
-	},
-	FactionCulturalNames = {
-		"suebi", "semnone-tribe", "Semnonia",
-		"suebi", "suebi-tribe", "Semnonia"
+		"suebi", "Semnonia"
 	},
 --	SettlementLocation = {518, 106}, -- Berlin
 	Claims = {
@@ -602,10 +583,8 @@ DefineProvince("Brittany", {
 	World = "earth",
 	CulturalNames = {
 		"celt", "Armorica",
-		"latin", "Armorica"
-	},
-	FactionCulturalNames = {
-		"french", "france", "Brittany"
+		"latin", "Armorica",
+		"french", "Brittany"
 	},
 --	SettlementLocation = {475, 119}, -- Rennes
 	HistoricalModifiers = {
@@ -679,8 +658,8 @@ DefineProvince("Bulgaria", {
 
 DefineProvince("Burgundy", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Bourgogne"
+	CulturalNames = {
+		"french", "Bourgogne"
 	},
 --	SettlementLocation = {494, 121}, -- Dijon
 	Claims = {
@@ -709,10 +688,8 @@ DefineProvince("Burgundy", {
 DefineProvince("Calabria", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Brutium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
-	},
-	FactionCulturalNames = {
-		"italian", "italy", "Calabria"
+		"latin", "Brutium", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
+		"italian", "Calabria"
 	},
 --	SettlementLocation = {526, 145}, -- Catanzaro
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -758,11 +735,9 @@ DefineProvince("Carniola", {
 DefineProvince("Castille", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Hispania Tarraconensis"
-	},
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Castille",
-		"castillian", "spain", "Castille"
+		"latin", "Hispania Tarraconensis",
+		"portuguese", "Castille",
+		"castillian", "Castille"
 	},
 --	SettlementLocation = {469, 141}, -- Madrid
 	HistoricalOwners = {
@@ -802,8 +777,8 @@ DefineProvince("Castille", {
 
 DefineProvince("Champagne", { -- includes Brie
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Champagne"
+	CulturalNames = {
+		"french", "Champagne"
 	},
 --	SettlementLocation = {491, 118}, -- Troyes
 	Claims = {
@@ -822,10 +797,8 @@ DefineProvince("Champagne", { -- includes Brie
 DefineProvince("Connaught", {
 	World = "earth",
 	CulturalNames = {
-		"gael", "Connaught"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Connaught"
+		"gael", "Connaught",
+		"english", "Connaught"
 	},
 --	SettlementLocation = {456, 103}, -- Roscommon
 	Claims = {
@@ -859,8 +832,8 @@ DefineProvince("Corinth", {
 
 DefineProvince("Cornwall", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "Cornwall"
+	CulturalNames = {
+		"english", "Cornwall"
 	},
 --	SettlementLocation = {465, 113}, -- Falmouth
 	Claims = {
@@ -951,8 +924,8 @@ DefineProvince("Crimea", {
 
 DefineProvince("Cumbria", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "Cumbria"
+	CulturalNames = {
+		"english", "Cumbria"
 	},
 --	SettlementLocation = {471, 100}, -- Carlisle
 	Claims = {
@@ -1005,8 +978,8 @@ DefineProvince("Dalmatia", {
 
 DefineProvince("Dauphiny", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {496, 128}, -- Grenoble
 	Claims = {
@@ -1026,9 +999,9 @@ DefineProvince("Dauphiny", {
 
 DefineProvince("Devon", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Devon",
-		"english", "england", "Devon"
+	CulturalNames = {
+		"anglo-saxon", "Devon",
+		"english", "Devon"
 	},
 --	SettlementLocation = {470, 111}, -- Exeter
 	Claims = {
@@ -1092,8 +1065,8 @@ DefineProvince("Don", {
 
 DefineProvince("Douro", {
 	World = "earth",
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Douro"
+	CulturalNames = {
+		"portuguese", "Douro"
 	},
 --	SettlementLocation = {456, 137}, -- Braga
 	Claims = {
@@ -1145,8 +1118,8 @@ DefineProvince("Drenthe", {
 
 DefineProvince("Durham", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "Durham"
+	CulturalNames = {
+		"english", "Durham"
 	},
 --	SettlementLocation = {475, 100}, -- Durham
 	Claims = {
@@ -1196,8 +1169,8 @@ DefineProvince("Dyfed", {
 
 DefineProvince("East Anglia", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "East Anglia"
+	CulturalNames = {
+		"english", "East Anglia"
 	},
 --	SettlementLocation = {484, 106}, -- Yarmouth
 	Claims = {
@@ -1265,9 +1238,9 @@ DefineProvince("Epirus", {
 
 DefineProvince("Essex", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Essex",
-		"english", "england", "Essex"
+	CulturalNames = {
+		"anglo-saxon", "Essex",
+		"english", "Essex"
 	},
 --	SettlementLocation = {480, 109}, -- London
 	Claims = {
@@ -1367,10 +1340,9 @@ DefineProvince("Finland", {
 
 DefineProvince("France", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "France",
-		"frankish", "francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
-		"frankish", "frank-tribe", "Neustria"
+	CulturalNames = {
+		"french", "France",
+		"frankish", "Neustria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
 	},
 --	SettlementLocation = {486, 117}, -- Paris
 	Claims = {
@@ -1406,10 +1378,8 @@ DefineProvince("Franche Comte", {
 	World = "earth",
 	CulturalNames = {
 		"celt", "Maxima Sequanorum",
-		"latin", "Maxima Sequanorum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	FactionCulturalNames = {
-		"french", "france", "Franche Comté"
+		"latin", "Maxima Sequanorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		"french", "Franche Comté"
 	},
 --	SettlementLocation = {497, 121}, -- Besançon
 	Claims = {
@@ -1446,11 +1416,8 @@ DefineProvince("Franche Comte", {
 DefineProvince("Franconia", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Franconia"
-	},
-	FactionCulturalNames = {
-		"frankish", "frank-tribe", "Franconia",
-		"teuton", "netherlands", "Franconia"
+		"teuton", "Franconia",
+		"frankish", "Franconia"
 	},
 --	SettlementLocation = {508, 114}, -- Würzburg
 	Claims = {
@@ -1548,12 +1515,10 @@ DefineProvince("Galicia", {
 DefineProvince("Gallaecia", {
 	World = "earth",
 	CulturalNames = {
-		"latin", "Gallaecia"
-	},
-	FactionCulturalNames = {
-		"suebi", "galicia", "Galicia",
-		"portuguese", "portugal", "Galicia",
-		"castillian", "spain", "Galicia"
+		"latin", "Gallaecia",
+		"suebi", "Galicia",
+		"portuguese", "Galicia",
+		"castillian", "Galicia"
 	},
 --	SettlementLocation = {456, 132}, -- Corunna
 	Claims = {
@@ -1576,8 +1541,8 @@ DefineProvince("Gallaecia", {
 
 DefineProvince("Galloway", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "Galloway"
+	CulturalNames = {
+		"english", "Galloway"
 	},
 --	SettlementLocation = {469, 99}, -- Dumfries
 	Claims = {
@@ -1741,11 +1706,8 @@ DefineProvince("Highland Scotland", {
 	CulturalNames = {
 		"celt", "Caledonia",
 		"latin", "Caledonia"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Highland Scotland",
-		"gael", "scot-tribe", "Highland Scotland",
-		"english", "scotland", "Highland Scotland"
+		"english", "Highland Scotland",
+		"gael", "Highland Scotland"
 	},
 --	SettlementLocation = {473, 93}, -- Aberdeen
 	Claims = {
@@ -1882,8 +1844,8 @@ DefineProvince("Hordaland", {
 
 DefineProvince("Hungary", {
 	World = "earth",
-	FactionCulturalNames = {
-		"magyar", "hungary", "Hungary"
+	CulturalNames = {
+		"magyar", "Hungary"
 	},
 --	SettlementLocation = {535, 120}, -- Pest
 	Claims = {
@@ -1998,9 +1960,9 @@ DefineProvince("Jutland", {
 
 DefineProvince("Kent", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Kent",
-		"english", "england", "Kent"
+	CulturalNames = {
+		"anglo-saxon", "Kent",
+		"english", "Kent"
 	},
 --	SettlementLocation = {483, 110}, -- Dover
 	Claims = {
@@ -2108,10 +2070,8 @@ DefineProvince("Latvia", {
 DefineProvince("Leinster", {
 	World = "earth",
 	CulturalNames = {
-		"gael", "Leinster"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Leinster"
+		"gael", "Leinster",
+		"english", "Leinster"
 	},
 --	SettlementLocation = {462, 104}, -- Dublin
 	Claims = {
@@ -2131,8 +2091,8 @@ DefineProvince("Leinster", {
 
 DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Liège"
+	CulturalNames = {
+		"french", "Liège"
 	},
 --	SettlementLocation = {495, 112}, -- Liège
 	Claims = {
@@ -2180,8 +2140,8 @@ DefineProvince("Liguria", {
 
 DefineProvince("Lincoln", {
 	World = "earth",
-	FactionCulturalNames = {
-		"english", "england", "Lincoln"
+	CulturalNames = {
+		"english", "Lincoln"
 	},
 --	SettlementLocation = {478, 104}, -- Lincoln
 	Claims = {
@@ -2248,10 +2208,8 @@ DefineProvince("Lombardy", {
 DefineProvince("Lorraine", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Lothringen"
-	},
-	FactionCulturalNames = {
-		"french", "france", "Lorraine"
+		"teuton", "Lothringen",
+		"french", "Lorraine"
 	},
 --	SettlementLocation = {496, 118}, -- Nancy
 	Claims = {
@@ -2266,10 +2224,8 @@ DefineProvince("Lorraine", {
 DefineProvince("Lothian", { -- includes Borders
 	World = "earth",
 	CulturalNames = {
-		"latin", "Valentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
-	FactionCulturalNames = {
-		"english", "england", "Lothian"
+		"latin", "Valentia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"english", "Lothian"
 	},
 --	SettlementLocation = {470, 97}, -- Edinburgh
 	Claims = {
@@ -2366,10 +2322,8 @@ DefineProvince("Lower Rhine", {
 DefineProvince("Luxemburg", {
 	World = "earth",
 	CulturalNames = {
-		"teuton", "Luxemburg"
-	},
-	FactionCulturalNames = {
-		"french", "france", "Luxembourg"
+		"teuton", "Luxemburg",
+		"french", "Luxembourg"
 	},
 --	SettlementLocation = {497, 115}, -- Luxemburg
 	Claims = {
@@ -2394,8 +2348,8 @@ DefineProvince("Luxemburg", {
 
 DefineProvince("Lyonnais", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {493, 125}, -- Lyons
 	Claims = {
@@ -2467,8 +2421,8 @@ DefineProvince("Malta", {
 
 DefineProvince("Marche", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {485, 124}, -- Guéret
 	Claims = {
@@ -2534,9 +2488,9 @@ DefineProvince("Mecklenburg", {
 
 DefineProvince("Mercia", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Mercia",
-		"english", "england", "Mercia"
+	CulturalNames = {
+		"anglo-saxon", "Mercia",
+		"english", "Mercia"
 	},
 --	SettlementLocation = {475, 106}, -- Tamworth
 	Claims = {
@@ -2677,10 +2631,8 @@ DefineProvince("Moselle", {
 DefineProvince("Munster", {
 	World = "earth",
 	CulturalNames = {
-		"gael", "Munster"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Munster"
+		"gael", "Munster",
+		"english", "Munster"
 	},
 --	SettlementLocation = {458, 106}, -- Clonmel
 	Claims = {
@@ -2751,10 +2703,8 @@ DefineProvince("Nordland", {
 DefineProvince("Normandy", {
 	World = "earth",
 	CulturalNames = {
-		"norse", "Normandy"
-	},
-	FactionCulturalNames = {
-		"french", "france", "Normandy"
+		"norse", "Normandy",
+		"french", "Normandy"
 	},
 --	SettlementLocation = {482, 115}, -- Rouen
 	Claims = {
@@ -2764,7 +2714,7 @@ DefineProvince("Normandy", {
 		-7000, "basque", "bellbeaker-tribe", -- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "frankish", "francia", -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		1560, "french", "france", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "french", "france" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-50, "latin", "rome",
@@ -2848,9 +2798,9 @@ DefineProvince("North Trondelag", {
 
 DefineProvince("Northumberland", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Bernicia",
-		"english", "england", "Northumberland"
+	CulturalNames = {
+		"anglo-saxon", "Bernicia",
+		"english", "Northumberland"
 	},
 --	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Claims = {
@@ -3085,8 +3035,8 @@ DefineProvince("Parma", {
 
 DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {486, 114}, -- Amiens
 	Claims = {
@@ -3129,8 +3079,8 @@ DefineProvince("Piedmont", {
 
 DefineProvince("Poitou", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Poitou"
+	CulturalNames = {
+		"french", "Poitou"
 	},
 --	SettlementLocation = {480, 123}, -- Poitiers
 	Claims = {
@@ -3194,8 +3144,8 @@ DefineProvince("Posen", {
 
 DefineProvince("Provence", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Provence"
+	CulturalNames = {
+		"french", "Provence"
 	},
 --	SettlementLocation = {495, 132}, -- Marseilles
 	Claims = {
@@ -3549,9 +3499,9 @@ DefineProvince("Slovakia", {
 
 DefineProvince("Somerset", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Somerset",
-		"english", "england", "Somerset"
+	CulturalNames = {
+		"anglo-saxon", "Somerset",
+		"english", "Somerset"
 	},
 --	SettlementLocation = {473, 110}, -- Wells
 	Claims = {
@@ -3590,10 +3540,8 @@ DefineProvince("South Trondelag", {
 DefineProvince("Strathclyde", {
 	World = "earth",
 	CulturalNames = {
-		"celt", "Strathclyde"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Strathclyde"
+		"celt", "Strathclyde",
+		"english", "Strathclyde"
 	},
 --	SettlementLocation = {467, 97}, -- Glasgow
 	Claims = {
@@ -3646,9 +3594,9 @@ DefineProvince("Styria", {
 
 DefineProvince("Sussex", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Sussex",
-		"english", "england", "Sussex"
+	CulturalNames = {
+		"anglo-saxon", "Sussex",
+		"english", "Sussex"
 	},
 --	SettlementLocation = {480, 111}, -- Newhaven
 	Claims = {
@@ -3796,8 +3744,8 @@ DefineProvince("Thuringia", {
 
 DefineProvince("Touraine", {
 	World = "earth",
-	FactionCulturalNames = {
-		"french", "france", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	CulturalNames = {
+		"french", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 --	SettlementLocation = {482, 121}, -- Tours
 	Claims = {
@@ -3939,10 +3887,8 @@ DefineProvince("Ukraine", {
 DefineProvince("Ulster", {
 	World = "earth",
 	CulturalNames = {
-		"gael", "Ulster"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Ulster"
+		"gael", "Ulster",
+		"english", "Ulster"
 	},
 --	SettlementLocation = {463, 100}, -- Belfast
 	Claims = {
@@ -4157,10 +4103,8 @@ DefineProvince("Vojvodina", {
 DefineProvince("Wales", {
 	World = "earth",
 	CulturalNames = {
-		"welsh", "Wales"
-	},
-	FactionCulturalNames = {
-		"english", "england", "Wales"
+		"welsh", "Wales",
+		"english", "Wales"
 	},
 --	SettlementLocation = {470, 109}, -- Cardiff
 	Claims = {
@@ -4223,9 +4167,9 @@ DefineProvince("Wallachia", {
 
 DefineProvince("Wessex", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Wessex",
-		"english", "england", "Wessex"
+	CulturalNames = {
+		"anglo-saxon", "Wessex",
+		"english", "Wessex"
 	},
 --	SettlementLocation = {476, 110}, -- Winchester
 	Claims = {
@@ -4349,9 +4293,9 @@ DefineProvince("Wurtemberg", {
 
 DefineProvince("York", {
 	World = "earth",
-	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Deira",
-		"english", "england", "York"
+	CulturalNames = {
+		"anglo-saxon", "Deira",
+		"english", "York"
 	},
 	Claims = {
 		"briton", "brigantes-tribe",
