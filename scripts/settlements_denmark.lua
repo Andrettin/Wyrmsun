@@ -75,31 +75,6 @@ DefineSite("legard", {
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
 
-DefineSite("leidre", {
-	Name = "Leidre",
-	MapTemplate = "earth",
-	Position = {4112, 784},
-	Major = true,
-	Cores = {
-		"dane-tribe"
-	},
-	CulturalNames = {
-		"germanic", "Leidre", -- should be a rendering of Lejre in Proto-Germanic instead
-		"norse", "Leidre"
-	},
-	HistoricalOwners = {
-		-5800, "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
-		{-2800, 12, 30}, "skeldung-tribe", -- Leidre / Lejre; Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38. In the Ynglinga Saga, Odin set his son Skjöldr to rule in Leidre after their people (who here we equate with the cultural ancestors of the Germanics who migrated to Scandinavia) conquered the land
-		-27, "herulian-tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		526, "dane-tribe", -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		919, "denmark" -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	},
-	HistoricalBuildings = {
-		-5800, 0, "town-hall"
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
-})
-
 DefineSite("store-tyrrestrup", {
 	Name = "Store Tyrrestrup",
 	MapTemplate = "earth",

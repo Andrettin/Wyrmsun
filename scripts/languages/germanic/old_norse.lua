@@ -951,14 +951,6 @@ DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
 })
 
-DefineLanguageWord("Holmr", { -- Fick and Kroonen also give the alternative form "holmi"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 254; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Small Island"}, -- Kroonen gives "small island", while Fick gives the German "Holm = See- oder Flußinsel"
-	Gender = "masculine", -- as given by both Fick and Kroonen
-	DerivesFrom = {"proto-germanic", "noun", "Hulma"} -- as given by both Fick and Kroonen
-})
-
 DefineLanguageWord("Hôr", { -- source also gives the alternative form "hâr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "old-norse",
 	Type = "adjective",
@@ -1548,18 +1540,6 @@ DefineLanguageWord("Sifiar", { -- Source: H. Munro Chadwick, "The Oak and the Th
 	GrammaticalNumber = "plural" -- the word is inherently plural
 })
 
-DefineLanguageWord("Sigr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "no-case", "Sig", -- presumably (assuming the "-r" ending here is a nominative ending)
-		"singular", "genitive", "Sigrs"
-	}
-})
-
 DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "old-norse",
 	Type = "noun",
@@ -1831,14 +1811,6 @@ DefineLanguageWord("Tryggr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Faithful"}
-})
-
-DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Enclosed Lawn in Front of the House", "Court Square", "City", "Town"}, -- source gives the German "eingehegter Grasplatz vor dem Hause, Hofplatz, Stadt" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
-	Gender = "neuter"
 })
 
 DefineLanguageWord("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.

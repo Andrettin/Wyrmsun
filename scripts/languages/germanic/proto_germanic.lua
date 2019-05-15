@@ -861,13 +861,6 @@ DefineLanguageWord("Hri", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Shout"} -- source gives the German "schreien" as the meaning
 })
 
-DefineLanguageWord("Hulma", { -- Fick and Kroonen both give "hulma(n)"; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 254; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Small Island", "Helm", "Helmet"}, -- Kroonen gives "small island", while Fick gives the German "Helm, Insel"
-	Gender = "masculine" -- as given by both Fick and Kroonen
-})
-
 DefineLanguageWord("Hulnia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1338,13 +1331,6 @@ DefineLanguageWord("Saivi", { -- source gives it as being from "saig-vi"; Source
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Segiz", { -- source gives "segiz(a)"; source also gives the alternative form "segu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Victory"}, -- source gives the German "Sieg" as the meaning
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Seta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1657,12 +1643,6 @@ DefineLanguageWord("Tīwaz", { -- name of a god; Fick gives "Tîva" instead, lik
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Tûna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Fence", "Enclosure"} -- source gives the German "Zaun, Gehege" as the meaning
 })
 
 DefineLanguageWord("Tunþska", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
