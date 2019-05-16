@@ -42,26 +42,6 @@ DefineSite("armagh", {
 	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
 })
 
-DefineSite("dublin", {
-	Name = "Dublin",
-	MapTemplate = "earth",
-	Position = {3696, 834},
-	Major = true,
-	CulturalNames = {
-		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"gael", "Dublin",
-		"english", "Dublin"
-	},
-	HistoricalOwners = {
-		802, "ireland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-	},
-	HistoricalBuildings = {
-		802, 0, "town-hall",
-		1312, 0, "university" -- University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
-	},
-	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
-})
-
 DefineSite("waterford", {
 	Name = "Waterford",
 	MapTemplate = "earth",

@@ -1705,9 +1705,9 @@ DefineProvince("Highland Scotland", {
 	World = "earth",
 	CulturalNames = {
 		"celt", "Caledonia",
-		"latin", "Caledonia"
 		"english", "Highland Scotland",
-		"gael", "Highland Scotland"
+		"gael", "Highland Scotland",
+		"latin", "Caledonia"
 	},
 --	SettlementLocation = {473, 93}, -- Aberdeen
 	Claims = {
