@@ -1724,6 +1724,7 @@ DefineCivilization("minotaur", {
 	Display = "Minotaur",
 	ParentCivilization = "neutral",
 	Species = "minotaur",
+	Language = "minotaur",
 	Adjective = "Minotaur",
 	Hidden = true,
 	Playable = false,
