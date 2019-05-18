@@ -378,7 +378,6 @@ DefineTerrainType("chasm", {
 
 DefineTerrainType("floor", {
 	Name = "Floor",
-	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
 	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow", "ice", "ford"},
@@ -1059,6 +1058,7 @@ DefineTerrainType("dwarven-wall", {
 
 DefineTerrainType("goblin-wall", {
 	Name = "Wall",
+	Character = "G",
 	Color = {160, 128, 128},
 	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
