@@ -92,6 +92,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
+- Improved the map generation algorithm.
+- The Earth map is now semi-randomly generated, as occurs with the Nidavellir map. Besides increasing replayability, this change makes it more viable to use different scales for different regions of the Earth map (e.g. Scandinavia being oversized so that there is enough space for its settlements represented in the game, particularly in Gotland and Zealand).
 
 * Units
 - Green Slimes now possess a new icon.
