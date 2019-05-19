@@ -25,9 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateLayerConnector("caverns-of-chaincolt-gates", "unit-cavern-entrance", {11, 16}, 1)
-SetMapTemplateLayerConnector("caverns-of-chaincolt-gates-underground", "unit-cavern-entrance", {13, 14}, 0)
-
 --[[
 SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {460, 226}, 25)
 SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {464, 228}, 25)
