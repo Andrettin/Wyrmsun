@@ -1,3 +1,5 @@
+/graphics/backgrounds/dwarven_victory.png (by Jinn) (licensed under the CC0)
+/graphics/backgrounds/dwarven_victory_sepia.png (by Jinn) (licensed under the CC0)
 /graphics/backgrounds/gnashorn.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/gnashorn_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/goblin_victory.png (by Jinn) (licensed under the CC0)
