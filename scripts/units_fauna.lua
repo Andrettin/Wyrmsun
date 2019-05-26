@@ -599,6 +599,7 @@ DefineUnitType("unit-rat", {
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
 	RandomMovementDistance = 3,
+	PeopleAversion = true,
 	Flesh = true,
 	Carnivore = true,
 	PierceDamage = true,

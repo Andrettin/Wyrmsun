@@ -95,12 +95,20 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the map generation algorithm.
 - The Earth map is now semi-randomly generated, as occurs with the Nidavellir map. Besides increasing replayability, this change makes it more viable to use different scales for different regions of the Earth map (e.g. Scandinavia being oversized so that there is enough space for its settlements represented in the game, particularly in Gotland and Zealand).
 
+* Terrain
+- Improved the performance of the tile code.
+
 * Units
 - Green Slimes now possess a new icon.
 - Derro Workers, Thugs, Executioners and Shadowguards now have new icons.
 - New icon for the Goblin Militia.
 - Elven swordsmen now have the same sight range at day and night.
 - Revamped fauna unit name generation, so that if a given fauna species lacks enough proper names, they will use the names of the closest-related group of species available. For example: yales lack their own proper names, but there are defined proper names for goats (mainly from mythological goats in Norse legends); since both yales and goats are caprine species, yales have access to caprine proper names, and thus can use goat names for their name generation. Another example: the various types of bats have no proper names defined for them. They will go up in their species group tree, until they reach one which has enough proper names; in the case of bats that their closest-related species group with enough proper names is that of mammals, so they will use the proper names that have been defined for all mammal species. This pretty much ensures that all animals will have proper names, and that the names will be as sensible for their species as possible.
+- Fauna unit random movement can now cause them to move between surface layers. Bats may now venture above ground if it is night there, and will return underground at dawn if there is a cavern entrance nearby.
+- Rats now attack non-neutral organic sapient units that are adjacent to them, like e.g. common bats do.
+- Improved the performance of unit autocast.
+- Improved the performance of unit animations.
+- Improved the performance of unit status effect timer decrementing.
 
 * Upgrades
 - The Architecture icon has been updated.
