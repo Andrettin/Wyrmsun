@@ -53,9 +53,6 @@ Load("scripts/map_templates/nidavellir/ofnirs_valley.lua")
 Load("scripts/map_templates/nidavellir/outskirts_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/peaceful_valley.lua")
 Load("scripts/map_templates/nidavellir/shorbear_hills.lua")
---]]
-Load("scripts/map_templates/nidavellir/svarinshaug.lua")
---[[
 Load("scripts/map_templates/nidavellir/swamp_of_dread.lua")
 --]]
 Load("scripts/map_templates/nidavellir/untersberg.lua")

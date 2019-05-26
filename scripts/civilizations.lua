@@ -557,6 +557,8 @@ DefineCivilization("dwarf", {
 	Adjective = "Dwarven",
 	DefaultPlayerColor = "red",
 	CivilizationUpgrade = "upgrade-dwarven-civilization",
+	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
+	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -1560,6 +1562,8 @@ DefineCivilization("germanic", {
 	DefaultPlayerColor = "orange",
 	Calendar = "anglo-saxon-calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
+	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
+	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-germanic-wooden-oblong-shield",
@@ -1658,6 +1662,7 @@ DefineCivilization("goblin", {
 	DefaultPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-goblin-civilization",
 	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
+	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
