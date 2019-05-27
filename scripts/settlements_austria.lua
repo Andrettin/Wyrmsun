@@ -280,39 +280,6 @@ DefineSite("trent", {
 	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
 })
 
-DefineSite("vienna", {
-	Name = "Vienna",
-	MapTemplate = "earth",
-	Position = {4212, 953},
-	Major = true,
-	CulturalNames = {
-		"celt", "Vindobona",
-		"gaul", "Vindobona",
-		"latin", "Vindobona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Vienna" -- "Wien"
-	},
-	HistoricalOwners = {
-		10, "rome", -- Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "", -- Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		955, "bavaria", -- Vienna became a part of the Bavarian East March in 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1156, "austria", -- Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1477, "austria" -- Vienna was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-	},
-	HistoricalBuildings = {
-		10, 161, "town-hall",
-		161, 526, "stronghold", -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 526, "barracks",
-		955, 0, "town-hall",
-		1365, 0, "university", -- University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1759, 0, "market", "temisvarer-privilegierte-handelskompagnie" -- "Temisvarer privilegierte Handelskompagnie" founded in 1759, with triple direction in Vienna, Trieste and Temesvar; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
-		-- Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
-	},
-	HistoricalPopulation = {
-		1844, 374378, -- the Austrian Kreis of "Haupt- und Residenstadt Wien" had 374,378 inhabitants in 1844 (excluding military personnel); Source: "Tafeln zur Statistik der österreichischen Monarchie für das Jahr 1844", 1848, Tafel 50.
-	},
-	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
-})
-
 DefineSite("villach", {
 	Name = "Villach",
 	MapTemplate = "earth",

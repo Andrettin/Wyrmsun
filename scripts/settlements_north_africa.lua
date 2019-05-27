@@ -25,24 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("carthage", {
-	Name = "Carthage",
-	MapTemplate = "earth",
-	Position = {4071, 1209},
-	Major = true,
-	CulturalNames = {
-		"latin", "Carthage", -- "Carthago"; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"phoenician", "Carthage"
-	},
-	HistoricalOwners = {
-		-218, "carthage" -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-	},
-	HistoricalBuildings = {
-		-218, 0, "town-hall"
-	},
-	Regions = {"africa"}
-})
-
 DefineSite("utica", {
 	Name = "Utica",
 	MapTemplate = "earth",
