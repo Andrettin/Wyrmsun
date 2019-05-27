@@ -474,35 +474,6 @@ DefineSite("ravenna", {
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
 
-DefineSite("rome", {
-	Name = "Rome",
-	MapTemplate = "earth",
-	Position = {4126, 1096},
-	Major = true,
-	CulturalNames = {
-		"italian", "Rome",
-		"latin", "Rome" -- "Roma"; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-750, "latin-tribe", -- Latins present in Latium by 750-625 BC, and Rome was in existence as well; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-500, "rome", -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		526, "ostrogothia", -- Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1494, "papal-states" -- Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		-750, 0, "town-hall",
-		-192, 0, "dock", -- Mercantile docks were built at Rome in 192 BC and 174 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 244.
-		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
---		-40, 0, "dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		-40, 0, "road", -- Roads existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		1303, 0, "university" -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	HistoricalPopulation = {
-		1600, 100000 -- Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
-	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
-})
-
 DefineSite("sena-gallica", {
 	Name = "Sena Gallica",
 	MapTemplate = "earth",
