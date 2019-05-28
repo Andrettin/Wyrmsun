@@ -416,16 +416,6 @@ DefineCharacter("beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Deities = {"odin", "tyr"}
 })
 
-DefineCharacter("branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Branda", -- "Brandr" in the original; this is a Proto-Germanic rendering of the name
-	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "germanic",
-	-- his father was in the Prose Edda set to rule over Westphalia
-	Father = "beldeg",
-	Deities = {"odin", "tyr"}
-})
-
 DefineCharacter("frjodigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Frjodigar", -- "Frjódigar"; also known as Fródi
 	Gender = "male",
@@ -482,29 +472,6 @@ DefineCharacter("rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	-- his father was in the Prose Edda set to rule over Frankland
 	Father = "sigi",
 	Deities = {"odin", "tyr"}
-})
-
-DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
-	-- ancestor of the Danish kings; from him spring the Skjoldungs
-	Name = "Skeldu", -- "Skjöldr" in the original; this is a Proto-Germanic rendering of the name
-	-- Danish king Scyld Scefing in Beowulf; Source: Stephen Mitchell, "Beowulf", 2017, p. 3.
-	Gender = "male",
-	Type = "unit-germanic-chieftain", -- chieftain
-	Civilization = "germanic",
-	StartDate = -2800,
-	DeathDate = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
-	Father = "voden",
-	Mother = "frigida", -- presumably, since she was Vóden's wife
-	Deities = {"odin", "tyr"},
-	HistoricalTitles = {
-		"head-of-state", -2800, -2800 + (30 * 2), "skeldung-tribe"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "asa-tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
-			return true
-		end
-		return false
-	end
 })
 
 DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.

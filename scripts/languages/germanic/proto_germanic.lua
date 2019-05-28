@@ -138,13 +138,6 @@ DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fic
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Aban", { -- as given by Kroonen; Fick gives "Avan" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Man", "Husband"}, -- as given by Kroonen; Fick gives the German "Großvater" as the meaning instead
-	Gender = "masculine" -- as given by both Kroonen and Fick
-})
-
 DefineLanguageWord("Avôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -282,13 +275,6 @@ DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Tablet"}
-})
-
-DefineLanguageWord("Branda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Fire", "Stick", "Stick for Burning"}, -- source gives the German "Brand, Stock (zum Brennen)" as the meaning
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Brannian", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -491,12 +477,6 @@ DefineLanguageWord("Etanan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Eat"}
-})
-
-DefineLanguageWord("Faðēr", { -- given in 2.3 as "Fadēr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 3.2.4.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Father"}
 })
 
 DefineLanguageWord("Falta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
@@ -1372,13 +1352,6 @@ DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Plowshare"} -- source gives "Schar, Pflugeisen" as the meaning
-})
-
-DefineLanguageWord("Skeldu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Split Piece of Wood", "Board", "Shield"}, -- source gives the German "(gespaltenes Holzstück) Brett, Schild" as the meaning
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Skîrô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.

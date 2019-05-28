@@ -1582,8 +1582,6 @@ DefineCivilization("germanic", {
 	PersonalNames = {
 		"female", "Ammon", -- Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
 		"female", "Moder", -- Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
-		"male", "Aban", -- Proto-Germanic rendering of "Afi", Karl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
-		"male", "Fader", -- Proto-Germanic rendering of "Fathir", Jarl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
 		"male", "Godagaz", -- correct?
 		"male", "Hadulaikaz", -- correct?
 		"male", "Hagustaldaz", -- correct?
@@ -2883,6 +2881,7 @@ DefineCivilization("assyrian", {
 	Display = "Assyrian",
 	ParentCivilization = "greek",
 	Species = "human",
+	Language = "assyrian",
 	Adjective = "Assyrian",
 	Hidden = true,
 	Playable = false,
@@ -2896,6 +2895,7 @@ DefineCivilization("babylonian", {
 	Display = "Babylonian",
 	ParentCivilization = "greek",
 	Species = "human",
+	Language = "babylonian",
 	Adjective = "Babylonian",
 	Hidden = true,
 	Playable = false,
@@ -3086,6 +3086,7 @@ DefineCivilization("phoenician", {
 	Display = "Phoenician",
 	ParentCivilization = "persian",
 	Species = "human",
+	Language = "phoenician",
 	Adjective = "Phoenician",
 	Hidden = true,
 	Playable = false,
