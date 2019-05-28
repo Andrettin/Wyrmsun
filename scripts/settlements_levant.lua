@@ -623,30 +623,6 @@ DefineSite("jericho", {
 	Regions = {"asia"}
 })
 
-DefineSite("jerusalem", {
-	Name = "Jerusalem",
-	MapTemplate = "earth",
-	Position = {4642, 1327},
-	Major = true,
-	CulturalNames = {
-		"babylonian", "Jerusalem",
-		"hebrew", "Jerusalem",
-		"persian", "Jerusalem",
-		"phoenician", "Jerusalem"
-	},
-	HistoricalOwners = {
-		-1250, "canaanite-tribe", -- Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-1025, "israel", -- Jerusalem was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-953, "judah", -- Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-		-600, "babylon", -- Jerusalem was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "persia" -- Jerusalem was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-1250, 0, "town-hall"
-	},
-	Regions = {"asia"}
-})
-
 DefineSite("jezreel", {
 	Name = "Jezreel",
 	MapTemplate = "earth",

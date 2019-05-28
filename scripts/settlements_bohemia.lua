@@ -70,31 +70,3 @@ DefineSite("kutna-hora", {
 	},
 	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
 })
-
-DefineSite("prague", {
-	Name = "Prague",
-	MapTemplate = "earth",
-	Position = {4169, 908},
-	Major = true,
-	CulturalNames = {
-		"slav", "Prague",
-		"suebi", "Bubienum", -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-		"teuton", "Prague"
-	},
-	Cores = {
-		"marcomanni-tribe"
-	},
-	HistoricalOwners = {
-		-9, "marcomanni-tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
-		526, "bavarian-tribe", -- Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1477, "bohemia", -- Prague was a Bohemian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1526, "austria", -- Prague became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "austria" -- Prague was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-9, 0, "town-hall",
-		1231, 0, "temple", -- Agnes Přemyslovna founded the St. Agnes' Cloister (in Prague) in 1231; Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
-		1347, 0, "university" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
-})
