@@ -35,7 +35,6 @@ Load("scripts/civilizations/greek/works.lua")
 Load("scripts/civilizations/latin/works.lua")
 Load("scripts/civilizations/norse/works.lua")
 Load("scripts/civilizations/teuton/works.lua")
-Load("scripts/civilizations/troll/works.lua")
 Load("scripts/civilizations/welsh/works.lua")
 
 local literary_works = GetLiteraryWorks()
