@@ -88,5 +88,4 @@ DefineCharacter("tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 })
 
 Load("scripts/civilizations/goth/characters_burgundian.lua")
-Load("scripts/civilizations/goth/characters_ostrogoth.lua")
 Load("scripts/civilizations/goth/characters_visigoth.lua")

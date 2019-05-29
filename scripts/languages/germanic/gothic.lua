@@ -654,13 +654,6 @@ DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Hardus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
-	Language = "gothic",
-	Type = "adjective",
-	Meanings = {"Hard", "Strict"}, -- source gives the German "hart, streng" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
-})
-
 DefineLanguageWord("Harjis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 10.
 	Language = "gothic",
 	Type = "noun",
@@ -1392,14 +1385,6 @@ DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realizatio
 	Language = "gothic",
 	Type = "adverb",
 	Meanings = {"Out"}
-})
-
-DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"},
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Waihjō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
