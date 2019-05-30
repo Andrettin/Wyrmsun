@@ -57,7 +57,7 @@ DefineTileset("name", "Cave",
 			{}},								-- 060
 		"solid", { "unused",
 			{}},								-- 070
-		"solid", { "cave-wall", "land", "rock", "unpassable", "air-unpassable",
+		"solid", { "cave-wall", "land", "unpassable", "air-unpassable",
 			{ 18, 18, 18, 18}},					-- 080
 		"solid", { "unused",
 			{}},								-- 090
@@ -124,7 +124,7 @@ DefineTileset("name", "Cave",
 			{ 200, 200, 200},							-- 3D0
 			{},									-- 3E0
 			{}},								-- 3F0
-		"mixed", { "cave-wall", "rockbound-cave-floor", "land", "rock", "unpassable", "air-unpassable",
+		"mixed", { "cave-wall", "rockbound-cave-floor", "land", "unpassable", "air-unpassable",
 			{ 35, 38, 35},							-- 400
 			{ 33, 36, 33},							-- 410
 			{ 34, 37, 40},							-- 420
