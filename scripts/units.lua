@@ -474,11 +474,13 @@ DefineUnitType("unit-minecart", {
 	Sounds = {
 		"selected", "gold-mine-selected",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves",
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves",
 		"dead", "explosion"
 	}
 } )
@@ -522,11 +524,13 @@ DefineUnitType("unit-caravan", {
 		"selected", "click",
 		"dead", "explosion",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-grass", "step-leaves",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "grass", "step-leaves",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone"
 	}
 } )
 
@@ -2387,7 +2391,6 @@ DefineUnitType("unit-small-rocks", { Name = "Small Rocks",
 	Indestructible = true,
 	VisibleUnderFog = true,
 	Diminutive = true,
-	Gravel = true, -- makes them play the gravel step sound when stepped upon
 	Variations = {
 		{
 			"variation-id", "1"
@@ -3725,11 +3728,13 @@ DefineUnitType("unit-template-worker", {
 	},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -3840,11 +3845,13 @@ DefineUnitType("unit-template-militia", {
 	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-grass", "step-leaves",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "grass", "step-leaves",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone"
 	}
 } )
 
@@ -3890,11 +3897,13 @@ DefineUnitType("unit-template-merchant", {
 	},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -3951,11 +3960,13 @@ DefineUnitType("unit-template-infantry", {
 	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4083,11 +4094,13 @@ DefineUnitType("unit-template-archer", {
 	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4183,11 +4196,13 @@ DefineUnitType("unit-template-thief", {
 	AiDrops = {"unit-christmas-hat"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4225,11 +4240,13 @@ DefineUnitType("unit-template-cavalry", {
 	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4304,11 +4321,13 @@ DefineUnitType("unit-template-spear-cavalry", {
 	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4364,11 +4383,13 @@ DefineUnitType("unit-template-priest", {
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -4471,11 +4492,13 @@ DefineUnitType("unit-template-siege-engine", {
 	Sounds = {
 		"selected", "click",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 })
 

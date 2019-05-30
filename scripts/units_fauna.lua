@@ -457,11 +457,13 @@ DefineUnitType("unit-adelobasileus-cromptoni", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -508,11 +510,13 @@ DefineUnitType("unit-galerix-exilis", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -560,11 +564,13 @@ DefineUnitType("unit-megacricetodon-collongensis", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 --]]
@@ -625,11 +631,13 @@ DefineUnitType("unit-rat", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -694,11 +702,13 @@ DefineUnitType("unit-horse", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -762,11 +772,13 @@ DefineUnitType("unit-goat", {
 		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 })
 
@@ -871,11 +883,13 @@ DefineUnitType("unit-boar", {
 		"hit", "club-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 })
 
@@ -930,11 +944,13 @@ DefineUnitType("unit-wolf", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 })
 
@@ -1105,11 +1121,13 @@ DefineUnitType("unit-wyrm", {
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 
@@ -1223,11 +1241,13 @@ DefineUnitType("unit-slime", {
 		"hit", "squishy-attack",
 		"miss", "squishy-miss",
 		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
+		"terrain-type-step", "dirt", "step-dirt",
+		"terrain-type-step", "dry-mud", "step-dirt",
+		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
+		"terrain-type-step", "mud", "step-mud",
+		"terrain-type-step", "cave-floor", "step-stone",
+		"terrain-type-step", "road", "step-stone",
+		"terrain-type-step", "grass", "step-leaves"
 	}
 } )
 

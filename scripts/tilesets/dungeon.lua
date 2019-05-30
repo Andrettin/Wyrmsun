@@ -48,13 +48,13 @@ DefineTileset("name", "Dungeon",
     {}},								-- 010
   "solid", { "unused",
     {}},								-- 020
-  "solid", { "rockbound-cave-floor", "land", "no-building", "gravel",
+  "solid", { "rockbound-cave-floor", "land", "no-building",
     { 432, 433, 434, 432}},						-- 030
-  "solid", { "rug", "land", "grass", -- since the "dark unbuildable land" slot is unused, use it for the rug (essentially a second type of "dark buildable land")
+  "solid", { "rug", "land", -- since the "dark unbuildable land" slot is unused, use it for the rug (essentially a second type of "dark buildable land")
     { 448, 449, 448, 449}},						-- 040
-  "solid", { "floor", "land", "stone-floor",
+  "solid", { "floor", "land",
     { 464, 465, 466, 467}},						-- 050
-  "solid", { "gold-pile", "land", "stone-floor",
+  "solid", { "gold-pile", "land",
     { 480, 481, 482, 483, 484}},					-- 060
   "solid", { "unused",
     {}},								-- 070
@@ -108,7 +108,7 @@ DefineTileset("name", "Dungeon",
     { 229, 230},							-- 2D0
     {},									-- 2E0
     {}},								-- 2F0
-  "mixed", { "rug", "floor", "land", "grass",
+  "mixed", { "rug", "floor", "land",
     { 336, 336, 336},							-- 300
     { 338, 338, 338},							-- 310
     { 340, 341, 340},							-- 320
@@ -142,7 +142,7 @@ DefineTileset("name", "Dungeon",
     { 131, 131, 131},							-- 4D0
     {},									-- 4E0
     {}},								-- 4F0
-  "mixed", { "rockbound-cave-floor", "floor", "land", "no-building", "gravel",
+  "mixed", { "rockbound-cave-floor", "floor", "land", "no-building",
     { 272, 272, 272},							-- 500
     { 274, 274, 274},							-- 510
     { 276, 277, 278},							-- 520
@@ -159,7 +159,7 @@ DefineTileset("name", "Dungeon",
     { 302, 303, 302},							-- 5D0
     {},									-- 5E0
     {}},								-- 5F0
-  "mixed", { "gold-pile", "floor", "land", "stone-floor",
+  "mixed", { "gold-pile", "floor", "land",
     { 304, 304, 304},							-- 600
     { 306, 306, 306},							-- 610
     { 308, 309, 310},							-- 620
