@@ -110,6 +110,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of unit animations.
 - Improved the performance of unit status effect timer decrementing.
 - Improved the performance of random unit movement (e.g. fauna random movement).
+- Improved the performance of unit pathfinding.
 
 * Upgrades
 - The Architecture icon has been updated.
