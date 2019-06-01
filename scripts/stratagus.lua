@@ -1932,7 +1932,6 @@ local defaultPreferences = {
 	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
-	UseOpenGL = true,
 	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 1066,
@@ -1992,7 +1991,6 @@ SetKeyScrollSpeed(wyr.preferences.KeyScrollSpeed)
 SetMusicEnabled(wyr.preferences.MusicEnabled)
 SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-SetUseOpenGL(wyr.preferences.UseOpenGL)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey

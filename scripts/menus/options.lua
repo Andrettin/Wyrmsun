@@ -617,7 +617,6 @@ function RunVideoOptionsMenu()
 	local offx = (Video.Width - 352) / 2
 	local offy = (Video.Height - 352) / 2
 	local checkTexture
-	local checkOpenGL
 	local b
 	local resolution_width_list = {"1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
 	local resolution_width_dd
@@ -748,17 +747,6 @@ function RunVideoOptionsMenu()
 		end
 	)
 	if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
-
-	checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*9 + 14,
-		function()
---TODO: Add function for immediately change state of OpenGL
-			wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
-			SavePreferences()
---			menu:stop() --TODO: Enable if we have an OpenGL function
-		end
-	)
-	checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
---	checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
 	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 		wyr.preferences.EffectsVolume = GetEffectsVolume()
