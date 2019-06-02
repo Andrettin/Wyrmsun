@@ -55,13 +55,6 @@ DefineCharacter("grid", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	-- giantess who helps Thor and Thialfi against Geirrod in Norse mythology
 })
 
-DefineCharacter("gymir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 90-91.
-	Name = "Gymir",
-	Gender = "male",
-	Type = "unit-ettin", -- frost giant
-	Civilization = "ettin"
-})
-
 DefineCharacter("hraesvelg", { -- giant who took the form of an eagle in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 18, 245.
 	Name = "Hraesvelg",
 	Gender = "male",
@@ -75,13 +68,6 @@ DefineCharacter("hrungnir", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Type = "unit-ettin",
 	Civilization = "ettin",
 	Trait = "upgrade-strong"
-})
-
-DefineCharacter("hymir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 102-105.
-	Name = "Hymir",
-	Gender = "male",
-	Type = "unit-ettin", -- frost giant
-	Civilization = "ettin"
 })
 
 DefineCharacter("mokkurkalfi", { -- giant made of clay from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
@@ -104,13 +90,6 @@ DefineCharacter("thiazi", { -- giant from Norse mythology; Source: Kevin Crossle
 	Gender = "male",
 	Type = "unit-ettin",
 	Civilization = "ettin"
-})
-
-DefineCharacter("thrym", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 109-112.
-	Name = "Thrym", -- "Þrymr"
-	Gender = "male",
-	Type = "unit-ettin",
-	Civilization = "ettin" -- frost giant from Norse mythology
 })
 
 DefineCharacter("gerd", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 54-58, 243; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 108-120; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 90-91.
