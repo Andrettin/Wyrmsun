@@ -68,4 +68,3 @@ PopupMenu/styles/hover = SubResource( 8 )
 PopupMenu/styles/panel = ExtResource( 3 )
 PopupMenu/styles/panel_disabled = ExtResource( 3 )
 PopupMenu/styles/separator = null
-

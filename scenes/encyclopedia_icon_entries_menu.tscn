@@ -40,4 +40,3 @@ shortcut = ExtResource( 7 )
 script = ExtResource( 8 )
 button_text = "~!Previous Menu"
 target_scene = "encyclopedia_category_civilization_menu"
-

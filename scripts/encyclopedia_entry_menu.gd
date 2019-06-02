@@ -517,6 +517,8 @@ func get_cost_strings(entry):
 func exit_entry_menu():
 	if (origin_scene.get("entry")):
 		encyclopedia.set_category_and_civilization_from_entry(origin_scene.get("entry"))
+	if (origin_scene.filename == "res://scenes/encyclopedia_entry_menu.tscn"):
+		origin_scene.popup() #the origin scene was hidden before in this case, as that was needed to make the scene be displayed properly
 	queue_free()
 	get_parent().remove_child(self)
 

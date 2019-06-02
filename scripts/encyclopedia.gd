@@ -135,9 +135,11 @@ func does_category_use_button_lists():
 func open_entry(entry, origin_scene):
 	var entry_menu = load("res://scenes/encyclopedia_entry_menu.tscn").instance()
 	entry_menu.origin_scene = origin_scene
-	get_tree().get_root().add_child(entry_menu)
-	entry_menu.popup()
+	get_tree().current_scene.add_child(entry_menu)
 	entry_menu.change_entry(entry)
+	entry_menu.popup()
+	if (origin_scene.filename == "res://scenes/encyclopedia_entry_menu.tscn"):
+		origin_scene.hide() #needed to make the scene be displayed properly
 
 func open_entry_link(entry_link, origin_scene):
 	var link_array = entry_link.split(":")
@@ -160,7 +162,7 @@ func open_entry_link(entry_link, origin_scene):
 		entry = wyrmgus.get_world(entry_ident)
 	
 	set_category_and_civilization_from_entry(entry)
-		
+	
 	open_entry(entry, origin_scene)
 	
 func get_category_ident_for_entry(entry):

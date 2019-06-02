@@ -8,6 +8,9 @@ func _ready():
 func set_entry(entry):
 	self.entry = entry
 	
+	if (entry.get_icon() == null):
+		printerr("Entry \"%s\" has no icon." % [entry.get_ident()])
+	
 	set_icon(entry.get_icon())
 	
 	var tooltip_text = ""

@@ -71,7 +71,7 @@ function RunTechTreeMenu(civilization_number)
 			techicon_frame = GetIconData(GetUnitTypeData(unit, "Icon"), "Frame")
 		else
 			unit_name = GetUpgradeData(unit, "Name")
-			tech_description = CUpgrade:Get(unit).Description
+			tech_description = GetUpgradeData(unit, "Description")
 			techicon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit, "Icon"), "File"))
 			techicon_frame = GetIconData(GetUpgradeData(unit, "Icon"), "Frame")
 		end
