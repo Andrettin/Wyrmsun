@@ -123,10 +123,13 @@ func update_entry_description():
 		entry_description_text += "Civilization:" + " " + entry.get_civilization().get_name() + "\n\n"
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
-		entry_description_text += "Faction:" + " " + entry.get_faction().get_name() + "\n\n"
+		entry_description_text += tr("Faction") + ": [url=faction:" + entry.get_faction().get_ident() + "]" + entry.get_faction().get_name() + "[/url]\n\n"
 	
 	if (entry.has_method("get_unit_type") and entry.get_unit_type() != null):
 		entry_description_text += tr("Unit Type") + ": [url=unit:" + entry.get_unit_type().get_ident() + "]" + entry.get_unit_type().get_name() + "[/url]\n\n"
+	
+	if (entry.has_method("get_type") and entry.get_type() != null):
+		entry_description_text += tr("Type") + ": " + entry.get_type().get_name() + "\n\n"
 		
 	if (entry.has_method("get_level")):
 		entry_description_text += tr("Level") + ": " + str(entry.get_level()) + "\n\n"

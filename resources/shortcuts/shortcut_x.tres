@@ -5,4 +5,3 @@ scancode = 88
 
 [resource]
 shortcut = SubResource( 1 )
-

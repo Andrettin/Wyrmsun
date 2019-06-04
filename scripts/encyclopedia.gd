@@ -44,6 +44,10 @@ func set_category(category_ident):
 	if (category_ident == "buildings"):
 		self.category = Category.Buildings
 		potential_entries = wyrmgus.get_building_unit_types()
+	elif (category_ident == "factions"):
+		self.category = Category.Factions
+		potential_entries = wyrmgus.get_factions()
+		potential_entries.sort_custom(self, "sort_factions")
 	elif (category_ident == "heroes"):
 		self.category = Category.Heroes
 		potential_entries = wyrmgus.get_characters()
@@ -83,6 +87,8 @@ func set_category(category_ident):
 func get_category_ident():
 	if (self.category == Category.Buildings):
 		return "buildings"
+	elif (self.category == Category.Factions):
+		return "factions"
 	elif (self.category == Category.Heroes):
 		return "heroes"
 	elif (self.category == Category.Items):
@@ -103,6 +109,8 @@ func get_category_ident():
 func get_category_name():
 	if (self.category == Category.Buildings):
 		return "Buildings"
+	elif (self.category == Category.Factions):
+		return "Factions"
 	elif (self.category == Category.Heroes):
 		return "Heroes"
 	elif (self.category == Category.Items):
@@ -121,7 +129,7 @@ func get_category_name():
 		return ""
 	
 func is_category_separated_by_civilization():
-	if (self.category == Category.Buildings || self.category == Category.Heroes || self.category == Category.Units):
+	if (self.category == Category.Buildings || self.category == Category.Factions || self.category == Category.Heroes || self.category == Category.Units):
 		return true
 	else:
 		return false
@@ -152,6 +160,8 @@ func open_entry_link(entry_link, origin_scene):
 		entry = wyrmgus.get_unit_type(entry_ident)
 	elif (entry_type_ident == "character"):
 		entry = wyrmgus.get_character(entry_ident)
+	elif (entry_type_ident == "faction"):
+		entry = wyrmgus.get_faction(entry_ident)
 	elif (entry_type_ident == "literary_text"):
 		entry = wyrmgus.get_literary_text(entry_ident)
 	elif (entry_type_ident == "plane"):
@@ -168,6 +178,8 @@ func open_entry_link(entry_link, origin_scene):
 func get_category_ident_for_entry(entry):
 	if (entry.is_class("CCharacter")):
 		return "heroes"
+	elif (entry.is_class("CFaction")):
+		return "factions"
 	elif (entry.is_class("CLiteraryText")):
 		return "texts"
 	elif (entry.is_class("CPlane")):
@@ -200,6 +212,16 @@ func sort_characters(a, b):
 			return false
 		else:
 			return a.get_faction().get_name() < b.get_faction().get_name()
+	else:
+		return a.get_name() < b.get_name()
+
+func sort_factions(a, b):
+	var faction_type_a = a.get_type()
+	var faction_type_b = b.get_type()
+	if (faction_type_a.is_tribal() != faction_type_b.is_tribal()):
+		return faction_type_a.is_tribal()
+	elif (faction_type_a.is_neutral() != faction_type_b.is_neutral()):
+		return !faction_type_a.is_neutral()
 	else:
 		return a.get_name() < b.get_name()
 

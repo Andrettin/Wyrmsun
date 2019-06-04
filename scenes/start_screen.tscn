@@ -24,5 +24,4 @@ autostart = true
 
 [node name="sepia_timer" type="Timer" parent="."]
 wait_time = 0.01
-
 [connection signal="timeout" from="splash_timer" to="sepia_timer" method="start"]
