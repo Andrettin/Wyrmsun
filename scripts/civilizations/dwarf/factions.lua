@@ -40,7 +40,7 @@ DefineFaction("brising-clan", {
 		"dlcs/brising_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	Description = "The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.",
+	Description = "The Brising clan is one of the first known dwarven clans. It made its home in Svarinshaug, where they tamed the fierce forces of nature.",
 	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse.",
 	HistoricalUpgrades = {
 --		-3000, "upgrade-deity-odin", true
