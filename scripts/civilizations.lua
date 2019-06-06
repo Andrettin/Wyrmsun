@@ -31,7 +31,8 @@ DefineCivilization("neutral", {
 	Playable = false,
 	Interface = "dwarven",
 	Adjective = "Neutral",
-	DefaultPlayerColor = "gray",
+	DefaultPrimaryPlayerColor = "gray",
+	DefaultSecondaryPlayerColor = "gray",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -555,7 +556,8 @@ DefineCivilization("dwarf", {
 	Interface = "dwarven",
 	Language = "dwarven",
 	Adjective = "Dwarven",
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-dwarven-civilization",
 	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
 	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
@@ -988,7 +990,8 @@ DefineCivilization("elf", {
 	Adjective = "Elven",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "teal",
+	DefaultPrimaryPlayerColor = "teal",
+	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-elven-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
@@ -1500,7 +1503,8 @@ DefineCivilization("ettin", {
 	Language = "ettin",
 	Adjective = "Ettin",
 	Playable = false,
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "blue",
 	CivilizationUpgrade = "upgrade-ettin-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1557,7 +1561,8 @@ DefineCivilization("germanic", {
 	Language = "proto-germanic",
 	Interface = "germanic",
 	Adjective = "Germanic",
-	DefaultPlayerColor = "orange",
+	DefaultPrimaryPlayerColor = "orange",
+	DefaultSecondaryPlayerColor = "white",
 	Calendar = "anglo-saxon-calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
 	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
@@ -1608,7 +1613,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Language = "proto-celtic",
 	Adjective = "Celtic",
 	Playable = false,
-	DefaultPlayerColor = "green",
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "red",
 	CivilizationUpgrade = "upgrade-celt-civilization",
 	Calendar = "gregorian-calendar",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
@@ -1636,7 +1642,8 @@ DefineCivilization("gnome", {
 	Language = "gnomish",
 	Adjective = "Gnomish",
 	Playable = false,
-	DefaultPlayerColor = "blue",
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "teal",
 	CivilizationUpgrade = "upgrade-gnomish-civilization",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
@@ -1655,7 +1662,8 @@ DefineCivilization("goblin", {
 	Language = "goblin",
 	Interface = "goblin",
 	Adjective = "Goblin",
-	DefaultPlayerColor = "teal",
+	DefaultPrimaryPlayerColor = "teal",
+	DefaultSecondaryPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-goblin-civilization",
 	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
 	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
@@ -1702,7 +1710,8 @@ DefineCivilization("kobold", {
 	Language = "kobold",
 	Adjective = "Kobold",
 	Playable = false,
-	DefaultPlayerColor = "violet",
+	DefaultPrimaryPlayerColor = "violet",
+	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-kobold-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1729,7 +1738,8 @@ DefineCivilization("minotaur", {
 	Adjective = "Minotaur",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "red"
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "black"
 })
 
 DefineCivilization("orc", {
@@ -1740,7 +1750,8 @@ DefineCivilization("orc", {
 	Adjective = "Orc",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "black",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
@@ -1895,7 +1906,8 @@ DefineCivilization("teuton", {
 	Species = "human",
 	Language = "high-german",
 	Adjective = "Teutonic",
-	DefaultPlayerColor = "yellow",
+	DefaultPrimaryPlayerColor = "yellow",
+	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2117,7 +2129,8 @@ DefineCivilization("anglo-saxon", {
 	Species = "human",
 	Language = "old-english",
 	Adjective = "Anglo-Saxon",
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "white",
 	Calendar = "anglo-saxon-calendar",
 	Currency = "scilling",
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
@@ -2166,7 +2179,8 @@ DefineCivilization("english", {
 	Species = "human",
 	Language = "english",
 	Adjective = "English",
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-english-civilization",
 	DevelopsFrom = {"anglo-saxon"},
 	Calendar = "gregorian-calendar",
@@ -2302,7 +2316,8 @@ DefineCivilization("frankish", {
 	Species = "human",
 	Language = "old-frankish",
 	Adjective = "Frankish",
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "blue",
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2337,7 +2352,8 @@ DefineCivilization("suebi", {
 	Species = "human",
 	Language = "old-high-german",
 	Adjective = "Suebi",
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "yellow",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
@@ -2363,7 +2379,8 @@ DefineCivilization("gaul", {
 	Adjective = "Gaul",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "blue",
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
@@ -2378,7 +2395,8 @@ DefineCivilization("briton", {
 	Adjective = "Briton",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "green",
 	Calendar = "gregorian-calendar",
 	PersonalNames = {
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
@@ -2406,7 +2424,8 @@ DefineCivilization("welsh", {
 	Adjective = "Welsh",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "green",
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "red",
 	PersonalNames = {
 		"female", "Aranrhod", -- daughter of Dôn; Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 143.
 		"female", "Branwen", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 130.
@@ -2461,7 +2480,8 @@ DefineCivilization("gael", {
 	Adjective = "Gael",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "green",
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "white",
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
@@ -2478,7 +2498,8 @@ DefineCivilization("ogre", {
 	Language = "ogre",
 	Adjective = "Ogre",
 	Playable = false,
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "violet",
 	PersonalNames = {
 		"male", "Akoark", -- from Battle for Wesnoth
 		"male", "Akort", -- from Battle for Wesnoth
@@ -2546,7 +2567,8 @@ DefineCivilization("troll", {
 	Adjective = "Troll",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "green",
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-troll-civilization"
 })
 
@@ -2557,7 +2579,8 @@ DefineCivilization("latin", {
 	Language = "latin",
 	Adjective = "Latin",
 	Playable = false,
-	DefaultPlayerColor = "red",
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "yellow",
 	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-latin-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.",
@@ -2758,7 +2781,8 @@ DefineCivilization("goth", {
 	Calendar = "gregorian-calendar",
 	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "red",
 	UnitSounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",
@@ -2923,7 +2947,8 @@ DefineCivilization("egyptian", {
 	Adjective = "Egyptian",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "yellow",
+	DefaultPrimaryPlayerColor = "yellow",
+	DefaultSecondaryPlayerColor = "brown",
 	CivilizationUpgrade = "upgrade-egyptian-civilization"
 })
 
@@ -2978,7 +3003,8 @@ DefineCivilization("norse", {
 	Species = "human",
 	Language = "old-norse",
 	Adjective = "Norse",
-	DefaultPlayerColor = "blue",
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "white",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade-norse-civilization",
 	Calendar = "norse-calendar",
@@ -3054,7 +3080,8 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 	Adjective = "Iberian",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "brown",
+	DefaultPrimaryPlayerColor = "brown",
+	DefaultSecondaryPlayerColor = "yellow",
 	Calendar = "gregorian-calendar"
 })
 
@@ -3088,7 +3115,8 @@ DefineCivilization("phoenician", {
 	Adjective = "Phoenician",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "black",
+	DefaultPrimaryPlayerColor = "black",
+	DefaultSecondaryPlayerColor = "white",
 	HistoricalUpgrades = {
 		-1100, "upgrade-celestial-navigation", true, -- around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
 	}
@@ -3115,7 +3143,8 @@ DefineCivilization("slav", {
 	Adjective = "Slavic",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "blue",
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "white",
 	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-slavic-civilization",
 	UnitSounds = {
@@ -3199,7 +3228,8 @@ DefineCivilization("treant", {
 	Adjective = "Treant",
 	Hidden = true,
 	Playable = false,
-	DefaultPlayerColor = "green",
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "teal",
 	PersonalNames = {
 		"male", "Bludebalmen", -- from Battle for Wesnoth
 		"male", "Boladrumbadrum", -- from Battle for Wesnoth
@@ -3291,7 +3321,8 @@ DefineCivilization("aesir", {
 	ParentCivilization = "neutral",
 	Language = "old-norse",
 	Adjective = "Aesir",
-	DefaultPlayerColor = "blue",
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "white",
 	Hidden = true,
 	Playable = false,
 	ButtonIcons = {
