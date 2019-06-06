@@ -37,8 +37,11 @@ func set_icon(icon):
 		texture.create_from_image(image)
 		self.icon_node.texture = texture
 
-func set_player_color(player_color):
-	self.icon_node.set_player_color(player_color)
+func set_primary_player_color(player_color):
+	self.icon_node.set_primary_player_color(player_color)
+
+func set_secondary_player_color(player_color):
+	self.icon_node.set_secondary_player_color(player_color)
 
 func set_tooltip(tooltip):
 	self.hint_tooltip = tooltip

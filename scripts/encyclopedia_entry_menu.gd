@@ -74,11 +74,14 @@ func update_entry_icon_button():
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		var faction = entry.get_faction()
-		entry_icon_button.set_player_color(faction.get_primary_color())
+		entry_icon_button.set_primary_player_color(faction.get_primary_color())
+		entry_icon_button.set_secondary_player_color(faction.get_secondary_color())
 	elif (encyclopedia.civilization != null):
-		entry_icon_button.set_player_color(encyclopedia.civilization.get_default_player_color())
+		entry_icon_button.set_primary_player_color(encyclopedia.civilization.get_default_primary_player_color())
+		entry_icon_button.set_secondary_player_color(encyclopedia.civilization.get_default_secondary_player_color())
 	else:
-		entry_icon_button.set_player_color(wyrmgus.get_civilization("neutral").get_default_player_color())
+		entry_icon_button.set_primary_player_color(wyrmgus.get_civilization("neutral").get_default_primary_player_color())
+		entry_icon_button.set_secondary_player_color(wyrmgus.get_civilization("neutral").get_default_secondary_player_color())
 
 func update_entry_description():
 	var entry_description_label = self.find_node("entry_description")

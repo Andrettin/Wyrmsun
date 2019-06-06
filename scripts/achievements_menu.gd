@@ -19,7 +19,8 @@ func _ready():
 		menu_area.add_child(achievement_button)
 		
 		achievement_button.set_icon(achievement.get_icon())
-		achievement_button.set_player_color(achievement.get_player_color())
+		achievement_button.set_primary_player_color(achievement.get_primary_player_color())
+		achievement_button.set_secondary_player_color(achievement.get_secondary_player_color())
 		achievement_button.set_tooltip(achievement.get_name())
 		achievement_button.connect("pressed", self, "show_achievement_dialog", [achievement])
 		if (!achievement.is_obtained()):

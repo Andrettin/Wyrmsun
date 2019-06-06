@@ -18,4 +18,5 @@ func set_achievement(achievement):
 	
 	var icon_button = self.find_node("icon_button")
 	icon_button.set_icon(achievement.get_icon())
-	icon_button.set_player_color(achievement.get_player_color())
+	icon_button.set_primary_player_color(achievement.get_primary_player_color())
+	icon_button.set_secondary_player_color(achievement.get_secondary_player_color())

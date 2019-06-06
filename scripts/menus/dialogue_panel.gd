@@ -33,7 +33,8 @@ func update_for_new_dialogue_node(dialogue_node, speaker_unit):
 			
 			icon_button.visible = true
 			icon_button.set_icon(speaker_unit.get_icon())
-			icon_button.set_player_color(speaker_unit.get_player().get_primary_color())
+			icon_button.set_primary_player_color(speaker_unit.get_player().get_primary_color())
+			icon_button.set_secondary_player_color(speaker_unit.get_player().get_secondary_color())
 			
 			text_label.rect_position.y = self.default_text_position.y
 			text_label.rect_size.y = self.default_text_size.y

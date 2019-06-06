@@ -22,12 +22,15 @@ func set_entry(entry):
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		var faction = entry.get_faction()
-		set_player_color(faction.get_primary_color())
+		set_primary_player_color(faction.get_primary_color())
+		set_secondary_player_color(faction.get_secondary_color())
 		tooltip_text += " (" + faction.get_name() + ")"
 	elif (encyclopedia.civilization != null):
-		set_player_color(encyclopedia.civilization.get_default_player_color())
+		set_primary_player_color(encyclopedia.civilization.get_default_primary_player_color())
+		set_secondary_player_color(encyclopedia.civilization.get_default_secondary_player_color())
 	else:
-		set_player_color(wyrmgus.get_civilization("neutral").get_default_player_color())
+		set_primary_player_color(wyrmgus.get_civilization("neutral").get_default_primary_player_color())
+		set_secondary_player_color(wyrmgus.get_civilization("neutral").get_default_secondary_player_color())
 		
 	set_tooltip(tooltip_text)
 
