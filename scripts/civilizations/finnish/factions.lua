@@ -36,7 +36,7 @@ DefineFaction("finland", {
 	Name = "Finland",
 	Civilization = "finnish",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColors = {"white", "blue"},
 	DefaultTier = "grand-duchy",
 	DevelopsFrom = {"fenni-tribe"}
 })

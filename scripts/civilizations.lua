@@ -2691,7 +2691,9 @@ DefineCivilization("castillian", {
 	Language = "castillian",
 	Adjective = "Castillian",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "yellow",
+	DefaultSecondaryPlayerColor = "red"
 })
 
 DefineCivilization("french", {
@@ -2702,6 +2704,8 @@ DefineCivilization("french", {
 	Adjective = "French",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "white",
 	--[[
 	SettlementNames = {
 		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
@@ -2720,7 +2724,9 @@ DefineCivilization("italian", {
 	Language = "italian",
 	Adjective = "Italian",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "white"
 })
 
 DefineCivilization("portuguese", {
@@ -2731,6 +2737,8 @@ DefineCivilization("portuguese", {
 	Adjective = "Portuguese",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "red",
 	UnitClassNames = {
 		"farm", "Macacos" -- farm in Rio de Janeiro; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
 	}
@@ -2743,7 +2751,9 @@ DefineCivilization("romanian", {
 	Language = "romanian",
 	Adjective = "Romanian",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "blue"
 })
 
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
@@ -2754,6 +2764,8 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 	Adjective = "Basque",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "green",
 	Calendar = "gregorian-calendar"
 })
 
@@ -2765,6 +2777,8 @@ DefineCivilization("etruscan", {
 	Adjective = "Etruscan",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "yellow",
+	DefaultSecondaryPlayerColor = "red",
 	HistoricalUpgrades = {
 		-750, "upgrade-architecture", true -- the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
 	}
@@ -2804,6 +2818,8 @@ DefineCivilization("greek", {
 	Adjective = "Greek",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "blue",
+	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-greek-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.",
 	UnitSounds = {
@@ -2907,6 +2923,8 @@ DefineCivilization("assyrian", {
 	Adjective = "Assyrian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "brown",
+	DefaultSecondaryPlayerColor = "red",
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
@@ -2921,6 +2939,8 @@ DefineCivilization("babylonian", {
 	Adjective = "Babylonian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "brown",
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
@@ -2934,6 +2954,8 @@ DefineCivilization("chinese", {
 	Adjective = "Chinese",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "blue",
 	HistoricalUpgrades = {
 		1044, "upgrade-gunpowder", true -- gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
@@ -2958,7 +2980,9 @@ DefineCivilization("hebrew", {
 	Species = "human",
 	Adjective = "Hebrew",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "white",
+	DefaultSecondaryPlayerColor = "blue"
 })
 
 DefineCivilization("hittite", {
@@ -2969,6 +2993,8 @@ DefineCivilization("hittite", {
 	Adjective = "Hittite",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "brown",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
@@ -2982,6 +3008,8 @@ DefineCivilization("illyrian", {
 	Adjective = "Illyrian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "blue",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
@@ -2994,7 +3022,9 @@ DefineCivilization("minoan", {
 	Language = "minoan",
 	Adjective = "Minoan",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "orange",
+	DefaultSecondaryPlayerColor = "red"
 })
 
 DefineCivilization("norse", {
@@ -3044,6 +3074,8 @@ DefineCivilization("baltic", {
 	Adjective = "Baltic",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "yellow",
 	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -3058,6 +3090,8 @@ DefineCivilization("uralic", {
 	Adjective = "Uralic",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "white",
+	DefaultSecondaryPlayerColor = "blue",
 	Calendar = "gregorian-calendar"
 })
 
@@ -3069,6 +3103,8 @@ DefineCivilization("finnish", {
 	Adjective = "Finnish",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "white",
+	DefaultSecondaryPlayerColor = "blue",
 	DevelopsFrom = {"uralic"},
 	Calendar = "gregorian-calendar"
 })
@@ -3093,6 +3129,8 @@ DefineCivilization("magyar", {
 	Adjective = "Magyar",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "white",
 	DevelopsFrom = {"uralic"},
 	Calendar = "gregorian-calendar"
 })
@@ -3104,7 +3142,9 @@ DefineCivilization("persian", {
 	Language = "avestan",
 	Adjective = "Persian",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "yellow",
+	DefaultSecondaryPlayerColor = "green"
 })
 
 DefineCivilization("phoenician", {
@@ -3130,6 +3170,8 @@ DefineCivilization("phrygian", {
 	Adjective = "Phrygian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "violet",
+	DefaultSecondaryPlayerColor = "red",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
@@ -3201,6 +3243,8 @@ DefineCivilization("sumerian", {
 	Adjective = "Sumerian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "teal",
+	DefaultSecondaryPlayerColor = "cyan",
 	HistoricalUpgrades = {
 		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
@@ -3215,6 +3259,8 @@ DefineCivilization("thracian", {
 	Adjective = "Thracian",
 	Hidden = true,
 	Playable = false,
+	DefaultPrimaryPlayerColor = "teal",
+	DefaultSecondaryPlayerColor = "red",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
@@ -3300,7 +3346,9 @@ DefineCivilization("turkish", {
 	Language = "turkish",
 	Adjective = "Turkish",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "red",
+	DefaultSecondaryPlayerColor = "white"
 })
 
 DefineCivilization("aztec", {
@@ -3309,7 +3357,9 @@ DefineCivilization("aztec", {
 	Species = "human",
 	Adjective = "Aztec",
 	Hidden = true,
-	Playable = false
+	Playable = false,
+	DefaultPrimaryPlayerColor = "green",
+	DefaultSecondaryPlayerColor = "red"
 })
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
