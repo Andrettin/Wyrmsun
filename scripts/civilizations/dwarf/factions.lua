@@ -31,6 +31,7 @@ DefineFaction("brising-clan", {
 	Type = "tribe",
 	PrimaryColors = {"red", "orange", "fire"},
 	FactionUpgrade = "upgrade-faction-brising-clan",
+	Icon = "icon-flag-silver-hammer-on-red",
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"
 	},
@@ -358,28 +359,4 @@ DefineFaction("lyr", {
 		400, "upgrade-dwarven-runewriting", true, -- polities require writing
 		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
-})
-
--- Mercenary Companies
-
-DefineFaction("surghan-mercenaries", {
-	Name = "Surghan Mercenaries",
-	Civilization = "dwarf",
-	Type = "mercenary-company",
-	PrimaryColors = {"blue"},
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-surghan-mercenaries",
-	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
-	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"
-})
-
-DefineFaction("yawning-yales", {
-	Name = "Yawning Yales",
-	ParentFaction = "goldhoof-clan", -- Joruvellir
-	Civilization = "dwarf",
-	Type = "mercenary-company",
-	PrimaryColors = {"yellow"},
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-yawning-yales",
-	Description = "The mercenaries known as the Yawning Yales originate in the sands of Joruvellir, riding forth to seek employment in military campaigns throughout the dwarven lands."
 })
