@@ -119,7 +119,7 @@ https://github.com/Andrettin/Wyrmsun
 - Replaced the main menu background with a new one made by Jinn.
 - Added a goblin victory background made by Jinn.
 - Overhauled the game's UI to make use of Godot's UI toolkit.
-- Renamed the "Top vs. Bottom" custom game type to "North vs. South", and "Left vs. Right" to "West vs. East". Thanks to Kriss7475 for the suggestion!
+- Renamed the "Top vs. Bottom" custom game type to "North vs. South", and "Left vs. Right" to "West vs. East". Thanks to Bleidd64 for the suggestion!
 
 -----------------------------------------------------------------------
 - 3.5.4
@@ -742,7 +742,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Town Halls can now only be built on top of Settlement Sites.
 - Smithies can now store Copper, Silver, Gold, Coal and Diamonds. Smithies now can only be built within a certain distance of deposits and mines.
-- Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Kriss7475). Diamonds convert to copper at a 800% rate.
+- Added Diamond Deposit/Mine (recolor of the Copper Deposit/Mine by Bleidd64). Diamonds convert to copper at a 800% rate.
 - Decorations are now removed when a building is constructed over a tile.
 - Added a Mason's Shop building for the dwarves, which stores stone and improves its processing by 25% (graphics by Jinn).
 
@@ -766,7 +766,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed the "northwest-northeast-inner" border graphics, which were incorrectly using the graphics for the "northwest-northeast-southwest-inner" border.
 - The initial random seed for the game now varies according to the computer's time and date, so that random maps should no longer yield the same result multiple times.
 - Added an encyclopedia page explaining the No Randomness mode in the Game Concepts section.
-- Added Diamond Rock (recolor of the Copper Rock by Kriss7475).
+- Added Diamond Rock (recolor of the Copper Rock by Bleidd64).
 - Muspelheim and Niflheim are now described as planes, rather than worlds. Helheim has now been subsumed into Niflheim, which is more accurate to the mythology.
 
 * Scenarios
