@@ -29,42 +29,42 @@ DefineFaction("belgae-tribe", { -- Source: William R. Shepherd, "Historical Atla
 	Name = "Belgae Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"purple"}
+	PrimaryColor = "purple"
 })
 
 DefineFaction("brigantes-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Brigantes Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"pink"}
+	PrimaryColor = "pink"
 })
 
 DefineFaction("caledonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Caledonii Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"brown"}
+	PrimaryColor = "brown"
 })
 
 DefineFaction("cantii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Cantii Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"brown"}
+	PrimaryColor = "brown"
 })
 
 DefineFaction("coritani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Coritani Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"yellow"}
+	PrimaryColor = "yellow"
 })
 
 DefineFaction("damnii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Damnii Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"pink"}
+	PrimaryColor = "pink"
 })
 
 DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
@@ -72,77 +72,77 @@ DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	Civilization = "briton",
 	Type = "tribe",
 	-- the Demetae gave origin to Dyfed, which was a Welsh principality
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Dumnonii Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"violet"}
+	PrimaryColor = "violet"
 })
 
 DefineFaction("iceni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Iceni Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"cyan"}
+	PrimaryColor = "cyan"
 })
 
 DefineFaction("ordovices-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Ordovices Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"pink"}
+	PrimaryColor = "pink"
 })
 
 DefineFaction("otalini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Otalini Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"purple"}
+	PrimaryColor = "purple"
 })
 
 DefineFaction("pict-tribe", {
 	Name = "Pict Tribe",
 	Civilization = "briton",
 	Type = "tribe",
-	PrimaryColors = {"cyan"}
+	PrimaryColor = "cyan"
 })
 
 DefineFaction("regni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Regni Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"green"}
+	PrimaryColor = "green"
 })
 
 DefineFaction("selgovae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Selgovae Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"white"}
+	PrimaryColor = "white"
 })
 
 DefineFaction("sovantae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Sovantae Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"blue"}
+	PrimaryColor = "blue"
 })
 
 DefineFaction("silures-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Silures Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Trinobantes Tribe",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"orange"}
+	PrimaryColor = "orange"
 })
 
 -- Polities
@@ -151,7 +151,7 @@ DefineFaction("pictland", { -- Source: William R. Shepherd, "Historical Atlas", 
 	Name = "Pictland",
 	Civilization = "briton",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "kingdom"
 })
 
@@ -159,6 +159,6 @@ DefineFaction("strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Name = "Strathclyde",
 	Civilization = "briton",
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	DefaultTier = "kingdom"
 })

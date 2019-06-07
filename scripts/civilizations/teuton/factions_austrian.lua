@@ -29,7 +29,8 @@ DefineFaction("austria", {
 	Name = "Austria",
 	Civilization = "teuton",
 	Type = "polity",
-	PrimaryColors = {"white", "red"},
+	PrimaryColor = "white",
+	SecondaryColor = "red",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-austria",
 	Icon = "icon-flag-old-austria",
@@ -78,7 +79,7 @@ DefineFaction("carinthia", {
 	Name = "Carinthia", -- "Kärnten"
 	Civilization = "teuton",
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-carinthia",
 	Icon = "icon-flag-five-orange-birds-on-black",
 	DefaultTier = "duchy", -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.

@@ -29,7 +29,7 @@ DefineFaction("illyrian-tribe", {
 	Name = "Illyrian Tribe",
 	Civilization = "illyrian",
 	Type = "tribe",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	Adjective = "Illyrian"
 })
 
@@ -37,5 +37,5 @@ DefineFaction("taulantii-tribe", {
 	Name = "Taulantii Tribe",
 	Civilization = "illyrian",
 	Type = "tribe",
-	PrimaryColors = {"blue"}
+	PrimaryColor = "blue"
 })

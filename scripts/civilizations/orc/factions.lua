@@ -29,12 +29,12 @@ DefineFaction("blackeye-clan", {
 	Name = "Blackeye Clan",
 	Civilization = "orc",
 	Type = "tribe",
-	PrimaryColors = {"black"}
+	PrimaryColor = "black"
 })
 
 DefineFaction("bloody-sword-clan", {
 	Name = "Bloody Sword Clan",
 	Civilization = "orc",
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })

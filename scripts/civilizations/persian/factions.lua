@@ -29,42 +29,42 @@ DefineFaction("abasgi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Abasgi Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"blue"}
+	PrimaryColor = "blue"
 })
 
 DefineFaction("alan-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Alan Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"purple"}
+	PrimaryColor = "purple"
 })
 
 DefineFaction("alazone-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Alazone Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"orange"}
+	PrimaryColor = "orange"
 })
 
 DefineFaction("aorsi-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Aorsi Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"violet"}
+	PrimaryColor = "violet"
 })
 
 DefineFaction("heniochi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Heniochi Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"violet"}
+	PrimaryColor = "violet"
 })
 
 DefineFaction("iazyge-tribe", {
 	Name = "Iazyge Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"violet"},
+	PrimaryColor = "violet",
 	HistoricalDiplomacyStates = {
 		171, "rome", "war", -- the Iazyges entered conflict with the Romans in (apparently) 171; Source: "Ancient Warfare VII.6", 2013, pp. 7-8.
 		175, "rome", "peace" -- in 175 the Romans defeated the Iazyges and forced them to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
@@ -75,49 +75,49 @@ DefineFaction("mede-tribe", {
 	Name = "Mede Tribe",
 	Civilization = "persian",
 	Type = "tribe",
-	PrimaryColors = {"brown"}
+	PrimaryColor = "brown"
 })
 
 DefineFaction("navari-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Navari Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"blue"}
+	PrimaryColor = "blue"
 })
 
 DefineFaction("roxolani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Roxolani Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("sarmatian-tribe", {
 	Name = "Sarmatian Tribe",
 	Civilization = "persian",
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("scythian-tribe", {
 	Name = "Scythian Tribe",
 	Civilization = "persian",
 	Type = "tribe",
-	PrimaryColors = {"green"}
+	PrimaryColor = "green"
 })
 
 DefineFaction("sindi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Sindi Tribe",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"white"}
+	PrimaryColor = "white"
 })
 
 DefineFaction("media", {
 	Name = "Media",
 	Civilization = "persian",
 	Type = "polity",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		-600, "ecbatana" -- Ecbatana was the capital of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -128,7 +128,7 @@ DefineFaction("parthia", {
 	Name = "Parthia",
 	Civilization = "persian",
 	Type = "polity",
-	PrimaryColors = {"purple"},
+	PrimaryColor = "purple",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 --		161, "Mesopotamia" -- Ctesiphon was the capital of Parthia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -143,7 +143,8 @@ DefineFaction("persia", {
 	Name = "Persia",
 	Civilization = "persian",
 	Type = "polity",
-	PrimaryColors = {"yellow", "green"},
+	PrimaryColor = "yellow",
+	SecondaryColor = "green",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		0, "persepolis"
@@ -156,7 +157,7 @@ DefineFaction("agraei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Agraei Tribe",
 	Civilization = "persian", -- should be Arabic?
 	Type = "tribe",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	Playable = false
 })
 
@@ -164,7 +165,7 @@ DefineFaction("arab-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Arab Tribe",
 	Civilization = "persian", -- should be Arabic
 	Type = "tribe",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	Playable = false
 })
 
@@ -172,7 +173,7 @@ DefineFaction("gaetuli-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Gaetuli Tribe",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	Playable = false
 })
 
@@ -180,7 +181,7 @@ DefineFaction("garamantes-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p.
 	Name = "Garamantes Tribe",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	Playable = false
 })
 
@@ -188,7 +189,7 @@ DefineFaction("mauri-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Mauri Tribe",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	Playable = false
 })
 
@@ -196,7 +197,7 @@ DefineFaction("musulamii-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 
 	Name = "Musulamii Tribe",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	Playable = false
 })
 
@@ -204,7 +205,7 @@ DefineFaction("nabataei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7
 	Name = "Nabataei Tribe",
 	Civilization = "persian", -- should be Arabic?
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	Playable = false
 })
 

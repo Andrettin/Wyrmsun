@@ -29,7 +29,8 @@ DefineFaction("aragon", {
 	Name = "Aragon",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"purple", "yellow"},
+	PrimaryColor = "purple",
+	SecondaryColor = "yellow",
 	DefaultTier = "kingdom"
 })
 
@@ -37,7 +38,8 @@ DefineFaction("argentina", {
 	Name = "Argentina",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"cyan", "white"},
+	PrimaryColor = "cyan",
+	SecondaryColor = "white",
 	DefaultTier = "kingdom" -- had the status of viceroyalty
 })
 
@@ -45,7 +47,8 @@ DefineFaction("castille", {
 	Name = "Castille",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"yellow", "red"},
+	PrimaryColor = "yellow",
+	SecondaryColor = "red",
 	DefaultTier = "kingdom"
 })
 
@@ -53,7 +56,7 @@ DefineFaction("leon", {
 	Name = "Leon",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "kingdom"
 })
 
@@ -61,7 +64,8 @@ DefineFaction("paraguay", {
 	Name = "Paraguay",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"blue", "red"},
+	PrimaryColor = "blue",
+	SecondaryColor = "red",
 	DefaultTier = "duchy"
 })
 
@@ -69,7 +73,8 @@ DefineFaction("spain", {
 	Name = "Spain",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"yellow", "red"},
+	PrimaryColor = "yellow",
+	SecondaryColor = "red",
 	DefaultTier = "kingdom"
 })
 
@@ -77,7 +82,8 @@ DefineFaction("uruguay", {
 	Name = "Uruguay",
 	Civilization = "castillian",
 	Type = "polity",
-	PrimaryColors = {"cyan", "white"},
+	PrimaryColor = "cyan",
+	SecondaryColor = "white",
 	DefaultTier = "duchy"
 })
 
@@ -87,6 +93,6 @@ DefineFaction("jesuit-order", {
 	Name = "Jesuit Order",
 	Civilization = "castillian",
 	Type = "holy-order",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "duchy"
 })

@@ -29,7 +29,7 @@ DefineFaction("aramaean-tribe", {
 	Name = "Aramaean Tribe",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "duchy"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("asher-tribe", {
 	Name = "Asher Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -45,7 +45,7 @@ DefineFaction("benjamin-tribe", {
 	Name = "Benjamin Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -53,7 +53,7 @@ DefineFaction("ephraim-tribe", {
 	Name = "Ephraim Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -61,7 +61,7 @@ DefineFaction("gad-tribe", {
 	Name = "Gad Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -69,7 +69,7 @@ DefineFaction("issachar-tribe", {
 	Name = "Issachar Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -77,7 +77,7 @@ DefineFaction("judah-tribe", {
 	Name = "Judah Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -85,7 +85,7 @@ DefineFaction("kenite-tribe", {
 	Name = "Kenite Tribe",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "duchy"
 })
 
@@ -93,7 +93,7 @@ DefineFaction("manasseh-tribe", {
 	Name = "Manasseh Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -101,7 +101,7 @@ DefineFaction("naphtali-tribe", {
 	Name = "Naphtali Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -109,7 +109,7 @@ DefineFaction("philistine-tribe", {
 	Name = "Philistine Tribe",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "duchy"
 })
 
@@ -117,7 +117,7 @@ DefineFaction("reuben-tribe", {
 	Name = "Reuben Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -125,7 +125,7 @@ DefineFaction("simeon-tribe", {
 	Name = "Simeon Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -133,7 +133,7 @@ DefineFaction("zebulon-tribe", {
 	Name = "Zebulon Tribe",
 	Civilization = "hebrew",
 	Type = "tribe",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "duchy"
 })
 
@@ -141,7 +141,7 @@ DefineFaction("israel", {
 	Name = "Israel",
 	Civilization = "hebrew",
 	Type = "polity",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	DefaultTier = "kingdom"
 })
 
@@ -149,7 +149,7 @@ DefineFaction("judah", {
 	Name = "Judah",
 	Civilization = "hebrew",
 	Type = "polity",
-	PrimaryColors = {"blue"},
+	PrimaryColor = "blue",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		0, "jerusalem"

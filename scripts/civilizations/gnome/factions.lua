@@ -29,7 +29,7 @@ DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 	Name = "Acthnic Tribe",
 	Civilization = "gnome",
 	Type = "tribe",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	FactionUpgrade = "upgrade-faction-acthnic-tribe",
 	Description = "The Acthnic tribe lives deep underground, near the subterranean fires of their homelands. They're known for being dangerous and reckless, occasionally entering the territory of derros or goblins without invitation. Their sages are well-versed in the mysteries of lightning, but above all they are masters of the flame."
 })
@@ -38,7 +38,7 @@ DefineFaction("cubital-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 	Name = "Cubital Tribe",
 	Civilization = "gnome",
 	Type = "tribe",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	Description = "The Cubitals are a hard-working tribe of gnomes, being known for their muscular strength and their efficiency at stonecutting. They are also talented artistically, making Cubital products highly sought after by the gnomish upper classes. When engaging in warfare, the Cubitals are known to make heavy use of explosives. The tribe's priests strive to command the forces of the earth and the air."
 })
 
@@ -46,7 +46,8 @@ DefineFaction("derro-tribe", {
 	Name = "Derro Tribe",
 	Civilization = "gnome",
 	Type = "tribe",
-	PrimaryColors = {"black", "purple", "violet"},
+	PrimaryColor = "black",
+	SecondaryColor = "purple",
 	Playable = false,
 	FactionUpgrade = "upgrade-faction-derro-tribe",
 	Description = "The Derro are a cruel gnomish offshoot, which separated themselves from the rest of their kin aeons ago. They dwell in the dark depths of Nidavellir's tunnels, in caves isolated even from other underground denizens. These gnomish fiends think themselves uniquely gifted, being at the same time wary and disdainful of other peoples. They see individuals of other races trespassing on their territory as a great crime, and will gladly put them in their place with the most sadistic of measures."
@@ -56,7 +57,7 @@ DefineFaction("sagan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 18
 	Name = "Sagan Tribe",
 	Civilization = "gnome",
 	Type = "tribe",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	FactionUpgrade = "upgrade-faction-sagan-tribe",
 	Description = "Herbalists par excellence, the Sagans are devoted to tending to the body and soul of plants. The tribesfolk is known for being tall (for gnomes)."
 })
@@ -65,7 +66,7 @@ DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1
 	Name = "Vulcan Tribe",
 	Civilization = "gnome",
 	Type = "tribe",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	Description = "The Vulcans excel at mining and metallurgy. The tribe's sages are believed to possess power over fire and thunder."
 })
 
@@ -74,7 +75,7 @@ DefineFaction("acthna", {
 	ParentFaction = "acthnic-tribe",
 	Civilization = "gnome",
 	Type = "polity",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "duchy",
 	HistoricalCapitals = {
 		-3000, "acthna"
@@ -85,7 +86,7 @@ DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 189
 	Name = "Untersberg",
 	Civilization = "gnome",
 	Type = "polity",
-	PrimaryColors = {"blue"}, -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
+	PrimaryColor = "blue", -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
 	DefaultTier = "kingdom",
 	MinisterTitles = {
 		"head-of-government", "", "no-government-type", "no-faction-tier", "Grand Chancellor", -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.

@@ -29,6 +29,6 @@ DefineFaction("uralic-tribe", {
 	Name = "Uralic Tribe",
 	Civilization = "uralic",
 	Type = "tribe",
-	PrimaryColors = {"teal"}
+	PrimaryColor = "teal"
 	-- a fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 })

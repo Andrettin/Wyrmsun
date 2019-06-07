@@ -29,7 +29,7 @@ DefineFaction("annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 	Name = "Annwn",
 	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	DefaultTier = "kingdom", -- Arawn was king of Annwn
 	Description = "Annwn is an elven island kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
 })
@@ -38,7 +38,7 @@ DefineFaction("lintanir", {
 	Name = "Lintanir",
 	Civilization = "elf",
 	Type = "polity",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "kingdom"
 })
 
@@ -46,7 +46,7 @@ DefineFaction("ulfdalir", {
 	Name = "Ulfdalir",
 	Civilization = "elf",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "kingdom", -- because Volund's father was a king (though of Finland in the original myth)
 	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
 })
@@ -55,7 +55,7 @@ DefineFaction("wesmere", {
 	Name = "Wesmere",
 	Civilization = "elf",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "kingdom"
 })
 
@@ -65,7 +65,7 @@ DefineFaction("bloodleaf-company", {
 	Name = "Bloodleaf Company",
 	Civilization = "elf",
 	Type = "mercenary-company",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "duchy",
 	Description = ""
 })

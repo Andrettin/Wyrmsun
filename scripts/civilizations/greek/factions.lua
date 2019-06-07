@@ -31,14 +31,14 @@ DefineFaction("chaoni-tribe", {
 	Name = "Chaoni Tribe",
 	Civilization = "greek",
 	Type = "tribe",
-	PrimaryColors = {"yellow"}
+	PrimaryColor = "yellow"
 })
 
 DefineFaction("dolopes-tribe", {
 	Name = "Dolopes Tribe",
 	Civilization = "greek",
 	Type = "tribe",
-	PrimaryColors = {"green"}
+	PrimaryColor = "green"
 })
 
 -- polities
@@ -47,7 +47,7 @@ DefineFaction("argos", {
 	Name = "Argos",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "county",
 	Adjective = "Argoan",
 	Titles = {
@@ -60,7 +60,7 @@ DefineFaction("athens", {
 	Name = "Athens",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "county",
 	Adjective = "Athenian",
 	Titles = {
@@ -77,7 +77,7 @@ DefineFaction("cimmerian-bosphorus", { -- Source: William R. Shepherd, "Historic
 	Name = "Cimmerian Bosphorus",
 	Civilization = "greek", -- accurate?
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "kingdom" -- Kingdom of the Cimmerian Bosphorus
 })
 
@@ -85,7 +85,7 @@ DefineFaction("corinth", {
 	Name = "Corinth",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "county",
 	Adjective = "Corinthian",
 	Titles = {
@@ -101,7 +101,7 @@ DefineFaction("epirus", {
 	Name = "Epirus",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"chaoni-tribe"}
 })
@@ -110,7 +110,7 @@ DefineFaction("ionia", {
 	Name = "Ionia",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "kingdom"
 })
 
@@ -118,7 +118,7 @@ DefineFaction("krete", {
 	Name = "Krete",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	DefaultTier = "kingdom"
 })
 
@@ -126,7 +126,8 @@ DefineFaction("macedon", {
 	Name = "Macedon",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"brown", "red"},
+	PrimaryColor = "brown",
+	SecondaryColor = "red",
 	DefaultTier = "kingdom",
 	HistoricalDiplomacyStates = {
 		-431, "athens", "war" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -137,7 +138,7 @@ DefineFaction("mycenae", {
 	Name = "Mycenae",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -155,7 +156,7 @@ DefineFaction("sparta", {
 	Name = "Sparta",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -171,7 +172,7 @@ DefineFaction("thebes", {
 	Name = "Thebes",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"blue"},
+	PrimaryColor = "blue",
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -188,7 +189,7 @@ DefineFaction("thrace", {
 	Name = "Thrace",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"orange"},
+	PrimaryColor = "orange",
 	DefaultTier = "kingdom"
 })
 
@@ -198,7 +199,7 @@ DefineFaction("armenia", {
 	Name = "Armenia",
 	Civilization = "greek",
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	DefaultTier = "kingdom",
 	Playable = false,
 	HistoricalCapitals = {

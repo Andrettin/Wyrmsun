@@ -29,12 +29,12 @@ DefineFaction("oretanian-tribe", {
 	Name = "Oretanian Tribe",
 	Civilization = "iberian",
 	Type = "tribe",
-	PrimaryColors = {"black"}
+	PrimaryColor = "black"
 })
 
 DefineFaction("turdetanian-tribe", {
 	Name = "Turdetanian Tribe",
 	Civilization = "iberian",
 	Type = "tribe",
-	PrimaryColors = {"brown"}
+	PrimaryColor = "brown"
 })

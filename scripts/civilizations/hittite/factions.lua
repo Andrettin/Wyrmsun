@@ -29,7 +29,7 @@ DefineFaction("hatti", {
 	Name = "Hatti",
 	Civilization = "hittite",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "kingdom"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("lydia", {
 	Name = "Lydia",
 	Civilization = "hittite",
 	Type = "polity",
-	PrimaryColors = {"teal"},
+	PrimaryColor = "teal",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		-600, "sardis" -- Sardis was the capital of the Lydian Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
@@ -48,6 +48,6 @@ DefineFaction("troy", {
 	Name = "Troy",
 	Civilization = "hittite",
 	Type = "polity",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	DefaultTier = "county"
 })

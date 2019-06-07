@@ -29,7 +29,7 @@ DefineFaction("etruscan-tribe", {
 	Name = "Etruscan Tribe",
 	Civilization = "etruscan",
 	Type = "tribe",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	Adjective = "Etruscan"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("etruria", {
 	Name = "Etruria",
 	Civilization = "etruscan",
 	Type = "polity",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"etruscan-tribe"},
 	Adjective = "Etruscan"

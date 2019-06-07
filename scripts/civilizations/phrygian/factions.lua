@@ -29,5 +29,5 @@ DefineFaction("bryges-tribe", {
 	Name = "Bryges Tribe",
 	Civilization = "phrygian",
 	Type = "tribe",
-	PrimaryColors = {"violet"}
+	PrimaryColor = "violet"
 })

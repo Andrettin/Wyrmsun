@@ -29,14 +29,15 @@ DefineFaction("fenni-tribe", { -- Tribes in Europe between 264 BC and 180 AD; So
 	Name = "Fenni Tribe",
 	Civilization = "finnish", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"green"}
+	PrimaryColor = "green"
 })
 
 DefineFaction("finland", {
 	Name = "Finland",
 	Civilization = "finnish",
 	Type = "polity",
-	PrimaryColors = {"white", "blue"},
+	PrimaryColor = "white",
+	SecondaryColor = "blue",
 	DefaultTier = "grand-duchy",
 	DevelopsFrom = {"fenni-tribe"}
 })

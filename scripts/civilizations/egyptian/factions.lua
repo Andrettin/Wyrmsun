@@ -29,7 +29,7 @@ DefineFaction("egypt", {
 	Name = "Egypt",
 	Civilization = "egyptian",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	HistoricalCapitals = {
 		0, "memphis"
 	}

@@ -29,7 +29,8 @@ DefineFaction("france", {
 	Name = "France",
 	Civilization = "french",
 	Type = "polity",
-	PrimaryColors = {"blue", "white"},
+	PrimaryColor = "blue",
+	SecondaryColor = "white",
 	DefaultTier = "kingdom"
 })
 
@@ -37,7 +38,8 @@ DefineFaction("belgium", {
 	Name = "Belgium",
 	Civilization = "french",
 	Type = "polity",
-	PrimaryColors = {"yellow", "red", "black"},
+	PrimaryColor = "yellow",
+	SecondaryColor = "red",
 	DefaultTier = "kingdom"
 })
 
@@ -47,6 +49,6 @@ DefineFaction("cistercian-order", {
 	Name = "Cistercian Order",
 	Civilization = "french",
 	Type = "holy-order",
-	PrimaryColors = {"blue"},
+	PrimaryColor = "blue",
 	DefaultTier = "duchy"
 })

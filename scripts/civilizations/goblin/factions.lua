@@ -29,7 +29,7 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	Name = "Aelak Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	FactionUpgrade = "upgrade-faction-aelak-tribe"
 })
 
@@ -37,7 +37,7 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	Name = "Issudru Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	FactionUpgrade = "upgrade-faction-issudru-tribe"
 })
 
@@ -45,7 +45,7 @@ DefineFaction("aurvangling-tribe", {
 	Name = "Aurvangling Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"teal"},
+	PrimaryColor = "teal",
 	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
@@ -54,7 +54,7 @@ DefineFaction("dreadskull-tribe", {
 	Name = "Dreadskull Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
@@ -63,7 +63,7 @@ DefineFaction("khag-tribe", {
 	Name = "Khag Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-khag-tribe",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Liberty (The Raid)
@@ -93,7 +93,7 @@ DefineFaction("lggi-tribe", {
 	Name = "Lggi Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"violet"},
+	PrimaryColor = "violet",
 	FactionUpgrade = "upgrade-faction-lggi-tribe",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
@@ -125,7 +125,7 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	Name = "Mabom Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"purple"},
+	PrimaryColor = "purple",
 	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
@@ -133,7 +133,7 @@ DefineFaction("prideblade-tribe", {
 	Name = "Prideblade Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"white"},
+	PrimaryColor = "white",
 	FactionUpgrade = "upgrade-faction-prideblade-tribe"
 })
 
@@ -141,7 +141,7 @@ DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	Name = "Sigre Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"yellow"},
+	PrimaryColor = "yellow",
 	FactionUpgrade = "upgrade-faction-sigre-tribe"
 })
 
@@ -149,7 +149,7 @@ DefineFaction("wildfang-tribe", {
 	Name = "Wildfang Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
-	PrimaryColors = {"red"},
+	PrimaryColor = "red",
 	FactionUpgrade = "upgrade-faction-wildfang-tribe",
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
@@ -158,7 +158,7 @@ DefineFaction("aurvang", {
 	Name = "Aurvang",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"teal"},
+	PrimaryColor = "teal",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
 	FactionUpgrade = "upgrade-faction-aurvang",
@@ -173,7 +173,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"brown"},
+	PrimaryColor = "brown",
 	DefaultTier = "barony",
 	DefaultGovernmentType = "republic",
 	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
@@ -187,7 +187,7 @@ DefineFaction("ezmarria", { -- invented by Jesse Crider
 	Name = "Ezmarria",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"white"},
+	PrimaryColor = "white",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-ezmarria",
@@ -203,7 +203,7 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	Name = "Myridia",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"cyan"},
+	PrimaryColor = "cyan",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-myridia",
@@ -219,7 +219,7 @@ DefineFaction("stilgar", { -- invented by Jesse Crider
 	Name = "Stilgar",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"blue"},
+	PrimaryColor = "blue",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-stilgar",
@@ -235,7 +235,7 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	Name = "Tenebris",
 	Civilization = "goblin",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-tenebris",
@@ -253,7 +253,7 @@ DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Greenskin Cartel", -- in the original adventure, the "Ape Cartel", formed by gorillas who had drunk intelligence potions
 	Civilization = "goblin",
 	Type = "mercenary-company",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "barony",
 	Description = "The Greenskin Cartel is a criminal group which runs the shipwreck town of Driftwood."
 })
@@ -262,7 +262,7 @@ DefineFaction("skulking-swords", {
 	Name = "Skulking Swords",
 	Civilization = "goblin",
 	Type = "mercenary-company",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "duchy",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
 })

@@ -29,61 +29,61 @@ DefineFaction("apsinthii-tribe", {
 	Name = "Apsinthii Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	PrimaryColors = {"purple"}
+	PrimaryColor = "purple"
 })
 
 DefineFaction("carpi-tribe", {
 	Name = "Carpi Tribe",
 	Civilization = "thracian", -- accurate?
 	Type = "tribe",
-	PrimaryColors = {"blue"}
+	PrimaryColor = "blue"
 })
 
 DefineFaction("costoboci-tribe", {
 	Name = "Costoboci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("daci-tribe", {
 	Name = "Daci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
-	PrimaryColors = {"violet"}
+	PrimaryColor = "violet"
 })
 
 DefineFaction("edoni-tribe", {
 	Name = "Edoni Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	PrimaryColors = {"white"}
+	PrimaryColor = "white"
 })
 
 DefineFaction("getae-tribe", {
 	Name = "Getae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	PrimaryColors = {"teal"}
+	PrimaryColor = "teal"
 })
 
 DefineFaction("odomanti-tribe", {
 	Name = "Odomanti Tribe",
 	Civilization = "thracian", -- were they really Thracian?
 	Type = "tribe",
-	PrimaryColors = {"black"}
+	PrimaryColor = "black"
 })
 
 DefineFaction("odrysae-tribe", {
 	Name = "Odrysae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	PrimaryColors = {"red"}
+	PrimaryColor = "red"
 })
 
 DefineFaction("triballi-tribe", {
 	Name = "Triballi Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	PrimaryColors = {"green"}
+	PrimaryColor = "green"
 })

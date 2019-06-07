@@ -80,7 +80,7 @@ DefineFaction("asgard", {
 	Name = "Asgard",
 	Civilization = "aesir",
 	Type = "polity",
-	PrimaryColors = {"blue"},
+	PrimaryColor = "blue",
 	DefaultTier = "kingdom",
 	DefaultAI = "passive"
 })
@@ -89,7 +89,7 @@ DefineFaction("hel", {
 	Name = "Hel",
 	Civilization = "aesir",
 	Type = "polity",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	DefaultTier = "kingdom",
 	DefaultAI = "passive"
 })

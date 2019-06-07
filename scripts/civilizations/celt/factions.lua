@@ -29,7 +29,7 @@ DefineFaction("celtic-cimmerian-tribe", {
 	Name = "Kommrogian Tribe",
 	Civilization = "celt",
 	Type = "tribe",
-	PrimaryColors = {"black"},
+	PrimaryColor = "black",
 	Adjective = "Kommrogian"
 	-- fictional Proto-Celtic people; Brythonic "Kombrogos" means "compatriot" and is the etymological origin of "Cymry" ("Welsh" in the Welsh language); "kom-mrogi" is a tentative rendering of that in Proto-Celtic
 })
@@ -38,7 +38,8 @@ DefineFaction("vana-tribe", {
 	Name = "Vana Tribe",
 	Civilization = "celt", -- the Vana appear, of course, only in Norse myths, but they are depicted as a people different from Scandinavians and their ancestors; since the Vanir (the Vana are an euhemerized version of the Vanir) are strongly associated with elves, it makes sense to make the Vana Celtic here, as the Celtic faeries are amalgamated with elves in Wyrmsun
 	Type = "tribe",
-	PrimaryColors = {"blue", "cyan"},
+	PrimaryColor = "blue",
+	SecondaryColor = "cyan",
 	DefaultAI = "passive",
 	Adjective = "Vana",
 	HistoricalResources = {

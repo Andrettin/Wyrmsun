@@ -29,7 +29,7 @@ DefineFaction("brazil", {
 	Name = "Brazil",
 	Civilization = "portuguese",
 	Type = "polity",
-	PrimaryColors = {"green"},
+	PrimaryColor = "green",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		-- Salvador was the Brazilian capital until 1763; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
