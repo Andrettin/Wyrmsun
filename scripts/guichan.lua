@@ -1375,7 +1375,7 @@ function RunSinglePlayerCustomGameMenu()
 		opponents:setSize(152, 20)
 
 		game_type_list = nil
-		game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
+		game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("North vs South"), _("West vs East"), _("Man vs Machine")}
 		gametype:setList(game_type_list)
 		gametype:setSize(152, 20)
 		gametype:setSelected(0)

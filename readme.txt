@@ -119,6 +119,7 @@ https://github.com/Andrettin/Wyrmsun
 - Replaced the main menu background with a new one made by Jinn.
 - Added a goblin victory background made by Jinn.
 - Overhauled the game's UI to make use of Godot's UI toolkit.
+- Renamed the "Top vs. Bottom" custom game type to "North vs. South", and "Left vs. Right" to "West vs. East". Thanks to Kriss7475 for the suggestion!
 
 -----------------------------------------------------------------------
 - 3.5.4
