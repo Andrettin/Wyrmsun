@@ -40,6 +40,7 @@ DefineFaction("avione-tribe", {
 	Civilization = "anglo-saxon", -- accurate?
 	Type = "tribe",
 	PrimaryColor = "white",
+	SecondaryColor = "red",
 	FactionUpgrade = "upgrade-faction-avione-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
 	DevelopsFrom = {"angle-tribe"}
