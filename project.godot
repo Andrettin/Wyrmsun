@@ -57,6 +57,11 @@ texture={
 "svg/scale": 1.0
 }
 
+[locale]
+
+locale_filter=[ 0, [  ] ]
+translations=PoolStringArray( "res://translations/wyr-de.po", "res://translations/wyr-es.po", "res://translations/wyr-fr.po", "res://translations/wyr-it.po", "res://translations/wyr-pl.po", "res://translations/wyr-pt.po", "res://translations/wyr-ru.po", "res://translations/wyr-tr.po" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

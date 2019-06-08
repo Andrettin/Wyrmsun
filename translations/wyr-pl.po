@@ -13,6 +13,9 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
+msgid "Single Player Game"
+msgstr "Gra Jednoosobowa"
+
 msgid "~!Single Player Game"
 msgstr "Gra Jednoo~!sobowa"
 

@@ -69,7 +69,7 @@ func update_entry_icon_button():
 		entry_icon_button.visible = false
 		return
 	
-	entry_icon_button.set_tooltip(entry.get_name())
+	entry_icon_button.set_tooltip(tr(entry.get_name()))
 	entry_icon_button.set_icon(entry.get_icon())
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
@@ -95,7 +95,10 @@ func update_entry_description():
 	entry_description_text += tr("Name") + ": "
 	if (name_word != null):
 		entry_description_text += "[url=word:" + name_word.get_ident() + "]"
-	entry_description_text += entry.get_name()
+	if (entry.is_class("CWord")):
+		entry_description_text += entry.get_name()
+	else:
+		entry_description_text += tr(entry.get_name())
 	if (name_word != null):
 		entry_description_text += "[/url]"
 	entry_description_text += "\n\n"
@@ -107,38 +110,44 @@ func update_entry_description():
 		entry_description_text += tr("Family Name") + ": "
 		if (family_name_word != null):
 			entry_description_text += "[url=word:" + family_name_word.get_ident() + "]"
-		entry_description_text += entry.get_family_name()
+		entry_description_text += tr(entry.get_family_name())
 		if (family_name_word != null):
 			entry_description_text += "[/url]"
 		entry_description_text += "\n\n"
 	
 	if (entry.has_method("get_anglicized_name") and entry.get_anglicized_name() != entry.get_name()):
 		entry_description_text += tr("Anglicized Name") + ": "
-		entry_description_text += entry.get_anglicized_name()
+		entry_description_text += tr(entry.get_anglicized_name())
 		entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
-		entry_description_text += "Class:" + " " + entry.get_unit_class().get_name() + "\n\n"
+		entry_description_text += "Class:" + " " + tr(entry.get_unit_class().get_name()) + "\n\n"
 	elif (entry.has_method("get_item_class") and entry.get_item_class() != null):
-		entry_description_text += "Class:" + " " + entry.get_item_class().get_name() + "\n\n"
+		entry_description_text += "Class:" + " " + tr(entry.get_item_class().get_name()) + "\n\n"
 	
 	if (entry.has_method("get_civilization") and entry.get_civilization() != null and entry.get_civilization().is_hidden() == false):
-		entry_description_text += "Civilization:" + " " + entry.get_civilization().get_name() + "\n\n"
+		entry_description_text += "Civilization:" + " " + tr(entry.get_civilization().get_name()) + "\n\n"
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
-		entry_description_text += tr("Faction") + ": [url=faction:" + entry.get_faction().get_ident() + "]" + entry.get_faction().get_name() + "[/url]\n\n"
+		entry_description_text += tr("Faction") + ": [url=faction:" + entry.get_faction().get_ident() + "]" + tr(entry.get_faction().get_name()) + "[/url]\n\n"
 	
 	if (entry.has_method("get_unit_type") and entry.get_unit_type() != null):
-		entry_description_text += tr("Unit Type") + ": [url=unit:" + entry.get_unit_type().get_ident() + "]" + entry.get_unit_type().get_name() + "[/url]\n\n"
+		entry_description_text += tr("Unit Type") + ": [url=unit:" + entry.get_unit_type().get_ident() + "]" + tr(entry.get_unit_type().get_name()) + "[/url]\n\n"
 	
 	if (entry.has_method("get_type") and entry.get_type() != null):
-		entry_description_text += tr("Type") + ": " + entry.get_type().get_name() + "\n\n"
+		entry_description_text += tr("Type") + ": " + tr(entry.get_type().get_name()) + "\n\n"
+		
+	if (entry.has_method("get_primary_color") and entry.get_primary_color() != null):
+		entry_description_text += tr("Primary Color") + ": " + tr(entry.get_primary_color().get_name()) + "\n\n"
+		
+	if (entry.has_method("get_secondary_color") and entry.get_secondary_color() != null):
+		entry_description_text += tr("Secondary Color") + ": " + tr(entry.get_secondary_color().get_name()) + "\n\n"
 		
 	if (entry.has_method("get_level")):
 		entry_description_text += tr("Level") + ": " + str(entry.get_level()) + "\n\n"
 		
 	if (entry.has_method("get_plane") and entry.get_plane() != null):
-		entry_description_text += tr("Plane") + ": [url=plane:" + entry.get_plane().get_ident() + "]" + entry.get_plane().get_name() + "[/url]\n\n"
+		entry_description_text += tr("Plane") + ": [url=plane:" + entry.get_plane().get_ident() + "]" + tr(entry.get_plane().get_name()) + "[/url]\n\n"
 	
 	if (entry.is_class("CCharacter")):
 		if (entry.has_method("get_father") and entry.get_father() != null):
@@ -202,7 +211,7 @@ func update_entry_description():
 				
 				var sapient_species_name_list = []
 				for sapient_species in sapient_species_list:
-					sapient_species_name_list.push_back(sapient_species.get_name_plural())
+					sapient_species_name_list.push_back(tr(sapient_species.get_name_plural()))
 				sapient_species_name_list.sort()
 				
 				var first_sapient_species = true
@@ -240,7 +249,7 @@ func update_entry_description():
 					first_deity = false
 				else:
 					entry_description_text += ", "
-				entry_description_text += deity.get_name()
+				entry_description_text += tr(deity.get_name())
 			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_abilities")):
@@ -261,16 +270,16 @@ func update_entry_description():
 					first_ability = false
 				else:
 					entry_description_text += ", "
-				entry_description_text += ability.get_name()
+				entry_description_text += tr(ability.get_name())
 				if (displayed_ability_count.get(ability) > 1):
 					entry_description_text += " (x" + str(displayed_ability_count.get(ability)) + ")"
 			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
-		entry_description_text += "Description:" + " " + wyrmgus.process_dynamic_string(entry.get_description(), entry) + "\n\n"
+		entry_description_text += "Description:" + " " + wyrmgus.process_dynamic_string(tr(entry.get_description()), entry) + "\n\n"
 	
 	if (entry.has_method("get_quote") and entry.get_quote().empty() == false):
-		entry_description_text += "Quote:" + " " + wyrmgus.process_dynamic_string(entry.get_quote(), entry) + "\n\n"
+		entry_description_text += "Quote:" + " " + wyrmgus.process_dynamic_string(tr(entry.get_quote()), entry) + "\n\n"
 		
 	if (entry.is_class("CUnitType")):
 		var cost_strings = get_cost_strings(entry)
@@ -303,23 +312,23 @@ func update_entry_description():
 	elif (entry.is_class("CLiteraryText")):
 		if (entry.get_author().empty() == false):
 			if (entry.get_main_text() == null or entry.get_author() != entry.get_main_text().get_author()):
-				entry_description_text += "Author:" + " " + entry.get_author() + "\n\n"
+				entry_description_text += tr("Author") + ": " + entry.get_author() + "\n\n"
 			
 		if (entry.get_translator().empty() == false):
 			if (entry.get_main_text() == null or entry.get_translator() != entry.get_main_text().get_translator()):
-				entry_description_text += "Translator:" + " " + entry.get_translator() + "\n\n"
+				entry_description_text += tr("Translator") + ": " + entry.get_translator() + "\n\n"
 	
 		if (entry.get_publisher().empty() == false):
 			if (entry.get_main_text() == null or entry.get_publisher() != entry.get_main_text().get_publisher()):
-				entry_description_text += "Publisher:" + " " + entry.get_publisher() + "\n\n"
+				entry_description_text += tr("Publisher") + ": " + entry.get_publisher() + "\n\n"
 	
 		if (entry.get_publication_year() != 0):
 			if (entry.get_main_text() == null or entry.get_publication_year() != entry.get_main_text().get_publication_year()):
-				entry_description_text += "Year of Publication:" + " " + str(entry.get_publication_year()) + "\n\n"
+				entry_description_text += tr("Year of Publication") + ": " + str(entry.get_publication_year()) + "\n\n"
 	
 		if (entry.get_license().empty() == false):
 			if (entry.get_main_text() == null or entry.get_license() != entry.get_main_text().get_license()):
-				entry_description_text += "License:" + " " + entry.get_license() + "\n\n"
+				entry_description_text += tr("License") + ": " + entry.get_license() + "\n\n"
 			
 		if (self.current_page != null):
 			if (entry_description_text.empty() == false):
@@ -330,18 +339,18 @@ func update_entry_description():
 		#draw a table of contents for subsections of the literary text for the last page of the literary text
 		var sections = entry.get_sections()
 		if (sections.empty() == false and (self.current_page == null or self.current_page.get_next_page() == null)):
-			entry_description_text += "\n\n" + "Table of Contents" + "\n"
+			entry_description_text += "\n\n" + tr("Table of Contents") + "\n"
 			
 			for section in sections:
 				entry_description_text += "\n[url=literary_text:" + section.get_ident() + "]"
 				entry_description_text += section.get_name()
 				entry_description_text += "[/url]"
 	elif (entry.is_class("CWord")):
-		entry_description_text += tr("Language") + ": " + entry.get_language().get_name() + "\n\n"
+		entry_description_text += tr("Language") + ": " + tr(entry.get_language().get_name()) + "\n\n"
 		if (entry.get_type() != null):
-			entry_description_text += tr("Type") + ": " + entry.get_type().get_name() + "\n\n"
+			entry_description_text += tr("Type") + ": " + tr(entry.get_type().get_name()) + "\n\n"
 		if (entry.get_gender() != null):
-			entry_description_text += tr("Grammatical Gender") + ": " + entry.get_gender().get_name() + "\n\n"
+			entry_description_text += tr("Grammatical Gender") + ": " + tr(entry.get_gender().get_name()) + "\n\n"
 			
 		if (entry.get_meanings().empty() == false):
 			entry_description_text += tr("Meanings") + ": "
@@ -351,7 +360,7 @@ func update_entry_description():
 					first_meaning = false
 				else:
 					entry_description_text += ", "
-				entry_description_text += "\"" + meaning + "\""
+				entry_description_text += "\"" + tr(meaning) + "\""
 			entry_description_text += "\n\n"
 			
 		if (entry.get_compound_elements().empty() == false):
@@ -382,32 +391,32 @@ func update_entry_description():
 		var personal_name_genders = entry.get_personal_name_genders()
 		if (!personal_name_genders.empty()):
 			if (personal_name_genders.size() == wyrmgus.get_genders().size()): #the name is used for all genders
-				entry_description_text += "Personal Name\n\n"
+				entry_description_text += tr("Personal Name") + "\n\n"
 			else:
 				for gender in personal_name_genders:
 					entry_description_text += gender.get_name() + " Personal Name\n\n"
 				
 		if (entry.is_family_name()):
-			entry_description_text += "Family Name\n\n"
+			entry_description_text += tr("Family Name") + "\n\n"
 			
 		var specimen_name_species = entry.get_specimen_name_species()
 		for species in specimen_name_species:
 			var specimen_name_genders = entry.get_specimen_name_genders(species)
 			if (!specimen_name_genders.empty()):
 				if (specimen_name_genders.size() == wyrmgus.get_genders().size()): #the name is used for all genders
-					entry_description_text += species.get_name() + " Name\n\n"
+					entry_description_text += tr(species.get_name()) + " " + tr("Name") + "\n\n"
 				else:
 					for gender in specimen_name_genders:
-						entry_description_text += gender.get_name() + " " + species.get_name() + " Name\n\n"
+						entry_description_text += tr(gender.get_name()) + " " + tr(species.get_name()) + " " + tr("Name") + "\n\n"
 			
 		if (entry.is_ship_name()):
-			entry_description_text += "Ship Name\n\n"
+			entry_description_text += tr("Ship Name") + "\n\n"
 			
 		if (entry.is_settlement_name()):
-			entry_description_text += "Settlement Name\n\n"
+			entry_description_text += tr("Settlement Name") + "\n\n"
 	
 	if (entry.has_method("get_background") and entry.get_background().empty() == false):
-		entry_description_text += "Background:" + " " + entry.get_background() + "\n\n"
+		entry_description_text += tr("Background") + ": " + tr(entry.get_background()) + "\n\n"
 		
 	while (entry_description_text.ends_with("\n")):
 		entry_description_text = entry_description_text.trim_suffix("\n") #remove unnecessary newlines at the end

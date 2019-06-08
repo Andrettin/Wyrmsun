@@ -219,7 +219,7 @@ func get_succint_species_string_list(species_list):
 			else:
 				name = species.get_name()
 			
-		species_string_list.push_back(name)
+		species_string_list.push_back(tr(name))
 		
 	species_string_list.sort()
 	
