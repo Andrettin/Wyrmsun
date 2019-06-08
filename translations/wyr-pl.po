@@ -61,6 +61,9 @@ msgstr "En~!cyklopedia"
 msgid "S~!how Credits"
 msgstr "Li~!sta Twórców"
 
+msgid "Cred~!its"
+msgstr "Twórców (~!I)"
+
 msgid "E~!xit Program"
 msgstr "Wyjdź z Gry (~!X)"
 
@@ -97,6 +100,12 @@ msgstr "Anuluj (~!C)"
 msgid "~<Units:~>"
 msgstr "~<Jednostki:~>"
 
+msgid "Units"
+msgstr "Jednostki"
+
+msgid "~!Units"
+msgstr "Jednostki (~!U)"
+
 msgid "Dwarf"
 msgstr "Krasnolud"
 
@@ -124,8 +133,14 @@ msgstr "Tartak"
 msgid "Gnomish Recruit"
 msgstr "Gnomi Rekrut"
 
+msgid "Recruit"
+msgstr "Rekrut"
+
 msgid "Gnomish Caravan"
 msgstr "Gnomia Karawana"
+
+msgid "Caravan"
+msgstr "Karawana"
 
 msgid "Gold Mine"
 msgstr "Kopalnia Złota"
@@ -143,6 +158,9 @@ msgid "Rat"
 msgstr "Szczur"
 
 msgid "The Scepter of Fire"
+msgstr "Berło Ognia"
+
+msgid "The Sceptre of Fire"
 msgstr "Berło Ognia"
 
 msgid "A Bargain is Struck"

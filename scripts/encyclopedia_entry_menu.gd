@@ -30,6 +30,9 @@ func change_entry(entry):
 		entry_title = entry.get_full_name()
 	else:
 		entry_title = entry.get_name()
+	if (entry.is_class("CWord") == false):
+		entry_title = tr(entry_title)
+		
 	menu_title.bbcode_text = "[center][color=#f4e020]" + entry_title + "[/color][/center]"
 	
 	if (entry.is_class("CLiteraryText")):
@@ -334,7 +337,7 @@ func update_entry_description():
 			if (entry_description_text.empty() == false):
 				#add a bit of separation between the description and the text of the page itself
 				entry_description_text += "\n\n"
-			entry_description_text += self.current_page.get_text()
+			entry_description_text += tr(self.current_page.get_text())
 			
 		#draw a table of contents for subsections of the literary text for the last page of the literary text
 		var sections = entry.get_sections()
@@ -486,7 +489,7 @@ func change_page(page):
 		#this is the first page, so show the information on the literary text as well
 		update_entry_description()
 	else:
-		entry_description_label.bbcode_text = page.get_text()
+		entry_description_label.bbcode_text = tr(page.get_text())
 		entry_description_label.update_for_scroll_bar()
 	
 	update_page_number()

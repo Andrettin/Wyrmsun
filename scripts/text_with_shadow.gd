@@ -20,6 +20,14 @@ func _ready():
 
 func _set(property, value):
 	if (property == "bbcode_text"):
+		var translatable_text = value
+		translatable_text = translatable_text.replace("[color=#f4e020]", "")
+		translatable_text = translatable_text.replace("[/color]", "")
+		translatable_text = translatable_text.replace("[center]", "")
+		translatable_text = translatable_text.replace("[/center]", "")
+		
+		value = value.replace(translatable_text, tr(translatable_text))
+		
 		var text_shadow = value
 		text_shadow = text_shadow.replace("[color=#f4e020]", "")
 		text_shadow = text_shadow.replace("[/color]", "")

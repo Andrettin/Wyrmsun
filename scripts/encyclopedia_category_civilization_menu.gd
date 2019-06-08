@@ -13,7 +13,7 @@ func _ready():
 	var menu_area = self.find_node("menu_area")
 	
 	var menu_title = menu_area.find_node("menu_title")
-	menu_title.bbcode_text = "[center][color=#f4e020]Encyclopedia: " + encyclopedia.get_category_name() + "[/color][/center]"
+	menu_title.bbcode_text = "[center][color=#f4e020]" + tr("Encyclopedia") + ": " + tr(encyclopedia.get_category_name()) + "[/color][/center]"
 	
 	for entry in encyclopedia.entries:
 		var civilization = entry.get_civilization()
@@ -40,7 +40,7 @@ func _ready():
 			civilization_name = "General"
 		else:
 			civilization_name = civilization.get_name()
-		civilization_button.set_button_text(civilization_name + " " + encyclopedia.get_category_name())
+		civilization_button.set_button_text(tr(civilization_name) + " " + tr(encyclopedia.get_category_name()))
 		
 		buttons.push_back(civilization_button)
 		

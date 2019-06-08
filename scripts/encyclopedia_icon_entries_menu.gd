@@ -11,9 +11,9 @@ func _ready():
 	var menu_area = self.find_node("menu_area")
 	
 	var menu_title_label = menu_area.find_node("menu_title")
-	var menu_title_text = "[center][color=#f4e020]Encyclopedia: " + encyclopedia.get_category_name()
+	var menu_title_text = "[center][color=#f4e020]" + tr("Encyclopedia") + ": " + tr(encyclopedia.get_category_name())
 	if (encyclopedia.civilization != null and encyclopedia.civilization.is_hidden() == false):
-		menu_title_text += " (" + encyclopedia.civilization.get_name() + ")"
+		menu_title_text += " (" + tr(encyclopedia.civilization.get_name()) + ")"
 	menu_title_text += "[/color][/center]"
 	menu_title_label.bbcode_text = menu_title_text
 	
