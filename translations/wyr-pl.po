@@ -61,9 +61,6 @@ msgstr "En~!cyklopedia"
 msgid "S~!how Credits"
 msgstr "Li~!sta Twórców"
 
-msgid "Cred~!its"
-msgstr "Twórców (~!I)"
-
 msgid "E~!xit Program"
 msgstr "Wyjdź z Gry (~!X)"
 
