@@ -22,8 +22,6 @@ func _ready():
 		
 		self.set_oaml_module(music_player)
 		
-		self.connect("initialized", self, "load_icons", [], CONNECT_DEFERRED)
-		
 		self.wyrmgus_thread = Thread.new()
 		self.wyrmgus_thread.start(self, "run_")
 
@@ -46,9 +44,10 @@ func update_user_directory():
 		return
 	self.set_user_directory(user_directory.get_current_dir())
 
-func load_icons():
-	for icon in get_icons():
-		var icon_texture = null
+func get_icon_texture(icon):
+	var icon_texture = self.icon_textures.get(icon)
+	
+	if (icon_texture == null):
 		var file_path = icon.get_file()
 		if (file_path.find(wyrmgus.get_user_directory()) == -1):
 			if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
@@ -64,9 +63,8 @@ func load_icons():
 			texture.create_from_image(image)
 			icon_texture = texture
 		self.icon_textures[icon] = icon_texture
-		
-func get_icon_texture(icon):
-	return self.icon_textures.get(icon, null)
+	
+	return icon_texture
 	
 func process_dynamic_string(string, context_element):
 	if (context_element.get_class() == "CCharacter"):
