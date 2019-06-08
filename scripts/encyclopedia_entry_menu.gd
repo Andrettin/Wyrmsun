@@ -124,12 +124,12 @@ func update_entry_description():
 		entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_unit_class") and entry.get_unit_class() != null):
-		entry_description_text += "Class:" + " " + tr(entry.get_unit_class().get_name()) + "\n\n"
+		entry_description_text += tr("Class") + ": " + tr(entry.get_unit_class().get_name()) + "\n\n"
 	elif (entry.has_method("get_item_class") and entry.get_item_class() != null):
-		entry_description_text += "Class:" + " " + tr(entry.get_item_class().get_name()) + "\n\n"
+		entry_description_text += tr("Class") + ": " + tr(entry.get_item_class().get_name()) + "\n\n"
 	
 	if (entry.has_method("get_civilization") and entry.get_civilization() != null and entry.get_civilization().is_hidden() == false):
-		entry_description_text += "Civilization:" + " " + tr(entry.get_civilization().get_name()) + "\n\n"
+		entry_description_text += tr("Civilization") + ": " + tr(entry.get_civilization().get_name()) + "\n\n"
 	
 	if (entry.has_method("get_faction") and entry.get_faction() != null):
 		entry_description_text += tr("Faction") + ": [url=faction:" + entry.get_faction().get_ident() + "]" + tr(entry.get_faction().get_name()) + "[/url]\n\n"
@@ -279,10 +279,10 @@ func update_entry_description():
 			entry_description_text += "\n\n"
 		
 	if (entry.has_method("get_description") and entry.get_description().empty() == false):
-		entry_description_text += "Description:" + " " + wyrmgus.process_dynamic_string(tr(entry.get_description()), entry) + "\n\n"
+		entry_description_text += tr("Description") + ": " + wyrmgus.process_dynamic_string(tr(entry.get_description()), entry) + "\n\n"
 	
 	if (entry.has_method("get_quote") and entry.get_quote().empty() == false):
-		entry_description_text += "Quote:" + " " + wyrmgus.process_dynamic_string(tr(entry.get_quote()), entry) + "\n\n"
+		entry_description_text += tr("Quote") + ": " + wyrmgus.process_dynamic_string(tr(entry.get_quote()), entry) + "\n\n"
 		
 	if (entry.is_class("CUnitType")):
 		var cost_strings = get_cost_strings(entry)
