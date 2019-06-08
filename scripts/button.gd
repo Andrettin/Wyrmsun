@@ -17,7 +17,7 @@ func set_button_text(button_text):
 	update_text()
 	
 func update_text():
-	text = self.button_text
+	text = tr(self.button_text)
 	var find_pos = text.find(character_highlight_markdown)
 	while (find_pos != -1):
 		text = text.insert(find_pos + character_highlight_markdown.length() + 1, "[/color]")
