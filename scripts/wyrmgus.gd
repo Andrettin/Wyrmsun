@@ -49,22 +49,35 @@ func get_icon_texture(icon):
 	
 	if (icon_texture == null):
 		var file_path = icon.get_file()
-		if (file_path.find(wyrmgus.get_user_directory()) == -1):
-			if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
-				file_path = "res://" + file_path
-			else:
-				file_path = "res://graphics/" + file_path
-			icon_texture = load(file_path)
-		else:
-			#for images that don't have import files, we need to do it a bit differently
-			var image = Image.new()
-			image.load(file_path)
-			var texture = ImageTexture.new()
-			texture.create_from_image(image)
-			icon_texture = texture
-		self.icon_textures[icon] = icon_texture
+		icon_texture = self.get_image_texture(file_path)
 	
 	return icon_texture
+	
+func get_civilization_victory_background_texture(civilization):
+	var file_path = civilization.get_victory_background_file()
+	file_path = file_path.replace(".png", "_sepia.png") #use the sepia version for better text visibility
+	return self.get_image_texture(file_path)
+	
+func get_civilization_defeat_background_texture(civilization):
+	var file_path = civilization.get_defeat_background_file()
+	file_path = file_path.replace(".png", "_sepia.png") #use the sepia version for better text visibility
+	return self.get_image_texture(file_path)
+	
+func get_image_texture(file_path):
+	var texture
+	if (file_path.find(self.get_user_directory()) == -1):
+		if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
+			file_path = "res://" + file_path
+		else:
+			file_path = "res://graphics/" + file_path
+		texture = load(file_path)
+	else:
+		#for images that don't have import files, we need to do it a bit differently
+		var image = Image.new()
+		image.load(file_path)
+		texture = ImageTexture.new()
+		texture.create_from_image(image)
+	return texture
 	
 func process_dynamic_string(string, context_element):
 	if (context_element.get_class() == "CCharacter"):

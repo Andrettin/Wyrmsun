@@ -40,21 +40,7 @@ func change_entry(entry):
 		
 	if (encyclopedia.civilization != null and encyclopedia.civilization.get_victory_background_file().empty() == false):
 		var menu_background = self.find_node("background")
-		var file_path = encyclopedia.civilization.get_victory_background_file()
-		file_path = file_path.replace(".png", "_sepia.png") #use the sepia version for better text visibility
-		if (file_path.find(wyrmgus.get_user_directory()) == -1):
-			if (file_path.find("dlcs/") != -1 or file_path.find("modules/") != -1):
-				file_path = "res://" + file_path
-			else:
-				file_path = "res://graphics/" + file_path
-			menu_background.texture = load(file_path)
-		else:
-			#for images that don't have import files, we need to do it a bit differently
-			var image = Image.new()
-			image.load(file_path)
-			var texture = ImageTexture.new()
-			texture.create_from_image(image)
-			menu_background.texture = texture
+		menu_background.texture = wyrmgus.get_civilization_victory_background_texture(encyclopedia.civilization)
 	
 	update_entry_icon_button()
 	update_entry_description()

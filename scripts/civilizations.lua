@@ -1506,6 +1506,8 @@ DefineCivilization("ettin", {
 	DefaultPrimaryPlayerColor = "black",
 	DefaultSecondaryPlayerColor = "blue",
 	CivilizationUpgrade = "upgrade-ettin-civilization",
+	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
+	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",
@@ -1713,6 +1715,8 @@ DefineCivilization("kobold", {
 	DefaultPrimaryPlayerColor = "violet",
 	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-kobold-civilization",
+	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
+	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-goblin-wooden-shield",

@@ -10,6 +10,10 @@ func _ready():
 	
 	var menu_area = self.find_node("menu_area")
 	
+	if (encyclopedia.civilization != null and encyclopedia.civilization.get_victory_background_file().empty() == false):
+		var menu_background = self.find_node("background")
+		menu_background.texture = wyrmgus.get_civilization_victory_background_texture(encyclopedia.civilization)
+	
 	var menu_title_label = menu_area.find_node("menu_title")
 	var menu_title_text = "[center][color=#f4e020]" + tr("Encyclopedia") + ": " + tr(encyclopedia.get_category_name())
 	if (encyclopedia.civilization != null and encyclopedia.civilization.is_hidden() == false):
