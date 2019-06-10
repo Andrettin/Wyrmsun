@@ -30,7 +30,8 @@ DefineFaction("celtic-cimmerian-tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 	PrimaryColor = "black",
-	Adjective = "Kommrogian"
+	Adjective = "Kommrogian",
+	Icon = "icon-flag-five-orange-birds-on-black"
 	-- fictional Proto-Celtic people; Brythonic "Kombrogos" means "compatriot" and is the etymological origin of "Cymry" ("Welsh" in the Welsh language); "kom-mrogi" is a tentative rendering of that in Proto-Celtic
 })
 
@@ -42,6 +43,7 @@ DefineFaction("vana-tribe", {
 	SecondaryColor = "cyan",
 	DefaultAI = "passive",
 	Adjective = "Vana",
+	Icon = "icon-flag-old-austria",
 	HistoricalResources = {
 		-3000, "copper", 0,
 		-3000, "lumber", 0,

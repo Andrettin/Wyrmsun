@@ -298,6 +298,7 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	PrimaryColor = "blue",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-dane-tribe",
+	Icon = "icon-flag-old-austria",
 	Description = "The Jomsvikings were a group of warriors and pirates based in Jomsburg."
 })
 
@@ -307,5 +308,6 @@ DefineFaction("varangian-guard", {
 	Type = "mercenary-company",
 	PrimaryColor = "red",
 	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-swede-tribe"
+	FactionUpgrade = "upgrade-faction-swede-tribe",
+	Icon = "icon-flag-five-white-birds-on-red"
 })

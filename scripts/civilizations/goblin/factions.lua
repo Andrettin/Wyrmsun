@@ -30,7 +30,8 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "red",
-	FactionUpgrade = "upgrade-faction-aelak-tribe"
+	FactionUpgrade = "upgrade-faction-aelak-tribe",
+	Icon = "icon-flag-brown-skull-on-red"
 })
 
 DefineFaction("issudru-tribe", { -- invented by Jesse Crider
@@ -38,7 +39,8 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "black",
-	FactionUpgrade = "upgrade-faction-issudru-tribe"
+	FactionUpgrade = "upgrade-faction-issudru-tribe",
+	Icon = "icon-flag-black-skull-on-white"
 })
 
 DefineFaction("aurvangling-tribe", {
@@ -47,6 +49,7 @@ DefineFaction("aurvangling-tribe", {
 	Type = "tribe",
 	PrimaryColor = "teal",
 	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
+	Icon = "icon-flag-orange-skull-on-teal",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
@@ -56,6 +59,7 @@ DefineFaction("dreadskull-tribe", {
 	Type = "tribe",
 	PrimaryColor = "black",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
+	Icon = "icon-flag-black-skull-on-white",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
 
@@ -65,6 +69,7 @@ DefineFaction("khag-tribe", {
 	Type = "tribe",
 	PrimaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-khag-tribe",
+	Icon = "icon-flag-brown-skull-on-red",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Liberty (The Raid)
 			"force-type", "land-force",
@@ -95,6 +100,7 @@ DefineFaction("lggi-tribe", {
 	Type = "tribe",
 	PrimaryColor = "violet",
 	FactionUpgrade = "upgrade-faction-lggi-tribe",
+	Icon = "icon-flag-green-skull-on-purple",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
 			"force-type", "land-force",
@@ -126,6 +132,7 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "purple",
+	Icon = "icon-flag-green-skull-on-purple",
 	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
@@ -134,6 +141,7 @@ DefineFaction("prideblade-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "white",
+	Icon = "icon-flag-black-skull-on-white",
 	FactionUpgrade = "upgrade-faction-prideblade-tribe"
 })
 
@@ -142,6 +150,7 @@ DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "yellow",
+	Icon = "icon-flag-red-skull-on-yellow",
 	FactionUpgrade = "upgrade-faction-sigre-tribe"
 })
 
@@ -151,6 +160,7 @@ DefineFaction("wildfang-tribe", {
 	Type = "tribe",
 	PrimaryColor = "red",
 	FactionUpgrade = "upgrade-faction-wildfang-tribe",
+	Icon = "icon-flag-brown-skull-on-red",
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
 
@@ -255,6 +265,7 @@ DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 	Type = "mercenary-company",
 	PrimaryColor = "green",
 	DefaultTier = "barony",
+	Icon = "icon-flag-purple-skull-on-green",
 	Description = "The Greenskin Cartel is a criminal group which runs the shipwreck town of Driftwood."
 })
 
@@ -264,5 +275,6 @@ DefineFaction("skulking-swords", {
 	Type = "mercenary-company",
 	PrimaryColor = "black",
 	DefaultTier = "duchy",
+	Icon = "icon-flag-black-skull-on-white",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
 })
