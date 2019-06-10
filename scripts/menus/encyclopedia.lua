@@ -46,9 +46,6 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Deities"), "d", offx + 208 + (113 * -1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("deities") end)
 
-	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*2,
-		function() RunEncyclopediaFactionsCivilizationMenu() end)
-
 	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*3,
 		function() RunEncyclopediaGameConceptsMenu() end)
 
@@ -1014,171 +1011,6 @@ function OpenEncyclopediaCivilizationEntry(civilization)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaFactionsCivilizationMenu()
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of civilization entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "factions", height_offset)
-
-	local potential_civilizations = GetCivilizations()
-	local civilizations = {}
-	
-	for i = 1, table.getn(potential_civilizations) do
-		local potential_factions = GetCivilizationData(potential_civilizations[i], "Factions")
-		local factions = {}
-		for j = 1, table.getn(potential_factions) do
-			if (GetFactionData(potential_factions[j], "Description") ~= "" or GetFactionData(potential_factions[j], "Background") ~= "" or GetFactionData(potential_factions[j], "Quote") ~= "") then
-				table.insert(factions, potential_factions[j])
-			end
-		end
-		if (table.getn(factions) > 0) then
-			table.insert(civilizations, potential_civilizations[i])
-		end
-	end
-	table.sort(civilizations)
-
-	local civilization_x = 0
-	if (GetTableSize(civilizations) > 20) then
-		civilization_x = -2
-	elseif (GetTableSize(civilizations) > 10) then
-		civilization_x = -1
-	end
-	local civilization_y = -3
-
-	for i = 1, table.getn(civilizations) do
-		menu:addFullButton(_(GetCivilizationData(civilizations[i], "Adjective") .. " " .. _("Factions")), "", offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
-			function() RunEncyclopediaFactionsMenu(civilizations[i]); end)
-
-		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < 600)) then
-			civilization_x = civilization_x + 2
-			civilization_y = -3
-		else
-			civilization_y = civilization_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function RunEncyclopediaFactionsMenu(civilization)
-
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= 600) then
-		height_offset = 2 -- change this to 0 if the number of faction entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "factions", height_offset)
-	
-	local potential_factions = GetCivilizationData(civilization, "Factions")
-	local factions = {}
-	
-	for i = 1, table.getn(potential_factions) do
-		if (GetFactionData(potential_factions[i], "Description") ~= "" or GetFactionData(potential_factions[i], "Background") ~= "" or GetFactionData(potential_factions[i], "Quote") ~= "") then
-			table.insert(factions, potential_factions[i])
-		end
-	end
-	table.sort(factions)
-
-	local faction_x = 0
-	if (GetTableSize(factions) > 20) then
-		faction_x = -2
-	elseif (GetTableSize(factions) > 10) then
-		faction_x = -1
-	end
-	local faction_y = -3
-
-	for i = 1, table.getn(factions) do
-		menu:addFullButton(_(GetFactionData(factions[i], "Name")), "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
-			function() OpenEncyclopediaFactionEntry(civilization, factions[i]); end)
-
-		if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
-			faction_x = faction_x + 2
-			faction_y = -3
-		else
-			faction_y = faction_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function OpenEncyclopediaFactionEntry(civilization, faction)
-	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
-	end
-
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. GetFactionData(faction, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64, Video.Height / 2)
-	l:setLineWidth(Video.Width - 64)
-	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
-	local effects = ""
-	if (GetFactionData(faction, "FactionUpgrade") ~= "") then
-		effects = GetUpgradeData(GetFactionData(faction, "FactionUpgrade"), "EffectsString")
-	end
-	local description = ""
-	description = "Color: " .. CapitalizeString(GetFactionData(faction, "PrimaryColor")) .. "\n\n"
-	if (effects ~= "") then
-		description = description .. "Effects: " .. effects .. ".\n\n"
-	end
-	if (GetFactionData(faction, "Description") ~= "") then
-		description = description .. _("Description") .. ": " .. _(GetFactionData(faction, "Description")) .. "\n\n"
-	end
-	if (GetFactionData(faction, "Quote") ~= "") then
-		description = description .. _("Quote") .. ": " .. _(GetFactionData(faction, "Quote")) .. "\n\n"
-	end
-	if (GetFactionData(faction, "Background") ~= "") then
-		description = description .. _("Background") .. ": " .. _(GetFactionData(faction, "Background")) .. "\n\n"
-	end
-	l:setCaption(description)
-			
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
 function GetCivilizationBackground(civilization)
 	if (civilization == "basque") then
 		return "backgrounds/gryphon.png"
@@ -1251,8 +1083,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Civilizations")
 	elseif (state == "deities") then
 		top_label_string = top_label_string .. _("Deities")
-	elseif (state == "factions") then
-		top_label_string = top_label_string .. _("Factions")
 	elseif (state == "game_concepts") then
 		top_label_string = top_label_string .. _("Game Concepts")
 	elseif (state == "item_prefixes") then
