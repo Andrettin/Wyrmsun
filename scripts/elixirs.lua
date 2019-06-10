@@ -31,42 +31,6 @@ DefineUpgrade("upgrade-elixir-fafnirs-heart", {
 	UniqueOnly = true
 })
 
-DefineUpgrade("upgrade-elixir-of-dexterity", {
-	Name = "Elixir of Dexterity",
-	MagicLevel = 5
-})
-
-DefineUpgrade("upgrade-elixir-of-intelligence", {
-	Name = "Elixir of Intelligence",
-	MagicLevel = 5
-})
-
-DefineUpgrade("upgrade-elixir-of-strength", {
-	Name = "Elixir of Strength",
-	MagicLevel = 5
-})
-
-DefineUpgrade("upgrade-elixir-of-vitality", {
-	Name = "Elixir of Vitality",
-	MagicLevel = 5
-})
-
 DefineModifier("upgrade-elixir-fafnirs-heart",
 	{"BasicDamage", 1}
-)
-
-DefineModifier("upgrade-elixir-of-dexterity",
-	{"Accuracy", 1}
-)
-
-DefineModifier("upgrade-elixir-of-intelligence",
-	{"Mana", 10}
-)
-
-DefineModifier("upgrade-elixir-of-strength",
-	{"BasicDamage", 1}
-)
-
-DefineModifier("upgrade-elixir-of-vitality",
-	{"HitPoints", 5}
 )

@@ -185,15 +185,6 @@ DefineUpgrade("upgrade-ironworking", {
 	Costs = {"time", 250, "copper", 2000}
 })
 
-DefineUpgrade("upgrade-masonry", {
-	Name = "Masonry",
-	Class = "masonry",
-	Civilization = "neutral",
-	Icon = "icon-masonry",
-	Description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds.",
-	Costs = {"time", 250, "copper", 900, "lumber", 1000, "stone", 500}
-})
-
 DefineUpgrade("upgrade-coinage", {
 	Name = "Coinage",
 	Class = "coinage",
@@ -237,16 +228,6 @@ DefineUpgrade("upgrade-mathematics", {
 	Description = "The understanding of even a basic level of mathematics has significant benefits for a civilization, particularly in matters such as keeping account of trade.",
 	RequirementsString = "Writing",
 	Costs = {"time", 250, "copper", 2000}
-})
-
-DefineUpgrade("upgrade-engineering", {
-	Name = "Engineering",
-	Class = "engineering",
-	Civilization = "neutral",
-	Icon = "icon-engineering",
-	Description = "The development of engineering allows the creation of more complex mechanisms.\n\nEffect: Allows siege engines, railroads and minecarts.",
-	RequirementsString = "Mathematics, Masonry and Ironworking",
-	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
 DefineUpgrade("upgrade-architecture", {
@@ -326,10 +307,6 @@ DefineModifier("upgrade-mathematics",
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-norse-market"},
 	{"apply-to", "unit-teuton-market"}
-)
-
-DefineModifier("upgrade-engineering", -- dummy upgrade modifier to change the variation
-	{"apply-to", "unit-gold-mine"}
 )
 
 DefineModifier("upgrade-masonry",
@@ -538,7 +515,6 @@ Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")
 Load("scripts/item_sets.lua")
 Load("scripts/province_modifiers.lua")
-Load("scripts/traits.lua")
 Load("scripts/elixirs.lua")
 Load("scripts/works.lua")
 
