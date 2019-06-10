@@ -138,6 +138,9 @@ func update_entry_description():
 	if (entry.has_method("get_plane") and entry.get_plane() != null):
 		entry_description_text += tr("Plane") + ": [url=plane:" + entry.get_plane().get_ident() + "]" + tr(entry.get_plane().get_name()) + "[/url]\n\n"
 	
+	if (entry.is_class("CFaction") and entry.get_faction_upgrade() != null):
+		entry_description_text += tr("Bonus") + ": " + tr(entry.get_faction_upgrade().get_effects_string()) + "\n\n"
+	
 	if (entry.is_class("CCharacter")):
 		if (entry.has_method("get_father") and entry.get_father() != null):
 			entry_description_text += tr("Father") + ": "
