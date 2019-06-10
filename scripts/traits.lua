@@ -32,12 +32,14 @@ DefineUpgrade("upgrade-trait", {
 
 DefineUpgrade("upgrade-ambitious", {
 	Parent = "upgrade-trait",
-	Name = "Ambitious"
+	Name = "Ambitious",
+	EffectsString = "+5 Mana"
 })
 
 DefineUpgrade("upgrade-clumsy", {
 	Parent = "upgrade-trait",
-	Name = "Clumsy"
+	Name = "Clumsy",
+	EffectsString = "-1 Accuracy, -1 Evasion"
 })
 
 DefineUpgrade("upgrade-compassionate", { -- no current effect
@@ -48,23 +50,27 @@ DefineUpgrade("upgrade-compassionate", { -- no current effect
 DefineUpgrade("upgrade-cruel", {
 	Parent = "upgrade-trait",
 	Name = "Cruel",
-	Epithets = {"the Cruel"}
+	Epithets = {"the Cruel"},
+	EffectsString = "+2 Damage"
 })
 
 DefineUpgrade("upgrade-dextrous", {
 	Parent = "upgrade-trait",
-	Name = "Dextrous"
+	Name = "Dextrous",
+	EffectsString = "+1 Accuracy, +1 Evasion"
 })
 
 DefineUpgrade("upgrade-dim", {
 	Parent = "upgrade-trait",
 	Name = "Dim",
-	Epithets = {"the Dim"}
+	Epithets = {"the Dim"},
+	EffectsString = "-5 Mana"
 })
 
 DefineUpgrade("upgrade-dutiful", {
 	Parent = "upgrade-trait",
-	Name = "Dutiful"
+	Name = "Dutiful",
+	EffectsString = "+3 Hit Points, +2 Mana"
 })
 
 DefineUpgrade("upgrade-generous", { -- no current effect
@@ -75,100 +81,117 @@ DefineUpgrade("upgrade-generous", { -- no current effect
 
 DefineUpgrade("upgrade-genius", {
 	Parent = "upgrade-trait",
-	Name = "Genius"
+	Name = "Genius",
+	EffectsString = "+10 Mana"
 })
 
 DefineUpgrade("upgrade-harsh", {
 	Parent = "upgrade-trait",
 	Name = "Harsh",
-	Epithets = {"the Harsh"}
+	Epithets = {"the Harsh"},
+	EffectsString = "+1 Damage"
 })
 
 DefineUpgrade("upgrade-intelligent", {
 	Parent = "upgrade-trait",
 	Name = "Intelligent",
-	Epithets = {"the Clever"}
+	Epithets = {"the Clever"},
+	EffectsString = "+5 Mana"
 })
 
 DefineUpgrade("upgrade-keen", {
 	Parent = "upgrade-trait",
-	Name = "Keen"
+	Name = "Keen",
+	EffectsString = "+1 Accuracy, +1 Sight"
 })
 
 DefineUpgrade("upgrade-limping", {
 	Parent = "upgrade-trait",
-	Name = "Limping"
+	Name = "Limping",
+	EffectsString = "-2 Speed"
 })
 
 DefineUpgrade("upgrade-mighty", {
 	Parent = "upgrade-trait",
 	Name = "Mighty",
-	Epithets = {"the Mighty"}
+	Epithets = {"the Mighty"},
+	EffectsString = "+2 Damage"
 })
 
 DefineUpgrade("upgrade-near-sighted", {
 	Parent = "upgrade-trait",
-	Name = "Near-Sighted"
+	Name = "Near-Sighted",
+	EffectsString = "-1 Accuracy, -1 Sight"
 })
 
 DefineUpgrade("upgrade-old", {
 	Parent = "upgrade-trait",
 	Name = "Old",
-	Epithets = {"the Old"}
+	Epithets = {"the Old"},
+	EffectsString = "-1 Sight, -1 Speed"
 })
 
 DefineUpgrade("upgrade-pious", {
 	Parent = "upgrade-trait",
 	Name = "Pious",
-	Epithets = {"the Pious", "the Blessed"}
+	Epithets = {"the Pious", "the Blessed"},
+	EffectsString = "+5 Mana"
 })
 
 DefineUpgrade("upgrade-quick", {
 	Parent = "upgrade-trait",
 	Name = "Quick",
-	Epithets = {"the Quick"}
+	Epithets = {"the Quick"},
+	EffectsString = "+1 Speed"
 })
 
 DefineUpgrade("upgrade-reckless", {
 	Parent = "upgrade-trait",
 	Name = "Reckless",
-	Epithets = {"the Reckless"}
+	Epithets = {"the Reckless"},
+	EffectsString = "-1 Evasion"
 })
 
 DefineUpgrade("upgrade-resilient", {
 	Parent = "upgrade-trait",
 	Name = "Resilient",
-	Epithets = {"the Bulwark", "the Hardy", "the Iron Shield"}
+	Epithets = {"the Bulwark", "the Hardy", "the Iron Shield"},
+	EffectsString = "+5 Hit Points"
 })
 
 DefineUpgrade("upgrade-slow", {
 	Parent = "upgrade-trait",
 	Name = "Slow",
-	Epithets = {"the Slow"}
+	Epithets = {"the Slow"},
+	EffectsString = "-1 Speed"
 })
 
 DefineUpgrade("upgrade-strong", {
 	Parent = "upgrade-trait",
 	Name = "Strong",
-	Epithets = {"the Strong"}
+	Epithets = {"the Strong"},
+	EffectsString = "+1 Damage"
 })
 
 DefineUpgrade("upgrade-vicious", {
 	Parent = "upgrade-trait",
 	Name = "Vicious",
-	Epithets = {"the Vicious", "the Butcher", "the Chirurgeon"}
+	Epithets = {"the Vicious", "the Butcher", "the Chirurgeon"},
+	EffectsString = "+3 Damage"
 })
 
 DefineUpgrade("upgrade-weak", {
 	Parent = "upgrade-trait",
 	Name = "Weak",
-	Epithets = {"the Weak"}
+	Epithets = {"the Weak"},
+	EffectsString = "-1 Damage"
 })
 
 DefineUpgrade("upgrade-wise", {
 	Parent = "upgrade-trait",
 	Name = "Wise",
-	Epithets = {"the Wise", "the Sage"}
+	Epithets = {"the Wise", "the Sage"},
+	EffectsString = "+5 Mana"
 })
 
 DefineModifier("upgrade-ambitious",
