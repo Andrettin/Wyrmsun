@@ -33,6 +33,7 @@ DefineCivilization("neutral", {
 	Adjective = "Neutral",
 	DefaultPrimaryPlayerColor = "gray",
 	DefaultSecondaryPlayerColor = "gray",
+	Icon = "icon-flag-silver-hammer-on-red",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -559,6 +560,7 @@ DefineCivilization("dwarf", {
 	DefaultPrimaryPlayerColor = "red",
 	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-dwarven-civilization",
+	Icon = "icon-flag-silver-hammer-on-red",
 	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
 	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
@@ -993,6 +995,7 @@ DefineCivilization("elf", {
 	DefaultPrimaryPlayerColor = "teal",
 	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-elven-civilization",
+	Icon = "icon-flag-old-austria",
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
 		"stop", "icon-germanic-wooden-oblong-shield",
@@ -1567,6 +1570,7 @@ DefineCivilization("germanic", {
 	DefaultSecondaryPlayerColor = "white",
 	Calendar = "anglo-saxon-calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
+	Icon = "icon-flag-old-austria",
 	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
 	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
@@ -1667,6 +1671,7 @@ DefineCivilization("goblin", {
 	DefaultPrimaryPlayerColor = "teal",
 	DefaultSecondaryPlayerColor = "green",
 	CivilizationUpgrade = "upgrade-goblin-civilization",
+	Icon = "icon-flag-black-skull-on-white",
 	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
 	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
 	ButtonIcons = {
@@ -1715,6 +1720,7 @@ DefineCivilization("kobold", {
 	DefaultPrimaryPlayerColor = "violet",
 	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-kobold-civilization",
+	Icon = "icon-flag-black-skull-on-white",
 	VictoryBackgroundFile = "backgrounds/goblin_victory.png",
 	DefeatBackgroundFile = "backgrounds/dwarven_victory.png",
 	ButtonIcons = {
@@ -1913,6 +1919,7 @@ DefineCivilization("teuton", {
 	DefaultPrimaryPlayerColor = "yellow",
 	DefaultSecondaryPlayerColor = "black",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
+	Icon = "icon-flag-holy-roman-empire",
 	DevelopsFrom = {"germanic"},
 	Calendar = "gregorian-calendar",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
