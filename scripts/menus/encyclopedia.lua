@@ -653,7 +653,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			quote = _("Quote") .. ": " .. _(GetUpgradeData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-			effects = _("Effects") .. ": " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
+			effects = _("Effects") .. ": " .. GetUpgradeData(unit_name, "EffectsString") .. ".\n\n"
 			applies_to = _("Available For") .. ": "
 			local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
 			table.sort(applies_to_items)

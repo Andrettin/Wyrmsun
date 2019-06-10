@@ -79,7 +79,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		trait_list = nil
 		trait_list = {}
 		for i=1,table.getn(trait_ident_list) do
-			table.insert(trait_list, GetUpgradeData(trait_ident_list[i], "Name") .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
+			table.insert(trait_list, GetUpgradeData(trait_ident_list[i], "Name") .. ": " .. GetUpgradeData(trait_ident_list[i], "EffectsString"))
 		end
 		trait:setList(trait_list)
 		trait:setSize(236, 20)
