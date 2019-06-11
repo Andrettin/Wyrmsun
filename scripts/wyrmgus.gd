@@ -48,7 +48,7 @@ func get_icon_texture(icon):
 	var icon_texture = self.icon_textures.get(icon)
 	
 	if (icon_texture == null):
-		var file_path = icon.get_file()
+		var file_path = icon.get_image().get_file()
 		icon_texture = self.get_image_texture(file_path)
 	
 	return icon_texture
