@@ -32,7 +32,7 @@
 --
 
 DefineUnitType("unit-ettin", {
-	Name = "Ettin",
+	Name = "ETTIN_UNIT",
 	Parent = "unit-template-infantry",
 	Civilization = "ettin",
 	Description = "The massive ettins lord over Jotunheim, striking terror into the hearts of smaller creatures such as orcs and ogres.",
