@@ -40,7 +40,10 @@ func _ready():
 			civilization_name = "General"
 		else:
 			civilization_name = civilization.get_name()
-		civilization_button.set_button_text(tr(civilization_name + " " + encyclopedia.get_category_name()))
+			
+		var civilization_category_string = tr("{civilization} {encyclopedia_category}")
+		civilization_category_string = civilization_category_string.format({"civilization": tr(civilization_name), "encyclopedia_category": tr(encyclopedia.get_category_name())})
+		civilization_button.set_button_text(civilization_category_string)
 		
 		buttons.push_back(civilization_button)
 		

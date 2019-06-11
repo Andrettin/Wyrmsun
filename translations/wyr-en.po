@@ -15,3 +15,6 @@ msgstr ""
 
 msgid "ETTIN_UNIT"
 msgstr "Ettin"
+
+msgid "ETTIN_CIVILIZATION"
+msgstr "Ettin"

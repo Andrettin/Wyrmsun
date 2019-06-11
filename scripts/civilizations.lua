@@ -1500,11 +1500,11 @@ DefineCivilization("elf", {
 })
 
 DefineCivilization("ettin", {
-	Display = "Ettin",
+	Display = "ETTIN_CIVILIZATION",
 	ParentCivilization = "neutral",
 	Species = "ettin",
 	Language = "ettin",
-	Adjective = "Ettin",
+	Adjective = "ETTIN_CIVILIZATION",
 	Playable = false,
 	DefaultPrimaryPlayerColor = "black",
 	DefaultSecondaryPlayerColor = "blue",
