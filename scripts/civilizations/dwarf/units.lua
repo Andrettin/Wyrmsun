@@ -389,6 +389,7 @@ DefineUnitType("unit-dwarven-runemaster", {
 	Parent = "unit-template-master-smith",
 	Civilization = "dwarf",
 	Description = "Except for those with almost supernatural skill, the highest rank a runecrafter can rise to is that of the runemaster.",
+	Quote = "\"The land of [url=faction:untersberg]Untersberg's[/url] banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runemaster",
 	DefaultEquipment = {
@@ -477,6 +478,7 @@ DefineUnitType("unit-dwarven-arcanister", {
 	Parent = "unit-template-grandmaster-smith",
 	Civilization = "dwarf",
 	Description = "The most powerful of all the runecrafters, the dwarven arcanister's skill in runesmithing is unrivaled, and the glyphs he carves into  weapons and armor are imbued with tremendous power.",
+	Quote = "\"The land of [url=faction:untersberg]Untersberg's[/url] banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-arcanister",
 	DefaultEquipment = {
