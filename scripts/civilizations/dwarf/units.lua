@@ -300,6 +300,7 @@ DefineUnitType("unit-dwarven-runesmith", {
 	Parent = "unit-template-journeyman-smith",
 	Civilization = "dwarf",
 	Description = "Dwarven runesmiths are renowned throughout Nidavellir for their craft. They carve arcane runes into the weapons and armor they make, infusing them with power.",
+	Quote = "\"The land of [url=faction:untersberg]Untersberg's[/url] banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
 	Image = {"file", "dwarf/units/runesmith.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-runesmith",
 	DefaultEquipment = {
@@ -878,7 +879,7 @@ DefineUnitType("unit-dwarven-thane", {
 	Name = "Stonelord",
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "dwarf",
-	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug.",
+	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was [url=character:modsognir]Modsognir[/url], the legendary chieftain who led his tribe against the perils of Svarinshaug.",
 	Quote = "\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry",
 	Background = "In Norse mythology, the dwarven leader Modsognir appears in the [url=literary_text:voluspo]Voluspo[/url] as one of the first dwarves and the mightiest of them.",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
@@ -2266,7 +2267,7 @@ DefineUnitType("unit-dwarven-smithy", {
 	Civilization = "dwarf",
 --	Description = "Smithing is a highly-valued skill in dwarven society, and it is in this structure that dwarven smiths gather to produce weapons and armor for troops. Dwarves are renowned for their smithing abilities, and their craft attracts many non-dwarven customers. The most prestigious of dwarven metalworkers are the runesmiths, Thursagan being the greatest among them.",
 	Description = "Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths.",
-	Quote = "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
+	Quote = "\"The land of [url=faction:untersberg]Untersberg's[/url] banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
 	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals.",
 --	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the [url=literary_text:reginsmol]Reginsmol[/url].\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in [url=literary_text:the_sceptre_of_fire]The Sceptre of Fire[/url] poem.",
 	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
@@ -2708,7 +2709,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 	Civilization = "dwarf",
 	Faction = "surghan-mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
-	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Quote = "\"It must be one of those [url=faction:surghan_mercenaries]Surghan mercenaries[/url]. I'll bet those [url=faction:shinsplitter_clan]Shinsplitters[/url] have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- [url=character:baglur]Baglur[/url], Retired [url=faction:norlund_clan]Norlund[/url] Warrior",
 	Icon = "icon-surghan-mercenary-axefighter",
 	BasicDamage = 11, -- +2 damage
 	Points = 60, -- +10 points
@@ -2770,7 +2771,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 	Civilization = "dwarf",
 	Faction = "surghan-mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
-	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Quote = "\"It must be one of those [url=faction:surghan_mercenaries]Surghan mercenaries[/url]. I'll bet those [url=faction:shinsplitter_clan]Shinsplitters[/url] have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- [url=character:baglur]Baglur[/url], Retired [url=faction:norlund_clan]Norlund[/url] Warrior",
 	Icon = "icon-surghan-mercenary-steelclad",
 	BasicDamage = 12, -- +2 damage
 	Points = 85, -- +10 points
@@ -2827,7 +2828,7 @@ DefineUnitType("unit-surghan-mercenary-thane", {
 	Civilization = "dwarf",
 	Faction = "surghan-mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
-	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
+	Quote = "\"It must be one of those [url=faction:surghan_mercenaries]Surghan mercenaries[/url]. I'll bet those [url=faction:shinsplitter_clan]Shinsplitters[/url] have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- [url=character:baglur]Baglur[/url], Retired [url=faction:norlund_clan]Norlund[/url] Warrior",
 	Icon = "icon-surghan-mercenary-thane",
 	BasicDamage = 14, -- +2 damage
 	Points = 110, -- +10 points
