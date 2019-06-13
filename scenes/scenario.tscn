@@ -1,97 +1,48 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/scenario_screen.gd" type="Script" id=1]
-[ext_resource path="res://graphics/interface/dwarven/resource.png" type="Texture" id=2]
-[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=3]
-[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=4]
-[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=5]
+[ext_resource path="res://scenes/map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/interface/dwarven/resource.png" type="Texture" id=3]
+[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=4]
+[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=5]
+[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=6]
 
 [node name="scenario" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="top_bar" type="TextureRect" parent="."]
+[node name="map" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 16 )
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+
+[node name="top_bar" type="TextureRect" parent="canvas_layer"]
+margin_right = 2694.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 3
-_sections_unfolded = [ "Rect" ]
 
-[node name="bottom_bar" type="TextureRect" parent="."]
-
-anchor_left = 0.0
+[node name="bottom_bar" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
-anchor_right = 0.0
 anchor_bottom = 1.0
 margin_left = 380.0
 margin_top = -181.0
 margin_right = 2068.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+texture = ExtResource( 4 )
 
-[node name="info_panel" type="TextureRect" parent="."]
-
-anchor_left = 0.0
+[node name="info_panel" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
-anchor_right = 0.0
 anchor_bottom = 1.0
 margin_top = -200.0
-margin_right = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 4 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
+margin_right = 391.0
+texture = ExtResource( 5 )
 
-[node name="button_panel" type="TextureRect" parent="."]
-
+[node name="button_panel" type="TextureRect" parent="canvas_layer"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -256.0
 margin_top = -200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Margin" ]
-
-
+texture = ExtResource( 6 )

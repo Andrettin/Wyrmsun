@@ -953,7 +953,7 @@ function EditUnitProperties()
 	local unit_work_label
 	local unit_unique
 	local activeCheckBox
-	local resource = GetUnitUnderCursor().Type.GivesResource
+	local resource = GetUnitUnderCursor():GetType().GivesResource
 	local resourceValue
 	
 	local function UniqueChanged()
@@ -1023,7 +1023,7 @@ function EditUnitProperties()
 		end
 	end
 
-	if (GetUnitUnderCursor().Type.GivesResource == 0) then
+	if (GetUnitUnderCursor():GetType().GivesResource == 0) then
 		menu:addLabel(_("AI"), math.floor(sizeX * 3 / 4), 11 + (36 * 5))
 		activeCheckBox = menu:addImageCheckBox(_("Active"), math.floor(sizeX * 3 / 4) - 30, 11 + (36 * 6))
 		activeCheckBox:setMarked(GetUnitUnderCursor().Active)
@@ -1074,7 +1074,7 @@ function EditUnitProperties()
 						SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique", unique_list[unit_unique:getSelected() + 1])
 					end
 				end
-				if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
+				if (GetUnitUnderCursor():GetType().GivesResource ~= 0) then
 					local resources_held = tonumber(resourceValue:getText())
 					if (resources_held > 1000000) then -- 1 million maximum
 						GetUnitUnderCursor().ResourcesHeld = 1000000;

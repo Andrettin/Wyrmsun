@@ -350,7 +350,7 @@ DefineUnitType("unit-frog", {
 	Civilization = "neutral",
 	--Description = "Frog",
 	--Background = " A \"Frog\" is a kind of \"Amphibian\".",
-	Image = {"file", "graphics/neutral/units/frog.png", "size", {18, 18}},
+	Image = {"file", "neutral/units/frog.png", "size", {18, 18}},
 	Animations = "animations-frog", Icon = "icon-slime",
 	Speed = 4,
 	HitPoints = 5,
