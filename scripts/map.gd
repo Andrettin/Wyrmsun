@@ -39,24 +39,22 @@ func create_unit_sprite(unit):
 	if (unit_image == null):
 		return
 	
-	var unit_sprite = Sprite.new()
-	unit_sprite.texture = unit_image.get_texture()
-	unit_sprite.hframes = unit_image.get_texture().get_width() / unit_image.get_frame_size().x
-	unit_sprite.vframes = unit_image.get_texture().get_height() / unit_image.get_frame_size().y
-	var tile_pos = unit.get_tile_pos()
-	unit_sprite.position = (tile_pos * wyrmgus.get_pixel_tile_size()) + unit.get_half_tile_pixel_size()
-	
-	var map_layer_index = unit.get_map_layer().get_index()
-	map_layers[map_layer_index].call_deferred("add_child", unit_sprite)
+	var unit_sprite = preload("res://scenes/unit.tscn").instance()
 	
 	#delete the unit node if the unit is removed from the map; node that "removed" here can mean that the unit is e.g. inside a building; it may continue existing, it is just not displayed on the map
 	unit.connect("removed", unit_sprite, "queue_free", [], CONNECT_DEFERRED)
+	
+	unit_sprite.call_deferred("set_image", unit_image)
+	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos(), unit.get_half_tile_pixel_size())
+	
+	var map_layer_index = unit.get_map_layer().get_index()
+	map_layers[map_layer_index].call_deferred("add_child", unit_sprite)
 
 func create_map_layer(index):
 	if (index > 0 and (index - 1) >= map_layers.size()):
 		self.create_map_layer(index - 1)
 	
-	var map_layer = load("res://scenes/map_layer.tscn").instance()
+	var map_layer = preload("res://scenes/map_layer.tscn").instance()
 	map_layer.visible = false
 	self.add_child(map_layer)
 	map_layers.push_back(map_layer)
