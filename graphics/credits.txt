@@ -236,6 +236,8 @@
 /graphics/dwarf/units/yale_rider_orange_hair_white_fur.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/yale_rider_red_hair_brown_fur.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/yale_rider_red_hair_gray_fur.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/elf/buildings/town_hall.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/elf/buildings/town_hall_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/elf/icons/elven_swordsman.png (by Jinn) (licensed under the CC0)
 /graphics/elf/icons/frey.png (by Exidelo) (licensed under the CC0)
 /graphics/elf/icons/freyja.png (by Exidelo) (licensed under the CC0)
