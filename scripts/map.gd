@@ -43,12 +43,22 @@ func create_unit_sprite(unit):
 	
 	#delete the unit node if the unit is removed from the map; node that "removed" here can mean that the unit is e.g. inside a building; it may continue existing, it is just not displayed on the map
 	unit.connect("removed", unit_sprite, "queue_free", [], CONNECT_DEFERRED)
-	
-	unit_sprite.call_deferred("set_image", unit_image)
-	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos(), unit.get_half_tile_pixel_size())
+
+	var unit_player = unit.get_player()
+	unit_player.connect("primary_color_changed", unit_sprite, "set_primary_player_color", [], CONNECT_DEFERRED)
+	unit_player.connect("secondary_color_changed", unit_sprite, "set_secondary_player_color", [], CONNECT_DEFERRED)
 	
 	var map_layer_index = unit.get_map_layer().get_index()
 	map_layers[map_layer_index].call_deferred("add_child", unit_sprite)
+	
+	unit_sprite.call_deferred("initialize_material") #initialize the material in the UI thread, otherwise the game logic thread will hang for a while
+	
+	unit_sprite.call_deferred("set_image", unit_image)
+	
+	unit_sprite.call_deferred("set_primary_player_color", unit_player.get_primary_color())
+	unit_sprite.call_deferred("set_secondary_player_color", unit_player.get_secondary_color())
+	
+	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos(), unit.get_half_tile_pixel_size())
 
 func create_map_layer(index):
 	if (index > 0 and (index - 1) >= map_layers.size()):

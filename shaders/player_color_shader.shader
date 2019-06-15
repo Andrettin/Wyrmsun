@@ -149,5 +149,5 @@ void fragment()
 		}
 	}
 	
-    COLOR = vec4(color.rgb, 1);
+    COLOR = color;
 }
