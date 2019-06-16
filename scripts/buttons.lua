@@ -995,21 +995,6 @@ DefineButton( { Pos = 6, Icon = "icon-precise-shot",
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 2, Icon = "icon-teuton-minecart",
-	Action = "train-unit", Value = "unit-minecart",
-	Key = "c", Hint = "Build Mine~!cart", Popup = "popup-unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-})
-
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-caravan",
 	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
@@ -1480,40 +1465,6 @@ DefineButton( { Pos = 10, Icon = "icon-stone",
 })
 
 -- Researches ---------------------------------------------------------
-
-DefineButton( { Pos = 1, Level = "enact-law-level", Icon = "icon-labor",
-	Action = "research", Value = "upgrade-free-workers",
-	Allowed = "check-single-research",
-	Description = "Removes Serfdom.",
-	Key = "f", Hint = "Enact ~!Free Workers", Popup = "popup-research",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-} )
-
-DefineButton( { Pos = 2, Level = "enact-law-level", Icon = "icon-serfdom",
-	Action = "research", Value = "upgrade-serfdom",
-	Allowed = "check-single-research",
-	Description = "-100 Copper cost for workers, -1 worker gathering rate. Removes Free Workers.",
-	Key = "s", Hint = "Enact ~!Serfdom", Popup = "popup-research",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-} )
 
 DefineButton( { Pos = 9, Icon = "icon-shield-wall",
 	Action = "research", Value = "upgrade-shield-wall",
