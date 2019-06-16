@@ -1591,30 +1591,6 @@ DefineButton( { Pos = 2, Icon = "icon-engineering",
 	}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-architecture",
-	Action = "research", Value = "upgrade-architecture",
-	Allowed = "check-single-research",
-	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings.",
-	Key = "c", Hint = "Research Ar~!chitecture", Popup = "popup-research",
-	ForUnit = {
-		"unit-dwarven-academy",
-		"unit-goblin-academy",
-		"unit-teuton-university"
-	}
-} )
-
-DefineButton( { Pos = 4, Icon = "icon-philosophy",
-	Action = "research", Value = "upgrade-philosophy",
-	Allowed = "check-single-research",
-	Description = "+10% Research Speed for buildings.",
-	Key = "s", Hint = "Research Philo~!sophy", Popup = "popup-research",
-	ForUnit = {
-		"unit-dwarven-academy",
-		"unit-goblin-academy",
-		"unit-teuton-university"
-	}
-} )
-
 DefineButton( { Pos = 6, Icon = "icon-gunpowder",
 	Action = "research", Value = "upgrade-gunpowder",
 	Allowed = "check-single-research",

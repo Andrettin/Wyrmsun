@@ -73,18 +73,6 @@ DefineDependency("upgrade-mathematics",
 	"or", {"upgrade-teuton-writing"}
 )
 
-DefineDependency("upgrade-architecture",
-	{"upgrade-dwarven-runewriting", "upgrade-masonry"},
-	"or", {"upgrade-goblin-writing", "upgrade-masonry"},
-	"or", {"upgrade-teuton-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-philosophy",
-	{"upgrade-dwarven-runewriting"},
-	"or", {"upgrade-goblin-writing"},
-	"or", {"upgrade-teuton-writing"}
-)
-
 DefineDependency("upgrade-gunpowder",
 	{"upgrade-dwarven-alchemy"},
 	"or", {"upgrade-goblin-alchemy"},
