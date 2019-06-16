@@ -228,14 +228,11 @@ if (OldDefineUnitType == nil) then
 end
 
 function DefineUnitType(unit_type, data)
-	local town_hall = false
 	local resource_mine = false
 	local smithy = false
 	local market = false
 	local dock = false
-	if (data.Class == "town-hall" or data.Class == "stronghold") then
-		town_hall = true
-	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
+	if ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
 		resource_mine = true
 	elseif (data.Class == "smithy") then
 		smithy = true
@@ -248,9 +245,7 @@ function DefineUnitType(unit_type, data)
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
-		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
-			town_hall = true
-		elseif (
+		if (
 			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and GetUnitTypeData(unit_type, "GivesResource") ~= "trade" and data.GivesResource == nil and data.BuildingRules == nil)
 			or (GetUnitTypeData(unit_type, "Class") == "lumber-mill" and data.Class == nil)
 		) then
@@ -266,13 +261,7 @@ function DefineUnitType(unit_type, data)
 	
 	data.OnInit = InitializeUnit
 	
-	if (town_hall) then
-		data.BuildingRules = {
-			"and", {
-				"ontop", { Type = "unit-settlement-site", ReplaceOnDie = true, ReplaceOnBuild = true },
-			}
-		}
-	elseif (resource_mine) then
+	if (resource_mine) then
 		data.BuildingRules = {
 			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
@@ -4642,6 +4631,11 @@ DefineUnitType("unit-template-town-hall", {
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	BuildingRulesString = "Must be built on a Settlement Site",
+	BuildingRules = {
+		"and", {
+			"ontop", { Type = "unit-settlement-site", ReplaceOnDie = true, ReplaceOnBuild = true },
+		}
+	},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
