@@ -4339,10 +4339,9 @@ DefineUnitType("unit-template-heroic-spear-cavalry", {
 	AiDrops = {"unit-crown"}
 } )
 
-DefineUnitType("unit-template-priest", {
-	Name = "Priest",
+DefineUnitType("unit-template-spellcaster", {
+	Name = "Spellcaster",
 	Parent = "unit-template-sapient-unit",
-	Class = "priest",
 	Costs = {"time", 80, "copper", 700},
 	Intelligence = 12,
 	Charisma = 12,
@@ -4365,8 +4364,6 @@ DefineUnitType("unit-template-priest", {
 	CanTargetLand = true,
 	Flesh = true,
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
-	ButtonPos = 1,
-	RequirementsString = "Any Deity or Religion",
 	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
@@ -4379,6 +4376,14 @@ DefineUnitType("unit-template-priest", {
 		"terrain-type-step", "road", "step-stone",
 		"terrain-type-step", "grass", "step-leaves"
 	}
+} )
+
+DefineUnitType("unit-template-priest", {
+	Name = "Priest",
+	Parent = "unit-template-spellcaster",
+	Class = "priest",
+	ButtonPos = 1,
+	RequirementsString = "Any Deity or Religion"
 } )
 
 DefineUnitType("unit-template-veteran-priest", {

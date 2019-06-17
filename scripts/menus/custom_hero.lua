@@ -121,6 +121,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 				and GetUnitTypeData(unitName, "Class") ~= "militia"
 				and unitName ~= "unit-germanic-spearman"
 				and GetUnitTypeData(unitName, "Class") ~= "priest"
+				and GetUnitTypeData(unitName, "Class") ~= "geomancer"
 				and GetUnitTypeData(unitName, "Class") ~= "thief" -- no dagger units yet
 				and GetUnitTypeData(unitName, "Level") == 1
 				and GetUnitTypeData(unitName, "Organic")

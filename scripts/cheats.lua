@@ -258,6 +258,11 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-troll-warrior", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (str == "lion wings") then
 		unit = CreateUnit("unit-gryphon", GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
+	elseif (str == "earthworm") then
+		local geomancer_type = GetFactionClassUnitType("geomancer", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (geomancer_type) then
+			unit = CreateUnit(geomancer_type, GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
+		end
 	else
 		return false
 	end
