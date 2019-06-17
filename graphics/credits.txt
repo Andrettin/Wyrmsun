@@ -203,6 +203,7 @@
 /graphics/dwarf/units/dwarven_scout.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/dwarven_scout_blond_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/dwarven_scout_gray_hair.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/geomancer.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/dwarf/units/gryphon_rider.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/gryphon_rider_gray_hair_brown_feathers.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
