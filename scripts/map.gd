@@ -54,6 +54,8 @@ func create_unit_sprite(unit):
 	unit_sprite.call_deferred("initialize_material") #initialize the material in the UI thread, otherwise the game logic thread will hang for a while
 	
 	unit_sprite.call_deferred("set_image", unit_image)
+	unit_sprite.call_deferred("set_offset", Vector2(unit_type.get_offset_x(), unit_type.get_offset_y()))
+	unit_sprite.call_deferred("set_z_index", unit_type.get_draw_level())
 	
 	unit_sprite.call_deferred("set_primary_player_color", unit_player.get_primary_color())
 	unit_sprite.call_deferred("set_secondary_player_color", unit_player.get_secondary_color())

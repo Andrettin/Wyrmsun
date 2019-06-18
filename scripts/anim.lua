@@ -178,6 +178,107 @@ UnitMoveNewMovement = {"unbreakable begin",
 	"label end", "unbreakable end", "wait 1",
 }
 
+UnitMoveNoIdle = {"unbreakable begin", 
+	"if-var v.Speed.Value <= 3 speed_3",
+	"if-var v.Speed.Value <= 6 speed_6",
+	"if-var v.Speed.Value == 7 speed_7",
+	"if-var v.Speed.Value == 8 speed_8",
+	"if-var v.Speed.Value == 9 speed_9",
+	"if-var v.Speed.Value == 10 speed_10",
+	"if-var v.Speed.Value == 11 speed_11",
+	"if-var v.Speed.Value == 12 speed_12",
+	"if-var v.Speed.Value == 13 speed_13",
+	"if-var v.Speed.Value == 14 speed_14",
+	"if-var v.Speed.Value == 15 speed_15",
+	"if-var v.Speed.Value >= 16 speed_16",
+	"label speed_3", -- 16 / (3 / 10) = c. 53 waits
+	"frame 5", "move 3", "wait 5", "frame 5", "move 3", "wait 4",
+    "frame 5", "move 3", "wait 5", "frame 10", "move 2", "wait 5",
+    "frame 10", "move 3", "wait 5", "frame 10", "move 2", "wait 4",
+    "frame 15", "move 3", "wait 5", "frame 15", "move 3", "wait 5",
+    "frame 15", "move 3", "wait 5", "frame 20", "move 2", "wait 4",
+    "frame 20", "move 3", "wait 5", "frame 20", "move 2", "goto end",
+	-- speed_4 16 / (4 / 10) = 40 waits
+	"label speed_6", -- 16 / (6 / 10) = c. 26 waits
+	"frame 5", "move 3", "wait 3", "frame 5", "move 3", "wait 2",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 3", "frame 10", "move 2", "wait 2",
+    "frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 3", "frame 20", "move 2", "wait 2",
+    "frame 20", "move 3", "wait 2", "frame 20", "move 2", "goto end",
+	"label speed_7", -- 16 / (7 / 10) = c. 22 waits
+	"frame 5", "move 3", "wait 2", "frame 5", "move 3", "wait 2",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 2",
+    "frame 20", "move 3", "wait 2", "frame 20", "move 2", "goto end",
+	"label speed_8", -- 16 / (8 / 10) = 20 waits
+	"frame 5", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 2",
+    "frame 10", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 2",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 20", "move 2", "goto end",
+	"label speed_9", -- 16 / (9 / 10) = c. 18 waits
+	"frame 5", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 2", "frame 20", "move 2", "goto end",
+	"label speed_10", -- 16 waits (this is the reference speed for other ones)
+	"frame 5", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+    "frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+    "frame 10", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+    "frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+    "frame 20", "move 3", "wait 1", "frame 20", "move 2", "goto end",
+	"label speed_11", -- 16 / (11 / 10) = c. 14 waits
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 2", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 2", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 20", "move 2", "goto end",
+	"label speed_12", -- 16 / (12 / 10) = c. 13 waits
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 15", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 20", "move 2", "goto end",
+	"label speed_13", -- 16 / (13 / 10) = c. 12 waits
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 10", "move 2", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 2", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 20", "move 2", "goto end",
+	"label speed_14", -- 16 / (14 / 10) = c. 11 waits
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 3", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 20", "move 2", "goto end",
+	"label speed_15", -- 16 / (15 / 10) = c. 10 waits
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 4", "wait 1",
+	"frame 20", "move 3", "goto end",
+	"label speed_16", -- 16 / (16 / 10) = 10 waits (same as speed 15)
+	"frame 5", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 3", "wait 1", "frame 20", "move 4", "wait 1",
+	"frame 20", "move 3", "goto end",
+	"label end", "unbreakable end", "wait 1",
+}
+
 ShipMove = {
 	"unbreakable begin",
 	"if-var v.Speed.Value <= 3 speed_3",
@@ -380,6 +481,13 @@ DefineAnimations("animations-critter", {
 DefineAnimations("animations-melee-unit", {
 	Still = UnitStill,
 	Move = UnitMove,
+	Attack = UnitMeleeAttack,
+	Death = UnitDeath
+})
+
+DefineAnimations("animations-melee-unit-no-idle-move", {
+	Still = UnitStill,
+	Move = UnitMoveNoIdle,
 	Attack = UnitMeleeAttack,
 	Death = UnitDeath
 })

@@ -550,6 +550,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-dwarven-geomancer", 
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -571,6 +572,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-dwarven-geomancer", 
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -592,6 +594,7 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-dwarven-geomancer", 
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -614,6 +617,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-dwarven-geomancer", 
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -636,6 +640,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
+		"unit-dwarven-geomancer", 
 		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
