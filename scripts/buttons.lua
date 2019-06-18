@@ -1349,51 +1349,6 @@ DefineButton( { Pos = 7, Icon = "icon-anvil",
 	}
 } )
 
-DefineButton( { Pos = 1, Icon = "icon-mathematics",
-	Action = "research", Value = "upgrade-mathematics",
-	Allowed = "check-single-research",
-	Description = "-5% Trade Cost for Markets.",
-	Key = "m", Hint = "Research ~!Mathematics", Popup = "popup-research",
-	ForUnit = {
-		"unit-dwarven-academy",
-		"unit-goblin-academy",
-		"unit-teuton-university"
-	}
-} )
-
-DefineButton( { Pos = 2, Icon = "icon-engineering",
-	Action = "research", Value = "upgrade-engineering",
-	Allowed = "check-single-research",
-	Description = "Allows siege engines, railroads and minecarts.",
-	Key = "e", Hint = "Research ~!Engineering", Popup = "popup-research",
-	ForUnit = {
-		"unit-dwarven-academy",
-		"unit-goblin-academy",
-		"unit-teuton-university"
-	}
-} )
-
-DefineButton( { Pos = 6, Icon = "icon-gunpowder",
-	Action = "research", Value = "upgrade-gunpowder",
-	Allowed = "check-single-research",
-	Description = "Allows gunpowder infantry.",
-	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
-	ForUnit = {
-		"unit-goblin-academy",
-		"unit-teuton-university"
-	}
-} )
-
-DefineButton( { Pos = 6, Icon = "icon-gunpowder",
-	Action = "research", Value = "upgrade-gunpowder",
-	Allowed = "check-single-research",
-	Description = "Allows gunpowder infantry and upgrades Ballista Towers to Cannon Towers.",
-	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
-	ForUnit = {
-		"unit-dwarven-academy"
-	}
-} )
-
 -- Items --------------------------------------------------------------
 
 DefineButton( { Pos = 2, Icon = "icon-red-potion",

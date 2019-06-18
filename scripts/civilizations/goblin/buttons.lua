@@ -317,14 +317,6 @@ DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Icon = "icon-cauldron",
-	Action = "research", Value = "upgrade-goblin-alchemy",
-	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for War Machines and Warships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
-	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-goblin-academy"}
-} )
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 5, Icon = "icon-gathaarl",

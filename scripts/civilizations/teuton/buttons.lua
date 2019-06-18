@@ -313,14 +313,6 @@ DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 5, Icon = "icon-cauldron",
-	Action = "research", Value = "upgrade-teuton-alchemy",
-	Allowed = "check-single-research",
-	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults and Longships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
-	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
-	ForUnit = {"unit-teuton-university"}
-} )
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 5, Icon = "icon-christianity",
