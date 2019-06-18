@@ -192,7 +192,7 @@ DefineButton( { Pos = 16, Level = "cancel-level", Icon = "icon-cancel",
 DefineButton( { Pos = 16, Icon = "icon-cancel",
 	Action = "cancel-upgrade",
 	Key = "escape", Hint = "Cancel Upgrade (~<Esc~>)", Popup = "popup-commands",
-	ForUnit = {"cancel-upgrade"}
+	ForUnit = {"*"}
 } )
 
 DefineButton( { Pos = 16, Icon = "icon-cancel",
@@ -204,7 +204,7 @@ DefineButton( { Pos = 16, Icon = "icon-cancel",
 DefineButton( { Pos = 16, Icon = "icon-cancel",
 	Action = "cancel-build",
 	Key = "escape", Hint = "Cancel Construction (~<Esc~>)", Popup = "popup-commands",
-	ForUnit = {"cancel-build"}
+	ForUnit = {"*"}
 } )
 
 -- Level-Up Upgrades ------------------------------------------------------
