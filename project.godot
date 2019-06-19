@@ -79,6 +79,10 @@ translations=PoolStringArray( "res://translations/wyr-de.po", "res://translation
 
 file_logging/enable_file_logging=true
 
+[memory]
+
+limits/message_queue/max_size_kb=4096
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

@@ -40,9 +40,14 @@ func create_unit_sprite(unit):
 		return
 	
 	var unit_sprite = preload("res://scenes/unit.tscn").instance()
+	unit_sprite.call_deferred("set_unit_type", unit_type)
 	
 	#delete the unit node if the unit is removed from the map; node that "removed" here can mean that the unit is e.g. inside a building; it may continue existing, it is just not displayed on the map
 	unit.connect("removed", unit_sprite, "queue_free", [], CONNECT_DEFERRED)
+	unit.connect("tile_pos_changed", unit_sprite, "set_tile_pos", [], CONNECT_DEFERRED)
+	unit.connect("map_layer_changed", unit_sprite, "set_map_layer", [], CONNECT_DEFERRED)
+	unit.connect("frame_changed", unit_sprite, "set_frame", [], CONNECT_DEFERRED)
+	unit.connect("flipped_changed", unit_sprite, "set_flip_h", [], CONNECT_DEFERRED)
 
 	var unit_player = unit.get_player()
 	unit_player.connect("primary_color_changed", unit_sprite, "set_primary_player_color", [], CONNECT_DEFERRED)
@@ -54,13 +59,14 @@ func create_unit_sprite(unit):
 	unit_sprite.call_deferred("initialize_material") #initialize the material in the UI thread, otherwise the game logic thread will hang for a while
 	
 	unit_sprite.call_deferred("set_image", unit_image)
-	unit_sprite.call_deferred("set_offset", Vector2(unit_type.get_offset_x(), unit_type.get_offset_y()))
-	unit_sprite.call_deferred("set_z_index", unit_type.get_draw_level())
 	
 	unit_sprite.call_deferred("set_primary_player_color", unit_player.get_primary_color())
 	unit_sprite.call_deferred("set_secondary_player_color", unit_player.get_secondary_color())
 	
-	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos(), unit.get_half_tile_pixel_size())
+	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos())
+	
+	unit_sprite.call_deferred("set_frame", unit.get_frame())
+	unit_sprite.call_deferred("set_flip_h", unit.is_flipped())
 
 func create_map_layer(index):
 	if (index > 0 and (index - 1) >= map_layers.size()):

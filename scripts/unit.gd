@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite
 
 const SHADER = preload("res://shaders/player_color_shader.shader")
 const MATERIAL = preload("res://shaders/player_color_shader.tres")
@@ -7,6 +7,7 @@ var source_primary_player_color
 var target_primary_player_color
 var source_secondary_player_color
 var target_secondary_player_color
+var unit_type
 
 func initialize_material():
 	if (self.source_primary_player_color == null):
@@ -14,6 +15,11 @@ func initialize_material():
 	
 	self.material = MATERIAL.duplicate()
 	self.material.shader = load("res://shaders/player_color_shader.shader")
+
+func set_unit_type(new_unit_type):
+	self.unit_type = new_unit_type
+	self.set_offset(Vector2(self.unit_type.get_offset_x(), self.unit_type.get_offset_y()))
+	self.set_z_index(self.unit_type.get_draw_level())
 
 func set_image(new_image):
 	self.texture = new_image.get_texture()
@@ -24,8 +30,13 @@ func set_image(new_image):
 		self.source_primary_player_color = new_image.get_source_primary_player_color()
 	self.source_secondary_player_color = new_image.get_source_secondary_player_color()
 
-func set_tile_pos(tile_pos, half_tile_pixel_size):
-	self.position = (tile_pos * wyrmgus.get_pixel_tile_size()) + half_tile_pixel_size
+func set_tile_pos(tile_pos):
+	self.position = (tile_pos * wyrmgus.get_pixel_tile_size()) + self.unit_type.get_half_tile_pixel_size()
+
+func set_map_layer(index):
+	var map = self.get_parent().get_parent()
+	self.get_parent().remove_child(self)
+	map.map_layers[index].add_child(self)
 
 func set_primary_player_color(player_color):
 	self.target_primary_player_color = player_color
