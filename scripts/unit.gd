@@ -8,6 +8,7 @@ var target_primary_player_color
 var source_secondary_player_color
 var target_secondary_player_color
 var unit_type
+var pixel_offset = Vector2(0, 0)
 
 func initialize_material():
 	if (self.source_primary_player_color == null):
@@ -18,7 +19,7 @@ func initialize_material():
 
 func set_unit_type(new_unit_type):
 	self.unit_type = new_unit_type
-	self.set_offset(Vector2(self.unit_type.get_offset_x(), self.unit_type.get_offset_y()))
+	self.update_offset()
 	self.set_z_index(self.unit_type.get_draw_level())
 
 func set_image(new_image):
@@ -37,6 +38,10 @@ func set_map_layer(index):
 	var map = self.get_parent().get_parent()
 	self.get_parent().remove_child(self)
 	map.map_layers[index].add_child(self)
+
+func set_pixel_offset(new_offset):
+	self.pixel_offset = new_offset
+	self.update_offset()
 
 func set_primary_player_color(player_color):
 	self.target_primary_player_color = player_color
@@ -71,3 +76,6 @@ func apply_secondary_player_color():
 	for i in range(0, color_count):
 		material.set_shader_param("source_secondary_player_color_" + str(i + 1), source_colors[i])
 		material.set_shader_param("target_secondary_player_color_" + str(i + 1), target_colors[i])
+
+func update_offset():
+	self.set_offset(self.unit_type.get_offset() + self.pixel_offset)

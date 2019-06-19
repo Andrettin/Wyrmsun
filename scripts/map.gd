@@ -48,6 +48,7 @@ func create_unit_sprite(unit):
 	unit.connect("map_layer_changed", unit_sprite, "set_map_layer", [], CONNECT_DEFERRED)
 	unit.connect("frame_changed", unit_sprite, "set_frame", [], CONNECT_DEFERRED)
 	unit.connect("flipped_changed", unit_sprite, "set_flip_h", [], CONNECT_DEFERRED)
+	unit.connect("pixel_offset_changed", unit_sprite, "set_pixel_offset", [], CONNECT_DEFERRED)
 
 	var unit_player = unit.get_player()
 	unit_player.connect("primary_color_changed", unit_sprite, "set_primary_player_color", [], CONNECT_DEFERRED)
@@ -64,6 +65,7 @@ func create_unit_sprite(unit):
 	unit_sprite.call_deferred("set_secondary_player_color", unit_player.get_secondary_color())
 	
 	unit_sprite.call_deferred("set_tile_pos", unit.get_tile_pos())
+	unit_sprite.call_deferred("set_pixel_offset", unit.get_pixel_offset())
 	
 	unit_sprite.call_deferred("set_frame", unit.get_frame())
 	unit_sprite.call_deferred("set_flip_h", unit.is_flipped())
