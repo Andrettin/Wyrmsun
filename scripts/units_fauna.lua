@@ -380,27 +380,27 @@ DefineUnitType("unit-frog", {
 		},
 		{
 			"variation-id", "teal",
-			"file", "graphics/neutral/units/frog_teal.png"
+			"file", "neutral/units/frog_teal.png"
 		},
 		{
 			"variation-id", "brown",
-			"file", "graphics/neutral/units/frog_brown.png"
+			"file", "neutral/units/frog_brown.png"
 		},
 		{
 			"variation-id", "blue",
-			"file", "graphics/neutral/units/frog_blue.png"
+			"file", "neutral/units/frog_blue.png"
 		},
 		{
 			"variation-id", "purple",
-			"file", "graphics/neutral/units/frog_purple.png"
+			"file", "neutral/units/frog_purple.png"
 		},
 		{
 			"variation-id", "red",
-			"file", "graphics/neutral/units/frog_red.png"
+			"file", "neutral/units/frog_red.png"
 		},
 		{
 			"variation-id", "yellow",
-			"file", "graphics/neutral/units/frog_yellow.png"
+			"file", "neutral/units/frog_yellow.png"
 		}
 	},
 	Sounds = {
@@ -1170,34 +1170,34 @@ DefineUnitType("unit-slime", {
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- slimes have a more limited selection of traits, since they have a rather different biology
 	Variations = {
 		{
-			"variation-id", "green",
+			"variation-id", "green-baby",
 			"file", "neutral/units/slime_baby.png",
 			"frame-size", {16, 16},
 			"upgrade-required", "upgrade-child"
 		},
 		{
-			"variation-id", "red",
+			"variation-id", "red-baby",
 			"file", "neutral/units/slime_baby_red.png",
 			"icon", "icon-slime-red",
 			"frame-size", {16, 16},
 			"upgrade-required", "upgrade-child"
 		},
 		{
-			"variation-id", "brown",
+			"variation-id", "brown-baby",
 			"file", "neutral/units/slime_baby_brown.png",
 			"icon", "icon-slime-brown",
 			"frame-size", {16, 16},
 			"upgrade-required", "upgrade-child"
 		},
 		{
-			"variation-id", "blue",
+			"variation-id", "blue-baby",
 			"file", "neutral/units/slime_baby_blue.png",
 			"icon", "icon-slime-blue",
 			"frame-size", {16, 16},
 			"upgrade-required", "upgrade-child"
 		},
 		{
-			"variation-id", "teal",
+			"variation-id", "teal-baby",
 			"file", "neutral/units/slime_baby_teal.png",
 			"icon", "icon-slime-teal",
 			"frame-size", {16, 16},
