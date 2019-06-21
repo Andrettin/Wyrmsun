@@ -92,29 +92,29 @@ void fragment()
 			color.rgb = target_primary_player_color_8.rgb;
 		} else if (color.rgb == source_primary_player_color_9.rgb) {
 			color.rgb = target_primary_player_color_9.rgb;
-		}
-	}
-	
-	// if there are valid source secondary player colors
-	if (source_secondary_player_color_1.rgb != vec3(0, 0, 0)) {
-		if (color.rgb == source_secondary_player_color_1.rgb) {
-			color.rgb = target_secondary_player_color_1.rgb;
-		} else if (color.rgb == source_secondary_player_color_2.rgb) {
-			color.rgb = target_secondary_player_color_2.rgb;
-		} else if (color.rgb == source_secondary_player_color_3.rgb) {
-			color.rgb = target_secondary_player_color_3.rgb;
-		} else if (color.rgb == source_secondary_player_color_4.rgb) {
-			color.rgb = target_secondary_player_color_4.rgb;
-		} else if (color.rgb == source_secondary_player_color_5.rgb) {
-			color.rgb = target_secondary_player_color_5.rgb;
-		} else if (color.rgb == source_secondary_player_color_6.rgb) {
-			color.rgb = target_secondary_player_color_6.rgb;
-		} else if (color.rgb == source_secondary_player_color_7.rgb) {
-			color.rgb = target_secondary_player_color_7.rgb;
-		} else if (color.rgb == source_secondary_player_color_8.rgb) {
-			color.rgb = target_secondary_player_color_8.rgb;
-		} else if (color.rgb == source_secondary_player_color_9.rgb) {
-			color.rgb = target_secondary_player_color_9.rgb;
+		} else {
+			// if there are valid source secondary player colors, but only if there are valid source primary player colors
+			if (source_secondary_player_color_1.rgb != vec3(0, 0, 0)) {
+				if (color.rgb == source_secondary_player_color_1.rgb) {
+					color.rgb = target_secondary_player_color_1.rgb;
+				} else if (color.rgb == source_secondary_player_color_2.rgb) {
+					color.rgb = target_secondary_player_color_2.rgb;
+				} else if (color.rgb == source_secondary_player_color_3.rgb) {
+					color.rgb = target_secondary_player_color_3.rgb;
+				} else if (color.rgb == source_secondary_player_color_4.rgb) {
+					color.rgb = target_secondary_player_color_4.rgb;
+				} else if (color.rgb == source_secondary_player_color_5.rgb) {
+					color.rgb = target_secondary_player_color_5.rgb;
+				} else if (color.rgb == source_secondary_player_color_6.rgb) {
+					color.rgb = target_secondary_player_color_6.rgb;
+				} else if (color.rgb == source_secondary_player_color_7.rgb) {
+					color.rgb = target_secondary_player_color_7.rgb;
+				} else if (color.rgb == source_secondary_player_color_8.rgb) {
+					color.rgb = target_secondary_player_color_8.rgb;
+				} else if (color.rgb == source_secondary_player_color_9.rgb) {
+					color.rgb = target_secondary_player_color_9.rgb;
+				}
+			}
 		}
 	}
 	
