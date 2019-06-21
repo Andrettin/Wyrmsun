@@ -61,8 +61,13 @@ func update_entry_icon_button():
 	entry_icon_button.set_tooltip(tr(entry.get_name()))
 	entry_icon_button.set_icon(entry.get_icon())
 	
-	if (entry.has_method("get_faction") and entry.get_faction() != null):
-		var faction = entry.get_faction()
+	var faction = null
+	if (entry.is_class("CFaction")):
+		faction = entry
+	elif (entry.has_method("get_faction")):
+		faction = entry.get_faction()
+	
+	if (faction != null):
 		entry_icon_button.set_primary_player_color(faction.get_primary_color())
 		entry_icon_button.set_secondary_player_color(faction.get_secondary_color())
 	elif (encyclopedia.civilization != null):

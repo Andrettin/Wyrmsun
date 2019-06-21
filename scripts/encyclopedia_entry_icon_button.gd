@@ -21,9 +21,14 @@ func set_entry(entry):
 		tooltip_text += entry.get_name()
 	else:
 		tooltip_text += tr(entry.get_name())
+		
+	var faction = null
+	if (entry.is_class("CFaction")):
+		faction = entry
+	elif (entry.has_method("get_faction")):
+		faction = entry.get_faction()
 	
-	if (entry.has_method("get_faction") and entry.get_faction() != null):
-		var faction = entry.get_faction()
+	if (faction != null):
 		set_primary_player_color(faction.get_primary_color())
 		set_secondary_player_color(faction.get_secondary_color())
 		tooltip_text += " (" + tr(faction.get_name()) + ")"
