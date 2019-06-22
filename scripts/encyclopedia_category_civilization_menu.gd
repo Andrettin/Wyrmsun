@@ -59,4 +59,4 @@ func sort_civilizations(a, b):
 		else:
 			return false
 	else:
-		return a.get_name() < b.get_name()
+		return tr(a.get_name()) < tr(b.get_name())
