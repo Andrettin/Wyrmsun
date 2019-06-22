@@ -39,8 +39,9 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "black",
+	SecondaryColor = "red",
 	FactionUpgrade = "upgrade-faction-issudru-tribe",
-	Icon = "icon-flag-black-skull-on-white"
+	Icon = "icon-flag-red-skull-on-white"
 })
 
 DefineFaction("aurvangling-tribe", {
@@ -59,7 +60,7 @@ DefineFaction("dreadskull-tribe", {
 	Type = "tribe",
 	PrimaryColor = "black",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
-	Icon = "icon-flag-black-skull-on-white",
+	Icon = "icon-flag-red-skull-on-white",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
 
@@ -141,7 +142,7 @@ DefineFaction("prideblade-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "white",
-	Icon = "icon-flag-black-skull-on-white",
+	Icon = "icon-flag-red-skull-on-white",
 	FactionUpgrade = "upgrade-faction-prideblade-tribe"
 })
 
@@ -214,6 +215,7 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "polity",
 	PrimaryColor = "cyan",
+	SecondaryColor = "teal",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-myridia",
@@ -246,10 +248,11 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "polity",
 	PrimaryColor = "black",
+	SecondaryColor = "violet",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-tenebris",
-	Icon = "icon-flag-black-skull-on-white",
+	Icon = "icon-flag-red-skull-on-white",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "dreadskull-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -274,7 +277,8 @@ DefineFaction("skulking-swords", {
 	Civilization = "goblin",
 	Type = "mercenary-company",
 	PrimaryColor = "black",
+	SecondaryColor = "white",
 	DefaultTier = "duchy",
-	Icon = "icon-flag-black-skull-on-white",
+	Icon = "icon-flag-red-skull-on-white",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
 })

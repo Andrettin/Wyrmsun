@@ -49,15 +49,3 @@ DefineFaction("england", {
 		return true
 	end
 })
-
-DefineFaction("scotland", {
-	Name = "Scotland",
-	Civilization = "english",
-	Type = "polity",
-	PrimaryColor = "blue",
-	SecondaryColor = "white",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-scotland",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"bernicia", "northumbria"}
-})
