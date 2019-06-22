@@ -220,18 +220,6 @@ DefineFaction("kent", {
 	}
 })
 
-DefineFaction("mercia", {
-	Name = "Mercia",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	PrimaryColor = "white",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-mercia",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England.",
-	DevelopsFrom = {"mierce-tribe", "lindisfaran-tribe"}
-})
-
 DefineFaction("middle-anglia", {
 	Name = "Middle Anglia",
 	Civilization = "anglo-saxon",
@@ -260,10 +248,11 @@ DefineFaction("northumbria", {
 	Name = "Northumbria",
 	Civilization = "anglo-saxon",
 	Type = "polity",
-	PrimaryColor = "brown",
+	PrimaryColor = "red",
+	SecondaryColor = "yellow",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-northumbria",
-	Icon = "icon-flag-five-orange-birds-on-black",
+	Icon = "icon-flag-savoy-dark-white-cross",
 	DevelopsFrom = {"bernicia", "deira"},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do

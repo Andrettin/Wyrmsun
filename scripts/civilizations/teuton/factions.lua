@@ -312,10 +312,11 @@ DefineFaction("saxony", {
 	Name = "Saxony", -- "Sachsen"
 	Civilization = "teuton",
 	Type = "polity",
-	PrimaryColor = "pink",
+	PrimaryColor = "yellow",
+	SecondaryColor = "black",
 	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	FactionUpgrade = "upgrade-faction-saxony",
-	Icon = "icon-flag-red-lion-on-green",
+	Icon = "icon-flag-savoy-dark-white-cross",
 	Adjective = "Saxon",
 	DevelopsFrom = {"saxon-tribe", "cherusci-tribe", "varini-tribe", "brandenburg", "bremen", "brunswick", "magdeburg", "mecklenburg"},
 	Titles = {
