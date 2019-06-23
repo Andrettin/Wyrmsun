@@ -115,7 +115,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Dwarven Geomancer, a spellcaster which possesses earth-related spells, and is trained at the Dwarven Academy.
 
 * Upgrades
-- The Architecture icon has been updated.
+- The Architecture, (human) Heater Shield and Mace Mastery icons have been updated.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
