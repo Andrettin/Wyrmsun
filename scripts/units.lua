@@ -122,7 +122,7 @@ Units = {
 	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
 	"upgrade-dwarven-civilization",
-	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+	"unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 	"unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
@@ -146,7 +146,7 @@ Units = {
 	"upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-bearded-throwing-axe", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
 	"upgrade-faction-brising-clan", "upgrade-faction-lyr",
-	"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
+	"unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
 	"unit-brising-smithy",
 	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-goldhoof-clan", "upgrade-faction-joruvellir", "upgrade-faction-yawning-yales",
 	"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
@@ -190,7 +190,6 @@ Units = {
 	"unit-ettin",
 	"unit-ettin-town-hall",
 	"unit-caravan",
-	"unit-minecart",
 --	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-megacricetodon-collongensis", "unit-rat",
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat",
 	"unit-goat", "unit-boar", "unit-horse",
@@ -366,112 +365,6 @@ DefineUnitType("unit-template-sapient-unit", {
 
 Load("scripts/items.lua")
 Load("scripts/units_fauna.lua")
-
-DefineUnitType("unit-minecart", {
-	Name = "Minecart",
-	Parent = "unit-template-unit",
-	Class = "minecart",
-	Civilization = "neutral",
-	Description = "Minecarts are useful to gather resources from mines in greater bulk.",
-	Image = {"file", "teuton/units/minecart.png", "size", {64, 64}},
-	Animations = "animations-minecart", Icon = "icon-teuton-minecart",
-	Costs = {"time", 60, "copper", 300, "lumber", 300},
-	RepairHp = 4,
-	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 7,
-	HitPoints = 110,
-	TileSize = {1, 1}, BoxSize = {42, 42},
-	SightRange = 4,
-	AutoRepairRange = 4,
-	MaxAttackRange = 1,
-	Priority = 55,
-	Points = 50,
-	Demand = 1,
-	SalvageFactor = 75,
-	Type = "land",
-	Coward = true,
-	RightMouseAction = "harvest",
-	Rail = true,
-	RequirementsString = "Engineering",
-	CanGatherResources = {
-		{
-			"resource-id", "gold",
-			"file-when-loaded", "teuton/units/minecart_with_gold.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "silver",
-			"file-when-loaded", "teuton/units/minecart_with_silver.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "copper",
-			"file-when-loaded", "teuton/units/minecart_with_copper.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "iron",
-			"file-when-loaded", "teuton/units/minecart_with_iron.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "mithril",
-			"file-when-loaded", "teuton/units/minecart_with_silver.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "coal",
-			"file-when-loaded", "teuton/units/minecart_with_coal.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "diamonds",
-			"file-when-loaded", "teuton/units/minecart_with_silver.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		},
-		{
-			"resource-id", "emeralds",
-			"file-when-loaded", "teuton/units/minecart_with_gold.png",
-			"resource-capacity", 200,
-			"resource-step", 6,
-			"wait-at-resource", 12,
-			"wait-at-depot", 150
-		}
-	},
-	Sounds = {
-		"selected", "gold-mine-selected",
-		"step", "step-dirt",
-		"terrain-type-step", "dirt", "step-dirt",
-		"terrain-type-step", "dry-mud", "step-dirt",
-		"terrain-type-step", "rockbound-cave-floor", "step-gravel",
-		"terrain-type-step", "mud", "step-mud",
-		"terrain-type-step", "cave-floor", "step-stone",
-		"terrain-type-step", "road", "step-stone",
-		"terrain-type-step", "grass", "step-leaves",
-		"dead", "explosion"
-	}
-} )
 
 DefineUnitType("unit-caravan", {
 	Name = "Caravan",
