@@ -800,10 +800,12 @@ DefineUnitType("unit-teuton-gunpowder-infantry", {
 	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
-			"variation-id", "1"
+			"variation-id", "brown-hair",
+			"hair-color", "brown"
 		},
 		{
-			"variation-id", "2",
+			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"file", "teuton/units/austrian_musketeer_extra_1.png"
 		}
 	},
