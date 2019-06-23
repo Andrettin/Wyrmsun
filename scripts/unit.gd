@@ -2,6 +2,8 @@ extends Sprite
 
 const SHADER = preload("res://shaders/player_color_shader.shader")
 const MATERIAL = preload("res://shaders/player_color_shader.tres")
+const SELECTION_BOX_Z_INDEX = 10
+const THIS_PLAYER_SELECTION_COLOR = Color("#00fc00")
 
 var source_primary_player_color
 var target_primary_player_color
@@ -9,6 +11,11 @@ var source_secondary_player_color
 var target_secondary_player_color
 var unit_type
 var pixel_offset = Vector2(0, 0)
+var draw_level = 0
+var tile_pos = Vector2(0, 0)
+var map_layer
+
+var selection_box
 
 func initialize_material():
 	if (self.source_primary_player_color == null):
@@ -20,7 +27,8 @@ func initialize_material():
 func set_unit_type(new_unit_type):
 	self.unit_type = new_unit_type
 	self.update_offset()
-	self.set_z_index(self.unit_type.get_draw_level())
+	self.draw_level = self.unit_type.get_draw_level()
+	self.update_z_index()
 
 func set_image(new_image):
 	self.texture = new_image.get_texture()
@@ -31,13 +39,18 @@ func set_image(new_image):
 		self.source_primary_player_color = new_image.get_source_primary_player_color()
 	self.source_secondary_player_color = new_image.get_source_secondary_player_color()
 
-func set_tile_pos(tile_pos):
-	self.position = (tile_pos * wyrmgus.get_pixel_tile_size()) + self.unit_type.get_half_tile_pixel_size()
+func set_tile_pos(new_tile_pos):
+	self.position = (new_tile_pos * wyrmgus.get_pixel_tile_size()) + self.unit_type.get_half_tile_pixel_size()
+	self.tile_pos = new_tile_pos
+	self.update_z_index()
 
-func set_map_layer(index):
+func set_map_layer(new_map_layer):
+	var index = new_map_layer.get_index()
 	var map = self.get_parent().get_parent()
 	self.get_parent().remove_child(self)
 	map.map_layers[index].add_child(self)
+	self.map_layer = new_map_layer
+	self.update_z_index()
 
 func set_pixel_offset(new_offset):
 	self.pixel_offset = new_offset
@@ -79,3 +92,25 @@ func apply_secondary_player_color():
 
 func update_offset():
 	self.set_offset(self.unit_type.get_offset() + self.pixel_offset)
+	
+func update_z_index():
+	var new_z_index = self.draw_level * 10
+	if (self.map_layer != null):
+		new_z_index += self.tile_pos.x * 0.1
+	self.set_z_index(new_z_index)
+
+func set_selected(selected):
+	if (selected):
+		self.selection_box = Line2D.new()
+		self.selection_box.width = 1
+		self.selection_box.z_index = SELECTION_BOX_Z_INDEX
+		self.selection_box.default_color = THIS_PLAYER_SELECTION_COLOR
+		self.selection_box.add_point(self.position - (self.unit_type.get_box_size() / 2))
+		self.selection_box.add_point(self.position + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + (Vector2(-self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position - (self.unit_type.get_box_size() / 2))
+		self.get_parent().add_child(self.selection_box)
+	else:
+		if (self.selection_box != null):
+			self.selection_box.queue_free()
