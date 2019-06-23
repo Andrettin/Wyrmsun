@@ -110,11 +110,13 @@ DefineUnitType("unit-gnomish-worker", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-gnomish-worker-gray-hair",
 			"file", "gnome/units/gnomish_worker_gray_hair.png",
 			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
@@ -176,11 +178,13 @@ DefineUnitType("unit-gnomish-recruit", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-gnomish-recruit-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
 			"weight", 1
@@ -221,11 +225,13 @@ DefineUnitType("unit-gnomish-duelist", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-gnomish-duelist-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
 			"weight", 1
@@ -267,11 +273,13 @@ DefineUnitType("unit-gnomish-master-at-arms", {
 	Variations = {
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-gnomish-master-at-arms-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
 			"weight", 1

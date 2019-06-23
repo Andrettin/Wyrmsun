@@ -39,6 +39,7 @@ DefineUnitType("unit-joruvellir-scout", {
 	Variations = {
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-scout-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -46,6 +47,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "black-hair-beardless",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair_beardless.png",
 			"icon", "icon-joruvellir-scout-black-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -53,6 +55,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "orange-hair",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout.png",
 			"icon", "icon-joruvellir-scout-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -60,6 +63,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "orange-hair-beardless",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout_beardless.png",
 			"icon", "icon-joruvellir-scout-orange-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -67,6 +71,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-scout-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -74,6 +79,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "blond-hair-beardless",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair_beardless.png",
 			"icon", "icon-joruvellir-scout-blond-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -81,6 +87,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-scout-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -88,6 +95,7 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "brown-hair-beardless",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
 			"icon", "icon-joruvellir-scout-brown-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -95,12 +103,14 @@ DefineUnitType("unit-joruvellir-scout", {
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-scout-gray-hair",
 			"weight", 2
 		},
 		{
 			"variation-id", "gray-hair-beardless",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair_beardless.png",
 			"icon", "icon-joruvellir-scout-gray-hair-beardless",
 			"weight", 1
@@ -122,6 +132,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 	Variations = {
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-pathfinder-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -129,6 +140,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "black-hair-beardless",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair_beardless.png",
 			"icon", "icon-joruvellir-pathfinder-black-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -136,6 +148,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "orange-hair",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout.png",
 			"icon", "icon-joruvellir-pathfinder-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -143,6 +156,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "orange-hair-beardless",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout_beardless.png",
 			"icon", "icon-joruvellir-pathfinder-orange-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -150,6 +164,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-pathfinder-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -157,6 +172,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "blond-hair-beardless",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair_beardless.png",
 			"icon", "icon-joruvellir-pathfinder-blond-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -164,6 +180,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-pathfinder-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -171,6 +188,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "brown-hair-beardless",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
 			"icon", "icon-joruvellir-pathfinder-brown-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -178,12 +196,14 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-pathfinder-gray-hair",
 			"weight", 2
 		},
 		{
 			"variation-id", "gray-hair-beardless",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair_beardless.png",
 			"icon", "icon-joruvellir-pathfinder-gray-hair-beardless",
 			"weight", 1
@@ -205,6 +225,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 	Variations = {
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair.png",
 			"icon", "icon-joruvellir-explorer-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -212,6 +233,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "black-hair-beardless",
+			"hair-color", "black",
 			"file", "dwarf/units/dwarven_scout_black_hair_beardless.png",
 			"icon", "icon-joruvellir-explorer-black-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -219,6 +241,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "orange-hair",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout.png",
 			"icon", "icon-joruvellir-explorer-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -226,6 +249,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "orange-hair-beardless",
+			"hair-color", "orange",
 			"file", "dwarf/units/dwarven_scout_beardless.png",
 			"icon", "icon-joruvellir-explorer-orange-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -233,6 +257,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair.png",
 			"icon", "icon-joruvellir-explorer-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -240,6 +265,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "blond-hair-beardless",
+			"hair-color", "blond",
 			"file", "dwarf/units/dwarven_scout_blond_hair_beardless.png",
 			"icon", "icon-joruvellir-explorer-blond-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -247,6 +273,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair.png",
 			"icon", "icon-joruvellir-explorer-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -254,6 +281,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "brown-hair-beardless",
+			"hair-color", "brown",
 			"file", "dwarf/units/dwarven_scout_brown_hair_beardless.png",
 			"icon", "icon-joruvellir-explorer-brown-hair-beardless",
 			"upgrade-forbidden", "upgrade-old",
@@ -261,12 +289,14 @@ DefineUnitType("unit-joruvellir-explorer", {
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
 			"icon", "icon-joruvellir-explorer-gray-hair",
 			"weight", 2
 		},
 		{
 			"variation-id", "gray-hair-beardless",
+			"hair-color", "gray",
 			"file", "dwarf/units/dwarven_scout_gray_hair_beardless.png",
 			"icon", "icon-joruvellir-explorer-gray-hair-beardless",
 			"weight", 1
@@ -290,6 +320,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
+			"hair-color", "black",
 			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -297,6 +328,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "black-hair-gray-brown-fur",
+			"hair-color", "black",
 			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -304,6 +336,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "blond-hair-brown-fur",
+			"hair-color", "blond",
 			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -311,6 +344,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "brown-hair-brown-fur",
+			"hair-color", "brown",
 			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -318,6 +352,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "brown-hair-white-fur",
+			"hair-color", "brown",
 			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
 			"icon", "icon-joruvellir-yale-rider-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -325,12 +360,14 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "gray-hair-gray-brown-fur",
+			"hair-color", "gray",
 			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-gray-hair",
 			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair-brown-fur",
+			"hair-color", "orange",
 			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-rider-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -338,6 +375,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 		},
 		{
 			"variation-id", "orange-hair-white-fur",
+			"hair-color", "orange",
 			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
 			"icon", "icon-joruvellir-yale-rider-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -356,6 +394,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
+			"hair-color", "black",
 			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -363,6 +402,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "black-hair-gray-brown-fur",
+			"hair-color", "black",
 			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-black-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -370,6 +410,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "blond-hair-brown-fur",
+			"hair-color", "blond",
 			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -377,6 +418,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "brown-hair-brown-fur",
+			"hair-color", "brown",
 			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -384,6 +426,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "brown-hair-white-fur",
+			"hair-color", "brown",
 			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
 			"icon", "icon-joruvellir-yale-lord-brown-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -391,12 +434,14 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "gray-hair-gray-brown-fur",
+			"hair-color", "gray",
 			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-gray-hair",
 			"weight", 1
 		},
 		{
 			"variation-id", "orange-hair-brown-fur",
+			"hair-color", "orange",
 			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
 			"icon", "icon-joruvellir-yale-lord-orange-hair",
 			"upgrade-forbidden", "upgrade-old",
@@ -404,6 +449,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 		},
 		{
 			"variation-id", "orange-hair-white-fur",
+			"hair-color", "orange",
 			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
 			"icon", "icon-joruvellir-yale-lord-orange-hair",
 			"upgrade-forbidden", "upgrade-old",

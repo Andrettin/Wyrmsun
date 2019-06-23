@@ -100,10 +100,12 @@ DefineUnitType("unit-deep-gnomish-worker", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-blond-hair",
+			"hair-color", "green-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-worker-blond-hair",
 			"file", "gnome/units/deep_gnomish_worker_blond_hair.png",
@@ -124,6 +126,7 @@ DefineUnitType("unit-deep-gnomish-worker", {
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-deep-gnomish-worker-gray-hair",
 			"file", "gnome/units/deep_gnomish_worker_gray_hair.png",
 			"file-when-loaded", "gold", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png",
@@ -143,6 +146,7 @@ DefineUnitType("unit-deep-gnomish-worker", {
 		},
 		{
 			"variation-id", "green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-worker-green-hair",
 			"file", "gnome/units/deep_gnomish_worker_green_hair.png",
@@ -175,21 +179,25 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-blond-hair",
+			"hair-color", "green-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-recruit-blond-hair",
 			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-deep-gnomish-recruit-gray-hair",
 			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
 		},
 		{
 			"variation-id", "green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-recruit-green-hair",
 			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
@@ -208,21 +216,25 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-blond-hair",
+			"hair-color", "green-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-duelist-blond-hair",
 			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-deep-gnomish-duelist-gray-hair",
 			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
 		},
 		{
 			"variation-id", "green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-duelist-green-hair",
 			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
@@ -241,21 +253,25 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-blond-hair",
+			"hair-color", "green-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-master-at-arms-blond-hair",
 			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
 		},
 		{
 			"variation-id", "gray-hair",
+			"hair-color", "gray",
 			"icon", "icon-deep-gnomish-master-at-arms-gray-hair",
 			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
 		},
 		{
 			"variation-id", "green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-master-at-arms-green-hair",
 			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
@@ -273,22 +289,26 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 	NightSightRangeBonus = 1,
 	Variations = {
 		{
-			"variation-id", "gray-hair"
+			"variation-id", "gray-hair",
+			"hair-color", "gray"
 		},
 		{
 			"variation-id", "green-blond-hair",
+			"hair-color", "green-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-blond-hair",
 			"file", "gnome/units/deep_gnomish_herbalist_blond_hair.png"
 		},
 		{
 			"variation-id", "green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-green-hair",
 			"file", "gnome/units/deep_gnomish_herbalist_green_hair.png"
 		},
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-red-hair",
 			"file", "gnome/units/deep_gnomish_herbalist_red_hair.png"

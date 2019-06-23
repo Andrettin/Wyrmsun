@@ -110,6 +110,7 @@ DefineUnitType("unit-teuton-worker", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 		}
 	},
 	Sounds = {
@@ -162,11 +163,13 @@ DefineUnitType("unit-teuton-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"icon", "icon-saxon-swordsman-black-hair",
 			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -174,6 +177,7 @@ DefineUnitType("unit-teuton-swordsman", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"icon", "icon-saxon-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -181,6 +185,7 @@ DefineUnitType("unit-teuton-swordsman", {
 		},
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"icon", "icon-saxon-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -320,11 +325,13 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"icon", "icon-veteran-saxon-swordsman-black-hair",
 			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -332,6 +339,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"icon", "icon-veteran-saxon-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -339,6 +347,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 		},
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"icon", "icon-veteran-saxon-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -480,11 +489,13 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 	Variations = {
 		{
 			"variation-id", "brown-hair",
+			"hair-color", "brown",
 			"upgrade-forbidden", "upgrade-old",
 			"weight", 4
 		},
 		{
 			"variation-id", "black-hair",
+			"hair-color", "black",
 			"icon", "icon-heroic-saxon-swordsman-black-hair",
 			"layer-file", "hair", "human/units/black_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -492,6 +503,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"icon", "icon-heroic-saxon-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -499,6 +511,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 		},
 		{
 			"variation-id", "red-hair",
+			"hair-color", "red",
 			"icon", "icon-heroic-saxon-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -635,7 +648,8 @@ DefineUnitType("unit-teuton-spearman", {
 	ButtonHint = "Train Sp~!earman",
 	Variations = {
 		{
-			"variation-id", "red-hair"
+			"variation-id", "red-hair",
+			"hair-color", "red"
 		},
 		{
 			"layer", "left-arm",
@@ -754,7 +768,8 @@ DefineUnitType("unit-teuton-archer", {
 	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
-			"variation-id", "blond-hair"
+			"variation-id", "blond-hair",
+			"hair-color", "blond"
 		}
 	},
 	Sounds = {
