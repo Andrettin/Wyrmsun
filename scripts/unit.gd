@@ -117,12 +117,12 @@ func update_z_index():
 		new_z_index += self.tile_pos.x * 0.1
 	self.set_z_index(new_z_index)
 
-func set_selected(selected):
+func set_selected(selected, selection_color):
 	if (selected):
 		self.selection_box = Line2D.new()
 		self.selection_box.width = 1
 		self.selection_box.z_index = SELECTION_BOX_Z_INDEX
-		self.selection_box.default_color = THIS_PLAYER_SELECTION_COLOR
+		self.selection_box.default_color = selection_color
 		self.selection_box.add_point(self.position + self.offset - (self.unit_type.get_box_size() / 2))
 		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
 		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
