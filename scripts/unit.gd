@@ -4,6 +4,8 @@ const SHADER = preload("res://shaders/player_color_shader.shader")
 const MATERIAL = preload("res://shaders/player_color_shader.tres")
 const SELECTION_BOX_Z_INDEX = 10
 const THIS_PLAYER_SELECTION_COLOR = Color("#00fc00")
+const ENEMY_SELECTION_COLOR = Color("#fc0000")
+const NEUTRAL_SELECTION_COLOR = Color("#fcfc00")
 
 var source_primary_player_color
 var target_primary_player_color
@@ -40,9 +42,17 @@ func set_image(new_image):
 	self.source_secondary_player_color = new_image.get_source_secondary_player_color()
 
 func set_tile_pos(new_tile_pos):
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) - self.position)
+	
 	self.position = (new_tile_pos * wyrmgus.get_pixel_tile_size()) + self.unit_type.get_half_tile_pixel_size()
 	self.tile_pos = new_tile_pos
 	self.update_z_index()
+	
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) + self.position)
 
 func set_map_layer(new_map_layer):
 	var index = new_map_layer.get_index()
@@ -91,7 +101,15 @@ func apply_secondary_player_color():
 		material.set_shader_param("target_secondary_player_color_" + str(i + 1), target_colors[i])
 
 func update_offset():
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) - self.offset)
+	
 	self.set_offset(self.unit_type.get_offset() + self.pixel_offset)
+	
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) + self.offset)
 	
 func update_z_index():
 	var new_z_index = self.draw_level * 10
@@ -105,12 +123,13 @@ func set_selected(selected):
 		self.selection_box.width = 1
 		self.selection_box.z_index = SELECTION_BOX_Z_INDEX
 		self.selection_box.default_color = THIS_PLAYER_SELECTION_COLOR
-		self.selection_box.add_point(self.position - (self.unit_type.get_box_size() / 2))
-		self.selection_box.add_point(self.position + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position + (Vector2(-self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position - (self.unit_type.get_box_size() / 2))
+		self.selection_box.add_point(self.position + self.offset - (self.unit_type.get_box_size() / 2))
+		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.offset + (Vector2(-self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.offset - (self.unit_type.get_box_size() / 2))
 		self.get_parent().add_child(self.selection_box)
 	else:
 		if (self.selection_box != null):
 			self.selection_box.queue_free()
+			self.selection_box = null
