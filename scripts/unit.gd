@@ -63,8 +63,16 @@ func set_map_layer(new_map_layer):
 	self.update_z_index()
 
 func set_pixel_offset(new_offset):
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) - self.pixel_offset)
+	
 	self.pixel_offset = new_offset
 	self.update_offset()
+ 	
+	if (self.selection_box != null):
+		for i in range(0, self.selection_box.points.size()):
+			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) + self.pixel_offset)
 
 func set_primary_player_color(player_color):
 	self.target_primary_player_color = player_color
@@ -101,15 +109,7 @@ func apply_secondary_player_color():
 		material.set_shader_param("target_secondary_player_color_" + str(i + 1), target_colors[i])
 
 func update_offset():
-	if (self.selection_box != null):
-		for i in range(0, self.selection_box.points.size()):
-			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) - self.offset)
-	
 	self.set_offset(self.unit_type.get_offset() + self.pixel_offset)
-	
-	if (self.selection_box != null):
-		for i in range(0, self.selection_box.points.size()):
-			self.selection_box.set_point_position(i, self.selection_box.get_point_position(i) + self.offset)
 	
 func update_z_index():
 	var new_z_index = self.draw_level * 10
@@ -123,11 +123,11 @@ func set_selected(selected, selection_color):
 		self.selection_box.width = 1
 		self.selection_box.z_index = SELECTION_BOX_Z_INDEX
 		self.selection_box.default_color = selection_color
-		self.selection_box.add_point(self.position + self.offset - (self.unit_type.get_box_size() / 2))
-		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position + self.offset + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position + self.offset + (Vector2(-self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
-		self.selection_box.add_point(self.position + self.offset - (self.unit_type.get_box_size() / 2))
+		self.selection_box.add_point(self.position + self.pixel_offset - (self.unit_type.get_box_size() / 2))
+		self.selection_box.add_point(self.position + self.pixel_offset + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.pixel_offset + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.pixel_offset + (Vector2(-self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
+		self.selection_box.add_point(self.position + self.pixel_offset - (self.unit_type.get_box_size() / 2))
 		self.get_parent().add_child(self.selection_box)
 	else:
 		if (self.selection_box != null):
