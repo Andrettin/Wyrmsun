@@ -118,6 +118,9 @@ func update_z_index():
 	self.set_z_index(new_z_index)
 
 func set_selected(selected, selection_color):
+	if (self.is_queued_for_deletion() or self.get_parent() == null):
+		return #to prevent issues if the function is called while in the process of freeing
+	
 	if (selected):
 		self.selection_box = Line2D.new()
 		self.selection_box.width = 1
@@ -133,3 +136,9 @@ func set_selected(selected, selection_color):
 		if (self.selection_box != null):
 			self.selection_box.queue_free()
 			self.selection_box = null
+			
+func remove_unit():
+	if (self.selection_box != null):
+		self.selection_box.queue_free()
+		self.selection_box = null
+	self.queue_free()

@@ -61,7 +61,7 @@ func create_unit_sprite(unit):
 	unit_sprite.call_deferred("set_selected", unit.is_selected(), unit.get_selection_color())
 
 	#delete the unit node if the unit is removed from the map; node that "removed" here can mean that the unit is e.g. inside a building; it may continue existing, it is just not displayed on the map
-	unit.connect("removed", unit_sprite, "queue_free", [], CONNECT_DEFERRED)
+	unit.connect("removed", unit_sprite, "remove_unit", [], CONNECT_DEFERRED)
 	unit.connect("image_changed", unit_sprite, "set_image", [], CONNECT_DEFERRED)
 	unit.connect("tile_pos_changed", unit_sprite, "set_tile_pos", [], CONNECT_DEFERRED)
 	unit.connect("map_layer_changed", unit_sprite, "set_map_layer", [], CONNECT_DEFERRED)
