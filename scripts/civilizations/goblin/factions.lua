@@ -30,8 +30,9 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "red",
+	SecondaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-aelak-tribe",
-	Icon = "icon-flag-brown-skull-on-red"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 DefineFaction("issudru-tribe", { -- invented by Jesse Crider
@@ -49,8 +50,9 @@ DefineFaction("aurvangling-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "teal",
+	SecondaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
-	Icon = "icon-flag-brown-skull-on-teal",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
@@ -70,8 +72,9 @@ DefineFaction("khag-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "brown",
+	SecondaryColor = "red",
 	FactionUpgrade = "upgrade-faction-khag-tribe",
-	Icon = "icon-flag-brown-skull-on-red",
+	Icon = "icon-flag-green-skull-on-violet",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Liberty (The Raid)
 			"force-type", "land-force",
@@ -153,7 +156,8 @@ DefineFaction("sigre-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "yellow",
-	Icon = "icon-flag-red-skull-on-yellow",
+	SecondaryColor = "red",
+	Icon = "icon-flag-red-skull-on-white",
 	FactionUpgrade = "upgrade-faction-sigre-tribe"
 })
 
@@ -162,8 +166,9 @@ DefineFaction("wildfang-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "red",
+	SecondaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-wildfang-tribe",
-	Icon = "icon-flag-brown-skull-on-red",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
 
@@ -172,10 +177,11 @@ DefineFaction("aurvang", {
 	Civilization = "goblin",
 	Type = "polity",
 	PrimaryColor = "teal",
+	SecondaryColor = "brown",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
 	FactionUpgrade = "upgrade-faction-aurvang",
-	Icon = "icon-flag-brown-skull-on-teal",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aurvangling-tribe", "dreadskull-tribe", "lggi-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -187,11 +193,12 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Civilization = "goblin",
 	Type = "polity",
 	PrimaryColor = "brown",
+	SecondaryColor = "yellow",
 	DefaultTier = "barony",
 	DefaultGovernmentType = "republic",
 	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
 	FactionUpgrade = "upgrade-faction-driftwood",
-	Icon = "icon-flag-red-skull-on-yellow",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aelak-tribe", "aurvangling-tribe", "dreadskull-tribe", "issudru-tribe", "khag-tribe", "lggi-tribe", "mabom-tribe", "sigre-tribe"},
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
@@ -221,7 +228,7 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-myridia",
-	Icon = "icon-flag-blue-skull-on-light-blue",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -234,10 +241,11 @@ DefineFaction("stilgar", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "polity",
 	PrimaryColor = "blue",
+	SecondaryColor = "purple",
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-stilgar",
-	Icon = "icon-flag-purple-skull-on-green",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "khag-tribe", "prideblade-tribe", "wildfang-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -269,8 +277,9 @@ DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 	Civilization = "goblin",
 	Type = "mercenary-company",
 	PrimaryColor = "green",
+	SecondaryColor = "purple",
 	DefaultTier = "barony",
-	Icon = "icon-flag-purple-skull-on-green",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The Greenskin Cartel is a criminal group which runs the shipwreck town of Driftwood."
 })
 

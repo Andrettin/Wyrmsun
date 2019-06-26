@@ -30,7 +30,7 @@ DefineFaction("brising-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	PrimaryColor = "red",
-	SecondaryColor = "yellow",
+	SecondaryColor = "orange",
 	FactionUpgrade = "upgrade-faction-brising-clan",
 	Icon = "icon-flag-white-hammer-on-red",
 	ButtonIcons = {
@@ -78,8 +78,9 @@ DefineFaction("eikinskjaldi-clan", {
 	ParentFaction = "goldhoof-clan",
 	Type = "tribe",
 	PrimaryColor = "brown",
+	SecondaryColor = "white",
 	FactionUpgrade = "upgrade-faction-eikinskjaldi-clan",
-	Icon = "icon-flag-light-blue-hammer-on-orange",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"goldhoof-clan"},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
@@ -90,9 +91,9 @@ DefineFaction("norlund-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	PrimaryColor = "red",
-	SecondaryColor = "orange",
+	SecondaryColor = "yellow",
 	FactionUpgrade = "upgrade-faction-norlund-clan",
-	Icon = "icon-flag-black-hammer-on-orange",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan"},
 	Description = "The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."
 })
@@ -102,8 +103,9 @@ DefineFaction("oinling-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	PrimaryColor = "yellow",
+	SecondaryColor = "blue",
 	FactionUpgrade = "upgrade-faction-oinling-clan",
-	Icon = "icon-flag-blue-hammer-on-yellow",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan"},
 	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
 })
@@ -113,8 +115,9 @@ DefineFaction("shadowcharm-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	PrimaryColor = "black",
+	SecondaryColor = "purple",
 	FactionUpgrade = "upgrade-faction-shadowcharm-clan",
-	Icon = "icon-flag-green-hammer-on-light-purple",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan"},
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."
 })
@@ -126,7 +129,7 @@ DefineFaction("shinsplitter-clan", {
 	PrimaryColor = "green",
 	SecondaryColor = "teal",
 	FactionUpgrade = "upgrade-faction-shinsplitter-clan",
-	Icon = "icon-flag-cyan-hammer-on-green",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan"},
 	Description = "The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."
 })
@@ -138,7 +141,7 @@ DefineFaction("shorbear-clan", {
 	PrimaryColor = "blue",
 	SecondaryColor = "cyan",
 	FactionUpgrade = "upgrade-faction-shorbear-clan",
-	Icon = "icon-flag-green-hammer-on-blue",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan"},
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
 	ForceTemplates = {
@@ -196,8 +199,9 @@ DefineFaction("whitesteel-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	PrimaryColor = "white",
+	SecondaryColor = "black",
 	FactionUpgrade = "upgrade-faction-whitesteel-clan",
-	Icon = "icon-flag-red-hammer-on-silver",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan", "norlund-clan", "shorbear-clan"},
 --	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
 })
@@ -238,9 +242,10 @@ DefineFaction("kal-kartha", {
 	Civilization = "dwarf",
 	Type = "polity",
 	PrimaryColor = "black",
+	SecondaryColor = "blue",
 	DefaultTier = "barony",
 	FactionUpgrade = "upgrade-faction-kal-kartha",
-	Icon = "icon-flag-red-hammer-on-silver",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"oinling-clan", "shadowcharm-clan", "shinsplitter-clan", "shorbear-clan", "whitesteel-clan"},
 	Titles = {
 		"monarchy", "barony", "Lordship"
@@ -348,7 +353,7 @@ DefineFaction("lyr", {
 	SecondaryColor = "teal",
 	DefaultTier = "barony",
 	FactionUpgrade = "upgrade-faction-lyr",
-	Icon = "icon-flag-yellow-hammer-on-purple",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"brising-clan", "oinling-clan", "whitesteel-clan"},
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
 	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",

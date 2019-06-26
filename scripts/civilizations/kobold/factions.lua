@@ -74,8 +74,9 @@ DefineFaction("grafvolling-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	PrimaryColor = "red",
+	SecondaryColor = "brown",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-brown-skull-on-red",
+	Icon = "icon-flag-green-skull-on-violet",
 	HistoricalDiplomacyStates = {
 		600, "driftwood", "war", -- the natives of the Island of the Kobold God are hostile to the newcomers to the island and the Driftwood shipwrecks
 		600, "lyr", "war"
@@ -87,8 +88,9 @@ DefineFaction("moinling-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	PrimaryColor = "orange",
+	SecondaryColor = "teal",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-brown-skull-on-teal",
+	Icon = "icon-flag-green-skull-on-violet",
 	HistoricalDiplomacyStates = {
 		-3000, "grafvitning-tribe", "alliance" -- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
 	}
@@ -110,16 +112,17 @@ DefineFaction("shellscale-tribe", {
 	Type = "tribe",
 	PrimaryColor = "blue",
 	SecondaryColor = "yellow",
-	Icon = "icon-flag-blue-skull-on-light-blue"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 DefineFaction("svafning-tribe", {
 	Name = "Svafning Tribe",
 	Civilization = "kobold",
 	Type = "tribe",
-	PrimaryColor = "blue",
+	PrimaryColor = "cyan",
+	SecondaryColor = "blue",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-blue-skull-on-light-blue"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 -- Mercenary Companies
