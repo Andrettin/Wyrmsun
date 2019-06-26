@@ -32,7 +32,7 @@ DefineFaction("brising-clan", {
 	PrimaryColor = "red",
 	SecondaryColor = "yellow",
 	FactionUpgrade = "upgrade-faction-brising-clan",
-	Icon = "icon-flag-silver-hammer-on-red",
+	Icon = "icon-flag-white-hammer-on-red",
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"
 	},
@@ -321,7 +321,7 @@ DefineFaction("knalga", {
 	SecondaryColor = "white",
 	DefaultTier = "barony",
 	FactionUpgrade = "upgrade-faction-knalga",
-	Icon = "icon-flag-silver-hammer-on-red",
+	Icon = "icon-flag-white-hammer-on-red",
 	DevelopsFrom = {"norlund-clan", "oinling-clan", "shinsplitter-clan", "shorbear-clan", "whitesteel-clan"},
 	Titles = {
 		"monarchy", "barony", "Lordship"

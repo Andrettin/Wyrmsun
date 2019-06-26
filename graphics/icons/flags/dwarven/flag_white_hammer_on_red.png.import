@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flag_orange_skull_on_teal.png-506b7f9d9f8af759791c58586338d13f.stex"
+path="res://.import/flag_white_hammer_on_red.png-c596152b0df0a01afd9cda236ab6317d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/goblin/icons/flag_orange_skull_on_teal.png"
-dest_files=[ "res://.import/flag_orange_skull_on_teal.png-506b7f9d9f8af759791c58586338d13f.stex" ]
+source_file="res://graphics/icons/flags/dwarven/flag_white_hammer_on_red.png"
+dest_files=[ "res://.import/flag_white_hammer_on_red.png-c596152b0df0a01afd9cda236ab6317d.stex" ]
 
 [params]
 

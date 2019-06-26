@@ -41,7 +41,7 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	PrimaryColor = "black",
 	SecondaryColor = "red",
 	FactionUpgrade = "upgrade-faction-issudru-tribe",
-	Icon = "icon-flag-red-skull-on-white"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 DefineFaction("aurvangling-tribe", {
@@ -50,7 +50,7 @@ DefineFaction("aurvangling-tribe", {
 	Type = "tribe",
 	PrimaryColor = "teal",
 	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
-	Icon = "icon-flag-orange-skull-on-teal",
+	Icon = "icon-flag-brown-skull-on-teal",
 	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
 })
 
@@ -59,8 +59,9 @@ DefineFaction("dreadskull-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "black",
+	SecondaryColor = "green",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
-	Icon = "icon-flag-red-skull-on-white",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
 
@@ -101,7 +102,7 @@ DefineFaction("lggi-tribe", {
 	Type = "tribe",
 	PrimaryColor = "violet",
 	FactionUpgrade = "upgrade-faction-lggi-tribe",
-	Icon = "icon-flag-green-skull-on-purple",
+	Icon = "icon-flag-green-skull-on-violet",
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
 			"force-type", "land-force",
@@ -133,7 +134,8 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "purple",
-	Icon = "icon-flag-green-skull-on-purple",
+	SecondaryColor = "white",
+	Icon = "icon-flag-green-skull-on-violet",
 	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
@@ -173,7 +175,7 @@ DefineFaction("aurvang", {
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "monarchy",
 	FactionUpgrade = "upgrade-faction-aurvang",
-	Icon = "icon-flag-orange-skull-on-teal",
+	Icon = "icon-flag-brown-skull-on-teal",
 	DevelopsFrom = {"aurvangling-tribe", "dreadskull-tribe", "lggi-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -202,7 +204,7 @@ DefineFaction("ezmarria", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-ezmarria",
-	Icon = "icon-flag-green-skull-on-purple",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -252,7 +254,7 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-tenebris",
-	Icon = "icon-flag-red-skull-on-white",
+	Icon = "icon-flag-green-skull-on-violet",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "dreadskull-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -279,6 +281,6 @@ DefineFaction("skulking-swords", {
 	PrimaryColor = "black",
 	SecondaryColor = "white",
 	DefaultTier = "duchy",
-	Icon = "icon-flag-red-skull-on-white",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
 })

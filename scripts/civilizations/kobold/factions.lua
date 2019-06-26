@@ -31,7 +31,7 @@ DefineFaction("fafning-tribe", {
 	Type = "tribe",
 	PrimaryColor = "purple",
 	DefaultAI = "passive",
-	Icon = "icon-flag-green-skull-on-purple"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 DefineFaction("goinling-tribe", {
@@ -61,7 +61,7 @@ DefineFaction("grafvitning-tribe", {
 	PrimaryColor = "black",
 	SecondaryColor = "red",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-red-skull-on-white",
+	Icon = "icon-flag-green-skull-on-violet",
 	HistoricalDiplomacyStates = {
 		-- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
 		-3000, "goinling-tribe", "alliance", 
@@ -88,7 +88,7 @@ DefineFaction("moinling-tribe", {
 	Type = "tribe",
 	PrimaryColor = "orange",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-orange-skull-on-teal",
+	Icon = "icon-flag-brown-skull-on-teal",
 	HistoricalDiplomacyStates = {
 		-3000, "grafvitning-tribe", "alliance" -- to prevent the Grafvitning tribe from being destroyed by the AI too soon in the The First Dwarves scenario
 	}
@@ -99,8 +99,9 @@ DefineFaction("ofning-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	PrimaryColor = "violet",
+	SecondaryColor = "red",
 	DefaultAI = "kobolds",
-	Icon = "icon-flag-green-skull-on-purple"
+	Icon = "icon-flag-green-skull-on-violet"
 })
 
 DefineFaction("shellscale-tribe", {
@@ -130,6 +131,6 @@ DefineFaction("sellscale-company", {
 	PrimaryColor = "black",
 	SecondaryColor = "green",
 	DefaultTier = "duchy",
-	Icon = "icon-flag-red-skull-on-white",
+	Icon = "icon-flag-green-skull-on-violet",
 	Description = "The Sellscale Company was founded by a group of kobold warriors, veterans from the Bone War. Unable to readapt to civilian life, they decided to make use of their military skills for profit."
 })

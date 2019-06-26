@@ -302,15 +302,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-flag-green-skull-on-purple",
+	Name = "icon-flag-brown-skull-on-teal",
 	Size = {46, 38},
-	File = "goblin/icons/flag_green_skull_on_purple.png"
-})
-
-DefineIcon({
-	Name = "icon-flag-orange-skull-on-teal",
-	Size = {46, 38},
-	File = "goblin/icons/flag_orange_skull_on_teal.png"
+	File = "goblin/icons/flag_brown_skull_on_teal.png"
 })
 
 DefineIcon({
