@@ -33,7 +33,7 @@ DefineCivilization("neutral", {
 	Adjective = "Neutral",
 	DefaultPrimaryPlayerColor = "gray",
 	DefaultSecondaryPlayerColor = "gray",
-	Icon = "icon-flag-silver-hammer-on-red",
+	Icon = "icon-flag-white-hammer-on-red",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -608,7 +608,7 @@ DefineCivilization("dwarf", {
 	DefaultPrimaryPlayerColor = "red",
 	DefaultSecondaryPlayerColor = "white",
 	CivilizationUpgrade = "upgrade-dwarven-civilization",
-	Icon = "icon-flag-silver-hammer-on-red",
+	Icon = "icon-flag-white-hammer-on-red",
 	VictoryBackgroundFile = "backgrounds/dwarven_victory.png",
 	DefeatBackgroundFile = "backgrounds/goblin_victory.png",
 	ButtonIcons = {
