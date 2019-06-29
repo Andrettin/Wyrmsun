@@ -44,6 +44,7 @@ func create_unit_sprite(unit):
 	var unit_player = unit.get_player()
 	
 	var unit_sprite = preload("res://scenes/unit.tscn").instance()
+	unit_sprite.unit = unit
 	
 	unit_sprite.call_deferred("set_unit_type", unit_type)
 	

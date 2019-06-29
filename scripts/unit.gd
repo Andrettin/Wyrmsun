@@ -16,6 +16,7 @@ var pixel_offset = Vector2(0, 0)
 var draw_level = 0
 var tile_pos = Vector2(0, 0)
 var map_layer
+var unit
 
 var selection_box
 
