@@ -81,17 +81,18 @@ func create_unit_sprite(unit):
 	unit_player.connect("primary_color_changed", unit_sprite, "set_primary_player_color", [], CONNECT_DEFERRED)
 	unit_player.connect("secondary_color_changed", unit_sprite, "set_secondary_player_color", [], CONNECT_DEFERRED)
 	
-func create_map_layer(index):
+func create_map_layer(map_layer):
+	var index = map_layer.get_index()
 	if (index > 0 and (index - 1) >= map_layers.size()):
 		self.create_map_layer(index - 1)
 	
-	var map_layer = preload("res://scenes/map_layer.tscn").instance()
-	map_layer.visible = false
-	self.add_child(map_layer)
-	map_layers.push_back(map_layer)
+	var map_layer_scene = preload("res://scenes/map_layer.tscn").instance()
+	map_layer_scene.visible = false
+	self.add_child(map_layer_scene)
+	map_layers.push_back(map_layer_scene)
 
-func change_current_map_layer(old_index, new_index):
-	if (old_index != -1):
-		map_layers[old_index].visible = false
-	if (new_index != -1):
-		map_layers[new_index].visible = true
+func change_current_map_layer(old_map_layer, new_map_layer):
+	if (old_map_layer != null):
+		map_layers[old_map_layer.get_index()].visible = false
+	if (new_map_layer != null):
+		map_layers[new_map_layer.get_index()].visible = true
