@@ -76,6 +76,7 @@ func create_unit_sprite(unit):
 	unit.connect("flipped_changed", unit_sprite, "set_flip_h", [], CONNECT_DEFERRED)
 	unit.connect("pixel_offset_changed", unit_sprite, "set_pixel_offset", [], CONNECT_DEFERRED)
 	unit.connect("selected_changed", unit_sprite, "set_selected", [], CONNECT_DEFERRED)
+	unit.connect("selection_color_changed", unit_sprite, "set_selection_color", [], CONNECT_DEFERRED)
 
 	unit_player.connect("primary_color_changed", unit_sprite, "set_primary_player_color", [], CONNECT_DEFERRED)
 	unit_player.connect("secondary_color_changed", unit_sprite, "set_secondary_player_color", [], CONNECT_DEFERRED)

@@ -126,7 +126,7 @@ func set_selected(selected, selection_color):
 		self.selection_box = Line2D.new()
 		self.selection_box.width = 1
 		self.selection_box.z_index = SELECTION_BOX_Z_INDEX
-		self.selection_box.default_color = selection_color
+		self.set_selection_color(selection_color)
 		self.selection_box.add_point(self.position + self.pixel_offset - (self.unit_type.get_box_size() / 2))
 		self.selection_box.add_point(self.position + self.pixel_offset + (Vector2(self.unit_type.get_box_width(), -self.unit_type.get_box_height()) / 2))
 		self.selection_box.add_point(self.position + self.pixel_offset + (Vector2(self.unit_type.get_box_width(), self.unit_type.get_box_height()) / 2))
@@ -137,6 +137,10 @@ func set_selected(selected, selection_color):
 		if (self.selection_box != null):
 			self.selection_box.queue_free()
 			self.selection_box = null
+
+func set_selection_color(color):
+	if (self.selection_box != null):
+		self.selection_box.default_color = color
 			
 func remove_unit():
 	if (self.selection_box != null):
