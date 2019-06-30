@@ -32,7 +32,7 @@ DefineFaction("geirrodung-clan", {
 	PrimaryColor = "red",
 	SecondaryColor = "orange",
 	DefaultAI = "passive",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-brown-skull-on-red",
 	Description = "The brutal ettin Geirrod possesses a magnificent hall in Jotunheim, where he, his kin and his followers dwell.",
 	HistoricalResources = {
 		-3000, "copper", 0,

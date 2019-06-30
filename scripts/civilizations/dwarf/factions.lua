@@ -80,7 +80,7 @@ DefineFaction("eikinskjaldi-clan", {
 	PrimaryColor = "brown",
 	SecondaryColor = "white",
 	FactionUpgrade = "upgrade-faction-eikinskjaldi-clan",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"goldhoof-clan"},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
@@ -105,7 +105,7 @@ DefineFaction("oinling-clan", {
 	PrimaryColor = "yellow",
 	SecondaryColor = "blue",
 	FactionUpgrade = "upgrade-faction-oinling-clan",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-red-hammer-on-white",
 	DevelopsFrom = {"brising-clan"},
 	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
 })
@@ -117,7 +117,7 @@ DefineFaction("shadowcharm-clan", {
 	PrimaryColor = "black",
 	SecondaryColor = "purple",
 	FactionUpgrade = "upgrade-faction-shadowcharm-clan",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"brising-clan"},
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."
 })
@@ -141,7 +141,7 @@ DefineFaction("shorbear-clan", {
 	PrimaryColor = "blue",
 	SecondaryColor = "cyan",
 	FactionUpgrade = "upgrade-faction-shorbear-clan",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"brising-clan"},
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
 	ForceTemplates = {
@@ -201,7 +201,7 @@ DefineFaction("whitesteel-clan", {
 	PrimaryColor = "white",
 	SecondaryColor = "black",
 	FactionUpgrade = "upgrade-faction-whitesteel-clan",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-red-hammer-on-white",
 	DevelopsFrom = {"brising-clan", "norlund-clan", "shorbear-clan"},
 --	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
 })
@@ -245,7 +245,7 @@ DefineFaction("kal-kartha", {
 	SecondaryColor = "blue",
 	DefaultTier = "barony",
 	FactionUpgrade = "upgrade-faction-kal-kartha",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"oinling-clan", "shadowcharm-clan", "shinsplitter-clan", "shorbear-clan", "whitesteel-clan"},
 	Titles = {
 		"monarchy", "barony", "Lordship"

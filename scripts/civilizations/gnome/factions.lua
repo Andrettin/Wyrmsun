@@ -32,7 +32,7 @@ DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 	PrimaryColor = "red",
 	SecondaryColor = "black",
 	FactionUpgrade = "upgrade-faction-acthnic-tribe",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-black-hammer-on-orange",
 	Description = "The Acthnic tribe lives deep underground, near the subterranean fires of their homelands. They're known for being dangerous and reckless, occasionally entering the territory of derros or goblins without invitation. Their sages are well-versed in the mysteries of lightning, but above all they are masters of the flame."
 })
 
@@ -42,7 +42,7 @@ DefineFaction("cubital-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 	Type = "tribe",
 	PrimaryColor = "brown",
 	SecondaryColor = "red",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-red-hammer-on-white",
 	Description = "The Cubitals are a hard-working tribe of gnomes, being known for their muscular strength and their efficiency at stonecutting. They are also talented artistically, making Cubital products highly sought after by the gnomish upper classes. When engaging in warfare, the Cubitals are known to make heavy use of explosives. The tribe's priests strive to command the forces of the earth and the air."
 })
 
@@ -54,7 +54,7 @@ DefineFaction("derro-tribe", {
 	SecondaryColor = "purple",
 	Playable = false,
 	FactionUpgrade = "upgrade-faction-derro-tribe",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-green-hammer-on-blue",
 	Description = "The Derro are a cruel gnomish offshoot, which separated themselves from the rest of their kin aeons ago. They dwell in the dark depths of Nidavellir's tunnels, in caves isolated even from other underground denizens. These gnomish fiends think themselves uniquely gifted, being at the same time wary and disdainful of other peoples. They see individuals of other races trespassing on their territory as a great crime, and will gladly put them in their place with the most sadistic of measures."
 })
 
@@ -75,7 +75,7 @@ DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1
 	Type = "tribe",
 	PrimaryColor = "yellow",
 	SecondaryColor = "red",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-red-hammer-on-white",
 	Description = "The Vulcans excel at mining and metallurgy. The tribe's sages are believed to possess power over fire and thunder."
 })
 
@@ -87,7 +87,7 @@ DefineFaction("acthna", {
 	PrimaryColor = "red",
 	SecondaryColor = "black",
 	DefaultTier = "duchy",
-	Icon = "icon-flag-white-hammer-on-red",
+	Icon = "icon-flag-black-hammer-on-orange",
 	HistoricalCapitals = {
 		-3000, "acthna"
 	}

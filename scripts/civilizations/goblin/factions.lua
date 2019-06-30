@@ -32,7 +32,7 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	PrimaryColor = "red",
 	SecondaryColor = "brown",
 	FactionUpgrade = "upgrade-faction-aelak-tribe",
-	Icon = "icon-flag-green-skull-on-violet"
+	Icon = "icon-flag-brown-skull-on-red"
 })
 
 DefineFaction("issudru-tribe", { -- invented by Jesse Crider
@@ -42,7 +42,7 @@ DefineFaction("issudru-tribe", { -- invented by Jesse Crider
 	PrimaryColor = "black",
 	SecondaryColor = "red",
 	FactionUpgrade = "upgrade-faction-issudru-tribe",
-	Icon = "icon-flag-green-skull-on-violet"
+	Icon = "icon-flag-brown-skull-on-red"
 })
 
 DefineFaction("aurvangling-tribe", {
@@ -63,7 +63,7 @@ DefineFaction("dreadskull-tribe", {
 	PrimaryColor = "black",
 	SecondaryColor = "green",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-white-skull-on-black",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
 })
 
@@ -138,7 +138,7 @@ DefineFaction("mabom-tribe", { -- invented by Jesse Crider
 	Type = "tribe",
 	PrimaryColor = "purple",
 	SecondaryColor = "white",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-brown-skull-on-red",
 	FactionUpgrade = "upgrade-faction-mabom-tribe"
 })
 
@@ -166,9 +166,9 @@ DefineFaction("wildfang-tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
 	PrimaryColor = "red",
-	SecondaryColor = "brown",
+	SecondaryColor = "yellow",
 	FactionUpgrade = "upgrade-faction-wildfang-tribe",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-brown-skull-on-red",
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
 
@@ -198,7 +198,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	DefaultGovernmentType = "republic",
 	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
 	FactionUpgrade = "upgrade-faction-driftwood",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-brown-skull-on-red",
 	DevelopsFrom = {"aelak-tribe", "aurvangling-tribe", "dreadskull-tribe", "issudru-tribe", "khag-tribe", "lggi-tribe", "mabom-tribe", "sigre-tribe"},
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
@@ -228,7 +228,7 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-myridia",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-brown-skull-on-red",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -262,7 +262,7 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 	DefaultTier = "duchy",
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-tenebris",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-white-skull-on-black",
 	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "dreadskull-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
@@ -290,6 +290,6 @@ DefineFaction("skulking-swords", {
 	PrimaryColor = "black",
 	SecondaryColor = "white",
 	DefaultTier = "duchy",
-	Icon = "icon-flag-green-skull-on-violet",
+	Icon = "icon-flag-white-skull-on-black",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."
 })
