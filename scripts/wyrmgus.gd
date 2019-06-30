@@ -1,9 +1,6 @@
 extends Wyrmgus
 
 var wyrmgus_thread
-
-var icon_textures = {} #hold references to the icon textures, to keep them loaded, mapped to the icons they pertain to
-
 var paused_game_dialog_count = 0 #the count of dialogs the presence of which pauses the game
 
 func _ready():
@@ -16,7 +13,7 @@ func _ready():
 		#if the player is hitting or being hit increment the tension to our music by one
 		self.connect("unit_hit", music_player, "add_tension", [1], CONNECT_DEFERRED)
 		
-		update_user_directory()
+		self.update_user_directory()
 		
 		self.set_oaml_module(music_player)
 		
@@ -42,14 +39,7 @@ func update_user_directory():
 		return
 	self.set_user_directory(user_directory.get_current_dir())
 
-func get_icon_texture(icon):
-	var icon_texture = self.icon_textures.get(icon)
 	
-	if (icon_texture == null):
-		var file_path = icon.get_image().get_file()
-		icon_texture = self.get_image_texture(file_path)
-	
-	return icon_texture
 	
 func get_civilization_victory_background_texture(civilization):
 	var file_path = civilization.get_victory_background_file()
