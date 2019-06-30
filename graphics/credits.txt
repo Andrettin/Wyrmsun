@@ -442,7 +442,6 @@
 /graphics/goblin/icons/embossed_shield.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/embossed_shield_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/icons/flag_blue_skull_on_light_blue.png (by Jinn) (licensed under the CC0)
-/graphics/goblin/icons/flag_green_skull_on_purple.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/flag_orange_skull_on_teal.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/flag_purple_skull_on_green.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/icons/flag_red_skull_on_yellow.png (by Jinn) (licensed under the CC0)
