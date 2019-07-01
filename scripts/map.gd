@@ -8,6 +8,7 @@ func _ready():
 	wyrmgus.connect("unit_placed", self, "create_unit_sprite")
 	wyrmgus.connect("map_layer_created", self, "create_map_layer", [], CONNECT_DEFERRED)
 	wyrmgus.connect("current_map_layer_changed", self, "change_current_map_layer", [], CONNECT_DEFERRED)
+	wyrmgus.connect("map_loaded", self, "initialize_map", [], CONNECT_DEFERRED)
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -88,6 +89,7 @@ func create_map_layer(map_layer):
 	
 	var map_layer_scene = preload("res://scenes/map_layer.tscn").instance()
 	map_layer_scene.visible = false
+	map_layer_scene.map_layer = map_layer
 	self.add_child(map_layer_scene)
 	map_layers.push_back(map_layer_scene)
 
@@ -96,3 +98,27 @@ func change_current_map_layer(old_map_layer, new_map_layer):
 		map_layers[old_map_layer.get_index()].visible = false
 	if (new_map_layer != null):
 		map_layers[new_map_layer.get_index()].visible = true
+
+func initialize_map():
+	for map_layer_scene in map_layers:
+		var tilemap = TileMap.new()
+		map_layer_scene.add_child(tilemap)
+		tilemap.position = Vector2(0, 0)
+		tilemap.set_tileset(wyrmgus.tileset)
+		tilemap.set_cell_size(wyrmgus.get_pixel_tile_size())
+		tilemap.set_z_index(0)
+		var overlay_tilemap = TileMap.new()
+		map_layer_scene.add_child(overlay_tilemap)
+		overlay_tilemap.position = Vector2(0, 0)
+		overlay_tilemap.set_tileset(wyrmgus.tileset)
+		overlay_tilemap.set_cell_size(wyrmgus.get_pixel_tile_size())
+		overlay_tilemap.set_z_index(1)
+		var map_layer = map_layer_scene.map_layer
+		for x in range(0, map_layer.get_width() - 1):
+			for y in range(0, map_layer.get_height() - 1):
+				var tile_pos = Vector2(x, y)
+				var terrain_type = map_layer.get_tile_terrain_type(tile_pos, false)
+				tilemap.set_cellv(tile_pos, terrain_type.get_index())
+				var overlay_terrain_type = map_layer.get_tile_terrain_type(tile_pos, true)
+				if (overlay_terrain_type != null):
+					overlay_tilemap.set_cellv(tile_pos, overlay_terrain_type.get_index())

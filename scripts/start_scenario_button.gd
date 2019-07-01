@@ -4,6 +4,8 @@ func _ready():
 	self.connect("pressed", self, "start_scenario")
 
 func start_scenario():
+	get_tree().change_scene("res://scenes/scenario.tscn")
+	
 	var command = "RunningScenario = true"
 	command += "\nGetMapInfo(\"scripts/map_templates/campaign.smp\")"
 	command += "\nGameSettings.NoRandomness = wyr.preferences.NoRandomness"
@@ -12,5 +14,3 @@ func start_scenario():
 	command += "\nRunMap(\"scripts/map_templates/campaign.smp\")"
 	
 	wyrmgus.lua_command(command)
-	
-	get_tree().change_scene("res://scenes/scenario.tscn")

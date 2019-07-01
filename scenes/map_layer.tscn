@@ -1,3 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/map_layer.gd" type="Script" id=1]
 
 [node name="map_layer" type="YSort"]
+script = ExtResource( 1 )

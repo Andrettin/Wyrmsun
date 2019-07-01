@@ -2,12 +2,14 @@ extends Wyrmgus
 
 var wyrmgus_thread
 var paused_game_dialog_count = 0 #the count of dialogs the presence of which pauses the game
+var tileset
 
 func _ready():
 	if (self.wyrmgus_thread == null):
 		#replace the default pointing hand cursor with the Wyrmsun magnifying glass cursor
 		Input.set_custom_mouse_cursor(load("res://graphics/ui/cursors/magnifying_glass.png"), Input.CURSOR_POINTING_HAND, Vector2(11, 11))
 		
+		self.connect("initialized", self, "initialize_tileset", [], CONNECT_DEFERRED)
 		self.connect("time_of_day_changed", music_player, "time_of_day_changed", [], CONNECT_DEFERRED)
 		
 		#if the player is hitting or being hit increment the tension to our music by one
@@ -39,7 +41,19 @@ func update_user_directory():
 		return
 	self.set_user_directory(user_directory.get_current_dir())
 
+func initialize_tileset():
+	self.tileset = TileSet.new()
 	
+	for terrain_type in self.get_terrain_types():
+		var index = terrain_type.get_index()
+		self.tileset.create_tile(index)
+		self.tileset.tile_set_name(index, terrain_type.get_ident())
+		self.tileset.tile_set_texture(index, terrain_type.get_image().get_texture())
+		self.tileset.tile_set_tile_mode(index, TileSet.AUTO_TILE)
+		self.tileset.autotile_set_size(index, wyrmgus.get_pixel_tile_size())
+		self.tileset.autotile_set_bitmask_mode(index, TileSet.BITMASK_3X3)
+		var solid_tiles = terrain_type.get_solid_tile_positions()
+		self.tileset.autotile_set_icon_coordinate(index, solid_tiles[0])
 	
 func get_civilization_victory_background_texture(civilization):
 	var file_path = civilization.get_victory_background_file()
