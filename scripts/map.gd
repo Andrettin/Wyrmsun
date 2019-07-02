@@ -103,12 +103,14 @@ func initialize_map():
 	for map_layer_scene in map_layers:
 		var tilemap = TileMap.new()
 		map_layer_scene.add_child(tilemap)
+		map_layer_scene.tile_maps.push_back(tilemap)
 		tilemap.position = Vector2(0, 0)
 		tilemap.set_tileset(wyrmgus.tileset)
 		tilemap.set_cell_size(wyrmgus.get_pixel_tile_size())
 		tilemap.set_z_index(0)
 		var overlay_tilemap = TileMap.new()
 		map_layer_scene.add_child(overlay_tilemap)
+		map_layer_scene.tile_maps.push_back(overlay_tilemap)
 		overlay_tilemap.position = Vector2(0, 0)
 		overlay_tilemap.set_tileset(wyrmgus.tileset)
 		overlay_tilemap.set_cell_size(wyrmgus.get_pixel_tile_size())
@@ -122,3 +124,5 @@ func initialize_map():
 				var overlay_terrain_type = map_layer.get_tile_terrain_type(tile_pos, true)
 				if (overlay_terrain_type != null):
 					overlay_tilemap.set_cellv(tile_pos, overlay_terrain_type.get_index())
+		tilemap.update_bitmask_region()
+		overlay_tilemap.update_bitmask_region()

@@ -50,11 +50,16 @@ func initialize_tileset():
 		self.tileset.tile_set_name(index, terrain_type.get_ident())
 		self.tileset.tile_set_texture(index, terrain_type.get_image().get_texture())
 		self.tileset.tile_set_tile_mode(index, TileSet.AUTO_TILE)
+		self.tileset.tile_set_region(index, Rect2(Vector2(0, 0), terrain_type.get_image().get_texture().get_size()))
 		self.tileset.autotile_set_size(index, wyrmgus.get_pixel_tile_size())
-		self.tileset.autotile_set_bitmask_mode(index, TileSet.BITMASK_3X3)
+		self.tileset.autotile_set_bitmask_mode(index, TileSet.BITMASK_3X3_MINIMAL)
 		var solid_tiles = terrain_type.get_solid_tile_positions()
 		self.tileset.autotile_set_icon_coordinate(index, solid_tiles[0])
-	
+		var tile_bitmasks = terrain_type.get_tile_bitmasks()
+		for tile_position in tile_bitmasks.keys():
+			self.tileset.autotile_set_bitmask(index, tile_position, tile_bitmasks[tile_position])
+			
+
 func get_civilization_victory_background_texture(civilization):
 	var file_path = civilization.get_victory_background_file()
 	file_path = file_path.replace(".png", "_sepia.png") #use the sepia version for better text visibility
