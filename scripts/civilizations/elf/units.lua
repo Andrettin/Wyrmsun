@@ -51,8 +51,8 @@ DefineUnitType("unit-elven-swordsman", {
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	ButtonKey = "s",
-	ButtonHint = "Train ~!Swordsman",
+	ButtonKey = "w",
+	ButtonHint = "Train S~!wordsman",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-germanic-voices-selected-group",

@@ -195,7 +195,8 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
 	{"apply-to", "unit-norse-market"},
 	{"apply-to", "unit-norse-temple"},
-	{"apply-to", "unit-elven-town-hall"}
+	{"apply-to", "unit-elven-town-hall"},
+	{"apply-to", "unit-elven-barracks"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",
