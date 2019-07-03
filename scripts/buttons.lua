@@ -1248,38 +1248,6 @@ DefineButton( { Pos = 10, Icon = "icon-stone",
 
 -- Researches ---------------------------------------------------------
 
-DefineButton( { Pos = 9, Icon = "icon-shield-wall",
-	Action = "research", Value = "upgrade-shield-wall",
-	Allowed = "check-single-research",
-	Description = "+2 Armor for infantry. Incompatible with Svinfylking.",
-	Key = "h", Hint = "Develop S~!hield Wall", Popup = "popup-research",
-	ForUnit = {
-		"unit-latin-barracks",
-		"unit-germanic-barracks",
-		"unit-norse-barracks",
-		"unit-teuton-barracks",
-		"unit-dwarven-barracks",
-		"unit-gnomish-barracks",
-		"unit-goblin-mess-hall"
-	}
-} )
-
-DefineButton( { Pos = 10, Icon = "icon-svinfylking",
-	Action = "research", Value = "upgrade-svinfylking",
-	Allowed = "check-single-research",
-	Description = "+2 Damage for infantry. Incompatible with Shield Wall.",
-	Key = "f", Hint = "Develop Svin~!fylking", Popup = "popup-research",
-	ForUnit = {
-		"unit-latin-barracks",
-		"unit-germanic-barracks",
-		"unit-norse-barracks",
-		"unit-teuton-barracks",
-		"unit-dwarven-barracks",
-		"unit-gnomish-barracks",
-		"unit-goblin-mess-hall"
-	}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-wood-plow",
 	Allowed = "check-single-research",
