@@ -32,7 +32,6 @@ Units = {
 	"upgrade-ironworking",
 	"upgrade-mathematics", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
-	"upgrade-elven-civilization",
 	"upgrade-latin-civilization",
 	"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion",
 	"unit-latin-javelineer",
