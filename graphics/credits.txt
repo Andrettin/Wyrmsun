@@ -17,6 +17,8 @@
 /graphics/backgrounds/yale.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/backgrounds/yale_profile.png (drawing by Tanja Nov) (licensed under the CC0)
 /graphics/buildings/elven/barracks.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/buildings/elven/farm.png (by Kwaliti and Exidelo) (licensed under the CC0)
+/graphics/buildings/elven/farm_snow.png (by Kwaliti and Exidelo) (licensed under the CC0)
 /graphics/celt/buildings/farm.png (by Jinn) (licensed under the CC0)
 /graphics/cursors/dwarven/dwarven_gauntlet.png (by Jinn) (licensed under the CC0)
 /graphics/cursors/dwarven/dwarven_gauntlet_extra_1.png (by Jinn) (licensed under the CC0)
