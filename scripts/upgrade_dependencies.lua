@@ -42,10 +42,6 @@ DefineDependency("unit-railroad",
 	{"upgrade-engineering"}
 )
 
-DefineDependency("unit-minecart",
-	{"upgrade-engineering"}
-)
-
 -- dependencies for neutral upgrades
 DefineDependency("upgrade-iron-tipped-wood-plow",
 	{"upgrade-wood-plow", "upgrade-ironworking", "unit-brising-smithy"},
