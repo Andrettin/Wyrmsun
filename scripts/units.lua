@@ -29,9 +29,8 @@ UnitTypeFiles = {}
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
-	"upgrade-wood-plow", "upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
 	"upgrade-ironworking",
-	"upgrade-mathematics", "upgrade-engineering", "upgrade-gunpowder",
+	"upgrade-mathematics", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
 	"upgrade-elven-civilization",
 	"upgrade-latin-civilization",
