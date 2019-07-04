@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-work-aecer-bot", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 172-175.
-	Name = "Land-Remedy", -- "Æcer-Bōt"
-	Work = "scroll",
-	Quote = "\"All hail, Earth, mother of men!\nBe fruitful in God's embracing arm,\nFilled with food for the needs of men.\""
-})
-
 DefineUpgrade("upgrade-work-be-galdorstafum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 202-203.
 	Name = "Concerning Magic Writings", -- "Be Galdorstafum"
 	Work = "scroll"
@@ -40,12 +34,6 @@ DefineUpgrade("upgrade-work-blodseten", { -- Source: Felix Grendon, "The Anglo-S
 	Name = "For Stanching Blood", -- "Blōdseten"
 	Work = "scroll",
 --	Quote = "\"For stanching blood in horse or man.\""
-})
-
-DefineUpgrade("upgrade-work-feld-bot", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 204-205.
-	Name = "A Field Remedy", -- "Feld-Bōt"
-	Work = "scroll",
-	Quote = "\"Cont apes ut salui sint and in corda eorum.\""
 })
 
 DefineUpgrade("upgrade-work-gagates-craeftas", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
@@ -391,19 +379,11 @@ DefineUpgrade("upgrade-work-with-tha-stithestan-feferas", { -- Source: Felix Gre
 	Work = "scroll"
 })
 
-DefineModifier("upgrade-work-aecer-bot",
-	{"KnowledgeMagic", 1}
-)
-
 DefineModifier("upgrade-work-be-galdorstafum",
 	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-blodseten",
-	{"KnowledgeMagic", 1}
-)
-
-DefineModifier("upgrade-work-feld-bot",
 	{"KnowledgeMagic", 1}
 )
 
@@ -645,19 +625,6 @@ DefineModifier("upgrade-work-with-tha-stithestan-feferas",
 
 -- the Anglo-Saxon charms should be available for any Germanic civilization (since we lack literary works for the others) or for fictional civilizations as appropriate; since these are charms, they should all require temples
 
-DefineDependency("upgrade-work-aecer-bot",
-	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-english-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-teuton-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple", "unit-dwarven-mushroom-farm"},
-	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple", "unit-gnomish-farm"},
-	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit-goblin-farm"},
-	"or", {"upgrade-kobold-civilization", "unit-goblin-temple", "unit-goblin-farm"}
-)
-
 DefineDependency("upgrade-work-be-galdorstafum",
 	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-english-civilization", "unit-teuton-temple"},
@@ -666,6 +633,7 @@ DefineDependency("upgrade-work-be-galdorstafum",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -679,22 +647,10 @@ DefineDependency("upgrade-work-blodseten",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
-)
-
-DefineDependency("upgrade-work-feld-bot",
-	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-english-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-teuton-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple", "unit-dwarven-mushroom-farm"},
-	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple", "unit-gnomish-farm"},
-	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit-goblin-farm"},
-	"or", {"upgrade-kobold-civilization", "unit-goblin-temple", "unit-goblin-farm"}
 )
 
 DefineDependency("upgrade-work-gagates-craeftas",
@@ -705,6 +661,7 @@ DefineDependency("upgrade-work-gagates-craeftas",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -718,6 +675,7 @@ DefineDependency("upgrade-work-nigon-wyrta-galdor",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -781,6 +739,7 @@ DefineDependency("upgrade-work-wid-aswollenum-eagum",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -794,6 +753,7 @@ DefineDependency("upgrade-work-wid-blaece",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -807,6 +767,7 @@ DefineDependency("upgrade-work-wid-blodrene-of-nosu",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -838,6 +799,7 @@ DefineDependency("upgrade-work-wid-corn",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -851,6 +813,7 @@ DefineDependency("upgrade-work-wid-cyrnel",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -864,6 +827,7 @@ DefineDependency("upgrade-work-wid-cyrnla",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -877,6 +841,7 @@ DefineDependency("upgrade-work-wid-da-blacan-blegene",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -935,6 +900,7 @@ DefineDependency("upgrade-work-wid-faerstice",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -984,6 +950,7 @@ DefineDependency("upgrade-work-wid-fleogendum-attre",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -997,6 +964,7 @@ DefineDependency("upgrade-work-wid-heafodece",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1028,6 +996,7 @@ DefineDependency("upgrade-work-wid-huntan-bite", -- mentions spiders, but fictio
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1041,6 +1010,7 @@ DefineDependency("upgrade-work-wid-laetbyrde",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1063,6 +1033,7 @@ DefineDependency("upgrade-work-wid-lenctenadle-2",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1076,6 +1047,7 @@ DefineDependency("upgrade-work-wid-leodrunan",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1098,6 +1070,7 @@ DefineDependency("upgrade-work-wid-maran",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1111,6 +1084,7 @@ DefineDependency("upgrade-work-wid-miclum-gonge",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1124,6 +1098,7 @@ DefineDependency("upgrade-work-wid-monadseocnesse",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1155,6 +1130,7 @@ DefineDependency("upgrade-work-wid-onfealle",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1177,6 +1153,7 @@ DefineDependency("upgrade-work-wid-theofende",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1190,6 +1167,7 @@ DefineDependency("upgrade-work-wid-theofentum",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1203,6 +1181,7 @@ DefineDependency("upgrade-work-wid-todece",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1225,6 +1204,7 @@ DefineDependency("upgrade-work-wid-utsiht",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1238,6 +1218,7 @@ DefineDependency("upgrade-work-wid-utsihte",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1269,6 +1250,7 @@ DefineDependency("upgrade-work-wid-wennum",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1282,6 +1264,7 @@ DefineDependency("upgrade-work-wid-wennum-2",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1295,6 +1278,7 @@ DefineDependency("upgrade-work-wid-wifgemaedlan",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1317,6 +1301,7 @@ DefineDependency("upgrade-work-wid-wyrt-forbore",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
@@ -1348,6 +1333,7 @@ DefineDependency("upgrade-work-with-tha-stithestan-feferas",
 	"or", {"upgrade-teuton-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple"},
+	"or", {"upgrade-elven-civilization", "unit-teuton-temple"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple"},
 	"or", {"upgrade-goblin-civilization", "unit-goblin-temple"},
 	"or", {"upgrade-kobold-civilization", "unit-goblin-temple"}
