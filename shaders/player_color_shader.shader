@@ -68,7 +68,7 @@ uniform vec4 target_hair_color_11 : hint_color;
 uniform vec4 target_hair_color_12 : hint_color;
 uniform vec4 target_hair_color_13 : hint_color;
 
-vec3 convert_rgb(vec3 rgb)
+vec3 get_modified_rgb(vec3 rgb)
 {
 	// if there are valid source primary player colors
 	if (source_primary_player_color_1.rgb != vec3(0, 0, 0)) {
@@ -153,7 +153,7 @@ vec3 convert_rgb(vec3 rgb)
 void fragment()
 {
 	vec4 color = texture(TEXTURE, UV);
-	color.rgb = convert_rgb(color.rgb);
+	color.rgb = get_modified_rgb(color.rgb);
 	
 	COLOR = color;
 }
