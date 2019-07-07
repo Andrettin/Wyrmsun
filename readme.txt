@@ -86,6 +86,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Bows now have specific graphics for when they are on the ground.
 
+* Miscellaneous
+- Added new Burgundy and Yellow player colors (the old yellow player color has been renamed to "Lime").
+
 * Quests
 - The quest icon has been updated.
 - Players can now have up to four quests at the same time, instead of three.
