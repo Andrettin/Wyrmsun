@@ -26,6 +26,12 @@ music_player="*res://scenes/music_player.tscn"
 wyrmgus="*res://scripts/wyrmgus.gd"
 encyclopedia="*res://scripts/encyclopedia.gd"
 
+[debug]
+
+gdscript/warnings/unused_class_variable=false
+gdscript/warnings/unused_argument=false
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 mouse_cursor/custom_image="res://graphics/cursors/dwarven/dwarven_gauntlet.png"
