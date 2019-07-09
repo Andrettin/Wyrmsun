@@ -46,6 +46,7 @@ func update_time_of_day(old_time_of_day, new_time_of_day):
 	if (new_time_of_day != null):
 		time_of_day_icon_node.visible = true
 		time_of_day_icon_node.texture = new_time_of_day.get_image().get_texture()
+		time_of_day_icon_node.hint_tooltip = new_time_of_day.get_name()
 	else:
 		time_of_day_icon_node.visible = false
 		
@@ -54,6 +55,7 @@ func update_season(old_season, new_season):
 	if (new_season != null):
 		season_icon_node.visible = true
 		season_icon_node.texture = new_season.get_image().get_texture()
+		season_icon_node.hint_tooltip = new_season.get_name()
 	else:
 		season_icon_node.visible = false
 		
