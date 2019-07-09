@@ -4,6 +4,9 @@ func _ready():
 	wyrmgus.connect("interface_changed", self, "update_interface_graphics", [], CONNECT_DEFERRED)
 	wyrmgus.connect("dialogue_called", self, "show_dialogue_panel", [], CONNECT_DEFERRED)
 	wyrmgus.connect("resource_stored_changed", self, "update_resource_count", [], CONNECT_DEFERRED)
+	wyrmgus.connect("time_of_day_changed", self, "update_time_of_day", [], CONNECT_DEFERRED)
+	wyrmgus.connect("season_changed", self, "update_season", [], CONNECT_DEFERRED)
+	wyrmgus.connect("age_changed", self, "update_age", [], CONNECT_DEFERRED)
 	
 func update_interface_graphics(old_interface, new_interface):
 	var interface_graphics_folder = "res://graphics/interface/" + new_interface + "/"
@@ -37,3 +40,31 @@ func update_resource_count(resource, amount):
 		amount_suffix = "k"
 	
 	resource_count_label.bbcode_text = str(amount) + amount_suffix
+	
+func update_time_of_day(old_time_of_day, new_time_of_day):
+	var time_of_day_icon_node = self.find_node("time_of_day_icon")
+	if (new_time_of_day != null):
+		time_of_day_icon_node.visible = true
+		time_of_day_icon_node.texture = new_time_of_day.get_image().get_texture()
+	else:
+		time_of_day_icon_node.visible = false
+		
+func update_season(old_season, new_season):
+	var season_icon_node = self.find_node("season_icon")
+	if (new_season != null):
+		season_icon_node.visible = true
+		season_icon_node.texture = new_season.get_image().get_texture()
+	else:
+		season_icon_node.visible = false
+		
+func update_age(old_age, new_age):
+	var age_icon_node = self.find_node("age_icon")
+	var age_label_node = self.find_node("age_label")
+	if (new_age != null):
+		age_icon_node.visible = true
+		age_label_node.visible = true
+		age_icon_node.texture = new_age.get_image().get_texture()
+		age_label_node.bbcode_text = new_age.get_name()
+	else:
+		age_icon_node.visible = false
+		age_label_node.visible = false

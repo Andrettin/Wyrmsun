@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/scenario_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map.tscn" type="PackedScene" id=2]
@@ -8,9 +8,11 @@
 [ext_resource path="res://fonts/berenika_14.tres" type="DynamicFont" id=6]
 [ext_resource path="res://graphics/ui/resources/lumber.png" type="Texture" id=7]
 [ext_resource path="res://graphics/ui/resources/stone.png" type="Texture" id=8]
-[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=9]
-[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=10]
-[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=11]
+[ext_resource path="res://graphics/ui/resources/morning.png" type="Texture" id=9]
+[ext_resource path="res://graphics/ui/resources/spring.png" type="Texture" id=10]
+[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=11]
+[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=12]
+[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=13]
 
 [node name="scenario" type="Control"]
 anchor_right = 1.0
@@ -36,9 +38,9 @@ texture = ExtResource( 4 )
 
 [node name="copper_count" parent="canvas_layer/top_bar" instance=ExtResource( 5 )]
 margin_left = 172.0
-margin_top = -1.0
+margin_top = -2.0
 margin_right = 229.0
-margin_bottom = 15.0
+margin_bottom = 14.0
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_text = "0"
 text = "0"
@@ -51,9 +53,9 @@ texture = ExtResource( 7 )
 
 [node name="lumber_count" parent="canvas_layer/top_bar" instance=ExtResource( 5 )]
 margin_left = 247.0
-margin_top = -1.0
+margin_top = -2.0
 margin_right = 304.0
-margin_bottom = 15.0
+margin_bottom = 14.0
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_text = "0"
 text = "0"
@@ -66,12 +68,39 @@ texture = ExtResource( 8 )
 
 [node name="stone_count" parent="canvas_layer/top_bar" instance=ExtResource( 5 )]
 margin_left = 322.0
-margin_top = -1.0
+margin_top = -2.0
 margin_right = 379.0
-margin_bottom = 15.0
+margin_bottom = 14.0
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_text = "0"
 text = "0"
+
+[node name="time_of_day_icon" type="TextureRect" parent="canvas_layer/top_bar"]
+margin_left = 454.0
+margin_right = 468.0
+margin_bottom = 14.0
+texture = ExtResource( 9 )
+
+[node name="season_icon" type="TextureRect" parent="canvas_layer/top_bar"]
+margin_left = 472.0
+margin_right = 486.0
+margin_bottom = 14.0
+texture = ExtResource( 10 )
+
+[node name="age_icon" type="TextureRect" parent="canvas_layer/top_bar"]
+margin_left = 529.0
+margin_right = 543.0
+margin_bottom = 14.0
+texture = ExtResource( 4 )
+
+[node name="age_label" parent="canvas_layer/top_bar" instance=ExtResource( 5 )]
+margin_left = 547.0
+margin_top = -2.0
+margin_right = 847.0
+margin_bottom = 16.0
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_text = "0"
+text = "Bronze Age"
 
 [node name="bottom_bar" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
@@ -79,14 +108,14 @@ anchor_bottom = 1.0
 margin_left = 380.0
 margin_top = -181.0
 margin_right = 2068.0
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 
 [node name="info_panel" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -200.0
 margin_right = 391.0
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 
 [node name="button_panel" type="TextureRect" parent="canvas_layer"]
 anchor_left = 1.0
@@ -95,4 +124,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -256.0
 margin_top = -200.0
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
