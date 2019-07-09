@@ -3,6 +3,7 @@ extends Control
 func _ready():
 	wyrmgus.connect("interface_changed", self, "update_interface_graphics", [], CONNECT_DEFERRED)
 	wyrmgus.connect("dialogue_called", self, "show_dialogue_panel", [], CONNECT_DEFERRED)
+	wyrmgus.connect("resource_stored_changed", self, "update_resource_count", [], CONNECT_DEFERRED)
 	
 func update_interface_graphics(old_interface, new_interface):
 	var interface_graphics_folder = "res://graphics/interface/" + new_interface + "/"
@@ -17,3 +18,22 @@ func show_dialogue_panel(dialogue):
 	self.find_node("canvas_layer").add_child(dialogue_panel)
 	dialogue_panel.set_dialogue(dialogue)
 	dialogue_panel.popup()
+	
+func update_resource_count(resource, amount):
+	var resource_count_label = null
+	if (resource.get_ident() == "copper"):
+		resource_count_label = self.find_node("copper_count")
+	elif (resource.get_ident() == "lumber"):
+		resource_count_label = self.find_node("lumber_count")
+	elif (resource.get_ident() == "stone"):
+		resource_count_label = self.find_node("stone_count")
+		
+	if (resource_count_label == null):
+		return
+		
+	var amount_suffix = ""
+	if (amount >= 100000):
+		amount /= 1000
+		amount_suffix = "k"
+	
+	resource_count_label.bbcode_text = str(amount) + amount_suffix
