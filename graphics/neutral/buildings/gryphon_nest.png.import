@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/gryphon_nest.png-2d7b42e6c7cca2e74b2c77f791bed475.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://graphics/neutral/buildings/gryphon_nest.png"
+dest_files=[ "res://.import/gryphon_nest.png-2d7b42e6c7cca2e74b2c77f791bed475.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
