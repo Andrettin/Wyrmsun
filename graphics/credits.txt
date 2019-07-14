@@ -1302,6 +1302,7 @@
 /graphics/orc/icons/shaman.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/spearthrower.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/warrior.png (by Jinn) (licensed under the CC0)
+/graphics/orc/units/sea_orc.png (by Gregor-Mack) (licensed under the CC0)
 /graphics/orc/units/spearthrower.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/russian/icons/warrior_varangian_era.png (by Jinn) (licensed under the CC0)
 /graphics/russian/units/warrior_varangian_era.png (by Gregor-Mack and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
