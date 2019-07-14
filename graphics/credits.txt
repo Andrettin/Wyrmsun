@@ -1023,6 +1023,7 @@
 /graphics/neutral/icons/christmas_hat.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/clothing.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/club.png (by Jinn) (licensed under the CC0)
+/graphics/neutral/icons/coal.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/compass.png (by Exidelo) (licensed under the CC0)
 /graphics/neutral/icons/critical_strike.png (by Jinn) (licensed under the CC0)
 /graphics/neutral/icons/crown.png (by Exidelo) (licensed under the CC0)
