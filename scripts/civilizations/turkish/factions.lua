@@ -41,11 +41,3 @@ DefineFaction("crimea", {
 		"head-of-state", "female", "monarchy", "kingdom", "Khan"
 	}
 })
-
-DefineFaction("turkey", {
-	Name = "Turkey",
-	Civilization = "turkish",
-	Type = "polity",
-	PrimaryColor = "brown",
-	DefaultTier = "empire"
-})
