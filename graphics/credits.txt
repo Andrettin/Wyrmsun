@@ -543,6 +543,7 @@
 /graphics/icons/units/goblin/spider_rider.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/goblin/spider_rider_extra_1.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/teutonic/crossbowman.png (by Exidelo) (licensed under the CC0)
+/graphics/icons/units/teutonic/peasant.png (by Exidelo) (licensed under the CC0)
 /graphics/interface/default/button-large-grayed.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button-large-normal.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button-large-pressed.png (by Jinn) (licensed under the CC0)
