@@ -429,6 +429,7 @@
 /graphics/goblin/buildings/mess_hall_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/buildings/smithy.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/buildings/smithy_shadow.png (by Jinn) (licensed under the CC0)
+/graphics/goblin/buildings/spider_pit.png (by Exidelo) (licensed under the CC0)
 /graphics/goblin/buildings/stronghold.png (modified from Exidelo's Goblin Town Hall) (licensed under the CC0)
 /graphics/goblin/buildings/stronghold_shadow.png (by Jinn) (licensed under the CC0)
 /graphics/goblin/buildings/temple.png (by Jinn) (licensed under the CC0)
