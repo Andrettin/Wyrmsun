@@ -34,6 +34,7 @@ gdscript/warnings/return_value_discarded=false
 
 [display]
 
+window/size/width=1066
 mouse_cursor/custom_image="res://graphics/cursors/dwarven/dwarven_gauntlet.png"
 mouse_cursor/custom_image_hotspot=Vector2( 2, 0 )
 mouse_cursor/tooltip_position_offset=Vector2( 32, 34 )

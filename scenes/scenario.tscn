@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/scenario_screen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/map.tscn" type="PackedScene" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://graphics/ui/resources/stone.png" type="Texture" id=8]
 [ext_resource path="res://graphics/ui/resources/morning.png" type="Texture" id=9]
 [ext_resource path="res://graphics/ui/resources/spring.png" type="Texture" id=10]
-[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=11]
-[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=12]
-[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=13]
+[ext_resource path="res://graphics/ui/resources/food.png" type="Texture" id=11]
+[ext_resource path="res://graphics/interface/dwarven/filler_bottom.png" type="Texture" id=12]
+[ext_resource path="res://graphics/interface/dwarven/infopanel.png" type="Texture" id=13]
+[ext_resource path="res://graphics/interface/dwarven/buttonpanel.png" type="Texture" id=14]
 
 [node name="scenario" type="Control"]
 anchor_right = 1.0
@@ -25,7 +26,6 @@ position = Vector2( 0, 16 )
 [node name="canvas_layer" type="CanvasLayer" parent="."]
 
 [node name="top_bar" type="TextureRect" parent="canvas_layer"]
-margin_right = 2694.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
 stretch_mode = 3
@@ -100,7 +100,24 @@ margin_right = 847.0
 margin_bottom = 16.0
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_text = "0"
-text = "Bronze Age"
+text = "0"
+
+[node name="food_icon" type="TextureRect" parent="canvas_layer/top_bar"]
+margin_left = 803.0
+margin_right = 817.0
+margin_bottom = 14.0
+hint_tooltip = "Food"
+texture = ExtResource( 11 )
+
+[node name="food_label" parent="canvas_layer/top_bar" instance=ExtResource( 5 )]
+margin_left = 821.0
+margin_top = -2.0
+margin_right = 873.0
+margin_bottom = 16.0
+hint_tooltip = "Food"
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_text = "0"
+text = "0"
 
 [node name="bottom_bar" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
@@ -108,14 +125,14 @@ anchor_bottom = 1.0
 margin_left = 380.0
 margin_top = -181.0
 margin_right = 2068.0
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="info_panel" type="TextureRect" parent="canvas_layer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -200.0
 margin_right = 391.0
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="button_panel" type="TextureRect" parent="canvas_layer"]
 anchor_left = 1.0
@@ -124,4 +141,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -256.0
 margin_top = -200.0
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )

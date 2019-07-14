@@ -1,5 +1,8 @@
 extends Control
 
+var supply = 0
+var demand = 0
+
 func _ready():
 	wyrmgus.connect("interface_changed", self, "update_interface_graphics", [], CONNECT_DEFERRED)
 	wyrmgus.connect("dialogue_called", self, "show_dialogue_panel", [], CONNECT_DEFERRED)
@@ -7,6 +10,8 @@ func _ready():
 	wyrmgus.connect("time_of_day_changed", self, "update_time_of_day", [], CONNECT_DEFERRED)
 	wyrmgus.connect("season_changed", self, "update_season", [], CONNECT_DEFERRED)
 	wyrmgus.connect("age_changed", self, "update_age", [], CONNECT_DEFERRED)
+	wyrmgus.connect("supply_changed", self, "update_supply", [], CONNECT_DEFERRED)
+	wyrmgus.connect("demand_changed", self, "update_demand", [], CONNECT_DEFERRED)
 	
 func update_interface_graphics(old_interface, new_interface):
 	var interface_graphics_folder = "res://graphics/interface/" + new_interface + "/"
@@ -70,3 +75,15 @@ func update_age(old_age, new_age):
 	else:
 		age_icon_node.visible = false
 		age_label_node.visible = false
+
+func update_supply(new_supply):
+	self.supply = new_supply
+	self.update_food_label()
+
+func update_demand(new_demand):
+	self.demand = new_demand
+	self.update_food_label()
+
+func update_food_label():
+	var food_label = self.find_node("food_label")
+	food_label.bbcode_text = str(self.demand) + "/" + str(self.supply)
