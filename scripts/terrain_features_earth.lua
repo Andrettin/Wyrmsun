@@ -192,11 +192,7 @@ DefineTerrainFeature("gulf-of-bothnia", { -- Source: "Limits of Oceans and Seas"
 	Name = "Gulf of Bothnia",
 	TerrainType = "shallow-water",
 	World = "earth",
-	Color = {16, 144, 144},
-	CulturalNames = {
-		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
+	Color = {16, 144, 144}
 })
 
 DefineTerrainFeature("irish-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
