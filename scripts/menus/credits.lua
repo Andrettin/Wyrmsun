@@ -26,7 +26,7 @@
 --
 
 function RunShowCreditsMenu()
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 

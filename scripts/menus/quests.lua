@@ -331,7 +331,7 @@ function Briefing(quest)
 		SetPlayerData(GetThisPlayer(), "RaceName", GetQuestData(quest, "Civilization"))
 	end
 
-	local briefing_background = GetBackground("ui/backgrounds/wyrm.png")
+	local briefing_background = GetBackground("backgrounds/wyrm.png")
 	if (GetQuestData(quest, "BriefingBackground") ~= "") then
 		briefing_background = GetBackground(GetQuestData(quest, "BriefingBackground"))
 	end

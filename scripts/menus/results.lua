@@ -7,36 +7,36 @@ function RunResultsMenu()
 	if (GameResult == GameVictory) then
 		result = "Victory!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = GetBackground("ui/backgrounds/yale.png")
+			background = GetBackground("backgrounds/yale.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			background = GetBackground("ui/backgrounds/yale.png")
+			background = GetBackground("backgrounds/yale.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		else
-			background = GetBackground("ui/backgrounds/gryphon.png")
+			background = GetBackground("backgrounds/gryphon.png")
 		end
 		PlayMusicByGroupAndFactionRandom("win", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 	elseif (GameResult == GameDefeat) then
 		result = "Defeat!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			background = GetBackground("ui/backgrounds/yale.png")
+			background = GetBackground("backgrounds/yale.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-			background = GetBackground("ui/backgrounds/yale.png")
+			background = GetBackground("backgrounds/yale.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		else
-			background = GetBackground("ui/backgrounds/wyrm.png")
+			background = GetBackground("backgrounds/wyrm.png")
 		end
 		PlayMusicByGroupAndFactionRandom("lose", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 	elseif (GameResult == GameDraw) then
 		result = "Draw!"
-		background = GetBackground("ui/backgrounds/gullinburst.png")
+		background = GetBackground("backgrounds/gullinburst.png")
 	else
 		return -- quit to menu
 	end

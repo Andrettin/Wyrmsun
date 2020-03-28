@@ -42,7 +42,7 @@ function RunEncyclopediaMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -113,7 +113,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -262,7 +262,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1043,7 +1043,7 @@ function RunEncyclopediaTextsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1075,7 +1075,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1367,7 +1367,7 @@ function RunEncyclopediaPlanesMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1424,7 +1424,7 @@ function OpenEncyclopediaPlaneEntry(plane)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1540,7 +1540,7 @@ function RunEncyclopediaWorldsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1597,7 +1597,7 @@ function OpenEncyclopediaWorldEntry(world)
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1716,7 +1716,7 @@ function RunEncyclopediaGameConceptsMenu()
 	
 	local game_concepts = GameConcepts
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1770,7 +1770,7 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 
 	local game_concepts = GameConcepts
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
@@ -1800,7 +1800,7 @@ function RunEncyclopediaCivilizationsMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1916,7 +1916,7 @@ function RunEncyclopediaFactionsCivilizationMenu()
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -1981,7 +1981,7 @@ function RunEncyclopediaFactionsMenu(civilization)
 		end
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
@@ -2076,42 +2076,42 @@ end
 
 function GetCivilizationBackground(civilization)
 	if (civilization == "basque") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "castillian" or civilization == "french" or civilization == "italian" or civilization == "latin" or civilization == "portuguese" or civilization == "romanian") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "dwarf") then
-		return "ui/backgrounds/yale.png"
+		return "backgrounds/yale.png"
 	elseif (civilization == "elf") then
-		return "ui/backgrounds/yale.png"
+		return "backgrounds/yale.png"
 	elseif (civilization == "ettin") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "germanic") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "gnome") then
-		return "ui/backgrounds/yale.png"
+		return "backgrounds/yale.png"
 	elseif (civilization == "goblin") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "greek") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "kobold") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "illyrian") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "minoan") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "orc") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "persian") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "phoenician") then
-		return "ui/backgrounds/gryphon.png"
+		return "backgrounds/gryphon.png"
 	elseif (civilization == "slav") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	elseif (civilization == "anglo-saxon" or civilization == "english" or civilization == "frankish" or civilization == "goth" or civilization == "norse" or civilization == "suebi" or civilization == "teuton") then
-		return "ui/backgrounds/wyrm.png"
+		return "backgrounds/wyrm.png"
 	end
 	
-	return "ui/backgrounds/wyrm.png"
+	return "backgrounds/wyrm.png"
 end
 
 function GetUnitBackground(unit_name, state)
@@ -2119,11 +2119,11 @@ function GetUnitBackground(unit_name, state)
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
 		elseif (unit_name == "unit-gryphon") then
-			return "ui/backgrounds/gryphon.png"
+			return "backgrounds/gryphon.png"
 		elseif (unit_name == "unit-wyrm") then
-			return "ui/backgrounds/wyrm.png"
+			return "backgrounds/wyrm.png"
 		elseif (unit_name == "unit-yale") then
-			return "ui/backgrounds/yale.png"
+			return "backgrounds/yale.png"
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		return GetCivilizationBackground(GetUpgradeData(unit_name, "Civilization"))
@@ -2133,7 +2133,7 @@ function GetUnitBackground(unit_name, state)
 		end
 	end
 	
-	return "ui/backgrounds/wyrm.png"
+	return "backgrounds/wyrm.png"
 end
 
 function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)

@@ -37,13 +37,7 @@ if not (ui_loaded_first_time) then
 				return new_background_image
 			end
 		end
-		if (CanAccessFile(background_image)) then -- check if can access the background image
-			return background_image
-		else -- substitute the image for another, if it isn't present
-			return "graphics/dwarf/ui/the_first_dwarves.png"
-		end
-		
-		return 
+		return background_image
 	end
 
 	Load("scripts/widgets.lua")
@@ -129,7 +123,7 @@ if not (ui_loaded_first_time) then
 end
 
 LoadingBarSetBackgrounds({
-	GetBackground("ui/backgrounds/gnashorn.png"), GetBackground("ui/backgrounds/gryphon.png"), GetBackground("ui/backgrounds/gullinburst.png"), GetBackground("ui/backgrounds/wyrm.png"), GetBackground("ui/backgrounds/yale.png")
+	GetBackground("backgrounds/gnashorn.png"), GetBackground("backgrounds/gryphon.png"), GetBackground("backgrounds/gullinburst.png"), GetBackground("backgrounds/wyrm.png"), GetBackground("backgrounds/yale.png")
 })
 
 --
