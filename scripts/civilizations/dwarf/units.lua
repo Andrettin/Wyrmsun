@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2019 by Andrettin
+--      (c) Copyright 2013-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -2686,12 +2686,16 @@ DefineUnitType("unit-dwarven-dock", {
 			"terrain", "dry-mud",
 			"terrain", "grass",
 			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water",
 			"season", "winter"
 		},
 		{
 			"variation-id", "dock-snow",
 			"file", "dwarf/buildings/dock_snow.png",
-			"terrain", "snow"
+			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water"
 		}
 	},
 	Sounds = {
