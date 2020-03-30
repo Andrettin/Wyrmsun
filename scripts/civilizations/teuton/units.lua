@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2019 by Andrettin
+--      (c) Copyright 2015-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1020,7 +1020,25 @@ DefineUnitType("unit-teuton-town-hall", {
 		},
 		{
 			"variation-id", "town-hall",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow-winter",
+			"file", "buildings/teuton/town_hall_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "town-hall-snow",
+			"file", "buildings/teuton/town_hall_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1040,6 +1058,27 @@ DefineUnitType("unit-teuton-stronghold", {
 	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
+	Variations = {
+		{
+			"variation-id", "stronghold",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "stronghold-snow-winter",
+			"file", "buildings/teuton/stronghold_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "stronghold-snow",
+			"file", "buildings/teuton/stronghold_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
@@ -1085,7 +1124,25 @@ DefineUnitType("unit-teuton-farm", {
 		},
 		{
 			"variation-id", "farm",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "farm-snow-winter",
+			"file", "buildings/teuton/farm_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "farm-snow",
+			"file", "buildings/teuton/farm_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1140,7 +1197,25 @@ DefineUnitType("unit-teuton-barracks", {
 		},
 		{
 			"variation-id", "barracks",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow-winter",
+			"file", "buildings/teuton/barracks_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "barracks-snow",
+			"file", "buildings/teuton/barracks_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1240,7 +1315,25 @@ DefineUnitType("unit-teuton-smithy", {
 		},
 		{
 			"variation-id", "smithy",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow-winter",
+			"file", "buildings/teuton/smithy_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "smithy-snow",
+			"file", "buildings/teuton/smithy_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1289,7 +1382,25 @@ DefineUnitType("unit-teuton-masons-shop", {
 		},
 		{
 			"variation-id", "masons-shop",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow-winter",
+			"file", "buildings/teuton/masons_shop_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "masons-shop-snow",
+			"file", "buildings/teuton/masons_shop_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1338,7 +1449,25 @@ DefineUnitType("unit-teuton-stables", {
 		},
 		{
 			"variation-id", "stables",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "stables-snow-winter",
+			"file", "buildings/teuton/stables_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "stables-snow",
+			"file", "buildings/teuton/stables_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1362,7 +1491,33 @@ DefineUnitType("unit-teuton-temple", {
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
 			"upgrade-forbidden", "upgrade-deity-loki",
-			"upgrade-forbidden", "upgrade-deity-frey"
+			"upgrade-forbidden", "upgrade-deity-frey",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "church-snow-winter",
+			"file", "buildings/teuton/church_snow.png",
+			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade-deity-odin",
+			"upgrade-forbidden", "upgrade-deity-thor",
+			"upgrade-forbidden", "upgrade-deity-loki",
+			"upgrade-forbidden", "upgrade-deity-frey",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "church-snow",
+			"file", "buildings/teuton/church_snow.png",
+			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade-deity-odin",
+			"upgrade-forbidden", "upgrade-deity-thor",
+			"upgrade-forbidden", "upgrade-deity-loki",
+			"upgrade-forbidden", "upgrade-deity-frey",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "germanic-temple",
@@ -1443,7 +1598,25 @@ DefineUnitType("unit-teuton-market", {
 		},
 		{
 			"variation-id", "market",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "market-snow-winter",
+			"file", "buildings/teuton/market_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "market-snow",
+			"file", "buildings/teuton/market_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
@@ -1460,6 +1633,27 @@ DefineUnitType("unit-teuton-university", {
 	Shadow = {"file", "teuton/buildings/university_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-university",
 	RequirementsString = "Writing",
+	Variations = {
+		{
+			"variation-id", "university",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "university-snow-winter",
+			"file", "buildings/teuton/university_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "university-snow",
+			"file", "buildings/teuton/university_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
@@ -1473,6 +1667,27 @@ DefineUnitType("unit-teuton-watch-tower", {
 	Image = {"file", "teuton/buildings/watch_tower.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-watch-tower",
+	Variations = {
+		{
+			"variation-id", "watch-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "watch-tower-snow-winter",
+			"file", "buildings/teuton/watch_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "watch-tower-snow",
+			"file", "buildings/teuton/watch_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
@@ -1487,6 +1702,27 @@ DefineUnitType("unit-teuton-guard-tower", {
 	Shadow = {"file", "teuton/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-guard-tower",
 	RequirementsString = "Carpenter's Shop/Lumber Mill and Masonry",
+	Variations = {
+		{
+			"variation-id", "guard-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "guard-tower-snow-winter",
+			"file", "buildings/teuton/guard_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "guard-tower-snow",
+			"file", "buildings/teuton/guard_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"
 	}
@@ -1503,6 +1739,27 @@ DefineUnitType("unit-teuton-catapult-tower", {
 	Missile = "missile-catapult-sandstone-rock",
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
+	Variations = {
+		{
+			"variation-id", "catapult-tower",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "catapult-tower-snow-winter",
+			"file", "buildings/teuton/catapult_tower_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "catapult-tower-snow",
+			"file", "buildings/teuton/catapult_tower_snow.png",
+			"terrain", "snow"
+		}
+	},
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town",
 		"fire-missile", "catapult-attack"
@@ -1539,6 +1796,8 @@ DefineUnitType("unit-teuton-dock", {
 			"terrain", "dry-mud",
 			"terrain", "grass",
 			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water",
 			"season", "winter"
 		},
 		{
@@ -1547,11 +1806,35 @@ DefineUnitType("unit-teuton-dock", {
 			"shadow-file", "germanic/buildings/dock_shadow.png",
 			"icon", "icon-germanic-dock",
 			"upgrade-forbidden", "upgrade-masonry",
-			"terrain", "snow"
+			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water"
 		},
 		{
 			"variation-id", "dock",
-			"upgrade-required", "upgrade-masonry"
+			"upgrade-required", "upgrade-masonry",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "dock-snow-winter",
+			"file", "buildings/teuton/dock_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water",
+			"season", "winter"
+		},
+		{
+			"variation-id", "dock-snow",
+			"file", "buildings/teuton/dock_snow.png",
+			"upgrade-required", "upgrade-masonry",
+			"terrain", "snow",
+			"terrain", "shallow-water",
+			"terrain", "gray-shallow-water"
 		}
 	},
 	Sounds = {
