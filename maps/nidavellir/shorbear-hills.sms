@@ -51,7 +51,7 @@ HexTiles = {
 ConvertHexTiles()
 
 -- Randomly add a few more trees, as the base map has none
---GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+--GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
 -- adjust a few tiles to make space for the Norlund mead hall
 SetRawTile(4, 3, "Rough")
@@ -61,7 +61,7 @@ SetRawTile(5, 8, "Rough")
 SetRawTile(8, 3, "Rough")
 SetRawTile(9, 3, "Rough")
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(15, 13, "Rock")
@@ -530,9 +530,9 @@ unit = CreateUnit("unit-glyph", PlayerNumNeutral, {69, 14}) -- cave entrance mar
 
 CreateCritters()
 
-CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+CreateRoamingFog((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096)
 
-CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 
 -- in a grand strategy battle, give the defender two guard towers if a stronghold is built
 if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then

@@ -116,7 +116,7 @@ SetRawTile(51, 35, "Rough")
 SetRawTile(51, 36, "Rough")
 SetRawTile(52, 35, "Rough")
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 SetRawTile(60, 38, "Land")
 SetRawTile(60, 39, "Land")
@@ -325,8 +325,8 @@ if not (GrandStrategy) then
 	SetDiplomacy(5, "enemy", 1)
 end
 
-CreateNeutralBuildings("unit-volcanic-crater", 16, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false) -- to make the map seem more volcanic until lava tiles are implemented
+CreateNeutralBuildings("unit-volcanic-crater", 16, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false) -- to make the map seem more volcanic until lava tiles are implemented
 
-CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 
 CreateCritters()

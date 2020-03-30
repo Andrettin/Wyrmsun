@@ -83,7 +83,7 @@ SetRawTile(28, 56, "Land")
 SetRawTile(28, 57, "Land")
 SetRawTile(27, 58, "Land")
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 ApplyRawTiles()
 
@@ -271,7 +271,7 @@ SetUnitVariable(unit, "Name", "Svafnir")
 SetUnitVariable(unit, "Active", false)
 
 if (LoadedGame == false) then
-	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 end
 
 CreateCritters()

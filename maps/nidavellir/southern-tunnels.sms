@@ -43,15 +43,15 @@ HexTiles = {
 ConvertHexTiles()
 
 -- convert buildable land tiles adjacent to rock tiles into rough land
-for x=0,(Map.Info.MapWidth - 1) do
-	for y=0,(Map.Info.MapHeight - 1) do
+for x=0,(CMap.Map.Info.MapWidth - 1) do
+	for y=0,(CMap.Map.Info.MapHeight - 1) do
 		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 			SetRawTile(x, y, "Rough")
 		end
 	end
 end
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 -- rectify cave wall pieces which appear too much like separate small blocks
 SetRawTile(3, 23, "Rock")
@@ -240,7 +240,7 @@ SetRawTile(72, 48, "Land")
 SetRawTile(72, 49, "Land")
 
 -- Randomly add a few more trees, as the base map has none
-GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
 -- remove trees from the Knalgans' farm area
 for x=43,52 do
@@ -315,9 +315,9 @@ unit = CreateUnit("unit-dwarven-sentry-tower", 3, {47, 48})
 unit = CreateUnit("unit-dwarven-sentry-tower", 3, {51, 48})
 
 if (LoadedGame == false) then
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, false)
 
-	CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 
 	CreateCritters()
 end

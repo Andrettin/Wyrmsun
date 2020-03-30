@@ -52,10 +52,10 @@ ConvertHexTiles()
 
 SetMapBorders("Rock", false)
 
-GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+GenerateRocks(((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024), ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8), "", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-for x=0,(Map.Info.MapWidth - 1) do
-	for y=0,(Map.Info.MapHeight - 1) do
+for x=0,(CMap.Map.Info.MapWidth - 1) do
+	for y=0,(CMap.Map.Info.MapHeight - 1) do
 		if (RawTile(x, y) == "") then
 			SetRawTile(x, y, "Land")
 		end
@@ -63,8 +63,8 @@ for x=0,(Map.Info.MapWidth - 1) do
 end
 
 -- convert buildable land tiles adjacent to rock tiles into rough land
-for x=0,(Map.Info.MapWidth - 1) do
-	for y=0,(Map.Info.MapHeight - 1) do
+for x=0,(CMap.Map.Info.MapWidth - 1) do
+	for y=0,(CMap.Map.Info.MapHeight - 1) do
 		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 			SetRawTile(x, y, "Rough")
 		end
@@ -72,9 +72,9 @@ for x=0,(Map.Info.MapWidth - 1) do
 end
 
 -- Randomly add a few more trees, as the base map has none
-GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(18, 43, "Water")
@@ -157,15 +157,15 @@ else
 end
 
 if (GetCurrentQuest() == "the-treasures-of-svarinshaug") then
-	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false, true)
-	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 5000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
-	CreateGoldMines(1, 15000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 15000, 0, CMap.Map.Info.MapWidth / 2, 0, CMap.Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 15000, 0, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapHeight / 2, CMap.Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 5000, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapWidth - 3, CMap.Map.Info.MapHeight / 2, CMap.Map.Info.MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
+	CreateGoldMines(1, 15000, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight / 2, false, true)
 else
-	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false, true)
-	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 50000, 0, CMap.Map.Info.MapWidth / 2, 0, CMap.Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 50000, 0, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapHeight / 2, CMap.Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapWidth - 3, CMap.Map.Info.MapHeight / 2, CMap.Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, CMap.Map.Info.MapWidth / 2, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight / 2, false, true)
 end
 
 -- create a couple of gold rocks on top of the gold deposits
@@ -182,7 +182,7 @@ for unit1 = 1,table.getn(uncount) do
 	end
 end
 
-CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 
 CreateCritters()
 

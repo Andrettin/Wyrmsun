@@ -370,8 +370,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 
 	--[[
 	-- convert buildable land tiles adjacent to rock tiles into rough land
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 				SetRawTile(x, y, "Rough")
 			end
@@ -545,8 +545,8 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 
 	--[[	
 	-- convert buildable land tiles adjacent to water tiles into rough land
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
 				SetRawTile(x, y, "Rough")
 			end
@@ -569,8 +569,8 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 	-- create initial rough land seeds
 	Count = rough_land_seed_number
 	while (Count > 0 and WhileCount < rough_land_seed_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(CMap.Map.Info.MapWidth)
+		RandomY = SyncRand(CMap.Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
@@ -607,8 +607,8 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 	-- expand rough land
 	Count = rough_land_expansions_number
 	while (Count > 0 and WhileCount < rough_land_expansions_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(CMap.Map.Info.MapWidth)
+		RandomY = SyncRand(CMap.Map.Info.MapHeight)
 		if (RawTile(RandomX, RandomY) == "Rough") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Rough" or RawTile(RandomX - 1, RandomY) ~= "Rough" or RawTile(RandomX, RandomY - 1) ~= "Rough")) then
@@ -655,7 +655,7 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		local near_starting_location = false
 		for i=0,(PlayerMax - 2) do
-			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 				if (math.abs(Players[i].StartPos.x - RandomX) < 4 and math.abs(Players[i].StartPos.y - RandomY) < 4) then
 					near_starting_location = true
 				end
@@ -1402,9 +1402,9 @@ end
 function CreateStartingLocationResourcePiles(loc_player, pile_type, pile_quantity)
 	if (LoadedGame == false) then
 		local min_x = math.max(Players[loc_player].StartPos.x - 8, 0)
-		local max_x = math.min(Players[loc_player].StartPos.x + 8, Map.Info.MapWidth - 1)
+		local max_x = math.min(Players[loc_player].StartPos.x + 8, CMap.Map.Info.MapWidth - 1)
 		local min_y = math.max(Players[loc_player].StartPos.y - 8, 0)
-		local max_y = math.min(Players[loc_player].StartPos.y + 8, Map.Info.MapHeight - 1)
+		local max_y = math.min(Players[loc_player].StartPos.y + 8, CMap.Map.Info.MapHeight - 1)
 				
 		local RandomX = 0
 		local RandomY = 0
@@ -1446,7 +1446,7 @@ function CreateCritters(arg)
 		arg = {}
 	end
 	if (LoadedGame == false) then
-		local critter_number = (Map.Info.MapWidth * Map.Info.MapHeight) / 256
+		local critter_number = (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256
 		local RandomNumber = 0
 		local RandomX = 0
 		local RandomY = 0
@@ -1497,13 +1497,13 @@ function CreateCritters(arg)
 				Count = 0
 				break
 			end
-			RandomX = SyncRand(Map.Info.MapWidth)
-			RandomY = SyncRand(Map.Info.MapHeight)
+			RandomX = SyncRand(CMap.Map.Info.MapWidth)
+			RandomY = SyncRand(CMap.Map.Info.MapHeight)
 			
 			local correct_tile = true
 			for sub_x = -(GetUnitTypeData(critter_unit_type, "TileWidth")), GetUnitTypeData(critter_unit_type, "TileWidth") do
 				for sub_y = -(GetUnitTypeData(critter_unit_type, "TileHeight")), GetUnitTypeData(critter_unit_type, "TileHeight") do
-					if (Map.Info:IsPointOnMap(RandomX + sub_x, RandomY + sub_y, 0)) then
+					if (CMap.Map.Info:IsPointOnMap(RandomX + sub_x, RandomY + sub_y, 0)) then
 						if not (
 							(
 								(
@@ -1591,9 +1591,9 @@ end
 function CreateCreeps(player, creep_type, creep_number, min_x, min_y, max_x, max_y)
 	if (LoadedGame == false) then
 		min_x = math.max(min_x, 0)
-		max_x = math.min(max_x, Map.Info.MapWidth - 1)
+		max_x = math.min(max_x, CMap.Map.Info.MapWidth - 1)
 		min_y = math.max(min_y, 0)
-		max_y = math.min(max_y, Map.Info.MapHeight - 1)
+		max_y = math.min(max_y, CMap.Map.Info.MapHeight - 1)
 	
 		local RandomX = 0
 		local RandomY = 0
@@ -1660,9 +1660,9 @@ function CreateRoamingFog(fog_number)
 			else
 				fog_type = "unit-roaming-fog-small"
 			end
-			RandomX = SyncRand(Map.Info.MapWidth - GetUnitTypeData(fog_type, "TileWidth"))
-			RandomY = SyncRand(Map.Info.MapHeight - GetUnitTypeData(fog_type, "TileHeight"))
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData(fog_type, "TileWidth") < Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData(fog_type, "TileHeight") < Map.Info.MapHeight - RandomY - 1) then
+			RandomX = SyncRand(CMap.Map.Info.MapWidth - GetUnitTypeData(fog_type, "TileWidth"))
+			RandomY = SyncRand(CMap.Map.Info.MapHeight - GetUnitTypeData(fog_type, "TileHeight"))
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData(fog_type, "TileWidth") < CMap.Map.Info.MapWidth - RandomX - 1 and GetUnitTypeData(fog_type, "TileHeight") < CMap.Map.Info.MapHeight - RandomY - 1) then
 				unit = CreateUnit(fog_type, PlayerNumNeutral, {RandomX, RandomY})
 				Count = Count - 1
 			end
@@ -1680,11 +1680,11 @@ function CreateDecorations()
 		local WhileCount = 0
 
 		local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {512, 512}) -- mushroom patch not listed here since it occurs in many maps through normal generation
-		Count = (Map.Info.MapWidth * Map.Info.MapHeight) / 128
+		Count = (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128
 		if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
-			while (Count > 0 and WhileCount < ((Map.Info.MapWidth * Map.Info.MapHeight) / 128) * 100) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+			while (Count > 0 and WhileCount < ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128) * 100) do
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "water") == false and GetTileTerrainHasFlag(RandomX, RandomY, "coast") == false and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					RandomNumber = SyncRand(1000)
 					if (RandomNumber < 200) then
@@ -1738,7 +1738,7 @@ function CreateDecorations()
 							Count = Count - 1
 						end
 					end
-				elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and RandomY < (Map.Info.MapHeight - 1) and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and RandomY < (CMap.Map.Info.MapHeight - 1) and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					if (SyncRand(2) == 0) then
 						unit = CreateUnit("unit-outer-wall-decoration", PlayerNumNeutral, {RandomX, RandomY})
 					else
@@ -1769,7 +1769,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,(PlayerMax - 2) do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			local faction_type = "tribe"
 			if (GameSettings.TechLevel == CivilizedGunpowderTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel) then
 				faction_type = "polity"
@@ -1810,9 +1810,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
-				Map.Info.PlayerType[i] = PlayerNobody
+				CMap.Map.Info.PlayerType[i] = PlayerNobody
 			else
-				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
+				if (CMap.Map.Info.PlayerType[i] ~= PlayerNobody) then
 					if (player_civilizations ~= nil and player_civilizations[i + 1] ~= nil) then
 						SetPlayerData(i, "RaceName", player_civilizations[i + 1])
 					else
@@ -1870,21 +1870,21 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 								player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
 								symmetric_starting_location = player_spawn_point
 							elseif (i == 1 or i == 5 or i == 9 or i == 13) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap.Map.Info.MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (CMap.Map.Info.MapHeight - 1)) - 3}
 							elseif (i == 2 or i == 6 or i == 10 or i == 14) then
-								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (Map.Info.MapHeight - 1)) - 3}
+								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (CMap.Map.Info.MapHeight - 1)) - 3}
 							elseif (i == 3 or i == 7 or i == 11) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap.Map.Info.MapWidth - 1)) - 3, symmetric_starting_location[2]}
 							end
 						end
 					end
 
 					starting_point_found = true
-					if ((player_spawn_point[1] + 4) > (Map.Info.MapWidth - 1) or (player_spawn_point[2] + 4) > (Map.Info.MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
+					if ((player_spawn_point[1] + 4) > (CMap.Map.Info.MapWidth - 1) or (player_spawn_point[2] + 4) > (CMap.Map.Info.MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
 					end
 					for j=0,(PlayerMax - 2) do
-						if (j < i and (Map.Info.PlayerType[j] == PlayerPerson or Map.Info.PlayerType[j] == PlayerComputer)) then
+						if (j < i and (CMap.Map.Info.PlayerType[j] == PlayerPerson or CMap.Map.Info.PlayerType[j] == PlayerComputer)) then
 							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then -- shouldn't start too close to another player
 								starting_point_found = false
 							end
@@ -1915,7 +1915,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 					WhileCount = WhileCount + 1
 				end
 				
-				if (Map.Info.PlayerType[i] ~= PlayerNobody) then
+				if (CMap.Map.Info.PlayerType[i] ~= PlayerNobody) then
 					SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 
 					if (no_raw_tile) then
@@ -1972,7 +1972,7 @@ end
 
 function SetMapBorders(tile_type, replace_tile)
 
-	for x=0,(Map.Info.MapWidth - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
 		if (RawTile(x, 0) == "" or replace_tile == true) then
 			SetRawTile(x, 0, tile_type)
 		end
@@ -1980,14 +1980,14 @@ function SetMapBorders(tile_type, replace_tile)
 			SetRawTile(x, 1, tile_type)
 		end
 
-		if (RawTile(x, Map.Info.MapHeight - 2) == "" or replace_tile == true) then
-			SetRawTile(x, Map.Info.MapHeight - 2, tile_type)
+		if (RawTile(x, CMap.Map.Info.MapHeight - 2) == "" or replace_tile == true) then
+			SetRawTile(x, CMap.Map.Info.MapHeight - 2, tile_type)
 		end
-		if (RawTile(x, Map.Info.MapHeight - 1) == "" or replace_tile == true) then
-			SetRawTile(x, Map.Info.MapHeight - 1, tile_type)
+		if (RawTile(x, CMap.Map.Info.MapHeight - 1) == "" or replace_tile == true) then
+			SetRawTile(x, CMap.Map.Info.MapHeight - 1, tile_type)
 		end
 	end
-	for y=0,(Map.Info.MapHeight - 1) do
+	for y=0,(CMap.Map.Info.MapHeight - 1) do
 		if (RawTile(0, y) == "" or replace_tile == true) then
 			SetRawTile(0, y, tile_type)
 		end
@@ -1995,11 +1995,11 @@ function SetMapBorders(tile_type, replace_tile)
 			SetRawTile(1, y, tile_type)
 		end
 
-		if (RawTile(Map.Info.MapWidth - 2, y) == "" or replace_tile == true) then
-			SetRawTile(Map.Info.MapWidth - 2, y, tile_type)
+		if (RawTile(CMap.Map.Info.MapWidth - 2, y) == "" or replace_tile == true) then
+			SetRawTile(CMap.Map.Info.MapWidth - 2, y, tile_type)
 		end
-		if (RawTile(Map.Info.MapWidth - 1, y) == "" or replace_tile == true) then
-			SetRawTile(Map.Info.MapWidth - 1, y, tile_type)
+		if (RawTile(CMap.Map.Info.MapWidth - 1, y) == "" or replace_tile == true) then
+			SetRawTile(CMap.Map.Info.MapWidth - 1, y, tile_type)
 		end
 	end
 end
@@ -2009,21 +2009,21 @@ function GenerateRandomMap(arg)
 		CleanRawTiles()
 
 		if (arg.WaterMap) then
-			for x=0,(Map.Info.MapWidth - 1) do
-				for y=0,(Map.Info.MapHeight - 1) do
+			for x=0,(CMap.Map.Info.MapWidth - 1) do
+				for y=0,(CMap.Map.Info.MapHeight - 1) do
 					SetRawTile(x, y, "Water")
 				end
 			end
 			if (arg.LandQuantity == "high") then
-				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 2, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+				GenerateLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 			elseif (arg.LandQuantity == "medium") then
-				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 4, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+				GenerateLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 			elseif (arg.LandQuantity == "low") then
-				GenerateLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+				GenerateLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 			end
 		else
-			for x=0,(Map.Info.MapWidth - 1) do
-				for y=0,(Map.Info.MapHeight - 1) do
+			for x=0,(CMap.Map.Info.MapWidth - 1) do
+				for y=0,(CMap.Map.Info.MapHeight - 1) do
 					SetRawTile(x, y, "Land")
 				end
 			end
@@ -2036,10 +2036,10 @@ function GenerateRandomMap(arg)
 		
 		if (arg.WaterLayout ~= nil) then
 			local block_size = 16
-			if (Map.Info.MapWidth > Map.Info.MapHeight) then
-				block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+			if (CMap.Map.Info.MapWidth > CMap.Map.Info.MapHeight) then
+				block_size = CMap.Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
 			else
-				block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+				block_size = CMap.Map.Info.MapHeight / table.getn(arg.WaterLayout)
 			end
 			
 			-- 8 = N/S river
@@ -2153,19 +2153,19 @@ function GenerateRandomMap(arg)
 		end
 		
 		if (arg.WaterQuantity == "high") then
-			GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.WaterQuantity == "medium") then
-			GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.WaterQuantity == "low") then
-			GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		end
 		
 		if (arg.WaterLayout ~= nil) then -- make sure the bridges will be present
 			local block_size = 16
-			if (Map.Info.MapWidth > Map.Info.MapHeight) then
-				block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+			if (CMap.Map.Info.MapWidth > CMap.Map.Info.MapHeight) then
+				block_size = CMap.Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
 			else
-				block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+				block_size = CMap.Map.Info.MapHeight / table.getn(arg.WaterLayout)
 			end
 			
 			for ay=1,table.getn(arg.WaterLayout) do
@@ -2184,14 +2184,14 @@ function GenerateRandomMap(arg)
 		end
 			
 		if (arg.RockQuantity == "high") then
-			GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateRocks((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8), "Land", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.RockQuantity == "medium") then
-			GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 16), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateRocks((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16), "Land", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.RockQuantity == "low") then
-			GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateRocks((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32), "Land", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		end
 
-		AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 		
 		if (arg.StartingLocationLayout ~= nil) then
 			-- -2 = Not available as a random start location
@@ -2219,10 +2219,10 @@ function GenerateRandomMap(arg)
 			end
 		
 			local block_size = 16
-			if (Map.Info.MapWidth > Map.Info.MapHeight) then
-				block_size = Map.Info.MapWidth / table.getn(arg.StartingLocationLayout[1])
+			if (CMap.Map.Info.MapWidth > CMap.Map.Info.MapHeight) then
+				block_size = CMap.Map.Info.MapWidth / table.getn(arg.StartingLocationLayout[1])
 			else
-				block_size = Map.Info.MapHeight / table.getn(arg.StartingLocationLayout)
+				block_size = CMap.Map.Info.MapHeight / table.getn(arg.StartingLocationLayout)
 			end
 			
 			local function BuildArea(x, y, t)
@@ -2239,51 +2239,51 @@ function GenerateRandomMap(arg)
 			end
 		end
 		
-		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
+		CreatePlayers(0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
 
 		if (arg.RoughLandQuantity == "high") then
-			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+			GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8)
 		elseif (arg.RoughLandQuantity == "medium") then
-			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16)
+			GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16)
 		elseif (arg.RoughLandQuantity == "low") then
-			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+			GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32)
 		end
 
 		if (arg.DarkRoughLandQuantity == "high") then
-			GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, "Rough")
 		elseif (arg.DarkRoughLandQuantity == "medium") then
-			GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, "Rough")
 		elseif (arg.DarkRoughLandQuantity == "low") then
-			GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, "Rough")
 		end
 
 		if (arg.TreeQuantity == "high") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 8, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.TreeQuantity == "medium") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.TreeQuantity == "low") then
-			GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2048, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		end
 
 		if (arg.DarkLandQuantity == "high") then
-			GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.DarkLandQuantity == "medium") then
-			GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.DarkLandQuantity == "low") then
-			GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		end
 
 		if (arg.DarkWaterQuantity == "high") then
-			GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.DarkWaterQuantity == "medium") then
-			GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 64, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		elseif (arg.DarkWaterQuantity == "low") then
-			GenerateDarkWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+			GenerateDarkWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 		end
 
 		if (symmetric) then
-			for x=(Map.Info.MapWidth / 2),(Map.Info.MapWidth - 1) do
-				for y=0,(Map.Info.MapHeight - 1) do
+			for x=(CMap.Map.Info.MapWidth / 2),(CMap.Map.Info.MapWidth - 1) do
+				for y=0,(CMap.Map.Info.MapHeight - 1) do
 					local mirrored_tile_x = x + 1 - 128
 					if (mirrored_tile_x < 0) then
 						mirrored_tile_x = mirrored_tile_x * -1
@@ -2294,8 +2294,8 @@ function GenerateRandomMap(arg)
 				end
 			end
 
-			for x=0,(Map.Info.MapWidth - 1) do
-				for y=(Map.Info.MapHeight / 2),(Map.Info.MapHeight - 1) do
+			for x=0,(CMap.Map.Info.MapWidth - 1) do
+				for y=(CMap.Map.Info.MapHeight / 2),(CMap.Map.Info.MapHeight - 1) do
 					local mirrored_tile_y = y + 1 - 128
 					if (mirrored_tile_y < 0) then
 						mirrored_tile_y = mirrored_tile_y * -1
@@ -2313,7 +2313,7 @@ function GenerateRandomMap(arg)
 
 		if (arg.WorkerQuantity) then
 			for i=0,(PlayerMax - 2) do
-				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+				if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 					for j=1,arg.WorkerQuantity do
 						unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 					end
@@ -2322,7 +2322,7 @@ function GenerateRandomMap(arg)
 		end
 
 		for i=0,(PlayerMax - 2) do
-			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+			if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 				if (GetPlayerData(i, "RaceName") == "dwarf") then
 					CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
 					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
@@ -2333,20 +2333,20 @@ function GenerateRandomMap(arg)
 		end
 			
 		if (arg.NoDeposits) then
-			CreateGoldRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+			CreateGoldRocks((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2048, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 		else
-			CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+			CreateGoldSpots((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2048, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 		end
 
 		if (arg.MercenaryCamp) then
-			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 		end
 
 		-- create oil patches
 	--	Count = 2
 	--	while (Count > 0) do
-	--		RandomX = SyncRand(Map.Info.MapWidth)
-	--		RandomY = SyncRand(Map.Info.MapHeight)
+	--		RandomX = SyncRand(CMap.Map.Info.MapWidth)
+	--		RandomY = SyncRand(CMap.Map.Info.MapHeight)
 	--		if (RawTile(RandomX, RandomY) == "Water" and RawTile(RandomX, RandomY + 1) == "Water" and RawTile(RandomX, RandomY + 2) == "Water" and RawTile(RandomX + 1, RandomY) == "Water" and RawTile(RandomX + 1, RandomY + 1) == "Water" and RawTile(RandomX + 1, RandomY + 2) == "Water" and RawTile(RandomX + 2, RandomY) == "Water" and RawTile(RandomX + 2, RandomY + 1) == "Water" and RawTile(RandomX + 2, RandomY + 2) == "Water") then
 	--			unit = CreateUnit("unit-oil-patch", PlayerNumNeutral, {RandomX, RandomY})
 	--			SetResourcesHeld(unit, 30000)
@@ -2355,15 +2355,15 @@ function GenerateRandomMap(arg)
 	--	end
 
 		if (GetCurrentTileset() == "swamp") then
-			CreateNeutralBuildings("unit-yale-cave", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+			CreateNeutralBuildings("unit-yale-cave", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 		end
 		
 		CreateCritters(arg)
 
 		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
-			CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+			CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, symmetric)
 		elseif (GetCurrentTileset() == "cave") then
-			CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+			CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, symmetric)
 		end
 		
 		CleanRawTiles()
@@ -2375,7 +2375,7 @@ function SetRawTile(x, y, tile_type)
 		return;
 	end
 	
-	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
+	if (x >= 0 and x < CMap.Map.Info.MapWidth and y >= 0 and y < CMap.Map.Info.MapHeight) then
 		RawTiles[y+1][x+1] = tile_type
 	end
 end
@@ -2385,24 +2385,24 @@ function RawTile(x, y)
 		return "";
 	end
 	
-	if (x >= 0 and x < Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight) then
+	if (x >= 0 and x < CMap.Map.Info.MapWidth and y >= 0 and y < CMap.Map.Info.MapHeight) then
 		return RawTiles[y+1][x+1]
-	elseif (x < 0 and y >= 0 and y < Map.Info.MapHeight and RawTiles[y+1][0+1] ~= "Wall") then
+	elseif (x < 0 and y >= 0 and y < CMap.Map.Info.MapHeight and RawTiles[y+1][0+1] ~= "Wall") then
 		return RawTiles[y+1][0+1]
-	elseif (x >= Map.Info.MapWidth and y >= 0 and y < Map.Info.MapHeight and RawTiles[y+1][Map.Info.MapWidth] ~= "Wall") then
-		return RawTiles[y+1][Map.Info.MapWidth]
-	elseif (x >= 0 and x < Map.Info.MapWidth and y < 0 and RawTiles[0+1][x+1] ~= "Wall") then
+	elseif (x >= CMap.Map.Info.MapWidth and y >= 0 and y < CMap.Map.Info.MapHeight and RawTiles[y+1][CMap.Map.Info.MapWidth] ~= "Wall") then
+		return RawTiles[y+1][CMap.Map.Info.MapWidth]
+	elseif (x >= 0 and x < CMap.Map.Info.MapWidth and y < 0 and RawTiles[0+1][x+1] ~= "Wall") then
 		return RawTiles[0+1][x+1]
-	elseif (x >= 0 and x < Map.Info.MapWidth and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][x+1] ~= "Wall") then
-		return RawTiles[Map.Info.MapHeight][x+1]
+	elseif (x >= 0 and x < CMap.Map.Info.MapWidth and y >= CMap.Map.Info.MapHeight and RawTiles[CMap.Map.Info.MapHeight][x+1] ~= "Wall") then
+		return RawTiles[CMap.Map.Info.MapHeight][x+1]
 	elseif (x < 0 and y < 0 and RawTiles[0+1][0+1] ~= "Wall") then
 		return RawTiles[0+1][0+1]
-	elseif (x >= Map.Info.MapWidth and y < 0 and RawTiles[0+1][Map.Info.MapWidth] ~= "Wall") then
-		return RawTiles[0+1][Map.Info.MapWidth]
-	elseif (x < 0 and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][0+1] ~= "Wall") then
-		return RawTiles[Map.Info.MapHeight][0+1]
-	elseif (x >= Map.Info.MapWidth and y >= Map.Info.MapHeight and RawTiles[Map.Info.MapHeight][Map.Info.MapWidth] ~= "Wall") then
-		return RawTiles[Map.Info.MapHeight][Map.Info.MapWidth]
+	elseif (x >= CMap.Map.Info.MapWidth and y < 0 and RawTiles[0+1][CMap.Map.Info.MapWidth] ~= "Wall") then
+		return RawTiles[0+1][CMap.Map.Info.MapWidth]
+	elseif (x < 0 and y >= CMap.Map.Info.MapHeight and RawTiles[CMap.Map.Info.MapHeight][0+1] ~= "Wall") then
+		return RawTiles[CMap.Map.Info.MapHeight][0+1]
+	elseif (x >= CMap.Map.Info.MapWidth and y >= CMap.Map.Info.MapHeight and RawTiles[CMap.Map.Info.MapHeight][CMap.Map.Info.MapWidth] ~= "Wall") then
+		return RawTiles[CMap.Map.Info.MapHeight][CMap.Map.Info.MapWidth]
 	else
 		return ""
 	end
@@ -2429,8 +2429,8 @@ function ApplyRawTiles()
 			end
 		end
 
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
+		for x=0,(CMap.Map.Info.MapWidth - 1) do
+			for y=0,(CMap.Map.Info.MapHeight - 1) do
 				if (RawTile(x, y) == "Mush") then
 					SetRawTile(x, y, "Land")
 					if (SyncRand(4) <= 2) then
@@ -2556,8 +2556,8 @@ function ApplyRawTiles()
 			end
 		end
 
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
+		for x=0,(CMap.Map.Info.MapWidth - 1) do
+			for y=0,(CMap.Map.Info.MapHeight - 1) do
 				local solid_slot = 0
 				local mixed_slot = 0
 				local value = 0
@@ -2898,7 +2898,7 @@ function ApplyRawTiles()
 		
 	CleanRawTiles()
 	
-	Map:AdjustMap()
+	CMap.Map:AdjustMap()
 end
 
 function FindAppropriateSpawnPoint(min_x, max_x, min_y, max_y)
@@ -2934,8 +2934,8 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 	local location_found = false
 	local WhileCount = 0
 	while (location_found == false and WhileCount < 10000) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
+		RandomX = SyncRand(CMap.Map.Info.MapWidth)
+		RandomY = SyncRand(CMap.Map.Info.MapHeight)
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			if (RawTile(RandomX - 1, RandomY) == tile_type or RawTile(RandomX + 1, RandomY) == tile_type or RawTile(RandomX, RandomY - 1) == tile_type or RawTile(RandomX, RandomY + 1) == tile_type or RawTile(RandomX - 2, RandomY) == tile_type or RawTile(RandomX + 2, RandomY) == tile_type or RawTile(RandomX, RandomY - 2) == tile_type or RawTile(RandomX, RandomY + 2) == tile_type) then
@@ -2992,8 +2992,8 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 		local WhileCount = 0
 		while (location_found == false and WhileCount < 100) do
 			if (symmetric) then
-				RandomX = SyncRand((Map.Info.MapWidth / 2) - 24)
-				RandomY = SyncRand((Map.Info.MapHeight / 2) - 24)
+				RandomX = SyncRand((CMap.Map.Info.MapWidth / 2) - 24)
+				RandomY = SyncRand((CMap.Map.Info.MapHeight / 2) - 24)
 			else
 				RandomX = SyncRand(max_x - min_x + 1) + min_x
 				RandomY = SyncRand(max_y - min_y + 1) + min_y
@@ -3091,8 +3091,8 @@ end
 function GetTileTerrainCount(terrain)
 	local tile_terrain_count = 0
 
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			if (GetTileTerrainName(x, y) == terrain) then
 				tile_terrain_count = tile_terrain_count + 1
 			end
@@ -3105,8 +3105,8 @@ end
 function GetTileTerrainFlagCount(flag)
 	local tile_flag_count = 0
 
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			if (GetTileTerrainHasFlag(x, y, flag)) then
 				tile_flag_count = tile_flag_count + 1
 			end
@@ -3808,7 +3808,7 @@ function SpreadTiles(x1, y1, x2, y2, src, des)
 			end
 		end
 	end
-	ReplaceTiles(0, 0, Map.Info.MapWidth - 1, Map.Info.MapHeight - 1, "Replace", src)
+	ReplaceTiles(0, 0, CMap.Map.Info.MapWidth - 1, CMap.Map.Info.MapHeight - 1, "Replace", src)
 end
 
 function RotateArea(x, y, size, count)
@@ -3881,7 +3881,7 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 				end
 			end
 		end
-		if ((gold_mine_spawn_point[1] + 2) > Map.Info.MapWidth or (gold_mine_spawn_point[2] + 2) > Map.Info.MapHeight or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
+		if ((gold_mine_spawn_point[1] + 2) > CMap.Map.Info.MapWidth or (gold_mine_spawn_point[2] + 2) > CMap.Map.Info.MapHeight or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
 			free_square = false
 		end
 		if (free_square) then
@@ -3949,7 +3949,7 @@ function CreateStartingBuilding(player, building_type)
 					if (RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Road") then
 						free_square = false
 					end
-					if (building_spawn_point[1] + sub_x < 0 or building_spawn_point[1] + sub_x >= Map.Info.MapWidth or building_spawn_point[2] + sub_y < 0 or building_spawn_point[2] + sub_y >= Map.Info.MapHeight) then
+					if (building_spawn_point[1] + sub_x < 0 or building_spawn_point[1] + sub_x >= CMap.Map.Info.MapWidth or building_spawn_point[2] + sub_y < 0 or building_spawn_point[2] + sub_y >= CMap.Map.Info.MapHeight) then
 						free_square = false
 					end
 			end
@@ -3986,38 +3986,38 @@ function GenerateValley(direction, lake_quantity)
 		lake_quantity = SyncRand(4) -- 0-3 lakes
 	end
 
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
+	FillArea(0, 0, (CMap.Map.Info.MapWidth - 1), (CMap.Map.Info.MapHeight - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight, true, false, true, nil, nil, false)
+		CreatePlayers(round(CMap.Map.Info.MapWidth / 6), round(CMap.Map.Info.MapWidth * 5 / 6), 0, CMap.Map.Info.MapHeight, true, false, true, nil, nil, false)
 		
-		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", 0, round(Map.Info.MapWidth / 6), 0, Map.Info.MapHeight)
+		GenerateRocks(((CMap.Map.Info.MapWidth / 6 * CMap.Map.Info.MapHeight) / 32), ((CMap.Map.Info.MapWidth / 6 * CMap.Map.Info.MapHeight) / 4), "Land", 0, round(CMap.Map.Info.MapWidth / 6), 0, CMap.Map.Info.MapHeight)
 		
-		GenerateRocks(((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 32), ((Map.Info.MapWidth / 6 * Map.Info.MapHeight) / 4), "Land", round(Map.Info.MapWidth * 5 / 6), Map.Info.MapWidth, 0, Map.Info.MapHeight)
+		GenerateRocks(((CMap.Map.Info.MapWidth / 6 * CMap.Map.Info.MapHeight) / 32), ((CMap.Map.Info.MapWidth / 6 * CMap.Map.Info.MapHeight) / 4), "Land", round(CMap.Map.Info.MapWidth * 5 / 6), CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, round(Map.Info.MapWidth / 6), round(Map.Info.MapWidth * 5 / 6), 0, Map.Info.MapHeight)
+		GenerateWater(lake_quantity, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, round(CMap.Map.Info.MapWidth / 6), round(CMap.Map.Info.MapWidth * 5 / 6), 0, CMap.Map.Info.MapHeight)
 	elseif (direction == "west-east") then
-		CreatePlayers(0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6), true, false, true, nil, nil, false)
+		CreatePlayers(0, CMap.Map.Info.MapWidth, round(CMap.Map.Info.MapHeight / 6), round(CMap.Map.Info.MapHeight * 5 / 6), true, false, true, nil, nil, false)
 		
-		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, 0, round(Map.Info.MapHeight / 6))
+		GenerateRocks(((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight / 6) / 32), ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight / 6) / 4), "Land", 0, CMap.Map.Info.MapWidth, 0, round(CMap.Map.Info.MapHeight / 6))
 		
-		GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 32), ((Map.Info.MapWidth * Map.Info.MapHeight / 6) / 4), "Land", 0, Map.Info.MapWidth, round(Map.Info.MapHeight * 5 / 6), Map.Info.MapHeight)
+		GenerateRocks(((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight / 6) / 32), ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight / 6) / 4), "Land", 0, CMap.Map.Info.MapWidth, round(CMap.Map.Info.MapHeight * 5 / 6), CMap.Map.Info.MapHeight)
 		
-		GenerateWater(lake_quantity, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, round(Map.Info.MapHeight / 6), round(Map.Info.MapHeight * 5 / 6))
+		GenerateWater(lake_quantity, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, 0, CMap.Map.Info.MapWidth, round(CMap.Map.Info.MapHeight / 6), round(CMap.Map.Info.MapHeight * 5 / 6))
 	end
 
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 	
---	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+--	GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8)
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
 	ApplyRawTiles()
 
 	CreateDecorations()	
 
 	for i=0,(PlayerMax - 2) do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
@@ -4026,18 +4026,18 @@ function GenerateValley(direction, lake_quantity)
 		end
 	end
 
-	CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateGoldSpots((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2048, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 	end
 
-	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+	CreateRoamingFog((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096)
 	
 	CreateCritters()
 
 	for i=0,(PlayerMax - 2) do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			if (GetPlayerData(i, "RaceName") == "dwarf") then
 				CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
 				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
@@ -4048,9 +4048,9 @@ function GenerateValley(direction, lake_quantity)
 	end
 			
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
-		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 	elseif (GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+		CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 	end
 	
 	CleanRawTiles()
@@ -4096,8 +4096,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		SetRawTile(35, 33, "Wall")
 		SetRawTile(35, 34, "Wall")
 
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
+		for x=0,(CMap.Map.Info.MapWidth - 1) do
+			for y=0,(CMap.Map.Info.MapHeight - 1) do
 				if (RawTile(x, y) == "") then
 					SetRawTile(x, y, "Wall")
 				end
@@ -4875,8 +4875,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			
 			-- dungeon generation algorithm inspired by Mike Anderson's code for Tyrant, which was released under the GPLv2 license
 			while ((Count > 0 or FeastHallArea == nil) and WhileCount < 64 * 100) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (RawTile(RandomX, RandomY) == "Wall" and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Land")) then
 					RandomNumber = SyncRand(100)
 					if (RandomNumber < 45 and Count > 0) then -- corridors
@@ -5225,8 +5225,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 24
 
 			while (Count > 0) do
-				for x=0,(Map.Info.MapWidth - 1) do
-					for y=0,(Map.Info.MapHeight - 1) do
+				for x=0,(CMap.Map.Info.MapWidth - 1) do
+					for y=0,(CMap.Map.Info.MapHeight - 1) do
 						if (RawTile(x, y) == "Land" or RawTile(x, y) == "Door" or RawTile(x, y) == "Dark-Land") then
 							local adjacent_floor_tiles = 0
 							if (RawTile(x + 1, y) == "Land" or RawTile(x + 1, y) == "Door" or RawTile(x + 1, y) == "Dark-Land") then
@@ -5250,7 +5250,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = Count - 1
 			end
 
-			GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 256, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Land")
+			GenerateDarkRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 256, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, "Land")
 
 			-- remove gold pile and random rug tiles from feast hall
 			for x=FeastHallArea[1][1],FeastHallArea[2][1] do
@@ -5393,8 +5393,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 16
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 1000) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					local adjacent_floor_tiles = 0
 					for x=(RandomX - 1),(RandomX + 1) do
@@ -5456,8 +5456,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			--Count = 1
 			--WhileCount = 0
 			--while (Count > 0 and WhileCount < 100) do
-			--	RandomX = SyncRand(Map.Info.MapWidth)
-			--	RandomY = SyncRand(Map.Info.MapHeight)
+			--	RandomX = SyncRand(CMap.Map.Info.MapWidth)
+			--	RandomY = SyncRand(CMap.Map.Info.MapHeight)
 			--	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			--		local adjacent_floor_tiles = 0
 			--		for x=(RandomX - 1),(RandomX + 1) do
@@ -5480,8 +5480,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 1
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 10000) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 						local adjacent_floor_tiles = 0
@@ -5580,13 +5580,13 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 
 			-- create player 2's units
 			Count = 1
-			if (Map.Info.PlayerType[1] == PlayerNobody) then
+			if (CMap.Map.Info.PlayerType[1] == PlayerNobody) then
 				Count = 0
 			end
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 10000) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 						local adjacent_floor_tiles = 0
@@ -5688,8 +5688,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = 1
 				WhileCount = 0
 				while (Count > 0 and WhileCount < 10000) do
-					RandomX = SyncRand(Map.Info.MapWidth)
-					RandomY = SyncRand(Map.Info.MapHeight)
+					RandomX = SyncRand(CMap.Map.Info.MapWidth)
+					RandomY = SyncRand(CMap.Map.Info.MapHeight)
 					if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 						if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 							local adjacent_floor_tiles = 0
@@ -5731,8 +5731,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = hostile_creep_number
 			WhileCount = 0
 			while (Count > 0 and WhileCount < hostile_creep_number * 1000) do
-				RandomX = SyncRand(Map.Info.MapWidth)
-				RandomY = SyncRand(Map.Info.MapHeight)
+				RandomX = SyncRand(CMap.Map.Info.MapWidth)
+				RandomY = SyncRand(CMap.Map.Info.MapHeight)
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 						RandomNumber = SyncRand(100)
@@ -5813,8 +5813,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = passive_dweller_number
 				WhileCount = 0
 				while (Count > 0 and WhileCount < passive_dweller_number * 100) do
-					RandomX = SyncRand(Map.Info.MapWidth)
-					RandomY = SyncRand(Map.Info.MapHeight)
+					RandomX = SyncRand(CMap.Map.Info.MapWidth)
+					RandomY = SyncRand(CMap.Map.Info.MapHeight)
 					if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 						if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 							if (GetNumUnitsAt(0, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1) then
@@ -5932,27 +5932,27 @@ function GenerateCave(town_halls, symmetric)
 	local Count = 0
 	local EntranceExists = false
 
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			SetRawTile(x, y, "Land")
 		end
 	end
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, Map.Info.MapWidth - 16, 16, Map.Info.MapHeight - 16, town_halls, symmetric, true, nil, nil, false)
+	CreatePlayers(16, CMap.Map.Info.MapWidth - 16, 16, CMap.Map.Info.MapHeight - 16, town_halls, symmetric, true, nil, nil, false)
 
-	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024),  ((Map.Info.MapWidth * Map.Info.MapHeight) / 4), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateRocks(((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024),  ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4), "Land", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-	GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateWater((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 64, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+	GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32)
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
 	if (symmetric) then
-		for x=(Map.Info.MapWidth / 2),(Map.Info.MapWidth - 1) do
-			for y=0,(Map.Info.MapHeight - 1) do
+		for x=(CMap.Map.Info.MapWidth / 2),(CMap.Map.Info.MapWidth - 1) do
+			for y=0,(CMap.Map.Info.MapHeight - 1) do
 				local mirrored_tile_x = x + 1 - 128
 				if (mirrored_tile_x < 0) then
 					mirrored_tile_x = mirrored_tile_x * -1
@@ -5963,8 +5963,8 @@ function GenerateCave(town_halls, symmetric)
 			end
 		end
 
-		for x=0,(Map.Info.MapWidth - 1) do
-			for y=(Map.Info.MapHeight / 2),(Map.Info.MapHeight - 1) do
+		for x=0,(CMap.Map.Info.MapWidth - 1) do
+			for y=(CMap.Map.Info.MapHeight / 2),(CMap.Map.Info.MapHeight - 1) do
 				local mirrored_tile_y = y + 1 - 128
 				if (mirrored_tile_y < 0) then
 					mirrored_tile_y = mirrored_tile_y * -1
@@ -5976,23 +5976,23 @@ function GenerateCave(town_halls, symmetric)
 		end
 	end
 	
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 	ApplyRawTiles()
 
-	CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateGoldSpots((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 2048, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 
 	CreateCritters()
 
 	if (GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
+		CreateNeutralBuildings("unit-hole", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, symmetric)
 	end
 
 	
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, symmetric)
 
 	for i=0,(PlayerMax - 2) do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			for j=1,5 do
 				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			end
@@ -6011,7 +6011,7 @@ end
 function FindNearestTerrainTile(terrain, starting_x, starting_y)
 	local search_range = 0
 	
-	while (search_range < Map.Info.MapWidth and search_range < Map.Info.MapHeight) do
+	while (search_range < CMap.Map.Info.MapWidth and search_range < CMap.Map.Info.MapHeight) do
 		for x=(starting_x - search_range), (starting_x + search_range) do
 			for y=(starting_y - search_range), (starting_y + search_range) do
 				if (GetTileTerrainName(x, y) == terrain) then
@@ -6028,7 +6028,7 @@ end
 function FindNearestTerrainFlagTile(terrain_flag, starting_x, starting_y)
 	local search_range = 0
 	
-	while (search_range < Map.Info.MapWidth and search_range < Map.Info.MapHeight) do
+	while (search_range < CMap.Map.Info.MapWidth and search_range < CMap.Map.Info.MapHeight) do
 		for x=(starting_x - search_range), (starting_x + search_range) do
 			for y=(starting_y - search_range), (starting_y + search_range) do
 				if (GetTileTerrainHasFlag(x, y, terrain_flag)) then

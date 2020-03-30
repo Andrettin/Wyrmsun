@@ -122,7 +122,7 @@ RawTiles = {
 }
 
 -- Randomly add a few more trees, as the base map has too few
-GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 512, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 512, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
 ApplyRawTiles()
 
@@ -247,13 +247,13 @@ SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {8, 51})
 unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {52, 96})
 
-CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, false)
 
 CreateCritters()
 
-CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
+CreateRoamingFog((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096)
 
-CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 
 -- in grand strategy mode, give the defender two guard towers if a stronghold is built
 if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then

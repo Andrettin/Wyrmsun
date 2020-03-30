@@ -7,15 +7,15 @@ if (LoadedGame == false) then
 
 	CleanRawTiles()
 
-	for x=0,(Map.Info.MapWidth - 1) do
-		for y=0,(Map.Info.MapHeight - 1) do
+	for x=0,(CMap.Map.Info.MapWidth - 1) do
+		for y=0,(CMap.Map.Info.MapHeight - 1) do
 			SetRawTile(x, y, "Land")
 		end
 	end
 		
-	CreatePlayers(12, Map.Info.MapWidth, 0, Map.Info.MapHeight, true, false, true, nil, nil)
+	CreatePlayers(12, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, true, false, true, nil, nil)
 
-	for y=0,(Map.Info.MapHeight - 1) do
+	for y=0,(CMap.Map.Info.MapHeight - 1) do
 		SetRawTile(0, y, "Water")
 	end
 
@@ -51,48 +51,48 @@ if (LoadedGame == false) then
 		SetRawTile(8, y, "Water")
 	end
 
-	GenerateWater(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateWater(0, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 16, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-	GenerateWater(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight) -- four major lakes: Lacanau, Cazaux et Sanguinet, Biscarrosse et Parentis and Aureilhan
+	GenerateWater(4, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 64, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight) -- four major lakes: Lacanau, Cazaux et Sanguinet, Biscarrosse et Parentis and Aureilhan
 
-	GenerateRocks(((Map.Info.MapWidth * Map.Info.MapHeight) / 1024), ((Map.Info.MapWidth * Map.Info.MapHeight) / 32), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+	GenerateRocks(((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024), ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32), "Land", 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+	GenerateRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 8)
 
---	GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
+--	GenerateDarkRoughLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight, "Rough")
 
-	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, 0, 64, 0, 96)
+	GenerateTrees((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, 0, 0, 64, 0, 96)
 
-	GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 12, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight) -- large coastal aquitainian forests
+	GenerateTrees(0, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 12, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight) -- large coastal aquitainian forests
 
-	GenerateTrees(4, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 64, 128, 0, 64) -- small forests in the northeast of aquitaine
+	GenerateTrees(4, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 32, 64, 128, 0, 64) -- small forests in the northeast of aquitaine
 
-	for x=64,(Map.Info.MapWidth - 1) do
-		for y=(Map.Info.MapHeight - 1),(Map.Info.MapHeight - 1) do
+	for x=64,(CMap.Map.Info.MapWidth - 1) do
+		for y=(CMap.Map.Info.MapHeight - 1),(CMap.Map.Info.MapHeight - 1) do
 			if (RawTile(x, y) == "Land") then
 				SetRawTile(x, y, "Tree")
 			end
 		end
 	end
 
-	GenerateTrees(0, (Map.Info.MapWidth * Map.Info.MapHeight) / 64, 64, 128, 96, 128) -- pyrennee forests
+	GenerateTrees(0, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 64, 64, 128, 96, 128) -- pyrennee forests
 
---	GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
+--	GenerateDarkLand((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024, (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128, 0, CMap.Map.Info.MapWidth, 0, CMap.Map.Info.MapHeight)
 
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+	AdjustTransitions(0, CMap.Map.Info.MapWidth - 1, 0, CMap.Map.Info.MapHeight - 1)
 
 	ApplyRawTiles()
 
 	CreateDecorations()
 		
-	CreateGoldSpots(1, 16, 64, 64 - 3, Map.Info.MapHeight - 3, false) -- gas deposit near Lacq
+	CreateGoldSpots(1, 16, 64, 64 - 3, CMap.Map.Info.MapHeight - 3, false) -- gas deposit near Lacq
 
-	CreateGoldSpots(5, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
+	CreateGoldSpots(5, 0, CMap.Map.Info.MapWidth - 3, 0, CMap.Map.Info.MapHeight - 3, false)
 
 	CreateCritters()
 
 	for i=0,14 do
-		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
 			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
@@ -101,5 +101,5 @@ if (LoadedGame == false) then
 		end
 	end
 
-	CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
 end
