@@ -31,7 +31,7 @@
 ------------------------------------------------------------------------------
 --	Define sounds later used
 --
-sound_click = MakeSound("click", "ui/click.wav")
+sound_click = MakeSound("click", "interface/click.wav")
 
 ------------------------------------------------------------------------------
 --	Define simple sounds. (FIXME: somebody must clean the order.)
@@ -405,8 +405,8 @@ MakeSound("teuton-bauer-ready", "teuton/bauer/bauer_ready.wav")
 --
 building_construction = MakeSound("building construction", "misc/building_construction.wav")
 
-placement_error = MakeSound("placement error", "ui/placement_error.wav")
-placement_success = MakeSound("placement success", "ui/placement_success.wav")
+placement_error = MakeSound("placement error", "interface/placement_error.wav")
+placement_success = MakeSound("placement success", "interface/placement_success.wav")
 
 rescue = MakeSound("rescue", "misc/rescue.wav")
 
