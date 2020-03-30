@@ -37,7 +37,7 @@ bckground:Load()
 bckground:Resize(Video.Width, Video.Height)
 backgroundWidget = ImageWidget(bckground)
 
-wyrmsun_logo = CGraphic:New("ui/wyrmsun_logo_" .. Video.Height .. ".png")
+wyrmsun_logo = CGraphic:New("interface/wyrmsun_logo_" .. Video.Height .. ".png")
 wyrmsun_logo:Load()
 --wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
 wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)

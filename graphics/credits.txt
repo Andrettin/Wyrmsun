@@ -718,6 +718,8 @@
 /graphics/interface/dwarven/up_arrow_pressed.png (by Jinn) (licensed under the CC0)
 /graphics/interface/dwarven/up_arrow_normal_slider.png (by Jinn) (licensed under the CC0)
 /graphics/interface/dwarven/up_arrow_pressed_slider.png (by Jinn) (licensed under the CC0)
+/graphics/interface/wyrmsun_logo.png (by Jinn) (licensed under the CC0)
+/graphics/interface/wyrmsun_logo_monochromatic.png (by Jinn) (licensed under the CC0)
 /graphics/kobold/icons/champion.png (by Exidelo) (licensed under the CC0)
 /graphics/kobold/icons/kobold_footpad.png (by Exidelo) (licensed under the CC0)
 /graphics/kobold/icons/slasher.png (by Exidelo) (licensed under the CC0)
