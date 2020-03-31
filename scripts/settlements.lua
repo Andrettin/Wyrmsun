@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2017-2019 by Andrettin
+--      (c) Copyright 2017-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -64,11 +64,9 @@ Load("scripts/settlements_norway.lua")
 Load("scripts/settlements_persia.lua")
 Load("scripts/settlements_poland.lua")
 Load("scripts/settlements_portugal.lua")
-Load("scripts/settlements_russia.lua")
 Load("scripts/settlements_slovakia.lua")
 Load("scripts/settlements_spain.lua")
 Load("scripts/settlements_sweden.lua")
 Load("scripts/settlements_switzerland.lua")
-Load("scripts/settlements_ukraine.lua")
 
 Load("scripts/settlements_nidavellir.lua")

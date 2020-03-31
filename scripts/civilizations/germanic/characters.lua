@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2019 by Andrettin
+--      (c) Copyright 2015-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -309,29 +309,6 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "asa-tribe"
-	}
-})
-
-DefineCharacter("voden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Wodanaz", -- Proto-Germanic name of Odin
-	-- "Vóden"; euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
-	Gender = "male",
-	Type = "unit-germanic-chieftain", -- chieftain
-	Civilization = "germanic",
-	Faction = "asa-tribe",
-	Trait = "upgrade-wise",
-	HairVariation = "gray-hair",
-	StartDate = -3000,
-	DeathDate = {-2800, 12, 30},
-	Father = "friallaf",
-	Deities = {"odin", "tyr"},
-	HistoricalLocations = {
-		-3000, "earth", "azov",
-		-2900, "earth", "novgorod",
-		-2800, "earth", "kiel"
-	},
-	HistoricalTitles = {
-		"head-of-state", -3000, -2800, "asa-tribe"
 	}
 })
 
