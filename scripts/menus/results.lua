@@ -75,13 +75,13 @@ function RunResultsMenu()
 
 	c = 0
 	for i=0,(PlayerMax - 2) do
-		if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive and GetPlayerData(ThisPlayer.Index, "HasContactWith", i)) then
+		if (GetPlayerData(i, "TotalUnits") > 0 and Players[i].Type ~= PlayerRescuePassive and Players[i].Type ~= PlayerRescueActive and GetPlayerData(CPlayer:GetThisPlayer().Index, "HasContactWith", i)) then
 			local name = _(GetPlayerData(i, "Name"))
-			if (ThisPlayer.Index == i) then
+			if (CPlayer:GetThisPlayer().Index == i) then
 				name = name .. " - " .. _("You")
-			elseif (ThisPlayer:IsAllied(Players[i])) then
+			elseif (CPlayer:GetThisPlayer():IsAllied(Players[i])) then
 				name = name .. " - " .. _("Ally")
-			elseif (ThisPlayer:IsEnemy(Players[i])) then
+			elseif (CPlayer:GetThisPlayer():IsEnemy(Players[i])) then
 				name = name .. " - " .. _("Enemy")
 			else
 				name = name .. " - " .. _("Neutral")
