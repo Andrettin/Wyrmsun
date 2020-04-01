@@ -10,7 +10,7 @@
 --
 --      widgets.lua - Define the widgets
 --
---      (c) Copyright 2004-2019 by Jimmy Salmon and Andrettin
+--      (c) Copyright 2004-2020 by Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -155,13 +155,13 @@ DefineButtonStyle("main-goblin", {
 	TextAlign = "Center",
 	TextPos = {50, 0},
 	Default = {
-		File = "goblin/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/goblin/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "goblin/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/goblin/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51, 1},
 	},
@@ -175,13 +175,13 @@ DefineButtonStyle("network-goblin", {
 	TextAlign = "Center",
 	TextPos = {40, 4},
 	Default = {
-		File = "goblin/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+		File = "interface/goblin/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "goblin/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		File = "interface/goblin/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {42, 6},
 	},
@@ -239,13 +239,13 @@ DefineButtonStyle("world-jotunheim", {
 	TextAlign = "Center",
 	TextPos = {10, 0},
 	Default = {
-		File = "goblin/ui/widgets/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
+		File = "interface/goblin/radio-normal-selected.png", Size = {19, 19}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "goblin/ui/widgets/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
+		File = "interface/goblin/radio-pressed-selected.png", Size = {19, 19}, Frame = 0
 	}
 })
 

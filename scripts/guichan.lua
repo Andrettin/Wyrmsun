@@ -44,23 +44,13 @@ wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
 function panel(n)
 	local panels = {}
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-		panels = {
-			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_1.png",
-			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_2.png",
-			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_3.png",
-			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_4.png",
-			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_5.png"
-		}
-	else
-		panels = {
-			"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_1.png",
-			"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_2.png",
-			"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_3.png",
-			"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_4.png",
-			"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_5.png"
-		}
-	end
+	panels = {
+		"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_1.png",
+		"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_2.png",
+		"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_3.png",
+		"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_4.png",
+		"interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/panel_5.png"
+	}
 	return panels[n]
 end
 
@@ -151,22 +141,14 @@ function AddMenuHelpers(menu)
 		local g_bln
 		local g_blp
 		local g_blg
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_bln = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
-			g_blp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
-			g_blg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_bln = CGraphic:New("interface/germanic/button-large-normal.png")
-			g_blp = CGraphic:New("interface/germanic/button-large-pressed.png")
-			g_blg = CGraphic:New("interface/germanic/button-large-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 			g_bln = CGraphic:New("interface/default/button_large_normal.png")
 			g_blp = CGraphic:New("interface/default/button_large_pressed.png")
 			g_blg = CGraphic:New("interface/default/button_large_grayed.png")
 		else
-			g_bln = CGraphic:New("interface/dwarven/button_large_normal.png")
-			g_blp = CGraphic:New("interface/dwarven/button_large_pressed.png")
-			g_blg = CGraphic:New("interface/dwarven/button_large_grayed.png")
+			g_bln = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_normal.png")
+			g_blp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_pressed.png")
+			g_blg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_grayed.png")
 		end
 		g_bln:Load()
 		g_blp:Load()
@@ -189,22 +171,14 @@ function AddMenuHelpers(menu)
 		local g_bsn
 		local g_bsp
 		local g_bsg
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_bsn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-normal.png")
-			g_bsp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-pressed.png")
-			g_bsg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_bsn = CGraphic:New("interface/germanic/button-small-normal.png")
-			g_bsp = CGraphic:New("interface/germanic/button-small-pressed.png")
-			g_bsg = CGraphic:New("interface/germanic/button-small-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 			g_bsn = CGraphic:New("interface/default/button_small_normal.png")
 			g_bsp = CGraphic:New("interface/default/button_small_pressed.png")
 			g_bsg = CGraphic:New("interface/default/button_small_grayed.png")
 		else
-			g_bsn = CGraphic:New("interface/dwarven/button_small_normal.png")
-			g_bsp = CGraphic:New("interface/dwarven/button_small_pressed.png")
-			g_bsg = CGraphic:New("interface/dwarven/button_small_grayed.png")
+			g_bsn = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_normal.png")
+			g_bsp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_pressed.png")
+			g_bsg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_grayed.png")
 		end
 		g_bsn:Load()
 		g_bsp:Load()
@@ -234,16 +208,8 @@ function AddMenuHelpers(menu)
 		b:setBackgroundColor(Color(0,0,0,0))
 		local g_lslider_n
 		local g_lslider_p
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
-			g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_lslider_n = CGraphic:New("interface/germanic/left-arrow-normal.png")
-			g_lslider_p = CGraphic:New("interface/germanic/left-arrow-pressed.png")
-		else
-			g_lslider_n = CGraphic:New("interface/dwarven/left_arrow_normal.png")
-			g_lslider_p = CGraphic:New("interface/dwarven/left_arrow_pressed.png")
-		end
+		g_lslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_normal.png")
+		g_lslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_pressed.png")
 		g_lslider_n:Load()
 		g_lslider_p:Load()
 		b:setNormalImage(g_lslider_n)
@@ -258,16 +224,8 @@ function AddMenuHelpers(menu)
 		-- New Slider Functions
 		local g_marker
 		local g_slider
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_marker = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-knob.png")
-			g_slider = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-bar-normal.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_marker = CGraphic:New("interface/germanic/slider-knob.png")
-			g_slider = CGraphic:New("interface/germanic/slider-bar-normal.png")
-		else
-			g_marker = CGraphic:New("interface/dwarven/slider_knob.png")
-			g_slider = CGraphic:New("interface/dwarven/slider_bar_normal.png")
-		end
+		g_marker = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_knob.png")
+		g_slider = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_bar_normal.png")
 		g_marker:Load()
 		g_slider:Load()
 		b:setMarkerImage(g_marker)
@@ -286,16 +244,8 @@ function AddMenuHelpers(menu)
 		b:setBackgroundColor(Color(0,0,0,0))
 		local g_rslider_n
 		local g_rslider_p
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
-			g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_rslider_n = CGraphic:New("interface/germanic/right-arrow-normal.png")
-			g_rslider_p = CGraphic:New("interface/germanic/right-arrow-pressed.png")
-		else
-			g_rslider_n = CGraphic:New("interface/dwarven/right_arrow_normal.png")
-			g_rslider_p = CGraphic:New("interface/dwarven/right_arrow_pressed.png")
-		end
+		g_rslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_normal.png")
+		g_rslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_pressed.png")
 		g_rslider_n:Load()
 		g_rslider_p:Load()
 		b:setNormalImage(g_rslider_n)
@@ -475,22 +425,10 @@ function AddMenuHelpers(menu)
 		local g_checkbox_off2
 		local g_checkbox_on
 		local g_checkbox_on2
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_checkbox_off = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-unselected.png")
-			g_checkbox_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
-			g_checkbox_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
-			g_checkbox_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_checkbox_off = CGraphic:New("interface/germanic/radio-normal-unselected.png")
-			g_checkbox_off2 = CGraphic:New("interface/germanic/radio-pressed-unselected.png")
-			g_checkbox_on = CGraphic:New("interface/germanic/radio-normal-selected.png")
-			g_checkbox_on2 = CGraphic:New("interface/germanic/radio-pressed-selected.png")
-		else
-			g_checkbox_off = CGraphic:New("interface/dwarven/radio_normal_unselected.png")
-			g_checkbox_off2 = CGraphic:New("interface/dwarven/radio_pressed_unselected.png")
-			g_checkbox_on = CGraphic:New("interface/dwarven/radio_normal_selected.png")
-			g_checkbox_on2 = CGraphic:New("interface/dwarven/radio_pressed_selected.png")
-		end
+		g_checkbox_off = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png")
+		g_checkbox_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
+		g_checkbox_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
+		g_checkbox_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
 		g_checkbox_off:Load()
 		g_checkbox_off2:Load()
 		g_checkbox_on:Load()
@@ -529,22 +467,10 @@ function AddMenuHelpers(menu)
 		local g_radio_off2
 		local g_radio_on
 		local g_radio_on2
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_radio_off = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-unselected.png")
-			g_radio_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
-			g_radio_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
-			g_radio_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_radio_off = CGraphic:New("interface/germanic/radio-normal-unselected.png")
-			g_radio_off2 = CGraphic:New("interface/germanic/radio-pressed-unselected.png")
-			g_radio_on = CGraphic:New("interface/germanic/radio-normal-selected.png")
-			g_radio_on2 = CGraphic:New("interface/germanic/radio-pressed-selected.png")
-		else
-			g_radio_off = CGraphic:New("interface/dwarven/radio_normal_unselected.png")
-			g_radio_off2 = CGraphic:New("interface/dwarven/radio_pressed_unselected.png")
-			g_radio_on = CGraphic:New("interface/dwarven/radio_normal_selected.png")
-			g_radio_on2 = CGraphic:New("interface/dwarven/radio_pressed_selected.png")
-		end
+		g_radio_off = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png")
+		g_radio_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
+		g_radio_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
+		g_radio_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
 		g_radio_off:Load()
 		g_radio_off2:Load()
 		g_radio_on:Load()
@@ -570,19 +496,9 @@ function AddMenuHelpers(menu)
 		local g_bar
 		local g_dslider_n
 		local g_dslider_p
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			g_bar = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-normal.png")
-			g_dslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo-saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			g_bar = CGraphic:New("interface/germanic/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("interface/germanic/down-arrow-normal.png")
-			g_dslider_p = CGraphic:New("interface/germanic/down-arrow-pressed.png")
-		else
-			g_bar = CGraphic:New("interface/dwarven/pulldown_bar_normal.png")
-			g_dslider_n = CGraphic:New("interface/dwarven/down_arrow_normal.png")
-			g_dslider_p = CGraphic:New("interface/dwarven/down_arrow_pressed.png")
-		end
+		g_bar = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/pulldown_bar_normal.png")
+		g_dslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_normal.png")
+		g_dslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_pressed.png")
 		g_bar:Load()
 		g_dslider_n:Load()
 		g_dslider_p:Load()
