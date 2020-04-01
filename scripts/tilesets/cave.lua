@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2000-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2000-2020 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software-- you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -165,6 +165,3 @@ BuildTilesetTables()
 
 Load("scripts/scripts.lua")
 GameSettings.Inside = true
-if (LoadedGame == false) then
-	SetTimeOfDaySchedule("")
-end
