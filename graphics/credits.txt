@@ -33,6 +33,8 @@
 /graphics/buildings/neutral/mithril_mine_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/neutral/silver_deposit_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/neutral/silver_mine_snow.png (by Jinn) (licensed under the CC0)
+/graphics/buildings/neutral/yale_cave_snow.png (by Jinn) (licensed under the CC0)
+/graphics/buildings/neutral/yale_hunting_lodge_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/teuton/barracks_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/teuton/castle_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/teuton/catapult_tower_snow.png (by Jinn) (licensed under the CC0)
