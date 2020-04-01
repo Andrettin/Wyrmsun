@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2019 by Andrettin
+--      (c) Copyright 2015-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -40,10 +40,10 @@ DefineCivilization("neutral", {
 		"return-goods", "icon-dwarven-return-goods"
 	},
 	UIFillers = {
-		"dwarf/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dwarf/ui/buttonpanel.png", -256, -200,
-		"dwarf/ui/infopanel.png", 0, -200
+		"interface/dwarven/filler_bottom.png", 380, -181,
+		"interface/dwarven/resource.png", 0, 0,
+		"interface/dwarven/buttonpanel.png", -256, -200,
+		"interface/dwarven/infopanel.png", 0, -200
 	},
 	ForceTypeWeights = {"land-force", 3, "naval-force", 1, "air-force", 1},
 	ForceTemplates = {
@@ -684,10 +684,10 @@ DefineCivilization("dwarf", {
 		"return-goods", "icon-dwarven-return-goods"
 	},
 	UIFillers = {
-		"dwarf/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dwarf/ui/buttonpanel.png", -256, -200,
-		"dwarf/ui/infopanel.png", 0, -200
+		"interface/dwarven/filler_bottom.png", 380, -181,
+		"interface/dwarven/resource.png", 0, 0,
+		"interface/dwarven/buttonpanel.png", -256, -200,
+		"interface/dwarven/infopanel.png", 0, -200
 	},
 	Description = "Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them.",
 	PersonalNames = {
@@ -1720,10 +1720,10 @@ DefineCivilization("ettin", {
 		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
-		"dwarf/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dwarf/ui/buttonpanel.png", -256, -200,
-		"dwarf/ui/infopanel.png", 0, -200
+		"interface/dwarven/filler_bottom.png", 380, -181,
+		"interface/dwarven/resource.png", 0, 0,
+		"interface/dwarven/buttonpanel.png", -256, -200,
+		"interface/dwarven/infopanel.png", 0, -200
 	},
 	Description = "The ettins of Jotunheim are an extremely ancient race. They possess deep knowledge of mystic forces, passed on by their sages from generation to generation. Ettins often lord over the smaller and weaker peoples of their world, such as orcs and ogres.",
 --	Description = "The ettins of Jotunheim are one of the most ancient sentient peoples to have existed. They possess deep knowledge of mystic forces, passed on by their sages from generation to generation. One of their mystics once discovered another plane of existence - Asgard - during a trance. They sought more and more knowledge about those strange lands, until they were able to construct a massive portal leading to the new realm. There they found a group of powerful beings, and soon hostilities erupted between them and the invaders. Though few in number, with their sword and sorcery each of the Asgardians slew scores of ettins. The invasion ended in disaster. Those remaining of the gigantic creatures squirreled towards the portal, as the Asgardians used their powers to destroy it.\n\nDespite the failure of their campaign, the ettins had made a phenomenal advance in their mystic knowledge. Their portal had been destroyed, but the ability to create a new one was now theirs - forever. And as their magic wisdom and their martial prowess grew, they would eventually bring forth heroes capable of taking on the Asgardians.",
@@ -1981,10 +1981,10 @@ DefineCivilization("orc", {
 		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
-		"dwarf/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dwarf/ui/buttonpanel.png", -256, -200,
-		"dwarf/ui/infopanel.png", 0, -200
+		"interface/dwarven/filler_bottom.png", 380, -181,
+		"interface/dwarven/resource.png", 0, 0,
+		"interface/dwarven/buttonpanel.png", -256, -200,
+		"interface/dwarven/infopanel.png", 0, -200
 	},
 	PersonalNames = {
 		"male", "Badush", -- from Battle for Wesnoth

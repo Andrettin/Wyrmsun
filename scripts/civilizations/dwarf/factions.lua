@@ -36,7 +36,7 @@ DefineFaction("brising-clan", {
 	},
 	UIFillers = {
 		"dlcs/brising_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
+		"interface/dwarven/resource.png", 0, 0,
 		"dlcs/brising_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
@@ -60,7 +60,7 @@ DefineFaction("goldhoof-clan", {
 	},
 	UIFillers = {
 		"dlcs/joruvellir_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
+		"interface/dwarven/resource.png", 0, 0,
 		"dlcs/joruvellir_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/joruvellir_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
