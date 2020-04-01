@@ -76,9 +76,9 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_brown_ha
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_gray_hair.png", "teuton/icons/spearman.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_red_hair.png", "teuton/icons/spearman.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frankish_spatha.png", "teuton/icons/spatha.png")
-SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", "germanic/ui/buttonpanel.png")
-SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", "germanic/ui/filler_bottom.png")
-SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "germanic/ui/infopanel.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", "interface/germanic/buttonpanel.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", "interface/germanic/filler_bottom.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "interface/germanic/infopanel.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png", "teuton/units/ritter_shield.png")
 
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png", "dwarf/buildings/town_hall.png")
