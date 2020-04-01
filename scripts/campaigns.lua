@@ -25,36 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCampaign("westward-migration", {
-	Name = "Westward Migration",
-	Description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west.",
-	Faction = "asa-tribe",
-	RequiredQuests = {"on-the-vanaquisl"},
-	StartDate = {-2900, SyncRand(12) + 1, 1},
-	MapTemplates = {
-		"earth", {4369, 609}, {256, 256}
-	}
-})
-
 DefineCampaign("a-home-in-the-fields-of-sand", {
 	Name = "A Home in the Fields of Sand",
-	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and seek a new home.",
+	Description = "As Svarinshaug proves too small for the growing dwarven population, the Goldhoof clan must move away and find a new home.",
 	Faction = "goldhoof-clan",
 	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {
 		"nidavellir", {0, 0}, {256, 256},
 		"nidavellir-underground", {0, 0}, {256, 256}
-	}
-})
-
-DefineCampaign("the-settlement-of-scandinavia", {
-	Name = "The Settlement of Scandinavia",
-	Description = "After a long journey, the Asa reach lands ripe for settlement.",
-	Faction = "asa-tribe",
-	RequiredQuests = {"westward-migration"},
-	StartDate = {-2800, SyncRand(12) + 1, 1},
-	MapTemplates = {
-		"earth", {4022, 667}, {256, 256}
 	}
 })
 
