@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 1998-2019 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 1998-2020 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1414,8 +1414,8 @@ DefineUnitType("unit-hole", {
 
 DefineUnitType("unit-cavern-entrance", {
 	Name = "Cavern Entrance",
-	Image = {"file", "neutral/buildings/cavern_entrance.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/cavern_entrance_shadow.png", "size", {96, 96}},
+	Image = {"file", "buildings/neutral/cavern_entrance.png", "size", {96, 96}},
+	Shadow = {"file", "buildings/neutral/cavern_entrance_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-cavern-entrance",
 	Description = "Cavern entrances connect different surface levels.",
 	NeutralMinimapColor = {128, 128, 0},
@@ -1434,12 +1434,46 @@ DefineUnitType("unit-cavern-entrance", {
 	Building = true,
 	Variations = {
 		{
-			"variation-id", "gray"
+			"variation-id", "gray",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "gray-snow-winter",
+			"file", "buildings/neutral/cavern_entrance_snow.png",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "gray-snow",
+			"file", "buildings/neutral/cavern_entrance_snow.png",
+			"terrain", "snow"
 		},
 		{
 			"variation-id", "brown",
-			"file", "neutral/buildings/cavern_entrance_brown.png",
-			"icon", "icon-cavern-entrance-brown"
+			"file", "buildings/neutral/cavern_entrance_brown.png",
+			"icon", "icon-cavern-entrance-brown",
+			"terrain-forbidden", "snow",
+			"forbidden-season", "winter"
+		},
+		{
+			"variation-id", "brown-snow-winter",
+			"file", "buildings/neutral/cavern_entrance_brown_snow.png",
+			"icon", "icon-cavern-entrance-brown",
+			"terrain", "dirt",
+			"terrain", "dry-mud",
+			"terrain", "grass",
+			"terrain", "snow",
+			"season", "winter"
+		},
+		{
+			"variation-id", "brown-snow",
+			"file", "buildings/neutral/cavern_entrance_brown_snow.png",
+			"icon", "icon-cavern-entrance-brown",
+			"terrain", "snow"
 		}
 	},
 	Sounds = {
