@@ -672,6 +672,7 @@
 /graphics/human/units/pants_mounted.png (by Jinn and b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/shoes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/spear.png (by 2D-Retroperspectives) (licensed under the CC0)
+/graphics/icons/neutral/belt.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/neutral/dragonslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/neutral/dwarfslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/neutral/elfslayer.png (by Exidelo) (licensed under the CC0)
@@ -688,7 +689,6 @@
 /graphics/interface/default/button-thin-medium-pressed.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button-thin-small-normal.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button-thin-small-pressed.png (by Jinn) (licensed under the CC0)
-
 /graphics/interface/dwarven/button_large_grayed.png (by Jinn) (licensed under the CC0)
 /graphics/interface/dwarven/button_large_normal.png (by Jinn) (licensed under the CC0)
 /graphics/interface/dwarven/button_large_pressed.png (by Jinn) (licensed under the CC0)
@@ -766,6 +766,7 @@
 /graphics/interface/dwarven/up_arrow_pressed_slider.png (by Jinn) (licensed under the CC0)
 /graphics/interface/wyrmsun_logo.png (by Jinn) (licensed under the CC0)
 /graphics/interface/wyrmsun_logo_monochromatic.png (by Jinn) (licensed under the CC0)
+/graphics/items/neutral/belt.png (by Exidelo) (licensed under the CC0)
 /graphics/kobold/icons/champion.png (by Exidelo) (licensed under the CC0)
 /graphics/kobold/icons/kobold_footpad.png (by Exidelo) (licensed under the CC0)
 /graphics/kobold/icons/slasher.png (by Exidelo) (licensed under the CC0)
