@@ -453,7 +453,7 @@ elseif (GrandStrategyEventMap) then
 	CreateProvinceUnits("Southern Tunnels", 2, 4, false, true)
 	CreateProvinceCustomHero("Southern Tunnels", 2)
 	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
-		unit = CreateUnit("unit-dwarven-thane", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-dwarven-thane", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
 	end

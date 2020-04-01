@@ -368,7 +368,7 @@ DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 			"text", "What did you say?! I shall stain your lands with your own blood!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y}, Players[trigger_player].StartMapLayer)
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y}, CPlayer:GetPlayer(trigger_player).StartMapLayer)
 					SetUnitVariable(unit, "TTL", 600)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
 					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)
@@ -390,7 +390,7 @@ DefineDialogue("jarl-threatens-the-hersings", {
 			"text", "We greet you into our village, and you dare threaten us?! Prepare to die!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {Players[trigger_player].StartPos.x, Players[trigger_player].StartPos.y}, Players[trigger_player].StartMapLayer)
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y}, CPlayer:GetPlayer(trigger_player).StartMapLayer)
 					SetUnitVariable(unit, "TTL", 600)
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
 					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)

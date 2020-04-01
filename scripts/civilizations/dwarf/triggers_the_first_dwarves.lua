@@ -67,7 +67,7 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "grafvitning-tribe" and GetPlayerData(i, "UnitTypesAiActiveCount", "unit-kobold-footpad") >= 1 and FindHero("modsognir") ~= nil and FindHero("durin") ~= nil and FindHero("modsognir", i) == nil and FindHero("durin", i) == nil) then
 				local modsognir_player = GetUnitVariable(FindHero("modsognir"), "Player")
-				if (Players[modsognir_player].Type ~= PlayerNeutral and GetPlayerData(modsognir_player, "UnitTypesCount", "unit-dwarven-barracks") > 0) then
+				if (CPlayer:GetPlayer(modsognir_player).Type ~= PlayerNeutral and GetPlayerData(modsognir_player, "UnitTypesCount", "unit-dwarven-barracks") > 0) then
 					trigger_player = i
 					return true
 				end

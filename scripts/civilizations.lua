@@ -29,6 +29,7 @@ DefineCivilization("neutral", {
 	Display = "Neutral",
 	Visible = false,
 	Playable = false,
+	Interface = "dwarven",
 	Adjective = "Neutral",
 	DefaultColor = "gray",
 	ButtonIcons = {
@@ -671,6 +672,7 @@ DefineCivilization("dwarf", {
 	Visible = true,
 	Species = "dwarf",
 	ParentCivilization = "neutral",
+	Interface = "dwarven",
 	Language = "dwarven",
 	Adjective = "Dwarven",
 	DefaultColor = "red",

@@ -31,19 +31,19 @@ if (LoadedGame == false) then
 
 	if (GrandStrategy == false) then
 		if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 		elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 		elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 		elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-			unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 		end
 	end
 end

@@ -31,12 +31,12 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "RaceName", "dwarf")
 	SetPlayerData(1, "Faction", "random")
 	
-	unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+	unit = CreateUnit("unit-gnomish-master-at-arms", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 	SetUnitVariable(unit, "Character", "pypo")
 
-	unit = CreateUnit("unit-dwarven-yale-rider", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- dwarven noble
+	unit = CreateUnit("unit-dwarven-yale-rider", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y}) -- dwarven noble
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-witness", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- old wise and faithful steward to the dwarven noble
+	unit = CreateUnit("unit-dwarven-witness", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y}) -- old wise and faithful steward to the dwarven noble
 	SetUnitVariable(unit, "Active", false)
 	AcquireTrait(unit, "upgrade-old")
 	

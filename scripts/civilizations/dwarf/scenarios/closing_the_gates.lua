@@ -139,7 +139,7 @@ AddTrigger("closing-the-gates-introduction",
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 
-		unit = CreateUnit("unit-revealer", player, {Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.x, Players[GetFactionPlayer("Shinsplitter Clan")].StartPos.y})
+		unit = CreateUnit("unit-revealer", player, {CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).StartPos.y})
 		Event(
 			"",
 			"Next in our story, Rugnur retreated into the caves of Knalga. But the Shinsplitters pressed on, and would enter the caves shortly.",

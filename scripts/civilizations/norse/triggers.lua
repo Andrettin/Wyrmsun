@@ -167,7 +167,7 @@ AddTrigger("the-house-of-seven-fathers",
 		if (the_house_of_seven_fathers) then
 			local uncount = GetUnitsAroundUnit(the_house_of_seven_fathers, 1, true)
 			for unit1 = 1,table.getn(uncount) do 
-				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Character") ~= "" and GetUnitVariable(uncount[unit1], "CustomCharacter") == false and Players[GetUnitVariable(the_house_of_seven_fathers, "Player")]:IsEnemy(Players[GetUnitVariable(uncount[unit1], "Player")]) == false) then -- for now only allowed for non-custom heroes, for code reasons
+				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Character") ~= "" and GetUnitVariable(uncount[unit1], "CustomCharacter") == false and CPlayer:GetPlayer(GetUnitVariable(the_house_of_seven_fathers, "Player")):IsEnemy(CPlayer:GetPlayer(GetUnitVariable(uncount[unit1], "Player"))) == false) then -- for now only allowed for non-custom heroes, for code reasons
 					trigger_player = GetUnitVariable(uncount[unit1], "Player")
 					second_trigger_player = GetUnitVariable(the_house_of_seven_fathers, "Player")
 					trigger_hero = GetUnitVariable(uncount[unit1], "Character")

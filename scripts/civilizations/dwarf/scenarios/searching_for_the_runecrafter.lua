@@ -423,7 +423,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 		return false
 	end,
 	function()
-		unit = CreateUnit("unit-dwarven-thane", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
+		unit = CreateUnit("unit-dwarven-thane", player, {CPlayer:GetPlayer(GetFactionPlayer("Thursagan")).StartPos.x, CPlayer:GetPlayer(GetFactionPlayer("Thursagan")).StartPos.y})
 		SetUnitVariable(unit, "Character", "thursagan")
 		Event(
 			FindHero("thursagan"),

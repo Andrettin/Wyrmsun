@@ -73,13 +73,13 @@ AddTrigger("oin-leaves",
 		end
 		SetStartView(oinling_player, GetSiteData("andvaris-falls", "MapCenterPosX"), GetSiteData("andvaris-falls", "MapCenterPosY"), GetSiteData("andvaris-falls", "MapLayer"))
 		unit = CreateUnitOnTop("unit-dwarven-town-hall", oinling_player, GetSiteData("andvaris-falls", "SiteUnit"))
-		unit = CreateUnit("unit-dwarven-mushroom-farm", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-mushroom-farm", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
 		local players_around = GetPlayersAroundUnit(unit, 256)
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
-		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {Players[oinling_player].StartPos.x, Players[oinling_player].StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
+		unit = CreateUnit("unit-dwarven-axefighter", oinling_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetSiteData("andvaris-falls", "MapLayer"))
 		SetUnitVariable(unit, "Character", "andvari") -- Oin's son
 		
 		for i = 1, table.getn(players_around) do 

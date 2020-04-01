@@ -656,7 +656,7 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		local near_starting_location = false
 		for i=0,(PlayerMax - 2) do
 			if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
-				if (math.abs(Players[i].StartPos.x - RandomX) < 4 and math.abs(Players[i].StartPos.y - RandomY) < 4) then
+				if (math.abs(CPlayer:GetPlayer(i).StartPos.x - RandomX) < 4 and math.abs(CPlayer:GetPlayer(i).StartPos.y - RandomY) < 4) then
 					near_starting_location = true
 				end
 			end
@@ -1401,10 +1401,10 @@ end
 
 function CreateStartingLocationResourcePiles(loc_player, pile_type, pile_quantity)
 	if (LoadedGame == false) then
-		local min_x = math.max(Players[loc_player].StartPos.x - 8, 0)
-		local max_x = math.min(Players[loc_player].StartPos.x + 8, CMap.Map.Info.MapWidth - 1)
-		local min_y = math.max(Players[loc_player].StartPos.y - 8, 0)
-		local max_y = math.min(Players[loc_player].StartPos.y + 8, CMap.Map.Info.MapHeight - 1)
+		local min_x = math.max(CPlayer:GetPlayer(loc_player).StartPos.x - 8, 0)
+		local max_x = math.min(CPlayer:GetPlayer(loc_player).StartPos.x + 8, CMap.Map.Info.MapWidth - 1)
+		local min_y = math.max(CPlayer:GetPlayer(loc_player).StartPos.y - 8, 0)
+		local max_y = math.min(CPlayer:GetPlayer(loc_player).StartPos.y + 8, CMap.Map.Info.MapHeight - 1)
 				
 		local RandomX = 0
 		local RandomY = 0
@@ -1836,7 +1836,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 						for j = 1, table.getn(settlement_units) do
 							local settlement_site_distance
 							for k = 0, (i - 1) do -- every player before this one
-								local new_settlement_site_distance = math.sqrt(math.pow(GetUnitVariable(settlement_units[j], "PosX") - Players[k].StartPos.x, 2) + math.pow(GetUnitVariable(settlement_units[j], "PosY") - Players[k].StartPos.y, 2))
+								local new_settlement_site_distance = math.sqrt(math.pow(GetUnitVariable(settlement_units[j], "PosX") - CPlayer:GetPlayer(k).StartPos.x, 2) + math.pow(GetUnitVariable(settlement_units[j], "PosY") - CPlayer:GetPlayer(k).StartPos.y, 2))
 								
 								if (settlement_site_distance) then
 									settlement_site_distance = math.min(settlement_site_distance, new_settlement_site_distance)
@@ -1856,11 +1856,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 				end
 				
 				while (starting_point_found == false and WhileCount < 10000) do
-					if (Players[i].StartPos.x > 0 and Players[i].StartPos.y > 0) then -- if the player already has a custom starting location set, then see if that area (or failing that the one surrounding it) is actually free
-						local second_min_x = Players[i].StartPos.x - WhileCount
-						local second_max_x = Players[i].StartPos.x + WhileCount
-						local second_min_y = Players[i].StartPos.y - WhileCount
-						local second_max_y = Players[i].StartPos.y + WhileCount
+					if (CPlayer:GetPlayer(i).StartPos.x > 0 and CPlayer:GetPlayer(i).StartPos.y > 0) then -- if the player already has a custom starting location set, then see if that area (or failing that the one surrounding it) is actually free
+						local second_min_x = CPlayer:GetPlayer(i).StartPos.x - WhileCount
+						local second_max_x = CPlayer:GetPlayer(i).StartPos.x + WhileCount
+						local second_min_y = CPlayer:GetPlayer(i).StartPos.y - WhileCount
+						local second_max_y = CPlayer:GetPlayer(i).StartPos.y + WhileCount
 						player_spawn_point = {SyncRand(second_max_x - second_min_x + 1) + second_min_x, SyncRand(second_max_y - second_min_y + 1) + second_min_y}
 					else
 						if (symmetric == false) then
@@ -1885,7 +1885,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 					end
 					for j=0,(PlayerMax - 2) do
 						if (j < i and (CMap.Map.Info.PlayerType[j] == PlayerPerson or CMap.Map.Info.PlayerType[j] == PlayerComputer)) then
-							if (math.abs(player_spawn_point[1] - Players[j].StartPos.x) < 32 and math.abs(player_spawn_point[2] - Players[j].StartPos.y) < 32) then -- shouldn't start too close to another player
+							if (math.abs(player_spawn_point[1] - CPlayer:GetPlayer(j).StartPos.x) < 32 and math.abs(player_spawn_point[2] - CPlayer:GetPlayer(j).StartPos.y) < 32) then -- shouldn't start too close to another player
 								starting_point_found = false
 							end
 						end
@@ -2315,7 +2315,7 @@ function GenerateRandomMap(arg)
 			for i=0,(PlayerMax - 2) do
 				if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 					for j=1,arg.WorkerQuantity do
-						unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+						unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 					end
 				end
 			end
@@ -3081,7 +3081,7 @@ end
 
 function FindUnusedPlayerSlot()
 	for i=0,(PlayerMax - 2) do
-		if (Players[i].Type == PlayerNobody) then
+		if (CPlayer:GetPlayer(i).Type == PlayerNobody) then
 			return i
 		end
 	end
@@ -3858,13 +3858,13 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 			gold_mine_spawn_point = {x + SyncRand(14), y + SyncRand(14)}
 		else
 			if (RandomNumber == 0) then -- north
-				gold_mine_spawn_point = {(Players[player].StartPos.x + (SyncRand(14) - 6)), (Players[player].StartPos.y - 6)}
+				gold_mine_spawn_point = {(CPlayer:GetPlayer(player).StartPos.x + (SyncRand(14) - 6)), (CPlayer:GetPlayer(player).StartPos.y - 6)}
 			elseif (RandomNumber == 1) then -- south
-				gold_mine_spawn_point = {(Players[player].StartPos.x + (SyncRand(14) - 6)), (Players[player].StartPos.y + 7)}
+				gold_mine_spawn_point = {(CPlayer:GetPlayer(player).StartPos.x + (SyncRand(14) - 6)), (CPlayer:GetPlayer(player).StartPos.y + 7)}
 			elseif (RandomNumber == 2) then -- west
-				gold_mine_spawn_point = {(Players[player].StartPos.x - 6), (Players[player].StartPos.y + (SyncRand(14) - 6))}
+				gold_mine_spawn_point = {(CPlayer:GetPlayer(player).StartPos.x - 6), (CPlayer:GetPlayer(player).StartPos.y + (SyncRand(14) - 6))}
 			elseif (RandomNumber == 3) then -- east
-				gold_mine_spawn_point = {(Players[player].StartPos.x + 7), (Players[player].StartPos.y + (SyncRand(14) - 6))}
+				gold_mine_spawn_point = {(CPlayer:GetPlayer(player).StartPos.x + 7), (CPlayer:GetPlayer(player).StartPos.y + (SyncRand(14) - 6))}
 			end
 		end
 		local free_square = true
@@ -3926,7 +3926,7 @@ function CreateStartingBuilding(player, building_type)
 		local road_found = false
 		local SecondWhileCount = 0
 		while (road_found == false and SecondWhileCount < 10000) do
-			road_tile = {(Players[player].StartPos.x + (SyncRand(32) - 16)), (Players[player].StartPos.y + (SyncRand(32) - 16))}
+			road_tile = {(CPlayer:GetPlayer(player).StartPos.x + (SyncRand(32) - 16)), (CPlayer:GetPlayer(player).StartPos.y + (SyncRand(32) - 16))}
 			if (RawTile(road_tile[1], road_tile[2]) == "Road") then
 				road_found = true
 			end
@@ -4018,11 +4018,11 @@ function GenerateValley(direction, lake_quantity)
 
 	for i=0,(PlayerMax - 2) do
 		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 		end
 	end
 
@@ -5563,10 +5563,10 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								
 								if (player_hero == "random") then
 									for i = 1, 5 do
-										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", player_civilization), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", player_civilization), 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 									end
 									for i = 1, 3 do
-										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", player_civilization), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", player_civilization), 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 									end
 								end
 								
@@ -5668,10 +5668,10 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								
 								if (second_player_hero == "random") then
 									for i = 1, 5 do
-										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", second_player_civilization), 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+										OldCreateUnit(ConvertUnitType("unit-dwarven-axefighter", second_player_civilization), 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
 									end
 									for i = 1, 3 do
-										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", second_player_civilization), 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+										OldCreateUnit(ConvertUnitType("unit-dwarven-scout", second_player_civilization), 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
 									end
 								end
 								
@@ -5994,7 +5994,7 @@ function GenerateCave(town_halls, symmetric)
 	for i=0,(PlayerMax - 2) do
 		if (CMap.Map.Info.PlayerType[i] == PlayerPerson or CMap.Map.Info.PlayerType[i] == PlayerComputer) then
 			for j=1,5 do
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 			end
 		end
 	end
@@ -6081,7 +6081,7 @@ end
 function CreatePlayerForFaction(faction, init_ai)
 	local faction_player = FindUnusedPlayerSlot()
 	if (faction_player ~= -1) then
-		Players[faction_player].Type = PlayerComputer				
+		CPlayer:GetPlayer(faction_player).Type = PlayerComputer				
 		SetPlayerData(faction_player, "RaceName", GetFactionData(faction, "Civilization"))
 		SetPlayerData(faction_player, "Faction", faction)
 		if (init_ai) then
