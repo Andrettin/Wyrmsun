@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2018-2019 by Andrettin
+--      (c) Copyright 2018-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -60,8 +60,8 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 		return nil;
 	end
 
-	local character_icon_frame = CIcon:Get(GetCharacterData(character, "Icon")).Frame
-	local character_icon = CIcon:Get(GetCharacterData(character, "Icon")).G
+	local character_icon_frame = GetIconData(GetCharacterData(character, "Icon"), "Frame")
+	local character_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(character, "Icon"), "File"))
 	local character_civilization = GetCharacterData(character, "Civilization")
 	local character_faction = GetCharacterData(character, "Faction")
 	local playercolor = "gray"

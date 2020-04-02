@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2019 by Andrettin
+--      (c) Copyright 2013-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -67,13 +67,13 @@ function RunTechTreeMenu(civilization_number)
 		if (string.find(unit, "upgrade-") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
-			techicon = CIcon:Get(GetUnitTypeData(unit, "Icon")).G
-			techicon_frame = CIcon:Get(GetUnitTypeData(unit, "Icon")).Frame
+			techicon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit, "Icon"), "File"))
+			techicon_frame = GetIconData(GetUnitTypeData(unit, "Icon"), "Frame")
 		else
 			unit_name = CUpgrade:Get(unit).Name
 			tech_description = CUpgrade:Get(unit).Description
-			techicon = CUpgrade:Get(unit).Icon.G
-			techicon_frame = CUpgrade:Get(unit).Icon.Frame
+			techicon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit, "Icon"), "File"))
+			techicon_frame = GetIconData(GetUpgradeData(unit, "Icon"), "Frame")
 		end
 		local b
 		techicon:Load()

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2019 by Andrettin
+--      (c) Copyright 2014-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -472,12 +472,12 @@ function Event(speaker, event_description, player, options, option_effects, even
 
 		local b
 		if (type(speaker) == "number") then
-			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
+			event_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitVariable(speaker, "Icon"), "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
-			event_icon = CIcon:Get(event_icon).G
+			event_icon = CPlayerColorGraphic:Get(GetIconData(event_icon, "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153, 48)
@@ -617,7 +617,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	end
 	
 	if (icon) then
-		icon_graphics = CIcon:Get(icon).G
+		icon_graphics = CPlayerColorGraphic:Get(GetIconData(icon, "File"))
 	end
 	
 	

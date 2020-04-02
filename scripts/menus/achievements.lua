@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2019 by Andrettin
+--      (c) Copyright 2014-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -61,8 +61,8 @@ function RunAchievementsMenu()
 end
 
 function addAchievementIcon(achievement, menu, x, y)
-	local achievement_icon_frame = CIcon:Get(GetAchievementData(achievement, "Icon")).Frame
-	local achievement_icon = CIcon:Get(GetAchievementData(achievement, "Icon")).G
+	local achievement_icon_frame = GetIconData(GetAchievementData(achievement, "Icon"), "Frame")
+	local achievement_icon = CPlayerColorGraphic:Get(GetIconData(GetAchievementData(achievement, "Icon"), "File"))
 	local b = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
