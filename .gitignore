@@ -9,20 +9,16 @@ mods/
 temp/
 wyr/
 crash.dmp
-launcher.exe
-lua51.dll
 oaml.log
 screen*.png
-SDL.dll
-SDL2.dll
 stderr.txt
 stdout.txt
-stratagus.exe
-wyrmsun.exe
 wyrmsun32
 wyrmsun64
 run.sh
 linux_readme.txt
+*.dll
+*.exe
 *.lnk
 
 ## Steam Workshop Mod Uploader
