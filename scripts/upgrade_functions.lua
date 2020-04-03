@@ -46,7 +46,7 @@ function DefineUpgrade(upgrade_ident, data)
 	
 	OldDefineUpgrade(upgrade_ident, data)
 	
-	if (CUpgrade:Get(upgrade_ident).Ability) then
+	if (GetUpgradeData(upgrade_ident, "Ability")) then
 		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	end
 end

@@ -162,7 +162,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 					end
 				end
 			elseif (state == "technologies" and string.find(unitName, "unit") == nil) then
-				if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
+				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
 					local element_civilization = GetUpgradeData(unitName, "Civilization")
 					if (element_civilization == "") then
 						element_civilization = "neutral"
@@ -319,7 +319,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 					end
 				end
 			elseif (state == "technologies" and string.find(unitName, "unit") == nil and civilization == GetUpgradeData(unitName, "Civilization")) then
-				if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
+				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
 					addEncyclopediaIcon(unitName, state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 					if (icon_x >= 10) then
 						icon_x = 0
@@ -467,7 +467,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
-		tooltip_name = _(CUpgrade:Get(unit_name).Name)
+		tooltip_name = _(GetUpgradeData(unit_name, "Name"))
 		if (civilization ~= "") then
 			if (faction ~= "") then
 				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
@@ -585,7 +585,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				return;
 			end
 		elseif (state == "technologies" and string.find(unit_name, "unit") == nil) then
-			if (CUpgrade:Get(unit_name).Description == "" and CUpgrade:Get(unit_name).Background == "") then
+			if (GetUpgradeData(unit_name, "Description") == "" and CUpgrade:Get(unit_name).Background == "") then
 				return;
 			end
 		end
@@ -630,7 +630,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
-		tooltip_name = _(CUpgrade:Get(unit_name).Name)
+		tooltip_name = _(GetUpgradeData(unit_name, "Name"))
 		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
@@ -774,11 +774,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetUpgradeData(unit_name, "Class") ~= "") then
 			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
 		end
-		if (CUpgrade:Get(unit_name).Description ~= "") then
-			description = _("Description") .. ": " .. _(CUpgrade:Get(unit_name).Description) .. "\n\n"
+		if (GetUpgradeData(unit_name, "Description") ~= "") then
+			description = _("Description") .. ": " .. _(GetUpgradeData(unit_name, "Description")) .. "\n\n"
 		end
-		if (CUpgrade:Get(unit_name).Quote ~= "") then
-			quote = _("Quote") .. ": " .. _(CUpgrade:Get(unit_name).Quote) .. "\n\n"
+		if (GetUpgradeData(unit_name, "Quote") ~= "") then
+			quote = _("Quote") .. ": " .. _(GetUpgradeData(unit_name, "Quote")) .. "\n\n"
 		end
 		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
 			effects = _("Effects") .. ": " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
@@ -802,8 +802,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 			applies_to = applies_to .. ".\n\n"
 		end
-		if (CUpgrade:Get(unit_name).Background ~= "") then
-			background = _("Background") .. ": " .. _(CUpgrade:Get(unit_name).Background) .. "\n\n"
+		if (GetUpgradeData(unit_name, "Background") ~= "") then
+			background = _("Background") .. ": " .. _(GetUpgradeData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "heroes") then
 		trigger_hero = unit_name
