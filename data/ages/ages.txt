@@ -1,104 +1,98 @@
-[age]
-	ident = bronze_age
+bronze_age = {
 	name = "Bronze Age"
 	priority = 1
-	[image]
+	image = {
 		file = "ui/resources/copper.png"
 		width = 14
 		height = 14
-	[/image]
-[/age]
+	}
+}
 
-[age]
-	ident = iron_age
+iron_age = {
 	name = "Iron Age"
 	priority = 2
-	[image]
+	image = {
 		file = "ui/resources/iron.png"
 		width = 14
 		height = 14
-	[/image]
-	[dependencies]
-		[upgrade]
+	}
+	dependencies = {
+		upgrade = {
 			upgrade = upgrade_ironworking
-		[/upgrade]
-	[/dependencies]
-[/age]
+		}
+	}
+}
 
-[age]
-	ident = viking_age
+viking_age = {
 	name = "Viking Age"
 	priority = 3
-	[image]
+	image = {
 		file = "ui/resources/labor_extra_1.png"
 		width = 14
 		height = 14
-	[/image]
-	[dependencies]
-		[upgrade]
+	}
+	dependencies = {
+		upgrade = {
 			upgrade = upgrade_norse_civilization
-		[/upgrade]
-		[upgrade]
+		}
+		upgrade = {
 			upgrade = upgrade_teuton_spatha
-		[/upgrade]
-		[upgrade]
+		}
+		upgrade = {
 			upgrade = upgrade_sailing
-		[/upgrade]
-		[or]
-			[upgrade]
+		}
+		or = {
+			upgrade = {
 				upgrade = upgrade_shield_wall
-			[/upgrade]
-			[upgrade]
+			}
+			upgrade = {
 				upgrade = upgrade_svinfylking
-			[/upgrade]
-		[/or]
-	[/dependencies]
-[/age]
+			}
+		}
+	}
+}
 
-[age]
-	ident = feudal_age
+feudal_age = {
 	name = "Feudal Age"
 	priority = 4
-	[image]
+	image = {
 		file = "ui/resources/prestige.png"
 		width = 14
 		height = 14
-	[/image]
-	[dependencies]
-		[upgrade]
+	}
+	dependencies = {
+		upgrade = {
 			upgrade = upgrade_serfdom
-		[/upgrade]
-	[/dependencies]
-[/age]
+		}
+	}
+}
 
-[age]
-	ident = gunpowder_age
+gunpowder_age = {
 	name = "Gunpowder Age"
 	priority = 5
-	[image]
+	image = {
 		file = "ui/resources/coal_extra_1.png"
 		width = 14
 		height = 14
-	[/image]
-	[dependencies]
-		[upgrade]
+	}
+	dependencies = {
+		upgrade = {
 			upgrade = upgrade_gunpowder
-		[/upgrade]
-	[/dependencies]
-[/age]
+		}
+	}
+}
 
-[age]
-	ident = industrial_age
+industrial_age = {
 	name = "Industrial Age"
 	priority = 6
-	[image]
+	image = {
 		file = "ui/resources/coal.png"
 		width = 14
 		height = 14
-	[/image]
-	[dependencies]
-		[upgrade]
+	}
+	dependencies = {
+		upgrade = {
 			upgrade = upgrade_steam_engine
-		[/upgrade]
-	[/dependencies]
-[/age]
+		}
+	}
+}
