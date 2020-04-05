@@ -8,8 +8,8 @@ dlcs/
 interface/QtGraphicalEffects/
 interface/QtQuick/
 interface/QtQuick.2/
+libraries/
 mods/
-platforms/qwindows.dll
 temp/
 wyr/
 crash.dmp
@@ -17,6 +17,7 @@ lua51.dll
 oaml.log
 Qt5Core.dll
 Qt5Gui.dll
+Qt5Multimedia.dll
 Qt5Network.dll
 Qt5Qml.dll
 Qt5QmlModels.dll
