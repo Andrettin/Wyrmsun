@@ -1,0 +1,7 @@
+basic_troll_voices_dead = {
+	files = {
+		"troll/basic_voices/troll-die-1.wav"
+		"troll/basic_voices/troll-die-2.wav"
+		"troll/basic_voices/troll-die-3.wav"
+	}
+}
