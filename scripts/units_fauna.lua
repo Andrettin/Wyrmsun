@@ -80,7 +80,6 @@ DefineUnitType("unit-bee", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 --		"dead", "bird-dead",
 		"hit", "dart-attack",
 		"miss", "attack-miss"
@@ -114,7 +113,6 @@ DefineUnitType("unit-fly", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 --		"dead", "bird-dead",
 --		"hit", "dart-attack",
 --		"miss", "attack-miss"
@@ -147,7 +145,6 @@ DefineUnitType("unit-bug", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 --		"dead", "bird-dead",
 --		"hit", "dart-attack",
 		"miss", "attack-miss"
@@ -181,7 +178,6 @@ DefineUnitType("unit-worm", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
@@ -224,7 +220,6 @@ DefineUnitType("unit-snail", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
@@ -286,7 +281,6 @@ DefineUnitType("unit-slug", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
@@ -329,7 +323,6 @@ DefineUnitType("unit-snigill", {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
 --		"ready", "bird-selected",
---		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
@@ -443,7 +436,6 @@ DefineUnitType("unit-adelobasileus-cromptoni", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -493,7 +485,6 @@ DefineUnitType("unit-galerix-exilis", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -544,7 +535,6 @@ DefineUnitType("unit-megacricetodon-collongensis", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -607,7 +597,6 @@ DefineUnitType("unit-rat", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "rat-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -691,7 +680,6 @@ DefineUnitType("unit-horse", {
 		"attack", "horse-attack",
 		"idle", "horse-idle",
 		"ready", "horse-idle",
---		"help", "critter-help",
 		"dead", "horse-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -1034,7 +1022,6 @@ DefineUnitType("unit-gryphon", {
 		"acknowledge", "gryphon-ready",
 		"ready", "gryphon-ready",
 		"idle", "gryphon-ready",
---		"help", "critter-help",
 		"dead", "gryphon-dead",
 		"hit", "claw-attack",
 		"miss", "attack-miss"
@@ -1133,7 +1120,6 @@ DefineUnitType("unit-wyrm", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "drake-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
@@ -1250,7 +1236,6 @@ DefineUnitType("unit-slime", {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
 --		"ready", "critter-ready",
---		"help", "critter-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss",
@@ -1313,7 +1298,6 @@ DefineUnitType("unit-bird", {
 		"acknowledge", "bird-selected",
 		"ready", "bird-selected",
 		"idle", "bird-selected",
---		"help", "critter-help",
 		"dead", "bird-dead",
 		"hit", "claw-attack",
 		"miss", "attack-miss"
@@ -1358,7 +1342,6 @@ DefineUnitType("unit-crow", {
 		"acknowledge", "crow-selected",
 		"ready", "crow-selected",
 		"idle", "crow-selected",
---		"help", "critter-help",
 		"dead", "bird-dead",
 		"hit", "claw-attack",
 		"miss", "attack-miss"

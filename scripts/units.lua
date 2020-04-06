@@ -551,7 +551,6 @@ DefineUnitType("unit-template-base-deposit", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 		"dead", "building-destroyed"
 	}
 } )
@@ -600,7 +599,6 @@ DefineUnitType("unit-settlement-site", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 		"dead", "building-destroyed"
 	}
 } )
@@ -633,7 +631,6 @@ DefineUnitType("unit-template-base-mine", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 		"dead", "building-destroyed"
 	}
 } )
@@ -1227,7 +1224,6 @@ DefineUnitType("unit-gold-rock", {
 		"selected", "metal-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1277,7 +1273,6 @@ DefineUnitType("unit-silver-rock", {
 		"selected", "metal-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1327,7 +1322,6 @@ DefineUnitType("unit-copper-rock", {
 		"selected", "metal-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1377,7 +1371,6 @@ DefineUnitType("unit-diamond-rock", {
 		"selected", "metal-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1427,7 +1420,6 @@ DefineUnitType("unit-emerald-rock", {
 		"selected", "metal-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1472,7 +1464,6 @@ DefineUnitType("unit-wood-pile", {
 		"selected", "tree-selected",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -1536,7 +1527,6 @@ DefineUnitType("unit-stone-pile", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 --		"dead", "building-destroyed"
 	}
 } )
@@ -2571,7 +2561,6 @@ DefineUnitType("unit-glyph", {
 		"used", "magic-holy",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
 		"dead", "building-destroyed"
 	}
 })
@@ -3392,7 +3381,6 @@ DefineUnitType("unit-roaming-fog", {
 		"selected", "click",
 --		"acknowledge", "bat-selected",
 --		"ready", "bat-selected",
---		"help", "critter-help",
 --		"dead", "rat-dead"
 	}
 } )
@@ -3426,7 +3414,6 @@ DefineUnitType("unit-roaming-fog-small", {
 		"selected", "click",
 --		"acknowledge", "bat-selected",
 --		"ready", "bat-selected",
---		"help", "critter-help",
 --		"dead", "rat-dead"
 	}
 } )
@@ -3461,7 +3448,6 @@ DefineUnitType("unit-miasma", {
 		"selected", "click",
 --		"acknowledge", "bat-selected",
 --		"ready", "bat-selected",
---		"help", "critter-help",
 --		"dead", "rat-dead"
 	}
 } )

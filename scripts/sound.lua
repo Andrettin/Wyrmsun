@@ -802,8 +802,6 @@ MakeSound("magic-holy",
     --	 selection sounds
     --	attack sounds
 
-MapSound("gold-mine-help", "basic-dwarf-voices-help")
-MapSound("critter-help", "basic-dwarf-voices-help")
 MakeSound("drake-dead", "neutral/drake_death.wav")
 SetSoundRange("drake-dead", 32)
 MakeSound("rat-dead", "neutral/rat_death.wav")
