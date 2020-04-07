@@ -279,9 +279,6 @@ function addQuestIcon(quest, menu, x, y)
 						GameSettings.NoRandomness = wyr.preferences.NoRandomness
 						GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 						GameSettings.Difficulty = wyr.preferences.Difficulty
-						if (GetQuestData(quest, "Briefing") ~= "") then
-							Briefing(quest)
-						end
 						mapname = GetQuestData(quest, "Map")
 						quest_menu:stop()
 						RunMap(mapname)
@@ -324,83 +321,4 @@ function addQuestIcon(quest, menu, x, y)
 	end
 	b:setTooltip(tooltip)
 	return b
-end
-
-function Briefing(quest)
-	if (GetQuestData(quest, "Civilization") ~= "") then
-		SetPlayerData(GetThisPlayer(), "RaceName", GetQuestData(quest, "Civilization"))
-	end
-
-	local briefing_background = GetBackground("backgrounds/wyrm.png")
-	if (GetQuestData(quest, "BriefingBackground") ~= "") then
-		briefing_background = GetBackground(GetQuestData(quest, "BriefingBackground"))
-	end
-	
-	local menu = WarMenu(nil, briefing_background)
-	
-	if (GetQuestData(quest, "BriefingMusic") ~= "") then
-		PlayMusic(GetQuestData(quest, "BriefingMusic"))
-	else
-		StopMusic()
-	end	
-
-	menu:addLabel(quest, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)
-
-	local t = GetQuestData(quest, "Briefing")
-	t = "\n\n\n\n\n\n\n\n\n\n" .. t .. "\n\n\n\n\n\n\n\n\n\n\n\n\n"
-	local sw = ScrollingWidget(320, 170 * Video.Height / 480)
-	sw:setBackgroundColor(Color(0,0,0,0))
-	sw:setSpeed(0.28)
-	local l = MultiLineLabel(t)
-	l:setFont(Fonts["large"])
-	l:setAlignment(MultiLineLabel.LEFT)
-	l:setVerticalAlignment(MultiLineLabel.TOP)
-	l:setLineWidth(320)
-	l:adjustSize()
-	sw:add(l, 0, 0)
-	menu:add(sw, Video.Width / 2 - (l:getWidth() / 2), 80 * Video.Height / 480)
-
-	if (table.getn(GetQuestData(quest, "Objectives")) > 0) then
-		menu:addLabel(_("Objectives:"), 372 * Video.Width / 640, 306 * Video.Height / 480, Fonts["large"], false)
-
-		local objectives = ""
-		table.foreachi(GetQuestData(quest, "Objectives"), function(k,v) objectives = objectives .. v .. "\n" end)
-
-		local l = MultiLineLabel(objectives)
-		l:setFont(Fonts["large"])
-		l:setAlignment(MultiLineLabel.LEFT)
-		l:setLineWidth(250 * Video.Width / 640)
-		l:adjustSize()
-		menu:add(l, 372 * Video.Width / 640, (306 * Video.Height / 480) + 30)
-	end
-  
-	local voice = 0
-	local channel = -1
-
-	menu:addFullButton(_("~!Continue"), "c", Video.Width / 2 - 112, 440 * Video.Height / 480,
-		function()
-			if (table.getn(GetQuestData(quest, "BriefingSounds")) > 0) then
-				if (channel ~= -1) then
-					voice = table.getn(GetQuestData(quest, "BriefingSounds"))
-					StopChannel(channel)
-				end
-			end
-			menu:stop()
-			StopMusic()
-		end
-	)
-
-	if (table.getn(GetQuestData(quest, "BriefingSounds")) > 0) then
-		function PlayNextVoice()
-			voice = voice + 1
-			if (voice <= table.getn(GetQuestData(quest, "BriefingSounds"))) then
-				channel = PlaySoundFile(GetQuestData(quest, "BriefingSounds")[voice], PlayNextVoice);
-			else
-				channel = -1
-			end
-		end
-		PlayNextVoice()
-	end
-
-	menu:run()
 end
