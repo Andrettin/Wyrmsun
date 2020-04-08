@@ -98,12 +98,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-deep-gnomish-duelist-red-hair",
-	Size = {46, 38},
-	File = "gnome/icons/duelist_deep_gnome_red_hair.png"
-})
-
-DefineIcon({
 	Name = "icon-deep-gnomish-master-at-arms-blond-hair",
 	Size = {46, 38},
 	File = "gnome/icons/master_at_arms_deep_gnome_blond_hair.png"
