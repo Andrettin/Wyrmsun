@@ -81,6 +81,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
+* Sounds
+- The "work complete" sound now correctly plays when an upgrade has been researched.
+
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
 
