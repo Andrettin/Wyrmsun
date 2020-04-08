@@ -42,36 +42,6 @@ sound_click = MakeSound("click", "interface/click.wav")
 --	Define simple dwarf sounds.
 --
 
-MakeSound("basic-dwarf-voices-ready", "dwarf/basic_voices/ready.wav")
-
-MakeSound("basic-dwarf-voices-selected", {
-	"dwarf/basic_voices/selected-1.wav",
-	"dwarf/basic_voices/selected-2.wav",
-	"dwarf/basic_voices/selected-3.wav",
-	"dwarf/basic_voices/selected-4.wav",
-	"dwarf/basic_voices/selected-5.wav"
-})
-
-MakeSound("basic-dwarf-voices-annoyed", {
-	"dwarf/basic_voices/annoy1.wav",
-	"dwarf/basic_voices/annoy2.wav",
-	"dwarf/basic_voices/annoy3.wav",
-	"dwarf/basic_voices/annoy4.wav"
-})
-
-MakeSoundGroup("basic-dwarf-voices-selected-group",
-	"basic-dwarf-voices-selected", "basic-dwarf-voices-annoyed"
-)
-MakeSound("basic-dwarf-voices-acknowledge", {
-	"dwarf/basic_voices/acknowledge-1.wav",
-	"dwarf/basic_voices/acknowledge-2.wav",
-	"dwarf/basic_voices/acknowledge-3.wav",
-	"dwarf/basic_voices/acknowledge-4.wav",
-	"dwarf/basic_voices/acknowledge-5.wav",
-	"dwarf/basic_voices/acknowledge-6.wav",
-	"dwarf/basic_voices/acknowledge-7.wav"
-})
-
 MakeSound("basic-dwarf-voices-attack", {
 	"dwarf/basic_voices/attack-01.wav",
 	"dwarf/basic_voices/attack-02.wav",
@@ -125,7 +95,7 @@ MakeSound("yale-rider-selected", {
 	"neutral/yale/yale_select02.wav"
 })
 MakeSoundGroup("yale-rider-selected-group",
-	"yale-rider-selected", "basic-dwarf-voices-annoyed")
+	"yale-rider-selected", "dwarf_annoyed")
 MakeSound("yale-rider-acknowledge", {
 	"dwarf/basic_voices/acknowledge-1.wav",
 	"dwarf/basic_voices/acknowledge-2.wav",

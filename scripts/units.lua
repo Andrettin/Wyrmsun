@@ -5292,8 +5292,8 @@ DefineUnitType("unit-orc-spearthrower", {
 --	Corpse = "unit-dwarven-dead-body",
 	HiddenInEditor = true,
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"ready", "dwarven-scout-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"

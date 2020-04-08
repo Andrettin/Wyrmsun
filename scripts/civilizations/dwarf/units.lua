@@ -116,7 +116,7 @@ DefineUnitType("unit-dwarven-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -200,7 +200,7 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -284,7 +284,7 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -372,7 +372,7 @@ DefineUnitType("unit-dwarven-runesmith", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -460,7 +460,7 @@ DefineUnitType("unit-dwarven-runemaster", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -548,7 +548,7 @@ DefineUnitType("unit-dwarven-arcanister", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -575,7 +575,7 @@ DefineUnitType("unit-dwarven-militia", {
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-boots", "unit-cheese"},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
+		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
@@ -719,8 +719,8 @@ DefineUnitType("unit-dwarven-axefighter", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-axefighter-ready",
 		"help", "basic-dwarf-voices-help",
@@ -863,8 +863,8 @@ DefineUnitType("unit-dwarven-steelclad", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
 		"help", "basic-dwarf-voices-help",
@@ -934,8 +934,8 @@ DefineUnitType("unit-dwarven-thane", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
 		"help", "basic-dwarf-voices-help",
@@ -982,10 +982,10 @@ DefineUnitType("unit-dwarven-guard", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -1026,10 +1026,10 @@ DefineUnitType("unit-dwarven-stalwart", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -1075,10 +1075,10 @@ DefineUnitType("unit-dwarven-sentinel", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -1163,8 +1163,8 @@ DefineUnitType("unit-dwarven-scout", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-scout-ready",
 		"fire-missile", "throwing-axe",
@@ -1221,8 +1221,8 @@ DefineUnitType("unit-dwarven-pathfinder", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
@@ -1277,8 +1277,8 @@ DefineUnitType("unit-dwarven-explorer", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
@@ -1299,10 +1299,10 @@ DefineUnitType("unit-dwarven-thunderer", {
 	Corpse = "unit-dwarven-dead-body",
 	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -1536,10 +1536,10 @@ DefineUnitType("unit-dwarven-witness", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
@@ -1577,10 +1577,10 @@ DefineUnitType("unit-dwarven-annalist", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
@@ -1618,10 +1618,10 @@ DefineUnitType("unit-dwarven-loremaster", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
-		"ready", "basic-dwarf-voices-ready",
+		"ready", "dwarf_ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
@@ -1678,8 +1678,8 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 		}
 	},
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"selected", "dwarf_selected_group",
+		"acknowledge", "dwarf_acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-gryphon-rider-ready",
 		"help", "basic-dwarf-voices-help",

@@ -1,0 +1,41 @@
+dwarf_ready = {
+	files = {
+		"dwarf/basic_voices/ready.wav"
+	}
+}
+
+dwarf_selected = {
+	files = {
+		"dwarf/basic_voices/selected-1.wav"
+		"dwarf/basic_voices/selected-2.wav"
+		"dwarf/basic_voices/selected-3.wav"
+		"dwarf/basic_voices/selected-4.wav"
+		"dwarf/basic_voices/selected-5.wav"
+	}
+}
+
+dwarf_annoyed = {
+	files = {
+		"dwarf/basic_voices/annoy1.wav"
+		"dwarf/basic_voices/annoy2.wav"
+		"dwarf/basic_voices/annoy3.wav"
+		"dwarf/basic_voices/annoy4.wav"
+	}
+}
+
+dwarf_selected_group = {
+	first_sound = dwarf_selected
+	second_sound = dwarf_annoyed
+}
+
+dwarf_acknowledge = {
+	files = {
+		"dwarf/basic_voices/acknowledge-1.wav"
+		"dwarf/basic_voices/acknowledge-2.wav"
+		"dwarf/basic_voices/acknowledge-3.wav"
+		"dwarf/basic_voices/acknowledge-4.wav"
+		"dwarf/basic_voices/acknowledge-5.wav"
+		"dwarf/basic_voices/acknowledge-6.wav"
+		"dwarf/basic_voices/acknowledge-7.wav"
+	}
+}
