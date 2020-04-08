@@ -1,0 +1,3 @@
+germanic_masons_shop = {
+	file = "germanic/icons/masons_shop.png"
+}

@@ -1355,7 +1355,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"variation-id", "masons-shop",
 			"file", "germanic/buildings/masons_shop.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
-			"icon", "icon-germanic-masons-shop",
+			"icon", "germanic_masons_shop",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
@@ -1364,7 +1364,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"variation-id", "masons-shop-snow-winter",
 			"file", "germanic/buildings/masons_shop_snow.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
-			"icon", "icon-germanic-masons-shop",
+			"icon", "germanic_masons_shop",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1376,7 +1376,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"variation-id", "masons-shop-snow",
 			"file", "germanic/buildings/masons_shop_snow.png",
 			"shadow-file", "germanic/buildings/masons_shop_shadow.png",
-			"icon", "icon-germanic-masons-shop",
+			"icon", "germanic_masons_shop",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "snow"
 		},

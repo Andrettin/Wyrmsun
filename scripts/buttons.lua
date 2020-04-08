@@ -2333,7 +2333,7 @@ DefineButton( { Pos = 1, Icon = "icon-masonry",
 	}
 } )
 
-DefineButton( { Pos = 7, Icon = "icon-anvil",
+DefineButton( { Pos = 7, Icon = "anvil",
 	Action = "research", Value = "upgrade-ironworking",
 	Allowed = "check-single-research",
 	Description = "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",

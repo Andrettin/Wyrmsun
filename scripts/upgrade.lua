@@ -180,7 +180,7 @@ DefineUpgrade("upgrade-ironworking", {
 	Name = "Ironworking",
 	Class = "ironworking",
 	Civilization = "neutral",
-	Icon = "icon-anvil",
+	Icon = "anvil",
 	Description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
 	Costs = {"time", 250, "copper", 2000}
 })
