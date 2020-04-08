@@ -1956,6 +1956,8 @@ if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
 end
 
+load_database()
+
 --- Uses Stratagus Library path!
 DefiningData = true
 LoadData() -- only initialize the data by ident, but don't actually process it
