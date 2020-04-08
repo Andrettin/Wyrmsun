@@ -27,11 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Icon and construction graphics also depend on the tileset
-
-Load("scripts/icons.lua")
-Load("scripts/constructions.lua")
-
 --StopMusic()
 
 if (GetCurrentTileset() == "cave") then -- ugly way to make sure the cave water appears properly
