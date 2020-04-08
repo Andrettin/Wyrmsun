@@ -1,4 +1,4 @@
-basic_troll_voices_dead = {
+troll_dead = {
 	files = {
 		"troll/basic_voices/troll-die-1.wav"
 		"troll/basic_voices/troll-die-2.wav"
