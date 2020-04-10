@@ -38,7 +38,7 @@ DefineSite("carthage", {
 		-218, "carthage" -- Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 	},
 	HistoricalBuildings = {
-		-218, 0, "town-hall"
+		-218, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })

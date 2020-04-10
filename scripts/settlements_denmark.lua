@@ -46,7 +46,7 @@ DefineSite("aarhus", {
 		1560, "denmark" -- Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-5800, 0, "town-hall"
+		-5800, 0, "town_hall"
 	},
 	HistoricalUnits = {
 		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "ertebolle-tribe"
@@ -96,7 +96,7 @@ DefineSite("legard", {
 		-1500, "jarling-tribe"
 	},
 	HistoricalBuildings = {
-		-1600, -1500, "lumber-mill",
+		-1600, -1500, "lumber_mill",
 		-1600, -1500, "farm",
 		-1600, -1500, "farm",
 		-1500, -1300, "farm" -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
@@ -124,7 +124,7 @@ DefineSite("leidre", {
 		919, "denmark" -- political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalBuildings = {
-		-5800, 0, "town-hall"
+		-5800, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

@@ -1,0 +1,11 @@
+icon_dwarven_patrol_land = {
+	file = "dwarf/icons/patrol_land.png"
+}
+
+icon_dwarven_stand_ground = {
+	file = "dwarf/icons/stand_ground.png"
+}
+
+icon_dwarven_return_goods = {
+	file = "dwarf/icons/return_goods.png"
+}

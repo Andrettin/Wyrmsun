@@ -40,7 +40,7 @@ DefineSite("geneva", {
 		561, "burgundia" -- Geneva went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple" -- Geneva was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}

@@ -439,15 +439,15 @@ DefineDependency("upgrade-faction-bavarian-tribe",
 )
 
 DefineDependency("upgrade-faction-frisian-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-lombard-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-saxon-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-austria",

@@ -36,7 +36,7 @@ DefineSite("ammonium", {
 		-500, "persia" -- Ammonium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })
@@ -54,7 +54,7 @@ DefineSite("barca", {
 		-500, "persia" -- Barca was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })
@@ -73,7 +73,7 @@ DefineSite("cyrene", {
 		-500, "persia" -- Cyrene was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })

@@ -40,7 +40,7 @@ local land_funcs = {
 	function() return AiSet(GetAiUnitType("worker"), 1) end,
 	function() return AiWait(GetAiUnitType("worker")) end, -- start hangs if nothing available
 
-	function() return AiWait(GetAiUnitType("town-hall")) end, -- don't spend resources on other buildings if the AI player doesn't have a town hall yet
+	function() return AiWait(GetAiUnitType("town_hall")) end, -- don't spend resources on other buildings if the AI player doesn't have a town hall yet
 
 	function() return AiSet(GetAiUnitType("worker"), 4) end, -- 4
 
@@ -51,11 +51,11 @@ local land_funcs = {
 
 	function() return AiSet(GetAiUnitType("worker"), 20) end,
 
-	function() return AiWait(GetAiUnitType("lumber-mill")) end,
+	function() return AiWait(GetAiUnitType("lumber_mill")) end,
 
 	function()
 		if (AiGetRace() == "dwarf") then
-			return AiWait(GetAiUnitType("masons-shop"));
+			return AiWait(GetAiUnitType("masons_shop"));
 		end
 		return false;
 	end,

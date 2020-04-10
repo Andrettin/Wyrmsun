@@ -1,0 +1,3 @@
+icon_dwarven_boots = {
+	file = "dwarf/icons/boots.png"
+}

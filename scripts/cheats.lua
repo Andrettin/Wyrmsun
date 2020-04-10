@@ -214,7 +214,7 @@ function HandleCheats(str)
 			unit = CreateUnit(shooter_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
 	elseif (str == "fire and steel") then
-		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder-infantry", GetPlayerData(GetThisPlayer(), "Faction"))
+		local gunpowder_infantry_type = GetFactionClassUnitType("gunpowder_infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (gunpowder_infantry_type) then
 			unit = CreateUnit(gunpowder_infantry_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
@@ -224,7 +224,7 @@ function HandleCheats(str)
 			unit = CreateUnit(priest_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
 	elseif (str == "archimedes") then
-		local siege_engine_type = GetFactionClassUnitType("siege-engine", GetPlayerData(GetThisPlayer(), "Faction"))
+		local siege_engine_type = GetFactionClassUnitType("siege_engine", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (siege_engine_type) then
 			unit = CreateUnit(siege_engine_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
@@ -234,7 +234,7 @@ function HandleCheats(str)
 			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
 	elseif (str == "skidbladnir") then
-		local siege_warship_type = GetFactionClassUnitType("siege-warship", GetPlayerData(GetThisPlayer(), "Faction"))
+		local siege_warship_type = GetFactionClassUnitType("siege_warship", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (siege_warship_type) then
 			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end

@@ -100,7 +100,7 @@ DefineSite("tournai", {
 		1831, "belgium" -- Tournai's area became a part of Belgium in 1831; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		481, 0, "town-hall"
+		481, 0, "town_hall"
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })

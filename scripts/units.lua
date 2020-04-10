@@ -30,7 +30,6 @@ UnitTypeFiles = {}
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
 	"upgrade-wood-plow", "upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
-	"upgrade-ironworking",
 	"upgrade-masonry",
 	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
 	"upgrade-egyptian-civilization",
@@ -234,9 +233,9 @@ function DefineUnitType(unit_type, data)
 	local smithy = false
 	local market = false
 	local dock = false
-	if (data.Class == "town-hall" or data.Class == "stronghold") then
+	if (data.Class == "town_hall" or data.Class == "stronghold") then
 		town_hall = true
-	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber-mill") then
+	elseif ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber_mill") then
 		resource_mine = true
 	elseif (data.Class == "smithy") then
 		smithy = true
@@ -249,11 +248,11 @@ function DefineUnitType(unit_type, data)
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
-		if ((GetUnitTypeData(unit_type, "Class") == "town-hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
+		if ((GetUnitTypeData(unit_type, "Class") == "town_hall" or GetUnitTypeData(unit_type, "Class") == "stronghold") and data.Class == nil) then
 			town_hall = true
 		elseif (
 			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and GetUnitTypeData(unit_type, "GivesResource") ~= "trade" and data.GivesResource == nil and data.BuildingRules == nil)
-			or (GetUnitTypeData(unit_type, "Class") == "lumber-mill" and data.Class == nil)
+			or (GetUnitTypeData(unit_type, "Class") == "lumber_mill" and data.Class == nil)
 		) then
 			resource_mine = true
 		elseif (GetUnitTypeData(unit_type, "Class") == "smithy" and data.Class == nil) then
@@ -277,7 +276,7 @@ function DefineUnitType(unit_type, data)
 		data.BuildingRules = {
 			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
 			}
@@ -286,7 +285,7 @@ function DefineUnitType(unit_type, data)
 		data.BuildingRules = {
 			"and", {
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "town-hall" },
+				"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
 
@@ -4104,7 +4103,7 @@ DefineUnitType("unit-template-heroic-shooter", {
 DefineUnitType("unit-template-gunpowder-infantry", {
 	Name = "Gunpowder Infantry",
 	Parent = "unit-template-archer",
-	Class = "gunpowder-infantry",
+	Class = "gunpowder_infantry",
 	Costs = {"time", 70, "copper", 800, "lumber", 0},
 	BasicDamage = 18,
 	Missile = "missile-bullet",
@@ -4373,7 +4372,7 @@ DefineUnitType("unit-template-high-priest", {
 DefineUnitType("unit-template-flying-rider", {
 	Name = "Flying Rider",
 	Parent = "unit-template-sapient-unit",
-	Class = "flying-rider",
+	Class = "flying_rider",
 	Costs = {"time", 250, "copper", 1750, "lumber", 750},
 	Strength = 12,
 	Dexterity = 13,
@@ -4413,7 +4412,7 @@ DefineUnitType("unit-template-flying-rider", {
 DefineUnitType("unit-template-siege-engine", {
 	Name = "Siege Engine",
 	Parent = "unit-template-unit",
-	Class = "siege-engine",
+	Class = "siege_engine",
 	Costs = {"time", 250, "copper", 900, "lumber", 900},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4525,7 +4524,7 @@ DefineUnitType("unit-template-transport-ship", {
 DefineUnitType("unit-template-siege-warship", {
 	Name = "Siege Warship",
 	Parent = "unit-template-ship",
-	Class = "siege-warship",
+	Class = "siege_warship",
 	Animations = "animations-siege-warship", 
 	Costs = {"time", 90, "copper", 700, "lumber", 3150},
 	Speed = 8,
@@ -4558,7 +4557,7 @@ DefineUnitType("unit-template-siege-warship", {
 DefineUnitType("unit-template-town-hall", {
 	Name = "Town Hall",
 	Parent = "unit-template-building",
-	Class = "town-hall",
+	Class = "town_hall",
 	Costs = {"time", 255, "copper", 1200, "lumber", 2400},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4721,7 +4720,7 @@ DefineUnitType("unit-template-barracks", {
 DefineUnitType("unit-template-lumber-mill", {
 	Name = "Lumber Mill",
 	Parent = "unit-template-building",
-	Class = "lumber-mill",
+	Class = "lumber_mill",
 	Costs = {"time", 150, "copper", 600, "lumber", 1350},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4811,7 +4810,7 @@ DefineUnitType("unit-template-smithy", {
 DefineUnitType("unit-template-masons-shop", {
 	Name = "Mason's Shop",
 	Parent = "unit-template-building",
-	Class = "masons-shop",
+	Class = "masons_shop",
 	Costs = {"time", 150, "copper", 600, "lumber", 1350},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4969,7 +4968,7 @@ DefineUnitType("unit-template-university", {
 DefineUnitType("unit-template-watch-tower", {
 	Name = "Watch Tower",
 	Parent = "unit-template-building",
-	Class = "watch-tower",
+	Class = "watch_tower",
 	Costs = {"time", 60, "copper", 550, "lumber", 300, "stone", 300},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
@@ -5011,7 +5010,7 @@ DefineUnitType("unit-template-watch-tower", {
 DefineUnitType("unit-template-guard-tower", {
 	Name = "Guard Tower",
 	Parent = "unit-template-building",
-	Class = "guard-tower",
+	Class = "guard_tower",
 	Animations = "animations-guard-tower",
 	Costs = {"time", 140, "copper", 500, "lumber", 225, "stone", 225},
 	RepairHp = 4,
@@ -5059,7 +5058,7 @@ DefineUnitType("unit-template-guard-tower", {
 DefineUnitType("unit-template-heavy-tower", {
 	Name = "Heavy Tower",
 	Parent = "unit-template-building",
-	Class = "heavy-tower",
+	Class = "heavy_tower",
 	Animations = "animations-heavy-tower",
 	Costs = {"time", 190, "copper", 1000, "lumber", 450, "stone", 450},
 	RepairHp = 4,
@@ -5101,7 +5100,7 @@ DefineUnitType("unit-template-heavy-tower", {
 DefineUnitType("unit-template-cannon-tower", {
 	Name = "Cannon Tower",
 	Parent = "unit-template-heavy-tower",
-	Class = "cannon-tower",
+	Class = "cannon_tower",
 	BasicDamage = 65,
 	Accuracy = 9,
 	Missile = "missile-cannon-ball",

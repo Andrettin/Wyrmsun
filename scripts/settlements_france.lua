@@ -145,7 +145,7 @@ DefineSite("besancon", {
 		1789, "france" -- Besançon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-71, 0, "town-hall",
+		-71, 0, "town_hall",
 		395, 0, "temple", -- Besançon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1485, 0, "university" -- University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -180,7 +180,7 @@ DefineSite("bordeaux", {
 		1789, "france" -- Bordeaux was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall",
+		161, 0, "town_hall",
 		395, 0, "temple", -- Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1441, 0, "university" -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -207,7 +207,7 @@ DefineSite("bourges", {
 		1789, "france" -- Bourges was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Bourges was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1464, 0, "university" -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -314,7 +314,7 @@ DefineSite("clermont-ferrand", {
 		1789, "france" -- Clermont-Ferrand was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-71, 0, "town-hall"
+		-71, 0, "town_hall"
 		-- Chief court of the salt tax existent in Clermont-Ferrand in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	HistoricalUnits = {
@@ -341,7 +341,7 @@ DefineSite("dijon", {
 		1789, "france" -- Dijon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-71, 0, "town-hall"
+		-71, 0, "town_hall"
 	},
 	HistoricalUnits = {
 		-- some troops to defend against the Suebi
@@ -444,7 +444,7 @@ DefineSite("lyon", {
 		1789, "france" -- Lyons was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall",
+		161, 0, "town_hall",
 		395, 0, "temple", -- Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1330, 0, "university" -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
@@ -473,7 +473,7 @@ DefineSite("marseilles", {
 		1789, "france" -- Marseilles was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall",
+		161, 0, "town_hall",
 		395, 0, "temple" -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -499,7 +499,7 @@ DefineSite("metz", {
 		1648, "france" -- Metz was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple" -- Metz was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -555,7 +555,7 @@ DefineSite("nantes", {
 		1789, "france" -- Nantes was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Nantes was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1460, 0, "university" -- University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
@@ -625,7 +625,7 @@ DefineSite("orleans", {
 		1789, "france" -- Orléans was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -651,7 +651,7 @@ DefineSite("paris", {
 		1789, "france" -- Paris was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall",
+		161, 0, "town_hall",
 		395, 0, "temple", -- Paris was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
@@ -697,7 +697,7 @@ DefineSite("poitiers", {
 		1789, "france" -- Poitiers was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Poitiers was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1431, 0, "university" -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
@@ -724,7 +724,7 @@ DefineSite("reims", {
 		1789, "france" -- Reims was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-50, 0, "town-hall",
+		-50, 0, "town_hall",
 		395, 0, "temple", -- Reims was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1547, 0, "university" -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
@@ -809,7 +809,7 @@ DefineSite("soissons", {
 		1789, "france" -- Soissons was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple" -- Soissons was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
@@ -842,7 +842,7 @@ DefineSite("strassburg", {
 		1789, "france" -- Strasburg was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	},
 	HistoricalBuildings = {
-		-61, 161, "town-hall",
+		-61, 161, "town_hall",
 		161, 0, "stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 0, "barracks",
 		395, 0, "temple" -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -916,7 +916,7 @@ DefineSite("toulouse", {
 	},
 	HistoricalBuildings = {
 		161, 395, "farm",
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Toulouse was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1230, 0, "university" -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.

@@ -332,7 +332,7 @@ DefineSite("damascus", {
 		-500, "persia" -- Damascus was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -556,7 +556,7 @@ DefineSite("hebron", {
 		-500, "persia" -- Hebron's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1250, -1025, "town-hall",
+		-1250, -1025, "town_hall",
 		-1025, 0, "farm"
 	},
 	Regions = {"asia"}
@@ -617,7 +617,7 @@ DefineSite("jericho", {
 		-500, "persia" -- Jericho's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1250, -750, "town-hall",
+		-1250, -750, "town_hall",
 		-750, 0, "farm"
 	},
 	Regions = {"asia"}
@@ -642,7 +642,7 @@ DefineSite("jerusalem", {
 		-500, "persia" -- Jerusalem was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1250, 0, "town-hall"
+		-1250, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -866,7 +866,7 @@ DefineSite("shiloh", {
 		-500, "persia" -- Shiloh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1250, -750, "town-hall",
+		-1250, -750, "town_hall",
 		-750, 0, "farm"
 	},
 	Regions = {"asia"}
@@ -927,7 +927,7 @@ DefineSite("tyre", {
 		-500, "persia" -- Tyre was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

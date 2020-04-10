@@ -38,7 +38,7 @@ DefineSite("helsinki", {
 		1560, "sweden" -- Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		1560, 0, "town_hall"
 	},
 	Regions = {"europe", "west-and-central-europe"}
 })

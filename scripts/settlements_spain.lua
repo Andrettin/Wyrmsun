@@ -40,7 +40,7 @@ DefineSite("barcelona", {
 		1560, "spain" -- Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1430, 1717, "university" -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
@@ -235,7 +235,7 @@ DefineSite("merida", {
 		1560, "spain" -- Mérida's area was a part of the Kingdom of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-138, 0, "town-hall"
+		-138, 0, "town_hall"
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
 })
@@ -369,7 +369,7 @@ DefineSite("toledo", {
 		1560, "spain" -- Toledo was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-197, 0, "town-hall",
+		-197, 0, "town_hall",
 		1474, 1807, "university" -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
@@ -432,7 +432,7 @@ DefineSite("zaragoza", {
 		1560, "spain" -- Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1474, 0, "university" -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},

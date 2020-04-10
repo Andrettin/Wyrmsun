@@ -2544,8 +2544,8 @@ function ApplyRawTiles()
 					end
 				elseif (string.sub(RawTile(x, y), 0, 22) == "Stronghold Guard Tower") then
 					local defender_player = tonumber(string.sub(RawTile(x, y), 23))
-					if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
-						unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), defender_player, {x, y})
+					if (GetCivilizationClassUnitType("guard_tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
+						unit = OldCreateUnit(GetCivilizationClassUnitType("guard_tower", GetProvinceCivilization(AttackedProvince.Name)), defender_player, {x, y})
 					end
 					for sub_x=0,1 do
 						for sub_y=0,1 do

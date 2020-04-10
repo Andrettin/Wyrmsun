@@ -222,11 +222,11 @@ DefineModifier("upgrade-faction-visigothia",
 )
 
 DefineDependency("upgrade-faction-burgundian-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-goth-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-burgundy",

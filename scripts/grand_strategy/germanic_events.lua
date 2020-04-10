@@ -335,7 +335,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and GetProvinceOwner("Westphalia") == EventFaction.Name
-				and ProvinceHasBuildingClass(WorldMapProvinces.Westphalia.Name, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Westphalia.Name, "town_hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -372,7 +372,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and GetProvinceOwner("Holland") == EventFaction.Name -- the Netherlands were the Franks' homelands
-				and ProvinceHasBuildingClass(WorldMapProvinces.Holland.Name, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Holland.Name, "town_hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
 				return true
@@ -406,7 +406,7 @@ local GermanicEvents = {
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name -- Brandenburg was the Suebi's homelands
-				and ProvinceHasBuildingClass(WorldMapProvinces.Brandenburg.Name, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.Brandenburg.Name, "town_hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5 -- don't fire this event before the parts of the faction have enough means to defend themselves from invasion by the Danes
 			) then
 				return true

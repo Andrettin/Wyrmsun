@@ -1,0 +1,11 @@
+icon_dwarven_shield_1 = {
+	file = "dwarf/icons/shield_1.png"
+}
+
+icon_dwarven_shield_2 = {
+	file = "dwarf/icons/shield_2.png"
+}
+
+icon_dwarven_shield_3 = {
+	file = "dwarf/icons/shield_3.png"
+}

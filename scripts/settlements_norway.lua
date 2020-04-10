@@ -41,7 +41,7 @@ DefineSite("arendal", {
 		841, "agder" -- Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
 	HistoricalBuildings = {
-		841, 0, "town-hall"
+		841, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -83,7 +83,7 @@ DefineSite("hamar", {
 		1560, "denmark" -- Hamar's area was a Danish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		841, 0, "town-hall"
+		841, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -104,7 +104,7 @@ DefineSite("hermansverk", {
 		841, "sogn", -- the kingdom of Sogn was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
 	},
 	HistoricalBuildings = {
-		841, 0, "town-hall"
+		841, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -125,7 +125,7 @@ DefineSite("oslo", {
 		824, "vingulmark", -- Gandalf became king of Vingulmark when Gudrod Yngling died; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
 	},
 	HistoricalBuildings = {
-		824, 0, "town-hall"
+		824, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -146,7 +146,7 @@ DefineSite("tonsberg", {
 		841, "vestfold" -- the kingdom of Vestfold was in existence when Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
 	HistoricalBuildings = {
-		841, 0, "town-hall"
+		841, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

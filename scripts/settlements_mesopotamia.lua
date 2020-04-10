@@ -116,7 +116,7 @@ DefineSite("babylon", {
 		-500, "persia" -- Babylon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -361,7 +361,7 @@ DefineSite("nineveh", {
 		-500, "persia" -- Nineveh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -538,7 +538,7 @@ DefineSite("ur", {
 		-500, "persia" -- Ur's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

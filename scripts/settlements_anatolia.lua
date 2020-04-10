@@ -39,7 +39,7 @@ DefineSite("amisus", {
 		-500, "persia" -- Amisus' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -75,7 +75,7 @@ DefineSite("phaselis", {
 		-500, "persia" -- Phaselis' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -95,7 +95,7 @@ DefineSite("sinope", {
 		-500, "persia" -- Sinope's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

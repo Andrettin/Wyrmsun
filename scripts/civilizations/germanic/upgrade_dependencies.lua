@@ -82,5 +82,5 @@ DefineDependency("unit-germanic-transport-ship",
 )
 
 DefineDependency("upgrade-teuton-civilization",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )

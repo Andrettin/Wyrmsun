@@ -360,7 +360,7 @@ DefineDependency("upgrade-faction-goldhoof-clan",
 )
 
 DefineDependency("upgrade-faction-norlund-clan",
-	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
+	{"unit-dwarven-smithy", "upgrade_ironworking"}, "or", {"unit-brising-smithy", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-oinling-clan",
@@ -372,15 +372,15 @@ DefineDependency("upgrade-faction-shadowcharm-clan",
 )
 
 DefineDependency("upgrade-faction-shinsplitter-clan",
-	{"unit-dwarven-barracks", "upgrade-ironworking"}
+	{"unit-dwarven-barracks", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-shorbear-clan",
-	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
+	{"unit-dwarven-smithy", "upgrade_ironworking"}, "or", {"unit-brising-smithy", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-whitesteel-clan",
-	{"unit-dwarven-smithy", "upgrade-ironworking"}, "or", {"unit-brising-smithy", "upgrade-ironworking"}
+	{"unit-dwarven-smithy", "upgrade_ironworking"}, "or", {"unit-brising-smithy", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-joruvellir",

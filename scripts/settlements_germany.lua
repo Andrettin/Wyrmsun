@@ -70,7 +70,7 @@ DefineSite("berlin", {
 		1815, "prussia" -- Berlin was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -87,7 +87,7 @@ DefineSite("bernstorf", { -- Bernstorf, Bavaria
 		-1400, ""
 	},
 	HistoricalBuildings = {
-		-1600, -1400, "watch-tower" -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
+		-1600, -1400, "watch_tower" -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
 	},
 	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
 })
@@ -111,7 +111,7 @@ DefineSite("bremen", {
 		526, "saxon-tribe" -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall",
+		-264, 0, "town_hall",
 		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
@@ -139,9 +139,9 @@ DefineSite("cologne", {
 		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-50, 1815, "town-hall",
+		-50, 1815, "town_hall",
 		-- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 486, "guard-tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, 486, "guard_tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, 0, "temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1388, 0, "university", -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -196,7 +196,7 @@ DefineSite("eresburg", {
 		1815, ""
 	},
 	HistoricalBuildings = {
-		775, 1815, "guard-tower"
+		775, 1815, "guard_tower"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -217,7 +217,7 @@ DefineSite("flensburg", {
 		1815, "denmark" -- Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -275,7 +275,7 @@ DefineSite("hamburg", {
 		-264, "saxon-tribe" -- Hamburg's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -298,7 +298,7 @@ DefineSite("hanover", {
 		-264, "lombard-tribe" -- Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -321,7 +321,7 @@ DefineSite("karlsruhe", {
 		-71, "suebi-tribe" -- Ariovistus and his people came from the Upper Rhine; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	},
 	HistoricalBuildings = {
-		-71, 0, "town-hall"
+		-71, 0, "town_hall"
 	},
 	HistoricalUnits = {
 		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
@@ -351,15 +351,15 @@ DefineSite("kiel", {
 		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-1600, 0, "town-hall",
+		-1600, 0, "town_hall",
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
 		-1600, 1815, "farm",
 --		-1600, 1815, "barracks", -- remove to prevent them from training troops
 --		-1600, 1815, "smithy", -- remove to prevent them from changing faction
-		-1600, 1815, "lumber-mill",
-		-1600, 1815, "watch-tower",
-		-1600, 1815, "watch-tower"
+		-1600, 1815, "lumber_mill",
+		-1600, 1815, "watch_tower",
+		-1600, 1815, "watch_tower"
 	},
 	HistoricalUnits = {
 		-2800, {-2800, 12, 30}, "unit-germanic-worker", 5000, "asa-tribe",
@@ -425,7 +425,7 @@ DefineSite("lubeck", {
 		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -451,7 +451,7 @@ DefineSite("magdeburg", {
 		1815, "prussia" -- Magdeburg was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -479,7 +479,7 @@ DefineSite("mainz", {
 		1815, "hesse" -- Mayence was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-50, 161, "town-hall",
+		-50, 161, "town_hall",
 		161, 0, "stronghold", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, 0, "barracks",
 		395, 0, "temple", -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
@@ -502,7 +502,7 @@ DefineSite("mittelberg", {
 		-1599, ""
 	},
 	HistoricalBuildings = {
-		-1600, -1599, "watch-tower" -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
+		-1600, -1599, "watch_tower" -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -526,7 +526,7 @@ DefineSite("munster", {
 		1815, "prussia" -- Münster was a part of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -631,8 +631,8 @@ DefineSite("regensburg", {
 		1815, "bavaria" -- Regensburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "guard-tower",
-		175, 526, "guard-tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		170, 172, "guard_tower",
+		175, 526, "guard_tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		526, 739, "farm",
 		739, 0, "temple" -- Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
@@ -711,7 +711,7 @@ DefineSite("straubing", {
 		1815, "bavaria" -- Straubing was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		170, 172, "guard-tower", -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
+		170, 172, "guard_tower", -- a Roman double camp at Straubing was destroyed during the First Marcomannic War in 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		1815, 0, "farm"
 	},
 	HistoricalUnits = {
@@ -734,7 +734,7 @@ DefineSite("syburg", {
 		1815, ""
 	},
 	HistoricalBuildings = {
-		775, 1815, "guard-tower"
+		775, 1815, "guard_tower"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })
@@ -777,7 +777,7 @@ DefineSite("trier", {
 		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple", -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1454, 0, "university" -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -808,7 +808,7 @@ DefineSite("worms", {
 		1815, "hesse" -- Worms was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		395, 0, "town-hall",
+		395, 0, "town_hall",
 		395, 0, "temple" -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}

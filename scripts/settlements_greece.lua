@@ -37,7 +37,7 @@ DefineSite("aghia-irini", {
 		-1190, ""
 	},
 	HistoricalBuildings = {
-		-1700, -1190, "guard-tower" -- Mycenaean fortifications present in Aghia Irini (in the island of Ceos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-1700, -1190, "guard_tower" -- Mycenaean fortifications present in Aghia Irini (in the island of Ceos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 		
 	},
@@ -113,7 +113,7 @@ DefineSite("athens", {
 	HistoricalBuildings = {
 		-1700, -1190, "stronghold", -- Mycenaean fortifications present in Athens between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-		-700, 0, "town-hall"
+		-700, 0, "town_hall"
 		
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
@@ -133,7 +133,7 @@ DefineSite("byzantium", {
 		-500, "persia" -- Byzantium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -153,7 +153,7 @@ DefineSite("corinth", {
 		-146, "" -- Corinth was destroyed by Rome in 146 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
 	HistoricalBuildings = {
-		-1450, -146, "town-hall"
+		-1450, -146, "town_hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -336,7 +336,7 @@ DefineSite("knossos", {
 		-1450, "mycenae" -- Cnossus was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -353,7 +353,7 @@ DefineSite("krisa", {
 		-1190, "" -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	HistoricalBuildings = {
-		-1700, -1190, "guard-tower"
+		-1700, -1190, "guard_tower"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })
@@ -419,7 +419,7 @@ DefineSite("phylakopi", {
 		-1190, ""
 	},
 	HistoricalBuildings = {
-		-1700, -1190, "guard-tower" -- Mycenaean fortifications present in Phylakopi (in the island of Melos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-1700, -1190, "guard_tower" -- Mycenaean fortifications present in Phylakopi (in the island of Melos) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 		
 	},
@@ -456,7 +456,7 @@ DefineSite("thebes", {
 		-700, "thebes" -- Thebes was part of the state of Boeotia/Thebes in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"europe", "greece", "west-and-central-europe"}
 })

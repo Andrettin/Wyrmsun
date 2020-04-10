@@ -129,7 +129,7 @@ DefineModifier("upgrade-faction-galicia",
 )
 
 DefineDependency("upgrade-faction-suebi-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-galicia",

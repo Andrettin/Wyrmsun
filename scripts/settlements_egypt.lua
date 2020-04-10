@@ -118,7 +118,7 @@ DefineSite("memphis", {
 		-500, "persia" -- Memphis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })
@@ -273,7 +273,7 @@ DefineSite("thebes-egypt", {
 		-500, "persia" -- Thebes was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"africa"}
 })

@@ -1436,7 +1436,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {UnitTypeClass = "lumber-mill"}, HighlightColor = "yellow",
+				{ 	Condition = {UnitTypeClass = "lumber_mill"}, HighlightColor = "yellow",
 					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "smithy"}, HighlightColor = "yellow",

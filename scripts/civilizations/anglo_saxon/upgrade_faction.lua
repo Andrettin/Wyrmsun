@@ -324,7 +324,7 @@ DefineModifier("upgrade-faction-wessex",
 )
 
 DefineDependency("upgrade-faction-angle-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-bernice-tribe",
@@ -344,7 +344,7 @@ DefineDependency("upgrade-faction-gumeninga-tribe",
 )
 
 DefineDependency("upgrade-faction-jute-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-lindisfaran-tribe",
@@ -356,7 +356,7 @@ DefineDependency("upgrade-faction-mierce-tribe",
 )
 
 DefineDependency("upgrade-faction-teuton-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-bernicia",

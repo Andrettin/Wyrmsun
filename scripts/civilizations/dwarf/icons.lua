@@ -524,42 +524,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-battle-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/battle_axe.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-broad-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/broad_axe.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-great-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/great_axe.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-shield-1",
-	Size = {46, 38},
-	File = "dwarf/icons/shield_1.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-shield-2",
-	Size = {46, 38},
-	File = "dwarf/icons/shield_2.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-shield-3",
-	Size = {46, 38},
-	File = "dwarf/icons/shield_3.png"
-})
-
-DefineIcon({
 	Name = "icon-dwarven-throwing-axe",
 	Size = {46, 38},
 	File = "dwarf/icons/throwing_axe.png"
@@ -593,30 +557,6 @@ DefineIcon({
 	Name = "icon-dwarven-ballista-bolt-3",
 	Size = {46, 38},
 	File = "dwarf/icons/ballista_bolt_3.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-boots",
-	Size = {46, 38},
-	File = "dwarf/icons/boots.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-patrol-land",
-	Size = {46, 38},
-	File = "dwarf/icons/patrol_land.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-stand-ground",
-	Size = {46, 38},
-	File = "dwarf/icons/stand_ground.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-return-goods",
-	Size = {46, 38},
-	File = "dwarf/icons/return_goods.png"
 })
 
 DefineIcon({

@@ -56,7 +56,7 @@ DefineSite("aquileia", {
 		1815, "austria" -- Aquileia's area was a part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-184, 0, "town-hall"
+		-184, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -209,7 +209,7 @@ DefineSite("florence", {
 		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-750, 0, "town-hall"
+		-750, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -232,7 +232,7 @@ DefineSite("genoa", {
 		1815, "sardinia" -- Genoa was a possession of the Kingdom of Sardinia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-154, 0, "town-hall"
+		-154, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -291,7 +291,7 @@ DefineSite("milan", {
 		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-191, 0, "town-hall",
+		-191, 0, "town_hall",
 		768, 0, "temple", -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
@@ -314,7 +314,7 @@ DefineSite("modena", {
 		1494, "modena"
 	},
 	HistoricalBuildings = {
-		-218, 0, "town-hall"
+		-218, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -336,7 +336,7 @@ DefineSite("naples", {
 		1560, "spain" -- Naples was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall",
+		-264, 0, "town_hall",
 		1224, 0, "university" -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -371,7 +371,7 @@ DefineSite("oderzo", {
 		161, "rome" -- Opitergium was in existence in the 161-180 AD period, and under Roman ownership; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalBuildings = {
-		161, 1815, "town-hall"
+		161, 1815, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -409,7 +409,7 @@ DefineSite("palermo", {
 		1560, "spain" -- Palermo was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-550, 0, "town-hall",
+		-550, 0, "town_hall",
 		1394, 0, "university" -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
@@ -490,7 +490,7 @@ DefineSite("rome", {
 		1494, "papal-states" -- Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-750, 0, "town-hall",
+		-750, 0, "town_hall",
 		-192, 0, "dock", -- Mercantile docks were built at Rome in 192 BC and 174 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 244.
 		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
 --		-40, 0, "dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
@@ -550,7 +550,7 @@ DefineSite("syracuse", {
 		1494, "sicily" -- Syracuse was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	},
 	HistoricalBuildings = {
-		-212, 0, "town-hall"
+		-212, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -572,7 +572,7 @@ DefineSite("venice", {
 		1815, "austria" -- Venice was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })
@@ -593,7 +593,7 @@ DefineSite("verona", {
 	},
 	HistoricalBuildings = {
 		161, 1815, "farm",
-		1815, 0, "guard-tower" -- Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, 0, "guard_tower" -- Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	Regions = {"europe", "italy", "west-and-central-europe"}
 })

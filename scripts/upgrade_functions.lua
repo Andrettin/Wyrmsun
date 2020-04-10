@@ -116,7 +116,7 @@ function ApplyTechLevels()
 		"upgrade-sailing"
 	}
 	local iron_upgrades = {
-		"upgrade-ironworking",
+		"upgrade_ironworking",
 		"upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
 		"upgrade-teuton-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",

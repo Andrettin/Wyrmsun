@@ -40,7 +40,7 @@ DefineSite("gdansk", {
 		1815, "prussia" -- Dantzic was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		1560, 0, "town_hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -60,7 +60,7 @@ DefineSite("gniezno", {
 		1815, "prussia" -- Gnesen was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		1560, 0, "town_hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -103,7 +103,7 @@ DefineSite("konigsberg", {
 		1815, "prussia" -- Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1544, 0, "town-hall",
+		1544, 0, "town_hall",
 		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"europe", "west-and-central-europe"}
@@ -126,7 +126,7 @@ DefineSite("krakow", {
 		1846, "austria" -- Cracow became an Austrian possession in 1846; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1364, 0, "town-hall",
+		1364, 0, "town_hall",
 		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
@@ -147,7 +147,7 @@ DefineSite("poznan", {
 		1815, "prussia" -- Posen was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		1560, 0, "town_hall"
 	},
 	Regions = {"europe", "poland", "west-and-central-europe"}
 })
@@ -170,7 +170,7 @@ DefineSite("szczecin", {
 		1815, "prussia" -- Stettin was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		1648, 0, "town-hall"
+		1648, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
 })

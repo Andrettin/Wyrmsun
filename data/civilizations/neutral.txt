@@ -1,0 +1,557 @@
+neutral = {
+	name = "Neutral"
+	visible = false
+	playable = false
+	interface = "dwarven"
+	default_color = "gray"
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_dwarven_shield_1
+		attack = icon_dwarven_battle_axe
+		patrol = icon_dwarven_patrol_land
+		stand_ground = icon_dwarven_stand_ground
+		return_goods = icon_dwarven_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/dwarven/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/dwarven/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/dwarven/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/dwarven/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	ship_names = {
+		"Naglfar" #ship of the giants in Norse mythology, whose helmsman is Hrym; made of dead men's nails; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 21.
+		"Ringhorn" #Balder's ship in Norse mythology in which he was cremanted; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
+		"Skidbladnir" #ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+		"Skrauti" #dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins; the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	}
+	
+	unit_class_names = {
+		barracks = {
+			"Axehall" "Bloodhall" "Daggerhall" "Hammerhall" "Helmhall" "Shieldhall" "Spearhall" "Stonehall" "Swordhall"
+		}
+		
+		farm = {
+			"Blackfield" "Blackgarden" "Brownfield" "Browngarden" "Greengarden" "Greenfield" "Lushfield" "Newfield" "Newgarden" "Oldfield" "Oldgarden" "Redfield" "Redgarden" "Stonefield" "Stonegarden" "Whitefield" "Whitegarden"
+		}
+		
+		lumber_mill = {
+			"The Black Board" "The Black Hammer" "The Black Nail" "The Black Plank" "The Black Saw" "The Black Tree" "The Brass Hammer" "The Brass Nail" "The Brass Saw" "The Bronze Hammer" "The Bronze Nail" "The Bronze Saw" "The Copper Hammer" "The Copper Nail" "The Copper Saw" "The Golden Hammer" "The Golden Nail" "The Golden Saw" "The Iron Hammer" "The Iron Nail" "The Iron Saw" "The Silver Hammer" "The Silver Nail" "The Silver Saw" "The Glittering Board" "The Glittering Hammer" "The Glittering Nail" "The Glittering Plank" "The Glittering Saw" "The Glittering Tree" "The Laughing Board" "The Laughing Hammer" "The Laughing Nail" "The Laughing Plank" "The Laughing Saw" "The Laughing Tree",
+		}
+		
+		masons_shop = {
+			"The Black Chisel" "The Black Hammer" "The Black Stone" "The Brass Chisel" "The Brass Hammer" "The Bronze Chisel" "The Bronze Hammer" "The Copper Chisel" "The Copper Hammer" "The Golden Chisel" "The Golden Hammer" "The Iron Chisel" "The Iron Hammer" "The Silver Chisel" "The Silver Hammer" "The Glittering Chisel" "The Glittering Hammer" "The Glittering Stone" "The Laughing Chisel" "The Laughing Hammer" "The Laughing Stone",
+		}
+		
+		smithy = {
+			"The Black Anvil" "The Black Furnace" "The Black Gauntlet" "The Black Hammer" "The Black Helm" "The Black Stone" "The Brass Anvil" "The Brass Furnace" "The Brass Gauntlet" "The Brass Hammer" "The Brass Helm" "The Bronze Anvil" "The Bronze Furnace" "The Bronze Gauntlet" "The Bronze Hammer" "The Bronze Helm" "The Copper Anvil" "The Copper Furnace" "The Copper Gauntlet" "The Copper Hammer" "The Copper Helm" "The Golden Anvil" "The Golden Furnace" "The Golden Gauntlet" "The Golden Hammer" "The Golden Helm" "The Iron Anvil" "The Iron Furnace" "The Iron Gauntlet" "The Iron Hammer" "The Iron Helm" "The Silver Anvil" "The Silver Furnace" "The Silver Gauntlet" "The Silver Hammer" "The Silver Helm" "The Glittering Anvil" "The Glittering Furnace" "The Glittering Gauntlet" "The Glittering Hammer" "The Glittering Helm" "The Glittering Stone" "The Laughing Anvil" "The Laughing Furnace" "The Laughing Hammer" "The Laughing Stone"
+		}
+	}
+	
+	force_type_weights = {
+		land_force = 3
+		naval_force = 1
+		air_force = 1
+	}
+	
+	force_templates = {
+		{
+			force_type = land_force
+			priority = 130
+			units = {
+				infantry = 4
+				cavalry = 2
+				gunpowder_infantry = 3
+				priest = 2
+				siege_engine = 1
+			}
+		}
+		{
+			force_type = land_force
+			priority = 130
+			units = {
+				infantry = 4
+				cavalry = 2
+				shooter = 3
+				priest = 2
+				siege_engine = 1
+			}
+		}
+		{
+			force_type = land_force
+			priority = 120
+			units = {
+				infantry = 4
+				cavalry = 2
+				gunpowder_infantry = 3
+				priest = 2
+			}
+		}
+		{
+			force_type = land_force
+			priority = 120
+			units = {
+				infantry = 4
+				cavalry = 2
+				shooter = 3
+				priest = 2
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 6
+				gunpowder_infantry = 3
+				priest = 2
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 6
+				shooter = 3
+				priest = 2
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 6
+				gunpowder_infantry = 3
+				siege_engine = 1
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 6
+				shooter = 3
+				siege_engine = 1
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 4
+				cavalry = 2
+				gunpowder_infantry = 3
+			}
+		}
+		{
+			force_type = land_force
+			priority = 115
+			units = {
+				infantry = 4
+				cavalry = 2
+				shooter = 3
+			}
+		}
+		{
+			force_type = land_force
+			priority = 110
+			units = {
+				infantry = 6
+				shooter = 3
+			}
+		}
+		{
+			force_type = land_force
+			priority = 100
+			units = {
+				infantry = 3
+			}
+		}
+		{
+			force_type = naval_force
+			priority = 100
+			units = {
+				siege_warship = 3
+			}
+		}
+		{
+			force_type = air_force
+			priority = 100
+			units = {
+				flying_rider = 3
+			}
+		}
+	}
+	
+	ai_building_templates = {
+		{
+			unit_class = barracks
+			priority = 1000
+		}
+		{
+			unit_class = smithy
+			priority = 990
+		}
+		{
+			unit_class = barracks
+			priority = 980
+		}
+		{
+			unit_class = lumber-mill
+			priority = 970
+		}
+		{
+			unit_class = market
+			priority = 960
+		}
+		{
+			unit_class = masons-shop
+			priority = 950
+		}
+		{
+			unit_class = stronghold
+			priority = 940
+		}
+		{
+			unit_class = stables
+			priority = 930
+		}
+		#{
+		#	unit_class = fortress
+		#	priority = 920
+		#}
+		{
+			unit_class = temple
+			priority = 910
+		}
+		{
+			unit_class = university
+			priority = 900
+		}
+		{
+			unit_class = barracks
+			priority = 890
+		}
+		{
+			unit_class = watch_tower
+			priority = 880
+		}
+		{
+			unit_class = heavy_tower
+			priority = 879
+		}
+		{
+			unit_class = cannon_tower
+			priority = 879
+		}
+		{
+			unit_class = banner
+			priority = 878
+		}
+		{
+			unit_class = watch_tower
+			priority = 877
+		}
+		{
+			unit_class = guard_tower
+			priority = 876
+		}
+		{
+			unit_class = banner
+			priority = 875
+		}
+		{
+			unit_class = watch_tower
+			priority = 874
+		}
+		{
+			unit_class = heavy_tower
+			priority = 873
+		}
+		{
+			unit_class = cannon_tower
+			priority = 873
+		}
+		{
+			unit_class = banner
+			priority = 872
+		}
+		#{
+		#	unit_class = eyrie
+		#	priority = 870
+		#}
+		{
+			unit_class = watch_tower
+			priority = 860
+		}
+		{
+			unit_class = heavy_tower
+			priority = 859
+		}
+		{
+			unit_class = cannon_tower
+			priority = 859
+		}
+		{
+			unit_class = banner
+			priority = 858
+		}
+		{
+			unit_class = watch_tower
+			priority = 857
+		}
+		{
+			unit_class = guard_tower
+			priority = 856
+		}
+		{
+			unit_class = banner
+			priority = 855
+		}
+		{
+			unit_class = watch_tower
+			priority = 854
+		}
+		{
+			unit_class = heavy_tower
+			priority = 853
+		}
+		{
+			unit_class = cannon_tower
+			priority = 853
+		}
+		{
+			unit_class = banner
+			priority = 852
+		}
+		{
+			unit_class = watch_tower
+			priority = 851
+		}
+		{
+			unit_class = guard_tower
+			priority = 850
+		}
+		{
+			unit_class = banner
+			priority = 849
+		}
+		{
+			unit_class = watch_tower
+			priority = 848
+		}
+		{
+			unit_class = heavy_tower
+			priority = 847
+		}
+		{
+			unit_class = cannon_tower
+			priority = 847
+		}
+		{
+			unit_class = banner
+			priority = 846
+		}
+		{
+			unit_class = watch_tower
+			priority = 845
+		}
+		{
+			unit_class = guard_tower
+			priority = 844
+		}
+		{
+			unit_class = banner
+			priority = 843
+		}
+		{
+			unit_class = watch_tower
+			priority = 842
+		}
+		{
+			unit_class = heavy_tower
+			priority = 841
+		}
+		{
+			unit_class = cannon_tower
+			priority = 841
+		}
+		{
+			unit_class = banner
+			priority = 840
+		}
+		{
+			unit_class = watch_tower
+			priority = 839
+		}
+		{
+			unit_class = guard_tower
+			priority = 838
+		}
+		{
+			unit_class = banner
+			priority = 837
+		}
+		{
+			unit_class = watch_tower
+			priority = 836
+		}
+		{
+			unit_class = heavy_tower
+			priority = 835
+		}
+		{
+			unit_class = cannon_tower
+			priority = 835
+		}
+		{
+			unit_class = banner
+			priority = 834
+		}
+		{
+			unit_class = watch_tower
+			priority = 833
+		}
+		{
+			unit_class = guard_tower
+			priority = 832
+		}
+		{
+			unit_class = banner
+			priority = 831
+		}
+		{
+			unit_class = barracks
+			priority = 830
+		}
+		{
+			unit_class = barracks
+			priority = 820
+		}
+		{
+			unit_class = watch_tower
+			priority = 810
+		}
+		{
+			unit_class = heavy_tower
+			priority = 809
+		}
+		{
+			unit_class = cannon_tower
+			priority = 809
+		}
+		{
+			unit_class = banner
+			priority = 808
+		}
+		{
+			unit_class = watch_tower
+			priority = 807
+		}
+		{
+			unit_class = guard_tower
+			priority = 806
+		}
+		{
+			unit_class = banner
+			priority = 805
+		}
+		{
+			unit_class = watch_tower
+			priority = 804
+		}
+		{
+			unit_class = heavy_tower
+			priority = 803
+		}
+		{
+			unit_class = cannon_tower
+			priority = 803
+		}
+		{
+			unit_class = banner
+			priority = 802
+		}
+		{
+			unit_class = watch_tower
+			priority = 801
+		}
+		{
+			unit_class = guard_tower
+			priority = 800
+		}
+		{
+			unit_class = banner
+			priority = 799
+		}
+		{
+			unit_class = watch_tower
+			priority = 798
+		}
+		{
+			unit_class = heavy_tower
+			priority = 797
+		}
+		{
+			unit_class = cannon_tower
+			priority = 797
+		}
+		{
+			unit_class = banner
+			priority = 796
+		}
+		{
+			unit_class = watch_tower
+			priority = 795
+		}
+		{
+			unit_class = guard_tower
+			priority = 794
+		}
+		{
+			unit_class = banner
+			priority = 793
+		}
+		{
+			unit_class = watch_tower
+			priority = 792
+		}
+		{
+			unit_class = heavy_tower
+			priority = 791
+		}
+		{
+			unit_class = cannon_tower
+			priority = 791
+		}
+		{
+			unit_class = banner
+			priority = 790
+		}
+		{
+			unit_class = watch_tower
+			priority = 789
+		}
+		{
+			unit_class = guard_tower
+			priority = 788
+		}
+		{
+			unit_class = banner
+			priority = 787
+		}
+	}
+}

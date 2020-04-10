@@ -145,7 +145,7 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
 					tech_icon_x = 7
 					tech_icon_y = 3
-				elseif (GetUnitTypeData(unitName, "Class") == "gunpowder-infantry") then
+				elseif (GetUnitTypeData(unitName, "Class") == "gunpowder_infantry") then
 					tech_icon_x = 10
 					tech_icon_y = 8
 				elseif (GetUnitTypeData(unitName, "Class") == "cavalry") then
@@ -154,19 +154,19 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "priest") then
 					tech_icon_x = 10
 					tech_icon_y = 3
-				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
+				elseif (GetUnitTypeData(unitName, "Class") == "siege_engine") then
 					tech_icon_x = 1
 					tech_icon_y = 3
 				elseif (GetUnitTypeData(unitName, "Class") == "transport-ship") then
 					tech_icon_x = 6
 					tech_icon_y = 7
-				elseif (GetUnitTypeData(unitName, "Class") == "siege-warship") then
+				elseif (GetUnitTypeData(unitName, "Class") == "siege_warship") then
 					tech_icon_x = 7
 					tech_icon_y = 7
-				elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
+				elseif (GetUnitTypeData(unitName, "Class") == "flying_rider") then
 					tech_icon_x = 8
 					tech_icon_y = 4
-				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
+				elseif (GetUnitTypeData(unitName, "Class") == "town_hall") then
 					tech_icon_x = 5
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "stronghold") then
@@ -178,10 +178,10 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "barracks") then
 					tech_icon_x = 4
 					tech_icon_y = 2
-				elseif (GetUnitTypeData(unitName, "Class") == "lumber-mill") then
+				elseif (GetUnitTypeData(unitName, "Class") == "lumber_mill") then
 					tech_icon_x = 7
 					tech_icon_y = 2
-				elseif (GetUnitTypeData(unitName, "Class") == "masons-shop") then
+				elseif (GetUnitTypeData(unitName, "Class") == "masons_shop") then
 					tech_icon_x = 9
 					tech_icon_y = 4
 				elseif (GetUnitTypeData(unitName, "Class") == "market") then
@@ -202,16 +202,16 @@ function RunTechTreeMenu(civilization_number)
 				elseif (GetUnitTypeData(unitName, "Class") == "dock") then
 					tech_icon_x = 6
 					tech_icon_y = 6
-				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
+				elseif (GetUnitTypeData(unitName, "Class") == "watch_tower") then
 					tech_icon_x = 9
 					tech_icon_y = 2
-				elseif (GetUnitTypeData(unitName, "Class") == "guard-tower") then
+				elseif (GetUnitTypeData(unitName, "Class") == "guard_tower") then
 					tech_icon_x = 9
 					tech_icon_y = 3
-				elseif (GetUnitTypeData(unitName, "Class") == "heavy-tower") then
+				elseif (GetUnitTypeData(unitName, "Class") == "heavy_tower") then
 					tech_icon_x = 9
 					tech_icon_y = 6
-				elseif (GetUnitTypeData(unitName, "Class") == "cannon-tower") then
+				elseif (GetUnitTypeData(unitName, "Class") == "cannon_tower") then
 					tech_icon_x = 9
 					tech_icon_y = 8
 				else

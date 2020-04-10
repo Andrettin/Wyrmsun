@@ -36,7 +36,7 @@ DefineSite("calchedon", {
 		-500, "persia" -- Calchedon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -52,7 +52,7 @@ DefineSite("dascylium", {
 		-500, "persia" -- Dascylium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -71,7 +71,7 @@ DefineSite("sardis", {
 		-500, "persia" -- Sardis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-750, 0, "town-hall"
+		-750, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -91,7 +91,7 @@ DefineSite("troy", {
 		-500, "ionia" -- Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	},
 	HistoricalBuildings = {
-		-1450, 0, "town-hall"
+		-1450, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

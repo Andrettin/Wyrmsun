@@ -39,7 +39,7 @@ DefineSite("braga", {
 		1150, "portugal" -- Braga was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
-		-138, 1560, "town-hall",
+		-138, 1560, "town_hall",
 		1560, 0, "farm"
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
@@ -80,7 +80,7 @@ DefineSite("lisbon", {
 		1148, "portugal" -- Lisbon was acquired by the Kingdom of Portugal in 1148 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
-		-138, 0, "town-hall",
+		-138, 0, "town_hall",
 		1911, 0, "university" -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}
@@ -100,7 +100,7 @@ DefineSite("oporto", {
 		1150, "portugal" -- Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 	},
 	HistoricalBuildings = {
-		-138, 0, "town-hall",
+		-138, 0, "town_hall",
 		1911, 0, "university" -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
 	Regions = {"europe", "iberia", "west-and-central-europe"}

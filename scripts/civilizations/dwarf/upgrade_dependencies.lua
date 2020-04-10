@@ -66,19 +66,19 @@ DefineDependency("unit-dwarven-thunderer",
 )
 
 DefineDependency("upgrade-dwarven-great-axe",
-	{"upgrade-dwarven-broad-axe", "upgrade-ironworking"}
+	{"upgrade-dwarven-broad-axe", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-dwarven-pike",
-	{"upgrade-dwarven-long-spear", "upgrade-ironworking"}
+	{"upgrade-dwarven-long-spear", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-dwarven-shield-2",
-	{"upgrade-dwarven-shield-1", "upgrade-ironworking"}
+	{"upgrade-dwarven-shield-1", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-dwarven-bearded-throwing-axe",
-	{"upgrade-dwarven-sharp-throwing-axe", "upgrade-ironworking"}
+	{"upgrade-dwarven-sharp-throwing-axe", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-1",
@@ -86,7 +86,7 @@ DefineDependency("upgrade-dwarven-ballista-bolt-1",
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-2",
-	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1", "upgrade-ironworking"}
+	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}
 )
 
 DefineDependency("unit-dwarven-stronghold",
@@ -98,7 +98,7 @@ DefineDependency("upgrade-dwarven-coinage",
 )
 
 DefineDependency("upgrade-dwarven-alchemy",
-	{"upgrade-philosophy", "upgrade-mathematics", "upgrade-ironworking"}
+	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",

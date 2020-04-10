@@ -54,7 +54,7 @@ DefinePredependency("upgrade-teuton-spatha",
 )
 
 DefineDependency("upgrade-teuton-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-ironworking"}
+	{"upgrade-germanic-broad-sword", "upgrade_ironworking"}
 )
 
 DefinePredependency("upgrade-frank-spatha",
@@ -62,19 +62,19 @@ DefinePredependency("upgrade-frank-spatha",
 )
 
 DefineDependency("upgrade-frank-spatha",
-	{"upgrade-germanic-broad-sword", "upgrade-ironworking"}
+	{"upgrade-germanic-broad-sword", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-teuton-pike",
-	{"upgrade-germanic-long-spear", "upgrade-ironworking"}
+	{"upgrade-germanic-long-spear", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-teuton-iron-shield",
-	{"upgrade-germanic-bronze-shield", "upgrade-ironworking"}
+	{"upgrade-germanic-bronze-shield", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-teuton-bodkin-arrow",
-	{"upgrade-germanic-barbed-arrow", "upgrade-ironworking"}
+	{"upgrade-germanic-barbed-arrow", "upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-1",
@@ -82,7 +82,7 @@ DefineDependency("upgrade-teuton-catapult-projectile-1",
 )
 
 DefineDependency("upgrade-teuton-catapult-projectile-2",
-	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"unit-norse-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1", "upgrade-ironworking"}
+	{"unit-teuton-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade_ironworking"}, "or", {"unit-norse-lumber-mill", "upgrade-teuton-catapult-projectile-1", "upgrade_ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-teuton-catapult-projectile-1", "upgrade_ironworking"}
 )
 
 DefineDependency("unit-teuton-stronghold",
@@ -94,7 +94,7 @@ DefineDependency("upgrade-teuton-coinage",
 )
 
 DefineDependency("upgrade-teuton-alchemy",
-	{"upgrade-philosophy", "upgrade-mathematics", "upgrade-ironworking"}
+	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
 
 DefinePredependency("unit-teuton-stables",

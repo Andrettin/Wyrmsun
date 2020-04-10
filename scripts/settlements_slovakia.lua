@@ -44,7 +44,7 @@ DefineSite("bratislava", {
 		1815, "austria" -- Presburg was a part of the Kingdom of Hungary within the Empire of Austria in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-5500, 0, "town-hall"
+		-5500, 0, "town_hall"
 	},
 	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
 })
@@ -63,7 +63,7 @@ DefineSite("kremnica", {
 		1815, "austria" -- Körmöczbanya/Kremnitz was a part of the Kingdom of Hungary within the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		161, 0, "town-hall"
+		161, 0, "town_hall"
 	},
 	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
 })

@@ -88,28 +88,28 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 			"objective-type", "build-units-of-class",
 			"objective-string", "Build a Chieftain's Hall in Ahvoosa (Aarhus)",
 			"quantity", 1,
-			"unit-class", "town-hall",
+			"unit-class", "town_hall",
 			"settlement", "aarhus"
 		},
 		{
 			"objective-type", "build-units-of-class",
 			"objective-string", "Build a Chieftain's Hall in Leidre",
 			"quantity", 1,
-			"unit-class", "town-hall",
+			"unit-class", "town_hall",
 			"settlement", "leidre"
 		},
 		{
 			"objective-type", "build-units-of-class",
 			"objective-string", "Build a Chieftain's Hall in Malmo",
 			"quantity", 1,
-			"unit-class", "town-hall",
+			"unit-class", "town_hall",
 			"settlement", "malmo"
 		},
 		{
 			"objective-type", "build-units-of-class",
 			"objective-string", "Build a Chieftain's Hall in Stukkahulma (Stockholm)",
 			"quantity", 1,
-			"unit-class", "town-hall",
+			"unit-class", "town_hall",
 			"settlement", "stockholm"
 		}
 	},

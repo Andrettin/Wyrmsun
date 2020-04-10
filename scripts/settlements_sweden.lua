@@ -45,7 +45,7 @@ DefineSite("goteborg", {
 		1560, "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		{-2800, 12, 30}, 0, "town-hall"
+		{-2800, 12, 30}, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -71,7 +71,7 @@ DefineSite("malmo", {
 		1560, "denmark" -- Malmo was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-7000, 0, "town-hall"
+		-7000, 0, "town_hall"
 	},
 	HistoricalUnits = {
 		-3000, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "gylfing-tribe"
@@ -132,7 +132,7 @@ DefineSite("stockholm", {
 		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		{-2800, 12, 30}, 0, "town-hall"
+		{-2800, 12, 30}, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -148,7 +148,7 @@ DefineSite("torsburgen", {
 		300, "gute-tribe"
 	},
 	HistoricalBuildings = {
-		300, 1100, "watch-tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
+		300, 1100, "watch_tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })
@@ -199,7 +199,7 @@ DefineSite("visby", {
 		1560, "denmark" -- Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		1560, 0, "town-hall"
+		1560, 0, "town_hall"
 	},
 	Regions = {"europe", "scandinavia", "west-and-central-europe"}
 })

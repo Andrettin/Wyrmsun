@@ -38,7 +38,7 @@ DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name
 		-3000, "dreadskull-tribe"
 	},
 	HistoricalBuildings = {
-		-3000, 0, "town-hall"
+		-3000, 0, "town_hall"
 	},
 	Regions = {}
 })
@@ -58,7 +58,7 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 		600, "driftwood"
 	},
 	HistoricalBuildings = {
-		600, 0, "town-hall",
+		600, 0, "town_hall",
 		600, 0, "mercenary-camp", "ape-cartel",
 		600, 0, "farm",
 		600, 0, "farm",
@@ -85,7 +85,7 @@ DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe 
 		-3000, "lggi-tribe"
 	},
 	HistoricalBuildings = {
-		-3000, 0, "town-hall"
+		-3000, 0, "town_hall"
 	},
 	Regions = {}
 })
@@ -122,7 +122,7 @@ DefineSite("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire 
 		{25, 12, 30}, "shinsplitter-clan" -- conquered during 25 by the Shinsplitters
 	},
 	HistoricalBuildings = {
-		25, 0, "watch-tower"
+		25, 0, "watch_tower"
 	},
 	Regions = {}
 })
@@ -139,7 +139,7 @@ DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of 
 		-3000, "wildfang-tribe"
 	},
 	HistoricalBuildings = {
-		-3000, 0, "town-hall"
+		-3000, 0, "town_hall"
 	},
 	Regions = {}
 })

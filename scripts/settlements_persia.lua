@@ -37,7 +37,7 @@ DefineSite("arachotus", {
 		-500, "persia" -- Arachotus' area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -54,7 +54,7 @@ DefineSite("bactra", {
 		-500, "persia" -- Bactra was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -70,7 +70,7 @@ DefineSite("bagistana", {
 		-500, "persia" -- Bagistana was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -87,7 +87,7 @@ DefineSite("cazaca", {
 		-500, "persia" -- Cazaca's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -103,7 +103,7 @@ DefineSite("cyropolis", {
 		-500, "persia" -- Cyropolis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -122,7 +122,7 @@ DefineSite("ecbatana", {
 		-500, "persia" -- Ecbatana was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-750, 0, "town-hall"
+		-750, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -139,7 +139,7 @@ DefineSite("harmozia", {
 		-500, "persia" -- Harmozia's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -156,7 +156,7 @@ DefineSite("pasargadae", {
 		-500, "persia" -- Pasargadae was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -172,7 +172,7 @@ DefineSite("persepolis", {
 		-500, "persia" -- Persepolis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-500, 0, "town-hall"
+		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -189,7 +189,7 @@ DefineSite("rhagae", {
 		-500, "persia" -- Rhagae's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })
@@ -226,7 +226,7 @@ DefineSite("tarua", {
 		-500, "persia" -- Tarua's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	},
 	HistoricalBuildings = {
-		-600, 0, "town-hall"
+		-600, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

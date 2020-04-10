@@ -1,0 +1,11 @@
+icon_dwarven_battle_axe = {
+	file = "dwarf/icons/battle_axe.png"
+}
+
+icon_dwarven_broad_axe = {
+	file = "dwarf/icons/broad_axe.png"
+}
+
+icon_dwarven_great_axe = {
+	file = "dwarf/icons/great_axe.png"
+}

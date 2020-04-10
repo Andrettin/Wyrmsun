@@ -36,7 +36,7 @@ DefineSite("anyang", {
 		-1520, "china" -- Anyang was a part of China under the Shang Dynasty (about 1520-1030 BC); Source: "Atlas de História Mundial", 2001, p. 62.
 	},
 	HistoricalBuildings = {
-		-1520, 0, "town-hall"
+		-1520, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

@@ -164,23 +164,23 @@ DefineModifier("upgrade-faction-sweden",
 )
 
 DefineDependency("upgrade-faction-dane-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-geat-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-gute-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-sitone-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-swede-tribe",
-	{"upgrade-ironworking"}
+	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-denmark",

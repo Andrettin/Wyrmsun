@@ -657,7 +657,7 @@ local NidavellirEvents = {
 		Description = "A band of goblin thieves has been looting the farms in PROVINCE_NAME. We have obtained information on where their hideout is... what shall we do?",
 		Conditions = function(s)
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
-				if (ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town-hall") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "barracks") == false and SyncRand(100) < 1) then -- event only fires if there is a province which is settled but does not have proper defenses
+				if (ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "town_hall") and ProvinceHasBuildingClass(WorldMapProvinces[province_key].Name, "barracks") == false and SyncRand(100) < 1) then -- event only fires if there is a province which is settled but does not have proper defenses
 					EventProvince = WorldMapProvinces[province_key]
 					return true
 				end

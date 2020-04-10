@@ -46,8 +46,8 @@ DefineSite("buda", {
 		1560, "turkey" -- Buda was a part of the kingdom of Hungary within the Ottoman Empire in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-5500, 474, "town-hall",
-		919, 0, "town-hall"
+		-5500, 474, "town_hall",
+		919, 0, "town_hall"
 	},
 	Regions = {"europe", "roman-danube", "west-and-central-europe"}
 })
@@ -68,7 +68,7 @@ DefineSite("pest", {
 		1560, "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall",
+		-264, 0, "town_hall",
 		1389, 0, "university", -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- the Eötvös College was founded in Budapest in 1896 by baron Loránd Eötvös; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
 	},

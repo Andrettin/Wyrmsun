@@ -176,15 +176,6 @@ DefineUpgrade("upgrade-iron-plow", {
 	RequirementsString = "Iron-Tipped Wood Plow and Smithy"
 })
 
-DefineUpgrade("upgrade-ironworking", {
-	Name = "Ironworking",
-	Class = "ironworking",
-	Civilization = "neutral",
-	Icon = "anvil",
-	Description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
-	Costs = {"time", 250, "copper", 2000}
-})
-
 DefineUpgrade("upgrade-masonry", {
 	Name = "Masonry",
 	Class = "masonry",
@@ -287,7 +278,7 @@ DefineUpgrade("upgrade-steam-engine", {
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
-DefineModifier("upgrade-ironworking",
+DefineModifier("upgrade_ironworking",
 	{"improve-production", "iron", 10},
 	{"improve-production", "mithril", 10},
 	{"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},

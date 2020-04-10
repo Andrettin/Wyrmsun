@@ -43,7 +43,7 @@ DefineSite("amsterdam", {
 		1815, "netherlands" -- Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall",
+		-264, 0, "town_hall",
 		1877, 0, "university" -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		-- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
@@ -84,7 +84,7 @@ DefineSite("leeuwarden", {
 		1815, "netherlands" -- Leeuwarden's area was part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {
-		-264, 0, "town-hall"
+		-264, 0, "town_hall"
 	},
 	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
 })
