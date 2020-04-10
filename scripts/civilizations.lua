@@ -523,7 +523,7 @@ DefineCivilization("dwarf", {
 		-1, "upgrade-dwarven-shield-1", true, -- bronze age technologies had already been obtained by the dwarves by this point
 		-1, "upgrade-dwarven-sharp-throwing-axe", true, -- bronze age technologies had already been obtained by the dwarves by this point
 		25, "upgrade-masonry", true, -- dwarves already had castles built of stone masonry by then
-		25, "upgrade-gunpowder", true, -- dwarves already had gunpowder by then (as seen by them having thunderes in The Sceptre of Fire)
+		25, "upgrade_gunpowder", true, -- dwarves already had gunpowder by then (as seen by them having thunderes in The Sceptre of Fire)
 		400, "upgrade-dwarven-coinage", true, -- the dwarves should already have Coinage technology by then
 		550, "upgrade_ironworking", true,
 		550, "upgrade-dwarven-great-axe", true, -- late iron age technologies already obtained by the dwarves by this point
@@ -1971,7 +1971,7 @@ DefineCivilization("teuton", {
 		800, "upgrade-teuton-writing", true,
 		800, "upgrade-masonry", true,
 		919, "upgrade-deity-christian-god", true, -- the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1249, "upgrade-gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+		1249, "upgrade_gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
 })
 
@@ -2045,7 +2045,7 @@ DefineCivilization("english", {
 	},
 	HistoricalUpgrades = {
 		1180, "upgrade-compass", true, -- the English scholar Alexander Neckam (1157-1217) wrote about the uses of magnetism for ascertaining the north/south direction in 1180; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
-		1249, "upgrade-gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+		1249, "upgrade_gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	},
 	PersonalNames = {
 		"male", "Albert",
@@ -2856,7 +2856,7 @@ DefineCivilization("chinese", {
 	Adjective = "Chinese",
 	Playable = false,
 	HistoricalUpgrades = {
-		1044, "upgrade-gunpowder", true -- gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+		1044, "upgrade_gunpowder", true -- gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
 })
 

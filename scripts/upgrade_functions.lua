@@ -129,7 +129,7 @@ function ApplyTechLevels()
 		"upgrade-celestial-navigation"
 	}
 	local gunpowder_upgrades = {
-		"upgrade-gunpowder",
+		"upgrade_gunpowder",
 		"upgrade-compass"
 	}
 	

@@ -31,7 +31,7 @@ Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
 	"upgrade-wood-plow", "upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
 	"upgrade-masonry",
-	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy", "upgrade-gunpowder",
+	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy",
 	"upgrade-egyptian-civilization",
 	"upgrade-elven-civilization",
 	"upgrade-latin-civilization",

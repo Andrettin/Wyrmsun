@@ -89,7 +89,7 @@ DefineDependency("upgrade-philosophy",
 	"or", {"upgrade-teuton-writing"}
 )
 
-DefineDependency("upgrade-gunpowder",
+DefineDependency("upgrade_gunpowder",
 	{"upgrade-dwarven-alchemy"},
 	"or", {"upgrade-goblin-alchemy"},
 	"or", {"upgrade-teuton-alchemy"}
@@ -278,12 +278,12 @@ DefineDependency("unit-bearded-throwing-axe",
 )
 
 DefineDependency("unit-hand-cannon",
-	{"unit-brising-smithy", "upgrade-gunpowder"},
-	"or", {"unit-dwarven-smithy", "upgrade-gunpowder"},
-	"or", {"unit-goblin-smithy", "upgrade-gunpowder"},
-	"or", {"unit-latin-smithy", "upgrade-gunpowder"},
-	"or", {"unit-norse-smithy", "upgrade-gunpowder"},
-	"or", {"unit-teuton-smithy", "upgrade-gunpowder"}
+	{"unit-brising-smithy", "upgrade_gunpowder"},
+	"or", {"unit-dwarven-smithy", "upgrade_gunpowder"},
+	"or", {"unit-goblin-smithy", "upgrade_gunpowder"},
+	"or", {"unit-latin-smithy", "upgrade_gunpowder"},
+	"or", {"unit-norse-smithy", "upgrade_gunpowder"},
+	"or", {"unit-teuton-smithy", "upgrade_gunpowder"}
 )
 
 DefineDependency("unit-wooden-shield",

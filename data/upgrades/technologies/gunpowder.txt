@@ -1,0 +1,12 @@
+upgrade_gunpowder = {
+	name = "Gunpowder"
+	class = gunpowder
+	civilization = neutral
+	icon = gunpowder
+	description = "The explosive material known as gunpowder has a varied number of potential applications. Early gunpowder weapons, such as the hand cannon, can have a significant impact on the battlefield. Further developments could even possess the potential to revolutionize warfare as a whole...\n\nEffect: Allows gunpowder infantry."
+	requirements_string = "Alchemy"
+	costs = {
+		time = 250
+		copper = 4000
+	}
+}

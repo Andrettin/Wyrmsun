@@ -30,7 +30,7 @@ DefineDependency("unit-teuton-archer",
 )
 
 DefineDependency("unit-teuton-gunpowder-infantry",
-	{"unit-teuton-smithy", "upgrade-gunpowder"}, "or", {"unit-latin-smithy", "upgrade-gunpowder"}, "or", {"unit-norse-smithy", "upgrade-gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade-gunpowder"}
+	{"unit-teuton-smithy", "upgrade_gunpowder"}, "or", {"unit-latin-smithy", "upgrade_gunpowder"}, "or", {"unit-norse-smithy", "upgrade_gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade_gunpowder"}
 )
 
 DefineDependency("unit-teuton-guard-tower",

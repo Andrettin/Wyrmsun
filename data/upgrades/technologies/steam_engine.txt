@@ -1,0 +1,8 @@
+upgrade_steam_engine = {
+	name = "Steam Engine"
+	class = steam_engine
+	costs = {
+		time = 250
+		copper = 4000
+	}
+}

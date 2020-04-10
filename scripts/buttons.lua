@@ -2396,8 +2396,8 @@ DefineButton( { Pos = 4, Icon = "icon-philosophy",
 	}
 } )
 
-DefineButton( { Pos = 6, Icon = "icon-gunpowder",
-	Action = "research", Value = "upgrade-gunpowder",
+DefineButton( { Pos = 6, Icon = "gunpowder",
+	Action = "research", Value = "upgrade_gunpowder",
 	Allowed = "check-single-research",
 	Description = "Allows gunpowder infantry.",
 	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
@@ -2407,8 +2407,8 @@ DefineButton( { Pos = 6, Icon = "icon-gunpowder",
 	}
 } )
 
-DefineButton( { Pos = 6, Icon = "icon-gunpowder",
-	Action = "research", Value = "upgrade-gunpowder",
+DefineButton( { Pos = 6, Icon = "gunpowder",
+	Action = "research", Value = "upgrade_gunpowder",
 	Allowed = "check-single-research",
 	Description = "Allows gunpowder infantry and upgrades Ballista Towers to Cannon Towers.",
 	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",

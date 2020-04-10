@@ -500,12 +500,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-gunpowder",
-	Size = {46, 38},
-	File = "neutral/icons/gunpowder.png"
-})
-
-DefineIcon({
 	Name = "icon-printing-press",
 	Size = {46, 38},
 	File = "neutral/icons/printing_press.png"

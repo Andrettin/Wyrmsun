@@ -260,24 +260,6 @@ DefineUpgrade("upgrade-philosophy", {
 	Costs = {"time", 250, "copper", 2000}
 })
 
-DefineUpgrade("upgrade-gunpowder", {
-	Name = "Gunpowder",
-	Class = "gunpowder",
-	Civilization = "neutral",
-	Icon = "icon-gunpowder",
-	Description = "The explosive material known as gunpowder has a varied number of potential applications. Early gunpowder weapons, such as the hand cannon, can have a significant impact on the battlefield. Further developments could even possess the potential to revolutionize warfare as a whole...\n\nEffect: Allows gunpowder infantry.",
-	RequirementsString = "Alchemy",
-	Costs = {"time", 250, "copper", 4000}
-})
-
-DefineUpgrade("upgrade-steam-engine", {
-	Name = "Steam Engine",
-	Class = "steam-engine",
---	Description = "The invention of the printing press allowed knowledge to be more quickly and more efficiently spread.",
-	Icon = "icon-printing-press",
-	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
-})
-
 DefineModifier("upgrade_ironworking",
 	{"improve-production", "iron", 10},
 	{"improve-production", "mithril", 10},
@@ -447,7 +429,7 @@ DefineModifier("upgrade-philosophy",
 	{"apply-to", "unit-mercenary-camp"}
 )
 
-DefineModifier("upgrade-gunpowder",
+DefineModifier("upgrade_gunpowder",
 	{"apply-to", "unit-dwarven-ballista-tower"}, {"convert-to", "unit-dwarven-cannon-tower"}
 )
 
