@@ -1,8 +1,8 @@
 upgrade_ironworking = {
 	name = "Ironworking"
-	class = "ironworking"
-	civilization = "neutral"
-	icon = "anvil"
+	class = ironworking
+	civilization = neutral
+	icon = anvil
 	description = "The development of ironworking has the potential to revolutionize a society, as it allows metal objects to be more commonly used, given the relative abundance of iron.\n\nEffect: Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies."
 	costs = {
 		time = 250
