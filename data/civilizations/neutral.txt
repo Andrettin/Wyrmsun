@@ -50,11 +50,11 @@ neutral = {
 		}
 		
 		lumber_mill = {
-			"The Black Board" "The Black Hammer" "The Black Nail" "The Black Plank" "The Black Saw" "The Black Tree" "The Brass Hammer" "The Brass Nail" "The Brass Saw" "The Bronze Hammer" "The Bronze Nail" "The Bronze Saw" "The Copper Hammer" "The Copper Nail" "The Copper Saw" "The Golden Hammer" "The Golden Nail" "The Golden Saw" "The Iron Hammer" "The Iron Nail" "The Iron Saw" "The Silver Hammer" "The Silver Nail" "The Silver Saw" "The Glittering Board" "The Glittering Hammer" "The Glittering Nail" "The Glittering Plank" "The Glittering Saw" "The Glittering Tree" "The Laughing Board" "The Laughing Hammer" "The Laughing Nail" "The Laughing Plank" "The Laughing Saw" "The Laughing Tree",
+			"The Black Board" "The Black Hammer" "The Black Nail" "The Black Plank" "The Black Saw" "The Black Tree" "The Brass Hammer" "The Brass Nail" "The Brass Saw" "The Bronze Hammer" "The Bronze Nail" "The Bronze Saw" "The Copper Hammer" "The Copper Nail" "The Copper Saw" "The Golden Hammer" "The Golden Nail" "The Golden Saw" "The Iron Hammer" "The Iron Nail" "The Iron Saw" "The Silver Hammer" "The Silver Nail" "The Silver Saw" "The Glittering Board" "The Glittering Hammer" "The Glittering Nail" "The Glittering Plank" "The Glittering Saw" "The Glittering Tree" "The Laughing Board" "The Laughing Hammer" "The Laughing Nail" "The Laughing Plank" "The Laughing Saw" "The Laughing Tree"
 		}
 		
 		masons_shop = {
-			"The Black Chisel" "The Black Hammer" "The Black Stone" "The Brass Chisel" "The Brass Hammer" "The Bronze Chisel" "The Bronze Hammer" "The Copper Chisel" "The Copper Hammer" "The Golden Chisel" "The Golden Hammer" "The Iron Chisel" "The Iron Hammer" "The Silver Chisel" "The Silver Hammer" "The Glittering Chisel" "The Glittering Hammer" "The Glittering Stone" "The Laughing Chisel" "The Laughing Hammer" "The Laughing Stone",
+			"The Black Chisel" "The Black Hammer" "The Black Stone" "The Brass Chisel" "The Brass Hammer" "The Bronze Chisel" "The Bronze Hammer" "The Copper Chisel" "The Copper Hammer" "The Golden Chisel" "The Golden Hammer" "The Iron Chisel" "The Iron Hammer" "The Silver Chisel" "The Silver Hammer" "The Glittering Chisel" "The Glittering Hammer" "The Glittering Stone" "The Laughing Chisel" "The Laughing Hammer" "The Laughing Stone"
 		}
 		
 		smithy = {
