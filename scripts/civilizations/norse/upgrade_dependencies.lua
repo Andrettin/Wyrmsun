@@ -26,7 +26,7 @@
 --
 
 DefinePredependency("unit-norse-swordsman",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("unit-norse-longship",
@@ -35,27 +35,27 @@ DefineDependency("unit-norse-longship",
 )
 
 DefinePredependency("unit-norse-town-hall",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefinePredependency("unit-norse-farm",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefinePredependency("unit-norse-barracks",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefinePredependency("unit-norse-lumber-mill",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefinePredependency("unit-norse-smithy",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefinePredependency("unit-norse-temple",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("unit-norse-temple",
@@ -63,7 +63,7 @@ DefineDependency("unit-norse-temple",
 )
 
 DefinePredependency("unit-norse-dock",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("unit-norse-dock",
@@ -71,7 +71,7 @@ DefineDependency("unit-norse-dock",
 )
 
 DefinePredependency("unit-norse-market",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("unit-norse-market",
@@ -79,5 +79,5 @@ DefineDependency("unit-norse-market",
 )
 
 DefinePredependency("unit-norse-watch-tower",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )

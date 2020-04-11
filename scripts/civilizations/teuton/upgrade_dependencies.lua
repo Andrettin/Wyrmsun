@@ -106,7 +106,7 @@ DefineDependency("unit-teuton-stables",
 )
 
 DefinePredependency("unit-teuton-swordsman",
-	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
+	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-spearman",
@@ -126,23 +126,23 @@ DefinePredependency("unit-teuton-town-hall",
 )
 
 DefinePredependency("unit-teuton-farm",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-barracks",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-lumber-mill",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-smithy",
-	{"upgrade-latin-civilization", 0, "upgrade-norse-civilization", 0, "upgrade-slavic-civilization", 0}
+	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
 )
 
 DefinePredependency("unit-teuton-temple",
-	{"upgrade-norse-civilization", 0}
+	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-temple",
@@ -150,7 +150,7 @@ DefineDependency("unit-teuton-temple",
 )
 
 DefinePredependency("unit-teuton-market",
-	{"upgrade-norse-civilization", 0}
+	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-market",
@@ -166,7 +166,7 @@ DefineDependency("unit-teuton-priest",
 )
 
 DefinePredependency("unit-teuton-dock",
-	{"upgrade-norse-civilization", 0}
+	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-dock",
@@ -174,7 +174,7 @@ DefineDependency("unit-teuton-dock",
 )
 
 DefinePredependency("unit-teuton-watch-tower",
-	{"upgrade-norse-civilization", 0}
+	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-kogge",

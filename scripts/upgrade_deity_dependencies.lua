@@ -30,7 +30,7 @@ DefineDependency("upgrade-deity-christian-god",
 )
 
 DefinePredependency("upgrade-deity-heimdall",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-anglo-saxon-civilization"}, "or", {"upgrade-norse-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-anglo-saxon-civilization"}, "or", {"upgrade_norse_civilization"}
 )
 
 DefineDependency("upgrade-deity-heimdall",

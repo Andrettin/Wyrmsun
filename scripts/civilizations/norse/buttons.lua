@@ -120,7 +120,7 @@ DefineButton( { Pos = 1, Level = "build-structure-level-2", Icon = "icon-norse-w
 
 DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade_norse_civilization"},
 	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
 	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
@@ -128,7 +128,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 
 DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-norse-civilization"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade_norse_civilization"},
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
 	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}

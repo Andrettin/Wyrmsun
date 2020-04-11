@@ -91,28 +91,28 @@ DefineModifier("upgrade-work-ynglingatal",
 )
 
 DefineDependency("upgrade-work-alvissmol",
-	{"upgrade-norse-civilization"},
+	{"upgrade_norse_civilization"},
 	"or", {"upgrade-dwarven-civilization"}
 )
 
 DefineDependency("upgrade-work-fafnismol",
-	{"upgrade-norse-civilization"},
+	{"upgrade_norse_civilization"},
 	"or", {"upgrade-dwarven-civilization"}
 )
 
 DefineDependency("upgrade-work-heimskringla",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("upgrade-work-historiae-vinlandiae-antiquae",
-	{"upgrade-norse-civilization", "unit-norse-dock"}
+	{"upgrade_norse_civilization", "unit-norse-dock"}
 )
 
 DefineDependency("upgrade-work-reginsmol",
-	{"upgrade-norse-civilization"},
+	{"upgrade_norse_civilization"},
 	"or", {"upgrade-dwarven-civilization"}
 )
 
 DefineDependency("upgrade-work-ynglingatal",
-	{"upgrade-norse-civilization"}
+	{"upgrade_norse_civilization"}
 )
