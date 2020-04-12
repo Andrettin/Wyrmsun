@@ -1340,6 +1340,7 @@
 /graphics/terrain/snow.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/snow_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/snow_extra_2.png (by Jinn and Exidelo) (licensed under the CC0)
+/graphics/terrain/space.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/teuton_wall.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/barracks.png (by Jinn) (licensed under the CC0)
 /graphics/teuton/buildings/barracks_shadow.png (by Jinn) (licensed under the CC0)
