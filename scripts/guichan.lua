@@ -1383,11 +1383,9 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
---DefiningData = true
---LoadData() -- only initialize the data by ident, but don't actually process it
---DefiningData = false
 LoadData() -- process the data
 
+load_database(false)
 initialize_database()
 
 LoadingHistory = true

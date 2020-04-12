@@ -1956,7 +1956,7 @@ if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
 end
 
-load_database()
+load_database(true)
 
 --- Uses Stratagus Library path!
 DefiningData = true
