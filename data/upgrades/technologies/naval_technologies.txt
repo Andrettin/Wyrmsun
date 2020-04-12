@@ -1,0 +1,142 @@
+upgrade_sailing = {
+	name = "Sailing"
+	class = sailing
+	civilization = neutral
+	icon = icon_sailing
+	description = "The invention of sails allows ships to take advantage of the wind to move faster.\n\nEffect: +1 Speed for ships."
+	costs = {
+		time = 200
+		copper = 500
+		lumber = 1500
+	}
+	modifier = {
+		speed = 1
+		units = {
+			unit_dwarven_transport_ship
+			unit_dwarven_ballista_warship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_goblin_warship
+			unit_norse_longship
+			unit_teuton_kogge
+		}
+	}
+	modifier = {
+		points = 10
+		units = {
+			unit_dwarven_ballista_warship
+			unit_goblin_warship
+			unit_norse_longship
+		}
+	}
+	modifier = {
+		points = 5
+		units = {
+			unit_dwarven_transport_ship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_teuton_kogge
+		}
+	}
+}
+
+upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
+	name = "Celestial Navigation"
+	class = celestial_navigation
+	civilization = neutral
+	icon = icon_celestial_navigation
+	requirements_string = "Sailing"
+	description = "Using the stars as guides for navigations allows ships to sail through the open seas with confidence, no longer needing to timidly sail along the coasts.\n\nEffect: +1 Speed for ships."
+	#instead of increasing ship speed, this technology could be a prerequisite for entering deep water tiles instead (when those are implemented in the game)
+	costs = {
+		time = 250
+		copper = 1500
+		lumber = 2700
+	}
+	modifier = {
+		speed = 1
+		units = {
+			unit_dwarven_transport_ship
+			unit_dwarven_ballista_warship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_goblin_warship
+			unit_norse_longship
+			unit_teuton_kogge
+		}
+	}
+	modifier = {
+		points = 10
+		units = {
+			unit_dwarven_ballista_warship
+			unit_goblin_warship
+			unit_norse_longship
+		}
+	}
+	modifier = {
+		points = 5
+		units = {
+			unit_dwarven_transport_ship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_teuton_kogge
+		}
+	}
+	dependencies = {
+		upgrade = {
+			upgrade = upgrade_sailing
+		}
+	}
+}
+
+upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
+	name = "Compass"
+	class = compass
+	civilization = neutral
+	icon = icon_compass
+	requirements_string = "Celestial Navigation and Engineering"
+	description = "The invention of the compass made it possible for ships to navigate open seas with greater confidence.\n\nEffect: +1 Speed for ships."
+	#instead of increasing ship speed, this technology could be a prerequisite for entering ocean tiles instead (when those are implemented in the game); ocean tiles would be tiles of deeper water than deep water tiles
+	costs = {
+		time = 250
+		copper = 1500
+		lumber = 2700
+	}
+	modifier = {
+		speed = 1
+		units = {
+			unit_dwarven_transport_ship
+			unit_dwarven_ballista_warship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_goblin_warship
+			unit_norse_longship
+			unit_teuton_kogge
+		}
+	}
+	modifier = {
+		points = 10
+		units = {
+			unit_dwarven_ballista_warship
+			unit_goblin_warship
+			unit_norse_longship
+		}
+	}
+	modifier = {
+		points = 5
+		units = {
+			unit_dwarven_transport_ship
+			unit_germanic_transport_ship
+			unit_goblin_transport_ship
+			unit_teuton_kogge
+		}
+	}
+	dependencies = {
+		upgrade = {
+			upgrade = upgrade_celestial_navigation
+		}
+		upgrade = {
+			upgrade = upgrade_engineering
+		}
+	}
+}

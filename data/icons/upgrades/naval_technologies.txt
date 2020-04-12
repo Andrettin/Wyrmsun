@@ -1,0 +1,11 @@
+icon_sailing = {
+	file = "neutral/icons/sailing.png"
+}
+
+icon_celestial_navigation = {
+	file = "neutral/icons/celestial_navigation.png"
+}
+
+icon_compass = {
+	file = "neutral/icons/compass.png"
+}

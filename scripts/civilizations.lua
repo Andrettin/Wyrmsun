@@ -3045,7 +3045,7 @@ DefineCivilization("phoenician", {
 	Playable = false,
 	DefaultColor = "black",
 	HistoricalUpgrades = {
-		-1100, "upgrade-celestial-navigation", true, -- around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
+		-1100, "upgrade_celestial_navigation", true, -- around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
 	}
 })
 

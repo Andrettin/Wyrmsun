@@ -126,7 +126,7 @@ function ApplyTechLevels()
 		"upgrade-goblin-long-sword", "upgrade-goblin-pike", "upgrade-goblin-embossed-shield", "upgrade-goblin-bodkin-arrow",
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 		"upgrade-longbow",
-		"upgrade-celestial-navigation"
+		"upgrade-celestial_navigation"
 	}
 	local gunpowder_upgrades = {
 		"upgrade_gunpowder",
