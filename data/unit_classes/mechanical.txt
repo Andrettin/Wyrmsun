@@ -1,0 +1,7 @@
+minecart = {
+	name = "Minecart"
+}
+
+caravan = {
+	name = "Caravan"
+}

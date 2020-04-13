@@ -724,7 +724,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 		end
 		if (GetUnitTypeData(unit_name, "Class") ~= "") then
-			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "_", " "))) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Description") ~= "") then
 			description = _("Description") .. ": " .. _(GetUnitTypeData(unit_name, "Description")) .. "\n\n"
@@ -772,7 +772,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 		end
 		if (GetUpgradeData(unit_name, "Class") ~= "") then
-			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUpgradeData(unit_name, "Class"), "_", " "))) .. "\n\n"
 		end
 		if (GetUpgradeData(unit_name, "Description") ~= "") then
 			description = _("Description") .. ": " .. _(GetUpgradeData(unit_name, "Description")) .. "\n\n"

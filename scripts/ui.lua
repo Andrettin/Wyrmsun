@@ -1902,13 +1902,13 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {UnitTypeClass = "merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {UnitTypeClass = "heroic-merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {UnitTypeClass = "heroic_merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "caravan", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {UnitTypeClass = "transport-ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {UnitTypeClass = "transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",

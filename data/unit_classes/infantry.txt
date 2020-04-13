@@ -1,0 +1,47 @@
+militia = {
+	name = "Militia"
+}
+
+infantry = {
+	name = "Infantry"
+}
+
+veteran_infantry = {
+	name = "Veteran Infantry"
+}
+
+heroic_infantry = {
+	name = "Heroic Infantry"
+}
+
+spearman = {
+	name = "Spearman"
+}
+
+veteran_spearman = {
+	name = "Veteran Spearman"
+}
+
+heroic_spearman = {
+	name = "Heroic Spearman"
+}
+
+shooter = {
+	name = "Spearman"
+}
+
+veteran_shooter = {
+	name = "Veteran Shooter"
+}
+
+heroic_shooter = {
+	name = "Heroic Shooter"
+}
+
+gunpowder_infantry = {
+	name = "Gunpowder Infantry"
+}
+
+marine_infantry = {
+	name = "Marine Infantry"
+}

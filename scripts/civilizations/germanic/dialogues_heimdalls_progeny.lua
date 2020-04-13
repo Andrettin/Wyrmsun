@@ -121,8 +121,9 @@ DefineDialogue("thrallings-subjugated", {
 						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), nil, nil, "stop")
-						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
-							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
+						local class_ident = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class")
+						if (class_ident ~= "" and GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(class_ident, GetPlayerData(trigger_player, "Faction"))) then
+							ConvertUnit(uncount[unit1], GetFactionClassUnitType(class_ident, GetPlayerData(trigger_player, "Faction")))
 						end
 					end
 					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
@@ -221,8 +222,9 @@ DefineDialogue("karlings-subjugated", {
 						-- change the unit's owner to the Eraling Tribe
 						ChangeUnitOwner(uncount[unit1], trigger_player)
 						OrderUnit(trigger_player, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), nil, nil, "stop")
-						if (GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction"))) then
-							ConvertUnit(uncount[unit1], GetFactionClassUnitType(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class"), GetPlayerData(trigger_player, "Faction")))
+						local class_ident = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class")
+						if (class_ident ~= "" and GetUnitVariable(uncount[unit1], "Ident") ~= GetFactionClassUnitType(class_ident, GetPlayerData(trigger_player, "Faction"))) then
+							ConvertUnit(uncount[unit1], GetFactionClassUnitType(class_ident, GetPlayerData(trigger_player, "Faction")))
 						end
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "subjugate-the-karlings")

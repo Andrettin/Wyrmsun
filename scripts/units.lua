@@ -685,7 +685,7 @@ DefineUnitType("unit-gold-deposit", {
 DefineUnitType("unit-gold-mine", {
 	Name = "Gold Mine",
 	Parent = "unit-template-mine",
-	Class = "gold-mine",
+	Class = "gold_mine",
 	Civilization = "neutral",
 	Description = "Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for.",
 	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
@@ -784,7 +784,7 @@ DefineUnitType("unit-silver-deposit", {
 DefineUnitType("unit-silver-mine", {
 	Name = "Silver Mine",
 	Parent = "unit-template-mine",
-	Class = "silver-mine",
+	Class = "silver_mine",
 	Civilization = "neutral",
 	Description = "Silver is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for. Although not as valuable as gold, silver is still a highly sought-after metal.",
 	Image = {"file", "neutral/buildings/silver_mine.png", "size", {96, 96}},
@@ -855,7 +855,7 @@ DefineUnitType("unit-copper-deposit", {
 DefineUnitType("unit-copper-mine", {
 	Name = "Copper Mine",
 	Parent = "unit-template-mine",
-	Class = "copper-mine",
+	Class = "copper_mine",
 	Civilization = "neutral",
 	Description = "More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze.",
 	Image = {"file", "neutral/buildings/copper_mine.png", "size", {96, 96}},
@@ -926,7 +926,7 @@ DefineUnitType("unit-iron-deposit", {
 DefineUnitType("unit-iron-mine", {
 	Name = "Iron Mine",
 	Parent = "unit-template-mine",
-	Class = "iron-mine",
+	Class = "iron_mine",
 	Civilization = "neutral",
 	Description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working metals like copper, silver or gold.",
 	Image = {"file", "neutral/buildings/iron_mine.png", "size", {96, 96}},
@@ -995,7 +995,7 @@ DefineUnitType("unit-mithril-deposit", {
 DefineUnitType("unit-mithril-mine", {
 	Name = "Mithril Mine",
 	Parent = "unit-template-mine",
-	Class = "mithril-mine",
+	Class = "mithril_mine",
 	Civilization = "neutral",
 	Description = "Of the inhabited worlds, mithril is only found in Nidavellir, and even there it is an exceedingly rare metal. Both lighter and more resistant than iron, mithril is highly sought-after for crafting weapons and armor, though its enormous expense ensures that only very few can afford it.",
 	Image = {"file", "neutral/buildings/mithril_mine.png", "size", {96, 96}},
@@ -1064,7 +1064,7 @@ DefineUnitType("unit-coal-deposit", {
 DefineUnitType("unit-coal-mine", {
 	Name = "Coal Mine",
 	Parent = "unit-template-mine",
-	Class = "coal-mine",
+	Class = "coal_mine",
 	Civilization = "neutral",
 	Description = "Coal is a valuable heating material.",
 	Image = {"file", "neutral/buildings/coal_mine.png", "size", {96, 96}},
@@ -1110,7 +1110,7 @@ DefineUnitType("unit-diamond-deposit", {
 DefineUnitType("unit-diamond-mine", {
 	Name = "Diamond Mine",
 	Parent = "unit-template-mine",
-	Class = "diamond-mine",
+	Class = "diamond_mine",
 	Civilization = "neutral",
 	Description = "Diamonds are highly valuable gems, so that the discovery of deposits containing them will quickly result in the construction of a mine.",
 	Image = {"file", "neutral/buildings/diamond_mine.png", "size", {96, 96}},
@@ -1136,7 +1136,7 @@ DefineUnitType("unit-emerald-deposit", {
 DefineUnitType("unit-emerald-mine", {
 	Name = "Emerald Mine",
 	Parent = "unit-template-mine",
-	Class = "emerald-mine",
+	Class = "emerald_mine",
 	Civilization = "neutral",
 --	Description = "Emeralds are valuable gems, and can be mined for high profits.",
 	Image = {"file", "neutral/buildings/emerald_mine.png", "size", {96, 96}},
@@ -1581,7 +1581,7 @@ DefineUnitType("unit-yale-cave", {
 DefineUnitType("unit-yale-hunting-lodge", {
 	Name = "Yale Hunting Lodge",
 	Parent = "unit-template-hunting-lodge",
-	Class = "yale-hunting-lodge",
+	Class = "yale_hunting_lodge",
 	Civilization = "neutral",
 	Description = "Before the development of farming, the dwarves of Nidavellir hunted and foraged to survive. Yales were one of the principal animals hunted by them, providing food for nourishment and leather for clothing.",
 	Image = {"file", "neutral/buildings/yale_hunting_lodge.png", "size", {96, 96}},
@@ -3706,7 +3706,7 @@ DefineUnitType("unit-template-worker", {
 DefineUnitType("unit-template-skilled-miner", {
 	Name = "Skilled Miner",
 	Parent = "unit-template-worker",
-	Class = "skilled-miner",
+	Class = "skilled_miner",
 	Costs = {"copper", 600},
 	HitPoints = 40,
 	BasicDamage = 6,
@@ -3725,7 +3725,7 @@ DefineUnitType("unit-template-skilled-miner", {
 DefineUnitType("unit-template-expert-miner", {
 	Name = "Expert Miner",
 	Parent = "unit-template-skilled-miner",
-	Class = "expert-miner",
+	Class = "expert_miner",
 	Costs = {"copper", 900},
 	HitPoints = 50,
 	BasicDamage = 7,
@@ -3745,7 +3745,7 @@ DefineUnitType("unit-template-expert-miner", {
 DefineUnitType("unit-template-journeyman-smith", {
 	Name = "Journeyman Smith",
 	Parent = "unit-template-worker",
-	Class = "journeyman-smith",
+	Class = "journeyman_smith",
 	Costs = {"copper", 600},
 	HitPoints = 55,
 	BasicDamage = 9,
@@ -3762,7 +3762,7 @@ DefineUnitType("unit-template-journeyman-smith", {
 DefineUnitType("unit-template-master-smith", {
 	Name = "Master Smith",
 	Parent = "unit-template-journeyman-smith",
-	Class = "master-smith",
+	Class = "master_smith",
 	Costs = {"copper", 900},
 	HitPoints = 65,
 	BasicDamage = 10,
@@ -3776,7 +3776,7 @@ DefineUnitType("unit-template-master-smith", {
 DefineUnitType("unit-template-grandmaster-smith", {
 	Name = "Grandmaster Smith",
 	Parent = "unit-template-master-smith",
-	Class = "master-smith",
+	Class = "grandmaster_smith",
 	Costs = {"copper", 1350},
 	HitPoints = 75,
 	BasicDamage = 12,
@@ -3871,7 +3871,7 @@ DefineUnitType("unit-template-merchant", {
 DefineUnitType("unit-template-heroic-merchant", {
 	Name = "Heroic Merchant",
 	Parent = "unit-template-merchant",
-	Class = "heroic-merchant",
+	Class = "heroic_merchant",
 	Costs = {"time", 120, "copper", 1200},
 	Strength = 10,
 	Dexterity = 12,
@@ -3932,7 +3932,7 @@ DefineUnitType("unit-template-infantry", {
 DefineUnitType("unit-template-veteran-infantry", {
 	Name = "Veteran Infantry",
 	Parent = "unit-template-infantry",
-	Class = "veteran-infantry",
+	Class = "veteran_infantry",
 	Costs = {"time", 90, "copper", 900},
 	Strength = 12,
 	Dexterity = 12,
@@ -3952,7 +3952,7 @@ DefineUnitType("unit-template-veteran-infantry", {
 DefineUnitType("unit-template-heroic-infantry", {
 	Name = "Heroic Infantry",
 	Parent = "unit-template-veteran-infantry",
-	Class = "heroic-infantry",
+	Class = "heroic_infantry",
 	Costs = {"time", 120, "copper", 1200},
 	Strength = 13,
 	Dexterity = 12,
@@ -3991,7 +3991,7 @@ DefineUnitType("unit-template-spearman", {
 DefineUnitType("unit-template-veteran-spearman", {
 	Name = "Veteran Spearman",
 	Parent = "unit-template-spearman",
-	Class = "veteran-spearman",
+	Class = "veteran_spearman",
 	Costs = {"time", 75, "copper", 600, "lumber", 150},
 	Strength = 12,
 	Dexterity = 12,
@@ -4007,7 +4007,7 @@ DefineUnitType("unit-template-veteran-spearman", {
 DefineUnitType("unit-template-heroic-spearman", {
 	Name = "Heroic Spearman",
 	Parent = "unit-template-veteran-spearman",
-	Class = "heroic-spearman",
+	Class = "heroic_spearman",
 	Costs = {"time", 100, "copper", 800, "lumber", 200},
 	Strength = 13,
 	Dexterity = 12,
@@ -4064,7 +4064,7 @@ DefineUnitType("unit-template-archer", {
 DefineUnitType("unit-template-veteran-shooter", {
 	Name = "Veteran Shooter",
 	Parent = "unit-template-archer",
-	Class = "veteran-shooter",
+	Class = "veteran_shooter",
 	Costs = {"time", 105, "copper", 750, "lumber", 225},
 	Strength = 11,
 	Dexterity = 12,
@@ -4081,7 +4081,7 @@ DefineUnitType("unit-template-veteran-shooter", {
 DefineUnitType("unit-template-heroic-shooter", {
 	Name = "Heroic Shooter",
 	Parent = "unit-template-veteran-shooter",
-	Class = "heroic-shooter",
+	Class = "heroic_shooter",
 	Costs = {"time", 140, "copper", 1000, "lumber", 300},
 	Strength = 12,
 	Dexterity = 13,
@@ -4206,7 +4206,7 @@ DefineUnitType("unit-template-cavalry", {
 DefineUnitType("unit-template-heroic-cavalry", {
 	Name = "Heroic Cavalry",
 	Parent = "unit-template-cavalry",
-	Class = "heroic-cavalry",
+	Class = "heroic_cavalry",
 	Costs = {"time", 120, "copper", 1200},
 	Strength = 13,
 	Dexterity = 12,
@@ -4226,7 +4226,7 @@ DefineUnitType("unit-template-heroic-cavalry", {
 DefineUnitType("unit-template-desert-cavalry", {
 	Name = "Desert Cavalry",
 	Parent = "unit-template-cavalry",
-	Class = "desert-cavalry",
+	Class = "desert_cavalry",
 	Speed = 12,
 	DehydrationImmunity = 1
 } )
@@ -4234,7 +4234,7 @@ DefineUnitType("unit-template-desert-cavalry", {
 DefineUnitType("unit-template-heroic-desert-cavalry", {
 	Name = "Heroic Desert Cavalry",
 	Parent = "unit-template-heroic-cavalry",
-	Class = "heroic-desert-cavalry",
+	Class = "heroic_desert_cavalry",
 	Costs = {"time", 120, "copper", 1200},
 	Speed = 12,
 	DehydrationImmunity = 1
@@ -4243,7 +4243,7 @@ DefineUnitType("unit-template-heroic-desert-cavalry", {
 DefineUnitType("unit-template-spear-cavalry", {
 	Name = "Spear Cavalry",
 	Parent = "unit-template-sapient-unit",
-	Class = "spear-cavalry",
+	Class = "spear_cavalry",
 	Costs = {"time", 90, "copper", 900},
 	Strength = 12,
 	Dexterity = 11,
@@ -4285,7 +4285,7 @@ DefineUnitType("unit-template-spear-cavalry", {
 DefineUnitType("unit-template-heroic-spear-cavalry", {
 	Name = "Heroic Spear Cavalry",
 	Parent = "unit-template-spear-cavalry",
-	Class = "heroic-spear-cavalry",
+	Class = "heroic_spear_cavalry",
 	Costs = {"time", 120, "copper", 1200},
 	Strength = 13,
 	Dexterity = 12,
@@ -4345,7 +4345,7 @@ DefineUnitType("unit-template-priest", {
 DefineUnitType("unit-template-veteran-priest", {
 	Name = "Veteran Priest",
 	Parent = "unit-template-priest",
-	Class = "veteran-priest",
+	Class = "veteran_priest",
 	Costs = {"time", 120, "copper", 1050},
 	Intelligence = 13,
 	Charisma = 13,
@@ -4358,7 +4358,7 @@ DefineUnitType("unit-template-veteran-priest", {
 DefineUnitType("unit-template-high-priest", {
 	Name = "High Priest",
 	Parent = "unit-template-veteran-priest",
-	Class = "high-priest",
+	Class = "high_priest",
 	Costs = {"time", 160, "copper", 1400},
 	Intelligence = 14,
 	Charisma = 14,
@@ -4481,7 +4481,7 @@ DefineUnitType("unit-template-ship", {
 DefineUnitType("unit-template-transport-ship", {
 	Name = "Transport",
 	Parent = "unit-template-ship",
-	Class = "transport-ship",
+	Class = "transport_ship",
 	Animations = "animations-transport-ship", 
 	Costs = {"time", 70, "copper", 600, "lumber", 2100},
 	Speed = 8,
@@ -5301,7 +5301,7 @@ DefineUnitType("unit-orc-spearthrower", {
 DefineUnitType("unit-orc-sea-orc", {
 	Name = "Sea Orc",
 	Parent = "unit-template-unit",
-	Class = "marine-infantry",
+	Class = "marine_infantry",
 	Civilization = "orc",
 --	Description = "While often viewed as inferior to their land-loving counterparts, sea orcs represent a great leap for all orcs as they have adapted to aquatic environments. These orcs use their ships to raid the coasts of the Eelhome Sea. With their curved swords they are competent warriors, although their poor fighting skills on land do represent a strategic weakness.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
@@ -5421,7 +5421,7 @@ DefineUnitType("unit-mercenary-camp", {
 	Name = "Mercenary Camp",
 	Parent = "unit-template-building",
 	Civilization = "neutral",
-	Class = "mercenary-camp",
+	Class = "mercenary_camp",
 	Description = "This camp houses a number of mercenary groups, who offer their talents for hire.",
 	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
 	Shadow = {"file", "neutral/buildings/mercenary_camp_shadow.png", "size", {96, 99}},

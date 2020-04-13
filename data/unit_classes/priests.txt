@@ -1,0 +1,11 @@
+priest = {
+	name = "Priest"
+}
+
+veteran_priest = {
+	name = "Veteran Priest"
+}
+
+high_priest = {
+	name = "High Priest"
+}

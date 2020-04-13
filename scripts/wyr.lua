@@ -39,12 +39,14 @@ end
 function ConvertUnitType(unittype, civilization)
 	local equiv
 
-	if (civilization ~= GetUnitTypeData(unittype, "Civilization") and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization) ~= nil) then
-		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization)
-	end
-	
-	if (civilization ~= GetUnitTypeData(unittype, "Civilization") and civilization == "germanic" and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton") ~= nil) then
-		return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton")
+	if (GetUnitTypeData(unittype, "Class") ~= "") then
+		if (civilization ~= GetUnitTypeData(unittype, "Civilization") and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization) ~= nil) then
+			return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), civilization)
+		end
+		
+		if (civilization ~= GetUnitTypeData(unittype, "Civilization") and civilization == "germanic" and GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton") ~= nil) then
+			return GetCivilizationClassUnitType(GetUnitTypeData(unittype, "Class"), "teuton")
+		end
 	end
 
 	return unittype

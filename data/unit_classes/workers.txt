@@ -1,0 +1,31 @@
+worker = {
+	name = "Worker"
+}
+
+skilled_miner = {
+	name = "Skilled Miner"
+}
+
+expert_miner = {
+	name = "Expert Miner"
+}
+
+journeyman_smith = {
+	name = "Journeyman Smith"
+}
+
+master_smith = {
+	name = "Master Smith"
+}
+
+grandmaster_smith = {
+	name = "Grandmaster Smith"
+}
+
+merchant = {
+	name = "Merchant"
+}
+
+heroic_merchant = {
+	name = "Heroic Merchant"
+}

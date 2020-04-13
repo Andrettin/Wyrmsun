@@ -1,0 +1,95 @@
+town_hall = {
+	name = "Town Hall"
+}
+
+stronghold = {
+	name = "Stronghold"
+}
+
+fortress = {
+	name = "Fortress"
+}
+
+farm = {
+	name = "Farm"
+}
+
+barracks = {
+	name = "Barracks"
+}
+
+lumber_mill = {
+	name = "Lumber Mill"
+}
+
+smithy = {
+	name = "Smithy"
+}
+
+masons_shop = {
+	name = "Mason's Shop"
+}
+
+market = {
+	name = "Market"
+}
+
+stables = {
+	name = "Stables"
+}
+
+temple = {
+	name = "Temple"
+}
+
+university = {
+	name = "University"
+}
+
+dock = {
+	name = "Dock"
+}
+
+watch_tower = {
+	name = "Watch Tower"
+}
+
+guard_tower = {
+	name = "Guard Tower"
+}
+
+heavy_tower = {
+	name = "Heavy Tower"
+}
+
+cannon_tower = {
+	name = "Cannon Tower"
+}
+
+banner = {
+	name = "Banner"
+}
+
+palisade = {
+	name = "Palisade"
+}
+
+wall = {
+	name = "Wall"
+}
+
+road = {
+	name = "Road"
+}
+
+railroad = {
+	name = "Railroad"
+}
+
+yale_hunting_lodge = {
+	name = "Yale Hunting Lodge"
+}
+
+mercenary_camp = {
+	name = "Mercenary Camp"
+}

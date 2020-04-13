@@ -1,0 +1,23 @@
+cavalry = {
+	name = "Cavalry"
+}
+
+heroic_cavalry = {
+	name = "Heroic Cavalry"
+}
+
+desert_cavalry = {
+	name = "Desert Cavalry"
+}
+
+heroic_desert_cavalry = {
+	name = "Heroic Desert Cavalry"
+}
+
+spear_cavalry = {
+	name = "Spear Cavalry"
+}
+
+heroic_spear_cavalry = {
+	name = "Heroic Spear Cavalry"
+}

@@ -1,0 +1,31 @@
+gold_mine = {
+	name = "Gold Mine"
+}
+
+silver_mine = {
+	name = "Silver Mine"
+}
+
+copper_mine = {
+	name = "Copper Mine"
+}
+
+iron_mine = {
+	name = "Iron Mine"
+}
+
+mithril_mine = {
+	name = "Mithril Mine"
+}
+
+coal_mine = {
+	name = "Coal Mine"
+}
+
+diamond_mine = {
+	name = "Diamond Mine"
+}
+
+emerald_mine = {
+	name = "Emerald Mine"
+}
