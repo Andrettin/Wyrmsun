@@ -340,7 +340,7 @@ DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Character = "h",
 	Color = {32, 32, 0},
-	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
