@@ -211,6 +211,10 @@ DefineTerrainType("ford", {
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Character = "w",
+	CharacterAliases = {
+		":", -- deep water
+		"+" -- lake
+	},
 	Color = {0, 128, 255},
 	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
 	Overlay = true,
@@ -338,7 +342,6 @@ DefineTerrainType("gray-shallow-water", {
 
 DefineTerrainType("chasm", {
 	Name = "Chasm",
-	Character = "h",
 	Color = {32, 32, 0},
 	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
 	Overlay = true,
