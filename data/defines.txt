@@ -1,1 +1,2 @@
+tile_size = { 32 32 }
 icon_size = { 46 38 }
