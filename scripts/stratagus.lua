@@ -65,6 +65,9 @@ function InitGameVariables()
 	end
 end
 
+load_database(true)
+load_defines()
+
 DefineBoolFlags("MetalImprove", "LumberImprove", "OilImprove", "StoneImprove")
 
 --  Edit the next sections to get your look and feel.
@@ -157,8 +160,7 @@ SetDamageMissile("missile-hit")
 --  Uncomment next, to reveal the complete map.
 --RevealMap()
 
-SetFogOfWarGraphics("tilesets/fogofwar.png", {32, 32})
-SetFogOfWarGraphics("tilesets/fogofwar_64.png", {64, 64})
+SetFogOfWarGraphics("tilesets/fogofwar.png")
 
 -------------------------------------------------------------------------------
 
@@ -1955,8 +1957,6 @@ Preference.HotkeySetup = wyr.preferences.HotkeySetup
 if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
 end
-
-load_database(true)
 
 --- Uses Stratagus Library path!
 DefiningData = true
