@@ -213,7 +213,8 @@ DefineTerrainType("shallow-water", {
 	Character = "w",
 	CharacterAliases = {
 		":", -- deep water
-		"+" -- lake
+		"+", -- lake
+		"4" -- river
 	},
 	Color = {0, 128, 255},
 	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
