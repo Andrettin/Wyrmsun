@@ -1,0 +1,15 @@
+universe = {
+	name = "Universe"
+	plane = material_plane
+	size = { 512 512 }
+}
+
+earth_space = {
+	name = "Earth (Space)"
+	main_template = universe
+	#world = earth
+	size = { 256 256 }
+	circle = true
+	unusable_area_terrain_type = dirt
+	unusable_area_overlay_terrain_type = chasm
+}

@@ -1,0 +1,9 @@
+scandinavia = {
+	name = "Scandinavia"
+	size = { 350 350 }
+	main_template = earth_space
+	terrain_file = "earth/scandinavia.map"
+	overlay_terrain_file = "earth/scandinavia_overlay.map"
+	start_pos = { 29 184 }
+	end_pos = { 207 349 }
+}
