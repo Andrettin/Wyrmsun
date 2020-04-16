@@ -1,0 +1,7 @@
+aethermaw = { #Source: "Battle for Wesnoth"
+	name = "Aethermaw"
+	main_template = universe
+	#plane = aethermaw
+	size = { 51 42 }
+	terrain_image = "aethermaw.png"
+}
