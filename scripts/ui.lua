@@ -1355,9 +1355,6 @@ if not (ui_loaded_first_time) then
 						)
 					), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {OwnershipInfluenceRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Influence Range:"), " "), Variable = "OwnershipInfluenceRange", Font = wyr.preferences.PopupDescriptionFont}}
-				},
 				{ 	Condition = {MaxHarvesters = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1850,9 +1847,6 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {OwnershipInfluenceRange = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Influence Range:"), " "), Variable = "OwnershipInfluenceRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}

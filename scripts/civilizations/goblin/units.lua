@@ -885,7 +885,6 @@ DefineUnitType("unit-goblin-banner", {
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
-	OwnershipInfluenceRange = 1,
 	Missile = "missile-none",
 	Priority = 0,
 	Type = "land",

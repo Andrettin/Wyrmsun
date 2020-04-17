@@ -39,7 +39,6 @@ DefineUpgrade("upgrade-trading-company", {
 
 DefineModifier("upgrade-holy-order",
 	{"Supply", 4}, -- holy orders' temples produce food, to allow them to train units despite not having farms
-	{"OwnershipInfluenceRange", -2}, -- holy orders' temples shouldn't have an influence range, so that they can be a part of other factions' territory
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-norse-temple"},
 	{"apply-to", "unit-dwarven-temple"},
@@ -87,7 +86,6 @@ DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary ca
 
 DefineModifier("upgrade-trading-company",
 	{"Supply", 8}, -- trading companies' markets and docks produce food, to allow them to build caravans and ships despite not having farms
-	{"OwnershipInfluenceRange", -2}, -- trading companies' markets and docks shouldn't have an influence range, so that they can be a part of other factions' territory
 	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-goblin-market"},
