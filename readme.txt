@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
+- Reduced Nidavellir's map size from 256x256 to 192x192.
 
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.

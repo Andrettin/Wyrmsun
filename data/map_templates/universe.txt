@@ -5,7 +5,7 @@ universe = {
 }
 
 earth_space = {
-	name = "Earth (Space)"
+	name = "Earth"
 	main_template = universe
 	#world = earth
 	size = { 256 256 }
