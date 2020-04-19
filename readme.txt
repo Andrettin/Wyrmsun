@@ -84,6 +84,9 @@ https://github.com/Andrettin/Wyrmsun
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.
 
+* Terrain
+- Units in underground terrain tiles (cave floor and rockbound cave floor) are now treated as if they are at night for sight range bonus purposes.
+
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
 
