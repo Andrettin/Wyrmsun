@@ -1,9 +1,8 @@
-[time_of_day]
-	ident = indoors
+indoors = {
 	name = "Indoors"
-	[image]
+	image = {
 		file = "ui/resources/indoors.png"
 		width = 14
 		height = 14
-	[/image]
-[/time_of_day]
+	}
+}

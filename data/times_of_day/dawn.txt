@@ -1,0 +1,10 @@
+dawn = {
+	name = "Dawn"
+	dawn = true
+	color_modification = { -20 -20 0 }
+	image = {
+		file = "ui/resources/dawn.png"
+		width = 14
+		height = 14
+	}
+}

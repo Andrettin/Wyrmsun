@@ -1,0 +1,10 @@
+late_night = {
+	name = "Late Night"
+	night = true
+	color_modification = { -45 -35 -10 }
+	image = {
+		file = "ui/resources/late_night.png"
+		width = 14
+		height = 14
+	}
+}

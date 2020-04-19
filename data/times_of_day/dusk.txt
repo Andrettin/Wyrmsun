@@ -1,0 +1,10 @@
+dusk = {
+	name = "Dusk"
+	dusk = true
+	color_modification = { 0 -20 -20 }
+	image = {
+		file = "ui/resources/dusk.png"
+		width = 14
+		height = 14
+	}
+}
