@@ -732,7 +732,7 @@ DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
 	Character = "v",
 	Color = {32, 32, 32},
-	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor", "snow"},
+	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"},
 	Graphics = "terrain/cave_wall.png",
