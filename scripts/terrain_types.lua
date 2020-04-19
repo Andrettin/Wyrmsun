@@ -29,7 +29,7 @@ DefineTerrainType("rockbound-cave-floor", {
 	Name = "Rockbound Cave Floor",
 	Character = "b",
 	Color = {128, 128, 160},
-	Flags = {"land", "no-building", "gravel"},
+	Flags = {"land", "no-building", "gravel", "underground"},
 	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
 	SolidTiles = {0, 1, 2}
@@ -40,7 +40,7 @@ DefineTerrainType("cave-floor", {
 	Character = "c",
 	Color = {160, 160, 160},
 	Buildable = true,
-	Flags = {"land", "stone-floor"},
+	Flags = {"land", "stone-floor", "underground"},
 	InnerBorderTerrains = {"dirt"},
 	OuterBorderTerrains = {"rockbound-cave-floor"},
 	Graphics = "terrain/cave_floor.png",
