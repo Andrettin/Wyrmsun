@@ -177,16 +177,16 @@ local max_damage = 	Add(
 )
 
 UI.MapArea.X = 0
-UI.MapArea.Y = 16
-UI.MapArea.EndX = Video.Width - 1
-UI.MapArea.EndY = Video.Height - 176 - 1
+UI.MapArea.Y = 16 * get_scale_factor()
+UI.MapArea.EndX = Video.Width - 1 * get_scale_factor()
+UI.MapArea.EndY = Video.Height + (-176 - 1) * get_scale_factor()
 
-UI.InfoPanel.X = 162
-UI.InfoPanel.Y = Video.Height - 186
+UI.InfoPanel.X = 162 * get_scale_factor()
+UI.InfoPanel.Y = Video.Height - 186 * get_scale_factor()
 
 b = CUIButton:new()
-b.X = 169
-b.Y = Video.Height - 166
+b.X = 169 * get_scale_factor()
+b.Y = Video.Height - 166 * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.SingleSelectedButton = b
 
@@ -194,8 +194,8 @@ UI.SelectedButtons:clear()
 
 function AddSelectedButton(x, y)
 	b = CUIButton:new_local()
-	b.X = 162 + x
-	b.Y = Video.Height - 186 + y
+	b.X = (162 + x) * get_scale_factor()
+	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.SelectedButtons:push_back(b)
 end
@@ -215,8 +215,8 @@ UI.MaxSelectedTextX = 162 + 0
 UI.MaxSelectedTextY = Video.Height - 186 + 15
 
 b = CUIButton:new()
-b.X = 162 + 160
-b.Y = Video.Height - 186 + 80
+b.X = (162 + 160) * get_scale_factor()
+b.Y = Video.Height + (-186 + 80) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.SingleTrainingButton = b
 
@@ -224,8 +224,8 @@ UI.TrainingButtons:clear()
 
 function AddTrainingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = 162 + x
-	b.Y = Video.Height - 186 + y
+	b.X = (162 + x) * get_scale_factor()
+	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.TrainingButtons:push_back(b)
 end
@@ -236,14 +236,14 @@ AddTrainingButton(56, 80)
 AddTrainingButton(4, 80)
 
 b = CUIButton:new()
-b.X = 162 + 110
-b.Y = Video.Height - 186 + 11 + 70
+b.X = (162 + 110) * get_scale_factor()
+b.Y = Video.Height + (-186 + 11 + 70) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.UpgradingButton = b
 
 b = CUIButton:new()
-b.X = 162 + 110
-b.Y = Video.Height - 186 + 11 + 70
+b.X = (162 + 110) * get_scale_factor()
+b.Y = Video.Height + (-186 + 11 + 70) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.ResearchingButton = b
 
@@ -251,8 +251,8 @@ UI.TransportingButtons:clear()
 
 function AddTransportingButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 243 + x
-	b.Y = Video.Height - 186 + y
+	b.X = Video.Width + (-243 + x) * get_scale_factor()
+	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.TransportingButtons:push_back(b)
 end
@@ -269,8 +269,8 @@ UI.InventoryButtons:clear()
 
 function AddInventoryButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 243 + x
-	b.Y = Video.Height - 186 + y
+	b.X = Video.Width + (-243 + x) * get_scale_factor()
+	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.InventoryButtons:push_back(b)
 end
@@ -293,14 +293,14 @@ AddInventoryButton(129, 140)
 
 b = CUIButton:new()
 --b.X = 12
-b.X = Video.Width - 12 - 46
-b.Y = 16 + 12
+b.X = Video.Width + (-12 - 46) * get_scale_factor()
+b.Y = (16 + 12) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.IdleWorkerButton = b
 
 b = CUIButton:new()
-b.X = Video.Width - 12 - 46
-b.Y = 16 + 12 + 38 + 24
+b.X = Video.Width + (-12 - 46) * get_scale_factor()
+b.Y = (16 + 12 + 38 + 24) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
 UI.LevelUpUnitButton = b
 
@@ -310,13 +310,13 @@ local hero_button_x = 0
 local hero_button_y = 0
 for i = 1, 12 do
 	b = CUIButton:new()
-	b.X = Video.Width - 12 - (46 * (1 + hero_button_x)) - (24 * hero_button_x)
-	b.Y = 16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y))
+	b.X = Video.Width + (-12 - (46 * (1 + hero_button_x)) - (24 * hero_button_x)) * get_scale_factor()
+	b.Y = (16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y))) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.HeroUnitButtons:push_back(b)
 	hero_button_y = hero_button_y + 1
 	
-	if ((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) >= UI.MapArea.EndY) then
+	if (((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) * get_scale_factor()) >= UI.MapArea.EndY) then
 		hero_button_x = hero_button_x + 1
 		hero_button_y = 0
 	end
@@ -329,8 +329,8 @@ UI.ButtonPanel.Buttons:clear()
 
 function AddButtonPanelButton(x, y)
 	b = CUIButton:new_local()
-	b.X = Video.Width - 243 + x
-	b.Y = Video.Height - 186 + y
+	b.X = Video.Width + (-243 + x) * get_scale_factor()
+	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
 	UI.ButtonPanel.Buttons:push_back(b)
 end
@@ -352,18 +352,18 @@ AddButtonPanelButton(73, 140)
 AddButtonPanelButton(129, 140)
 AddButtonPanelButton(185, 140)
 
-UI.ButtonPanel.X = Video.Width - 243
-UI.ButtonPanel.Y = Video.Height - 186
+UI.ButtonPanel.X = Video.Width - 243 * get_scale_factor()
+UI.ButtonPanel.Y = Video.Height - 186 * get_scale_factor()
 UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 
-UI.Minimap.X = 17
-UI.Minimap.Y = Video.Height - 156
-UI.Minimap.W = 128
-UI.Minimap.H = 128
+UI.Minimap.X = 17 * get_scale_factor()
+UI.Minimap.Y = Video.Height - 156 * get_scale_factor()
+UI.Minimap.W = 128 * get_scale_factor()
+UI.Minimap.H = 128 * get_scale_factor()
 
-UI.StatusLine.TextX = 2
-UI.StatusLine.TextY = Video.Height + 2 - 16
-UI.StatusLine.Width = Video.Width - 16 - 2 - 176
+UI.StatusLine.TextX = 2 * get_scale_factor()
+UI.StatusLine.TextY = Video.Height + (2 - 16) * get_scale_factor()
+UI.StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
 UI.StatusLine.Font = Fonts["game"]
 
 -- copper
