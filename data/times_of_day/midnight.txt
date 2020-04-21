@@ -1,7 +1,7 @@
 midnight = {
 	name = "Midnight"
 	night = true
-	color_modification = { -45 -35 -10 }
+	color_modification = { -22 -17 -5 }
 	image = {
 		file = "ui/resources/midnight.png"
 		width = 14

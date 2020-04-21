@@ -78,6 +78,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Bows now have specific graphics for when they are on the ground.
 
+* Miscellaneous
+- Reduced the time of day color effects, so that the graphics aren't too dark during night.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 
@@ -86,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Units in underground terrain tiles (cave floor and rockbound cave floor) are now treated as if they are at night for sight range bonus purposes.
+- Units in underground terrain tiles are now have the night-time color effect applied on them.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
