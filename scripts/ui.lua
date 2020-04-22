@@ -369,43 +369,43 @@ UI.StatusLine.Font = Fonts["game"]
 -- copper
 UI.Resources[1].G = CGraphic:New("ui/resources/copper.png", 14, 14)
 UI.Resources[1].IconFrame = 0
-UI.Resources[1].IconX = 154 + (75 * 0)
+UI.Resources[1].IconX = (154 + (75 * 0)) * get_scale_factor()
 UI.Resources[1].IconY = 0
-UI.Resources[1].TextX = 154 + (75 * 0) + 18
-UI.Resources[1].TextY = 1
+UI.Resources[1].TextX = (154 + (75 * 0) + 18) * get_scale_factor()
+UI.Resources[1].TextY = 1 * get_scale_factor()
 
 -- lumber
 UI.Resources[2].G = CGraphic:New("ui/resources/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
-UI.Resources[2].IconX = 154 + (75 * 1)
+UI.Resources[2].IconX = (154 + (75 * 1)) * get_scale_factor()
 UI.Resources[2].IconY = 0
-UI.Resources[2].TextX = 154 + (75 * 1) + 18
-UI.Resources[2].TextY = 1
+UI.Resources[2].TextX = (154 + (75 * 1) + 18) * get_scale_factor()
+UI.Resources[2].TextY = 1 * get_scale_factor()
 
 -- stone
 UI.Resources[5].G = CGraphic:New("ui/resources/stone.png", 14, 14)
 UI.Resources[5].IconFrame = 0
-UI.Resources[5].IconX = 154 + (75 * 2)
+UI.Resources[5].IconX = (154 + (75 * 2)) * get_scale_factor()
 UI.Resources[5].IconY = 0
-UI.Resources[5].TextX = 154 + (75 * 2) + 18
-UI.Resources[5].TextY = 1
+UI.Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
+UI.Resources[5].TextY = 1 * get_scale_factor()
 
 -- oil
 --UI.Resources[3].G = CGraphic:New("ui/resources/oil.png", 14, 14)
 --UI.Resources[3].IconFrame = 0
---UI.Resources[3].IconX = 154 + 150
+--UI.Resources[3].IconX = (154 + 150) * get_scale_factor()
 --UI.Resources[3].IconY = 0
---UI.Resources[3].TextX = 154 + 150 + 18
---UI.Resources[3].TextY = 1
+--UI.Resources[3].TextX = (154 + 150 + 18) * get_scale_factor()
+--UI.Resources[3].TextY = 1 * get_scale_factor()
 
 if (GetCurrentQuest() == "gathering-materials") then
 	-- coal
 	UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
 	UI.Resources[6].IconFrame = 0
-	UI.Resources[6].IconX = 154 + (75 * 3)
+	UI.Resources[6].IconX = (154 + (75 * 3)) * get_scale_factor()
 	UI.Resources[6].IconY = 0
-	UI.Resources[6].TextX = 154 + (75 * 3) + 18
-	UI.Resources[6].TextY = 1
+	UI.Resources[6].TextX = (154 + (75 * 3) + 18) * get_scale_factor()
+	UI.Resources[6].TextY = 1 * get_scale_factor()
 else
 	-- Hide Coal (should not show up in normal scenarios)
 	if (UI.Resources[6].G) then
@@ -420,9 +420,9 @@ if (CanAccessFile("ui/resources/food.png")) then
   UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
 end
 UI.Resources[FoodCost].IconFrame = 0
-UI.Resources[FoodCost].IconX = Video.Width - 138 - 99 - 26
+UI.Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
 UI.Resources[FoodCost].IconY = 0
-UI.Resources[FoodCost].TextX = Video.Width - 138 + 18 - 99 - 26
+UI.Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
 UI.Resources[FoodCost].TextY = 1
 
 -- score
@@ -430,9 +430,9 @@ if (CanAccessFile("ui/resources/score.png"))then
   UI.Resources[ScoreCost].G = CGraphic:New("ui/resources/score.png", 14, 14)
 end
 UI.Resources[ScoreCost].IconFrame = 0
-UI.Resources[ScoreCost].IconX = Video.Width - 68 - 99 - 26
+UI.Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
 UI.Resources[ScoreCost].IconY = 0
-UI.Resources[ScoreCost].TextX = Video.Width - 68 + 18 - 99 - 26
+UI.Resources[ScoreCost].TextX = Video.Width + (-68 + 18) * get_scale_factor()
 UI.Resources[ScoreCost].TextY = 1
 
 UI.Resources[ManaResCost].G = CGraphic:New("ui/resources/mana_icon.png", 14, 14)
@@ -463,24 +463,24 @@ UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 
 UI.TimeOfDayPanel.IconFrame = 0
-UI.TimeOfDayPanel.IconX = 154 + (75 * 4) + (18 * 0)
+UI.TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
 UI.TimeOfDayPanel.IconY = 0
 
 UI.SeasonPanel.IconFrame = 0
-UI.SeasonPanel.IconX = 154 + (75 * 4) + (18 * 1)
+UI.SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
 UI.SeasonPanel.IconY = 0
 
 UI.AgePanel.IconFrame = 0
-UI.AgePanel.IconX = 154 + (75 * 5)
+UI.AgePanel.IconX = (154 + (75 * 5)) * get_scale_factor()
 UI.AgePanel.IconY = 0
-UI.AgePanel.TextX = 154 + (75 * 5) + 18
-UI.AgePanel.TextY = 1
+UI.AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
+UI.AgePanel.TextY = 1 * get_scale_factor()
 
---UI.DatePanel.TextX = 154 + (75 * 7)
---UI.DatePanel.TextY = 1
+--UI.DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
+--UI.DatePanel.TextY = 1 * get_scale_factor()
 
-UI.MenuButton.X = 26
-UI.MenuButton.Y = 1
+UI.MenuButton.X = 26 * get_scale_factor()
+UI.MenuButton.Y = 1 * get_scale_factor()
 UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton:SetCallback(
 	function()
@@ -492,8 +492,8 @@ UI.MenuButton:SetCallback(
 	end
 )
 
-UI.NetworkDiplomacyButton.X = Video.Width - 99 - 26
-UI.NetworkDiplomacyButton.Y = 1
+UI.NetworkDiplomacyButton.X = Video.Width + (-99 - 26) * get_scale_factor()
+UI.NetworkDiplomacyButton.Y = 1 * get_scale_factor()
 UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
@@ -648,23 +648,23 @@ DefinePanelContents(
 	},
 	--]]
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(3, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(3, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 59}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(4, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 59}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(4, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(3, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
-	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 83}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(3, UnitTypeName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {170, 83}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(3, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
 	
 	-- Resource Left
 	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},

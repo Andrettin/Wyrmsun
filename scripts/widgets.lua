@@ -188,12 +188,12 @@ DefineButtonStyle("network-goblin", {
 })
 
 DefineButtonStyle("icon", {
-	Size = {46, 38},
+	Size = {46 * get_scale_factor(), 38 * get_scale_factor()},
 	Font = "game",
 	TextNormalColor = "yellow",
 	TextReverseColor = "yellow",
 	TextAlign = "Right",
-	TextPos = {46, 26},
+	TextPos = {46 * get_scale_factor(), 26 * get_scale_factor()},
 	Default = {
 		Border = {
 			Color = {0, 0, 0}, Size = 1,
