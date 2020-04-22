@@ -217,7 +217,7 @@ DefineTerrainType("shallow-water", {
 		"4" -- river
 	},
 	Color = {0, 128, 255},
-	BaseTerrainTypes = {"dirt", "mud", "rockbound-cave-floor", "cave-floor", "snow", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "snow", "ice", "ford"},
 	Overlay = true,
 	Flags = {"water"},
 	AllowSingle = true,
@@ -299,9 +299,9 @@ DefineTerrainType("shallow-water", {
 DefineTerrainType("gray-shallow-water", {
 	Name = "Gray Shallow Water",
 	Character = "y",
-	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor", "mud", "dirt", "snow", "ice", "ford"},
+	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor"},
 	Overlay = true,
-	Flags = {"water"},
+	Flags = {"water", "underground"},
 	Graphics = "terrain/gray_shallow_water.png",
 	ElevationGraphics = "terrain/gray_shallow_water_shore.png",
 	SolidTiles = {17, 20, 23},
