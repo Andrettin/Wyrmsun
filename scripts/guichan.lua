@@ -109,7 +109,7 @@ function AddMenuHelpers(menu)
 			callback()
 		end
 	)
-    if (size == nil) then size = {200, 24} end
+    if (size == nil) then size = {200 * get_scale_factor(), 24 * get_scale_factor()} end
     b:setSize(size[1], size[2])
     b:setBackgroundColor(dark)
     b:setBaseColor(dark)
@@ -150,13 +150,13 @@ function AddMenuHelpers(menu)
 			g_blp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_pressed.png")
 			g_blg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_grayed.png")
 		end
-		g_bln:Load()
-		g_blp:Load()
-		g_blg:Load()
+		g_bln:Load(false, get_scale_factor())
+		g_blp:Load(false, get_scale_factor())
+		g_blg:Load(false, get_scale_factor())
 		b:setNormalImage(g_bln)
 		b:setPressedImage(g_blp)
 		b:setDisabledImage(g_blg)
-		b:setSize(224, 28)
+		b:setSize(224 * get_scale_factor(), 28 * get_scale_factor())
 		if (string.len(caption) > 24) then
 			b:setFont(Fonts["game"])
 		end
@@ -180,13 +180,13 @@ function AddMenuHelpers(menu)
 			g_bsp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_pressed.png")
 			g_bsg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_grayed.png")
 		end
-		g_bsn:Load()
-		g_bsp:Load()
-		g_bsg:Load()
+		g_bsn:Load(false, get_scale_factor())
+		g_bsp:Load(false, get_scale_factor())
+		g_bsg:Load(false, get_scale_factor())
 		b:setNormalImage(g_bsn)
 		b:setPressedImage(g_bsp)
 		b:setDisabledImage(g_bsg)
-		b:setSize(106, 28)
+		b:setSize(106 * get_scale_factor(), 28 * get_scale_factor())
 		return b
 	end
 
@@ -210,11 +210,11 @@ function AddMenuHelpers(menu)
 		local g_lslider_p
 		g_lslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_normal.png")
 		g_lslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_pressed.png")
-		g_lslider_n:Load()
-		g_lslider_p:Load()
+		g_lslider_n:Load(false, get_scale_factor())
+		g_lslider_p:Load(false, get_scale_factor())
 		b:setNormalImage(g_lslider_n)
 		b:setPressedImage(g_lslider_p)
-		b:setSize(20, 19)
+		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
 		b:setBorderSize(0)
 		return b
 	end
@@ -226,8 +226,8 @@ function AddMenuHelpers(menu)
 		local g_slider
 		g_marker = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_knob.png")
 		g_slider = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_bar_normal.png")
-		g_marker:Load()
-		g_slider:Load()
+		g_marker:Load(false, get_scale_factor())
+		g_slider:Load(false, get_scale_factor())
 		b:setMarkerImage(g_marker)
 		b:setBackgroundImage(g_slider)
 		b:setSize(w, h)
@@ -246,11 +246,11 @@ function AddMenuHelpers(menu)
 		local g_rslider_p
 		g_rslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_normal.png")
 		g_rslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_pressed.png")
-		g_rslider_n:Load()
-		g_rslider_p:Load()
+		g_rslider_n:Load(false, get_scale_factor())
+		g_rslider_p:Load(false, get_scale_factor())
 		b:setNormalImage(g_rslider_n)
 		b:setPressedImage(g_rslider_p)
-		b:setSize(20, 19)
+		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
 		b:setBorderSize(0)
 		return b
 	end
@@ -429,17 +429,17 @@ function AddMenuHelpers(menu)
 		g_checkbox_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
 		g_checkbox_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
 		g_checkbox_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
-		g_checkbox_off:Load()
-		g_checkbox_off2:Load()
-		g_checkbox_on:Load()
-		g_checkbox_on2:Load()
+		g_checkbox_off:Load(false, get_scale_factor())
+		g_checkbox_off2:Load(false, get_scale_factor())
+		g_checkbox_on:Load(false, get_scale_factor())
+		g_checkbox_on2:Load(false, get_scale_factor())
 		b:setUncheckedNormalImage(g_checkbox_off)
 		b:setUncheckedPressedImage(g_checkbox_off2)
 		b:setCheckedNormalImage(g_checkbox_on)
 		b:setCheckedPressedImage(g_checkbox_on2)
 		if (callback ~= nil) then b:setActionCallback(function(s) PlaySound("click"); callback(b, s) end) end
 		b:setFont(Fonts["game"])
-		self:add(b, x - 1, y - 1) -- reduced by 1 because the images are bigger than they are supposed to be, as they are graphics for radio buttons
+		self:add(b, x - 1 * get_scale_factor(), y - 1 * get_scale_factor()) -- reduced by 1 because the images are bigger than they are supposed to be, as they are graphics for radio buttons
 		return b
 	end
   
@@ -471,10 +471,10 @@ function AddMenuHelpers(menu)
 		g_radio_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
 		g_radio_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
 		g_radio_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
-		g_radio_off:Load()
-		g_radio_off2:Load()
-		g_radio_on:Load()
-		g_radio_on2:Load()
+		g_radio_off:Load(false, get_scale_factor())
+		g_radio_off2:Load(false, get_scale_factor())
+		g_radio_on:Load(false, get_scale_factor())
+		g_radio_on2:Load(false, get_scale_factor())
 		b:setUncheckedNormalImage(g_radio_off)
 		b:setUncheckedPressedImage(g_radio_off2)
 		b:setCheckedNormalImage(g_radio_on)
@@ -499,9 +499,9 @@ function AddMenuHelpers(menu)
 		g_bar = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/pulldown_bar_normal.png")
 		g_dslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_normal.png")
 		g_dslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_pressed.png")
-		g_bar:Load()
-		g_dslider_n:Load()
-		g_dslider_p:Load()
+		g_bar:Load(false, get_scale_factor())
+		g_dslider_n:Load(false, get_scale_factor())
+		g_dslider_p:Load(false, get_scale_factor())
 		dd:setItemImage(g_bar)
 		dd:setDownNormalImage(g_dslider_n)
 		dd:setDownPressedImage(g_dslider_p)
@@ -521,7 +521,7 @@ function AddMenuHelpers(menu)
     b:setForegroundColor(clear)
     b:setBackgroundColor(dark)
     if (w == nil) then w = 100 end
-    b:setSize(w, 18)
+    b:setSize(w, 18 * get_scale_factor())
     self:add(b, x, y)
     return b
   end
@@ -827,17 +827,17 @@ function RunSinglePlayerGameMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-	local campaign_button = menu:addFullButton(_("~!Scenarios"), "s", offx + 208, offy + 104 + 36*2,
+	menu:addLabel(_("~<Single Player~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
+	local campaign_button = menu:addFullButton(_("~!Scenarios"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
 		function()
 			menu:stop()
 			RunCampaignMenu();
 		end
 	)
-	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Quests"), "q", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
 		function()
 			RunQuestWorldMenu();
 			if (RunningScenario) then
@@ -845,7 +845,7 @@ function RunSinglePlayerGameMenu()
 			end
 		end
 	)
-	menu:addFullButton(_("C~!ustom Game"), "u", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("C~!ustom Game"), "u", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
 		function()
 			RunSinglePlayerCustomGameMenu()
 			if (RunningScenario) then
@@ -853,15 +853,15 @@ function RunSinglePlayerGameMenu()
 			end
 		end
 	)
-	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("~!Load Game"), "l", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(),
 		function()
 			RunLoadGameMenu();
 			menu:stop(1)
 		end
 	)
-	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
 		function() RunTechTreeMenu(0) end)
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*7,
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*7) * get_scale_factor(),
 		function() menu:stop() end)
 	return menu:run()
 end
@@ -1298,11 +1298,11 @@ function BuildProgramStartMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
 --	menu:addLabel("v" .. wyrmsun.Version .. "  " .. wyrmsun.Homepage, offx + 320, (Video.Height - 90) + 18*2, Fonts["game"])
-	menu:addLabel(wyrmsun.Copyright, offx + 320, (Video.Height - 90) + 18*4, Fonts["small"])
+	menu:addLabel(wyrmsun.Copyright, offx + 320 * get_scale_factor(), (Video.Height - 90 * get_scale_factor()) + 18*4 * get_scale_factor(), Fonts["small"])
 
 --	wyrmsun_logo_widget:setSize(6197 * 800 / Video.Width / 16, 2456 * 600 / Video.Height / 16)
 	menu:add(wyrmsun_logo_widget, Video.Width / 2 - (wyrmsun_logo_widget:getWidth() / 2), 0)
@@ -1315,25 +1315,25 @@ function BuildProgramStartMenu()
 		SaveQuestCompletion()
 	end
 	
-	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(),
 		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
---	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
+--	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3 * get_scale_factor(), -- replays are broken at the moment
 --		function() RunReplayGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Achievements"), "a", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
 		function() RunAchievementsMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Options"), "o", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
 		function() RunOptionsMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(),
 	function() RunEditorMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Mo~!ds"), "d", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("Mo~!ds"), "d", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
 		function() RunModsMenu(0); menu:stop(1) end)
-	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
+	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36*7) * get_scale_factor(),
 		function() RunEncyclopediaMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
+	menu:addFullButton(_("Cred~!its"), "i", offx + 208 * get_scale_factor(), offy + (104 + 36*8) * get_scale_factor(), RunShowCreditsMenu)
 
-	menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
+	menu:addFullButton(_("E~!xit"), "x", offx + 208 * get_scale_factor(), offy + (104 + 36*9) * get_scale_factor(),
 		function() menu:stop() end)
 
 	return menu:run()

@@ -38,12 +38,12 @@ function RunCampaignMenu()
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
-	menu:addLabel(_("~<Scenarios~>"), offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Scenarios~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
 
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480, offy + 10 + 270 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -51,7 +51,7 @@ function RunCampaignMenu()
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
 	
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480, offy + 10 + 300 + 3,
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480 * get_scale_factor(), offy + (10 + 300 + 3) * get_scale_factor(),
 		function()
 			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
 			SavePreferences()
@@ -62,14 +62,14 @@ function RunCampaignMenu()
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
 	
-	menu:addLabel(_("Difficulty:"), offx + 244, offy + (10 + 300) - 20, Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 244, offy + 10 + 300,
+	menu:addLabel(_("Difficulty:"), offx + 244 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + 244 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
 		function(dd)
 			wyr.preferences.Difficulty = difficulty:getSelected() + 1
 			SavePreferences()
 		end
 	)
-	difficulty:setSize(152, 20)
+	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
 	local campaign_dd
@@ -133,13 +133,13 @@ function RunCampaignMenu()
 	end
 	
 	
-	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2), offy + 104 + 36*0,
+	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor(),
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			UpdateCampaignDescription()
 		end
 	)
-	campaign_dd:setSize(240, 20)
+	campaign_dd:setSize(240 * get_scale_factor(), 20 * get_scale_factor())
 	if (GetCurrentCampaign() ~= "") then
 		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, GetCurrentCampaign()) - 1)
 	else
@@ -147,11 +147,11 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	
-	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640) / 2) + 32, offy + 104 + 36*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (104 + 36*1.5) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
 	
 	UpdateCampaignDescription()
 
-	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208 * get_scale_factor(), offy + (212 + (36 * 4)) * get_scale_factor(),
 		function()
 			RunningScenario = true
 			GetMapInfo("scripts/map_templates/campaign.smp")
@@ -163,7 +163,7 @@ function RunCampaignMenu()
 		end
 	)
 	
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 5),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 5)) * get_scale_factor(),
 		function()
 			SetCurrentCampaign("")
 			menu:stop();

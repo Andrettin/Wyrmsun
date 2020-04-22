@@ -211,8 +211,8 @@ AddSelectedButton(86, 123)
 AddSelectedButton(142, 123)
 
 UI.MaxSelectedFont = Fonts["game"]
-UI.MaxSelectedTextX = 162 + 0
-UI.MaxSelectedTextY = Video.Height - 186 + 15
+UI.MaxSelectedTextX = 162 * get_scale_factor()
+UI.MaxSelectedTextY = Video.Height + (-186 + 15) * get_scale_factor()
 
 b = CUIButton:new()
 b.X = (162 + 160) * get_scale_factor()
@@ -501,8 +501,8 @@ UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
 local earth_id = GetWorldData("earth", "ID")
 if (GetMapLayer("material-plane", "earth", 0) ~= -1) then
-	UI.WorldButtons:at(earth_id).X = 16 + (19  * 0)
-	UI.WorldButtons:at(earth_id).Y = Video.Height - 23
+	UI.WorldButtons:at(earth_id).X = (16 + (19  * 0)) * get_scale_factor()
+	UI.WorldButtons:at(earth_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
 else
 	UI.WorldButtons:at(earth_id).X = -1
@@ -511,8 +511,8 @@ end
 
 local nidavellir_id = GetWorldData("nidavellir", "ID")
 if (GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
-	UI.WorldButtons:at(nidavellir_id).X = 16 + (19  * 1)
-	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23
+	UI.WorldButtons:at(nidavellir_id).X = (16 + (19  * 1)) * get_scale_factor()
+	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
 else
 	UI.WorldButtons:at(nidavellir_id).X = -1
@@ -521,8 +521,8 @@ end
 
 local jotunheim_id = GetWorldData("jotunheim", "ID")
 if (GetMapLayer("material-plane", "jotunheim", 0) ~= -1) then
-	UI.WorldButtons:at(jotunheim_id).X = 16 + (19  * 2)
-	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23
+	UI.WorldButtons:at(jotunheim_id).X = (16 + (19  * 2)) * get_scale_factor()
+	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")
 else
 	UI.WorldButtons:at(jotunheim_id).X = -1

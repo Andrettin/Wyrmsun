@@ -434,7 +434,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			menu = WarGrandStrategyGameMenu(panel(5))
 			menu:setDrawMenusUnder(true)
 		end
-		menu:resize(352, 352)
+		menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 		
 		if (speaker == nil) then
 			speaker = ""
@@ -451,21 +451,21 @@ function Event(speaker, event_description, player, options, option_effects, even
 			title_label = speaker
 		end
 		if (title_label ~= "") then
-			menu:addLabel(_(title_label), 176, 11)
+			menu:addLabel(_(title_label), 176 * get_scale_factor(), 11 * get_scale_factor())
 		end
 
 		local l = MultiLineLabel()
 		l:setFont(Fonts["game"])
-		l:setSize(324, 324)
-		l:setLineWidth(324)
+		l:setSize(324 * get_scale_factor(), 324 * get_scale_factor())
+		l:setLineWidth(324 * get_scale_factor())
 		if (event_icon == nil and type(speaker) == "string") then
 			--if (title_label ~= "") then
-				menu:add(l, 14, 76)
+				menu:add(l, 14 * get_scale_factor(), 76 * get_scale_factor())
 			--else
-			--	menu:add(l, 14, 38)
+			--	menu:add(l, 14 * get_scale_factor(), 38 * get_scale_factor())
 			--end
 		else
-			menu:add(l, 14, 112)
+			menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 		end
 		
 		l:setCaption(ProcessEventString(_(event_description)))
@@ -475,12 +475,12 @@ function Event(speaker, event_description, player, options, option_effects, even
 			event_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitVariable(speaker, "Icon"), "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
-			menu:add(b, 153, 48)
+			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		elseif (event_icon ~= nil) then
 			event_icon = CPlayerColorGraphic:Get(GetIconData(event_icon, "File"))
 			event_icon:Load()
 			b = PlayerColorImageButton("", "gray")
-			menu:add(b, 153, 48)
+			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		end
 		if (b) then
 			b:setNormalImage(event_icon)
@@ -506,7 +506,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			local option_b = menu:addFullButton(_(options[i]), option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
+			local option_b = menu:addFullButton(_(options[i]), option_hotkey, (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * (table.getn(options) - (i - 1))) * get_scale_factor(),
 				function(s)
 					if (GameRunning and not IsNetworkGame()) then
 						SetGamePaused(false)
@@ -562,15 +562,15 @@ function Tip(tip_name, tip_description)
 		menu = WarGrandStrategyGameMenu(panel(2))
 		menu:setDrawMenusUnder(true)
 	end
-	menu:resize(288, 256)
+	menu:resize(288 * get_scale_factor(), 256 * get_scale_factor())
 
-	menu:addLabel(_(tip_name), 144, 11)
+	menu:addLabel(_(tip_name), 144 * get_scale_factor(), 11 * get_scale_factor())
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
-	l:setSize(260, 128 + 36)
-	l:setLineWidth(260)
-	menu:add(l, 14, 35 * 1.5)
+	l:setSize(260 * get_scale_factor(), (128 + 36) * get_scale_factor())
+	l:setLineWidth(260 * get_scale_factor())
+	menu:add(l, 14 * get_scale_factor(), 35 * 1.5 * get_scale_factor())
 	l:setCaption(_(tip_description))
 
 	if (tip_name ~= "" and GetArrayIncludes(wyr.preferences.TipsShown, tip_name) == false) then
@@ -578,7 +578,7 @@ function Tip(tip_name, tip_description)
 		SavePreferences()
 	end
 			
-	menu:addHalfButton(_("~!Close"), "c", 288 / 2 - (106 / 2), 256 - 40,
+	menu:addHalfButton(_("~!Close"), "c", (288 / 2 - (106 / 2)) * get_scale_factor(), (256 - 40) * get_scale_factor(),
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
@@ -628,7 +628,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 		menu:setDrawMenusUnder(true)
 	end
 
-	menu:addLabel(_(title), 128, 11)
+	menu:addLabel(_(title), 128 * get_scale_factor(), 11 * get_scale_factor())
 	
 	if (icon) then
 		local icon_x_origin = (frame * icon_graphics:getWidth()) % icon_graphics:getGraphicWidth()
@@ -638,7 +638,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageButton("", player_color)
-		menu:add(icon_widget, 105, 48)
+		menu:add(icon_widget, 105 * get_scale_factor(), 48 * get_scale_factor())
 		icon_widget:setImageOrigin(icon_x_origin, icon_y_origin)
 		icon_widget:setNormalImage(icon_graphics)
 		icon_widget:setPressedImage(icon_graphics)
@@ -651,16 +651,16 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
-	l:setSize(228, 256)
-	l:setLineWidth(228)
+	l:setSize(228 * get_scale_factor(), 256 * get_scale_factor())
+	l:setLineWidth(228 * get_scale_factor())
 	if (icon) then
-		menu:add(l, 14, 112)
+		menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 	else
-		menu:add(l, 14, 35)
+		menu:add(l, 14 * get_scale_factor(), 35 * get_scale_factor())
 	end
 	l:setCaption(_(message))
 
-	local ok_button = menu:addFullButton(_("~!OK"), "o", 16, 248 - (36 * 0),
+	local ok_button = menu:addFullButton(_("~!OK"), "o", 16 * get_scale_factor(), (248 - (36 * 0)) * get_scale_factor(),
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)

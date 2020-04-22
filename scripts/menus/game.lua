@@ -6,7 +6,7 @@ function WarGameMenu(background)
     menu:setBaseColor(dark)
   else
     local bgg = CGraphic:New(background)
-    bgg:Load()
+    bgg:Load(false, get_scale_factor())
     local bg = ImageWidget(bgg)
     menu:add(bg, 0, 0)
   end
@@ -17,7 +17,7 @@ function WarGameMenu(background)
       (Video.Height - menu:getHeight()) / 2)
   end
 
-  menu:resize(256, 288)
+  menu:resize(256 * get_scale_factor(), 288 * get_scale_factor())
 --  menu:setBorderSize(1)
   menu:setDrawMenusUnder(true)
 
