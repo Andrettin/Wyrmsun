@@ -1,6 +1,7 @@
 underground = {
 	name = "Underground"
 	night = true
+	color_modification = { -22 -17 -5 }
 	image = {
 		file = "ui/resources/underground.png"
 		width = 14
