@@ -1,13 +1,13 @@
-[historical_unit]
-	ident = svafning_footpads
+svafning_footpads = {
 	name = "Svafning Footpads"
 	unit_type = unit_kobold_footpad
 	faction = svafning_tribe
 	quantity = 9
+	ai_active = false
 	start_date = years_wesnoth.25
 	end_date = years_wesnoth.40
-	[historical_location]
+	historical_location = {
 		date = years_wesnoth.25
 		map_template = nidavellir_underground
-	[/historical_location]
-[/historical_unit]
+	}
+}

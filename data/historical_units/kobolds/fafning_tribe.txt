@@ -1,14 +1,14 @@
-[historical_unit]
-	ident = fafning_footpads
+fafning_footpads = {
 	name = "fafning Footpads"
 	unit_type = unit_kobold_footpad
 	faction = fafning_tribe
 	quantity = 9
+	ai_active = false
 	#Sigibert's campaign begins in 561; Sigibert's encounter with Fafnir (in which the latter was killed) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 	start_date = 561
 	end_date = 566
-	[historical_location]
+	historical_location = {
 		date = -3000
 		map_template = nidavellir_underground
-	[/historical_location]
-[/historical_unit]
+	}
+}

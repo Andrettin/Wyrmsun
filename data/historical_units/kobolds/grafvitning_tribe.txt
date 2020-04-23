@@ -1,13 +1,13 @@
-[historical_unit]
-	ident = grafvitning_footpads
+grafvitning_footpads = {
 	name = "Grafvitning Footpads"
 	unit_type = unit_kobold_footpad
 	faction = grafvitning_tribe
 	quantity = 9
+	ai_active = false
 	start_date = -3000
 	end_date = -2999
-	[historical_location]
+	historical_location = {
 		date = -3000
 		map_template = svarinshaug_underground
-	[/historical_location]
-[/historical_unit]
+	}
+}

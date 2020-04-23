@@ -1,12 +1,12 @@
-[historical_unit]
-	ident = goinling_footpads
+goinling_footpads = {
 	name = "Goinling Footpads"
 	unit_type = unit_kobold_footpad
 	faction = goinling_tribe
 	quantity = 9
+	ai_active = false
 	start_date = -3000
-	[historical_location]
+	historical_location = {
 		date = -3000
 		map_template = nidavellir_underground
-	[/historical_location]
-[/historical_unit]
+	}
+}
