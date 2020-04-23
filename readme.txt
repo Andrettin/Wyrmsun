@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
+- Player territories are now drawn on the minimap.
 
 -----------------------------------------------------------------------
 - 3.5.4
