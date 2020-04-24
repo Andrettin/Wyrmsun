@@ -1,0 +1,28 @@
+nidavellir = {
+	name = "Nidavellir"
+	world = nidavellir
+	size = { 256 256 }
+	unusable_area_terrain_type = dry_mud
+	unusable_area_overlay_terrain_type = chasm
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_silver_deposit = 3
+		unit_copper_deposit = 2
+		unit_iron_deposit = 7
+		unit_mithril_deposit = 1
+		unit_diamond_deposit = 1
+		unit_yale_cave = 7
+		unit_tree_stump = 11
+		unit_snigill = 40
+		unit_slime = 28
+		#unit_blood_bat = 16
+		#unit_dread_bat = 8
+		#unit_gryphon = 8
+		unit_wyrm = 4
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}
