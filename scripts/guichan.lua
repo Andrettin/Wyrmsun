@@ -520,7 +520,9 @@ function AddMenuHelpers(menu)
     b:setBaseColor(clear)
     b:setForegroundColor(clear)
     b:setBackgroundColor(dark)
-    if (w == nil) then w = 100 end
+    if (w == nil) then
+		w = 100 * get_scale_factor()
+	end
     b:setSize(w, 18 * get_scale_factor())
     self:add(b, x, y)
     return b
@@ -748,30 +750,30 @@ end
 function RunSelectScenarioMenu(is_mod)
 	buttonStatut = 0
 	local menu = WarMenu(nil, panel(5), false)
-	menu:setSize(352, 352)
-	menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
+	menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
+	menu:setPosition((Video.Width - 352 * get_scale_factor()) / 2, (Video.Height - 352 * get_scale_factor()) / 2)
 	menu:setDrawMenusUnder(true)
 
 	local browser
 	if not (is_mod) then
-		menu:addLabel(_("Select Map"), 176, 8)
+		menu:addLabel(_("Select Map"), 176 * get_scale_factor(), 8 * get_scale_factor())
 		
 		browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
-			24, 88, 300, 108, mapname)
+			24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), mapname)
 	else
-		menu:addLabel(_("Select Mod"), 176, 8)
+		menu:addLabel(_("Select Mod"), 176 * get_scale_factor(), 8 * get_scale_factor())
 
 		if (modname ~= "") then
 			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24, 88, 300, 108, modname)
+				24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), modname)
 		else
 			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24, 88, 300, 108)
+				24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor())
 		end
 	end
 
 
-	local l = menu:addLabel(browser:getSelectedItem(), 24, 208, Fonts["game"], false)
+	local l = menu:addLabel(browser:getSelectedItem(), 24 * get_scale_factor(), 208 * get_scale_factor(), Fonts["game"], false)
 
 	local function cb(s)
 		l:setCaption(browser:getSelectedItem())
@@ -779,7 +781,7 @@ function RunSelectScenarioMenu(is_mod)
 	end
 	browser:setActionCallback(cb)
 
-	menu:addHalfButton(_("~!OK"), "o", 48, 318,
+	menu:addHalfButton(_("~!OK"), "o", 48 * get_scale_factor(), 318 * get_scale_factor(),
 		function()
 			local cap = l:getCaption()
 
@@ -794,12 +796,12 @@ function RunSelectScenarioMenu(is_mod)
 			end
 			menu:stop()
 		end)
-	menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
+	menu:addHalfButton(_("~!Cancel"), "c", 198 * get_scale_factor(), 318 * get_scale_factor(),
 		function() buttonStatut = 2; menu:stop() end)
 	
 	if not (is_mod) then
 		local sortByCheckBox
-		sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) / 2, 352 - 16 - 27 - 25,
+		sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) * get_scale_factor() / 2, (352 - 16 - 27 - 25) * get_scale_factor(),
 		function()
 			wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
 			SavePreferences()
@@ -869,8 +871,8 @@ end
 function RunSinglePlayerCustomGameMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local d
 	local world
 	local scenario
@@ -962,11 +964,11 @@ function RunSinglePlayerCustomGameMenu()
 		table.insert(world_list, _("Custom"))
 	end
 
-	mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
-	descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
+	mapl = menu:addLabel(string.sub(mapname, 6), offx + 16 * get_scale_factor(), offy + (360 + 24) * get_scale_factor(), Fonts["game"], false)
+	descriptionl = menu:addLabel("descriptionl", offx + 16 * get_scale_factor(), offy + 360 * get_scale_factor(), Fonts["game"], false)
 
-	menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
-	menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
+	menu:addLabel("~<Single Player Game Setup~>", offx + (640/2 + 12) * get_scale_factor(), offy + 72 * get_scale_factor())
+	menu:addFullButton(_("~!Start Game"), "s", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*1) * get_scale_factor(),
 		function()
 			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
 				for i=1,mapinfo.nplayers do
@@ -1000,78 +1002,78 @@ function RunSinglePlayerCustomGameMenu()
 			SetCurrentCustomHero("")
 		end
 	)
-	menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2,
+	menu:addFullButton(_("~!Cancel Game"), "c", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*2) * get_scale_factor(),
 		function()
 			SetCurrentCustomHero("")
 			menu:stop()
 		end
 	)
 
-	menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
-	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
+	menu:addLabel(_("World:"), offx + 40 * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
+	world = menu:addDropDown(world_list, offx + 40 * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
 		function(dd) WorldChanged() end)
-	world:setSize(152, 20)
+	world:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	world:setSelected(0)
 
-	menu:addLabel(_("Map:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
-	scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
+	menu:addLabel(_("Map:"), offx + 220 * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
+	scenario = menu:addDropDown(scenario_list, offx + 220 * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
 		function(dd) ScenarioChanged() end)
-	scenario:setSize(152, 20)
+	scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Difficulty:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 640 - 224 - 16, offy + 10 + 120,
+	menu:addLabel(_("Difficulty:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
 		function(dd)
 			wyr.preferences.Difficulty = difficulty:getSelected() + 1
 			SavePreferences()
 		end
 	)
-	difficulty:setSize(152, 20)
+	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
-	menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-	race = menu:addDropDown(civilization_list, offx + 40, offy + 10 + 180,
+	menu:addLabel(_("Your Civilization:"), offx + 40 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
+	race = menu:addDropDown(civilization_list, offx + 40 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) CivilizationChanged() end)
-	race:setSize(152, 20)
+	race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Your Faction:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
-	faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
+	menu:addLabel(_("Your Faction:"), offx + 220 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
+	faction = menu:addDropDown({_("Map Default")}, offx + 220 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) end)
-	faction:setSize(152, 20)
+	faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Resources:"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
-	resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + 640 - 224 - 16, offy + 10 + 180,
+	menu:addLabel(_("Resources:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
+	resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) end)
-	resources:setSize(152, 20)
+	resources:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"), _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
 
-	menu:addLabel(_("Opponents:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-	opponents = menu:addDropDown(opponents_list, offx + 40, offy + 10 + 240,
+	menu:addLabel(_("Opponents:"), offx + 40 * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
+	opponents = menu:addDropDown(opponents_list, offx + 40 * get_scale_factor(), offy + (10 + 240) * get_scale_factor(),
 		function(dd) end)
-	opponents:setSize(152, 20)
+	opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Game Type:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
-	gametype = menu:addDropDown(game_type_list, offx + 220, offy + 10 + 240, function(dd) end)
-	gametype:setSize(152, 20)
+	menu:addLabel(_("Game Type:"), offx + 220 * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
+	gametype = menu:addDropDown(game_type_list, offx + 220 * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) end)
+	gametype:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Tech Level:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
-	tech_level = menu:addDropDown(tech_level_list, offx + 640 - 224 - 16, offy + 10 + 240, function(dd) TechLevelChanged() end)
-	tech_level:setSize(152, 20)
+	menu:addLabel(_("Tech Level:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
+	tech_level = menu:addDropDown(tech_level_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) TechLevelChanged() end)
+	tech_level:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Max Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 40, offy + 10 + 300, function(dd) end)
-	max_tech_level:setSize(152, 20)
+	menu:addLabel(_("Max Tech Level:"), offx + 40 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
+	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 40 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(), function(dd) end)
+	max_tech_level:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Custom Hero:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 220, offy + 10 + 300,
+	menu:addLabel(_("Custom Hero:"), offx + 220 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 220 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 		end
 	)
-	hero_dd:setSize(152, 20)
+	hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	
 --	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3 + 45,
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 285 + 3 + 45,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 285 + 3 + 45) * get_scale_factor(),
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -1079,7 +1081,7 @@ function RunSinglePlayerCustomGameMenu()
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
 
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 220, offy + 10 + 285 + 3 + 45,
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 220 * get_scale_factor(), offy + (10 + 285 + 3 + 45) * get_scale_factor(),
 		function()
 			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
 			SavePreferences()
@@ -1106,7 +1108,7 @@ function RunSinglePlayerCustomGameMenu()
 
 		table.sort(scenario_list)
 		scenario:setList(scenario_list)
-		scenario:setSize(152, 20)
+		scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		scenario:setSelected(0)
 		ScenarioChanged()
 	end
@@ -1154,7 +1156,7 @@ function RunSinglePlayerCustomGameMenu()
 			end
 		end
 		faction:setList(faction_list)
-		faction:setSize(152, 20)
+		faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		faction:setSelected(0)
 		
 		hero_list = nil
@@ -1173,7 +1175,7 @@ function RunSinglePlayerCustomGameMenu()
 		table.sort(hero_list)
 		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
 		hero_dd:setList(hero_list)
-		hero_dd:setSize(152, 20)
+		hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		hero_dd:setSelected(table.getn(hero_list) - 1)
 	end
 
@@ -1201,7 +1203,7 @@ function RunSinglePlayerCustomGameMenu()
 		table.insert(max_tech_level_enum_list, CivilizedGunpowderTechLevel)
 		
 		max_tech_level:setList(max_tech_level_list)
-		max_tech_level:setSize(152, 20)
+		max_tech_level:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		max_tech_level:setSelected(0)
 		BuildCivilizationList()
 	end
@@ -1253,7 +1255,7 @@ function RunSinglePlayerCustomGameMenu()
 		
 		
 		race:setList(civilization_list)
-		race:setSize(152, 20)
+		race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		race:setSelected(0)
 		CivilizationChanged()
 	end
@@ -1272,12 +1274,12 @@ function RunSinglePlayerCustomGameMenu()
 			table.insert(o, opponents_list[i])
 		end
 		opponents:setList(o)
-		opponents:setSize(152, 20)
+		opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 		game_type_list = nil
 		game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
 		gametype:setList(game_type_list)
-		gametype:setSize(152, 20)
+		gametype:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		gametype:setSelected(0)
 	end
 
