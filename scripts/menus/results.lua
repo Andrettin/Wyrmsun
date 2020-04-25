@@ -42,14 +42,14 @@ function RunResultsMenu()
 	end
 
 	local menu = WarMenu(nil, background)
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
 --	local names_font = Fonts["small-title"]
 	local names_font = Fonts["large"]
-	local top_offset = 57
-	local bottom_offset = 178
-	local description_offset = 30
+	local top_offset = 57 * get_scale_factor()
+	local bottom_offset = 178 * get_scale_factor()
+	local description_offset = 30 * get_scale_factor()
 
 	local c = 0
 	for i=0,7 do
@@ -58,20 +58,20 @@ function RunResultsMenu()
 		end
 	end
 
-	local line_spacing = (432 - bottom_offset - description_offset) / c
-	local player_name_spacing = 104 / c
-	menu:addLabel(_("Outcome"), offx + 106, offy + top_offset)
+	local line_spacing = (432 * get_scale_factor() - bottom_offset - description_offset) / c
+	local player_name_spacing = 104 * get_scale_factor() / c
+	menu:addLabel(_("Outcome"), offx + 106 * get_scale_factor(), offy + top_offset)
 --	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
-	menu:addLabel(_(result), offx + 106, offy + top_offset + 21, Fonts["large"])
+	menu:addLabel(_(result), offx + 106 * get_scale_factor(), offy + top_offset + 21 * get_scale_factor(), Fonts["large"])
 
-	menu:addLabel(_("Units"), offx + 50, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Buildings"), offx + 140, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Copper"), offx + 230, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Lumber"), offx + 320, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Stone"), offx + 410, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Units"), offx + 50 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Buildings"), offx + 140 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Copper"), offx + 230 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Lumber"), offx + 320 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Stone"), offx + 410 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
 --	menu:addLabel("Oil", offx + 410, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Kills"), offx + 500, offy + bottom_offset, Fonts["large"], true)
-	menu:addLabel(_("Razings"), offx + 590, offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Kills"), offx + 500 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
+	menu:addLabel(_("Razings"), offx + 590 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
 
 	c = 0
 	for i=0,(PlayerMax - 2) do
@@ -86,32 +86,32 @@ function RunResultsMenu()
 			else
 				name = name .. " - " .. _("Neutral")
 			end
-			menu:addLabel(name, offx + 320,
-				offy + bottom_offset + description_offset + player_name_spacing + line_spacing * c + 5,
+			menu:addLabel(name, offx + 320 * get_scale_factor(),
+				offy + bottom_offset + description_offset + player_name_spacing + line_spacing * c + 5 * get_scale_factor(),
 				names_font, true)
-			menu:addLabel(GetPlayerData(i, "TotalUnits"), offx + 10 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalUnits"), offx + (10 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalBuildings"), offx + 100 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalBuildings"), offx + (100 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalResources", "copper"), offx + 190 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalResources", "copper"), offx + (190 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalResources", "lumber"), offx + 280 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalResources", "lumber"), offx + (280 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalResources", "stone"), offx + 370 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalResources", "stone"), offx + (370 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
 --			menu:addLabel(GetPlayerData(i, "TotalResources", "oil"), offx + 370 + 40,
 --				offy + bottom_offset + description_offset + line_spacing * c + 5,
 --			  Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalKills"), offx + 460 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalKills"), offx + (460 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
-			menu:addLabel(GetPlayerData(i, "TotalRazings"), offx + 550 + 40,
-				offy + bottom_offset + description_offset + line_spacing * c + 5,
+			menu:addLabel(GetPlayerData(i, "TotalRazings"), offx + (550 + 40) * get_scale_factor(),
+				offy + bottom_offset + description_offset + line_spacing * c + 5 * get_scale_factor(),
 				Fonts["large"], true)
 
 			c = c + 1
@@ -126,7 +126,7 @@ function RunResultsMenu()
 --		function() RunSaveReplayMenu() end)
 
 --	menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
-	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112, offy + 440,
+	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112 * get_scale_factor(), offy + 440 * get_scale_factor(),
 		function()
 			CleanPlayers()
 			StopMusic();
