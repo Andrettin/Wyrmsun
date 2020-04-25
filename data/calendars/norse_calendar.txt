@@ -1,0 +1,7 @@
+norse_calendar = {
+	name = "Norse Calendar"
+	day_of_the_week_names = {
+		2 = "Tysdag" #"Týsdagr"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 127.
+		5 = "Friadag" #"Friádagr"; from the Old West Norse; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+	}
+}

@@ -1,0 +1,23 @@
+anglo_saxon_calendar = { #Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 97-98.
+	name = "Anglo-Saxon Calendar"
+	day_of_the_week_names = {
+		2 = "Tiwesdaeg" #"Tīwesdaeg" according to Buchholz; Fick gives "Tîwesdæg" instead; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 127; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
+		4 = "Thunresdaeg" #"Þunresdaeg"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		5 = "Frigedaeg" #"Frigedæg"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
+	}
+	month_names = {
+		1 = "Giuli" #first month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year; the year began on the 25th of December, during the night of which the "Modra nect" ("the night of the mothers") was celebrated
+		2 = "Solmonath" #second month of the Anglo-Saxon year; known as the month of cakes, in which those were offered to the gods
+		3 = "Hrethmonath" #third month of the Anglo-Saxon year, named after the goddess Hretha
+		4 = "Eosturmonath" #fourth month of the Anglo-Saxon year, named after the goddess Eostre
+		5 = "Thrimilci" #fifth month of the Anglo-Saxon year, so named because cows were supposedly milked three times a day during this month
+		6 = "Litha" #sixth and seventh month of the Anglo-Saxon year, the word supposedly means "moon"
+		7 = "Litha"
+		8 = "Weodmonath" #eighth month of the Anglo-Saxon year, the name means "the month of weeds"
+		9 = "Halegmonath" #ninth month of the Anglo-Saxon year, the name means "the month of offerings", due to a festival made at the end of the harvest
+		10 = "Wintirfyllith" #tenth month of the Anglo-Saxon year, begins with the first winter full moon
+		11 = "Blotmonath" #eleventh month of the Anglo-Saxon year, "the month of sacrifice", in which animals were sacrificed to the gods
+		12 = "Giuli" #last month of the Anglo-Saxon year; the modern Yule, the name was used for both the last and first month of the year
+	}
+	#the Anglo-Saxon year began on 25 December
+}

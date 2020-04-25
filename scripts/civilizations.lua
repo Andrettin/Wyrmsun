@@ -1153,7 +1153,7 @@ DefineCivilization("germanic", {
 	Interface = "germanic",
 	Adjective = "Germanic",
 	DefaultColor = "orange",
-	Calendar = "anglo-saxon-calendar",
+	Calendar = "anglo_saxon_calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -1206,7 +1206,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Playable = false,
 	DefaultColor = "green",
 	CivilizationUpgrade = "upgrade-celt-civilization",
-	Calendar = "gregorian-calendar",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
 		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
@@ -1762,7 +1761,6 @@ DefineCivilization("teuton", {
 	DefaultColor = "yellow",
 	CivilizationUpgrade = "upgrade-teuton-civilization",
 	DevelopsFrom = {"germanic"},
-	Calendar = "gregorian-calendar",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
 	UnitSounds = {
 		"selected", "basic-teuton-voices-selected-group",
@@ -1983,7 +1981,7 @@ DefineCivilization("anglo-saxon", {
 	ParentCivilization = "teuton",
 	Adjective = "Anglo-Saxon",
 	DefaultColor = "red",
-	Calendar = "anglo-saxon-calendar",
+	Calendar = "anglo_saxon_calendar",
 	Currency = "scilling",
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
 	DevelopsFrom = {"germanic"},
@@ -2035,7 +2033,6 @@ DefineCivilization("english", {
 	DefaultColor = "red",
 	CivilizationUpgrade = "upgrade-english-civilization",
 	DevelopsFrom = {"anglo-saxon"},
-	Calendar = "gregorian-calendar",
 	UnitSounds = {
 		"selected", "basic-english-voices-selected-group",
 		"acknowledge", "basic-english-voices-acknowledge",
@@ -2172,7 +2169,6 @@ DefineCivilization("frankish", {
 	DefaultColor = "black",
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
-	Calendar = "gregorian-calendar",
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UnitSounds = {
 		"selected", "basic-germanic-voices-selected-group",
@@ -2212,7 +2208,6 @@ DefineCivilization("suebi", {
 	DefaultColor = "black",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
-	Calendar = "gregorian-calendar",
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
 	UnitSounds = {
 		"selected", "basic-germanic-voices-selected-group",
@@ -2236,7 +2231,6 @@ DefineCivilization("gaul", {
 	Adjective = "Gaul",
 	Playable = false,
 	DefaultColor = "black",
-	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
 	}
@@ -2251,7 +2245,6 @@ DefineCivilization("briton", {
 	Adjective = "Briton",
 	Playable = false,
 	DefaultColor = "red",
-	Calendar = "gregorian-calendar",
 	PersonalNames = {
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
 	},
@@ -2334,7 +2327,6 @@ DefineCivilization("gael", {
 	Adjective = "Gael",
 	Playable = false,
 	DefaultColor = "green",
-	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
@@ -2489,7 +2481,6 @@ DefineCivilization("latin", {
 	Adjective = "Latin",
 	Playable = false,
 	DefaultColor = "red",
-	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-latin-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.",
 	UnitSounds = {
@@ -2665,8 +2656,7 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 	Language = "basque",
 	ParentCivilization = "germanic",
 	Adjective = "Basque",
-	Playable = false,
-	Calendar = "gregorian-calendar"
+	Playable = false
 })
 
 DefineCivilization("etruscan", {
@@ -2691,7 +2681,6 @@ DefineCivilization("goth", {
 	Adjective = "Gothic",
 	CivilizationUpgrade = "upgrade-gothic-civilization",
 	DevelopsFrom = {"germanic"},
-	Calendar = "gregorian-calendar",
 	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
 	DefaultColor = "black",
@@ -2931,7 +2920,7 @@ DefineCivilization("norse", {
 	DefaultColor = "blue",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade_norse_civilization",
-	Calendar = "norse-calendar",
+	Calendar = "norse_calendar",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.",
 	UnitSounds = {
 		"selected", "basic-germanic-voices-selected-group",
@@ -2974,7 +2963,6 @@ DefineCivilization("baltic", {
 	ParentCivilization = "norse",
 	Adjective = "Baltic",
 	Playable = false,
-	Calendar = "gregorian-calendar",
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
@@ -2987,8 +2975,7 @@ DefineCivilization("uralic", {
 	Language = "proto-uralic",
 	ParentCivilization = "germanic",
 	Adjective = "Uralic",
-	Playable = false,
-	Calendar = "gregorian-calendar"
+	Playable = false
 })
 
 DefineCivilization("finnish", {
@@ -2999,8 +2986,7 @@ DefineCivilization("finnish", {
 	ParentCivilization = "norse",
 	Adjective = "Finnish",
 	Playable = false,
-	DevelopsFrom = {"uralic"},
-	Calendar = "gregorian-calendar"
+	DevelopsFrom = {"uralic"}
 })
 
 DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, such as the Oretanians
@@ -3010,8 +2996,7 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 	ParentCivilization = "germanic",
 	Adjective = "Iberian",
 	Playable = false,
-	DefaultColor = "brown",
-	Calendar = "gregorian-calendar"
+	DefaultColor = "brown"
 })
 
 DefineCivilization("magyar", {
@@ -3022,8 +3007,7 @@ DefineCivilization("magyar", {
 	ParentCivilization = "teuton",
 	Adjective = "Magyar",
 	Playable = false,
-	DevelopsFrom = {"uralic"},
-	Calendar = "gregorian-calendar"
+	DevelopsFrom = {"uralic"}
 })
 
 DefineCivilization("persian", {
@@ -3071,7 +3055,6 @@ DefineCivilization("slav", {
 	Adjective = "Slavic",
 	Playable = false,
 	DefaultColor = "blue",
-	Calendar = "gregorian-calendar",
 	CivilizationUpgrade = "upgrade-slavic-civilization",
 	UnitSounds = {
 		"selected", "basic-greek-voices-selected-group",
