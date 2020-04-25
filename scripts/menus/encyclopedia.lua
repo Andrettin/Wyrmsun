@@ -515,16 +515,16 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		tooltip_string = tooltip_string .. " " .. tooltip_civilization
 	end
 	
-	encyclopedia_icon:Load()
+	encyclopedia_icon:Load(false, get_scale_factor())
 	if not (encyclopedia_icon_pressed) then
 		encyclopedia_icon_pressed = encyclopedia_icon
 	else
-		encyclopedia_icon_pressed:Load()
+		encyclopedia_icon_pressed:Load(false, get_scale_factor())
 	end
 	if not (encyclopedia_icon_disabled) then
 		encyclopedia_icon_disabled = encyclopedia_icon
 	else
-		encyclopedia_icon_disabled:Load()
+		encyclopedia_icon_disabled:Load(false, get_scale_factor())
 	end
 	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
 	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
@@ -674,7 +674,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	end
-	encyclopedia_icon:Load()
+	encyclopedia_icon:Load(false, get_scale_factor())
 	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
 	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
 	local playercolor

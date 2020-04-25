@@ -124,7 +124,7 @@ function RunQuestMenu(world)
 	else
 		badge_icon = CGraphic:New("ui/icons/badge_cracked.png")
 	end
-	badge_icon:Load()
+	badge_icon:Load(false, get_scale_factor())
 	local b = ImageWidget(badge_icon)
 	menu:add(b, (Video.Width / 2) - (badge_icon:getWidth() / 2), (Video.Height / 2) - (badge_icon:getHeight() / 2))
 	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")

@@ -26,7 +26,6 @@
 --
 
 function RunAchievementsMenu()
-
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
@@ -34,17 +33,17 @@ function RunAchievementsMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
-	menu:addLabel(_("~<Achievements~>"), offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Achievements~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
 
 	local item_x = 1
 	local item_y = 1
 	local achievements = GetAchievements()
 	for i=1, table.getn(achievements) do
 		if (GetAchievementData(achievements[i], "Hidden") == false) then
-			addAchievementIcon(achievements[i], menu, offx + 23 + 4 + (54 * item_x), offy + 10 + 4 + (46 * item_y))
+			addAchievementIcon(achievements[i], menu, offx + (23 + 4 + (54 * item_x)) * get_scale_factor(), offy + (10 + 4 + (46 * item_y)) * get_scale_factor())
 			
 			item_x = item_x + 1
 			if (item_x > 9) then
@@ -54,7 +53,7 @@ function RunAchievementsMenu()
 		end
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 6)) * get_scale_factor(),
 		function() menu:stop(); end)
 
 	menu:run()
@@ -67,19 +66,19 @@ function addAchievementIcon(achievement, menu, x, y)
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
 	end
-	local achievement_icon_x_origin = (achievement_icon_frame * 46) % achievement_icon:getGraphicWidth()
-	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46) / achievement_icon:getGraphicWidth()) * 38
+	local achievement_icon_x_origin = (achievement_icon_frame * 46 * get_scale_factor()) % achievement_icon:getGraphicWidth()
+	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46 * get_scale_factor()) / achievement_icon:getGraphicWidth()) * 38 * get_scale_factor()
 --	b:setHotKey("")
 	b:setActionCallback(
 		function()
 			PlaySound("click")
 			local achievement_menu = WarGameMenu(panel(2))
-			achievement_menu:setSize(288, 256)
+			achievement_menu:setSize(288 * get_scale_factor(), 256 * get_scale_factor())
     		achievement_menu:setPosition((Video.Width - achievement_menu:getWidth()) / 2, (Video.Height - achievement_menu:getHeight()) / 2)
-			achievement_menu:addLabel(_(GetAchievementData(achievement, "Name")), (achievement_menu:getWidth() / 2), 11)
+			achievement_menu:addLabel(_(GetAchievementData(achievement, "Name")), (achievement_menu:getWidth() / 2), 11 * get_scale_factor())
 			
 			local achievement_menu_image = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
-			achievement_menu:add(achievement_menu_image, (achievement_menu:getWidth() / 2) - 23, 48)
+			achievement_menu:add(achievement_menu_image, (achievement_menu:getWidth() / 2) - 23 * get_scale_factor(), 48 * get_scale_factor())
 			achievement_menu_image:setNormalImage(achievement_icon)
 			achievement_menu_image:setPressedImage(achievement_icon)
 			achievement_menu_image:setDisabledImage(achievement_icon)
@@ -90,9 +89,9 @@ function addAchievementIcon(achievement, menu, x, y)
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])
-			l:setSize(achievement_menu:getWidth() - 28, achievement_menu:getHeight() - 48)
-			l:setLineWidth(achievement_menu:getWidth() - 28)
-			achievement_menu:add(l, 14, 112)
+			l:setSize(achievement_menu:getWidth() - 28 * get_scale_factor(), achievement_menu:getHeight() - 48 * get_scale_factor())
+			l:setLineWidth(achievement_menu:getWidth() - 28 * get_scale_factor())
+			achievement_menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 			
 			local description = _(GetAchievementData(achievement, "Description"))
 			if (GetAchievementData(achievement, "ProgressMax") > 0) then
@@ -100,7 +99,7 @@ function addAchievementIcon(achievement, menu, x, y)
 			end
 			l:setCaption(description)
 			
-			achievement_menu:addFullButton(_("~!Close"), "c", (achievement_menu:getWidth() / 2) - (224 / 2), achievement_menu:getHeight() - 40 * 1,
+			achievement_menu:addFullButton(_("~!Close"), "c", (achievement_menu:getWidth() / 2) - (224 / 2) * get_scale_factor(), achievement_menu:getHeight() - (40 * 1) * get_scale_factor(),
 				function()
 					achievement_menu:stop()
 				end)
@@ -112,7 +111,7 @@ function addAchievementIcon(achievement, menu, x, y)
 	b:setNormalImage(achievement_icon)
 	b:setPressedImage(achievement_icon)
 	b:setDisabledImage(achievement_icon)
-	b:setSize(46, 38)
+	b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 	b:setBorderSize(0)
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)

@@ -27,8 +27,8 @@
 
 function RunShowCreditsMenu()
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
 	SetMusicCondition(10, 1)
 
@@ -271,15 +271,15 @@ function RunShowCreditsMenu()
 		"",
 	}
 
-	local sw = ScrollingWidget(328, 275)
-	menu:add(sw, offx + 140, offy + 80)
+	local sw = ScrollingWidget(328 * get_scale_factor(), 275 * get_scale_factor())
+	menu:add(sw, offx + 140 * get_scale_factor(), offy + 80 * get_scale_factor())
 	sw:setBackgroundColor(Color(0,0,0,0))
 	sw:setActionCallback(function() sw:restart() end)
 	for i,f in ipairs(credits) do
-		sw:add(Label(f), 0, 24 * (i - 1) + 275)
+		sw:add(Label(f), 0, (24 * (i - 1) + 275) * get_scale_factor())
 	end
 
-	menu:addHalfButton(_("~!Continue"), "c", offx + 455, offy + 440,
+	menu:addHalfButton(_("~!Continue"), "c", offx + 455 * get_scale_factor(), offy + 440 * get_scale_factor(),
 		function() menu:stop() end)
 
 	local speed = GetGameSpeed()

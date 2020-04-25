@@ -76,7 +76,7 @@ function RunTechTreeMenu(civilization_number)
 			techicon_frame = GetIconData(GetUpgradeData(unit, "Icon"), "Frame")
 		end
 		local b
-		techicon:Load()
+		techicon:Load(false, get_scale_factor())
 		local techicon_x_origin = (techicon_frame * 46) % techicon:getGraphicWidth()
 		local techicon_y_origin = math.floor((techicon_frame * 46) / techicon:getGraphicWidth()) * 38
 		b = PlayerColorImageButton("", playercolor)

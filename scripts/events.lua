@@ -473,12 +473,12 @@ function Event(speaker, event_description, player, options, option_effects, even
 		local b
 		if (type(speaker) == "number") then
 			event_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitVariable(speaker, "Icon"), "File"))
-			event_icon:Load()
+			event_icon:Load(false, get_scale_factor())
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		elseif (event_icon ~= nil) then
 			event_icon = CPlayerColorGraphic:Get(GetIconData(event_icon, "File"))
-			event_icon:Load()
+			event_icon:Load(false, get_scale_factor())
 			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		end
