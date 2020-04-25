@@ -1,5 +1,5 @@
 years_wesnoth = { #Source: "Battle for Wesnoth"
 	name = "Years Wesnoth"
-	negative_year_label = BW
-	year_label = YW
+	negative_year_label = "BW"
+	year_label = "YW"
 }
