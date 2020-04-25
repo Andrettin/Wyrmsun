@@ -40,39 +40,39 @@ function RunGameVideoOptionsMenu()
 	local fullscreen = Video.FullScreen
 	local fullscreen_dd
 
-	menu:addLabel(_("Video Options"), 128, 11)
+	menu:addLabel(_("Video Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addLabel(_("Resolution Width:"), offx + (256 / 2 - (152 / 2)), offy + 34, Fonts["game"], false)
-	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*0,
+	menu:addLabel(_("Resolution Width:"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
+	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
 	function(dd)
 			resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
 	end)
-	resolution_width_dd:setSize(152, 20)
+	resolution_width_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	for i = 1,table.getn(resolution_width_list) do
 		if (tonumber(resolution_width_list[i]) == Video.Width) then
 			resolution_width_dd:setSelected(i - 1)
 		end
 	end
 
-	menu:addLabel(_("Resolution Height:"), offx + (256 / 2 - (152 / 2)), offy + 34 + 26*2, Fonts["game"], false)
-	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*2,
+	menu:addLabel(_("Resolution Height:"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (34 + 26*2) * get_scale_factor(), Fonts["game"], false)
+	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (55 + 26*2) * get_scale_factor(),
 	function(dd)
 			resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
 	end)
-	resolution_height_dd:setSize(152, 20)
+	resolution_height_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	for i = 1,table.getn(resolution_height_list) do
 		if (tonumber(resolution_height_list[i]) == Video.Height) then
 			resolution_height_dd:setSelected(i - 1)
 		end
 	end
 
-	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + (256 / 2 - (152 / 2)), offy + 90 + 26*2,
+	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (90 + 26*2) * get_scale_factor(),
 	function()
 		fullscreen = full_screen_dd:isMarked()
 	end)
 	full_screen_dd:setMarked(fullscreen)
 
-	menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
+	menu:addFullButton("~!OK", "o", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
 	function()
 		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
 			LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
@@ -94,38 +94,38 @@ end
 function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local b
 
-  b = menu:addLabel(_("Sound Options"), 176, 11)
+  b = menu:addLabel(_("Sound Options"), 176 * get_scale_factor(), 11 * get_scale_factor())
 
   b = Label(_("Sound Effects Volume"))
   b:setFont(CFont:Get("game"))
   b:adjustSize();
-  menu:add(b, offx + 16, offy + 36 * 1)
+  menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 1) * get_scale_factor())
 
   -- FIXME: disable if effects turned off
   local soundslider = {}
   -- slider button to decrease slider value
-  soundslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
+  soundslider = menu:addImageLeftSliderButton("", nil, 21 * get_scale_factor(), offy + (36 * 1.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
   -- slider button to increase slider value
-  soundslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
+  soundslider = menu:addImageRightSliderButton("", nil, 213 * get_scale_factor(), offy + (36 * 1.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
   -- slider itself
-  soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 1.5, function() SetEffectsVolume(soundslider:getValue()) end)
+  soundslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 1.5) * get_scale_factor(), function() SetEffectsVolume(soundslider:getValue()) end)
 
   soundslider:setValue(GetEffectsVolume())
 
   b = Label("min")
   b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 32, offy + 36 * 2 + 6)
+  menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 2 + 6) * get_scale_factor())
 
   b = Label("max")
   b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 224, offy + 36 * 2 + 6)
+  menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 2 + 6) * get_scale_factor())
 
   local effectscheckbox = {}
-  effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 1.5,
+  effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 1.5) * get_scale_factor(),
     function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
   effectscheckbox:setMarked(IsEffectsEnabled())
   effectscheckbox:adjustSize()
@@ -133,18 +133,18 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   b = Label(_("Music Volume"))
   b:setFont(CFont:Get("game"))
   b:adjustSize();
-  menu:add(b, offx + 16, offy + 36 * 3)
+  menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
   -- FIXME: disable if music turned off
   local musicslider = {}
   -- slider button to decrease slider value
-  musicslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
+  musicslider = menu:addImageLeftSliderButton("", nil, 21 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
 
   -- slider button to decrease slider value
-  musicslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
+  musicslider = menu:addImageRightSliderButton("", nil, 213 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
 
   -- slider itself
-  musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetMusicVolume(musicslider:getValue()) end)
+  musicslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() SetMusicVolume(musicslider:getValue()) end)
 
   -- set the value so the game saves it
   musicslider:setValue(GetMusicVolume())
@@ -152,15 +152,15 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   b = Label("min")
   b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
+  menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
   b = Label("max")
   b:setFont(CFont:Get("small"))
   b:adjustSize();
-  menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
+  menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	local musiccheckbox = {}
-	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 3.5,
+	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(),
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then
@@ -174,7 +174,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
 	musiccheckbox:setMarked(IsMusicEnabled())
 	musiccheckbox:adjustSize();
 
-  b = menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
+  b = menu:addFullButton("~!OK", "o", centerx, bottom + (-11 - 27) * get_scale_factor(),
     function()
       wyr.preferences.EffectsVolume = GetEffectsVolume()
       wyr.preferences.EffectsEnabled = IsEffectsEnabled()
@@ -187,9 +187,9 @@ end
 
 function RunGameSoundOptionsMenu()
   local menu = WarGameMenu(panel(5))
-  menu:resize(352, 352)
+  menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 
-  AddSoundOptions(menu, 0, 0, 352/2 - 224/2, 352)
+  AddSoundOptions(menu, 0, 0, (352/2 - 224/2) * get_scale_factor(), 352 * get_scale_factor())
 
   menu:run(false)
 end
@@ -197,7 +197,7 @@ end
 function AddPreferences(menu, offx, offy, centerx, bottom)
 	local l
 
-	l = menu:addLabel(_("Preferences"), 176, 11)
+	l = menu:addLabel(_("Preferences"), 176 * get_scale_factor(), 11 * get_scale_factor())
 
 	--[[
 	local fog = {}
@@ -210,13 +210,13 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	--]]
 
 	local ckey = {}
-	ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16, offy + 26 * 1,
+	ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16 * get_scale_factor(), offy + (26 * 1) * get_scale_factor(),
 		function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
 	ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
 	ckey:adjustSize()
 
 	local mouse_grabbing = {}
-	mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 26 * 2,
+	mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16 * get_scale_factor(), offy + (26 * 2) * get_scale_factor(),
 		function()
 			wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
 			SetGrabMouse(wyr.preferences.GrabMouse)
@@ -228,7 +228,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	mouse_grabbing:setTooltip(_("Ensures the mouse will be kept within the game's window"))
 
 	local reverse_mouse_wheel_scrolling = {}
-	reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16, offy + 26 * 3,
+	reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16 * get_scale_factor(), offy + (26 * 3) * get_scale_factor(),
 		function()
 			wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
 			SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
@@ -241,17 +241,17 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	l = Label(_("Game Speed"))
 	l:setFont(CFont:Get("game"))
 	l:adjustSize()
-	menu:add(l, offx + 16, offy + 36 * 3)
+	menu:add(l, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
 	local gamespeed = {}
 	-- slider button to decrease slider value
-	gamespeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
+	gamespeed = menu:addImageLeftSliderButton("", nil, 21 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
 
 	-- slider button to decrease slider value
-	gamespeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
+	gamespeed = menu:addImageRightSliderButton("", nil, 213 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
 
 	-- slider itself
-	gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, offy + 36 * 3.5, function() SetGameSpeed(gamespeed:getValue()) end)
+	gamespeed = menu:addImageSlider(15, 75, 172 * get_scale_factor(), 18 * get_scale_factor(), 41 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() SetGameSpeed(gamespeed:getValue()) end)
 
 	-- set the value so the game saves it
 	gamespeed:setValue(GetGameSpeed())
@@ -259,24 +259,24 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	l = Label("slow")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize()
-	menu:addCentered(l, offx + 32, offy + 36 * 4 + 6)
+	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	l = Label("fast")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize()
-	menu:addCentered(l, offx + 224, offy + 36 * 4 + 6)
+	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
-	menu:addLabel(_("Mouse Scroll Speed"), offx + 16, offy + (36 * 5), CFont:Get("game"), false)
+	menu:addLabel(_("Mouse Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor(), CFont:Get("game"), false)
 
 	local mousescrollspeed = {}
 	-- slider button to decrease slider value
-	mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
 	-- slider button to decrease slider value
-	mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	mousescrollspeed = menu:addImageRightSliderButton("", nil, 213 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
 	-- slider itself
-	mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, offy + 36 * 5.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+	mousescrollspeed = menu:addImageSlider(1, 10, 172 * get_scale_factor(), 18 * get_scale_factor(), 41 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
 
 	-- set the value so the game saves it
 	mousescrollspeed:setValue(GetMouseScrollSpeed())
@@ -284,24 +284,24 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	l = Label("slow")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize()
-	menu:addCentered(l, offx + 32, offy + 36 * 6 + 6)
+	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
 	l = Label("fast")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize()
-	menu:addCentered(l, offx + 224, offy + 36 * 6 + 6)
+	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
-	menu:addLabel(_("Key Scroll Speed"), offx + 16, offy + (36 * 7), CFont:Get("game"), false)
+	menu:addLabel(_("Key Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 7) * get_scale_factor(), CFont:Get("game"), false)
 
 	local keyscrollspeed = {}
 	-- slider button to decrease slider value
-	keyscrollspeed = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() - .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	keyscrollspeed = menu:addImageLeftSliderButton("", nil, offx + 21 * get_scale_factor(), offy + (36 * 7.5) * get_scale_factor(), function() keyscrollspeed:setValue(keyscrollspeed:getValue() - .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
 	-- slider button to increase slider value
-	keyscrollspeed = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() + .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	keyscrollspeed = menu:addImageRightSliderButton("", nil, offx + 213 * get_scale_factor(), offy + (36 * 7.5) * get_scale_factor(), function() keyscrollspeed:setValue(keyscrollspeed:getValue() + .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
 	-- slider itself
-	keyscrollspeed = menu:addImageSlider(1, 10, 172, 18, offx + 41, offy + 36 * 7.5, function() SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+	keyscrollspeed = menu:addImageSlider(1, 10, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 7.5) * get_scale_factor(), function() SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
 
 	-- set the value so the game saves it
 	keyscrollspeed:setValue(GetKeyScrollSpeed())
@@ -309,14 +309,14 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	l = Label("slow")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize();
-	menu:addCentered(l, offx + 32, offy + 36 * 8 + 6)
+	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 8 + 6) * get_scale_factor())
 
 	l = Label("fast")
 	l:setFont(CFont:Get("small"))
 	l:adjustSize()
-	menu:addCentered(l, offx + 224, offy + 36 * 8 + 6)
+	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 8 + 6) * get_scale_factor())
 
-	menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
+	menu:addFullButton("~!OK", "o", centerx, bottom + (-11 - 27) * get_scale_factor(),
 		function()
 			wyr.preferences.FogOfWar = GetFogOfWar()
 			wyr.preferences.ShowCommandKey = UI.ButtonPanel.ShowCommandKey
@@ -330,16 +330,16 @@ end
 
 function RunPreferencesMenu()
   local menu = WarGameMenu(panel(5))
-  menu:resize(352, 352)
+  menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 
-  AddPreferences(menu, 0, 4, 352/2 - 224/2, 352)
+  AddPreferences(menu, 0, 4 * get_scale_factor(), (352/2 - 224/2) * get_scale_factor(), 352 * get_scale_factor())
 
   menu:run(false)
 end
 
 function SetVideoSize(width, height)
 	UI.MapArea.EndX = width - 1
-	UI.MapArea.EndY = height - 176 - 1
+	UI.MapArea.EndY = height - (176 * get_scale_factor()) - 1
 	if (Video:ResizeScreen(width, height) == false) then
 		if (Video.FullScreen) then
 			GenericDialog("Resolution Change Failed", "This resolution is not available while in full screen mode for your monitor.")
@@ -365,29 +365,29 @@ function BuildOptionsMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addLabel(_("~<Options~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-	menu:addFullButton(_("~!Gameplay Options"), "g", offx + 208, offy + 104 + 36*2,
+	menu:addLabel(_("~<Options~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
+	menu:addFullButton(_("~!Gameplay Options"), "g", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
 		function()
 			RunGameplayOptionsMenu();
 		end
 	)
-	menu:addFullButton(_("~!Video and Audio Options"), "v", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Video and Audio Options"), "v", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
 		function()
 			RunVideoOptionsMenu()
 			menu:stop(1)
 		end
 	)
 	--[[
-	menu:addFullButton(_("~!Audio Options"), "a", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Audio Options"), "a", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
 		function()
 			RunAudioOptionsMenu()
 		end
 	)
 	--]]
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
 		function() menu:stop() end
 	)
 	return menu:run()
@@ -395,13 +395,13 @@ end
 
 function RunGameplayOptionsMenu()
 	local menu = WarMenu()
-	local offx = (Video.Width - 352) / 2
-	local offy = (Video.Height - 352) / 2
+	local offx = (Video.Width - 352 * get_scale_factor()) / 2
+	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local b
 	local hotkey_setup_list = {_("Default"), _("Position-Based"), _("Position-Based (except Commands)")}
 	local hotkey_setup_dd
 
-	menu:addLabel(_("~<Gameplay Options~>"), offx + 176, offy + 1)
+	menu:addLabel(_("~<Gameplay Options~>"), offx + 176 * get_scale_factor(), offy + 1 * get_scale_factor())
 
 	--[[
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
@@ -460,8 +460,8 @@ function RunGameplayOptionsMenu()
 	end
 	--]]
 
-	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
-	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8, offy + 55 + 26*2,
+	menu:addLabel(_("Hotkey Setup:"), offx + 8 * get_scale_factor(), offy + (34 + 26*1) * get_scale_factor(), Fonts["game"], false)
+	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8 * get_scale_factor(), offy + (55 + 26*1) * get_scale_factor(),
 		function(dd)
 			wyr.preferences.HotkeySetup = hotkey_setup_dd:getSelected()
 			Preference.HotkeySetup = wyr.preferences.HotkeySetup
@@ -469,10 +469,10 @@ function RunGameplayOptionsMenu()
 			RunGameplayOptionsMenu()
 		end
 	)
-	hotkey_setup_dd:setSize(266, 20)
+	hotkey_setup_dd:setSize(266 * get_scale_factor(), 20 * get_scale_factor())
 	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
 
-	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*6 + 14,
+	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16 * get_scale_factor(), offy + (55 + 26*5 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.GrabMouse == false) then
 				wyr.preferences.GrabMouse = true
@@ -488,7 +488,7 @@ function RunGameplayOptionsMenu()
 	b:setMarked(wyr.preferences.GrabMouse)
 	b:setTooltip(_("Ensures the mouse will be kept within the game's window"))
 
-	b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*3 + 14,
+	b = menu:addImageCheckBox(_("Show Tips"), offx + 16 * get_scale_factor(), offy + (55 + 26*2 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowTips == false) then
 				wyr.preferences.ShowTips = true
@@ -501,7 +501,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowTips)
 
-	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*4 + 14,
+	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16 * get_scale_factor(), offy + (55 + 26*3 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowResourceBar = true
@@ -516,7 +516,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowResourceBar)
 
-	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16, offy + 55 + 26*7 + 14,
+	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16 * get_scale_factor(), offy + (55 + 26*6 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.PopupDescriptionFont == "small") then
 				wyr.preferences.PopupDescriptionFont = "game"
@@ -530,7 +530,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
 
-	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16, offy + 55 + 26*10 + 14,
+	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.PlayerColorCircle == false) then
 				wyr.preferences.PlayerColorCircle = true
@@ -544,7 +544,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.PlayerColorCircle)
 
-	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16, offy + 55 + 26*11 + 14,
+	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16 * get_scale_factor(), offy + (55 + 26*10 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowHeroSymbol == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowHeroSymbol = true
@@ -561,7 +561,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowHeroSymbol)
 
-	b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*5 + 14,
+	b = menu:addImageCheckBox(_("Autosave"), offx + 16 * get_scale_factor(), offy + (55 + 26*4 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.Autosave == false) then
 				wyr.preferences.Autosave = true
@@ -576,7 +576,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.Autosave)
 
-	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*8 + 14,
+	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16 * get_scale_factor(), offy + (55 + 26*7 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowPathlines == false) then
 				wyr.preferences.ShowPathlines = true
@@ -590,7 +590,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowPathlines)
 
-	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16, offy + 55 + 26*9 + 14,
+	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowMessages) then
 				wyr.preferences.ShowMessages = false
@@ -604,7 +604,7 @@ function RunGameplayOptionsMenu()
 	)
 	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*13 + 14, function()
+	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
 		SavePreferences()
 		menu:stop()
 	end)
@@ -614,8 +614,8 @@ end
 
 function RunVideoOptionsMenu()
 	local menu = WarMenu()
-	local offx = (Video.Width - 352) / 2
-	local offy = (Video.Height - 352) / 2
+	local offx = (Video.Width - 352 * get_scale_factor()) / 2
+	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local checkTexture
 	local checkOpenGL
 	local b
@@ -628,25 +628,25 @@ function RunVideoOptionsMenu()
 	local fullscreen_dd
 	local fullscreen = Video.FullScreen
 
-	menu:addLabel(_("~<Video and Audio Options~>"), offx + 176, offy + 1)
-	menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
-	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
+	menu:addLabel(_("~<Video and Audio Options~>"), offx + 176 * get_scale_factor(), offy + 1 * get_scale_factor())
+	menu:addLabel(_("Resolution Width:"), offx + 8 * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
+	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8 * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
 	function(dd)
 		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
 	end)
-	resolution_width_dd:setSize(152, 20)
+	resolution_width_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	for i = 1,table.getn(resolution_width_list) do
 		if (tonumber(resolution_width_list[i]) == Video.Width) then
 			resolution_width_dd:setSelected(i - 1)
 		end
 	end
 
-	menu:addLabel(_("Resolution Height:"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
-	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
+	menu:addLabel(_("Resolution Height:"), offx + (16 + 152 + 24) * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
+	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (16 + 152 + 24) * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
 	function(dd)
 		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
 	end)
-	resolution_height_dd:setSize(152, 20)
+	resolution_height_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	for i = 1,table.getn(resolution_height_list) do
 		if (tonumber(resolution_height_list[i]) == Video.Height) then
 			resolution_height_dd:setSelected(i - 1)
@@ -657,33 +657,33 @@ function RunVideoOptionsMenu()
 	b = Label(_("Sound Effects Volume"))
 	b:setFont(CFont:Get("game"))
 	b:adjustSize();
-	menu:add(b, offx + 16, offy + 36 * 3)
+	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
 	-- FIXME: disable if effects turned off
 	local soundslider = {}
 	-- slider button to decrease slider value
-	soundslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
+	soundslider = menu:addImageLeftSliderButton("", nil, offx + 21 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
 	-- slider button to increase slider value
-	soundslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
+	soundslider = menu:addImageRightSliderButton("", nil, offx + 213 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
 	-- slider itself
-	soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetEffectsVolume(soundslider:getValue()) end)
+	soundslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() SetEffectsVolume(soundslider:getValue()) end)
 
 	soundslider:setValue(GetEffectsVolume())
 
 	b = Label("min")
 	b:setFont(CFont:Get("small"))
 	b:adjustSize();
-	menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
+	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	b = Label("max")
 	b:setFont(CFont:Get("small"))
 	b:adjustSize();
-	menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
+	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	local effectscheckbox = {}
-	effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 3.5,
+	effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(),
 		function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
 	effectscheckbox:setMarked(IsEffectsEnabled())
 	effectscheckbox:adjustSize()
@@ -691,18 +691,18 @@ function RunVideoOptionsMenu()
 	b = Label(_("Music Volume"))
 	b:setFont(CFont:Get("game"))
 	b:adjustSize();
-	menu:add(b, offx + 16, offy + 36 * 5)
+	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor())
 
 	-- FIXME: disable if music turned off
 	local musicslider = {}
 	-- slider button to decrease slider value
-	musicslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
+	musicslider = menu:addImageLeftSliderButton("", nil, offx + 21 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
 
 	-- slider button to decrease slider value
-	musicslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
+	musicslider = menu:addImageRightSliderButton("", nil, offx + 213 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
 
 	-- slider itself
-	musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 5.5, function() SetMusicVolume(musicslider:getValue()) end)
+	musicslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() SetMusicVolume(musicslider:getValue()) end)
 
 	-- set the value so the game saves it
 	musicslider:setValue(GetMusicVolume())
@@ -710,15 +710,15 @@ function RunVideoOptionsMenu()
 	b = Label("min")
 	b:setFont(CFont:Get("small"))
 	b:adjustSize();
-	menu:addCentered(b, offx + 32, offy + 36 * 6 + 6)
+	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
 	b = Label("max")
 	b:setFont(CFont:Get("small"))
 	b:adjustSize();
-	menu:addCentered(b, offx + 224, offy + 36 * 6 + 6)
+	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
 	local musiccheckbox = {}
-	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240, offy + 36 * 5.5,
+	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(),
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then
@@ -729,14 +729,14 @@ function RunVideoOptionsMenu()
 	musiccheckbox:setMarked(IsMusicEnabled())
 	musiccheckbox:adjustSize();
 
-	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*8 + 14,
+	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
 		function()
 			fullscreen = full_screen_dd:isMarked()
 		end
 	)
 	full_screen_dd:setMarked(Video.FullScreen)
 
-	checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16, offy + 55 + 26*10 + 14,
+	checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16 * get_scale_factor(), offy + (55 + 26*10 + 14) * get_scale_factor(),
 		function()
 			if (checkTexture:isMarked()) then
 				wyr.preferences.MaxOpenGLTexture = 256
@@ -749,7 +749,7 @@ function RunVideoOptionsMenu()
 	)
 	if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
-	checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*9 + 14,
+	checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
 --TODO: Add function for immediately change state of OpenGL
 			wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
@@ -760,7 +760,7 @@ function RunVideoOptionsMenu()
 	checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --	checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
+	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
 		wyr.preferences.EffectsVolume = GetEffectsVolume()
 		wyr.preferences.EffectsEnabled = IsEffectsEnabled()
 		wyr.preferences.MusicVolume = GetMusicVolume()
@@ -795,8 +795,8 @@ end
 function RunGameOptionsMenu(previous_menu)
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel(_("Game Options"), 128, 11)
-	menu:addFullButton(_("~!Video"), "v", 16, 40 + 36*0,
+	menu:addLabel(_("Game Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
+	menu:addFullButton(_("~!Video"), "v", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
 		function()
 			RunGameVideoOptionsMenu()
 			menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
@@ -805,13 +805,13 @@ function RunGameOptionsMenu(previous_menu)
 			end
 		end
 	)
-	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*1,
+	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
 		function() RunGameSoundOptionsMenu() end)
-	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16, 40 + 36*2,
+	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16 * get_scale_factor(), (40 + 36*2) * get_scale_factor(),
 		function() RunPreferencesMenu() end)
-	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16, 40 + 36*3,
+	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16 * get_scale_factor(), (40 + 36*3) * get_scale_factor(),
 		function() RunDiplomacyMenu() end)
-	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 128 - (224 / 2), 288 - 40,
+	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)

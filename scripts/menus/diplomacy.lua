@@ -1,12 +1,12 @@
 function RunDiplomacyMenu()
 	local menu = WarGameMenu(panel(5))
-	menu:resize(352, 352)
+	menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 
-	menu:addLabel(_("Diplomacy"), 176, 11)
+	menu:addLabel(_("Diplomacy"), 176 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addLabel(_("Allied"), 136, 30, Fonts["game"])
-	menu:addLabel(_("Enemy"), 196, 30, Fonts["game"])
-	menu:addLabel(_("Shared Vision"), 286, 30, Fonts["game"])
+	menu:addLabel(_("Allied"), 136 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
+	menu:addLabel(_("Enemy"), 196 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
+	menu:addLabel(_("Shared Vision"), 286 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
 
 	local allied = {}
 	local enemy = {}
@@ -20,7 +20,7 @@ function RunDiplomacyMenu()
 			local l = Label(_(CPlayer:GetPlayer(i).Name))
 			l:setFont(Fonts["game"])
 			l:adjustSize()
-			menu:add(l, 16, (18 * j) + 26)
+			menu:add(l, 16 * get_scale_factor(), ((18 * j) + 26) * get_scale_factor())
 
 			-- FIXME: disable checkboxes in replays or if on the same team
 
@@ -28,7 +28,7 @@ function RunDiplomacyMenu()
 			local enemycb = {}
 			local sharedvisioncb = {}
 
-			alliedcb = menu:addImageCheckBox("", 126, (18 * j) + 23,
+			alliedcb = menu:addImageCheckBox("", 126 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
 			function()
 				if (alliedcb:isMarked() and enemycb:isMarked()) then
 					enemycb:setMarked(false)
@@ -38,7 +38,7 @@ function RunDiplomacyMenu()
 			allied[j] = alliedcb
 			allied[j].index = i
 
-			enemycb = menu:addImageCheckBox("", 186, (18 * j) + 23,
+			enemycb = menu:addImageCheckBox("", 186 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
 			function()
 				if (alliedcb:isMarked() and enemycb:isMarked()) then
 					alliedcb:setMarked(false)
@@ -47,14 +47,14 @@ function RunDiplomacyMenu()
 			enemycb:setMarked(CPlayer:GetThisPlayer():IsEnemy(i))
 			enemy[j] = enemycb
 
-			sharedvisioncb = menu:addImageCheckBox("", 276, (18 * j) + 23,
+			sharedvisioncb = menu:addImageCheckBox("", 276 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
 			function() end)
 			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)))
 			sharedvision[j] = sharedvisioncb
 		end
 	end
 
-	menu:addHalfButton(_("~!OK"), "o", 75, 352 - 40,
+	menu:addHalfButton(_("~!OK"), "o", 75 * get_scale_factor(), (352 - 40) * get_scale_factor(),
 	function()
 		for j=1,table.getn(allied) do
 			local i = allied[j].index
@@ -110,7 +110,7 @@ function RunDiplomacyMenu()
 		end
 		menu:stop()
 	end)
-	menu:addHalfButton(_("~!Cancel"), "c", 195, 352 - 40, function() menu:stop() end)
+	menu:addHalfButton(_("~!Cancel"), "c", 195 * get_scale_factor(), (352 - 40) * get_scale_factor(), function() menu:stop() end)
 
 	menu:run(false)
 end
