@@ -40,18 +40,18 @@ function RunTechTreeMenu(civilization_number)
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local civilization_dd
 	local civilization_ident_list = GetAvailableCivilizationIdentsTechTree()
 	local civilization_list = GetAvailableCivilizationNamesTechTree()
 --	local button_quantity = 0
 
-	menu:addLabel(_("~<Civilization:~>"), offx + 244, offy + (10 + 15) - 20, Fonts["game"], false)
-	civilization_dd = menu:addDropDown(civilization_list, offx + 244, offy + 10 + 15,
+	menu:addLabel(_("~<Civilization:~>"), offx + 244 * get_scale_factor(), offy + ((10 + 15) - 20) * get_scale_factor(), Fonts["game"], false)
+	civilization_dd = menu:addDropDown(civilization_list, offx + 244 * get_scale_factor(), offy + (10 + 15) * get_scale_factor(),
 		function(dd) menu:stop(); RunTechTreeMenu(civilization_dd:getSelected()) end)
 	civilization_dd:setSelected(civilization_number)
-	civilization_dd:setSize(152, 20)
+	civilization_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	local civilization = civilization_ident_list[civilization_number + 1]
 
@@ -77,19 +77,19 @@ function RunTechTreeMenu(civilization_number)
 		end
 		local b
 		techicon:Load(false, get_scale_factor())
-		local techicon_x_origin = (techicon_frame * 46) % techicon:getGraphicWidth()
-		local techicon_y_origin = math.floor((techicon_frame * 46) / techicon:getGraphicWidth()) * 38
+		local techicon_x_origin = (techicon_frame * 46 * get_scale_factor()) % techicon:getGraphicWidth()
+		local techicon_y_origin = math.floor((techicon_frame * 46 * get_scale_factor()) / techicon:getGraphicWidth()) * 38
 		b = PlayerColorImageButton("", playercolor)
 		b:setActionCallback(
 			function()
 				PlaySound("click")
 				
 				local tech_menu = WarGameMenu(panel(5))
-				tech_menu:setSize(352, 352)
+				tech_menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
-				tech_menu:addLabel(_(unit_name), 176, 11)
+				tech_menu:addLabel(_(unit_name), 176 * get_scale_factor(), 11 * get_scale_factor())
 				local tech_menu_image = PlayerColorImageButton("", playercolor)
-				tech_menu:add(tech_menu_image, 153, 48)
+				tech_menu:add(tech_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
 				tech_menu_image:setNormalImage(techicon)
 				tech_menu_image:setPressedImage(techicon)
 				tech_menu_image:setDisabledImage(techicon)
@@ -100,12 +100,12 @@ function RunTechTreeMenu(civilization_number)
 
 				local l = MultiLineLabel()
 				l:setFont(Fonts["game"])
-				l:setSize(324, 208)
-				l:setLineWidth(324)
-				tech_menu:add(l, 14, 112)
+				l:setSize(324 * get_scale_factor(), 208 * get_scale_factor())
+				l:setLineWidth(324 * get_scale_factor())
+				tech_menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 				l:setCaption(_(tech_description))
 
-				tech_menu:addFullButton(_("~!Close"), "c", 176 - (224 / 2), 352 - 40 * 1,
+				tech_menu:addFullButton(_("~!Close"), "c", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 1) * get_scale_factor(),
 					function()
 						tech_menu:stop()
 					end)
@@ -117,7 +117,7 @@ function RunTechTreeMenu(civilization_number)
 		b:setNormalImage(techicon)
 		b:setPressedImage(techicon)
 		b:setDisabledImage(techicon)
-		b:setSize(46, 38)
+		b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		b:setFrameImage(Preference.IconFrameG)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)
@@ -218,7 +218,7 @@ function RunTechTreeMenu(civilization_number)
 					tech_allowed = false
 				end
 				if (tech_allowed) then
-					addTechItemIcon(unitName, menu, offx + 23 + 4 + (54 * tech_icon_x), offy + 10 + 4 + (46 * tech_icon_y), playercolor)
+					addTechItemIcon(unitName, menu, offx + (23 + 4 + (54 * tech_icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * tech_icon_y)) * get_scale_factor(), playercolor)
 				end
 			end
 		else
@@ -335,13 +335,13 @@ function RunTechTreeMenu(civilization_number)
 					tech_allowed = false
 				end
 				if (tech_allowed) then
-					addTechItemIcon(unitName, menu, offx + 23 + 4 + (54 * tech_icon_x), offy + 10 + 4 + (46 * tech_icon_y), playercolor)
+					addTechItemIcon(unitName, menu, offx + (23 + 4 + (54 * tech_icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * tech_icon_y)) * get_scale_factor(), playercolor)
 				end
 			end
 		end
 	end
 	
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 10),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9.5)) * get_scale_factor(),
 		function() SetPlayerData(GetThisPlayer(), "RaceName", "gnome"); menu:stop(); end)
 
 	menu:run()
