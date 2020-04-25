@@ -64,7 +64,7 @@ function RunTechTreeMenu(civilization_number)
 		local tech_description
 		local techicon
 		local techicon_frame = 0
-		if (string.find(unit, "upgrade-") == nil) then
+		if (string.find(unit, "upgrade") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
 			techicon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit, "Icon"), "File"))
@@ -128,7 +128,7 @@ function RunTechTreeMenu(civilization_number)
 	local playercolor = GetCivilizationData(civilization, "DefaultColor")
 
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") == nil) then
+		if (string.find(unitName, "upgrade") == nil) then
 			if (GetUnitTypeData(unitName, "Class") ~= "" and GetCivilizationClassUnitType(GetUnitTypeData(unitName, "Class"), civilization) == unitName) then
 				local tech_icon_x = 0
 				local tech_icon_y = 0

@@ -55,7 +55,7 @@ function DefineAllowNormalUnits(flags)
 	for i, unitName in ipairs(Units) do
 		local PlayerUnitFlag = {}
 		for j=0,(PlayerMax - 1) do
-			if (string.find(unitName, "upgrade-") == nil) then
+			if (string.find(unitName, "upgrade") == nil) then
 				if (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") then
 					PlayerUnitFlag[j] = "A"
 				else
@@ -67,7 +67,10 @@ function DefineAllowNormalUnits(flags)
 					and (
 						unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")
 						or (GetPlayerData(j, "Faction") ~= "" and unitName == GetFactionData(GetPlayerData(j, "Faction"), "FactionUpgrade"))
-						or (GetPlayerData(j, "Faction") ~= "" and unitName == ("upgrade-" .. GetFactionData(GetPlayerData(j, "Faction"), "Type")))
+						or (GetPlayerData(j, "Faction") ~= "" and (
+							unitName == ("upgrade-" .. GetFactionData(GetPlayerData(j, "Faction"), "Type"))
+							or unitName == ("upgrade_" .. GetFactionData(GetPlayerData(j, "Faction"), "Type"))
+						))
 					)
 				) then
 					PlayerUnitFlag[j] = "R"
@@ -85,7 +88,7 @@ function DefineAllowNormalUnits(flags)
 end
 
 InitFuncs:add(function()
-	DefineAllowNormalUnits("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+	DefineAllowNormalUnits("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 end)
 
 function ApplyTechLevels()
@@ -170,7 +173,7 @@ function ApplyTechLevels()
 	end
 	
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") ~= nil) then
+		if (string.find(unitName, "upgrade") ~= nil) then
 			for j=0,(PlayerMax - 1) do
 				if (IsTechnologyUnderMinimumTechLevel(unitName, j) and GetPlayerData(j, "Allow", unitName) == "A") then -- if tech level is at least Agrarian (Iron)
 					SetPlayerData(j, "Allow", unitName, "R")

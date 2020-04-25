@@ -1110,7 +1110,7 @@ function EditorCreateUnitType()
 	local sizeY = 256
 
 	menu:addLabel(_("Ident:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local unit_type_ident = menu:addTextInputField("unit-", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+	local unit_type_ident = menu:addTextInputField("unit_", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
 			
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local unit_type_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
@@ -1132,8 +1132,8 @@ function EditorCreateUnitType()
 			
 	menu:addFullButton(_("Crea~!te"), "t", 176 - (224 / 2), sizeY - 40 * 2,
 		function()
-			if (string.sub(unit_type_ident:getText(), 0, 5) ~= "unit-") then
-				GenericDialog(_("Error"), _("The unit type's ident must begin with") .. "\"unit-\".")
+			if (string.sub(unit_type_ident:getText(), 0, 5) ~= "unit") then
+				GenericDialog(_("Error"), _("The unit type's ident must begin with") .. "\"unit\".")
 			elseif (unit_type_ident:getText() == "") then
 				GenericDialog(_("Error"), _("The unit type's ident cannot be empty."))
 			elseif (GetArrayIncludes(GetUnitTypes(), unit_type_ident:getText())) then

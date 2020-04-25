@@ -325,7 +325,7 @@ end
 
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
-		if (string.find(unitName, "upgrade-") ~= nil) then
+		if (string.find(unitName, "upgrade") ~= nil) then
 			if (GetUpgradeData(unitName, "Class") == technology_type and GetFactionTechnology(faction.Civilization, faction.Name, unitName)) then
 				return true
 			end

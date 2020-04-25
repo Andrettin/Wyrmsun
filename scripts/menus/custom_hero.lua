@@ -115,7 +115,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		hero_class_list = {}
 		for i, unitName in ipairs(Units) do
 			if (
-				string.find(unitName, "upgrade-") == nil
+				string.find(unitName, "upgrade") == nil
 				and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1])
 				and GetUnitTypeData(unitName, "Class") ~= "worker"
 				and GetUnitTypeData(unitName, "Class") ~= "militia"
