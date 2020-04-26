@@ -1,6 +1,5 @@
 universe = {
 	name = "Universe"
-	plane = material_plane
 	size = { 512 512 }
 }
 
@@ -12,4 +11,9 @@ earth_space = {
 	circle = true
 	unusable_area_terrain_type = dirt
 	unusable_area_overlay_terrain_type = chasm
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
 }
