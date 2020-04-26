@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
+- The Nidavellir scenarios now take place in a single map layer. The underground portions of the map are now in the same layer as the surface portions, but retain their peculiar characteristics, e.g. cave walls being non-passable by air units and missiles.
 
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.

@@ -31,8 +31,7 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	Faction = "goldhoof-clan",
 	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {
-		"nidavellir", {0, 0}, {256, 256},
-		"nidavellir-underground", {0, 0}, {256, 256}
+		"nidavellir", {0, 0}, {256, 256}
 	}
 })
 
@@ -114,8 +113,7 @@ DefineCampaign("the-scepter-of-fire", {
 	Faction = "norlund-clan",
 	StartYear = 25,
 	MapTemplates = {
-		"nidavellir", {0, 0}, {512, 512},
-		"nidavellir-underground", {0, 0}, {512, 512}
+		"nidavellir", {0, 0}, {256, 256}
 	}
 })
 
@@ -178,8 +176,7 @@ DefineCampaign("island-of-the-lizard-god", { -- based on Will Doyle's "Island of
 	Faction = "lyr",
 	StartYear = 600, -- approximate date; a seafaring dwarven lordship should already exist
 	MapTemplates = {
-		"nidavellir", {0, 0}, {256, 256},
-		"nidavellir-underground", {0, 0}, {256, 256}
+		"nidavellir", {0, 0}, {256, 256}
 	}
 })
 

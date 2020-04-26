@@ -57,7 +57,6 @@ SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", ""
 --SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", "", {18, 17}, 25)
 --SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", "", {19, 16}, 25)
 --SetMapTemplateUnit("caverns-of-chaincolt-city", "unit-dwarven-mushroom-farm", "", {20, 6}, 25)
---]]
 
 -- Roads present in 25, as seen in Battle for Wesnoth: The Sceptre of Fire (In the Dwarven City)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {457, 182}, 25)
@@ -146,3 +145,4 @@ SetMapTemplateTileTerrain("nidavellir-underground", "road", {480, 185}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {480, 202}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {481, 202}, 25)
 SetMapTemplateTileTerrain("nidavellir-underground", "road", {482, 202}, 25)
+--]]

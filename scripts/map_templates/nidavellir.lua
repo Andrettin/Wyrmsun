@@ -30,9 +30,7 @@
 --SetMapTemplateHero("nidavellir-underground", "galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
 
 --SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "asgard")
---SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {-1, -1}, 1)
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "earth")
---SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {-1, -1}, 0)
 
 Load("scripts/map_templates/nidavellir/aurvang.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_gates.lua")
@@ -53,13 +51,7 @@ Load("scripts/map_templates/nidavellir/ofnirs_valley.lua")
 Load("scripts/map_templates/nidavellir/outskirts_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/peaceful_valley.lua")
 Load("scripts/map_templates/nidavellir/shorbear_hills.lua")
---]]
-Load("scripts/map_templates/nidavellir/svarinshaug.lua")
---[[
 Load("scripts/map_templates/nidavellir/swamp_of_dread.lua")
---]]
-Load("scripts/map_templates/nidavellir/untersberg.lua")
---[[
 Load("scripts/map_templates/nidavellir/west_gate_of_kal_kartha.lua")
 Load("scripts/map_templates/nidavellir/wildlands.lua")
 Load("scripts/map_templates/nidavellir/caverns_of_chaincolt_city.lua")

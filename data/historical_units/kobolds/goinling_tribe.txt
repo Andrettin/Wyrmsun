@@ -9,7 +9,7 @@ goinling_footpads = {
 			active = true
 			faction = goinling_tribe
 			location = {
-				map_template = nidavellir_underground
+				map_template = nidavellir
 			}
 		}
 	}

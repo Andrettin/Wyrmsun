@@ -10,7 +10,7 @@ svafning_footpads = {
 				active = true
 				faction = svafning_tribe
 				location = {
-					map_template = nidavellir_underground
+					map_template = nidavellir
 				}
 			}
 			

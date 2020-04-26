@@ -1,0 +1,2 @@
+nidavellir/caverns_of_chaincolt_gates.map (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+nidavellir/caverns_of_chaincolt_gates_overlay.map (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)

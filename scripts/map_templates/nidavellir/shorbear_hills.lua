@@ -27,9 +27,6 @@
 
 -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
 
---SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {499, 209}, 1)
---SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {499, 209}, 0)
-
 SetMapTemplateHero("nidavellir", "rugnur", "norlund-clan", {499, 209}, 34, 35)
 SetMapTemplateUnit("nidavellir", "unit-gnomish-duelist", "norlund-clan", {499, 209}, 34, 35) -- Gnomish Envoy
 SetMapTemplateHero("nidavellir", "baglur", "norlund-clan", {499, 209}, 34, 35)
@@ -38,6 +35,3 @@ SetMapTemplateHero("nidavellir", "thursagan", "norlund-clan", {499, 209}, 34, 35
 SetMapTemplateHero("nidavellir", "durstorn", "norlund-clan", {507, 207}, 34, 35)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-pathfinder", "norlund-clan", {507, 207}, 34, 35) -- Noiraran
 SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "norlund-clan", {507, 207}, 34, 35) -- Kuhnar
-
---SetMapTemplateLayerConnector("nidavellir", "unit-cavern-entrance", {532, 209}, 1)
---SetMapTemplateLayerConnector("nidavellir-underground", "unit-cavern-entrance", {532, 209}, 0)

@@ -29,7 +29,6 @@
 
 DefineMapTemplate("island-of-the-lizard-god", {
 	Name = "Island of the Kobold God",
-	MainTemplate = "nidavellir",
 	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god.png",
 	Width = 160,
 	Height = 128,
@@ -52,7 +51,6 @@ DefineMapTemplate("island-of-the-lizard-god", {
 
 DefineMapTemplate("island-of-the-lizard-god-underground", {
 	Name = "Island of the Kobold God Underground",
-	MainTemplate = "nidavellir-underground",
 	TerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground.png",
 	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/island_of_the_lizard_god_underground_overlay.png",
 	Width = 160,

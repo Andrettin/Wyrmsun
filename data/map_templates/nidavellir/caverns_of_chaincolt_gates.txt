@@ -1,0 +1,12 @@
+caverns_of_chaincolt_gates = {
+	name = "Caverns of Chaincolt Gates"
+	main_template = nidavellir
+	size = { 34 30 }
+	terrain_file = "nidavellir/caverns_of_chaincolt_gates.map"
+	overlay_terrain_file = "nidavellir/caverns_of_chaincolt_gates_overlay.map"
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}
