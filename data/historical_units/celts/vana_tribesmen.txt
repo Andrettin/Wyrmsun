@@ -1,12 +1,12 @@
 vana_warriors = { #Vana defensive forces
 	name = "Vana Warriors"
 	unit_type = unit_germanic_warrior
-	faction = vana_tribe
 	quantity = 3
 	
 	history = {
 		-3000 = {
 			active = true
+			faction = vana_tribe
 			location = {
 				site = rostov_on_don
 			}

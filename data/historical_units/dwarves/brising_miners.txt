@@ -1,12 +1,12 @@
 brising_miners = {
 	name = "Brising Miners"
 	unit_type = unit_brising_miner
-	faction = brising_clan
 	quantity = 5
 	
 	history = {
 		-3000 = {
 			active = true
+			faction = brising_clan
 			location = {
 				site = svarinshaug
 			}

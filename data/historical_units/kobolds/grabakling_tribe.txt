@@ -1,13 +1,13 @@
 grabakling_footpads = {
 	name = "Grabakling Footpads"
 	unit_type = unit_kobold_footpad
-	faction = grabakling_tribe
 	quantity = 9
 	ai_active = false
 	
 	history = {
 		-3000 = {
 			active = true
+			faction = grabakling_tribe
 			location = {
 				map_template = nidavellir_underground
 			}

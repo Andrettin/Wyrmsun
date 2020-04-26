@@ -1,12 +1,12 @@
 aurvangling_drudge = {
 	name = "Aurvangling Drudge"
 	unit_type = unit_goblin_worker
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-3000 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				site = aurvang
 			}

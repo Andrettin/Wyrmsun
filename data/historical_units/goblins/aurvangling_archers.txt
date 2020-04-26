@@ -1,12 +1,12 @@
 aurvangling_archer_1 = {
 	name = "Aurvangling Archer I"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -17,12 +17,12 @@ aurvangling_archer_1 = {
 aurvangling_archer_2 = {
 	name = "Aurvangling Archer II"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -33,12 +33,12 @@ aurvangling_archer_2 = {
 aurvangling_archer_3 = {
 	name = "Aurvangling Archer III"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -49,12 +49,12 @@ aurvangling_archer_3 = {
 aurvangling_archer_4 = {
 	name = "Aurvangling Archer IV"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -65,12 +65,12 @@ aurvangling_archer_4 = {
 aurvangling_archer_5 = {
 	name = "Aurvangling Archer V"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -81,12 +81,12 @@ aurvangling_archer_5 = {
 aurvangling_archer_6 = {
 	name = "Aurvangling Archer VI"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -97,12 +97,12 @@ aurvangling_archer_6 = {
 aurvangling_archer_7 = {
 	name = "Aurvangling Archer VII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -113,12 +113,12 @@ aurvangling_archer_7 = {
 aurvangling_archer_8 = {
 	name = "Aurvangling Archer VIII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -129,12 +129,12 @@ aurvangling_archer_8 = {
 aurvangling_archer_9 = {
 	name = "Aurvangling Archer IX"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -145,12 +145,12 @@ aurvangling_archer_9 = {
 aurvangling_archer_10 = {
 	name = "Aurvangling Archer X"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -161,12 +161,12 @@ aurvangling_archer_10 = {
 aurvangling_archer_11 = {
 	name = "Aurvangling Archer XI"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -177,12 +177,12 @@ aurvangling_archer_11 = {
 aurvangling_archer_12 = {
 	name = "Aurvangling Archer XII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -193,12 +193,12 @@ aurvangling_archer_12 = {
 aurvangling_archer_13 = {
 	name = "Aurvangling Archer XIII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -209,12 +209,12 @@ aurvangling_archer_13 = {
 aurvangling_archer_14 = {
 	name = "Aurvangling Archer XIV"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -225,12 +225,12 @@ aurvangling_archer_14 = {
 aurvangling_archer_15 = {
 	name = "Aurvangling Archer XV"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -241,12 +241,12 @@ aurvangling_archer_15 = {
 aurvangling_archer_16 = {
 	name = "Aurvangling Archer XVI"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -257,12 +257,12 @@ aurvangling_archer_16 = {
 aurvangling_archer_17 = {
 	name = "Aurvangling Archer XVII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -273,12 +273,12 @@ aurvangling_archer_17 = {
 aurvangling_archer_18 = {
 	name = "Aurvangling Archer XVIII"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -289,12 +289,12 @@ aurvangling_archer_18 = {
 aurvangling_archer_19 = {
 	name = "Aurvangling Archer XIX"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -305,12 +305,12 @@ aurvangling_archer_19 = {
 aurvangling_archer_20 = {
 	name = "Aurvangling Archer XX"
 	unit_type = unit_goblin_archer
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}

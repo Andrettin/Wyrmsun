@@ -1,12 +1,12 @@
 aurvangling_guard_tower_1 = {
 	name = "Aurvangling Guard Tower I"
 	unit_type = unit_goblin_guard_tower
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -17,12 +17,12 @@ aurvangling_guard_tower_1 = {
 aurvangling_guard_tower_2 = {
 	name = "Aurvangling Guard Tower II"
 	unit_type = unit_goblin_guard_tower
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}
@@ -33,12 +33,12 @@ aurvangling_guard_tower_2 = {
 aurvangling_guard_tower_3 = {
 	name = "Aurvangling Guard Tower III"
 	unit_type = unit_goblin_guard_tower
-	faction = aurvangling_tribe
 	quantity = 1
 	
 	history = {
 		-2999 = {
 			active = true
+			faction = aurvangling_tribe
 			location = {
 				map_template = aurvang
 			}

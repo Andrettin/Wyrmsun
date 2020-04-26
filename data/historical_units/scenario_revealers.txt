@@ -1,11 +1,11 @@
 joruvellir_revealer = {
 	name = "Joruvellir Revealer"
 	unit_type = unit_revealer
-	faction = goldhoof_clan
 	
 	history = {
 		-2800 = {
 			active = true
+			faction = goldhoof_clan
 			location = {
 				site = joruvellir
 			}

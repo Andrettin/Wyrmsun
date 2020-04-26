@@ -1,13 +1,13 @@
 grafvitning_footpads = {
 	name = "Grafvitning Footpads"
 	unit_type = unit_kobold_footpad
-	faction = grafvitning_tribe
 	quantity = 9
 	ai_active = false
 	
 	history = {
 		-3000 = {
 			active = true
+			faction = grafvitning_tribe
 			location = {
 				map_template = svarinshaug_underground
 			}
