@@ -1,0 +1,103 @@
+#stepping on all the glyphs should deactivate (or reactivate) the connection between the cavern entrances
+
+caverns_of_chaincolt_glyph_1 = {
+	name = "Caverns of Chaincolt Glyph I"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 3 5 }
+				}
+			}
+		}
+	}
+}
+
+caverns_of_chaincolt_glyph_2 = {
+	name = "Caverns of Chaincolt Glyph II"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 14 3 }
+				}
+			}
+		}
+	}
+}
+
+caverns_of_chaincolt_glyph_3 = {
+	name = "Caverns of Chaincolt Glyph III"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 9 11 }
+				}
+			}
+		}
+	}
+}
+
+caverns_of_chaincolt_glyph_4 = {
+	name = "Caverns of Chaincolt Glyph IV"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 17 15 }
+				}
+			}
+		}
+	}
+}
+
+caverns_of_chaincolt_glyph_5 = {
+	name = "Caverns of Chaincolt Glyph V"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 23 24 }
+				}
+			}
+		}
+	}
+}
+
+caverns_of_chaincolt_glyph_6 = {
+	name = "Caverns of Chaincolt Glyph VI"
+	unit_type = unit_glyph
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = caverns_of_chaincolt_gates_underground
+					pos = { 30 19 }
+				}
+			}
+		}
+	}
+}

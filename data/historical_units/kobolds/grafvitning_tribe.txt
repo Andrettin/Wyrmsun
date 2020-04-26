@@ -4,10 +4,17 @@ grafvitning_footpads = {
 	faction = grafvitning_tribe
 	quantity = 9
 	ai_active = false
-	start_date = -3000
-	end_date = -2999
-	historical_location = {
-		date = -3000
-		map_template = svarinshaug_underground
+	
+	history = {
+		-3000 = {
+			active = true
+			location = {
+				map_template = svarinshaug_underground
+			}
+		}
+		
+		-2999 = {
+			active = false
+		}
 	}
 }

@@ -4,9 +4,13 @@ grabakling_footpads = {
 	faction = grabakling_tribe
 	quantity = 9
 	ai_active = false
-	start_date = -3000
-	historical_location = {
-		date = -3000
-		map_template = nidavellir_underground
+	
+	history = {
+		-3000 = {
+			active = true
+			location = {
+				map_template = nidavellir_underground
+			}
+		}
 	}
 }

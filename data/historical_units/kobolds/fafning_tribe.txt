@@ -5,10 +5,17 @@ fafning_footpads = {
 	quantity = 9
 	ai_active = false
 	#Sigibert's campaign begins in 561; Sigibert's encounter with Fafnir (in which the latter was killed) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
-	start_date = 561
-	end_date = 566
-	historical_location = {
-		date = -3000
-		map_template = nidavellir_underground
+	
+	history = {
+		561 = {
+			active = true
+			location = {
+				map_template = nidavellir_underground
+			}
+		}
+		
+		566 = {
+			active = false
+		}
 	}
 }

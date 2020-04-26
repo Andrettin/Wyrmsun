@@ -1,0 +1,79 @@
+asa_workers = {
+	name = "Asa Workers"
+	unit_type = unit_germanic_worker
+	faction = asa_tribe
+	quantity = 1
+	
+	history = {
+		-3000 = {
+			active = true
+			location = {
+				site = azov
+			}
+		}
+		
+		-2900 = {
+			active = false
+		}
+	}
+}
+
+asa_warriors = { #the great army assembled to fight the Vana
+	name = "Asa Warriors"
+	unit_type = unit_germanic_warrior
+	faction = asa_tribe
+	quantity = 8
+	
+	history = {
+		-3000 = {
+			active = true
+			location = {
+				site = azov
+			}
+		}
+		
+		-2900 = {
+			active = false
+		}
+	}
+}
+
+asa_workers_holmgard = {
+	name = "Asa Workers (Holmgard)"
+	unit_type = unit_germanic_worker
+	faction = asa_tribe
+	quantity = 5
+	
+	history = {
+		-2900 = {
+			active = true
+			location = {
+				site = novgorod
+			}
+		}
+		
+		-2800 = {
+			active = false
+		}
+	}
+}
+
+asa_warriors_holmgard = {
+	name = "Asa Warriors (Holmgard)"
+	unit_type = unit_germanic_warrior
+	faction = asa_tribe
+	quantity = 12
+	
+	history = {
+		-2900 = {
+			active = true
+			location = {
+				site = novgorod
+			}
+		}
+		
+		-2800 = {
+			active = false
+		}
+	}
+}

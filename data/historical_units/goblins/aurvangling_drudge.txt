@@ -1,0 +1,19 @@
+aurvangling_drudge = {
+	name = "Aurvangling Drudge"
+	unit_type = unit_goblin_worker
+	faction = aurvangling_tribe
+	quantity = 1
+	
+	history = {
+		-3000 = {
+			active = true
+			location = {
+				site = aurvang
+			}
+		}
+		
+		-2999 = {
+			active = false
+		}
+	}
+}

@@ -4,10 +4,19 @@ svafning_footpads = {
 	faction = svafning_tribe
 	quantity = 9
 	ai_active = false
-	start_date = years_wesnoth.25
-	end_date = years_wesnoth.40
-	historical_location = {
-		date = years_wesnoth.25
-		map_template = nidavellir_underground
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				active = true
+				location = {
+					map_template = nidavellir_underground
+				}
+			}
+			
+			40 = {
+				active = false
+			}
+		}
 	}
 }
