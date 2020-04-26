@@ -31,7 +31,7 @@ DefineQuest("trors-inheritance", {
 	Description = "The young Tror has come of age, and requested you bring his father's weapons to him.",
 	World = "earth",
 	Civilization = "germanic",
-	QuestGiver = "tror",
+--	QuestGiver = "tror",
 	Area = "Asaland",
 	StartSpeech = "I am finally old enough to receive my father's weapons. Would you be so kind and get them for me from chieftain Lorikus?",
 	InProgressSpeech = "Long have I waited for this moment...",
@@ -91,7 +91,7 @@ DefineQuest("ottars-lineage", {
 	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
 	World = "earth",
 	Civilization = "norse",
-	QuestGiver = "ottar",
+--	QuestGiver = "ottar",
 	Area = "Hordaland",
 	StartSpeech = "In the heat of a discussion, me and Argantyr have made a bet - to see who has the better lineage. Each of us has put our entire inheritance at stake. There is a seeress who can tell me about my bloodline - would you escort me to her?",
 	InProgressSpeech = "Everything is at stake...",
@@ -123,13 +123,13 @@ DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 	Rewards = "The Chieftain's Hall in Leidre will become the Heorot unique building, Lose 500 Lumber",
 	Objectives = {
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 500 Lumber",
 			"quantity", 500,
 			"resource", "lumber"
 		},
 		{
-			"objective-type", "have-resource",
+			"objective-type", "have_resource",
 			"objective-string", "Have 500 Lumber",
 			"quantity", 500,
 			"resource", "lumber"

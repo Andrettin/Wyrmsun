@@ -57,13 +57,13 @@ DefineQuest("a-rocky-home", {
 			"unit-type", "unit-dwarven-town-hall"
 		},
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 800 Lumber",
 			"quantity", 800,
 			"resource", "lumber"
 		},
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 2400 Stone",
 			"quantity", 2400,
 			"resource", "stone"
@@ -151,13 +151,13 @@ DefineQuest("the-ring-of-riches", {
 	Rewards = "Magic Ring, Lose 4000 Copper",
 	Objectives = {
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 1000 Gold",
 			"quantity", 1000,
 			"resource", "gold"
 		},
 		{
-			"objective-type", "have-resource",
+			"objective-type", "have_resource",
 			"objective-string", "Have 4000 Copper",
 			"quantity", 4000,
 			"resource", "copper"
@@ -196,13 +196,13 @@ DefineQuest("the-thunder-hammer", {
 	Rewards = "Magic Hammer, Lose 4000 Copper",
 	Objectives = {
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 4000 Copper",
 			"quantity", 4000,
 			"resource", "copper"
 		},
 		{
-			"objective-type", "have-resource",
+			"objective-type", "have_resource",
 			"objective-string", "Have 4000 Copper",
 			"quantity", 4000,
 			"resource", "copper"
@@ -241,25 +241,25 @@ DefineQuest("the-magnificent-spear", {
 	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber",
 	Objectives = {
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 2000 Copper",
 			"quantity", 2000,
 			"resource", "copper"
 		},
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 2000 Lumber",
 			"quantity", 2000,
 			"resource", "lumber"
 		},
 		{
-			"objective-type", "have-resource",
+			"objective-type", "have_resource",
 			"objective-string", "Have 2000 Copper",
 			"quantity", 2000,
 			"resource", "copper"
 		},
 		{
-			"objective-type", "have-resource",
+			"objective-type", "have_resource",
 			"objective-string", "Have 2000 Lumber",
 			"quantity", 2000,
 			"resource", "lumber"

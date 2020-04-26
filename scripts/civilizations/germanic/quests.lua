@@ -41,7 +41,7 @@ DefineQuest("on-the-vanaquisl", {
 	ObjectiveStrings = {"- Wodanaz must survive"},
 	Objectives = {
 		{
-			"objective-type", "destroy-units",
+			"objective-type", "destroy_units",
 			"objective-string", "Destroy Vanaland's Chieftain's Hall",
 			"quantity", 1,
 			"unit-type", "unit-germanic-town-hall",
@@ -190,7 +190,7 @@ DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Cros
 	Hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber.",
 	Objectives = {
 		{
-			"objective-type", "gather-resource",
+			"objective-type", "gather_resource",
 			"objective-string", "Gather 2000 Lumber",
 			"quantity", 2000,
 			"resource", "lumber"

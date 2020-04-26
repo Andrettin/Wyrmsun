@@ -434,7 +434,7 @@ DefineQuest("andvaris-gold", {
 	Rewards = "+10,000 Copper, Magic Ring",
 	Objectives = {
 		{
-			"objective-type", "destroy-units",
+			"objective-type", "destroy_units",
 			"objective-string", "Destroy the Oinling Clan's Mead Hall",
 			"quantity", 1,
 			"settlement", "andvaris-falls",
