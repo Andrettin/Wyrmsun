@@ -1,3 +1,7 @@
 glider = {
 	name = "Glider"
 }
+
+flying_machine = {
+	name = "Flying Machine"
+}
