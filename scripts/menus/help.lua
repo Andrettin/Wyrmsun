@@ -1,14 +1,14 @@
 function RunHelpMenu()
   local menu = WarGameMenu(panel(1))
 
-  menu:addLabel(_("Help Menu"), 128, 11)
-  menu:addFullButton(_("En~!cyclopedia"), "c", 16, 40 + 36*0,
+  menu:addLabel(_("Help Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
+  menu:addFullButton(_("En~!cyclopedia"), "c", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
     function() RunEncyclopediaMenu() end)
-  menu:addFullButton(_("~!Hotkeys"), "h", 16, 40 + 36*1,
+  menu:addFullButton(_("~!Hotkeys"), "h", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
     function() RunKeystrokeHelpMenu() end)
 --  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
 --    function() RunTipsMenu() end)
-  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 128 - (224 / 2), 248,
+  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", (128 - (224 / 2)) * get_scale_factor(), 248 * get_scale_factor(),
     function() menu:stop() end)
 
   menu:run(false)
@@ -64,7 +64,7 @@ local keystrokes = {
 
 function RunKeystrokeHelpMenu()
   local menu = WarGameMenu(panel(5))
-  menu:resize(352, 352)
+  menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 
   local c = Container()
   c:setOpaque(false)
@@ -73,25 +73,25 @@ function RunKeystrokeHelpMenu()
     local l = Label(keystrokes[i][1])
     l:setFont(Fonts["game"])
     l:adjustSize()
-    c:add(l, 0, 20 * (i - 1))
+    c:add(l, 0 * get_scale_factor(), 20 * (i - 1) * get_scale_factor())
     local l = Label(keystrokes[i][2])
     l:setFont(Fonts["game"])
     l:adjustSize()
-    c:add(l, 80, 20 * (i - 1))
+    c:add(l, 80 * get_scale_factor(), 20 * (i - 1) * get_scale_factor())
   end
 
   local s = ScrollArea()
-  c:setSize(320 - s:getScrollbarWidth(), 20 * table.getn(keystrokes))
+  c:setSize(320 * get_scale_factor() - s:getScrollbarWidth(), 20 * get_scale_factor() * table.getn(keystrokes))
   s:setBaseColor(dark)
   s:setBackgroundColor(dark)
   s:setForegroundColor(clear)
-  s:setSize(320, 216)
+  s:setSize(320 * get_scale_factor(), 216 * get_scale_factor())
   s:setContent(c)
-  menu:add(s, 16, 60)
+  menu:add(s, 16 * get_scale_factor(), 60 * get_scale_factor())
 
-  menu:addLabel(_("Hotkey Menu"), 352 / 2, 11)
+  menu:addLabel(_("Hotkey Menu"), 352 / 2 * get_scale_factor(), 11 * get_scale_factor())
   menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape",
-    (352 / 2) - (224 / 2), 352 - 40, function() menu:stop() end)
+    ((352 / 2) - (224 / 2)) * get_scale_factor(), (352 - 40) * get_scale_factor(), function() menu:stop() end)
 
   menu:run(false)
 end
@@ -166,15 +166,15 @@ LoadingBarSetTips(tips)
 
 function RunTipsMenu()
   local menu = WarGameMenu(panel(2))
-  menu:resize(288, 256)
+  menu:resize(288 * get_scale_factor(), 256 * get_scale_factor())
 
-  menu:addLabel(_("Tips"), 144, 11)
+  menu:addLabel(_("Tips"), 144 * get_scale_factor(), 11 * get_scale_factor())
 
   local l = MultiLineLabel()
   l:setFont(Fonts["game"])
-  l:setSize(260, 128)
-  l:setLineWidth(260)
-  menu:add(l, 14, 35)
+  l:setSize(260 * get_scale_factor(), 128 * get_scale_factor())
+  l:setLineWidth(260 * get_scale_factor())
+  menu:add(l, 14 * get_scale_factor(), 35 * get_scale_factor())
 
   function l:prevTip()
     wyr.preferences.TipNumber = wyr.preferences.TipNumber - 1
@@ -200,16 +200,16 @@ function RunTipsMenu()
   l:updateCaption()
 
   local showtips = {}
-  showtips = menu:addImageCheckBox(_("Show tips when starting"), 14, 256 - 75,
+  showtips = menu:addImageCheckBox(_("Show tips when starting"), 14 * get_scale_factor(), (256 - 75) * get_scale_factor(),
     function()
       wyr.preferences.ShowTips = showtips:isMarked()
       SavePreferences()
     end)
   showtips:setMarked(wyr.preferences.ShowTips)
 
-  menu:addHalfButton(_("~!Next Tip"), "n", 14, 256 - 40,
+  menu:addHalfButton(_("~!Next Tip"), "n", 14 * get_scale_factor(), (256 - 40) * get_scale_factor(),
     function() l:nextTip(); l:updateCaption() end)
-  menu:addHalfButton(_("~!Close"), "c", 168, 256 - 40,
+  menu:addHalfButton(_("~!Close"), "c", 168 * get_scale_factor(), (256 - 40) * get_scale_factor(),
     function() l:nextTip(); menu:stop() end)
 
   menu:run(false)

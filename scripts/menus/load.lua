@@ -28,11 +28,11 @@ function LoadGame(s)
 end
 
 function AddLoadGameItems(menu)
-	menu:addLabel(_("Load Game"), 384 / 2, 11)
+	menu:addLabel(_("Load Game"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
 	local browser = menu:addBrowser("~save", "^.*%.sav%.?g?z?$",
-		(384 - 300 - 18) / 2, 11 + 36, 318, 126)
+		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 36) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 
-	menu:addHalfButton(_("~!Load"), "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Load"), "l", (384 - 300 - 18) / 2 * get_scale_factor(), (256 - 16 - 27) * get_scale_factor(),
 	function()
 		if (browser:getSelected() < 0) then
 			return
@@ -51,7 +51,7 @@ function AddLoadGameItems(menu)
 	end)
 	
 	local sortByCheckBox
-	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (384 - 300 - 18) / 2 * get_scale_factor(), (256 - 16 - 27 - 25) * get_scale_factor(),
 	function()
 		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
 		SavePreferences()
@@ -66,14 +66,14 @@ function AddLoadGameItems(menu)
 	if (wyr.preferences.SortSaveGamesByTime) then
 		browser:sortByTime()
 	end
-	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Cancel"), "c", (384 - ((384 - 300 - 18) / 2) - 106) * get_scale_factor(), (256 - 16 - 27) * get_scale_factor(),
 	function() menu:stop() end)
 end
 
 function RunLoadGameMenu()
 	local menu = WarMenu(nil, panel(3), false)
-	menu:setSize(384, 256)
-	menu:setPosition((Video.Width - 384) / 2, (Video.Height - 256) / 2)
+	menu:setSize(384 * get_scale_factor(), 256 * get_scale_factor())
+	menu:setPosition((Video.Width - 384 * get_scale_factor()) / 2, (Video.Height - 256 * get_scale_factor()) / 2)
 	menu:setDrawMenusUnder(true)
 
 	AddLoadGameItems(menu)
@@ -84,7 +84,7 @@ end
 
 function RunGameLoadGameMenu()
 	local menu = WarGameMenu(panel(3))
-	menu:resize(384, 256)
+	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
 	menu:setDrawMenusUnder(true)
 
 	AddLoadGameItems(menu)
