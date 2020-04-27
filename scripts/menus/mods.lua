@@ -31,8 +31,8 @@ function RunModsMenu(selected_mod)
 	ModDependencies = nil
 		
 	local menu = WarMenu()
-	local offx = (Video.Width - 352) / 2
-	local offy = (Video.Height - 352) / 2
+	local offx = (Video.Width - 352 * get_scale_factor()) / 2
+	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local b
 	local mod_list = {}
 	local mod_dd
@@ -107,9 +107,9 @@ function RunModsMenu(selected_mod)
 		end
 	end
 			
-	menu:addLabel(_("~<Mods~>"), offx + 176, offy + 1)
+	menu:addLabel(_("~<Mods~>"), offx + 176 * get_scale_factor(), offy + 1 * get_scale_factor())
 --	menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
-	mod_dd = menu:addDropDown(mod_list, Video.Width / 2 - (300 / 2), offy + 55 + 26*0,
+	mod_dd = menu:addDropDown(mod_list, Video.Width / 2 - (300 / 2) * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
 		function(dd)
 			ModName = ""
 			ModDescription = ""
@@ -127,7 +127,7 @@ function RunModsMenu(selected_mod)
 			RunModsMenu(mod_dd:getSelected())
 		end
 	)
-	mod_dd:setSize(300, 20)
+	mod_dd:setSize(300 * get_scale_factor(), 20 * get_scale_factor())
 	if (table.getn(mod_list) > 0) then
 		mod_dd:setSelected(selected_mod)
 		ModName = ""
@@ -162,7 +162,7 @@ function RunModsMenu(selected_mod)
 		end
 
 		if (mod_description ~= "") then
-			menu:addMultiLineLabel(mod_description, ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+			menu:addMultiLineLabel(mod_description, ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (34 + 60*1.5) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
 		end
 
 		local enabled_label
@@ -173,7 +173,7 @@ function RunModsMenu(selected_mod)
 		end
 		
 		
-		mod_enabled = menu:addImageCheckBox(enabled_label, offx + 48, offy + 36 * 8.5,
+		mod_enabled = menu:addImageCheckBox(enabled_label, offx + 48 * get_scale_factor(), offy + (36 * 8.5) * get_scale_factor(),
 			function()
 				if (GetArrayIncludes(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])) then
 					RemoveElementFromArray(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])
@@ -217,7 +217,7 @@ function RunModsMenu(selected_mod)
 		mod_enabled:adjustSize()
 	end
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
+	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
 		menu:stop()
 	end)
 

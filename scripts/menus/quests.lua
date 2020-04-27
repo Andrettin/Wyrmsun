@@ -36,10 +36,10 @@ function RunQuestWorldMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 212 - 25 - (36 * 1))
+	menu:addLabel(_("~<Quests~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
 
 	local quest_world_y = 2
 	for i=1, table.getn(QuestWorlds) do
@@ -51,7 +51,7 @@ function RunQuestWorldMenu()
 		local quest_world_name = string.gsub(QuestWorlds[i], "~!", "")
 		quest_world_name = string.lower(quest_world_name)
 		
-		menu:addFullButton(_(QuestWorlds[i]), quest_world_hotkey, offx + 208, offy + 104 + 36*quest_world_y,
+		menu:addFullButton(_(QuestWorlds[i]), quest_world_hotkey, offx + 208 * get_scale_factor(), offy + (104 + 36*quest_world_y) * get_scale_factor(),
 		function()
 			RunQuestMenu(quest_world_name);
 			if (RunningScenario) then
@@ -62,7 +62,7 @@ function RunQuestWorldMenu()
 		quest_world_y = quest_world_y + 1
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*quest_world_y,
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*quest_world_y) * get_scale_factor(),
 		function() menu:stop() end
 	)
 	return menu:run()
@@ -78,12 +78,12 @@ function RunQuestMenu(world)
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
 	RunningScenario = false
 	
-	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
+	menu:addLabel(_("~<Quests~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
 
 	local completed_quest_quantity = 0
 	local total_quest_quantity = 0
@@ -94,7 +94,7 @@ function RunQuestMenu(world)
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world and GetQuestData(quests[i], "Map") ~= "") then
 			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
-				addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * item_x), offy + 10 + 4 + (46 * (item_y + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
+				addQuestIcon(quests[i], menu, offx + (23 + 4 + (54 * item_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (item_y + 1))) * get_scale_factor()) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
 			
 				item_x = item_x + 1
 				if (item_x > 9) then
@@ -131,7 +131,7 @@ function RunQuestMenu(world)
 	--]]
 	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
 
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480, offy + 10 + 270 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -139,7 +139,7 @@ function RunQuestMenu(world)
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
 	
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480, offy + 10 + 300 + 3,
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480 * get_scale_factor(), offy + (10 + 300 + 3) * get_scale_factor(),
 		function()
 			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
 			SavePreferences()
@@ -150,14 +150,14 @@ function RunQuestMenu(world)
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
 	
-	menu:addLabel(_("Difficulty:"), offx + 244, offy + (10 + 300) - 20, Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 244, offy + 10 + 300,
+	menu:addLabel(_("Difficulty:"), offx + 244 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + 244 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
 		function(dd)
 			wyr.preferences.Difficulty = difficulty:getSelected() + 1
 			SavePreferences()
 		end
 	)
-	difficulty:setSize(152, 20)
+	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
 	local custom_heroes = GetCustomHeroes()
@@ -180,33 +180,33 @@ function RunQuestMenu(world)
 	end
 	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
 	table.insert(hero_name_list, "")
-	menu:addLabel(_("Custom Hero:"), offx + 30, offy + (10 + 300) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_name_list, offx + 30, offy + 10 + 300,
+	menu:addLabel(_("Custom Hero:"), offx + 30 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_name_list, offx + 30 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 			menu:stop()
 			RunQuestMenu(world)
 		end
 	)
-	hero_dd:setSize(152, 20)
+	hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()) - 1)
 				
-	menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
+	menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208 * get_scale_factor(), offy + (212 + (36 * 4)) * get_scale_factor(),
 		function() CustomHeroCreationMenu(world, menu);
 		end
 	)
 	
-	menu:addFullButton(_("~!Delete Custom Hero"), "d", offx + 208 + 226, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Delete Custom Hero"), "d", offx + (208 + 226) * get_scale_factor(), offy + (212 + (36 * 4)) * get_scale_factor(),
 		function()
 			if (GetCurrentCustomHero() ~= "") then
 				local confirm = WarGameMenu(panel(4))
 
-				confirm:resize(288,128)
+				confirm:resize(288 * get_scale_factor(), 128 * get_scale_factor())
 
-				confirm:addLabel(_("Delete ") .. GetCurrentCustomHero(), 288 / 2, 11)
-				confirm:addLabel(_("Are you sure?") .. " This cannot be undone.", 288 / 2, 45, Fonts["game"])
+				confirm:addLabel(_("Delete ") .. GetCurrentCustomHero(), 288 / 2 * get_scale_factor(), 11 * get_scale_factor())
+				confirm:addLabel(_("Are you sure?") .. " This cannot be undone.", 288 / 2 * get_scale_factor(), 45 * get_scale_factor(), Fonts["game"])
 
-				confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!Yes"), "y", (1 * (288 / 3) - 90) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 					function()
 						DeleteCustomHero(GetCurrentCustomHero())
 						confirm:stop()
@@ -214,7 +214,7 @@ function RunQuestMenu(world)
 					end
 				)
 
-				confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				confirm:addHalfButton(_("~!No"), "n", (3 * (288 / 3) - 116) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 					function() confirm:stop() end
 				)
 
@@ -223,7 +223,7 @@ function RunQuestMenu(world)
 		end
 	)
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 5),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 5)) * get_scale_factor(),
 		function()
 			SetCurrentCustomHero("")
 			menu:stop();
@@ -243,30 +243,30 @@ function addQuestIcon(quest, menu, x, y)
 		questicon = CPlayerColorGraphic:Get(GetIconData(GetQuestData(quest, "Icon"), "File"))
 	end
 	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
-	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
-	local quest_icon_y_origin = math.floor((quest_icon_frame * 46) / questicon:getGraphicWidth()) * 38
+	local quest_icon_x_origin = (quest_icon_frame * 46 * get_scale_factor()) % questicon:getGraphicWidth()
+	local quest_icon_y_origin = math.floor((quest_icon_frame * 46 * get_scale_factor()) / questicon:getGraphicWidth()) * 38 * get_scale_factor()
 	b:setActionCallback(
 		function()
 			PlaySound("click")
 			
 			local quest_menu = WarGameMenu(panel(5))
-			quest_menu:setSize(352, 352)
+			quest_menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
     		quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176, 11)
+			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176 * get_scale_factor(), 11 * get_scale_factor())
 			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
-			quest_menu:add(quest_menu_image, 153, 48)
+			quest_menu:add(quest_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])
-			l:setSize(324, 208)
-			l:setLineWidth(324)
-			quest_menu:add(l, 14, 112)
+			l:setSize(324 * get_scale_factor(), 208 * get_scale_factor())
+			l:setLineWidth(324 * get_scale_factor())
+			quest_menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 			local quest_description = _(GetQuestData(quest, "Description"))
 			l:setCaption(quest_description)
 			
 			if (GetQuestData(quest, "Map") ~= "") then
-				quest_menu:addFullButton(_("~!Play Quest"), "p", 176 - (224 / 2), 352 - 40 * 2,
+				quest_menu:addFullButton(_("~!Play Quest"), "p", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
 					function()
 						RunningScenario = true
 						SetCurrentQuest(quest)
@@ -289,7 +289,7 @@ function addQuestIcon(quest, menu, x, y)
 					end
 				)
 			end
-			quest_menu:addFullButton(_("~!Close"), "c", 176 - (224 / 2), 352 - 40 * 1,
+			quest_menu:addFullButton(_("~!Close"), "c", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 1) * get_scale_factor(),
 				function()
 					quest_menu:stop()
 				end
@@ -302,7 +302,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setNormalImage(questicon)
 	b:setPressedImage(questicon)
 	b:setDisabledImage(questicon)
-	b:setSize(46, 38)
+	b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)

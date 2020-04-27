@@ -71,9 +71,8 @@ function AddLoadGameItems(menu)
 end
 
 function RunLoadGameMenu()
-	local menu = WarMenu(nil, panel(3), false)
-	menu:setSize(384 * get_scale_factor(), 256 * get_scale_factor())
-	menu:setPosition((Video.Width - 384 * get_scale_factor()) / 2, (Video.Height - 256 * get_scale_factor()) / 2)
+	local menu = WarGameMenu(panel(3))
+	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
 	menu:setDrawMenusUnder(true)
 
 	AddLoadGameItems(menu)

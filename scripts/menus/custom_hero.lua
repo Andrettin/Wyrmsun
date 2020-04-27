@@ -27,12 +27,12 @@
 
 function CustomHeroCreationMenu(world, quest_menu)
 	local menu = WarGameMenu(panel(5))
-	menu:setSize(352, 352)
+	menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-	menu:addLabel(_("Create Custom Hero"), 176, 11)
+	menu:addLabel(_("Create Custom Hero"), 176 * get_scale_factor(), 11 * get_scale_factor())
 	
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	local hero_civilization_list = {}
 	if (world == "earth") then
@@ -82,7 +82,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 			table.insert(trait_list, GetUpgradeData(trait_ident_list[i], "Name") .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
 		end
 		trait:setList(trait_list)
-		trait:setSize(236, 20)
+		trait:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		trait:setSelected(0)
 		
 		variation_list = nil
@@ -97,7 +97,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		end
 		table.sort(variation_list)
 		variation:setList(variation_list)
-		variation:setSize(236, 20)
+		variation:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		variation:setSelected(0)
 		
 		local new_language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
@@ -140,33 +140,33 @@ function CustomHeroCreationMenu(world, quest_menu)
 		ClassChanged()
 	end
 	
-	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	hero_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+	menu:addLabel(_("Name:"), 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	hero_name = menu:addTextInputField("", (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 120 * get_scale_factor())
 
-	menu:addLabel(_("Surname:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	hero_family_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
+	menu:addLabel(_("Surname:"), 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	hero_family_name = menu:addTextInputField("", (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 120 * get_scale_factor())
 
-	menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	hero_civilization = menu:addDropDown(hero_civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) CivilizationChanged() end)
-	hero_civilization:setSize(236, 20)
+	menu:addLabel(_("Civilization:"), 10 * get_scale_factor(), (14 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	hero_civilization = menu:addDropDown(hero_civilization_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), function(dd) CivilizationChanged() end)
+	hero_civilization:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	menu:addLabel(_("Class:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	hero_class = menu:addDropDown(hero_class_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) ClassChanged() end)
-	hero_class:setSize(236, 20)
+	menu:addLabel(_("Class:"), 10 * get_scale_factor(), (14 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	hero_class = menu:addDropDown(hero_class_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), function(dd) ClassChanged() end)
+	hero_class:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	menu:addLabel(_("Trait:"), 10, 14 + 36 * 5, Fonts["game"], false)
-	trait = menu:addDropDown(trait_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
-	trait:setSize(236, 20)
+	menu:addLabel(_("Trait:"), 10 * get_scale_factor(), (14 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	trait = menu:addDropDown(trait_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), function(dd) end)
+	trait:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	menu:addLabel(_("Variation:"), 10, 14 + 36 * 6, Fonts["game"], false)
-	variation = menu:addDropDown(variation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
-	variation:setSize(236, 20)
+	menu:addLabel(_("Variation:"), 10 * get_scale_factor(), (14 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	variation = menu:addDropDown(variation_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), function(dd) end)
+	variation:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	variation:setSelected(0)
 	
 	hero_civilization:setSelected(0)
 	CivilizationChanged()
 	
-	menu:addHalfButton(_("Crea~!te"), "t", 20 + 48, 352 - 40 * 2,
+	menu:addHalfButton(_("Crea~!te"), "t", (20 + 48) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
 		function()
 			local hero_ident = hero_name:getText()
 			if (hero_family_name:getText() ~= "") then
@@ -201,12 +201,12 @@ function CustomHeroCreationMenu(world, quest_menu)
 			end
 		end
 	)
-	menu:addHalfButton(_("New ~!Name"), "n", 130 + 48, 352 - 40 * 2,
+	menu:addHalfButton(_("New ~!Name"), "n", (130 + 48) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
 		function()
 			GenerateNewHeroName()
 		end
 	)
-	menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), 352 - 40 * 1,
+	menu:addFullButton(_("~!Cancel"), "c", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 1) * get_scale_factor(),
 		function()
 			menu:stop()
 		end
