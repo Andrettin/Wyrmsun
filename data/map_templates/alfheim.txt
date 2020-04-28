@@ -1,0 +1,42 @@
+alfheim = {
+	name = "Alfheim"
+	main_template = universe
+	#world = alfheim
+	size = { 128 128 }
+	circle = true
+	base_terrain_type = grass
+	unusable_area_terrain_type = dirt
+	unusable_area_overlay_terrain_type = chasm
+	generated_terrains = {
+		dirt = {
+			seed_count = 16
+			max_percent = 20
+			target_terrain_type = grass
+		}
+		fairlimbed_tree = {
+			seed_count = 128
+			expansion_chance = 50
+			max_percent = 33
+			target_terrain_type = grass
+		}
+		rock = {
+			seed_count = 8
+			expansion_chance = 50
+			max_percent = 20
+			target_terrain_type = dirt
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_silver_deposit = 2
+		unit_copper_deposit = 4
+		unit_iron_deposit = 4
+		unit_tree_stump = 16
+		unit_unicorn = 32
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}
