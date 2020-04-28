@@ -47,7 +47,7 @@ AddTrigger("iuvavum-sacked",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-sack-of-iuvavum")) then
 				local rome_player = GetFactionPlayer("rome")
 				if (rome_player ~= nil) then
-					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4135 - EarthStartX, 960 - EarthStartY}, {4135 - EarthStartX, 960 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0) then
 						trigger_player = i
 						return true
 					end
@@ -70,7 +70,7 @@ AddTrigger("opitergium-razed",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-razing-of-opitergium")) then
 				local rome_player = GetFactionPlayer("rome")
 				if (rome_player ~= nil) then
-					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4122 - EarthStartX, 1005 - EarthStartY}, {4122 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0) then
 						trigger_player = i
 						return true
 					end
@@ -93,7 +93,7 @@ AddTrigger("aquileia-destroyed",
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-first-marcomannic-war")) then
 				local rome_player = GetFactionPlayer("rome")
 				if (rome_player ~= nil) then
-					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) == 0) then
+					if (GetNumUnitsAt(rome_player, "unit-latin-town-hall", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0 and GetNumUnitsAt(rome_player, "unit-teuton-stronghold", {4143 - EarthStartX, 1005 - EarthStartY}, {4143 - EarthStartX, 1005 - EarthStartY}, GetMapLayer("material-plane", "earth")) == 0) then
 						trigger_player = i
 						return true
 					end

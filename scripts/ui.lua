@@ -500,7 +500,7 @@ UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")
-if (GetMapLayer("material-plane", "earth", 0) ~= -1) then
+if (GetMapLayer("material-plane", "earth") ~= -1) then
 	UI.WorldButtons:at(earth_id).X = (16 + (19  * 0)) * get_scale_factor()
 	UI.WorldButtons:at(earth_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
@@ -510,7 +510,7 @@ else
 end
 
 local nidavellir_id = GetWorldData("nidavellir", "ID")
-if (GetMapLayer("material-plane", "nidavellir", 0) ~= -1) then
+if (GetMapLayer("material-plane", "nidavellir") ~= -1) then
 	UI.WorldButtons:at(nidavellir_id).X = (16 + (19  * 1)) * get_scale_factor()
 	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
@@ -520,7 +520,7 @@ else
 end
 
 local jotunheim_id = GetWorldData("jotunheim", "ID")
-if (GetMapLayer("material-plane", "jotunheim", 0) ~= -1) then
+if (GetMapLayer("material-plane", "jotunheim") ~= -1) then
 	UI.WorldButtons:at(jotunheim_id).X = (16 + (19  * 2)) * get_scale_factor()
 	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23 * get_scale_factor()
 	UI.WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")
@@ -528,16 +528,6 @@ else
 	UI.WorldButtons:at(jotunheim_id).X = -1
 	UI.WorldButtons:at(jotunheim_id).Y = -1
 end
-
--- Surface Layer Map Layer Buttons
-if (UI.SurfaceLayerButtons:size() >= 1) then
-	UI.SurfaceLayerButtons:at(0).Style = FindButtonStyle("world-earth")
-end
-if (UI.SurfaceLayerButtons:size() >= 2) then
-	UI.SurfaceLayerButtons:at(1).Style = FindButtonStyle("world-jotunheim")
-end
-
-UpdateSurfaceLayerButtons()
 
 Load("scripts/civilizations/anglo_saxon/ui.lua")
 Load("scripts/civilizations/basque/ui.lua")

@@ -75,7 +75,7 @@ AddTrigger("aurvangling-goblins-sighted",
 AddTrigger("joruvellir-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "any", {GetMapTemplateData("joruvellir", "MapStartPosX"), GetMapTemplateData("joruvellir", "MapStartPosY")}, {GetMapTemplateData("joruvellir", "MapEndPosX"), GetMapTemplateData("joruvellir", "MapEndPosY")}, GetMapLayer("material-plane", "nidavellir", 0)) > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "any", {GetMapTemplateData("joruvellir", "MapStartPosX"), GetMapTemplateData("joruvellir", "MapStartPosY")}, {GetMapTemplateData("joruvellir", "MapEndPosX"), GetMapTemplateData("joruvellir", "MapEndPosY")}, GetMapLayer("material-plane", "nidavellir")) > 0) then
 				trigger_player = i
 				return true
 			end

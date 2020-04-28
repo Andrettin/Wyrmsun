@@ -414,7 +414,7 @@ DefineQuest("andvaris-gold", {
 	end,
 	AcceptEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
-		unit = CreateUnit("unit-revealer", trigger_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0)) -- show the location of Andvari's holding
+		unit = CreateUnit("unit-revealer", trigger_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetMapLayer("material-plane", "nidavellir")) -- show the location of Andvari's holding
 		SetUnitVariable(unit, "TTL", 600)
 	end,
 	CompletionEffects = function(s)
@@ -427,7 +427,7 @@ DefineQuest("andvaris-gold", {
 			SetUnitVariable(unit, "GenerateSpecialProperties", oinling_player, true) -- if Andvaranaut cannot drop, then generate a magic ring
 		end
 		SetUnitVariable(unit, "Identified", false)
-		unit = CreateUnit("unit-revealer", trigger_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetMapLayer("material-plane", "nidavellir", 0)) -- show the location of the ring
+		unit = CreateUnit("unit-revealer", trigger_player, {CPlayer:GetPlayer(oinling_player).StartPos.x, CPlayer:GetPlayer(oinling_player).StartPos.y}, GetMapLayer("material-plane", "nidavellir")) -- show the location of the ring
 		SetUnitVariable(unit, "TTL", 600)
 		CallDialogue("andvaris-gold-is-ours", trigger_player)
 	end,

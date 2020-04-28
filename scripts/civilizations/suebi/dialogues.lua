@@ -33,7 +33,7 @@ DefineDialogue("ariovistus-enters-gaul", {
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "ariovistus-ambition")
-					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("dijon", "PosX") - EarthStartX, GetSiteData("dijon", "PosY") - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("dijon", "PosX") - EarthStartX, GetSiteData("dijon", "PosY") - EarthStartY}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}

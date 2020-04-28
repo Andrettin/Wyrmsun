@@ -35,9 +35,6 @@ DefineMapTemplate("mount-sacrifice", {
 	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice_overlay.png"
 })
 
-SetMapTemplateLayerConnector("island-of-the-lizard-god", "unit-cavern-entrance", {133, 72}, 1)
-SetMapTemplateLayerConnector("island-of-the-lizard-god-underground", "unit-cavern-entrance", {133, 72}, 0)
-
 -- "Surprisingly lightly guarded entry chamber"
 SetMapTemplateUnit("mount-sacrifice", "unit-kobold-footpad", "grafvolling-tribe", {3, 13})
 

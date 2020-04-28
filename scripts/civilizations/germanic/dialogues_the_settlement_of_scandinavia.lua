@@ -136,7 +136,7 @@ DefineDialogue("westward-migration-introduction", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "westward-migration")
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
@@ -219,16 +219,16 @@ DefineDialogue("the-settlement-of-scandinavia-introduction", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the-settlement-of-scandinavia")
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4064 - EarthStartX, 777 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Aarhus
+					unit = CreateUnit("unit-revealer", trigger_player, {4064 - EarthStartX, 777 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Aarhus
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4112 - EarthStartX, 784 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Leidre
+					unit = CreateUnit("unit-revealer", trigger_player, {4112 - EarthStartX, 784 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Leidre
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4136 - EarthStartX, 783 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Malmo
+					unit = CreateUnit("unit-revealer", trigger_player, {4136 - EarthStartX, 783 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Malmo
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4253 - EarthStartX, 693 - EarthStartY}, GetMapLayer("material-plane", "earth", 0)) -- Stockholm
+					unit = CreateUnit("unit-revealer", trigger_player, {4253 - EarthStartX, 693 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Stockholm
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}

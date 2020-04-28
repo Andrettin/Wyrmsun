@@ -170,7 +170,7 @@ AddTrigger("westward-migration-victory",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration")) then
-				if (GetNumUnitsAt(i, "unit-germanic-worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth", 0)) > 0) then
+				if (GetNumUnitsAt(i, "unit-germanic-worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth")) > 0) then
 					trigger_player = i
 					return true
 				end
@@ -192,7 +192,7 @@ AddTrigger("the-settlement-of-scandinavia-introduction",
 				and GetPlayerData(i, "Faction") == "asa-tribe"
 				and GetFactionExists("ertebolle-tribe", true)
 				and GetFactionExists("gylfing-tribe", true)
-				and GetNumUnitsAt(i, "any", {4068 - EarthStartX - 16, 811 - EarthStartY - 16}, {4068 - EarthStartX + 16, 811 - EarthStartY + 16}, GetMapLayer("material-plane", "earth", 0)) > 0 -- must have units near Kiel
+				and GetNumUnitsAt(i, "any", {4068 - EarthStartX - 16, 811 - EarthStartY - 16}, {4068 - EarthStartX + 16, 811 - EarthStartY + 16}, GetMapLayer("material-plane", "earth")) > 0 -- must have units near Kiel
 			) then
 				trigger_player = i
 				return true

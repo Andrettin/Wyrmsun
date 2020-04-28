@@ -36,10 +36,10 @@ DefineDialogue("thialfi-commanded-to-gotland", {
 					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
 					unit = FindUnit("unit-revealer", trigger_player)
 					if not (unit) then
-						unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
+						unit = CreateUnit("unit-revealer", trigger_player, {4265 - EarthStartX, 741 - EarthStartY}, GetMapLayer("material-plane", "earth"))
 					end
 					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetMapLayer("material-plane", "earth", 0))
+					ChangeCurrentMapLayer(GetMapLayer("material-plane", "earth"))
 					CenterMap(4265 - EarthStartX, 741 - EarthStartY)
 				end
 			}
@@ -72,7 +72,7 @@ DefineDialogue("thors-servant-temple-complete", {
 			"text", "The priests of Thunraz I invited to take charge of the new temple have told me that a group of wild berserkers are living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-revealer", trigger_player, {4089 - EarthStartX, 745 - EarthStartY}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "TTL", 600)
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing-tribe"))
@@ -106,14 +106,14 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 			"text", "A ship, they say of dwarven making, and used by the gods themselves. I had never seen such a sturdy vessel before... The sacred men tell me that its purpose is to take me to another world, the realm of the giants, through a magic passage near my island that can only be seen with the ship's magic. Once there I shall slay the ettin Geirrod, who has given much trouble to the few friends the gods have in the giants' realm. I, Thunraz's hammer, shall bring the monster his end!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "Unique", "skidbladnir")
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
 					SetDiplomacy(GetFactionPlayer("geirrodung-clan"), "enemy", trigger_player)
-					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {4270 - EarthStartX, 723 - EarthStartY}, GetMapLayer("material-plane", "earth", 0))
+					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {4270 - EarthStartX, 723 - EarthStartY}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetMapLayer("material-plane", "earth", 0))
+					ChangeCurrentMapLayer(GetMapLayer("material-plane", "earth"))
 					CenterMap(4270 - EarthStartX, 723 - EarthStartY)
 				end
 			}
