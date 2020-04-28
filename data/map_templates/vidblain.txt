@@ -1,0 +1,41 @@
+vidblain = {
+	name = "Vidblain"
+	main_template = universe
+	#world = vidblain
+	size = { 32 32 }
+	circle = true
+	base_terrain_type = grass
+	unusable_area_terrain_type = dirt
+	unusable_area_overlay_terrain_type = chasm
+	north_of = alfheim
+	generated_terrains = {
+		dirt = {
+			seed_count = 4
+			max_percent = 20
+			target_terrain_type = grass
+		}
+		fairlimbed_tree = {
+			seed_count = 8
+			expansion_chance = 50
+			max_percent = 33
+			target_terrain_type = grass
+		}
+		rock = {
+			seed_count = 1
+			expansion_chance = 50
+			max_percent = 20
+			target_terrain_type = dirt
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_iron_deposit = 1
+		unit_tree_stump = 2
+		unit_unicorn = 4
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}
