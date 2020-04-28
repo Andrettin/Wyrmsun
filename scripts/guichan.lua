@@ -749,9 +749,8 @@ end
 
 function RunSelectScenarioMenu(is_mod)
 	buttonStatut = 0
-	local menu = WarMenu(nil, panel(5), false)
-	menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
-	menu:setPosition((Video.Width - 352 * get_scale_factor()) / 2, (Video.Height - 352 * get_scale_factor()) / 2)
+	local menu = WarGameMenu(panel(5))
+	menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 	menu:setDrawMenusUnder(true)
 
 	local browser

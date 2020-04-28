@@ -85,22 +85,22 @@ end
 --  Menu for new map to edit
 local function RunEditorNewMapMenu()
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local tilesets = editor_tilesets
 
-	menu:addLabel(_("Map Description:"), offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
-	local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
-	menu:addLabel(_("Terrain:"), offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
-	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
-	dropDownTileset:setSize(152, 20)
+	menu:addLabel(_("Map Description:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
+	local mapDescription = menu:addTextInputField("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 1) * get_scale_factor(), 200 * get_scale_factor())
+	menu:addLabel(_("Terrain:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
+	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), function() end)
+	dropDownTileset:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Width:"), offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
-	local mapSizex = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 3, 60)
-	menu:addLabel(_("Height:"), offx + 208, offy + 104 + 32 * 4, Fonts["game"], false)
-	local mapSizey = menu:addTextInputField(128, offx + 208 + 60, offy + 104 + 32 * 4, 60)
+	menu:addLabel(_("Width:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
+	local mapSizex = menu:addTextInputField(128, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), 60 * get_scale_factor())
+	menu:addLabel(_("Height:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 4) * get_scale_factor(), Fonts["game"], false)
+	local mapSizey = menu:addTextInputField(128, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 4) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
+	menu:addFullButton(_("~!New Map"), "n", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(),
 	function()
 		if (tonumber(mapSizex:getText()) == nil) then
 			GenericDialog("Error", "The map width must be a number.")
@@ -136,15 +136,15 @@ local function RunEditorNewMapMenu()
 			RunEditorMenu()
 		end
 	end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); RunEditorMenu() end)
 	return menu:run()
 end
 
 -- Menu for loading map to edit
 local function RunEditorLoadMapMenu(is_mod)
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local labelMapName
 	local labelDescription
 	local labelNbPlayer
@@ -181,10 +181,10 @@ local function RunEditorLoadMapMenu(is_mod)
 		end
 	end
 
-	labelDescription = menu:addLabel("", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
-	labelMapName = menu:addLabel("", offx + 208, offy + 104 + 36 * 1, Fonts["game"], false)
-	labelNbPlayer = menu:addLabel("", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
-	labelMapSize = menu:addLabel("", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+	labelDescription = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
+	labelMapName = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	labelNbPlayer = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
+	labelMapSize = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
 
 	local select_button_string
 	if not (is_mod) then
@@ -192,7 +192,7 @@ local function RunEditorLoadMapMenu(is_mod)
 	else
 		select_button_string = _("~!Select Mod")
 	end
-	menu:addFullButton(select_button_string, "s", offx + 208, offy + 104 + 36 * 4,
+	menu:addFullButton(select_button_string, "s", offx + 208 * get_scale_factor(), offy + (104 + 36 * 4) * get_scale_factor(),
 		function()
 			if not (is_mod) then
 				local oldmapname = mapname
@@ -212,14 +212,14 @@ local function RunEditorLoadMapMenu(is_mod)
 		end)
 
 	if not (is_mod) then
-		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function()
+		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function()
 			menu:stop();
 			StartEditor(mapname, false);
 			ReloadMods();
 			RunEditorMenu()
 		end)
 	else
-		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop();
+		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function() menu:stop();
 			CMap.Map.Info.MapWidth = 32
 			CMap.Map.Info.MapHeight = 32
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
@@ -229,7 +229,7 @@ local function RunEditorLoadMapMenu(is_mod)
 			RunEditorMenu()
 		end)
 	end
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); RunEditorMenu() end)
 
 	if not (is_mod) then
 		GetMapInfo(mapname)
@@ -251,15 +251,15 @@ function RunEditorMenu()
 	end
 
 	local menu = WarMenu()
-	local offx = (Video.Width - 640) / 2
-	local offy = (Video.Height - 480) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addLabel(_("~<Map Editor~>"), offx + 320, offy + 212 - 25)
+	menu:addLabel(_("~<Map Editor~>"), offx + 320 * get_scale_factor(), offy + (212 - 25) * get_scale_factor())
 	local buttonNewMap =
-	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
-	menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(false); menu:stop() end)
-	menu:addFullButton(_("Load ~!Mod"), "m", offx + 208, offy + 104 + 36*5, function() RunEditorLoadMapMenu(true); menu:stop() end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*6, function() menu:stop() end)
+	menu:addFullButton(_("~!New Map"), "n", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(), function() RunEditorNewMapMenu(); menu:stop() end)
+	menu:addFullButton(_("~!Load Map"), "l", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(), function() RunEditorLoadMapMenu(false); menu:stop() end)
+	menu:addFullButton(_("Load ~!Mod"), "m", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(), function() RunEditorLoadMapMenu(true); menu:stop() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(), function() menu:stop() end)
 	return menu:run()
 end
 
@@ -270,14 +270,14 @@ function RunEditorSaveMap(browser, name, menu, save_as_mod)
 	
 	if (saved == -1) then
 		local confirm = WarGameMenu(panel(3))
-		confirm:resize(300,120)
+		confirm:resize(300 * get_scale_factor(), 120 * get_scale_factor())
 		if not (save_as_mod) then
-			confirm:addLabel("Cannot save map to file:", 300 / 2, 11)
+			confirm:addLabel("Cannot save map to file:", 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
 		else
-			confirm:addLabel("Cannot save mod to file:", 300 / 2, 11)
+			confirm:addLabel("Cannot save mod to file:", 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
 		end
-		confirm:addLabel(browser.path .. name, 300 / 2, 31)
-		confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
+		confirm:addLabel(browser.path .. name, 300 / 2 * get_scale_factor(), 31 * get_scale_factor())
+		confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(), function() confirm:stop() end)
 		confirm:run(false)
 	else
 		if not (save_as_mod) then
@@ -309,28 +309,28 @@ function RunEditorSaveMenu(save_as_mod)
 	
 	local menu = WarGameMenu(panel(3))
 
-	menu:resize(384, 256)
+	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
 
 	if not (save_as_mod) then
-		menu:addLabel(_("Save Map"), 384 / 2, 11)
+		menu:addLabel(_("Save Map"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
 	else
-		menu:addLabel(_("Save as Mod"), 384 / 2, 11)
+		menu:addLabel(_("Save as Mod"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
 	end
 
 	local t
 	local browser
 	if not (save_as_mod) then
 		t = menu:addTextInputField("map.smp",
-			(384 - 300 - 18) / 2, 11 + 24, 318)
+			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
 
 		browser = menu:addBrowser(MapDirectories[1], ".smp$",
-			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
+			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 	else
 		t = menu:addTextInputField("mod.smp",
-			(384 - 300 - 18) / 2, 11 + 24, 318)
+			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
 
 		browser = menu:addBrowser(ModDirectories[1], ".smp$",
-			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
+			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 	end
 
 	local function cb(s)
@@ -338,8 +338,8 @@ function RunEditorSaveMenu(save_as_mod)
 	end
 	browser:setActionCallback(cb)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27, function() menu:stop() end)
-	menu:addHalfButton(_("~!Save"), "s", (384 - 300 - 18) / 2, 256 - 16 - 27,
+	menu:addHalfButton(_("~!Cancel"), "c", (384 - ((384 - 300 - 18) / 2) - 106) * get_scale_factor(), (256 - 16 - 27) * get_scale_factor(), function() menu:stop() end)
+	menu:addHalfButton(_("~!Save"), "s", (384 - 300 - 18) / 2 * get_scale_factor(), (256 - 16 - 27) * get_scale_factor(),
 	function()
 		local name = t:getText()
 		-- check for an empty string
@@ -357,15 +357,15 @@ function RunEditorSaveMenu(save_as_mod)
 
 		if (browser:exists(name)) then
 			local confirm = WarGameMenu(panel(3))
-			confirm:resize(300,120)
-			confirm:addLabel(name, 300 / 2, 11)
-			confirm:addLabel(_("File exists, are you sure?"), 300 / 2, 31)
-			confirm:addHalfButton(_("~!Yes"), "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
+			confirm:resize(300 * get_scale_factor(), 120 * get_scale_factor())
+			confirm:addLabel(name, 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
+			confirm:addLabel(_("File exists, are you sure?"), 300 / 2 * get_scale_factor(), 31 * get_scale_factor())
+			confirm:addHalfButton(_("~!Yes"), "y", (1 * (300 / 3) - 90) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 			function()
 				confirm:stop()
 				RunEditorSaveMap(browser, name, menu, save_as_mod)
 			end)
-			confirm:addHalfButton(_("~!No"), "n", 3 * (300 / 3) - 116, 120 - 16 - 27, function() confirm:stop() end)
+			confirm:addHalfButton(_("~!No"), "n", (3 * (300 / 3) - 116) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(), function() confirm:stop() end)
 			confirm:run(false)
 		else
 			RunEditorSaveMap(browser, name, menu, save_as_mod)
@@ -373,7 +373,7 @@ function RunEditorSaveMenu(save_as_mod)
 	end)
 	
 	local sortByCheckBox
-	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (384 - 300 - 18) / 2 * get_scale_factor(), (256 - 16 - 27 - 25) * get_scale_factor(),
 	function()
 		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
 		SavePreferences()
@@ -412,11 +412,11 @@ end
 --
 function RunEditorPlayerProperties()
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_("Player Properties"), sizeX / 2, 11)
+	menu:addLabel(_("Player Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
 	local civilization_names = GetCivilizations(true)
@@ -474,7 +474,7 @@ function RunEditorPlayerProperties()
 			current_player_faction:setSelected(0)
 			player_properties[current_player:getSelected() + 1].Faction = faction_list[current_player_faction:getSelected() + 1]
 		end
-		current_player_faction:setSize(236, 20)
+		current_player_faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		
 		current_player_ai:setSelected(player_properties[current_player:getSelected() + 1].AI)
 		current_player_copper:setText(player_properties[current_player:getSelected() + 1].Copper)
@@ -495,43 +495,43 @@ function RunEditorPlayerProperties()
 		current_player_stone_label:setVisible(player_active)
 	end
 
-	current_player = menu:addDropDown(player_list, (sizeX / 2) - 60, 11 + (36 * 1), function(dd) PlayerChanged() end)
-	current_player:setSize(120, 20)
+	current_player = menu:addDropDown(player_list, (sizeX / 2) - 60 * get_scale_factor(), (11 + (36 * 1)) * get_scale_factor(), function(dd) PlayerChanged() end)
+	current_player:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 		
-	menu:addLabel(_("Type:"), 10, 14 + 36 * 2, Fonts["game"], false)
-	current_player_type = menu:addDropDown(types, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd)
+	menu:addLabel(_("Type:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	current_player_type = menu:addDropDown(types, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd)
 		player_properties[current_player:getSelected() + 1].Type = current_player_type:getSelected()
 		PlayerChanged()
 	end)
-	current_player_type:setSize(236, 20)
+	current_player_type:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	current_player_civilization_label = menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	current_player_civilization = menu:addDropDown(civilization_names, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd)
+	current_player_civilization_label = menu:addLabel(_("Civilization:"), 10 * get_scale_factor(), (14 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	current_player_civilization = menu:addDropDown(civilization_names, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), function(dd)
 		player_properties[current_player:getSelected() + 1].Civilization = civilization_names[current_player_civilization:getSelected() + 1]
 		PlayerChanged()
 	end)
-	current_player_civilization:setSize(236, 20)
+	current_player_civilization:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	current_player_faction_label = menu:addLabel(_("Faction:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	current_player_faction = menu:addDropDown(faction_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd)
+	current_player_faction_label = menu:addLabel(_("Faction:"), 10 * get_scale_factor(), (14 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	current_player_faction = menu:addDropDown(faction_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), function(dd)
 		player_properties[current_player:getSelected() + 1].Faction = faction_list[current_player_faction:getSelected() + 1]
 	end)
-	current_player_faction:setSize(236, 20)
+	current_player_faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	current_player_ai_label = menu:addLabel(_("AI:"), 10, 14 + 36 * 5, Fonts["game"], false)
-	current_player_ai = menu:addDropDown(ais, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd)
+	current_player_ai_label = menu:addLabel(_("AI:"), 10 * get_scale_factor(), (14 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	current_player_ai = menu:addDropDown(ais, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), function(dd)
 		player_properties[current_player:getSelected() + 1].AI = current_player_ai:getSelected()
 	end)
-	current_player_ai:setSize(236, 20)
+	current_player_ai:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	
-	current_player_copper_label = menu:addLabel(_("Copper:"), 10, 12 + 36 * 6, Fonts["game"], false)
-	current_player_copper = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Copper, (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
+	current_player_copper_label = menu:addLabel(_("Copper:"), 10 * get_scale_factor(), (12 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	current_player_copper = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Copper, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), 60 * get_scale_factor())
 
-	current_player_lumber_label = menu:addLabel(_("Lumber:"), (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
-	current_player_lumber = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Lumber, sizeX - 60 - 10, 11 + 36 * 6, 60)
+	current_player_lumber_label = menu:addLabel(_("Lumber:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	current_player_lumber = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Lumber, sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), 60 * get_scale_factor())
 
-	current_player_stone_label = menu:addLabel(_("Stone:"), 10, 12 + 36 * 7, Fonts["game"], false)
-	current_player_stone = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Stone, (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
+	current_player_stone_label = menu:addLabel(_("Stone:"), 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+	current_player_stone = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Stone, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 
 	local function listen()
 		player_properties[current_player:getSelected() + 1].Copper = current_player_copper:getText()
@@ -543,7 +543,7 @@ function RunEditorPlayerProperties()
 	
 	PlayerChanged()
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton("~!OK", "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			for i = 0,(PlayerMax - 2) do
 				if (i < table.getn(player_properties)) then
@@ -562,7 +562,7 @@ function RunEditorPlayerProperties()
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -575,22 +575,22 @@ function RunEditorMapProperties()
 -- TODO : manage edition of all properties.
 	local menu = WarGameMenu(panel(3))
 
-	local sizeX = 384
-	local sizeY = 256
+	local sizeX = 384 * get_scale_factor()
+	local sizeY = 256 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_("Map Properties"), sizeX / 2, 11)
+	menu:addLabel(_("Map Properties"), sizeX / 2, 11 * get_scale_factor())
 
-	menu:addLabel(_("Map Name:") .. " ", 45, 11 + 36, nil, false)
-	local desc = menu:addTextInputField(CMap.Map.Info.Description, 15, 36 * 2, 350)
+	menu:addLabel(_("Map Name:") .. " ", 45 * get_scale_factor(), (11 + 36) * get_scale_factor(), nil, false)
+	local desc = menu:addTextInputField(CMap.Map.Info.Description, 15 * get_scale_factor(), 36 * 2 * get_scale_factor(), 350 * get_scale_factor())
 
-	menu:addLabel(_("Size:") .. " " .. CMap.Map.Info.MapWidth .. " x " .. CMap.Map.Info.MapHeight, 45, 36 * 3, nil, false)
+	menu:addLabel(_("Size:") .. " " .. CMap.Map.Info.MapWidth .. " x " .. CMap.Map.Info.MapHeight, 45 * get_scale_factor(), 36 * 3 * get_scale_factor(), nil, false)
 --	menu:addLabel("Size : ", 15, 36 * 3, nil, false)
 --	local sizeX = menu:addTextInputField(CMap.Map.Info.MapWidth, 75, 36 * 3, 50)
 --	menu:addLabel(" x ", 130, 36 * 3, nil, false)
 --	local sizeY = menu:addTextInputField(CMap.Map.Info.MapHeight, 160, 36 * 3, 50)
 
-	menu:addHalfButton(_("~!OK"), "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+	menu:addHalfButton(_("~!OK"), "o", 1 * (sizeX / 3) + (-106 - 10) * get_scale_factor(), sizeY + (-16 - 27) * get_scale_factor(),
 		function()
 			CMap.Map.Info.Description = desc:getText()
 			-- TODO : Add others properties
@@ -598,7 +598,7 @@ function RunEditorMapProperties()
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+	menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 3) + (-106 - 10) * get_scale_factor(), sizeY + (-16 - 27) * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -607,11 +607,11 @@ end
 function RunEditorCustomDataProperties()
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel(_("Custom Data Properties"), 128, 11)
+	menu:addLabel(_("Custom Data Properties"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addFullButton(_("Custom ~!Factions"), "f", 16, 40 + 35 * 0, RunEditorFactionProperties)
+	menu:addFullButton(_("Custom ~!Factions"), "f", 16 * get_scale_factor(), (40 + 35 * 0) * get_scale_factor(), RunEditorFactionProperties)
 
-	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 16, 40 + 35 * 6,
+	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 6) * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -622,11 +622,11 @@ end
 --
 function RunEditorFactionProperties()
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_("Custom Factions"), sizeX / 2, 11)
+	menu:addLabel(_("Custom Factions"), sizeX / 2, 11 * get_scale_factor())
 
 	local faction_type_list = {"tribe", "polity"}
 	local color_list = GetPlayerColors()
@@ -698,13 +698,13 @@ function RunEditorFactionProperties()
 		end
 		table.insert(parent_faction_list, "")
 		parent_faction:setList(parent_faction_list)
-		parent_faction:setSize(236, 20)
+		parent_faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		parent_faction:setSelected(GetElementIndexFromArray(parent_faction_list, faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].ParentFaction) - 1)
 	end
 	
 	local function CivilizationChanged(new_faction)
 		current_faction:setList(faction_list[current_civilization:getSelected() + 1])
-		current_faction:setSize(120, 20)
+		current_faction:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 		if (new_faction == nil) then
 			current_faction:setSelected(0)
 		else
@@ -721,7 +721,7 @@ function RunEditorFactionProperties()
 		faction_upgrade:setVisible(has_factions)
 		faction_upgrade_label:setVisible(has_factions)
 		faction_upgrade:setList(faction_upgrade_list[current_civilization:getSelected() + 1])
-		faction_upgrade:setSize(236, 20)
+		faction_upgrade:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		parent_faction:setVisible(has_factions)
 		parent_faction_label:setVisible(has_factions)
 		delete_faction_button:setVisible(has_factions)
@@ -731,55 +731,55 @@ function RunEditorFactionProperties()
 		end		
 	end
 
-	current_civilization = menu:addDropDown(civilization_list, (sizeX / 2) - 60, 11 + (34 * 1), function(dd) CivilizationChanged() end)
-	current_civilization:setSize(120, 20)
+	current_civilization = menu:addDropDown(civilization_list, (sizeX / 2) - 60 * get_scale_factor(), (11 + (34 * 1)) * get_scale_factor(), function(dd) CivilizationChanged() end)
+	current_civilization:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 	current_civilization:setSelected(0)
 		
-	current_faction = menu:addDropDown(faction_list[current_civilization:getSelected() + 1], (sizeX / 2) - 60, 11 + (34 * 2), function(dd) FactionChanged() end)
-	current_faction:setSize(120, 20)
+	current_faction = menu:addDropDown(faction_list[current_civilization:getSelected() + 1], (sizeX / 2) - 60 * get_scale_factor(), (11 + (34 * 2)) * get_scale_factor(), function(dd) FactionChanged() end)
+	current_faction:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 		
-	faction_type_label = menu:addLabel(_("Type:"), 10, 14 + 34 * 3, Fonts["game"], false)
-	faction_type = menu:addDropDown(faction_type_list, (sizeX / 2) - 60 - 10, 11 + 34 * 3, function(dd)
+	faction_type_label = menu:addLabel(_("Type:"), 10 * get_scale_factor(), (14 + 34 * 3) * get_scale_factor(), Fonts["game"], false)
+	faction_type = menu:addDropDown(faction_type_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 34 * 3) * get_scale_factor(), function(dd)
 		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Type = faction_type_list[faction_type:getSelected() + 1]
 	end)
-	faction_type:setSize(236, 20)
+	faction_type:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	faction_type:setSelected(0)
 
-	parent_faction_label = menu:addLabel(_("Parent:"), 10, 14 + 34 * 4, Fonts["game"], false)
-	parent_faction = menu:addDropDown(parent_faction_list, (sizeX / 2) - 60 - 10, 11 + 34 * 4, function(dd)
+	parent_faction_label = menu:addLabel(_("Parent:"), 10 * get_scale_factor(), (14 + 34 * 4) * get_scale_factor(), Fonts["game"], false)
+	parent_faction = menu:addDropDown(parent_faction_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 34 * 4) * get_scale_factor(), function(dd)
 		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].ParentFaction = parent_faction_list[parent_faction:getSelected() + 1]
 	end)
-	parent_faction:setSize(236, 20)
+	parent_faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	parent_faction:setSelected(0)
 
-	color_label = menu:addLabel(_("Color:"), 10, 14 + 34 * 6, Fonts["game"], false)
-	color = menu:addDropDown(color_list, (sizeX / 2) - 60 - 10, 11 + 34 * 6, function(dd)
+	color_label = menu:addLabel(_("Color:"), 10 * get_scale_factor(), (14 + 34 * 6) * get_scale_factor(), Fonts["game"], false)
+	color = menu:addDropDown(color_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 34 * 6) * get_scale_factor(), function(dd)
 		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Color = color_list[color:getSelected() + 1]
 	end)
-	color:setSize(236, 20)
+	color:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	color:setSelected(0)
 
-	faction_upgrade_label = menu:addLabel(_("Upgrade:"), 10, 14 + 34 * 7, Fonts["game"], false)
-	faction_upgrade = menu:addDropDown({""}, (sizeX / 2) - 60 - 10, 11 + 34 * 7, function(dd)
+	faction_upgrade_label = menu:addLabel(_("Upgrade:"), 10 * get_scale_factor(), (14 + 34 * 7) * get_scale_factor(), Fonts["game"], false)
+	faction_upgrade = menu:addDropDown({""}, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 34 * 7) * get_scale_factor(), function(dd)
 		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].FactionUpgrade = faction_upgrade_list[current_civilization:getSelected() + 1][faction_upgrade:getSelected() + 1]
 	end)
-	faction_upgrade:setSize(236, 20)
+	faction_upgrade:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	faction_upgrade:setSelected(0)
 
-	menu:addHalfButton("~!Add", "a", 20 + 48, sizeY - 36 * 2,
+	menu:addHalfButton("~!Add", "a", (20 + 48) * get_scale_factor(), sizeY - 36 * 2 * get_scale_factor(),
 		function()
 			local sub_menu = WarGameMenu(panel(3))
-			sub_menu:setSize(384, 256)
+			sub_menu:setSize(384 * get_scale_factor(), 256 * get_scale_factor())
 			sub_menu:setPosition((Video.Width - sub_menu:getWidth()) / 2, (Video.Height - sub_menu:getHeight()) / 2)
-			sub_menu:addLabel(_("Create Faction"), 176, 11)
+			sub_menu:addLabel(_("Create Faction"), 176 * get_scale_factor(), 11 * get_scale_factor())
 			
-			local sub_sizeX = 384
-			local sub_sizeY = 256
+			local sub_sizeX = 384 * get_scale_factor()
+			local sub_sizeY = 256 * get_scale_factor()
 
-			sub_menu:addLabel(_("Faction:"), 10, 12 + 36 * 1, Fonts["game"], false)
-			local faction_name = sub_menu:addTextInputField("", (sub_sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+			sub_menu:addLabel(_("Faction:"), 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+			local faction_name = sub_menu:addTextInputField("", (sub_sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 120 * get_scale_factor())
 			
-			sub_menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sub_sizeY - 40 * 2,
+			sub_menu:addFullButton("Crea~!te", "t", (176 - (224 / 2)) * get_scale_factor(), sub_sizeY - 40 * 2 * get_scale_factor(),
 				function()
 					local faction_ident = NameToIdent(faction_name:getText())
 					if (faction_name:getText() == "") then
@@ -804,7 +804,7 @@ function RunEditorFactionProperties()
 					end
 				end
 			)
-			sub_menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), sub_sizeY - 40 * 1,
+			sub_menu:addFullButton(_("~!Cancel"), "c", (176 - (224 / 2)) * get_scale_factor(), sub_sizeY - 40 * 1 * get_scale_factor(),
 				function()
 					sub_menu:stop()
 				end
@@ -813,16 +813,16 @@ function RunEditorFactionProperties()
 		end
 	)
 	
-	delete_faction_button = menu:addHalfButton(_("~!Delete"), "d", 130 + 48, sizeY - 36 * 2,
+	delete_faction_button = menu:addHalfButton(_("~!Delete"), "d", (130 + 48) * get_scale_factor(), sizeY - 36 * 2 * get_scale_factor(),
 		function()
 			local confirm = WarGameMenu(panel(4))
 
-			confirm:resize(288,128)
+			confirm:resize(288 * get_scale_factor(), 128 * get_scale_factor())
 
-			confirm:addLabel(_("Delete") .. " " .. faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1], 288 / 2, 11)
-			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2, 45, Fonts["game"])
+			confirm:addLabel(_("Delete") .. " " .. faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1], 288 / 2 * get_scale_factor(), 11)
+			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2 * get_scale_factor(), 45 * get_scale_factor(), Fonts["game"])
 
-			confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!Yes"), "y", (1 * (288 / 3) - 90) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 				function()
 					DeleteModFaction(faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
 					RemoveElementFromArray(civilization_factions[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
@@ -833,7 +833,7 @@ function RunEditorFactionProperties()
 				end
 			)
 
-			confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!No"), "n", (3 * (288 / 3) - 116) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 				function() confirm:stop() end
 			)
 
@@ -843,7 +843,7 @@ function RunEditorFactionProperties()
 	
 	CivilizationChanged()
 	
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 36 * 1,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 36 * 1 * get_scale_factor(),
 		function()
 			for i=1,table.getn(faction_list) do
 				for j=1,table.getn(faction_list[i]) do
@@ -864,7 +864,7 @@ function RunEditorFactionProperties()
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 36 * 1,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 36 * 1 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -876,21 +876,21 @@ end
 function RunInEditorMenu()
 	local menu = WarGameMenu(panel(1))
 
-	menu:addLabel(_("Editor Menu"), 128, 11)
+	menu:addLabel(_("Editor Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16, 40, function() RunEditorSaveMenu(false); end)
+	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(false); end)
 --	local buttonEditorLoad = -- To be removed when enabled.
 --	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
-	menu:addFullButton(_("Save as ~!Mod"), "m", 16, 40 + 35 * 1, function() RunEditorSaveMenu(true); end)
-	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
-	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
-	menu:addFullButton(_("Custom ~!Data"), "d", 16, 40 + 35 * 4, RunEditorCustomDataProperties)
+	menu:addFullButton(_("Save as ~!Mod"), "m", 16 * get_scale_factor(), (40 + 35 * 1) * get_scale_factor(), function() RunEditorSaveMenu(true); end)
+	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16 * get_scale_factor(), (40 + 35 * 2) * get_scale_factor(), RunEditorMapProperties)
+	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(), RunEditorPlayerProperties)
+	menu:addFullButton(_("Custom ~!Data"), "d", 16 * get_scale_factor(), (40 + 35 * 4) * get_scale_factor(), RunEditorCustomDataProperties)
 
 --	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
-	menu:addFullButton(_("E~!xit to Menu"), "x", 16, 40 + 35 * 5,
+	menu:addFullButton(_("E~!xit to Menu"), "x", 16 * get_scale_factor(), (40 + 35 * 5) * get_scale_factor(),
 		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
-	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16, 40 + 35 * 6,
+	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 6) * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -905,14 +905,14 @@ function EditUnitProperties()
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_("Unit Properties"), sizeX / 2, 11)
+	menu:addLabel(_("Unit Properties"), sizeX / 2, 11 * get_scale_factor())
 
-	local name_label = menu:addLabel(_("Unit Name"), sizeX / 2, 11 + (36 * 1))
-	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60, 11 + (36 * 2), 120)
+	local name_label = menu:addLabel(_("Unit Name"), sizeX / 2, (11 + (36 * 1)) * get_scale_factor())
+	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60 * get_scale_factor(), (11 + (36 * 2)) * get_scale_factor(), 120 * get_scale_factor())
 
 	local trait_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")
 	local prefix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")
@@ -990,57 +990,57 @@ function EditUnitProperties()
 	end	
 
 	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
-		menu:addLabel(_("Unit Trait"), sizeX / 2, 11 + (36 * 3))
-		unit_trait = menu:addDropDown(display_trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
-		unit_trait:setSize(120, 20)
+		menu:addLabel(_("Unit Trait"), sizeX / 2, (11 + (36 * 3)) * get_scale_factor())
+		unit_trait = menu:addDropDown(display_trait_list, (sizeX / 2) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
+		unit_trait:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) - 1)
 	end
 
 	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
 		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0) then
-			unit_prefix_label = menu:addLabel(_("Prefix"), sizeX / 4, 11 + (36 * 3))
-			unit_prefix = menu:addDropDown(display_prefix_list, (sizeX / 4) - 60, 11 + (36 * 4), function(dd) end)
-			unit_prefix:setSize(120, 20)
+			unit_prefix_label = menu:addLabel(_("Prefix"), sizeX / 4, (11 + (36 * 3)) * get_scale_factor())
+			unit_prefix = menu:addDropDown(display_prefix_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
+			unit_prefix:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 			unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) - 1)
 		end
 		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0) then
-			unit_suffix_label = menu:addLabel(_("Suffix"), math.floor(sizeX * 3 / 4), 11 + (36 * 3))
-			unit_suffix = menu:addDropDown(display_suffix_list, math.floor(sizeX * 3 / 4) - 60, 11 + (36 * 4), function(dd) end)
-			unit_suffix:setSize(120, 20)
+			unit_suffix_label = menu:addLabel(_("Suffix"), math.floor(sizeX * 3 / 4), (11 + (36 * 3)) * get_scale_factor())
+			unit_suffix = menu:addDropDown(display_suffix_list, math.floor(sizeX * 3 / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
+			unit_suffix:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 			unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) - 1)
 		end
 		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")) > 0) then
-			unit_work_label = menu:addLabel(_("Work"), sizeX / 4, 11 + (36 * 3))
-			unit_work = menu:addDropDown(display_work_list, (sizeX / 4) - 60, 11 + (36 * 4), function(dd) end)
-			unit_work:setSize(120, 20)
+			unit_work_label = menu:addLabel(_("Work"), sizeX / 4, (11 + (36 * 3)) * get_scale_factor())
+			unit_work = menu:addDropDown(display_work_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
+			unit_work:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 			unit_work:setSelected(GetElementIndexFromArray(work_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work")) - 1)
 		end
 		if (table.getn(unique_list) > 1) then
-			menu:addLabel(_("Unique"), sizeX / 4, 11 + (36 * 5))
-			unit_unique = menu:addDropDown(unique_list, (sizeX / 4) - 60, 11 + (36 * 6), function(dd) UniqueChanged() end)
-			unit_unique:setSize(120, 20)
+			menu:addLabel(_("Unique"), sizeX / 4, (11 + (36 * 5)) * get_scale_factor())
+			unit_unique = menu:addDropDown(unique_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 6)) * get_scale_factor(), function(dd) UniqueChanged() end)
+			unit_unique:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
 			unit_unique:setSelected(GetElementIndexFromArray(unique_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique")) - 1)
 		end
 	end
 
 	if (resource == 0) then
-		menu:addLabel(_("AI"), math.floor(sizeX * 3 / 4), 11 + (36 * 5))
-		activeCheckBox = menu:addImageCheckBox(_("Active"), math.floor(sizeX * 3 / 4) - 30, 11 + (36 * 6))
+		menu:addLabel(_("AI"), math.floor(sizeX * 3 / 4), (11 + (36 * 5)) * get_scale_factor())
+		activeCheckBox = menu:addImageCheckBox(_("Active"), math.floor(sizeX * 3 / 4) - 30 * get_scale_factor(), (11 + (36 * 6)) * get_scale_factor())
 		activeCheckBox:setMarked(GetUnitUnderCursor().Active)
 	else
-		menu:addLabel(_("Resources:"), 10, 12 + 36 * 7, Fonts["game"], false)
-		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
+		menu:addLabel(_("Resources:"), 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 	end
 
 	
-	menu:addLabel(_("Hit Points:"), (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
-	local hp_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints"), sizeX - 60 - 10, 11 + 36 * 7, 60)
+	menu:addLabel(_("Hit Points:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+	local hp_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 	
 	if (GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") ~= "") then
 		UniqueChanged()
 	end
 
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			if (resourceValue and tonumber(resourceValue:getText()) == nil) then
 				GenericDialog(_("Error"), _("The resource amount must be a number."))
@@ -1092,7 +1092,7 @@ function EditUnitProperties()
 		end
 	)
 		
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 	menu:run(false)
 end
@@ -1102,18 +1102,18 @@ end
 --
 function EditorCreateUnitType()
 	local menu = WarGameMenu(panel(3))
-	menu:setSize(384, 256)
+	menu:setSize(384 * get_scale_factor(), 256 * get_scale_factor())
 	menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-	menu:addLabel(_("Create Unit Type"), 176, 11)
+	menu:addLabel(_("Create Unit Type"), 176 * get_scale_factor(), 11 * get_scale_factor())
 			
-	local sizeX = 384
-	local sizeY = 256
+	local sizeX = 384 * get_scale_factor()
+	local sizeY = 256 * get_scale_factor()
 
-	menu:addLabel(_("Ident:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local unit_type_ident = menu:addTextInputField("unit_", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+	menu:addLabel(_("Ident:"), 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	local unit_type_ident = menu:addTextInputField("unit_", (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 120 * get_scale_factor())
 			
-	menu:addLabel(_("Name:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local unit_type_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
+	menu:addLabel(_("Name:"), 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local unit_type_name = menu:addTextInputField("", (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 120 * get_scale_factor())
 	
 	local unit_types_list = {}
 	local potential_unit_types_list = GetUnitTypes()
@@ -1124,13 +1124,13 @@ function EditorCreateUnitType()
 	end
 --	table.insert(unit_types_list, "")
 	
-	local parent_unit_type_label = menu:addLabel(_("Parent:"), 10, 14 + 34 * 3, Fonts["game"], false)
-	local parent_unit_type = menu:addDropDown(unit_types_list, (sizeX / 2) - 60 - 10, 11 + 34 * 3, function(dd) end)
-	parent_unit_type:setSize(236, 20)
+	local parent_unit_type_label = menu:addLabel(_("Parent:"), 10 * get_scale_factor(), (14 + 34 * 3) * get_scale_factor(), Fonts["game"], false)
+	local parent_unit_type = menu:addDropDown(unit_types_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 34 * 3) * get_scale_factor(), function(dd) end)
+	parent_unit_type:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 --	parent_unit_type:setSelected(GetElementIndexFromArray(unit_types_list, "") - 1)
 	parent_unit_type:setSelected(0)
 			
-	menu:addFullButton(_("Crea~!te"), "t", 176 - (224 / 2), sizeY - 40 * 2,
+	menu:addFullButton(_("Crea~!te"), "t", (176 - (224 / 2)) * get_scale_factor(), sizeY - 40 * 2 * get_scale_factor(),
 		function()
 			if (string.sub(unit_type_ident:getText(), 0, 5) ~= "unit") then
 				GenericDialog(_("Error"), _("The unit type's ident must begin with") .. "\"unit\".")
@@ -1170,7 +1170,7 @@ function EditorCreateUnitType()
 			end
 		end
 	)
-	menu:addFullButton(_("~!Cancel"), "c", 176 - (224 / 2), sizeY - 40 * 1,
+	menu:addFullButton(_("~!Cancel"), "c", (176 - (224 / 2)) * get_scale_factor(), sizeY - 40 * 1 * get_scale_factor(),
 		function()
 			menu:stop()
 		end
@@ -1187,64 +1187,64 @@ function EditUnitTypeProperties(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 
-	local main_properties_button = menu:addFullButton(_("~!Main Properties"), "m", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 7),
+	local main_properties_button = menu:addFullButton(_("~!Main Properties"), "m", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 7)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesMain(unit_type)
 		end
 	)
 
-	local graphics_properties_button = menu:addFullButton(_("~!Graphics"), "g", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
+	local graphics_properties_button = menu:addFullButton(_("~!Graphics"), "g", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 6)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesGraphics(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 5),
+	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 5)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesStats(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
+	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 4)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesResourceStats(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
+	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 3)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesSounds(unit_type)
 		end
 	)
 
-	local training_properties_button = menu:addFullButton(_("~!Train/Drop"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
+	local training_properties_button = menu:addFullButton(_("~!Train/Drop"), "t", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 2)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesTraining(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 1),
+	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 1)) * get_scale_factor(),
 		function()
 			menu:stop()
 		end
 	)
 	
-	local delete_button = menu:addFullButton(_("~!Delete"), "d", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 0),
+	local delete_button = menu:addFullButton(_("~!Delete"), "d", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 0)) * get_scale_factor(),
 		function()
 			local confirm = WarGameMenu(panel(4))
 
-			confirm:resize(288,128)
+			confirm:resize(288 * get_scale_factor(), 128 * get_scale_factor())
 
-			confirm:addLabel(_("Delete") .. " " .. GetUnitTypeName(unit_type), 288 / 2, 11)
-			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2, 45, Fonts["game"])
+			confirm:addLabel(_("Delete") .. " " .. GetUnitTypeName(unit_type), 288 / 2 * get_scale_factor(), 11 * get_scale_factor())
+			confirm:addLabel(_("Are you sure? This cannot be undone."), 288 / 2 * get_scale_factor(), 45 * get_scale_factor(), Fonts["game"])
 
-			confirm:addHalfButton(_("~!Yes"), "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!Yes"), "y", (1 * (288 / 3) - 90) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 				function()
 					DeleteModUnitType(unit_type)
 					confirm:stop()
@@ -1252,7 +1252,7 @@ function EditUnitTypeProperties(unit_type)
 				end
 			)
 
-			confirm:addHalfButton(_("~!No"), "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+			confirm:addHalfButton(_("~!No"), "n", (3 * (288 / 3) - 116) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 				function() confirm:stop() end
 			)
 
@@ -1275,8 +1275,8 @@ function EditUnitTypePropertiesMain(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
@@ -1299,24 +1299,24 @@ function EditUnitTypePropertiesMain(unit_type)
 		end
 		table.insert(faction_list, "")
 		faction:setList(faction_list)
-		faction:setSize(236, 20)
+		faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 		faction:setSelected(0)
 	end
 	
-	civilization_label = menu:addLabel(_("Civilization:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	civilization = menu:addDropDown(civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) CivilizationChanged() end)
-	civilization:setSize(236, 20)
+	civilization_label = menu:addLabel(_("Civilization:"), 10 * get_scale_factor(), (14 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	civilization = menu:addDropDown(civilization_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), function(dd) CivilizationChanged() end)
+	civilization:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	civilization:setSelected(GetElementIndexFromArray(civilization_list, GetUnitTypeData(unit_type, "Civilization")) - 1)
 	
-	faction_label = menu:addLabel(_("Faction:"), 10, 14 + 36 * 2, Fonts["game"], false)
-	faction = menu:addDropDown(faction_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
-	faction:setSize(236, 20)
+	faction_label = menu:addLabel(_("Faction:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	faction = menu:addDropDown(faction_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd) end)
+	faction:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 
 	CivilizationChanged()
 	
 	faction:setSelected(GetElementIndexFromArray(faction_list, GetUnitTypeData(unit_type, "Faction")) - 1)
 	
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			local unit_type_definition = {}
 
@@ -1334,7 +1334,7 @@ function EditUnitTypePropertiesMain(unit_type)
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -1346,11 +1346,11 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local unit_graphics_list = GetUnitGraphics()
 	
@@ -1375,45 +1375,45 @@ function EditUnitTypePropertiesGraphics(unit_type)
 	local icon
 	local icon_label
   
-	unit_graphics_label = menu:addLabel(_("Graphics:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	unit_graphics = menu:addDropDown(unit_graphics_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
-	unit_graphics:setSize(236, 20)
+	unit_graphics_label = menu:addLabel(_("Graphics:"), 10 * get_scale_factor(), (14 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	unit_graphics = menu:addDropDown(unit_graphics_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), function(dd) end)
+	unit_graphics:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	if (GetUnitTypeData(unit_type, "Image") == "") then
 		unit_graphics:setSelected(0)
 	else
 		unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
 	end
 	
-	unit_graphics_shadow_label = menu:addLabel(_("Shadow:"), 10, 14 + 36 * 2, Fonts["game"], false)
-	unit_graphics_shadow = menu:addDropDown(unit_graphics_shadow_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
+	unit_graphics_shadow_label = menu:addLabel(_("Shadow:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	unit_graphics_shadow = menu:addDropDown(unit_graphics_shadow_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd) end)
 	unit_graphics_shadow:setSize(236, 20)
 	unit_graphics_shadow:setSelected(GetElementIndexFromArray(unit_graphics_shadow_list, GetUnitTypeData(unit_type, "Shadow")) - 1)
 	
-	menu:addLabel(_("Frame Width:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Frame Width:"), 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
-	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 	
-	animation_label = menu:addLabel(_("Animations:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	animation = menu:addDropDown(animation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
-	animation:setSize(236, 20)
+	animation_label = menu:addLabel(_("Animations:"), 10 * get_scale_factor(), (14 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	animation = menu:addDropDown(animation_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), function(dd) end)
+	animation:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	if (GetUnitTypeData(unit_type, "Animations") == "") then
 		animation:setSelected(0)
 	else
 		animation:setSelected(GetElementIndexFromArray(animation_list, GetUnitTypeData(unit_type, "Animations")) - 1)
 	end
 	
-	icon_label = menu:addLabel(_("Icon:"), 10, 14 + 36 * 5, Fonts["game"], false)
-	icon = menu:addDropDown(icon_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
-	icon:setSize(236, 20)
+	icon_label = menu:addLabel(_("Icon:"), 10 * get_scale_factor(), (14 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	icon = menu:addDropDown(icon_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), function(dd) end)
+	icon:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	if (GetUnitTypeData(unit_type, "Icon") == "") then
 		icon:setSelected(0)
 	else
 		icon:setSelected(GetElementIndexFromArray(icon_list, GetUnitTypeData(unit_type, "Icon")) - 1)
 	end
 	
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			local graphic_width = 0
 			local graphic_height = 0
@@ -1496,7 +1496,7 @@ function EditUnitTypePropertiesGraphics(unit_type)
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -1508,55 +1508,55 @@ function EditUnitTypePropertiesStats(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local variables_displayed = {"HitPoints", "BasicDamage", "Armor", "Accuracy", "Evasion", "AttackRange", "SightRange", "Speed", "CriticalStrikeChance", "Backstab", "BonusAgainstMounted", "ThornsDamage", "DaySightRangeBonus", "NightSightRangeBonus"}
 
-	menu:addLabel(_("Hit Points:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local hp_value = menu:addTextInputField(GetUnitTypeData(unit_type, "HitPoints"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
+	menu:addLabel(_("Hit Points:"), 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	local hp_value = menu:addTextInputField(GetUnitTypeData(unit_type, "HitPoints"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 60 * get_scale_factor())
 
 	menu:addLabel(_("Speed:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
-	local speed_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Speed"), sizeX - 60 - 10, 11 + 36 * 1, 60)
+	local speed_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Speed"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Damage:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local basic_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BasicDamage"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Damage:"), 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local basic_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BasicDamage"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Armor:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
-	local armor_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Armor"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Armor:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local armor_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Armor"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Accuracy:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local accuracy_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Accuracy"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Accuracy:"), 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local accuracy_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Accuracy"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Evasion:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
-	local evasion_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Evasion"), sizeX - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Evasion:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local evasion_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Evasion"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Range:"), 10, 12 + 36 * 4, Fonts["game"], false)
-	local range_value = menu:addTextInputField(GetUnitTypeData(unit_type, "AttackRange"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
+	menu:addLabel(_("Range:"), 10 * get_scale_factor(), (12 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	local range_value = menu:addTextInputField(GetUnitTypeData(unit_type, "AttackRange"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Sight:"), (sizeX / 2) + 10, 12 + 36 * 4, Fonts["game"], false)
-	local sight_value = menu:addTextInputField(GetUnitTypeData(unit_type, "SightRange"), sizeX - 60 - 10, 11 + 36 * 4, 60)
+	menu:addLabel(_("Sight:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	local sight_value = menu:addTextInputField(GetUnitTypeData(unit_type, "SightRange"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Crit. Chance:"), 10, 12 + 36 * 5, Fonts["game"], false)
-	local critical_strike_chance_value = menu:addTextInputField(GetUnitTypeData(unit_type, "CriticalStrikeChance"), (sizeX / 2) - 60 - 10, 11 + 36 * 5, 60)
+	menu:addLabel(_("Crit. Chance:"), 10 * get_scale_factor(), (12 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	local critical_strike_chance_value = menu:addTextInputField(GetUnitTypeData(unit_type, "CriticalStrikeChance"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Backstab:"), (sizeX / 2) + 10, 12 + 36 * 5, Fonts["game"], false)
-	local backstab_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Backstab"), sizeX - 60 - 10, 11 + 36 * 5, 60)
+	menu:addLabel(_("Backstab:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	local backstab_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Backstab"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Vs. Mounted:"), 10, 12 + 36 * 6, Fonts["game"], false)
-	local bonus_against_mounted_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BonusAgainstMounted"), (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
+	menu:addLabel(_("Vs. Mounted:"), 10 * get_scale_factor(), (12 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	local bonus_against_mounted_value = menu:addTextInputField(GetUnitTypeData(unit_type, "BonusAgainstMounted"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Thorns Dam.:"), (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
-	local thorns_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ThornsDamage"), sizeX - 60 - 10, 11 + 36 * 6, 60)
+	menu:addLabel(_("Thorns Dam.:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	local thorns_damage_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ThornsDamage"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Day Sight:"), 10, 12 + 36 * 7, Fonts["game"], false)
-	local day_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "DaySightRangeBonus"), (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
+	menu:addLabel(_("Day Sight:"), 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+	local day_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "DaySightRangeBonus"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Night Sight:"), (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
-	local night_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "NightSightRangeBonus"), sizeX - 60 - 10, 11 + 36 * 7, 60)
+	menu:addLabel(_("Night Sight:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+	local night_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "NightSightRangeBonus"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 
 	for i=1,table.getn(variables_displayed) do
 		SetModStat(CMap.Map.Info.Filename, unit_type, variables_displayed[i], 0, "Value")
@@ -1564,7 +1564,7 @@ function EditUnitTypePropertiesStats(unit_type)
 		SetModStat(CMap.Map.Info.Filename, unit_type, variables_displayed[i], 0, "Enable")
 	end
 				
-	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addFullButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			if (tonumber(hp_value:getText()) == nil) then
 				GenericDialog(_("Error"), "The hit points must be a number.")
@@ -1733,41 +1733,41 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 	
 	local resources_displayed = {"time", "copper", "lumber", "stone"}
 
-	menu:addLabel(_("Time Cost:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
+	menu:addLabel(_("Time Cost:"), 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Copper Cost:"), (sizeX / 2) + 10, 12 + 36 * 1, Fonts["game"], false)
-	local copper_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "copper"), sizeX - 60 - 10, 11 + 36 * 1, 60)
+	menu:addLabel(_("Copper Cost:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	local copper_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "copper"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Lumber Cost:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local lumber_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "lumber"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Lumber Cost:"), 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local lumber_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "lumber"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Stone Cost:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
-	local stone_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "stone"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+	menu:addLabel(_("Stone Cost:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local stone_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "stone"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Copper Proc.:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local copper_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "copper"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Copper Proc.:"), 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local copper_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "copper"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Lumber Proc.:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
-	local lumber_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "lumber"),  sizeX - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Lumber Proc.:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local lumber_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "lumber"),  sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Stone Proc.:"), 10, 12 + 36 * 4, Fonts["game"], false)
-	local stone_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "stone"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
+	menu:addLabel(_("Stone Proc.:"), 10 * get_scale_factor(), (12 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	local stone_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "stone"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), 60 * get_scale_factor())
 
 	for i=1,table.getn(resources_displayed) do
 		SetModStat(CMap.Map.Info.Filename, unit_type, "Costs", 0, resources_displayed[i])
 		SetModStat(CMap.Map.Info.Filename, unit_type, "ImproveProduction", 0, resources_displayed[i])
 	end
 	
-	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addFullButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			if (tonumber(time_cost_value:getText()) == nil) then
 				GenericDialog(_("Error"), "The time cost must be a number.")
@@ -1862,11 +1862,11 @@ function EditUnitTypePropertiesTraining(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local potential_unit_type_list = GetUnitTypes()
 	local unit_type_list = {}
@@ -1893,12 +1893,12 @@ function EditUnitTypePropertiesTraining(unit_type)
 		drops_checkbox:setMarked(GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]))
 	end
 	
-	trains_label = menu:addLabel(_("Trains:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	trains = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) TrainedUnitTypeChanged() end)
-	trains:setSize(236 - 19 - 10, 20)
+	trains_label = menu:addLabel(_("Trains:"), 10 * get_scale_factor(), (14 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	trains = menu:addDropDown(unit_type_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), function(dd) TrainedUnitTypeChanged() end)
+	trains:setSize((236 - 19 - 10) * get_scale_factor(), 20 * get_scale_factor())
 	trains:setSelected(0)
 	
-	trains_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 1,
+	trains_checkbox = menu:addImageCheckBox("", sizeX + (-19 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(),
 	function()
 		if (trains_checkbox:isMarked()) then
 			if (GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]) == false) then
@@ -1909,12 +1909,12 @@ function EditUnitTypePropertiesTraining(unit_type)
 		end
 	end)
 
-	drops_label = menu:addLabel(_("Drops:"), 10, 14 + 36 * 2, Fonts["game"], false)
-	drops = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) DroppedUnitTypeChanged() end)
-	drops:setSize(236 - 19 - 10, 20)
+	drops_label = menu:addLabel(_("Drops:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	drops = menu:addDropDown(unit_type_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd) DroppedUnitTypeChanged() end)
+	drops:setSize((236 - 19 - 10) * get_scale_factor(), 20 * get_scale_factor())
 	drops:setSelected(0)
 	
-	drops_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 2,
+	drops_checkbox = menu:addImageCheckBox("", sizeX + (-19 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(),
 	function()
 		if (drops_checkbox:isMarked()) then
 			if (GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]) == false) then
@@ -1928,16 +1928,16 @@ function EditUnitTypePropertiesTraining(unit_type)
 	TrainedUnitTypeChanged()
 	DroppedUnitTypeChanged()
 	
-	menu:addLabel(_("Button Pos:"), 10, 12 + 36 * 3, Fonts["game"], false)
-	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Button Pos:"), 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Hotkey:"), (sizeX / 2) + 10, 12 + 36 * 3, Fonts["game"], false)
-	local button_key_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonKey"), sizeX - 60 - 10, 11 + 36 * 3, 60)
+	menu:addLabel(_("Hotkey:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local button_key_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonKey"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), 60 * get_scale_factor())
 
-	menu:addLabel(_("Hint:"), 10, 12 + 36 * 4, Fonts["game"], false)
-	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 180)
+	menu:addLabel(_("Hint:"), 10 * get_scale_factor(), (12 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), 180 * get_scale_factor())
 
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			if (tonumber(button_pos_value:getText()) == nil) then
 				GenericDialog(_("Error"), "The button pos must be a number.")
@@ -1976,7 +1976,7 @@ function EditUnitTypePropertiesTraining(unit_type)
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -1988,51 +1988,51 @@ function EditUnitTypePropertiesSounds(unit_type)
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
-	local sizeX = 352
-	local sizeY = 352
+	local sizeX = 352 * get_scale_factor()
+	local sizeY = 352 * get_scale_factor()
 
 	menu:resize(sizeX, sizeY)
-	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local sound_list = GetSounds()
 	table.insert(sound_list, "") -- for instances where the unit does not have a sound of a particular type
   
-	menu:addLabel(_("Selected:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	local selected_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
-	selected_sound:setSize(236, 20)
+	menu:addLabel(_("Selected:"), 10 * get_scale_factor(), (14 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
+	local selected_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), function(dd) end)
+	selected_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	selected_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "selected")) - 1)
 	
-	menu:addLabel(_("Acknowledge:"), 10, 14 + 36 * 2, Fonts["game"], false)
-	local acknowledge_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
-	acknowledge_sound:setSize(236, 20)
+	menu:addLabel(_("Acknowledge:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
+	local acknowledge_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd) end)
+	acknowledge_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	acknowledge_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "acknowledge")) - 1)
 	
-	menu:addLabel(_("Attack:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	local attack_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) end)
-	attack_sound:setSize(236, 20)
+	menu:addLabel(_("Attack:"), 10 * get_scale_factor(), (14 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
+	local attack_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 3) * get_scale_factor(), function(dd) end)
+	attack_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	attack_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "attack")) - 1)
 	
-	menu:addLabel(_("Ready:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	local ready_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
-	ready_sound:setSize(236, 20)
+	menu:addLabel(_("Ready:"), 10 * get_scale_factor(), (14 + 36 * 4) * get_scale_factor(), Fonts["game"], false)
+	local ready_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 4) * get_scale_factor(), function(dd) end)
+	ready_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	ready_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "ready")) - 1)
 	
-	menu:addLabel(_("Idle:"), 10, 14 + 36 * 5, Fonts["game"], false)
-	local idle_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
-	idle_sound:setSize(236, 20)
+	menu:addLabel(_("Idle:"), 10 * get_scale_factor(), (14 + 36 * 5) * get_scale_factor(), Fonts["game"], false)
+	local idle_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 5) * get_scale_factor(), function(dd) end)
+	idle_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	idle_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "idle")) - 1)
 	
-	menu:addLabel(_("Help:"), 10, 14 + 36 * 6, Fonts["game"], false)
-	local help_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
-	help_sound:setSize(236, 20)
+	menu:addLabel(_("Help:"), 10 * get_scale_factor(), (14 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
+	local help_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), function(dd) end)
+	help_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	help_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "help")) - 1)
 	
-	menu:addLabel(_("Dead:"), 10, 14 + 36 * 7, Fonts["game"], false)
-	local dead_sound = menu:addDropDown(sound_list, (sizeX / 2) - 60 - 10, 11 + 36 * 7, function(dd) end)
-	dead_sound:setSize(236, 20)
+	menu:addLabel(_("Dead:"), 10 * get_scale_factor(), (14 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
+	local dead_sound = menu:addDropDown(sound_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), function(dd) end)
+	dead_sound:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
 	dead_sound:setSelected(GetElementIndexFromArray(sound_list, GetUnitTypeData(unit_type, "Sounds", "dead")) - 1)
 	
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
 			if (GetUnitTypeData(unit_type, "Mod") == CMap.Map.Info.Filename) then
 				local unit_type_definition = {}
@@ -2096,7 +2096,7 @@ function EditUnitTypePropertiesSounds(unit_type)
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", (130 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)
