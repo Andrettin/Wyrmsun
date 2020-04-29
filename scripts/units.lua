@@ -824,7 +824,6 @@ DefineUnitType("unit-copper-deposit", {
 	Parent = "unit-template-deposit",
 	Description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-copper-deposit",
 	GivesResource = "copper",
 	Variations = {
@@ -895,7 +894,6 @@ DefineUnitType("unit-iron-deposit", {
 	Parent = "unit-template-deposit",
 	Description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/iron_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/iron_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-iron-deposit",
 	GivesResource = "iron",
 	Variations = {
@@ -1100,7 +1098,6 @@ DefineUnitType("unit-diamond-deposit", {
 	Parent = "unit-template-deposit",
 	Description = "Diamond deposits contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/diamond_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-diamond-deposit",
 	GivesResource = "diamonds"
 } )
@@ -1276,7 +1273,6 @@ DefineUnitType("unit-silver-rock", {
 DefineUnitType("unit-copper-rock", {
 	Name = "Copper Rock",
 	Image = {"file", "neutral/buildings/copper_rock_1.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/copper_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-copper-rock",
 	Offset = {0, -2},
 	NeutralMinimapColor = {255, 255, 0},
@@ -1300,18 +1296,15 @@ DefineUnitType("unit-copper-rock", {
 		},
 		{
 			"variation-id", "2",
-			"file", "neutral/buildings/copper_rock_2.png",
-			"shadow-file", "neutral/buildings/copper_rock_2_shadow.png"
+			"file", "neutral/buildings/copper_rock_2.png"
 		},
 		{
 			"variation-id", "3",
-			"file", "neutral/buildings/copper_rock_3.png",
-			"shadow-file", "neutral/buildings/copper_rock_3_shadow.png"
+			"file", "neutral/buildings/copper_rock_3.png"
 		},
 		{
 			"variation-id", "4",
-			"file", "neutral/buildings/copper_rock_4.png",
-			"shadow-file", "neutral/buildings/copper_rock_4_shadow.png"
+			"file", "neutral/buildings/copper_rock_4.png"
 		}
 	},
 	Sounds = {
@@ -1325,7 +1318,6 @@ DefineUnitType("unit-copper-rock", {
 DefineUnitType("unit-diamond-rock", {
 	Name = "Diamond Rock",
 	Image = {"file", "neutral/buildings/diamond_rock_1.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/copper_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-diamond-rock",
 	Offset = {0, -2},
 	NeutralMinimapColor = {255, 255, 0},
@@ -1349,18 +1341,15 @@ DefineUnitType("unit-diamond-rock", {
 		},
 		{
 			"variation-id", "2",
-			"file", "neutral/buildings/diamond_rock_2.png",
-			"shadow-file", "neutral/buildings/copper_rock_2_shadow.png"
+			"file", "neutral/buildings/diamond_rock_2.png"
 		},
 		{
 			"variation-id", "3",
-			"file", "neutral/buildings/diamond_rock_3.png",
-			"shadow-file", "neutral/buildings/copper_rock_3_shadow.png"
+			"file", "neutral/buildings/diamond_rock_3.png"
 		},
 		{
 			"variation-id", "4",
-			"file", "neutral/buildings/diamond_rock_4.png",
-			"shadow-file", "neutral/buildings/copper_rock_4_shadow.png"
+			"file", "neutral/buildings/diamond_rock_4.png"
 		}
 	},
 	Sounds = {
@@ -1545,7 +1534,6 @@ DefineUnitType("unit-yale-cave", {
 	Parent = "unit-template-lair",
 	Description = "Yales shelter in the caves and under the cliffs of the rocky world of Nidavellir.",
 	Image = {"file", "neutral/buildings/yale_cave.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/yale_cave_shadow.png", "size", {96, 96}},
 	Icon = "icon-yale-cave",
 	GivesResource = "leather",
 	SpawnUnits = {"unit-yale"},
