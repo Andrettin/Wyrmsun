@@ -558,7 +558,6 @@ DefineUnitType("unit-settlement-site", {
 	Parent = "unit-template-building",
 	Description = "A site which is a prime spot for establishing a settlement.",
 	Image = {"file", "neutral/buildings/settlement_site.png", "size", {128, 128}},
-	Shadow = {"file", "neutral/buildings/settlement_site_shadow.png", "size", {128, 128}},
 	Icon = "icon-settlement-site",
 	NeutralMinimapColor = {128, 128, 0},
 	Construction = "construction-land2",
@@ -1468,7 +1467,6 @@ DefineUnitType("unit-wood-pile", {
 DefineUnitType("unit-stone-pile", {
 	Name = "Stone Pile",
 	Image = {"file", "neutral/buildings/stone_pile.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/stone_pile_shadow.png", "size", {43, 43}},
 	Animations = "animations-decoration", Icon = "icon-stone-pile",
 	NeutralMinimapColor = {92, 92, 92},
 	Costs = {"time", 150},
