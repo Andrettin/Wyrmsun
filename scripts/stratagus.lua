@@ -168,45 +168,6 @@ Load("scripts/resources.lua")
 
 -------------------------------------------------------------------------------
 
-DefinePlayerColorIndex(208, 4)
-
-DefinePlayerColors({
-	"red", {{164, 0, 0}, {124, 0, 0}, {92, 4, 0}, {68, 4, 0}},
-	"blue", {{12, 72, 204}, {4, 40, 160}, {0, 20, 116}, {0, 4, 76}},
-	"green", {{24, 119, 23}, {2, 96, 1}, {2, 61, 1}, {9, 32, 9}},
-	"violet", {{152, 72, 176}, {116, 44, 132}, {80, 24, 88}, {44, 8, 44}},
-	"orange", {{248, 140, 20}, {200, 96, 16}, {152, 60, 16}, {108, 32, 12}},
-	"black", {{40, 40, 60}, {28, 28, 44}, {20, 20, 32}, {12, 12, 20}},
-	"white", {{162, 152, 182}, {118, 103, 141}, {78, 65, 105}, {38, 22, 65}},
-	"yellow", {{147, 164, 21}, {113, 126, 16}, {73, 83, 8}, {48, 53, 11}},
-	"pink", {{164, 21, 97}, {126, 16, 75}, {90, 12, 53}, {55, 0, 28}},
-	"cyan", {{75, 130, 155}, {35, 90, 115}, {11, 50, 69}, {0, 27, 41}},
-	"teal", {{44, 180, 148}, {20, 132, 92}, {4, 84, 44}, {0, 40, 12}},
-	"purple", {{148, 28, 150}, {121, 12, 122}, {87, 1, 88}, {54, 0, 54}},
-	"fire", {{241, 172, 0}, {222, 80, 22}, {185, 0, 0}, {111, 0, 0}},
-	"brown", {{170, 119, 0}, {134, 82, 0}, {98, 47, 0}, {70, 23, 15}},
-	"radioactive", {{248, 254, 1}, {154, 204, 5}, {103, 146, 4}, {51, 74, 2}},
-	"acid", {{229, 11, 217}, {144, 18, 206}, {82, 0, 185}, {42, 0, 111}},
-	"red-2", {{164, 0, 0}, {124, 0, 0}, {92, 4, 0}, {68, 4, 0}},
-	"blue-2", {{12, 72, 204}, {4, 40, 160}, {0, 20, 116}, {0, 4, 76}},
-	"green-2", {{24, 119, 23}, {2, 96, 1}, {2, 61, 1}, {9, 32, 9}},
-	"violet-2", {{152, 72, 176}, {116, 44, 132}, {80, 24, 88}, {44, 8, 44}},
-	"orange-2", {{248, 140, 20}, {200, 96, 16}, {152, 60, 16}, {108, 32, 12}},
-	"black-2", {{40, 40, 60}, {28, 28, 44}, {20, 20, 32}, {12, 12, 20}},
-	"white-2", {{162, 152, 182}, {118, 103, 141}, {78, 65, 105}, {38, 22, 65}},
-	"yellow-2", {{147, 164, 21}, {113, 126, 16}, {73, 83, 8}, {48, 53, 11}},
-	"pink-2", {{164, 21, 97}, {126, 16, 75}, {90, 12, 53}, {55, 0, 28}},
-	"cyan-2", {{75, 130, 155}, {35, 90, 115}, {11, 50, 69}, {0, 27, 41}},
-	"teal-2", {{44, 180, 148}, {20, 132, 92}, {4, 84, 44}, {0, 40, 12}},
-	"purple-2", {{148, 28, 150}, {121, 12, 122}, {87, 1, 88}, {54, 0, 54}},
-	"fire-2", {{241, 172, 0}, {222, 80, 22}, {185, 0, 0}, {111, 0, 0}},
-	"brown-2", {{170, 119, 0}, {134, 82, 0}, {98, 47, 0}, {70, 23, 15}},
-	"radioactive-2", {{248, 254, 1}, {154, 204, 5}, {103, 146, 4}, {51, 74, 2}},
-	"gray", {{116, 104, 99}, {97, 85, 80}, {74, 62, 57}, {48, 36, 31}}
-})
-
-DefineConversiblePlayerColors("violet")
-
 --  If color-cycle-all is off (#f) only the tileset palette is color cycled.
 -- Otherwise (#t) all palettes are color cycled.
 SetColorCycleAll(false)
@@ -1634,7 +1595,7 @@ function LoadData()
 end
 
 function LoadDataDirectories(directory)
-	local data_directories = {"player_colors", "icons", "button_levels", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "spells", "terrain_types", "planes", "worlds", "animations", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "buttons", "campaigns"}
+	local data_directories = {"icons", "button_levels", "time_of_day_schedules", "seasons", "season_schedules", "missile_types", "spells", "terrain_types", "planes", "worlds", "animations", "currencies", "civilizations", "factions", "unit_types", "upgrades", "deity_domains", "schools_of_magic", "religions", "pantheons", "deities", "map_templates", "sites", "characters", "buttons", "campaigns"}
 	
 	-- load the data files directly in the main data directory
 	local fileslist = ListFilesInDirectory(directory)
