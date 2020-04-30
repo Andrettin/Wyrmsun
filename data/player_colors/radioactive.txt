@@ -1,0 +1,9 @@
+radioactive = {
+	name = "Radioactive"
+	colors = {
+		{ 248 254 1 }
+		{ 154 204 5 }
+		{ 103 146 4 }
+		{ 51 74 2 }
+	}
+}
