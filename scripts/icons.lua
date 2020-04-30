@@ -776,54 +776,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-black-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_black.png"
-})
-
-DefineIcon({
-	Name = "icon-blue-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_blue.png"
-})
-
-DefineIcon({
-	Name = "icon-gray-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_gray.png"
-})
-
-DefineIcon({
-	Name = "icon-green-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_green.png"
-})
-
-DefineIcon({
-	Name = "icon-orange-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_orange.png"
-})
-
-DefineIcon({
-	Name = "icon-purple-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_purple.png"
-})
-
-DefineIcon({
-	Name = "icon-red-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_red.png"
-})
-
-DefineIcon({
-	Name = "icon-white-potion",
-	Size = {46, 38},
-	File = "neutral/icons/potion_white.png"
-})
-
-DefineIcon({
 	Name = "icon-cheese",
 	Size = {46, 38},
 	File = "neutral/icons/cheese.png"

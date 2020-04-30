@@ -1,0 +1,39 @@
+icon_black_potion = {
+	file = "icons/neutral/potion_black.png"
+}
+
+icon_blue_potion = {
+	file = "icons/neutral/potion_blue.png"
+}
+
+icon_gray_potion = {
+	file = "icons/neutral/potion_gray.png"
+}
+
+icon_green_potion = {
+	file = "icons/neutral/potion_green.png"
+}
+
+icon_orange_potion = {
+	file = "icons/neutral/potion_orange.png"
+}
+
+icon_pink_potion = {
+	file = "icons/neutral/potion_pink.png"
+}
+
+icon_purple_potion = {
+	file = "icons/neutral/potion_purple.png"
+}
+
+icon_red_potion = {
+	file = "icons/neutral/potion_red.png"
+}
+
+icon_teal_potion = {
+	file = "icons/neutral/potion_teal.png"
+}
+
+icon_white_potion = {
+	file = "icons/neutral/potion_white.png"
+}
