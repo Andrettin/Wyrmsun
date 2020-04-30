@@ -92,18 +92,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-repair",
-	Size = {46, 38},
-	File = "neutral/icons/repair.png"
-})
-
-DefineIcon({
-	Name = "icon-harvest",
-	Size = {46, 38},
-	File = "neutral/icons/harvest.png"
-})
-
-DefineIcon({
 	Name = "icon-attack-ground",
 	Size = {46, 38},
 	File = "neutral/icons/attack_ground.png"
