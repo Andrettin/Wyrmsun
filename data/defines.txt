@@ -1,4 +1,6 @@
 tile_size = { 32 32 }
 icon_size = { 46 38 }
+conversible_player_color = violet
+neutral_player_color = gray
 underground_time_of_day = underground
 documents_modules_loading_enabled = true
