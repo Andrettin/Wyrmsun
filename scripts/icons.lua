@@ -428,12 +428,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-cancel",
-	Size = {46, 38},
-	File = "neutral/icons/cancel.png"
-})
-
-DefineIcon({
 	Name = "icon-left-arrow",
 	Size = {46, 38},
 	File = "neutral/icons/left_arrow.png"

@@ -1,0 +1,7 @@
+icon_cancel = {
+	file = "icons/neutral/cancel.png"
+}
+
+icon_enter = {
+	file = "icons/neutral/enter.png"
+}
