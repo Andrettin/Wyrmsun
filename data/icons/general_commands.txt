@@ -1,3 +1,7 @@
+icon_build_basic_structure = {
+	file = "icons/neutral/build_basic_structure.png"
+}
+
 icon_cancel = {
 	file = "icons/neutral/cancel.png"
 }

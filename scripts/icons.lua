@@ -440,12 +440,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-build-basic-structure",
-	Size = {46, 38},
-	File = "neutral/icons/build_basic_structure.png"
-})
-
-DefineIcon({
 	Name = "icon-wood-plow",
 	Size = {46, 38},
 	File = "neutral/icons/wood_plow.png"
