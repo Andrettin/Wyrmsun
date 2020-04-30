@@ -524,24 +524,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-throwing-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/throwing_axe.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-sharp-throwing-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/sharp_throwing_axe.png"
-})
-
-DefineIcon({
-	Name = "icon-dwarven-bearded-throwing-axe",
-	Size = {46, 38},
-	File = "dwarf/icons/bearded_throwing_axe.png"
-})
-
-DefineIcon({
 	Name = "icon-dwarven-ballista-bolt-1",
 	Size = {46, 38},
 	File = "dwarf/icons/ballista_bolt_1.png"
