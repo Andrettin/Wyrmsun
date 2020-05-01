@@ -516,21 +516,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowResourceBar)
 
-	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16 * get_scale_factor(), offy + (55 + 26*6 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.PopupDescriptionFont == "small") then
-				wyr.preferences.PopupDescriptionFont = "game"
-			elseif (wyr.preferences.PopupDescriptionFont == "game") then
-				wyr.preferences.PopupDescriptionFont = "small"
-			end
-			Load("scripts/ui.lua")
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
-
-	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
+	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.PlayerColorCircle == false) then
 				wyr.preferences.PlayerColorCircle = true
@@ -544,7 +530,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.PlayerColorCircle)
 
-	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16 * get_scale_factor(), offy + (55 + 26*10 + 14) * get_scale_factor(),
+	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowHeroSymbol == false) then -- sort of ugly way to set the preferences for this, should fix later
 				wyr.preferences.ShowHeroSymbol = true
@@ -576,7 +562,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.Autosave)
 
-	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16 * get_scale_factor(), offy + (55 + 26*7 + 14) * get_scale_factor(),
+	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16 * get_scale_factor(), offy + (55 + 26*6 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowPathlines == false) then
 				wyr.preferences.ShowPathlines = true
@@ -590,7 +576,7 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowPathlines)
 
-	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
+	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16 * get_scale_factor(), offy + (55 + 26*7 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowMessages) then
 				wyr.preferences.ShowMessages = false
@@ -617,7 +603,7 @@ function RunVideoOptionsMenu()
 	local offx = (Video.Width - 352 * get_scale_factor()) / 2
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local checkTexture
-	local checkOpenGL
+	local scaling_checkbox
 	local b
 	local resolution_width_list = {"1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
 	local resolution_width_dd
@@ -749,16 +735,16 @@ function RunVideoOptionsMenu()
 	)
 	if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
-	checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
+	scaling_checkbox = menu:addImageCheckBox(_("2x Scale Factor (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
---TODO: Add function for immediately change state of OpenGL
-			wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
-			SavePreferences()
---			menu:stop() --TODO: Enable if we have an OpenGL function
+			if (get_scale_factor_preference() == 1) then
+				set_scale_factor(2)
+			else 
+				set_scale_factor(1)
+			end
 		end
 	)
-	checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
---	checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
+	scaling_checkbox:setMarked(get_scale_factor_preference() == 2)
 
 	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
 		wyr.preferences.EffectsVolume = GetEffectsVolume()
@@ -779,6 +765,7 @@ function RunVideoOptionsMenu()
 		end
 
 		SavePreferences()
+		save_preferences()
 		menu:stop()
 	end)
 

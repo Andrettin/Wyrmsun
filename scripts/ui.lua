@@ -1005,15 +1005,12 @@ if not (ui_loaded_first_time) then
 	})
 
 	function GetRGBA(r, g, b, a)
-		if (wyr.preferences.UseOpenGL == false) then
-			return b + g*0x100 + r*0x10000 + a*0x1000000
-		else
-			return r + g*0x100 + b*0x10000 + a*0x1000000
-		end
+		return r + g*0x100 + b*0x10000 + a*0x1000000
 	end
 
 	local PopupBackgroundColor = GetRGBA(28, 28, 28, 208)
 	local PopupBorderColor = GetRGBA(93, 93, 93, 160)
+	local PopupDescriptionFont = "small"
 
 	local PopupFont = "game"
 
@@ -1021,7 +1018,7 @@ if not (ui_loaded_first_time) then
 		Ident = "popup-commands",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{ 	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -1036,39 +1033,39 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "quest"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Click to accept quest"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Click to accept quest"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				}, 
 				-- Produce Resource
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), " is sold automatically if a Market is present"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), " is sold automatically if a Market is present"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(Concat("Trade Cost: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost"))), "%"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(Concat("Trade Cost: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost"))), "%"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Resource Sell
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
@@ -1084,19 +1081,19 @@ if not (ui_loaded_first_time) then
 							),
 							" Copper"
 						)
-					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Resource Buy
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
@@ -1112,19 +1109,19 @@ if not (ui_loaded_first_time) then
 							),
 							" Copper"
 						)
-					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "buy-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat("Trade Cost: ", Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "buy-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Buy Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceBuyPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Buy Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceBuyPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Salvage Building
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "salvage"},
@@ -1146,7 +1143,7 @@ if not (ui_loaded_first_time) then
 							),
 							"% of the resources used to construct it"
 						),
-						MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+						MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "salvage", Building = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -1164,58 +1161,58 @@ if not (ui_loaded_first_time) then
 							),
 							"% of the resources used to construct it"
 						),
-						MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+						MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Move hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<ALT~>-click to defend a unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<ALT~>-click to defend a unit"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click to stand ground after moving"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click to stand ground after moving"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Attack hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "attack"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "attack"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Click on an empty space to attack-move"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Click on an empty space to attack-move"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Repair hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "repair"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click to toggle auto-repair of damaged buildings"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click to toggle auto-repair of damaged buildings"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click to toggle autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click to toggle autocast"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "sell-resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click to toggle the automatic sale of the resource"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click to toggle the automatic sale of the resource"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter-map-layer"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "enter-map-layer"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Click to change the current map layer to the one this building connects to"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Click to change the current map layer to the one this building connects to"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter-map-layer"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "enter-map-layer"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Hint: You can press ~<CTRL~>-~!L to return to the previous map layer"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Hint: You can press ~<CTRL~>-~!L to return to the previous map layer"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 		}	
 	})
@@ -1225,7 +1222,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -1235,7 +1232,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1246,16 +1243,16 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPoints = "only", Indestructible = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}
 				}, 
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -1310,104 +1307,104 @@ if not (ui_loaded_first_time) then
 								)
 							)
 						)
-					), Font = wyr.preferences.PopupDescriptionFont}}
+					), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {MaxHarvesters = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Supply = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SpeedBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Speed Bonus: "), Variable = "SpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Speed Bonus: "), Variable = "SpeedBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Transport = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonedRangeBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrisoned Range Bonus: "), Variable = "GarrisonedRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrisoned Range Bonus: "), Variable = "GarrisonedRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ResearchSpeedBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {DehydrationImmunity = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Dehydration Immunity", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Regeneration Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Regeneration Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LeadershipAura = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Leadership Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Leadership Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HydratingAura = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Hydrating Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EtherealVision = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Ethereal Vision", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Ethereal Vision", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Resources"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Resources"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "copper"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Copper"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "silver"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Silver"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Silver"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "gold"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Gold"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Gold"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "iron"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Iron"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Iron"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "mithril"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Mithril"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Mithril"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "lumber"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Lumber"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "stone"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Stone"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Stone"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "leather"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Leather"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackFromTransporter = "only", Transport = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonTraining = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrison Training"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {IncreasesLuxuryDemand = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = TypeLuxuryDemand("Type"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "lumber_mill"}, HighlightColor = "yellow",
-					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = "Allows spears and arrows/throwing axes to be sold at the Market", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "smithy"}, HighlightColor = "yellow",
-					More = {"Text", {Text = "Allows swords/axes, shields, tools, horns and jewelry to be sold at the Market", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = "Allows swords/axes, shields, tools, horns and jewelry to be sold at the Market", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {BuildingRulesString = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {BuildingRulesString = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = TypeBuildingRulesString("Type"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = TypeBuildingRulesString("Type"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 		}	
 	})
@@ -1417,7 +1414,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -1433,19 +1430,19 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {RequirementsString = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ExperienceRequirementsString = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ExperienceRequirementsString = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Requirements: "), TypeExperienceRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeExperienceRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "experience-upgrade-to"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "experience-upgrade-to"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1460,7 +1457,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = TypeIdent("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = TypeIdent("Type"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "editor-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1478,37 +1475,37 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{	Condition = {ButtonAction = "train-unit"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<SHIFT~>-click to train 5"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<SHIFT~>-click to train 5"), Font = PopupDescriptionFont}}
 				}, 
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SightRange = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {DaySightRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {NightSightRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackRange = "only", BasicDamage = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -1563,7 +1560,7 @@ if not (ui_loaded_first_time) then
 								)
 							)
 						)
-					), Font = wyr.preferences.PopupDescriptionFont}}
+					), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -1618,7 +1615,7 @@ if not (ui_loaded_first_time) then
 								)
 							)
 						)
-					), Font = wyr.preferences.PopupDescriptionFont}}
+					), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "unit", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -1673,7 +1670,7 @@ if not (ui_loaded_first_time) then
 								)
 							)
 						)
-					), Font = wyr.preferences.PopupDescriptionFont}}
+					), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "buy", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -1728,246 +1725,246 @@ if not (ui_loaded_first_time) then
 								)
 							)
 						)
-					), Font = wyr.preferences.PopupDescriptionFont}}
+					), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Evasion = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ChargeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Charge Bonus: "), Variable = "ChargeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Charge Bonus: "), Variable = "ChargeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Backstab Bonus: "), Variable = "Backstab", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Backstab Bonus: "), Variable = "Backstab", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstMounted = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Bonus vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Bonus vs. Mounted: "), Variable = "BonusAgainstMounted", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstAir = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Bonus vs. Air: "), Variable = "BonusAgainstAir", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Bonus vs. Air: "), Variable = "BonusAgainstAir", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstGiants = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Bonus vs. Giants: "), Variable = "BonusAgainstGiants", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Bonus vs. Giants: "), Variable = "BonusAgainstGiants", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstDragons = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Bonus vs. Dragons: "), Variable = "BonusAgainstDragons", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Bonus vs. Dragons: "), Variable = "BonusAgainstDragons", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstBuildings = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Bonus vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Bonus vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Mugging = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Mugging: "), Variable = "Mugging", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Mugging: "), Variable = "Mugging", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Raiding = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Raiding: "), Variable = "Raiding", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Raiding: "), Variable = "Raiding", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Fire Resistance: "), Variable = "FireResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Fire Resistance: "), Variable = "FireResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Cold Resistance: "), Variable = "ColdResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Cold Resistance: "), Variable = "ColdResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Arcane Resistance: "), Variable = "ArcaneResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Arcane Resistance: "), Variable = "ArcaneResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Lightning Resistance: "), Variable = "LightningResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Lightning Resistance: "), Variable = "LightningResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Air Resistance: "), Variable = "AirResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Air Resistance: "), Variable = "AirResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Earth Resistance: "), Variable = "EarthResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Earth Resistance: "), Variable = "EarthResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Water Resistance: "), Variable = "WaterResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Water Resistance: "), Variable = "WaterResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Hack Resistance: "), Variable = "HackResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Hack Resistance: "), Variable = "HackResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {PierceResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Pierce Resistance: "), Variable = "PierceResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Pierce Resistance: "), Variable = "PierceResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BluntResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Transport = "only", Building = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonedRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Garrisoned Range Bonus: +"), String(TypeVar("GarrisonedRangeBonus", "Value"))), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Garrisoned Range Bonus: +"), String(TypeVar("GarrisonedRangeBonus", "Value"))), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {CopperGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SilverGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GoldGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {IronGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {MithrilGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LumberGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {StoneGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {CoalGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GemsGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {JewelryGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FurnitureGatheringBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TimeEfficiencyBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Time Efficiency Bonus: "), Variable = "TimeEfficiencyBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ResearchSpeedBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Research Speed Bonus: "), Variable = "ResearchSpeedBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Trade Capacity: 100"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "heroic_merchant", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Trade Capacity: 100"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Trade Capacity: 100"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "caravan", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Trade Capacity: 400"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Trade Capacity: 400"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Trade Capacity: 400"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Supply = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Food Supply:"), " "), Variable = "Supply", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeWarfare = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMining = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {DisembarkmentBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {DehydrationImmunity = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Dehydration Immunity", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Dehydration Immunity", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {RegenerationAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Regeneration Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Regeneration Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LeadershipAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Leadership Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Leadership Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HydratingAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Hydrating Aura", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Hydrating Aura", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EtherealVision = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = "Ethereal Vision", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = "Ethereal Vision", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Trader = "only", UnitTypeType = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Trades with foreign markets"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Trades with foreign markets"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Trader = "only", UnitTypeType = "naval", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Trades with foreign docks"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Trades with foreign docks"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Rail = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Can only move over railroads"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Can only move over railroads"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Resources"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Resources"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "copper", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Copper"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Copper"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "silver", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Silver"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Silver"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "gold", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Gold"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Gold"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "iron", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Iron"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Iron"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "mithril", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Mithril"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Mithril"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "lumber", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Lumber"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Lumber"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "stone", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Stone"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Stone"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "false", CanStore = "leather", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stores Leather"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stores Leather"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackFromTransporter = "only", Transport = "only", Building = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Transported Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Transported Can Attack"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackFromTransporter = "only", Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrisoned Can Attack"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonTraining = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Garrison Training"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Garrison Training"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ImproveIncomes = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = TypeImproveIncomes("Type"), Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to edit properties"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to edit properties"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "unit"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Left-click to center"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Left-click to center"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Middle-click to track"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Middle-click to track"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Encyclopedia = true, ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to see encyclopedia"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to see encyclopedia"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 		}	
 	})
@@ -1977,7 +1974,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -1986,7 +1983,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "train-unit", RequirementsString = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1997,107 +1994,107 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPointBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Damage:"), " "), Variable = "BasicDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Damage:"), " "), Variable = "BasicDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Fire Damage: "), Variable = "FireDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Fire Damage: "), Variable = "FireDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Cold Damage: "), Variable = "ColdDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Cold Damage: "), Variable = "ColdDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Arcane Damage: "), Variable = "ArcaneDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Arcane Damage: "), Variable = "ArcaneDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Lightning Damage: "), Variable = "LightningDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Lightning Damage: "), Variable = "LightningDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Air Damage: "), Variable = "AirDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Air Damage: "), Variable = "AirDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Earth Damage: "), Variable = "EarthDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Earth Damage: "), Variable = "EarthDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ChargeBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Charge Bonus: "), String(TypeVar("ChargeBonus","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Charge Bonus: "), String(TypeVar("ChargeBonus","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Mugging = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Mugging: "), String(TypeVar("Mugging","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Mugging: "), String(TypeVar("Mugging","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Raiding = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Raiding: "), String(TypeVar("Raiding","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Raiding: "), String(TypeVar("Raiding","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Fire Resistance: +"), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Fire Resistance: +"), String(TypeVar("FireResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Cold Resistance: +"), String(TypeVar("ColdResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Cold Resistance: +"), String(TypeVar("ColdResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Arcane Resistance: +"), String(TypeVar("ArcaneResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Arcane Resistance: +"), String(TypeVar("ArcaneResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Lightning Resistance: +"), String(TypeVar("LightningResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Lightning Resistance: +"), String(TypeVar("LightningResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Air Resistance: +"), String(TypeVar("AirResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Air Resistance: +"), String(TypeVar("AirResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Earth Resistance: +"), String(TypeVar("EarthResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Earth Resistance: +"), String(TypeVar("EarthResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Water Resistance: +"), String(TypeVar("WaterResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Water Resistance: +"), String(TypeVar("WaterResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hack Resistance: +"), String(TypeVar("HackResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hack Resistance: +"), String(TypeVar("HackResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {PierceResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Pierce Resistance: +"), String(TypeVar("PierceResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Pierce Resistance: +"), String(TypeVar("PierceResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BluntResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Blunt Resistance: +"), String(TypeVar("BluntResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Blunt Resistance: +"), String(TypeVar("BluntResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Speed = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 		}	
 	})
@@ -2107,7 +2104,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -2128,31 +2125,31 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {Equipped = "false", Equippable = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to equip"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Consumable = "only", CanUse = "only", Work = "false", Elixir = "false"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", CanUse = "only", ReadWork = "false"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to read"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", ReadWork = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Already read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Already read"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Elixir = "only", CanUse = "only", ConsumedElixir = "false"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to consume"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Right-click to consume"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Elixir = "only", ConsumedElixir = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Already consumed"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Already consumed"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Bound = "false"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Bound = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Cannot be dropped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Cannot be dropped"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Identified = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2161,43 +2158,43 @@ if not (ui_loaded_first_time) then
 							String(UnitVar("MagicLevel", "Value"))
 						),
 						_(" to identify)")
-					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Weapon = "only", Equippable = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces weapon technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Replaces weapon technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Shield = "only", Equippable = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces shield technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Replaces shield technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Arrows = "only", Equippable = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces arrow technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Replaces arrow technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Type: "), TypeName("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Type: "), TypeName("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Unique Item"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Unique Item"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Literary Work"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Literary Work"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Elixir = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Elixir"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Elixir"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Elixir = "only", HitPoints = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPointBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Regeneration = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2207,10 +2204,10 @@ if not (ui_loaded_first_time) then
 							),
 							String(UnitVar("HitPointBonus", "IncreaseChange"))
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Mana = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Mana: "), Variable = "Mana", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Mana: "), Variable = "Mana", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -2220,31 +2217,31 @@ if not (ui_loaded_first_time) then
 						),
 						String(Add(UnitVar("BasicDamage", "Change"), UnitVar("PiercingDamage", "Change")))
 					),
-					Font = wyr.preferences.PopupDescriptionFont}}
+					Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Fire Damage: "), Variable = "FireDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Fire Damage: "), Variable = "FireDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Cold Damage: "), Variable = "ColdDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Cold Damage: "), Variable = "ColdDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Arcane Damage: "), Variable = "ArcaneDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Arcane Damage: "), Variable = "ArcaneDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Lightning Damage: "), Variable = "LightningDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Lightning Damage: "), Variable = "LightningDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Air Damage: "), Variable = "AirDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Air Damage: "), Variable = "AirDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Earth Damage: "), Variable = "EarthDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Earth Damage: "), Variable = "EarthDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ChargeBonus = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2257,7 +2254,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2270,7 +2267,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {CriticalStrikeChance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2283,7 +2280,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2296,7 +2293,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstAir = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2309,7 +2306,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2322,7 +2319,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstDragons = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2335,7 +2332,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2348,7 +2345,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Mugging = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2361,7 +2358,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Raiding = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2374,7 +2371,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
@@ -2384,16 +2381,16 @@ if not (ui_loaded_first_time) then
 						),
 						String(UnitVar("AttackRange", "Change"))
 					),
-					Font = wyr.preferences.PopupDescriptionFont}}
+					Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Accuracy:"), " "), Variable = "Accuracy", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Armor:"), " "), Variable = "Armor", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Evasion:"), " "), Variable = "Evasion", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2406,7 +2403,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2419,7 +2416,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2432,7 +2429,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2445,7 +2442,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2458,7 +2455,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2471,7 +2468,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2484,7 +2481,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2497,7 +2494,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {PierceResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2510,7 +2507,7 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BluntResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
@@ -2523,102 +2520,102 @@ if not (ui_loaded_first_time) then
 							),
 							"%"
 						),
-						Font = wyr.preferences.PopupDescriptionFont}}
+						Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Speed = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Sight:"), " "), Variable = "SightRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {DaySightRangeBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Day Sight Bonus:"), " "), Variable = "DaySightRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {NightSightRangeBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Night Sight Bonus:"), " "), Variable = "NightSightRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {CopperGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Copper Mining Bonus: "), Variable = "CopperGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {SilverGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Silver Mining Bonus: "), Variable = "SilverGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GoldGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gold Mining Bonus: "), Variable = "GoldGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {IronGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Iron Mining Bonus: "), Variable = "IronGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {MithrilGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Mithril Mining Bonus: "), Variable = "MithrilGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {LumberGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Lumber Gathering Bonus: "), Variable = "LumberGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {StoneGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Stone Gathering Bonus: "), Variable = "StoneGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {CoalGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Coal Mining Bonus: "), Variable = "CoalGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GemsGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Gem Mining Bonus: "), Variable = "GemsGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {JewelryGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Jewelry Production Bonus: "), Variable = "JewelryGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FurnitureGatheringBonus = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Furniture Production Bonus: "), Variable = "FurnitureGatheringBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMining = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Knowledge (Mining): "), Variable = "KnowledgeMining", Font = PopupDescriptionFont}}
 				},
 				-- Knowledge effects
 				{ 	Condition = {KnowledgeMagic = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Every 5 levels in Knowledge (Magic) grant +1 Mana"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Every 5 levels in Knowledge (Magic) grant +1 Mana"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeWarfare = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Every 5 levels in Knowledge (Warfare) grant +1 HP"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Every 5 levels in Knowledge (Warfare) grant +1 HP"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMining = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {KnowledgeMining = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Every 25 levels in Knowledge (Mining) grant +1 Mining Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = _("Every 25 levels in Knowledge (Mining) grant +1 Mining Bonus"), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Set: "), UnitUniqueSet("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Set: "), UnitUniqueSet("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "gray",
-					More = {"Text", {Text = UnitUniqueSetItems("Unit"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitUniqueSetItems("Unit"), Font = PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {Unique = "only", Identified = "only", Quote = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2630,13 +2627,13 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {Unique = "only", Identified = "only", Quote = true}, HighlightColor = "yellow",
-					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
-					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Elixir = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
-					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 		}	
 	})
@@ -2646,7 +2643,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -2656,14 +2653,14 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				-- Already Acquired
 				{ 	Margin = {1, 1}, Condition = {UpgradeResearched = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {UpgradeResearched = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Costs
 				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", UpgradeResearched = "false"},
@@ -2676,36 +2673,36 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				-- Faction Button Information
 				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Civilization: "), FactionCivilization("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Civilization: "), FactionCivilization("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Type: "), FactionType("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Type: "), FactionType("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "gray",
-					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = PopupDescriptionFont}}
 				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				}
 		}	
 	})
@@ -2715,7 +2712,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 			{	HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -2725,21 +2722,21 @@ if not (ui_loaded_first_time) then
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
-				More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 			},
 			-- Already Acquired
 			{ 	Margin = {1, 1}, Condition = {Ability = "false", UpgradeResearched = "only"},
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {Ability = "false", UpgradeResearched = "only"}, HighlightColor = "yellow",
-				More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			},
 			-- Other Information
 			{ 	Margin = {1, 1}, Condition = {Ability = "only", UpgradeResearched = "false"}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {Ability = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
-				More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			},
 			{ 	Condition = {Ability = "only"}, Margin = {1, 1}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2752,14 +2749,14 @@ if not (ui_loaded_first_time) then
 							Concat("/", UpgradeMaxLimit("Upgrade"))
 						)
 					),
-					MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			},
 			-- Description
 			{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			}, 
 			{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 			},
 		}	
 	})
@@ -2769,7 +2766,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 32,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -2784,7 +2781,7 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Building = "only", SettlementName = true, ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2807,7 +2804,7 @@ if not (ui_loaded_first_time) then
 							return trade_potential_description
 						end
 					),
-					Font = wyr.preferences.PopupDescriptionFont}}
+					Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "market", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2830,7 +2827,7 @@ if not (ui_loaded_first_time) then
 							return trade_potential_description
 						end
 					),
-					Font = wyr.preferences.PopupDescriptionFont}}
+					Font = PopupDescriptionFont}}
 				}
 		}	
 	})
@@ -2840,7 +2837,7 @@ if not (ui_loaded_first_time) then
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
-		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		DefaultFont = PopupDescriptionFont,
 		Contents = {
 			{	HighlightColor = "yellow",
 				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
@@ -2849,7 +2846,7 @@ if not (ui_loaded_first_time) then
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			},
 			--[[
 			{ 	Condition = {ButtonValue = "copper", ResearchedUpgradeClass = "coinage"}, HighlightColor = "yellow",
@@ -2858,14 +2855,14 @@ if not (ui_loaded_first_time) then
 							return GetPlayerData(GetThisPlayer(), "Currency")
 						end
 					),
-					Font = wyr.preferences.PopupDescriptionFont}}
+					Font = PopupDescriptionFont}}
 			},
 			--]]
 			{ 	Condition = {ChildResources = "only"}, HighlightColor = "yellow",
-				More = {"Text", {Text = ResourceConversionRates("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = ResourceConversionRates("Resource"), Font = PopupDescriptionFont}}
 			},
 			{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
-				More = {"Text", {Text = ResourceImproveIncomes("Resource"), Font = wyr.preferences.PopupDescriptionFont}}
+				More = {"Text", {Text = ResourceImproveIncomes("Resource"), Font = PopupDescriptionFont}}
 			},
 		}	
 	})

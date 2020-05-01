@@ -1813,6 +1813,7 @@ wyr = {preferences = {}}
 if (CanAccessFile("preferences.lua")) then
 	Load("preferences.lua")
 end
+
 local defaultPreferences = {
 	DoubleClickDelayInMs = 300,     --  For the wanted double-click delay (in ms).
 	EffectsEnabled = true,
@@ -1840,7 +1841,6 @@ local defaultPreferences = {
 	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
-	UseOpenGL = true,
 	VideoFullScreen = false,
 	VideoHeight = 600,
 	VideoWidth = 1066,
@@ -1849,7 +1849,6 @@ local defaultPreferences = {
 	Language = "English",
 	ShowResourceBar = false,
 	ShowHeroSymbol = false,
-	PopupDescriptionFont = "small",
 	Autosave = true,
 	PlayerColorCircle = false,
 	HotkeySetup = 0,
@@ -1900,7 +1899,7 @@ SetKeyScrollSpeed(wyr.preferences.KeyScrollSpeed)
 SetMusicEnabled(wyr.preferences.MusicEnabled)
 SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-SetUseOpenGL(wyr.preferences.UseOpenGL)
+SetUseOpenGL(true)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey

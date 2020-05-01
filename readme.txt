@@ -81,6 +81,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Reduced the time of day color effects, so that the graphics aren't too dark during night.
 - Instead of tiles being owned by a player based on an influence range expanding from the player's buildings, tiles are now assigned to a settlement, and when the player builds a hall on the settlement site ownership of all its tiles are gained.
+- Added 2x scaling option.
+- Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
+- Removed the "Use OpenGL" option, as OpenGL is now always used for rendering.
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
