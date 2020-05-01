@@ -1899,7 +1899,6 @@ SetKeyScrollSpeed(wyr.preferences.KeyScrollSpeed)
 SetMusicEnabled(wyr.preferences.MusicEnabled)
 SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-SetUseOpenGL(true)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
