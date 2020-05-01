@@ -1,3 +1,7 @@
 anvil = {
 	file = "neutral/icons/anvil.png"
 }
+
+icon_chisel = {
+	file = "germanic/icons/chisel.png"
+}

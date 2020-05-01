@@ -1,0 +1,11 @@
+icon_bat = {
+	file = "neutral/icons/bat.png"
+}
+
+icon_blood_bat = {
+	file = "neutral/icons/blood_bat.png"
+}
+
+icon_dread_bat = {
+	file = "neutral/icons/dread_bat.png"
+}

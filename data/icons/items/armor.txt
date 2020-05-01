@@ -1,0 +1,23 @@
+icon_clothing = {
+	file = "neutral/icons/clothing.png"
+}
+
+icon_leather_armor = {
+	file = "neutral/icons/leather_armor.png"
+}
+
+icon_leather_armor_with_belt = {
+	file = "neutral/icons/leather_armor_with_belt.png"
+}
+
+icon_scale_mail = {
+	file = "neutral/icons/scale_mail.png"
+}
+
+icon_chainmail = {
+	file = "neutral/icons/chainmail.png"
+}
+
+icon_plate_mail = {
+	file = "neutral/icons/plate_mail.png"
+}

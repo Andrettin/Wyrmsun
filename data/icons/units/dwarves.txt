@@ -1,0 +1,3 @@
+icon_dwarven_geomancer = {
+	file = "dwarf/icons/geomancer.png"
+}

@@ -1,0 +1,7 @@
+icon_frey = {
+	file = "elf/icons/frey.png"
+}
+
+icon_freyja = {
+	file = "elf/icons/freyja.png"
+}
