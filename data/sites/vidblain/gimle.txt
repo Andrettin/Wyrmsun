@@ -1,0 +1,5 @@
+gimle = {
+	name = "Gimle" #Gimlé
+	map_template = vidblain
+	major = true
+}

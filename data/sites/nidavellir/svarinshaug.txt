@@ -1,0 +1,14 @@
+svarinshaug = {
+	name = "Svarinshaug"
+	map_template = svarinshaug
+	major = true
+	cores = { brising_clan }
+	
+	history = {
+		-2999 = {
+			owner_faction = brising_clan
+			building_classes += town_hall
+		}
+		
+	}
+}
