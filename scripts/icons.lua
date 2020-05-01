@@ -440,18 +440,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-rat",
-	Size = {46, 38},
-	File = "neutral/icons/rat.png"
-})
-
-DefineIcon({
-	Name = "icon-rat-swamp",
-	Size = {46, 38},
-	File = "neutral/icons/rat_swamp.png"
-})
-
-DefineIcon({
 	Name = "icon-horse",
 	Size = {46, 38},
 	File = "neutral/icons/horse.png"
@@ -473,30 +461,6 @@ DefineIcon({
 	Name = "icon-goat",
 	Size = {46, 38},
 	File = "neutral/icons/goat.png"
-})
-
-DefineIcon({
-	Name = "icon-yale",
-	Size = {46, 38},
-	File = "neutral/icons/yale.png"
-})
-
-DefineIcon({
-	Name = "icon-yale-gray-fur",
-	Size = {46, 38},
-	File = "neutral/icons/yale_gray_fur.png"
-})
-
-DefineIcon({
-	Name = "icon-yale-gray-brown-fur",
-	Size = {46, 38},
-	File = "neutral/icons/yale_gray_brown_fur.png"
-})
-
-DefineIcon({
-	Name = "icon-yale-white-fur",
-	Size = {46, 38},
-	File = "neutral/icons/yale_white_fur.png"
 })
 
 DefineIcon({

@@ -1,0 +1,15 @@
+icon_yale = {
+	file = "icons/units/fauna/yale.png"
+}
+
+icon_yale_gray_fur = {
+	file = "icons/units/fauna/yale_gray_fur.png"
+}
+
+icon_yale_gray_brown_fur = {
+	file = "icons/units/fauna/yale_gray_brown_fur.png"
+}
+
+icon_yale_white_fur = {
+	file = "icons/units/fauna/yale_white_fur.png"
+}

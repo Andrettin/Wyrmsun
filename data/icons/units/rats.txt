@@ -1,0 +1,7 @@
+icon_rat = {
+	file = "icons/units/fauna/rat.png"
+}
+
+icon_rat_swamp = {
+	file = "icons/units/fauna/rat_swamp.png"
+}
