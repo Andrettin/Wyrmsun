@@ -66,11 +66,11 @@ function ChooseFaction(old_civilization, old_faction)
 	
 	menu = WarGameMenu(panel(1))
 
-	menu:addLabel(_("Choose Your Faction"), 128, 11)
+	menu:addLabel(_("Choose Your Faction"), 128 * get_scale_factor(), 11 * get_scale_factor())
 	
 	local l
 	
-	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)), 55 + 26*1,
+	faction_dd = menu:addDropDown(faction_name_list, (256 / 2 - (152 / 2)) * get_scale_factor(), (55 + 26*1) * get_scale_factor(),
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
 		if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
@@ -79,22 +79,22 @@ function ChooseFaction(old_civilization, old_faction)
 			l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
 		end
 	end)
-	faction_dd:setSize(152, 20)
+	faction_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	faction_dd:setSelected(0)
 	
 	-- faction effects
 	l = MultiLineLabel()
 	l:setFont(Fonts["game"])
-	l:setSize(228, 192)
-	l:setLineWidth(228)
-	menu:add(l, 14, 3 + (32 * 4))
+	l:setSize(228 * get_scale_factor(), 192 * get_scale_factor())
+	l:setLineWidth(228 * get_scale_factor())
+	menu:add(l, 14 * get_scale_factor(), (3 + (32 * 4)) * get_scale_factor())
 	if (GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade") ~= "") then
 		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))) .. "\n\n" .. _("Effects:") .. " " .. GetUpgradeData(GetFactionData(faction_list[faction_dd:getSelected() + 1], "FactionUpgrade"), "EffectsString"))
 	else
 		l:setCaption(_("Default Color:") .. " " .. _(CapitalizeString(GetFactionData(faction_list[faction_dd:getSelected() + 1], "Color"))))
 	end
 
-	local ok_button = menu:addFullButton(_("~!OK"), "o", 16, 248 - (36 * 0),
+	local ok_button = menu:addFullButton(_("~!OK"), "o", 16 * get_scale_factor(), (248 - (36 * 0)) * get_scale_factor(),
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
