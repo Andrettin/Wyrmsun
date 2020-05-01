@@ -1,0 +1,15 @@
+icon_composite_bow = {
+	file = "magyar/icons/composite_bow.png"
+}
+
+icon_longbow = {
+	file = "welsh/icons/longbow.png"
+}
+
+icon_longbow_2 = {
+	file = "welsh/icons/longbow_2.png"
+}
+
+icon_longbow_3 = {
+	file = "welsh/icons/longbow_3.png"
+}

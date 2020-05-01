@@ -1,0 +1,19 @@
+icon_build_basic_structure = {
+	file = "icons/commands/build_basic_structure.png"
+}
+
+icon_harvest = {
+	file = "icons/commands/harvest.png"
+}
+
+icon_repair = {
+	file = "icons/commands/repair.png"
+}
+
+icon_cancel = {
+	file = "icons/commands/cancel.png"
+}
+
+icon_enter = {
+	file = "icons/commands/enter.png"
+}

@@ -1,11 +1,11 @@
 icon_dwarven_throwing_axe = {
-	file = "icons/dwarven/throwing_axe.png"
+	file = "icons/items/dwarven/throwing_axe.png"
 }
 
 icon_dwarven_sharp_throwing_axe = {
-	file = "icons/dwarven/sharp_throwing_axe.png"
+	file = "icons/items/dwarven/sharp_throwing_axe.png"
 }
 
 icon_dwarven_bearded_throwing_axe = {
-	file = "icons/dwarven/bearded_throwing_axe.png"
+	file = "icons/items/dwarven/bearded_throwing_axe.png"
 }

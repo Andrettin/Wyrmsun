@@ -1,0 +1,15 @@
+icon_barkskin = {
+	file = "neutral/icons/barkskin.png"
+}
+
+icon_infusion = {
+	file = "dwarf/icons/infusion.png"
+}
+
+icon_regeneration = {
+	file = "neutral/icons/regeneration.png"
+}
+
+icon_sandblast = {
+	file = "neutral/icons/sandblast.png"
+}

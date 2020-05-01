@@ -1,7 +1,0 @@
-icon_dwarven_coinage = {
-	file = "icons/dwarven/coinage.png"
-}
-
-icon_suebi_coinage = {
-	file = "icons/suebi/coinage.png"
-}
