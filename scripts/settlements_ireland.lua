@@ -39,7 +39,7 @@ DefineSite("armagh", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"british-isles"}
 })
 
 DefineSite("dublin", {
@@ -59,7 +59,7 @@ DefineSite("dublin", {
 		802, 0, "town_hall",
 		1312, 0, "university" -- University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"british-isles"}
 })
 
 DefineSite("waterford", {
@@ -75,5 +75,5 @@ DefineSite("waterford", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"british-isles"}
 })

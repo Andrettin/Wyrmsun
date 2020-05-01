@@ -40,7 +40,7 @@ DefineSite("aleria", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("aquileia", {
@@ -58,7 +58,7 @@ DefineSite("aquileia", {
 	HistoricalBuildings = {
 		-184, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("ariminum", {
@@ -76,7 +76,7 @@ DefineSite("ariminum", {
 	HistoricalBuildings = {
 		-268, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("bologna", {
@@ -96,7 +96,7 @@ DefineSite("bologna", {
 		-189, 1250, "farm",
 		1250, 0, "university" -- University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("brindisi", {
@@ -115,7 +115,7 @@ DefineSite("brindisi", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("caralis", {
@@ -133,7 +133,7 @@ DefineSite("caralis", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("cosa", {
@@ -150,7 +150,7 @@ DefineSite("cosa", {
 	HistoricalBuildings = {
 		-273, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("cremona", {
@@ -171,7 +171,7 @@ DefineSite("cremona", {
 	HistoricalBuildings = {
 		-218, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("firmum", {
@@ -189,7 +189,7 @@ DefineSite("firmum", {
 	HistoricalBuildings = {
 		-264, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("florence", {
@@ -211,7 +211,7 @@ DefineSite("florence", {
 	HistoricalBuildings = {
 		-750, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("genoa", {
@@ -234,7 +234,7 @@ DefineSite("genoa", {
 	HistoricalBuildings = {
 		-154, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("hatria", {
@@ -252,7 +252,7 @@ DefineSite("hatria", {
 	HistoricalBuildings = {
 		-298, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("luni-sul-mignone", {
@@ -269,7 +269,7 @@ DefineSite("luni-sul-mignone", {
 	HistoricalBuildings = {
 		-1700, -1350, "farm" -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("milan", {
@@ -295,7 +295,7 @@ DefineSite("milan", {
 		768, 0, "temple", -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("modena", {
@@ -316,7 +316,7 @@ DefineSite("modena", {
 	HistoricalBuildings = {
 		-218, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("naples", {
@@ -339,7 +339,7 @@ DefineSite("naples", {
 		-264, 0, "town_hall",
 		1224, 0, "university" -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("novum-castrum", {
@@ -356,7 +356,7 @@ DefineSite("novum-castrum", {
 	HistoricalBuildings = {
 		-283, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("oderzo", {
@@ -373,7 +373,7 @@ DefineSite("oderzo", {
 	HistoricalBuildings = {
 		161, 1815, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("paestum", {
@@ -389,7 +389,7 @@ DefineSite("paestum", {
 	HistoricalBuildings = {
 		-273, 1494, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("palermo", {
@@ -412,7 +412,7 @@ DefineSite("palermo", {
 		-550, 0, "town_hall",
 		1394, 0, "university" -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("piacenza", {
@@ -433,7 +433,7 @@ DefineSite("piacenza", {
 		-218, 1248, "farm",
 		1248, 0, "university" -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("poggiomarino", {
@@ -450,7 +450,7 @@ DefineSite("poggiomarino", {
 	HistoricalBuildings = {
 		-1600, -501, "smithy" -- the settlement of Poggiomarino was inhabited continuously between the 16th and 6th centuries BC; due to environmental reasons the settlement had to be forsaken, at which point they founded the city of Pompeii; Poggiomarino was a major industrial center in southern central Italy; it contained a furnace for copper smelting and mold casts for making bronze objects; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 42-44.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("ravenna", {
@@ -471,7 +471,7 @@ DefineSite("ravenna", {
 		161, 768, "farm",
 		768, 0, "temple" -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("rome", {
@@ -500,7 +500,7 @@ DefineSite("rome", {
 	HistoricalPopulation = {
 		1600, 100000 -- Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("sena-gallica", {
@@ -518,7 +518,7 @@ DefineSite("sena-gallica", {
 	HistoricalBuildings = {
 		-283, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("spoletum", {
@@ -534,7 +534,7 @@ DefineSite("spoletum", {
 	HistoricalBuildings = {
 		-240, 0, "farm"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("syracuse", {
@@ -552,7 +552,7 @@ DefineSite("syracuse", {
 	HistoricalBuildings = {
 		-212, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("venice", {
@@ -574,7 +574,7 @@ DefineSite("venice", {
 	HistoricalBuildings = {
 		-500, 0, "town_hall"
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })
 
 DefineSite("verona", {
@@ -595,5 +595,5 @@ DefineSite("verona", {
 		161, 1815, "farm",
 		1815, 0, "guard_tower" -- Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"europe", "italy", "west-and-central-europe"}
+	Regions = {"italy"}
 })

@@ -25,7 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/regions.lua")
 --Load("scripts/provinces_alfheim.lua")
 --Load("scripts/provinces_earth_africa.lua")
 --Load("scripts/provinces_earth_america.lua")

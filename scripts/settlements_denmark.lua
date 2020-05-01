@@ -51,7 +51,7 @@ DefineSite("aarhus", {
 	HistoricalUnits = {
 		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "ertebolle-tribe"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("brodrene-gram", {
@@ -67,7 +67,7 @@ DefineSite("brodrene-gram", {
 	HistoricalBuildings = {
 		-1500, -1300, "farm" -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("egtved", {
@@ -77,11 +77,7 @@ DefineSite("egtved", {
 	CulturalNames = {
 		"norse", "Egtved"
 	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("legard", {
@@ -101,7 +97,7 @@ DefineSite("legard", {
 		-1600, -1500, "farm",
 		-1500, -1300, "farm" -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("leidre", {
@@ -126,7 +122,7 @@ DefineSite("leidre", {
 	HistoricalBuildings = {
 		-5800, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("store-tyrrestrup", {
@@ -144,7 +140,7 @@ DefineSite("store-tyrrestrup", {
 		-1600, -1500, "farm",
 		-1500, -1300, "farm" -- a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("vejle", {
@@ -160,5 +156,5 @@ DefineSite("vejle", {
 	HistoricalBuildings = {
 		-1600, -1599, "barracks"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })

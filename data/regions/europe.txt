@@ -1,0 +1,78 @@
+europe = {
+}
+
+british_isles = {
+	superregions = { europe }
+	
+	#The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
+}
+
+england = {
+	superregions = { british_isles }
+}
+
+scotland = {
+	superregions = { british_isles }
+}
+
+austria = {
+	superregions = { europe }
+}
+
+baltic_countries = {
+	superregions = { europe }
+}
+
+cisleithania = {
+	superregions = { europe }
+}
+
+czechoslovakia = {
+	superregions = { europe cisleithania }
+}
+
+france = {
+	superregions = { europe }
+}
+
+gaul = {
+	superregions = { europe }
+}
+
+germany = {
+	superregions = { europe }
+}
+
+greece = {
+	superregions = { europe }
+	
+	#3 million people lived in Greece at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+}
+
+iberia = {
+	superregions = { europe }
+}
+
+italy = {
+	superregions = { europe }
+}
+
+low_countries = {
+	superregions = { europe }
+}
+
+belgium = {
+	superregions = { low_countries gaul }
+}
+
+netherlands = {
+	superregions = { low_countries }
+}
+
+poland = {
+	superregions = { europe }
+}
+
+scandinavia = {
+	superregions = { europe }
+}

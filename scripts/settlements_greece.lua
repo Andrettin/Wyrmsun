@@ -41,7 +41,7 @@ DefineSite("aghia-irini", {
 		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 		
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("amyclae", {
@@ -57,7 +57,7 @@ DefineSite("amyclae", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("aphidnae", {
@@ -74,7 +74,7 @@ DefineSite("aphidnae", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("argos", {
@@ -90,7 +90,7 @@ DefineSite("argos", {
 	HistoricalBuildings = {
 		-700, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("athens", {
@@ -116,7 +116,7 @@ DefineSite("athens", {
 		-700, 0, "town_hall"
 		
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("byzantium", {
@@ -135,7 +135,7 @@ DefineSite("byzantium", {
 	HistoricalBuildings = {
 		-500, 0, "town_hall"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("corinth", {
@@ -155,7 +155,7 @@ DefineSite("corinth", {
 	HistoricalBuildings = {
 		-1450, -146, "town_hall"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("coulas", {
@@ -171,7 +171,7 @@ DefineSite("coulas", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("delos", {
@@ -190,7 +190,7 @@ DefineSite("delos", {
 		-113, -88, "temple", "hermaistes-apolloniastes-poseidoniastes" -- The "Hermaistes, Apolloniastes, Poseidoniastes" Roman society was founded in Delos around 113 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 		-- Roman freedmen and slaves founded a society for the worship of the "lares compitales" around 100 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("delphi", {
@@ -206,7 +206,7 @@ DefineSite("delphi", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("dicte", {
@@ -222,7 +222,7 @@ DefineSite("dicte", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("eleusis", {
@@ -239,7 +239,7 @@ DefineSite("eleusis", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("epidaurus", {
@@ -256,7 +256,7 @@ DefineSite("epidaurus", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("gerenia", {
@@ -272,7 +272,7 @@ DefineSite("gerenia", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("ialysus", {
@@ -288,7 +288,7 @@ DefineSite("ialysus", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("iolcus", {
@@ -304,7 +304,7 @@ DefineSite("iolcus", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("itanus", {
@@ -320,7 +320,7 @@ DefineSite("itanus", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("knossos", {
@@ -338,7 +338,7 @@ DefineSite("knossos", {
 	HistoricalBuildings = {
 		-1450, 0, "town_hall"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("krisa", {
@@ -355,7 +355,7 @@ DefineSite("krisa", {
 	HistoricalBuildings = {
 		-1700, -1190, "guard_tower"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("mycenae", {
@@ -372,7 +372,7 @@ DefineSite("mycenae", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("orchomenus", {
@@ -388,7 +388,7 @@ DefineSite("orchomenus", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("pagasae", {
@@ -404,7 +404,7 @@ DefineSite("pagasae", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("phylakopi", {
@@ -423,7 +423,7 @@ DefineSite("phylakopi", {
 		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 		
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("sicyon", {
@@ -439,7 +439,7 @@ DefineSite("sicyon", {
 	HistoricalBuildings = {
 		-700, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("thebes", {
@@ -458,7 +458,7 @@ DefineSite("thebes", {
 	HistoricalBuildings = {
 		-1450, 0, "town_hall"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 
 DefineSite("tiryns", {
@@ -475,6 +475,6 @@ DefineSite("tiryns", {
 	HistoricalBuildings = {
 		-1450, 0, "farm"
 	},
-	Regions = {"europe", "greece", "west-and-central-europe"}
+	Regions = {"greece"}
 })
 

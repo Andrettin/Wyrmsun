@@ -44,7 +44,7 @@ DefineSite("barcelona", {
 		395, 0, "temple", -- Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1430, 1717, "university" -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("burgos", {
@@ -62,7 +62,7 @@ DefineSite("burgos", {
 	HistoricalBuildings = {
 		910, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("cadiz", {
@@ -84,7 +84,7 @@ DefineSite("cadiz", {
 	HistoricalBuildings = {
 		-218, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("calahorra", {
@@ -102,7 +102,7 @@ DefineSite("calahorra", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Calahorra was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("cartagena", {
@@ -125,7 +125,7 @@ DefineSite("cartagena", {
 		-218, 395, "farm",
 		395, 0, "temple" -- Cartagena was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("cordoba", {
@@ -146,7 +146,7 @@ DefineSite("cordoba", {
 		-197, 1572, "farm",
 		1572, 0, "university" -- Minor university founded in Cordoba in 1572; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("gerona", {
@@ -165,7 +165,7 @@ DefineSite("gerona", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Gerona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("granada", {
@@ -182,7 +182,7 @@ DefineSite("granada", {
 	HistoricalBuildings = {
 		1526, 0, "university" -- University founded in Granada in 1526 (as given by Martínez Ruiz and Maqueda, The Cambridge Modern History Atlas gives 1531 instead), containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("lerida", {
@@ -199,7 +199,7 @@ DefineSite("lerida", {
 	HistoricalBuildings = {
 		1300, 0, "university" -- Major university founded in Lerida in 1300; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("malaga", {
@@ -218,7 +218,7 @@ DefineSite("malaga", {
 	HistoricalBuildings = {
 		-201, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("merida", {
@@ -237,7 +237,7 @@ DefineSite("merida", {
 	HistoricalBuildings = {
 		-138, 0, "town_hall"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("munda", {
@@ -255,7 +255,7 @@ DefineSite("munda", {
 	HistoricalBuildings = {
 		-197, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("murcia", {
@@ -273,7 +273,7 @@ DefineSite("murcia", {
 		1614, 1806, "university" -- Minor university founded in Murcia in 1614; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		-- Minor university abolished in Murcia in 1806; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("orihuela", {
@@ -291,7 +291,7 @@ DefineSite("orihuela", {
 		1552, 1807, "university" -- Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		-- Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("saguntum", {
@@ -311,7 +311,7 @@ DefineSite("saguntum", {
 	HistoricalBuildings = {
 		-218, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("seville", {
@@ -331,7 +331,7 @@ DefineSite("seville", {
 		-201, 1504, "farm",
 		1504, 0, "university" -- Major university founded in Seville in 1504; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("tarragona", {
@@ -351,7 +351,7 @@ DefineSite("tarragona", {
 		-201, 395, "farm",
 		395, 0, "temple" -- Tarragona was the seat of an archbishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("toledo", {
@@ -372,7 +372,7 @@ DefineSite("toledo", {
 		-197, 0, "town_hall",
 		1474, 1807, "university" -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("tortosa", {
@@ -393,7 +393,7 @@ DefineSite("tortosa", {
 		1645, 1717, "university", -- Minor university founded in Tortosa in 1645; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1717, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("valencia", {
@@ -414,7 +414,7 @@ DefineSite("valencia", {
 		-201, 1500, "farm",
 		1500, 0, "university" -- University founded in Valencia in 1500; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("zaragoza", {
@@ -436,5 +436,5 @@ DefineSite("zaragoza", {
 		395, 0, "temple", -- Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1474, 0, "university" -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })

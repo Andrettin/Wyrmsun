@@ -39,7 +39,7 @@ DefineSite("mitau", {
 	HistoricalBuildings = {
 		-9000, 0, "town_hall"
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"baltic_countries"}
 })
 
 DefineSite("riga", {
@@ -57,7 +57,7 @@ DefineSite("riga", {
 	HistoricalBuildings = {
 		-9000, 0, "town_hall"
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"baltic_countries"}
 })
 
 DefineSite("tallinn", {
@@ -76,5 +76,5 @@ DefineSite("tallinn", {
 	HistoricalBuildings = {
 		-9000, 0, "town_hall"
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"baltic_countries"}
 })

@@ -38,7 +38,7 @@ DefineSite("gradisca", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
+	Regions = {"cisleithania", "italy"}
 })
 
 DefineSite("gorz", {
@@ -54,7 +54,7 @@ DefineSite("gorz", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
+	Regions = {"cisleithania", "italy"}
 })
 
 DefineSite("pola", {
@@ -72,7 +72,7 @@ DefineSite("pola", {
 		1477, 1815, "farm",
 		1815, 0, "guard_tower" -- Pola had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("trieste", {
@@ -104,5 +104,5 @@ DefineSite("trieste", {
 		1838, 54387, -- Trieste's population was 54,387 in 1838; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
 		1853, 60860 -- Trieste's population was 60,860 in 1853; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "italy", "west-and-central-europe"}
+	Regions = {"cisleithania", "italy"}
 })

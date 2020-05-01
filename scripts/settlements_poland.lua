@@ -42,7 +42,7 @@ DefineSite("gdansk", {
 	HistoricalBuildings = {
 		1560, 0, "town_hall"
 	},
-	Regions = {"europe", "poland", "west-and-central-europe"}
+	Regions = {"poland"}
 })
 
 DefineSite("gniezno", {
@@ -62,7 +62,7 @@ DefineSite("gniezno", {
 	HistoricalBuildings = {
 		1560, 0, "town_hall"
 	},
-	Regions = {"europe", "poland", "west-and-central-europe"}
+	Regions = {"poland"}
 })
 
 DefineSite("kolberg", {
@@ -83,7 +83,7 @@ DefineSite("kolberg", {
 	HistoricalBuildings = {
 		1648, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("konigsberg", {
@@ -106,7 +106,7 @@ DefineSite("konigsberg", {
 		1544, 0, "town_hall",
 		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("krakow", {
@@ -129,7 +129,7 @@ DefineSite("krakow", {
 		1364, 0, "town_hall",
 		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"cisleithania", "europe", "poland", "west-and-central-europe"}
+	Regions = {"cisleithania", "poland"}
 })
 
 DefineSite("poznan", {
@@ -149,7 +149,7 @@ DefineSite("poznan", {
 	HistoricalBuildings = {
 		1560, 0, "town_hall"
 	},
-	Regions = {"europe", "poland", "west-and-central-europe"}
+	Regions = {"poland"}
 })
 
 DefineSite("szczecin", {
@@ -172,5 +172,5 @@ DefineSite("szczecin", {
 	HistoricalBuildings = {
 		1648, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })

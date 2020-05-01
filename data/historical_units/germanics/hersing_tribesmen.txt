@@ -1,0 +1,39 @@
+hersing_warriors = {
+	name = "Hersing Warriors"
+	unit_type = unit_germanic_warrior
+	quantity = 6
+	
+	history = {
+		-1600 = {
+			active = true
+			faction = hersing_tribe
+			location = {
+				site = kiel
+			}
+		}
+		
+		-1599 = {
+			active = false
+		}
+	}
+}
+
+hersing_archers = {
+	name = "Hersing Archers"
+	unit_type = unit_germanic_archer
+	quantity = 3
+	
+	history = {
+		-1600 = {
+			active = true
+			faction = hersing_tribe
+			location = {
+				site = kiel
+			}
+		}
+		
+		-1599 = {
+			active = false
+		}
+	}
+}

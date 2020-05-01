@@ -47,7 +47,7 @@ DefineSite("goteborg", {
 	HistoricalBuildings = {
 		{-2800, 12, 30}, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("malmo", {
@@ -76,7 +76,7 @@ DefineSite("malmo", {
 	HistoricalUnits = {
 		-3000, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "gylfing-tribe"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("roma-gotland", {
@@ -92,7 +92,7 @@ DefineSite("roma-gotland", {
 	HistoricalBuildings = {
 		{1164, 9, 9}, 0, "temple", "cistercian-order" -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("sigtun", {
@@ -111,7 +111,7 @@ DefineSite("sigtun", {
 	HistoricalBuildings = {
 		{-2800, 12, 30}, 0, "temple" -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("stockholm", {
@@ -134,7 +134,7 @@ DefineSite("stockholm", {
 	HistoricalBuildings = {
 		{-2800, 12, 30}, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("torsburgen", {
@@ -150,7 +150,7 @@ DefineSite("torsburgen", {
 	HistoricalBuildings = {
 		300, 1100, "watch_tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("uppsala", {
@@ -167,7 +167,7 @@ DefineSite("uppsala", {
 		1164, 1477, "temple", -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
 		1477, 0, "university" -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("vastervik", {
@@ -181,7 +181,7 @@ DefineSite("vastervik", {
 	},
 	HistoricalBuildings = {
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("visby", {
@@ -201,7 +201,7 @@ DefineSite("visby", {
 	HistoricalBuildings = {
 		1560, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("vitemolla", {
@@ -217,5 +217,5 @@ DefineSite("vitemolla", {
 	HistoricalBuildings = {
 		-1700, -500, "temple", "heimdalls-stones" -- the archaeoastronomical observatory termed by archaeologists as "Heimdall's Stones" was constructed and in use during the Bronze Age; between 600 and 500 BC it was covered by sands; Source: Nils-Axel Mörner, Bob G. Lind, Göran Possnert, "Heimdall's Stones at Vitemölla in SE Sweden and the Chronology and Stratigraphy of the Surroundings", 2009, pp. 209-212.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })

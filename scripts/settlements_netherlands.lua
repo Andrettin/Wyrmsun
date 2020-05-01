@@ -47,7 +47,7 @@ DefineSite("amsterdam", {
 		1877, 0, "university" -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		-- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"netherlands"}
 })
 
 DefineSite("franeker", {
@@ -64,7 +64,7 @@ DefineSite("franeker", {
 	HistoricalBuildings = {
 		1585, 0, "university" -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"netherlands"}
 })
 
 DefineSite("leeuwarden", {
@@ -86,7 +86,7 @@ DefineSite("leeuwarden", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"netherlands"}
 })
 
 DefineSite("wijk-bij-duurstede", {
@@ -107,5 +107,5 @@ DefineSite("wijk-bij-duurstede", {
 	HistoricalBuildings = {
 		692, 0, "temple" -- Swithberht was consecrated bishop with seat at Wijk bij Duurstede in 692/693 by Wilfrid of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
 	},
-	Regions = {"europe", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"netherlands"}
 })

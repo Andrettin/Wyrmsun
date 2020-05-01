@@ -49,7 +49,7 @@ DefineSite("buda", {
 		-5500, 474, "town_hall",
 		919, 0, "town_hall"
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("pest", {
@@ -72,5 +72,5 @@ DefineSite("pest", {
 		1389, 0, "university", -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- the Eötvös College was founded in Budapest in 1896 by baron Loránd Eötvös; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })

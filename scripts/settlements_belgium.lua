@@ -38,7 +38,7 @@ DefineSite("duisburg", {
 	HistoricalBuildings = {
 		{486, 12, 30}, 0, "farm"
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"belgium"}
 })
 
 DefineSite("echternach", {
@@ -58,7 +58,7 @@ DefineSite("echternach", {
 	HistoricalBuildings = {
 		739, 0, "temple" -- a monastery under the protection of Francia existed in Echternach as of 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"belgium"}
 })
 
 DefineSite("tongres", {
@@ -80,7 +80,7 @@ DefineSite("tongres", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Tongres was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"belgium"}
 })
 
 DefineSite("tournai", {
@@ -102,5 +102,5 @@ DefineSite("tournai", {
 	HistoricalBuildings = {
 		481, 0, "town_hall"
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "northwest-europe", "west-and-central-europe"}
+	Regions = {"belgium"}
 })

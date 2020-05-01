@@ -40,5 +40,5 @@ DefineSite("helsinki", {
 	HistoricalBuildings = {
 		1560, 0, "town_hall"
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })

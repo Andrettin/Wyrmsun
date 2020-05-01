@@ -44,7 +44,7 @@ DefineSite("fiume", {
 		1719, 0, "dock", -- Karl VI of the Holy Roman Empire made Fiume/Rijeka a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 464.
 		1750, 0, "dock", "haubt-handlungs-compagnie-von-triest-und-fiume" -- "Haubt-Handlungs-Compagnie von Triest und Fiume" founded in 1750; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("narona", {
@@ -60,7 +60,7 @@ DefineSite("narona", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("zagreb", {
@@ -85,6 +85,6 @@ DefineSite("zagreb", {
 		1477, 0, "town_hall",
 		1874, 0, "university" -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 

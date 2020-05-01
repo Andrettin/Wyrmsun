@@ -38,7 +38,7 @@ DefineSite("adelsberg", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("bruck", {
@@ -54,7 +54,7 @@ DefineSite("bruck", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("carnuntum", {
@@ -76,7 +76,7 @@ DefineSite("carnuntum", {
 	HistoricalUnits = {
 		170, 171, "unit-teuton-swordsman", 20000, "rome" -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
 	},
-	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("cilli", {
@@ -92,7 +92,7 @@ DefineSite("cilli", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("gastein", {
@@ -108,7 +108,7 @@ DefineSite("gastein", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("gossensass", {
@@ -128,7 +128,7 @@ DefineSite("gossensass", {
 	HistoricalResources = {
 		0, 0, "unit-silver-deposit", 0
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("graz", {
@@ -148,7 +148,7 @@ DefineSite("graz", {
 		1477, 0, "town_hall",
 		1585, 0, "university" -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("innsbruck", {
@@ -166,7 +166,7 @@ DefineSite("innsbruck", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("klagenfurt", {
@@ -184,7 +184,7 @@ DefineSite("klagenfurt", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("linz", {
@@ -202,7 +202,7 @@ DefineSite("linz", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("ljubljana", {
@@ -222,7 +222,7 @@ DefineSite("ljubljana", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("marburg", {
@@ -239,7 +239,7 @@ DefineSite("marburg", {
 	HistoricalBuildings = {
 		1477, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("salzburg", {
@@ -261,7 +261,7 @@ DefineSite("salzburg", {
 		739, 0, "temple" -- Salzburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 		-- archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("trent", {
@@ -277,7 +277,7 @@ DefineSite("trent", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("vienna", {
@@ -310,7 +310,7 @@ DefineSite("vienna", {
 	HistoricalPopulation = {
 		1844, 374378, -- the Austrian Kreis of "Haupt- und Residenstadt Wien" had 374,378 inhabitants in 1844 (excluding military personnel); Source: "Tafeln zur Statistik der österreichischen Monarchie für das Jahr 1844", 1848, Tafel 50.
 	},
-	Regions = {"europe", "west-and-central-europe", "roman-danube", "germany-netherlands", "cisleithania"}
+	Regions = {"cisleithania", "austria"}
 })
 
 DefineSite("villach", {
@@ -326,6 +326,6 @@ DefineSite("villach", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"cisleithania", "austria"}
 })
 

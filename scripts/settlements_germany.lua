@@ -46,7 +46,7 @@ DefineSite("augsburg", {
 		170, 172, "farm",
 		1815, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("berlin", {
@@ -72,7 +72,7 @@ DefineSite("berlin", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("bernstorf", { -- Bernstorf, Bavaria
@@ -89,7 +89,7 @@ DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	HistoricalBuildings = {
 		-1600, -1400, "watch_tower" -- a fortified settlement existed c. 1600-1400 BC in Bernstorf (Bavaria); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 29.
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("bremen", {
@@ -114,7 +114,7 @@ DefineSite("bremen", {
 		-264, 0, "town_hall",
 		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("cologne", {
@@ -147,7 +147,7 @@ DefineSite("cologne", {
 		1388, 0, "university", -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1815, 0, "stronghold" -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"gaul", "germany"}
 })
 
 DefineSite("eichstatt", {
@@ -163,7 +163,7 @@ DefineSite("eichstatt", {
 	HistoricalBuildings = {
 		741, 0, "temple" -- the bishopric of Eichstätt existed as of 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("eining", {
@@ -180,7 +180,7 @@ DefineSite("eining", {
 	HistoricalUnits = {
 		173, 179, "unit-teuton-swordsman", 5000, "rome" -- the "Legio III Italica" was stationed at the location of Eining from c. 173 to 179; Source: "Ancient Warfare VII.6", 2013, p. 25.
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("eresburg", {
@@ -198,7 +198,7 @@ DefineSite("eresburg", {
 	HistoricalBuildings = {
 		775, 1815, "guard_tower"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("flensburg", {
@@ -219,7 +219,7 @@ DefineSite("flensburg", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("freising", {
@@ -235,7 +235,7 @@ DefineSite("freising", {
 	HistoricalBuildings = {
 		739, 0, "temple" -- Freising became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("fulda", {
@@ -255,7 +255,7 @@ DefineSite("fulda", {
 	HistoricalBuildings = {
 		744, 0, "temple" -- the abbey of Fulda was founded on 744 by Boniface; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 172.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("hamburg", {
@@ -277,7 +277,7 @@ DefineSite("hamburg", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("hanover", {
@@ -300,7 +300,7 @@ DefineSite("hanover", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("karlsruhe", {
@@ -327,48 +327,7 @@ DefineSite("karlsruhe", {
 		-71, -61, "unit-suebi-swordsman", 15000, "suebi-tribe" -- 15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
-})
-
-DefineSite("kiel", {
-	Name = "Kiel",
-	MapTemplate = "earth",
-	Position = {4068, 811},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Kiel"
-	},
-	Cores = {
-		"hersing-tribe",
-		"teuton-tribe",
-		"germany", -- Kiel was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Kiel was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-2800, "asa-tribe",
-		-1600, "hersing-tribe", -- Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
-		-264, "teuton-tribe", -- Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1815, "denmark" -- Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-1600, 0, "town_hall",
-		-1600, 1815, "farm",
-		-1600, 1815, "farm",
-		-1600, 1815, "farm",
---		-1600, 1815, "barracks", -- remove to prevent them from training troops
---		-1600, 1815, "smithy", -- remove to prevent them from changing faction
-		-1600, 1815, "lumber_mill",
-		-1600, 1815, "watch_tower",
-		-1600, 1815, "watch_tower"
-	},
-	HistoricalUnits = {
-		-2800, {-2800, 12, 30}, "unit-germanic-worker", 5000, "asa-tribe",
-		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 2000, "asa-tribe",
-		-2800, {-2800, 12, 30}, "unit-germanic-archer", 1000, "asa-tribe",
-		-1600, -1599, "unit-germanic-warrior", 6000, "hersing-tribe",
-		-1600, -1599, "unit-germanic-archer", 3000, "hersing-tribe"
-	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("konnenberg", {
@@ -384,7 +343,7 @@ DefineSite("konnenberg", {
 	HistoricalBuildings = {
 		526, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("konstanz", {
@@ -405,7 +364,7 @@ DefineSite("konstanz", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("lubeck", {
@@ -427,7 +386,7 @@ DefineSite("lubeck", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("magdeburg", {
@@ -453,7 +412,7 @@ DefineSite("magdeburg", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("mainz", {
@@ -487,7 +446,7 @@ DefineSite("mainz", {
 		1476, 0, "university" -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"gaul", "germany"}
 })
 
 DefineSite("mittelberg", {
@@ -504,7 +463,7 @@ DefineSite("mittelberg", {
 	HistoricalBuildings = {
 		-1600, -1599, "watch_tower" -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("munster", {
@@ -528,7 +487,7 @@ DefineSite("munster", {
 	HistoricalBuildings = {
 		-264, 0, "town_hall"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("nuremberg", {
@@ -549,7 +508,7 @@ DefineSite("nuremberg", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("oldenburg", {
@@ -573,7 +532,7 @@ DefineSite("oldenburg", {
 		-3950, -3000, "farm",
 		-264, -0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("paderborn", {
@@ -590,7 +549,7 @@ DefineSite("paderborn", {
 		919, 1614, "farm",
 		1614, 0, "university" -- University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("passau", {
@@ -607,7 +566,7 @@ DefineSite("passau", {
 	HistoricalBuildings = {
 		739, 0, "temple" -- Passau became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("regensburg", {
@@ -640,7 +599,7 @@ DefineSite("regensburg", {
 		170, 172, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		170, 172, "unit-teuton-ritter", 125, "rome"
 	},
-	Regions = {"europe", "germany-netherlands", "roman-danube", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("rostock", {
@@ -661,7 +620,7 @@ DefineSite("rostock", {
 	HistoricalBuildings = {
 		1419, 0, "university" -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("scheidungen", {
@@ -677,7 +636,7 @@ DefineSite("scheidungen", {
 	HistoricalBuildings = {
 		526, 0, "farm"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("schwerin", {
@@ -695,7 +654,7 @@ DefineSite("schwerin", {
 	},
 	HistoricalBuildings = {
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("straubing", {
@@ -718,7 +677,7 @@ DefineSite("straubing", {
 		170, 172, "unit-teuton-swordsman", 500, "rome", -- the "Cohors II Raetorum" (a unit containing 500 infantry) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		170, 172, "unit-teuton-archer", 1000, "rome" -- the "Cohors I Flavia Canathenorum milliaria sagittariorum" (a unit containing 1,000 Syrian archers) was stationed at Straubing when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("syburg", {
@@ -736,7 +695,7 @@ DefineSite("syburg", {
 	HistoricalBuildings = {
 		775, 1815, "guard_tower"
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("tauberbischofsheim", {
@@ -753,7 +712,7 @@ DefineSite("tauberbischofsheim", {
 	HistoricalBuildings = {
 		754, 0, "temple" -- the abbey of Tauberbischofsheim existed as of 754; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
 	},
-	Regions = {"europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"germany"}
 })
 
 DefineSite("trier", {
@@ -782,7 +741,7 @@ DefineSite("trier", {
 		-- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1454, 0, "university" -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"gaul", "germany"}
 })
 
 DefineSite("worms", {
@@ -811,7 +770,7 @@ DefineSite("worms", {
 		395, 0, "town_hall",
 		395, 0, "temple" -- Worms was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"gaul", "germany"}
 })
 
 DefineSite("zulpich", {
@@ -829,5 +788,5 @@ DefineSite("zulpich", {
 	HistoricalBuildings = {
 		{486, 12, 30}, 0, "farm"
 	},
-	Regions = {"europe", "gaul", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"gaul", "germany"}
 })

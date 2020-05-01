@@ -33,9 +33,5 @@ DefineSite("simferopol", {
 	CulturalNames = {
 		"slav", "Simferopol"
 	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"eurasia", "europe"}
+	Regions = {"europe"}
 })

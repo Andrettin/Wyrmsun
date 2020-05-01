@@ -40,7 +40,7 @@ DefineSite("apulum", {
 		107, 161, "farm",
 		161, 275, "guard_tower" -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("temesvar", {
@@ -58,5 +58,5 @@ DefineSite("temesvar", {
 		1759, 0, "market", "temisvarer-privilegierte-handelskompagnie" -- "Temisvarer privilegierte Handelskompagnie" founded in 1759, with triple direction in Vienna, Trieste and Temesvar; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
 		1815, 0, "stronghold", -- Temesvar had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"europe", "west-and-central-europe"}
+	Regions = {"europe"}
 })

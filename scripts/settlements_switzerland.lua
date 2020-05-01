@@ -43,7 +43,7 @@ DefineSite("geneva", {
 		395, 0, "town_hall",
 		395, 0, "temple" -- Geneva was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("martigny", {
@@ -62,7 +62,7 @@ DefineSite("martigny", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Martigny was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })
 
 DefineSite("vindonissa", {
@@ -81,5 +81,5 @@ DefineSite("vindonissa", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Vindonissa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "roman-danube", "west-and-central-europe"}
+	Regions = {"europe"}
 })

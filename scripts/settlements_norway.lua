@@ -43,7 +43,7 @@ DefineSite("arendal", {
 	HistoricalBuildings = {
 		841, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("gjerstad", {
@@ -63,7 +63,7 @@ DefineSite("gjerstad", {
 	HistoricalBuildings = {
 		824, 0, "farm" -- Geirstadir was a farm; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("hamar", {
@@ -85,7 +85,7 @@ DefineSite("hamar", {
 	HistoricalBuildings = {
 		841, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("hermansverk", {
@@ -106,7 +106,7 @@ DefineSite("hermansverk", {
 	HistoricalBuildings = {
 		841, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("oslo", {
@@ -127,7 +127,7 @@ DefineSite("oslo", {
 	HistoricalBuildings = {
 		824, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })
 
 DefineSite("tonsberg", {
@@ -148,5 +148,5 @@ DefineSite("tonsberg", {
 	HistoricalBuildings = {
 		841, 0, "town_hall"
 	},
-	Regions = {"europe", "scandinavia", "west-and-central-europe"}
+	Regions = {"scandinavia"}
 })

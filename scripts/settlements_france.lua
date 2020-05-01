@@ -45,7 +45,7 @@ DefineSite("amiens", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("antibes", {
@@ -63,7 +63,7 @@ DefineSite("antibes", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("arles", {
@@ -84,7 +84,7 @@ DefineSite("arles", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Arles was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("autun", {
@@ -104,7 +104,7 @@ DefineSite("autun", {
 	HistoricalBuildings = {
 		481, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("avignon", {
@@ -123,7 +123,7 @@ DefineSite("avignon", {
 		561, 1303, "farm",
 		1303, 0, "university" -- University founded in Avignon in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("besancon", {
@@ -155,7 +155,7 @@ DefineSite("besancon", {
 		-71, -61, "unit-teuton-swordsman", 6000, "sequani-tribe",
 		-71, -61, "unit-teuton-archer", 3000, "sequani-tribe",
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("bordeaux", {
@@ -186,7 +186,7 @@ DefineSite("bordeaux", {
 		1441, 0, "university" -- University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Parlement or conseil souverain, chambre des comptes, court of admiralty and prévôt des maréchaux existent in Bordeaux in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("bourges", {
@@ -213,7 +213,7 @@ DefineSite("bourges", {
 		1464, 0, "university" -- University founded in Bourges in 1464; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("brest", {
@@ -234,7 +234,7 @@ DefineSite("brest", {
 	HistoricalBuildings = {
 		161, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("cahors", {
@@ -253,7 +253,7 @@ DefineSite("cahors", {
 	HistoricalBuildings = {
 		1332, 0, "university" -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("cambrai", {
@@ -275,7 +275,7 @@ DefineSite("cambrai", {
 	HistoricalBuildings = {
 		{486, 12, 30}, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("chalons", {
@@ -294,7 +294,7 @@ DefineSite("chalons", {
 	HistoricalBuildings = {
 		395, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("clermont-ferrand", {
@@ -321,7 +321,7 @@ DefineSite("clermont-ferrand", {
 		-71, -61, "unit-teuton-swordsman", 6000, "arverni-tribe",
 		-71, -61, "unit-teuton-archer", 3000, "arverni-tribe"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("dijon", {
@@ -348,7 +348,7 @@ DefineSite("dijon", {
 		-71, -61, "unit-teuton-swordsman", 6000, "aedui-tribe",
 		-71, -61, "unit-teuton-archer", 3000, "aedui-tribe"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("embrun", {
@@ -366,7 +366,7 @@ DefineSite("embrun", {
 	HistoricalBuildings = {
 		768, 0, "temple" -- Archbishopric existent in Embrun during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("ferrieres", {
@@ -383,7 +383,7 @@ DefineSite("ferrieres", {
 	HistoricalBuildings = {
 		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of Ferrières; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("grenoble", {
@@ -402,7 +402,7 @@ DefineSite("grenoble", {
 		1339, 0, "university" -- University founded in Grenoble in 1339; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("langres", {
@@ -421,7 +421,7 @@ DefineSite("langres", {
 	HistoricalBuildings = {
 		486, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("lyon", {
@@ -449,7 +449,7 @@ DefineSite("lyon", {
 		-- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1330, 0, "university" -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("marseilles", {
@@ -476,7 +476,7 @@ DefineSite("marseilles", {
 		161, 0, "town_hall",
 		395, 0, "temple" -- Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("metz", {
@@ -502,7 +502,7 @@ DefineSite("metz", {
 		395, 0, "town_hall",
 		395, 0, "temple" -- Metz was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("molsheim", {
@@ -519,7 +519,7 @@ DefineSite("molsheim", {
 	HistoricalBuildings = {
 		1618, 0, "university" -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("montpellier", {
@@ -536,7 +536,7 @@ DefineSite("montpellier", {
 		1250, 0, "university" -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		-- Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("nantes", {
@@ -559,7 +559,7 @@ DefineSite("nantes", {
 		395, 0, "temple", -- Nantes was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1460, 0, "university" -- University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("narbonne", {
@@ -580,7 +580,7 @@ DefineSite("narbonne", {
 		395, 0, "temple" -- Narbonne was the seat of a metropolitanate (archbishopric) in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Chief court of the salt tax existent in Narbonne in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("nice", {
@@ -606,7 +606,7 @@ DefineSite("nice", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Nicaea was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("orleans", {
@@ -628,7 +628,7 @@ DefineSite("orleans", {
 		395, 0, "town_hall",
 		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("paris", {
@@ -658,7 +658,7 @@ DefineSite("paris", {
 	HistoricalPopulation = {
 		1789, 500000 -- Paris had a population of 500,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("perpignan", {
@@ -676,7 +676,7 @@ DefineSite("perpignan", {
 		1349, 0, "university" -- University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("poitiers", {
@@ -701,7 +701,7 @@ DefineSite("poitiers", {
 		395, 0, "temple", -- Poitiers was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1431, 0, "university" -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("reims", {
@@ -729,7 +729,7 @@ DefineSite("reims", {
 		-- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		1547, 0, "university" -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("rodez", {
@@ -748,7 +748,7 @@ DefineSite("rodez", {
 		561, 0, "farm"
 		-- Chief court of the salt tax existent in Rodez in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("rouen", {
@@ -769,7 +769,7 @@ DefineSite("rouen", {
 		395, 768, "farm",
 		768, 0, "temple" -- Archbishopric existent in Rouen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("sens", {
@@ -790,7 +790,7 @@ DefineSite("sens", {
 		395, 768, "farm",
 		768, 0, "temple" -- Archbishopric existent in Sens in the 768-814 AD period; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("soissons", {
@@ -812,7 +812,7 @@ DefineSite("soissons", {
 		395, 0, "town_hall",
 		395, 0, "temple" -- Soissons was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("strassburg", {
@@ -853,7 +853,7 @@ DefineSite("strassburg", {
 		-61, -58, "unit-suebi-swordsman", 135000, "suebi-tribe" -- 135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("toul", {
@@ -873,7 +873,7 @@ DefineSite("toul", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Toul was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("toulon", {
@@ -891,7 +891,7 @@ DefineSite("toulon", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("toulouse", {
@@ -921,7 +921,7 @@ DefineSite("toulouse", {
 		1230, 0, "university" -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("tours", {
@@ -946,7 +946,7 @@ DefineSite("tours", {
 		-- Archbishopric existent in Tours during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		-- Alcuin received the greater abbey of St. Martin at Tours from Charlemagne in 796; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("troyes", {
@@ -969,7 +969,7 @@ DefineSite("troyes", {
 		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 		-- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("uzes", {
@@ -987,7 +987,7 @@ DefineSite("uzes", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("valence", {
@@ -1007,7 +1007,7 @@ DefineSite("valence", {
 		1459, 0, "university" -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("verdun", {
@@ -1030,7 +1030,7 @@ DefineSite("verdun", {
 	HistoricalBuildings = {
 		395, 0, "temple" -- Verdun was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })
 
 DefineSite("vienne", {
@@ -1051,5 +1051,5 @@ DefineSite("vienne", {
 		395, 0, "temple" -- Vienne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Vienne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
-	Regions = {"europe", "france", "gaul", "west-and-central-europe"}
+	Regions = {"france", "gaul"}
 })

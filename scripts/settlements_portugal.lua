@@ -42,7 +42,7 @@ DefineSite("braga", {
 		-138, 1560, "town_hall",
 		1560, 0, "farm"
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("coimbra", {
@@ -62,7 +62,7 @@ DefineSite("coimbra", {
 		1308, 0, "university", -- University founded in Coimbra in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		-- University moved permanently from Lisbon to Coimbra in 1537; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("lisbon", {
@@ -83,7 +83,7 @@ DefineSite("lisbon", {
 		-138, 0, "town_hall",
 		1911, 0, "university" -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("oporto", {
@@ -103,7 +103,7 @@ DefineSite("oporto", {
 		-138, 0, "town_hall",
 		1911, 0, "university" -- University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"europe", "iberia", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 
 DefineSite("tres-minas", {
@@ -122,6 +122,6 @@ DefineSite("tres-minas", {
 	HistoricalResources = {
 		0, 0, "unit-gold-deposit", 0 -- gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
 	},
-	Regions = {"cisleithania", "europe", "germany-netherlands", "west-and-central-europe"}
+	Regions = {"iberia"}
 })
 

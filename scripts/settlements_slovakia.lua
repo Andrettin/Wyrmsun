@@ -46,7 +46,7 @@ DefineSite("bratislava", {
 	HistoricalBuildings = {
 		-5500, 0, "town_hall"
 	},
-	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"czechoslovakia"}
 })
 
 DefineSite("kremnica", {
@@ -65,5 +65,5 @@ DefineSite("kremnica", {
 	HistoricalBuildings = {
 		161, 0, "town_hall"
 	},
-	Regions = {"czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"czechoslovakia"}
 })

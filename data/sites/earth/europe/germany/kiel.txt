@@ -1,0 +1,42 @@
+kiel = {
+	name = "Kiel"
+	map_template = earth
+	pos = { 4068 811 }
+	major = true
+	
+	cores = {
+		hersing_tribe
+		teuton_tribe
+		germany #Kiel was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Kiel was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	
+	regions = {
+		germany
+	}
+	
+	history = {
+		-2800 = {
+			owner_faction = asa_tribe
+		}
+		
+		-1600 = {
+			owner_faction = hersing_tribe #Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
+			building_classes += town_hall
+			building_classes += farm
+			building_classes += farm
+			building_classes += farm
+			building_classes += lumber_mill
+			building_classes += watch_tower
+			building_classes += watch_tower
+		}
+		
+		-264 = {
+			owner_faction = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		1815 = {
+			owner_faction = denmark #Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

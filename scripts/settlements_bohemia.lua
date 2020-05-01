@@ -41,7 +41,7 @@ DefineSite("budweis", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("jilova", {
@@ -54,7 +54,7 @@ DefineSite("jilova", {
 	HistoricalResources = {
 		0, 0, "unit-gold-deposit", "the-wedding-veil", 0 -- the gold mine called "The Wedding Veil" was located in Jilova; Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("kutna-hora", {
@@ -68,7 +68,7 @@ DefineSite("kutna-hora", {
 		0, 0, "unit-silver-deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
 		0, 0, "unit-silver-deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("prague", {
@@ -96,5 +96,5 @@ DefineSite("prague", {
 		1231, 0, "temple", -- Agnes Přemyslovna founded the St. Agnes' Cloister (in Prague) in 1231; Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
 		1347, 0, "university" -- University founded in Prague in 1347; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })

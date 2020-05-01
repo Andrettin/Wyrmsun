@@ -40,7 +40,7 @@ DefineSite("amesbury", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("athelney", {
@@ -58,7 +58,7 @@ DefineSite("athelney", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("bamburgh", {
@@ -80,7 +80,7 @@ DefineSite("bamburgh", {
 	HistoricalBuildings = {
 		526, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("bath", {
@@ -102,7 +102,7 @@ DefineSite("bath", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("bitterne", {
@@ -123,7 +123,7 @@ DefineSite("bitterne", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("brancaster", {
@@ -144,7 +144,7 @@ DefineSite("brancaster", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("bristol", {
@@ -163,7 +163,7 @@ DefineSite("bristol", {
 		802, 1909, "farm",
 		1909, 0, "university" -- University founded in Bristol in 1909; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("cambridge", {
@@ -186,7 +186,7 @@ DefineSite("cambridge", {
 		410, 1250, "farm",
 		1250, 0, "university" -- University existent in Cambridge in 1250; Source: "Atlas de História Mundial", p. 144.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("canterbury", {
@@ -210,7 +210,7 @@ DefineSite("canterbury", {
 		410, 0, "town_hall",
 		597, 0, "temple" -- Augustine and his followers performed religious services in a church in Canterbury in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("carlisle", {
@@ -232,7 +232,7 @@ DefineSite("carlisle", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("castor-near-norwich", {
@@ -253,7 +253,7 @@ DefineSite("castor-near-norwich", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("chester", {
@@ -276,7 +276,7 @@ DefineSite("chester", {
 	HistoricalBuildings = {
 		410, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("chichester", {
@@ -299,7 +299,7 @@ DefineSite("chichester", {
 	HistoricalBuildings = {
 		410, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("cirencester", {
@@ -321,7 +321,7 @@ DefineSite("cirencester", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("colchester", {
@@ -344,7 +344,7 @@ DefineSite("colchester", {
 	HistoricalBuildings = {
 		410, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("corbridge", {
@@ -369,7 +369,7 @@ DefineSite("corbridge", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("deorham", {
@@ -386,7 +386,7 @@ DefineSite("deorham", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("dorchester", {
@@ -408,7 +408,7 @@ DefineSite("dorchester", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("dover", {
@@ -430,7 +430,7 @@ DefineSite("dover", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("dunwich", {
@@ -449,7 +449,7 @@ DefineSite("dunwich", {
 	HistoricalBuildings = {
 		672, 0, "temple" -- Dunwich was a bishopric as of 672; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("durham", {
@@ -468,7 +468,7 @@ DefineSite("durham", {
 		802, 1832, "farm",
 		1832, 0, "university" -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("durolipons", {
@@ -488,7 +488,7 @@ DefineSite("durolipons", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("edinburgh", {
@@ -510,7 +510,7 @@ DefineSite("edinburgh", {
 		-27, 0, "town_hall",
 		1582, 0, "university" -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
+	Regions = {"scotland"}
 })
 
 DefineSite("exeter", {
@@ -533,7 +533,7 @@ DefineSite("exeter", {
 	HistoricalBuildings = {
 		410, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("farnham", {
@@ -552,7 +552,7 @@ DefineSite("farnham", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("glasgow", {
@@ -573,7 +573,7 @@ DefineSite("glasgow", {
 		-27, 0, "town_hall",
 		1450, 0, "university" -- University founded in Glasgow in 1450; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
+	Regions = {"scotland"}
 })
 
 DefineSite("glastonbury", {
@@ -590,7 +590,7 @@ DefineSite("glastonbury", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("gloucester", {
@@ -613,7 +613,7 @@ DefineSite("gloucester", {
 	HistoricalBuildings = {
 		410, 0, "town_hall"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("goodmanham", {
@@ -631,7 +631,7 @@ DefineSite("goodmanham", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("hastings", {
@@ -649,7 +649,7 @@ DefineSite("hastings", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("heathfield", {
@@ -666,7 +666,7 @@ DefineSite("heathfield", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("hereford", {
@@ -684,7 +684,7 @@ DefineSite("hereford", {
 	HistoricalBuildings = {
 		680, 0, "temple" -- archbishop Theodore of Canterbury made Hereford into a separate diocese before 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("hexham", {
@@ -703,7 +703,7 @@ DefineSite("hexham", {
 	HistoricalBuildings = {
 		684, 0, "temple" -- an episcopal see was existent in Hexham as of 684; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("jarrow", {
@@ -723,7 +723,7 @@ DefineSite("jarrow", {
 		681, 0, "temple" -- Benedict Biscop founded a monastery at Jarrow in 681, with the land being given by king Ecgfrith of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 185.
 		-- Benedict Biscop travelled to Rome in 684 to acquire relics and books for the monastery at Jarrow; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 185.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("kingston", {
@@ -740,7 +740,7 @@ DefineSite("kingston", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("leicester", {
@@ -763,7 +763,7 @@ DefineSite("leicester", {
 		410, 737, "farm",
 		737, 0, "temple" -- diocese of Leicester permanently founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 134, 146.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("lincoln", {
@@ -789,7 +789,7 @@ DefineSite("lincoln", {
 		627, 0, "temple" -- a church was in existence in Lincoln in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
 		-- Lindsey became a separate diocese in 677; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("leeds", {
@@ -808,7 +808,7 @@ DefineSite("leeds", {
 		802, 1904, "farm",
 		1904, 0, "university" -- University founded in Leeds in 1904; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("lichfield", {
@@ -827,7 +827,7 @@ DefineSite("lichfield", {
 	HistoricalBuildings = {
 		669, 0, "temple" -- Lichfield became a bishopric in 669; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 132.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("london", {
@@ -860,7 +860,7 @@ DefineSite("london", {
 		1789, 1000000, -- London had a population of around 1,000,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
 		1801, 959000 -- London had a population of 959,000 in 1801; Source: "Atlas de História Mundial", 2001.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("malmesbury", {
@@ -879,7 +879,7 @@ DefineSite("malmesbury", {
 	HistoricalBuildings = {
 		705, 0, "temple" -- an abbey existed in Malmesbury as of 705; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("nursling", {
@@ -897,7 +897,7 @@ DefineSite("nursling", {
 	HistoricalBuildings = {
 		-- 716, 0, "temple" -- the West Saxon Wynfrith/Boniface was the head of the monastic school at a monastery in Nursling in 716, when he left it to go perform missionary work in Frisia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("ockley", {
@@ -914,7 +914,7 @@ DefineSite("ockley", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("old-sarum", {
@@ -935,7 +935,7 @@ DefineSite("old-sarum", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("oundle", {
@@ -953,7 +953,7 @@ DefineSite("oundle", {
 	HistoricalBuildings = {
 		709, 0, "temple" -- Oundle possessed a monastery as of 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 145.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("pevensey", {
@@ -975,7 +975,7 @@ DefineSite("pevensey", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("reading", {
@@ -993,7 +993,7 @@ DefineSite("reading", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("reculver", {
@@ -1017,7 +1017,7 @@ DefineSite("reculver", {
 --		410, 669, "farm",
 --		669, 0, "temple" -- a church was founded in Reculver in 669 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 111.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("richborough", {
@@ -1038,7 +1038,7 @@ DefineSite("richborough", {
 	HistoricalBuildings = {
 --		410, 0, "farm" -- not enough space
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("ripon", {
@@ -1058,7 +1058,7 @@ DefineSite("ripon", {
 		686, 0, "temple" -- a church was existent in Ripon as of 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
 		-- Ripon ceased to be a bishopric when Wilfrid died in 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145-146.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("rochester", {
@@ -1081,7 +1081,7 @@ DefineSite("rochester", {
 		410, 604, "farm",
 		604, 0, "temple" -- king Æthelberht of Kent built a church in Rochester in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("saint-albans", {
@@ -1103,7 +1103,7 @@ DefineSite("saint-albans", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("salisbury", {
@@ -1124,7 +1124,7 @@ DefineSite("salisbury", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("sherborne", {
@@ -1142,7 +1142,7 @@ DefineSite("sherborne", {
 	HistoricalBuildings = {
 		705, 0, "temple" -- a bishopric was established in Sherborne in 705 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("silchester", {
@@ -1163,7 +1163,7 @@ DefineSite("silchester", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("sitomagus", {
@@ -1183,7 +1183,7 @@ DefineSite("sitomagus", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("southampton", {
@@ -1200,7 +1200,7 @@ DefineSite("southampton", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("speen", {
@@ -1221,7 +1221,7 @@ DefineSite("speen", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("vindogladia", {
@@ -1241,7 +1241,7 @@ DefineSite("vindogladia", {
 	HistoricalBuildings = {
 		410, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("wearmouth", {
@@ -1259,7 +1259,7 @@ DefineSite("wearmouth", {
 	HistoricalBuildings = {
 		674, 0, "temple" -- Benedict Biscop founded a monastery at Wearmouth in 674, with the land being given by king Ecgfrith of Northumbria; Benedict Biscop transported his large collection of books to Wearmouth, establishing a library at the monastery; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 184-185.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("whitby", {
@@ -1277,7 +1277,7 @@ DefineSite("whitby", {
 	HistoricalBuildings = {
 		663, 0, "temple" -- Streoneshalh had a monastery in 663; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 123.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("whithorn", {
@@ -1296,7 +1296,7 @@ DefineSite("whithorn", {
 	HistoricalBuildings = {
 		731, 0, "temple" -- a bishopric was founded at Whithorn in c. 731; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 146.
 	},
-	Regions = {"british-isles", "europe", "northwest-europe", "scotland", "west-and-central-europe"}
+	Regions = {"scotland"}
 })
 
 DefineSite("wilton", {
@@ -1314,7 +1314,7 @@ DefineSite("wilton", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("winchester", {
@@ -1338,7 +1338,7 @@ DefineSite("winchester", {
 		410, 0, "town_hall",
 		660, 0, "temple" -- Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("winwaedsfield", {
@@ -1356,7 +1356,7 @@ DefineSite("winwaedsfield", {
 	HistoricalBuildings = {
 		802, 0, "farm"
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("worcester", {
@@ -1375,7 +1375,7 @@ DefineSite("worcester", {
 	HistoricalBuildings = {
 		680, 0, "temple" -- archbishop Theodore of Canterbury made Worcester into a separate diocese before 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })
 
 DefineSite("york", {
@@ -1404,5 +1404,5 @@ DefineSite("york", {
 		161, 0, "barracks",
 		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
 	},
-	Regions = {"british-isles", "england", "europe", "northwest-europe", "west-and-central-europe"}
+	Regions = {"england"}
 })

@@ -38,8 +38,8 @@ asa_warriors = { #the great army assembled to fight the Vana
 	}
 }
 
-asa_workers_holmgard = {
-	name = "Asa Workers (Holmgard)"
+asa_workers_holmgard_scandinavia = {
+	name = "Asa Workers (Holmgard/Scandinavia)"
 	unit_type = unit_germanic_worker
 	quantity = 5
 	
@@ -53,6 +53,12 @@ asa_workers_holmgard = {
 		}
 		
 		-2800 = {
+			location = {
+				site = kiel
+			}
+		}
+		
+		-2800.12.30 = {
 			active = false
 		}
 	}
@@ -73,6 +79,46 @@ asa_warriors_holmgard = {
 		}
 		
 		-2800 = {
+			active = false
+		}
+	}
+}
+
+asa_warriors_scandinavia = {
+	name = "Asa Warriors (Scandinavia)"
+	unit_type = unit_germanic_warrior
+	quantity = 2
+	
+	history = {
+		-2800 = {
+			active = true
+			faction = asa_tribe
+			location = {
+				site = kiel
+			}
+		}
+		
+		-2800.12.30 = {
+			active = false
+		}
+	}
+}
+
+asa_archers = {
+	name = "Asa Archers"
+	unit_type = unit_germanic_archer
+	quantity = 1
+	
+	history = {
+		-2800 = {
+			active = true
+			faction = asa_tribe
+			location = {
+				site = kiel
+			}
+		}
+		
+		-2800.12.30 = {
 			active = false
 		}
 	}

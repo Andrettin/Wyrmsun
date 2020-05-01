@@ -43,7 +43,7 @@ DefineSite("brunn", {
 	HistoricalBuildings = {
 		1815, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("doubravnik", {
@@ -59,7 +59,7 @@ DefineSite("doubravnik", {
 	HistoricalBuildings = {
 		1211, 0, "temple", "cistercian-order" -- a Cistercian nunnery was founded in Doubravník in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("olmutz", {
@@ -82,7 +82,7 @@ DefineSite("olmutz", {
 		1581, 0, "university", -- University founded in Olmütz in 1581; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1815, 0, "stronghold" -- Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
 
 DefineSite("velehrad", {
@@ -98,5 +98,5 @@ DefineSite("velehrad", {
 	HistoricalBuildings = {
 		1201, 0, "temple", "cistercian-order" -- a Cistercian monastery was founded in Velehrad in 1201; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
-	Regions = {"cisleithania", "czechoslovakia", "europe", "west-and-central-europe"}
+	Regions = {"cisleithania", "czechoslovakia"}
 })
