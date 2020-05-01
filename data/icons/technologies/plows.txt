@@ -1,0 +1,11 @@
+icon_wood_plow = {
+	file = "icons/technologies/wood_plow.png"
+}
+
+icon_iron_tipped_wood_plow = {
+	file = "icons/technologies/iron_tipped_wood_plow.png"
+}
+
+icon_iron_plow = {
+	file = "icons/technologies/iron_plow.png"
+}

@@ -356,24 +356,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-wood-plow",
-	Size = {46, 38},
-	File = "neutral/icons/wood_plow.png"
-})
-
-DefineIcon({
-	Name = "icon-iron-tipped-wood-plow",
-	Size = {46, 38},
-	File = "neutral/icons/iron_tipped_wood_plow.png"
-})
-
-DefineIcon({
-	Name = "icon-iron-plow",
-	Size = {46, 38},
-	File = "neutral/icons/iron_plow.png"
-})
-
-DefineIcon({
 	Name = "icon-masonry",
 	Size = {46, 38},
 	File = "neutral/icons/masonry.png"
