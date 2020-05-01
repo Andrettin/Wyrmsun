@@ -32,12 +32,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-suebi-coinage",
-	Size = {46, 38},
-	File = "suebi/icons/coinage.png"
-})
-
-DefineIcon({
 	Name = "icon-marbod",
 	Size = {46, 38},
 	File = "suebi/icons/marbod.png"

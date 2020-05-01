@@ -254,12 +254,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-flag-holy-roman-empire",
-	Size = {46, 38},
-	File = "teuton/icons/flag_holy_roman_empire.png"
-})
-
-DefineIcon({
 	Name = "icon-flag-old-austria",
 	Size = {46, 38},
 	File = "teuton/icons/flag_old_austria.png"

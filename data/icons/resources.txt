@@ -1,0 +1,3 @@
+icon_research = {
+	file = "icons/neutral/research.png"
+}
