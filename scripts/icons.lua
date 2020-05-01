@@ -110,21 +110,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-labor",
-	Size = {46, 38},
-	File = "neutral/icons/labor.png"
-})
-
-DefineIcon({
 	Name = "icon-gold",
 	Size = {46, 38},
 	File = "neutral/icons/gold.png"
-})
-
-DefineIcon({
-	Name = "icon-food",
-	Size = {46, 38},
-	File = "neutral/icons/food.png"
 })
 
 DefineIcon({
@@ -347,18 +335,6 @@ DefineIcon({
 	Name = "icon-wither",
 	Size = {46, 38},
 	File = "neutral/icons/wither.png"
-})
-
-DefineIcon({
-	Name = "icon-inventory",
-	Size = {46, 38},
-	File = "neutral/icons/inventory.png"
-})
-
-DefineIcon({
-	Name = "icon-bodkin-arrow",
-	Size = {46, 38},
-	File = "neutral/icons/bodkin_arrow.png"
 })
 
 DefineIcon({

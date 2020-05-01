@@ -1,0 +1,3 @@
+icon_norse_runewriting = {
+	file = "icons/technologies/norse/runewriting.png"
+}

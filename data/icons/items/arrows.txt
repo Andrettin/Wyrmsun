@@ -1,0 +1,3 @@
+icon_bodkin_arrow = {
+	file = "icons/items/bodkin_arrow.png"
+}

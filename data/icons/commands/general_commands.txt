@@ -6,6 +6,10 @@ icon_harvest = {
 	file = "icons/commands/harvest.png"
 }
 
+icon_inventory = {
+	file = "icons/commands/inventory.png"
+}
+
 icon_repair = {
 	file = "icons/commands/repair.png"
 }

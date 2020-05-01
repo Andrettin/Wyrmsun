@@ -1,3 +1,11 @@
+icon_food = {
+	file = "icons/resources/food.png"
+}
+
+icon_labor = {
+	file = "icons/resources/labor.png"
+}
+
 icon_research = {
 	file = "icons/resources/research.png"
 }
