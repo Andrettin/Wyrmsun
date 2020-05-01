@@ -1,0 +1,3 @@
+icon_christmas_hat = {
+	file = "neutral/icons/christmas_hat.png"
+}
