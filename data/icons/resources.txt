@@ -2,6 +2,10 @@ icon_food = {
 	file = "icons/resources/food.png"
 }
 
+icon_gold = {
+	file = "icons/resources/gold.png"
+}
+
 icon_labor = {
 	file = "icons/resources/labor.png"
 }

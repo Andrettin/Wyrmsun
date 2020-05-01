@@ -3,7 +3,7 @@ icon_dwarven_patrol_land = {
 }
 
 icon_dwarven_stand_ground = {
-	file = "dwarf/icons/stand_ground.png"
+	file = "icons/commands/dwarven/stand_ground.png"
 }
 
 icon_dwarven_return_goods = {

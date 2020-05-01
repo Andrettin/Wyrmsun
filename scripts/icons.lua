@@ -104,12 +104,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-gold",
-	Size = {46, 38},
-	File = "neutral/icons/gold.png"
-})
-
-DefineIcon({
 	Name = "icon-lumber",
 	Size = {46, 38},
 	File = "neutral/icons/lumber.png"
@@ -245,12 +239,6 @@ DefineIcon({
 	Name = "icon-critical-strike",
 	Size = {46, 38},
 	File = "neutral/icons/critical_strike.png"
-})
-
-DefineIcon({
-	Name = "icon-deadly-precision",
-	Size = {46, 38},
-	File = "neutral/icons/deadly_precision.png"
 })
 
 DefineIcon({
