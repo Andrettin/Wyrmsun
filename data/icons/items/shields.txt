@@ -9,3 +9,7 @@ icon_dwarven_shield_2 = {
 icon_dwarven_shield_3 = {
 	file = "dwarf/icons/shield_3.png"
 }
+
+saxon_iron_shield = {
+	file = "icons/items/saxon/iron_shield.png"
+}

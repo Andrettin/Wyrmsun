@@ -92,12 +92,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-attack-ground",
-	Size = {46, 38},
-	File = "neutral/icons/attack_ground.png"
-})
-
-DefineIcon({
 	Name = "icon-unload",
 	Size = {46, 38},
 	File = "neutral/icons/unload.png"
@@ -260,12 +254,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-eagle-eye",
-	Size = {46, 38},
-	File = "neutral/icons/eagle_eye.png"
-})
-
-DefineIcon({
 	Name = "icon-ethereal-vision",
 	Size = {46, 38},
 	File = "neutral/icons/ethereal_vision.png"
@@ -335,24 +323,6 @@ DefineIcon({
 	Name = "icon-wither",
 	Size = {46, 38},
 	File = "neutral/icons/wither.png"
-})
-
-DefineIcon({
-	Name = "icon-catapult-projectile-1",
-	Size = {46, 38},
-	File = "neutral/icons/catapult_projectile_sandstone.png"
-})
-
-DefineIcon({
-	Name = "icon-catapult-projectile-2",
-	Size = {46, 38},
-	File = "neutral/icons/catapult_projectile_granite.png"
-})
-
-DefineIcon({
-	Name = "icon-catapult-projectile-3",
-	Size = {46, 38},
-	File = "neutral/icons/catapult_projectile_metal.png"
 })
 
 DefineIcon({

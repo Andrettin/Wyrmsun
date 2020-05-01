@@ -2,6 +2,10 @@ icon_barkskin = {
 	file = "neutral/icons/barkskin.png"
 }
 
+icon_eagle_eye = {
+	file = "icons/abilities/eagle_eye.png"
+}
+
 icon_infusion = {
 	file = "dwarf/icons/infusion.png"
 }

@@ -337,7 +337,7 @@ DefineUnitType("unit-iron-shield", {
 	Parent = "unit-template-item",
 	Costs = {"copper", 400},
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
-	Icon = "icon-teuton-iron-shield",
+	Icon = "saxon_iron_shield",
 	ItemClass = "shield",
 	Armor = 4
 } )
@@ -367,7 +367,7 @@ DefineUnitType("unit-suebi-shield", {
 	Name = "Suebi Shield",
 	Parent = "unit-template-item",
 	Image = {"file", "suebi/items/suebi_shield.png", "size", {32, 32}},
-	Icon = "icon-teuton-iron-shield", -- each base item type needs to have its own icon
+	Icon = "saxon_iron_shield", -- each base item type needs to have its own icon
 	ItemClass = "shield",
 	Armor = 4
 } )

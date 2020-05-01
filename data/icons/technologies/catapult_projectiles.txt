@@ -1,0 +1,11 @@
+icon_catapult_projectile_1 = {
+	file = "icons/technologies/catapult_projectile_sandstone.png"
+}
+
+icon_catapult_projectile_2 = {
+	file = "icons/technologies/catapult_projectile_granite.png"
+}
+
+icon_catapult_projectile_3 = {
+	file = "icons/technologies/catapult_projectile_metal.png"
+}

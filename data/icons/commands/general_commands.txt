@@ -1,3 +1,7 @@
+icon_attack_ground = {
+	file = "icons/commands/attack_ground.png"
+}
+
 icon_build_basic_structure = {
 	file = "icons/commands/build_basic_structure.png"
 }

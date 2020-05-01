@@ -257,7 +257,7 @@ DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
-DefineButton( { Pos = 4, Icon = "icon-teuton-iron-shield",
+DefineButton( { Pos = 4, Icon = "saxon_iron_shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",

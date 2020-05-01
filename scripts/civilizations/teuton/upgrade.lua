@@ -46,7 +46,7 @@ DefineUpgrade("upgrade-teuton-pike", {
 
 DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
-	Icon = "icon-teuton-iron-shield",
+	Icon = "saxon_iron_shield",
 	Civilization = "teuton",
 	RequirementsString = "Bronze Shield and Ironworking",
 	Description = "The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
