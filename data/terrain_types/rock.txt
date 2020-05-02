@@ -1,0 +1,42 @@
+rock = {
+	name = "Rock"
+	character = k
+	color = { 128 128 128 }
+	overlay = true
+	resource = stone
+	image_file = "terrain/rock.png"
+	flags = {
+		land
+		rock
+		unpassable
+	}
+	base_terrain_types = {
+		dirt
+		mud
+		dry_mud
+		desert_sand
+	}
+	solid_tiles = { 18 21 24 }
+	destroyed_tiles = { 16 }
+	season_image_files = {
+		winter = "terrain/rock_snow.png"
+	}
+	transition_tiles = {
+		any = {
+			north = { 2 5 8 }
+			south = { 34 37 40 }
+			west = { 17 20 23 }
+			east = { 19 22 25 }
+			northwest_outer = { 1 4 }
+			northeast_outer = { 3 6 }
+			southwest_outer = { 33 36 }
+			southeast_outer = { 35 38 }
+			northwest_inner = { 10 12 }
+			northeast_inner = { 11 13 }
+			southwest_inner = { 26 28 }
+			southeast_inner = { 27 29 }
+			northwest_southeast_inner = { 30 31 }
+			northeast_southwest_inner = { 14 15 }
+		}
+	}
+}
