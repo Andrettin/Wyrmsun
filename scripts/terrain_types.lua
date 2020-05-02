@@ -984,7 +984,6 @@ DefineTerrainType("norse-palisade", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/norse_wooden_wall.png",
-	PlayerColorGraphics = "terrain/norse_wooden_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1048,7 +1047,6 @@ DefineTerrainType("dwarven-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/dwarven_wall.png",
-	PlayerColorGraphics = "terrain/dwarven_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1112,7 +1110,6 @@ DefineTerrainType("goblin-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/goblin_wall.png",
-	PlayerColorGraphics = "terrain/goblin_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1175,7 +1172,6 @@ DefineTerrainType("teuton-wall", {
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
 	Graphics = "terrain/teuton_wall.png",
-	PlayerColorGraphics = "terrain/teuton_wall_player_color.png",
 	SolidTiles = {177},
 	DestroyedTiles = {160},
 	TransitionTiles = {
@@ -1238,7 +1234,6 @@ DefineTerrainType("border", {
 	AllowSingle = true,
 	Hidden = true,
 	Graphics = "terrain/border.png",
-	PlayerColorGraphics = "terrain/border_player_color.png",
 	SolidTiles = {17, 20, 23},
 	TransitionTiles = {
 		"any", "north", 1,
