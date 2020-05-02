@@ -1,0 +1,19 @@
+gylfing_warriors = {
+	name = "Gylfing Warriors"
+	unit_type = unit_germanic_warrior
+	quantity = 3
+	
+	history = {
+		-3000 = {
+			active = true
+			faction = gylfing_tribe
+			location = {
+				site = malmo
+			}
+		}
+		
+		-2800.12.30 = {
+			active = false
+		}
+	}
+}
