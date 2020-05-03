@@ -7,7 +7,6 @@ scandinavia = {
 	start_pos = { 29 184 }
 	end_pos = { 207 349 }
 	generated_neutral_units = {
-		unit_diamond_deposit = 1
 		unit_gold_deposit = 2
 		unit_silver_deposit = 2
 		unit_copper_deposit = 2

@@ -15,7 +15,6 @@ earth = {
 		#}
 	}
 	generated_neutral_units = {
-		unit_diamond_deposit = 1
 		unit_gold_deposit = 2
 		unit_silver_deposit = 2
 		unit_copper_deposit = 2
