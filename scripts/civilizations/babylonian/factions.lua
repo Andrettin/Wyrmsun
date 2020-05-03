@@ -29,7 +29,7 @@ DefineFaction("babylon", {
 	Name = "Babylon",
 	Civilization = "babylonian",
 	Type = "polity",
-	Colors = {"red"},
+	Color = "red",
 	DefaultTier = "kingdom",
 	HistoricalCapitals = {
 		0, "babylon"

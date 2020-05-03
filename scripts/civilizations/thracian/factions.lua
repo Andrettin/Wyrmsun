@@ -29,61 +29,61 @@ DefineFaction("apsinthii-tribe", {
 	Name = "Apsinthii Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	Colors = {"purple"}
+	Color = "purple"
 })
 
 DefineFaction("carpi-tribe", {
 	Name = "Carpi Tribe",
 	Civilization = "thracian", -- accurate?
 	Type = "tribe",
-	Colors = {"blue"}
+	Color = "blue"
 })
 
 DefineFaction("costoboci-tribe", {
 	Name = "Costoboci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
-	Colors = {"red"}
+	Color = "red"
 })
 
 DefineFaction("daci-tribe", {
 	Name = "Daci Tribe",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
-	Colors = {"violet"}
+	Color = "violet"
 })
 
 DefineFaction("edoni-tribe", {
 	Name = "Edoni Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	Colors = {"white"}
+	Color = "white"
 })
 
 DefineFaction("getae-tribe", {
 	Name = "Getae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	Colors = {"teal"}
+	Color = "teal"
 })
 
 DefineFaction("odomanti-tribe", {
 	Name = "Odomanti Tribe",
 	Civilization = "thracian", -- were they really Thracian?
 	Type = "tribe",
-	Colors = {"black"}
+	Color = "black"
 })
 
 DefineFaction("odrysae-tribe", {
 	Name = "Odrysae Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	Colors = {"red"}
+	Color = "red"
 })
 
 DefineFaction("triballi-tribe", {
 	Name = "Triballi Tribe",
 	Civilization = "thracian",
 	Type = "tribe",
-	Colors = {"green"}
+	Color = "green"
 })

@@ -31,35 +31,35 @@ DefineFaction("aequian-tribe", {
 	Name = "Aequian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"teal"}
+	Color = "teal"
 })
 
 DefineFaction("elymian-tribe", {
 	Name = "Elymian Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Colors = {"yellow", "red"}
+	Color = "yellow"
 })
 
 DefineFaction("frentanian-tribe", {
 	Name = "Frentanian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"orange"}
+	Color = "orange"
 })
 
 DefineFaction("iapygian-tribe", {
 	Name = "Iapygian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"teal"}
+	Color = "teal"
 })
 
 DefineFaction("latin-tribe", {
 	Name = "Latin Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"red", "yellow"},
+	Color = "red",
 	Adjective = "Latin"
 })
 
@@ -67,77 +67,77 @@ DefineFaction("marsian-tribe", {
 	Name = "Marsian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"brown"}
+	Color = "brown"
 })
 
 DefineFaction("messapian-tribe", {
 	Name = "Messapian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"green"}
+	Color = "green"
 })
 
 DefineFaction("oenotrian-tribe", {
 	Name = "Oenotrian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"blue"}
+	Color = "blue"
 })
 
 DefineFaction("picentian-tribe", {
 	Name = "Picentian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"green"}
+	Color = "green"
 })
 
 DefineFaction("sabellian-tribe", {
 	Name = "Sabellian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"white"}
+	Color = "white"
 })
 
 DefineFaction("sabine-tribe", {
 	Name = "Sabine Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"blue"}
+	Color = "blue"
 })
 
 DefineFaction("samnite-tribe", {
 	Name = "Samnite Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"yellow"}
+	Color = "yellow"
 })
 
 DefineFaction("sicanian-tribe", {
 	Name = "Sicanian Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Colors = {"yellow", "red"}
+	Color = "yellow"
 })
 
 DefineFaction("sicel-tribe", {
 	Name = "Sicel Tribe",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Colors = {"red", "yellow"}
+	Color = "red"
 })
 
 DefineFaction("umbrian-tribe", {
 	Name = "Umbrian Tribe",
 	Civilization = "latin",
 	Type = "tribe",
-	Colors = {"pink"}
+	Color = "pink"
 })
 
 DefineFaction("venetian-tribe", {
 	Name = "Venetian Tribe",
 	Civilization = "latin", -- is not correct, but they could be reasonably close to justify it for game purposes
 	Type = "tribe",
-	Colors = {"teal"}
+	Color = "teal"
 })
 
 -- Polities
@@ -146,7 +146,7 @@ DefineFaction("rome", {
 	Name = "Rome",
 	Civilization = "latin",
 	Type = "polity",
-	Colors = {"red", "yellow"},
+	Color = "red",
 	DefaultTier = "kingdom",
 	DevelopsFrom = {"latin-tribe"},
 	HistoricalGovernmentTypes = {
@@ -178,7 +178,7 @@ DefineFaction("hermaistes-apolloniastes-poseidoniastes", { -- Source: Tenney Fra
 	Name = "Hermaistes", -- "Hermaistes, Apolloniastes, Poseidoniastes"
 	Civilization = "latin",
 	Type = "holy-order",
-	Colors = {"red"},
+	Color = "red",
 	DefaultTier = "barony",
 --	Description = "The \"Hermaistes, Apolloniastes, Poseidoniastes\" was a Roman society founded in Delos around 113 BC.",
 	HistoricalUpgrades = {
@@ -194,6 +194,6 @@ DefineFaction("mamertines", {
 	Name = "Mamertines",
 	Civilization = "latin",
 	Type = "mercenary-company",
-	Colors = {"red"},
+	Color = "red",
 	DefaultTier = "duchy"
 })

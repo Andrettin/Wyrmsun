@@ -29,6 +29,6 @@ DefineFaction("china", {
 	Name = "China",
 	Civilization = "chinese",
 	Type = "polity",
-	Colors = {"yellow"},
+	Color = "yellow",
 	DefaultTier = "empire"
 })

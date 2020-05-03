@@ -29,12 +29,12 @@ DefineFaction("blackeye-clan", {
 	Name = "Blackeye Clan",
 	Civilization = "orc",
 	Type = "tribe",
-	Colors = {"black"}
+	Color = "black"
 })
 
 DefineFaction("bloody-sword-clan", {
 	Name = "Bloody Sword Clan",
 	Civilization = "orc",
 	Type = "tribe",
-	Colors = {"red"}
+	Color = "red"
 })

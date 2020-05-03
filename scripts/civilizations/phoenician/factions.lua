@@ -29,7 +29,7 @@ DefineFaction("canaanite-tribe", {
 	Name = "Canaanite Tribe",
 	Civilization = "phoenician", -- correct?
 	Type = "tribe",
-	Colors = {"red"},
+	Color = "red",
 	DefaultTier = "duchy"
 })
 
@@ -37,14 +37,14 @@ DefineFaction("carthage", {
 	Name = "Carthage",
 	Civilization = "phoenician",
 	Type = "polity",
-	Colors = {"black"}
+	Color = "black"
 })
 
 DefineFaction("phoenicia", {
 	Name = "Phoenicia",
 	Civilization = "phoenician",
 	Type = "polity",
-	Colors = {"black"},
+	Color = "black",
 	HistoricalCapitals = {
 		0, "tyre"
 	}
