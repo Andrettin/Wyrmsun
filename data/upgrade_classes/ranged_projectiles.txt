@@ -1,0 +1,7 @@
+ranged_projectile_1 = {
+	name = "Ranged Projectile I"
+}
+
+ranged_projectile_2 = {
+	name = "Ranged Projectile II"
+}

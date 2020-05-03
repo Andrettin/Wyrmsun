@@ -1,0 +1,3 @@
+philosophy = {
+	name = "Philosophy"
+}

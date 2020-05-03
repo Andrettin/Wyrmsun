@@ -1,0 +1,11 @@
+sailing = {
+	name = "Sailing"
+}
+
+celestial_navigation = {
+	name = "Celestial Navigation"
+}
+
+compass = {
+	name = "Compass"
+}

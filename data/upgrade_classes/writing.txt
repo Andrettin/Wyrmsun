@@ -1,0 +1,7 @@
+writing = {
+	name = "Writing"
+}
+
+printing_press = {
+	name = "Printing Press"
+}

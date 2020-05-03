@@ -1,0 +1,11 @@
+wood_plow = {
+	name = "Wood Plow"
+}
+
+iron_tipped_wood_plow = {
+	name = "Iron-Tipped Wood Plow"
+}
+
+iron_plow = {
+	name = "Iron Plow"
+}

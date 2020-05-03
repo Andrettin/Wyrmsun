@@ -1,0 +1,7 @@
+alchemy = {
+	name = "Alchemy"
+}
+
+gunpowder = {
+	name = "Gunpowder"
+}

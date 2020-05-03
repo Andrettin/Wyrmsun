@@ -1,0 +1,7 @@
+melee_weapon_1 = {
+	name = "Melee Weapon I"
+}
+
+melee_weapon_2 = {
+	name = "Melee Weapon II"
+}

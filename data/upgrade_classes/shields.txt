@@ -1,0 +1,7 @@
+bronze_shield = {
+	name = "Bronze Shield"
+}
+
+iron_shield = {
+	name = "Iron Shield"
+}

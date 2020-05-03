@@ -1,0 +1,7 @@
+siege_projectile_1 = {
+	name = "Siege Projectile I"
+}
+
+siege_projectile_2 = {
+	name = "Siege Projectile II"
+}

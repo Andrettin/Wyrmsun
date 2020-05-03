@@ -1,0 +1,7 @@
+long_spear = {
+	name = "Long Spear"
+}
+
+pike = {
+	name = "Pike"
+}

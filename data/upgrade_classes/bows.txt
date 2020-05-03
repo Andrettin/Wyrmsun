@@ -1,0 +1,7 @@
+composite_bow = {
+	name = "Composite Bow"
+}
+
+longbow = {
+	name = "Longbow"
+}

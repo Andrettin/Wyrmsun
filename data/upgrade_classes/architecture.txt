@@ -1,0 +1,7 @@
+masonry = {
+	name = "Masonry"
+}
+
+architecture = {
+	name = "Architecture"
+}

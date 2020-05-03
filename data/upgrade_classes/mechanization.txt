@@ -1,0 +1,3 @@
+steam_engine = {
+	name = "Steam Engine"
+}
