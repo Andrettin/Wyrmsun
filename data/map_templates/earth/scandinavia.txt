@@ -6,4 +6,31 @@ scandinavia = {
 	overlay_terrain_file = "earth/scandinavia_overlay.map"
 	start_pos = { 29 184 }
 	end_pos = { 207 349 }
+	generated_neutral_units = {
+		unit_diamond_deposit = 1
+		unit_gold_deposit = 2
+		unit_silver_deposit = 2
+		unit_copper_deposit = 2
+		unit_iron_deposit = 6
+		unit_tree_stump = 16
+		unit_bee = 32
+		unit_fly = 32
+		unit_bug = 32
+		unit_worm = 32
+		unit_snail = 32
+		unit_slug = 32
+		unit_frog = 32
+		unit_bird = 32
+		unit_crow = 32
+		unit_rat = 32
+		unit_goat = 16
+		unit_boar = 16
+		unit_horse = 8
+		unit_wolf = 16
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
 }

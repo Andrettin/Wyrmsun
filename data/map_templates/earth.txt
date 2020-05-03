@@ -1,0 +1,61 @@
+earth = {
+	name = "Earth"
+	world = earth
+	size = { 8192 4096 }
+	terrain_image = "earth/earth.png"
+	generated_terrains = {
+		rock = {
+			seed_count = 32
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+		}
+		#limestone_rock = {
+		#	seed_count = 16
+		#	target_terrain_type = dirt
+		#}
+	}
+	generated_neutral_units = {
+		unit_diamond_deposit = 1
+		unit_gold_deposit = 2
+		unit_silver_deposit = 2
+		unit_copper_deposit = 2
+		unit_iron_deposit = 6
+		unit_tree_stump = 16
+		unit_bee = 64
+		unit_fly = 64
+		unit_bug = 64
+		unit_worm = 64
+		unit_snail = 64
+		unit_slug = 64
+		unit_frog = 64
+		unit_bird = 64
+		unit_crow = 64
+		unit_rat = 64
+		unit_goat = 32
+		unit_boar = 32
+		unit_horse = 16
+		unit_wolf = 32
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}
+
+earth_space = {
+	name = "Earth"
+	main_template = universe
+	#world = earth
+	size = { 256 256 }
+	circle = true
+	unusable_area_terrain_type = dirt
+	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = dirt
+	surrounding_overlay_terrain_type = space
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}

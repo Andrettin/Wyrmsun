@@ -2,20 +2,3 @@ universe = {
 	name = "Universe"
 	size = { 512 512 }
 }
-
-earth_space = {
-	name = "Earth"
-	main_template = universe
-	#world = earth
-	size = { 256 256 }
-	circle = true
-	unusable_area_terrain_type = dirt
-	unusable_area_overlay_terrain_type = space
-	surrounding_terrain_type = dirt
-	surrounding_overlay_terrain_type = space
-	player_location_generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_wood_pile = 16
-		unit_stone_pile = 8
-	}
-}
