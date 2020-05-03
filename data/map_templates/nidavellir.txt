@@ -1,9 +1,14 @@
 nidavellir = {
 	name = "Nidavellir"
+	#main_template = universe
 	world = nidavellir
 	size = { 256 256 }
+	#circle = true
 	unusable_area_terrain_type = dry_mud
-	unusable_area_overlay_terrain_type = chasm
+	unusable_area_overlay_terrain_type = space
+	#surrounding_terrain_type = dry_mud
+	#surrounding_overlay_terrain_type = space
+	#north_of = earth_space
 	generated_neutral_units = {
 		unit_gold_deposit = 1
 		unit_silver_deposit = 3
