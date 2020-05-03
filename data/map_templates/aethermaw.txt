@@ -4,4 +4,6 @@ aethermaw = { #Source: "Battle for Wesnoth"
 	#plane = aethermaw
 	size = { 51 42 }
 	terrain_image = "aethermaw.png"
+	surrounding_terrain_type = dirt
+	surrounding_overlay_terrain_type = space
 }
