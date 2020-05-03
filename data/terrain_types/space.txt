@@ -1,0 +1,38 @@
+space = {
+	name = "Space"
+	character = *
+	color = { 64 0 128 }
+	overlay = true
+	image_file = "terrain/space.png"
+	transition_image_file = "terrain/cliff_mask.png"
+	elevation_image_file = "terrain/cliff.png"
+	tiled_background = true
+	transition_mask = true
+	flags = {
+		space
+	}
+	base_terrain_types = {
+		dirt
+		mud
+		dry_mud
+		desert_sand
+	}
+	transition_tiles = {
+		any = {
+			north = { 1 4 7 }
+			south = { 25 28 31 }
+			west = { 12 15 18 }
+			east = { 14 17 20 }
+			northwest_outer = { 0 3 6 }
+			northeast_outer = { 2 5 8 }
+			southwest_outer = { 24 27 30 }
+			southeast_outer = { 26 29 32 }
+			northwest_inner = { 72 }
+			northeast_inner = { 73 }
+			southwest_inner = { 84 }
+			southeast_inner = { 85 }
+			northwest_southeast_inner = { 96 }
+			northeast_southwest_inner = { 97 }
+		}
+	}
+}
