@@ -69,7 +69,6 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	StartDate = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathDate = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	-- Fichtner gives him as dying in 436, however
-	ViolentDeath = true, -- presumably
 	Father = "gibica",
 	Mother = "grimhild",
 	Deities = {"christian-god"},
@@ -396,7 +395,6 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	StartDate = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	-- Fichtner also gives him (as Godomar) as being the Burgundian king from 523 on; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	DeathDate = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
-	ViolentDeath = true,
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	Deities = {"christian-god"},
 	HistoricalTitles = {

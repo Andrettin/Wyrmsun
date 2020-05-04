@@ -112,7 +112,6 @@ DefineCharacter("aethelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Faction = "bernicia",
 	StartDate = 593, -- beginning of reign
 	DeathDate = 616, -- died in battle against Rædwald
-	ViolentDeath = true,
 	Father = "aethelric",
 	Description = "Aethelfrith was the king of Bernicia between 593 and 616. He simultaneously ruled over Deira, and is famed for his defeat of the Britons at Chester. Aethelfrith came to a tragic end at the hands of Raedwald of East Anglia in 616, being killed in battle.",
 	Deities = {"odin", "tyr"},
@@ -157,7 +156,6 @@ DefineCharacter("edwin-of-deira", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Father = "aelle",
 	StartDate = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
 	DeathDate = {632, 10, 12}, -- died on the 12th of October 632 in battle against Cadwallon of Gwynedd, at Hatfield
-	ViolentDeath = true,
 	-- married Æthelberg in 625
 	Deities = {"christian-god"},
 	HistoricalTitles = {
@@ -306,7 +304,6 @@ DefineCharacter("osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Faction = "deira",
 	Father = "edwin-of-deira",
 	DeathDate = 632, -- died in 632 in battle against Cadwallon of Gwynedd
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "deira" or GetPlayerData(trigger_player, "Faction") == "bernicia") then -- Edwin also ruled over Bernicia
@@ -324,7 +321,6 @@ DefineCharacter("penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Faction = "mercia",
 	StartDate = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
 	DeathDate = 654, -- died fighting against Oswiu of Bernicia; died in the autumn of 654
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 654, "mercia" -- became king of Mercia in 632 after Edwin's demise
@@ -346,7 +342,6 @@ DefineCharacter("osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Faction = "deira",
 	StartDate = 632,
 	DeathDate = 633, -- died fighting against Cadwallon in the summer of 633
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 633, "deira" -- king of Deira from Edwin's death to 633
@@ -368,7 +363,6 @@ DefineCharacter("eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Father = "aethelfrith",
 	StartDate = 632,
 	DeathDate = 633, -- killed in 633 while visiting Cadwallon to sue for peace
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 632, 633, "bernicia" -- king of Bernicia from Edwin's death to 633
@@ -409,7 +403,6 @@ DefineCharacter("oswald-of-bernicia", { -- Source: Frank Stenton, "Anglo-Saxon E
 	Father = "aethelfrith", -- he was a brother of Eanfrith's, so presumably also a son of Æthelfrith
 	StartDate = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
 	DeathDate = 641, -- defeated and killed by Penda of Mercia at Maserfelth (likely Oswestry in Shropshire) on the 5h of August 641
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 633, 641, "bernicia",
@@ -577,7 +570,6 @@ DefineCharacter("oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Father = "osric",
 	StartDate = 641,
 	DeathDate = 651, -- died as a result of Oswiu of Bernicia's invasion of Deira in 651 AD
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 641, 651, "deira" -- became king of Deira on the death of Oswald of Bernicia
@@ -618,7 +610,6 @@ DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Faction = "east-anglia",
 	StartDate = 654,
 	DeathDate = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 654, 654, "east-anglia" -- king of East Anglia; in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
@@ -701,7 +692,6 @@ DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Father = "penda",
 	StartDate = 653, -- was ruling the Middle Angles in 653 when he was baptized
 	DeathDate = 656, -- murdered in the spring of 656
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 654, 656, "middle-anglia"
@@ -892,7 +882,6 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Father = "oswiu",
 	StartDate = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
 	DeathDate = {685, 5, 20}, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 674, 685, "northumbria" -- king of Northumbria
@@ -1218,7 +1207,6 @@ DefineCharacter("osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Trait = "upgrade-cruel", -- described as wild, irreligious and tyrannical to his noble subjects
 	StartDate = 697, -- began to rule in 705, when he was eight years old
 	DeathDate = 716, -- murdered in 716
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 705, 716, "northumbria" -- king of Northumbria; began to rule in 705
@@ -1711,7 +1699,6 @@ DefineCharacter("aethelred-moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Father = "aethelwald-moll",
 	StartDate = 774,
 	DeathDate = 796, -- murdered
-	ViolentDeath = true,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
 		"head-of-state", 774, 779, "northumbria", -- became king of Northumbria after Alhred was deposed, was expelled in 779 from Northumbria by Ælfwald

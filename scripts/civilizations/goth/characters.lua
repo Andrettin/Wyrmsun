@@ -73,7 +73,6 @@ DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Civilization = "goth",
 	StartDate = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
 	DeathDate = 493, -- was put to death by Theoderic in 493 AD
-	ViolentDeath = true,
 	Deities = {"christian-god"}
 })
 

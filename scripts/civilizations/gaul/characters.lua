@@ -51,7 +51,6 @@ DefineCharacter("cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germ
 	Faction = "eburones-tribe",
 	StartDate = -54,
 	DeathDate = -53, -- poisoned himself after the Romans devastated the lands of his people
-	ViolentDeath = true,
 	Trait = "upgrade-old",
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "eburones-tribe") then

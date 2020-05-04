@@ -333,8 +333,7 @@ DefineCharacter("snorri-sturlson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "sturla-thordarson",
 	Trait = "upgrade-ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
 	StartDate = 1178, -- born in 1178 at Hvam, in western Iceland
-	DeathDate = 1241, -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
-	ViolentDeath = true
+	DeathDate = 1241 -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
 })
 
 DefineCharacter("alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.

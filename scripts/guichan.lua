@@ -1389,11 +1389,6 @@ LoadData() -- process the data
 load_database(false)
 initialize_database()
 
-LoadingHistory = true
-LoadDataFiles("wyr/history/")
-LoadingHistory = false
---GenerateHistory()
-
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
 
 -- load heroes after the DLCs and mods, so that they can use mod-specific items

@@ -32,7 +32,6 @@ DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Civilization = "germanic",
 	StartDate = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
 	DeathDate = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
-	ViolentDeath = true,
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
 		"head-of-state", -3000, -3000 + 12, "asa-tribe"

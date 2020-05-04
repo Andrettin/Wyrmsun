@@ -226,7 +226,6 @@ DefineCharacter("cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Faction = "gwynedd",
 	StartDate = 632,
 	DeathDate = 633, -- killed by Oswald of Bernicia in 633
-	ViolentDeath = true,
 	HistoricalTitles = {
 		"head-of-state", 632, 0, "gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
 	},
