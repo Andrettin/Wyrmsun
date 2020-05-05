@@ -127,6 +127,7 @@ DefineDialogue("the-mead-of-poetry-invitation-to-gilling", {
 	}
 })
 
+--[[
 DefineDialogue("the-mead-of-poetry-gilling-appears", {
 	Nodes = {
 		{
@@ -223,3 +224,4 @@ DefineDialogue("the-mead-of-poetry-suttungs-boastfulness", {
 		}
 	}
 })
+--]]

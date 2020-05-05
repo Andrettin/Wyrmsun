@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 DefineQuest("the-two-kings-of-annwn", {
 	Name = "The Two Kings of Annwn",
 	Icon = "icon-elven-swordsman",
@@ -37,6 +38,7 @@ DefineQuest("the-two-kings-of-annwn", {
 	IntroductionDialogue = "the-two-kings-of-annwn-introduction",
 	Hidden = true
 })
+--]]
 
 DefineQuest("volunds-flight", {
 	Name = "Volund's Flight",

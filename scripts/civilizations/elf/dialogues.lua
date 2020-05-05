@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 DefineDialogue("the-two-kings-of-annwn-introduction", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10-11, 13.
 	Nodes = {
 		{
@@ -81,5 +82,6 @@ DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier
 		}
 	}
 })
+--]]
 
 Load("scripts/civilizations/elf/dialogues_the_winter_war.lua")

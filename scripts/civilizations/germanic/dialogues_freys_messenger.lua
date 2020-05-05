@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 DefineDialogue("freys-messenger-skirnirs-feeling", {
 	Nodes = {
 		{
@@ -210,3 +211,4 @@ DefineDialogue("freys-messenger-skirnir-returns-with-gerds-message", { -- based 
 		}
 	}
 })
+--]]
