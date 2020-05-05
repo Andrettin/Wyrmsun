@@ -110,12 +110,12 @@ DefineQuest("the-mastersmith-brothers", {
 	Hint = "A selection of heroes is available for recruitment at the Mead Hall.",
 	Objectives = {
 		{
-			"objective-type", "recruit-hero",
+			"objective-type", "recruit_hero",
 			"objective-string", "Recruit Brokk",
 			"character", "brokk"
 		},
 		{
-			"objective-type", "recruit-hero",
+			"objective-type", "recruit_hero",
 			"objective-string", "Recruit Eitri",
 			"character", "eitri"
 		}
