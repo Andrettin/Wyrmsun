@@ -1,0 +1,27 @@
+gates_of_svarinshaug = { #border between Svarinshaug and Aurvang, to give a location to place the Goldhoof Clan
+	name = "Gates of Svarinshaug"
+	main_template = nidavellir
+	size = { 8 8 }
+	base_terrain_type = dry_mud
+	adjacent_template = svarinshaug
+	adjacent_template = aurvang
+	generated_terrains = {
+		mud = {
+			seed_count = 2
+			target_terrain_type = dry_mud
+		}
+		flamefood_tree = {
+			seed_count = 1
+			expansion_chance = 45
+			max_percent = 20
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 1
+			expansion_chance = 45
+			max_percent = 20
+			target_terrain_type = dry_mud
+			target_terrain_type = mud
+		}
+	}
+}
