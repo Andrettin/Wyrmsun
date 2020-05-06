@@ -1,0 +1,38 @@
+pine_tree = {
+	name = "Pine Tree"
+	character = t
+	color = { 0 128 0 }
+	base_terrain_types = { grass }
+	overlay = true
+	image_file = "terrain/pine_tree.png"
+	flags = {
+		land
+		forest
+		unpassable
+	}
+	resource = lumber
+	solid_tiles = { 18 }
+	destroyed_tiles = { 16 32 48 }
+	season_image_files = {
+		autumn = "terrain/pine_tree_autumn.png"
+		winter = "terrain/pine_tree_snow.png"
+	}
+	transition_tiles = {
+		any = {
+			north = { 2 }
+			south = { 34 }
+			west = { 17 }
+			east = { 19 }
+			northwest_outer = { 1 }
+			northeast_outer = { 3 }
+			southwest_outer = { 33 }
+			southeast_outer = { 35 }
+			northwest_inner = { 10 }
+			northeast_inner = { 11 }
+			southwest_inner = { 26 }
+			southeast_inner = { 27 }
+			northwest_southeast_inner = { 30 }
+			northeast_southwest_inner = { 14 }
+		}
+	}
+}
