@@ -1,0 +1,76 @@
+shallow_water = {
+	name = "Shallow Water"
+	character = w
+	character_aliases = {
+		: #deep water
+		+ #lake
+		4 #river
+	}
+	color = { 0 128 255 }
+	overlay = true
+	allow_single = true
+	image_file = "terrain/shallow_water.png"
+	elevation_image_file = "terrain/shallow_water_shore.png"
+	flags = {
+		water
+	}
+	base_terrain_types = {
+		dirt
+		mud
+		snow
+		ice
+		ford
+	}
+	solid_tiles = { 17 20 23 }
+	transition_tiles = {
+		any = {
+			north = { 1 4 7 }
+			south = { 33 36 39 }
+			west = { 16 19 22 }
+			east = { 18 21 24 }
+			northwest_outer = { 0 3 }
+			northeast_outer = { 2 5 }
+			southwest_outer = { 32 35 }
+			southeast_outer = { 34 37 }
+			northwest_inner = { 48 50 }
+			northeast_inner = { 49 51 }
+			southwest_inner = { 64 66 }
+			southeast_inner = { 65 67 }
+			northwest_southeast_inner = { 81 97 }
+			northeast_southwest_inner = { 80 96 }
+			
+			single = { 129 }
+			north_single = { 161 }
+			south_single = { 193 }
+			west_single = { 176 }
+			east_single = { 178 }
+			north_south = { 113 145 }
+			west_east = { 128 130 131 }
+			northwest_northeast_southwest_southeast_inner = { 177 }
+			northwest_northeast_inner = { 216 }
+			southwest_southeast_inner = { 232 }
+			northwest_southwest_inner = { 217 }
+			northeast_southeast_inner = { 233 }
+			northwest_northeast_southwest_inner = { 218 }
+			northwest_northeast_southeast_inner = { 219 }
+			northwest_southwest_southeast_inner = { 234 }
+			northeast_southwest_southeast_inner = { 235 }
+			north_southwest_inner_southeast_inner = { 208 }
+			north_southwest_inner = { 214 }
+			north_southeast_inner = { 215 }
+			south_northwest_inner_northeast_inner = { 224 }
+			south_northwest_inner = { 230 }
+			south_northeast_inner = { 231 }
+			west_northeast_inner_southeast_inner = { 209 }
+			west_northeast_inner = { 212 }
+			west_southeast_inner = { 228 }
+			east_northwest_inner_southwest_inner = { 225 }
+			east_northwest_inner = { 213 }
+			east_southwest_inner = { 229 }
+			northwest_outer_southeast_inner = { 112 }
+			northeast_outer_southwest_inner = { 114 }
+			southwest_outer_northeast_inner = { 144 }
+			southeast_outer_northwest_inner = { 146 }
+		}
+	}
+}
