@@ -208,51 +208,6 @@ DefineTerrainType("ford", {
 	}
 })
 
-DefineTerrainType("gray-shallow-water", {
-	Name = "Gray Shallow Water",
-	Character = "y",
-	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor"},
-	Overlay = true,
-	Flags = {"water", "underground"},
-	Graphics = "terrain/gray_shallow_water.png",
-	ElevationGraphics = "terrain/gray_shallow_water_shore.png",
-	SolidTiles = {17, 20, 23},
-	TransitionTiles = {
-		"any", "north", 1,
-		"any", "north", 4,
-		"any", "north", 7,
-		"any", "south", 33,
-		"any", "south", 36,
-		"any", "south", 39,
-		"any", "west", 16,
-		"any", "west", 19,
-		"any", "west", 22,
-		"any", "east", 18,
-		"any", "east", 21,
-		"any", "east", 24,
-		"any", "northwest-outer", 0,
-		"any", "northwest-outer", 3,
-		"any", "northeast-outer", 2,
-		"any", "northeast-outer", 5,
-		"any", "southwest-outer", 32,
-		"any", "southwest-outer", 35,
-		"any", "southeast-outer", 34,
-		"any", "southeast-outer", 37,
-		"any", "northwest-inner", 48,
-		"any", "northwest-inner", 50,
-		"any", "northeast-inner", 49,
-		"any", "northeast-inner", 51,
-		"any", "southwest-inner", 64,
-		"any", "southwest-inner", 66,
-		"any", "southeast-inner", 65,
-		"any", "southeast-inner", 67,
-		"any", "northwest-southeast-inner", 81,
-		"any", "northwest-southeast-inner", 97,
-		"any", "northeast-southwest-inner", 80,
-		"any", "northeast-southwest-inner", 96
-	}
-})
-
 DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Color = {32, 32, 0},

@@ -1,0 +1,35 @@
+gray_shallow_water = {
+	name = "Gray Shallow Water"
+	character = y
+	color = { 0 64 128 }
+	overlay = true
+	image_file = "terrain/gray_shallow_water.png"
+	elevation_image_file = "terrain/gray_shallow_water_shore.png"
+	flags = {
+		water
+		underground
+	}
+	base_terrain_types = {
+		rockbound_cave_floor
+		cave_floor
+	}
+	solid_tiles = { 17 20 23 }
+	transition_tiles = {
+		any = {
+			north = { 1 4 7 }
+			south = { 33 36 39 }
+			west = { 16 19 22 }
+			east = { 18 21 24 }
+			northwest_outer = { 0 3 }
+			northeast_outer = { 2 5 }
+			southwest_outer = { 32 35 }
+			southeast_outer = { 34 37 }
+			northwest_inner = { 48 50 }
+			northeast_inner = { 49 51 }
+			southwest_inner = { 64 66 }
+			southeast_inner = { 65 67 }
+			northwest_southeast_inner = { 81 97 }
+			northeast_southwest_inner = { 80 96 }
+		}
+	}
+}
