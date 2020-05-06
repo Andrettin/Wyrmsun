@@ -1,17 +1,14 @@
-dirt = {
-	name = "Dirt"
-	character = d
-	character_aliases = { h } #hills
-	color = { 192 128 0 }
-	image_file = "terrain/dirt.png"
+dry_mud = {
+	name = "Dry Mud"
+	character = r
+	color = { 128 64 0 }
 	buildable = true
-	flags = {
-		land
-		dirt
-	}
+	image_file = "terrain/dry_mud.png"
+	flags = { land }
 	outer_border_terrain_types = {
-		dry_mud
 		mud
+		cave_floor
+		rockbound_cave_floor
 	}
 	solid_tiles = { 17 20 23 }
 	season_image_files = {
