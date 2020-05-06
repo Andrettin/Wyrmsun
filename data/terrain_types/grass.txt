@@ -1,0 +1,38 @@
+grass = {
+	name = "Grass"
+	character = g
+	character_aliases = { p } #plains
+	color = { 0 192 0 }
+	image_file = "terrain/grass.png"
+	buildable = true
+	flags = {
+		land
+		grass
+	}
+	outer_border_terrain_types = {
+		dirt
+		dry_mud
+	}
+	solid_tiles = { 17 20 23 }
+	season_image_files = {
+		winter = "terrain/snow.png"
+	}
+	adjacent_transition_tiles = {
+		any = {
+			north = { 33 36 39 }
+			south = { 1 4 7 }
+			west = { 18 21 24 }
+			east = { 16 19 22 }
+			northwest_outer = { 65 67 69 }
+			northeast_outer = { 64 66 68 }
+			southwest_outer = { 49 51 53 }
+			southeast_outer = { 48 50 52 }
+			northwest_inner = { 34 37 40 }
+			northeast_inner = { 32 35 38 }
+			southwest_inner = { 2 5 8 }
+			southeast_inner = { 0 3 6 }
+			northwest_southeast_inner = { 80 96 }
+			northeast_southwest_inner = { 81 97 }
+		}
+	}
+}
