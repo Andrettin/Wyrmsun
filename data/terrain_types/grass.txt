@@ -1,7 +1,10 @@
 grass = {
 	name = "Grass"
 	character = g
-	character_aliases = { p } #plains
+	character_aliases = {
+		p #plains
+		G #dry grass
+	}
 	color = { 0 192 0 }
 	image_file = "terrain/grass.png"
 	buildable = true

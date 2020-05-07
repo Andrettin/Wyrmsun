@@ -1,6 +1,9 @@
 rock = {
 	name = "Rock"
 	character = k
+	character_aliases = {
+		K #dry rock
+	}
 	color = { 128 128 128 }
 	overlay = true
 	resource = stone

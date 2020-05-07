@@ -1,6 +1,10 @@
 gray_shallow_water = {
 	name = "Gray Shallow Water"
 	character = y
+	character_aliases = {
+		x #lava
+		X #lava chasm
+	}
 	color = { 0 64 128 }
 	overlay = true
 	image_file = "terrain/gray_shallow_water.png"

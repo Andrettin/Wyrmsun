@@ -1,6 +1,9 @@
 pine_tree = {
 	name = "Pine Tree"
 	character = t
+	character_aliases = {
+		T #tropical tree
+	}
 	color = { 0 128 0 }
 	base_terrain_types = { grass }
 	overlay = true

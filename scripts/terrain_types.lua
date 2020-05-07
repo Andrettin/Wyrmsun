@@ -85,6 +85,7 @@ DefineTerrainType("desert-sand", {
 	Name = "Desert Sand",
 	Color = {255, 255, 0},
 	Character = "e",
+	CharacterAliases = {"E"}, -- dunes/sandy hills
 	Flags = {"land", "no-building", "dirt", "desert"},
 	InnerBorderTerrains = {"dirt", "dry-mud", "cave-floor", "mud"},
 	Graphics = "terrain/desert_sand.png",
@@ -168,6 +169,7 @@ DefineTerrainType("snow", {
 DefineTerrainType("ford", {
 	Name = "Ford",
 	Color = {0, 128, 192},
+	Character = "o",
 	Flags = {"land", "no-building"},
 	InnerBorderTerrains = {"snow", "mud", "dirt", "dry-mud", "desert-sand", "cave-floor", "rockbound-cave-floor", "ice"},
 	Graphics = "terrain/ford.png",

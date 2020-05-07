@@ -1,6 +1,9 @@
 dry_mud = {
 	name = "Dry Mud"
 	character = r
+	character_aliases = {
+		R #dry dirt
+	}
 	color = { 128 64 0 }
 	buildable = true
 	image_file = "terrain/dry_mud.png"

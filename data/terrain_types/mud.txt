@@ -1,6 +1,9 @@
 mud = {
 	name = "Mud"
 	character = m
+	character_aliases = {
+		M #swamp water reed
+	}
 	color = { 192 64 64 }
 	flags = {
 		land
