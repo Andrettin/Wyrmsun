@@ -1,0 +1,11 @@
+ursula = {
+	name = "Ursula"
+	main_template = universe
+	size = { 51 54 }
+	terrain_file = "alpha_quadrant.map"
+	overlay_terrain_file = "alpha_quadrant_overlay.map"
+	surrounding_terrain_type = dirt
+	surrounding_overlay_terrain_type = space
+	start_pos = { 21 1 }
+	end_pos = { 29 8 }
+}

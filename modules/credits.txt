@@ -1,0 +1,2 @@
+/modules/battle_for_wesnoth/ (by the Battle for Wesnoth Team) (licensed under the GPL 2.0)
+/modules/battle_for_wesnoth/modules/galactic_empires/ (by the Bob_The_Mighty) (licensed under the GPL 2.0)
