@@ -2,6 +2,6 @@ the_first_dwarves = {
 	name = "The First Dwarves"
 	description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?"
 	faction = brising_clan
-	start_date = -3000.3 #the dwarves should arrive before winter, so that they have time to prepare their dwelling before the forces of nature imperil them; spring is an appropriate season, since then the player has plenty of time before winter
+	start_date = -3000.4 #the dwarves should arrive before winter, so that they have time to prepare their dwelling before the forces of nature imperil them; spring is an appropriate season, since then the player has plenty of time before winter
 	map_templates = { nidavellir }
 }
