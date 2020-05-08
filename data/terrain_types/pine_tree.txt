@@ -3,6 +3,7 @@ pine_tree = {
 	character = t
 	character_aliases = {
 		T #tropical tree
+		U #deciduous tree
 	}
 	color = { 0 128 0 }
 	base_terrain_types = { grass }

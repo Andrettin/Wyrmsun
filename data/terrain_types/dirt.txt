@@ -1,7 +1,10 @@
 dirt = {
 	name = "Dirt"
 	character = d
-	character_aliases = { h } #hills
+	character_aliases = {
+		h #hills
+		B #beach sand
+	}
 	color = { 192 128 0 }
 	image_file = "terrain/dirt.png"
 	buildable = true

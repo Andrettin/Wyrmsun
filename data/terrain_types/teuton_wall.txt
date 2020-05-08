@@ -1,6 +1,7 @@
 teuton_wall = {
 	name = "Wall"
 	color = { 160 144 144 }
+	character = /
 	overlay = true
 	allow_single = true
 	image_file = "terrain/teuton_wall.png"

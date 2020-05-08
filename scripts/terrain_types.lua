@@ -726,6 +726,7 @@ DefineTerrainType("fairlimbed-tree", {
 
 DefineTerrainType("road", {
 	Name = "Road",
+	Character = "_",
 	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "road", "stone-floor"},
@@ -848,6 +849,7 @@ DefineTerrainType("railroad", { -- also represents tramways when linking a settl
 
 DefineTerrainType("norse-palisade", {
 	Name = "Palisade",
+	Character = "|",
 	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
