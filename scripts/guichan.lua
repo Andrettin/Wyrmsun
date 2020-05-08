@@ -1387,6 +1387,9 @@ LoadMods()
 LoadData() -- process the data
 
 load_database(false)
+
+Load("scripts/map_template_data.lua")
+
 initialize_database()
 
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
