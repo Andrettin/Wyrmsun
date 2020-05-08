@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added 2x scaling option.
 - Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
 - Removed the "Use OpenGL" option, as OpenGL is now always used for rendering.
+- Reworked the random number generator to provide better results.
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
