@@ -1,0 +1,6 @@
+weldyn = {
+	name = "Weldyn"
+	map_template = weldyn
+	pos = { 17 21 }
+	major = true
+}
