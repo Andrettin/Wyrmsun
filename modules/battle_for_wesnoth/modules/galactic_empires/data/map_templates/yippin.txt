@@ -1,0 +1,11 @@
+yippin = {
+	name = "Yippin"
+	main_template = universe
+	size = { 51 54 }
+	terrain_file = "alpha_quadrant.map"
+	overlay_terrain_file = "alpha_quadrant_overlay.map"
+	surrounding_terrain_type = cave_floor
+	surrounding_overlay_terrain_type = space
+	start_pos = { 7 8 }
+	end_pos = { 13 13 }
+}
