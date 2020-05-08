@@ -9,14 +9,14 @@ vidblain = {
 	unusable_area_overlay_terrain_type = space
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
-	north_of = alfheim
+	#adjacent_template = alfheim
 	generated_terrains = {
 		dirt = {
 			seed_count = 4
 			max_percent = 20
 			target_terrain_type = grass
 		}
-		fairlimbed_tree = {
+		pine_tree = {
 			seed_count = 8
 			expansion_chance = 50
 			max_percent = 33
@@ -33,7 +33,6 @@ vidblain = {
 		unit_gold_deposit = 1
 		unit_iron_deposit = 1
 		unit_tree_stump = 2
-		unit_unicorn = 4
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
