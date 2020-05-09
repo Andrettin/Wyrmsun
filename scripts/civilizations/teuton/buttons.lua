@@ -65,7 +65,7 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 
 DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization", "upgrade-gothic-civilization", "upgrade-celt-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization", "upgrade-gothic-civilization", "upgrade-celtic-civilization"},
 	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
 	Description = "Trade with foreign markets",
 	ForUnit = {
@@ -333,7 +333,7 @@ DefineButton( { Pos = 5, Icon = "icon-christianity",
   
 DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
 	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -349,7 +349,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 
 DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-anglo-saxon-civilization", "upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-anglo-saxon-civilization", "upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
 	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -365,7 +365,7 @@ DefineButton( { Pos = 10, Icon = "icon-tyr",
 DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
 	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-research",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Description = "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
@@ -395,7 +395,7 @@ DefineButton( { Pos = 12, Icon = "icon-hel",
 DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
 	Key = "l", Hint = "Worship He~!lla", Popup = "popup-research",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade-teuton-civilization"},
+	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Description = "Choose Hella as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Ziu minor deity.",
 	ForUnit = {"unit-teuton-temple"}
 })

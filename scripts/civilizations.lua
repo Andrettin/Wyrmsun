@@ -1205,7 +1205,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Adjective = "Celtic",
 	Playable = false,
 	DefaultColor = "green",
-	CivilizationUpgrade = "upgrade-celt-civilization",
+	CivilizationUpgrade = "upgrade-celtic-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
 		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
@@ -1759,7 +1759,7 @@ DefineCivilization("teuton", {
 	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
 	DefaultColor = "yellow",
-	CivilizationUpgrade = "upgrade-teuton-civilization",
+	CivilizationUpgrade = "upgrade_teutonic_civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
 	UnitSounds = {

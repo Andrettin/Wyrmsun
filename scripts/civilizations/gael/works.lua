@@ -39,5 +39,5 @@ DefineModifier("upgrade-work-de-mensura-orbis-terrae",
 )
 
 DefineDependency("upgrade-work-de-mensura-orbis-terrae",
-	{"upgrade-celt-civilization", "unit-teuton-university"}
+	{"upgrade-celtic-civilization", "unit-teuton-university"}
 )

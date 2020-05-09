@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-germanic-civilization", {
-	Name = "Germanic Civilization"
-})
-
-DefineUpgrade("upgrade-teuton-civilization", {
-	Name = "Teuton Civilization"
-})
-
 DefineUpgrade("upgrade-germanic-broad-sword", {
 	Parent = "upgrade-broad-sword",
 	Icon = "icon-germanic-broad-sword",
@@ -114,6 +106,6 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 	{"apply-to", "unit-teuton-stronghold"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"change-civilization-to", "teuton"}
 )

@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-goblin-civilization", {
-	Name = "Goblin Civilization"
-})
-
 DefineUpgrade("upgrade-goblin-broad-sword", {
 	Parent = "upgrade-broad-sword",
 	Icon = "icon-goblin-broad-sword",

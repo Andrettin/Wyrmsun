@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-suebi-civilization", {
-	Name = "Suebi Civilization"
-})
-
 DefineModifier("upgrade-suebi-civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
 )

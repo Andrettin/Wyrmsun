@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-anglo-saxon-civilization", {
-	Name = "Anglo-Saxon Civilization"
-})
-
 DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
 )
@@ -93,6 +89,6 @@ DefineModifier("upgrade-anglo-saxon-civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
 )

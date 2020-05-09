@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-slavic-civilization", {
-	Name = "Slavic Civilization"
-})
-
 DefineModifier("upgrade-slavic-civilization",
 	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-slavic-swordsman"}
 )

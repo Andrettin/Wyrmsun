@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-frankish-civilization", {
-	Name = "Frankish Civilization"
-})
-
 DefineUpgrade("upgrade-frank-spatha", {
 	Name = "Spatha",
 	Parent = "upgrade-long-sword",

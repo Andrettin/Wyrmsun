@@ -48,9 +48,9 @@ DefineModifier("upgrade-work-pedair-cainc-y-mabinogi",
 )
 
 DefineDependency("upgrade-work-de-excidio-et-conquestu-britanniae",
-	{"upgrade-celt-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"upgrade-celtic-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-work-pedair-cainc-y-mabinogi",
-	{"upgrade-celt-civilization", "unit-teuton-temple"}
+	{"upgrade-celtic-civilization", "unit-teuton-temple"}
 )

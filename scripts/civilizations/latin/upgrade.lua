@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-latin-civilization", {
-	Name = "Latin Civilization",
-	Civilization = "latin",
-	Costs = {"time", 200}
-})
-
 DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-latin-town-hall"}
 )

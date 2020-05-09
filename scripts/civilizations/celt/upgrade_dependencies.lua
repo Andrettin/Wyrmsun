@@ -28,5 +28,5 @@
 --
 
 DefinePredependency("unit-celt-farm",
-	{"upgrade-celt-civilization"}
+	{"upgrade-celtic-civilization"}
 )

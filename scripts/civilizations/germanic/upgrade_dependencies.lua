@@ -26,7 +26,7 @@
 --
 
 DefinePredependency("unit-germanic-town-hall",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefinePredependency("unit-germanic-farm",
@@ -34,15 +34,15 @@ DefinePredependency("unit-germanic-farm",
 )
 
 DefinePredependency("unit-germanic-barracks",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefinePredependency("unit-germanic-carpenters-shop",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefinePredependency("unit-germanic-smithy",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefineDependency("unit-germanic-archer",
@@ -50,7 +50,7 @@ DefineDependency("unit-germanic-archer",
 )
 
 DefinePredependency("unit-germanic-temple",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefineDependency("unit-germanic-temple",
@@ -58,7 +58,7 @@ DefineDependency("unit-germanic-temple",
 )
 
 DefinePredependency("unit-germanic-market",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefineDependency("unit-germanic-market",
@@ -70,7 +70,7 @@ DefineDependency("unit-germanic-priest",
 )
 
 DefinePredependency("unit-germanic-dock",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celt-civilization"}
+	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefineDependency("unit-germanic-dock",
@@ -81,6 +81,6 @@ DefineDependency("unit-germanic-transport-ship",
 	{"unit-germanic-carpenters-shop"}, "or", {"upgrade-trading-company"}
 )
 
-DefineDependency("upgrade-teuton-civilization",
+DefineDependency("upgrade_teutonic_civilization",
 	{"upgrade_ironworking"}
 )

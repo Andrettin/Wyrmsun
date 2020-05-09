@@ -1,0 +1,3 @@
+upgrade_gnomish_civilization = {
+	name = "Gnomish Civilization"
+}

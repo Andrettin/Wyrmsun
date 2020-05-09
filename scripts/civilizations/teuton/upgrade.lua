@@ -211,74 +211,74 @@ DefineModifier("upgrade-teuton-alchemy",
 	{"apply-to", "unit-teuton-catapult"}, {"apply-to", "unit-norse-longship"}, {"apply-to", "unit-teuton-catapult-tower"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-town-hall"}, {"convert-to", "unit-teuton-town-hall"}
 )
   
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-teuton-barracks"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-carpenters-shop"}, {"convert-to", "unit-teuton-lumber-mill"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-temple"}, {"convert-to", "unit-teuton-temple"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-market"}, {"convert-to", "unit-teuton-market"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-teuton-swordsman"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-suebi-swordsman"}, {"convert-to", "unit-teuton-swordsman"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-spearman"}, {"convert-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-priest"}, {"convert-to", "unit-teuton-priest"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-transport-ship"}, {"convert-to", "unit-teuton-kogge"}
 )
 
-DefineModifier("upgrade-teuton-civilization",
+DefineModifier("upgrade_teutonic_civilization",
 	{"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}
 )
