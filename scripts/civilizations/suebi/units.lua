@@ -64,7 +64,7 @@ DefineUnitType("unit-suebi-swordsman", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "k",
 	ButtonHint = "Train ~!Kregar",

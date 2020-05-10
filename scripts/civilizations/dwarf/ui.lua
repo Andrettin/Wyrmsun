@@ -27,14 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCursor({
-	Name = "cursor-point",
-	Race = "dwarf",
-	File = "cursors/dwarven/dwarven_gauntlet.png",
-	HotSpot = {3, 1},
-	Size = {28, 32}
-})
-
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 

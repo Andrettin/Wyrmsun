@@ -1,0 +1,7 @@
+teutonic_gauntlet = {
+	type = point
+	civilization = teuton
+	file = "cursors/teutonic/teutonic_gauntlet.png"
+	hot_pos = { 0 0 }
+	frame_size = { 28 32 }
+}

@@ -1,0 +1,7 @@
+germanic_hand = {
+	type = point
+	civilization = germanic
+	file = "cursors/germanic/germanic_hand.png"
+	hot_pos = { 0 0 }
+	frame_size = { 29 32 }
+}

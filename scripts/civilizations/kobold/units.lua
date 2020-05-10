@@ -49,7 +49,7 @@ DefineUnitType("unit-kobold-footpad", {
 	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
@@ -104,7 +104,7 @@ DefineUnitType("unit-kobold-slasher", {
 	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
@@ -159,7 +159,7 @@ DefineUnitType("unit-kobold-champion", {
 	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",

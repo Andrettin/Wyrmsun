@@ -173,7 +173,7 @@ DefineUpgrade("upgrade-sword-mastery", {
 	Name = "Sword Mastery",
 	Icon = "icon-sword-mastery",
 	Ability = true,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	MaxLimit = 5
 })
 
@@ -187,7 +187,7 @@ DefineUpgrade("upgrade-throwing-mastery", {
 	Name = "Throwing Mastery",
 	Icon = "icon-throwing-mastery",
 	Ability = true,
-	WeaponClasses = {"javelin", "throwing-axe"},
+	WeaponClasses = {"javelin", "throwing_axe"},
 	MaxLimit = 5
 })
 

@@ -1,0 +1,104 @@
+magnifying_glass = {
+	type = magnifying_glass
+	file = "cursors/magnifying_glass.png"
+	hot_pos = { 11 11 }
+	frame_size = { 34 35 }
+}
+
+cross = {
+	type = cross
+	file = "cursors/small_green_cross.png"
+	hot_pos = { 8 8 }
+	frame_size = { 18 18 }
+}
+
+scroll = {
+	type = scroll
+	file = "cursors/cross.png"
+	hot_pos = { 15 15 }
+	frame_size = { 32 32 }
+}
+
+arrow_e = {
+	type = arrow_east
+	file = "cursors/arrow_e.png"
+	hot_pos = { 22 10 }
+	frame_size = { 32 24 }
+}
+
+arrow_ne = {
+	type = arrow_northeast
+	file = "cursors/arrow_ne.png"
+	hot_pos = { 20 2 }
+	frame_size = { 32 24 }
+}
+
+arrow_n = {
+	type = arrow_north
+	file = "cursors/arrow_ne.png"
+	hot_pos = { 12 2 }
+	frame_size = { 24 32 }
+}
+
+arrow_nw = {
+	type = arrow_northwest
+	file = "cursors/arrow_nw.png"
+	hot_pos = { 2 2 }
+	frame_size = { 24 32 }
+}
+
+arrow_w = {
+	type = arrow_west
+	file = "cursors/arrow_w.png"
+	hot_pos = { 4 10 }
+	frame_size = { 32 24 }
+}
+
+arrow_s = {
+	type = arrow_south
+	file = "cursors/arrow_s.png"
+	hot_pos = { 12 22 }
+	frame_size = { 24 32 }
+}
+
+arrow_sw = {
+	type = arrow_southwest
+	file = "cursors/arrow_sw.png"
+	hot_pos = {  2 18 }
+	frame_size = { 32 24 }
+}
+
+arrow_se = {
+	type = arrow_southeast
+	file = "cursors/arrow_se.png"
+	hot_pos = { 20 18 }
+	frame_size = { 24 32 }
+}
+
+point = {
+	type = point
+	file = "cursors/dwarven/dwarven_gauntlet.png"
+	hot_pos = { 3 1 }
+	frame_size = { 28 32 }
+}
+
+green_hair = {
+	type = green_hair
+	file = "cursors/green.png"
+	hot_pos = { 15 15 }
+	frame_size = { 32 32 }
+}
+
+yellow_hair = {
+	type = yellow_hair
+	file = "cursors/yellow.png"
+	hot_pos = { 15 15 }
+	frame_size = { 32 32 }
+}
+
+red_hair = {
+	type = red_hair
+	file = "cursors/red.png"
+	hot_pos = { 15 15 }
+	frame_size = { 32 32 }
+}

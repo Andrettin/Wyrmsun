@@ -1,0 +1,7 @@
+dwarven_gauntlet = {
+	type = point
+	civilization = dwarf
+	file = "cursors/dwarven/dwarven_gauntlet.png"
+	hot_pos = { 3 1 }
+	frame_size = { 28 32 }
+}

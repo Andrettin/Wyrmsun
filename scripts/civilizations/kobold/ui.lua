@@ -27,14 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCursor({
-	Name = "cursor-point",
-	Race = "kobold",
-	File = "goblin/ui/cursors/goblin_gauntlet.png",
-	HotSpot = {1, 1},
-	Size = {26, 32}
-})
-
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 

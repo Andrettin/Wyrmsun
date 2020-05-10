@@ -122,7 +122,7 @@ DefineUnitType("unit-thrusting-sword", {
 	Costs = {"copper", 100},
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-gnomish-thrusting-sword-1",
-	ItemClass = "thrusting-sword",
+	ItemClass = "thrusting_sword",
 	ButtonIcons = {
 		{"stand-ground", "icon-germanic-stand-ground"}
 	},
@@ -254,7 +254,7 @@ DefineUnitType("unit-throwing-axe", {
 	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-throwing-axe",
-	ItemClass = "throwing-axe",
+	ItemClass = "throwing_axe",
 	ButtonIcons = {
 		{"stand-ground", "icon-dwarven-stand-ground"}
 	},
@@ -267,7 +267,7 @@ DefineUnitType("unit-sharp-throwing-axe", {
 	Costs = {"copper", 200},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-sharp-throwing-axe",
-	ItemClass = "throwing-axe",
+	ItemClass = "throwing_axe",
 	ButtonIcons = {
 		{"stand-ground", "icon-dwarven-stand-ground"}
 	},
@@ -280,7 +280,7 @@ DefineUnitType("unit-bearded-throwing-axe", {
 	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-bearded-throwing-axe",
-	ItemClass = "throwing-axe",
+	ItemClass = "throwing_axe",
 	ButtonIcons = {
 		{"stand-ground", "icon-dwarven-stand-ground"}
 	},

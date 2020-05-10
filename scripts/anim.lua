@@ -432,6 +432,22 @@ DefineAnimations("animations-archer", {
 	Death = ArcherDeath
 })
 
+
+DefineAnimations("animations-archer-short-attack", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = {
+		"unbreakable begin",
+		"frame 25", "wait 10", "frame 30", "attack", "wait 10",
+		"frame 0", "wait 19", "frame 0",
+		"unbreakable end", "wait 1",
+	},
+	Death = {
+		"unbreakable begin", "frame 35", "wait 3", "frame 40", "wait 3", "frame 45", "wait 100",
+		"frame 45", "unbreakable end", "wait 1",
+	}
+})
+
 DefineAnimations("animations-weapon-thrower", {
 	Still = UnitStill,
 	Move = UnitMove,

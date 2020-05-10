@@ -47,7 +47,7 @@ DefineUnitType("unit-latin-legionary", {
 	Armor = 3, -- +1 armor
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
@@ -73,7 +73,7 @@ DefineUnitType("unit-latin-veteran-legionary", {
 	Armor = 3, -- +1 armor
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
@@ -99,7 +99,7 @@ DefineUnitType("unit-latin-centurion", {
 	Armor = 3, -- +1 armor
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},

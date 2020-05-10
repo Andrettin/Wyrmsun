@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCursor({
-	Name = "cursor-point",
-	Race = "greek",
-	File = "germanic/ui/cursors/germanic_hand.png",
-	HotSpot = {0, 0},
-	Size = {29, 32}
-})
-
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 

@@ -137,7 +137,7 @@ DefineUnitType("unit-germanic-warrior", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
@@ -255,7 +255,7 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
@@ -373,7 +373,7 @@ DefineUnitType("unit-germanic-chieftain", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},

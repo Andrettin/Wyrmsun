@@ -48,7 +48,7 @@ DefineUnitType("unit-elven-swordsman", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},

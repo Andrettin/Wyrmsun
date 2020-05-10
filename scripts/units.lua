@@ -333,6 +333,82 @@ DefineUnitType("unit-caravan", {
 	}
 } )
 
+--DefineUnitType("unit-destroyed-1x1-place", { Name = "Destroyed 1x1 Place",
+--	Image = {"size", {32, 32}},
+--	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+--	HitPoints = 255,
+--	DrawLevel = 10,
+--	TileSize = {1, 1}, BoxSize = {31, 31},
+--	SightRange = 2,
+--	Missile = "missile-none",
+--	Priority = 0,
+--	Type = "land",
+--	Building = true, VisibleUnderFog = true,
+--	Vanishes = true,
+--	Sounds = {} } )
+
+DefineUnitType("unit-destroyed-2x2-place", {
+	Name = "Destroyed 2x2 Place",
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	HitPoints = 255,
+	DrawLevel = 10,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 1,
+	Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	Vanishes = true,
+	Sounds = {}
+})
+
+DefineUnitType("unit-destroyed-3x3-place", {
+	Name = "Destroyed 3x3 Place",
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	HitPoints = 255,
+	DrawLevel = 10,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	Vanishes = true,
+	Sounds = {}
+})
+
+--DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
+--	Image = {"size", {64, 64}},
+--	Animations = "animations-destroyed-place-water", Icon = "icon-dwarven-miner",
+--	HitPoints = 255,
+--	DrawLevel = 10,
+--	TileSize = {3, 3}, BoxSize = {95, 95},
+--	SightRange = 0,
+--	Missile = "missile-none",
+--	Priority = 0,
+--	Type = "naval",
+--	Building = true, VisibleUnderFog = true,
+--	Vanishes = true,
+--	Sounds = {} } )
+
+DefineUnitType("unit-destroyed-4x4-place", {
+	Name = "Destroyed 4x4 Place",
+	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
+	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	HitPoints = 255,
+	DrawLevel = 10,
+	TileSize = {4, 4}, BoxSize = {127, 127},
+	SightRange = 1,
+	Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	Vanishes = true,
+	Sounds = {}
+})
+
 DefineUnitType("unit-template-base-deposit", {
 	Name = "Deposit",
 	Parent = "unit-template-building",
@@ -3240,82 +3316,6 @@ DefineUnitType("unit-miasma", {
 	}
 } )
 
---DefineUnitType("unit-destroyed-1x1-place", { Name = "Destroyed 1x1 Place",
---	Image = {"size", {32, 32}},
---	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
---	HitPoints = 255,
---	DrawLevel = 10,
---	TileSize = {1, 1}, BoxSize = {31, 31},
---	SightRange = 2,
---	Missile = "missile-none",
---	Priority = 0,
---	Type = "land",
---	Building = true, VisibleUnderFog = true,
---	Vanishes = true,
---	Sounds = {} } )
-
-DefineUnitType("unit-destroyed-2x2-place", {
-	Name = "Destroyed 2x2 Place",
-	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
-	HitPoints = 255,
-	DrawLevel = 10,
-	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 1,
-	Missile = "missile-none",
-	Priority = 0,
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	Vanishes = true,
-	Sounds = {}
-})
-
-DefineUnitType("unit-destroyed-3x3-place", {
-	Name = "Destroyed 3x3 Place",
-	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
-	HitPoints = 255,
-	DrawLevel = 10,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
-	Missile = "missile-none",
-	Priority = 0,
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	Vanishes = true,
-	Sounds = {}
-})
-
---DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
---	Image = {"size", {64, 64}},
---	Animations = "animations-destroyed-place-water", Icon = "icon-dwarven-miner",
---	HitPoints = 255,
---	DrawLevel = 10,
---	TileSize = {3, 3}, BoxSize = {95, 95},
---	SightRange = 0,
---	Missile = "missile-none",
---	Priority = 0,
---	Type = "naval",
---	Building = true, VisibleUnderFog = true,
---	Vanishes = true,
---	Sounds = {} } )
-
-DefineUnitType("unit-destroyed-4x4-place", {
-	Name = "Destroyed 4x4 Place",
-	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
-	HitPoints = 255,
-	DrawLevel = 10,
-	TileSize = {4, 4}, BoxSize = {127, 127},
-	SightRange = 1,
-	Missile = "missile-none",
-	Priority = 0,
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	Vanishes = true,
-	Sounds = {}
-})
-
 DefineUnitType("unit-revealer", {
 	Name = "Revealer",
 	Animations = "animations-building", Icon = "icon-eagle-eye",
@@ -5096,7 +5096,7 @@ DefineUnitType("unit-orc-sea-orc", {
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	WeaponClasses = {"sword", "thrusting-sword"},
+	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	HiddenInEditor = true,
 	Sounds = {
