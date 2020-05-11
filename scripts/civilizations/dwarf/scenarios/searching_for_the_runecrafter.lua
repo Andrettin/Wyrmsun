@@ -366,7 +366,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 	function()
 		for i=0, (PlayerMax - 2) do
-			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
@@ -407,7 +407,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 AddTrigger("searching-for-the-runecrafter-thursagan-found",
 	function()
 		for i=0, (PlayerMax - 2) do
-			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall") and IfNearUnit(i, ">=", 1, "units", "unit-dwarven-smithy")) then
+			if (PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")) then
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
