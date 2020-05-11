@@ -256,7 +256,7 @@ DefineTerrainType("floor", {
 	Name = "Floor",
 	Character = "f",
 	Buildable = true,
-	Flags = {"land", "stone-floor"},
+	Flags = {"land", "stone-floor", "underground"},
 	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow", "ford"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
@@ -295,7 +295,7 @@ DefineTerrainType("floor", {
 DefineTerrainType("rug", {
 	Name = "Rug",
 	Buildable = true,
-	Flags = {"land", "grass"},
+	Flags = {"land", "grass", "underground"},
 	OuterBorderTerrains = {"floor"},
 	Graphics = "terrain/rug.png",
 	SolidTiles = {17, 20},
@@ -323,7 +323,7 @@ DefineTerrainType("rug", {
 
 DefineTerrainType("gold-pile", {
 	Name = "Gold Pile",
-	Flags = {"land"},
+	Flags = {"land", "underground"},
 	OuterBorderTerrains = {"floor"},
 	Graphics = "terrain/gold_pile.png",
 	SolidTiles = {17, 20, 23, 26, 29},
