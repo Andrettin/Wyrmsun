@@ -206,14 +206,6 @@ if (GrandStrategy == false) then
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
 	SetUnitVariable(unit, "Unique", "shorbear-hold")
-	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 2)
-		SetUnitVariable(unit, "Active", false)
-	end
 	
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
@@ -227,12 +219,6 @@ if (GrandStrategy == false) then
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})
 	SetUnitVariable(unit, "Active", false)
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-	end
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {29, 29})
 		SetUnitVariable(unit, "Active", false)
@@ -260,12 +246,6 @@ if (GrandStrategy == false) then
 	
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 37})
 	SetUnitVariable(unit, "Active", false)
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-	end
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {29, 37})
 		SetUnitVariable(unit, "Active", false)
@@ -293,12 +273,6 @@ if (GrandStrategy == false) then
 	
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {38, 25})
 	SetUnitVariable(unit, "Active", false)
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-	end
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {38, 25})
 		SetUnitVariable(unit, "Active", false)
@@ -326,12 +300,6 @@ if (GrandStrategy == false) then
 	
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 29})
 	SetUnitVariable(unit, "Active", false)
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-	end
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {47, 29})
 		SetUnitVariable(unit, "Active", false)
@@ -359,12 +327,6 @@ if (GrandStrategy == false) then
 	
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 35})
 	SetUnitVariable(unit, "Active", false)
-	if (unit) then
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
-		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
-		SetUnitVariable(unit, "Active", false)
-	end
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
 		unit = CreateUnit("unit-dwarven-axefighter", 1, {47, 35})
 		SetUnitVariable(unit, "Active", false)
