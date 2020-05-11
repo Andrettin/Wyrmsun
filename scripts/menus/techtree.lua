@@ -77,8 +77,8 @@ function RunTechTreeMenu(civilization_number)
 		end
 		local b
 		techicon:Load(false, get_scale_factor())
-		local techicon_x_origin = (techicon_frame * 46 * get_scale_factor()) % techicon:getGraphicWidth()
-		local techicon_y_origin = math.floor((techicon_frame * 46 * get_scale_factor()) / techicon:getGraphicWidth()) * 38
+		local techicon_x_origin = (techicon_frame * 46 * get_scale_factor()) % techicon:get_width()
+		local techicon_y_origin = math.floor((techicon_frame * 46 * get_scale_factor()) / techicon:get_width()) * 38
 		b = PlayerColorImageButton("", playercolor)
 		b:setActionCallback(
 			function()
@@ -93,7 +93,7 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu_image:setNormalImage(techicon)
 				tech_menu_image:setPressedImage(techicon)
 				tech_menu_image:setDisabledImage(techicon)
-				tech_menu_image:setSize(techicon:getWidth(), techicon:getHeight())
+				tech_menu_image:setSize(techicon:get_frame_width(), techicon:get_frame_height())
 				tech_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 				tech_menu_image:setFrameImage(Preference.IconFrameG)
 				tech_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)

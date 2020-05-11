@@ -526,8 +526,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	else
 		encyclopedia_icon_disabled:Load(false, get_scale_factor())
 	end
-	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
-	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
+	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) % encyclopedia_icon:get_width()
+	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) / encyclopedia_icon:get_width()) * encyclopedia_icon:get_frame_height()
 	local b
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
@@ -554,7 +554,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	b:setNormalImage(encyclopedia_icon)
 	b:setPressedImage(encyclopedia_icon_pressed)
 	b:setDisabledImage(encyclopedia_icon_disabled)
-	b:setSize(encyclopedia_icon:getWidth(), encyclopedia_icon:getHeight())
+	b:setSize(encyclopedia_icon:get_frame_width(), encyclopedia_icon:get_frame_height())
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		b:setFrameImage(Preference.IconFrameG)
@@ -675,8 +675,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	end
 	encyclopedia_icon:Load(false, get_scale_factor())
-	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
-	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
+	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) % encyclopedia_icon:get_width()
+	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) / encyclopedia_icon:get_width()) * encyclopedia_icon:get_frame_height()
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
@@ -695,7 +695,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		menu_image:setNormalImage(encyclopedia_icon)
 		menu_image:setPressedImage(encyclopedia_icon_pressed)
 		menu_image:setDisabledImage(encyclopedia_icon_disabled)
-		menu_image:setSize(encyclopedia_icon:getWidth(), encyclopedia_icon:getHeight())
+		menu_image:setSize(encyclopedia_icon:get_frame_width(), encyclopedia_icon:get_frame_height())
 		menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		menu_image:setFrameImage(Preference.IconFrameG)
 		menu_image:setPressedFrameImage(Preference.PressedIconFrameG)

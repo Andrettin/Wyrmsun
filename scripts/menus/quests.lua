@@ -126,7 +126,7 @@ function RunQuestMenu(world)
 	end
 	badge_icon:Load(false, get_scale_factor())
 	local b = ImageWidget(badge_icon)
-	menu:add(b, (Video.Width / 2) - (badge_icon:getWidth() / 2), (Video.Height / 2) - (badge_icon:getHeight() / 2))
+	menu:add(b, (Video.Width / 2) - (badge_icon:get_frame_width() / 2), (Video.Height / 2) - (badge_icon:get_frame_height() / 2))
 	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")
 	--]]
 	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
@@ -237,14 +237,11 @@ function addQuestIcon(quest, menu, x, y)
 	local quest_icon_frame = GetIconData(GetQuestData(quest, "Icon"), "Frame")
 	local questicon
 	local b
-	if (GetQuestData(quest, "Completed")) then
-		questicon = CIcon:Get(GetQuestData(quest, "Icon")).GScale
-	else
-		questicon = CPlayerColorGraphic:Get(GetIconData(GetQuestData(quest, "Icon"), "File"))
-	end
+	local is_grayscale = GetQuestData(quest, "Completed")
+	questicon = CPlayerColorGraphic:Get(GetIconData(GetQuestData(quest, "Icon"), "File"))
 	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
-	local quest_icon_x_origin = (quest_icon_frame * 46 * get_scale_factor()) % questicon:getGraphicWidth()
-	local quest_icon_y_origin = math.floor((quest_icon_frame * 46 * get_scale_factor()) / questicon:getGraphicWidth()) * 38 * get_scale_factor()
+	local quest_icon_x_origin = (quest_icon_frame * 46 * get_scale_factor()) % questicon:get_width()
+	local quest_icon_y_origin = math.floor((quest_icon_frame * 46 * get_scale_factor()) / questicon:get_width()) * 38 * get_scale_factor()
 	b:setActionCallback(
 		function()
 			PlaySound("click")
@@ -255,6 +252,7 @@ function addQuestIcon(quest, menu, x, y)
 			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176 * get_scale_factor(), 11 * get_scale_factor())
 			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
+			quest_menu_image:setGrayscale(is_grayscale)	
 			quest_menu:add(quest_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
 
 			local l = MultiLineLabel()
@@ -306,6 +304,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
+	b:setGrayscale(is_grayscale)	
 	local tooltip = _(GetQuestData(quest, "Name")) .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
 	if (GetQuestData(quest, "HighestCompletedDifficulty") >= DifficultyEasy) then
 		tooltip = tooltip .. "\nHighest Completed Difficulty: "

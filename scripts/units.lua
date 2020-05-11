@@ -68,8 +68,6 @@ function DefineUnitType(unit_type, data)
 		end
 	end
 	
-	data.OnInit = InitializeUnit
-	
 	if (town_hall) then
 		data.BuildingRules = {
 			"and", {
@@ -1713,6 +1711,10 @@ DefineUnitType("unit-water-portal", {
 	}
 } )
 
+function InitializeMushroom(unit)
+	SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
+end
+
 DefineUnitType("unit-mushroom", {
 	Name = "Mushroom",
 	Image = {"file", "neutral/decorations/mushroom.png", "size", {32, 32}},
@@ -1730,6 +1732,7 @@ DefineUnitType("unit-mushroom", {
 	Indestructible = true,
 	VisibleUnderFog = true,
 	Diminutive = true,
+	OnInit = InitializeMushroom,
 	Variations = {
 		{
 			"variation-id", "red"
@@ -1746,6 +1749,10 @@ DefineUnitType("unit-mushroom", {
 	},
 	Sounds = {}
 })
+
+function InitializeMushroomPatch(unit)
+	SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
+end
 
 DefineUnitType("unit-mushroom-patch", {
 	Name = "Mushroom Patch",
@@ -1764,6 +1771,7 @@ DefineUnitType("unit-mushroom-patch", {
 	Indestructible = true,
 	VisibleUnderFog = true,
 	Diminutive = true,
+	OnInit = InitializeMushroomPatch,
 	Variations = {
 		{
 			"variation-id", "red"

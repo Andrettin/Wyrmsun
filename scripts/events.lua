@@ -486,7 +486,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			b:setNormalImage(event_icon)
 			b:setPressedImage(event_icon)
 			b:setDisabledImage(event_icon)
-			b:setSize(event_icon:getWidth(), event_icon:getHeight())
+			b:setSize(event_icon:get_frame_width(), event_icon:get_frame_height())
 			b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 			b:setFrameImage(Preference.IconFrameG)
 			b:setPressedFrameImage(Preference.PressedIconFrameG)
@@ -631,8 +631,8 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	menu:addLabel(_(title), 128 * get_scale_factor(), 11 * get_scale_factor())
 	
 	if (icon) then
-		local icon_x_origin = (frame * icon_graphics:getWidth()) % icon_graphics:getGraphicWidth()
-		local icon_y_origin = math.floor((frame * icon_graphics:getWidth()) / icon_graphics:getGraphicWidth()) * icon_graphics:getHeight()
+		local icon_x_origin = (frame * icon_graphics:get_frame_width()) % icon_graphics:get_width()
+		local icon_y_origin = math.floor((frame * icon_graphics:get_frame_width()) / icon_graphics:get_width()) * icon_graphics:get_frame_height()
 		
 		if not (player_color) then
 			player_color = "red"
@@ -643,7 +643,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 		icon_widget:setNormalImage(icon_graphics)
 		icon_widget:setPressedImage(icon_graphics)
 		icon_widget:setDisabledImage(icon_graphics)
-		icon_widget:setSize(icon_graphics:getWidth(), icon_graphics:getHeight())
+		icon_widget:setSize(icon_graphics:get_frame_width(), icon_graphics:get_frame_height())
 		icon_widget:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		icon_widget:setFrameImage(Preference.IconFrameG)
 		icon_widget:setPressedFrameImage(Preference.PressedIconFrameG)

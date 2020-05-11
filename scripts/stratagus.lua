@@ -1249,12 +1249,6 @@ function GetNumPlayers()
 	return player_count
 end
 
-function InitializeUnit(unit)
-	if (GetUnitVariable(unit, "Ident") == "unit-mushroom" or GetUnitVariable(unit, "Ident") == "unit-mushroom-patch") then
-		SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
-	end
-end
-
 function DeathExplosion(unit, pixel_x, pixel_y)
 	local nearby_uncount = GetUnitsAroundUnit(unit, 1, true)
 	for unit1 = 1,table.getn(nearby_uncount) do 

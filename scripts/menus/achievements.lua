@@ -66,8 +66,8 @@ function addAchievementIcon(achievement, menu, x, y)
 	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
 	end
-	local achievement_icon_x_origin = (achievement_icon_frame * 46 * get_scale_factor()) % achievement_icon:getGraphicWidth()
-	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46 * get_scale_factor()) / achievement_icon:getGraphicWidth()) * 38 * get_scale_factor()
+	local achievement_icon_x_origin = (achievement_icon_frame * 46 * get_scale_factor()) % achievement_icon:get_width()
+	local achievement_icon_y_origin = math.floor((achievement_icon_frame * 46 * get_scale_factor()) / achievement_icon:get_width()) * 38 * get_scale_factor()
 --	b:setHotKey("")
 	b:setActionCallback(
 		function()
@@ -82,7 +82,7 @@ function addAchievementIcon(achievement, menu, x, y)
 			achievement_menu_image:setNormalImage(achievement_icon)
 			achievement_menu_image:setPressedImage(achievement_icon)
 			achievement_menu_image:setDisabledImage(achievement_icon)
-			achievement_menu_image:setSize(achievement_icon:getWidth(), achievement_icon:getHeight())
+			achievement_menu_image:setSize(achievement_icon:get_frame_width(), achievement_icon:get_frame_height())
 			achievement_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 			achievement_menu_image:setFrameImage(Preference.IconFrameG)
 			achievement_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)

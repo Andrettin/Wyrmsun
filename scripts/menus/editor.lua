@@ -1422,12 +1422,12 @@ function EditUnitTypePropertiesGraphics(unit_type)
 			if (graphic == nil) then
 				graphic = CGraphic:New(unit_graphics_list[unit_graphics:getSelected() + 1])
 				graphic:Load(false, get_scale_factor())
-				graphic_width = graphic:getGraphicWidth()
-				graphic_height = graphic:getGraphicHeight()
+				graphic_width = graphic:get_width()
+				graphic_height = graphic:get_height()
 				CGraphic:Free(graphic)
 			else
-				graphic_width = graphic:getGraphicWidth()
-				graphic_height = graphic:getGraphicHeight()
+				graphic_width = graphic:get_width()
+				graphic_height = graphic:get_height()
 			end
 			
 			local shadow_graphic_width = 0
@@ -1437,12 +1437,12 @@ function EditUnitTypePropertiesGraphics(unit_type)
 				if (shadow_graphic == nil) then
 					shadow_graphic = CGraphic:New(unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
 					shadow_graphic:Load(false, get_scale_factor())
-					shadow_graphic_width = shadow_graphic:getGraphicWidth()
-					shadow_graphic_height = shadow_graphic:getGraphicHeight()
+					shadow_graphic_width = shadow_graphic:get_width()
+					shadow_graphic_height = shadow_graphic:get_height()
 					CGraphic:Free(shadow_graphic)
 				else
-					shadow_graphic_width = shadow_graphic:getGraphicWidth()
-					shadow_graphic_height = shadow_graphic:getGraphicHeight()
+					shadow_graphic_width = shadow_graphic:get_width()
+					shadow_graphic_height = shadow_graphic:get_height()
 				end
 			end
 
