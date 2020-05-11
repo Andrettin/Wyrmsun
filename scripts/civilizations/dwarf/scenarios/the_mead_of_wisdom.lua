@@ -177,9 +177,9 @@ AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
 		for unit1 = 1,table.getn(uncount) do 
-			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Fjalar") then
+			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and string.find(GetUnitVariable(uncount[unit1], "Name"), "Fjalar")) then
 				fjalar = uncount[unit1]
-			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Galar") then
+			elseif ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and string.find(GetUnitVariable(uncount[unit1], "Name"), "Galar")) then
 				galar = uncount[unit1]
 			end
 		end
