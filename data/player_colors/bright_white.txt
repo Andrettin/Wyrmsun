@@ -1,0 +1,9 @@
+bright_white = {
+	name = "Bright White"
+	colors = {
+		{ 224 224 224 }
+		{ 152 152 180 }
+		{ 84 84 128 }
+		{ 36 40 76 }
+	}
+}
