@@ -49,7 +49,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 	Hint = "Select a War Hall and then click on the Train Gryphon Rider button to train the unit required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Train a Gryphon Rider", -- could be changed to exploring a % of the skies? (or unpassable terrain)
 			"quantity", 1,
 			"unit-type", "unit-dwarven-gryphon-rider"
@@ -135,7 +135,7 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Transport", -- could be changed to be about exploring a % of the seas, or finding a certain neutral building in the seas or shores
 			"quantity", 1,
 			"unit-type", "unit-dwarven-transport-ship"
@@ -194,7 +194,7 @@ DefineQuest("the-weaver-of-dreams", { -- based on the lay of Alvis from Norse my
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple",
 			"quantity", 1,
 			"unit-type", "unit-dwarven-temple"
@@ -233,7 +233,7 @@ DefineQuest("shorbear-hold", {
 	Hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Bastion for the Shorbear Hold",
 			"quantity", 1,
 			"unit-type", "unit-dwarven-stronghold",
@@ -390,7 +390,7 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	Hint = "Select a Miner, press the Build Structure button and then click on the Build Mushroom Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build 3 Mushroom Farms",
 			"quantity", 3,
 			"unit-type", "unit-dwarven-mushroom-farm"

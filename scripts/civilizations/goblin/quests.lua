@@ -47,7 +47,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build 3 Farms",
 			"quantity", 3,
 			"unit-type", "unit-goblin-farm"
@@ -76,7 +76,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple",
 			"quantity", 1,
 			"unit-type", "unit-goblin-temple"
@@ -135,7 +135,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	Hint = "Select a Drudge, press the Build Structure button and then click on the Build Mess Hall button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Mess Hall",
 			"quantity", 1,
 			"unit-type", "unit-goblin-mess-hall"

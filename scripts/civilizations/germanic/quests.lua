@@ -85,28 +85,28 @@ DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and
 	ObjectiveStrings = {"- Wodanaz must survive"},
 	Objectives = {
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall in Ahvoosa (Aarhus)",
 			"quantity", 1,
 			"unit-class", "town_hall",
 			"settlement", "aarhus"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall in Leidre",
 			"quantity", 1,
 			"unit-class", "town_hall",
 			"settlement", "leidre"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall in Malmo",
 			"quantity", 1,
 			"unit-class", "town_hall",
 			"settlement", "malmo"
 		},
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall in Stukkahulma (Stockholm)",
 			"quantity", 1,
 			"unit-class", "town_hall",
@@ -131,7 +131,7 @@ DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskri
 	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest. Make sure it is closer to Stukkahulma's Chieftain's Hall than to that of another settlement.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple in Stukkahulma",
 			"quantity", 1,
 			"unit-type", "unit-germanic-temple",
@@ -162,7 +162,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build 2 Farms",
 			"quantity", 2,
 			"unit-type", "unit-germanic-farm"
@@ -218,7 +218,7 @@ DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Farm",
 			"quantity", 1,
 			"unit-type", "unit-germanic-farm"
@@ -246,7 +246,7 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Farm",
 			"quantity", 1,
 			"unit-type", "unit-germanic-farm"
@@ -284,7 +284,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall",
 			"quantity", 1,
 			"unit-type", "unit-germanic-town-hall"
@@ -309,7 +309,7 @@ DefineQuest("jarls-retainers", { -- based on the Song of Rig; Source: Kevin Cros
 	Hint = "Select a War Lodge and then click on the Train Erala button to train the unit required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Train 5 Eralas",
 			"quantity", 5,
 			"unit-type", "unit-germanic-warrior"
@@ -336,7 +336,7 @@ DefineQuest("temple-to-heimdall", {
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest. Once the Temple has been built, click on it, and the Worship Haimadala button will be visible. In order for Haimadala to be available, a major deity (such as Wodanaz or Thunraz) will have to be chosen for worship first.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple",
 			"quantity", 1,
 			"unit-type", "unit-germanic-temple"
@@ -370,7 +370,7 @@ DefineQuest("heimdalls-stones", {
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple in Malmo",
 			"quantity", 1,
 			"unit-type", "unit-germanic-temple",
@@ -432,7 +432,7 @@ DefineQuest("master-of-metal", {
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Smithy",
 			"quantity", 1,
 			"unit-type", "unit-germanic-smithy"
@@ -540,7 +540,7 @@ DefineQuest("the-discovery-of-gotland", {
 	end,
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Chieftain's Hall in Gotland",
 			"quantity", 1,
 			"unit-type", "unit-germanic-town-hall",
@@ -575,7 +575,7 @@ DefineQuest("thors-servant-thors-temple", {
 	end,
 	Objectives = {
 		{
-			"objective-type", "build-units-of-class",
+			"objective-type", "build_units",
 			"objective-string", "Build a Temple in Gotland",
 			"quantity", 1,
 			"unit-class", "temple",

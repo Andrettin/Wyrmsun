@@ -51,7 +51,7 @@ DefineQuest("a-rocky-home", {
 	Unobtainable = true,
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Mead Hall",
 			"quantity", 1,
 			"unit-type", "unit-dwarven-town-hall"
@@ -69,7 +69,7 @@ DefineQuest("a-rocky-home", {
 			"resource", "stone"
 		},
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Yale Hunting Lodge",
 			"quantity", 1,
 			"unit-type", "unit-yale-hunting-lodge"
@@ -288,7 +288,7 @@ DefineQuest("the-sleek-ship", {
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "build-units",
+			"objective-type", "build_units",
 			"objective-string", "Build a Transport",
 			"quantity", 1,
 			"unit-type", "unit-dwarven-transport-ship"
