@@ -29,13 +29,13 @@
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-norse-swordsman",
-	Key = "w", Hint = "Train S~!wordsman", Popup = "popup-unit",
+	Key = "w", Hint = "Train S~!wordsman", Popup = "popup_unit",
 	ForUnit = {"unit-norse-barracks"}
 })
 
 DefineButton( { Pos = 2,
 	Action = "train-unit", Value = "unit-norse-longship",
-	Key = "l", Hint = "Build ~!Longship", Popup = "popup-unit",
+	Key = "l", Hint = "Build ~!Longship", Popup = "popup_unit",
 	ForUnit = {"unit-norse-dock", "unit-teuton-dock"}
 })
 
@@ -43,7 +43,7 @@ DefineButton( { Pos = 2,
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-norse-swordsman",
-	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup-unit",
+	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
@@ -51,61 +51,61 @@ DefineButton( { Pos = 1,
 
 DefineButton( { Pos = 1, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-town-hall",
-	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup-building",
+	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 2, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-farm",
-	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 3, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-barracks",
-	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup-building",
+	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 4, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-lumber-mill",
-	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 5, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-smithy",
-	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
+	Key = "s", Hint = "Build ~!Smithy", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
 DefineButton( { Pos = 8, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-temple",
-	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 9, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-market",
-	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
+	Key = "m", Hint = "Build ~!Market", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 10, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-watch-tower",
-	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
+	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 11, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-dock",
-	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 1, Level = "build-structure-level-2", Icon = "icon-norse-wooden-wall",
 	Action = "build", Value = "unit-norse-palisade",
-	Key = "p", Hint = "Build ~!Palisade", Popup = "popup-building",
+	Key = "p", Hint = "Build ~!Palisade", Popup = "popup_building",
 	ForUnit = {
 		"unit-teuton-worker",
 		"unit-germanic-worker",
@@ -121,7 +121,7 @@ DefineButton( { Pos = 1, Level = "build-structure-level-2", Icon = "icon-norse-w
 DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade_norse_civilization"},
-	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-research",
+	Key = "o", Hint = "Worship ~!Odin", Popup = "popup_research",
 	Description = "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
@@ -129,7 +129,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-upgrade", AllowArg = {"upgrade_norse_civilization"},
-	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-research",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup_research",
 	Description = "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Loki, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple", "unit-teuton-temple"}
 })
@@ -137,14 +137,14 @@ DefineButton( { Pos = 7, Icon = "icon-thor",
 DefineButton( { Pos = 8, Icon = "icon-loki",
 	Action = "research", Value = "upgrade-deity-loki",
 	Allowed = "check-single-research",
-	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-research",
+	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup_research",
 	Description = "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin, Thor, Frey or Freyja deities.",
 	ForUnit = {"unit-norse-temple"}
 })
 
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
-	Key = "o", Hint = "Worship ~!Odin", Popup = "popup-learn-ability",
+	Key = "o", Hint = "Worship ~!Odin", Popup = "popup_learn_ability",
 	Description = "Choose Odin as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thor, Loki or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
@@ -153,7 +153,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
-	Key = "t", Hint = "Worship ~!Thor", Popup = "popup-learn-ability",
+	Key = "t", Hint = "Worship ~!Thor", Popup = "popup_learn_ability",
 	Description = "Choose Thor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Odin, Loki or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
@@ -162,7 +162,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-loki",
 	Action = "learn-ability", Value = "upgrade-deity-loki",
-	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup-learn-ability",
+	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup_learn_ability",
 	Description = "Choose Loki as your hero's major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Incompatible with the Christianity religion or with the Odin, Thor or Frey major deities.",
 	ForUnit = {
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman"
@@ -171,7 +171,7 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
-	Key = "y", Hint = "Worship T~!yr", Popup = "popup-learn-ability",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {
@@ -182,7 +182,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
-	Key = "d", Hint = "Worship Heim~!dall", Popup = "popup-learn-ability",
+	Key = "d", Hint = "Worship Heim~!dall", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Archers, enables Precision spell for Gudjans. Incompatible with the Hel and Tyr minor deities.",
 	ForUnit = {
@@ -192,7 +192,7 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 15, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship He~!l", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship He~!l", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Heimdall and Tyr minor deities.",
 	ForUnit = {
@@ -204,12 +204,12 @@ DefineButton( { Pos = 15, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-norse-veteran-swordsman",
-	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
+	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup_unit",
 	ForUnit = {"unit-norse-swordsman", "unit-slavic-swordsman"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-norse-heroic-swordsman",
-	Key = "h", Hint = "Upgrade to ~!Hersir", Popup = "popup-unit",
+	Key = "h", Hint = "Upgrade to ~!Hersir", Popup = "popup_unit",
 	ForUnit = {"unit-norse-veteran-swordsman"}
 })

@@ -28,31 +28,31 @@
 -- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-latin-forum",
-	Action = "build", Value = "unit-latin-town-hall", Popup = "popup-building",
+	Action = "build", Value = "unit-latin-town-hall", Popup = "popup_building",
 	Key = "u", Hint = "Build For~!um",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
 DefineButton( { Pos = 2, Level = "build-structure-level", Icon = "icon-latin-farm",
-	Action = "build", Value = "unit-latin-farm", Popup = "popup-building",
+	Action = "build", Value = "unit-latin-farm", Popup = "popup_building",
 	Key = "f", Hint = "Build ~!Farm",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
 DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-latin-barracks",
-	Action = "build", Value = "unit-latin-barracks", Popup = "popup-building",
+	Action = "build", Value = "unit-latin-barracks", Popup = "popup_building",
 	Key = "b", Hint = "Build ~!Barracks",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
 DefineButton( { Pos = 5, Level = "build-structure-level", Icon = "icon-latin-smithy",
-	Action = "build", Value = "unit-latin-smithy", Popup = "popup-building",
+	Action = "build", Value = "unit-latin-smithy", Popup = "popup_building",
 	Key = "s", Hint = "Build ~!Smithy",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
 DefineButton( { Pos = 7, Level = "build-structure-level", Icon = "icon-latin-stables",
-	Action = "build", Value = "unit-latin-stables", Popup = "popup-building",
+	Action = "build", Value = "unit-latin-stables", Popup = "popup_building",
 	Key = "e", Hint = "Build Stabl~!es",
 	ForUnit = {"unit-teuton-worker"}
 } )
@@ -61,13 +61,13 @@ DefineButton( { Pos = 7, Level = "build-structure-level", Icon = "icon-latin-sta
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-latin-legionary",
-	Key = "l", Hint = "Train ~!Legionary", Popup = "popup-unit",
+	Key = "l", Hint = "Train ~!Legionary", Popup = "popup_unit",
 	ForUnit = {"unit-latin-barracks"}
 })
 
 DefineButton( { Pos = 3,
 	Action = "train-unit", Value = "unit-latin-javelineer",
-	Key = "j", Hint = "Train ~!Javelineer", Popup = "popup-unit",
+	Key = "j", Hint = "Train ~!Javelineer", Popup = "popup_unit",
 	ForUnit = {"unit-latin-barracks"}
 })
 
@@ -75,13 +75,13 @@ DefineButton( { Pos = 3,
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-latin-legionary",
-	Key = "l", Hint = "Hire ~!Legionary", Popup = "popup-unit",
+	Key = "l", Hint = "Hire ~!Legionary", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
 DefineButton( { Pos = 3,
 	Action = "train-unit", Value = "unit-latin-javelineer",
-	Key = "j", Hint = "Hire ~!Javelineer", Popup = "popup-unit",
+	Key = "j", Hint = "Hire ~!Javelineer", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
@@ -89,12 +89,12 @@ DefineButton( { Pos = 3,
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-latin-veteran-legionary",
-	Key = "l", Hint = "Upgrade to Veteran ~!Legionary", Popup = "popup-unit",
+	Key = "l", Hint = "Upgrade to Veteran ~!Legionary", Popup = "popup_unit",
 	ForUnit = {"unit-latin-legionary"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-latin-centurion",
-	Key = "c", Hint = "Upgrade to ~!Centurion", Popup = "popup-unit",
+	Key = "c", Hint = "Upgrade to ~!Centurion", Popup = "popup_unit",
 	ForUnit = {"unit-latin-veteran-legionary"}
 })

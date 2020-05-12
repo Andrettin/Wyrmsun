@@ -1,0 +1,3 @@
+icon_rally_point = {
+	file = "icons/commands/rally_point.png"
+}

@@ -39,7 +39,7 @@
 DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 	Action = "harvest",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-dwarven-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
 	Description = "Trade with foreign markets",
 	ForUnit = {
 		"unit-gnomish-caravan"
@@ -50,19 +50,19 @@ DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 
 DefineButton( { Pos = 4, Icon = "icon-herbal-cure",
 	Action = "cast-spell", Value = "spell-herbal-cure",
-	Key = "h", Hint = "~!Herbal Cure (per 1 HP)", Popup = "popup-commands",
+	Key = "h", Hint = "~!Herbal Cure (per 1 HP)", Popup = "popup_commands",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-portent",
 	Action = "learn-ability", Value = "upgrade-portent",
-	Key = "p", Hint = "Learn ~!Portent", Popup = "popup-learn-ability",
+	Key = "p", Hint = "Learn ~!Portent", Popup = "popup_learn_ability",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
 })
 
 DefineButton( { Pos = 5, Icon = "icon-portent",
 	Action = "cast-spell", Value = "spell-portent",
-	Key = "p", Hint = "~!Portent", Popup = "popup-commands",
+	Key = "p", Hint = "~!Portent", Popup = "popup_commands",
 	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
 })
 
@@ -70,7 +70,7 @@ DefineButton( { Pos = 5, Icon = "icon-portent",
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-gnomish-caravan",
-	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
+	Key = "c", Hint = "Build ~!Caravan", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-market"}
 })
 
@@ -78,19 +78,19 @@ DefineButton( { Pos = 1,
 
 DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-gnomish-town-hall",
 	Action = "build", Value = "unit-gnomish-town-hall",
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
+	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup_building",
 	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
 })
 
 DefineButton( { Pos = 2, Level = "build-structure-level", Icon = "icon-gnomish-farm",
 	Action = "build", Value = "unit-gnomish-farm",
-	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup_building",
 	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
 })
 
 DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-gnomish-barracks",
 	Action = "build", Value = "unit-gnomish-barracks",
-	Key = "b", Hint = "Build ~!Barracks", Popup = "popup-building",
+	Key = "b", Hint = "Build ~!Barracks", Popup = "popup_building",
 	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
 })
 
@@ -98,36 +98,36 @@ DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-gnomish-b
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
-	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup_unit",
 	ForUnit = {"unit-gnomish-recruit"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-master-at-arms",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
-	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup_unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",
 	Action = "experience-upgrade-to", Value = "unit-deep-gnomish-duelist",
-	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup_unit",
 	ForUnit = {"unit-deep-gnomish-recruit"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-master-at-arms",
 	Action = "experience-upgrade-to", Value = "unit-deep-gnomish-master-at-arms",
-	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup_unit",
 	ForUnit = {"unit-deep-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-derro-executioner",
 	Action = "experience-upgrade-to", Value = "unit-derro-executioner",
-	Key = "u", Hint = "~!Upgrade to Executioner", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Executioner", Popup = "popup_unit",
 	ForUnit = {"unit-derro-thug"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-derro-shadowguard",
 	Action = "experience-upgrade-to", Value = "unit-derro-shadowguard",
-	Key = "u", Hint = "~!Upgrade to Shadowguard", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Shadowguard", Popup = "popup_unit",
 	ForUnit = {"unit-derro-executioner"}
 } )

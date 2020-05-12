@@ -30,7 +30,7 @@
 DefineButton( { Pos = 2, Icon = "icon-frankish-spatha",
 	Action = "research", Value = "upgrade-frank-spatha",
 	Allowed = "check-single-research",
-	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
+	Key = "p", Hint = "Research S~!patha", Popup = "popup_research",
 	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
@@ -39,24 +39,24 @@ DefineButton( { Pos = 2, Icon = "icon-frankish-spatha",
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
-	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup-unit",
+	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup_unit",
 	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-frank-heroic-swordsman",
-	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup-unit",
+	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup_unit",
 	ForUnit = {"unit-frank-veteran-swordsman"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
-	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup-unit",
+	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup_unit",
 	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-frank-knight-lord",
-	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup-unit",
+	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup_unit",
 	ForUnit = {"unit-frank-horseman"}
 } )

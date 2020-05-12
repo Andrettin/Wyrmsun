@@ -28,7 +28,7 @@
 -- Simple Buildings Celt -----------------------------------------------------
 
 DefineButton( { Pos = 2, Level = "build-structure-level", Icon = "icon-celt-farm",
-	Action = "build", Value = "unit-celt-farm", Popup = "popup-building",
+	Action = "build", Value = "unit-celt-farm", Popup = "popup_building",
 	Key = "f", Hint = "Build ~!Farm",
 	ForUnit = {"unit-germanic-worker"}
 })

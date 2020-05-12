@@ -36,7 +36,7 @@
 
 DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
-	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-catapult",
 		"unit-norse-longship"
@@ -46,7 +46,7 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-1",
 DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-2",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-1"},
-	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-catapult",
 		"unit-norse-longship"
@@ -56,7 +56,7 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-2",
 DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 	Action = "attack",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-catapult-projectile-2"},
-	Key = "a", Hint = "~!Attack", Popup = "popup-commands",
+	Key = "a", Hint = "~!Attack", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-catapult",
 		"unit-norse-longship"
@@ -66,7 +66,7 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 	Action = "harvest",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization", "upgrade-gothic-civilization", "upgrade-celtic-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
 	Description = "Trade with foreign markets",
 	ForUnit = {
 		"unit-caravan"
@@ -75,7 +75,7 @@ DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 
 DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 	Action = "harvest",
-	Key = "t", Hint = "~!Trade", Popup = "popup-commands",
+	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
 	Description = "Trade with foreign docks",
 	ForUnit = {
 		"unit-germanic-transport-ship",
@@ -87,7 +87,7 @@ DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-worker",
-	Key = "b", Hint = "Train ~!Bura", Popup = "popup-unit",
+	Key = "b", Hint = "Train ~!Bura", Popup = "popup_unit",
 	ForUnit = {
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
 		"unit-latin-town-hall",
@@ -97,33 +97,33 @@ DefineButton( { Pos = 1,
 
 DefineButton( { Pos = 7,
 	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
-	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup-unit",
+	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-barracks", "unit-norse-barracks"}
 })
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-priest",
-	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup-unit",
+	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
-	Key = "l", Hint = "Train C~!leric", Popup = "popup-unit",
+	Key = "l", Hint = "Train C~!leric", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
-	Key = "l", Hint = "Hire C~!leric", Popup = "popup-unit",
+	Key = "l", Hint = "Hire C~!leric", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-kogge",
-	Key = "c", Hint = "Build ~!Cog", Popup = "popup-unit",
+	Key = "c", Hint = "Build ~!Cog", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-dock", "unit-norse-dock"}
 })
 
@@ -132,7 +132,7 @@ DefineButton( { Pos = 1,
 --[[
 DefineButton( { Pos = 7,
 	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
-	Key = "p", Hint = "Hire Gun~!powder Infantry", Popup = "popup-unit",
+	Key = "p", Hint = "Hire Gun~!powder Infantry", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 --]]
@@ -141,107 +141,107 @@ DefineButton( { Pos = 7,
 
 DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-germanic-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
-	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup-building",
+	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-teuton-town-hall",
 	Action = "build", Value = "unit-teuton-town-hall",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup-building",
+	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 2, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-farm",
-	Key = "f", Hint = "Build ~!Farm", Popup = "popup-building",
+	Key = "f", Hint = "Build ~!Farm", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-germanic-barracks",
 	Action = "build", Value = "unit-teuton-barracks",
-	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup-building",
+	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
 DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-teuton-barracks",
 	Action = "build", Value = "unit-teuton-barracks",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
-	Key = "b", Hint = "Build ~!Barracks", Popup = "popup-building",
+	Key = "b", Hint = "Build ~!Barracks", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
   
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-teuton-lumber-mill",
-	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup-building",
+	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-english-lumber-mill",
 	Action = "build", Value = "unit-teuton-lumber-mill",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
-	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup-building",
+	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 5, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-smithy",
-	Key = "s", Hint = "Build ~!Smithy", Popup = "popup-building",
+	Key = "s", Hint = "Build ~!Smithy", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 6, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-masons-shop",
-	Key = "n", Hint = "Build Maso~!n's Shop", Popup = "popup-building",
+	Key = "n", Hint = "Build Maso~!n's Shop", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 7, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-stables",
-	Key = "e", Hint = "Build Stabl~!es", Popup = "popup-building",
+	Key = "e", Hint = "Build Stabl~!es", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 8, Level = "build-structure-level", Icon = "icon-germanic-temple",
 	Action = "build", Value = "unit-teuton-temple",
-	Key = "p", Hint = "Build Tem~!ple", Popup = "popup-building",
+	Key = "p", Hint = "Build Tem~!ple", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 8, Level = "build-structure-level", Icon = "icon-teuton-church",
 	Action = "build", Value = "unit-teuton-temple",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
-	Key = "c", Hint = "Build ~!Church", Popup = "popup-building",
+	Key = "c", Hint = "Build ~!Church", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 9, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-market",
-	Key = "m", Hint = "Build ~!Market", Popup = "popup-building",
+	Key = "m", Hint = "Build ~!Market", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 10, Level = "build-structure-level", Icon = "icon-teuton-watch-tower",
 	Action = "build", Value = "unit-teuton-watch-tower",
-	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup-building",
+	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 11, Level = "build-structure-level",
 	Action = "build", Value = "unit-teuton-dock",
-	Key = "d", Hint = "Build ~!Dock", Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Dock", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 12, Level = "build-structure-level", Icon = "icon-teuton-university",
 	Action = "build", Value = "unit-teuton-university",
-	Key = "u", Hint = "Build ~!University", Popup = "popup-building",
+	Key = "u", Hint = "Build ~!University", Popup = "popup_building",
 	ForUnit = {"unit-teuton-worker"}
 })
 
 DefineButton( { Pos = 2, Level = "build-structure-level-2", Icon = "icon-teuton-wall",
 	Action = "build", Value = "unit-teuton-wall",
-	Key = "w", Hint = "Build ~!Wall", Popup = "popup-building",
+	Key = "w", Hint = "Build ~!Wall", Popup = "popup_building",
 	ForUnit = {
 		"unit-teuton-worker"
 	}
@@ -252,7 +252,7 @@ DefineButton( { Pos = 2, Level = "build-structure-level-2", Icon = "icon-teuton-
 DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
-	Key = "p", Hint = "Research S~!patha", Popup = "popup-research",
+	Key = "p", Hint = "Research S~!patha", Popup = "popup_research",
 	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
@@ -260,7 +260,7 @@ DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",
 DefineButton( { Pos = 4, Icon = "saxon_iron_shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
-	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup-research",
+	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup_research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
@@ -268,7 +268,7 @@ DefineButton( { Pos = 4, Icon = "saxon_iron_shield",
 DefineButton( { Pos = 5, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
 	Allowed = "check-single-research",
-	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup-research",
+	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup_research",
 	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
@@ -276,7 +276,7 @@ DefineButton( { Pos = 5, Icon = "icon-catapult-projectile-2",
 DefineButton( { Pos = 6, Icon = "icon-catapult-projectile-3",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-2",
 	Allowed = "check-single-research",
-	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup-research",
+	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup_research",
 	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
 	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
@@ -284,7 +284,7 @@ DefineButton( { Pos = 6, Icon = "icon-catapult-projectile-3",
 DefineButton( { Pos = 2, Icon = "icon-pike",
 	Action = "research", Value = "upgrade-teuton-pike",
 	Allowed = "check-single-research",
-	Key = "k", Hint = "Research Pi~!ke", Popup = "popup-research",
+	Key = "k", Hint = "Research Pi~!ke", Popup = "popup_research",
 	Description = "+2 Damage for Spearmen. Allows Pikes to be sold at the Market.",
 	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
@@ -292,7 +292,7 @@ DefineButton( { Pos = 2, Icon = "icon-pike",
 DefineButton( { Pos = 4, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
-	Key = "a", Hint = "Research Bodkin ~!Arrow", Popup = "popup-research",
+	Key = "a", Hint = "Research Bodkin ~!Arrow", Popup = "popup_research",
 	Description = "+2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market.",
 	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
@@ -301,7 +301,7 @@ DefineButton( { Pos = 3, Icon = "icon-suebi-coinage",
 	Action = "research", Value = "upgrade-teuton-coinage",
 	Allowed = "check-single-research",
 	Description = "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",
-	Key = "c", Hint = "Research ~!Coinage", Popup = "popup-research",
+	Key = "c", Hint = "Research ~!Coinage", Popup = "popup_research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
@@ -309,7 +309,7 @@ DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
 	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "w", Hint = "Research ~!Writing", Popup = "popup-research",
+	Key = "w", Hint = "Research ~!Writing", Popup = "popup_research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
@@ -317,7 +317,7 @@ DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
 	Description = "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults and Longships. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market.",
-	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup-research",
+	Key = "a", Hint = "Research ~!Alchemy", Popup = "popup_research",
 	ForUnit = {"unit-teuton-university"}
 } )
 
@@ -326,7 +326,7 @@ DefineButton( { Pos = 5, Icon = "icon-cauldron",
 DefineButton( { Pos = 5, Icon = "icon-christianity",
 	Action = "research", Value = "upgrade-deity-christian-god",
 	Allowed = "check-single-research",
-	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-research",
+	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup_research",
 	Description = "Choose Christianity as your religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
@@ -334,7 +334,7 @@ DefineButton( { Pos = 5, Icon = "icon-christianity",
 DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
-	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-research",
+	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup_research",
 	Description = "Choose Wodan as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
@@ -342,7 +342,7 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 DefineButton( { Pos = 6, Icon = "icon-odin",
 	Action = "research", Value = "upgrade-deity-odin",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
-	Key = "w", Hint = "Worship ~!Woden", Popup = "popup-research",
+	Key = "w", Hint = "Worship ~!Woden", Popup = "popup_research",
 	Description = "Choose Woden as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
@@ -350,21 +350,21 @@ DefineButton( { Pos = 6, Icon = "icon-odin",
 DefineButton( { Pos = 7, Icon = "icon-thor",
 	Action = "research", Value = "upgrade-deity-thor",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-anglo-saxon-civilization", "upgrade-frankish-civilization", "upgrade-gothic-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
-	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-research",
+	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup_research",
 	Description = "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {"unit-teuton-temple"}
 })
 
 DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
-	Key = "y", Hint = "Worship T~!yr", Popup = "popup-research",
+	Key = "y", Hint = "Worship T~!yr", Popup = "popup_research",
 	Description = "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
-	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-research",
+	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup_research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Description = "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -372,7 +372,7 @@ DefineButton( { Pos = 10, Icon = "icon-tyr",
 
 DefineButton( { Pos = 10, Icon = "icon-tyr",
 	Action = "research", Value = "upgrade-deity-tyr",
-	Key = "w", Hint = "Worship Ti~!w", Popup = "popup-research",
+	Key = "w", Hint = "Worship Ti~!w", Popup = "popup_research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-anglo-saxon-civilization"},
 	Description = "Choose Tiw as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities.",
 	ForUnit = {"unit-teuton-temple"}
@@ -380,21 +380,21 @@ DefineButton( { Pos = 10, Icon = "icon-tyr",
 
 DefineButton( { Pos = 11, Icon = "icon-heimdall",
 	Action = "research", Value = "upgrade-deity-heimdall",
-	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup-research",
+	Key = "h", Hint = "Worship ~!Heimdall", Popup = "popup_research",
 	Description = "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship He~!l", Popup = "popup-research",
+	Key = "l", Hint = "Worship He~!l", Popup = "popup_research",
 	Description = "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities.",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
 DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship He~!lla", Popup = "popup-research",
+	Key = "l", Hint = "Worship He~!lla", Popup = "popup_research",
 	Allowed = "check-upgrade-or", AllowArg = {"upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization"},
 	Description = "Choose Hella as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Ziu minor deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -402,7 +402,7 @@ DefineButton( { Pos = 12, Icon = "icon-hel",
 
 DefineButton( { Pos = 12, Icon = "icon-hel",
 	Action = "research", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup-research",
+	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup_research",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-gothic-civilization"},
 	Description = "Choose Halja as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Tyr minor deity.",
 	ForUnit = {"unit-teuton-temple"}
@@ -410,7 +410,7 @@ DefineButton( { Pos = 12, Icon = "icon-hel",
 
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-christianity",
 	Action = "learn-ability", Value = "upgrade-deity-christian-god",
-	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup-learn-ability",
+	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup_learn_ability",
 	Description = "Choose Christianity as your hero's religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {
 		"unit-teuton-worker",
@@ -431,7 +431,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-odin",
 	Action = "learn-ability", Value = "upgrade-deity-odin",
-	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup-learn-ability",
+	Key = "w", Hint = "Worship ~!Wodan", Popup = "popup_learn_ability",
 	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit-teuton-worker",
@@ -449,7 +449,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
   
 DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "icon-thor",
 	Action = "learn-ability", Value = "upgrade-deity-thor",
-	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup-learn-ability",
+	Key = "t", Hint = "Worship ~!Thunor", Popup = "popup_learn_ability",
 	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {
 		"unit-teuton-worker",
@@ -467,7 +467,7 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "icon-tyr",
 	Action = "learn-ability", Value = "upgrade-deity-tyr",
-	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup-learn-ability",
+	Key = "z", Hint = "Worship ~!Ziu", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Hella minor deity.",
 	ForUnit = {
@@ -486,7 +486,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 --[[
 DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "icon-heimdall",
 	Action = "learn-ability", Value = "upgrade-deity-heimdall",
-	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup-learn-ability",
+	Key = "d", Hint = "Worship Haima~!dala", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Heimdall as a minor deity for your hero. +1 Sight for Archers, enables Precision spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
 	ForUnit = {
@@ -496,7 +496,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship He~!lla", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship He~!lla", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Hella as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Ziu minor deity.",
 	ForUnit = {
@@ -515,7 +515,7 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 
 DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "icon-hel",
 	Action = "learn-ability", Value = "upgrade-deity-hel",
-	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Worship Ha~!lja", Popup = "popup_learn_ability",
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Halja as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Tyr minor deity.",
 	ForUnit = {
@@ -528,44 +528,44 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 DefineButton( { Pos = 3, Icon = "icon-teuton-stronghold",
 	Action = "upgrade-to", Value = "unit-teuton-stronghold",
 	Allowed = "check-upgrade-to",
-	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup-building",
+	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup_building",
 	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall", "unit-norse-town-hall"}
 } )
 
 DefineButton( { Pos = 1, Icon = "icon-teuton-guard-tower",
 	Action = "upgrade-to", Value = "unit-teuton-guard-tower",
 	Allowed = "check-upgrade-to",
-	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup-building",
+	Key = "g", Hint = "Upgrade to ~!Guard Tower", Popup = "popup_building",
 	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
 } )
 
 DefineButton( { Pos = 2, Icon = "icon-teuton-catapult-tower",
 	Action = "upgrade-to", Value = "unit-teuton-catapult-tower",
 	Allowed = "check-upgrade-to",
-	Key = "c", Hint = "Upgrade to ~!Catapult Tower", Popup = "popup-building",
+	Key = "c", Hint = "Upgrade to ~!Catapult Tower", Popup = "popup_building",
 	ForUnit = {"unit-teuton-watch-tower", "unit-norse-watch-tower"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
-	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup-unit",
+	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-teuton-heroic-swordsman",
-	Key = "w", Hint = "Upgrade to ~!Warlord", Popup = "popup-unit",
+	Key = "w", Hint = "Upgrade to ~!Warlord", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-veteran-swordsman"}
 })
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
-	Key = "k", Hint = "Upgrade to ~!Knight", Popup = "popup-unit",
+	Key = "k", Hint = "Upgrade to ~!Knight", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-norse-swordsman", "unit-latin-legionary", "unit-slavic-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-teuton-knight-lord",
-	Key = "k", Hint = "Upgrade to ~!Knight Lord", Popup = "popup-unit",
+	Key = "k", Hint = "Upgrade to ~!Knight Lord", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-ritter"}
 } )

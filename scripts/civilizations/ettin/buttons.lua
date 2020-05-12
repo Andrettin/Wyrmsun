@@ -29,7 +29,7 @@
 
 DefineButton( { Pos = 1, Level = "build-structure-level",
 	Action = "build", Value = "unit-ettin-town-hall",
-	Key = "h", Hint = "Build Mead ~!Hall", Popup = "popup-building",
+	Key = "h", Hint = "Build Mead ~!Hall", Popup = "popup_building",
 	ForUnit = {
 	}
 })
@@ -38,6 +38,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level",
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-ettin",
-	Key = "e", Hint = "Hire ~!Ettin", Popup = "popup-unit",
+	Key = "e", Hint = "Hire ~!Ettin", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })

@@ -98,12 +98,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-rally-point",
-	Size = {46, 38},
-	File = "neutral/icons/rally_point.png"
-})
-
-DefineIcon({
 	Name = "icon-lumber",
 	Size = {46, 38},
 	File = "neutral/icons/lumber.png"

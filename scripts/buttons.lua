@@ -30,7 +30,7 @@
 
 DefineButton( { Pos = 6, Icon = "icon-attack-ground",
 	Action = "attack-ground",
-	Key = "g", Hint = "Attack ~!Ground", Popup = "popup-commands",
+	Key = "g", Hint = "Attack ~!Ground", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-catapult", "germanic-group", "anglo-saxon-group", "english-group", "frankish-group", "goth-group", "norse-group", "suebi-group", "teuton-group",
 		"unit-norse-longship",
@@ -41,7 +41,7 @@ DefineButton( { Pos = 6, Icon = "icon-attack-ground",
 
 DefineButton( { Pos = 5, Icon = "icon-unload",
 	Action = "unload",
-	Key = "u", Hint = "~!Unload", Popup = "popup-commands",
+	Key = "u", Hint = "~!Unload", Popup = "popup_commands",
 	ForUnit = {
 		"unit-caravan", "unit-gnomish-caravan",
 		"unit-germanic-transport-ship", "unit-teuton-kogge", "unit-dwarven-transport-ship", "unit-goblin-transport-ship"
@@ -50,7 +50,7 @@ DefineButton( { Pos = 5, Icon = "icon-unload",
 
 DefineButton( { Pos = 16, Icon = "icon-salvage",
 	Action = "salvage",
-	Key = "delete", Hint = "Salvage Unit (~<Del~>)", Popup = "popup-commands",
+	Key = "delete", Hint = "Salvage Unit (~<Del~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-minecart"
 	}
@@ -60,7 +60,7 @@ DefineButton( { Pos = 16, Icon = "icon-salvage",
 
 DefineButton( { Pos = 4, Icon = "icon-repair",
 	Action = "repair",
-	Key = "r", Hint = "~!Repair", Popup = "popup-commands",
+	Key = "r", Hint = "~!Repair", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -73,7 +73,7 @@ DefineButton( { Pos = 4, Icon = "icon-repair",
 
 DefineButton( { Pos = 5, Icon = "icon-harvest",
 	Action = "harvest",
-	Key = "h", Hint = "~!Harvest Resource", Popup = "popup-commands",
+	Key = "h", Hint = "~!Harvest Resource", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -87,7 +87,7 @@ DefineButton( { Pos = 5, Icon = "icon-harvest",
 
 DefineButton( { Pos = 5,
 	Action = "return-goods",
-	Key = "g", Hint = "Return with ~!Goods", Popup = "popup-commands",
+	Key = "g", Hint = "Return with ~!Goods", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -104,7 +104,7 @@ DefineButton( { Pos = 5,
 DefineButton( { Pos = 13, Icon = "icon-build-basic-structure",
 	Action = "button", Value = "build-structure-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "b", Hint = "~!Build Structure", Popup = "popup-commands",
+	Key = "b", Hint = "~!Build Structure", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -117,46 +117,10 @@ DefineButton( { Pos = 13, Icon = "icon-build-basic-structure",
 
 -- Building Commands ------------------------------------------------------
 
-DefineButton( { Pos = 13, Icon = "icon-rally-point",
-	Action = "rally-point",
-	Key = "r", Hint = "Set ~!Rally Point", Popup = "popup-commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-latin-barracks",
-		"unit-germanic-town-hall",
-		"unit-germanic-barracks",
-		"unit-germanic-temple", "unit-germanic-dock",
-		"unit-germanic-market",
-		"unit-norse-town-hall",
-		"unit-norse-barracks",
-		"unit-norse-temple", "unit-norse-dock",
-		"unit-norse-market",
-		"unit-norse-watch-tower",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-teuton-barracks",
-		"unit-teuton-temple", "unit-teuton-dock",
-		"unit-teuton-market",
-		"unit-teuton-watch-tower", "unit-teuton-guard-tower",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-dwarven-barracks",
-		"unit-dwarven-temple", "unit-dwarven-dock",
-		"unit-dwarven-market",
-		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-gnomish-barracks",
-		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-goblin-mess-hall",
-		"unit-goblin-temple", "unit-goblin-dock",
-		"unit-goblin-market",
-		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
-	}
-} )
-
 DefineButton( { Pos = 14, Icon = "icon-crown",
 	Action = "button", Value = "found-faction-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "f", Hint = "~!Found a Faction", Popup = "popup-commands",
+	Key = "f", Hint = "~!Found a Faction", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -172,7 +136,7 @@ DefineButton( { Pos = 14, Icon = "icon-crown",
 DefineButton( { Pos = 14, Icon = "icon-chest",
 	Action = "button", Value = "buy-item-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "b", Hint = "~!Buy Items", Popup = "popup-commands",
+	Key = "b", Hint = "~!Buy Items", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -185,7 +149,7 @@ DefineButton( { Pos = 14, Icon = "icon-chest",
 DefineButton( { Pos = 15, Icon = "icon-book-red",
 	Action = "button", Value = "enact-law-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "l", Hint = "Enact a ~!Law", Popup = "popup-commands",
+	Key = "l", Hint = "Enact a ~!Law", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -201,7 +165,7 @@ DefineButton( { Pos = 15, Icon = "icon-book-red",
 DefineButton( { Pos = 16, Icon = "icon-garrison",
 	Action = "button", Value = "garrison-level",
 	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
-	Key = "g", Hint = "View ~!Garrison", Popup = "popup-commands",
+	Key = "g", Hint = "View ~!Garrison", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
@@ -211,7 +175,7 @@ DefineButton( { Pos = 16, Icon = "icon-garrison",
 
 DefineButton( { Pos = 16, Icon = "icon-salvage",
 	Action = "salvage",
-	Key = "delete", Hint = "Salvage Building (~<Del~>)", Popup = "popup-commands",
+	Key = "delete", Hint = "Salvage Building (~<Del~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 		"unit-germanic-town-hall",
@@ -266,7 +230,7 @@ DefineButton( { Pos = 16, Icon = "icon-salvage",
 DefineButton( { Pos = 16, Icon = "icon-crown",
 	Action = "button", Value = "grand-settlement-to-faction-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "g", Hint = "~!Grant Settlement to Faction", Popup = "popup-commands",
+	Key = "g", Hint = "~!Grant Settlement to Faction", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -282,7 +246,7 @@ DefineButton( { Pos = 16, Icon = "icon-crown",
 
 DefineButton( { Pos = 16, Level = "quest-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
@@ -292,7 +256,7 @@ DefineButton( { Pos = 16, Level = "quest-level", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "found-faction-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -307,7 +271,7 @@ DefineButton( { Pos = 16, Level = "found-faction-level", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "buy-item-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -319,7 +283,7 @@ DefineButton( { Pos = 16, Level = "buy-item-level", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "enact-law-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -334,7 +298,7 @@ DefineButton( { Pos = 16, Level = "enact-law-level", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "found-faction-level-2", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -351,25 +315,25 @@ DefineButton( { Pos = 16, Level = "found-faction-level-2", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "cancel-level", Icon = "icon-cancel",
 	Action = "cancel",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {"*"}
 } )
 
 DefineButton( { Pos = 16, Icon = "icon-cancel",
 	Action = "cancel-upgrade",
-	Key = "escape", Hint = "Cancel Upgrade (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Upgrade (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {"cancel-upgrade"}
 } )
 
 DefineButton( { Pos = 16, Icon = "icon-cancel",
 	Action = "cancel-train-unit",
-	Key = "escape", Hint = "Cancel Unit Training (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Unit Training (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {"*"}
 } )
 
 DefineButton( { Pos = 16, Icon = "icon-cancel",
 	Action = "cancel-build",
-	Key = "escape", Hint = "Cancel Construction (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel Construction (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {"cancel-build"}
 } )
 
@@ -378,7 +342,7 @@ DefineButton( { Pos = 16, Icon = "icon-cancel",
 DefineButton( { Pos = 13, Icon = "icon-level-up",
 	Action = "button", Value = "choose-individual-upgrade-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup-commands",
+	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
@@ -424,7 +388,7 @@ DefineButton( { Pos = 13, Icon = "icon-level-up",
 DefineButton( { Pos = 14, Icon = "icon-level-up",
 	Action = "button", Value = "choose-individual-upgrade-level",
 	Allowed = "check-has-sub-buttons",
-	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup-commands",
+	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -437,7 +401,7 @@ DefineButton( { Pos = 14, Icon = "icon-level-up",
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-mace-mastery",
 	Action = "learn-ability", Value = "upgrade-mace-mastery",
-	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-learn-ability",
+	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup_learn_ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2.",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
@@ -448,7 +412,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-bow-mastery",
 	Action = "learn-ability", Value = "upgrade-bow-mastery",
-	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup-learn-ability",
+	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup_learn_ability",
 	Description = "Bow Mastery is a passive ability that increases damage with bows by 2.",
 	ForUnit = {
 		"unit-germanic-archer",
@@ -459,7 +423,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-throwing-mastery",
 	Action = "learn-ability", Value = "upgrade-throwing-mastery",
-	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup-learn-ability",
+	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup_learn_ability",
 	Description = "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2.",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -470,7 +434,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gun-mastery",
 	Action = "learn-ability", Value = "upgrade-gun-mastery",
-	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup-learn-ability",
+	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup_learn_ability",
 	Description = "Gun Mastery is a passive ability that increases damage with guns by 2.",
 	ForUnit = {
 		"unit-dwarven-thunderer",
@@ -481,7 +445,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-axe-mastery",
 	Action = "learn-ability", Value = "upgrade-axe-mastery",
-	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-learn-ability",
+	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup_learn_ability",
 	Description = "Axe Mastery is a passive ability that increases damage with axes by 2.",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -493,7 +457,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery-bronze",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-germanic-chieftain",
@@ -511,7 +475,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-germanic-chieftain",
@@ -529,7 +493,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-frank-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-learn-ability",
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-frank-heroic-swordsman", "unit-frank-knight-lord"
@@ -538,7 +502,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-spear-mastery",
 	Action = "learn-ability", Value = "upgrade-spear-mastery",
-	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup-learn-ability",
+	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup_learn_ability",
 	Description = "Spear Mastery is a passive ability that increases damage with spears by 2.",
 	ForUnit = {
 		"unit-dwarven-sentinel",
@@ -549,7 +513,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-critical-strike",
 	Action = "learn-ability", Value = "upgrade-critical-strike",
-	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-learn-ability",
+	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup_learn_ability",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead.",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
@@ -583,7 +547,7 @@ DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 3, Level = "choose-individual-upgrade-level", Icon = "icon-deadly-precision",
 	Action = "learn-ability", Value = "upgrade-deadly-precision",
-	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-learn-ability",
+	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup_learn_ability",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
 	ForUnit = {
 		"unit-dwarven-arcanister",
@@ -615,7 +579,7 @@ DefineButton( { Pos = 3, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 4, Level = "choose-individual-upgrade-level", Icon = "icon-eagle-eye",
 	Action = "learn-ability", Value = "upgrade-eagle-eye",
-	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup-learn-ability",
+	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup_learn_ability",
 	Description = "Eagle Eye is a passive ability that increases accuracy by 2.",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -648,7 +612,7 @@ DefineButton( { Pos = 4, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon-scouting",
 	Action = "learn-ability", Value = "upgrade-scouting",
-	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup-learn-ability",
+	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup_learn_ability",
 	Description = "Scouting is a passive ability that increases sight by 1.",
 	ForUnit = {
 		"unit-dwarven-gryphon-rider",
@@ -661,7 +625,7 @@ DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon-stun",
 	Action = "learn-ability", Value = "upgrade-stun",
-	Key = "u", Hint = "Learn St~!un", Popup = "popup-learn-ability",
+	Key = "u", Hint = "Learn St~!un", Popup = "popup_learn_ability",
 	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments.",
 	ForUnit = {
 		"unit-dwarven-arcanister",
@@ -687,7 +651,7 @@ DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon-precise-shot",
 	Action = "learn-ability", Value = "upgrade-precise-shot",
-	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup-learn-ability",
+	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup_learn_ability",
 	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons.",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
@@ -704,7 +668,7 @@ DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon-puncture",
 	Action = "learn-ability", Value = "upgrade-puncture",
-	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-learn-ability",
+	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup_learn_ability",
 	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
 	ForUnit = {
 		"unit-germanic-chieftain", "unit-germanic-spearman",
@@ -722,7 +686,7 @@ DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 7, Level = "choose-individual-upgrade-level", Icon = "icon-leadership",
 	Action = "learn-ability", Value = "upgrade-leadership",
-	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-learn-ability",
+	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup_learn_ability",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%.",
 	ForUnit = {
 		"unit-dwarven-thane",
@@ -740,7 +704,7 @@ DefineButton( { Pos = 7, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 8, Level = "choose-individual-upgrade-level", Icon = "icon-toughness",
 	Action = "learn-ability", Value = "upgrade-toughness",
-	Key = "o", Hint = "Learn T~!oughness", Popup = "popup-learn-ability",
+	Key = "o", Hint = "Learn T~!oughness", Popup = "popup_learn_ability",
 	Description = "Toughness is a passive ability that increases HP by 10.",
 	ForUnit = {
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
@@ -785,7 +749,7 @@ DefineButton( { Pos = 8, Level = "choose-individual-upgrade-level", Icon = "icon
 --[[
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
-	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup-learn-ability",
+	Key = "v", Hint = "Learn Ethereal ~!Vision", Popup = "popup_learn_ability",
 	Description = "Ethereal Vision is a passive ability that allows the unit to see ethereal objects, such as interplanar portals.",
 	ForUnit = { -- allow only level 3 units to learn it, so that it isn't too easy to do so
 		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
@@ -828,13 +792,13 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Description = "Healing is an active ability that heals an organic unit.",
-	Key = "h", Hint = "Learn ~!Healing", Popup = "popup-learn-ability",
+	Key = "h", Hint = "Learn ~!Healing", Popup = "popup_learn_ability",
 	ForUnit = {"unit-dwarven-loremaster"}
 })
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-precision",
 	Action = "learn-ability", Value = "upgrade-precision",
-	Key = "r", Hint = "Learn P~!recision", Popup = "popup-learn-ability",
+	Key = "r", Hint = "Learn P~!recision", Popup = "popup_learn_ability",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat.",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-loremaster"}
 })
@@ -842,7 +806,7 @@ DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon
 
 DefineButton( { Pos = 16, Level = "choose-individual-upgrade-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
@@ -895,7 +859,7 @@ DefineButton( { Pos = 16, Level = "choose-individual-upgrade-level", Icon = "ico
 DefineButton( { Pos = 14, Icon = "icon-inventory",
 	Action = "button", Value = "inventory-level",
 	Allowed = "check-has-inventory",
-	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
+	Key = "i", Hint = "Open ~!Inventory", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
@@ -939,7 +903,7 @@ DefineButton( { Pos = 14, Icon = "icon-inventory",
 DefineButton( { Pos = 15, Icon = "icon-inventory",
 	Action = "button", Value = "inventory-level",
 	Allowed = "check-has-inventory",
-	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
+	Key = "i", Hint = "Open ~!Inventory", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -952,7 +916,7 @@ DefineButton( { Pos = 15, Icon = "icon-inventory",
 
 DefineButton( { Pos = 16, Level = "inventory-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
@@ -1005,7 +969,7 @@ DefineButton( { Pos = 16, Level = "inventory-level", Icon = "icon-cancel",
 DefineButton( { Pos = 4, Icon = "icon-far-sight",
 	Action = "cast-spell", Value = "spell-far-sight",
 	Description = "Reveals an area",
-	Key = "f", Hint = "~!Far Sight", Popup = "popup-commands",
+	Key = "f", Hint = "~!Far Sight", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1016,14 +980,14 @@ DefineButton( { Pos = 4, Icon = "icon-far-sight",
 DefineButton( { Pos = 4, Icon = "icon-terror",
 	Action = "cast-spell", Value = "spell-terror",
 	Description = "Makes an organic unit flee in terror",
-	Key = "t", Hint = "~!Terror", Popup = "popup-commands",
+	Key = "t", Hint = "~!Terror", Popup = "popup_commands",
 	ForUnit = {"unit-goblin-shaman"}
 })
 
 DefineButton( { Pos = 4, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit",
-	Key = "h", Hint = "~!Healing", Popup = "popup-commands",
+	Key = "h", Hint = "~!Healing", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1035,7 +999,7 @@ DefineButton( { Pos = 4, Icon = "icon-healing",
 DefineButton( { Pos = 4, Icon = "icon-shocking-grasp",
 	Action = "cast-spell", Value = "spell-shocking-grasp",
 	Description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds",
-	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup-commands",
+	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1046,7 +1010,7 @@ DefineButton( { Pos = 4, Icon = "icon-shocking-grasp",
 DefineButton( { Pos = 4, Icon = "icon-slow",
 	Action = "cast-spell", Value = "spell-slow",
 	Description = "Slows a target unit",
-	Key = "w", Hint = "Slo~!w", Popup = "popup-commands",
+	Key = "w", Hint = "Slo~!w", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1057,7 +1021,7 @@ DefineButton( { Pos = 4, Icon = "icon-slow",
 DefineButton( { Pos = 5, Icon = "icon-inspire",
 	Action = "cast-spell", Value = "spell-inspire",
 	Description = "Inspires an organic unit to deal 50% more damage",
-	Key = "i", Hint = "~!Inspire", Popup = "popup-commands",
+	Key = "i", Hint = "~!Inspire", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1068,7 +1032,7 @@ DefineButton( { Pos = 5, Icon = "icon-inspire",
 DefineButton( { Pos = 5, Icon = "icon-wither",
 	Action = "cast-spell", Value = "spell-wither",
 	Description = "Causes an organic unit to deal 50% less damage",
-	Key = "w", Hint = "~!Wither", Popup = "popup-commands",
+	Key = "w", Hint = "~!Wither", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1081,7 +1045,7 @@ DefineButton( { Pos = 5, Icon = "icon-wither",
 DefineButton( { Pos = 5, Icon = "icon-blessing",
 	Action = "cast-spell", Value = "spell-blessing",
 	Description = "Blesses an organic unit to deal 50% more damage and to evade 50% better",
-	Key = "b", Hint = "~!Blessing", Popup = "popup-commands",
+	Key = "b", Hint = "~!Blessing", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1093,7 +1057,7 @@ DefineButton( { Pos = 5, Icon = "icon-blessing",
 DefineButton( { Pos = 5, Icon = "icon-precision",
 	Action = "cast-spell", Value = "spell-precision",
 	Description = "Doubles the accuracy of an organic unit while in combat",
-	Key = "r", Hint = "P~!recision", Popup = "popup-commands",
+	Key = "r", Hint = "P~!recision", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-priest",
 		"unit-teuton-priest",
@@ -1105,7 +1069,7 @@ DefineButton( { Pos = 5, Icon = "icon-precision",
 DefineButton( { Pos = 6, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",
 	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments",
-	Key = "n", Hint = "Stu~!n", Popup = "popup-commands",
+	Key = "n", Hint = "Stu~!n", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-lord",
@@ -1128,7 +1092,7 @@ DefineButton( { Pos = 6, Icon = "icon-stun",
 DefineButton( { Pos = 7, Icon = "icon-puncture",
 	Action = "cast-spell", Value = "spell-puncture",
 	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
-	Key = "r", Hint = "Punctu~!re", Popup = "popup-commands",
+	Key = "r", Hint = "Punctu~!re", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-chieftain", "unit-germanic-spearman",
 		"unit-norse-heroic-swordsman",
@@ -1145,7 +1109,7 @@ DefineButton( { Pos = 7, Icon = "icon-puncture",
 DefineButton( { Pos = 6, Icon = "icon-precise-shot",
 	Action = "cast-spell", Value = "spell-precise-shot",
 	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons",
-	Key = "r", Hint = "P~!recise Shot", Popup = "popup-commands",
+	Key = "r", Hint = "P~!recise Shot", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
 		"unit-joruvellir-explorer",
@@ -1163,7 +1127,7 @@ DefineButton( { Pos = 6, Icon = "icon-precise-shot",
 
 DefineButton( { Pos = 2, Icon = "icon-teuton-minecart",
 	Action = "train-unit", Value = "unit-minecart",
-	Key = "c", Hint = "Build Mine~!cart", Popup = "popup-unit",
+	Key = "c", Hint = "Build Mine~!cart", Popup = "popup_unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1178,7 +1142,7 @@ DefineButton( { Pos = 2, Icon = "icon-teuton-minecart",
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-caravan",
-	Key = "c", Hint = "Build ~!Caravan", Popup = "popup-unit",
+	Key = "c", Hint = "Build ~!Caravan", Popup = "popup_unit",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -1192,7 +1156,7 @@ DefineButton( { Pos = 1,
 
 DefineButton( { Pos = 13, Level = "build-structure-level", Icon = "icon-road",
 	Action = "build", Value = "unit-road",
-	Key = "o", Hint = "Build R~!oad", Popup = "popup-building",
+	Key = "o", Hint = "Build R~!oad", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1205,7 +1169,7 @@ DefineButton( { Pos = 13, Level = "build-structure-level", Icon = "icon-road",
 
 DefineButton( { Pos = 14, Level = "build-structure-level", Icon = "icon-railroad",
 	Action = "build", Value = "unit-railroad",
-	Key = "r", Hint = "Build ~!Railroad", Popup = "popup-building",
+	Key = "r", Hint = "Build ~!Railroad", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1218,7 +1182,7 @@ DefineButton( { Pos = 14, Level = "build-structure-level", Icon = "icon-railroad
 
 DefineButton( { Pos = 3, Level = "build-structure-level-2", Icon = "icon-copper-mine",
 	Action = "build", Value = "unit-copper-mine",
-	Key = "c", Hint = "Build ~!Copper Mine", Popup = "popup-building",
+	Key = "c", Hint = "Build ~!Copper Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1231,7 +1195,7 @@ DefineButton( { Pos = 3, Level = "build-structure-level-2", Icon = "icon-copper-
 
 DefineButton( { Pos = 4, Level = "build-structure-level-2", Icon = "icon-silver-mine",
 	Action = "build", Value = "unit-silver-mine",
-	Key = "v", Hint = "Build Si~!lver Mine", Popup = "popup-building",
+	Key = "v", Hint = "Build Si~!lver Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1244,7 +1208,7 @@ DefineButton( { Pos = 4, Level = "build-structure-level-2", Icon = "icon-silver-
 
 DefineButton( { Pos = 5, Level = "build-structure-level-2", Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
-	Key = "g", Hint = "Build ~!Gold Mine", Popup = "popup-building",
+	Key = "g", Hint = "Build ~!Gold Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1257,7 +1221,7 @@ DefineButton( { Pos = 5, Level = "build-structure-level-2", Icon = "icon-gold-mi
 
 DefineButton( { Pos = 6, Level = "build-structure-level-2", Icon = "icon-diamond-mine",
 	Action = "build", Value = "unit-diamond-mine",
-	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup-building",
+	Key = "d", Hint = "Build ~!Diamond Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1270,7 +1234,7 @@ DefineButton( { Pos = 6, Level = "build-structure-level-2", Icon = "icon-diamond
 
 DefineButton( { Pos = 7, Level = "build-structure-level-3", Icon = "icon-emerald-mine", -- unreachable level so that the mine is buildable, but the button doesn't actually appear
 	Action = "build", Value = "unit-emerald-mine",
-	Key = "e", Hint = "Build ~!Emerald Mine", Popup = "popup-building",
+	Key = "e", Hint = "Build ~!Emerald Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1283,7 +1247,7 @@ DefineButton( { Pos = 7, Level = "build-structure-level-3", Icon = "icon-emerald
 
 DefineButton( { Pos = 7, Level = "build-structure-level-2", Icon = "icon-iron-mine",
 	Action = "build", Value = "unit-iron-mine",
-	Key = "i", Hint = "Build ~!Iron Mine", Popup = "popup-building",
+	Key = "i", Hint = "Build ~!Iron Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1296,7 +1260,7 @@ DefineButton( { Pos = 7, Level = "build-structure-level-2", Icon = "icon-iron-mi
 
 DefineButton( { Pos = 8, Level = "build-structure-level-2", Icon = "icon-mithril-mine",
 	Action = "build", Value = "unit-mithril-mine",
-	Key = "m", Hint = "Build ~!Mithril Mine", Popup = "popup-building",
+	Key = "m", Hint = "Build ~!Mithril Mine", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1309,7 +1273,7 @@ DefineButton( { Pos = 8, Level = "build-structure-level-2", Icon = "icon-mithril
 
 DefineButton( { Pos = 9, Level = "build-structure-level-2",
 	Action = "build", Value = "unit-yale-hunting-lodge",
-	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup-building",
+	Key = "y", Hint = "Build ~!Yale Hunting Lodge", Popup = "popup_building",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1322,7 +1286,7 @@ DefineButton( { Pos = 9, Level = "build-structure-level-2",
 
 DefineButton( { Pos = 15, Level = "build-structure-level", Icon = "icon-right-arrow",
 	Action = "button", Value = "build-structure-level-2",
-	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup-commands",
+	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1335,7 +1299,7 @@ DefineButton( { Pos = 15, Level = "build-structure-level", Icon = "icon-right-ar
 
 DefineButton( { Pos = 15, Level = "build-structure-level-2", Icon = "icon-left-arrow",
 	Action = "button", Value = "build-structure-level",
-	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup-commands",
+	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1348,7 +1312,7 @@ DefineButton( { Pos = 15, Level = "build-structure-level-2", Icon = "icon-left-a
 
 DefineButton( { Pos = 16, Level = "build-structure-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1361,7 +1325,7 @@ DefineButton( { Pos = 16, Level = "build-structure-level", Icon = "icon-cancel",
 
 DefineButton( { Pos = 16, Level = "build-structure-level-2", Icon = "icon-cancel",
 	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
@@ -1376,7 +1340,7 @@ DefineButton( { Pos = 16, Level = "build-structure-level-2", Icon = "icon-cancel
 
 DefineButton( { Pos = 1, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1391,7 +1355,7 @@ DefineButton( { Pos = 1, Level = "found-faction-level",
 
 DefineButton( { Pos = 2, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1406,7 +1370,7 @@ DefineButton( { Pos = 2, Level = "found-faction-level",
 
 DefineButton( { Pos = 3, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1421,7 +1385,7 @@ DefineButton( { Pos = 3, Level = "found-faction-level",
 
 DefineButton( { Pos = 4, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1436,7 +1400,7 @@ DefineButton( { Pos = 4, Level = "found-faction-level",
 
 DefineButton( { Pos = 5, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1451,7 +1415,7 @@ DefineButton( { Pos = 5, Level = "found-faction-level",
 
 DefineButton( { Pos = 6, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1466,7 +1430,7 @@ DefineButton( { Pos = 6, Level = "found-faction-level",
 
 DefineButton( { Pos = 7, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1481,7 +1445,7 @@ DefineButton( { Pos = 7, Level = "found-faction-level",
 
 DefineButton( { Pos = 8, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1496,7 +1460,7 @@ DefineButton( { Pos = 8, Level = "found-faction-level",
 
 DefineButton( { Pos = 9, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1511,7 +1475,7 @@ DefineButton( { Pos = 9, Level = "found-faction-level",
 
 DefineButton( { Pos = 10, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1526,7 +1490,7 @@ DefineButton( { Pos = 10, Level = "found-faction-level",
 
 DefineButton( { Pos = 11, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1541,7 +1505,7 @@ DefineButton( { Pos = 11, Level = "found-faction-level",
 
 DefineButton( { Pos = 12, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1556,7 +1520,7 @@ DefineButton( { Pos = 12, Level = "found-faction-level",
 
 DefineButton( { Pos = 13, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1571,7 +1535,7 @@ DefineButton( { Pos = 13, Level = "found-faction-level",
 
 DefineButton( { Pos = 14, Level = "found-faction-level",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1587,7 +1551,7 @@ DefineButton( { Pos = 14, Level = "found-faction-level",
 DefineButton( { Pos = 15, Level = "found-faction-level", Icon = "icon-right-arrow",
 	Action = "button", Value = "found-faction-level-2",
 	Allowed = "check-has-sub-buttons",
-	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup-commands",
+	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1602,7 +1566,7 @@ DefineButton( { Pos = 15, Level = "found-faction-level", Icon = "icon-right-arro
 
 DefineButton( { Pos = 1, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1617,7 +1581,7 @@ DefineButton( { Pos = 1, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 2, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1632,7 +1596,7 @@ DefineButton( { Pos = 2, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 3, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1647,7 +1611,7 @@ DefineButton( { Pos = 3, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 4, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1662,7 +1626,7 @@ DefineButton( { Pos = 4, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 5, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1677,7 +1641,7 @@ DefineButton( { Pos = 5, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 6, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1692,7 +1656,7 @@ DefineButton( { Pos = 6, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 7, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1707,7 +1671,7 @@ DefineButton( { Pos = 7, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 8, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1722,7 +1686,7 @@ DefineButton( { Pos = 8, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 9, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1737,7 +1701,7 @@ DefineButton( { Pos = 9, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 10, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1752,7 +1716,7 @@ DefineButton( { Pos = 10, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 11, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1767,7 +1731,7 @@ DefineButton( { Pos = 11, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 12, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1782,7 +1746,7 @@ DefineButton( { Pos = 12, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 13, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1797,7 +1761,7 @@ DefineButton( { Pos = 13, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 14, Level = "found-faction-level-2",
 	Action = "faction", Value = -1,
-	Key = "", Hint = "", Popup = "popup-research",
+	Key = "", Hint = "", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1812,7 +1776,7 @@ DefineButton( { Pos = 14, Level = "found-faction-level-2",
 
 DefineButton( { Pos = 15, Level = "found-faction-level-2", Icon = "icon-left-arrow",
 	Action = "button", Value = "found-faction-level",
-	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup-commands",
+	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1829,7 +1793,7 @@ DefineButton( { Pos = 15, Level = "found-faction-level-2", Icon = "icon-left-arr
 
 DefineButton( { Pos = 5, Icon = "icon-quest",
 	Action = "quest", Value = 0,
-	Key = "", Hint = "Quest", Popup = "popup-commands",
+	Key = "", Hint = "Quest", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1844,7 +1808,7 @@ DefineButton( { Pos = 5, Icon = "icon-quest",
 
 DefineButton( { Pos = 6, Icon = "icon-quest",
 	Action = "quest", Value = 1,
-	Key = "", Hint = "Quest", Popup = "popup-commands",
+	Key = "", Hint = "Quest", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1859,7 +1823,7 @@ DefineButton( { Pos = 6, Icon = "icon-quest",
 
 DefineButton( { Pos = 7, Icon = "icon-quest",
 	Action = "quest", Value = 2,
-	Key = "", Hint = "Quest", Popup = "popup-commands",
+	Key = "", Hint = "Quest", Popup = "popup_commands",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1876,7 +1840,7 @@ DefineButton( { Pos = 7, Icon = "icon-quest",
 
 DefineButton( { Pos = 9,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup_unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1892,7 +1856,7 @@ DefineButton( { Pos = 9,
 
 DefineButton( { Pos = 10,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup_unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1908,7 +1872,7 @@ DefineButton( { Pos = 10,
 
 DefineButton( { Pos = 11,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup_unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1924,7 +1888,7 @@ DefineButton( { Pos = 11,
 
 DefineButton( { Pos = 12,
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-unit",
+	Key = "", Hint = "Buy", Popup = "popup_unit",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -1942,7 +1906,7 @@ DefineButton( { Pos = 12,
 
 DefineButton( { Pos = 1, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -1954,7 +1918,7 @@ DefineButton( { Pos = 1, Level = "buy-item-level",
 
 DefineButton( { Pos = 2, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -1966,7 +1930,7 @@ DefineButton( { Pos = 2, Level = "buy-item-level",
 
 DefineButton( { Pos = 3, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -1978,7 +1942,7 @@ DefineButton( { Pos = 3, Level = "buy-item-level",
 
 DefineButton( { Pos = 4, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -1990,7 +1954,7 @@ DefineButton( { Pos = 4, Level = "buy-item-level",
 
 DefineButton( { Pos = 5, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2002,7 +1966,7 @@ DefineButton( { Pos = 5, Level = "buy-item-level",
 
 DefineButton( { Pos = 6, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2014,7 +1978,7 @@ DefineButton( { Pos = 6, Level = "buy-item-level",
 
 DefineButton( { Pos = 7, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2026,7 +1990,7 @@ DefineButton( { Pos = 7, Level = "buy-item-level",
 
 DefineButton( { Pos = 8, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2038,7 +2002,7 @@ DefineButton( { Pos = 8, Level = "buy-item-level",
 
 DefineButton( { Pos = 9, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2050,7 +2014,7 @@ DefineButton( { Pos = 9, Level = "buy-item-level",
 
 DefineButton( { Pos = 10, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2062,7 +2026,7 @@ DefineButton( { Pos = 10, Level = "buy-item-level",
 
 DefineButton( { Pos = 11, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2074,7 +2038,7 @@ DefineButton( { Pos = 11, Level = "buy-item-level",
 
 DefineButton( { Pos = 12, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2086,7 +2050,7 @@ DefineButton( { Pos = 12, Level = "buy-item-level",
 
 DefineButton( { Pos = 13, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2098,7 +2062,7 @@ DefineButton( { Pos = 13, Level = "buy-item-level",
 
 DefineButton( { Pos = 14, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2110,7 +2074,7 @@ DefineButton( { Pos = 14, Level = "buy-item-level",
 
 DefineButton( { Pos = 15, Level = "buy-item-level",
 	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup-item-inventory",
+	Key = "", Hint = "Buy", Popup = "popup_item_inventory",
 	ForUnit = {
 		"unit-germanic-market",
 		"unit-norse-market",
@@ -2124,7 +2088,7 @@ DefineButton( { Pos = 15, Level = "buy-item-level",
 
 DefineButton( { Pos = 9, Icon = "icon-ring",
 	Action = "produce-resource", Value = "jewelry",
-	Key = "j", Hint = "Produce ~!Jewelry", Popup = "popup-commands",
+	Key = "j", Hint = "Produce ~!Jewelry", Popup = "popup_commands",
 	Description = "Allows workers to transform Copper into Jewelry in this building",
 	ForUnit = {
 		"unit-brising-smithy",
@@ -2139,7 +2103,7 @@ DefineButton( { Pos = 9, Icon = "icon-ring",
 
 DefineButton( { Pos = 13, Icon = "icon-furniture",
 	Action = "produce-resource", Value = "furniture",
-	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup-commands",
+	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup_commands",
 	Description = "Allows workers to transform Lumber into Furniture in this building",
 	ForUnit = {
 		"unit-dwarven-lumber-mill",
@@ -2152,7 +2116,7 @@ DefineButton( { Pos = 13, Icon = "icon-furniture",
 
 DefineButton( { Pos = 1, Icon = "icon-leather",
 	Action = "produce-resource", Value = "leather",
-	Key = "l", Hint = "Produce ~!Leather", Popup = "popup-commands",
+	Key = "l", Hint = "Produce ~!Leather", Popup = "popup_commands",
 	Description = "Allows workers to gather Leather in this building",
 	ForUnit = {
 		"unit-yale-hunting-lodge",
@@ -2165,7 +2129,7 @@ DefineButton( { Pos = 1, Icon = "icon-leather",
 
 DefineButton( { Pos = 5, Icon = "icon-lumber",
 	Action = "sell-resource", Value = "lumber",
-	Hint = "Sell Lumber", Popup = "popup-commands",
+	Hint = "Sell Lumber", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-market",
 		"unit-germanic-market",
@@ -2177,7 +2141,7 @@ DefineButton( { Pos = 5, Icon = "icon-lumber",
 
 DefineButton( { Pos = 6, Icon = "icon-stone",
 	Action = "sell-resource", Value = "stone",
-	Hint = "Sell Stone", Popup = "popup-commands",
+	Hint = "Sell Stone", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-market",
 		"unit-germanic-market",
@@ -2189,7 +2153,7 @@ DefineButton( { Pos = 6, Icon = "icon-stone",
 
 DefineButton( { Pos = 9, Icon = "icon-lumber",
 	Action = "buy-resource", Value = "lumber",
-	Hint = "Buy Lumber", Popup = "popup-commands",
+	Hint = "Buy Lumber", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-market",
 		"unit-germanic-market",
@@ -2201,7 +2165,7 @@ DefineButton( { Pos = 9, Icon = "icon-lumber",
 
 DefineButton( { Pos = 10, Icon = "icon-stone",
 	Action = "buy-resource", Value = "stone",
-	Hint = "Buy Stone", Popup = "popup-commands",
+	Hint = "Buy Stone", Popup = "popup_commands",
 	ForUnit = {
 		"unit-dwarven-market",
 		"unit-germanic-market",
@@ -2217,7 +2181,7 @@ DefineButton( { Pos = 1, Level = "enact-law-level", Icon = "icon-labor",
 	Action = "research", Value = "upgrade-free-workers",
 	Allowed = "check-single-research",
 	Description = "Removes Serfdom.",
-	Key = "f", Hint = "Enact ~!Free Workers", Popup = "popup-research",
+	Key = "f", Hint = "Enact ~!Free Workers", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -2234,7 +2198,7 @@ DefineButton( { Pos = 2, Level = "enact-law-level", Icon = "icon-serfdom",
 	Action = "research", Value = "upgrade-serfdom",
 	Allowed = "check-single-research",
 	Description = "-100 Copper cost for workers, -1 worker gathering rate. Removes Free Workers.",
-	Key = "s", Hint = "Enact ~!Serfdom", Popup = "popup-research",
+	Key = "s", Hint = "Enact ~!Serfdom", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
@@ -2251,7 +2215,7 @@ DefineButton( { Pos = 9, Icon = "icon-shield-wall",
 	Action = "research", Value = "upgrade-shield-wall",
 	Allowed = "check-single-research",
 	Description = "+2 Armor for infantry. Incompatible with Svinfylking.",
-	Key = "h", Hint = "Develop S~!hield Wall", Popup = "popup-research",
+	Key = "h", Hint = "Develop S~!hield Wall", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-barracks",
 		"unit-germanic-barracks",
@@ -2267,7 +2231,7 @@ DefineButton( { Pos = 10, Icon = "icon-svinfylking",
 	Action = "research", Value = "upgrade-svinfylking",
 	Allowed = "check-single-research",
 	Description = "+2 Damage for infantry. Incompatible with Shield Wall.",
-	Key = "f", Hint = "Develop Svin~!fylking", Popup = "popup-research",
+	Key = "f", Hint = "Develop Svin~!fylking", Popup = "popup_research",
 	ForUnit = {
 		"unit-latin-barracks",
 		"unit-germanic-barracks",
@@ -2283,7 +2247,7 @@ DefineButton( { Pos = 5, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-wood-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
-	Key = "p", Hint = "Research Wood ~!Plow", Popup = "popup-research",
+	Key = "p", Hint = "Research Wood ~!Plow", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-lumber-mill",
 		"unit-germanic-carpenters-shop",
@@ -2297,7 +2261,7 @@ DefineButton( { Pos = 6, Icon = "icon-iron-tipped-wood-plow",
 	Action = "research", Value = "upgrade-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
-	Key = "p", Hint = "Research Iron-Tipped Wood ~!Plow", Popup = "popup-research",
+	Key = "p", Hint = "Research Iron-Tipped Wood ~!Plow", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-lumber-mill",
 		"unit-germanic-carpenters-shop",
@@ -2311,7 +2275,7 @@ DefineButton( { Pos = 7, Icon = "icon-iron-plow",
 	Action = "research", Value = "upgrade-iron-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",
-	Key = "p", Hint = "Research Iron ~!Plow", Popup = "popup-research",
+	Key = "p", Hint = "Research Iron ~!Plow", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-lumber-mill",
 		"unit-germanic-carpenters-shop",
@@ -2324,7 +2288,7 @@ DefineButton( { Pos = 7, Icon = "icon-iron-plow",
 DefineButton( { Pos = 1, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-masonry",
 	Allowed = "check-single-research",
-	Key = "m", Hint = "Research ~!Masonry", Popup = "popup-research",
+	Key = "m", Hint = "Research ~!Masonry", Popup = "popup_research",
 	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions.",
 	ForUnit = {
 		"unit-dwarven-masons-shop",
@@ -2337,7 +2301,7 @@ DefineButton( { Pos = 7, Icon = "anvil",
 	Action = "research", Value = "upgrade_ironworking",
 	Allowed = "check-single-research",
 	Description = "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
-	Key = "i", Hint = "Research ~!Ironworking", Popup = "popup-research",
+	Key = "i", Hint = "Research ~!Ironworking", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-smithy", "unit-brising-smithy",
 		"unit-germanic-smithy",
@@ -2352,7 +2316,7 @@ DefineButton( { Pos = 1, Icon = "icon-mathematics",
 	Action = "research", Value = "upgrade-mathematics",
 	Allowed = "check-single-research",
 	Description = "-5% Trade Cost for Markets.",
-	Key = "m", Hint = "Research ~!Mathematics", Popup = "popup-research",
+	Key = "m", Hint = "Research ~!Mathematics", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy",
 		"unit-goblin-academy",
@@ -2364,7 +2328,7 @@ DefineButton( { Pos = 2, Icon = "icon-engineering",
 	Action = "research", Value = "upgrade-engineering",
 	Allowed = "check-single-research",
 	Description = "Allows siege engines, railroads and minecarts.",
-	Key = "e", Hint = "Research ~!Engineering", Popup = "popup-research",
+	Key = "e", Hint = "Research ~!Engineering", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy",
 		"unit-goblin-academy",
@@ -2376,7 +2340,7 @@ DefineButton( { Pos = 3, Icon = "icon-architecture",
 	Action = "research", Value = "upgrade-architecture",
 	Allowed = "check-single-research",
 	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings.",
-	Key = "c", Hint = "Research Ar~!chitecture", Popup = "popup-research",
+	Key = "c", Hint = "Research Ar~!chitecture", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy",
 		"unit-goblin-academy",
@@ -2388,7 +2352,7 @@ DefineButton( { Pos = 4, Icon = "icon-philosophy",
 	Action = "research", Value = "upgrade-philosophy",
 	Allowed = "check-single-research",
 	Description = "+10% Research Speed for buildings.",
-	Key = "s", Hint = "Research Philo~!sophy", Popup = "popup-research",
+	Key = "s", Hint = "Research Philo~!sophy", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy",
 		"unit-goblin-academy",
@@ -2400,7 +2364,7 @@ DefineButton( { Pos = 6, Icon = "gunpowder",
 	Action = "research", Value = "upgrade_gunpowder",
 	Allowed = "check-single-research",
 	Description = "Allows gunpowder infantry.",
-	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
+	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup_research",
 	ForUnit = {
 		"unit-goblin-academy",
 		"unit-teuton-university"
@@ -2411,7 +2375,7 @@ DefineButton( { Pos = 6, Icon = "gunpowder",
 	Action = "research", Value = "upgrade_gunpowder",
 	Allowed = "check-single-research",
 	Description = "Allows gunpowder infantry and upgrades Ballista Towers to Cannon Towers.",
-	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup-research",
+	Key = "g", Hint = "Research ~!Gunpowder", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy"
 	}
@@ -2421,7 +2385,7 @@ DefineButton( { Pos = 6, Icon = "gunpowder",
 
 DefineButton( { Pos = 2, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",
-	Key = "h", Hint = "Buy Potion of ~!Healing", Popup = "popup-item",
+	Key = "h", Hint = "Buy Potion of ~!Healing", Popup = "popup_item",
 	ForUnit = {"unit-germanic-temple", "unit-norse-temple", "unit-teuton-temple", "unit-dwarven-temple", "unit-goblin-temple"}
 })
 

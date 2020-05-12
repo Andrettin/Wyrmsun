@@ -147,7 +147,7 @@ DefineUnitType("unit-template-unit", {
 	Animations = "animations-melee-unit-new",
 	DrawLevel = 40,
 	SelectableByRectangle = true,
-	ButtonPopup = "popup-unit"
+	ButtonPopup = "popup_unit"
 })
 
 DefineUnitType("unit-template-building", {
@@ -161,7 +161,7 @@ DefineUnitType("unit-template-building", {
 	SelectableByRectangle = true,
 	SalvageFactor = 75,
 	ButtonLevel = "build-structure-level",
-	ButtonPopup = "popup-building"
+	ButtonPopup = "popup_building"
 })
 
 DefineUnitType("unit-template-sapient-unit", {
@@ -1533,7 +1533,7 @@ DefineUnitType("unit-tree-stump", {
 	GivesResource = "lumber", CanHarvest = true,
 	HarvestFromOutside = true,
 	Building = true,
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	Variations = {
 		{
 			"variation-id", "1"
@@ -4376,7 +4376,7 @@ DefineUnitType("unit-template-town-hall", {
 	IncreasesLuxuryDemand = true,
 	CanStore = {"copper", "silver", "gold", "iron", "mithril", "lumber", "stone", "limestone", "coal", "jewelry", "furniture", "leather", "diamonds", "emeralds"},
 	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	ButtonPos = 1,
@@ -4491,7 +4491,7 @@ DefineUnitType("unit-template-barracks", {
 	IncreasesLuxuryDemand = true,
 	GarrisonTraining = true,
 	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	CostModifier = 25,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -4691,7 +4691,7 @@ DefineUnitType("unit-template-temple", {
 	Type = "land",
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	Drops = {"unit-wood-pile"},
 	CostModifier = 25,
 	BurnPercent = 50,
@@ -4733,7 +4733,7 @@ DefineUnitType("unit-template-university", {
 	Type = "land",
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	Drops = {"unit-wood-pile"},
 	CostModifier = 25,
 	BurnPercent = 50,
@@ -4922,7 +4922,7 @@ DefineUnitType("unit-template-market", {
 	Inexhaustible = true,
 	StartingResources = {1000},
 	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	CostModifier = 25,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -4968,7 +4968,7 @@ DefineUnitType("unit-template-dock", {
 	IncreasesLuxuryDemand = true,
 	StartingResources = {1000},
 --	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	CostModifier = 25,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -5222,7 +5222,7 @@ DefineUnitType("unit-mercenary-camp", {
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
 	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
+	RightMouseAction = "rally_point",
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RecruitHeroes = true,

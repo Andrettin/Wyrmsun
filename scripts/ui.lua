@@ -914,7 +914,7 @@ if not (ui_loaded_first_time) then
 	local PopupFont = "game"
 
 	DefinePopup({
-		Ident = "popup-commands",
+		Ident = "popup_commands",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		DefaultFont = PopupDescriptionFont,
@@ -1117,7 +1117,7 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
-		Ident = "popup-building",
+		Ident = "popup_building",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -1309,7 +1309,7 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
-		Ident = "popup-unit",
+		Ident = "popup_unit",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -1869,7 +1869,7 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
-		Ident = "popup-item",
+		Ident = "popup_item",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -1999,7 +1999,7 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
-		Ident = "popup-item-inventory",
+		Ident = "popup_item_inventory",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -2538,7 +2538,7 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
-		Ident = "popup-research",
+		Ident = "popup_research",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -2607,7 +2607,7 @@ if not (ui_loaded_first_time) then
 	})
 	
 	DefinePopup({
-		Ident = "popup-learn-ability",
+		Ident = "popup_learn_ability",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,
@@ -2661,7 +2661,7 @@ if not (ui_loaded_first_time) then
 	})
 	
 	DefinePopup({
-		Ident = "popup-unit-under-cursor",
+		Ident = "popup_unit_under_cursor",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 32,
@@ -2732,7 +2732,7 @@ if not (ui_loaded_first_time) then
 	})
 	
 	DefinePopup({
-		Ident = "popup-resource",
+		Ident = "popup_resource",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
 		MinWidth = 128,

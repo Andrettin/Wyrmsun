@@ -29,7 +29,7 @@
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-kobold-footpad",
-	Key = "f", Hint = "Hire ~!Footpad", Popup = "popup-unit",
+	Key = "f", Hint = "Hire ~!Footpad", Popup = "popup_unit",
 	ForUnit = {"unit-mercenary-camp"}
 })
 
@@ -37,13 +37,13 @@ DefineButton( { Pos = 1,
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-slasher",
 	Action = "experience-upgrade-to", Value = "unit-kobold-slasher",
-	Key = "u", Hint = "~!Upgrade to Slasher", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Slasher", Popup = "popup_unit",
 	ForUnit = {"unit-kobold-footpad"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-champion",
 	Action = "experience-upgrade-to", Value = "unit-kobold-champion",
-	Key = "u", Hint = "~!Upgrade to Champion", Popup = "popup-unit",
+	Key = "u", Hint = "~!Upgrade to Champion", Popup = "popup_unit",
 	ForUnit = {"unit-kobold-slasher"}
 } )
 

@@ -38,7 +38,7 @@ DefineUnitType("unit-template-item", {
 	Type = "land",
 	NumDirections = 1,
 	Item = true,
-	ButtonPopup = "popup-item",
+	ButtonPopup = "popup_item",
 	Sounds = {
 		"selected", "click"
 	} 

@@ -1,0 +1,19 @@
+rally_point = {
+	pos = 13
+	icon = icon_rally_point
+	action = rally_point
+	key = r
+	hint = "Set ~!Rally Point"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+		barracks
+		temple
+		dock
+		market
+		watch_tower
+		guard_tower
+	}
+}
