@@ -48,14 +48,6 @@ DefineButton( { Pos = 5, Icon = "icon-unload",
 	}
 })
 
-DefineButton( { Pos = 16, Icon = "icon-salvage",
-	Action = "salvage",
-	Key = "delete", Hint = "Salvage Unit (~<Del~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-minecart"
-	}
-})
-
 -- Worker Commands ------------------------------------------------------
 
 DefineButton( { Pos = 4, Icon = "icon-repair",
@@ -170,59 +162,6 @@ DefineButton( { Pos = 16, Icon = "icon-garrison",
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
 		"unit-goblin-stronghold",
-	}
-})
-
-DefineButton( { Pos = 16, Icon = "icon-salvage",
-	Action = "salvage",
-	Key = "delete", Hint = "Salvage Building (~<Del~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
-		"unit-germanic-town-hall",
-		"unit-germanic-farm", "unit-germanic-barracks",
-		"unit-germanic-carpenters-shop", "unit-germanic-smithy",
-		"unit-germanic-market", "unit-germanic-dock",
-		"unit-germanic-temple",
-		"unit-norse-town-hall",
-		"unit-norse-farm", "unit-norse-barracks",
-		"unit-norse-lumber-mill", "unit-norse-smithy",
-		"unit-norse-market",
-		"unit-norse-temple",
-		"unit-norse-watch-tower",
-		"unit-norse-dock",
-		"unit-teuton-town-hall", -- "unit-teuton-stronghold",
-		"unit-teuton-farm", "unit-teuton-barracks",
-		"unit-teuton-lumber-mill", "unit-teuton-smithy", "unit-teuton-masons-shop",
-		"unit-teuton-stables",
-		"unit-teuton-temple", "unit-teuton-university",
-		"unit-teuton-market", "unit-teuton-dock",
-		"unit-teuton-watch-tower", "unit-teuton-guard-tower", "unit-teuton-catapult-tower",
-		"unit-celt-farm",
-		"unit-dwarven-town-hall", -- "unit-dwarven-stronghold",
-		"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-		"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-masons-shop",
-		"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
-		"unit-dwarven-academy",
-		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower", "unit-dwarven-cannon-tower",
-		"unit-dwarven-dock",
-		"unit-brising-smithy",
-		"unit-joruvellir-yale-pen",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-gnomish-barracks",
-		"unit-gnomish-farm",
-		"unit-goblin-town-hall", -- "unit-goblin-stronghold",
-		"unit-goblin-mess-hall", "unit-goblin-farm",
-		"unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-masons-shop",
-		"unit-goblin-temple", "unit-goblin-market", "unit-goblin-academy",
-		"unit-goblin-watch-tower", "unit-goblin-guard-tower", "unit-goblin-catapult-tower",
-		"unit-goblin-dock",
-		"unit-goblin-banner",
-		"unit-gold-mine", "unit-silver-mine", "unit-copper-mine", "unit-iron-mine", "unit-mithril-mine",
-		"unit-coal-mine",
-		"unit-diamond-mine", "unit-emerald-mine",
-		"unit-yale-hunting-lodge",
-		"unit-mercenary-camp"
 	}
 })
 

@@ -1,4 +1,4 @@
-rally_point = {
+set_rally_point = {
 	pos = 13
 	icon = icon_rally_point
 	action = rally_point
@@ -15,5 +15,42 @@ rally_point = {
 		market
 		watch_tower
 		guard_tower
+	}
+}
+
+salvage_building = {
+	pos = 16
+	icon = icon_salvage
+	action = salvage
+	key = delete
+	hint = "Salvage Building (~<Del~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		banner
+		gold_mine
+		silver_mine
+		copper_mine
+		iron_mine
+		mithril_mine
+		coal_mine
+		diamond_mine
+		emerald_mine
+		yale_hunting_lodge
+		mercenary_camp
 	}
 }

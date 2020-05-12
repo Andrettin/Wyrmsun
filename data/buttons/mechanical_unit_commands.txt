@@ -1,0 +1,11 @@
+salvage_unit = {
+	pos = 16
+	icon = icon_salvage
+	action = salvage
+	key = delete
+	hint = "Salvage Unit (~<Del~>)"
+	popup = popup_commands
+	unit_classes = {
+		minecart
+	}
+}
