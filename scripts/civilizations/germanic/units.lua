@@ -808,6 +808,7 @@ DefineUnitType("unit-germanic-barracks", {
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	ButtonKey = "w",
 	Variations = {
 		{
 			"variation-id", "barracks",

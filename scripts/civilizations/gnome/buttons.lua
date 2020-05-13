@@ -82,12 +82,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-gnomish-t
 	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
 })
 
-DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-gnomish-barracks",
-	Action = "build", Value = "unit-gnomish-barracks",
-	Key = "b", Hint = "Build ~!Barracks", Popup = "popup_building",
-	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
-})
-
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",

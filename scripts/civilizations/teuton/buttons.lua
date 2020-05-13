@@ -152,19 +152,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-teuton-to
 	ForUnit = {"unit-teuton-worker"}
 })
 
-DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-germanic-barracks",
-	Action = "build", Value = "unit-teuton-barracks",
-	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-  
-DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-teuton-barracks",
-	Action = "build", Value = "unit-teuton-barracks",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-masonry"},
-	Key = "b", Hint = "Build ~!Barracks", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-  
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-teuton-lumber-mill",
 	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup_building",

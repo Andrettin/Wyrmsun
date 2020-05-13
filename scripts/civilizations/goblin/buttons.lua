@@ -145,12 +145,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-goblin-to
 	ForUnit = {"unit-goblin-worker"}
 } )
 
-DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-goblin-mess-hall",
-	Action = "build", Value = "unit-goblin-mess-hall",
-	Key = "s", Hint = "Build Me~!ss Hall", Popup = "popup_building",
-	ForUnit = {"unit-goblin-worker"}
-})
-
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-goblin-lumber-mill",
 	Action = "build", Value = "unit-goblin-lumber-mill",
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",

@@ -1166,6 +1166,7 @@ DefineUnitType("unit-teuton-barracks", {
 		{
 			"variation-id", "barracks",
 			"type-name", "War Lodge",
+			"button-key", "w",
 			"file", "germanic/buildings/barracks.png",
 			"shadow-file", "germanic/buildings/barracks_shadow.png",
 			"icon", "icon-germanic-barracks",
@@ -1176,6 +1177,7 @@ DefineUnitType("unit-teuton-barracks", {
 		{
 			"variation-id", "barracks-snow-winter",
 			"type-name", "War Lodge",
+			"button-key", "w",
 			"file", "germanic/buildings/barracks_snow.png",
 			"shadow-file", "germanic/buildings/barracks_shadow.png",
 			"icon", "icon-germanic-barracks",
@@ -1189,6 +1191,7 @@ DefineUnitType("unit-teuton-barracks", {
 		{
 			"variation-id", "barracks-snow",
 			"type-name", "War Lodge",
+			"button-key", "w",
 			"file", "germanic/buildings/barracks_snow.png",
 			"shadow-file", "germanic/buildings/barracks_shadow.png",
 			"icon", "icon-germanic-barracks",

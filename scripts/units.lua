@@ -4497,7 +4497,6 @@ DefineUnitType("unit-template-barracks", {
 	BurnDamageRate = 1,
 	ButtonPos = 3,
 	ButtonKey = "b",
-	ButtonHint = "Build ~!Barracks",
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	AiDrops = {"unit-club"},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
