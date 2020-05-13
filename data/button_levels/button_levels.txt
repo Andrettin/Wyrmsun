@@ -1,0 +1,35 @@
+build_structure_level = {
+}
+
+build_structure_level_2 = {
+}
+
+build_structure_level_3 = {
+}
+
+choose_individual_upgrade_level = {
+}
+
+found_faction_level = {
+}
+
+found_faction_level_2 = {
+}
+
+enact_law_level = {
+}
+
+inventory_level = {
+}
+
+quest_level = {
+}
+
+buy_item_level = {
+}
+
+cancel_level = {
+}
+
+garrison_level = {
+}
