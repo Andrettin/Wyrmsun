@@ -377,7 +377,7 @@ DefineUnitType("unit-gnomish-barracks", {
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",
-	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-derro-thug", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"},
+	Trains = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	Sounds = {
 		"ready", "basic-gnome-voices-work-complete",

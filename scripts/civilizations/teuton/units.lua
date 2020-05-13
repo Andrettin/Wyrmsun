@@ -1160,7 +1160,7 @@ DefineUnitType("unit-teuton-barracks", {
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
-	Trains = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman", "unit-teuton-catapult"},
+	Trains = {"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman", "unit-teuton-catapult"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Variations = {
 		{
