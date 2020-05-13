@@ -133,7 +133,7 @@ function RunCampaignMenu()
 	end
 	
 	
-	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor(),
+	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*-0.5) * get_scale_factor(),
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			UpdateCampaignDescription()
@@ -147,7 +147,7 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	
-	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (104 + 36*1.5) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
+	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
 	
 	UpdateCampaignDescription()
 
