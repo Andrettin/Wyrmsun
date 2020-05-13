@@ -86,6 +86,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the "Use OpenGL" option, as OpenGL is now always used for rendering.
 - Reworked the random number generator to provide better results.
 
+* Multiplayer
+- Fixed possible source of desyncs related to hiring units at mercenary camps.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 - The Nidavellir scenarios now take place in a single map layer. The underground portions of the map are now in the same layer as the surface portions, but retain their peculiar characteristics, e.g. cave walls being non-passable by air units and missiles.
