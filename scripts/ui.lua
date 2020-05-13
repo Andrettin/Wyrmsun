@@ -1367,6 +1367,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
+				{	Condition = {ButtonAction = "train_unit_class"},
+					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				}, 
+				{ 	Condition = {ButtonAction = "train_unit_class"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
 				{	Condition = {ButtonAction = "buy"},
 					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 
@@ -1379,7 +1385,16 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
+				{	Condition = {ButtonAction = "train_unit_class"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<SHIFT~>-click to train 5"), Font = PopupDescriptionFont}}
+				}, 
+				{ 	Condition = {ButtonAction = "train_unit_class"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
 				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {Class = true, ButtonAction = "train_unit_class"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
@@ -1407,6 +1422,61 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = Concat(_("Range:"), " "), Variable = "AttackRange", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						Concat(_("Damage:"), " "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+										),
+										Add(
+											TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+											),
+											TypeVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+									),
+									Add(
+										TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+										),
+										TypeVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
+					), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {BasicDamage = "only", ButtonAction = "train_unit_class"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
 						Concat(_("Damage:"), " "),
 						String(
@@ -1877,7 +1947,7 @@ if not (ui_loaded_first_time) then
 		Contents = {
 				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
-				}, 
+				},
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "train-unit", RequirementsString = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
