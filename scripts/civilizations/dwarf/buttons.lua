@@ -91,16 +91,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level",
 	}
 })
 
-DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-dwarven-barracks",
-	Action = "build", Value = "unit-dwarven-barracks",
-	Key = "w", Hint = "Build ~!War Hall", Popup = "popup_building",
-	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
-	}
-})
-
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-dwarven-lumber-mill",
 	Action = "build", Value = "unit-dwarven-lumber-mill",
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",
