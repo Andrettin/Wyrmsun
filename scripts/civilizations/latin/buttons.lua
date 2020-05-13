@@ -33,12 +33,6 @@ DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-latin-for
 	ForUnit = {"unit-teuton-worker"}
 } )
 
-DefineButton( { Pos = 2, Level = "build-structure-level", Icon = "icon-latin-farm",
-	Action = "build", Value = "unit-latin-farm", Popup = "popup_building",
-	Key = "f", Hint = "Build ~!Farm",
-	ForUnit = {"unit-teuton-worker"}
-} )
-
 DefineButton( { Pos = 3, Level = "build-structure-level", Icon = "icon-latin-barracks",
 	Action = "build", Value = "unit-latin-barracks", Popup = "popup_building",
 	Key = "b", Hint = "Build ~!Barracks",

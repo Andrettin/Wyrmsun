@@ -2300,7 +2300,6 @@ DefineButton( { Pos = 2, Icon = "icon-red-potion",
 -- Load the buttons of all civilizations
 
 Load("scripts/civilizations/anglo_saxon/buttons.lua")
-Load("scripts/civilizations/celt/buttons.lua")
 Load("scripts/civilizations/dwarf/buttons.lua")
 Load("scripts/civilizations/english/buttons.lua")
 Load("scripts/civilizations/ettin/buttons.lua")
