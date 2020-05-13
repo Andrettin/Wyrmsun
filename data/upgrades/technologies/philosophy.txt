@@ -1,0 +1,29 @@
+upgrade_philosophy = {
+	name = "Philosophy"
+	upgrade_class = philosophy
+	civilization = neutral
+	icon = icon_philosophy
+	description = "The new modes of thinking fostered by the development of philosophy result in the improvement of the rate of technical and cultural advancement.\n\nEffect: +25% Research Speed for buildings."
+	requirements_string = "Writing"
+	costs = {
+		time = 200
+		copper = 2000
+	}
+	modifier = {
+		research_speed_bonus = 25
+		unit_classes = {
+			town_hall
+			stronghold
+			barracks
+			lumber_mill
+			smithy
+			masons_shop
+			#stables
+			#market
+			temple
+			university
+			dock
+			mercenary_camp
+		}
+	}
+}

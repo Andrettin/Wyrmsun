@@ -2258,7 +2258,7 @@ DefineButton( { Pos = 3, Icon = "icon-architecture",
 DefineButton( { Pos = 4, Icon = "icon-philosophy",
 	Action = "research", Value = "upgrade-philosophy",
 	Allowed = "check-single-research",
-	Description = "+10% Research Speed for buildings.",
+	Description = "+25% Research Speed for buildings.",
 	Key = "s", Hint = "Research Philo~!sophy", Popup = "popup_research",
 	ForUnit = {
 		"unit-dwarven-academy",

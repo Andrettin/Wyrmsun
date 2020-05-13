@@ -250,16 +250,6 @@ DefineUpgrade("upgrade-architecture", {
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
-DefineUpgrade("upgrade-philosophy", {
-	Name = "Philosophy",
-	Class = "philosophy",
-	Civilization = "neutral",
-	Icon = "icon-philosophy",
-	Description = "The new modes of thinking fostered by the development of philosophy result in the improvement of the rate of technical and cultural advancement.\n\nEffect: +25% Research Speed for buildings.",
-	RequirementsString = "Writing",
-	Costs = {"time", 250, "copper", 2000}
-})
-
 DefineModifier("upgrade_ironworking",
 	{"improve-production", "iron", 10},
 	{"improve-production", "mithril", 10},
@@ -389,44 +379,6 @@ DefineModifier("upgrade-architecture",
 	{"apply-to", "unit-teuton-market"}, {"apply-to", "unit-teuton-university"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}, {"apply-to", "unit-teuton-catapult-tower"},
 	{"apply-to", "unit-teuton-dock"}
-)
-
-DefineModifier("upgrade-philosophy",
-	{"ResearchSpeedBonus", 25},
-	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
-	{"apply-to", "unit-dwarven-barracks"},
-	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
-	{"apply-to", "unit-dwarven-masons-shop"},
---	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
---	{"apply-to", "unit-dwarven-market"},
-	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-academy"},
---	{"apply-to", "unit-dwarven-dock"},
-	{"apply-to", "unit-ettin-town-hall"},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
-	{"apply-to", "unit-goblin-mess-hall"},
-	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
-	{"apply-to", "unit-goblin-masons-shop"},
---	{"apply-to", "unit-goblin-market"},
-	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-academy"},
---	{"apply-to", "unit-goblin-dock"},
-	{"apply-to", "unit-latin-town-hall"},
-	{"apply-to", "unit-latin-barracks"},
-	{"apply-to", "unit-latin-smithy"},
---	{"apply-to", "unit-latin-stables"},
-	{"apply-to", "unit-norse-town-hall"},
-	{"apply-to", "unit-norse-barracks"},
-	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
-	{"apply-to", "unit-norse-temple"},
---	{"apply-to", "unit-norse-market"},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-barracks"},
-	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
-	{"apply-to", "unit-teuton-masons-shop"},
---	{"apply-to", "unit-teuton-stables"},
---	{"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
---	{"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-mercenary-camp"}
 )
 
 DefineModifier("upgrade_gunpowder",

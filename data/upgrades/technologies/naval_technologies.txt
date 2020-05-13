@@ -11,7 +11,7 @@ upgrade_sailing = {
 	}
 	modifier = {
 		speed = 1
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_dwarven_ballista_warship
 			unit_germanic_transport_ship
@@ -23,7 +23,7 @@ upgrade_sailing = {
 	}
 	modifier = {
 		points = 10
-		units = {
+		unit_types = {
 			unit_dwarven_ballista_warship
 			unit_goblin_warship
 			unit_norse_longship
@@ -31,7 +31,7 @@ upgrade_sailing = {
 	}
 	modifier = {
 		points = 5
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_germanic_transport_ship
 			unit_goblin_transport_ship
@@ -55,7 +55,7 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 	}
 	modifier = {
 		speed = 1
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_dwarven_ballista_warship
 			unit_germanic_transport_ship
@@ -67,7 +67,7 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 	}
 	modifier = {
 		points = 10
-		units = {
+		unit_types = {
 			unit_dwarven_ballista_warship
 			unit_goblin_warship
 			unit_norse_longship
@@ -75,7 +75,7 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 	}
 	modifier = {
 		points = 5
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_germanic_transport_ship
 			unit_goblin_transport_ship
@@ -104,7 +104,7 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 	}
 	modifier = {
 		speed = 1
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_dwarven_ballista_warship
 			unit_germanic_transport_ship
@@ -116,7 +116,7 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 	}
 	modifier = {
 		points = 10
-		units = {
+		unit_types = {
 			unit_dwarven_ballista_warship
 			unit_goblin_warship
 			unit_norse_longship
@@ -124,7 +124,7 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 	}
 	modifier = {
 		points = 5
-		units = {
+		unit_types = {
 			unit_dwarven_transport_ship
 			unit_germanic_transport_ship
 			unit_goblin_transport_ship
