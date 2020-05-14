@@ -1,0 +1,79 @@
+upgrade_masonry = {
+	name = "Masonry"
+	upgrade_class = masonry
+	civilization = neutral
+	icon = icon_masonry
+	description = "Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
+	costs = {
+		time = 250
+		copper = 900
+		lumber = 1000
+		stone = 500
+	}
+	modifier = {
+		hit_points = {
+			percent_value = 20
+		}
+		armor = 5
+		salvage_factor = -25
+		unit_classes = {
+			town_hall
+			stronghold
+			fortress
+			farm
+			barracks
+			lumber_mill
+			smithy
+			masons_shop
+			stables
+			temple
+			market
+			university
+			dock
+			watch_tower
+			guard_tower
+			heavy_tower
+			cannon_tower
+		}
+	}
+}
+
+upgrade_architecture = {
+	name = "Architecture"
+	upgrade_class = architecture
+	civilization = neutral
+	icon = icon_architecture
+	description = "The development of architecture as an area of knowledge results in better construction techniques.\n\nEffect: +20% Hit Points, +5 Armor and -25% Salvage Factor for buildings."
+	requirements_string = "Writing and Masonry"
+	costs = {
+		time = 250
+		copper = 2000
+		lumber = 2000
+	}
+	modifier = {
+		hit_points = {
+			percent_value = 20
+		}
+		armor = 5
+		salvage_factor = -25
+		unit_classes = {
+			town_hall
+			stronghold
+			fortress
+			farm
+			barracks
+			lumber_mill
+			smithy
+			masons_shop
+			stables
+			temple
+			market
+			university
+			dock
+			watch_tower
+			guard_tower
+			heavy_tower
+			cannon_tower
+		}
+	}
+}

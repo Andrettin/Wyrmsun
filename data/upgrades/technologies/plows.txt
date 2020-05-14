@@ -1,0 +1,52 @@
+upgrade_wood_plow = {
+	name = "Wood Plow"
+	upgrade_class = wood_plow
+	civilization = neutral
+	icon = icon_wood_plow
+	description = "While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."
+	costs = {
+		time = 200
+		copper = 300
+		lumber = 900
+	}
+	modifier = {
+		supply = 1
+		unit_classes = { farm }
+	}
+}
+
+upgrade_iron_tipped_wood_plow = {
+	name = "Iron-Tipped Wood Plow"
+	upgrade_class = iron_tipped_wood_plow
+	civilization = neutral
+	icon = icon_iron_tipped_wood_plow
+	description = "The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms."
+	requirements_string = "Wood Plow, Ironworking and Smithy"
+	costs = {
+		time = 250
+		copper = 900
+		lumber = 1500
+	}
+	modifier = {
+		supply = 1
+		unit_classes = { farm }
+	}
+}
+
+upgrade_iron_plow = {
+	name = "Iron Plow"
+	upgrade_class = iron_plow
+	civilization = neutral
+	icon = icon_iron_plow
+	description = "The use of plows made entirely of iron makes for a significant improvement in farming productivity.\n\nEffect: +1 Food supply for farms."
+	requirements_string = "Iron-Tipped Wood Plow and Smithy"
+	costs = {
+		time = 250
+		copper = 900
+		lumber = 1500
+	}
+	modifier = {
+		supply = 1
+		unit_classes = { farm }
+	}
+}

@@ -27,12 +27,6 @@
 
 -- Buildings -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-latin-forum",
-	Action = "build", Value = "unit-latin-town-hall", Popup = "popup_building",
-	Key = "u", Hint = "Build For~!um",
-	ForUnit = {"unit-teuton-worker"}
-} )
-
 DefineButton( { Pos = 5, Level = "build-structure-level", Icon = "icon-latin-smithy",
 	Action = "build", Value = "unit-latin-smithy", Popup = "popup_building",
 	Key = "s", Hint = "Build ~!Smithy",
