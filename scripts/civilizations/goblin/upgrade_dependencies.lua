@@ -102,7 +102,7 @@ DefineDependency("unit-goblin-market",
 )
 
 DefineDependency("unit-goblin-academy",
-	{"upgrade-goblin-writing"}
+	{"upgrade-writing"}
 )
 
 DefineDependency("unit-goblin-shaman",

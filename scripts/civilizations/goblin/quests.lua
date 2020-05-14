@@ -151,7 +151,7 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 	Civilization = "goblin",
 	PlayerColor = "white",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-goblin-writing") == "A" and CheckDependency(trigger_player, "upgrade-goblin-writing")) then -- should be made to require Orza Chahax in the future, and be specific to the Ezmarria Syndicate
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-stronghold") > 0 and GetPlayerData(trigger_player, "Allow", "upgrade-writing") == "A" and CheckDependency(trigger_player, "upgrade-writing")) then -- should be made to require Orza Chahax in the future, and be specific to the Ezmarria Syndicate
 			return true
 		end
 		return false
@@ -167,7 +167,7 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 		{
 			"objective-type", "research-upgrade",
 			"objective-string", "Research Writing",
-			"upgrade", "upgrade-goblin-writing"
+			"upgrade", "upgrade-writing"
 		}
 	}
 })

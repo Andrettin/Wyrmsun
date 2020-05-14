@@ -158,7 +158,7 @@ DefineDependency("unit-teuton-market",
 )
 
 DefineDependency("unit-teuton-university",
-	{"upgrade-teuton-writing"}
+	{"upgrade-writing"}
 )
 
 DefineDependency("unit-teuton-priest",

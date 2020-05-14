@@ -26,7 +26,7 @@
 --
 
 DefineDependency("upgrade-deity-christian-god",
-	{"upgrade-teuton-writing"}
+	{"upgrade-writing"}
 )
 
 DefinePredependency("upgrade-deity-heimdall",

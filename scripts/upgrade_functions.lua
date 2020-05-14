@@ -100,8 +100,7 @@ function ApplyTechLevels()
 	}
 	local civilized_upgrades = {
 		"upgrade-dwarven-runewriting",
-		"upgrade-teuton-writing",
-		"upgrade-goblin-writing",
+		"upgrade-writing",
 		"upgrade-dwarven-coinage", "upgrade-dwarven-alchemy",
 		"upgrade-teuton-coinage", "upgrade-teuton-alchemy",
 		"upgrade-goblin-coinage", "upgrade-goblin-alchemy",

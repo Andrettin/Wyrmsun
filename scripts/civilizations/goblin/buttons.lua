@@ -291,14 +291,6 @@ DefineButton( { Pos = 3, Icon = "icon-goblin-coinage",
 	ForUnit = {"unit-goblin-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
-	Action = "research", Value = "upgrade-goblin-writing",
-	Allowed = "check-single-research",
-	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "w", Hint = "Research ~!Writing", Popup = "popup_research",
-	ForUnit = {"unit-goblin-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",

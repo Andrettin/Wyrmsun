@@ -1917,9 +1917,7 @@ DefiningData = false
 
 Units = {
 	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
-	"upgrade-wood-plow", "upgrade-iron-tipped-wood-plow", "upgrade-iron-plow",
-	"upgrade-masonry",
-	"upgrade-mathematics", "upgrade-engineering", "upgrade-architecture", "upgrade-philosophy",
+	"upgrade-mathematics", "upgrade-engineering",
 	"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion",
 	"unit-latin-javelineer",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
@@ -1975,7 +1973,7 @@ Units = {
 	"unit-teuton-wall",
 	"upgrade-teuton-spatha", "upgrade-frank-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
-	"upgrade-teuton-coinage", "upgrade-teuton-writing", "upgrade-teuton-alchemy",
+	"upgrade-teuton-coinage", "upgrade-teuton-alchemy",
 	"upgrade-faction-angle-tribe", "upgrade-faction-avione-tribe", "upgrade-faction-bernice-tribe", "upgrade-faction-charude-tribe", "upgrade-faction-cantware-tribe", "upgrade-faction-dere-tribe", "upgrade-faction-gumeninga-tribe", "upgrade-faction-jute-tribe", "upgrade-faction-lindisfaran-tribe", "upgrade-faction-mierce-tribe", "upgrade-faction-teuton-tribe",
 	"upgrade-faction-bernicia", "upgrade-faction-deira", "upgrade-faction-east-anglia", "upgrade-faction-englaland", "upgrade-faction-essex", "upgrade-faction-jutland", "upgrade-faction-kent", "upgrade-faction-mercia", "upgrade-faction-middle-anglia", "upgrade-faction-middlesex", "upgrade-faction-northumbria", "upgrade-faction-sussex", "upgrade-faction-wessex",
 	"upgrade-faction-england", "upgrade-faction-scotland",
@@ -2053,7 +2051,7 @@ Units = {
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",
 	"upgrade-goblin-barbed-arrow", "upgrade-goblin-bodkin-arrow",
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
-	"upgrade-goblin-coinage", "upgrade-goblin-writing", "upgrade-goblin-alchemy",
+	"upgrade-goblin-coinage", "upgrade-goblin-alchemy",
 	"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 	"unit-elven-swordsman", "unit-elven-priest", 
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",

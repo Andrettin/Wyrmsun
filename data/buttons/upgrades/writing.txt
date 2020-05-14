@@ -1,0 +1,12 @@
+research_writing = {
+	pos = 4
+	action = research_class
+	value = writing
+	allowed = check_single_research
+	description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market."
+	popup = popup_research
+	unit_classes = {
+		stronghold
+		fortress
+	}
+}

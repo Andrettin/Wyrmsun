@@ -85,12 +85,6 @@ DefineUpgrade("upgrade-teuton-coinage", {
 	Background = "West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."
 })
 
-DefineUpgrade("upgrade-teuton-writing", {
-	Parent = "upgrade-writing",
-	Civilization = "teuton",
-	Icon = "icon-norse-runewriting"
-})
-
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",
@@ -174,27 +168,6 @@ DefineModifier("upgrade-teuton-coinage",
 	{"TradeCost", -5},
 	{"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-norse-market"}
-)
-
-DefineModifier("upgrade-teuton-writing",
-	{"ResearchSpeedBonus", 10},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-barracks"},
-	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
-	{"apply-to", "unit-teuton-masons-shop"},
---	{"apply-to", "unit-teuton-stables"},
---	{"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"},
---	{"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-latin-town-hall"},
-	{"apply-to", "unit-latin-barracks"},
-	{"apply-to", "unit-latin-smithy"},
---	{"apply-to", "unit-latin-stables"},
-	{"apply-to", "unit-norse-town-hall"},
-	{"apply-to", "unit-norse-barracks"},
-	{"apply-to", "unit-norse-lumber-mill"}, {"apply-to", "unit-norse-smithy"},
-	{"apply-to", "unit-norse-market"},
-	{"apply-to", "unit-norse-temple"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",

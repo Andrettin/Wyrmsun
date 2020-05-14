@@ -423,14 +423,6 @@ DefineButton( { Pos = 3, Icon = "icon-dwarven-coinage",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
-	Action = "research", Value = "upgrade-dwarven-runewriting",
-	Allowed = "check-single-research",
-	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "r", Hint = "Research ~!Runewriting", Popup = "popup_research",
-	ForUnit = {"unit-dwarven-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",

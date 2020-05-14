@@ -160,7 +160,7 @@ DefineFaction("burgundy", {
 	Icon = "icon-flag-old-austria",
 	DevelopsFrom = {"burgundian-tribe"},
 	HistoricalUpgrades = {
-		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-writing", true, -- polities must have writing
 		0, "upgrade-masonry", true
 	},
 	HistoricalCapitals = {
@@ -189,7 +189,7 @@ DefineFaction("ostrogothia", {
 	Icon = "icon-flag-five-black-birds-on-purple",
 	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepidae-tribe"},
 	HistoricalUpgrades = {
-		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-writing", true, -- polities must have writing
 		0, "upgrade-masonry", true
 	}
 })
@@ -204,7 +204,7 @@ DefineFaction("vandalia", {
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	DevelopsFrom = {"vandal-tribe", "lugii-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe"},
 	HistoricalUpgrades = {
-		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-writing", true, -- polities must have writing
 		0, "upgrade-masonry", true
 	}
 })
@@ -219,7 +219,7 @@ DefineFaction("visigothia", {
 	Icon = "icon-flag-five-orange-birds-on-black",
 	DevelopsFrom = {"visigoth-tribe"},
 	HistoricalUpgrades = {
-		0, "upgrade-teuton-writing", true, -- polities must have writing
+		0, "upgrade-writing", true, -- polities must have writing
 		0, "upgrade-masonry", true
 	},
 	HistoricalCapitals = {

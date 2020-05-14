@@ -273,14 +273,6 @@ DefineButton( { Pos = 3, Icon = "icon-suebi-coinage",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Icon = "icon-norse-runewriting",
-	Action = "research", Value = "upgrade-teuton-writing",
-	Allowed = "check-single-research",
-	Description = "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market.",
-	Key = "w", Hint = "Research ~!Writing", Popup = "popup_research",
-	ForUnit = {"unit-teuton-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",

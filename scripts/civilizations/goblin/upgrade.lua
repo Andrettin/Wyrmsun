@@ -114,12 +114,6 @@ DefineUpgrade("upgrade-goblin-coinage", {
 	RequirementsString = "Fugla Forge"
 })
 
-DefineUpgrade("upgrade-goblin-writing", {
-	Parent = "upgrade-writing",
-	Civilization = "goblin",
-	Icon = "icon-norse-runewriting"
-})
-
 DefineUpgrade("upgrade-goblin-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "goblin",
@@ -216,17 +210,6 @@ DefineModifier("upgrade-goblin-coinage",
 DefineModifier("upgrade-goblin-coinage",
 	{"TradeCost", -5},
 	{"apply-to", "unit-goblin-market"}
-)
-
-DefineModifier("upgrade-goblin-writing",
-	{"ResearchSpeedBonus", 10},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
-	{"apply-to", "unit-goblin-mess-hall"},
-	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
-	{"apply-to", "unit-goblin-masons-shop"},
---	{"apply-to", "unit-goblin-market"},
-	{"apply-to", "unit-goblin-temple"}, {"apply-to", "unit-goblin-academy"}
---	{"apply-to", "unit-goblin-dock"}
 )
 
 DefineModifier("upgrade-goblin-alchemy",

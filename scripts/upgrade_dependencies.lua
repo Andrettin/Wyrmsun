@@ -69,8 +69,7 @@ DefineDependency("upgrade-iron-plow",
 
 DefineDependency("upgrade-mathematics",
 	{"upgrade-dwarven-runewriting"},
-	"or", {"upgrade-goblin-writing"},
-	"or", {"upgrade-teuton-writing"}
+	"or", {"upgrade-writing"}
 )
 
 DefineDependency("upgrade-engineering",
@@ -79,14 +78,12 @@ DefineDependency("upgrade-engineering",
 
 DefineDependency("upgrade-architecture",
 	{"upgrade-dwarven-runewriting", "upgrade-masonry"},
-	"or", {"upgrade-goblin-writing", "upgrade-masonry"},
-	"or", {"upgrade-teuton-writing", "upgrade-masonry"}
+	"or", {"upgrade-writing", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-philosophy",
 	{"upgrade-dwarven-runewriting"},
-	"or", {"upgrade-goblin-writing"},
-	"or", {"upgrade-teuton-writing"}
+	"or", {"upgrade-writing"}
 )
 
 DefineDependency("upgrade_gunpowder",
@@ -98,14 +95,12 @@ DefineDependency("upgrade_gunpowder",
 -- dependencies for items
 DefineDependency("unit-book",
 	{"upgrade-dwarven-runewriting"},
-	"or", {"upgrade-goblin-writing"},
-	"or", {"upgrade-teuton-writing"}
+	"or", {"upgrade-writing"}
 )
 
 DefineDependency("unit-scroll",
 	{"upgrade-dwarven-runewriting"},
-	"or", {"upgrade-goblin-writing"},
-	"or", {"upgrade-teuton-writing"}
+	"or", {"upgrade-writing"}
 )
 
 DefineDependency("unit-carrots",

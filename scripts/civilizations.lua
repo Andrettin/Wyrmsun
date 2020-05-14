@@ -560,7 +560,7 @@ DefineCivilization("elf", {
 	Description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare.",
 	Background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore.",
 	HistoricalUpgrades = {
-		550, "upgrade-teuton-writing", true, -- should be changed later
+		550, "upgrade-writing", true, -- should be changed later
 		550, "upgrade-masonry", true -- should be changed later
 	},
 	PersonalNames = {
@@ -1966,7 +1966,7 @@ DefineCivilization("teuton", {
 		-500, "upgrade_ironworking", true,
 		-500, "upgrade-teuton-iron-shield", true,
 		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-		800, "upgrade-teuton-writing", true,
+		800, "upgrade-writing", true,
 		800, "upgrade-masonry", true,
 		919, "upgrade-deity-christian-god", true, -- the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1249, "upgrade_gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
@@ -2728,7 +2728,7 @@ DefineCivilization("greek", {
 	},
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-		-1700, "upgrade-teuton-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-1700, "upgrade-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1400, "upgrade-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 	--[[
@@ -2819,7 +2819,7 @@ DefineCivilization("assyrian", {
 	Adjective = "Assyrian",
 	Playable = false,
 	HistoricalUpgrades = {
-		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
 	}
 })
@@ -2832,7 +2832,7 @@ DefineCivilization("babylonian", {
 	Adjective = "Babylonian",
 	Playable = false,
 	HistoricalUpgrades = {
-		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
 	}
 })
@@ -3111,7 +3111,7 @@ DefineCivilization("sumerian", {
 	Adjective = "Sumerian",
 	Playable = false,
 	HistoricalUpgrades = {
-		-3500, "upgrade-teuton-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
+		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
 	}
 })
