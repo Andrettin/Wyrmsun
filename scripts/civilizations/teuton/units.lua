@@ -971,7 +971,7 @@ DefineUnitType("unit-teuton-town-hall", {
 	Name = "Town Hall",
 	Parent = "unit-template-town-hall",
 	Civilization = "teuton",
-	Description = "The rathaus, or town hall, is the political center of Teuton settlements.",
+	Description = "The rathaus, or town hall, is the political center of Teutonic settlements.",
 --	Background = "The appearance of the Rathaus is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
 	Background = "The appearance of the Town Hall is based on the Tallinn Town Hall, which was originally built by Hanseatic merchants.",
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
@@ -1160,7 +1160,7 @@ DefineUnitType("unit-teuton-barracks", {
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
-	Trains = {"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman", "unit-teuton-catapult"},
+	Trains = {"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Variations = {
 		{

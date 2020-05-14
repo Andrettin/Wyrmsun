@@ -74,14 +74,6 @@ DefineButton( { Pos = 1,
 	ForUnit = {"unit-dwarven-market"}
 })
 
--- Buildings -----------------------------------------------------
-
-DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-gnomish-town-hall",
-	Action = "build", Value = "unit-gnomish-town-hall",
-	Key = "h", Hint = "Build Town ~!Hall", Popup = "popup_building",
-	ForUnit = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"}
-})
-
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",

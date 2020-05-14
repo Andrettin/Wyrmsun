@@ -1792,6 +1792,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-joruvellir-allegiance"},
+	ButtonKey = "h",
 	Variations = {
 		{
 			"variation-id", "mead-hall",

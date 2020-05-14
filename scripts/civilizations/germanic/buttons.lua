@@ -27,12 +27,6 @@
 
 -- Buildings -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = "build-structure-level", Icon = "icon-germanic-town-hall",
-	Action = "build", Value = "unit-germanic-town-hall",
-	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-germanic-carpenters-shop",
 	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup_building",

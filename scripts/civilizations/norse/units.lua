@@ -43,6 +43,7 @@ DefineUnitType("unit-norse-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
+	ButtonKey = "w",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-norse-voices-selected-group",
@@ -139,6 +140,7 @@ DefineUnitType("unit-norse-town-hall", {
 	Image = {"file", "norse/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "norse/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-norse-town-hall",
+	ButtonKey = "h",
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-norse-allegiance"},
 	Sounds = {
@@ -167,7 +169,8 @@ DefineUnitType("unit-norse-barracks", {
 	Image = {"file", "norse/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "norse/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-barracks",
-	Trains = {"unit-teuton-spearman", "unit-teuton-ritter", "unit-teuton-catapult"},
+	ButtonKey = "w",
+	Trains = {"unit-teuton-spearman", "unit-teuton-ritter"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"

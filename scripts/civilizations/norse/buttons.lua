@@ -27,12 +27,6 @@
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-norse-swordsman",
-	Key = "w", Hint = "Train S~!wordsman", Popup = "popup_unit",
-	ForUnit = {"unit-norse-barracks"}
-})
-
 DefineButton( { Pos = 2,
 	Action = "train-unit", Value = "unit-norse-longship",
 	Key = "l", Hint = "Build ~!Longship", Popup = "popup_unit",
@@ -48,18 +42,6 @@ DefineButton( { Pos = 1,
 })
 
 -- Buildings -----------------------------------------------------
-
-DefineButton( { Pos = 1, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-town-hall",
-	Key = "h", Hint = "Build Chieftain's ~!Hall", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 3, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-barracks",
-	Key = "w", Hint = "Build ~!War Lodge", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
 
 DefineButton( { Pos = 4, Level = "build-structure-level",
 	Action = "build", Value = "unit-norse-lumber-mill",

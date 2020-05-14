@@ -81,16 +81,6 @@ DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 
 -- Buildings -----------------------------------------------------
 
-DefineButton( { Pos = 1, Level = "build-structure-level",
-	Action = "build", Value = "unit-dwarven-town-hall",
-	Key = "h", Hint = "Build Mead ~!Hall", Popup = "popup_building",
-	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner"
-	}
-})
-
 DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-dwarven-lumber-mill",
 	Action = "build", Value = "unit-dwarven-lumber-mill",
 	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",
@@ -249,12 +239,6 @@ DefineButton( { Pos = 4, Icon = "icon-joruvellir-yale-rider-black-hair",
 	Action = "train-unit", Value = "unit-joruvellir-yale-rider",
 	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-barracks"}
-})
-
-DefineButton( { Pos = 5, Icon = "icon-dwarven-ballista",
-	Action = "train-unit", Value = "unit-dwarven-ballista",
-	Key = "b", Hint = "Build ~!Ballista", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 })
 
 DefineButton( { Pos = 6, Icon = "icon-dwarven-gryphon-rider",

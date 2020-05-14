@@ -1,0 +1,9 @@
+build_siege_engine = {
+	pos = 5
+	action = train_unit_class
+	value = siege_engine
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}
