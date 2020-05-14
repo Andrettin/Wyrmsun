@@ -45,20 +45,6 @@ DefineButton( { Pos = 7, Level = "build-structure-level", Icon = "icon-latin-sta
 	ForUnit = {"unit-teuton-worker"}
 } )
 
--- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-latin-legionary",
-	Key = "l", Hint = "Train ~!Legionary", Popup = "popup_unit",
-	ForUnit = {"unit-latin-barracks"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-latin-javelineer",
-	Key = "j", Hint = "Train ~!Javelineer", Popup = "popup_unit",
-	ForUnit = {"unit-latin-barracks"}
-})
-
 -- Mercenaries ---------------------------------------------------------
 
 DefineButton( { Pos = 1,

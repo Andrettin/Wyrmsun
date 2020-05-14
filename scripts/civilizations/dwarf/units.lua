@@ -614,7 +614,6 @@ DefineUnitType("unit-dwarven-axefighter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "a",
-	ButtonHint = "Train ~!Axefighter",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{

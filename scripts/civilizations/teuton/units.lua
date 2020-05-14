@@ -716,7 +716,7 @@ DefineUnitType("unit-teuton-archer", {
 	Name = "Archer",
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
-	Description = "Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands.",
+	Description = "Teutonic archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands.",
 --	Background = "\"Scuzzo\" is an Old High German word for \"archer\".",
 --	Background = "\"Schutze\" is a German word for \"archer\".",
 	Image = {"file", "human/units/body_archer.png", "size", {72, 72}},

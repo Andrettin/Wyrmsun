@@ -1,0 +1,9 @@
+train_shooter = {
+	pos = 3
+	action = train_unit_class
+	value = shooter
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}

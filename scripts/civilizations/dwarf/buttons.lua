@@ -239,18 +239,6 @@ DefineButton( { Pos = 2, Icon = "icon-dwarven-guard",
 	ForUnit = {"unit-dwarven-barracks"}
 })
 
-DefineButton( { Pos = 3, Icon = "icon-dwarven-scout",
-	Action = "train-unit", Value = "unit-dwarven-scout",
-	Key = "s", Hint = "Train ~!Scout", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-joruvellir-scout",
-	Key = "s", Hint = "Train ~!Scout", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks"}
-})
-
 DefineButton( { Pos = 4, Icon = "icon-dwarven-yale-rider",
 	Action = "train-unit", Value = "unit-dwarven-yale-rider",
 	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup_unit",

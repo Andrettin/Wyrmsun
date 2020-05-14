@@ -27,7 +27,7 @@ heroic_spearman = {
 }
 
 shooter = {
-	name = "Spearman"
+	name = "Shooter"
 }
 
 veteran_shooter = {

@@ -647,6 +647,7 @@ DefineUnitType("unit-germanic-archer", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	RequirementsString = "Carpenter's Shop",
+	ButtonKey = "s",
 	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{

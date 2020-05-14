@@ -167,7 +167,7 @@ DefineUnitType("unit-norse-barracks", {
 	Image = {"file", "norse/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "norse/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-barracks",
-	Trains = {"unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
+	Trains = {"unit-teuton-spearman", "unit-teuton-ritter", "unit-teuton-catapult"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"

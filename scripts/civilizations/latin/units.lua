@@ -49,6 +49,7 @@ DefineUnitType("unit-latin-legionary", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
+	ButtonKey = "l",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 		"dead", "basic-human-voices-dead",
@@ -130,6 +131,7 @@ DefineUnitType("unit-latin-javelineer", {
 	WeaponClasses = {"javelin"},
 	PierceDamage = true,
 	RequirementsString = "Lumber Mill",
+	ButtonKey = "j",
 	AiDrops = {"unit-pilum", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-precise-shot"},

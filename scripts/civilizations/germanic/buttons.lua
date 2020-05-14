@@ -77,12 +77,6 @@ DefineButton( { Pos = 1, Icon = "icon-germanic-warrior",
 	ForUnit = {"unit-germanic-barracks"}
 })
 
-DefineButton( { Pos = 3, Icon = "icon-germanic-archer",
-	Action = "train-unit", Value = "unit-germanic-archer",
-	Key = "s", Hint = "Train ~!Skutan", Popup = "popup_unit",
-	ForUnit = {"unit-germanic-barracks"}
-})
-
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-germanic-transport-ship",
 	Key = "t", Hint = "Build ~!Transport", Popup = "popup_unit",
