@@ -1,0 +1,11 @@
+train_worker = {
+	pos = 1
+	action = train_unit_class
+	value = worker
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}

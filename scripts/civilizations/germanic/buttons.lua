@@ -59,18 +59,6 @@ DefineButton( { Pos = 11, Level = "build-structure-level", Icon = "icon-germanic
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 1, Icon = "icon-germanic-worker",
-	Action = "train-unit", Value = "unit-germanic-worker",
-	Key = "b", Hint = "Train ~!Bura", Popup = "popup_unit",
-	ForUnit = {"unit-germanic-town-hall"}
-})
-
-DefineButton( { Pos = 1, Icon = "icon-germanic-warrior",
-	Action = "train-unit", Value = "unit-germanic-warrior",
-	Key = "e", Hint = "Train ~!Erala", Popup = "popup_unit",
-	ForUnit = {"unit-germanic-barracks"}
-})
-
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-germanic-transport-ship",
 	Key = "t", Hint = "Build ~!Transport", Popup = "popup_unit",

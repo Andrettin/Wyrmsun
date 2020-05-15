@@ -85,16 +85,6 @@ DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-teuton-worker",
-	Key = "b", Hint = "Train ~!Bura", Popup = "popup_unit",
-	ForUnit = {
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-latin-town-hall",
-		"unit-norse-town-hall"
-	}
-})
-
 DefineButton( { Pos = 7,
 	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
 	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup_unit",

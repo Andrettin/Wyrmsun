@@ -40,6 +40,7 @@ DefineUnitType("unit-germanic-worker", {
 	Background = "\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\".",
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",
+	ButtonKey = "b",
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
 	},
@@ -128,6 +129,7 @@ DefineUnitType("unit-germanic-warrior", {
 	Background = "\"Erala\" is the Proto-Germanic word for \"warrior\". The warrior's helmet is based on the Nordic Bronze Age Viksø helmets, which were used for ceremonial occasions.",
 	Image = {"file", "germanic/units/warrior.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-germanic-warrior",
+	ButtonKey = "e",
 	DefaultEquipment = {
 		{"weapon", "unit-short-sword"},
 		{"shield", "unit-wooden-shield"},

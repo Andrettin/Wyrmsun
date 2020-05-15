@@ -664,7 +664,6 @@ DefineUnitType("unit-goblin-town-hall", {
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-goblin-town-hall",
-	Trains = {"unit-goblin-worker"},
 	AiDrops = {"unit-boots"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -679,7 +678,6 @@ DefineUnitType("unit-goblin-stronghold", {
 	Image = {"file", "goblin/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-goblin-stronghold",
-	Trains = {"unit-goblin-worker"},
 	RequirementsString = "Mess Hall and Masonry",
 	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {

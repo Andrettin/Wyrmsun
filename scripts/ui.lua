@@ -1101,16 +1101,16 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "sell-resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("~<CTRL~>-click to toggle the automatic sale of the resource"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter-map-layer"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter_map_layer"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "enter-map-layer"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "enter_map_layer"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Click to change the current map layer to the one this building connects to"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter-map-layer"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "enter_map_layer"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "enter-map-layer"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "enter_map_layer"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Hint: You can press ~<CTRL~>-~!L to return to the previous map layer"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 		}	

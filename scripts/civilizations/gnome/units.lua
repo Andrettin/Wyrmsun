@@ -346,7 +346,6 @@ DefineUnitType("unit-gnomish-town-hall", {
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
-	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropSpells = {"spell-acthnic-allegiance"},
 	Sounds = {

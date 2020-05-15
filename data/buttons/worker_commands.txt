@@ -1,0 +1,110 @@
+repair = {
+	pos = 4
+	icon = icon_repair
+	action = repair
+	key = r
+	hint = "~!Repair"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+harvest = {
+	pos = 5
+	icon = icon_harvest
+	action = harvest
+	key = h
+	hint = "~!Harvest Resource"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+		minecart
+	}
+}
+
+return_goods = {
+	pos = 5
+	action = return_goods
+	key = g
+	hint = "Return with ~!Goods"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+		minecart
+		caravan
+		transport_ship
+	}
+}
+
+build_structure = {
+	pos = 13
+	icon = icon_build_basic_structure
+	action = button
+	value = build_structure_level
+	allowed = check_has_sub_buttons
+	key = b
+	hint = "~!Build Structure"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+choose_level_up_upgrade = {
+	pos = 14
+	icon = icon_level_up
+	action = button
+	value = choose_individual_upgrade_level
+	allowed = check_has_sub_buttons
+	key = u
+	hint = "Choose ~!Upgrade"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+open_inventory = {
+	pos = 15
+	icon = icon_inventory
+	action = button
+	value = inventory_level
+	allowed = check_has_inventory
+	key = i
+	hint = "Open ~!Inventory"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}

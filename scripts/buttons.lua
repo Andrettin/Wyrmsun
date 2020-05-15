@@ -48,65 +48,6 @@ DefineButton( { Pos = 5, Icon = "icon-unload",
 	}
 })
 
--- Worker Commands ------------------------------------------------------
-
-DefineButton( { Pos = 4, Icon = "icon-repair",
-	Action = "repair",
-	Key = "r", Hint = "~!Repair", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 5, Icon = "icon-harvest",
-	Action = "harvest",
-	Key = "h", Hint = "~!Harvest Resource", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker",
-		"unit-minecart"
-	}
-})
-
-DefineButton( { Pos = 5,
-	Action = "return-goods",
-	Key = "g", Hint = "Return with ~!Goods", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker",
-		"unit-minecart",
-		"unit-caravan", "unit-gnomish-caravan",
-		"unit-germanic-transport-ship", "unit-teuton-kogge", "unit-dwarven-transport-ship", "unit-goblin-transport-ship"
-	}
-})
-
-DefineButton( { Pos = 13, Icon = "icon-build-basic-structure",
-	Action = "button", Value = "build-structure-level",
-	Allowed = "check-has-sub-buttons",
-	Key = "b", Hint = "~!Build Structure", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
 -- Building Commands ------------------------------------------------------
 
 DefineButton( { Pos = 14, Icon = "icon-crown",
@@ -321,20 +262,6 @@ DefineButton( { Pos = 13, Icon = "icon-level-up",
 		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-troll-warrior",
 		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 14, Icon = "icon-level-up",
-	Action = "button", Value = "choose-individual-upgrade-level",
-	Allowed = "check-has-sub-buttons",
-	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
 	}
 } )
 
@@ -743,56 +670,6 @@ DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon
 })
 --]]
 
-DefineButton( { Pos = 16, Level = "choose-individual-upgrade-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
-		"unit-dwarven-thunderer",
-		"unit-dwarven-gryphon-rider",
-		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
-		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
-		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
-		"unit-germanic-spearman", "unit-germanic-archer",
-		"unit-germanic-priest", 
-		"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
-		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
-		"unit-teuton-priest",
-		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
-		"unit-slavic-swordsman",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
-		"unit-goblin-worker",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-goblin-shaman",
-		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	} 
-} )
-
 -- Inventory ------------------------------------------------------
 
 DefineButton( { Pos = 14, Icon = "icon-inventory",
@@ -837,70 +714,6 @@ DefineButton( { Pos = 14, Icon = "icon-inventory",
 		"unit-elven-swordsman", "unit-elven-priest",
 		"unit-troll-warrior"
 	}
-} )
-
-DefineButton( { Pos = 15, Icon = "icon-inventory",
-	Action = "button", Value = "inventory-level",
-	Allowed = "check-has-inventory",
-	Key = "i", Hint = "Open ~!Inventory", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-} )
-
-DefineButton( { Pos = 16, Level = "inventory-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
-		"unit-dwarven-thunderer",
-		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
-		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
-		"unit-dwarven-gryphon-rider",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-germanic-worker",
-		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
-		"unit-germanic-spearman", "unit-germanic-archer",
-		"unit-germanic-priest",
-		"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
-		"unit-teuton-worker",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
-		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
-		"unit-teuton-priest",
-		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
-		"unit-slavic-swordsman",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
-		"unit-goblin-worker",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-goblin-shaman",
-		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
-		"unit-wyrm",
-		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-troll-warrior"
-	} 
 } )
 
 -- Special Abilities ---------------------------------------------------

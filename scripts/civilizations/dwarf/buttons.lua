@@ -204,24 +204,11 @@ DefineButton( { Pos = 2, Level = "build-structure-level-2", Icon = "icon-dwarven
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
 	}
 })
 
 -- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 1, Icon = "icon-dwarven-miner",
-	Action = "train-unit", Value = "unit-dwarven-miner",
-	Key = "m", Hint = "Train ~!Miner", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
-})
-
-DefineButton( { Pos = 1, Icon = "icon-brising-miner",
-	Action = "train-unit", Value = "unit-brising-miner",
-	Key = "m", Hint = "Train ~!Miner", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
-})
 
 DefineButton( { Pos = 2, Icon = "icon-dwarven-guard",
 	Action = "train-unit", Value = "unit-dwarven-guard",
