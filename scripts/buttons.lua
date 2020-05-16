@@ -1036,58 +1036,6 @@ DefineButton( { Pos = 9, Level = "build-structure-level-2",
 	}
 })
 
-DefineButton( { Pos = 15, Level = "build-structure-level", Icon = "icon-right-arrow",
-	Action = "button", Value = "build-structure-level-2",
-	Key = "pagedown", Hint = "Next (~<PgDwn~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 15, Level = "build-structure-level-2", Icon = "icon-left-arrow",
-	Action = "button", Value = "build-structure-level",
-	Key = "pageup", Hint = "Previous (~<PgUp~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 16, Level = "build-structure-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
-DefineButton( { Pos = 16, Level = "build-structure-level-2", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-worker", "unit-teuton-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-goblin-worker"
-	}
-})
-
 -- Faction Change Buttons
 
 DefineButton( { Pos = 1, Level = "found-faction-level",

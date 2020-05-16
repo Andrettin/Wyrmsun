@@ -71,7 +71,7 @@ build_structure = {
 	}
 }
 
-choose_level_up_upgrade = {
+choose_worker_level_up_upgrade = {
 	pos = 14
 	icon = icon_level_up
 	action = button
@@ -90,7 +90,7 @@ choose_level_up_upgrade = {
 	}
 }
 
-open_inventory = {
+open_worker_inventory = {
 	pos = 15
 	icon = icon_inventory
 	action = button
@@ -98,6 +98,82 @@ open_inventory = {
 	allowed = check_has_inventory
 	key = i
 	hint = "Open ~!Inventory"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_structure_next = {
+	pos = 15
+	level = build_structure_level
+	icon = icon_right_arrow
+	action = button
+	value = build_structure_level_2
+	key = pagedown
+	hint = "Next (~<PgDwn~>)"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_structure_2_previous = {
+	pos = 15
+	level = build_structure_level_2
+	icon = icon_left_arrow
+	action = button
+	value = build_structure_level
+	key = pageup
+	hint = "Previous (~<PgUp~>)"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+cancel_build_structure = {
+	pos = 16
+	level = build_structure_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+cancel_build_structure_2 = {
+	pos = 16
+	level = build_structure_level_2
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
 	popup = popup_commands
 	unit_classes = {
 		worker
