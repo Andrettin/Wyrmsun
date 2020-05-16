@@ -1,0 +1,9 @@
+bright_yellow = {
+	name = "Bright Yellow"
+	colors = {
+		{ 252 252 72 }
+		{ 228 204 40 }
+		{ 204 160 16 }
+		{ 180 116 0 }
+	}
+}
