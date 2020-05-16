@@ -1,0 +1,143 @@
+build_copper_mine = {
+	pos = 3
+	level = build_structure_level_2
+	action = build_class
+	value = copper_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_silver_mine = {
+	pos = 4
+	level = build_structure_level_2
+	action = build_class
+	value = silver_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_gold_mine = {
+	pos = 5
+	level = build_structure_level_2
+	action = build_class
+	value = gold_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_iron_mine = {
+	pos = 6
+	level = build_structure_level_2
+	action = build_class
+	value = iron_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_mithril_mine = {
+	pos = 7
+	level = build_structure_level_2
+	action = build_class
+	value = mithril_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_yale_hunting_lodge = {
+	pos = 8
+	level = build_structure_level_2
+	action = build_class
+	value = yale_hunting_lodge
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_diamond_mine = {
+	pos = 6
+	level = build_structure_level_3 #unreachable level so that the mine is buildable, but the button doesn't actually appear
+	action = build_class
+	value = diamond_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_emerald_mine = {
+	pos = 7
+	level = build_structure_level_3 #unreachable level so that the mine is buildable, but the button doesn't actually appear
+	action = build_class
+	value = emerald_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}
+
+build_coal_mine = {
+	pos = 7
+	level = build_structure_level_3 #unreachable level so that the mine is buildable, but the button doesn't actually appear
+	action = build_class
+	value = coal_mine
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}

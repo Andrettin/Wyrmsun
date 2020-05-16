@@ -562,9 +562,7 @@ DefineUnitType("unit-gold-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "gold",
-	ButtonPos = 12,
 	ButtonKey = "g",
-	ButtonHint = "Build ~!Gold Mine",
 	BuildingRulesString = "Must be built on top of a Gold Deposit",
 	Variations = {
 		{
@@ -660,9 +658,7 @@ DefineUnitType("unit-silver-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "silver",
-	ButtonPos = 11,
 	ButtonKey = "v",
-	ButtonHint = "Build Sil~!ver Mine",
 	BuildingRulesString = "Must be built on top of a Silver Deposit",
 	Variations = {
 		{
@@ -730,9 +726,7 @@ DefineUnitType("unit-copper-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "copper",
-	ButtonPos = 10,
 	ButtonKey = "c",
-	ButtonHint = "Build ~!Copper Mine",
 	BuildingRulesString = "Must be built on top of a Copper Deposit",
 	Variations = {
 		{
@@ -802,6 +796,7 @@ DefineUnitType("unit-iron-mine", {
 	GivesResource = "iron",
 	BuildingRulesString = "Must be built on top of a Iron Deposit",
 	RequirementsString = "Ironworking",
+	ButtonKey = "i",
 	Variations = {
 		{
 			"variation-id", "iron-mine",
@@ -871,6 +866,7 @@ DefineUnitType("unit-mithril-mine", {
 	GivesResource = "mithril",
 	BuildingRulesString = "Must be built on top of a Mithril Deposit",
 	RequirementsString = "Ironworking",
+	ButtonKey = "m",
 	Variations = {
 		{
 			"variation-id", "mithril-mine",
@@ -938,6 +934,7 @@ DefineUnitType("unit-coal-mine", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-coal-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "coal",
 	BuildingRulesString = "Must be built on top of a Coal Deposit",
+	ButtonKey = "c",
 	Variations = {
 		{
 			"variation-id", "coal-mine",
@@ -983,7 +980,8 @@ DefineUnitType("unit-diamond-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-diamond-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "diamonds",
-	BuildingRulesString = "Must be built on top of a Diamond Deposit"
+	BuildingRulesString = "Must be built on top of a Diamond Deposit",
+	ButtonKey = "d"
 } )
 
 DefineUnitType("unit-emerald-deposit", {
@@ -1009,7 +1007,8 @@ DefineUnitType("unit-emerald-mine", {
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-emerald-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "emeralds",
-	BuildingRulesString = "Must be built on top of an Emerald Deposit"
+	BuildingRulesString = "Must be built on top of an Emerald Deposit",
+	ButtonKey = "e"
 } )
 
 DefineUnitType("unit-gold-rock", {
@@ -1445,6 +1444,7 @@ DefineUnitType("unit-yale-hunting-lodge", {
 	BuildingRules = { "and", { "ontop", { Type = "unit-yale-cave", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "leather",
 	BuildingRulesString = "Must be built on top of a Yale Cave",
+	ButtonKey = "y",
 	Variations = {
 		{
 			"variation-id", "yale-hunting-lodge",
@@ -5316,6 +5316,7 @@ DefineUnitType("unit-road", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Masonry",
+	ButtonKey = "o",
 	Sounds = {
 		"dead", "building-destroyed"
 	}
@@ -5349,6 +5350,7 @@ DefineUnitType("unit-railroad", {
 	BuilderOutside = true,
 	HiddenInEditor = true,
 	RequirementsString = "Engineering",
+	ButtonKey = "r",
 	Sounds = {
 		"dead", "building-destroyed"
 	}
