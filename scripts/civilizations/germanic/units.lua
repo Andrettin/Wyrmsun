@@ -846,8 +846,7 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 	Image = {"file", "germanic/buildings/carpenters_shop.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
-	ButtonKey = "r",
-	ButtonHint = "Build Carpente~!r's Shop",
+	ButtonKey = "a",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows"},
 	Variations = {
 		{

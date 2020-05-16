@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Buildings -----------------------------------------------------
-
-DefineButton( { Pos = 5, Level = "build-structure-level", Icon = "icon-latin-smithy",
-	Action = "build", Value = "unit-latin-smithy", Popup = "popup_building",
-	Key = "s", Hint = "Build ~!Smithy",
-	ForUnit = {"unit-teuton-worker"}
-} )
-
-DefineButton( { Pos = 7, Level = "build-structure-level", Icon = "icon-latin-stables",
-	Action = "build", Value = "unit-latin-stables", Popup = "popup_building",
-	Key = "e", Hint = "Build Stabl~!es",
-	ForUnit = {"unit-teuton-worker"}
-} )
-
 -- Mercenaries ---------------------------------------------------------
 
 DefineButton( { Pos = 1,

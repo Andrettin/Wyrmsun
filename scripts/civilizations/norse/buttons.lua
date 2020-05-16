@@ -41,57 +41,6 @@ DefineButton( { Pos = 1,
 	ForUnit = {"unit-mercenary-camp"}
 })
 
--- Buildings -----------------------------------------------------
-
-DefineButton( { Pos = 4, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-lumber-mill",
-	Key = "l", Hint = "Build ~!Lumber Mill", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 5, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-smithy",
-	Key = "s", Hint = "Build ~!Smithy", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-  
-DefineButton( { Pos = 8, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-temple",
-	Key = "p", Hint = "Build Tem~!ple", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 9, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-market",
-	Key = "m", Hint = "Build ~!Market", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 10, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-watch-tower",
-	Key = "t", Hint = "Build Watch ~!Tower", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 11, Level = "build-structure-level",
-	Action = "build", Value = "unit-norse-dock",
-	Key = "d", Hint = "Build ~!Dock", Popup = "popup_building",
-	ForUnit = {"unit-teuton-worker"}
-})
-
-DefineButton( { Pos = 1, Level = "build-structure-level-2", Icon = "icon-norse-wooden-wall",
-	Action = "build", Value = "unit-norse-palisade",
-	Key = "p", Hint = "Build ~!Palisade", Popup = "popup_building",
-	ForUnit = {
-		"unit-teuton-worker",
-		"unit-germanic-worker",
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
-		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker"
-	}
-})
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Icon = "icon-odin",

@@ -1,0 +1,15 @@
+build_university = {
+	pos = 12
+	level = build_structure_level
+	action = build_class
+	value = university
+	popup = popup_building
+	unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+}

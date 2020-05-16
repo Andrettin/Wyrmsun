@@ -917,6 +917,7 @@ DefineUnitType("unit-teuton-priest", {
 			"file", "germanic/units/priest.png",
 			"icon", "icon-germanic-priest",
 			"type-name", "Gudjan",
+			"button-key", "g",
 			"upgrade-forbidden", "upgrade-deity-christian-god"
 		}
 	},
@@ -1243,6 +1244,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
+			"button-key", "a",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
@@ -1253,6 +1255,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
+			"button-key", "a",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1266,6 +1269,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 			"shadow-file", "germanic/buildings/carpenters_shop_shadow.png",
 			"icon", "icon-germanic-carpenters-shop",
 			"type-name", "Carpenter's Shop",
+			"button-key", "a",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "snow"
 		},
@@ -1488,6 +1492,7 @@ DefineUnitType("unit-teuton-temple", {
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
+	ButtonKey = "c",
 	Variations = {
 		{
 			"variation-id", "church",
@@ -1529,6 +1534,7 @@ DefineUnitType("unit-teuton-temple", {
 			"shadow-file", "germanic/buildings/temple_shadow.png",
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
+			"button-key", "p",
 			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
@@ -1539,6 +1545,7 @@ DefineUnitType("unit-teuton-temple", {
 			"shadow-file", "germanic/buildings/temple_shadow.png",
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
+			"button-key", "p",
 			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1552,6 +1559,7 @@ DefineUnitType("unit-teuton-temple", {
 			"shadow-file", "germanic/buildings/temple_shadow.png",
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
+			"button-key", "p",
 			"upgrade-forbidden", "upgrade-deity-christian-god",
 			"terrain", "snow"
 		},

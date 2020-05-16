@@ -731,16 +731,13 @@ DefineUnitType("unit-goblin-lumber-mill", {
 })
 
 DefineUnitType("unit-goblin-smithy", {
-	Name = "Fugla Forge",
 	Parent = "unit-template-smithy",
 	Civilization = "goblin",
 	Description = "Goblins construct their forges out of the skulls of massive birds found on Nidavellir.",
-	Background = "The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'.",
+	--Background = "The name 'Fugla' was taken from the Proto-Germanic language (the reconstructed ancestor to all Germanic languages), and means 'bird'.",
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-smithy",
-	ButtonKey = "o",
-	ButtonHint = "Build Fugla F~!orge",
 	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -839,6 +836,7 @@ DefineUnitType("unit-goblin-academy", {
 	Shadow = {"file", "goblin/buildings/academy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-academy",
 	RequirementsString = "Writing",
+	ButtonKey = "a",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
@@ -889,6 +887,7 @@ DefineUnitType("unit-goblin-banner", {
 	Building = true,
 	BuilderOutside = true,
 	LeadershipAura = 1,
+	ButtonKey = "b",
 	Variations = {
 		{
 			"variation-id", "no-skull"

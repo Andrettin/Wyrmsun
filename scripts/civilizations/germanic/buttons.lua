@@ -25,38 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Buildings -----------------------------------------------------
-
-DefineButton( { Pos = 4, Level = "build-structure-level", Icon = "icon-germanic-carpenters-shop",
-	Action = "build", Value = "unit-germanic-carpenters-shop",
-	Key = "a", Hint = "Build C~!arpenter's Shop", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
-DefineButton( { Pos = 5, Level = "build-structure-level", Icon = "icon-germanic-smithy",
-	Action = "build", Value = "unit-germanic-smithy",
-	Key = "s", Hint = "Build ~!Smithy", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
-DefineButton( { Pos = 8, Level = "build-structure-level", Icon = "icon-germanic-temple",
-	Action = "build", Value = "unit-germanic-temple",
-	Key = "p", Hint = "Build Tem~!ple", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
-DefineButton( { Pos = 9, Level = "build-structure-level", Icon = "icon-germanic-market",
-	Action = "build", Value = "unit-germanic-market",
-	Key = "m", Hint = "Build ~!Market", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
-DefineButton( { Pos = 11, Level = "build-structure-level", Icon = "icon-germanic-dock",
-	Action = "build", Value = "unit-germanic-dock",
-	Key = "d", Hint = "Build ~!Dock", Popup = "popup_building",
-	ForUnit = {"unit-germanic-worker"}
-})
-
 -- Units --------------------------------------------------------------
 
 DefineButton( { Pos = 1,

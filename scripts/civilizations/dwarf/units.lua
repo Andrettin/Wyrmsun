@@ -2357,7 +2357,6 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	GivesResource = "leather",
 	MaxHarvesters = 3,
 	ButtonKey = "y",
-	ButtonHint = "Build ~!Yale Pen",
 	Drops = {"unit-stone-pile", "unit-yale"},
 	BuildingRulesString = "Cannot be built close to town halls",
 	Variations = {
@@ -2438,7 +2437,6 @@ DefineUnitType("unit-dwarven-sentry-tower", {
 	FireResistance = 20,
 	HitPoints = 250, -- 300 with masonry
 	Construction = "construction-dwarven-sentry-tower",
-	ButtonHint = "Build Sentry ~!Tower",
 	Variations = {
 		{
 			"variation-id", "sentry-tower",
@@ -2634,6 +2632,7 @@ DefineUnitType("unit-dwarven-academy", {
 	Shadow = {"file", "dwarf/buildings/academy_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-academy",
 	RequirementsString = "Writing",
+	ButtonKey = "a",
 	Variations = {
 		{
 			"variation-id", "academy",
