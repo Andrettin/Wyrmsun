@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---=============================================================================
---	Define unit-types.
---
---	NOTE: Save can generate this table.
---
-
 DefineUnitType("unit-dwarven-miner", {
 	Name = "Miner",
 	Parent = "unit-template-worker",
