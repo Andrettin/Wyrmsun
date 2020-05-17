@@ -2,8 +2,8 @@ neutral = {
 	name = "Neutral"
 	visible = false
 	playable = false
-	interface = "dwarven"
-	default_color = "gray"
+	interface = dwarven
+	default_color = gray
 	
 	button_icons = {
 		move = icon_dwarven_boots
