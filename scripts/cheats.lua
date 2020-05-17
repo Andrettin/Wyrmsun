@@ -252,6 +252,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-norse-longship", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "volund") then
 		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+	elseif (str == "modsognir") then
+		unit = CreateUnit("unit-dwarven-axefighter", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "vingethor") then
 		unit = CreateUnit("unit-dwarven-gryphon-rider", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "tyr") then
