@@ -1,0 +1,7 @@
+batcave = {
+	name = "Batcave"
+	#main_template = earth_space
+	size = { 11 7 }
+	terrain_file = "batcave.map"
+	overlay_terrain_file = "batcave_overlay.map"
+}

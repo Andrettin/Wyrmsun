@@ -1,0 +1,119 @@
+batcave_bat_1 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 4 1 }
+		}
+	}
+}
+
+batcave_bat_2 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 3 2 }
+		}
+	}
+}
+
+batcave_bat_3 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 7 2 }
+		}
+	}
+}
+
+batcave_bat_4 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 2 3 }
+		}
+	}
+}
+
+batcave_bat_5 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 3 3 }
+		}
+	}
+}
+
+batcave_bat_6 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 7 3 }
+		}
+	}
+}
+
+batcave_bat_7 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 8 3 }
+		}
+	}
+}
+
+batcave_bat_8 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 3 4 }
+		}
+	}
+}
+
+batcave_bat_9 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 7 4 }
+		}
+	}
+}
+
+batcave_bat_10 = {
+	unit_type = unit_bat
+	
+	history = {
+		active = true
+		location = {
+			map_template = batcave
+			pos = { 6 5 }
+		}
+	}
+}

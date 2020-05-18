@@ -257,7 +257,7 @@ DefineTerrainType("floor", {
 	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone-floor", "underground"},
-	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor", "dirt", "grass", "dry-mud", "snow", "ford"},
+	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
 	AdjacentTransitionTiles = {
