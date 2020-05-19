@@ -2,6 +2,6 @@ kobold_bridge = { #minmay_kobold_bridge
 	name = "Kobold Bridge"
 	main_template = nidavellir
 	size = { 13 15 }
-	terrain_file = "dungeon/kobold_bridge.map"
-	overlay_terrain_file = "dungeon/kobold_bridge_overlay.map"
+	terrain_file = "the_dungeon/kobold_bridge.map"
+	overlay_terrain_file = "the_dungeon/kobold_bridge_overlay.map"
 }

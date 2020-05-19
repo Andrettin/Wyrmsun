@@ -2,6 +2,6 @@ goblin_kobold_house = { #minmay_goblin_kobold_house
 	name = "Goblin-Kobold House"
 	main_template = nidavellir
 	size = { 9 10 }
-	terrain_file = "dungeon/goblin_kobold_house.map"
-	overlay_terrain_file = "dungeon/goblin_kobold_house_overlay.map"
+	terrain_file = "the_dungeon/goblin_kobold_house.map"
+	overlay_terrain_file = "the_dungeon/goblin_kobold_house_overlay.map"
 }
