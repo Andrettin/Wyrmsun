@@ -1,6 +1,6 @@
 kobold_bridge_unit_1 = {
 	unit_types = {
-		unit_kobold_footpad
+		unit_kobold_footpad = 10
 		none = 3
 	}
 	
@@ -15,7 +15,7 @@ kobold_bridge_unit_1 = {
 
 kobold_bridge_unit_2 = {
 	unit_types = {
-		unit_kobold_footpad
+		unit_kobold_footpad = 10
 		none = 3
 	}
 	
@@ -30,7 +30,7 @@ kobold_bridge_unit_2 = {
 
 kobold_bridge_unit_3 = {
 	unit_types = {
-		unit_kobold_footpad
+		unit_kobold_footpad = 10
 		none = 3
 	}
 	
@@ -45,7 +45,7 @@ kobold_bridge_unit_3 = {
 
 kobold_bridge_unit_4 = {
 	unit_types = {
-		unit_kobold_footpad
+		unit_kobold_footpad = 10
 		none = 3
 	}
 	
@@ -60,7 +60,7 @@ kobold_bridge_unit_4 = {
 
 kobold_bridge_unit_5 = {
 	unit_types = {
-		unit_kobold_footpad
+		unit_kobold_footpad = 10
 		none = 3
 	}
 	
