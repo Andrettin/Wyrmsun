@@ -1,0 +1,74 @@
+kobold_bridge_unit_1 = {
+	unit_types = {
+		unit_kobold_footpad
+		none = 3
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_bridge
+			pos = { 7 4 }
+		}
+	}
+}
+
+kobold_bridge_unit_2 = {
+	unit_types = {
+		unit_kobold_footpad
+		none = 3
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_bridge
+			pos = { 5 6 }
+		}
+	}
+}
+
+kobold_bridge_unit_3 = {
+	unit_types = {
+		unit_kobold_footpad
+		none = 3
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_bridge
+			pos = { 7 7 }
+		}
+	}
+}
+
+kobold_bridge_unit_4 = {
+	unit_types = {
+		unit_kobold_footpad
+		none = 3
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_bridge
+			pos = { 6 8 }
+		}
+	}
+}
+
+kobold_bridge_unit_5 = {
+	unit_types = {
+		unit_kobold_footpad
+		none = 3
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_bridge
+			pos = { 5 10 }
+		}
+	}
+}
