@@ -3702,6 +3702,7 @@ DefineUnitType("unit-template-infantry", {
 	CanAttack = true,
 	CanTargetLand = true,
 	Flesh = true,
+	NeutralHostile = true,
 	CanCastSpell = {"spell-stun"},
 	AutoCastActive = {"spell-stun"},
 	ButtonPos = 1,
@@ -3835,6 +3836,7 @@ DefineUnitType("unit-template-archer", {
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	Flesh = true,
 	AttackFromTransporter = true,
+	NeutralHostile = true,
 	ButtonPos = 3,
 	RequirementsString = "Lumber Mill",
 	AiDrops = {"unit-christmas-hat"},
@@ -3935,6 +3937,7 @@ DefineUnitType("unit-template-thief", {
 	CanTargetLand = true,
 	Flesh = true,
 	HiddenOwnership = true,
+	NeutralHostile = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	AiDrops = {"unit-christmas-hat"},
@@ -3977,6 +3980,7 @@ DefineUnitType("unit-template-cavalry", {
 	CanTargetLand = true,
 	Mounted = true,
 	Flesh = true,
+	NeutralHostile = true,
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	ButtonPos = 4,
 	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
@@ -4056,6 +4060,7 @@ DefineUnitType("unit-template-spear-cavalry", {
 	CanTargetLand = true,
 	Mounted = true,
 	Flesh = true,
+	NeutralHostile = true,
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	ButtonPos = 4,
 	AiDrops = {"unit-christmas-hat", "unit-horn", "unit-amulet", "unit-ring"},
@@ -4114,6 +4119,7 @@ DefineUnitType("unit-template-priest", {
 	CanAttack = true,
 	CanTargetLand = true,
 	Flesh = true,
+	NeutralHostile = true,
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
 	ButtonPos = 1,
 	RequirementsString = "Any Deity or Religion",
@@ -4187,6 +4193,7 @@ DefineUnitType("unit-template-flying-rider", {
 	Flesh = true,
 	Mounted = true,
 	Inventory = true,
+	NeutralHostile = true,
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonPos = 6,
@@ -4223,6 +4230,7 @@ DefineUnitType("unit-template-siege-engine", {
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true,
 	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
+	NeutralHostile = true,
 	ButtonPos = 5,
 	RequirementsString = "Lumber Mill, Smithy and Engineering",
 	Sounds = {
@@ -4334,6 +4342,7 @@ DefineUnitType("unit-template-siege-warship", {
 	CanDock = true,
 	GroundAttack = true,
 	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
+	NeutralHostile = true,
 	RequirementsString = "Lumber Mill, Smithy and Engineering",
 	Sounds = {
 		"fire-missile", "catapult-attack"
@@ -4449,6 +4458,7 @@ DefineUnitType("unit-template-farm", {
 	Type = "land",
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
+	NeutralHostile = true, -- so that factions will attack neutral farms
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	ButtonPos = 2,
