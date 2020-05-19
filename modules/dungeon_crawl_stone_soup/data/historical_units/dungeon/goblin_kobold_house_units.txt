@@ -11,65 +11,10 @@ goblin_kobold_house = {
 }
 
 #37 floor tiles, with 1 monster for every 8 floor tiles (also 1 item for every 8 floor tiles): rounds to 5 monsters on average
-#for every 3 monsters, 2 will be a goblin/hobgoblin and 1 will be a kobold: rounds to 3 goblins and 2 kobolds on average
+#for every 3 monsters, 2 will be a goblin/hobgoblin and 1 will be a kobold
 
-goblin_kobold_house_unit_1 = {
-	unit_types = {
-		unit_goblin_swordsman = 2
-		unit_kobold_footpad
-	}
-	
-	history = {
-		active = true
-		location = {
-			map_template = goblin_kobold_house
-		}
-	}
-}
-
-goblin_kobold_house_unit_2 = {
-	unit_types = {
-		unit_goblin_swordsman = 2
-		unit_kobold_footpad
-	}
-	
-	history = {
-		active = true
-		location = {
-			map_template = goblin_kobold_house
-		}
-	}
-}
-
-goblin_kobold_house_unit_3 = {
-	unit_types = {
-		unit_goblin_swordsman = 2
-		unit_kobold_footpad
-	}
-	
-	history = {
-		active = true
-		location = {
-			map_template = goblin_kobold_house
-		}
-	}
-}
-
-goblin_kobold_house_unit_4 = {
-	unit_types = {
-		unit_goblin_swordsman = 2
-		unit_kobold_footpad
-	}
-	
-	history = {
-		active = true
-		location = {
-			map_template = goblin_kobold_house
-		}
-	}
-}
-
-goblin_kobold_house_unit_5 = {
+goblin_kobold_house_unit = {
+	repeat_count = 5
 	unit_types = {
 		unit_goblin_swordsman = 2
 		unit_kobold_footpad
