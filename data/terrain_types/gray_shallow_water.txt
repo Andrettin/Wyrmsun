@@ -16,7 +16,7 @@ gray_shallow_water = {
 	base_terrain_types = {
 		rockbound_cave_floor
 		cave_floor
-		ford
+		underground_ford
 	}
 	solid_tiles = { 17 20 23 }
 	transition_tiles = {
