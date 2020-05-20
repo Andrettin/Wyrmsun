@@ -274,8 +274,8 @@ DefineSite("luni-sul-mignone", {
 
 DefineSite("milan", {
 	Name = "Milan",
-	MapTemplate = "earth",
-	Position = {4049, 1013},
+	MapTemplate = "western_europe",
+	Position = {157, 195},
 	Major = true,
 	CulturalNames = {
 		"italian", "Milan",
@@ -476,8 +476,8 @@ DefineSite("ravenna", {
 
 DefineSite("rome", {
 	Name = "Rome",
-	MapTemplate = "earth",
-	Position = {4126, 1096},
+	MapTemplate = "central_europe",
+	Position = {179, 222},
 	Major = true,
 	CulturalNames = {
 		"italian", "Rome",
@@ -557,8 +557,8 @@ DefineSite("syracuse", {
 
 DefineSite("venice", {
 	Name = "Venice",
-	MapTemplate = "earth",
-	Position = {4121, 1009},
+	MapTemplate = "central_europe",
+	Position = {177, 195},
 	Major = true,
 	CulturalNames = {
 		"italian", "Venice",

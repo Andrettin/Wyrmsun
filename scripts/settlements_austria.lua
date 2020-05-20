@@ -282,8 +282,8 @@ DefineSite("trent", {
 
 DefineSite("vienna", {
 	Name = "Vienna",
-	MapTemplate = "earth",
-	Position = {4212, 953},
+	MapTemplate = "central_europe",
+	Position = {194, 177},
 	Major = true,
 	CulturalNames = {
 		"celt", "Vindobona",

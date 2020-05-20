@@ -493,8 +493,8 @@ DefineSite("durolipons", {
 
 DefineSite("edinburgh", {
 	Name = "Edinburgh",
-	MapTemplate = "earth",
-	Position = {3766, 775},
+	MapTemplate = "british_isles",
+	Position = {90, 103},
 	Major = true,
 	CulturalNames = {
 		"english", "Edinburgh"
@@ -832,8 +832,8 @@ DefineSite("lichfield", {
 
 DefineSite("london", {
 	Name = "London",
-	MapTemplate = "earth",
-	Position = {3839, 873},
+	MapTemplate = "british_isles",
+	Position = {109, 138},
 	Major = true,
 	CulturalNames = {
 		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.

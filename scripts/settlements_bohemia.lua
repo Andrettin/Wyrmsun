@@ -73,8 +73,8 @@ DefineSite("kutna-hora", {
 
 DefineSite("prague", {
 	Name = "Prague",
-	MapTemplate = "earth",
-	Position = {4169, 908},
+	MapTemplate = "central_europe",
+	Position = {185, 159},
 	Major = true,
 	CulturalNames = {
 		"slav", "Prague",
