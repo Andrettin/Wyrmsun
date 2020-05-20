@@ -1,0 +1,959 @@
+kobold_water_treatment_center_river_rat_1 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 21 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_2 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 22 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_3 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 23 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_4 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 24 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_5 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 25 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_6 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 33 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_7 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 34 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_8 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 22 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_9 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 23 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_10 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 32 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_11 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 33 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_12 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 34 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_13 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 35 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_14 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 36 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_15 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 34 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_16 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 35 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_17 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 15 26 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_18 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 14 27 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_19 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 15 27 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_20 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 16 27 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_21 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 38 27 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_22 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 37 28 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_23 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 38 28 }
+		}
+	}
+}
+
+kobold_water_treatment_center_river_rat_24 = { #rat / river rat
+	unit_type = unit_snigill
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 39 28 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_1 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 5 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_2 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 7 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_3 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 50 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_4 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 52 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_5 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 6 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_6 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 51 11 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_7 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 5 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_8 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 7 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_9 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 50 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_10 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 52 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_11 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 5 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_12 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 6 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_13 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 7 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_14 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 50 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_15 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 51 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_kobold_16 = { #kobold / big kobold
+	unit_types = {
+		unit_kobold_footpad
+		unit_kobold_slasher
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 52 24 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_1 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 12 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_2 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 44 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_3 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 16 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_4 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 47 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_5 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 29 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_6 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 41 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_7 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 32 14 }
+		}
+	}
+}
+
+kobold_water_treatment_center_adder_8 = { #ball python / adder / frilled lizard / ooze
+	unit_type = unit_slime
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 24 15 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_1 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 9 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_2 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 5 9 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_3 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 52 9 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_4 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 9 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_5 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_6 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 10 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_7 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_8 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 12 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_9 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_10 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 5 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_11 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 52 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_12 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 13 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_13 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 22 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_14 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 22 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_15 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 4 26 }
+		}
+	}
+}
+
+kobold_water_treatment_center_potion_of_might_16 = { #potion of curing / potion of heal wounds / potion of might / potion of brilliance / potion of agility / potion of flight / any scroll / any armour / any weapon
+	unit_types = {
+		unit_potion_of_healing
+		#unit_scroll
+		unit_goblin_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_boots
+		unit_short_sword
+		unit_broad_sword
+	}
+	
+	history = {
+		active = true
+		location = {
+			map_template = kobold_water_treatment_center
+			pos = { 53 26 }
+		}
+	}
+}

@@ -1,6 +1,7 @@
 goblin_wall = {
 	name = "Wall"
 	color = { 160 128 128 }
+	character = ~
 	overlay = true
 	allow_single = true
 	image_file = "terrain/goblin_wall.png"

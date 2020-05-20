@@ -1,0 +1,7 @@
+kobold_water_treatment_center = {
+	name = "Kobold Water Treatment Center"
+	main_template = nidavellir
+	size = { 58 36 }
+	terrain_file = "the_sewers/kobold_water_treatment_center.map"
+	overlay_terrain_file = "the_sewers/kobold_water_treatment_center_overlay.map"
+}
