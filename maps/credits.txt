@@ -1,2 +1,3 @@
+/maps/earth/europe.map (FreeCiv) (licensed under the GPL 2.0)
 /maps/earth/scandinavia.map (GM1530 Scenarios) (licensed under the GPL 2.0+)
 /maps/earth/scandinavia_overlay.map (GM1530 Scenarios) (licensed under the GPL 2.0+)

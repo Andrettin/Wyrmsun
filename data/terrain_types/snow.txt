@@ -1,7 +1,10 @@
 snow = {
 	name = "Snow"
 	character = s
-	character_aliases = { S } #snowy hills
+	character_aliases = {
+		S #snowy hills
+		A #tundra
+	}
 	color = { 255 255 255 }
 	image_file = "terrain/snow.png"
 	buildable = true
