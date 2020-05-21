@@ -27,8 +27,8 @@
 
 DefineSite("amsterdam", {
 	Name = "Amsterdam",
-	MapTemplate = "earth",
-	Position = {3952, 858},
+	MapTemplate = "low_countries",
+	Position = {136, 138},
 	Major = true,
 	CulturalNames = {
 --		"dutch", "Amsterdam"

@@ -27,8 +27,8 @@
 
 DefineSite("barcelona", {
 	Name = "Barcelona",
-	MapTemplate = "earth",
-	Position = {3887, 1104},
+	MapTemplate = "western_europe",
+	Position = {111, 218},
 	Major = true,
 	CulturalNames = {
 		"castillian", "Barcelona"

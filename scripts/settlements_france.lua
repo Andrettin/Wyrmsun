@@ -633,8 +633,8 @@ DefineSite("orleans", {
 
 DefineSite("paris", {
 	Name = "Paris",
-	MapTemplate = "earth",
-	Position = {3891, 937},
+	MapTemplate = "western_europe",
+	Position = {117, 160},
 	Major = true,
 	CulturalNames = {
 		"celt", "Lutetia",
