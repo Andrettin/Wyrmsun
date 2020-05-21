@@ -494,7 +494,7 @@ DefineSite("durolipons", {
 DefineSite("edinburgh", {
 	Name = "Edinburgh",
 	MapTemplate = "british_isles",
-	Position = {90, 103},
+	Position = {91, 106},
 	Major = true,
 	CulturalNames = {
 		"english", "Edinburgh"

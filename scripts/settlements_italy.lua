@@ -274,8 +274,8 @@ DefineSite("luni-sul-mignone", {
 
 DefineSite("milan", {
 	Name = "Milan",
-	MapTemplate = "western_europe",
-	Position = {157, 195},
+	MapTemplate = "central_europe",
+	Position = {160, 195},
 	Major = true,
 	CulturalNames = {
 		"italian", "Milan",
