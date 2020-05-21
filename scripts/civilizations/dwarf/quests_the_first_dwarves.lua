@@ -25,12 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("the-first-dwarves", {
+DefineQuest("the_first_dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-modsognir",
 	PlayerColor = "red",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,

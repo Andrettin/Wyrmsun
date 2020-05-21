@@ -30,7 +30,7 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	Icon = "icon-germanic-warrior",
 	Description = "Complete the On the Vanaquisl, Westward Migration and The Settlement of Scandinavia scenarios.",
 	PlayerColor = "orange",
-	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "the-settlement-of-scandinavia"}
+	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "the_settlement_of_scandinavia"}
 })
 
 DefineAchievement("heimdalls-progeny", {
@@ -78,7 +78,7 @@ DefineAchievement("the-first-dwarves", {
 	Icon = "icon-brising-miner",
 	Description = "Complete the The First Dwarves scenario.",
 	PlayerColor = "red",
-	RequiredQuests = {"the-first-dwarves"}
+	RequiredQuests = {"the_first_dwarves"}
 })
 
 DefineAchievement("the-mightiest-made", {

@@ -43,7 +43,7 @@ DefineDialogue("a-rocky-home-introduction", {
 			"text", "There are many perils laying about. We need to be ready quickly.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-first-dwarves")
+					SetPlayerData(trigger_player, "AcceptQuest", "the_first_dwarves")
 					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
 				end
 			}
@@ -170,11 +170,11 @@ DefineDialogue("modsognirs-clan-destroys-the-grafvitnings", {
 			"text", "The diminutive fiends and their pet monster are done for. Our clan lives on!",
 			"option-effects", {
 				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "the-first-dwarves")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-first-dwarves") then
+					if (GetPlayerData(trigger_player, "HasQuest", "the_first_dwarves")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
 							CallDialogue("campaign-victory", trigger_player)
 						end
-						SetPlayerData(trigger_player, "CompleteQuest", "the-first-dwarves")
+						SetPlayerData(trigger_player, "CompleteQuest", "the_first_dwarves")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "the-slaying-of-grafvitnir")
 				end

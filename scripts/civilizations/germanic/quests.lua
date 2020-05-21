@@ -69,16 +69,16 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 	Unobtainable = true
 })
 
-DefineQuest("the-settlement-of-scandinavia", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-town-hall",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	CompletionEffects = function(s)
-		CallDialogue("the-settlement-of-scandinavia-victory", trigger_player)
+		CallDialogue("the_settlement_of_scandinavia_victory", trigger_player)
 	end,
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-settlement-of-scandinavia") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_settlement_of_scandinavia") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
