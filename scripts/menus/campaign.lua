@@ -136,12 +136,13 @@ function RunCampaignMenu()
 	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*-0.5) * get_scale_factor(),
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
+			set_selected_campaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			UpdateCampaignDescription()
 		end
 	)
 	campaign_dd:setSize(240 * get_scale_factor(), 20 * get_scale_factor())
-	if (GetCurrentCampaign() ~= "") then
-		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, GetCurrentCampaign()) - 1)
+	if (get_selected_campaign() ~= "") then
+		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, get_selected_campaign()) - 1)
 	else
 		campaign_dd:setSelected(0)
 		SetCurrentCampaign(campaign_ident_list[1])
@@ -153,6 +154,7 @@ function RunCampaignMenu()
 
 	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208 * get_scale_factor(), offy + (212 + (36 * 4)) * get_scale_factor(),
 		function()
+			save_preferences()
 			RunningScenario = true
 			GetMapInfo("scripts/map_templates/campaign.smp")
 			GameSettings.NoRandomness = wyr.preferences.NoRandomness
@@ -165,6 +167,7 @@ function RunCampaignMenu()
 	
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 5)) * get_scale_factor(),
 		function()
+			save_preferences()
 			SetCurrentCampaign("")
 			menu:stop();
 			RunSinglePlayerGameMenu()
