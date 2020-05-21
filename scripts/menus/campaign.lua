@@ -143,6 +143,7 @@ function RunCampaignMenu()
 	campaign_dd:setSize(240 * get_scale_factor(), 20 * get_scale_factor())
 	if (get_selected_campaign() ~= "") then
 		campaign_dd:setSelected(GetElementIndexFromArray(campaign_ident_list, get_selected_campaign()) - 1)
+		SetCurrentCampaign(get_selected_campaign())
 	else
 		campaign_dd:setSelected(0)
 		SetCurrentCampaign(campaign_ident_list[1])
