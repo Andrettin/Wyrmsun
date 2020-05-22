@@ -184,7 +184,7 @@ AddTrigger("westward-migration-victory",
 	end
 )
 
-AddTrigger("the-settlement-of-scandinavia-introduction",
+AddTrigger("the_settlement_of_scandinavia_introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (
@@ -201,7 +201,7 @@ AddTrigger("the-settlement-of-scandinavia-introduction",
 		return false
 	end,
 	function()
-		CallDialogue("the-settlement-of-scandinavia-introduction", trigger_player)
+		CallDialogue("the_settlement_of_scandinavia_introduction", trigger_player)
 		return false
 	end
 )
@@ -209,7 +209,7 @@ AddTrigger("the-settlement-of-scandinavia-introduction",
 AddTrigger("northwards-to-the-sea-natives-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("ertebolle-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("ertebolle-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
@@ -233,7 +233,7 @@ AddTrigger("northwards-to-the-sea-natives-sighted",
 AddTrigger("northwards-to-the-sea-victory",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("ertebolle-tribe", true) == false and GetFactionExists("gylfing-tribe", true)) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("ertebolle-tribe", true) == false and GetFactionExists("gylfing-tribe", true)) then
 				trigger_player = i
 				return true
 			end
@@ -246,10 +246,10 @@ AddTrigger("northwards-to-the-sea-victory",
 	end
 )
 
-AddTrigger("the-settlement-of-scandinavia-gylfings-sighted",
+AddTrigger("the_settlement_of_scandinavia_gylfings_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the-settlement-of-scandinavia") and GetFactionExists("gylfing-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("gylfing-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("gylfing-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
@@ -265,7 +265,7 @@ AddTrigger("the-settlement-of-scandinavia-gylfings-sighted",
 		return false
 	end,
 	function()
-		CallDialogue("the-settlement-of-scandinavia-gylfings-sighted", trigger_player)
+		CallDialogue("the_settlement_of_scandinavia_gylfings_sighted", trigger_player)
 		return false
 	end
 )

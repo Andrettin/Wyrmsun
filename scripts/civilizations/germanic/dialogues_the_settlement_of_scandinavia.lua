@@ -206,7 +206,7 @@ DefineDialogue("westward-migration-victory", {
 	}
 })
 
-DefineDialogue("the-settlement-of-scandinavia-introduction", {
+DefineDialogue("the_settlement_of_scandinavia_introduction", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
@@ -217,7 +217,7 @@ DefineDialogue("the-settlement-of-scandinavia-introduction", {
 			"text", "One tribe dwells in this peninsula, to our north, and another beyond the sea, a short distance to our east. Both need to be defeated. First, however, we must build a settlement here and gather our forces.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-settlement-of-scandinavia")
+					SetPlayerData(trigger_player, "AcceptQuest", "the_settlement_of_scandinavia")
 					
 					unit = CreateUnit("unit-revealer", trigger_player, {4064 - EarthStartX, 777 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Aarhus
 					SetUnitVariable(unit, "TTL", 600)
@@ -279,7 +279,7 @@ DefineDialogue("northwards-to-the-sea-victory", {
 	}
 })
 
-DefineDialogue("the-settlement-of-scandinavia-gylfings-sighted", {
+DefineDialogue("the_settlement_of_scandinavia_gylfings_sighted", {
 	Nodes = {
 		{
 			"speaker", "character", "gylve",
@@ -310,14 +310,14 @@ DefineDialogue("the-settlement-of-scandinavia-gylfings-sighted", {
 	}
 })
 
-DefineDialogue("the-settlement-of-scandinavia-victory", {
+DefineDialogue("the_settlement_of_scandinavia_victory", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
 			"text", "These lands are now ours! My descendants shall rule them for untold generations...",
 			"option-effects", {
 				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the-settlement-of-scandinavia") then
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_settlement_of_scandinavia") then
 						CallDialogue("campaign-victory", trigger_player)
 					end
 				end
