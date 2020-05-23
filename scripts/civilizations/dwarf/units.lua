@@ -1316,7 +1316,6 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	WeaponClasses = {"axe"},
 	HackDamage = true,
 	ButtonKey = "y",
-	ButtonHint = "Train ~!Yale Rider",
 	RequirementsString = "Smithy and Yale Pen",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {

@@ -81,18 +81,6 @@ DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 4, Icon = "icon-dwarven-yale-rider",
-	Action = "train-unit", Value = "unit-dwarven-yale-rider",
-	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
-})
-
-DefineButton( { Pos = 4, Icon = "icon-joruvellir-yale-rider-black-hair",
-	Action = "train-unit", Value = "unit-joruvellir-yale-rider",
-	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks"}
-})
-
 DefineButton( { Pos = 6, Icon = "icon-dwarven-gryphon-rider",
 	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
 	Key = "p", Hint = "Train Gry~!phon Rider", Popup = "popup_unit",

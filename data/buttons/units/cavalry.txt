@@ -1,0 +1,9 @@
+train_cavalry = {
+	pos = 4
+	action = train_unit_class
+	value = cavalry
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}
