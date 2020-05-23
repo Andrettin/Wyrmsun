@@ -7,3 +7,13 @@ train_infantry = {
 		barracks
 	}
 }
+
+train_spearman = {
+	pos = 2
+	action = train_unit_class
+	value = spearman
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}

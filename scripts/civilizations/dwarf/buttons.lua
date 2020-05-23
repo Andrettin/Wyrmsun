@@ -81,12 +81,6 @@ DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 2, Icon = "icon-dwarven-guard",
-	Action = "train-unit", Value = "unit-dwarven-guard",
-	Key = "g", Hint = "Train ~!Guard", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks"}
-})
-
 DefineButton( { Pos = 4, Icon = "icon-dwarven-yale-rider",
 	Action = "train-unit", Value = "unit-dwarven-yale-rider",
 	Key = "y", Hint = "Train ~!Yale Rider", Popup = "popup_unit",

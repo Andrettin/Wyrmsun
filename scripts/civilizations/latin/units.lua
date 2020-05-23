@@ -177,7 +177,7 @@ DefineUnitType("unit-latin-barracks", {
 	Image = {"file", "latin/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-barracks",
-	Trains = {"unit-teuton-spearman", "unit-teuton-ritter"},
+	Trains = {"unit-teuton-ritter"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-pilum", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"

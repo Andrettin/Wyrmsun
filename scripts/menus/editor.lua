@@ -1182,7 +1182,6 @@ end
 --  Function to edit unit type properties in the editor
 --
 function EditUnitTypeProperties(unit_type)
-
 	if (unit_type == "" or unit_type == nil) then
 		return;
 	end
@@ -1223,7 +1222,7 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 
-	local training_properties_button = menu:addFullButton(_("~!Train/Drop"), "t", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 2)) * get_scale_factor(),
+	menu:addFullButton(_("~!Train/Drop"), "t", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 2)) * get_scale_factor(),
 		function()
 			EditUnitTypePropertiesTraining(unit_type)
 		end
@@ -1234,7 +1233,7 @@ function EditUnitTypeProperties(unit_type)
 			menu:stop()
 		end
 	)
-	
+
 	local delete_button = menu:addFullButton(_("~!Delete"), "d", (sizeX / 2) - (224 / 2) * get_scale_factor(), sizeY + (-40 - (36 * 0)) * get_scale_factor(),
 		function()
 			local confirm = WarGameMenu(panel(4))
@@ -1259,7 +1258,7 @@ function EditUnitTypeProperties(unit_type)
 			confirm:run(false)
 		end
 	)
-	
+
 	if (GetUnitTypeData(unit_type, "Mod") ~= CMap.Map.Info.Filename) then
 		main_properties_button:setEnabled(false)
 		graphics_properties_button:setEnabled(false)
@@ -1875,40 +1874,16 @@ function EditUnitTypePropertiesTraining(unit_type)
 			table.insert(unit_type_list, potential_unit_type_list[i])
 		end
 	end
-	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", CMap.Map.Info.Filename)
 	local dropped_unit_type_list = GetUnitTypeData(unit_type, "AiDrops", CMap.Map.Info.Filename)
 	
-	local trains
-	local trains_label
-	local trains_checkbox
 	local drops
 	local drops_label
 	local drops_checkbox
   
-	local function TrainedUnitTypeChanged()
-		trains_checkbox:setMarked(GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]))
-	end
-	
 	local function DroppedUnitTypeChanged()
 		drops_checkbox:setMarked(GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]))
 	end
 	
-	trains_label = menu:addLabel(_("Trains:"), 10 * get_scale_factor(), (14 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
-	trains = menu:addDropDown(unit_type_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(), function(dd) TrainedUnitTypeChanged() end)
-	trains:setSize((236 - 19 - 10) * get_scale_factor(), 20 * get_scale_factor())
-	trains:setSelected(0)
-	
-	trains_checkbox = menu:addImageCheckBox("", sizeX + (-19 - 10) * get_scale_factor(), (11 + 36 * 1) * get_scale_factor(),
-	function()
-		if (trains_checkbox:isMarked()) then
-			if (GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]) == false) then
-				table.insert(trained_unit_type_list, unit_type_list[trains:getSelected() + 1])
-			end
-		else
-			RemoveElementFromArray(trained_unit_type_list, unit_type_list[trains:getSelected() + 1])
-		end
-	end)
-
 	drops_label = menu:addLabel(_("Drops:"), 10 * get_scale_factor(), (14 + 36 * 2) * get_scale_factor(), Fonts["game"], false)
 	drops = menu:addDropDown(unit_type_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 2) * get_scale_factor(), function(dd) DroppedUnitTypeChanged() end)
 	drops:setSize((236 - 19 - 10) * get_scale_factor(), 20 * get_scale_factor())
@@ -1925,7 +1900,6 @@ function EditUnitTypePropertiesTraining(unit_type)
 		end
 	end)
 
-	TrainedUnitTypeChanged()
 	DroppedUnitTypeChanged()
 	
 	menu:addLabel(_("Button Pos:"), 10 * get_scale_factor(), (12 + 36 * 3) * get_scale_factor(), Fonts["game"], false)
@@ -1945,10 +1919,6 @@ function EditUnitTypePropertiesTraining(unit_type)
 				if (GetUnitTypeData(unit_type, "Mod") == CMap.Map.Info.Filename) then
 					local unit_type_definition = {}
 
-					if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
-						unit_type_definition.Trains = trained_unit_type_list
-					end
-
 					if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
 						unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
 					end
@@ -1962,10 +1932,6 @@ function EditUnitTypePropertiesTraining(unit_type)
 					end
 
 					DefineUnitType(unit_type, unit_type_definition)
-				else
-					if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
-						SetModTrains(CMap.Map.Info.Filename, unit_type, trained_unit_type_list)
-					end
 				end
 				if (dropped_unit_type_list ~= GetUnitTypeData(unit_type, "AiDrops")) then
 					SetModDrops(CMap.Map.Info.Filename, unit_type, dropped_unit_type_list)

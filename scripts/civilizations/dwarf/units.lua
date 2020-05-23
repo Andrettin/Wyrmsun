@@ -966,7 +966,6 @@ DefineUnitType("unit-dwarven-guard", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "g",
-	ButtonHint = "Train ~!Guard",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
