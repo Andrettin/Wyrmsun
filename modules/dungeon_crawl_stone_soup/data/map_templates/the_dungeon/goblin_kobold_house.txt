@@ -4,4 +4,5 @@ goblin_kobold_house = { #minmay_goblin_kobold_house
 	size = { 9 10 }
 	terrain_file = "the_dungeon/goblin_kobold_house.map"
 	overlay_terrain_file = "the_dungeon/goblin_kobold_house_overlay.map"
+	optional = true
 }

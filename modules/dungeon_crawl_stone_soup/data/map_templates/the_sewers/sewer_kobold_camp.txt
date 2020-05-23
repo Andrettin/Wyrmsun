@@ -4,4 +4,5 @@ sewer_kobold_camp = {
 	size = { 47 36 }
 	terrain_image = "the_sewers/sewer_kobold_camp.png"
 	overlay_terrain_image = "the_sewers/sewer_kobold_camp_overlay.png"
+	optional = true
 }
