@@ -763,7 +763,6 @@ DefineUnitType("unit-goblin-temple", {
 	Image = {"file", "goblin/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-temple",
-	Trains = {"unit-goblin-shaman"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

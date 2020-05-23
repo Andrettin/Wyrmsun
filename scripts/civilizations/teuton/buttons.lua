@@ -93,19 +93,6 @@ DefineButton( { Pos = 7,
 
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-teuton-priest",
-	Key = "g", Hint = "Train ~!Gudjan", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
-})
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-teuton-priest",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god"},
-	Key = "l", Hint = "Train C~!leric", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
-})
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-teuton-priest",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
 	Key = "l", Hint = "Hire C~!leric", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}

@@ -1,0 +1,9 @@
+train_priest = {
+	pos = 1
+	action = train_unit_class
+	value = priest
+	popup = popup_unit
+	unit_classes = {
+		temple
+	}
+}

@@ -917,7 +917,6 @@ DefineUnitType("unit-germanic-temple", {
 	Image = {"file", "germanic/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-temple",
-	Trains = {"unit-germanic-priest"},
 	RequirementsString = "Carpenter's Shop",
 	Variations = {
 		{
