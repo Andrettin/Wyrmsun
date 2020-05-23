@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-germanic-transport-ship",
-	Key = "t", Hint = "Build ~!Transport", Popup = "popup_unit",
-	ForUnit = {"unit-germanic-dock"}
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Icon = "icon-germanic-broad-sword",

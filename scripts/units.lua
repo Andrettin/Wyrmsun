@@ -4299,9 +4299,7 @@ DefineUnitType("unit-template-transport-ship", {
 	CanDock = true,
 	AttackFromTransporter = true,
 	Trader = true,
-	ButtonPos = 1,
 	ButtonKey = "t",
-	ButtonHint = "Build ~!Transport",
 	RequirementsString = "Lumber Mill",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
 	CanGatherResources = {

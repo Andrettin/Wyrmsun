@@ -1,0 +1,9 @@
+build_transport_ship = {
+	pos = 1
+	action = train_unit_class
+	value = transport_ship
+	popup = popup_unit
+	unit_classes = {
+		dock
+	}
+}

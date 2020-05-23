@@ -105,18 +105,6 @@ DefineButton( { Pos = 7, Icon = "icon-dwarven-thunderer",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 })
 
-DefineButton( { Pos = 1, Icon = "icon-dwarven-witness",
-	Action = "train-unit", Value = "unit-dwarven-witness",
-	Key = "w", Hint = "Train ~!Witness", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-temple"}
-})
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-dwarven-transport-ship",
-	Key = "t", Hint = "Build ~!Transport", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-dock"}
-})
-
 DefineButton( { Pos = 2,
 	Action = "train-unit", Value = "unit-dwarven-ballista-warship",
 	Key = "b", Hint = "Build ~!Ballista Warship", Popup = "popup_unit",

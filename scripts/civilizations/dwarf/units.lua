@@ -1523,6 +1523,7 @@ DefineUnitType("unit-dwarven-witness", {
 	BluntDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "w",
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},

@@ -98,12 +98,6 @@ DefineButton( { Pos = 1,
 	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
 })
 
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-teuton-kogge",
-	Key = "c", Hint = "Build ~!Cog", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-dock", "unit-norse-dock"}
-})
-
 -- Mercenaries ---------------------------------------------------------
 
 --[[

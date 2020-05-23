@@ -1787,7 +1787,6 @@ DefineUnitType("unit-teuton-dock", {
 	Image = {"file", "teuton/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-dock",
-	Trains = {"unit-teuton-kogge"},
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Variations = {
 		{
