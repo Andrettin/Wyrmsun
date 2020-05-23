@@ -41,7 +41,7 @@ local keystrokes = {
   {"PRINT", "- make screen shot"},
   {"ENTER", "- write a message"},
   {"SPACE", "- goto last event"},
-  {"TAB", "- hide/unhide terrain"},
+  {"TAB", "- toggle minimap mode"},
   {"^", "- select nothing"},
   {"#", "- select group"},
   {"##", "- center on group"},
@@ -112,7 +112,9 @@ local tips = {
 	"You can order a worker to build one building after the other if you hold the SHIFT key while you place the building.",
 	"You can build the same building many times if you hold the ALT and SHIFT keys while you place the structures.",
 
+	-- Interface-related tips
 	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
+	"Press TAB to toggle through the minimap modes.",
 
 --	"Attack a chest to open it.",
 
