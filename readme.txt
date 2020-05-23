@@ -85,7 +85,6 @@ https://github.com/Andrettin/Wyrmsun
 - Reduced the time of day color effects, so that the graphics aren't too dark during night.
 - Instead of tiles being owned by a player based on an influence range expanding from the player's buildings, tiles are now assigned to a settlement, and when the player builds a hall on the settlement site ownership of all its tiles are gained.
 - Added 2x scaling option.
-- Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
 - Removed the "Use OpenGL" option, as OpenGL is now always used for rendering.
 - Reworked the random number generator to provide better results.
 
@@ -106,7 +105,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
-- Player territories are now drawn on the minimap.
+- Added a "Territories" minimap mode. Press TAB to toggle through the minimap modes.
+- Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
 
 -----------------------------------------------------------------------
 - 3.5.4
