@@ -1822,7 +1822,6 @@ local defaultPreferences = {
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	LeaveStopScrolling = true,      --  Enable/disable stopping scrolling when mouse leave.
 	MaxOpenGLTexture = 256,
-	MinimapWithTerrain = true,      --  Choose your default for minimap with/without terrain.
 	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
@@ -1883,7 +1882,6 @@ SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(wyr.preferences.LeaveStopScrolling)
 SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
 SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
-SetMinimapTerrain(wyr.preferences.MinimapWithTerrain)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)

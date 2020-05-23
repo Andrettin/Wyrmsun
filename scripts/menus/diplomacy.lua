@@ -49,7 +49,7 @@ function RunDiplomacyMenu()
 
 			sharedvisioncb = menu:addImageCheckBox("", 276 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
 			function() end)
-			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)))
+			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():has_shared_vision_with(CPlayer:GetPlayer(i)))
 			sharedvision[j] = sharedvisioncb
 		end
 	end
@@ -74,7 +74,7 @@ function RunDiplomacyMenu()
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "enemy", i)
 					if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
 						SetDiplomacy(i, "enemy", CPlayer:GetThisPlayer().Index) -- Andrettin: this is added so that when the human player decides to attack computer players, computer players become enemies of the human player as well
-						if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsSharedVision(CPlayer:GetThisPlayer())) then
+						if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):has_shared_vision_with(CPlayer:GetThisPlayer())) then
 							SetSharedVision(i, false, CPlayer:GetThisPlayer().Index)
 						end
 					end
@@ -99,11 +99,11 @@ function RunDiplomacyMenu()
 
 			-- shared vision
 			if (sharedvision[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i)) == false) then
+				if (CPlayer:GetThisPlayer():has_shared_vision_with(CPlayer:GetPlayer(i)) == false) then
 					SetSharedVision(CPlayer:GetThisPlayer().Index, true, i)
 				end
 			else
-				if (CPlayer:GetThisPlayer():IsSharedVision(CPlayer:GetPlayer(i))) then
+				if (CPlayer:GetThisPlayer():has_shared_vision_with(CPlayer:GetPlayer(i))) then
 					SetSharedVision(CPlayer:GetThisPlayer().Index, false, i)
 				end
 			end
