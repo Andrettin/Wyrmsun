@@ -1,0 +1,9 @@
+build_glider = {
+	pos = 8
+	action = train_unit_class
+	value = glider
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}

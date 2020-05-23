@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Units ---------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-slavic-swordsman",
-	Key = "w", Hint = "Train S~!wordsman", Popup = "popup_unit",
-	ForUnit = {"unit-norse-barracks"}
-})
-
 -- Mercenaries ---------------------------------------------------------
 
 DefineButton( { Pos = 1,

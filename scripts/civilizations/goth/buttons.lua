@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 4,
-	Action = "train-unit", Value = "unit-gothic-horse-rider",
-	Key = "d", Hint = "Train Horse Ri~!der", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-barracks"}
-})
-
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",

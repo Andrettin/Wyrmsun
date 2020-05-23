@@ -612,8 +612,6 @@ DefineUnitType("unit-goblin-glider", {
 	Coward = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ButtonKey = "g",
-	ButtonHint = "Build ~!Glider",
-	ButtonPos = 7,
 	RequirementsString = "Lumber Mill",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -707,7 +705,6 @@ DefineUnitType("unit-goblin-mess-hall", {
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/mess_hall_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
-	Trains = {"unit-goblin-glider"},
 	ButtonKey = "s",
 	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Sounds = {

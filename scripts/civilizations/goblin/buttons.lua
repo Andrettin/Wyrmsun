@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-------------------------------------------------------------------------------
---	Define", "unit-button.
---
---	DefineButton( { Pos = n, Level = n 'icon ident Action = name ['value value]
---		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
---
-
 -- General Commands -------------------------------
 
 DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-1",
@@ -81,7 +74,7 @@ DefineButton( { Pos = 5, Icon = "icon-goblin-coinage",
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 8, Icon = "icon-goblin-gunpowder-infantry",
+DefineButton( { Pos = 7, Icon = "icon-goblin-gunpowder-infantry",
 	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
 	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup_unit",
 	ForUnit = {"unit-goblin-mess-hall"}

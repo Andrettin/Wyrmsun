@@ -55,6 +55,7 @@ DefineUnitType("unit-gothic-horse-rider", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "d",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	RequirementsString = "Smithy and Stables",
