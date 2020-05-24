@@ -3,6 +3,7 @@ icon_size = { 46 38 }
 conversible_player_color = violet
 neutral_player_color = gray
 minimap_color_index = 0
+minimap_non_land_territory_alpha = 64
 underground_time_of_day = underground
 border_terrain_type = border
 documents_modules_loading_enabled = true
