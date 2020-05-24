@@ -1,0 +1,19 @@
+munich = {
+	name = "Munich"
+	map_template = central_europe
+	pos = { 175 170 }
+	major = true
+	cultural_names = {
+		#teuton = "München"
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+	}
+}
