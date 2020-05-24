@@ -105,8 +105,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
-- Added a "Territories" minimap mode. Press TAB to toggle through the minimap modes.
 - Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
+- Added "Territories" minimap mode. Press TAB to toggle through the minimap modes.
+- Added minimap mode with the territories of each settlement.
 
 -----------------------------------------------------------------------
 - 3.5.4
