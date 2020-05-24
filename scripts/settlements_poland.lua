@@ -151,26 +151,3 @@ DefineSite("poznan", {
 	},
 	Regions = {"poland"}
 })
-
-DefineSite("szczecin", {
-	Name = "Szczecin",
-	MapTemplate = "earth",
-	Position = {4170, 829},
-	Major = true,
-	CulturalNames = {
-		"slav", "Szczecin",
-		"teuton", "Stettin"
-	},
-	Cores = {
-		"germany", -- Stettin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Stettin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		1648, "sweden", -- Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1815, "prussia" -- Stettin was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1648, 0, "town_hall"
-	},
-	Regions = {"germany"}
-})

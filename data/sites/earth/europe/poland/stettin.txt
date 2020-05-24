@@ -1,0 +1,27 @@
+stettin = {
+	name = "Stettin"
+	map_template = scandinavia
+	pos = { 134 327 }
+	major = true
+	cultural_names = {
+		slav = "Szczecin"
+	}
+	cores = {
+		germany #Stettin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Stettin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		1648 = {
+			owner_faction = sweden #Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+			building_classes += town_hall
+		}
+		
+		1815 = {
+			owner_faction = prussia #Stettin was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}
