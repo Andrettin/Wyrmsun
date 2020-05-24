@@ -272,32 +272,6 @@ DefineSite("luni-sul-mignone", {
 	Regions = {"italy"}
 })
 
-DefineSite("milan", {
-	Name = "Milan",
-	MapTemplate = "central_europe",
-	Position = {160, 195},
-	Major = true,
-	CulturalNames = {
-		"italian", "Milan",
-		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Milan" -- Mailand
-	},
-	HistoricalOwners = {
-		-191, "rome", -- Mediolanium became a Roman possession in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1477, "milan", -- Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "milan", -- Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1560, "spain", -- Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "austria", -- Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		1859, "sardinia" -- Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-191, 0, "town_hall",
-		768, 0, "temple", -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1565, 0, "university" -- University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("modena", {
 	Name = "Modena",
 	MapTemplate = "earth",
@@ -474,35 +448,6 @@ DefineSite("ravenna", {
 	Regions = {"italy"}
 })
 
-DefineSite("rome", {
-	Name = "Rome",
-	MapTemplate = "central_europe",
-	Position = {179, 222},
-	Major = true,
-	CulturalNames = {
-		"italian", "Rome",
-		"latin", "Rome" -- "Roma"; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-750, "latin-tribe", -- Latins present in Latium by 750-625 BC, and Rome was in existence as well; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-500, "rome", -- Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		526, "ostrogothia", -- Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1494, "papal-states" -- Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		-750, 0, "town_hall",
-		-192, 0, "dock", -- Mercantile docks were built at Rome in 192 BC and 174 BC; Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 244.
-		-40, 0, "temple", -- Temple of Jupiter Capitolinus, Temple of Jupiter Victor, Temple of Vesta, Temple of Fortunus and Temple of Aesculapius existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
---		-40, 0, "dock", -- Shipyards ("Navalia") existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		-40, 0, "road", -- Roads existed in Rome in c. 40 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 22-23.
-		1303, 0, "university" -- University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	HistoricalPopulation = {
-		1600, 100000 -- Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("sena-gallica", {
 	Name = "Sena Gallica",
 	MapTemplate = "earth",
@@ -551,28 +496,6 @@ DefineSite("syracuse", {
 	},
 	HistoricalBuildings = {
 		-212, 0, "town_hall"
-	},
-	Regions = {"italy"}
-})
-
-DefineSite("venice", {
-	Name = "Venice",
-	MapTemplate = "central_europe",
-	Position = {177, 195},
-	Major = true,
-	CulturalNames = {
-		"italian", "Venice",
-		-- "teuton", "Venice" -- Venedig
-	},
-	HistoricalOwners = {
-		-500, "venetian-tribe", -- Venice's area was territory of the Venetians in the 500-100 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		-222, "rome", -- Venice's area was acquired by Rome in 222 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1477, "venice", -- Venice was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "venice", -- Venice was part of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1815, "austria" -- Venice was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-500, 0, "town_hall"
 	},
 	Regions = {"italy"}
 })

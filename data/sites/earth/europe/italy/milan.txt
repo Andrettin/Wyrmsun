@@ -1,0 +1,52 @@
+milan = {
+	name = "Milan"
+	map_template = central_europe
+	pos = { 160 195 }
+	major = true
+	cultural_names = {
+		latin = "Mediolanum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+		#teuton = "Mailand"
+	}
+	regions = {
+		italy
+	}
+	
+	history = {
+		-191 = {
+			owner_faction = rome #Mediolanium became a Roman possession in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		768 = {
+			building_classes += temple #Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1477 = {
+			owner_faction = milan #Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner_faction = milan #Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+		
+		1560 = {
+			owner_faction = spain #Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1565 = {
+			building_classes += university #University founded in Milan in 1565; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1815 = {
+			owner_faction = austria #Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+		
+		1859 = {
+			owner_faction = sardinia #Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

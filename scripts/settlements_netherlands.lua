@@ -25,31 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("amsterdam", {
-	Name = "Amsterdam",
-	MapTemplate = "low_countries",
-	Position = {136, 138},
-	Major = true,
-	CulturalNames = {
---		"dutch", "Amsterdam"
-	},
-	HistoricalOwners = {
-		-264, "batavian-tribe", -- Amsterdam's area was territory of the Batavians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		481, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "frisian-tribe", -- Amsterdam's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain", -- Amsterdam was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1648, "netherlands", -- Amsterdam was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		-- Amsterdam ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1815, "netherlands" -- Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall",
-		1877, 0, "university" -- State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-		-- Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
-	Regions = {"netherlands"}
-})
-
 DefineSite("franeker", {
 	Name = "Franeker",
 	MapTemplate = "earth",

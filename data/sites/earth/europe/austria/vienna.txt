@@ -1,0 +1,68 @@
+vienna = {
+	name = "Vienna"
+	map_template = central_europe
+	pos = { 194 177 }
+	major = true
+	cultural_names = {
+		celt = "Vindobona"
+		gaul = "Vindobona"
+		latin = "Vindobona" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+		#teuton = "Wien"
+	}
+	regions = {
+		austria
+		cisleithania
+	}
+	
+	history = {
+		10 = {
+			owner_faction = rome #Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		161 = { #Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			building_classes += stronghold
+			building_classes -= town_hall
+			building_classes += barracks
+		}
+		
+		526 = {
+			owner_faction = none #Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			building_classes -= stronghold
+			building_classes -= barracks
+		}
+		
+		955 = {
+			owner_faction = bavaria #Vienna became a part of the Bavarian East March in 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			building_classes += town_hall
+		}
+		
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1156 = {
+			owner_faction = austria #Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1365 = {
+			building_classes += university #University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1477 = {
+			owner_faction = austria #Vienna was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1759 = {
+			building_classes += market #temisvarer_privilegierte_handelskompagnie #"Temisvarer privilegierte Handelskompagnie" founded in 1759, with triple direction in Vienna, Trieste and Temesvar; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
+		}
+		
+		1815 = {
+			#Imperial Polytechnic Institute of Vienna founded in 1815; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
+		}
+		
+		1844 = {
+			#the Austrian Kreis of "Haupt- und Residenstadt Wien" had 374,378 inhabitants in 1844 (excluding military personnel); Source: "Tafeln zur Statistik der österreichischen Monarchie für das Jahr 1844", 1848, Tafel 50.
+		}
+	}
+}

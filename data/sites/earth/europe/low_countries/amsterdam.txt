@@ -1,0 +1,49 @@
+amsterdam = {
+	name = "Amsterdam"
+	map_template = low_countries
+	pos = { 136 138 }
+	major = true
+	regions = {
+		netherlands
+	}
+	
+	history = {
+		-264 = {
+			owner_faction = batavian_tribe #Amsterdam's area was territory of the Batavians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		481 = {
+			owner_faction = frisian_tribe #Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner_faction = frisian_tribe #Amsterdam's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1560 = {
+			owner_faction = spain #Amsterdam was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1648 = {
+			owner_faction = netherlands #Amsterdam was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+			#Amsterdam ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+		
+		1815 = {
+			owner_faction = netherlands #Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+		
+		1877 = {
+			building_classes += university #State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+		
+		1905 = {
+			#Calvinist university founded in Amsterdam in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}
