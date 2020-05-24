@@ -192,7 +192,8 @@ AddTrigger("the_settlement_of_scandinavia_introduction",
 				and GetPlayerData(i, "Faction") == "asa-tribe"
 				and GetFactionExists("ertebolle-tribe", true)
 				and GetFactionExists("gylfing-tribe", true)
-				and GetNumUnitsAt(i, "any", {4068 - EarthStartX - 16, 811 - EarthStartY - 16}, {4068 - EarthStartX + 16, 811 - EarthStartY + 16}, GetMapLayer("material-plane", "earth")) > 0 -- must have units near Kiel
+				and GetSiteData("kiel", "MapLayer") ~= -1
+				and GetNumUnitsAt(i, "any", {GetSiteData("kiel", "MapPosX") - 16, GetSiteData("kiel", "MapPosY") - 16}, {GetSiteData("kiel", "MapPosX") + 16, GetSiteData("kiel", "MapPosY") + 16}, GetSiteData("kiel", "MapLayer")) > 0 -- must have units near Kiel
 			) then
 				trigger_player = i
 				return true

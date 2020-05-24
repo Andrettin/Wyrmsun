@@ -219,16 +219,16 @@ DefineDialogue("the_settlement_of_scandinavia_introduction", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the_settlement_of_scandinavia")
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4064 - EarthStartX, 777 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Aarhus
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("aarhus", "MapPosX"), GetSiteData("aarhus", "MapPosY")}, GetSiteData("aarhus", "MapLayer")) -- Aarhus
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4112 - EarthStartX, 784 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Leidre
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("leidre", "MapPosX"), GetSiteData("leidre", "MapPosY")}, GetSiteData("leidre", "MapLayer")) -- Leidre
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4136 - EarthStartX, 783 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Malmo
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("malmo", "MapPosX"), GetSiteData("malmo", "MapPosY")}, GetSiteData("malmo", "MapLayer")) -- Malmo
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4253 - EarthStartX, 693 - EarthStartY}, GetMapLayer("material-plane", "earth")) -- Stockholm
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("stockholm", "MapPosX"), GetSiteData("stockholm", "MapPosY")}, GetSiteData("stockholm", "MapLayer")) -- Stockholm
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}
