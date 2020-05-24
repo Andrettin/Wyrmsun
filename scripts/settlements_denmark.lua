@@ -48,9 +48,6 @@ DefineSite("aarhus", {
 	HistoricalBuildings = {
 		-5800, 0, "town_hall"
 	},
-	HistoricalUnits = {
-		-2800, {-2800, 12, 30}, "unit-germanic-warrior", 3000, "ertebolle-tribe"
-	},
 	Regions = {"scandinavia"}
 })
 

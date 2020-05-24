@@ -1,0 +1,18 @@
+ertebolle_warriors = {
+	unit_type = unit_germanic_warrior
+	quantity = 3
+	
+	history = {
+		-2800 = {
+			active = true
+			faction = ertebolle_tribe
+			location = {
+				site = aarhus
+			}
+		}
+		
+		-2800.12.30 = {
+			active = false
+		}
+	}
+}
