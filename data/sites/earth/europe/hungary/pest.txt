@@ -1,0 +1,48 @@
+pest = {
+	name = "Pest"
+	map_template = central_europe
+	pos = { 211 180 }
+	major = true
+	cores = {
+		magyar_tribe
+		hungary
+	}
+	regions = {
+		europe
+	}
+	
+	history = {
+		-264 = {
+			owner_faction = iazyge_tribe #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		896 = {
+			owner_faction = magyar_tribe #Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
+		}
+		
+		919 = {
+			owner_faction = hungary #Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1097 = {
+			owner_faction = hungary #part of the Kingdom of Hungary c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1389 = {
+			building_classes += university #University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1477 = {
+			owner_faction = hungary #Pest was an Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1560 = {
+			owner_faction = turkey #Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1896 = {
+			#the Eötvös College was founded in Budapest in 1896 by baron Loránd Eötvös; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
+		}
+	}
+}

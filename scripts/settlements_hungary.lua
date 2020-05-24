@@ -51,26 +51,3 @@ DefineSite("buda", {
 	},
 	Regions = {"europe"}
 })
-
-DefineSite("pest", {
-	Name = "Pest",
-	MapTemplate = "earth",
-	Position = {4274, 968},
-	Major = true,
-	CulturalNames = {
-		"magyar", "Pest"
-	},
-	HistoricalOwners = {
-		-264, "iazyge-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		896, "magyar-tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
-		919, "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1477, "hungary", -- Pest was an Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1560, "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall",
-		1389, 0, "university", -- University founded in Budapest in 1389; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- the Eötvös College was founded in Budapest in 1896 by baron Loránd Eötvös; Source: John Lukacs, "Budapest 1900: a historical portrait of a city and its culture", pp. 175-176.
-	},
-	Regions = {"europe"}
-})
