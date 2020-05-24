@@ -894,36 +894,6 @@ DefineSite("toulon", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("toulouse", {
-	Name = "Toulouse",
-	MapTemplate = "earth",
-	Position = {3867, 1048},
-	Major = true,
-	CulturalNames = {
-		"celt", "Tolosa",
-		"frankish", "Tolosa",
-		"french", "Toulouse", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-		"gaul", "Tolosa",
-		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Tolosa was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		481, "visigothia", -- Toulouse was a Visigothic possession in the 481-507 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "visigothia", -- Toulouse was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		526, "francia", -- Toulouse was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "neustria", -- Tolosa went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Toulouse was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		161, 395, "farm",
-		395, 0, "town_hall",
-		395, 0, "temple", -- Toulouse was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1230, 0, "university" -- University founded in Toulouse in 1230; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- Parlement or conseil souverain, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Toulouse in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("tours", {
 	Name = "Tours",
 	MapTemplate = "earth",
