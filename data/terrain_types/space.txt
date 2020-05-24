@@ -4,10 +4,7 @@ space = {
 	color = { 64 0 128 }
 	overlay = true
 	image_file = "terrain/space.png"
-	transition_image_file = "terrain/cliff_mask.png"
 	elevation_image_file = "terrain/cliff.png"
-	tiled_background = true
-	transition_mask = true
 	flags = {
 		space
 	}
@@ -17,6 +14,7 @@ space = {
 		dry_mud
 		desert_sand
 	}
+	solid_tiles = { 13 16 19 9 10 11 21 22 }
 	transition_tiles = {
 		any = {
 			north = { 1 4 7 }
