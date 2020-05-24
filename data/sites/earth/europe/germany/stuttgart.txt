@@ -1,7 +1,7 @@
 stuttgart = {
 	name = "Stuttgart"
-	map_template = western_europe
-	pos = { 158 161 }
+	map_template = central_europe
+	pos = { 162 161 }
 	major = true
 	regions = {
 		germany

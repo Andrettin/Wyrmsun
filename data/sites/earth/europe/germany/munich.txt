@@ -1,7 +1,7 @@
 munich = {
 	name = "Munich"
 	map_template = central_europe
-	pos = { 175 170 }
+	pos = { 177 170 }
 	major = true
 	cultural_names = {
 		#teuton = "München"
