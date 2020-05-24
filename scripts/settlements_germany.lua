@@ -258,51 +258,6 @@ DefineSite("fulda", {
 	Regions = {"germany"}
 })
 
-DefineSite("hamburg", {
-	Name = "Hamburg",
-	MapTemplate = "earth",
-	Position = {4065, 828},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Hamburg"
-	},
-	Cores = {
-		"saxon-tribe",
-		"germany", -- Hamburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Hamburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-264, "saxon-tribe" -- Hamburg's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("hanover", {
-	Name = "Hanover",
-	MapTemplate = "earth",
-	Position = {4063, 855},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Hanover" -- "Hannover"
-	},
-	Cores = {
-		"lombard-tribe",
-		"brunswick",
-		"germany", -- Hanover was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Hanover was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-264, "lombard-tribe" -- Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("karlsruhe", {
 	Name = "Karlsruhe",
 	MapTemplate = "earth",
@@ -363,28 +318,6 @@ DefineSite("konstanz", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("lubeck", {
-	Name = "Lubeck",
-	MapTemplate = "earth",
-	Position = {4083, 821},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Lubeck" -- "Lübeck"
-	},
-	Cores = {
-		"saxon-tribe",
-		"germany", -- Lübeck was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Lübeck was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-264, "saxon-tribe" -- Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
 	},
 	Regions = {"germany"}
 })
@@ -513,8 +446,9 @@ DefineSite("nuremberg", {
 
 DefineSite("oldenburg", {
 	Name = "Oldenburg",
-	MapTemplate = "earth",
-	Position = {4027, 839},
+	MapTemplate = "scandinavia",
+	Position = {26,324},
+	Major = true,
 	CulturalNames = {
 		"teuton", "Oldenburg"
 	},
@@ -529,8 +463,8 @@ DefineSite("oldenburg", {
 		919, "holy-rome" -- part of the Duchy of Saxony within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalBuildings = {
-		-3950, -3000, "farm",
-		-264, -0, "farm"
+		-3950, -3000, "town-hall",
+		-264, -0, "town-hall"
 	},
 	Regions = {"germany"}
 })

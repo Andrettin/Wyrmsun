@@ -87,8 +87,8 @@ DefineSite("sigtun", {
 
 DefineSite("stockholm", {
 	Name = "Stockholm",
-	MapTemplate = "earth",
-	Position = {4253, 693},
+	MapTemplate = "scandinavia",
+	Position = {178, 210},
 	Major = true,
 	Cores = {
 		"swede-tribe"
@@ -157,8 +157,8 @@ DefineSite("vastervik", {
 
 DefineSite("visby", {
 	Name = "Visby",
-	MapTemplate = "earth",
-	Position = {4259, 736},
+	MapTemplate = "scandinavia",
+	Position = {179, 255},
 	Major = true,
 	Cores = {
 		"gute-tribe"

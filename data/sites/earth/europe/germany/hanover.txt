@@ -1,0 +1,30 @@
+hanover = {
+	name = "Hanover" #"Hannover"
+	map_template = central_europe
+	pos = { 167 136 }
+	major = true
+	cores = {
+		lombard_tribe
+		brunswick
+		germany #Hanover was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome 
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		-264 = {
+			owner_faction = lombard_tribe #Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1648 = {
+			#Hanover was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+	}
+}

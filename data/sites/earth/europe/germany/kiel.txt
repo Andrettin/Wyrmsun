@@ -1,7 +1,7 @@
 kiel = {
 	name = "Kiel"
-	map_template = earth
-	pos = { 4068 811 }
+	map_template = scandinavia
+	pos = { 63 307 }
 	major = true
 	cores = {
 		hersing_tribe

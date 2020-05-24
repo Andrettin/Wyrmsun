@@ -111,8 +111,8 @@ DefineSite("hermansverk", {
 
 DefineSite("oslo", {
 	Name = "Oslo",
-	MapTemplate = "earth",
-	Position = {4085, 682},
+	MapTemplate = "scandinavia",
+	Position = {87, 199},
 	Major = true,
 	CulturalNames = {
 		"norse", "Oslo"

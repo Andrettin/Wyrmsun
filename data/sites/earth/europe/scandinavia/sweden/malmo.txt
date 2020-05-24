@@ -1,7 +1,7 @@
 malmo = {
 	name = "Malmo" #"Malmö"
-	map_template = earth
-	pos = { 4136 783 }
+	map_template = scandinavia
+	pos = { 107 296 }
 	major = true
 	
 	cores = {
