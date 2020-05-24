@@ -1,0 +1,15 @@
+friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, pp. 35, 903.
+	name = "Friedrich"
+	surname = "Barbarossa" #byname
+	#belonged to the Hohenstaufen dynasty
+	unit_type = unit_teuton_knight_lord
+	civilization = teuton
+	faction = holy_rome
+	gender = male
+	home_settlement = stuttgart #Swabia
+	deities = { christian_god }
+	#born in 1122; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 903.
+	#crowned king of Germany in 1152, whereupon he also assumed the title of Holy Roman Emperor; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 62.
+	#crowned Holy Roman Emperor by pope Hadrian IV in 1155; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 35.
+	#died in 1190; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 903.
+}
