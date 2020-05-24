@@ -1,0 +1,16 @@
+warsaw = {
+	name = "Warsaw"
+	map_template = central_europe
+	pos = { 216 141 }
+	major = true
+	regions = {
+		poland
+	}
+	
+	history = {
+		1097 = {
+			owner_faction = poland #part of the Kingdom of Poland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+	}
+}

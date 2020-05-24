@@ -62,29 +62,3 @@ DefineSite("narona", {
 	},
 	Regions = {"europe"}
 })
-
-DefineSite("zagreb", {
-	Name = "Zagreb",
-	MapTemplate = "earth",
-	Position = {4204, 1005},
-	Major = true,
-	CulturalNames = {
-		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Zagreb",
-		"teuton", "Agram"
-	},
-	Cores = {
-		"croatia"
-	},
-	HistoricalOwners = {
-		1477, "hungary", -- Agram was an Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1526, "austria", -- Zagreb's area became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "austria" -- Agram was a part of the Empire of Austria in 1815 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1477, 0, "town_hall",
-		1874, 0, "university" -- University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
-	},
-	Regions = {"europe"}
-})
-
