@@ -2,6 +2,7 @@ space = {
 	name = "Space"
 	character = *
 	color = { 64 0 128 }
+	minimap_color = { 17 1 25 }
 	overlay = true
 	image_file = "terrain/space.png"
 	elevation_image_file = "terrain/cliff.png"
