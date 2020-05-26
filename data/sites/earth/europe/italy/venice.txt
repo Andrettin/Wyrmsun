@@ -1,7 +1,7 @@
 venice = {
 	name = "Venice"
 	map_template = central_europe
-	pos = { 177 195 }
+	pos = { 179 189 }
 	major = true
 	cultural_names = {
 		#teuton = "Venedig"
