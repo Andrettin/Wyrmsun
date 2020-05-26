@@ -42,6 +42,7 @@ local keystrokes = {
   {"ENTER", "- write a message"},
   {"SPACE", "- goto last event"},
   {"TAB", "- toggle minimap mode"},
+  {"Shift-TAB", "- toggle minimap zoom"},
   {"^", "- select nothing"},
   {"#", "- select group"},
   {"##", "- center on group"},
@@ -115,6 +116,7 @@ local tips = {
 	-- Interface-related tips
 	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 	"Press TAB to toggle through the minimap modes.",
+	"Press Shift-TAB to zoom/unzoom the minimap in larger maps.",
 
 --	"Attack a chest to open it.",
 

@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
 - Added "Territories" minimap mode. Press TAB to toggle through the minimap modes.
 - Added minimap mode with the territories of each settlement.
+- Added support for zooming the minimap for maps with tile size larger than the pixel size of the minimap (e.g. 256x256 maps if the minimap is 128x128). Press Shift-TAB to zoom/unzoom the minimap.
 
 -----------------------------------------------------------------------
 - 3.5.4
