@@ -38,6 +38,10 @@ malmo = {
 			owner_faction = dane_tribe #Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
+		1097 = {
+			owner_faction = denmark #part of the Kingdom of Denmark c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1560 = {
 			owner_faction = denmark #Malmo was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
