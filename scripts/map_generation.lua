@@ -1730,7 +1730,7 @@ function CreateDecorations()
 						unit = CreateUnit("unit-bones", PlayerNumNeutral, {RandomX, RandomY})
 						Count = Count - 1
 					elseif (RandomNumber >= 999) then
-						if (GetTileTerrainName(RandomX, RandomY) == "dry-mud" or GetTileTerrainName(RandomX, RandomY) == "mud") then
+						if (GetTileTerrainName(RandomX, RandomY) == "dry_mud" or GetTileTerrainName(RandomX, RandomY) == "mud") then
 							unit = CreateUnit("unit-wyrm-skeleton", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						else
@@ -6054,7 +6054,7 @@ end
 
 function GetTerrainCivilizations(terrain)
 	local terrain_civilizations = {}
-	if (terrain == "dry-mud" or terrain == "cave-floor") then
+	if (terrain == "dry_mud" or terrain == "cave-floor") then
 		table.insert(terrain_civilizations, "dwarf")
 		table.insert(terrain_civilizations, "gnome")
 		table.insert(terrain_civilizations, "goblin")
