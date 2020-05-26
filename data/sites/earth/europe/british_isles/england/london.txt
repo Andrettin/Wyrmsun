@@ -1,0 +1,63 @@
+london = {
+	name = "London"
+	map_template = british_isles
+	pos = { 107 138 }
+	major = true
+	cultural_names = {
+		anglo_saxon = "Lunden" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		briton = "Londinium"
+		celt = "Londinium"
+		latin = "Londinium" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner_faction = rome #Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += town_hall
+		}
+		
+		604 = {
+			owner_faction = essex #London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+			building_classes += temple #a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+		}
+		
+		704 = {
+			#London possessed a bishopric as of 704; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 179.
+		}
+		
+		802 = {
+			owner_faction = middlesex #London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1097 = {
+			owner_faction = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1500 = {
+			#London had a population of 60,000 in 1500; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
+		}
+		
+		1560 = {
+			owner_faction = england #London was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1640 = {
+			#London had a population of 450,000 in 1640; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
+		}
+		
+		1789 = {
+			#London had a population of around 1,000,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
+		}
+		
+		1801 = {
+			#London had a population of 959,000 in 1801; Source: "Atlas de História Mundial", 2001.
+		}
+		
+		1836 = {
+			building_classes += university #University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

@@ -1,0 +1,27 @@
+dublin = {
+	name = "Dublin"
+	map_template = british_isles
+	pos = { 72 125 }
+	major = true
+	cultural_names = {
+		celt = "Eblana" #or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+	regions = {
+		british_isles
+	}
+	
+	history = {
+		802 = {
+			owner_faction = ireland #Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += town_hall
+		}
+		
+		1097 = {
+			owner_faction = ireland #part of the Ireland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1312 = {
+			building_classes += university #University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
+		}
+	}
+}

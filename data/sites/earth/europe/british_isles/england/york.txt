@@ -1,0 +1,56 @@
+york = {
+	name = "York"
+	map_template = british_isles
+	pos = { 98 116 }
+	major = true
+	cultural_names = {
+		anglo_saxon = "Eoforwic" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		briton = "Eboracum"
+		celt = "Eboracum"
+		latin = "Eboracum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		-264 = {
+			owner_faction = brigantes_tribe #York's environs were territory of the Brigantes in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		43 = {
+			owner_faction = rome #Eburacum/York was acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		161 = {
+			building_classes += stronghold #Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			building_classes -= town_hall
+			building_classes += barracks
+		}
+		
+		500 = {
+			owner_faction = dere_tribe #the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		}
+		
+		588 = {
+			owner_faction = bernicia #according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+		}
+		
+		654 = {
+			owner_faction = northumbria #Northumbria unified by Oswiu of Bernicia in 654
+		}
+		
+		735 = {
+			building_classes += temple #archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
+		}
+		
+		1097 = {
+			owner_faction = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1560 = {
+			owner_faction = england #York was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

@@ -491,28 +491,6 @@ DefineSite("durolipons", {
 	Regions = {"england"}
 })
 
-DefineSite("edinburgh", {
-	Name = "Edinburgh",
-	MapTemplate = "british_isles",
-	Position = {91, 106},
-	Major = true,
-	CulturalNames = {
-		"english", "Edinburgh"
-	},
-	HistoricalOwners = {
-		-27, "otalini-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		80, "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		802, "northumbria", -- Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-		1560, "scotland" -- Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-27, 0, "town_hall",
-		1582, 0, "university" -- University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"scotland"}
-})
-
 DefineSite("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
@@ -826,39 +804,6 @@ DefineSite("lichfield", {
 	},
 	HistoricalBuildings = {
 		669, 0, "temple" -- Lichfield became a bishopric in 669; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 132.
-	},
-	Regions = {"england"}
-})
-
-DefineSite("london", {
-	Name = "London",
-	MapTemplate = "british_isles",
-	Position = {109, 138},
-	Major = true,
-	CulturalNames = {
-		"anglo-saxon", "Lunden", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"briton", "Londinium",
-		"celt", "Londinium",
-		"english", "London",
-		"latin", "Londinium" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-	},
-	HistoricalOwners = {
-		410, "rome", -- Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		604, "essex", -- London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
-		802, "middlesex", -- London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-		1560, "england" -- London was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		410, 0, "town_hall",
-		604, 0, "temple", -- a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
-		-- London possessed a bishopric as of 704; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 142, 179.
-		1836, 0, "university" -- University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
-	HistoricalPopulation = {
-		1500, 60000, -- London had a population of 60,000 in 1500; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
-		1640, 450000, -- London had a population of 450,000 in 1640; Source: Lawrence Stone, "As Causas da Revolução Inglesa: 1529-1642", pp. 134-135.
-		1789, 1000000, -- London had a population of around 1,000,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
-		1801, 959000 -- London had a population of 959,000 in 1801; Source: "Atlas de História Mundial", 2001.
 	},
 	Regions = {"england"}
 })
@@ -1374,35 +1319,6 @@ DefineSite("worcester", {
 	},
 	HistoricalBuildings = {
 		680, 0, "temple" -- archbishop Theodore of Canterbury made Worcester into a separate diocese before 680; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 134.
-	},
-	Regions = {"england"}
-})
-
-DefineSite("york", {
-	Name = "York",
-	MapTemplate = "earth",
-	Position = {3815, 819},
-	Major = true,
-	CulturalNames = {
-		"anglo-saxon", "Eoforwic", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"briton", "Eboracum",
-		"celt", "Eboracum",
-		"english", "York",
-		"latin", "Eboracum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-	},
-	HistoricalOwners = {
-		-264, "brigantes-tribe", -- York's environs were territory of the Brigantes in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		43, "rome", -- Eburacum/York was acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		500, "dere-tribe", -- the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-		588, "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
-		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
-		1560, "england" -- York was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		43, 161, "town_hall",
-		161, 0, "stronghold", -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 0, "barracks",
-		735, 0, "temple" -- archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
 	},
 	Regions = {"england"}
 })

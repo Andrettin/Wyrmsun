@@ -1,0 +1,40 @@
+edinburgh = {
+	name = "Edinburgh"
+	map_template = british_isles
+	pos = { 91 106 }
+	major = true
+	regions = {
+		scotland
+	}
+	
+	history = {
+		-27 = {
+			owner_faction = otalini_tribe #British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+			building_classes += town_hall
+		}
+		
+		80 = {
+			owner_faction = rome #The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		161 = {
+			owner_faction = selgovae_tribe #The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		802 = {
+			owner_faction = northumbria #Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1097 = {
+			owner_faction = scotland #part of the Kingdom of Scotland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1560 = {
+			owner_faction = scotland #Edinburgh was a part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1582 = {
+			building_classes += university #University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}
