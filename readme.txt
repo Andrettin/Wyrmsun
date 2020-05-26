@@ -109,6 +109,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Territories" minimap mode. Press TAB to toggle through the minimap modes.
 - Added minimap mode with the territories of each settlement.
 - Added support for zooming the minimap for maps with tile size larger than the pixel size of the minimap (e.g. 256x256 maps if the minimap is 128x128). Press Shift-TAB to zoom/unzoom the minimap.
+- Simplified the appearance of terrain on the minimap. Each terrain type is now represented by a particular color (with seasonal variations).
 
 -----------------------------------------------------------------------
 - 3.5.4

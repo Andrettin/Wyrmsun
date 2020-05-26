@@ -6,6 +6,7 @@ pine_tree = {
 		U #deciduous tree
 	}
 	color = { 0 128 0 }
+	minimap_color = { 0 44 0 }
 	base_terrain_types = { grass }
 	overlay = true
 	image_file = "terrain/pine_tree.png"
@@ -20,6 +21,9 @@ pine_tree = {
 	season_image_files = {
 		autumn = "terrain/pine_tree_autumn.png"
 		winter = "terrain/pine_tree_snow.png"
+	}
+	season_minimap_colors = {
+		autumn = { 0 44 0 }
 	}
 	transition_tiles = {
 		any = {
