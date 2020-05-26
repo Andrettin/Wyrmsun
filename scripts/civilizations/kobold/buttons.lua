@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Mercenaries
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-kobold-footpad",
-	Key = "f", Hint = "Hire ~!Footpad", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-slasher",

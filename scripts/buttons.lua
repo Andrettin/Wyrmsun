@@ -1929,7 +1929,6 @@ DefineButton( { Pos = 2, Icon = "icon-red-potion",
 -- Load the buttons of all civilizations
 
 Load("scripts/civilizations/dwarf/buttons.lua")
-Load("scripts/civilizations/ettin/buttons.lua")
 Load("scripts/civilizations/frankish/buttons.lua")
 Load("scripts/civilizations/germanic/buttons.lua")
 Load("scripts/civilizations/gnome/buttons.lua")
@@ -1938,5 +1937,4 @@ Load("scripts/civilizations/goth/buttons.lua")
 Load("scripts/civilizations/kobold/buttons.lua")
 Load("scripts/civilizations/latin/buttons.lua")
 Load("scripts/civilizations/norse/buttons.lua")
-Load("scripts/civilizations/slav/buttons.lua")
 Load("scripts/civilizations/teuton/buttons.lua")

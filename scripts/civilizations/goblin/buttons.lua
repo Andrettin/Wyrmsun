@@ -86,50 +86,6 @@ DefineButton( { Pos = 2,
 	ForUnit = {"unit-goblin-dock"}
 })
 
--- Mercenaries --------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-goblin-thief",
-	Key = "t", Hint = "Hire ~!Thief", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 2,
-	Action = "train-unit", Value = "unit-goblin-swordsman",
-	Key = "s", Hint = "Hire ~!Swordsman", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-goblin-spearman",
-	Key = "i", Hint = "Hire ~!Impaler", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 4,
-	Action = "train-unit", Value = "unit-goblin-archer",
-	Key = "a", Hint = "Hire ~!Archer", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 6,
-	Action = "train-unit", Value = "unit-goblin-war-machine",
-	Key = "m", Hint = "Hire War ~!Machine", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 7,
-	Action = "train-unit", Value = "unit-goblin-glider",
-	Key = "g", Hint = "Hire ~!Glider", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 8,
-	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
-	Key = "p", Hint = "Hire Gun~!power Infantry", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Icon = "icon-goblin-broad-sword",

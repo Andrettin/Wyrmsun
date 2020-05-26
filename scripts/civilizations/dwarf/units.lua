@@ -1289,6 +1289,7 @@ DefineUnitType("unit-dwarven-thunderer", {
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-dwarven-dead-body",
+	ButtonKey = "t",
 	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "dwarf_selected_group",
@@ -1640,7 +1641,6 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	WeaponClasses = {"throwing_axe"},
 	HackDamage = true,
 	ButtonKey = "p",
-	ButtonHint = "Train Gry~!phon Rider",
 	RequirementsString = "Bastion and Lumber Mill",
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {

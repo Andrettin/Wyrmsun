@@ -97,60 +97,16 @@ DefineDependency("upgrade-teuton-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
 
-DefinePredependency("unit-teuton-stables",
-	{"upgrade-latin-civilization", 0}
-)
-
 DefineDependency("unit-teuton-stables",
 	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
-)
-
-DefinePredependency("unit-teuton-swordsman",
-	{"upgrade-suebi-civilization", 0, "upgrade-frankish-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-spearman",
-	{"upgrade-frankish-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-ritter",
-	{"upgrade-frankish-civilization", 0, "upgrade-gothic-civilization", 0}
 )
 
 DefineDependency("unit-teuton-ritter",
 	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}, "or", {"unit-norse-smithy", "unit-teuton-stables"}, "or", {"upgrade-mercenary-company"}
 )
 
-DefinePredependency("unit-teuton-town-hall",
-	{"upgrade_teutonic_civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-suebi-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-frankish-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-anglo-saxon-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-english-civilization", "upgrade-latin-civilization", 0}, "or", {"upgrade-gothic-civilization", "upgrade-latin-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-farm",
-	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-barracks",
-	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-lumber-mill",
-	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-smithy",
-	{"upgrade-latin-civilization", 0, "upgrade_norse_civilization", 0, "upgrade-slavic-civilization", 0}
-)
-
-DefinePredependency("unit-teuton-temple",
-	{"upgrade_norse_civilization", 0}
-)
-
 DefineDependency("unit-teuton-temple",
 	{"unit-teuton-lumber-mill"}
-)
-
-DefinePredependency("unit-teuton-market",
-	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-market",
@@ -165,16 +121,8 @@ DefineDependency("unit-teuton-priest",
 	{"upgrade-deity-christian-god"}, "or", {"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}, "or", {"upgrade-deity-frey"}
 )
 
-DefinePredependency("unit-teuton-dock",
-	{"upgrade_norse_civilization", 0}
-)
-
 DefineDependency("unit-teuton-dock",
 	{"unit-teuton-lumber-mill"}
-)
-
-DefinePredependency("unit-teuton-watch-tower",
-	{"upgrade_norse_civilization", 0}
 )
 
 DefineDependency("unit-teuton-kogge",

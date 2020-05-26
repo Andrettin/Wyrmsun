@@ -25,59 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePredependency("unit-norse-swordsman",
-	{"upgrade_norse_civilization"}
-)
-
 DefineDependency("unit-norse-longship",
 	{"unit-norse-smithy", "unit-norse-lumber-mill", "upgrade-engineering"},
 	"or", {"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}
-)
-
-DefinePredependency("unit-norse-town-hall",
-	{"upgrade_norse_civilization"}
-)
-
-DefinePredependency("unit-norse-farm",
-	{"upgrade_norse_civilization"}
-)
-
-DefinePredependency("unit-norse-barracks",
-	{"upgrade_norse_civilization"}
-)
-
-DefinePredependency("unit-norse-lumber-mill",
-	{"upgrade_norse_civilization"}
-)
-
-DefinePredependency("unit-norse-smithy",
-	{"upgrade_norse_civilization"}
-)
-
-DefinePredependency("unit-norse-temple",
-	{"upgrade_norse_civilization"}
 )
 
 DefineDependency("unit-norse-temple",
 	{"unit-norse-lumber-mill"}
 )
 
-DefinePredependency("unit-norse-dock",
-	{"upgrade_norse_civilization"}
-)
-
 DefineDependency("unit-norse-dock",
 	{"unit-norse-lumber-mill"}
 )
 
-DefinePredependency("unit-norse-market",
-	{"upgrade_norse_civilization"}
-)
-
 DefineDependency("unit-norse-market",
 	{"unit-norse-lumber-mill"}
-)
-
-DefinePredependency("unit-norse-watch-tower",
-	{"upgrade_norse_civilization"}
 )

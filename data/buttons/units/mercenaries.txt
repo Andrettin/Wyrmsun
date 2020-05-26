@@ -1,0 +1,89 @@
+hire_thief = {
+	pos = 1
+	action = train_unit_class
+	value = thief
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_infantry = {
+	pos = 2
+	action = train_unit_class
+	value = infantry
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_spearman = {
+	pos = 3
+	action = train_unit_class
+	value = spearman
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_shooter = {
+	pos = 4
+	action = train_unit_class
+	value = shooter
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_cavalry = {
+	pos = 5
+	action = train_unit_class
+	value = cavalry
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_siege_engine = {
+	pos = 6
+	action = train_unit_class
+	value = siege_engine
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_flying_rider = {
+	pos = 7
+	action = train_unit_class
+	value = flying_rider
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_gunpowder_infantry = {
+	pos = 8
+	action = train_unit_class
+	value = gunpowder_infantry
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}
+
+hire_glider = {
+	pos = 9
+	action = train_unit_class
+	value = glider
+	popup = popup_unit
+	unit_classes = {
+		mercenary_camp
+	}
+}

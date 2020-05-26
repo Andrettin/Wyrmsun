@@ -81,84 +81,10 @@ DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
 
 -- Units --------------------------------------------------------------
 
-DefineButton( { Pos = 6, Icon = "icon-dwarven-gryphon-rider",
-	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
-	Key = "p", Hint = "Train Gry~!phon Rider", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
-})
-
-DefineButton( { Pos = 7, Icon = "icon-dwarven-thunderer",
-	Action = "train-unit", Value = "unit-dwarven-thunderer",
-	Key = "t", Hint = "Train ~!Thunderer", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
-})
-
 DefineButton( { Pos = 2,
 	Action = "train-unit", Value = "unit-dwarven-ballista-warship",
 	Key = "b", Hint = "Build ~!Ballista Warship", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-dock"}
-})
-
--- Mercenaries ---------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-dwarven-axefighter",
-	Key = "a", Hint = "Hire ~!Axefighter", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 1, Icon = "icon-surghan-mercenary-axefighter",
-	Action = "train-unit", Value = "unit-surghan-mercenary-axefighter",
-	Key = "a", Hint = "Hire ~!Axefighter", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 2,
-	Action = "train-unit", Value = "unit-dwarven-guard",
-	Key = "g", Hint = "Hire ~!Guard", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-dwarven-scout",
-	Key = "s", Hint = "Hire ~!Scout", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-joruvellir-scout",
-	Key = "s", Hint = "Hire ~!Scout", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 4,
-	Action = "train-unit", Value = "unit-dwarven-yale-rider",
-	Key = "y", Hint = "Hire ~!Yale Rider", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 4,
-	Action = "train-unit", Value = "unit-joruvellir-yale-rider",
-	Key = "y", Hint = "Hire ~!Yale Rider", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 5,
-	Action = "train-unit", Value = "unit-dwarven-ballista",
-	Key = "b", Hint = "Hire ~!Ballista", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 6,
-	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
-	Key = "p", Hint = "Hire Gry~!phon Rider", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 7,
-	Action = "train-unit", Value = "unit-dwarven-thunderer",
-	Key = "t", Hint = "Hire ~!Thunderer", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
 })
 
 -- Researches ---------------------------------------------------------

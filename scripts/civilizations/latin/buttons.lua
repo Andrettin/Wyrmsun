@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Mercenaries ---------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-latin-legionary",
-	Key = "l", Hint = "Hire ~!Legionary", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
-DefineButton( { Pos = 3,
-	Action = "train-unit", Value = "unit-latin-javelineer",
-	Key = "j", Hint = "Hire ~!Javelineer", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",

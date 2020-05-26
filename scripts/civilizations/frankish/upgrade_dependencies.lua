@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePredependency("unit-frank-swordsman",
-	{"upgrade-frankish-civilization"}
-)
-
-DefinePredependency("unit-frank-spearman",
-	{"upgrade-frankish-civilization"}
-)
-
-DefinePredependency("unit-frank-horseman",
-	{"upgrade-frankish-civilization"}
-)
-
 DefineDependency("unit-frank-horseman",
 	{"unit-teuton-smithy", "unit-teuton-stables"}
 )

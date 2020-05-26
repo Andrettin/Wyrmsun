@@ -231,8 +231,6 @@ DefineUnitType("unit-goblin-thief", {
 	WeaponClasses = {"dagger"},
 	PierceDamage = true,
 	ButtonKey = "t",
-	ButtonHint = "Hire Goblin ~!Thief",
-	ButtonPos = 1,
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",

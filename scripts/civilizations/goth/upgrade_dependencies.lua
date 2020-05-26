@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePredependency("unit-gothic-horse-rider",
-	{"upgrade-gothic-civilization"}
-)
-
 DefineDependency("unit-gothic-horse-rider",
 	{"unit-teuton-smithy", "unit-teuton-stables"}
 )

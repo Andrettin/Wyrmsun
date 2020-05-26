@@ -33,14 +33,6 @@ DefineButton( { Pos = 2,
 	ForUnit = {"unit-norse-dock", "unit-teuton-dock"}
 })
 
--- Mercenaries ---------------------------------------------------------
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-norse-swordsman",
-	Key = "w", Hint = "Hire S~!wordsman", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Icon = "icon-odin",

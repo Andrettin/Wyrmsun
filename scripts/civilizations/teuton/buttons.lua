@@ -83,16 +83,6 @@ DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 	}
 })
 
--- Mercenaries ---------------------------------------------------------
-
---[[
-DefineButton( { Pos = 7,
-	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
-	Key = "p", Hint = "Hire Gun~!powder Infantry", Popup = "popup_unit",
-	ForUnit = {"unit-mercenary-camp"}
-})
---]]
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",
