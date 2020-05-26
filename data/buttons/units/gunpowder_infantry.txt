@@ -1,0 +1,9 @@
+train_gunpowder_infantry = {
+	pos = 7
+	action = train_unit_class
+	value = gunpowder_infantry
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}

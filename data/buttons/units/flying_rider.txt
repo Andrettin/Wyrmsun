@@ -1,0 +1,9 @@
+train_flying_rider = {
+	pos = 6
+	action = train_unit_class
+	value = flying_rider
+	popup = popup_unit
+	unit_classes = {
+		barracks
+	}
+}

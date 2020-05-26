@@ -83,21 +83,6 @@ DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
 	}
 })
 
--- Units ---------------------------------------------------------
-
-DefineButton( { Pos = 7,
-	Action = "train-unit", Value = "unit-teuton-gunpowder-infantry",
-	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-barracks", "unit-norse-barracks"}
-})
-
-DefineButton( { Pos = 1,
-	Action = "train-unit", Value = "unit-teuton-priest",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-deity-christian-god", "upgrade-holy-order"},
-	Key = "l", Hint = "Hire C~!leric", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-temple", "unit-norse-temple"}
-})
-
 -- Mercenaries ---------------------------------------------------------
 
 --[[

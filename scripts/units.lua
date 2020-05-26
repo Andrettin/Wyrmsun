@@ -3906,6 +3906,7 @@ DefineUnitType("unit-template-gunpowder-infantry", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	Gender = "male",
+	ButtonKey = "p",
 	RequirementsString = "Smithy and Gunpowder"
 } )
 

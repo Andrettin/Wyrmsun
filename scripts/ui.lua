@@ -1954,6 +1954,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit", RequirementsString = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "train_unit_class", RequirementsString = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "train_unit_class", RequirementsString = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), TypeRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
+				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
