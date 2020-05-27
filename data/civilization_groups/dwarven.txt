@@ -1,0 +1,4 @@
+dwarven = {
+	name = "Dwarven"
+	supergroup = dwarven
+}

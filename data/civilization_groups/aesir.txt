@@ -1,0 +1,4 @@
+aesir = {
+	name = "Aesir"
+	supergroup = aesir
+}

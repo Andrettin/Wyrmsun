@@ -2,6 +2,7 @@ elf = {
 	name = "Elf"
 	parent_civilization = neutral
 	species = elf
+	group = elven
 	visible = false
 	playable = false
 	interface = germanic

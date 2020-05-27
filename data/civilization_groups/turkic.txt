@@ -1,0 +1,4 @@
+turkic = {
+	name = "Turkic"
+	supergroup = altaic
+}

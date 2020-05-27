@@ -30,7 +30,7 @@ DefineCivilization("dutch", { -- information for later use
 	Display = "Dutch",
 	Playable = false,
 	Visible = true,
-	Species = "human",
+	Group = "continental_west_germanic",
 	ParentCivilization = "teuton",
 	Language = "dutch",
 	Adjective = "Dutch",
@@ -49,6 +49,7 @@ DefineCivilization("dwarf", {
 	Display = "Dwarf",
 	Visible = true,
 	Species = "dwarf",
+	Group = "dwarven",
 	ParentCivilization = "neutral",
 	Language = "dwarven",
 	Interface = "dwarven",
@@ -537,6 +538,7 @@ DefineCivilization("ettin", {
 	Display = "Ettin",
 	Visible = true,
 	Species = "ettin",
+	Group = "ettin",
 	ParentCivilization = "neutral",
 --	Language = "ettin",
 	Adjective = "Ettin",
@@ -599,7 +601,7 @@ DefineCivilization("ettin", {
 DefineCivilization("germanic", {
 	Display = "Germanic",
 	Visible = true,
-	Species = "human",
+	Group = "old_germanic",
 	ParentCivilization = "neutral",
 	Language = "proto-germanic",
 	Interface = "germanic",
@@ -651,7 +653,7 @@ DefineCivilization("germanic", {
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
 	Display = "Celt",
 	Visible = true,
-	Species = "human",
+	Group = "old_celtic",
 	Language = "proto-celtic",
 	ParentCivilization = "germanic",
 	Adjective = "Celtic",
@@ -682,6 +684,7 @@ DefineCivilization("gnome", {
 	Display = "Gnome",
 	Visible = true,
 	Species = "gnome",
+	Group = "gnomish",
 	ParentCivilization = "dwarf",
 	Language = "gnomish",
 	Adjective = "Gnomish",
@@ -705,6 +708,7 @@ DefineCivilization("goblin", {
 	Display = "Goblin",
 	Visible = true,
 	Species = "goblin",
+	Group = "goblin",
 	ParentCivilization = "neutral",
 	Language = "goblin",
 	Interface = "goblin",
@@ -757,6 +761,7 @@ DefineCivilization("kobold", {
 	Display = "Kobold",
 	Visible = true,
 	Species = "kobold",
+	Group = "kobold",
 	ParentCivilization = "neutral",
 	Language = "kobold",
 	Adjective = "Kobold",
@@ -791,6 +796,7 @@ DefineCivilization("minotaur", {
 	Display = "Minotaur",
 	Visible = false,
 	Species = "minotaur",
+	Group = "minotaur",
 	ParentCivilization = "neutral",
 	Adjective = "Minotaur",
 	Playable = false,
@@ -800,7 +806,7 @@ DefineCivilization("minotaur", {
 DefineCivilization("teuton", {
 	Display = "Teuton",
 	Visible = true,
-	Species = "human",
+	Group = "continental_west_germanic",
 	Language = "high-german",
 	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
@@ -1022,7 +1028,7 @@ DefineCivilization("teuton", {
 DefineCivilization("anglo-saxon", {
 	Display = "Anglo-Saxon",
 	Visible = true,
-	Species = "human",
+	Group = "anglo_saxon",
 	Language = "old-english",
 	ParentCivilization = "teuton",
 	Adjective = "Anglo-Saxon",
@@ -1072,7 +1078,7 @@ DefineCivilization("anglo-saxon", {
 DefineCivilization("english", {
 	Display = "English",
 	Visible = true,
-	Species = "human",
+	Group = "anglo_saxon",
 	Language = "english",
 	ParentCivilization = "anglo-saxon",
 	Adjective = "English",
@@ -1208,7 +1214,7 @@ DefineCivilization("english", {
 DefineCivilization("frankish", {
 	Display = "Frankish",
 	Visible = true,
-	Species = "human",
+	Group = "continental_west_germanic",
 	Language = "old-frankish",
 	ParentCivilization = "teuton",
 	Adjective = "Frankish",
@@ -1247,7 +1253,7 @@ DefineCivilization("frankish", {
 DefineCivilization("suebi", {
 	Display = "Suebi",
 	Visible = true,
-	Species = "human",
+	Group = "continental_west_germanic",
 	Language = "old-high-german",
 	ParentCivilization = "teuton",
 	Adjective = "Suebi",
@@ -1271,7 +1277,7 @@ DefineCivilization("suebi", {
 DefineCivilization("gaul", {
 	Display = "Gaul",
 	Visible = false,
-	Species = "human",
+	Group = "gaulish",
 	Language = "gaulish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gaul",
@@ -1285,7 +1291,7 @@ DefineCivilization("gaul", {
 DefineCivilization("briton", {
 	Display = "Briton",
 	Visible = false,
-	Species = "human",
+	Group = "brythonic",
 	Language = "british",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Briton",
@@ -1312,7 +1318,7 @@ DefineCivilization("briton", {
 DefineCivilization("welsh", {
 	Display = "Welsh",
 	Visible = false,
-	Species = "human",
+	Group = "brythonic",
 	Language = "welsh",
 	ParentCivilization = "briton",
 	Adjective = "Welsh",
@@ -1367,7 +1373,7 @@ DefineCivilization("welsh", {
 DefineCivilization("gael", {
 	Display = "Gael",
 	Visible = false,
-	Species = "human",
+	Group = "gaelic",
 	Language = "irish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gael",
@@ -1384,6 +1390,7 @@ DefineCivilization("ogre", {
 	Display = "Ogre",
 	Visible = false,
 	Species = "ogre",
+	Group = "ettin",
 	ParentCivilization = "orc",
 	Adjective = "Ogre",
 	Playable = false,
@@ -1450,7 +1457,7 @@ DefineCivilization("ogre", {
 DefineCivilization("latin", {
 	Display = "Latin",
 	Visible = true,
-	Species = "human",
+	Group = "latin",
 	Language = "latin",
 	ParentCivilization = "teuton",
 	Adjective = "Latin",
@@ -1561,39 +1568,16 @@ DefineCivilization("latin", {
 DefineCivilization("castillian", {
 	Display = "Castillian",
 	Visible = false,
-	Species = "human",
+	Group = "latin",
 	ParentCivilization = "latin",
 	Adjective = "Castillian",
 	Playable = false
 })
 
-DefineCivilization("french", {
-	Display = "French",
-	Visible = false,
-	Species = "human",
-	ParentCivilization = "latin",
-	Adjective = "French",
-	Playable = false,
-	PersonalNames = {
-		"male", "Bellaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Bonnaud", -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-		"male", "Renaud" -- Source: http://www.cnrtl.fr/definition/lourdaud//1
-	},
-	--[[
-	SettlementNames = {
-		"Hamelet", -- Source: http://www.cnrtl.fr/definition/hameau
-		"Hamelin", -- Source: http://www.cnrtl.fr/definition/hameau
-		"Hem", -- Source: http://www.cnrtl.fr/definition/hameau
-		"Le Hamel", -- Source: http://www.cnrtl.fr/definition/hameau
-		"Luxembourg"
-	}
-	--]]
-})
-
 DefineCivilization("italian", {
 	Display = "Italian",
 	Visible = false,
-	Species = "human",
+	Group = "latin",
 	ParentCivilization = "latin",
 	Adjective = "Italian",
 	Playable = false,
@@ -1606,7 +1590,7 @@ DefineCivilization("italian", {
 DefineCivilization("portuguese", {
 	Display = "Portuguese",
 	Visible = false,
-	Species = "human",
+	Group = "latin",
 	ParentCivilization = "latin",
 	Adjective = "Portuguese",
 	Playable = false,
@@ -1618,7 +1602,7 @@ DefineCivilization("portuguese", {
 DefineCivilization("romanian", {
 	Display = "Romanian",
 	Visible = false,
-	Species = "human",
+	Group = "latin",
 	ParentCivilization = "latin",
 	Adjective = "Romanian",
 	Playable = false
@@ -1627,7 +1611,7 @@ DefineCivilization("romanian", {
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
 	Display = "Basque",
 	Visible = false,
-	Species = "human",
+	Group = "old_european",
 	Language = "basque",
 	ParentCivilization = "germanic",
 	Adjective = "Basque",
@@ -1637,7 +1621,7 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 DefineCivilization("etruscan", {
 	Display = "Etruscan",
 	Visible = false,
-	Species = "human",
+	Group = "old_european",
 	Language = "etruscan",
 	ParentCivilization = "latin",
 	Adjective = "Etruscan",
@@ -1650,7 +1634,7 @@ DefineCivilization("etruscan", {
 DefineCivilization("goth", {
 	Display = "Goth",
 	Visible = true,
-	Species = "human",
+	Group = "east_germanic",
 	Language = "gothic",
 	ParentCivilization = "teuton",
 	Adjective = "Gothic",
@@ -1686,7 +1670,7 @@ DefineCivilization("goth", {
 DefineCivilization("greek", {
 	Display = "Greek",
 	Visible = false,
-	Species = "human",
+	Group = "hellenic",
 	Language = "greek",
 	ParentCivilization = "latin",
 	Adjective = "Greek",
@@ -1789,7 +1773,7 @@ DefineCivilization("greek", {
 DefineCivilization("assyrian", {
 	Display = "Assyrian",
 	Visible = false,
-	Species = "human",
+	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Assyrian",
 	Playable = false,
@@ -1802,7 +1786,7 @@ DefineCivilization("assyrian", {
 DefineCivilization("babylonian", {
 	Display = "Babylonian",
 	Visible = false,
-	Species = "human",
+	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Babylonian",
 	Playable = false,
@@ -1815,7 +1799,7 @@ DefineCivilization("babylonian", {
 DefineCivilization("chinese", {
 	Display = "Chinese",
 	Visible = false,
-	Species = "human",
+	Group = "sinic",
 	ParentCivilization = "greek",
 	Adjective = "Chinese",
 	Playable = false,
@@ -1827,7 +1811,7 @@ DefineCivilization("chinese", {
 DefineCivilization("egyptian", {
 	Display = "Egyptian",
 	Visible = false,
-	Species = "human",
+	Group = "egyptian",
 	ParentCivilization = "greek",
 	Adjective = "Egyptian",
 	Playable = false,
@@ -1843,7 +1827,7 @@ DefineCivilization("egyptian", {
 DefineCivilization("hebrew", {
 	Display = "Hebrew",
 	Visible = false,
-	Species = "human",
+	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Hebrew",
 	Playable = false
@@ -1852,7 +1836,7 @@ DefineCivilization("hebrew", {
 DefineCivilization("hittite", {
 	Display = "Hittite",
 	Visible = false,
-	Species = "human",
+	Group = "anatolian",
 --	Language = "hittite",
 	ParentCivilization = "greek",
 	Adjective = "Hittite",
@@ -1865,7 +1849,7 @@ DefineCivilization("hittite", {
 DefineCivilization("illyrian", {
 	Display = "Illyrian",
 	Visible = false,
-	Species = "human",
+	Group = "hellenic",
 	Language = "illyrian",
 	ParentCivilization = "greek",
 	Adjective = "Illyrian",
@@ -1878,7 +1862,7 @@ DefineCivilization("illyrian", {
 DefineCivilization("minoan", {
 	Display = "Minoan",
 	Visible = false,
-	Species = "human",
+	Group = "old_european",
 	Language = "minoan",
 	ParentCivilization = "greek",
 	Adjective = "Minoan",
@@ -1888,7 +1872,7 @@ DefineCivilization("minoan", {
 DefineCivilization("norse", {
 	Display = "Norse",
 	Visible = true,
-	Species = "human",
+	Group = "scandinavian",
 	Language = "old-norse",
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
@@ -1933,7 +1917,7 @@ DefineCivilization("norse", {
 DefineCivilization("baltic", {
 	Display = "Baltic",
 	Visible = false,
-	Species = "human",
+	Group = "baltic",
 --	Language = "lithuanian",
 	ParentCivilization = "norse",
 	Adjective = "Baltic",
@@ -1946,7 +1930,7 @@ DefineCivilization("baltic", {
 DefineCivilization("uralic", {
 	Display = "Uralic",
 	Visible = false,
-	Species = "human",
+	Group = "uralic",
 	Language = "proto-uralic",
 	ParentCivilization = "germanic",
 	Adjective = "Uralic",
@@ -1956,7 +1940,7 @@ DefineCivilization("uralic", {
 DefineCivilization("finnish", {
 	Display = "Finnish",
 	Visible = false,
-	Species = "human",
+	Group = "uralic",
 	Language = "finnish",
 	ParentCivilization = "norse",
 	Adjective = "Finnish",
@@ -1967,7 +1951,7 @@ DefineCivilization("finnish", {
 DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, such as the Oretanians
 	Display = "Iberian",
 	Visible = false,
-	Species = "human",
+	Group = "old_european",
 	ParentCivilization = "germanic",
 	Adjective = "Iberian",
 	Playable = false,
@@ -1977,7 +1961,7 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 DefineCivilization("magyar", {
 	Display = "Magyar",
 	Visible = false,
-	Species = "human",
+	Group = "uralic",
 --	Language = "hungarian",
 	ParentCivilization = "teuton",
 	Adjective = "Magyar",
@@ -1988,7 +1972,7 @@ DefineCivilization("magyar", {
 DefineCivilization("persian", {
 	Display = "Persian",
 	Visible = false,
-	Species = "human",
+	Group = "iranian",
 	Language = "avestan",
 	ParentCivilization = "greek",
 	Adjective = "Persian",
@@ -1998,7 +1982,7 @@ DefineCivilization("persian", {
 DefineCivilization("phoenician", {
 	Display = "Phoenician",
 	Visible = false,
-	Species = "human",
+	Group = "semitic",
 	ParentCivilization = "persian",
 	Adjective = "Phoenician",
 	Playable = false,
@@ -2011,7 +1995,7 @@ DefineCivilization("phoenician", {
 DefineCivilization("phrygian", {
 	Display = "Phrygian",
 	Visible = false,
-	Species = "human",
+	Group = "hellenic",
 	Language = "phrygian",
 	ParentCivilization = "greek",
 	Adjective = "Phrygian",
@@ -2024,7 +2008,7 @@ DefineCivilization("phrygian", {
 DefineCivilization("slav", {
 	Display = "Slav",
 	Visible = false,
-	Species = "human",
+	Group = "old_slavic",
 	Language = "proto-slavic",
 	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Adjective = "Slavic",
@@ -2081,7 +2065,7 @@ DefineCivilization("slav", {
 DefineCivilization("sumerian", {
 	Display = "Sumerian",
 	Visible = false,
-	Species = "human",
+	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Sumerian",
 	Playable = false,
@@ -2094,7 +2078,7 @@ DefineCivilization("sumerian", {
 DefineCivilization("thracian", {
 	Display = "Thracian",
 	Visible = false,
-	Species = "human",
+	Group = "hellenic",
 	Language = "thracian",
 	ParentCivilization = "greek",
 	Adjective = "Thracian",
@@ -2108,6 +2092,7 @@ DefineCivilization("treant", {
 	Display = "Treant",
 	Visible = false,
 	Species = "treant",
+	Group = "treant",
 	ParentCivilization = "neutral",
 	Adjective = "Treant",
 	Playable = false,
@@ -2178,7 +2163,7 @@ DefineCivilization("treant", {
 DefineCivilization("turkish", {
 	Display = "Turkish",
 	Visible = false,
-	Species = "human",
+	Group = "turkic",
 	ParentCivilization = "greek", -- so that it can use Greek/Latin units and buildings
 	Adjective = "Turkish",
 	Playable = false
@@ -2187,12 +2172,10 @@ DefineCivilization("turkish", {
 DefineCivilization("aztec", {
 	Display = "Aztec",
 	Visible = false,
-	Species = "human",
+	Group = "mesoamerican",
 	ParentCivilization = "greek",
 	Adjective = "Aztec",
-	Playable = false,
-	HistoricalUpgrades = {
-	}
+	Playable = false
 })
 
 -- Cyclops names: Arges ("Vivid"), Brontes ("Thunderer"), Polyphemus (name means "many-voiced"), Steropes ("Lightner"), Tepegoz (an ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; Tepe means "top, crown of the head" and Göz means "eye"), Depeghoz (Depêghöz, same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424)
@@ -2203,6 +2186,8 @@ DefineCivilization("aesir", {
 	Display = "Aesir",
 	Visible = false,
 	ParentCivilization = "neutral",
+	Group = "aesir",
+	Species = "einherjar",
 	Language = "old-norse",
 	Adjective = "Aesir",
 	DefaultColor = "blue",

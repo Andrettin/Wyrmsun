@@ -1,0 +1,4 @@
+ettin = {
+	name = "Ettin"
+	supergroup = ettin
+}

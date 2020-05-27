@@ -2,6 +2,7 @@ orc = {
 	name = "Orc"
 	parent_civilization = neutral
 	species = orc
+	group = ettin
 	visible = false
 	playable = false
 	interface = goblin

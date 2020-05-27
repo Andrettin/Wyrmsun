@@ -1,0 +1,4 @@
+scandinavian = {
+	name = "Scandinavian"
+	supergroup = germanic
+}

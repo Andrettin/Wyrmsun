@@ -1,0 +1,3 @@
+demonic = {
+	name = "Demonic"
+}

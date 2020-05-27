@@ -1,0 +1,4 @@
+baltic = {
+	name = "Baltic"
+	species = human
+}

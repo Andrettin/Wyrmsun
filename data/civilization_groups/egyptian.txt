@@ -1,0 +1,4 @@
+egyptian = {
+	name = "Egyptian"
+	supergroup = egyptian
+}

@@ -1,0 +1,4 @@
+hellenic = {
+	name = "Hellenic"
+	species = human
+}

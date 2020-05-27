@@ -2,6 +2,7 @@ troll = {
 	name = "Troll"
 	parent_civilization = neutral
 	species = troll
+	group = troll
 	visible = false
 	playable = false
 	interface = goblin

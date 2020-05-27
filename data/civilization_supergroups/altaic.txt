@@ -1,0 +1,4 @@
+altaic = {
+	name = "Altaic"
+	species = human
+}

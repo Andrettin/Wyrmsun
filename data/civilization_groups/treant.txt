@@ -1,0 +1,4 @@
+treant = {
+	name = "Treant"
+	supergroup = treant
+}

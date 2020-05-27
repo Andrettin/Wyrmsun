@@ -1,0 +1,3 @@
+ettin = {
+	name = "Ettin"
+}

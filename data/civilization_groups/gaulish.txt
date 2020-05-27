@@ -1,0 +1,4 @@
+gaulish = {
+	name = "Gaulish"
+	supergroup = celtic
+}

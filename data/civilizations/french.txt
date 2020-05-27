@@ -1,0 +1,28 @@
+french = {
+	name = "French"
+	parent_civilization = latin
+	group = latin
+	visible = false
+	playable = false
+	default_color = blue
+	
+	personal_names = {
+		male = {
+			"Bellaud" #Source: http://www.cnrtl.fr/definition/lourdaud//1
+			"Bonnaud" #Source: http://www.cnrtl.fr/definition/lourdaud//1
+			"Renaud" #Source: http://www.cnrtl.fr/definition/lourdaud//1
+		}
+		
+		female = {
+			"Anne"
+		}
+	}
+	
+	#settlement_names = {
+	#	"Hamelet" #Source: http://www.cnrtl.fr/definition/hameau
+	#	"Hamelin" #Source: http://www.cnrtl.fr/definition/hameau
+	#	"Hem" #Source: http://www.cnrtl.fr/definition/hameau
+	#	"Le Hamel" #Source: http://www.cnrtl.fr/definition/hameau
+	#	"Luxembourg"
+	#}
+}

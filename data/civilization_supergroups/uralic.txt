@@ -1,0 +1,4 @@
+uralic = {
+	name = "Uralic"
+	species = human
+}

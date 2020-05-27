@@ -1,0 +1,4 @@
+demonic = {
+	name = "Demonic"
+	supergroup = demonic
+}

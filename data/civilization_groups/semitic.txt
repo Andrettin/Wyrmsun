@@ -1,0 +1,4 @@
+semitic = {
+	name = "Semitic"
+	supergroup = semitic
+}

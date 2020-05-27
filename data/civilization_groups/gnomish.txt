@@ -1,0 +1,4 @@
+gnomish = {
+	name = "Gnomish"
+	supergroup = dwarven
+}

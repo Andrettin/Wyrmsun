@@ -1,0 +1,4 @@
+slavic = {
+	name = "Slavic"
+	species = human
+}

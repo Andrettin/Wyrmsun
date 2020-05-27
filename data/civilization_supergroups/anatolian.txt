@@ -1,0 +1,4 @@
+anatolian = {
+	name = "Anatolian"
+	species = human
+}

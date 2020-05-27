@@ -1,0 +1,4 @@
+sinic = {
+	name = "Sinic"
+	supergroup = sinic
+}
