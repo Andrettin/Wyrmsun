@@ -85,29 +85,6 @@ DefineSite("sigtun", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("stockholm", {
-	Name = "Stockholm",
-	MapTemplate = "scandinavia",
-	Position = {178, 210},
-	Major = true,
-	Cores = {
-		"swede-tribe"
-	},
-	CulturalNames = {
-		"germanic", "Stukkahulma", -- tentative rendering of "Stockholm" in Proto-Germanic
-		"norse", "Stockholm"
-	},
-	HistoricalOwners = {
-		{-2800, 12, 30}, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-		-264, "swede-tribe", -- tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "sweden" -- political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		{-2800, 12, 30}, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("torsburgen", {
 	Name = "Torsburgen",
 	MapTemplate = "earth",

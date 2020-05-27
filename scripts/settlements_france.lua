@@ -631,36 +631,6 @@ DefineSite("orleans", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("paris", {
-	Name = "Paris",
-	MapTemplate = "western_europe",
-	Position = {117, 160},
-	Major = true,
-	CulturalNames = {
-		"celt", "Lutetia",
-		"frankish", "Parisii",
-		"french", "Paris",
-		"gaul", "Lutetia",
-		"latin", "Lutetia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, "rome", -- Paris was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Paris became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51, 53.
-		561, "neustria", -- Parisii went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Paris was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		161, 0, "town_hall",
-		395, 0, "temple", -- Paris was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1250, 0, "university" -- University existent in Paris in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-	},
-	HistoricalPopulation = {
-		1789, 500000 -- Paris had a population of 500,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("perpignan", {
 	Name = "Perpignan",
 	MapTemplate = "earth",

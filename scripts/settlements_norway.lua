@@ -109,27 +109,6 @@ DefineSite("hermansverk", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("oslo", {
-	Name = "Oslo",
-	MapTemplate = "scandinavia",
-	Position = {87, 199},
-	Major = true,
-	CulturalNames = {
-		"norse", "Oslo"
-	},
-	Cores = {
-		"norway",
-		"vingulmark"
-	},
-	HistoricalOwners = {
-		824, "vingulmark", -- Gandalf became king of Vingulmark when Gudrod Yngling died; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
-	},
-	HistoricalBuildings = {
-		824, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("tonsberg", {
 	Name = "Tonsberg",
 	MapTemplate = "earth",
