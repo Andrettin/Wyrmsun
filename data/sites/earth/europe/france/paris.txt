@@ -1,7 +1,7 @@
 paris = {
 	name = "Paris"
 	map_template = western_europe
-	pos = { 117 160 }
+	pos = { 116 162 }
 	major = true
 	
 	cultural_names = {
