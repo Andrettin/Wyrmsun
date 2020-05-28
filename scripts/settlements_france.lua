@@ -324,33 +324,6 @@ DefineSite("clermont-ferrand", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("dijon", {
-	Name = "Dijon",
-	MapTemplate = "earth",
-	Position = {3955, 972},
-	Major = true,
-	CulturalNames = {
-		"frankish", "Divio",
-		"french", "Dijon"
-	},
-	HistoricalOwners = {
-		-71, "aedui-tribe", -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-		481, "burgundy", -- Dijon's area was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "burgundy", -- Dijon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia", -- Divio went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Dijon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		-71, 0, "town_hall"
-	},
-	HistoricalUnits = {
-		-- some troops to defend against the Suebi
-		-71, -61, "unit-teuton-swordsman", 6000, "aedui-tribe",
-		-71, -61, "unit-teuton-archer", 3000, "aedui-tribe"
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("embrun", {
 	Name = "Embrun",
 	MapTemplate = "earth",
@@ -858,29 +831,6 @@ DefineSite("tours", {
 		395, 0, "temple" -- Tours was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		-- Archbishopric existent in Tours during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		-- Alcuin received the greater abbey of St. Martin at Tours from Charlemagne in 796; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("troyes", {
-	Name = "Troyes",
-	MapTemplate = "earth",
-	Position = {3923, 952},
-	CulturalNames = {
-		"frankish", "Trecae",
-		"french", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalOwners = {
-		395, "rome", -- Troyes' area was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Troyes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia", -- Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		782, "francia",
-		1789, "france" -- Troyes was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		{486, 12, 30}, 782, "farm",
-		782, 0, "temple" -- Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
-		-- Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"france", "gaul"}
 })
