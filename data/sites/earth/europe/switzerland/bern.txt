@@ -1,0 +1,16 @@
+bern = {
+	name = "Bern"
+	map_template = western_europe
+	pos = { 147 181 }
+	major = true
+	regions = {
+		europe
+	}
+	
+	history = {
+		1097 = {
+			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+	}
+}
