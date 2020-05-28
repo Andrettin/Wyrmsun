@@ -1,7 +1,7 @@
 dijon = {
 	name = "Dijon"
 	map_template = western_europe
-	pos = { 139 178 }
+	pos = { 135 177 }
 	major = true
 	cultural_names = {
 		frankish = "Divio"
