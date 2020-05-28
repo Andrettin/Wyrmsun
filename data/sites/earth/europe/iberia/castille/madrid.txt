@@ -1,0 +1,17 @@
+madrid = {
+	name = "Madrid"
+	map_template = western_europe
+	pos = { 74 220 }
+	major = true
+	
+	regions = {
+		iberia
+	}
+	
+	history = {
+		1097 = {
+			owner_faction = castille #part of the Kingdom of Castille c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+	}
+}
