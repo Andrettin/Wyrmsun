@@ -46,21 +46,21 @@ end
 
 function ErrorMenu(errmsg)
   local menu = WarMenu(nil, panel(4), false)
-  menu:setSize(288 * get_scaled_factor(), 128 * get_scaled_factor())
-  menu:setPosition((Video.Width - 288 * get_scaled_factor()) / 2, (Video.Height - 128 * get_scaled_factor()) / 2)
+  menu:setSize(288 * get_scale_factor(), 128 * get_scale_factor())
+  menu:setPosition((Video.Width - 288 * get_scale_factor()) / 2, (Video.Height - 128 * get_scale_factor()) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel(_("Error:"), 144 * get_scaled_factor(), 11 * get_scaled_factor())
+  menu:addLabel(_("Error:"), 144 * get_scale_factor(), 11 * get_scale_factor())
 
   local l = MultiLineLabel(errmsg)
   l:setFont(Fonts["large"])
   l:setAlignment(MultiLineLabel.CENTER)
   l:setVerticalAlignment(MultiLineLabel.CENTER)
-  l:setLineWidth(270 * get_scaled_factor())
-  l:setWidth(270 * get_scaled_factor())
-  l:setHeight(41 * get_scaled_factor())
+  l:setLineWidth(270 * get_scale_factor())
+  l:setWidth(270 * get_scale_factor())
+  l:setHeight(41 * get_scale_factor())
   l:setBackgroundColor(dark)
-  menu:add(l, 9 * get_scaled_factor(), 38 * get_scaled_factor())
+  menu:add(l, 9 * get_scale_factor(), 38 * get_scale_factor())
 
   menu:addHalfButton("~!OK", "o", 92, 80, function() menu:stop() end)
 
@@ -77,10 +77,10 @@ function addPlayersList(menu, numplayers)
 
   menu:writeLargeText(_("Players"), sx * 11, sy*3)
   for i=1,8 do
-    players_name[i] = menu:writeText(_("Player")..i, sx * 11, sy*4 + i*18 * get_scaled_factor())
-    players_state[i] = menu:writeText(_("Preparing"), sx * 11 + 80 * get_scaled_factor(), sy*4 + i*18 * get_scaled_factor())
+    players_name[i] = menu:writeText(_("Player")..i, sx * 11, sy*4 + i*18 * get_scale_factor())
+    players_state[i] = menu:writeText(_("Preparing"), sx * 11 + 80 * get_scale_factor(), sy*4 + i*18 * get_scale_factor())
   end
-  numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144 * get_scaled_factor())
+  numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144 * get_scale_factor())
 
   local function updatePlayers()
     local connected_players = 0
@@ -124,31 +124,31 @@ function RunJoiningMapMenu(s)
 	menu = WarMenu(_("Joining Game: Map"))
 
 	menu:writeLargeText(_("Map"), sx, sy*3)
-	menu:writeText(_("Name:"), sx, sy*3+30 * get_scaled_factor())
-	descr = menu:writeText(description, sx+70 * get_scaled_factor(), sy*3+30 * get_scaled_factor())
-	menu:writeText(_("File:"), sx, sy*3+50 * get_scaled_factor())
-	maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+70 * get_scaled_factor(), sy*3+50 * get_scaled_factor())
-	menu:writeText(_("Players:"), sx, sy*3+70 * get_scaled_factor())
-	players = menu:writeText(numplayers, sx+70 * get_scaled_factor(), sy*3+70 * get_scaled_factor())
+	menu:writeText(_("Name:"), sx, sy*3+30 * get_scale_factor())
+	descr = menu:writeText(description, sx+70 * get_scale_factor(), sy*3+30 * get_scale_factor())
+	menu:writeText(_("File:"), sx, sy*3+50 * get_scale_factor())
+	maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+70 * get_scale_factor(), sy*3+50 * get_scale_factor())
+	menu:writeText(_("Players:"), sx, sy*3+70 * get_scale_factor())
+	players = menu:writeText(numplayers, sx+70 * get_scale_factor(), sy*3+70 * get_scale_factor())
 
-	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scaled_factor(), function() end)
+	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), function() end)
 	fow:setMarked(true)
 	ServerSetupState.FogOfWar = 1
 	fow:setEnabled(true)
 	fow:setMarked(int2bool(ServerSetupState.FogOfWar))
-	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scaled_factor(), function() end)
+	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), function() end)
 	revealmap:setEnabled(true)
 	revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scaled_factor(), function() end)
+	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scale_factor(), function() end)
 	no_randomness:setEnabled(true)
 	no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scaled_factor(), function() end)
+	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), function() end)
 	computer_opponents:setEnabled(true)
 	computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 
 	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-	local race = menu:addDropDown(civilization_list, sx + 100 * get_scaled_factor(), sy*11,
+	local race = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11,
 		function(dd)
 			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
 				local chosen_civilization = civilization_list[dd:getSelected() + 1]
@@ -161,18 +161,18 @@ function RunJoiningMapMenu(s)
 				LocalSetupState.Race[NetLocalHostsSlot] = -1
 			end
 		end)
-	race:setSize(190 * get_scaled_factor(), 20 * get_scaled_factor())
+	race:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:writeText(_("Resources:"), sx, sy*11+50 * get_scaled_factor())
-	local resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scaled_factor(), sy*11+50 * get_scaled_factor(),
+	menu:writeText(_("Resources:"), sx, sy*11+50 * get_scale_factor())
+	local resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scale_factor(), sy*11+50 * get_scale_factor(),
 		function(dd) end)
 	resources:setSize(190, 20)
 	resources:setEnabled(false)
 
-	local difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75 * get_scaled_factor())
-	local difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scaled_factor(), sy * 11 + 75 * get_scaled_factor(),
+	local difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75 * get_scale_factor())
+	local difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scale_factor(), sy * 11 + 75 * get_scale_factor(),
 		function(dd) end)
-	difficulty:setSize(190 * get_scaled_factor(), 20 * get_scaled_factor())
+	difficulty:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setEnabled(false)
 	difficulty:setVisible(false)
 	difficulty_label:setVisible(false)
@@ -239,7 +239,7 @@ function RunJoiningMapMenu(s)
 	listener = LuaActionListener(listen)
 	menu:addLogicCallback(listener)
 
-	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scaled_factor(), Video.Height - 100 * get_scaled_factor(),
+	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scale_factor(), Video.Height - 100 * get_scale_factor(),
 		function() NetworkDetachFromServer(); menu:stop() end)
 
 	menu:run()
@@ -247,18 +247,18 @@ end
 
 function RunJoiningGameMenu(server_address, s)
   local menu = WarMenu(nil, panel(4), false)
-  menu:setSize(288 * get_scaled_factor(), 128 * get_scaled_factor())
-  menu:setPosition((Video.Width - 288 * get_scaled_factor()) / 2, (Video.Height - 128 * get_scaled_factor()) / 2)
+  menu:setSize(288 * get_scale_factor(), 128 * get_scale_factor())
+  menu:setPosition((Video.Width - 288 * get_scale_factor()) / 2, (Video.Height - 128 * get_scale_factor()) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel(_("Connecting to") .. " " .. server_address, 144 * get_scaled_factor(), 11 * get_scaled_factor())
+  menu:addLabel(_("Connecting to") .. " " .. server_address, 144 * get_scale_factor(), 11 * get_scale_factor())
 
   local percent = 0
 
-  local sb = StatBoxWidget(258 * get_scaled_factor(), 30 * get_scaled_factor())
+  local sb = StatBoxWidget(258 * get_scale_factor(), 30 * get_scale_factor())
   sb:setCaption(_("Connecting..."))
   sb:setPercent(percent)
-  menu:add(sb, 15 * get_scaled_factor(), 38 * get_scaled_factor())
+  menu:add(sb, 15 * get_scale_factor(), 38 * get_scale_factor())
   sb:setBackgroundColor(dark)
 
   local function checkconnection()
@@ -294,7 +294,7 @@ function RunJoiningGameMenu(server_address, s)
   local listener = LuaActionListener(checkconnection)
   menu:addLogicCallback(listener)
 
-  menu:addHalfButton(_("Cancel (~<Esc~>)"), "escape", 92 * get_scaled_factor(), 80 * get_scaled_factor(),
+  menu:addHalfButton(_("Cancel (~<Esc~>)"), "escape", 92 * get_scale_factor(), 80 * get_scale_factor(),
     function() menu:stop(1) end)
 
   return menu:run()
@@ -302,14 +302,14 @@ end
 
 function RunJoinIpMenu()
 	local menu = WarMenu(nil, panel(4), false)
-	menu:setSize(288 * get_scaled_factor(), 128 * get_scaled_factor())
-	menu:setPosition((Video.Width - 288 * get_scaled_factor()) / 2, (Video.Height - 128 * get_scaled_factor()) / 2)
+	menu:setSize(288 * get_scale_factor(), 128 * get_scale_factor())
+	menu:setPosition((Video.Width - 288 * get_scale_factor()) / 2, (Video.Height - 128 * get_scale_factor()) / 2)
 	menu:setDrawMenusUnder(true)
 
-	menu:addLabel(_("Enter server IP-address:"), 144 * get_scaled_factor(), 11 * get_scaled_factor())
-	local server = menu:addTextInputField("localhost", 40 * get_scaled_factor(), 38 * get_scaled_factor(), 212 * get_scaled_factor())
+	menu:addLabel(_("Enter server IP-address:"), 144 * get_scale_factor(), 11 * get_scale_factor())
+	local server = menu:addTextInputField("localhost", 40 * get_scale_factor(), 38 * get_scale_factor(), 212 * get_scale_factor())
 
-	menu:addHalfButton("~!OK", "o", 24 * get_scaled_factor(), 80 * get_scaled_factor(),
+	menu:addHalfButton("~!OK", "o", 24 * get_scale_factor(), 80 * get_scale_factor(),
 		function(s)
 			-- FIXME: allow port ("localhost:1234")
 			if (NetworkSetupServerAddress(server:getText()) ~= 0) then
@@ -324,7 +324,7 @@ function RunJoinIpMenu()
 			menu:stop()
 		end
 	)
-	menu:addHalfButton(_("~!Cancel"), "c", 154 * get_scaled_factor(), 80 * get_scaled_factor(), function() menu:stop() end)
+	menu:addHalfButton(_("~!Cancel"), "c", 154 * get_scale_factor(), 80 * get_scale_factor(), function() menu:stop() end)
 
 	menu:run()
 end
@@ -341,32 +341,32 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	menu = WarMenu(_("Create Multiplayer game"))
 
 	menu:writeLargeText(_("Map"), sx, sy*3)
-	menu:writeText(_("Name:"), sx, sy*3+30 * get_scaled_factor())
-	descr = menu:writeText(description, sx+70 * get_scaled_factor(), sy*3+30 * get_scaled_factor())
-	menu:writeText(_("File:"), sx, sy*3+50 * get_scaled_factor())
-	maptext = menu:writeText(string.sub(map, 6), sx+70 * get_scaled_factor(), sy*3+50 * get_scaled_factor())
-	menu:writeText(_("Players:"), sx, sy*3+70 * get_scaled_factor())
-	players = menu:writeText(numplayers, sx+70 * get_scaled_factor(), sy*3+70 * get_scaled_factor())
+	menu:writeText(_("Name:"), sx, sy*3+30 * get_scale_factor())
+	descr = menu:writeText(description, sx+70 * get_scale_factor(), sy*3+30 * get_scale_factor())
+	menu:writeText(_("File:"), sx, sy*3+50 * get_scale_factor())
+	maptext = menu:writeText(string.sub(map, 6), sx+70 * get_scale_factor(), sy*3+50 * get_scale_factor())
+	menu:writeText(_("Players:"), sx, sy*3+70 * get_scale_factor())
+	players = menu:writeText(numplayers, sx+70 * get_scale_factor(), sy*3+70 * get_scale_factor())
 
 	local function fowCb(dd)
 		ServerSetupState.FogOfWar = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.NoFogOfWar = not dd:isMarked()
 	end
-	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scaled_factor(), fowCb)
+	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), fowCb)
 	fow:setMarked(true)
 	local function revealMapCb(dd)
 		ServerSetupState.RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.RevealMap = bool2int(dd:isMarked())
 	end
-	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scaled_factor(), revealMapCb)
+	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), revealMapCb)
 	local function no_randomnessCb(dd)
 		ServerSetupState.NoRandomness = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.NoRandomness = dd:isMarked()
 	end
-	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scaled_factor(), no_randomnessCb)
+	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scale_factor(), no_randomnessCb)
 	no_randomness:setMarked(false)
 	
 	ServerSetupState.Opponents = 0
@@ -380,12 +380,12 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		difficulty:setVisible(ServerSetupState.Opponents > 0)
 		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
 	end
-	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scaled_factor(), computer_opponentsCb)
+	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), computer_opponentsCb)
 	computer_opponents:setMarked(false)
 
 	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-	d = menu:addDropDown(civilization_list, sx + 100 * get_scaled_factor(), sy*11,
+	d = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11,
 		function(dd)
 			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
 				local chosen_civilization = civilization_list[dd:getSelected() + 1]
@@ -399,25 +399,25 @@ function RunServerMultiGameMenu(map, description, numplayers)
 			end
 			NetworkServerResyncClients()
 		end)
-	d:setSize(190 * get_scaled_factor(), 20 * get_scaled_factor())
+	d:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:writeText("Resources:", sx, sy*11+50 * get_scaled_factor())
-	d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scaled_factor(), sy*11+50 * get_scaled_factor(),
+	menu:writeText("Resources:", sx, sy*11+50 * get_scale_factor())
+	d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scale_factor(), sy*11+50 * get_scale_factor(),
 		function(dd)
 			GameSettings.Resources = dd:getSelected()
 			ServerSetupState.ResourcesOption = GameSettings.Resources
 			NetworkServerResyncClients()
 		end)
-	d:setSize(190 * get_scaled_factor(), 20 * get_scaled_factor())
+	d:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 
-	difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75 * get_scaled_factor())
-	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scaled_factor(), sy * 11 + 75 * get_scaled_factor(),
+	difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75 * get_scale_factor())
+	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scale_factor(), sy * 11 + 75 * get_scale_factor(),
 		function(dd)
 			GameSettings.Difficulty = dd:getSelected() + 1
 			ServerSetupState.Difficulty = GameSettings.Difficulty
 			NetworkServerResyncClients()
 		end)
-	difficulty:setSize(190 * get_scaled_factor(), 20 * get_scaled_factor())
+	difficulty:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setSelected(1)
 	difficulty:setVisible(false)
 	difficulty_label:setVisible(false)
@@ -453,7 +453,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
 	menu:addLogicCallback(listener)
 
-	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scaled_factor(), Video.Height - 100 * get_scaled_factor(),
+	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scale_factor(), Video.Height - 100 * get_scale_factor(),
 		function() InitGameSettings(); menu:stop() end)
 
 	menu:run()
@@ -470,12 +470,12 @@ function RunCreateMultiGameMenu(s)
 
   menu = WarMenu(_("Create Multiplayer game"))
 
-  menu:writeText(_("Name:"), sx, sy*3+30 * get_scaled_factor())
-  descr = menu:writeText(description, sx+70 * get_scaled_factor(), sy*3+30 * get_scaled_factor())
-  menu:writeText(_("File:"), sx, sy*3+50 * get_scaled_factor())
-  maptext = menu:writeText(string.sub(mapfile, 6), sx+70 * get_scaled_factor(), sy*3+50 * get_scaled_factor())
-  menu:writeText(_("Players:"), sx, sy*3+70 * get_scaled_factor())
-  players = menu:writeText(numplayers, sx+70 * get_scaled_factor(), sy*3+70 * get_scaled_factor())
+  menu:writeText(_("Name:"), sx, sy*3+30 * get_scale_factor())
+  descr = menu:writeText(description, sx+70 * get_scale_factor(), sy*3+30 * get_scale_factor())
+  menu:writeText(_("File:"), sx, sy*3+50 * get_scale_factor())
+  maptext = menu:writeText(string.sub(mapfile, 6), sx+70 * get_scale_factor(), sy*3+50 * get_scale_factor())
+  menu:writeText(_("Players:"), sx, sy*3+70 * get_scale_factor())
+  players = menu:writeText(numplayers, sx+70 * get_scale_factor(), sy*3+70 * get_scale_factor())
 
   local OldPresentMap = PresentMap
   PresentMap = function(desc, nplayers, w, h, id)
@@ -565,16 +565,16 @@ function RunCreateMultiGameMenu(s)
 	  table.insert(world_list, _("Custom"))
   end
 
-  menu:addLabel(_("World:"), sx*10, sy*2+20 * get_scaled_factor(), Fonts["game"], false)
-  world = menu:addDropDown(world_list, sx*10, sy*2 + (20 + 20) * get_scaled_factor(),
+  menu:addLabel(_("World:"), sx*10, sy*2+20 * get_scale_factor(), Fonts["game"], false)
+  world = menu:addDropDown(world_list, sx*10, sy*2 + (20 + 20) * get_scale_factor(),
     function(dd) WorldChanged() end)
-  world:setSize(152 * get_scaled_factor(), 20 * get_scaled_factor())
+  world:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
   world:setSelected(0)
   
   menu:addLabel(_("Map:"), sx*10, sy*4+20, Fonts["game"], false)
-  scenario = menu:addDropDown(scenario_list, sx*10, sy*4 + (20 + 20) * get_scaled_factor(),
+  scenario = menu:addDropDown(scenario_list, sx*10, sy*4 + (20 + 20) * get_scale_factor(),
     function(dd) ScenarioChanged() end)
-  scenario:setSize(152 * get_scaled_factor(), 20 * get_scaled_factor())
+  scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
   function WorldChanged()
 	scenario_list = {}
@@ -593,7 +593,7 @@ function RunCreateMultiGameMenu(s)
 
 	table.sort(scenario_list)
 	scenario:setList(scenario_list)
-	scenario:setSize(152 * get_scaled_factor(), 20 * get_scaled_factor())
+	scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	scenario:setSelected(0)
 	ScenarioChanged()
   end
@@ -636,7 +636,7 @@ function RunCreateMultiGameMenu(s)
   
   WorldChanged()
 
-  menu:addFullButton(_("Cancel (~<Esc~>)"), "escape", sx,  sy*12+25 * get_scaled_factor(),
+  menu:addFullButton(_("Cancel (~<Esc~>)"), "escape", sx,  sy*12+25 * get_scale_factor(),
     function() menu:stop() end)
 
   menu:run()
@@ -645,8 +645,8 @@ end
 
 function RunMultiPlayerGameMenu(s)
 	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scaled_factor()) / 2
-	local offy = (Video.Height - 480 * get_scaled_factor()) / 2
+	local offx = (Video.Width - 640 * get_scale_factor()) / 2
+	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local nick
 
 	local function FixMusic()
@@ -660,12 +660,12 @@ function RunMultiPlayerGameMenu(s)
 	InitGameSettings()
 	InitNetwork1()
 
-	menu:addLabel(_("~<Multiplayer Network Game~>"), offx + (640/2 + 12) * get_scaled_factor(), offy + 192 * get_scaled_factor())
+	menu:addLabel(_("~<Multiplayer Network Game~>"), offx + (640/2 + 12) * get_scale_factor(), offy + 192 * get_scale_factor())
 
-	menu:writeText(_("Nickname :"), 208 * get_scaled_factor() + offx, 264 * get_scaled_factor() + offy)
-	nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298 * get_scaled_factor(), 260 * get_scaled_factor() + offy)
+	menu:writeText(_("Nickname :"), 208 * get_scale_factor() + offx, 264 * get_scale_factor() + offy)
+	nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298 * get_scale_factor(), 260 * get_scale_factor() + offy)
 
-	menu:addFullButton(_("~!Join Game"), "j", 208 * get_scaled_factor() + offx, (320 + (36 * 0)) * get_scaled_factor() + offy,
+	menu:addFullButton(_("~!Join Game"), "j", 208 * get_scale_factor() + offx, (320 + (36 * 0)) * get_scale_factor() + offy,
 		function()
 			if nick:getText() ~= GetLocalPlayerName() then
 				SetLocalPlayerName(nick:getText())
@@ -676,7 +676,7 @@ function RunMultiPlayerGameMenu(s)
 			FixMusic()
 		end
 	)
-	menu:addFullButton(_("~!Create Game"), "c", 208 * get_scaled_factor() + offx, (320 + (36 * 1)) * get_scaled_factor() + offy,
+	menu:addFullButton(_("~!Create Game"), "c", 208 * get_scale_factor() + offx, (320 + (36 * 1)) * get_scale_factor() + offy,
 		function()
 			if nick:getText() ~= GetLocalPlayerName() then
 				SetLocalPlayerName(nick:getText())
@@ -688,7 +688,7 @@ function RunMultiPlayerGameMenu(s)
 		end
 	)
 
-	menu:addFullButton(_("~!Previous Menu"), "p", 208 * get_scaled_factor() + offx, (320 + (36 * 2)) * get_scaled_factor() + offy,
+	menu:addFullButton(_("~!Previous Menu"), "p", 208 * get_scale_factor() + offx, (320 + (36 * 2)) * get_scale_factor() + offy,
 		function() SetLocalPlayerName("") menu:stop() end) -- Andrettin: in single-player games the local player shouldn't use his nick
 
 	menu:run()
