@@ -2841,6 +2841,25 @@ if not (ui_loaded_first_time) then
 			},
 		}	
 	})
+	
+	DefinePopup({
+		Ident = "popup_food",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 128,
+		DefaultFont = PopupDescriptionFont,
+		Contents = {
+			{	HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			{ 	Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = Concat("Population: ", String(PlayerData(GetThisPlayer(), "Population"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+			}
+		}	
+	})
 end
 
 ui_loaded_first_time = true
