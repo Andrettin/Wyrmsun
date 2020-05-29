@@ -47,7 +47,7 @@ rome = {
 		}
 		
 		1600 = {
-			#Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
+			population = 100000 #Rome had a population of 100,000 in 1600; Source: Henry Kamen, "The Iron Century", p. 419.
 		}
 	}
 }
