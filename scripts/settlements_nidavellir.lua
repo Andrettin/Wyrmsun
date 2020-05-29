@@ -31,16 +31,12 @@ DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name
 --	Position = {669, 298},
 	Position = {669, 296}, -- because of the mud tiles in its former position
 	Major = true,
-	CulturalNames = {
-		"goblin", "Dreadskull"
-	},
 	HistoricalOwners = {
 		-3000, "dreadskull-tribe"
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"
-	},
-	Regions = {}
+	}
 })
 
 DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
@@ -69,8 +65,7 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	HistoricalUnits = { -- some units for defense
 		600, 0, "unit-goblin-swordsman", 3000, "driftwood",
 		600, 0, "unit-goblin-archer", 2000, "driftwood"
-	},
-	Regions = {}
+	}
 })
 
 DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
@@ -86,8 +81,7 @@ DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe 
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"
-	},
-	Regions = {}
+	}
 })
 
 DefineSite("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
@@ -97,34 +91,23 @@ DefineSite("pypos-camp", { -- from Battle for Wesnoth: The Sceptre of Fire (A Ba
 	CulturalNames = {
 		"gnome", "Pypo's Camp"
 	},
-	Cores = {
-	},
 	HistoricalOwners = {
 		25, "untersberg",
 		{25, 12, 30}, ""
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {}
+	}
 })
 
 DefineSite("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
 	Name = "Rugnur's Outpost",
 	MapTemplate = "nidavellir",
 	Position = {465, 239},
-	CulturalNames = {
-		"dwarf", "Rugnur's Outpost"
-	},
-	Cores = {
-	},
 	HistoricalOwners = {
 		25, "norlund-clan", -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
 		{25, 12, 30}, "shinsplitter-clan" -- conquered during 25 by the Shinsplitters
 	},
 	HistoricalBuildings = {
-		25, 0, "watch_tower"
-	},
-	Regions = {}
+	--	25, 0, "watch_tower"
+	}
 })
 
 DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
@@ -132,15 +115,11 @@ DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of 
 	MapTemplate = "nidavellir",
 	Position = {613, 208},
 	Major = true,
-	CulturalNames = {
-		"goblin", "Wildfang"
-	},
 	HistoricalOwners = {
 		-3000, "wildfang-tribe"
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"
-	},
-	Regions = {}
+	}
 })
 
