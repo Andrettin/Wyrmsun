@@ -13,3 +13,4 @@ campaign_defeat_dialogue = campaign_defeat
 inventory_button_level = inventory_level
 cancel_button_level = cancel_level
 town_hall_class = town_hall
+default_population_class = worker
