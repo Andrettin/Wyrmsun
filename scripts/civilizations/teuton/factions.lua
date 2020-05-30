@@ -292,34 +292,6 @@ DefineFaction("thuringia", {
 	}
 })
 
-DefineFaction("westphalia", {
-	Name = "Westphalia", -- "Westfalen"
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-westphalia",
-	Icon = "icon-flag-cyan-lion-on-red",
-	Adjective = "Westphalian",
-	DevelopsFrom = {"saxon-tribe"}
-})
-
-DefineFaction("saxony", {
-	Name = "Saxony", -- "Sachsen"
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "pink",
-	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-faction-saxony",
-	Icon = "icon-flag-red-lion-on-green",
-	Adjective = "Saxon",
-	DevelopsFrom = {"saxon-tribe", "cherusci-tribe", "varini-tribe", "brandenburg", "bremen", "brunswick", "magdeburg", "mecklenburg"},
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")

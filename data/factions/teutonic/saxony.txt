@@ -1,0 +1,20 @@
+saxony = {
+	name = "Saxony" #"Sachsen"
+	adjective = "Saxon"
+	civilization = teuton
+	type = polity
+	color = pink
+	default_tier = duchy #Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	icon = icon_flag_red_lion_on_green
+	faction_upgrade = upgrade_faction_saxony
+	develops_from = {
+		saxon_tribe
+		cherusci_tribe
+		varini_tribe
+		brandenburg
+		bremen
+		brunswick
+		magdeburg
+		mecklenburg
+	}
+}
