@@ -9,7 +9,7 @@ nidavellir_earth_space = {
 	size = { 1 256 }
 	base_terrain_type = dirt
 	base_overlay_terrain_type = space
-	subtemplate_top_left_pos = { 224 256 }
+	subtemplate_top_left_pos = { 196 256 }
 }
 
 earth_alfheim_space = {
@@ -18,5 +18,5 @@ earth_alfheim_space = {
 	size = { 512 1 }
 	base_terrain_type = dirt
 	base_overlay_terrain_type = space
-	subtemplate_top_left_pos = { 0 192 }
+	subtemplate_top_left_pos = { 0 130 }
 }
