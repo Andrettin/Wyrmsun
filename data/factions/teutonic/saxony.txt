@@ -17,4 +17,13 @@ saxony = {
 		magdeburg
 		mecklenburg
 	}
+	
+	history = {
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+	}
 }

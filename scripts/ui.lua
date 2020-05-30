@@ -2860,6 +2860,41 @@ if not (ui_loaded_first_time) then
 			}
 		}	
 	})
+	
+	DefinePopup({
+		Ident = "popup_territory",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 128,
+		DefaultFont = PopupDescriptionFont,
+		Contents = {
+			{	HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}, 
+			{ 	Condition = {Overlord = "only"}, Margin = {1, 1},
+				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+			},
+			{ 	Condition = {Overlord = "only"}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = Concat("Overlord: ", PlayerName(PlayerData(ButtonPlayer("Player"), "Overlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+			},
+			{ 	Condition = {TopOverlord = "only"}, TextColor = "white", HighlightColor = "yellow",
+				More = {"Text", {Text = Concat("Top Overlord: ", PlayerName(PlayerData(ButtonPlayer("Player"), "TopOverlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+			}
+		}	
+	})
+	
+	DefinePopup({
+		Ident = "popup_settlement",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 128,
+		DefaultFont = PopupDescriptionFont,
+		Contents = {
+			{	HighlightColor = "yellow",
+				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+			}
+		}	
+	})
 end
 
 ui_loaded_first_time = true
