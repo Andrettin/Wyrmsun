@@ -10,13 +10,4 @@ westphalia = {
 	develops_from = {
 		saxon_tribe
 	}
-	
-	history = {
-		919 = {
-			diplomacy_state = {
-				faction = saxony
-				state = vassal
-			}
-		}
-	}
 }
