@@ -22,6 +22,10 @@ lubeck = {
 			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
+		1138 = {
+			owner_faction = saxony #part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1648 = {
 			#Lübeck was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}

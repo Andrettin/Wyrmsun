@@ -1,0 +1,36 @@
+bavaria = {
+	name = "Bavaria" #"Bayern"
+	adjective = "Bavarian"
+	civilization = teuton
+	type = polity
+	color = cyan
+	default_tier = duchy #Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	icon = icon_flag_five_white_birds_on_red
+	faction_upgrade = upgrade_faction_bavaria
+	develops_from = {
+		bavarian_tribe
+	}
+	
+	history = {
+		784 = {
+			diplomacy_state = {
+				faction = francia #Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+				state = war
+			}
+		}
+		
+		787 = {
+			diplomacy_state = {
+				faction = francia #Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+				state = peace
+			}
+		}
+	
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+	}
+}

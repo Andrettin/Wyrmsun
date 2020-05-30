@@ -106,26 +106,6 @@ DefineFaction("varini-tribe", {
 
 -- Teuton polities
 
-DefineFaction("bavaria", {
-	Name = "Bavaria", -- "Bayern"
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "cyan",
-	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-faction-bavaria",
-	Icon = "icon-flag-five-white-birds-on-red",
-	Adjective = "Bavarian",
-	DevelopsFrom = {"bavarian-tribe"},
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "kingdom", "Kingdom"
-	},
-	HistoricalDiplomacyStates = {
-		784, "francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
-		787, "francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
-	}
-})
-
 DefineFaction("brandenburg", {
 	Name = "Brandenburg",
 	Civilization = "teuton",
