@@ -39,20 +39,6 @@ DefineFaction("venedae-tribe", { -- Source: William R. Shepherd, "Historical Atl
 	Color = "yellow"
 })
 
-DefineFaction("bohemia", {
-	Name = "Bohemia",
-	Civilization = "slav",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "duchy",
-	HistoricalTiers = {
-		1086, "kingdom" -- Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
-	},
-	HistoricalDiplomacyStates = {
-		1039, "hungary", "alliance" -- Duke Břetislav I of Bohemia made an alliance with King Peter of Hungaryin 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
-	}
-})
-
 DefineFaction("croatia", {
 	Name = "Croatia",
 	Civilization = "slav",

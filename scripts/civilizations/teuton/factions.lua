@@ -201,7 +201,7 @@ DefineFaction("hesse", {
 		"monarchy", "duchy", "Landgraviate"
 	},
 	HistoricalTiers = {
-		1815, "grand-duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, "grand_duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 })
 
@@ -238,7 +238,7 @@ DefineFaction("mecklenburg", {
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "brown",
-	DefaultTier = "grand-duchy",
+	DefaultTier = "grand_duchy",
 	FactionUpgrade = "upgrade-faction-mecklenburg",
 	Icon = "icon-flag-blue-lion-on-yellow",
 	DevelopsFrom = {"saxon-tribe", "varini-tribe"}
@@ -306,10 +306,6 @@ DefineFaction("holy-rome", {
 	Icon = "icon-flag-holy-roman-empire",
 	DevelopsFrom = {"austria", "bavaria", "francia", "brandenburg", "cologne", "franconia", "hesse", "saxony", "swabia"}, -- must either be Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate
 	Adjective = "Holy Roman",
-	HistoricalDiplomacyStates = {
-		985, "bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
-		987, "bohemia", "overlord" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
-	},
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
 			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi" or GetPlayerData(i, "Faction") == "rome")) then

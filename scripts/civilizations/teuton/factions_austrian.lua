@@ -35,19 +35,19 @@ DefineFaction("austria", {
 	Icon = "icon-flag-old-austria",
 	DevelopsFrom = {"bavarian-tribe"},
 	Titles = {
-		"monarchy", "grand-duchy", "Archduchy"
+		"monarchy", "grand_duchy", "Archduchy"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "grand-duchy", "Archduke",
-		"head-of-state", "female", "monarchy", "grand-duchy", "Archduchess",
-		"head-of-government", "none", "monarchy", "no-faction-tier", "Minister-President", -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
-		"education-minister", "none", "no-government-type", "no-faction-tier", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+		"head-of-state", "male", "monarchy", "grand_duchy", "Archduke",
+		"head-of-state", "female", "monarchy", "grand_duchy", "Archduchess",
+		"head-of-government", "none", "monarchy", "none", "Minister-President", -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+		"education-minister", "none", "no-government-type", "none", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	},
 	HistoricalCapitals = {
 		0, "vienna"
 	},
 	HistoricalTiers = {
-		1560, "grand-duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "grand_duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1815, "empire" -- Political situation in Central Europe, 1815-1866 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	ShipNames = {

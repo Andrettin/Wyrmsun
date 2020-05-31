@@ -1,0 +1,49 @@
+bohemia = {
+	name = "Bohemia"
+	adjective = "Bohemian"
+	civilization = slav
+	type = polity
+	color = red
+	default_tier = duchy
+	
+	history = {
+		1039 = {
+			diplomacy_state = {
+				faction = hungary #Duke Břetislav I of Bohemia made an alliance with King Peter of Hungary in 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
+				state = alliance
+			}
+		}
+		
+		787 = {
+			diplomacy_state = {
+				faction = francia #Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+				state = peace
+			}
+		}
+		
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+		
+		985 = {
+			diplomacy_state = {
+				faction = holy_rome #war between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+				state = war
+			}
+		}
+		
+		987 = {
+			diplomacy_state = {
+				faction = holy_rome #Bohemia became a vassal of the Holy Roman Empire again in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+				state = vassal
+			}
+		}
+		
+		1086 = {
+			tier = kingdom #Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
+		}
+	}
+}

@@ -36,6 +36,6 @@ DefineFaction("lithuania", {
 	Name = "Lithuania",
 	Civilization = "baltic",
 	Type = "polity",
-	DefaultTier = "grand-duchy",
+	DefaultTier = "grand_duchy",
 	Color = "red"
 })

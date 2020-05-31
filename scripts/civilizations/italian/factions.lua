@@ -122,7 +122,7 @@ DefineFaction("tuscany", {
 	Civilization = "italian",
 	Type = "polity",
 	Color = "orange",
-	DefaultTier = "grand-duchy"
+	DefaultTier = "grand_duchy"
 })
 
 DefineFaction("venice", {

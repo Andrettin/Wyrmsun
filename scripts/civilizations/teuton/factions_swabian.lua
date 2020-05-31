@@ -30,7 +30,7 @@ DefineFaction("baden", {
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "black",
-	DefaultTier = "grand-duchy",
+	DefaultTier = "grand_duchy",
 	FactionUpgrade = "upgrade-faction-baden",
 	Icon = "icon-flag-habsburg",
 	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
