@@ -24,8 +24,16 @@ prague = {
 			owner_faction = bavarian_tribe #Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
-		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		919 = {
+			owner_faction = bohemia #part of the Duchy of Bohemia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1003 = {
+			owner_faction = poland #became a part of Poland in 1003; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1004 = {
+			owner_faction = bohemia #ceased to be a part of Poland in 1004; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1231 = {

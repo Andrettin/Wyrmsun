@@ -12,7 +12,7 @@ munich = {
 	
 	history = {
 		919 = {
-			owner_faction = bavaria #part of the Duchy of Bavaria in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner_faction = bavaria #part of the Duchy of Bavaria in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
 		}
 		
