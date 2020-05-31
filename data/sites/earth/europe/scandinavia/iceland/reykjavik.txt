@@ -1,0 +1,9 @@
+reykjavik = {
+	name = "Reykjavik"
+	map_template = iceland
+	pos = { 10 39 }
+	major = true
+	regions = {
+		scandinavia
+	}
+}
