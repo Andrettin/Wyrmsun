@@ -43,6 +43,10 @@ AddTrigger("the-mead-of-poetry-fjalar-and-galar-conspire",
 
 AddTrigger("oin-leaves",
 	function()
+		if (true) then
+			return false -- deactivate for now
+		end
+	
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
 			return false
 		end
