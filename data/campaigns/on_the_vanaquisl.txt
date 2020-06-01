@@ -1,0 +1,6 @@
+on_the_vanaquisl = {
+	name = "On the Vanaquisl"
+	description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands..."
+	faction = asa_tribe
+	start_date = -3000
+}
