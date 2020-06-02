@@ -16,10 +16,16 @@ Qt5Core.dll
 Qt5Cored.dll
 Qt5Gui.dll
 Qt5Guid.dll
+Qt5Location.dll
+Qt5Locationd.dll
 Qt5Multimedia.dll
 Qt5Multimediad.dll
 Qt5Network.dll
 Qt5Networkd.dll
+Qt5Positioning.dll
+Qt5Positioningd.dll
+Qt5PositioningQuick.dll
+Qt5PositioningQuickd.dll
 Qt5Qml.dll
 Qt5Qmld.dll
 Qt5QmlModels.dll
