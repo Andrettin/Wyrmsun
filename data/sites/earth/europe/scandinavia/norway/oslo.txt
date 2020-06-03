@@ -1,7 +1,7 @@
 oslo = {
 	name = "Oslo"
-	map_template = scandinavia
-	pos = { 87 199 }
+	map_template = earth_space
+	geocoordinate = { 10.74997920600 59.91669028640 } #from Natural Earth
 	major = true
 	cores = {
 		norway

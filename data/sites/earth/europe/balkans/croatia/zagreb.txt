@@ -1,7 +1,7 @@
 zagreb = {
 	name = "Zagreb"
-	map_template = central_europe
-	pos = { 198 190 }
+	map_template = earth_space
+	geocoordinate = { 15.99999466820 45.80000673330 } #from Natural Earth
 	major = true
 	cultural_names = {
 		latin = "Celeta" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.

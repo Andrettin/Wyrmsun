@@ -1,7 +1,7 @@
 vienna = {
 	name = "Vienna"
-	map_template = central_europe
-	pos = { 194 177 }
+	map_template = earth_space
+	geocoordinate = { 16.36663895540 48.20001527820 } #from Natural Earth
 	major = true
 	cultural_names = {
 		celt = "Vindobona"

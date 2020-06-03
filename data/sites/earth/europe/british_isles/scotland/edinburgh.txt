@@ -1,7 +1,7 @@
 edinburgh = {
 	name = "Edinburgh"
-	map_template = british_isles
-	pos = { 91 106 }
+	map_template = earth_space
+	geocoordinate = { -3.21909061829 55.94832785960 } #from Natural Earth
 	major = true
 	regions = {
 		scotland

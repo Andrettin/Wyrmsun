@@ -1,7 +1,7 @@
 rome = {
 	name = "Rome"
-	map_template = central_europe
-	pos = { 179 222 }
+	map_template = earth_space
+	geocoordinate = { 12.48325842150 41.89595562650 } #from Natural Earth
 	major = true
 	cultural_names = {
 		#latin = "Roma" #Source: "Ancient Warfare VII.6", 2013, p. 7.

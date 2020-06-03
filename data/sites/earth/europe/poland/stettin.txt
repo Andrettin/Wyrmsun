@@ -1,7 +1,7 @@
 stettin = {
 	name = "Stettin"
-	map_template = scandinavia
-	pos = { 134 327 }
+	map_template = earth_space
+	geocoordinate = { 14.53000687530 53.42039430650 } #from Natural Earth
 	major = true
 	cultural_names = {
 		slav = "Szczecin"

@@ -1,9 +1,8 @@
 madrid = {
 	name = "Madrid"
-	map_template = western_europe
-	pos = { 74 220 }
+	map_template = earth_space
+	geocoordinate = { -3.68335168600 40.40002626450 } #from Natural Earth
 	major = true
-	
 	regions = {
 		iberia
 	}

@@ -1,7 +1,7 @@
 dijon = {
 	name = "Dijon"
-	map_template = western_europe
-	pos = { 135 177 }
+	map_template = earth_space
+	geocoordinate = { 5.03001826846 47.33040427560 } #from Natural Earth
 	major = true
 	cultural_names = {
 		frankish = "Divio"

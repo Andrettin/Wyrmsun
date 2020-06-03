@@ -1,7 +1,7 @@
 kiel = {
 	name = "Kiel"
-	map_template = scandinavia
-	pos = { 63 307 }
+	map_template = earth_space
+	geocoordinate = { 10.13001704780 54.33039044100 } #from Natural Earth
 	major = true
 	cores = {
 		hersing_tribe

@@ -1,7 +1,7 @@
 hanover = {
 	name = "Hanover" #"Hannover"
-	map_template = central_europe
-	pos = { 167 136 }
+	map_template = earth_space
+	geocoordinate = { 9.71665726588 52.36697023430 } #from Natural Earth
 	major = true
 	cores = {
 		lombard_tribe

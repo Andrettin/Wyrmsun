@@ -1,7 +1,7 @@
 toulouse = {
 	name = "Toulouse" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	map_template = western_europe
-	pos = { 108 201 }
+	map_template = earth_space
+	geocoordinate = { 1.44992671571 43.61995892240 } #from Natural Earth
 	major = true
 	
 	cultural_names = {

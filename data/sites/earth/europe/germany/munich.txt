@@ -1,7 +1,7 @@
 munich = {
 	name = "Munich"
-	map_template = central_europe
-	pos = { 177 170 }
+	map_template = earth_space
+	geocoordinate = { 11.57499344750 48.12994203600 } #from Natural Earth
 	major = true
 	cultural_names = {
 		#teuton = "München"

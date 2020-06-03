@@ -1,7 +1,7 @@
 london = {
 	name = "London"
-	map_template = british_isles
-	pos = { 107 138 }
+	map_template = earth_space
+	geocoordinate = { -0.11672184386 51.49999472970 } #from Natural Earth
 	major = true
 	cultural_names = {
 		anglo_saxon = "Lunden" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.

@@ -1,13 +1,11 @@
 malmo = {
 	name = "Malmo" #"Malmö"
-	map_template = scandinavia
-	pos = { 107 296 }
+	map_template = earth_space
+	geocoordinate = { 13.03330236680 55.58333721830 } #from Natural Earth
 	major = true
-	
 	cores = {
 		scania
 	}
-	
 	regions = {
 		scandinavia
 	}

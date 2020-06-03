@@ -1,7 +1,7 @@
 milan = {
 	name = "Milan"
-	map_template = central_europe
-	pos = { 160 195 }
+	map_template = earth_space
+	geocoordinate = { 9.20500890976 45.46997519840 } #from Natural Earth
 	major = true
 	cultural_names = {
 		latin = "Mediolanum" #Source: "Ancient Warfare VII.6", 2013, p. 7.

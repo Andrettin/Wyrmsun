@@ -1,7 +1,7 @@
 amsterdam = {
 	name = "Amsterdam"
-	map_template = low_countries
-	pos = { 136 138 }
+	map_template = earth_space
+	geocoordinate = { 4.91664017601 52.34996868810 } #from Natural Earth
 	major = true
 	regions = {
 		netherlands

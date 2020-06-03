@@ -1,8 +1,7 @@
 lubeck = {
 	name = "Lubeck" #"Lübeck"
-	map_template = scandinavia
-	pos = { 76 320 }
-	major = true
+	map_template = earth_space
+	geocoordinate = { 10.66998408880 53.87039267890 } #from Natural Earth
 	cores = {
 		saxon_tribe
 		germany #Lübeck was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -15,7 +14,6 @@ lubeck = {
 	history = {
 		-264 = {
 			owner_faction = saxon_tribe #Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-			building_classes += town_hall
 		}
 		
 		1097 = {
@@ -24,6 +22,7 @@ lubeck = {
 		
 		1138 = {
 			owner_faction = saxony #part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += dock #Lübeck existed in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1648 = {

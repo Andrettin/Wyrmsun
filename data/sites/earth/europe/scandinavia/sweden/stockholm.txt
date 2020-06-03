@@ -1,7 +1,7 @@
 stockholm = {
 	name = "Stockholm"
-	map_template = scandinavia
-	pos = { 178 210 }
+	map_template = earth_space
+	geocoordinate = { 18.09733473280 59.35075995430 } #from Natural Earth
 	major = true
 	cultural_names = {
 		germanic = "Stukkahulma" #tentative rendering of "Stockholm" in Proto-Germanic

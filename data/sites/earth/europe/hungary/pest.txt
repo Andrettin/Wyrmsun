@@ -1,7 +1,7 @@
 pest = {
 	name = "Pest"
-	map_template = central_europe
-	pos = { 211 180 }
+	map_template = earth_space
+	geocoordinate = { 19.08332067740 47.50000632640 } #Budapest; from Natural Earth
 	major = true
 	cores = {
 		magyar_tribe

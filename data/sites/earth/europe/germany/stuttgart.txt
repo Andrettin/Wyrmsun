@@ -1,7 +1,7 @@
 stuttgart = {
 	name = "Stuttgart"
-	map_template = central_europe
-	pos = { 162 161 }
+	map_template = earth_space
+	geocoordinate = { 9.19999629582 48.77997987780 } #from Natural Earth
 	major = true
 	regions = {
 		germany

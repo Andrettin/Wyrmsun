@@ -1,18 +1,15 @@
 aarhus = {
 	name = "Aarhus"
-	map_template = scandinavia
-	pos = { 62 276 }
+	map_template = earth_space
+	geocoordinate = { 10.21068395860 56.15720399890 } #from Natural Earth
 	major = true
-	
 	cultural_names = {
 		germanic = "Ahvoosa" #tentative rendering of "Aarhus" in Proto-Germanic
 	}
-	
 	cores = {
 		charude_tribe
 		jute_tribe
 	}
-	
 	regions = {
 		scandinavia
 	}

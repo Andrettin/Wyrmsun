@@ -1,7 +1,7 @@
 paris = {
 	name = "Paris"
-	map_template = western_europe
-	pos = { 116 162 }
+	map_template = earth_space
+	geocoordinate = { 2.33333532574 48.86669293120 } #from Natural Earth
 	major = true
 	
 	cultural_names = {

@@ -1,7 +1,7 @@
 york = {
 	name = "York"
-	map_template = british_isles
-	pos = { 98 116 }
+	map_template = earth_space
+	geocoordinate = { -1.08002221822 53.97038657540 } #from Natural Earth
 	major = true
 	cultural_names = {
 		anglo_saxon = "Eoforwic" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.

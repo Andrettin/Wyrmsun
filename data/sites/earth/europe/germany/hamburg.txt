@@ -1,8 +1,7 @@
 hamburg = {
 	name = "Hamburg"
-	map_template = scandinavia
-	pos = { 58 325 }
-	major = true
+	map_template = earth_space
+	geocoordinate = { 9.99999914413 53.55002463690 } #from Natural Earth
 	cores = {
 		saxon_tribe
 		germany #Hamburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -15,11 +14,11 @@ hamburg = {
 	history = {
 		-264 = {
 			owner_faction = saxon_tribe #Hamburg's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-			building_classes += town_hall
 		}
 		
 		1097 = {
 			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += market #Hamburg existed c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1138 = {

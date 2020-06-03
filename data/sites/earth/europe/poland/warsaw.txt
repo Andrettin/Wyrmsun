@@ -1,7 +1,7 @@
 warsaw = {
 	name = "Warsaw"
-	map_template = central_europe
-	pos = { 216 141 }
+	map_template = earth_space
+	geocoordinate = { 20.99999955110 52.25000062980 } #from Natural Earth
 	major = true
 	regions = {
 		poland
