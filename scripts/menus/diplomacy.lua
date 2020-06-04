@@ -34,7 +34,7 @@ function RunDiplomacyMenu()
 					enemycb:setMarked(false)
 				end
 			end)
-			alliedcb:setMarked(CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)))
+			alliedcb:setMarked(CPlayer:GetThisPlayer():IsAllied(i))
 			allied[j] = alliedcb
 			allied[j].index = i
 
@@ -61,7 +61,7 @@ function RunDiplomacyMenu()
 
 			-- allies
 			if (allied[j]:isMarked() and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
+				if (CPlayer:GetThisPlayer():IsAllied(i) == false or
 					CPlayer:GetThisPlayer():IsEnemy(i)) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "allied", i)
 				end
@@ -69,7 +69,7 @@ function RunDiplomacyMenu()
 
 			-- enemies
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
+				if (CPlayer:GetThisPlayer():IsAllied(i) or
 					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "enemy", i)
 					if (CPlayer:GetPlayer(i).Type == PlayerComputer and CPlayer:GetPlayer(i):IsEnemy(GetThisPlayer()) == false) then
@@ -83,7 +83,7 @@ function RunDiplomacyMenu()
 
 			-- neutral
 			if (allied[j]:isMarked() == false and enemy[j]:isMarked() == false) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) or
+				if (CPlayer:GetThisPlayer():IsAllied(i) or
 					CPlayer:GetThisPlayer():IsEnemy(i)) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "neutral", i)
 				end
@@ -91,7 +91,7 @@ function RunDiplomacyMenu()
 
 			-- crazy
 			if (allied[j]:isMarked() and enemy[j]:isMarked()) then
-				if (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i)) == false or
+				if (CPlayer:GetThisPlayer():IsAllied(i) == false or
 					CPlayer:GetThisPlayer():IsEnemy(i) == false) then
 					SetDiplomacy(CPlayer:GetThisPlayer().Index, "crazy", i)
 				end
