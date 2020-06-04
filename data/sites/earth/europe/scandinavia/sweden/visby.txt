@@ -1,6 +1,6 @@
 visby = {
 	name = "Visby"
-	map_template = earth_space
+	map_template = gotland
 	geocoordinate = { 18.30000931670 57.63365134600 } #from Natural Earth
 	major = true
 	cores = {
@@ -11,9 +11,13 @@ visby = {
 	}
 	
 	history = {
+		1097 = {
+			owner_faction = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+		
 		1560 = {
 			owner_faction = denmark #Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-			building_classes += town_hall
 		}
 	}
 }
