@@ -55,6 +55,18 @@ earth_space = {
 	max_longitude = 20
 	min_latitude = 35
 	max_latitude = 60
+	generated_terrains = {
+		grass = {
+			seed_count = 1024
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+		}
+		pine_tree = {
+			seed_count = 128
+			max_percent = 20
+			target_terrain_type = grass
+		}
+	}
 	generated_neutral_units = {
 		unit_gold_deposit = 2
 		unit_silver_deposit = 2
