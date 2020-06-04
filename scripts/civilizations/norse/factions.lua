@@ -264,26 +264,6 @@ DefineFaction("norway", {
 	end
 })
 
-DefineFaction("sweden", {
-	Name = "Sweden",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	Adjective = "Swedish",
-	FactionUpgrade = "upgrade-faction-sweden",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe", "gautland", "scania"},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "swede-tribe")) then
-				return false
-			end
-		end
-		return true
-	end
-})
-
 -- Mercenary Companies
 
 DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 94.

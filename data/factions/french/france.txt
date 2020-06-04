@@ -1,0 +1,9 @@
+france = {
+	name = "France"
+	adjective = "French"
+	civilization = french
+	type = polity
+	color = blue
+	default_tier = kingdom
+	default_capital = paris
+}

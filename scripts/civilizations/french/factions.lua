@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("france", {
-	Name = "France",
-	Civilization = "french",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("belgium", {
-	Name = "Belgium",
-	Civilization = "french",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom"
-})
-
 -- Holy Orders
 
 DefineFaction("cistercian-order", {

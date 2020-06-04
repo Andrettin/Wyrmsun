@@ -296,16 +296,7 @@ DefineFaction("germany", {
 	end
 })
 
-DefineFaction("holy-rome", {
-	Name = "Holy Rome",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "empire",
-	FactionUpgrade = "upgrade-faction-holy-rome",
-	Icon = "icon-flag-holy-roman-empire",
-	DevelopsFrom = {"austria", "bavaria", "francia", "brandenburg", "cologne", "franconia", "hesse", "saxony", "swabia"}, -- must either be Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate
-	Adjective = "Holy Roman",
+DefineFaction("holy_rome", {
 	Conditions = function(s)
 		for i=0,(PlayerMax - 2) do
 			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi" or GetPlayerData(i, "Faction") == "rome")) then

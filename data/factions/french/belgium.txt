@@ -1,0 +1,9 @@
+belgium = {
+	name = "Belgium"
+	adjective = "Belgian"
+	civilization = french
+	type = polity
+	color = yellow
+	default_tier = kingdom
+	default_capital = brussels
+}

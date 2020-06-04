@@ -1,0 +1,17 @@
+sweden = {
+	name = "Sweden"
+	adjective = "Swedish"
+	civilization = norse
+	type = polity
+	color = blue
+	default_tier = kingdom
+	default_capital = stockholm
+	faction_upgrade = upgrade_faction_sweden
+	icon = icon_flag_yellow_lion_on_cyan
+	develops_from = {
+		sitone_tribe
+		swede_tribe
+		gautland
+		scania
+	}
+}
