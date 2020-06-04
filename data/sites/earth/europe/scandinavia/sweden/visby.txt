@@ -1,0 +1,19 @@
+visby = {
+	name = "Visby"
+	map_template = earth_space
+	geocoordinate = { 18.30000931670 57.63365134600 } #from Natural Earth
+	major = true
+	cores = {
+		gute_tribe
+	}
+	regions = {
+		scandinavia
+	}
+	
+	history = {
+		1560 = {
+			owner_faction = denmark #Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			building_classes += town_hall
+		}
+	}
+}

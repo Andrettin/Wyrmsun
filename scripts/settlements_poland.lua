@@ -25,26 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("gdansk", {
-	Name = "Gdansk",
-	MapTemplate = "scandinavia",
-	Position = {183, 317},
-	Major = true,
-	CulturalNames = {
-		"slav", "Gdansk", -- "Gdańsk"
-		"teuton", "Danzig"
-	},
-	HistoricalOwners = {
-		1560, "poland", -- Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "prussia" -- Dantzic was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1560, 0, "town_hall"
-	},
-	Regions = {"poland"}
-})
-
 DefineSite("gniezno", {
 	Name = "Gniezno",
 	MapTemplate = "earth",

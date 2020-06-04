@@ -1,0 +1,41 @@
+barcelona = {
+	name = "Barcelona"
+	map_template = earth_space
+	geocoordinate = { 2.18337031923 41.38329957990 } #from Natural Earth
+	major = true
+	regions = {
+		iberia
+	}
+	
+	history = {
+		395 = {
+			owner_faction = rome #Barcelona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+			building_classes += temple #Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner_faction = visigothia #Barcelona was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner_faction = visigothia #Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1097 = {
+			owner_faction = castille #part of the Kingdom of Castille c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1430 = {
+			building_classes += university #University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+		
+		1560 = {
+			owner_faction = spain #Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1717 = {
+			building_classes -= university #University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+	}
+}

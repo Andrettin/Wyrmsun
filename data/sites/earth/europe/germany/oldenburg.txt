@@ -1,0 +1,32 @@
+oldenburg = {
+	name = "Oldenburg"
+	map_template = earth_space
+	geocoordinate = { 8.22000443384 53.12999859530 } #from Natural Earth
+	major = true
+	cores = {
+		germany #Oldenburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Oldenburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		-3950 = {
+			owner_faction = funnelbeaker_tribe #Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			building_classes += town_hall
+		}
+		
+		-264 = {
+			owner_faction = chauci_tribe #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		161 = {
+			owner_faction = lombard_tribe #The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		919 = {
+			owner_faction = saxony #part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+	}
+}

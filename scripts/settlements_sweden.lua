@@ -132,26 +132,6 @@ DefineSite("vastervik", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("visby", {
-	Name = "Visby",
-	MapTemplate = "scandinavia",
-	Position = {179, 255},
-	Major = true,
-	Cores = {
-		"gute-tribe"
-	},
-	CulturalNames = {
-		"norse", "Visby"
-	},
-	HistoricalOwners = {
-		1560, "denmark" -- Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1560, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("vitemolla", {
 	Name = "Vitemolla",
 	MapTemplate = "earth",

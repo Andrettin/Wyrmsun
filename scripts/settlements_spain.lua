@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("barcelona", {
-	Name = "Barcelona",
-	MapTemplate = "western_europe",
-	Position = {111, 218},
-	Major = true,
-	CulturalNames = {
-		"castillian", "Barcelona"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Barcelona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "visigothia", -- Barcelona was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "visigothia", -- Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple", -- Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1430, 1717, "university" -- University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144. University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("burgos", {
 	Name = "Burgos",
 	MapTemplate = "earth",
