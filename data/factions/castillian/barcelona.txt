@@ -1,0 +1,7 @@
+barcelona = {
+	name = "Barcelona"
+	civilization = castillian
+	type = polity
+	color = yellow
+	default_tier = county
+}
