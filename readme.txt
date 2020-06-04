@@ -111,6 +111,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for zooming the minimap for maps with tile size larger than the pixel size of the minimap (e.g. 256x256 maps if the minimap is 128x128). Press Shift-TAB to zoom/unzoom the minimap.
 - Simplified the appearance of terrain on the minimap. Each terrain type is now represented by a particular color (with seasonal variations).
 - The player's population number can now be seen when hovering the food icon on the top bar. The number is based on the number of organic, non-fauna units the player possesses. The population number is for flavor only, and has no gameplay effect.
+- The player's name in the player list is now in green.
 
 -----------------------------------------------------------------------
 - 3.5.4
