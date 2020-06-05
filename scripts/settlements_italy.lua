@@ -214,29 +214,6 @@ DefineSite("florence", {
 	Regions = {"italy"}
 })
 
-DefineSite("genoa", {
-	Name = "Genoa",
-	MapTemplate = "earth",
-	Position = {4042, 1035},
-	Major = true,
-	CulturalNames = {
-		"italian", "Genoa",
-		"latin", "Genua" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	Cores = {
-		"genoa"
-	},
-	HistoricalOwners = {
-		-154, "rome", -- Genua became a Roman possession in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1494, "genoa", -- Genoa was a possession of the Republic of Genoa about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1815, "sardinia" -- Genoa was a possession of the Kingdom of Sardinia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-154, 0, "town_hall"
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("hatria", {
 	Name = "Hatria",
 	MapTemplate = "earth",
