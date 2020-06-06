@@ -5297,7 +5297,6 @@ DefineUnitType("unit-road", {
 	Description = "The construction of roads allows trade caravans - and armies - to more efficiently move from one point to another.",
 	TerrainType = "road",
 	Image = {"file", "neutral/buildings/road.png", "size", {32, 32}},
-	Shadow = {"file", "neutral/buildings/road_shadow.png", "size", {32, 32}},
 	Animations = "animations-building", Icon = "icon-road",
 	Costs = {"time", 30, "copper", 20, "lumber", 15, "stone", 15},
 	Construction = "construction-land-1x1",
