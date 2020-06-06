@@ -102,6 +102,7 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Units in underground terrain tiles (cave floor and rockbound cave floor) are now treated as if they are at night for sight range bonus purposes.
 - Units in underground terrain tiles are now have the night-time color effect applied on them.
+- Terrain feature tooltips now only appear after one second.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
