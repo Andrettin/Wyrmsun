@@ -231,11 +231,6 @@ DefineTerrainFeature("po-river", {
 	Color = {0, 128, 208}
 })
 
-DefineTerrainFeature("pyrenees", {
-	Name = "Pyrenees",
-	TerrainType = "rock" -- mountains
-})
-
 DefineTerrainFeature("rhine-river", {
 	Name = "Rhine River",
 	TerrainType = "shallow-water",
