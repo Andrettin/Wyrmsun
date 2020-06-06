@@ -51,19 +51,9 @@ DefineTerrainFeature("bromswold-forest", {
 	}
 })
 
-DefineTerrainFeature("cambrian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
-	Name = "Cambrian Mountains",
-	TerrainType = "rock" -- mountains
-})
-
 DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Dee River",
 	TerrainType = "shallow-water"
-})
-
-DefineTerrainFeature("grampian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
-	Name = "Grampian Mountains",
-	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("great-ouse-river", {

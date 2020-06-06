@@ -1,0 +1,47 @@
+anti_atlas = {
+	name = "Anti Atlas"
+	terrain_type = rock #mountains
+	color = { 51 31 97 }
+}
+
+er_rif = {
+	name = "Er Rif"
+	terrain_type = rock #mountains
+	color = { 89 63 176 }
+}
+
+high_atlas = {
+	name = "High Atlas"
+	terrain_type = rock #mountains
+	color = { 69 126 142 }
+	cultural_names = {
+		french = "Haut Atlas"
+	}
+}
+
+middle_atlas = {
+	name = "Middle Atlas"
+	terrain_type = rock #mountains
+	color = { 224 109 222 }
+	cultural_names = {
+		french = "Moyen Atlas"
+	}
+}
+
+saharan_atlas = {
+	name = "Saharan Atlas"
+	terrain_type = rock #mountains
+	color = { 132 48 221 }
+	cultural_names = {
+		french = "Atlas Saharien"
+	}
+}
+
+tell_atlas = {
+	name = "Tell Atlas"
+	terrain_type = rock #mountains
+	color = { 149 201 55 }
+	cultural_names = {
+		french = "Atlas Tellien"
+	}
+}

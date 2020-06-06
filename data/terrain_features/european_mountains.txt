@@ -1,0 +1,119 @@
+alps = {
+	name = "Alps"
+	terrain_type = rock #mountains
+	color = { 125 252 71 }
+}
+
+ardennes = {
+	name = "Ardennes"
+	terrain_type = rock #mountains
+	color = { 131 190 134 }
+}
+
+balkan_mountains = {
+	name = "Balkan Mountains"
+	terrain_type = rock #mountains
+	color = { 20 36 233 }
+}
+
+bohmerwald = {
+	name = "Bohmerwald" #Böhmerwald
+	terrain_type = rock #mountains
+	color = { 146 23 167 }
+}
+
+cantabrian_mountains = {
+	name = "Cantabrian Mountains"
+	terrain_type = rock #mountains
+	color = { 129 112 84 }
+}
+
+cambrian_mountains = { #Source: "Philip's International School Atlas", 2006, p. 64.
+	name = "Cambrian Mountains"
+	terrain_type = rock #mountains
+	color = { 22 92 32 }
+}
+
+erzgebirge = {
+	name = "Erzgebirge"
+	terrain_type = rock #mountains
+	color = { 138 23 7 }
+}
+
+grampian_mountains = { #Source: "Philip's International School Atlas", 2006, p. 64.
+	name = "Grampian Mountains"
+	terrain_type = rock #mountains
+	color = { 220 7 49 }
+}
+
+harz = {
+	name = "Harz"
+	terrain_type = rock #mountains
+	color = { 145 0 70 }
+}
+
+jura = {
+	name = "Jura"
+	terrain_type = rock #mountains
+	color = { 128 5 235 }
+}
+
+hardangervidda = {
+	name = "Hardangervidda"
+	terrain_type = rock #mountains
+	color = { 213 96 244 }
+}
+
+kjolen_mountains = {
+	name = "Kjolen Mountains" #"Kjølen Mountains"
+	terrain_type = rock #mountains
+	color = { 101 213 66 }
+}
+
+pindus_mountains = {
+	name = "Pindus Mountains"
+	terrain_type = rock #mountains
+	color = { 217 237 64 }
+}
+
+sierra_morena = {
+	name = "Sierra Morena"
+	terrain_type = rock #mountains
+	color = { 168 21 73 }
+}
+
+sierra_nevada = {
+	name = "Sierra Nevada"
+	terrain_type = rock #mountains
+	color = { 18 23 61 }
+}
+
+sudetes_mountains = {
+	name = "Sudetes Mountains"
+	terrain_type = rock #mountains
+	color = { 156 94 13 }
+}
+
+tatra_mountains = {
+	name = "Tatra Mountains"
+	terrain_type = rock #mountains
+	color = { 152 254 43 }
+}
+
+transylvanian_alps = {
+	name = "Transylvanian Alps"
+	terrain_type = rock #mountains
+	color = { 7 221 20 }
+}
+
+vatnajokull = {
+	name = "Vatnajokull" #Vatnajökull
+	terrain_type = rock #mountains
+	color = { 4 219 64 }
+}
+
+vosges = {
+	name = "Vosges"
+	terrain_type = rock #mountains
+	color = { 60 8 9 }
+}

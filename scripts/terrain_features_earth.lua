@@ -35,11 +35,6 @@ DefineTerrainFeature("alpheus-river", { -- Source: William R. Shepherd, "Histori
 	TerrainType = "shallow-water"
 })
 
-DefineTerrainFeature("alps", {
-	Name = "Alps",
-	TerrainType = "rock" -- mountains
-})
-
 DefineTerrainFeature("apennines", {
 	Name = "Apennines",
 	TerrainType = "rock" -- mountains
@@ -68,11 +63,6 @@ DefineTerrainFeature("black-sea", { -- Source: "Limits of Oceans and Seas", 1953
 	CulturalNames = {
 		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
-})
-
-DefineTerrainFeature("cantabrian-mountains", {
-	Name = "Cantabrian Mountains",
-	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("carpathians", {
