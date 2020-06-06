@@ -1,0 +1,17 @@
+cassian_way = {
+	name = "Cassian Way"
+	trade_route = true
+	color = { 206 39 73 }
+}
+
+flaminian_way = {
+	name = "Flaminian Way"
+	trade_route = true
+	color = { 71 132 104 }
+}
+
+postumian_way = {
+	name = "Postumian Way"
+	trade_route = true
+	color = { 87 243 152 }
+}
