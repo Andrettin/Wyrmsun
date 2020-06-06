@@ -28,122 +28,69 @@
 DefineTerrainFeature("arkanthoria-river", {
 	Name = "Arkanthoria River",
 	TerrainType = "shallow-water",
-	Color = {0, 176, 144},
-	World = "nidavellir",
-	CulturalNames = {
-		"dwarf", "Arkanthoria River",
-		"elf", "Arkanthoria River"
-	}
+	Color = {0, 176, 144}
 })
 
 DefineTerrainFeature("aurvang", {
 	Name = "Aurvang",
 	TerrainType = "mud",
-	World = "nidavellir",
-	Color = {192, 80, 64},
-	CulturalNames = {
-		"dwarf", "Aurvang",
-		"goblin", "Aurvang"
-	}
+	Color = {192, 80, 64}
 })
 
 DefineTerrainFeature("blackfang-river", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Blackfang River",
 	TerrainType = "shallow-water",
-	Color = {0, 208, 176},
-	World = "nidavellir",
-	CulturalNames = {
-		"kobold", "Blackfang River"
-	}
+	Color = {0, 208, 176}
 })
 
 DefineTerrainFeature("forbidden-forest", { -- from Battle for Wesnoth: The Hammer of Thursagan (Forbidden Forest)
 	Name = "Forbidden Forest",
-	TerrainType = "flamefood-tree",
-	World = "nidavellir",
-	CulturalNames = {
-		"gnome", "Forbidden Forest"
-	}
+	TerrainType = "flamefood-tree"
 })
 
 DefineTerrainFeature("gryphon-mountain", { -- from Battle for Wesnoth: Heir to the Throne (Gryphon Mountain)
 	Name = "Gryphon Mountain",
 	TerrainType = "rock",
-	World = "nidavellir",
-	Color = {128, 144, 128},
-	CulturalNames = {
-		"dwarf", "Gryphon Mountain",
-		"gnome", "Gryphon Mountain"
-	}
+	Color = {128, 144, 128}
 })
 
 DefineTerrainFeature("heartfangs", {
 	Name = "Heartfangs",
 	TerrainType = "rock", -- mountains
-	World = "nidavellir",
-	Color = {128, 128, 144},
-	CulturalNames = {
-		"dwarf", "Heartfangs",
-		"goblin", "Heartfangs"
-	}
+	Color = {128, 128, 144}
 })
 
 DefineTerrainFeature("heart-mountains", {
 	Name = "Heart Mountains",
 	TerrainType = "rock", -- mountains
-	World = "nidavellir",
-	Color = {128, 144, 144},
-	CulturalNames = {
-		"dwarf", "Heart Mountains",
-		"goblin", "Heart Mountains"
-	}
+	Color = {128, 144, 144}
 })
 
 DefineTerrainFeature("joruvellir", {
 	Name = "Joruvellir",
 	TerrainType = "desert-sand",
-	World = "nidavellir",
-	Color = {255, 255, 16},
-	CulturalNames = {
-		"dwarf", "Joruvellir"
-	}
+	Color = {255, 255, 16}
 })
 
 DefineTerrainFeature("jungle-of-insanity", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Jungle of Insanity",
-	TerrainType = "flamefood-tree",
-	World = "nidavellir",
-	CulturalNames = {
-		"kobold", "Jungle of Insanity"
-	}
+	TerrainType = "flamefood-tree"
 })
 
 DefineTerrainFeature("lake-vrug", {
 	Name = "Lake Vrug",
 	TerrainType = "shallow-water",
-	Color = {0, 176, 128},
-	World = "nidavellir",
-	CulturalNames = {
-		"dwarf", "Lake Vrug"
-	}
+	Color = {0, 176, 128}
 })
 
 DefineTerrainFeature("shorbear-hills", { -- from Battle for Wesnoth: The Sceptre of Fire
 	Name = "Shorbear Hills",
 	TerrainType = "rock", -- hills
-	World = "nidavellir",
-	Color = {144, 144, 128},
-	CulturalNames = {
-		"dwarf", "Shorbear Hills"
-	}
+	Color = {144, 144, 128}
 })
 
 DefineTerrainFeature("svarinshaug", {
 	Name = "Svarinshaug",
 	TerrainType = "rock", -- hill
-	World = "nidavellir",
-	Color = {144, 128, 128},
-	CulturalNames = {
-		"dwarf", "Svarinshaug"
-	}
+	Color = {144, 128, 128}
 })

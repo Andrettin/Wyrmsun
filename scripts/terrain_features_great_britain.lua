@@ -28,7 +28,6 @@
 DefineTerrainFeature("avon-river", {
 	Name = "Avon River",
 	TerrainType = "shallow-water",
-	World = "earth",
 	CulturalNames = {
 		"anglo-saxon", "Afene River" -- Old English name of the Avon River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
@@ -38,119 +37,85 @@ DefineTerrainFeature("berkshire-downs", {
 --	Name = "Berkshire Downs",
 	Name = "Aescesdun",
 	TerrainType = "rock", -- hills
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Aescesdun", -- "Æscesdun"; Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"english", "Berkshire Downs"
+		"anglo-saxon", "Aescesdun" -- "Æscesdun"; Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
 DefineTerrainFeature("bromswold-forest", {
 	Name = "Bromswold Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	Color = {0, 120, 0},
 	CulturalNames = {
-		"anglo-saxon", "Bruneswald", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"english", "Bromswold Forest"
+		"anglo-saxon", "Bruneswald" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
 DefineTerrainFeature("cambrian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
 	Name = "Cambrian Mountains",
-	TerrainType = "rock", -- mountains
-	World = "earth",
-	CulturalNames = {
-		"english", "Cambrian Mountains"
-	}
+	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Dee River",
-	TerrainType = "shallow-water",
-	World = "earth",
-	CulturalNames = {
-		"english", "Dee River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
+	TerrainType = "shallow-water"
 })
 
 DefineTerrainFeature("grampian-mountains", { -- Source: "Philip's International School Atlas", 2006, p. 64.
 	Name = "Grampian Mountains",
-	TerrainType = "rock", -- mountains
-	World = "earth",
-	CulturalNames = {
-		"english", "Grampian Mountains"
-	}
+	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("great-ouse-river", {
 	Name = "Great Ouse River",
 	TerrainType = "shallow-water",
-	Color = {0, 160, 208},
-	World = "earth",
-	CulturalNames = {
-		"english", "Great Ouse River"
-	}
+	Color = {0, 160, 208}
 })
 
 DefineTerrainFeature("kinver-forest", {
 	Name = "Kinver Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Cynibre", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"english", "Kinver Forest"
+		"anglo-saxon", "Cynibre" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
 DefineTerrainFeature("morfe-forest", {
 	Name = "Morfe Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Moerheb", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Morfe Forest"
+		"anglo-saxon", "Moerheb" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
 DefineTerrainFeature("orwell-river", {
 	Name = "Orwell River",
 	TerrainType = "shallow-water",
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Arwe River", -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"english", "Orwell River"
+		"anglo-saxon", "Arwe River" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
 DefineTerrainFeature("pennines", { -- Source: "Philip's International School Atlas", 2006, p. 64.
 	Name = "Pennines",
-	TerrainType = "rock", -- mountains
-	World = "earth",
-	CulturalNames = {
-		"english", "Pennines"
-	}
+	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("sherwood-forest", {
 	Name = "Sherwood Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	Color = {0, 136, 0},
 	CulturalNames = {
-		"anglo-saxon", "Scirwudu", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Sherwood Forest"
+		"anglo-saxon", "Scirwudu" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
 DefineTerrainFeature("selwood", {
 	Name = "Selwood",
 	TerrainType = "pine-tree",
-	World = "earth",
 	Color = {0, 112, 0},
 	CulturalNames = {
-		"anglo-saxon", "Sealwudu", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Selwood"
+		"anglo-saxon", "Sealwudu" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
@@ -158,60 +123,46 @@ DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historic
 	Name = "Severn River",
 	TerrainType = "shallow-water",
 	Color = {0, 144, 208},
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Saefern River", -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Severn River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"anglo-saxon", "Saefern River" -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
 DefineTerrainFeature("snowdon", { -- Source: "Philip's International School Atlas", 2006, p. 64.
 	Name = "Snowdon",
-	TerrainType = "rock", -- mountain
-	World = "earth",
-	CulturalNames = {
-		"english", "Snowdon"
-	}
+	TerrainType = "rock" -- mountain
 })
 
 DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	Name = "Thames River",
 	TerrainType = "shallow-water",
 	Color = {0, 176, 208},
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Temes River", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Thames River" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
 DefineTerrainFeature("the-weald", {
 	Name = "The Weald",
 	TerrainType = "pine-tree", -- The Weald was a forest, but of what kind?
-	World = "earth",
 	Color = {0, 144, 0},
 	CulturalNames = {
-		"anglo-saxon", "Andredesweald", -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"english", "The Weald"
+		"anglo-saxon", "Andredesweald" -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
 DefineTerrainFeature("wyre-forest", {
 	Name = "Wyre Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Weogorenaleag", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-		"english", "Wyre Forest"
+		"anglo-saxon", "Weogorenaleag" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
 DefineTerrainFeature("wychwood-forest", {
 	Name = "Wychwood Forest",
 	TerrainType = "pine-tree",
-	World = "earth",
 	CulturalNames = {
-		"anglo-saxon", "Hwiccawudu", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"english", "Wychwood Forest"
+		"anglo-saxon", "Hwiccawudu" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 	}
 })

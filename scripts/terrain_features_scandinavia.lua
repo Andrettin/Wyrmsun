@@ -26,49 +26,28 @@
 --
 
 DefineTerrainFeature("galdhopiggen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
-	Name = "Galdhoppigen",
-	TerrainType = "rock", -- mountain
-	World = "earth",
-	CulturalNames = {
-		"norse", "Galdhoppigen" -- "Galdhøppigen"
-	}
+	Name = "Galdhoppigen", -- "Galdhøppigen"
+	TerrainType = "rock" -- mountain
 })
 
 DefineTerrainFeature("jotunheimen", { -- Source: "Philip's International School Atlas", 2006, p. 63.
 	Name = "Jotunheimen",
-	TerrainType = "rock", -- mountains
-	World = "earth",
-	CulturalNames = {
-		"norse", "Jotunheimen"
-	}
+	TerrainType = "rock" -- mountains
 })
 
 DefineTerrainFeature("kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
 	Name = "Kattegat",
 	TerrainType = "shallow-water",
-	World = "earth",
-	Color = {16, 144, 120},
-	CulturalNames = {
-		"norse", "Kattegat"
-	}
+	Color = {16, 144, 120}
 })
 
 DefineTerrainFeature("lake-wener", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
-	Name = "Lake Wener",
+	Name = "Lake Wener", -- "Vänern"
 	TerrainType = "shallow-water",
-	Color = {0, 176, 176},
-	World = "earth",
-	CulturalNames = {
-		"norse", "Lake Wener" -- "Vänern"
-	}
+	Color = {0, 176, 176}
 })
 
 DefineTerrainFeature("snohetta", { -- Source: "Philip's International School Atlas", 2006, p. 63.
-	Name = "Snohetta",
-	TerrainType = "rock", -- mountain
-	World = "earth",
-	CulturalNames = {
-		"norse", "Snohetta" -- "Snøhetta"
-	}
+	Name = "Snohetta", -- "Snøhetta"
+	TerrainType = "rock" -- mountain
 })
-

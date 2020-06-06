@@ -27,56 +27,31 @@
 
 DefineTerrainFeature("forest-of-thelien", { -- from Battle for Wesnoth: Son of the Black–Eye
 	Name = "Forest of Thelien",
-	TerrainType = "flamefood-tree",
-	World = "jotunheim",
-	CulturalNames = {
-		"orc", "Forest of Thelien"
-	}
+	TerrainType = "flamefood-tree"
 })
 
 DefineTerrainFeature("green-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
 	Name = "Green Forest",
-	TerrainType = "flamefood-tree",
-	World = "jotunheim",
-	CulturalNames = {
-		"orc", "Green Forest"
-	}
+	TerrainType = "flamefood-tree"
 })
 
 DefineTerrainFeature("hnitbjorg", { -- mountain in Jotunheim in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 99.
-	Name = "Hnitbjorg",
-	TerrainType = "rock", -- mountain
-	World = "jotunheim",
-	CulturalNames = {
-		"ettin", "Hnitbjorg" -- "Hnitbjörg"
-	}
+	Name = "Hnitbjorg", -- "Hnitbjörg"
+	TerrainType = "rock" -- mountain
 })
 
 DefineTerrainFeature("lyfjaberg", { -- mountain next to Menglad's hall in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
-	Name = "Lyfjaberg",
-	TerrainType = "rock", -- mountain
-	World = "jotunheim",
-	CulturalNames = {
-		"ettin", "Lyfjaberg" -- name means "Hill of Healing"
-	}
+	Name = "Lyfjaberg", -- name means "Hill of Healing"
+	TerrainType = "rock" -- mountain
 })
 
 DefineTerrainFeature("mountains-of-haag", { -- from Battle for Wesnoth: Son of the Black–Eye
 	Name = "Mountains of Haag",
 	TerrainType = "rock",
-	World = "jotunheim",
-	Color = {128, 144, 176},
-	CulturalNames = {
-		"ettin", "Mountains of Haag",
-		"orc", "Mountains of Haag"
-	}
+	Color = {128, 144, 176}
 })
 
 DefineTerrainFeature("silent-forest", { -- from Battle for Wesnoth: Son of the Black–Eye
 	Name = "Silent Forest",
-	TerrainType = "flamefood-tree",
-	World = "jotunheim",
-	CulturalNames = {
-		"orc", "Silent Forest"
-	}
+	TerrainType = "flamefood-tree"
 })
