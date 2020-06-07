@@ -1,0 +1,16 @@
+elbe_river = {
+	name = "Elbe River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 0 144 176 }
+	cultural_names = {
+		latin = "Albis River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+}
+
+po_river = {
+	name = "Po River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 0 128 208 }
+}

@@ -109,15 +109,6 @@ DefineTerrainFeature("douro-river", { -- Source: William R. Shepherd, "Historica
 	}
 })
 
-DefineTerrainFeature("elbe-river", {
-	Name = "Elbe River",
-	TerrainType = "shallow-water",
-	Color = {0, 144, 176},
-	CulturalNames = {
-		"latin", "Albis River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	}
-})
-
 DefineTerrainFeature("english-channel", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 	Name = "English Channel",
 	TerrainType = "shallow-water",
@@ -223,12 +214,6 @@ DefineTerrainFeature("oder-river", {
 DefineTerrainFeature("peneus-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	Name = "Peneus River",
 	TerrainType = "shallow-water"
-})
-
-DefineTerrainFeature("po-river", {
-	Name = "Po River",
-	TerrainType = "shallow-water",
-	Color = {0, 128, 208}
 })
 
 DefineTerrainFeature("rhine-river", {
