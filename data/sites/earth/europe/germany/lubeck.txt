@@ -1,7 +1,8 @@
 lubeck = {
 	name = "Lubeck" #"Lübeck"
 	map_template = earth_space
-	geocoordinate = { 10.66998408880 53.87039267890 } #from Natural Earth
+	#geocoordinate = { 10.66998408880 53.87039267890 } #from Natural Earth
+	geocoordinate = { 10.86825677 53.95222222 } #Travemunde, from Natural Earth
 	cores = {
 		saxon_tribe
 		germany #Lübeck was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
