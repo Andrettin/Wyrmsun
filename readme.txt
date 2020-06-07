@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - The AI now goes to the aid of its attacked buildings, rather than only its units.
+- The AI now purposefully builds units/buildings to complete its quests.
 
 * Buildings
 - All Germanic buildings now have snowy variations.
