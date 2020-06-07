@@ -80,7 +80,7 @@ DefineQuest("the-gleamer", { -- based on the lay of Alvis from Norse mythology; 
 	Hint = "Select a Temple and then click on the Research Astrology button to research the technology required for this quest.",
 --	Objectives = {
 --		{
---			"objective-type", "research-upgrade",
+--			"objective-type", "research_upgrade",
 --			"objective-string", "Research Astrology",
 --			"upgrade", "upgrade-dwarven-astrology" -- this technology could improve farm output, to represent better knowledge of the seasons which knowing about celestial bodies provided; that might make farms give too much food though, so it might be better for it to give a bonus to dwarven priests
 --		}
@@ -105,7 +105,7 @@ DefineQuest("the-days-refuge", { -- based on the lay of Alvis from Norse mytholo
 	Hint = "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Runewriting",
 			"upgrade", "upgrade-dwarven-runewriting"
 		}
@@ -165,7 +165,7 @@ DefineQuest("the-burner", { -- based on the lay of Alvis from Norse mythology; S
 	Hint = "Select an Academy and then click on the Research Alchemy button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Alchemy",
 			"upgrade", "upgrade-dwarven-alchemy"
 		}
@@ -456,7 +456,7 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	ObjectiveStrings = {"- Fjalar and Galar must survive"},
 	Objectives = {
 		{
-			"objective-type", "destroy-hero",
+			"objective-type", "destroy_hero",
 			"objective-string", "Kill Kvasir",
 			"character", "kvasir"
 		}

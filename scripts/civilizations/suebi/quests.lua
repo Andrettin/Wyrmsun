@@ -39,17 +39,17 @@ DefineQuest("ariovistus-ambition", {
 	end,
 	Objectives = {
 		{
-			"objective-type", "destroy-faction",
+			"objective-type", "destroy_faction",
 			"objective-string", "Defeat the Aedui",
 			"faction", "aedui-tribe"
 		},
 		{
-			"objective-type", "destroy-faction",
+			"objective-type", "destroy_faction",
 			"objective-string", "Defeat the Sequani",
 			"faction", "sequani-tribe"
 		},
 		{
-			"objective-type", "destroy-faction",
+			"objective-type", "destroy_faction",
 			"objective-string", "Defeat the Arverni",
 			"faction", "arverni-tribe"
 		}

@@ -342,7 +342,7 @@ DefineQuest("temple-to-heimdall", {
 			"unit-type", "unit-germanic-temple"
 		},
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Worship Haimadala",
 			"upgrade", "upgrade-deity-heimdall"
 		}
@@ -487,7 +487,7 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 	Hint = "Select a Smithy and then click on the Research Bronze Shield button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Bronze Shield",
 			"upgrade", "upgrade-germanic-bronze-shield"
 		}
@@ -582,7 +582,7 @@ DefineQuest("thors-servant-thors-temple", {
 			"settlement", "visby"
 		},
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Worship Thunraz",
 			"upgrade", "upgrade-deity-thor"
 		}
@@ -629,7 +629,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Rewards = "+1500 Copper",
 	Objectives = {
 		{
-			"objective-type", "destroy-faction",
+			"objective-type", "destroy_faction",
 			"objective-string", "Destroy the Hlesings",
 			"faction", "hlesing-tribe"
 		}
@@ -651,7 +651,7 @@ DefineQuest("slay-geirrod", {
 	end,
 	Objectives = {
 		{
-			"objective-type", "destroy-hero",
+			"objective-type", "destroy_hero",
 			"objective-string", "Kill Geirrod",
 			"character", "geirrod-ettin"
 		}

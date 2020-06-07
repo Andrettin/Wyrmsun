@@ -106,7 +106,7 @@ DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins b
 	Hint = "Select a Stronghold and then click on the Research Coinage button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Coinage",
 			"upgrade", "upgrade-goblin-coinage"
 		}
@@ -165,7 +165,7 @@ DefineQuest("orzas-scholarship", { -- based on the description of Orza Chahax by
 	Hint = "Select a Stronghold and then click on the Research Writing button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Writing",
 			"upgrade", "upgrade-writing"
 		}

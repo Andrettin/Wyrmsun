@@ -340,7 +340,7 @@ DefineQuest("dvalins-runes", {
 	Hint = "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest.",
 	Objectives = {
 		{
-			"objective-type", "research-upgrade",
+			"objective-type", "research_upgrade",
 			"objective-string", "Research Runewriting",
 			"upgrade", "upgrade-dwarven-runewriting"
 		}
