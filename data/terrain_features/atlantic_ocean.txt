@@ -1,0 +1,49 @@
+bay_of_biscay = {
+	name = "Bay of Biscay"
+	terrain_type = shallow_water
+	color = { 97 225 109 }
+}
+
+bristol_channel = {
+	name = "Bristol Channel"
+	terrain_type = shallow_water
+	color = { 100 44 144 }
+}
+
+english_channel = { #Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+	name = "English Channel"
+	terrain_type = shallow_water
+	color = { 48 128 128 }
+	cultural_names = {
+		celt = "British Ocean"
+		latin = "British Ocean"
+	}
+}
+
+inner_seas = {
+	name = "Inner Seas"
+	terrain_type = shallow_water
+	color = { 70 247 84 }
+}
+
+irish_sea = { #Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+	name = "Irish Sea"
+	terrain_type = shallow_water
+	color = { 48 144 144 }
+	cultural_names = {
+		celt = "Hibernian Ocean"
+		latin = "Hibernian Ocean"
+	}
+}
+
+north_atlantic_ocean = {
+	name = "North Atlantic Ocean"
+	terrain_type = shallow_water
+	color = { 135 11 136 }
+}
+
+sargasso_sea = {
+	name = "Sargasso Sea"
+	terrain_type = shallow_water
+	color = { 221 89 67 }
+}

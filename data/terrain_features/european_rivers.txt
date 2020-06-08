@@ -1,3 +1,13 @@
+douro_river = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+	name = "Douro River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 148 164 57 }
+	cultural_names = {
+		castillian = "Duero River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+	}
+}
+
 elbe_river = {
 	name = "Elbe River"
 	terrain_type = shallow_water
@@ -8,9 +18,71 @@ elbe_river = {
 	}
 }
 
+guadiana_river = {
+	name = "Guadiana River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 188 197 58 }
+	cultural_names = {
+		latin = "Anas River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+}
+
+minho_river = {
+	name = "Minho River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 156 50 103 }
+}
+
+oder_river = {
+	name = "Oder River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 94 212 172 }
+}
+
 po_river = {
 	name = "Po River"
 	terrain_type = shallow_water
 	minor_river = true
 	color = { 0 128 208 }
+}
+
+rhine_river = {
+	name = "Rhine River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 0 128 212 }
+	cultural_names = {
+		latin = "Rhenus River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+}
+
+tagus_river = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+	name = "Tagus River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 200 55 246 }
+}
+
+waal_river = {
+	name = "Waal River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 140 255 154 }
+}
+
+vistula_river = {
+	name = "Vistula River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 250 246 67 }
+}
+
+zancara_river = {
+	name = "Zancara River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 223 141 48 }
 }

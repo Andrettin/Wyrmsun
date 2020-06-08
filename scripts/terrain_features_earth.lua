@@ -35,25 +35,10 @@ DefineTerrainFeature("alpheus-river", { -- Source: William R. Shepherd, "Histori
 	TerrainType = "shallow-water"
 })
 
-DefineTerrainFeature("apennines", {
-	Name = "Apennines",
-	TerrainType = "rock" -- mountains
-})
-
 DefineTerrainFeature("atlantic-ocean", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 	Name = "Atlantic Ocean",
 	TerrainType = "shallow-water",
 	Color = {48, 176, 176}
-})
-
-DefineTerrainFeature("baltic-sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
-	Name = "Baltic Sea",
-	TerrainType = "shallow-water",
-	Color = {16, 120, 144},
-	CulturalNames = {
-		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
 })
 
 DefineTerrainFeature("black-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
@@ -101,24 +86,6 @@ DefineTerrainFeature("don-river", {
 	}
 })
 
-DefineTerrainFeature("douro-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	Name = "Douro River",
-	TerrainType = "shallow-water",
-	CulturalNames = {
-		"castillian", "Duero River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
-DefineTerrainFeature("english-channel", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
-	Name = "English Channel",
-	TerrainType = "shallow-water",
-	Color = {48, 128, 128},
-	CulturalNames = {
-		"celt", "British Ocean",
-		"latin", "British Ocean"
-	}
-})
-
 DefineTerrainFeature("eurotas-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	Name = "Eurotas River",
 	TerrainType = "shallow-water",
@@ -131,34 +98,6 @@ DefineTerrainFeature("eurotas-river", { -- Source: William R. Shepherd, "Histori
 DefineTerrainFeature("garonne-river", {
 	Name = "Garonne River",
 	TerrainType = "shallow-water"
-})
-
-DefineTerrainFeature("guadiana-river", {
-	Name = "Guadiana River",
-	TerrainType = "shallow-water",
-	CulturalNames = {
-		"latin", "Anas River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	}
-})
-
-DefineTerrainFeature("gulf-of-bothnia", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	Name = "Gulf of Bothnia",
-	TerrainType = "shallow-water",
-	Color = {16, 144, 144},
-	CulturalNames = {
-		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"suebi", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineTerrainFeature("irish-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
-	Name = "Irish Sea",
-	TerrainType = "shallow-water",
-	Color = {48, 144, 144},
-	CulturalNames = {
-		"celt", "Hibernian Ocean",
-		"latin", "Hibernian Ocean"
-	}
 })
 
 DefineTerrainFeature("lake-neusiedl", {
@@ -179,11 +118,6 @@ DefineTerrainFeature("mediterranean-sea", {
 	Color = {0, 144, 104}
 })
 
-DefineTerrainFeature("minho-river", {
-	Name = "Minho River",
-	TerrainType = "shallow-water"
-})
-
 DefineTerrainFeature("narova-river", {
 	Name = "Narova River",
 	TerrainType = "shallow-water"
@@ -194,36 +128,9 @@ DefineTerrainFeature("neva-river", {
 	TerrainType = "shallow-water"
 })
 
-DefineTerrainFeature("north-sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
-	Name = "North Sea",
-	TerrainType = "shallow-water",
-	Color = {0, 144, 120},
-	CulturalNames = {
-		"germanic", "German Ocean",
-		"goth", "German Ocean",
-		"latin", "German Ocean", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"suebi", "German Ocean"
-	}
-})
-
-DefineTerrainFeature("oder-river", {
-	Name = "Oder River",
-	TerrainType = "shallow-water"
-})
-
 DefineTerrainFeature("peneus-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	Name = "Peneus River",
 	TerrainType = "shallow-water"
-})
-
-DefineTerrainFeature("rhine-river", {
-	Name = "Rhine River",
-	TerrainType = "shallow-water",
-	Color = {0, 128, 212},
-	CulturalNames = {
-		"latin", "Rhenus River", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"teuton", "Rhine River"
-	}
 })
 
 DefineTerrainFeature("sado-river", {
@@ -236,12 +143,6 @@ DefineTerrainFeature("seine-river", { -- Source: William R. Shepherd, "Historica
 	TerrainType = "shallow-water"
 })
 
-DefineTerrainFeature("skagerrak", { -- Source: "Limits of Oceans and Seas", 1953, p. 6.
-	Name = "Skagerrak",
-	TerrainType = "shallow-water",
-	Color = {0, 120, 144}
-})
-
 DefineTerrainFeature("strait-of-gibraltar", {
 	Name = "Strait of Gibraltar",
 	TerrainType = "shallow-water",
@@ -249,11 +150,6 @@ DefineTerrainFeature("strait-of-gibraltar", {
 	CulturalNames = {
 		"norse", "Niorvasund" -- the Straits of Gibraltar were known as "Niorvasund" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.
 	}
-})
-
-DefineTerrainFeature("tagus-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	Name = "Tagus River",
-	TerrainType = "shallow-water"
 })
 
 DefineTerrainFeature("ural-mountains", {

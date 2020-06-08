@@ -1,0 +1,55 @@
+baltic_sea = {
+	name = "Baltic Sea"
+	terrain_type = shallow_water
+	color = { 16 120 144 }
+	cultural_names = {
+		latin = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+		suebi = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+}
+
+bay_of_mecklenburg = {
+	name = "Bay of Mecklenburg"
+	terrain_type = shallow_water
+	color = { 125 150 29 }
+}
+
+gulf_of_bothnia = { #Source: "Limits of Oceans and Seas", 1953, p. 5.
+	name = "Gulf of Bothnia"
+	terrain_type = shallow_water
+	color = { 16 144 144 }
+	cultural_names = {
+		latin = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+		suebi = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+}
+
+gulf_of_finland = {
+	name = "Gulf of Finland"
+	terrain_type = shallow_water
+	color = { 40 109 108 }
+}
+
+gulf_of_riga = {
+	name = "Gulf of Riga"
+	terrain_type = shallow_water
+	color = { 212 140 167 }
+}
+
+konigsberg_lagoon = {
+	name = "Konigsberg Lagoon"
+	terrain_type = shallow_water
+	color = { 156 197 126 }
+}
+
+oresund = {
+	name = "Oresund"
+	terrain_type = shallow_water
+	color = { 138 237 62 }
+}
+
+stettin_lagoon = {
+	name = "Stettin Lagoon"
+	terrain_type = shallow_water
+	color = { 141 133 172 }
+}

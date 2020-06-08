@@ -1,0 +1,41 @@
+boknafjorden = {
+	name = "Boknafjorden"
+	terrain_type = shallow_water
+	color = { 148 148 199 }
+}
+
+danish_waters = {
+	name = "Danish Waters"
+	terrain_type = shallow_water
+	color = { 247 251 87 }
+}
+
+kattegat = { #Source: "Limits of Oceans and Seas", 1953, p. 5.
+	name = "Kattegat"
+	terrain_type = shallow_water
+	color = { 16 144 120 }
+}
+
+north_sea = {
+	name = "North Sea"
+	terrain_type = shallow_water
+	color = { 0 144 120 }
+	cultural_names = {
+		germanic = "German Ocean"
+		goth = "German Ocean"
+		latin = "German Ocean" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+		suebi = "German Ocean"
+	}
+}
+
+skagerrak = { #Source: "Limits of Oceans and Seas", 1953, p. 6.
+	name = "Skagerrak"
+	terrain_type = shallow_water
+	color = { 0 120 144 }
+}
+
+waddenzee = {
+	name = "Waddenzee"
+	terrain_type = shallow_water
+	color = { 85 56 235 }
+}

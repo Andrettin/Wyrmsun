@@ -1,0 +1,5 @@
+adriatic_sea = {
+	name = "Adriatic Sea"
+	terrain_type = shallow_water
+	color = { 45 97 244 }
+}

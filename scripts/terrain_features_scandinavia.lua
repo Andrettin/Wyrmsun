@@ -35,12 +35,6 @@ DefineTerrainFeature("jotunheimen", { -- Source: "Philip's International School 
 	TerrainType = "rock" -- mountains
 })
 
-DefineTerrainFeature("kattegat", { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-	Name = "Kattegat",
-	TerrainType = "shallow-water",
-	Color = {16, 144, 120}
-})
-
 DefineTerrainFeature("lake-wener", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
 	Name = "Lake Wener", -- "Vänern"
 	TerrainType = "shallow-water",
