@@ -1,0 +1,36 @@
+krakow = {
+	name = "Krakow"
+	map_template = earth_space
+	geocoordinate = { 19.96001135120 50.05997926750 } #from Natural Earth
+	major = true
+	cores = {
+		poland
+	}
+	regions = {
+		cisleithania
+		poland
+	}
+	
+	history = {
+		1097 = {
+			owner_faction = poland #part of the Kingdom of Poland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			building_classes += town_hall
+		}
+		
+		1364 = {
+			building_classes += university #University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1560 = {
+			owner_faction = poland #Cracow was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1569 = {
+			owner_faction = poland_lithuania #the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1846 = {
+			owner_faction = austria #Cracow became an Austrian possession in 1846; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

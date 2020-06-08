@@ -89,29 +89,6 @@ DefineSite("konigsberg", {
 	Regions = {"europe"}
 })
 
-DefineSite("krakow", {
-	Name = "Krakow",
-	MapTemplate = "earth",
-	Position = {4293, 907},
-	Major = true,
-	CulturalNames = {
-		"slav", "Krakow"
-	},
-	Cores = {
-		"poland"
-	},
-	HistoricalOwners = {
-		1560, "poland", -- Cracow was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1846, "austria" -- Cracow became an Austrian possession in 1846; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1364, 0, "town_hall",
-		1364, 0, "university" -- University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"cisleithania", "poland"}
-})
-
 DefineSite("poznan", {
 	Name = "Poznan",
 	MapTemplate = "earth",

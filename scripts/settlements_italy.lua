@@ -118,24 +118,6 @@ DefineSite("brindisi", {
 	Regions = {"italy"}
 })
 
-DefineSite("caralis", {
-	Name = "Caralis",
-	MapTemplate = "earth",
-	Position = {4047, 1155},
-	CulturalNames = {
-		"italian", "Cagliari",
-		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1815, "sardinia" -- Caralis was part of the Kingdom of Sardinia in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
-	},
-	HistoricalBuildings = {
-		161, 0, "farm"
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("cosa", {
 	Name = "Cosa",
 	MapTemplate = "earth",
@@ -455,24 +437,6 @@ DefineSite("spoletum", {
 	},
 	HistoricalBuildings = {
 		-240, 0, "farm"
-	},
-	Regions = {"italy"}
-})
-
-DefineSite("syracuse", {
-	Name = "Syracuse",
-	MapTemplate = "earth",
-	Position = {4184, 1204},
-	Major = true,
-	CulturalNames = {
-		"greek", "Syracuse" -- "Syracusae"; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-212, "rome", -- Syracuse was acquired by Rome in 212 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1494, "sicily" -- Syracuse was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		-212, 0, "town_hall"
 	},
 	Regions = {"italy"}
 })
