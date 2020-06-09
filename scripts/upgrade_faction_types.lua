@@ -33,10 +33,6 @@ DefineUpgrade("upgrade-mercenary-company", {
 	Name = "Mercenary Company"
 })
 
-DefineUpgrade("upgrade-trading-company", {
-	Name = "Trading Company"
-})
-
 DefineModifier("upgrade-holy-order",
 	{"Supply", 4}, -- holy orders' temples produce food, to allow them to train units despite not having farms
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},

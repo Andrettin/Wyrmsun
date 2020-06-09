@@ -1,0 +1,136 @@
+trade_market_suebi = {
+	pos = 5
+	icon = icon_suebi_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign markets"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_germanic_civilization
+		upgrade_anglo_saxon_civilization
+		upgrade_english_civilization
+		upgrade_frankish_civilization
+		upgrade_suebi_civilization
+		upgrade_teutonic_civilization
+		upgrade_gothic_civilization
+		upgrade_norse_civilization
+		upgrade_celtic_civilization
+		upgrade_latin_civilization
+		upgrade_slavic_civilization
+		upgrade_egyptian_civilization
+		upgrade_elven_civilization
+	}
+	unit_classes = {
+		caravan
+	}
+}
+
+trade_dock_suebi = {
+	pos = 5
+	icon = icon_suebi_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign docks"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_germanic_civilization
+		upgrade_anglo_saxon_civilization
+		upgrade_english_civilization
+		upgrade_frankish_civilization
+		upgrade_suebi_civilization
+		upgrade_teutonic_civilization
+		upgrade_gothic_civilization
+		upgrade_norse_civilization
+		upgrade_celtic_civilization
+		upgrade_latin_civilization
+		upgrade_slavic_civilization
+		upgrade_egyptian_civilization
+		upgrade_elven_civilization
+	}
+	unit_classes = {
+		transport_ship
+		space_transport_ship
+	}
+}
+
+trade_market_dwarven = {
+	pos = 5
+	icon = icon_dwarven_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign markets"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_dwarven_civilization
+		upgrade_gnomish_civilization
+	}
+	unit_classes = {
+		caravan
+	}
+}
+
+trade_dock_dwarven = {
+	pos = 5
+	icon = icon_dwarven_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign docks"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_dwarven_civilization
+		upgrade_gnomish_civilization
+	}
+	unit_classes = {
+		transport_ship
+		space_transport_ship
+	}
+}
+
+trade_market_goblin = {
+	pos = 5
+	icon = icon_goblin_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign markets"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_goblin_civilization
+		upgrade_ettin_civilization
+		upgrade_troll_civilization
+		upgrade_kobold_civilization
+	}
+	unit_classes = {
+		caravan
+	}
+}
+
+trade_dock_goblin = {
+	pos = 5
+	icon = icon_goblin_coinage
+	action = harvest
+	key = t
+	hint = "~!Trade"
+	popup = popup_commands
+	description = "Trade with foreign docks"
+	allowed = check_upgrade_or
+	allow_arg = {
+		upgrade_goblin_civilization
+		upgrade_ettin_civilization
+		upgrade_troll_civilization
+		upgrade_kobold_civilization
+	}
+	unit_classes = {
+		transport_ship
+		space_transport_ship
+	}
+}

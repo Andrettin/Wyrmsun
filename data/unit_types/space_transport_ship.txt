@@ -1,0 +1,62 @@
+unit_space_transport_ship = {
+	name = "Space Transport"
+	parent = unit_template_space_ship
+	unit_class = space_transport_ship
+	civilization = neutral
+	image_file = "units/space_transport.png"
+	frame_size = { 128 128 }
+	animation_set = animations_transport_ship
+	icon = space_transport_ship
+	costs = {
+		time = 70
+		copper = 600
+		lumber = 2100
+	}
+	speed = 11
+	hit_points = 150
+	max_on_board = 6
+	tile_size = { 2 2 }
+	box_size = { 63 63 }
+	sight_range = 4
+	armor = 5
+	missile = missile_none
+	max_attack_range = 1
+	garrisoned_range_bonus = 1
+	evasion = 5
+	priority = 70
+	annoy_computer_factor = 15
+	points = 40
+	demand = 2
+	can_target_land = true
+	can_target_sea = true
+	can_target_air = true
+	right_mouse_action = harvest
+	can_transport = {
+		land_unit = only
+	}
+	side_attack = true
+	can_dock = true
+	attack_from_transporter = true
+	trader = true
+	button_key = t
+	requirements_string = "Lumber Mill"
+	affixes = {
+		upgrade_item_prefix_frail
+		upgrade_item_prefix_impregnable
+		upgrade_item_prefix_sturdy
+		upgrade_item_prefix_vulnerable
+		upgrade_item_suffix_of_frailty
+		upgrade_item_suffix_of_slowness
+		upgrade_item_suffix_of_speed
+		upgrade_item_suffix_of_swiftness
+		upgrade_item_suffix_of_vulnerability
+	}
+	resource_gathering = {
+		trade = {
+			resource_capacity = 600
+			resource_step = 4
+			wait_at_resource = 6
+			wait_at_depot = 150
+		}
+	}
+}

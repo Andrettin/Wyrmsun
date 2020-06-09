@@ -34,18 +34,6 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
--- General Commands -------------------------------
-
-DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
-	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-dwarven-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign markets",
-	ForUnit = {
-		"unit-gnomish-caravan"
-	}
-})
-
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 4, Icon = "icon-herbal-cure",

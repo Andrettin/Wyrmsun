@@ -60,25 +60,6 @@ DefineButton( { Pos = 3, Icon = "icon-dwarven-ballista-bolt-3",
 	}
 } )
 
-DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
-	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-dwarven-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign markets",
-	ForUnit = {
-		"unit-caravan"
-	}
-})
-
-DefineButton( { Pos = 5, Icon = "icon-dwarven-coinage",
-	Action = "harvest",
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign docks",
-	ForUnit = {
-		"unit-dwarven-transport-ship"
-	}
-})
-
 -- Units --------------------------------------------------------------
 
 DefineButton( { Pos = 2,

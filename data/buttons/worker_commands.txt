@@ -49,6 +49,7 @@ return_goods = {
 		minecart
 		caravan
 		transport_ship
+		space_transport_ship
 	}
 }
 

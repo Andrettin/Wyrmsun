@@ -4274,6 +4274,22 @@ DefineUnitType("unit-template-ship", {
 	}
 })
 
+DefineUnitType("unit-template-space-ship", {
+	Name = "Space Ship",
+	Parent = "unit-template-unit",
+	DrawLevel = 60,
+	RepairHp = 4,
+	RepairCosts = {"copper", 1, "lumber", 1},
+--	Corpse = "unit-dead-sea-body",
+	Type = "space",
+	Sounds = {
+		"selected", "ship-selected",
+		"ready", "ship-selected",
+--		"acknowledge", "ship-move",
+		"dead", "ship-destroyed"
+	}
+})
+
 DefineUnitType("unit-template-transport-ship", {
 	Name = "Transport",
 	Parent = "unit-template-ship",

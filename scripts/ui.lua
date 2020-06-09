@@ -1826,7 +1826,10 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = _("Trade Capacity: 400"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {UnitTypeClass = "transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Trade Capacity: 400"), Font = PopupDescriptionFont}}
+					More = {"Text", {Text = _("Trade Capacity: 600"), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {UnitTypeClass = "space_transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Trade Capacity: 600"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Food Cost:"), " "), Variable = "Demand", Font = PopupDescriptionFont}}

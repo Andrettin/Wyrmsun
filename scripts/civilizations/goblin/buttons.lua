@@ -53,25 +53,6 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
-DefineButton( { Pos = 5, Icon = "icon-goblin-coinage",
-	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-goblin-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign markets",
-	ForUnit = {
-		"unit-caravan"
-	}
-})
-
-DefineButton( { Pos = 5, Icon = "icon-goblin-coinage",
-	Action = "harvest",
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign docks",
-	ForUnit = {
-		"unit-goblin-transport-ship"
-	}
-})
-
 -- Units --------------------------------------------------------------
 
 DefineButton( { Pos = 7, Icon = "icon-goblin-gunpowder-infantry",

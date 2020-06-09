@@ -1,0 +1,3 @@
+space_transport_ship = {
+	name = "Space Transport Ship"
+}

@@ -3,6 +3,6 @@ the_settlement_of_scandinavia = {
 	description = "After a long journey, the Asa reach lands ripe for settlement."
 	faction = asa_tribe
 	start_date = -2800.7 #start during summer
-	required_quest = westward_migration
 	map_templates = { earth_space }
+	required_quests = { westward_migration }
 }

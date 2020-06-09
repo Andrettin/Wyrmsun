@@ -1,0 +1,3 @@
+space_transport_ship = {
+	file = "icons/units/space_transport_ship.png"
+}

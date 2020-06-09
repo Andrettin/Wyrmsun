@@ -39,15 +39,6 @@ DefineButton( { Pos = 6, Icon = "icon-attack-ground",
 	}
 })
 
-DefineButton( { Pos = 5, Icon = "icon-unload",
-	Action = "unload",
-	Key = "u", Hint = "~!Unload", Popup = "popup_commands",
-	ForUnit = {
-		"unit-caravan", "unit-gnomish-caravan",
-		"unit-germanic-transport-ship", "unit-teuton-kogge", "unit-dwarven-transport-ship", "unit-goblin-transport-ship"
-	}
-})
-
 -- Building Commands ------------------------------------------------------
 
 DefineButton( { Pos = 14, Icon = "icon-crown",

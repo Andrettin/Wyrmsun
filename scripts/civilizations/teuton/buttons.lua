@@ -63,26 +63,6 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
-DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
-	Action = "harvest",
-	Allowed = "check-upgrade-or", AllowArg = {"upgrade-germanic-civilization", "upgrade-anglo-saxon-civilization", "upgrade-english-civilization", "upgrade-frankish-civilization", "upgrade-suebi-civilization", "upgrade_teutonic_civilization", "upgrade-gothic-civilization", "upgrade-celtic-civilization"},
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign markets",
-	ForUnit = {
-		"unit-caravan"
-	}
-})
-
-DefineButton( { Pos = 5, Icon = "icon-suebi-coinage",
-	Action = "harvest",
-	Key = "t", Hint = "~!Trade", Popup = "popup_commands",
-	Description = "Trade with foreign docks",
-	ForUnit = {
-		"unit-germanic-transport-ship",
-		"unit-teuton-kogge"
-	}
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",

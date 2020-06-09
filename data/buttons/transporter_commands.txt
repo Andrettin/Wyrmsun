@@ -1,0 +1,13 @@
+unload = {
+	pos = 5
+	icon = icon_unload
+	action = unload
+	key = u
+	hint = "~!Unload"
+	popup = popup_commands
+	unit_classes = {
+		caravan
+		transport_ship
+		space_transport_ship
+	}
+}
