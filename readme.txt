@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI now goes to the aid of its attacked buildings, rather than only its units.
 - The AI now purposefully builds units/buildings to complete its quests.
+- The AI now only declares war during scenarios after 20 minutes of playing, so that main quests can proceed more smoothly.
 
 * Buildings
 - All Germanic buildings now have snowy variations.
