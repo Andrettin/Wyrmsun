@@ -37,7 +37,9 @@ DefineFaction("carthage", {
 	Name = "Carthage",
 	Civilization = "phoenician",
 	Type = "polity",
-	Color = "black"
+	Color = "black",
+	DefaultTier = "kingdom",
+	DefaultGovernmentType = "republic"
 })
 
 DefineFaction("phoenicia", {
