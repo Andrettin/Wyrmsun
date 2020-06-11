@@ -292,26 +292,6 @@ DefineSite("saguntum", {
 	Regions = {"iberia"}
 })
 
-DefineSite("seville", {
-	Name = "Seville",
-	MapTemplate = "earth",
-	Position = {3703, 1195},
-	CulturalNames = {
-		"castillian", "Seville",
-		"latin", "Hispalis"
-	},
-	HistoricalOwners = {
-		-201, "rome", -- Hispalis was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Seville was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Seville was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-201, 1504, "farm",
-		1504, 0, "university" -- Major university founded in Seville in 1504; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("tarragona", {
 	Name = "Tarragona",
 	MapTemplate = "earth",
