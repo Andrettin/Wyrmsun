@@ -1,0 +1,7 @@
+morocco = {
+	name = "Morocco"
+	civilization = arab
+	type = polity
+	color = red
+	default_tier = kingdom
+}

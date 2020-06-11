@@ -1,0 +1,9 @@
+arab = {
+	name = "Arab"
+	parent_civilization = greek
+	group = semitic
+	visible = false
+	playable = false
+	default_color = green
+	upgrade = upgrade_arab_civilization
+}
