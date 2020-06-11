@@ -1,0 +1,32 @@
+oporto = {
+	name = "Oporto"
+	map_template = earth_space
+	geocoordinate = { -8.62000126284 41.15000632640 } #from Natural Earth
+	major = true
+	regions = {
+		iberia
+	}
+	
+	history = {
+		-138 = {
+			owner_faction = rome #Oporto's area was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		411.12.31 = {
+			owner_faction = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		}
+		
+		1097 = {
+			owner_faction = portugal #part of the County of Portugal c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1150 = {
+			owner_faction = portugal #Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
+		}
+		
+		1911 = {
+			building_classes += university #University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}
