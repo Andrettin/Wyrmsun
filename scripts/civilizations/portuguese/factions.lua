@@ -25,12 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("portugal", {
-	Name = "Portugal",
-	Civilization = "portuguese",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom"
-})
-
 Load("scripts/civilizations/portuguese/factions_brazilian.lua")

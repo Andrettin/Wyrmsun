@@ -65,27 +65,6 @@ DefineSite("coimbra", {
 	Regions = {"iberia"}
 })
 
-DefineSite("lisbon", {
-	Name = "Lisbon",
-	MapTemplate = "earth",
-	Position = {3632, 1166},
-	Major = true,
-	CulturalNames = {
-		"latin", "Olisipo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"portuguese", "Lisbon" -- "Lisboa"
-	},
-	HistoricalOwners = {
-		-138, "rome", -- Olisipo was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Lisbon was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1148, "portugal" -- Lisbon was acquired by the Kingdom of Portugal in 1148 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
-	},
-	HistoricalBuildings = {
-		-138, 0, "town_hall",
-		1911, 0, "university" -- University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("oporto", {
 	Name = "Oporto",
 	MapTemplate = "earth",

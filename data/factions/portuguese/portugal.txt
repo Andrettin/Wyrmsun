@@ -1,0 +1,13 @@
+portugal = {
+	name = "Portugal"
+	civilization = portuguese
+	type = polity
+	color = green
+	default_tier = kingdom
+	
+	history = {
+		1097 = {
+			tier = county #county c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+	}
+}
