@@ -148,6 +148,7 @@ DefineFaction("rome", {
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "kingdom",
+	DefaultGovernmentType = "republic",
 	DevelopsFrom = {"latin-tribe"},
 	HistoricalGovernmentTypes = {
 		-500, "republic", -- correct?

@@ -30,7 +30,8 @@ DefineFaction("florence", {
 	Civilization = "italian",
 	Type = "polity",
 	Color = "orange",
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic"
 })
 
 DefineFaction("genoa", {
@@ -38,7 +39,8 @@ DefineFaction("genoa", {
 	Civilization = "italian",
 	Type = "polity",
 	Color = "green",
-	DefaultTier = "duchy"
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic"
 })
 
 DefineFaction("italy", {
@@ -63,17 +65,6 @@ DefineFaction("modena", {
 	Type = "polity",
 	Color = "yellow",
 	DefaultTier = "duchy"
-})
-
-DefineFaction("papal-states", {
-	Name = "Papal States",
-	Civilization = "italian",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "kingdom",
-	HistoricalCapitals = {
-		0, "rome"
-	}
 })
 
 DefineFaction("parma", {
@@ -131,6 +122,7 @@ DefineFaction("venice", {
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DefaultGovernmentType = "republic",
 	HistoricalGovernmentTypes = {
 		919, "monarchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "republic" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

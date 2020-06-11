@@ -1,0 +1,10 @@
+papal_states = {
+	name = "Papal States"
+	civilization = italian
+	type = polity
+	color = brown
+	default_tier = kingdom
+	default_government_type = theocracy
+	default_capital = rome
+	simple_name = true
+}
