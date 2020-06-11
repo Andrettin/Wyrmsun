@@ -2878,10 +2878,10 @@ if not (ui_loaded_first_time) then
 				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 			},
 			{ 	Condition = {Overlord = "only"}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = Concat("Overlord: ", PlayerName(PlayerData(ButtonPlayer("Player"), "Overlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+				More = {"Text", {Text = Concat("Overlord: ", PlayerFullName(PlayerData(ButtonPlayer("Player"), "Overlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			},
 			{ 	Condition = {TopOverlord = "only"}, TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = Concat("Top Overlord: ", PlayerName(PlayerData(ButtonPlayer("Player"), "TopOverlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+				More = {"Text", {Text = Concat("Top Overlord: ", PlayerFullName(PlayerData(ButtonPlayer("Player"), "TopOverlord"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 			}
 		}	
 	})
