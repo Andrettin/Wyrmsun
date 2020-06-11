@@ -15,9 +15,5 @@ munich = {
 			owner_faction = bavaria #part of the Duchy of Bavaria in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
 		}
-		
-		1147 = {
-			owner_faction = saxony #the Duchy of Bavaria was returned to Henry the Lion of Saxony in 1147; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 713.
-		}
 	}
 }
