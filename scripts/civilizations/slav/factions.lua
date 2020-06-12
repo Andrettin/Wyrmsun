@@ -112,5 +112,9 @@ DefineFaction("serbia", {
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })

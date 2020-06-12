@@ -44,6 +44,10 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -63,6 +67,10 @@ DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
 	}
 })
 

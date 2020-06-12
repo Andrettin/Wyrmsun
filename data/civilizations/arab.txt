@@ -6,4 +6,23 @@ arab = {
 	playable = false
 	default_color = green
 	upgrade = upgrade_arab_civilization
+	
+	title_names = {
+		monarchy = {
+			duchy = "Emirate"
+		}
+	}
+	
+	character_title_names = {
+		head_of_state = {
+			polity = {
+				monarchy = {
+					duchy = {
+						male = "Emir"
+						female = "Emira"
+					}
+				}
+			}
+		}
+	}
 }

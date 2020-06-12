@@ -1,0 +1,16 @@
+castille = {
+	name = "Castille"
+	civilization = castillian
+	type = polity
+	color = yellow
+	default_tier = kingdom
+	
+	history = {
+		1037 = {
+			diplomacy_state = {
+				faction = leon #the kingdoms of León and Castille were united in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+				state = personal_union_vassal
+			}
+		}
+	}
+}

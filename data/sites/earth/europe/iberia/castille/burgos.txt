@@ -1,0 +1,30 @@
+burgos = {
+	name = "Burgos"
+	map_template = earth_space
+	geocoordinate = { -3.67996687968 42.35039817210 } #from Natural Earth
+	major = true
+	cores = {
+		castille
+	}
+	cultural_names = {
+		latin = "Burgiorum" #Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	}
+	regions = {
+		iberia
+	}
+	
+	history = {
+		910 = {
+			owner_faction = leon #part of the County of Bardulia/Castille within the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			building_classes += town_hall
+		}
+		
+		1037 = {
+			owner_faction = castille #part of the Kingdom of Castille in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1560 = {
+			owner_faction = spain #Burgos was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

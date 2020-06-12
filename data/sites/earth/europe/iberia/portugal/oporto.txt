@@ -17,8 +17,8 @@ oporto = {
 			owner_faction = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
-		1097 = {
-			owner_faction = portugal #part of the County of Portugal c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		1094 = {
+			owner_faction = portugal #part of the County of Portugal from 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
 		1150 = {

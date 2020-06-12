@@ -158,6 +158,9 @@ DefineFaction("cologne", {
 	DevelopsFrom = {"frank-tribe", "ubii-tribe"},
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "theocracy", "duchy", "Archbishop"
 	}
 })
 
@@ -184,6 +187,10 @@ DefineFaction("friesland", {
 	DevelopsFrom = {"frisian-tribe"},
 	Titles = {
 		"monarchy", "barony", "Lordship"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
 	}
 })
 
@@ -199,6 +206,9 @@ DefineFaction("hesse", {
 	DevelopsFrom = {"frank-tribe", "ubii-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "duchy", "Landgrave"
 	},
 	HistoricalTiers = {
 		1815, "grand_duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -227,6 +237,9 @@ DefineFaction("magdeburg", {
 	DevelopsFrom = {"saxon-tribe", "cherusci-tribe"},
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "theocracy", "duchy", "Archbishop"
 	},
 	HistoricalGovernmentTypes = {
 		1547, "theocracy" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
@@ -269,6 +282,9 @@ DefineFaction("thuringia", {
 	DevelopsFrom = {"thuringian-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "duchy", "Landgrave"
 	}
 })
 

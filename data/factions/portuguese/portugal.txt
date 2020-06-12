@@ -6,8 +6,22 @@ portugal = {
 	default_tier = kingdom
 	
 	history = {
-		1097 = {
-			tier = county #county c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		1094 = {
+			tier = county #created as a county of the Kingdom of León in 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			
+			diplomacy_state = {
+				faction = leon
+				state = vassal
+			}
+		}
+		
+		1140 = {
+			tier = kingdom #independent kingdom from 1140; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			
+			diplomacy_state = {
+				faction = leon
+				state = peace
+			}
 		}
 	}
 }

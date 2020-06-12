@@ -25,24 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("burgos", {
-	Name = "Burgos",
-	MapTemplate = "earth",
-	Position = {3756, 1083},
-	CulturalNames = {
-		"castillian", "Burgos",
-		"latin", "Burgiorum" -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	},
-	HistoricalOwners = {
-		910, "leon", -- Burgos was a part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		1560, "spain" -- Burgos was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		910, 0, "farm"
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("cadiz", {
 	Name = "Cadiz",
 	MapTemplate = "earth",
@@ -371,28 +353,6 @@ DefineSite("valencia", {
 	HistoricalBuildings = {
 		-201, 1500, "farm",
 		1500, 0, "university" -- University founded in Valencia in 1500; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("zaragoza", {
-	Name = "Zaragoza",
-	MapTemplate = "earth",
-	Position = {3824, 1103},
-	Major = true,
-	CulturalNames = {
-		"castillian", "Zaragoza",
-		"latin", "Caesaraugusta"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		486, "visigothia", -- Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple", -- Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1474, 0, "university" -- University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"iberia"}
 })

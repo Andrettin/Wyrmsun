@@ -41,22 +41,6 @@ DefineFaction("argentina", {
 	DefaultTier = "kingdom" -- had the status of viceroyalty
 })
 
-DefineFaction("castille", {
-	Name = "Castille",
-	Civilization = "castillian",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("leon", {
-	Name = "Leon",
-	Civilization = "castillian",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom"
-})
-
 DefineFaction("paraguay", {
 	Name = "Paraguay",
 	Civilization = "castillian",

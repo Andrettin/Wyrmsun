@@ -60,6 +60,9 @@ DefineFaction("switzerland", {
 	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"},
 	Titles = {
 		"republic", "kingdom", "Confederation"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "republic", "kingdom", "Chancellor"
 	}
 })
 

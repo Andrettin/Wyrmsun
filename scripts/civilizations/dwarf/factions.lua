@@ -216,7 +216,9 @@ DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of
 	},
 	MinisterTitles = {
 		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
+		"head-of-state", "female", "monarchy", "barony", "Lady",
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	},
 	HistoricalCapitals = {
 		400, "joruvellir"

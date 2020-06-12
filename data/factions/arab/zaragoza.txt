@@ -1,0 +1,16 @@
+zaragoza = {
+	name = "Zaragoza"
+	civilization = arab
+	type = polity
+	color = black
+	default_tier = duchy #emirate
+	
+	history = {
+		1094 = {
+			diplomacy_state = {
+				faction = morocco #part of the dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+				state = vassal
+			}
+		}
+	}
+}

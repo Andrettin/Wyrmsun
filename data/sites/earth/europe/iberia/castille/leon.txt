@@ -1,0 +1,19 @@
+leon = {
+	name = "Leon"
+	map_template = earth_space
+	geocoordinate = { -5.57000655254 42.57997072250 } #from Natural Earth
+	major = true
+	cores = {
+		leon
+	}
+	regions = {
+		iberia
+	}
+	
+	history = {
+		910 = {
+			owner_faction = leon #part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			building_classes += town_hall
+		}
+	}
+}

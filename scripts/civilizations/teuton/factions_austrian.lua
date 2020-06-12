@@ -41,7 +41,7 @@ DefineFaction("austria", {
 		"head-of-state", "male", "monarchy", "grand_duchy", "Archduke",
 		"head-of-state", "female", "monarchy", "grand_duchy", "Archduchess",
 		"head-of-government", "none", "monarchy", "none", "Minister-President", -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
-		"education-minister", "none", "no-government-type", "none", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+		"education-minister", "none", "none", "none", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	},
 	HistoricalCapitals = {
 		0, "vienna"

@@ -1,0 +1,43 @@
+zaragoza = {
+	name = "Zaragoza"
+	map_template = earth_space
+	geocoordinate = { -0.88998213846 41.65000164700 } #from Natural Earth
+	major = true
+	cores = {
+		aragon
+	}
+	cultural_names = {
+		latin = "Caesaraugusta"
+	}
+	regions = {
+		iberia
+	}
+	
+	history = {
+		395 = {
+			owner_faction = rome #Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+			building_classes += temple #Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		486 = {
+			owner_faction = visigothia #Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		910 = {
+			owner_faction = zaragoza #part of independent Moorish states in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1037 = {
+			owner_faction = zaragoza #part of the Emirate of Zaragoza in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1474 = {
+			building_classes += university #University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1560 = {
+			owner_faction = spain #Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

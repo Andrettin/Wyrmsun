@@ -1,0 +1,7 @@
+leon = {
+	name = "Leon" #"León"
+	civilization = castillian
+	type = polity
+	color = red
+	default_tier = kingdom
+}

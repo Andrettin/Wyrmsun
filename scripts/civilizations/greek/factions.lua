@@ -53,6 +53,10 @@ DefineFaction("argos", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
 	}
 })
 
@@ -66,6 +70,10 @@ DefineFaction("athens", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-450, "argos", "alliance", -- Argos was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
@@ -91,6 +99,10 @@ DefineFaction("corinth", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-431, "athens", "war" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -143,6 +155,10 @@ DefineFaction("mycenae", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
+	},
 	HistoricalCapitals = {
 		-1450, "mycenae" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},
@@ -161,6 +177,10 @@ DefineFaction("sparta", {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
 	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
+	},
 	HistoricalDiplomacyStates = {
 		-431, "corinth", "alliance", -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
 		-431, "macedon", "alliance" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -176,6 +196,10 @@ DefineFaction("thebes", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
+	},
+	MinisterTitles = {
+		"head-of-state", "none", "monarchy", "county", "Archon",
+		"head-of-state", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-450, "athens", "alliance", -- Thebes was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
