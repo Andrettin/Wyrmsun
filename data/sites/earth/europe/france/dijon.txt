@@ -3,6 +3,7 @@ dijon = {
 	map_template = earth_space
 	geocoordinate = { 5.03001826846 47.33040427560 } #from Natural Earth
 	major = true
+	color = { 200 208 75 }
 	cultural_names = {
 		frankish = "Divio"
 	}

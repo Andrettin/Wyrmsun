@@ -3,6 +3,7 @@ leon = {
 	map_template = earth_space
 	geocoordinate = { -5.57000655254 42.57997072250 } #from Natural Earth
 	major = true
+	color = { 201 142 117 }
 	cores = {
 		leon
 	}

@@ -3,6 +3,7 @@ oporto = {
 	map_template = earth_space
 	geocoordinate = { -8.62000126284 41.15000632640 } #from Natural Earth
 	major = true
+	color = { 37 113 29 }
 	regions = {
 		iberia
 	}

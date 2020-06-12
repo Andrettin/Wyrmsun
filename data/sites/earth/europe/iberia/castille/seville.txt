@@ -3,6 +3,7 @@ seville = {
 	map_template = earth_space
 	geocoordinate = { -5.98000736635 37.40501527820 } #from Natural Earth
 	major = true
+	color = { 230 112 111 }
 	cultural_names = {
 		latin = "Hispalis"
 	}

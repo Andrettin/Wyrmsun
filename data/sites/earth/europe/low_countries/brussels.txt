@@ -3,6 +3,7 @@ brussels = {
 	map_template = earth_space
 	geocoordinate = { 4.33331660830 50.83331707670 } #from Natural Earth
 	major = true
+	color = { 95 134 74 }
 	regions = {
 		belgium
 	}

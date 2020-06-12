@@ -3,6 +3,7 @@ barcelona = {
 	map_template = earth_space
 	geocoordinate = { 2.18337031923 41.38329957990 } #from Natural Earth
 	major = true
+	color = { 172 234 91 }
 	cores = {
 		barcelona
 	}

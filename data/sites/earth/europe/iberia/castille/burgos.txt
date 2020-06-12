@@ -3,6 +3,7 @@ burgos = {
 	map_template = earth_space
 	geocoordinate = { -3.67996687968 42.35039817210 } #from Natural Earth
 	major = true
+	color = { 0 85 46 }
 	cores = {
 		castille
 	}

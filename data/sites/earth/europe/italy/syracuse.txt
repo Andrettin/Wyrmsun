@@ -3,6 +3,7 @@ syracuse = {
 	map_template = earth_space
 	geocoordinate = { 15.28996048860 37.07035870260 } #from Natural Earth
 	major = true
+	color = { 100 246 40 }
 	cultural_names = {
 		#greek = "Syracusae" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

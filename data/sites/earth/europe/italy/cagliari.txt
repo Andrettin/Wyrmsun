@@ -3,6 +3,7 @@ cagliari = {
 	map_template = earth_space
 	geocoordinate = { 9.10398148462 39.22239788720 } #from Natural Earth
 	major = true
+	color = { 68 112 115 }
 	cultural_names = {
 		latin = "Caralis" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

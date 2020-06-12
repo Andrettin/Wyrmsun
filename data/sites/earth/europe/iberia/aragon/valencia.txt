@@ -3,6 +3,7 @@ valencia = {
 	map_template = earth_space
 	geocoordinate = { -0.40001204569 39.48501751610 } #from Natural Earth
 	major = true
+	color = { 179 252 129 }
 	cultural_names = {
 		latin = "Valentia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

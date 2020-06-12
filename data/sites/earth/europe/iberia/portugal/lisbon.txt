@@ -3,6 +3,7 @@ lisbon = {
 	map_template = earth_space
 	geocoordinate = { -9.14486630549 38.72272287790 } #from Natural Earth
 	major = true
+	color = { 36 81 20 }
 	cultural_names = {
 		latin = "Olisipo" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}

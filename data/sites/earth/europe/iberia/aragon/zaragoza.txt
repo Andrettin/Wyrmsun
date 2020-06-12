@@ -3,6 +3,7 @@ zaragoza = {
 	map_template = earth_space
 	geocoordinate = { -0.88998213846 41.65000164700 } #from Natural Earth
 	major = true
+	color = { 202 26 200 }
 	cores = {
 		aragon
 	}

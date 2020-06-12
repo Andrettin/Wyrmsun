@@ -3,6 +3,7 @@ vienna = {
 	map_template = earth_space
 	geocoordinate = { 16.36663895540 48.20001527820 } #from Natural Earth
 	major = true
+	color = { 42 3 128 }
 	cultural_names = {
 		celt = "Vindobona"
 		gaul = "Vindobona"

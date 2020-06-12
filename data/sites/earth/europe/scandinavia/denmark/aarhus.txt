@@ -3,6 +3,7 @@ aarhus = {
 	map_template = earth_space
 	geocoordinate = { 10.21068395860 56.15720399890 } #from Natural Earth
 	major = true
+	color = { 174 209 177 }
 	cultural_names = {
 		germanic = "Ahvoosa" #tentative rendering of "Aarhus" in Proto-Germanic
 	}

@@ -3,14 +3,13 @@ toulouse = {
 	map_template = earth_space
 	geocoordinate = { 1.44992671571 43.61995892240 } #from Natural Earth
 	major = true
-	
+	color = { 64 201 136 }
 	cultural_names = {
 		celt = "Tolosa"
 		frankish = "Tolosa"
 		gaul = "Tolosa"
 		latin = "Tolosa" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
-	
 	regions = {
 		france
 		gaul
