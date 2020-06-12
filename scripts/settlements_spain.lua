@@ -335,24 +335,3 @@ DefineSite("tortosa", {
 	},
 	Regions = {"iberia"}
 })
-
-DefineSite("valencia", {
-	Name = "Valencia",
-	MapTemplate = "earth",
-	Position = {3833, 1148},
-	Major = true,
-	CulturalNames = {
-		"castillian", "Valencia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-201, "rome", -- Valentia was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Valencia was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Valencia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-201, 1500, "farm",
-		1500, 0, "university" -- University founded in Valencia in 1500; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"iberia"}
-})

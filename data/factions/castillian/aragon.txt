@@ -1,0 +1,7 @@
+aragon = {
+	name = "Aragon"
+	civilization = castillian
+	type = polity
+	color = purple
+	default_tier = kingdom
+}
