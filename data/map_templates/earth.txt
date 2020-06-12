@@ -51,6 +51,7 @@ earth_space = {
 	base_terrain_type = dirt
 	terrain_image = "earth/earth_space.png"
 	overlay_terrain_image = "earth/earth_space_overlay.png"
+	territory_image = "earth/earth_space_territories.png"
 	min_longitude = -11
 	max_longitude = 20
 	min_latitude = 35
