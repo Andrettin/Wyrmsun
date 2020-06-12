@@ -25,31 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("goteborg", {
-	Name = "Gothenburg",
-	MapTemplate = "earth",
-	Position = {4104, 725},
-	Major = true,
-	CulturalNames = {
-		"goth", "Gothenburg",
-		"norse", "Goteborg" -- "Göteborg"
-	},
-	Cores = {
---		"goth-tribe",
-		"geat-tribe"
-	},
-	HistoricalOwners = {
-		{-2800, 12, 30}, "yngling-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
-		-325, "goth-tribe", -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		161, "swede-tribe", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1560, "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		{-2800, 12, 30}, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("roma-gotland", {
 	Name = "Roma",
 	MapTemplate = "earth",

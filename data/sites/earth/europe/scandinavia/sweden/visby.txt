@@ -3,6 +3,7 @@ visby = {
 	map_template = gotland
 	geocoordinate = { 18.30000931670 57.63365134600 } #from Natural Earth
 	major = true
+	color = { 152 171 212 }
 	cores = {
 		gute_tribe
 	}

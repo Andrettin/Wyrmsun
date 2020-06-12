@@ -1,14 +1,15 @@
-stockholm = {
-	name = "Stockholm"
+gothenburg = {
+	name = "Gothenburg"
 	map_template = earth_space
-	geocoordinate = { 18.09733473280 59.35075995430 } #from Natural Earth
+	geocoordinate = { 12.00003210310 57.75000083330 } #from Natural Earth
 	major = true
-	color = { 50 166 2 }
+	color = { 188 201 246 }
 	cultural_names = {
-		germanic = "Stukkahulma" #tentative rendering of "Stockholm" in Proto-Germanic
+		#norse = "Goteborg" #"Göteborg"
 	}
 	cores = {
-		swede_tribe
+		#goth_tribe
+		geat_tribe
 	}
 	regions = {
 		scandinavia
@@ -20,10 +21,14 @@ stockholm = {
 			building_classes += town_hall
 		}
 		
-		-264 = {
-			owner_faction = swede_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-325 = {
+			owner_faction = goth_tribe #Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
+		161 = {
+			owner_faction = swede_tribe #the area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+
 		1097 = {
 			owner_faction = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}

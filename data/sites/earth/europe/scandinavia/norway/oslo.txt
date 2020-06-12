@@ -3,6 +3,7 @@ oslo = {
 	map_template = earth_space
 	geocoordinate = { 10.74997920600 59.91669028640 } #from Natural Earth
 	major = true
+	color = { 211 128 27 }
 	cores = {
 		norway
 		vingulmark

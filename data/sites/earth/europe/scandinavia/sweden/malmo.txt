@@ -3,6 +3,7 @@ malmo = {
 	map_template = earth_space
 	geocoordinate = { 13.03330236680 55.58333721830 } #from Natural Earth
 	major = true
+	color = { 226 61 40 }
 	cores = {
 		scania
 	}
