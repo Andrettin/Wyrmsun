@@ -3,6 +3,7 @@ hanover = {
 	map_template = earth_space
 	geocoordinate = { 9.71665726588 52.36697023430 } #from Natural Earth
 	major = true
+	color = { 15 78 106 }
 	cores = {
 		lombard_tribe
 		brunswick

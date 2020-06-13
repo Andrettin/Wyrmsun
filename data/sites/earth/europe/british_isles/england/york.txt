@@ -3,6 +3,7 @@ york = {
 	map_template = earth_space
 	geocoordinate = { -1.08002221822 53.97038657540 } #from Natural Earth
 	major = true
+	color = { 39 195 115 }
 	cultural_names = {
 		anglo_saxon = "Eoforwic" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Eboracum"

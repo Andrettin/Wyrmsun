@@ -3,6 +3,7 @@ dublin = {
 	map_template = earth_space
 	geocoordinate = { -6.24890568178 53.33306113600 } #from Natural Earth
 	major = true
+	color = { 98 64 38 }
 	cultural_names = {
 		celt = "Eblana" #or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}

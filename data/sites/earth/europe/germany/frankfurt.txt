@@ -3,6 +3,7 @@ frankfurt = {
 	map_template = earth_space
 	geocoordinate = { 8.67501542017 50.09997682610 } #from Natural Earth
 	major = true
+	color = { 22 220 110 }
 	cores = {
 		frank_tribe
 		germany

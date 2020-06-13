@@ -3,6 +3,7 @@ london = {
 	map_template = earth_space
 	geocoordinate = { -0.11672184386 51.49999472970 } #from Natural Earth
 	major = true
+	color = { 242 84 91 }
 	cultural_names = {
 		anglo_saxon = "Lunden" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Londinium"

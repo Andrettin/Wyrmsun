@@ -3,6 +3,7 @@ munich = {
 	map_template = earth_space
 	geocoordinate = { 11.57499344750 48.12994203600 } #from Natural Earth
 	major = true
+	color = { 53 10 147 }
 	cultural_names = {
 		#teuton = "München"
 	}

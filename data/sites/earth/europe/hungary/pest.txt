@@ -3,6 +3,7 @@ pest = {
 	map_template = earth_space
 	geocoordinate = { 19.08332067740 47.50000632640 } #Budapest; from Natural Earth
 	major = true
+	color = { 57 174 209 }
 	cores = {
 		magyar_tribe
 		hungary

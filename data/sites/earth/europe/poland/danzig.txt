@@ -3,6 +3,7 @@ danzig = {
 	map_template = earth_space
 	geocoordinate = { 18.64004024120 54.35997519850 } #from Natural Earth
 	major = true
+	color = { 248 144 8 }
 	cultural_names = {
 		slav = "Gdansk" #"Gdańsk"
 	}

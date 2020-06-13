@@ -3,6 +3,7 @@ kiel = {
 	map_template = earth_space
 	geocoordinate = { 10.13001704780 54.33039044100 } #from Natural Earth
 	major = true
+	color = { 101 97 115 }
 	cores = {
 		hersing_tribe
 		teuton_tribe
