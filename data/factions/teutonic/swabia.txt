@@ -1,0 +1,23 @@
+swabia = {
+	name = "Swabia" #"Schwaben"
+	adjective = "Swabian"
+	civilization = teuton
+	type = polity
+	color = orange
+	default_tier = duchy #Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	icon = icon_flag_blue_lion_on_yellow
+	faction_upgrade = upgrade_faction_swabia
+	develops_from = {
+		alamanni_tribe
+		suebi_tribe
+	}
+	
+	history = {
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+	}
+}

@@ -3,18 +3,15 @@ stuttgart = {
 	map_template = earth_space
 	geocoordinate = { 9.19999629582 48.77997987780 } #from Natural Earth
 	major = true
+	color = { 192 202 36 }
 	regions = {
 		germany
 	}
 	
 	history = {
 		919 = {
-			owner_faction = holy_rome #Stuttgart's area was part of the Duchy of Swabia within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner_faction = swabia #the area was part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
-		}
-		
-		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 	}
 }
