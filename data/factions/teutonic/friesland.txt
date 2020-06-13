@@ -1,0 +1,41 @@
+friesland = {
+	name = "Friesland"
+	adjective = "Frisian"
+	civilization = teuton
+	type = polity
+	color = black
+	default_tier = duchy
+	icon = icon_flag_green_lion_on_orange
+	faction_upgrade = upgrade_faction_friesland
+	develops_from = {
+		frisian_tribe
+	}
+	title_names = {
+		monarchy = {
+			barony = "Lordship"
+		}
+	}
+	character_title_names = {
+		head_of_state = {
+			monarchy = {
+				barony = {
+					male = "Lord"
+					female = "Lady"
+				}
+			}
+		}
+	}
+	
+	history = {
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+
+		1559 = {
+			tier = barony #Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+		}
+	}
+}

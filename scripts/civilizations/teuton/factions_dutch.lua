@@ -100,7 +100,6 @@ DefineFaction("netherlands", {
 	},
 	--]]
 	ProvinceNames = {
-		"Flevoland",
-		"Friesland"
+		"Flevoland"
 	}
 })

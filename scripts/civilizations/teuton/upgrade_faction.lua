@@ -175,7 +175,7 @@ DefineUpgrade("upgrade-faction-mecklenburg", {
 DefineUpgrade("upgrade-faction-netherlands", {
 	Name = "Netherlands",
 	EffectsString = "+5% Copper, Silver and Gold Processing for Smithies",
-	RequirementsString = "Writing, Masonry, no other faction is Brabant, Drenthe, Holland or Overijssel"
+	RequirementsString = "Writing, Masonry, Gunpowder, no other faction is Brabant, Drenthe, Holland or Overijssel"
 })
 
 DefineUpgrade("upgrade-faction-overijssel", {
@@ -523,7 +523,7 @@ DefineDependency("upgrade-faction-mecklenburg",
 )
 
 DefineDependency("upgrade-faction-netherlands",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"upgrade-writing", "upgrade-masonry", "upgrade-gunpowder"}
 )
 
 DefineDependency("upgrade-faction-overijssel",

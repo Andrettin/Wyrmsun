@@ -176,24 +176,6 @@ DefineFaction("franconia", { -- represents the German region, so it uses base Te
 	DevelopsFrom = {"frank-tribe"}
 })
 
-DefineFaction("friesland", {
-	Name = "Friesland",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	FactionUpgrade = "upgrade-faction-friesland",
-	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"frisian-tribe"},
-	Titles = {
-		"monarchy", "barony", "Lordship"
-	},
-	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
-	}
-})
-
 DefineFaction("hesse", {
 	Name = "Hesse",
 	Civilization = "teuton",

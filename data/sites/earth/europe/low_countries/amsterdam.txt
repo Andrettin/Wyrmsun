@@ -22,8 +22,8 @@ amsterdam = {
 			owner_faction = frisian_tribe #Amsterdam's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
-		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		919 = {
+			owner_faction = friesland #the area was part of Friesland in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1560 = {
