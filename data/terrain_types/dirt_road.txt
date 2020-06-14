@@ -1,14 +1,11 @@
-road = {
-	name = "Road"
-	character = _
+dirt_road = {
+	name = "Dirt Road"
 	overlay = true
-	pathway = true
 	allow_single = true
-	image_file = "terrain/road.png"
+	image_file = "terrain/dirt_road.png"
 	flags = {
 		land
-		road
-		stone_floor
+		dirt
 	}
 	base_terrain_types = {
 		dirt
