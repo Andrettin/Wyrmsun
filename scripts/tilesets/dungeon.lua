@@ -52,9 +52,9 @@ DefineTileset("name", "Dungeon",
     { 432, 433, 434, 432}},						-- 030
   "solid", { "rug", "land", "grass", -- since the "dark unbuildable land" slot is unused, use it for the rug (essentially a second type of "dark buildable land")
     { 448, 449, 448, 449}},						-- 040
-  "solid", { "floor", "land", "stone-floor",
+  "solid", { "floor", "land", "stone_floor",
     { 464, 465, 466, 467}},						-- 050
-  "solid", { "gold-pile", "land", "stone-floor",
+  "solid", { "gold-pile", "land", "stone_floor",
     { 480, 481, 482, 483, 484}},					-- 060
   "solid", { "unused",
     {}},								-- 070
@@ -159,7 +159,7 @@ DefineTileset("name", "Dungeon",
     { 302, 303, 302},							-- 5D0
     {},									-- 5E0
     {}},								-- 5F0
-  "mixed", { "gold-pile", "floor", "land", "stone-floor",
+  "mixed", { "gold-pile", "floor", "land", "stone_floor",
     { 304, 304, 304},							-- 600
     { 306, 306, 306},							-- 610
     { 308, 309, 310},							-- 620

@@ -51,7 +51,7 @@ DefineTileset("name", "Cave",
 			{ 432, 433, 434, 432}},						-- 030
 		"solid", { "unused",
 			{}},								-- 040
-		"solid", { "cave-floor", "land", "stone-floor",
+		"solid", { "cave-floor", "land", "stone_floor",
 			{ 464, 465, 466, 464}},						-- 050
 		"solid", { "unused",
 			{}},								-- 060
