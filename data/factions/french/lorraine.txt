@@ -1,0 +1,27 @@
+lorraine = {
+	name = "Lorraine"
+	civilization = french
+	type = polity
+	color = yellow
+	default_tier = duchy #Upper and Lower Lorraine were duchies in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	
+	history = {
+		911 = {
+			diplomacy_state = {
+				faction = france #part of France from 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+		
+		925 = {
+			diplomacy_state = {
+				faction = holy_rome #part of the Holy Roman Empire from 925; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+		
+		959 = {
+			#split into the duchies Upper and Lower Lorraine in 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+	}
+}
