@@ -303,7 +303,7 @@ function SinglePlayerTriggers()
 	StandardTriggers()
 
 	if (LoadedGame == false) then
-		DefineAllowNormalUnits("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+		DefineAllowNormalUnits("A")
 		ApplyTechLevels()
 	end
 

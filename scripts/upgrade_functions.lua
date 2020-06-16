@@ -47,23 +47,23 @@ function DefineUpgrade(upgrade_ident, data)
 	OldDefineUpgrade(upgrade_ident, data)
 	
 	if (GetUpgradeData(upgrade_ident, "Ability")) then
-		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	end
 end
 
-function DefineAllowNormalUnits(flags)
+function DefineAllowNormalUnits(base_flag)
 	for i, unitName in ipairs(Units) do
 		local PlayerUnitFlag = {}
 		for j=0,(PlayerMax - 1) do
 			if (string.find(unitName, "upgrade") == nil) then
-				if (flags == "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR") then
+				if (base_flag == "R") then
 					PlayerUnitFlag[j] = "A"
 				else
-					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
+					PlayerUnitFlag[j] = base_flag
 				end
 			else
 				if (
-					flags == "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+					base_flag == "A"
 					and (
 						unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")
 						or (GetPlayerData(j, "Faction") ~= "" and unitName == GetFactionData(GetPlayerData(j, "Faction"), "FactionUpgrade"))
@@ -75,7 +75,7 @@ function DefineAllowNormalUnits(flags)
 				) then
 					PlayerUnitFlag[j] = "R"
 				else
-					PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
+					PlayerUnitFlag[j] = base_flag
 				end
 			end
 		end
@@ -88,7 +88,7 @@ function DefineAllowNormalUnits(flags)
 end
 
 InitFuncs:add(function()
-	DefineAllowNormalUnits("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+	DefineAllowNormalUnits("A")
 end)
 
 function ApplyTechLevels()
