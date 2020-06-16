@@ -16,11 +16,11 @@ hamburg = {
 			owner_faction = saxon_tribe #Hamburg's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
-		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
-			building_classes += market #Hamburg existed c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		919 = {
+			owner_faction = saxony #part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			building_classes += market #Hamburg existed in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
-		
+
 		1138 = {
 			owner_faction = saxony #part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
 		}

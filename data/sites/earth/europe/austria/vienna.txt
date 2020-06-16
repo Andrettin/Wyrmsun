@@ -33,13 +33,13 @@ vienna = {
 			building_classes -= barracks
 		}
 		
-		955 = {
-			owner_faction = bavaria #Vienna became a part of the Bavarian East March in 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		907 = {
+			owner_faction = hungary #Hungarian possession from 907; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
 		}
 		
-		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		955 = {
+			owner_faction = austria #part of the Bavarian East March (the Margraviate of Austria) from 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1156 = {

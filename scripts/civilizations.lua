@@ -804,7 +804,6 @@ DefineCivilization("minotaur", {
 })
 
 DefineCivilization("teuton", {
-	Display = "Teuton",
 	Visible = true,
 	Group = "continental_west_germanic",
 	Language = "high-german",

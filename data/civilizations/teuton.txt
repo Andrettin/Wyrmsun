@@ -1,0 +1,23 @@
+teuton = {
+	name = "Teuton"
+	
+	title_names = {
+		monarchy = {
+			marquisate = "Margraviate"
+		}
+	}
+	
+	character_title_names = {
+		head_of_state = {
+			polity = {
+				monarchy = {
+					marquisate = {
+						male = "Margrave"
+						female = "Margravine"
+					}
+				}
+			}
+		}
+	}
+}
+
