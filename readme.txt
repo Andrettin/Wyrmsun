@@ -97,6 +97,7 @@ https://github.com/Andrettin/Wyrmsun
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 - The Nidavellir scenarios now take place in a single map layer. The underground portions of the map are now in the same layer as the surface portions, but retain their peculiar characteristics, e.g. cave walls being non-passable by air units and missiles.
 - Reduced the size of the Aurvang and Joruvellir map templates.
+- The Settlement of Scandinavia scenario now requires the player to build a Chieftain's Hall in Copenhagen instead of Leidre.
 
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.
@@ -114,7 +115,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for zooming the minimap for maps with tile size larger than the pixel size of the minimap (e.g. 256x256 maps if the minimap is 128x128). Press Shift-TAB to zoom/unzoom the minimap.
 - Simplified the appearance of terrain on the minimap. Each terrain type is now represented by a particular color (with seasonal variations).
 - The player's population number can now be seen when hovering the food icon on the top bar. The number is based on the number of organic, non-fauna units the player possesses. The population number is for flavor only, and has no gameplay effect.
-- The (human) player's name in the player list is now in green.
+- The (human) player's name in the player list is now shown in green.
 
 -----------------------------------------------------------------------
 - 3.5.4

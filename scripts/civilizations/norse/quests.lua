@@ -102,25 +102,25 @@ DefineQuest("ottars-lineage", {
 DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 	Name = "Heorot",
 	Icon = "icon-norse-town-hall",
-	Description = "A master builder has proposed to us to remake our hall in Leidre anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources.",
+	Description = "A master builder has proposed to us to remake our hall in Copenhagen anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources.",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Allow", "upgrade-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "leidre") and GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "leidre") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
+		if (GetPlayerData(trigger_player, "Allow", "upgrade-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "copenhagen") and GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "copenhagen") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "copenhagen") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
 			return true
 		end
 		return false
 	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 500)
-		local hall_unit = FindUnit("unit-norse-town-hall", trigger_player, false, true, "leidre")
+		local hall_unit = FindUnit("unit-norse-town-hall", trigger_player, false, true, "copenhagen")
 		if not (hall_unit) then
-			hall_unit = FindUnit("unit-teuton-town-hall", trigger_player, false, true, "leidre")
+			hall_unit = FindUnit("unit-teuton-town-hall", trigger_player, false, true, "copenhagen")
 		end
 		if (hall_unit) then
 			SetUnitVariable(hall_unit, "Unique", "heorot")
 		end
 	end,
-	Rewards = "The Chieftain's Hall in Leidre will become the Heorot unique building, Lose 500 Lumber",
+	Rewards = "The Chieftain's Hall in Copenhagen will become the Heorot unique building, Lose 500 Lumber",
 	Objectives = {
 		{
 			"objective-type", "gather_resource",

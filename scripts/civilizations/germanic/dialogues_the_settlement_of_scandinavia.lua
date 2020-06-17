@@ -222,7 +222,7 @@ DefineDialogue("the_settlement_of_scandinavia_introduction", {
 					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("aarhus", "MapPosX"), GetSiteData("aarhus", "MapPosY")}, GetSiteData("aarhus", "MapLayer")) -- Aarhus
 					SetUnitVariable(unit, "TTL", 600)
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("leidre", "MapPosX"), GetSiteData("leidre", "MapPosY")}, GetSiteData("leidre", "MapLayer")) -- Leidre
+					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("copenhagen", "MapPosX"), GetSiteData("copenhagen", "MapPosY")}, GetSiteData("copenhagen", "MapLayer")) -- Copenhagen
 					SetUnitVariable(unit, "TTL", 600)
 					
 					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("malmo", "MapPosX"), GetSiteData("malmo", "MapPosY")}, GetSiteData("malmo", "MapLayer")) -- Malmo

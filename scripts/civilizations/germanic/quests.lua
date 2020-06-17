@@ -93,10 +93,10 @@ DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and
 		},
 		{
 			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Leidre",
+			"objective-string", "Build a Chieftain's Hall in Copenhagen",
 			"quantity", 1,
 			"unit-class", "town_hall",
-			"settlement", "leidre"
+			"settlement", "copenhagen"
 		},
 		{
 			"objective-type", "build_units",
