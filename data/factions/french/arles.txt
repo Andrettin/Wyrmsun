@@ -1,0 +1,8 @@
+arles = {
+	name = "Arles"
+	civilization = french
+	type = polity
+	color = cyan
+	default_tier = kingdom
+	default_capital = marseilles #Arles
+}

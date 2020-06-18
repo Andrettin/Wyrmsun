@@ -62,7 +62,7 @@ DefineFaction("uruguay", {
 DefineFaction("jesuit-order", {
 	Name = "Jesuit Order",
 	Civilization = "castillian",
-	Type = "holy-order",
+	Type = "holy_order",
 	Color = "black",
 	DefaultTier = "duchy"
 })

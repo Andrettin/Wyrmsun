@@ -1,0 +1,8 @@
+bourgogne = {
+	name = "Bourgogne"
+	civilization = french
+	type = polity
+	color = blue
+	default_tier = duchy
+	default_capital = dijon
+}

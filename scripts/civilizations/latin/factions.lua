@@ -178,7 +178,7 @@ DefineFaction("rome", {
 DefineFaction("hermaistes-apolloniastes-poseidoniastes", { -- Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	Name = "Hermaistes", -- "Hermaistes, Apolloniastes, Poseidoniastes"
 	Civilization = "latin",
-	Type = "holy-order",
+	Type = "holy_order",
 	Color = "red",
 	DefaultTier = "barony",
 --	Description = "The \"Hermaistes, Apolloniastes, Poseidoniastes\" was a Roman society founded in Delos around 113 BC.",

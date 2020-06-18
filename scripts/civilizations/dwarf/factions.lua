@@ -367,7 +367,7 @@ DefineFaction("lyr", {
 DefineFaction("order-of-loremasters", { -- from Battle for Wesnoth: The Hammer of Thursagan
 	Name = "Order of Loremasters",
 	Civilization = "dwarf",
-	Type = "holy-order", -- should be a non-religious order of sages instead
+	Type = "holy_order", -- should be a non-religious order of sages instead
 	Color = "white",
 	DefaultTier = "duchy"
 })

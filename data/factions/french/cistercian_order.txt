@@ -1,0 +1,8 @@
+cistercian_order = {
+	name = "Cistercian Order"
+	adjective = "Cistercian"
+	civilization = french
+	type = holy_order
+	color = blue
+	default_tier = duchy
+}
