@@ -453,7 +453,7 @@ DefineQuest("the-mead-of-poetry-kill-kvasir", {
 	CompletionEffects = function(s)
 		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
 	end,
-	ObjectiveStrings = {"- Fjalar and Galar must survive"},
+	ObjectiveStrings = {"Fjalar and Galar must survive"},
 	Objectives = {
 		{
 			"objective-type", "destroy_hero",
@@ -472,7 +472,7 @@ DefineQuest("island-of-the-lizard-god", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Find a way out of the island", "- Vindalf must survive"},
+	ObjectiveStrings = {"Find a way out of the island", "Vindalf must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
 	HeroesMustSurvive = {"vindalf"}

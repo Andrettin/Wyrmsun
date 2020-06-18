@@ -38,7 +38,7 @@ DefineQuest("on-the-vanaquisl", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Wodanaz must survive"},
+	ObjectiveStrings = {"Wodanaz must survive"},
 	Objectives = {
 		{
 			"objective-type", "destroy_units",
@@ -63,7 +63,7 @@ DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Ind
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Bring a Bura to the southwestern edge of the map", "- Wodanaz must survive"},
+	ObjectiveStrings = {"Bring a Bura to the southwestern edge of the map", "Wodanaz must survive"},
 	HeroesMustSurvive = {"voden"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -82,7 +82,7 @@ DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Wodanaz must survive"},
+	ObjectiveStrings = {"Wodanaz must survive"},
 	Objectives = {
 		{
 			"objective-type", "build_units",
@@ -264,7 +264,7 @@ DefineQuest("heimdalls-progeny", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Conquer all of your home peninsula", "- Erala must survive"},
+	ObjectiveStrings = {"Conquer all of your home peninsula", "Erala must survive"},
 	HeroesMustSurvive = {"erala"},
 	Uncompleteable = true,
 	Unobtainable = true
@@ -280,7 +280,7 @@ DefineQuest("jarls-hall", { -- based on the Song of Rig; Source: Kevin Crossley-
 	CompletionEffects = function(s)
 		CallDialogue("jarls-hall-is-complete", trigger_player)
 	end,
-	ObjectiveStrings = {"- Acquire some Buras"},
+	ObjectiveStrings = {"Acquire some Buras"},
 	Hint = "Select a Bura, press the Build Structure button and then click on the Build Chieftain's Hall button to build the structure required for this quest.",
 	Objectives = {
 		{
@@ -402,7 +402,7 @@ DefineQuest("journey-to-heimdalls-stones", {
 		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max") + 500, "Max")
 		SetUnitVariable(trigger_unit, "Xp", GetUnitVariable(trigger_unit, "Xp", "Max"))
 	end,
-	ObjectiveStrings = {"- Visit Haimadala's Stones with Erala"},
+	ObjectiveStrings = {"Visit Haimadala's Stones with Erala"},
 	Rewards = "+500 XP for Erala",
 	Hint = "A transport ship will likely be needed for Erala to reach Haimadala's Stones.",
 	HeroesMustSurvive = {"erala"},
@@ -446,7 +446,7 @@ DefineQuest("subjugate-the-karlings", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
-	ObjectiveStrings = {"- Subjugate the Karlings"},
+	ObjectiveStrings = {"Subjugate the Karlings"},
 	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
@@ -459,7 +459,7 @@ DefineQuest("neutralize-the-hersings", {
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
-	ObjectiveStrings = {"- Ally with or defeat the Hersings"},
+	ObjectiveStrings = {"Ally with or defeat the Hersings"},
 	HeroesMustSurvive = {"erala"},
 	Unobtainable = true,
 	Uncompleteable = true,
@@ -510,7 +510,7 @@ DefineQuest("thors-servant", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Fulfill Thunraz's wishes", "- Thialfi must survive"},
+	ObjectiveStrings = {"Fulfill Thunraz's wishes", "Thialfi must survive"},
 	HeroesMustSurvive = {"thialfi"},
 	Uncompleteable = true,
 	Unobtainable = true

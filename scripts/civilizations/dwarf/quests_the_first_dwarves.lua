@@ -34,7 +34,7 @@ DefineQuest("the_first_dwarves", {
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
-	ObjectiveStrings = {"- Overcome Svarinshaug's perils", "- Modsognir must survive", "- Durin must survive"},
+	ObjectiveStrings = {"Overcome Svarinshaug's perils", "Modsognir must survive", "Durin must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
 	HeroesMustSurvive = {"modsognir", "durin"}
@@ -147,7 +147,7 @@ DefineQuest("the-ring-of-riches", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"- Brokk and Eitri must survive"},
+	ObjectiveStrings = {"Brokk and Eitri must survive"},
 	Rewards = "Magic Ring, Lose 4000 Copper",
 	Objectives = {
 		{
@@ -192,7 +192,7 @@ DefineQuest("the-thunder-hammer", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"- Brokk and Eitri must survive"},
+	ObjectiveStrings = {"Brokk and Eitri must survive"},
 	Rewards = "Magic Hammer, Lose 4000 Copper",
 	Objectives = {
 		{
@@ -237,7 +237,7 @@ DefineQuest("the-magnificent-spear", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"- Ivaldi must survive"},
+	ObjectiveStrings = {"Ivaldi must survive"},
 	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber",
 	Objectives = {
 		{
@@ -283,7 +283,7 @@ DefineQuest("the-sleek-ship", {
 	CompletionEffects = function(s)
 		SetUnitVariable(FindUnit("unit-dwarven-transport-ship", trigger_player, false, true), "Unique", "skidbladnir")
 	end,
-	ObjectiveStrings = {"- Ivaldi must survive"},
+	ObjectiveStrings = {"Ivaldi must survive"},
 	Rewards = "The Transport will become the Skidbladnir unique ship",
 	Hint = "Select a Dock and then click on the Build Transport button to build the ship required for this quest.",
 	Objectives = {
@@ -320,7 +320,7 @@ DefineQuest("the-slaying-of-grafvitnir", {
 	World = "nidavellir",
 	Civilization = "dwarf",
 	PlayerColor = "black",
-	ObjectiveStrings = {"- Destroy the Grafvitning Tribe"},
+	ObjectiveStrings = {"Destroy the Grafvitning Tribe"},
 	Unobtainable = true,
 	Uncompleteable = true,
 	Unfailable = true,
@@ -335,7 +335,7 @@ DefineQuest("dvalins-runes", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
 	end,
-	ObjectiveStrings = {"- Dvalin must survive"},
+	ObjectiveStrings = {"Dvalin must survive"},
 	Rewards = "+2500 Copper",
 	Hint = "Select a Bastion and then click on the Research Runewriting button to research the technology required for this quest.",
 	Objectives = {

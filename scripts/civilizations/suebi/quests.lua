@@ -54,7 +54,7 @@ DefineQuest("ariovistus-ambition", {
 			"faction", "arverni-tribe"
 		}
 	},
-	ObjectiveStrings = {"- Ariovistus must survive"},
+	ObjectiveStrings = {"Ariovistus must survive"},
 	HeroesMustSurvive = {"ariovistus"},
 	Unobtainable = true
 })
