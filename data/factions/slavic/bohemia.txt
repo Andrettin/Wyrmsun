@@ -14,14 +14,9 @@ bohemia = {
 			}
 		}
 		
-		787 = {
-			diplomacy_state = {
-				faction = francia #Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
-				state = peace
-			}
-		}
-		
 		919 = {
+			tier = duchy
+			
 			diplomacy_state = {
 				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 				state = vassal
@@ -42,8 +37,19 @@ bohemia = {
 			}
 		}
 		
-		1086 = {
-			tier = kingdom #Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
+		1085 = {
+			#Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
+			#according to Peter H. Wilson this elevation occurred in 1085 instead, and was only a personal grant to Duke Wratislav II (i.e. it lasted only for Wratislav II's lifetime); Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
+			tier = kingdom 
+		}
+		
+		1152 = {
+			tier = duchy
+		}
+		
+		1158 = {
+			#Frederick I of the Holy Roman Empire granted a personal elevation to king to Vladislav II of Bohemia; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
+			tier = kingdom 
 		}
 	}
 }
