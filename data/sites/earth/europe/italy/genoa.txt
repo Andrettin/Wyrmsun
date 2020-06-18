@@ -19,7 +19,7 @@ genoa = {
 		}
 		
 		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner_faction = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1494 = {

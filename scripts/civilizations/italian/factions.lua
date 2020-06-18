@@ -43,14 +43,6 @@ DefineFaction("genoa", {
 	DefaultGovernmentType = "republic"
 })
 
-DefineFaction("italy", {
-	Name = "Italy",
-	Civilization = "italian",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom"
-})
-
 DefineFaction("milan", {
 	Name = "Milan",
 	Civilization = "italian",
@@ -114,17 +106,4 @@ DefineFaction("tuscany", {
 	Type = "polity",
 	Color = "orange",
 	DefaultTier = "grand_duchy"
-})
-
-DefineFaction("venice", {
-	Name = "Venice",
-	Civilization = "italian",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DefaultGovernmentType = "republic",
-	HistoricalGovernmentTypes = {
-		919, "monarchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "republic" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
 })

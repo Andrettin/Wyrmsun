@@ -1,0 +1,20 @@
+venice = {
+	name = "Venice"
+	adjective = "Venetian"
+	civilization = italian
+	type = polity
+	color = red
+	default_tier = duchy #Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	default_government_type = republic
+	default_capital = venice
+	
+	history = {
+		919 = {
+			government_type = monarchy #Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1050 = {
+			government_type = republic #was a republic c. 1050; Source: William R. Shepherd, "Historical Atlas", 1911, p. 64.
+		}
+	}
+}

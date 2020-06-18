@@ -5,4 +5,17 @@ arles = {
 	color = cyan
 	default_tier = kingdom
 	default_capital = marseilles #Arles
+	
+	history = {
+		933 = {
+			#Upper Burgundy and Lower Burgundy united into the Kingdom of Arles in 933; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1033 = {
+			diplomacy_state = {
+				faction = holy_rome #part of the Holy Roman Empire from 1033/1034; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+	}
 }

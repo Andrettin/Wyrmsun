@@ -2,7 +2,7 @@ bern = {
 	name = "Bern"
 	map_template = earth_space
 	geocoordinate = { 7.46697546248 46.91668275870 } #from Natural Earth
-	major = true
+	#major = true
 	regions = {
 		europe
 	}
@@ -10,7 +10,7 @@ bern = {
 	history = {
 		1097 = {
 			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
-			building_classes += town_hall
+			#building_classes += town_hall
 		}
 	}
 }
