@@ -65,7 +65,7 @@ DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 
 DefineCharacter("humprecht-cernin-of-chudenice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
 	Name = "Humprecht", -- Imperial envoy to Venice
-	ExtraName = "Černín of Chudenice",
+	ExtraName = "Cernin of Chudenice", -- "Černín of Chudenice"
 	Gender = "male",
 	Type = "unit-slavic-swordsman",
 	Civilization = "slav",
