@@ -48,7 +48,7 @@ bohemia = {
 		}
 		
 		1158 = {
-			#Frederick I of the Holy Roman Empire granted a personal elevation to king to Vladislav II of Bohemia; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
+			#Frederick I of the Holy Roman Empire granted a personal elevation to king to Vladislav II of Bohemia in 1158; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
 			tier = kingdom 
 		}
 	}
