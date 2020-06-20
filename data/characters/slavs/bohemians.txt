@@ -1,0 +1,22 @@
+vlatislav_ii_of_bohemia = { #Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
+	name = "Vlatislav"
+	surname = "II" #regnal number
+	#duke (and later king) of Bohemia
+	unit_type = unit_teuton_knight_lord #duke/king
+	civilization = slav
+	default_faction = bohemia
+	gender = male
+	home_settlement = prague #Bohemia
+	deities = { christian_god }
+	history = {
+		1152 = {
+			active = true
+		}
+		
+		#Frederick I of the Holy Roman Empire granted a personal elevation to king to Vladislav II of Bohemia in 1158; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 207.
+		
+		1182 = {
+			active = false #30 years estimate for end of activity
+		}
+	}
+}
