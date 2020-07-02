@@ -41,7 +41,7 @@ DefineButton( { Pos = 6, Icon = "icon-attack-ground",
 
 -- Building Commands ------------------------------------------------------
 
-DefineButton( { Pos = 14, Icon = "icon-crown",
+DefineButton( { Pos = 14, Icon = "royal_crown",
 	Action = "button", Value = "found-faction-level",
 	Allowed = "check-has-sub-buttons",
 	Key = "f", Hint = "~!Found a Faction", Popup = "popup_commands",
@@ -98,7 +98,7 @@ DefineButton( { Pos = 16, Icon = "icon-garrison",
 })
 
 --[[
-DefineButton( { Pos = 16, Icon = "icon-crown",
+DefineButton( { Pos = 16, Icon = "royal_crown",
 	Action = "button", Value = "grand-settlement-to-faction-level",
 	Allowed = "check-has-sub-buttons",
 	Key = "g", Hint = "~!Grant Settlement to Faction", Popup = "popup_commands",

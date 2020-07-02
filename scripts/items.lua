@@ -430,7 +430,7 @@ DefineUnitType("unit-crown", {
 	Parent = "unit-template-item",
 	Costs = {"copper", 400},
 	Image = {"file", "neutral/items/crown.png", "size", {32, 32}},
-	Icon = "icon-crown",
+	Icon = "royal_crown",
 	ItemClass = "helmet",
 	Armor = 1
 } )

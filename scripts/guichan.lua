@@ -1404,7 +1404,6 @@ else
 end
 LoadingPersistentHeroes = false
 
-
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
 		StopMusic()

@@ -1,0 +1,31 @@
+baronial_crown = {
+	file = "icons/items/baronial_crown.png"
+}
+
+vicecomital_crown = {
+	file = "icons/items/vicecomital_crown.png"
+}
+
+comital_crown = {
+	file = "icons/items/comital_crown.png"
+}
+
+marquisal_crown = {
+	file = "icons/items/marquisal_crown.png"
+}
+
+ducal_crown = {
+	file = "icons/items/ducal_crown.png"
+}
+
+grand_ducal_crown = {
+	file = "icons/items/grand_ducal_crown.png"
+}
+
+royal_crown = {
+	file = "icons/items/royal_crown.png"
+}
+
+imperial_crown = {
+	file = "icons/items/imperial_crown.png"
+}
