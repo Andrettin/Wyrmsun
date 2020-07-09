@@ -201,27 +201,6 @@ DefineSite("eresburg", {
 	Regions = {"germany"}
 })
 
-DefineSite("flensburg", {
-	Name = "Flensburg",
-	MapTemplate = "earth",
-	Position = {4054, 802},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Flensburg"
-	},
-	Cores = {
-		"angle-tribe"
-	},
-	HistoricalOwners = {
-		-264, "angle-tribe", -- tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1815, "denmark" -- Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("freising", {
 	Name = "Freising",
 	MapTemplate = "earth",

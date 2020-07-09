@@ -32,10 +32,6 @@ copenhagen = {
 			owner_faction = dane_tribe #Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
-		526 = {
-			owner_faction = dane_tribe #Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		}
-		
 		919 = {
 			owner_faction = denmark #political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
