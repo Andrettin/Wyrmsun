@@ -41,36 +41,6 @@ DefineSite("brodrene-gram", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("egtved", {
-	Name = "Egtved",
-	MapTemplate = "earth",
-	Position = {4055, 781},
-	CulturalNames = {
-		"norse", "Egtved"
-	},
-	Regions = {"scandinavia"}
-})
-
-DefineSite("legard", {
-	Name = "Legard", -- in northwestern Jutland
-	MapTemplate = "earth",
-	Position = {4034, 752},
-	CulturalNames = {
-		"norse", "Legard" -- Legård
-	},
-	HistoricalOwners = {
-		-1600, "karling-tribe", -- seems like a good place to place the Karlings
-		-1500, "jarling-tribe"
-	},
-	HistoricalBuildings = {
-		-1600, -1500, "lumber_mill",
-		-1600, -1500, "farm",
-		-1600, -1500, "farm",
-		-1500, -1300, "farm" -- a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("store-tyrrestrup", {
 	Name = "Store Tyrrestrup",
 	MapTemplate = "earth",
@@ -85,22 +55,6 @@ DefineSite("store-tyrrestrup", {
 	HistoricalBuildings = {
 		-1600, -1500, "farm",
 		-1500, -1300, "farm" -- a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
-	},
-	Regions = {"scandinavia"}
-})
-
-DefineSite("vejle", {
-	Name = "Vejle",
-	MapTemplate = "earth",
-	Position = {4058, 779},
-	CulturalNames = {
-		"norse", "Vejle"
-	},
-	HistoricalOwners = {
-		-1600, "jarling-tribe" -- regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Vejle's location seems to fit well enough
-	},
-	HistoricalBuildings = {
-		-1600, -1599, "barracks"
 	},
 	Regions = {"scandinavia"}
 })

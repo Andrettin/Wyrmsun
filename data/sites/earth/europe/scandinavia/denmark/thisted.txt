@@ -1,0 +1,27 @@
+thisted = {
+	name = "Thisted"
+	map_template = earth_space
+	geocoordinate = { 8.692167256 56.95277778 } #from Natural Earth (ports)
+	regions = {
+		scandinavia
+	}
+	#Legård is in Thisted
+	
+	history = {
+		-1600 = {
+			owner_faction = karling_tribe #seems like a good place to place the Karlings
+			building_classes += lumber_mill
+			building_classes += farm
+			building_classes += farm
+		}
+		
+		-1500 = {
+			owner_faction = jarling_tribe
+			building_classes -= lumber_mill
+			building_classes -= farm
+			building_classes -= farm
+			
+			building_classes += farm #a longhouse existed in Legård (in northwestern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 78.
+		}
+	}
+}

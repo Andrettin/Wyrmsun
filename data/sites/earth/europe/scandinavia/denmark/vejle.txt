@@ -1,0 +1,20 @@
+vejle = {
+	name = "Vejle"
+	map_template = earth_space
+	geocoordinate = { 9.53499649845 55.70900102840 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+	#Egtved is in Vejle
+	
+	history = {
+		-1600 = {
+			owner_faction = jarling_tribe #regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Vejle's location seems to fit well enough
+			building_classes += barracks
+		}
+		
+		-1599 = {
+			building_classes -= barracks
+		}
+	}
+}
