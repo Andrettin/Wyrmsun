@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("brodrene-gram", {
-	Name = "Brodrene Gram", -- in southern Jutland
-	MapTemplate = "scandinavia",
-	Position = {53, 293},
-	CulturalNames = {
-		"norse", "Brodrene Gram" -- "Brødrene Gram"
-	},
-	HistoricalOwners = {
-		-1500, "jarling-tribe"
-	},
-	HistoricalBuildings = {
-		-1500, -1300, "farm" -- a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("store-tyrrestrup", {
 	Name = "Store Tyrrestrup",
 	MapTemplate = "earth",

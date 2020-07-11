@@ -1,0 +1,20 @@
+haderslev = {
+	name = "Haderslev"
+	map_template = earth_space
+	geocoordinate = { 9.504416961 55.25111111 } #from Natural Earth (ports)
+	regions = {
+		scandinavia
+	}
+	#Brødrene Gram is in Haderslev
+	
+	history = {
+		-1500 = {
+			owner_faction = jarling_tribe
+			building_classes += farm #a longhouse existed in Brødrene Gram (in southern Jutland) in the period II of the Nordic Bronze Age (1500-1300 BC), interpreted as a chiefly residence; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77-78.
+		}
+		
+		-1300 = {
+			building_classes -= farm
+		}
+	}
+}
