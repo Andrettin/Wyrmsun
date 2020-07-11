@@ -1,0 +1,26 @@
+karla = {
+	name = "Karla" #Proto-Germanic rendering of "Karl", the ancestor of the class of peasants in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+	unit_type = unit_germanic_worker
+	civilization = germanic
+	default_faction = karling_tribe
+	gender = male
+	trait = upgrade_intelligent
+	variation = brown_hair #described as brown-haired in the myths
+	deities = {
+		odin
+		heimdall
+	}
+	
+	history = {
+		-1600 = {
+			active = true
+			location = {
+				site = thisted
+			}
+		}
+		
+		-1599 = {
+			active = false
+		}
+	}
+}

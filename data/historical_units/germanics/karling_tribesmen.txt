@@ -1,0 +1,37 @@
+karling_workers = {
+	unit_type = unit_germanic_worker
+	quantity = 4
+	
+	history = {
+		-1600 = {
+			active = true
+			faction = karling_tribe
+			location = {
+				site = thisted
+			}
+		}
+		
+		-1500 = {
+			active = false
+		}
+	}
+}
+
+karling_archers = {
+	unit_type = unit_germanic_archer
+	quantity = 3
+	
+	history = {
+		-1600 = {
+			active = true
+			faction = karling_tribe
+			location = {
+				site = thisted
+			}
+		}
+		
+		-1500 = {
+			active = false
+		}
+	}
+}

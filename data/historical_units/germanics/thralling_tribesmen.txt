@@ -1,0 +1,18 @@
+thralling_workers = {
+	unit_type = unit_germanic_worker
+	quantity = 4
+	
+	history = {
+		-1600 = {
+			active = true
+			faction = thralling_tribe
+			location = {
+				site = frederikshavn
+			}
+		}
+		
+		-1500 = {
+			active = false
+		}
+	}
+}

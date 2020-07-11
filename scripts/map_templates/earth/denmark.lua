@@ -59,25 +59,8 @@ SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
 SetMapTemplateUnit("earth", "unit-germanic-warrior", "hlesing-tribe", {4089, 745}, -1101, -1100)
 
--- Legård (northwestern Jutland)
-SetMapTemplateHero("earth", "karla", "karling-tribe", {4033, 751}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-archer", "karling-tribe", {4033, 751}, -1600, -1500)
-
 -- Lusehøj
 -- a burial mound was created at Lusehøj in the period V of the Nordic Bronze Age (900-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73, 77.
-
--- Store Tyrrestrup (Vendsyssel)
-SetMapTemplateHero("earth", "thrahila", "thralling-tribe", {4070, 743}, -1600, -1599)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
-SetMapTemplateUnit("earth", "unit-germanic-worker", "thralling-tribe", {4070, 743}, -1600, -1500)
 
 -- Strandtved (near Svendborg)
 -- a burial mound was created at Strandtved (near Svendborg) in c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 76.

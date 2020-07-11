@@ -1,0 +1,27 @@
+thrahila = {
+	name = "Thrahila" #Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
+	unit_type = unit_germanic_worker
+	civilization = germanic
+	default_faction = thralling_tribe
+	gender = male
+	trait = upgrade_dutiful
+	variation = black_hair #described as black-haired in the myths
+	description = "The robust Thrahila is a hard worker, constantly engaged in logging and other laborious activities."
+	deities = {
+		odin
+		heimdall
+	}
+	
+	history = {
+		-1600 = {
+			active = true
+			location = {
+				site = frederikshavn
+			}
+		}
+		
+		-1599 = {
+			active = false
+		}
+	}
+}
