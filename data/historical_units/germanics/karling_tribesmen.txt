@@ -1,6 +1,7 @@
 karling_workers = {
 	unit_type = unit_germanic_worker
 	quantity = 4
+	ai_active = false
 	
 	history = {
 		-1600 = {
@@ -20,6 +21,7 @@ karling_workers = {
 karling_archers = {
 	unit_type = unit_germanic_archer
 	quantity = 3
+	ai_active = false
 	
 	history = {
 		-1600 = {
