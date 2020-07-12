@@ -168,7 +168,10 @@ AddTrigger("jarl-conquers-jutland",
 			if (
 				GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil
 				and GetPlayerData(i, "HasQuest", "heimdalls-progeny")
-				and (GetNumUnitsAt(-2, "any", {4023 - EarthStartX, 733 - EarthStartY}, {4087 - EarthStartX, 829 - EarthStartY}, GetMapLayer("material-plane", "earth")) - GetNumUnitsAt(i, "any", {4023 - EarthStartX, 733 - EarthStartY}, {4087 - EarthStartX, 829 - EarthStartY}, GetMapLayer("material-plane", "earth"))) == 0
+				and GetFactionExists("thralling-tribe", true) == false
+				and GetFactionExists("karling-tribe", true) == false
+				and GetUnitVariable(GetSiteData("aarhus", "SiteUnit"), "Player") == i
+				and (GetUnitVariable(GetSiteData("kiel", "SiteUnit"), "Player") == i or GetUnitVariable(GetSiteData("kiel", "SiteUnit"), "Player") == PlayerNumNeutral)
 			) then
 				trigger_player = i
 				return true
