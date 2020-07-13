@@ -1,0 +1,49 @@
+the_rise_of_barbarossa_introduction = {
+	{
+		speaker = friedrich_barbarossa
+		text = "Convincing the electors to choose me as Holy Roman Emperor was a challenge, and yet that was just the beginning. I need to consolidate my rule in Germany if I am to go on to achieve great deeds."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "A personal visit to some of my most powerful vassals could go a long way in bringing them into the fold. My cousin, Henry the Lion, rules over vast lands in Saxony to the north. Duke Vlatislav II of Bohemia rules Slavic lands in the east."
+		option = {
+			effects = {
+				accept_quest = the_rise_of_barbarossa
+			}
+		}
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Though I was elected emperor, my crowning ceremony is yet to occur. An emperor can only be crowned by the Pope, so I must travel to Rome. Without being properly crowned, I will never achieve full legitimacy in the eyes of my vassals."
+		option = {
+			effects = {
+				#accept_quest = barbarossas_crowning
+			}
+		}
+	}
+}
+
+vlatislavs_request = {
+	{
+		speaker = vlatislav_ii_of_bohemia
+		text = "Your Imperial Majesty. I am glad of your visit to my domains. As you well know, I am a loyal vassal of yours. I have, however, a request to make."
+	}
+	{
+		speaker = vlatislav_ii_of_bohemia
+		text = "My people, the Bohemians, differ in language and custom from the Germans. It would only be fitting, then if Bohemia became its own kingdom, separate from the Kingdom of Germany, but still within the Holy Roman Empire."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Vlatislav, I understand the merits of your request. I shall ponder it."
+		option = {
+			effects = {
+				#accept_quest = vlatislavs_request
+			}
+		}
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "I am, as of now, only emperor-elect. I am yet to be properly crowned, and your request must wait until that is done. Only a crowned emperor has the legitimacy to create a king."
+		#should add condition here
+	}
+}

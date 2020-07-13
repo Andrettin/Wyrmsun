@@ -1,0 +1,34 @@
+the_rise_of_barbarossa = {
+	name = "The Rise of Barbarossa"
+	icon = icon_flag_holy_roman_empire
+	player_color = yellow
+	description = "Friedrich Barbarossa, the duke of Swabia, has been elected to succeed his uncle as Holy Roman Emperor. Consolidating his rule over the independent-minded princes of the Empire will be a challenge, however."
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+	objective_strings = {
+		"Consolidate your rule over Bohemia"
+		"Consolidate your rule over Saxony"
+		"Consolidate your rule over Bavaria"
+	}
+}
+
+the_lombard_league = {
+	name = "The Lombard League"
+	icon = icon_flag_holy_roman_empire
+	player_color = yellow
+	description = "Although Barbarossa's rule is now secure in Germany, in Italy a number of cities have banded together in opposition to him, forming the Lombard League."
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+}
+
+the_lion_of_saxony = {
+	name = "The Lion of Saxony"
+	icon = icon_flag_holy_roman_empire
+	player_color = yellow
+	description = "Henry the Lion, duke of Saxony and cousin to emperor Barbarossa, has risen in rebellion. The emperor must now march to restore order in the great northern duchy."
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+}

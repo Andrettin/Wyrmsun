@@ -8,6 +8,7 @@ friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Sou
 	gender = male
 	home_settlement = stuttgart #Swabia
 	deities = { christian_god }
+	
 	history = {
 		#born in 1122; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 903.
 		

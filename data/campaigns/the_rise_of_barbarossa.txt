@@ -1,0 +1,29 @@
+the_rise_of_barbarossa = {
+	name = "The Rise of Barbarossa"
+	description = "Friedrich Barbarossa, the duke of Swabia, has been elected to succeed his uncle as Holy Roman Emperor. Consolidating his rule over the independent-minded princes of the Empire will be a challenge, however."
+	faction = holy_rome
+	start_date = 1152
+	map_templates = { universe }
+	completion_quest = the_rise_of_barbarossa
+	hidden = true
+}
+
+the_lombard_league = {
+	name = "The Lombard League"
+	description = "Although Barbarossa's rule is now secure in Germany, in Italy a number of cities have banded together in opposition to him, forming the Lombard League."
+	faction = holy_rome
+	start_date = 1167
+	required_quests = { the_rise_of_barbarossa }
+	map_templates = { universe }
+	completion_quest = the_lombard_league
+}
+
+the_lion_of_saxony = {
+	name = "The Lion of Saxony"
+	description = "Henry the Lion, duke of Saxony and cousin to emperor Barbarossa, has risen in rebellion. The emperor must now march to restore order in the great northern duchy."
+	faction = holy_rome
+	start_date = 1178
+	required_quests = { the_lombard_league }
+	map_templates = { universe }
+	completion_quest = the_lion_of_saxony
+}
