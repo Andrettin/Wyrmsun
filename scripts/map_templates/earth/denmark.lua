@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- some coastline fixes in the Danish Islands, to make them not be connected to the mainland or between themselves by land
-SetMapTemplateTileTerrain("earth", "shallow-water", {4060, 784})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4061, 782})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4061, 783})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4062, 782})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4062, 785})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4081, 797})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4110, 796})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4111, 796})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4111, 798})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4113, 797})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4114, 797})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4115, 796})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4125, 772})
-SetMapTemplateTileTerrain("earth", "shallow-water", {4126, 773})
-
 SetMapTemplateResource("earth", "unit-gold-deposit", {4078, 744}) -- Amber; Source: "Atlas de História Mundial", 2001, p. 89.
 
 -- Buddinge (near Copenhagen)

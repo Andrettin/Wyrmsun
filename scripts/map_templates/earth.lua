@@ -30,7 +30,6 @@
 EarthStartX = 4022
 EarthStartY = 667
 
-Load("scripts/map_templates/earth/asia_minor.lua")
 Load("scripts/map_templates/earth/austria.lua")
 Load("scripts/map_templates/earth/bohemia.lua")
 Load("scripts/map_templates/earth/croatia.lua")
