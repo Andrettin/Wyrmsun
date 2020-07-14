@@ -35,6 +35,8 @@ function RunCampaignMenu()
 	local campaign_description
 	local highest_completed_difficulty
 	local faction_name
+	local start_year
+	local start_date_str
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
@@ -115,6 +117,14 @@ function RunCampaignMenu()
 	local function UpdateCampaignDescription()
 			faction_name = _("Faction:").. " " .. _(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name")) .. " (" .. _(GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display")) .. ")"
 	
+			start_year = GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYear")
+			start_date_str = _("Start Date:").. " " .. tostring(math.abs(start_year))
+			if (start_year >= 0) then
+				start_date_str = start_date_str .. " AD"
+			else
+				start_date_str = start_date_str .. " BC"
+			end
+	
 			highest_completed_difficulty = _("Highest Completed Difficulty: ")
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyEasy) then
 				highest_completed_difficulty = highest_completed_difficulty .. _("Easy")
@@ -128,7 +138,7 @@ function RunCampaignMenu()
 				highest_completed_difficulty = highest_completed_difficulty .. _("None")
 			end
 			
-			campaign_description:setCaption(faction_name .. "\n\n" .. _("Description: ") .. _(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")) .. "\n\n" .. highest_completed_difficulty)
+			campaign_description:setCaption(faction_name .. "\n\n" .. start_date_str .. "\n\n" .. _("Description: ") .. _(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")) .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
 	end
 	

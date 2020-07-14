@@ -98,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Nidavellir scenarios now take place in a single map layer. The underground portions of the map are now in the same layer as the surface portions, but retain their peculiar characteristics, e.g. cave walls being non-passable by air units and missiles.
 - Reduced the size of the Aurvang and Joruvellir map templates.
 - The Settlement of Scandinavia scenario now requires the player to build a Chieftain's Hall in Copenhagen instead of Leidre.
+- The scenario screen now shows the year in which the scenario takes place.
 
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.
