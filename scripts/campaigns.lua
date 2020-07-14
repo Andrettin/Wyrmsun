@@ -31,7 +31,7 @@ DefineCampaign("a-home-in-the-fields-of-sand", {
 	Faction = "goldhoof-clan",
 	StartDate = {-2800, SyncRand(12) + 1, 1},
 	MapTemplates = {
-		"nidavellir", {0, 0}, {256, 256}
+		"nidavellir", {0, 0}, {192, 192}
 	}
 })
 
@@ -50,12 +50,6 @@ DefineCampaign("freys-messenger", {
 	StartYear = -2800 -- when Scandinavia was historically settled by Indo-Europeans; Yngve ruled over the Swedes in the Ynglinga saga soon after Odin's people settled Scandinavia in that saga; since Skirnir was a servant of Frey in mythology, let's make him a contemporary of Yngve
 })
 --]]
-
-DefineCampaign("heimdalls-progeny", {
-	MapTemplates = {
-		"earth", {4022, 667}, {256, 256}
-	}
-})
 
 DefineCampaign("thors-servant", {
 	Name = "Thunraz's Servant",

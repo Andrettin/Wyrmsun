@@ -3,7 +3,7 @@ the_rise_of_barbarossa = {
 	description = "Friedrich Barbarossa, the duke of Swabia, has been elected to succeed his uncle as Holy Roman Emperor. Consolidating his rule over the independent-minded princes of the Empire will be a challenge, however."
 	faction = holy_rome
 	start_date = 1152
-	map_templates = { universe }
+	map_templates = { earth_space }
 	completion_quest = the_rise_of_barbarossa
 	hidden = true
 }
@@ -14,7 +14,7 @@ the_lombard_league = {
 	faction = holy_rome
 	start_date = 1167
 	required_quests = { the_rise_of_barbarossa }
-	map_templates = { universe }
+	map_templates = { earth_space }
 	completion_quest = the_lombard_league
 }
 
@@ -24,6 +24,6 @@ the_lion_of_saxony = {
 	faction = holy_rome
 	start_date = 1178
 	required_quests = { the_lombard_league }
-	map_templates = { universe }
+	map_templates = { earth_space }
 	completion_quest = the_lion_of_saxony
 }
