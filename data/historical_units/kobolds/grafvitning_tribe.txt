@@ -5,7 +5,7 @@ grafvitning_footpads = {
 	ai_active = false
 	
 	history = {
-		-3000 = {
+		-25000 = {
 			active = true
 			faction = grafvitning_tribe
 			location = {
@@ -13,7 +13,7 @@ grafvitning_footpads = {
 			}
 		}
 		
-		-2999 = {
+		-24999 = {
 			active = false
 		}
 	}

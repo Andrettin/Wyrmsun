@@ -5,7 +5,7 @@ goinling_footpads = {
 	ai_active = false
 	
 	history = {
-		-3000 = {
+		-25000 = {
 			active = true
 			faction = goinling_tribe
 			location = {

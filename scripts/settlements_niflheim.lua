@@ -36,10 +36,10 @@ DefineSite("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossle
 		"hel"
 	},
 	HistoricalOwners = {
---		-3000, "hel"
+--		-30000, "hel"
 	},
 	HistoricalBuildings = {
---		-3000, 0, "stronghold" -- the hall was fortified (possessed tall walls and impregnable gates)
+--		-30000, 0, "stronghold" -- the hall was fortified (possessed tall walls and impregnable gates)
 	},
 	Regions = {}
 })

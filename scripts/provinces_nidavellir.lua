@@ -36,11 +36,11 @@ DefineProvince("Acthna", {
 		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		-3000, "gnome", "acthnic-tribe", -- maybe should be later?
+		-25000, "gnome", "acthnic-tribe", -- maybe should be later?
 		1, "gnome", "acthna" -- maybe should be at another date?
 	},
 	HistoricalCultures = {
-		-3000, "gnome"
+		-25000, "gnome"
 	}
 })
 
@@ -297,11 +297,11 @@ DefineProvince("Untersberg", {
 		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		-3000, "gnome", "sagan-tribe",
+		-25000, "gnome", "sagan-tribe",
 		1, "gnome", "untersberg"
 	},
 	HistoricalCultures = {
-		-3000, "gnome"
+		-25000, "gnome"
 	}
 	-- in 1529, the gnomes of Untersberg were visited for 10 days by an outsider; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 35.
 	-- the gnomes of Untersberg were visited by an expedition on the 23rd of June in an unknown year; this happened after the Manchester-Liverpool railway line was already projected, but before (intercity? probably) railways were in action; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 24, 40-41.

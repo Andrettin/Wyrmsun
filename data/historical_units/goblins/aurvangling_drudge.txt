@@ -4,7 +4,7 @@ aurvangling_drudge = {
 	quantity = 1
 	
 	history = {
-		-3000 = {
+		-25000 = {
 			active = true
 			faction = aurvangling_tribe
 			location = {
@@ -12,7 +12,7 @@ aurvangling_drudge = {
 			}
 		}
 		
-		-2999 = {
+		-24999 = {
 			active = false
 		}
 	}

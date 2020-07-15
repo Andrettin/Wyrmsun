@@ -75,11 +75,11 @@ DefineCharacter("ganglati", { -- Hel's manservant in Norse mythology; Source: Ke
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Faction = "hel",
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-slow",
 	HistoricalLocations = {
-		-3000, "niflheim", "eljudnir"
+		-30000, "niflheim", "eljudnir"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then
@@ -95,11 +95,11 @@ DefineCharacter("ganglot", { -- Hel's maidservant in Norse mythology; Source: Ke
 	Type = "unit-teuton-priest",
 	Civilization = "norse",
 	Faction = "hel",
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-slow",
 	HistoricalLocations = {
-		-3000, "niflheim", "eljudnir"
+		-30000, "niflheim", "eljudnir"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then
@@ -115,11 +115,11 @@ DefineCharacter("garm", { -- Hel's wolf-hound in Norse mythology, who guards the
 	Type = "unit-wolf", -- wolf-hound
 	Faction = "hel",
 	Level = 3,
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-vicious",
 	HistoricalLocations = {
-		-3000, "niflheim", {8, 181}
+		-30000, "niflheim", {8, 181}
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then
@@ -136,11 +136,11 @@ DefineCharacter("groa", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Type = "unit-teuton-priest", -- seeress
 	Civilization = "norse",
 	Faction = "hel", -- lives in Niflheim
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-wise",
 	HistoricalLocations = {
-		-3000, "niflheim", "eljudnir"
+		-30000, "niflheim", "eljudnir"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then
@@ -155,11 +155,11 @@ DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Nif
 	Gender = "male",
 	Type = "unit-wyrm",
 	Faction = "hel",
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-vicious",
 	HistoricalLocations = {
-		-3000, "niflheim", {101, 164}
+		-30000, "niflheim", {101, 164}
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hel") then

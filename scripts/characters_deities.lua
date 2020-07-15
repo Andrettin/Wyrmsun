@@ -31,12 +31,12 @@ DefineCharacter("gathaarl", {
 	Type = "unit-goblin-warlord",
 	Faction = "hel", -- lives in Niflheim
 	Deity = "gathaarl",
-	StartDate = -3000,
+	StartDate = -30000,
 	DeathDate = 3000,
 	Trait = "upgrade-vicious",
 	Level = 50,
 	HistoricalLocations = {
-		-3000, "niflheim", "eljudnir"
+		-30000, "niflheim", "eljudnir"
 	}
 })
 

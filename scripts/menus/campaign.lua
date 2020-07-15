@@ -118,7 +118,7 @@ function RunCampaignMenu()
 			faction_name = _("Faction:").. " " .. _(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name")) .. " (" .. _(GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display")) .. ")"
 	
 			start_year = GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYear")
-			start_date_str = _("Start Date:").. " " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYearString")
+			start_date_str = _("Start Year:").. " " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYearString")
 			if (start_year >= 0) then
 				start_date_str = start_date_str .. " AD"
 			else

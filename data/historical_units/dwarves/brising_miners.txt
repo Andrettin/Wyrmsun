@@ -4,7 +4,7 @@ brising_miners = {
 	quantity = 5
 	
 	history = {
-		-3000 = {
+		-25000 = {
 			active = true
 			faction = brising_clan
 			location = {
@@ -12,7 +12,7 @@ brising_miners = {
 			}
 		}
 		
-		-2999 = {
+		-24999 = {
 			active = false
 		}
 	}

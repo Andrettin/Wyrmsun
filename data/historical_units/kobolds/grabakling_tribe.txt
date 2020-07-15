@@ -5,7 +5,7 @@ grabakling_footpads = {
 	ai_active = false
 	
 	history = {
-		-3000 = {
+		-25000 = {
 			active = true
 			faction = grabakling_tribe
 			location = {
