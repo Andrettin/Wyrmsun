@@ -4,7 +4,7 @@ aurvangling_guard_tower_1 = {
 	quantity = 1
 	
 	history = {
-		-2999 = {
+		-24999 = {
 			active = true
 			faction = aurvangling_tribe
 			location = {
@@ -20,7 +20,7 @@ aurvangling_guard_tower_2 = {
 	quantity = 1
 	
 	history = {
-		-2999 = {
+		-24999 = {
 			active = true
 			faction = aurvangling_tribe
 			location = {
@@ -36,7 +36,7 @@ aurvangling_guard_tower_3 = {
 	quantity = 1
 	
 	history = {
-		-2999 = {
+		-24999 = {
 			active = true
 			faction = aurvangling_tribe
 			location = {
