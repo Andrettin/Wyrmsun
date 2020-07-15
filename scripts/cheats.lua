@@ -200,6 +200,11 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
 		AddMessage("Player " .. message_player .. " has " .. CPlayer:GetPlayer(message_player).NumBuildingsUnderConstruction .. " under construction buildings.")
+	elseif (str == "work work") then
+		local worker_type = GetFactionClassUnitType("worker", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (worker_type) then
+			unit = CreateUnit(worker_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		end
 	elseif (str == "shield wall") then
 		local infantry_type = GetFactionClassUnitType("infantry", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (infantry_type) then
