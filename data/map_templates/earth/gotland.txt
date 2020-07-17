@@ -1,13 +1,13 @@
 gotland = {
 	name = "Gotland"
-	main_template = earth_space
+	main_template = earth_45_60_latitude_north
 	world = earth
-	size = { 24 24 }
-	end_pos = { 19 23 }
-	subtemplate_top_left_pos = { 236 17 }
+	size = { 26 38 }
+	subtemplate_top_left_pos = { 245 18 }
 	base_terrain_type = dirt
 	terrain_image = "earth/gotland.png"
 	overlay_terrain_image = "earth/gotland_overlay.png"
+	territory_image = "earth/gotland_territories.png"
 	min_longitude = 18
 	max_longitude = 19.5
 	min_latitude = 56.5

@@ -1,6 +1,6 @@
 hanover = {
 	name = "Hanover" #"Hannover"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 9.71665726588 52.36697023430 } #from Natural Earth
 	major = true
 	color = { 15 78 106 }

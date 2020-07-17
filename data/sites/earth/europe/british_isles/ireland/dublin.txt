@@ -1,6 +1,6 @@
 dublin = {
 	name = "Dublin"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { -6.24890568178 53.33306113600 } #from Natural Earth
 	major = true
 	color = { 98 64 38 }

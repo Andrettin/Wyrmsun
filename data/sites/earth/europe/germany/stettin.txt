@@ -1,6 +1,6 @@
 stettin = {
 	name = "Stettin"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 14.53000687530 53.42039430650 } #from Natural Earth
 	major = true
 	color = { 164 255 28 }

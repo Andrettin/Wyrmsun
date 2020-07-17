@@ -1,6 +1,6 @@
 haderslev = {
 	name = "Haderslev"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 9.504416961 55.25111111 } #from Natural Earth (ports)
 	regions = {
 		scandinavia

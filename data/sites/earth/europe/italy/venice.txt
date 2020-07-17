@@ -1,6 +1,6 @@
 venice = {
 	name = "Venice"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 12.33499873720 45.43865928050 } #from Natural Earth
 	major = true
 	color = { 240 155 38 }

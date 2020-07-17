@@ -1,6 +1,6 @@
 syracuse = {
 	name = "Syracuse"
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { 15.28996048860 37.07035870260 } #from Natural Earth
 	major = true
 	color = { 100 246 40 }

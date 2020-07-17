@@ -1,6 +1,6 @@
 paris = {
 	name = "Paris"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 2.33333532574 48.86669293120 } #from Natural Earth
 	major = true
 	color = { 38 14 126 }

@@ -1,6 +1,6 @@
 bern = {
 	name = "Bern"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 7.46697546248 46.91668275870 } #from Natural Earth
 	#major = true
 	regions = {

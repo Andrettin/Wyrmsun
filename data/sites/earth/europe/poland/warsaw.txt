@@ -1,6 +1,6 @@
 warsaw = {
 	name = "Warsaw"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 20.99999955110 52.25000062980 } #from Natural Earth
 	major = true
 	regions = {

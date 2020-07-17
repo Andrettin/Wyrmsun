@@ -1,6 +1,6 @@
 oxford = {
 	name = "Oxford"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { -1.24998600402 51.77041749990 } #from Natural Earth
 	regions = {
 		england

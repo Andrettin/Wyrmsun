@@ -1,6 +1,6 @@
 prague = {
 	name = "Prague"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 14.46597977570 50.08333701490 } #from Natural Earth
 	major = true
 	color = { 30 207 116 }

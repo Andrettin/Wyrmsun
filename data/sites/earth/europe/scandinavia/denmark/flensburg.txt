@@ -1,6 +1,6 @@
 flensburg = {
 	name = "Flensburg"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 9.43331538762 54.78374778150 } #from Natural Earth
 	cores = {
 		angle_tribe

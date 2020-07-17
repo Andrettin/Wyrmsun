@@ -1,6 +1,6 @@
 stuttgart = {
 	name = "Stuttgart"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 9.19999629582 48.77997987780 } #from Natural Earth
 	major = true
 	color = { 192 202 36 }

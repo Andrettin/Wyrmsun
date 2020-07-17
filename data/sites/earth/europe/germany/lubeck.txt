@@ -1,6 +1,6 @@
 lubeck = {
 	name = "Lubeck" #"Lübeck"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	#geocoordinate = { 10.66998408880 53.87039267890 } #from Natural Earth
 	geocoordinate = { 10.86825677 53.95222222 } #Travemunde, from Natural Earth
 	cores = {

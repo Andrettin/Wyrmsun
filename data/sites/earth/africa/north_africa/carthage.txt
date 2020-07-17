@@ -1,6 +1,6 @@
 carthage = {
 	name = "Carthage"
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { 10.17967809920 36.80277813620 } #Tunis; from Natural Earth
 	major = true
 	cultural_names = {

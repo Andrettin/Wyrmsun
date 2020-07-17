@@ -1,6 +1,6 @@
 frederikshavn = {
 	name = "Frederikshavn"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 10.53329992540 57.43368939120 } #from Natural Earth
 	regions = {
 		scandinavia

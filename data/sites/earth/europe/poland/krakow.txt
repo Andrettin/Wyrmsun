@@ -1,6 +1,6 @@
 krakow = {
 	name = "Krakow"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 19.96001135120 50.05997926750 } #from Natural Earth
 	major = true
 	color = { 14 205 65 }

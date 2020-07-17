@@ -1,6 +1,6 @@
 london = {
 	name = "London"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { -0.11672184386 51.49999472970 } #from Natural Earth
 	major = true
 	color = { 242 84 91 }

@@ -1,6 +1,6 @@
 troyes = {
 	name = "Troyes" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 4.08335770531 48.34039430650 } #from Natural Earth
 	color = { 151 186 207 }
 	cultural_names = {

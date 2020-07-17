@@ -1,6 +1,6 @@
 toulouse = {
 	name = "Toulouse" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { 1.44992671571 43.61995892240 } #from Natural Earth
 	major = true
 	color = { 64 201 136 }

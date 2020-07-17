@@ -1,6 +1,6 @@
 munich = {
 	name = "Munich"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 11.57499344750 48.12994203600 } #from Natural Earth
 	major = true
 	color = { 53 10 147 }

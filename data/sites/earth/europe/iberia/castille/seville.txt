@@ -1,6 +1,6 @@
 seville = {
 	name = "Seville"
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { -5.98000736635 37.40501527820 } #from Natural Earth
 	major = true
 	color = { 230 112 111 }

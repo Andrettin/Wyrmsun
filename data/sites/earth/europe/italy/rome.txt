@@ -1,6 +1,6 @@
 rome = {
 	name = "Rome"
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { 12.48325842150 41.89595562650 } #from Natural Earth
 	major = true
 	color = { 57 237 186 }

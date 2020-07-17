@@ -1,6 +1,6 @@
 burgos = {
 	name = "Burgos"
-	map_template = earth_space
+	map_template = earth_30_45_latitude_north
 	geocoordinate = { -3.67996687968 42.35039817210 } #from Natural Earth
 	major = true
 	color = { 0 85 46 }

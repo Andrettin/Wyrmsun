@@ -1,6 +1,6 @@
 pest = {
 	name = "Pest"
-	map_template = earth_space
+	map_template = earth_45_60_latitude_north
 	geocoordinate = { 19.08332067740 47.50000632640 } #Budapest; from Natural Earth
 	major = true
 	color = { 57 174 209 }
