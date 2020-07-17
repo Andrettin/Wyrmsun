@@ -1,0 +1,5 @@
+sahara_desert = {
+	name = "Sahara Desert"
+	terrain_type = desert_sand
+	color = { 244 136 113 }
+}
