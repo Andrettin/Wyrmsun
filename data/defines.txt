@@ -7,7 +7,6 @@ minimap_color_index = 1
 minimap_non_land_territory_alpha = 64
 underground_time_of_day = underground
 border_terrain_type = border
-documents_modules_loading_enabled = true
 campaign_victory_dialogue = campaign_victory
 campaign_defeat_dialogue = campaign_defeat
 inventory_button_level = inventory_level
