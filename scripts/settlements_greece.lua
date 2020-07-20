@@ -119,25 +119,6 @@ DefineSite("athens", {
 	Regions = {"greece"}
 })
 
-DefineSite("byzantium", {
-	Name = "Byzantium",
-	MapTemplate = "earth",
-	Position = {4498, 1114},
-	CulturalNames = {
-		"greek", "Byzantium",
-		"latin", "Constantinople",
-		"persian", "Byzantium",
-		"turkish", "Istanbul"
-	},
-	HistoricalOwners = {
-		-500, "persia" -- Byzantium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-500, 0, "town_hall"
-	},
-	Regions = {"greece"}
-})
-
 DefineSite("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",
