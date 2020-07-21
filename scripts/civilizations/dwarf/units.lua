@@ -604,6 +604,8 @@ DefineUnitType("unit-dwarven-axefighter", {
 	},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
+	HitPoints = 70, -- +10 HP
+	Evasion = 8, -- -2 Evasion
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
@@ -746,6 +748,8 @@ DefineUnitType("unit-dwarven-steelclad", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
+	HitPoints = 85, -- +10 HP
+	Evasion = 8, -- -2 Evasion
 	Armor = 4,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
@@ -881,6 +885,8 @@ DefineUnitType("unit-dwarven-thane", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
+	HitPoints = 100, -- +10 HP
+	Evasion = 8, -- -2 Evasion
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
@@ -959,8 +965,9 @@ DefineUnitType("unit-dwarven-guard", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	HitPoints = 65,
-	Armor = 2,
+	HitPoints = 70, -- +10 HP
+	Evasion = 8, -- -2 Evasion
+	Armor = 2, -- +1 Armor
 	Corpse = "unit-dwarven-dead-body",
 	PierceDamage = true,
 	InvertedEastArms = true,
@@ -1004,8 +1011,9 @@ DefineUnitType("unit-dwarven-stalwart", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	HitPoints = 80,
-	Armor = 2,
+	HitPoints = 85, -- +10 HP
+	Evasion = 8, -- -2 Evasion
+	Armor = 2, -- +1 Armor
 	Corpse = "unit-dwarven-dead-body",
 	PierceDamage = true,
 	InvertedEastArms = true,
@@ -1048,8 +1056,9 @@ DefineUnitType("unit-dwarven-sentinel", {
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
 		{"boots", "unit-boots"}
 	},
-	HitPoints = 95,
-	Armor = 2,
+	HitPoints = 100, -- +10 HP
+	Evasion = 8, -- -2 Evasion
+	Armor = 2, -- +1 Armor
 	Corpse = "unit-dwarven-dead-body",
 	PierceDamage = true,
 	InvertedEastArms = true,

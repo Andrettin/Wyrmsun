@@ -109,6 +109,10 @@ https://github.com/Andrettin/Wyrmsun
 - Units in underground terrain tiles are now have the night-time color effect applied on them.
 - Terrain feature tooltips now only appear after one second.
 
+* Units
+- Dwarven axe infantry units now have +10 HP and -2 evasion.
+- Dwarven spear infantry units now have +5 HP and -2 evasion (they already had a free +5 HP bonus before).
+
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
 - Removed the "Larger Popup Font" option, as its purpose is largely fulfilled by the 2x scaling option.
