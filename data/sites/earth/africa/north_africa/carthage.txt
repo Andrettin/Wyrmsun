@@ -3,6 +3,7 @@ carthage = {
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { 10.17967809920 36.80277813620 } #Tunis; from Natural Earth
 	major = true
+	color = { 168 87 58 }
 	cultural_names = {
 		#latin = "Carthago" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

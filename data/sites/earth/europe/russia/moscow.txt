@@ -1,0 +1,10 @@
+moscow = {
+	name = "Moscow"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 37.61552282590 55.75216412260 } #from Natural Earth
+	major = true
+	color = { 236 226 172 }
+	regions = {
+		europe
+	}
+}

@@ -93,32 +93,6 @@ DefineSite("argos", {
 	Regions = {"greece"}
 })
 
-DefineSite("athens", {
-	Name = "Athens",
-	MapTemplate = "earth",
-	Position = {4380, 1183},
-	Major = true,
-	CulturalNames = {
-		"greek", "Athens", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		"latin", "Athens"
-	},
-	HistoricalOwners = {
-		-1700, "mycenae",
-		-1190, "",
-		-- Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-700, "athens", -- Athens was part of the state of Attica/Athens in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-146, "rome", -- Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1740, "turkey" -- Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	HistoricalBuildings = {
-		-1700, -1190, "stronghold", -- Mycenaean fortifications present in Athens between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-		-700, 0, "town_hall"
-		
-	},
-	Regions = {"greece"}
-})
-
 DefineSite("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",

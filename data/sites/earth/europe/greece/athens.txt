@@ -1,0 +1,37 @@
+athens = {
+	name = "Athens"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 23.73332108430 37.98332623190 } #from Natural Earth
+	major = true
+	color = { 102 220 253 }
+	regions = {
+		greece
+	}
+	
+	history = {
+		-1700 = {
+			owner_faction = mycenae
+			building_classes += stronghold #Mycenaean fortifications present in Athens between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		}
+		
+		#Athens was a center of the highest Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		
+		-1190 = {
+			owner_faction = none
+			building_classes -= stronghold #Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+		}
+		
+		-700 = {
+			owner_faction = athens #Athens was part of the state of Attica/Athens in the 700-600 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+			building_classes += town_hall
+		}
+		
+		-146 = {
+			owner_faction = rome #Athens was acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		1740 = {
+			owner_faction = turkey #Athens was in possession of the Ottoman Empire in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+	}
+}
