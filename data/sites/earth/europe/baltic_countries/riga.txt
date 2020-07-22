@@ -1,0 +1,17 @@
+riga = {
+	name = "Riga"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 24.09996537140 56.95002382320 } #from Natural Earth
+	major = true
+	color = { 142 59 246 }
+	regions = {
+		baltic_countries
+	}
+	
+	history = {
+		-9000 = {
+			owner_faction = uralic_tribe #the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+			building_classes += town_hall
+		}
+	}
+}

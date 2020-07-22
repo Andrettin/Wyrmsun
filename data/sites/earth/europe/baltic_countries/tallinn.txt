@@ -1,0 +1,24 @@
+tallinn = {
+	name = "Tallinn"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 24.72804072950 59.43387737950 } #from Natural Earth
+	major = true
+	color = { 144 153 229 }
+	cultural_names = {
+		teuton = "Reval"
+	}
+	regions = {
+		baltic_countries
+	}
+	
+	history = {
+		-9000 = {
+			owner_faction = uralic_tribe #the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+			building_classes += town_hall
+		}
+		
+		1561 = {
+			owner_faction = sweden #Reval became a Swedish possession in 1561; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+	}
+}
