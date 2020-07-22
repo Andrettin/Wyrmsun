@@ -1,0 +1,36 @@
+konigsberg = {
+	name = "Konigsberg" #"Königsberg"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 20.49734289420 54.70000612300 } #from Natural Earth
+	major = true
+	color = { 72 145 47 }
+	cultural_names = {
+		#slav = "Kaliningrad" #Russian
+	}
+	cores = {
+		prussia
+	}
+	regions = {
+		europe
+	}
+	
+	history = {
+		1544 = {
+			owner_faction = prussia
+			building_classes += town_hall
+			building_classes += university #University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1560 = {
+			owner_faction = prussia #Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1618 = {
+			owner_faction = brandenburg #Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+		
+		1815 = {
+			owner_faction = prussia #Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

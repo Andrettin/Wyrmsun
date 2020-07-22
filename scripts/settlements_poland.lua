@@ -66,29 +66,6 @@ DefineSite("kolberg", {
 	Regions = {"germany"}
 })
 
-DefineSite("konigsberg", {
-	Name = "Konigsberg",
-	MapTemplate = "earth",
-	Position = {4302, 804},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Konigsberg" -- "Königsberg"
-	},
-	Cores = {
-		"prussia"
-	},
-	HistoricalOwners = {
-		1560, "prussia", -- Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1618, "brandenburg", -- Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1815, "prussia" -- Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1544, 0, "town_hall",
-		1544, 0, "university" -- University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"europe"}
-})
-
 DefineSite("poznan", {
 	Name = "Poznan",
 	MapTemplate = "earth",
