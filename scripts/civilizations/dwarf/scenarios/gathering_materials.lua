@@ -296,7 +296,7 @@ AddTrigger("gathering-materials-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {512, 512}) >= 1 and GetNumUnitsAt(-1, "unit-coal-deposit", {0, 0}, {512, 512}) >= 2) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Collect 10000 copper and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1 and GetNumUnitsAt(-1, "unit-coal-deposit", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 2) then
 			for i=0, (PlayerMax - 2) do
 				if (
 					GetPlayerData(i, "RaceName") == "dwarf"

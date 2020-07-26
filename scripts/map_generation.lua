@@ -1679,7 +1679,7 @@ function CreateDecorations()
 		local RandomNumber = 0
 		local WhileCount = 0
 
-		local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {512, 512}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {512, 512}) -- mushroom patch not listed here since it occurs in many maps through normal generation
+		local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {MaxMapWidth, MaxMapHeight}) -- mushroom patch not listed here since it occurs in many maps through normal generation
 		Count = (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128
 		if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
 			while (Count > 0 and WhileCount < ((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 128) * 100) do
@@ -2413,7 +2413,7 @@ function ApplyRawTiles()
 		local RandomNumber = 0
 
 		if (Editor.Running == EditorNotRunning) then
-			if (GetNumUnitsAt(PlayerNumNeutral, "unit-mushroom-patch", {0, 0}, {512, 512}) >= 1) then
+			if (GetNumUnitsAt(PlayerNumNeutral, "unit-mushroom-patch", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1) then
 				-- destroy mushrooms that ended up in inappropriate locations
 				local uncount = 0
 				uncount = GetUnits(PlayerNumNeutral)
@@ -2879,7 +2879,7 @@ function ApplyRawTiles()
 		end
 		
 		if (Editor.Running == EditorNotRunning) then
-			if ((GetNumUnitsAt(PlayerNumNeutral, "unit-gold-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {512, 512}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {512, 512})) >= 1) then
+			if ((GetNumUnitsAt(PlayerNumNeutral, "unit-gold-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
 				-- destroy gold and silver rocks that ended up in inappropriate locations
 				local uncount = 0
 				uncount = GetUnits(PlayerNumNeutral)
@@ -3309,7 +3309,7 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 	end
 
 	-- destroy mushrooms that ended up in inappropriate locations
-	if (GetNumUnitsAt(PlayerNumNeutral, "unit-mushroom-patch", {0, 0}, {512, 512}) >= 1) then
+	if (GetNumUnitsAt(PlayerNumNeutral, "unit-mushroom-patch", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1) then
 		local uncount = 0
 		uncount = GetUnits(PlayerNumNeutral)
 		for unit1 = 1,table.getn(uncount) do 
@@ -5839,7 +5839,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 												unit = OldCreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
-											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 												unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
@@ -5850,7 +5850,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 												unit = OldCreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
-											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 												unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
@@ -5865,7 +5865,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 												unit = OldCreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
-											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 												unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
@@ -5876,13 +5876,13 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 												unit = OldCreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
-											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 												unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											end
 										elseif (hostile_dungeon_player_civilization == "kobold") then
-											if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
+											if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 												unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1

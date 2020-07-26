@@ -110,10 +110,10 @@ local function RunEditorNewMapMenu()
 			GenericDialog("Error", "The map width must be at least 32.")
 		elseif (tonumber(mapSizey:getText()) < 32) then
 			GenericDialog("Error", "The map height must be at least 32.")
-		elseif (tonumber(mapSizex:getText()) > 512) then
-			GenericDialog("Error", "The map width must be at most 512.")
-		elseif (tonumber(mapSizey:getText()) > 512) then
-			GenericDialog("Error", "The map height must be at most 512.")
+		elseif (tonumber(mapSizex:getText()) > MaxMapWidth) then
+			GenericDialog("Error", "The map width must be at most " .. MaxMapWidth .. ".")
+		elseif (tonumber(mapSizey:getText()) > MaxMapHeight) then
+			GenericDialog("Error", "The map height must be at most " .. MaxMapHeight .. ".")
 		else
 			CMap.Map.Info.Description = mapDescription:getText()
 			CMap.Map.Info.MapWidth = tonumber(mapSizex:getText())

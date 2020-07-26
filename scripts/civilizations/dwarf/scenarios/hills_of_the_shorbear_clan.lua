@@ -1026,7 +1026,7 @@ AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-escapes",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {512, 512}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-master-at-arms", {44, 76}, {512, 512})) >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-master-at-arms", {44, 76}, {MaxMapWidth, MaxMapHeight})) >= 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1121,7 +1121,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-ending",
 		return false
 	end,
 	function()
-		KillUnitAt("any", GetFactionPlayer("Shorbear Clan"), GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnits"), {0, 0}, {512, 512})
+		KillUnitAt("any", GetFactionPlayer("Shorbear Clan"), GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnits"), {0, 0}, {MaxMapWidth, MaxMapHeight})
 		Event(
 			"",
 			"The Norlunds have defeated our forces at the hills, garrisoning themselves inside the Shorbear Hold after destroying the Shorbears. Our reinforcements established control over the hills and kept the siege on the Norlunds, but eventually they escaped to some nearby caves...",
@@ -1168,7 +1168,7 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 			return false
 		end
 		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")) then
-			if (GetNumUnitsAt(0, "any", {0, 0}, {512, 512}) < 1) then
+			if (GetNumUnitsAt(0, "any", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then
 				player = GetFactionPlayer("Shinsplitter Clan")
 				return true
 			end
@@ -1201,7 +1201,7 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-victory",
 			return false
 		end
 		if (GetFactionPlayer("Shorbear Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")) then
-			if (GetNumUnitsAt(0, "any", {0, 0}, {512, 512}) < 1) then
+			if (GetNumUnitsAt(0, "any", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then
 				player = GetFactionPlayer("Shorbear Clan")
 				return true
 			end

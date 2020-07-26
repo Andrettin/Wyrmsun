@@ -313,7 +313,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																				function(s)
 																					SetDiplomacy(gnomish_monarch_player, "neutral", player)
 																					SetDiplomacy(player, "neutral", gnomish_monarch_player)
-																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
+																					KillUnitAt("unit-revealer", player, 1, {0, 0}, {MaxMapWidth, MaxMapHeight})
 																					ActionDraw()
 																				end}
 																			)
@@ -348,7 +348,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 
 									CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).Type = PlayerNeutral
 
-									KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
+									KillUnitAt("unit-revealer", player, 1, {0, 0}, {MaxMapWidth, MaxMapHeight})
 								end}
 							)
 							end}
@@ -510,7 +510,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(player, "enemy", second_bandit_player)
 												SetDiplomacy(bandit_player, "allied", second_bandit_player)
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
-												KillUnitAt("unit-revealer", player, 2, {0, 0}, {512, 512})
+												KillUnitAt("unit-revealer", player, 2, {0, 0}, {MaxMapWidth, MaxMapHeight})
 												if (wyr.preferences.ShowTips and not IsReplayGame()) then
 													Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
 												end

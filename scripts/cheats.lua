@@ -113,7 +113,7 @@ function HandleCheats(str)
 	elseif (str == "ragnarok") then
 		ActionDefeat()
 	elseif (str == "fenrir") then
-		KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {512, 512})
+		KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {MaxMapWidth, MaxMapHeight})
 	elseif (str == "hroptatyr") then
 		if (godcheat) then
 			godcheat = false

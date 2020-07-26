@@ -277,7 +277,7 @@ AddTrigger("closing-the-gates-introduction",
 																								if (mapinfo.description == "Caverns of Chaincolt") then
 																									RemovePlayerObjective(player, "- Defeat your rivals")
 																								end
-																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {512, 512})
+																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {MaxMapWidth, MaxMapHeight})
 																							end}
 																						)
 																						end}

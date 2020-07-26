@@ -50,7 +50,7 @@ function EventTriggers()
 					return false
 				end
 				-- requires the existence of a sufficient number of farms which would be the origin of Greebo's loot
-				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {512, 512}) >= 10) then
+				if ((SyncRand(100) + 1) <= 1 and GetNumUnitsAt(-1, "unit-dwarven-mushroom-farm", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 10) then
 					player = GetThisPlayer()
 					return true
 				end
@@ -165,11 +165,11 @@ function EventTriggers()
 
 	end
 	
-	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) >= 1) then
+	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1) then
 		-- Soldier offers training
 		AddTrigger("swordsman-freed",
 			function()
-				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {512, 512}) >= 1) then
+				if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1) then
 					local uncount = 0
 					uncount = GetUnits("any")
 					for unit1 = 1,table.getn(uncount) do 
