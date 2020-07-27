@@ -1,0 +1,9 @@
+minsk = {
+	name = "Minsk"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 27.56662715530 53.89997743640 } #from Natural Earth
+	major = true
+	regions = {
+		europe
+	}
+}
