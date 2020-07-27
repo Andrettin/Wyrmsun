@@ -1,0 +1,9 @@
+bialystok = {
+	name = "Bialystok"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 23.16999629590 53.15035910960 } #from Natural Earth
+	major = true
+	regions = {
+		poland
+	}
+}
