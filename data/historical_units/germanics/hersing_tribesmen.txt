@@ -2,6 +2,7 @@ hersing_warriors = {
 	name = "Hersing Warriors"
 	unit_type = unit_germanic_warrior
 	quantity = 6
+	ai_active = false
 	
 	history = {
 		-1600 = {
@@ -22,6 +23,7 @@ hersing_archers = {
 	name = "Hersing Archers"
 	unit_type = unit_germanic_archer
 	quantity = 3
+	ai_active = false
 	
 	history = {
 		-1600 = {
