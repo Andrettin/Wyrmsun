@@ -5074,7 +5074,7 @@ Load("scripts/civilizations/slav/units.lua")
 DefineUnitType("unit-orc-spearthrower", {
 	Name = "Spearthrower",
 	Parent = "unit-template-archer",
-	Civilization = "orc",
+	--Civilization = "orc",
 --	Description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone.",
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-weapon-thrower", Icon = "icon-orc-spearthrower",
@@ -5128,7 +5128,7 @@ DefineUnitType("unit-orc-shaman", {
 	Name = "Shaman",
 	Parent = "unit-template-unit",
 	Class = "priest",
-	Civilization = "orc",
+	--Civilization = "orc",
 --	Description = "Orc shamans are the guardians of orcish magic. Respected among orcish tribes, they form the Orcish Council, which makes important decisions for the whole orcish community and arbitrates the many conflicts that arise between tribes of this argumentative race.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-orc-shaman",
