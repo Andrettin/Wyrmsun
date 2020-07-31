@@ -1,0 +1,28 @@
+unit_orc_spearthrower = {
+	name = "Spearthrower"
+	parent = unit_template_archer
+	civilization = orc
+	description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone."
+	image_file = "units/orc/spearthrower.png"
+	frame_size = { 132 132 }
+	animation_set = animations_orc_spearthrower
+	icon = icon_orc_spearthrower
+	pierce_damage = true
+	missile = missile_orc_javelin
+	fire_missile = missile_orc_javelin
+	corpse_type = unit_orc_dead_body
+	weapon_classes = { javelin }
+	button_key = s
+	ai_drops = {
+		unit_boots
+		unit_cheese
+		unit_potion_of_healing
+	}
+	default_equipment = {
+		boots = unit_boots
+	}
+	sounds = {
+		fire_missile = throw_weapon
+		miss = attack_miss
+	}
+}

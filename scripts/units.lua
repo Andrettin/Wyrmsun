@@ -5071,27 +5071,6 @@ Load("scripts/civilizations/slav/units.lua")
 
 -- Other civilizations' units
 
-DefineUnitType("unit-orc-spearthrower", {
-	Name = "Spearthrower",
-	Parent = "unit-template-archer",
-	--Civilization = "orc",
---	Description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone.",
-	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
-	Animations = "animations-weapon-thrower", Icon = "icon-orc-spearthrower",
-	Missile = "missile-javelin",
-	WeaponClasses = {"javelin"},
-	PierceDamage = true,
---	Corpse = "unit-dwarven-dead-body",
-	HiddenInEditor = true,
-	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"ready", "dwarven-scout-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
-	}
-} )
-
 DefineUnitType("unit-orc-sea-orc", {
 	Name = "Sea Orc",
 	Parent = "unit-template-unit",
