@@ -12,6 +12,48 @@ enter_map_layer = {
 	}
 }
 
+choose_level_up_upgrade = {
+	pos = 13
+	icon = icon_level_up
+	action = button
+	value = choose_individual_upgrade_level
+	allowed = check_has_sub_buttons
+	key = u
+	hint = "Choose ~!Upgrade"
+	popup = popup_commands
+	unit_classes = {
+		infantry
+		veteran_infantry
+		heroic_infantry
+		spearman
+		veteran_spearman
+		heroic_spearman
+		shooter
+		veteran_shooter
+		heroic_shooter
+		gunpowder_infantry
+		flying_rider
+		cavalry
+		heroic_cavalry
+		priest
+		veteran_priest
+		high_priest
+		thief
+		merchant
+		heroic_merchant
+	}
+	unit_types = {
+		unit_wolf
+		unit_wyrm
+		unit_gryphon
+		unit_bird
+		unit_crow
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+	}
+}
+
 cancel_level_up_upgrade_choice = {
 	pos = 16
 	level = choose_individual_upgrade_level
@@ -57,6 +99,41 @@ cancel_level_up_upgrade_choice = {
 		unit_bat
 		unit_blood_bat
 		unit_dread_bat
+	}
+}
+
+open_inventory = {
+	pos = 14
+	icon = icon_inventory
+	action = button
+	value = inventory_level
+	allowed = check_has_inventory
+	key = i
+	hint = "Open ~!Inventory"
+	popup = popup_commands
+	unit_classes = {
+		infantry
+		veteran_infantry
+		heroic_infantry
+		spearman
+		veteran_spearman
+		heroic_spearman
+		shooter
+		veteran_shooter
+		heroic_shooter
+		gunpowder_infantry
+		cavalry
+		heroic_cavalry
+		flying_rider
+		priest
+		veteran_priest
+		high_priest
+		thief
+		merchant
+		heroic_merchant
+	}
+	unit_types = {
+		unit_wyrm
 	}
 }
 

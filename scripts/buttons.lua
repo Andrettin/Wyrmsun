@@ -210,52 +210,6 @@ DefineButton( { Pos = 16, Icon = "icon-cancel",
 
 -- Level-Up Upgrades ------------------------------------------------------
 
-DefineButton( { Pos = 13, Icon = "icon-level-up",
-	Action = "button", Value = "choose-individual-upgrade-level",
-	Allowed = "check-has-sub-buttons",
-	Key = "u", Hint = "Choose ~!Upgrade", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
-		"unit-dwarven-thunderer",
-		"unit-dwarven-gryphon-rider",
-		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
-		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
-		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
-		"unit-germanic-spearman", "unit-germanic-archer",
-		"unit-germanic-priest",
-		"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
-		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-ritter", "unit-teuton-knight-lord",
-		"unit-frank-horseman", "unit-frank-knight-lord",
-		"unit-teuton-priest",
-		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
-		"unit-slavic-swordsman",
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-goblin-shaman",
-		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-mace-mastery",
 	Action = "learn-ability", Value = "upgrade-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup_learn_ability",
@@ -275,17 +229,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-germanic-archer",
 		"unit-teuton-archer",
 		"unit-goblin-shadowstalker"
-	}
-} )
-
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-throwing-mastery",
-	Action = "learn-ability", Value = "upgrade-throwing-mastery",
-	Key = "t", Hint = "Learn ~!Throwing Mastery", Popup = "popup_learn_ability",
-	Description = "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2.",
-	ForUnit = {
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-latin-javelineer"
 	}
 } )
 
@@ -368,118 +311,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 	}
 } )
 
-DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-critical-strike",
-	Action = "learn-ability", Value = "upgrade-critical-strike",
-	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup_learn_ability",
-	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead.",
-	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
-		"unit-dwarven-thane",
-		"unit-dwarven-sentinel",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-surghan-mercenary-thane",
-		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 3, Level = "choose-individual-upgrade-level", Icon = "icon-deadly-precision",
-	Action = "learn-ability", Value = "upgrade-deadly-precision",
-	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup_learn_ability",
-	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
-	ForUnit = {
-		"unit-dwarven-arcanister",
-		"unit-dwarven-thane",
-		"unit-dwarven-sentinel",
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-surghan-mercenary-thane",
-		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 4, Level = "choose-individual-upgrade-level", Icon = "icon-eagle-eye",
-	Action = "learn-ability", Value = "upgrade-eagle-eye",
-	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup_learn_ability",
-	Description = "Eagle Eye is a passive ability that increases accuracy by 2.",
-	ForUnit = {
-		"unit-dwarven-thane",
-		"unit-dwarven-sentinel",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-surghan-mercenary-thane",
-		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-gryphon", "unit-bird", "unit-crow", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon-scouting",
-	Action = "learn-ability", Value = "upgrade-scouting",
-	Key = "s", Hint = "Learn ~!Scouting", Popup = "popup_learn_ability",
-	Description = "Scouting is a passive ability that increases sight by 1.",
-	ForUnit = {
-		"unit-dwarven-gryphon-rider",
-		"unit-germanic-archer",
-		"unit-latin-javelineer",
-		"unit-teuton-archer",
-		"unit-goblin-shadowstalker"
-	}
-} )
-
 DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon-stun",
 	Action = "learn-ability", Value = "upgrade-stun",
 	Key = "u", Hint = "Learn St~!un", Popup = "popup_learn_ability",
@@ -559,50 +390,6 @@ DefineButton( { Pos = 7, Level = "choose-individual-upgrade-level", Icon = "icon
 	}
 } )
 
-DefineButton( { Pos = 8, Level = "choose-individual-upgrade-level", Icon = "icon-toughness",
-	Action = "learn-ability", Value = "upgrade-toughness",
-	Key = "o", Hint = "Learn T~!oughness", Popup = "popup_learn_ability",
-	Description = "Toughness is a passive ability that increases HP by 10.",
-	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
-		"unit-dwarven-thane",
-		"unit-dwarven-sentinel",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-dwarven-loremaster",
-		"unit-surghan-mercenary-thane",
-		"unit-germanic-worker",
-		"unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-germanic-priest",
-		"unit-latin-centurion", "unit-latin-javelineer",
-		"unit-frank-heroic-swordsman", "unit-frank-spearman", "unit-frank-knight-lord",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-worker",
-		"unit-teuton-heroic-swordsman", 
-		"unit-teuton-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-knight-lord",
-		"unit-teuton-priest",
-		"unit-gothic-horse-lord",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-worker",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-goblin-shaman",
-		"unit-goblin-magnate",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-troll-warrior",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat", "unit-gryphon"
-	}
-} )
-
 --[[
 DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "icon-ethereal-vision",
 	Action = "learn-ability", Value = "upgrade-ethereal-vision",
@@ -623,6 +410,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-germanic-priest",
 		"unit-latin-centurion", "unit-latin-javelineer",
 		"unit-norse-heroic-swordsman",
+		"unit-orc-spearthrower",
 --		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
 --		"unit-teuton-spearman", "unit-frank-spearman",
 --		"unit-teuton-archer",
@@ -660,52 +448,6 @@ DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-loremaster"}
 })
 --]]
-
--- Inventory ------------------------------------------------------
-
-DefineButton( { Pos = 14, Icon = "icon-inventory",
-	Action = "button", Value = "inventory-level",
-	Allowed = "check-has-inventory",
-	Key = "i", Hint = "Open ~!Inventory", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
-		"unit-dwarven-thunderer",
-		"unit-dwarven-yale-rider", "unit-dwarven-yale-lord",
-		"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
-		"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster",
-		"unit-dwarven-gryphon-rider",
-		"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
-		"unit-germanic-spearman", "unit-germanic-archer",
-		"unit-germanic-priest",
-		"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion", "unit-latin-javelineer",
-		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
-		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-teuton-ritter", "unit-teuton-knight-lord", "unit-frank-horseman", "unit-frank-knight-lord",
-		"unit-teuton-priest",
-		"unit-gothic-horse-rider", "unit-gothic-horse-lord",
-		"unit-slavic-swordsman",
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-		"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry",
-		"unit-goblin-shaman",
-		"unit-goblin-magnate",
-		"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
-		"unit-wyrm",
-		"unit-ettin",
-		"unit-elven-swordsman", "unit-elven-priest",
-		"unit-troll-warrior"
-	}
-} )
 
 -- Special Abilities ---------------------------------------------------
 

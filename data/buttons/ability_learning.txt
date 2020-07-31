@@ -1,0 +1,217 @@
+learn_throwing_mastery = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	icon = icon_throwing_mastery
+	action = learn_ability
+	value = upgrade_throwing_mastery
+	key = t
+	hint = "Learn ~!Throwing Mastery"
+	popup = popup_learn_ability
+	description = "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2."
+	unit_types = {
+		unit_dwarven_explorer
+		unit_dwarven_gryphon_rider
+		unit_joruvellir_explorer
+		unit_latin_javelineer
+		unit_orc_spearthrower
+	}
+}
+
+learn_critical_strike = {
+	pos = 2
+	level = choose_individual_upgrade_level
+	icon = icon_critical_strike
+	action = learn_ability
+	value = upgrade_critical_strike
+	key = c
+	hint = "Learn ~!Critical Strike"
+	popup = popup_learn_ability
+	description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead."
+	unit_classes = {
+		expert_miner
+		grandmaster_smith
+		heroic_infantry
+		heroic_spearman
+		heroic_shooter
+		gunpowder_infantry
+		heroic_cavalry
+		flying_rider
+		thief
+	}
+	unit_types = {
+		unit_elven_swordsman
+		unit_ettin
+		unit_frank_spearman
+		unit_germanic_spearman
+		unit_germanic_archer
+		unit_goblin_spearman
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+		unit_teuton_spearman
+		unit_troll_warrior
+		unit_wolf
+		unit_wyrm
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+	}
+}
+
+learn_deadly_precision = {
+	pos = 3
+	level = choose_individual_upgrade_level
+	icon = icon_deadly_precision
+	action = learn_ability
+	value = upgrade_deadly_precision
+	key = d
+	hint = "Learn ~!Deadly Precision"
+	popup = popup_learn_ability
+	description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead."
+	unit_classes = {
+		grandmaster_smith
+		heroic_infantry
+		heroic_spearman
+		heroic_shooter
+		gunpowder_infantry
+		heroic_cavalry
+		flying_rider
+		thief
+	}
+	unit_types = {
+		unit_elven_swordsman
+		unit_ettin
+		unit_frank_spearman
+		unit_germanic_spearman
+		unit_germanic_archer
+		unit_goblin_spearman
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+		unit_teuton_spearman
+		unit_troll_warrior
+		unit_wolf
+		unit_wyrm
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+	}
+}
+
+learn_eagle_eye = {
+	pos = 4
+	level = choose_individual_upgrade_level
+	icon = icon_eagle_eye
+	action = learn_ability
+	value = upgrade_eagle_eye
+	key = e
+	hint = "Learn Eagle ~!Eye"
+	popup = popup_learn_ability
+	description = "Eagle Eye is a passive ability that increases accuracy by 2."
+	unit_classes = {
+		heroic_infantry
+		heroic_spearman
+		heroic_shooter
+		gunpowder_infantry
+		heroic_cavalry
+		flying_rider
+		thief
+	}
+	unit_types = {
+		unit_elven_swordsman
+		unit_ettin
+		unit_frank_spearman
+		unit_germanic_spearman
+		unit_germanic_archer
+		unit_goblin_spearman
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+		unit_teuton_spearman
+		unit_troll_warrior
+		unit_wolf
+		unit_wyrm
+		unit_gryphon
+		unit_bird
+		unit_crow
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+	}
+}
+
+learn_scouting = {
+	pos = 5
+	level = choose_individual_upgrade_level
+	icon = icon_scouting
+	action = learn_ability
+	value = upgrade_scouting
+	key = s
+	hint = "Learn ~!Scouting"
+	popup = popup_learn_ability
+	description = "Scouting is a passive ability that increases sight by 1."
+	unit_classes = {
+		flying_rider
+	}
+	unit_types = {
+		unit_germanic_archer
+		unit_goblin_shadowstalker
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+	}
+}
+
+learn_toughness = {
+	pos = 8
+	level = choose_individual_upgrade_level
+	icon = icon_toughness
+	action = learn_ability
+	value = upgrade_toughness
+	key = o
+	hint = "Learn T~!oughness"
+	popup = popup_learn_ability
+	description = "Toughness is a passive ability that increases HP by 10."
+	unit_classes = {
+		expert_miner
+		grandmaster_smith
+		heroic_merchant
+		heroic_infantry
+		heroic_spearman
+		heroic_shooter
+		gunpowder_infantry
+		heroic_cavalry
+		flying_rider
+		high_priest
+		thief
+	}
+	unit_types = {
+		unit_deep_gnomish_worker
+		unit_derro_worker
+		unit_elven_priest
+		unit_elven_swordsman
+		unit_ettin
+		unit_frank_spearman
+		unit_germanic_archer
+		unit_germanic_priest
+		unit_germanic_spearman
+		unit_germanic_worker
+		unit_gnomish_worker
+		unit_goblin_shaman
+		unit_goblin_spearman
+		unit_goblin_worker
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+		unit_teuton_priest
+		unit_teuton_spearman
+		unit_teuton_worker
+		unit_troll_warrior
+		unit_wolf
+		unit_wyrm
+		unit_gryphon
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+	}
+}
