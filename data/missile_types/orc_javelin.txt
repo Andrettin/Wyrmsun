@@ -1,0 +1,11 @@
+missile_orc_javelin = {
+	image_file = "missiles/orc/javelin.png"
+	frame_size = { 132 132 }
+	frames = 5
+	num_directions = 9
+	draw_level = 50
+	missile_class = point_to_point
+	sleep = 1
+	speed = 32
+	impact_sound = spear_attack
+}
