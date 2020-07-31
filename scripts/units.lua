@@ -3888,6 +3888,15 @@ DefineUnitType("unit-template-heroic-shooter", {
 	AiDrops = {"unit-crown"}
 } )
 
+DefineUnitType("unit-template-javelineer", {
+	Name = "Javelineer",
+	Parent = "unit-template-archer",
+	BasicDamage = 11, -- +2 damage
+	MaxAttackRange = 4, -- -1 range
+	PierceDamage = true,
+	WeaponClasses = {"javelin"},
+} )
+
 DefineUnitType("unit-template-gunpowder-infantry", {
 	Name = "Gunpowder Infantry",
 	Parent = "unit-template-archer",
@@ -5223,6 +5232,7 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-ettin", 1,
 		"unit-latin-legionary", 4, "unit-latin-javelineer", 3,
 		"unit-norse-swordsman", 4,
+		"unit-orc-spearthrower", 3,
 		"unit-slavic-swordsman", 4,
 		"unit-troll-warrior", 2
 	},

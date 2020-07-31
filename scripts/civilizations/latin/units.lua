@@ -114,23 +114,18 @@ DefineUnitType("unit-latin-centurion", {
 
 DefineUnitType("unit-latin-javelineer", {
 	Name = "Javelineer",
-	Parent = "unit-template-archer",
+	Parent = "unit-template-javelineer",
 	Civilization = "latin",
-	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
+	Description = "Roman javelineers were an effective skirmish force, often arrayed so as to throw a rain of spears at the start of a battle.",
 	Image = {"file", "latin/units/javelineer.png", "size", {72, 72}},
 	Animations = "animations-weapon-thrower", Icon = "icon-latin-javelineer",
 	DefaultEquipment = {
 		{"weapon", "unit-pilum"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 11,
 	Missile = "missile-javelin",
 	FireMissile = "missile-javelin",
-	MaxAttackRange = 4,
 	Corpse = "unit-human-dead-body",
-	WeaponClasses = {"javelin"},
-	PierceDamage = true,
-	RequirementsString = "Lumber Mill",
 	ButtonKey = "j",
 	AiDrops = {"unit-pilum", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
