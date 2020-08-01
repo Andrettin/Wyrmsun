@@ -12,18 +12,10 @@ unit_composite_bow = {
 	}
 	conditions = {
 		or = {
-			unit_type = {
-				unit_type = unit_germanic_carpenters_shop
-			}
-			unit_type = {
-				unit_type = unit_goblin_lumber_mill
-			}
-			unit_type = {
-				unit_type = unit_norse_lumber_mill
-			}
-			unit_type = {
-				unit_type = unit_teuton_lumber_mill
-			}
+			unit_type = unit_germanic_carpenters_shop
+			unit_type = unit_goblin_lumber_mill
+			unit_type = unit_norse_lumber_mill
+			unit_type = unit_teuton_lumber_mill
 		}
 		upgrade = upgrade_composite_bow
 	}
@@ -53,18 +45,10 @@ unit_longbow = {
 	}
 	conditions = {
 		or = {
-			unit_type = {
-				unit_type = unit_germanic_carpenters_shop
-			}
-			unit_type = {
-				unit_type = unit_goblin_lumber_mill
-			}
-			unit_type = {
-				unit_type = unit_norse_lumber_mill
-			}
-			unit_type = {
-				unit_type = unit_teuton_lumber_mill
-			}
+			unit_type = unit_germanic_carpenters_shop
+			unit_type = unit_goblin_lumber_mill
+			unit_type = unit_norse_lumber_mill
+			unit_type = unit_teuton_lumber_mill
 		}
 		upgrade = upgrade_longbow
 	}

@@ -25,9 +25,7 @@ unit_orc_spearthrower = {
 	}
 	conditions = {
 		or = {
-			unit_type = {
-				unit_type = unit_goblin_lumber_mill
-			}
+			unit_class = lumber_mill
 			upgrade = upgrade_mercenary_company
 		}
 	}

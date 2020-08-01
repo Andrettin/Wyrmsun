@@ -3,12 +3,8 @@ a_rocky_home_introduction = {
 	only_once = true
 	campaign_only = true
 	conditions = {
-		character = {
-			character = modsognir
-		}
-		character = {
-			character = durin
-		}
+		character = modsognir
+		character = durin
 	}
 	effects = {
 		call_dialogue = a_rocky_home_introduction
