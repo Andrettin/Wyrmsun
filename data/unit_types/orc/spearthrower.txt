@@ -19,6 +19,12 @@ unit_orc_spearthrower = {
 	default_equipment = {
 		boots = unit_boots
 	}
+	mana = {
+		enable = true
+		value = 75
+		max = 75
+		increase = 1
+	}
 	spells = { spell_precise_shot }
 	autocast_spells = { spell_precise_shot }
 	sounds = {
