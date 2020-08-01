@@ -337,23 +337,6 @@ DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon
 	}
 } )
 
-DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon-precise-shot",
-	Action = "learn-ability", Value = "upgrade-precise-shot",
-	Key = "r", Hint = "Learn P~!recise Shot", Popup = "popup_learn_ability",
-	Description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons.",
-	ForUnit = {
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-germanic-archer",
-		"unit-latin-javelineer",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry"
-	}
-} )
-
 DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon-puncture",
 	Action = "learn-ability", Value = "upgrade-puncture",
 	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup_learn_ability",
@@ -588,23 +571,6 @@ DefineButton( { Pos = 7, Icon = "icon-puncture",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-elven-swordsman",
 		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-})
-
-DefineButton( { Pos = 6, Icon = "icon-precise-shot",
-	Action = "cast-spell", Value = "spell-precise-shot",
-	Description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons",
-	Key = "r", Hint = "P~!recise Shot", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
-		"unit-joruvellir-explorer",
-		"unit-dwarven-thunderer",
-		"unit-germanic-archer",
-		"unit-latin-javelineer",
-		"unit-teuton-archer",
-		"unit-teuton-gunpowder-infantry",
-		"unit-goblin-shadowstalker",
-		"unit-goblin-gunpowder-infantry"
 	}
 })
 

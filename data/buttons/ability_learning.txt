@@ -162,6 +162,29 @@ learn_scouting = {
 	}
 }
 
+learn_precise_shot = {
+	pos = 6
+	level = choose_individual_upgrade_level
+	icon = icon_precise_shot
+	action = learn_ability
+	value = upgrade_precise_shot
+	key = r
+	hint = "Learn P~!recise Shot"
+	popup = popup_learn_ability
+	description = "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons."
+	unit_classes = {
+		heroic_shooter
+		gunpowder_infantry
+		flying_rider
+	}
+	unit_types = {
+		unit_germanic_archer
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+	}
+}
+
 learn_toughness = {
 	pos = 8
 	level = choose_individual_upgrade_level

@@ -1,0 +1,21 @@
+cast_precise_shot = {
+	pos = 6
+	icon = icon_precise_shot
+	action = cast_spell
+	value = spell_precise_shot
+	key = r
+	hint = "P~!recise Shot"
+	popup = popup_commands
+	description = "Deals an attack which always results in a critical hit. Only usable with ranged weapons."
+	unit_classes = {
+		heroic_shooter
+		gunpowder_infantry
+		flying_rider
+	}
+	unit_types = {
+		unit_germanic_archer
+		unit_latin_javelineer
+		unit_orc_spearthrower
+		unit_teuton_archer
+	}
+}
