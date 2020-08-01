@@ -16,10 +16,8 @@ iron_age = {
 		width = 14
 		height = 14
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_ironworking
-		}
+	conditions = {
+		upgrade = upgrade_ironworking
 	}
 }
 
@@ -31,23 +29,13 @@ viking_age = {
 		width = 14
 		height = 14
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_norse_civilization
-		}
-		upgrade = {
-			upgrade = upgrade_teuton_spatha
-		}
-		upgrade = {
-			upgrade = upgrade_sailing
-		}
+	conditions = {
+		upgrade = upgrade_norse_civilization
+		upgrade = upgrade_teuton_spatha
+		upgrade = upgrade_sailing
 		or = {
-			upgrade = {
-				upgrade = upgrade_shield_wall
-			}
-			upgrade = {
-				upgrade = upgrade_svinfylking
-			}
+			upgrade = upgrade_shield_wall
+			upgrade = upgrade_svinfylking
 		}
 	}
 }
@@ -60,10 +48,8 @@ feudal_age = {
 		width = 14
 		height = 14
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_serfdom
-		}
+	conditions = {
+		upgrade = upgrade_serfdom
 	}
 }
 
@@ -75,10 +61,8 @@ gunpowder_age = {
 		width = 14
 		height = 14
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_gunpowder
-		}
+	conditions = {
+		upgrade = upgrade_gunpowder
 	}
 }
 
@@ -90,9 +74,7 @@ industrial_age = {
 		width = 14
 		height = 14
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_steam_engine
-		}
+	conditions = {
+		upgrade = upgrade_steam_engine
 	}
 }

@@ -82,10 +82,8 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 			unit_teuton_kogge
 		}
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_sailing
-		}
+	conditions = {
+		upgrade = upgrade_sailing
 	}
 }
 
@@ -131,12 +129,8 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 			unit_teuton_kogge
 		}
 	}
-	dependencies = {
-		upgrade = {
-			upgrade = upgrade_celestial_navigation
-		}
-		upgrade = {
-			upgrade = upgrade_engineering
-		}
+	conditions = {
+		upgrade = upgrade_celestial_navigation
+		upgrade = upgrade_engineering
 	}
 }

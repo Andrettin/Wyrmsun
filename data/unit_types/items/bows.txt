@@ -10,7 +10,7 @@ unit_composite_bow = {
 	costs = {
 		copper = 200
 	}
-	dependencies = {
+	conditions = {
 		or = {
 			unit_type = {
 				unit_type = unit_germanic_carpenters_shop
@@ -25,9 +25,7 @@ unit_composite_bow = {
 				unit_type = unit_teuton_lumber_mill
 			}
 		}
-		upgrade = {
-			upgrade = upgrade_composite_bow
-		}
+		upgrade = upgrade_composite_bow
 	}
 }
 
@@ -53,7 +51,7 @@ unit_longbow = {
 			icon = icon_longbow_3
 		}
 	}
-	dependencies = {
+	conditions = {
 		or = {
 			unit_type = {
 				unit_type = unit_germanic_carpenters_shop
@@ -68,8 +66,6 @@ unit_longbow = {
 				unit_type = unit_teuton_lumber_mill
 			}
 		}
-		upgrade = {
-			upgrade = upgrade_longbow
-		}
+		upgrade = upgrade_longbow
 	}
 }

@@ -23,14 +23,12 @@ unit_orc_spearthrower = {
 		fire_missile = throw_weapon
 		miss = attack_miss
 	}
-	dependencies = {
+	conditions = {
 		or = {
 			unit_type = {
 				unit_type = unit_goblin_lumber_mill
 			}
-			upgrade = {
-				upgrade = upgrade_mercenary_company
-			}
+			upgrade = upgrade_mercenary_company
 		}
 	}
 }
