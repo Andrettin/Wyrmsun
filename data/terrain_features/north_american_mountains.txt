@@ -1,0 +1,47 @@
+adirondack_mountains = {
+	name = "Adirondack Mountains"
+	terrain_type = rock_snow #mountains
+	color = { 248 227 35 }
+}
+
+appalachian_mountains = {
+	name = "Appalachian Mountains"
+	terrain_type = rock #mountains
+	color = { 207 197 200 }
+}
+
+birch_mountains = {
+	name = "Birch Mountains"
+	terrain_type = rock #mountains
+	color = { 133 54 48 }
+}
+
+black_hills = {
+	name = "Black Hills"
+	terrain_type = rock #mountains
+	color = { 131 109 207 }
+}
+
+blue_ridge = {
+	name = "Blue Ridge"
+	terrain_type = rock #mountains
+	color = { 15 125 214 }
+}
+
+caribou_mountains = {
+	name = "Caribou Mountains"
+	terrain_type = rock #mountains
+	color = { 114 162 219 }
+}
+
+ouachita_mountains = {
+	name = "Ouachita Mountains"
+	terrain_type = rock #mountains
+	color = { 13 160 98 }
+}
+
+torngat_mountains = {
+	name = "Torngat Mountains"
+	terrain_type = rock_snow #mountains
+	color = { 60 157 171 }
+}

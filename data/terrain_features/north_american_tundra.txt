@@ -1,0 +1,11 @@
+barren_grounds = {
+	name = "Barren Grounds"
+	terrain_type = snow #tundra
+	color = { 208 100 17 }
+}
+
+canadian_shield = {
+	name = "Canadian Shield"
+	terrain_type = snow #tundra
+	color = { 84 0 150 }
+}
