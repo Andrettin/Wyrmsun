@@ -2,10 +2,18 @@ north_america = {
 	superregions = { america }
 }
 
+canada = {
+	superregions = { north_america }
+}
+
 caribbean = {
 	superregions = { north_america }
 }
 
 central_america = {
+	superregions = { north_america }
+}
+
+mexico = {
 	superregions = { north_america }
 }

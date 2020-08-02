@@ -85,12 +85,12 @@ north_america_45_60_latitude_north = {
 			target_terrain_type = dirt
 		}
 		pine_tree = {
-			seed_count = 64
+			seed_count = 128
 			max_percent = 20
 			target_terrain_type = grass
 		}
 		pine_tree_snow = {
-			seed_count = 128
+			seed_count = 256
 			max_percent = 20
 			target_terrain_type = snow
 		}
