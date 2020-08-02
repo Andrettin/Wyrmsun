@@ -1,0 +1,8 @@
+sept_iles = {
+	name = "Sept-Iles" #Sept-Îles
+	map_template = north_america_45_60_latitude_north
+	geocoordinate = { -66.36001692880 50.31608766590 } #from Natural Earth
+	regions = {
+		canada
+	}
+}

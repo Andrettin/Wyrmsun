@@ -1,0 +1,9 @@
+baie_comeau = {
+	name = "Baie-Comeau"
+	map_template = north_america_45_60_latitude_north
+	geocoordinate = { -68.15799503750 49.22266603500 } #from Natural Earth
+	major = true
+	regions = {
+		canada
+	}
+}
