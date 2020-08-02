@@ -9,7 +9,7 @@ north_america = {
 }
 
 north_america_60_75_latitude_north = {
-	name = "Earth"
+	name = "North America"
 	main_template = north_america
 	world = earth
 	size = { 384 32 }
@@ -64,7 +64,7 @@ north_america_60_75_latitude_north = {
 }
 
 north_america_45_60_latitude_north = {
-	name = "Earth"
+	name = "North America"
 	main_template = north_america
 	world = earth
 	size = { 384 192 }

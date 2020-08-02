@@ -1,0 +1,9 @@
+fredericton = {
+	name = "Fredericton"
+	map_template = north_america_45_60_latitude_north
+	geocoordinate = { -66.63330774090 45.94999757800 } #from Natural Earth
+	major = true
+	regions = {
+		canada
+	}
+}
