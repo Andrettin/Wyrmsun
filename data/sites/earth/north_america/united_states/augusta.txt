@@ -1,0 +1,9 @@
+augusta = {
+	name = "Augusta"
+	map_template = north_america_30_45_latitude_north
+	geocoordinate = { -69.77998905610 44.31056276350 } #from Natural Earth
+	major = true
+	regions = {
+		united_states
+	}
+}

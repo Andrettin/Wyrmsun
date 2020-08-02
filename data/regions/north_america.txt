@@ -17,3 +17,7 @@ central_america = {
 mexico = {
 	superregions = { north_america }
 }
+
+united_states = {
+	superregions = { north_america }
+}
