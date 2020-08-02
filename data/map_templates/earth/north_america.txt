@@ -30,9 +30,14 @@ north_america_60_75_latitude_north = {
 			target_terrain_type = dirt
 		}
 		pine_tree = {
-			seed_count = 16
+			seed_count = 4
 			max_percent = 20
 			target_terrain_type = grass
+		}
+		pine_tree_snow = {
+			seed_count = 16
+			max_percent = 20
+			target_terrain_type = snow
 		}
 	}
 	generated_neutral_units = {
@@ -49,7 +54,6 @@ north_america_60_75_latitude_north = {
 		unit_crow = 8
 		unit_rat = 8
 		unit_goat = 4
-		unit_boar = 4
 		unit_wolf = 4
 	}
 	player_location_generated_neutral_units = {
@@ -81,9 +85,14 @@ north_america_45_60_latitude_north = {
 			target_terrain_type = dirt
 		}
 		pine_tree = {
-			seed_count = 128
+			seed_count = 64
 			max_percent = 20
 			target_terrain_type = grass
+		}
+		pine_tree_snow = {
+			seed_count = 128
+			max_percent = 20
+			target_terrain_type = snow
 		}
 	}
 	generated_neutral_units = {
@@ -103,7 +112,6 @@ north_america_45_60_latitude_north = {
 		unit_crow = 64
 		unit_rat = 64
 		unit_goat = 32
-		unit_boar = 32
 		unit_wolf = 32
 	}
 	player_location_generated_neutral_units = {
@@ -139,6 +147,11 @@ north_america_30_45_latitude_north = {
 			max_percent = 20
 			target_terrain_type = grass
 		}
+		pine_tree_snow = {
+			seed_count = 16
+			max_percent = 20
+			target_terrain_type = snow
+		}
 	}
 	generated_neutral_units = {
 		unit_gold_deposit = 2
@@ -157,7 +170,6 @@ north_america_30_45_latitude_north = {
 		unit_crow = 64
 		unit_rat = 64
 		unit_goat = 32
-		unit_boar = 32
 		unit_wolf = 32
 	}
 	player_location_generated_neutral_units = {
