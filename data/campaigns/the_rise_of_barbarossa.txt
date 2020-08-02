@@ -4,7 +4,7 @@ the_rise_of_barbarossa = {
 	faction = holy_rome
 	start_date = 1152
 	map_templates = { earth_space }
-	completion_quest = the_rise_of_barbarossa
+	quest = the_rise_of_barbarossa
 	hidden = true
 }
 
@@ -15,7 +15,7 @@ the_lombard_league = {
 	start_date = 1167
 	required_quests = { the_rise_of_barbarossa }
 	map_templates = { earth_space }
-	completion_quest = the_lombard_league
+	quest = the_lombard_league
 }
 
 the_lion_of_saxony = {
@@ -25,5 +25,5 @@ the_lion_of_saxony = {
 	start_date = 1178
 	required_quests = { the_lombard_league }
 	map_templates = { earth_space }
-	completion_quest = the_lion_of_saxony
+	quest = the_lion_of_saxony
 }
