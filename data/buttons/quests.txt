@@ -1,5 +1,6 @@
 accept_quest_1 = {
-	pos = 5
+	pos = 1
+	level = quest_level
 	icon = icon_quest
 	action = quest
 	value = 0
@@ -13,7 +14,7 @@ accept_quest_1 = {
 }
 
 accept_quest_2 = {
-	pos = 6
+	pos = 2
 	level = quest_level
 	icon = icon_quest
 	action = quest
@@ -28,11 +29,191 @@ accept_quest_2 = {
 }
 
 accept_quest_3 = {
-	pos = 7
+	pos = 3
 	level = quest_level
 	icon = icon_quest
 	action = quest
 	value = 2
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_4 = {
+	pos = 4
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 3
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_5 = {
+	pos = 5
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 4
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_6 = {
+	pos = 6
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 5
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_7 = {
+	pos = 7
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 6
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_8 = {
+	pos = 8
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 7
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_9 = {
+	pos = 9
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 8
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_10 = {
+	pos = 10
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 9
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_11 = {
+	pos = 11
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 10
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_12 = {
+	pos = 12
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 11
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_13 = {
+	pos = 13
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 12
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_14 = {
+	pos = 14
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 13
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_15 = {
+	pos = 15
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 14
 	hint = "Quest"
 	popup = popup_commands
 	unit_classes = {

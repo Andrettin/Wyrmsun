@@ -54,7 +54,7 @@ DefineButton( { Pos = 14, Icon = "icon-chest",
 	}
 })
 
-DefineButton( { Pos = 16, Icon = "icon-garrison",
+DefineButton( { Pos = 14, Icon = "icon-garrison",
 	Action = "button", Value = "garrison-level",
 	Allowed = "check-unit-variable", AllowArg = {"Transport", "Value", ">=", "1"},
 	Key = "g", Hint = "View ~!Garrison", Popup = "popup_commands",
@@ -67,7 +67,7 @@ DefineButton( { Pos = 16, Icon = "icon-garrison",
 
 --[[
 DefineButton( { Pos = 16, Icon = "royal_crown",
-	Action = "button", Value = "grand-settlement-to-faction-level",
+	Action = "button", Value = "grant-settlement-to-faction-level",
 	Allowed = "check-has-sub-buttons",
 	Key = "g", Hint = "~!Grant Settlement to Faction", Popup = "popup_commands",
 	ForUnit = {
@@ -82,16 +82,6 @@ DefineButton( { Pos = 16, Icon = "royal_crown",
 	}
 })
 --]]
-
-DefineButton( { Pos = 16, Level = "quest-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-teuton-stronghold",
-		"unit-dwarven-stronghold",
-		"unit-goblin-stronghold"
-	}
-} )
 
 DefineButton( { Pos = 16, Level = "buy-item-level", Icon = "icon-cancel",
 	Action = "button", Value = "",

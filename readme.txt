@@ -94,6 +94,10 @@ https://github.com/Andrettin/Wyrmsun
 * Multiplayer
 - Fixed possible source of desyncs related to hiring units at mercenary camps.
 
+* Quests
+- Quests can now be accepted in a sub-menu in the town hall interface.
+- Increased the maximum quest pool size to 15.
+
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
 - The Nidavellir scenarios now take place in a single map layer. The underground portions of the map are now in the same layer as the surface portions, but retain their peculiar characteristics, e.g. cave walls being non-passable by air units and missiles.

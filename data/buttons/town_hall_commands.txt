@@ -1,5 +1,37 @@
+choose_a_quest = {
+	pos = 5
+	icon = icon_quest
+	action = button
+	value = quest_level
+	allowed = check_has_sub_buttons
+	key = q
+	hint = "Choose a ~!Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_choose_a_quest = {
+	pos = 16
+	level = quest_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
 found_a_faction = {
-	pos = 14
+	pos = 6
 	icon = royal_crown
 	action = button
 	value = found_faction_level
@@ -46,8 +78,40 @@ cancel_found_a_faction_2 = {
 	}
 }
 
+choose_a_dynasty = {
+	pos = 7
+	icon = royal_crown
+	action = button
+	value = choose_dynasty_level
+	allowed = check_has_sub_buttons
+	key = d
+	hint = "Choose a ~!Dynasty"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_choose_a_dynasty = {
+	pos = 16
+	level = choose_dynasty_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
 enact_a_law = {
-	pos = 15
+	pos = 8
 	icon = icon_book_red
 	action = button
 	value = enact_law_level
@@ -73,6 +137,21 @@ cancel_enact_a_law = {
 	popup = popup_commands
 	unit_classes = {
 		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_garrison = {
+	pos = 16
+	level = garrison_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
 		stronghold
 		fortress
 	}

@@ -27,6 +27,8 @@ salvage_building = {
 	popup = popup_commands
 	unit_classes = {
 		town_hall
+		stronghold
+		fortress
 		farm
 		barracks
 		lumber_mill

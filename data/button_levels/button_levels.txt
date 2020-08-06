@@ -19,6 +19,9 @@ found_faction_level_2 = {
 enact_law_level = {
 }
 
+choose_dynasty_level = {
+}
+
 inventory_level = {
 }
 
