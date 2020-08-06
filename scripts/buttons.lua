@@ -41,22 +41,6 @@ DefineButton( { Pos = 6, Icon = "icon-attack-ground",
 
 -- Building Commands ------------------------------------------------------
 
-DefineButton( { Pos = 14, Icon = "royal_crown",
-	Action = "button", Value = "found-faction-level",
-	Allowed = "check-has-sub-buttons",
-	Key = "f", Hint = "~!Found a Faction", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-})
-
 DefineButton( { Pos = 14, Icon = "icon-chest",
 	Action = "button", Value = "buy-item-level",
 	Allowed = "check-has-sub-buttons",
@@ -67,22 +51,6 @@ DefineButton( { Pos = 14, Icon = "icon-chest",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
-	}
-})
-
-DefineButton( { Pos = 15, Icon = "icon-book-red",
-	Action = "button", Value = "enact-law-level",
-	Allowed = "check-has-sub-buttons",
-	Key = "l", Hint = "Enact a ~!Law", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
 	}
 })
 
@@ -125,21 +93,6 @@ DefineButton( { Pos = 16, Level = "quest-level", Icon = "icon-cancel",
 	}
 } )
 
-DefineButton( { Pos = 16, Level = "found-faction-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-} )
-
 DefineButton( { Pos = 16, Level = "buy-item-level", Icon = "icon-cancel",
 	Action = "button", Value = "",
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
@@ -149,36 +102,6 @@ DefineButton( { Pos = 16, Level = "buy-item-level", Icon = "icon-cancel",
 		"unit-teuton-market",
 		"unit-dwarven-market",
 		"unit-goblin-market"
-	}
-} )
-
-DefineButton( { Pos = 16, Level = "enact-law-level", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-} )
-
-DefineButton( { Pos = 16, Level = "found-faction-level-2", Icon = "icon-cancel",
-	Action = "button", Value = "",
-	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup_commands",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
 	}
 } )
 

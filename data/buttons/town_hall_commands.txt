@@ -1,0 +1,79 @@
+found_a_faction = {
+	pos = 14
+	icon = royal_crown
+	action = button
+	value = found_faction_level
+	allowed = check_has_sub_buttons
+	key = f
+	hint = "~!Found a Faction"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_found_a_faction = {
+	pos = 16
+	level = found_faction_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_found_a_faction_2 = {
+	pos = 16
+	level = found_faction_level_2
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+enact_a_law = {
+	pos = 15
+	icon = icon_book_red
+	action = button
+	value = enact_law_level
+	allowed = check_has_sub_buttons
+	key = l
+	hint = "Enact a ~!Law"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+cancel_enact_a_law = {
+	pos = 16
+	level = enact_law_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
