@@ -1,0 +1,43 @@
+accept_quest_1 = {
+	pos = 5
+	icon = icon_quest
+	action = quest
+	value = 0
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_2 = {
+	pos = 6
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 1
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+accept_quest_3 = {
+	pos = 7
+	level = quest_level
+	icon = icon_quest
+	action = quest
+	value = 2
+	hint = "Quest"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
