@@ -2641,10 +2641,10 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Costs
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", DynastyUpgrade = "false", UpgradeResearched = "false"},
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {FactionUpgrade = "false", DynastyUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
