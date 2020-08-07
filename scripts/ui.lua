@@ -2641,10 +2641,10 @@ if not (ui_loaded_first_time) then
 					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Costs
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", UpgradeResearched = "false"},
+				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", DynastyUpgrade = "false", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {FactionUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "false", DynastyUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
@@ -2674,6 +2674,13 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "gray",
 					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = PopupDescriptionFont}}
+				},
+				-- Dynasty Button Information
+				{ 	Margin = {1, 1}, Condition = {DynastyUpgrade = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {DynastyUpgrade = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Dynasty Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				-- AutoCast Tooltip
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},

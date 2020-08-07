@@ -1,0 +1,194 @@
+choose_dynasty_1 = {
+	pos = 1
+	level = choose_dynasty_level
+	action = dynasty
+	value = 0
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_2 = {
+	pos = 2
+	level = choose_dynasty_level
+	action = dynasty
+	value = 1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_3 = {
+	pos = 3
+	level = choose_dynasty_level
+	action = dynasty
+	value = 2
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_4 = {
+	pos = 4
+	level = choose_dynasty_level
+	action = dynasty
+	value = 3
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_5 = {
+	pos = 5
+	level = choose_dynasty_level
+	action = dynasty
+	value = 4
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_6 = {
+	pos = 6
+	level = choose_dynasty_level
+	action = dynasty
+	value = 5
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_7 = {
+	pos = 7
+	level = choose_dynasty_level
+	action = dynasty
+	value = 6
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_8 = {
+	pos = 8
+	level = choose_dynasty_level
+	action = dynasty
+	value = 7
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_9 = {
+	pos = 9
+	level = choose_dynasty_level
+	action = dynasty
+	value = 8
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_10 = {
+	pos = 10
+	level = choose_dynasty_level
+	action = dynasty
+	value = 9
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_11 = {
+	pos = 11
+	level = choose_dynasty_level
+	action = dynasty
+	value = 10
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_12 = {
+	pos = 12
+	level = choose_dynasty_level
+	action = dynasty
+	value = 11
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_13 = {
+	pos = 13
+	level = choose_dynasty_level
+	action = dynasty
+	value = 12
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_14 = {
+	pos = 14
+	level = choose_dynasty_level
+	action = dynasty
+	value = 13
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+choose_dynasty_15 = {
+	pos = 15
+	level = choose_dynasty_level
+	action = dynasty
+	value = 14
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
