@@ -1,0 +1,6 @@
+upgrade_dynasty = {
+	costs = {
+		time = 250
+		copper = 4000
+	}
+}
