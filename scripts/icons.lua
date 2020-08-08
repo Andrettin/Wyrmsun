@@ -116,12 +116,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-heater-shield",
-	Size = {46, 38},
-	File = "neutral/icons/heater_shield.png"
-})
-
-DefineIcon({
 	Name = "icon-serfdom",
 	Size = {46, 38},
 	File = "neutral/icons/serfdom.png"

@@ -80,7 +80,7 @@ cancel_found_a_faction_2 = {
 
 choose_a_dynasty = {
 	pos = 7
-	icon = royal_crown
+	icon = icon_heater_shield
 	action = button
 	value = choose_dynasty_level
 	allowed = check_has_sub_buttons

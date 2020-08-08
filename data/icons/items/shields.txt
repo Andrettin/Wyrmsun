@@ -1,3 +1,7 @@
+icon_heater_shield = {
+	file = "neutral/icons/heater_shield.png"
+}
+
 icon_dwarven_shield_1 = {
 	file = "dwarf/icons/shield_1.png"
 }
