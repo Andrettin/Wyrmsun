@@ -1,5 +1,6 @@
 elf = {
-	name = "Elf"
+	name = "Elven"
+	aliases += elven
 	parent_civilization = neutral
 	species = elf
 	group = elven
@@ -7,7 +8,6 @@ elf = {
 	playable = false
 	interface = germanic
 	default_color = teal
-	adjective = "Elven"
 	#language = elven
 	upgrade = upgrade_elven_civilization
 	description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare."

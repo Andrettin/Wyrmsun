@@ -1,0 +1,525 @@
+dwarf = {
+	name = "Dwarven"
+	aliases += dwarven
+	parent_civilization = neutral
+	species = dwarf
+	group = dwarven
+	visible = true
+	playable = true
+	interface = dwarven
+	default_color = red
+	upgrade = upgrade_dwarven_civilization
+	description = "Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them."
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_dwarven_shield_1
+		attack = icon_dwarven_battle_axe
+		patrol = icon_dwarven_patrol_land
+		stand_ground = icon_dwarven_stand_ground
+		return_goods = icon_dwarven_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/dwarven/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/dwarven/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/dwarven/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/dwarven/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	personal_names = {
+		male = {
+			"Ai" #dwarf from Norse mythology who was a settler of Joruvellir
+			"Aigaithas" #from Battle for Wesnoth
+			"Aigaithil" #from Battle for Wesnoth
+			"Aigaithing" #from Battle for Wesnoth
+			"Aigaithol" #from Battle for Wesnoth
+			"Aigalas" #from Battle for Wesnoth
+			"Aigaling" #from Battle for Wesnoth
+			"Aigalis" #from Battle for Wesnoth
+			"Aigalol" #from Battle for Wesnoth
+			"Aigalsil" #from Battle for Wesnoth
+			"Aigatas" #from Battle for Wesnoth
+			"Aigatis" #from Battle for Wesnoth
+			"Aigatlos" #from Battle for Wesnoth
+			"Aigatsil" #from Battle for Wesnoth
+			"Aigatsol" #from Battle for Wesnoth
+			"Aigatus" #from Battle for Wesnoth
+			"Aigcatas" #from Battle for Wesnoth
+			"Aigcatil" #from Battle for Wesnoth
+			"Aigcating" #from Battle for Wesnoth
+			"Aigcatis" #from Battle for Wesnoth
+			"Aigcatsil" #from Battle for Wesnoth
+			"Aigcatsol" #from Battle for Wesnoth
+			"Aigcatus" #from Battle for Wesnoth
+			"Aigdring" #from Battle for Wesnoth
+			"Aigdris" #from Battle for Wesnoth
+			"Aigdrlos" #from Battle for Wesnoth
+			"Aigdrsil" #from Battle for Wesnoth
+			"Aigdrsol" #from Battle for Wesnoth
+			"Aigduras" #from Battle for Wesnoth
+			"Aigdurlos" #from Battle for Wesnoth
+			"Aigdursol" #from Battle for Wesnoth
+			"Aiglondur" #dwarven hero in Battle for Wesnoth: The Hammer of Thursagan
+			"Aigthaing" #from Battle for Wesnoth
+			"Aigthais" #from Battle for Wesnoth
+			"Aigthasil" #from Battle for Wesnoth
+			"Aigthaus" #from Battle for Wesnoth
+			"Alaithas" #from Battle for Wesnoth
+			"Alaithis" #from Battle for Wesnoth
+			"Alaithlos" #from Battle for Wesnoth
+			"Alaithol" #from Battle for Wesnoth
+			"Alaithsol" #from Battle for Wesnoth
+			"Alaithus" #from Battle for Wesnoth
+			"Alalas" #from Battle for Wesnoth
+			"Alalil" #from Battle for Wesnoth
+			"Alalol" #from Battle for Wesnoth
+			"Alalsol" #from Battle for Wesnoth
+			"Alalus" #from Battle for Wesnoth
+			"Alatas" #from Battle for Wesnoth
+			"Alatil" #from Battle for Wesnoth
+			"Alating" #from Battle for Wesnoth
+			"Alatlos" #from Battle for Wesnoth
+			"Alatsil" #from Battle for Wesnoth
+			"Alberich" #dwarf from German sagas
+			"Alcatil" #from Battle for Wesnoth
+			"Alcatis" #from Battle for Wesnoth
+			"Alcatlos" #from Battle for Wesnoth
+			"Alcatsil" #from Battle for Wesnoth
+			"Aldras" #from Battle for Wesnoth
+			"Aldril" #from Battle for Wesnoth
+			"Aldring" #from Battle for Wesnoth
+			"Aldris" #from Battle for Wesnoth
+			"Aldrlos" #from Battle for Wesnoth
+			"Aldrol" #from Battle for Wesnoth
+			"Aldrsol" #from Battle for Wesnoth
+			"Alduras" #from Battle for Wesnoth
+			"Aldurlos" #from Battle for Wesnoth
+			"Aldurol" #from Battle for Wesnoth
+			"Alf" #dwarf from Norse mythology who was a settler of Joruvellir
+			"Alfrigg" #dwarf from Norse mythology
+			"Alsvid" #dwarf from Norse mythology
+			"Althaas" #from Battle for Wesnoth
+			"Althail" #from Battle for Wesnoth
+			"Althalos" #from Battle for Wesnoth
+			"Althaol" #from Battle for Wesnoth
+			"Althasil" #from Battle for Wesnoth
+			"Althasol" #from Battle for Wesnoth
+			"Althaus" #from Battle for Wesnoth
+			"Althjof" #"mighty thief", dwarf from Norse mythology
+			"Anaithas" #from Battle for Wesnoth
+			"Anaithil" #from Battle for Wesnoth
+			"Anaithing" #from Battle for Wesnoth
+			"Anaithis" #from Battle for Wesnoth
+			"Anaithsil" #from Battle for Wesnoth
+			"Anaithus" #from Battle for Wesnoth
+			"Analil" #from Battle for Wesnoth
+			"Anallos" #from Battle for Wesnoth
+			"Analol" #from Battle for Wesnoth
+			"Analsil" #from Battle for Wesnoth
+			"Analus" #from Battle for Wesnoth
+			"Anatas" #from Battle for Wesnoth
+			"Anating" #from Battle for Wesnoth
+			"Anatis" #from Battle for Wesnoth
+			"Anatol" #from Battle for Wesnoth
+			"Anatsol" #from Battle for Wesnoth
+			"Ancatas" #from Battle for Wesnoth
+			"Ancatil" #from Battle for Wesnoth
+			"Ancatol" #from Battle for Wesnoth
+			"Ancatus" #from Battle for Wesnoth
+			"Andril" #from Battle for Wesnoth
+			"Andris" #from Battle for Wesnoth
+			"Andrlos" #from Battle for Wesnoth
+			"Andrus" #from Battle for Wesnoth
+			"Anduril" #from Battle for Wesnoth
+			"Andurol" #from Battle for Wesnoth
+			"Andursol" #from Battle for Wesnoth
+			"Andurus" #from Battle for Wesnoth
+			"Andvari" #dwarf from Norse mythology who possessed a lot of gold, including a golden ring (Andvaranaut) which was stolen by Loki; was possibly one of the settlers of Joruvellir; son of Oin
+			"Angarthing" #dwarf from Battle for Wesnoth: The Hammer of Thursagan
+			"Anthaas" #from Battle for Wesnoth
+			"Anthaing" #from Battle for Wesnoth
+			"Anthais" #from Battle for Wesnoth
+			"Anthaol" #from Battle for Wesnoth
+			"Anthasil" #from Battle for Wesnoth
+			"Anthasol" #from Battle for Wesnoth
+			"Anthaus" #from Battle for Wesnoth
+			"Augaithas" #from Battle for Wesnoth
+			"Augaithing" #from Battle for Wesnoth
+			"Augaithsil" #from Battle for Wesnoth
+			"Augaithus" #from Battle for Wesnoth
+			"Augalas" #from Battle for Wesnoth
+			"Augaling" #from Battle for Wesnoth
+			"Augalol" #from Battle for Wesnoth
+			"Augating" #from Battle for Wesnoth
+			"Augatlos" #from Battle for Wesnoth
+			"Augatol" #from Battle for Wesnoth
+			"Augatsil" #from Battle for Wesnoth
+			"Augatsol" #from Battle for Wesnoth
+			"Augcatas" #from Battle for Wesnoth
+			"Augcatil" #from Battle for Wesnoth
+			"Augcatis" #from Battle for Wesnoth
+			"Augcatol" #from Battle for Wesnoth
+			"Augcatsil" #from Battle for Wesnoth
+			"Augcatus" #from Battle for Wesnoth
+			"Augdras" #from Battle for Wesnoth
+			"Augdris" #from Battle for Wesnoth
+			"Augdrsil" #from Battle for Wesnoth
+			"Augdrus" #from Battle for Wesnoth
+			"Augduras" #from Battle for Wesnoth
+			"Augduril" #from Battle for Wesnoth
+			"Augduring" #from Battle for Wesnoth
+			"Augdurol" #from Battle for Wesnoth
+			"Augdursol" #from Battle for Wesnoth
+			"Augdurus" #from Battle for Wesnoth
+			"Augthail" #from Battle for Wesnoth
+			"Augthais" #from Battle for Wesnoth
+			"Augthalos" #from Battle for Wesnoth
+			"Augthaol" #from Battle for Wesnoth
+			"Aurvang" #dwarf from Norse mythology
+			"Austri" #dwarf from Norse mythology (name means "the Eastern"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+			"Bari" #dwarf from Norse mythology
+			"Berling" #dwarf from Norse mythology
+			"Bibung" #dwarf from Norse mythology
+			"Burin" #dwarf from Battle for Wesnoth: The Rise of Wesnoth
+			"Delling" #dwarf from Norse mythology
+			"Delling" #dwarf from Norse mythology
+			"Dolgthvari" #dwarf from Norse mythology
+			"Dori" #dwarf from Norse mythology
+			"Duf" #dwarf from Norse mythology
+			"Dulaithil" #from Battle for Wesnoth
+			"Dulaithing" #from Battle for Wesnoth
+			"Dulaithlos" #from Battle for Wesnoth
+			"Dulaithsil" #from Battle for Wesnoth
+			"Dulaithsol" #from Battle for Wesnoth
+			"Dulalas" #from Battle for Wesnoth
+			"Dulaling" #from Battle for Wesnoth
+			"Dulalis" #from Battle for Wesnoth
+			"Dulalsil" #from Battle for Wesnoth
+			"Dulatil" #from Battle for Wesnoth
+			"Dulating" #from Battle for Wesnoth
+			"Dulatol" #from Battle for Wesnoth
+			"Dulatsol" #from Battle for Wesnoth
+			"Dulatus" #from Battle for Wesnoth
+			"Dulcatil" #from Battle for Wesnoth
+			"Dulcating" #from Battle for Wesnoth
+			"Dulcatlos" #from Battle for Wesnoth
+			"Dulcatol" #from Battle for Wesnoth
+			"Dulcatsil" #from Battle for Wesnoth
+			"Dulcatsol" #from Battle for Wesnoth
+			"Dulcatulos" #from Battle for Wesnoth: The Hammer of Thursagan
+			"Duldril" #from Battle for Wesnoth
+			"Duldris" #from Battle for Wesnoth
+			"Duldrlos" #from Battle for Wesnoth
+			"Duldrol" #from Battle for Wesnoth
+			"Duldrsil" #from Battle for Wesnoth
+			"Duldrus" #from Battle for Wesnoth
+			"Dulduras" #from Battle for Wesnoth
+			"Dulduring" #from Battle for Wesnoth
+			"Duldursil" #from Battle for Wesnoth
+			"Duldurus" #from Battle for Wesnoth
+			"Dulsi" #dwarf from Norse mythology; not entirely clear if this is the name of a particular dwarf, or if it means "dwarf"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 109.
+			"Dulthalos" #from Battle for Wesnoth
+			"Dulthasil" #from Battle for Wesnoth
+			"Dulthasol" #from Battle for Wesnoth
+			"Dulthaus" #from Battle for Wesnoth
+			"Durahn" #"Durâhn"; from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+			"Dursil" #dwarf from Battle for Wesnoth: The Rise of Wesnoth
+			"Eggerich" #dwarf from German sagas
+			"Fal" #dwarf from Norse mythology
+			"Fid" #dwarf from Norse mythology
+			"Fili" #dwarf from Norse mythology
+			"Frag" #dwarf from Norse mythology
+			"Frar" #dwarf from Norse mythology
+			"Fundin" #dwarf from Norse mythology
+			"Ginnar" #dwarf from Norse mythology
+			"Glamaithil" #from Battle for Wesnoth
+			"Glamaithis" #from Battle for Wesnoth
+			"Glamaithol" #from Battle for Wesnoth
+			"Glamaithsol" #from Battle for Wesnoth
+			"Glamalil" #from Battle for Wesnoth
+			"Glamaling" #from Battle for Wesnoth
+			"Glamalis" #from Battle for Wesnoth
+			"Glamallos" #from Battle for Wesnoth
+			"Glamalsil" #from Battle for Wesnoth
+			"Glamalus" #from Battle for Wesnoth
+			"Glamatil" #from Battle for Wesnoth
+			"Glamatus" #from Battle for Wesnoth
+			"Glamcatas" #from Battle for Wesnoth
+			"Glamcatil" #from Battle for Wesnoth
+			"Glamcating" #from Battle for Wesnoth
+			"Glamcatsil" #from Battle for Wesnoth
+			"Glamcatus" #from Battle for Wesnoth
+			"Glamdras" #from Battle for Wesnoth
+			"Glamdril" #from Battle for Wesnoth
+			"Glamdrlos" #from Battle for Wesnoth
+			"Glamdrsol" #from Battle for Wesnoth
+			"Glamduras" #from Battle for Wesnoth
+			"Glamduril" #from Battle for Wesnoth
+			"Glamduring" #from Battle for Wesnoth
+			"Glamduris" #from Battle for Wesnoth
+			"Glamdursol" #from Battle for Wesnoth
+			"Glamthaas" #from Battle for Wesnoth
+			"Glamthaol" #from Battle for Wesnoth
+			"Glamthasil" #from Battle for Wesnoth
+			"Glamthasol" #from Battle for Wesnoth
+			"Glamthaus" #from Battle for Wesnoth
+			"Glinar" #dwarf from Battle for Wesnoth: The Sceptre of Fire
+			"Gloin" #dwarf from Norse mythology
+			"Glomin" #from Battle for Wesnoth
+			"Goldemar" #dwarf from German sagas
+			"Gomaithas" #from Battle for Wesnoth
+			"Gomaithil" #from Battle for Wesnoth
+			"Gomaithol" #from Battle for Wesnoth
+			"Gomaithsol" #from Battle for Wesnoth
+			"Gomalil" #from Battle for Wesnoth
+			"Gomalis" #from Battle for Wesnoth
+			"Gomalus" #from Battle for Wesnoth
+			"Gomatas" #from Battle for Wesnoth
+			"Gomatil" #from Battle for Wesnoth
+			"Gomating" #from Battle for Wesnoth
+			"Gomatis" #from Battle for Wesnoth
+			"Gomatlos" #from Battle for Wesnoth
+			"Gomatol" #from Battle for Wesnoth
+			"Gomcatil" #from Battle for Wesnoth
+			"Gomcatis" #from Battle for Wesnoth
+			"Gomcatlos" #from Battle for Wesnoth
+			"Gomdras" #from Battle for Wesnoth
+			"Gomdril" #from Battle for Wesnoth
+			"Gomdring" #from Battle for Wesnoth
+			"Gomdris" #from Battle for Wesnoth
+			"Gomdrol" #from Battle for Wesnoth
+			"Gomdrsil" #from Battle for Wesnoth
+			"Gomduris" #from Battle for Wesnoth
+			"Gomdurlos" #from Battle for Wesnoth
+			"Gomdursil" #from Battle for Wesnoth
+			"Gomdursol" #from Battle for Wesnoth
+			"Gomdurus" #from Battle for Wesnoth
+			"Gomthaas" #from Battle for Wesnoth
+			"Gomthalos" #from Battle for Wesnoth
+			"Gomthasol" #from Battle for Wesnoth
+			"Grerr" #dwarf from Norse mythology
+			"Grimnir" #dwarven pathfinder from Battle for Wesnoth: Under the Burning Suns
+			"Hamel" #dwarf from Battle for Wesnoth: Northern Rebirth and Battle for Wesnoth: The Hammer of Thursagan
+			"Hannar" #"Hannarr"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
+			"Har" #dwarf from Norse mythology
+			"Haur" #dwarf from Norse mythology
+			"Heptifili" #dwarf from Norse mythology
+			"Hledjolf" #dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 272.
+			"Hornbori" #dwarf from Norse mythology
+			"Hugstari" #dwarf from Norse mythology
+			"Ingi" #dwarf from Norse mythology
+			"Iri" #dwarf from Norse mythology
+			"Isuldan" #from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+			"Jari" #dwarf from Norse mythology
+			"Karrag" #dwarf from Battle for Wesnoth: The Hammer of Thursagan
+			"Kili" #dwarf from Norse mythology
+			"Kinan" #dwarf from Battle for Wesnoth: The Sceptre of Fire
+			"Laurin" #dwarf from German sagas
+			"Lit" #dwarf from Norse mythology
+			"Lofar" #dwarf from Norse mythology who was a descendant of the settlers of Joruvellir
+			"Loni" #dwarf from Norse mythology
+			"Mjodvitnir" #dwarf from Norse mythology
+			"Nabbi" #dwarven mastersmith from Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+			"Naraithil" #from Battle for Wesnoth
+			"Naraithing" #from Battle for Wesnoth
+			"Naraithol" #from Battle for Wesnoth
+			"Naraithsil" #from Battle for Wesnoth
+			"Naraithsol" #from Battle for Wesnoth
+			"Naraithus" #from Battle for Wesnoth
+			"Naralas" #from Battle for Wesnoth
+			"Naralil" #from Battle for Wesnoth
+			"Naralsil" #from Battle for Wesnoth
+			"Naralus" #from Battle for Wesnoth
+			"Naratlos" #from Battle for Wesnoth
+			"Naratol" #from Battle for Wesnoth
+			"Naratsil" #from Battle for Wesnoth
+			"Narcating" #from Battle for Wesnoth
+			"Narcatis" #from Battle for Wesnoth
+			"Narcatol" #from Battle for Wesnoth
+			"Narcatsil" #from Battle for Wesnoth
+			"Narcatsol" #from Battle for Wesnoth
+			"Nardras" #from Battle for Wesnoth
+			"Nardril" #from Battle for Wesnoth
+			"Nardring" #from Battle for Wesnoth
+			"Nardris" #from Battle for Wesnoth
+			"Nardrol" #from Battle for Wesnoth
+			"Nardrsil" #from Battle for Wesnoth
+			"Nardrsol" #from Battle for Wesnoth
+			"Nardrus" #from Battle for Wesnoth
+			"Narduras" #from Battle for Wesnoth
+			"Narduril" #from Battle for Wesnoth
+			"Nardurol" #from Battle for Wesnoth
+			"Narthalos" #from Battle for Wesnoth
+			"Narthaol" #from Battle for Wesnoth
+			"Nefi" #dwarf from Norse mythology
+			"Neglur" #dwarf from Battle for Wesnoth: The Sceptre of Fire
+			"Nidi" #dwarf from Norse mythology
+			"Nidjung" #dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
+			"Nordri" #dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+			"Nyi" #dwarf from Norse mythology
+			"Nyr" #dwarf from Norse mythology
+			"Nyrad" #dwarf from Norse mythology
+			"Oin" #dwarf from Norse mythology who was the father of Andvari
+			"Olurf" #dwarf from Battle for Wesnoth: The Legend of Wesmere
+			"Ori" #dwarf from Norse mythology
+			"Pelaithas" #from Battle for Wesnoth
+			"Pelaithil" #from Battle for Wesnoth
+			"Pelaithing" #from Battle for Wesnoth
+			"Pelaithis" #from Battle for Wesnoth
+			"Pelaithlos" #from Battle for Wesnoth
+			"Pelaithol" #from Battle for Wesnoth
+			"Pelaithsil" #from Battle for Wesnoth
+			"Pelaithsol" #from Battle for Wesnoth
+			"Pelalil" #from Battle for Wesnoth
+			"Pelaling" #from Battle for Wesnoth
+			"Pelalis" #from Battle for Wesnoth
+			"Pelalsil" #from Battle for Wesnoth
+			"Pelalsol" #from Battle for Wesnoth
+			"Pelalus" #from Battle for Wesnoth
+			"Pelatil" #from Battle for Wesnoth
+			"Pelating" #from Battle for Wesnoth
+			"Pelatis" #from Battle for Wesnoth
+			"Pelatol" #from Battle for Wesnoth
+			"Pelatsil" #from Battle for Wesnoth
+			"Pelatus" #from Battle for Wesnoth
+			"Pelcating" #from Battle for Wesnoth
+			"Pelcatlos" #from Battle for Wesnoth
+			"Pelcatol" #from Battle for Wesnoth
+			"Pelcatsil" #from Battle for Wesnoth
+			"Peldras" #from Battle for Wesnoth
+			"Peldril" #from Battle for Wesnoth
+			"Peldrsol" #from Battle for Wesnoth
+			"Peldrus" #from Battle for Wesnoth
+			"Pelduril" #from Battle for Wesnoth
+			"Pelduring" #from Battle for Wesnoth
+			"Pelduris" #from Battle for Wesnoth
+			"Peldurol" #from Battle for Wesnoth
+			"Peldursol" #from Battle for Wesnoth
+			"Peldurus" #from Battle for Wesnoth
+			"Pelthaas" #from Battle for Wesnoth
+			"Pelthail" #from Battle for Wesnoth
+			"Pelthasil" #from Battle for Wesnoth
+			"Radsvid" #dwarf from Norse mythology
+			"Rekk" #dwarf from Norse mythology
+			"Relgorn" #dwarf from Battle for Wesnoth: Heir to the Throne and Battle for Wesnoth: Delfador's Memoirs
+			"Rynan" #dwarf from Battle for Wesnoth: The Sceptre of Fire
+			"Skavid" #dwarf from Norse mythology
+			"Skirvir" #dwarf from Norse mythology
+			"Solblindi" #dwarf from Norse mythology
+			"Sudri" #dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+			"Svarin" #dwarf from Norse mythology
+			"Sviar" #dwarf from Norse mythology
+			"Sviur" #dwarf from Norse mythology
+			"Theganli" #dwarf from Battle for Wesnoth: The Sceptre of Fire; jeweler of Durstorn's clan
+			"Thekk" #dwarf from Norse mythology
+			"Thorin" #dwarf from Norse mythology
+			"Thrain" #dwarf from Norse mythology
+			"Thror" #dwarf from Norse mythology
+			"Trithaithas" #from Battle for Wesnoth
+			"Trithaithil" #from Battle for Wesnoth
+			"Trithaithis" #from Battle for Wesnoth
+			"Trithaithlos" #from Battle for Wesnoth
+			"Trithaithol" #from Battle for Wesnoth
+			"Trithaithsil" #from Battle for Wesnoth
+			"Trithaithsol" #from Battle for Wesnoth
+			"Trithaithus" #from Battle for Wesnoth
+			"Trithalis" #from Battle for Wesnoth
+			"Trithalol" #from Battle for Wesnoth
+			"Trithatas" #from Battle for Wesnoth
+			"Trithatil" #from Battle for Wesnoth
+			"Trithatlos" #from Battle for Wesnoth
+			"Trithatsol" #from Battle for Wesnoth
+			"Trithcatlos" #from Battle for Wesnoth
+			"Trithcatsol" #from Battle for Wesnoth
+			"Trithcatus" #from Battle for Wesnoth
+			"Trithdril" #from Battle for Wesnoth
+			"Trithdring" #from Battle for Wesnoth
+			"Trithdris" #from Battle for Wesnoth
+			"Trithdrlos" #from Battle for Wesnoth
+			"Trithdrol" #from Battle for Wesnoth
+			"Trithdrsol" #from Battle for Wesnoth
+			"Trithdrus" #from Battle for Wesnoth
+			"Trithduril" #from Battle for Wesnoth
+			"Trithduring" #from Battle for Wesnoth
+			"Trithdurlos" #from Battle for Wesnoth
+			"Trithdurol" #from Battle for Wesnoth
+			"Trithdursil" #from Battle for Wesnoth
+			"Trithdurus" #from Battle for Wesnoth
+			"Triththaas" #from Battle for Wesnoth
+			"Triththail" #from Battle for Wesnoth
+			"Triththaing" #from Battle for Wesnoth
+			"Triththasol" #from Battle for Wesnoth
+			"Triththaus" #from Battle for Wesnoth
+			"Tuta" #dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 645.
+			"Ulrek" #dwarf from Battle for Wesnoth: Delfador's Memoirs
+			"Uni" #dwarf from Norse mythology
+			"Vali" #dwarf from Norse mythology
+			"Var" #dwarf from Norse mythology
+			"Vegdrasil" #dwarf from Norse mythology
+			"Vestri" #dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
+			"Vig" #dwarf from Norse mythology
+			"Vigdvalin" #"Víg-dvalinn"; dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
+			"Virfir" #dwarf from Norse mythology
+			"Vit" #dwarf from Norse mythology
+		}
+		
+		female = {
+			"Gneissus" #from Dyson Logos' The Tomb of Durâhn Oakenshield, which the author agreed to release under the GPLv2
+		}
+	}
+	
+	#ship_names = {
+		#"Skidbladnir" #ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+	#}
+	
+	#settlement_names = {
+	#	"Dwarven Doors" #from Battle for Wesnoth
+	#	"Kal Kartha" #from Battle for Wesnoth: The Hammer of Thursagan
+	#	"Knalga" #from Battle for Wesnoth
+	#	"Lyr"
+	#}
+	
+	history = {
+		-3000 = {
+			acquired_upgrades += upgrade_wood_plow #give plow technology to the dwarven factions
+		}
+		
+		-1 = {
+			#bronze age technologies had already been obtained by the dwarves by this point
+			acquired_upgrades += upgrade_dwarven_broad_axe
+			acquired_upgrades += upgrade_dwarven_shield_1
+			acquired_upgrades += upgrade_dwarven_sharp_throwing_axe
+		}
+		
+		25 = {
+			acquired_upgrades += upgrade_masonry #dwarves already had castles built of stone masonry by then
+			acquired_upgrades += upgrade_gunpowder #dwarves already had gunpowder by then (as seen by them having thunderers in The Sceptre of Fire)
+		}
+		
+		400 = {
+			acquired_upgrades += upgrade_dwarven_coinage #the dwarves should already have coinage technology by then
+		}
+		
+		550 = {
+			#late iron age technologies already obtained by the dwarves by this point
+			acquired_upgrades += upgrade_ironworking
+			acquired_upgrades += upgrade_dwarven_great_axe
+			acquired_upgrades += upgrade_dwarven_shield_2
+			acquired_upgrades += upgrade_dwarven_bearded_throwing_axe
+			acquired_upgrades += upgrade_dwarven_ballista_bolt_1
+		}
+	}
+}
