@@ -126,31 +126,6 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 		end
 	end
 	
-	if (direction == "both") then -- draw siblings, but only for the main character of the family tree
-		local potential_character_siblings = GetCharacterData(character, "Siblings")
-		local older_siblings = {}
-		local younger_siblings = {}
-		for i = 1, table.getn(potential_character_siblings) do
-			if (GetCharacterData(potential_character_siblings[i], "IsUsable")) then
-				if (GetCharacterData(potential_character_siblings[i], "BirthYear") < GetCharacterData(character, "BirthYear")) then
-					table.insert(older_siblings, potential_character_siblings[i])
-				else
-					table.insert(younger_siblings, potential_character_siblings[i])
-				end
-			end
-		end
-		
-		local siblings_start_x = x - (54 + 14) * table.getn(older_siblings)
-		for i = 1, table.getn(older_siblings) do
-			AddFamilyTreeIcon(older_siblings[i], menu, siblings_start_x + (54 + 14) * (i - 1), y)
-		end
-		
-		siblings_start_x = x + (54 + 14)
-		for i = 1, table.getn(younger_siblings) do
-			AddFamilyTreeIcon(younger_siblings[i], menu, siblings_start_x + (54 + 14) * (i - 1), y)
-		end
-	end
-	
 	return b
 end
 

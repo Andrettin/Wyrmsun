@@ -1390,8 +1390,6 @@ load_database(false)
 
 Load("scripts/map_template_data.lua")
 
-initialize_database()
-
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
 
 -- load heroes after the DLCs and mods, so that they can use mod-specific items
@@ -1403,6 +1401,8 @@ else
 	LoadHeroes() -- load persistent heroes
 end
 LoadingPersistentHeroes = false
+
+initialize_database()
 
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
