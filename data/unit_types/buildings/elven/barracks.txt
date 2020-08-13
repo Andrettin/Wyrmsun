@@ -1,0 +1,49 @@
+unit_elven_barracks = {
+	parent = unit_template_barracks
+	civilization = elven
+	description = "The barracks provides a place for elven warriors to hone their swordsmanship and archery skills."
+	image_file = "buildings/elven/barracks.png"
+	frame_size = { 102 102 }
+	offset = { -3 -3 }
+	conversible_player_color = teal
+	icon = elven_barracks
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_spatha
+		unit_short_spear
+		unit_long_spear
+		unit_pike
+		unit_composite_bow
+		unit_longbow
+		unit_hand_cannon
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_kite_shield
+		unit_boots
+		unit_arrows
+		unit_barbed_arrows
+		unit_bodkin_arrows
+	}
+	variations = {
+		barracks = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		barracks_snow_winter = {
+			image_file = "buildings/elven/barracks_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+			}
+			seasons = { winter }
+		}
+		barracks_snow = {
+			image_file = "buildings/elven/barracks_snow.png"
+			terrain_types = { snow }
+		}
+	}
+}
