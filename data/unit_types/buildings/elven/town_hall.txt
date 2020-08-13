@@ -1,0 +1,32 @@
+unit_elven_town_hall = {
+	parent = unit_template_town_hall
+	civilization = elven
+	description = "The town hall is the gathering place in elven settlements, where the important issues of the day are discussed."
+	image_file = "buildings/elven/town_hall.png"
+	frame_size = { 128 128 }
+	conversible_player_color = teal
+	icon = elven_town_hall
+	ai_drops = {
+		unit_boots
+	}
+	variations = {
+		town_hall = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		town_hall_snow_winter = {
+			image_file = "buildings/elven/town_hall_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+			}
+			seasons = { winter }
+		}
+		town_hall_snow = {
+			image_file = "buildings/elven/town_hall_snow.png"
+			terrain_types = { snow }
+		}
+	}
+}
