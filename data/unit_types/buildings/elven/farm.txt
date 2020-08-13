@@ -1,0 +1,29 @@
+unit_elven_farm = {
+	parent = unit_template_farm
+	civilization = elven
+	image_file = "buildings/elven/farm.png"
+	frame_size = { 70 70 }
+	icon = elven_farm
+	offset = { 0 -3 }
+	description = "Elven farms grow food to sustain their settlements, seeking to exact as little from the land as possible."
+	variations = {
+		farm = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		farm_snow_winter = {
+			image_file = "buildings/elven/farm_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+			}
+			seasons = { winter }
+		}
+		farm_snow = {
+			image_file = "buildings/elven/farm_snow.png"
+			terrain_types = { snow }
+		}
+	}
+}
