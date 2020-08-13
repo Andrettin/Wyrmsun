@@ -1,0 +1,363 @@
+found_faction_1 = {
+	pos = 1
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_2 = {
+	pos = 2
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_3 = {
+	pos = 3
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_4 = {
+	pos = 4
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_5 = {
+	pos = 5
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_6 = {
+	pos = 6
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_7 = {
+	pos = 7
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_8 = {
+	pos = 8
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_9 = {
+	pos = 9
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_10 = {
+	pos = 10
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_11 = {
+	pos = 11
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_12 = {
+	pos = 12
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_13 = {
+	pos = 13
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_14 = {
+	pos = 14
+	level = found_faction_level
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_15 = {
+	pos = 1
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_16 = {
+	pos = 2
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_17 = {
+	pos = 3
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_18 = {
+	pos = 4
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_19 = {
+	pos = 5
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_20 = {
+	pos = 6
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_21 = {
+	pos = 7
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_22 = {
+	pos = 8
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_23 = {
+	pos = 9
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_24 = {
+	pos = 10
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_25 = {
+	pos = 11
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_26 = {
+	pos = 12
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_27 = {
+	pos = 13
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_28 = {
+	pos = 14
+	level = found_faction_level_2
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
