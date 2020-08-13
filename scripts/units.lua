@@ -195,6 +195,7 @@ DefineUnitType("unit-minecart", {
 	RightMouseAction = "harvest",
 	Rail = true,
 	RequirementsString = "Engineering",
+	ButtonKey = "c",
 	CanGatherResources = {
 		{
 			"resource-id", "gold",

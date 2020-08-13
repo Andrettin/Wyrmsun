@@ -489,21 +489,6 @@ DefineButton( { Pos = 7, Icon = "icon-puncture",
 
 -- Units ---------------------------------------------------------
 
-DefineButton( { Pos = 2, Icon = "icon-teuton-minecart",
-	Action = "train-unit", Value = "unit-minecart",
-	Key = "c", Hint = "Build Mine~!cart", Popup = "popup_unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-})
-
 DefineButton( { Pos = 1,
 	Action = "train-unit", Value = "unit-caravan",
 	Key = "c", Hint = "Build ~!Caravan", Popup = "popup_unit",
@@ -966,72 +951,6 @@ DefineButton( { Pos = 15, Level = "found-faction-level-2", Icon = "icon-left-arr
 		"unit-ettin-town-hall",
 		"unit-gnomish-town-hall",
 		"unit-goblin-town-hall", "unit-goblin-stronghold"
-	}
-})
-
--- Hero Recruitment Buttons
-
-DefineButton( { Pos = 9,
-	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup_unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-mercenary-camp"
-	}
-})
-
-DefineButton( { Pos = 10,
-	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup_unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-mercenary-camp"
-	}
-})
-
-DefineButton( { Pos = 11,
-	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup_unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-mercenary-camp"
-	}
-})
-
-DefineButton( { Pos = 12,
-	Action = "buy", Value = -1,
-	Key = "", Hint = "Buy", Popup = "popup_unit",
-	ForUnit = {
-		"unit-latin-town-hall",
-		"unit-germanic-town-hall",
-		"unit-norse-town-hall",
-		"unit-teuton-town-hall", "unit-teuton-stronghold",
-		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
-		"unit-ettin-town-hall",
-		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-mercenary-camp"
 	}
 })
 

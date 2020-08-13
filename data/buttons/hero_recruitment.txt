@@ -1,0 +1,51 @@
+recruit_hero_1 = {
+	pos = 9
+	action = buy
+	value = -1
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+		mercenary_camp
+	}
+}
+
+recruit_hero_2 = {
+	pos = 10
+	action = buy
+	value = -1
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+		mercenary_camp
+	}
+}
+
+recruit_hero_3 = {
+	pos = 11
+	action = buy
+	value = -1
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+		mercenary_camp
+	}
+}
+
+recruit_hero_4 = {
+	pos = 12
+	action = buy
+	value = -1
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+		mercenary_camp
+	}
+}

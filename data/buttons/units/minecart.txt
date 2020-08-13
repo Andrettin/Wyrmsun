@@ -1,0 +1,11 @@
+build_minecart = {
+	pos = 2
+	action = train_unit_class
+	value = minecart
+	popup = popup_unit
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
