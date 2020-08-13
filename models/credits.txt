@@ -1,2 +1,3 @@
+/models/buildings/elven/ (by Kwaliti) (licensed under the CC0)
 /models/buildings/latin/ (by Wildfire Games and Kwaliti) (licensed under the CC-BY-SA 3.0)
 /models/units/ (by Kwaliti) (licensed under the CC0)
