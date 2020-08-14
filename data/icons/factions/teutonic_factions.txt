@@ -1,3 +1,0 @@
-icon_flag_holy_roman_empire = {
-	file = "icons/factions/teutonic/flag_holy_roman_empire.png"
-}

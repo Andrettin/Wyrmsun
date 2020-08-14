@@ -1,0 +1,3 @@
+flag_white_skull_on_black = {
+	file = "icons/flags/goblin/flag_white_skull_on_black.png"
+}
