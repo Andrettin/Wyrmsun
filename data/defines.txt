@@ -8,6 +8,7 @@ magic_font_color = light_blue
 unique_font_color = fire
 tile_size = { 32 32 }
 icon_size = { 46 38 }
+resource_icon_size = { 14 14 }
 conversible_player_color = violet
 neutral_player_color = gray
 neutral_civilization = neutral

@@ -37,13 +37,6 @@ DefineResource("time", {
 	ActionName = "stop"
 })
 
-DefineResource("copper", {
-	Name = "Copper",
-	DefaultIncome = 100,
-	ActionName = "mine",
-	DefaultAmount = 50000
-})
-
 DefineResource("silver", {
 	Name = "Silver",
 	DefaultIncome = 100,
@@ -107,22 +100,6 @@ DefineResource("trade", {
 	ActionName = "perform"
 })
 
-DefineResource("lumber", {
-	Name = "Lumber",
-	DefaultIncome = 100,
-	BasePrice = 100,
-	ActionName = "gather",
-	DefaultAmount = 400
-})
-
-DefineResource("stone", {
-	Name = "Stone",
-	DefaultIncome = 100,
-	BasePrice = 100,
-	ActionName = "quarry",
-	DefaultAmount = 10000
-})
-
 DefineResource("limestone", {
 	Name = "Limestone",
 	DefaultIncome = 100,
@@ -131,14 +108,6 @@ DefineResource("limestone", {
 	ActionName = "quarry",
 	Hidden = true,
 	DefaultAmount = 10000
-})
-
-DefineResource("coal", {
-	Name = "Coal",
-	DefaultIncome = 100,
-	BasePrice = 100,
-	ActionName = "mine",
-	DefaultAmount = 50000
 })
 
 DefineResource("oil", {

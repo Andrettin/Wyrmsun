@@ -1,0 +1,8 @@
+coal = {
+	name = "Coal"
+	icon_file = "ui/resources/coal.png"
+	action_name = "mine"
+	default_income = 100
+	base_price = 100
+	default_amount = 50000
+}

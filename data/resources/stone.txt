@@ -1,0 +1,8 @@
+stone = {
+	name = "Stone"
+	icon_file = "ui/resources/stone.png"
+	action_name = "quarry"
+	default_income = 100
+	base_price = 100
+	default_amount = 10000
+}

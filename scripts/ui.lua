@@ -367,24 +367,18 @@ UI.StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
 UI.StatusLine.Font = Fonts["game"]
 
 -- copper
-UI.Resources[1].G = CGraphic:New("ui/resources/copper.png", 14, 14)
-UI.Resources[1].IconFrame = 0
 UI.Resources[1].IconX = (154 + (75 * 0)) * get_scale_factor()
 UI.Resources[1].IconY = 0
 UI.Resources[1].TextX = (154 + (75 * 0) + 18) * get_scale_factor()
 UI.Resources[1].TextY = 1 * get_scale_factor()
 
 -- lumber
-UI.Resources[2].G = CGraphic:New("ui/resources/lumber.png", 14, 14)
-UI.Resources[2].IconFrame = 0
 UI.Resources[2].IconX = (154 + (75 * 1)) * get_scale_factor()
 UI.Resources[2].IconY = 0
 UI.Resources[2].TextX = (154 + (75 * 1) + 18) * get_scale_factor()
 UI.Resources[2].TextY = 1 * get_scale_factor()
 
 -- stone
-UI.Resources[5].G = CGraphic:New("ui/resources/stone.png", 14, 14)
-UI.Resources[5].IconFrame = 0
 UI.Resources[5].IconX = (154 + (75 * 2)) * get_scale_factor()
 UI.Resources[5].IconY = 0
 UI.Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
@@ -400,8 +394,6 @@ UI.Resources[5].TextY = 1 * get_scale_factor()
 
 if (GetCurrentQuest() == "gathering-materials") then
 	-- coal
-	UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
-	UI.Resources[6].IconFrame = 0
 	UI.Resources[6].IconX = (154 + (75 * 3)) * get_scale_factor()
 	UI.Resources[6].IconY = 0
 	UI.Resources[6].TextX = (154 + (75 * 3) + 18) * get_scale_factor()
@@ -411,6 +403,8 @@ else
 	if (UI.Resources[6].G) then
 		UI.Resources[6].G = nil
 	end
+	UI.Resources[6].IconX = -1
+	UI.Resources[6].IconY = -1
 	UI.Resources[6].TextX = -1
 	UI.Resources[6].TextY = -1
 end
@@ -437,10 +431,10 @@ UI.Resources[ScoreCost].TextY = 1
 
 UI.Resources[ManaResCost].G = CGraphic:New("ui/resources/mana_icon.png", 14, 14)
 UI.Resources[ManaResCost].IconFrame = 0
-UI.Resources[ManaResCost].IconX = -100
-UI.Resources[ManaResCost].IconY = -100
-UI.Resources[ManaResCost].TextX = -100
-UI.Resources[ManaResCost].TextY = -100
+UI.Resources[ManaResCost].IconX = -1
+UI.Resources[ManaResCost].IconY = -1
+UI.Resources[ManaResCost].TextX = -1
+UI.Resources[ManaResCost].TextY = -1
 
 UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
 UI.Resources[GetResourceIdByName("silver")].IconFrame = 0

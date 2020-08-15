@@ -1,0 +1,7 @@
+copper = {
+	name = "Copper"
+	icon_file = "ui/resources/copper.png"
+	action_name = "mine"
+	default_income = 100
+	default_amount = 50000
+}
