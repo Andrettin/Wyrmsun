@@ -2585,7 +2585,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Set: "), UnitUniqueSet("Unit")), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "gray",
+				{ 	Condition = {Unique = "only", Identified = "only", UniqueSet = "only"}, HighlightColor = "dark_gray",
 					More = {"Text", {Text = UnitUniqueSetItems("Unit"), Font = PopupDescriptionFont}}
 				},
 				-- Description
@@ -2672,7 +2672,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "gray",
+				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "dark_gray",
 					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = PopupDescriptionFont}}
 				},
 				-- Dynasty Button Information
