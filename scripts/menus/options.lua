@@ -97,7 +97,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   b = menu:addLabel(_("Sound Options"), 176 * get_scale_factor(), 11 * get_scale_factor())
 
   b = Label(_("Sound Effects Volume"))
-  b:setFont(CFont:Get("game"))
+  b:setFont(font:Get("game"))
   b:adjustSize();
   menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 1) * get_scale_factor())
 
@@ -115,12 +115,12 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   soundslider:setValue(GetEffectsVolume())
 
   b = Label("min")
-  b:setFont(CFont:Get("small"))
+  b:setFont(font:Get("small"))
   b:adjustSize();
   menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 2 + 6) * get_scale_factor())
 
   b = Label("max")
-  b:setFont(CFont:Get("small"))
+  b:setFont(font:Get("small"))
   b:adjustSize();
   menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 2 + 6) * get_scale_factor())
 
@@ -131,7 +131,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   effectscheckbox:adjustSize()
 
   b = Label(_("Music Volume"))
-  b:setFont(CFont:Get("game"))
+  b:setFont(font:Get("game"))
   b:adjustSize();
   menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
@@ -150,12 +150,12 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   musicslider:setValue(GetMusicVolume())
 
   b = Label("min")
-  b:setFont(CFont:Get("small"))
+  b:setFont(font:Get("small"))
   b:adjustSize();
   menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
   b = Label("max")
-  b:setFont(CFont:Get("small"))
+  b:setFont(font:Get("small"))
   b:adjustSize();
   menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
@@ -239,7 +239,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	reverse_mouse_wheel_scrolling:adjustSize()
 
 	l = Label(_("Game Speed"))
-	l:setFont(CFont:Get("game"))
+	l:setFont(font:Get("game"))
 	l:adjustSize()
 	menu:add(l, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
@@ -257,16 +257,16 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	gamespeed:setValue(GetGameSpeed())
 
 	l = Label("slow")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize()
 	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	l = Label("fast")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize()
 	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
-	menu:addLabel(_("Mouse Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor(), CFont:Get("game"), false)
+	menu:addLabel(_("Mouse Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor(), font:Get("game"), false)
 
 	local mousescrollspeed = {}
 	-- slider button to decrease slider value
@@ -282,16 +282,16 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	mousescrollspeed:setValue(GetMouseScrollSpeed())
 
 	l = Label("slow")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize()
 	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
 	l = Label("fast")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize()
 	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
-	menu:addLabel(_("Key Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 7) * get_scale_factor(), CFont:Get("game"), false)
+	menu:addLabel(_("Key Scroll Speed"), offx + 16 * get_scale_factor(), offy + (36 * 7) * get_scale_factor(), font:Get("game"), false)
 
 	local keyscrollspeed = {}
 	-- slider button to decrease slider value
@@ -307,12 +307,12 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	keyscrollspeed:setValue(GetKeyScrollSpeed())
 
 	l = Label("slow")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize();
 	menu:addCentered(l, offx + 32 * get_scale_factor(), offy + (36 * 8 + 6) * get_scale_factor())
 
 	l = Label("fast")
-	l:setFont(CFont:Get("small"))
+	l:setFont(font:Get("small"))
 	l:adjustSize()
 	menu:addCentered(l, offx + 224 * get_scale_factor(), offy + (36 * 8 + 6) * get_scale_factor())
 
@@ -641,7 +641,7 @@ function RunVideoOptionsMenu()
 
 	-- sound volume options
 	b = Label(_("Sound Effects Volume"))
-	b:setFont(CFont:Get("game"))
+	b:setFont(font:Get("game"))
 	b:adjustSize();
 	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
 
@@ -659,12 +659,12 @@ function RunVideoOptionsMenu()
 	soundslider:setValue(GetEffectsVolume())
 
 	b = Label("min")
-	b:setFont(CFont:Get("small"))
+	b:setFont(font:Get("small"))
 	b:adjustSize();
 	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
 	b = Label("max")
-	b:setFont(CFont:Get("small"))
+	b:setFont(font:Get("small"))
 	b:adjustSize();
 	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
 
@@ -675,7 +675,7 @@ function RunVideoOptionsMenu()
 	effectscheckbox:adjustSize()
 
 	b = Label(_("Music Volume"))
-	b:setFont(CFont:Get("game"))
+	b:setFont(font:Get("game"))
 	b:adjustSize();
 	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor())
 
@@ -694,12 +694,12 @@ function RunVideoOptionsMenu()
 	musicslider:setValue(GetMusicVolume())
 
 	b = Label("min")
-	b:setFont(CFont:Get("small"))
+	b:setFont(font:Get("small"))
 	b:adjustSize();
 	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 
 	b = Label("max")
-	b:setFont(CFont:Get("small"))
+	b:setFont(font:Get("small"))
 	b:adjustSize();
 	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
 

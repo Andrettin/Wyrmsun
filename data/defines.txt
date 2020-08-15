@@ -1,3 +1,5 @@
+small_font = small
+game_font = game
 tile_size = { 32 32 }
 icon_size = { 46 38 }
 conversible_player_color = violet

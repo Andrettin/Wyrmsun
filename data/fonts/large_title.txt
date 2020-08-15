@@ -1,0 +1,4 @@
+large_title = {
+	file = "ui/fonts/dejavusansbold14.png"
+	size = { 22 18 }
+}

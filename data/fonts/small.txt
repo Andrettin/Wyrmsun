@@ -1,0 +1,4 @@
+small = {
+	file = "ui/fonts/small.png"
+	size = { 10 11 }
+}

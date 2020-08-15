@@ -1,0 +1,4 @@
+small_title = {
+	file = "ui/fonts/freesansbold14.png"
+	size = { 18 19 }
+}

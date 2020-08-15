@@ -113,7 +113,7 @@ function RunGrandStrategyGameSetupMenu()
 	faction:setSize(152, 20)
 
 	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))
-	date_label:setFont(CFont:Get("game"))
+	date_label:setFont(font:Get("game"))
 	date_label:adjustSize();
 	menu:add(date_label, offx + 220, offy + 36 * 7)
 	-- slider button to decrease slider value
@@ -128,12 +128,12 @@ function RunGrandStrategyGameSetupMenu()
 	date_slider:setValue(date_minimum)
 
 	local date_minimum_label = Label(GetYearString(date_minimum))
-	date_minimum_label:setFont(CFont:Get("small"))
+	date_minimum_label:setFont(font:Get("small"))
 	date_minimum_label:adjustSize();
 	menu:addCentered(date_minimum_label, offx + 220 + 76 - 86 - 20 + 11, offy + 36 * 8 + 6)
 
 	local date_maximum_label = Label(GetYearString(date_maximum))
-	date_maximum_label:setFont(CFont:Get("small"))
+	date_maximum_label:setFont(font:Get("small"))
 	date_maximum_label:adjustSize();
 	menu:addCentered(date_maximum_label, offx + 220 + 76 + 86 + 11, offy + 36 * 8 + 6)
 

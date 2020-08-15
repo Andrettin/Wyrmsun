@@ -27,54 +27,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-CFont:New("small", CGraphic:New("ui/fonts/small.png", 10, 11))
-CFont:New("game", CGraphic:New("ui/fonts/dejavusansbold10.png", 15, 14))
-CFont:New("large", CGraphic:New("ui/fonts/dejavusansbold12.png", 19, 16))
-CFont:New("small-title", CGraphic:New("ui/fonts/freesansbold14.png", 18, 19))
-CFont:New("large-title", CGraphic:New("ui/fonts/dejavusansbold14.png", 22, 18))
-
-
+--[[
 --	FIXME: only yellow, white, and grey are correct.
 
-function DefineFontColor(id, t)
-  fc = CFontColor:New(id)
-  for i = 0,(table.getn(t) / 3 - 1) do
-    fc.Colors[i] = CColor(t[i * 3 + 1], t[i * 3 + 2], t[i * 3 + 3])
-  end
-end
-
-DefineFontColor("black",
-  {    0,   0,   0,	-- 0
-      40,  40,  60,	-- 228
-      40,  40,  60,	-- 228
-      40,  40,  60,	-- 228
-      40,  40,  60,	-- 228
-       0,   0,   0,	-- 239
-       0,   0,   0})	-- 0
-DefineFontColor("red",
-  {    0,   0,   0,	-- 0
-     164,   0,   0,	-- 208
-     124,   0,   0,	-- 209
-      92,   4,   0,	-- 210
-      68,   4,   0,	-- 211
-       0,   0,   0,	-- 239
-       0,   0,   0})	-- 0
-DefineFontColor("green",
-  {    0,   0,   0,	-- 0
-      44, 180, 148,	-- 216
-      44, 180, 148,	-- 216
-      44, 180, 148,	-- 216
-      44, 180, 148,	-- 216
-       0,   0,   0,	-- 239
-       0,   0,   0})	-- 0
-DefineFontColor("yellow",
-  {  252, 248, 240,	-- 246
-     244, 224,  32,	-- 200
-     208, 192,  28,	-- 199
-     168, 140,  16,	-- 197
-      92,  48,   0,	-- 192
-       0,   0,   0,	-- 239
-     108, 108, 108})	-- 104
 DefineFontColor("blue",
   {    0,   0,   0,	-- 0
       12,  72, 204,	-- 1
@@ -99,27 +54,11 @@ DefineFontColor("cyan",
      248, 140, 140,	-- 224
        0,   0,   0,	-- 239
        0,   0,   0})	-- 0
-DefineFontColor("white",
-  {    0,   0,   0,	-- 0
-     252, 248, 240,	-- 246
-     252, 248, 240,	-- 246
-     252, 248, 240,	-- 246
-     108, 108, 108,	-- 104
-       0,   0,   0,	-- 239
-       0,   0,   0})	-- 0
 DefineFontColor("white-old",
   {    0,   0,   0,	-- 0
      252, 248, 240,	-- 246
      252, 248, 240,	-- 246
      159, 159, 159,	-- 246
-     108, 108, 108,	-- 104
-       0,   0,   0,	-- 239
-       0,   0,   0})	-- 0
-DefineFontColor("grey",
-  {    0,   0,   0,	-- 0
-     192, 192, 192,	-- 111
-     180, 180, 180,	-- 110
-     168, 168, 168,	-- 109
      108, 108, 108,	-- 104
        0,   0,   0,	-- 239
        0,   0,   0})	-- 0
@@ -284,3 +223,4 @@ DefineFontColor("gray", {
 	0,   0,   0,	-- 239
 	0,   0,   0
 })	-- 0
+]]

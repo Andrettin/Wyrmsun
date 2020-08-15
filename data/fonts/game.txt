@@ -1,0 +1,4 @@
+game = {
+	file = "ui/fonts/dejavusansbold10.png"
+	size = { 15 14 }
+}

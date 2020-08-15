@@ -1,0 +1,4 @@
+large = {
+	file = "ui/fonts/dejavusansbold12.png"
+	size = { 19 16 }
+}
