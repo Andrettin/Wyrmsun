@@ -25,8 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-UI.NormalFontColor = "white"
-UI.ReverseFontColor = "yellow"
-
 UI.MenuButton.Style = FindButtonStyle("main-germanic")
 UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

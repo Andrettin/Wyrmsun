@@ -1,5 +1,11 @@
 small_font = small
 game_font = game
+default_font_color = white
+default_highlight_font_color = yellow
+ally_font_color = green
+enemy_font_color = red
+magic_font_color = light_blue
+unique_font_color = fire
 tile_size = { 32 32 }
 icon_size = { 46 38 }
 conversible_player_color = violet
