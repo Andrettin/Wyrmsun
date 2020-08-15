@@ -409,10 +409,28 @@ else
 	UI.Resources[6].TextY = -1
 end
 
+UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
+UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
+UI.Resources[GetResourceIdByName("silver")].IconX = -1
+UI.Resources[GetResourceIdByName("silver")].IconY = -1
+
+UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/resources/research.png", 14, 14)
+UI.Resources[GetResourceIdByName("research")].IconFrame = 0
+UI.Resources[GetResourceIdByName("research")].IconX = -1
+UI.Resources[GetResourceIdByName("research")].IconY = -1
+
+UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/resources/prestige.png", 14, 14)
+UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
+UI.Resources[GetResourceIdByName("prestige")].IconX = -1
+UI.Resources[GetResourceIdByName("prestige")].IconY = -1
+
+UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/leadership.png", 14, 14)
+UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
+UI.Resources[GetResourceIdByName("leadership")].IconX = -1
+UI.Resources[GetResourceIdByName("leadership")].IconY = -1
+
 -- food
-if (CanAccessFile("ui/resources/food.png")) then
-  UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
-end
+UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
 UI.Resources[FoodCost].IconFrame = 0
 UI.Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
 UI.Resources[FoodCost].IconY = 0
@@ -420,9 +438,7 @@ UI.Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
 UI.Resources[FoodCost].TextY = 1
 
 -- score
-if (CanAccessFile("ui/resources/score.png"))then
-  UI.Resources[ScoreCost].G = CGraphic:New("ui/resources/score.png", 14, 14)
-end
+UI.Resources[ScoreCost].G = CGraphic:New("ui/resources/score.png", 14, 14)
 UI.Resources[ScoreCost].IconFrame = 0
 UI.Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
 UI.Resources[ScoreCost].IconY = 0
@@ -435,26 +451,6 @@ UI.Resources[ManaResCost].IconX = -1
 UI.Resources[ManaResCost].IconY = -1
 UI.Resources[ManaResCost].TextX = -1
 UI.Resources[ManaResCost].TextY = -1
-
-UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
-UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
-UI.Resources[GetResourceIdByName("silver")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("silver")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/resources/research.png", 14, 14)
-UI.Resources[GetResourceIdByName("research")].IconFrame = 0
-UI.Resources[GetResourceIdByName("research")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("research")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/resources/prestige.png", 14, 14)
-UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
-UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
-
-UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/leadership.png", 14, 14)
-UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
-UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
-UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
 
 UI.TimeOfDayPanel.IconFrame = 0
 UI.TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
