@@ -1,0 +1,49 @@
+unit_dwarven_dock = {
+	parent = unit_template_dock
+	civilization = dwarven
+	description = "Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike."
+	image_file = "buildings/dwarven/dock.png"
+	frame_size = { 96 96 }
+	icon = icon_dwarven_dock
+	fire_resistance = 20
+	costs = {
+		time = 200
+		copper = 800
+		lumber = 900
+		stone = 450
+	}
+	repair_costs = {
+		copper = 1
+		lumber = 1
+		stone = 1
+	}
+	#ai_drops = {
+		#unit_stone_pile
+	#}
+	variations = {
+		dock = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		dock_snow_winter = {
+			image_file = "buildings/dwarven/dock_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+				shallow_water
+				gray_shallow_water
+			}
+			seasons = { winter }
+		}
+		dock_snow = {
+			image_file = "buildings/dwarven/dock_snow.png"
+			terrain_types = {
+				snow
+				shallow_water
+				gray_shallow_water
+			}
+		}
+	}
+}

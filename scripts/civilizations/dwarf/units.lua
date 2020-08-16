@@ -2495,45 +2495,6 @@ DefineUnitType("unit-dwarven-academy", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-dock", {
-	Name = "Dock",
-	Parent = "unit-template-dock",
-	Civilization = "dwarf",
-	Description = "Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike.",
-	Image = {"file", "dwarf/buildings/dock.png", "size", {96, 96}},
-	Shadow = {"file", "dwarf/buildings/dock_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-dwarven-dock",
-	Costs = {"time", 200, "copper", 800, "lumber", 900, "stone", 450},
-	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
-	FireResistance = 20,
---	Drops = {"unit-stone-pile"},
-	Variations = {
-		{
-			"variation-id", "dock",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "dock-snow-winter",
-			"file", "dwarf/buildings/dock_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water",
-			"season", "winter"
-		},
-		{
-			"variation-id", "dock-snow",
-			"file", "dwarf/buildings/dock_snow.png",
-			"terrain", "snow",
-			"terrain", "shallow-water",
-			"terrain", "gray-shallow-water"
-		}
-	}
-} )
-
 DefineUnitType("unit-dwarven-wall", {
 	Parent = "unit-template-wall",
 	Civilization = "dwarf",
