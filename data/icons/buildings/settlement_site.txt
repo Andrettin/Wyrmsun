@@ -1,0 +1,3 @@
+settlement_site = {
+	file = "icons/buildings/neutral/settlement_site.png"
+}

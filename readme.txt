@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Mercenary Camp, Settlement Site, Yale Cave and Yale Hunting Lodge buildings now have snowy variations.
 - Added the Elven Town Hall, Farm and Barracks buildings.
 - Added the Latin Dock building.
+- The construction of town halls over settlement sites now possesses two additional (generic) construction frames.
 
 * Editor
 - Fixed crash which occurred when creating new cave and dungeon maps in the editor.

@@ -113,15 +113,19 @@ DefineConstruction("construction-land-active", {
 })
 
 DefineConstruction("construction-town-hall", {
+	Files = {
+		File = "buildings/neutral/settlement_construction_site.png",
+		Size = {128, 128}
+	},
 	Constructions = {
 		{
 			Percent = 0,
-			File = "main",
-			Frame = 1
+			File = "construction",
+			Frame = 0
 		},
 		{
 			Percent = 25,
-			File = "main",
+			File = "construction",
 			Frame = 1
 		},
 		{
@@ -148,16 +152,20 @@ DefineConstruction("construction-dock", {
 })
 
 DefineConstruction("construction-germanic-town-hall", {
+	Files = {
+		File = "buildings/neutral/settlement_construction_site.png",
+		Size = {128, 128}
+	},
 	Constructions = {
 		{
 			Percent = 0,
-			File = "main",
-			Frame = 3
+			File = "construction",
+			Frame = 0
 		},
 		{
 			Percent = 25,
-			File = "main",
-			Frame = 3
+			File = "construction",
+			Frame = 1
 		},
 		{
 			Percent = 50,
