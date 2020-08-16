@@ -54,7 +54,6 @@ DefineUnitType("unit-elven-swordsman", {
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	ButtonKey = "s",
-	ButtonHint = "Train ~!Swordsman",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-germanic-voices-selected-group",
@@ -97,7 +96,6 @@ DefineUnitType("unit-elven-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "p",
-	ButtonHint = "Train ~!Priest",
 	StartingAbilities = {"upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},

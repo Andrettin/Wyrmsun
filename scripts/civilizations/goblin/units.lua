@@ -49,7 +49,6 @@ DefineUnitType("unit-goblin-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "d",
-	ButtonHint = "Train ~!Drudge",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
@@ -266,7 +265,6 @@ DefineUnitType("unit-goblin-swordsman", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "s",
-	ButtonHint = "Train ~!Swordsman",
 	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -406,7 +404,6 @@ DefineUnitType("unit-goblin-archer", {
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "a",
-	ButtonHint = "Train ~!Archer",
 	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -541,7 +538,6 @@ DefineUnitType("unit-goblin-shaman", {
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	HackDamage = true,
 	ButtonKey = "s",
-	ButtonHint = "Train ~!Shaman",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -567,7 +563,6 @@ DefineUnitType("unit-goblin-war-machine", {
 	CanCastSpell = {"spell-war-machine-spear-attack"},
 	AutoCastActive = {"spell-war-machine-spear-attack"},
 	ButtonKey = "m",
-	ButtonHint = "Build War ~!Machine",
 	BluntDamage = true,
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",

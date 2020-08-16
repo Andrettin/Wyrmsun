@@ -81,7 +81,6 @@ DefineUnitType("unit-ettin-town-hall", {
 	Costs = {"lumber", 0, "stone", 2400},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	ButtonHint = "Build Mead ~!Hall",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {"unit-boots"},
 	SpawnUnits = {"unit-ettin"},

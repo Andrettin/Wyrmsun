@@ -699,7 +699,6 @@ DefineUnitType("unit-germanic-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "g",
-	ButtonHint = "Train ~!Gudjan",
 	StartingAbilities = {"upgrade-barkskin", "upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-barkskin", "spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-barkskin", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},

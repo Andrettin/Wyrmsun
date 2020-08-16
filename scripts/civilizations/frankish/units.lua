@@ -58,7 +58,6 @@ DefineUnitType("unit-frank-swordsman", {
 		{"boots", "unit-boots"}
 	},
 	ButtonKey = "k",
-	ButtonHint = "Train ~!Kregar",
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -529,7 +528,6 @@ DefineUnitType("unit-frank-spearman", {
 		{"boots", "unit-boots"}
 	},
 	ButtonKey = "e",
-	ButtonHint = "Train Sp~!earman",
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -667,7 +665,6 @@ DefineUnitType("unit-frank-horseman", {
 	InvertedSoutheastArms = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	ButtonKey = "t",
-	ButtonHint = "Train Ri~!tar",
 	Corpse = "unit-human-dead-body",
 	RequirementsString = "Smithy and Stables",
 	Sounds = {

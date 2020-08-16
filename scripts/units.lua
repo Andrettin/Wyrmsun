@@ -3379,7 +3379,6 @@ DefineUnitType("unit-template-worker", {
 	Flesh = true,
 	ButtonPos = 1,
 	ButtonKey = "w",
-	ButtonHint = "Train ~!Worker",
 	AiDrops = {"unit-christmas-hat"},
 	CanGatherResources = {
 		{
@@ -3634,7 +3633,6 @@ DefineUnitType("unit-template-merchant", {
 	Flesh = true,
 	ButtonPos = 1,
 	ButtonKey = "m",
-	ButtonHint = "Train ~!Merchant",
 	Trader = true,
 	AiDrops = {"unit-christmas-hat"},
 	CanGatherResources = {
@@ -4404,7 +4402,6 @@ DefineUnitType("unit-template-town-hall", {
 	BurnDamageRate = 1,
 	ButtonPos = 1,
 	ButtonKey = "h",
-	ButtonHint = "Build Town ~!Hall",
 	ResourceDemand = {"jewelry", 5, "furniture", 5, "leather", 5},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
@@ -4488,7 +4485,6 @@ DefineUnitType("unit-template-farm", {
 	BurnDamageRate = 1,
 	ButtonPos = 2,
 	ButtonKey = "f",
-	ButtonHint = "Build ~!Farm",
 	ResourceDemand = {"furniture", 1, "leather", 1},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {

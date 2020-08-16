@@ -47,7 +47,6 @@ DefineUnitType("unit-gnomish-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "s",
-	ButtonHint = "Train ~!Scavenger",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
@@ -172,7 +171,6 @@ DefineUnitType("unit-gnomish-recruit", {
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "t",
-	ButtonHint = "Train Recrui~!t",
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -308,7 +306,6 @@ DefineUnitType("unit-gnomish-herbalist", {
 	HackDamage = true,
 	ButtonPos = 2,
 	ButtonKey = "h",
-	ButtonHint = "Train ~!Herbalist",
 	Sounds = {
 		"selected", "gnomish-herbalist-selected-group",
 		"acknowledge", "basic-gnome-voices-acknowledge",

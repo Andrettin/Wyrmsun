@@ -158,7 +158,6 @@ DefineUnitType("unit-teuton-swordsman", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "w",
-	ButtonHint = "Train S~!wordsman",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -633,7 +632,6 @@ DefineUnitType("unit-teuton-spearman", {
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	ButtonKey = "e",
-	ButtonHint = "Train Sp~!earman",
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -750,7 +748,6 @@ DefineUnitType("unit-teuton-archer", {
 	CanCastSpell = {"spell-precise-shot"},
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "a",
-	ButtonHint = "Train ~!Archer",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
@@ -829,7 +826,6 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "k",
-	ButtonHint = "Train ~!Knight",
 	RequirementsString = "Smithy and Stables",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
@@ -944,7 +940,6 @@ DefineUnitType("unit-teuton-catapult", {
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
 	ButtonKey = "c",
-	ButtonHint = "Build ~!Catapult",
 	RequirementsString = "Carpenter's Shop/Lumber Mill, Smithy and Engineering",
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
@@ -963,7 +958,6 @@ DefineUnitType("unit-teuton-kogge", {
 	LightImage = {"file", "teuton/units/kogge_water.png"},
 	Icon = "icon-teuton-kogge",
 	ButtonKey = "c",
-	ButtonHint = "Build ~!Cog",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Sounds = {
 --		"help", "basic-teuton-voices-help"

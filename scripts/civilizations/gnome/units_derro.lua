@@ -112,8 +112,7 @@ DefineUnitType("unit-derro-thug", {
 	BasicDamage = 11, Evasion = 10, -- +2 damage, -1 evasion
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	ButtonKey = "t",
-	ButtonHint = "Train ~!Thug"
+	ButtonKey = "t"
 } )
 
 DefineUnitType("unit-derro-executioner", {
