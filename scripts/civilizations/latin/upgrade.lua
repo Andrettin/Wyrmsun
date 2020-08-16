@@ -74,7 +74,11 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-latin-dock"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-teuton-dock"}, {"convert-to", "unit-latin-dock"}
 )
 
 DefineModifier("upgrade-latin-civilization",

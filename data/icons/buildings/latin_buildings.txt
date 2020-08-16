@@ -1,0 +1,3 @@
+latin_dock = {
+	file = "icons/buildings/latin/dock.png"
+}

@@ -1,0 +1,8 @@
+unit_latin_dock = {
+	parent = unit_template_dock
+	civilization = latin
+	description = "Roman shipwrights are instrumental in ensuring Rome's dominance over the Mediterranean Sea."
+	image_file = "buildings/latin/dock.png"
+	frame_size = { 96 99 }
+	icon = latin_dock
+}
