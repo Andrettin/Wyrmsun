@@ -20,6 +20,16 @@ dwarf = {
 		return_goods = icon_dwarven_return_goods
 	}
 	
+	unit_sounds = {
+		selected = dwarf_selected_group
+		acknowledge = dwarf_acknowledge
+		attack = basic_dwarf_voices_attack
+		ready = dwarf_ready
+		help = basic_dwarf_voices_help
+		help_town = basic_dwarf_voices_help_town
+		dead = basic_dwarf_voices_dead
+	}
+	
 	ui_fillers = {
 		{
 			file = "interface/dwarven/filler_bottom.png"

@@ -110,12 +110,8 @@ DefineUnitType("unit-dwarven-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -194,12 +190,8 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -278,12 +270,8 @@ DefineUnitType("unit-dwarven-expert-miner", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -366,12 +354,6 @@ DefineUnitType("unit-dwarven-runesmith", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -454,12 +436,6 @@ DefineUnitType("unit-dwarven-runemaster", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -542,12 +518,6 @@ DefineUnitType("unit-dwarven-arcanister", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -569,12 +539,8 @@ DefineUnitType("unit-dwarven-militia", {
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-boots", "unit-cheese"},
 	Sounds = {
-		"selected", "dwarf_selected_group",
 		"acknowledge", "dwarven-miner-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-miner-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -714,12 +680,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-axefighter-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -860,12 +821,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -933,12 +889,7 @@ DefineUnitType("unit-dwarven-thane", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-steelclad-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -979,14 +930,6 @@ DefineUnitType("unit-dwarven-guard", {
 			"variation-id", "brown-hair",
 			"weight", 4
 		}
-	},
-	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
 	}
 } )
 
@@ -1024,14 +967,6 @@ DefineUnitType("unit-dwarven-stalwart", {
 			"variation-id", "brown-hair",
 			"weight", 4
 		}
-	},
-	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
 	}
 } )
 
@@ -1074,14 +1009,6 @@ DefineUnitType("unit-dwarven-sentinel", {
 			"weight", 2,
 			"icon", "icon-dwarven-sentinel-open-mouth"
 		}
-	},
-	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
 	}
 } )
 
@@ -1164,13 +1091,8 @@ DefineUnitType("unit-dwarven-scout", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-scout-ready",
-		"fire-missile", "throwing-axe",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"fire-missile", "throwing-axe"
 	}
 } )
 
@@ -1222,11 +1144,7 @@ DefineUnitType("unit-dwarven-pathfinder", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"fire-missile", "throwing-axe"
 	}
 } )
 
@@ -1278,11 +1196,7 @@ DefineUnitType("unit-dwarven-explorer", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
+		"fire-missile", "throwing-axe"
 	}
 } )
 
@@ -1299,15 +1213,7 @@ DefineUnitType("unit-dwarven-thunderer", {
 	},
 	Corpse = "unit-dwarven-dead-body",
 	ButtonKey = "t",
-	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead"
-	}
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"}
 } )
 
 DefineUnitType("unit-dwarven-yale-rider", {
@@ -1399,10 +1305,7 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	Sounds = {
 		"selected", "yale-rider-selected-group",
 		"acknowledge", "yale-rider-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-yale-rider-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -1495,10 +1398,7 @@ DefineUnitType("unit-dwarven-yale-lord", {
 	Sounds = {
 		"selected", "yale-rider-selected-group",
 		"acknowledge", "yale-rider-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-yale-rider-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
@@ -1538,12 +1438,6 @@ DefineUnitType("unit-dwarven-witness", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -1579,12 +1473,6 @@ DefineUnitType("unit-dwarven-annalist", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -1620,12 +1508,6 @@ DefineUnitType("unit-dwarven-loremaster", {
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
-		"ready", "dwarf_ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "basic-dwarf-voices-dead",
 		"hit", "mace-attack",
 		"miss", "attack-miss"
 	}
@@ -1679,11 +1561,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 		}
 	},
 	Sounds = {
-		"selected", "dwarf_selected_group",
-		"acknowledge", "dwarf_acknowledge",
-		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-gryphon-rider-ready",
-		"help", "basic-dwarf-voices-help",
 		"dead", "gryphon-dead"
 	}
 } )
@@ -1703,7 +1581,6 @@ DefineUnitType("unit-dwarven-ballista", {
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "dwarven-ballista-ready",
-		"help", "basic-dwarf-voices-help",
 		"dead", "explosion"
 	}
 })
@@ -1755,9 +1632,6 @@ DefineUnitType("unit-dwarven-transport-ship", {
 			"icon", "icon-joruvellir-transport-ship",
 			"upgrade-required", "upgrade-faction-joruvellir"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help"
 	}
 })
 
@@ -1772,10 +1646,7 @@ DefineUnitType("unit-dwarven-ballista-warship", {
 	Missile = "missile-dwarven-ballista-bolt",
 	FireMissile = "missile-flaming-dwarven-ballista-bolt",
 	PierceDamage = true,
-	SideAttack = false,
-	Sounds = {
-		"help", "basic-dwarf-voices-help"
-	}
+	SideAttack = false
 })
 
 DefineUnitType("unit-dwarven-town-hall", {
@@ -1951,9 +1822,6 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"upgrade-required", "upgrade-faction-joruvellir",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 })
 
@@ -2136,7 +2004,6 @@ DefineUnitType("unit-dwarven-stronghold", {
 		}
 	},
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "throwing-axe"
 	}
 })
@@ -2174,9 +2041,6 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 			"file", "dwarf/buildings/mushroom_farm_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2215,9 +2079,6 @@ DefineUnitType("unit-dwarven-barracks", {
 			"file", "dwarf/buildings/barracks_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2255,9 +2116,6 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 			"file", "dwarf/buildings/lumber_mill_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2298,9 +2156,6 @@ DefineUnitType("unit-dwarven-smithy", {
 			"file", "dwarf/buildings/smithy_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2335,9 +2190,6 @@ DefineUnitType("unit-dwarven-masons-shop", {
 			"file", "dwarf/buildings/masons_shop_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2383,8 +2235,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 		}
 	},
 	Sounds = {
-		"selected", "yale-pen-selected",
-		"help", "basic-dwarf-voices-help-town"
+		"selected", "yale-pen-selected"
 	}
 } )
 
@@ -2420,9 +2271,6 @@ DefineUnitType("unit-dwarven-temple", {
 			"file", "dwarf/buildings/temple_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2459,9 +2307,6 @@ DefineUnitType("unit-dwarven-sentry-tower", {
 			"file", "dwarf/buildings/sentry_tower_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2505,7 +2350,6 @@ DefineUnitType("unit-dwarven-guard-tower", {
 		}
 	},
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "throwing-axe"
 	}
 } )
@@ -2546,7 +2390,6 @@ DefineUnitType("unit-dwarven-ballista-tower", {
 		}
 	},
 	Sounds = {
-		"help", "basic-dwarf-voices-help-town",
 		"fire-missile", "catapult-attack"
 	}
 } )
@@ -2582,9 +2425,6 @@ DefineUnitType("unit-dwarven-cannon-tower", {
 			"file", "dwarf/buildings/cannon_tower_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2619,9 +2459,6 @@ DefineUnitType("unit-dwarven-market", {
 			"file", "dwarf/buildings/market_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2655,9 +2492,6 @@ DefineUnitType("unit-dwarven-academy", {
 			"file", "dwarf/buildings/academy_snow.png",
 			"terrain", "snow"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
@@ -2697,9 +2531,6 @@ DefineUnitType("unit-dwarven-dock", {
 			"terrain", "shallow-water",
 			"terrain", "gray-shallow-water"
 		}
-	},
-	Sounds = {
-		"help", "basic-dwarf-voices-help-town"
 	}
 } )
 
