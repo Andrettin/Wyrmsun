@@ -1,0 +1,14 @@
+dock = {
+	frames = {
+		{
+			percent = 0
+			image_type = main
+			frame = 2
+		}
+		{
+			percent = 50
+			image_type = main
+			frame = 1
+		}
+	}
+}

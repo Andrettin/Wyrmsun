@@ -1,0 +1,11 @@
+land_building_1x1_simple = {
+	image_file = "neutral/buildings/land_construction_site_1x1.png"
+	frame_size = { 32 32 }
+	frames = {
+		{
+			percent = 0
+			image_type = construction
+			frame = 0
+		}
+	}
+}

@@ -2282,7 +2282,7 @@ DefineUnitType("unit-dwarven-sentry-tower", {
 	RepairCosts = {"lumber", 0},
 	FireResistance = 20,
 	HitPoints = 250, -- 300 with masonry
-	Construction = "construction-dwarven-sentry-tower",
+	Construction = "dwarven_sentry_tower",
 	Variations = {
 		{
 			"variation-id", "sentry-tower",

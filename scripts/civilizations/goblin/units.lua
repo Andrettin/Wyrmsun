@@ -860,7 +860,7 @@ DefineUnitType("unit-goblin-banner", {
 	NeutralMinimapColor = {128, 128, 0},
 	Animations = "animations-goblin-banner", Icon = "icon-goblin-banner",
 	Costs = {"time", 30, "copper", 200, "lumber", 300},
-	Construction = "construction-land-1x1-simple",
+	Construction = "land_building_1x1_simple",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
 	HitPoints = 40,

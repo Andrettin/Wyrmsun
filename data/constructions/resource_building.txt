@@ -1,0 +1,9 @@
+resource_building = {
+	frames = {
+		{
+			percent = 0
+			image_type = main
+			frame = 2
+		}
+	}
+}

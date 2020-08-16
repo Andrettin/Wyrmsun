@@ -735,7 +735,7 @@ DefineUnitType("unit-germanic-town-hall", {
 	Image = {"file", "germanic/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
-	Construction = "construction-germanic-town-hall",
+	Construction = "germanic_town_hall",
 	AiDrops = {"unit-boots"},
 	Variations = {
 		{

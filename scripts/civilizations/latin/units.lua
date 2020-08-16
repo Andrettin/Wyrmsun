@@ -145,7 +145,6 @@ DefineUnitType("unit-latin-town-hall", {
 	Image = {"file", "latin/buildings/forum.png", "size", {128, 128}},
 	Shadow = {"file", "latin/buildings/forum_shadow.png", "size", {128, 128}},
 	Icon = "icon-latin-forum",
-	Construction = "construction-land",
 	ButtonKey = "u",
 	AiDrops = {"unit-boots"},
 	Sounds = {

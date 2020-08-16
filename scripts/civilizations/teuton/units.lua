@@ -983,7 +983,7 @@ DefineUnitType("unit-teuton-town-hall", {
 			"shadow-file", "germanic/buildings/town_hall_shadow.png",
 			"icon", "icon-germanic-town-hall",
 			"animations", "animations-germanic-town-hall",
-			"construction", "construction-germanic-town-hall",
+			"construction", "germanic_town_hall",
 			"type-name", "Chieftain's Hall",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain-forbidden", "snow",
@@ -995,7 +995,7 @@ DefineUnitType("unit-teuton-town-hall", {
 			"shadow-file", "germanic/buildings/town_hall_shadow.png",
 			"icon", "icon-germanic-town-hall",
 			"animations", "animations-germanic-town-hall",
-			"construction", "construction-germanic-town-hall",
+			"construction", "germanic_town_hall",
 			"type-name", "Chieftain's Hall",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "dirt",
@@ -1010,7 +1010,7 @@ DefineUnitType("unit-teuton-town-hall", {
 			"shadow-file", "germanic/buildings/town_hall_shadow.png",
 			"icon", "icon-germanic-town-hall",
 			"animations", "animations-germanic-town-hall",
-			"construction", "construction-germanic-town-hall",
+			"construction", "germanic_town_hall",
 			"type-name", "Chieftain's Hall",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "snow"
@@ -1351,7 +1351,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 	Shadow = {"file", "teuton/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-masons-shop",
 	Animations = "animations-active-building",
-	Construction = "construction-land-active",
+	Construction = "land_building_active",
 	Variations = {
 		{
 			"variation-id", "masons-shop",

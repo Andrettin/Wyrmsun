@@ -1,0 +1,21 @@
+germanic_town_hall = {
+	image_file = "buildings/neutral/settlement_construction_site.png"
+	frame_size = { 128 128 }
+	frames = {
+		{
+			percent = 0
+			image_type = construction
+			frame = 0
+		}
+		{
+			percent = 25
+			image_type = construction
+			frame = 1
+		}
+		{
+			percent = 50
+			image_type = main
+			frame = 3
+		}
+	}
+}
