@@ -53,20 +53,6 @@ DefineButton( { Pos = 3, Icon = "icon-catapult-projectile-3",
 	}
 } )
 
--- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 7, Icon = "icon-goblin-gunpowder-infantry",
-	Action = "train-unit", Value = "unit-goblin-gunpowder-infantry",
-	Key = "p", Hint = "Train Gun~!powder Infantry", Popup = "popup_unit",
-	ForUnit = {"unit-goblin-mess-hall"}
-})
-
-DefineButton( { Pos = 2,
-	Action = "train-unit", Value = "unit-goblin-warship",
-	Key = "w", Hint = "Build ~!Warship", Popup = "popup_unit",
-	ForUnit = {"unit-goblin-dock"}
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Icon = "icon-goblin-broad-sword",

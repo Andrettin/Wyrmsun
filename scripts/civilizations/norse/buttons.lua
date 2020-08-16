@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Units ---------------------------------------------------------
-
-DefineButton( { Pos = 2,
-	Action = "train-unit", Value = "unit-norse-longship",
-	Key = "l", Hint = "Build ~!Longship", Popup = "popup_unit",
-	ForUnit = {"unit-norse-dock", "unit-teuton-dock"}
-})
-
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 6, Icon = "icon-odin",

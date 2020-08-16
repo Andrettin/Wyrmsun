@@ -7,3 +7,13 @@ build_transport_ship = {
 		dock
 	}
 }
+
+build_siege_warship = {
+	pos = 2
+	action = train_unit_class
+	value = siege_warship
+	popup = popup_unit
+	unit_classes = {
+		dock
+	}
+}

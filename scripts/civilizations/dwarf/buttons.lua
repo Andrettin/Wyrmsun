@@ -60,14 +60,6 @@ DefineButton( { Pos = 3, Icon = "icon-dwarven-ballista-bolt-3",
 	}
 } )
 
--- Units --------------------------------------------------------------
-
-DefineButton( { Pos = 2,
-	Action = "train-unit", Value = "unit-dwarven-ballista-warship",
-	Key = "b", Hint = "Build ~!Ballista Warship", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-dock"}
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Icon = "icon-dwarven-broad-axe",

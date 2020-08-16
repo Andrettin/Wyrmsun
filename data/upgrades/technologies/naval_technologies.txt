@@ -4,6 +4,7 @@ upgrade_sailing = {
 	civilization = neutral
 	icon = icon_sailing
 	description = "The invention of sails allows ships to take advantage of the wind to move faster.\n\nEffect: +1 Speed for ships."
+	button_key = s
 	costs = {
 		time = 200
 		copper = 500
@@ -48,6 +49,7 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 	requirements_string = "Sailing"
 	description = "Using the stars as guides for navigations allows ships to sail through the open seas with confidence, no longer needing to timidly sail along the coasts.\n\nEffect: +1 Speed for ships."
 	#instead of increasing ship speed, this technology could be a prerequisite for entering deep water tiles instead (when those are implemented in the game)
+	button_key = n
 	costs = {
 		time = 250
 		copper = 1500
@@ -95,6 +97,7 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 	requirements_string = "Celestial Navigation and Engineering"
 	description = "The invention of the compass made it possible for ships to navigate open seas with greater confidence.\n\nEffect: +1 Speed for ships."
 	#instead of increasing ship speed, this technology could be a prerequisite for entering ocean tiles instead (when those are implemented in the game); ocean tiles would be tiles of deeper water than deep water tiles
+	button_key = c
 	costs = {
 		time = 250
 		copper = 1500

@@ -1,0 +1,35 @@
+research_sailing = {
+	pos = 9
+	action = research_class
+	value = sailing
+	allowed = check_single_research
+	description = "+1 Speed for ships."
+	popup = popup_research
+	unit_classes = {
+		dock
+	}
+}
+
+research_celestial_navigation = {
+	pos = 10
+	action = research_class
+	value = celestial_navigation
+	allowed = check_single_research
+	description = "+1 Speed for ships."
+	popup = popup_research
+	unit_classes = {
+		dock
+	}
+}
+
+research_compass = {
+	pos = 11
+	action = research_class
+	value = compass
+	allowed = check_single_research
+	description = "+1 Speed for ships."
+	popup = popup_research
+	unit_classes = {
+		dock
+	}
+}

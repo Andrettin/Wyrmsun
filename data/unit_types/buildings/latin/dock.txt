@@ -5,4 +5,7 @@ unit_latin_dock = {
 	image_file = "buildings/latin/dock.png"
 	frame_size = { 96 99 }
 	icon = latin_dock
+	conditions = {
+		unit_class = lumber_mill
+	}
 }

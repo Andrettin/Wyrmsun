@@ -87,6 +87,7 @@ DefineModifier("upgrade-trading-company",
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-norse-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-dock"},
 	{"apply-to", "unit-norse-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}
@@ -104,6 +105,7 @@ DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships 
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-norse-market"},
 	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-dock"},
 	{"apply-to", "unit-norse-dock"},
 	{"apply-to", "unit-dwarven-dock"},
 	{"apply-to", "unit-goblin-dock"}

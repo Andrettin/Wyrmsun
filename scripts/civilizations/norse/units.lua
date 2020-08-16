@@ -127,9 +127,7 @@ DefineUnitType("unit-norse-longship", {
 	Missile = "missile-catapult-sandstone-rock",
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
-	Sounds = {
---		"help", "basic-norse-voices-help"
-	}
+	ButtonKey = "l"
 })
 
 DefineUnitType("unit-norse-town-hall", {
