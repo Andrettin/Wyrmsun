@@ -1,0 +1,7 @@
+icon_gold_deposit = {
+	file = "icons/buildings/neutral/gold_deposit.png"
+}
+
+icon_gold_mine = {
+	file = "icons/buildings/neutral/gold_mine.png"
+}

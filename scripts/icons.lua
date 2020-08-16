@@ -662,18 +662,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-gold-deposit",
-	Size = {46, 38},
-	File = "neutral/icons/gold_deposit.png"
-})
-
-DefineIcon({
-	Name = "icon-gold-mine",
-	Size = {46, 38},
-	File = "neutral/icons/gold_mine.png"
-})
-
-DefineIcon({
 	Name = "icon-silver-deposit",
 	Size = {46, 38},
 	File = "neutral/icons/silver_deposit.png"

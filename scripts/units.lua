@@ -522,8 +522,7 @@ DefineUnitType("unit-gold-deposit", {
 	Name = "Gold Deposit",
 	Parent = "unit-template-deposit",
 	Description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place.",
-	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
+	Image = {"file", "buildings/neutral/gold_deposit.png", "size", {96, 96}},
 	Icon = "icon-gold-deposit",
 	GivesResource = "gold",
 	Variations = {
@@ -555,9 +554,7 @@ DefineUnitType("unit-gold-mine", {
 	Class = "gold_mine",
 	Civilization = "neutral",
 	Description = "Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for.",
-	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
-	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
+	Image = {"file", "buildings/neutral/gold_mine.png", "size", {96, 96}},
 	Icon = "icon-gold-mine",
 --	Costs = {"time", 200, "copper", 700, "lumber", 450},
 	Costs = {"time", 200, "lumber", 2050},
@@ -590,8 +587,7 @@ DefineUnitType("unit-gold-mine", {
 		},
 		{
 			"variation-id", "rail-gold-mine",
-			"file", "neutral/buildings/gold_mine_rail.png",
-			"light-file", "neutral/buildings/gold_mine_rail_light.png",
+			"file", "buildings/neutral/gold_mine_rail.png",
 			"upgrade-required", "upgrade-engineering",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
@@ -990,7 +986,7 @@ DefineUnitType("unit-emerald-deposit", {
 	Parent = "unit-template-deposit",
 --	Description = "Emerald deposits contain deep sources of emeralds, which can be gainfully mined after the proper infrastructure is put into place.",
 	Image = {"file", "neutral/buildings/emerald_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
+	Shadow = {"file", "buildings/neutral/gold_deposit_shadow.png", "size", {96, 96}},
 	Icon = "icon-emerald-deposit",
 	GivesResource = "emeralds"
 } )
@@ -1002,8 +998,8 @@ DefineUnitType("unit-emerald-mine", {
 	Civilization = "neutral",
 --	Description = "Emeralds are valuable gems, and can be mined for high profits.",
 	Image = {"file", "neutral/buildings/emerald_mine.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
-	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
+	Shadow = {"file", "buildings/neutral/gold_mine_shadow.png", "size", {96, 96}},
+	LightImage = {"file", "buildings/neutral/gold_mine_light.png"},
 	Icon = "icon-emerald-mine",
 	Costs = {"time", 200, "lumber", 2050},
 	BuildingRules = { "and", { "ontop", { Type = "unit-emerald-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
