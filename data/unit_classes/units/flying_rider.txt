@@ -1,0 +1,13 @@
+flying_rider = {
+	name = "Flying Rider"
+	
+	conditions = {
+		or = {
+			and = {
+				unit_class = stronghold
+				unit_class = lumber_mill
+			}
+			upgrade = upgrade_mercenary_company
+		}
+	}
+}

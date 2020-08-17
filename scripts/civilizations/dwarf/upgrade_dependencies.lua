@@ -77,10 +77,6 @@ DefineDependency("upgrade-dwarven-ballista-bolt-2",
 	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}
 )
 
-DefineDependency("unit-dwarven-stronghold",
-	{"unit-dwarven-barracks", "upgrade-masonry"}, "or", {"unit-gnomish-barracks", "upgrade-masonry"}
-)
-
 DefineDependency("upgrade-dwarven-coinage",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}, "or", {"upgrade-mercenary-company"}
 )
@@ -180,10 +176,6 @@ DefinePredependency("unit-dwarven-dock",
 
 DefinePredependency("unit-dwarven-gryphon-rider",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
-)
-
-DefineDependency("unit-dwarven-gryphon-rider",
-	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-dwarven-miner",

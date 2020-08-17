@@ -1,0 +1,9 @@
+stronghold = {
+	name = "Stronghold"
+	town_hall = true
+	
+	conditions = {
+		unit_class = barracks
+		upgrade_class = masonry
+	}
+}

@@ -1,5 +1,12 @@
 glider = {
 	name = "Glider"
+	
+	conditions = {
+		or = {
+			unit_class = lumber_mill
+			upgrade = upgrade_mercenary_company
+		}
+	}
 }
 
 flying_machine = {

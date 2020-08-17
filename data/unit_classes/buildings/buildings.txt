@@ -3,11 +3,6 @@ town_hall = {
 	town_hall = true
 }
 
-stronghold = {
-	name = "Stronghold"
-	town_hall = true
-}
-
 fortress = {
 	name = "Fortress"
 	town_hall = true

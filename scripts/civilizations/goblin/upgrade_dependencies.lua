@@ -61,20 +61,12 @@ DefinePredependency("unit-goblin-glider",
 	{"upgrade-goblin-civilization"}
 )
 
-DefineDependency("unit-goblin-glider",
-	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
-)
-
 DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear", "upgrade_ironworking"}
 )
 
 DefineDependency("unit-goblin-shaman",
 	{"upgrade-deity-gathaarl"}
-)
-
-DefineDependency("unit-goblin-stronghold",
-	{"unit-goblin-mess-hall", "upgrade-masonry"}
 )
 
 DefineDependency("upgrade-goblin-bodkin-arrow",
