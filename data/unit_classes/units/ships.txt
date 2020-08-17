@@ -1,7 +1,0 @@
-transport_ship = {
-	name = "Transport Ship"
-}
-
-siege_warship = {
-	name = "Siege Warship"
-}

@@ -25,11 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDependency("unit-norse-longship",
-	{"unit-norse-smithy", "unit-norse-lumber-mill", "upgrade-engineering"},
-	"or", {"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}
-)
-
 DefineDependency("unit-norse-temple",
 	{"unit-norse-lumber-mill"}
 )

@@ -132,11 +132,3 @@ DefineDependency("upgrade-goblin-coinage",
 DefineDependency("upgrade-goblin-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
-
-DefineDependency("unit-goblin-transport-ship",
-	{"unit-goblin-lumber-mill"}, "or", {"upgrade-trading-company"}
-)
-
-DefineDependency("unit-goblin-warship",
-	{"unit-goblin-smithy", "unit-goblin-lumber-mill", "upgrade-engineering"}
-)

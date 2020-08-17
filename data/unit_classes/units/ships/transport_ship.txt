@@ -1,0 +1,10 @@
+transport_ship = {
+	name = "Transport Ship"
+	
+	conditions = {
+		or = {
+			unit_class = lumber_mill
+			upgrade = upgrade_trading_company
+		}
+	}
+}

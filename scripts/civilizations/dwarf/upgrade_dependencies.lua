@@ -237,15 +237,6 @@ DefinePredependency("unit-dwarven-dock",
 	"or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("unit-dwarven-transport-ship",
-	{"unit-dwarven-lumber-mill"}, "or", {"upgrade-trading-company"}
-)
-
-DefineDependency("unit-dwarven-ballista-warship",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
-	"or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"}
-)
-
 DefinePredependency("unit-dwarven-gryphon-rider",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )

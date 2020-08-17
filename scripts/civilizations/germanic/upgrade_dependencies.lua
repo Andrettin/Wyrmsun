@@ -73,10 +73,6 @@ DefinePredependency("unit-germanic-dock",
 	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
-DefineDependency("unit-germanic-transport-ship",
-	{"unit-germanic-carpenters-shop"}, "or", {"upgrade-trading-company"}
-)
-
 DefineDependency("upgrade_teutonic_civilization",
 	{"upgrade_ironworking"}
 )
