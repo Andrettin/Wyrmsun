@@ -49,10 +49,6 @@ university = {
 	name = "University"
 }
 
-dock = {
-	name = "Dock"
-}
-
 watch_tower = {
 	name = "Watch Tower"
 }

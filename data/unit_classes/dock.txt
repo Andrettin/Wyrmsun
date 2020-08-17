@@ -1,0 +1,7 @@
+dock = {
+	name = "Dock"
+	
+	conditions = {
+		unit_class = lumber_mill
+	}
+}

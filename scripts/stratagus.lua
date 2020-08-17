@@ -2007,7 +2007,6 @@ Units = {
 	"unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-market",
 	"unit-dwarven-academy",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower", "unit-dwarven-ballista-tower", "unit-dwarven-cannon-tower",
-	"unit-dwarven-dock",
 	"unit-dwarven-wall",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-long-spear", "upgrade-dwarven-pike",

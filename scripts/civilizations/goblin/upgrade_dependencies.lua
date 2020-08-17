@@ -109,10 +109,6 @@ DefineDependency("unit-goblin-shaman",
 	{"upgrade-deity-gathaarl"}
 )
 
-DefineDependency("unit-goblin-dock",
-	{"unit-goblin-lumber-mill"}
-)
-
 DefineDependency("unit-goblin-stronghold",
 	{"unit-goblin-mess-hall", "upgrade-masonry"}
 )

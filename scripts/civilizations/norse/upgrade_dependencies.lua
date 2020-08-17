@@ -34,10 +34,6 @@ DefineDependency("unit-norse-temple",
 	{"unit-norse-lumber-mill"}
 )
 
-DefineDependency("unit-norse-dock",
-	{"unit-norse-lumber-mill"}
-)
-
 DefineDependency("unit-norse-market",
 	{"unit-norse-lumber-mill"}
 )
