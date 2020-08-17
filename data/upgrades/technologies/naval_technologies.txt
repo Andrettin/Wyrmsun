@@ -84,9 +84,6 @@ upgrade_celestial_navigation = { #Source: Isaac Asimov, "Cronologia das Ciência
 			unit_teuton_kogge
 		}
 	}
-	conditions = {
-		upgrade = upgrade_sailing
-	}
 }
 
 upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
@@ -131,9 +128,5 @@ upgrade_compass = { #Source: Isaac Asimov, "Cronologia das Ciências e das Desco
 			unit_goblin_transport_ship
 			unit_teuton_kogge
 		}
-	}
-	conditions = {
-		upgrade = upgrade_celestial_navigation
-		upgrade = upgrade_engineering
 	}
 }

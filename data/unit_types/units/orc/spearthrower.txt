@@ -31,10 +31,4 @@ unit_orc_spearthrower = {
 		fire_missile = throw_weapon
 		miss = attack_miss
 	}
-	conditions = {
-		or = {
-			unit_class = lumber_mill
-			upgrade = upgrade_mercenary_company
-		}
-	}
 }

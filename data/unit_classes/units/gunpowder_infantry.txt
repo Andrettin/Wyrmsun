@@ -1,0 +1,11 @@
+gunpowder_infantry = {
+	name = "Gunpowder Infantry"
+	
+	conditions = {
+		or = {
+			unit_class = smithy
+			upgrade = upgrade_mercenary_company
+		}
+		upgrade_class = gunpowder
+	}
+}

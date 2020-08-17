@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDependency("unit-teuton-gunpowder-infantry",
-	{"unit-teuton-smithy", "upgrade_gunpowder"}, "or", {"unit-latin-smithy", "upgrade_gunpowder"}, "or", {"unit-norse-smithy", "upgrade_gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade_gunpowder"}
-)
-
 DefineDependency("unit-teuton-guard-tower",
 	{"unit-teuton-lumber-mill", "upgrade-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-masonry"}
 )

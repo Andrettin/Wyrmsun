@@ -26,10 +26,6 @@ heroic_spearman = {
 	name = "Heroic Spearman"
 }
 
-gunpowder_infantry = {
-	name = "Gunpowder Infantry"
-}
-
 marine_infantry = {
 	name = "Marine Infantry"
 }

@@ -53,10 +53,6 @@ DefinePredependency("unit-dwarven-thunderer",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("unit-dwarven-thunderer",
-	{"unit-dwarven-smithy", "upgrade_gunpowder"}, "or", {"unit-brising-smithy", "upgrade_gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade_gunpowder"}
-)
-
 DefineDependency("upgrade-dwarven-great-axe",
 	{"upgrade-dwarven-broad-axe", "upgrade_ironworking"}
 )
