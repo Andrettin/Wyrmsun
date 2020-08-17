@@ -37,10 +37,6 @@ DefinePredependency("unit-goblin-archer",
 	{"upgrade-goblin-civilization"}
 )
 
-DefineDependency("unit-goblin-archer",
-	{"unit-goblin-lumber-mill"}, "or", {"upgrade-mercenary-company"}
-)
-
 DefinePredependency("unit-goblin-gunpowder-infantry",
 	{"upgrade-goblin-civilization"}
 )

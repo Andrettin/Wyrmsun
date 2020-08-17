@@ -26,18 +26,6 @@ heroic_spearman = {
 	name = "Heroic Spearman"
 }
 
-shooter = {
-	name = "Shooter"
-}
-
-veteran_shooter = {
-	name = "Veteran Shooter"
-}
-
-heroic_shooter = {
-	name = "Heroic Shooter"
-}
-
 gunpowder_infantry = {
 	name = "Gunpowder Infantry"
 }

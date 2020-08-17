@@ -4,6 +4,6 @@ siege_warship = {
 	conditions = {
 		unit_class = smithy
 		unit_class = lumber_mill
-		upgrade = upgrade_engineering
+		upgrade_class = engineering
 	}
 }

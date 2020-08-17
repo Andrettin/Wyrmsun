@@ -1,0 +1,18 @@
+shooter = {
+	name = "Shooter"
+	
+	conditions = {
+		or = {
+			unit_class = lumber_mill
+			upgrade = upgrade_mercenary_company
+		}
+	}
+}
+
+veteran_shooter = {
+	name = "Veteran Shooter"
+}
+
+heroic_shooter = {
+	name = "Heroic Shooter"
+}

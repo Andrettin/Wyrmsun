@@ -37,10 +37,6 @@ market = {
 	name = "Market"
 }
 
-stables = {
-	name = "Stables"
-}
-
 temple = {
 	name = "Temple"
 }

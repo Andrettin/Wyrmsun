@@ -1,0 +1,7 @@
+stables = {
+	name = "Stables"
+	
+	conditions = {
+		unit_class = lumber_mill
+	}
+}

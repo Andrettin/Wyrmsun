@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDependency("unit-teuton-archer",
-	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}, "or", {"upgrade-mercenary-company"}
-)
-
 DefineDependency("unit-teuton-gunpowder-infantry",
 	{"unit-teuton-smithy", "upgrade_gunpowder"}, "or", {"unit-latin-smithy", "upgrade_gunpowder"}, "or", {"unit-norse-smithy", "upgrade_gunpowder"}, "or", {"upgrade-mercenary-company", "upgrade_gunpowder"}
 )
@@ -95,10 +91,6 @@ DefineDependency("upgrade-teuton-coinage",
 
 DefineDependency("upgrade-teuton-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
-)
-
-DefineDependency("unit-teuton-stables",
-	{"unit-teuton-lumber-mill"}, "or", {"unit-norse-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-ritter",
