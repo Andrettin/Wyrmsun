@@ -1,5 +1,15 @@
 cavalry = {
 	name = "Cavalry"
+	
+	conditions = {
+		or = {
+			and = {
+				unit_class = smithy
+				unit_class = stables
+			}
+			upgrade = upgrade_mercenary_company
+		}
+	}
 }
 
 heroic_cavalry = {

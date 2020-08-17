@@ -407,11 +407,9 @@ DefineDependency("unit-ring",
 Load("scripts/upgrade_deity_dependencies.lua")
 
 Load("scripts/civilizations/dwarf/upgrade_dependencies.lua")
-Load("scripts/civilizations/frankish/upgrade_dependencies.lua")
 Load("scripts/civilizations/germanic/upgrade_dependencies.lua")
 Load("scripts/civilizations/gnome/upgrade_dependencies.lua")
 Load("scripts/civilizations/goblin/upgrade_dependencies.lua")
-Load("scripts/civilizations/goth/upgrade_dependencies.lua")
 Load("scripts/civilizations/kobold/upgrade_dependencies.lua")
 Load("scripts/civilizations/norse/upgrade_dependencies.lua")
 Load("scripts/civilizations/teuton/upgrade_dependencies.lua")

@@ -148,19 +148,11 @@ DefinePredependency("unit-dwarven-yale-rider",
 	"or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("unit-dwarven-yale-rider",
-	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"upgrade-mercenary-company"}
-)
-
 DefinePredependency("unit-joruvellir-yale-rider",
 	{"upgrade-faction-goldhoof-clan"},
 	"or", {"upgrade-faction-eikinskjaldi-clan"},
 	"or", {"upgrade-faction-joruvellir"},
 	"or", {"upgrade-faction-yawning-yales"}
-)
-
-DefineDependency("unit-joruvellir-yale-rider",
-	{"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}, "or", {"upgrade-mercenary-company"}
 )
 
 DefinePredependency("unit-dwarven-town-hall",

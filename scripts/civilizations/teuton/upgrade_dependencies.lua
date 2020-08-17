@@ -93,10 +93,6 @@ DefineDependency("upgrade-teuton-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
 
-DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables"}, "or", {"unit-latin-smithy", "unit-latin-stables"}, "or", {"unit-norse-smithy", "unit-teuton-stables"}, "or", {"upgrade-mercenary-company"}
-)
-
 DefineDependency("unit-teuton-temple",
 	{"unit-teuton-lumber-mill"}
 )
