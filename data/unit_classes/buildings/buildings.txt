@@ -33,20 +33,8 @@ masons_shop = {
 	name = "Mason's Shop"
 }
 
-university = {
-	name = "University"
-}
-
 watch_tower = {
 	name = "Watch Tower"
-}
-
-guard_tower = {
-	name = "Guard Tower"
-}
-
-heavy_tower = {
-	name = "Heavy Tower"
 }
 
 cannon_tower = {
@@ -59,10 +47,6 @@ banner = {
 
 palisade = {
 	name = "Palisade"
-}
-
-wall = {
-	name = "Wall"
 }
 
 road = {

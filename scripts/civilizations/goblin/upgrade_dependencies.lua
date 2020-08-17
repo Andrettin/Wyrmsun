@@ -49,24 +49,8 @@ DefineDependency("upgrade-goblin-embossed-shield",
 	{"upgrade-goblin-rimmed-shield", "upgrade_ironworking"}
 )
 
-DefineDependency("unit-goblin-guard-tower",
-	{"unit-goblin-lumber-mill", "upgrade-masonry"}
-)
-
-DefineDependency("unit-goblin-catapult-tower",
-	{"unit-goblin-lumber-mill", "unit-goblin-smithy", "upgrade-masonry", "upgrade-engineering"}
-)
-
-DefineDependency("unit-goblin-wall",
-	{"upgrade-masonry"}
-)
-
 DefinePredependency("unit-goblin-war-machine",
 	{"upgrade-goblin-civilization"}
-)
-
-DefineDependency("unit-goblin-war-machine",
-	{"unit-goblin-smithy", "unit-goblin-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-goblin-thief",
@@ -83,10 +67,6 @@ DefineDependency("unit-goblin-glider",
 
 DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear", "upgrade_ironworking"}
-)
-
-DefineDependency("unit-goblin-academy",
-	{"upgrade-writing"}
 )
 
 DefineDependency("unit-goblin-shaman",

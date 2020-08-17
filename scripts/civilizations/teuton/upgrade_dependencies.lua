@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDependency("unit-teuton-guard-tower",
-	{"unit-teuton-lumber-mill", "upgrade-masonry"}, "or", {"unit-norse-lumber-mill", "upgrade-masonry"}
-)
-
-DefineDependency("unit-teuton-catapult-tower",
-	{"unit-teuton-lumber-mill", "unit-teuton-smithy", "upgrade-masonry", "upgrade-engineering"}
-)
-
-DefineDependency("unit-teuton-wall",
-	{"upgrade-masonry"}
-)
-
-DefineDependency("unit-teuton-catapult",
-	{"unit-teuton-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill", "upgrade-engineering"}, "or", {"unit-norse-smithy", "unit-norse-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
-)
-
 DefinePredependency("upgrade-teuton-spatha",
 	{"upgrade-frankish-civilization", 0}
 )
@@ -87,10 +71,6 @@ DefineDependency("upgrade-teuton-coinage",
 
 DefineDependency("upgrade-teuton-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
-)
-
-DefineDependency("unit-teuton-university",
-	{"upgrade-writing"}
 )
 
 DefineDependency("unit-teuton-priest",

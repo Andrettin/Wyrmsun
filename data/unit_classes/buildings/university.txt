@@ -1,0 +1,7 @@
+university = {
+	name = "University"
+	
+	conditions = {
+		upgrade_class = writing
+	}
+}

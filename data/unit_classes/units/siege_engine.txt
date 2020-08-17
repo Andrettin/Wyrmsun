@@ -1,0 +1,14 @@
+siege_engine = {
+	name = "Siege Engine"
+	
+	conditions = {
+		or = {
+			and = {
+				unit_class = smithy
+				unit_class = lumber_mill
+			}
+			upgrade = upgrade_mercenary_company
+		}
+		upgrade_class = engineering
+	}
+}

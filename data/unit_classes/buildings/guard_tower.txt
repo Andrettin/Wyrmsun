@@ -1,0 +1,8 @@
+guard_tower = {
+	name = "Guard Tower"
+	
+	conditions = {
+		unit_class = lumber_mill
+		upgrade_class = masonry
+	}
+}

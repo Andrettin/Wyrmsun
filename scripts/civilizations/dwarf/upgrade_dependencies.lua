@@ -89,17 +89,8 @@ DefineDependency("upgrade-dwarven-alchemy",
 	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
 )
 
-DefineDependency("unit-dwarven-guard-tower",
-	{"unit-dwarven-lumber-mill", "upgrade-masonry"}
-)
-
 DefinePredependency("unit-dwarven-ballista-tower",
 	{"upgrade_gunpowder", 0}
-)
-
-DefineDependency("unit-dwarven-ballista-tower",
-	{"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "upgrade-masonry", "upgrade-engineering"},
-	"or", {"unit-dwarven-lumber-mill", "unit-brising-smithy", "upgrade-masonry", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-dwarven-cannon-tower",
@@ -116,18 +107,8 @@ DefinePredependency("unit-dwarven-wall",
 	"or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("unit-dwarven-wall",
-	{"upgrade-masonry"}
-)
-
 DefinePredependency("unit-dwarven-ballista",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
-)
-
-DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
-	"or", {"unit-brising-smithy", "unit-dwarven-lumber-mill", "upgrade-engineering"},
-	"or", {"upgrade-mercenary-company", "upgrade-engineering"}
 )
 
 DefinePredependency("unit-dwarven-yale-pen",
@@ -186,10 +167,6 @@ DefinePredependency("unit-dwarven-market",
 DefinePredependency("unit-dwarven-academy",
 	{"upgrade-dwarven-civilization"},
 	"or", {"upgrade-gnomish-civilization"}
-)
-
-DefineDependency("unit-dwarven-academy",
-	{"upgrade-dwarven-runewriting"}
 )
 
 DefineDependency("unit-dwarven-witness",

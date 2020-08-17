@@ -1,0 +1,7 @@
+wall = {
+	name = "Wall"
+	
+	conditions = {
+		upgrade_class = masonry
+	}
+}

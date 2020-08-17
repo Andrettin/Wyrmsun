@@ -1,0 +1,10 @@
+heavy_tower = {
+	name = "Heavy Tower"
+	
+	conditions = {
+		unit_class = lumber_mill
+		unit_class = smithy
+		upgrade_class = masonry
+		upgrade_class = engineering
+	}
+}
