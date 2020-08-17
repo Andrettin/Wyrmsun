@@ -49,16 +49,8 @@ DefinePredependency("unit-germanic-temple",
 	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
-DefineDependency("unit-germanic-temple",
-	{"unit-germanic-carpenters-shop"}
-)
-
 DefinePredependency("unit-germanic-market",
 	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefineDependency("unit-germanic-market",
-	{"unit-germanic-carpenters-shop"}
 )
 
 DefineDependency("unit-germanic-priest",

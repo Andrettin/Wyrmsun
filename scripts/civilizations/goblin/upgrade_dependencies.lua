@@ -89,14 +89,6 @@ DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear", "upgrade_ironworking"}
 )
 
-DefineDependency("unit-goblin-temple",
-	{"unit-goblin-lumber-mill"}
-)
-
-DefineDependency("unit-goblin-market",
-	{"unit-goblin-lumber-mill"}
-)
-
 DefineDependency("unit-goblin-academy",
 	{"upgrade-writing"}
 )

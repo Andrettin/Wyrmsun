@@ -1,0 +1,7 @@
+market = {
+	name = "Market"
+	
+	conditions = {
+		unit_class = lumber_mill
+	}
+}

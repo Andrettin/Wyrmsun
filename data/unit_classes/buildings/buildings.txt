@@ -33,14 +33,6 @@ masons_shop = {
 	name = "Mason's Shop"
 }
 
-market = {
-	name = "Market"
-}
-
-temple = {
-	name = "Temple"
-}
-
 university = {
 	name = "University"
 }

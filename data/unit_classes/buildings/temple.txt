@@ -1,0 +1,7 @@
+temple = {
+	name = "Temple"
+	
+	conditions = {
+		unit_class = lumber_mill
+	}
+}

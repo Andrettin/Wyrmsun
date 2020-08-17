@@ -182,17 +182,9 @@ DefinePredependency("unit-dwarven-temple",
 	"or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("unit-dwarven-temple",
-	{"unit-dwarven-lumber-mill"}
-)
-
 DefinePredependency("unit-dwarven-market",
 	{"upgrade-dwarven-civilization"},
 	"or", {"upgrade-gnomish-civilization"}
-)
-
-DefineDependency("unit-dwarven-market",
-	{"unit-dwarven-lumber-mill"}
 )
 
 DefinePredependency("unit-dwarven-academy",
