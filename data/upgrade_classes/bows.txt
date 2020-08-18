@@ -4,4 +4,8 @@ composite_bow = {
 
 longbow = {
 	name = "Longbow"
+
+	conditions = {
+		upgrade_class = composite_bow
+	}
 }
