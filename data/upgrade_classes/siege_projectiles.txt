@@ -1,7 +1,24 @@
 siege_projectile_1 = {
 	name = "Siege Projectile I"
+
+	conditions = {
+		or = {
+			unit_class = lumber_mill
+			upgrade = upgrade_mercenary_company
+		}
+		upgrade_class = engineering
+	}
 }
 
 siege_projectile_2 = {
 	name = "Siege Projectile II"
+
+	conditions = {
+		or = {
+			unit_class = lumber_mill
+			upgrade = upgrade_mercenary_company
+		}
+		upgrade_class = siege_projectile_1
+		upgrade_class = ironworking
+	}
 }

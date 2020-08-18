@@ -1,3 +1,10 @@
 coinage = {
 	name = "Coinage"
+
+	conditions = {
+		or = {
+			unit_class = smithy
+			upgrade = upgrade_mercenary_company
+		}
+	}
 }

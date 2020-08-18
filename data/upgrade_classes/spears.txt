@@ -4,4 +4,9 @@ long_spear = {
 
 pike = {
 	name = "Pike"
+
+	conditions = {
+		upgrade_class = long_spear
+		upgrade_class = ironworking
+	}
 }

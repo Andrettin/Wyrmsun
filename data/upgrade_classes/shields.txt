@@ -4,4 +4,9 @@ bronze_shield = {
 
 iron_shield = {
 	name = "Iron Shield"
+
+	conditions = {
+		upgrade_class = bronze_shield
+		upgrade_class = ironworking
+	}
 }

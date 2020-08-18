@@ -53,38 +53,6 @@ DefinePredependency("unit-dwarven-thunderer",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
-DefineDependency("upgrade-dwarven-great-axe",
-	{"upgrade-dwarven-broad-axe", "upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-dwarven-pike",
-	{"upgrade-dwarven-long-spear", "upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-dwarven-shield-2",
-	{"upgrade-dwarven-shield-1", "upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-dwarven-bearded-throwing-axe",
-	{"upgrade-dwarven-sharp-throwing-axe", "upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-dwarven-ballista-bolt-1",
-	{"unit-dwarven-lumber-mill", "upgrade-engineering"}, "or", {"upgrade-mercenary-company", "upgrade-engineering"}
-)
-
-DefineDependency("upgrade-dwarven-ballista-bolt-2",
-	{"unit-dwarven-lumber-mill", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}, "or", {"upgrade-mercenary-company", "upgrade-dwarven-ballista-bolt-1", "upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-dwarven-coinage",
-	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}, "or", {"upgrade-mercenary-company"}
-)
-
-DefineDependency("upgrade-dwarven-alchemy",
-	{"upgrade-philosophy", "upgrade-mathematics", "upgrade_ironworking"}
-)
-
 DefinePredependency("unit-dwarven-ballista-tower",
 	{"upgrade_gunpowder", 0}
 )

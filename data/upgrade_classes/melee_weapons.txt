@@ -4,4 +4,9 @@ melee_weapon_1 = {
 
 melee_weapon_2 = {
 	name = "Melee Weapon II"
+
+	conditions = {
+		upgrade_class = melee_weapon_1
+		upgrade_class = ironworking
+	}
 }

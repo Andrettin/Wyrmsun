@@ -1,5 +1,11 @@
 alchemy = {
 	name = "Alchemy"
+
+	conditions = {
+		upgrade_class = philosophy
+		upgrade_class = mathematics
+		upgrade_class = ironworking
+	}
 }
 
 gunpowder = {

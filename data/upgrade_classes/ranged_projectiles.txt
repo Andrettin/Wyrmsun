@@ -4,4 +4,9 @@ ranged_projectile_1 = {
 
 ranged_projectile_2 = {
 	name = "Ranged Projectile II"
+
+	conditions = {
+		upgrade_class = ranged_projectile_1
+		upgrade_class = ironworking
+	}
 }

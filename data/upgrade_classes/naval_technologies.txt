@@ -7,7 +7,7 @@ celestial_navigation = {
 
 	conditions = {
 		upgrade_class = sailing
-	}	
+	}
 }
 
 compass = {
