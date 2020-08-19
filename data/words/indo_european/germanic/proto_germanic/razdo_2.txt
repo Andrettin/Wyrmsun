@@ -1,0 +1,10 @@
+razdo_2 = { #Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	name = "Razdō"
+	language = proto_germanic
+	type = noun
+	gender = feminine
+	meanings = {
+		"Food"
+		"Meal"
+	}
+}

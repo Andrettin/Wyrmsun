@@ -82,12 +82,6 @@ DefineLanguageWord("Olca", { -- Source: Guus Kroonen, "Etymological Dictionary o
 	Meanings = {"Arable Land"}
 })
 
-DefineLanguageWord("Rêda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 175.
-	Language = "gaulish",
-	Type = "noun",
-	Meanings = {"Wagon"} -- source gives the German "Wagen" as the meaning
-})
-
 DefineLanguageWord("Ritu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
 	Language = "gaulish",
 	Type = "noun",

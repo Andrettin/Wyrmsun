@@ -1,0 +1,8 @@
+nurtha_noun = { #source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	name = "Nurþa"
+	language = proto_germanic
+	type = noun
+	meanings = {
+		"North" #source gives the German "Nord" as the meaning
+	}
+}

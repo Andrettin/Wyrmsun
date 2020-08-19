@@ -51,7 +51,6 @@ DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal ver
 	Type = "adjective",
 	Meanings = {"Larger"}, -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
 	DerivesFrom = {"old-norse", "adjective", "Meiri"}, -- presumably
-	Replaces = {"old-norse", "adjective", "Meiri"},
 	ComparisonDegreeCaseInflections = {
 		"comparative", "Mēre"
 	}
@@ -80,6 +79,5 @@ DefineLanguageWord("Vī", { -- source gives "Vī(r)"; Source: Sean Crist, "An An
 	Type = "pronoun",
 	Meanings = {"We"},
 	DerivesFrom = {"old-norse", "pronoun", "Vēr"},
-	Replaces = {"old-norse", "pronoun", "Vēr"},
 	Nominative = "Vī"
 })

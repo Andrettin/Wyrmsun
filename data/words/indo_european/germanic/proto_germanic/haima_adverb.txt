@@ -3,6 +3,6 @@ haima_adverb = { #accusative; Source: August Fick and Alf Torp, "Wortschatz der 
 	language = proto_germanic
 	type = adverb
 	meanings = {
-		"(To) Home" #source gives the German "nach Hause" as the meaning
+		"Home" #source gives the German "nach Hause" as the meaning
 	}
 }

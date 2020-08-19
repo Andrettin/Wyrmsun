@@ -1,0 +1,8 @@
+nurtha_adverb = { #source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	name = "Nurþa"
+	language = proto_germanic
+	type = adverb
+	meanings = {
+		"Northward" #source gives the German "nördlich" as the meaning, and since it is given as an adverb, "northward" seems like the best translation to English
+	}
+}

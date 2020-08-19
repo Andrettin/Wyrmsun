@@ -1148,18 +1148,6 @@ DefineLanguageWord("Nistǒs", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {}
 })
 
-DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"North"} -- source gives the German "Nord" as the meaning
-})
-
-DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
-	Language = "proto-germanic",
-	Type = "adverb",
-	Meanings = {"North"} -- source gives the German "nördlich" as the meaning
-})
-
 DefineLanguageWord("Ôsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1172,20 +1160,6 @@ DefineLanguageWord("Penna", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Pointed Tack", "Pin"}, -- source gives the German "(Spitz) Zwecke, Pinne"
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Voice", "Sound"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Food", "Meal"},
-	Gender = "feminine"
 })
 
 DefineLanguageWord("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -1201,13 +1175,6 @@ DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Right", "Straight"}
 })
 
-DefineLanguageWord("Rêda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Counsel", "Council"}, -- source gives the German "Rat"
-	Gender = "masculine" -- alternatively also neuter
-})
-
 DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 169.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1218,20 +1185,6 @@ DefineLanguageWord("Rīdan", { -- Source: Guus Kroonen, "Etymological Dictionary
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Ride", "Move", "Swing", "Rock"}
-})
-
-DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
-})
-
-DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Powerful"}, -- source gives the German "mächtig" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
 })
 
 DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -1448,18 +1401,6 @@ DefineLanguageWord("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Sun"}
-})
-
-DefineLanguageWord("Sunþa", { -- source also gives the alternative form "Sunþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"South"} -- source gives the German "Süd" as the meaning
-})
-
-DefineLanguageWord("Sunþa", { -- source also gives the alternative form "Sunþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Language = "proto-germanic",
-	Type = "adverb",
-	Meanings = {"Southward"} -- source gives the German "südwärts" as the meaning
 })
 
 DefineLanguageWord("Surgên", { -- source gives "S(v)urgên"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

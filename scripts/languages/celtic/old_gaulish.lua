@@ -30,7 +30,7 @@ DefineLanguageWord("Rîx", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"King"}, -- source gives the German "König" as the meaning
 	-- present in "Dumno-rîx"
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"},
+	DerivesFrom = {"proto-indo-european", "none", "Reĝ"},
 	NumberCaseInflections = {
 		"singular", "genitive", "Rîgis"
 	}

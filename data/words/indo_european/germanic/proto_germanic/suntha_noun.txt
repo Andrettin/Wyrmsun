@@ -1,0 +1,8 @@
+suntha_noun = { #source also gives the alternative form "Sunþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	name = "Sunþa"
+	language = proto_germanic
+	type = noun
+	meanings = {
+		"South" #source gives the German "Süd" as the meaning
+	}
+}

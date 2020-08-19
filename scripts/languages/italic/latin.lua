@@ -512,7 +512,7 @@ DefineLanguageWord("Rêx", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "latin",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
+	DerivesFrom = {"proto-indo-european", "none", "Reĝ"}
 })
 
 DefineLanguageWord("Saeta", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.

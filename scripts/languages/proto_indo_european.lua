@@ -277,12 +277,6 @@ DefineLanguageWord("Pryx", { -- source gives "pr-y-X-"; Source: Winfred P. Lehma
 	Meanings = {}
 })
 
-DefineLanguageWord("Reĝ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "adjective",

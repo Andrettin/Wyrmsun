@@ -1,0 +1,11 @@
+reda_proto_germanic = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	name = "Rêda"
+	language = proto_germanic
+	type = noun
+	gender = masculine #alternatively also neuter
+	meanings = {
+		#source gives the German "Rat"
+		"Counsel"
+		"Council"
+	}
+}

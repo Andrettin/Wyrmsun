@@ -54,8 +54,7 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"old-norse", "noun", "Bord"},
-	Replaces = {"old-norse", "noun", "Bord"}
+	DerivesFrom = {"old-norse", "noun", "Bord"}
 })
 
 DefineLanguageWord("Brímir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 80.
@@ -148,8 +147,7 @@ DefineLanguageWord("Gnísta", { -- Source: Richard Cleasby and Gudbrand Vigfusso
 	Language = "old-icelandic",
 	Type = "verb",
 	Meanings = {"Gnash the Teeth", "Snarl"},
-	DerivesFrom = {"old-norse", "verb", "Gnîsta"}, -- presumably
-	Replaces = {"old-norse", "verb", "Gnîsta"} -- presumably
+	DerivesFrom = {"old-norse", "verb", "Gnîsta"} -- presumably
 })
 
 DefineLanguageWord("Gnjóstr", { -- appears in the name of a male goat; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 207, 625.
@@ -196,7 +194,6 @@ DefineLanguageWord("Gull", { -- earlier spelt as "goll"; Source: Richard Cleasby
 	Type = "noun",
 	Meanings = {"Gold"},
 	DerivesFrom = {"old-norse", "noun", "Gull"}, -- presumably
-	Replaces = {"old-norse", "noun", "Gull"},
 	Gender = "neuter"
 })
 
@@ -255,8 +252,7 @@ DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-icelandic",
 	Type = "adjective", -- perhaps a "determiner" class of words should be added?
 	Meanings = {"More"},
-	DerivesFrom = {"old-norse", "adjective", "Meiri"}, -- presumably
-	Replaces = {"old-norse", "adjective", "Meiri"}
+	DerivesFrom = {"old-norse", "adjective", "Meiri"} -- presumably
 })
 
 DefineLanguageWord("Melnir", { -- Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 423.
@@ -317,7 +313,6 @@ DefineLanguageWord("Silfr", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "noun",
 	Meanings = {"Silver"},
 	DerivesFrom = {"old-norse", "noun", "Silfr"}, -- presumably
-	Replaces = {"old-norse", "noun", "Silfr"},
 	Gender = "neuter"
 })
 
@@ -440,8 +435,7 @@ DefineLanguageWord("Tönn", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "noun",
 	Meanings = {"Tooth", "Tusk"},
 	Gender = "feminine",
-	DerivesFrom = {"old-norse", "noun", "Tǫnn"}, -- presumably
-	Replaces = {"old-norse", "noun", "Tǫnn"} -- presumably
+	DerivesFrom = {"old-norse", "noun", "Tǫnn"} -- presumably
 })
 
 DefineLanguageWord("Toppr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 636.

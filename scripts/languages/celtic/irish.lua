@@ -274,7 +274,7 @@ DefineLanguageWord("Rí", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"King"}, -- source gives the German "König" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"},
+	DerivesFrom = {"proto-indo-european", "none", "Reĝ"},
 	NumberCaseInflections = {
 		"singular", "genitive", "Ríg"
 	}

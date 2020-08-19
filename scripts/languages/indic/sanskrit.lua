@@ -436,7 +436,7 @@ DefineLanguageWord("Râjan", { -- source also gives the form "-râj-"; Source: A
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"King"}, -- source gives the German "König" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
+	DerivesFrom = {"proto-indo-european", "none", "Reĝ"}
 })
 
 DefineLanguageWord("Raṇa", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
