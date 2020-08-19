@@ -1388,6 +1388,7 @@ LoadData() -- process the data
 
 load_database(false)
 
+Load("scripts/language_words.lua")
 Load("scripts/map_template_data.lua")
 
 Load("scripts/ai_helper.lua") -- load the AI helper after the mods
