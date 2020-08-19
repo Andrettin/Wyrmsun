@@ -1,0 +1,10 @@
+sudr_noun = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	name = "Suđr"
+	language = old_norse
+	type = noun
+	gender = neuter
+	etymon = suntha_noun
+	meanings = {
+		"South" #source gives the German "Süd" as the meaning
+	}
+}

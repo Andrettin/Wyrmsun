@@ -1284,21 +1284,6 @@ DefineLanguageWord("Nōr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Ship"}
 })
 
-DefineLanguageWord("Norđ", { -- source also gives the alternative form "Norđr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"North"}, -- source gives the German "Nord" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Nurþa"},
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Norđ", { -- source also gives the alternative form "Norđr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
-	Language = "old-norse",
-	Type = "adverb",
-	Meanings = {"Northward"}, -- source gives the German "nordwärts" as the meaning
-	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
-})
-
 DefineLanguageWord("Nŷ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	Language = "old-norse",
 	Type = "noun",
@@ -1593,21 +1578,6 @@ DefineLanguageWord("Strīđ", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Woe", "Grief", "Struggle", "War"} -- according to the source, the meaning of "war" came to be in the end of the 13th century
-})
-
-DefineLanguageWord("Suđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"South"}, -- source gives the German "Süd" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Sunþa"},
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Suđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Language = "old-norse",
-	Type = "adverb",
-	Meanings = {"Southward"}, -- source gives the German "südwärts" as the meaning
-	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
 })
 
 DefineLanguageWord("Sumar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
