@@ -67,12 +67,6 @@ DefineLanguageWord("Bhoumo", { -- source gives "bhou(ə)mo"; Source: August Fick
 	Meanings = {}
 })
 
-DefineLanguageWord("Bhrdho", { -- Fick gives "bher(e)dh" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/bord
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {"Board"} -- source gives the French "planche" as the meaning
-})
-
 DefineLanguageWord("Bhrenvō", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-indo-european",
 	Type = "verb", -- correct?

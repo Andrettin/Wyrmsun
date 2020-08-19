@@ -1,0 +1,11 @@
+bord_old_icelandic = { #Source: http://www.cnrtl.fr/definition/B%F6rde
+	name = "Bord"
+	language = old_icelandic
+	type = noun
+	etymon = bord_1_old_norse
+	meanings = {
+		#source gives the French "planche, table" as the meaning
+		"Board"
+		"Table"
+	}
+}

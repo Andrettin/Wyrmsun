@@ -135,21 +135,6 @@ DefineLanguageWord("Bôm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bord", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Tisch"
-	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
-	Gender = "neuter" -- as given by the TLFi and Fick
-})
-
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
-})
-
 DefineLanguageWord("Brand", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-saxon", -- source gives Old Low German
 	Type = "noun",

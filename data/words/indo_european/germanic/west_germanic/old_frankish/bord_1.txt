@@ -1,0 +1,11 @@
+bord_1_old_frankish = { #Source: http://www.cnrtl.fr/definition/B%F6rde
+	name = "Bord"
+	language = old_frankish #source gives "Ancien Bas Francique" (= Old Frankish)
+	type = noun
+	gender = neuter
+	etymon = burda #the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives this word's cognates as deriving from Proto-Germanic "burda"
+	meanings = {
+		"Board" #source gives the French "planche" as the meaning
+	}
+	#plural nominative: "Borda"
+}

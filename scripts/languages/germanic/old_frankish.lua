@@ -44,24 +44,6 @@ DefineLanguageWord("Blāo", { -- Source: http://www.cnrtl.fr/definition/bleu
 	DerivesFrom = {"proto-germanic", "adjective", "Blêva"} -- presumably
 })
 
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
-	Type = "noun",
-	Meanings = {"Board"}, -- source gives the French "planche" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives this word's cognates as deriving from Proto-Germanic "burda"
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Borda"
-	}
-})
-
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
-	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
-	Type = "noun",
-	Meanings = {"Edge of a Vessel"}, -- source gives the French "bord d'un vaisseau" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
-})
-
 DefineLanguageWord("Borganjan", { -- cross of "borgen" with "waidanjan"; Source: http://www.cnrtl.fr/definition/barguigner
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",

@@ -1,0 +1,9 @@
+borde = {
+	name = "Börde"
+	language = french
+	type = noun
+	etymon = bord_1_old_frankish #derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
+	meanings = {
+		"Small Farm"
+	}
+}

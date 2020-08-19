@@ -96,20 +96,6 @@ DefineLanguageWord("Bois", {
 	-- Fick gives as being derived from Medieval Latin "Buscus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
 })
 
-DefineLanguageWord("Bord", {
-	Language = "french",
-	Type = "noun",
-	Meanings = {"Edge"},
-	DerivesFrom = {"old-frankish", "noun", {"Edge of a Vessel"}, "Bord"} -- Source: http://www.cnrtl.fr/definition/bord
-})
-
-DefineLanguageWord("Börde", {
-	Language = "french",
-	Type = "noun",
-	Meanings = {"Small Farm"},
-	DerivesFrom = {"old-frankish", "noun", {"Board"}, "Bord"} -- derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
-})
-
 DefineLanguageWord("Bourg", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	Language = "french",
 	Type = "noun",

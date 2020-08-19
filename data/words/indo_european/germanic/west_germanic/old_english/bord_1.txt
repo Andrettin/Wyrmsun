@@ -1,0 +1,12 @@
+bord_1_old_english = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
+	name = "Bord"
+	language = old_english
+	type = noun
+	gender = neuter #as given by the TLFi and Fick
+	etymon = burda #as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
+	meanings = {
+		#the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Brett, Tisch"
+		"Board"
+		"Table"
+	}
+}

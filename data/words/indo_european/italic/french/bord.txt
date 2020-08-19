@@ -1,0 +1,9 @@
+bord_french = {
+	name = "Bord"
+	language = french
+	type = noun
+	etymon = bord_2_old_frankish #Source: http://www.cnrtl.fr/definition/bord
+	meanings = {
+		"Edge"
+	}
+}

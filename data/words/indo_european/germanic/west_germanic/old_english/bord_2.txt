@@ -1,0 +1,13 @@
+bord_2_old_english = { #Source: http://www.cnrtl.fr/definition/bord
+	name = "Bord"
+	language = old_english
+	type = noun
+	gender = neuter #as given by the TLFi and Fick
+	etymon = bhrdho
+	meanings = {
+		#source gives the French "bord, arête; bord de navire" as the meaning
+		"Edge"
+		"Ridge"
+		"Edge of a Ship"
+	}
+}

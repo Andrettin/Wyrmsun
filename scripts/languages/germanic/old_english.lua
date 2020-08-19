@@ -220,21 +220,6 @@ DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
-DefineLanguageWord("Bord", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Brett, Tisch"
-	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
-	Gender = "neuter" -- as given by the TLFi and Fick
-})
-
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
-})
-
 DefineLanguageWord("Bós", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
 	Language = "old-english",
 	Type = "noun",

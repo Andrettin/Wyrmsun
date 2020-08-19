@@ -332,14 +332,6 @@ DefineLanguageWord("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Burda", { -- source also gives the alternative form "breda"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- the TLFi gives the reflexes of this word as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives the Indo-European root as "bher(e)dh" instead
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "proto-germanic",
 	Type = "noun",

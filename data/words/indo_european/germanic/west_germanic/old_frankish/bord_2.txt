@@ -1,0 +1,9 @@
+bord_2_old_frankish = { #Source: http://www.cnrtl.fr/definition/bord
+	name = "Bord"
+	language = old_frankish #source gives "Ancien Bas Francique" (= Old Frankish)
+	type = noun
+	etymon = bhrdho
+	meanings = {
+		"Edge of a Vessel" #source gives the French "bord d'un vaisseau" as the meaning
+	}
+}

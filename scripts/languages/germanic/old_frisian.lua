@@ -93,14 +93,6 @@ DefineLanguageWord("Blâw", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Blêva"}
 })
 
-DefineLanguageWord("Bord", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Tisch"
-	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
-	Gender = "neuter" -- as given by the TLFi and Fick
-})
-
 DefineLanguageWord("Brond", { -- source also gives the alternative form "Brand"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-frisian",
 	Type = "noun",

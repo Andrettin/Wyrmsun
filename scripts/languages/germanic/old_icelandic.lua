@@ -50,13 +50,6 @@ DefineLanguageWord("Blær", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"old-norse", "noun", "Bord"}
-})
-
 DefineLanguageWord("Brímir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 80.
 	Language = "old-icelandic",
 	Type = "noun",

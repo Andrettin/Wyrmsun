@@ -1,0 +1,12 @@
+bord_2_old_saxon = { #Source: http://www.cnrtl.fr/definition/bord
+	name = "Bord"
+	language = old_saxon
+	type = noun
+	etymon = bhrdho
+	meanings = {
+		#source gives the French "bord, arête; bord de navire" as the meaning
+		"Edge"
+		"Ridge"
+		"Edge of a Ship"
+	}
+}
