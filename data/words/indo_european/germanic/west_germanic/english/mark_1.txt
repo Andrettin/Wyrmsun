@@ -1,0 +1,10 @@
+mark_1_english = {
+	name = "Mark"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = mearc_2 #presumably
+	meanings = {
+		"Mark"
+	}
+}

@@ -1360,20 +1360,6 @@ DefineLanguageWord("Mark", {
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Marke", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Mark"},
-	DerivesFrom = {"middle-high-german", "noun", "Marke"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Gender = "feminine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Marken",
-		"plural", "accusative", "Marken",
-		"plural", "dative", "Marken",
-		"plural", "genitive", "Marken"
-	}
-})
-
 DefineLanguageWord("Mehr", {
 	Language = "high-german",
 	Type = "adverb",

@@ -235,14 +235,6 @@ DefineLanguageWord("Mage", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "middle-low-german",
-	Type = "noun",
-	Meanings = {"Sign"}, -- source gives the German "Zeichen"
-	DerivesFrom = {"proto-germanic", "noun", "Marka"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Marke", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "middle-low-german",
 	Type = "noun",

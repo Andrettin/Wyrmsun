@@ -1,0 +1,10 @@
+mark_2_english = {
+	name = "Mark"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = mearc_3 #presumably
+	meanings = {
+		"Mark" #currency unit used by e.g. Germany
+	}
+}

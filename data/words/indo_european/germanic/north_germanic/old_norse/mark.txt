@@ -1,0 +1,13 @@
+mark_old_norse = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Mark"
+	language = old_norse
+	type = noun
+	gender = neuter
+	etymon = marka_proto_germanic
+	meanings = {
+		#source gives the German "Zeichen, Kennzeichen (auch 'Grenze' in endi-mark, land-mark)"
+		"Sign"
+		"Indicator"
+		"Border"
+	}
+}

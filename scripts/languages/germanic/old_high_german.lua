@@ -1144,14 +1144,6 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	}
 })
 
-DefineLanguageWord("Marca", { -- source also gives the alternative form "Marcha"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Border", "Borderland", "District", "Forest"}, -- source gives the German "Grenze, Grenzland, Bezirk, Wald"
-	DerivesFrom = {"proto-germanic", "noun", "Mark"},
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Meisa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155; Source: http://www.cnrtl.fr/definition/m%C3%A9sange
 	Language = "old-high-german",
 	Type = "noun",

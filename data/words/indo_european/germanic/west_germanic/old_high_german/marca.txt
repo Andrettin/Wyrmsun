@@ -1,0 +1,14 @@
+marca_old_high_german = { #source also gives the alternative form "Marcha"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Marca"
+	language = old_high_german
+	type = noun
+	gender = feminine
+	etymon = mark_proto_germanic
+	meanings = {
+		#source gives the German "Grenze, Grenzland, Bezirk, Wald"
+		"Border"
+		"Borderland"
+		"District"
+		"Forest"
+	}
+}

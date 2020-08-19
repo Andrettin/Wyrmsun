@@ -1214,22 +1214,6 @@ DefineLanguageWord("March", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Mark", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Mark"},
-	DerivesFrom = {"old-english", "noun", {"Mark", "Sign"}, "Mearc"}, -- presumably
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Mark", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Mark"}, -- Currency unit used by i.e. Germany
-	DerivesFrom = {"old-english", "noun", {"Half Silver Pound"}, "Mearc"}, -- presumably
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Marsh", {
 	Language = "english",
 	Type = "noun",

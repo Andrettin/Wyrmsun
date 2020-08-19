@@ -1,0 +1,12 @@
+mearc_2 = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Mearc"
+	language = old_english
+	type = noun
+	gender = feminine
+	etymon = marko_1
+	meanings = {
+		#source gives the German "Marke, Zeichen"
+		"Mark"
+		"Sign"
+	}
+}

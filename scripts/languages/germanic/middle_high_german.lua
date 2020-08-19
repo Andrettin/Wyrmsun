@@ -673,22 +673,6 @@ DefineLanguageWord("Mare", { -- source also gives the alternative form "March"; 
 	}
 })
 
-DefineLanguageWord("Marke", { -- source also gives the alternative form "Mark"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Border", "Borderland", "District", "Forest"}, -- source gives the German "Grenze, Grenzland, Bezirk, Wald"
-	DerivesFrom = {"old-high-german", "noun", "Marca"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Marke", { -- Fick also gives the alternative form "Mark", while the TLFi also gives the alternative forms "Marc" and "March"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160; Source: http://www.cnrtl.fr/definition/marc
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Half Silver Pound", "Half Gold Pound"}, -- Fick gives the German "halbes Pfund Silbers", while the TLFi gives the French "moitié d'une livre d'or ou d'argent"
-	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"}, -- as given by Fick
-	Gender = "feminine" -- as given by Fick
-})
-
 DefineLanguageWord("Meise", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
 	Language = "middle-high-german",
 	Type = "noun",

@@ -1364,29 +1364,6 @@ DefineLanguageWord("Meaht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"}
 })
 
-DefineLanguageWord("Mearc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Border", "End", "District"}, -- source gives the German "Grenze, Ende, Bezirk"
-	DerivesFrom = {"proto-germanic", "noun", "Mark"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Mearc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Mark", "Sign"}, -- source gives the German "Marke, Zeichen"
-	DerivesFrom = {"proto-germanic", "noun", "Markô"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Mearc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Half Silver Pound"}, -- source gives the German "halbes Pfund Silbers"
-	DerivesFrom = {"old-norse", "noun", {"Silver Mark"}, "Mǫrk"} -- "from the Nordic" according to the source
-})
-
 DefineLanguageWord("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "noun",

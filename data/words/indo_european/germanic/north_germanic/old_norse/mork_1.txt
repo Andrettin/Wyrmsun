@@ -1,0 +1,15 @@
+mork_1 = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Mǫrk"
+	language = old_norse
+	type = noun
+	gender = feminine
+	etymon = mark_proto_germanic
+	meanings = {
+		#source gives the German "Wald, Grenzwald (ursprünglich ungerodetes Grenzland)"
+		"Forest"
+		"Border Forest"
+	}
+	
+	#singular genitive: "Markar", alternatively also "Merkr"
+	#plural nominative: "Markir", alternatively also "Merkr"
+}

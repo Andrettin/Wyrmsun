@@ -1,0 +1,12 @@
+marke_2_middle_high_german = { #Fick also gives the alternative form "Mark", while the TLFi also gives the alternative forms "Marc" and "March"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160; Source: http://www.cnrtl.fr/definition/marc
+	name = "Marke"
+	language = middle_high_german
+	type = noun
+	gender = feminine #as given by Fick
+	etymon = marko_2 #as given by Fick
+	meanings = {
+		#Fick gives the German "halbes Pfund Silbers", while the TLFi gives the French "moitié d'une livre d'or ou d'argent"
+		"Half Silver Pound"
+		"Half Gold Pound"
+	}
+}

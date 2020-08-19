@@ -1036,22 +1036,6 @@ DefineLanguageWord("Mari", { -- source gives "mari-"; Source: http://www.cnrtl.f
 	Meanings = {"Sea"} -- source gives the French "mer"
 })
 
-DefineLanguageWord("Mark", { -- source also gives the alternative form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Mark", "Border", "Borderland"}, -- source gives the German "Marke, Grenze, Grenzland"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- source indicates this as a possibility
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Sign", "Indicator", "Mark"}, -- source gives the German "Zeichen, Kennzeichen, Marke"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being equivalent (same origin?) to the noun "Mark"
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Type = "noun",

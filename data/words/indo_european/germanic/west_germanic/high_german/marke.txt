@@ -1,0 +1,15 @@
+marke_high_german = {
+	name = "Marke"
+	language = high_german
+	type = noun
+	gender = feminine
+	etymon = marke_2_middle_high_german #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	meanings = {
+		"Mark"
+	}
+	
+	#plural nominative: "Marken"
+	#plural accusative: "Marken"
+	#plural dative: "Marken"
+	#plural genitive: "Marken"
+}

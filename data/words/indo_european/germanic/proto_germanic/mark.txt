@@ -1,0 +1,13 @@
+mark_proto_germanic = { #source also gives the alternative form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Mark"
+	language = proto_germanic
+	type = noun
+	gender = feminine
+	etymon = mareg #source indicates this as a possibility
+	meanings = {
+		#source gives the German "Marke, Grenze, Grenzland"
+		"Mark"
+		"Border"
+		"Borderland"
+	}
+}
