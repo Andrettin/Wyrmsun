@@ -616,17 +616,6 @@ DefineLanguageWord("Künec", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	}
 })
 
-DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Land", "Country"}, -- source gives the German "Land"
-	DerivesFrom = {"old-high-german", "noun", "Lant"},
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Landes"
-	}
-})
-
 DefineLanguageWord("Leibe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
 	Language = "middle-high-german",
 	Type = "noun",

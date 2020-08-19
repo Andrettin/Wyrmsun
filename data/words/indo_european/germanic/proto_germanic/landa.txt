@@ -1,0 +1,12 @@
+landa = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	name = "Landa"
+	language = proto_germanic
+	type = noun
+	gender = neuter
+	meanings = {
+		#source gives the German "terra firma, Land"
+		"Terra Firma"
+		"Land"
+		"Country"
+	}
+}

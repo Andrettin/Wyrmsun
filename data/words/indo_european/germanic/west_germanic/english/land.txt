@@ -1,0 +1,10 @@
+land_english = {
+	name = "Land"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = land_old_english #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	meanings = {
+		"Land"
+	}
+}

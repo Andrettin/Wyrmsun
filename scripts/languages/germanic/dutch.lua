@@ -120,12 +120,6 @@ DefineLanguageWord("Krijg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Meanings = {"War"}
 })
 
-DefineLanguageWord("Land", {
-	Language = "dutch",
-	Type = "noun",
-	Meanings = {"Land", "Country"} -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
-})
-
 DefineLanguageWord("Leger", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 14.
 	Language = "dutch",
 	Type = "noun",

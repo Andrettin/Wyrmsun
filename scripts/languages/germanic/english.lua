@@ -1112,14 +1112,6 @@ DefineLanguageWord("Knight", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Land", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Land"},
-	DerivesFrom = {"old-english", "noun", "Land"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Lead", {
 	Language = "english",
 	Type = "noun",

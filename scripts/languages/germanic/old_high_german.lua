@@ -1049,17 +1049,6 @@ DefineLanguageWord("Lang", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
-DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Land", "Country"}, -- source gives the German "Land"
-	DerivesFrom = {"proto-germanic", "noun", "Landa"},
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Lantes" -- source also gives the alternative form "Landes"
-	}
-})
-
 DefineLanguageWord("Leiba", { -- source also gives the alternative form "laipa"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 187.
 	Language = "old-high-german",
 	Type = "noun",

@@ -1,0 +1,10 @@
+land_dutch = {
+	name = "Land"
+	language = dutch
+	type = noun
+	meanings = {
+		#Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
+		"Land"
+		"Country"
+	}
+}

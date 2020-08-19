@@ -202,13 +202,6 @@ DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Curl", "Tress"}
 })
 
-DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Language = "irish",
-	Type = "noun",
-	Meanings = {"Free Space"}, -- source gives the German "freier Platz"
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Lóid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "irish",
 	Type = "noun",

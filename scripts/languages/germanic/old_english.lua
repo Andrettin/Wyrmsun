@@ -1254,14 +1254,6 @@ DefineLanguageWord("Lagu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Law"}
 })
 
-DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Land", "Country"}, -- source gives the German "Land"
-	DerivesFrom = {"proto-germanic", "noun", "Landa"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Léad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-english",
 	Type = "noun",

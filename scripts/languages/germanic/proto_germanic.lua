@@ -950,13 +950,6 @@ DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An An
 	Meanings = {"Teach"}
 })
 
-DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German "terra firma, Land"
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Langaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",

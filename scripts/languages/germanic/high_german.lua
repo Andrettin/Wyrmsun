@@ -1303,19 +1303,6 @@ DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Land", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Land", "Country"},
-	DerivesFrom = {"middle-high-german", "noun", "Lant"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Landes",
-		"plural", "nominative", "Länder",
-		"plural", "genitive", "Länder"
-	}
-})
-
 DefineLanguageWord("Lot", {
 	Language = "high-german",
 	Type = "noun",

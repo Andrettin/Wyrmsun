@@ -1,0 +1,9 @@
+land_irish = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	name = "Land"
+	language = irish
+	type = noun
+	gender = feminine
+	meanings = {
+		"Free Space" #source gives the German "freier Platz"
+	}
+}
