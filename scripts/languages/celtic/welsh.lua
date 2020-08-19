@@ -154,12 +154,6 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 	}
 })
 
-DefineLanguageWord("Llu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
-	Language = "welsh",
-	Type = "noun",
-	Meanings = {"Throng", "Host", "Army"}
-})
-
 DefineLanguageWord("March", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
 	Language = "welsh",
 	Type = "noun",
@@ -265,15 +259,5 @@ DefineLanguageWord("Cantref", { -- Source: Bernhard Maier (trans.), "Das Sagenbu
 	CompoundElements = {
 		"prefix", "welsh", "numeral", "Cant",
 		"suffix", "welsh", "noun", "Tref"
-	}
-})
-
-DefineLanguageWord("Teilu", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
-	Language = "welsh",
-	Type = "noun",
-	Meanings = {"Family"},
-	CompoundElements = {
---		"prefix", ?
-		"suffix", "welsh", "noun", "Llu"
 	}
 })

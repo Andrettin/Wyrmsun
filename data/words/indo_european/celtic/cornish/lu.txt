@@ -1,0 +1,9 @@
+lu = { #source also gives the alternative forms "luu" and "llu"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	name = "Lu"
+	language = cornish
+	type = noun
+	meanings = {
+		"Multitude"
+		"Army"
+	}
+}

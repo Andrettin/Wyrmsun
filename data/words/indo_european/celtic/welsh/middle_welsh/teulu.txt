@@ -1,0 +1,11 @@
+teulu_middle_welsh = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	name = "Teulu"
+	language = middle_welsh
+	type = noun
+	meanings = {
+		#source gives the German "Haus-Schar", "Haushalt" and "Leibwache" as the meaning
+		"House Throng"
+		"Household"
+		"Bodyguard"
+	}
+}

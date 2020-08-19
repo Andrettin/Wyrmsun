@@ -1,0 +1,10 @@
+teulu_modern_welsh = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	name = "Teulu"
+	language = modern_welsh
+	type = noun
+	etymon = teulu_middle_welsh
+	meanings = {
+		#source gives the German "Familie" as the meaning
+		"Family"
+	}
+}

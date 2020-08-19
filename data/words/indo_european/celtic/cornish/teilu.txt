@@ -1,0 +1,11 @@
+teilu_cornish = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	name = "Teilu"
+	language = cornish
+	type = noun
+	meanings = {
+		"Family"
+	}
+	compound_elements = {
+		lu
+	}
+}

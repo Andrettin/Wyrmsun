@@ -1,0 +1,10 @@
+marchawg = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	name = "Marchawg"
+	language = middle_welsh
+	type = noun
+	meanings = {
+		#source gives the German "Reiter" and "Ritter" as the meaning
+		"Rider"
+		"Knight"
+	}
+}
