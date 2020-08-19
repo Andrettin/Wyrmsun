@@ -33,12 +33,6 @@ DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Number = 8
 })
 
-DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adposition",
-	Meanings = {"From"}
-})
-
 DefineLanguageWord("Ahvô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -195,13 +189,6 @@ DefineLanguageWord("Baþa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	Gender = "neuter"
-})
-
-DefineLanguageWord("Berôn", { -- source also gives the alternative form "Berniôn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Female Bear"},
-	Gender = "feminine"
 })
 
 DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.

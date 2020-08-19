@@ -49,13 +49,6 @@ DefineLanguageWord("Ađili", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-norse",
-	Type = "adposition",
-	Meanings = {"From"}, -- derived from Proto-Germanic "Af", which means "From"
-	DerivesFrom = {"proto-germanic", "adposition", "Af"}
-})
-
 DefineLanguageWord("Afi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "old-norse",
 	Type = "noun",
@@ -156,21 +149,6 @@ DefineLanguageWord("Austan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adverb", "Austanô"}
 })
 
-DefineLanguageWord("Austr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"East"}, -- source gives the German "Osten" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Austa"},
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Austr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Language = "old-norse",
-	Type = "adverb",
-	Meanings = {"Eastward"}, -- source gives the German "ostwärts" as the meaning
-	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
-})
-
 DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-norse",
 	Type = "noun",
@@ -231,21 +209,6 @@ DefineLanguageWord("Bekkr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baki"}
-})
-
-DefineLanguageWord("Bera", { -- source also gives alternative form "Birna"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Female Bear"}, -- source gives the German "Bärin" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Berôn"}, -- presumably from "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-norse",
-	Type = "verb",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"}
 })
 
 DefineLanguageWord("Bīta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

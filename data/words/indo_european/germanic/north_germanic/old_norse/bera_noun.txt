@@ -1,0 +1,10 @@
+bera_old_norse_noun = { #source also gives alternative form "Birna"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	name = "Bera"
+	language = old_norse
+	type = noun
+	gender = feminine
+	etymon = beron #presumably from Proto-Germanic "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
+	meanings = {
+		"Female Bear" #source gives the German "Bärin" as the meaning
+	}
+}

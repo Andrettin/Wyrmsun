@@ -1,0 +1,10 @@
+bera_old_english = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	name = "Bera"
+	language = old_english
+	type = noun
+	gender = masculine
+	etymon = beran_proto_germanic_noun
+	meanings = {
+		"Bear" #source gives the German "Bär" as the meaning
+	}
+}

@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "gothic",
-	Type = "adposition",
-	Meanings = {"From"}, -- derived from Proto-Germanic "Af", which means "From"
-	DerivesFrom = {"proto-germanic", "adposition", "Af"}
-})
-
 DefineLanguageWord("Ahva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 13.
 	Language = "gothic",
 	Type = "noun",

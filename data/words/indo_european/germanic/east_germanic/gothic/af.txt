@@ -1,0 +1,9 @@
+af_gothic = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	name = "Af"
+	language = gothic
+	type = adposition
+	etymon = af_proto_germanic
+	meanings = {
+		"From" #derived from Proto-Germanic "Af", which means "From"
+	}
+}

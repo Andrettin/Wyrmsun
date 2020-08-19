@@ -1,0 +1,8 @@
+af_proto_germanic = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	name = "Af"
+	language = proto_germanic
+	type = adposition
+	meanings = {
+		"From"
+	}
+}

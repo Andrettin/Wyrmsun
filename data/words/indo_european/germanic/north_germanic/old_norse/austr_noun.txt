@@ -1,0 +1,10 @@
+austr_noun = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	name = "Austr"
+	language = old_norse
+	type = noun
+	gender = neuter
+	etymon = austa_noun
+	meanings = {
+		"East" #source gives the German "Osten" as the meaning
+	}
+}

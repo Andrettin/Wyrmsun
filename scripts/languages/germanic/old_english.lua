@@ -185,14 +185,6 @@ DefineLanguageWord("Beornan", { -- strong verb; source also gives the alternativ
 	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
 })
 
-DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Berstan", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "old-english",
 	Type = "verb",
@@ -1531,13 +1523,6 @@ DefineLanguageWord("Norþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "adverb",
 	Meanings = {"Northward", "North"}, -- source gives the German "nordwärts, nördlich" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
-})
-
-DefineLanguageWord("Of", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-english",
-	Type = "adposition",
-	Meanings = {"From"}, -- derived from Proto-Germanic "Af", which means "From"
-	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
 DefineLanguageWord("Ofer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
