@@ -1,0 +1,5 @@
+beran_proto_germanic_verb = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	name = "Beran"
+	language = proto_germanic
+	type = verb
+}

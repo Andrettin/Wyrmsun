@@ -113,18 +113,6 @@ DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Austa", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"East"} -- source gives the German "Osten" as the meaning
-})
-
-DefineLanguageWord("Austa", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Language = "proto-germanic",
-	Type = "adverb",
-	Meanings = {"To the East"} -- source gives the German "nach Osten hin" as the meaning
-})
-
 DefineLanguageWord("Austanô", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "adverb",
@@ -207,19 +195,6 @@ DefineLanguageWord("Baþa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	Gender = "neuter"
-})
-
-DefineLanguageWord("Beran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {}
 })
 
 DefineLanguageWord("Berôn", { -- source also gives the alternative form "Berniôn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -723,29 +698,6 @@ DefineLanguageWord("Habanô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Haima", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Village", "Home"}, -- as given by Kroonen; Fick likewise gives the German "Dorf, Heim, Heimat" as the meaning
-	Gender = "masculine", -- as given by both Kroonen and Fick
-	NumberCaseInflections = {
-		"singular", "accusative", "Haima" -- as given by Fick; Fick gives meaning of "nach Hause" for the accusative; Fick also gives the (apparently accusative) "Haimanô", meaning "von Hause"
-	}
-})
-
-DefineLanguageWord("Haima", { -- accusative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	Language = "proto-germanic",
-	Type = "adverb", -- apparently
-	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
-	Accusative = "Haima"
-})
-
-DefineLanguageWord("Haimanô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	Language = "proto-germanic",
-	Type = "adverb",
-	Meanings = {"Home"} -- source gives the German "von Hause" as the meaning
-})
-
 DefineLanguageWord("Haljô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1126,22 +1078,6 @@ DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Sign", "Indicator", "Mark"}, -- source gives the German "Zeichen, Kennzeichen, Marke"
 	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being equivalent (same origin?) to the noun "Mark"
 	Gender = "neuter"
-})
-
-DefineLanguageWord("Markô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Sign", "Indicator", "Mark"}, -- source gives the German "Zeichen, Kennzeichen, Marke"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being equivalent (same origin?) to the noun "Mark"
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Markô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Mark", "Half Pound", "Half Silver Pound"}, -- source gives the German "Mark, halbes Pfund (Silbers)"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being originally equivalent to the noun "Marka"
-	Gender = "feminine"
 })
 
 DefineLanguageWord("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.

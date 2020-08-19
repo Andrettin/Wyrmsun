@@ -1,0 +1,12 @@
+haima_noun = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 201; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	name = "Haima"
+	language = proto_germanic
+	type = noun
+	gender = masculine #as given by both Kroonen and Fick
+	meanings = {
+		#as given by both Kroonen and Fick; Fick gives the German "Dorf, Heim, Heimat" as the meaning
+		"Village"
+		"Home"
+	}
+	#Fick also gives the (apparently accusative) "Haimanô", meaning "von Hause"
+}

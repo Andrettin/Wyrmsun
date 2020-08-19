@@ -132,13 +132,6 @@ DefineLanguageWord("Bein", { -- source also gives the alternative form "pein"; S
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"}
-})
-
 DefineLanguageWord("Berg", { -- source also gives the alternative forms "Berc", "Perc", "Perag" and "Perac"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-high-german",
 	Type = "noun",

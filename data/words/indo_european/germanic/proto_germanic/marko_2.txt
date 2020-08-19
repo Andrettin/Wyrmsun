@@ -1,0 +1,13 @@
+marko_2 = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Markô"
+	language = proto_germanic
+	type = noun
+	gender = feminine
+	etymon = mareg #presumably, since the source lists this word as being originally equivalent to the noun "Marka"
+	meanings = {
+		#source gives the German "Mark, halbes Pfund (Silbers)"
+		"Mark"
+		"Half Pound"
+		"Half Silver Pound"
+	}
+}

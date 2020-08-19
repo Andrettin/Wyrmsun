@@ -1,0 +1,6 @@
+beran_old_high_german = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	name = "Beran"
+	language = old_high_german
+	type = verb
+	etymon = beran_proto_germanic_verb
+}

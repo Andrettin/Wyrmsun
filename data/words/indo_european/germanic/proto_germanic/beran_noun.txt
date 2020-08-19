@@ -1,0 +1,9 @@
+beran_proto_germanic_noun = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	name = "Beran"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	meanings = {
+		"Bear" #source gives the German "Bär" as the meaning
+	}
+}
