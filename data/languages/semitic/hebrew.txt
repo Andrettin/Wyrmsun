@@ -1,0 +1,4 @@
+hebrew = {
+	name = "Hebrew"
+	family = semitic
+}

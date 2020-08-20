@@ -1,0 +1,3 @@
+aztec = {
+	language = nahuatl
+}

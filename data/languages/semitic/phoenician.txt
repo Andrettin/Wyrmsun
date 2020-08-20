@@ -1,0 +1,4 @@
+phoenician = {
+	name = "Phoenician"
+	family = semitic
+}

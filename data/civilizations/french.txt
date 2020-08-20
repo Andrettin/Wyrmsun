@@ -5,6 +5,7 @@ french = {
 	visible = false
 	playable = false
 	default_color = blue
+	language = french
 	
 	personal_names = {
 		male = {

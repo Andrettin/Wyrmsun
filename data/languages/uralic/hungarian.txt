@@ -1,0 +1,4 @@
+hungarian = {
+	name = "Hungarian"
+	family = uralic
+}

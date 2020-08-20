@@ -7,6 +7,7 @@ orc = {
 	playable = false
 	interface = goblin
 	default_color = red
+	language = orcish
 	
 	unit_sounds = {
 		selected = basic_orc_voices_selected

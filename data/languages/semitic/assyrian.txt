@@ -1,0 +1,4 @@
+assyrian = {
+	name = "Assyrian"
+	family = semitic
+}

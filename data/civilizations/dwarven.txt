@@ -4,6 +4,7 @@ dwarf = {
 	parent_civilization = neutral
 	species = dwarf
 	group = dwarven
+	language = dwarven
 	visible = true
 	playable = true
 	interface = dwarven

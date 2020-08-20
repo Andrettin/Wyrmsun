@@ -2,6 +2,7 @@ arab = {
 	name = "Arab"
 	parent_civilization = greek
 	group = semitic
+	language = arabic
 	visible = false
 	playable = false
 	default_color = green

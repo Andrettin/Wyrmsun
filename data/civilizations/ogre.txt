@@ -1,0 +1,4 @@
+ogre = {
+	name = "Ogre"
+	language = ogre
+}

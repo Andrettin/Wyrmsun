@@ -45,17 +45,13 @@ DefineCivilization("dutch", { -- information for later use
 })
 --]]
 
-DefineCivilization("dwarf", {
-	Language = "dwarven"
-})
-
 DefineCivilization("ettin", {
 	Display = "Ettin",
 	Visible = true,
 	Species = "ettin",
 	Group = "ettin",
 	ParentCivilization = "neutral",
---	Language = "ettin",
+	Language = "ettin",
 	Adjective = "Ettin",
 	Playable = false,
 	DefaultColor = "black",
@@ -305,17 +301,6 @@ DefineCivilization("kobold", {
 		"Pumphut", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 		"Shellycoat", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
 	}
-})
-
-DefineCivilization("minotaur", {
-	Display = "Minotaur",
-	Visible = false,
-	Species = "minotaur",
-	Group = "minotaur",
-	ParentCivilization = "neutral",
-	Adjective = "Minotaur",
-	Playable = false,
-	DefaultColor = "red"
 })
 
 DefineCivilization("teuton", {
@@ -901,7 +886,6 @@ DefineCivilization("gael", {
 })
 
 DefineCivilization("ogre", {
-	Display = "Ogre",
 	Visible = false,
 	Species = "ogre",
 	Group = "ettin",
@@ -1351,7 +1335,7 @@ DefineCivilization("hittite", {
 	Display = "Hittite",
 	Visible = false,
 	Group = "anatolian",
---	Language = "hittite",
+	Language = "hittite",
 	ParentCivilization = "greek",
 	Adjective = "Hittite",
 	Playable = false,
@@ -1432,7 +1416,7 @@ DefineCivilization("baltic", {
 	Display = "Baltic",
 	Visible = false,
 	Group = "baltic",
---	Language = "lithuanian",
+	Language = "lithuanian",
 	ParentCivilization = "norse",
 	Adjective = "Baltic",
 	Playable = false,
@@ -1476,7 +1460,7 @@ DefineCivilization("magyar", {
 	Display = "Magyar",
 	Visible = false,
 	Group = "uralic",
---	Language = "hungarian",
+	Language = "hungarian",
 	ParentCivilization = "teuton",
 	Adjective = "Magyar",
 	Playable = false,

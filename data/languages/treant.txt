@@ -1,0 +1,3 @@
+treant = {
+	name = "Treant"
+}

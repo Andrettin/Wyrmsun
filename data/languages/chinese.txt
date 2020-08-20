@@ -1,0 +1,3 @@
+chinese = {
+	name = "Chinese"
+}
