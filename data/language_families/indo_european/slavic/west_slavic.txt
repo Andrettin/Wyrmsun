@@ -1,0 +1,4 @@
+west_slavic = {
+	name = "West Slavic"
+	family = slavic
+}

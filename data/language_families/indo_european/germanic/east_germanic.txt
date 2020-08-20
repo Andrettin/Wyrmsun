@@ -1,0 +1,4 @@
+east_germanic = {
+	name = "East Germanic"
+	family = germanic
+}

@@ -1,0 +1,4 @@
+slavic = {
+	name = "Slavic"
+	family = indo_european
+}

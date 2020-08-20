@@ -1,0 +1,4 @@
+west_germanic = {
+	name = "West Germanic"
+	family = germanic
+}

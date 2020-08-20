@@ -29,10 +29,6 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
-DefineLanguage("hittite", {
-	Name = "Hittite"
-})
-
 DefineLanguage("illyrian", {
 	Name = "Illyrian"
 })
@@ -97,20 +93,8 @@ DefineLanguage("minoan", {
 	Name = "Minoan"
 })
 
-DefineLanguage("dwarven", {
-	Name = "Dwarven"
-})
-
 DefineLanguage("gnomish", {
 	Name = "Gnomish"
-})
-
-DefineLanguage("goblin", {
-	Name = "Goblin"
-})
-
-DefineLanguage("kobold", {
-	Name = "Kobold"
 })
 
 Load("scripts/languages_celtic.lua")

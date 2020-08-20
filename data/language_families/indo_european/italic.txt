@@ -1,0 +1,4 @@
+italic = {
+	name = "Italic"
+	family = indo_european
+}

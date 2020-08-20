@@ -1,0 +1,4 @@
+iranian = {
+	name = "Iranian"
+	family = indo_european
+}

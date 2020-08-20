@@ -1,0 +1,4 @@
+indic = {
+	name = "Indic"
+	family = indo_european
+}

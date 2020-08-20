@@ -1,0 +1,3 @@
+uralic = {
+	name = "Uralic"
+}

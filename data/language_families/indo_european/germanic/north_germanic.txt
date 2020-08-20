@@ -1,0 +1,4 @@
+north_germanic = {
+	name = "North Germanic"
+	family = germanic
+}

@@ -1,0 +1,4 @@
+baltic = {
+	name = "Baltic"
+	family = indo_european
+}

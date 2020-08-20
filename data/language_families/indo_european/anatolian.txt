@@ -1,0 +1,4 @@
+anatolian = {
+	name = "Anatolian"
+	family = indo_european
+}

@@ -1,0 +1,4 @@
+germanic = {
+	name = "Germanic"
+	family = indo_european
+}

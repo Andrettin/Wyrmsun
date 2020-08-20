@@ -1,0 +1,11 @@
+ishiulas = { #Source: Giuseppe Furlani, "The Basic Aspect of Hittite Religion", 1938, p. 253.
+	name = "Išḫiulāš"
+	language = hittite
+	type = noun
+	meanings = {
+		"Obligation"
+		"Binding"
+		"Contract"
+		"Duty"
+	}
+}

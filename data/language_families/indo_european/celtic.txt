@@ -1,0 +1,4 @@
+celtic = {
+	name = "Celtic"
+	family = indo_european
+}

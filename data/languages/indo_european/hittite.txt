@@ -1,0 +1,4 @@
+hittite = {
+	name = "Hittite"
+	family = anatolian
+}
