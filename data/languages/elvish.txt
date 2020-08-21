@@ -1,0 +1,3 @@
+elvish = {
+	name = "Elvish"
+}
