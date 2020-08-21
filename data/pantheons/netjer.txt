@@ -1,0 +1,3 @@
+netjer = { #apparently the word meaning "god" in Egyptian
+	name = "Netjer"
+}

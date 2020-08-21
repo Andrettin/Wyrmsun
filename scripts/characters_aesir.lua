@@ -34,4 +34,3 @@ DefineCharacter("odin", {
 	Trait = "upgrade-wise",
 	Level = 95
 })
-
