@@ -817,6 +817,26 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetCharacterData(unit_name, "Type") ~= "") then
 			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
 		end
+		
+		if (GetCharacterData(unit_name, "Father") ~= "") then
+			description = description .. _("Father") .. ": " .. _(GetCharacterData(GetCharacterData(unit_name, "Father"), "Name")) .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Mother") ~= "") then
+			description = description .. _("Mother") .. ": " .. _(GetCharacterData(GetCharacterData(unit_name, "Mother"), "Name")) .. "\n\n"
+		end
+		
+		local children = GetCharacterData(unit_name, "Children")
+		if (table.getn(children) > 0) then
+			description = description .. _("Children") .. ": "
+			for i=1,table.getn(children) do
+				description = description .. _(GetCharacterData(children[i], "Name"))
+				if (i < table.getn(children)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		
 		local deities = GetCharacterData(unit_name, "Deities")
 		if (table.getn(deities) > 0) then
 			description = description .. _("Deities") .. ": "
@@ -868,6 +888,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			background = _("Background") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Background"))) .. "\n\n"
 		end
 	elseif (state == "deities") then
+		local deity_character = GetDeityData(unit_name, "Character")
+		
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
 			description = description .. _("Pantheon") .. ": " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
 		end
@@ -892,6 +914,27 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 			end
 			description = description .. "\n\n"
+		end
+		
+		if (deity_character ~= "") then
+			if (GetCharacterData(deity_character, "Father") ~= "") then
+				description = description .. _("Father") .. ": " .. _(GetCharacterData(GetCharacterData(deity_character, "Father"), "Name")) .. "\n\n"
+			end
+			if (GetCharacterData(deity_character, "Mother") ~= "") then
+				description = description .. _("Mother") .. ": " .. _(GetCharacterData(GetCharacterData(deity_character, "Mother"), "Name")) .. "\n\n"
+			end
+			
+			local children = GetCharacterData(deity_character, "Children")
+			if (table.getn(children) > 0) then
+				description = description .. _("Children") .. ": "
+				for i=1,table.getn(children) do
+					description = description .. _(GetCharacterData(children[i], "Name"))
+					if (i < table.getn(children)) then
+						description = description .. ", "
+					end
+				end
+				description = description .. "\n\n"
+			end
 		end
 		
 		local civilizations = GetDeityData(unit_name, "Civilizations")

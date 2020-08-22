@@ -81,6 +81,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Latin Dock building.
 - The construction of town halls over settlement sites now possesses two additional (generic) construction frames.
 
+* Characters
+- A character's father, mother and children are now delineated in their encyclopedia entry.
+
+* Deities
+- A deity's father, mother and children are now delineated in their encyclopedia entry.
+
 * Editor
 - Fixed crash which occurred when creating new cave and dungeon maps in the editor.
 

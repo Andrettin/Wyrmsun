@@ -1,5 +1,6 @@
 loki = { #son of two giants; attractive, mischief-making and ambivalent god; known as the Sly One, the Trickster, the Shape Changer or the Sky Traveller; as time wears on he becomes more evil, culminating in him causing the death of Balder, and Loki is then imprisoned until Ragnarok comes; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247. Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 41-42.
 	name = "Loki"
+	character = loki
 	pantheon = aesir
 	home_plane = asgard
 	civilizations = {
@@ -15,5 +16,5 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 		envy
 	}
 	deity_upgrade = upgrade_deity_loki
-	description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir. He is the father of Hel."
+	description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir."
 }
