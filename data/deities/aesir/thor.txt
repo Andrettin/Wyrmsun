@@ -1,5 +1,6 @@
 thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	name = "Thor"
+	character = thor
 	pantheon = aesir
 	home_plane = asgard
 	civilizations = {
@@ -13,9 +14,7 @@ thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder
 		teuton
 	}
 	religions = { paganism }
-	gender = male
 	major = true
-	icon = icon_thor
 	domains = {
 		air
 		lightning
