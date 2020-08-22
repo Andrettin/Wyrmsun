@@ -1,0 +1,6 @@
+rhea = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Rhea"
+	gender = female
+	father = uranus
+	mother = gaia
+}

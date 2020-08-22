@@ -1,0 +1,9 @@
+tethys = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Tethys"
+	character = tethys
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

@@ -1,0 +1,9 @@
+mnemosyne = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Mnemosyne"
+	character = mnemosyne
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}
