@@ -1,5 +1,5 @@
 /models/buildings/elven/ (by Kwaliti) (licensed under the CC0)
 /models/buildings/latin/ (by Wildfire Games and Kwaliti) (licensed under the CC-BY-SA 3.0)
-/models/buildings/neutral/star/2k_sun.png (by https://www.solarsystemscope.com/textures/ and Kwaliti) (licensed under the CC-BY 4.0)
+/models/buildings/neutral/star/2k_sun.png (by https://www.solarsystemscope.com/textures/) (licensed under the CC-BY 4.0)
 /models/buildings/neutral/star/Star.blend (by Kwaliti) (licensed under the CC0)
 /models/units/ (by Kwaliti) (licensed under the CC0)
