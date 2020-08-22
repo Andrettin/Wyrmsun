@@ -1,0 +1,11 @@
+kvasir = {
+	name = "Kvasir"
+	unit_type = unit_elven_priest
+	civilization = vanir
+	default_faction = asgard
+	gender = male
+	variation = gray_hair
+	trait = upgrade_wise
+	base_level = 25
+	icon = icon_kvasir
+}

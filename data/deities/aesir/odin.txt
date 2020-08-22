@@ -1,5 +1,6 @@
 odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	name = "Odin"
+	character = odin
 	pantheon = aesir
 	home_plane = asgard
 	civilizations = {
@@ -13,9 +14,7 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 		teuton
 	}
 	religions = { paganism }
-	gender = male
 	major = true
-	icon = icon_odin
 	domains = {
 		aether
 		magic

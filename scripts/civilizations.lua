@@ -1713,7 +1713,6 @@ DefineCivilization("aesir", {
 	}
 })
 
-
 Load("scripts/factions.lua")
 
 function GetCivilizationID(civilization)

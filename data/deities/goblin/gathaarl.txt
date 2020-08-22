@@ -1,12 +1,11 @@
 gathaarl = { #from Tyrant, Goblin God of Battle
 	name = "Gathaarl"
+	character = gathaarl
 	pantheon = goblin
 	home_plane = niflheim
 	civilizations = { goblin }
 	religions = { paganism }
-	gender = male
 	major = true
-	icon = icon_gathaarl
 	domains = {
 		chaos
 		earth

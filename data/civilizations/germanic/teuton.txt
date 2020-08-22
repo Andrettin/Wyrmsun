@@ -1,5 +1,6 @@
 teuton = {
 	name = "Teuton"
+	aliases += teutonic
 	
 	title_names = {
 		monarchy = {
@@ -20,4 +21,3 @@ teuton = {
 		}
 	}
 }
-

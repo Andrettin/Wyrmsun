@@ -1,0 +1,3 @@
+icon_christianity = {
+	file = "neutral/icons/christianity.png"
+}

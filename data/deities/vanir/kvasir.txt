@@ -1,0 +1,14 @@
+kvasir = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
+	name = "Kvasir"
+	character = kvasir
+	pantheon = vanir
+	home_plane = vanaheim
+	civilizations = {
+		elven #Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Kvasir an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+		norse
+	}
+	religions = { paganism }
+	domains = { wisdom }
+	character_upgrade = upgrade_kvasir_character
+	#description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
+}

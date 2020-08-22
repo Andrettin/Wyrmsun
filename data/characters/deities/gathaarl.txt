@@ -1,0 +1,19 @@
+gathaarl = {
+	name = "Gathaarl"
+	unit_type = unit_goblin_warlord
+	civilization = aesir
+	default_faction = hel #lives in Niflheim
+	gender = male
+	trait = upgrade_vicious
+	base_level = 50
+	icon = icon_gathaarl
+	
+	history = {
+		-30000 = {
+			active = true
+			location = {
+				site = eljudnir
+			}
+		}
+	}
+}
