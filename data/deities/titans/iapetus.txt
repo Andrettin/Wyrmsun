@@ -1,0 +1,9 @@
+iapetus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Iapetus"
+	character = iapetus
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

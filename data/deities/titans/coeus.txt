@@ -1,0 +1,9 @@
+coeus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Coeus"
+	character = coeus
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

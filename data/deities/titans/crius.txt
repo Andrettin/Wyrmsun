@@ -1,0 +1,9 @@
+crius = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Crius"
+	character = crius
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

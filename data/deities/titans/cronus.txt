@@ -1,0 +1,9 @@
+cronus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Cronus"
+	character = cronus
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

@@ -1,0 +1,6 @@
+iapetus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Iapetus"
+	gender = male
+	father = uranus
+	mother = gaia
+}
