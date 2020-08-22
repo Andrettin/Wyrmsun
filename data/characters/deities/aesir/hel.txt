@@ -1,0 +1,9 @@
+hel = {
+	name = "Hel"
+	unit_type = unit_germanic_priest
+	civilization = aesir
+	default_faction = hel
+	gender = female
+	icon = icon_hel
+	father = loki
+}

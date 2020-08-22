@@ -1,5 +1,6 @@
 hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	name = "Hel"
+	character = hel
 	pantheon = aesir
 	home_plane = niflheim
 	civilizations = {
@@ -16,8 +17,6 @@ hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of O
 		teuton
 	}
 	religions = { paganism }
-	gender = female
-	icon = icon_hel
 	domains = { death }
 	deity_upgrade = upgrade_deity_hel
 	description = "Hel is a goddess of death who dwells in Niflheim. Half of her is alive, while the other half is corpse-like. Hel is the daughter of Loki."

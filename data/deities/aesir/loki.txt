@@ -8,9 +8,7 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 		norse
 	}
 	religions = { paganism }
-	gender = male
 	major = true
-	icon = icon_loki
 	domains = {
 		trickery
 		chaos
