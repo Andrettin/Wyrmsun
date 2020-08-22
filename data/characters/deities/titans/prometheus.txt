@@ -1,0 +1,3 @@
+prometheus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Prometheus"
+}

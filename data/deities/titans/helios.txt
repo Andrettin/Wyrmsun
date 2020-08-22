@@ -1,0 +1,9 @@
+helios = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	name = "Helios"
+	character = helios
+	pantheon = titan
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}
