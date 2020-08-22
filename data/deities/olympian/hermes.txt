@@ -1,0 +1,15 @@
+hermes = {
+	name = "Hermes"
+	pantheon = olympian
+	civilizations = {
+		greek
+		latin
+	}
+	religions = { paganism }
+	gender = male
+	#domains = { air }
+	deity_upgrade = upgrade_deity_hermes
+	cultural_names = {
+		latin = "Mercury"
+	}
+}

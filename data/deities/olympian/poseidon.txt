@@ -1,0 +1,16 @@
+poseidon = {
+	name = "Poseidon"
+	pantheon = olympian
+	civilizations = {
+		greek
+		latin
+	}
+	religions = { paganism }
+	gender = male
+	major = true
+	domains = { water }
+	deity_upgrade = upgrade_deity_poseidon
+	cultural_names = {
+		latin = "Neptune"
+	}
+}

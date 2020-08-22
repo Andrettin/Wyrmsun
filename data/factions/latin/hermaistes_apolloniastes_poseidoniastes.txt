@@ -1,0 +1,17 @@
+hermaistes_apolloniastes_poseidoniastes = { #Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
+	name = "Hermaistes" #"Hermaistes, Apolloniastes, Poseidoniastes"
+	civilization = latin
+	type = holy_order
+	color = red
+	default_tier = barony
+	holy_order_deity = hermes
+	#description = "The \"Hermaistes, Apolloniastes, Poseidoniastes\" was a Roman society founded in Delos around 113 BC."
+	
+	history = {
+		-113 = {
+			acquired_upgrades += upgrade_deity_hermes
+			acquired_upgrades += upgrade_deity_apollo
+			acquired_upgrades += upgrade_deity_poseidon
+		}
+	}
+}

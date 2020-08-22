@@ -1,0 +1,12 @@
+apollo = {
+	name = "Apollo"
+	pantheon = olympian
+	civilizations = {
+		greek
+		latin
+	}
+	religions = { paganism }
+	gender = male
+	domains = { sun }
+	deity_upgrade = upgrade_deity_apollo
+}

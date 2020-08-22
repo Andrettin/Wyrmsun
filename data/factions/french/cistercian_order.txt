@@ -5,4 +5,5 @@ cistercian_order = {
 	type = holy_order
 	color = blue
 	default_tier = duchy
+	holy_order_deity = christian_god
 }

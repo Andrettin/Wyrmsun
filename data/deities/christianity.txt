@@ -1,0 +1,29 @@
+christian_god = {
+	name = "Christian God"
+	home_plane = heaven
+	civilizations = {
+		anglo_saxon
+		english
+		frankish
+		french
+		goth
+		italian
+		latin
+		norse
+		portuguese
+		romanian
+		slav
+		suebi
+		teuton
+	}
+	religions = { christianity }
+	gender = male
+	major = true
+	#icon = icon_christianity
+	domains = {
+		charity
+		faith
+		hope
+	}
+	deity_upgrade = upgrade_deity_christian_god
+}
