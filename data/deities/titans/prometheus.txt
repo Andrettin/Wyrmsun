@@ -1,8 +1,14 @@
-prometheus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+prometheus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 419-421.
 	name = "Prometheus"
 	pantheon = titan
+	gender = male
+	father = iapetus
+	mother = clymene
 	civilizations = {
 		greek
 	}
 	religions = { paganism }
+	domains = {
+		fire #gave fire to mankind
+	}
 }

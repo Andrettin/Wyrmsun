@@ -1,0 +1,13 @@
+clymene = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 130.
+	name = "Clymene"
+	pantheon = titan #an Oceanid (daughter of Oceanus and a nymph), but she was not only the daughter of two Titans, but was also married to a Titan
+	gender = female
+	father = oceanus
+	mother = tethys
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+	#married to Iapetus
+	#mother of the Epimetheus and Menoetius
+}

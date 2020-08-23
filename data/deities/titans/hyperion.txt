@@ -1,5 +1,5 @@
-hyperion = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
-	name = "Hyperion"
+hyperion = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 256.
+	name = "Hyperion" #the name means "he who travels above", apparently meaning the sun
 	pantheon = titan
 	gender = male
 	father = uranus
@@ -8,4 +8,7 @@ hyperion = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p.
 		greek
 	}
 	religions = { paganism }
+	domains = { sun }
+	#married to Theia
+	#father of Selene and Eos
 }

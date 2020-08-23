@@ -1,0 +1,9 @@
+zeus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 287-288.
+	name = "Zeus"
+	pantheon = olympian
+	gender = male
+	civilizations = {
+		greek
+	}
+	religions = { paganism }
+}

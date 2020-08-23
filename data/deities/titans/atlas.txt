@@ -1,8 +1,19 @@
-atlas = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
-	name = "Atlas"
+atlas = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 91-92.
+	name = "Atlas" #the name means "very enduring"
 	pantheon = titan
+	gender = male
+	father = iapetus
+	mother = clymene
 	civilizations = {
 		greek
 	}
 	religions = { paganism }
+	#condemned by Zeus to hold up the sky
+	domains = {
+		air #associated with the sky and the stars
+	}
+	character = {
+		trait = upgrade_resilient #supported the heavy burden of holding up the sky for aeons
+		#trait = upgrade_dim #his dimness caused him to be tricked by Heracles
+	}
 }

@@ -1,8 +1,20 @@
-leto = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+leto = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 287-288.
 	name = "Leto"
-	pantheon = titan
+	pantheon = titan #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	gender = female
+	father = coeus
+	mother = phoebe
 	civilizations = {
 		greek
+		latin
 	}
 	religions = { paganism }
+	domains = {
+		charity #marked for her exceptional kindness
+	}
+	cultural_names = {
+		latin = "Latona"
+	}
+	#gentle and kind
+	#transformed humans into frogs in one tale
 }

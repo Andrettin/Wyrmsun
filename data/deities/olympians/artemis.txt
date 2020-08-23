@@ -1,0 +1,12 @@
+artemis = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 287-288.
+	name = "Artemis"
+	pantheon = olympian
+	gender = female
+	father = zeus
+	mother = leto
+	civilizations = {
+		greek
+		latin
+	}
+	religions = { paganism }
+}

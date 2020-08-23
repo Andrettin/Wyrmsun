@@ -1,12 +1,14 @@
 apollo = {
 	name = "Apollo"
 	pantheon = olympian
+	gender = male
+	father = zeus #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 287-288.
+	mother = leto #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 287-288.
 	civilizations = {
 		greek
 		latin
 	}
 	religions = { paganism }
-	gender = male
 	domains = { sun }
 	upgrade = upgrade_deity_apollo
 }

@@ -1,8 +1,12 @@
-helios = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
-	name = "Helios"
-	pantheon = titan
+helios = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 228-230.
+	name = "Helios" #the name means "sun"
+	pantheon = titan #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+	gender = male
+	father = hyperion
+	mother = theia
 	civilizations = {
 		greek
 	}
 	religions = { paganism }
+	domains = { sun }
 }

@@ -1,4 +1,4 @@
-iapetus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
+iapetus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 259.
 	name = "Iapetus"
 	pantheon = titan
 	gender = male
@@ -8,4 +8,5 @@ iapetus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 
 		greek
 	}
 	religions = { paganism }
+	#father of the Titans Epimetheus and Menoetius
 }
