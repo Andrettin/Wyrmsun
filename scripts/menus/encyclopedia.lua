@@ -906,7 +906,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local domains = GetDeityData(unit_name, "Domains")
 		table.sort(domains)
 		if (table.getn(domains) > 0) then
-			description = description .. _("Portfolio") .. ": "
+			description = description .. _("Domains") .. ": "
 			for i=1,table.getn(domains) do
 				description = description .. _(GetDeityDomainData(domains[i], "Name"))
 				if (i < table.getn(domains)) then
