@@ -1,0 +1,7 @@
+lightning = {
+	name = "Lightning"
+	upgrade = upgrade_deity_domain_lightning
+	abilities = {
+		upgrade_shocking_grasp
+	}
+}

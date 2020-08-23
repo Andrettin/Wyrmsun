@@ -1,0 +1,7 @@
+courage = { #one of the four Cardinal Virtues
+	name = "Courage"
+	upgrade = upgrade_deity_domain_courage
+	abilities = {
+		upgrade_inspire
+	}
+}

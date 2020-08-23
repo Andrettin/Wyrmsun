@@ -1,0 +1,7 @@
+darkness = {
+	name = "Darkness"
+	upgrade = upgrade_deity_domain_darkness
+	abilities = {
+		upgrade_terror
+	}
+}

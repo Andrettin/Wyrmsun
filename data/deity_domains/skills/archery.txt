@@ -1,0 +1,7 @@
+archery = {
+	name = "Archery"
+	upgrade = upgrade_deity_domain_archery
+	abilities = {
+		upgrade_precision
+	}
+}

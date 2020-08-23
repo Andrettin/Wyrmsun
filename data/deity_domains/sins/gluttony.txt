@@ -1,0 +1,4 @@
+gluttony = { #one of the Seven Sins
+	name = "Gluttony"
+	upgrade = upgrade_deity_domain_gluttony
+}

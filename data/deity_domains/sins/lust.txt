@@ -1,0 +1,4 @@
+lust = { #one of the Seven Sins
+	name = "Lust"
+	upgrade = upgrade_deity_domain_lust
+}

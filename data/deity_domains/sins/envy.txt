@@ -1,0 +1,4 @@
+envy = { #one of the Seven Sins
+	name = "Envy"
+	upgrade = upgrade_deity_domain_envy
+}

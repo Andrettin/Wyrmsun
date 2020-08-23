@@ -1,0 +1,4 @@
+air = { #one of the five classical elements
+	name = "Air"
+	upgrade = upgrade_deity_domain_air
+}

@@ -1,0 +1,4 @@
+metalworking = {
+	name = "Metalworking"
+	upgrade = upgrade_deity_domain_metalworking
+}

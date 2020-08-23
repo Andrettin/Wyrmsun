@@ -1,0 +1,7 @@
+trickery = {
+	name = "Trickery"
+	upgrade = upgrade_deity_domain_trickery
+	abilities = {
+		upgrade_slow_ability
+	}
+}

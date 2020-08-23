@@ -1,0 +1,4 @@
+earth = { #one of the five classical elements; one of the five Chinese elements
+	name = "Earth"
+	upgrade = upgrade_deity_domain_earth
+}

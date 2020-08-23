@@ -1,0 +1,4 @@
+magic = {
+	name = "Magic"
+	upgrade = upgrade_deity_domain_magic
+}

@@ -1,0 +1,7 @@
+faith = { #one of the three Theological Virtues
+	name = "Faith"
+	upgrade = upgrade_deity_domain_faith
+	abilities = {
+		upgrade_blessing
+	}
+}

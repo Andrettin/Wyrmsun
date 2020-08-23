@@ -1,0 +1,7 @@
+wood = { #one of the five Chinese elements
+	name = "Wood"
+	upgrade = upgrade_deity_domain_wood
+	abilities = {
+		upgrade_barkskin
+	}
+}

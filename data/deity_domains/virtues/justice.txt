@@ -1,0 +1,7 @@
+justice = { #one of the four Cardinal Virtues
+	name = "Justice"
+	upgrade = upgrade_deity_domain_justice
+	abilities = {
+		upgrade_inspire
+	}
+}

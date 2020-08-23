@@ -1,0 +1,7 @@
+warfare = {
+	name = "Warfare"
+	upgrade = upgrade_deity_domain_warfare
+	abilities = {
+		upgrade_inspire
+	}
+}

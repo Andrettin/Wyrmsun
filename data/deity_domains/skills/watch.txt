@@ -1,0 +1,7 @@
+watch = {
+	name = "Watch"
+	upgrade = upgrade_deity_domain_watch
+	abilities = {
+		upgrade_precision
+	}
+}
