@@ -8,5 +8,5 @@ apollo = {
 	religions = { paganism }
 	gender = male
 	domains = { sun }
-	deity_upgrade = upgrade_deity_apollo
+	upgrade = upgrade_deity_apollo
 }

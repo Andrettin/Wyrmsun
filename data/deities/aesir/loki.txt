@@ -16,7 +16,7 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 		chaos
 		envy
 	}
-	deity_upgrade = upgrade_deity_loki
+	upgrade = upgrade_deity_loki
 	description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir."
 	character = {
 		unit_type = unit_norse_heroic_swordsman

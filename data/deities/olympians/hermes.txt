@@ -8,7 +8,7 @@ hermes = {
 	religions = { paganism }
 	gender = male
 	#domains = { air }
-	deity_upgrade = upgrade_deity_hermes
+	upgrade = upgrade_deity_hermes
 	cultural_names = {
 		latin = "Mercury"
 	}

@@ -20,7 +20,7 @@ hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of O
 	}
 	religions = { paganism }
 	domains = { death }
-	deity_upgrade = upgrade_deity_hel
+	upgrade = upgrade_deity_hel
 	description = "Hel is a goddess of death who dwells in Niflheim. Half of her is alive, while the other half is corpse-like."
 	cultural_names = {
 		#anglo_saxon = "Hell" #Old English cognate of Old Norse "Hel"; see language data

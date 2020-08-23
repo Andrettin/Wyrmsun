@@ -25,5 +25,5 @@ christian_god = {
 		faith
 		hope
 	}
-	deity_upgrade = upgrade_deity_christian_god
+	upgrade = upgrade_deity_christian_god
 }

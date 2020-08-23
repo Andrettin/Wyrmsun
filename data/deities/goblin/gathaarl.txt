@@ -12,7 +12,7 @@ gathaarl = { #from Tyrant, Goblin God of Battle
 		earth
 		wrath
 	}
-	deity_upgrade = upgrade_deity_gathaarl
+	upgrade = upgrade_deity_gathaarl
 	description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
 	character = {
 		unit_type = unit_goblin_warlord
