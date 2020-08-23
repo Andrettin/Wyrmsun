@@ -1,7 +1,9 @@
 tethys = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
 	name = "Tethys"
-	character = tethys
 	pantheon = titan
+	gender = female
+	father = uranus
+	mother = gaia
 	civilizations = {
 		greek
 	}

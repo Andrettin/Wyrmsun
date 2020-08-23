@@ -1,6 +1,0 @@
-tethys = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
-	name = "Tethys"
-	gender = female
-	father = uranus
-	mother = gaia
-}

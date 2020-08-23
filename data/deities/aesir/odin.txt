@@ -1,8 +1,9 @@
 odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	name = "Odin"
-	character = odin
 	pantheon = aesir
 	home_plane = asgard
+	gender = male
+	icon = icon_odin
 	civilizations = {
 		anglo_saxon
 		dwarven
@@ -31,5 +32,13 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 		germanic = "Wodanaz" #"Wōđanaz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
 		suebi = "Wodan"
 		teuton = "Wodan" #Old High German name for the deity, as seen in the second Merseburg charm; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
+	}
+	character = {
+		unit_type = unit_norse_heroic_swordsman
+		civilization = aesir
+		default_faction = asgard
+		variation = gray_hair
+		trait = upgrade_wise
+		base_level = 95
 	}
 }

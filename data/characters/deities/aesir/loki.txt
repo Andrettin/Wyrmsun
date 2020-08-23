@@ -1,9 +1,0 @@
-loki = {
-	name = "Loki"
-	unit_type = unit_norse_heroic_swordsman
-	civilization = aesir
-	default_faction = asgard
-	gender = male
-	variation = blond_hair
-	icon = icon_loki
-}

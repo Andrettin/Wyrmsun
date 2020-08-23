@@ -1,6 +1,0 @@
-frigg = {
-	name = "Frigg"
-	civilization = aesir
-	default_faction = asgard
-	gender = female
-}

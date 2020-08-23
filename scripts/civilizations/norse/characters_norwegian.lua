@@ -643,14 +643,6 @@ DefineCharacter("nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Civilization = "norse"
 })
 
-DefineCharacter("nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
-	Name = "Nanna", -- her son married Instein's sister
-	Gender = "female",
-	Type = "unit-teuton-archer",
-	Civilization = "norse",
-	Father = "nokkvi"
-})
-
 DefineCharacter("skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Skekil", -- also known as Skekkil
 	Gender = "male",

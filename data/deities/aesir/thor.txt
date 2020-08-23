@@ -1,8 +1,11 @@
 thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	name = "Thor"
-	character = thor
 	pantheon = aesir
 	home_plane = asgard
+	gender = male
+	icon = icon_thor
+	father = odin
+	mother = jord
 	civilizations = {
 		anglo_saxon
 		dwarven
@@ -29,5 +32,12 @@ thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder
 		germanic = "Thunraz" #Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		suebi = "Thunor"
 		teuton = "Thunor" #Anglo-Saxon name for the deity, used here for lack of a better one
+	}
+	character = {
+		unit_type = unit_norse_heroic_swordsman
+		civilization = aesir
+		default_faction = asgard
+		variation = blond_hair
+		trait = upgrade_mighty
 	}
 }

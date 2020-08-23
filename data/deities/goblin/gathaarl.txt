@@ -1,11 +1,12 @@
 gathaarl = { #from Tyrant, Goblin God of Battle
 	name = "Gathaarl"
-	character = gathaarl
 	pantheon = goblin
 	home_plane = niflheim
+	major = true
+	gender = male
+	icon = icon_gathaarl
 	civilizations = { goblin }
 	religions = { paganism }
-	major = true
 	domains = {
 		chaos
 		earth
@@ -13,6 +14,22 @@ gathaarl = { #from Tyrant, Goblin God of Battle
 	}
 	deity_upgrade = upgrade_deity_gathaarl
 	description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
+	character = {
+		unit_type = unit_goblin_warlord
+		civilization = aesir
+		default_faction = hel #lives in Niflheim
+		trait = upgrade_vicious
+		base_level = 50
+		
+		history = {
+			-30000 = {
+				active = true
+				location = {
+					site = eljudnir
+				}
+			}
+		}
+	}
 	#neutral alignment (actually "neutral -")
 	#prefers offerings of food and weapons
 	#offering description from Tyrant: "dissolved in a cloud of green smoke"

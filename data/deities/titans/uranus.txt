@@ -1,12 +1,12 @@
 uranus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
 	name = "Uranus"
-	character = uranus
 	pantheon = titan #he was not actually a titan, but since he was the father of the titans, this pantheon fits him best
+	major = true
+	gender = male
 	civilizations = {
 		greek
 	}
 	religions = { paganism }
-	major = true
 	domains = {
 		air
 	}

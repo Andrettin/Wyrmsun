@@ -1,0 +1,8 @@
+nanna_nokkvisdottir = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
+	name = "Nanna" 
+	unit_type = unit_teuton_archer
+	civilization = norse
+	gender = female
+	father = nokkvi
+	#her son married Instein's sister
+}

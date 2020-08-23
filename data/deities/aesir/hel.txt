@@ -1,8 +1,10 @@
 hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	name = "Hel"
-	character = hel
 	pantheon = aesir
 	home_plane = niflheim
+	gender = female
+	icon = icon_hel
+	father = loki
 	civilizations = {
 		#no attestation has been found of the Anglo-Saxons, Frisians, Goths, High Germans or Saxons worshipping the deity Hel, but their languages have cognates of Old Norse "Hel", and consequently also reflexes of Proto-Germanic "Haljô"; Hel is here also included for the dwarves and goblins (even though they have no interaction with her in myths/legends) to allow them to possess necromantic spells
 		anglo_saxon
@@ -29,5 +31,10 @@ hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of O
 		#saxon = "Hellja" #the alternative form "hell" is also given; Old Saxon cognate of Old Norse "Hel"; see language data
 		suebi = "Hella"
 		teuton = "Hella" #Old High German cognate of Old Norse "Hel"; see language data
+	}
+	character = {
+		unit_type = unit_germanic_priest
+		civilization = aesir
+		default_faction = hel
 	}
 }

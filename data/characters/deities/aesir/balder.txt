@@ -1,8 +1,0 @@
-balder = {
-	name = "Balder"
-	civilization = aesir
-	default_faction = asgard
-	gender = male
-	father = odin
-	mother = frigg
-}

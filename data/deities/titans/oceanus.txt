@@ -1,7 +1,9 @@
 oceanus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
 	name = "Oceanus"
-	character = oceanus
 	pantheon = titan
+	gender = male
+	father = uranus
+	mother = gaia
 	civilizations = {
 		greek
 	}

@@ -1,8 +1,8 @@
 frigg = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
 	name = "Frigg"
-	character = frigg
 	pantheon = aesir
 	home_plane = asgard
+	gender = female
 	civilizations = {
 		anglo_saxon
 		frankish
@@ -21,4 +21,8 @@ frigg = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Sour
 		teuton = "Friia" #as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	}
 	#first among the goddesses
+	character = {
+		civilization = aesir
+		default_faction = asgard
+	}
 }

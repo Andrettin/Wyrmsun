@@ -1,6 +1,0 @@
-theia = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
-	name = "Theia"
-	gender = female
-	father = uranus
-	mother = gaia
-}

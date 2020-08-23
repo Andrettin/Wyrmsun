@@ -1,7 +1,10 @@
 cronus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
 	name = "Cronus"
-	character = cronus
 	pantheon = titan
+	major = true
+	gender = male
+	father = uranus
+	mother = gaia
 	civilizations = {
 		greek
 	}
