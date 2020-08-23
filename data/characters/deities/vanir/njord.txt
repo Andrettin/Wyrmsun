@@ -1,0 +1,6 @@
+njord = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 54.
+	name = "Njord"
+	civilization = vanir
+	default_faction = asgard
+	gender = male
+}

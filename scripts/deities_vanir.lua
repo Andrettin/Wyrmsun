@@ -47,20 +47,6 @@ DefineDeity("nerthus", { -- same etymological root as Njord, likely originally t
 	Description = "Nerthus is an earth goddess."
 })
 
-DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 54.
-	Name = "Njord",
-	Pantheon = "vanir",
-	HomePlane = "vanaheim",
-	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Njord an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
-	Religions = {"paganism"},
-	Gender = "male",
-	Domains = {"water"}, -- god of the sea and wind
-	CulturalNames = {
-		"germanic", "Nerthiwiz" -- "Nerþiwiz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135.
-	},
-	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Njord was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his two children, Frey and Freyja. At first, the Vanir were worshiped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Njord went to live in Asgard he began to be worshiped by the Germanics as well."
-})
-
 DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Name = "Eloh",
 	Pantheon = "vanir", -- since she is an elven deity
