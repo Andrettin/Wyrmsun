@@ -10,8 +10,8 @@ hera = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 23
 	gender = female
 	major = true
 	domains = { life }
-	#description = "Hera is a goddess of marriage and childbirth, and is the wife of Zeus. She is both feared and adored by the gnomes of Nidavellir. She is said to have transformed a gnomish woman of exceeding beauty into a bird when she denied Hera the proper worship."
-	#background = "In Greek mythology, Hera transformed a beautiful girl who was one of the mythological pygmies into a crane. #in Wyrmsun the pygmies from Greek mythology are identified with the gnomes, as in Franz Hartmann's "Among the Gnomes" they are a subtype of gnome
+	description = "Hera is a goddess of marriage and childbirth, and is the wife of Zeus. She is both feared and adored by the gnomes of Nidavellir. She is said to have transformed a gnomish woman of exceeding beauty into a bird when she denied Hera the proper worship."
+	background = "In Greek mythology, Hera transformed a beautiful girl who was one of the mythological pygmies into a crane. #in Wyrmsun the pygmies from Greek mythology are identified with the gnomes, as in Franz Hartmann's "Among the Gnomes" they are a subtype of gnome
 	cultural_names = {
 		latin = "Juno"
 	}

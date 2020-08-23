@@ -1,0 +1,18 @@
+balder = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
+	name = "Balder"
+	character = balder
+	pantheon = aesir
+	home_plane = asgard
+	civilizations = {
+		anglo_saxon
+		norse
+	}
+	religions = { paganism }
+	domains = { light }
+	description = "Balder is known for his beauty, wisdom and gentleness. Light is said to evoke from him. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
+	cultural_names = {
+		anglo_saxon = "Baeldaeg" #"Bældæg"; Anglo-Saxon name for the deity
+	}
+	#due to Loki's mischief, he was killed by Hod
+	#Balder returns after Ragnarok
+}

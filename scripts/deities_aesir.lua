@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
-	Name = "Frigg",
-	Pantheon = "aesir",
-	Civilizations = {"anglo-saxon", "frankish", "germanic", "norse", "suebi", "teuton"},
-	Religions = {"paganism"},
-	Gender = "female",
-	CulturalNames = {
-		"anglo-saxon", "Frig", -- "Frig" is the Anglo-Saxon name for the goddess according to Stenton, Larrington gives "Fricg" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
-		"germanic", "Frijjo", -- "Frijjō"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
-		"frankish", "Friia",
-		"suebi", "Friia",
-		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
-	},
-	Description = "Frigg is a goddess of fate, love and marriage. She is Odin's wife and the mother of Balder. Frigg's hall is Fensalir."
-})
-
 DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	Name = "Seaxneat",
 	Pantheon = "aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but we don't know if he was actually considered one of the Aesir
@@ -74,20 +58,6 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"water"} -- god of the sea
-})
-
-DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
-	Name = "Balder",
-	Pantheon = "aesir",
-	HomePlane = "asgard",
-	Civilizations = {"anglo-saxon", "norse"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Domains = {"light"},
-	CulturalNames = {
-		"anglo-saxon", "Baeldaeg", -- "Bældæg"; Anglo-Saxon name for the deity
-	},
-	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. Light is said to evoke from him. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })
 
 DefineDeity("bragi", { -- son of Odin and husband of Idun; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 50.
@@ -194,15 +164,6 @@ DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of y
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"life"}
-})
-
-DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known as Fjorgyn; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 241-242.
-	Name = "Jord",
-	Pantheon = "aesir",
-	Civilizations = {"norse"},
-	Religions = {"paganism"},
-	Gender = "female",
-	Domains = {"earth"}
 })
 
 DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.

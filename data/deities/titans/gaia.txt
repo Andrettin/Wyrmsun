@@ -12,5 +12,5 @@ gaia = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 20
 		earth
 		chaos
 	}
-	#description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshipers are the ettins of Jotunheim, to whom she appeared in ages past."
+	description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshipers are the ettins of Jotunheim, to whom she appeared in ages past."
 }

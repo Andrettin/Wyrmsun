@@ -8,4 +8,5 @@ thor = {
 	trait = upgrade_mighty
 	icon = icon_thor
 	father = odin
+	mother = jord
 }

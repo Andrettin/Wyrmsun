@@ -1,0 +1,24 @@
+frigg = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 51.
+	name = "Frigg"
+	character = frigg
+	pantheon = aesir
+	home_plane = asgard
+	civilizations = {
+		anglo_saxon
+		frankish
+		germanic
+		norse
+		suebi
+		teuton
+	}
+	religions = { paganism }
+	description = "Frigg is a goddess of fate, love and marriage. She is Odin's wife, and her hall is Fensalir."
+	cultural_names = {
+		anglo_saxon = "Frig" #"Frig" is the Anglo-Saxon name for the goddess according to Stenton, while Larrington gives "Fricg" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
+		germanic = "Frijjo" #"Frijjō"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		frankish = "Friia"
+		suebi = "Friia"
+		teuton = "Friia" #as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
+	}
+	#first among the goddesses
+}
