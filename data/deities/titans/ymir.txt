@@ -1,0 +1,18 @@
+ymir = { #Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, pp. 336, 377-378.
+	name = "Ymir"
+	pantheon = titan #as he is a primordial being, and Gaia's children are mostly Titans
+	major = true
+	gender = male
+	mother = gaia #identified with the Earth-born god Tuisto
+	civilizations = {
+		ettin #mythical progenitor of the giants
+		germanic #Tuisto was venerated as a godly ancestor by Germanic peoples
+	}
+	religions = { paganism }
+	domains = {
+		ice #progenitor of the frost giants
+	}
+	cultural_names = {
+		germanic = "Tuisto"
+	}
+}
