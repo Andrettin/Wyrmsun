@@ -1,0 +1,9 @@
+upgrade_regeneration = {
+	name = "Regeneration"
+	icon = icon_regeneration
+	ability = true
+
+	conditions = {
+		upgrade = upgrade_deity_freyja
+	}
+}

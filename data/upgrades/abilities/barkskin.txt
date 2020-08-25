@@ -1,0 +1,9 @@
+upgrade_barkskin = {
+	name = "Barkskin"
+	icon = icon_barkskin
+	ability = true
+
+	conditions = {
+		upgrade = upgrade_deity_frey
+	}
+}
