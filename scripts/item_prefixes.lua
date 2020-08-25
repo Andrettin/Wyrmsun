@@ -355,31 +355,31 @@ DefineModifier("upgrade-item-prefix-wounding",
 )
 
 DefineDependency("upgrade-item-prefix-cold",
-	{"upgrade-deity-domain-ice"}
+	{"upgrade-magic-domain-ice"}
 )
 
 DefineDependency("upgrade-item-prefix-cruel",
-	{"upgrade-deity-domain-wrath"}
+	{"upgrade-magic-domain-blood"}, "or", {"upgrade-magic-domain-death"}
 )
 
 DefineDependency("upgrade-item-prefix-dwindling",
-	{"upgrade-deity-domain-death"}
+	{"upgrade-magic-domain-death"}
 )
 
 DefineDependency("upgrade-item-prefix-extinguishing",
-	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
+	{"upgrade-magic-domain-water"}, "or", {"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-prefix-fiery",
-	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
+	{"upgrade-magic-domain-fire"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
 )
 
 DefineDependency("upgrade-item-prefix-flaming",
-	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
+	{"upgrade-magic-domain-fire"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
 )
 
 DefineDependency("upgrade-item-prefix-giants",
-	{"upgrade-deity-domain-chaos"}
+	{"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-prefix-giantsbane",
@@ -387,47 +387,47 @@ DefineDependency("upgrade-item-prefix-giantsbane",
 )
 
 DefineDependency("upgrade-item-prefix-glacial",
-	{"upgrade-deity-domain-ice"}
+	{"upgrade-magic-domain-ice"}
 )
 
 DefineDependency("upgrade-item-prefix-impaling",
-	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}
+	{"upgrade-magic-domain-blood"}
 )
 
 DefineDependency("upgrade-item-prefix-impregnable",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-order"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-earth"}, "or", {"upgrade-magic-domain-metal"}
 )
 
 DefineDependency("upgrade-item-prefix-industrious",
-	{"upgrade-deity-domain-greed"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-temperance"}
+	{"upgrade-magic-domain-earth"}, "or", {"upgrade-magic-domain-metal"}
 )
 
 DefineDependency("upgrade-item-prefix-jinns",
-	{"upgrade-deity-domain-air"}
+	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-prefix-quenching",
-	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
+	{"upgrade-magic-domain-water"}, "or", {"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-prefix-replenishing",
-	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-hope"}
+	{"upgrade-magic-domain-life"}
 )
 
 DefineDependency("upgrade-item-prefix-shocking",
-	{"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-prefix-storm",
-	{"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-prefix-vicious",
-	{"upgrade-deity-domain-wrath"}
+	{"upgrade-magic-domain-blood"}
 )
 
 DefineDependency("upgrade-item-prefix-wolfs",
-	{"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-magic-domain-moon"}
 )
 
 local item_prefixes = GetItemPrefixes()

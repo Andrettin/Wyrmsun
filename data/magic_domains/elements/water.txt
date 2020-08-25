@@ -1,0 +1,5 @@
+water = { #one of the five classical elements; one of the five Chinese elements
+	name = "Water"
+	upgrade = upgrade_magic_domain_water
+	#specialist mage: Hydromancer
+}

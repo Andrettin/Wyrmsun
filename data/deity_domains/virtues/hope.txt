@@ -1,4 +1,0 @@
-hope = { #one of the three Theological Virtues
-	name = "Hope"
-	upgrade = upgrade_deity_domain_hope
-}

@@ -30,15 +30,14 @@ DefineDeity("gobannonos", { -- ancient Celtic god of smithing; Source: Bernhard 
 	Civilizations = {"celt"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"metalworking"}
+	Domains = {"transmutation"}
 })
 
 DefineDeity("maponos", { -- Celtic god; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 129.
 	Name = "Maponos",
 	Civilizations = {"celt"},
 	Religions = {"paganism"},
-	Gender = "male",
-	Domains = {}
+	Gender = "male"
 })
 
 DefineDeity("taranos", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26, 28.

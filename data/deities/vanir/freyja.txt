@@ -11,7 +11,7 @@ freyja = { #Source: Peter Buchholz, "Perspectives for Historical Research in Ger
 		norse
 	}
 	religions = { paganism }
-	domains = { love } #fertility goddess, and a goddess of love
+	domains = { earth } #fertility goddess, and a goddess of love
 	upgrade = upgrade_deity_freyja
 	description = "Freyja is one of the Vanir, a group of deities originally worshipped solely by elves. With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Freyja was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by her father Njord and her brother Frey. The Germanic peoples, who worshipped the Aesir, eventually came to worship Freyja. Freyja is a goddess of love and fertility."
 	#feast = "Disa Blot" #great sacrifice held in mid-winter; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.

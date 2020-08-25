@@ -16,7 +16,7 @@ tyr = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251
 		teuton
 	}
 	religions = { paganism }
-	domains = { warfare } #god of war, law and justice
+	domains = { metal } #god of war, law and justice
 	upgrade = upgrade_deity_tyr
 	description = "Tyr is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand while the Aesir chain the beast with the dwarven fetter Gleipnir."
 	cultural_names = {

@@ -1,4 +1,0 @@
-pride = { #one of the Seven Sins
-	name = "Pride"
-	upgrade = upgrade_deity_domain_pride
-}

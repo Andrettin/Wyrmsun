@@ -29,188 +29,74 @@
 
 -- The Five Classical Elements
 
-DefineUpgrade("upgrade-deity-domain-air", {
+DefineUpgrade("upgrade-magic-domain-air", {
 	Name = "Air"
 })
 
-DefineUpgrade("upgrade-deity-domain-earth", {
+DefineUpgrade("upgrade-magic-domain-earth", {
 	Name = "Earth"
 })
 
-DefineUpgrade("upgrade-deity-domain-fire", {
+DefineUpgrade("upgrade-magic-domain-fire", {
 	Name = "Fire"
 })
 
-DefineUpgrade("upgrade-deity-domain-water", {
+DefineUpgrade("upgrade-magic-domain-water", {
 	Name = "Water"
 })
 
-DefineUpgrade("upgrade-deity-domain-aether", {
+DefineUpgrade("upgrade-magic-domain-aether", {
 	Name = "Aether"
 })
 
 -- Chinese Elements (which aren't present in the classical ones)
 
-DefineUpgrade("upgrade-deity-domain-metal", {
+DefineUpgrade("upgrade-magic-domain-metal", {
 	Name = "Metal"
 })
 
-DefineUpgrade("upgrade-deity-domain-wood", {
+DefineUpgrade("upgrade-magic-domain-wood", {
 	Name = "Wood"
 })
 
 -- Other Elements
 
-DefineUpgrade("upgrade-deity-domain-ice", {
+DefineUpgrade("upgrade-magic-domain-ice", {
 	Name = "Ice"
 })
 
-DefineUpgrade("upgrade-deity-domain-lightning", {
+DefineUpgrade("upgrade-magic-domain-lightning", {
 	Name = "Lightning"
-})
-
--- Chaos and Order
-
-DefineUpgrade("upgrade-deity-domain-chaos", {
-	Name = "Chaos"
-})
-
-DefineUpgrade("upgrade-deity-domain-order", {
-	Name = "Order"
 })
 
 -- Life and Death
 
-DefineUpgrade("upgrade-deity-domain-death", {
+DefineUpgrade("upgrade-magic-domain-death", {
 	Name = "Death"
 })
 
-DefineUpgrade("upgrade-deity-domain-life", {
+DefineUpgrade("upgrade-magic-domain-life", {
 	Name = "Life"
-})
-
--- Darkness and Light (Yin and Yang)
-
-DefineUpgrade("upgrade-deity-domain-darkness", {
-	Name = "Darkness"
-})
-
-DefineUpgrade("upgrade-deity-domain-light", {
-	Name = "Light"
 })
 
 -- Sun and Moon
 
-DefineUpgrade("upgrade-deity-domain-sun", {
+DefineUpgrade("upgrade-magic-domain-sun", {
 	Name = "Sun"
 })
 
-DefineUpgrade("upgrade-deity-domain-moon", {
+DefineUpgrade("upgrade-magic-domain-moon", {
 	Name = "Moon"
 })
 
--- Four Cardinal Virtues
+-- Magic Types
 
-DefineUpgrade("upgrade-deity-domain-courage", {
-	Name = "Courage"
+DefineUpgrade("upgrade-magic-domain-illusion", {
+	Name = "Illusion"
 })
 
-DefineUpgrade("upgrade-deity-domain-justice", {
-	Name = "Justice"
-})
-
-DefineUpgrade("upgrade-deity-domain-temperance", {
-	Name = "Temperance"
-})
-
-DefineUpgrade("upgrade-deity-domain-wisdom", {
-	Name = "Wisdom"
-})
-
--- Three Theological Virtues
-
-DefineUpgrade("upgrade-deity-domain-charity", {
-	Name = "Charity"
-})
-
-DefineUpgrade("upgrade-deity-domain-faith", {
-	Name = "Faith"
-})
-
-DefineUpgrade("upgrade-deity-domain-hope", {
-	Name = "Hope"
-})
-
--- Other Virtues
-
-DefineUpgrade("upgrade-deity-domain-love", {
-	Name = "Love"
-})
-
--- Seven Sins
-
-DefineUpgrade("upgrade-deity-domain-envy", {
-	Name = "Envy"
-})
-
-DefineUpgrade("upgrade-deity-domain-gluttony", {
-	Name = "Gluttony"
-})
-
-DefineUpgrade("upgrade-deity-domain-greed", {
-	Name = "Greed"
-})
-
-DefineUpgrade("upgrade-deity-domain-lust", {
-	Name = "Lust"
-})
-
-DefineUpgrade("upgrade-deity-domain-pride", {
-	Name = "Pride"
-})
-
-DefineUpgrade("upgrade-deity-domain-sloth", {
-	Name = "Sloth"
-})
-
-DefineUpgrade("upgrade-deity-domain-wrath", {
-	Name = "Wrath"
-})
-
--- Other Sins
-
-DefineUpgrade("upgrade-deity-domain-fear", {
-	Name = "Fear"
-})
-
--- Skills
-
-DefineUpgrade("upgrade-deity-domain-archery", {
-	Name = "Archery"
-})
-
-DefineUpgrade("upgrade-deity-domain-magic", {
-	Name = "Magic"
-})
-
-DefineUpgrade("upgrade-deity-domain-metalworking", {
-	Name = "Metalworking"
-})
-
-DefineUpgrade("upgrade-deity-domain-poetry", {
-	Name = "Poetry"
-})
-
-DefineUpgrade("upgrade-deity-domain-trickery", {
-	Name = "Trickery"
-})
-
-DefineUpgrade("upgrade-deity-domain-warfare", {
-	Name = "Warfare"
-})
-
-DefineUpgrade("upgrade-deity-domain-watch", {
-	Name = "Watch"
+DefineUpgrade("upgrade-magic-domain-transmutation", {
+	Name = "Transmutation"
 })
 
 -- Deity Upgrades

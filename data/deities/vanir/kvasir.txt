@@ -9,7 +9,7 @@ kvasir = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
 		norse
 	}
 	religions = { paganism }
-	domains = { wisdom }
+	domains = { aether }
 	#description = "The wisest of the Vanir, Kvasir was sent to live with the Aesir in Asgard as a result of the peace treaty which concluded the Aesir-Vanir War."
 	character = {
 		unit_type = unit_elven_priest

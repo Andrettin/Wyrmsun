@@ -1,7 +1,0 @@
-love = {
-	name = "Love"
-	upgrade = upgrade_deity_domain_love
-	abilities = {
-		upgrade_regeneration
-	}
-}

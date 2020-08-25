@@ -455,147 +455,147 @@ DefineModifier("upgrade-item-suffix-of-the-woodpecker",
 )
 
 DefineDependency("upgrade-item-suffix-of-accuracy",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-beaver",
-	{"upgrade-deity-domain-wood"}
+	{"upgrade-magic-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-betrayal",
-	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-envy"}, "or", {"upgrade-deity-domain-greed"}
+	{"upgrade-magic-domain-illusion"}
 )
 
 DefineDependency("upgrade-item-suffix-of-carpentry",
-	{"upgrade-deity-domain-wood"}
+	{"upgrade-magic-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-cold",
-	{"upgrade-deity-domain-ice"}
+	{"upgrade-magic-domain-ice"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-colossus",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-magic-domain-earth"}, "or", {"upgrade-magic-domain-metal"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-day",
-	{"upgrade-deity-domain-light"}, "or", {"upgrade-deity-domain-sun"}, "or", {"upgrade-deity-domain-order"}
+	{"upgrade-magic-domain-sun"}
 )
 
 DefineDependency("upgrade-item-suffix-of-diligence",
-	{"upgrade-deity-domain-temperance"}
+	{"upgrade-magic-domain-earth"}, "or", {"upgrade-magic-domain-metal"}
 )
 
 DefineDependency("upgrade-item-suffix-of-ethereal-vision",
-	{"upgrade-deity-domain-aether"}, "or", {"upgrade-deity-domain-magic"}
+	{"upgrade-magic-domain-aether"}
 )
 
 DefineDependency("upgrade-item-suffix-of-extinguishment",
-	{"upgrade-deity-domain-water"}, "or", {"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-fire"}
+	{"upgrade-magic-domain-water"}, "or", {"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-suffix-of-fire",
-	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-suffix-of-flame",
-	{"upgrade-deity-domain-fire"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-jinn",
-	{"upgrade-deity-domain-air"}
+	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-suffix-of-lightning",
-	{"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-night",
-	{"upgrade-deity-domain-darkness"}, "or", {"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-chaos"}
+	{"upgrade-magic-domain-moon"}
 )
 
 DefineDependency("upgrade-item-suffix-of-perfuration",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-wrath"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-suffix-of-plenty",
-	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-charity"}
+	{"upgrade-magic-domain-life"}, "or", {"upgrade-magic-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-power",
-	{"upgrade-deity-domain-pride"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-lightning"}, "or", {"upgrade-magic-domain-fire"}, "or", {"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-suffix-of-regeneration",
-	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-life"}
 )
 
 DefineDependency("upgrade-item-suffix-of-replenishment",
-	{"upgrade-deity-domain-life"}, "or", {"upgrade-deity-domain-hope"}
+	{"upgrade-magic-domain-life"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-serpent",
-	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-envy"}
+	{"upgrade-magic-domain-illusion"}
 )
 
 DefineDependency("upgrade-item-suffix-of-slaughter",
-	{"upgrade-deity-domain-wrath"}, "or", {"upgrade-deity-domain-death"}
+	{"upgrade-magic-domain-blood"}, "or", {"upgrade-magic-domain-death"}
 )
 
 DefineDependency("upgrade-item-suffix-of-slowness",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+	{"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-suffix-of-smithing",
-	{"upgrade-deity-domain-metal"}, "or", {"upgrade-deity-domain-metalworking"}
+	{"upgrade-magic-domain-metal"}, "or", {"upgrade-magic-domain-transmutation"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-snail",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+	{"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-snigill",
-	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-sloth"}
+	{"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-suffix-of-speed",
-	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-air"}, "or", {"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-storm",
-	{"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-strength",
-	{"upgrade-deity-domain-warfare"}, "or", {"upgrade-deity-domain-faith"}
+	{"upgrade-magic-domain-earth"}
 )
 
 DefineDependency("upgrade-item-suffix-of-swiftness",
-	{"upgrade-deity-domain-air"}, "or", {"upgrade-deity-domain-lightning"}
+	{"upgrade-magic-domain-air"}, "or", {"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-thorns",
-	{"upgrade-deity-domain-chaos"}, "or", {"upgrade-deity-domain-wood"}
+	{"upgrade-magic-domain-wood"}
 )
 
 DefineDependency("upgrade-item-suffix-of-trickery",
-	{"upgrade-deity-domain-trickery"}, "or", {"upgrade-deity-domain-chaos"}
+	{"upgrade-magic-domain-illusion"}
 )
 
 DefineDependency("upgrade-item-suffix-of-victory",
-	{"upgrade-deity-domain-hope"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-magic-domain-sun"}, "or", {"upgrade-magic-domain-fire"}, "or", {"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-vision",
-	{"upgrade-deity-domain-archery"}, "or", {"upgrade-deity-domain-faith"}, "or", {"upgrade-deity-domain-light"}, "or", {"upgrade-deity-domain-watch"}
+	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-wolf",
-	{"upgrade-deity-domain-moon"}, "or", {"upgrade-deity-domain-warfare"}
+	{"upgrade-magic-domain-moon"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-woodpecker",
-	{"upgrade-deity-domain-wood"}
+	{"upgrade-magic-domain-wood"}
 )
 
 local item_suffixes = GetItemSuffixes()

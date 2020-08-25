@@ -13,9 +13,6 @@ frey = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Sourc
 	}
 	religions = { paganism }
 	domains = {
-		earth
-		light
-		#warfare
 		wood #for Barkskin
 	}
 	upgrade = upgrade_deity_frey

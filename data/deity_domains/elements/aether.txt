@@ -1,4 +1,0 @@
-aether = { #one of the five classical elements
-	name = "Aether"
-	upgrade = upgrade_deity_domain_aether
-}

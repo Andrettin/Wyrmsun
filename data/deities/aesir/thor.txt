@@ -19,9 +19,7 @@ thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder
 	religions = { paganism }
 	major = true
 	domains = {
-		air
 		lightning
-		order
 	}
 	upgrade = upgrade_deity_thor
 	description = "Thor is the foremost protector of the Aesir, using his massive throwing hammer to keep Asgard's enemies at bay. Given his power over the weather, Thor is also worshiped as a fertility god. He is married to Sif."

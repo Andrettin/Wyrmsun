@@ -1,0 +1,8 @@
+earth = { #one of the five classical elements; one of the five Chinese elements
+	name = "Earth"
+	upgrade = upgrade_magic_domain_earth
+	abilities = {
+		upgrade_regeneration
+	}
+	#specialist mage: Geomancer
+}

@@ -1,7 +1,0 @@
-fear = {
-	name = "Fear"
-	upgrade = upgrade_deity_domain_fear
-	abilities = {
-		upgrade_terror
-	}
-}

@@ -1,0 +1,8 @@
+air = { #one of the five classical elements
+	name = "Air"
+	upgrade = upgrade_magic_domain_air
+	abilities = {
+		upgrade_precision
+	}
+	#specialist mage: Aeromancer
+}

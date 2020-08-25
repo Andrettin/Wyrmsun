@@ -1,4 +1,0 @@
-water = { #one of the five classical elements; one of the five Chinese elements
-	name = "Water"
-	upgrade = upgrade_deity_domain_water
-}

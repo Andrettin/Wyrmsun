@@ -1,7 +1,0 @@
-charity = { #one of the three Theological Virtues
-	name = "Charity"
-	upgrade = upgrade_deity_domain_charity
-	abilities = {
-		upgrade_healing
-	}
-}

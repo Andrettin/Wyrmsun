@@ -10,7 +10,7 @@ balder = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Sou
 		norse
 	}
 	religions = { paganism }
-	domains = { light }
+	domains = { sun }
 	description = "Balder is known for his beauty, wisdom and gentleness. Light is said to evoke from him. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 	cultural_names = {
 		anglo_saxon = "Baeldaeg" #"Bældæg"; Anglo-Saxon name for the deity

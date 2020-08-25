@@ -1,0 +1,8 @@
+death = {
+	name = "Death"
+	upgrade = upgrade_magic_domain_death
+	abilities = {
+		upgrade_wither
+	}
+	#specialist mage: Necromancer
+}

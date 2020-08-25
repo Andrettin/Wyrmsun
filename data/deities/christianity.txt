@@ -21,9 +21,8 @@ christian_god = {
 	major = true
 	#icon = icon_christianity
 	domains = {
-		charity
-		faith
-		hope
+		aether
+		life
 	}
 	upgrade = upgrade_deity_christian_god
 }

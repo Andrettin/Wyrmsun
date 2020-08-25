@@ -66,7 +66,7 @@ DefineDeity("bragi", { -- son of Odin and husband of Idun; Source: Kevin Crossle
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"poetry"}, -- god of eloquence and poetry
+	-- god of eloquence and poetry
 	Description = "Bragi is a god of poetry and eloquence. He is married to Idun."
 })
 
@@ -76,7 +76,7 @@ DefineDeity("delling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 	Civilizations = {"dwarf", "norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"light"},
+	Domains = {"sun"},
 	Description = "The shining god Delling is the husband of Not, a goddess of the night. Their son is Dag, a god of the day."
 })
 
@@ -104,7 +104,7 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"justice"}, -- god of justice and law
+	-- god of justice and law
 	Description = "Forseti is a god of justice and law, and his hall is Glitnir. He is the son of Balder."
 })
 
@@ -172,7 +172,7 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"lust"}
+	Domains = {"illusion"}
 })
 
 DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with the Vanir, but was killed by the latter; his head was preserved by Odin and put by Mimir's Well; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
@@ -181,7 +181,7 @@ DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with th
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"wisdom"}
+	Domains = {"aether"}
 })
 
 DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
@@ -240,7 +240,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"archery"},
+	Domains = {"air"},
 	Description = "Ull is a god archery and skiing. He is the son of Sif, and dwells in Ydalir." -- his dwelling-place name is "Ýdalir" in Old Norse; Ull's father is unknown
 })
 

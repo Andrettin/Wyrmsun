@@ -1,4 +1,0 @@
-sloth = { #one of the Seven Sins
-	name = "Sloth"
-	upgrade = upgrade_deity_domain_sloth
-}

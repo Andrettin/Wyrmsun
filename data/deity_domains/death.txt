@@ -1,7 +1,0 @@
-death = {
-	name = "Death"
-	upgrade = upgrade_deity_domain_death
-	abilities = {
-		upgrade_wither
-	}
-}

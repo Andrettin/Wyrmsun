@@ -1,4 +1,0 @@
-moon = {
-	name = "Moon"
-	upgrade = upgrade_deity_domain_moon
-}

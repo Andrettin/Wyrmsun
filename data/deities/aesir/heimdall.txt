@@ -10,7 +10,7 @@ heimdall = { #the horn Gjall belongs to him; identified with Rig (the progenitor
 		norse
 	}
 	religions = { paganism }
-	domains = { watch }
+	domains = { air }
 	upgrade = upgrade_deity_heimdall
 	description = "Heimdall is the watchman of the Aesir, his hall Himinbjorg guarding the gates to Asgard. He is believed to be the son of nine mothers."
 	cultural_names = {

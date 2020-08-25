@@ -908,7 +908,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (table.getn(domains) > 0) then
 			description = description .. _("Domains") .. ": "
 			for i=1,table.getn(domains) do
-				description = description .. _(GetDeityDomainData(domains[i], "Name"))
+				description = description .. _(GetMagicDomainData(domains[i], "Name"))
 				if (i < table.getn(domains)) then
 					description = description .. ", "
 				end

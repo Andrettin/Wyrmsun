@@ -30,8 +30,7 @@ DefineDeity("huitzilopochtli", { -- Source: Edward E. Calnek, "The Historical Va
 	Civilizations = {"aztec"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Major = true,
-	Domains = {}
+	Major = true
 	-- according to myth, Huitzilopochtli was born in Cohuatepec (near Tula)
 })
 
@@ -40,8 +39,7 @@ DefineDeity("tezcatlipoca", { -- Source: Jerome A. Offner, "A Reassessment of th
 	Civilizations = {"aztec"}, -- worshipped by the Huitznahuaque and the Tlailotlaque
 	Religions = {"paganism"},
 	Gender = "male",
-	Major = true,
-	Domains = {}
+	Major = true
 })
 
 DefineDeity("tlaloc", { -- Source: Jerome A. Offner, "A Reassessment of the Extent and Structuring of the Empire of Techotlalatzin, Fourteenth Century Ruler of Texcoco", 1979, p. 233.

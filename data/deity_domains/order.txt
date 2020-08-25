@@ -1,4 +1,0 @@
-order = {
-	name = "Order"
-	upgrade = upgrade_deity_domain_order
-}

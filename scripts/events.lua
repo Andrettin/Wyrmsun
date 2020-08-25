@@ -341,7 +341,7 @@ function ProcessEventString(event_string)
 			if (GetDeityData(hero_deities[i], "Major") == false) then
 				local deity_domains = GetDeityData(hero_deities[i], "Domains")
 				for j = 1,table.getn(deity_domains) do
-					event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1", GetDeityDomainData(deity_domains[j], "Name"))
+					event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1", GetMagicDomainData(deity_domains[j], "Name"))
 					break
 				end
 				break

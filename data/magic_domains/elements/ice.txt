@@ -1,0 +1,5 @@
+ice = {
+	name = "Ice"
+	upgrade = upgrade_magic_domain_ice
+	#specialist mage: Cryomancer
+}

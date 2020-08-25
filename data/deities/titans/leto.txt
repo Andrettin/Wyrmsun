@@ -10,7 +10,7 @@ leto = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 28
 	}
 	religions = { paganism }
 	domains = {
-		charity #marked for her exceptional kindness
+		life #marked for her exceptional kindness
 	}
 	cultural_names = {
 		latin = "Latona"

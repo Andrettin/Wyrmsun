@@ -1,7 +1,0 @@
-wisdom = { #one of the four Cardinal Virtues
-	name = "Wisdom"
-	upgrade = upgrade_deity_domain_wisdom
-	abilities = {
-		upgrade_far_sight
-	}
-}

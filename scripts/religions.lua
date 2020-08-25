@@ -31,7 +31,7 @@ DefineReligion("buddhism", {
 
 DefineReligion("christianity", {
 	Name = "Christianity",
-	Domains = {"charity", "faith", "hope"}
+	Domains = {"life", "aether"}
 })
 
 DefineReligion("hinduism", {

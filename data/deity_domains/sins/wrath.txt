@@ -1,7 +1,0 @@
-wrath = { #one of the Seven Sins
-	name = "Wrath"
-	upgrade = upgrade_deity_domain_wrath
-	abilities = {
-		upgrade_terror
-	}
-}

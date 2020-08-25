@@ -40,7 +40,7 @@ DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs",
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"light"}
+	Domains = {"sun"}
 })
 
 DefineDeity("deva", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125

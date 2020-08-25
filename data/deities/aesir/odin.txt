@@ -18,8 +18,6 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 	major = true
 	domains = {
 		aether
-		magic
-		wisdom
 	}
 	upgrade = upgrade_deity_odin
 	#description = "Odin is the chief deity of the Aesir. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."

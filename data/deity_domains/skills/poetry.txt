@@ -1,4 +1,0 @@
-poetry = {
-	name = "Poetry"
-	upgrade = upgrade_deity_domain_poetry
-}

@@ -1,0 +1,7 @@
+illusion = {
+	name = "Illusion"
+	upgrade = upgrade_magic_domain_illusion
+	abilities = {
+		upgrade_slow_ability
+	}
+}

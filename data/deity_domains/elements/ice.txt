@@ -1,4 +1,0 @@
-ice = {
-	name = "Ice"
-	upgrade = upgrade_deity_domain_ice
-}

@@ -1,0 +1,8 @@
+wood = { #one of the five Chinese elements
+	name = "Wood"
+	upgrade = upgrade_magic_domain_wood
+	abilities = {
+		upgrade_barkskin
+	}
+	#specialist priest: Druid
+}

@@ -74,7 +74,6 @@ DefineDeity("andjety", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Andjety is a mysterious god worshiped in the ninth nome of Lower Egypt, wearing a heqa (a sheepherd's staff) and a nekhekh (a lash)."
 })
 
@@ -84,7 +83,6 @@ DefineDeity("antyui", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "\"The two claws\", Antyui is a brutal god worshiped in the tenth nome of Upper Egypt. He represents battle between opposites."
 })
 
@@ -104,7 +102,6 @@ DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Anuquis is a goddess who is known to take the form of a gazelle. She is particularly worshiped by stone workers."
 })
 
@@ -114,7 +111,6 @@ DefineDeity("atum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Atum is a god of royalty. He is the father of Shu and Tefnut."
 })
 
@@ -144,7 +140,7 @@ DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian", "minotaur"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"air", "lust"},
+	Domains = {"air"},
 --	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness, love and lust. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim. One of Hathor's symbols was the papyrus reed. She is known as the Lady of Turquoise."
 })
 
@@ -164,7 +160,6 @@ DefineDeity("hedjhotep", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Hedjhotep is a god of clothing and weaving."
 })
 
@@ -204,7 +199,6 @@ DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Horus is a warrior god who takes the shape of a falcon. He is the son of Osiris and Isis."
 })
 
@@ -214,7 +208,6 @@ DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Hu is a deity of the word and of expression."
 })
 
@@ -224,7 +217,6 @@ DefineDeity("imenhy", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Imenhy is a god of sacrifice."
 })
 
@@ -234,7 +226,6 @@ DefineDeity("isis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Isis is the mother of Horus and the wife of Osiris. She is the daughter of Geb and Nut."
 })
 
@@ -245,7 +236,7 @@ DefineDeity("keku", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
 	HomePlane = "nun",
-	Domains = {"darkness"},
+	Domains = {"illusion"},
 --	Description = "Keku is a primordial deity of darkness."
 })
 
@@ -255,7 +246,6 @@ DefineDeity("khentiamenti", { -- Source: Claude Traunecker, "Os Deuses do Egito"
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Khentiamenti is a god of the west. He takes an anthropomorphic canine shape."
 })
 
@@ -275,7 +265,6 @@ DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "\"The one who comes and goes\", Khonsu is a moon god who takes the appearance of a mummy. He is the son of Amon and Mut."
 })
 
@@ -285,7 +274,6 @@ DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "\"The runner\", Mafdet is a goddess who takes the shape of a panther."
 })
 
@@ -305,7 +293,6 @@ DefineDeity("menket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Menket is a goddess of beer."
 })
 
@@ -315,7 +302,6 @@ DefineDeity("merekhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Merekhet is a goddess of ointments."
 })
 
@@ -335,7 +321,6 @@ DefineDeity("montu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Montu is a warrior god, often worshiped by the medjaiu, who police the Egyptian deserts."
 })
 
@@ -345,7 +330,7 @@ DefineDeity("mut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"light"},
+	Domains = {"sun"},
 --	Description = "The goddess Mut is known as the mother of light. She is the mother of Khonsu." -- is "Light" in this context a deity (maybe Khonsu himself)?
 })
 
@@ -365,7 +350,6 @@ DefineDeity("nefertum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Nefertum is a god of perfume who takes the form of a lotus."
 })
 
@@ -375,7 +359,6 @@ DefineDeity("neftis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Neftis is the daughter of Geb and Nut."
 })
 
@@ -386,7 +369,7 @@ DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Religions = {"paganism"},
 	Gender = "female",
 	HomePlane = "nun",
-	Domains = {"archery", "water"},
+	Domains = {"water"},
 --	Description = "Neith is a goddess famed for her arrows. She takes the form of a cow or a fish. She is the mother of Ra."
 })
 
@@ -406,7 +389,6 @@ DefineDeity("neper", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Neper is a god who takes the shape of a grain."
 })
 
@@ -448,7 +430,6 @@ DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "\"The dilacerator\", Pakhet is a goddess who takes the form of a lioness."
 })
 
@@ -488,7 +469,7 @@ DefineDeity("sekhmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"wrath"},
+	Domains = {"blood"},
 --	Description = "Sekhmet is a raging, bloodthirsty goddess. She takes the form of a lioness and is a skilled archer. She is also the goddess of physicians."
 })
 
@@ -508,7 +489,7 @@ DefineDeity("seth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"chaos"},
+	Domains = {"blood"},
 --	Description = "Seth is a god associated with brutal strength and with the desertic wildernesses. He is the son of Geb and Nut."
 })
 
@@ -518,7 +499,6 @@ DefineDeity("shesmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Shesmu is a god of wine-pressing, olive oil and perfume."
 })
 
@@ -528,7 +508,6 @@ DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Shu is a deity associated with the space between earth and sky. Shu is the father of Nut and Geb. He is the son of Atum."
 })
 
@@ -538,7 +517,6 @@ DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Sia is a deity of thought and conceptualization."
 })
 
@@ -558,7 +536,6 @@ DefineDeity("tait", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Tait is a goddess of weaving."
 })
 
@@ -579,7 +556,6 @@ DefineDeity("tenmet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {},
 --	Description = "Tenmet is a goddess of beer."
 })
 
@@ -590,7 +566,6 @@ DefineDeity("tenmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
 	HomePlane = "nun",
-	Domains = {"chaos"},
 --	Description = "Tenmu is a primordial deity of disorder."
 })
 
@@ -600,7 +575,6 @@ DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "Thot is a god of writing and knowledge. He appears as an anthropomorphic ibis, equipped with a scribe's utensil. Sometimes Thot takes the form of an ibis itself, or even a baboon. Given his portfolio, Thot is often worshiped by scribes."
 })
 
@@ -620,7 +594,6 @@ DefineDeity("upuaut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {},
 --	Description = "\"The opener of paths\", Upuaut is a god who takes the form of a jackal."
 })
 

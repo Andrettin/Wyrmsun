@@ -31,6 +31,6 @@ DefineDeity("perkuno", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"fire", "order", "lightning"}, -- maybe wood?
+	Domains = {"fire", "lightning"}, -- maybe wood?
 --	Description = "Perkuno is a thunder god who is believed to have a mystic connection to an oak at Romove, where an eternal fire is said to burn. When thunderstorms occurred, his priests visited the oak to try to communicate with him. Perkuno appears as a middle-aged man with a black beard and possessing a wrathful expression, with his head being crowned by flames. The Baltic Prussians attributed their fundamental laws to him. Perkuno's symbol is the perpetual fire."
 })
