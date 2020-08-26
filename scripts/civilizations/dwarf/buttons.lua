@@ -142,14 +142,6 @@ DefineButton( { Pos = 4, Icon = "icon-dwarven-bearded-throwing-axe",
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-dwarven-coinage",
-	Action = "research", Value = "upgrade-dwarven-coinage",
-	Allowed = "check-single-research",
-	Description = "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",
-	Key = "c", Hint = "Research ~!Coinage", Popup = "popup_research",
-	ForUnit = {"unit-dwarven-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",

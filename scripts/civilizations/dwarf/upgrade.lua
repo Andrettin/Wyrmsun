@@ -112,12 +112,6 @@ DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
 	Description = "Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +12 Damage for Ballistas, +5 Damage for Ballista Warships and Ballista Towers."
 })
 
-DefineUpgrade("upgrade-dwarven-coinage", {
-	Parent = "upgrade-coinage",
-	Civilization = "dwarf",
-	Icon = "icon-dwarven-coinage"
-})
-
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",

@@ -1,0 +1,30 @@
+upgrade_coinage = {
+	name = "Coinage"
+	upgrade_class = coinage
+	description = "While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing Bonus for Smithies, -5% Trade Cost for Markets."
+	button_key = c
+	requirements_string = "Smithy"
+	costs = {
+		time = 250
+		copper = 1500
+	}
+}
+
+upgrade_dwarven_coinage = {
+	parent = upgrade_coinage
+	civilization = dwarven
+	icon = icon_dwarven_coinage
+}
+
+upgrade_goblin_coinage = {
+	parent = upgrade_coinage
+	civilization = goblin
+	icon = icon_goblin_coinage
+}
+
+upgrade_teuton_coinage = {
+	parent = upgrade_coinage
+	civilization = teutonic
+	icon = icon_suebi_coinage
+	background = "West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."
+}

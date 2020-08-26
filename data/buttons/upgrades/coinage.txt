@@ -1,0 +1,12 @@
+research_coinage = {
+	pos = 3
+	action = research_class
+	value = coinage
+	allowed = check_single_research
+	description =  "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets."
+	popup = popup_research
+	unit_classes = {
+		stronghold
+		fortress
+	}
+}

@@ -107,13 +107,6 @@ DefineUpgrade("upgrade-goblin-catapult-projectile-2", {
 	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +12 Damage for War Machines and +5 Damage for Warships and Catapult Towers."
 })
 
-DefineUpgrade("upgrade-goblin-coinage", {
-	Parent = "upgrade-coinage",
-	Civilization = "goblin",
-	Icon = "icon-goblin-coinage",
-	RequirementsString = "Fugla Forge"
-})
-
 DefineUpgrade("upgrade-goblin-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "goblin",

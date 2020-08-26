@@ -113,14 +113,6 @@ DefineButton( { Pos = 4, Icon = "icon-bodkin-arrow",
 	ForUnit = {"unit-norse-lumber-mill", "unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-suebi-coinage",
-	Action = "research", Value = "upgrade-teuton-coinage",
-	Allowed = "check-single-research",
-	Description = "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",
-	Key = "c", Hint = "Research ~!Coinage", Popup = "popup_research",
-	ForUnit = {"unit-teuton-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",

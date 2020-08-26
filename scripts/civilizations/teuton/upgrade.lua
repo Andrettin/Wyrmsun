@@ -78,13 +78,6 @@ DefineUpgrade("upgrade-teuton-catapult-projectile-2", {
 	Description = "Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of those siege weapons.\n\nEffect: +12 Damage for Catapults, +5 Damage for Longships and Catapult Towers."
 })
 
-DefineUpgrade("upgrade-teuton-coinage", {
-	Parent = "upgrade-coinage",
-	Civilization = "teuton",
-	Icon = "icon-suebi-coinage",
-	Background = "West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."
-})
-
 DefineUpgrade("upgrade-teuton-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "teuton",

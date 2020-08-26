@@ -135,14 +135,6 @@ DefineButton( { Pos = 4, Icon = "icon-bodkin-arrow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-goblin-coinage",
-	Action = "research", Value = "upgrade-goblin-coinage",
-	Allowed = "check-single-research",
-	Description = "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets.",
-	Key = "c", Hint = "Research ~!Coinage", Popup = "popup_research",
-	ForUnit = {"unit-goblin-stronghold"}
-} )
-
 DefineButton( { Pos = 5, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-goblin-alchemy",
 	Allowed = "check-single-research",

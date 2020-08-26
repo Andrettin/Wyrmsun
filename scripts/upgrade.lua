@@ -147,14 +147,6 @@ DefineUpgrade("upgrade-penetrating-ballista-bolt", {
 	RequirementsString = "Lumber Mill, Broadhead Ballista Bolt and Ironworking"
 })
 
-DefineUpgrade("upgrade-coinage", {
-	Name = "Coinage",
-	Class = "coinage",
-	Description = "While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Copper, Silver and Gold Processing Bonus for Smithies, -5% Trade Cost for Markets.",
-	Costs = {"time", 250, "copper", 1500},
-	RequirementsString = "Smithy"
-})
-
 DefineUpgrade("upgrade-alchemy", {
 	Name = "Alchemy",
 	Class = "alchemy",
