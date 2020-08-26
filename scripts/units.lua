@@ -4442,6 +4442,7 @@ DefineUnitType("unit-template-stronghold", {
 	SaveCargo = true,
 	PierceDamage = true,
 	ButtonLevelForTransporter = "garrison-level",
+	ButtonKey = "h",
 	Drops = {"unit-stone-pile"},
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},

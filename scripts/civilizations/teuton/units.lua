@@ -1052,7 +1052,6 @@ DefineUnitType("unit-teuton-stronghold", {
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	RequirementsString = "Barracks and Masonry",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {

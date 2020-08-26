@@ -657,13 +657,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	ForUnit = {"unit-dwarven-annalist"}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-dwarven-stronghold",
-	Action = "upgrade-to", Value = "unit-dwarven-stronghold",
-	Allowed = "check-upgrade-to",
-	Key = "b", Hint = "Upgrade to ~!Bastion", Popup = "popup_building",
-	ForUnit = {"unit-dwarven-town-hall"}
-} )
-  
 DefineButton( { Pos = 1, Icon = "icon-dwarven-guard-tower",
 	Action = "upgrade-to", Value = "unit-dwarven-guard-tower",
 	Allowed = "check-upgrade-to",

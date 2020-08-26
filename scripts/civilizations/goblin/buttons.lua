@@ -198,13 +198,6 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 3, Icon = "icon-goblin-stronghold",
-	Action = "upgrade-to", Value = "unit-goblin-stronghold",
-	Allowed = "check-upgrade-to",
-	Key = "s", Hint = "Upgrade to ~!Stronghold", Popup = "popup_building",
-	ForUnit = {"unit-goblin-town-hall"}
-} )
-
 DefineButton( { Pos = 1, Icon = "icon-goblin-guard-tower",
 	Action = "upgrade-to", Value = "unit-goblin-guard-tower",
 	Allowed = "check-upgrade-to",

@@ -333,13 +333,6 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 
 -- Upgrades ---------------------------------------------------------
 
-DefineButton( { Pos = 3, Icon = "icon-teuton-stronghold",
-	Action = "upgrade-to", Value = "unit-teuton-stronghold",
-	Allowed = "check-upgrade-to",
-	Key = "h", Hint = "Upgrade to Strong~!hold", Popup = "popup_building",
-	ForUnit = {"unit-teuton-town-hall", "unit-latin-town-hall", "unit-norse-town-hall"}
-} )
-
 DefineButton( { Pos = 1, Icon = "icon-teuton-guard-tower",
 	Action = "upgrade-to", Value = "unit-teuton-guard-tower",
 	Allowed = "check-upgrade-to",

@@ -1839,6 +1839,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 	FireResistance = 20,
 	HackDamage = true,
 	PierceDamage = false,
+	ButtonKey = "b",
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	RequirementsString = "War Hall and Masonry",
 	DropSpells = {"spell-joruvellir-allegiance"},

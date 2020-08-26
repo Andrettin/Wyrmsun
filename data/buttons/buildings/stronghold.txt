@@ -1,0 +1,10 @@
+upgrade_to_stronghold = {
+	pos = 3
+	action = upgrade_to_class
+	value = stronghold
+	allowed = check_upgrade_to
+	popup = popup_building
+	unit_classes = {
+		town_hall
+	}
+}
