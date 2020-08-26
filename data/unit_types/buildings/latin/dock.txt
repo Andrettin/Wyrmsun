@@ -5,6 +5,7 @@ unit_latin_dock = {
 	image_file = "buildings/latin/dock.png"
 	frame_size = { 96 99 }
 	icon = latin_dock
+	construction = latin_dock
 	variations = {
 		dock = {
 			forbidden_terrain_types = { snow }
