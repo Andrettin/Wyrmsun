@@ -1,6 +1,5 @@
 metal = { #one of the five Chinese elements
 	name = "Metal"
-	upgrade = upgrade_magic_domain_metal
 	abilities = {
 		upgrade_inspire
 	}

@@ -1,4 +1,3 @@
 aether = { #one of the five classical elements
 	name = "Aether"
-	upgrade = upgrade_magic_domain_aether
 }

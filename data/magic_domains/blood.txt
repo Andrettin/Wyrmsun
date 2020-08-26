@@ -1,6 +1,5 @@
 blood = {
 	name = "Blood"
-	upgrade = upgrade_magic_domain_blood
 	abilities = {
 		upgrade_terror
 	}

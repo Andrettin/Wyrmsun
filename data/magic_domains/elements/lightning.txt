@@ -1,6 +1,5 @@
 lightning = {
 	name = "Lightning"
-	upgrade = upgrade_magic_domain_lightning
 	abilities = {
 		upgrade_shocking_grasp
 	}

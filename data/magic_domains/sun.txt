@@ -1,5 +1,4 @@
 sun = {
 	name = "Sun"
-	upgrade = upgrade_magic_domain_sun
 	#specialist paladin (non-mounted): Solar Warrior
 }

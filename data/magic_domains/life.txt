@@ -1,6 +1,5 @@
 life = {
 	name = "Life"
-	upgrade = upgrade_magic_domain_life
 	abilities = {
 		upgrade_healing
 	}

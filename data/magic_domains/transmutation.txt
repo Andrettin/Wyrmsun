@@ -1,6 +1,5 @@
 transmutation = {
 	name = "Transmutation"
-	upgrade = upgrade_magic_domain_transmutation
 	abilities = {
 		upgrade_barkskin
 	}

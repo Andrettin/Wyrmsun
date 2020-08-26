@@ -1,4 +1,3 @@
 moon = {
 	name = "Moon"
-	upgrade = upgrade_magic_domain_moon
 }
