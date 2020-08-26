@@ -46,52 +46,6 @@ DefineUpgrade("upgrade-free-workers", {
 	}
 })
 
-DefineUpgrade("upgrade-serfdom", {
-	Name = "Serfdom",
-	Icon = "icon-serfdom",
---	Description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate.",
-	Costs = {"time", 200, "copper", 1200},
-	RequirementsString = "Stronghold/Bastion",
-	CivilizationPriorities = {
-		"anglo-saxon", 200,
-		"english", 200,
-		"frankish", 200,
-		"goth", 200,
-		"norse", 200,
-		"slav", 200,
-		"suebi", 200,
-		"teuton", 200
-	}
-})
-
-DefineModifier("upgrade-serfdom",
-	{"cost", "copper", -100},
-	{"apply-to", "unit-dwarven-miner"}, {"apply-to", "unit-brising-miner"},
-	{"apply-to", "unit-germanic-worker"}, {"apply-to", "unit-teuton-worker"},
-	{"apply-to", "unit-gnomish-worker"}, {"apply-to", "unit-deep-gnomish-worker"}, {"apply-to", "unit-derro-worker"},
-	{"apply-to", "unit-goblin-worker"}
-)
-
-DefineModifier("upgrade-serfdom",
-	{"GatheringBonus", -1},
-	{"apply-to", "unit-dwarven-miner"}, {"apply-to", "unit-dwarven-skilled-miner"}, {"apply-to", "unit-dwarven-expert-miner"},
-	{"apply-to", "unit-brising-miner"}, {"apply-to", "unit-brising-skilled-miner"}, {"apply-to", "unit-brising-expert-miner"},
-	{"apply-to", "unit-dwarven-runesmith"}, {"apply-to", "unit-dwarven-runemaster"}, {"apply-to", "unit-dwarven-arcanister"},
-	{"apply-to", "unit-germanic-worker"}, {"apply-to", "unit-teuton-worker"},
-	{"apply-to", "unit-gnomish-worker"}, {"apply-to", "unit-deep-gnomish-worker"}, {"apply-to", "unit-derro-worker"},
-	{"apply-to", "unit-goblin-worker"}
-)
-
 DefineModifier("upgrade-free-workers",
 	{"remove-upgrade", "upgrade-serfdom"}
-)
-
-DefineModifier("upgrade-serfdom",
-	{"remove-upgrade", "upgrade-free-workers"}
-)
-
-DefineDependency("upgrade-serfdom",
-	{"unit-dwarven-stronghold"},
-	"or", {"unit-goblin-stronghold"},
-	"or", {"unit-teuton-stronghold"}
 )
