@@ -30,6 +30,7 @@
 /graphics/buildings/elven/town_hall.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/latin/dock.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/buildings/latin/dock_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/neutral/cavern_entrance.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/neutral/cavern_entrance_brown.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/neutral/cavern_entrance_brown_extra_1.png (by Jinn) (licensed under the CC0)

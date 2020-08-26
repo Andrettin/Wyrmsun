@@ -5,4 +5,30 @@ unit_latin_dock = {
 	image_file = "buildings/latin/dock.png"
 	frame_size = { 96 99 }
 	icon = latin_dock
+	variations = {
+		dock = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		dock_snow_winter = {
+			image_file = "buildings/latin/dock_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+				shallow_water
+				gray_shallow_water
+			}
+			seasons = { winter }
+		}
+		dock_snow = {
+			image_file = "buildings/latin/dock_snow.png"
+			terrain_types = {
+				snow
+				shallow_water
+				gray_shallow_water
+			}
+		}
+	}
 }
