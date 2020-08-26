@@ -1,0 +1,7 @@
+time = {
+	name = "Time"
+	abilities = {
+		upgrade_slow_ability
+	}
+	#specialist mage: Chronomancer
+}

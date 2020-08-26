@@ -1,7 +1,4 @@
 earth = { #one of the five classical elements; one of the five Chinese elements
 	name = "Earth"
-	abilities = {
-		upgrade_regeneration
-	}
 	#specialist mage: Geomancer
 }

@@ -9,6 +9,7 @@ gathaarl = { #from Tyrant, Goblin God of Battle
 	religions = { paganism }
 	domains = {
 		blood
+		earth
 	}
 	upgrade = upgrade_deity_gathaarl
 	description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."

@@ -1,0 +1,4 @@
+dream = {
+	name = "Dream"
+	#specialist mage: Oneiromancer
+}

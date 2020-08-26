@@ -1,0 +1,6 @@
+charm = {
+	name = "Charm"
+	abilities = {
+		upgrade_regeneration
+	}
+}
