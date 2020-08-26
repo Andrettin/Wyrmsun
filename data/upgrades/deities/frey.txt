@@ -1,0 +1,32 @@
+upgrade_deity_frey = {
+	name = "Frey"
+	costs = {
+		time = 200
+		copper = 1500
+	}
+	modifier = {
+		basic_damage = 1
+		points = 10
+		unit_types = {
+			unit_germanic_archer
+			unit_teuton_archer
+		}
+	}
+	modifier = {
+		remove_upgrades = {
+			upgrade_deity_odin
+			upgrade_deity_thor
+			upgrade_deity_loki
+			upgrade_deity_heimdall
+			upgrade_deity_hel
+			upgrade_deity_tyr
+			upgrade_deity_christian_god
+		}
+	}
+	modifier = { #dummy upgrade modifier to change starting abilities/variations
+		unit_types = {
+			unit_germanic_priest
+			unit_teuton_priest
+		}
+	}
+}

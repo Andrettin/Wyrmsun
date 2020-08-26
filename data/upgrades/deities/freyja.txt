@@ -1,0 +1,20 @@
+upgrade_deity_freyja = {
+	name = "Freyja"
+	requirements_string = "Frey"
+	costs = {
+		time = 200
+		copper = 1500
+	}
+	modifier = {
+		mana = 20
+		points = 10
+		unit_classes = {
+			priest
+			veteran_priest
+			high_priest
+		}
+	}
+	conditions = {
+		upgrade = upgrade_deity_frey
+	}
+}
