@@ -1,0 +1,8 @@
+divination = {
+	name = "Divination"
+	upgrade = upgrade_magic_domain_divination
+	abilities = {
+		upgrade_far_sight
+	}
+	#specialist mage: Diviner
+}

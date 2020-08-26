@@ -17,6 +17,7 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 	religions = { paganism }
 	major = true
 	domains = {
+		divination
 		aether
 	}
 	upgrade = upgrade_deity_odin
