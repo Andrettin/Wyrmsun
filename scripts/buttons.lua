@@ -62,6 +62,7 @@ DefineButton( { Pos = 14, Icon = "icon-garrison",
 		"unit-teuton-stronghold",
 		"unit-dwarven-stronghold",
 		"unit-goblin-stronghold",
+		"unit-elven-stronghold"
 	}
 })
 
@@ -78,7 +79,8 @@ DefineButton( { Pos = 16, Icon = "royal_crown",
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
 		"unit-ettin-town-hall",
 		"unit-gnomish-town-hall",
-		"unit-goblin-town-hall", "unit-goblin-stronghold"
+		"unit-goblin-town-hall", "unit-goblin-stronghold",
+		"unit-elven-town-hall", "unit-elven-stronghold"
 	}
 })
 --]]

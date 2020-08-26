@@ -77,7 +77,7 @@ https://github.com/Andrettin/Wyrmsun
 - Teuton buildings now have snowy variations.
 - Copper, Silver, Gold, Iron, Mithril and Coal Deposits and Mines now have snowy variations.
 - The Mercenary Camp, Settlement Site, Yale Cave and Yale Hunting Lodge buildings now have snowy variations.
-- Added the Elven Town Hall, Farm and Barracks buildings.
+- Added the Elven Town Hall, Stronghold, Farm and Barracks buildings.
 - Added the Latin Dock building.
 - The construction of town halls over settlement sites now possesses two additional (generic) construction frames.
 

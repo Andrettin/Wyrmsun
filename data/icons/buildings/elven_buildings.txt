@@ -3,6 +3,10 @@ elven_town_hall = {
 	conversible_player_color = teal
 }
 
+elven_stronghold = {
+	file = "icons/buildings/elven/stronghold.png"
+}
+
 elven_farm = {
 	file = "icons/buildings/elven/farm.png"
 }

@@ -27,6 +27,8 @@
 /graphics/buildings/elven/barracks_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/farm.png (by Kwaliti and Exidelo) (licensed under the CC0)
 /graphics/buildings/elven/farm_snow.png (by Kwaliti and Exidelo) (licensed under the CC0)
+/graphics/buildings/elven/stronghold.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/buildings/elven/stronghold_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/latin/dock.png (by Kwaliti and Jinn) (licensed under the CC0)
