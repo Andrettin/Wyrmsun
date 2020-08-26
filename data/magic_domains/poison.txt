@@ -1,0 +1,4 @@
+poison = {
+	name = "Poison"
+	#specialist mage: Venomancer
+}
