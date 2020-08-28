@@ -1,6 +1,6 @@
 choose_a_quest = {
 	pos = 5
-	icon = icon_quest
+	icon = quest
 	action = button
 	value = quest_level
 	allowed = check_has_sub_buttons
@@ -114,7 +114,7 @@ cancel_found_a_faction_2 = {
 
 choose_a_dynasty = {
 	pos = 7
-	icon = icon_heater_shield
+	icon = heater_shield
 	action = button
 	value = choose_dynasty_level
 	allowed = check_has_sub_buttons

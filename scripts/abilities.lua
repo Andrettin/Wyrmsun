@@ -107,7 +107,7 @@ DefineUpgrade("upgrade-leadership", {
 
 DefineUpgrade("upgrade-mace-mastery", {
 	Name = "Mace Mastery",
-	Icon = "icon-mace-mastery",
+	Icon = "mace_mastery",
 	Ability = true,
 	WeaponClasses = {"mace"},
 	MaxLimit = 5

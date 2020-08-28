@@ -125,7 +125,7 @@ DefineButton( { Pos = 16, Icon = "icon-cancel",
 
 -- Level-Up Upgrades ------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-mace-mastery",
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "mace_mastery",
 	Action = "learn-ability", Value = "upgrade-mace-mastery",
 	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup_learn_ability",
 	Description = "Mace Mastery is a passive ability that increases damage with maces by 2.",
@@ -871,7 +871,7 @@ DefineButton( { Pos = 2, Icon = "icon-engineering",
 	}
 } )
 
-DefineButton( { Pos = 3, Icon = "icon-architecture",
+DefineButton( { Pos = 3, Icon = "architecture",
 	Action = "research", Value = "upgrade-architecture",
 	Allowed = "check-single-research",
 	Description = "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings.",

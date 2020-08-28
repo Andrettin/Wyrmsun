@@ -1,5 +1,5 @@
-icon_heater_shield = {
-	file = "neutral/icons/heater_shield.png"
+heater_shield = {
+	file = "icons/items/heater_shield.png"
 }
 
 icon_dwarven_shield_1 = {

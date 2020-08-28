@@ -357,7 +357,7 @@ DefineUnitType("unit-kite-shield", {
 	Parent = "unit-template-item",
 	Costs = {"copper", 400},
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
-	Icon = "icon-heater-shield",
+	Icon = "heater_shield",
 	ItemClass = "shield",
 	Armor = 4
 } )

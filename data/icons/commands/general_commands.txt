@@ -25,3 +25,7 @@ icon_cancel = {
 icon_enter = {
 	file = "icons/commands/enter.png"
 }
+
+quest = {
+	file = "icons/commands/quest.png"
+}

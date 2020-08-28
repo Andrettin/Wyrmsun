@@ -14,6 +14,10 @@ icon_infusion = {
 	file = "dwarf/icons/infusion.png"
 }
 
+mace_mastery = {
+	file = "icons/abilities/mace_mastery.png"
+}
+
 icon_regeneration = {
 	file = "neutral/icons/regeneration.png"
 }

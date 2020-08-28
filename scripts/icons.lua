@@ -134,12 +134,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-quest",
-	Size = {46, 38},
-	File = "neutral/icons/quest.png"
-})
-
-DefineIcon({
 	Name = "icon-garrison",
 	Size = {46, 38},
 	File = "neutral/icons/garrison.png"
@@ -173,12 +167,6 @@ DefineIcon({
 	Name = "icon-gun-mastery",
 	Size = {46, 38},
 	File = "neutral/icons/gun_mastery.png"
-})
-
-DefineIcon({
-	Name = "icon-mace-mastery",
-	Size = {46, 38},
-	File = "neutral/icons/mace_mastery.png"
 })
 
 DefineIcon({
@@ -341,12 +329,6 @@ DefineIcon({
 	Name = "icon-engineering",
 	Size = {46, 38},
 	File = "neutral/icons/engineering.png"
-})
-
-DefineIcon({
-	Name = "icon-architecture",
-	Size = {46, 38},
-	File = "neutral/icons/architecture.png"
 })
 
 DefineIcon({
