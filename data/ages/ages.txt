@@ -2,7 +2,7 @@ bronze_age = {
 	name = "Bronze Age"
 	priority = 1
 	image = {
-		file = "ui/resources/copper.png"
+		file = "ui/resources/bronze.png"
 		width = 14
 		height = 14
 	}
