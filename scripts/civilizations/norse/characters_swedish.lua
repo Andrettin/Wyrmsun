@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("vana", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 227.
+DefineCharacter("vana_of_vanaland", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 227.
 	Name = "Vana",
 	Gender = "female",
 	Type = "unit-teuton-archer",

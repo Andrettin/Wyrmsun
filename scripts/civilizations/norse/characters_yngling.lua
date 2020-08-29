@@ -59,7 +59,7 @@ DefineCharacter("vanland-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
 	Father = "svegdir-yngling",
-	Mother = "vana",
+	Mother = "vana_of_vanaland",
 	Quote = "\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "swede-tribe"

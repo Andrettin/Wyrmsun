@@ -1,4 +1,4 @@
-ymir = { #Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, pp. 336, 377-378.
+ymir = { #the primordial frost giant in Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, pp. 336, 377-378; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 240, 253; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 	name = "Ymir"
 	pantheon = titan #as he is a primordial being, and Gaia's children are mostly Titans
 	major = true
@@ -15,4 +15,5 @@ ymir = { #Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, pp. 33
 	cultural_names = {
 		germanic = "Tuisto"
 	}
+	#"Aurgelmir" is another name for Ymir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 58.
 }
