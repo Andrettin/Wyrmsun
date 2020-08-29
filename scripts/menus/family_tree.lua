@@ -61,7 +61,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	end
 
 	local character_icon_frame = GetIconData(GetCharacterData(character, "Icon"), "Frame")
-	local character_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(character, "Icon"), "File"))
+	local character_icon = GetIconData(GetCharacterData(character, "Icon"), "File")
 	local character_civilization = GetCharacterData(character, "Civilization")
 	local character_faction = GetCharacterData(character, "Faction")
 	local playercolor = "gray"
@@ -70,9 +70,6 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	elseif (character_civilization ~= "") then
 			playercolor = GetCivilizationData(character_civilization, "DefaultColor")
 	end
-	character_icon:Load(false, get_scale_factor())
-	local character_icon_x_origin = (character_icon_frame * 46) % character_icon:get_width()
-	local character_icon_y_origin = math.floor((character_icon_frame * 46) / character_icon:get_width()) * 38
 	local b = PlayerColorImageButton("", playercolor)
 	b:setActionCallback(
 		function()
@@ -82,11 +79,10 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 		end
 	)
 	menu:add(b, x, y)
-	b:setImageOrigin(character_icon_x_origin, character_icon_y_origin)	
 	b:setNormalImage(character_icon)
 	b:setPressedImage(character_icon)
 	b:setDisabledImage(character_icon)
-	b:setSize(46, 38)
+	b:set_frame(character_icon_frame)
 	b:setBorderSize(0)
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)

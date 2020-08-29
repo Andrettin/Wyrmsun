@@ -95,7 +95,7 @@ local NorseEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				SetProvinceHero("Sweden", "Vana", 4)
+				SetProvinceHero("Sweden", "vana_of_vanaland", 4)
 				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Vanland Yngling")
 				KillGrandStrategyHero("Swegder Yngling")
 			end

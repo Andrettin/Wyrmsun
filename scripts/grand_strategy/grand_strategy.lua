@@ -562,9 +562,7 @@ function WarGrandStrategyGameMenu(background)
 		menu:setOpaque(true)
 		menu:setBaseColor(dark)
 	else
-		local bgg = CGraphic:New(background)
-		bgg:Load()
-		local bg = ImageWidget(bgg)
+		local bg = ImageWidget(background, get_scale_factor())
 		menu:add(bg, 0, 0)
 	end
 
@@ -742,16 +740,12 @@ function GrandStrategyEvent(faction, event)
 		l:setCaption(event_description)
 
 		if (event_icon ~= nil) then
-			event_icon = CGraphic:New(event_icon)
-			event_icon:Load()
-			local b = ImageWidget(event_icon)
+			local b = ImageWidget(event_icon, get_scale_factor())
 			menu:add(b, 153, 48)
 		end
 
 		if (event_image ~= nil) then
-			event_image = CGraphic:New(event_image)
-			event_image:Load()
-			local b = ImageWidget(event_image)
+			local b = ImageWidget(event_image, get_scale_factor())
 			menu:add(b, 0, 0)
 		end
 

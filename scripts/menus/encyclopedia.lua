@@ -444,7 +444,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetUnitTypeData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
@@ -458,12 +458,12 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon = GetIconData(GetUpgradeData(unit_name, "Icon"), "File")
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
-			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
-			encyclopedia_icon_pressed = CGraphic:New("interface/default/button_large_pressed.png")
-			encyclopedia_icon_grayed = CGraphic:New("interface/default/button_large_grayed.png")
+			encyclopedia_icon = "interface/default/button_large_normal.png"
+			encyclopedia_icon_pressed = "interface/default/button_large_pressed.png"
+			encyclopedia_icon_grayed = "interface/default/button_large_grayed.png"
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
@@ -474,7 +474,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetCharacterData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
@@ -487,7 +487,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetDeityData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -496,7 +496,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -515,22 +515,16 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		tooltip_string = tooltip_string .. " " .. tooltip_civilization
 	end
 	
-	encyclopedia_icon:Load(false, get_scale_factor())
 	if not (encyclopedia_icon_pressed) then
 		encyclopedia_icon_pressed = encyclopedia_icon
-	else
-		encyclopedia_icon_pressed:Load(false, get_scale_factor())
 	end
 	if not (encyclopedia_icon_disabled) then
 		encyclopedia_icon_disabled = encyclopedia_icon
-	else
-		encyclopedia_icon_disabled:Load(false, get_scale_factor())
 	end
-	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) % encyclopedia_icon:get_width()
-	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) / encyclopedia_icon:get_width()) * encyclopedia_icon:get_frame_height()
 	local b
 	local playercolor
-	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+	local has_icon = (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil)
+	if (has_icon) then
 		if (civilization ~= "" and faction ~= "") then
 			playercolor = GetFactionData(faction, "Color")
 		elseif (civilization ~= "") then
@@ -550,13 +544,14 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		end
 	)
 	menu:add(b, x, y)
-	b:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 	b:setNormalImage(encyclopedia_icon)
 	b:setPressedImage(encyclopedia_icon_pressed)
 	b:setDisabledImage(encyclopedia_icon_disabled)
-	b:setSize(encyclopedia_icon:get_frame_width(), encyclopedia_icon:get_frame_height())
+	if (has_icon) then
+		b:set_frame(encyclopedia_icon_frame)
+	end
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+	if (has_icon) then
 		b:setFrameImage(Preference.IconFrameG)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)
 		b:setTooltip(tooltip_string)
@@ -608,7 +603,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetUnitTypeData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
@@ -622,11 +617,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit_name, "Icon"), "File"))
+			encyclopedia_icon = GetIconData(GetUpgradeData(unit_name, "Icon"), "File")
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
 		else
-			encyclopedia_icon = CGraphic:New("interface/default/button_large_normal.png")
-			encyclopedia_icon_grayed = CGraphic:New("interface/default/button_large_grayed.png")
+			encyclopedia_icon = "interface/default/button_large_normal.png"
+			encyclopedia_icon_grayed = "interface/default/button_large_grayed.png"
 		end
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
@@ -639,7 +634,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "heroes") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetCharacterData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetCharacterData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
 		civilization = GetCharacterData(unit_name, "Civilization")
 		faction = GetCharacterData(unit_name, "Faction")
@@ -652,7 +647,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "deities") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetDeityData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetDeityData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -661,7 +656,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
-		encyclopedia_icon = CPlayerColorGraphic:Get(GetIconData(GetUniqueItemData(unit_name, "Icon"), "File"))
+		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
 		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
 		civilization = ""
 		faction = ""
@@ -674,9 +669,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	end
-	encyclopedia_icon:Load(false, get_scale_factor())
-	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) % encyclopedia_icon:get_width()
-	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:get_frame_width()) / encyclopedia_icon:get_width()) * encyclopedia_icon:get_frame_height()
 	local playercolor
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		if (civilization ~= "" and faction ~= "") then
@@ -687,15 +679,14 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			playercolor = "gray"
 		end
 	end
-
+	
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		local menu_image = PlayerColorImageButton("", playercolor)
-		menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 		menu:add(menu_image, (Video.Width / 2) - 23 * get_scale_factor(), offy + (104 + 36*-1) * get_scale_factor())
 		menu_image:setNormalImage(encyclopedia_icon)
-		menu_image:setPressedImage(encyclopedia_icon_pressed)
-		menu_image:setDisabledImage(encyclopedia_icon_disabled)
-		menu_image:setSize(encyclopedia_icon:get_frame_width(), encyclopedia_icon:get_frame_height())
+		menu_image:setPressedImage(encyclopedia_icon)
+		menu_image:setDisabledImage(encyclopedia_icon)
+		menu_image:set_frame(encyclopedia_icon_frame)
 		menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		menu_image:setFrameImage(Preference.IconFrameG)
 		menu_image:setPressedFrameImage(Preference.PressedIconFrameG)

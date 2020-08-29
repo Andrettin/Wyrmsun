@@ -32,13 +32,10 @@ dark = Color(38, 38, 78)
 clear = Color(200, 200, 120)
 black = Color(0, 0, 0)
 
-bckground = CGraphic:New("backgrounds/wyrmsun_sepia.png")
-bckground:Load()
-bckground:Resize(Video.Width, Video.Height)
-backgroundWidget = ImageWidget(bckground)
+bckground = "backgrounds/wyrmsun_sepia.png"
+backgroundWidget = ImageWidget(bckground, 1, Video.Width, Video.Height)
 
-wyrmsun_logo = CGraphic:New("interface/wyrmsun_logo_" .. Video.Height .. ".png")
-wyrmsun_logo:Load()
+wyrmsun_logo = "interface/wyrmsun_logo_" .. Video.Height .. ".png"
 --wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
 wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
@@ -142,17 +139,14 @@ function AddMenuHelpers(menu)
 		local g_blp
 		local g_blg
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			g_bln = CGraphic:New("interface/default/button_large_normal.png")
-			g_blp = CGraphic:New("interface/default/button_large_pressed.png")
-			g_blg = CGraphic:New("interface/default/button_large_grayed.png")
+			g_bln = "interface/default/button_large_normal.png"
+			g_blp = "interface/default/button_large_pressed.png"
+			g_blg = "interface/default/button_large_grayed.png"
 		else
-			g_bln = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_normal.png")
-			g_blp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_pressed.png")
-			g_blg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_grayed.png")
+			g_bln = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_normal.png"
+			g_blp = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_pressed.png"
+			g_blg = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_large_grayed.png"
 		end
-		g_bln:Load(false, get_scale_factor())
-		g_blp:Load(false, get_scale_factor())
-		g_blg:Load(false, get_scale_factor())
 		b:setNormalImage(g_bln)
 		b:setPressedImage(g_blp)
 		b:setDisabledImage(g_blg)
@@ -172,17 +166,14 @@ function AddMenuHelpers(menu)
 		local g_bsp
 		local g_bsg
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			g_bsn = CGraphic:New("interface/default/button_small_normal.png")
-			g_bsp = CGraphic:New("interface/default/button_small_pressed.png")
-			g_bsg = CGraphic:New("interface/default/button_small_grayed.png")
+			g_bsn = "interface/default/button_small_normal.png"
+			g_bsp = "interface/default/button_small_pressed.png"
+			g_bsg = "interface/default/button_small_grayed.png"
 		else
-			g_bsn = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_normal.png")
-			g_bsp = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_pressed.png")
-			g_bsg = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_grayed.png")
+			g_bsn = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_normal.png"
+			g_bsp = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_pressed.png"
+			g_bsg = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/button_small_grayed.png"
 		end
-		g_bsn:Load(false, get_scale_factor())
-		g_bsp:Load(false, get_scale_factor())
-		g_bsg:Load(false, get_scale_factor())
 		b:setNormalImage(g_bsn)
 		b:setPressedImage(g_bsp)
 		b:setDisabledImage(g_bsg)
@@ -208,10 +199,8 @@ function AddMenuHelpers(menu)
 		b:setBackgroundColor(Color(0,0,0,0))
 		local g_lslider_n
 		local g_lslider_p
-		g_lslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_normal.png")
-		g_lslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_pressed.png")
-		g_lslider_n:Load(false, get_scale_factor())
-		g_lslider_p:Load(false, get_scale_factor())
+		g_lslider_n = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_normal.png"
+		g_lslider_p = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_pressed.png"
 		b:setNormalImage(g_lslider_n)
 		b:setPressedImage(g_lslider_p)
 		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
@@ -224,10 +213,8 @@ function AddMenuHelpers(menu)
 		-- New Slider Functions
 		local g_marker
 		local g_slider
-		g_marker = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_knob.png")
-		g_slider = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_bar_normal.png")
-		g_marker:Load(false, get_scale_factor())
-		g_slider:Load(false, get_scale_factor())
+		g_marker = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_knob.png"
+		g_slider = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_bar_normal.png"
 		b:setMarkerImage(g_marker)
 		b:setBackgroundImage(g_slider)
 		b:setSize(w, h)
@@ -244,10 +231,8 @@ function AddMenuHelpers(menu)
 		b:setBackgroundColor(Color(0,0,0,0))
 		local g_rslider_n
 		local g_rslider_p
-		g_rslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_normal.png")
-		g_rslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_pressed.png")
-		g_rslider_n:Load(false, get_scale_factor())
-		g_rslider_p:Load(false, get_scale_factor())
+		g_rslider_n = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_normal.png"
+		g_rslider_p = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_pressed.png"
 		b:setNormalImage(g_rslider_n)
 		b:setPressedImage(g_rslider_p)
 		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
@@ -425,14 +410,10 @@ function AddMenuHelpers(menu)
 		local g_checkbox_off2
 		local g_checkbox_on
 		local g_checkbox_on2
-		g_checkbox_off = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png")
-		g_checkbox_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
-		g_checkbox_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
-		g_checkbox_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
-		g_checkbox_off:Load(false, get_scale_factor())
-		g_checkbox_off2:Load(false, get_scale_factor())
-		g_checkbox_on:Load(false, get_scale_factor())
-		g_checkbox_on2:Load(false, get_scale_factor())
+		g_checkbox_off = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png"
+		g_checkbox_off2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png"
+		g_checkbox_on = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png"
+		g_checkbox_on2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png"
 		b:setUncheckedNormalImage(g_checkbox_off)
 		b:setUncheckedPressedImage(g_checkbox_off2)
 		b:setCheckedNormalImage(g_checkbox_on)
@@ -467,14 +448,10 @@ function AddMenuHelpers(menu)
 		local g_radio_off2
 		local g_radio_on
 		local g_radio_on2
-		g_radio_off = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png")
-		g_radio_off2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png")
-		g_radio_on = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png")
-		g_radio_on2 = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png")
-		g_radio_off:Load(false, get_scale_factor())
-		g_radio_off2:Load(false, get_scale_factor())
-		g_radio_on:Load(false, get_scale_factor())
-		g_radio_on2:Load(false, get_scale_factor())
+		g_radio_off = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png"
+		g_radio_off2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png"
+		g_radio_on = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png"
+		g_radio_on2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png"
 		b:setUncheckedNormalImage(g_radio_off)
 		b:setUncheckedPressedImage(g_radio_off2)
 		b:setCheckedNormalImage(g_radio_on)
@@ -496,12 +473,9 @@ function AddMenuHelpers(menu)
 		local g_bar
 		local g_dslider_n
 		local g_dslider_p
-		g_bar = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/pulldown_bar_normal.png")
-		g_dslider_n = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_normal.png")
-		g_dslider_p = CGraphic:New("interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_pressed.png")
-		g_bar:Load(false, get_scale_factor())
-		g_dslider_n:Load(false, get_scale_factor())
-		g_dslider_p:Load(false, get_scale_factor())
+		g_bar = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/pulldown_bar_normal.png"
+		g_dslider_n = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_normal.png"
+		g_dslider_p = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/down_arrow_pressed.png"
 		dd:setItemImage(g_bar)
 		dd:setDownNormalImage(g_dslider_n)
 		dd:setDownPressedImage(g_dslider_p)
@@ -530,32 +504,31 @@ function AddMenuHelpers(menu)
 end
 
 function WarMenu(title, background, resize)
-  local menu
-  local exitButton
-  local bg
-  local bgg
+	local menu
+	local exitButton
+	local bg
+	local bgg
 
-  menu = MenuScreen()
+	menu = MenuScreen()
 
-  if background == nil then
-    bg = backgroundWidget
-  else
-    bgg = CGraphic:New(background)
-    bgg:Load()
-    if (resize == nil or resize == true) then
-      bgg:Resize(Video.Width, Video.Height)
-    end
-    bg = ImageWidget(bgg)
-  end
-  menu:add(bg, 0, 0)
+	if background == nil then
+		bg = backgroundWidget
+	else
+		if (resize == nil or resize == true) then
+			bg = ImageWidget(background, 1, Video.Width, Video.Height)
+		else
+			bg = ImageWidget(background, get_scale_factor())
+		end
+	end
+	menu:add(bg, 0, 0)
 
-  AddMenuHelpers(menu)
+	AddMenuHelpers(menu)
 
-  if title then
-    menu:addLabel(title, Video.Width / 2, Video.Height / 20, Fonts["large"])
-  end
+	if title then
+		menu:addLabel(title, Video.Width / 2, Video.Height / 20, Fonts["large"])
+	end
 
-  return menu
+	return menu
 end
 
 function WarGrandStrategyMenu(title, resize)

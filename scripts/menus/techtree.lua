@@ -67,18 +67,15 @@ function RunTechTreeMenu(civilization_number)
 		if (string.find(unit, "upgrade") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
-			techicon = CPlayerColorGraphic:Get(GetIconData(GetUnitTypeData(unit, "Icon"), "File"))
+			techicon = GetIconData(GetUnitTypeData(unit, "Icon"), "File")
 			techicon_frame = GetIconData(GetUnitTypeData(unit, "Icon"), "Frame")
 		else
 			unit_name = GetUpgradeData(unit, "Name")
 			tech_description = GetUpgradeData(unit, "Description")
-			techicon = CPlayerColorGraphic:Get(GetIconData(GetUpgradeData(unit, "Icon"), "File"))
+			techicon = GetIconData(GetUpgradeData(unit, "Icon"), "File")
 			techicon_frame = GetIconData(GetUpgradeData(unit, "Icon"), "Frame")
 		end
 		local b
-		techicon:Load(false, get_scale_factor())
-		local techicon_x_origin = (techicon_frame * 46 * get_scale_factor()) % techicon:get_width()
-		local techicon_y_origin = math.floor((techicon_frame * 46 * get_scale_factor()) / techicon:get_width()) * 38
 		b = PlayerColorImageButton("", playercolor)
 		b:setActionCallback(
 			function()
@@ -93,7 +90,7 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu_image:setNormalImage(techicon)
 				tech_menu_image:setPressedImage(techicon)
 				tech_menu_image:setDisabledImage(techicon)
-				tech_menu_image:setSize(techicon:get_frame_width(), techicon:get_frame_height())
+				tech_menu_image:set_frame(techicon_frame)
 				tech_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 				tech_menu_image:setFrameImage(Preference.IconFrameG)
 				tech_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
@@ -113,11 +110,10 @@ function RunTechTreeMenu(civilization_number)
 			end
 		)
 		menu:add(b, x, y)
-		b:setImageOrigin(techicon_x_origin, techicon_y_origin)
 		b:setNormalImage(techicon)
 		b:setPressedImage(techicon)
 		b:setDisabledImage(techicon)
-		b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
+		b:set_frame(techicon_frame)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		b:setFrameImage(Preference.IconFrameG)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)

@@ -472,13 +472,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 
 		local b
 		if (type(speaker) == "number") then
-			event_icon = CPlayerColorGraphic:Get(GetIconData(GetUnitVariable(speaker, "Icon"), "File"))
-			event_icon:Load(false, get_scale_factor())
+			event_icon = GetIconData(GetUnitVariable(speaker, "Icon"), "File")
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		elseif (event_icon ~= nil) then
-			event_icon = CPlayerColorGraphic:Get(GetIconData(event_icon, "File"))
-			event_icon:Load(false, get_scale_factor())
+			event_icon = GetIconData(event_icon, "File")
 			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		end
@@ -486,17 +484,10 @@ function Event(speaker, event_description, player, options, option_effects, even
 			b:setNormalImage(event_icon)
 			b:setPressedImage(event_icon)
 			b:setDisabledImage(event_icon)
-			b:setSize(event_icon:get_frame_width(), event_icon:get_frame_height())
+			b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 			b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 			b:setFrameImage(Preference.IconFrameG)
 			b:setPressedFrameImage(Preference.PressedIconFrameG)
-		end
-
-		if (event_image ~= nil) then
-			event_image = CGraphic:New(event_image)
-			event_image:Load()
-			local b = ImageWidget(event_image)
-			menu:add(b, 0, 0)
 		end
 
 		for i=1,table.getn(options) do
@@ -617,7 +608,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	end
 	
 	if (icon) then
-		icon_graphics = CPlayerColorGraphic:Get(GetIconData(icon, "File"))
+		icon_graphics = GetIconData(icon, "File")
 	end
 	
 	
@@ -631,19 +622,15 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	menu:addLabel(_(title), 128 * get_scale_factor(), 11 * get_scale_factor())
 	
 	if (icon) then
-		local icon_x_origin = (frame * icon_graphics:get_frame_width()) % icon_graphics:get_width()
-		local icon_y_origin = math.floor((frame * icon_graphics:get_frame_width()) / icon_graphics:get_width()) * icon_graphics:get_frame_height()
-		
 		if not (player_color) then
 			player_color = "red"
 		end
 		local icon_widget = PlayerColorImageButton("", player_color)
 		menu:add(icon_widget, 105 * get_scale_factor(), 48 * get_scale_factor())
-		icon_widget:setImageOrigin(icon_x_origin, icon_y_origin)
 		icon_widget:setNormalImage(icon_graphics)
 		icon_widget:setPressedImage(icon_graphics)
 		icon_widget:setDisabledImage(icon_graphics)
-		icon_widget:setSize(icon_graphics:get_frame_width(), icon_graphics:get_frame_height())
+		icon_widget:set_frame(frame)
 		icon_widget:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 		icon_widget:setFrameImage(Preference.IconFrameG)
 		icon_widget:setPressedFrameImage(Preference.PressedIconFrameG)

@@ -125,7 +125,7 @@ function RunQuestMenu(world)
 		badge_icon = CGraphic:New("ui/icons/badge_cracked.png")
 	end
 	badge_icon:Load(false, get_scale_factor())
-	local b = ImageWidget(badge_icon)
+	local b = ImageWidget(badge_icon, get_scale_factor())
 	menu:add(b, (Video.Width / 2) - (badge_icon:get_frame_width() / 2), (Video.Height / 2) - (badge_icon:get_frame_height() / 2))
 	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")
 	--]]
@@ -238,10 +238,8 @@ function addQuestIcon(quest, menu, x, y)
 	local questicon
 	local b
 	local is_grayscale = GetQuestData(quest, "Completed")
-	questicon = CPlayerColorGraphic:Get(GetIconData(GetQuestData(quest, "Icon"), "File"))
+	questicon = GetIconData(GetQuestData(quest, "Icon"), "File")
 	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
-	local quest_icon_x_origin = (quest_icon_frame * 46 * get_scale_factor()) % questicon:get_width()
-	local quest_icon_y_origin = math.floor((quest_icon_frame * 46 * get_scale_factor()) / questicon:get_width()) * 38 * get_scale_factor()
 	b:setActionCallback(
 		function()
 			PlaySound("click")
@@ -251,7 +249,7 @@ function addQuestIcon(quest, menu, x, y)
     		quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
 			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176 * get_scale_factor(), 11 * get_scale_factor())
 			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
-			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
+			quest_menu_image:set_frame(quest_icon_frame)	
 			quest_menu_image:setGrayscale(is_grayscale)	
 			quest_menu:add(quest_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
 
@@ -296,11 +294,10 @@ function addQuestIcon(quest, menu, x, y)
 		end
 	)
 	menu:add(b, x, y)
-	b:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 	b:setNormalImage(questicon)
 	b:setPressedImage(questicon)
 	b:setDisabledImage(questicon)
-	b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
+	b:set_frame(quest_icon_frame)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)

@@ -1414,49 +1414,10 @@ function EditUnitTypePropertiesGraphics(unit_type)
 	
 	menu:addHalfButton(_("~!OK"), "o", (20 + 48) * get_scale_factor(), sizeY - 40 * get_scale_factor(),
 		function()
-			local graphic_width = 0
-			local graphic_height = 0
-			
-			local graphic = CGraphic:Get(unit_graphics_list[unit_graphics:getSelected() + 1])
-			if (graphic == nil) then
-				graphic = CGraphic:New(unit_graphics_list[unit_graphics:getSelected() + 1])
-				graphic:Load(false, get_scale_factor())
-				graphic_width = graphic:get_width()
-				graphic_height = graphic:get_height()
-				CGraphic:Free(graphic)
-			else
-				graphic_width = graphic:get_width()
-				graphic_height = graphic:get_height()
-			end
-			
-			local shadow_graphic_width = 0
-			local shadow_graphic_height = 0
-			if (unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1] ~= "") then
-				local shadow_graphic = CGraphic:Get(unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
-				if (shadow_graphic == nil) then
-					shadow_graphic = CGraphic:New(unit_graphics_shadow_list[unit_graphics_shadow:getSelected() + 1])
-					shadow_graphic:Load(false, get_scale_factor())
-					shadow_graphic_width = shadow_graphic:get_width()
-					shadow_graphic_height = shadow_graphic:get_height()
-					CGraphic:Free(shadow_graphic)
-				else
-					shadow_graphic_width = shadow_graphic:get_width()
-					shadow_graphic_height = shadow_graphic:get_height()
-				end
-			end
-
 			if (tonumber(frame_width_value:getText()) == nil) then
 				GenericDialog(_("Error"), "The frame width must be a number.")
 			elseif (tonumber(frame_height_value:getText()) == nil) then
 				GenericDialog(_("Error"), "The frame height must be a number.")
-			elseif (graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
-				GenericDialog(_("Error"), "The image graphic's width (" .. graphic_width .. ") must be divisible by the frame width.")
-			elseif (graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
-				GenericDialog(_("Error"), "The image graphic's height (" .. graphic_height .. ") must be divisible by the frame height.")
-			elseif (shadow_graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
-				GenericDialog(_("Error"), "The shadow image graphic's width (" .. shadow_graphic_width .. ") must be divisible by the frame width.")
-			elseif (shadow_graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
-				GenericDialog(_("Error"), "The shadow image graphic's height (" .. shadow_graphic_height .. ") must be divisible by the frame height.")
 			else
 				local unit_type_definition = {}
 
