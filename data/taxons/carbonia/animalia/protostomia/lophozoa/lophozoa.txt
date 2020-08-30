@@ -1,0 +1,6 @@
+lophozoa = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=914159
+	name = "Lophozoa"
+	common_name = "Lophozoan"
+	rank = superphylum
+	supertaxon = protostomia
+}

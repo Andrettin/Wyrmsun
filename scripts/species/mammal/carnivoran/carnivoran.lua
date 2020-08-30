@@ -77,9 +77,7 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}, -- common ancestor with Amphicyon, which was also a carnivoran
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 60 cm tall up to the shoulder
 	-- lived in Eurasia
 	-- inhabited relatively open areas
@@ -91,10 +89,9 @@ Load("scripts/species/mammal/carnivoran/ursid.lua")
 
 DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
+	Supertaxon = "carnivora",
 	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"}
 })
 
 DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
@@ -104,25 +101,22 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 --	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
 	EvolvesFrom = {"alphadon", "zalambdalestes", "miacis"},
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "eocene"
 	-- ground dwelling carnivore
 })
 
 DefineSpecies("raccoon", {
 	Name = "Raccoon",
+	Supertaxon = "carnivora",
 	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"}
 })
 
 DefineSpecies("seal", {
 	Name = "Seal",
+	Supertaxon = "carnivora",
 	Homeworld = "earth",
-	Terrains = {"snow", "ice"},
-	EvolvesFrom = {},
-	ChildUpgrade = "upgrade-child"
+	Terrains = {"snow", "ice"}
 })
 
 Load("scripts/species/mammal/carnivoran/ailurid.lua")

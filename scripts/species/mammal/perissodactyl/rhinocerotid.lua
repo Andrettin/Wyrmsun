@@ -52,9 +52,7 @@ DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge M
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
-	Era = "miocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene"
 	-- lived in Western Europe
 	-- 120cm shoulder height
 	-- adapted to eat soft vegetals like bush leaves and fruits, but could also eat a larger range of vegetals according to the situation
@@ -67,9 +65,7 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
-	Era = "miocene", -- Middle and Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle and Upper Miocene
 	-- dwelled in open environments which possessed few trees
 	-- lived in Western Europe, Turkey and China
 	-- 100cm shoulder height
@@ -83,7 +79,6 @@ DefineSpecies("rhinoceros-unicornis", { -- Source: http://www.itis.gov/servlet/S
 	Species = "unicornis",
 	Homeworld = "earth",
 	EvolvesFrom = {"aceratherium-incisivum", "hispanotherium-matritense"}, -- earlier Rhinocerotids
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 

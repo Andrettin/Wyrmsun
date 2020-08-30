@@ -1,0 +1,9 @@
+snake = {
+	name = "Snake"
+	supertaxon = reptilia
+	homeworld = earth
+	pre_evolutions = {
+		petrolacosaurus
+		thadeosaurus
+	}
+}

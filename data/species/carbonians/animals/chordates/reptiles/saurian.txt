@@ -1,0 +1,8 @@
+saurian = { #from Wesnoth
+	name = "Saurian"
+	supertaxon = reptilia
+	specific_name = "sapiens"
+	era = holocene
+	sapient = true
+	#sapient species evolved from dinosaurs
+}

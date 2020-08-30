@@ -61,9 +61,7 @@ DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Mo
 	Species = "azzouzorum",
 	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
-	Era = "paleocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "paleocene"
 	-- first known proboscid
 	-- lived in Africa
 	-- weighted up to 5 kg
@@ -75,18 +73,15 @@ DefineSpecies("numidotherium-koholense", { -- Source: Mauricio Antón and Jorge 
 	Species = "koholense",
 	Homeworld = "earth",
 	EvolvesFrom = {"eritherium-azzouzorum"}, -- earlier proboscid
-	Era = "eocene", -- Middle Eocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "eocene" -- Middle Eocene
 	-- weighted more than 200 kg
 })
 
 DefineSpecies("phiomia", {
 	Name = "Phiomia",
+	Supertaxon = "proboscidea",
 	Homeworld = "earth",
-	EvolvesFrom = {"eritherium-azzouzorum"}, -- earlier proboscid
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"eritherium-azzouzorum"} -- earlier proboscid
 })
 
 DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 50-51.
@@ -96,9 +91,7 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
-	Era = "miocene", -- Miocene and Pliocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Miocene and Pliocene
 	-- grazer
 	-- ate soft vegetals
 	-- robust, with its mass being comparable to that of an Indian elephant
@@ -113,9 +106,7 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
-	Era = "miocene", -- Miocene and Pliocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Miocene and Pliocene
 	-- 3m shoulder height
 	-- lived in Eurasia and Africa
 	-- had teeth adapted to a fibrous diet
@@ -123,24 +114,22 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 
 DefineSpecies("elephant", {
 	Name = "Elephant",
+	Supertaxon = "proboscidea",
 	Homeworld = "earth",
-	EvolvesFrom = {"phiomia"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"phiomia"}
 })
 
 DefineSpecies("mammoth", {
 	Name = "Mammoth",
+	Supertaxon = "proboscidea",
 	Homeworld = "earth",
-	EvolvesFrom = {"phiomia"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"phiomia"}
 })
 
 DefineSpecies("platybeledon", {
 	Name = "Platybeledon",
+	Supertaxon = "proboscidea",
 	Homeworld = "earth",
-	EvolvesFrom = {"phiomia"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"phiomia"}
 })
 

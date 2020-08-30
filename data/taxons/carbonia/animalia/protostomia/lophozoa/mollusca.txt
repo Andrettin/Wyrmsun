@@ -1,0 +1,6 @@
+mollusca = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69458
+	name = "Mollusca"
+	common_name = "Mollusk"
+	rank = phylum
+	supertaxon = lophozoa
+}

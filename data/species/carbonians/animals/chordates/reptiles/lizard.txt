@@ -1,0 +1,9 @@
+lizard = {
+	name = "Lizard"
+	supertaxon = reptilia
+	homeworld = earth
+	pre_evolutions = {
+		petrolacosaurus
+		thadeosaurus
+	}
+}

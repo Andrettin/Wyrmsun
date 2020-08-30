@@ -37,16 +37,7 @@ DefineSpecies("hemicyon-sansaniense", { -- Source: Mauricio Antón and Jorge Mor
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 90 cm shoulder height
 	-- inhabited Eurasia
-})
-
-DefineSpecies("bear", {
-	Name = "Bear",
-	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
-	ChildUpgrade = "upgrade-child"
 })

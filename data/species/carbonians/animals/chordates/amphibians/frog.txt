@@ -1,0 +1,15 @@
+frog = {
+	name = "Frog"
+	supertaxon = amphibia
+	homeworld = earth
+	pre_evolutions = {
+		peltobatrachus
+		platyhystrix
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+}

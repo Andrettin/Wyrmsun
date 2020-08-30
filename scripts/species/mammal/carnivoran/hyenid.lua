@@ -38,9 +38,7 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
-	Era = "miocene", -- Middle and Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle and Upper Miocene
 	-- 30 cm tall up to the shoulder
 	-- lived in Eurasia
 	-- a large proportion of its diet was carrion, but also hunted small prey like rodents and lagomorphs
@@ -48,13 +46,14 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 
 DefineSpecies("hyena", {
 	Name = "Hyena",
+	Supertaxon = "hyaenidae",
 	Homeworld = "earth",
-	EvolvesFrom = {"protictitherium-crassum"}, -- earlier hyenid
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"protictitherium-crassum"} -- earlier hyenid
 })
 
 DefineSpecies("gnoll", {
 	Name = "Gnoll",
+	Supertaxon = "hyaenidae",
 	Homeworld = "alfheim",
 	EvolvesFrom = {"protictitherium-crassum"}, -- common ancestor with hyenas
 	Sapient = true

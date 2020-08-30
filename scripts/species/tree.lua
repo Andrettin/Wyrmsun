@@ -27,6 +27,7 @@
 
 DefineSpecies("treant", {
 	Name = "Treant",
+	Supertaxon = "plantae",
 	Homeworld = "alfheim",
 	Terrains = {"grass"},
 	Sapient = true -- sentient tree-like being

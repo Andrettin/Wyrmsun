@@ -1,0 +1,13 @@
+slime = {
+	name = "Slime"
+	supertaxon = carbonia
+	era = holocene
+	homeworld = nidavellir
+	asexual = true
+	native_terrain_types = {
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+}

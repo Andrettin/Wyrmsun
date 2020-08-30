@@ -42,26 +42,23 @@ DefineSpeciesGenus("chalicotherium", { -- Source: Mauricio Antón and Jorge Mora
 
 DefineSpecies("palaeotherium", {
 	Name = "Palaeotherium",
+	Supertaxon = "perissodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"phenacodus"}
 })
 
 DefineSpecies("coelodonta", {
 	Name = "Coelodonta",
+	Supertaxon = "perissodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"palaeotherium"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"palaeotherium"}
 })
 
 DefineSpecies("indricotherium", {
 	Name = "Indricotherium",
+	Supertaxon = "perissodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"palaeotherium"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"palaeotherium"}
 })
 
 DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 52.
@@ -71,9 +68,7 @@ DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Mo
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- known as gorilla-horse
 	-- grazer
 	-- 180cm shoulder height

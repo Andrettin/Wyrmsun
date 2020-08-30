@@ -49,8 +49,7 @@ DefineSpecies("gryphon", {
 	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "mud", "flamefood-tree", "rock", "snow"}, -- should be dark dirt instead of dry mud and mud
 	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
-	Era = "holocene",
-	ChildUpgrade = "upgrade-gryphon-child"
+	Era = "holocene"
 	-- in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
 })
 
@@ -61,7 +60,6 @@ DefineSpecies("hippogryph", {
 	Homeworld = "alfheim",
 	Terrains = {"grass", "dirt", "fairlimbed-tree", "rock"},
 	EvolvesFrom = {"hoatzin"}, -- the Hippogryph has a common ancestor with eagles
-	Era = "holocene",
-	ChildUpgrade = "upgrade-gryphon-child"
+	Era = "holocene"
 	-- in mythology, a hippogryph is half-eagle and half-horse; but in the Wyrmsun universe, it is entirely avian, although with the body built like an hippogryph
 })

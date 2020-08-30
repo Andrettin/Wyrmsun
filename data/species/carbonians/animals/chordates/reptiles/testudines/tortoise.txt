@@ -1,0 +1,9 @@
+tortoise = {
+	name = "Tortoise"
+	supertaxon = testudines
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		cheirogaster_bolivari #earlier tortoise
+	}
+}

@@ -1,0 +1,17 @@
+cheirogaster_bolivari = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 35.
+	name = "Cheirogaster" #Giant Tortoise
+	supertaxon = cheirogaster #on page 18 the species is given as "Geochelone bolivari" (with a reconstruction being provided), but on page 35 the same reconstruction is assigned to the Cheirogaster genus, of fossils "found in the Bolívar street"; furthermore, in fossilworks.org (http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039) there is no entry for a Geochelone bolivari, but there is a Cheirogaster bolivari
+	specific_name = "bolivari"
+	era = miocene #Middle Aragonian
+	homeworld = earth
+	pre_evolutions = {
+		pareiasaurus
+	}
+	#this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	native_terrain_types = {
+		grass
+		dirt
+		dry_mud
+		mud
+	}
+}

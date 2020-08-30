@@ -1,0 +1,10 @@
+bee = {
+	name = "Bee"
+	supertaxon = insecta
+	era = holocene
+	homeworld = earth
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+	}
+}

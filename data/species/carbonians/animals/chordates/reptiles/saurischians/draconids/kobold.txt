@@ -1,0 +1,12 @@
+kobold = {
+	name = "Kobold"
+	supertaxon = koboldus
+	specific_name = "sapiens"
+	era = holocene
+	homeworld = nidavellir
+	sapient = true
+	pre_evolutions = {
+		tyrannosaurus_rex #seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	}
+	#Kobolds believe that they are descendants of wyrms, but in truth they only share a common ancestor
+}

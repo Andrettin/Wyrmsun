@@ -36,8 +36,6 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
 	Era = "miocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child",
 	Description = "The aragorals are the oldest caprines to have existed. The Aesir transported a few of them to Nidavellir, where they eventually evolved into yales."
 	-- ground dwelling grazer-browser
 })
@@ -49,9 +47,7 @@ DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Moral
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 70cm shoulder height
 	-- lived in Spain
 })
@@ -62,8 +58,7 @@ DefineSpecies("cow", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Species = "taurus",
 	Homeworld = "earth",
 	EvolvesFrom = {"ilingoceros"}, -- shares a common ancestor with the bison
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
@@ -73,8 +68,7 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("yale", {
@@ -83,14 +77,5 @@ DefineSpecies("yale", {
 	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "snow"},
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("minotaur", {
-	Name = "Minotaur",
---	Family = "bovidae",
-	Homeworld = "jotunheim",
-	Era = "holocene",
-	Sapient = true
+	Era = "holocene"
 })

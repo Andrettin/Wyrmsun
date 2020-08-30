@@ -1,0 +1,7 @@
+minotaur = {
+	name = "Minotaur"
+	supertaxon = bovidae
+	era = holocene
+	homeworld = jotunheim
+	sapient = true
+}

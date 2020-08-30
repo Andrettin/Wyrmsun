@@ -1,0 +1,11 @@
+bug = {
+	name = "Bug"
+	supertaxon = insecta
+	homeworld = earth
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+}

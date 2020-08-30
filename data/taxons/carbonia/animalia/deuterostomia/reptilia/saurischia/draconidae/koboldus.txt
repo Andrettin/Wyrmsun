@@ -1,0 +1,6 @@
+koboldus = {
+	name = "Koboldus"
+	common_name = "Kobold"
+	rank = genus
+	supertaxon = draconidae
+}

@@ -1,0 +1,6 @@
+hydra = {
+	name = "Hydra"
+	supertaxon = reptilia
+	homeworld = jotunheim
+	era = holocene
+}

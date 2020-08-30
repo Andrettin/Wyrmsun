@@ -1,0 +1,17 @@
+centaur = {
+	name = "Centaur"
+	supertaxon = centaurus
+	era = holocene
+	homeworld = alfheim
+	sapient = true
+	pre_evolutions = {
+		#earlier equids
+		anchitherium_cursor
+		hipparion_primigenium
+		merychippus
+		nannippus
+		parahippus
+		pliohippus
+	}
+	#in Wyrmsun, centaurs are entirely equid, rather than being half-horse, half-human; they have a similar morphology, however; this means that they have a humanoid upper body, but with equid features like fur throughout the body and horse-like facial features
+}

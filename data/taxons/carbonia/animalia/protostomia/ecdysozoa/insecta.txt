@@ -1,0 +1,6 @@
+insecta = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=99208
+	name = "Insecta"
+	common_name = "Insect"
+	rank = class
+	supertaxon = hexapoda
+}

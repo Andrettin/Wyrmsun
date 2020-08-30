@@ -1,0 +1,6 @@
+gastropoda = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=69459
+	name = "Gastropoda"
+	common_name = "Gastropod"
+	rank = class
+	supertaxon = mollusca
+}

@@ -42,9 +42,7 @@ DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Mora
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 80cm shoulder height
 	-- lived in Spain
 	-- had large upper canine teeth
@@ -57,9 +55,7 @@ DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge M
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 55cm shoulder height
 	-- lived in Europe
 })
@@ -70,6 +66,5 @@ DefineSpecies("deer", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Species = "elaphus",
 	Homeworld = "earth",
 	EvolvesFrom = {"heteroprox-moralesi", "procervulus-dichotomus"}, -- earlier cervids
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })

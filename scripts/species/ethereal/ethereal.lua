@@ -27,6 +27,7 @@
 
 DefineSpecies("akh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 37-38.
 	Name = "Akh",
+	Supertaxon = "aetheria",
 	HomePlane = "duat",
 	Sapient = true,
 	Description = "The akhs are powerful luminescent spirits who dwell in Duat."
@@ -34,6 +35,7 @@ DefineSpecies("akh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 
 DefineSpecies("akh-iqer", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 38.
 	Name = "Akh-Iqer",
+	Supertaxon = "aetheria",
 	HomePlane = "duat",
 	Sapient = true,
 	Description = "An akh-iqer is a particularly mighty akh, who claims to have achieved perfection."
@@ -41,6 +43,7 @@ DefineSpecies("akh-iqer", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 
 DefineSpecies("einherjar", {
 	Name = "Einherjar",
+	Supertaxon = "aetheria",
 	HomePlane = "asgard",
 	Sapient = true,
 	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
@@ -48,6 +51,7 @@ DefineSpecies("einherjar", {
 
 DefineSpecies("sylph", {
 	Name = "Sylph",
+	Supertaxon = "aetheria",
 	HomePlane = "vanaheim",
 	Sapient = true,
 	Description = "Sylphs are elf-like creatures who possess a pair of butterfly wings. They serve the Vanir."
@@ -55,6 +59,7 @@ DefineSpecies("sylph", {
 
 DefineSpecies("valkyrie", {
 	Name = "Valkyrie",
+	Supertaxon = "aetheria",
 	HomePlane = "asgard",
 	Sapient = true,
 	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."

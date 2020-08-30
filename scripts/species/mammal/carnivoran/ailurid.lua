@@ -47,9 +47,7 @@ DefineSpecies("amphictis-ambiguus", { -- Source: Mauricio Antón and Jorge Moral
 	Homeworld = "earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
-	Era = "oligocene", -- Upper Oligocene and Lower Miocene (25-18 million years ago)
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "oligocene" -- Upper Oligocene and Lower Miocene (25-18 million years ago)
 	-- oldest ailurid
 	-- was of a similar size as the modern red panda
 	-- carnivore (its teeth were adapted to the consumption of meat)
@@ -61,9 +59,7 @@ DefineSpecies("magerictis-imperialensis", { -- Source: Mauricio Antón and Jorge
 	Species = "imperialensis",
 	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 30 cm shoulder height
 	-- inhabited Spain
 })
@@ -74,9 +70,7 @@ DefineSpecies("simocyon-batalleri", { -- Source: Mauricio Antón and Jorge Moral
 	Species = "batalleri",
 	Homeworld = "earth",
 	EvolvesFrom = {"amphictis-ambiguus"}, -- earlier ailurid
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 70 cm shoulder height
 	-- inhabited Eurasia and Africa
 	-- weighted up to 65kg

@@ -1,0 +1,6 @@
+amphibia = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173420
+	name = "Amphibia"
+	common_name = "Amphibian"
+	rank = class
+	supertaxon = tetrapoda
+}

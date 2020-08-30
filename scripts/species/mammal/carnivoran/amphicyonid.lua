@@ -41,9 +41,7 @@ DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Mora
 	Species = "giganteus",
 	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- weighted more than 200 kg
 	-- inhabited Eurasia
 })
@@ -55,9 +53,7 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Middle and Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle and Upper Miocene
 	-- 90 cm shoulder height
 	-- about the same size as a brown bear
 	-- was primarily a hunter, but also ate carrion
@@ -71,9 +67,7 @@ DefineSpecies("daphoenodon-superbus", { -- Source: Mauricio Antón and Jorge Mor
 	Species = "superbus",
 	Homeworld = "earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Lower Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Lower Miocene
 	-- had the size of a wolf
 	-- adapted for running
 })
@@ -85,9 +79,7 @@ DefineSpecies("magericyon-anceps", { -- Source: Mauricio Antón and Jorge Morale
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 78 cm shoulder height
 	-- inhabited Spain
 	-- specialized hunter

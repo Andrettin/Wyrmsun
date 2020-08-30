@@ -27,10 +27,9 @@
 
 DefineSpecies("ischyromys", {
 	Name = "Ischyromys",
+	Supertaxon = "rodentia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "leptictidium", "megazostrodon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "crusafontia", "leptictidium", "megazostrodon", "zalambdalestes"}
 })
 
 DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37.
@@ -40,9 +39,7 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"ischyromys"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- had an omnivore diet with a high proportion of insects
 	-- lived in Europe
 	-- had a length of 8-13 cm
@@ -50,26 +47,25 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 
 DefineSpecies("beaver", {
 	Name = "Beaver",
+	Supertaxon = "rodentia",
 	Homeworld = "earth",
-	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"megacricetodon-collongensis"} -- earlier rodent
 })
 
 DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid; goblins keep this beast as a mount
 	Name = "Carrat",
---	Family = "muridae", -- same as rats
+	Supertaxon = "muridae", -- same as rats
 	Homeworld = "nidavellir",
 	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
 	EvolvesFrom = {"megacricetodon-collongensis"}, -- shares a common ancestor with rats
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("mouse", {
 	Name = "Mouse",
+	Supertaxon = "rodentia",
 	Homeworld = "earth",
-	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"megacricetodon-collongensis"} -- earlier rodent
 })
 
 DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
@@ -78,8 +74,7 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Species = "norvegicus",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "cave-floor", "rockbound-cave-floor"}, -- correct?
-	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"megacricetodon-collongensis"} -- earlier rodent
 })
 
 DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
@@ -87,7 +82,6 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Genus = "sciurus",
 	Species = "vulgaris",
 	Homeworld = "earth",
-	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"megacricetodon-collongensis"} -- earlier rodent
 })
 

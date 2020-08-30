@@ -1,0 +1,6 @@
+arthropoda = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=82696
+	name = "Arthropoda"
+	common_name = "Arthropod"
+	rank = phylum
+	supertaxon = ecdysozoa
+}

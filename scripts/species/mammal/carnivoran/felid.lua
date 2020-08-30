@@ -36,9 +36,7 @@ DefineSpecies("proailurus-lemanensis", { -- Source: Mauricio Antón and Jorge Mo
 	Species = "lemanensis",
 	Homeworld = "earth",
 	EvolvesFrom = {"nimravus"}, -- earlier feliform
-	Era = "oligocene", -- Upper Oligocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "oligocene" -- Upper Oligocene
 	-- first known felid
 	-- had the size of a small lynx
 })
@@ -50,9 +48,7 @@ DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "M
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 35 cm shoulder height
 	-- lived in Eurasia
 	-- as fast and agile as a mountain cat
@@ -65,9 +61,7 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 100 cm shoulder height
 	-- lived in Eurasia and Africa
 	-- the size of a lion
@@ -82,9 +76,7 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- 60 cm shoulder height
 	-- lived in Eurasia
 	-- had the size similar to that of a modern leopard
@@ -98,9 +90,7 @@ DefineSpecies("pseudaelurus-quadridentatus", { -- Source: Mauricio Antón and Jo
 	Species = "quadridentatus",
 	Homeworld = "earth",
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- first known machairodontine
 	-- lived in Europe
 	-- somewhat smaller than a puma
@@ -114,9 +104,7 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- had the size of a lynx
 	-- 45 cm shoulder height
 	-- likely inhabited areas with abundant vegetation
@@ -129,16 +117,14 @@ DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Species = "leo",
 	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("sabertooth", {
 	Name = "Sabertooth",
+	Supertaxon = "felidae",
 	Homeworld = "earth",
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"proailurus-lemanensis"} -- earlier felid
 })
 
 DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805
@@ -147,6 +133,5 @@ DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Species = "tigris",
 	Homeworld = "earth",
 	EvolvesFrom = {"felis-attica", "schizaelurus-lorteti"}, -- earlier felines (the pantherinae originated from the felinae)
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })

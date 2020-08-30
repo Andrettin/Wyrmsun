@@ -1,0 +1,12 @@
+fly = {
+	name = "Fly"
+	supertaxon = insecta
+	era = holocene
+	homeworld = earth
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+}

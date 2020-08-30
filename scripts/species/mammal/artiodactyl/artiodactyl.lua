@@ -82,10 +82,9 @@ DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morale
 
 DefineSpecies("diacodexis", {
 	Name = "Diacodexis",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"}
 })
 
 DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
@@ -93,9 +92,7 @@ DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Genus = "helohyus",
 	Homeworld = "earth",
 	EvolvesFrom = {"chriacus", "phenacodus"},
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "eocene"
 	-- amphibious herbivore-omnivore
 })
 
@@ -106,9 +103,7 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Aragonian
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Aragonian
 })
 
 DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
@@ -118,9 +113,7 @@ DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Mor
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Lower Miocene to the Lower Pliocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Lower Miocene to the Lower Pliocene
 	-- lived in Eurasia and Africa
 	-- 25-80cm shoulder height
 	-- ate fruits and leaves, as well as worms and other invertebrates
@@ -132,18 +125,15 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Species = "alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene"
 	-- ground dwelling browser-grazer
 })
 
 DefineSpecies("megaloceros", {
 	Name = "Megaloceros",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"diacodexis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"diacodexis"}
 })
 
 DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
@@ -153,9 +143,7 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- end of the Middle Miocene and beginning of the Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- end of the Middle Miocene and beginning of the Upper Miocene
 	-- 35-38cm shoulder height
 	-- lived in Spain
 	-- used its large upper canine teeth to fight with other males for females
@@ -168,9 +156,7 @@ DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morale
 	Species = "soriae",
 	Homeworld = "earth",
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Upper Vallensian
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Vallensian
 })
 
 DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 64-65.
@@ -180,39 +166,37 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 125cm shoulder height
 	-- lived in Spain
 })
 
 DefineSpecies("antelope", {
 	Name = "Antelope",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ilingoceros"}
 })
 
 DefineSpecies("bison", {
 	Name = "Bison",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ilingoceros"}
 })
 
 DefineSpecies("giraffe", {
 	Name = "Giraffe",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"diacodexis"}
 })
 
 DefineSpecies("hippopotamus", {
 	Name = "Hippopotamus",
+	Supertaxon = "artiodactyla",
 	Homeworld = "earth",
-	EvolvesFrom = {"helohyus"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"helohyus"}
 })
 
 Load("scripts/species/mammal/artiodactyl/bovid.lua")

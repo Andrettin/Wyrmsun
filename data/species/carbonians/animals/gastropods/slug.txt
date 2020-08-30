@@ -1,0 +1,13 @@
+slug = {
+	name = "Slug"
+	supertaxon = gastropoda
+	era = holocene
+	homeworld = earth
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		ford #correct?
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+	}
+}

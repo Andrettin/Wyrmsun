@@ -1,0 +1,9 @@
+salamander = {
+	name = "Salamander"
+	supertaxon = amphibia
+	homeworld = earth
+	pre_evolutions = {
+		peltobatrachus
+		platyhystrix
+	}
+}

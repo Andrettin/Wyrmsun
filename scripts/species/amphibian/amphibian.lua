@@ -27,159 +27,126 @@
 
 DefineSpecies("acanthostega", {
 	Name = "Acanthostega",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("elginerpeton", {
 	Name = "Elginerpeton",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("hylerpeton", {
 	Name = "Hylerpeton",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("ichthyostega", {
 	Name = "Ichthyostega",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("tulerpeton", {
 	Name = "Tulerpeton",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("ventastega", {
 	Name = "Ventastega",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian fish"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"rhipidistian_fish"}
 })
 
 DefineSpecies("aistopod", {
 	Name = "Aistopod",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"elginerpeton", "hylerpeton", "tulerpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"elginerpeton", "hylerpeton", "tulerpeton"}
 })
 
 DefineSpecies("cacops", {
 	Name = "Cacops",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"acanthostega", "ichthyostega", "ventastega"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"acanthostega", "ichthyostega", "ventastega"}
 })
 
 DefineSpecies("diplocaulus", {
 	Name = "Diplocaulus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"elginerpeton", "ichthyostega", "tulerpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"elginerpeton", "ichthyostega", "tulerpeton"}
 })
 
 DefineSpecies("eogyrinus", {
 	Name = "Eogyrinus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"elginerpeton", "hylerpeton", "ventastega"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"elginerpeton", "hylerpeton", "ventastega"}
 })
 
 DefineSpecies("greererpeton", {
 	Name = "Greererpeton",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"acanthostega", "ichthyostega", "tulerpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"acanthostega", "ichthyostega", "tulerpeton"}
 })
 
 DefineSpecies("diadectes", {
 	Name = "Diadectes",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"cacops", "diplocaulus", "eogyrinus", "greererpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"cacops", "diplocaulus", "eogyrinus", "greererpeton"}
 })
 
 DefineSpecies("pantylus", {
 	Name = "Pantylus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"aistopod", "diplocaulus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"aistopod", "diplocaulus"}
 })
 
 DefineSpecies("peltobatrachus", {
 	Name = "Peltobatrachus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"}
 })
 
 DefineSpecies("platyhystrix", {
 	Name = "Platyhystrix",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"}
 })
 
 DefineSpecies("seymouria", {
 	Name = "Seymouria",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"acanthostega", "hylerpeton", "ventastega"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"acanthostega", "hylerpeton", "ventastega"}
 })
 
 DefineSpecies("tuditanus", {
 	Name = "Tuditanus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"aistopod", "diplocaulus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"aistopod", "diplocaulus"}
 })
 
 DefineSpecies("hylonomus", {
 	Name = "Hylonomus",
+	Supertaxon = "amphibia",
 	Homeworld = "earth",
-	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("frog", {
-	Name = "Frog",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("salamander", {
-	Name = "Salamander",
-	Homeworld = "earth",
-	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"}
 })

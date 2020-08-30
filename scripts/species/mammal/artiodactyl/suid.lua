@@ -42,9 +42,7 @@ DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge 
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- primarily herbivore
 	-- 65cm shoulder height
 	-- lived in Eurasia
@@ -57,9 +55,7 @@ DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Mora
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
-	Era = "miocene", -- Middle Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle Miocene
 	-- 60cm shoulder height
 	-- lived in Eurasia and Africa
 	-- could chew hard objects like bones
@@ -73,9 +69,7 @@ DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morale
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
-	Era = "miocene", -- Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Upper Miocene
 	-- lived in Eurasia
 	-- 100 cm shoulder height
 	-- weighted about 300kg
@@ -88,8 +82,7 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Homeworld = "earth",
 	Terrains = {"grass"},
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mythology) Gullinbursti
@@ -99,6 +92,5 @@ DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mytho
 	Homeworld = "nidavellir",
 	Terrains = {"dry-mud", "mud"}, -- should be dark dirt instead of dry-mud and mud
 	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })

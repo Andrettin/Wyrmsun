@@ -1,0 +1,6 @@
+ecdysozoa = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=914158
+	name = "Ecdysozoa"
+	common_name = "Ecdysozoan"
+	rank = superphylum
+	supertaxon = protostomia
+}

@@ -65,39 +65,37 @@ DefineSpeciesGenus("orcus", {
 
 DefineSpecies("plesiadapis", {
 	Name = "Plesiadapis",
+	Supertaxon = "primates",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("lemur", {
 	Name = "Lemur",
+	Supertaxon = "primates",
 	Homeworld = "earth",
-	EvolvesFrom = {"plesiadapis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"plesiadapis"}
 })
 
 DefineSpecies("monkey", {
 	Name = "Monkey",
+	Supertaxon = "primates",
 	Homeworld = "earth",
-	EvolvesFrom = {"plesiadapis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"plesiadapis"}
 })
 
 DefineSpecies("dryopithecus", {
 	Name = "Dryopithecus",
+	Supertaxon = "primates",
 	Homeworld = "earth",
-	EvolvesFrom = {"plesiadapis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"plesiadapis"}
 })
 
 DefineSpecies("chimpanzee", {
 	Name = "Chimpanzee",
+	Supertaxon = "primates",
 	Homeworld = "earth",
-	EvolvesFrom = {"dryopithecus"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"dryopithecus"}
 })
 
 DefineSpecies("australopithecus", {
@@ -105,9 +103,7 @@ DefineSpecies("australopithecus", {
 	Genus = "australopithecus",
 	Species = "afarensis", -- the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
 	Homeworld = "earth",
-	EvolvesFrom = {"dryopithecus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"dryopithecus"}
 })
 
 DefineSpecies("cyclops", {
@@ -201,6 +197,7 @@ DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 
 DefineSpecies("ogre", {
 	Name = "Ogre",
+	Supertaxon = "primates",
 	Species = "sapiens",
 	Homeworld = "jotunheim",
 	Era = "holocene",
@@ -218,6 +215,7 @@ DefineSpecies("orc", {
 
 DefineSpecies("troll", {
 	Name = "Troll",
+	Supertaxon = "primates",
 	Homeworld = "alfheim",
 	Era = "holocene",
 	Sapient = true

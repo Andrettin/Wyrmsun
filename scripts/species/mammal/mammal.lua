@@ -185,9 +185,7 @@ DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Genus = "alphadon",
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "cretaceous",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "cretaceous"
 	-- scansorial omnivore
 })
 
@@ -197,9 +195,7 @@ DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Species = "cuencana", -- type species of the Crusafontia genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "cretaceous",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "cretaceous"
 	-- scansorial insectivore
 })
 
@@ -209,9 +205,7 @@ DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=ta
 	Species = "auderiense", -- type species of the Leptictidium genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "eocene"
 	-- scansorial insectivore
 })
 
@@ -221,9 +215,7 @@ DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=t
 	Species = "rudnerae", -- type species of the Megazostrodon genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "jurassic",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "jurassic"
 	-- scansorial insectivore
 })
 
@@ -233,318 +225,291 @@ DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?ac
 	Species = "lechei", -- type species of the Zalambdalestes genus
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "cretaceous",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "cretaceous"
 	-- ground-dwelling insectivore
 })
 
 DefineSpecies("borhyaena", {
 	Name = "Borhyaena",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon"}
 })
 
 DefineSpecies("thylacosmilus", {
 	Name = "Thylacosmilus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"borhyaena"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"borhyaena"}
 })
 
 DefineSpecies("chriacus", {
 	Name = "Chriacus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
 DefineSpecies("marsupial-mouse", {
 	Name = "Marsupial Mouse",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"}
 })
 
 DefineSpecies("miacis", {
 	Name = "Miacis",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
 DefineSpecies("possum", {
 	Name = "Possum",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"}
 })
 
 DefineSpecies("rabbit", {
 	Name = "Rabbit",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("thylacoleo", {
 	Name = "Thylacoleo",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon"}
 })
 
 DefineSpecies("thylacinus", {
 	Name = "Thylacinus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"thylacoleo"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"thylacoleo"}
 })
 
 DefineSpecies("weasel", {
 	Name = "Weasel",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"miacis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"miacis"}
 })
 
 DefineSpecies("kangaroo", {
 	Name = "Kangaroo",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"marsupial-mouse", "possum"}
 })
 
 DefineSpecies("koala", {
 	Name = "Koala",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"marsupial-mouse", "possum"}
 })
 
 DefineSpecies("procoptodon", {
 	Name = "Procoptodon",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"marsupial-mouse", "possum"}
 })
 
 DefineSpecies("wombat", {
 	Name = "Wombat",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"marsupial-mouse", "possum"}
 })
 
 DefineSpecies("diprotodon", {
 	Name = "Diprotodon",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"wombat"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"wombat"}
 })
 
 DefineSpecies("palorchestes", {
 	Name = "Palorchestes",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"wombat"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"wombat"}
 })
 
 DefineSpecies("hyopsodus", {
 	Name = "Hyopsodus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"leptictidium", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("phenacodus", {
 	Name = "Phenacodus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"alphadon", "zalambdalestes"}
 })
 
 DefineSpecies("didolodus", {
 	Name = "Didolodus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"chriacus", "hyopsodus"}
 })
 
 DefineSpecies("astrapotherium", {
 	Name = "Astrapotherium",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"didolodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"didolodus"}
 })
 
 DefineSpecies("diadiaphorus", {
 	Name = "Diadiaphorus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"didolodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"didolodus"}
 })
 
 DefineSpecies("macrauchenia", {
 	Name = "Macrauchenia",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"diadiaphorus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"diadiaphorus"}
 })
 
 DefineSpecies("scarrittia", {
 	Name = "Scarrittia",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"didolodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"didolodus"}
 })
 
 DefineSpecies("pachyrukhos", {
 	Name = "Pachyrukhos",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"scarrittia"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"scarrittia"}
 })
 
 DefineSpecies("mesonyx", {
 	Name = "Mesonyx",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"}
 })
 
 DefineSpecies("poebrodon", {
 	Name = "Poebrodon",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"chriacus", "hyopsodus"}
 })
 
 DefineSpecies("camel", {
 	Name = "Camel",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"poebrodon"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"poebrodon"}
 })
 
 DefineSpecies("bat", {
 	Name = "Bat",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
 	Terrains = {"cave-floor", "rockbound-cave-floor"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
+	Supertaxon = "mammalia",
 	Homeworld = "nidavellir",
 	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"leptictidium", "zalambdalestes"} -- has a common ancestor with bats
 })
 
 DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
+	Supertaxon = "mammalia",
 	Homeworld = "nidavellir",
 	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"leptictidium", "zalambdalestes"} -- has a common ancestor with bats
 })
 
 DefineSpecies("hyaenodon", {
 	Name = "Hyaenodon",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
 DefineSpecies("metacheiromys", {
 	Name = "Metacheiromys",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
 DefineSpecies("armadillo", {
 	Name = "Armadillo",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"metacheiromys"}
 })
 
 DefineSpecies("glyptotherium", {
 	Name = "Glyptotherium",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"metacheiromys"}
 })
 
 DefineSpecies("hedgehog", {
 	Name = "Hedgehog",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"zalambdalestes"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"zalambdalestes"}
 })
 
 DefineSpecies("megatherium", {
 	Name = "Megatherium",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"metacheiromys"}
 })
 
 DefineSpecies("sloth", {
 	Name = "Sloth",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"metacheiromys"}
 })
 
 DefineSpecies("steropodon", {
 	Name = "Steropodon",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"megazostrodon"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"megazostrodon"}
 })
 
 DefineSpecies("platypus", {
 	Name = "Platypus",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"steropodon"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"steropodon"}
 })
 
 DefineSpecies("uintathere", {
 	Name = "Uintathere",
+	Supertaxon = "mammalia",
 	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "leptictidium", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"crusafontia", "leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67606
@@ -553,9 +518,7 @@ DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/brid
 	Species = "giganticus",
 	Homeworld = "earth",
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "cretaceous",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "cretaceous"
 	-- ground dwelling carnivore
 })
 
@@ -566,9 +529,7 @@ DefineSpecies("galerix-exilis", { -- Source: Mauricio Antón and Jorge Morales, 
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "miocene", -- Middle and Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	Era = "miocene" -- Middle and Upper Miocene
 	-- insectivore
 	-- lived in Europe
 	-- had a length of 10-15 cm

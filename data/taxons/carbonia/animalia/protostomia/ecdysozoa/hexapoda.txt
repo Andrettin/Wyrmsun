@@ -1,0 +1,6 @@
+hexapoda = { #Source: https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=563886
+	name = "Hexapoda"
+	common_name = "Hexapod"
+	rank = subphylum
+	supertaxon = arthropoda
+}

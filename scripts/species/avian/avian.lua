@@ -42,42 +42,37 @@ DefineSpeciesGenus("haliaeetus", { -- Source: http://www.itis.gov/servlet/Single
 
 DefineSpecies("archaeopteryx", {
 	Name = "Archaeopteryx",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"}
 })
 
 DefineSpecies("gallimimus", {
 	Name = "Gallimimus",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"compsognathus", "deinonychus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"compsognathus", "deinonychus"}
 })
 
 DefineSpecies("ichthyornis", {
 	Name = "Ichthyornis",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"archaeopteryx", "gallimimus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"archaeopteryx", "gallimimus"}
 })
 
 DefineSpecies("presbyornis", {
 	Name = "Presbyornis",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"archaeopteryx", "gallimimus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"archaeopteryx", "gallimimus"}
 })
 
 DefineSpecies("hoatzin", {
 	Name = "Hoatzin",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
@@ -87,97 +82,94 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Homeworld = "earth",
 --	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
 	EvolvesFrom = {"hoatzin"},
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
+	Era = "holocene"
 })
 
 DefineSpecies("bird", {
 	Name = "Bird",
+	Supertaxon = "aves",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud", "snow", "ice"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"} -- seems sensible, given the songbird is set to descend from these
 })
 
 DefineSpecies("crow", {
 	Name = "Crow",
+	Supertaxon = "aves",
 	Homeworld = "earth",
 	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"} -- seems sensible, given the songbird is set to descend from these
 })
 
 DefineSpecies("diatryma", {
 	Name = "Diatryma",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("duck", {
 	Name = "Duck",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("ostrich", {
 	Name = "Ostrich",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("owl", {
 	Name = "Owl",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("parrot", {
 	Name = "Parrot",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"hoatzin"}
 })
 
 DefineSpecies("passenger-pigeon", {
 	Name = "Passenger Pigeon",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"hoatzin"}
 })
 
 DefineSpecies("pelican", {
 	Name = "Pelican",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("phorusrhacus", {
 	Name = "Phorusrhacus",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 DefineSpecies("roc", {
 	Name = "Roc",
+	Supertaxon = "aves",
 	Homeworld = "jotunheim",
 	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
-	Era = "holocene",
-	ChildUpgrade = "upgrade-gryphon-child"
+	Era = "holocene"
 })
 
 DefineSpecies("songbird", {
 	Name = "Songbird",
+	Supertaxon = "aves",
 	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"},
-	ChildUpgrade = "upgrade-child"
+	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
 Load("scripts/species/avian/gryphid.lua") -- mythical gryphons
