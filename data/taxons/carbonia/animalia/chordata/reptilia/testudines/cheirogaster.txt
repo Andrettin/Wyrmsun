@@ -1,0 +1,5 @@
+cheirogaster = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 35; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039
+	name = "Cheirogaster"
+	rank = genus
+	supertaxon = testudines
+}

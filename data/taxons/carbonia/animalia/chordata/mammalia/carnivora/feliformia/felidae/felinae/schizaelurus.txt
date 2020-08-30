@@ -1,0 +1,5 @@
+schizaelurus = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46-47.
+	name = "Schizaelurus"
+	rank = genus
+	supertaxon = felinae
+}

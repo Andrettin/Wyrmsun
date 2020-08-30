@@ -1,0 +1,5 @@
+amphicyoninae = { #Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
+	name = "Amphicyoninae"
+	rank = subfamily
+	supertaxon = amphicyonidae
+}

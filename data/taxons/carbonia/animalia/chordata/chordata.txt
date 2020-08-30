@@ -1,0 +1,6 @@
+chordata = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
+	name = "Chordata"
+	common_name = "Chordate"
+	rank = phylum
+	supertaxon = deuterostomia
+}

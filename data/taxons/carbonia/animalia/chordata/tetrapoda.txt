@@ -1,0 +1,6 @@
+tetrapoda = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174371
+	name = "Tetrapoda"
+	common_name = "Tetrapod"
+	rank = superclass
+	supertaxon = gnathostomata
+}

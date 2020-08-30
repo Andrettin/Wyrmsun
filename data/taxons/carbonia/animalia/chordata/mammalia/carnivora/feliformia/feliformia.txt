@@ -1,0 +1,5 @@
+feliformia = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
+	name = "Feliformia"
+	rank = suborder
+	supertaxon = carnivora
+}

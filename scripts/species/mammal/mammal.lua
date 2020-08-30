@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesClass("mammalia", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=179913
-	Name = "Mammalia",
-	Phylum = "chordata",
-	Subphylum = "vertebrata",
-	Infraphylum = "gnathostomata",
-	Superclass = "tetrapoda"
-})
-
 DefineSpeciesOrder("chiroptera", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Chiroptera",
 	Class = "mammalia"

@@ -1,0 +1,5 @@
+myomorpha = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=970141
+	name = "Myomorpha"
+	rank = suborder
+	supertaxon = rodentia #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=970141
+}

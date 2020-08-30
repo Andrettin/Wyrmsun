@@ -1,0 +1,5 @@
+pliohippus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
+	name = "Pliohippus"
+	rank = genus
+	supertaxon = equini
+}

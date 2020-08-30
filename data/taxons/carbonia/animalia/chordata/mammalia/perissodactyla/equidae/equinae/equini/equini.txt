@@ -1,0 +1,5 @@
+equini = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
+	name = "Equini"
+	rank = tribe
+	supertaxon = equinae
+}

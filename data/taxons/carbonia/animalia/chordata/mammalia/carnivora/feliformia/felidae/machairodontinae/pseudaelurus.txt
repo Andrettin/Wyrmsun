@@ -1,0 +1,5 @@
+pseudaelurus = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46, 48.
+	name = "Pseudaelurus"
+	rank = genus
+	supertaxon = machairodontinae
+}

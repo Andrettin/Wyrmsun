@@ -1,0 +1,6 @@
+equinae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
+	name = "Equinae"
+	common_name = "Equine"
+	rank = subfamily
+	supertaxon = equidae
+}

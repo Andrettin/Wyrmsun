@@ -1,0 +1,5 @@
+sciurinae = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180171
+	name = "Sciurinae"
+	rank = subfamily
+	supertaxon = sciuridae
+}

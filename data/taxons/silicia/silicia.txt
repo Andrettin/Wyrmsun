@@ -1,0 +1,4 @@
+silicia = { #silicon-based lifeforms
+	name = "Silicia"
+	rank = empire
+}

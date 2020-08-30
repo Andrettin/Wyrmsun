@@ -1,0 +1,6 @@
+artiodactyla = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180692
+	name = "Artiodactyla"
+	common_name = "Artiodactyl"
+	rank = order
+	supertaxon = eutheria
+}

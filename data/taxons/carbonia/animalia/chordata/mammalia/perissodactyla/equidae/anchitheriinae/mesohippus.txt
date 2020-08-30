@@ -1,0 +1,5 @@
+mesohippus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
+	name = "Mesohippus"
+	rank = genus
+	supertaxon = anchitheriinae
+}

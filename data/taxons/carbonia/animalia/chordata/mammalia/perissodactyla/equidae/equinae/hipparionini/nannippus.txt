@@ -1,0 +1,5 @@
+nannippus = { #Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
+	name = "Nannippus"
+	rank = genus
+	supertaxon = hipparionini
+}

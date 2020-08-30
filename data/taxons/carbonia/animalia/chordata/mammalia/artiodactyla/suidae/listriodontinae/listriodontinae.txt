@@ -1,0 +1,5 @@
+listriodontinae = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
+	name = "Listriodontinae"
+	rank = subfamily
+	supertaxon = suidae
+}

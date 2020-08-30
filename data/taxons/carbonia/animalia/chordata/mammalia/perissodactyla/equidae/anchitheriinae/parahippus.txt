@@ -1,0 +1,5 @@
+parahippus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43016
+	name = "Parahippus"
+	rank = genus
+	supertaxon = anchitheriinae
+}

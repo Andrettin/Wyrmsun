@@ -25,27 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesClass("reptilia", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173747
-	Name = "Reptilia",
-	Phylum = "chordata",
-	Subphylum = "vertebrata",
-	Infraphylum = "gnathostomata",
-	Superclass = "tetrapoda"
-})
-
 DefineSpeciesOrder("saurischia", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Saurischia
 	Name = "Saurischia",
 	Class = "reptilia"
-})
-
-DefineSpeciesOrder("synapsida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Synapsida+(awaiting+allocation)
-	Name = "Synapsida",
-	Class = "reptilia"
-})
-
-DefineSpeciesFamily("synapsida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=116313
-	Name = "Synapsida",
-	Order = "synapsida"
 })
 
 DefineSpeciesFamily("tyrannosauridae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=116228

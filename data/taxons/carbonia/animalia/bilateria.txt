@@ -1,0 +1,5 @@
+bilateria = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
+	name = "Bilateria"
+	rank = subkingdom
+	supertaxon = animalia
+}

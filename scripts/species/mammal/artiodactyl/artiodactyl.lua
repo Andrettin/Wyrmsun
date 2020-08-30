@@ -25,22 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("artiodactyla", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180692
-	Name = "Artiodactyla",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
 DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
 	Name = "Antilocapridae",
 	Order = "artiodactyla"
-})
-
-DefineSpeciesFamily("cainotheriidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67948
-	Name = "Cainotheriidae",
-	Order = "artiodactyla",
-	Suborder = "tylopoda"
 })
 
 DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=111988

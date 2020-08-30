@@ -1,0 +1,6 @@
+eale = {
+	name = "Eale"
+	common_name = "Yale"
+	rank = genus
+	supertaxon = caprinae
+}

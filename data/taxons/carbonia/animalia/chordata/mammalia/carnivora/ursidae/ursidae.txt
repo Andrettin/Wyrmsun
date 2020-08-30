@@ -1,0 +1,6 @@
+ursidae = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	name = "Ursidae"
+	common_name = "Ursid"
+	rank = family
+	supertaxon = carnivora
+}

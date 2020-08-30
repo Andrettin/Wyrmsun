@@ -1,0 +1,5 @@
+cainotheriidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67948
+	name = "Cainotheriidae"
+	rank = family
+	supertaxon = tylopoda
+}

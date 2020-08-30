@@ -25,21 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("primates", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180089
-	Name = "Primates",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
-DefineSpeciesFamily("hominidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180090
-	Name = "Hominidae",
-	Order = "primates",
-	Suborder = "haplorrhini",
-	Infraorder = "simiiformes",
-	Superfamily = "hominoidea"
-})
-
 DefineSpeciesGenus("alfus", {
 	Name = "Alfus", -- "elf" in Latin
 	CommonName = "Elfoid",
@@ -65,13 +50,6 @@ DefineSpeciesGenus("gnomus", {
 DefineSpeciesGenus("gobelinus", {
 	Name = "Gobelinus", -- "goblin" in Latin
 	CommonName = "Goblinoid"
-})
-
-DefineSpeciesGenus("homo", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180091
-	Name = "Homo",
-	CommonName = "Hominoid",
-	Family = "hominidae",
-	Subfamily = "homininae"
 })
 
 DefineSpeciesGenus("nanus", {

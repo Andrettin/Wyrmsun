@@ -1,0 +1,5 @@
+hipparionini = { #Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
+	name = "Hipparionini"
+	rank = tribe
+	supertaxon = equinae
+}

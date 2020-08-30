@@ -1,0 +1,5 @@
+nimravinae = { #Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043
+	name = "Nimravinae"
+	rank = subfamily
+	supertaxon = nimravidae
+}

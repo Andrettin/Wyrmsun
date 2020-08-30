@@ -1,0 +1,6 @@
+tylopoda = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67948
+	name = "Tylopoda"
+	common_name = "Tylopod"
+	rank = suborder
+	supertaxon = artiodactyla
+}

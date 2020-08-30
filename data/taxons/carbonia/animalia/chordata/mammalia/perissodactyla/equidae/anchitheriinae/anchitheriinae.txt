@@ -1,0 +1,5 @@
+anchitheriinae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
+	name = "Anchitheriinae"
+	rank = subfamily
+	supertaxon = equidae
+}

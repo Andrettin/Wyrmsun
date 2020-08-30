@@ -1,0 +1,5 @@
+nimravidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
+	name = "Nimravidae"
+	rank = family
+	supertaxon = feliformia
+}

@@ -25,23 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("testudines", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=56475
-	Name = "Testudines",
-	Class = "reptilia"
-})
-
-DefineSpeciesFamily("testudinidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37739
-	Name = "Testudinidae",
-	Order = "testudines",
-	Suborder = "cryptodira",
-	Superfamily = "testudinoidea"
-})
-
-DefineSpeciesGenus("cheirogaster", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 35; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039
-	Name = "Cheirogaster",
---	Order = "testudines"
-})
-
 DefineSpeciesGenus("geochelone", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173853
 	Name = "Geochelone",
 	Family = "testudinidae"

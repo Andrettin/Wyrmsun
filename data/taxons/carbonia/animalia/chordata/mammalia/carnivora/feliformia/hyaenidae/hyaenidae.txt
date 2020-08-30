@@ -1,0 +1,6 @@
+hyaenidae = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=621756
+	name = "Hyaenidae"
+	common_name = "Hyenid"
+	rank = family
+	supertaxon = feliformia
+}

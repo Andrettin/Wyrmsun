@@ -1,0 +1,4 @@
+carbonia = { #equivalent to the "Biota" taxon; carbon-based lifeforms
+	name = "Carbonia"
+	rank = empire
+}

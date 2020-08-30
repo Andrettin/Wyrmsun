@@ -1,0 +1,5 @@
+cryptodira = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37739
+	name = "Cryptodira"
+	rank = suborder
+	supertaxon = testudines
+}

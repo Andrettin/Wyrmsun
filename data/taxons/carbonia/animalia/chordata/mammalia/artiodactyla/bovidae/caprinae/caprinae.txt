@@ -1,0 +1,6 @@
+caprinae = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180714
+	name = "Caprinae"
+	common_name = "Caprine"
+	rank = subfamily
+	supertaxon = bovidae
+}

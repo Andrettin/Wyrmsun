@@ -1,0 +1,5 @@
+caniformia = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180545
+	name = "Caniformia"
+	rank = suborder
+	supertaxon = carnivora
+}

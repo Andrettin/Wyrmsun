@@ -1,0 +1,5 @@
+cricetinae = { #Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=121093
+	name = "Cricetinae"
+	rank = subfamily
+	supertaxon = cricetidae
+}

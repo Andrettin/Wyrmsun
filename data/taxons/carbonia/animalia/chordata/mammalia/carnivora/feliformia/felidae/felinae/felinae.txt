@@ -1,0 +1,6 @@
+felinae = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46-47.
+	name = "Felinae"
+	common_name = "Feline"
+	rank = subfamily
+	supertaxon = felidae
+}

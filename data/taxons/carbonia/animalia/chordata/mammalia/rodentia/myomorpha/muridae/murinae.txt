@@ -1,0 +1,5 @@
+murinae = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180361
+	name = "Murinae"
+	rank = subfamily
+	supertaxon = muridae
+}

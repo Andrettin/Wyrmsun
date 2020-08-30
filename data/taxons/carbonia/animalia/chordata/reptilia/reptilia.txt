@@ -1,0 +1,6 @@
+reptilia = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173747
+	name = "Reptilia"
+	common_name = "Reptile"
+	rank = class
+	supertaxon = tetrapoda
+}

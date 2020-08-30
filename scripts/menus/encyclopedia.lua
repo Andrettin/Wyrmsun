@@ -26,10 +26,14 @@
 --
 
 function GetGenusCommonName(genus)
-	if (genus ~= "" and GetSpeciesGenusData(genus, "CommonName") ~= "") then
-		return GetSpeciesGenusData(genus, "CommonName")
+	if (genus ~= "") then
+		if (GetSpeciesGenusData(genus, "CommonName") ~= "") then
+			return GetSpeciesGenusData(genus, "CommonName")
+		else
+			return GetSpeciesGenusData(genus, "Name")
+		end
 	else
-		return CapitalizeString(genus)
+		return ""
 	end
 end
 

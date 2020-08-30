@@ -1,0 +1,5 @@
+capra = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180714
+	name = "Capra"
+	rank = genus
+	supertaxon = caprinae
+}

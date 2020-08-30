@@ -1,0 +1,6 @@
+muridae = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180360
+	name = "Muridae"
+	common_name = "Murid"
+	rank = family
+	supertaxon = muroidea
+}

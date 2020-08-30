@@ -1,0 +1,5 @@
+hominoidea = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180090
+	name = "Hominoidea"
+	rank = superfamily
+	supertaxon = simiiformes
+}
