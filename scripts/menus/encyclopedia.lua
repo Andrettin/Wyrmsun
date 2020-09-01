@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function GetGenusCommonName(genus)
-	if (genus ~= "") then
-		if (GetTaxonData(genus, "CommonName") ~= "") then
-			return GetTaxonData(genus, "CommonName")
-		else
-			return GetTaxonData(genus, "Name")
-		end
-	else
-		return ""
-	end
-end
-
 function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 
@@ -1475,67 +1463,29 @@ function OpenEncyclopediaPlaneEntry(plane)
 	encyclopedia_entry_menu:add(l, 32 * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor())
 	local description = ""
 	
-	local species = GetPlaneData(plane, "Species")
-	table.sort(species)
-	if (table.getn(species) > 0) then
-		local sapient_species = {}
-		local fauna_species = {}
-		local fauna_taxon_counts = {}
-		for i = 1, table.getn(species) do
-			if (GetSpeciesData(species[i], "Sapient")) then
-				table.insert(sapient_species, species[i])
-			else
-				table.insert(fauna_species, species[i])
-				local taxon = GetSpeciesData(species[i], "Supertaxon")
-				while (taxon ~= "") do
-					if (fauna_taxon_counts[taxon] == nil) then
-						fauna_taxon_counts[taxon] = 0
-					end
-					fauna_taxon_counts[taxon] = fauna_taxon_counts[taxon] + 1
-					taxon = GetTaxonData(taxon, "Supertaxon")
-				end
+	local sapient_species_names = GetPlaneData(plane, "NativeSapientSpeciesNames")
+	local fauna_species_names = GetPlaneData(plane, "NativeFaunaSpeciesNames")
+
+	if (table.getn(sapient_species_names) > 0) then
+		description = description .. _("Native Sapients") .. ": "
+		for i = 1, table.getn(sapient_species_names) do
+			description = description .. _(GetPluralForm(sapient_species_names[i]))
+			if (i < table.getn(sapient_species_names)) then
+				description = description .. ", "
 			end
 		end
-		
-		local fauna_species_names = {}
-		for i = 1, table.getn(fauna_species) do
-			local species_name = GetSpeciesData(fauna_species[i], "Name")
-			local taxon = GetSpeciesData(fauna_species[i], "Supertaxon")
-			while (taxon ~= "" and fauna_taxon_counts[taxon] > 5) do
-				if (GetTaxonData(taxon, "CommonName") ~= "") then
-					species_name = GetTaxonData(taxon, "CommonName")
-				else
-					species_name = GetTaxonData(taxon, "Name")
-				end
-				taxon = GetTaxonData(taxon, "Supertaxon")
-			end
-			if (GetArrayIncludes(fauna_species_names, species_name) == false) then
-				table.insert(fauna_species_names, species_name)
-			end
-		end
-		table.sort(fauna_species_names)
-		
-		if (table.getn(sapient_species) > 0) then
-			description = description .. _("Sapient Inhabitants") .. ": "
-			for i = 1, table.getn(sapient_species) do
-				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
-				if (i < table.getn(sapient_species)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		if (table.getn(fauna_species_names) > 0) then
-			description = description .. _("Fauna") .. ": "
-			for i = 1, table.getn(fauna_species_names) do
-				description = description .. _(GetPluralForm(fauna_species_names[i]))
-				if (i < table.getn(fauna_species_names)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end		
+		description = description .. "\n\n"
 	end
+	if (table.getn(fauna_species_names) > 0) then
+		description = description .. _("Native Fauna") .. ": "
+		for i = 1, table.getn(fauna_species_names) do
+			description = description .. _(GetPluralForm(fauna_species_names[i]))
+			if (i < table.getn(fauna_species_names)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end		
 	
 	if (GetPlaneData(plane, "Description") ~= "") then
 		description = description .. _("Description") .. ": " .. GetPlaneData(plane, "Description")
@@ -1668,66 +1618,29 @@ function OpenEncyclopediaWorldEntry(world)
 	if (GetWorldData(world, "Plane") ~= "") then
 		description = _("Plane") .. ": " .. _(GetPlaneData(GetWorldData(world, "Plane"), "Name")) .. "\n\n"
 	end
-	local species = GetWorldData(world, "Species")
-	table.sort(species)
-	if (table.getn(species) > 0) then
-		local sapient_species = {}
-		local fauna_species = {}
-		local fauna_taxon_counts = {}
-		for i = 1, table.getn(species) do
-			if (GetSpeciesData(species[i], "Sapient")) then
-				table.insert(sapient_species, species[i])
-			else
-				table.insert(fauna_species, species[i])
-				local taxon = GetSpeciesData(species[i], "Supertaxon")
-				while (taxon ~= "") do
-					if (fauna_taxon_counts[taxon] == nil) then
-						fauna_taxon_counts[taxon] = 0
-					end
-					fauna_taxon_counts[taxon] = fauna_taxon_counts[taxon] + 1
-					taxon = GetTaxonData(taxon, "Supertaxon")
-				end
-			end
-		end
-		
-		local fauna_species_names = {}
-		for i = 1, table.getn(fauna_species) do
-			local species_name = GetSpeciesData(fauna_species[i], "Name")
-			local taxon = GetSpeciesData(fauna_species[i], "Supertaxon")
-			while (taxon ~= "" and fauna_taxon_counts[taxon] > 5) do
-				if (GetTaxonData(taxon, "CommonName") ~= "") then
-					species_name = GetTaxonData(taxon, "CommonName")
-				else
-					species_name = GetTaxonData(taxon, "Name")
-				end
-				taxon = GetTaxonData(taxon, "Supertaxon")
-			end
-			if (GetArrayIncludes(fauna_species_names, species_name) == false) then
-				table.insert(fauna_species_names, species_name)
-			end
-		end
-		table.sort(fauna_species_names)
 
-		if (table.getn(sapient_species) > 0) then
-			description = description .. _("Sapient Inhabitants") .. ": "
-			for i = 1, table.getn(sapient_species) do
-				description = description .. _(GetPluralForm(GetSpeciesData(sapient_species[i], "Name")))
-				if (i < table.getn(sapient_species)) then
-					description = description .. ", "
-				end
+	local sapient_species_names = GetWorldData(world, "NativeSapientSpeciesNames")
+	local fauna_species_names = GetWorldData(world, "NativeFaunaSpeciesNames")
+
+	if (table.getn(sapient_species_names) > 0) then
+		description = description .. _("Native Sapients") .. ": "
+		for i = 1, table.getn(sapient_species_names) do
+			description = description .. _(GetPluralForm(sapient_species_names[i]))
+			if (i < table.getn(sapient_species_names)) then
+				description = description .. ", "
 			end
-			description = description .. "\n\n"
 		end
-		if (table.getn(fauna_species_names) > 0) then
-			description = description .. _("Fauna") .. ": "
-			for i = 1, table.getn(fauna_species_names) do
-				description = description .. _(GetPluralForm(fauna_species_names[i]))
-				if (i < table.getn(fauna_species_names)) then
-					description = description .. ", "
-				end
+		description = description .. "\n\n"
+	end
+	if (table.getn(fauna_species_names) > 0) then
+		description = description .. _("Native Fauna") .. ": "
+		for i = 1, table.getn(fauna_species_names) do
+			description = description .. _(GetPluralForm(fauna_species_names[i]))
+			if (i < table.getn(fauna_species_names)) then
+				description = description .. ", "
 			end
-			description = description .. "\n\n"
-		end		
+		end
+		description = description .. "\n\n"
 	end
 	if (GetWorldData(world, "Description") ~= "") then
 		description = description .. _("Description") .. ": " .. _(GetWorldData(world, "Description"))
