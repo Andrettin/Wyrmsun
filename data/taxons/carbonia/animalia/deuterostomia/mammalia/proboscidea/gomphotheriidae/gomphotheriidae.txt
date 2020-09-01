@@ -1,0 +1,5 @@
+gomphotheriidae = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
+	name = "Gomphotheriidae"
+	rank = family
+	supertaxon = proboscidea
+}

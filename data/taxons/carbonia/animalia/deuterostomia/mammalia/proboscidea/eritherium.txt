@@ -1,0 +1,5 @@
+eritherium = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 50.
+	name = "Eritherium"
+	rank = genus
+	supertaxon = proboscidea
+}
