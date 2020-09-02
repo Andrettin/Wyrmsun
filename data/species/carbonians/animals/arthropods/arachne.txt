@@ -1,0 +1,8 @@
+arachne = {
+	name = "Arachne"
+	supertaxon = arthropoda
+	era = holocene
+	homeworld = svartalfheim
+	sapient = true
+	#arachnes have the body of a spider, but where the head would be in a normal spider, there is a humanoid torso (much like a centaur); this humanoid torso is also spider-like, with an exoskeleton and having multiple eyes on its head
+}
