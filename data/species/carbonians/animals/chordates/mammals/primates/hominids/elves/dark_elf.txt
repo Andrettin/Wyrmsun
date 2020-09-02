@@ -1,0 +1,11 @@
+dark_elf = {
+	name = "Dark Elf"
+	supertaxon = alfus
+	specific_name = "tenebra" #"dark" in Latin
+	era = holocene
+	homeworld = svartalfheim
+	sapient = true
+	pre_evolutions = {
+		australopithecus #could descend from another closely-related species instead
+	}
+}

@@ -1,0 +1,11 @@
+elf = {
+	name = "Elf"
+	supertaxon = alfus
+	specific_name = "sapiens"
+	era = holocene
+	homeworld = alfheim
+	sapient = true
+	pre_evolutions = {
+		australopithecus #could descend from another closely-related species instead
+	}
+}

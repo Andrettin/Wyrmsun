@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesGenus("alfus", {
-	Name = "Alfus", -- "elf" in Latin
-	CommonName = "Elfoid",
-	Family = "hominidae"
-})
-
 DefineSpeciesGenus("australopithecus", {
 	Name = "Australopithecus",
 	Family = "hominidae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
@@ -135,16 +129,6 @@ DefineSpecies("dwarf", {
 	Era = "holocene",
 	Sapient = true
 	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("elf", {
-	Name = "Elf",
-	Genus = "alfus", -- "elf" in Latin
-	Species = "sapiens",
-	Homeworld = "alfheim",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
-	Era = "holocene",
-	Sapient = true
 })
 
 DefineSpecies("ettin", {
