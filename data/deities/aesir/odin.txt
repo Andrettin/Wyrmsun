@@ -37,6 +37,6 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 		default_faction = asgard
 		variation = gray_hair
 		trait = upgrade_wise
-		base_level = 95
+		base_level = 79
 	}
 }
