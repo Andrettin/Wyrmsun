@@ -1,6 +1,6 @@
 gaia = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 200-201.
 	name = "Gaia"
-	pantheon = titan #she was not actually a titaness, but since she was the mother of the titans, this pantheon fits her best
+	pantheon = protogenoi
 	major = true
 	gender = female
 	civilizations = {

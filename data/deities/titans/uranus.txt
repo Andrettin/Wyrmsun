@@ -1,6 +1,6 @@
 uranus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 479.
 	name = "Uranus"
-	pantheon = titan #he was not actually a titan, but since he was the father of the titans, this pantheon fits him best
+	pantheon = protogenoi
 	major = true
 	gender = male
 	civilizations = {
