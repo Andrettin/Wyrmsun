@@ -22,3 +22,11 @@ inventory_button_level = inventory_level
 cancel_button_level = cancel_level
 town_hall_class = town_hall
 default_population_class = worker
+
+#image files
+icon_frame_file = "ui/icon_frame.png"
+pressed_icon_frame_file = "ui/icon_frame_pressed.png"
+command_button_frame_file = "ui/command_button_frame.png"
+bar_frame_file = "ui/bar_frame.png"
+infopanel_frame_file = "ui/infopanel_frame.png"
+progress_bar_file = "ui/progress_bar.png"
