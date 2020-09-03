@@ -3,6 +3,7 @@ gaia = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 20
 	pantheon = protogenoi
 	major = true
 	gender = female
+	mother = chaos #in Greek mythology, she was the first deity born after Chaos, but here we make her Chaos' daughter, as that fits better with our cosmology
 	civilizations = {
 		ettin
 		greek
