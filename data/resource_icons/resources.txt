@@ -1,0 +1,47 @@
+bronze = {
+	file = "ui/resources/bronze.png"
+}
+
+burning_coal = {
+	file = "ui/resources/burning_coal.png"
+}
+
+coal = {
+	file = "ui/resources/coal.png"
+}
+
+copper = {
+	file = "ui/resources/copper.png"
+}
+
+iron = {
+	file = "ui/resources/iron.png"
+}
+
+leadership = {
+	file = "ui/resources/leadership.png"
+}
+
+lumber = {
+	file = "ui/resources/lumber.png"
+}
+
+oil = {
+	file = "ui/resources/oil.png"
+}
+
+prestige = {
+	file = "ui/resources/prestige.png"
+}
+
+research = {
+	file = "ui/resources/research.png"
+}
+
+silver = {
+	file = "ui/resources/silver.png"
+}
+
+stone = {
+	file = "ui/resources/stone.png"
+}

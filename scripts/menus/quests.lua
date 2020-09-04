@@ -108,27 +108,6 @@ function RunQuestMenu(world)
 		end
 	end
 	
-	--[[
-	local quest_completion_percent = completed_quest_quantity * 100 / total_quest_quantity
-	local badge_icon
-	if (quest_completion_percent == 100) then
-		badge_icon = CGraphic:New("ui/icons/badge_foil.png")
-	elseif (quest_completion_percent >= 80) then
-		badge_icon = CGraphic:New("ui/icons/badge_gold.png")
-	elseif (quest_completion_percent >= 60) then
-		badge_icon = CGraphic:New("ui/icons/badge_silver.png")
-	elseif (quest_completion_percent >= 40) then
-		badge_icon = CGraphic:New("ui/icons/badge_bronze.png")
-	elseif (quest_completion_percent >= 20) then
-		badge_icon = CGraphic:New("ui/icons/badge_glow.png")
-	else
-		badge_icon = CGraphic:New("ui/icons/badge_cracked.png")
-	end
-	badge_icon:Load(false, get_scale_factor())
-	local b = ImageWidget(badge_icon, get_scale_factor())
-	menu:add(b, (Video.Width / 2) - (badge_icon:get_frame_width() / 2), (Video.Height / 2) - (badge_icon:get_frame_height() / 2))
-	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")
-	--]]
 	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
 
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),

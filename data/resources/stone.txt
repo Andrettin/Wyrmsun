@@ -1,6 +1,6 @@
 stone = {
 	name = "Stone"
-	icon_file = "ui/resources/stone.png"
+	icon = stone
 	action_name = "quarry"
 	default_income = 100
 	base_price = 100

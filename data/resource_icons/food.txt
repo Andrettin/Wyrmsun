@@ -1,0 +1,3 @@
+food = {
+	file = "ui/resources/food.png"
+}

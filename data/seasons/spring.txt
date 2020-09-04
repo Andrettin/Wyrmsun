@@ -1,0 +1,4 @@
+spring = {
+	name = "Spring"
+	icon = spring
+}

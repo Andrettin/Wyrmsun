@@ -1,0 +1,4 @@
+autumn = {
+	name = "Autumn"
+	icon = autumn
+}

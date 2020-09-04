@@ -1,0 +1,3 @@
+score = {
+	file = "ui/resources/score.png"
+}

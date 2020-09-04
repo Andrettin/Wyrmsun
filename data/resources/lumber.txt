@@ -1,6 +1,6 @@
 lumber = {
 	name = "Lumber"
-	icon_file = "ui/resources/lumber.png"
+	icon = lumber
 	action_name = "gather"
 	default_income = 100
 	base_price = 100

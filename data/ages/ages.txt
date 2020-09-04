@@ -1,21 +1,13 @@
 bronze_age = {
 	name = "Bronze Age"
 	priority = 1
-	image = {
-		file = "ui/resources/bronze.png"
-		width = 14
-		height = 14
-	}
+	icon = bronze
 }
 
 iron_age = {
 	name = "Iron Age"
 	priority = 2
-	image = {
-		file = "ui/resources/iron.png"
-		width = 14
-		height = 14
-	}
+	icon = iron
 	conditions = {
 		upgrade = upgrade_ironworking
 	}
@@ -24,11 +16,7 @@ iron_age = {
 viking_age = {
 	name = "Viking Age"
 	priority = 3
-	image = {
-		file = "ui/resources/labor_extra_1.png"
-		width = 14
-		height = 14
-	}
+	icon = strength
 	conditions = {
 		upgrade = upgrade_norse_civilization
 		upgrade = upgrade_teuton_spatha
@@ -43,11 +31,7 @@ viking_age = {
 feudal_age = {
 	name = "Feudal Age"
 	priority = 4
-	image = {
-		file = "ui/resources/prestige.png"
-		width = 14
-		height = 14
-	}
+	icon = prestige
 	conditions = {
 		upgrade = upgrade_serfdom
 	}
@@ -56,11 +40,7 @@ feudal_age = {
 gunpowder_age = {
 	name = "Gunpowder Age"
 	priority = 5
-	image = {
-		file = "ui/resources/coal_extra_1.png"
-		width = 14
-		height = 14
-	}
+	icon = burning_coal
 	conditions = {
 		upgrade = upgrade_gunpowder
 	}
@@ -69,11 +49,7 @@ gunpowder_age = {
 industrial_age = {
 	name = "Industrial Age"
 	priority = 6
-	image = {
-		file = "ui/resources/coal.png"
-		width = 14
-		height = 14
-	}
+	icon = coal
 	conditions = {
 		upgrade = upgrade_steam_engine
 	}

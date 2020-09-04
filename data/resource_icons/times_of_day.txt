@@ -1,0 +1,39 @@
+afternoon = {
+	file = "ui/resources/afternoon.png"
+}
+
+dawn = {
+	file = "ui/resources/dawn.png"
+}
+
+dusk = {
+	file = "ui/resources/dusk.png"
+}
+
+early_night = {
+	file = "ui/resources/early_night.png"
+}
+
+indoors = {
+	file = "ui/resources/indoors.png"
+}
+
+late_night = {
+	file = "ui/resources/late_night.png"
+}
+
+midday = {
+	file = "ui/resources/midday.png"
+}
+
+midnight = {
+	file = "ui/resources/midnight.png"
+}
+
+morning = {
+	file = "ui/resources/morning.png"
+}
+
+underground = {
+	file = "ui/resources/underground.png"
+}

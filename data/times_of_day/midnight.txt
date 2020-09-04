@@ -2,9 +2,5 @@ midnight = {
 	name = "Midnight"
 	night = true
 	color_modification = { -22 -17 -5 }
-	image = {
-		file = "ui/resources/midnight.png"
-		width = 14
-		height = 14
-	}
+	icon = midnight
 }

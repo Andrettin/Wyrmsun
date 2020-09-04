@@ -1,0 +1,3 @@
+mana = {
+	file = "ui/resources/mana.png"
+}

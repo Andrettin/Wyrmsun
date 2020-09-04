@@ -1,6 +1,6 @@
 leadership = {
 	name = "Leadership"
-	icon_file = "ui/resources/leadership.png"
+	icon = leadership
 	action_name = "gain"
 	default_income = 100
 }

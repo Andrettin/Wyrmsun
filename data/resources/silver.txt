@@ -1,6 +1,6 @@
 silver = {
 	name = "Silver"
-	icon_file = "ui/resources/silver.png"
+	icon = silver
 	action_name = "mine"
 	default_income = 100
 	default_amount = 50000

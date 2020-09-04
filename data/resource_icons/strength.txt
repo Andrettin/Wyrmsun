@@ -1,0 +1,3 @@
+strength = {
+	file = "ui/resources/strength.png"
+}

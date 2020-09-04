@@ -1,6 +1,6 @@
 research = {
 	name = "Research"
-	icon_file = "ui/resources/research.png"
+	icon = research
 	action_name = "produce"
 	default_income = 100
 }

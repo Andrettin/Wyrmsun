@@ -30,3 +30,6 @@ command_button_frame_file = "ui/command_button_frame.png"
 bar_frame_file = "ui/bar_frame.png"
 infopanel_frame_file = "ui/infopanel_frame.png"
 progress_bar_file = "ui/progress_bar.png"
+food_icon = food
+score_icon = score
+mana_icon = mana

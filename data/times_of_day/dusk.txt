@@ -2,9 +2,5 @@ dusk = {
 	name = "Dusk"
 	dusk = true
 	color_modification = { 0 -10 -10 }
-	image = {
-		file = "ui/resources/dusk.png"
-		width = 14
-		height = 14
-	}
+	icon = dusk
 }

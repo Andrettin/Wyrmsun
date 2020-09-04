@@ -101,13 +101,6 @@ DefineResource("limestone", {
 	DefaultAmount = 10000
 })
 
-DefineResource("oil", {
-	Name = "Oil",
-	DefaultIncome = 100,
-	ActionName = "drill",
-	DefaultAmount = 50000
-})
-
 DefineResource("jewelry", {
 	Name = "Jewelry",
 	LuxuryResource = true,

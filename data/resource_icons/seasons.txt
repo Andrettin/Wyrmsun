@@ -1,0 +1,15 @@
+autumn = {
+	file = "ui/resources/autumn.png"
+}
+
+spring = {
+	file = "ui/resources/spring.png"
+}
+
+summer = {
+	file = "ui/resources/summer.png"
+}
+
+winter = {
+	file = "ui/resources/winter.png"
+}

@@ -1,9 +1,5 @@
 afternoon = {
 	name = "Afternoon"
 	day = true
-	image = {
-		file = "ui/resources/afternoon.png"
-		width = 14
-		height = 14
-	}
+	icon = afternoon
 }

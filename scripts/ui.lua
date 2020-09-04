@@ -385,8 +385,6 @@ UI.Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
 UI.Resources[5].TextY = 1 * get_scale_factor()
 
 -- oil
---UI.Resources[3].G = CGraphic:New("ui/resources/oil.png", 14, 14)
---UI.Resources[3].IconFrame = 0
 --UI.Resources[3].IconX = (154 + 150) * get_scale_factor()
 --UI.Resources[3].IconY = 0
 --UI.Resources[3].TextX = (154 + 150 + 18) * get_scale_factor()
@@ -400,9 +398,6 @@ if (GetCurrentQuest() == "gathering-materials") then
 	UI.Resources[6].TextY = 1 * get_scale_factor()
 else
 	-- Hide Coal (should not show up in normal scenarios)
-	if (UI.Resources[6].G) then
-		UI.Resources[6].G = nil
-	end
 	UI.Resources[6].IconX = -1
 	UI.Resources[6].IconY = -1
 	UI.Resources[6].TextX = -1
@@ -410,37 +405,29 @@ else
 end
 
 -- food
-UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
-UI.Resources[FoodCost].IconFrame = 0
 UI.Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
 UI.Resources[FoodCost].IconY = 0
 UI.Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
 UI.Resources[FoodCost].TextY = 1
 
 -- score
-UI.Resources[ScoreCost].G = CGraphic:New("ui/resources/score.png", 14, 14)
-UI.Resources[ScoreCost].IconFrame = 0
 UI.Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
 UI.Resources[ScoreCost].IconY = 0
 UI.Resources[ScoreCost].TextX = Video.Width + (-68 + 18) * get_scale_factor()
 UI.Resources[ScoreCost].TextY = 1
 
-UI.Resources[ManaResCost].G = CGraphic:New("ui/resources/mana_icon.png", 14, 14)
-UI.Resources[ManaResCost].IconFrame = 0
+-- mana
 UI.Resources[ManaResCost].IconX = -1
 UI.Resources[ManaResCost].IconY = -1
 UI.Resources[ManaResCost].TextX = -1
 UI.Resources[ManaResCost].TextY = -1
 
-UI.TimeOfDayPanel.IconFrame = 0
 UI.TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
 UI.TimeOfDayPanel.IconY = 0
 
-UI.SeasonPanel.IconFrame = 0
 UI.SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
 UI.SeasonPanel.IconY = 0
 
-UI.AgePanel.IconFrame = 0
 UI.AgePanel.IconX = (154 + (75 * 5)) * get_scale_factor()
 UI.AgePanel.IconY = 0
 UI.AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
