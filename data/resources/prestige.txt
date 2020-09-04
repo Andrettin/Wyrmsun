@@ -1,0 +1,6 @@
+prestige = {
+	name = "Prestige"
+	icon_file = "ui/resources/prestige.png"
+	action_name = "gain"
+	default_income = 100
+}

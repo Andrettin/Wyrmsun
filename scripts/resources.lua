@@ -37,15 +37,6 @@ DefineResource("time", {
 	ActionName = "stop"
 })
 
-DefineResource("silver", {
-	Name = "Silver",
-	DefaultIncome = 100,
-	FinalResource = "copper",
-	FinalResourceConversionRate = 200,
-	ActionName = "mine",
-	DefaultAmount = 50000
-})
-
 DefineResource("gold", {
 	Name = "Gold",
 	DefaultIncome = 100,
@@ -143,22 +134,4 @@ DefineResource("leather", {
 	DefaultIncome = 100,
 	BasePrice = 100,
 	ActionName = "gather"
-})
-
-DefineResource("research", {
-	Name = "Research",
-	DefaultIncome = 100,
-	ActionName = "produce"
-})
-
-DefineResource("prestige", {
-	Name = "Prestige",
-	DefaultIncome = 100,
-	ActionName = "gain"
-})
-
-DefineResource("leadership", {
-	Name = "Leadership",
-	DefaultIncome = 100,
-	ActionName = "gain"
 })

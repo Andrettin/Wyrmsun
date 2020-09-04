@@ -1,0 +1,9 @@
+silver = {
+	name = "Silver"
+	icon_file = "ui/resources/silver.png"
+	action_name = "mine"
+	default_income = 100
+	default_amount = 50000
+	final_resource = copper
+	final_resource_conversion_rate = 200
+}

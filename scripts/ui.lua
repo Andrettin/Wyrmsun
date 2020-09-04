@@ -409,26 +409,6 @@ else
 	UI.Resources[6].TextY = -1
 end
 
-UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
-UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
-UI.Resources[GetResourceIdByName("silver")].IconX = -1
-UI.Resources[GetResourceIdByName("silver")].IconY = -1
-
-UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/resources/research.png", 14, 14)
-UI.Resources[GetResourceIdByName("research")].IconFrame = 0
-UI.Resources[GetResourceIdByName("research")].IconX = -1
-UI.Resources[GetResourceIdByName("research")].IconY = -1
-
-UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/resources/prestige.png", 14, 14)
-UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
-UI.Resources[GetResourceIdByName("prestige")].IconX = -1
-UI.Resources[GetResourceIdByName("prestige")].IconY = -1
-
-UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/leadership.png", 14, 14)
-UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
-UI.Resources[GetResourceIdByName("leadership")].IconX = -1
-UI.Resources[GetResourceIdByName("leadership")].IconY = -1
-
 -- food
 UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
 UI.Resources[FoodCost].IconFrame = 0
