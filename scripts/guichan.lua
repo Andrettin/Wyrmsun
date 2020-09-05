@@ -51,8 +51,6 @@ function panel(n)
 	return panels[n]
 end
 
-
-
 function AddMenuHelpers(menu)
   function menu:addCentered(widget, x, y)
     self:add(widget, x - widget:getWidth() / 2, y)
