@@ -33,7 +33,7 @@ clear = Color(200, 200, 120)
 black = Color(0, 0, 0)
 
 color_bckground = "backgrounds/wyrmsun.png"
-color_background_widget = ImageWidget(color_bckground, 1, Video.Width, Video.Height)
+color_background_widget = ImageWidget(color_bckground)
 
 bckground = "backgrounds/wyrmsun_sepia.png"
 backgroundWidget = ImageWidget(bckground, 1, Video.Width, Video.Height)
