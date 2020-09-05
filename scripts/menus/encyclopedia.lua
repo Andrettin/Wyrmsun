@@ -544,8 +544,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	end
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	if (has_icon) then
-		b:setFrameImage(Preference.IconFrameG)
-		b:setPressedFrameImage(Preference.PressedIconFrameG)
+		b:setIconFrameImage()
 		b:setTooltip(tooltip_string)
 	else
 		b:setBaseColor(Color(0,0,0,0))
@@ -680,8 +679,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		menu_image:setDisabledImage(encyclopedia_icon)
 		menu_image:set_frame(encyclopedia_icon_frame)
 		menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-		menu_image:setFrameImage(Preference.IconFrameG)
-		menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
+		menu_image:setIconFrameImage()
 	end
 	menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor(), nil, true)
 

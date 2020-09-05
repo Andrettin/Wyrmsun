@@ -84,8 +84,7 @@ function AddFamilyTreeIcon(character, menu, x, y, direction)
 	b:setDisabledImage(character_icon)
 	b:set_frame(character_icon_frame)
 	b:setBorderSize(0)
-	b:setFrameImage(Preference.IconFrameG)
-	b:setPressedFrameImage(Preference.PressedIconFrameG)
+	b:setIconFrameImage()
 	b:setTooltip(GetCharacterData(character, "FullName"))
 	
 	if (direction == "upwards" or direction == "both") then

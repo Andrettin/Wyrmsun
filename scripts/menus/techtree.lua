@@ -92,8 +92,7 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu_image:setDisabledImage(techicon)
 				tech_menu_image:set_frame(techicon_frame)
 				tech_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-				tech_menu_image:setFrameImage(Preference.IconFrameG)
-				tech_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
+				tech_menu_image:setIconFrameImage()
 
 				local l = MultiLineLabel()
 				l:setFont(Fonts["game"])
@@ -115,8 +114,7 @@ function RunTechTreeMenu(civilization_number)
 		b:setDisabledImage(techicon)
 		b:set_frame(techicon_frame)
 		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-		b:setFrameImage(Preference.IconFrameG)
-		b:setPressedFrameImage(Preference.PressedIconFrameG)
+		b:setIconFrameImage()
 		b:setTooltip(_(unit_name))
 		return b
 	end

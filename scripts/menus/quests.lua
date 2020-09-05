@@ -278,8 +278,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setDisabledImage(questicon)
 	b:set_frame(quest_icon_frame)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	b:setFrameImage(Preference.IconFrameG)
-	b:setPressedFrameImage(Preference.PressedIconFrameG)
+	b:setIconFrameImage()
 	b:setGrayscale(is_grayscale)	
 	local tooltip = _(GetQuestData(quest, "Name")) .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
 	if (GetQuestData(quest, "HighestCompletedDifficulty") >= DifficultyEasy) then

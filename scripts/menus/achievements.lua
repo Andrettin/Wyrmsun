@@ -82,8 +82,7 @@ function addAchievementIcon(achievement, menu, x, y)
 			achievement_menu_image:setDisabledImage(achievement_icon)
 			achievement_menu_image:set_frame(achievement_icon_frame)
 			achievement_menu_image:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-			achievement_menu_image:setFrameImage(Preference.IconFrameG)
-			achievement_menu_image:setPressedFrameImage(Preference.PressedIconFrameG)
+			achievement_menu_image:setIconFrameImage()
 
 			local l = MultiLineLabel()
 			l:setFont(Fonts["game"])
@@ -110,8 +109,7 @@ function addAchievementIcon(achievement, menu, x, y)
 	b:setDisabledImage(achievement_icon)
 	b:set_frame(achievement_icon_frame)
 	b:setBorderSize(0)
-	b:setFrameImage(Preference.IconFrameG)
-	b:setPressedFrameImage(Preference.PressedIconFrameG)
+	b:setIconFrameImage()
 	b:setTooltip(_(GetAchievementData(achievement, "Name")))
 	return b
 end

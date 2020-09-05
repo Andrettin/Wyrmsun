@@ -486,8 +486,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			b:setDisabledImage(event_icon)
 			b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 			b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-			b:setFrameImage(Preference.IconFrameG)
-			b:setPressedFrameImage(Preference.PressedIconFrameG)
+			b:setIconFrameImage()
 		end
 
 		for i=1,table.getn(options) do
@@ -632,8 +631,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 		icon_widget:setDisabledImage(icon_graphics)
 		icon_widget:set_frame(frame)
 		icon_widget:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-		icon_widget:setFrameImage(Preference.IconFrameG)
-		icon_widget:setPressedFrameImage(Preference.PressedIconFrameG)
+		icon_widget:setIconFrameImage()
 	end
 
 	local l = MultiLineLabel()
