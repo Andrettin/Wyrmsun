@@ -183,7 +183,7 @@ DefineUnitType("unit-hammer", {
 	Parent = "unit-template-item",
 	Costs = {"copper", 100},
 	Image = {"file", "neutral/items/hammer.png", "size", {32, 32}},
-	Icon = "icon-hammer",
+	Icon = "hammer",
 	ItemClass = "mace",
 	BasicDamage = 0
 } )
