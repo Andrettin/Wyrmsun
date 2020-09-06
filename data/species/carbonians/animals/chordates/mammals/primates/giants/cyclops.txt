@@ -1,0 +1,9 @@
+cyclops = {
+	name = "Cyclops"
+	supertaxon = gigans #cyclops are of the same genus as ettins
+	specific_name = "cyclops"
+	era = holocene
+	homeworld = jotunheim
+	sapient = true
+	#ogres, ettins and cyclopses should have a common ancestor
+}

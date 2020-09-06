@@ -1,0 +1,9 @@
+chimpanzee = {
+	name = "Chimpanzee"
+	supertaxon = primates
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		dryopithecus
+	}
+}

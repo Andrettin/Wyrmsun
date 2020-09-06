@@ -1,0 +1,9 @@
+lemur = {
+	name = "Lemur"
+	supertaxon = primates
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		plesiadapis
+	}
+}

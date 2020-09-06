@@ -1,6 +1,6 @@
 alfus = {
 	name = "Alfus" #"elf" in Latin
-	common_name = "Elfoid"
+	common_name = "Elf"
 	rank = genus
 	supertaxon = hominidae
 }

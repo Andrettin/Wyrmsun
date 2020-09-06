@@ -1,0 +1,8 @@
+orc = {
+	name = "Orc"
+	supertaxon = orcus
+	specific_name = "sapiens"
+	era = holocene
+	homeworld = jotunheim
+	sapient = true
+}

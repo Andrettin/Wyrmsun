@@ -1,0 +1,6 @@
+ogrus = {
+	name = "Ogrus"
+	common_name = "Ogroid"
+	rank = genus
+	supertaxon = primates
+}

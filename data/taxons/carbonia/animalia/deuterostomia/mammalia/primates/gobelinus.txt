@@ -1,0 +1,6 @@
+gobelinus = {
+	name = "Gobelinus" #"goblin" in Latin
+	common_name = "Goblinoid"
+	rank = genus
+	supertaxon = primates
+}

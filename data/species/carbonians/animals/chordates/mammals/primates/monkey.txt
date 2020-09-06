@@ -1,0 +1,9 @@
+monkey = {
+	name = "Monkey"
+	supertaxon = primates
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		plesiadapis
+	}
+}

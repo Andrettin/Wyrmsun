@@ -1,0 +1,8 @@
+hobgoblin = {
+	name = "Hobgoblin"
+	specific_name = "magnus" #"big" in Latin" (as it is bigger than a goblin)
+	supertaxon = gobelinus
+	era = holocene
+	homeworld = nidavellir
+	sapient = true
+}
