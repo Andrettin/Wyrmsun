@@ -8,4 +8,5 @@ elf = {
 	pre_evolutions = {
 		australopithecus #could descend from another closely-related species instead
 	}
+	description = "In ages past, a tribe of primitive hominids found a passageway to a new world. There, they discovered verdant forests and graceful creatures. Though alarmed that no way back to their homeworld could be seen, they delighted in the new, welcoming environment. Adapting to the new world they had found, eventually those hominids would evolve into a new species, the elves."
 }
