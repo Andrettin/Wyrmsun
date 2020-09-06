@@ -1,0 +1,9 @@
+halfling = {
+	name = "Halfling"
+	supertaxon = homo
+	era = holocene
+	sapient = true
+	pre_evolutions = {
+		homo_floresiensis
+	}
+}
