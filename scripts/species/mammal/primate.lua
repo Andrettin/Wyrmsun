@@ -25,31 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesGenus("australopithecus", {
-	Name = "Australopithecus",
-	Family = "hominidae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
-})
-
 DefineSpeciesGenus("gigans", {
 	Name = "Gigans", -- "giant" in Latin
 	CommonName = "Giant"
 })
 
-DefineSpeciesGenus("gnomus", {
-	Name = "Gnomus", -- "gnome" in Latin
-	CommonName = "Gnomoid",
-	Family = "hominidae"
-})
-
 DefineSpeciesGenus("gobelinus", {
 	Name = "Gobelinus", -- "goblin" in Latin
 	CommonName = "Goblinoid"
-})
-
-DefineSpeciesGenus("nanus", {
-	Name = "Nanus", -- "dwarf" in Latin
-	CommonName = "Dwarfoid",
-	Family = "hominidae"
 })
 
 DefineSpeciesGenus("orcus", {
@@ -109,28 +92,6 @@ DefineSpecies("cyclops", {
 	Sapient = true
 })
 
-DefineSpecies("derro", {
-	Name = "Derro",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "detrimenti", -- "detrimental" in Latin
-	Homeworld = "nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Era = "holocene",
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("dwarf", {
-	Name = "Dwarf",
-	Genus = "nanus", -- "dwarf" in Latin
-	Species = "sapiens",
-	Homeworld = "nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Era = "holocene",
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
 DefineSpecies("ettin", {
 	Name = "Ettin",
 	Genus = "gigans", -- "giant" in Latin
@@ -138,17 +99,6 @@ DefineSpecies("ettin", {
 	Homeworld = "jotunheim",
 	Era = "holocene",
 	Sapient = true
-})
-
-DefineSpecies("gnome", {
-	Name = "Gnome",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "sapiens",
-	Homeworld = "nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Era = "holocene",
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
 })
 
 DefineSpecies("goblin", {
@@ -165,16 +115,6 @@ DefineSpecies("hobgoblin", {
 	Genus = "gobelinus", -- "goblin" in Latin
 	Species = "magnus", -- "big" in Latin" (as it is bigger than a goblin)
 	Homeworld = "nidavellir",
-	Era = "holocene",
-	Sapient = true
-})
-
-DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
-	Name = "Human",
-	Genus = "homo",
-	Species = "sapiens",
-	Homeworld = "earth",
-	EvolvesFrom = {"australopithecus"}, -- possibly
 	Era = "holocene",
 	Sapient = true
 })

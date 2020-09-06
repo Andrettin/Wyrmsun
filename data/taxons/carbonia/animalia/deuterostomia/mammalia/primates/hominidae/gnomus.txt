@@ -1,0 +1,6 @@
+gnomus = {
+	name = "Gnomus" #"gnome" in Latin
+	common_name = "Gnomoid"
+	rank = genus
+	supertaxon = hominidae
+}

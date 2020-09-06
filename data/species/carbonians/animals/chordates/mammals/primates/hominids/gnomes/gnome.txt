@@ -1,0 +1,12 @@
+gnome = {
+	name = "Gnome"
+	supertaxon = gnomus
+	specific_name = "sapiens"
+	era = holocene
+	homeworld = nidavellir
+	sapient = true
+	pre_evolutions = {
+		australopithecus #could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
+	}
+	#in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+}

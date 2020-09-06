@@ -1,0 +1,11 @@
+human = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
+	name = "Human"
+	supertaxon = homo
+	specific_name = "sapiens"
+	era = holocene
+	homeworld = earth
+	sapient = true
+	pre_evolutions = {
+		australopithecus
+	}
+}
