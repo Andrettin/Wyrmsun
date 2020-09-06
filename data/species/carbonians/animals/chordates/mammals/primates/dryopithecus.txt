@@ -1,0 +1,8 @@
+dryopithecus = {
+	name = "Dryopithecus"
+	supertaxon = primates
+	homeworld = earth
+	pre_evolutions = {
+		plesiadapis
+	}
+}

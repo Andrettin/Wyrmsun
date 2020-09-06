@@ -1,0 +1,9 @@
+australopithecus = {
+	name = "Australopithecus"
+	specific_name = "afarensis" #the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
+	supertaxon = australopithecus
+	homeworld = earth
+	pre_evolutions = {
+		dryopithecus
+	}
+}

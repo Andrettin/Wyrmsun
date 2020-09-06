@@ -1,0 +1,10 @@
+plesiadapis = {
+	name = "Plesiadapis"
+	supertaxon = primates
+	homeworld = earth
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+	}
+}
