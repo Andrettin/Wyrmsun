@@ -2,5 +2,5 @@ nanus = {
 	name = "Nanus" #"dwarf" in Latin
 	common_name = "Dwarfoid"
 	rank = genus
-	supertaxon = hominidae
+	supertaxon = homininae
 }
