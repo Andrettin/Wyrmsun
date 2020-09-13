@@ -1,0 +1,43 @@
+spell_stun = {
+	name = "Stun"
+	mana_cost = 50
+	range = 1
+	target = unit
+	dependency_upgrade = upgrade_stun
+	actions = {
+		adjust_variable = {
+			stun = 200
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+		spawn_missile = {
+			missile = missile_always_hits
+			use_unit_var = true
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		building = false
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			stun == 0
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			stun == 0
+		}
+	}
+}

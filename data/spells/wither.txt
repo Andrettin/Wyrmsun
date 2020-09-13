@@ -1,0 +1,39 @@
+spell_wither = {
+	name = "Wither"
+	mana_cost = 50
+	range = 6
+	target = unit
+	sound_when_cast = magic_holy
+	dependency_upgrade = upgrade_wither
+	actions = {
+		adjust_variable = {
+			wither = 1000
+			blessing = 0
+			inspire = 0
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		wither == 0
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+		}
+	}
+}

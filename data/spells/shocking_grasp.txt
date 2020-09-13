@@ -1,0 +1,42 @@
+spell_shocking_grasp = {
+	name = "Shocking Grasp"
+	mana_cost = 50
+	range = 1
+	target = unit
+	dependency_upgrade = upgrade_shocking_grasp
+	actions = {
+		adjust_variable = {
+			stun = 200
+		}
+		spawn_missile = {
+			missile = missile_impact_lightning
+			start_point = target
+		}
+		spawn_missile = {
+			missile = missile_always_hits
+			lightning_damage = 7
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		building = false
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			stun == 0
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			stun == 0
+		}
+	}
+}

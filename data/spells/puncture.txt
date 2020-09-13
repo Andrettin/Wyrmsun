@@ -1,0 +1,44 @@
+spell_puncture = {
+	name = "Puncture"
+	mana_cost = 50
+	range = 1
+	target = unit
+	dependency_upgrade = upgrade_puncture
+	actions = {
+		adjust_variable = {
+			bleeding = 1000
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+		spawn_missile = {
+			missile = missile_always_hits
+			use_unit_var = true
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		building = false
+		thrusting_weapon = only
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			bleeding == 0
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+			bleeding == 0
+		}
+	}
+}

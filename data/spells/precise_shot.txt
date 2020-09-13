@@ -1,0 +1,35 @@
+spell_precise_shot = {
+	name = "Precise Shot"
+	mana_cost = 50
+	range = 5
+	target = unit
+	dependency_upgrade = upgrade_precise_shot
+	actions = {
+		spawn_missile = {
+			missile = missile_none
+			use_unit_var = true
+			always_critical = true
+			start_point = caster
+		}
+	}
+	cast_conditions = {
+		organic = only
+		building = false
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			opponent = only
+		}
+	}
+}

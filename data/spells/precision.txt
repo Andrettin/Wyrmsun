@@ -1,0 +1,37 @@
+spell_precision = {
+	name = "Precision"
+	mana_cost = 50
+	range = 6
+	target = unit
+	sound_when_cast = magic_holy
+	dependency_upgrade = upgrade_precision
+	actions = {
+		adjust_variable = {
+			precision = 1000
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		precision == 0
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			alliance = only
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			alliance = only
+		}
+	}
+}

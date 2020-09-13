@@ -1,0 +1,37 @@
+spell_infusion = {
+	name = "Infusion"
+	mana_cost = 50
+	range = 1
+	target = unit
+	sound_when_cast = magic_holy
+	actions = {
+		adjust_variable = {
+			infusion = 1000
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		infusion == 0
+	}
+	autocast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			building = false
+			alliance = only
+		}
+	}
+	ai_cast = {
+		range = 6
+		combat = only
+		cast_conditions = {
+			coward = false
+			building = false
+			alliance = only
+		}
+	}
+}
