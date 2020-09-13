@@ -1,0 +1,43 @@
+spell_healing = {
+	name = "Healing"
+	mana_cost = 2
+	range = 6
+	target = unit
+	sound_when_cast = magic_holy
+	dependency_upgrade = upgrade_healing
+	actions = {
+		adjust_vitals = {
+			hit_points = 1
+			max_multi_cast = 4
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		building = false
+		hit_points = {
+			max_value_percent = 100
+		}
+	}
+	autocast = {
+		range = 6
+		cast_conditions = {
+			alliance = only
+			hit_points = {
+				max_value_percent = 90
+			}
+		}
+	}
+	ai_cast = {
+		range = 6
+		cast_conditions = {
+			alliance = only
+			hit_points = {
+				max_value_percent = 90
+			}
+		}
+	}
+}

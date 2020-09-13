@@ -1,0 +1,23 @@
+spell_far_sight = {
+	name = "Far Sight"
+	mana_cost = 70
+	range = infinite
+	target = position
+	stackable = false
+	sound_when_cast = magic_holy
+	dependency_upgrade = upgrade_far_sight
+	actions = {
+		summon = {
+			unit_type = unit_ethereal_revealer
+			time_to_live = 50
+		}
+		spawn_missile = {
+			missile = missile_magic_effect
+			start_point = target
+		}
+	}
+	cast_conditions = {
+		organic = only
+		barkskin == 0
+	}
+}
