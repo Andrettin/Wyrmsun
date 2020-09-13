@@ -1,0 +1,9 @@
+neanderthal = {
+	name = "Neanderthal"
+	specific_name = "neanderthalensis"
+	supertaxon = homo
+	homeworld = earth
+	pre_evolutions = {
+		australopithecus
+	}
+}

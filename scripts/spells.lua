@@ -27,7 +27,7 @@
 
 -- For documentation see stratagus/doc/ccl/ccl.html
 
---  Declare some unit types used in spells. This is quite accetable, the other
+--  Declare some unit types used in spells. This is quite acceptable, the other
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
 DefineUnitType("unit-ethereal-revealer", {})
@@ -302,4 +302,3 @@ DefineSpell("spell-joruvellir-allegiance",
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"
 )
-
