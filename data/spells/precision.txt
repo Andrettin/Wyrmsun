@@ -1,5 +1,8 @@
 spell_precision = {
 	name = "Precision"
+	magic_domains = {
+		air
+	}
 	mana_cost = 50
 	range = 6
 	target = unit

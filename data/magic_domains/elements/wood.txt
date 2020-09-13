@@ -1,7 +1,4 @@
 wood = { #one of the five Chinese elements
 	name = "Wood"
-	abilities = {
-		upgrade_barkskin
-	}
 	#specialist priest: Druid
 }

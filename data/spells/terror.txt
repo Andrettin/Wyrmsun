@@ -1,5 +1,8 @@
 spell_terror = {
 	name = "Terror"
+	magic_domains = {
+		blood
+	}
 	mana_cost = 50
 	range = 6
 	target = unit

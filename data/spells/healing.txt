@@ -1,5 +1,8 @@
 spell_healing = {
 	name = "Healing"
+	magic_domains = {
+		life
+	}
 	mana_cost = 2
 	range = 6
 	target = unit

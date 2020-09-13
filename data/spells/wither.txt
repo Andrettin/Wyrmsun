@@ -1,5 +1,8 @@
 spell_wither = {
 	name = "Wither"
+	magic_domains = {
+		death
+	}
 	mana_cost = 50
 	range = 6
 	target = unit

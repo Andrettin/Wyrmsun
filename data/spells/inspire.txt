@@ -1,5 +1,8 @@
 spell_inspire = {
 	name = "Inspire"
+	magic_domains = {
+		metal
+	}
 	mana_cost = 25
 	range = 6
 	target = unit

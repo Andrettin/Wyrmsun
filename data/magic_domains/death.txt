@@ -1,7 +1,4 @@
 death = {
 	name = "Death"
-	abilities = {
-		upgrade_wither
-	}
 	#specialist mage: Necromancer
 }

@@ -1,7 +1,4 @@
 illusion = {
 	name = "Illusion"
-	abilities = {
-		upgrade_slow_ability
-	}
 	#specialist mage: Illusionist
 }

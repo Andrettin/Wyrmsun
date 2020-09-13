@@ -1,5 +1,8 @@
 spell_far_sight = {
 	name = "Far Sight"
+	magic_domains = {
+		divination
+	}
 	mana_cost = 70
 	range = infinite
 	target = position

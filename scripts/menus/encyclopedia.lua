@@ -949,13 +949,13 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			description = description .. "\n\n"
 		end
 		
-		local abilities = GetDeityData(unit_name, "Abilities")
-		table.sort(abilities)
-		if (table.getn(abilities) > 0) then
+		local spells = GetDeityData(unit_name, "Spells")
+		table.sort(spells)
+		if (table.getn(spells) > 0) then
 			description = description .. _("Spells") .. ": "
-			for i=1,table.getn(abilities) do
-				description = description .. _(GetUpgradeData(abilities[i], "Name"))
-				if (i < table.getn(abilities)) then
+			for i=1,table.getn(spells) do
+				description = description .. _(GetSpellData(spells[i], "Name"))
+				if (i < table.getn(spells)) then
 					description = description .. ", "
 				end
 			end

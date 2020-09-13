@@ -1,8 +1,5 @@
 divination = {
 	name = "Divination"
-	abilities = {
-		upgrade_far_sight
-	}
 	#specialist mage: Diviner
 	#specialist priest: Seer
 }

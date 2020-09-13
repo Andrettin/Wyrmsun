@@ -1,5 +1,9 @@
 spell_barkskin = {
 	name = "Barkskin"
+	magic_domains = {
+		wood
+		transmutation
+	}
 	mana_cost = 50
 	range = 6
 	target = unit

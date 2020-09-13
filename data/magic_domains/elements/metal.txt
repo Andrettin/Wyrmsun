@@ -1,6 +1,3 @@
 metal = { #one of the five Chinese elements
 	name = "Metal"
-	abilities = {
-		upgrade_inspire
-	}
 }

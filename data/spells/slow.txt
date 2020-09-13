@@ -1,5 +1,9 @@
 spell_slow = {
 	name = "Slow"
+	magic_domains = {
+		time
+		illusion
+	}
 	mana_cost = 50
 	range = 6
 	target = unit

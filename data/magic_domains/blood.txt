@@ -1,7 +1,4 @@
 blood = {
 	name = "Blood"
-	abilities = {
-		upgrade_terror
-	}
 	#specialist mage: Blood Mage / Warlock / Demonologist
 }

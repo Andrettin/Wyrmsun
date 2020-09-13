@@ -1,7 +1,4 @@
 life = {
 	name = "Life"
-	abilities = {
-		upgrade_healing
-	}
 	#specialist priest: Healer
 }

@@ -1,6 +1,3 @@
 lightning = {
 	name = "Lightning"
-	abilities = {
-		upgrade_shocking_grasp
-	}
 }

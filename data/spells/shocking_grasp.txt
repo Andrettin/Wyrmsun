@@ -1,5 +1,8 @@
 spell_shocking_grasp = {
 	name = "Shocking Grasp"
+	magic_domains = {
+		lightning
+	}
 	mana_cost = 50
 	range = 1
 	target = unit

@@ -1,7 +1,4 @@
 transmutation = {
 	name = "Transmutation"
-	abilities = {
-		upgrade_barkskin
-	}
 	#specialist mage: Alchemist
 }

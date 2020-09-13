@@ -1,5 +1,8 @@
 spell_regeneration = {
 	name = "Regeneration"
+	magic_domains = {
+		charm
+	}
 	mana_cost = 50
 	range = 6
 	target = unit
