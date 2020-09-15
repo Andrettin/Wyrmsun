@@ -1,0 +1,15 @@
+icon_derro_worker = {
+	file = "icons/units/derro/worker.png"
+}
+
+icon_derro_thug = {
+	file = "icons/units/derro/thug.png"
+}
+
+icon_derro_executioner = {
+	file = "icons/units/derro/executioner.png"
+}
+
+icon_derro_shadowguard = {
+	file = "icons/units/derro/shadowguard.png"
+}

@@ -26,33 +26,9 @@
 --
 
 DefineIcon({
-	Name = "icon-derro-worker",
-	Size = {46, 38},
-	File = "gnome/icons/derro_worker.png"
-})
-
-DefineIcon({
-	Name = "icon-derro-thug",
-	Size = {46, 38},
-	File = "gnome/icons/derro_thug.png"
-})
-
-DefineIcon({
-	Name = "icon-derro-executioner",
-	Size = {46, 38},
-	File = "gnome/icons/derro_executioner.png"
-})
-
-DefineIcon({
 	Name = "icon-derro-rust-rider",
 	Size = {46, 38},
 	File = "gnome/icons/derro_rust_rider.png"
-})
-
-DefineIcon({
-	Name = "icon-derro-shadowguard",
-	Size = {46, 38},
-	File = "gnome/icons/derro_shadowguard.png"
 })
 
 DefineIcon({
