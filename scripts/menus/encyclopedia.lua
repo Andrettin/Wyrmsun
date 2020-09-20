@@ -1277,7 +1277,7 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 		end
 	end
 	
-	encyclopedia_entry_menu:addFullButton("Pre~!vious Page", "v", offx + (208 - 224 - 2) * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18) * get_scale_factor()),
+	encyclopedia_entry_menu:addFullButton("Pre~!vious Page", "v", offx + (208 - 224 - 2) * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18)) * get_scale_factor(),
 		function()
 			if (current_chapter == "Cover") then
 			elseif (current_chapter == "Contents") then
@@ -1321,7 +1321,7 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 			end
 		end
 	)
-	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + (208 + 224 + 2) * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18) * get_scale_factor()),
+	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + (208 + 224 + 2) * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18)) * get_scale_factor(),
 		function()
 			if (current_chapter == "Cover") then
 				if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 1) then
