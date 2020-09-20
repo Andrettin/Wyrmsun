@@ -48,7 +48,7 @@ function RunModsMenu(selected_mod)
 		-- get the mods saved from the editor
 		local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i])
 		for i,f in ipairs(fileslist) do
-			CMap.Map.Info.Description = ""
+			CMap:get().Info.Description = ""
 			if (string.find(f, ".smp")) then
 				local mod_location = ModDirectories[mod_dir_i] .. f
 				mod_location = tostring(string.gsub(mod_location, ".smp", ".sms"))
@@ -71,7 +71,7 @@ function RunModsMenu(selected_mod)
 			fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
 			for i,f in ipairs(fileslist) do
 				ModName = ""
-				CMap.Map.Info.Description = ""
+				CMap:get().Info.Description = ""
 				if (string.find(f, "info.lua")) then
 					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j]
 					if (GetArrayIncludes(mod_list, mod_location) == false) then
@@ -92,12 +92,12 @@ function RunModsMenu(selected_mod)
 	
 	for i = 1, table.getn(mods) do
 		ModName = ""
-		CMap.Map.Info.Description = ""
+		CMap:get().Info.Description = ""
 		
 		if (string.find(mods[i], ".sms")) then
 			Load(tostring(string.gsub(mods[i], ".sms", ".smp")))
-			if (CMap.Map.Info.Description ~= "") then
-				table.insert(mod_list, CMap.Map.Info.Description)
+			if (CMap:get().Info.Description ~= "") then
+				table.insert(mod_list, CMap:get().Info.Description)
 			else
 				table.insert(mod_list, mods[i])
 			end
@@ -114,14 +114,14 @@ function RunModsMenu(selected_mod)
 			ModName = ""
 			ModDescription = ""
 			ModDependencies = nil
-			CMap.Map.Info.Description = ""
+			CMap:get().Info.Description = ""
 			if (string.find(mods[mod_dd:getSelected() + 1], ".sms")) then
 				Load(mods[mod_dd:getSelected() + 1])
 			else
 				Load(mods[mod_dd:getSelected() + 1] .. "info.lua")
 			end
-			if (CMap.Map.Info.Description ~= "") then
-				ModName = CMap.Map.Info.Description
+			if (CMap:get().Info.Description ~= "") then
+				ModName = CMap:get().Info.Description
 			end
 			menu:stop()
 			RunModsMenu(mod_dd:getSelected())
@@ -133,10 +133,10 @@ function RunModsMenu(selected_mod)
 		ModName = ""
 		ModDescription = ""
 		ModDependencies = nil
-		CMap.Map.Info.Description = ""
+		CMap:get().Info.Description = ""
 		if (string.find(mods[selected_mod + 1], ".sms")) then
 			Load(tostring(string.gsub(mods[selected_mod + 1], ".sms", ".smp")))
-			ModName = CMap.Map.Info.Description
+			ModName = CMap:get().Info.Description
 		else
 			Load(mods[selected_mod + 1] .. "info.lua")
 		end
