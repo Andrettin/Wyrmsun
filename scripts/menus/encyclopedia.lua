@@ -1016,9 +1016,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
-	local texts = GetTexts()
+	local texts = GetLiteraryTexts()
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				chapter_references = chapter_references + 1
@@ -1039,7 +1039,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		chapter_x = -2
 	end
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				if (table.getn(chapters) > 1) then
@@ -1073,16 +1073,17 @@ function RunEncyclopediaTextsMenu()
 	
 	AddTopEncyclopediaLabel(menu, offx, offy, "texts")
 
-	local texts = GetTexts()
+	local texts = GetLiteraryTexts()
 	local text_y = -1
-	for i, text_name in ipairs(texts) do
+	for i, text_identifier in ipairs(texts) do
+		local text_name = GetLiteraryTextData(text_identifier, "Name")
 		local text_hotkey = ""		
 		if (string.find(_(text_name), "~!") ~= nil) then
 			text_hotkey = string.sub(string.match(_(text_name), "~!%a"), 3)
 			text_hotkey = string.lower(text_hotkey)
 		end
 		menu:addFullButton(text_name, text_hotkey, offx + 208 * get_scale_factor(), offy + (104 + 36*text_y) * get_scale_factor(),
-			function() OpenEncyclopediaText(text_name); end)
+			function() OpenEncyclopediaText(text_identifier); end)
 		text_y = text_y + 1
 	end
 
@@ -1092,7 +1093,7 @@ function RunEncyclopediaTextsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaText(text_name, chosen_chapter)
+function OpenEncyclopediaText(text_identifier, chosen_chapter)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
@@ -1109,6 +1110,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	else
 		height_offset = 2
 	end
+	
+	local text_name = GetLiteraryTextData(text_identifier, "Name")
 	local title = encyclopedia_entry_menu:addLabel("~<" .. text_name .. "~>", Video.Width / 2, offy + (104 + 36*(-4 + height_offset)) * get_scale_factor(), nil, true)
 	title:adjustSize()
 	title:setAlignment(MultiLineLabel.CENTER)
@@ -1123,7 +1126,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	l:setLineWidth(Video.Width - 64 * get_scale_factor())
 	encyclopedia_entry_menu:add(l, 32 * get_scale_factor(), offy + (104 + 36*(-3 + height_offset)) * get_scale_factor())
 	
-	local chapters = GetTextData(text_name, "Chapters")
+	local chapters = GetLiteraryTextData(text_identifier, "Chapters")
 	
 	local current_chapter
 	local current_chapter_number
@@ -1133,48 +1136,48 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	local current_page = 1
 	
 	local cover_text = ""
-	if (GetTextData(text_name, "Author") ~= "") then
-		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Author")
+	if (GetLiteraryTextData(text_identifier, "Author") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetLiteraryTextData(text_identifier, "Author")
 	end
-	if (GetTextData(text_name, "Translator") ~= "") then
-		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Translator") .. " (Translator)"
+	if (GetLiteraryTextData(text_identifier, "Translator") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetLiteraryTextData(text_identifier, "Translator") .. " (Translator)"
 	end
-	if (GetTextData(text_name, "Publisher") ~= "") then
-		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Publisher")
+	if (GetLiteraryTextData(text_identifier, "Publisher") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetLiteraryTextData(text_identifier, "Publisher")
 	end
-	if (GetTextData(text_name, "Year") ~= 0) then
-		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Year")
+	if (GetLiteraryTextData(text_identifier, "Year") ~= 0) then
+		cover_text = cover_text .. "\n\n" .. GetLiteraryTextData(text_identifier, "Year")
 	end
-	if (GetTextData(text_name, "CopyrightNotice") ~= "") then
-		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "CopyrightNotice")
+	if (GetLiteraryTextData(text_identifier, "CopyrightNotice") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetLiteraryTextData(text_identifier, "CopyrightNotice")
 	end
-	if (GetTextData(text_name, "Notes") ~= "") then
-		cover_text = cover_text .. "\n\n[Note: " .. GetTextData(text_name, "Notes") .. "]"
+	if (GetLiteraryTextData(text_identifier, "Notes") ~= "") then
+		cover_text = cover_text .. "\n\n[Note: " .. GetLiteraryTextData(text_identifier, "Notes") .. "]"
 	end
 
 	if (chosen_chapter == nil) then
 		current_chapter = "Cover"
 		current_chapter_number = 1
-		page_number = GetTextData(text_name, "InitialPage") - 1
+		page_number = GetLiteraryTextData(text_identifier, "InitialPage") - 1
 		l:setCaption(cover_text)
 		l:setAlignment(MultiLineLabel.CENTER)
 	else
 		current_chapter = chosen_chapter
-		current_chapter_number = GetTextData(text_name, "ChapterIndex", current_chapter) + 1
+		current_chapter_number = GetLiteraryTextData(text_identifier, "ChapterIndex", current_chapter) + 1
 		current_page = 1
-		l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+		l:setCaption(GetLiteraryTextData(text_identifier, "ChapterPage", current_chapter, current_page));
 		l:setAlignment(MultiLineLabel.LEFT)
 		title:setCaption("~<" .. current_chapter .. "~>")
 		title:adjustSize()
 		title:setX((Video.Width / 2) - (title:getWidth() / 2))
-		if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
-			page_number = GetTextData(text_name, "InitialPage")
+		if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
+			page_number = GetLiteraryTextData(text_identifier, "InitialPage")
 			for i=1, table.getn(chapters) do
 				if (chapters[i] == current_chapter) then
 					break
 				end
-				if not (GetTextData(text_name, "ChapterIntroduction", chapters[i])) then
-					page_number = page_number + GetTextData(text_name, "ChapterPageQuantity", chapters[i])
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", chapters[i])) then
+					page_number = page_number + GetLiteraryTextData(text_identifier, "ChapterPageQuantity", chapters[i])
 				end
 			end
 			page_number_label:setCaption(page_number);
@@ -1198,7 +1201,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 			title:setCaption("~<" .. text_name .. "~>")
 			title:adjustSize()
 			title:setX((Video.Width / 2) - (title:getWidth() / 2))
-			page_number = GetTextData(text_name, "InitialPage") - 1
+			page_number = GetLiteraryTextData(text_identifier, "InitialPage") - 1
 			page_number_label:setCaption("     ");
 			page_number_label:adjustSize()
 			page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
@@ -1209,16 +1212,16 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 			title:setCaption("~<Table of Contents~>")
 			title:adjustSize()
 			title:setX((Video.Width / 2) - (title:getWidth() / 2))
-			page_number = GetTextData(text_name, "InitialPage") - 1
+			page_number = GetLiteraryTextData(text_identifier, "InitialPage") - 1
 			page_number_label:setCaption("     ");
 			page_number_label:adjustSize()
 			page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 
-			if (GetTextData(text_name, "ChapterQuantity") > 1) then
+			if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 1) then
 				local chapter_x = 0
-				if (GetTextData(text_name, "ChapterQuantity") > 26) then
+				if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 26) then
 					chapter_x = -2
-				elseif (GetTextData(text_name, "ChapterQuantity") > 13) then
+				elseif (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 13) then
 					chapter_x = -1
 				end
 				local chapter_y = -3
@@ -1234,21 +1237,21 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 							current_chapter = chapters[i]
 							current_chapter_number = i
 							current_page = 1
-							l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+							l:setCaption(GetLiteraryTextData(text_identifier, "ChapterPage", current_chapter, current_page));
 							l:setAlignment(MultiLineLabel.LEFT)
 							title:setCaption("~<" .. current_chapter .. "~>")
 							title:adjustSize()
 							title:setX((Video.Width / 2) - (title:getWidth() / 2))
-							page_number = GetTextData(text_name, "InitialPage")
+							page_number = GetLiteraryTextData(text_identifier, "InitialPage")
 							for j=1, table.getn(chapters) do
 								if (j == i) then
 									break
 								end
-								if not (GetTextData(text_name, "ChapterIntroduction", chapters[j])) then
-									page_number = page_number + GetTextData(text_name, "ChapterPageQuantity", chapters[j])
+								if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", chapters[j])) then
+									page_number = page_number + GetLiteraryTextData(text_identifier, "ChapterPageQuantity", chapters[j])
 								end
 							end
-							if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+							if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 								page_number_label:setCaption(page_number);
 								page_number_label:adjustSize()
 								page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
@@ -1266,7 +1269,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				end
 			end
 		else
-			l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+			l:setCaption(GetLiteraryTextData(text_identifier, "ChapterPage", current_chapter, current_page));
 			l:setAlignment(MultiLineLabel.LEFT)
 			title:setCaption("~<" .. current_chapter .. "~>")
 			title:adjustSize()
@@ -1287,20 +1290,20 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				SetChapter("Cover")
 			elseif (current_page > 1) then
 				current_page = current_page - 1;
-				l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
-				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+				l:setCaption(GetLiteraryTextData(text_identifier, "ChapterPage", current_chapter, current_page));
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number - 1
 					page_number_label:setCaption(page_number);
 					page_number_label:adjustSize()
 					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			elseif (current_chapter_number > 1) then
-				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number - 1
 				end
 				current_chapter_number = current_chapter_number - 1;
-				SetChapter(chapters[current_chapter_number], GetTextData(text_name, "ChapterPageQuantity", chapters[current_chapter_number]))
-				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+				SetChapter(chapters[current_chapter_number], GetLiteraryTextData(text_identifier, "ChapterPageQuantity", chapters[current_chapter_number]))
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 					page_number_label:setCaption(page_number);
 					page_number_label:adjustSize()
 					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
@@ -1310,7 +1313,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			else
-				if (GetTextData(text_name, "ChapterQuantity") > 1) then
+				if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 1) then
 					SetChapter("Contents")
 				else
 					SetChapter("Cover")
@@ -1321,11 +1324,11 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + (208 + 224 + 2) * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18) * get_scale_factor()),
 		function()
 			if (current_chapter == "Cover") then
-				if (GetTextData(text_name, "ChapterQuantity") > 1) then
+				if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 1) then
 					SetChapter("Contents")
 				else
 					SetChapter(chapters[current_chapter_number], 1)
-					if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+					if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 						page_number = page_number + 1
 						page_number_label:setCaption(page_number);
 						page_number_label:adjustSize()
@@ -1344,19 +1347,19 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				chapter_buttons = {}
 						
 				SetChapter(chapters[current_chapter_number], 1)
-			elseif (current_page < GetTextData(text_name, "ChapterPageQuantity", current_chapter)) then
+			elseif (current_page < GetLiteraryTextData(text_identifier, "ChapterPageQuantity", current_chapter)) then
 				current_page = current_page + 1;
-				l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
-				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+				l:setCaption(GetLiteraryTextData(text_identifier, "ChapterPage", current_chapter, current_page));
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
 					page_number_label:adjustSize()
 					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
-			elseif (current_chapter_number < GetTextData(text_name, "ChapterQuantity")) then
+			elseif (current_chapter_number < GetLiteraryTextData(text_identifier, "ChapterQuantity")) then
 				current_chapter_number = current_chapter_number + 1
 				SetChapter(chapters[current_chapter_number], 1)
-				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+				if not (GetLiteraryTextData(text_identifier, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
 					page_number_label:adjustSize()
@@ -1372,7 +1375,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * (10 - height_offset) + 18)) * get_scale_factor(),
 		function()
-			if (GetTextData(text_name, "ChapterQuantity") > 1 and current_chapter ~= "Cover" and current_chapter ~= "Contents" and chosen_chapter == nil) then
+			if (GetLiteraryTextData(text_identifier, "ChapterQuantity") > 1 and current_chapter ~= "Cover" and current_chapter ~= "Contents" and chosen_chapter == nil) then
 				SetChapter("Contents", 1)
 			else
 				encyclopedia_entry_menu:stop();
@@ -1495,9 +1498,9 @@ function OpenEncyclopediaPlaneEntry(plane)
 			
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
-	local texts = GetTexts()
+	local texts = GetLiteraryTexts()
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				chapter_references = chapter_references + 1
@@ -1516,7 +1519,7 @@ function OpenEncyclopediaPlaneEntry(plane)
 	end
 
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				if (table.getn(chapters) > 1) then
@@ -1650,9 +1653,9 @@ function OpenEncyclopediaWorldEntry(world)
 			
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
-	local texts = GetTexts()
+	local texts = GetLiteraryTexts()
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				chapter_references = chapter_references + 1
@@ -1671,7 +1674,7 @@ function OpenEncyclopediaWorldEntry(world)
 	end
 
 	for i, text_name in ipairs(texts) do
-		local chapters = GetTextData(text_name, "Chapters")
+		local chapters = GetLiteraryTextData(text_name, "Chapters")
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				if (table.getn(chapters) > 1) then

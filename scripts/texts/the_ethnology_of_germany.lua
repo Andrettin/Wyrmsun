@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineText("The Ethnology of Germany II", {
+DefineLiteraryText("the_ethnology_of_germany_ii", {
+	Name = "The Ethnology of Germany II",
 	Author = "H. H. Howorth",
 	Publisher = "The Journal of the Anthropological Institute of Great Britain and Ireland, vol. 7",
 	Year = 1878,

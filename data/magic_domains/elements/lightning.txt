@@ -1,3 +1,4 @@
 lightning = {
 	name = "Lightning"
+	#specialist mage: Astrapomancer
 }
