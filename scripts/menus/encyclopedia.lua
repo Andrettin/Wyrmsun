@@ -763,9 +763,10 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
 			effects = _("Effects") .. ": " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
-			applies_to = _("Available For") .. ": "
 			local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
 			table.sort(applies_to_items)
+			if (table.getn(applies_to_items) > 0) then
+			applies_to = _("Available For") .. ": "
 			for i=1,table.getn(applies_to_items) do
 				if (i > 1) then
 					applies_to = applies_to .. ", "
@@ -782,6 +783,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				end
 			end
 			applies_to = applies_to .. ".\n\n"
+			end
 		end
 		if (GetUpgradeData(unit_name, "Background") ~= "") then
 			background = _("Background") .. ": " .. _(GetUpgradeData(unit_name, "Background")) .. "\n\n"
