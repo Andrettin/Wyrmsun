@@ -1,0 +1,20 @@
+upgrade_suffix_of_elvenkind = {
+	name = "of Elvenkind"
+	magic_suffix = true
+	magic_level = 2
+	affixed_item_classes = {
+		boots
+	}
+	
+	conditions = {
+		upgrade = upgrade_elven_civilization
+		
+		#one elven major deity
+		upgrade = upgrade_deity_frey
+	}
+	
+	modifier = {
+		evasion = 2
+		#should also increase stealth
+	}
+}
