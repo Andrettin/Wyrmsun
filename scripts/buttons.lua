@@ -136,17 +136,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "mace
 	}
 } )
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-bow-mastery",
-	Action = "learn-ability", Value = "upgrade-bow-mastery",
-	Key = "b", Hint = "Learn ~!Bow Mastery", Popup = "popup_learn_ability",
-	Description = "Bow Mastery is a passive ability that increases damage with bows by 2.",
-	ForUnit = {
-		"unit-germanic-archer",
-		"unit-teuton-archer",
-		"unit-goblin-shadowstalker"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gun-mastery",
 	Action = "learn-ability", Value = "upgrade-gun-mastery",
 	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup_learn_ability",

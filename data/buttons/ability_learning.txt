@@ -1,3 +1,22 @@
+learn_bow_mastery = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	icon = icon_bow_mastery
+	action = learn_ability
+	value = upgrade_bow_mastery
+	key = b
+	hint = "Learn ~!Bow Mastery"
+	popup = popup_learn_ability
+	description = "Bow Mastery is a passive ability that increases damage with bows by 2."
+	unit_classes = {
+		heroic_shooter
+	}
+	unit_types = {
+		unit_germanic_archer
+		unit_teuton_archer
+	}
+}
+
 learn_throwing_mastery = {
 	pos = 1
 	level = choose_individual_upgrade_level
