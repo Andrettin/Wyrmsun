@@ -598,6 +598,7 @@
 /graphics/human/units/spear.png (by 2D-Retroperspectives) (licensed under the CC0)
 /graphics/icons/abilities/air_mastery.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/deadly_precision.png (by Jinn) (licensed under the CC0)
+/graphics/icons/abilities/dodge.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/dragonslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/dwarfslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/eagle_eye.png (by Jinn) (licensed under the CC0)

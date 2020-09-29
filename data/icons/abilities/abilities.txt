@@ -6,6 +6,10 @@ icon_deadly_precision = {
 	file = "icons/abilities/deadly_precision.png"
 }
 
+dodge = {
+	file = "icons/abilities/dodge.png"
+}
+
 icon_eagle_eye = {
 	file = "icons/abilities/eagle_eye.png"
 }
