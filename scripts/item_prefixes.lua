@@ -112,7 +112,7 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = "Glacial",
 	MagicPrefix = true,
 	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 4
+	MagicLevel = 6
 })
 
 DefineUpgrade("upgrade-item-prefix-impaling", {
@@ -281,7 +281,7 @@ DefineModifier("upgrade-item-prefix-giantsbane",
 )
 
 DefineModifier("upgrade-item-prefix-glacial",
-	{"ColdDamage", 2}
+	{"ColdDamage", 3}
 )
 
 DefineModifier("upgrade-item-prefix-impaling",
