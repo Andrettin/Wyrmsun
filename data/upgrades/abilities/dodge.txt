@@ -1,0 +1,9 @@
+upgrade_dodge = {
+	name = "Dodge"
+	icon = dodge
+	ability = true
+	
+	modifier = {
+		evasion = 2
+	}
+}
