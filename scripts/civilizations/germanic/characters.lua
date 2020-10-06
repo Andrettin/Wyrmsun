@@ -562,24 +562,6 @@ DefineCharacter("egill", { -- Source: Carolyne Larrington, "The Norse Myths: A G
 	Deities = {"thor", "tyr"}
 })
 
-DefineCharacter("thialfi", { -- Thor's servant in Norse mythology; associated by several scholars with Þieluar, the discoverer of Gotland; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xvii-xviii, 3; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
-	Name = "Thialfi",
-	Gender = "male",
-	Type = "unit-germanic-warrior",
-	Civilization = "germanic",
-	Faction = "thielung-tribe",
-	Description = "Terrified by a calamitous thunderstorm, Thialfi's parents pledged him to the service of the lightning god Thunraz when he was still a boy. Years later as a grown up man, during a dream he heard his master command him to sail to an undiscovered island...",
-	Trait = "upgrade-quick",
-	Father = "egill",
-	Deities = {"thor", "tyr"},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
 	Name = "Roskva", -- "Röskva"
 	Gender = "female",

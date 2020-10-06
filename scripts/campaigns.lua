@@ -57,7 +57,7 @@ DefineCampaign("thors-servant", {
 	Faction = "thielung-tribe",
 	StartDate = {-1101, SyncRand(12) + 1, 1}, -- 1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far, so we place the campaign start at just before that
 	MapTemplates = {
-		"earth", {4022, 667}, {256, 256},
+		"earth_space", {0, 0}, {384, 384},
 		"jotunheim", {679, 304}, {64, 64}
 	}
 })

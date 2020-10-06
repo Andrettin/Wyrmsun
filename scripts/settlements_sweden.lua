@@ -93,20 +93,6 @@ DefineSite("uppsala", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("vastervik", {
-	Name = "Vastervik",
-	MapTemplate = "earth",
-	Position = {4218, 734},
-	CulturalNames = {
-		"norse", "Vastervik" -- "Västervik"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("vitemolla", {
 	Name = "Vitemolla",
 	MapTemplate = "earth",

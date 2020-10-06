@@ -1,0 +1,55 @@
+thielung_workers = {
+	unit_type = unit_germanic_worker
+	quantity = 2
+	
+	history = {
+		-1101 = {
+			active = true
+			faction = thielung_tribe
+			location = {
+				site = vastervik
+			}
+		}
+		
+		-1100 = {
+			active = false
+		}
+	}
+}
+
+thielung_transport_ship = {
+	unit_type = unit_germanic_transport_ship
+	
+	history = {
+		-1101 = {
+			active = true
+			faction = thielung_tribe
+			location = {
+				site = vastervik
+			}
+		}
+		
+		-1100 = {
+			active = false
+		}
+	}
+}
+
+thielung_revealer = {
+	name = "Thielung Revealer"
+	unit_type = unit_revealer
+	
+	history = {
+		-1101 = {
+			active = true
+			faction = thielung_tribe
+			location = {
+				site = visby
+			}
+		}
+		
+		-1100 = {
+			active = false
+		}
+	}
+}
