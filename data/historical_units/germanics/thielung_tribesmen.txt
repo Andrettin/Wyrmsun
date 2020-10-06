@@ -36,7 +36,6 @@ thielung_transport_ship = {
 }
 
 thielung_revealer = {
-	name = "Thielung Revealer"
 	unit_type = unit_revealer
 	
 	history = {

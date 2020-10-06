@@ -250,6 +250,9 @@ function HandleCheats(str)
 		if (siege_warship_type) then
 			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
+	elseif (str == "freys vessel") then
+		unit = CreateUnit("unit-dwarven-transport-ship", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		SetUnitVariable(unit, "Unique", "skidbladnir")
 	elseif (str == "jotun") then
 		unit = CreateUnit("unit-ettin", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "backstab") then

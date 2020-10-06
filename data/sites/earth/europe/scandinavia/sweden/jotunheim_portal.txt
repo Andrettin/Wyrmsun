@@ -1,0 +1,5 @@
+jotunheim_portal = {
+	name = "Jotunheim Portal"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 20.5 59 }
+}
