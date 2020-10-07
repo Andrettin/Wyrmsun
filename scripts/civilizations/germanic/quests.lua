@@ -501,12 +501,12 @@ DefineQuest("thors-servant", {
 	Civilization = "germanic",
 	PlayerColor = "white",
 	CompletionEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-victory", trigger_player)
 		end
 	end,
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
@@ -521,12 +521,12 @@ DefineQuest("the-discovery-of-gotland", {
 	Icon = "icon-germanic-transport-ship",
 	PlayerColor = "white",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
 	CompletionEffects = function(s)
-		if (GetCurrentCampaign() == "thors-servant") then
+		if (GetCurrentCampaign() == "thors_servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
 			if (thialfi_unit) then
 				while (GetUnitVariable(thialfi_unit, "Level") < 2) do
@@ -556,12 +556,12 @@ DefineQuest("thors-servant-thors-temple", {
 	Icon = "icon-germanic-temple",
 	PlayerColor = "white",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
 	CompletionEffects = function(s)
-		if (GetCurrentCampaign() == "thors-servant") then
+		if (GetCurrentCampaign() == "thors_servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
 			if (thialfi_unit) then
 				while (GetUnitVariable(thialfi_unit, "Level") < 3) do
@@ -608,13 +608,13 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		return false
 	end,
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
-		if (GetCurrentCampaign() == "thors-servant") then
+		if (GetCurrentCampaign() == "thors_servant") then
 			local thialfi_unit = FindHero("thialfi", trigger_player)
 			if (thialfi_unit) then
 				while (GetUnitVariable(thialfi_unit, "Level") < 4) do
@@ -645,7 +645,7 @@ DefineQuest("slay-geirrod", {
 		CallDialogue("thors-servant-geirrod-killed", trigger_player)
 	end,
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors-servant") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,

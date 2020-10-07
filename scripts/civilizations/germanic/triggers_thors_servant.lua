@@ -28,7 +28,7 @@
 AddTrigger("thialfi-commanded-to-gotland",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("thialfi", i) ~= nil and GetCurrentCampaign() == "thors-servant") then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("thialfi", i) ~= nil and GetCurrentCampaign() == "thors_servant") then
 				trigger_player = i
 				return true
 			end
@@ -91,7 +91,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 AddTrigger("thors-servant-skidbladnir-destroyed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "slay-geirrod") and GetUniqueItemData("skidbladnir", "CanDrop") and GetCurrentCampaign() == "thors-servant") then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "slay-geirrod") and GetUniqueItemData("skidbladnir", "CanDrop") and GetCurrentCampaign() == "thors_servant") then
 				trigger_player = i
 				return true
 			end
