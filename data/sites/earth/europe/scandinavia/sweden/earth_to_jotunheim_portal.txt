@@ -1,0 +1,6 @@
+earth_to_jotunheim_portal = {
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 20.5 59 }
+	base_unit_type = unit_water_portal
+	connection_destination = jotunheim_to_earth_portal
+}

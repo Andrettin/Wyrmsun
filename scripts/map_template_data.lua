@@ -29,7 +29,6 @@
 
 Load("scripts/map_templates/alfheim.lua")
 Load("scripts/map_templates/earth.lua")
-Load("scripts/map_templates/jotunheim.lua")
 Load("scripts/map_templates/nidavellir.lua")
 Load("scripts/map_templates/asgard.lua")
 Load("scripts/map_templates/niflheim.lua")

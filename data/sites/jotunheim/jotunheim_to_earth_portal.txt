@@ -1,0 +1,6 @@
+jotunheim_to_earth_portal = {
+	map_template = jotunheim
+	pos = { 723 335 }
+	base_unit_type = unit_water_portal
+	connection_destination = earth_to_jotunheim_portal
+}

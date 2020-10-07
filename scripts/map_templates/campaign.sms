@@ -10,7 +10,5 @@ ApplyCampaignMap(GetCurrentCampaign())
 
 EarthStartX = GetMapTemplateData("earth", "CurrentStartPosX")
 EarthStartY = GetMapTemplateData("earth", "CurrentStartPosY")
-JotunheimStartX = GetMapTemplateData("jotunheim", "CurrentStartPosX")
-JotunheimStartY = GetMapTemplateData("jotunheim", "CurrentStartPosY")
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")

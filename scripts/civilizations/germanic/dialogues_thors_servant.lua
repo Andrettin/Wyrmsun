@@ -111,10 +111,10 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
 					SetDiplomacy(GetFactionPlayer("geirrodung-clan"), "enemy", trigger_player)
-					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {GetSiteData("jotunheim_portal", "MapPosX"), GetSiteData("jotunheim_portal", "MapPosY")}, GetSiteData("jotunheim_portal", "MapLayer"))
+					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {GetSiteData("earth_to_jotunheim_portal", "MapPosX"), GetSiteData("earth_to_jotunheim_portal", "MapPosY")}, GetSiteData("earth_to_jotunheim_portal", "MapLayer"))
 					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetSiteData("jotunheim_portal", "MapLayer"))
-					CenterMap(GetSiteData("jotunheim_portal", "MapPosX"), GetSiteData("jotunheim_portal", "MapPosY"))
+					ChangeCurrentMapLayer(GetSiteData("earth_to_jotunheim_portal", "MapLayer"))
+					CenterMap(GetSiteData("earth_to_jotunheim_portal", "MapPosX"), GetSiteData("earth_to_jotunheim_portal", "MapPosY"))
 				end
 			}
 		},
