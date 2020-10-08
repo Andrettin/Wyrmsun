@@ -8,9 +8,7 @@ hersing_warriors = {
 		-1600 = {
 			active = true
 			faction = hersing_tribe
-			location = {
-				site = kiel
-			}
+			location = kiel
 		}
 		
 		-1599 = {
@@ -29,9 +27,7 @@ hersing_archers = {
 		-1600 = {
 			active = true
 			faction = hersing_tribe
-			location = {
-				site = kiel
-			}
+			location = kiel
 		}
 		
 		-1599 = {

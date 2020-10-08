@@ -7,9 +7,7 @@ karling_workers = {
 		-1600 = {
 			active = true
 			faction = karling_tribe
-			location = {
-				site = thisted
-			}
+			location = thisted
 		}
 		
 		-1500 = {
@@ -27,9 +25,7 @@ karling_archers = {
 		-1600 = {
 			active = true
 			faction = karling_tribe
-			location = {
-				site = thisted
-			}
+			location = thisted
 		}
 		
 		-1500 = {

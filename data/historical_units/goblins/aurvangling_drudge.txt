@@ -7,9 +7,7 @@ aurvangling_drudge = {
 		-25000 = {
 			active = true
 			faction = aurvangling_tribe
-			location = {
-				site = aurvang
-			}
+			location = aurvang
 		}
 		
 		-24999 = {

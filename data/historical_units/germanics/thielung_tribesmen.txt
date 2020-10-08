@@ -6,9 +6,7 @@ thielung_workers = {
 		-1101 = {
 			active = true
 			faction = thielung_tribe
-			location = {
-				site = vastervik
-			}
+			location = vastervik
 		}
 		
 		-1100 = {
@@ -24,9 +22,7 @@ thielung_transport_ship = {
 		-1101 = {
 			active = true
 			faction = thielung_tribe
-			location = {
-				site = vastervik
-			}
+			location = vastervik
 		}
 		
 		-1100 = {
@@ -42,9 +38,7 @@ thielung_revealer = {
 		-1101 = {
 			active = true
 			faction = thielung_tribe
-			location = {
-				site = visby
-			}
+			location = visby
 		}
 		
 		-1100 = {

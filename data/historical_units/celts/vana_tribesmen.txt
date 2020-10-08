@@ -7,9 +7,7 @@ vana_warriors = { #Vana defensive forces
 		-3000 = {
 			active = true
 			faction = vana_tribe
-			location = {
-				site = rostov_on_don
-			}
+			location = rostov_on_don
 		}
 		
 		-2800 = {

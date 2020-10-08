@@ -15,9 +15,7 @@ thrahila = {
 	history = {
 		-1600 = {
 			active = true
-			location = {
-				site = frederikshavn
-			}
+			location = frederikshavn
 		}
 		
 		-1599 = {

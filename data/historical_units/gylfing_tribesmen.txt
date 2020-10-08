@@ -7,9 +7,7 @@ gylfing_warriors = {
 		-3000 = {
 			active = true
 			faction = gylfing_tribe
-			location = {
-				site = malmo
-			}
+			location = malmo
 		}
 		
 		-2800.12.30 = {

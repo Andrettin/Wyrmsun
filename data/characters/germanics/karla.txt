@@ -14,9 +14,7 @@ karla = {
 	history = {
 		-1600 = {
 			active = true
-			location = {
-				site = thisted
-			}
+			location = thisted
 		}
 		
 		-1599 = {

@@ -6,9 +6,7 @@ joruvellir_revealer = {
 		-2800 = {
 			active = true
 			faction = goldhoof_clan
-			location = {
-				site = joruvellir
-			}
+			location = joruvellir
 		}
 		
 		-2799 = {

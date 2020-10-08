@@ -7,9 +7,7 @@ asa_workers = {
 		-3000 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = azov
-			}
+			location = azov
 		}
 		
 		-2900 = {
@@ -27,9 +25,7 @@ asa_warriors = { #the great army assembled to fight the Vana
 		-3000 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = azov
-			}
+			location = azov
 		}
 		
 		-2900 = {
@@ -47,15 +43,11 @@ asa_workers_holmgard_scandinavia = {
 		-2900 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = novgorod
-			}
+			location = novgorod
 		}
 		
 		-2800 = {
-			location = {
-				site = kiel
-			}
+			location = kiel
 		}
 		
 		-2800.12.30 = {
@@ -73,9 +65,7 @@ asa_warriors_holmgard = {
 		-2900 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = novgorod
-			}
+			location = novgorod
 		}
 		
 		-2800 = {
@@ -93,9 +83,7 @@ asa_warriors_scandinavia = {
 		-2800 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = kiel
-			}
+			location = kiel
 		}
 		
 		-2800.12.30 = {
@@ -113,9 +101,7 @@ asa_archers = {
 		-2800 = {
 			active = true
 			faction = asa_tribe
-			location = {
-				site = kiel
-			}
+			location = kiel
 		}
 		
 		-2800.12.30 = {

@@ -7,9 +7,7 @@ brising_miners = {
 		-25000 = {
 			active = true
 			faction = brising_clan
-			location = {
-				site = svarinshaug
-			}
+			location = svarinshaug
 		}
 		
 		-24999 = {

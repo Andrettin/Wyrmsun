@@ -8,9 +8,7 @@ aedui_warriors = {
 		-71 = {
 			active = true
 			faction = aedui_tribe
-			location = {
-				site = dijon
-			}
+			location = dijon
 		}
 		
 		-61 = {
@@ -27,9 +25,7 @@ aedui_archers = {
 		-71 = {
 			active = true
 			faction = aedui_tribe
-			location = {
-				site = dijon
-			}
+			location = dijon
 		}
 		
 		-61 = {

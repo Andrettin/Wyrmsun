@@ -7,9 +7,7 @@ thralling_workers = {
 		-1600 = {
 			active = true
 			faction = thralling_tribe
-			location = {
-				site = frederikshavn
-			}
+			location = frederikshavn
 		}
 		
 		-1500 = {

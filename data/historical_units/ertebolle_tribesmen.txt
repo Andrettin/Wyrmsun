@@ -6,9 +6,7 @@ ertebolle_warriors = {
 		-2800 = {
 			active = true
 			faction = ertebolle_tribe
-			location = {
-				site = aarhus
-			}
+			location = aarhus
 		}
 		
 		-2800.12.30 = {
