@@ -1379,6 +1379,8 @@ LoadingPersistentHeroes = false
 
 initialize_database()
 
+--pack_image_folder("C:/Wyrmsun/models/units/elven/worker/Sprites")
+
 function GameStarting()
 	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
 		StopMusic()
