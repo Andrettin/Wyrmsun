@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the gnomish user interface
---
 --      (c) Copyright 2014-2020 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -27,5 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-UI.MenuButton.Style = FindButtonStyle("main-gnome")
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")
+CUserInterface:get().MenuButton.Style = FindButtonStyle("main-gnome")
+CUserInterface:get().NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")

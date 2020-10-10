@@ -211,8 +211,8 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 
 	local ckey = {}
 	ckey = menu:addImageCheckBox(_("Show Hotkeys"), offx + 16 * get_scale_factor(), offy + (26 * 1) * get_scale_factor(),
-		function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
-	ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
+		function() CUserInterface:get().ButtonPanel.ShowCommandKey = ckey:isMarked() end)
+	ckey:setMarked(CUserInterface:get().ButtonPanel.ShowCommandKey)
 	ckey:adjustSize()
 
 	local mouse_grabbing = {}
@@ -319,7 +319,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	menu:addFullButton("~!OK", "o", centerx, bottom + (-11 - 27) * get_scale_factor(),
 		function()
 			wyr.preferences.FogOfWar = GetFogOfWar()
-			wyr.preferences.ShowCommandKey = UI.ButtonPanel.ShowCommandKey
+			wyr.preferences.ShowCommandKey = CUserInterface:get().ButtonPanel.ShowCommandKey
 			wyr.preferences.GameSpeed = GetGameSpeed()
 			wyr.preferences.MouseScrollSpeed = GetMouseScrollSpeed()
 			wyr.preferences.KeyScrollSpeed = GetKeyScrollSpeed()
@@ -338,8 +338,8 @@ function RunPreferencesMenu()
 end
 
 function SetVideoSize(width, height)
-	UI.MapArea.EndX = width - 1
-	UI.MapArea.EndY = height - (176 * get_scale_factor()) - 1
+	CUserInterface:get().MapArea.EndX = width - 1
+	CUserInterface:get().MapArea.EndY = height - (176 * get_scale_factor()) - 1
 	if (Video:ResizeScreen(width, height) == false) then
 		if (Video.FullScreen) then
 			GenericDialog("Resolution Change Failed", "This resolution is not available while in full screen mode for your monitor.")

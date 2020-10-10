@@ -281,9 +281,9 @@ function RunEditorSaveMap(browser, name, menu, save_as_mod)
 		confirm:run(false)
 	else
 		if not (save_as_mod) then
-			UI.StatusLine:Set("Saved map to: " .. browser.path .. name)
+			CUserInterface:get().StatusLine:Set("Saved map to: " .. browser.path .. name)
 		else
-			UI.StatusLine:Set("Saved mod to: " .. browser.path .. name)
+			CUserInterface:get().StatusLine:Set("Saved mod to: " .. browser.path .. name)
 		end
 		menu:stop()
 	end

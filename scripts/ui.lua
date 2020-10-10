@@ -176,28 +176,28 @@ local max_damage = 	Add(
 	)
 )
 
-UI.MapArea.X = 0
-UI.MapArea.Y = 16 * get_scale_factor()
-UI.MapArea.EndX = Video.Width - 1 * get_scale_factor()
-UI.MapArea.EndY = Video.Height + (-176 - 1) * get_scale_factor()
+CUserInterface:get().MapArea.X = 0
+CUserInterface:get().MapArea.Y = 16 * get_scale_factor()
+CUserInterface:get().MapArea.EndX = Video.Width - 1 * get_scale_factor()
+CUserInterface:get().MapArea.EndY = Video.Height + (-176 - 1) * get_scale_factor()
 
-UI.InfoPanel.X = 162 * get_scale_factor()
-UI.InfoPanel.Y = Video.Height - 186 * get_scale_factor()
+CUserInterface:get().InfoPanel.X = 162 * get_scale_factor()
+CUserInterface:get().InfoPanel.Y = Video.Height - 186 * get_scale_factor()
 
 b = CUIButton:new()
 b.X = 169 * get_scale_factor()
 b.Y = Video.Height - 166 * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.SingleSelectedButton = b
+CUserInterface:get().SingleSelectedButton = b
 
-UI.SelectedButtons:clear()
+CUserInterface:get().SelectedButtons:clear()
 
 function AddSelectedButton(x, y)
 	b = CUIButton:new_local()
 	b.X = (162 + x) * get_scale_factor()
 	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.SelectedButtons:push_back(b)
+	CUserInterface:get().SelectedButtons:push_back(b)
 end
 
 AddSelectedButton(30, 15)
@@ -210,24 +210,24 @@ AddSelectedButton(30, 123)
 AddSelectedButton(86, 123)
 AddSelectedButton(142, 123)
 
-UI.MaxSelectedFont = Fonts["game"]
-UI.MaxSelectedTextX = 162 * get_scale_factor()
-UI.MaxSelectedTextY = Video.Height + (-186 + 15) * get_scale_factor()
+CUserInterface:get().MaxSelectedFont = Fonts["game"]
+CUserInterface:get().MaxSelectedTextX = 162 * get_scale_factor()
+CUserInterface:get().MaxSelectedTextY = Video.Height + (-186 + 15) * get_scale_factor()
 
 b = CUIButton:new()
 b.X = (162 + 160) * get_scale_factor()
 b.Y = Video.Height + (-186 + 80) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.SingleTrainingButton = b
+CUserInterface:get().SingleTrainingButton = b
 
-UI.TrainingButtons:clear()
+CUserInterface:get().TrainingButtons:clear()
 
 function AddTrainingButton(x, y)
 	b = CUIButton:new_local()
 	b.X = (162 + x) * get_scale_factor()
 	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.TrainingButtons:push_back(b)
+	CUserInterface:get().TrainingButtons:push_back(b)
 end
 
 AddTrainingButton(160, 80)
@@ -239,22 +239,22 @@ b = CUIButton:new()
 b.X = (162 + 110) * get_scale_factor()
 b.Y = Video.Height + (-186 + 11 + 70) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.UpgradingButton = b
+CUserInterface:get().UpgradingButton = b
 
 b = CUIButton:new()
 b.X = (162 + 110) * get_scale_factor()
 b.Y = Video.Height + (-186 + 11 + 70) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.ResearchingButton = b
+CUserInterface:get().ResearchingButton = b
 
-UI.TransportingButtons:clear()
+CUserInterface:get().TransportingButtons:clear()
 
 function AddTransportingButton(x, y)
 	b = CUIButton:new_local()
 	b.X = Video.Width + (-243 + x) * get_scale_factor()
 	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.TransportingButtons:push_back(b)
+	CUserInterface:get().TransportingButtons:push_back(b)
 end
 
 AddTransportingButton(17, 97)
@@ -265,14 +265,14 @@ AddTransportingButton(17, 140)
 AddTransportingButton(73, 140)
 AddTransportingButton(129, 140)
 
-UI.InventoryButtons:clear()
+CUserInterface:get().InventoryButtons:clear()
 
 function AddInventoryButton(x, y)
 	b = CUIButton:new_local()
 	b.X = Video.Width + (-243 + x) * get_scale_factor()
 	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.InventoryButtons:push_back(b)
+	CUserInterface:get().InventoryButtons:push_back(b)
 end
 
 AddInventoryButton(17, 11)
@@ -296,15 +296,15 @@ b = CUIButton:new()
 b.X = Video.Width + (-12 - 46) * get_scale_factor()
 b.Y = (16 + 12) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.IdleWorkerButton = b
+CUserInterface:get().IdleWorkerButton = b
 
 b = CUIButton:new()
 b.X = Video.Width + (-12 - 46) * get_scale_factor()
 b.Y = (16 + 12 + 38 + 24) * get_scale_factor()
 b.Style = FindButtonStyle("icon")
-UI.LevelUpUnitButton = b
+CUserInterface:get().LevelUpUnitButton = b
 
-UI.HeroUnitButtons:clear()
+CUserInterface:get().HeroUnitButtons:clear()
 
 local hero_button_x = 0
 local hero_button_y = 0
@@ -313,26 +313,26 @@ for i = 1, 12 do
 	b.X = Video.Width + (-12 - (46 * (1 + hero_button_x)) - (24 * hero_button_x)) * get_scale_factor()
 	b.Y = (16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y))) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.HeroUnitButtons:push_back(b)
+	CUserInterface:get().HeroUnitButtons:push_back(b)
 	hero_button_y = hero_button_y + 1
 	
-	if (((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) * get_scale_factor()) >= UI.MapArea.EndY) then
+	if (((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) * get_scale_factor()) >= CUserInterface:get().MapArea.EndY) then
 		hero_button_x = hero_button_x + 1
 		hero_button_y = 0
 	end
 end
 
-UI.CompletedBarColorRGB = CColor(48, 100, 4)
-UI.CompletedBarShadow = false
+CUserInterface:get().CompletedBarColorRGB = CColor(48, 100, 4)
+CUserInterface:get().CompletedBarShadow = false
 
-UI.ButtonPanel.Buttons:clear()
+CUserInterface:get().ButtonPanel.Buttons:clear()
 
 function AddButtonPanelButton(x, y)
 	b = CUIButton:new_local()
 	b.X = Video.Width + (-243 + x) * get_scale_factor()
 	b.Y = Video.Height + (-186 + y) * get_scale_factor()
 	b.Style = FindButtonStyle("icon")
-	UI.ButtonPanel.Buttons:push_back(b)
+	CUserInterface:get().ButtonPanel.Buttons:push_back(b)
 end
 
 AddButtonPanelButton(17, 11)
@@ -352,94 +352,94 @@ AddButtonPanelButton(73, 140)
 AddButtonPanelButton(129, 140)
 AddButtonPanelButton(185, 140)
 
-UI.ButtonPanel.X = Video.Width - 243 * get_scale_factor()
-UI.ButtonPanel.Y = Video.Height - 186 * get_scale_factor()
-UI.ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
+CUserInterface:get().ButtonPanel.X = Video.Width - 243 * get_scale_factor()
+CUserInterface:get().ButtonPanel.Y = Video.Height - 186 * get_scale_factor()
+CUserInterface:get().ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 
-UI.Minimap.X = 17 * get_scale_factor()
-UI.Minimap.Y = Video.Height - 156 * get_scale_factor()
-UI.Minimap.W = 128 * get_scale_factor()
-UI.Minimap.H = 128 * get_scale_factor()
+CUserInterface:get():get_minimap().X = 17 * get_scale_factor()
+CUserInterface:get():get_minimap().Y = Video.Height - 156 * get_scale_factor()
+CUserInterface:get():get_minimap().W = 128 * get_scale_factor()
+CUserInterface:get():get_minimap().H = 128 * get_scale_factor()
 
-UI.StatusLine.TextX = 2 * get_scale_factor()
-UI.StatusLine.TextY = Video.Height + (2 - 16) * get_scale_factor()
-UI.StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
-UI.StatusLine.Font = Fonts["game"]
+CUserInterface:get().StatusLine.TextX = 2 * get_scale_factor()
+CUserInterface:get().StatusLine.TextY = Video.Height + (2 - 16) * get_scale_factor()
+CUserInterface:get().StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
+CUserInterface:get().StatusLine.Font = Fonts["game"]
 
 -- copper
-UI.Resources[1].IconX = (154 + (75 * 0)) * get_scale_factor()
-UI.Resources[1].IconY = 0
-UI.Resources[1].TextX = (154 + (75 * 0) + 18) * get_scale_factor()
-UI.Resources[1].TextY = 1 * get_scale_factor()
+CUserInterface:get().Resources[1].IconX = (154 + (75 * 0)) * get_scale_factor()
+CUserInterface:get().Resources[1].IconY = 0
+CUserInterface:get().Resources[1].TextX = (154 + (75 * 0) + 18) * get_scale_factor()
+CUserInterface:get().Resources[1].TextY = 1 * get_scale_factor()
 
 -- lumber
-UI.Resources[2].IconX = (154 + (75 * 1)) * get_scale_factor()
-UI.Resources[2].IconY = 0
-UI.Resources[2].TextX = (154 + (75 * 1) + 18) * get_scale_factor()
-UI.Resources[2].TextY = 1 * get_scale_factor()
+CUserInterface:get().Resources[2].IconX = (154 + (75 * 1)) * get_scale_factor()
+CUserInterface:get().Resources[2].IconY = 0
+CUserInterface:get().Resources[2].TextX = (154 + (75 * 1) + 18) * get_scale_factor()
+CUserInterface:get().Resources[2].TextY = 1 * get_scale_factor()
 
 -- stone
-UI.Resources[5].IconX = (154 + (75 * 2)) * get_scale_factor()
-UI.Resources[5].IconY = 0
-UI.Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
-UI.Resources[5].TextY = 1 * get_scale_factor()
+CUserInterface:get().Resources[5].IconX = (154 + (75 * 2)) * get_scale_factor()
+CUserInterface:get().Resources[5].IconY = 0
+CUserInterface:get().Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
+CUserInterface:get().Resources[5].TextY = 1 * get_scale_factor()
 
 -- oil
---UI.Resources[3].IconX = (154 + 150) * get_scale_factor()
---UI.Resources[3].IconY = 0
---UI.Resources[3].TextX = (154 + 150 + 18) * get_scale_factor()
---UI.Resources[3].TextY = 1 * get_scale_factor()
+--CUserInterface:get().Resources[3].IconX = (154 + 150) * get_scale_factor()
+--CUserInterface:get().Resources[3].IconY = 0
+--CUserInterface:get().Resources[3].TextX = (154 + 150 + 18) * get_scale_factor()
+--CUserInterface:get().Resources[3].TextY = 1 * get_scale_factor()
 
 if (GetCurrentQuest() == "gathering-materials") then
 	-- coal
-	UI.Resources[6].IconX = (154 + (75 * 3)) * get_scale_factor()
-	UI.Resources[6].IconY = 0
-	UI.Resources[6].TextX = (154 + (75 * 3) + 18) * get_scale_factor()
-	UI.Resources[6].TextY = 1 * get_scale_factor()
+	CUserInterface:get().Resources[6].IconX = (154 + (75 * 3)) * get_scale_factor()
+	CUserInterface:get().Resources[6].IconY = 0
+	CUserInterface:get().Resources[6].TextX = (154 + (75 * 3) + 18) * get_scale_factor()
+	CUserInterface:get().Resources[6].TextY = 1 * get_scale_factor()
 else
 	-- Hide Coal (should not show up in normal scenarios)
-	UI.Resources[6].IconX = -1
-	UI.Resources[6].IconY = -1
-	UI.Resources[6].TextX = -1
-	UI.Resources[6].TextY = -1
+	CUserInterface:get().Resources[6].IconX = -1
+	CUserInterface:get().Resources[6].IconY = -1
+	CUserInterface:get().Resources[6].TextX = -1
+	CUserInterface:get().Resources[6].TextY = -1
 end
 
 -- food
-UI.Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
-UI.Resources[FoodCost].IconY = 0
-UI.Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
-UI.Resources[FoodCost].TextY = 1
+CUserInterface:get().Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
+CUserInterface:get().Resources[FoodCost].IconY = 0
+CUserInterface:get().Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
+CUserInterface:get().Resources[FoodCost].TextY = 1
 
 -- score
-UI.Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
-UI.Resources[ScoreCost].IconY = 0
-UI.Resources[ScoreCost].TextX = Video.Width + (-68 + 18) * get_scale_factor()
-UI.Resources[ScoreCost].TextY = 1
+CUserInterface:get().Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
+CUserInterface:get().Resources[ScoreCost].IconY = 0
+CUserInterface:get().Resources[ScoreCost].TextX = Video.Width + (-68 + 18) * get_scale_factor()
+CUserInterface:get().Resources[ScoreCost].TextY = 1
 
 -- mana
-UI.Resources[ManaResCost].IconX = -1
-UI.Resources[ManaResCost].IconY = -1
-UI.Resources[ManaResCost].TextX = -1
-UI.Resources[ManaResCost].TextY = -1
+CUserInterface:get().Resources[ManaResCost].IconX = -1
+CUserInterface:get().Resources[ManaResCost].IconY = -1
+CUserInterface:get().Resources[ManaResCost].TextX = -1
+CUserInterface:get().Resources[ManaResCost].TextY = -1
 
-UI.TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
-UI.TimeOfDayPanel.IconY = 0
+CUserInterface:get().TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
+CUserInterface:get().TimeOfDayPanel.IconY = 0
 
-UI.SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
-UI.SeasonPanel.IconY = 0
+CUserInterface:get().SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
+CUserInterface:get().SeasonPanel.IconY = 0
 
-UI.AgePanel.IconX = (154 + (75 * 5)) * get_scale_factor()
-UI.AgePanel.IconY = 0
-UI.AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
-UI.AgePanel.TextY = 1 * get_scale_factor()
+CUserInterface:get().AgePanel.IconX = (154 + (75 * 5)) * get_scale_factor()
+CUserInterface:get().AgePanel.IconY = 0
+CUserInterface:get().AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
+CUserInterface:get().AgePanel.TextY = 1 * get_scale_factor()
 
---UI.DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
---UI.DatePanel.TextY = 1 * get_scale_factor()
+--CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
+--CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
 
-UI.MenuButton.X = 26 * get_scale_factor()
-UI.MenuButton.Y = 1 * get_scale_factor()
-UI.MenuButton.Text = "Menu (~<F10~>)"
-UI.MenuButton:SetCallback(
+CUserInterface:get().MenuButton.X = 26 * get_scale_factor()
+CUserInterface:get().MenuButton.Y = 1 * get_scale_factor()
+CUserInterface:get().MenuButton.Text = "Menu (~<F10~>)"
+CUserInterface:get().MenuButton:SetCallback(
 	function()
 		if (Editor.Running == EditorNotRunning) then
 			RunGameMenu()
@@ -449,41 +449,41 @@ UI.MenuButton:SetCallback(
 	end
 )
 
-UI.NetworkDiplomacyButton.X = Video.Width + (-99 - 26) * get_scale_factor()
-UI.NetworkDiplomacyButton.Y = 1 * get_scale_factor()
-UI.NetworkDiplomacyButton.Text = "Diplomacy"
-UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
+CUserInterface:get().NetworkDiplomacyButton.X = Video.Width + (-99 - 26) * get_scale_factor()
+CUserInterface:get().NetworkDiplomacyButton.Y = 1 * get_scale_factor()
+CUserInterface:get().NetworkDiplomacyButton.Text = "Diplomacy"
+CUserInterface:get().NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
 
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")
 if (GetMapLayer("material-plane", "earth") ~= -1) then
-	UI.WorldButtons:at(earth_id).X = (16 + (19  * 0)) * get_scale_factor()
-	UI.WorldButtons:at(earth_id).Y = Video.Height - 23 * get_scale_factor()
-	UI.WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
+	CUserInterface:get().WorldButtons:at(earth_id).X = (16 + (19  * 0)) * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(earth_id).Y = Video.Height - 23 * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
 else
-	UI.WorldButtons:at(earth_id).X = -1
-	UI.WorldButtons:at(earth_id).Y = -1
+	CUserInterface:get().WorldButtons:at(earth_id).X = -1
+	CUserInterface:get().WorldButtons:at(earth_id).Y = -1
 end
 
 local nidavellir_id = GetWorldData("nidavellir", "ID")
 if (GetMapLayer("material-plane", "nidavellir") ~= -1) then
-	UI.WorldButtons:at(nidavellir_id).X = (16 + (19  * 1)) * get_scale_factor()
-	UI.WorldButtons:at(nidavellir_id).Y = Video.Height - 23 * get_scale_factor()
-	UI.WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
+	CUserInterface:get().WorldButtons:at(nidavellir_id).X = (16 + (19  * 1)) * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(nidavellir_id).Y = Video.Height - 23 * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
 else
-	UI.WorldButtons:at(nidavellir_id).X = -1
-	UI.WorldButtons:at(nidavellir_id).Y = -1
+	CUserInterface:get().WorldButtons:at(nidavellir_id).X = -1
+	CUserInterface:get().WorldButtons:at(nidavellir_id).Y = -1
 end
 
 local jotunheim_id = GetWorldData("jotunheim", "ID")
 if (GetMapLayer("material-plane", "jotunheim") ~= -1) then
-	UI.WorldButtons:at(jotunheim_id).X = (16 + (19  * 2)) * get_scale_factor()
-	UI.WorldButtons:at(jotunheim_id).Y = Video.Height - 23 * get_scale_factor()
-	UI.WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")
+	CUserInterface:get().WorldButtons:at(jotunheim_id).X = (16 + (19  * 2)) * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(jotunheim_id).Y = Video.Height - 23 * get_scale_factor()
+	CUserInterface:get().WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")
 else
-	UI.WorldButtons:at(jotunheim_id).X = -1
-	UI.WorldButtons:at(jotunheim_id).Y = -1
+	CUserInterface:get().WorldButtons:at(jotunheim_id).X = -1
+	CUserInterface:get().WorldButtons:at(jotunheim_id).Y = -1
 end
 
 Load("scripts/civilizations/anglo_saxon/ui.lua")
@@ -515,8 +515,8 @@ Load("scripts/civilizations/troll/ui.lua")
 
 
 
-local info_panel_x = UI.InfoPanel.X
-local info_panel_y = UI.InfoPanel.Y
+local info_panel_x = CUserInterface:get().InfoPanel.X
+local info_panel_y = CUserInterface:get().InfoPanel.Y
 
 DefinePanelContents(
 -- Default presentation. ------------------------
@@ -857,8 +857,8 @@ DefinePanelContents(
   } })
 
 if not (ui_loaded_first_time) then
-	UI.MessageFont = Fonts["game"]
-	UI.MessageScrollSpeed = 5
+	CUserInterface:get().MessageFont = Fonts["game"]
+	CUserInterface:get().MessageScrollSpeed = 5
 
 	function GetRGBA(r, g, b, a)
 		return r + g*0x100 + b*0x10000 + a*0x1000000

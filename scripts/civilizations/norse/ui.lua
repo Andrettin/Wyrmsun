@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the norse user interface
---
---      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2001-2020 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,5 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-UI.MenuButton.Style = FindButtonStyle("main-germanic")
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")
+CUserInterface:get().MenuButton.Style = FindButtonStyle("main-germanic")
+CUserInterface:get().NetworkDiplomacyButton.Style = FindButtonStyle("main-germanic")

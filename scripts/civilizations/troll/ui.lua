@@ -25,5 +25,5 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-UI.MenuButton.Style = FindButtonStyle("main-goblin")
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-goblin")
+CUserInterface:get().MenuButton.Style = FindButtonStyle("main-goblin")
+CUserInterface:get().NetworkDiplomacyButton.Style = FindButtonStyle("main-goblin")

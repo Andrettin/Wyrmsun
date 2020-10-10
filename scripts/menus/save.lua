@@ -18,7 +18,7 @@ function RunSaveGame(name, menu)
 			confirm:addHalfButton(_("~!OK"), "o", 1 * (288 / 3) * get_scale_factor(), (128 - 16 - 27) * get_scale_factor(), function() confirm:stop() end)
 			confirm:run(false)
 		else
-			UI.StatusLine:Set(_("Saved game to:") .. " " .. name)
+			CUserInterface:get().StatusLine:Set(_("Saved game to:") .. " " .. name)
 			menu:stop()
 		end
 	else

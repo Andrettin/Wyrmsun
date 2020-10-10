@@ -1885,7 +1885,7 @@ SetMusicVolume(wyr.preferences.MusicVolume)
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoFullScreen(wyr.preferences.VideoFullScreen)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
-UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
+CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
