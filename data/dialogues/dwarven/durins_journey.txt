@@ -1,0 +1,14 @@
+durins_journey = {
+	{
+		speaker = durin
+		text = "I had a strange dream last night... Hroptatyr's mighty visage led me deep into the mountains. There, I found a swirling, mystical passage. I stepped into it, and at the other side... there was a new world. Even the air I breathed there felt different."
+	}
+	{
+		speaker_unit_type = unit_dwarven_witness
+		text = "Ye should not overlook this vision, Durin. It must have been sent by Hroptatyr himself, and ye have been chosen for this important task: to find this mysterious passage, and lead dwarves to a new world, so that our people may settle there."
+	}
+	{
+		speaker = durin
+		text = "I will take heed, wise sage."
+	}
+}
