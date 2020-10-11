@@ -66,14 +66,6 @@ DefineWorldMapTile({536, 138}, {
 	}
 })
 
-DefineWorldMapTile({538, 129}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Singidunum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Belgrade"
-	}
-})
-
 DefineWorldMapTile({540, 129}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -88,4 +80,3 @@ DefineWorldMapTile({540, 136}, {
 		"slav", "Skopje"
 	}
 })
-
