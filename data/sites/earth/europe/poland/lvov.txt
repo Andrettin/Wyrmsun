@@ -1,0 +1,13 @@
+lvov = {
+	name = "Lvov"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 24.02999548210 49.83498008130 } #from Natural Earth
+	major = true
+	color = { 212 250 43 }
+	cultural_names = {
+		teutonic = "Lemberg"
+	}
+	regions = {
+		poland
+	}
+}

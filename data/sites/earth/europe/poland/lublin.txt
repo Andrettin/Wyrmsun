@@ -3,6 +3,7 @@ lublin = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 22.57272009140 51.25039756170 } #from Natural Earth
 	major = true
+	color = { 201 54 155 }
 	regions = {
 		poland
 	}
