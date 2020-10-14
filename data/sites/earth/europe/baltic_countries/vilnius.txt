@@ -1,0 +1,10 @@
+vilnius = {
+	name = "Vilnius"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 25.31663529330 54.68336631180 } #from Natural Earth
+	major = true
+	color = { 126 243 201 }
+	regions = {
+		baltic_countries
+	}
+}
