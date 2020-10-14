@@ -3,6 +3,7 @@ cluj = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 23.59844559600 46.78842185370 } #from Natural Earth
 	major = true
+	color = { 147 132 43 }
 	regions = {
 		europe
 	}
