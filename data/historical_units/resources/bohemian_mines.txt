@@ -1,0 +1,9 @@
+the_wedding_veil = {
+	unit_type = unit_gold_deposit
+	unique = the_wedding_veil
+	
+	history = {
+		active = true
+		location = jihlava #the gold mine called "The Wedding Veil" was located in Jilova
+	}
+}

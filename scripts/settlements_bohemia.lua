@@ -44,19 +44,6 @@ DefineSite("budweis", {
 	Regions = {"cisleithania", "czechoslovakia"}
 })
 
-DefineSite("jilova", {
-	Name = "Jilova",
-	MapTemplate = "earth",
-	Position = {4169, 913},
-	CulturalNames = {
-		"slav", "Jilova"
-	},
-	HistoricalResources = {
-		0, 0, "unit-gold-deposit", "the-wedding-veil", 0 -- the gold mine called "The Wedding Veil" was located in Jilova; Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
-	},
-	Regions = {"cisleithania", "czechoslovakia"}
-})
-
 DefineSite("kutna-hora", {
 	Name = "Kutna Hora",
 	MapTemplate = "earth",
@@ -65,8 +52,8 @@ DefineSite("kutna-hora", {
 		"slav", "Kutna Hora" -- "Kutná Hora"
 	},
 	HistoricalResources = {
-		0, 0, "unit-silver-deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
-		0, 0, "unit-silver-deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora; Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+		0, 0, "unit-silver-deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora
+		0, 0, "unit-silver-deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora
 	},
 	Regions = {"cisleithania", "czechoslovakia"}
 })

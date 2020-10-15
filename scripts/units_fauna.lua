@@ -657,7 +657,7 @@ DefineUnitType("unit-horse", {
 		"Lettfeti", -- Léttfeti was a horse from Norse mythology (name means "light-pacer" according to Cleasby and "light-feet" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 153, 386.
 		"Melnir", -- Melnir was a horse from Norse mythology (name means "Bit-Bearer" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 423.
 		"Mylnir", -- Mylnir was a horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Semik", -- Šemík was Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
+		"Semik", -- Šemík was Horymír's horse in the Praguer legend
 		"Sinir", -- Sinir was a horse from Norse mythology (name means "Sinewy" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 		"Silfrintopp", -- Silfrintoppr was a horse from Norse mythology; Cleasby gives the meaning of "silver-tuft", while Bellows gives "silver-topped" instead; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 528, 636.
 		"Skeidbrimir", -- Skeiðbrímir was a horse from Norse mythology (Bellows gives the name as meaning "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 543.

@@ -337,7 +337,7 @@ DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of T
 
 -- Mines
 
-DefineUniqueItem("the-wedding-veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+DefineUniqueItem("the-wedding-veil", {
 	Name = "The Wedding Veil",
 	Type = "unit-gold-deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
@@ -346,7 +346,7 @@ DefineUniqueItem("the-wedding-veil", { -- Source: Alena Ježková, "77 Prague Le
 	Background = "The Wedding Veil was a gold mine in Jilova owned by the Prague burgher Rotlev, who lived in the time of Charles IV. The mine was very profitable, but had begun to dry up. Strongly believing that it still contained much gold inside, Rotlev sold off more and more of his possessions to keep paying for the mining operations. Eventually, he had nothing left to sell. His wife then took a golden veil which he had given to her as a wedding gift, and told him to sell it. He hesitantly accepted. During the further week of mining the veil had paid for, vast gold veins were found in the mine. Rotlev was saved. He bought back his wife's veil, and the gold was so abundant that he became an even wealthier man than he had been previously. And thus the mine became known for the veil which saved its owner, receiving its name from it. With the mine's riches, Rotlev built a large house in Prague, which was later bought by the crown and became the Carolinum."
 } )
 
-DefineUniqueItem("esel", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+DefineUniqueItem("esel", {
 	Name = "Esel",
 	Type = "unit-silver-deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
@@ -355,7 +355,7 @@ DefineUniqueItem("esel", { -- Source: Alena Ježková, "22 Böhmische Legenden",
 	Background = "Esel was a very rich silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was legendary for never having flooded, and it was said among the miners that as long as Esel was not filled with water, the silver mining near Kuttenberg would remain strong. In 1540, Esel suddenly began to flood, and by 1554 it was entirely submerged in water. The miners' prophecy turned true: soon after Esel's flood, the silver finds in the Kuttenberg area began to dwindle."
 } )
 
-DefineUniqueItem("smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+DefineUniqueItem("smitna", {
 	Name = "Smitna",
 	Type = "unit-silver-deposit",
 	Prefix = "upgrade-item-prefix-industrious",
@@ -422,7 +422,7 @@ DefineUniqueItem("varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Background = "Varva was a farm in Jutland in ancient times. In the Ynglinga Saga it is told that the sparrow of the Swedish king Dag, which relayed news to the monarch from faraway lands, once flew to the farm. It ate some of the farmer's grain, upon which he threw stones at the sparrow, killing it. When the king discovered that the sparrow had been killed at Varva, he sent a host to exact his revenge on the farm's inhabitants. As the king was about cross Skiotan's Ford to return to Sweden, a thrall threw a hay-fork at the monarch, hitting his head and ending his life."
 } )
 
-DefineUniqueItem("carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+DefineUniqueItem("carolinum", {
 	Name = "Carolinum",
 	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple
 	Prefix = ?,
@@ -430,21 +430,21 @@ DefineUniqueItem("carolinum", { -- Source: Alena Ježková, "77 Prague Legends",
 	Background = "The Carolinum was the seat of the Prague University. It was first built as a residence by the rich burgher Rotlev, being later acquired by the crown and transformed into a university seat.
 } )
 
-DefineUniqueItem("castle-of-zebrak", { -- Castle of Žebrák; Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
+DefineUniqueItem("castle-of-zebrak", { -- Castle of Žebrák
 	Name = "Castle of Zebrak",
 	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("prague-castle", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 53, 61.
+DefineUniqueItem("prague-castle", {
 	Name = "Prague Castle",
 	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("novy-hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
+DefineUniqueItem("novy-hrad", { -- Nový Hrad
 	Name = "Novy Hrad",
 	Type = "unit-teuton-stronghold", -- should be a castle
 	Prefix = ?,
@@ -452,7 +452,7 @@ DefineUniqueItem("novy-hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prag
 	Background = "\"Nový Hrad\" means \"new castle\" in Czech."
 } )
 
-DefineUniqueItem("clementinum", { -- Alena Ježková, "77 Prague Legends", 2006, p. 54.
+DefineUniqueItem("clementinum", {
 	Name = "Clementinum",
 	Type = "unit-teuton-temple", -- should be limited to only churches
 	Prefix = ?,
@@ -460,14 +460,14 @@ DefineUniqueItem("clementinum", { -- Alena Ježková, "77 Prague Legends", 2006,
 	Background = "The Clementinum was a large complex of buildings built by the Jesuit Order in Prague. It encompassed six courtyards, two churches and two chapels. The complex was abandoned by the Jesuits in 1773, when Pope Clement XV dissolved their order."
 } )
 
-DefineUniqueItem("schwarzenberg-palace", { -- Located in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+DefineUniqueItem("schwarzenberg-palace", { -- Located in Prague
 	Name = "Schwarzenberg Palace",
 	Type = "unit-teuton-stronghold", -- should be a castle?
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("daliborka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("daliborka", {
 	Name = "Daliborka",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
@@ -475,7 +475,7 @@ DefineUniqueItem("daliborka", { -- Source: Alena Ježková, "77 Prague Legends",
 	Background = "Daliborka was a prison tower in Prague, named after its most renowned captive, Dalibor of Kozajedy."
 } )
 
-DefineUniqueItem("the-white-tower", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("the-white-tower", {
 	Name = "The White Tower",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
@@ -483,7 +483,7 @@ DefineUniqueItem("the-white-tower", { -- Source: Alena Ježková, "77 Prague Leg
 	Background = "The White Tower was a tower in Prague."
 } )
 
-DefineUniqueItem("mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("mihulka", {
 	Name = "Mihulka",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
@@ -491,7 +491,7 @@ DefineUniqueItem("mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2
 	Background = "Mihulka was a tower in Prague."
 } )
 
-DefineUniqueItem("ploskovice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("ploskovice", {
 	Name = "Ploskovice",
 	Type = "unit-teuton-stronghold",
 	Prefix = ?,
@@ -499,7 +499,7 @@ DefineUniqueItem("ploskovice", { -- Source: Alena Ježková, "77 Prague Legends"
 	Background = "Ploskovice was a stronghold near Litoměřice."
 } )
 
-DefineUniqueItem("tyn-church", { -- Týn Church; Alena Ježková, "77 Prague Legends", 2006, p. 14.
+DefineUniqueItem("tyn-church", { -- Týn Church
 	Name = "Tyn Church",
 	Type = "unit-teuton-temple", -- should be limited to only churches
 	Prefix = ?,
@@ -507,7 +507,7 @@ DefineUniqueItem("tyn-church", { -- Týn Church; Alena Ježková, "77 Prague Leg
 	Background = "The Týn Church was a church in Prague."
 } )
 
-DefineUniqueItem("ungelt", { -- Alena Ježková, "77 Prague Legends", 2006, p. 17.
+DefineUniqueItem("ungelt", {
 	Name = "Ungelt",
 	Type = "unit-teuton-market",
 	Prefix = ?,
@@ -515,7 +515,7 @@ DefineUniqueItem("ungelt", { -- Alena Ježková, "77 Prague Legends", 2006, p. 1
 	Background = "Also known as the Týn Court, the Ungelt was the royal customs house in Prague."
 } )
 
-DefineUniqueItem("rott", { -- Alena Ježková, "77 Prague Legends", 2006, p. 19.
+DefineUniqueItem("rott", {
 	Name = "Rott",
 	Type = "unit-teuton-smithy",
 	Prefix = ?,
@@ -523,7 +523,7 @@ DefineUniqueItem("rott", { -- Alena Ježková, "77 Prague Legends", 2006, p. 19.
 	Background = "The Rott ironmonger's shop was located in Prague."
 } )
 
-DefineUniqueItem("v-kotcich", { -- Alena Ježková, "77 Prague Legends", 2006, p. 32.
+DefineUniqueItem("v-kotcich", {
 	Name = "V Kotcich",
 	Type = "unit-teuton-market",
 	Prefix = ?,
@@ -531,7 +531,7 @@ DefineUniqueItem("v-kotcich", { -- Alena Ježková, "77 Prague Legends", 2006, p
 	Background = "V Kotcich was a marketplace in Prague."
 } )
 
-DefineUniqueItem("the-lion-court", { -- Alena Ježková, "77 Prague Legends", 2006, p. 90.
+DefineUniqueItem("the-lion-court", {
 	Name = "The Lion Court",
 	Type = "unit-teuton-stables",
 	Prefix = ?,
@@ -539,7 +539,7 @@ DefineUniqueItem("the-lion-court", { -- Alena Ježková, "77 Prague Legends", 20
 	Background = "The Lion Court was a bestiary in Prague."
 } )
 
-DefineUniqueItem("cernin-palace", { -- Alena Ježková, "77 Prague Legends", 2006, p. 94.
+DefineUniqueItem("cernin-palace", {
 	Name = "Cernin Palace",
 	Type = "unit-teuton-stronghold",
 	Prefix = ?,
@@ -547,7 +547,7 @@ DefineUniqueItem("cernin-palace", { -- Alena Ježková, "77 Prague Legends", 200
 	Background = "The Černín Palace was built in the Loretánské Square in Prague for Humprecht Černín of Chudenice, the Holy Roman Empire's envoy to Venice."
 } )
 
-DefineUniqueItem("the-old-new-synanogue", { -- Alena Ježková, "77 Prague Legends", 2006, p. 103.
+DefineUniqueItem("the-old-new-synanogue", {
 	Name = "The Old New Synanogue",
 	Type = "unit-teuton-temple",
 	Prefix = ?,
@@ -555,7 +555,7 @@ DefineUniqueItem("the-old-new-synanogue", { -- Alena Ježková, "77 Prague Legen
 	Background = "The Old New Synanogue lies in Prague."
 } )
 
-DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Legends", 2006, pp. 126, 130.
+DefineUniqueItem("na-slovanech-monastery", {
 	Name = "Na Slovanech Monastery",
 	Type = "unit-teuton-temple", -- previously known as Emmaeus Monastery
 	Prefix = ?,
@@ -565,31 +565,21 @@ DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Lege
 --]]
 
 -- Unique houses in Prague
--- "House at Death"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 35.
--- "House at the Golden Well"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
--- "House at the Three Bells"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 71.
--- "House at the Three White Roses"; also known as House U Rotta (because of the Rott ironmonger's shop); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
--- "The Chateau"; smallest house in the Golden Lane, which had once been inhabited by an elderly nobleman; Source: Alena Ježková, "77 Prague Legends", 2006, p. 93.
--- Faust's House; Source: Alena Ježková, "77 Prague Legends", 2006, p. 126.
--- U Myslíků ("At the Myslíks"); the protestant owner of this house and his family had to flee Prague after the Battle of the White Mountain in 1620; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 131-132.
+-- "House of Death"
+-- "House of the Golden Well"
+-- "House of the Three Bells"
+-- "House of the Three White Roses"; also known as House U Rotta (because of the Rott ironmonger's shop)
+-- "The Chateau"; smallest house in the Golden Lane, which had once been inhabited by an elderly nobleman
+-- Faust's House
+-- U Myslíků ("At the Myslíks"); the protestant owner of this house and his family had to flee Prague after the Battle of the White Mountain in 1620
 
--- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
--- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.
+-- "U Jezurů" ("At the Lakes"); night tavern in Prague frequented by prostitutes, which was said to be haunted by a hairy ghost who killed prostitutes near the tavern
 
--- Kunratice Forest (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
--- Petřín Hill (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
--- Jánský vršek ("John Hill"; in or nearby Prague); a Chapel of St John was located in this hill; Source: Alena Ježková, "77 Prague Legends", 2006, p. 65.
--- Kampa (river) (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 69.
--- Vltava (river) (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 32.
--- Kampa Park (in or neaby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 49.
+-- The Hunger Wall (wall in Prague)
 
--- "U Jezurů" ("At the Lakes"); night tavern in Prague frequented by prostitutes, which was said to be haunted by a hairy ghost who killed prostitutes near the tavern; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
+-- Zikmund (unique bell in Prague)
 
--- The Hunger Wall (wall in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
-
--- Zikmund (unique bell in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 84.
-
--- Josef (legendary golem from Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 107.
+-- Josef (legendary golem from Prague)
 
 -- Bodn (jar which contained some of the mead of poetry)
 -- Dainsleif (dwarven sword)
