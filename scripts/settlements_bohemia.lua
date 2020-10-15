@@ -25,25 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("budweis", {
-	Name = "Budweis",
-	MapTemplate = "earth",
-	Position = {4167, 937},
-	CulturalNames = {
-		"slav", "Budejovice",
-		"teuton", "Budweis"
-	},
-	HistoricalOwners = {
-		1477, "bohemia", -- Budweis' area was a Bohemian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1526, "austria", -- Budweis' area became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "austria" -- Budweis was a part of the Austrian province of Bohemia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1815, 0, "farm"
-	},
-	Regions = {"cisleithania", "czechoslovakia"}
-})
-
 DefineSite("kutna-hora", {
 	Name = "Kutna Hora",
 	MapTemplate = "earth",
