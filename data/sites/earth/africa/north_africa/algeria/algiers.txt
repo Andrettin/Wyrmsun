@@ -1,0 +1,9 @@
+algiers = {
+	name = "Algiers"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 3.05055252952 36.76306479800 } #from Natural Earth
+	major = true
+	regions = {
+		africa
+	}
+}

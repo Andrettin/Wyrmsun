@@ -1,0 +1,9 @@
+tripoli = {
+	name = "Tripoli"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 13.18001175810 32.89250001940 } #from Natural Earth
+	major = true
+	regions = {
+		africa
+	}
+}
