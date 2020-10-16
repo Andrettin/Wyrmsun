@@ -1,0 +1,19 @@
+uppsala = {
+	name = "Uppsala"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 17.63999792350 59.86005291660 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+	
+	history = {
+		1164 = {
+			owner_faction = sweden
+			building_classes += temple #Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
+		}
+		
+		1477 = {
+			building_classes += university #University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

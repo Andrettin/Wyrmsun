@@ -76,23 +76,6 @@ DefineSite("torsburgen", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("uppsala", {
-	Name = "Uppsala",
-	MapTemplate = "earth",
-	Position = {4241, 684},
-	CulturalNames = {
-		"norse", "Uppsala"
-	},
-	HistoricalOwners = {
-		1164, "sweden"
-	},
-	HistoricalBuildings = {
-		1164, 1477, "temple", -- Swedish archbishopric founded in Uppsala in 1164; Source: "Guta Saga: The History of the Gotlanders", 1999, p. vii.
-		1477, 0, "university" -- University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("vitemolla", {
 	Name = "Vitemolla",
 	MapTemplate = "earth",
