@@ -1,7 +1,8 @@
 athens = {
 	name = "Athens"
 	map_template = earth_30_45_latitude_north
-	geocoordinate = { 23.73332108430 37.98332623190 } #from Natural Earth
+	#geocoordinate = { 23.73332108430 37.98332623190 } #from Natural Earth
+	pos = { 294 71 } #so that the Peloponnese isn't blocked by the settlement site
 	major = true
 	color = { 102 220 253 }
 	regions = {
