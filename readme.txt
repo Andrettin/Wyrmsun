@@ -61,6 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
 - Fixed the tooltip of the Barkskin ability to correctly reflect that it increases armor by 4.
 - Improved the performance of the autocasting.
+- The hotkey for Inspire is now "p", as its previous hotkey ("i") was the same as that to open the inventory.
 
 * Ages
 - Norse players now require not only the Spatha upgrade, but also Sailing and either Shield Wall or Svinfylking to enter the Viking Age.

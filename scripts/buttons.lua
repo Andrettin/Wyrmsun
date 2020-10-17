@@ -390,17 +390,6 @@ DefineButton( { Pos = 4, Icon = "icon-slow",
 	}
 })
 
-DefineButton( { Pos = 5, Icon = "icon-inspire",
-	Action = "cast-spell", Value = "spell-inspire",
-	Description = "Inspires an organic unit to deal 50% more damage",
-	Key = "i", Hint = "~!Inspire", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-priest",
-		"unit-teuton-priest",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
-	}
-})
-
 DefineButton( { Pos = 5, Icon = "icon-wither",
 	Action = "cast-spell", Value = "spell-wither",
 	Description = "Causes an organic unit to deal 50% less damage",

@@ -1,3 +1,37 @@
+cast_infusion = {
+	pos = 6
+	icon = icon_infusion
+	action = cast_spell
+	value = spell_infusion
+	key = f
+	hint = "In~!fusion"
+	popup = popup_commands
+	description = "Increases the arcane damage of a unit by 4."
+	unit_types = {
+		unit_dwarven_runesmith
+		unit_dwarven_runemaster
+		unit_dwarven_arcanister
+	}
+}
+
+cast_inspire = {
+	pos = 5
+	icon = icon_inspire
+	action = cast_spell
+	value = spell_inspire
+	key = p
+	hint = "Ins~!pire"
+	popup = popup_commands
+	description = "Inspires an organic unit to deal 50% more damage."
+	unit_types = {
+		unit_germanic_priest
+		unit_teuton_priest
+		unit_dwarven_witness
+		unit_dwarven_annalist
+		unit_dwarven_loremaster
+	}
+}
+
 cast_precise_shot = {
 	pos = 6
 	icon = icon_precise_shot
