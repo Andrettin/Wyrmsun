@@ -225,7 +225,7 @@ function RunShowCreditsMenu()
 		"  Ferk",
 		"  Jeff",
 		"  João Victor G. Costa (Jinn)",
-		"  Kenji03",
+		"  Kenji_03",
 		"  KPJ",
 		"  KroArtem",
 		"  Kyran",
