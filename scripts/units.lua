@@ -32,91 +32,9 @@ if (OldDefineUnitType == nil) then
 end
 
 function DefineUnitType(unit_type, data)
-	local resource_mine = false
-	local smithy = false
-	local market = false
-	local dock = false
-	if ((data.GivesResource and data.BuildingRules == nil and data.GivesResource ~= "trade") or data.Class == "lumber_mill") then
-		resource_mine = true
-	elseif (data.Class == "smithy") then
-		smithy = true
-	elseif (data.Class == "market") then
-		market = true
-	elseif (data.Class == "dock") then
-		dock = true
-	end
-	
 	if (data.Parent ~= nil) then
 		OldDefineUnitType(unit_type, {Parent = data.Parent})
 		data.Parent = nil
-		if (
-			(GetUnitTypeData(unit_type, "GivesResource") ~= "" and GetUnitTypeData(unit_type, "GivesResource") ~= "trade" and data.GivesResource == nil and data.BuildingRules == nil)
-			or (GetUnitTypeData(unit_type, "Class") == "lumber_mill" and data.Class == nil)
-		) then
-			resource_mine = true
-		elseif (GetUnitTypeData(unit_type, "Class") == "smithy" and data.Class == nil) then
-			smithy = true
-		elseif (GetUnitTypeData(unit_type, "Class") == "market" and data.Class == nil) then
-			market = true
-		elseif (GetUnitTypeData(unit_type, "Class") == "dock" and data.Class == nil) then
-			dock = true
-		end
-	end
-	
-	if (resource_mine) then
-		data.BuildingRules = {
-			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
-			}
-		}
-	elseif (smithy) then
-		data.BuildingRules = {
-			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
-				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
-
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit_gold_deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit_silver_deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-deposit" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-mine" },
-
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-cave" },
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-yale-hunting-lodge" },
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-lumber-mill" },
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-carpenters-shop" },
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-yale-pen" },
---				"distance", { Distance = 3, DistanceType = ">", Type = "unit-joruvellir-yale-pen" }
-			}
-		}
-	elseif (market) then
-		data.BuildingRules = {
-			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Class = "market" }
-			}
-		}
-	elseif (dock) then
-		data.BuildingRules = {
-			"and", {
-				"distance", { Distance = 3, DistanceType = ">", Class = "dock" }
-			}
-		}
 	end
 	
 	OldDefineUnitType(unit_type, data)
@@ -414,6 +332,14 @@ DefineUnitType("unit-template-base-deposit", {
 	Type = "land",
 	StartingResources = {50000},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
+		}
+	},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -4411,6 +4337,14 @@ DefineUnitType("unit-template-lumber-mill", {
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
+		}
+	},
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -4454,6 +4388,31 @@ DefineUnitType("unit-template-smithy", {
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls or mines",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
+			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
+
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_gold_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_silver_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-emerald-mine" },
+		}
+	},
 	Sounds = {
 		"selected", "smithy-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -4796,6 +4755,11 @@ DefineUnitType("unit-template-market", {
 	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Class = "market" }
+		}
+	},
 	Sounds = {
 		"selected", "market-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -4839,6 +4803,11 @@ DefineUnitType("unit-template-dock", {
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other docks",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Class = "dock" }
+		}
+	},
 	Sounds = {
 		"selected", "dock-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
