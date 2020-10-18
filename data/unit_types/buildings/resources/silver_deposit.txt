@@ -1,7 +1,8 @@
 unit_silver_deposit = {
 	name = "Silver Deposit"
 	parent = unit_template_deposit
-	description = "Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place: Silver is converted to copper at a 200% ratio."
+	description = "Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Silver is converted to copper at a 200% ratio."
 	image_file = "buildings/neutral/silver_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_silver_deposit

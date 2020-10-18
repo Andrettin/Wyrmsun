@@ -1,7 +1,8 @@
 unit_mithril_deposit = {
 	name = "Mithril Deposit"
 	parent = unit_template_deposit
-	description = "Mithril deposits contain deep veins of extremely valuable mithril, which can be gainfully mined after the proper infrastructure is put into place: Mithril is converted to copper at a 800% ratio."
+	description = "Mithril deposits contain deep veins of extremely valuable mithril, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Mithril is converted to copper at a 800% ratio."
 	image_file = "buildings/neutral/mithril_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_mithril_deposit

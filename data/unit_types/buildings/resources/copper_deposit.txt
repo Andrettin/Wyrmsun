@@ -1,7 +1,8 @@
 unit_copper_deposit = {
 	name = "Copper Deposit"
 	parent = unit_template_deposit
-	description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place: the basic unit of currency."
+	description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Copper is the basic unit of currency."
 	image_file = "buildings/neutral/copper_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_copper_deposit

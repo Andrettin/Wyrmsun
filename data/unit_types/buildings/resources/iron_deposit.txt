@@ -1,7 +1,8 @@
 unit_iron_deposit = {
 	name = "Iron Deposit"
 	parent = unit_template_deposit
-	description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place: Iron is converted to copper at a 100% ratio."
+	description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Iron is converted to copper at a 100% ratio."
 	image_file = "buildings/neutral/iron_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_iron_deposit

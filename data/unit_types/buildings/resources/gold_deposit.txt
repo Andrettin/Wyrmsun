@@ -1,7 +1,8 @@
 unit_gold_deposit = {
 	name = "Gold Deposit"
 	parent = unit_template_deposit
-	description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place: Gold is converted to copper at a 400% ratio."
+	description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Gold is converted to copper at a 400% ratio."
 	image_file = "buildings/neutral/gold_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_gold_deposit

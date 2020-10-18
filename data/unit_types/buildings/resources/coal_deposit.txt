@@ -1,7 +1,8 @@
 unit_coal_deposit = {
 	name = "Coal Deposit"
 	parent = unit_template_deposit
-	description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place: a quest objective resource"
+	description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place."
+	notes = "Coal is a quest objective resource."
 	image_file = "buildings/neutral/coal_deposit.png"
 	frame_size = { 96 96 }
 	icon = icon_coal_deposit
