@@ -137,7 +137,8 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
 				if (
 					(
-						GetUnitTypeData(unitName, "Description") ~= ""
+						GetUnitTypeData(unitName, "Notes") ~= ""
+						or GetUnitTypeData(unitName, "Description") ~= ""
 						or GetUnitTypeData(unitName, "Background") ~= ""
 						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
 					)
@@ -294,7 +295,8 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 				if (
 					(civilization == nil or civilization == GetUnitTypeData(unitName, "Civilization") or (civilization == "neutral" and GetUnitTypeData(unitName, "Civilization") == ""))
 					and (
-						GetUnitTypeData(unitName, "Description") ~= ""
+						GetUnitTypeData(unitName, "Notes") ~= ""
+						or GetUnitTypeData(unitName, "Description") ~= ""
 						or GetUnitTypeData(unitName, "Background") ~= ""
 						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
 					)
@@ -559,7 +561,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
-					GetUnitTypeData(unit_name, "Description") == ""
+					GetUnitTypeData(unit_name, "Notes") == ""
+					and GetUnitTypeData(unit_name, "Description") == ""
 					and GetUnitTypeData(unit_name, "Background") == ""
 					and (GetUnitTypeData(unit_name, "Item") == false or GetUnitTypeData(unit_name, "Class") == "")
 				)
@@ -692,6 +695,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local faction = ""
 	local unit_type_type = ""
 	local unit_type_class = ""
+	local notes = ""
 	local description = ""
 	local effects = ""
 	local applies_to = ""
@@ -712,6 +716,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
 			quote = _("Quote") .. ": " .. _(GetUnitTypeData(unit_name, "Quote")) .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Notes") ~= "") then
+			notes = _("Notes") .. ": " .. _(GetUnitTypeData(unit_name, "Notes")) .. "\n\n"
 		end
 		if (GetUnitTypeData(unit_name, "Item") == false and GetUnitTypeStatsString(unit_name) ~= "") then
 			local costs_string = ""
@@ -1002,7 +1009,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 		end
 	end
-	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. background)
+	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. notes .. effects .. applies_to .. background)
 
 	local has_family_tree_button = false
 	if (state == "heroes") then
