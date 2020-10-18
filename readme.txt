@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Elven Town Hall, Stronghold, Farm and Barracks buildings.
 - Added the Latin Dock building.
 - The construction of town halls over settlement sites now possesses two additional (generic) construction frames.
+- Added notes in the encyclopedia for deposit/mine buildings, describing their conversion rates to copper.
 
 * Characters
 - A character's father, mother and children are now delineated in their encyclopedia entry.
