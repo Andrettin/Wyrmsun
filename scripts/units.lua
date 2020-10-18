@@ -661,37 +661,6 @@ DefineUnitType("unit-mithril-mine", {
 	}
 } )
 
-DefineUnitType("unit-coal-deposit", {
-	Name = "Coal Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Coal deposits contain deep stores of coal, which can be gainfully mined after the proper infrastructure is put into place: a quest objective resource",
-	Image = {"file", "neutral/buildings/coal_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/coal_deposit_shadow.png", "size", {96, 96}},
-	Icon = "icon-coal-deposit",
-	GivesResource = "coal",
-	Variations = {
-		{
-			"variation-id", "coal-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "coal-deposit-snow-winter",
-			"file", "buildings/neutral/coal_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "coal-deposit-snow",
-			"file", "buildings/neutral/coal_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-coal-mine", {
 	Name = "Coal Mine",
 	Parent = "unit-template-mine",
@@ -702,7 +671,7 @@ DefineUnitType("unit-coal-mine", {
 	Shadow = {"file", "neutral/buildings/coal_mine_shadow.png", "size", {96, 96}},
 	Icon = "icon-coal-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-coal-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_coal_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "coal",
 	BuildingRulesString = "Must be built on top of a Coal Deposit",
 	ButtonKey = "c",
@@ -732,7 +701,7 @@ DefineUnitType("unit-coal-mine", {
 DefineUnitType("unit-diamond-deposit", {
 	Name = "Diamond Deposit",
 	Parent = "unit-template-deposit",
-	Description = "Diamond deposits contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place: Diamond is converted to copper at a 800% ratio.",
+	--Description = "Diamond deposits contain deep sources of diamonds, which can be gainfully mined after the proper infrastructure is put into place: Diamond is converted to copper at a 800% ratio.",
 	Image = {"file", "neutral/buildings/diamond_deposit.png", "size", {96, 96}},
 	Icon = "icon-diamond-deposit",
 	GivesResource = "diamonds"
@@ -743,7 +712,7 @@ DefineUnitType("unit-diamond-mine", {
 	Parent = "unit-template-mine",
 	Class = "diamond_mine",
 	Civilization = "neutral",
-	Description = "Diamonds are highly valuable gems, so that the discovery of deposits containing them will quickly result in the construction of a mine: Diamond is converted to copper at a 800% ratio.",
+	--Description = "Diamonds are highly valuable gems, so that the discovery of deposits containing them will quickly result in the construction of a mine: Diamond is converted to copper at a 800% ratio.",
 	Image = {"file", "neutral/buildings/diamond_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
@@ -4405,7 +4374,7 @@ DefineUnitType("unit-template-smithy", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_coal_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-diamond-mine" },

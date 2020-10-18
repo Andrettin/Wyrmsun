@@ -2061,7 +2061,7 @@ Units = {
 	"unit-copper-rock", "unit-copper-mine",
 	"unit-iron-mine",
 	"unit-mithril-mine",
-	"unit-coal-deposit", "unit-coal-mine",
+	"unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
 	"unit-yale-cave", "unit-yale-hunting-lodge",
