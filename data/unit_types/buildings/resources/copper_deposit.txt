@@ -1,0 +1,29 @@
+unit_copper_deposit = {
+	name = "Copper Deposit"
+	parent = unit_template_deposit
+	description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place: the basic unit of currency."
+	image_file = "buildings/neutral/copper_deposit.png"
+	frame_size = { 96 96 }
+	icon = icon_copper_deposit
+	given_resource = copper
+	variations = {
+		copper_deposit = {
+			forbidden_terrain_types = { snow }
+			forbidden_seasons = { winter }
+		}
+		copper_deposit_snow_winter = {
+			image_file = "buildings/neutral/copper_deposit_snow.png"
+			terrain_types = {
+				dirt
+				dry_mud
+				grass
+				snow
+			}
+			seasons = { winter }
+		}
+		copper_deposit_snow = {
+			image_file = "buildings/neutral/copper_deposit_snow.png"
+			terrain_types = { snow }
+		}
+	}
+}

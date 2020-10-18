@@ -1151,7 +1151,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 			deposit_type = "unit_silver_deposit"
 			rock_type = "unit-silver-rock"
 		elseif (RandomNumber == 2) then
-			deposit_type = "unit-copper-deposit"
+			deposit_type = "unit_copper_deposit"
 			rock_type = "unit-copper-rock"
 		elseif (RandomNumber >= 3) then
 			deposit_type = "unit-iron-deposit"
@@ -1267,7 +1267,7 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 			local RandomNumber = SyncRand(6)
 			local deposit_type
 			if (RandomNumber == 0 and not only_gold) then
-				deposit_type = "unit-copper-deposit"
+				deposit_type = "unit_copper_deposit"
 			elseif (RandomNumber == 1 and not only_gold) then
 				deposit_type = "unit_silver_deposit"
 			elseif (RandomNumber == 2 or only_gold) then
@@ -2448,10 +2448,10 @@ function ApplyRawTiles()
 					SetRawTile(x, y, "Water")
 				elseif (RawTile(x, y) == "Starting Gold Mine") then
 					-- for starting gold locations, generate gold rocks and the gold deposit
-					unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {x, y})
+					unit = CreateUnit("unit_copper_deposit", PlayerNumNeutral, {x, y})
 					SetResourcesHeld(unit, 50000)
-					for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
-						for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
+					for sub_x=0,(GetUnitTypeData("unit_copper_deposit", "TileWidth") - 1) do
+						for sub_y=0,(GetUnitTypeData("unit_copper_deposit", "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
 								unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {x + sub_x, y + sub_y})
@@ -2468,7 +2468,7 @@ function ApplyRawTiles()
 						deposit_type = "unit_silver_deposit"
 						rock_type = "unit-silver-rock"
 					elseif (RandomNumber == 2) then
-						deposit_type = "unit-copper-deposit"
+						deposit_type = "unit_copper_deposit"
 						rock_type = "unit-copper-rock"
 					end
 					unit = CreateUnit(deposit_type, PlayerNumNeutral, {x, y})
@@ -2971,8 +2971,8 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 				end
 
-				local gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
-				local close_gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
+				local gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+				local close_gold_mine_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
 				if (unit_quantity < 1 and gold_mine_quantity >= 1 and close_gold_mine_quantity < 1) then
 					location_found = true
@@ -2999,7 +2999,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 				RandomY = SyncRand(max_y - min_y + 1) + min_y
 			end
 			
-			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-norse-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			local unit_quantity = GetNumUnitsAt(PlayerNumNeutral, "unit_gold_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-iron-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-mithril-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-coal-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-teuton-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-latin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-norse-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			
 			if (unit_quantity < 1) then
 				local space_available = true
@@ -3886,7 +3886,7 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 		end
 		if (free_square) then
 			if (no_raw_tile) then
-				unit = CreateUnit("unit-copper-deposit", PlayerNumNeutral, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+				unit = CreateUnit("unit_copper_deposit", PlayerNumNeutral, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 				SetResourcesHeld(unit, 50000)
 				for i = 1, 9 do
 					unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {gold_mine_spawn_point[1] + 1, gold_mine_spawn_point[2] + 1})
@@ -3897,8 +3897,8 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 						SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Road") -- add "road" so that there are no transition issues
 					end
 				end
-				for sub_x=0,(GetUnitTypeData("unit-copper-deposit", "TileWidth") - 1) do
-					for sub_y=0,(GetUnitTypeData("unit-copper-deposit", "TileHeight") - 1) do
+				for sub_x=0,(GetUnitTypeData("unit_copper_deposit", "TileWidth") - 1) do
+					for sub_y=0,(GetUnitTypeData("unit_copper_deposit", "TileHeight") - 1) do
 						SetRawTile(gold_mine_spawn_point[1] + sub_x, gold_mine_spawn_point[2] + sub_y, "Starting Gold Mine")
 					end
 				end

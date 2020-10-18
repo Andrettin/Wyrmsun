@@ -28,7 +28,7 @@
 SetMapTemplateTileTerrain("earth", "shallow-water", {3815, 1011}) -- to make the river appear properly, as single water tiles aren't supported
 SetMapTemplateTileTerrain("earth", "shallow-water", {3812, 1030}) -- to make the river appear properly, as single water tiles aren't supported
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+SetMapTemplateResource("earth", "unit_copper_deposit", {3749, 956}) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 
 -- Colmar
 -- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.

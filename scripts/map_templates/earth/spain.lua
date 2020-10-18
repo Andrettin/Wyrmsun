@@ -25,14 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1079}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+SetMapTemplateResource("earth", "unit_copper_deposit", {3695, 1079}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {3675, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3684, 1195}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3686, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3687, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3695, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
-SetMapTemplateResource("earth", "unit-copper-deposit", {3792, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3675, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3684, 1195}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3686, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3687, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3695, 1201}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+SetMapTemplateResource("earth", "unit_copper_deposit", {3792, 1194}) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 
 -- Baena
 -- University founded in Baena in 1553. Source: "The Cambridge Modern History Atlas", 1912, p. 9.

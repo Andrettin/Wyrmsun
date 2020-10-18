@@ -84,7 +84,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit_silver_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
@@ -619,36 +619,6 @@ DefineUnitType("unit-silver-mine", {
 	}
 } )
 
-DefineUnitType("unit-copper-deposit", {
-	Name = "Copper Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place: the basic unit of currency.",
-	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
-	Icon = "icon-copper-deposit",
-	GivesResource = "copper",
-	Variations = {
-		{
-			"variation-id", "copper-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "copper-deposit-snow-winter",
-			"file", "buildings/neutral/copper_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "copper-deposit-snow",
-			"file", "buildings/neutral/copper_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-copper-mine", {
 	Name = "Copper Mine",
 	Parent = "unit-template-mine",
@@ -660,7 +630,7 @@ DefineUnitType("unit-copper-mine", {
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
 	Icon = "icon-copper-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_copper_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "copper",
 	ButtonKey = "c",
 	BuildingRulesString = "Must be built on top of a Copper Deposit",

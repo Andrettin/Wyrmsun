@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit-copper-deposit", {4142, 907}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+SetMapTemplateResource("earth", "unit_copper_deposit", {4142, 907}) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 
 SetMapTemplateUnit("earth", "unit-teuton-stables", "quadi-tribe", {4234, 931}, 180) -- horse breeding in 180 AD; Source: "Atlas de História Mundial", 2001, p. 89.
 
