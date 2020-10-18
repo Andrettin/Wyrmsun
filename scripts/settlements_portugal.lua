@@ -79,7 +79,7 @@ DefineSite("tres-minas", {
 		1, 100, "gold-mine" -- Três Minas was the location of a Roman gold mine in the 1st century AD; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
 	},
 	HistoricalResources = {
-		0, 0, "unit-gold-deposit", 0 -- gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
+		0, 0, "unit_gold_deposit", 0 -- gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
 	},
 	Regions = {"iberia"}
 })

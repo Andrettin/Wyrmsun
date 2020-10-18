@@ -80,9 +80,9 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 				"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
 
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit_gold_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-gold-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit_silver_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
@@ -518,36 +518,6 @@ DefineUnitType("unit-template-mine", {
 	}
 } )
 
-DefineUnitType("unit-gold-deposit", {
-	Name = "Gold Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place: Gold is converted to copper at a 400% ratio.",
-	Image = {"file", "buildings/neutral/gold_deposit.png", "size", {96, 96}},
-	Icon = "icon-gold-deposit",
-	GivesResource = "gold",
-	Variations = {
-		{
-			"variation-id", "gold-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "gold-deposit-snow-winter",
-			"file", "buildings/neutral/gold_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "gold-deposit-snow",
-			"file", "buildings/neutral/gold_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-gold-mine", {
 	Name = "Gold Mine",
 	Parent = "unit-template-mine",
@@ -558,7 +528,7 @@ DefineUnitType("unit-gold-mine", {
 	Icon = "icon-gold-mine",
 --	Costs = {"time", 200, "copper", 700, "lumber", 450},
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_gold_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "gold",
 	ButtonKey = "g",
 	BuildingRulesString = "Must be built on top of a Gold Deposit",
@@ -611,37 +581,6 @@ DefineUnitType("unit-gold-mine", {
 	}
 } )
 
-DefineUnitType("unit-silver-deposit", {
-	Name = "Silver Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place: Silver is converted to copper at a 200% ratio.",
-	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
-	Icon = "icon-silver-deposit",
-	GivesResource = "silver",
-	Variations = {
-		{
-			"variation-id", "silver-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "silver-deposit-snow-winter",
-			"file", "buildings/neutral/silver_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "silver-deposit-snow",
-			"file", "buildings/neutral/silver_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-silver-mine", {
 	Name = "Silver Mine",
 	Parent = "unit-template-mine",
@@ -653,7 +592,7 @@ DefineUnitType("unit-silver-mine", {
 	LightImage = {"file", "neutral/buildings/silver_mine_light.png"},
 	Icon = "icon-silver-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_silver_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "silver",
 	ButtonKey = "v",
 	BuildingRulesString = "Must be built on top of a Silver Deposit",
@@ -5260,7 +5199,6 @@ DefineUnitType("unit-mercenary-camp", {
 		"dead", "building-destroyed"
 	}
 } )
-
 
 DefineUnitType("unit-dungeon-wall", {
 	Name = "Dungeon Wall",

@@ -35,7 +35,7 @@ DefineMapTemplate("crucible-of-steel", {
 	OverlayTerrainImage = "scripts/map_templates/nidavellir/island_of_the_lizard_god/crucible_of_steel_overlay.png"
 })
 
-SetMapTemplateResource("crucible-of-steel", "unit-gold-deposit", {6, 31}) -- should be a mithril deposit
+SetMapTemplateResource("crucible-of-steel", "unit_gold_deposit", {6, 31}) -- should be a mithril deposit
 
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 9})
 SetMapTemplateTileTerrain("crucible-of-steel", "railroad", {5, 10})

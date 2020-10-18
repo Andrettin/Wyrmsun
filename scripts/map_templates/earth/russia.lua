@@ -25,4 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit-silver-deposit", {4875, 1027}) -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+SetMapTemplateResource("earth", "unit_silver_deposit", {4875, 1027}) -- Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.

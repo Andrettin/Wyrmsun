@@ -875,7 +875,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Deposit") == false) then
 			AddTrigger("tip-gold-deposit",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-deposit") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_gold_deposit") then
 						return true
 					else
 						return false
@@ -907,7 +907,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Deposit") == false) then
 			AddTrigger("tip-silver-deposit",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-deposit") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_silver_deposit") then
 						return true
 					else
 						return false
@@ -2056,9 +2056,9 @@ Units = {
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-unicorn",
 	"unit-settlement-site",
-	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
-	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",
-	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
+	"unit-gold-rock", "unit-gold-mine",
+	"unit-silver-rock", "unit-silver-mine",
+	"unit-copper-rock", "unit-copper-mine",
 	"unit-iron-deposit", "unit-iron-mine",
 	"unit-mithril-deposit", "unit-mithril-mine",
 	"unit-coal-deposit", "unit-coal-mine",

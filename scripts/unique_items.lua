@@ -339,7 +339,7 @@ DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of T
 
 DefineUniqueItem("the-wedding-veil", {
 	Name = "The Wedding Veil",
-	Type = "unit-gold-deposit",
+	Type = "unit_gold_deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
 	Suffix = "upgrade-item-suffix-of-replenishment",
 	ResourcesHeld = 200000,
@@ -348,7 +348,7 @@ DefineUniqueItem("the-wedding-veil", {
 
 DefineUniqueItem("esel", {
 	Name = "Esel",
-	Type = "unit-silver-deposit",
+	Type = "unit_silver_deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
 	Suffix = "upgrade-item-suffix-of-diligence",
 	ResourcesHeld = 200000,
@@ -357,7 +357,7 @@ DefineUniqueItem("esel", {
 
 DefineUniqueItem("smitna", {
 	Name = "Smitna",
-	Type = "unit-silver-deposit",
+	Type = "unit_silver_deposit",
 	Prefix = "upgrade-item-prefix-industrious",
 	Suffix = "upgrade-item-suffix-of-diligence",
 	ResourcesHeld = 100000,

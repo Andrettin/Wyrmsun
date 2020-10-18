@@ -126,7 +126,7 @@ DefineSite("gossensass", {
 		1480, 0, "railroad"
 	},
 	HistoricalResources = {
-		0, 0, "unit-silver-deposit", 0
+		0, 0, "unit_silver_deposit", 0
 	},
 	Regions = {"cisleithania", "austria"}
 })

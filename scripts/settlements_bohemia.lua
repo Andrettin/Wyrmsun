@@ -33,8 +33,8 @@ DefineSite("kutna-hora", {
 		"slav", "Kutna Hora" -- "Kutná Hora"
 	},
 	HistoricalResources = {
-		0, 0, "unit-silver-deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora
-		0, 0, "unit-silver-deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora
+		0, 0, "unit_silver_deposit", "esel", 0, -- the silver mine of Esel was located in Kutná Hora
+		0, 0, "unit_silver_deposit", "smitna", 0 -- the silver mine of Šmitna was located in Kutná Hora
 	},
 	Regions = {"cisleithania", "czechoslovakia"}
 })
