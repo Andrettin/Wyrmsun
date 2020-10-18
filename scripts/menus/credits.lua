@@ -51,6 +51,7 @@ function RunShowCreditsMenu()
 		"  Chris Beck (iceiceice)",
 		"  DinkyDyeAussie",
 		"  Dmitry Marakasov",
+		"  Kenji_03",
 		"  marcelofg55",
 		"  Morel Bérenger",
 		"  Spfnym",
