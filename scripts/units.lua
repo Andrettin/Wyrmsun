@@ -86,9 +86,9 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
-				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-deposit" },
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-deposit" },
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine" },
@@ -657,36 +657,6 @@ DefineUnitType("unit-copper-mine", {
 	}
 } )
 
-DefineUnitType("unit-iron-deposit", {
-	Name = "Iron Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Iron deposits contain deep veins of iron, which can be gainfully mined after the proper infrastructure is put into place: Iron is converted to copper at a 100% ratio.",
-	Image = {"file", "neutral/buildings/iron_deposit.png", "size", {96, 96}},
-	Icon = "icon-iron-deposit",
-	GivesResource = "iron",
-	Variations = {
-		{
-			"variation-id", "iron-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "iron-deposit-snow-winter",
-			"file", "buildings/neutral/iron_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "iron-deposit-snow",
-			"file", "buildings/neutral/iron_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-iron-mine", {
 	Name = "Iron Mine",
 	Parent = "unit-template-mine",
@@ -698,7 +668,7 @@ DefineUnitType("unit-iron-mine", {
 	LightImage = {"file", "neutral/buildings/iron_mine_light.png"},
 	Icon = "icon-iron-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-iron-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_iron_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "iron",
 	BuildingRulesString = "Must be built on top of a Iron Deposit",
 	RequirementsString = "Ironworking",
@@ -726,37 +696,6 @@ DefineUnitType("unit-iron-mine", {
 	}
 } )
 
-DefineUnitType("unit-mithril-deposit", {
-	Name = "Mithril Deposit",
-	Parent = "unit-template-deposit",
-	Description = "Mithril deposits contain deep veins of extremely valuable mithril, which can be gainfully mined after the proper infrastructure is put into place: Mithril is converted to copper at a 800% ratio.",
-	Image = {"file", "neutral/buildings/mithril_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/mithril_deposit_shadow.png", "size", {96, 96}},
-	Icon = "icon-mithril-deposit",
-	GivesResource = "mithril",
-	Variations = {
-		{
-			"variation-id", "mithril-deposit",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "mithril-deposit-snow-winter",
-			"file", "buildings/neutral/mithril_deposit_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "mithril-deposit-snow",
-			"file", "buildings/neutral/mithril_deposit_snow.png",
-			"terrain", "snow"
-		}
-	}
-} )
-
 DefineUnitType("unit-mithril-mine", {
 	Name = "Mithril Mine",
 	Parent = "unit-template-mine",
@@ -768,7 +707,7 @@ DefineUnitType("unit-mithril-mine", {
 	LightImage = {"file", "neutral/buildings/mithril_mine_light.png"},
 	Icon = "icon-mithril-mine",
 	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit-mithril-deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_mithril_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "mithril",
 	BuildingRulesString = "Must be built on top of a Mithril Deposit",
 	RequirementsString = "Ironworking",

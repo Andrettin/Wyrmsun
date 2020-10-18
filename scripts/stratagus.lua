@@ -955,7 +955,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Iron Deposit") == false) then
 			AddTrigger("tip-iron-deposit",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-iron-deposit") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_iron_deposit") then
 						return true
 					else
 						return false
@@ -971,7 +971,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mithril Deposit") == false) then
 			AddTrigger("tip-mithril-deposit",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-mithril-deposit") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_mithril_deposit") then
 						return true
 					else
 						return false
@@ -2059,8 +2059,8 @@ Units = {
 	"unit-gold-rock", "unit-gold-mine",
 	"unit-silver-rock", "unit-silver-mine",
 	"unit-copper-rock", "unit-copper-mine",
-	"unit-iron-deposit", "unit-iron-mine",
-	"unit-mithril-deposit", "unit-mithril-mine",
+	"unit-iron-mine",
+	"unit-mithril-mine",
 	"unit-coal-deposit", "unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
