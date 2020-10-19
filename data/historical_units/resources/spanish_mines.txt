@@ -1,0 +1,83 @@
+spanish_copper_deposit_1 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -7.2509765625 37.2216796875 }
+		}
+	}
+}
+
+spanish_copper_deposit_2 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -6.85546875 37.4853515625 }
+		}
+	}
+}
+
+spanish_copper_deposit_3 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -6.767578125 37.2216796875 }
+		}
+	}
+}
+
+spanish_copper_deposit_4 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -6.7236328125 37.529296875 }
+		}
+	}
+}
+
+spanish_copper_deposit_5 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -6.3720703125 37.2216796875 }
+		}
+	}
+}
+
+spanish_copper_deposit_6 = { #Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -2.109375 37.529296875 }
+		}
+	}
+}
+
+spanish_tin_deposit = { #Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { -6.3720703125 42.5830078125 }
+		}
+	}
+}
