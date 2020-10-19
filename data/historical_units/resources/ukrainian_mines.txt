@@ -1,0 +1,11 @@
+ukrainian_iron_deposit_1 = { #Iron deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+	unit_type = unit_iron_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { 32.1240234375 48.3837890625 }
+		}
+	}
+}

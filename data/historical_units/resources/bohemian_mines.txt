@@ -7,3 +7,15 @@ the_wedding_veil = {
 		location = jihlava #the gold mine called "The Wedding Veil" was located in Jilova
 	}
 }
+
+bohemian_tin_deposit_1 = { #Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { 13.271484375 50,1416015625 }
+		}
+	}
+}
