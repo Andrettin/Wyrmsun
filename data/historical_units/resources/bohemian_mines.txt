@@ -8,7 +8,7 @@ the_wedding_veil = {
 	}
 }
 
-bohemian_tin_deposit_1 = { #Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+bohemian_tin_deposit = { #Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 	unit_type = unit_copper_deposit
 	
 	history = {

@@ -1,4 +1,4 @@
-ukrainian_iron_deposit_1 = { #Iron deposits; Source: "Philip's International School Atlas", 2006, p. 59.
+ukrainian_iron_deposit = { #Iron deposits; Source: "Philip's International School Atlas", 2006, p. 59.
 	unit_type = unit_iron_deposit
 	
 	history = {

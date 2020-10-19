@@ -1,0 +1,11 @@
+french_tin_deposit = { #Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { -3.9990234375 47.98828125 }
+		}
+	}
+}

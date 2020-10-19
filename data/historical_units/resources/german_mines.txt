@@ -1,0 +1,11 @@
+german_amber_deposit = { #Amber; Source: "Atlas de História Mundial", 2001, p. 89.
+	unit_type = unit_gold_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { 11.865234375 54.0087890625 }
+		}
+	}
+}
