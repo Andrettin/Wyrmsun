@@ -1,0 +1,63 @@
+mount_gabriel_copper_deposit = { #copper deposits at Mount Gabriel in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { -9.4921875 51.6357421875 }
+		}
+	}
+}
+
+mount_gabriel_copper_mine = {
+	unit_type = unit_copper_mine
+	
+	history = {
+		-2200 = {
+			#copper mines at Mount Gabriel were operational during the Early Bronze Age of the British Isles (c. 2200-1650 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+			active = true
+			faction = celtic_cimmerian_tribe
+			location = {
+				map_template = earth_45_60_latitude_north
+				geocoordinate = { -9.4921875 51.6357421875 }
+			}
+		}
+		
+		-1650 = {
+			active = false
+		}
+	}
+}
+
+ross_island_copper_deposit = { #copper deposits at Ross Island in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+	unit_type = unit_copper_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_45_60_latitude_north
+			geocoordinate = { -9.5361328125 52.0751953125 }
+		}
+	}
+}
+
+ross_island_copper_mine = {
+	unit_type = unit_copper_mine
+	
+	history = {
+		-2200 = {
+			#copper mines at Ross Island were operational during the Early Bronze Age of the British Isles (c. 2200-1650 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+			active = true
+			faction = celtic_cimmerian_tribe
+			location = {
+				map_template = earth_45_60_latitude_north
+				geocoordinate = { -9.5361328125 52.0751953125 }
+			}
+		}
+		
+		-1650 = {
+			active = false
+		}
+	}
+}
