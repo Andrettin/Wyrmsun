@@ -1,0 +1,11 @@
+russian_silver_deposit = { #Silver deposits; Source: "Philip's International School Atlas", 2006, p. 77.
+	unit_type = unit_silver_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_30_45_latitude_north
+			geocoordinate = { 45.4833984375 44.8681640625 }
+		}
+	}
+}

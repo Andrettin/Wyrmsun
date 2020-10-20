@@ -1,0 +1,36 @@
+swedish_iron_deposit_1 = { #Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+	unit_type = unit_iron_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_60_75_latitude_north
+			geocoordinate = { 13.623046875 60.6005859375 }
+		}
+	}
+}
+
+swedish_iron_deposit_2 = { #Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+	unit_type = unit_iron_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_60_75_latitude_north
+			geocoordinate = { 14.0185546875 60.46875 }
+		}
+	}
+}
+
+swedish_iron_deposit_3 = { #Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+	unit_type = unit_iron_deposit
+	
+	history = {
+		active = true
+		location = {
+			map_template = earth_60_75_latitude_north
+			geocoordinate = { 14.150390625 60.8203125 }
+		}
+	}
+}
+

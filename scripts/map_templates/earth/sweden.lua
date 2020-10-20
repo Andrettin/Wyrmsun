@@ -25,9 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateResource("earth", "unit_iron_deposit", {4150, 669}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit_iron_deposit", {4159, 672}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
-SetMapTemplateResource("earth", "unit_iron_deposit", {4162, 664}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit_iron_deposit", {4162, 695}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit_iron_deposit", {4165, 698}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 SetMapTemplateResource("earth", "unit_iron_deposit", {4197, 694}) -- Iron deposits; Source: "Atlas de História Mundial", 2001, pp. 212-213.
