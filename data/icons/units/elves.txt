@@ -1,0 +1,3 @@
+elven_worker = {
+	file = "icons/units/elven/worker.png"
+}

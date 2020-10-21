@@ -473,6 +473,11 @@ WorkerStoneMining = {
 	"frame 25", "wait 9", "frame 25",
 	"wait 1",
 }
+WorkerRepair = {
+	"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+	"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
+	"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
+}
 
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
@@ -543,11 +548,25 @@ DefineAnimations("animations-worker", {
 	Harvest_limestone = WorkerStoneMining,
 	Harvest_diamonds = WorkerStoneMining,
 	Harvest_emeralds = WorkerStoneMining,
-	Repair = {
-		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-		"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
-		"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
-	},
+	Repair = WorkerRepair,
+	Death = WorkerDeath
+})
+
+DefineAnimations("animations-elven-worker", {
+	Still = UnitStill,
+	Move = UnitMoveFourFramesNoIdle,
+	Attack = WorkerAttack,
+	Harvest_gold = WorkerMetalMining,
+	Harvest_silver = WorkerMetalMining,
+	Harvest_copper = WorkerMetalMining,
+	Harvest_iron = WorkerMetalMining,
+	Harvest_mithril = WorkerMetalMining,
+	Harvest_lumber = WorkerLumberHarvesting,
+	Harvest_stone = WorkerStoneMining,
+	Harvest_limestone = WorkerStoneMining,
+	Harvest_diamonds = WorkerStoneMining,
+	Harvest_emeralds = WorkerStoneMining,
+	Repair = WorkerRepair,
 	Death = WorkerDeath
 })
 

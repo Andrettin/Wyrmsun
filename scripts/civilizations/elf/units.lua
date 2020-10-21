@@ -56,12 +56,6 @@ DefineUnitType("unit-elven-swordsman", {
 	ButtonKey = "s",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Sounds = {
---		"selected", "basic-germanic-voices-selected-group",
---		"acknowledge", "basic-germanic-voices-acknowledge",
---		"attack", "basic-germanic-voices-attack",
---		"ready", "basic-germanic-voices-ready",
---		"help", "basic-germanic-voices-help",
-		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
 	}
@@ -101,11 +95,6 @@ DefineUnitType("unit-elven-priest", {
 	AutoCastActive = {"spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
---		"selected", "basic-teuton-voices-selected-group",
---		"acknowledge", "basic-teuton-voices-acknowledge",
---		"ready", "basic-teuton-voices-ready",
---		"help", "basic-teuton-voices-help",
-		"dead", "basic-human-voices-dead",
 		"hit", "fist-attack",
 		"miss", "attack-miss"
 	}

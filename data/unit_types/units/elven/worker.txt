@@ -1,0 +1,73 @@
+unit_elven_worker = {
+	name = "Worker"
+	parent = unit_template_worker
+	civilization = elven
+	description = "The elven working class performs a varied range of tasks required by their society, such as tending to plants and gathering wood."
+	image_file = "units/elven/worker.png"
+	frame_size = { 116 116 }
+	offset = { 0 5 }
+	animation_set = animations_elven_worker
+	icon = elven_worker
+	corpse_type = unit_human_dead_body
+	button_key = w
+	weapon_classes = { axe mace }
+	hack_damage = true
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_boots
+		unit_cheese
+		unit_carrots
+	}
+	default_equipment = {
+		boots = unit_boots
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		silver = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		copper = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		iron = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		mithril = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		lumber = {
+			loaded_image_file = "units/elven/worker_with_lumber.png"
+		}
+		stone = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		limestone = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		coal = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		jewelry = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		furniture = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		leather = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		diamonds = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+		emeralds = {
+			loaded_image_file = "units/elven/worker_with_gold.png"
+		}
+	}
+	sounds = {
+		hit = axe_attack
+		miss = attack_miss
+	}
+}

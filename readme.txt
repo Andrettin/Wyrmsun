@@ -60,7 +60,7 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added the Infusion ability for dwarven Runesmiths, Runemasters and Arcanisters. When used, this ability increases the arcane damage of the target unit by 4.
 - Fixed the tooltip of the Barkskin ability to correctly reflect that it increases armor by 4.
-- Improved the performance of the autocasting.
+- Improved the performance of autocasting.
 - The hotkey for Inspire is now "p", as its previous hotkey ("i") was the same as that to open the inventory.
 
 * Ages
@@ -128,6 +128,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Dwarven axe infantry units now have +10 HP and -2 evasion.
 - Dwarven spear infantry units now have +5 HP and -2 evasion (they already had a free +5 HP bonus before).
+- Added Elven Worker unit.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.

@@ -13,6 +13,10 @@ elf = {
 	description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare."
 	background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore."
 	
+	unit_sounds = {
+		dead = basic_human_voices_dead
+	}
+	
 	button_icons = {
 		move = icon_gnomish_boots
 		stop = icon_germanic_wooden_oblong_shield
