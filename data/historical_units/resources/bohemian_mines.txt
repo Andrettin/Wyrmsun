@@ -8,6 +8,26 @@ the_wedding_veil = {
 	}
 }
 
+esel = {
+	unit_type = unit_silver_deposit
+	unique = esel
+	
+	history = {
+		active = true
+		location = kutna_hora #the silver mine of Esel was located in Kutná Hora
+	}
+}
+
+smitna = {
+	unit_type = unit_silver_deposit
+	unique = smitna
+	
+	history = {
+		active = true
+		location = kutna_hora #the silver mine of Šmitna was located in Kutná Hora
+	}
+}
+
 bohemian_tin_deposit = { #Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 	unit_type = unit_copper_deposit
 	

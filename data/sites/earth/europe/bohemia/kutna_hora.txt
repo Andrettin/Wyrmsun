@@ -1,0 +1,9 @@
+kutna_hora = {
+	name = "Kutna Hora" #Kutná Hora
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 15.556640625 49.2626953125 }
+	regions = {
+		cisleithania
+		czechoslovakia
+	}
+}

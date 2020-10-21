@@ -27,6 +27,10 @@
 
 -- Notes on Islands: If a building should exist on an island, but the latter is too small (for instance, if it has a single tile), then the building should be left out, unless the building is vitally important (placing it in the island will already automatically move it to the closest shore).
 
+-- Conversion formula from the old Earth map's coordinates to geocoordinates:
+-- To Longitude = (X + 256 - 4096) / 22,755555555555555555555555555556
+-- To Latitude = (Y - 2048) / 22,755555555555555555555555555556 * -1
+
 Load("scripts/map_templates/alfheim.lua")
 Load("scripts/map_templates/earth.lua")
 Load("scripts/map_templates/nidavellir.lua")
