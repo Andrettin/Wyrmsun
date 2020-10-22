@@ -41,7 +41,8 @@ DefineUpgrade("upgrade-free-workers", {
 		"unit-goblin-worker"
 	},
 	CivilizationPriorities = {
-		"dwarf", 200,
+		"dwarven", 200,
+		"elven", 200,
 		"germanic", 200,
 		"goblin", 200
 	}
