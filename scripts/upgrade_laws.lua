@@ -35,6 +35,7 @@ DefineUpgrade("upgrade-free-workers", {
 		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
+		"unit_elven_worker",
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"

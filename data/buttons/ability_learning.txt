@@ -232,6 +232,7 @@ learn_toughness = {
 		unit_derro_worker
 		unit_elven_priest
 		unit_elven_swordsman
+		unit_elven_worker
 		unit_ettin
 		unit_frank_spearman
 		unit_germanic_archer
