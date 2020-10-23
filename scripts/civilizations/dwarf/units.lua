@@ -37,7 +37,7 @@ DefineUnitType("unit-dwarven-miner", {
 		{"boots", "unit-boots"}
 	},
 	Corpse = "unit-dwarven-dead-body",
-	WeaponClasses = {"mace", "axe"},
+	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "m",
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
