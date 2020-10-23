@@ -93,7 +93,7 @@ end)
 
 function ApplyTechLevels()
 	local default_law_upgrades = {
-		"upgrade-free-workers"
+		"upgrade_free_workers"
 	}
 	local agrarian_upgrades = {
 		"upgrade-masonry"

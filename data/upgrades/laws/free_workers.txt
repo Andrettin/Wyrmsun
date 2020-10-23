@@ -1,0 +1,31 @@
+upgrade_free_workers = {
+	name = "Free Workers"
+	icon = icon_labor
+	#description = ".\n\nEffect: +25% worker cost, +25% worker gathering rates."
+	costs = {
+		time = 200
+		copper = 1200
+	}
+	scaled_costs = {
+		copper = 100
+	}
+	scaled_cost_unit_classes = {
+		worker
+		skilled_miner
+		expert_miner
+		journeyman_smith
+		master_smith
+		grandmaster_smith
+	}
+	civilization_priorities = {
+		dwarven = 200
+		elven = 200
+		germanic = 200
+		goblin = 200
+	}
+	modifier = {
+		remove_upgrades = {
+			upgrade_serfdom
+		}
+	}
+}

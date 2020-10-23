@@ -220,9 +220,6 @@ Load("scripts/upgrade_faction_types.lua")
 -- Load the deity upgrades
 Load("scripts/upgrade_deities.lua")
 
--- Law upgrades
-Load("scripts/upgrade_laws.lua")
-
 -- Military doctrine upgrades
 Load("scripts/upgrade_military_doctrines.lua")
 
