@@ -1,0 +1,17 @@
+To create a mod (i.e. a custom module), go to your "Documents" folder in your computer, and then to the "Wyrmsun" subfolder. In the "Documents/Wyrmsun" folder, create a "modules" subfolder.
+
+Now, create a subfolder there for your module, with a name of your choice (e.g. "my_module"). Next we deal with the structure of the module itself.  In this regard, the modules in the base game's "modules" subfolder can serve as a reference.
+
+Within the newly-created folder for your module, create a "module.txt" file. Define a name for your module there, like this:
+
+name = "My Module"
+
+You can optionally also define other modules as dependencies for yours in your module.txt file, so that your module will be loaded after them. Here is an example:
+
+dependencies = { other_module }
+
+With the creation of your module.txt file, your module will now be loaded by the game when it starts. Your module does not have any content yet, however, which is what we will look at next.
+
+Textual database entries (e.g. faction definitions) are stored for modules in their "data" folder. In it, different sorts of data entries are placed in differently-named folders (e.g. "factions" for faction definitions), which is how the game recognizes the type of data entry being loaded. For the various different types of data entries, see the base game's own "data" folder, as well as those of its modules.
+
+A module can also contain submodules. Those are located in a "modules" folder within the module's directory. A submodule is necessarily loaded after its parent module.
