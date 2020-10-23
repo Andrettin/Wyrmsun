@@ -102,6 +102,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the "Use OpenGL" option, as OpenGL is now always used for rendering.
 - Reworked the random number generator to provide better results.
 
+* Modding
+- Added instructions (in the game's "documents" subfolder) on how to create a mod in the game's new database format.
+
 * Multiplayer
 - Fixed possible source of desyncs related to hiring units at mercenary camps.
 
