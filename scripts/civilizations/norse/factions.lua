@@ -103,25 +103,6 @@ DefineFaction("scania", {
 	DevelopsFrom = {"dane-tribe", "swede-tribe"}
 })
 
-DefineFaction("denmark", {
-	Name = "Denmark",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-denmark",
-	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"dane-tribe", "scania"},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "dane-tribe")) then
-				return false
-			end
-		end
-		return true
-	end
-})
-
 DefineFaction("gautland", {
 	Name = "Gautland",
 	Civilization = "norse",
@@ -243,25 +224,6 @@ DefineFaction("vingulmark", {
 	HistoricalDiplomacyStates = {
 		{841, 9, 1}, "agder", "war" -- Halfdan the Black, king of Agder, attacked Vingulmark with an army in the autumn of 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	}
-})
-
-DefineFaction("norway", {
-	Name = "Norway",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe", "agder", "halogaland", "hedmark", "hordaland", "orkney", "sogn", "vestfold", "vingulmark"},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "Faction") == "agder" or GetPlayerData(i, "Faction") == "halogaland" or GetPlayerData(i, "Faction") == "hedmark" or GetPlayerData(i, "Faction") == "hordaland" or GetPlayerData(i, "Faction") == "sogn" or GetPlayerData(i, "Faction") == "vestfold" or GetPlayerData(i, "Faction") == "vingulmark")) then
-				return false
-			end
-		end
-		return true
-	end
 })
 
 -- Mercenary Companies

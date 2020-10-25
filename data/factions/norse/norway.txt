@@ -1,0 +1,38 @@
+norway = {
+	name = "Norway"
+	adjective = "Norwegian"
+	civilization = norse
+	type = polity
+	color = blue
+	default_tier = kingdom
+	default_capital = oslo
+	faction_upgrade = upgrade_faction_norway
+	icon = icon_flag_cyan_lion_on_red
+	develops_from = {
+		sitone_tribe
+		swede_tribe
+		agder
+		halogaland
+		hedmark
+		hordaland
+		orkney
+		sogn
+		vestfold
+		vingulmark
+	}
+	conditions = {
+		not = {
+			any_player = {
+				or = {
+					faction = agder
+					faction = halogaland
+					faction = hedmark
+					faction = hordaland
+					faction = sogn
+					faction = vestfold
+					faction = vingulmark
+				}
+			}
+		}
+	}
+}
