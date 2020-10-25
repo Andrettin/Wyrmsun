@@ -22,7 +22,7 @@ norway = {
 	}
 	conditions = {
 		not = {
-			any_player = {
+			any_other_player = {
 				or = {
 					faction = agder
 					faction = halogaland

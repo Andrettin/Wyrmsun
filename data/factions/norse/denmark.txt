@@ -14,7 +14,7 @@ denmark = {
 	}
 	conditions = {
 		not = {
-			any_player = {
+			any_other_player = {
 				faction = dane_tribe
 			}
 		}
