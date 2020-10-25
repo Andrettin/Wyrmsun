@@ -1,0 +1,37 @@
+englaland = {
+	name = "Englaland" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 211.
+	adjective = "Englalander"
+	civilization = anglo_saxon
+	type = polity
+	color = red
+	default_tier = kingdom
+	default_capital = london
+	faction_upgrade = upgrade_faction_englaland
+	icon = icon_flag_cyan_lion_on_red
+	develops_from = {
+		bernicia
+		deira
+		east_anglia
+		essex
+		kent
+		mercia
+		middle_anglia
+		middlesex
+		northumbria
+		sussex
+		wessex
+	}
+	conditions = {
+		not = {
+			any_other_player = {
+				or = {
+					civilization = anglo_saxon
+					civilization = english
+				}
+				not = {
+					faction = scotland
+				}
+			}
+		}
+	}
+}

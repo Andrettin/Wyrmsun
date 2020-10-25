@@ -1,0 +1,42 @@
+northumbria = {
+	name = "Northumbria"
+	adjective = "Northumbrian"
+	civilization = anglo_saxon
+	type = polity
+	color = brown
+	default_tier = kingdom
+	default_capital = york
+	faction_upgrade = upgrade_faction_northumbria
+	icon = icon_flag_five_orange_birds_on_black
+	develops_from = {
+		bernicia
+		deira
+	}
+	conditions = {
+		not = {
+			any_other_player = {
+				or = {
+					faction = bernicia
+					faction = deira
+				}
+			}
+		}
+	}
+	
+	history = {
+		627 = {
+			#king Edwin of Northumbria was baptized in 627 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+			acquired_upgrades += upgrade_deity_christian_god
+		}
+		
+		632 = {
+			#the Christian mission to Northumbria supported by king Edwin collapsed in 632 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 115.
+			acquired_upgrades -= upgrade_deity_christian_god
+		}
+		
+		634 = {
+			#Aidan and his monks arrived in Northumbria in 634 to establish Christianity there as per king Oswald's request; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 118.
+			acquired_upgrades += upgrade_deity_christian_god
+		}
+	}
+}

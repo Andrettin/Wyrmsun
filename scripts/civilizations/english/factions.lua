@@ -25,30 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("england", {
-	Name = "England",
-	Civilization = "english",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-england",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"englaland"},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (
-				i ~= trigger_player
-				and GetPlayerData(i, "TotalNumUnitsConstructed") > 0
-				and (GetPlayerData(i, "RaceName") == "anglo-saxon" or GetPlayerData(i, "RaceName") == "english")
-				and GetPlayerData(i, "Faction") ~= "scotland"
-			) then
-				return false
-			end
-		end
-		return true
-	end
-})
-
 DefineFaction("scotland", {
 	Name = "Scotland",
 	Civilization = "english",

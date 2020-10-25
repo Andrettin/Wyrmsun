@@ -1,0 +1,27 @@
+england = {
+	name = "England"
+	adjective = "English"
+	civilization = english
+	type = polity
+	color = red
+	default_tier = kingdom
+	default_capital = london
+	faction_upgrade = upgrade_faction_england
+	icon = icon_flag_cyan_lion_on_red
+	develops_from = {
+		englaland
+	}
+	conditions = {
+		not = {
+			any_other_player = {
+				or = {
+					civilization = anglo_saxon
+					civilization = english
+				}
+				not = {
+					faction = scotland
+				}
+			}
+		}
+	}
+}
