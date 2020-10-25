@@ -5,6 +5,7 @@ unit_orc_spearthrower = {
 	description = "Amongst orcs, throwing spears are often regarded as a cowardly weapon; but even orcs, especially youths and those of slight build, are pragmatic enough to use them in spite of this. Orcish spearthrowers are seldom well equipped, and have no semblance of training. Even as poorly handled as they are, their weapons can still be quite deadly, and the wielders thereof rarely march alone."
 	image_file = "units/orc/spearthrower.png"
 	frame_size = { 132 132 }
+	offset = { 0 4 }
 	animation_set = animations_orc_spearthrower
 	icon = icon_orc_spearthrower
 	missile = missile_orc_javelin
