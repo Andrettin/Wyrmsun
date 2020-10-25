@@ -1,0 +1,45 @@
+francia = {
+	name = "Francia"
+	adjective = "Frankish"
+	civilization = frankish
+	parent_faction = frank_tribe
+	type = polity
+	color = green
+	default_tier = kingdom
+	faction_upgrade = upgrade_faction_francia
+	icon = icon_flag_old_austria
+	develops_from = {
+		frank_tribe
+	}
+	character_title_names = {
+		head_of_government = {
+			monarchy = "Mayor of the Palace" #Source: "Medieval Warfare V.2", 2013, p. 7.
+		}
+	}
+	conditions = {
+		not = {
+			any_other_player = {
+				civilization = frankish
+			}
+		}
+	}
+	
+	history = {
+		#polities must have writing and masonry
+		acquired_upgrades += upgrade_writing
+		acquired_upgrades += upgrade_masonry
+		
+		486 = {
+			#capital = tournai
+		}
+	
+		565 = {
+			#Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
+			acquired_upgrades += upgrade_teuton_coinage
+		}
+		
+		768 = {
+			#capital = aachen #Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+	}
+}

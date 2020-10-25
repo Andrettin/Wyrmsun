@@ -101,38 +101,6 @@ DefineFaction("frank-tribe", {
 	}
 })
 
-DefineFaction("francia", {
-	Name = "Francia",
-	Civilization = "frankish",
-	ParentFaction = "frank-tribe",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-francia",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"frank-tribe"},
-	MinisterTitles = {
-		"head-of-government", "none", "monarchy", "none", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
-	},
-	HistoricalUpgrades = {
-		0, "upgrade-writing", true, -- polities must have writing
-		0, "upgrade-masonry", true,
-		565, "upgrade-teuton-coinage", true -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-	},
-	HistoricalCapitals = {
-		486, "tournai",
---		768, "Lower Rhine" -- Aachen was Francia's capital during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "frankish") then
-				return false
-			end
-		end
-		return true
-	end
-})
-
 DefineFaction("austrasia", {
 	Name = "Austrasia",
 	Civilization = "frankish",
