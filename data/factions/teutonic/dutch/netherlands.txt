@@ -1,0 +1,48 @@
+netherlands = {
+	name = "Netherlands"
+	adjective = "Dutch"
+	civilization = teutonic
+	type = polity
+	color = orange
+	default_tier = kingdom
+	icon = icon_flag_green_lion_on_orange
+	faction_upgrade = upgrade_faction_netherlands
+	definite_article = true
+	develops_from = {
+		ampsivarii_tribe
+		batavian_tribe
+		chamavi_tribe
+		chatti_tribe
+		frank_tribe
+		sugambri_tribe
+		austrasia
+		brabant
+		drenthe
+		friesland
+		holland
+		overijssel
+		salia
+	}
+	conditions = {
+		not = {
+			any_other_player = {
+				or = {
+					faction = brabant
+					faction = drenthe
+					faction = holland
+					faction = overijssel
+				}
+			}
+		}
+	}
+	#settlement_names = {
+	#	"'s-Hertogenbosch",
+	#	"Beverwijk",
+	#	"Rotterdam",
+	#	"Staphorst", #Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+	#	"Waalwijk"
+	#}
+	#province_names = {
+	#	"Flevoland"
+	#}
+}

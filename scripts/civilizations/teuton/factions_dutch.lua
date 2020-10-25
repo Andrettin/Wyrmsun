@@ -68,38 +68,3 @@ DefineFaction("overijssel", {
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	DevelopsFrom = {"frank-tribe", "chamavi-tribe"}
 })
-
-DefineFaction("netherlands", {
-	Name = "Netherlands",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "orange",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-netherlands",
-	Icon = "icon-flag-green-lion-on-orange",
-	DefiniteArticle = true,
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe", "austrasia", "brabant", "drenthe", "friesland", "holland", "overijssel", "salia"},
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (
-				i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and
-				(GetPlayerData(i, "Faction") == "brabant" or GetPlayerData(i, "Faction") == "drenthe" or GetPlayerData(i, "Faction") == "holland" or GetPlayerData(i, "Faction") == "overijssel")
-			) then
-				return false
-			end
-		end
-		return true
-	end,
-	--[[
-	SettlementNames = {
-		"'s-Hertogenbosch",
-		"Beverwijk",
-		"Rotterdam",
-		"Staphorst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-		"Waalwijk"
-	},
-	--]]
-	ProvinceNames = {
-		"Flevoland"
-	}
-})

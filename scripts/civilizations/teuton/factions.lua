@@ -273,34 +273,3 @@ DefineFaction("thuringia", {
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")
-
-DefineFaction("germany", {
-	Name = "Germany",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-holy-rome",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	Adjective = "German",
-	DevelopsFrom = {"austria", "bavaria", "brandenburg", "cologne", "franconia", "hesse", "prussia", "saxony", "swabia"}, -- must either be one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor or German king/emperor, or an electorate
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi")) then
-				return false
-			end
-		end
-		return true
-	end
-})
-
-DefineFaction("holy_rome", {
-	Conditions = function(s)
-		for i=0,(PlayerMax - 2) do
-			if (i ~= trigger_player and GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and (GetPlayerData(i, "RaceName") == "teuton" or GetPlayerData(i, "RaceName") == "frankish" or GetPlayerData(i, "RaceName") == "suebi" or GetPlayerData(i, "Faction") == "rome")) then
-				return false
-			end
-		end
-		return true
-	end
-})

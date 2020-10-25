@@ -1,23 +1,22 @@
-holy_rome = {
-	name = "Holy Rome"
-	adjective = "Holy Roman"
+germany = {
+	name = "Germany"
+	adjective = "German"
 	civilization = teutonic
 	type = polity
-	color = yellow
-	default_tier = empire
-	default_capital = frankfurt
-	icon = icon_flag_holy_roman_empire
+	color = black
+	default_tier = kingdom
+	icon = icon_flag_five_orange_birds_on_black
 	faction_upgrade = upgrade_faction_holy_rome
 	short_name = true
 	develops_from = {
-		#must either be Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate
+		#must either be one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor or German king/emperor, or an electorate
 		austria
 		bavaria
-		francia
 		brandenburg
 		cologne
 		franconia
 		hesse
+		prussia
 		saxony
 		swabia
 	}
@@ -28,7 +27,6 @@ holy_rome = {
 					civilization = teutonic
 					civilization = frankish
 					civilization = suebi
-					faction = rome
 				}
 			}
 		}
