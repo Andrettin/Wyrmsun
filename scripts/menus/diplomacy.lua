@@ -4,8 +4,8 @@ function RunDiplomacyMenu()
 
 	menu:addLabel(_("Diplomacy"), 176 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addLabel(_("Allied"), 136 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
-	menu:addLabel(_("Enemy"), 196 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
+	menu:addLabel(_("Allied"), 152 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
+	menu:addLabel(_("Enemy"), 212 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
 	menu:addLabel(_("Shared Vision"), 286 * get_scale_factor(), 30 * get_scale_factor(), Fonts["game"])
 
 	local allied = {}
@@ -20,7 +20,7 @@ function RunDiplomacyMenu()
 			local l = Label(_(CPlayer:GetPlayer(i).Name))
 			l:setFont(Fonts["game"])
 			l:adjustSize()
-			menu:add(l, 16 * get_scale_factor(), ((18 * j) + 26) * get_scale_factor())
+			menu:add(l, 16 * get_scale_factor(), ((18 * j) + 32) * get_scale_factor())
 
 			-- FIXME: disable checkboxes in replays or if on the same team
 
@@ -28,7 +28,7 @@ function RunDiplomacyMenu()
 			local enemycb = {}
 			local sharedvisioncb = {}
 
-			alliedcb = menu:addImageCheckBox("", 126 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
+			alliedcb = menu:addImageCheckBox("", 142 * get_scale_factor(), ((18 * j) + 32) * get_scale_factor(),
 			function()
 				if (alliedcb:isMarked() and enemycb:isMarked()) then
 					enemycb:setMarked(false)
@@ -38,7 +38,7 @@ function RunDiplomacyMenu()
 			allied[j] = alliedcb
 			allied[j].index = i
 
-			enemycb = menu:addImageCheckBox("", 186 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
+			enemycb = menu:addImageCheckBox("", 202 * get_scale_factor(), ((18 * j) + 32) * get_scale_factor(),
 			function()
 				if (alliedcb:isMarked() and enemycb:isMarked()) then
 					alliedcb:setMarked(false)
@@ -47,7 +47,7 @@ function RunDiplomacyMenu()
 			enemycb:setMarked(CPlayer:GetThisPlayer():IsEnemy(i))
 			enemy[j] = enemycb
 
-			sharedvisioncb = menu:addImageCheckBox("", 276 * get_scale_factor(), ((18 * j) + 23) * get_scale_factor(),
+			sharedvisioncb = menu:addImageCheckBox("", 276 * get_scale_factor(), ((18 * j) + 32) * get_scale_factor(),
 			function() end)
 			sharedvisioncb:setMarked(CPlayer:GetThisPlayer():has_shared_vision_with(CPlayer:GetPlayer(i)))
 			sharedvision[j] = sharedvisioncb
