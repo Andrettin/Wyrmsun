@@ -28,6 +28,7 @@
 DefineUnitType("unit-template-fauna-unit", {
 	Name = "Fauna Unit",
 	Parent = "unit-template-unit",
+	Template = true,
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 2,
 	Charisma = 2,
@@ -40,6 +41,7 @@ DefineUnitType("unit-template-fauna-unit", {
 DefineUnitType("unit-template-diminutive-fauna-unit", {
 	Name = "Diminutive Fauna Unit",
 	Parent = "unit-template-fauna-unit",
+	Template = true,
 	TileSize = {1, 1}, BoxSize = {15, 15},
 	HitPoints = 1,
 	BasicDamage = 1, Missile = "missile-none",
