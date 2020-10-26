@@ -15,6 +15,7 @@ thrahila = {
 	history = {
 		-1600 = {
 			active = true
+			ai_active = false
 			location = frederikshavn
 		}
 		
