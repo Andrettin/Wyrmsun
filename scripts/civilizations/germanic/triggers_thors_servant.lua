@@ -65,6 +65,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 			return false
 		end
 		unit = CreateUnit("unit-germanic-archer", hlesing_player, {GetSiteData("hlesey", "MapPosX"), GetSiteData("hlesey", "MapPosY")})
+		local players_around = GetPlayersAroundUnit(unit, 128)
 		
 		for i=0,(PlayerMax - 2) do
 			if (i ~= hlesing_player) then
