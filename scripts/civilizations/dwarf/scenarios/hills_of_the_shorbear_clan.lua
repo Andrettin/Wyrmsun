@@ -714,7 +714,7 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 				end
 				
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
-				unit = CreateUnit("unit-dwarven-stronghold", 0, {37, 32})
+				unit = CreateUnitOnTop("unit-dwarven-stronghold", 0, FindUnit("unit-settlement-site"))
 				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
 				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
 				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
