@@ -266,11 +266,11 @@ end
 
 if (LoadedGame == false) then
 	-- create some gryphons
-	CreateCreeps(PlayerNumNeutral, "unit-gryphon", 3, 0, 0, CMap.Map.Info.MapWidth - 2, CMap.Map.Info.MapHeight - 2)
+	CreateCreeps(PlayerNumNeutral, "unit-gryphon", 3, 0, 0, CMap:get().Info.MapWidth - 2, CMap:get().Info.MapHeight - 2)
 
 	CreateCritters()
 
-	CreateRoamingFog((CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 1024) -- should be particularly foggy
+	CreateRoamingFog((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 1024) -- should be particularly foggy
 
-	CreateNeutralBuildings("unit-tree-stump", (CMap.Map.Info.MapWidth * CMap.Map.Info.MapHeight) / 4096, 0, CMap.Map.Info.MapWidth - 2, 0, CMap.Map.Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-tree-stump", (CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 4096, 0, CMap:get().Info.MapWidth - 2, 0, CMap:get().Info.MapHeight - 2, false)
 end
