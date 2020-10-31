@@ -1,4 +1,99 @@
 ogre = {
 	name = "Ogre"
+	parent_civilization = neutral
+	species = ogre
+	group = ettin
+	visible = false
+	playable = false
+	interface = goblin
+	default_color = red
 	language = ogre
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_goblin_wooden_shield
+		attack = icon_dwarven_battle_axe
+		patrol = icon_goblin_patrol_land
+		stand_ground = icon_dwarven_stand_ground
+		return_goods = icon_goblin_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/goblin/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/goblin/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/goblin/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/goblin/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	personal_names = {
+		male = {
+			"Akoark" #from Battle for Wesnoth
+			"Akort" #from Battle for Wesnoth
+			"Akzalk" #from Battle for Wesnoth
+			"Arkarm" #from Battle for Wesnoth
+			"Barkuk" #from Battle for Wesnoth
+			"Blokkar" #from Battle for Wesnoth
+			"Borkuk" #from Battle for Wesnoth
+			"Bukkak" #from Battle for Wesnoth
+			"Bulruk" #from Battle for Wesnoth
+			"Corkkar" #from Battle for Wesnoth
+			"Delkkak" #from Battle for Wesnoth
+			"Garkuk" #from Battle for Wesnoth
+			"Gnukk" #from Battle for Wesnoth
+			"Goruk" #from Battle for Wesnoth
+			"Grak" #from Battle for Wesnoth
+			"Gurk" #from Battle for Wesnoth
+			"Gurm" #from Battle for Wesnoth
+			"Kalknix" #from Battle for Wesnoth
+			"Karak" #from Battle for Wesnoth
+			"Karbuk" #from Battle for Wesnoth
+			"Kargnak" #from Battle for Wesnoth
+			"Karterak" #from Battle for Wesnoth
+			"Kayrak" #from Battle for Wesnoth
+			"Kelkrar" #from Battle for Wesnoth
+			"Kerta" #from Battle for Wesnoth
+			"Kilkrar" #from Battle for Wesnoth
+			"Kingrok" #from Battle for Wesnoth
+			"Kirk" #from Battle for Wesnoth
+			"Klud" #from Battle for Wesnoth
+			"Kokkan" #from Battle for Wesnoth
+			"Kolk" #from Battle for Wesnoth
+			"Komak" #from Battle for Wesnoth
+			"Korgnak" #from Battle for Wesnoth
+			"Kork" #from Battle for Wesnoth
+			"Koruck" #from Battle for Wesnoth
+			"Kramak" #from Battle for Wesnoth
+			"Krog" #from Battle for Wesnoth
+			"Krukrak" #from Battle for Wesnoth
+			"Krumuk" #from Battle for Wesnoth
+			"Kuknuk" #from Battle for Wesnoth
+			"Kurkur" #from Battle for Wesnoth
+			"Kurmak" #from Battle for Wesnoth
+			"Makron" #from Battle for Wesnoth
+			"Markaak" #from Battle for Wesnoth
+			"Markuk" #from Battle for Wesnoth
+			"Merknik" #from Battle for Wesnoth
+			"Nargak" #from Battle for Wesnoth
+			"Olk" #from Battle for Wesnoth
+			"Orkut" #from Battle for Wesnoth
+			"Reknak" #from Battle for Wesnoth
+			"Takolak" #from Battle for Wesnoth
+			"Trabuk" #from Battle for Wesnoth
+			"Trakkon" #from Battle for Wesnoth
+			"Urkar" #from Battle for Wesnoth
+			"Urkark" #from Battle for Wesnoth
+		}
+	}
 }
