@@ -1,0 +1,15 @@
+mage = {
+	name = "Mage"
+}
+
+veteran_mage = {
+	name = "Veteran Mage"
+}
+
+archmage = {
+	name = "Archmage"
+}
+
+geomancer = {
+	name = "Geomancer"
+}

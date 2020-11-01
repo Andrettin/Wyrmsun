@@ -3958,6 +3958,79 @@ DefineUnitType("unit-template-high-priest", {
 	Mana = {Enable = true, Max = 570, Value = 570, Increase = 1}
 } )
 
+DefineUnitType("unit_template_mage", {
+	Name = "Mage",
+	Parent = "unit-template-sapient-unit",
+	Class = "mage",
+	Template = true,
+	Costs = {"time", 90, "copper", 900},
+	Intelligence = 14,
+	Speed = 8,
+	HitPoints = 40,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 9,
+	BasicDamage = 6, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 8,
+	Evasion = 8,
+	Priority = 70,
+	Points = 60,
+	Demand = 1,
+	Gender = "male",
+	Type = "land",
+	RightMouseAction = "attack",
+	Coward = true,
+	CanAttack = true,
+	CanTargetLand = true,
+	Flesh = true,
+	NeutralHostile = true,
+	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
+	ButtonPos = 1,
+	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"},
+	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
+	Sounds = {
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+} )
+
+DefineUnitType("unit_template_veteran_mage", {
+	Name = "Veteran Mage",
+	Parent = "unit_template_mage",
+	Class = "veteran_mage",
+	Template = true,
+	Costs = {"time", 120, "copper", 1050},
+	Intelligence = 16,
+	HitPoints = 50,
+	Points = 90,
+	Level = 2,
+	Mana = {Enable = true, Max = 380, Value = 380, Increase = 1}
+} )
+
+DefineUnitType("unit_template_archmage", {
+	Name = "Archmage",
+	Parent = "unit_template_veteran_mage",
+	Class = "archmage",
+	Template = true,
+	Costs = {"time", 160, "copper", 1400},
+	Intelligence = 18,
+	HitPoints = 60,
+	Points = 120,
+	Level = 3,
+	Mana = {Enable = true, Max = 570, Value = 570, Increase = 1}
+} )
+
+DefineUnitType("unit_template_geomancer", {
+	Name = "Geomancer",
+	Parent = "unit_template_mage",
+	Class = "geomancer",
+	Template = true
+} )
+
 DefineUnitType("unit-template-flying-rider", {
 	Name = "Flying Rider",
 	Parent = "unit-template-sapient-unit",
