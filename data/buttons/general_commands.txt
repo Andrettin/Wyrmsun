@@ -38,6 +38,10 @@ choose_level_up_upgrade = {
 		priest
 		veteran_priest
 		high_priest
+		mage
+		veteran_mage
+		archmage
+		geomancer
 		thief
 		merchant
 		heroic_merchant
@@ -86,6 +90,10 @@ cancel_level_up_upgrade_choice = {
 		priest
 		veteran_priest
 		high_priest
+		mage
+		veteran_mage
+		archmage
+		geomancer
 		thief
 		merchant
 		heroic_merchant
@@ -128,6 +136,10 @@ open_inventory = {
 		priest
 		veteran_priest
 		high_priest
+		mage
+		veteran_mage
+		archmage
+		geomancer
 		thief
 		merchant
 		heroic_merchant
@@ -169,6 +181,10 @@ cancel_inventory = {
 		priest
 		veteran_priest
 		high_priest
+		mage
+		veteran_mage
+		archmage
+		geomancer
 		thief
 		merchant
 		heroic_merchant

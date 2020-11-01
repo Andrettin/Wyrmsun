@@ -225,6 +225,8 @@ learn_toughness = {
 		heroic_cavalry
 		flying_rider
 		high_priest
+		archmage
+		geomancer
 		thief
 	}
 	unit_types = {
