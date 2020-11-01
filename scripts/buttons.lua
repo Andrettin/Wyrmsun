@@ -368,17 +368,6 @@ DefineButton( { Pos = 4, Icon = "icon-healing",
 	}
 })
 
-DefineButton( { Pos = 4, Icon = "icon-shocking-grasp",
-	Action = "cast-spell", Value = "spell-shocking-grasp",
-	Description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds",
-	Key = "k", Hint = "Shoc~!king Grasp", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-priest",
-		"unit-teuton-priest",
-		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
-	}
-})
-
 DefineButton( { Pos = 4, Icon = "icon-slow",
 	Action = "cast-spell", Value = "spell-slow",
 	Description = "Slows a target unit",

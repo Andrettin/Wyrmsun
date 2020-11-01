@@ -53,3 +53,21 @@ cast_precise_shot = {
 		unit_teuton_archer
 	}
 }
+
+cast_shocking_grasp = {
+	pos = 4
+	icon = icon_shocking_grasp
+	action = cast_spell
+	value = spell_shocking_grasp
+	key = k
+	hint = "Shoc~!king Grasp"
+	popup = popup_commands
+	description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds."
+	unit_types = {
+		unit_germanic_priest
+		unit_teuton_priest
+		unit_dwarven_witness
+		unit_dwarven_annalist
+		unit_dwarven_loremaster
+	}
+}
