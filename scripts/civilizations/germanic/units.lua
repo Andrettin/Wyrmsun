@@ -689,7 +689,7 @@ DefineUnitType("unit-germanic-priest", {
 	Civilization = "germanic",
 	Description = "Germanic priests perform the rituals of their people, working magic to aid them.",
 	Image = {"file", "germanic/units/priest.png", "size", {72, 72}},
-	Animations = "animations-melee-unit-new",
+	Animations = "animations-spellcaster-new",
 	Icon = "icon-germanic-priest",
 	DefaultEquipment = {
 --		{"weapon", "unit-mace"},

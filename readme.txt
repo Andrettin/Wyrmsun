@@ -134,6 +134,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven spear infantry units now have +5 HP and -2 evasion (they already had a free +5 HP bonus before).
 - Added Elven Worker unit.
 - Dwarven Miners can no longer equip axes.
+- Priest units now have a slower attack rate.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.

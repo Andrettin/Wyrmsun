@@ -422,6 +422,28 @@ UnitWeaponThrowAttackSixFrames = {
 	"unbreakable end", "wait 1",
 }
 
+SpellcasterAttackOld = {
+	"unbreakable begin",
+	"frame 25", "wait 5", "frame 30", "wait 5",
+    "frame 35", "attack", "wait 7",
+    "frame 40", "wait 5", "frame 0", "wait 17", "frame 0",
+	"unbreakable end", "wait 1",
+}
+
+SpellcasterAttack = {
+	"unbreakable begin",
+  	"frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "wait 5",
+  	"frame 40", "attack", "wait 8", "frame 0", "wait 16", "frame 0",
+	"unbreakable end", "wait 1",
+}
+
+SpellcasterAttackNew = {
+	"unbreakable begin",
+  	"frame 30", "wait 5", "frame 35", "wait 5", "frame 40", "wait 5",
+  	"frame 45", "attack", "wait 8", "frame 0", "wait 16", "frame 0",
+	"unbreakable end", "wait 1",
+}
+
 WorkerAttack = {
 	"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
     "frame 40", "attack", "wait 5", "frame 45", "wait 3",
@@ -532,6 +554,27 @@ DefineAnimations("animations-orc-spearthrower", {
 	Move = UnitMoveFourFramesNoIdle,
 	Attack = UnitWeaponThrowAttackSixFrames,
 	Death = UnitDeathTwelfthFrameBegin
+})
+
+DefineAnimations("animations-spellcaster-old", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = SpellcasterAttackOld,
+	Death = UnitDeath
+})
+
+DefineAnimations("animations-spellcaster", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = SpellcasterAttack,
+	Death = UnitDeath
+})
+
+DefineAnimations("animations-spellcaster-new", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = SpellcasterAttackNew,
+	Death = WorkerDeath
 })
 
 DefineAnimations("animations-worker", {

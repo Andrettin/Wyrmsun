@@ -561,7 +561,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 		{"layer", "weapon", "file", "dwarf/units/weapons/axe.png"},
 		{"layer", "shield", "file", "dwarf/units/shields/round_shield.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-axefighter",
 	DefaultEquipment = {
 		{"weapon", "unit-battle-axe"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -702,7 +702,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 		{"layer", "weapon", "file", "dwarf/units/weapons/axe.png"},
 		{"layer", "shield", "file", "dwarf/units/shields/round_shield.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-steelclad",
 	DefaultEquipment = {
 		{"weapon", "unit-battle-axe"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -834,7 +834,7 @@ DefineUnitType("unit-dwarven-thane", {
 	Quote = "\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry",
 	Background = "In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them.",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-thane",
 	DefaultEquipment = {
 		{"weapon", "unit-battle-axe"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -909,7 +909,7 @@ DefineUnitType("unit-dwarven-guard", {
 		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
 		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-guard",
 	DefaultEquipment = {
 		{"weapon", "unit-short-spear"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -947,7 +947,7 @@ DefineUnitType("unit-dwarven-stalwart", {
 		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
 		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-stalwart",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-stalwart",
 	DefaultEquipment = {
 		{"weapon", "unit-short-spear"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -984,7 +984,7 @@ DefineUnitType("unit-dwarven-sentinel", {
 		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
 		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-sentinel",
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-sentinel",
 	DefaultEquipment = {
 		{"weapon", "unit-short-spear"},
 --		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
@@ -1420,7 +1420,7 @@ DefineUnitType("unit-dwarven-witness", {
 		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
 		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-witness",
+	Animations = "animations-spellcaster", Icon = "icon-dwarven-witness",
 	DefaultEquipment = {
 --		{"weapon", "unit-mace"},
 		{"boots", "unit-boots"}
@@ -1456,7 +1456,7 @@ DefineUnitType("unit-dwarven-annalist", {
 		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
 		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-annalist",
+	Animations = "animations-spellcaster", Icon = "icon-dwarven-annalist",
 	DefaultEquipment = {
 --		{"weapon", "unit-mace"},
 		{"boots", "unit-boots"}
@@ -1491,7 +1491,7 @@ DefineUnitType("unit-dwarven-loremaster", {
 		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
 		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
 	},
-	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-loremaster",
+	Animations = "animations-spellcaster", Icon = "icon-dwarven-loremaster",
 	DefaultEquipment = {
 --		{"weapon", "unit-mace"},
 		{"boots", "unit-boots"}

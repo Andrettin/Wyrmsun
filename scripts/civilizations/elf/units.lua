@@ -80,7 +80,7 @@ DefineUnitType("unit-elven-priest", {
 		{"layer", "pants", "file", "human/units/pants.png"},
 		{"layer", "boots", "file", "teuton/units/leather_shoes.png"}
 	},
-	Animations = "animations-melee-unit-new",
+	Animations = "animations-spellcaster-new",
 	Icon = "icon-kvasir",
 	DefaultEquipment = {
 --		{"weapon", "unit-mace"},
