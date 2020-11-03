@@ -419,6 +419,8 @@ function Event(speaker, event_description, player, options, option_effects, even
 	if not (arg) then
 		arg = {}
 	end
+	
+	local icon_frame = 0
 
 	if (
 		GameRunning and GetThisPlayer() == player
@@ -473,9 +475,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 		local b
 		if (type(speaker) == "number") then
 			event_icon = GetIconData(GetUnitVariable(speaker, "Icon"), "File")
+			icon_frame = GetIconData(GetUnitVariable(speaker, "Icon"), "Frame")
 			b = PlayerColorImageButton("", GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
 		elseif (event_icon ~= nil) then
+			icon_frame = GetIconData(event_icon, "Frame")
 			event_icon = GetIconData(event_icon, "File")
 			b = PlayerColorImageButton("", "gray")
 			menu:add(b, 153 * get_scale_factor(), 48 * get_scale_factor())
@@ -484,6 +488,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			b:setNormalImage(event_icon)
 			b:setPressedImage(event_icon)
 			b:setDisabledImage(event_icon)
+			b:set_frame(icon_frame)
 			b:setSize(46 * get_scale_factor(), 38 * get_scale_factor())
 			b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 			b:setIconFrameImage()
