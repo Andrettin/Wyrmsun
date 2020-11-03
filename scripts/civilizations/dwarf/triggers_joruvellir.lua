@@ -28,7 +28,7 @@
 AddTrigger("a-home-in-the-fields-of-sand-introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and i == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and i == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
 				trigger_player = i
 				return true
 			end
@@ -75,7 +75,7 @@ AddTrigger("aurvangling-goblins-sighted",
 AddTrigger("joruvellir-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "any", {GetMapTemplateData("joruvellir", "MapStartPosX"), GetMapTemplateData("joruvellir", "MapStartPosY")}, {GetMapTemplateData("joruvellir", "MapEndPosX"), GetMapTemplateData("joruvellir", "MapEndPosY")}, GetMapTemplateData("joruvellir", "MapLayer")) > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a_home_in_the_fields_of_sand") and GetNumUnitsAt(i, "any", {GetMapTemplateData("joruvellir", "MapStartPosX"), GetMapTemplateData("joruvellir", "MapStartPosY")}, {GetMapTemplateData("joruvellir", "MapEndPosX"), GetMapTemplateData("joruvellir", "MapEndPosY")}, GetMapTemplateData("joruvellir", "MapLayer")) > 0) then
 				trigger_player = i
 				return true
 			end
@@ -91,7 +91,7 @@ AddTrigger("joruvellir-sighted",
 AddTrigger("joruvellir-hall-completed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetNumUnitsAt(i, "unit-dwarven-town-hall", {GetSiteData("joruvellir", "MapCenterPosX") - 16, GetSiteData("joruvellir", "MapCenterPosY") - 16}, {GetSiteData("joruvellir", "MapCenterPosX") + 16, GetSiteData("joruvellir", "MapCenterPosY") + 16}, GetSiteData("joruvellir", "MapLayer")) > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a_home_in_the_fields_of_sand") and GetNumUnitsAt(i, "unit-dwarven-town-hall", {GetSiteData("joruvellir", "MapCenterPosX") - 16, GetSiteData("joruvellir", "MapCenterPosY") - 16}, {GetSiteData("joruvellir", "MapCenterPosX") + 16, GetSiteData("joruvellir", "MapCenterPosY") + 16}, GetSiteData("joruvellir", "MapLayer")) > 0) then
 				trigger_player = i
 				return true
 			end
@@ -107,7 +107,7 @@ AddTrigger("joruvellir-hall-completed",
 AddTrigger("joruvellir-hall-construction-failed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a-home-in-the-fields-of-sand") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-skilled-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-expert-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-runesmith") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-runemaster") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-arcanister") == 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "a_home_in_the_fields_of_sand") and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-skilled-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-expert-miner") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-runesmith") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-runemaster") == 0 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-arcanister") == 0) then
 				trigger_player = i
 				return true
 			end

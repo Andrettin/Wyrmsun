@@ -95,7 +95,7 @@ DefineAchievement("a-home-in-the-fields-of-sand", {
 	Icon = "icon-joruvellir-scout-black-hair",
 	Description = "Complete the A Home in the Fields of Sand scenario.",
 	PlayerColor = "brown",
-	RequiredQuests = {"a-home-in-the-fields-of-sand"}
+	RequiredQuests = {"a_home_in_the_fields_of_sand"}
 })
 
 DefineAchievement("the-treasures-of-svarinshaug", {

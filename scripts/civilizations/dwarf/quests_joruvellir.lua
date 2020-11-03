@@ -25,12 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("a-home-in-the-fields-of-sand", {
+DefineQuest("a_home_in_the_fields_of_sand", {
 	Name = "A Home in the Fields of Sand",
 	Icon = "icon-joruvellir-scout-black-hair",
 	PlayerColor = "brown",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,

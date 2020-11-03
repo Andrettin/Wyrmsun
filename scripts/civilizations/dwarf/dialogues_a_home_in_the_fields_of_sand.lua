@@ -41,7 +41,7 @@ DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 			"text", "Travel through the Aurvang swamplands? That place is filled with goblins, we must beware...",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "a-home-in-the-fields-of-sand")
+					SetPlayerData(trigger_player, "AcceptQuest", "a_home_in_the_fields_of_sand")
 					unit = FindUnit("unit-revealer", trigger_player)
 					if not (unit) then
 						unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY")}, GetSiteData("joruvellir", "MapLayer"))
@@ -97,11 +97,11 @@ DefineDialogue("joruvellir-hall-completed", {
 			"text", "The foundations of our new settlement have been laid. After a long journey, we can finally rejoice in the safety our new dwelling!",
 			"option-effects", {
 				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "a-home-in-the-fields-of-sand")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a-home-in-the-fields-of-sand") then
+					if (GetPlayerData(trigger_player, "HasQuest", "a_home_in_the_fields_of_sand")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
 							CallDialogue("campaign-victory", trigger_player)
 						end
-						SetPlayerData(trigger_player, "CompleteQuest", "a-home-in-the-fields-of-sand")
+						SetPlayerData(trigger_player, "CompleteQuest", "a_home_in_the_fields_of_sand")
 					end
 				end
 			}
@@ -116,7 +116,7 @@ DefineDialogue("joruvellir-hall-construction-failed", {
 			"text", "Our workers have been lost... how will we build our settlement now?",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "FailQuest", "a-home-in-the-fields-of-sand")
+					SetPlayerData(trigger_player, "FailQuest", "a_home_in_the_fields_of_sand")
 				end
 			}
 		}
