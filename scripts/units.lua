@@ -63,7 +63,7 @@ DefineUnitType("unit-template-building", {
 	Template = true,
 	TileSize = {2, 2}, BoxSize = {63, 63}, -- default tile and box size
 	Animations = "animations-building",
-	DrawLevel = 40,
+	DrawLevel = 35,
 	SightRange = 2,
 	Building = true,
 	VisibleUnderFog = true,
