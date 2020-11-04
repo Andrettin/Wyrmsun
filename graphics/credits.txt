@@ -687,6 +687,7 @@
 /graphics/icons/technologies/iron_tipped_wood_plow.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/pyromancy.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/wood_plow.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/dark_elven/mage.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/executioner.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/shadowguard.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/thug.png (by Jinn) (licensed under the CC0)
