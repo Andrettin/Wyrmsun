@@ -501,7 +501,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 				option_hotkey = string.lower(option_hotkey)
 			end
 
-			local option_b = menu:addFullButton(_(options[i]), option_hotkey, (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * (table.getn(options) - (i - 1))) * get_scale_factor(),
+			local option_b = menu:addFullButton(_(options[i]), option_hotkey, (176 - (224 / 2)) * get_scale_factor(), (352 - 40 - 32 * (table.getn(options) - i)) * get_scale_factor(),
 				function(s)
 					if (GameRunning and not IsNetworkGame()) then
 						SetGamePaused(false)
