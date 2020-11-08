@@ -1,0 +1,12 @@
+desolation_ruin_diamond_intact = {
+	name = "Desolation Ruin"
+	main_template = earth_30_45_latitude_north
+	size = { 12 12 }
+	overlay_terrain_file = "the_desolation_of_salt/desolation_ruin_diamond_intact.map"
+	constructed_only = true
+	optional = true
+	
+	history = {
+		active = true
+	}
+}
