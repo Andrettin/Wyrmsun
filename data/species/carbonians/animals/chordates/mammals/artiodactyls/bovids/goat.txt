@@ -1,0 +1,14 @@
+goat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
+	name = "Goat"
+	specific_name = "hircus"
+	supertaxon = capra
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		aragoral #oldest member of the Caprinae subfamily
+	}
+	native_terrain_types = {
+		grass
+		dirt
+	}
+}

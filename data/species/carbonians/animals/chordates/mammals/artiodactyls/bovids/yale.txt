@@ -1,0 +1,13 @@
+yale = {
+	name = "Yale"
+	supertaxon = eale
+	era = holocene
+	homeworld = nidavellir
+	pre_evolutions = {
+		aragoral #oldest member of the Caprinae subfamily
+	}
+	native_terrain_types = {
+		dry_mud
+		snow
+	}
+}

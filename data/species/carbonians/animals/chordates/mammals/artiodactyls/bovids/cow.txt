@@ -1,0 +1,10 @@
+cow = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183838
+	name = "Cow"
+	specific_name = "taurus"
+	supertaxon = bos
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		ilingoceros #shares a common ancestor with the bison
+	}
+}
