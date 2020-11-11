@@ -1,0 +1,19 @@
+horse = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
+	name = "Horse"
+	specific_name = "caballus"
+	supertaxon = equus
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		anchitherium_cursor #earlier equid
+		hipparion_primigenium #earlier equid
+		merychippus #earlier equid
+		nannippus #earlier equid
+		parahippus #earlier equid
+		pliohippus #earlier equid
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+	}
+}

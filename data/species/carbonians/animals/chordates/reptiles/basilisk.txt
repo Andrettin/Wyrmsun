@@ -1,6 +1,6 @@
 basilisk = {
 	name = "Basilisk"
 	supertaxon = reptilia
-	homeworld = alfheim
 	era = holocene
+	homeworld = alfheim
 }

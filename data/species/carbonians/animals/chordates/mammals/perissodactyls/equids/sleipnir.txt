@@ -1,0 +1,16 @@
+sleipnir = { #eight-legged horse from Norse mythology
+	name = "Sleipnir"
+	specific_name = "polypus" #"many feet" in Latin
+	supertaxon = sleipnir
+	era = holocene
+	homeworld = jotunheim #perhaps should be in Alfheim instead?
+	pre_evolutions = {
+		anchitherium_cursor #earlier equid
+		hipparion_primigenium #earlier equid
+		merychippus #earlier equid
+		nannippus #earlier equid
+		parahippus #earlier equid
+		pliohippus #earlier equid
+	}
+	#could be made of the suitable size to be mounted by a giant, and thus used for ettin cavalry (as in Norse mythology Sleipnir is the child of a giant's horse)
+}

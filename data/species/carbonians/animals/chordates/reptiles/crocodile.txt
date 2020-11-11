@@ -1,8 +1,8 @@
 crocodile = {
 	name = "Crocodile"
 	supertaxon = reptilia
-	homeworld = earth
 	era = holocene
+	homeworld = earth
 	pre_evolutions = {
 		deinosuchus
 	}

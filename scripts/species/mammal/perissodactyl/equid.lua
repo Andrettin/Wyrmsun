@@ -63,15 +63,6 @@ DefineSpeciesGenus("unicornis", {
 	Family = "equidae"
 })
 
-DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
-	Name = "Mesohippus",
-	Genus = "mesohippus",
-	Homeworld = "earth",
-	EvolvesFrom = {"palaeotherium"},
-	Era = "eocene"
-	-- ground dwelling browser
-})
-
 DefineSpecies("anchitherium-alberdiae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
 	Name = "Alberd Anchitherium", -- Anchitherium alberdiae
 	Genus = "anchitherium",
@@ -141,41 +132,4 @@ DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene"
 	-- ground dwelling browser
-})
-
-DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
-	Name = "Horse",
-	Genus = "equus",
-	Species = "caballus",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"} -- earlier equids
-})
-
-DefineSpecies("pegasus", {
-	Name = "Pegasus",
-	Genus = "pegasus",
-	Homeworld = "alfheim",
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	Era = "holocene"
-	-- in Wyrmsun, the wings of pegasuses are not avian, having fur instead of feathers
-})
-
-DefineSpecies("sleipnir", {
-	Name = "Sleipnir", -- eight-legged horse from Norse mythology
-	Genus = "sleipnir",
-	Species = "polypus", -- "many feet" in Latin
-	Homeworld = "jotunheim", -- perhaps should be in Alfheim instead?
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	Era = "holocene"
-	-- could be made of the suitable size to be mounted by a giant, and thus used for ettin cavalry (as in Norse mythology Sleipnir is the child of a giant's horse)
-})
-
-DefineSpecies("unicorn", {
-	Name = "Unicorn",
-	Genus = "unicornis",
-	Homeworld = "alfheim",
-	Terrains = {"grass"}, -- unicorns live in woodlands
-	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
-	Era = "holocene"
 })

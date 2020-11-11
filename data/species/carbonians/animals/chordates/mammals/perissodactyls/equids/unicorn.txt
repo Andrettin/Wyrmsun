@@ -1,0 +1,17 @@
+unicorn = {
+	name = "Unicorn"
+	supertaxon = unicornis
+	era = holocene
+	homeworld = alfheim
+	pre_evolutions = {
+		anchitherium_cursor #earlier equid
+		hipparion_primigenium #earlier equid
+		merychippus #earlier equid
+		nannippus #earlier equid
+		parahippus #earlier equid
+		pliohippus #earlier equid
+	}
+	native_terrain_types = {
+		grass #unicorns live in woodlands
+	}
+}
