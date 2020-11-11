@@ -1,0 +1,17 @@
+hippogryph = {
+	name = "Hippogryph"
+	supertaxon = hippogryphus
+	specific_name = "equus" #"equus" means "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
+	era = holocene
+	homeworld = alfheim
+	pre_evolutions = {
+		hoatzin #the Hippogryph has a common ancestor with eagles
+	}
+	native_terrain_types = {
+		grass
+		dirt
+		fairlimbed_tree
+		rock
+	}
+	#in mythology, a hippogryph is half-eagle and half-horse; but in the Wyrmsun universe, it is entirely avian, although with the body built like an hippogryph
+}
