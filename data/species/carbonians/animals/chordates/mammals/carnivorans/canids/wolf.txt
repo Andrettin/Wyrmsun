@@ -11,4 +11,12 @@ wolf = {
 		dirt
 		snow
 	}
+	specimen_names = {
+		"Fenrir" #Fenrir is a massive wolf in Norse mythology, who was bound by the gods only with great effort; during Ragnarok he will kill Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
+		"Freki" #Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
+		"Geri" #Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
+		"Hati" #Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+		"Hrodvitnir" #alternative name for the wolf from Norse mythology, Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
+		"Skoll" #Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+	}
 }

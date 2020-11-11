@@ -15,4 +15,36 @@ gryphon = {
 		snow
 	}
 	#in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
+	specimen_names = {
+		male = {
+			"Graa" #male gryphon name in Battle for Wesnoth
+			"Greaa" #male gryphon name in Battle for Wesnoth
+			"Gree" #male gryphon name in Battle for Wesnoth
+			"Kaaa" #male gryphon name in Battle for Wesnoth
+			"Kassshh" #male gryphon name in Battle for Wesnoth
+			"Kessshh" #male gryphon name in Battle for Wesnoth
+			"Korro" #male gryphon name in Battle for Wesnoth
+			"Kraa" #male gryphon name in Battle for Wesnoth
+			"Kuu" #male gryphon name in Battle for Wesnoth
+			"Kzaaa" #male gryphon name in Battle for Wesnoth
+			"Kzuuu" #male gryphon name in Battle for Wesnoth
+		}
+		
+		female = {
+			"Kaasa" #female gryphon name in Battle for Wesnoth
+			"Kayya" #female gryphon name in Battle for Wesnoth
+			"Keyya" #female gryphon name in Battle for Wesnoth
+			"Kiira" #female gryphon name in Battle for Wesnoth
+			"Korra" #female gryphon name in Battle for Wesnoth
+		}
+		
+		"Graak" #gryphon in Battle for Wesnoth: Heir to the Throne
+		"Graik" #gryphon in Battle for Wesnoth: Heir to the Throne
+		"Griak" #gryphon in Battle for Wesnoth: Heir to the Throne
+		"Grook" #gryphon in Battle for Wesnoth: Heir to the Throne
+		"Gruak" #gryphon in Battle for Wesnoth: Heir to the Throne
+		"Kaara" #gryphon in Battle for Wesnoth: The Hammer of Thursagan
+		"Kawn" #gryphon in Battle for Wesnoth: The Sceptre of Fire
+		"Krawg" #gryphon in Battle for Wesnoth: The Sceptre of Fire
+	}
 }

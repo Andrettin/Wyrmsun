@@ -13,4 +13,9 @@ wyrm = {
 		mud
 		desert_sand
 	}
+	specimen_names = {
+		"Jormungand" #Wyrm/dragon in Norse mythology
+		"Ladon" #Wyrm/dragon in Greek mythology
+		"Svafnir" #Wyrm/dragon in Norse mythology
+	}
 }

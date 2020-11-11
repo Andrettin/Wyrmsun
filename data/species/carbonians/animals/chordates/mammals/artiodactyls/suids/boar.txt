@@ -12,4 +12,9 @@ boar = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 	native_terrain_types = {
 		grass
 	}
+	specimen_names = {
+		"Gullinbursti" #Gullinbursti is Frey's boar in Norse mythology, given to him by the dwarf Brokk; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 52.
+		"Hildisvini" #Hildisvini is Freya's battle-boar in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+		"Saehrimnir" #Saehrimnir is the boar who is boiled in Valhalla in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
+	}
 }

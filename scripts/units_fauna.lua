@@ -644,38 +644,6 @@ DefineUnitType("unit-horse", {
 	Herbivore = true,
 	BluntDamage = true,
 	Coward = true,
-	PersonalNames = {
-		"Falhofnir", -- Falhófnir was a horse from Norse mythology (name means "barrel-hoof" or "hollow-hoof" according to Cleasby and "Hollow-Hoofed" according to Bellows); Bellows gives "Falhofnir" instead; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 139.
-		"Freyfaxi", -- Freyfaxi was a horse from Norse mythology (from the Hrafnkels Saga); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-		"Gisl", -- Gisl was a horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Glath", -- Glath was a horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Glaum", -- Glaum was the horse of Atli (Attila) in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 493.
-		"Gler", -- Gler was a horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Glofaxi", -- Glófaxi was a horse (presumably) from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-		"Grani", -- Gráni was Sigurd's horse in Norse mythology; Cleasby gives "Gráni", while Bellows gives "Grani"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
-		"Gullfaxi", -- Gullfaxi was the giant Hrungnir's horse in Norse mythology; name given by Cleasby as meaning "gold-mane"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145.
-		"Gyllir", -- Gyllir was a horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Hrimfaxi", -- Hrímfaxi was a horse from Norse mythology (from the Edda), which was the mount of Night; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 145; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 62.
-		"Lettfeti", -- Léttfeti was a horse from Norse mythology (name means "light-pacer" according to Cleasby and "light-feet" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 153, 386.
-		"Melnir", -- Melnir was a horse from Norse mythology (name means "Bit-Bearer" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 423.
-		"Mylnir", -- Mylnir was a horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Semik", -- Šemík was Horymír's horse in the Praguer legend
-		"Sinir", -- Sinir was a horse from Norse mythology (name means "Sinewy" according to Bellows); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Silfrintopp", -- Silfrintoppr was a horse from Norse mythology; Cleasby gives the meaning of "silver-tuft", while Bellows gives "silver-topped" instead; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 528, 636.
-		"Skeidbrimir", -- Skeiðbrímir was a horse from Norse mythology (Bellows gives the name as meaning "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 543.
-		"Skinfaxi", -- "Skínfaxi"; it was a sun-horse from Norse mythology (according to Bellows the name means "Shining-Mane"; Cleasby gives the meaning as "Sheen-mane" instead), which was the mount of Day; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 145, 547; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 62.
-		"Sleipnir", -- Sleipnir was Odin's eight-legged horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 102, 159, 196; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 567.
-		"Slongvir", -- Slöngvir was the horse of Adils (Yngling) of Sweden in the Ynglingasaga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-		"Sporvitnir", -- Sporvitnir was a horse from Norse mythology (name means "Spur-Wolf"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Svathilfari", -- Svathilfari was a giant's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 159, 196.
-		"Sveggjuth", -- Sveggjuth was a horse from Norse mythology (name means "Lithe"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
-		"Sviputh", -- Sviputh was a horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
-		"Vigblaer", -- Vígblær was Helgi's horse in Norse mythology (according to Cleasby its name means "War-breeze"; according to Bellows "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 325; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 715.
-		"Vingskornir", -- Vingskornir was Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
-		"male", "Alsvid", -- Alsviðr was one of the (male) sun horses from Norse mythology (name means "All-Swift", as given by both sources); also a constellation; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
-		"male", "Arvak", -- "Arvakr"; Arvak was one of the (male) sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 124.
-		"male", "Gulltopp" -- Gulltoppr was Heimdall's (male) horse from Norse mythology; Cleasby gives Gulltoppr (meaning "gold-tuft"); Bellows gives Golltop instead (meaning "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 220-221, 636; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 18.
-	},
 	Sounds = {
 		"selected", "horse-selected",
 		"acknowledge", "horse-idle",
@@ -743,13 +711,6 @@ DefineUnitType("unit-goat", {
 	Flesh = true,
 	Herbivore = true,
 	BluntDamage = true,
-	PersonalNames = {
-		"Aegipan", -- Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
-		"female", "Amaltheia", -- Amaltheia was a female goat from Greek mythology who fed child Zeus
-		"female", "Heidrun", -- Heidrun was a female goat from Norse mythology
-		"male", "Tanngnjost", -- Tanngnjóstr was one of Thor's male goats; the name means "teeth-gnasher"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
-		"male", "Tanngrisnir", -- Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
-	},
 	Sounds = {
 		"selected", "goat",
 		"acknowledge", "goat",
@@ -852,11 +813,6 @@ DefineUnitType("unit-boar", {
 	Flesh = true,
 	Herbivore = true,
 	BluntDamage = true,
-	PersonalNames = {
-		"Gullinbursti", -- Gullinbursti is Frey's boar in Norse mythology, given to him by the dwarf Brokk; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 52.
-		"Hildisvini", -- Hildisvini is Freya's battle-boar in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
-		"Saehrimnir" -- Saehrimnir is the boar who is boiled in Valhalla in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61.
-	},
 	Sounds = {
 		"selected", "pig",
 		"acknowledge", "pig",
@@ -907,14 +863,6 @@ DefineUnitType("unit-wolf", {
 	Flesh = true,
 	Carnivore = true,
 	PierceDamage = true,
-	PersonalNames = {
-		"Fenrir", -- Fenrir is a massive wolf in Norse mythology, who was bound by the gods only with great effort; during Ragnarok he will kill Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 193.
-		"Freki", -- Freki is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
-		"Geri", -- Geri is one of Odin's wolves in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 61; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
-		"Hati", -- Hati is the wolf who pursues the moon in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
-		"Hrodvitnir", -- alternative name for the wolf from Norse mythology, Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245.
-		"Skoll" -- Skoll is the wolf who pursues the sun in Norse mythology; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
-	},
 	Sounds = {
 		"selected", "wolf-growl",
 		"acknowledge", "wolf-growl",
@@ -967,32 +915,6 @@ DefineUnitType("unit-gryphon", {
 	Flesh = true,
 	Carnivore = true,
 	PierceDamage = true,
-	PersonalNames = {
-		"female", "Kaasa", -- female gryphon name in Battle for Wesnoth
-		"female", "Kayya", -- female gryphon name in Battle for Wesnoth
-		"female", "Keyya", -- female gryphon name in Battle for Wesnoth
-		"female", "Kiira", -- female gryphon name in Battle for Wesnoth
-		"female", "Korra", -- female gryphon name in Battle for Wesnoth
-		"male", "Graa", -- male gryphon name in Battle for Wesnoth
-		"male", "Greaa", -- male gryphon name in Battle for Wesnoth
-		"male", "Gree", -- male gryphon name in Battle for Wesnoth
-		"male", "Kaaa", -- male gryphon name in Battle for Wesnoth
-		"male", "Kassshh", -- male gryphon name in Battle for Wesnoth
-		"male", "Kessshh", -- male gryphon name in Battle for Wesnoth
-		"male", "Korro", -- male gryphon name in Battle for Wesnoth
-		"male", "Kraa", -- male gryphon name in Battle for Wesnoth
-		"male", "Kuu", -- male gryphon name in Battle for Wesnoth
-		"male", "Kzaaa", -- male gryphon name in Battle for Wesnoth
-		"male", "Kzuuu", -- male gryphon name in Battle for Wesnoth
-		"Graak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Graik", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Griak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Grook", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Gruak", -- gryphon in Battle for Wesnoth: Heir to the Throne
-		"Kaara", -- gryphon in Battle for Wesnoth: The Hammer of Thursagan
-		"Kawn", -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-		"Krawg" -- gryphon in Battle for Wesnoth: The Sceptre of Fire
-	},
 	Variations = {
 		--[[
 		{
@@ -1069,11 +991,6 @@ DefineUnitType("unit-wyrm", {
 	PierceDamage = true,
 	DehydrationImmunity = 1,
 	Drops = {"unit-wyrm-heart"},
-	PersonalNames = {
-		"Jormungand", -- Wyrm/dragon in Norse mythology
-		"Ladon", -- Wyrm/dragon in Greek mythology
-		"Svafnir" -- Wyrm/dragon in Norse mythology
-	},
 	Variations = {
 		--[[
 		{

@@ -11,4 +11,17 @@ goat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 		grass
 		dirt
 	}
+	specimen_names = {
+		male = {
+			"Tanngnjost" #Tanngnjóstr was one of Thor's male goats; the name means "teeth-gnasher"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
+			"Tanngrisnir" #Tanngrisnir was one of the goats who pulls Thor's chariot; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
+		}
+		
+		female = {
+			"Amaltheia" #Amaltheia was a female goat from Greek mythology who fed child Zeus
+			"Heidrun" #Heidrun was a female goat from Norse mythology
+		}
+		
+		"Aegipan" #Aegipan was a figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
+	}
 }
