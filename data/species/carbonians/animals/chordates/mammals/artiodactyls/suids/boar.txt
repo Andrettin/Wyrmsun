@@ -1,0 +1,15 @@
+boar = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
+	name = "Boar"
+	supertaxon = sus
+	specific_name = "scrofa"
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		bunolistriodon_lockarti #earlier suid
+		conohyus_simorrense #earlier suid
+		microstonyx_major #earlier suid
+	}
+	native_terrain_types = {
+		grass
+	}
+}

@@ -1,0 +1,17 @@
+gullinbursti = { #named after the mythical boar (in Norse mythology) Gullinbursti
+	name = "Gullinbursti"
+	supertaxon = seta #"bristle" in Latin
+	specific_name = "aurea" #"golden" in Latin
+	era = holocene
+	homeworld = nidavellir
+	pre_evolutions = {
+		bunolistriodon_lockarti #earlier suid
+		conohyus_simorrense #earlier suid
+		microstonyx_major #earlier suid
+	}
+	native_terrain_types = {
+		#should be dark dirt instead of dry mud and mud
+		dry_mud
+		mud
+	}
+}
