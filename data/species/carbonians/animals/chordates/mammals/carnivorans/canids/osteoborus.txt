@@ -1,0 +1,11 @@
+osteoborus = {
+	name = "Osteoborus"
+	supertaxon = canidae
+	homeworld = earth
+	pre_evolutions = {
+		amphicyon_giganteus
+		amphicyon_major
+		hemicyon_sansaniense
+		miacis
+	}
+}

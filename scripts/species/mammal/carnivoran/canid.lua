@@ -29,19 +29,3 @@ DefineSpeciesFamily("canidae", { -- Source: Mauricio Antón and Jorge Morales, "
 	Name = "Canidae",
 	Order = "carnivora"
 })
-
-DefineSpecies("osteoborus", {
-	Name = "Osteoborus",
-	Supertaxon = "canidae",
-	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"}
-})
-
-DefineSpecies("wolf", {
-	Name = "Wolf",
-	Supertaxon = "canidae",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "snow"},
-	EvolvesFrom = {"osteoborus"}
-})
-

@@ -1,0 +1,14 @@
+wolf = {
+	name = "Wolf"
+	supertaxon = canidae
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		osteoborus
+	}
+	native_terrain_types = {
+		grass
+		dirt
+		snow
+	}
+}
