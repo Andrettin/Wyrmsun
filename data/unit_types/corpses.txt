@@ -1,3 +1,22 @@
+unit_gnoll_dead_body = {
+	name = "Dead Body"
+	icon = icon_dwarven_miner
+	image_file = "units/gnoll/corpse.png"
+	frame_size = { 72 72 }
+	animation_set = animations_dead_body
+	speed = 0
+	hit_points = 255
+	draw_level = 30
+	tile_size = { 1 1 }
+	box_size = { 31 31 }
+	sight_range = 1
+	missile = missile_none
+	priority = 0
+	type = land
+	vanishes = true
+	detritus = true
+}
+
 unit_orc_dead_body = {
 	name = "Dead Body"
 	icon = icon_dwarven_miner
