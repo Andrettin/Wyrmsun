@@ -1,7 +1,7 @@
 sleipnir = { #eight-legged horse from Norse mythology
 	name = "Sleipnir"
-	specific_name = "polypus" #"many feet" in Latin
 	supertaxon = sleipnir
+	specific_name = "polypus" #"many feet" in Latin
 	era = holocene
 	homeworld = jotunheim #perhaps should be in Alfheim instead?
 	pre_evolutions = {

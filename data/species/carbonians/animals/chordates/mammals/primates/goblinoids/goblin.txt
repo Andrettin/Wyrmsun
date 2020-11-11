@@ -1,7 +1,7 @@
 goblin = {
 	name = "Goblin"
-	specific_name = "brevis" #"small"/"short" in Latin (as it is smaller than a hobgoblin)
 	supertaxon = gobelinus
+	specific_name = "brevis" #"small"/"short" in Latin (as it is smaller than a hobgoblin)
 	era = holocene
 	homeworld = nidavellir
 	sapient = true

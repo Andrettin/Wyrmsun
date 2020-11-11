@@ -1,7 +1,7 @@
 horse = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
 	name = "Horse"
-	specific_name = "caballus"
 	supertaxon = equus
+	specific_name = "caballus"
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {

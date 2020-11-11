@@ -1,7 +1,7 @@
 cow = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183838
 	name = "Cow"
-	specific_name = "taurus"
 	supertaxon = bos
+	specific_name = "taurus"
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {

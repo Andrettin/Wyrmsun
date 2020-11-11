@@ -1,7 +1,7 @@
 homo_floresiensis = {
 	name = "Homo Floresiensis"
-	specific_name = "floresiensis"
 	supertaxon = homo
+	specific_name = "floresiensis"
 	homeworld = earth
 	pre_evolutions = {
 		australopithecus
