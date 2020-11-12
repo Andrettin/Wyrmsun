@@ -7,4 +7,15 @@ cow = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TS
 	pre_evolutions = {
 		ilingoceros #shares a common ancestor with the bison
 	}
+	specimen_names = {
+		male = {
+			"Apis" #name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+			"Buchis" #name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+			"Mnevis" #name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
+		}
+		
+		female = {
+			"Audhumla" #Auðhumla"; name of a cow in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 59.
+		}
+	}
 }

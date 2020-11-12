@@ -1267,23 +1267,6 @@ DefineUnitType("unit-crow", {
 	}
 } )
 
--- Serpent Names:
--- "Apofis", -- serpent which appears in Egyptian mythology, representing the utter lack of order; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 104, 107.
--- "Ikher", -- serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
--- "Irto", -- serpent which appears in Egyptian mythology, having created the earth; Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 101, 103-104.
--- "Kematef" -- serpent which appears in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
-
--- Bull Names:
--- "Apis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
--- "Buchis", -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
--- "Mnevis" -- name of a bull in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 119.
-
--- Cow Names:
--- "Audhumla", -- Auðhumla"; name of a cow in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 59.
-
 -- Raven Names:
 -- "Hugin", -- "Huginn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
 -- "Munin", -- "Muninn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
-
--- Squirrel Names:
- -- "Ratatosk", -- Ratatoskr is a squirrel in Norse mythology; Cleasby gives the meaning of the name as "Tusk the traveller" or "the climber Tusk", while Bellows gives the meaning as "The Swift-Tusked"; "rata" is presumably the genitive form; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 317, 483, 638; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 97.
