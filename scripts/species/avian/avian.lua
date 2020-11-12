@@ -93,14 +93,6 @@ DefineSpecies("bird", {
 	EvolvesFrom = {"ichthyornis", "presbyornis"} -- seems sensible, given the songbird is set to descend from these
 })
 
-DefineSpecies("crow", {
-	Name = "Crow",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"} -- seems sensible, given the songbird is set to descend from these
-})
-
 DefineSpecies("diatryma", {
 	Name = "Diatryma",
 	Supertaxon = "aves",

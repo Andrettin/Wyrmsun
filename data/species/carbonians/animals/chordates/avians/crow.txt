@@ -1,0 +1,15 @@
+crow = {
+	name = "Crow"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis #seems sensible, given the songbird is set to descend from this
+		presbyornis #seems sensible, given the songbird is set to descend from this
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		pine_tree #correct?
+		rock #correct?
+	}
+}
