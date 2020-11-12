@@ -1,0 +1,9 @@
+beaver = {
+	name = "Beaver"
+	supertaxon = rodentia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		megacricetodon_collongensis #earlier rodent
+	}
+}

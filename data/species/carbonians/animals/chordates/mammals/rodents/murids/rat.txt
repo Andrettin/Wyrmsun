@@ -1,0 +1,16 @@
+rat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
+	name = "Rat"
+	supertaxon = rattus
+	specific_name = "norvegicus"
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		megacricetodon_collongensis #earlier rodent
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+	}
+}

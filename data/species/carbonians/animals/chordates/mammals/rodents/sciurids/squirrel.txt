@@ -1,0 +1,10 @@
+squirrel = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
+	name = "Squirrel" #Eurasian Red Squirrel
+	supertaxon = sciurus
+	specific_name = "vulgaris"
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		megacricetodon_collongensis #earlier rodent
+	}
+}

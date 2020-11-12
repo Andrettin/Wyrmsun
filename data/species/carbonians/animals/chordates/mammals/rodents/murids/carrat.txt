@@ -1,0 +1,15 @@
+carrat = { #rodent with the morphology akin to that of a canid; goblins keep this beast as a mount
+	name = "Carrat"
+	supertaxon = muridae #same family as rats
+	era = holocene
+	homeworld = nidavellir
+	native_terrain_types = {
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+	pre_evolutions = {
+		megacricetodon_collongensis #shares a common ancestor with rats
+	}
+}
