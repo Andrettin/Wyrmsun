@@ -1,0 +1,20 @@
+raven = {
+	name = "Raven"
+	supertaxon = aves
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis #seems sensible, given the crow is set to descend from this
+		presbyornis #seems sensible, given the crow is set to descend from this
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		pine_tree #correct?
+		rock #correct?
+	}
+	specimen_names = {
+		"Hugin" #"Huginn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
+		"Munin" #"Muninn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
+	}
+}

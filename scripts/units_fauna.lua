@@ -1266,7 +1266,3 @@ DefineUnitType("unit-crow", {
 		"miss", "attack-miss"
 	}
 } )
-
--- Raven Names:
--- "Hugin", -- "Huginn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
--- "Munin", -- "Muninn", one of Odin's ravens in Norse mythology; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 31.
