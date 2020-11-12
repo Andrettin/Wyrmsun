@@ -14,4 +14,7 @@ gullinbursti = { #named after the mythical boar (in Norse mythology) Gullinburst
 		dry_mud
 		mud
 	}
+	specimen_names = {
+		"Gullinbursti" #Gullinbursti is Frey's boar in Norse mythology, given to him by the dwarf Brokk; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 52.
+	}
 }

@@ -13,4 +13,7 @@ sleipnir = { #eight-legged horse from Norse mythology
 		pliohippus #earlier equid
 	}
 	#could be made of the suitable size to be mounted by a giant, and thus used for ettin cavalry (as in Norse mythology Sleipnir is the child of a giant's horse)
+	specimen_names = {
+		"Sleipnir" #Sleipnir was Odin's eight-legged horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 102, 159, 196; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 567.
+	}
 }
