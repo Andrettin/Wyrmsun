@@ -33,3 +33,9 @@ progress_bar_file = "ui/progress_bar.png"
 food_icon = food
 score_icon = score
 mana_icon = mana
+
+#forest regeneration speed, in seconds (0 = disabled)
+forest_regeneration_threshold = 1200
+
+#destroyed overlay terrain decay speed, in seconds (0 = disabled)
+destroyed_overlay_terrain_decay_threshold = -1200

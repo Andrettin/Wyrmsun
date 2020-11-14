@@ -129,6 +129,7 @@ https://github.com/Andrettin/Wyrmsun
 - Units in underground terrain tiles (cave floor and rockbound cave floor) are now treated as if they are at night for sight range bonus purposes.
 - Units in underground terrain tiles are now have the night-time color effect applied on them.
 - Terrain feature tooltips now only appear after one second.
+- Destroyed rocks and walls now disappear after some time.
 
 * Units
 - Dwarven axe infantry units now have +10 HP and -2 evasion.
