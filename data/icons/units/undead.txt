@@ -1,0 +1,4 @@
+skeleton = {
+	file = "icons/units/undead/skeleton.png"
+	conversible_player_color = red
+}
