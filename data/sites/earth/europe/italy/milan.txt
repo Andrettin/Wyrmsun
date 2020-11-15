@@ -14,7 +14,7 @@ milan = {
 	
 	history = {
 		-191 = {
-			owner_faction = rome #Mediolanium became a Roman possession in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #Mediolanium became a Roman possession in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		
@@ -23,19 +23,19 @@ milan = {
 		}
 		
 		1097 = {
-			owner_faction = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1477 = {
-			owner_faction = milan #Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+			owner = milan #Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		}
 		
 		1494 = {
-			owner_faction = milan #Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+			owner = milan #Milan was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		}
 		
 		1560 = {
-			owner_faction = spain #Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = spain #Milan was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
 		
 		1565 = {
@@ -43,11 +43,11 @@ milan = {
 		}
 		
 		1815 = {
-			owner_faction = austria #Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = austria #Milan was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 		
 		1859 = {
-			owner_faction = sardinia #Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = sardinia #Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

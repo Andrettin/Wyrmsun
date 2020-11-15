@@ -13,16 +13,16 @@ valencia = {
 	
 	history = {
 		-201 = {
-			owner_faction = rome #Valentia was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #Valentia was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		
 		486 = {
-			owner_faction = visigothia #Valencia was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = visigothia #Valencia was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		1097 = {
-			owner_faction = morocco #part of the dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = morocco #part of the dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1500 = {
@@ -30,7 +30,7 @@ valencia = {
 		}
 		
 		1560 = {
-			owner_faction = spain #Valencia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = spain #Valencia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 	}
 }

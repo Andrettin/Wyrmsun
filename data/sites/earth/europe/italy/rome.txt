@@ -13,12 +13,12 @@ rome = {
 	
 	history = {
 		-750 = {
-			owner_faction = latin_tribe #Latins present in Latium by 750-625 BC, and Rome was in existence as well; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+			owner = latin_tribe #Latins present in Latium by 750-625 BC, and Rome was in existence as well; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 			building_classes += town_hall
 		}
 		
 		-500 = {
-			owner_faction = rome #Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+			owner = rome #Rome had been founded and was independent by 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 		}
 		
 		-192 = {
@@ -32,19 +32,19 @@ rome = {
 		}
 		
 		526 = {
-			owner_faction = ostrogothia #Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = ostrogothia #Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		1097 = {
-			owner_faction = papal_states #part of the States of the Church c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = papal_states #part of the States of the Church c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1303 = {
-			owner_faction = university #University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+			owner = university #University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		
 		1494 = {
-			owner_faction = papal_states #Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+			owner = papal_states #Rome was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		}
 		
 		1600 = {

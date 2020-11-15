@@ -10,20 +10,20 @@ oporto = {
 	
 	history = {
 		-138 = {
-			owner_faction = rome #Oporto's area was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #Oporto's area was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		
 		411.12.31 = {
-			owner_faction = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+			owner = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
 		1094 = {
-			owner_faction = portugal #part of the County of Portugal from 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			owner = portugal #part of the County of Portugal from 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
 		1150 = {
-			owner_faction = portugal #Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
+			owner = portugal #Oporto was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 		}
 		
 		1911 = {

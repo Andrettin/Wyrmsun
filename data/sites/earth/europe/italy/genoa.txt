@@ -14,20 +14,20 @@ genoa = {
 	
 	history = {
 		-154 = {
-			owner_faction = rome #Genua became a Roman possession in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #Genua became a Roman possession in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += dock
 		}
 		
 		1097 = {
-			owner_faction = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1494 = {
-			owner_faction = genoa #Genoa was a possession of the Republic of Genoa about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+			owner = genoa #Genoa was a possession of the Republic of Genoa about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 		}
 		
 		1815 = {
-			owner_faction = sardinia #Genoa was a possession of the Kingdom of Sardinia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = sardinia #Genoa was a possession of the Kingdom of Sardinia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

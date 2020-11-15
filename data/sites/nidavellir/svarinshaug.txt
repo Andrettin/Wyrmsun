@@ -6,7 +6,7 @@ svarinshaug = {
 	
 	history = {
 		-24999 = {
-			owner_faction = brising_clan
+			owner = brising_clan
 			building_classes += town_hall
 		}
 		

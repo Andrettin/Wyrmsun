@@ -14,12 +14,12 @@ oslo = {
 	
 	history = {
 		824 = {
-			owner_faction = vingulmark #Gandalf became king of Vingulmark when Gudrod Yngling died; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
+			owner = vingulmark #Gandalf became king of Vingulmark when Gudrod Yngling died; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260, 262.
 			building_classes += town_hall
 		}
 		
 		1097 = {
-			owner_faction = norway #part of the Kingdom of Norway c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = norway #part of the Kingdom of Norway c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 	}
 }

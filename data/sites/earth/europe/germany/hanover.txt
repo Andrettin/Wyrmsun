@@ -16,16 +16,16 @@ hanover = {
 	
 	history = {
 		-264 = {
-			owner_faction = lombard_tribe #Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = lombard_tribe #Hanover's area was territory of the Lombards in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		
 		919 = {
-			owner_faction = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 
 		1138 = {
-			owner_faction = saxony #the area was part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
+			owner = saxony #the area was part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
 		}
 		
 		1648 = {

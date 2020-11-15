@@ -13,21 +13,21 @@ barcelona = {
 	
 	history = {
 		395 = {
-			owner_faction = rome #Barcelona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = rome #Barcelona was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 			building_classes += town_hall
 			building_classes += temple #Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		481 = {
-			owner_faction = visigothia #Barcelona was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+			owner = visigothia #Barcelona was a Visigothic possession in the 481-801 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}
 		
 		486 = {
-			owner_faction = visigothia #Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = visigothia #Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		910 = {
-			owner_faction = barcelona #part of the County of Barcelona in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			owner = barcelona #part of the County of Barcelona in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
 		1430 = {
@@ -35,7 +35,7 @@ barcelona = {
 		}
 		
 		1560 = {
-			owner_faction = spain #Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = spain #Barcelona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 		
 		1717 = {

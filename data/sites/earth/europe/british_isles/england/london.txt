@@ -16,12 +16,12 @@ london = {
 	
 	history = {
 		410 = {
-			owner_faction = rome #Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			owner = rome #Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 			building_classes += town_hall
 		}
 		
 		604 = {
-			owner_faction = essex #London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
+			owner = essex #London was the capital of the East Saxons in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 			building_classes += temple #a church was built in London in 604 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 109.
 		}
 		
@@ -30,11 +30,11 @@ london = {
 		}
 		
 		802 = {
-			owner_faction = middlesex #London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			owner = middlesex #London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		}
 		
 		1097 = {
-			owner_faction = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1500 = {
@@ -42,7 +42,7 @@ london = {
 		}
 		
 		1560 = {
-			owner_faction = england #London was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = england #London was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 		
 		1640 = {

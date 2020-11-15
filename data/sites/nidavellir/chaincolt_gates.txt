@@ -7,7 +7,7 @@ chaincolt_gates = { #from Battle for Wesnoth: The Sceptre of Fire (Closing the G
 	history = {
 		years_wesnoth = {
 			25 = {
-				owner_faction = norlund_clan
+				owner = norlund_clan
 				building_classes += guard_tower
 			}
 		}
@@ -24,7 +24,7 @@ chaincolt_gates_outpost = { #from Battle for Wesnoth: The Sceptre of Fire (Closi
 	history = {
 		years_wesnoth = {
 			25 = {
-				owner_faction = norlund_clan
+				owner = norlund_clan
 				building_classes += guard_tower
 			}
 		}

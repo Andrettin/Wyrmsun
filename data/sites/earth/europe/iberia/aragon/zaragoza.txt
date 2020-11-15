@@ -16,21 +16,21 @@ zaragoza = {
 	
 	history = {
 		395 = {
-			owner_faction = rome #Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = rome #Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 			building_classes += town_hall
 			building_classes += temple #Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486 = {
-			owner_faction = visigothia #Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = visigothia #Saragossa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		910 = {
-			owner_faction = zaragoza #part of independent Moorish states in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			owner = zaragoza #part of independent Moorish states in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
 		1037 = {
-			owner_faction = zaragoza #part of the Emirate of Zaragoza in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			owner = zaragoza #part of the Emirate of Zaragoza in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
 		1474 = {
@@ -38,7 +38,7 @@ zaragoza = {
 		}
 		
 		1560 = {
-			owner_faction = spain #Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = spain #Saragossa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 	}
 }

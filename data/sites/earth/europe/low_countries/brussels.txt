@@ -10,12 +10,12 @@ brussels = {
 	
 	history = {
 		911 = {
-			owner_faction = lorraine #the area was part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = lorraine #the area was part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
 		}
 		
 		959 = {
-			owner_faction = lorraine #the area was part of the Duchy of Lower Lorraine from 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = lorraine #the area was part of the Duchy of Lower Lorraine from 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 	}
 }

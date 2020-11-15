@@ -13,12 +13,12 @@ visby = {
 	
 	history = {
 		1097 = {
-			owner_faction = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 			building_classes += town_hall
 		}
 		
 		1560 = {
-			owner_faction = denmark #Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = denmark #Wisby was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 	}
 }

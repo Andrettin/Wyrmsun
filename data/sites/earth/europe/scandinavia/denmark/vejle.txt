@@ -9,7 +9,7 @@ vejle = {
 	
 	history = {
 		-1600 = {
-			owner_faction = jarling_tribe #regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Vejle's location seems to fit well enough
+			owner = jarling_tribe #regarding the place of Jarl's dwelling, it should be in a mountainous area, but also near a sound (since in the myth Jarl swam across sounds in his infancy); the lands between Jarl's hall and that of Hersir should contain boggy ground somewhere; Vejle's location seems to fit well enough
 			building_classes += barracks
 		}
 		

@@ -13,12 +13,12 @@ dublin = {
 	
 	history = {
 		802 = {
-			owner_faction = ireland #Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			owner = ireland #Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 			building_classes += town_hall
 		}
 		
 		1097 = {
-			owner_faction = ireland #part of the Ireland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = ireland #part of the Ireland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1312 = {

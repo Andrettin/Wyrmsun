@@ -11,12 +11,12 @@ flensburg = {
 	
 	history = {
 		-264 = {
-			owner_faction = angle_tribe #tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = angle_tribe #tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += farm
 		}
 		
 		1815 = {
-			owner_faction = denmark #Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = denmark #Flensburg was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

@@ -13,7 +13,7 @@ helsinki = {
 	
 	history = {
 		1560 = {
-			owner_faction = sweden #Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = sweden #Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 			building_classes += town_hall
 		}
 	}

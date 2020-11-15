@@ -16,21 +16,21 @@ konigsberg = {
 	
 	history = {
 		1544 = {
-			owner_faction = prussia
+			owner = prussia
 			building_classes += town_hall
 			building_classes += university #University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		
 		1560 = {
-			owner_faction = prussia #Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = prussia #Königsberg was a part of the Duchy of Prussia about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
 		
 		1618 = {
-			owner_faction = brandenburg #Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+			owner = brandenburg #Königsberg became a Brandenburgian possession in 1618; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}
 		
 		1815 = {
-			owner_faction = prussia #Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = prussia #Königsberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

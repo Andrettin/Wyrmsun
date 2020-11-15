@@ -10,12 +10,12 @@ kiev = {
 	
 	history = {
 		1560 = {
-			owner_faction = lithuania #Kiev was a Lithuanian possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = lithuania #Kiev was a Lithuanian possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 			building_classes += town_hall
 		}
 		
 		1569 = {
-			owner_faction = poland_lithuania #the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = poland_lithuania #the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
 	}
 }

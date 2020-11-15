@@ -17,28 +17,28 @@ aarhus = {
 	
 	history = {
 		-5800 = {
-			owner_faction = ertebolle_tribe #Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+			owner = ertebolle_tribe #Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 			building_classes += town_hall
 		}
 		
 		-2800.12.30 = {
-			owner_faction = asa_tribe
+			owner = asa_tribe
 		}
 		
 		-1600 = {
-			owner_faction = none
+			owner = none
 		}
 		
 		-1600.12.30 = {
-			owner_faction = jarling_tribe
+			owner = jarling_tribe
 		}
 		
 		1097 = {
-			owner_faction = denmark #part of the Kingdom of Denmark c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = denmark #part of the Kingdom of Denmark c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1560 = {
-			owner_faction = denmark #Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+			owner = denmark #Aarhuus was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
 	}
 }

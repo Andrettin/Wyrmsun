@@ -16,11 +16,11 @@ kiel = {
 	
 	history = {
 		-2800 = {
-			owner_faction = asa_tribe
+			owner = asa_tribe
 		}
 		
 		-1600 = {
-			owner_faction = hersing_tribe #Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
+			owner = hersing_tribe #Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
 			building_classes += town_hall
 			building_classes += farm
 			building_classes += farm
@@ -31,19 +31,19 @@ kiel = {
 		}
 		
 		-264 = {
-			owner_faction = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		919 = {
-			owner_faction = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1138 = {
-			owner_faction = saxony #the area was part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
+			owner = saxony #the area was part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
 		}
 		
 		1815 = {
-			owner_faction = denmark #Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = denmark #Kiel was a possession of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

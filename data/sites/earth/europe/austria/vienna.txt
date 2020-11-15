@@ -17,7 +17,7 @@ vienna = {
 	
 	history = {
 		10 = {
-			owner_faction = rome #Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #Upper Pannonia (where Vindobona was located) acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		
@@ -28,22 +28,22 @@ vienna = {
 		}
 		
 		526 = {
-			owner_faction = none #Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = none #Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 			building_classes -= stronghold
 			building_classes -= barracks
 		}
 		
 		907 = {
-			owner_faction = hungary #Hungarian possession from 907; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = hungary #Hungarian possession from 907; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall
 		}
 		
 		955 = {
-			owner_faction = austria #part of the Bavarian East March (the Margraviate of Austria) from 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = austria #part of the Bavarian East March (the Margraviate of Austria) from 955; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1156 = {
-			owner_faction = austria #Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = austria #Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1365 = {
@@ -51,7 +51,7 @@ vienna = {
 		}
 		
 		1477 = {
-			owner_faction = austria #Vienna was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+			owner = austria #Vienna was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		}
 		
 		1759 = {

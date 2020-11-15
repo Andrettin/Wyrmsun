@@ -17,24 +17,24 @@ paris = {
 	
 	history = {
 		161 = {
-			owner_faction = rome #Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = rome #Lutetia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 			building_classes += town_hall
 		}
 		
 		395 = {
-			owner_faction = rome #Paris was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = rome #Paris was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486.12.30 = {
-			owner_faction = francia #Paris became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51, 53.
+			owner = francia #Paris became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51, 53.
 		}
 		
 		561 = {
-			owner_faction = neustria #Parisii went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+			owner = neustria #Parisii went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		}
 		
 		1097 = {
-			owner_faction = france #part of the Kingdom of France c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = france #part of the Kingdom of France c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1250 = {
@@ -42,7 +42,7 @@ paris = {
 		}
 		
 		1789 = {
-			owner_faction = france #Paris was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+			owner = france #Paris was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 			population = 500000 #Paris had a population of 500,000 in 1789; Source: Eric J. Hobsbawm, "The Age of Revolution, Europe 1789-1848", p. 28.
 		}
 	}

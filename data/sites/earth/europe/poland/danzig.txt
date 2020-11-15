@@ -13,16 +13,16 @@ danzig = {
 	
 	history = {
 		1560 = {
-			owner_faction = poland #Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = poland #Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 			building_classes += town_hall
 		}
 		
 		1569 = {
-			owner_faction = poland_lithuania #the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+			owner = poland_lithuania #the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
 		
 		1815 = {
-			owner_faction = prussia #Dantzic was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			owner = prussia #Dantzic was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

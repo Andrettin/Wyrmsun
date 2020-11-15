@@ -14,15 +14,15 @@ lubeck = {
 	
 	history = {
 		-264 = {
-			owner_faction = saxon_tribe #Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = saxon_tribe #Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		1097 = {
-			owner_faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1138 = {
-			owner_faction = saxony #part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
+			owner = saxony #part of the Duchy of Saxony in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
 			building_classes += dock #Lübeck existed in 1138-1254; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
 		}
 		

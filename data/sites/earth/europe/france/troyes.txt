@@ -13,30 +13,30 @@ troyes = {
 	
 	history = {
 		395 = {
-			owner_faction = rome #Troyes' area was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = rome #Troyes' area was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486.12.30 = {
-			owner_faction = francia #Troyes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = francia #Troyes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 			building_classes += farm
 		}
 		
 		561 = {
-			owner_faction = burgundia #Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+			owner = burgundia #Trecae went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		}
 		
 		782 = {
-			owner_faction = francia
+			owner = francia
 			building_classes += temple #Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
 			building_classes -= farm
 		}
 		
 		1097 = {
-			owner_faction = france #part of the Kingdom of France c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = france #part of the Kingdom of France c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1789 = {
-			owner_faction = france #Troyes was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+			owner = france #Troyes was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 			#Chief court of the salt tax existent in Troyes in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		}
 	}

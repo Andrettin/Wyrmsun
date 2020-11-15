@@ -13,12 +13,12 @@ cagliari = {
 	
 	history = {
 		161 = {
-			owner_faction = rome #Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = rome #Caralis was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 			building_classes += town_hall
 		}
 		
 		1815 = {
-			owner_faction = sardinia #Cagliari was part of the Kingdom of Sardinia in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
+			owner = sardinia #Cagliari was part of the Kingdom of Sardinia in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
 		}
 	}
 }

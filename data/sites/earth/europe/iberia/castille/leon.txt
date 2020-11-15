@@ -13,7 +13,7 @@ leon = {
 	
 	history = {
 		910 = {
-			owner_faction = leon #part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+			owner = leon #part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 			building_classes += town_hall
 		}
 	}

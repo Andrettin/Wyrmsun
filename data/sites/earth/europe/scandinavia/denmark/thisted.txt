@@ -9,14 +9,14 @@ thisted = {
 	
 	history = {
 		-1600 = {
-			owner_faction = karling_tribe #seems like a good place to place the Karlings
+			owner = karling_tribe #seems like a good place to place the Karlings
 			building_classes += lumber_mill
 			building_classes += farm
 			building_classes += farm
 		}
 		
 		-1500 = {
-			owner_faction = jarling_tribe
+			owner = jarling_tribe
 			building_classes -= lumber_mill
 			building_classes -= farm
 			building_classes -= farm

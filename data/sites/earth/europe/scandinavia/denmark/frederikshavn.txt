@@ -9,12 +9,12 @@ frederikshavn = {
 	
 	history = {
 		-1600 = {
-			owner_faction = thralling_tribe #seems like a good place to place the Thrahilings
+			owner = thralling_tribe #seems like a good place to place the Thrahilings
 			building_classes += farm
 		}
 		
 		-1500 = {
-			owner_faction = jarling_tribe
+			owner = jarling_tribe
 			
 			building_classes -= farm
 			building_classes += farm #a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
