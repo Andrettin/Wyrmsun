@@ -1,9 +1,15 @@
 cavepeople = { #erik_cavepeople
 	name = "Cavepeople"
+	main_template = earth_45_60_latitude_north
 	size = { 40 21 }
 	overlay_terrain_file = "the_dungeon/cavepeople.map"
 	constructed_only = true
 	optional = true
+	character_units = {
+		1 = unit_wolf #jackal / hound
+		2 = unit_horse #yak
+		3 = unit_germanic_warrior #human
+	}
 	character_substitutions = {
 		#Crawl substitutions
 		{
@@ -70,7 +76,7 @@ cavepeople = { #erik_cavepeople
 			target_character = 0
 		}
 		{
-			source_characters = { 1 2 3 4 5 + $ @ % }
+			source_characters = { 4 5 + $ @ % }
 			target_character = 0
 		}
 	}
