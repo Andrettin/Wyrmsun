@@ -1,0 +1,81 @@
+cavepeople = { #erik_cavepeople
+	name = "Cavepeople"
+	size = { 40 21 }
+	overlay_terrain_file = "the_dungeon/cavepeople.map"
+	constructed_only = true
+	optional = true
+	character_substitutions = {
+		#Crawl substitutions
+		{
+			source_character = 1
+			target_characters = { 1 1 . }
+		}
+		{
+			source_character = 3
+			target_characters = { 3 . }
+		}
+		{
+			source_character = 4
+			target_characters = { 3 4 }
+		}
+		{
+			source_character = 5
+			target_characters = { 3 5 }
+		}
+		{
+			shuffle_character_sets = {
+				{ r R }
+				{ s S }
+				{ u U }
+				{ v V }
+				{ w W }
+				{ y Y }
+				{ z Z }
+			}
+		}
+		{
+			shuffle_character_sets = {
+				{ u U }
+				{ n N }
+			}
+		}
+		{
+			source_characters = { r s n }
+			target_character = .
+		}
+		{
+			source_characters = { R S N }
+			target_character = @
+		}
+		{
+			source_characters = { u U v V w W y Y z Z }
+			target_character = x
+		}
+		
+		#character conversions
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_character = c
+			target_character = /
+		}
+		{
+			source_character = l #lava
+			target_character = 0
+		}
+		{
+			source_characters = { 1 2 3 4 5 + $ @ % }
+			target_character = 0
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
