@@ -1,0 +1,33 @@
+ruffians = { #minmay_ruffians
+	name = "Ruffians"
+	main_template = earth_45_60_latitude_north
+	size = { 9 7 }
+	overlay_terrain_file = "the_dungeon/ruffians.map"
+	constructed_only = true
+	optional = true
+	character_units = {
+		1 = unit_germanic_warrior #human; club | mace w:3 . animal skin | leather armour
+		2 = unit_germanic_archer #human; hunting sling . stone | sling bullet w:3 . animal skin | \
+        leather armour
+		3 = unit_germanic_chieftain #human; flail . ring mail | scale mail
+	}
+	character_substitutions = {
+		#character conversions
+		{
+			source_character = .
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_characters = { + % }
+			target_character = 0
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
