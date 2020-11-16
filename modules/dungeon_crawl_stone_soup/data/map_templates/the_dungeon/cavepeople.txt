@@ -11,7 +11,6 @@ cavepeople = { #erik_cavepeople
 		3 = unit_germanic_warrior #human
 	}
 	character_substitutions = {
-		#Crawl substitutions
 		{
 			source_character = 1
 			target_characters = { 1 1 . }

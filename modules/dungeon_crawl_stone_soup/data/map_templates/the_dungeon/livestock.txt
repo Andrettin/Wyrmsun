@@ -1,0 +1,43 @@
+livestock = { #grunt_livestock
+	name = "Livestock"
+	main_template = earth_45_60_latitude_north
+	#D:7-14
+	size = { 8 7 }
+	overlay_terrain_file = "the_dungeon/livestock.map"
+	constructed_only = true
+	optional = true
+	character_units = {
+		1 = unit_germanic_warrior #human ; animal skin . hand axe
+		2 = {
+			unit_types = {
+				unit_boar = 10 #hog w:(14 - absdepth) #the average depth this map is generated on is 10.5
+				unit_horse = 1 #yak w:1
+			}
+		}
+		d = unit_cheese #ration q:2
+		e = unit_cheese #ration q:1
+	}
+	character_substitutions = {
+		#character conversions
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_characters = { + @ - }
+			target_character = 0
+		}
+		{
+			source_character = K #iron grate
+			target_character = | #palisade
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
