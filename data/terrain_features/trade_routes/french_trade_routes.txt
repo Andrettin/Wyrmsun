@@ -1,0 +1,6 @@
+french_route_network = {
+	name = "Gallic Route Network"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 221 190 218 }
+}
