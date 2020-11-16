@@ -1,0 +1,64 @@
+slaughterhouse = {
+	name = "Slaughterhouse"
+	main_template = earth_45_60_latitude_north
+	size = { 20 19 }
+	overlay_terrain_file = "the_dungeon/slaughterhouse.map"
+	constructed_only = true
+	optional = true
+	character_units = {
+		1 = {
+			unit_types = {
+				unit_horse = 5 #death yak w:5
+				unit_goat = 3 #dream sheep w:3
+				unit_horse = 7 #yak w:7
+			}
+		}
+		2 = unit_germanic_warrior #generate_awake human ; dagger | hand axe #represents a butcher
+		d = {
+			unit_types = {
+				unit_cheese = 5 #ration w:5 #meat would be more fitting than cheese here
+				none
+			}
+		}
+	}
+	character_substitutions = {
+		{
+			source_character = F
+			target_character = d
+		}
+		{
+			source_character = 2
+			target_characters = { 2 . }
+		}
+		
+		#character conversions
+		{
+			source_character = K #closed_clear_door
+			target_character = 0
+		}
+		{
+			source_character = ~ #random trap
+			target_character = 0
+		}
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_characters = { c n }
+			target_character = /
+		}
+		{
+			source_characters = { + @ }
+			target_character = 0
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
