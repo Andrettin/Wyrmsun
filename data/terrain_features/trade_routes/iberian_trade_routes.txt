@@ -1,0 +1,6 @@
+iberian_route_network = {
+	name = "Iberian Route Network"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 50 87 118 }
+}
