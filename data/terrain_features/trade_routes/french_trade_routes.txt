@@ -1,4 +1,4 @@
-french_route_network = {
+french_route_network = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 98-99.
 	name = "Gallic Route Network"
 	terrain_type = dirt_road
 	trade_route = true
