@@ -1308,7 +1308,7 @@ DefineUnitType("unit-tree-stump", {
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
 --		"ready", "dwarven-sentry-tower-ready",
 --		"help", "basic-dwarf-voices-help",
-		"dead", "building-destroyed"
+--		"dead", "building-destroyed"
 	}
 } )
 
