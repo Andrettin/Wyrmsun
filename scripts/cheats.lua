@@ -277,6 +277,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit-orc-spearthrower", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "worker of the wood") then
 		unit = CreateUnit("unit_elven_worker", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+	elseif (str == "nidhogg") then
+		unit = CreateUnit("unit_wyrm", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	else
 		return false
 	end
