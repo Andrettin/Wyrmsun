@@ -690,6 +690,8 @@
 /graphics/icons/technologies/pyromancy.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/wood_plow.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dark_elven/mage.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/dark_elven/mage_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/dark_elven/mage_extra_2.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/executioner.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/shadowguard.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/derro/thug.png (by Jinn) (licensed under the CC0)
