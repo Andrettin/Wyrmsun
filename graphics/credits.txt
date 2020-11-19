@@ -614,6 +614,7 @@
 /graphics/icons/abilities/goblinslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/humanslayer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/abilities/mace_mastery.png (by Vladislav "iDreamRunner" and Jinn) (licensed under the CC0)
+/graphics/icons/abilities/riding_mastery.png (by Jinn) (licensed under the CC0)
 /graphics/icons/abilities/water_mastery.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/commands/dwarven/stand_ground.png (by Jinn) (licensed under the CC0)
 /graphics/icons/commands/attack_ground.png (by Jinn) (licensed under the CC0)
