@@ -3,6 +3,7 @@ railroad = { #also represents tramways when linking a settlement's buildings
 	overlay = true
 	pathway = true
 	allow_single = true
+	movement_bonus = 1
 	image_file = "terrain/railroad.png"
 	flags = {
 		land

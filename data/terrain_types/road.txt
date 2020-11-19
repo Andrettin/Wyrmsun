@@ -4,6 +4,7 @@ road = {
 	overlay = true
 	pathway = true
 	allow_single = true
+	movement_bonus = 1
 	image_file = "terrain/road.png"
 	flags = {
 		land
