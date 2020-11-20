@@ -129,6 +129,53 @@ UnitMove = {
 	"label end", "unbreakable end", "wait 1",
 }
 
+UnitMoveSequential = {
+	"unbreakable begin", 
+	"if-var v.Speed.Value <= 11 speed_11",
+	"if-var v.Speed.Value == 12 speed_12",
+	"if-var v.Speed.Value == 13 speed_13",
+	"if-var v.Speed.Value == 14 speed_14",
+	"if-var v.Speed.Value == 15 speed_15",
+	"if-var v.Speed.Value >= 16 speed_16",
+	"label speed_11", -- 16 / (11 / 10) = c. 14 waits
+	"frame 0", "move 3", "wait 2", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 2", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 2", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label speed_12", -- 16 / (12 / 10) = c. 13 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 2", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 2", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 2", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label speed_13", -- 16 / (13 / 10) = c. 12 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 2", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 2", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label speed_14", -- 16 / (14 / 10) = c. 11 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 2", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label speed_15", -- 15 / (14 / 10) = c. 10 waits
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 1", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label speed_16", -- 16 / (16 / 10) = 10 waits (same as speed 15)
+	"frame 0", "move 3", "wait 1", "frame 5", "move 3", "wait 1",
+	"frame 5", "move 4", "wait 1", "frame 10", "move 3", "wait 1",
+	"frame 10", "move 3", "wait 1", "frame 15", "move 3", "wait 1",
+	"frame 15", "move 4", "wait 1", "frame 20", "move 3", "wait 1",
+	"frame 20", "move 3", "wait 1", "frame 0", "move 3", "goto end",
+	"label end", "unbreakable end", "wait 1",
+}
+
 UnitMoveFourFramesNoIdle = {
 	"unbreakable begin", 
 	"if-var v.Speed.Value <= 3 speed_3",
@@ -547,6 +594,13 @@ DefineAnimations("animations-melee-unit-new-movement", {
 	Move = UnitMoveNewMovement,
 	Attack = UnitMeleeAttackNewMovement,
 	Death = UnitDeathNewMovement
+})
+
+DefineAnimations("animations-melee-unit-sequential-movement", {
+	Still = UnitStill,
+	Move = UnitMoveSequential,
+	Attack = UnitMeleeAttack,
+	Death = UnitDeath
 })
 
 DefineAnimations("animations-orc-spearthrower", {
