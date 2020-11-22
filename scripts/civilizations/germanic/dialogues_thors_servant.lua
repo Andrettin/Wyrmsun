@@ -108,7 +108,7 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 				function(s)
 					unit = CreateUnit("unit-dwarven-transport-ship", trigger_player, {GetSiteData("visby", "MapPosX"), GetSiteData("visby", "MapPosY")}, GetSiteData("visby", "MapLayer"))
 					SetUnitVariable(unit, "Unique", "skidbladnir")
-					SetPlayerData(trigger_player, "AcceptQuest", "slay-geirrod")
+					SetPlayerData(trigger_player, "AcceptQuest", "slay_geirrod")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("geirrodung-clan"))
 					SetDiplomacy(GetFactionPlayer("geirrodung-clan"), "enemy", trigger_player)
 					unit = CreateUnit("unit-ethereal-revealer", trigger_player, {GetSiteData("earth_to_jotunheim_portal", "MapPosX"), GetSiteData("earth_to_jotunheim_portal", "MapPosY")}, GetSiteData("earth_to_jotunheim_portal", "MapLayer"))

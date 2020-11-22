@@ -1,0 +1,13 @@
+slay_geirrod = {
+	name = "Slay Geirrod"
+	icon = icon_ettin
+	player_color = red
+	unobtainable = true
+	competitive = true
+	objectives = {
+		destroy_hero = geirrod_ettin
+	}
+	completion_effects = {
+		call_dialogue = thors_servant_geirrod_killed
+	}
+}

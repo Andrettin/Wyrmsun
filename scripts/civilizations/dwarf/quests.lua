@@ -445,24 +445,6 @@ DefineQuest("andvaris-gold", {
 	Competitive = true
 })
 
-DefineQuest("the-mead-of-poetry-kill-kvasir", {
-	Name = "Kill Kvasir",
-	Icon = "icon-dwarven-loremaster",
-	PlayerColor = "black",
-	Unobtainable = true,
-	CompletionEffects = function(s)
-		CallDialogue("the-mead-of-poetry-kvasir-assassinated", trigger_player)
-	end,
-	ObjectiveStrings = {"Fjalar and Galar must survive"},
-	Objectives = {
-		{
-			"objective-type", "destroy_hero",
-			"objective-string", "Kill Kvasir",
-			"character", "kvasir"
-		}
-	}
-})
-
 DefineQuest("island-of-the-lizard-god", {
 	Name = "Island of the Kobold God",
 	Icon = "icon-kobold-slasher",

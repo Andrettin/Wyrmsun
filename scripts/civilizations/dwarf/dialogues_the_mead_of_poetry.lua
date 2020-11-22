@@ -82,7 +82,7 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire-to-kill-kvasir", {
 			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-mead-of-poetry-kill-kvasir")
+					SetPlayerData(trigger_player, "AcceptQuest", "the_mead_of_poetry_kill_kvasir")
 				end
 			}
 		}

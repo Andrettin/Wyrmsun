@@ -1,0 +1,14 @@
+the_mead_of_poetry_kill_kvasir = {
+	name = "Kill Kvasir"
+	icon = icon_dwarven_loremaster
+	player_color = black
+	unobtainable = true
+	objectives = {
+		destroy_hero = kvasir
+		hero_must_survive = fjalar
+		hero_must_survive = galar
+	}
+	completion_effects = {
+		call_dialogue = the_mead_of_poetry_kvasir_assassinated
+	}
+}

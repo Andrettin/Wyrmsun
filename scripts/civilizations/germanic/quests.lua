@@ -637,25 +637,10 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	Competitive = true
 })
 
-DefineQuest("slay-geirrod", {
-	Name = "Slay Geirrod",
-	Icon = "icon-ettin",
-	PlayerColor = "red",
-	CompletionEffects = function(s)
-		CallDialogue("thors-servant-geirrod-killed", trigger_player)
-	end,
+DefineQuest("slay_geirrod", {
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
-	end,
-	Objectives = {
-		{
-			"objective-type", "destroy_hero",
-			"objective-string", "Kill Geirrod",
-			"character", "geirrod-ettin"
-		}
-	},
-	Unobtainable = true,
-	Competitive = true
+	end
 })
