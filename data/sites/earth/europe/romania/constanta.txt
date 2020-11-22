@@ -1,0 +1,11 @@
+constanta = {
+	name = "Constanta" #Constanța
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 28.60997432320 44.20266237290 } #from Natural Earth
+	cultural_names = {
+		latin = "Tomi" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	}
+	regions = {
+		europe
+	}
+}

@@ -48,8 +48,6 @@ DefineSite("temesvar", {
 	MapTemplate = "earth",
 	Position = {4318, 1011},
 	Major = true,
-	CulturalNames = {
-	},
 	HistoricalOwners = {
 		1566, "turkey" -- Temesvar became an Ottoman possession in 1566; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 	},

@@ -25,34 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 129}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Bucharest"
-	}
-})
-
-DefineWorldMapTile({557, 121}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Iași"
-	}
-})
-
 DefineWorldMapTile({560, 127}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Troesmis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
-
-DefineWorldMapTile({560, 130}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
-	FactionCulturalSettlementNames = {
-		"romanian", "romania", "Constanța"
-	}
-})
-

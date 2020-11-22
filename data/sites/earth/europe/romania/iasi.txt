@@ -1,0 +1,8 @@
+iasi = {
+	name = "Iasi" #Iași
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 27.57494706090 47.16834698390 } #from Natural Earth
+	regions = {
+		europe
+	}
+}
