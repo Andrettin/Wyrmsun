@@ -92,37 +92,6 @@ DefineQuest("the-mead-of-wisdom", {
 	Unobtainable = true
 })
 
-DefineQuest("the-mastersmith-brothers", {
-	Name = "The Mastersmith Brothers",
-	Icon = "icon-dwarven-runemaster",
-	Description = "The brothers Brokk and Eitri have come to renown for their remarkable smithing abilities. It would surely be a boon for us to have them under our employ.",
-	PlayerColor = "red",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "jewelry", GetPlayerData(trigger_player, "Resources", "jewelry") + 1000)
-	end,
-	Rewards = "+1000 Jewelry",
-	Hint = "A selection of heroes is available for recruitment at the Mead Hall.",
-	Objectives = {
-		{
-			"objective-type", "recruit_hero",
-			"objective-string", "Recruit Brokk",
-			"character", "brokk"
-		},
-		{
-			"objective-type", "recruit_hero",
-			"objective-string", "Recruit Eitri",
-			"character", "eitri"
-		}
-	},
-	Competitive = true
-})
-
 DefineQuest("the-ring-of-riches", {
 	Name = "The Ring of Riches",
 	Icon = "icon-ring",

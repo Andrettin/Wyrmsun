@@ -1,0 +1,18 @@
+the_mastersmith_brothers = {
+	name = "The Mastersmith Brothers"
+	icon = icon_dwarven_runemaster
+	player_color = red
+	competitive = true
+	description = "The brothers Brokk and Eitri have come to renown for their remarkable smithing abilities. It would surely be a boon for us to have them under our employ."
+	hint = "A selection of heroes is available for recruitment at the Mead Hall."
+	objectives = {
+		recruit_hero = brokk
+		recruit_hero = eitri
+	}
+	conditions = {
+		unit_class = smithy
+	}
+	completion_effects = {
+		jewelry += 1000
+	}
+}

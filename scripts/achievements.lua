@@ -103,7 +103,7 @@ DefineAchievement("the-treasures-of-svarinshaug", {
 	Icon = "icon-dwarven-runemaster",
 	Description = "Complete the The Mastersmith Brothers, The Ring of Riches, The Thunder Hammer and The Magnificent Spear quests.", -- don't require "The Sleek Ship" here since players are unlikely to build a dock in the dwarven scenarios
 	PlayerColor = "red",
-	RequiredQuests = {"the-mastersmith-brothers", "the-ring-of-riches", "the-thunder-hammer", "the-magnificent-spear"}
+	RequiredQuests = {"the_mastersmith_brothers", "the-ring-of-riches", "the-thunder-hammer", "the-magnificent-spear"}
 })
 
 DefineAchievement("the-lay-of-alvis", {
