@@ -1,0 +1,14 @@
+chicken = {
+	name = "Chicken"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+	specimen_names = {
+		male = {
+			"Fjalar" #"Fjalarr", a bright-red roost in Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 84.
+		}
+	}
+}
