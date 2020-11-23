@@ -1080,7 +1080,6 @@ DefineUnitType("unit-slime", {
 	CanAttack = true,
 	CanTargetLand = true,
 	RandomMovementProbability = 1,
-	Gender = "asexual",
 	PeopleAversion = true,
 	Slime = true,
 	Detritivore = true,	
