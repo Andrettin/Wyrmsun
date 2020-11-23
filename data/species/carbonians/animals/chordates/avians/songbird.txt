@@ -1,0 +1,9 @@
+songbird = {
+	name = "Songbird"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+}

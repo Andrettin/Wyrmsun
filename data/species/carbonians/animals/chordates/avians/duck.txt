@@ -1,0 +1,9 @@
+duck = {
+	name = "Duck"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+}

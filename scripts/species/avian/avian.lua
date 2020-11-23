@@ -75,24 +75,6 @@ DefineSpecies("hoatzin", {
 	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
-DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
-	Name = "Eagle", -- Bald Eagle
-	Genus = "haliaeetus",
-	Species = "leucocephalus",
-	Homeworld = "earth",
---	Terrains = {"grass", "dirt", "pine-tree", "rock"}, -- correct?
-	EvolvesFrom = {"hoatzin"},
-	Era = "holocene"
-})
-
-DefineSpecies("bird", {
-	Name = "Bird",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "pine-tree", "rock", "shallow-water", "dry-mud", "mud", "snow", "ice"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"} -- seems sensible, given the songbird is set to descend from these
-})
-
 DefineSpecies("diatryma", {
 	Name = "Diatryma",
 	Supertaxon = "aves",
@@ -100,65 +82,8 @@ DefineSpecies("diatryma", {
 	EvolvesFrom = {"ichthyornis", "presbyornis"}
 })
 
-DefineSpecies("duck", {
-	Name = "Duck",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"}
-})
-
-DefineSpecies("ostrich", {
-	Name = "Ostrich",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"}
-})
-
-DefineSpecies("owl", {
-	Name = "Owl",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"}
-})
-
-DefineSpecies("parrot", {
-	Name = "Parrot",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"}
-})
-
-DefineSpecies("passenger-pigeon", {
-	Name = "Passenger Pigeon",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"hoatzin"}
-})
-
-DefineSpecies("pelican", {
-	Name = "Pelican",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"}
-})
-
 DefineSpecies("phorusrhacus", {
 	Name = "Phorusrhacus",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"ichthyornis", "presbyornis"}
-})
-
-DefineSpecies("roc", {
-	Name = "Roc",
-	Supertaxon = "aves",
-	Homeworld = "jotunheim",
-	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
-	Era = "holocene"
-})
-
-DefineSpecies("songbird", {
-	Name = "Songbird",
 	Supertaxon = "aves",
 	Homeworld = "earth",
 	EvolvesFrom = {"ichthyornis", "presbyornis"}

@@ -1,0 +1,8 @@
+parrot = {
+	name = "Parrot"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		hoatzin
+	}
+}

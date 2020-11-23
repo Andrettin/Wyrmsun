@@ -1,0 +1,8 @@
+passenger_pigeon = {
+	name = "Passenger Pigeon"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		hoatzin
+	}
+}

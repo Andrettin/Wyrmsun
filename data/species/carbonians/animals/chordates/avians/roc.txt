@@ -1,0 +1,9 @@
+roc = {
+	name = "Roc"
+	supertaxon = aves
+	era = holocene
+	homeworld = jotunheim
+	pre_evolutions = {
+		hoatzin #the Roc has a common ancestor with eagles
+	}
+}

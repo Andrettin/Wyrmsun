@@ -1,0 +1,9 @@
+owl = {
+	name = "Owl"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+}

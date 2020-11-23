@@ -1,0 +1,16 @@
+bald_eagle = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
+	name = "Eagle" #Bald Eagle
+	supertaxon = haliaeetus
+	specific_name = "leucocephalus"
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		hoatzin
+	}
+	native_terrain_types = {
+		grass #correct?
+		dirt #correct?
+		pine_tree #correct?
+		rock #correct?
+	}
+}

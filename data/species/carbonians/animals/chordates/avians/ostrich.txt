@@ -1,0 +1,9 @@
+ostrich = {
+	name = "Ostrich"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+}

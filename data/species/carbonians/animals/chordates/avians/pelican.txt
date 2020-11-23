@@ -1,0 +1,9 @@
+pelican = {
+	name = "Pelican"
+	supertaxon = aves
+	homeworld = earth
+	pre_evolutions = {
+		ichthyornis
+		presbyornis
+	}
+}
