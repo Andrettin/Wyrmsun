@@ -2041,7 +2041,7 @@ Units = {
 	"upgrade-goblin-alchemy",
 	"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
 	"unit-elven-swordsman", "unit-elven-priest", 
-	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
+	"unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-ettin",
 	"unit-ettin-town-hall",
 	"unit-caravan",
