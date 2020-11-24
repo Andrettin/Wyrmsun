@@ -1,0 +1,10 @@
+goblin = {
+	work_complete_sound = basic_goblin_voices_work_complete
+	not_enough_food_sound = basic_goblin_voices_not_enough_food
+	not_enough_resource_sounds = {
+		coal = basic_goblin_voices_not_enough_coal
+		copper = basic_goblin_voices_not_enough_gold
+		lumber = basic_goblin_voices_not_enough_lumber
+		stone = basic_goblin_voices_not_enough_stone
+	}
+}

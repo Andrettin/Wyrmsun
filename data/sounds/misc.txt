@@ -1,0 +1,11 @@
+building_construction = {
+	files = {
+		"misc/building_construction.wav"
+	}
+}
+
+rescue = {
+	files = {
+		"misc/rescue.wav"
+	}
+}

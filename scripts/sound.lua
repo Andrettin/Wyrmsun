@@ -29,11 +29,6 @@
 --SoundThread()
 
 ------------------------------------------------------------------------------
---	Define sounds later used
---
-sound_click = MakeSound("click", "interface/click.wav")
-
-------------------------------------------------------------------------------
 --	Define simple sounds. (FIXME: somebody must clean the order.)
 --
 
@@ -66,6 +61,14 @@ MakeSound("basic-dwarf-voices-dead", {
 	"dwarf/basic_voices/dead-2.wav"
 })
 SetSoundRange("basic-dwarf-voices-dead", 32)
+
+MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")
+MakeSound("basic-dwarf-voices-not-enough-food", "dwarf/basic_voices/need-farms.wav")
+
+MakeSound("basic-dwarf-voices-not-enough-coal", "dwarf/basic_voices/need-coal.wav")
+MakeSound("basic-dwarf-voices-not-enough-gold", "dwarf/basic_voices/need-gold.wav")
+MakeSound("basic-dwarf-voices-not-enough-lumber", "dwarf/basic_voices/need-wood.wav")
+MakeSound("basic-dwarf-voices-not-enough-stone", "dwarf/basic_voices/need-stone.wav")
 
 ------------------------------------------------------------------------------
 --	Define unit-specific dwarf sounds.
@@ -209,6 +212,15 @@ MakeSound("gnomish-caravan-ready", {
 	"gnome/caravan/caravan-ready-4.wav"
 })
 
+MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")
+MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")
+MakeSound("basic-gnome-voices-not-enough-food", "gnome/basic_voices/need-farms.wav")
+
+MakeSound("basic_gnome_voices_not_enough_coal", "gnome/basic_voices/need-coal.wav")
+MakeSound("basic_gnome_voices_not_enough_gold", "gnome/basic_voices/need-gold.wav")
+MakeSound("basic_gnome_voices_not_enough_lumber", "gnome/basic_voices/need-wood.wav")
+MakeSound("basic_gnome_voices_not_enough_stone", "gnome/basic_voices/need-stone.wav")
+
 ------------------------------------------------------------------------------
 --	Define simple goblin sounds.
 --
@@ -270,6 +282,14 @@ MakeSound("basic-goblin-voices-dead", {
 	"goblin/basic_voices/goblin-die-2.wav"
 })
 SetSoundRange("basic-goblin-voices-dead", 32)
+
+MakeSound("basic-goblin-voices-work-complete", "goblin/worker/built.wav")
+MakeSound("basic-goblin-voices-not-enough-food", "goblin/basic_voices/need-farms.wav")
+
+MakeSound("basic_goblin_voices_not_enough_coal", "goblin/basic_voices/need-coal.wav")
+MakeSound("basic_goblin_voices_not_enough_gold", "goblin/basic_voices/need-gold.wav")
+MakeSound("basic_goblin_voices_not_enough_lumber", "goblin/basic_voices/need-wood.wav")
+MakeSound("basic_goblin_voices_not_enough_stone", "goblin/basic_voices/need-stone.wav")
 
 ------------------------------------------------------------------------------
 --	Define unit-specific goblin sounds.
@@ -334,6 +354,8 @@ MakeSound("basic-germanic-voices-help-town", {
 	"teuton/basic_voices/town_help.wav"
 })
 
+MakeSound("basic-germanic-voices-work-complete", "germanic/bura/work_complete.wav")
+
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 --	Define simple teuton sounds.
@@ -365,20 +387,18 @@ MakeSound("basic-teuton-voices-help-town", {
 	"teuton/basic_voices/town_help.wav"
 })
 
+MakeSound("basic-teuton-voices-work-complete", "teuton/bauer/work_complete.wav")
+MakeSound("basic-teuton-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")
+
+MakeSound("basic-teuton-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")
+MakeSound("basic-teuton-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")
+MakeSound("basic-teuton-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")
+MakeSound("basic-teuton-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")
+
 ------------------------------------------------------------------------------
 --	Define unit-specific teuton sounds.
 --
 MakeSound("teuton-bauer-ready", "teuton/bauer/bauer_ready.wav")
-
-------------------------------------------------------------------------------
---	Define simple misc sounds.
---
-building_construction = MakeSound("building construction", "misc/building_construction.wav")
-
-placement_error = MakeSound("placement error", "interface/placement_error.wav")
-placement_success = MakeSound("placement success", "interface/placement_success.wav")
-
-rescue = MakeSound("rescue", "misc/rescue.wav")
 
 -- building selection sounds
 MakeSound("town-hall-selected", "buildings/sel_civ_center.wav")
@@ -902,177 +922,6 @@ Load("scripts/civilizations/orc/sound.lua")
 
 --	Define sounds used by the game
 --
-DefineGameSounds(
-	"placement-error", {"anglo-saxon", placement_error},
-	"placement-error", {"castillian", placement_error},
-	"placement-error", {"celt", placement_error},
-	"placement-error", {"dwarf", placement_error},
-	"placement-error", {"english", placement_error},
-	"placement-error", {"frankish", placement_error},
-	"placement-error", {"french", placement_error},
-	"placement-error", {"germanic", placement_error},
-	"placement-error", {"gnome", placement_error},
-	"placement-error", {"goblin", placement_error},
-	"placement-error", {"goth", placement_error},
-	"placement-error", {"greek", placement_error},
-	"placement-error", {"italian", placement_error},
-	"placement-error", {"kobold", placement_error},
-	"placement-error", {"latin", placement_error},
-	"placement-error", {"norse", placement_error},
-	"placement-error", {"portuguese", placement_error},
-	"placement-error", {"romanian", placement_error},
-	"placement-error", {"suebi", placement_error},
-	"placement-error", {"teuton", placement_error},
-
-	"placement-success", {"anglo-saxon", placement_success},
-	"placement-success", {"castillian", placement_success},
-	"placement-success", {"celt", placement_success},
-	"placement-success", {"dwarf", placement_success},
-	"placement-success", {"english", placement_success},
-	"placement-success", {"frankish", placement_success},
-	"placement-success", {"french", placement_success},
-	"placement-success", {"germanic", placement_success},
-	"placement-success", {"gnome", placement_success},
-	"placement-success", {"goblin", placement_success},
-	"placement-success", {"goth", placement_success},
-	"placement-success", {"greek", placement_success},
-	"placement-success", {"italian", placement_success},
-	"placement-success", {"kobold", placement_success},
-	"placement-success", {"latin", placement_success},
-	"placement-success", {"norse", placement_success},
-	"placement-success", {"portuguese", placement_success},
-	"placement-success", {"romanian", placement_success},
-	"placement-success", {"suebi", placement_success},
-	"placement-success", {"teuton", placement_success},
-
-	"click", sound_click,
+--DefineGameSounds(
 --	"transport-docking", transport_docking,
-	"chat-message", sound_click,
-
-	"building-construction", {"anglo-saxon", building_construction},
-	"building-construction", {"castillian", building_construction},
-	"building-construction", {"celt", building_construction},
-	"building-construction", {"dwarf", building_construction},
-	"building-construction", {"english", building_construction},
-	"building-construction", {"frankish", building_construction},
-	"building-construction", {"french", building_construction},
-	"building-construction", {"germanic", building_construction},
-	"building-construction", {"gnome", building_construction},
-	"building-construction", {"goblin", building_construction},
-	"building-construction", {"goth", building_construction},
-	"building-construction", {"greek", building_construction},
-	"building-construction", {"italian", building_construction},
-	"building-construction", {"kobold", building_construction},
-	"building-construction", {"latin", building_construction},
-	"building-construction", {"norse", building_construction},
-	"building-construction", {"portuguese", building_construction},
-	"building-construction", {"romanian", building_construction},
-	"building-construction", {"suebi", building_construction},
-	"building-construction", {"teuton", building_construction},
-
-	"work-complete", {"anglo-saxon", MakeSound("basic-anglo-saxon-voices-work-complete", {"english/basic_voices/work_complete_01.wav", "english/basic_voices/work_complete_02.wav", "english/basic_voices/work_complete_03.wav"})},
-	"work-complete", {"dwarf", MakeSound("basic-dwarf-voices-work-complete", "dwarf/miner/work-done.wav")},
-	"work-complete", {"english", MakeSound("basic-english-voices-work-complete", {"english/basic_voices/work_complete_01.wav", "english/basic_voices/work_complete_02.wav", "english/basic_voices/work_complete_03.wav"})},
-	"work-complete", {"frankish", MakeSound("basic-frankish-voices-work-complete", "germanic/bura/work_complete.wav")},
-	"work-complete", {"germanic", MakeSound("basic-germanic-voices-work-complete", "germanic/bura/work_complete.wav")},
-	"work-complete", {"gnome", MakeSound("basic-gnome-voices-work-complete", "gnome/basic_voices/done-01.wav")},
-	"work-complete", {"goth", MakeSound("basic-goth-voices-work-complete", "germanic/bura/work_complete.wav")},
-	"work-complete", {"greek", MakeSound("basic-greek-voices-work-complete", {"greek/basic_voices/civ_male_yes_1.wav"})},
-	"work-complete", {"goblin", MakeSound("basic-goblin-voices-work-complete", "goblin/worker/built.wav")},
-	"work-complete", {"latin", MakeSound("basic-latin-voices-work-complete", {"latin/basic_voices/civ_male_build_1.wav"})},
-	"work-complete", {"norse", MakeSound("basic-norse-voices-work-complete", "germanic/bura/work_complete.wav")},
-	"work-complete", {"suebi", MakeSound("basic-suebi-voices-work-complete", "germanic/bura/work_complete.wav")},
-	"work-complete", {"teuton", MakeSound("basic-teuton-voices-work-complete", "teuton/bauer/work_complete.wav")},
-
-	"research-complete", {"gnome", MakeSound("basic-gnome-voices-research-complete", "gnome/basic_voices/research-done-1.wav")}
-)
-
-DefineGameSounds(
-	"not-enough-res", {"coal", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-coal", {"english/basic_voices/need_coal_01.wav", "english/basic_voices/need_coal_02.wav"})},
-	"not-enough-res", {"coal", "dwarf", MakeSound("basic-dwarf-voices-not-enough-coal", "dwarf/basic_voices/need-coal.wav")},
-	"not-enough-res", {"coal", "english", MakeSound("basic-english-voices-not-enough-coal", {"english/basic_voices/need_coal_01.wav", "english/basic_voices/need_coal_02.wav"})},
-	"not-enough-res", {"coal", "frankish", MakeSound("basic-frankish-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"coal", "germanic", MakeSound("basic-germanic-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"coal", "gnome", MakeSound("basic-gnome-voices-not-enough-coal", "gnome/basic_voices/need-coal.wav")},
-	"not-enough-res", {"coal", "goblin", MakeSound("basic-goblin-voices-not-enough-coal", "goblin/basic_voices/need-coal.wav")},
-	"not-enough-res", {"coal", "goth", MakeSound("basic-goth-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"coal", "greek", MakeSound("basic-greek-voices-not-enough-coal", {"english/basic_voices/need_coal_01.wav", "english/basic_voices/need_coal_02.wav"})},
-	"not-enough-res", {"coal", "latin", MakeSound("basic-latin-voices-not-enough-coal", {"english/basic_voices/need_coal_01.wav", "english/basic_voices/need_coal_02.wav"})},
-	"not-enough-res", {"coal", "norse", MakeSound("basic-norse-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"coal", "suebi", MakeSound("basic-suebi-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"coal", "teuton", MakeSound("basic-teuton-voices-not-enough-coal", "teuton/basic_voices/not_enough_coal.wav")},
-	"not-enough-res", {"copper", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-copper", "english/basic_voices/need_copper.wav")},
-	"not-enough-res", {"copper", "dwarf", MakeSound("basic-dwarf-voices-not-enough-gold", "dwarf/basic_voices/need-gold.wav")},
-	"not-enough-res", {"copper", "english", MakeSound("basic-english-voices-not-enough-copper", "english/basic_voices/need_copper.wav")},
-	"not-enough-res", {"copper", "frankish", MakeSound("basic-frankish-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"copper", "germanic", MakeSound("basic-germanic-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"copper", "gnome", MakeSound("basic-gnome-voices-not-enough-gold", "gnome/basic_voices/need-gold.wav")},
-	"not-enough-res", {"copper", "goblin", MakeSound("basic-goblin-voices-not-enough-gold", "goblin/basic_voices/need-gold.wav")},
-	"not-enough-res", {"copper", "goth", MakeSound("basic-goth-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"copper", "greek", MakeSound("basic-greek-voices-not-enough-copper", "english/basic_voices/need_copper.wav")},
-	"not-enough-res", {"copper", "latin", MakeSound("basic-latin-voices-not-enough-copper", "english/basic_voices/need_copper.wav")},
-	"not-enough-res", {"copper", "norse", MakeSound("basic-norse-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"copper", "suebi", MakeSound("basic-suebi-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"copper", "teuton", MakeSound("basic-teuton-voices-not-enough-gold", "teuton/basic_voices/not_enough_gold.wav")},
-	"not-enough-res", {"lumber", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")},
-	"not-enough-res", {"lumber", "dwarf", MakeSound("basic-dwarf-voices-not-enough-lumber", "dwarf/basic_voices/need-wood.wav")},
-	"not-enough-res", {"lumber", "english", MakeSound("basic-english-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")},
-	"not-enough-res", {"lumber", "frankish", MakeSound("basic-frankish-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"lumber", "germanic", MakeSound("basic-germanic-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"lumber", "gnome", MakeSound("basic-gnome-voices-not-enough-lumber", "gnome/basic_voices/need-wood.wav")},
-	"not-enough-res", {"lumber", "goblin", MakeSound("basic-goblin-voices-not-enough-lumber", "goblin/basic_voices/need-wood.wav")},
-	"not-enough-res", {"lumber", "goth", MakeSound("basic-goth-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"lumber", "greek", MakeSound("basic-greek-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")},
-	"not-enough-res", {"lumber", "latin", MakeSound("basic-latin-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")},
-	"not-enough-res", {"lumber", "norse", MakeSound("basic-norse-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"lumber", "suebi", MakeSound("basic-suebi-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"lumber", "teuton", MakeSound("basic-teuton-voices-not-enough-lumber", "teuton/basic_voices/not_enough_lumber.wav")},
-	"not-enough-res", {"stone", "anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-stone", "english/basic_voices/need_stone.wav")},
-	"not-enough-res", {"stone", "dwarf", MakeSound("basic-dwarf-voices-not-enough-stone", "dwarf/basic_voices/need-stone.wav")},
-	"not-enough-res", {"stone", "english", MakeSound("basic-english-voices-not-enough-stone", "english/basic_voices/need_stone.wav")},
-	"not-enough-res", {"stone", "frankish", MakeSound("basic-frankish-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-	"not-enough-res", {"stone", "germanic", MakeSound("basic-germanic-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-	"not-enough-res", {"stone", "gnome", MakeSound("basic-gnome-voices-not-enough-stone", "gnome/basic_voices/need-stone.wav")},
-	"not-enough-res", {"stone", "goblin", MakeSound("basic-goblin-voices-not-enough-stone", "goblin/basic_voices/need-stone.wav")},
-	"not-enough-res", {"stone", "goth", MakeSound("basic-goth-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-	"not-enough-res", {"stone", "greek", MakeSound("basic-greek-voices-not-enough-stone", "english/basic_voices/need_stone.wav")},
-	"not-enough-res", {"stone", "latin", MakeSound("basic-latin-voices-not-enough-stone", "english/basic_voices/need_stone.wav")},
-	"not-enough-res", {"stone", "norse", MakeSound("basic-norse-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-	"not-enough-res", {"stone", "suebi", MakeSound("basic-suebi-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-	"not-enough-res", {"stone", "teuton", MakeSound("basic-teuton-voices-not-enough-stone", "teuton/basic_voices/not_enough_stone.wav")},
-
-	"not-enough-food", {"anglo-saxon", MakeSound("basic-anglo-saxon-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"dwarf", MakeSound("basic-dwarf-voices-not-enough-food", "dwarf/basic_voices/need-farms.wav")},
-	"not-enough-food", {"english", MakeSound("basic-english-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"frankish", MakeSound("basic-frankish-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"germanic", MakeSound("basic-germanic-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"gnome", MakeSound("basic-gnome-voices-not-enough-food", "gnome/basic_voices/need-farms.wav")},
-	"not-enough-food", {"goblin", MakeSound("basic-goblin-voices-not-enough-food", "goblin/basic_voices/need-farms.wav")},
-	"not-enough-food", {"goth", MakeSound("basic-goth-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"greek", MakeSound("basic-greek-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"latin", MakeSound("basic-latin-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"norse", MakeSound("basic-norse-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"suebi", MakeSound("basic-suebi-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-	"not-enough-food", {"teuton", MakeSound("basic-teuton-voices-not-enough-food", "teuton/basic_voices/not_enough_food.wav")},
-
-	"rescue", {"anglo-saxon", rescue},
-	"rescue", {"castillian", rescue},
-	"rescue", {"celt", rescue},
-	"rescue", {"dwarf", rescue},
-	"rescue", {"english", rescue},
-	"rescue", {"frankish", rescue},
-	"rescue", {"french", rescue},
-	"rescue", {"germanic", rescue},
-	"rescue", {"gnome", rescue},
-	"rescue", {"goblin", rescue},
-	"rescue", {"goth", rescue},
-	"rescue", {"greek", rescue},
-	"rescue", {"italian", rescue},
-	"rescue", {"kobold", rescue},
-	"rescue", {"latin", rescue},
-	"rescue", {"norse", rescue},
-	"rescue", {"portuguese", rescue},
-	"rescue", {"romanian", rescue},
-	"rescue", {"suebi", rescue},
-	"rescue", {"teuton", rescue}
-)
+--)

@@ -1,0 +1,3 @@
+suebi = {
+	work_complete_sound = basic_germanic_voices_work_complete
+}

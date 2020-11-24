@@ -1,0 +1,82 @@
+english = {
+	name = "English"
+	parent_civilization = anglo_saxon
+	group = anglo_saxon
+	language = english
+	visible = true
+	default_color = red
+	upgrade = upgrade_english_civilization
+	develops_from = {
+		anglo_saxon
+	}
+	
+	unit_sounds = {
+		selected = basic_english_voices_selected_group
+		acknowledge = basic_english_voices_acknowledge
+		ready = basic_english_voices_ready
+		help = basic_english_voices_help
+		help_town = basic_english_voices_help_town
+	}
+	work_complete_sound = basic_english_voices_work_complete
+	not_enough_resource_sounds = {
+		coal = basic_english_voices_not_enough_coal
+		copper = basic_english_voices_not_enough_copper
+		lumber = basic_english_voices_not_enough_lumber
+		stone = basic_english_voices_not_enough_stone
+	}
+	
+	personal_names = {
+		male = {
+			"Albert"
+			"Anthony"
+			"Bernard"
+			"Charles"
+			"Edward"
+			"Francis"
+			"Frederick"
+			"George"
+			"Henry"
+			"John"
+			"Joseph"
+			"Lewis"
+			"Paul"
+			"Peter"
+			"Theodore"
+			"William"
+		}
+	}
+	
+	unit_class_names = {
+		farm = {
+			"Blackfield"
+			"Blackgarden"
+			"Brownfield"
+			"Browngarden"
+			"Greengarden"
+			"Greenfield"
+			"Lushfield"
+			"Newfield"
+			"Newgarden"
+			"Oldfield"
+			"Oldgarden"
+			"Redfield"
+			"Redgarden"
+			"Stonefield"
+			"Stonegarden"
+			"Whitefield"
+			"Whitegarden"
+		}
+	}
+	
+	history = {
+		1180 = {
+			#the English scholar Alexander Neckam (1157-1217) wrote about the uses of magnetism for ascertaining the north/south direction in 1180; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
+			acquired_upgrades += upgrade_compass
+		}
+		
+		1249 = {
+			#the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+			acquired_upgrades += upgrade_gunpowder
+		}
+	}
+}

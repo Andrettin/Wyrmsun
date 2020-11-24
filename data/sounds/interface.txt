@@ -1,0 +1,17 @@
+click = {
+	files = {
+		"interface/click.wav"
+	}
+}
+
+placement_error = {
+	files = {
+		"interface/placement_error.wav"
+	}
+}
+
+placement_success = {
+	files = {
+		"interface/placement_success.wav"
+	}
+}

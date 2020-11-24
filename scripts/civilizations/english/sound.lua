@@ -71,3 +71,18 @@ MakeSound("basic-english-voices-help-town", {
 	"english/basic_voices/help_town_01.wav",
 	"english/basic_voices/help_town_02.wav"
 })
+
+MakeSound("basic_english_voices_work_complete", {
+	"english/basic_voices/work_complete_01.wav",
+	"english/basic_voices/work_complete_02.wav",
+	"english/basic_voices/work_complete_03.wav"
+})
+
+MakeSound("basic-english-voices-not-enough-coal", {
+	"english/basic_voices/need_coal_01.wav",
+	"english/basic_voices/need_coal_02.wav"
+})
+
+MakeSound("basic-english-voices-not-enough-copper", "english/basic_voices/need_copper.wav")
+MakeSound("basic-english-voices-not-enough-lumber", "english/basic_voices/need_lumber.wav")
+MakeSound("basic-english-voices-not-enough-stone", "english/basic_voices/need_stone.wav")

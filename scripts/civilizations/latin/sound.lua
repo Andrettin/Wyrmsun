@@ -68,3 +68,4 @@ MakeSound("basic-latin-voices-harvest", {
 	"latin/basic_voices/civ_male_gather_together_1.wav"
 })
 
+MakeSound("basic-latin-voices-work-complete", {"latin/basic_voices/civ_male_build_1.wav"})

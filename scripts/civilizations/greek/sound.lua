@@ -49,3 +49,5 @@ MakeSound("basic-greek-voices-acknowledge", {
 MakeSound("basic-greek-voices-attack", {
 	"greek/basic_voices/civ_male_attack_10.wav"
 })
+
+MakeSound("basic-greek-voices-work-complete", {"greek/basic_voices/civ_male_yes_1.wav"})

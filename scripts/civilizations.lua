@@ -575,44 +575,6 @@ DefineCivilization("anglo-saxon", {
 })
 
 DefineCivilization("english", {
-	Display = "English",
-	Visible = true,
-	Group = "anglo_saxon",
-	Language = "english",
-	ParentCivilization = "anglo-saxon",
-	Adjective = "English",
-	DefaultColor = "red",
-	CivilizationUpgrade = "upgrade-english-civilization",
-	DevelopsFrom = {"anglo-saxon"},
-	UnitSounds = {
-		"selected", "basic-english-voices-selected-group",
-		"acknowledge", "basic-english-voices-acknowledge",
-		"ready", "basic-english-voices-ready",
-		"help", "basic-english-voices-help",
-		"help-town", "basic-english-voices-help-town"
-	},
-	HistoricalUpgrades = {
-		1180, "upgrade-compass", true, -- the English scholar Alexander Neckam (1157-1217) wrote about the uses of magnetism for ascertaining the north/south direction in 1180; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
-		1249, "upgrade_gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
-	},
-	PersonalNames = {
-		"male", "Albert",
-		"male", "Anthony",
-		"male", "Bernard",
-		"male", "Charles",
-		"male", "Edward",
-		"male", "Francis",
-		"male", "Frederick",
-		"male", "George",
-		"male", "Henry",
-		"male", "John",
-		"male", "Joseph",
-		"male", "Lewis",
-		"male", "Paul",
-		"male", "Peter",
-		"male", "Theodore",
-		"male", "William"
-	},
 	--[[
 	SettlementNames = {
 		"Ashford", -- Source: "Philip's International School Atlas", 2006, p. 64.
@@ -688,25 +650,6 @@ DefineCivilization("english", {
 		"Suffolk",
 		"Sussex",
 		"Wiltshire"
-	},
-	UnitClassNames = {
-		"farm", "Blackfield",
-		"farm", "Blackgarden",
-		"farm", "Brownfield",
-		"farm", "Browngarden",
-		"farm", "Greengarden",
-		"farm", "Greenfield",
-		"farm", "Lushfield",
-		"farm", "Newfield",
-		"farm", "Newgarden",
-		"farm", "Oldfield",
-		"farm", "Oldgarden",
-		"farm", "Redfield",
-		"farm", "Redgarden",
-		"farm", "Stonefield",
-		"farm", "Stonegarden",
-		"farm", "Whitefield",
-		"farm", "Whitegarden"
 	}
 })
 

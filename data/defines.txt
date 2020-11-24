@@ -39,3 +39,12 @@ forest_regeneration_threshold = 1200
 
 #destroyed overlay terrain decay speed, in seconds (0 = disabled)
 destroyed_overlay_terrain_decay_threshold = -1200
+
+game_sound_set = {
+	placement_error = placement_error
+	placement_success = placement_success
+	click = click
+	building_construction = building_construction
+	rescue = rescue
+	chat_message = click
+}

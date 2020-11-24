@@ -1,0 +1,3 @@
+greek = {
+	work_complete_sound = basic_greek_voices_work_complete
+}
