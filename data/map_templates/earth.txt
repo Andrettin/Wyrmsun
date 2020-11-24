@@ -119,6 +119,8 @@ earth_60_75_latitude_north = {
 		unit_boar = 4
 		unit_horse = 2
 		unit_wolf = 4
+		unit_germanic_warrior = 8
+		unit_germanic_archer = 8
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
@@ -174,6 +176,8 @@ earth_45_60_latitude_north = {
 		unit_boar = 32
 		unit_horse = 16
 		unit_wolf = 32
+		unit_germanic_warrior = 64
+		unit_germanic_archer = 64
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
@@ -229,6 +233,8 @@ earth_30_45_latitude_north = {
 		unit_boar = 32
 		unit_horse = 16
 		unit_wolf = 32
+		unit_germanic_warrior = 64
+		unit_germanic_archer = 64
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
