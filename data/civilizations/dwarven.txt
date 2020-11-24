@@ -27,9 +27,9 @@ dwarf = {
 		attack = basic_dwarf_voices_attack
 		ready = dwarf_ready
 		help = basic_dwarf_voices_help
-		help_town = basic_dwarf_voices_help_town
 		dead = basic_dwarf_voices_dead
 	}
+	help_town_sound = basic_dwarf_voices_help_town
 	work_complete_sound = basic_dwarf_voices_work_complete
 	not_enough_food_sound = basic_dwarf_voices_not_enough_food
 	not_enough_resource_sounds = {

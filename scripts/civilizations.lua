@@ -304,93 +304,7 @@ DefineCivilization("kobold", {
 })
 
 DefineCivilization("teuton", {
-	Visible = true,
-	Group = "continental_west_germanic",
-	Language = "high-german",
-	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
-	DefaultColor = "yellow",
-	CivilizationUpgrade = "upgrade_teutonic_civilization",
-	DevelopsFrom = {"germanic"},
-	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".",
-	UnitSounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
-		"help-town", "basic-teuton-voices-help-town"
-	},
-	PersonalNames = {
-		"female", "Hilde",
-		"female", "Wilhelmina",
-		"male", "Adalbert",
-		"male", "Albert",
-		"male", "Albrecht",
-		"male", "Alexander",
-		"male", "Alphart",
-		"male", "Anton",
-		"male", "Arnulf",
-		"male", "Bernard",
-		"male", "Carl",
-		"male", "Christian",
-		"male", "David",
-		"male", "Eduard",
-		"male", "Ernst",
-		"male", "Fabian",
-		"male", "Ferdinand",
-		"male", "Franz",
-		"male", "Friedrich",
-		"male", "Georg",
-		"male", "Gerhard",
-		"male", "Gottfried",
-		"male", "Gunther",
-		"male", "Gustav",
-		"male", "Hagen",
-		"male", "Hans",
-		"male", "Heinrich",
-		"male", "Heinz",
-		"male", "Helmut",
-		"male", "Hermann",
-		"male", "Hildebrand",
-		"male", "Jakob",
-		"male", "Johann",
-		"male", "Josef",
-		"male", "Joseph",
-		"male", "Karl",
-		"male", "Karlmann",
-		"male", "Klaus",
-		"male", "Kurt",
-		"male", "Leopold",
-		"male", "Lothar",
-		"male", "Ludwig",
-		"male", "Luitpold",
-		"male", "Lukas",
-		"male", "Manfred",
-		"male", "Mark",
-		"male", "Matthias",
-		"male", "Maximilian",
-		"male", "Michael",
-		"male", "Otto",
-		"male", "Paul",
-		"male", "Peter",
-		"male", "Philipp",
-		"male", "Pippin",
-		"male", "Richard",
-		"male", "Rudolf",
-		"male", "Siegfried",
-		"male", "Theodor",
-		"male", "Thomas",
-		"male", "Tobias",
-		"male", "Victor",
-		"male", "Walter",
-		"male", "Werner",
-		"male", "Wilhelm",
-		"male", "Wolfgang",
-		"male", "Wolfhart"
-	},
-	FamilyNames = {
-		"Muhlhausen" -- "Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
-	},
 	--[[
 	SettlementNames = {
 		"Altsohl",
@@ -492,35 +406,6 @@ DefineCivilization("teuton", {
 		"Styria", -- "Steiermark"
 		"Tyrol", -- "Tirol"
 		"Vorarlberg" 
-	},
-	ShipNames = {
-		-- Austrian ship names
-		"Achilles", -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-		"Adler", -- imperial yacht; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
-		"Banhans", -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-		"Bodrog", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 34.
-		"Enns", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 35.
-		"Erzherzog Albrecht", -- steam warship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
-		"Erzherzog Franz Ferdinand", -- hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-		"Franz I.", -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 28-29.
-		"Koros", -- "Körös"; river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 33-34.
-		"Kulpa", -- hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-		"Leitha", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 32-33.
-		"Maros", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 32-33.
-		"Schlick", -- steam warship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
-		"Szamos", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 33-34.
-		"Temes", -- river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 34.
-		"Traisen", -- hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-		"Traun" -- steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
-	},
-	HistoricalUpgrades = {
-		-500, "upgrade_ironworking", true,
-		-500, "upgrade-teuton-iron-shield", true,
-		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-		800, "upgrade-writing", true,
-		800, "upgrade-masonry", true,
-		919, "upgrade-deity-christian-god", true, -- the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1249, "upgrade_gunpowder", true -- the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
 })
 
@@ -537,13 +422,6 @@ DefineCivilization("anglo-saxon", {
 	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
-	UnitSounds = {
-		"selected", "basic-english-voices-selected-group",
-		"acknowledge", "basic-english-voices-acknowledge",
-		"ready", "basic-english-voices-ready",
-		"help", "basic-english-voices-help",
-		"help-town", "basic-english-voices-help-town"
-	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		664, "upgrade-deity-christian-god", true -- Christianity was predominant in England in 664; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 128.
@@ -664,14 +542,6 @@ DefineCivilization("frankish", {
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	UnitSounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
---		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"help-town", "basic-germanic-voices-help-town"
-	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	},
@@ -703,14 +573,6 @@ DefineCivilization("suebi", {
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
-	UnitSounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
---		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"help-town", "basic-germanic-voices-help-town"
-	},
 	HistoricalUpgrades = {
 		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
@@ -859,9 +721,7 @@ DefineCivilization("latin", {
 		"harvest", "leather", "basic-latin-voices-harvest",
 		"harvest", "diamonds", "basic-latin-voices-harvest",
 		"harvest", "emeralds", "basic-latin-voices-harvest",
-		"ready", "basic-latin-voices-ready",
-		"help", "basic-english-voices-help",
-		"help-town", "basic-english-voices-help-town"
+		"ready", "basic-latin-voices-ready"
 	},
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -1017,14 +877,6 @@ DefineCivilization("goth", {
 	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
 	DefaultColor = "black",
-	UnitSounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
---		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"help-town", "basic-germanic-voices-help-town"
-	},
 	PersonalNames = {
 		-- Burgundian names
 		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
@@ -1055,9 +907,7 @@ DefineCivilization("greek", {
 		"selected", "basic-greek-voices-selected-group",
 		"acknowledge", "basic-greek-voices-acknowledge",
 --		"attack", "basic-greek-voices-attack",
-		"ready", "basic-greek-voices-ready",
-		"help", "basic-english-voices-help",
-		"help-town", "basic-english-voices-help-town"
+		"ready", "basic-greek-voices-ready"
 	},
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
@@ -1255,14 +1105,6 @@ DefineCivilization("norse", {
 	CivilizationUpgrade = "upgrade_norse_civilization",
 	Calendar = "norse_calendar",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.",
-	UnitSounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
---		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"help-town", "basic-germanic-voices-help-town"
-	},
 	PersonalNames = {
 		"male", "Biari", -- Old Swedish name; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
@@ -1393,9 +1235,7 @@ DefineCivilization("slav", {
 		"selected", "basic-greek-voices-selected-group",
 		"acknowledge", "basic-greek-voices-acknowledge",
 --		"attack", "basic-greek-voices-attack",
-		"ready", "basic-greek-voices-ready",
-		"help", "basic-english-voices-help",
-		"help-town", "basic-english-voices-help-town"
+		"ready", "basic-greek-voices-ready"
 	},
 	HistoricalUpgrades = {
 		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.

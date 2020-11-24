@@ -1,4 +1,8 @@
 latin = {
+	unit_sounds = {
+		help = basic_english_voices_help
+	}
+	help_town_sound = basic_english_voices_help_town
 	work_complete_sound = basic_latin_voices_work_complete
 	not_enough_resource_sounds = {
 		coal = basic_english_voices_not_enough_coal

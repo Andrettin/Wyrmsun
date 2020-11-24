@@ -1,7 +1,24 @@
 teuton = {
 	name = "Teuton"
 	aliases += teutonic
+	parent_civilization = germanic
+	group = continental_west_germanic
+	language = high_german
+	visible = true
+	default_color = yellow
+	upgrade = upgrade_teutonic_civilization
+	description = During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".
+	develops_from = {
+		germanic
+	}
 	
+	unit_sounds = {
+		selected = basic_teuton_voices_selected_group
+		acknowledge = basic_teuton_voices_acknowledge
+		ready = basic_teuton_voices_ready
+		help = basic_teuton_voices_help
+	}
+	help_town_sound = basic_teuton_voices_help_town
 	work_complete_sound = basic_teuton_voices_work_complete
 	not_enough_food_sound = basic_teuton_voices_not_enough_food
 	not_enough_resource_sounds = {
@@ -27,6 +44,132 @@ teuton = {
 					}
 				}
 			}
+		}
+	}
+	
+	personal_names = {
+		male = {
+			"Adalbert"
+			"Albert"
+			"Albrecht"
+			"Alexander"
+			"Alphart"
+			"Anton"
+			"Arnulf"
+			"Bernard"
+			"Carl"
+			"Christian"
+			"David"
+			"Eduard"
+			"Ernst"
+			"Fabian"
+			"Ferdinand"
+			"Franz"
+			"Friedrich"
+			"Georg"
+			"Gerhard"
+			"Gottfried"
+			"Gunther"
+			"Gustav"
+			"Hagen"
+			"Hans"
+			"Heinrich"
+			"Heinz"
+			"Helmut"
+			"Hermann"
+			"Hildebrand"
+			"Jakob"
+			"Johann"
+			"Josef"
+			"Joseph"
+			"Karl"
+			"Karlmann"
+			"Klaus"
+			"Kurt"
+			"Leopold"
+			"Lothar"
+			"Ludwig"
+			"Luitpold"
+			"Lukas"
+			"Manfred"
+			"Mark"
+			"Matthias"
+			"Maximilian"
+			"Michael"
+			"Otto"
+			"Paul"
+			"Peter"
+			"Philipp"
+			"Pippin"
+			"Richard"
+			"Rudolf"
+			"Siegfried"
+			"Theodor"
+			"Thomas"
+			"Tobias"
+			"Victor"
+			"Walter"
+			"Werner"
+			"Wilhelm"
+			"Wolfgang"
+			"Wolfhart"
+		}
+		
+		female = {
+			"Hilde"
+			"Wilhelmina"
+		}
+	}
+	
+	surnames = {
+		"Muhlhausen" #"Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
+	}
+	
+	ship_names = {
+		#Austrian ship names
+		"Achilles" #steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+		"Adler" #imperial yacht; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
+		"Banhans" #steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+		"Bodrog" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 34.
+		"Enns" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 35.
+		"Erzherzog Albrecht" #steam warship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
+		"Erzherzog Franz Ferdinand" #hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+		"Franz I." #steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 28-29.
+		"Koros" #"Körös"; river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 33-34.
+		"Kulpa" #hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+		"Leitha" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 32-33.
+		"Maros" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 32-33.
+		"Schlick" #steam warship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.
+		"Szamos" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", pp. 33-34.
+		"Temes" #river monitor; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 34.
+		"Traisen" #hospital ship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+		"Traun" #steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
+	}
+	
+	history = {
+		-500 = {
+			acquired_upgrades += upgrade_ironworking
+			acquired_upgrades += upgrade_teuton_iron_shield
+		}
+		
+		180 = {
+			#In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+			acquired_upgrades += upgrade_teuton_spatha
+		}
+		
+		800 = {
+			acquired_upgrades += upgrade_writing
+			acquired_upgrades += upgrade_masonry
+		}
+		
+		919 = {
+			#the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			acquired_upgrades += upgrade_deity_christian_god
+		}
+		
+		1249 = {
+			#the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+			acquired_upgrades += upgrade_gunpowder
 		}
 	}
 }
