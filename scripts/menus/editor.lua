@@ -901,7 +901,7 @@ end
 --
 function EditUnitProperties()
 
-	if (GetUnitUnderCursor() == nil) then
+	if (GetUnitUnderCursorNumber() == -1) then
 		return;
 	end
 	local menu = WarGameMenu(panel(5))
@@ -912,13 +912,13 @@ function EditUnitProperties()
 	menu:addLabel(_("Unit Properties"), sizeX / 2, 11 * get_scale_factor())
 
 	local name_label = menu:addLabel(_("Unit Name"), sizeX / 2, (11 + (36 * 1)) * get_scale_factor())
-	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60 * get_scale_factor(), (11 + (36 * 2)) * get_scale_factor(), 120 * get_scale_factor())
+	local name_value = menu:addTextInputField(GetUnitVariable(GetUnitUnderCursorNumber(), "Name"), sizeX / 2 - 60 * get_scale_factor(), (11 + (36 * 2)) * get_scale_factor(), 120 * get_scale_factor())
 
-	local trait_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")
-	local prefix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")
-	local suffix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")
-	local work_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")
-	local unique_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Uniques")
+	local trait_list = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Traits")
+	local prefix_list = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Prefixes")
+	local suffix_list = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Suffixes")
+	local work_list = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Works")
+	local unique_list = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Uniques")
 	table.insert(trait_list, "") -- for if the unit has no trait
 	table.insert(prefix_list, "") -- for if the unit has no prefix
 	table.insert(suffix_list, "") -- for if the unit has no suffix
@@ -953,7 +953,7 @@ function EditUnitProperties()
 	local unit_work_label
 	local unit_unique
 	local activeCheckBox
-	local resource = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "GivesResource")
+	local resource = GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "GivesResource")
 	local resourceValue
 	
 	local function UniqueChanged()
@@ -989,54 +989,54 @@ function EditUnitProperties()
 		end
 	end	
 
-	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
+	if (GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Traits")) > 0) then
 		menu:addLabel(_("Unit Trait"), sizeX / 2, (11 + (36 * 3)) * get_scale_factor())
 		unit_trait = menu:addDropDown(display_trait_list, (sizeX / 2) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
 		unit_trait:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
-		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) - 1)
+		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(GetUnitUnderCursorNumber(), "Trait")) - 1)
 	end
 
-	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
-		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0) then
+	if (GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Organic") == false and GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Decoration") == false) then
+		if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Prefixes")) > 0) then
 			unit_prefix_label = menu:addLabel(_("Prefix"), sizeX / 4, (11 + (36 * 3)) * get_scale_factor())
 			unit_prefix = menu:addDropDown(display_prefix_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
 			unit_prefix:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
-			unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) - 1)
+			unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, GetUnitVariable(GetUnitUnderCursorNumber(), "Prefix")) - 1)
 		end
-		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0) then
+		if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Suffixes")) > 0) then
 			unit_suffix_label = menu:addLabel(_("Suffix"), math.floor(sizeX * 3 / 4), (11 + (36 * 3)) * get_scale_factor())
 			unit_suffix = menu:addDropDown(display_suffix_list, math.floor(sizeX * 3 / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
 			unit_suffix:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
-			unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) - 1)
+			unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, GetUnitVariable(GetUnitUnderCursorNumber(), "Suffix")) - 1)
 		end
-		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")) > 0) then
+		if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Works")) > 0) then
 			unit_work_label = menu:addLabel(_("Work"), sizeX / 4, (11 + (36 * 3)) * get_scale_factor())
 			unit_work = menu:addDropDown(display_work_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 4)) * get_scale_factor(), function(dd) end)
 			unit_work:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
-			unit_work:setSelected(GetElementIndexFromArray(work_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work")) - 1)
+			unit_work:setSelected(GetElementIndexFromArray(work_list, GetUnitVariable(GetUnitUnderCursorNumber(), "Work")) - 1)
 		end
 		if (table.getn(unique_list) > 1) then
 			menu:addLabel(_("Unique"), sizeX / 4, (11 + (36 * 5)) * get_scale_factor())
 			unit_unique = menu:addDropDown(unique_list, (sizeX / 4) - 60 * get_scale_factor(), (11 + (36 * 6)) * get_scale_factor(), function(dd) UniqueChanged() end)
 			unit_unique:setSize(120 * get_scale_factor(), 20 * get_scale_factor())
-			unit_unique:setSelected(GetElementIndexFromArray(unique_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique")) - 1)
+			unit_unique:setSelected(GetElementIndexFromArray(unique_list, GetUnitVariable(GetUnitUnderCursorNumber(), "Unique")) - 1)
 		end
 	end
 
 	if (resource == 0) then
 		menu:addLabel(_("AI"), math.floor(sizeX * 3 / 4), (11 + (36 * 5)) * get_scale_factor())
 		activeCheckBox = menu:addImageCheckBox(_("Active"), math.floor(sizeX * 3 / 4) - 30 * get_scale_factor(), (11 + (36 * 6)) * get_scale_factor())
-		activeCheckBox:setMarked(GetUnitUnderCursor().Active)
+		activeCheckBox:setMarked(GetUnitVariable(GetUnitUnderCursorNumber(), "Active"))
 	else
 		menu:addLabel(_("Resources:"), 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
-		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
+		resourceValue = menu:addTextInputField(GetUnitVariable(GetUnitUnderCursorNumber(), "ResourcesHeld"), (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 	end
 
 	
 	menu:addLabel(_("Hit Points:"), (sizeX / 2) + 10 * get_scale_factor(), (12 + 36 * 7) * get_scale_factor(), Fonts["game"], false)
-	local hp_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
+	local hp_value = menu:addTextInputField(GetUnitVariable(GetUnitUnderCursorNumber(), "HitPoints"), sizeX + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 	
-	if (GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") ~= "") then
+	if (GetUnitVariable(GetUnitUnderCursorNumber(), "Unique") ~= "") then
 		UniqueChanged()
 	end
 
@@ -1047,45 +1047,45 @@ function EditUnitProperties()
 			elseif (hp_value and tonumber(hp_value:getText()) == nil) then
 				GenericDialog(_("Error"), _("The hit points must be a number."))
 			else
-				if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") and unique_list[unit_unique:getSelected() + 1] == "") then
-					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique", unique_list[unit_unique:getSelected() + 1])
+				if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Unique") and unique_list[unit_unique:getSelected() + 1] == "") then
+					SetUnitVariable(GetUnitUnderCursorNumber(), "Unique", unique_list[unit_unique:getSelected() + 1])
 				end
 				if (table.getn(unique_list) <= 1 or unique_list[unit_unique:getSelected() + 1] == "") then
-					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name", name_value:getText())
+					SetUnitVariable(GetUnitUnderCursorNumber(), "Name", name_value:getText())
 				end
-				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
-					if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
-						AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
+				if (GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Organic") and table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Traits")) > 0) then
+					if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Trait")) then
+						AcquireTrait(GetUnitUnderCursorNumber(), trait_list[unit_trait:getSelected() + 1])
 					end
 				end
-				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
+				if (GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Organic") == false and GetUnitBoolFlag(GetUnitUnderCursorNumber(), "Decoration") == false) then
 					if (table.getn(unique_list) == 1 or unique_list[unit_unique:getSelected() + 1] == "") then
-						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
-							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
+						if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Prefix")) then
+							SetUnitVariable(GetUnitUnderCursorNumber(), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
 						end
-						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) then
-							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
+						if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Suffix")) then
+							SetUnitVariable(GetUnitUnderCursorNumber(), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
 						end
-						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")) > 0 and work_list[unit_work:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work")) then
-							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work", work_list[unit_work:getSelected() + 1])
+						if (table.getn(GetUnitTypeData(GetUnitVariable(GetUnitUnderCursorNumber(), "Ident"), "Works")) > 0 and work_list[unit_work:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Work")) then
+							SetUnitVariable(GetUnitUnderCursorNumber(), "Work", work_list[unit_work:getSelected() + 1])
 						end
 					end
-					if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") and unique_list[unit_unique:getSelected() + 1] ~= "") then
-						SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique", unique_list[unit_unique:getSelected() + 1])
+					if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(GetUnitUnderCursorNumber(), "Unique") and unique_list[unit_unique:getSelected() + 1] ~= "") then
+						SetUnitVariable(GetUnitUnderCursorNumber(), "Unique", unique_list[unit_unique:getSelected() + 1])
 					end
 				end
 				if (resource ~= 0) then
 					local resources_held = tonumber(resourceValue:getText())
 					if (resources_held > 1000000) then -- 1 million maximum
-						GetUnitUnderCursor().ResourcesHeld = 1000000;
+						SetUnitVariable(GetUnitUnderCursorNumber(), "ResourcesHeld", 1000000)
 					else
-						GetUnitUnderCursor().ResourcesHeld = resources_held
+						SetUnitVariable(GetUnitUnderCursorNumber(), "ResourcesHeld", resources_held)
 					end
 				else
-					GetUnitUnderCursor().Active = activeCheckBox:isMarked();
+					SetUnitVariable(GetUnitUnderCursorNumber(), "Active", activeCheckBox:isMarked())
 				end
-				if (hp_value:getText() ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", "Max")) then
-					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", tonumber(hp_value:getText()))
+				if (hp_value:getText() ~= GetUnitVariable(GetUnitUnderCursorNumber(), "HitPoints", "Max")) then
+					SetUnitVariable(GetUnitUnderCursorNumber(), "HitPoints", tonumber(hp_value:getText()))
 				end
 				menu:stop()
 			end
