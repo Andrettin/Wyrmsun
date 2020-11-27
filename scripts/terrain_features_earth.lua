@@ -55,15 +55,6 @@ DefineTerrainFeature("carpathians", {
 	TerrainType = "rock" -- mountains
 })
 
-DefineTerrainFeature("danube-river", {
-	Name = "Danube River",
-	TerrainType = "shallow-water",
-	Color = {0, 128, 144},
-	CulturalNames = {
-		"latin", "Danuvius River" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	}
-})
-
 DefineTerrainFeature("dnieper-river", {
 	Name = "Dnieper River",
 	TerrainType = "shallow-water",

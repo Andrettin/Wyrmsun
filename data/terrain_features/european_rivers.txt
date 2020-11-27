@@ -1,3 +1,20 @@
+chilia_branch = {
+	name = "Chilia Branch"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 182 1 26 }
+}
+
+danube_river = {
+	name = "Danube River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 0 128 144 }
+	cultural_names = {
+		latin = "Danuvius River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+}
+
 douro_river = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 	name = "Douro River"
 	terrain_type = shallow_water
@@ -57,6 +74,20 @@ rhine_river = {
 	cultural_names = {
 		latin = "Rhenus River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
+}
+
+st_george_branch = {
+	name = "St. George Branch"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 54 218 58 }
+}
+
+sulina_branch = {
+	name = "Sulina Branch"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 98 125 77 }
 }
 
 tagus_river = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
