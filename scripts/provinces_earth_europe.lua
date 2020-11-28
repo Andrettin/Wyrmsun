@@ -1467,7 +1467,7 @@ DefineProvince("Galicia", {
 --	SettlementLocation = {547, 114}, -- Lvov / Lemberg
 	Claims = {
 		"goth", "bastarnae-tribe",
-		"goth", "gepidae-tribe",
+		"goth", "gepid_tribe",
 		"slav", "poland",
 		"suebi", "buri-tribe"
 	},
@@ -3371,7 +3371,7 @@ DefineProvince("Slovakia", {
 	Claims = {
 		"basque", "linearware-tribe",
 		"gaul", "cotini-tribe",
-		"goth", "gepidae-tribe",
+		"goth", "gepid_tribe",
 		"suebi", "quadi-tribe",
 		"thracian", "carpi-tribe"
 	},

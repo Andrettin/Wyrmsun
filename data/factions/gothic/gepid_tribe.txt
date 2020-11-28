@@ -1,0 +1,12 @@
+gepid_tribe = {
+	name = "Gepid Tribe"
+	adjective = "Gepid"
+	civilization = gothic
+	type = tribe
+	color = black
+	faction_upgrade = upgrade_faction_gepid_tribe
+	icon = icon_flag_five_red_birds_on_yellow
+	develops_from = {
+		goth_tribe
+	}
+}

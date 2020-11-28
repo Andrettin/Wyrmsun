@@ -55,16 +55,6 @@ DefineFaction("burgundian-tribe", {
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
-DefineFaction("gepidae-tribe", {
-	Name = "Gepidae Tribe",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "black",
-	FactionUpgrade = "upgrade-faction-gepidae-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"goth-tribe"}
-})
-
 DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
 	Civilization = "goth",
@@ -187,7 +177,7 @@ DefineFaction("ostrogothia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-ostrogothia",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepidae-tribe"},
+	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepid_tribe"},
 	HistoricalUpgrades = {
 		0, "upgrade-writing", true, -- polities must have writing
 		0, "upgrade-masonry", true

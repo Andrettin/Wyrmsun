@@ -36,8 +36,8 @@ DefineUpgrade("upgrade-faction-burgundian-tribe", {
 	RequirementsString = "Ironworking"
 })
 
-DefineUpgrade("upgrade-faction-gepidae-tribe", {
-	Name = "Gepidae Tribe",
+DefineUpgrade("upgrade_faction_gepid_tribe", {
+	Name = "Gepid Tribe",
 	EffectsString = "+1 Speed for Swordsmen"
 })
 
@@ -130,7 +130,7 @@ DefineModifier("upgrade-faction-burgundian-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-gepidae-tribe",
+DefineModifier("upgrade_faction_gepid_tribe",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
