@@ -1,9 +1,0 @@
-shahhat = {
-	name = "Shahhat"
-	map_template = earth_30_45_latitude_north
-	geocoordinate = { 21.86216914740 32.82813702290 } #from Natural Earth
-	major = true
-	regions = {
-		africa
-	}
-}

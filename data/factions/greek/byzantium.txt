@@ -1,0 +1,8 @@
+byzantium = {
+	name = "Byzantium"
+	civilization = greek
+	type = polity
+	color = purple
+	default_tier = empire
+	default_capital = byzantium
+}

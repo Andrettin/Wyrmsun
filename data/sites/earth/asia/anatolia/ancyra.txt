@@ -1,14 +1,14 @@
-alexandria = {
-	name = "Alexandria"
+ancyra = {
+	name = "Ancyra"
 	map_template = earth_30_45_latitude_north
-	geocoordinate = { 29.94999588900 31.20001934710 } #from Natural Earth
+	geocoordinate = { 32.86439164100 39.92723858550 } #from Natural Earth
 	major = true
-	color = { 215 64 189 }
+	color = { 254 241 146 }
 	cultural_names = {
-		arab = "Al-Iskandariyah"
+		turkish = "Ankara"
 	}
 	regions = {
-		africa
+		asia
 	}
 	
 	history = {

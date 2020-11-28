@@ -10,6 +10,9 @@ byzantium = {
 		latin = "Constantinople"
 		turkish = "Istanbul"
 	}
+	cores = {
+		byzantium
+	}
 	regions = {
 		greece
 	}
@@ -18,6 +21,10 @@ byzantium = {
 		-500 = {
 			owner = persia #Byzantium was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 			building_classes += town_hall
+		}
+		
+		486 = {
+			owner = byzantium #part of the Eastern Roman Empire in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 	}
 }

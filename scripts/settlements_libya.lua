@@ -58,22 +58,3 @@ DefineSite("barca", {
 	},
 	Regions = {"africa"}
 })
-
-DefineSite("cyrene", {
-	Name = "Cyrene",
-	MapTemplate = "earth",
-	Position = {4342, 1301},
-	Major = true,
-	CulturalNames = {
-		"greek", "Cyrene",
-		"latin", "Cyrene", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"persian", "Cyrene"
-	},
-	HistoricalOwners = {
-		-500, "persia" -- Cyrene was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-500, 0, "town_hall"
-	},
-	Regions = {"africa"}
-})

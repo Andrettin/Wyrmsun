@@ -13,4 +13,11 @@ belgrade = {
 	regions = {
 		europe
 	}
+	
+	history = {
+		486 = {
+			owner = byzantium #part of the Eastern Roman Empire in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+	}
 }
