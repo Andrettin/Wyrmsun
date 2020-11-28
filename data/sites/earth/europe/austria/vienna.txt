@@ -23,7 +23,6 @@ vienna = {
 		
 		161 = { #Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 			building_classes += stronghold
-			building_classes -= town_hall
 			building_classes += barracks
 		}
 		

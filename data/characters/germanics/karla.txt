@@ -6,6 +6,7 @@ karla = {
 	gender = male
 	trait = upgrade_intelligent
 	variation = brown_hair #described as brown-haired in the myths
+	ai_active = false
 	deities = {
 		odin
 		heimdall
@@ -14,7 +15,6 @@ karla = {
 	history = {
 		-1600 = {
 			active = true
-			ai_active = false
 			location = thisted
 		}
 		
