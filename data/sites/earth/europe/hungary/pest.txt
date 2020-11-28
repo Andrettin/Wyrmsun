@@ -17,6 +17,10 @@ pest = {
 			owner = iazyge_tribe #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
+	
+		486 = {
+			owner = gepid_tribe #part of Gepid territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
 		
 		896 = {
 			owner = magyar_tribe #Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
