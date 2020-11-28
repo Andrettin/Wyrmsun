@@ -10,7 +10,7 @@ danish_waters = {
 	color = { 247 251 87 }
 }
 
-kattegat = { #Source: "Limits of Oceans and Seas", 1953, p. 5.
+kattegat = {
 	name = "Kattegat"
 	terrain_type = shallow_water
 	color = { 16 144 120 }
@@ -28,7 +28,7 @@ north_sea = {
 	}
 }
 
-skagerrak = { #Source: "Limits of Oceans and Seas", 1953, p. 6.
+skagerrak = {
 	name = "Skagerrak"
 	terrain_type = shallow_water
 	color = { 0 120 144 }

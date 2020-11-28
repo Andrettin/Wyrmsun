@@ -41,15 +41,6 @@ DefineTerrainFeature("atlantic-ocean", { -- Source: "Limits of Oceans and Seas",
 	Color = {48, 176, 176}
 })
 
-DefineTerrainFeature("black-sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-	Name = "Black Sea",
-	TerrainType = "shallow-water",
-	Color = {0, 104, 136},
-	CulturalNames = {
-		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineTerrainFeature("carpathians", {
 	Name = "Carpathians",
 	TerrainType = "rock" -- mountains
@@ -101,12 +92,6 @@ DefineTerrainFeature("march-river", {
 	Name = "March River",
 	TerrainType = "shallow-water",
 	Color = {0, 144, 128}
-})
-
-DefineTerrainFeature("mediterranean-sea", {
-	Name = "Mediterranean Sea",
-	TerrainType = "shallow-water",
-	Color = {0, 144, 104}
 })
 
 DefineTerrainFeature("narova-river", {

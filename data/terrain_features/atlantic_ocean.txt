@@ -10,7 +10,7 @@ bristol_channel = {
 	color = { 100 44 144 }
 }
 
-english_channel = { #Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+english_channel = {
 	name = "English Channel"
 	terrain_type = shallow_water
 	color = { 48 128 128 }
@@ -26,7 +26,7 @@ inner_seas = {
 	color = { 70 247 84 }
 }
 
-irish_sea = { #Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
+irish_sea = {
 	name = "Irish Sea"
 	terrain_type = shallow_water
 	color = { 48 144 144 }

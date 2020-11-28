@@ -1,3 +1,8 @@
 When (re-)generating geodata-based maps, some manual touch-ups are required. In particular, trade route terrain features have to be modified so to remove superfluous tiles that harm their path-like look.
 
-Additionally, for the Earth map the Sound needs to be touched up so that there is enough space for a ship to pass through.
+Additionally, for the Earth map the following water areas need to be touched up so that there is enough space for a ship to pass through:
+
+1. The Sound.
+2. The Dardanelles.
+3. The Bosphorus.
+4. The Strait of Sicily.

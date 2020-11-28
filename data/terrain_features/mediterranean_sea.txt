@@ -3,3 +3,103 @@ adriatic_sea = {
 	terrain_type = shallow_water
 	color = { 45 97 244 }
 }
+
+aegean_sea = {
+	name = "Aegean Sea"
+	terrain_type = shallow_water
+	color = { 229 77 76 }
+}
+
+alboran_sea = {
+	name = "Alboran Sea"
+	terrain_type = shallow_water
+	color = { 121 56 135 }
+}
+
+balearic_sea = {
+	name = "Balearic Sea"
+	terrain_type = shallow_water
+	color = { 125 215 106 }
+}
+
+black_sea = {
+	name = "Black Sea"
+	terrain_type = shallow_water
+	color = { 0 104 136 }
+	cultural_names = {
+		latin = "Pontus Euxinos" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+}
+
+eastern_mediterranean_sea = {
+	name = "Eastern Mediterranean Sea"
+	terrain_type = shallow_water
+	color = { 193 100 102 }
+}
+
+gulf_of_gabes = {
+	name = "Gulf of Gabes" #"Gulf of Gabès"
+	terrain_type = shallow_water
+	color = { 71 246 83 }
+}
+
+gulf_of_lion = {
+	name = "Gulf of Lion"
+	terrain_type = shallow_water
+	color = { 57 58 13 }
+}
+
+gulf_of_sidra = {
+	name = "Gulf of Sidra"
+	terrain_type = shallow_water
+	color = { 192 164 26 }
+}
+
+ionian_sea = {
+	name = "Ionian Sea"
+	terrain_type = shallow_water
+	color = { 37 18 13 }
+}
+
+ligurian_sea = {
+	name = "Ligurian Sea"
+	terrain_type = shallow_water
+	color = { 200 75 128 }
+}
+
+sea_of_azov = {
+	name = "Sea of Azov"
+	terrain_type = shallow_water
+	color = { 68 210 89 }
+	cultural_names = {
+		greek = "Lake Maeotis"
+		latin = "Lake Maeotis" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+}
+
+sea_of_crete = {
+	name = "Sea of Crete"
+	terrain_type = shallow_water
+	color = { 192 190 18 }
+}
+
+sea_of_marmara = {
+	name = "Sea of Marmara"
+	terrain_type = shallow_water
+	color = { 52 106 206 }
+	cultural_names = {
+		greek = "Propontis" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+}
+
+tyrrhenian_sea = {
+	name = "Tyrrhenian Sea"
+	terrain_type = shallow_water
+	color = { 162 50 140 }
+}
+
+western_mediterranean_sea = {
+	name = "Western Mediterranean Sea"
+	terrain_type = shallow_water
+	color = { 0 144 104 }
+}

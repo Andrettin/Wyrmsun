@@ -14,7 +14,7 @@ bay_of_mecklenburg = {
 	color = { 125 150 29 }
 }
 
-gulf_of_bothnia = { #Source: "Limits of Oceans and Seas", 1953, p. 5.
+gulf_of_bothnia = {
 	name = "Gulf of Bothnia"
 	terrain_type = shallow_water
 	color = { 16 144 144 }
