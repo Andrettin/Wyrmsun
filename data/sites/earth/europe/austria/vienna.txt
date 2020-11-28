@@ -26,10 +26,12 @@ vienna = {
 			building_classes += barracks
 		}
 		
+		486 = {
+			owner = ostrogothia #part of the dominions of the Ostrogoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+
 		526 = {
-			owner = none #Vindobona no longer under Roman control by 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-			building_classes -= stronghold
-			building_classes -= barracks
+			owner = bavarian #Bavarian territory in 526 (apparently); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		907 = {

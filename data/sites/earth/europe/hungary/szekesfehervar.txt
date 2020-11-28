@@ -11,4 +11,11 @@ szekesfehervar = {
 	regions = {
 		europe
 	}
+	
+	history = {
+		486 = {
+			owner = ostrogothia #part of the dominions of the Ostrogoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+	}
 }
