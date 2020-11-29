@@ -34,6 +34,10 @@ kiel = {
 			owner = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
+		486 = {
+			owner = angle_tribe #part of Angle territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		919 = {
 			owner = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}

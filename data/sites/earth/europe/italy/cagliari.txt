@@ -17,6 +17,10 @@ cagliari = {
 			building_classes += town_hall
 		}
 		
+		486 = {
+			owner = vandalia #part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		1815 = {
 			owner = sardinia #Cagliari was part of the Kingdom of Sardinia in the 1815-1870 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
 		}

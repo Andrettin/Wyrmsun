@@ -1,0 +1,24 @@
+vandalia = {
+	name = "Vandalia"
+	adjective = "Vandal"
+	civilization = gothic
+	type = polity
+	color = cyan
+	default_tier = kingdom
+	default_capital = carthage
+	faction_upgrade = upgrade_faction_vandalia
+	icon = icon_flag_five_blue_birds_on_orange
+	develops_from = {
+		vandal_tribe
+		lugii_tribe
+		rugian_tribe
+		silingae_tribe
+		turcilingian_tribe
+	}
+	
+	history = {
+		#polities must have writing and masonry
+		acquired_upgrades += upgrade_writing
+		acquired_upgrades += upgrade_masonry
+	}
+}

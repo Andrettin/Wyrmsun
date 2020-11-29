@@ -17,7 +17,7 @@ pest = {
 			owner = iazyge_tribe #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
-	
+		
 		486 = {
 			owner = gepid_tribe #part of Gepid territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}

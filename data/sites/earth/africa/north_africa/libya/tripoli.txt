@@ -6,4 +6,11 @@ tripoli = {
 	regions = {
 		africa
 	}
+	
+	history = {
+		486 = {
+			owner = vandalia #part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+	}
 }

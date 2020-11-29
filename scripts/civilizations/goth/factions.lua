@@ -184,21 +184,6 @@ DefineFaction("ostrogothia", {
 	}
 })
 
-DefineFaction("vandalia", {
-	Name = "Vandalia",
-	Civilization = "goth",
-	Type = "polity",
-	Color = "cyan",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-vandalia",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	DevelopsFrom = {"vandal-tribe", "lugii-tribe", "rugian-tribe", "silingae-tribe", "turcilingian-tribe"},
-	HistoricalUpgrades = {
-		0, "upgrade-writing", true, -- polities must have writing
-		0, "upgrade-masonry", true
-	}
-})
-
 DefineFaction("visigothia", {
 	Name = "Visigothia",
 	Civilization = "goth",

@@ -33,6 +33,10 @@ malmo = {
 			owner = swede_tribe #Scania was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
+		486 = {
+			owner = dane_tribe #part of Danish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		526 = {
 			owner = dane_tribe #Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}

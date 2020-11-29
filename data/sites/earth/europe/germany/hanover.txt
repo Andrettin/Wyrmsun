@@ -20,6 +20,10 @@ hanover = {
 			building_classes += town_hall
 		}
 		
+		486 = {
+			owner = saxon_tribe #part of Saxon territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		919 = {
 			owner = saxony #the area was part of the Duchy of Saxony in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
