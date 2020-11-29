@@ -13,5 +13,9 @@ riga = {
 			owner = uralic_tribe #the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 			building_classes += town_hall
 		}
+		
+		486 = {
+			owner = estonian_tribe #part of Estonian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
 	}
 }

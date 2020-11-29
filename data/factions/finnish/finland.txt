@@ -1,0 +1,11 @@
+finland = {
+	name = "Finland"
+	adjective = "Finnish"
+	civilization = finnish
+	type = polity
+	color = green
+	default_tier = grand_duchy
+	develops_from = {
+		fenni_tribe
+	}
+}

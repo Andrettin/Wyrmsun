@@ -1,0 +1,7 @@
+estonian_tribe = {
+	name = "Estonian Tribe"
+	adjective = "Estonian"
+	civilization = finnish #Estonian
+	type = tribe
+	color = blue
+}

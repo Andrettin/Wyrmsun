@@ -17,6 +17,10 @@ tallinn = {
 			building_classes += town_hall
 		}
 		
+		486 = {
+			owner = fenni_tribe #part of Finnish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		1561 = {
 			owner = sweden #Reval became a Swedish possession in 1561; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}

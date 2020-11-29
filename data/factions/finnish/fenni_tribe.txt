@@ -1,0 +1,7 @@
+fenni_tribe = { #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	name = "Fenni Tribe"
+	adjective = "Fenni"
+	civilization = finnish #correct?
+	type = tribe
+	color = green
+}
