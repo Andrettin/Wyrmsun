@@ -41,6 +41,7 @@ forest_regeneration_threshold = 1200
 destroyed_overlay_terrain_decay_threshold = -1200
 
 faction_type_upgrades = {
+	polity = upgrade_polity
 	mercenary_company = upgrade_mercenary_company
 	holy_order = upgrade_holy_order
 	trading_company = upgrade_trading_company

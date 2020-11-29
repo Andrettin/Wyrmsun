@@ -1,3 +1,7 @@
-upgrade_holy_order = {
-	name = "Holy Order"
+upgrade_polity = {
+	name = "Polity"
+	conditions = {
+		upgrade_class = writing
+		upgrade_class = masonry
+	}
 }
