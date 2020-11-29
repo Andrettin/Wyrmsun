@@ -213,27 +213,3 @@ DefineDependency("upgrade-faction-sugambri-tribe",
 DefineDependency("upgrade-faction-ubii-tribe",
 	{"upgrade_ironworking"}
 )
-
-DefineDependency("upgrade-faction-francia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-austrasia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-burgundia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-east-francia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-neustria",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-salia",
-	{"upgrade-writing", "upgrade-masonry"}
-)

@@ -450,110 +450,22 @@ DefineDependency("upgrade-faction-saxon-tribe",
 	{"upgrade_ironworking"}
 )
 
-DefineDependency("upgrade-faction-austria",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-baden",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-bavaria",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-brabant",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-brandenburg",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-bremen",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-brunswick",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-carinthia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
 DefineDependency("upgrade-faction-cologne",
-	{"upgrade-writing", "upgrade-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
-)
-
-DefineDependency("upgrade-faction-drenthe",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-franconia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-friesland",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-hesse",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-holland",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-holy-rome", -- must be Christian
-	{"upgrade-writing", "upgrade-masonry", "upgrade-deity-christian-god"}
-)
-
-DefineDependency("upgrade-faction-lombardy",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-magdeburg",
-	{"upgrade-writing", "upgrade-masonry", "unit-teuton-temple", "upgrade-deity-christian-god"}
-)
-
-DefineDependency("upgrade-faction-mecklenburg",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"unit-teuton-temple", "upgrade-deity-christian-god"}
 )
 
 DefineDependency("upgrade-faction-netherlands",
-	{"upgrade-writing", "upgrade-masonry", "upgrade-gunpowder"}
-)
-
-DefineDependency("upgrade-faction-overijssel",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"upgrade-gunpowder"}
 )
 
 DefineDependency("upgrade-faction-prussia",
-	{"upgrade-writing", "upgrade-masonry", "unit-teuton-stronghold", "unit-teuton-barracks"}
-)
-
-DefineDependency("upgrade-faction-saxony",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-swabia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-switzerland",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-thuringia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-westphalia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-wurtemberg",
-	{"upgrade-writing", "upgrade-masonry"}
+	{"unit-teuton-stronghold", "unit-teuton-barracks"}
 )

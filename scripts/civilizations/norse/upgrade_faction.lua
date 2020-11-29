@@ -182,23 +182,3 @@ DefineDependency("upgrade-faction-sitone-tribe",
 DefineDependency("upgrade-faction-swede-tribe",
 	{"upgrade_ironworking"}
 )
-
-DefineDependency("upgrade-faction-denmark",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-gautland",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-gotland",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-norway",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-sweden",
-	{"upgrade-writing", "upgrade-masonry"}
-)

@@ -359,50 +359,6 @@ DefineDependency("upgrade-faction-teuton-tribe",
 	{"upgrade_ironworking"}
 )
 
-DefineDependency("upgrade-faction-bernicia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-deira",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-east-anglia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-essex",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-jutland",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-kent",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-mercia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-middle-anglia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-middlesex",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
 DefineDependency("upgrade-faction-northumbria",
 	{"unit-teuton-temple"}
-)
-
-DefineDependency("upgrade-faction-sussex",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-wessex",
-	{"upgrade-writing", "upgrade-masonry"}
 )

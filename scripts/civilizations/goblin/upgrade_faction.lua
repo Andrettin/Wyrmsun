@@ -192,27 +192,3 @@ DefineModifier("upgrade-faction-tenebris",
 	{"Points", 10},
 	{"apply-to", "unit-goblin-shaman"}
 )
-
-DefineDependency("upgrade-faction-aurvang",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-driftwood",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-ezmarria",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-myridia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-stilgar",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-tenebris",
-	{"upgrade-writing", "upgrade-masonry"}
-)

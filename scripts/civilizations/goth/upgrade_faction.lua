@@ -228,23 +228,3 @@ DefineDependency("upgrade-faction-burgundian-tribe",
 DefineDependency("upgrade-faction-goth-tribe",
 	{"upgrade_ironworking"}
 )
-
-DefineDependency("upgrade-faction-burgundy",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-gothia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-ostrogothia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-vandalia",
-	{"upgrade-writing", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-visigothia",
-	{"upgrade-writing", "upgrade-masonry"}
-)

@@ -382,19 +382,3 @@ DefineDependency("upgrade-faction-shorbear-clan",
 DefineDependency("upgrade-faction-whitesteel-clan",
 	{"unit-dwarven-smithy", "upgrade_ironworking"}, "or", {"unit-brising-smithy", "upgrade_ironworking"}
 )
-
-DefineDependency("upgrade-faction-joruvellir",
-	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-kal-kartha",
-	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-knalga",
-	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
-)
-
-DefineDependency("upgrade-faction-lyr",
-	{"upgrade-dwarven-runewriting", "upgrade-masonry"}
-)
