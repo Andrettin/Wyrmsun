@@ -9,9 +9,13 @@ stuttgart = {
 	}
 	
 	history = {
+		486 = {
+			owner = alamanni_tribe #part of Alamanni territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		919 = {
 			owner = swabia #the area was part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-			building_classes += town_hall
 		}
 	}
 }

@@ -14,9 +14,13 @@ frankfurt = {
 	}
 	
 	history = {
+		486 = {
+			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		1097 = {
 			owner = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
-			building_classes += town_hall
 		}
 	}
 }

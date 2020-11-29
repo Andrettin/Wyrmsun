@@ -9,9 +9,13 @@ madrid = {
 	}
 	
 	history = {
+		486 = {
+			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		1097 = {
 			owner = castille #part of the Kingdom of Castille c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
-			building_classes += town_hall
 		}
 	}
 }

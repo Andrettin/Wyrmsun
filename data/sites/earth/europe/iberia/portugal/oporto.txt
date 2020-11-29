@@ -18,6 +18,10 @@ oporto = {
 			owner = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
+		486 = {
+			owner = galicia #part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		1094 = {
 			owner = portugal #part of the County of Portugal from 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}

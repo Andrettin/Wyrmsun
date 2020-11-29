@@ -12,9 +12,13 @@ munich = {
 	}
 	
 	history = {
+		486 = {
+			owner = rugian_tribe #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		919 = {
 			owner = bavaria #part of the Duchy of Bavaria in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-			building_classes += town_hall
 		}
 	}
 }

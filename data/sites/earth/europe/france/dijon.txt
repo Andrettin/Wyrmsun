@@ -23,7 +23,7 @@ dijon = {
 		}
 		
 		486 = {
-			owner = burgundy #Dijon was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = burgundy #part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		561 = {

@@ -9,9 +9,13 @@ brussels = {
 	}
 	
 	history = {
+		486 = {
+			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		911 = {
 			owner = lorraine #the area was part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-			building_classes += town_hall
 		}
 		
 		959 = {

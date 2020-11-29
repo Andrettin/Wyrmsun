@@ -27,7 +27,7 @@ marseilles = {
 		}
 		
 		480 = {
-			owner = visigothia #Marseilles became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = visigothia #became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		526 = {

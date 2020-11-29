@@ -23,7 +23,7 @@ barcelona = {
 		}
 		
 		486 = {
-			owner = visigothia #Barcelona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		910 = {

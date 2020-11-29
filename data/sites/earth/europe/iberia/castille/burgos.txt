@@ -15,9 +15,13 @@ burgos = {
 	}
 	
 	history = {
+		486 = {
+			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		910 = {
 			owner = leon #part of the County of Bardulia/Castille within the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-			building_classes += town_hall
 		}
 		
 		1037 = {

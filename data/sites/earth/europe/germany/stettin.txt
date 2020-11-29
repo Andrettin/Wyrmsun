@@ -16,9 +16,13 @@ stettin = {
 	}
 	
 	history = {
+		486 = {
+			owner = rugian_tribe #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+		
 		1648 = {
 			owner = sweden #Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-			building_classes += town_hall
 		}
 		
 		1815 = {
