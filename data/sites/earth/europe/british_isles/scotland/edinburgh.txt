@@ -22,6 +22,10 @@ edinburgh = {
 			owner = selgovae_tribe #The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
+		486 = {
+			owner = pict_tribe #part of Pictish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
 		802 = {
 			owner = northumbria #Edinburgh was a part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		}
