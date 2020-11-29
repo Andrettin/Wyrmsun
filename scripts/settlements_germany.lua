@@ -49,32 +49,6 @@ DefineSite("augsburg", {
 	Regions = {"germany"}
 })
 
-DefineSite("berlin", {
-	Name = "Berlin",
-	MapTemplate = "earth",
-	Position = {4145, 853},
-	Major = true,
-	CulturalNames = {
-		"teuton", "Berlin"
-	},
-	Cores = {
-		"semnone-tribe",
-		"suebi-tribe",
-		"brandenburg",
-		"germany" -- Berlin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		-- "holy-rome" -- Berlin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-264, "semnone-tribe", -- Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1648, "brandenburg", -- Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1815, "prussia" -- Berlin was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	Name = "Bernstorf",
 	MapTemplate = "earth",

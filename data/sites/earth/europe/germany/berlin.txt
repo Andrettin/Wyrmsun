@@ -1,0 +1,35 @@
+berlin = {
+	name = "Berlin"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 13.40154862330 52.52181866360 } #from Natural Earth
+	major = true
+	color = { 183 64 193 }
+	cores = {
+		semnone_tribe
+		suebi_tribe
+		brandenburg
+		germany #Berlin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		-264 = {
+			owner = semnone_tribe #Berlin's area was territory of the Sueves/Semnones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		486 = {
+			owner = suebi_tribe #part of Suebic territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1648 = {
+			owner = brandenburg #Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+		
+		1815 = {
+			owner = prussia #Berlin was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

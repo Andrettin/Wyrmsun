@@ -1,0 +1,20 @@
+erfurt = {
+	name = "Erfurt"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 11.02996211610 50.97005291660 } #from Natural Earth
+	major = true
+	color = { 102 126 172 }
+	cores = {
+		germany
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		486 = {
+			owner = thuringian_tribe #part of Thuringian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			building_classes += town_hall
+		}
+	}
+}
