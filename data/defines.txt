@@ -40,6 +40,12 @@ forest_regeneration_threshold = 1200
 #destroyed overlay terrain decay speed, in seconds (0 = disabled)
 destroyed_overlay_terrain_decay_threshold = -1200
 
+faction_type_upgrades = {
+	mercenary_company = upgrade_mercenary_company
+	holy_order = upgrade_holy_order
+	trading_company = upgrade_trading_company
+}
+
 game_sound_set = {
 	placement_error = placement_error
 	placement_success = placement_success
