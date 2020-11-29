@@ -178,7 +178,7 @@ DefineFaction("rome", {
 DefineFaction("mamertines", {
 	Name = "Mamertines",
 	Civilization = "latin",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "red",
 	DefaultTier = "duchy"
 })

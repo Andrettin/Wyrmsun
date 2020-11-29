@@ -1360,7 +1360,7 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 				local all_factions = GetFactions()
 				local potential_factions = {}
 				for i=1, table.getn(all_factions) do
-					if (GetArrayIncludes(potential_civilizations, GetFactionData(all_factions[i], "Civilization")) and GetFactionData(all_factions[i], "Type") == "mercenary-company") then
+					if (GetArrayIncludes(potential_civilizations, GetFactionData(all_factions[i], "Civilization")) and GetFactionData(all_factions[i], "Type") == "mercenary_company") then
 						table.insert(potential_factions, all_factions[i])
 					end
 				end

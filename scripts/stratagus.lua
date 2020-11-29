@@ -1904,7 +1904,6 @@ LoadData() -- only initialize the data by ident, but don't actually process it
 DefiningData = false
 
 Units = {
-	"upgrade-holy-order", "upgrade-mercenary-company", "upgrade-trading-company",
 	"upgrade-mathematics", "upgrade-engineering",
 	"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion",
 	"unit-latin-javelineer",

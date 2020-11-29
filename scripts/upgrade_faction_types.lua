@@ -25,15 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-holy-order", {
-	Name = "Holy Order"
-})
-
-DefineUpgrade("upgrade-mercenary-company", {
-	Name = "Mercenary Company"
-})
-
-DefineModifier("upgrade-holy-order",
+DefineModifier("upgrade_holy_order",
 	{"Supply", 4}, -- holy orders' temples produce food, to allow them to train units despite not having farms
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-norse-temple"},
@@ -41,7 +33,7 @@ DefineModifier("upgrade-holy-order",
 	{"apply-to", "unit-goblin-temple"}
 )
 
-DefineModifier("upgrade-holy-order", -- holy orders' temples "regenerate", since they aren't supposed to have workers to repair them
+DefineModifier("upgrade_holy_order", -- holy orders' temples "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
 	{"apply-to", "unit-germanic-temple"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-norse-temple"},
@@ -49,38 +41,38 @@ DefineModifier("upgrade-holy-order", -- holy orders' temples "regenerate", since
 	{"apply-to", "unit-goblin-temple"}
 )
 
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+DefineModifier("upgrade_holy_order", -- holy orders' temples have a unit stock for priests
 	{"unit-stock", "unit-germanic-priest", 2},
 	{"apply-to", "unit-germanic-temple"}
 )
 
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+DefineModifier("upgrade_holy_order", -- holy orders' temples have a unit stock for priests
 	{"unit-stock", "unit-teuton-priest", 2},
 	{"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-norse-temple"}
 )
 
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+DefineModifier("upgrade_holy_order", -- holy orders' temples have a unit stock for priests
 	{"unit-stock", "unit-dwarven-witness", 2},
 	{"apply-to", "unit-dwarven-temple"}
 )
 
-DefineModifier("upgrade-holy-order", -- holy orders' temples have a unit stock for priests
+DefineModifier("upgrade_holy_order", -- holy orders' temples have a unit stock for priests
 	{"unit-stock", "unit-goblin-shaman", 2},
 	{"apply-to", "unit-goblin-temple"}
 )
 
-DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
+DefineModifier("upgrade_mercenary_company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
 	{"Supply", 8},
 	{"apply-to", "unit-mercenary-camp"}
 )
 
-DefineModifier("upgrade-mercenary-company", -- mercenary companies' mercenary camps "regenerate", since they aren't supposed to have workers to repair them
+DefineModifier("upgrade_mercenary_company", -- mercenary companies' mercenary camps "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
 	{"apply-to", "unit-mercenary-camp"}
 )
 
-DefineModifier("upgrade-trading-company",
+DefineModifier("upgrade_trading_company",
 	{"Supply", 8}, -- trading companies' markets and docks produce food, to allow them to build caravans and ships despite not having farms
 	{"apply-to", "unit-germanic-market"}, {"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-dwarven-market"},
@@ -93,7 +85,7 @@ DefineModifier("upgrade-trading-company",
 	{"apply-to", "unit-goblin-dock"}
 )
 
-DefineModifier("upgrade-trading-company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
+DefineModifier("upgrade_trading_company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
 	{"apply-to", "unit-caravan"},
 	{"apply-to", "unit-gnomish-caravan"},

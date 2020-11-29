@@ -44,7 +44,7 @@ DefineFaction("geirrodung-clan", {
 DefineFaction("greedstone-company", {
 	Name = "Greedstone Company",
 	Civilization = "ettin",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "yellow",
 	DefaultTier = "duchy",
 	Description = "The Greedstone warriors lend their fists for gold, doing a good deal of dirty work for the ettin kingdoms. Merchant guilds are also keen to employ them, specially to destroy settlements of escaped orc slaves and recapture their inhabitants."

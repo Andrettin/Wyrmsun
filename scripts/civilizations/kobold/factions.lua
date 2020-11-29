@@ -113,7 +113,7 @@ DefineFaction("svafning-tribe", {
 DefineFaction("sellscale-company", {
 	Name = "Sellscale Company",
 	Civilization = "kobold",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "black",
 	DefaultTier = "duchy",
 	Description = "The Sellscale Company was founded by a group of kobold warriors, veterans from the Bone War. Unable to readapt to civilian life, they decided to make use of their military skills for profit."

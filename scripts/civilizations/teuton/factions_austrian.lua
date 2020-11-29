@@ -41,7 +41,7 @@ DefineFaction("carinthia", {
 DefineFaction("kaiserliche-privilegierte-orientalische-kompagnie", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	Name = "Privileged Imperial Oriental Company",
 	Civilization = "teuton",
-	Type = "trading-company",
+	Type = "trading_company",
 	Color = "white",
 	DefaultTier = "barony",
 --	Description = "The \"Kaiserliche privilegierte orientalische Kompagnie\", or Privileged Imperial Oriental Company, is an Austrian trading company founded on its Adriatic possessions. It engages in trade not only along the Adriatic coast itself, but also with the eastern Mediterranean.",
@@ -53,7 +53,7 @@ DefineFaction("kaiserliche-privilegierte-orientalische-kompagnie", { -- Source: 
 DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	Name = "Main Commercial Company of Trieste and Fiume",
 	Civilization = "teuton",
-	Type = "trading-company",
+	Type = "trading_company",
 	Color = "white",
 	DefaultTier = "barony",
 --	Description = "The \"Haubt-Handlungs-Compagnie von Triest und Fiume\", or Main Commercial Company of Trieste and Fiume, is an Austrian trading company founded on those two cities. It engages heavily in trade and manufacturing.",
@@ -65,7 +65,7 @@ DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Iva
 DefineFaction("temisvarer-privilegierte-handelskompagnie", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
 	Name = "Privileged Temesvaran Trading Company",
 	Civilization = "teuton",
-	Type = "trading-company",
+	Type = "trading_company",
 	Color = "white",
 	DefaultTier = "barony",
 --	Description = "The \"Temisvarer privilegierte Handelskompagnie\", or Privileged Temesvaran Trading Company, is an Austrian trading company with triple headquarters in Vienna, Trieste and Temesvar. It specializes in connecting the fertile lands of the Danube with the Adriatic Sea, bringing livestock and agricultural goods to port and selling foreign imports along the Danube.",

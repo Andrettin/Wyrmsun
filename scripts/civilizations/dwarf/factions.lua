@@ -377,7 +377,7 @@ DefineFaction("order-of-loremasters", { -- from Battle for Wesnoth: The Hammer o
 DefineFaction("surghan-mercenaries", {
 	Name = "Surghan Mercenaries",
 	Civilization = "dwarf",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "blue",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-surghan-mercenaries",
@@ -389,7 +389,7 @@ DefineFaction("yawning-yales", {
 	Name = "Yawning Yales",
 	ParentFaction = "goldhoof-clan", -- Joruvellir
 	Civilization = "dwarf",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "yellow",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-yawning-yales",

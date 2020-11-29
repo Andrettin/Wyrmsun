@@ -256,7 +256,7 @@ DefineFaction("tenebris", { -- invented by Jesse Crider
 DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Greenskin Cartel", -- in the original adventure, the "Ape Cartel", formed by gorillas who had drunk intelligence potions
 	Civilization = "goblin",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "green",
 	DefaultTier = "barony",
 	Description = "The Greenskin Cartel is a criminal group which runs the shipwreck town of Driftwood."
@@ -265,7 +265,7 @@ DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 DefineFaction("skulking-swords", {
 	Name = "Skulking Swords",
 	Civilization = "goblin",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "black",
 	DefaultTier = "duchy",
 	Description = "The Skulking Swords are a renowned goblin mercenary company, being often employed by the goblin merchant guilds."

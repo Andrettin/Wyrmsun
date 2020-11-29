@@ -231,7 +231,7 @@ DefineFaction("vingulmark", {
 DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 94.
 	Name = "Jomsvikings",
 	Civilization = "norse",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "blue",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-dane-tribe",
@@ -241,7 +241,7 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 DefineFaction("varangian-guard", {
 	Name = "Varangian Guard",
 	Civilization = "norse",
-	Type = "mercenary-company",
+	Type = "mercenary_company",
 	Color = "red",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-swede-tribe"
