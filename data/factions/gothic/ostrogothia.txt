@@ -1,0 +1,25 @@
+ostrogothia = {
+	name = "Ostrogothia"
+	adjective = "Ostrogothic"
+	civilization = gothic
+	type = polity
+	color = red
+	default_tier = kingdom
+	faction_upgrade = upgrade_faction_ostrogothia
+	icon = icon_flag_five_black_birds_on_purple
+	develops_from = {
+		ostrogoth_tribe
+		bastarnae_tribe
+		gepid_tribe
+	}
+	
+	history = {
+		#polities must have writing and masonry
+		acquired_upgrades += upgrade_writing
+		acquired_upgrades += upgrade_masonry
+		
+		486 = {
+			capital = szekesfehervar #Pannonia
+		}
+	}
+}

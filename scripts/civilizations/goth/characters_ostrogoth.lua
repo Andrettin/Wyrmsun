@@ -120,29 +120,6 @@ DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	end
 })
 
-DefineCharacter("thiudareiks-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
-	-- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
-	Name = "Thiudareiks", -- "Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
-	FamilyName = "Amelung",
-	Gender = "male",
-	Type = "unit-gothic-horse-lord", -- king
-	Civilization = "goth",
-	Faction = "ostrogoth-tribe",
-	StartDate = 454, -- born (was 8 years old in 462 AD)
-	DeathDate = 526, -- died; he was put in a magnificent marble tomb in Ravenna
-	Father = "theodemer-amelung",
-	Deities = {"christian-god"},
-	HistoricalTitles = {
-		"head-of-state", 474, 526, "ostrogoth-tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogoth-tribe" or GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 28-29, 63.
 	-- follower of Dietrich (= Theoderic, ostrogothic king) in the Dietrich Saga; hot-headed (source pp. 28-29); young and ever thirsting for the fray (source p. 63)
 	Name = "Vulfshardus", -- in the saga his name is "Wolfhart"; this is a tentative rendering of the name in Gothic, based on the cognates of the original German name
@@ -158,4 +135,3 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 		return false
 	end
 })
-

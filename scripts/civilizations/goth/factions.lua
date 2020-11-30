@@ -169,21 +169,6 @@ DefineFaction("gothia", {
 	DevelopsFrom = {"goth-tribe", "herulian-tribe"}
 })
 
-DefineFaction("ostrogothia", {
-	Name = "Ostrogothia",
-	Civilization = "goth",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-ostrogothia",
-	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"ostrogoth-tribe", "bastarnae-tribe", "gepid_tribe"},
-	HistoricalUpgrades = {
-		0, "upgrade-writing", true, -- polities must have writing
-		0, "upgrade-masonry", true
-	}
-})
-
 DefineFaction("visigothia", {
 	Name = "Visigothia",
 	Civilization = "goth",
