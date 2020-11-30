@@ -264,22 +264,6 @@ DefineSite("salzburg", {
 	Regions = {"cisleithania", "austria"}
 })
 
-DefineSite("trent", {
-	Name = "Trent",
-	MapTemplate = "earth",
-	Position = {4095, 1000},
-	CulturalNames = {
-		"teuton", "Trent"
-	},
-	HistoricalOwners = {
-		1815, "austria" -- Trent was part of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1815, 0, "farm"
-	},
-	Regions = {"cisleithania", "austria"}
-})
-
 DefineSite("villach", {
 	Name = "Villach",
 	MapTemplate = "earth",

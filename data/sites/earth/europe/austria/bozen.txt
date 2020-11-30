@@ -1,0 +1,13 @@
+bozen = {
+	name = "Bozen"
+	aliases += jochgrimm #Jochgrimm is near Bozen
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 11.36001948920 46.50042909660 } #from Natural Earth
+	cultural_names = {
+		italian = "Bolzano"
+	}
+	regions = {
+		austria
+		cisleithania
+	}
+}
