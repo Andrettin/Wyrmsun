@@ -1,0 +1,20 @@
+ebenrot = {
+	name = "Ebenrot" #Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 40-41.
+	unit_type = unit_ettin
+	civilization = ettin
+	gender = male
+	
+	#brother of Ecke and Fasolt
+	#wooed the three princesses of Jochgrimm together with his brothers
+	
+	history = {
+		474 = {
+			active = true
+			location = jochgrimm
+		}
+		
+		526 = {
+			active = false
+		}
+	}
+}
