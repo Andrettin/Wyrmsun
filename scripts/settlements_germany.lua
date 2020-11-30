@@ -91,39 +91,6 @@ DefineSite("bremen", {
 	Regions = {"germany"}
 })
 
-DefineSite("cologne", {
-	Name = "Cologne",
-	MapTemplate = "earth",
-	Position = {3992, 897},
-	Major = true,
-	CulturalNames = {
-		"french", "Cologne",
-		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Cologne" -- "Köln"
-	},
-	Cores = {
-		"germany", -- Cologne was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Cologne was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-50, "rome", -- Gaul (where Colonia Agrippina was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		481, "frank-tribe", -- Cologne was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Cologne was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia", -- Colonia Agrippina went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1815, "prussia" -- Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-50, 1815, "town_hall",
-		-- Colonia Agrippina was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 486, "guard_tower", -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		395, 0, "temple", -- Cologne was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1388, 0, "university", -- University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1815, 0, "stronghold" -- Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	Regions = {"gaul", "germany"}
-})
-
 DefineSite("eichstatt", {
 	Name = "Eichstatt",
 	MapTemplate = "earth",
