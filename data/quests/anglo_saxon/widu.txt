@@ -1,0 +1,19 @@
+widu_anglo_saxon = {
+	name = "Widu"
+	icon = icon_lumber
+	player_color = gray
+	description = "\"[word:widu_old_english.name]\" means \"[word:widu_old_english.meanings.1]\" or \"[word:widu_old_english.meanings.2]\" in Old English. Gathering lumber is vital for the construction of new structures."
+	hint = "Select a worker and then right-click on a tree or wood pile to gather lumber."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 250
+	}
+}
