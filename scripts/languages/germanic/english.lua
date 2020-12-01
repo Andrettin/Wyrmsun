@@ -2164,14 +2164,6 @@ DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Wood", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Wood"},
-	DerivesFrom = {"old-english", "noun", "Widu"}, -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Wool", {
 	Language = "english",
 	Type = "noun",

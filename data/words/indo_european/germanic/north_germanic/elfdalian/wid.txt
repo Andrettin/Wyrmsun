@@ -1,0 +1,11 @@
+wid = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	name = "Wið"
+	language = elfdalian
+	type = noun
+	gender = masculine
+	etymon = vidr
+	meanings = {
+		"Tree"
+		"Wood"
+	}
+}

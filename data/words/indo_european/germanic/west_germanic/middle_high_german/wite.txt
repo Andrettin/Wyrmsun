@@ -1,0 +1,11 @@
+wite = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Wite" #both sources also give the alternative form "wit"
+	language = middle_high_german
+	type = noun
+	gender = masculine #as given by both sources
+	etymon = witu #as given by both sources
+	meanings = {
+		"Tree" #as given by Kroonen
+		"Wood" #as given by both sources (Fick gives the German "Holz")
+	}
+}

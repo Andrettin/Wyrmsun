@@ -1,0 +1,11 @@
+gwyd = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	name = "Gwyd"
+	language = middle_welsh
+	type = noun
+	etymon = guid
+	meanings = {
+		"Trees"
+	}
+	
+	#collective noun
+}

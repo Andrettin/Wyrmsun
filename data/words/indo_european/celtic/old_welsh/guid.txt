@@ -1,0 +1,10 @@
+guid = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	name = "Guid"
+	language = old_welsh
+	type = noun
+	meanings = {
+		"Trees"
+	}
+	
+	#collective noun
+}

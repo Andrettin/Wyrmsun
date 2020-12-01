@@ -1886,14 +1886,6 @@ DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Nominative = "Wī̆r"
 })
 
-DefineLanguageWord("Witu", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Tree", "Wood"},
-	DerivesFrom = {"proto-germanic", "noun", "Widu"},
-	Gender = "masculine" -- alternatively also neutral
-})
-
 DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	Language = "old-high-german",
 	Type = "adjective",

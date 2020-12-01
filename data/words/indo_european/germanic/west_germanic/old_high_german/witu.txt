@@ -1,0 +1,11 @@
+witu = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Witu" #Fick also gives the alternative form "wito"
+	language = old_high_german
+	type = noun
+	gender = masculine #as given by both sources; alternatively also neutral according to Kroonen
+	etymon = widu_proto_germanic
+	meanings = {
+		"Tree" #as given by Kroonen
+		"Wood" #as given by both sources (Fick gives the German "Holz")
+	}
+}

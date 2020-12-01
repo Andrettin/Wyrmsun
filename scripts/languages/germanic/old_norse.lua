@@ -1841,17 +1841,6 @@ DefineLanguageWord("Vestr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Viðr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Tree", "Wood"},
-	DerivesFrom = {"proto-germanic", "noun", "Widu"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Viðar"
-	}
-})
-
 DefineLanguageWord("Vīg", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "old-norse",
 	Type = "noun",

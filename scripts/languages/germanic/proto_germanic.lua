@@ -1653,13 +1653,6 @@ DefineLanguageWord("Wela", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Indeed"}
 })
 
-DefineLanguageWord("Widu", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Tree", "Wood"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Wilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "proto-germanic",
 	Type = "verb",

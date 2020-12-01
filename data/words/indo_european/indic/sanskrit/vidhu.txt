@@ -1,0 +1,8 @@
+vidhu = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Vidhú"
+	language = sanskrit
+	type = adjective
+	meanings = {
+		"Lonely" #source gives the German "vereinsamt"
+	}
+}

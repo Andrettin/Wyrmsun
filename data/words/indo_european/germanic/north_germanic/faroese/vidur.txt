@@ -1,0 +1,11 @@
+vidur = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585.
+	name = "Viður"
+	language = faroese
+	type = noun
+	gender = masculine
+	etymon = vidr
+	meanings = {
+		"Tree"
+		"Wood"
+	}
+}

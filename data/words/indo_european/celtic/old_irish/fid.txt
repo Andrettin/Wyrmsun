@@ -1,0 +1,11 @@
+fid = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Fid"
+	language = old_irish #as given by Kroonen; Fick gives "Irish" instead
+	type = noun
+	gender = masculine #as given by both sources
+	meanings = {
+		"Tree" #as given by both sources (Fick gives the German "Baum")
+		"Wood" #as given by both sources (Fick gives the German "Holz")
+		"Forest" #as given by both sources (Fick gives the German "Wald")
+	}
+}

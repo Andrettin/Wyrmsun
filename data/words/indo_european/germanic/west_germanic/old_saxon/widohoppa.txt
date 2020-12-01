@@ -1,0 +1,12 @@
+widohoppa = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Widohoppa"
+	language = old_saxon #source gives Old Low German
+	type = noun
+	etymon = widu_proto_germanic
+	compound_elements = {
+		wido
+	}
+	meanings = {
+		"Hoopoe" #source gives the German "Wiedehopf"
+	}
+}

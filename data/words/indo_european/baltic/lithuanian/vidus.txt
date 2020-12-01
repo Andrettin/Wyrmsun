@@ -1,0 +1,9 @@
+vidus = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 585; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 207.
+	name = "Vidùs"
+	language = lithuanian
+	type = noun
+	gender = masculine #as given by Kroonen
+	meanings = {
+		"Middle" #as given by both sources (Fick gives the German "Mitte")
+	}
+}
