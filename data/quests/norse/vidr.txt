@@ -1,0 +1,19 @@
+vidr = {
+	name = "Viðr"
+	icon = icon_lumber
+	player_color = gray
+	description = "\"[word:vidr.name]\" means \"[word:vidr.meanings.1]\" or \"[word:vidr.meanings.2]\" in Old Norse. Gathering lumber is vital for the construction of new structures."
+	hint = "Select a worker and then right-click on a tree or wood pile to gather lumber."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 250
+	}
+}
