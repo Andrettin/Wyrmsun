@@ -17,6 +17,6 @@ witu = {
 		}
 	}
 	completion_effects = {
-		copper += 250
+		copper += 500
 	}
 }
