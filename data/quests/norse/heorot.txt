@@ -1,0 +1,23 @@
+heorot = { #Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
+	name = "Heorot"
+	icon = icon_norse_town_hall
+	player_color = red
+	competitive = true
+	description = "A master builder has proposed to us to remake our hall in Copenhagen anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources."
+	conditions = {
+		not = {
+			upgrade_class = masonry
+		}
+		settlement = copenhagen
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 500
+		}
+		have_resource = {
+			resource = lumber
+			quantity = 500
+		}
+	}
+}

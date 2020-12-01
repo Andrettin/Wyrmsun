@@ -1,0 +1,29 @@
+the_magnificent_spear = {
+	name = "The Magnificent Spear"
+	icon = icon_long_spear
+	player_color = white
+	competitive = true
+	description = "Ivaldi and his sons are of a mind to craft a wondrous spear, for which they will need a significant amount of materials."
+	conditions = {
+		unit_class = smithy
+	}
+	objectives = {
+		gather_resource = {
+			resource = copper
+			quantity = 2000
+		}
+		gather_resource = {
+			resource = lumber
+			quantity = 2000
+		}
+		have_resource = {
+			resource = copper
+			quantity = 2000
+		}
+		have_resource = {
+			resource = lumber
+			quantity = 2000
+		}
+		hero_must_survive = ivaldi
+	}
+}

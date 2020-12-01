@@ -1,0 +1,22 @@
+the_ring_of_riches = {
+	name = "The Ring of Riches"
+	icon = icon_ring
+	player_color = white
+	competitive = true
+	description = "The mastersmith brothers Brokk and Eitri seek to create a gold ring the like of which none of us have seen before. They request to be provided with the necessary gold for the task."
+	conditions = {
+		unit_class = smithy
+	}
+	objectives = {
+		gather_resource = {
+			resource = gold
+			quantity = 1000
+		}
+		have_resource = {
+			resource = copper
+			quantity = 4000
+		}
+		hero_must_survive = brokk
+		hero_must_survive = eitri
+	}
+}

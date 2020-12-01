@@ -1,0 +1,28 @@
+a_rocky_home = {
+	name = "A Rocky Home"
+	icon = icon_modsognir
+	player_color = red
+	description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?"
+	unobtainable = true
+	objectives = {
+		build_units = {
+			unit_type = unit_dwarven_town_hall
+		}
+		gather_resource = {
+			resource = lumber
+			quantity = 800
+		}
+		gather_resource = {
+			resource = stone
+			quantity = 2400
+		}
+		build_units = {
+			unit_type = unit_yale_hunting_lodge
+		}
+		hero_must_survive = modsognir
+		hero_must_survive = durin
+	}
+	completion_effects = {
+		call_dialogue = a_rocky_home_materials_collected
+	}
+}

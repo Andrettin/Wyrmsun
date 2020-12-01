@@ -1,0 +1,17 @@
+thralls_logging = { #based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
+	name = "Thrahila's Logging" #in the Song of Rig, Rig (the god Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "thrall" is a reflex of Proto-Germanic "þrahila"
+	icon = icon_germanic_carpenters_shop
+	player_color = orange
+	description = "The robust serf Thrahila meekly suggests that we gather some wood for our people to warm themselves and build new homes."
+	hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber."
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 2000
+		}
+		hero_must_survive = thrahila
+	}
+	completion_effects = {
+		copper += 1000
+	}
+}

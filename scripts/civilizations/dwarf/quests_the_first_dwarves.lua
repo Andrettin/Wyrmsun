@@ -40,44 +40,6 @@ DefineQuest("the_first_dwarves", {
 	HeroesMustSurvive = {"modsognir", "durin"}
 })
 
-DefineQuest("a-rocky-home", {
-	Name = "A Rocky Home",
-	Icon = "icon-modsognir",
-	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?",
-	PlayerColor = "red",
-	CompletionEffects = function(s)
-		CallDialogue("a-rocky-home-materials-collected", trigger_player)
-	end,
-	Unobtainable = true,
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Mead Hall",
-			"quantity", 1,
-			"unit-type", "unit-dwarven-town-hall"
-		},
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 800 Lumber",
-			"quantity", 800,
-			"resource", "lumber"
-		},
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 2400 Stone",
-			"quantity", 2400,
-			"resource", "stone"
-		},
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Yale Hunting Lodge",
-			"quantity", 1,
-			"unit-type", "unit-yale-hunting-lodge"
-		}
-	},
-	HeroesMustSurvive = {"modsognir", "durin"}
-})
-
 DefineQuest("the-mead-of-wisdom", {
 	Name = "The Mead of Wisdom",
 	Icon = "icon-durin",
@@ -92,17 +54,7 @@ DefineQuest("the-mead-of-wisdom", {
 	Unobtainable = true
 })
 
-DefineQuest("the-ring-of-riches", {
-	Name = "The Ring of Riches",
-	Icon = "icon-ring",
-	Description = "The mastersmith brothers Brokk and Eitri seek to create a gold ring the like of which none of us have seen before. They request to be provided with the necessary gold for the task.",
-	PlayerColor = "white",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
-			return true
-		end
-		return false
-	end,
+DefineQuest("the_ring_of_riches", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 4000)
 		local brokk_unit = FindHero("brokk", trigger_player)
@@ -116,37 +68,10 @@ DefineQuest("the-ring-of-riches", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"Brokk and Eitri must survive"},
-	Rewards = "Magic Ring, Lose 4000 Copper",
-	Objectives = {
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 1000 Gold",
-			"quantity", 1000,
-			"resource", "gold"
-		},
-		{
-			"objective-type", "have_resource",
-			"objective-string", "Have 4000 Copper",
-			"quantity", 4000,
-			"resource", "copper"
-		}
-	},
-	HeroesMustSurvive = {"brokk", "eitri"},
-	Competitive = true
+	Rewards = "Magic Ring, Lose 4000 Copper"
 })
 
-DefineQuest("the-thunder-hammer", {
-	Name = "The Thunder Hammer",
-	Icon = "icon-brising-smithy",
-	Description = "The mastersmiths Brokk and Eitri have spoken of their desire to craft a magnificent hammer, stronger than any other. To do so they will require plenty of metal, however.",
-	PlayerColor = "white",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
-			return true
-		end
-		return false
-	end,
+DefineQuest("the_thunder_hammer", {
 	CompletionEffects = function(s)
 		CallDialogue("brokk-and-eitri-craft-mjollnir", trigger_player)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 4000)
@@ -161,37 +86,10 @@ DefineQuest("the-thunder-hammer", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"Brokk and Eitri must survive"},
-	Rewards = "Magic Hammer, Lose 4000 Copper",
-	Objectives = {
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 4000 Copper",
-			"quantity", 4000,
-			"resource", "copper"
-		},
-		{
-			"objective-type", "have_resource",
-			"objective-string", "Have 4000 Copper",
-			"quantity", 4000,
-			"resource", "copper"
-		}
-	},
-	HeroesMustSurvive = {"brokk", "eitri"},
-	Competitive = true
+	Rewards = "Magic Hammer, Lose 4000 Copper"
 })
 
-DefineQuest("the-magnificent-spear", {
-	Name = "The Magnificent Spear",
-	Icon = "icon-long-spear",
-	Description = "Ivaldi and his sons are of a mind to craft a wondrous spear, for which they will need a significant amount of materials.",
-	PlayerColor = "white",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-smithy") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-brising-smithy") > 0) then
-			return true
-		end
-		return false
-	end,
+DefineQuest("the_magnificent_spear", {
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 2000)
 		SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 2000)
@@ -206,36 +104,7 @@ DefineQuest("the-magnificent-spear", {
 			SetUnitVariable(unit, "Identified", false)
 		end
 	end,
-	ObjectiveStrings = {"Ivaldi must survive"},
-	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber",
-	Objectives = {
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 2000 Copper",
-			"quantity", 2000,
-			"resource", "copper"
-		},
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 2000 Lumber",
-			"quantity", 2000,
-			"resource", "lumber"
-		},
-		{
-			"objective-type", "have_resource",
-			"objective-string", "Have 2000 Copper",
-			"quantity", 2000,
-			"resource", "copper"
-		},
-		{
-			"objective-type", "have_resource",
-			"objective-string", "Have 2000 Lumber",
-			"quantity", 2000,
-			"resource", "lumber"
-		}
-	},
-	HeroesMustSurvive = {"ivaldi"},
-	Competitive = true
+	Rewards = "Magic Spear, Lose 2000 Copper and 2000 Lumber"
 })
 
 DefineQuest("the-sleek-ship", {

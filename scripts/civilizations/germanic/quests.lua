@@ -170,34 +170,6 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	}
 })
 
-DefineQuest("thralls-logging", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 19.
-	Name = "Thrahila's Logging", -- in the Song of Rig, Rig (the god Heimdall) fathers Thrall, Karl and Jarl, each of which originates a class of the Norse world; namely serfs, peasants and warriors; "thrall" is a reflex of Proto-Germanic "þrahila"
-	Icon = "icon-germanic-carpenters-shop",
-	Description = "The robust serf Thrahila meekly suggests that we gather some wood for our people to warm themselves and build new homes.",
-	World = "earth",
-	Civilization = "germanic",
-	PlayerColor = "orange",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "HasHero", "thrahila")) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
-	end,
-	Rewards = "+1000 Copper",
-	Hint = "Select a Bura and right-click on a tree or wood pile to begin gathering lumber.",
-	Objectives = {
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 2000 Lumber",
-			"quantity", 2000,
-			"resource", "lumber"
-		}
-	}
-})
-
 DefineQuest("thralls-hut", { -- based on the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 206-207.
 	Name = "Thrahila's Hut", -- in the Song of Rig, Rig (the god Heimdall), Thrall's ten sons shore up the hut of their parents and grandparents, afterwards tending to goats and pigs near it
 	Icon = "icon-germanic-farm",

@@ -44,7 +44,7 @@ DefineDialogue("a-rocky-home-introduction", {
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the_first_dwarves")
-					SetPlayerData(trigger_player, "AcceptQuest", "a-rocky-home")
+					SetPlayerData(trigger_player, "AcceptQuest", "a_rocky_home")
 				end
 			}
 		},

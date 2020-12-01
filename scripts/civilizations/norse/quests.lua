@@ -99,13 +99,9 @@ DefineQuest("ottars-lineage", {
 	Hidden = true
 })
 
-DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
-	Name = "Heorot",
-	Icon = "icon-norse-town-hall",
-	Description = "A master builder has proposed to us to remake our hall in Copenhagen anew, replacing the existing structure with a magnificent hall. The construction of the new hall will, of course, necessitate a certain quantity of resources.",
-	PlayerColor = "red",
+DefineQuest("heorot", {
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Allow", "upgrade-masonry") ~= "R" and GetPlayerData(trigger_player, "HasSettlement", "copenhagen") and GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "copenhagen") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "copenhagen") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
+		if (GetUniqueItemData("heorot", "CanDrop") and (FindUnit("unit-norse-town-hall", trigger_player, false, true, "copenhagen") ~= nil or FindUnit("unit-teuton-town-hall", trigger_player, false, true, "copenhagen") ~= nil)) then -- allow for Teuton town halls for now as well, since the Norse aren't playable yet
 			return true
 		end
 		return false
@@ -120,22 +116,7 @@ DefineQuest("heorot", { -- Source: Stephen Mitchell, "Beowulf", 2017, p. 7.
 			SetUnitVariable(hall_unit, "Unique", "heorot")
 		end
 	end,
-	Rewards = "The Chieftain's Hall in Copenhagen will become the Heorot unique building, Lose 500 Lumber",
-	Objectives = {
-		{
-			"objective-type", "gather_resource",
-			"objective-string", "Gather 500 Lumber",
-			"quantity", 500,
-			"resource", "lumber"
-		},
-		{
-			"objective-type", "have_resource",
-			"objective-string", "Have 500 Lumber",
-			"quantity", 500,
-			"resource", "lumber"
-		}
-	},
-	Competitive = true
+	Rewards = "The Chieftain's Hall in Copenhagen will become the Heorot unique building, Lose 500 Lumber"
 })
 
 DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.

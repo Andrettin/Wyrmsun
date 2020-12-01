@@ -1,0 +1,22 @@
+the_thunder_hammer = {
+	name = "The Thunder Hammer"
+	icon = icon_brising_smithy
+	player_color = white
+	competitive = true
+	description = "The mastersmiths Brokk and Eitri have spoken of their desire to craft a magnificent hammer, stronger than any other. To do so they will require plenty of metal, however."
+	conditions = {
+		unit_class = smithy
+	}
+	objectives = {
+		gather_resource = {
+			resource = copper
+			quantity = 4000
+		}
+		have_resource = {
+			resource = copper
+			quantity = 4000
+		}
+		hero_must_survive = brokk
+		hero_must_survive = eitri
+	}
+}
