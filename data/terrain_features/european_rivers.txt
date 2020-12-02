@@ -11,6 +11,7 @@ danube_river = {
 	major_river = true
 	color = { 0 128 144 }
 	cultural_names = {
+		gothic = "Donawi River" #"Dōnawi"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
 		latin = "Danuvius River" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 }

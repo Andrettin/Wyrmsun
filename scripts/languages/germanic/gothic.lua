@@ -259,7 +259,7 @@ DefineLanguageWord("Baúrgs", { -- Donkin gives "Baurgs" instead; Source: August
 	Meanings = {"City", "Town"}, -- Fick gives "Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"}, -- as given by Fick
 	Gender = "feminine" -- as given by Fick
-	-- Donkin (apparently) gives this word as coming "bairgan" (to shelter)
+	-- Donkin (apparently) gives this word as coming from "bairgan" (to shelter)
 })
 
 DefineLanguageWord("Beitan", { -- source gives ("(and-)beitan"); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

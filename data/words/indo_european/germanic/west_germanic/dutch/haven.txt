@@ -2,7 +2,7 @@ haven_dutch = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germani
 	name = "Haven"
 	language = dutch
 	type = noun
-	gender = masculine #common gender
+	#common gender
 	etymon = haven_middle_dutch
 	meanings = {
 		"Harbor"
