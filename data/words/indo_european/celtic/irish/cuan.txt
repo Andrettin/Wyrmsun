@@ -1,0 +1,10 @@
+cuan = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Cúan"
+	language = old_norse
+	type = noun
+	gender = masculine #as given by Kroonen
+	meanings = {
+		"Harbor" #as given by both sources (Fick gives the German "Hafen")
+		"Port" #as given by Kroonen
+	}
+}

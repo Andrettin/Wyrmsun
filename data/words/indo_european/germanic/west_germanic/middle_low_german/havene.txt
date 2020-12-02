@@ -1,0 +1,10 @@
+havene = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Havene"
+	language = middle_low_german
+	type = noun
+	gender = feminine #as given by Kroonen
+	etymon = habano #as given by both sources
+	meanings = {
+		"Harbor" #as given by both sources (Fick apparently gives the German "Hafen" as the meaning)
+	}
+}

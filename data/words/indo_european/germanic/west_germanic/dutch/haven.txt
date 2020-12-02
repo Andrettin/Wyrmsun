@@ -1,0 +1,10 @@
+haven_dutch = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196.
+	name = "Haven"
+	language = dutch
+	type = noun
+	gender = masculine #common gender
+	etymon = haven_middle_dutch
+	meanings = {
+		"Harbor"
+	}
+}

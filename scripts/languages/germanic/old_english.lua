@@ -922,14 +922,6 @@ DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Hair"}
 })
 
-DefineLanguageWord("Hæfen", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Harbor"}, -- source (apparently) gives the German "Hafen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Habanô"},
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Hæ̂man", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 52-53.
 	Language = "old-english",
 	Type = "verb",

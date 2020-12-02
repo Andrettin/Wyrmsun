@@ -670,13 +670,6 @@ DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance;
 	}
 })
 
-DefineLanguageWord("Habanô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Harbor"}, -- source gives the German "Hafen"
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Haljô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "proto-germanic",
 	Type = "noun",

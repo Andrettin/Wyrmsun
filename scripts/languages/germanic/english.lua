@@ -901,13 +901,6 @@ DefineLanguageWord("Harrow", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Haven", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Haven"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Head", {
 	Language = "english",
 	Type = "noun",

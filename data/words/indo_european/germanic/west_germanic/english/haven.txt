@@ -1,0 +1,10 @@
+haven_english = {
+	name = "Haven"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = haefen #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196.
+	meanings = {
+		"Haven"
+	}
+}

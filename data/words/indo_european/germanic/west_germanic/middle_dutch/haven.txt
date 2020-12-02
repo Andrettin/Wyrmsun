@@ -1,0 +1,10 @@
+haven_middle_dutch = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196.
+	name = "Haven"
+	language = middle_dutch
+	type = noun
+	gender = feminine
+	etymon = habano
+	meanings = {
+		"Harbor"
+	}
+}

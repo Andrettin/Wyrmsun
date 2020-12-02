@@ -1,0 +1,9 @@
+hafen_1 = {
+	name = "Hafen"
+	language = high_german #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	type = noun
+	etymon = havene #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	meanings = {
+		"Harbor"
+	}
+}

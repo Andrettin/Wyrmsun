@@ -1,0 +1,10 @@
+haefen = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Hæfen"
+	language = old_english
+	type = noun
+	gender = feminine #as given by both sources
+	etymon = habano #as given by both sources
+	meanings = {
+		"Harbor" #as given by both sources (Fick apparently gives the German "Hafen" as the meaning)
+	}
+}

@@ -1,0 +1,10 @@
+havan = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, pp. 196-197; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Havan"
+	language = old_high_german
+	type = noun
+	gender = masculine #as given by both sources
+	meanings = {
+		"Pot" #as given by both sources (Fick gives the German "Topf")
+		"Vessel" #as given by Kroonen
+	}
+}

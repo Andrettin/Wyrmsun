@@ -1,0 +1,10 @@
+hafen_2 = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Hafen"
+	language = high_german
+	type = noun
+	gender = masculine
+	etymon = haven_middle_high_german
+	meanings = {
+		"Pot" #source gives the German "Hafen", which is likely there in the meaning of "pot" given the Old High German etymon's meaning
+	}
+}

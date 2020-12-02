@@ -1,0 +1,10 @@
+haban = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, pp. 196-197.
+	name = "Haƀan"
+	language = old_saxon
+	type = noun
+	gender = masculine
+	meanings = {
+		"Vessel"
+		"Pot"
+	}
+}

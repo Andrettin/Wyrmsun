@@ -1,0 +1,9 @@
+habano = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 196; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 45.
+	name = "Habanō" #Fick gives "habanô" instead
+	language = proto_germanic
+	type = noun
+	gender = feminine #as given by both sources
+	meanings = {
+		"Harbor" #as given by both sources (Fick gives the German "Hafen")
+	}
+}
