@@ -1,8 +1,8 @@
 witu = {
-	name = "Witu"
+	name = "[word:witu.name.normalized]"
 	icon = icon_lumber
 	player_color = gray
-	description = "\"[word:witu.name]\" means \"[word:witu.meanings.1.lowered]\" or \"[word:witu.meanings.2.lowered]\" in Old High German. Gathering lumber is vital for the construction of new structures."
+	description = "\"[word:witu.name.normalized]\" means \"[word:witu.meanings.1.lowered]\" or \"[word:witu.meanings.2.lowered]\" in Old High German. Gathering lumber is vital for the construction of new structures."
 	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and then right-click on a tree or wood pile to gather lumber."
 	conditions = {
 		or = {

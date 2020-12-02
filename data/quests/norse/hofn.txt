@@ -1,5 +1,5 @@
 hofn = {
-	name = "Hǫfn"
+	name = "[word:hofn.name.normalized]"
 	icon = icon_norse_dock
 	player_color = blue
 	description = "\"[word:hofn.name.normalized]\" means \"[word:hofn.meanings.1.lowered]\" in Old Norse. Building a dock enables the construction of ships to sail through seas and rivers."

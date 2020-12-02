@@ -1,5 +1,5 @@
 habano = {
-	name = "Habano"
+	name = "[word:habano.name.normalized]"
 	icon = icon_germanic_dock
 	player_color = orange
 	description = "\"[word:habano.name.normalized]\" means \"[word:habano.meanings.1.lowered]\" in Proto-Germanic. Building a dock enables the construction of ships to sail through seas and rivers."

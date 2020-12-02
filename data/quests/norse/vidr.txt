@@ -1,8 +1,8 @@
 vidr = {
-	name = "Viðr"
+	name = "[word:vidr.name.normalized]"
 	icon = icon_lumber
 	player_color = gray
-	description = "\"[word:vidr.name]\" means \"[word:vidr.meanings.1.lowered]\" or \"[word:vidr.meanings.2.lowered]\" in Old Norse. Gathering lumber is vital for the construction of new structures."
+	description = "\"[word:vidr.name.normalized]\" means \"[word:vidr.meanings.1.lowered]\" or \"[word:vidr.meanings.2.lowered]\" in Old Norse. Gathering lumber is vital for the construction of new structures."
 	hint = "Select a [civilization:norse.class_unit_type:worker.name] and then right-click on a tree or wood pile to gather lumber."
 	conditions = {
 		civilization = norse

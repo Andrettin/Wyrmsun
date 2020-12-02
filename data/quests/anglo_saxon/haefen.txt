@@ -1,5 +1,5 @@
 haefen = {
-	name = "Hæfen"
+	name = "[word:haefen.name.normalized]"
 	icon = icon_teuton_dock
 	player_color = red
 	description = "\"[word:haefen.name.normalized]\" means \"[word:haefen.meanings.1.lowered]\" in Old English. Building a dock enables the construction of ships to sail through seas and rivers."
