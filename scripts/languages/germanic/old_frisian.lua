@@ -675,13 +675,6 @@ DefineLanguageWord("Wi", { -- Source: Sean Crist, "An Analysis of *z loss in Wes
 	Nominative = "Wi"
 })
 
-DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"}
-})
-
 DefineLanguageWord("Worm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "old-frisian",
 	Type = "noun",

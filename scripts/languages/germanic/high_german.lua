@@ -2104,21 +2104,6 @@ DefineLanguageWord("Wild", {
 	Meanings = {"Wild"}
 })
 
-DefineLanguageWord("Wolf", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Wolf"},
-	DerivesFrom = {"middle-high-german", "noun", "Wolf"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Wolfs", -- alternatively also "Wolfes"
-		"plural", "nominative", "Wölfe",
-		"plural", "accusative", "Wölfe",
-		"plural", "dative", "Wölfen",
-		"plural", "genitive", "Wölfe"
-	}
-})
-
 DefineLanguageWord("Wölfin", {
 	Language = "high-german",
 	Type = "noun",

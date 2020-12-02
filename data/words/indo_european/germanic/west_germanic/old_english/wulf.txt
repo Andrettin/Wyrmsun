@@ -1,0 +1,9 @@
+wulf_old_english = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Wulf"
+	language = old_english
+	type = noun
+	etymon = wulfa
+	meanings = {
+		"Wolf" #source gives the German "Wolf"
+	}
+}

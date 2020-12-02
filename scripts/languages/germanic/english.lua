@@ -2149,14 +2149,6 @@ DefineLanguageWord("Wold", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter" -- presumably
 })
 
-DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Wolf"},
-	DerivesFrom = {"old-english", "noun", "Wulf"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Wool", {
 	Language = "english",
 	Type = "noun",

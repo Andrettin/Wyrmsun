@@ -319,13 +319,6 @@ DefineLanguageWord("Viɫkas", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
-DefineLanguageWord("Vilpiszỹs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "lithuanian",
-	Type = "noun",
-	Meanings = {"Wild Cat"}, -- source gives the German "wilde Katze"
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"}
-})
-
 DefineLanguageWord("Vyti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "lithuanian",
 	Type = "verb",

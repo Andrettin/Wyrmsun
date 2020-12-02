@@ -1,0 +1,9 @@
+wolf_old_high_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/garou
+	name = "Wolf"
+	language = old_high_german
+	type = noun
+	etymon = wulfa
+	meanings = {
+		"Wolf" #the TLFi gives the French "loup", while Fick gives the German "Wolf"
+	}
+}

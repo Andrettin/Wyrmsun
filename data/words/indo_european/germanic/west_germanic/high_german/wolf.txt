@@ -1,0 +1,16 @@
+wolf_high_german = {
+	name = "Wolf"
+	language = high_german
+	type = noun
+	gender = masculine
+	etymon = wolf_middle_high_german #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	meanings = {
+		"Wolf"
+	}
+	
+	#singular genitive: "Wolfs", alternatively also "Wolfes"
+	#plural nominative: "Wölfe"
+	#plural accusative: "Wölfe"
+	#plural dative: "Wölfen"
+	#plural genitive: "Wölfe"
+}

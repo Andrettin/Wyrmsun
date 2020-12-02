@@ -1,0 +1,9 @@
+wolf_old_frisian = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Wolf"
+	language = old_frisian
+	type = noun
+	etymon = wulfa
+	meanings = {
+		"Wolf" #source gives the German "Wolf"
+	}
+}

@@ -1902,12 +1902,6 @@ DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 		"plural", "first-person", "present", "indicative", "Wizzum" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	}
 })
-DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/garou
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- the TLFi gives the French "loup", while Fick gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"}
-})
 
 DefineLanguageWord("Wulpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "old-high-german",
@@ -2064,6 +2058,7 @@ DefineLanguageWord("Siohtago", { -- Source: August Fick and Alf Torp, "Wortschat
 		"suffix", "old-high-german", "noun", "Tago"
 	}
 })
+
 DefineLanguageWord("Werwolf", { -- Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",

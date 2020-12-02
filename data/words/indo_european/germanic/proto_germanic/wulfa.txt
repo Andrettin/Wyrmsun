@@ -1,0 +1,10 @@
+wulfa = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 598; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Wulfa" #Fick gives "vulfa" instead
+	language = proto_germanic
+	type = noun
+	gender = masculine #as given by both sources
+	etymon = vlpo #as given by Fick
+	meanings = {
+		"Wolf" #as given by both sources (Fick gives the German "Wolf")
+	}
+}

@@ -1767,16 +1767,6 @@ DefineLanguageWord("Úfriđr", { -- Source: Carl D. Buck, "Words for 'Battle,' '
 	Meanings = {"Unpeace", "War"}
 })
 
-DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"},
-	NumberCaseInflections = {
-		"singular", "no-case", "Ulf" -- presumably (assuming the "-r" ending here is the nominative ending)
-	}
-})
-
 DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",

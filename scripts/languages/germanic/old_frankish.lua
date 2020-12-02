@@ -269,13 +269,6 @@ DefineLanguageWord("Wer", { -- Source: http://www.cnrtl.fr/definition/garou
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"} -- presumably
 })
 
-DefineLanguageWord("Wolf", { -- Source: http://www.cnrtl.fr/definition/garou
-	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the French "loup" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"} -- presumably
-})
-
 DefineLanguageWord("Worm", { -- source also gives the alternative form "Wurm"; Source: http://www.cnrtl.fr/definition/gourme
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",

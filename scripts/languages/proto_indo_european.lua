@@ -325,12 +325,6 @@ DefineLanguageWord("Vel", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Rip"} -- source gives the German "reißen"
 })
 
-DefineLanguageWord("Vl̥po", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "proto-indo-european",
 	Type = "noun",

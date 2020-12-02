@@ -1,0 +1,9 @@
+wolf_old_frankish = { #Source: http://www.cnrtl.fr/definition/garou
+	name = "Wolf"
+	language = old_frankish #source gives "Ancien Bas Francique" (= Old Frankish)
+	type = noun
+	etymon = wulfa #presumably
+	meanings = {
+		"Wolf" #source gives the French "loup"
+	}
+}

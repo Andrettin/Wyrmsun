@@ -1017,13 +1017,6 @@ DefineLanguageWord("Wîz̨", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"old-high-german", "adjective", "Wîz̨"}
 })
 
-DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"old-high-german", "noun", "Wolf"}
-})
-
 DefineLanguageWord("Wülpe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "middle-high-german",
 	Type = "noun",

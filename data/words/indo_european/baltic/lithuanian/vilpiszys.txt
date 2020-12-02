@@ -1,0 +1,9 @@
+vilpiszys = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Vilpiszỹs"
+	language = lithuanian
+	type = noun
+	etymon = vlpo
+	meanings = {
+		"Wild Cat" #source gives the German "wilde Katze"
+	}
+}

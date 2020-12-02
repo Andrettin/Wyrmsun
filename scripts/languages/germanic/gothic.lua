@@ -1379,14 +1379,6 @@ DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realizatio
 	Meanings = {"Out"}
 })
 
-DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Wulfa"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Waihjō", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 	Language = "gothic",
 	Type = "noun",
