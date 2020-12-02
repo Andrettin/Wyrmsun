@@ -1,0 +1,23 @@
+hofn = {
+	name = "Hǫfn"
+	icon = icon_norse_dock
+	player_color = blue
+	description = "\"[word:hofn.name.normalized]\" means \"[word:hofn.meanings.1.lowered]\" in Old Norse. Building a dock enables the construction of ships to sail through seas and rivers."
+	hint = "Select a [civilization:norse.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:norse.class_unit_type:dock.name] button to build the structure."
+	conditions = {
+		civilization = norse
+		not = {
+			unit_class = dock
+		}
+		coastal = true
+	}
+	objectives = {
+		build_units = {
+			unit_class = dock
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

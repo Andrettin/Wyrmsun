@@ -1,0 +1,23 @@
+haefen = {
+	name = "Hæfen"
+	icon = icon_teuton_dock
+	player_color = red
+	description = "\"[word:haefen.name.normalized]\" means \"[word:haefen.meanings.1.lowered]\" in Old English. Building a dock enables the construction of ships to sail through seas and rivers."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:anglo_saxon.class_unit_type:dock.name] button to build the structure."
+	conditions = {
+		civilization = anglo_saxon
+		not = {
+			unit_class = dock
+		}
+		coastal = true
+	}
+	objectives = {
+		build_units = {
+			unit_class = dock
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

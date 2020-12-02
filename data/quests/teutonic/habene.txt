@@ -1,0 +1,26 @@
+habene = {
+	name = "Habene"
+	icon = icon_teuton_dock
+	player_color = yellow
+	description = "\"[word:habene.name.normalized]\" means \"[word:habene.meanings.1.lowered]\" in Middle High German. Building a dock enables the construction of ships to sail through seas and rivers."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:dock.name] button to build the structure."
+	conditions = {
+		or = {
+			civilization = teutonic
+			civilization = suebi
+		}
+		not = {
+			unit_class = dock
+		}
+		coastal = true
+	}
+	objectives = {
+		build_units = {
+			unit_class = dock
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}
