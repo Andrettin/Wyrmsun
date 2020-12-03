@@ -1,4 +1,14 @@
 goblin = {
+	name = "Goblin"
+	parent_civilization = neutral
+	species = goblin
+	language = goblin
+	visible = true
+	interface = goblin
+	default_color = teal
+	upgrade = upgrade_goblin_civilization
+	description = "Goblins dwell in the caves and highlands of Nidavellir. The frequency of goblin raids into dwarven and gnomish territory has fostered a history of hatred with those races. The emergence of the goblin merchant syndicates has changed this relationship, however. The goblin merchants have become an indispensable part of Nidavellir's trade network, though the dwarves and gnomes do hold grudges against their practices, specially their suspected support of piracy..."
+	
 	work_complete_sound = basic_goblin_voices_work_complete
 	not_enough_food_sound = basic_goblin_voices_not_enough_food
 	not_enough_resource_sounds = {
@@ -6,5 +16,59 @@ goblin = {
 		copper = basic_goblin_voices_not_enough_gold
 		lumber = basic_goblin_voices_not_enough_lumber
 		stone = basic_goblin_voices_not_enough_stone
+	}
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_goblin_wooden_shield
+		attack = icon_goblin_short_sword
+		patrol = icon_goblin_patrol_land
+		stand_ground = icon_goblin_stand_ground
+		return_goods = icon_goblin_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/goblin/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/goblin/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/goblin/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/goblin/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	personal_names = {
+		male = {
+			"Dran"
+			"Erdog"
+			"Gashnok"
+			"Grogor-Tuk"
+			"Hrugt"
+			"Kardur"
+			"Kartrog"
+			"Odrun"
+			"Orhtib"
+			"Ozdul"
+			"Panok"
+			"Pruol"
+			"Sbrak"
+			"Sdrul"
+			"Uhmit"
+			"Urdum"
+			"Utrub"
+			"Vrag"
+			"Vrunt"
+			"Zhuk"
+			"Zuzerd"
+		}
 	}
 }
