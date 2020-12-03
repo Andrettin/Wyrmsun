@@ -112,7 +112,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Quests can now be accepted in a sub-menu in the town hall interface.
 - Increased the maximum quest pool size to 15.
-- Added new side-quests for gathering lumber and building docks. These quests are available for the Anglo-Saxon, Germanic, Norse, Suebi and Teutonic civilizations.
+- Added new side-quests for gathering lumber, building docks and hunting wolves. These quests are available for the Anglo-Saxon, Germanic, Gothic, Norse, Suebi and Teutonic civilizations.
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.

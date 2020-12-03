@@ -3,7 +3,7 @@ widu_anglo_saxon = {
 	icon = icon_lumber
 	player_color = gray
 	description = "\"[word:widu_old_english.name.normalized]\" means \"[word:widu_old_english.meanings.1.lowered]\" or \"[word:widu_old_english.meanings.2.lowered]\" in Old English. Gathering lumber is vital for the construction of new structures."
-	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name] and then right-click on a tree or wood pile to gather lumber."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name] and right-click on a tree or wood pile to gather lumber."
 	conditions = {
 		civilization = anglo_saxon
 	}

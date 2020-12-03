@@ -5,10 +5,7 @@ habene = {
 	description = "\"[word:habene.name.normalized]\" means \"[word:habene.meanings.1.lowered]\" in Middle High German. Building a dock enables the construction of ships to sail through seas and rivers."
 	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:dock.name] button to build the structure."
 	conditions = {
-		or = {
-			civilization = teutonic
-			civilization = suebi
-		}
+		civilization = teutonic
 		not = {
 			unit_class = dock
 		}

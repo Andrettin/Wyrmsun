@@ -1,0 +1,21 @@
+vulfs = {
+	name = "[word:vulfs.name.normalized]"
+	icon = icon_wolf
+	player_color = gray
+	description = "\"[word:vulfs.name.normalized]\" means \"[word:vulfs.meanings.1.lowered]\" in Gothic. Wolves are pack hunters who can be dangerous to humans and livestock."
+	conditions = {
+		civilization = gothic
+		neutral_player = {
+			unit_type = unit_wolf
+		}
+	}
+	objectives = {
+		destroy_units = {
+			unit_type = unit_wolf
+			quantity = 1
+		}
+	}
+	completion_effects = {
+		copper += 250
+	}
+}

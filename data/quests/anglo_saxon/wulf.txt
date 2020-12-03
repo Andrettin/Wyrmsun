@@ -1,0 +1,21 @@
+wulf_old_english = {
+	name = "[word:wulf_old_english.name.normalized]"
+	icon = icon_wolf
+	player_color = gray
+	description = "\"[word:wulf_old_english.name.normalized]\" means \"[word:wulf_old_english.meanings.1.lowered]\" in Old English. Wolves are pack hunters who can be dangerous to humans and livestock."
+	conditions = {
+		civilization = anglo_saxon
+		neutral_player = {
+			unit_type = unit_wolf
+		}
+	}
+	objectives = {
+		destroy_units = {
+			unit_type = unit_wolf
+			quantity = 1
+		}
+	}
+	completion_effects = {
+		copper += 250
+	}
+}

@@ -3,7 +3,7 @@ widu = {
 	icon = icon_lumber
 	player_color = gray
 	description = "\"[word:widu_proto_germanic.name.normalized]\" means \"[word:widu_proto_germanic.meanings.1.lowered]\" or \"[word:widu_proto_germanic.meanings.2.lowered]\" in Proto-Germanic. Gathering lumber is vital for the construction of new structures."
-	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and then right-click on a tree or wood pile to gather lumber."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a tree or wood pile to gather lumber."
 	conditions = {
 		civilization = germanic
 	}
