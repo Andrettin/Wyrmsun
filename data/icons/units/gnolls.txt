@@ -1,0 +1,9 @@
+gnoll_warrior = {
+	file = "icons/units/gnoll/warrior.png"
+	frame = 0
+}
+
+gnoll_warrior_2 = {
+	file = "icons/units/gnoll/warrior.png"
+	frame = 1
+}
