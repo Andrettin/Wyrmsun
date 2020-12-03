@@ -1,0 +1,11 @@
+kobold += {
+	personal_names = {
+		male = {
+			"Pikel" #Pikel the Slaver (unique male kobold)
+		}
+		
+		female = {
+			"Sonja" #Sonja, the Graceful Assassin (unique female kobold)
+		}
+	}
+}
