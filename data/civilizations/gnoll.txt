@@ -1,0 +1,43 @@
+gnoll = {
+	name = "Gnoll"
+	parent_civilization = neutral
+	species = gnoll
+	language = gnoll
+	visible = false
+	playable = false
+	interface = goblin
+	default_color = yellow
+	upgrade = upgrade_gnoll_civilization
+	
+	unit_sounds = {
+		dead = basic_orc_voices_dead
+	}
+
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_goblin_wooden_shield
+		attack = icon_club
+		patrol = icon_goblin_patrol_land
+		stand_ground = icon_dwarven_stand_ground
+		return_goods = icon_goblin_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/goblin/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/goblin/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/goblin/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/goblin/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+}
