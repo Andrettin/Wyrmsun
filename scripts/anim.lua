@@ -459,6 +459,14 @@ UnitMeleeAttackNewMovement = {
 	"unbreakable end", "wait 1",
 }
 
+UnitMeleeAttackFiveFrames = {
+	"unbreakable begin",
+  	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+	"frame 40", "wait 3",
+  	"frame 45", "attack", "wait 5", "frame 25", "wait 7", "frame 25",
+	"unbreakable end", "wait 1",
+}
+
 UnitWeaponThrowAttackSixFrames = {
 	"unbreakable begin", 
 	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
@@ -503,7 +511,7 @@ UnitDeath = {
 	"unbreakable end", "wait 1",
 }
 
-UnitDeathNewMovement = {
+UnitDeathEleventhFrameBegin = {
 	"unbreakable begin",
 	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
 	"unbreakable end", "wait 1",
@@ -593,7 +601,7 @@ DefineAnimations("animations-melee-unit-new-movement", {
 	Still = UnitStill,
 	Move = UnitMoveNewMovement,
 	Attack = UnitMeleeAttackNewMovement,
-	Death = UnitDeathNewMovement
+	Death = UnitDeathEleventhFrameBegin
 })
 
 DefineAnimations("animations-melee-unit-sequential-movement", {
@@ -652,7 +660,7 @@ DefineAnimations("animations-worker", {
 DefineAnimations("animations-elven-worker", {
 	Still = UnitStill,
 	Move = UnitMoveFourFramesNoIdle,
-	Attack = WorkerAttack,
+	Attack = UnitMeleeAttackFiveFrames,
 	Harvest_gold = WorkerMetalMining,
 	Harvest_silver = WorkerMetalMining,
 	Harvest_copper = WorkerMetalMining,
@@ -678,7 +686,6 @@ DefineAnimations("animations-archer", {
 	},
 	Death = ArcherDeath
 })
-
 
 DefineAnimations("animations-archer-short-attack", {
 	Still = UnitStill,
