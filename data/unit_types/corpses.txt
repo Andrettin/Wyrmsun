@@ -15,6 +15,13 @@ unit_gnoll_dead_body = {
 	type = land
 	vanishes = true
 	detritus = true
+	variations = {
+		light_fur = {
+		}
+		dark_fur = {
+			image_file = "units/gnoll/corpse_dark_fur.png"
+		}
+	}
 }
 
 unit_orc_dead_body = {

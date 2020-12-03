@@ -611,6 +611,13 @@ DefineAnimations("animations-melee-unit-sequential-movement", {
 	Death = UnitDeath
 })
 
+DefineAnimations("animations_gnoll_warrior", {
+	Still = UnitStill,
+	Move = UnitMoveFourFramesNoIdle,
+	Attack = UnitMeleeAttackFiveFrames,
+	Death = UnitDeathEleventhFrameBegin
+})
+
 DefineAnimations("animations-orc-spearthrower", {
 	Still = UnitStill,
 	Move = UnitMoveFourFramesNoIdle,

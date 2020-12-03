@@ -281,6 +281,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit_wyrm", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "navalia") then
 		unit = CreateUnit("unit_latin_dock", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+	elseif (str == "werehyena") then
+		unit = CreateUnit("unit_gnoll_warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	else
 		return false
 	end
