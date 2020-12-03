@@ -1,4 +1,0 @@
-celtic = {
-	name = "Celtic"
-	species = human
-}

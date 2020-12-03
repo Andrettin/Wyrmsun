@@ -1,4 +1,0 @@
-tupi = {
-	name = "Tupi"
-	species = human
-}

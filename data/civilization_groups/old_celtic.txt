@@ -1,4 +1,0 @@
-old_celtic = {
-	name = "Old Celtic"
-	supergroup = celtic
-}

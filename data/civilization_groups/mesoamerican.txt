@@ -1,4 +1,5 @@
 mesoamerican = {
 	name = "Mesoamerican"
-	supergroup = mesoamerican
+	rank = group
+	species = human
 }

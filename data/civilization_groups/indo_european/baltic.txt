@@ -1,0 +1,5 @@
+baltic = {
+	name = "Baltic"
+	rank = group
+	group = indo_european
+}

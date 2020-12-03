@@ -1,0 +1,5 @@
+latin = {
+	name = "Latin"
+	rank = group
+	group = indo_european
+}

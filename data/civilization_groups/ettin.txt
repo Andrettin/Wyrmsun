@@ -1,4 +1,4 @@
 ettin = {
 	name = "Ettin"
-	supergroup = ettin
+	rank = group
 }

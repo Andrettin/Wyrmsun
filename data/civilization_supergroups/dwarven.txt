@@ -1,3 +1,0 @@
-dwarven = {
-	name = "Dwarven"
-}

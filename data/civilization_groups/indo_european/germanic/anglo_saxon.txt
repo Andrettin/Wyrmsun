@@ -1,0 +1,5 @@
+anglo_saxon = {
+	name = "Anglo-Saxon"
+	rank = subgroup
+	group = germanic
+}

@@ -2,6 +2,7 @@ goblin = {
 	name = "Goblin"
 	parent_civilization = neutral
 	species = goblin
+	group = goblinoid
 	language = goblin
 	visible = true
 	interface = goblin

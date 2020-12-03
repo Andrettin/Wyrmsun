@@ -1,4 +1,0 @@
-kobold = {
-	name = "Kobold"
-	supergroup = draconic
-}

@@ -1,0 +1,5 @@
+indo_european = {
+	name = "Indo-European"
+	rank = supergroup
+	species = human
+}

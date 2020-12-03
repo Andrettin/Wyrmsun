@@ -112,7 +112,6 @@ DefineCivilization("ettin", {
 DefineCivilization("germanic", {
 	Display = "Germanic",
 	Visible = true,
-	Group = "old_germanic",
 	ParentCivilization = "neutral",
 	Language = "proto-germanic",
 	Interface = "germanic",
@@ -164,7 +163,6 @@ DefineCivilization("germanic", {
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
 	Display = "Celt",
 	Visible = true,
-	Group = "old_celtic",
 	Language = "proto-celtic",
 	ParentCivilization = "germanic",
 	Adjective = "Celtic",
@@ -215,15 +213,10 @@ DefineCivilization("gnome", {
 	}
 })
 
-DefineCivilization("goblin", {
-	Group = "goblin",
-})
-
 DefineCivilization("kobold", {
 	Display = "Kobold",
 	Visible = true,
 	Species = "kobold",
-	Group = "kobold",
 	ParentCivilization = "neutral",
 	Language = "kobold",
 	Adjective = "Kobold",
@@ -1175,7 +1168,6 @@ DefineCivilization("phrygian", {
 DefineCivilization("slav", {
 	Display = "Slav",
 	Visible = false,
-	Group = "old_slavic",
 	Language = "proto-slavic",
 	ParentCivilization = "norse", -- so that it can use Norse units and buildings
 	Adjective = "Slavic",
@@ -1257,7 +1249,6 @@ DefineCivilization("treant", {
 	Display = "Treant",
 	Visible = false,
 	Species = "treant",
-	Group = "treant",
 	ParentCivilization = "neutral",
 	Adjective = "Treant",
 	Playable = false,
@@ -1351,7 +1342,6 @@ DefineCivilization("aesir", {
 	Display = "Aesir",
 	Visible = false,
 	ParentCivilization = "neutral",
-	Group = "aesir",
 	Species = "einherjar",
 	Language = "old-norse",
 	Adjective = "Aesir",

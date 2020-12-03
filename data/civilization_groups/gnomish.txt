@@ -1,4 +1,4 @@
 gnomish = {
 	name = "Gnomish"
-	supergroup = dwarven
+	rank = group
 }

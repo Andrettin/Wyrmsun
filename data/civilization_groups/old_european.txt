@@ -1,4 +1,5 @@
 old_european = {
 	name = "Old European"
-	supergroup = old_european
+	rank = group
+	species = human
 }

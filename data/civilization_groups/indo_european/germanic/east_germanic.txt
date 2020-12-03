@@ -1,0 +1,5 @@
+east_germanic = {
+	name = "East Germanic"
+	rank = subgroup
+	group = germanic
+}

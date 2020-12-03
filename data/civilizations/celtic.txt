@@ -1,0 +1,4 @@
+celt = {
+	aliases += celtic
+	group = celtic
+}

@@ -1,0 +1,5 @@
+germanic = {
+	name = "Germanic"
+	rank = group
+	group = indo_european
+}

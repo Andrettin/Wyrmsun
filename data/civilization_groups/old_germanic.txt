@@ -1,4 +1,0 @@
-old_germanic = {
-	name = "Old Germanic"
-	supergroup = germanic
-}

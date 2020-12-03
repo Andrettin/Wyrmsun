@@ -1,4 +1,0 @@
-germanic = {
-	name = "Germanic"
-	species = human
-}

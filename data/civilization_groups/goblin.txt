@@ -1,4 +1,0 @@
-goblin = {
-	name = "Goblin"
-	supergroup = goblin
-}

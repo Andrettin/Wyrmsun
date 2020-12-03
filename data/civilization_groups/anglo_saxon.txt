@@ -1,4 +1,0 @@
-anglo_saxon = {
-	name = "Anglo-Saxon"
-	supergroup = germanic
-}

@@ -1,4 +1,5 @@
 tupi = {
 	name = "Tupi"
-	supergroup = tupi
+	rank = group
+	species = human
 }

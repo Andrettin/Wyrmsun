@@ -1,0 +1,5 @@
+scandinavian = {
+	name = "Scandinavian"
+	rank = subgroup
+	group = germanic
+}

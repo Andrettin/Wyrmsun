@@ -2,7 +2,6 @@ minotaur = {
 	name = "Minotaur"
 	parent_civilization = neutral
 	species = minotaur
-	group = minotaur
 	language = minotaur
 	visible = false
 	playable = false

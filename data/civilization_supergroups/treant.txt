@@ -1,3 +1,0 @@
-treant = {
-	name = "Treant"
-}

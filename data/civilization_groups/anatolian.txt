@@ -1,4 +1,0 @@
-anatolian = {
-	name = "Anatolian"
-	supergroup = anatolian
-}

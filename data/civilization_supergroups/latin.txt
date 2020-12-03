@@ -1,4 +1,0 @@
-latin = {
-	name = "Latin"
-	species = human
-}

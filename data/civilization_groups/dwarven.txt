@@ -1,4 +1,4 @@
 dwarven = {
 	name = "Dwarven"
-	supergroup = dwarven
+	rank = group
 }

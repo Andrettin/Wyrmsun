@@ -1,4 +1,0 @@
-east_slavic = {
-	name = "East Slavic"
-	supergroup = slavic
-}

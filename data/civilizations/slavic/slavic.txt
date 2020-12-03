@@ -1,5 +1,6 @@
 slav = {
 	aliases += slavic
+	group = slavic
 	
 	unit_sounds = {
 		help = basic_english_voices_help

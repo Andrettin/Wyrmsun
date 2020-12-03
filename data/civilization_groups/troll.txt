@@ -1,4 +1,4 @@
 troll = {
 	name = "Troll"
-	supergroup = troll
+	rank = group
 }

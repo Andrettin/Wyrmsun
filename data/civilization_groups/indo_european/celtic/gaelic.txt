@@ -1,0 +1,5 @@
+gaelic = {
+	name = "Gaelic"
+	rank = subgroup
+	group = celtic
+}

@@ -1,4 +1,5 @@
 sinic = {
 	name = "Sinic"
-	supergroup = sinic
+	rank = group
+	species = human
 }

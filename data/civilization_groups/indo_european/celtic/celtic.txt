@@ -1,0 +1,5 @@
+celtic = {
+	name = "Celtic"
+	rank = group
+	group = indo_european
+}

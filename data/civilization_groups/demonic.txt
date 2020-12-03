@@ -1,4 +1,4 @@
 demonic = {
 	name = "Demonic"
-	supergroup = demonic
+	rank = supergroup
 }

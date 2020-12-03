@@ -1,4 +1,5 @@
 semitic = {
 	name = "Semitic"
-	supergroup = semitic
+	species = human
+	rank = group
 }

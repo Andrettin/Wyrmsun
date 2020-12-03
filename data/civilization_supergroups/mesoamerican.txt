@@ -1,3 +1,0 @@
-mesoamerican = {
-	name = "Mesoamerican"
-}

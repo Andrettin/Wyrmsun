@@ -1,4 +1,5 @@
 egyptian = {
 	name = "Egyptian"
-	supergroup = egyptian
+	rank = group
+	species = human
 }

@@ -1,4 +1,0 @@
-old_european = {
-	name = "Old European"
-	species = human
-}

@@ -1,0 +1,5 @@
+west_slavic = {
+	name = "West Slavic"
+	rank = subgroup
+	group = slavic
+}
