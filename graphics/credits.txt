@@ -1902,6 +1902,8 @@
 /graphics/units/elven/worker_with_gold.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/elven/worker_with_lumber.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/gnoll/corpse.png (by Jinn) (licensed under the CC0)
+/graphics/units/gnoll/warrior.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/units/gnoll/warrior_dark_fur.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/orc/corpse.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/orc/sea_orc.png (by Gregor-Mack) (licensed under the CC0)
 /graphics/units/orc/spearthrower.png (by Kwaliti and Jinn) (licensed under the CC0)
