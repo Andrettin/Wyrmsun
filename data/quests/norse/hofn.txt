@@ -6,9 +6,6 @@ hofn = {
 	hint = "Select a [civilization:norse.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:norse.class_unit_type:dock.name] button to build the structure."
 	conditions = {
 		civilization = norse
-		not = {
-			unit_class = dock
-		}
 		coastal = true
 	}
 	objectives = {

@@ -6,9 +6,6 @@ haefen = {
 	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:anglo_saxon.class_unit_type:dock.name] button to build the structure."
 	conditions = {
 		civilization = anglo_saxon
-		not = {
-			unit_class = dock
-		}
 		coastal = true
 	}
 	objectives = {
