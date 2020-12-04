@@ -1,0 +1,19 @@
+gulth = {
+	name = "[word:gulth.name.normalized]"
+	icon = icon_gold
+	player_color = red
+	description = "\"[word:gulth.name.normalized]\" means \"[word:gulth.meanings.1.lowered]\" in Gothic. Gold is an extremely valuable metal to mine.
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on a gold deposit to build a gold mine and gather from it."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		gather_resource = {
+			resource = gold
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
