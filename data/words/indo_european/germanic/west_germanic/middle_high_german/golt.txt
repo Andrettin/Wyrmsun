@@ -1,0 +1,12 @@
+golt = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	name = "Golt"
+	language = middle_high_german
+	type = noun
+	gender = neuter
+	etymon = gold_old_high_german
+	meanings = {
+		"Gold" #source gives the German "Gold"
+	}
+	
+	#singular genitive: "Goldes"
+}

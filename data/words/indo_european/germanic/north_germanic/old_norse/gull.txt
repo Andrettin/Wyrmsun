@@ -1,0 +1,10 @@
+gull_old_norse = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	name = "Gull" #source also gives the alternative form "goll"
+	language = old_norse
+	type = noun
+	gender = neuter
+	etymon = gultha
+	meanings = {
+		"Gold" #source gives the German "Gold"
+	}
+}

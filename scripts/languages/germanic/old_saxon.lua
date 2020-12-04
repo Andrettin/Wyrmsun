@@ -276,13 +276,6 @@ DefineLanguageWord("God", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"proto-germanic", "noun", "Guda"}
 })
 
-DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
-})
-
 DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "old-saxon",
 	Type = "adjective",

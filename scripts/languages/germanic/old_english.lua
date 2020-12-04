@@ -842,13 +842,6 @@ DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	}
 })
 
-DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
-})
-
 DefineLanguageWord("Græ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "old-english",
 	Type = "adjective",

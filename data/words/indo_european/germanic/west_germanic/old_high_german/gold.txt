@@ -1,0 +1,9 @@
+gold_old_high_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	name = "Gold" #source also gives the alternative form "cold"
+	language = old_high_german
+	type = noun
+	etymon = gultha
+	meanings = {
+		"Gold" #source gives the German "Gold"
+	}
+}

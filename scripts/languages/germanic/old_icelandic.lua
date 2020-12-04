@@ -182,14 +182,6 @@ DefineLanguageWord("Grisnir", { -- appears in the name of a male goat; Source: R
 	Meanings = {"Gat"} -- presumably, since Tanngrisni means "Gat-Tooth" (according to another source which wasn't noted down)
 })
 
-DefineLanguageWord("Gull", { -- earlier spelt as "goll"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 220.
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Gold"},
-	DerivesFrom = {"old-norse", "noun", "Gull"}, -- presumably
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Gyllir", { -- a horse name; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 	Language = "old-icelandic",
 	Type = "adjective",

@@ -691,14 +691,6 @@ DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; S
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Gull", { -- source also gives the alternative form "goll"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "old-norse",
 	Type = "noun",

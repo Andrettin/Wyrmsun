@@ -778,14 +778,6 @@ DefineLanguageWord("Goethe", {
 	DerivesFrom = {"middle-high-german", "noun", "Göte"} -- source is not clear if Goethe comes from Göte or Gote in Middle High German; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 })
 
-DefineLanguageWord("Gold", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Gold"},
-	DerivesFrom = {"middle-high-german", "noun", "Golt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Golden", {
 	Language = "high-german",
 	Type = "adjective",

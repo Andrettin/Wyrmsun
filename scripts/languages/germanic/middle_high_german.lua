@@ -338,17 +338,6 @@ DefineLanguageWord("Gnîten", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"old-high-german", "verb", "Gnîtan"}
 })
 
-DefineLanguageWord("Golt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Gold"},
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Goldes"
-	},
-})
-
 DefineLanguageWord("Got", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "middle-high-german",
 	Type = "noun",

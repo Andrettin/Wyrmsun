@@ -648,13 +648,6 @@ DefineLanguageWord("Gudjan", { -- source also gives the alternative form "gudan"
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "proto-germanic",
 	Type = "noun",

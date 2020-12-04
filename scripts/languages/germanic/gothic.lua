@@ -536,14 +536,6 @@ DefineLanguageWord("Gudja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Guma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "gothic",
 	Type = "noun",

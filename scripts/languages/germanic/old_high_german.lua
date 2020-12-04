@@ -624,13 +624,6 @@ DefineLanguageWord("Gnîtan", { -- source also gives the alternative form "knît
 	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
 })
 
-DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
-})
-
 DefineLanguageWord("Gomo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "old-high-german",
 	Type = "noun",
