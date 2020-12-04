@@ -962,14 +962,6 @@ DefineLanguageWord("Irmindeot", { -- the first part of this compound derives fro
 	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
 })
 
-DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Ist", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "verb",

@@ -1,0 +1,9 @@
+isarna = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 271; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	name = "Īsarna" #Fick gives "îsarna" instead; Kroonen also gives the alternative form "īzarna"
+	language = proto_germanic
+	type = noun
+	gender = neuter #as given by both sources
+	meanings = {
+		"Iron" #as given by both sources (Fick gives the German "Eisen")
+	}
+}

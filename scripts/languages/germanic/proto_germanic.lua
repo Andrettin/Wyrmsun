@@ -838,13 +838,6 @@ DefineLanguageWord("Hvîta", { -- source also gives the alternative form "hvitta
 	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"} -- Lehmann gives its reflexes as being derived from this word; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 })
 
-DefineLanguageWord("Îsarna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Isti", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "proto-germanic",
 	Type = "verb",

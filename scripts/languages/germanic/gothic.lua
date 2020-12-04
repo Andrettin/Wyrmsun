@@ -392,22 +392,6 @@ DefineLanguageWord("Drauhtiwitōþ", { -- Source: Carl D. Buck, "Words for 'Batt
 	Meanings = {"Warfare"}
 })
 
-DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter",
-	Uncountable = true -- as a material, it is likely to be uncountable
-})
-
-DefineLanguageWord("Eisarneins", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "gothic",
-	Type = "adjective",
-	Meanings = {"Iron"}, -- source gives the German "Eisern" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"}
-})
-
 DefineLanguageWord("Faihs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "adjective",

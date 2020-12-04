@@ -1,0 +1,10 @@
+isarn_old_norse = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 271; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	name = "Ísarn" #Fick gives "îsarn" and "jârn" instead
+	language = old_norse
+	type = noun
+	gender = neuter #as given by both sources
+	etymon = isarna #as given by both sources
+	meanings = {
+		"Iron" #as given by both sources (Fick gives the German "Eisen")
+	}
+}

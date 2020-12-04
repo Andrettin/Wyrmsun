@@ -1,0 +1,11 @@
+eisen = {
+	name = "Eisen"
+	language = high_german
+	type = noun
+	gender = neuter
+	#uncountable
+	etymon = isern_middle_high_german #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	meanings = {
+		"Iron"
+	}
+}

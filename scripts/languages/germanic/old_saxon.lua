@@ -496,14 +496,6 @@ DefineLanguageWord("Irminthiod", { -- the first part of this compound derives fr
 	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
 })
 
-DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Jung", {
 	Language = "old-saxon",
 	Type = "adjective",

@@ -542,22 +542,6 @@ DefineLanguageWord("Eins", {
 	DerivesFrom = {"old-high-german", "numeral", "Ein"} -- presumably
 })
 
-DefineLanguageWord("Eisen", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Iron"},
-	DerivesFrom = {"middle-high-german", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Gender = "neuter",
-	Uncountable = true
-})
-	
-DefineLanguageWord("Eisern", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"Iron"},
-	DerivesFrom = {"middle-high-german", "noun", "Îsern"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-})
-
 DefineLanguageWord("Elf", {
 	Language = "high-german",
 	Type = "numeral",

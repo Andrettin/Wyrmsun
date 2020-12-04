@@ -1,0 +1,10 @@
+isern_middle_high_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	name = "Îsern" #source also gives the alternative form "îsen"
+	language = middle_high_german
+	type = noun
+	gender = neuter
+	etymon = isarn_old_high_german
+	meanings = {
+		"Iron" #source gives the German "Eisen"
+	}
+}

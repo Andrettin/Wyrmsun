@@ -1212,14 +1212,6 @@ DefineLanguageWord("Is", { -- this is the singular first person present; Source:
 	}
 })
 
-DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen" and "Îren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Iuguð", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
 	Language = "old-english",
 	Type = "noun",

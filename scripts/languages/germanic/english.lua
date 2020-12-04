@@ -1073,22 +1073,6 @@ DefineLanguageWord("Ill", {
 	Meanings = {"Ill"}
 })
 
-DefineLanguageWord("Iron", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Iron"},
-	DerivesFrom = {"old-english", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Gender = "neuter",
-	Uncountable = true
-})
-
-DefineLanguageWord("Iron", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Iron"},
-	DerivesFrom = {"old-english", "noun", "Îsern"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-})
-
 DefineLanguageWord("King", {
 	Language = "english",
 	Type = "noun",

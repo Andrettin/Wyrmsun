@@ -1003,14 +1003,6 @@ DefineLanguageWord("Hyrni", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Ist", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-norse", -- source gives Old Norse Runic
 	Type = "verb",
