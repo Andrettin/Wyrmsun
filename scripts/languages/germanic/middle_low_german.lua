@@ -270,13 +270,6 @@ DefineLanguageWord("Orloge", { -- Source: Carl D. Buck, "Words for 'Battle,' 'Wa
 	Meanings = {"War"}
 })
 
-DefineLanguageWord("Sage", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "middle-low-german",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source (apparently) gives the German "Säge" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Sagô"}
-})
-
 DefineLanguageWord("Smede", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "middle-low-german",
 	Type = "noun",

@@ -1,0 +1,10 @@
+saga_old_saxon = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421.
+	name = "Saga"
+	language = old_saxon
+	type = noun
+	gender = feminine
+	etymon = sago
+	meanings = {
+		"Saw"
+	}
+}

@@ -1,0 +1,10 @@
+saga_elfdalian = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421.
+	name = "Sågå"
+	language = elfdalian
+	type = noun
+	gender = feminine
+	etymon = sog
+	meanings = {
+		"Saw"
+	}
+}

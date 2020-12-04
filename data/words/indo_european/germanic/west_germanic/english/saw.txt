@@ -1,0 +1,10 @@
+saw = {
+	name = "Saw"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = sagu #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	meanings = {
+		"Saw"
+	}
+}

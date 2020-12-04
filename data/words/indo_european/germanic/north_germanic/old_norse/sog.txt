@@ -1,0 +1,10 @@
+sog = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	name = "Sǫg"
+	language = old_norse
+	type = noun
+	gender = feminine #as given by both sources
+	etymon = sago #as given by both sources
+	meanings = {
+		"Saw" #as given by both sources (Fick gives the German "Säge")
+	}
+}

@@ -1561,14 +1561,6 @@ DefineLanguageWord("Sandal", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Saw", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Saw"},
-	DerivesFrom = {"old-english", "noun", "Sagu"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Scale", {
 	Language = "english",
 	Type = "noun",

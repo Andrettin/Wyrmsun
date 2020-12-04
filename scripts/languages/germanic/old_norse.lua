@@ -1520,14 +1520,6 @@ DefineLanguageWord("Smiđr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	}
 })
 
-DefineLanguageWord("Sǫg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-norse",
 	Type = "noun",

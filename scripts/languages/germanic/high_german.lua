@@ -94,7 +94,7 @@ DefineLanguageWord("Amboss", {
 	}
 })
 
-DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
+DefineLanguageWord("Au", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Flat Terrain with Lush Meadows"},
@@ -107,7 +107,7 @@ DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
+DefineLanguageWord("Bach", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Stream"},
@@ -122,7 +122,7 @@ DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
+DefineLanguageWord("Bad", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Bath", "Baths"},
@@ -160,7 +160,7 @@ DefineLanguageWord("Baden", {
 	}
 })
 
-DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
+DefineLanguageWord("Bär", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Bear"},
@@ -177,7 +177,7 @@ DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bart", { -- Source: http://www.duden.de/rechtschreibung/Bart
+DefineLanguageWord("Bart", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Beard"},
@@ -273,7 +273,7 @@ DefineLanguageWord("Bleiern", {
 	Meanings = {"Lead"}
 })
 
-DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
+DefineLanguageWord("Blume", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Flower"},
@@ -345,7 +345,7 @@ DefineLanguageWord("Brennend", {
 	DerivesFrom = {"middle-high-german", "verb", "Brennen"} -- presumably, since the verb "Brennen" comes from this word
 })
 
-DefineLanguageWord("Brett", { -- Source: http://www.duden.de/rechtschreibung/Brett
+DefineLanguageWord("Brett", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Board"},
@@ -647,7 +647,7 @@ DefineLanguageWord("Feurig", {
 	DerivesFrom = {"middle-high-german", "noun", "Viur"} -- presumably, since "Feuer" does
 })
 
-DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fisch
+DefineLanguageWord("Fisch", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Fish"},
@@ -705,7 +705,7 @@ DefineLanguageWord("Fürst", {
 	}
 })
 
-DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
+DefineLanguageWord("Furt", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Ford"},
@@ -926,7 +926,7 @@ DefineLanguageWord("Hammer", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
+DefineLanguageWord("Hart", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Hard"},
@@ -1098,7 +1098,7 @@ DefineLanguageWord("Huhn", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
+DefineLanguageWord("Hunger", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Hunger"},
@@ -1162,7 +1162,7 @@ DefineLanguageWord("Kind", {
 	}
 })
 
-DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
+DefineLanguageWord("Klage", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Complaint"},
@@ -1175,7 +1175,7 @@ DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
+DefineLanguageWord("Klause", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Cloister"},
@@ -1292,7 +1292,7 @@ DefineLanguageWord("Kupfern", {
 	Meanings = {"Copper"}
 })
 
-DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
+DefineLanguageWord("Lai", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Old French Poetry"},
@@ -1404,7 +1404,7 @@ DefineLanguageWord("Mittel", {
 	}
 })
 
-DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
+DefineLanguageWord("Mühle", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Mill"},
@@ -1454,7 +1454,7 @@ DefineLanguageWord("Norden", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
+DefineLanguageWord("Nuss", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Nut"},
@@ -1565,7 +1565,7 @@ DefineLanguageWord("Reiten", {
 	DerivesFrom = {"old-high-german", "verb", "Rītan"} -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 412.
 })
 
-DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
+DefineLanguageWord("Rose", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Rose"},
@@ -1582,20 +1582,6 @@ DefineLanguageWord("Rostig", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Rusty"}
-})
-
-DefineLanguageWord("Säge", { -- Source: http://www.duden.de/rechtschreibung/Saege
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Saw"},
-	DerivesFrom = {"middle-high-german", "noun", "Sage"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Gender = "feminine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Sägen",
-		"plural", "accusative", "Sägen",
-		"plural", "dative", "Sägen",
-		"plural", "genitive", "Sägen"
-	}
 })
 
 DefineLanguageWord("Salz", {
@@ -1656,7 +1642,7 @@ DefineLanguageWord("Schlacht", {
 	DerivesFrom = {"old-high-german", "noun", "Slahta"} -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 4.
 })
 
-DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
+DefineLanguageWord("Schloss", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Castle", "Palace"},
@@ -2193,7 +2179,7 @@ DefineLanguageWord("Zwölf", {
 
 -- compounds
 
-DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
+DefineLanguageWord("Schlossberg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Hill under a Castle", "Hill under a Palace", "Mountain under a Castle", "Mountain under a Palace"},

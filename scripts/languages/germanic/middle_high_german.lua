@@ -796,21 +796,6 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Sage", { -- source also gives the alternative form "sege"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Saga"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Sagler", { -- source apparently gives the word as being related to the Proto-Germanic noun "sagô" and its reflexes; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Incisor"}, -- source gives the German "Schneidezahn" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Saga"} -- presumably
-})
-
 DefineLanguageWord("Schilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
 	Language = "middle-high-german",
 	Type = "noun",

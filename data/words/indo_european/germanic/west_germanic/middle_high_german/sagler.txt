@@ -1,0 +1,9 @@
+sagler = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	name = "Sagler"
+	language = middle_high_german
+	type = noun
+	etymon = saga_old_high_german #presumably; source apparently gives the word as being related to the Proto-Germanic noun "sagô" and its reflexes
+	meanings = {
+		"Incisor" #source gives the German "Schneidezahn"
+	}
+}

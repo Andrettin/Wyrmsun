@@ -1162,13 +1162,6 @@ DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Current", "Stream"} -- source gives meaning as "Strom, Bach"
 })
 
-DefineLanguageWord("Sagô", { -- source also gives the alternative form "segô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "proto-germanic",
 	Type = "noun",

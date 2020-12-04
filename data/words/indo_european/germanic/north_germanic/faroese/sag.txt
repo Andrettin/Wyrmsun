@@ -1,0 +1,10 @@
+sag = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421.
+	name = "Sag"
+	language = faroese
+	type = noun
+	gender = feminine
+	etymon = sog
+	meanings = {
+		"Saw"
+	}
+}

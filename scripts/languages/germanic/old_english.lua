@@ -1627,14 +1627,6 @@ DefineLanguageWord("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Meanings = {"Happy", "Prosperous"}
 })
 
-DefineLanguageWord("Sagu", { -- source also gives the alternative form "sage"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",

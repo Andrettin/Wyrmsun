@@ -1,0 +1,9 @@
+sage_middle_low_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	name = "Sage"
+	language = middle_low_german
+	type = noun
+	etymon = saga_old_saxon #presumably; the source gives Proto-Germanic "sagô", and doesn't list the Old Saxon version
+	meanings = {
+		"Saw" #source (apparently) gives the German "Säge"
+	}
+}

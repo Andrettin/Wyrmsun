@@ -175,18 +175,6 @@ DefineLanguageWord("Raziti", { -- source gives "(su-) raziti"; Source: Carl D. B
 	Meanings = {"Strike"}
 })
 
-DefineLanguageWord("Sěčivo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "old-church-slavonic",
-	Type = "noun",
-	Meanings = {"Axe"} -- source gives the German "Axt" as the meaning
-})
-
-DefineLanguageWord("Sekyra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "old-church-slavonic",
-	Type = "noun",
-	Meanings = {"Heel"} -- source gives the German "Hacke" as the meaning
-})
-
 DefineLanguageWord("Sěmĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
 	Language = "old-church-slavonic",
 	Type = "noun",

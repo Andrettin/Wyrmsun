@@ -1,0 +1,10 @@
+saga_old_high_german = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 421; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	name = "Saga" #both sources also give the alternative form "sega"
+	language = old_high_german
+	type = noun
+	gender = feminine #as given by both sources
+	etymon = sago #as given by both sources
+	meanings = {
+		"Saw" #as given by both sources (Fick gives the German "Säge")
+	}
+}

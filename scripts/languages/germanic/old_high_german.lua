@@ -1391,14 +1391,6 @@ DefineLanguageWord("Rītan", { -- Source: Guus Kroonen, "Etymological Dictionary
 	DerivesFrom = {"proto-germanic", "verb", "Rīdan"}
 })
 
-DefineLanguageWord("Saga", { -- source also gives the alternative form "sega"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Sāt", { -- given as "sāt" in 2.2 and as "saat" in 2.7.4; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.4.
 	Language = "old-high-german",
 	Type = "noun",
