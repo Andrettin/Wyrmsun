@@ -1,0 +1,4 @@
+ekwos = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	name = "Éḱwos"
+	language = proto_indo_european
+}

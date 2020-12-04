@@ -554,13 +554,6 @@ DefineLanguageWord("Elm", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"proto-germanic", "noun", "Alma"}
 })
 
-DefineLanguageWord("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
-})
-
 DefineLanguageWord("Eormengrund", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 	Language = "old-english",
 	Type = "noun",

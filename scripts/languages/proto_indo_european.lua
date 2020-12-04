@@ -121,12 +121,6 @@ DefineLanguageWord("Dont", { -- source gives "dont-"; source also gives the alte
 	Meanings = {}
 })
 
-DefineLanguageWord("Éḱwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Ĝherē", { -- source also gives the alternative form "ĝhrē"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 79-80.
 	Language = "proto-indo-european",
 	Type = "verb",

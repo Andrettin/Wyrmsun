@@ -232,13 +232,6 @@ DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Number = 7
 })
 
-DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
-})
-
 DefineLanguageWord("Ídmen", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "verb",

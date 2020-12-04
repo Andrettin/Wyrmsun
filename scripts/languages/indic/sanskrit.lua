@@ -54,13 +54,6 @@ DefineLanguageWord("Áhar", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
-DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "sanskrit",
-	Type = "noun",
-	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
-})
-
 DefineLanguageWord("Áva", { -- source also gives the alternative form "ávas-tâd"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "sanskrit",
 	Type = "adverb", -- correct?

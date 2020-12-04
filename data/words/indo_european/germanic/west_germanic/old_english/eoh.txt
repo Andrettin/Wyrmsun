@@ -1,0 +1,9 @@
+eoh = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	name = "Eoh"
+	language = old_english
+	type = noun
+	etymon = ekwos
+	meanings = {
+		"Horse"
+	}
+}

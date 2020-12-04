@@ -1,0 +1,9 @@
+aihwa = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	name = "Aihʷa"
+	language = gothic
+	type = noun
+	etymon = ekwos
+	meanings = {
+		"Horse"
+	}
+}

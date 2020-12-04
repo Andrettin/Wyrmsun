@@ -39,13 +39,6 @@ DefineLanguageWord("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Property"} -- source gives the German "Besitz"
 })
 
-DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
-})
-
 DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",
