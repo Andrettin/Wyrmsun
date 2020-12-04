@@ -6,6 +6,7 @@ isarn_norse = {
 	hint = "Select a [civilization:norse.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
 	conditions = {
 		civilization = norse
+		upgrade_class = ironworking
 	}
 	objectives = {
 		gather_resource = {

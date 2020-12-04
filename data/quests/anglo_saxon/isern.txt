@@ -6,6 +6,7 @@ isern = {
 	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
 	conditions = {
 		civilization = anglo_saxon
+		upgrade_class = ironworking
 	}
 	objectives = {
 		gather_resource = {

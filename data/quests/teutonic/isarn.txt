@@ -9,6 +9,7 @@ isarn_teutonic = {
 			civilization = teutonic
 			civilization = suebi
 		}
+		upgrade_class = ironworking
 	}
 	objectives = {
 		gather_resource = {
