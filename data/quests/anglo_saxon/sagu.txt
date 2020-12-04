@@ -1,0 +1,19 @@
+sagu = {
+	name = "[word:sagu.name.normalized]"
+	icon = icon_english_lumber_mill
+	player_color = red
+	description = "\"[word:sagu.name.normalized]\" means \"[word:sagu.meanings.1.lowered]\" in Old English. Building a [civilization:anglo_saxon.class_unit_type:lumber_mill.name.lowered] improves your woodworking capabilities."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:anglo_saxon.class_unit_type:lumber_mill.name] button to build the structure. The [civilization:anglo_saxon.class_unit_type:lumber_mill.name] grants a lumber processing bonus, increasing the amount of lumber received per lumber gathered. It also serves as a location to which lumber can be delivered."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		build_units = {
+			unit_class = lumber_mill
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

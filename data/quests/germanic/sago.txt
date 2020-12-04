@@ -1,0 +1,19 @@
+sago = {
+	name = "[word:sago.name.normalized]"
+	icon = icon_germanic_carpenters_shop
+	player_color = orange
+	description = "\"[word:sago.name.normalized]\" means \"[word:sago.meanings.1.lowered]\" in Proto-Germanic. Building a [civilization:germanic.class_unit_type:lumber_mill.name.lowered] improves your woodworking capabilities."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:germanic.class_unit_type:lumber_mill.name] button to build the structure. The [civilization:germanic.class_unit_type:lumber_mill.name] grants a lumber processing bonus, increasing the amount of lumber received per lumber gathered. It also serves as a location to which lumber can be delivered."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		build_units = {
+			unit_class = lumber_mill
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}
