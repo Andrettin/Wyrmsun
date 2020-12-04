@@ -1,0 +1,19 @@
+isarn_norse = {
+	name = "[word:isarn_old_norse.name.normalized]"
+	icon = anvil
+	player_color = blue
+	description = "\"[word:isarn_old_norse.name.normalized]\" means \"[word:isarn_old_norse.meanings.1.lowered]\" in Old Norse. Mining iron is a good way to satisfy your needs for metal."
+	hint = "Select a [civilization:norse.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		gather_resource = {
+			resource = iron
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

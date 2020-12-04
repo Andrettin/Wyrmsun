@@ -1,0 +1,22 @@
+isarn_teutonic = {
+	name = "[word:isarn_old_high_german.name.normalized]"
+	icon = anvil
+	player_color = yellow
+	description = "\"[word:isarn_old_high_german.name.normalized]\" means \"[word:isarn_old_high_german.meanings.1.lowered]\" in Old High German. Mining iron is a good way to satisfy your needs for metal."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
+	conditions = {
+		or = {
+			civilization = teutonic
+			civilization = suebi
+		}
+	}
+	objectives = {
+		gather_resource = {
+			resource = iron
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

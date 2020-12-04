@@ -1,0 +1,19 @@
+isern = {
+	name = "[word:isern_old_english.name.normalized]"
+	icon = anvil
+	player_color = red
+	description = "\"[word:isern_old_english.name.normalized]\" means \"[word:isern_old_english.meanings.1.lowered]\" in Old English. Mining iron is a good way to satisfy your needs for metal."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		gather_resource = {
+			resource = iron
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

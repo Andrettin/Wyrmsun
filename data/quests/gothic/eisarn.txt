@@ -1,0 +1,19 @@
+eisarn = {
+	name = "[word:eisarn.name.normalized]"
+	icon = anvil
+	player_color = red
+	description = "\"[word:eisarn.name.normalized]\" means \"[word:eisarn.meanings.1.lowered]\" in Gothic. Mining iron is a good way to satisfy your needs for metal."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		gather_resource = {
+			resource = iron
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
