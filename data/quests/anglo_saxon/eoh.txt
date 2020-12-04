@@ -1,0 +1,18 @@
+eoh = {
+	name = "[word:eoh.name.normalized]"
+	icon = icon_horse
+	player_color = red
+	description = "\"[word:eoh.name.normalized]\" means \"[word:eoh.meanings.1.lowered]\" in Old English. Breeding horses enables the creation of cavalry forces."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		build_units = {
+			unit_class = stables
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

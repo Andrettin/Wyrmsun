@@ -1,0 +1,18 @@
+aihwa = {
+	name = "[word:aihwa.name.normalized]"
+	icon = icon_horse
+	player_color = red
+	description = "\"[word:aihwa.name.normalized]\" means \"[word:aihwa.meanings.1.lowered]\" in Gothic. Breeding horses enables the creation of cavalry forces."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		build_units = {
+			unit_class = stables
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}
