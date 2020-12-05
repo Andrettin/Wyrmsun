@@ -5,10 +5,7 @@ isarn_teutonic = {
 	description = "\"[word:isarn_old_high_german.name.normalized]\" means \"[word:isarn_old_high_german.meanings.1.lowered]\" in Old High German. Mining iron is a good way to satisfy your needs for metal."
 	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on an iron deposit to build an iron mine and gather from it."
 	conditions = {
-		or = {
-			civilization = teutonic
-			civilization = suebi
-		}
+		scripted_condition = has_old_high_german_culture
 		upgrade_class = ironworking
 	}
 	objectives = {

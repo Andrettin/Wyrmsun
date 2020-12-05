@@ -1,0 +1,16 @@
+has_old_high_german_culture = {
+	or = {
+		and = {
+			civilization = teutonic
+			not = {
+				scripted_condition = has_high_medieval_or_later_age
+			}
+		}
+		civilization = suebi
+	}
+}
+
+has_middle_high_german_culture = {
+	civilization = teutonic
+	scripted_condition = has_high_medieval_or_later_age
+}
