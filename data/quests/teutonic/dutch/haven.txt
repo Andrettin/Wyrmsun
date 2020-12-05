@@ -1,0 +1,20 @@
+haven_middle_dutch = {
+	name = "[word:haven_middle_dutch.name.normalized]"
+	icon = icon_teuton_dock
+	player_color = orange
+	description = "\"[word:haven_middle_dutch.name.normalized]\" means \"[word:haven_middle_dutch.meanings.1.lowered]\" in Middle Dutch. Building a dock enables the construction of ships to sail through seas and rivers."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:dock.name] button to build the structure."
+	conditions = {
+		scripted_condition = has_middle_dutch_culture
+		coastal = true
+	}
+	objectives = {
+		build_units = {
+			unit_class = dock
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

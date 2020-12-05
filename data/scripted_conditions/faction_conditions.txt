@@ -1,0 +1,33 @@
+is_frisian_faction = {
+	or = {
+		faction = frisian_tribe
+		faction = friesland
+	}
+}
+
+is_saxon_faction = {
+	or = {
+		faction = chauci_tribe
+		faction = cherusci_tribe
+		faction = saxon_tribe
+		faction = varini_tribe
+		faction = brandenburg
+		faction = bremen
+		faction = brunswick
+		faction = magdeburg
+		faction = mecklenburg
+		faction = prussia
+		faction = saxony
+		faction = westphalia
+	}
+}
+
+is_dutch_faction = {
+	or = {
+		faction = brabant
+		faction = drenthe
+		faction = holland
+		faction = netherlands
+		faction = overijssel
+	}
+}

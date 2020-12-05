@@ -1,0 +1,21 @@
+wulf_old_saxon = {
+	name = "[word:wulf_old_saxon.name.normalized]"
+	icon = icon_wolf
+	player_color = gray
+	description = "\"[word:wulf_old_saxon.name.normalized]\" means \"[word:wulf_old_saxon.meanings.1.lowered]\" in Old Saxon. Wolves are pack hunters who can be dangerous to humans and livestock."
+	conditions = {
+		scripted_condition = has_old_saxon_culture
+		neutral_player = {
+			unit_type = unit_wolf
+		}
+	}
+	objectives = {
+		destroy_units = {
+			unit_type = unit_wolf
+			quantity = 1
+		}
+	}
+	completion_effects = {
+		copper += 250
+	}
+}

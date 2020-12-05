@@ -3,6 +3,9 @@ has_old_high_german_culture = {
 		and = {
 			civilization = teutonic
 			not = {
+				scripted_condition = is_frisian_faction
+				scripted_condition = is_saxon_faction
+				scripted_condition = is_dutch_faction
 				scripted_condition = has_high_medieval_or_later_age
 			}
 		}
@@ -12,5 +15,34 @@ has_old_high_german_culture = {
 
 has_middle_high_german_culture = {
 	civilization = teutonic
+	not = {
+		scripted_condition = is_frisian_faction
+		scripted_condition = is_saxon_faction
+		scripted_condition = is_dutch_faction
+	}
 	scripted_condition = has_high_medieval_or_later_age
+}
+
+has_old_saxon_culture = {
+	civilization = teutonic
+	scripted_condition = is_saxon_faction
+	not = {
+		scripted_condition = has_late_medieval_or_later_age
+	}
+}
+
+has_middle_low_german_culture = {
+	civilization = teutonic
+	scripted_condition = is_saxon_faction
+	scripted_condition = has_late_medieval_or_later_age
+}
+
+has_old_frisian_culture = {
+	civilization = teutonic
+	scripted_condition = is_frisian_faction
+}
+
+has_middle_dutch_culture = {
+	civilization = teutonic
+	scripted_condition = is_dutch_faction
 }

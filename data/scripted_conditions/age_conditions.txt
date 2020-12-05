@@ -5,3 +5,11 @@ has_high_medieval_or_later_age = {
 		age = industrial_age
 	}
 }
+
+has_late_medieval_or_later_age = {
+	or = {
+		age = feudal_age
+		age = gunpowder_age
+		age = industrial_age
+	}
+}

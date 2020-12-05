@@ -1,0 +1,18 @@
+ransa = {
+	name = "[word:ransa.name.normalized]"
+	icon = icon_teuton_farm
+	player_color = orange
+	description = "\"[word:ransa.name.normalized]\" means \"[word:ransa.meanings.1.lowered]\" in Old Frisian. Constructing houses will provide a place for your people to dwell as your population grows."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:farm.name] button to build the structure."
+	conditions = {
+		scripted_condition = has_old_frisian_culture
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

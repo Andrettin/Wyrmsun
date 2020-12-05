@@ -1,0 +1,20 @@
+havene = {
+	name = "[word:havene.name.normalized]"
+	icon = icon_teuton_dock
+	player_color = red
+	description = "\"[word:havene.name.normalized]\" means \"[word:havene.meanings.1.lowered]\" in Middle Low German. Building a dock enables the construction of ships to sail through seas and rivers."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:dock.name] button to build the structure."
+	conditions = {
+		scripted_condition = has_middle_low_german_culture
+		coastal = true
+	}
+	objectives = {
+		build_units = {
+			unit_class = dock
+		}
+	}
+	completion_effects = {
+		copper += 250
+		lumber += 250
+	}
+}

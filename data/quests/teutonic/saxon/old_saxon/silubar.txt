@@ -1,0 +1,19 @@
+silubar = {
+	name = "[word:silubar.name.normalized]"
+	icon = icon_silver_mine
+	player_color = red
+	description = "\"[word:silubar.name.normalized]\" means \"[word:silubar.meanings.1.lowered]\" in Old Saxon. Silver is a rather valuable metal to mine.
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it."
+	conditions = {
+		scripted_condition = has_old_saxon_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = silver
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
