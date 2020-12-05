@@ -1341,13 +1341,6 @@ DefineLanguageWord("Râđ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"House"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Rauðr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "adjective",

@@ -459,12 +459,6 @@ DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"}
 })
 
-DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"House"}
-})
-
 DefineLanguageWord("Rêd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
 	Language = "old-frisian",
 	Type = "noun",

@@ -42,13 +42,6 @@ DefineLanguageWord("Ælf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
-DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"House"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-english",
 	Type = "noun",

@@ -1,0 +1,17 @@
+aern = {
+	name = "[word:aern.name.normalized]"
+	icon = icon_teuton_farm
+	player_color = red
+	description = "\"[word:aern.name.normalized]\" means \"[word:aern.meanings.1.lowered]\" in Old English. Constructing houses will provide a place for your people to dwell as your population grows."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

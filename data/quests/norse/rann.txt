@@ -1,0 +1,17 @@
+rann = {
+	name = "[word:rann.name.normalized]"
+	icon = icon_norse_farm
+	player_color = blue
+	description = "\"[word:rann.name.normalized]\" means \"[word:rann.meanings.1.lowered]\" in Old Norse. Constructing houses will provide a place for your people to dwell as your population grows."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

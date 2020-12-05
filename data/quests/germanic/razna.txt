@@ -1,0 +1,17 @@
+razna = {
+	name = "[word:razna.name.normalized]"
+	icon = icon_germanic_farm
+	player_color = orange
+	description = "\"[word:razna.name.normalized]\" means \"[word:razna.meanings.1.lowered]\" in Proto-Germanic. Constructing houses will provide a place for your people to dwell as your population grows."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

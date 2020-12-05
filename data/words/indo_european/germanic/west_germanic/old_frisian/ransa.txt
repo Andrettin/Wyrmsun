@@ -1,0 +1,8 @@
+ransa = { #Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	name = "Ransa"
+	language = old_frisian
+	type = noun
+	meanings = {
+		"House"
+	}
+}

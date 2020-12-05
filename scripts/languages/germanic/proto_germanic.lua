@@ -1097,13 +1097,6 @@ DefineLanguageWord("Penna", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"House"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
