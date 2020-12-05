@@ -1,0 +1,19 @@
+wite = {
+	name = "[word:wite.name.normalized]"
+	icon = icon_lumber
+	player_color = gray
+	description = "\"[word:wite.name.normalized]\" means \"[word:wite.meanings.1.lowered]\" or \"[word:wite.meanings.2.lowered]\" in Middle High German. Gathering lumber is vital for the construction of new structures."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a tree or wood pile to gather lumber."
+	conditions = {
+		scripted_condition = has_middle_high_german_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

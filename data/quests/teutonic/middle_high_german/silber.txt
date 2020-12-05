@@ -1,0 +1,19 @@
+silber_middle_high_german = {
+	name = "[word:silber_middle_high_german.name.normalized]"
+	icon = icon_silver_mine
+	player_color = yellow
+	description = "\"[word:silber_middle_high_german.name.normalized]\" means \"[word:silber_middle_high_german.meanings.1.lowered]\" in Middle High German. Silver is a rather valuable metal to mine.
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it."
+	conditions = {
+		scripted_condition = has_middle_high_german_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = silver
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

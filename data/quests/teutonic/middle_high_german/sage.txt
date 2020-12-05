@@ -1,0 +1,18 @@
+sage_middle_high_german = {
+	name = "[word:sage_middle_high_german.name.normalized]"
+	icon = icon_english_lumber_mill
+	player_color = yellow
+	description = "\"[word:sage_middle_high_german.name.normalized]\" means \"[word:sage_middle_high_german.meanings.1.lowered]\" in Middle High German. Building a [civilization:teutonic.class_unit_type:lumber_mill.name.lowered] improves your woodworking capabilities."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:teutonic.class_unit_type:lumber_mill.name] button to build the structure. The [civilization:teutonic.class_unit_type:lumber_mill.name] grants a lumber processing bonus, increasing the amount of lumber received per lumber gathered. It also serves as a location to which lumber can be delivered."
+	conditions = {
+		scripted_condition = has_middle_high_german_culture
+	}
+	objectives = {
+		build_units = {
+			unit_class = lumber_mill
+		}
+	}
+	completion_effects = {
+		lumber += 500
+	}
+}
