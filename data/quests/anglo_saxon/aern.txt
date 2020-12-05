@@ -3,6 +3,7 @@ aern = {
 	icon = icon_teuton_farm
 	player_color = red
 	description = "\"[word:aern.name.normalized]\" means \"[word:aern.meanings.1.lowered]\" in Old English. Constructing houses will provide a place for your people to dwell as your population grows."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:anglo_saxon.class_unit_type:farm.name] button to build the structure."
 	conditions = {
 		civilization = anglo_saxon
 	}

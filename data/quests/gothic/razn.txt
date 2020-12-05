@@ -3,6 +3,7 @@ razn = {
 	icon = icon_teuton_farm
 	player_color = red
 	description = "\"[word:razn.name.normalized]\" means \"[word:razn.meanings.1.lowered]\" in Gothic. Constructing houses will provide a place for your people to dwell as your population grows."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:gothic.class_unit_type:farm.name] button to build the structure."
 	conditions = {
 		civilization = gothic
 	}

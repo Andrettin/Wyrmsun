@@ -3,6 +3,7 @@ rann = {
 	icon = icon_norse_farm
 	player_color = blue
 	description = "\"[word:rann.name.normalized]\" means \"[word:rann.meanings.1.lowered]\" in Old Norse. Constructing houses will provide a place for your people to dwell as your population grows."
+	hint = "Select a [civilization:norse.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:norse.class_unit_type:farm.name] button to build the structure."
 	conditions = {
 		civilization = norse
 	}
