@@ -1,0 +1,9 @@
+rajan = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	name = "Râjan" #source also gives the form "-râj-"
+	language = sanskrit
+	type = noun
+	etymon = reg
+	meanings = {
+		"King" #source gives the German "König"
+	}
+}

@@ -57,13 +57,6 @@ DefineLanguageWord("Hazaṅh", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Violence", "Power", "Predation"} -- source gives the German "Gewalt, Macht, Raub" as the meaning
 })
 
-DefineLanguageWord("Marezu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Border"}, -- source gives the German "Grenze"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
-})
-
 DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "avestan",
 	Type = "noun",

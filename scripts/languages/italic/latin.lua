@@ -383,13 +383,6 @@ DefineLanguageWord("Manus", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Hand"} -- source gives the German "Hand" as the meaning
 })
 
-DefineLanguageWord("Margo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Edge"}, -- source gives the German "Rand"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
-})
-
 DefineLanguageWord("Merula", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
 	Language = "latin",
 	Type = "noun",
@@ -506,13 +499,6 @@ DefineLanguageWord("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "latin",
 	Type = "adjective",
 	Meanings = {"Straight"} -- presumably, but it is not entirely clear from the source
-})
-
-DefineLanguageWord("Rêx", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "none", "Reĝ"}
 })
 
 DefineLanguageWord("Saeta", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.

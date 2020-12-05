@@ -140,14 +140,6 @@ DefineLanguageWord("Berg", { -- source also gives the alternative forms "Berc", 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Biotan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "verb",

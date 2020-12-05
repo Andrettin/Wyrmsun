@@ -4,6 +4,6 @@ beran_proto_germanic_noun = { #Source: August Fick and Alf Torp, "Wortschatz der
 	type = noun
 	gender = masculine
 	meanings = {
-		"Bear" #source gives the German "Bär" as the meaning
+		"Bear" #source gives the German "Bär"
 	}
 }

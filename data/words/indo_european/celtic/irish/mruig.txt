@@ -1,0 +1,11 @@
+mruig = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Mruig" #source also gives the alternative form "Bruig"
+	language = irish
+	type = noun
+	etymon = mareg #source indicates this as a possibility
+	meanings = {
+		#source gives the German "Mark, Landschaft"
+		"March"
+		"Landscape"
+	}
+}

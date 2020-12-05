@@ -1,0 +1,10 @@
+bero = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	name = "Bero" #source also gives the alternative form "Pero"
+	language = old_high_german
+	type = noun
+	gender = masculine
+	etymon = beran_proto_germanic_noun
+	meanings = {
+		"Bear" #source gives the German "Bär"
+	}
+}

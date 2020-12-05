@@ -1,0 +1,11 @@
+rix = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	name = "Rîx"
+	language = old_gaulish
+	type = noun
+	etymon = reg
+	meanings = {
+		"King" #source gives the German "König"
+	}
+	#singular genitive: "Rîgis"
+	#present in "Dumno-rîx"
+}

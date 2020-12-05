@@ -1,0 +1,9 @@
+marezu = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Marezu"
+	language = avestan
+	type = noun
+	etymon = mareg #source indicates this as a possibility
+	meanings = {
+		"Border" #source gives the German "Grenze"
+	}
+}

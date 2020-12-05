@@ -1,0 +1,10 @@
+ri_irish = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	name = "Rí"
+	language = irish
+	type = noun
+	etymon = reg
+	meanings = {
+		"King" #source gives the German "König"
+	}
+	#singular genitive: "Ríg"
+}

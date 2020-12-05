@@ -226,14 +226,6 @@ DefineLanguageWord("Bjarg", { -- source also gives the alternate form "Berg"; So
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Blār", { -- Fick gives "blâr" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147; Source: http://www.cnrtl.fr/definition/bleu
 	Language = "old-norse",
 	Type = "adjective",

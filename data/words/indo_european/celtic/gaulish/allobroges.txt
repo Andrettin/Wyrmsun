@@ -1,0 +1,6 @@
+allobroges = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	name = "Allobroges"
+	language = gaulish
+	type = noun
+	etymon = mareg #source indicates this as a possibility
+}

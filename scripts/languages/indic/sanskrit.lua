@@ -425,13 +425,6 @@ DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Foul"}
 })
 
-DefineLanguageWord("Râjan", { -- source also gives the form "-râj-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "sanskrit",
-	Type = "noun",
-	Meanings = {"King"}, -- source gives the German "König" as the meaning
-	DerivesFrom = {"proto-indo-european", "none", "Reĝ"}
-})
-
 DefineLanguageWord("Raṇa", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 6.
 	Language = "sanskrit",
 	Type = "noun",

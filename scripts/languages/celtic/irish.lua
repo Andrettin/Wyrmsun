@@ -250,27 +250,10 @@ DefineLanguageWord("Mind", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Meanings = {"Diadem"} -- source gives the German "Diadem" as the meaning
 })
 
-DefineLanguageWord("Mruig", { -- source also gives the alternative form "Bruig"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Language = "irish",
-	Type = "noun",
-	Meanings = {"March", "Landscape"}, -- source gives the German "Mark, Landschaft"
-	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
-})
-
 DefineLanguageWord("Notail", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "irish",
 	Type = "verb",
 	Meanings = {"You Feed"} -- source gives the Latin (?) "alit te" as the meaning
-})
-
-DefineLanguageWord("Rí", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "irish",
-	Type = "noun",
-	Meanings = {"King"}, -- source gives the German "König" as the meaning
-	DerivesFrom = {"proto-indo-european", "none", "Reĝ"},
-	NumberCaseInflections = {
-		"singular", "genitive", "Ríg"
-	}
 })
 
 DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
