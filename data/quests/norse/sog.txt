@@ -13,7 +13,6 @@ sog = {
 		}
 	}
 	completion_effects = {
-		copper += 250
-		lumber += 250
+		lumber += 500
 	}
 }
