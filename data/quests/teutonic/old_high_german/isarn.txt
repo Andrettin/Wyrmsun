@@ -1,4 +1,4 @@
-isarn_teutonic = {
+isarn_old_high_german = {
 	name = "[word:isarn_old_high_german.name.normalized]"
 	icon = anvil
 	player_color = yellow

@@ -1,4 +1,4 @@
-saga = {
+saga_old_high_german = {
 	name = "[word:saga_old_high_german.name.normalized]"
 	icon = icon_english_lumber_mill
 	player_color = yellow
