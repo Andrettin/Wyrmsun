@@ -1,0 +1,12 @@
+scilt = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	name = "Scilt"
+	language = old_high_german
+	type = noun
+	gender = masculine
+	etymon = skeldu
+	meanings = {
+		"Shield" #source gives the German "Schild"
+	}
+	
+	#plural nominative: "scilti", alternatively also "schiltâ"
+}

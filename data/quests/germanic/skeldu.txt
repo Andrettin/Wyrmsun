@@ -1,0 +1,18 @@
+skeldu = {
+	name = "[word:skeldu.name.normalized]"
+	icon = icon_germanic_bronze_shield
+	player_color = orange
+	description = "\"[word:skeldu.name.normalized]\" means \"[word:skeldu.meanings.1.lowered]\" in Proto-Germanic. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:germanic.class_unit_type:smithy.name] and click on the [civilization:germanic.class_upgrade:bronze_shield.name] button to research the upgrade. [civilization:germanic.class_upgrade:bronze_shield.name] increases the armor of your melee units."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = bronze_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

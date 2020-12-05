@@ -1,0 +1,18 @@
+scild = {
+	name = "[word:scild.name.normalized]"
+	icon = saxon_iron_shield
+	player_color = red
+	description = "\"[word:scild.name.normalized]\" means \"[word:scild.meanings.1.lowered]\" or \"[word:scild.meanings.2.lowered]\" in Old Saxon. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:teutonic.class_unit_type:smithy.name] and click on the [civilization:teutonic.class_upgrade:iron_shield.name] button to research the upgrade. [civilization:teutonic.class_upgrade:iron_shield.name] increases the armor of your melee units."
+	conditions = {
+		scripted_condition = has_old_saxon_culture
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = iron_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

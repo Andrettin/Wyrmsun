@@ -1443,14 +1443,6 @@ DefineLanguageWord("Skjaldþili", { -- Source: August Fick and Alf Torp, "Wortsc
 	-- the first part of this compound derives from Proto-Germanic "Skeldu"
 })
 
-DefineLanguageWord("Skjǫldr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Skuggi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-norse",
 	Type = "noun",

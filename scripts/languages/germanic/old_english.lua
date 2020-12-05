@@ -1626,14 +1626,6 @@ DefineLanguageWord("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Scield", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Shield", "Protection"}, -- source gives the German "Schild, Schutz" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Scîr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
 	Language = "old-english",
 	Type = "noun",

@@ -1606,14 +1606,6 @@ DefineLanguageWord("Shelter", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Shield", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Shield"},
-	DerivesFrom = {"old-english", "noun", "Scield"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Shining", {
 	Language = "english",
 	Type = "adjective",

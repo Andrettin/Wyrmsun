@@ -1,0 +1,18 @@
+skjoldr = {
+	name = "[word:skjoldr.name.normalized]"
+	icon = saxon_iron_shield
+	player_color = blue
+	description = "\"[word:skjoldr.name.normalized]\" means \"[word:skjoldr.meanings.1.lowered]\" in Old Norse. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:norse.class_unit_type:smithy.name] and click on the [civilization:norse.class_upgrade:iron_shield.name] button to research the upgrade. [civilization:norse.class_upgrade:iron_shield.name] increases the armor of your melee units."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = iron_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

@@ -1199,13 +1199,6 @@ DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"
 	Meanings = {"Plowshare"} -- source gives "Schar, Pflugeisen" as the meaning
 })
 
-DefineLanguageWord("Skeldu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Split Piece of Wood", "Board", "Shield"}, -- source gives the German "(gespaltenes Holzstück) Brett, Schild" as the meaning
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Skîrô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
 	Language = "proto-germanic",
 	Type = "noun",

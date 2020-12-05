@@ -1,0 +1,18 @@
+skildus = {
+	name = "[word:skildus.name.normalized]"
+	icon = saxon_iron_shield
+	player_color = red
+	description = "\"[word:skildus.name.normalized]\" means \"[word:skildus.meanings.1.lowered]\" in Gothic. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:gothic.class_unit_type:smithy.name] and click on the [civilization:gothic.class_upgrade:iron_shield.name] button to research the upgrade. [civilization:gothic.class_upgrade:iron_shield.name] increases the armor of your melee units."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = iron_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

@@ -1,0 +1,12 @@
+scild = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	name = "Scild"
+	language = old_saxon
+	type = noun
+	gender = masculine
+	etymon = skeldu
+	meanings = {
+		#source gives the German "Schild, Schutz"
+		"Shield"
+		"Protection"
+	}
+}

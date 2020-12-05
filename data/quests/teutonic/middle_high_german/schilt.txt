@@ -1,0 +1,18 @@
+schilt = {
+	name = "[word:schilt.name.normalized]"
+	icon = saxon_iron_shield
+	player_color = yellow
+	description = "\"[word:schilt.name.normalized]\" means \"[word:schilt.meanings.1.lowered]\" in Middle High German. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:teutonic.class_unit_type:smithy.name] and click on the [civilization:teutonic.class_upgrade:iron_shield.name] button to research the upgrade. [civilization:teutonic.class_upgrade:iron_shield.name] increases the armor of your melee units."
+	conditions = {
+		scripted_condition = has_middle_high_german_culture
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = iron_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

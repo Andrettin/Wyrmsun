@@ -1596,21 +1596,6 @@ DefineLanguageWord("Schaf", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Schild", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Shield"},
-	DerivesFrom = {"middle-high-german", "noun", "Schilt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Schildes", -- alternatively also "Schilds"
-		"plural", "nominative", "Schilde",
-		"plural", "accusative", "Schilde",
-		"plural", "dative", "Schilden",
-		"plural", "genitive", "Schilde"
-	}
-})
-
 DefineLanguageWord("Schlacht", {
 	Language = "high-german",
 	Type = "noun",

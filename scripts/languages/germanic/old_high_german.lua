@@ -1375,17 +1375,6 @@ DefineLanguageWord("Sāt", { -- given as "sāt" in 2.2 and as "saat" in 2.7.4; S
 	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
 })
 
-DefineLanguageWord("Scilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Scilti" -- alternatively also "schiltâ"
-	}
-})
-
 DefineLanguageWord("Scîra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
 	Language = "old-high-german",
 	Type = "noun",

@@ -31,11 +31,3 @@ DefineLanguageWord("Sáighdiur", { -- Source: Carl D. Buck, "Words for 'Battle,'
 	Meanings = {"Soldier"},
 --	DerivesFrom = {"middle-irish", "noun", "Saigdeoir"} -- blend of Middle Irish "saigdeoir" and Middle English "soudoier"/"sougeour"
 })
-
-DefineLanguageWord("Scell", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "irish",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"old-norse", "noun", "Skjǫldr"}
-})
-

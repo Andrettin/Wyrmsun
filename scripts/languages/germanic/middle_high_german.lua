@@ -777,17 +777,6 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Schilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Scilt"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Schildes"
-	}
-})
-
 DefineLanguageWord("Sê", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "middle-high-german",
 	Type = "noun",

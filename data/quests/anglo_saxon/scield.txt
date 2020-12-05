@@ -1,0 +1,18 @@
+scield = {
+	name = "[word:scield.name.normalized]"
+	icon = saxon_iron_shield
+	player_color = red
+	description = "\"[word:scield.name.normalized]\" means \"[word:scield.meanings.1.lowered]\" or \"[word:scield.meanings.2.lowered]\" in Old English. Improving your shields will allow your soldiers to better withstand enemy attack."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:smithy.name] and click on the [civilization:anglo_saxon.class_upgrade:iron_shield.name] button to research the upgrade. [civilization:anglo_saxon.class_upgrade:iron_shield.name] increases the armor of your melee units."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = iron_shield
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

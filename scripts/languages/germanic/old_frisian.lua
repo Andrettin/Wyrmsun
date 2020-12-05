@@ -498,14 +498,6 @@ DefineLanguageWord("Sî", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Skeld", { -- source also gives the alternative form "schild"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"Shield", "Protection"}, -- source gives the German "Schild, Schutz" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Smeth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "old-frisian",
 	Type = "noun",
