@@ -1,0 +1,19 @@
+silubr = {
+	name = "[word:silubr.name.normalized]"
+	icon = icon_silver_mine
+	player_color = red
+	description = "\"[word:silubr.name.normalized]\" means \"[word:silubr.meanings.1.lowered]\" in Gothic. Silver is a rather valuable metal to mine.
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		gather_resource = {
+			resource = silver
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
