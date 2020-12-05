@@ -1,0 +1,9 @@
+stone_adjective = {
+	name = "Stone"
+	language = english
+	type = adjective
+	etymon = stan_old_english #presumably, since it is the one for the corresponding noun
+	meanings = {
+		"Stone"
+	}
+}

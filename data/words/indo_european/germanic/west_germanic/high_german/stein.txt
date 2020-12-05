@@ -1,0 +1,16 @@
+stein_high_german = {
+	name = "Stein"
+	language = high_german
+	type = noun
+	gender = masculine
+	etymon = stein_middle_high_german #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	meanings = {
+		"Stone"
+	}
+	
+	#singular genitive: "Steines", alternatively also "Steins"
+	#plural nominative: "Steine"
+	#plural accusative: "Steine"
+	#plural dative: "Steinen"
+	#plural genitive: "Steine"
+}

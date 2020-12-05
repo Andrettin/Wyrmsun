@@ -1831,21 +1831,6 @@ DefineLanguageWord("Staffel", {
 	}
 })
 
-DefineLanguageWord("Stein", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Stone"},
-	DerivesFrom = {"middle-high-german", "noun", "Stein"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Steines", -- alternatively also "Steins"
-		"plural", "nominative", "Steine",
-		"plural", "accusative", "Steine",
-		"plural", "dative", "Steinen",
-		"plural", "genitive", "Steine"
-	}
-})
-
 DefineLanguageWord("Steinern", {
 	Language = "high-german",
 	Type = "adjective",

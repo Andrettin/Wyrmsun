@@ -1,0 +1,10 @@
+sten_old_frisian = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	name = "Stēn" #as given by Lehmann; Fick gives "stên" instead
+	language = old_frisian
+	type = noun
+	gender = masculine #as given by Fick
+	etymon = staynas #as given by both Lehmann and Fick
+	meanings = {
+		"Stone" #as given by Lehmann
+	}
+}

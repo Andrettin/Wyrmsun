@@ -1,0 +1,10 @@
+steinn_old_high_german = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	name = "Steinn" #as given by Lehmann; Fick gives "stein" instead
+	language = old_high_german
+	type = noun
+	gender = masculine #as given by Fick
+	etymon = staynas #as given by both Lehmann and Fick
+	meanings = {
+		"Stone" #as given by Lehmann
+	}
+}

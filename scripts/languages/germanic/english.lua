@@ -1762,28 +1762,6 @@ DefineLanguageWord("Stock", {
 	DerivesFrom = {"old-english", "noun", "Stock"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
 })
 
-DefineLanguageWord("Stone", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Stone"},
-	DerivesFrom = {"old-english", "noun", "Stān"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Stone", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Stone"},
-	DerivesFrom = {"old-english", "noun", "Stān"} -- presumably, since the corresponding noun does
-})
-
-DefineLanguageWord("Stony", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Stony"},
-	DerivesFrom = {"old-english", "noun", "Stān"} -- presumably, since the noun "stone" does
-})
-
 DefineLanguageWord("Street", {
 	Language = "english",
 	Type = "noun",

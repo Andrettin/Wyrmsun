@@ -816,14 +816,6 @@ DefineLanguageWord("Stapfel", { -- source also gives the alternative form "staff
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "middle-high-german",
-	Type = "noun",
-	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Steinn"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Stoc", { -- source gives "stoc (-ck-)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
 	Language = "middle-high-german",
 	Type = "noun",

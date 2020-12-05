@@ -1488,14 +1488,6 @@ DefineLanguageWord("Spic", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"} -- apparently
 })
 
-DefineLanguageWord("Steinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staynas"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
 	Language = "old-norse",
 	Type = "verb",

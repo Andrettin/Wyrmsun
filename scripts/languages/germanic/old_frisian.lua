@@ -519,14 +519,6 @@ DefineLanguageWord("Stapul", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Stapula"}
 })
 
-DefineLanguageWord("Stēn", { -- as given by Lehmann; Fick gives "stên" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"Stone"}, -- as given by Lehmann
-	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
-	Gender = "masculine" -- as given by Fick
-})
-
 DefineLanguageWord("Stok", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
 	Language = "old-frisian",
 	Type = "noun",

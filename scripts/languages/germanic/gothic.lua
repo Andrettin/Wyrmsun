@@ -1155,14 +1155,6 @@ DefineLanguageWord("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Spit"}
 })
 
-DefineLanguageWord("Stáins", { -- as given by Lehmann; Fick gives "stains" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Stone"}, -- as given by Lehmann
-	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
-	Gender = "masculine" -- as given by Fick
-})
-
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "verb",

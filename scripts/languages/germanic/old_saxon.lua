@@ -731,14 +731,6 @@ DefineLanguageWord("Sorgôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
-DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Staynas"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Stok", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 247.
 	Language = "old-saxon", -- source gives Old Low German
 	Type = "noun",

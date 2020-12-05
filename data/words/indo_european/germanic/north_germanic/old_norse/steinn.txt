@@ -1,0 +1,10 @@
+steinn_old_norse = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	name = "Steinn"
+	language = old_norse
+	type = noun
+	gender = masculine
+	etymon = staynas
+	meanings = {
+		"Stone" #source (apparently) gives the German "Stein" as the meaning
+	}
+}

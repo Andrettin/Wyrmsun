@@ -1261,13 +1261,6 @@ DefineLanguageWord("Speuta", { -- Source: Guus Kroonen, "Etymological Dictionary
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Staynas", { -- as given by Lehmann; Fick gives "staina" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Stone"}, -- as given by both sources; Fick gives the German "Stein" as the meaning
-	Gender = "masculine" -- as given by Fick
-})
-
 DefineLanguageWord("Stapula", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
 	Language = "proto-germanic",
 	Type = "noun",

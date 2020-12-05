@@ -1,0 +1,10 @@
+stein_middle_high_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	name = "Stein"
+	language = middle_high_german
+	type = noun
+	gender = masculine
+	etymon = steinn_old_high_german
+	meanings = {
+		"Stone" #source (apparently) gives the German "Stein" as the meaning
+	}
+}

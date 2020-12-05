@@ -1769,14 +1769,6 @@ DefineLanguageWord("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf
 	Meanings = {"Spindle-Side"}
 })
 
-DefineLanguageWord("Stān", { -- as given by Lehmann; Fick gives "stân" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Stone"}, -- as given by Lehmann
-	DerivesFrom = {"proto-germanic", "noun", "Staynas"}, -- as given by both Lehmann and Fick
-	Gender = "masculine" -- as given by Fick
-})
-
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
