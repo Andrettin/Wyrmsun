@@ -1175,12 +1175,6 @@ DefineLanguageWord("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Seed"}
 })
 
-DefineLanguageWord("Silubra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Silver"} -- source gives the German "Silber" as the meaning
-})
-
 DefineLanguageWord("Sinaskalka", { -- Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal
 	Language = "proto-germanic",
 	Type = "noun",

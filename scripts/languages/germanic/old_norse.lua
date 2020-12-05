@@ -1437,14 +1437,6 @@ DefineLanguageWord("Sigr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
-DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Simull", { -- source also gives the alternative forms "Simi" and "Siruir"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-norse",
 	Type = "noun",

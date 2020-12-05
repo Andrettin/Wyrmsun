@@ -1669,14 +1669,6 @@ DefineLanguageWord("Sēoðan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	-- source also gives the forms "sēað", "sudon" and "sodden" (presumably conjugations of the verb)
 })
 
-DefineLanguageWord("Seolfor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Language = "old-english",
 	Type = "verb",

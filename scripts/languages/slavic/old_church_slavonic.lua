@@ -187,13 +187,6 @@ DefineLanguageWord("Sěmija", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Menial Staff"} -- source gives the German "Gesinde" as the meaning
 })
 
-DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-church-slavonic",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Sluga", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
 	Language = "old-church-slavonic",
 	Type = "noun",

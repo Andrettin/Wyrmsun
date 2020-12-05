@@ -1122,14 +1122,6 @@ DefineLanguageWord("Sihu", { -- source is unsure whether this is a writing mista
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Silubr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Siuns", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "noun",

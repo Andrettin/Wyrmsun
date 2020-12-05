@@ -1,0 +1,9 @@
+silfr_old_icelandic_adjective = { #Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 528.
+	name = "Silfr"
+	language = old_icelandic
+	type = adjective
+	etymon = silfr_old_norse #presumably
+	meanings = {
+		"Silver"
+	}
+}

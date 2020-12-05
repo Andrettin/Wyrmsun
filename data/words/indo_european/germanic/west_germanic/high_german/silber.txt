@@ -1,0 +1,10 @@
+silber_high_german = {
+	name = "Silber"
+	language = high_german
+	type = noun
+	gender = neuter
+	etymon = silber_middle_high_german #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	meanings = {
+		"Silver"
+	}
+}

@@ -1,0 +1,10 @@
+silubr = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	name = "Silubr"
+	language = gothic
+	type = noun
+	gender = neuter
+	etymon = silubra
+	meanings = {
+		"Silver" #source gives the German "Silber"
+	}
+}

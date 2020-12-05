@@ -490,14 +490,6 @@ DefineLanguageWord("Sê", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-frisian",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Sî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "old-frisian",
 	Type = "noun",

@@ -1,0 +1,10 @@
+silabar = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	name = "Silabar" #source also gives the alternative forms "Silapar" and "Silbar"
+	language = old_high_german
+	type = noun
+	gender = neuter
+	etymon = silubra
+	meanings = {
+		"Silver" #source gives the German "Silber"
+	}
+}

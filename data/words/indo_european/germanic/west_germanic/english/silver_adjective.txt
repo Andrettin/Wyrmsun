@@ -1,0 +1,9 @@
+silver_adjective = {
+	name = "Silver"
+	language = english
+	type = adjective
+	etymon = seolfor #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	meanings = {
+		"Silver"
+	}
+}

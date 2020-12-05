@@ -1656,23 +1656,6 @@ DefineLanguageWord("Side", {
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Silver", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Silver"},
-	DerivesFrom = {"old-english", "noun", "Seolfor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Gender = "neuter",
-	Uncountable = true
-})
-
-DefineLanguageWord("Silver", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Silver"},
-	DerivesFrom = {"old-english", "noun", "Seolfor"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	
-})
-
 DefineLanguageWord("Slight", {
 	Language = "english",
 	Type = "adjective",

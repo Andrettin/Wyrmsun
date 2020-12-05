@@ -1,0 +1,10 @@
+silfrin = { #Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 528.
+	name = "Silfrin"
+	language = old_icelandic
+	type = noun
+	gender = neuter
+	etymon = silfr_old_norse #presumably
+	meanings = {
+		"Silver"
+	}
+}

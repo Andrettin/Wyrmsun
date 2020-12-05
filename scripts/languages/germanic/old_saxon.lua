@@ -717,14 +717,6 @@ DefineLanguageWord("Sigi", { -- source gives "sigi- (drohtin)"; Source: August F
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-saxon",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Smiđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "old-saxon", -- source gives Old Low German
 	Type = "noun",

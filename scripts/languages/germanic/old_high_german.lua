@@ -1461,14 +1461,6 @@ DefineLanguageWord("Sigu", { -- source also gives the alternative forms "sigo", 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Silapar" and "Silbar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Sippa", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
 	Language = "old-high-german",
 	Type = "noun",

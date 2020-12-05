@@ -293,29 +293,6 @@ DefineLanguageWord("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Wound"}
 })
 
-DefineLanguageWord("Silfr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 528.
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Silver"},
-	DerivesFrom = {"old-norse", "noun", "Silfr"}, -- presumably
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Silfrin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 528.
-	Language = "old-icelandic",
-	Type = "noun",
-	Meanings = {"Silver"},
-	DerivesFrom = {"old-norse", "noun", "Silfr"}, -- presumably
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Silfr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 528.
-	Language = "old-icelandic",
-	Type = "adjective",
-	Meanings = {"Silver"},
-	DerivesFrom = {"old-norse", "noun", "Silfr"} -- presumably
-})
-
 DefineLanguageWord("Sinir", { -- name of a horse; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 529; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 	Language = "old-icelandic",
 	Type = "noun",
