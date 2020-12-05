@@ -1,0 +1,19 @@
+stan_old_english = {
+	name = "[word:stan_old_english.name.normalized]"
+	icon = icon_stone
+	player_color = gray
+	description = "\"[word:stan_old_english.name.normalized]\" means \"[word:stan_old_english.meanings.1.lowered]\" in Old English. Quarrying stone is necessary for the construction of fortifications and paved roads."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:worker.name] and right-click on a rock, cave wall or stone pile to quarry stone."
+	conditions = {
+		civilization = anglo_saxon
+	}
+	objectives = {
+		gather_resource = {
+			resource = stone
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

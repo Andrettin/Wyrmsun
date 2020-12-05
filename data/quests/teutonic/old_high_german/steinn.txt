@@ -1,0 +1,19 @@
+steinn_old_high_german = {
+	name = "[word:steinn_old_high_german.name.normalized]"
+	icon = icon_stone
+	player_color = gray
+	description = "\"[word:steinn_old_high_german.name.normalized]\" means \"[word:steinn_old_high_german.meanings.1.lowered]\" in Old High German. Quarrying stone is necessary for the construction of fortifications and paved roads."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a rock, cave wall or stone pile to quarry stone."
+	conditions = {
+		scripted_condition = has_old_high_german_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = stone
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

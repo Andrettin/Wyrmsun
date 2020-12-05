@@ -1,0 +1,19 @@
+stein_middle_high_german = {
+	name = "[word:stein_middle_high_german.name.normalized]"
+	icon = icon_stone
+	player_color = gray
+	description = "\"[word:stein_middle_high_german.name.normalized]\" means \"[word:stein_middle_high_german.meanings.1.lowered]\" in Middle High German. Quarrying stone is necessary for the construction of fortifications and paved roads."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a rock, cave wall or stone pile to quarry stone."
+	conditions = {
+		scripted_condition = has_middle_high_german_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = stone
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

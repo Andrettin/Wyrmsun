@@ -1,0 +1,19 @@
+staynas = {
+	name = "[word:staynas.name.normalized]"
+	icon = icon_stone
+	player_color = gray
+	description = "\"[word:staynas.name.normalized]\" means \"[word:staynas.meanings.1.lowered]\" in Proto-Germanic. Quarrying stone is necessary for the construction of fortifications and paved roads."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a rock, cave wall or stone pile to quarry stone."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		gather_resource = {
+			resource = stone
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
