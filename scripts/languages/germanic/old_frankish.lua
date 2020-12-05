@@ -175,7 +175,7 @@ DefineLanguageWord("Riki", { -- Source: http://www.cnrtl.fr/definition/riche
 DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 235.
 	Language = "old-frankish",
 	Type = "noun",
-	Meanings = {"Knife-like Sword"} -- source gives (in German) "messerartiges Schwert" as the meaning
+	Meanings = {"Knife-like Sword"} -- source gives the German "messerartiges Schwert" as the meaning
 })
 
 DefineLanguageWord("Siniskalk", { -- Fick gives "Sinigus, seniscalcus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215; Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal

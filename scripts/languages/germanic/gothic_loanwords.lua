@@ -38,4 +38,3 @@ DefineLanguageWord("Wein", { -- Source: D. H. Green, "From Germania to Europe: t
 	Meanings = {"Wine"}, -- apparently
 	DerivesFrom = {"latin", "noun", "Vinum"}
 })
-

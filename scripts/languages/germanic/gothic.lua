@@ -1017,13 +1017,6 @@ DefineLanguageWord("Razda", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"House"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Reiki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxix.
 	Language = "gothic",
 	Type = "noun",
