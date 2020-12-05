@@ -9,7 +9,7 @@ iron_age = {
 	priority = 2
 	icon = iron
 	conditions = {
-		upgrade = upgrade_ironworking
+		upgrade_class = ironworking
 	}
 }
 
@@ -18,9 +18,9 @@ viking_age = {
 	priority = 3
 	icon = strength
 	conditions = {
-		upgrade = upgrade_norse_civilization
+		civilization = norse
 		upgrade = upgrade_teuton_spatha
-		upgrade = upgrade_sailing
+		upgrade_class = sailing
 		or = {
 			upgrade = upgrade_shield_wall
 			upgrade = upgrade_svinfylking
@@ -42,7 +42,7 @@ gunpowder_age = {
 	priority = 5
 	icon = burning_coal
 	conditions = {
-		upgrade = upgrade_gunpowder
+		upgrade_class = gunpowder
 	}
 }
 
