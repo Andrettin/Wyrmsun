@@ -3,7 +3,7 @@ silubra = {
 	icon = icon_silver_mine
 	player_color = orange
 	description = "\"[word:silubra.name.normalized]\" means \"[word:silubra.meanings.1.lowered]\" in Proto-Germanic. Silver is a rather valuable metal to mine.
-	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it. Silver can also be mined by right-clicking on a silver rock."
 	conditions = {
 		civilization = germanic
 	}

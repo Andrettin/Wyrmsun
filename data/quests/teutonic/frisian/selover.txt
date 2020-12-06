@@ -3,7 +3,7 @@ selover = {
 	icon = icon_silver_mine
 	player_color = red
 	description = "\"[word:selover.name.normalized]\" means \"[word:selover.meanings.1.lowered]\" in Old Frisian. Silver is a rather valuable metal to mine.
-	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a silver deposit to build a silver mine and gather from it. Silver can also be mined by right-clicking on a silver rock."
 	conditions = {
 		scripted_condition = has_old_frisian_culture
 	}

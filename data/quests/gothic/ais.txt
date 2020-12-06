@@ -3,7 +3,7 @@ ais = {
 	icon = icon_copper_mine
 	player_color = red
 	description = "\"[word:ais.name.normalized]\" means \"[word:ais.meanings.1.lowered]\" or \"[word:ais.meanings.2.lowered]\" in Gothic. Copper is the most basic currency metal, and it can also be used for the creation of weapons, armor and tools."
-	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it. Copper can also be mined by right-clicking on a copper rock."
 	conditions = {
 		civilization = gothic
 	}

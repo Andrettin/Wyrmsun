@@ -3,7 +3,7 @@ aiza = {
 	icon = icon_copper_mine
 	player_color = orange
 	description = "\"[word:aiza.name.normalized]\" means \"[word:aiza.meanings.1.lowered]\" in Proto-Germanic. Copper is the most basic currency metal, and it can also be used for the creation of weapons, armor and tools."
-	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it. Copper can also be mined by right-clicking on a copper rock."
 	conditions = {
 		civilization = germanic
 	}

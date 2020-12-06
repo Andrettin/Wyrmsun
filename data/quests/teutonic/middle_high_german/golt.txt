@@ -3,7 +3,7 @@ golt = {
 	icon = icon_gold
 	player_color = yellow
 	description = "\"[word:golt.name.normalized]\" means \"[word:golt.meanings.1.lowered]\" in Middle High German. Gold is an extremely valuable metal to mine.
-	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a gold deposit to build a gold mine and gather from it."
+	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a gold deposit to build a gold mine and gather from it. Gold can also be mined by right-clicking on a gold rock."
 	conditions = {
 		scripted_condition = has_middle_high_german_culture
 	}
