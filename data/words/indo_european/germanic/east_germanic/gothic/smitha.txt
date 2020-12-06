@@ -1,0 +1,6 @@
+smitha = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
+	name = "Smiþa"
+	language = gothic
+	type = noun
+	etymon = smithu
+}

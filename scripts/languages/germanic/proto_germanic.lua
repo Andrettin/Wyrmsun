@@ -1232,13 +1232,6 @@ DefineLanguageWord("Smîþôn", { -- Source: August Fick and Alf Torp, "Wortscha
 	Meanings = {}
 })
 
-DefineLanguageWord("Smiþu", { -- source also gives the alternative form "Smiþa"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Smith", "Master Craftsman"}, -- source gives the German "Schmied, Werkmeister" as the meaning
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigvi" and "Snaigi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
 	Language = "proto-germanic",
 	Type = "noun",

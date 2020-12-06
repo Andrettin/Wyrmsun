@@ -94,13 +94,6 @@ DefineLanguageWord("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Bronze"}
 })
 
-DefineLanguageWord("Aizasmiþa", { -- the latter part of this compound is derived from the Proto-Germanic noun "Smiþu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Smith"}, -- source gives the German "Schmied"
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Alabrunsts", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "gothic",
 	Type = "noun",

@@ -1,0 +1,11 @@
+smithu = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	name = "Smiþu" #source also gives the alternative form "Smiþa"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	meanings = {
+		#source gives the German "Schmied, Werkmeister"
+		"Smith"
+		"Master Craftsman"
+	}
+}
