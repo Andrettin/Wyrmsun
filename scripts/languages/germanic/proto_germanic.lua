@@ -40,13 +40,6 @@ DefineLanguageWord("Ahvô", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Al", { -- source also gives the alternative forms "Alan", "Ôl" and "Alana"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "proto-germanic",
 	Type = "verb",

@@ -1,0 +1,9 @@
+aiza = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	name = "Aiza"
+	language = proto_germanic
+	type = noun
+	gender = neuter
+	meanings = {
+		"Ore" #source gives the German "Erz"
+	}
+}
