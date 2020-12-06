@@ -474,12 +474,6 @@ DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
-DefineLanguageWord("Gadrauhts", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 16.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Soldier"}
-})
-
 DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "noun",

@@ -2,8 +2,8 @@ aizasmitha = {
 	name = "[word:aizasmitha.name.normalized]"
 	icon = icon_teuton_smithy
 	player_color = red
-	description = "\"[word:aizasmitha.name.normalized]\" means \"[word:aizasmitha.meanings.1.lowered]\" in Gothic. Building a [civilization:germanic.class_unit_type:smithy.name.lowered] allows for the development of improved metal weapons, armor and tools."
-	hint = "Select a [civilization:gothic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:gothic.class_unit_type:smithy.name] button to build the structure. The [civilization:germanic.class_unit_type:smithy.name] serves as a location to which copper and other metals can be delivered."
+	description = "\"[word:aizasmitha.name.normalized]\" means \"[word:aizasmitha.meanings.1.lowered]\" in Gothic. Building a [civilization:gothic.class_unit_type:smithy.name.lowered] allows for the development of improved metal weapons, armor and tools."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:gothic.class_unit_type:smithy.name] button to build the structure. The [civilization:gothic.class_unit_type:smithy.name] serves as a location to which copper and other metals can be delivered."
 	conditions = {
 		civilization = gothic
 	}
