@@ -127,12 +127,6 @@ DefineLanguageWord("Ghredh", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {}
 })
 
-DefineLanguageWord("Ĝhutó", { -- this is the partiple; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "proto-indo-european",
-	Type = "verb",
-	Meanings = {"Call"} -- source gives the German "rufen" as the meaning
-})
-
 DefineLanguageWord("Ghni", { -- source gives "ghni-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "proto-indo-european",
 	Type = "noun",

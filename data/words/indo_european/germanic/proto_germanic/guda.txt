@@ -1,0 +1,10 @@
+guda = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	name = "Guda"
+	language = proto_germanic
+	type = noun
+	gender = masculine #can also be neuter
+	etymon = ghuto
+	meanings = {
+		"God" #source gives the German "Gott"
+	}
+}

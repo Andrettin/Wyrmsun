@@ -1,7 +1,7 @@
 wite = {
 	name = "[word:wite.name.normalized]"
 	icon = icon_lumber
-	player_color = gray
+	player_color = yellow
 	description = "\"[word:wite.name.normalized]\" means \"[word:wite.meanings.1.lowered]\" or \"[word:wite.meanings.2.lowered]\" in Middle High German. Gathering lumber is vital for the construction of new structures."
 	hint = "Select a [civilization:teutonic.class_unit_type:worker.name] and right-click on a tree or wood pile to gather lumber."
 	conditions = {

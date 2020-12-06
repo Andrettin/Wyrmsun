@@ -618,14 +618,6 @@ DefineLanguageWord("Grônia", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Green"} -- source gives the German "grün" as the meaning
 })
 
-DefineLanguageWord("Guda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
-	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"},
-	Gender = "masculine" -- can also be neuter
-})
-
 DefineLanguageWord("Gudjan", { -- source also gives the alternative form "gudan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "proto-germanic",
 	Type = "noun",
