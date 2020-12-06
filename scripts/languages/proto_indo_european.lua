@@ -61,12 +61,6 @@ DefineLanguageWord("Bhoino", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {}
 })
 
-DefineLanguageWord("Bhoumo", { -- source gives "bhou(ə)mo"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
-	Language = "proto-indo-european",
-	Type = "noun", -- correct?
-	Meanings = {}
-})
-
 DefineLanguageWord("Bhrenvō", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-indo-european",
 	Type = "verb", -- correct?

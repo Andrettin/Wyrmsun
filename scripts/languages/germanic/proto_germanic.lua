@@ -139,14 +139,6 @@ DefineLanguageWord("Aynos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Number = 1
 })
 
-DefineLanguageWord("Bagma", { -- source also gives the alternative form "bauma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhoumo"}, -- source mentions this as a possibility
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Baina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "proto-germanic",
 	Type = "noun",

@@ -1,0 +1,19 @@
+bagms = {
+	name = "[word:bagms.name.normalized]"
+	icon = icon_lumber
+	player_color = red
+	description = "\"[word:bagms.name.normalized]\" means \"[word:bagms.meanings.1.lowered]\" in Gothic. Chopping trees is the principal way to acquire lumber."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name] and right-click on a tree to gather lumber."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

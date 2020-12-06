@@ -1,0 +1,19 @@
+bagma = {
+	name = "[word:bagma.name.normalized]"
+	icon = icon_lumber
+	player_color = orange
+	description = "\"[word:bagma.name.normalized]\" means \"[word:bagma.meanings.1.lowered]\" in Proto-Germanic. Chopping trees is the principal way to acquire lumber."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name] and right-click on a tree to gather lumber."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		gather_resource = {
+			resource = lumber
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

@@ -1,0 +1,10 @@
+bagma = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	name = "Bagma" #source also gives the alternative form "bauma"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	etymon = bhoumo #source mentions this as a possibility
+	meanings = {
+		"Tree" #source gives the German "Baum"
+	}
+}
