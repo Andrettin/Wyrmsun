@@ -1,0 +1,18 @@
+gudjan = {
+	name = "[word:gudjan.name.normalized]"
+	icon = icon_germanic_priest
+	player_color = orange
+	description = "\"[word:gudjan.name.normalized]\" means \"[word:gudjan.meanings.1.lowered]\" in Proto-Germanic. Priests can invoke divine favor to aid you in battle."
+	hint = "Select a [civilization:germanic.class_unit_type:temple.name] and click on the [civilization:germanic.class_unit_type:priest.name] button to train the unit. The [civilization:germanic.class_unit_type:priest.name] is a spellcasting unit, whose spells depend on the deities worshiped."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		build_units = {
+			unit_class = priest
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

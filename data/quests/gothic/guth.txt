@@ -2,8 +2,8 @@ guth = {
 	name = "[word:guth.name.normalized]"
 	icon = icon_germanic_temple
 	player_color = red
-	description = "\"[word:guth.name.normalized]\" means \"[word:guth.meanings.1.lowered]\" in Gothic. Building a [civilization:gothic.class_unit_type:temple.name.lowered] will provide a place for deity worship."
-	hint = "Select a [civilization:gothic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:gothic.class_unit_type:temple.name] button to build the structure."
+	description = "\"[word:guth.name.normalized]\" means \"[word:guth.meanings.1.lowered]\" in Gothic. Building a [unit_class:temple.name.lowered] will provide a place for deity worship."
+	hint = "Select a [civilization:gothic.class_unit_type:worker.name], press the Build Structure button and then click on the [unit_class:temple.name] button to build the structure."
 	conditions = {
 		civilization = gothic
 	}

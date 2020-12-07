@@ -618,13 +618,6 @@ DefineLanguageWord("Grônia", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Green"} -- source gives the German "grün" as the meaning
 })
 
-DefineLanguageWord("Gudjan", { -- source also gives the alternative form "gudan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Priest"}, -- source gives the German "Priester" as the meaning
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Gumō", { -- Lehmann also gives "gumn-" in another instance; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2, 3.2.3.
 	Language = "proto-germanic",
 	Type = "noun",

@@ -1,0 +1,18 @@
+gudja = {
+	name = "[word:gudja.name.normalized]"
+	icon = icon_germanic_priest
+	player_color = red
+	description = "\"[word:gudja.name.normalized]\" means \"[word:gudja.meanings.1.lowered]\" in Gothic. Priests can invoke divine favor to aid you in battle."
+	hint = "Select a [unit_class:temple.name] and click on the [unit_class:priest.name] button to train the unit. The [unit_class:priest.name] is a spellcasting unit, whose spells depend on the deities worshiped."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		build_units = {
+			unit_class = priest
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}
