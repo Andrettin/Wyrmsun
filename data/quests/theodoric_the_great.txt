@@ -1,0 +1,12 @@
+theodoric_the_great = {
+	name = "Theodoric the Great"
+	icon = icon_gothic_horse_lord_brown_hair
+	player_color = red
+	description = "Theodoric the Great"
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+	objectives = {
+		hero_must_survive = thiudareiks_amelung
+	}
+}
