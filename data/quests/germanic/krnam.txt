@@ -1,0 +1,18 @@
+krnam = {
+	name = "[word:krnam.name.normalized]"
+	icon = icon_germanic_farm
+	player_color = orange
+	description = "\"[word:krnam.name.normalized]\" means \"[word:krnam.meanings.1.lowered]\" in Proto-Germanic. Build a farm will enhance your food supply."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:germanic.class_unit_type:farm.name] button to build the structure."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		copper += 500
+	}
+}

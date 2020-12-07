@@ -863,12 +863,6 @@ DefineLanguageWord("Krenh", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {}
 })
 
-DefineLanguageWord("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Grain"}
-})
-
 DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-germanic",
 	Type = "noun",

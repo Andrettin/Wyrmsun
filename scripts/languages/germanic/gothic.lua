@@ -731,13 +731,6 @@ DefineLanguageWord("Kas", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Container"}
 })
 
-DefineLanguageWord("Kaúrn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
-	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
-})
-
 DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "noun",

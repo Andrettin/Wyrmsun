@@ -1,0 +1,8 @@
+krnam = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	name = "Kŕnam"
+	language = proto_germanic
+	type = noun
+	meanings = {
+		"Grain"
+	}
+}
