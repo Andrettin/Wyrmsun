@@ -121,6 +121,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Settlement of Scandinavia scenario now requires the player to build a Chieftain's Hall in Copenhagen instead of Leidre.
 - The scenario screen now shows the year in which the scenario starts.
 - Moved the start year of the The First Dwarves scenario from 3000 BC to 25000 BC.
+- Made it so many Earth scenarios now take place on a new 384x384 map.
 
 * Sounds
 - The "work complete" sound now correctly plays when an upgrade has been researched.
