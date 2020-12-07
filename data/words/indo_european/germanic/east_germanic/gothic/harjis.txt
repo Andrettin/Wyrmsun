@@ -1,0 +1,8 @@
+harjis = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 10.
+	name = "Harjis"
+	language = gothic
+	type = noun
+	meanings = {
+		"Army"
+	}
+}

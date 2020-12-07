@@ -1,0 +1,19 @@
+harjis = {
+	name = "[word:harjis.name.normalized]"
+	icon = icon_saxon_swordsman
+	player_color = red
+	description = "\"[word:harjis.name.normalized]\" means \"[word:harjis.meanings.1.lowered]\" in Gothic. Training infantry will increase your military capability."
+	hint = "Select a [civilization:gothic.class_unit_type:barracks.name] and click on the [civilization:gothic.class_unit_type:infantry.name] button to train the unit. The [civilization:gothic.class_unit_type:infantry.name] is a basic military unit."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		build_units = {
+			unit_class = infantry
+			quantity = 5
+		}
+	}
+	completion_effects = {
+		copper += 2500
+	}
+}

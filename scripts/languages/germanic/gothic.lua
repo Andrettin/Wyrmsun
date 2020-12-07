@@ -573,12 +573,6 @@ DefineLanguageWord("Hardus", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
 })
 
-DefineLanguageWord("Harjis", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 4, 10.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Army"}
-})
-
 DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
