@@ -13,6 +13,6 @@ guda = {
 		}
 	}
 	completion_effects = {
-		lumber += 500
+		copper += 500
 	}
 }

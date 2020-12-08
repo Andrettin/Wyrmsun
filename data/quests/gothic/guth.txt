@@ -13,6 +13,6 @@ guth = {
 		}
 	}
 	completion_effects = {
-		lumber += 500
+		copper += 500
 	}
 }
