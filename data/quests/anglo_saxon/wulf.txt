@@ -16,6 +16,6 @@ wulf_old_english = {
 		}
 	}
 	completion_effects = {
-		copper += 250
+		scripted_effect = minor_copper_reward
 	}
 }

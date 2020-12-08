@@ -14,6 +14,6 @@ harjis = {
 		}
 	}
 	completion_effects = {
-		copper += 2500
+		scripted_effect = major_copper_reward
 	}
 }

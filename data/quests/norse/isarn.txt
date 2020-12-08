@@ -15,6 +15,6 @@ isarn_norse = {
 		}
 	}
 	completion_effects = {
-		copper += 500
+		scripted_effect = minor_copper_reward
 	}
 }

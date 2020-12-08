@@ -1,0 +1,24 @@
+minor_copper_reward = {
+	copper += 500
+}
+
+small_copper_reward = {
+	copper += 1000
+}
+
+medium_copper_reward = {
+	copper += 1500
+}
+
+large_copper_reward = {
+	copper += 2000
+}
+
+major_copper_reward = {
+	copper += 2500
+}
+
+minor_copper_and_lumber_reward = {
+	copper += 250
+	lumber += 250
+}
