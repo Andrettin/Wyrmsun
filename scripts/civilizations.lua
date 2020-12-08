@@ -151,12 +151,6 @@ DefineCivilization("germanic", {
 	},
 	ProvinceNames = {
 		"Ansulanda", -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
-	},
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-		-- the prevalence of bronzeworking (compared to copperworking) in Scandinavia began c. 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73.
-		-1100, "upgrade-germanic-bronze-shield", true, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-		-1000, "upgrade-germanic-broad-sword", true -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 	}
 })
 
@@ -181,7 +175,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"male", "Indutiomarus"
 	},
 	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
@@ -367,7 +360,6 @@ DefineCivilization("anglo-saxon", {
 	DevelopsFrom = {"germanic"},
 	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
 	HistoricalUpgrades = {
-		180, "upgrade-teuton-spatha", true, -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 		664, "upgrade-deity-christian-god", true -- Christianity was predominant in England in 664; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 128.
 	},
 	--[[
@@ -486,9 +478,6 @@ DefineCivilization("frankish", {
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	HistoricalUpgrades = {
-		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	},
 	PersonalNames = {
 		"male", "Answald", -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
 		"male", "Grimwald" -- Old Frankish name; Source: http://www.cnrtl.fr/definition/lourdaud//1
@@ -516,10 +505,7 @@ DefineCivilization("suebi", {
 	DefaultColor = "black",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
-	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.",
-	HistoricalUpgrades = {
-		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	}
+	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
 })
 
 DefineCivilization("gaul", {
@@ -667,9 +653,6 @@ DefineCivilization("latin", {
 		"harvest", "emeralds", "basic-latin-voices-harvest",
 		"ready", "basic-latin-voices-ready"
 	},
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	},
 	PersonalNames = {
 		"female", "Faustina", -- daughter of Emperor Antoninus Pius who married Marcus Aurelius; Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
 		"male", "Antoninus", -- Antoninus Pius, Roman emperor; Source: "Ancient Warfare VII.6", 2013, p. 6.
@@ -772,9 +755,9 @@ DefineCivilization("portuguese", {
 	ParentCivilization = "latin",
 	Adjective = "Portuguese",
 	Playable = false,
-	UnitClassNames = {
-		"farm", "Macacos" -- farm in Rio de Janeiro; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
-	}
+	--UnitClassNames = {
+	--	"farm", "Macacos" -- farm in Rio de Janeiro; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
+	--}
 })
 
 DefineCivilization("romanian", {
@@ -831,9 +814,6 @@ DefineCivilization("goth", {
 		"Ringhorn", -- Balder's ship in Norse mythology in which he was cremanted; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
 		"Skidbladnir", -- ship built by dwarves in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 		"Skrauti" -- dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins; the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
-	},
-	HistoricalUpgrades = {
-		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -854,7 +834,6 @@ DefineCivilization("greek", {
 		"ready", "basic-greek-voices-ready"
 	},
 	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 		-1700, "upgrade-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 		-1400, "upgrade-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
@@ -1008,10 +987,7 @@ DefineCivilization("hittite", {
 	Language = "hittite",
 	ParentCivilization = "greek",
 	Adjective = "Hittite",
-	Playable = false,
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 DefineCivilization("illyrian", {
@@ -1021,10 +997,7 @@ DefineCivilization("illyrian", {
 	Language = "illyrian",
 	ParentCivilization = "greek",
 	Adjective = "Illyrian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 DefineCivilization("minoan", {
@@ -1068,9 +1041,6 @@ DefineCivilization("norse", {
 	--]]
 	ProvinceNames = {
 		"Gardarike"
-	},
-	HistoricalUpgrades = {
-		180, "upgrade-teuton-spatha", true -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -1081,10 +1051,7 @@ DefineCivilization("baltic", {
 	Language = "lithuanian",
 	ParentCivilization = "norse",
 	Adjective = "Baltic",
-	Playable = false,
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 DefineCivilization("uralic", {
@@ -1159,10 +1126,7 @@ DefineCivilization("phrygian", {
 	Language = "phrygian",
 	ParentCivilization = "greek",
 	Adjective = "Phrygian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 DefineCivilization("slav", {
@@ -1179,9 +1143,6 @@ DefineCivilization("slav", {
 		"acknowledge", "basic-greek-voices-acknowledge",
 --		"attack", "basic-greek-voices-attack",
 		"ready", "basic-greek-voices-ready"
-	},
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	},
 	PersonalNames = {
 		-- Czech names
@@ -1239,10 +1200,7 @@ DefineCivilization("thracian", {
 	Language = "thracian",
 	ParentCivilization = "greek",
 	Adjective = "Thracian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-4000, "upgrade-wood-plow", true -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	}
+	Playable = false
 })
 
 DefineCivilization("treant", {

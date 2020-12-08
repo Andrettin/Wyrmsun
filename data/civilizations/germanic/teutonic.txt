@@ -147,16 +147,6 @@ teuton = {
 	}
 	
 	history = {
-		-500 = {
-			acquired_upgrades += upgrade_ironworking
-			acquired_upgrades += upgrade_teuton_iron_shield
-		}
-		
-		180 = {
-			#In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-			acquired_upgrades += upgrade_teuton_spatha
-		}
-		
 		800 = {
 			acquired_upgrades += upgrade_writing
 			acquired_upgrades += upgrade_masonry
