@@ -1,0 +1,15 @@
+etruscan = {
+	name = "Etruscan"
+	parent_civilization = latin
+	group = old_european
+	language = etruscan
+	visible = false
+	playable = false
+	
+	history = {
+		-750 = {
+			#the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
+			acquired_upgrade_classes += architecture
+		}
+	}
+}

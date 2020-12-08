@@ -1,3 +1,16 @@
 phoenician = {
+	name = "Phoenician"
+	parent_civilization = persian
+	group = semitic
 	language = phoenician
+	visible = false
+	playable = false
+	default_color = black
+	
+	history = {
+		-1100 = {
+			#around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
+			acquired_upgrade_classes += celestial_navigation
+		}
+	}
 }

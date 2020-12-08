@@ -1,4 +1,16 @@
 anglo_saxon = {
+	name = "Anglo-Saxon"
+	parent_civilization = teuton
+	group = anglo_saxon
+	language = old_english
+	visible = true
+	default_color = red
+	upgrade = upgrade_anglo_saxon_civilization
+	description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent."
+	develops_from = {
+		germanic
+	}
+	
 	unit_sounds = {
 		selected = basic_english_voices_selected_group
 		acknowledge = basic_english_voices_acknowledge
@@ -12,5 +24,12 @@ anglo_saxon = {
 		copper = basic_english_voices_not_enough_copper
 		lumber = basic_english_voices_not_enough_lumber
 		stone = basic_english_voices_not_enough_stone
+	}
+	
+	unit_class_names = {
+		farm = {
+			"Wedone" #Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+			"Weoland" #Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+		}
 	}
 }

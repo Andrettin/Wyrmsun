@@ -4,4 +4,16 @@ greek = {
 	}
 	help_town_sound = basic_english_voices_help_town
 	work_complete_sound = basic_greek_voices_work_complete
+	
+	history = {
+		-1700 = {
+			#Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+			acquired_upgrade_classes += writing
+		}
+		
+		-1400 = {
+			#Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+			acquired_upgrade_classes += masonry
+		}
+	}
 }

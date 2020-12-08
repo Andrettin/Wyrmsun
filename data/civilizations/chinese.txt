@@ -1,3 +1,15 @@
 chinese = {
+	name = "Chinese"
+	parent_civilization = greek
+	group = sinic
 	language = chinese
+	visible = false
+	playable = false
+	
+	history = {
+		1044 = {
+			#gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+			acquired_upgrade_classes += gunpowder
+		}
+	}
 }

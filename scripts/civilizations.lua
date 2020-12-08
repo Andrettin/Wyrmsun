@@ -347,21 +347,8 @@ DefineCivilization("teuton", {
 })
 
 DefineCivilization("anglo-saxon", {
-	Display = "Anglo-Saxon",
-	Visible = true,
-	Group = "anglo_saxon",
-	Language = "old-english",
-	ParentCivilization = "teuton",
-	Adjective = "Anglo-Saxon",
-	DefaultColor = "red",
 	Calendar = "anglo_saxon_calendar",
 	Currency = "scilling",
-	CivilizationUpgrade = "upgrade-anglo-saxon-civilization",
-	DevelopsFrom = {"germanic"},
-	Description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent.",
-	HistoricalUpgrades = {
-		664, "upgrade-deity-christian-god", true -- Christianity was predominant in England in 664; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 128.
-	},
 	--[[
 	SettlementNames = {
 		"Abbandun",  -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -380,12 +367,8 @@ DefineCivilization("anglo-saxon", {
 		"Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Gumeninga Hearh" -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-	},
-	--]]
-	UnitClassNames = {
-		"farm", "Wedone", -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-		"farm", "Weoland" -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	}
+	--]]
 })
 
 DefineCivilization("english", {
@@ -779,19 +762,6 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 	Playable = false
 })
 
-DefineCivilization("etruscan", {
-	Display = "Etruscan",
-	Visible = false,
-	Group = "old_european",
-	Language = "etruscan",
-	ParentCivilization = "latin",
-	Adjective = "Etruscan",
-	Playable = false,
-	HistoricalUpgrades = {
-		-750, "upgrade-architecture", true -- the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
-	}
-})
-
 DefineCivilization("goth", {
 	Display = "Goth",
 	Visible = true,
@@ -832,10 +802,6 @@ DefineCivilization("greek", {
 		"acknowledge", "basic-greek-voices-acknowledge",
 --		"attack", "basic-greek-voices-attack",
 		"ready", "basic-greek-voices-ready"
-	},
-	HistoricalUpgrades = {
-		-1700, "upgrade-writing", true, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-		-1400, "upgrade-masonry", true -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 	--[[
 	SettlementNames = {
@@ -940,18 +906,6 @@ DefineCivilization("babylonian", {
 	HistoricalUpgrades = {
 		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
 		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
-	}
-})
-
-DefineCivilization("chinese", {
-	Display = "Chinese",
-	Visible = false,
-	Group = "sinic",
-	ParentCivilization = "greek",
-	Adjective = "Chinese",
-	Playable = false,
-	HistoricalUpgrades = {
-		1044, "upgrade_gunpowder", true -- gunpowder had already been discovered in China in 1044; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
 	}
 })
 
@@ -1104,19 +1058,6 @@ DefineCivilization("persian", {
 	ParentCivilization = "greek",
 	Adjective = "Persian",
 	Playable = false
-})
-
-DefineCivilization("phoenician", {
-	Display = "Phoenician",
-	Visible = false,
-	Group = "semitic",
-	ParentCivilization = "persian",
-	Adjective = "Phoenician",
-	Playable = false,
-	DefaultColor = "black",
-	HistoricalUpgrades = {
-		-1100, "upgrade_celestial_navigation", true -- around 1100 BC the Phoenicians began using celestial navigation (using Ursa Major as a base) to securely sail the open seas in the Mediterranean; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 90-91.
-	}
 })
 
 DefineCivilization("phrygian", {

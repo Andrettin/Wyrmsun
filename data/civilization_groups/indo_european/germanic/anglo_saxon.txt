@@ -2,4 +2,11 @@ anglo_saxon = {
 	name = "Anglo-Saxon"
 	rank = subgroup
 	group = germanic
+	
+	history = {
+		664 = {
+			#Christianity was predominant in England in 664; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 128.
+			acquired_upgrades += upgrade_deity_christian_god
+		}
+	}
 }
