@@ -942,13 +942,6 @@ DefineLanguageWord("Maisôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Chisel"}, -- source gives meaning as "Meißel"
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "proto-germanic",
 	Type = "adverb",

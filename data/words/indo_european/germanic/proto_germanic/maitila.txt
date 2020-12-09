@@ -1,0 +1,9 @@
+maitila = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
+	name = "Maitila"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	meanings = {
+		"Chisel" #source gives the German "Meißel"
+	}
+}

@@ -1,0 +1,18 @@
+#maitila = {
+#	name = "[word:maitila.name.normalized]"
+#	icon = germanic_masons_shop
+#	player_color = orange
+#	description = "\"[word:maitila.name.normalized]\" means \"[word:maitila.meanings.1.lowered]\" in Proto-Germanic. Building a [civilization:germanic.class_unit_type:masons_shop.name.lowered] improves your stoneworking capabilities."
+#	hint = "Select a [civilization:germanic.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:germanic.class_unit_type:masons_shop.name] button to build the structure. The [civilization:germanic.class_unit_type:masons_shop.name] grants a stone processing bonus, increasing the amount of stone received per stone gathered. It also serves as a location to which stone can be delivered."
+#	conditions = {
+#		civilization = germanic
+#	}
+#	objectives = {
+#		build_units = {
+#			unit_class = masons_shop
+#		}
+#	}
+#	completion_effects = {
+#		stone += 500
+#	}
+#}
