@@ -1,0 +1,6 @@
+phoenicia = {
+	name = "Phoenicia"
+	civilization = phoenician
+	type = polity
+	color = black
+}

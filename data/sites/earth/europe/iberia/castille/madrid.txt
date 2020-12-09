@@ -9,9 +9,13 @@ madrid = {
 	}
 	
 	history = {
+		-218 = {
+			owner = carthage #part of Carthagian dominions and allies in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 		
 		1097 = {

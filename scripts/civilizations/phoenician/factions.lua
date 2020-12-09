@@ -25,28 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("canaanite-tribe", {
-	Name = "Canaanite Tribe",
-	Civilization = "phoenician", -- correct?
-	Type = "tribe",
-	Color = "red",
-	DefaultTier = "duchy"
-})
-
-DefineFaction("carthage", {
-	Name = "Carthage",
-	Civilization = "phoenician",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "kingdom",
-	DefaultGovernmentType = "republic"
-})
-
 DefineFaction("phoenicia", {
-	Name = "Phoenicia",
-	Civilization = "phoenician",
-	Type = "polity",
-	Color = "black",
 	HistoricalCapitals = {
 		0, "tyre"
 	}

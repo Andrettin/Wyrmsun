@@ -12,9 +12,13 @@ seville = {
 	}
 	
 	history = {
+		-218 = {
+			owner = carthage #part of Carthagian dominions and allies in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+			building_classes += town_hall
+		}
+		
 		-201 = {
 			owner = rome #Hispalis was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-			building_classes += town_hall
 		}
 		
 		486 = {

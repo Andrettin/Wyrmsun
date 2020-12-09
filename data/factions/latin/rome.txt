@@ -1,0 +1,59 @@
+rome = {
+	name = "Rome"
+	civilization = latin
+	type = polity
+	color = red
+	default_tier = kingdom
+	default_government_type = republic
+	default_capital = rome
+	develops_from = {
+		latin_tribe
+	}
+	
+	history = {
+		#polities must have writing
+		acquired_upgrades += upgrade_writing
+		
+		-264 = {
+			#Rome should already have masonry technology by then
+			acquired_upgrades += upgrade_masonry
+		}
+		
+		-58 = {
+			#Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+			acquired_upgrades += upgrade_teuton_coinage
+		}
+		
+		-54 = {
+			#the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
+			diplomacy_state = {
+				faction = eburones_tribe
+				state = war
+			}
+			
+			#the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
+			diplomacy_state = {
+				faction = nervii_tribe
+				state = war
+			}
+		}
+		
+		-27 = {
+			tier = empire #Rome was an empire under Augustus
+			government_type = monarchy #Augustus assumed power in Rome; was this the date in which he actually became emperor?
+		}
+		
+		161 = {
+			#in 161 Armenia was a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+			diplomacy_state = {
+				faction = armenia
+				state = overlord
+			}
+		}
+		
+		395 = {
+			#Christianity was already widespread in the Roman Empire around 395 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			acquired_upgrades += upgrade_deity_christian_god
+		}
+	}
+}

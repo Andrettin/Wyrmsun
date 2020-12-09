@@ -1,0 +1,7 @@
+canaanite_tribe = {
+	name = "Canaanite Tribe"
+	civilization = phoenician #correct?
+	type = tribe
+	color = red
+	default_tier = duchy
+}

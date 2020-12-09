@@ -1,0 +1,9 @@
+carthage = {
+	name = "Carthage"
+	civilization = phoenician
+	type = polity
+	color = black
+	default_tier = kingdom
+	default_government_type = republic
+	default_capital = carthage
+}
