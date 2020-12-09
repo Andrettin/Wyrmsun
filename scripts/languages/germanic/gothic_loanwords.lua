@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Aíkklēsjo", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Assembly", "Congregation", "House of God", "Church"},
-	DerivesFrom = {"greek", "noun", "Ekklēsía"}
-})
-
 DefineLanguageWord("Wein", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
 	Language = "gothic",
 	Type = "noun",

@@ -1,0 +1,12 @@
+aikklesjo = { #Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
+	name = "Aíkklēsjo"
+	language = gothic
+	type = noun
+	etymon = ekklesia
+	meanings = {
+		"Assembly"
+		"Congregation"
+		"House of God"
+		"Church"
+	}
+}

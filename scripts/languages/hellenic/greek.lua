@@ -169,12 +169,6 @@ DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Nominative = "Égō"
 })
 
-DefineLanguageWord("Ekklēsía", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Congregation", "Christian Congregation", "Church"}
-})
-
 DefineLanguageWord("Éphūn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "greek",
 	Type = "noun",
