@@ -225,12 +225,6 @@ DefineLanguageWord("Bōkān", { -- source gives "bōkān-"; Source: Winfred P. L
 	Meanings = {"Beech"}
 })
 
-DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Tablet"}
-})
-
 DefineLanguageWord("Branda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-germanic",
 	Type = "noun",

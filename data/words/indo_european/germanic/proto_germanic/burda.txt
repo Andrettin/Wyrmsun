@@ -1,5 +1,5 @@
-burda = { #source also gives the alternative form "breda"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
-	name = "Burda"
+burda = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
+	name = "Burda" #source also gives the alternative form "breda"
 	language = proto_germanic
 	type = noun
 	gender = neuter

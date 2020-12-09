@@ -1,0 +1,8 @@
+boks = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
+	name = "Bōks"
+	language = proto_germanic
+	type = noun
+	meanings = {
+		"Tablet"
+	}
+}

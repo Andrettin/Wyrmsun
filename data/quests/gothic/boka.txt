@@ -1,0 +1,18 @@
+boka = {
+	name = "[word:boka.name.normalized]"
+	icon = icon_book_red
+	player_color = red
+	description = "\"[word:boka.name.normalized]\" means \"[word:boka.meanings.1.lowered]\" in Gothic. Developing writing will allow knowledge to be stored in books, being thus more easily passed to future generations."
+	hint = "Select a [civilization:gothic.class_unit_type:stronghold.name] and click on the [civilization:gothic.class_upgrade:writing.name] button to research the upgrade. [civilization:gothic.class_upgrade:writing.name] increases research speed for your buildings."
+	conditions = {
+		civilization = gothic
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = writing
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}
