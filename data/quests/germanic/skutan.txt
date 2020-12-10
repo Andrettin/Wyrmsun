@@ -1,0 +1,18 @@
+skutan = {
+	name = "[word:skutan.name.normalized]"
+	icon = icon_germanic_archer
+	player_color = orange
+	description = "\"[word:skutan.name.normalized]\" means \"[word:skutan.meanings.1.lowered]\" in Proto-Germanic. Training archers will provide your military with ranged attacks."
+	hint = "Select a [civilization:germanic.class_unit_type:barracks.name] and click on the [civilization:germanic.class_unit_type:shooter.name] button to train the unit. The [civilization:germanic.class_unit_type:shooter.name] is a basic ranged unit."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		build_units = {
+			unit_class = shooter
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

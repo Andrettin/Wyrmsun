@@ -1,0 +1,9 @@
+speru = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	name = "Speru"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	meanings = {
+		"Spear"
+	}
+}

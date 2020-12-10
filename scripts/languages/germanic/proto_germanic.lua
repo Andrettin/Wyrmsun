@@ -321,7 +321,7 @@ DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 DefineLanguageWord("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Farmer", "Peasant"},
+	Meanings = {"Farmer", "Peasant", "Chamber", "Storehouse"}, -- source gives the German "'Bauer', Gemach, Vorratshaus"
 	Gender = "masculine"
 })
 
@@ -1157,12 +1157,6 @@ DefineLanguageWord("Skîrô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Skutan", { -- the source gives "skut(i)an; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 234.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Archer"} -- the source gives "Schütze" as the meaning
-})
-
 DefineLanguageWord("Smaiþra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1189,20 +1183,6 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Meanings = {"Snow"},
 	Gender = "masculine",
 	Uncountable = true -- seems likely to be uncountable
-})
-
-DefineLanguageWord("Speru", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Spear"},
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Speuta", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Spear"},
-	Gender = "neuter"
 })
 
 DefineLanguageWord("Stapula", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.

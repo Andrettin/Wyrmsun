@@ -1,0 +1,9 @@
+speuta = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 467.
+	name = "Speuta"
+	language = proto_germanic
+	type = noun
+	gender = neuter
+	meanings = {
+		"Spear"
+	}
+}
