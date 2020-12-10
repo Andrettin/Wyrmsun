@@ -1,0 +1,9 @@
+the_second_punic_war = {
+	name = "The Second Punic War"
+	description = "The Second Punic War"
+	faction = rome
+	start_date = -218
+	map_templates = { earth_space }
+	quest = the_second_punic_war
+	hidden = true
+}

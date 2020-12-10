@@ -1,0 +1,9 @@
+the_second_punic_war = {
+	name = "The Second Punic War"
+	icon = icon_latin_centurion
+	player_color = red
+	description = "The Second Punic War"
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+}
