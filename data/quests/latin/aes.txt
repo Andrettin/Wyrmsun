@@ -1,0 +1,19 @@
+aes = {
+	name = "[word:aes.name.normalized]"
+	icon = icon_copper_mine
+	player_color = red
+	description = "\"[word:aes.name.normalized]\" means \"[word:aes.meanings.1.lowered]\" in Latin. Copper is the most basic currency metal, and it can also be used for the creation of weapons, armor and tools."
+	hint = "Select a [civilization:latin.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it. Copper can also be mined by right-clicking on a copper rock."
+	conditions = {
+		civilization = latin
+	}
+	objectives = {
+		gather_resource = {
+			resource = copper
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

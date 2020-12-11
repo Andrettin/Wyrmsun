@@ -1,0 +1,18 @@
+granum = {
+	name = "[word:granum.name.normalized]"
+	icon = icon_latin_farm
+	player_color = red
+	description = "\"[word:granum.name.normalized]\" means \"[word:granum.meanings.1.lowered]\" in Latin. Building a farm will enhance your food supply."
+	hint = "Select a [civilization:latin.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:latin.class_unit_type:farm.name] button to build the structure."
+	conditions = {
+		civilization = latin
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

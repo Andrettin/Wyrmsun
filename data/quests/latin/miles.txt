@@ -1,0 +1,18 @@
+miles = {
+	name = "[word:miles.name.normalized]"
+	icon = icon_latin_legionary
+	player_color = red
+	description = "\"[word:miles.name.normalized]\" means \"[word:miles.meanings.1.lowered]\" in Latin. Training infantry will increase your military capability."
+	hint = "Select a [civilization:latin.class_unit_type:barracks.name] and click on the [civilization:latin.class_unit_type:infantry.name] button to train the unit. The [civilization:latin.class_unit_type:infantry.name] is a basic military unit."
+	conditions = {
+		civilization = latin
+	}
+	objectives = {
+		build_units = {
+			unit_class = infantry
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

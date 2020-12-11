@@ -31,16 +31,6 @@ DefineLanguageWord("Aciēs", { -- Source: Carl D. Buck, "Words for 'Battle,' 'Wa
 	Meanings = {"Battle Array", "Battle"}
 })
 
-DefineLanguageWord("Aes", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Aeris"
-	}
-})
-
 DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "verb",
@@ -190,12 +180,6 @@ DefineLanguageWord("Dens", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
 })
 
-DefineLanguageWord("Deus", { -- source also gives the alternative form "dīuus"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"God"}
-})
-
 DefineLanguageWord("Diēs", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
 	Language = "latin",
 	Type = "noun",
@@ -314,12 +298,6 @@ DefineLanguageWord("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	}
 })
 
-DefineLanguageWord("Grānum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Grain"}
-})
-
 DefineLanguageWord("Haedus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
 	Type = "noun",
@@ -387,15 +365,6 @@ DefineLanguageWord("Merula", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Blackbird", "Merl"} -- source gives the German "Amsel" as the meaning
-})
-
-DefineLanguageWord("Mīles", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Soldier"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Mīlitēs"
-	}
 })
 
 DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

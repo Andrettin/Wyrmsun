@@ -45,4 +45,3 @@ DefineLanguageWord("Mynster", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Meanings = {"Monastery"},
 	DerivesFrom = {"latin", "noun", "Monasterium"}
 })
-

@@ -1,0 +1,8 @@
+deus_latin = { #Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	name = "Deus" #source also gives the alternative form "dīuus"
+	language = latin
+	type = noun
+	meanings = {
+		"God"
+	}
+}

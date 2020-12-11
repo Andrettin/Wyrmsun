@@ -1,0 +1,10 @@
+miles = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 16.
+	name = "Mīles"
+	language = latin
+	type = noun
+	meanings = {
+		"Soldier"
+	}
+	
+	#plural nominative: "Mīlitēs"
+}
