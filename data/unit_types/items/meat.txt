@@ -1,0 +1,20 @@
+unit_meat = {
+	name = "Meat"
+	parent = unit_template_item
+	icon = icon_food
+	item_class = food
+	image_file = "items/meat.png"
+	frame_size = { 16 16 }
+	hit_point_healing = 5
+	vegetable = true
+	costs = {
+		time = 50
+		copper = 25
+	}
+	sounds = {
+		used = eat
+	}
+	conditions = {
+		unit_class = farm
+	}
+}
