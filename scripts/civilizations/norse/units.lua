@@ -44,7 +44,7 @@ DefineUnitType("unit-norse-swordsman", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "w",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-norse-voices-selected-group",
 --		"acknowledge", "basic-norse-voices-acknowledge",
@@ -73,7 +73,7 @@ DefineUnitType("unit-norse-veteran-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 --		"selected", "basic-norse-voices-selected-group",
 --		"acknowledge", "basic-norse-voices-acknowledge",
@@ -104,7 +104,7 @@ DefineUnitType("unit-norse-heroic-swordsman", {
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Sounds = {
 --		"selected", "basic-norse-voices-selected-group",
 --		"acknowledge", "basic-norse-voices-acknowledge",

@@ -50,7 +50,7 @@ DefineUnitType("unit-latin-legionary", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "l",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
@@ -76,7 +76,7 @@ DefineUnitType("unit-latin-veteran-legionary", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",
@@ -104,7 +104,7 @@ DefineUnitType("unit-latin-centurion", {
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Sounds = {
 		"dead", "basic-human-voices-dead",
 		"hit", "sword-attack",

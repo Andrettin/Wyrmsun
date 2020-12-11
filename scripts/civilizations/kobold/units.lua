@@ -52,7 +52,7 @@ DefineUnitType("unit-kobold-footpad", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "f",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
@@ -107,7 +107,7 @@ DefineUnitType("unit-kobold-slasher", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
@@ -162,7 +162,7 @@ DefineUnitType("unit-kobold-champion", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-goblin-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{

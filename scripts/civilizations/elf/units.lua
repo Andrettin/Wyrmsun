@@ -54,7 +54,7 @@ DefineUnitType("unit-elven-swordsman", {
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
 	ButtonKey = "s",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -93,7 +93,7 @@ DefineUnitType("unit-elven-priest", {
 	StartingAbilities = {"upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"hit", "fist-attack",
 		"miss", "attack-miss"

@@ -40,7 +40,7 @@ DefineUnitType("unit-dwarven-miner", {
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "m",
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CopperGatheringBonus = 1,
 	SilverGatheringBonus = 1,
 	GoldGatheringBonus = 1,
@@ -129,7 +129,7 @@ DefineUnitType("unit-dwarven-skilled-miner", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -209,7 +209,7 @@ DefineUnitType("unit-dwarven-expert-miner", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -293,7 +293,7 @@ DefineUnitType("unit-dwarven-runesmith", {
 	BluntDamage = true,
 	CanCastSpell = {"spell-infusion"},
 	AutoCastActive = {"spell-infusion"},
-	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -375,7 +375,7 @@ DefineUnitType("unit-dwarven-runemaster", {
 	BluntDamage = true,
 	CanCastSpell = {"spell-infusion"},
 	AutoCastActive = {"spell-infusion"},
-	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -457,7 +457,7 @@ DefineUnitType("unit-dwarven-arcanister", {
 	BluntDamage = true,
 	CanCastSpell = {"spell-infusion"},
 	AutoCastActive = {"spell-infusion"},
-	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-runesmiths-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -536,7 +536,7 @@ DefineUnitType("unit-dwarven-militia", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-boots", "unit-cheese", "unit_meat"},
 	Sounds = {
 		"acknowledge", "dwarven-miner-acknowledge",
 		"ready", "dwarven-miner-ready",
@@ -575,7 +575,7 @@ DefineUnitType("unit-dwarven-axefighter", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "a",
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -714,7 +714,7 @@ DefineUnitType("unit-dwarven-steelclad", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	Variations = {
@@ -846,7 +846,7 @@ DefineUnitType("unit-dwarven-thane", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -923,7 +923,7 @@ DefineUnitType("unit-dwarven-guard", {
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "g",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -960,7 +960,7 @@ DefineUnitType("unit-dwarven-stalwart", {
 	PierceDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -997,7 +997,7 @@ DefineUnitType("unit-dwarven-sentinel", {
 	PierceDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -1034,7 +1034,7 @@ DefineUnitType("unit-dwarven-scout", {
 	ButtonKey = "s",
 	RequirementsString = "Lumber Mill",
 	StartingAbilities = {"upgrade-scouting"},
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",
@@ -1113,7 +1113,7 @@ DefineUnitType("unit-dwarven-pathfinder", {
 	WeaponClasses = {"throwing_axe"},
 	HackDamage = true,
 	StartingAbilities = {"upgrade-scouting"},
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "orange-hair",
@@ -1165,7 +1165,7 @@ DefineUnitType("unit-dwarven-explorer", {
 	WeaponClasses = {"throwing_axe"},
 	HackDamage = true,
 	StartingAbilities = {"upgrade-scouting"},
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {
 		{
 			"variation-id", "orange-hair",
@@ -1211,7 +1211,7 @@ DefineUnitType("unit-dwarven-thunderer", {
 	},
 	Corpse = "unit-dwarven-dead-body",
 	ButtonKey = "t",
-	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"}
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"}
 } )
 
 DefineUnitType("unit-dwarven-yale-rider", {
@@ -1231,7 +1231,7 @@ DefineUnitType("unit-dwarven-yale-rider", {
 	HackDamage = true,
 	ButtonKey = "y",
 	RequirementsString = "Smithy and Yale Pen",
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -1324,7 +1324,7 @@ DefineUnitType("unit-dwarven-yale-lord", {
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "red-hair-gray-fur",
@@ -1434,7 +1434,7 @@ DefineUnitType("unit-dwarven-witness", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -1469,7 +1469,7 @@ DefineUnitType("unit-dwarven-annalist", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -1504,7 +1504,7 @@ DefineUnitType("unit-dwarven-loremaster", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -1531,7 +1531,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", {
 	HackDamage = true,
 	ButtonKey = "p",
 	RequirementsString = "Bastion and Lumber Mill",
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",

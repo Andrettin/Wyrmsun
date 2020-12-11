@@ -47,7 +47,7 @@ DefineUnitType("unit-gnomish-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "s",
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit_meat", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -167,7 +167,7 @@ DefineUnitType("unit-gnomish-recruit", {
 	Points = 40,
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClasses = {"thrusting_sword", "sword"},
-	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
 	ButtonKey = "t",
@@ -213,7 +213,7 @@ DefineUnitType("unit-gnomish-duelist", {
 	Evasion = 13,
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClasses = {"thrusting_sword", "sword"},
-	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
 	Variations = {
@@ -259,7 +259,7 @@ DefineUnitType("unit-gnomish-master-at-arms", {
 	WeaponClasses = {"thrusting_sword", "sword"},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
+	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
 	Variations = {
@@ -302,7 +302,7 @@ DefineUnitType("unit-gnomish-herbalist", {
 	Corpse = "unit-gnomish-dead-body",
 	CanCastSpell = {"spell-herbal-cure", "spell-portent"},
 	AutoCastActive = {"spell-herbal-cure"},
-	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	HackDamage = true,
 	ButtonPos = 2,
 	ButtonKey = "h",

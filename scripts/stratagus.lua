@@ -1080,7 +1080,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Food") == false) then
 			AddTrigger("tip-food",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-cheese" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-carrots")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-cheese" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-carrots" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_meat")) then
 						return true
 					else
 						return false

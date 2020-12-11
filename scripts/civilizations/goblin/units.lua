@@ -49,7 +49,7 @@ DefineUnitType("unit-goblin-worker", {
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
 	ButtonKey = "d",
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -158,7 +158,7 @@ DefineUnitType("unit-goblin-militia", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"sword"},
 	HackDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-boots", "unit-cheese", "unit_meat"},
 	Variations = {
 		{
 			"variation-id", "bald"
@@ -197,7 +197,7 @@ DefineUnitType("unit-goblin-magnate", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"dagger"},
 	PierceDamage = true,
-	AiDrops = {"unit-boots", "unit-cheese"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -230,7 +230,7 @@ DefineUnitType("unit-goblin-thief", {
 	WeaponClasses = {"dagger"},
 	PierceDamage = true,
 	ButtonKey = "t",
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -265,7 +265,7 @@ DefineUnitType("unit-goblin-swordsman", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "s",
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -299,7 +299,7 @@ DefineUnitType("unit-goblin-barbarian", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -334,7 +334,7 @@ DefineUnitType("unit-goblin-warlord", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -369,7 +369,7 @@ DefineUnitType("unit-goblin-spearman", {
 	NightSightRangeBonus = 1,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	ButtonKey = "i",
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-goblin-wooden-shield", "unit-goblin-rimmed-shield", "unit-goblin-embossed-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -404,7 +404,7 @@ DefineUnitType("unit-goblin-archer", {
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "a",
-	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -441,7 +441,7 @@ DefineUnitType("unit-goblin-headhunter", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
-	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -477,7 +477,7 @@ DefineUnitType("unit-goblin-shadowstalker", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
-	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -507,7 +507,7 @@ DefineUnitType("unit-goblin-gunpowder-infantry", {
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	Corpse = "unit-goblin-dead-body",
-	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -535,7 +535,7 @@ DefineUnitType("unit-goblin-shaman", {
 	StartingAbilities = {"upgrade-terror", "upgrade-wither"},
 	CanCastSpell = {"spell-terror", "spell-wither"},
 	AutoCastActive = {"spell-terror", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
 	HackDamage = true,
 	ButtonKey = "s",
 	Sounds = {

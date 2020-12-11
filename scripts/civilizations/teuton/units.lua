@@ -48,7 +48,7 @@ DefineUnitType("unit-teuton-worker", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat"},
 	ButtonKey = "b",
 	CanGatherResources = {
 		{
@@ -158,7 +158,7 @@ DefineUnitType("unit-teuton-swordsman", {
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
 	ButtonKey = "w",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -316,7 +316,7 @@ DefineUnitType("unit-teuton-veteran-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -476,7 +476,7 @@ DefineUnitType("unit-teuton-heroic-swordsman", {
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -630,7 +630,7 @@ DefineUnitType("unit-teuton-spearman", {
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	ButtonKey = "e",
 	Variations = {
 		{
@@ -749,7 +749,7 @@ DefineUnitType("unit-teuton-archer", {
 	AutoCastActive = {"spell-precise-shot"},
 	ButtonKey = "a",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
-	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair"
@@ -780,7 +780,7 @@ DefineUnitType("unit-teuton-gunpowder-infantry", {
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-hand-cannon", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "1"
@@ -827,7 +827,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "k",
 	RequirementsString = "Smithy and Stables",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
@@ -866,7 +866,7 @@ DefineUnitType("unit-teuton-knight-lord", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",

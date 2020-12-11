@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Bows now have specific graphics for when they are on the ground.
+- Added meat food item.
 
 * Miscellaneous
 - Reduced the time of day color effects, so that the graphics aren't too dark during night.

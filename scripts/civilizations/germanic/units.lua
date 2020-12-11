@@ -49,7 +49,7 @@ DefineUnitType("unit-germanic-worker", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace", "axe"},
 	BluntDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold", -- this needs to be on top
@@ -141,7 +141,7 @@ DefineUnitType("unit-germanic-warrior", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -259,7 +259,7 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -379,7 +379,7 @@ DefineUnitType("unit-germanic-chieftain", {
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -510,7 +510,7 @@ DefineUnitType("unit-germanic-spearman", {
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"layer", "hair",
@@ -650,7 +650,7 @@ DefineUnitType("unit-germanic-archer", {
 	AutoCastActive = {"spell-precise-shot"},
 	RequirementsString = "Carpenter's Shop",
 	ButtonKey = "s",
-	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",

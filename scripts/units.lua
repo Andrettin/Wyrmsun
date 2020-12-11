@@ -4349,7 +4349,7 @@ DefineUnitType("unit-template-farm", {
 --	HydratingAura = 1,
 	Corpse = "unit-destroyed-2x2-place",
 	ExplodeWhenKilled = "missile-explosion",
-	Drops = {"unit-cheese", "unit-carrots", "unit-wood-pile"},
+	Drops = {"unit-cheese", "unit-carrots", "unit_meat", "unit-wood-pile"},
 	Type = "land",
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
@@ -4866,7 +4866,7 @@ DefineUnitType("unit-template-market", {
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	BuildingRules = {

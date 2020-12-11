@@ -15,6 +15,7 @@ unit_gnoll_warrior = {
 	ai_drops = {
 		unit_boots
 		unit_cheese
+		unit_meat
 		unit_potion_of_healing
 	}
 	default_equipment = {

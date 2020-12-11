@@ -63,7 +63,7 @@ DefineUnitType("unit-frank-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -219,7 +219,7 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword", "thrusting_sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -377,7 +377,7 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 	HackDamage = true,
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -532,7 +532,7 @@ DefineUnitType("unit-frank-spearman", {
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -663,7 +663,7 @@ DefineUnitType("unit-frank-horseman", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	ButtonKey = "t",
 	Corpse = "unit-human-dead-body",
 	RequirementsString = "Smithy and Stables",
@@ -701,7 +701,7 @@ DefineUnitType("unit-frank-knight-lord", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",

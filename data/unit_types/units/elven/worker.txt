@@ -17,7 +17,7 @@ unit_elven_worker = {
 		unit_mining_pick
 		unit_boots
 		unit_cheese
-		unit_carrots
+		unit_meat
 	}
 	default_equipment = {
 		boots = unit_boots
