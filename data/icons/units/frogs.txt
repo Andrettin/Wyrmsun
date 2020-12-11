@@ -1,0 +1,34 @@
+frog_green = {
+	file = "icons/units/fauna/frog.png"
+	frame = 0
+}
+
+frog_brown = {
+	file = "icons/units/fauna/frog.png"
+	frame = 1
+}
+
+frog_red = {
+	file = "icons/units/fauna/frog.png"
+	frame = 2
+}
+
+frog_yellow = {
+	file = "icons/units/fauna/frog.png"
+	frame = 3
+}
+
+frog_blue = {
+	file = "icons/units/fauna/frog.png"
+	frame = 5
+}
+
+frog_purple = {
+	file = "icons/units/fauna/frog.png"
+	frame = 6
+}
+
+frog_teal = {
+	file = "icons/units/fauna/frog.png"
+	frame = 7
+}

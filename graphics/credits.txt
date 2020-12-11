@@ -700,6 +700,8 @@
 /graphics/icons/units/derro/worker.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/elven/archer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/elven/worker.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/fauna/crow.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/fauna/frog.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/rat.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/rat_swamp.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/yale.png (by Jinn) (licensed under the CC0)
