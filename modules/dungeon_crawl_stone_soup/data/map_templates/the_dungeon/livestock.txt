@@ -14,8 +14,18 @@ livestock = { #grunt_livestock
 				unit_horse = 1 #yak w:1
 			}
 		}
-		d = unit_cheese #ration q:2
-		e = unit_cheese #ration q:1
+		d = {
+			unit_types = { #ration q:2
+				unit_cheese
+				unit_meat
+			}
+		}
+		e = {
+			unit_types = { #ration q:1
+				unit_cheese
+				unit_meat
+			}
+		}
 	}
 	character_substitutions = {
 		#character conversions

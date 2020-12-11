@@ -16,7 +16,7 @@ slaughterhouse = {
 		2 = unit_germanic_warrior #generate_awake human ; dagger | hand axe #represents a butcher
 		d = {
 			unit_types = {
-				unit_cheese = 5 #ration w:5 #meat would be more fitting than cheese here
+				unit_meat = 5 #ration w:5
 				none
 			}
 		}
