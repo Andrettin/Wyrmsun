@@ -335,10 +335,10 @@ DefineUnitType("unit-frog", {
 	Name = "Frog",
 	Parent = "unit-template-fauna-unit",
 	Species = "frog",
-	--Description = "Frog",
-	--Background = " A \"Frog\" is a kind of \"Amphibian\".",
+	Description = "Frogs are amphibians who eat insects.",
 	Image = {"file", "graphics/neutral/units/frog.png", "size", {18, 18}},
-	Animations = "animations-frog", Icon = "icon-slime",
+	Animations = "animations-frog",
+	Icon = "frog_green",
 	Speed = 4,
 	HitPoints = 5,
 	DrawLevel = 35,
@@ -352,7 +352,6 @@ DefineUnitType("unit-frog", {
 	Points = 2,
 	Demand = 1,
 	Type = "land",
-	IsNotSelectable = true,
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
@@ -360,34 +359,39 @@ DefineUnitType("unit-frog", {
 	RandomMovementDistance = 1,
 	Flesh = true,
 	Insectivore = true,
-	HiddenInEditor = true,
 	Variations = {
 		{
 			"variation-id", "green"
 		},
 		{
 			"variation-id", "teal",
-			"file", "graphics/neutral/units/frog_teal.png"
+			"file", "graphics/neutral/units/frog_teal.png",
+			"icon", "frog_teal"
 		},
 		{
 			"variation-id", "brown",
-			"file", "graphics/neutral/units/frog_brown.png"
+			"file", "graphics/neutral/units/frog_brown.png",
+			"icon", "frog_brown"
 		},
 		{
 			"variation-id", "blue",
-			"file", "graphics/neutral/units/frog_blue.png"
+			"file", "graphics/neutral/units/frog_blue.png",
+			"icon", "frog_blue"
 		},
 		{
 			"variation-id", "purple",
-			"file", "graphics/neutral/units/frog_purple.png"
+			"file", "graphics/neutral/units/frog_purple.png",
+			"icon", "frog_purple"
 		},
 		{
 			"variation-id", "red",
-			"file", "graphics/neutral/units/frog_red.png"
+			"file", "graphics/neutral/units/frog_red.png",
+			"icon", "frog_red"
 		},
 		{
 			"variation-id", "yellow",
-			"file", "graphics/neutral/units/frog_yellow.png"
+			"file", "graphics/neutral/units/frog_yellow.png",
+			"icon", "frog_yellow"
 		}
 	},
 	Sounds = {
@@ -1226,8 +1230,10 @@ DefineUnitType("unit-crow", {
 	Name = "Crow",
 	Parent = "unit-template-fauna-unit",
 	Species = "crow",
+	Description = "Crows are carrion-eating birds.",
 	Image = {"file", "neutral/units/bird_black.png", "size", {32, 32}},
-	Animations = "animations-bird", Icon = "icon-gryphon",
+	Animations = "animations-bird",
+	Icon = "crow",
 	Strength = 1,
 	Dexterity = 15,
 	Intelligence = 3,
@@ -1243,7 +1249,6 @@ DefineUnitType("unit-crow", {
 	Points = 1,
 	Demand = 1,
 	Type = "fly",
-	IsNotSelectable = true,
 	RightMouseAction = "move",
 	CanAttack = true,
 	CanTargetLand = true,
@@ -1254,7 +1259,6 @@ DefineUnitType("unit-crow", {
 	Insectivore = true,
 	Detritivore = true,	
 	PierceDamage = true,
-	HiddenInEditor = true,
 	Sounds = {
 		"selected", "crow-selected",
 		"acknowledge", "crow-selected",

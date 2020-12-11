@@ -140,6 +140,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Elven Worker unit.
 - Dwarven Miners can no longer equip axes.
 - Priest units now have a slower attack rate.
+- Frogs and crows now have their own icons, and are selectable.
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
