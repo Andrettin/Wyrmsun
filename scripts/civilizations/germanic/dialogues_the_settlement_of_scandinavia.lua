@@ -25,14 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("on-the-vanaquisl-introduction", {
+DefineDialogue("on_the_vanaquisl_introduction", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
 			"text", "I have won every battle I have taken part in... but they were no more than squabbles compared to the aim I set before myself: the conquest of Vanaland. That country is peopled by a strange group of elf-worshippers... My great army has been assembled, and the time has come to make the river run red with their blood. Their lands shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "on-the-vanaquisl")
+					SetPlayerData(trigger_player, "AcceptQuest", "on_the_vanaquisl")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana-tribe"))
 				end
 			}
@@ -58,7 +58,7 @@ DefineDialogue("asa-raid", {
 	}
 })
 
-DefineDialogue("on-the-vanaquisl-vanaquisl-sighted", { -- unused, since the Asa begin near the Vanaquisl river as well, so the line wouldn't make much sense; would be triggered when an Asa unit gets close to the Vanaquisl river, or close to the Tanais/Vanaquisl Vana settlement
+DefineDialogue("on_the_vanaquisl_vanaquisl_sighted", { -- unused, since the Asa begin near the Vanaquisl river as well, so the line wouldn't make much sense; would be triggered when an Asa unit gets close to the Vanaquisl river, or close to the Tanais/Vanaquisl Vana settlement
 	Nodes = {
 		{
 			"speaker", "character", "voden",
@@ -67,7 +67,7 @@ DefineDialogue("on-the-vanaquisl-vanaquisl-sighted", { -- unused, since the Asa 
 	}
 })
 
-DefineDialogue("on-the-vanaquisl-vana-sighted", {
+DefineDialogue("on_the_vanaquisl_vana_sighted", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
@@ -86,7 +86,7 @@ DefineDialogue("on-the-vanaquisl-vana-sighted", {
 	}
 })
 
-DefineDialogue("on-the-vanaquisl-victory", {
+DefineDialogue("on_the_vanaquisl_victory", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
@@ -114,7 +114,7 @@ DefineDialogue("on-the-vanaquisl-victory", {
 			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!",
 			"option-effects", {
 				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on_the_vanaquisl") then
 						CallDialogue("campaign-victory", trigger_player)
 					end
 				end
@@ -123,7 +123,7 @@ DefineDialogue("on-the-vanaquisl-victory", {
 	}
 })
 
-DefineDialogue("westward-migration-introduction", {
+DefineDialogue("westward_migration_introduction", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
@@ -134,7 +134,7 @@ DefineDialogue("westward-migration-introduction", {
 			"text", "Travelling northwards, we came to this land crossed by a great river. And yet, the priests say that our journey is not yet ended, that the northern land of our destinity is not this one. Settlement here would certainly be difficult, for this area is filled with natives who are as troublesome as they are numerous. We hear of more docile peoples farther to the west, who will be more easily conquered... But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "westward-migration")
+					SetPlayerData(trigger_player, "AcceptQuest", "westward_migration")
 					
 					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth"))
 					SetUnitVariable(unit, "TTL", 600)
@@ -147,7 +147,7 @@ DefineDialogue("westward-migration-introduction", {
 	}
 })
 
-DefineDialogue("westward-migration-natives-sighted", {
+DefineDialogue("westward_migration_natives_sighted", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
@@ -166,7 +166,7 @@ DefineDialogue("westward-migration-natives-sighted", {
 	}
 })
 
-DefineDialogue("westward-migration-native-settlement-sighted", {
+DefineDialogue("westward_migration_native_settlement_sighted", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
@@ -175,31 +175,31 @@ DefineDialogue("westward-migration-native-settlement-sighted", {
 	}
 })
 
-DefineDialogue("westward-migration-workers-killed", {
+DefineDialogue("westward_migration_workers_killed", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
 			"text", "I have failed to protect my people, now my tribe is done for...",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "FailQuest", "westward-migration")
+					SetPlayerData(trigger_player, "FailQuest", "westward_migration")
 				end
 			}
 		}
 	}
 })
 
-DefineDialogue("westward-migration-victory", {
+DefineDialogue("westward_migration_victory", {
 	Nodes = {
 		{
 			"speaker", "character", "voden",
 			"text", "Our people has been safely led across these hostile lands. Onwards to a new realm!",
 			"option-effects", {
 				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward-migration") then
+					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
 						CallDialogue("campaign-victory", trigger_player)
 					end
-					SetPlayerData(trigger_player, "CompleteQuest", "westward-migration")
+					SetPlayerData(trigger_player, "CompleteQuest", "westward_migration")
 				end
 			}
 		}

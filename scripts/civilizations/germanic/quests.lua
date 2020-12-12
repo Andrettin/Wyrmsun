@@ -25,16 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("on-the-vanaquisl", {
+DefineQuest("on_the_vanaquisl", {
 	Name = "On the Vanaquisl",
 	Icon = "icon-germanic-warrior",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	CompletionEffects = function(s)
-		CallDialogue("on-the-vanaquisl-victory", trigger_player)
+		CallDialogue("on_the_vanaquisl_victory", trigger_player)
 	end,
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on-the-vanaquisl") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on_the_vanaquisl") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
@@ -53,13 +53,13 @@ DefineQuest("on-the-vanaquisl", {
 	Unobtainable = true
 })
 
-DefineQuest("westward-migration", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+DefineQuest("westward_migration", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward-migration") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,

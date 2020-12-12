@@ -30,7 +30,7 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	Icon = "icon-germanic-warrior",
 	Description = "Complete the On the Vanaquisl, Westward Migration and The Settlement of Scandinavia scenarios.",
 	PlayerColor = "orange",
-	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "the_settlement_of_scandinavia"}
+	RequiredQuests = {"on_the_vanaquisl", "westward_migration", "the_settlement_of_scandinavia"}
 })
 
 DefineAchievement("heimdalls-progeny", {

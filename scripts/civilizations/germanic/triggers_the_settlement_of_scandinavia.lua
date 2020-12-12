@@ -27,7 +27,7 @@
 
 -- On the Vanaquisl introduction
 -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger("on-the-vanaquisl-introduction",
+AddTrigger("on_the_vanaquisl_introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe", true)) then
@@ -49,16 +49,16 @@ AddTrigger("on-the-vanaquisl-introduction",
 			vana_defender_quantity = 36
 		end
 		CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
-		CallDialogue("on-the-vanaquisl-introduction", trigger_player)
+		CallDialogue("on_the_vanaquisl_introduction", trigger_player)
 		CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
 		return false
 	end
 )
 
-AddTrigger("on-the-vanaquisl-vana-sighted",
+AddTrigger("on_the_vanaquisl_vana_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("voden", i) ~= nil and GetFactionExists("vana-tribe") and GetPlayerData(i, "HasQuest", "on-the-vanaquisl")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("voden", i) ~= nil and GetFactionExists("vana-tribe") and GetPlayerData(i, "HasQuest", "on_the_vanaquisl")) then
 				local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
@@ -74,12 +74,12 @@ AddTrigger("on-the-vanaquisl-vana-sighted",
 		return false
 	end,
 	function()
-		CallDialogue("on-the-vanaquisl-vana-sighted", trigger_player)
+		CallDialogue("on_the_vanaquisl_vana_sighted", trigger_player)
 		return false
 	end
 )
 
-AddTrigger("westward-migration-introduction",
+AddTrigger("westward_migration_introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe", true)) then
@@ -102,15 +102,15 @@ AddTrigger("westward-migration-introduction",
 		end
 		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-warrior", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
 		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-archer", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
-		CallDialogue("westward-migration-introduction", trigger_player)
+		CallDialogue("westward_migration_introduction", trigger_player)
 		return false
 	end
 )
 
-AddTrigger("westward-migration-natives-sighted",
+AddTrigger("westward_migration_natives_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetFactionExists("uralic-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration") and GetFactionExists("uralic-tribe")) then
 				local uncount = GetUnits(GetFactionPlayer("uralic-tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
@@ -126,15 +126,15 @@ AddTrigger("westward-migration-natives-sighted",
 		return false
 	end,
 	function() 
-		CallDialogue("westward-migration-natives-sighted", trigger_player)
+		CallDialogue("westward_migration_natives_sighted", trigger_player)
 		return false
 	end
 )
 
-AddTrigger("westward-migration-native-settlement-sighted",
+AddTrigger("westward_migration_native_settlement_sighted",
 	function()
 		for i = 0, (PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetFactionExists("uralic-tribe") and FindHero("voden", i) ~= nil) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration") and GetFactionExists("uralic-tribe") and FindHero("voden", i) ~= nil) then
 				local voden_unit = FindHero("voden", i)
 				if (GetNumUnitsAt(GetFactionPlayer("uralic-tribe"), "buildings", {GetUnitVariable(voden_unit, "PosX") - 3, GetUnitVariable(voden_unit, "PosY") - 3}, {GetUnitVariable(voden_unit, "PosX") + 3, GetUnitVariable(voden_unit, "PosY") + 3}, GetUnitVariable(voden_unit, "MapLayer")) > 0) then
 					trigger_player = i
@@ -145,15 +145,15 @@ AddTrigger("westward-migration-native-settlement-sighted",
 		return false
 	end,
 	function() 
-		CallDialogue("westward-migration-native-settlement-sighted", trigger_player)
+		CallDialogue("westward_migration_native_settlement_sighted", trigger_player)
 		return false
 	end
 )
 
-AddTrigger("westward-migration-workers-killed",
+AddTrigger("westward_migration_workers_killed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration") and GetPlayerData(i, "UnitTypesCount", "unit-germanic-worker") < 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration") and GetPlayerData(i, "UnitTypesCount", "unit-germanic-worker") < 1) then
 				trigger_player = i
 				return true
 			end
@@ -161,15 +161,15 @@ AddTrigger("westward-migration-workers-killed",
 		return false
 	end,
 	function() 
-		CallDialogue("westward-migration-workers-killed", trigger_player)
+		CallDialogue("westward_migration_workers_killed", trigger_player)
 		return false
 	end
 )
 
-AddTrigger("westward-migration-victory",
+AddTrigger("westward_migration_victory",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward-migration")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration")) then
 				if (GetNumUnitsAt(i, "unit-germanic-worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth")) > 0) then
 					trigger_player = i
 					return true
@@ -179,7 +179,7 @@ AddTrigger("westward-migration-victory",
 		return false
 	end,
 	function() 
-		CallDialogue("westward-migration-victory", trigger_player)
+		CallDialogue("westward_migration_victory", trigger_player)
 		return false
 	end
 )
