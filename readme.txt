@@ -113,7 +113,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Quests can now be accepted in a sub-menu in the town hall interface.
 - Added dozens of new side-quests for gathering resources, building structures, researching upgrades and hunting predators. These quests are available for the Anglo-Saxon, Germanic, Gothic, Norse, Suebi and Teutonic civilizations, and provide flavor based on each civilization's language.
-- The quest pool is now updated each minute, instead of each half-minute.
+- The quest pool is now updated each minute, instead of each half-minute, to give the player a bit more time to pick a quest before the pool changes.
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.
