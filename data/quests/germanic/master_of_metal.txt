@@ -1,0 +1,21 @@
+master_of_metal = {
+	name = "Master of Metal"
+	icon = icon_germanic_smithy
+	player_color = orange
+	description = "Control over metalworking is essential for a chieftain's status to be maintained. Building a smithy will foster your mastery over metal and strengthen your support."
+	hint = "Select a [civilization:germanic.class_unit_type:worker.name], press the Build Structure button and then click on the Build [civilization:germanic.class_unit_type:smithy.name] button to build the structure required for this quest."
+	conditions = {
+		civilization = germanic
+		not = {
+			unit_class = smithy
+		}
+	}
+	objectives = {
+		build_units = {
+			unit_class = smithy
+		}
+	}
+	completion_effects = {
+		copper += 1000
+	}
+}

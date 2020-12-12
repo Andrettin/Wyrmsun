@@ -382,36 +382,6 @@ DefineQuest("journey-to-heimdalls-stones", {
 	Competitive = true
 })
 
-DefineQuest("master-of-metal", {
-	Name = "Master of Metal",
-	Icon = "icon-germanic-smithy",
-	Description = "Control over metalworking is essential for a chieftain's status to be maintained. Building a smithy will foster your mastery over metal and attract followers.",
-	World = "earth",
-	Civilization = "germanic",
-	PlayerColor = "yellow",
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-smithy") == 0 and CheckDependency(trigger_player, "unit-germanic-smithy")) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1000)
-		unit = CreateUnit("unit-germanic-worker", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", trigger_player, {CPlayer:GetPlayer(trigger_player).StartPos.x, CPlayer:GetPlayer(trigger_player).StartPos.y})
-	end,
-	Rewards = "+1000 Copper, +2 Buras",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Smithy button to build the structure required for this quest.",
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Smithy",
-			"quantity", 1,
-			"unit-type", "unit-germanic-smithy"
-		}
-	}
-})
-
 DefineQuest("subjugate-the-karlings", {
 	Name = "Subjugate the Karlings",
 	Icon = "icon-germanic-worker",
