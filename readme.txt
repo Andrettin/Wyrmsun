@@ -115,6 +115,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added dozens of new side-quests for gathering resources, building structures, researching upgrades and hunting predators. These quests are available for the Anglo-Saxon, Germanic, Gothic, Norse, Suebi and Teutonic civilizations, and provide flavor based on each civilization's language.
 - The quest pool is now updated each minute, instead of each half-minute, to give the player a bit more time to pick a quest before the pool changes.
 - The Master of Metal quest no longer grants 2 Buras on completion, providing just the copper reward now.
+- The House of Seven Fathers quest is now available only for the Norse civilization (previously it was also available for the Germanic civilization).
 
 * Scenarios
 - Other kobolds will no longer attack the Grafvitning Tribe, to prevent it from being destroyed too soon in the The First Dwarves scenario.

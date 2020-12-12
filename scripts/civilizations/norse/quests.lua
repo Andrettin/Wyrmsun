@@ -126,9 +126,9 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 	PlayerColor = "red",
 	Conditions = function(s)
 		if (
-			(GetPlayerData(trigger_player, "RaceName") == "germanic" or GetPlayerData(trigger_player, "RaceName") == "norse")
-			and (GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 or GetPlayerData(trigger_player, "UnitTypesCount", "unit-teuton-worker") > 0)
-			and (CheckDependency(trigger_player, "unit-germanic-farm") or CheckDependency(trigger_player, "unit-norse-farm"))
+			GetPlayerData(trigger_player, "RaceName") == "norse"
+			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-teuton-worker") > 0
+			and CheckDependency(trigger_player, "unit-norse-farm")
 			and GetUniqueItemData("the-house-of-seven-fathers", "CanDrop")
 		) then
 			return true
@@ -137,11 +137,7 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 500)
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic") then
-			SetUnitVariable(FindUnit("unit-germanic-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
-		else
-			SetUnitVariable(FindUnit("unit-norse-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
-		end
+		SetUnitVariable(FindUnit("unit-norse-farm", trigger_player, false, true), "Unique", "the-house-of-seven-fathers")
 	end,
 	Rewards = "+500 Copper, the Farm will become the The House of Seven Fathers unique building",
 	Hint = "Select a worker, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest.",
