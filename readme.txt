@@ -143,6 +143,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven Miners can no longer equip axes.
 - Priest units now have a slower attack rate.
 - Frogs and crows now have their own icons, and are selectable.
+- A unit's type name will now have its civilization prefixed to it if the type's civilization is different than that of its owning player. For example: a goblin "Swordsman" which is recruited as a mercenary by a dwarven player will then be called a "Goblin Swordsman".
 
 * User Interface
 - Replaced the main menu background with a new one made by Jinn.
