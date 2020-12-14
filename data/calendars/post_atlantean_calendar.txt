@@ -1,0 +1,4 @@
+post_atlantean_calendar = { #calendar starting with the fall of Atlantis
+	name = "Post-Atlantean Calendar"
+	year_offset = -9590 #as per Plato's dialogue "Critias", Atlantis fell 9000 years before the telling of the Atlantis story by Egyptian priests to Solon, which occurred c. 590 BC
+}
