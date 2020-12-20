@@ -63,14 +63,14 @@ neutral = {
 	}
 	
 	force_type_weights = {
-		land_force = 3
-		naval_force = 1
-		air_force = 1
+		land = 3
+		naval = 1
+		air = 1
 	}
 	
 	force_templates = {
 		{
-			force_type = land_force
+			force_type = land
 			priority = 130
 			units = {
 				infantry = 4
@@ -81,7 +81,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 130
 			units = {
 				infantry = 4
@@ -92,7 +92,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 120
 			units = {
 				infantry = 4
@@ -102,7 +102,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 120
 			units = {
 				infantry = 4
@@ -112,7 +112,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 6
@@ -121,7 +121,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 6
@@ -130,7 +130,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 6
@@ -139,7 +139,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 6
@@ -148,7 +148,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 4
@@ -157,7 +157,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 115
 			units = {
 				infantry = 4
@@ -166,7 +166,7 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 110
 			units = {
 				infantry = 6
@@ -174,21 +174,21 @@ neutral = {
 			}
 		}
 		{
-			force_type = land_force
+			force_type = land
 			priority = 100
 			units = {
 				infantry = 3
 			}
 		}
 		{
-			force_type = naval_force
+			force_type = naval
 			priority = 100
 			units = {
 				siege_warship = 3
 			}
 		}
 		{
-			force_type = air_force
+			force_type = air
 			priority = 100
 			units = {
 				flying_rider = 3

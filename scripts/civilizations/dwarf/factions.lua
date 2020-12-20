@@ -138,7 +138,7 @@ DefineFaction("shorbear-clan", {
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
 	ForceTemplates = {
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 125,
 			"unit-class", "infantry", 2,
 			"unit-class", "spearman", 1,
@@ -146,14 +146,14 @@ DefineFaction("shorbear-clan", {
 			"unit-class", "siege_engine", 1 -- as a clan specialized in toolcrafting, it makes sense for them to use siege weapons
 		},
 		{ -- from Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan)
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 120,
 			"unit-class", "infantry", 2,
 			"unit-class", "spearman", 1,
 			"unit-class", "gunpowder_infantry", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 115,
 			"unit-class", "infantry", 2,
 			"unit-class", "spearman", 1,
@@ -161,25 +161,25 @@ DefineFaction("shorbear-clan", {
 			"unit-class", "siege_engine", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 110,
 			"unit-class", "infantry", 2,
 			"unit-class", "spearman", 1,
 			"unit-class", "shooter", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 100,
 			"unit-class", "infantry", 2,
 			"unit-class", "spearman", 1
 		},
 		{
-			"force-type", "naval-force",
+			"force-type", "naval",
 			"priority", 100,
 			"unit-class", "siege_warship", 1
 		},
 		{
-			"force-type", "air-force",
+			"force-type", "air",
 			"priority", 100,
 			"unit-class", "flying_rider", 1
 		}
@@ -254,55 +254,55 @@ DefineFaction("kal-kartha", {
 	},
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Siege of Kal Kartha)
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 120,
 			"unit-class", "infantry", 2,
 			"unit-class", "gunpowder_infantry", 1
 		},
 		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Court of Karrag)
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 120,
 			"unit-class", "infantry", 2, -- a fighter and an ulfserker
 			"unit-class", "gunpowder_infantry", 1
 		},
 		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Underlevels)
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 120,
 			"unit-class", "infantry", 1,
 			"unit-class", "spearman", 1,
 			"unit-class", "gunpowder_infantry", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 110,
 			"unit-class", "infantry", 2,
 			"unit-class", "shooter", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 110,
 			"unit-class", "infantry", 1,
 			"unit-class", "spearman", 1,
 			"unit-class", "shooter", 1
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 100,
 			"unit-class", "infantry", 2
 		},
 		{
-			"force-type", "land-force",
+			"force-type", "land",
 			"priority", 100,
 			"unit-class", "infantry", 1,
 			"unit-class", "spearman", 1
 		},
 		{
-			"force-type", "naval-force",
+			"force-type", "naval",
 			"priority", 100,
 			"unit-class", "siege_warship", 1
 		},
 		{
-			"force-type", "air-force",
+			"force-type", "air",
 			"priority", 100,
 			"unit-class", "flying_rider", 1
 		}
