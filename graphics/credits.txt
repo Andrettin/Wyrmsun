@@ -1913,6 +1913,7 @@
 /graphics/units/orc/corpse.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/orc/sea_orc.png (by Gregor-Mack) (licensed under the CC0)
 /graphics/units/orc/spearthrower.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/units/undead/skeleton_warrior.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/space_transport.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/welsh/icons/longbow.png (by Exidelo) (licensed under the CC0)
 /graphics/welsh/icons/longbow_2.png (by Exidelo) (licensed under the CC0)
