@@ -1113,7 +1113,7 @@ end
 
 function GetCivilizationAvailableFactions(civilization, faction_type)
 	if not (faction_type) then
-		faction_type = ""
+		faction_type = "none"
 	end
 
 	local civilization_factions = GetFactions(civilization, faction_type)
