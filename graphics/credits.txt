@@ -710,6 +710,7 @@
 /graphics/icons/units/fauna/yale_gray_fur.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/yale_white_fur.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/gnoll/warrior.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/hobgoblin/warrior.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/undead/skeleton.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button_large_grayed.png (by Jinn) (licensed under the CC0)
 /graphics/interface/default/button_large_normal.png (by Jinn) (licensed under the CC0)
