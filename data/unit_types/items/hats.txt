@@ -1,0 +1,26 @@
+unit_christmas_hat = {
+	name = "Christmas Hat"
+	parent = unit_template_item
+	icon = icon_christmas_hat
+	item_class = helmet
+	image_file = "neutral/items/christmas_hat.png"
+	frame_size = { 16 16 }
+	armor = 0
+	costs = {
+		copper = 100
+	}
+	conditions = {
+		or = {
+			season = winter
+			scripted_condition = is_christmas_season
+		}
+		or = {
+			upgrade = upgrade_deity_christian_god
+			upgrade = upgrade_deity_odin
+			upgrade = upgrade_deity_thor
+			upgrade = upgrade_deity_loki
+			upgrade = upgrade_deity_frey
+			upgrade = upgrade_deity_gathaarl
+		}
+	}
+}

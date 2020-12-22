@@ -58,7 +58,10 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Characters
-- Added "Mboytata" unique wyrm to Nidavellir, based on the fire serpent of the same name in Tupi mythology.
+- Added "Mboytata" unique wyrm to Nidavellir, based on the fire serpent of the same name from Tupi mythology.
+
+* Items
+- Christmas hats can now drop during the second half of December (in the real world), even if it isn't winter in-game.
 
 * Units
 - Added the Skeleton Warrior.
