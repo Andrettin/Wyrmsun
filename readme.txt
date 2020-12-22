@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused some of the triggers for the Westward Migration scenario to not work properly, making it uncompleteable.
 
 * Units
-- Added the Skeleton Warrior.
+- Added the Skeleton Warrior. This unit can only be placed via the editor or obtained via a cheat for now.
 
 -----------------------------------------------------------------------
 - 4.0.1
