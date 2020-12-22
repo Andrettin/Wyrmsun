@@ -1,0 +1,16 @@
+is_on_snowy_terrain = {
+	or = {
+		terrain = snow
+		terrain = ice
+		and = {
+			season = winter
+			or = {
+				terrain = dirt
+				terrain = dry_mud
+				terrain = grass
+				terrain = shallow_water
+				terrain = gray_shallow_water
+			}
+		}
+	}
+}

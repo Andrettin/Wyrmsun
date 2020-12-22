@@ -26,22 +26,17 @@ unit_elven_stronghold = {
 	}
 	variations = {
 		town_hall = {
-			forbidden_terrain_types = { snow }
-			forbidden_seasons = { winter }
-		}
-		town_hall_snow_winter = {
-			image_file = "buildings/elven/stronghold_snow.png"
-			terrain_types = {
-				dirt
-				dry_mud
-				grass
-				snow
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
 			}
-			seasons = { winter }
 		}
 		town_hall_snow = {
 			image_file = "buildings/elven/stronghold_snow.png"
-			terrain_types = { snow }
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
 		}
 	}
 }

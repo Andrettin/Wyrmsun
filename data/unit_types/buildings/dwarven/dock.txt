@@ -22,27 +22,16 @@ unit_dwarven_dock = {
 	#}
 	variations = {
 		dock = {
-			forbidden_terrain_types = { snow }
-			forbidden_seasons = { winter }
-		}
-		dock_snow_winter = {
-			image_file = "buildings/dwarven/dock_snow.png"
-			terrain_types = {
-				dirt
-				dry_mud
-				grass
-				snow
-				shallow_water
-				gray_shallow_water
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
 			}
-			seasons = { winter }
 		}
 		dock_snow = {
 			image_file = "buildings/dwarven/dock_snow.png"
-			terrain_types = {
-				snow
-				shallow_water
-				gray_shallow_water
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
 			}
 		}
 	}

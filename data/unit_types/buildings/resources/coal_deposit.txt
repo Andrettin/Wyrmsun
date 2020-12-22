@@ -9,22 +9,17 @@ unit_coal_deposit = {
 	given_resource = coal
 	variations = {
 		coal_deposit = {
-			forbidden_terrain_types = { snow }
-			forbidden_seasons = { winter }
-		}
-		coal_deposit_snow_winter = {
-			image_file = "buildings/neutral/coal_deposit_snow.png"
-			terrain_types = {
-				dirt
-				dry_mud
-				grass
-				snow
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
 			}
-			seasons = { winter }
 		}
 		coal_deposit_snow = {
 			image_file = "buildings/neutral/coal_deposit_snow.png"
-			terrain_types = { snow }
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
 		}
 	}
 }

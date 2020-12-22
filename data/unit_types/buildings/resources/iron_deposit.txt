@@ -9,22 +9,17 @@ unit_iron_deposit = {
 	given_resource = iron
 	variations = {
 		iron_deposit = {
-			forbidden_terrain_types = { snow }
-			forbidden_seasons = { winter }
-		}
-		iron_deposit_snow_winter = {
-			image_file = "buildings/neutral/iron_deposit_snow.png"
-			terrain_types = {
-				dirt
-				dry_mud
-				grass
-				snow
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
 			}
-			seasons = { winter }
 		}
 		iron_deposit_snow = {
 			image_file = "buildings/neutral/iron_deposit_snow.png"
-			terrain_types = { snow }
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
 		}
 	}
 }
