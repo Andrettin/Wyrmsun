@@ -1,0 +1,11 @@
+mboytata = { #fire serpent in Tupi mythology; Source: Pindaro Tasso Jatahy, "Mitteilungen des Deutsch-Südamerikanischen Instituts", vol. 6, "Die Ortsnamen Brasiliens und die Tupisprache", 1918, p. 66.
+	name = "Mboytata" #"Mboytatá", alternatively also "boitatá"
+	unit_type = unit_wyrm
+	
+	history = {
+		active = true
+		location = {
+			map_template = nidavellir
+		}
+	}
+}

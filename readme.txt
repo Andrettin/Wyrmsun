@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.2
 -----------------------------------------------------------------------
 
+* Characters
+- Added "Mboytata" unique wyrm to Nidavellir, based on the fire serpent of the same name in Tupi mythology.
+
 * Units
 - Added the Skeleton Warrior.
 
