@@ -151,6 +151,7 @@ DefineDialogue("westward_migration_natives_sighted", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
+			"speaker-player", "uralic-tribe",
 			"text", "Intruders! Get them!"
 		},
 		{
