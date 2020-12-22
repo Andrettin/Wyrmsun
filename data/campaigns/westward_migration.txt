@@ -1,0 +1,7 @@
+westward_migration = {
+	name = "Westward Migration"
+	description = "As food becomes scarce in the native steppes of the Asa, they must seek a migration route to the west."
+	faction = asa_tribe
+	start_date = -2900.10 #start during autumn
+	required_quests = { on_the_vanaquisl }
+}
