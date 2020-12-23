@@ -54,6 +54,10 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 4.0.3
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
 - 4.0.2
 -----------------------------------------------------------------------
 
@@ -61,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Mboytata" unique wyrm to Nidavellir, based on the fire serpent of the same name from Tupi mythology.
 
 * Items
-- Christmas hats can now drop during the second half of December (in the real world), even if it isn't winter in-game.
+- Christmas Hats can now drop during the second half of December (in the real world), even if it isn't winter in-game.
 
 * Scenarios
 - Fixed an issue which caused some of the triggers for the Westward Migration scenario to not work properly, making it uncompleteable.
