@@ -52,7 +52,7 @@ DefineCampaign("thors-servant", {
 DefineCampaign("ariovistus-ambition", {
 	Name = "Ariovistus' Ambition",
 	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
-	Faction = "suebi-tribe",
+	Faction = "suebi_tribe",
 	StartYear = -71,
 	MapTemplates = {
 		"earth", {3871, 821}, {256, 256}

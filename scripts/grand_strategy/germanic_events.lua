@@ -417,19 +417,19 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Vegdeg"},
 		OptionEffects = {
 			function(s)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi_tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi_tribe")
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe", "war")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi_tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi_tribe")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi_tribe", "war")
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi-tribe")
+				AcquireProvince(WorldMapProvinces.Brandenburg, "suebi_tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi_tribe")
 				GrandStrategyFaction = Factions.suebi_tribe
-				SetPlayerFaction(Factions.suebi_tribe.Civilization, "suebi-tribe")
+				SetPlayerFaction(Factions.suebi_tribe.Civilization, "suebi_tribe")
 			end
 		}
 	},

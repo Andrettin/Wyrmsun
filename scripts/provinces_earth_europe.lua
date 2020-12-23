@@ -56,7 +56,7 @@ DefineProvince("Alsace", {
 		"teuton", "holy-rome"				
 	},
 	HistoricalOwners = {
-		-61, "suebi", "suebi-tribe", -- The Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+		-61, "suebi", "suebi_tribe", -- The Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 		-58, "", "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 		-54, "gaul", "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -354,7 +354,7 @@ DefineProvince("Beira", {
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "suebi", "suebi-tribe", -- The Suebi were in possession of most of modern Portugal (pretty much everything up to the Tagus river) by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		450, "suebi", "suebi_tribe", -- The Suebi were in possession of most of modern Portugal (pretty much everything up to the Tagus river) by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		486, "goth", "visigothia", -- Portugal up to the Tagus river was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -463,7 +463,7 @@ DefineProvince("Bohemia", {
 	},
 	FactionCulturalNames = {
 		"suebi", "marcomanni-tribe", "Marcomannia",
-		"suebi", "suebi-tribe", "Marcomannia"
+		"suebi", "suebi_tribe", "Marcomannia"
 	},
 --	SettlementLocation = {520, 113}, -- Prague
 	Claims = {
@@ -525,17 +525,17 @@ DefineProvince("Brandenburg", {
 	},
 	FactionCulturalNames = {
 		"suebi", "semnone-tribe", "Semnonia",
-		"suebi", "suebi-tribe", "Semnonia"
+		"suebi", "suebi_tribe", "Semnonia"
 	},
 --	SettlementLocation = {518, 106}, -- Berlin
 	Claims = {
 		"suebi", "semnone-tribe",
-		"suebi", "suebi-tribe",
+		"suebi", "suebi_tribe",
 		"teuton", "brandenburg"
 	},
 	HistoricalOwners = {
 		-264, "suebi", "semnone-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		-71, "suebi", "suebi-tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
+		-71, "suebi", "suebi_tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 		161, "suebi", "semnone-tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1055,7 +1055,7 @@ DefineProvince("Douro", {
 	},
 	HistoricalOwners = {
 		-138, "latin", "rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		411, "suebi", "suebi-tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		411, "suebi", "suebi_tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "suebi", "galicia", -- Suebic kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "portuguese", "portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1498,7 +1498,7 @@ DefineProvince("Gallaecia", {
 	},
 	HistoricalOwners = {
 		-17, "latin", "rome", -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		411, "suebi", "suebi-tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		411, "suebi", "suebi_tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "suebi", "galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -2237,11 +2237,11 @@ DefineProvince("Lower Lusatia", {
 	},
 --	SettlementLocation = {521, 108}, -- Guben
 	Claims = {
-		"suebi", "suebi-tribe",
+		"suebi", "suebi_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		161, "suebi", "suebi-tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "suebi_tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -2610,11 +2610,11 @@ DefineProvince("Neumark", {
 	},
 --	SettlementLocation = {522, 106}, -- Küstrin
 	Claims = {
-		"suebi", "suebi-tribe",
+		"suebi", "suebi_tribe",
 		"teuton", "brandenburg"
 	},
 	HistoricalOwners = {
-		161, "suebi", "suebi-tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "suebi_tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -3847,11 +3847,11 @@ DefineProvince("Upper Lusatia", {
 	},
 --	SettlementLocation = {520, 109}, -- Bautzen
 	Claims = {
-		"suebi", "suebi-tribe",
+		"suebi", "suebi_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		161, "suebi", "suebi-tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "suebi_tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1635, "teuton", "saxony" -- Saxony acquired Upper Lusatia in 1635; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
@@ -3869,12 +3869,12 @@ DefineProvince("Upper Saxony", {
 --	SettlementLocation = {515, 109}, -- Leipzig
 	Claims = {
 		"suebi", "hermunduri-tribe",
-		"suebi", "suebi-tribe",
+		"suebi", "suebi_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "suebi-tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "suebi_tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {

@@ -33,7 +33,7 @@ DefineFaction("baden", {
 	DefaultTier = "grand_duchy",
 	FactionUpgrade = "upgrade-faction-baden",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
+	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"}
 	
 })
 
@@ -45,7 +45,7 @@ DefineFaction("switzerland", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-switzerland",
 	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"},
+	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"},
 	Titles = {
 		"republic", "kingdom", "Confederation"
 	},
@@ -63,6 +63,6 @@ DefineFaction("wurtemberg", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-wurtemberg",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"alamanni-tribe", "suebi-tribe"}
+	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"}
 })
 

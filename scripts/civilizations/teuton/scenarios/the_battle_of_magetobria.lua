@@ -26,7 +26,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "suebi-tribe")
+	SetPlayerData(0, "Faction", "suebi_tribe")
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)
