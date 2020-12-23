@@ -14,6 +14,10 @@ ariovistus_ambition = {
 		}
 		build_units = {
 			unit_class = town_hall
+			settlement = cologne
+		}
+		build_units = {
+			unit_class = town_hall
 			settlement = paris
 		}
 		build_units = {
