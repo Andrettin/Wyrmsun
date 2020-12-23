@@ -7,4 +7,11 @@ lublin = {
 	regions = {
 		poland
 	}
+	
+	history = {
+		-264 = {
+			owner = venedae_tribe #Venedae territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+	}
 }

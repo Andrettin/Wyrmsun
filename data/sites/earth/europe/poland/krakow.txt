@@ -13,9 +13,13 @@ krakow = {
 	}
 	
 	history = {
+		-264 = {
+			owner = lugii_tribe #Lugii territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+
 		1097 = {
 			owner = poland #part of the Kingdom of Poland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
-			building_classes += town_hall
 		}
 		
 		1364 = {

@@ -17,6 +17,6 @@ ariovistus_enters_gaul = {
 ariovistus_conquers_gaul = {
 	{
 		speaker = ariovistus
-		text = "Through this great victory of our people, ours are now the fair fields of Gaul. Let us feast now, on Gaulish wine!"
+		text = "Through this great victory, ours are now the fair fields of Gaul. Let us feast now, on Gaulish wine!"
 	}
 }

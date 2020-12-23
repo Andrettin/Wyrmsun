@@ -653,9 +653,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Posen", "goth", "burgundian-tribe")
 	SetProvinceCivilization("Posen", "goth")
 	AddProvinceClaim("Posen", "goth", "burgundian-tribe")	
-	
-	SetProvinceOwner("Lithuania", "baltic", "aestui-tribe")
-	SetProvinceCivilization("Lithuania", "slav")
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

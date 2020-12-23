@@ -12,9 +12,13 @@ helsinki = {
 	}
 	
 	history = {
+		-264 = {
+			owner = fenni_tribe #Fenni territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+
 		1560 = {
 			owner = sweden #Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-			building_classes += town_hall
 		}
 	}
 }
