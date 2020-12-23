@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("ariovistus-enters-gaul",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("ariovistus", i) ~= nil and GetFactionExists("sequani-tribe") and GetFactionExists("arverni-tribe") and GetFactionExists("aedui-tribe")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function() 
-		CallDialogue("ariovistus-enters-gaul", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("ariovistus-claims-victory-over-the-aedui",
 	function()
 		for i=0,(PlayerMax - 2) do

@@ -1,0 +1,22 @@
+ariovistus_enters_gaul = {
+	{
+		speaker = ariovistus
+		text = "The Sequani have invited us, the Suebi, to enter Gaul and aid them and their Arverni allies against the tribe of the Aedui. To their aid we shall come, though our ambitions are greater than they expect... once the Aedui are defeated, the entirety of Gaul shall be open to us, ripe for conquest!"
+		option = {
+			effects = {
+				create_unit = {
+					unit_type = unit_revealer
+					site = dijon
+					ttl = 600
+				}
+			}
+		}
+	}
+}
+
+ariovistus_conquers_gaul = {
+	{
+		speaker = ariovistus
+		text = "Through this great victory of our people, ours are now the fair fields of Gaul. Let us feast now, on Gaulish wine!"
+	}
+}

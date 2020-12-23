@@ -1,0 +1,36 @@
+ariovistus_ambition = {
+	name = "Ariovistus' Ambition"
+	icon = icon_suebi_swordsman
+	player_color = black
+	description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies imagine... he wishes to conquer the entirety of Gaul."
+	unobtainable = true
+	accept_effects = {
+		call_dialogue = ariovistus_enters_gaul
+	}
+	objectives = {
+		build_units = {
+			unit_class = town_hall
+			settlement = dijon
+		}
+		build_units = {
+			unit_class = town_hall
+			settlement = paris
+		}
+		build_units = {
+			unit_class = town_hall
+			settlement = brussels
+		}
+		build_units = {
+			unit_class = town_hall
+			settlement = toulouse
+		}
+		build_units = {
+			unit_class = town_hall
+			settlement = marseilles
+		}
+		hero_must_survive = ariovistus
+	}
+	completion_effects = {
+		call_dialogue = ariovistus_conquers_gaul
+	}
+}

@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("ariovistus-enters-gaul", {
-	Nodes = {
-		{
-			"speaker", "character", "ariovistus",
-			"text", "The Sequani have invited us, the Suebi, to enter Gaul and aid them and their Arverni allies against the tribe of the Aedui. To their aid we shall come, though our ambitions are greater than they could expect... once the Aedui are defeated, the entirety of Gaul shall be open to us, ripe for conquest.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "ariovistus-ambition")
-					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("dijon", "PosX") - EarthStartX, GetSiteData("dijon", "PosY") - EarthStartY}, GetMapLayer("material-plane", "earth"))
-					SetUnitVariable(unit, "TTL", 600)
-				end
-			}
-		}
-	}
-})
-
 DefineDialogue("ariovistus-claims-victory-over-the-aedui", {
 	Nodes = {
 		{
@@ -57,22 +41,6 @@ DefineDialogue("ariovistus-claims-victory-over-the-aedui", {
 					SetDiplomacy(GetFactionPlayer("arverni-tribe"), "enemy", trigger_player)
 					SetSharedVision(trigger_player, false, GetFactionPlayer("arverni-tribe"))
 					SetSharedVision(GetFactionPlayer("arverni-tribe"), false, trigger_player)
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("ariovistus-conquers-gaul", {
-	Nodes = {
-		{
-			"speaker", "character", "ariovistus",
-			"text", "Through this great effort of our tribal confederation, ours are now the fair fields of Gaul. Let us feast now, on Gaulish wine!",
-			"option-effects", {
-				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "ariovistus-ambition") then
-						CallDialogue("campaign-victory", trigger_player)
-					end
 				end
 			}
 		}

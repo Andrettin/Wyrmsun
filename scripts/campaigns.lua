@@ -49,16 +49,6 @@ DefineCampaign("thors-servant", {
 })
 
 --[[
-DefineCampaign("ariovistus-ambition", {
-	Name = "Ariovistus' Ambition",
-	Description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies suppose... he wishes to conquer the entirety of Gaul.",
-	Faction = "suebi_tribe",
-	StartYear = -71,
-	MapTemplates = {
-		"earth", {3871, 821}, {256, 256}
-	}
-})
-
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
