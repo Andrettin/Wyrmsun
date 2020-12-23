@@ -1,13 +1,11 @@
-stuttgart = {
-	name = "Stuttgart"
+karlsruhe = {
+	name = "Karlsruhe"
 	map_template = earth_45_60_latitude_north
-	geocoordinate = { 9.19999629582 48.77997987780 } #from Natural Earth
-	major = true
-	color = { 192 202 36 }
+	geocoordinate = { 8.39999344751 48.99999228830 } #from Natural Earth
 	cores = {
-		wurtemberg
-		germany
-		holy_rome
+		baden
+		germany #Karlsruhe was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Karlsruhe was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	}
 	regions = {
 		germany
@@ -19,15 +17,6 @@ stuttgart = {
 			#Ariovistus and his people came from the Upper Rhine; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 
 			owner = suebi_tribe
-			building_classes += town_hall
-		}
-		
-		486 = {
-			owner = alamanni_tribe #part of Alamanni territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		}
-		
-		919 = {
-			owner = swabia #the area was part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 	}
 }

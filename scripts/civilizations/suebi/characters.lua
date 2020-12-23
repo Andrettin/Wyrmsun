@@ -25,31 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("ariovistus", {
-	Name = "Ariovistus",
-	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- chieftain
-	Civilization = "suebi",
-	Faction = "suebi-tribe",
-	StartDate = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	DeathDate = -54, -- Ariovistus died in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
-	Deities = {"odin", "tyr"},
-	HistoricalTitles = {
-		"head-of-state", -71, -54, "suebi-tribe"
-	},
-	HistoricalLocations = {
-		-- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-		-- Ariovistus and his people came from the Upper Rhine; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-		-71, "earth", "karlsruhe"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "suebi-tribe") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("marbod", {
 	Name = "Marbod",
 	Gender = "male",
