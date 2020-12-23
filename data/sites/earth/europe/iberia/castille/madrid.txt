@@ -14,6 +14,10 @@ madrid = {
 			building_classes += town_hall
 		}
 		
+		-197 = {
+			owner = rome #acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+
 		486 = {
 			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
