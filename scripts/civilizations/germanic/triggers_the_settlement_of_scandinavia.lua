@@ -82,7 +82,7 @@ AddTrigger("on_the_vanaquisl_vana_sighted",
 AddTrigger("westward_migration_introduction",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe", true)) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe", true) and GetCurrentCampaign() == "westward_migration") then
 				trigger_player = i
 				return true
 			end
