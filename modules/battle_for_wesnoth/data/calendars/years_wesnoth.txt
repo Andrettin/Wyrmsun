@@ -2,6 +2,6 @@ years_wesnoth = { #Source: "Battle for Wesnoth"
 	name = "Years Wesnoth"
 	negative_year_label = "BW"
 	year_label = "YW"
-	#base_calendar = post_atlantean_calendar
-	#year_offset = 2 #the fall of the Green Isle occurred in 2 BW, and here we equate that with the fall of Atlantis
+	base_calendar = post_atlantean_calendar
+	year_offset = 2 #the fall of the Green Isle occurred in 2 BW, and here we equate that with the fall of Atlantis
 }
