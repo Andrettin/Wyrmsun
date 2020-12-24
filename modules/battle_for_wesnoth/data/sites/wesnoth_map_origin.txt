@@ -1,0 +1,7 @@
+wesnoth_map_origin = {
+	name = "Wesnoth Map Origin"
+	map_template = earth_60_75_latitude_north
+	geocoordinate_offset = { -586 553 } #pos offset from Weldyn, based on Weldyn's position in the SoF campaign
+	geocoordinate_reference_site = weldyn
+	geocoordinate_scale = 3
+}

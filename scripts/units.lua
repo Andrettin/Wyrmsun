@@ -1132,10 +1132,7 @@ DefineUnitType("unit-stone-pile", {
 		}
 	},
 	Sounds = {
-		"selected", "click",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"dead", "building-destroyed"
+		"selected", "click"
 	}
 } )
 
