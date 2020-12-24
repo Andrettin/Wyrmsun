@@ -1,0 +1,30 @@
+kal_kartha = {
+	name = "Kal Kartha"
+	map_template = earth_45_60_latitude_north
+	geocoordinate_offset = { 730 -95 }
+	geocoordinate_reference_site = wesnoth_map_origin
+	geocoordinate_scale = 3
+}
+
+tallinn += {
+	aliases += kal_kartha_settlement
+	cultural_names = {
+		dwarven = "Kal Kartha"
+	}
+	cores += kal_kartha
+	
+	history = {
+		years_wesnoth = {
+			550 = {
+				owner = kal_kartha
+				building_classes += barracks #had capability to train warriors
+				building_classes += smithy #Karrag was already reviving the art of runesmithing in 550 YW
+			}
+			
+			2000 = {
+				building_classes -= barracks
+				building_classes -= smithy
+			}
+		}
+	}
+}

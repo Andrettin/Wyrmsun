@@ -166,20 +166,6 @@ DefineProvince("Joruvellir", {
 	}
 })
 
-DefineProvince("Kal Kartha", {
-	World = "nidavellir",
-	CulturalNames = {
-		"dwarf", "Kal Kartha"
-	},
-	Claims = {
-		"dwarf", "kal-kartha"
-	},
-	HistoricalSettlementBuildings = {
-		550, "unit-dwarven-barracks", true, -- had capability to train warriors
-		550, "unit-dwarven-smithy", true -- Karrag was already reviving the art of runesmithing in 550 AD
-	}
-})
-
 DefineProvince("Lyr", {
 	World = "nidavellir",
 	CulturalNames = {

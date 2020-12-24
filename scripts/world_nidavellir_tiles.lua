@@ -32,13 +32,6 @@ DefineWorldMapTile({32, 14}, {
 	}
 })
 
-DefineWorldMapTile({45, 5}, {
-	World = "nidavellir",
-	CulturalSettlementNames = {
-		"dwarf", "Kal Kartha"
-	}
-})
-
 DefineWorldMapTile({50, 13}, {
 	World = "nidavellir",
 	CulturalSettlementNames = {
