@@ -58,7 +58,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Miscellaneous
-- Fixed issue with saving workers assigned to a resource (resulted in a crash when loading the game).
+- Fixed issue with saving workers assigned to a resource (resulted in a crash when loading a game).
 
 * Quests
 - Fixed issue which caused a defeat on start for the The Tomb of Durahn Eikinskjaldi quest.
