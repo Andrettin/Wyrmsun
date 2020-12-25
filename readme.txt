@@ -57,11 +57,15 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.3
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed issue with saving workers assigned to a resource (resulted in a crash when loading the game).
+
 * Quests
 - Fixed issue which caused a defeat on start for the The Tomb of Durahn Eikinskjaldi quest.
 
 * Scenarios
 - Fixed issue which caused the Westward Migration introduction trigger to fire for the The Settlement of Scandinavia scenario as well.
+- Fixed issue with no speaker being assigned to dialogue messages which should pertain to a Dwarven Miner for the The First Dwarves Scenario.
 
 -----------------------------------------------------------------------
 - 4.0.2

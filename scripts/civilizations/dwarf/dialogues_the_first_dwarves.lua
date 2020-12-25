@@ -61,6 +61,7 @@ DefineDialogue("a-rocky-home-mead-hall-built", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-brising-miner",
+			"speaker-player", "brising_clan",
 			"text", "The mead hall is built, my chieftain."
 		},
 		{
@@ -187,10 +188,12 @@ DefineDialogue("worker-suggests-stone-furniture", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-brising-miner",
+			"speaker-player", "brising_clan",
 			"text", "I have an idea! Why don't we make furniture out of stone?"
 		},
 		{
 			"speaker", "unit", "unit-brising-expert-miner",
+			"speaker-player", "brising_clan",
 			"text", "Har! Even our hardy dwarven arses can't withstand sitting on stone for long. And have ye thought of how difficult it would be to move it around?"
 		}
 	}
