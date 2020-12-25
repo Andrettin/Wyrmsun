@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.3
 -----------------------------------------------------------------------
 
+* Quests
+- Fixed issue which caused a defeat on start for the The Tomb of Durahn Eikinskjaldi quest.
+
 * Scenarios
 - Fixed issue which caused the Westward Migration introduction trigger to fire for the The Settlement of Scandinavia scenario as well.
 

@@ -302,9 +302,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-baglur-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (
-			FindHero("baglur") == nil
-		) then
+		if (FindHero("baglur") == nil) then
 			return true
 		end
 		return false
@@ -321,9 +319,7 @@ AddTrigger("the-tomb-of-durahn-eikinskjaldi-durstorn-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (
-			FindHero("durstorn") == nil
-		) then
+		if (FindHero("durstorn") == nil) then
 			return true
 		end
 		return false
