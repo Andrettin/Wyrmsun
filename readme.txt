@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Fixed issue which caused the Westward Migration introduction trigger to fire for the The Settlement of Scandinavia scenario as well.
 - Fixed issue with no speaker being assigned to dialogue messages which should pertain to a Dwarven Miner for the The First Dwarves Scenario.
+- Fixed issue which caused other kobold tribes to be at war with you when the Grafvitning Tribe became hostile.
 
 -----------------------------------------------------------------------
 - 4.0.2
