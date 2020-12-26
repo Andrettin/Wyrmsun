@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.4
 -----------------------------------------------------------------------
 
+* Quests
+- Fixed issue which caused the defeat to be triggered for certain quests when a required hero died only after their corpse had completely withered away.
+
 -----------------------------------------------------------------------
 - 4.0.3
 -----------------------------------------------------------------------
