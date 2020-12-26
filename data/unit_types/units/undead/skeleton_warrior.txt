@@ -1,7 +1,9 @@
 unit_skeleton_warrior = {
 	name = "Skeleton Warrior"
-	parent = unit_template_infantry
+	parent = unit_template_undead_unit
 	description = "Raised from their graves, these skeletons are mindless warriors who follow the commands of the necromancer who brought them into undeath."
+	tile_size = { 1 1 }
+	box_size = { 31 31 }
 	image_file = "units/undead/skeleton_warrior.png"
 	frame_size = { 116 116 }
 	offset = { 0 6 }
@@ -9,6 +11,22 @@ unit_skeleton_warrior = {
 	icon = skeleton
 	weapon_classes = { axe }
 	hack_damage = true
+	hit_points = 40
+	basic_damage = 9
+	max_attack_range = 1
+	accuracy = 8
+	evasion = 8
+	armor = 2
+	sight_range = 3
+	speed = 8
+	missile = missile_none
+	priority = 55
+	points = 40
+	demand = 1
+	type = land
+	right_mouse_action = attack
+	can_attack = true
+	can_target_land = true
 	ai_drops = {
 		unit_battle_axe
 		unit_boots
