@@ -1,0 +1,60 @@
+ossuary_entry_catacombs = {
+	name = "Ossuary (Catacombs Entry)"
+	main_template = earth_30_45_latitude_north
+	size = { 9 9 }
+	overlay_terrain_file = "the_ossuary/ossuary_entry_catacombs.map"
+	constructed_only = true
+	optional = true
+	#should only appear in Egypt and environs
+	min_subtemplate_geocoordinate = { 19 34 }
+	max_subtemplate_geocoordinate = { 35 16 }
+	character_units = {
+		#O1 = orc skeleton / orc zombie w:5 / elf skeleton / elf zombie w:5 / human skeleton / human zombie w:5
+		O = unit_skeleton_warrior
+		1 = unit_skeleton_warrior
+	}
+	character_substitutions = {
+		{
+			source_character = A
+			target_characters = { + c }
+		}
+		{
+			source_character = B
+			target_characters = { + c }
+		}
+		{
+			source_character = C
+			target_characters = { + c }
+		}
+		{ #s = 1:O / 4:1 / *:1.....
+			source_character = s
+			target_characters = {
+				O = 1
+				1 = 4
+				. = 5 #10 s characters in total on the map, so that the "*" can be replaced by 5, and there are six characters, so the "1" would become fractional, so that we need only take the "."s in consideration
+			}
+		}
+		
+		#character conversions
+		{
+			source_character = .
+			target_character = 0
+		}
+		{
+			source_character = c
+			target_character = [ #dwarven wall
+		}
+		{
+			source_character = +
+			target_character = 0
+		}
+		{
+			source_character = '
+			target_character = 0
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
