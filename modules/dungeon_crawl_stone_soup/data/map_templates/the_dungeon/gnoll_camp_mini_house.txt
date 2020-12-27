@@ -1,0 +1,60 @@
+gnoll_camp_mini_house = {
+	name = "Gnoll Camp House"
+	main_template = earth_30_45_latitude_north
+	size = { 11 12 }
+	overlay_terrain_file = "the_dungeon/gnoll_camp_mini_house.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
+	min_subtemplate_geocoordinate = { 18 37 }
+	max_subtemplate_geocoordinate = { 63 -35 }
+	character_units = {
+		1 = unit_gnoll_warrior
+		2 = unit_gnoll_warrior #gnoll shaman
+		3 = unit_gnoll_warrior #gnoll sergeant
+		4 = {
+			unit_types = {
+				unit_wolf = 1 #hound
+				unit_wolf = 2 #wolf w:2
+			}
+			ai_active = false #to prevent it from wandering away
+		}
+	}
+	character_substitutions = {
+		{
+			shuffle_character_sets = {
+				{ 2 3 }
+			}
+		}
+		
+		#character conversions
+		{
+			source_character = .
+			target_character = 0
+		}
+		{
+			source_character = +
+			target_character = 0
+		}
+		{
+			source_character = % #item
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_character = c
+			target_character = ~
+		}
+		{
+			source_character = T #water fountain
+			target_character = 0
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
