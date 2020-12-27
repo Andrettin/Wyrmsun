@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed a save game load issue which occurred if a reference was held to a destroyed unit.
+- Fixed crash which occurred when right-clicking the portrait of e.g. stone piles.
 
 * Pathfinding
 - Fixed a pathfinding issue which could cause minecarts to get stuck when looking for a place to return goods to.
