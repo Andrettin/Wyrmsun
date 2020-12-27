@@ -1,0 +1,39 @@
+gnoll_camp_mini_shop = {
+	name = "Gnoll Camp Shop"
+	main_template = earth_30_45_latitude_north
+	size = { 8 9 }
+	overlay_terrain_file = "the_dungeon/gnoll_camp_mini_shop.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
+	min_subtemplate_geocoordinate = { 18 37 }
+	max_subtemplate_geocoordinate = { 63 -35 }
+	character_units = {
+		1 = {
+			unit_types = {
+				unit_gnoll_warrior = 1 #gnoll
+				none = 2 #nothing w:2
+			}
+		}
+		S = unit_goblin_market #any shop
+	}
+	character_substitutions = {
+		#character conversions
+		{
+			source_character = .
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_character = c
+			target_character = ~
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}

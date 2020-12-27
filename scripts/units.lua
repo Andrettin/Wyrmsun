@@ -4353,6 +4353,7 @@ DefineUnitType("unit-template-farm", {
 	Parent = "unit-template-building",
 	Class = "farm",
 	Template = true,
+	NeutralMinimapColor = {192, 192, 192},
 	Costs = {"time", 100, "copper", 500, "lumber", 750},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4852,6 +4853,7 @@ DefineUnitType("unit-template-market", {
 	Parent = "unit-template-building",
 	Class = "market",
 	Template = true,
+	NeutralMinimapColor = {192, 192, 192},
 	Costs = {"time", 200, "copper", 800, "lumber", 1350},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
@@ -4879,6 +4881,7 @@ DefineUnitType("unit-template-market", {
 	BurnDamageRate = 1,
 	TradeCost = 30,
 	ButtonKey = "m",
+	NeutralHostile = true, -- so that factions will attack neutral markets
 	ResourceDemand = {"jewelry", 3, "furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
