@@ -1,0 +1,62 @@
+gnoll_camp_huts_basic = {
+	name = "Gnoll Camp Huts (Basic)"
+	main_template = earth_30_45_latitude_north
+	size = { 18 18 }
+	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_huts_basic.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
+	min_subtemplate_geocoordinate = { -18 37 }
+	max_subtemplate_geocoordinate = { 63 -35 }
+	character_units = {
+		1 = unit_gnoll_warrior #gnoll
+		2 = unit_gnoll_warrior #gnoll shaman
+		3 = unit_gnoll_warrior #gnoll sergeant
+		4 = {
+			unit_types = {
+				unit_wolf = 1 #jackal
+				unit_wolf = 1 #hound
+				unit_wolf = 1 #wolf w:1
+			}
+			ai_active = false #to prevent it from wandering away
+		}
+	}
+	character_substitutions = {
+		{ #. = 7:1 / 1:2 / 2:3 / 4:4 / *:.
+			source_character = .
+			target_characters = {
+				1 = 7
+				2 = 1
+				3 = 2
+				4 = 4
+				. = 162 #176 "." characters in total on the map
+			}
+		}
+
+		#character conversions
+		{
+			source_character = % #item
+			target_character = 0
+		}
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = +
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_character = c
+			target_character = ~
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}

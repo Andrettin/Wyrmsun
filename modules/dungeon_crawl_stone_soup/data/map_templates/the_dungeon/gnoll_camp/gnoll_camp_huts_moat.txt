@@ -1,0 +1,67 @@
+gnoll_camp_huts_moat = {
+	name = "Gnoll Camp Huts (Moat)"
+	main_template = earth_30_45_latitude_north
+	size = { 22 24 }
+	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_huts_moat.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
+	min_subtemplate_geocoordinate = { -18 37 }
+	max_subtemplate_geocoordinate = { 63 -35 }
+	character_units = {
+		1 = unit_gnoll_warrior #gnoll
+		2 = unit_gnoll_warrior #gnoll shaman
+		3 = unit_gnoll_warrior #gnoll sergeant
+		4 = {
+			unit_types = {
+				unit_wolf = 1 #jackal
+				unit_wolf = 1 #hound
+				unit_wolf = 1 #wolf w:1
+			}
+			ai_active = false #to prevent it from wandering away
+		}
+		5 = unit_gnoll_warrior #gnoll ; stone q:10 | boomerang q:3 | throwing net q:3
+	}
+	character_substitutions = {
+		{ #. = 5:1 / 1:2 / 2:3 / 4:4 / *:.
+			source_character = .
+			target_characters = {
+				1 = 5
+				2 = 1
+				3 = 2
+				4 = 4
+				. = 285 #297 "." characters in total on the map
+			}
+		}
+
+		#character conversions
+		{
+			source_character = w #deep water, supposed to represent a moat here, thus being best represented by a wall
+			target_character = ~
+		}
+		{
+			source_character = % #item
+			target_character = 0
+		}
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = +
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+		{
+			source_character = c
+			target_character = ~
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}

@@ -31,7 +31,7 @@ ossuary_entry_catacombs = {
 			target_characters = {
 				O = 1
 				1 = 4
-				. = 5 #10 s characters in total on the map, so that the "*" can be replaced by 5, and there are six characters, so the "1" would become fractional, so that we need only take the "."s in consideration
+				. = 5 #10 "s" characters in total on the map, so that the "*" can be replaced by 5, and there are six characters, so the "1" would become fractional, so that we need only take the "."s in consideration
 			}
 		}
 		
