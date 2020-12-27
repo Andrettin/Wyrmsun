@@ -1,7 +1,6 @@
 gnoll += {
 	personal_names = {
 		male = {
-			"Grum" #Grum the Hunter (unique male gnoll)
 			"Yiuf" #Crazy Yiuf the Enlightened (unique male gnoll)
 		}
 	}

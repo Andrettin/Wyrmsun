@@ -1,0 +1,16 @@
+grum = { #Grum the Hunter
+	name = "Grum"
+	unit_type = unit_gnoll_warrior
+	civilization = gnoll
+	gender = male
+	base_level = 4 #4 HD
+	description = "A tough-looking gnoll, wearing the pelt of one of his former war dogs."
+	
+	history = {
+		active = true
+		location = {
+			map_template = grums_kennel
+			pos = { 8 11 }
+		}
+	}
+}
