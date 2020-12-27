@@ -57,6 +57,12 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.4
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed a save game load issue which occurred if a reference was held to a destroyed unit.
+
+* Pathfinding
+- Fixed a pathfinding issue which could cause minecarts to get stuck when looking for a place to return goods to.
+
 * Quests
 - Fixed issue which caused the defeat to be triggered for certain quests when a required hero died only after their corpse had completely withered away.
 
