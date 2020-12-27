@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.4
 -----------------------------------------------------------------------
 
+* Maps
+- Fixed issue with the Italy custom map.
+
 * Miscellaneous
 - Fixed a save game load issue which occurred if a reference was held to a destroyed unit.
 
@@ -65,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Fixed issue which caused the defeat to be triggered for certain quests when a required hero died only after their corpse had completely withered away.
+
+* Scenarios
+- Added several mini-forts with neutral hostile Gnoll Warriors, randomly-placed on the Earth map in areas where there were historically werehyena myths (i.e. North Africa).
 
 -----------------------------------------------------------------------
 - 4.0.3
