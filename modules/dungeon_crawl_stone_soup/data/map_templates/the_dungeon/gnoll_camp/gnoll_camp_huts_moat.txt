@@ -30,7 +30,7 @@ gnoll_camp_huts_moat = {
 				2 = 1
 				3 = 2
 				4 = 4
-				. = 285 #297 "." characters in total on the map
+				. = 273 #285 "." characters in total on the map
 			}
 		}
 

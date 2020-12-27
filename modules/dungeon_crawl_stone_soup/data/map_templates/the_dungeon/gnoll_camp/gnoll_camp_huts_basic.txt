@@ -29,7 +29,7 @@ gnoll_camp_huts_basic = {
 				2 = 1
 				3 = 2
 				4 = 4
-				. = 162 #176 "." characters in total on the map
+				. = 150 #164 "." characters in total on the map
 			}
 		}
 
