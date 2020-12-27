@@ -1,5 +1,5 @@
 gnoll_camp_mini_basic = {
-	name = "Gnoll Camp"
+	name = "Gnoll Camp (Basic)"
 	main_template = earth_30_45_latitude_north
 	size = { 13 11 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_mini_basic.map"
