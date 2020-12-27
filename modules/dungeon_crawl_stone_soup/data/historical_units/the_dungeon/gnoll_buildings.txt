@@ -1,0 +1,11 @@
+gnoll_camp_house = {
+	unit_type = unit_goblin_farm
+	
+	history = {
+		active = true
+		location = {
+			map_template = gnoll_camp_mini_house
+			pos = { 4 5 }
+		}
+	}
+}
