@@ -58,7 +58,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Maps
-- Fixed issue with the Italy custom map.
+- Fixed issue which caused a crash when starting the Italy custom map.
 
 * Miscellaneous
 - Fixed a save game load issue which occurred if a reference was held to a destroyed unit.
