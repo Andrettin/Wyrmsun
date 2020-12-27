@@ -2,7 +2,7 @@ grums_kennel = {
 	name = "Grum's Kennel"
 	main_template = earth_30_45_latitude_north
 	size = { 12 15 }
-	overlay_terrain_file = "the_dungeon/grums_kennel.map"
+	overlay_terrain_file = "the_dungeon/gnoll_camp/grums_kennel.map"
 	constructed_only = true
 	optional = true
 	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
