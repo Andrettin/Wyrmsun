@@ -36,8 +36,8 @@ gnoll_camp_huts_moat = {
 
 		#character conversions
 		{
-			source_character = w #deep water, supposed to represent a moat here, thus being best represented by a wall
-			target_character = ~
+			source_character = w #deep water, supposed to represent a moat here, thus being best represented by a palisade
+			target_character = |
 		}
 		{
 			source_character = % #item

@@ -1,0 +1,47 @@
+gnoll_hut = {
+	name = "Gnoll Hut" #cheibrodos_gnoll_hut
+	main_template = earth_30_45_latitude_north
+	#D:2-5
+	size = { 7 7 }
+	overlay_terrain_file = "the_dungeon/gnoll_hut.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
+	min_subtemplate_geocoordinate = { -18 37 }
+	max_subtemplate_geocoordinate = { 63 -35 }
+	character_units = {
+		1 = {
+			unit_types = {
+				unit_wolf = 1 #jackal; depth <= 2
+				unit_wolf = 3 #hound; depth > 2
+			}
+			ai_active = false #to prevent it from wandering away
+		}
+		2 = unit_gnoll_warrior #gnoll
+		S = unit_trap #known shaft trap
+		P = unit_fern #bush
+	}
+	character_substitutions = {
+		#character conversions
+		{
+			source_character = % #item
+			target_character = 0
+		}
+		{
+			source_character = .
+			target_character = 0
+		}
+		{
+			source_characters = { + @ }
+			target_character = 0
+		}
+		{
+			source_character = x
+			target_character = ~
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
