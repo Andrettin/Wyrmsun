@@ -1,0 +1,19 @@
+bord_1_old_norse = {
+	name = "[word:bord_1_old_norse.name.normalized]"
+	icon = icon_furniture
+	player_color = blue
+	description = "\"[word:bord_1_old_norse.name.normalized]\" means \"[word:bord_1_old_norse.meanings.1.lowered]\" or \"[word:bord_1_old_norse.meanings.2.lowered]\" in Old Norse. Furniture is a commonly-needed good."
+	hint = "Select a [civilization:norse.class_unit_type:lumber_mill.name] and click on the Produce Furniture button to allow workers to produce furniture at the building. Then, select a [civilization:norse.class_unit_type:worker.name] and right-click on the [civilization:norse.class_unit_type:lumber_mill.name] for the worker to begin transforming lumber into furniture. If a [civilization:norse.class_unit_type:market.name] is present, furniture will be sold automatically."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		gather_resource = {
+			resource = furniture
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

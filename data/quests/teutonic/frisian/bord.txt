@@ -1,0 +1,19 @@
+bord_old_frisian = {
+	name = "[word:bord_old_frisian.name.normalized]"
+	icon = icon_furniture
+	player_color = orange
+	description = "\"[word:bord_old_frisian.name.normalized]\" means \"[word:bord_old_frisian.meanings.1.lowered]\" or \"[word:bord_old_frisian.meanings.2.lowered]\" in Old Frisian. Furniture is a commonly-needed good."
+	hint = "Select a [civilization:teutonic.class_unit_type:lumber_mill.name] and click on the Produce Furniture button to allow workers to produce furniture at the building. Then, select a [civilization:teutonic.class_unit_type:worker.name] and right-click on the [civilization:teutonic.class_unit_type:lumber_mill.name] for the worker to begin transforming lumber into furniture. If a [civilization:teutonic.class_unit_type:market.name] is present, furniture will be sold automatically."
+	conditions = {
+		scripted_condition = has_old_frisian_culture
+	}
+	objectives = {
+		gather_resource = {
+			resource = furniture
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

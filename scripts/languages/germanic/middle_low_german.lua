@@ -55,14 +55,6 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Bort", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "middle-low-german",
-	Type = "noun",
-	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Tisch"
-	DerivesFrom = {"old-saxon", "noun", "Bord"}, -- as given by the TLFi and Fick
-	Gender = "neuter" -- as given by the TLFi
-})
-
 DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "middle-low-german",
 	Type = "noun",

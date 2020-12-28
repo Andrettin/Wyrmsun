@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Fixed issue which caused the defeat to be triggered for certain quests when a required hero died only after their corpse had completely withered away.
+- Added side-quests for producing furniture for the Anglo-Saxon and Norse civilizations, as well as for some Teutonic factions.
 
 * Scenarios
 - Added several mini-forts with neutral hostile Gnoll Warriors, randomly-placed on the Earth map in areas where there were historically werehyena myths (i.e. North Africa).
