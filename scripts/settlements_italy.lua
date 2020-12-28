@@ -25,6 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSite("milan-old-earth-map", { -- so that it appears in the Italy custom map
+	Name = "Milan",
+	MapTemplate = "earth",
+	Position = {4049, 1013},
+	Major = true
+})
+	
+DefineSite("rome-old-earth-map", { -- so that it appears in the Italy custom map
+	Name = "Rome",
+	MapTemplate = "earth",
+	Position = {4126, 1096},
+	Major = true
+})
+
 DefineSite("aleria", {
 	Name = "Aleria",
 	MapTemplate = "earth",
