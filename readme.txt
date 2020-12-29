@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed a save game load issue which occurred if a reference was held to a destroyed unit.
 - Fixed crash which occurred when right-clicking the portrait of e.g. stone piles.
+- Fixed issue which allowed the Anglo-Saxon civilization to be chosen for custom games even if they started at the most basic technological level (the bronze age), even though the Anglo-Saxons are an iron age civilization.
 
 * Pathfinding
 - Fixed a pathfinding issue which could cause minecarts to get stuck when looking for a place to return goods to.

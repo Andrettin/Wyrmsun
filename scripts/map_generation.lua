@@ -1776,8 +1776,8 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 			end
 			
 			local possible_civilizations = {}
-			if (HasCivilizationAvailableFactions("anglo-saxon") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
-				table.insert(possible_civilizations, "anglo-saxon")
+			if (HasCivilizationAvailableFactions("anglo_saxon") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+				table.insert(possible_civilizations, "anglo_saxon")
 			end
 			if (HasCivilizationAvailableFactions("dwarf")) then
 				table.insert(possible_civilizations, "dwarf")
@@ -6062,7 +6062,7 @@ function GetTerrainCivilizations(terrain)
 		table.insert(terrain_civilizations, "ettin")
 	end
 	if (terrain == "dirt" or terrain == "grass" or terrain == "snow") then
-		table.insert(terrain_civilizations, "anglo-saxon")
+		table.insert(terrain_civilizations, "anglo_saxon")
 		table.insert(terrain_civilizations, "english")
 		table.insert(terrain_civilizations, "frankish")
 		table.insert(terrain_civilizations, "germanic")
