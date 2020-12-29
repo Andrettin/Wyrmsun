@@ -1,0 +1,22 @@
+helsinki += { #Elensiria is identified with Helsinki as Finland (which was an elven realm in Völundr's tale in Norse mythology) is identified with Lintanir
+	aliases += elensiria
+	cultural_names = {
+		elven = "Elensiria"
+	}
+	cores += lintanir
+	
+	history = {
+		years_wesnoth = {
+			19 = {
+				owner = lintanir
+				building_classes += barracks #had capability to train warriors
+				building_classes += smithy #Karrag was already reviving the art of runesmithing in 550 YW
+			}
+			
+			2000 = {
+				building_classes -= barracks
+				building_classes -= smithy
+			}
+		}
+	}
+}
