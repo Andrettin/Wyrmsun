@@ -1,0 +1,44 @@
+unit_teuton_dock = {
+	parent = unit_template_dock
+	civilization = teuton
+	description = "Shipbuilding is an ancient craft in the Teuton shores. Already in antiquity they constructed sturdy ships, capable of assaulting the vulnerable coasts to the west. During medieval times, their shipbuilding flourished even further, as the Hanseatic League dominated commerce in the Baltic and North Seas."
+	image_file = "buildings/teutonic/dock.png"
+	frame_size = { 96 96 }
+	icon = icon_teuton_dock
+	requirements_string = "Carpenter's Shop/Lumber Mill"
+	variations = {
+		dock = {
+			image_file = "buildings/germanic/dock.png"
+			conditions = {
+				not = {
+					upgrade_class = masonry
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		dock_snow = {
+			image_file = "buildings/germanic/dock_snow.png"
+			conditions = {
+				not = {
+					upgrade_class = masonry
+				}
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+		dock = {
+			conditions = {
+				upgrade_class = masonry
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		dock_snow = {
+			image_file = "buildings/teutonic/dock_snow.png"
+			conditions = {
+				upgrade_class = masonry
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}

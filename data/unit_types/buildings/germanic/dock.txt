@@ -1,0 +1,24 @@
+unit_germanic_dock = {
+	parent = unit_template_dock
+	civilization = germanic
+	description = "Germanic peoples were skilled shipwrights. They often lived close to the shore and built sturdy ships capable sailing the seas."
+	image_file = "buildings/germanic/dock.png"
+	frame_size = { 96 96 }
+	icon = icon_germanic_dock
+	requirements_string = "Carpenter's Shop"
+	variations = {
+		dock = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		dock_snow = {
+			image_file = "buildings/germanic/dock_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}
