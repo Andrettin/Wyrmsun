@@ -1023,7 +1023,7 @@ DefineUnitType("unit-teuton-town-hall", {
 		},
 		{
 			"variation-id", "town-hall-snow-winter",
-			"file", "buildings/teuton/town_hall_snow.png",
+			"file", "buildings/teutonic/town_hall_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1033,7 +1033,7 @@ DefineUnitType("unit-teuton-town-hall", {
 		},
 		{
 			"variation-id", "town-hall-snow",
-			"file", "buildings/teuton/town_hall_snow.png",
+			"file", "buildings/teutonic/town_hall_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1062,7 +1062,7 @@ DefineUnitType("unit-teuton-stronghold", {
 		},
 		{
 			"variation-id", "stronghold-snow-winter",
-			"file", "buildings/teuton/stronghold_snow.png",
+			"file", "buildings/teutonic/stronghold_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1071,7 +1071,7 @@ DefineUnitType("unit-teuton-stronghold", {
 		},
 		{
 			"variation-id", "stronghold-snow",
-			"file", "buildings/teuton/stronghold_snow.png",
+			"file", "buildings/teutonic/stronghold_snow.png",
 			"terrain", "snow"
 		}
 	},
@@ -1126,7 +1126,7 @@ DefineUnitType("unit-teuton-farm", {
 		},
 		{
 			"variation-id", "farm-snow-winter",
-			"file", "buildings/teuton/farm_snow.png",
+			"file", "buildings/teutonic/farm_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1136,7 +1136,7 @@ DefineUnitType("unit-teuton-farm", {
 		},
 		{
 			"variation-id", "farm-snow",
-			"file", "buildings/teuton/farm_snow.png",
+			"file", "buildings/teutonic/farm_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1201,7 +1201,7 @@ DefineUnitType("unit-teuton-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow-winter",
-			"file", "buildings/teuton/barracks_snow.png",
+			"file", "buildings/teutonic/barracks_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1211,7 +1211,7 @@ DefineUnitType("unit-teuton-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow",
-			"file", "buildings/teuton/barracks_snow.png",
+			"file", "buildings/teutonic/barracks_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1322,7 +1322,7 @@ DefineUnitType("unit-teuton-smithy", {
 		},
 		{
 			"variation-id", "smithy-snow-winter",
-			"file", "buildings/teuton/smithy_snow.png",
+			"file", "buildings/teutonic/smithy_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1332,7 +1332,7 @@ DefineUnitType("unit-teuton-smithy", {
 		},
 		{
 			"variation-id", "smithy-snow",
-			"file", "buildings/teuton/smithy_snow.png",
+			"file", "buildings/teutonic/smithy_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1389,7 +1389,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 		},
 		{
 			"variation-id", "masons-shop-snow-winter",
-			"file", "buildings/teuton/masons_shop_snow.png",
+			"file", "buildings/teutonic/masons_shop_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1399,7 +1399,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 		},
 		{
 			"variation-id", "masons-shop-snow",
-			"file", "buildings/teuton/masons_shop_snow.png",
+			"file", "buildings/teutonic/masons_shop_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1456,7 +1456,7 @@ DefineUnitType("unit-teuton-stables", {
 		},
 		{
 			"variation-id", "stables-snow-winter",
-			"file", "buildings/teuton/stables_snow.png",
+			"file", "buildings/teutonic/stables_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1466,7 +1466,7 @@ DefineUnitType("unit-teuton-stables", {
 		},
 		{
 			"variation-id", "stables-snow",
-			"file", "buildings/teuton/stables_snow.png",
+			"file", "buildings/teutonic/stables_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1499,7 +1499,7 @@ DefineUnitType("unit-teuton-temple", {
 		},
 		{
 			"variation-id", "church-snow-winter",
-			"file", "buildings/teuton/church_snow.png",
+			"file", "buildings/teutonic/church_snow.png",
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
@@ -1513,7 +1513,7 @@ DefineUnitType("unit-teuton-temple", {
 		},
 		{
 			"variation-id", "church-snow",
-			"file", "buildings/teuton/church_snow.png",
+			"file", "buildings/teutonic/church_snow.png",
 			"upgrade-required", "upgrade-deity-christian-god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
@@ -1609,7 +1609,7 @@ DefineUnitType("unit-teuton-market", {
 		},
 		{
 			"variation-id", "market-snow-winter",
-			"file", "buildings/teuton/market_snow.png",
+			"file", "buildings/teutonic/market_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
@@ -1619,7 +1619,7 @@ DefineUnitType("unit-teuton-market", {
 		},
 		{
 			"variation-id", "market-snow",
-			"file", "buildings/teuton/market_snow.png",
+			"file", "buildings/teutonic/market_snow.png",
 			"upgrade-required", "upgrade-masonry",
 			"terrain", "snow"
 		}
@@ -1646,7 +1646,7 @@ DefineUnitType("unit-teuton-university", {
 		},
 		{
 			"variation-id", "university-snow-winter",
-			"file", "buildings/teuton/university_snow.png",
+			"file", "buildings/teutonic/university_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1655,7 +1655,7 @@ DefineUnitType("unit-teuton-university", {
 		},
 		{
 			"variation-id", "university-snow",
-			"file", "buildings/teuton/university_snow.png",
+			"file", "buildings/teutonic/university_snow.png",
 			"terrain", "snow"
 		}
 	},
@@ -1680,7 +1680,7 @@ DefineUnitType("unit-teuton-watch-tower", {
 		},
 		{
 			"variation-id", "watch-tower-snow-winter",
-			"file", "buildings/teuton/watch_tower_snow.png",
+			"file", "buildings/teutonic/watch_tower_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1689,7 +1689,7 @@ DefineUnitType("unit-teuton-watch-tower", {
 		},
 		{
 			"variation-id", "watch-tower-snow",
-			"file", "buildings/teuton/watch_tower_snow.png",
+			"file", "buildings/teutonic/watch_tower_snow.png",
 			"terrain", "snow"
 		}
 	},
@@ -1715,7 +1715,7 @@ DefineUnitType("unit-teuton-guard-tower", {
 		},
 		{
 			"variation-id", "guard-tower-snow-winter",
-			"file", "buildings/teuton/guard_tower_snow.png",
+			"file", "buildings/teutonic/guard_tower_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1724,7 +1724,7 @@ DefineUnitType("unit-teuton-guard-tower", {
 		},
 		{
 			"variation-id", "guard-tower-snow",
-			"file", "buildings/teuton/guard_tower_snow.png",
+			"file", "buildings/teutonic/guard_tower_snow.png",
 			"terrain", "snow"
 		}
 	},
@@ -1752,7 +1752,7 @@ DefineUnitType("unit-teuton-catapult-tower", {
 		},
 		{
 			"variation-id", "catapult-tower-snow-winter",
-			"file", "buildings/teuton/catapult_tower_snow.png",
+			"file", "buildings/teutonic/catapult_tower_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1761,7 +1761,7 @@ DefineUnitType("unit-teuton-catapult-tower", {
 		},
 		{
 			"variation-id", "catapult-tower-snow",
-			"file", "buildings/teuton/catapult_tower_snow.png",
+			"file", "buildings/teutonic/catapult_tower_snow.png",
 			"terrain", "snow"
 		}
 	},
