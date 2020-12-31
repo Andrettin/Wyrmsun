@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.6
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed issue which caused the name of the player's current age not to appear after loading a saved game.
+
 -----------------------------------------------------------------------
 - 4.0.5
 -----------------------------------------------------------------------
