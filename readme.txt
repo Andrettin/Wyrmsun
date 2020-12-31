@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.0.5
 -----------------------------------------------------------------------
 
+* Buildings
+- Fixed the variation conditions for Germanic and Teutonic Docks.
+
 * Miscellaneous
 - Fixed a potential crash when loading a saved game a second time.
 
