@@ -1,0 +1,8 @@
+unit_goblin_dock = {
+	parent = unit_template_dock
+	civilization = goblin
+	description = "Goblins make for crafty shipwrights. Focusing in sleek and fast ships, goblin shipyards produce many vessels used by their kind for piracy."
+	image_file = "buildings/goblin/dock.png"
+	frame_size = { 96 96 }
+	icon = icon_goblin_dock
+}

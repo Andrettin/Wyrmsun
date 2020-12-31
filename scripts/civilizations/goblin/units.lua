@@ -830,18 +830,6 @@ DefineUnitType("unit-goblin-academy", {
 	}
 } )
 
-DefineUnitType("unit-goblin-dock", {
-	Parent = "unit-template-dock",
-	Civilization = "goblin",
-	Description = "Goblins make for crafty shipwrights. Focusing in sleek and fast ships, goblin shipyards produce many vessels used by their kind for piracy.",
-	Image = {"file", "goblin/buildings/dock.png", "size", {96, 96}},
-	Shadow = {"file", "goblin/buildings/dock_shadow.png", "size", {96, 96}},
-	Icon = "icon-goblin-dock",
-	Sounds = {
-		"help", "basic-goblin-voices-help-town"
-	}
-} )
-
 DefineUnitType("unit-goblin-wall", {
 	Parent = "unit-template-wall",
 	Civilization = "goblin",

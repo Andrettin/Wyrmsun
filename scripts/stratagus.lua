@@ -2030,7 +2030,6 @@ Units = {
 	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-masons-shop",
 	"unit-goblin-temple", "unit-goblin-market", "unit-goblin-academy",
 	"unit-goblin-watch-tower", "unit-goblin-guard-tower", "unit-goblin-catapult-tower",
-	"unit-goblin-dock",
 	"unit-goblin-wall",
 	"unit-goblin-banner",
 	"upgrade-goblin-broad-sword", "upgrade-goblin-long-sword", "upgrade-goblin-rimmed-shield", "upgrade-goblin-embossed-shield",
