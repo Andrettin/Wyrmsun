@@ -61,7 +61,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed the variation conditions for Germanic and Teutonic Docks.
 
 * Miscellaneous
-- Fixed a potential crash when loading a saved game a second time.
+- Fixed a potential crash when exiting a loaded saved game.
+
+* Pathfinding
+- Fixed a resource-gathering pathfinding issue which occurred if e.g. wood piles were adjacent to the building to which the resource would be returned, and one of the adjacent wood piles were unreachable.
 
 -----------------------------------------------------------------------
 - 4.0.4
