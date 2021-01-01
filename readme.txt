@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue which caused the name of the player's current age not to appear after loading a saved game.
 
+* Units
+- Fixed issue which could result in units autocasting spells they didn't have, e.g. Germanic Gudjans autocasting the Infusion spell.
+
 -----------------------------------------------------------------------
 - 4.0.5
 -----------------------------------------------------------------------
