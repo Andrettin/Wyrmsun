@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which could result in units autocasting spells they didn't have, e.g. Germanic Gudjans autocasting the Infusion spell.
+- When a unit exits a building which has a rally point, it will now be dropped at the adjacent tile closest to the rally point.
 
 -----------------------------------------------------------------------
 - 4.0.5
