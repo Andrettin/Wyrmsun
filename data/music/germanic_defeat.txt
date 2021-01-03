@@ -1,0 +1,16 @@
+germanic_defeat = {
+	type = defeat
+	file = "oaml/GermanicLose_A.ogg"
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}

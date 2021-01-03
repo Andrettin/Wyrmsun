@@ -1,0 +1,29 @@
+germanic_victory = {
+	type = victory
+	intro_music = {
+		germanic_victory_intro
+	}
+	submusic = {
+		germanic_victory_a
+	}
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}
+
+germanic_victory_intro = {
+	file = "oaml/GermanicWin_Intro.ogg"
+}
+
+germanic_victory_a = {
+	file = "oaml/GermanicWin_A.ogg"
+}
