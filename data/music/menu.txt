@@ -1,0 +1,44 @@
+menu_theme = {
+	type = menu
+	volume_percent = 60
+	intro_music = {
+		menu_theme_intro
+	}
+	submusic = {
+		menu_theme_a1
+		menu_theme_a2
+		menu_theme_a3
+		menu_theme_a4
+	}
+}
+
+menu_theme_intro = {
+	file = "oaml/MenuTheme_Intro.ogg"
+	volume_percent = 60
+}
+
+menu_theme_a1 = {
+	file = "oaml/MenuTheme_A1.ogg"
+	volume_percent = 60
+}
+
+menu_theme_a2 = {
+	file = "oaml/MenuTheme_A2.ogg"
+	volume_percent = 60
+}
+
+menu_theme_a3 = {
+	file = "oaml/MenuTheme_A3.ogg"
+	volume_percent = 60
+}
+
+menu_theme_a4 = {
+	file = "oaml/MenuTheme_A4.ogg"
+	volume_percent = 60
+}
+
+menu_theme_c = {
+	type = credits
+	file = "oaml/MenuTheme_C.ogg"
+	volume_percent = 60
+}
