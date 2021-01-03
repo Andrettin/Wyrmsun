@@ -10,6 +10,11 @@ mods/
 temp/
 wyr/
 crash.dmp
+libFLAC-8.dll
+libmikmod-2.dll
+libogg-0.dll
+libvorbis-0.dll
+libvorbisfile-3.dll
 lua51.dll
 oaml.log
 Qt5Core.dll
@@ -42,6 +47,8 @@ Qt5Widgets.dll
 Qt5Widgetsd.dll
 screen*.png
 SDL.dll
+SDL_mixer.dll
+smpeg.dll
 stderr.txt
 stdout.txt
 wyrmsun32
