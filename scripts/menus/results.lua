@@ -17,7 +17,7 @@ function RunResultsMenu()
 		else
 			background = GetBackground("backgrounds/gryphon.png")
 		end
-		PlayMusicByGroupAndFactionRandom("win", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
+		play_victory_music()
 	elseif (GameResult == GameDefeat) then
 		result = "Defeat!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
@@ -33,7 +33,7 @@ function RunResultsMenu()
 		else
 			background = GetBackground("backgrounds/wyrm.png")
 		end
-		PlayMusicByGroupAndFactionRandom("lose", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
+		play_defeat_music()
 	elseif (GameResult == GameDraw) then
 		result = "Draw!"
 		background = GetBackground("backgrounds/gullinburst.png")
