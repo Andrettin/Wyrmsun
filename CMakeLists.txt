@@ -18,6 +18,7 @@ install(FILES oaml.defs DESTINATION ${DATADIR})
 install(DIRECTORY
 	data
 	graphics
+	interface
 	maps
 	music
 	scripts
