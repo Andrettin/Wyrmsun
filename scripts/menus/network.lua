@@ -652,9 +652,7 @@ function RunMultiPlayerGameMenu(s)
 	local function FixMusic()
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	InitGameSettings()

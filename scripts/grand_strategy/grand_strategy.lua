@@ -47,9 +47,7 @@ function RunGrandStrategyGameSetupMenu()
 
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	if not (IsMusicPlaying()) then
-		PlayMusicName("MenuTheme")
-	end
+	play_menu_music()
 
 	local menu = WarMenu()
 	local offx = (Video.Width - 640) / 2

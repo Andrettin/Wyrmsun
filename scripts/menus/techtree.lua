@@ -34,9 +34,7 @@ function RunTechTreeMenu(civilization_number)
 	if (RunningScenario == false) then
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu()

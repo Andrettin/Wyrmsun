@@ -28,9 +28,7 @@
 function RunCampaignMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	if not (IsMusicPlaying()) then
-		PlayMusicName("MenuTheme")
-	end
+	play_menu_music()
 
 	local campaign_description
 	local highest_completed_difficulty

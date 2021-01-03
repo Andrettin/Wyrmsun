@@ -358,9 +358,7 @@ end
 function BuildOptionsMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	if not (IsMusicPlaying()) then
-		PlayMusicName("MenuTheme")
-	end
+	play_menu_music()
 
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -706,7 +704,7 @@ function RunVideoOptionsMenu()
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then
-				PlayMusicName("MenuTheme")
+				play_menu_music()
 			end
 		end
 	)

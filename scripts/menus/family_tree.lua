@@ -27,9 +27,7 @@
 
 function RunFamilyTreeMenu(hero)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))

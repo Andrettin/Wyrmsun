@@ -28,9 +28,7 @@
 function RunAchievementsMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	if not (IsMusicPlaying()) then
-		PlayMusicName("MenuTheme")
-	end
+	play_menu_music()
 
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2

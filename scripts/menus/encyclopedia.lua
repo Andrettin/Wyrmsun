@@ -29,9 +29,7 @@ function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -100,9 +98,7 @@ end
 function RunEncyclopediaUnitsCivilizationMenu(state)
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -250,9 +246,7 @@ end
 function RunEncyclopediaUnitsMenu(state, civilization)
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -581,9 +575,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	end
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name, state)))
@@ -1071,9 +1063,7 @@ end
 function RunEncyclopediaTextsMenu()
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1104,9 +1094,7 @@ end
 
 function OpenEncyclopediaText(text_identifier, chosen_chapter)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1396,11 +1384,8 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 end
 
 function RunEncyclopediaPlanesMenu()
-
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1455,9 +1440,7 @@ end
 
 function OpenEncyclopediaPlaneEntry(plane)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1551,9 +1534,7 @@ end
 function RunEncyclopediaWorldsMenu()
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1608,9 +1589,7 @@ end
 
 function OpenEncyclopediaWorldEntry(world)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1706,9 +1685,7 @@ end
 function RunEncyclopediaGameConceptsMenu()
 
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 	
 	local game_concepts = GameConcepts
@@ -1760,9 +1737,7 @@ end
 
 function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local game_concepts = GameConcepts
@@ -1790,11 +1765,8 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 end
 
 function RunEncyclopediaCivilizationsMenu()
-
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1849,9 +1821,7 @@ end
 
 function OpenEncyclopediaCivilizationEntry(civilization)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
@@ -1908,9 +1878,7 @@ end
 
 function RunEncyclopediaFactionsCivilizationMenu()
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1971,11 +1939,8 @@ function RunEncyclopediaFactionsCivilizationMenu()
 end
 
 function RunEncyclopediaFactionsMenu(civilization)
-
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -2030,9 +1995,7 @@ end
 
 function OpenEncyclopediaFactionEntry(civilization, faction)
 	if (RunningScenario == false) then
-		if not (IsMusicPlaying()) then
-			PlayMusicName("MenuTheme")
-		end
+		play_menu_music()
 	end
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))

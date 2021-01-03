@@ -30,7 +30,7 @@ function RunShowCreditsMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	SetMusicCondition(10, 1)
+	play_credits_music()
 
 	local credits = {
 		_("Wyrmsun Design and Maintenance"),
@@ -291,6 +291,6 @@ function RunShowCreditsMenu()
 	menu:run()
 
 	SetGameSpeed(speed)
-	SetMusicCondition(10, 0)
+	play_menu_music()
 end
 
