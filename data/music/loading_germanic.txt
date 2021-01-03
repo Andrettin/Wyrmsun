@@ -1,0 +1,32 @@
+loading_germanic = {
+	type = loading
+	submusic = {
+		loading_germanic_a1
+		loading_germanic_a2
+		loading_germanic_a3
+	}
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}
+
+loading_germanic_a1 = {
+	file = "oaml/GermanicLoading_A1.ogg"
+}
+
+loading_germanic_a2 = {
+	file = "oaml/GermanicLoading_A2.ogg"
+}
+
+loading_germanic_a3 = {
+	file = "oaml/GermanicLoading_A3.ogg"
+}
