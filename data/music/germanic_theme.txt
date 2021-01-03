@@ -1,0 +1,55 @@
+germanic_theme = {
+	type = map
+	submusic = {
+		germanic_theme_a1
+		germanic_theme_a2
+		germanic_theme_r1
+		germanic_theme_b1
+		germanic_theme_b2
+	}
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}
+
+germanic_theme_a1 = {
+	file = "oaml/GermanicTheme_A1.ogg"
+	conditions = {
+		war = false #so that it doesn't play when the battle music can be played
+	}
+}
+
+germanic_theme_a2 = {
+	file = "oaml/GermanicTheme_A2.ogg"
+	conditions = {
+		war = false #so that it doesn't play when the battle music can be played
+	}
+}
+
+germanic_theme_r1 = {
+	file = "oaml/GermanicTheme_R1.ogg"
+	#in OAML had a 25% random chance to be picked
+}
+
+germanic_theme_b1 = {
+	file = "oaml/GermanicTheme_B1.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 1 and 24
+	}
+}
+
+germanic_theme_b2 = {
+	file = "oaml/GermanicTheme_B2.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 25 and 100
+	}
+}
