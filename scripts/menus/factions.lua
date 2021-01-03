@@ -100,8 +100,6 @@ function ChooseFaction(old_civilization, old_faction)
 				SetGamePaused(false)
 			end
 			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
-			StopMusic()
-			PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 			menu:stop()
 		end
 	)
@@ -112,8 +110,6 @@ function ChooseFaction(old_civilization, old_faction)
 				SetGamePaused(false)
 			end
 			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
-			StopMusic()
-			PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 			menu:stop()
 		end,
 		{0, 0}

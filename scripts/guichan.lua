@@ -606,12 +606,7 @@ function RunMap(map, objective, fow, revealmap)
 	end
 	local loop = true
 	while (loop) do
-		StopMusic()
-		if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "LoadingMusic") ~= "") then
-			PlayMusicName(GetQuestData(GetCurrentQuest(), "LoadingMusic"))
-		else
-			PlayMusicByGroupAndSubgroupRandom("loading", GetPlayerData(GetThisPlayer(), "RaceName"))
-		end
+		play_loading_music()
 
 		InitGameVariables()
 		if fow ~= nil then
@@ -1375,13 +1370,7 @@ initialize_database()
 --pack_image_folder("C:/Wyrmsun/models/units/elven/worker/Sprites")
 
 function GameStarting()
-	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
-		StopMusic()
-		PlayMusicName(GetQuestData(GetCurrentQuest(), "MapMusic"))
-	else
-		StopMusic()
-		PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
-	end
+	play_map_music()
 	
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
