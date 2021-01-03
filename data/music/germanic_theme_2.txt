@@ -1,0 +1,47 @@
+germanic_theme_2 = {
+	type = map
+	intro_music = {
+		germanic_theme_2_intro
+	}
+	submusic = {
+		germanic_theme_2_a1
+		germanic_theme_2_a2
+		germanic_theme_2_a3
+		germanic_theme_2_b1
+	}
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}
+
+germanic_theme_2_intro = {
+	file = "oaml/GermanicTheme2_Intro.ogg"
+}
+
+germanic_theme_2_a1 = {
+	file = "oaml/GermanicTheme2_A1.ogg"
+}
+
+germanic_theme_2_a2 = {
+	file = "oaml/GermanicTheme2_A2.ogg"
+}
+
+germanic_theme_2_a3 = {
+	file = "oaml/GermanicTheme2_A3.ogg"
+}
+
+germanic_theme_2_b1 = {
+	file = "oaml/GermanicTheme2_B1.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 1 and 100
+	}
+}

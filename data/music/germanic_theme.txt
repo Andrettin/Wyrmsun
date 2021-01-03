@@ -23,16 +23,10 @@ germanic_theme = {
 
 germanic_theme_a1 = {
 	file = "oaml/GermanicTheme_A1.ogg"
-	conditions = {
-		war = false #so that it doesn't play when the battle music can be played
-	}
 }
 
 germanic_theme_a2 = {
 	file = "oaml/GermanicTheme_A2.ogg"
-	conditions = {
-		war = false #so that it doesn't play when the battle music can be played
-	}
 }
 
 germanic_theme_r1 = {

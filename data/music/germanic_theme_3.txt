@@ -1,0 +1,93 @@
+germanic_theme_3 = {
+	type = map
+	submusic = {
+		germanic_theme_3_a1
+		germanic_theme_3_a2
+		germanic_theme_3_a3
+		germanic_theme_3_n1
+		germanic_theme_3_n2
+		germanic_theme_3_n3
+		germanic_theme_3_b1
+		germanic_theme_3_b2
+	}
+	conditions = {
+		or = {
+			civilization = germanic
+			civilization = anglo_saxon
+			civilization = english
+			civilization = frankish
+			civilization = gothic
+			civilization = norse
+			civilization = suebi
+			civilization = teutonic
+		}
+	}
+}
+
+germanic_theme_3_a1 = {
+	file = "oaml/GermanicTheme3_A1.ogg"
+	conditions = {
+		not = {
+			#in OAML would be picked when the time of day is not a night one
+			scripted_condition = is_night
+		}
+	}
+}
+
+germanic_theme_3_a2 = {
+	file = "oaml/GermanicTheme3_A2.ogg"
+	conditions = {
+		not = {
+			#in OAML would be picked when the time of day is not a night one
+			scripted_condition = is_night
+		}
+	}
+}
+
+germanic_theme_3_a3 = {
+	file = "oaml/GermanicTheme3_A3.ogg"
+	conditions = {
+		not = {
+			#in OAML would be picked when the time of day is not a night one
+			scripted_condition = is_night
+		}
+	}
+}
+
+germanic_theme_3_n1 = {
+	file = "oaml/GermanicTheme3_N1.ogg"
+	conditions = {
+		#in OAML would be picked when the time of day is a night one
+		scripted_condition = is_night
+	}
+}
+
+germanic_theme_3_n2 = {
+	file = "oaml/GermanicTheme3_N2.ogg"
+	conditions = {
+		#in OAML would be picked when the time of day is a night one
+		scripted_condition = is_night
+	}
+}
+
+germanic_theme_3_n3 = {
+	file = "oaml/GermanicTheme3_N3.ogg"
+	conditions = {
+		#in OAML would be picked when the time of day is a night one
+		scripted_condition = is_night
+	}
+}
+
+germanic_theme_3_b1 = {
+	file = "oaml/GermanicTheme3_B1.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 1 and 24
+	}
+}
+
+germanic_theme_3_b2 = {
+	file = "oaml/GermanicTheme3_B2.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 25 and 100
+	}
+}
