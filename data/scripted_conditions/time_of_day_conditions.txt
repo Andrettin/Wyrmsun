@@ -1,0 +1,8 @@
+is_night = {
+	or = {
+		time_of_day = early_night
+		time_of_day = midnight
+		time_of_day = late_night
+		time_of_day = underground
+	}
+}
