@@ -28,6 +28,4 @@
 InitMusicOAML()
 
 LoadOAMLDefinitionsFile("scripts/civilizations/dwarf/oaml.defs")
-LoadOAMLDefinitionsFile("scripts/civilizations/dwarf/oaml_knalga.defs")
-LoadOAMLDefinitionsFile("scripts/civilizations/dwarf/oaml_norlund.defs")
 LoadOAMLDefinitionsFile("scripts/civilizations/germanic/oaml.defs")
