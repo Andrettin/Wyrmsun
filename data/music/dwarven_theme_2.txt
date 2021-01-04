@@ -1,0 +1,32 @@
+dwarven_theme_2 = {
+	type = map
+	submusic = {
+		dwarven_theme_2_a1
+		dwarven_theme_2_a2
+		dwarven_theme_2_r1
+		dwarven_theme_2_b1
+	}
+	conditions = {
+		civilization = dwarven
+	}
+}
+
+dwarven_theme_2_a1 = {
+	file = "oaml/DwarfTheme2_A1.ogg"
+}
+
+dwarven_theme_2_a2 = {
+	file = "oaml/DwarfTheme2_A2.ogg"
+}
+
+dwarven_theme_2_r1 = {
+	file = "oaml/DwarfTheme2_R1.ogg"
+	#in OAML had a 100% random chance to be picked
+}
+
+dwarven_theme_2_b1 = {
+	file = "oaml/DwarfTheme2_B1.ogg"
+	conditions = {
+		war = true #in OAML would be picked when the tension range is between 1 and 100
+	}
+}
