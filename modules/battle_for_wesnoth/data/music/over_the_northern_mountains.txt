@@ -1,0 +1,11 @@
+over_the_northern_mountains = {
+	type = map
+	file = "northern_mountains.ogg"
+	conditions = {
+		or = {
+			civilization = dwarven
+			civilization = goblin
+			civilization = orc
+		}
+	}
+}

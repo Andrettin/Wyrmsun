@@ -1,0 +1,7 @@
+the_city_falls = {
+	type = map
+	file = "the_city_falls.ogg"
+	conditions = {
+		war = true
+	}
+}

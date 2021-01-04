@@ -1,0 +1,4 @@
+nunc_dimittis = {
+	type = map
+	file = "nunc_dimittis.ogg"
+}

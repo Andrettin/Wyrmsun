@@ -1,0 +1,4 @@
+traveling_minstrels = {
+	type = map
+	file = "traveling_minstrels.ogg"
+}

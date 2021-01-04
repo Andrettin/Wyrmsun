@@ -1,0 +1,7 @@
+knalgan_theme = {
+	type = map
+	file = "knalgan_theme.ogg"
+	conditions = {
+		civilization = dwarven
+	}
+}

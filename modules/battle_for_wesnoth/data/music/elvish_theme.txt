@@ -1,0 +1,7 @@
+elvish_theme = {
+	type = map
+	file = "elvish-theme.ogg"
+	conditions = {
+		civilization = elven
+	}
+}

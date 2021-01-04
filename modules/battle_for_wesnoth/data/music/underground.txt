@@ -1,0 +1,7 @@
+underground = {
+	type = map
+	file = "underground.ogg"
+	conditions = {
+		time_of_day = underground
+	}
+}

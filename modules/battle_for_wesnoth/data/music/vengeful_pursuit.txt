@@ -1,0 +1,7 @@
+vengeful_pursuit = {
+	type = map
+	file = "vengeful.ogg"
+	conditions = {
+		war = true
+	}
+}

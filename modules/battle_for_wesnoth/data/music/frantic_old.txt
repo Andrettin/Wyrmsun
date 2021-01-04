@@ -1,0 +1,4 @@
+frantic_old = {
+	type = map
+	file = "frantic-old.ogg"
+}

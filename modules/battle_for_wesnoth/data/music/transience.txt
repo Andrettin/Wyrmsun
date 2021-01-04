@@ -1,0 +1,4 @@
+transience = {
+	type = map
+	file = "transience.ogg"
+}

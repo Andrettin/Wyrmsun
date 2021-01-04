@@ -1,0 +1,7 @@
+into_the_shadows = {
+	type = map
+	file = "into_the_shadows.ogg"
+	conditions = {
+		scripted_condition = is_night #whether it is night or underground
+	}
+}

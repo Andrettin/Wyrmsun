@@ -1,0 +1,4 @@
+the_knolls_of_doldesh = {
+	type = map
+	file = "knolls.ogg"
+}

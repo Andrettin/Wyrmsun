@@ -1,0 +1,7 @@
+the_deep_path = {
+	type = map
+	file = "the_deep_path.ogg"
+	conditions = {
+		time_of_day = underground #the author said he made it for underground levels: https://wesnoth.org/forum/viewtopic.php?t=22233
+	}
+}

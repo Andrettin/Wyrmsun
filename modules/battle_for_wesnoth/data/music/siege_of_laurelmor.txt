@@ -1,0 +1,7 @@
+siege_of_laurelmor = {
+	type = map
+	file = "siege_of_laurelmor.ogg"
+	conditions = {
+		war = true
+	}
+}

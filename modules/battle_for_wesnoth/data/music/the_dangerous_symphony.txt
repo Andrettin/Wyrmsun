@@ -1,0 +1,4 @@
+the_dangerous_symphony = {
+	type = map
+	file = "the_dangerous_symphony.ogg"
+}

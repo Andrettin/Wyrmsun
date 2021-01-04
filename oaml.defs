@@ -55,36 +55,3 @@
 		<xfadeOut>500</xfadeOut>
 	</audio>
 </track>
-<track>
-	<name>Victory</name>
-	<group>win</group>
-	<fadeIn>0</fadeIn>
-	<fadeOut>500</fadeOut>
-	<xfadeIn>10</xfadeIn>
-	<xfadeOut>10</xfadeOut>
-	<audio>
-		<filename>music/victory.ogg</filename>
-	</audio>
-</track>
-<track>
-	<name>Defeat</name>
-	<group>lose</group>
-	<fadeIn>0</fadeIn>
-	<fadeOut>500</fadeOut>
-	<xfadeIn>10</xfadeIn>
-	<xfadeOut>10</xfadeOut>
-	<audio>
-		<filename>music/defeat.ogg</filename>
-	</audio>
-</track>
-<track>
-	<name>Defeat2</name>
-	<group>lose</group>
-	<fadeIn>0</fadeIn>
-	<fadeOut>500</fadeOut>
-	<xfadeIn>10</xfadeIn>
-	<xfadeOut>10</xfadeOut>
-	<audio>
-		<filename>music/defeat2.ogg</filename>
-	</audio>
-</track>

@@ -1,0 +1,4 @@
+loyalists = {
+	type = map
+	file = "loyalists.ogg"
+}

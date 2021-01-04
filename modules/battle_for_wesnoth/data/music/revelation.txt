@@ -1,0 +1,4 @@
+revelation = {
+	type = map
+	file = "revelation.ogg"
+}

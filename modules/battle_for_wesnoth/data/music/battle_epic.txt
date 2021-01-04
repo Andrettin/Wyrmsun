@@ -1,0 +1,7 @@
+battle_epic = {
+	type = map
+	file = "battle-epic.ogg"
+	conditions = {
+		war = true
+	}
+}

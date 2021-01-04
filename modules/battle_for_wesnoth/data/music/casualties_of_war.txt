@@ -1,0 +1,7 @@
+casualties_of_war = {
+	type = map
+	file = "casualties_of_war.ogg"
+	conditions = {
+		war = true
+	}
+}

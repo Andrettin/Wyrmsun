@@ -253,7 +253,6 @@ DefineQuest("a-bargain-is-struck", {
 	Map = "maps/nidavellir/chaincolt-foothills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/a_bargain_is_struck.lua",
 	PlayerColor = "red",
-	MapMusic = "ABargainIsStruck",
 	Unobtainable = true
 })
 
@@ -267,7 +266,6 @@ DefineQuest("closing-the-gates", {
 	Map = "maps/nidavellir/caverns-of-chaincolt.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/closing_the_gates.lua",
 	PlayerColor = "red",
-	MapMusic = "ClosingTheGates",
 	Unobtainable = true
 })
 
@@ -281,7 +279,6 @@ DefineQuest("searching-for-the-runecrafter", {
 	Map = "maps/nidavellir/northern-wastelands.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/searching_for_the_runecrafter.lua",
 	PlayerColor = "red",
-	MapMusic = "SearchingForTheRunecrafter",
 	Unobtainable = true
 })
 
@@ -295,7 +292,6 @@ DefineQuest("gathering-materials", {
 	Map = "maps/nidavellir/eastern-mines.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/gathering_materials.lua",
 	PlayerColor = "red",
-	MapMusic = "GatheringMaterials",
 	Unobtainable = true
 })
 
@@ -309,7 +305,6 @@ DefineQuest("hills-of-the-shorbear-clan", {
 	Map = "maps/nidavellir/shorbear-hills.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
 	PlayerColor = "red",
-	MapMusic = "HillsOfTheShorbearClan",
 	Unobtainable = true
 })
 
@@ -323,7 +318,6 @@ DefineQuest("the-wyrm", {
 	Map = "maps/nidavellir/svafnirs-lair.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_wyrm.lua",
 	PlayerColor = "red",
-	MapMusic = "TheWyrm",
 	Unobtainable = true
 })
 
@@ -337,7 +331,6 @@ DefineQuest("caverns-of-flame", {
 	Map = "maps/nidavellir/caverns-of-flame.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/caverns_of_flame.lua",
 	PlayerColor = "red",
-	MapMusic = "CavernsOfFlame",
 	Unobtainable = true
 })
 

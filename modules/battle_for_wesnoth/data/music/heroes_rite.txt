@@ -1,0 +1,4 @@
+heroes_rite = {
+	type = map
+	file = "heroes_rite.ogg"
+}

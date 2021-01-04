@@ -1,0 +1,4 @@
+suspense = {
+	type = map
+	file = "suspense.ogg"
+}

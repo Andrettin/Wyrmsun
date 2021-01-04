@@ -1,0 +1,4 @@
+still_another_wanderer = {
+	type = map
+	file = "wanderer.ogg"
+}

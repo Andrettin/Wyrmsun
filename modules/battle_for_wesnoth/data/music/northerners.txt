@@ -1,0 +1,11 @@
+northerners = {
+	type = map
+	file = "northerners.ogg"
+	conditions = {
+		or = {
+			civilization = dwarven
+			civilization = goblin
+			civilization = orc
+		}
+	}
+}

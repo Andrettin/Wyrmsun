@@ -1,0 +1,4 @@
+journeys_end = {
+	type = map
+	file = "journeys_end.ogg"
+}

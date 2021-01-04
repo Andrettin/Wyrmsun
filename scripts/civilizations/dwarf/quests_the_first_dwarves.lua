@@ -49,8 +49,6 @@ DefineQuest("the-mead-of-wisdom", {
 	Map = "maps/nidavellir/fjalars-and-galars-hall.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_mead_of_wisdom.lua",
 	PlayerColor = "white",
-	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme2",
 	Unobtainable = true
 })
 
@@ -146,8 +144,6 @@ DefineQuest("the-necklace-of-the-brisings", {
 	Map = "maps/nidavellir/aurvang.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 	PlayerColor = "black",
-	LoadingMusic = "DwarfLoading",
---	MapMusic = "DwarfTheme4",
 	Unobtainable = true
 })
 

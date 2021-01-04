@@ -1,0 +1,11 @@
+legends_of_the_north = {
+	type = map
+	file = "legends_of_the_north.ogg"
+	conditions = {
+		or = {
+			civilization = dwarven
+			civilization = goblin
+			civilization = orc
+		}
+	}
+}

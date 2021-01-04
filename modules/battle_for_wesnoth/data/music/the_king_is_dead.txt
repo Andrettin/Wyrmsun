@@ -1,0 +1,4 @@
+the_king_is_dead = {
+	type = map
+	file = "the_king_is_dead.ogg"
+}

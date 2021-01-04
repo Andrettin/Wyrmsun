@@ -1,0 +1,7 @@
+battle_music = {
+	type = map
+	file = "battle.ogg"
+	conditions = {
+		war = true
+	}
+}
