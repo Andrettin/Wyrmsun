@@ -1,0 +1,4 @@
+defeat = {
+	type = defeat
+	file = "defeat.ogg"
+}
