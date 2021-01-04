@@ -290,6 +290,8 @@ function HandleCheats(str)
 		if (dock_type) then
 			unit = CreateUnit(dock_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
+	elseif (str == "merry christmas") then
+		unit = CreateUnit("unit_christmas_hat", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	else
 		return false
 	end

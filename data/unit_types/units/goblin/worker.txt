@@ -1,0 +1,145 @@
+unit_goblin_worker = {
+	name = "Drudge"
+	parent = unit_template_worker
+	civilization = goblin
+	description = "Goblin drudges do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."
+	image_file = "goblin/units/goblin_worker.png"
+	frame_size = { 72 72 }
+	animation_set = animations_gnomish_worker
+	icon = goblin_worker
+	accuracy = 9
+	evasion = 10
+	day_sight_range_bonus = -1
+	night_sight_range_bonus = 1
+	corpse_type = unit_goblin_dead_body
+	button_key = d
+	weapon_classes = { mace axe }
+	blunt_damage = true
+	default_equipment = {
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_boots
+		unit_cheese
+		unit_meat
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		silver = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		copper = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		iron = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		mithril = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		lumber = {
+			loaded_image_file = "goblin/units/goblin_worker_with_lumber.png"
+		}
+		stone = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		limestone = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		coal = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		jewelry = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		furniture = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		leather = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		diamonds = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+		emeralds = {
+			loaded_image_file = "goblin/units/goblin_worker_with_gold.png"
+		}
+	}
+	variations = {
+		bald = {
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		bald_christmas_hat = {
+			icon = goblin_worker_christmas_hat
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		spiky_hair = {
+			image_file = "goblin/units/goblin_worker_spiky_hair.png"
+			resource_loaded_image_files = {
+				gold = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				silver = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				copper = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				iron = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				mithril = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				stone = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				limestone = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				coal = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				lumber = "goblin/units/goblin_worker_with_lumber_spiky_hair.png"
+				jewelry = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				furniture = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				leather = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				diamonds = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				emeralds = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+			}
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		spiky_hair_christmas_hat = {
+			icon = goblin_worker_christmas_hat
+			image_file = "goblin/units/goblin_worker_spiky_hair.png"
+			resource_loaded_image_files = {
+				gold = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				silver = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				copper = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				iron = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				mithril = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				stone = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				limestone = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				coal = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				lumber = "goblin/units/goblin_worker_with_lumber_spiky_hair.png"
+				jewelry = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				furniture = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				leather = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				diamonds = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+				emeralds = "goblin/units/goblin_worker_with_gold_spiky_hair.png"
+			}
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+	}
+	sounds = {
+		ready = goblin_worker_ready
+		hit = mace_attack
+		miss = attack_miss
+	}
+}

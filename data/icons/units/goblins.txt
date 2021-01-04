@@ -1,0 +1,9 @@
+goblin_worker = {
+	file = "icons/units/goblin/worker.png"
+	frame = 0
+}
+
+goblin_worker_christmas_hat = {
+	file = "icons/units/goblin/worker.png"
+	frame = 1
+}
