@@ -4,13 +4,7 @@ germanic_defeat = {
 	conditions = {
 		or = {
 			civilization = germanic
-			civilization = anglo_saxon
-			civilization = english
-			civilization = frankish
-			civilization = gothic
-			civilization = norse
-			civilization = suebi
-			civilization = teutonic
+			civilization_group = germanic
 		}
 	}
 }
