@@ -1,0 +1,21 @@
+loading_dwarven = {
+	type = loading
+	submusic = {
+		loading_dwarven_a1
+		loading_dwarven_a2
+	}
+	conditions = {
+		or = {
+			civilization = dwarven
+			civilization = goblin #as the goblins don't have a loading sound of their own
+		}
+	}
+}
+
+loading_dwarven_a1 = {
+	file = "oaml/DwarfLoading_A1.ogg"
+}
+
+loading_dwarven_a2 = {
+	file = "oaml/DwarfLoading_A2.ogg"
+}
