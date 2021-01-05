@@ -301,8 +301,6 @@ function LoadDLCs()
 			if (string.find(f, "main.lua")) then
 				CMod:SetCurrentModPath("dlcs/" .. dirlist[j])
 				Load(CMod:GetCurrentModPath() .. f)
-			elseif (string.find(f, "oaml.defs")) then
-				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
 			end
 		end
 	end
