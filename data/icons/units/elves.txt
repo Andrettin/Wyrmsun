@@ -1,3 +1,9 @@
 elven_worker = {
 	file = "icons/units/elven/worker.png"
+	frame = 0
+}
+
+elven_worker_christmas_hat = {
+	file = "icons/units/elven/worker.png"
+	frame = 1
 }

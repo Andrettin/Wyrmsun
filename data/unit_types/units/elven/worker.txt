@@ -66,6 +66,24 @@ unit_elven_worker = {
 			loaded_image_file = "units/elven/worker_with_gold.png"
 		}
 	}
+	variations = {
+		brown_hair = {
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		brown_hair_christmas_hat = {
+			icon = elven_worker_christmas_hat
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+	}
 	sounds = {
 		hit = axe_attack
 		miss = attack_miss
