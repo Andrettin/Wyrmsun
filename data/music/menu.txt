@@ -13,27 +13,27 @@ menu_theme = {
 }
 
 menu_theme_intro = {
-	file = "oaml/MenuTheme_Intro.ogg"
+	file = "oaml/MenuTheme_Intro_shortened.ogg"
 	volume_percent = 60
 }
 
 menu_theme_a1 = {
-	file = "oaml/MenuTheme_A1.ogg"
+	file = "oaml/MenuTheme_A1_shortened.ogg"
 	volume_percent = 60
 }
 
 menu_theme_a2 = {
-	file = "oaml/MenuTheme_A2.ogg"
+	file = "oaml/MenuTheme_A2_shortened.ogg"
 	volume_percent = 60
 }
 
 menu_theme_a3 = {
-	file = "oaml/MenuTheme_A3.ogg"
+	file = "oaml/MenuTheme_A3_shortened.ogg"
 	volume_percent = 60
 }
 
 menu_theme_a4 = {
-	file = "oaml/MenuTheme_A4.ogg"
+	file = "oaml/MenuTheme_A4_shortened.ogg"
 	volume_percent = 60
 }
 
