@@ -621,8 +621,8 @@ function StandardTriggers()
 					if (
 						table.getn(GetSelectedUnits()) > 0
 						and (
-							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-miner"
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_dwarven_miner"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_brising_miner"
 						)
 					) then
 						return true
@@ -2001,7 +2001,7 @@ Units = {
 	"upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-bearded-throwing-axe", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 	"upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
 	"upgrade-faction-brising-clan", "upgrade-faction-lyr",
-	"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
+	"unit-brising-skilled-miner", "unit-brising-expert-miner", "unit-brising-militia",
 	"unit-brising-smithy",
 	"upgrade-faction-eikinskjaldi-clan", "upgrade-faction-goldhoof-clan", "upgrade-faction-joruvellir", "upgrade-faction-yawning-yales",
 	"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",

@@ -31,15 +31,6 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-brising-miner", {
-	Parent = "unit-dwarven-miner",
-	Civilization = "dwarf",
-	Faction = "brising-clan",
-	Icon = "icon-brising-miner",
-	HitPoints = 40, -- +10 HP
-	Points = 35 -- +5 points
-} )
-
 DefineUnitType("unit-brising-skilled-miner", {
 	Parent = "unit-dwarven-skilled-miner",
 	Civilization = "dwarf",
