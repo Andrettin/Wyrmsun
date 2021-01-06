@@ -1342,13 +1342,13 @@ Load("scripts/menus/custom_hero.lua")
 
 SetGrabMouse(wyr.preferences.GrabMouse)
 
--- load DLCs and mods now
-LoadDLCs()
-LoadMods()
-
 LoadData() -- process the data
 
 load_database(false)
+
+-- load DLCs and mods now
+LoadDLCs()
+LoadMods()
 
 Load("scripts/language_words.lua")
 Load("scripts/map_template_data.lua")
