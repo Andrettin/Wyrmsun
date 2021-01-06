@@ -1,3 +1,13 @@
+dwarven_miner = {
+	file = "icons/units/dwarven/miner.png"
+	frame = 0
+}
+
+dwarven_miner_christmas_hat = {
+	file = "icons/units/dwarven/miner.png"
+	frame = 1
+}
+
 icon_dwarven_geomancer = {
 	file = "dwarf/icons/geomancer.png"
 }

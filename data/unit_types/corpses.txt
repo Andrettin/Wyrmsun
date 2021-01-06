@@ -1,6 +1,6 @@
 unit_gnoll_dead_body = {
 	name = "Dead Body"
-	icon = icon_dwarven_miner
+	icon = dwarven_miner
 	image_file = "units/gnoll/corpse.png"
 	frame_size = { 72 72 }
 	animation_set = animations_dead_body
@@ -26,7 +26,7 @@ unit_gnoll_dead_body = {
 
 unit_orc_dead_body = {
 	name = "Dead Body"
-	icon = icon_dwarven_miner
+	icon = dwarven_miner
 	image_file = "units/orc/corpse.png"
 	frame_size = { 132 132 }
 	animation_set = animations_dead_body

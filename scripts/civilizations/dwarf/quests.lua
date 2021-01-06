@@ -284,7 +284,7 @@ DefineQuest("searching-for-the-runecrafter", {
 
 DefineQuest("gathering-materials", {
 	Name = "Gathering Materials",
-	Icon = "icon-dwarven-miner",
+	Icon = "dwarven_miner",
 	Description = "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines",
 	RequiredQuest = "searching-for-the-runecrafter",
 	World = "nidavellir",

@@ -621,8 +621,8 @@ function StandardTriggers()
 					if (
 						table.getn(GetSelectedUnits()) > 0
 						and (
-							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-miner"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-miner"
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_dwarven_miner"
 						)
 					) then
 						return true
@@ -1978,7 +1978,7 @@ Units = {
 	"unit-celt-farm",
 	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
-	"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+	"unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 	"unit-dwarven-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",

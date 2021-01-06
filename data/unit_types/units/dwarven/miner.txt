@@ -1,0 +1,102 @@
+unit_dwarven_miner = {
+	name = "Miner"
+	parent = unit_template_worker
+	civilization = dwarven
+	description = "Dwarven miners are the grunt workers of dwarven society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts. Although their expertise makes them quite efficient in mining, this comes at the cost of neglecting training in the harvesting of timber."
+	background = "In Norse mythology, dwarves were shown to have an affinity for metals, and often they lived in mountainous homes."
+	image_file = "dwarf/units/miner.png"
+	frame_size = { 72 72 }
+	animation_set = animations_dwarven_miner
+	icon = dwarven_miner
+	copper_gathering_bonus = 1
+	silver_gathering_bonus = 1
+	gold_gathering_bonus = 1
+	iron_gathering_bonus = 1
+	mithril_gathering_bonus = 1
+	coal_gathering_bonus = 1
+	lumber_gathering_bonus = -1
+	furniture_gathering_bonus = -1
+	gems_gathering_bonus = 1
+	corpse_type = unit_dwarven_dead_body
+	button_key = m
+	weapon_classes = { mace }
+	blunt_damage = true
+	default_equipment = {
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_boots
+		unit_cheese
+		unit_meat
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		silver = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		copper = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		iron = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		mithril = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		lumber = {
+			loaded_image_file = "dwarf/units/miner_with_lumber.png"
+		}
+		stone = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		limestone = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		coal = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		jewelry = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		furniture = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		leather = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		diamonds = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+		emeralds = {
+			loaded_image_file = "dwarf/units/miner_with_gold.png"
+		}
+	}
+	variations = {
+		brown_hair = {
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		brown_hair_christmas_hat = {
+			icon = dwarven_miner_christmas_hat
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+	}
+	sounds = {
+		acknowledge = dwarven_miner_acknowledge
+		ready = dwarven_miner_ready
+		hit = mace_attack
+		miss = attack_miss
+	}
+}

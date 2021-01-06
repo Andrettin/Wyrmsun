@@ -26,12 +26,6 @@
 --
 
 DefineIcon({
-	Name = "icon-dwarven-miner",
-	Size = {46, 38},
-	File = "dwarf/icons/miner.png"
-})
-
-DefineIcon({
 	Name = "icon-dwarven-skilled-miner",
 	Size = {46, 38},
 	File = "dwarf/icons/skilled_miner.png"

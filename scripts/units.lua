@@ -264,7 +264,7 @@ DefineUnitType("unit-caravan", {
 
 --DefineUnitType("unit-destroyed-1x1-place", { Name = "Destroyed 1x1 Place",
 --	Image = {"size", {32, 32}},
---	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+--	Animations = "animations-destroyed-place", Icon = "dwarven_miner",
 --	HitPoints = 255,
 --	DrawLevel = 10,
 --	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -279,7 +279,7 @@ DefineUnitType("unit-caravan", {
 DefineUnitType("unit-destroyed-2x2-place", {
 	Name = "Destroyed 2x2 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	Animations = "animations-destroyed-place", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {2, 2}, BoxSize = {63, 63},
@@ -295,7 +295,7 @@ DefineUnitType("unit-destroyed-2x2-place", {
 DefineUnitType("unit-destroyed-3x3-place", {
 	Name = "Destroyed 3x3 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	Animations = "animations-destroyed-place", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {3, 3}, BoxSize = {95, 95},
@@ -310,7 +310,7 @@ DefineUnitType("unit-destroyed-3x3-place", {
 
 --DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
 --	Image = {"size", {64, 64}},
---	Animations = "animations-destroyed-place-water", Icon = "icon-dwarven-miner",
+--	Animations = "animations-destroyed-place-water", Icon = "dwarven_miner",
 --	HitPoints = 255,
 --	DrawLevel = 10,
 --	TileSize = {3, 3}, BoxSize = {95, 95},
@@ -325,7 +325,7 @@ DefineUnitType("unit-destroyed-3x3-place", {
 DefineUnitType("unit-destroyed-4x4-place", {
 	Name = "Destroyed 4x4 Place",
 	Image = {"file", "neutral/buildings/destroyed_site.png", "size", {64, 64}},
-	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
+	Animations = "animations-destroyed-place", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {4, 4}, BoxSize = {127, 127},
@@ -2393,7 +2393,7 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
 DefineUnitType("unit-dwarven-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/dwarven_corpse.png", "size", {72, 72}},
-	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2409,7 +2409,7 @@ DefineUnitType("unit-dwarven-dead-body", {
 DefineUnitType("unit-gnomish-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
-	Animations = "animations-gnomish-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-gnomish-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2425,7 +2425,7 @@ DefineUnitType("unit-gnomish-dead-body", {
 DefineUnitType("unit-goblin-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
-	Animations = "animations-goblin-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-goblin-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2441,7 +2441,7 @@ DefineUnitType("unit-goblin-dead-body", {
 DefineUnitType("unit-human-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
-	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2457,7 +2457,7 @@ DefineUnitType("unit-human-dead-body", {
 DefineUnitType("unit-kobold-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
-	Animations = "animations-kobold-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-kobold-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2473,7 +2473,7 @@ DefineUnitType("unit-kobold-dead-body", {
 DefineUnitType("unit-troll-dead-body", {
 	Name = "Dead Body",
 	Image = {"file", "troll/units/corpse.png", "size", {72, 72}},
-	Animations = "animations-dead-body", Icon = "icon-dwarven-miner",
+	Animations = "animations-dead-body", Icon = "dwarven_miner",
 	HitPoints = 255,
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
@@ -2488,7 +2488,7 @@ DefineUnitType("unit-troll-dead-body", {
 
 --DefineUnitType("unit-dead-sea-body", { Name = "Dead Body",
 --	Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},
---	Animations = "animations-dead-sea-body", Icon = "icon-dwarven-miner",
+--	Animations = "animations-dead-sea-body", Icon = "dwarven_miner",
 --	HitPoints = 255,
 --	DrawLevel = 30,
 --	TileSize = {2, 2}, BoxSize = {31, 31},
