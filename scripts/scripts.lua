@@ -27,8 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---StopMusic()
-
 if (GetCurrentTileset() == "cave") then -- ugly way to make sure the cave water appears properly
 	ClearAllColorCyclingRange()
 	AddColorCyclingRange(38, 46) -- water

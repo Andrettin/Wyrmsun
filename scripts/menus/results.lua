@@ -3,7 +3,6 @@ function RunResultsMenu()
 	local background
 	local result
 
-	StopMusic()
 	if (GameResult == GameVictory) then
 		result = "Victory!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
@@ -129,7 +128,7 @@ function RunResultsMenu()
 	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112 * get_scale_factor(), offy + 440 * get_scale_factor(),
 		function()
 			CleanPlayers()
-			StopMusic();
+			play_menu_music();
 			menu:stop()
 		end)
 
