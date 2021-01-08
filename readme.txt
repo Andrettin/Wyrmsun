@@ -60,6 +60,8 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue which caused the name of the player's current age not to appear after loading a saved game.
 - Fixed a potential crash which could occur soon after loading a saved game.
+- Instead of being loaded on startup, icons are now loaded on demand in the main menu (e.g. for the encyclopedia), with the remaining ones being loaded when a game is started. This was done in order to improve startup speed.
+- Font graphics are now loaded on demand, instead of all of them being loaded on startup.
 
 * Units
 - Fixed issue which could result in units autocasting spells they didn't have, e.g. Germanic Gudjans autocasting the Infusion spell.
