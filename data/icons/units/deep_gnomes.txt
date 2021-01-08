@@ -1,0 +1,24 @@
+deep_gnomish_worker_red_hair = {
+	file = "icons/units/deep_gnomish/worker.png"
+	frame = 0
+}
+
+deep_gnomish_worker_red_hair_christmas_hat = {
+	file = "icons/units/deep_gnomish/worker.png"
+	frame = 4
+}
+
+deep_gnomish_worker_blond_hair = {
+	file = "icons/units/deep_gnomish/worker.png"
+	frame = 1
+}
+
+deep_gnomish_worker_gray_hair = {
+	file = "icons/units/deep_gnomish/worker.png"
+	frame = 2
+}
+
+deep_gnomish_worker_green_hair = {
+	file = "icons/units/deep_gnomish/worker.png"
+	frame = 3
+}

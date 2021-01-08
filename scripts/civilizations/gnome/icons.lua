@@ -26,24 +26,6 @@
 --
 
 DefineIcon({
-	Name = "icon-gnomish-worker",
-	Size = {46, 38},
-	File = "gnome/icons/worker.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-worker-black-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_black_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-worker-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_gray_hair.png"
-})
-
-DefineIcon({
 	Name = "icon-gnomish-recruit",
 	Size = {46, 38},
 	File = "gnome/icons/recruit.png"

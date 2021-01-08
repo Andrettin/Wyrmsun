@@ -760,7 +760,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scavenger") == false) then
 			AddTrigger("tip-scavenger",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-derro-worker")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_gnomish_worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_deep_gnomish_worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_derro_worker")) then
 						return true
 					else
 						return false
@@ -2010,10 +2010,10 @@ Units = {
 	"upgrade-faction-surghan-mercenaries",
 	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"upgrade-faction-acthnic-tribe", "upgrade-faction-derro-tribe", "upgrade-faction-sagan-tribe",
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
+	"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
-	"unit-derro-worker", "unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
+	"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
+	"unit-derro-thug", "unit-derro-executioner", "unit-derro-shadowguard",
 	"upgrade-faction-aelak-tribe", "upgrade-faction-issudru-tribe", "upgrade-faction-mabom-tribe", "upgrade-faction-sigre-tribe",
 	"upgrade-faction-aurvangling-tribe", "upgrade-faction-dreadskull-tribe", "upgrade-faction-khag-tribe", "upgrade-faction-lggi-tribe", "upgrade-faction-prideblade-tribe", "upgrade-faction-wildfang-tribe",
 	"upgrade-faction-aurvang", "upgrade-faction-driftwood", "upgrade-faction-ezmarria", "upgrade-faction-myridia", "upgrade-faction-stilgar", "upgrade-faction-tenebris",

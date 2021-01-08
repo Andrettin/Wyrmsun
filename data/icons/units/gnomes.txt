@@ -1,0 +1,19 @@
+gnomish_worker = {
+	file = "icons/units/gnomish/worker.png"
+	frame = 0
+}
+
+gnomish_worker_black_hair = {
+	file = "icons/units/gnomish/worker.png"
+	frame = 1
+}
+
+gnomish_worker_gray_hair = {
+	file = "icons/units/gnomish/worker.png"
+	frame = 2
+}
+
+gnomish_worker_christmas_hat = {
+	file = "icons/units/gnomish/worker.png"
+	frame = 3
+}

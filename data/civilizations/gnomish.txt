@@ -1,5 +1,12 @@
 gnome = {
 	aliases += gnomish
+	
+	unit_sounds = {
+		acknowledge = basic_gnome_voices_acknowledge
+		attack = basic_gnome_voices_attack
+		help = basic_gnome_voices_help
+		dead = basic_gnome_voices_dead
+	}
 	work_complete_sound = basic_gnome_voices_work_complete
 	research_complete_sound = basic_gnome_voices_research_complete
 	not_enough_food_sound = basic_gnome_voices_not_enough_food

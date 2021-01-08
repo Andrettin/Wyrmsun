@@ -1,15 +1,21 @@
-icon_derro_worker = {
+derro_worker = {
 	file = "icons/units/derro/worker.png"
+	frame = 0
 }
 
-icon_derro_thug = {
+derro_worker_christmas_hat = {
+	file = "icons/units/derro/worker.png"
+	frame = 1
+}
+
+derro_thug = {
 	file = "icons/units/derro/thug.png"
 }
 
-icon_derro_executioner = {
+derro_executioner = {
 	file = "icons/units/derro/executioner.png"
 }
 
-icon_derro_shadowguard = {
+derro_shadowguard = {
 	file = "icons/units/derro/shadowguard.png"
 }

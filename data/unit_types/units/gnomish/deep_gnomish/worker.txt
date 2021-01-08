@@ -1,0 +1,146 @@
+unit_deep_gnomish_worker = {
+	parent = unit_gnomish_worker
+	civilization = gnomish
+	faction = acthnic_tribe
+	image_file = "gnome/units/deep_gnomish_worker_red_hair.png"
+	frame_size = { 72 72 }
+	icon = deep_gnomish_worker_red_hair
+	day_sight_range_bonus = -1
+	night_sight_range_bonus = 1
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		silver = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		copper = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		iron = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		mithril = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		lumber = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_lumber_red_hair.png"
+		}
+		stone = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		limestone = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		coal = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		jewelry = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		furniture = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		leather = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		diamonds = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+		emeralds = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_red_hair.png"
+		}
+	}
+	variations = {
+		red_hair = {
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		red_hair_christmas_hat = {
+			icon = deep_gnomish_worker_red_hair_christmas_hat
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		green_blond_hair = {
+			image_file = "gnome/units/deep_gnomish_worker_blond_hair.png"
+			icon = deep_gnomish_worker_blond_hair
+			resource_loaded_image_files = {
+				gold = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				silver = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				copper = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				iron = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				mithril = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				stone = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				limestone = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				coal = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				lumber = "gnome/units/deep_gnomish_worker_with_lumber_blond_hair.png"
+				jewelry = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				furniture = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				leather = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				diamonds = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+				emeralds = "gnome/units/deep_gnomish_worker_with_gold_blond_hair.png"
+			}
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+			}
+		}
+		gray_hair = {
+			image_file = "gnome/units/deep_gnomish_worker_gray_hair.png"
+			icon = deep_gnomish_worker_gray_hair
+			resource_loaded_image_files = {
+				gold = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				silver = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				copper = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				iron = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				mithril = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				stone = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				limestone = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				coal = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				lumber = "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png"
+				jewelry = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				furniture = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				leather = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				diamonds = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+				emeralds = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+			}
+		}
+		green_hair = {
+			image_file = "gnome/units/deep_gnomish_worker_green_hair.png"
+			icon = deep_gnomish_worker_green_hair
+			resource_loaded_image_files = {
+				gold = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				silver = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				copper = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				iron = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				mithril = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				stone = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				limestone = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				coal = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				lumber = "gnome/units/deep_gnomish_worker_with_lumber_green_hair.png"
+				jewelry = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				furniture = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				leather = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				diamonds = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+				emeralds = "gnome/units/deep_gnomish_worker_with_gold_green_hair.png"
+			}
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+			}
+		}
+	}
+}

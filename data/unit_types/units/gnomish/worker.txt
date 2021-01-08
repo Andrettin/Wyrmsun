@@ -1,0 +1,119 @@
+unit_gnomish_worker = {
+	name = "Scavenger"
+	parent = unit_template_worker
+	civilization = gnomish
+	description = "Scavengers serve as the main source of manual labor in the gnomish lands."
+	image_file = "gnome/units/gnomish_worker.png"
+	frame_size = { 72 72 }
+	animation_set = animations_gnomish_worker
+	icon = gnomish_worker
+	accuracy = 9
+	evasion = 10
+	corpse_type = unit_gnomish_dead_body
+	button_key = s
+	weapon_classes = { mace axe }
+	blunt_damage = true
+	default_equipment = {
+		boots = unit_wool_shoes
+	}
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_wool_shoes
+		unit_cheese
+		unit_meat
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		silver = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		copper = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		iron = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		mithril = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		lumber = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_lumber.png"
+		}
+		stone = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		limestone = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		coal = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		jewelry = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		furniture = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		leather = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		diamonds = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+		emeralds = {
+			loaded_image_file = "gnome/units/gnomish_worker_with_gold.png"
+		}
+	}
+	variations = {
+		blond_hair = {
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		blond_hair_christmas_hat = {
+			icon = gnomish_worker_christmas_hat
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		gray_hair = {
+			image_file = "gnome/units/gnomish_worker_gray_hair.png"
+			icon = gnomish_worker_gray_hair
+			resource_loaded_image_files = {
+				gold = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				silver = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				copper = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				iron = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				mithril = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				stone = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				limestone = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				coal = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				lumber = "gnome/units/gnomish_worker_with_lumber_gray_hair.png"
+				jewelry = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				furniture = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				leather = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				diamonds = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+				emeralds = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
+			}
+		}
+	}
+	sounds = {
+		selected = gnomish_worker_selected_group
+		repair = gnomish_worker_repair
+		ready = gnomish_worker_ready
+		hit = mace_attack
+		miss = attack_miss
+	}
+}

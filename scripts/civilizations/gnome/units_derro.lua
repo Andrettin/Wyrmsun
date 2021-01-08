@@ -31,76 +31,6 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-derro-worker", {
-	Parent = "unit-gnomish-worker",
-	Civilization = "gnome",
-	Faction = "derro-tribe",
-	Description = "Derro workers labor silently in their underground caves. Despite their lack of combat training, the sight of one of them still makes travelers wary: the axes used by these laborers to split wood could soon be splitting necks instead.",
-	Image = {"file", "gnome/units/deep_gnomish_worker_gray_hair.png", "size", {72, 72}},
-	Icon = "icon-derro-worker",
-	DaySightRangeBonus = -1,
-	NightSightRangeBonus = 1,
-	BasicDamage = 6, -- +1 damage
-	CanGatherResources = {
-		{
-			"resource-id", "gold",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "silver",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "copper",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "iron",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "mithril",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "lumber",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png"
-		},
-		{
-			"resource-id", "stone",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "limestone",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "coal",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "jewelry",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "furniture",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "leather",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "diamonds",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		},
-		{
-			"resource-id", "emeralds",
-			"file-when-loaded", "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
-		}
-	}
-} )
-
 DefineUnitType("unit-derro-thug", {
 	Name = "Thug",
 	Parent = "unit-gnomish-recruit",
@@ -108,7 +38,7 @@ DefineUnitType("unit-derro-thug", {
 	Faction = "derro-tribe",
 	Description = "Derro thugs are addicted to a brew made of poisonous mushrooms, which also drive them insane. They use this concoction to enter a battle rage, allowing them to keep on fighting with horrendous injuries as they slice and cackle with maddening glee.",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
-	Icon = "icon-derro-thug",
+	Icon = "derro_thug",
 	BasicDamage = 11, Evasion = 10, -- +2 damage, -1 evasion
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
@@ -122,7 +52,7 @@ DefineUnitType("unit-derro-executioner", {
 	Faction = "derro-tribe",
 	Description = "The poisonous mushroom brew which gives common Derro swordsmen their battlerage exacts a heavy price. The more it is drunk, the more the user's sanity is damaged. The most promising and vicious Derro swordsmen are taken by magisters for a harsh recovery process. Indeed, at the end of it their madness seems gone. But so is much of their personality, leaving little more than a husk, subservient to the magisters' commands.",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
-	Icon = "icon-derro-executioner",
+	Icon = "derro_executioner",
 	BasicDamage = 12, Evasion = 11, Armor = 3, -- +2 damage, -2 evasion, +1 armor
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1
@@ -135,7 +65,7 @@ DefineUnitType("unit-derro-shadowguard", {
 	Faction = "derro-tribe",
 	Description = "The executioners who prove their skill at arms and start to show a glimmer of morbid cunning are taken by the magisters to receive further training and indoctrination. They are painfully infused with ancient magics that wrack and empower the subjects' body, if they survive the rite. They then become the hidden hand of the Derro clergy, the shadowguards. The few who have fought against a shadowguard and lived often end up half-crazed, telling fantastical stories of dancing shadows.",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_gray_hair.png", "size", {72, 72}},
-	Icon = "icon-derro-shadowguard",
+	Icon = "derro_shadowguard",
 	BasicDamage = 14, Evasion = 13, Armor = 3, -- +2 damage, -2 evasion, +1 armor
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1

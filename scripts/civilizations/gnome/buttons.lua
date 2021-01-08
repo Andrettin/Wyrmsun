@@ -88,13 +88,13 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 	ForUnit = {"unit-deep-gnomish-duelist"}
 } )
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-derro-executioner",
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "derro_executioner",
 	Action = "experience-upgrade-to", Value = "unit-derro-executioner",
 	Key = "u", Hint = "~!Upgrade to Executioner", Popup = "popup_unit",
 	ForUnit = {"unit-derro-thug"}
 } )
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-derro-shadowguard",
+DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "derro_shadowguard",
 	Action = "experience-upgrade-to", Value = "unit-derro-shadowguard",
 	Key = "u", Hint = "~!Upgrade to Shadowguard", Popup = "popup_unit",
 	ForUnit = {"unit-derro-executioner"}

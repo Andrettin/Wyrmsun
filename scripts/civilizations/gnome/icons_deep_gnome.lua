@@ -26,30 +26,6 @@
 --
 
 DefineIcon({
-	Name = "icon-deep-gnomish-worker-blond-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_deep_gnome_blond_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-deep-gnomish-worker-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_deep_gnome_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-deep-gnomish-worker-green-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_deep_gnome_green_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-deep-gnomish-worker-red-hair",
-	Size = {46, 38},
-	File = "gnome/icons/worker_deep_gnome_red_hair.png"
-})
-
-DefineIcon({
 	Name = "icon-deep-gnomish-recruit-blond-hair",
 	Size = {46, 38},
 	File = "gnome/icons/recruit_deep_gnome_blond_hair.png"

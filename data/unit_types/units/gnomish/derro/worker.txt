@@ -1,0 +1,74 @@
+unit_derro_worker = {
+	parent = unit_gnomish_worker
+	civilization = gnomish
+	faction = derro_tribe
+	description = "Derro workers labor silently in their underground caves. Despite their lack of combat training, the sight of one of them still makes travelers wary: the axes used by these laborers to split wood could soon be splitting necks instead."
+	image_file = "gnome/units/deep_gnomish_worker_gray_hair.png"
+	frame_size = { 72 72 }
+	icon = derro_worker
+	day_sight_range_bonus = -1
+	night_sight_range_bonus = 1
+	basic_damage = 6 #+1 damage
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		silver = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		copper = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		iron = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		mithril = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		lumber = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_lumber_gray_hair.png"
+		}
+		stone = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		limestone = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		coal = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		jewelry = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		furniture = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		leather = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		diamonds = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+		emeralds = {
+			loaded_image_file = "gnome/units/deep_gnomish_worker_with_gold_gray_hair.png"
+		}
+	}
+	variations = {
+		gray_hair = {
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		gray_hair_christmas_hat = {
+			icon = derro_worker_christmas_hat
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+	}
+}
