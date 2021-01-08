@@ -1,0 +1,9 @@
+germanic_worker = {
+	file = "icons/units/human/germanic/worker.png"
+	frame = 0
+}
+
+germanic_worker_christmas_hat = {
+	file = "icons/units/human/germanic/worker.png"
+	frame = 1
+}

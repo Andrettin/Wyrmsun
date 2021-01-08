@@ -55,7 +55,7 @@ DefineQuest("on_the_vanaquisl", {
 
 DefineQuest("westward_migration", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 	Name = "Westward Migration",
-	Icon = "icon-germanic-worker",
+	Icon = "germanic_worker",
 	Civilization = "germanic",
 	PlayerColor = "orange",
 	FailEffects = function(s)
@@ -384,7 +384,7 @@ DefineQuest("journey-to-heimdalls-stones", {
 
 DefineQuest("subjugate-the-karlings", {
 	Name = "Subjugate the Karlings",
-	Icon = "icon-germanic-worker",
+	Icon = "germanic_worker",
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "yellow",

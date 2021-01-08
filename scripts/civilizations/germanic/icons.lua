@@ -26,12 +26,6 @@
 --
 
 DefineIcon({
-	Name = "icon-germanic-worker",
-	Size = {46, 38},
-	File = "germanic/icons/worker.png"
-})
-
-DefineIcon({
 	Name = "icon-germanic-warrior",
 	Size = {46, 38},
 	File = "germanic/icons/warrior.png"

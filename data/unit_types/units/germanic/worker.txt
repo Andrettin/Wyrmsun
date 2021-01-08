@@ -1,0 +1,96 @@
+unit_germanic_worker = {
+	name = "Bura" #Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
+	parent = unit_template_worker
+	civilization = germanic
+	description = "Hardworking and robust, buras are the lifeblood of Germanic society, tending the fields and performing most of the manual labor required."
+	quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- Rigsthula"
+	background = "\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."
+	image_file = "germanic/units/worker.png"
+	frame_size = { 72 72 }
+	animation_set = animations_worker
+	icon = germanic_worker
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
+	corpse_type = unit_human_dead_body
+	button_key = b
+	weapon_classes = { mace axe }
+	blunt_damage = true
+	default_equipment = {
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_boots
+		unit_cheese
+		unit_carrots
+		unit_meat
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		silver = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		copper = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		iron = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		mithril = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		lumber = {
+			loaded_image_file = "germanic/units/worker_with_lumber.png"
+		}
+		stone = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		limestone = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		coal = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		jewelry = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		furniture = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		leather = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		diamonds = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+		emeralds = {
+			loaded_image_file = "germanic/units/worker_with_gold.png"
+		}
+	}
+	variations = {
+		brown_hair = {
+			conditions = {
+				not = {
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+		brown_hair_christmas_hat = {
+			icon = germanic_worker_christmas_hat
+			conditions = {
+				or = {
+					scripted_condition = is_christmas_season
+					equipment = unit_christmas_hat
+				}
+			}
+		}
+	}
+	sounds = {
+		hit = mace_attack
+		miss = attack_miss
+		dead = basic_human_voices_dead
+	}
+}

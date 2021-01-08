@@ -77,7 +77,7 @@ DefineDialogue("jarl-meets-the-thrallings", {
 					local attacker_count = 0
 					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_germanic_worker") then
 							OrderUnit(GetFactionPlayer("thralling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 							attacker_count = attacker_count + 1
 							if (attacker_count >= 2) then
@@ -177,7 +177,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 					local erala_hero_unit = FindHero("erala", trigger_player)
 					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
 					for unit1 = 1,table.getn(uncount) do 
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-worker") then
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_germanic_worker") then
 							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 						end
 					end

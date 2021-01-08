@@ -1,6 +1,14 @@
 germanic = {
 	group = germanic
 	
+	unit_sounds = {
+		selected = basic_germanic_voices_selected_group
+		acknowledge = basic_germanic_voices_acknowledge
+		attack = basic_germanic_voices_attack
+		ready = basic_germanic_voices_ready
+		help = basic_germanic_voices_help
+		dead = basic_human_voices_dead
+	}
 	work_complete_sound = basic_germanic_voices_work_complete
 	not_enough_food_sound = basic_teuton_voices_not_enough_food
 	not_enough_resource_sounds = {

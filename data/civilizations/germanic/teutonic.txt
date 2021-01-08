@@ -17,6 +17,7 @@ teuton = {
 		acknowledge = basic_teuton_voices_acknowledge
 		ready = basic_teuton_voices_ready
 		help = basic_teuton_voices_help
+		dead = basic_human_voices_dead
 	}
 	help_town_sound = basic_teuton_voices_help_town
 	work_complete_sound = basic_teuton_voices_work_complete

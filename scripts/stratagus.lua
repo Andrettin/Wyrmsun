@@ -382,7 +382,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Bura") == false) then
 			AddTrigger("tip-bura",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-worker") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_germanic_worker") then
 						return true
 					else
 						return false
@@ -1909,7 +1909,7 @@ Units = {
 	"unit-latin-javelineer",
 	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-faction-asa-tribe", "upgrade-faction-jarling-tribe", "upgrade-faction-karling-tribe", "upgrade-faction-skeldung-tribe", "upgrade-faction-thielung-tribe", "upgrade-faction-thralling-tribe", "upgrade-faction-yngling-tribe",
-	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
+	"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
@@ -1941,7 +1941,7 @@ Units = {
 	"upgrade-faction-brabant", "upgrade-faction-drenthe", "upgrade-faction-holland", "upgrade-faction-netherlands", "upgrade-faction-overijssel",
 	"upgrade-faction-lombardy",
 	"upgrade-faction-holy-rome",
-	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
+	"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman",
 	"unit-teuton-spearman",
 	"unit-teuton-archer",
 	"unit-teuton-gunpowder-infantry",
