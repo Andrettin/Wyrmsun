@@ -1,7 +1,7 @@
 unit_clay_golem = {
 	name = "Clay Golem"
 	parent = unit_template_construct_unit
-	description = "."
+	description = "Golems are constructed by mages skilled in the art of transmutation, to serve as guards against would-be enemies."
 	tile_size = { 1 1 }
 	box_size = { 31 31 }
 	image_file = "units/construct/clay_golem.png"
