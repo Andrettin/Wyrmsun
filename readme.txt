@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.1
 -----------------------------------------------------------------------
 
+* Items
+- Removed Potions of Decay and Potions of Slowness from dungeon maps, replacing them with traps.
+
 -----------------------------------------------------------------------
 - 4.1.0
 -----------------------------------------------------------------------

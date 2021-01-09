@@ -4510,14 +4510,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-								SecondRandomNumber = SyncRand(3)
-								if (SecondRandomNumber == 0) then
-									unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {SecondRandomX, SecondRandomY})
-								elseif (SecondRandomNumber == 1) then
-									unit = CreateUnit("unit-potion-of-decay", PlayerNumNeutral, {SecondRandomX, SecondRandomY})
-								elseif (SecondRandomNumber == 2) then
-									unit = CreateUnit("unit-potion-of-slowness", PlayerNumNeutral, {SecondRandomX, SecondRandomY})
-								end
+								unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {SecondRandomX, SecondRandomY})
 								SecondCount = SecondCount - 1
 							end
 						end
@@ -5438,10 +5431,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								unit = CreateUnit("unit-chair", PlayerNumNeutral, {RandomX, RandomY})
 							elseif (RandomNumber < 75) then
 								unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {RandomX, RandomY})
-							elseif (RandomNumber < 90) then
-								unit = CreateUnit("unit-potion-of-slowness", PlayerNumNeutral, {RandomX, RandomY})
 							else
-								unit = CreateUnit("unit-potion-of-decay", PlayerNumNeutral, {RandomX, RandomY})
+								unit = CreateUnit("unit-trap", PlayerNumNeutral, {RandomX, RandomY})
 							end
 							Count = Count - 1
 						end

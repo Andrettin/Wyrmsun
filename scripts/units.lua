@@ -2850,7 +2850,7 @@ DefineUnitType("unit-barrel", {
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
-	Drops = {"unit-potion-of-healing", "unit-potion-of-decay", "unit-potion-of-slowness"},
+	Drops = {"unit-potion-of-healing"},
 	VisibleUnderFog = true,
 	Obstacle = true,
 	Variations = {
