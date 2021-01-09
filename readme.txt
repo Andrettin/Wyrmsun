@@ -67,10 +67,12 @@ https://github.com/Andrettin/Wyrmsun
 
 * Sounds
 - Reworked the game's audio decoding and output code, as well as that for music support.
+- Added death sounds for the Skeleton Warrior.
 
 * Units
 - Fixed issue which could result in units autocasting spells they didn't have, e.g. Germanic Gudjans autocasting the Infusion spell.
 - When a unit exits a building which has a rally point, it will now be dropped at the adjacent tile closest to the rally point.
+- Added Clay Golem unit.
 
 -----------------------------------------------------------------------
 - 4.0.5
