@@ -1,15 +1,15 @@
-#desolation_ruin_diamond_intact_saltling_band = {
-#	unit_type = unit_saltling
-#	repeat_count = 7 #5 empty spaces around
-#	
-#	history = {
-#		active = true
-#		location = {
-#			map_template = desolation_ruin_diamond_intact
-#			pos = { 10 5 }
-#		}
-#	}
-#}
+desolation_ruin_diamond_intact_saltling_band = {
+	unit_type = unit_clay_golem #Saltling
+	repeat_count = 7 #5 empty spaces around
+	
+	history = {
+		active = true
+		location = {
+			map_template = desolation_ruin_diamond_intact
+			pos = { 10 5 }
+		}
+	}
+}
 
 desolation_ruin_diamond_intact_imperial_myrmidon_1 = {
 	unit_type = unit_latin_centurion #Imperial Myrmidon
