@@ -285,6 +285,8 @@ function HandleCheats(str)
 		unit = CreateUnit("unit_gnoll_warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "undeath") then
 		unit = CreateUnit("unit_skeleton_warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+	elseif (str == "prometheus") then
+		unit = CreateUnit("unit_clay_golem", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "safe harbor") then
 		local dock_type = GetFactionClassUnitType("dock", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (dock_type) then

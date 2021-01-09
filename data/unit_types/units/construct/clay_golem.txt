@@ -1,0 +1,41 @@
+unit_clay_golem = {
+	name = "Clay Golem"
+	parent = unit_template_construct_unit
+	description = "."
+	tile_size = { 1 1 }
+	box_size = { 31 31 }
+	image_file = "units/construct/clay_golem.png"
+	frame_size = { 140 140 }
+	offset = { 0 6 }
+	animation_set = animations_gnoll_warrior
+	icon = clay_golem
+	blunt_damage = true
+	hit_points = 90
+	basic_damage = 9
+	max_attack_range = 1
+	accuracy = 8
+	evasion = 8
+	armor = 2
+	sight_range = 4
+	speed = 8
+	missile = missile_none
+	priority = 69
+	points = 50
+	demand = 1
+	type = land
+	right_mouse_action = attack
+	can_attack = true
+	can_target_land = true
+	variations = {
+		clay_golem = {
+		}
+		clay_golem_with_moss = {
+			icon = clay_golem_with_moss
+		}
+	}
+	sounds = {
+		hit = fist_attack
+		miss = attack_miss
+		dead = skeleton_dead
+	}
+}
