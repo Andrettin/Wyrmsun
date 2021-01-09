@@ -679,7 +679,7 @@
 /graphics/icons/technologies/iron_tipped_wood_plow.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/pyromancy.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/wood_plow.png (by Jinn) (licensed under the CC0)
-/graphics/icons/units/constructs/clay_golem.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/construct/clay_golem.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dark_elven/mage.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dark_elven/mage_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dark_elven/mage_extra_2.png (by Jinn) (licensed under the CC0)

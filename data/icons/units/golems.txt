@@ -1,9 +1,9 @@
 clay_golem = {
-	file = "icons/units/constructs/clay_golem.png"
+	file = "icons/units/construct/clay_golem.png"
 	frame = 1
 }
 
-clay_golem_grassy = {
-	file = "icons/units/constructs/clay_golem.png"
+clay_golem_with_moss = {
+	file = "icons/units/construct/clay_golem.png"
 	frame = 0
 }
