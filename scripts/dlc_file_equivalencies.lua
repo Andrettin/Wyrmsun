@@ -34,7 +34,7 @@ SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smi
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy_snow.png", "dwarf/buildings/smithy_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_expert_miner.png", "dwarf/icons/expert_miner.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_militia.png", "dwarf/icons/militia.png")
-SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_miner.png", "dwarf/icons/miner.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_miner.png", "icons/units/dwarven/miner.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_round_shield.png", "dwarf/icons/shield_1.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_skilled_miner.png", "dwarf/icons/skilled_miner.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_smithy.png", "dwarf/icons/smithy.png")
