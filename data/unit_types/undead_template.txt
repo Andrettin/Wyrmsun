@@ -1,0 +1,24 @@
+unit_template_undead_unit = {
+	name = "Undead Unit"
+	parent = unit_template_unit
+	template = true
+	neutral_minimap_color = { 192 192 192 }
+	strength = 10
+	dexterity = 10
+	undead = true
+	mana = {
+		enable = false
+		value = 0
+		max = 0
+		increase = 1
+	}
+	neutral_hostile = true
+	sounds = {
+		step = step_dirt
+		step_dirt = step_dirt
+		step_gravel = step_gravel
+		step_mud = step_mud
+		step_stone = step_stone
+		step_grass = step_leaves
+	}
+}

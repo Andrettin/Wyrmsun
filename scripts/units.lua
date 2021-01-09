@@ -87,26 +87,6 @@ DefineUnitType("unit-template-sapient-unit", {
 	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
 
-DefineUnitType("unit-template-undead-unit", {
-	Name = "Undead Unit",
-	Parent = "unit-template-unit",
-	Template = true,
-	NeutralMinimapColor = {192, 192, 192},
-	Strength = 10,
-	Dexterity = 10,
-	Undead = true,
-	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
-	NeutralHostile = true,
-	Sounds = {
-		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
-	}
-})
-
 Load("scripts/items.lua")
 Load("scripts/units_fauna.lua")
 
