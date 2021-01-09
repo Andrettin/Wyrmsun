@@ -234,6 +234,7 @@ function RunShowCreditsMenu()
 		"  Leo",
 		"  libregametester",
 		"  Little Luigi",
+		"  Metaltooth",
 		"  Mladen Milovanović",
 		"  paipan",
 		"  pirro",
