@@ -40,5 +40,6 @@ unit_skeleton_warrior = {
 	sounds = {
 		hit = axe_attack
 		miss = attack_miss
+		dead = skeleton_dead
 	}
 }

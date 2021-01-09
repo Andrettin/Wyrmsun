@@ -1,0 +1,6 @@
+skeleton_dead = {
+	files = {
+		"units/undead/skeleton/skeleton-die-1.ogg"
+		"units/undead/skeleton/skeleton-die-2.ogg"
+	}
+}
