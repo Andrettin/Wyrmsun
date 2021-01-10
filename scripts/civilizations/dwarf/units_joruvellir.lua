@@ -440,5 +440,5 @@ DefineUnitType("unit-joruvellir-yale-pen", {
 			"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_snow.png",
 			"terrain", "snow"
 		}
-	},
+	}
 } )

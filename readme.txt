@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Fixed the Dwarven Yale Pen being buildable close to a town hall.
+
 * Characters
 - The Mboytata unique wyrm is now a firewyrm.
 
