@@ -1,0 +1,86 @@
+unit_wyrm = {
+	name = "Wyrm"
+	parent = unit_template_fauna_unit
+	species = wyrm
+	description = "These enormous draconic creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors. Some tribes go as far as living near a wyrm's lair, keeping it harmless by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."
+	quote = "\"More wyrms there are beneath the ash\nThan an unwise fool would think\"\n- Dwarven Traditional Poetry"
+	background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The ~<Grimnismol~> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon."
+	tile_size = { 2 2 }
+	box_size = { 63 63 }
+	image_file = "neutral/units/wyrm.png"
+	frame_size = { 110 108 }
+	animation_set = animations_wyrm
+	icon = icon_wyrm
+	costs = {
+		time = 250
+		copper = 2500
+	}
+	pierce_damage = true
+	strength = 27
+	dexterity = 10
+	intelligence = 5 #same as a gryphon
+	charisma = 8 #same as gryphon
+	hit_points = 150
+	basic_damage = 36
+	max_attack_range = 1
+	accuracy = 10
+	evasion = 10
+	armor = 10
+	sight_range = 6
+	speed = 10
+	missile = missile_none
+	priority = 65
+	points = 300
+	demand = 3
+	type = land
+	right_mouse_action = attack
+	can_attack = true
+	can_target_land = true
+	random_movement_probability = 1
+	level = 3
+	people_aversion = true
+	predator = true
+	flesh = true
+	carnivore = true
+	dragon = true
+	dehydration_immunity = 1
+	drops = {
+		unit_wyrm_heart
+	}
+	variations = {
+		green_scales = {
+		}
+		blue_scales = {
+			image_file = "neutral/units/wyrm_blue_scales.png"
+			icon = icon_wyrm_blue_scales
+		}
+		cyan_scales = {
+			image_file = "neutral/units/wyrm_cyan_scales.png"
+			icon = icon_wyrm_cyan_scales
+		}
+		purple_scales = {
+			image_file = "neutral/units/wyrm_purple_scales.png"
+			icon = icon_wyrm_purple_scales
+		}
+		red_scales = {
+			image_file = "neutral/units/wyrm_red_scales.png"
+			icon = icon_wyrm_red_scales
+		}
+		yellow_scales = {
+			image_file = "neutral/units/wyrm_yellow_scales.png"
+			icon = icon_wyrm_yellow_scales
+		}
+	}
+	sounds = {
+		selected = click
+		hit = bite_attack
+		miss = attack_miss
+		dead = drake_dead
+		step = step_dirt
+		step_dirt = step_dirt
+		step_gravel = step_gravel
+		step_mud = step_mud
+		step_stone = step_stone
+		step_grass = step_leaves
+	}
+}
