@@ -18,9 +18,11 @@ install(FILES oaml.defs DESTINATION ${DATADIR})
 
 install(DIRECTORY
 	data
+	fonts
 	graphics
 	interface
 	maps
+	modules
 	music
 	scripts
 	sounds
