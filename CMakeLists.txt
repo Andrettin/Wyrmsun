@@ -1,4 +1,4 @@
-project(wyrmsun)
+project(wyrmsun NONE)
 cmake_minimum_required(VERSION 3.0)
 
 set(BINDIR bin CACHE STRING "Where to install Wyrmsun launch script")
