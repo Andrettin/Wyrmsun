@@ -255,7 +255,7 @@ DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-elven-swordsman",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
+		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 } )
 
@@ -452,7 +452,7 @@ DefineButton( { Pos = 7, Icon = "icon-puncture",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-elven-swordsman",
-		"unit-wolf", "unit-wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
+		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 })
 

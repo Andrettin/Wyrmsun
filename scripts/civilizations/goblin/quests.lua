@@ -33,7 +33,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 	Civilization = "goblin",
 	PlayerColor = "teal",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and CheckDependency(trigger_player, "unit-goblin-farm")) then -- should be made to require Gathaarl being worshiped in the future
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_goblin_worker") > 0 and CheckDependency(trigger_player, "unit-goblin-farm")) then -- should be made to require Gathaarl being worshiped in the future
 			return true
 		end
 		return false
@@ -62,7 +62,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 	Civilization = "goblin",
 	PlayerColor = "black",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-temple") == 0 and CheckDependency(trigger_player, "unit-goblin-temple")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_goblin_worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-temple") == 0 and CheckDependency(trigger_player, "unit-goblin-temple")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
 			return true
 		end
 		return false
@@ -121,7 +121,7 @@ DefineQuest("iouns-tactics", { -- based on the description of Ioun Stilgar by Je
 	Civilization = "goblin",
 	PlayerColor = "blue",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-mess-hall") == 0 and CheckDependency(trigger_player, "unit-goblin-mess-hall")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_goblin_worker") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-goblin-mess-hall") == 0 and CheckDependency(trigger_player, "unit-goblin-mess-hall")) then -- should be made to require Agniss in the future, and be specific to the Tenebris Syndicate
 			return true
 		end
 		return false

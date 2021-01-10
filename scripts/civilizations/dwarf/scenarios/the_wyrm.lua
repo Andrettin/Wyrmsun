@@ -305,7 +305,7 @@ AddTrigger("the-wyrm-svafnir-sighted",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Svafnir"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
 				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
 				if (unit_quantity > 0) then
 					player = GetFactionPlayer("Norlund Clan")
@@ -466,7 +466,7 @@ AddTrigger("the-wyrm-kobolds-defend-svafnir",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Svafnir"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") < GetUnitVariable(uncount[unit1], "HitPoints", "Max")) then
 					player = GetThisPlayer()
 					return true
@@ -481,7 +481,7 @@ AddTrigger("the-wyrm-kobolds-defend-svafnir",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Svafnir"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
 				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})

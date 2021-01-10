@@ -153,7 +153,7 @@ AddTrigger("westward_migration_native_settlement_sighted",
 AddTrigger("westward_migration_workers_killed",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration") and GetPlayerData(i, "UnitTypesCount", "unit-germanic-worker") < 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration") and GetPlayerData(i, "UnitTypesCount", "unit_germanic_worker") < 1) then
 				trigger_player = i
 				return true
 			end
@@ -170,7 +170,7 @@ AddTrigger("westward_migration_victory",
 	function()
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "westward_migration")) then
-				if (GetNumUnitsAt(i, "unit-germanic-worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth")) > 0) then
+				if (GetNumUnitsAt(i, "unit_germanic_worker", {4369 - EarthStartX, 749 - EarthStartY}, {4369 - EarthStartX + 32, 749 - EarthStartY + 116}, GetMapLayer("material-plane", "earth")) > 0) then
 					trigger_player = i
 					return true
 				end

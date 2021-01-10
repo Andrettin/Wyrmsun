@@ -2080,7 +2080,7 @@ function GetUnitBackground(unit_name, state)
 			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
 		elseif (unit_name == "unit-gryphon") then
 			return "backgrounds/gryphon.png"
-		elseif (unit_name == "unit-wyrm") then
+		elseif (unit_name == "unit_wyrm") then
 			return "backgrounds/wyrm.png"
 		elseif (unit_name == "unit-yale") then
 			return "backgrounds/yale.png"

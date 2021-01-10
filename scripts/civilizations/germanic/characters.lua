@@ -557,7 +557,7 @@ DefineCharacter("erala", {
 DefineCharacter("egill", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
 	Name = "Egill",
 	Gender = "male",
-	Type = "unit-germanic-worker",
+	Type = "unit_germanic_worker",
 	Civilization = "germanic",
 	Deities = {"thor", "tyr"}
 })
@@ -565,7 +565,7 @@ DefineCharacter("egill", { -- Source: Carolyne Larrington, "The Norse Myths: A G
 DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
 	Name = "Roskva", -- "Röskva"
 	Gender = "female",
-	Type = "unit-germanic-worker",
+	Type = "unit_germanic_worker",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Father = "egill",
@@ -594,7 +594,7 @@ DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders
 DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotlanders", 1999, p. 3.
 	Name = "Huitastierna",
 	Gender = "female",
-	Type = "unit-germanic-worker",
+	Type = "unit_germanic_worker",
 	Civilization = "germanic",
 	Faction = "thielung-tribe",
 	Background = "In the Guta Saga, Huitastierna was the wife of Hafthi, and together they were the first to settle the island of Gotland.",

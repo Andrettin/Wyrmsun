@@ -340,7 +340,7 @@ DefineModifier("upgrade-faction-franconia",
 
 DefineModifier("upgrade-faction-friesland",
 	{"Supply", 2},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-hesse",
@@ -351,7 +351,7 @@ DefineModifier("upgrade-faction-hesse",
 
 DefineModifier("upgrade-faction-holland",
 	{"Supply", 2},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-holy-rome",

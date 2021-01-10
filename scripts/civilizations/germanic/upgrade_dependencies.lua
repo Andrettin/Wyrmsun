@@ -57,7 +57,7 @@ DefineDependency("unit-germanic-priest",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-frey"}
 )
 
-DefinePredependency("unit-germanic-dock",
+DefinePredependency("unit_germanic_dock",
 	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 

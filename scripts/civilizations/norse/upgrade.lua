@@ -82,11 +82,11 @@ DefineModifier("upgrade_norse_civilization",
 )
 
 DefineModifier("upgrade_norse_civilization",
-	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-norse-dock"}
+	{"apply-to", "unit_germanic_dock"}, {"convert-to", "unit-norse-dock"}
 )
 
 DefineModifier("upgrade_norse_civilization",
-	{"apply-to", "unit-teuton-dock"}, {"convert-to", "unit-norse-dock"}
+	{"apply-to", "unit_teuton_dock"}, {"convert-to", "unit-norse-dock"}
 )
 
 DefineModifier("upgrade_norse_civilization",
@@ -94,7 +94,7 @@ DefineModifier("upgrade_norse_civilization",
 )
 
 DefineModifier("upgrade_norse_civilization",
-	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
+	{"apply-to", "unit_germanic_worker"}, {"convert-to", "unit_teuton_worker"}
 )
 
 DefineModifier("upgrade_norse_civilization",

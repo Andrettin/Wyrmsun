@@ -109,7 +109,7 @@ DefineCharacter("starkod-the-old", { -- Source: Snorri Sturlson, "Heimskringla",
 DefineCharacter("tunne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 240-241.
 	Name = "Tunne",
 	Gender = "male",
-	Type = "unit-teuton-worker",
+	Type = "unit_teuton_worker",
 	Civilization = "norse"
 	-- slave who was counsellor and treasurer to On the Old of Sweden
 })

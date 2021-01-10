@@ -54,11 +54,11 @@ DefineModifier("upgrade-gothic-civilization",
 )
 
 DefineModifier("upgrade-gothic-civilization",
-	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+	{"apply-to", "unit_germanic_dock"}, {"convert-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-gothic-civilization",
-	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
+	{"apply-to", "unit_germanic_worker"}, {"convert-to", "unit_teuton_worker"}
 )
 
 DefineModifier("upgrade-gothic-civilization",

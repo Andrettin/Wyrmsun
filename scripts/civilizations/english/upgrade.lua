@@ -54,11 +54,11 @@ DefineModifier("upgrade-english-civilization",
 )
 
 DefineModifier("upgrade-english-civilization",
-	{"apply-to", "unit-germanic-dock"}, {"convert-to", "unit-teuton-dock"}
+	{"apply-to", "unit_germanic_dock"}, {"convert-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-english-civilization",
-	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
+	{"apply-to", "unit_germanic_worker"}, {"convert-to", "unit_teuton_worker"}
 )
 
 DefineModifier("upgrade-english-civilization",

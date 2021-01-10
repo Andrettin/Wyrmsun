@@ -127,7 +127,7 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 	Conditions = function(s)
 		if (
 			GetPlayerData(trigger_player, "RaceName") == "norse"
-			and GetPlayerData(trigger_player, "UnitTypesCount", "unit-teuton-worker") > 0
+			and GetPlayerData(trigger_player, "UnitTypesCount", "unit_teuton_worker") > 0
 			and CheckDependency(trigger_player, "unit-norse-farm")
 			and GetUniqueItemData("the-house-of-seven-fathers", "CanDrop")
 		) then

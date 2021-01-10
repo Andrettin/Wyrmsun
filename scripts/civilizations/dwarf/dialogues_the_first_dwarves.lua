@@ -60,7 +60,7 @@ DefineDialogue("a-rocky-home-introduction", {
 DefineDialogue("a-rocky-home-mead-hall-built", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-brising-miner",
+			"speaker", "unit", "unit_brising_miner",
 			"speaker-player", "brising_clan",
 			"text", "The mead hall is built, my chieftain."
 		},
@@ -187,7 +187,7 @@ DefineDialogue("modsognirs-clan-destroys-the-grafvitnings", {
 DefineDialogue("worker-suggests-stone-furniture", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-brising-miner",
+			"speaker", "unit", "unit_brising_miner",
 			"speaker-player", "brising_clan",
 			"text", "I have an idea! Why don't we make furniture out of stone?"
 		},

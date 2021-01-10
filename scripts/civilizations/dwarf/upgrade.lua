@@ -237,7 +237,7 @@ DefineModifier("upgrade-dwarven-runewriting",
 --	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
 --	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-dwarven-temple"}, {"apply-to", "unit-dwarven-academy"}
---	{"apply-to", "unit-dwarven-dock"}
+--	{"apply-to", "unit_dwarven_dock"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",

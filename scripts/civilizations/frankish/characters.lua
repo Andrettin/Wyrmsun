@@ -240,7 +240,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 DefineCharacter("fredegunde", { -- concubine of Chilperich; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Name = "Fredegunde",
 	Gender = "female",
-	Type = "unit-teuton-worker",
+	Type = "unit_teuton_worker",
 	Civilization = "frankish",
 	Faction = "salia",
 	Conditions = function(s)

@@ -121,7 +121,7 @@ SetMapTemplateHero("earth", "marcus-aurelius", "rome", {4126, 1096}, 176, 178) -
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4080, 1026}, -1700, -1350) -- a settlement at Santa Rosa di Poviglio was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Thapsos
-SetMapTemplateUnit("earth", "unit-latin-dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
+SetMapTemplateUnit("earth", "unit_latin_dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
 
 -- Toppo Daguzzo
 -- three tombs at Toppo Daguzzo during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.

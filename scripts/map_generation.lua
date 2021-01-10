@@ -1922,11 +1922,11 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 						if (has_settlement_site == false) then
 							unit = CreateUnit("unit-germanic-town-hall", i, {player_spawn_point[1], player_spawn_point[2]})
 						end
-						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
-						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
-						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
-						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
-						unit = CreateUnit("unit-germanic-worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
+						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
 						CreateStartingGoldMine(i, nil, nil, true) -- create the player's gold mine
 						if (GetPlayerData(i, "RaceName") == "dwarf") then
 							CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
@@ -2315,7 +2315,7 @@ function GenerateRandomMap(arg)
 			for i=0,(PlayerMax - 2) do
 				if (CMap:get().Info.PlayerType[i] == PlayerPerson or CMap:get().Info.PlayerType[i] == PlayerComputer) then
 					for j=1,arg.WorkerQuantity do
-						unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+						unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 					end
 				end
 			end
@@ -4018,11 +4018,11 @@ function GenerateValley(direction, lake_quantity)
 
 	for i=0,(PlayerMax - 2) do
 		if (CMap:get().Info.PlayerType[i] == PlayerPerson or CMap:get().Info.PlayerType[i] == PlayerComputer) then
-			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
-			unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+			unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 		end
 	end
 
@@ -5789,7 +5789,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								SetUnitVariable(unit, "Active", false)
 								Count = Count - 1
 							elseif (RandomNumber >= 90) then
-								unit = OldCreateUnit("unit-wyrm", 2, {RandomX, RandomY})
+								unit = OldCreateUnit("unit_wyrm", 2, {RandomX, RandomY})
 								SetUnitVariable(unit, "Active", false)
 								Count = Count - 1
 							end
@@ -5823,11 +5823,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										if (hostile_dungeon_player_civilization == "dwarf") then
 											RandomNumber = SyncRand(100)
 											if (RandomNumber < 90) then
-												unit = OldCreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
+												unit = OldCreateUnit("unit_dwarven_miner", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (RandomNumber < 95) then
-												unit = OldCreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
+												unit = OldCreateUnit("unit_gnomish_worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
@@ -5838,7 +5838,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										elseif (hostile_dungeon_player_civilization == "germanic") then
 											RandomNumber = SyncRand(100)
 											if (RandomNumber < 95) then
-												unit = OldCreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
+												unit = OldCreateUnit("unit_germanic_worker", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
@@ -5849,11 +5849,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										elseif (hostile_dungeon_player_civilization == "gnome") then
 											RandomNumber = SyncRand(100)
 											if (RandomNumber < 90) then
-												unit = OldCreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY})
+												unit = OldCreateUnit("unit_gnomish_worker", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (RandomNumber < 95) then
-												unit = OldCreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
+												unit = OldCreateUnit("unit_dwarven_miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
@@ -5864,7 +5864,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										elseif (hostile_dungeon_player_civilization == "goblin") then
 											RandomNumber = SyncRand(100)
 											if (RandomNumber < 95) then
-												unit = OldCreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
+												unit = OldCreateUnit("unit_goblin_worker", 3, {RandomX, RandomY})
 												SetUnitVariable(unit, "Active", false)
 												Count = Count - 1
 											elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {MaxMapWidth, MaxMapHeight}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
@@ -5985,7 +5985,7 @@ function GenerateCave(town_halls, symmetric)
 	for i=0,(PlayerMax - 2) do
 		if (CMap:get().Info.PlayerType[i] == PlayerPerson or CMap:get().Info.PlayerType[i] == PlayerComputer) then
 			for j=1,5 do
-				unit = CreateUnit("unit-germanic-worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
+				unit = CreateUnit("unit_germanic_worker", i, {CPlayer:GetPlayer(i).StartPos.x, CPlayer:GetPlayer(i).StartPos.y})
 			end
 		end
 	end

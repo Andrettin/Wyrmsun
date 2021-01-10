@@ -150,7 +150,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	PlayerColor = "blue",
 	Conditions = function(s)
 --		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa-tribe") then
-		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then -- allow for all Germanic tribes for now, since they don't have quests
+		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_germanic_worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then -- allow for all Germanic tribes for now, since they don't have quests
 			return true
 		end
 		return false
@@ -541,7 +541,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 	PlayerColor = "black",
 	Conditions = function(s)
 		if (
-			GetPlayerData(trigger_player, "UnitTypesCount", "unit-germanic-dock") > 0 -- the player must have a dock
+			GetPlayerData(trigger_player, "UnitTypesCount", "unit_germanic_dock") > 0 -- the player must have a dock
 			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-thor") == "R" -- must be a worshipper of Thor/Thunraz
 			and GetNumUnitsAt(trigger_player, "buildings", {GetSiteData("hlesey", "MapPosX") - 128, GetSiteData("hlesey", "MapPosY") - 128}, {GetSiteData("hlesey", "MapPosX") + 128, GetSiteData("hlesey", "MapPosY") + 128}, GetSiteData("hlesey", "MapLayer")) > 0 -- the player must have a building relatively close to Hlesey
 		) then

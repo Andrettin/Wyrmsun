@@ -28,7 +28,7 @@
 DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
 	Name = "Grafvolluth", -- means "the Field Gnawer" in Old Norse
 	Gender = "male",
-	Type = "unit-wyrm",
+	Type = "unit_wyrm",
 	Civilization = "kobold",
 	Faction = "grafvolling-tribe"
 })
@@ -36,7 +36,7 @@ DefineCharacter("grafvolluth", { -- a wyrm/dragon in Norse mythology; Source: He
 DefineCharacter("ofnir", { -- a wyrm/dragon in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 98.
 	Name = "Ofnir", -- means "the Bewilderer" in Old Norse
 	Gender = "male",
-	Type = "unit-wyrm",
+	Type = "unit_wyrm",
 	Civilization = "kobold",
 	Faction = "ofning-tribe"
 })

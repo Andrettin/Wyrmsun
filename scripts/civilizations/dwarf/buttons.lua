@@ -197,9 +197,9 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 	Key = "o", Hint = "Worship Hr~!optatyr", Popup = "popup_learn_ability",
 	Description = "Choose Hroptatyr as your hero's major deity. +2 Damage for Axefighters, enables Far Sight spell for Witnesses. Incompatible with the Thor and Loki major deities.",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit_dwarven_miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit_brising_miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -218,9 +218,9 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	Key = "t", Hint = "Worship ~!Thor", Popup = "popup_learn_ability",
 	Description = "Choose Thor as your hero's major deity. +2 Damage for Scouts, enables Shocking Grasp spell for Witnesses. Incompatible with the Hroptatyr and Loki major deities.",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit_dwarven_miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit_brising_miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -239,9 +239,9 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 	Key = "k", Hint = "Worship Lo~!ki", Popup = "popup_learn_ability",
 	Description = "Choose Loki as your hero's major deity. +50% Backstab Bonus for Axefighters, enables Slow spell for Witnesses. Incompatible with the Hroptatyr and Thor major deities.",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit_dwarven_miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit_brising_miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -261,9 +261,9 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Tyr as a minor deity for your hero. +2 Damage for Axefighters and enables Inspire spell for Witnesses. Incompatible with the Hel minor deity.",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit_dwarven_miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit_brising_miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -283,9 +283,9 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki"},
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Witnesses. Incompatible with the Tyr minor deity.",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
+		"unit_dwarven_miner", "unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 		"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
-		"unit-brising-miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
+		"unit_brising_miner", "unit-brising-skilled-miner", "unit-brising-expert-miner",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 		"unit-dwarven-guard", "unit-dwarven-stalwart", "unit-dwarven-sentinel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
@@ -304,7 +304,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-skilled-miner",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-skilled-miner",
 	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-miner"}
+	ForUnit = {"unit_dwarven_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-expert-miner",
@@ -316,7 +316,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-brising-skilled-miner",
 	Action = "experience-upgrade-to", Value = "unit-brising-skilled-miner",
 	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup_unit",
-	ForUnit = {"unit-brising-miner"}
+	ForUnit = {"unit_brising_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-brising-expert-miner",
@@ -328,7 +328,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-runesmith",
 	Action = "experience-upgrade-to", Value = "unit-dwarven-runesmith",
 	Key = "r", Hint = "Upgrade to ~!Runesmith", Popup = "popup_unit",
-	ForUnit = {"unit-dwarven-miner", "unit-brising-miner"}
+	ForUnit = {"unit_dwarven_miner", "unit_brising_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-runemaster",

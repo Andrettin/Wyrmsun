@@ -94,7 +94,7 @@ DefineDialogue("jarl-meets-the-thrallings", {
 DefineDialogue("thrallings-subjugated", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-germanic-worker",
+			"speaker", "unit", "unit_germanic_worker",
 			"speaker-player", "thralling-tribe",
 			"text", "Please, have mercy!"
 		},
@@ -103,7 +103,7 @@ DefineDialogue("thrallings-subjugated", {
 			"text", "If you serve me faithfully, I will spare your lives."
 		},
 		{
-			"speaker", "unit", "unit-germanic-worker",
+			"speaker", "unit", "unit_germanic_worker",
 			"speaker-player", "thralling-tribe",
 			"text", "We are yours to command.",
 			"option-effects", {
@@ -191,7 +191,7 @@ DefineDialogue("jarl-attacks-the-karlings", {
 DefineDialogue("karlings-subjugated", {
 	Nodes = {
 		{
-			"speaker", "unit", "unit-germanic-worker",
+			"speaker", "unit", "unit_germanic_worker",
 			"speaker-player", "karling-tribe",
 			"text", "Enough of this bloodshed! Mercy!"
 		},
@@ -200,7 +200,7 @@ DefineDialogue("karlings-subjugated", {
 			"text", "Will you submit to my tribe?"
 		},
 		{
-			"speaker", "unit", "unit-germanic-worker",
+			"speaker", "unit", "unit_germanic_worker",
 			"speaker-player", "karling-tribe",
 			"text", "We shall. But only if our personal freedom is guaranteed, otherwise we would rather die."
 		},

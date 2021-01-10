@@ -122,7 +122,7 @@ DefineModifier("upgrade-faction-brising-clan",
 )
 
 DefineModifier("upgrade-faction-brising-clan",
-	{"apply-to", "unit-dwarven-miner"}, {"convert-to", "unit-brising-miner"}
+	{"apply-to", "unit_dwarven_miner"}, {"convert-to", "unit_brising_miner"}
 )
 
 DefineModifier("upgrade-faction-brising-clan",
@@ -294,7 +294,7 @@ DefineModifier("upgrade-faction-lyr",
 )
 
 DefineModifier("upgrade-faction-lyr",
-	{"apply-to", "unit-dwarven-miner"}, {"convert-to", "unit-brising-miner"}
+	{"apply-to", "unit_dwarven_miner"}, {"convert-to", "unit_brising_miner"}
 )
 
 DefineModifier("upgrade-faction-lyr",

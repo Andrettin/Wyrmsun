@@ -79,7 +79,7 @@ AddTrigger("grafvitning-kobolds-send-attacker",
 		local attacker_unit = nil
 		local uncount = GetUnits(trigger_player)
 		for unit1 = 1,table.getn(uncount) do
-			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit-wyrm" and GetUnitVariable(uncount[unit1], "Active") and GetUnitVariable(uncount[unit1], "Idle")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic") and GetUnitVariable(uncount[unit1], "Ident") ~= "unit_wyrm" and GetUnitVariable(uncount[unit1], "Active") and GetUnitVariable(uncount[unit1], "Idle")) then
 				attacker_unit = uncount[unit1]
 				break
 			end
@@ -185,7 +185,7 @@ AddTrigger("worker-suggests-stone-furniture",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "brising-clan" and SyncRand(10) == 0 and GetPlayerData(i, "UnitTypesCount", "unit-brising-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-brising-expert-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-masons-shop") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-market") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "brising-clan" and SyncRand(10) == 0 and GetPlayerData(i, "UnitTypesCount", "unit_brising_miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-brising-expert-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-masons-shop") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-market") >= 1) then
 				trigger_player = i
 				return true
 			end

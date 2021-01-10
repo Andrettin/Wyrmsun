@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Firewyrm unit. Similar to the Wyrm, it also deals fire damage, and possesses resistance to fire.
+- Fixed the level up button being missing for the Dwarven Miner and Brising Miner.
 
 -----------------------------------------------------------------------
 - 4.1.1

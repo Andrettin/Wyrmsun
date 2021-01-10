@@ -150,7 +150,7 @@ DefineCharacter("groa", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 DefineCharacter("nidhogg", { -- wyrm/dragon in Norse mythology, who lived in Niflheim
 	Name = "Nidhogg",
 	Gender = "male",
-	Type = "unit-wyrm",
+	Type = "unit_wyrm",
 	Faction = "hel",
 	StartDate = -30000,
 	DeathDate = 3000,

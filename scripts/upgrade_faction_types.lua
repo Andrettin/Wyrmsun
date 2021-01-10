@@ -78,11 +78,11 @@ DefineModifier("upgrade_trading_company",
 	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-norse-market"},
-	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-latin-dock"},
+	{"apply-to", "unit_germanic_dock"}, {"apply-to", "unit_teuton_dock"},
+	{"apply-to", "unit_latin_dock"},
 	{"apply-to", "unit-norse-dock"},
-	{"apply-to", "unit-dwarven-dock"},
-	{"apply-to", "unit-goblin-dock"}
+	{"apply-to", "unit_dwarven_dock"},
+	{"apply-to", "unit_goblin_dock"}
 )
 
 DefineModifier("upgrade_trading_company", -- trading companies' caravans, ships and docks "regenerate", since they aren't supposed to have workers to repair them
@@ -96,9 +96,9 @@ DefineModifier("upgrade_trading_company", -- trading companies' caravans, ships 
 	{"apply-to", "unit-dwarven-market"},
 	{"apply-to", "unit-goblin-market"},
 	{"apply-to", "unit-norse-market"},
-	{"apply-to", "unit-germanic-dock"}, {"apply-to", "unit-teuton-dock"},
-	{"apply-to", "unit-latin-dock"},
+	{"apply-to", "unit_germanic_dock"}, {"apply-to", "unit_teuton_dock"},
+	{"apply-to", "unit_latin_dock"},
 	{"apply-to", "unit-norse-dock"},
-	{"apply-to", "unit-dwarven-dock"},
-	{"apply-to", "unit-goblin-dock"}
+	{"apply-to", "unit_dwarven_dock"},
+	{"apply-to", "unit_goblin_dock"}
 )

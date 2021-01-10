@@ -194,7 +194,7 @@ DefineModifier("upgrade-faction-cantware-tribe",
 --	{"apply-to", "unit-teuton-stables"},
 --	{"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"}
---	{"apply-to", "unit-teuton-dock"}
+--	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-charude-tribe",
@@ -217,7 +217,7 @@ DefineModifier("upgrade-faction-gumeninga-tribe",
 
 DefineModifier("upgrade-faction-jute-tribe",
 	{"Supply", 2},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-lindisfaran-tribe",
@@ -273,7 +273,7 @@ DefineModifier("upgrade-faction-essex",
 
 DefineModifier("upgrade-faction-jutland",
 	{"Supply", 2},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-kent",
@@ -284,7 +284,7 @@ DefineModifier("upgrade-faction-kent",
 --	{"apply-to", "unit-teuton-stables"},
 --	{"apply-to", "unit-teuton-market"},
 	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"}
---	{"apply-to", "unit-teuton-dock"}
+--	{"apply-to", "unit_teuton_dock"}
 )
 
 DefineModifier("upgrade-faction-mercia",

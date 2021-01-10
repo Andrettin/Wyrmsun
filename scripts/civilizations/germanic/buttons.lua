@@ -107,7 +107,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 	Key = "w", Hint = "Worship ~!Wodanaz", Popup = "popup_learn_ability",
 	Description = "Choose Wodanaz as your hero's major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Incompatible with the Thunraz and Fraujaz major deities.",
 	ForUnit = {
-		"unit-germanic-worker",
+		"unit_germanic_worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest"
@@ -119,7 +119,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	Key = "t", Hint = "Worship ~!Thunraz", Popup = "popup_learn_ability",
 	Description = "Choose Thunraz as your hero's major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Incompatible with the Wodanaz and Fraujaz major deities.",
 	ForUnit = {
-		"unit-germanic-worker",
+		"unit_germanic_worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest"
@@ -132,7 +132,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Tiwaz as a minor deity for your hero. +2 Damage for Eralas and enables Inspire spell for Gudjans. Incompatible with the Haimadala and Haljo minor deities.",
 	ForUnit = {
-		"unit-germanic-worker",
+		"unit_germanic_worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest"
@@ -145,7 +145,7 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Haimadala as a minor deity for your hero. +1 Sight for Skutans, enables Precision spell for Gudjans. Incompatible with the Haljo and Tiwaz minor deities.",
 	ForUnit = {
-		"unit-germanic-worker",
+		"unit_germanic_worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest"
@@ -158,7 +158,7 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 	Allowed = "check-individual-upgrade-or", AllowArg = {"upgrade-deity-odin", "upgrade-deity-thor"},
 	Description = "Choose Haljo as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Haimadala and Tiwaz minor deities.",
 	ForUnit = {
-		"unit-germanic-worker",
+		"unit_germanic_worker",
 		"unit-germanic-warrior", "unit-germanic-veteran-warrior", "unit-germanic-chieftain",
 		"unit-germanic-spearman", "unit-germanic-archer",
 		"unit-germanic-priest"

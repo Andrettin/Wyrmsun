@@ -715,11 +715,11 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 				
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
 				unit = CreateUnitOnTop("unit-dwarven-stronghold", 0, FindUnit("unit-settlement-site"))
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
-				unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
+				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
+				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
+				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
+				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
+				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
 
 				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 29})
 				unit = CreateUnit("unit-dwarven-guard-tower", 0, {29, 37})
@@ -739,22 +739,22 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 
 					-- create second encampment for Shinsplitters
 					unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					unit = CreateUnit("unit_dwarven_miner", 2, {40, 10})
+					unit = CreateUnit("unit_dwarven_miner", 2, {40, 10})
+					unit = CreateUnit("unit_dwarven_miner", 2, {40, 10})
+					unit = CreateUnit("unit_dwarven_miner", 2, {40, 10})
+					unit = CreateUnit("unit_dwarven_miner", 2, {40, 10})
 
 					unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
 					SetUnitVariable(unit, "Active", false)
 
 					-- create third encampment for Shinsplitters
 					unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					unit = CreateUnit("unit_dwarven_miner", 2, {60, 60})
+					unit = CreateUnit("unit_dwarven_miner", 2, {60, 60})
+					unit = CreateUnit("unit_dwarven_miner", 2, {60, 60})
+					unit = CreateUnit("unit_dwarven_miner", 2, {60, 60})
+					unit = CreateUnit("unit_dwarven_miner", 2, {60, 60})
 						
 					unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
 					SetUnitVariable(unit, "Active", false)

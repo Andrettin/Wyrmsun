@@ -52,7 +52,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		if ( -- if Hlesey is empty, but there are certain Germanic structures within a certain range of it
 			GetNumUnitsAt(-2, "any", {GetSiteData("hlesey", "MapPosX") - 2, GetSiteData("hlesey", "MapPosY") - 2}, {GetSiteData("hlesey", "MapPosX") + 2, GetSiteData("hlesey", "MapPosY") + 2}, GetSiteData("hlesey", "MapLayer")) == 0
 			and GetNumUnitsAt(-2, "unit-germanic-barracks", {GetSiteData("hlesey", "MapPosX") - 128, GetSiteData("hlesey", "MapPosY") - 128}, {GetSiteData("hlesey", "MapPosX") + 128, GetSiteData("hlesey", "MapPosY") + 128}, GetSiteData("hlesey", "MapLayer")) > 0 -- a barracks from which the warriors could have come from
-			and GetNumUnitsAt(-2, "unit-germanic-dock", {GetSiteData("hlesey", "MapPosX") - 128, GetSiteData("hlesey", "MapPosY") - 128}, {GetSiteData("hlesey", "MapPosX") + 128, GetSiteData("hlesey", "MapPosY") + 128}, GetSiteData("hlesey", "MapLayer")) > 0 -- a dock from which they may have obtained ships
+			and GetNumUnitsAt(-2, "unit_germanic_dock", {GetSiteData("hlesey", "MapPosX") - 128, GetSiteData("hlesey", "MapPosY") - 128}, {GetSiteData("hlesey", "MapPosX") + 128, GetSiteData("hlesey", "MapPosY") + 128}, GetSiteData("hlesey", "MapLayer")) > 0 -- a dock from which they may have obtained ships
 			and GetNumUnitsAt(-2, "unit-germanic-smithy", {GetSiteData("hlesey", "MapPosX") - 128, GetSiteData("hlesey", "MapPosY") - 128}, {GetSiteData("hlesey", "MapPosX") + 128, GetSiteData("hlesey", "MapPosY") + 128}, GetSiteData("hlesey", "MapLayer")) > 0 -- a smithy, as they were said in the myth to have wielded iron clubs
 		) then
 			return true

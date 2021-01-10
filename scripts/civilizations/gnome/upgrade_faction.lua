@@ -38,7 +38,7 @@ DefineUpgrade("upgrade-faction-sagan-tribe", {
 })
 
 DefineModifier("upgrade-faction-acthnic-tribe",
-	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-deep-gnomish-worker"}
+	{"apply-to", "unit_gnomish_worker"}, {"convert-to", "unit_deep_gnomish_worker"}
 )
 
 DefineModifier("upgrade-faction-acthnic-tribe",
@@ -58,7 +58,7 @@ DefineModifier("upgrade-faction-acthnic-tribe",
 )
 
 DefineModifier("upgrade-faction-derro-tribe",
-	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-derro-worker"}
+	{"apply-to", "unit_gnomish_worker"}, {"convert-to", "unit_derro_worker"}
 )
 
 DefineModifier("upgrade-faction-derro-tribe",

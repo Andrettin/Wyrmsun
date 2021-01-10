@@ -393,7 +393,7 @@ AddTrigger("gathering-materials-miners-reminder",
 		return false
 	end,
 	function()
-		if (GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner") < 1) then
+		if (GetPlayerData(player, "UnitTypesCount", "unit_dwarven_miner") < 1) then
 			Event(
 				FindHero("thursagan"),
 				"Don't forget to recruit the miners. Our warriors can clear the tunnels of goblins and worse, but once we find the gold and coal we need the miners to acquire it.",

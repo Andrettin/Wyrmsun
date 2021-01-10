@@ -137,7 +137,7 @@ DefineDependency("unit-dwarven-witness",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
 )
 
-DefinePredependency("unit-dwarven-dock",
+DefinePredependency("unit_dwarven_dock",
 	{"upgrade-dwarven-civilization"},
 	"or", {"upgrade-gnomish-civilization"}
 )
@@ -146,11 +146,11 @@ DefinePredependency("unit-dwarven-gryphon-rider",
 	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
 )
 
-DefinePredependency("unit-dwarven-miner",
+DefinePredependency("unit_dwarven_miner",
 	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )
 
-DefinePredependency("unit-brising-miner",
+DefinePredependency("unit_brising_miner",
 	{"upgrade-faction-brising-clan"}, "or", {"upgrade-faction-lyr"}
 )
 

@@ -63,7 +63,7 @@ AddTrigger("jarl-meets-the-thrallings",
 AddTrigger("thrallings-subjugated",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetPlayerData(GetFactionPlayer("thralling-tribe"), "UnitTypesCount", "unit-germanic-worker") <= 3) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetPlayerData(GetFactionPlayer("thralling-tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
 				trigger_player = i
 				return true
 			end
@@ -98,7 +98,7 @@ AddTrigger("jarl-meets-the-karlings",
 AddTrigger("karlings-subjugated",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-archer") == 0 and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-worker") <= 3) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-archer") == 0 and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
 				trigger_player = i
 				return true
 			end

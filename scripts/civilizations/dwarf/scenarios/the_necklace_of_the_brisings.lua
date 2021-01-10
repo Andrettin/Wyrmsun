@@ -46,11 +46,11 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-dwarven-steelclad", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
 	SetUnitVariable(unit, "Active", false)
 	
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
-	unit = CreateUnit("unit-brising-miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit_brising_miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit_brising_miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit_brising_miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit_brising_miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit_brising_miner", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
 end
 
 RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your rivals")
@@ -80,7 +80,7 @@ AddTrigger("the-necklace-of-the-brisings-introduction",
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindUnit("unit-brising-miner", GetFactionPlayer("Brising Clan")),
+					FindUnit("unit_brising_miner", GetFactionPlayer("Brising Clan")),
 					"All of this for a necklace...",
 					player,
 					{"~!Continue"},

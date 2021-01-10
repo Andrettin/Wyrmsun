@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePredependency("unit-gnomish-worker",
+DefinePredependency("unit_gnomish_worker",
 	{"upgrade-faction-acthnic-tribe", 0, "upgrade-faction-derro-tribe", 0}
 )
 
@@ -37,7 +37,7 @@ DefinePredependency("unit-gnomish-herbalist",
 	{"upgrade-faction-acthnic-tribe", 0}
 )
 
-DefinePredependency("unit-deep-gnomish-worker",
+DefinePredependency("unit_deep_gnomish_worker",
 	{"upgrade-faction-acthnic-tribe"}
 )
 
@@ -49,7 +49,7 @@ DefinePredependency("unit-deep-gnomish-herbalist",
 	{"upgrade-faction-acthnic-tribe"}
 )
 
-DefinePredependency("unit-derro-worker",
+DefinePredependency("unit_derro_worker",
 	{"upgrade-faction-derro-tribe"}
 )
 

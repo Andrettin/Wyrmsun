@@ -121,7 +121,7 @@ DefineQuest("the-deep", { -- based on the lay of Alvis from Norse mythology; Sou
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-dock") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-transport-ship") == 0 and CheckDependency(trigger_player, "unit-dwarven-transport-ship")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_dwarven_dock") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-transport-ship") == 0 and CheckDependency(trigger_player, "unit-dwarven-transport-ship")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 			return true
 		end
 		return false

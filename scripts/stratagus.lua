@@ -824,7 +824,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wyrm") == false) then
 			AddTrigger("tip-wyrm",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-wyrm") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_wyrm") then
 						return true
 					else
 						return false
@@ -2046,7 +2046,7 @@ Units = {
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat",
 	"unit-goat", "unit-boar", "unit-horse",
 	"unit-wolf",
-	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
+	"unit-slime", "unit-yale", "unit-gryphon", "unit-water-elemental",
 	"unit-unicorn",
 	"unit-settlement-site",
 	"unit-gold-rock", "unit-gold-mine",
