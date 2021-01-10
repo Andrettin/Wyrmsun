@@ -1,0 +1,16 @@
+firewyrm = {
+	name = "Firewyrm"
+	supertaxon = vurmus
+	era = holocene
+	homeworld = nidavellir
+	pre_evolutions = {
+		tyrannosaurus_rex #seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	}
+	native_terrain_types = {
+		cave_floor
+		rockbound_cave_floor
+		dry_mud
+		mud
+		desert_sand
+	}
+}

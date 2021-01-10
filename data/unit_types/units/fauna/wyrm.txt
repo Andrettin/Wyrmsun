@@ -84,3 +84,18 @@ unit_wyrm = {
 		step_grass = step_leaves
 	}
 }
+
+unit_firewyrm = {
+	name = "Firewyrm"
+	parent = unit_wyrm
+	species = firewyrm
+	description = "Firewyrms are much like common wyrms, with one important difference: they can breathe fire."
+	image_file = "units/fauna/wyrms/boitata.png"
+	icon = icon_wyrm_red_scales
+	fire_damage = 9
+	fire_resistance = 50
+	level = 4
+	points = 400
+	variations = {
+	}
+}

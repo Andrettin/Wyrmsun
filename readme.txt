@@ -57,8 +57,14 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.2
 -----------------------------------------------------------------------
 
+* Characters
+- The Mboytata unique wyrm is now a firewyrm.
+
 * Sounds
 - Fixed issue which caused the sound effects volume slider to have no effect on the actual volume.
+
+* Units
+- Added Firewyrm unit. Similar to the Wyrm, it also deals fire damage, and possesses resistance to fire.
 
 -----------------------------------------------------------------------
 - 4.1.1
