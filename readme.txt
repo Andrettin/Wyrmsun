@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.2
 -----------------------------------------------------------------------
 
+* Sounds
+- Fixed issue which caused the sound effects volume slider to have no effect on the actual volume.
+
 -----------------------------------------------------------------------
 - 4.1.1
 -----------------------------------------------------------------------
