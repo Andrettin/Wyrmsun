@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Fixed the Dwarven Yale Pen being buildable close to a town hall.
+- Fixed issue which caused guard tower range to be much larger than it was supposed to be, if the tower was already garrisoned before the upgrade to a guard tower.
 
 * Characters
 - The Mboytata unique wyrm is now a firewyrm.
