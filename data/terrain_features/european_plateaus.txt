@@ -1,17 +1,17 @@
 azov_upland = {
 	name = "Azov Upland"
-	terrain_type = grass #plateau
+	terrain_type = semi_dry_grass #plateau
 	color = { 225 161 97 }
 }
 
 central_russian_upland = {
 	name = "Central Russian Upland"
-	terrain_type = grass #plateau
+	terrain_type = semi_dry_grass #plateau
 	color = { 149 238 71 }
 }
 
 dnieper_upland = {
 	name = "Dnieper Upland"
-	terrain_type = grass #plateau
+	terrain_type = semi_dry_grass #plateau
 	color = { 169 254 124 }
 }
