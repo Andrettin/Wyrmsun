@@ -1,0 +1,17 @@
+lesser_caucasus_mountains = {
+	name = "Lesser Caucasus Mountains"
+	terrain_type = rock #mountains
+	color = { 29 226 146 }
+}
+
+pontic_mountains = {
+	name = "Pontic Mountains"
+	terrain_type = rock #mountains
+	color = { 78 193 68 }
+}
+
+taurus_mountains = {
+	name = "Taurus Mountains"
+	terrain_type = rock #mountains
+	color = { 146 160 64 }
+}

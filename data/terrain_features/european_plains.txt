@@ -1,0 +1,5 @@
+great_hungarian_plain = {
+	name = "Great Hungarian Plain" #also known as Alföld
+	terrain_type = semi_dry_grass #plains
+	color = { 102 47 161 }
+}

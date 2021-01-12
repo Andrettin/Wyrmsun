@@ -1,0 +1,11 @@
+jabal_nafusah = {
+	name = "Jabal Nafusah" #"Jabal Nafüsah"
+	terrain_type = dry_grass #plains
+	color = { 245 248 9 }
+}
+
+nile_delta = {
+	name = "Nile Delta"
+	terrain_type = grass #delta
+	color = { 41 159 27 }
+}

@@ -1,3 +1,9 @@
+al_jabal_al_akhdar = {
+	name = "Al Jabal al Akhdar"
+	terrain_type = rock #mountains
+	color = { 208 143 195 }
+}
+
 anti_atlas = {
 	name = "Anti Atlas"
 	terrain_type = rock #mountains
