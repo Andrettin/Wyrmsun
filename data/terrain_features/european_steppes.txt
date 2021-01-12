@@ -1,5 +1,5 @@
 pontic_steppe = {
 	name = "Pontic Steppe"
-	terrain_type = grass #steppe
+	terrain_type = dry_grass #steppe
 	color = { 51 193 77 }
 }

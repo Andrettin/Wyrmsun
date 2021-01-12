@@ -129,7 +129,7 @@ DefineTerrainType("desert-sand", {
 DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Color = {32, 32, 0},
-	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "dry_grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
@@ -643,7 +643,7 @@ DefineTerrainType("fairlimbed-tree", {
 DefineTerrainType("norse-palisade", {
 	Name = "Palisade",
 	Character = "|",
-	BaseTerrainTypes = {"dirt", "grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "grass", "dry_grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,

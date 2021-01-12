@@ -432,6 +432,7 @@ DefineUnitType("unit-joruvellir-yale-pen", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},

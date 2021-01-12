@@ -40,7 +40,7 @@ DefineSpecies("heteroprox-moralesi", { -- Source: Mauricio Antón and Jorge Mora
 	Genus = "heteroprox",
 	Species = "moralesi",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Middle Miocene
 	-- 80cm shoulder height
@@ -53,7 +53,7 @@ DefineSpecies("procervulus-dichotomus", { -- Source: Mauricio Antón and Jorge M
 	Genus = "procervulus",
 	Species = "dichotomus",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Middle Miocene
 	-- 55cm shoulder height

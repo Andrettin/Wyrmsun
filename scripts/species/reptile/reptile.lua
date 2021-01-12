@@ -308,7 +308,7 @@ DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi
 	Genus = "adelobasileus",
 	Species = "cromptoni",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt"}, -- correct?
+	Terrains = {"grass", "dry_grass", "dirt"}, -- correct?
 	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
 	Era = "triassic"
 	-- scansorial insectivore

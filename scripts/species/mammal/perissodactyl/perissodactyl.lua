@@ -66,7 +66,7 @@ DefineSpecies("chalicotherium-grande", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "chalicotherium",
 	Species = "grande",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene" -- Middle Miocene
 	-- known as gorilla-horse

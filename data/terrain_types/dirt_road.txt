@@ -11,6 +11,7 @@ dirt_road = {
 	base_terrain_types = {
 		dirt
 		grass
+		dry_grass
 		dry_mud
 		cave_floor
 		snow

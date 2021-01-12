@@ -9,6 +9,7 @@ raven = {
 	}
 	native_terrain_types = {
 		grass #correct?
+		dry_grass #correct?
 		dirt #correct?
 		pine_tree #correct?
 		rock #correct?

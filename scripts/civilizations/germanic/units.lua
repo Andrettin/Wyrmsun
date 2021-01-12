@@ -660,6 +660,7 @@ DefineUnitType("unit-germanic-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -695,6 +696,7 @@ DefineUnitType("unit-germanic-farm", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -734,6 +736,7 @@ DefineUnitType("unit-germanic-barracks", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -770,6 +773,7 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -805,6 +809,7 @@ DefineUnitType("unit-germanic-smithy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -840,6 +845,7 @@ DefineUnitType("unit-germanic-temple", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -875,6 +881,7 @@ DefineUnitType("unit-germanic-market", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},

@@ -10,6 +10,7 @@ cheirogaster_bolivari = { #Source: Mauricio Antón and Jorge Morales, "Madrid an
 	#this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	native_terrain_types = {
 		grass
+		dry_grass
 		dirt
 		dry_mud
 		mud

@@ -101,7 +101,7 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	Genus = "cainotherium",
 	Species = "miocaenicum",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Middle Aragonian
 })
@@ -111,7 +111,7 @@ DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Mor
 	Genus = "dorcatherium",
 	Species = "crassum",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Lower Miocene to the Lower Pliocene
 	-- lived in Eurasia and Africa
@@ -141,7 +141,7 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 	Genus = "micromeryx",
 	Species = "azanzae",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- end of the Middle Miocene and beginning of the Upper Miocene
 	-- 35-38cm shoulder height
@@ -164,7 +164,7 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "triceromeryx",
 	Species = "pachecoi",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Middle Miocene
 	-- 125cm shoulder height

@@ -59,7 +59,7 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 	Genus = "gomphotherium",
 	Species = "angustidens",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene" -- Miocene and Pliocene
 	-- grazer
@@ -74,7 +74,7 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	Genus = "tetralophodon",
 	Species = "longirostris",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"numidotherium-koholense", "phiomia"}, -- earlier proboscids
 	Era = "miocene" -- Miocene and Pliocene
 	-- 3m shoulder height

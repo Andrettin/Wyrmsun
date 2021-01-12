@@ -1,18 +1,14 @@
-grass = {
-	name = "Grass"
-	character = g
-	character_aliases = {
-		p #plains
-	}
-	color = { 0 192 0 }
-	image_file = "terrain/grass.png"
+dry_grass = {
+	name = "Dry Grass"
+	character = G
+	color = { 168 192 0 }
+	image_file = "terrain/dry_grass.png"
 	buildable = true
 	flags = {
 		land
 		grass
 	}
 	outer_border_terrain_types = {
-		dry_grass
 		dirt
 		dry_mud
 	}
@@ -37,8 +33,5 @@ grass = {
 			northwest_southeast_inner = { 80 96 }
 			northeast_southwest_inner = { 81 97 }
 		}
-	}
-	tile_numbers = {
-		80 81 82 84 85 86 87 88 89 90 91 92 93 94 95
 	}
 }

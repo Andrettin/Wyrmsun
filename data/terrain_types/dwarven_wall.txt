@@ -13,6 +13,7 @@ dwarven_wall = {
 	base_terrain_types = {
 		dirt
 		grass
+		dry_grass
 		dry_mud
 		cave_floor
 		floor

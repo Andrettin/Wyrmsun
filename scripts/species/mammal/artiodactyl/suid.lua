@@ -40,7 +40,7 @@ DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge 
 	Genus = "bunolistriodon",
 	Species = "lockarti",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene" -- Middle Miocene
 	-- primarily herbivore
@@ -53,7 +53,7 @@ DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Mora
 	Genus = "conohyus",
 	Species = "simorrense",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene" -- Middle Miocene
 	-- 60cm shoulder height
@@ -67,7 +67,7 @@ DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morale
 	Genus = "microstonyx",
 	Species = "major",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene" -- Upper Miocene
 	-- lived in Eurasia

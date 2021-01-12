@@ -1593,6 +1593,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1630,6 +1631,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1641,6 +1643,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1686,6 +1689,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1696,6 +1700,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1706,6 +1711,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1774,6 +1780,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1811,6 +1818,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1822,6 +1830,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1867,6 +1876,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1877,6 +1887,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1887,6 +1898,7 @@ DefineUnitType("unit-dwarven-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1939,6 +1951,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -1977,6 +1990,7 @@ DefineUnitType("unit-dwarven-barracks", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2014,6 +2028,7 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2054,6 +2069,7 @@ DefineUnitType("unit-dwarven-smithy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2088,6 +2104,7 @@ DefineUnitType("unit-dwarven-masons-shop", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2139,6 +2156,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2177,6 +2195,7 @@ DefineUnitType("unit-dwarven-temple", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2213,6 +2232,7 @@ DefineUnitType("unit-dwarven-sentry-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2254,6 +2274,7 @@ DefineUnitType("unit-dwarven-guard-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2294,6 +2315,7 @@ DefineUnitType("unit-dwarven-ballista-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2331,6 +2353,7 @@ DefineUnitType("unit-dwarven-cannon-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2365,6 +2388,7 @@ DefineUnitType("unit-dwarven-market", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},
@@ -2398,6 +2422,7 @@ DefineUnitType("unit-dwarven-academy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
 		},

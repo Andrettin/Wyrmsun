@@ -45,7 +45,7 @@ DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Moral
 	Genus = "tethytragus",
 	Species = "langai",
 	Homeworld = "earth",
-	Terrains = {"grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene" -- Middle Miocene
 	-- 70cm shoulder height

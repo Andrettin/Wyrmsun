@@ -8,6 +8,7 @@ is_on_snowy_terrain = {
 				terrain = dirt
 				terrain = dry_mud
 				terrain = grass
+				terrain = dry_grass
 				terrain = shallow_water
 				terrain = gray_shallow_water
 			}
