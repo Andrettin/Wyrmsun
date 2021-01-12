@@ -1422,6 +1422,7 @@
 /graphics/terrain/rock.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/rockbound_cave_floor.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/rug.png (by b_o) (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/terrain/semi_dry_grass.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/terrain/shallow_water.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/snow.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/snow_extra_1.png (by Jinn) (licensed under the CC0)

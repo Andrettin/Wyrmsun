@@ -9,6 +9,7 @@ goat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 	}
 	native_terrain_types = {
 		grass
+		semi_dry_grass
 		dry_grass
 		dirt
 	}

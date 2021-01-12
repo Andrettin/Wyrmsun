@@ -9,6 +9,7 @@ rat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TS
 	}
 	native_terrain_types = {
 		grass #correct?
+		semi_dry_grass #correct?
 		dry_grass #correct?
 		dirt #correct?
 		cave_floor #correct?

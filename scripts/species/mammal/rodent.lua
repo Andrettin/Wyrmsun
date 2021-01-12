@@ -37,7 +37,7 @@ DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jo
 	Genus = "megacricetodon",
 	Species = "collongensis",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"ischyromys"},
 	Era = "miocene" -- Middle Miocene
 	-- had an omnivore diet with a high proportion of insects

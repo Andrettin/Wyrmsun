@@ -76,7 +76,7 @@ DefineSpecies("anchitherium-cursor", { -- Source: Mauricio Antón and Jorge Mora
 	Genus = "anchitherium",
 	Species = "cursor",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene" -- Middle Miocene
 	-- lived in Madrid
@@ -89,7 +89,7 @@ DefineSpecies("hipparion-primigenium", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "hipparion",
 	Species = "primigenium",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
 	Era = "miocene" -- Upper Miocene
 	-- 135cm shoulder height

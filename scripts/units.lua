@@ -382,6 +382,7 @@ DefineUnitType("unit-settlement-site", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -481,6 +482,7 @@ DefineUnitType("unit-gold-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -505,6 +507,7 @@ DefineUnitType("unit-gold-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -546,6 +549,7 @@ DefineUnitType("unit-silver-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -586,6 +590,7 @@ DefineUnitType("unit-copper-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -627,6 +632,7 @@ DefineUnitType("unit-iron-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -668,6 +674,7 @@ DefineUnitType("unit-mithril-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -707,6 +714,7 @@ DefineUnitType("unit-coal-mine", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1180,6 +1188,7 @@ DefineUnitType("unit-yale-cave", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1224,6 +1233,7 @@ DefineUnitType("unit-yale-hunting-lodge", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1250,6 +1260,7 @@ DefineUnitType("unit-yale-hunting-lodge", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1379,6 +1390,7 @@ DefineUnitType("unit-cavern-entrance", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1402,6 +1414,7 @@ DefineUnitType("unit-cavern-entrance", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1569,6 +1582,7 @@ DefineUnitType("unit-flowers", {
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "dirt",
 			"terrain", "snow"
@@ -1623,6 +1637,7 @@ DefineUnitType("unit-large-flower", {
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "dirt",
 			"terrain", "snow"
@@ -1631,6 +1646,7 @@ DefineUnitType("unit-large-flower", {
 			"variation-id", "forest",
 			"file", "neutral/decorations/large_flower_2.png",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "dirt",
 			"terrain", "snow"
@@ -1639,6 +1655,7 @@ DefineUnitType("unit-large-flower", {
 			"variation-id", "forest",
 			"file", "neutral/decorations/large_flower_3.png",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "dirt",
 			"terrain", "snow"
@@ -1764,6 +1781,7 @@ DefineUnitType("unit-fern", { Name = "Fern",
 		{
 			"variation-id", "forest",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "dirt",
 			"terrain", "snow"
@@ -5195,6 +5213,7 @@ DefineUnitType("unit-mercenary-camp", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"

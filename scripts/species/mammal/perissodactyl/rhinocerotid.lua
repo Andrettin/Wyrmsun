@@ -50,7 +50,7 @@ DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge M
 	Genus = "aceratherium",
 	Species = "incisivum",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene"
 	-- lived in Western Europe
@@ -63,7 +63,7 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 	Genus = "hispanotherium",
 	Species = "matritense",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene" -- Middle and Upper Miocene
 	-- dwelled in open environments which possessed few trees

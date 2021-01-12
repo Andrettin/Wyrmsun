@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Sounds
 - Fixed issue which caused the sound effects volume slider to have no effect on the actual volume.
 
+* Terrain
+- Added Semi-Dry Grass and Dry Grass terrain types.
+
 * Units
 - Added Firewyrm unit. Similar to the Wyrm, it also deals fire damage, and possesses resistance to fire.
 - Fixed the level up button being missing for the Dwarven Miner and Brising Miner.

@@ -5,6 +5,7 @@ bee = {
 	homeworld = earth
 	native_terrain_types = {
 		grass #correct?
+		semi_dry_grass #correct?
 		dry_grass #correct?
 		dirt #correct?
 	}

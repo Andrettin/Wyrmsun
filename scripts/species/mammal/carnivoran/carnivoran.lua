@@ -75,7 +75,7 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 	Genus = "eomellivora",
 	Species = "wimani",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}, -- common ancestor with Amphicyon, which was also a carnivoran
 	Era = "miocene" -- Upper Miocene
 	-- 60 cm tall up to the shoulder

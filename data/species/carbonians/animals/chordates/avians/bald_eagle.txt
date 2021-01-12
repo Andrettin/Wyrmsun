@@ -9,6 +9,7 @@ bald_eagle = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_t
 	}
 	native_terrain_types = {
 		grass #correct?
+		semi_dry_grass #correct?
 		dry_grass #correct?
 		dirt #correct?
 		pine_tree #correct?

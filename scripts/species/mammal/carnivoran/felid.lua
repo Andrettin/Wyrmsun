@@ -46,7 +46,7 @@ DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "M
 	Genus = "felis",
 	Species = "attica",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene" -- Upper Miocene
 	-- 35 cm shoulder height
@@ -59,7 +59,7 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 	Genus = "machairodus",
 	Species = "aphanistus",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene" -- Upper Miocene
 	-- 100 cm shoulder height
@@ -74,7 +74,7 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "pristinosmilus",
 	Species = "ogygia",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene" -- Upper Miocene
 	-- 60 cm shoulder height
@@ -102,7 +102,7 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 	Genus = "schizaelurus",
 	Species = "lorteti",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
 	Era = "miocene" -- Middle Miocene
 	-- had the size of a lynx

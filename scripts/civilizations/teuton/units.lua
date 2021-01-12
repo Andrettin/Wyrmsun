@@ -908,6 +908,7 @@ DefineUnitType("unit-teuton-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -936,6 +937,7 @@ DefineUnitType("unit-teuton-town-hall", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -975,6 +977,7 @@ DefineUnitType("unit-teuton-stronghold", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1017,6 +1020,7 @@ DefineUnitType("unit-teuton-farm", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1042,6 +1046,7 @@ DefineUnitType("unit-teuton-farm", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1092,6 +1097,7 @@ DefineUnitType("unit-teuton-barracks", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1119,6 +1125,7 @@ DefineUnitType("unit-teuton-barracks", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1167,6 +1174,7 @@ DefineUnitType("unit-teuton-lumber-mill", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1218,6 +1226,7 @@ DefineUnitType("unit-teuton-smithy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1243,6 +1252,7 @@ DefineUnitType("unit-teuton-smithy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1287,6 +1297,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1312,6 +1323,7 @@ DefineUnitType("unit-teuton-masons-shop", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1356,6 +1368,7 @@ DefineUnitType("unit-teuton-stables", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1381,6 +1394,7 @@ DefineUnitType("unit-teuton-stables", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1429,6 +1443,7 @@ DefineUnitType("unit-teuton-temple", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1465,6 +1480,7 @@ DefineUnitType("unit-teuton-temple", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1513,6 +1529,7 @@ DefineUnitType("unit-teuton-market", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1538,6 +1555,7 @@ DefineUnitType("unit-teuton-market", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1575,6 +1593,7 @@ DefineUnitType("unit-teuton-university", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1610,6 +1629,7 @@ DefineUnitType("unit-teuton-watch-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1646,6 +1666,7 @@ DefineUnitType("unit-teuton-guard-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"
@@ -1684,6 +1705,7 @@ DefineUnitType("unit-teuton-catapult-tower", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"

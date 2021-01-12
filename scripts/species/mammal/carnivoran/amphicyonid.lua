@@ -51,7 +51,7 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Genus = "amphicyon",
 	Species = "major",
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene" -- Middle and Upper Miocene
 	-- 90 cm shoulder height
@@ -77,7 +77,7 @@ DefineSpecies("magericyon-anceps", { -- Source: Mauricio Antón and Jorge Morale
 	Genus = "magericyon",
 	Species = "anceps", -- "cutting" in Latin
 	Homeworld = "earth",
-	Terrains = {"grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene" -- Upper Miocene
 	-- 78 cm shoulder height

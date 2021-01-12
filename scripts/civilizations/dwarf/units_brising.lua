@@ -82,6 +82,7 @@ DefineUnitType("unit-brising-smithy", {
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
+			"terrain", "semi_dry_grass",
 			"terrain", "dry_grass",
 			"terrain", "snow",
 			"season", "winter"

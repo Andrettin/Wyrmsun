@@ -11,6 +11,7 @@ border = {
 		cave_floor
 		dry_mud
 		grass
+		semi_dry_grass
 		dry_grass
 		desert_sand
 		snow
