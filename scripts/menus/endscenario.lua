@@ -56,7 +56,7 @@ function RunQuitToMenuConfirmMenu()
 
 	menu:addLabel(_("Are you sure?"), 128 * get_scale_factor(), 11 * get_scale_factor())
 	menu:addFullButton(_("~!Yes"), "y", 16 * get_scale_factor(), (11 + (36 * 2) + 29) * get_scale_factor(),
-		function() StopMusic(); StopGame(GameQuitToMenu); Editor.Running = EditorNotRunning; menu:stopAll() end)
+		function() play_menu_music(); StopGame(GameQuitToMenu); Editor.Running = EditorNotRunning; menu:stopAll() end)
 	menu:addFullButton(_("~!No"), "n", 16 * get_scale_factor(), (11 + (36 * 3) + 29) * get_scale_factor(),
 		function() menu:stop() end)
 

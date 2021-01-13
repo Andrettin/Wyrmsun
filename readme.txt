@@ -64,6 +64,10 @@ https://github.com/Andrettin/Wyrmsun
 * Characters
 - The Mboytata unique wyrm is now a firewyrm.
 
+* Miscellaneous
+- The error log in the stderr.txt file is no longer cleared when starting the game, being appended to instead. The file will be reset at start if it has grown beyond 1 MB.
+- Fixed issue which caused the game to crash when quitting to the main menu from a mission.
+
 * Sounds
 - Fixed issue which caused the sound effects volume slider to have no effect on the actual volume.
 
