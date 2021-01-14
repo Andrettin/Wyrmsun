@@ -97,5 +97,11 @@ unit_firewyrm = {
 	level = 4
 	points = 400
 	variations = {
+		brown_scales = {
+		}
+		green_scales = {
+			icon = icon_wyrm
+			image_file = "units/fauna/wyrms/boitata_green_scales.png"
+		}
 	}
 }
