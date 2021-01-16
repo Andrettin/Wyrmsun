@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.3
 -----------------------------------------------------------------------
 
+* Interface
+- Renamed the "Quests" screen to "Legacy Quests", to better reflect that these are missions in an old format, and which are supposed to be eventually updated to the Scenario mode.
+
 -----------------------------------------------------------------------
 - 4.1.2
 -----------------------------------------------------------------------

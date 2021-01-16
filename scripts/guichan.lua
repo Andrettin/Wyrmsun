@@ -796,13 +796,15 @@ function RunSinglePlayerGameMenu()
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
 	menu:addLabel(_("~<Single Player~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
-	local campaign_button = menu:addFullButton(_("~!Scenarios"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
+	
+	menu:addFullButton(_("~!Scenarios"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
 		function()
 			menu:stop()
 			RunCampaignMenu();
 		end
 	)
-	menu:addFullButton(_("~!Quests"), "q", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
+	
+	menu:addFullButton(_("Legacy ~!Quests"), "q", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
 		function()
 			RunQuestWorldMenu();
 			if (RunningScenario) then
