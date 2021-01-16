@@ -511,6 +511,14 @@ UnitDeath = {
 	"unbreakable end", "wait 1",
 }
 
+SpellcasterDeathOld = {
+	"unbreakable begin",
+	"frame 45", "wait 5", "frame 50", "wait 5", "frame 55", "wait 5",
+	"frame 60", "wait 5", "frame 65", "wait 5", "frame 70", "wait 5",
+	"frame 75", "wait 5", "frame 75",
+	"unbreakable end", "wait 1",
+}
+
 UnitDeathEleventhFrameBegin = {
 	"unbreakable begin",
 	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
@@ -625,11 +633,11 @@ DefineAnimations("animations-orc-spearthrower", {
 	Death = UnitDeathTwelfthFrameBegin
 })
 
-DefineAnimations("animations-spellcaster-old", {
+DefineAnimations("animations_spellcaster_old", {
 	Still = UnitStill,
 	Move = UnitMove,
 	Attack = SpellcasterAttackOld,
-	Death = UnitDeath
+	Death = SpellcasterDeathOld
 })
 
 DefineAnimations("animations-spellcaster", {
