@@ -54,6 +54,10 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 4.1.3
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
 - 4.1.2
 -----------------------------------------------------------------------
 
@@ -63,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Characters
 - The Mboytata unique wyrm is now a firewyrm.
+
+* Maps
+- Added Semi-Dry Grass and Dry Grass terrain features to the Earth map.
 
 * Miscellaneous
 - The error log in the stderr.txt file is no longer cleared when starting the game, being appended to instead. The file will be reset at start if it has grown beyond 1 MB.
@@ -75,7 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Semi-Dry Grass and Dry Grass terrain types.
 
 * Units
-- Added Firewyrm unit. Similar to the Wyrm, it also deals fire damage, and possesses resistance to fire.
+- Added Firewyrm unit. Similar to the Wyrm, but it also deals fire damage, and possesses resistance to fire.
 - Fixed the level up button being missing for the Dwarven Miner and Brising Miner.
 
 -----------------------------------------------------------------------
