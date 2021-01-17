@@ -52,4 +52,6 @@ if (nearest_coast ~= nil) then
 end
 
 CreateGoldMines(1, 50000, 0, CMap:get().Info.MapWidth - 3, math.floor(CMap:get().Info.MapHeight * 3 / 4), CMap:get().Info.MapHeight - 3, false, true)
-SetUnitVariable(unit, "Unique", "the-wedding-veil")
+if (LoadedGame == false) then
+	SetUnitVariable(unit, "Unique", "the-wedding-veil")
+end
