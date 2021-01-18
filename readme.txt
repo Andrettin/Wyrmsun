@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Interface
 - Renamed the "Quests" screen to "Legacy Quests", to better reflect that these are missions in an old format, and which are supposed to be eventually updated to the Scenario mode.
 - Fixed interface issues (e.g. incorrect button placement) which occurred after enabling the 2x scaled mode without restarting.
+- Added terrain-only minimap mode.
 
 * Units
 - When randomly moving, people-averse fauna units will no longer enter a tile with an owner if their current tile is in an unowned one. In effect, this means that e.g. wyrms will not wander into settled areas if they start off in an unsettled one until their starting area itself is settled.
