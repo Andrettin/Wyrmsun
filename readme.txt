@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Fixed issue which made the AI be able to take quests even if it didn't have a town hall.
 
+* Items
+- Fixed issue which allowed magic prefixes to be generated as suffixes and vice-versa.
+
 * Interface
 - Renamed the "Quests" screen to "Legacy Quests", to better reflect that these are missions in an old format, and which are supposed to be eventually updated to the Scenario mode.
 - Fixed interface issues (e.g. incorrect button placement) which occurred after enabling the 2x scaled mode without restarting.
