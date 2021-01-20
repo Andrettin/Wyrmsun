@@ -1,0 +1,6 @@
+aldhibah = { #Zeta Draconis
+	name = "Aldhibah"
+	map_template = universe
+	astrocoordinate = { -102.8033 65.7147 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 330
+}

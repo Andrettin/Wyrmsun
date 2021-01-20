@@ -1,0 +1,6 @@
+thuban = { #Alpha Draconis
+	name = "Thuban"
+	map_template = universe
+	astrocoordinate = { -148.9027 64.3759 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 303
+}

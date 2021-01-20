@@ -1,0 +1,6 @@
+edasich = { #Iota Draconis
+	name = "Edasich"
+	map_template = universe
+	astrocoordinate = { -128.7676 58.9661 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 101.2
+}

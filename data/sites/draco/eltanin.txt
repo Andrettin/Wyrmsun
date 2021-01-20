@@ -1,0 +1,6 @@
+eltanin = { #Gamma Draconis
+	name = "Eltanin"
+	map_template = universe
+	astrocoordinate = { -90.8485 51.4889 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 154.3
+}

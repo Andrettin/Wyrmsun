@@ -1,0 +1,6 @@
+alrakis = { #Mu Draconis
+	name = "Alrakis"
+	map_template = universe
+	astrocoordinate = { -103.6661 54.47 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 89
+}

@@ -1,0 +1,6 @@
+kuma = { #Nu Draconis
+	name = "Kuma"
+	map_template = universe
+	astrocoordinate = { -96.956 55.1842 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 98.7
+}

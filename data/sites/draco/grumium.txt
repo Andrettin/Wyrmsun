@@ -1,0 +1,6 @@
+grumium = { #Xi Draconis
+	name = "Grumium"
+	map_template = universe
+	astrocoordinate = { -91.6178 56.8726 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 112.5
+}

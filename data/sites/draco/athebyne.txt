@@ -1,0 +1,6 @@
+athebyne = { #Eta Draconis
+	name = "Athebyne"
+	map_template = universe
+	astrocoordinate = { -114.0021 61.5142 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 92.1
+}

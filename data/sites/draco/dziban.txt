@@ -1,0 +1,6 @@
+dziban = { #Psi Draconis
+	name = "Dziban"
+	map_template = universe
+	astrocoordinate = { -94.5152 72.1488 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 74.5
+}
