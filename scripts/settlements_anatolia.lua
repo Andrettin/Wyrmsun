@@ -29,7 +29,7 @@ DefineSite("amisus", {
 	Name = "Amisus",
 	MapTemplate = "earth",
 	Position = {4663, 1106},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Amisus",
 		"persian", "Amisus"
@@ -65,7 +65,7 @@ DefineSite("phaselis", {
 	Name = "Phaselis",
 	MapTemplate = "earth",
 	Position = {4534, 1216},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Phaselis",
 		"hittite", "Phaselis"
@@ -84,7 +84,7 @@ DefineSite("sinope", {
 	Name = "Sinope",
 	MapTemplate = "earth",
 	Position = {4637, 1092},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Sinope",
 		"hittite", "Sinope",

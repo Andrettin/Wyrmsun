@@ -2,7 +2,7 @@ madrid = {
 	name = "Madrid"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -3.68335168600 40.40002626450 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 124 44 233 }
 	regions = {
 		iberia

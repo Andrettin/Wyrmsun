@@ -29,7 +29,7 @@ DefineSite("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: 
 	Name = "Geirrod's Hall",
 	MapTemplate = "jotunheim",
 	Position = {710, 335}, -- Geirrod's hall is located in mountains and near a river
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"ettin", "Geirrod's Hall"
 	},

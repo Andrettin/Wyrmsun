@@ -2,7 +2,7 @@ oslo = {
 	name = "Oslo"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 10.74997920600 59.91669028640 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 211 128 27 }
 	cores = {
 		norway

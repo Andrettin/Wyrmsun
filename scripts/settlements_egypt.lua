@@ -103,7 +103,7 @@ DefineSite("memphis", {
 	Name = "Memphis",
 	MapTemplate = "earth",
 	Position = {4546, 1363},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Memphis",
 		"egyptian", "Memphis",
@@ -259,7 +259,7 @@ DefineSite("thebes-egypt", {
 	Name = "Thebes",
 	MapTemplate = "earth",
 	Position = {4582, 1466},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Thebes",
 		"egyptian", "Thebes",

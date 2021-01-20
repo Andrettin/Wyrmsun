@@ -1,7 +1,7 @@
 svarinshaug = {
 	name = "Svarinshaug"
 	map_template = svarinshaug
-	major = true
+	base_unit_type = unit_settlement_site
 	cores = { brising_clan }
 	
 	history = {

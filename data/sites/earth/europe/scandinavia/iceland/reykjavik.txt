@@ -2,7 +2,7 @@ reykjavik = {
 	name = "Reykjavik"
 	map_template = earth_60_75_latitude_north
 	geocoordinate = { -21.95001448720 64.15002361970 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	regions = {
 		scandinavia
 	}

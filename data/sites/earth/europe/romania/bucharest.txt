@@ -2,7 +2,7 @@ bucharest = {
 	name = "Bucharest"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { 26.09994665400 44.43337180490 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 177 111 178 }
 	regions = {
 		europe

@@ -3,7 +3,7 @@ halifax = {
 	map_template = north_america_30_45_latitude_north
 	#geocoordinate = { -63.60000451830 44.65002524730 } #from Natural Earth
 	pos = { 284 1 } #so that it doesn't block the tiles to its south
-	major = true
+	base_unit_type = unit_settlement_site
 	regions = {
 		canada
 	}

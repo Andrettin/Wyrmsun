@@ -29,7 +29,7 @@ DefineSite("geneva", {
 	Name = "Geneva",
 	MapTemplate = "earth",
 	Position = {3982, 997},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"french", "Geneva"
 	},

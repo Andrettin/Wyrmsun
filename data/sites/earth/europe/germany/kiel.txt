@@ -2,7 +2,7 @@ kiel = {
 	name = "Kiel"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 10.13001704780 54.33039044100 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 101 97 115 }
 	cores = {
 		hersing_tribe

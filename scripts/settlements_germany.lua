@@ -70,7 +70,7 @@ DefineSite("bremen", {
 	Name = "Bremen",
 	MapTemplate = "earth",
 	Position = {4044, 841},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Bremen"
 	},
@@ -219,7 +219,7 @@ DefineSite("magdeburg", {
 	Name = "Magdeburg",
 	MapTemplate = "earth",
 	Position = {4104, 861},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Magdeburg"
 	},
@@ -245,7 +245,7 @@ DefineSite("mainz", {
 	Name = "Mainz",
 	MapTemplate = "earth",
 	Position = {4022, 913},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"french", "Mayence",
 		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -296,7 +296,7 @@ DefineSite("munster", {
 	Name = "Munster",
 	MapTemplate = "earth",
 	Position = {3992, 865},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Munster" -- "Münster"
 	},
@@ -408,7 +408,7 @@ DefineSite("rostock", {
 	Name = "Rostock",
 	MapTemplate = "earth",
 	Position = {4126, 817},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Rostock"
 	},
@@ -521,7 +521,7 @@ DefineSite("trier", {
 	Name = "Trier",
 	MapTemplate = "earth",
 	Position = {3993, 917},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"french", "Treves", -- "Trèves"
 		"teuton", "Trier"
@@ -550,7 +550,7 @@ DefineSite("worms", {
 	Name = "Worms",
 	MapTemplate = "earth",
 	Position = {4026, 922},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"latin", "Borbetomagus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Worms"

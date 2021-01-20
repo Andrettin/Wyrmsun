@@ -2,7 +2,7 @@ burgos = {
 	name = "Burgos"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -3.67996687968 42.35039817210 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 0 85 46 }
 	cores = {
 		castille

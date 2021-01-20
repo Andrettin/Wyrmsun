@@ -315,7 +315,7 @@ DefineSite("damascus", {
 	Name = "Damascus",
 	MapTemplate = "earth",
 	Position = {4666, 1279},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Damascus",
 		"babylonian", "Damascus",
@@ -627,7 +627,7 @@ DefineSite("jerusalem", {
 	Name = "Jerusalem",
 	MapTemplate = "earth",
 	Position = {4642, 1327},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"babylonian", "Jerusalem",
 		"hebrew", "Jerusalem",
@@ -914,7 +914,7 @@ DefineSite("tyre", {
 	Name = "Tyre",
 	MapTemplate = "earth",
 	Position = {4642, 1291},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"babylonian", "Tyre",
 		"persian", "Tyre",

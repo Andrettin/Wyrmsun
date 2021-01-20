@@ -29,7 +29,7 @@ DefineSite("cadiz", {
 	Name = "Cadiz",
 	MapTemplate = "earth",
 	Position = {3699, 1218},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Cadiz",
 		"latin", "Gades",
@@ -69,7 +69,7 @@ DefineSite("cartagena", {
 	Name = "New Carthage",
 	MapTemplate = "earth",
 	Position = {3816, 1191},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Cartagena",
 		"latin", "New Carthage",
@@ -92,7 +92,7 @@ DefineSite("cordoba", {
 	Name = "Cordoba",
 	MapTemplate = "earth",
 	Position = {3730, 1183},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Cordoba",
 		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -298,7 +298,7 @@ DefineSite("toledo", {
 	Name = "Toledo",
 	MapTemplate = "earth",
 	Position = {3756, 1139},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Toledo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.

@@ -29,7 +29,7 @@ DefineSite("carthage-old-earth-map", { -- so that it appears in the Italy custom
 	Name = "Carthage",
 	MapTemplate = "earth",
 	Position = {4071, 1209},
-	Major = true
+	BaseUnitType = "unit_settlement_site"
 })
 
 DefineSite("utica", {

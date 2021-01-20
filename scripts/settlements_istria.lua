@@ -79,7 +79,7 @@ DefineSite("trieste", {
 	Name = "Trieste",
 	MapTemplate = "earth",
 	Position = {4154, 1009},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"italian", "Trieste",
 		"latin", "Tergeste", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.

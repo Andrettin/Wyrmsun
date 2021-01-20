@@ -29,7 +29,7 @@ DefineSite("bratislava", {
 	Name = "Bratislava",
 	MapTemplate = "earth",
 	Position = {4227, 950},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"slav", "Bratislava",
 		"teuton", "Presburg"

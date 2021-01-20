@@ -2,7 +2,7 @@ erfurt = {
 	name = "Erfurt"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 11.02996211610 50.97005291660 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 102 126 172 }
 	cores = {
 		germany

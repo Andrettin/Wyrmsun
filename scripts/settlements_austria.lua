@@ -135,7 +135,7 @@ DefineSite("graz", {
 	Name = "Graz",
 	MapTemplate = "earth",
 	Position = {4190, 981},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Graz" -- from the same Slavic root as "Grad"
 	},
@@ -155,7 +155,7 @@ DefineSite("innsbruck", {
 	Name = "Innsbruck",
 	MapTemplate = "earth",
 	Position = {4102, 972},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Innsbruck"
 	},
@@ -173,7 +173,7 @@ DefineSite("klagenfurt", {
 	Name = "Klagenfurt",
 	MapTemplate = "earth",
 	Position = {4166, 987},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Klagenfurt"
 	},
@@ -191,7 +191,7 @@ DefineSite("linz", {
 	Name = "Linz",
 	MapTemplate = "earth",
 	Position = {4162, 949},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Linz"
 	},
@@ -209,7 +209,7 @@ DefineSite("ljubljana", {
 	Name = "Ljubljana",
 	MapTemplate = "earth",
 	Position = {4170, 1000},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"slav", "Ljubljana",
@@ -246,7 +246,7 @@ DefineSite("salzburg", {
 	Name = "Salzburg",
 	MapTemplate = "earth",
 	Position = {4135, 960},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"latin", "Iuvavum",
 		"teuton", "Salzburg"

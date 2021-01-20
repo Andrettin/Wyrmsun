@@ -30,7 +30,7 @@ DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name
 	MapTemplate = "nidavellir",
 --	Position = {669, 298},
 	Position = {669, 296}, -- because of the mud tiles in its former position
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	HistoricalOwners = {
 		-3000, "dreadskull-tribe"
 	},
@@ -43,7 +43,7 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
 	MapTemplate = "island-of-the-lizard-god",
 	Position = {59, 117},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"goblin", "Driftwood" -- in the original, it is a town run by a cartel of intelligent apes
 	},
@@ -72,7 +72,7 @@ DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe 
 	Name = "Lggi",
 	MapTemplate = "nidavellir",
 	Position = {800, 285},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"goblin", "Lggi"
 	},
@@ -114,7 +114,7 @@ DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of 
 	Name = "Wildfang",
 	MapTemplate = "nidavellir",
 	Position = {613, 208},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	HistoricalOwners = {
 		-3000, "wildfang-tribe"
 	},

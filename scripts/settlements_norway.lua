@@ -29,7 +29,7 @@ DefineSite("arendal", {
 	Name = "Arendal",
 	MapTemplate = "earth",
 	Position = {4048, 708},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"norse", "Arendal"
 	},
@@ -70,7 +70,7 @@ DefineSite("hamar", {
 	Name = "Hamar",
 	MapTemplate = "earth",
 	Position = {4089, 666},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"norse", "Hamar"
 	},
@@ -92,7 +92,7 @@ DefineSite("hermansverk", {
 	Name = "Hermansverk",
 	MapTemplate = "earth",
 	Position = {3981, 653},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"norse", "Hermansverk"
 	},
@@ -113,7 +113,7 @@ DefineSite("tonsberg", {
 	Name = "Tonsberg",
 	MapTemplate = "earth",
 	Position = {4074, 698},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"norse", "Tonsberg" -- "Tønsberg"
 	},

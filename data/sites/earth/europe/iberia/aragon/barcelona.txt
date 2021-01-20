@@ -2,7 +2,7 @@ barcelona = {
 	name = "Barcelona"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { 2.18337031923 41.38329957990 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 172 234 91 }
 	cores = {
 		barcelona

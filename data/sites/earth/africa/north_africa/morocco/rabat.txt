@@ -2,7 +2,7 @@ rabat = {
 	name = "Rabat"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -6.83613082013 34.02529909160 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	regions = {
 		africa
 	}

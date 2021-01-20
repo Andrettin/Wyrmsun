@@ -2,7 +2,7 @@ cluj = {
 	name = "Cluj"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 23.59844559600 46.78842185370 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 147 132 43 }
 	regions = {
 		europe

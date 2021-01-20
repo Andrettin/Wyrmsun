@@ -2,7 +2,7 @@ frankfurt = {
 	name = "Frankfurt"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 8.67501542017 50.09997682610 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 22 220 110 }
 	cores = {
 		frank_tribe

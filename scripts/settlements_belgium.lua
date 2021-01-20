@@ -87,7 +87,7 @@ DefineSite("tournai", {
 	Name = "Tournai",
 	MapTemplate = "earth",
 	Position = {3918, 896},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Tornacum",
 		"french", "Tournai"

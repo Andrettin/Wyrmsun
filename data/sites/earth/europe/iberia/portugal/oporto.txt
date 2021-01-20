@@ -2,7 +2,7 @@ oporto = {
 	name = "Oporto"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -8.62000126284 41.15000632640 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 37 113 29 }
 	regions = {
 		iberia

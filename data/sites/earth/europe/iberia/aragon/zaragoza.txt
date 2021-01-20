@@ -2,7 +2,7 @@ zaragoza = {
 	name = "Zaragoza"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -0.88998213846 41.65000164700 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 202 26 200 }
 	cores = {
 		aragon

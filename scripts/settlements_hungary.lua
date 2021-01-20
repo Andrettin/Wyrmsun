@@ -29,7 +29,7 @@ DefineSite("buda", {
 	Name = "Buda",
 	MapTemplate = "earth",
 	Position = {4268, 966},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"latin", "Aquincum",
 		"magyar", "Buda", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.

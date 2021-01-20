@@ -61,7 +61,7 @@ DefineSite("sardis", {
 	Name = "Sardis",
 	MapTemplate = "earth",
 	Position = {4474, 1170},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"hittite", "Sardis",
 		"persian", "Sardis"
@@ -80,7 +80,7 @@ DefineSite("troy", {
 	Name = "Troy",
 	MapTemplate = "earth",
 	Position = {4437, 1140},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Ilium", -- Troy/Ilium
 		"hittite", "Troy"

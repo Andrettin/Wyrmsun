@@ -29,7 +29,7 @@ DefineSite("gniezno", {
 	Name = "Gniezno",
 	MapTemplate = "earth",
 	Position = {4248, 853},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"slav", "Gniezno",
 		"teuton", "Gnesen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -70,7 +70,7 @@ DefineSite("poznan", {
 	Name = "Poznan",
 	MapTemplate = "earth",
 	Position = {4225, 855},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"slav", "Poznan", -- "Poznań"
 		"teuton", "Posen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.

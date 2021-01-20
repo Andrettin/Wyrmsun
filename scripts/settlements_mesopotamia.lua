@@ -103,7 +103,7 @@ DefineSite("babylon", {
 	Name = "Babylon",
 	MapTemplate = "earth",
 	Position = {4848, 1300},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Babylon",
 		"babylonian", "Babylon",
@@ -350,7 +350,7 @@ DefineSite("nineveh", {
 	Name = "Nineveh",
 	MapTemplate = "earth",
 	Position = {4828, 1214},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Nineveh",
 		"persian", "Nineveh"
@@ -526,7 +526,7 @@ DefineSite("ur", {
 	Name = "Ur",
 	MapTemplate = "earth",
 	Position = {4895, 1345},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"assyrian", "Ur",
 		"babylonian", "Ur"

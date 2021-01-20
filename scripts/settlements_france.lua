@@ -130,7 +130,7 @@ DefineSite("besancon", {
 	Name = "Besancon",
 	MapTemplate = "earth",
 	Position = {3977, 978},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Vesontio",
 		"french", "Besancon" -- "Besançon"
@@ -162,7 +162,7 @@ DefineSite("bordeaux", {
 	Name = "Bordeaux",
 	MapTemplate = "earth",
 	Position = {3826, 1029},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"celt", "Burdigala",
 		"frankish", "Burdegala",
@@ -193,7 +193,7 @@ DefineSite("bourges", {
 	Name = "Bourges",
 	MapTemplate = "earth",
 	Position = {3894, 975},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Bituricae",
 		"french", "Bourges" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
@@ -301,7 +301,7 @@ DefineSite("clermont-ferrand", {
 	Name = "Clermont-Ferrand",
 	MapTemplate = "earth",
 	Position = {3909, 1006},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Arverni",
 		"french", "Clermont-Ferrand"
@@ -401,7 +401,7 @@ DefineSite("lyon", {
 	Name = "Lyon",
 	MapTemplate = "earth",
 	Position = {3947, 1006},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"celt", "Lugdunum",
 		"frankish", "Lugdunum",
@@ -429,7 +429,7 @@ DefineSite("metz", {
 	Name = "Metz",
 	MapTemplate = "earth",
 	Position = {3981, 931},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Mettis",
 		"french", "Metz"
@@ -489,7 +489,7 @@ DefineSite("nantes", {
 	Name = "Nantes",
 	MapTemplate = "earth",
 	Position = {3804, 972},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Namnetes",
 		"french", "Nantes"
@@ -559,7 +559,7 @@ DefineSite("orleans", {
 	Name = "Orleans",
 	MapTemplate = "earth",
 	Position = {3884, 961},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Aurehani",
 		"french", "Orleans" -- "Orléans"
@@ -599,7 +599,7 @@ DefineSite("poitiers", {
 	Name = "Poitiers",
 	MapTemplate = "earth",
 	Position = {3845, 990},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"frankish", "Pictavis",
 		"french", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
@@ -624,7 +624,7 @@ DefineSite("reims", {
 	Name = "Reims",
 	MapTemplate = "earth",
 	Position = {3930, 926},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"celt", "Durocortorum",
 		"frankish", "Remi",
@@ -713,7 +713,7 @@ DefineSite("soissons", {
 	Name = "Soissons",
 	MapTemplate = "earth",
 	Position = {3915, 923},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"french", "Soissons"
 	},
@@ -735,7 +735,7 @@ DefineSite("strassburg", {
 	Name = "Strasbourg",
 	MapTemplate = "earth",
 	Position = {4010, 945},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"celt", "Argentoratum",
 		"frankish", "Argentoratum",

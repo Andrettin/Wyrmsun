@@ -2,7 +2,7 @@ riga = {
 	name = "Riga"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 24.09996537140 56.95002382320 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 142 59 246 }
 	regions = {
 		baltic_countries

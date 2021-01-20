@@ -2,7 +2,7 @@ pest = {
 	name = "Pest"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 19.08332067740 47.50000632640 } #Budapest; from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	color = { 57 174 209 }
 	cores = {
 		magyar_tribe

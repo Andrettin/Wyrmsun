@@ -29,7 +29,7 @@ DefineSite("brunn", {
 	Name = "Brno",
 	MapTemplate = "earth",
 	Position = {4206, 936},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"slav", "Brno",
 		"teuton", "Brunn" -- "Brünn"
@@ -66,7 +66,7 @@ DefineSite("olmutz", {
 	Name = "Olomouc",
 	MapTemplate = "earth",
 	Position = {4232, 921},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"slav", "Olomouc",
 		"teuton", "Olmutz" -- "Olmütz"

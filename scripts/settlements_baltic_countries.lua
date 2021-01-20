@@ -29,7 +29,7 @@ DefineSite("mitau", {
 	Name = "Mitau",
 	MapTemplate = "earth",
 	Position = {4378, 763},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"teuton", "Mitau"
 	},

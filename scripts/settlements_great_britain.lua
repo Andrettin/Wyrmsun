@@ -65,7 +65,7 @@ DefineSite("bamburgh", {
 	Name = "Bamburgh",
 	MapTemplate = "earth",
 	Position = {3800, 784},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Bebbanburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -193,7 +193,7 @@ DefineSite("canterbury", {
 	Name = "Canterbury",
 	MapTemplate = "earth",
 	Position = {3866, 880},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Cantwaraburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Durovernum",
@@ -260,7 +260,7 @@ DefineSite("chester", {
 	Name = "Chester",
 	MapTemplate = "earth",
 	Position = {3774, 837},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Legaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Deva",
@@ -283,7 +283,7 @@ DefineSite("chichester", {
 	Name = "Chichester",
 	MapTemplate = "earth",
 	Position = {3821, 890},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Cisseceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Regnum",
@@ -328,7 +328,7 @@ DefineSite("colchester", {
 	Name = "Colchester",
 	MapTemplate = "earth",
 	Position = {3860, 866},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Colneceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"briton", "Camulodunum",
@@ -495,7 +495,7 @@ DefineSite("exeter", {
 	Name = "Exeter",
 	MapTemplate = "earth",
 	Position = {3759, 893},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Escanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Isca Dumnoniorum",
@@ -537,7 +537,7 @@ DefineSite("glasgow", {
 	Name = "Glasgow",
 	MapTemplate = "earth",
 	Position = {3741, 777},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"english", "Glasgow"
 	},
@@ -575,7 +575,7 @@ DefineSite("gloucester", {
 	Name = "Gloucester",
 	MapTemplate = "earth",
 	Position = {3784, 874},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Gleawanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		"briton", "Glevum",
@@ -1266,7 +1266,7 @@ DefineSite("winchester", {
 	Name = "Winchester",
 	MapTemplate = "earth",
 	Position = {3810, 885},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"anglo-saxon", "Wintanceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
 		"briton", "Verita Belgarum",

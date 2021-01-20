@@ -45,7 +45,7 @@ DefineSite("barca", {
 	Name = "Barca",
 	MapTemplate = "earth",
 	Position = {4332, 1306},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Barca",
 		"persian", "Barca"

@@ -29,14 +29,14 @@ DefineSite("milan-old-earth-map", { -- so that it appears in the Italy custom ma
 	Name = "Milan",
 	MapTemplate = "earth",
 	Position = {4049, 1013},
-	Major = true
+	BaseUnitType = "unit_settlement_site"
 })
 	
 DefineSite("rome-old-earth-map", { -- so that it appears in the Italy custom map
 	Name = "Rome",
 	MapTemplate = "earth",
 	Position = {4126, 1096},
-	Major = true
+	BaseUnitType = "unit_settlement_site"
 })
 
 DefineSite("aleria", {
@@ -61,7 +61,7 @@ DefineSite("aquileia", {
 	Name = "Aquileia",
 	MapTemplate = "earth",
 	Position = {4143, 1004},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"latin", "Aquileia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 26-27, 29; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -192,7 +192,7 @@ DefineSite("florence", {
 	Name = "Florence",
 	MapTemplate = "earth",
 	Position = {4095, 1054},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"italian", "Florence",
 		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -249,7 +249,7 @@ DefineSite("modena", {
 	Name = "Modena",
 	MapTemplate = "earth",
 	Position = {4089, 1032},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"italian", "Modena",
 		"latin", "Mutina" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -270,7 +270,7 @@ DefineSite("naples", {
 	Name = "Naples",
 	MapTemplate = "earth",
 	Position = {4163, 1116},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Neapolis",
 		"italian", "Naples",
@@ -343,7 +343,7 @@ DefineSite("palermo", {
 	Name = "Palermo",
 	MapTemplate = "earth",
 	Position = {4141, 1181},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Panormus",
 		"italian", "Palermo",

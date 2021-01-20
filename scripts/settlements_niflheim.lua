@@ -29,7 +29,7 @@ DefineSite("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossle
 	Name = "Eljudnir",
 	MapTemplate = "niflheim",
 	Position = {225, 132},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 	},
 	Cores = {

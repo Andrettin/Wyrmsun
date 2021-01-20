@@ -2,7 +2,7 @@ quebec = {
 	name = "Quebec"
 	map_template = north_america_45_60_latitude_north
 	geocoordinate = { -71.24561019050 46.83996909490 } #from Natural Earth
-	major = true
+	base_unit_type = unit_settlement_site
 	regions = {
 		canada
 	}

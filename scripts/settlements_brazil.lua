@@ -29,7 +29,7 @@ DefineSite("florianopolis", {
 	Name = "Florianopolis",
 	MapTemplate = "earth",
 	Position = {2732, 2674}, -- is actually in the island of Santa Catharina, but there's not enough space there for a settlement
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Florianopolis" -- Florianopolis/Desterro
 	},
@@ -47,7 +47,7 @@ DefineSite("laguna", {
 	Name = "Laguna",
 	MapTemplate = "earth",
 	Position = {2664, 2756},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Laguna"
 	},
@@ -68,7 +68,7 @@ DefineSite("porto-alegre", {
 	Name = "Porto Alegre",
 	MapTemplate = "earth",
 	Position = {2675, 2733},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Porto Alegre"
 	},
@@ -89,7 +89,7 @@ DefineSite("recife", {
 	Name = "Recife",
 	MapTemplate = "earth",
 	Position = {3046, 2224},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 --		"dutch", "Mauritsstad", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 128.
 		"portuguese", "Recife"
@@ -114,7 +114,7 @@ DefineSite("rio-grande", {
 	Name = "Rio Grande",
 	MapTemplate = "earth",
 	Position = {2652, 2779},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Rio Grande"
 	},
@@ -135,7 +135,7 @@ DefineSite("rio-de-janeiro", {
 	Name = "Rio de Janeiro",
 	MapTemplate = "earth",
 	Position = {2856, 2569},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"french", "Henriville",
 		"portuguese", "Rio de Janeiro"
@@ -166,7 +166,7 @@ DefineSite("salvador", {
 	Name = "Salvador",
 	MapTemplate = "earth",
 	Position = {2964, 2343},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Salvador"
 	},
@@ -187,7 +187,7 @@ DefineSite("sao-paulo", {
 	Name = "Sao Paulo",
 	MapTemplate = "earth",
 	Position = {2752, 2583},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Sao Paulo" -- "São Paulo"
 	},

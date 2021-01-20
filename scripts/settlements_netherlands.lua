@@ -46,7 +46,7 @@ DefineSite("leeuwarden", {
 	Name = "Leeuwarden",
 	MapTemplate = "earth",
 	Position = {3968, 837},
-	Major = true,
+	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 --		"dutch", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
