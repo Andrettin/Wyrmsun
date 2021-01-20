@@ -395,8 +395,6 @@ DefineUnitType("unit-settlement-site", {
 	},
 	Sounds = {
 		"selected", "click",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
 		"dead", "building-destroyed"
 	}
 } )
