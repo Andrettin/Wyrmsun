@@ -12,6 +12,7 @@ unit_template_celestial_body = {
 	priority = 0
 	missile = missile_none
 	building = true
+	celestial_body = true
 	visible_under_fog = true
 	selectable_by_rectangle = true
 	indestructible = true
