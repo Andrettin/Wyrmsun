@@ -1,0 +1,6 @@
+tianyi = {
+	name = "Tianyi"
+	map_template = universe
+	astrocoordinate = { -168.1069 66.7903 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 780
+}

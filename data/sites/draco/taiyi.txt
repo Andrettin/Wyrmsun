@@ -1,0 +1,6 @@
+taiyi = {
+	name = "Taiyi"
+	map_template = universe
+	astrocoordinate = { -166.131 65.4385 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 95.9
+}

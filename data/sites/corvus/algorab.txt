@@ -1,0 +1,6 @@
+algorab = { #Delta Corvi
+	name = "Algorab"
+	map_template = universe
+	astrocoordinate = { -172.5339 -16.5154 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 86.9
+}

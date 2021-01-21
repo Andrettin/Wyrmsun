@@ -1,0 +1,6 @@
+kraz = { #Beta Corvi
+	name = "Kraz"
+	map_template = universe
+	astrocoordinate = { -171.4032 -23.3968 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 146
+}

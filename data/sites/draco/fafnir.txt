@@ -1,0 +1,6 @@
+fafnir = {
+	name = "Fafnir"
+	map_template = universe
+	astrocoordinate = { -83.5036 65.5635 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 315
+}

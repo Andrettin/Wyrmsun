@@ -1,0 +1,6 @@
+alchiba = { #Alpha Corvi
+	name = "Alchiba"
+	map_template = universe
+	astrocoordinate = { -177.8966 -24.7289 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 48.7
+}
