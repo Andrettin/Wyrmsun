@@ -1,5 +1,5 @@
 gimle = {
 	name = "Gimle" #Gimlé
-	map_template = gimle
+	map_template = vidblain
 	base_unit_type = unit_settlement_site
 }

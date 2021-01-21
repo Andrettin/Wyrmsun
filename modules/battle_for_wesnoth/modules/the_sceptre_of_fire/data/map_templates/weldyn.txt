@@ -1,6 +1,6 @@
 weldyn = {
 	name = "Weldyn"
-	main_template = vidblain
+	#main_template = vidblain
 	size = { 34 38 }
 	terrain_file = "weldyn.map"
 	overlay_terrain_file = "weldyn_overlay.map"
