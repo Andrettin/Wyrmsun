@@ -699,11 +699,14 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 				local uncount = 0
 				uncount = GetUnits(0)
 				local units_to_die = {}
+				local has_shorbear_hold_settlement = false
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider") then
-						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
---							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
-							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
+					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider" or (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44)) then
+--						MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
+						SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
+						
+						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TownHall")) then
+							has_shorbear_hold_settlement = true
 						end
 					else
 						table.insert(units_to_die, uncount[unit1])
@@ -714,7 +717,9 @@ AddTrigger("hills-of-the-shorbear-clan-gates-sealed",
 				end
 				
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
-				unit = CreateUnitOnTop("unit-dwarven-stronghold", 0, FindUnit("unit-settlement-site"))
+				if (has_shorbear_hold_settlement == false) then
+					unit = CreateUnitOnTop("unit-dwarven-stronghold", 0, FindUnit("unit-settlement-site"))
+				end
 				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
 				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
 				unit = CreateUnit("unit_dwarven_miner", 0, {38, 33})
