@@ -1,6 +1,6 @@
 universe = {
 	name = "Universe"
 	size = { 512 512 }
-	astrodistance_multiplier = 2
+	astrodistance_multiplier = 5
 	astrodistance_additive_modifier = 192 #Earth's tile radius
 }
