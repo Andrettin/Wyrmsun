@@ -3,4 +3,6 @@ universe = {
 	size = { 512 512 }
 	astrodistance_multiplier = 5
 	astrodistance_additive_modifier = 192 #Earth's tile radius
+	base_terrain_type = dirt
+	base_overlay_terrain_type = space
 }
