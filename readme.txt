@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed interface issues (e.g. incorrect button placement) which occurred after enabling the 2x scaled mode without restarting.
 - Added terrain-only minimap mode.
 
+* Multiplayer
+- Fixed a potential desync cause due to floating point operations.
+
 * Units
 - When randomly moving, people-averse fauna units will no longer enter a tile with an owner if their current tile is in an unowned one. In effect, this means that e.g. wyrms will not wander into settled areas if they start off in an unsettled one until their starting area itself is settled.
 
