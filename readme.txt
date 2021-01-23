@@ -68,6 +68,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed interface issues (e.g. incorrect button placement) which occurred after enabling the 2x scaled mode without restarting.
 - Added terrain-only minimap mode.
 
+* Map Editor
+- Fixed crash which could occur when clicking on the "OK" button in the player properties dialog.
+- Fixed the position of the editor tile tooltip in the bottom-left in the 2x scaled mode.
+
 * Multiplayer
 - Fixed a potential desync cause due to floating point operations.
 
