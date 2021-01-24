@@ -1,0 +1,7 @@
+dalim = { #Alpha Fornacis
+	name = "Dalim"
+	map_template = universe
+	astrocoordinate = { 48.0189 -28.9876 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 46.4
+	base_unit_type = unit_star #yellow_white_giant_star
+}
