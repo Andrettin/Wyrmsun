@@ -44,7 +44,7 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 			"text", "The Karlings are diligent farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls-progeny")
+					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls_progeny")
 					SetPlayerData(trigger_player, "AcceptQuest", "jarls-hall")
 				end
 			}
@@ -342,11 +342,11 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "allied", trigger_player)
 					SetSharedVision(trigger_player, true, GetFactionPlayer("hersing-tribe"))
 					SetSharedVision(GetFactionPlayer("hersing-tribe"), true, trigger_player)
-					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls_progeny")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "v") then
 							CallDialogue("campaign-victory", trigger_player)
 						end
-						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
+						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls_progeny")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
 				end
@@ -409,11 +409,11 @@ DefineDialogue("jarl-conquers-jutland", {
 			"text", "It is done. My rule extends throughout the entire peninsula, from north to south!",
 			"option-effects", {
 				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls-progeny")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls_progeny")) then
+						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
 							CallDialogue("campaign-victory", trigger_player)
 						end
-						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls-progeny")
+						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls_progeny")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
 				end

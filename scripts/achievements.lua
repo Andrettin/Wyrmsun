@@ -38,7 +38,7 @@ DefineAchievement("heimdalls-progeny", {
 	Icon = "icon-jarl",
 	Description = "Complete the Haimadala's Progeny scenario.",
 	PlayerColor = "yellow",
-	RequiredQuests = {"heimdalls-progeny"}
+	RequiredQuests = {"heimdalls_progeny"}
 })
 
 DefineAchievement("thors-servant", {

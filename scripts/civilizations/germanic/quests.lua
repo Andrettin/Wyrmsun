@@ -226,13 +226,13 @@ DefineQuest("karls-farm", { -- based on the Song of Rig; Source: Kevin Crossley-
 	}
 })
 
-DefineQuest("heimdalls-progeny", {
+DefineQuest("heimdalls_progeny", {
 	Name = "Haimadala's Progeny",
 	Icon = "icon-jarl",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
 	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls-progeny") then
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
 			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
