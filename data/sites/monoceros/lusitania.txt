@@ -1,0 +1,7 @@
+lusitania = {
+	name = "Lusitania" #"Lusitânia"
+	map_template = universe
+	astrocoordinate = { 97.305 10.9339 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 113.8
+	base_unit_type = unit_star #yellow_dwarf_star
+}
