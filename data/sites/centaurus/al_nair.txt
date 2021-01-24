@@ -1,0 +1,7 @@
+al_nair = { #Zeta Centauri
+	name = "Al Nair"
+	map_template = universe
+	astrocoordinate = { -151.1151 -47.2884 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 382
+	base_unit_type = unit_star #blue_white_giant_star
+}

@@ -1,0 +1,8 @@
+toliman = { #Alpha Centauri B
+	name = "Toliman"
+	#astrocoordinate = { -140.1039 -60.8375 } #from www.github.com/ofrohn/d3-celestial
+	#astrodistance = 4.37 #light-years
+	orbit_center = rigil_kentaurus
+	distance_from_orbit_center_au = 23 #average distance of 23 AU from Rigil Kentaurus
+	base_unit_type = unit_star #orange_dwarf_star
+}

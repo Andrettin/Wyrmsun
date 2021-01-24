@@ -1,0 +1,7 @@
+hadar = { #Beta Centauri
+	name = "Hadar"
+	map_template = universe
+	astrocoordinate = { -149.0441 -60.373 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 390
+	base_unit_type = unit_star #blue_white_giant_star
+}

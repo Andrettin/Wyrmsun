@@ -1,0 +1,7 @@
+ke_kwan = { #Kappa Centauri
+	name = "Ke Kwan"
+	map_template = universe
+	astrocoordinate = { -135.2096 -42.1042 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 380
+	base_unit_type = unit_star #blue_white_giant_star
+}
