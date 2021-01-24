@@ -4,4 +4,7 @@ pollux = { #Beta Geminorum
 	astrocoordinate = { 116.329 28.0262 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 33.78
 	base_unit_type = unit_star #orange_giant_star
+	cultural_names = {
+		norse = "Thiassi's Left Eye" #a pair of stars was known as "Þjaza/Þjassa Augu" in Old Icelandic, that is, "the Eyes of the Giant Thiazi/Thiassi", and they were probably Castor and Pollux; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 33, 594.
+	}
 }
