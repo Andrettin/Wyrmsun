@@ -1,0 +1,7 @@
+tejat_posterior = { #Mu Geminorum
+	name = "Tejat Posterior"
+	map_template = universe
+	astrocoordinate = { 95.7401 22.5136 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 230
+	base_unit_type = unit_star #red_giant_star
+}

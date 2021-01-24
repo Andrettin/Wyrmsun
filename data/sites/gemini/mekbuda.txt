@@ -1,0 +1,7 @@
+mekbuda = { #Zeta Geminorum
+	name = "Mekbuda"
+	map_template = universe
+	astrocoordinate = { 106.0272 20.5703 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1120
+	base_unit_type = unit_star #yellow_white_giant_star #F7I to G3I
+}

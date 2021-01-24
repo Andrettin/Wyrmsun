@@ -1,0 +1,7 @@
+castor = { #Alpha Geminorum
+	name = "Castor"
+	map_template = universe
+	astrocoordinate = { 113.6495 31.8883 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 51
+	base_unit_type = unit_star #class_a_dwarf_star
+}

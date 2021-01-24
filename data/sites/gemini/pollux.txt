@@ -1,0 +1,7 @@
+pollux = { #Beta Geminorum
+	name = "Pollux"
+	map_template = universe
+	astrocoordinate = { 116.329 28.0262 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 33.78
+	base_unit_type = unit_star #orange_giant_star
+}

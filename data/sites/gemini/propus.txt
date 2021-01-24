@@ -1,0 +1,7 @@
+propus = { #Iota Geminorum
+	name = "Propus"
+	map_template = universe
+	astrocoordinate = { 111.4316 27.7981 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 120.4
+	base_unit_type = unit_star #yellow_giant_star
+}

@@ -1,0 +1,7 @@
+alzirr = { #Xi Geminorum
+	name = "Alzirr"
+	map_template = universe
+	astrocoordinate = { 101.3224 12.8956 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 58.7
+	base_unit_type = unit_star #yellow_white_dwarf_star #F5IV-V
+}
