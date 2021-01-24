@@ -326,7 +326,7 @@ DefineDialogue("jarl-seeks-an-alliance-with-the-hersings", {
 DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 	Nodes = {
 		{
-			"text", "~<[Level Check Succeeded]~>"
+			"text", "~<*Level Check Succeeded*~>"
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
@@ -358,7 +358,7 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 	Nodes = {
 		{
-			"text", "~<[Level Check Failed]~>"
+			"text", "~<*Level Check Failed*~>"
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
