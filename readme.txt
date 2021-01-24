@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed the "Quests" screen to "Legacy Quests", to better reflect that these are missions in an old format, and which are supposed to be eventually updated to the Scenario mode.
 - Fixed interface issues (e.g. incorrect button placement) which occurred after enabling the 2x scaled mode without restarting.
 - Added terrain-only minimap mode.
+- Added settlement territories (including non-land) minimap mode.
 
 * Map Editor
 - Fixed crash which could occur when clicking on the "OK" button in the player properties dialog.
