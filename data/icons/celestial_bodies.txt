@@ -1,0 +1,3 @@
+star = {
+	file = "icons/celestial_bodies/star.png"
+}
