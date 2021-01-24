@@ -3,4 +3,5 @@ rastaban = { #Beta Draconis
 	map_template = universe
 	astrocoordinate = { -97.3918 52.3014 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 380
+	base_unit_type = unit_star #yellow_giant_star
 }

@@ -3,4 +3,5 @@ grumium = { #Xi Draconis
 	map_template = universe
 	astrocoordinate = { -91.6178 56.8726 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 112.5
+	base_unit_type = unit_star #orange_giant_star
 }

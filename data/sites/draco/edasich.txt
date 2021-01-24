@@ -3,4 +3,5 @@ edasich = { #Iota Draconis
 	map_template = universe
 	astrocoordinate = { -128.7676 58.9661 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 101.2
+	base_unit_type = unit_star #orange_giant_star
 }

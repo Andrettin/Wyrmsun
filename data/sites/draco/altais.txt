@@ -3,4 +3,5 @@ altais = { #Delta Draconis
 	map_template = universe
 	astrocoordinate = { -71.8612 67.6615 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 97.4
+	base_unit_type = unit_star #yellow_giant_star
 }

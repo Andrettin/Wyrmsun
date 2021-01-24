@@ -3,4 +3,5 @@ tyl = { #Epsilon Draconis
 	map_template = universe
 	astrocoordinate = { -62.9569 70.2679 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 148
+	base_unit_type = unit_star #yellow_giant_star
 }

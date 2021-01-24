@@ -3,4 +3,5 @@ alsafi = { #Sigma Draconis
 	map_template = universe
 	astrocoordinate = { -66.91 69.6612 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 18.77
+	base_unit_type = unit_star #yellow_dwarf_star
 }

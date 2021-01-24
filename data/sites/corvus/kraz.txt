@@ -3,4 +3,5 @@ kraz = { #Beta Corvi
 	map_template = universe
 	astrocoordinate = { -171.4032 -23.3968 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 146
+	base_unit_type = unit_star #yellow_giant_star
 }

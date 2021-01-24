@@ -3,4 +3,5 @@ eltanin = { #Gamma Draconis
 	map_template = universe
 	astrocoordinate = { -90.8485 51.4889 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 154.3
+	base_unit_type = unit_star #orange_giant_star
 }
