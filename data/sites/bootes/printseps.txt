@@ -1,0 +1,7 @@
+printseps = { #Delta Boötis
+	name = "Printseps"
+	map_template = universe
+	astrocoordinate = { -131.1243 33.3148 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 121.8
+	base_unit_type = unit_star #yellow_giant_star
+}

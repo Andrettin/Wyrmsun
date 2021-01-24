@@ -1,0 +1,7 @@
+asellus_tertius = { #Kappa Boötis
+	name = "Asellus Tertius"
+	map_template = universe
+	astrocoordinate = { -146.6291 51.79 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 161
+	base_unit_type = unit_star #yellow_white_dwarf_star #F2V
+}

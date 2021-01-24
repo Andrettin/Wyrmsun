@@ -1,0 +1,7 @@
+asellus_secondus = { #Iota Boötis
+	name = "Asellus Secondus"
+	map_template = universe
+	astrocoordinate = { -145.9586 51.3672 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 94.8
+	base_unit_type = unit_star #class_a_dwarf_star
+}

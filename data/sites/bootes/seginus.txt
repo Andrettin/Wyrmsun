@@ -1,0 +1,7 @@
+seginus = { #Gamma Boötis
+	name = "Seginus"
+	map_template = universe
+	astrocoordinate = { -141.9805 38.3083 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 86.8
+	base_unit_type = unit_star #class_a_giant_star
+}

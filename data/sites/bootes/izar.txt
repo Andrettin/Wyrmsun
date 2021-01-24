@@ -1,0 +1,7 @@
+izar = { #Epsilon Boötis
+	name = "Izar"
+	map_template = universe
+	astrocoordinate = { -138.7533 27.0742 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 203
+	base_unit_type = unit_star #orange_giant_star
+}

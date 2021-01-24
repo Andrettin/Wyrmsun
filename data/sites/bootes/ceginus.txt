@@ -1,0 +1,7 @@
+ceginus = { #Phi Boötis
+	name = "Ceginus"
+	map_template = universe
+	astrocoordinate = { -125.5433 40.3534 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 170
+	base_unit_type = unit_star #yellow_giant_star
+}
