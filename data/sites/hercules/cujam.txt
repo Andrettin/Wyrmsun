@@ -1,0 +1,7 @@
+cujam = { #Omega Herculis
+	name = "Cujam"
+	map_template = universe
+	astrocoordinate = { -113.646 14.0333 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 250
+	base_unit_type = unit_star #class_a_dwarf_star
+}

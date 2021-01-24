@@ -1,0 +1,7 @@
+sarin = { #Delta Herculis
+	name = "Sarin"
+	map_template = universe
+	astrocoordinate = { -101.242 24.8392 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 75.1
+	base_unit_type = unit_star #class_a_giant_star
+}

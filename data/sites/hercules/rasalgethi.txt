@@ -1,0 +1,7 @@
+rasalgethi = { #Alpha Herculis
+	name = "Rasalgethi"
+	map_template = universe
+	astrocoordinate = { -101.3381 14.3903 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 360
+	base_unit_type = unit_star #red_giant_star
+}

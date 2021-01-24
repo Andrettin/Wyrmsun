@@ -1,0 +1,7 @@
+hunor = {
+	name = "Hunor"
+	map_template = universe
+	astrocoordinate = { -114.8485 41.0481 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 418
+	base_unit_type = unit_star #yellow_white_dwarf_star #F8V
+}

@@ -1,0 +1,6 @@
+#magor = {
+#	name = "Magor"
+#	map_template = universe
+	#base_unit_type = unit_barren_world
+	#orbit_center = hunor
+#}
