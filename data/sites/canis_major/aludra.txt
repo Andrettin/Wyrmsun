@@ -1,0 +1,7 @@
+aludra = { #Eta Canis Majoris
+	name = "Aludra"
+	map_template = universe
+	astrocoordinate = { 111.0238 -29.3031 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 2000
+	base_unit_type = unit_star #blue_white_giant_star
+}

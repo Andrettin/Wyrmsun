@@ -1,0 +1,7 @@
+mirzam = { #Beta Canis Majoris
+	name = "Mirzam"
+	map_template = universe
+	astrocoordinate = { 95.6749 -17.9559 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 490
+	base_unit_type = unit_star #blue_white_giant_star
+}

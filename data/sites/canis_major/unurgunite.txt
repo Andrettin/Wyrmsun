@@ -1,0 +1,7 @@
+unurgunite = { #Sigma Canis Majoris
+	name = "Unurgunite"
+	map_template = universe
+	astrocoordinate = { 105.4298 -27.9348 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1120
+	base_unit_type = unit_star #orange_giant_star
+}

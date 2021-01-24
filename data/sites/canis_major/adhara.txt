@@ -1,0 +1,7 @@
+adhara = { #Epsilon Canis Majoris
+	name = "Adhara"
+	map_template = universe
+	astrocoordinate = { 104.6565 -28.9721 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 430
+	base_unit_type = unit_star #blue_white_giant_star
+}

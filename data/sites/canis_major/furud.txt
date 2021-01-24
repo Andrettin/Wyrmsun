@@ -1,0 +1,7 @@
+furud = { #Zeta Canis Majoris
+	name = "Furud"
+	map_template = universe
+	astrocoordinate = { 95.0783 -30.0634 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 362
+	base_unit_type = unit_star #blue_white_dwarf_star
+}
