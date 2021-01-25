@@ -1,0 +1,7 @@
+uruk_star = {
+	name = "Uruk"
+	map_template = universe
+	astrocoordinate = { -66.9997 19.8065 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance_pc = 76.2875
+	base_unit_type = unit_star #yellow_giant_star #G5E
+}
