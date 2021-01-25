@@ -1,0 +1,7 @@
+polaris = { #Alpha Ursae Minoris
+	name = "Polaris"
+	map_template = universe
+	astrocoordinate = { 37.9546 89.2641 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 378 #323–433 light-years
+	base_unit_type = unit_star #yellow_white_giant_star #F7I
+}

@@ -1,0 +1,7 @@
+alifa = { #Zeta Ursae Minoris
+	name = "Alifa"
+	map_template = universe
+	astrocoordinate = { -123.9853 77.7945 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 380
+	base_unit_type = unit_star #class_a_dwarf_star
+}

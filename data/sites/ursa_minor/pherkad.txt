@@ -1,0 +1,7 @@
+pherkad = { #Gamma Ursae Minoris
+	name = "Pherkad"
+	map_template = universe
+	astrocoordinate = { -129.8178 71.834 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 487
+	base_unit_type = unit_star #class_a_giant_star
+}

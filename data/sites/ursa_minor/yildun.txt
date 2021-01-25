@@ -1,0 +1,7 @@
+yildun = { #Delta Ursae Minoris
+	name = "Yildun"
+	map_template = universe
+	astrocoordinate = { -96.9458 86.5865 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 172
+	base_unit_type = unit_star #class_a_dwarf_star
+}
