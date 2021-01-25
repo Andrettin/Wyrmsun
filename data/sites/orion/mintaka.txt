@@ -1,0 +1,7 @@
+mintaka = { #Delta Orionis
+	name = "Mintaka"
+	map_template = universe
+	astrocoordinate = { 83.0017 -0.2991 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1200
+	base_unit_type = unit_star #blue_giant_star
+}

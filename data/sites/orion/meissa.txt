@@ -1,0 +1,7 @@
+meissa = { #Lambda Orionis
+	name = "Meissa"
+	map_template = universe
+	astrocoordinate = { 83.7845 9.9342 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1100
+	base_unit_type = unit_star #blue_giant_star
+}

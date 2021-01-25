@@ -1,0 +1,7 @@
+thabit = { #Upsilon Orionis
+	name = "Thabit"
+	map_template = universe
+	astrocoordinate = { 82.9828 -7.3015 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 2900
+	base_unit_type = unit_star #blue_dwarf_star
+}

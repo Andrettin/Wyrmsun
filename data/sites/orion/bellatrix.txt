@@ -1,0 +1,7 @@
+bellatrix = { #Gamma Orionis
+	name = "Bellatrix"
+	map_template = universe
+	astrocoordinate = { 81.2828 6.3497 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 250
+	base_unit_type = unit_star #blue_white_giant_star
+}

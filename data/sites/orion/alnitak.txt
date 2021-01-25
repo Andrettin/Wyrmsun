@@ -1,0 +1,7 @@
+alnitak = { #Zeta Orionis
+	name = "Alnitak"
+	map_template = universe
+	astrocoordinate = { 85.1897 -1.9426 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1260
+	base_unit_type = unit_star #blue_giant_star
+}

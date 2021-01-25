@@ -1,0 +1,7 @@
+algjebbah = { #Eta Orionis
+	name = "Algjebbah"
+	map_template = universe
+	astrocoordinate = { 81.1192 -2.3971 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 1000
+	base_unit_type = unit_star #blue_white_dwarf_star
+}
