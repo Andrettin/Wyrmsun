@@ -1,0 +1,7 @@
+merope = { #23 Tauri
+	name = "Merope"
+	map_template = universe
+	astrocoordinate = { 56.5816 23.9484 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 380
+	base_unit_type = unit_star #blue_white_giant_star
+}

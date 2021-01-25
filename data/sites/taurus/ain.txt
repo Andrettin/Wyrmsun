@@ -1,0 +1,7 @@
+ain = { #Epsilon Tauri
+	name = "Ain"
+	map_template = universe
+	astrocoordinate = { 67.1542 19.1804 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 147
+	base_unit_type = unit_star #orange_giant_star
+}

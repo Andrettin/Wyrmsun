@@ -1,0 +1,7 @@
+atlas = { #27 Tauri
+	name = "Atlas"
+	map_template = universe
+	astrocoordinate = { 57.2906 24.0534 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 431
+	base_unit_type = unit_star #blue_white_giant_star
+}

@@ -1,0 +1,7 @@
+chamukuy = { #Theta Tauri
+	name = "Chamukuy"
+	map_template = universe
+	astrocoordinate = { 67.1656 15.8709 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 152
+	base_unit_type = unit_star #yellow_giant_star
+}

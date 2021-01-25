@@ -1,0 +1,7 @@
+celaeno = { #16 Tauri
+	name = "Celaeno"
+	map_template = universe
+	astrocoordinate = { 56.2009 24.2895 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 430
+	base_unit_type = unit_star #blue_white_giant_star
+}

@@ -1,0 +1,5 @@
+andlang = {
+	name = "Andlang"
+	map_template = andlang
+	base_unit_type = unit_settlement_site
+}

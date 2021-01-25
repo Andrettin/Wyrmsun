@@ -1,0 +1,8 @@
+maia = { #20 Tauri
+	name = "Maia"
+	#commented out as it was ending up in the same position as Electra
+	#map_template = universe
+	#astrocoordinate = { 56.4567 24.3677 } #from www.github.com/ofrohn/d3-celestial
+	#astrodistance = 400
+	base_unit_type = unit_star #blue_white_giant_star
+}

@@ -1,0 +1,8 @@
+taygeta = { #q Tauri
+	name = "Taygeta"
+	#commented out as it was ending up in the same position as Asterope
+	#map_template = universe
+	#astrocoordinate = { 56.3021 24.4673 } #from www.github.com/ofrohn/d3-celestial
+	#astrodistance = 440
+	base_unit_type = unit_star #blue_white_giant_star
+}
