@@ -1,0 +1,7 @@
+rosaliadecastro = {
+	name = "Rosaliadecastro"
+	map_template = universe
+	astrocoordinate = { -111.7873 2.0848 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 240
+	base_unit_type = unit_star #yellow_giant_star
+}
