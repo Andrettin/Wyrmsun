@@ -57,6 +57,10 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.4
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed a potential crash cause when processing triggers.
+- Fixed issue which caused certain site positions (e.g. that where the Hlesey revealer should be created for the Thunraz's Servant scenario) to not be saved in a save game.
+
 -----------------------------------------------------------------------
 - 4.1.3
 -----------------------------------------------------------------------
