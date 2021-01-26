@@ -1,0 +1,8 @@
+muspelheim = {
+	name = "Muspelheim"
+	map_template = universe
+	right_ascension = 2.12.31.478
+	declination = 51.7787
+	astrodistance = 1030
+	base_unit_type = unit_star #yellow_dwarf_star
+}
