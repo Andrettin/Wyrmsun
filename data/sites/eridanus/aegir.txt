@@ -1,0 +1,6 @@
+#aegir = {
+#	name = "Aegir" #"Ægir"
+#	map_template = universe
+	#base_unit_type = unit_gas_giant
+	#orbit_center = ran
+#}
