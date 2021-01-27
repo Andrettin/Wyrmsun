@@ -1,0 +1,7 @@
+tupi = {
+	name = "Tupi"
+	map_template = universe
+	astrocoordinate = { 54.9296 -52.9158 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 109.2
+	base_unit_type = unit_star #yellow_white_dwarf_star
+}
