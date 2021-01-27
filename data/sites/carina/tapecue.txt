@@ -1,0 +1,7 @@
+tapecue = {
+	name = "Tapecue"
+	map_template = universe
+	astrocoordinate = { 116.9572 -54.2641 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 108
+	base_unit_type = unit_star #yellow_white_dwarf_star
+}
