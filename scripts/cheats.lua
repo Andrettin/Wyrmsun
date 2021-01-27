@@ -250,50 +250,11 @@ function HandleCheats(str)
 		if (siege_warship_type) then
 			unit = CreateUnit(siege_warship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
-	elseif (str == "freys vessel") then
-		unit = CreateUnit("unit-dwarven-transport-ship", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-		SetUnitVariable(unit, "Unique", "skidbladnir")
-	elseif (str == "jotun") then
-		unit = CreateUnit("unit-ettin", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "backstab") then
-		unit = CreateUnit("unit-goblin-thief", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "marius") then
-		unit = CreateUnit("unit-latin-legionary", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "peruns shield") then
-		unit = CreateUnit("unit-slavic-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "lodbrok") then
-		unit = CreateUnit("unit-norse-longship", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "volund") then
-		unit = CreateUnit("unit-elven-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "modsognir") then
-		unit = CreateUnit("unit-dwarven-axefighter", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "vingethor") then
-		unit = CreateUnit("unit-dwarven-gryphon-rider", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "tyr") then
-		unit = CreateUnit("unit-norse-swordsman", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "trollheim") then
-		unit = CreateUnit("unit-troll-warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "greenspear") then
-		unit = CreateUnit("unit-orc-spearthrower", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "worker of the wood") then
-		unit = CreateUnit("unit_elven_worker", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "nidhogg") then
-		unit = CreateUnit("unit_wyrm", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "navalia") then
-		unit = CreateUnit("unit_latin_dock", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "werehyena") then
-		unit = CreateUnit("unit_gnoll_warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "undeath") then
-		unit = CreateUnit("unit_skeleton_warrior", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-	elseif (str == "prometheus") then
-		unit = CreateUnit("unit_clay_golem", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	elseif (str == "safe harbor") then
 		local dock_type = GetFactionClassUnitType("dock", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (dock_type) then
 			unit = CreateUnit(dock_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
-	elseif (str == "merry christmas") then
-		unit = CreateUnit("unit_christmas_hat", GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 	else
 		return false
 	end

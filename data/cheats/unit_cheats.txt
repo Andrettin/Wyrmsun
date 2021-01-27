@@ -1,0 +1,151 @@
+latin_legionary = {
+	code = marius
+	
+	effects = {
+		create_unit = unit_latin_legionary
+	}
+}
+
+latin_dock = {
+	code = navalia
+	
+	effects = {
+		create_unit = unit_latin_dock
+	}
+}
+
+norse_swordsman = {
+	code = tyr
+	
+	effects = {
+		create_unit = unit_norse_swordsman
+	}
+}
+
+norse_longship = {
+	code = lodbrok
+	
+	effects = {
+		create_unit = unit_norse_longship
+	}
+}
+
+slavic_swordsman = {
+	code = "peruns shield"
+	
+	effects = {
+		create_unit = unit_slavic_swordsman
+	}
+}
+
+dwarven_axefighter = {
+	code = modsognir
+	
+	effects = {
+		create_unit = unit_dwarven_axefighter
+	}
+}
+
+dwarven_gryphon_rider = {
+	code = vingethor
+	
+	effects = {
+		create_unit = unit_dwarven_gryphon_rider
+	}
+}
+
+dwarven_transport_ship = {
+	code = "freys vessel"
+	
+	effects = {
+		create_unit = unit_dwarven_transport_ship
+	}
+}
+
+elven_worker = {
+	code = "worker of the wood"
+	
+	effects = {
+		create_unit = unit_elven_worker
+	}
+}
+
+elven_swordsman = {
+	code = volund
+	
+	effects = {
+		create_unit = unit_elven_swordsman
+	}
+}
+
+ettin = {
+	code = jotun
+	
+	effects = {
+		create_unit = unit_ettin
+	}
+}
+
+gnoll_warrior = {
+	code = werehyena
+	
+	effects = {
+		create_unit = unit_gnoll_warrior
+	}
+}
+
+goblin_thief = {
+	code = backstab
+	
+	effects = {
+		create_unit = unit_goblin_thief
+	}
+}
+
+orc_spearthrower = {
+	code = greenspear
+	
+	effects = {
+		create_unit = unit_orc_spearthrower
+	}
+}
+
+troll_warrior = {
+	code = trollheim
+	
+	effects = {
+		create_unit = unit_troll_warrior
+	}
+}
+
+skeleton_warrior = {
+	code = undeath
+	
+	effects = {
+		create_unit = unit_skeleton_warrior
+	}
+}
+
+clay_golem = {
+	code = prometheus
+	
+	effects = {
+		create_unit = unit_clay_golem
+	}
+}
+
+wyrm = {
+	code = nidhogg
+	
+	effects = {
+		create_unit = unit_wyrm
+	}
+}
+
+christmas_hat = {
+	code = "merry christmas"
+	
+	effects = {
+		create_unit = unit_christmas_hat
+	}
+}
