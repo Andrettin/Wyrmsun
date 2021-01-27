@@ -1,0 +1,5 @@
+beowulf = {
+	name = "Beowulf"
+	map_template = beowulf
+	base_unit_type = unit_settlement_site
+}
