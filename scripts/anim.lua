@@ -1634,8 +1634,8 @@ DefineAnimations("animations-barrel", {
 
 DefineAnimations("animations-door", {
 	Still = {
-		"if-var v_HitPoints.Percent <= 50 damaged_50",
-		"if-var v_HitPoints.Percent <= 75 damaged_25",
+		"if-var v.HitPoints.Percent <= 50 damaged_50",
+		"if-var v.HitPoints.Percent <= 75 damaged_25",
 		"frame 0", "wait 4", "frame 0", "goto end",
 		"label damaged_50", "frame 2", "wait 4", "frame 2", "goto end",
 		"label damaged_25", "frame 1", "wait 4", "frame 1", "goto end",

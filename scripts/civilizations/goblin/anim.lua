@@ -133,7 +133,7 @@ DefineAnimations("animations-goblin-war-machine", {
 	},
 	SpellCast = {
 		"unbreakable begin",
-		"if-var s_spell-war-machine-spear-attack == 1 spear_attack",
+		"if-var s.spell-war-machine-spear-attack == 1 spear_attack",
 		"goto end",
 		"label spear_attack",
 		"frame 0", "wait 8",
