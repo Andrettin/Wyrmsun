@@ -57,6 +57,7 @@ wyrmsun64
 run.sh
 linux_readme.txt
 *.exe
+*.pdb
 *.lnk
 
 ## Steam Workshop Mod Uploader
