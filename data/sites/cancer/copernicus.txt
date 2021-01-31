@@ -1,0 +1,7 @@
+copernicus = {
+	name = "Copernicus"
+	map_template = universe
+	astrocoordinate = { 133.1492 28.3308 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 41.06
+	base_unit_type = unit_star #yellow_dwarf_star
+}

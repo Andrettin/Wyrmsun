@@ -1,0 +1,7 @@
+#lipperhey = {
+#	name = "Lipperhey"
+#	map_template = universe
+	#base_unit_type = unit_barren_world
+	#orbit_center = copernicus
+	#distance_from_orbit_center_au = 5.775 #average; apastron of 5.92 AU and periastron of 5.63
+#}
