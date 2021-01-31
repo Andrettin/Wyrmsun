@@ -1,12 +1,12 @@
-unit_space_transport_ship = {
-	name = "Space Transport"
+unit_aether_transport_ship = {
+	name = "Aether Transport"
 	parent = unit_template_space_ship
-	unit_class = space_transport_ship
+	unit_class = aether_transport_ship
 	civilization = neutral
-	image_file = "units/space_transport.png"
+	image_file = "units/aether_transport.png"
 	frame_size = { 128 128 }
 	animation_set = animations_transport_ship
-	icon = space_transport_ship
+	icon = aether_transport_ship
 	costs = {
 		time = 70
 		copper = 600

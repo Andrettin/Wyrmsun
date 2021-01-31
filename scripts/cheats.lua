@@ -241,7 +241,7 @@ function HandleCheats(str)
 			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
 	elseif (str == "phlogiston") then
-		local transport_ship_type = GetFactionClassUnitType("space_transport_ship", GetPlayerData(GetThisPlayer(), "Faction"))
+		local transport_ship_type = GetFactionClassUnitType("aether_transport_ship", GetPlayerData(GetThisPlayer(), "Faction"))
 		if (transport_ship_type) then
 			unit = CreateUnit(transport_ship_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end

@@ -1785,7 +1785,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {UnitTypeClass = "transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 600"), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {UnitTypeClass = "space_transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {UnitTypeClass = "aether_transport_ship", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Trade Capacity: 600"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",

@@ -53,7 +53,7 @@ trade_dock_suebi = {
 	}
 	unit_classes = {
 		transport_ship
-		space_transport_ship
+		aether_transport_ship
 	}
 }
 
@@ -90,7 +90,7 @@ trade_dock_dwarven = {
 	}
 	unit_classes = {
 		transport_ship
-		space_transport_ship
+		aether_transport_ship
 	}
 }
 
@@ -131,6 +131,6 @@ trade_dock_goblin = {
 	}
 	unit_classes = {
 		transport_ship
-		space_transport_ship
+		aether_transport_ship
 	}
 }

@@ -8,6 +8,6 @@ unload = {
 	unit_classes = {
 		caravan
 		transport_ship
-		space_transport_ship
+		aether_transport_ship
 	}
 }
