@@ -255,6 +255,10 @@ function HandleCheats(str)
 		if (dock_type) then
 			unit = CreateUnit(dock_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
+	elseif (string.sub(str, 0, 5) == "event") then
+		call_trigger(string.sub(str, 7))
+	elseif (string.sub(str, 0, 7) == "trigger") then
+		call_trigger(string.sub(str, 9))
 	else
 		return false
 	end
