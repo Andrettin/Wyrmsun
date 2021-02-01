@@ -71,12 +71,12 @@ english = {
 	history = {
 		1180 = {
 			#the English scholar Alexander Neckam (1157-1217) wrote about the uses of magnetism for ascertaining the north/south direction in 1180; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 164-165.
-			acquired_upgrades += upgrade_compass
+			acquired_upgrade_classes += compass
 		}
 		
 		1249 = {
 			#the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
-			acquired_upgrades += upgrade_gunpowder
+			acquired_upgrade_classes += gunpowder
 		}
 	}
 }

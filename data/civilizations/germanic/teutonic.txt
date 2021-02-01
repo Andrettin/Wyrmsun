@@ -149,8 +149,8 @@ teuton = {
 	
 	history = {
 		800 = {
-			acquired_upgrades += upgrade_writing
-			acquired_upgrades += upgrade_masonry
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
 		}
 		
 		919 = {

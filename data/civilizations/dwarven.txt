@@ -512,7 +512,7 @@ dwarf = {
 	
 	history = {
 		-3000 = {
-			acquired_upgrades += upgrade_wood_plow #give plow technology to the dwarven factions
+			acquired_upgrade_classes += wood_plow #give plow technology to the dwarven factions
 		}
 		
 		-1 = {
@@ -523,17 +523,17 @@ dwarf = {
 		}
 		
 		25 = {
-			acquired_upgrades += upgrade_masonry #dwarves already had castles built of stone masonry by then
-			acquired_upgrades += upgrade_gunpowder #dwarves already had gunpowder by then (as seen by them having thunderers in The Sceptre of Fire)
+			acquired_upgrade_classes += masonry #dwarves already had castles built of stone masonry by then
+			acquired_upgrade_classes += gunpowder #dwarves already had gunpowder by then (as seen by them having thunderers in The Sceptre of Fire)
 		}
 		
 		400 = {
-			acquired_upgrades += upgrade_dwarven_coinage #the dwarves should already have coinage technology by then
+			acquired_upgrade_classes += coinage #the dwarves should already have coinage technology by then
 		}
 		
 		550 = {
 			#late iron age technologies already obtained by the dwarves by this point
-			acquired_upgrades += upgrade_ironworking
+			acquired_upgrade_classes += ironworking
 			acquired_upgrades += upgrade_dwarven_great_axe
 			acquired_upgrades += upgrade_dwarven_shield_2
 			acquired_upgrades += upgrade_dwarven_bearded_throwing_axe

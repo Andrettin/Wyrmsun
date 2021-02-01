@@ -12,16 +12,16 @@ rome = {
 	
 	history = {
 		#polities must have writing
-		acquired_upgrades += upgrade_writing
+		acquired_upgrade_classes += writing
 		
 		-264 = {
 			#Rome should already have masonry technology by then
-			acquired_upgrades += upgrade_masonry
+			acquired_upgrade_classes += masonry
 		}
 		
 		-58 = {
 			#Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
-			acquired_upgrades += upgrade_teuton_coinage
+			acquired_upgrade_classes += coinage
 		}
 		
 		-54 = {

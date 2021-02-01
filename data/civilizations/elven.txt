@@ -566,8 +566,8 @@ elf = {
 	
 	history = {
 		550 = { #should be changed later
-			acquired_upgrades += upgrade_writing
-			acquired_upgrades += upgrade_masonry
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
 		}
 	}
 }

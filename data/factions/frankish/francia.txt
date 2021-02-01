@@ -26,8 +26,8 @@ francia = {
 	
 	history = {
 		#polities must have writing and masonry
-		acquired_upgrades += upgrade_writing
-		acquired_upgrades += upgrade_masonry
+		acquired_upgrade_classes += writing
+		acquired_upgrade_classes += masonry
 		
 		486 = {
 			#capital = tournai
@@ -35,7 +35,7 @@ francia = {
 	
 		565 = {
 			#Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-			acquired_upgrades += upgrade_teuton_coinage
+			acquired_upgrade_classes += coinage
 		}
 		
 		768 = {
