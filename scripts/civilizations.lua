@@ -886,7 +886,6 @@ DefineCivilization("greek", {
 DefineCivilization("assyrian", {
 	Display = "Assyrian",
 	Visible = false,
-	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Assyrian",
 	Playable = false,
@@ -899,7 +898,6 @@ DefineCivilization("assyrian", {
 DefineCivilization("babylonian", {
 	Display = "Babylonian",
 	Visible = false,
-	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Babylonian",
 	Playable = false,
@@ -928,7 +926,6 @@ DefineCivilization("egyptian", {
 DefineCivilization("hebrew", {
 	Display = "Hebrew",
 	Visible = false,
-	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Hebrew",
 	Playable = false
@@ -1073,7 +1070,6 @@ DefineCivilization("phrygian", {
 DefineCivilization("sumerian", {
 	Display = "Sumerian",
 	Visible = false,
-	Group = "semitic",
 	ParentCivilization = "greek",
 	Adjective = "Sumerian",
 	Playable = false,

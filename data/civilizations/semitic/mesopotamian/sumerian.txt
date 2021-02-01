@@ -1,0 +1,4 @@
+sumerian = {
+	group = mesopotamian #the Mesopotamian group's upper group is Semitic, and though Sumerians didn't speak a Semitic language, they fit well in the Mesopotamian civilization group
+	language = sumerian
+}

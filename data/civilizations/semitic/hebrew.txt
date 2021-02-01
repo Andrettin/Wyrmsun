@@ -1,3 +1,4 @@
 hebrew = {
+	group = semitic
 	language = hebrew
 }

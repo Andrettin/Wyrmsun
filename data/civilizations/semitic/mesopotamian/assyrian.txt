@@ -1,3 +1,4 @@
 assyrian = {
+	group = mesopotamian
 	language = assyrian
 }

@@ -1,3 +1,4 @@
 babylonian = {
+	group = mesopotamian
 	language = babylonian
 }

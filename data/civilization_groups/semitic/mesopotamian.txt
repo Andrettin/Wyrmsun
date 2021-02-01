@@ -1,0 +1,6 @@
+mesopotamian = {
+	name = "Mesopotamian"
+	rank = subgroup
+	group = semitic
+	
+}
