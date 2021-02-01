@@ -61,6 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a potential crash cause when processing triggers.
 - Fixed issue which caused certain site positions (e.g. that where the Hlesey revealer should be created for the Thunraz's Servant scenario) to not be saved in a save game.
 - Fixed issue which could mistakenly cause under certain circumstances a removed settlement site to be saved as the settlement head unit for a settlement, instead of the town hall which had been built on top of it.
+- The preferences.txt file is now saved in AppData instead of the Documents folder.
 
 -----------------------------------------------------------------------
 - 4.1.3
