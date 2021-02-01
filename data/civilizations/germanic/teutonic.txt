@@ -157,10 +157,5 @@ teuton = {
 			#the Holy Roman Empire was in existence in 919 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			acquired_upgrades += upgrade_deity_christian_god
 		}
-		
-		1249 = {
-			#the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
-			acquired_upgrades += upgrade_gunpowder
-		}
 	}
 }

@@ -173,12 +173,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 		"male", "Ambiorix",
 		"male", "Cativolcus",
 		"male", "Indutiomarus"
-	},
-	HistoricalUpgrades = {
-		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
-		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
 	}
 })
 
@@ -499,10 +493,7 @@ DefineCivilization("gaul", {
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gaul",
 	Playable = false,
-	DefaultColor = "black",
-	HistoricalUpgrades = {
-		-- swords appear in the Carpathian Basin c. 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 32.
-	}
+	DefaultColor = "black"
 })
 
 DefineCivilization("briton", {
@@ -524,11 +515,6 @@ DefineCivilization("briton", {
 	--]]
 	ProvinceNames = {
 		"Demetia", -- land of the Demetae, an ancient Briton people; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
-	},
-	HistoricalUpgrades = {
-		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
 	}
 })
 
@@ -595,12 +581,7 @@ DefineCivilization("gael", {
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gael",
 	Playable = false,
-	DefaultColor = "green",
-	HistoricalUpgrades = {
-		-- metalworking begins in the British Isles at c. 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- bronzeworking begins in the British Isles at c. 2200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
-		-- swords appear in the British Isles c. 1200 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 55.
-	}
+	DefaultColor = "green"
 })
 
 DefineCivilization("latin", {
@@ -888,11 +869,7 @@ DefineCivilization("assyrian", {
 	Visible = false,
 	ParentCivilization = "greek",
 	Adjective = "Assyrian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
-		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
-	}
+	Playable = false
 })
 
 DefineCivilization("babylonian", {
@@ -900,11 +877,7 @@ DefineCivilization("babylonian", {
 	Visible = false,
 	ParentCivilization = "greek",
 	Adjective = "Babylonian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
-		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
-	}
+	Playable = false
 })
 
 DefineCivilization("egyptian", {
@@ -1072,11 +1045,7 @@ DefineCivilization("sumerian", {
 	Visible = false,
 	ParentCivilization = "greek",
 	Adjective = "Sumerian",
-	Playable = false,
-	HistoricalUpgrades = {
-		-3500, "upgrade-writing", true, -- writing was developed in Sumeria around 3500 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 70-72.
-		-1800, "upgrade-mathematics", true -- the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
-	}
+	Playable = false
 })
 
 DefineCivilization("thracian", {
@@ -1204,13 +1173,6 @@ DefineCivilization("aesir", {
 		"interface/germanic/resource.png", 0, 0,
 		"interface/germanic/buttonpanel.png", -256, -200,
 		"interface/germanic/infopanel.png", 0, -200
-	},
-	HistoricalUpgrades = { -- give the Aesir iron weapons and armor from the beginning
-		0, "upgrade_ironworking", true,
-		0, "upgrade-germanic-broad-sword", true,
-		0, "upgrade-teuton-spatha", true,
-		0, "upgrade-germanic-bronze-shield", true,
-		0, "upgrade-teuton-iron-shield", true
 	}
 })
 
