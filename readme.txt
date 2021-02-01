@@ -64,7 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - The preferences.txt file is now saved in AppData instead of the Documents folder.
 
 * Resources
-- Added extra checks to prevent the stored resource quantity from becoming negative.
+- Added checks to prevent the stored resource quantity from becoming negative.
 
 -----------------------------------------------------------------------
 - 4.1.3
