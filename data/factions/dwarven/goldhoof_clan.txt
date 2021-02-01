@@ -1,0 +1,7 @@
+goldhoof_clan = {
+	history = {
+		-2800 = {
+			acquired_upgrades += upgrade_deity_odin
+		}
+	}
+}

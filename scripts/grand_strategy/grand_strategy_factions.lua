@@ -50,7 +50,7 @@ function LoadFactions(world)
 		},
 		-- Non-Playable Tribes
 		gylfing_tribe = {
-			Name = "gylfing-tribe",
+			Name = "gylfing_tribe",
 			Civilization = "basque",
 			Copper = 5000,
 			Commodities = {

@@ -33,7 +33,7 @@ DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 		},
 		{
 			"speaker", "unit", "unit-dwarven-witness",
-			"speaker-player", "goldhoof-clan",
+			"speaker-player", "goldhoof_clan",
 			"text", "Fellow Goldhoof dwarves, Hroptatyr has shown me the way! Beyond the Aurvang swamplands to our southeast lie sprawling fields of sand, named Joruvellir. A harsh place, to be sure, but livable enough, and safe. There shall we found a new realm!"
 		},
 		{

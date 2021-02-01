@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "brising-clan")
+	SetPlayerData(0, "Faction", "brising_clan")
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 2000)
 	SetPlayerData(0, "Resources", "stone", 3000)

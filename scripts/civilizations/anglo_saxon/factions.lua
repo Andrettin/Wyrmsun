@@ -209,12 +209,7 @@ DefineFaction("kent", {
 	FactionUpgrade = "upgrade-faction-kent",
 	Description = "",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"cantware-tribe"},
-	HistoricalUpgrades = {
-		597, "upgrade-deity-christian-god", true, -- king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
---		616, "upgrade-deity-christian-god", false -- king Eadbald of Kent was openly pagan; he acceeded in 616 AD; later, however, he accepted Christianity; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 112.
-		-- king Wihtred of Kent exempted the church from taxation in 695; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 142.
-	}
+	DevelopsFrom = {"cantware-tribe"}
 })
 
 DefineFaction("mercia", {
@@ -261,10 +256,7 @@ DefineFaction("sussex", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-sussex",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	Description = "",
-	HistoricalUpgrades = {
-		686, "upgrade-deity-christian-god", true -- king Æthelwalh of the South Saxons had been converted to Christianity by 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.
-	}
+	Description = ""
 })
 
 DefineFaction("wessex", {

@@ -185,7 +185,7 @@ AddTrigger("worker-suggests-stone-furniture",
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "brising-clan" and SyncRand(10) == 0 and GetPlayerData(i, "UnitTypesCount", "unit_brising_miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-brising-expert-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-masons-shop") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-market") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "brising_clan" and SyncRand(10) == 0 and GetPlayerData(i, "UnitTypesCount", "unit_brising_miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-brising-expert-miner") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-masons-shop") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-market") >= 1) then
 				trigger_player = i
 				return true
 			end

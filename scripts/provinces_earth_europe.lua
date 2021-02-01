@@ -3249,12 +3249,12 @@ DefineProvince("Scania", {
 		"norse", "Scania"
 	},
 	FactionCulturalNames = {
-		"basque", "gylfing-tribe", "Gylveland"
+		"basque", "gylfing_tribe", "Gylveland"
 	},
 --	SettlementLocation = {517, 97}, -- Malmö
 	Claims = {
 		"basque", "ertebolle-tribe",
-		"basque", "gylfing-tribe",
+		"basque", "gylfing_tribe",
 		"basque", "kongemose-tribe",
 		"norse", "dane-tribe",
 		"norse", "scania"
@@ -3262,7 +3262,7 @@ DefineProvince("Scania", {
 	HistoricalOwners = {
 		-7000, "basque", "kongemose-tribe", -- Kongemose culture present in Scania c. 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 185.
 		-5800, "basque", "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
-		-3000, "basque", "gylfing-tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
+		-3000, "basque", "gylfing_tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
 		-2800, "germanic", "asa-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "yngling-tribe", -- estimated date
 		-264, "", "", -- remove the Proto-Germanics

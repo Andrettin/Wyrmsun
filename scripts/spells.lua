@@ -293,11 +293,11 @@ DefineSpell("spell-joruvellir-allegiance",
 	"condition", {
 		"Organic", "only",
 		"Building", "false",
-		"faction-equivalent", "goldhoof-clan"
+		"faction-equivalent", "goldhoof_clan"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "dwarf", "faction", "goldhoof-clan"}
+		{"polymorph", "civilization", "dwarf", "faction", "goldhoof_clan"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"

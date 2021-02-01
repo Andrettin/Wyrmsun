@@ -531,6 +531,11 @@ dwarf = {
 			acquired_upgrade_classes += coinage #the dwarves should already have coinage technology by then
 		}
 		
+		534 = {
+			#Mushroom Farms existent in Knalga
+			acquired_upgrade_classes += iron_tipped_wood_plow
+		}
+
 		550 = {
 			#late iron age technologies already obtained by the dwarves by this point
 			acquired_upgrade_classes += ironworking

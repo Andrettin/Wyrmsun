@@ -191,7 +191,7 @@ AddTrigger("the_settlement_of_scandinavia_introduction",
 				GetPlayerData(i, "TotalNumUnitsConstructed") > 0
 				and GetPlayerData(i, "Faction") == "asa-tribe"
 				and GetFactionExists("ertebolle-tribe", true)
-				and GetFactionExists("gylfing-tribe", true)
+				and GetFactionExists("gylfing_tribe", true)
 				and GetSiteData("kiel", "MapLayer") ~= -1
 				and GetNumUnitsAt(i, "any", {GetSiteData("kiel", "MapPosX") - 16, GetSiteData("kiel", "MapPosY") - 16}, {GetSiteData("kiel", "MapPosX") + 16, GetSiteData("kiel", "MapPosY") + 16}, GetSiteData("kiel", "MapLayer")) > 0 -- must have units near Kiel
 			) then
@@ -234,7 +234,7 @@ AddTrigger("northwards-to-the-sea-natives-sighted",
 AddTrigger("northwards-to-the-sea-victory",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("ertebolle-tribe", true) == false and GetFactionExists("gylfing-tribe", true)) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("ertebolle-tribe", true) == false and GetFactionExists("gylfing_tribe", true)) then
 				trigger_player = i
 				return true
 			end
@@ -250,8 +250,8 @@ AddTrigger("northwards-to-the-sea-victory",
 AddTrigger("the_settlement_of_scandinavia_gylfings_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("gylfing-tribe")) then
-				local uncount = GetUnits(GetFactionPlayer("gylfing-tribe"))
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "the_settlement_of_scandinavia") and GetFactionExists("gylfing_tribe")) then
+				local uncount = GetUnits(GetFactionPlayer("gylfing_tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))

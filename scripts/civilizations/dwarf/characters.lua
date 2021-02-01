@@ -251,7 +251,7 @@ DefineCharacter("regin", {
 	Gender = "male",
 	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
-	Faction = "brising-clan",
+	Faction = "brising_clan",
 	Description = "Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades.",
 	Background = "In Norse mythology, Regin was a skilled dwarven smith and the brother of the dragon Fafnir.",
 	HairVariation = "brown-hair",

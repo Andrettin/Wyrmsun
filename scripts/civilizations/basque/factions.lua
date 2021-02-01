@@ -52,21 +52,15 @@ DefineFaction("funnelbeaker-tribe", { -- based on the Funnel Beaker culture of Z
 	Name = "Funnelbeaker Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "violet",
+	Color = "violet"
 	-- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	HistoricalUpgrades = {
-		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
-	}
 })
 
-DefineFaction("gylfing-tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+DefineFaction("gylfing_tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
 	Name = "Gylfing Tribe",
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "green",
-	HistoricalUpgrades = {
-		-3600, "upgrade-wood-plow", true, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
-	}
+	Color = "green"
 })
 
 DefineFaction("cardialware-tribe", {

@@ -1,0 +1,7 @@
+burgundy = {
+	history = {
+		#polities must have writing and masonry
+		acquired_upgrade_classes += writing
+		acquired_upgrade_classes += masonry
+	}
+}

@@ -26,7 +26,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "brising-clan")
+	SetPlayerData(0, "Faction", "brising_clan")
 	SetPlayerData(2, "Name", "Fjalar and Galar")
 
 	if (GrandStrategy == false) then

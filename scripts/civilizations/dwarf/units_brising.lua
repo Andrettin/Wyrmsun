@@ -34,7 +34,7 @@
 DefineUnitType("unit-brising-skilled-miner", {
 	Parent = "unit-dwarven-skilled-miner",
 	Civilization = "dwarf",
-	Faction = "brising-clan",
+	Faction = "brising_clan",
 	Icon = "icon-brising-skilled-miner",
 	HitPoints = 50, -- +10 HP
 	Points = 50 -- +5 points
@@ -43,7 +43,7 @@ DefineUnitType("unit-brising-skilled-miner", {
 DefineUnitType("unit-brising-expert-miner", {
 	Parent = "unit-dwarven-expert-miner",
 	Civilization = "dwarf",
-	Faction = "brising-clan",
+	Faction = "brising_clan",
 	Icon = "icon-brising-expert-miner",
 	HitPoints = 60, -- +10 HP
 	Points = 65 -- +5 points
@@ -52,7 +52,7 @@ DefineUnitType("unit-brising-expert-miner", {
 DefineUnitType("unit-brising-militia", {
 	Parent = "unit-dwarven-militia",
 	Civilization = "dwarf",
-	Faction = "brising-clan",
+	Faction = "brising_clan",
 	Icon = "icon-brising-militia",
 	DefaultEquipment = {
 		{"shield", "unit-brising-round-shield"}
@@ -65,7 +65,7 @@ DefineUnitType("unit-brising-militia", {
 DefineUnitType("unit-brising-smithy", {
 	Parent = "unit-dwarven-smithy",
 	Civilization = "dwarf",
-	Faction = "brising-clan",
+	Faction = "brising_clan",
 	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "size", {96, 96}},
 	Shadow = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-brising-smithy",

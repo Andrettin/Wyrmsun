@@ -303,8 +303,8 @@ DefineDialogue("the_settlement_of_scandinavia_gylfings_sighted", {
 			"text", "You know little of us, stranger. And you ask us to become your subjects, vowing to protect us from invasion? You are the invaders! You may not have come in peace, but you will rest in it.",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("gylfing-tribe"))
-					SetDiplomacy(GetFactionPlayer("gylfing-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("gylfing_tribe"))
+					SetDiplomacy(GetFactionPlayer("gylfing_tribe"), "enemy", trigger_player)
 				end
 			}
 		}

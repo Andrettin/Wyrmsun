@@ -37,7 +37,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "brising-clan"
+				EventFaction.Name == "brising_clan"
 				and SyncRand(100) < 20
 			) then
 				return true
@@ -48,7 +48,7 @@ local NidavellirEvents = {
 		Options = {"Send ~!Durin", "Do ~!nothing"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising-clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising_clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 
 					GrandStrategyEventMap = true
@@ -58,10 +58,10 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "brising-clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
+						ChangeFactionResource("dwarf", "brising_clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "brising-clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising_clan" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("dwarf", "brising_clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Mead of Wisdom", "Fjalar and Galar had brewn Thjodrorir's remains into mead, gloating that drink it had made them wiser. Durin survived the encounter with them, and brought the mead to be buried in Thjodrorir's tomb.")
 					end
@@ -69,7 +69,7 @@ local NidavellirEvents = {
 				KillGrandStrategyHero("Thjodrorir")
 			end,
 			function(s)
-				ChangeFactionResource("dwarf", "brising-clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
+				ChangeFactionResource("dwarf", "brising_clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
 				KillGrandStrategyHero("Thjodrorir")
 			end
 		},
@@ -87,7 +87,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "brising-clan"
+				EventFaction.Name == "brising_clan"
 				and GetProvinceOwner("Aurvang") == ""
 				and SyncRand(100) < 20
 			) then
@@ -99,7 +99,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising-clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "brising_clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Modsognir", 2)
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 
@@ -110,17 +110,17 @@ local NidavellirEvents = {
 					GrandStrategyEventMap = false
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for rooting out the bandits
-						ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of the Necklace
+						ChangeFactionResource("dwarf", "brising_clan", "prestige", 5) -- prestige for rooting out the bandits
+						ChangeFactionResource("dwarf", "brising_clan", "copper", 1000) -- copper value of the Necklace
 						-- place some goblins in Aurvang after the dwarven bandits are gone
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising-clan" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "brising_clan" or wyr.preferences.AutomaticBattles)) then
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
-					ChangeFactionResource("dwarf", "brising-clan", "prestige", 5) -- prestige for rooting out the bandits
-					ChangeFactionResource("dwarf", "brising-clan", "copper", 1000) -- copper value of the Necklace
+					ChangeFactionResource("dwarf", "brising_clan", "prestige", 5) -- prestige for rooting out the bandits
+					ChangeFactionResource("dwarf", "brising_clan", "copper", 1000) -- copper value of the Necklace
 					
 					-- place some goblins in Aurvang after the dwarven bandits are gone
 					SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)

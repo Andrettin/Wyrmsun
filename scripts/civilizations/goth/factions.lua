@@ -132,10 +132,7 @@ DefineFaction("visigoth-tribe", {
 	Color = "pink",
 	FactionUpgrade = "upgrade-faction-visigoth-tribe",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"goth-tribe"},
-	HistoricalUpgrades = {
-		573, "upgrade-teuton-coinage", true -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
-	}
+	DevelopsFrom = {"goth-tribe"}
 })
 
 -- polities
@@ -149,10 +146,6 @@ DefineFaction("burgundy", {
 	FactionUpgrade = "upgrade-faction-burgundy",
 	Icon = "icon-flag-old-austria",
 	DevelopsFrom = {"burgundian-tribe"},
-	HistoricalUpgrades = {
-		0, "upgrade-writing", true, -- polities must have writing
-		0, "upgrade-masonry", true
-	},
 	HistoricalCapitals = {
 		411, "worms" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	}
@@ -178,10 +171,6 @@ DefineFaction("visigothia", {
 	FactionUpgrade = "upgrade-faction-visigothia",
 	Icon = "icon-flag-five-orange-birds-on-black",
 	DevelopsFrom = {"visigoth-tribe"},
-	HistoricalUpgrades = {
-		0, "upgrade-writing", true, -- polities must have writing
-		0, "upgrade-masonry", true
-	},
 	HistoricalCapitals = {
 		486, "toulouse"
 	}

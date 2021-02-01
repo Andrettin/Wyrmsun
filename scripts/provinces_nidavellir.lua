@@ -257,7 +257,7 @@ DefineProvince("Svarinshaug", {
 		"dwarf", "Svarinshaug"
 	},
 	Claims = {
-		"dwarf", "brising-clan"
+		"dwarf", "brising_clan"
 	}
 })
 

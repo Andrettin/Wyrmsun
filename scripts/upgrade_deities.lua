@@ -93,7 +93,7 @@ DefineUpgrade("upgrade-deity-hel", {
 	Costs = {"time", 200, "copper", 1500},
 	RequirementsString = "Odin, Thor, Loki or Gathaarl",
 	FactionPriorities = {
-		"kal-kartha", 200
+		"kal_kartha", 200
 	}
 })
 

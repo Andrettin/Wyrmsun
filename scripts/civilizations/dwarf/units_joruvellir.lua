@@ -34,7 +34,7 @@
 DefineUnitType("unit-joruvellir-scout", {
 	Parent = "unit-dwarven-scout",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Icon = "icon-joruvellir-scout-black-hair",
 	Variations = {
 		{
@@ -117,7 +117,7 @@ DefineUnitType("unit-joruvellir-scout", {
 DefineUnitType("unit-joruvellir-pathfinder", {
 	Parent = "unit-dwarven-pathfinder",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Icon = "icon-joruvellir-pathfinder-black-hair",
 	Variations = {
 		{
@@ -200,7 +200,7 @@ DefineUnitType("unit-joruvellir-pathfinder", {
 DefineUnitType("unit-joruvellir-explorer", {
 	Parent = "unit-dwarven-explorer",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Icon = "icon-joruvellir-explorer-black-hair",
 	Variations = {
 		{
@@ -283,7 +283,7 @@ DefineUnitType("unit-joruvellir-explorer", {
 DefineUnitType("unit-joruvellir-yale-rider", {
 	Parent = "unit-dwarven-yale-rider",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Icon = "icon-joruvellir-yale-rider-black-hair",
 	BasicDamage = 13, -- +1 Damage
 	Points = 80, -- +5 points
@@ -349,7 +349,7 @@ DefineUnitType("unit-joruvellir-yale-rider", {
 DefineUnitType("unit-joruvellir-yale-lord", {
 	Parent = "unit-dwarven-yale-lord",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Icon = "icon-joruvellir-yale-lord-black-hair",
 	BasicDamage = 15, -- +1 Damage
 	Points = 105, -- +5 points
@@ -415,7 +415,7 @@ DefineUnitType("unit-joruvellir-yale-lord", {
 DefineUnitType("unit-joruvellir-yale-pen", {
 	Parent = "unit-dwarven-yale-pen",
 	Civilization = "dwarf",
-	Faction = "goldhoof-clan",
+	Faction = "goldhoof_clan",
 	Image = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "size", {96, 96}},
 	Shadow = {"file", "dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "size", {96, 96}},
 	Icon = "icon-joruvellir-yale-pen",

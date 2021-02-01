@@ -1,0 +1,8 @@
+joruvellir = {
+	history = {
+		400 = {
+			#polities require writing
+			acquired_upgrade_classes += writing
+		}
+	}
+}

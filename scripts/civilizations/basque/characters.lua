@@ -30,18 +30,18 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Gender = "male",
 	Type = "unit-germanic-priest",
 	Civilization = "basque",
-	Faction = "gylfing-tribe",
+	Faction = "gylfing_tribe",
 	StartDate = -2800,
 	DeathDate = {-2800, 12, 30},
 	Level = 3, -- chieftain/king
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "gylfing-tribe"
+		"head-of-state", 0, 0, "gylfing_tribe"
 	},
 	HistoricalLocations = {
 		-2800, "earth", "malmo"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "gylfing-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gylfing_tribe") then
 			return true
 		end
 		return false

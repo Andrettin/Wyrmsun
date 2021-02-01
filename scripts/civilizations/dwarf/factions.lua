@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("brising-clan", {
+DefineFaction("brising_clan", {
 	Name = "Brising Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
@@ -41,20 +41,17 @@ DefineFaction("brising-clan", {
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
 	Description = "The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.",
-	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse.",
-	HistoricalUpgrades = {
---		-3000, "upgrade-deity-odin", true
-	}
+	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
 })
 
-DefineFaction("goldhoof-clan", {
+DefineFaction("goldhoof_clan", {
 	Name = "Goldhoof Clan",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-goldhoof-clan",
 	Icon = "icon-flag-golden-yale-skull-on-green",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	ButtonIcons = {
 		"stop", "icon-joruvellir-shield"
 	},
@@ -64,21 +61,18 @@ DefineFaction("goldhoof-clan", {
 		"dlcs/joruvellir_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/joruvellir_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir.",
-	HistoricalUpgrades = {
-		-2800, "upgrade-deity-odin", true
-	}
+	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir."
 })
 
 DefineFaction("eikinskjaldi-clan", {
 	Name = "Eikinskjaldi Clan",
 	Civilization = "dwarf",
-	ParentFaction = "goldhoof-clan",
+	ParentFaction = "goldhoof_clan",
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-eikinskjaldi-clan",
 	Icon = "icon-flag-light-blue-hammer-on-orange",
-	DevelopsFrom = {"goldhoof-clan"},
+	DevelopsFrom = {"goldhoof_clan"},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
@@ -90,7 +84,7 @@ DefineFaction("norlund-clan", {
 	Color = "red",
 	FactionUpgrade = "upgrade-faction-norlund-clan",
 	Icon = "icon-flag-black-hammer-on-orange",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	Description = "The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."
 })
 
@@ -101,7 +95,7 @@ DefineFaction("oinling-clan", {
 	Color = "yellow",
 	FactionUpgrade = "upgrade-faction-oinling-clan",
 	Icon = "icon-flag-blue-hammer-on-yellow",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
 })
 
@@ -112,7 +106,7 @@ DefineFaction("shadowcharm-clan", {
 	Color = "black",
 	FactionUpgrade = "upgrade-faction-shadowcharm-clan",
 	Icon = "icon-flag-green-hammer-on-light-purple",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."
 })
 
@@ -123,7 +117,7 @@ DefineFaction("shinsplitter-clan", {
 	Color = "green",
 	FactionUpgrade = "upgrade-faction-shinsplitter-clan",
 	Icon = "icon-flag-cyan-hammer-on-green",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	Description = "The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."
 })
 
@@ -134,7 +128,7 @@ DefineFaction("shorbear-clan", {
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-shorbear-clan",
 	Icon = "icon-flag-green-hammer-on-blue",
-	DevelopsFrom = {"brising-clan"},
+	DevelopsFrom = {"brising_clan"},
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
 	ForceTemplates = {
 		{
@@ -193,7 +187,7 @@ DefineFaction("whitesteel-clan", {
 	Color = "white",
 	FactionUpgrade = "upgrade-faction-whitesteel-clan",
 	Icon = "icon-flag-red-hammer-on-silver",
-	DevelopsFrom = {"brising-clan", "norlund-clan", "shorbear-clan"},
+	DevelopsFrom = {"brising_clan", "norlund-clan", "shorbear-clan"},
 --	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
 })
 
@@ -201,14 +195,14 @@ DefineFaction("whitesteel-clan", {
 
 DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand"
 	Name = "Joruvellir",
-	ParentFaction = "goldhoof-clan",
+	ParentFaction = "goldhoof_clan",
 	Civilization = "dwarf",
 	Type = "polity",
 	Color = "brown",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-joruvellir",
 	Icon = "icon-flag-joruvellir",
-	DevelopsFrom = {"eikinskjaldi-clan", "goldhoof-clan"},
+	DevelopsFrom = {"eikinskjaldi-clan", "goldhoof_clan"},
 	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
 	Titles = {
 		"monarchy", "barony", "Lordship",
@@ -222,14 +216,10 @@ DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of
 	},
 	HistoricalCapitals = {
 		400, "joruvellir"
-	},
-	HistoricalUpgrades = {
-		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
-DefineFaction("kal-kartha", {
+DefineFaction("kal_kartha", {
 	Name = "Kal Kartha",
 	Civilization = "dwarf",
 	Type = "polity",
@@ -246,11 +236,7 @@ DefineFaction("kal-kartha", {
 		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
-		400, "kal-kartha"
-	},
-	HistoricalUpgrades = {
-		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		400, "kal_kartha"
 	},
 	ForceTemplates = {
 		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Siege of Kal Kartha)
@@ -327,10 +313,6 @@ DefineFaction("knalga", {
 	},
 	HistoricalCapitals = {
 		400, "knalga"
-	},
-	HistoricalUpgrades = {
-		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga
 	}
 })
 
@@ -338,12 +320,12 @@ DefineFaction("lyr", {
 	Name = "Lyr",
 	Civilization = "dwarf",
 	Type = "polity",
-	ParentFaction = "brising-clan",
+	ParentFaction = "brising_clan",
 	Color = "green",
 	DefaultTier = "barony",
 	FactionUpgrade = "upgrade-faction-lyr",
 	Icon = "icon-flag-yellow-hammer-on-purple",
-	DevelopsFrom = {"brising-clan", "oinling-clan", "whitesteel-clan"},
+	DevelopsFrom = {"brising_clan", "oinling-clan", "whitesteel-clan"},
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
 	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",
 	Titles = {
@@ -355,10 +337,6 @@ DefineFaction("lyr", {
 	},
 	HistoricalCapitals = {
 		400, "lyr"
-	},
-	HistoricalUpgrades = {
-		400, "upgrade-dwarven-runewriting", true, -- polities require writing
-		534, "upgrade-iron-tipped-wood-plow", true -- Mushroom Farms existent in Knalga (so possibly also in other polities)
 	}
 })
 
@@ -387,7 +365,7 @@ DefineFaction("surghan-mercenaries", {
 
 DefineFaction("yawning-yales", {
 	Name = "Yawning Yales",
-	ParentFaction = "goldhoof-clan", -- Joruvellir
+	ParentFaction = "goldhoof_clan", -- Joruvellir
 	Civilization = "dwarf",
 	Type = "mercenary_company",
 	Color = "yellow",
