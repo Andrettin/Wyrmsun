@@ -1,10 +1,65 @@
-unit_star = {
+unit_template_star = {
 	name = "Star"
 	parent = unit_template_celestial_body
+	template = true
 	description = "A star, providing warmth and light to other celestial bodies around it."
 	image_file = "celestial_bodies/star.png"
 	frame_size = { 231 231 }
 	icon = star
 	tile_size = { 4 4 }
 	box_size = { 127 127 }
+}
+
+unit_yellow_star = {
+	name = "Yellow Star"
+	parent = unit_template_star
+}
+
+unit_blue_star = {
+	name = "Blue Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_blue.png"
+	icon = star_blue
+}
+
+unit_blue_white_star = {
+	name = "Blue-White Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_blue_white.png"
+	icon = star_blue_white
+}
+
+unit_brown_star = {
+	name = "Brown Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_brown.png"
+	icon = star_brown
+}
+
+unit_orange_star = {
+	name = "Orange Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_orange.png"
+	icon = star_orange
+}
+
+unit_red_star = {
+	name = "Red Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_red.png"
+	icon = star_red
+}
+
+unit_white_star = {
+	name = "White Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_white.png"
+	icon = star_white
+}
+
+unit_yellow_white_star = {
+	name = "Yellow-White Star"
+	parent = unit_template_star
+	image_file = "celestial_bodies/star_yellow_white.png"
+	icon = star_yellow_white
 }

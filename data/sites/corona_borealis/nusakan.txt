@@ -3,5 +3,5 @@ nusakan = { #Beta Coronae Borealis
 	map_template = universe
 	astrocoordinate = { -128.0428 29.1057 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 112
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 }

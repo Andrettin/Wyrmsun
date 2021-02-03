@@ -3,5 +3,5 @@ alrakis = { #Mu Draconis
 	map_template = universe
 	astrocoordinate = { -103.6661 54.47 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 89
-	base_unit_type = unit_star #yellow_white_dwarf_star #F7V
+	base_unit_type = unit_yellow_white_star #dwarf star #F7V
 }

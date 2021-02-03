@@ -3,7 +3,7 @@ arcturus = { #Alpha Boötis
 	map_template = universe
 	astrocoordinate = { -146.0847 19.1824 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 36.7
-	base_unit_type = unit_star #orange_giant_star
+	base_unit_type = unit_orange_star #giant star
 	cultural_names = {
 		norse = "Vagnstjarna" #the name means "the Wain Star"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 594.
 	}

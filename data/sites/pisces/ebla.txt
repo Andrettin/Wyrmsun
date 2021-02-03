@@ -3,5 +3,5 @@ ebla_star = {
 	map_template = universe
 	astrocoordinate = { -12.7053 -2.2607 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 94.1
-	base_unit_type = unit_star #orange_dwarf_star
+	base_unit_type = unit_orange_star #dwarf star
 }

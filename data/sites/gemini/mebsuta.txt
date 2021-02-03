@@ -3,5 +3,5 @@ mebsuta = { #Epsilon Geminorum
 	map_template = universe
 	astrocoordinate = { 100.983 25.1311 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 840
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

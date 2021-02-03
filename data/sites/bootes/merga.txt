@@ -3,5 +3,5 @@ merga = {
 	map_template = universe
 	astrocoordinate = { -137.6722 46.1162 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 157.4
-	base_unit_type = unit_star #yellow_white_giant_star #F6IV
+	base_unit_type = unit_yellow_white_star #giant star #F6IV
 }

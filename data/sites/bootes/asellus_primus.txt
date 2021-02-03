@@ -3,5 +3,5 @@ asellus_primus = { #Theta Boötis
 	map_template = universe
 	astrocoordinate = { -143.7008 51.8507 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 47.39
-	base_unit_type = unit_star #yellow_white_dwarf_star #F7V
+	base_unit_type = unit_yellow_white_star #dwarf star #F7V
 }

@@ -3,5 +3,5 @@ menkent = { #Theta Centauri
 	map_template = universe
 	astrocoordinate = { -148.3294 -36.37 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 58.8
-	base_unit_type = unit_star #orange_giant_star
+	base_unit_type = unit_orange_star #giant star
 }

@@ -3,5 +3,5 @@ fomalhaut = {
 	map_template = universe
 	astrocoordinate = { -15.5873 -29.6222 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 25.13
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 }

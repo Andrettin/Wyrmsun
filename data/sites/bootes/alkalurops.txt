@@ -3,5 +3,5 @@ alkalurops = { #Mu Boötis
 	map_template = universe
 	astrocoordinate = { -128.8774 37.3772 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 121
-	base_unit_type = unit_star #yellow_white_dwarf_star #F0V
+	base_unit_type = unit_yellow_white_star #dwarf star #F0V
 }

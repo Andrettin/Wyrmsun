@@ -3,5 +3,5 @@ muphrid = { #Eta Boötis
 	map_template = universe
 	astrocoordinate = { -151.3288 18.3977 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 37.2
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

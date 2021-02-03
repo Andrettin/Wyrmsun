@@ -3,5 +3,5 @@ aldhibah = { #Zeta Draconis
 	map_template = universe
 	astrocoordinate = { -102.8033 65.7147 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 330
-	base_unit_type = unit_star #blue_white_giant_star
+	base_unit_type = unit_blue_white_star #giant star
 }

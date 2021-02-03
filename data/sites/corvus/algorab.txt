@@ -3,5 +3,5 @@ algorab = { #Delta Corvi
 	map_template = universe
 	astrocoordinate = { -172.5339 -16.5154 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 86.9
-	base_unit_type = unit_star #class_a_giant_star
+	base_unit_type = unit_white_star #class A giant star
 }

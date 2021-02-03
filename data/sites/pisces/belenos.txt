@@ -3,5 +3,5 @@ belenos = {
 	map_template = universe
 	astrocoordinate = { 21.3022 28.5667 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 146.4
-	base_unit_type = unit_star #yellow_white_dwarf_star
+	base_unit_type = unit_yellow_white_star #dwarf star
 }

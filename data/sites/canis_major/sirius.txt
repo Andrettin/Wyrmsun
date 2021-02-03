@@ -3,7 +3,7 @@ sirius = { #Alpha Canis Majoris
 	map_template = universe
 	astrocoordinate = { 101.2872 -16.7161 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 8.6 #light-years
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 	cultural_names = {
 		norse = "Lokabrenna" #the name means "the Conflagration of Loki"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 79.
 	}

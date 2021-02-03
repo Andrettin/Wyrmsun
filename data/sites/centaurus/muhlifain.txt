@@ -3,5 +3,5 @@ muhlifain = { #Gamma Centauri
 	map_template = universe
 	astrocoordinate = { -169.6207 -48.9599 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 130
-	base_unit_type = unit_star #class_a_giant_star
+	base_unit_type = unit_white_star #class A giant star
 }

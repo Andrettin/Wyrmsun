@@ -3,5 +3,5 @@ pherkad_minor = { #11 Ursae Minoris
 	map_template = universe
 	astrocoordinate = { -130.7255 71.8239 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 410
-	base_unit_type = unit_star #orange_giant_star
+	base_unit_type = unit_orange_star #giant star
 }

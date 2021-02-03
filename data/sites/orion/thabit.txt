@@ -3,5 +3,5 @@ thabit = { #Upsilon Orionis
 	map_template = universe
 	astrocoordinate = { 82.9828 -7.3015 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 2900
-	base_unit_type = unit_star #blue_dwarf_star
+	base_unit_type = unit_blue_star #dwarf star
 }

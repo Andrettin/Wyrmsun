@@ -3,5 +3,5 @@ flegetonte = {
 	map_template = universe
 	astrocoordinate = { 176.4262 2.8215 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 95.8
-	base_unit_type = unit_star #orange_dwarf_star
+	base_unit_type = unit_orange_star #dwarf star
 }

@@ -3,5 +3,5 @@ tianyi = {
 	map_template = universe
 	astrocoordinate = { -168.1069 66.7903 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 780
-	base_unit_type = unit_star #orange_giant_star
+	base_unit_type = unit_orange_star #giant star
 }

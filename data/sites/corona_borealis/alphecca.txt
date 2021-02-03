@@ -3,5 +3,5 @@ alphecca = { #Alpha Coronae Borealis
 	map_template = universe
 	astrocoordinate = { -126.328 26.7147 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 75
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 }

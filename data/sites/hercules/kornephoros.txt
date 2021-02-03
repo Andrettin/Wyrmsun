@@ -3,5 +3,5 @@ kornephoros = { #Beta Herculis
 	map_template = universe
 	astrocoordinate = { -112.445 21.4896 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 139
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

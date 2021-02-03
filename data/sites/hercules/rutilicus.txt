@@ -3,5 +3,5 @@ rutilicus = { #Zeta Herculis
 	map_template = universe
 	astrocoordinate = { -109.6785 31.6027 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 35
-	base_unit_type = unit_star #yellow_white_giant_star
+	base_unit_type = unit_yellow_white_star #giant star
 }

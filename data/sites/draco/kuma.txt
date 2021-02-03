@@ -3,5 +3,5 @@ kuma = { #Nu Draconis
 	map_template = universe
 	astrocoordinate = { -96.956 55.1842 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 98.7
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 }

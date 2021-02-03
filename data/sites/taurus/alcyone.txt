@@ -3,5 +3,5 @@ alcyone = { #Eta Tauri
 	map_template = universe
 	astrocoordinate = { 56.8712 24.1051 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance_pc = 136 #in parsecs
-	base_unit_type = unit_star #blue_white_giant_star
+	base_unit_type = unit_blue_white_star #giant star
 }

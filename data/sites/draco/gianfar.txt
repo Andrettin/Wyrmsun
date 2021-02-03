@@ -3,5 +3,5 @@ gianfar = { #Lambda Draconis
 	map_template = universe
 	astrocoordinate = { 172.8509 69.3311 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 333
-	base_unit_type = unit_star #red_giant_star
+	base_unit_type = unit_red_star #giant star
 }

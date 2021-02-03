@@ -3,5 +3,5 @@ wezen = { #Delta Canis Majoris
 	map_template = universe
 	astrocoordinate = { 107.0979 -26.3932 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 1600
-	base_unit_type = unit_star #yellow_white_giant_star
+	base_unit_type = unit_yellow_white_star #giant star
 }

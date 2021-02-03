@@ -3,5 +3,5 @@ xuange = { #Lambda Boötis
 	map_template = universe
 	astrocoordinate = { -145.9041 46.0883 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 99
-	base_unit_type = unit_star #class_a_giant_star
+	base_unit_type = unit_white_star #class A giant star
 }

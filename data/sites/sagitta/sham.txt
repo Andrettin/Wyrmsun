@@ -3,5 +3,5 @@ sham = { #Alpha Sagittae
 	map_template = universe
 	astrocoordinate = { -64.9759 18.0139 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 382
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

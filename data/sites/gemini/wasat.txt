@@ -3,5 +3,5 @@ wasat = { #Delta Geminorum
 	map_template = universe
 	astrocoordinate = { 110.0307 21.9823 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 60.5
-	base_unit_type = unit_star #yellow_white_giant_star
+	base_unit_type = unit_yellow_white_star #giant star
 }

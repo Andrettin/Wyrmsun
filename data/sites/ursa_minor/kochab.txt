@@ -3,5 +3,5 @@ kochab = { #Beta Ursae Minoris
 	map_template = universe
 	astrocoordinate = { -137.3236 74.1555 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 130.9
-	base_unit_type = unit_star #orange_giant_star
+	base_unit_type = unit_orange_star #giant star
 }

@@ -3,7 +3,7 @@ castor = { #Alpha Geminorum
 	map_template = universe
 	astrocoordinate = { 113.6495 31.8883 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 51
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 	cultural_names = {
 		norse = "Thiassi's Right Eye" #a pair of stars was known as "Þjaza/Þjassa Augu" in Old Icelandic, that is, "the Eyes of the Giant Thiazi/Thiassi", and they were probably Castor and Pollux; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 33, 594.
 	}

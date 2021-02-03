@@ -3,5 +3,5 @@ saiph = { #Kappa Orionis
 	map_template = universe
 	astrocoordinate = { 86.9391 -9.6696 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 650
-	base_unit_type = unit_star #blue_white_giant_star
+	base_unit_type = unit_blue_white_star #giant star
 }

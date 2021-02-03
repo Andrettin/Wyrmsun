@@ -3,5 +3,5 @@ athebyne = { #Eta Draconis
 	map_template = universe
 	astrocoordinate = { -114.0021 61.5142 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 92.1
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

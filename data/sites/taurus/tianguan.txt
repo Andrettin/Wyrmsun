@@ -3,5 +3,5 @@ tianguan = { #Zeta Tauri
 	map_template = universe
 	astrocoordinate = { 84.4112 21.1425 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 440
-	base_unit_type = unit_star #blue_white_giant_star
+	base_unit_type = unit_blue_white_star #giant star
 }

@@ -3,5 +3,5 @@ betelgeuse = { #Alpha Orionis
 	map_template = universe
 	astrocoordinate = { 88.7929 7.4071 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 700
-	base_unit_type = unit_star #red_giant_star
+	base_unit_type = unit_red_star #giant star
 }

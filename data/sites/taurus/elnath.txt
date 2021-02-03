@@ -3,5 +3,5 @@ elnath = { #Beta Tauri
 	map_template = universe
 	astrocoordinate = { 81.573 28.6075 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 134
-	base_unit_type = unit_star #blue_white_giant_star
+	base_unit_type = unit_blue_white_star #giant star
 }

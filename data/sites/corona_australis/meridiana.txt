@@ -3,5 +3,5 @@ meridiana = { #Alpha Coronae Australis
 	map_template = universe
 	astrocoordinate = { -72.6319 -37.9045 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 125
-	base_unit_type = unit_star #class_a_dwarf_star
+	base_unit_type = unit_white_star #class A dwarf star
 }

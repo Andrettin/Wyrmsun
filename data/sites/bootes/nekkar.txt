@@ -3,5 +3,5 @@ nekkar = { #Beta Boötis
 	map_template = universe
 	astrocoordinate = { -134.5135 40.3906 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 225
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }

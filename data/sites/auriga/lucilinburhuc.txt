@@ -3,5 +3,5 @@ lucilinburhuc = {
 	map_template = universe
 	astrocoordinate = { 97.1905 38.963 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 160
-	base_unit_type = unit_star #yellow_giant_star
+	base_unit_type = unit_yellow_star #giant star
 }
