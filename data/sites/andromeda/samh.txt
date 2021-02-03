@@ -1,0 +1,7 @@
+#samh = {
+#	name = "Samh"
+#	map_template = universe
+	#base_unit_type = unit_barren_world #gas giant
+	#orbit_center = titawin
+	#distance_from_orbit_center = 50.355 #average; apastron of 9.11 Gm and periastron of 91.6 Gm (these two are very far apart though, perhaps a typo was made in one of them in the source)
+#}

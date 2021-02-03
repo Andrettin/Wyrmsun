@@ -1,0 +1,7 @@
+#majriti = {
+#	name = "Majriti"
+#	map_template = universe
+	#base_unit_type = unit_barren_world
+	#orbit_center = titawin
+	#distance_from_orbit_center = 380 #average; apastron of 478 Gm and periastron of 282 Gm
+#}

@@ -1,0 +1,7 @@
+titawin = { #Upsilon Andromedae
+	name = "Titawin"
+	map_template = universe
+	astrocoordinate = { 24.1993 41.4055 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 43.7
+	base_unit_type = unit_star #yellow_white_dwarf_star
+}
