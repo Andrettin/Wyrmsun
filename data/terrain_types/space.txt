@@ -15,7 +15,16 @@ space = {
 		dry_mud
 		desert_sand
 	}
-	solid_tiles = { 13 16 19 9 10 11 21 22 }
+	solid_tiles = {
+		13 = 1
+		16 = 100
+		19 = 100
+		9 = 100
+		10 = 100
+		11 = 100
+		21 = 100
+		22 = 100
+	}
 	transition_tiles = {
 		any = {
 			north = { 1 4 7 }
