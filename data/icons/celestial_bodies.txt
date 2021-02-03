@@ -1,3 +1,31 @@
 star = {
 	file = "icons/celestial_bodies/star.png"
 }
+
+star_blue = {
+	file = "icons/celestial_bodies/star_blue.png"
+}
+
+star_blue_white = {
+	file = "icons/celestial_bodies/star_blue_white.png"
+}
+
+star_brown = {
+	file = "icons/celestial_bodies/star_brown.png"
+}
+
+star_orange = {
+	file = "icons/celestial_bodies/star_orange.png"
+}
+
+star_red = {
+	file = "icons/celestial_bodies/star_red.png"
+}
+
+star_white = {
+	file = "icons/celestial_bodies/star_white.png"
+}
+
+star_yellow_white = {
+	file = "icons/celestial_bodies/star_yellow_white.png"
+}
