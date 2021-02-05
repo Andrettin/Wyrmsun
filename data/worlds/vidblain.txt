@@ -1,0 +1,3 @@
+vidblain = {
+	name = "Vidblain"
+}

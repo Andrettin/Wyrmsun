@@ -1,7 +1,7 @@
 vidblain = {
 	name = "Vidblain"
 	main_template = universe
-	#world = vidblain
+	world = vidblain
 	size = { 32 32 }
 	min_subtemplate_pos = { 0 0 }
 	max_subtemplate_pos = { 128 128 }

@@ -1,7 +1,7 @@
 beowulf = {
 	name = "Beowulf"
 	main_template = universe
-	#world = beowulf
+	world = beowulf
 	size = { 32 32 }
 	circle = true
 	base_terrain_type = grass
