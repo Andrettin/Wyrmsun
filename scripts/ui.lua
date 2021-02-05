@@ -2775,6 +2775,25 @@ if not (ui_loaded_first_time) then
 	})
 	
 	DefinePopup({
+		Ident = "popup_tile_under_cursor",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 32,
+		DefaultFont = PopupDescriptionFont,
+		Contents = {
+				{	Condition = {terrain_feature = "only"}, HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{ 	Condition = {terrain_feature = "only", world = "only"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {world = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("World: "), TileWorldName("Tile")), Font = PopupDescriptionFont}}
+				}
+		}	
+	})
+	
+	DefinePopup({
 		Ident = "popup_resource",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,
