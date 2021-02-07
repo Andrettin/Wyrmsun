@@ -1,0 +1,44 @@
+two_suns_schedule = {
+	name = "Two Suns Schedule"
+	scheduled_times_of_day = {
+		the_long_dark = {
+			hours = 5
+		}
+		first_dawn = {
+			hours = 3
+		}
+		first_morning = {
+			hours = 3
+		}
+		first_midday = {
+			hours = 3
+		}
+		first_afternoon = {
+			hours = 3
+		}
+		first_dusk = {
+			hours = 3
+		}
+		the_short_dark = {
+			hours = 4
+		}
+		second_dawn = {
+			hours = 3
+		}
+		second_morning = {
+			hours = 3
+		}
+		second_midday = {
+			hours = 3
+		}
+		second_afternoon = {
+			hours = 3
+		}
+		second_dusk = {
+			hours = 3
+		}
+		the_long_dark = {
+			hours = 9
+		}
+	}
+}

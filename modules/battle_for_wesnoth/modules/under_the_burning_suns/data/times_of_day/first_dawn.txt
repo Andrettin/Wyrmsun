@@ -1,0 +1,6 @@
+first_dawn = {
+	name = "First Dawn"
+	dawn = true
+	color_modification = { -10 -10 0 }
+	icon = dawn
+}

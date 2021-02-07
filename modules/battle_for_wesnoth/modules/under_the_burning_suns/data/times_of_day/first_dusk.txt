@@ -1,0 +1,6 @@
+first_dusk = {
+	name = "First Dusk"
+	dusk = true
+	color_modification = { 0 -10 -10 }
+	icon = dusk
+}

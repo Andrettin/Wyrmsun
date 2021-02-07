@@ -1,0 +1,5 @@
+first_morning = {
+	name = "First Morning"
+	day = true
+	icon = morning
+}

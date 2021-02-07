@@ -1,0 +1,6 @@
+the_short_dark = {
+	name = "The Short Dark"
+	night = true
+	color_modification = { -22 -17 -5 }
+	icon = late_night
+}

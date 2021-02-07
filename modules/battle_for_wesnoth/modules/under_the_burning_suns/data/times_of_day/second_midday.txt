@@ -1,0 +1,5 @@
+second_midday = {
+	name = "Second Midday"
+	day = true
+	icon = midday
+}

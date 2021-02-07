@@ -1,0 +1,6 @@
+the_long_dark = {
+	name = "The Long Dark"
+	night = true
+	color_modification = { -22 -17 -5 }
+	icon = midnight
+}
