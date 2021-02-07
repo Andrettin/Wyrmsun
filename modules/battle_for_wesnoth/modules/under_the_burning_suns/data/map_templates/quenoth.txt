@@ -2,14 +2,11 @@ quenoth = {
 	name = "Quenoth"
 	main_template = universe
 	world = quenoth
-	size = { 48 48 }
+	size = { 40 40 }
 	circle = true
 	clear_terrain = true
 	unusable_area_terrain_type = dirt
 	unusable_area_overlay_terrain_type = space
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
-	generated_neutral_units = {
-		unit_copper_deposit = 1
-	}
 }

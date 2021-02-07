@@ -4,8 +4,4 @@ a_stirring_in_the_night = {
 	size = { 28 28 }
 	terrain_file = "a_stirring_in_the_night.map"
 	overlay_terrain_file = "a_stirring_in_the_night_overlay.map"
-	generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_gold_deposit = 1
-	}
 }
