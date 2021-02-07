@@ -1,0 +1,21 @@
+terran_schedule = {
+	name = "Terran Schedule"
+	hours_per_day = 24
+	scheduled_seasons = {
+		winter = {
+			days = 80 #until the 20th of March, and including that day
+		}
+		spring = {
+			days = 91
+		}
+		summer = {
+			days = 92
+		}
+		autumn = {
+			days = 91
+		}
+		winter = {
+			days = 11 #from c. the 21st of December onwards
+		}
+	}
+}

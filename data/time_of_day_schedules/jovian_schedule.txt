@@ -1,0 +1,30 @@
+jovian_schedule = {
+	name = "Jovian Schedule"
+	#a solar day lasts 9.9 hours on Jupiter
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 1
+		}
+		late_night = {
+			hours = 1
+		}
+		dawn = {
+			hours = 2
+		}
+		morning = {
+			hours = 1
+		}
+		midday = {
+			hours = 1
+		}
+		afternoon = {
+			hours = 1
+		}
+		dusk = {
+			hours = 2
+		}
+		early_night = {
+			hours = 1
+		}
+	}
+}

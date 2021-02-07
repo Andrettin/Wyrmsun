@@ -1,0 +1,33 @@
+lunar_schedule = {
+	name = "Lunar Schedule"
+	#a solar day lasts 708.7 hours on the Moon
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 29
+		}
+		late_night = {
+			hours = 88
+		}
+		dawn = {
+			hours = 89
+		}
+		morning = {
+			hours = 88
+		}
+		midday = {
+			hours = 89
+		}
+		afternoon = {
+			hours = 88
+		}
+		dusk = {
+			hours = 89
+		}
+		early_night = {
+			hours = 89
+		}
+		midnight = {
+			hours = 60
+		}
+	}
+}

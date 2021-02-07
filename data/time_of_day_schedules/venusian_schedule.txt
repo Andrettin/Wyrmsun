@@ -1,0 +1,33 @@
+venusian_schedule = {
+	name = "Venusian Schedule"
+	#a solar day lasts 2802.0 hours on Venus
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 233
+		}
+		late_night = {
+			hours = 350
+		}
+		dawn = {
+			hours = 351
+		}
+		morning = {
+			hours = 350
+		}
+		midday = {
+			hours = 350
+		}
+		afternoon = {
+			hours = 350
+		}
+		dusk = {
+			hours = 351
+		}
+		early_night = {
+			hours = 350
+		}
+		midnight = {
+			hours = 117
+		}
+	}
+}

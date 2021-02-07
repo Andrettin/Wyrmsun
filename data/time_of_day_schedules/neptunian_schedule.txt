@@ -1,0 +1,33 @@
+neptunian_schedule = {
+	name = "Neptunian Schedule"
+	#a solar day lasts 17.2 hours on Neptune
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 1
+		}
+		late_night = {
+			hours = 2
+		}
+		dawn = {
+			hours = 2
+		}
+		morning = {
+			hours = 2
+		}
+		midday = {
+			hours = 2
+		}
+		afternoon = {
+			hours = 2
+		}
+		dusk = {
+			hours = 2
+		}
+		early_night = {
+			hours = 2
+		}
+		midnight = {
+			hours = 1
+		}
+	}
+}

@@ -1,0 +1,33 @@
+saturnian_schedule = {
+	name = "Saturnian Schedule"
+	#a solar day lasts 10.7 hours on Saturn
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 1
+		}
+		late_night = {
+			hours = 1
+		}
+		dawn = {
+			hours = 2
+		}
+		morning = {
+			hours = 1
+		}
+		midday = {
+			hours = 2
+		}
+		afternoon = {
+			hours = 1
+		}
+		dusk = {
+			hours = 1
+		}
+		early_night = {
+			hours = 1
+		}
+		midnight = {
+			hours = 1
+		}
+	}
+}

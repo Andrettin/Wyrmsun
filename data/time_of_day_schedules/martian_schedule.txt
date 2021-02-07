@@ -1,0 +1,33 @@
+martian_schedule = {
+	name = "Martian Schedule"
+	#a solar day lasts 24.7 hours on Mars
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 2
+		}
+		late_night = {
+			hours = 3
+		}
+		dawn = {
+			hours = 3
+		}
+		morning = {
+			hours = 3
+		}
+		midday = {
+			hours = 3
+		}
+		afternoon = {
+			hours = 3
+		}
+		dusk = {
+			hours = 4
+		}
+		early_night = {
+			hours = 3
+		}
+		midnight = {
+			hours = 2
+		}
+	}
+}

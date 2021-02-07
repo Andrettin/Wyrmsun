@@ -1,0 +1,22 @@
+mercurian_schedule = {
+	name = "Mercurian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 88.0 Earth days on Mercury
+	scheduled_seasons = {
+		winter = {
+			days = 7
+		}
+		spring = {
+			days = 22
+		}
+		summer = {
+			days = 22
+		}
+		autumn = {
+			days = 22
+		}
+		winter = {
+			days = 15
+		}
+	}
+}

@@ -1,0 +1,58 @@
+terran_schedule = {
+	name = "Terran Schedule"
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 2
+			season_hours = {
+				summer = 1
+			}
+		}
+		late_night = {
+			hours = 3
+			season_hours = {
+				summer = 2
+				winter = 4
+			}
+		}
+		dawn = {
+			hours = 3
+		}
+		morning = {
+			hours = 3
+			season_hours = {
+				summer = 4
+				winter = 2
+			}
+		}
+		midday = {
+			hours = 3
+			season_hours = {
+				summer = 4
+				winter = 2
+			}
+		}
+		afternoon = {
+			hours = 3
+			season_hours = {
+				summer = 4
+				winter = 2
+			}
+		}
+		dusk = {
+			hours = 3
+		}
+		early_night = {
+			hours = 3
+			season_hours = {
+				summer = 2
+				winter = 4
+			}
+		}
+		midnight = {
+			hours = 1
+			season_hours = {
+				winter = 2
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+saturnian_schedule = {
+	name = "Saturnian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 10,747 Earth days on Jupiter
+	scheduled_seasons = {
+		winter = {
+			days = 895
+		}
+		spring = {
+			days = 2687
+		}
+		summer = {
+			days = 2686
+		}
+		autumn = {
+			days = 2687
+		}
+		winter = {
+			days = 1792
+		}
+	}
+}

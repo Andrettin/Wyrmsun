@@ -1,0 +1,22 @@
+jovian_schedule = {
+	name = "Jovian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 4331 Earth days on Jupiter
+	scheduled_seasons = {
+		winter = {
+			days = 361
+		}
+		spring = {
+			days = 1083
+		}
+		summer = {
+			days = 1083
+		}
+		autumn = {
+			days = 1083
+		}
+		winter = {
+			days = 721
+		}
+	}
+}

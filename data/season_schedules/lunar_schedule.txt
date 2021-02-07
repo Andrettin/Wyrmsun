@@ -1,0 +1,22 @@
+lunar_schedule = {
+	name = "Lunar Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 27.3 Earth days on the Moon
+	scheduled_seasons = {
+		winter = {
+			days = 2
+		}
+		spring = {
+			days = 7
+		}
+		summer = {
+			days = 6
+		}
+		autumn = {
+			days = 7
+		}
+		winter = {
+			days = 5
+		}
+	}
+}

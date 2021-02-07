@@ -1,0 +1,22 @@
+neptunian_schedule = {
+	name = "Neptunian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 59,800 Earth days on Neptune
+	scheduled_seasons = {
+		winter = {
+			days = 4983
+		}
+		spring = {
+			days = 14950
+		}
+		summer = {
+			days = 14950
+		}
+		autumn = {
+			days = 14950
+		}
+		winter = {
+			days = 9967
+		}
+	}
+}

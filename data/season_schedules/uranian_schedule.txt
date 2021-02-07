@@ -1,0 +1,22 @@
+uranian_schedule = {
+	name = "Uranian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 30,589 Earth days on Uranus
+	scheduled_seasons = {
+		winter = {
+			days = 2549
+		}
+		spring = {
+			days = 7647
+		}
+		summer = {
+			days = 7647
+		}
+		autumn = {
+			days = 7648
+		}
+		winter = {
+			days = 5098
+		}
+	}
+}

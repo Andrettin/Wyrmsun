@@ -1,0 +1,8 @@
+eternal_day = {
+	name = "Eternal Day"
+	scheduled_times_of_day = {
+		midday = {
+			hours = 24
+		}
+	}
+}

@@ -1,0 +1,33 @@
+mercurian_schedule = {
+	name = "Mercurian Schedule"
+	#a solar day lasts 4222.6 hours on Mercury
+	scheduled_times_of_day = {
+		midnight = {
+			hours = 351
+		}
+		late_night = {
+			hours = 528
+		}
+		dawn = {
+			hours = 528
+		}
+		morning = {
+			hours = 528
+		}
+		midday = {
+			hours = 528
+		}
+		afternoon = {
+			hours = 528
+		}
+		dusk = {
+			hours = 528
+		}
+		early_night = {
+			hours = 528
+		}
+		midnight = {
+			hours = 176
+		}
+	}
+}

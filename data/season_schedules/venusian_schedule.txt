@@ -1,0 +1,22 @@
+venusian_schedule = {
+	name = "Venusian Schedule"
+	hours_per_day = 24 #in order for the season length to work according to Earth days
+	#a year lasts 224.7 Earth days on Venus
+	scheduled_seasons = {
+		winter = {
+			days = 19
+		}
+		spring = {
+			days = 57
+		}
+		summer = {
+			days = 56
+		}
+		autumn = {
+			days = 56
+		}
+		winter = {
+			days = 37
+		}
+	}
+}
