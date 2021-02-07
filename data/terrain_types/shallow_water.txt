@@ -5,6 +5,7 @@ shallow_water = {
 		: #deep water
 		+ #lake
 		4 #river
+		W #tropical shallow water
 	}
 	color = { 0 128 255 }
 	overlay = true

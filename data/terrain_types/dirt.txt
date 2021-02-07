@@ -4,6 +4,7 @@ dirt = {
 	character_aliases = {
 		h #hills
 		B #beach sand
+		z #dark dirt
 	}
 	color = { 192 128 0 }
 	image_file = "terrain/dirt.png"

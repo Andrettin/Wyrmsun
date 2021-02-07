@@ -4,6 +4,9 @@ pine_tree = {
 	character_aliases = {
 		T #tropical tree
 		U #deciduous tree
+		N #savannah tree
+		L #palm tree
+		I #rainforest tree
 	}
 	color = { 0 128 0 }
 	minimap_color = { 0 44 0 }

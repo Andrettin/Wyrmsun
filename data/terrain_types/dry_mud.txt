@@ -3,6 +3,7 @@ dry_mud = {
 	character = r
 	character_aliases = {
 		R #dry dirt
+		H #dry hills
 	}
 	color = { 128 64 0 }
 	buildable = true

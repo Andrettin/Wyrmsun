@@ -3,6 +3,7 @@ rock = {
 	character = k
 	character_aliases = {
 		K #dry rock
+		% #desert rock
 	}
 	color = { 128 128 128 }
 	overlay = true
