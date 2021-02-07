@@ -1,6 +1,5 @@
 martian_schedule = {
 	name = "Martian Schedule"
-	hours_per_day = 24 #in order for the season length to work according to Earth days
 	#a year lasts 687.0 Earth days on Mars
 	scheduled_seasons = {
 		winter = {

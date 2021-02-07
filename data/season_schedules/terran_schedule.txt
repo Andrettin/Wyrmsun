@@ -1,6 +1,5 @@
 terran_schedule = {
 	name = "Terran Schedule"
-	hours_per_day = 24
 	scheduled_seasons = {
 		winter = {
 			days = 80 #until the 20th of March, and including that day

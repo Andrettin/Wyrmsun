@@ -1,6 +1,5 @@
 lunar_schedule = {
 	name = "Lunar Schedule"
-	hours_per_day = 24 #in order for the season length to work according to Earth days
 	#a year lasts 27.3 Earth days on the Moon
 	scheduled_seasons = {
 		winter = {
