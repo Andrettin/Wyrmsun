@@ -1,0 +1,4 @@
+quenoth = {
+	name = "Quenoth"
+	time_of_day_schedule = two_suns_schedule
+}
