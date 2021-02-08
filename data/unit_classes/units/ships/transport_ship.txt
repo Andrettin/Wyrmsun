@@ -1,5 +1,6 @@
 transport_ship = {
 	name = "Transport Ship"
+	ship = true
 	
 	conditions = {
 		or = {

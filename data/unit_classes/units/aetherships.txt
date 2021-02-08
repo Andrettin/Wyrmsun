@@ -1,3 +1,4 @@
 aether_transport_ship = {
 	name = "Aether Transport Ship"
+	ship = true
 }

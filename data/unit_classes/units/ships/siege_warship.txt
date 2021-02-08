@@ -1,5 +1,6 @@
 siege_warship = {
 	name = "Siege Warship"
+	ship = true
 	
 	conditions = {
 		unit_class = smithy
