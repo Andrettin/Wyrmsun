@@ -1,0 +1,6 @@
+quenoth = {
+	name = "Quenoth"
+	map_template = a_stirring_in_the_night
+	pos = { 6 16 }
+	base_unit_type = unit_settlement_site
+}
