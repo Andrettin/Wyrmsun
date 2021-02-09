@@ -8,4 +8,9 @@ norse = {
 	}
 	help_town_sound = basic_germanic_voices_help_town
 	work_complete_sound = basic_germanic_voices_work_complete
+	
+	ship_names = {
+		"Ringhorn" #Balder's ship in Norse mythology in which he was cremated; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
+		"Skrauti" #dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins; the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
+	}
 }
