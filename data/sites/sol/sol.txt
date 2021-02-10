@@ -1,6 +1,6 @@
 sol = {
 	name = "Sol"
-	map_template = universe
+	map_template = sol_system
 	random_astrocoordinate = true
 	astrodistance = 0
 	astrodistance_additive_modifier = 0 #in tiles
