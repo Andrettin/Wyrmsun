@@ -1,12 +1,11 @@
 quenoth = {
 	name = "Quenoth"
-	main_template = universe
+	main_template = quenoth_system
 	world = quenoth
 	size = { 40 40 }
+	subtemplate_top_left_pos = { 10 10 } #so that it is placed in the Quenoth System's center
 	circle = true
 	clear_terrain = true
 	unusable_area_terrain_type = dirt
 	unusable_area_overlay_terrain_type = space
-	surrounding_terrain_type = dirt
-	surrounding_overlay_terrain_type = space
 }

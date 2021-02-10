@@ -1,6 +1,6 @@
 sela = {
 	name = "Sela"
-	map_template = universe
+	map_template = quenoth_system
 	random_astrocoordinate = true
 	astrocoordinate_reference_subtemplate = quenoth
 	astrodistance_additive_modifier = 8
