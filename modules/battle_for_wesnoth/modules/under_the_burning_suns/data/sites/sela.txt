@@ -1,8 +1,7 @@
 sela = {
 	name = "Sela"
 	map_template = quenoth_system
-	random_astrocoordinate = true
+	map_template_orbit = true
 	astrocoordinate_reference_subtemplate = quenoth
-	astrodistance_additive_modifier = 0
 	base_unit_type = unit_yellow_star #dwarf star; presumably similar to Sol, as in the original it was Irdya's sun
 }
