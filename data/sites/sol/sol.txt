@@ -3,6 +3,6 @@ sol = {
 	map_template = universe
 	random_astrocoordinate = true
 	astrodistance = 0
-	astrodistance_additive_modifier = 8 #in tiles
+	astrodistance_additive_modifier = 0 #in tiles
 	base_unit_type = unit_yellow_star #dwarf star
 }

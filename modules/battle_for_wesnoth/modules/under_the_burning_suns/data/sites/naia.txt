@@ -3,6 +3,6 @@ naia = {
 	map_template = quenoth_system
 	random_astrocoordinate = true
 	astrocoordinate_reference_subtemplate = quenoth
-	astrodistance_additive_modifier = 8
+	astrodistance_additive_modifier = 1
 	base_unit_type = unit_yellow_star #dwarf star; presumably similar to Sela, as in the original story it was created in imitation of it
 }
