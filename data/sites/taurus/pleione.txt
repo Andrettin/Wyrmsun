@@ -1,8 +1,7 @@
 pleione = { #28 Tauri
 	name = "Pleione"
-	#commented out as it was ending up in the same position as Merope
-	#map_template = universe
-	#astrocoordinate = { 57.2967 24.1367 } #from www.github.com/ofrohn/d3-celestial
-	#astrodistance = 392
+	map_template = universe
+	astrocoordinate = { 57.2967 24.1367 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 392
 	base_unit_type = unit_blue_white_star #giant star
 }
