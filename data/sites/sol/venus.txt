@@ -1,0 +1,5 @@
+venus = {
+	name = "Venus"
+	orbit_center = sol
+	distance_from_orbit_center = 108 #108 million kilometers
+}

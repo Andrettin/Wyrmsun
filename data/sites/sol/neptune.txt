@@ -1,0 +1,5 @@
+neptune = {
+	name = "Neptune"
+	orbit_center = sol
+	distance_from_orbit_center = 4500 #4.5 billion kilometers
+}

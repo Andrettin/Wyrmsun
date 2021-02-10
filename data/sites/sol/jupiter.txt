@@ -1,0 +1,5 @@
+jupiter = {
+	name = "Jupiter"
+	orbit_center = sol
+	distance_from_orbit_center = 778 #778 million kilometers
+}

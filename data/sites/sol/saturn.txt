@@ -1,0 +1,5 @@
+saturn = {
+	name = "Saturn"
+	orbit_center = sol
+	distance_from_orbit_center = 1400 #1.4 billion kilometers
+}

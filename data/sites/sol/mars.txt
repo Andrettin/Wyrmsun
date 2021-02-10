@@ -1,0 +1,5 @@
+mars = {
+	name = "Mars"
+	orbit_center = sol
+	distance_from_orbit_center = 230 #230 million kilometers
+}

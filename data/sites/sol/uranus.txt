@@ -1,0 +1,5 @@
+uranus = {
+	name = "Uranus"
+	orbit_center = sol
+	distance_from_orbit_center = 3000 #3 billion kilometers
+}

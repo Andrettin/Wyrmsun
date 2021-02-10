@@ -1,0 +1,5 @@
+mercury = {
+	name = "Mercury"
+	orbit_center = sol
+	distance_from_orbit_center = 58 #58 million kilometers
+}
