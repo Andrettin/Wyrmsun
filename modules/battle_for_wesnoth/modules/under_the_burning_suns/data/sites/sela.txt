@@ -1,0 +1,8 @@
+sela = {
+	name = "Sela"
+	map_template = universe
+	random_astrocoordinate = true
+	astrocoordinate_reference_subtemplate = quenoth
+	astrodistance_additive_modifier = 8
+	base_unit_type = unit_yellow_star #dwarf star; presumably similar to Sol, as in the original it was Irdya's sun
+}
