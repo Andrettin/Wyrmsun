@@ -1,0 +1,7 @@
+dimidium = {
+	name = "Dimidium"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = helvetios
+	distance_from_orbit_center_au = 0.0527 #average; apastron of 0.0534 AU and periastron of 0.0520
+	#also known as Bellerophon
+}

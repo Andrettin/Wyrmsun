@@ -1,0 +1,7 @@
+helvetios = {
+	name = "Helvetios"
+	map_template = universe
+	astrocoordinate = { -15.6334 20.7688 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 50.45
+	base_unit_type = unit_yellow_star
+}
