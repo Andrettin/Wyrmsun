@@ -1,0 +1,5 @@
+amateru = {
+	name = "Amateru"
+	base_unit_type = unit_barren_world
+	orbit_center = ain
+}

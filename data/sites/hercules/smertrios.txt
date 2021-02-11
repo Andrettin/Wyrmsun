@@ -1,0 +1,5 @@
+smertrios = {
+	name = "Smertrios"
+	base_unit_type = unit_barren_world
+	orbit_center = ogma
+}
