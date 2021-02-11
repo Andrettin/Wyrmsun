@@ -1,0 +1,6 @@
+meztli = {
+	name = "Meztli"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = tonatiuh
+	distance_from_orbit_center_au = 0.78 #average; apastron of 0.80 AU and periastron of 0.76
+}
