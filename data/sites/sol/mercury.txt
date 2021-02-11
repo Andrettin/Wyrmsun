@@ -1,5 +1,8 @@
 mercury = {
 	name = "Mercury"
-	orbit_center = sol
+	map_template = sol_system
+	base_unit_type = unit_barren_world
+	map_template_orbit = true
 	distance_from_orbit_center = 58 #58 million kilometers
+	astrodistance_additive_modifier = 1 #to make it more distant than the sun
 }
