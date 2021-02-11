@@ -10,19 +10,19 @@ unit_template_star = {
 	box_size = { 127 127 }
 }
 
-unit_yellow_star = {
+unit_yellow_star = { #Class G
 	name = "Yellow Star"
 	parent = unit_template_star
 }
 
-unit_blue_star = {
+unit_blue_star = { #Class O
 	name = "Blue Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_blue.png"
 	icon = star_blue
 }
 
-unit_blue_white_star = {
+unit_blue_white_star = { #Class B
 	name = "Blue-White Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_blue_white.png"
@@ -36,28 +36,28 @@ unit_brown_star = {
 	icon = star_brown
 }
 
-unit_orange_star = {
+unit_orange_star = { #Class K
 	name = "Orange Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_orange.png"
 	icon = star_orange
 }
 
-unit_red_star = {
+unit_red_star = { #Class M
 	name = "Red Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_red.png"
 	icon = star_red
 }
 
-unit_white_star = {
+unit_white_star = { #Class A
 	name = "White Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_white.png"
 	icon = star_white
 }
 
-unit_yellow_white_star = {
+unit_yellow_white_star = { #Class F
 	name = "Yellow-White Star"
 	parent = unit_template_star
 	image_file = "celestial_bodies/star_yellow_white.png"
