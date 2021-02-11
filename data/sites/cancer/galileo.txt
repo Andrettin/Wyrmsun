@@ -1,7 +1,6 @@
-#galileo = {
-#	name = "Galileo"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = copernicus
-	#distance_from_orbit_center_au = 0.1145 #average; apastron of 0.116 AU and periastron of 0.113
-#}
+galileo = {
+	name = "Galileo"
+	base_unit_type = unit_barren_world
+	orbit_center = copernicus
+	distance_from_orbit_center_au = 0.1145 #average; apastron of 0.116 AU and periastron of 0.113
+}

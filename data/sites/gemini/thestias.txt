@@ -1,0 +1,5 @@
+thestias = {
+	name = "Thestias"
+	base_unit_type = unit_barren_world
+	orbit_center = pollux
+}

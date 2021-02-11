@@ -1,7 +1,6 @@
-#saffar = {
-#	name = "Saffar"
-#	map_template = universe
-	#base_unit_type = unit_iron_barren_world #gas giant containing silicates, iron, vanadium and titanium
-	#orbit_center = titawin
-	#distance_from_orbit_center_au = 0.0594 #average; apastron of 0.0601 AU and periastron of 0.0587
-#}
+saffar = {
+	name = "Saffar"
+	base_unit_type = unit_iron_barren_world #gas giant containing silicates, iron, vanadium and titanium
+	orbit_center = titawin
+	distance_from_orbit_center_au = 0.0594 #average; apastron of 0.0601 AU and periastron of 0.0587
+}

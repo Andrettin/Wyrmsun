@@ -1,6 +1,5 @@
-#guarani = {
-#	name = "Guarani"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = tupi
-#}
+guarani = {
+	name = "Guarani"
+	base_unit_type = unit_barren_world
+	orbit_center = tupi
+}

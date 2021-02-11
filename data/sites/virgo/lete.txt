@@ -1,6 +1,5 @@
-#lete = {
-#	name = "Lete"
-#	map_template = universe
-	#base_unit_type = unit_gas_giant
-	#orbit_center = flegetonte
-#}
+lete = {
+	name = "Lete"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = flegetonte
+}

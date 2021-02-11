@@ -1,6 +1,5 @@
-#surt = {
-#	name = "Surt"
-#	map_template = universe
-	#base_unit_type = unit_gas_giant
-	#orbit_center = muspelheim
-#}
+surt = {
+	name = "Surt"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = muspelheim
+}

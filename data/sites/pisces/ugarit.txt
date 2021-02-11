@@ -1,6 +1,5 @@
-#ugarit_world = {
-#	name = "Ugarit"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = ebla_star
-#}
+ugarit_world = {
+	name = "Ugarit"
+	base_unit_type = unit_barren_world
+	orbit_center = ebla_star
+}

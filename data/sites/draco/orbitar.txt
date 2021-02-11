@@ -1,6 +1,5 @@
-#orbitar = {
-#	name = "Orbitar"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = fafnir
-#}
+orbitar = {
+	name = "Orbitar"
+	base_unit_type = unit_barren_world
+	orbit_center = fafnir
+}

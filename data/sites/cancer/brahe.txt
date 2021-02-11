@@ -1,7 +1,6 @@
-#brahe = {
-#	name = "Brahe"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = copernicus
-	#distance_from_orbit_center_au = 0.2395 #average; apastron of 0.260 AU and periastron of 0.219
-#}
+brahe = {
+	name = "Brahe"
+	base_unit_type = unit_barren_world
+	orbit_center = copernicus
+	distance_from_orbit_center_au = 0.2395 #average; apastron of 0.260 AU and periastron of 0.219
+}

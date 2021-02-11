@@ -1,6 +1,5 @@
-#dagon = {
-#	name = "Dagon"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = fomalhaut
-#}
+dagon = {
+	name = "Dagon"
+	base_unit_type = unit_barren_world
+	orbit_center = fomalhaut
+}

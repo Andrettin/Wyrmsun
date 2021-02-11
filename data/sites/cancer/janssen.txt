@@ -1,7 +1,6 @@
-#janssen = {
-#	name = "Janssen"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = copernicus
-	#distance_from_orbit_center_au = 0.015405 #average; apastron of 0.01617 AU and periastron of 0.01464
-#}
+janssen = {
+	name = "Janssen"
+	base_unit_type = unit_barren_world
+	orbit_center = copernicus
+	distance_from_orbit_center_au = 0.015405 #average; apastron of 0.01617 AU and periastron of 0.01464
+}

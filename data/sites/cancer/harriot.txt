@@ -1,7 +1,6 @@
-#harriot = {
-#	name = "Harriot"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = copernicus
-	#distance_from_orbit_center_au = 0.7815 #average; apastron of 0.833 AU and periastron of 0.730
-#}
+harriot = {
+	name = "Harriot"
+	base_unit_type = unit_barren_world
+	orbit_center = copernicus
+	distance_from_orbit_center_au = 0.7815 #average; apastron of 0.833 AU and periastron of 0.730
+}

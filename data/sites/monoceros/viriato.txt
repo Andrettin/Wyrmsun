@@ -1,6 +1,5 @@
-#viriato = {
-#	name = "Viriato"
-#	map_template = universe
-	#base_unit_type = unit_gas_giant
-	#orbit_center = lusitania
-#}
+viriato = {
+	name = "Viriato"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = lusitania
+}

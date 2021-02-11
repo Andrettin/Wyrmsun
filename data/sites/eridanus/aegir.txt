@@ -1,6 +1,5 @@
-#aegir = {
-#	name = "Aegir" #"Ægir"
-#	map_template = universe
-	#base_unit_type = unit_gas_giant
-	#orbit_center = ran
-#}
+aegir = {
+	name = "Aegir" #"Ægir"
+	base_unit_type = unit_barren_world #gas giant
+	orbit_center = ran
+}

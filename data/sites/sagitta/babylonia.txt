@@ -1,6 +1,5 @@
-#babylonia = {
-#	name = "Babylonia"
-#	map_template = universe
-	#base_unit_type = unit_barren_world
-	#orbit_center = uruk_star
-#}
+babylonia = {
+	name = "Babylonia"
+	base_unit_type = unit_barren_world
+	orbit_center = uruk_star
+}
