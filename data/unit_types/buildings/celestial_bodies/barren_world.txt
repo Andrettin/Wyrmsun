@@ -23,6 +23,6 @@ unit_barren_world = {
 unit_iron_barren_world = {
 	name = "Iron Barren World"
 	parent = unit_template_barren_world
-	notes = "Iron is converted to copper at a 100% ratio."
+	#notes = "Iron is converted to copper at a 100% ratio."
 	given_resource = iron
 }
