@@ -1,0 +1,5 @@
+titan = {
+	name = "Titan"
+	base_unit_type = unit_barren_moon
+	orbit_center = saturn
+}
