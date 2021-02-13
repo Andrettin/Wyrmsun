@@ -1,0 +1,5 @@
+phobos = {
+	name = "Phobos"
+	base_unit_type = unit_barren_moon #could also be an asteroid instead
+	orbit_center = mars
+}
