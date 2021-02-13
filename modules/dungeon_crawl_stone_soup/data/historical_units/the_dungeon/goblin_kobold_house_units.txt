@@ -16,7 +16,8 @@ goblin_kobold_house = {
 goblin_kobold_house_unit = {
 	repeat_count = 5
 	unit_types = {
-		unit_goblin_swordsman = 2
+		unit_goblin_swordsman
+		unit_hobgoblin_warrior
 		unit_kobold_footpad
 	}
 	

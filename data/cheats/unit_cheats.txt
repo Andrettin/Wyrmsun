@@ -102,6 +102,14 @@ goblin_thief = {
 	}
 }
 
+hobgoblin_warrior = {
+	code = "hob the gob"
+	
+	effects = {
+		create_unit = unit_hobgoblin_warrior
+	}
+}
+
 orc_spearthrower = {
 	code = greenspear
 	

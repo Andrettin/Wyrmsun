@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Resources
 - Added checks to prevent the stored resource quantity from becoming negative.
 
+* Units
+- Added Hobgoblin Warrior unit.
+
 -----------------------------------------------------------------------
 - 4.1.3
 -----------------------------------------------------------------------
