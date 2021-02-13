@@ -1,0 +1,5 @@
+triton = {
+	name = "Triton"
+	base_unit_type = unit_barren_moon
+	orbit_center = neptune
+}

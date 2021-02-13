@@ -4,5 +4,4 @@ jupiter = {
 	base_unit_type = unit_barren_world
 	map_template_orbit = true
 	distance_from_orbit_center = 778 #778 million kilometers
-	astrodistance_additive_modifier = 1 #to make it more distant than the sun
 }

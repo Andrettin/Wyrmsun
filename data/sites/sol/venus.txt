@@ -4,7 +4,6 @@ venus = {
 	base_unit_type = unit_barren_world
 	map_template_orbit = true
 	distance_from_orbit_center = 108 #108 million kilometers
-	astrodistance_additive_modifier = 1 #to make it more distant than the sun
 	cultural_names = {
 		norse = "Friggjarstjarna" #the name means "Frigg's Star"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 174.
 	}

@@ -1,0 +1,5 @@
+nereid = {
+	name = "Nereid"
+	base_unit_type = unit_barren_moon
+	orbit_center = neptune
+}
