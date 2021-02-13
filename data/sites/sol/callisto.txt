@@ -1,0 +1,6 @@
+callisto = {
+	name = "Callisto"
+	base_unit_type = unit_barren_moon
+	orbit_center = jupiter
+	distance_from_orbit_center = 1.883 #average; apastron of 1.897 Gm and periastron of 1.869 Gm
+}

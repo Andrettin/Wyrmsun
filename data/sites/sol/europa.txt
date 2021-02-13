@@ -1,0 +1,6 @@
+europa = {
+	name = "Europa"
+	base_unit_type = unit_barren_moon
+	orbit_center = jupiter
+	distance_from_orbit_center = 0.6709 #mean orbit radius
+}

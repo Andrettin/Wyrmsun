@@ -1,0 +1,6 @@
+ganymede = {
+	name = "Ganymede"
+	base_unit_type = unit_barren_moon
+	orbit_center = jupiter
+	distance_from_orbit_center = 1.0704 #average; apastron of 1.0716 Gm and periastron of 1.0692 Gm
+}
