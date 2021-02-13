@@ -1,0 +1,28 @@
+unit_template_barren_moon = {
+	name = "Barren Moon"
+	parent = unit_template_celestial_body
+	template = true
+	description = "A barren moon, devoid of life, but containing rich mineral deposits."
+	frame_size = { 64 64 }
+	tile_size = { 2 2 }
+	box_size = { 63 63 }
+	neutral_minimap_color = { 128 128 0 }
+	starting_resources = 30000
+	can_harvest = true
+	max_harvesters = 3
+}
+
+unit_barren_moon = {
+	name = "Barren Moon"
+	parent = unit_template_barren_moon
+	subtypes = {
+		unit_iron_barren_moon
+	}
+}
+
+unit_iron_barren_moon = {
+	name = "Iron Barren Moon"
+	parent = unit_template_barren_moon
+	#notes = "Iron is converted to copper at a 100% ratio."
+	given_resource = iron
+}
