@@ -4,4 +4,3 @@
 /models/celestial_bodies/star/Star.blend (by Kwaliti) (licensed under the CC0)
 /models/celestial_bodies/iron_barren_world/ (by Kwaliti) (licensed under the CC0)
 /models/units/ (by Kwaliti) (licensed under the CC0)
-/models/units/ (by Kwaliti) (licensed under the CC0)

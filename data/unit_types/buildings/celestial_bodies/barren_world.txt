@@ -3,7 +3,9 @@ unit_template_barren_world = {
 	parent = unit_template_celestial_body
 	template = true
 	description = "A barren world, devoid of life, but containing rich mineral deposits."
+	image_file = "celestial_bodies/iron_barren_world.png"
 	frame_size = { 96 96 }
+	icon = star
 	tile_size = { 3 3 }
 	box_size = { 95 95 }
 	neutral_minimap_color = { 128 128 0 }
@@ -24,5 +26,24 @@ unit_iron_barren_world = {
 	name = "Iron Barren World"
 	parent = unit_template_barren_world
 	#notes = "Iron is converted to copper at a 100% ratio."
+	image_file = "celestial_bodies/iron_barren_world.png"
+	icon = star
+	animation_set = world
 	given_resource = iron
+	variations = {
+		1 = {
+		}
+		2 = {
+			animation_set = world_2
+		}
+		3 = {
+			animation_set = world_3
+		}
+		4 = {
+			animation_set = world_4
+		}
+		5 = {
+			animation_set = world_5
+		}
+	}
 }
