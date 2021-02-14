@@ -3,7 +3,7 @@ universe = {
 	size = { 512 512 }
 	astrodistance_multiplier = 5
 	astrodistance_additive_modifier = 0 #in tiles
-	#default_astrocoordinate_reference_subtemplate = earth_space
+	default_astrocoordinate_reference_subtemplate = earth_space
 	base_terrain_type = dirt
 	base_overlay_terrain_type = space
 }
