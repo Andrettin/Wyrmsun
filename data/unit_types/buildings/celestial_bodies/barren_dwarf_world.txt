@@ -3,7 +3,9 @@ unit_template_barren_dwarf_world = {
 	parent = unit_template_celestial_body
 	template = true
 	description = "A barren dwarf world, devoid of life, but containing rich mineral deposits."
+	image_file = "celestial_bodies/iron_barren_moon.png"
 	frame_size = { 64 64 }
+	icon = star
 	tile_size = { 2 2 }
 	box_size = { 63 63 }
 	neutral_minimap_color = { 128 128 0 }
@@ -24,5 +26,24 @@ unit_iron_barren_dwarf_world = {
 	name = "Iron Barren Dwarf World"
 	parent = unit_template_barren_dwarf_world
 	#notes = "Iron is converted to copper at a 100% ratio."
+	image_file = "celestial_bodies/iron_barren_moon.png"
+	icon = star
+	animation_set = world
 	given_resource = iron
+	variations = {
+		1 = {
+		}
+		2 = {
+			animation_set = world_2
+		}
+		3 = {
+			animation_set = world_3
+		}
+		4 = {
+			animation_set = world_4
+		}
+		5 = {
+			animation_set = world_5
+		}
+	}
 }

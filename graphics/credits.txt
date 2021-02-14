@@ -90,6 +90,7 @@
 /graphics/buildings/teuton/town_hall_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/teuton/university_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/teuton/watch_tower_snow.png (by Jinn) (licensed under the CC0)
+/graphics/celestial_bodies/iron_barren_moon.png (by Kwaliti) (licensed under the CC0)
 /graphics/celestial_bodies/iron_barren_world.png (by Kwaliti) (licensed under the CC0)
 /graphics/celestial_bodies/star.png (by https://www.solarsystemscope.com/textures/, Kwaliti and Jinn) (licensed under the CC-BY 4.0)
 /graphics/celestial_bodies/star_blue.png (by https://www.solarsystemscope.com/textures/, Kwaliti and Jinn) (licensed under the CC-BY 4.0)

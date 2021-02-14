@@ -1,0 +1,44 @@
+world = {
+	still = {
+		frame = 0
+		wait = 4
+		frame = 0
+		wait = 1
+	}
+}
+
+world_2 = {
+	still = {
+		frame = 1
+		wait = 4
+		frame = 1
+		wait = 1
+	}
+}
+
+world_3 = {
+	still = {
+		frame = 2
+		wait = 4
+		frame = 2
+		wait = 1
+	}
+}
+
+world_4 = {
+	still = {
+		frame = 3
+		wait = 4
+		frame = 3
+		wait = 1
+	}
+}
+
+world_5 = {
+	still = {
+		frame = 4
+		wait = 4
+		frame = 4
+		wait = 1
+	}
+}
