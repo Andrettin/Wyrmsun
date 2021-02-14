@@ -1,0 +1,22 @@
+unit_silver_rock = {
+	name = "Silver Rock"
+	parent = unit_template_metal_rock
+	image_file = "neutral/buildings/silver_rock_1.png"
+	frame_size = { 43 43 }
+	offset = { 0 -2 }
+	icon = icon_silver_rock
+	given_resource = silver
+	variations = {
+		1 = {
+		}
+		2 = {
+			image_file = "neutral/buildings/silver_rock_2.png"
+		}
+		3 = {
+			image_file = "neutral/buildings/silver_rock_3.png"
+		}
+		4 = {
+			image_file = "neutral/buildings/silver_rock_4.png"
+		}
+	}
+}

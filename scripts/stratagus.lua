@@ -888,7 +888,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Rock") == false) then
 			AddTrigger("tip-silver-rock",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-rock") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_silver_rock") then
 						return true
 					else
 						return false
@@ -2050,7 +2050,7 @@ Units = {
 	"unit-unicorn",
 	"unit-settlement-site",
 	"unit-gold-mine",
-	"unit-silver-rock", "unit-silver-mine",
+	"unit-silver-mine",
 	"unit-copper-mine",
 	"unit-iron-mine",
 	"unit-mithril-mine",

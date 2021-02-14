@@ -1149,7 +1149,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 			rock_type = "unit_gold_rock"
 		elseif (RandomNumber == 1) then
 			deposit_type = "unit_silver_deposit"
-			rock_type = "unit-silver-rock"
+			rock_type = "unit_silver_rock"
 		elseif (RandomNumber == 2) then
 			deposit_type = "unit_copper_deposit"
 			rock_type = "unit_copper_rock"
@@ -1220,7 +1220,7 @@ function CreateGoldRocks(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 		if (RandomNumber == 0) then
 			rock_type = "unit_gold_rock"
 		elseif (RandomNumber == 1) then
-			rock_type = "unit-silver-rock"
+			rock_type = "unit_silver_rock"
 		elseif (RandomNumber == 2) then
 			rock_type = "unit_copper_rock"
 		end
@@ -2466,7 +2466,7 @@ function ApplyRawTiles()
 						rock_type = "unit_gold_rock"
 					elseif (RandomNumber == 1) then
 						deposit_type = "unit_silver_deposit"
-						rock_type = "unit-silver-rock"
+						rock_type = "unit_silver_rock"
 					elseif (RandomNumber == 2) then
 						deposit_type = "unit_copper_deposit"
 						rock_type = "unit_copper_rock"
@@ -2879,13 +2879,13 @@ function ApplyRawTiles()
 		end
 		
 		if (Editor.Running == EditorNotRunning) then
-			if ((GetNumUnitsAt(PlayerNumNeutral, "unit_gold_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
+			if ((GetNumUnitsAt(PlayerNumNeutral, "unit_gold_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
 				-- destroy gold and silver rocks that ended up in inappropriate locations
 				local uncount = 0
 				uncount = GetUnits(PlayerNumNeutral)
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1]) then
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_gold_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit_copper_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-diamond-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-emerald-rock") then
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_gold_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit_silver_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit_copper_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-diamond-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-emerald-rock") then
 							if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
 								KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), PlayerNumNeutral, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 							end
