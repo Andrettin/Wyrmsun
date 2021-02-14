@@ -1388,6 +1388,10 @@ function GameStarting()
 	end
 end
 
+if (is_test_run()) then
+	return
+end
+
 if (Editor.Running == EditorCommandLine) then
 	if (CliMapName and CliMapName ~= "") then
 		StartEditor(CliMapName, false)
