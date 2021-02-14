@@ -1,0 +1,28 @@
+unit_template_barren_dwarf_world = {
+	name = "Barren Dwarf World"
+	parent = unit_template_celestial_body
+	template = true
+	description = "A barren dwarf world, devoid of life, but containing rich mineral deposits."
+	frame_size = { 64 64 }
+	tile_size = { 2 2 }
+	box_size = { 63 63 }
+	neutral_minimap_color = { 128 128 0 }
+	starting_resources = 10000
+	can_harvest = true
+	max_harvesters = 3
+}
+
+unit_barren_dwarf_world = {
+	name = "Barren Dwarf World"
+	parent = unit_template_barren_dwarf_world
+	subtypes = {
+		unit_iron_barren_dwarf_world
+	}
+}
+
+unit_iron_barren_dwarf_world = {
+	name = "Iron Barren Dwarf World"
+	parent = unit_template_barren_dwarf_world
+	#notes = "Iron is converted to copper at a 100% ratio."
+	given_resource = iron
+}
