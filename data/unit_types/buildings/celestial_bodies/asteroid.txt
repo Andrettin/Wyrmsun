@@ -1,0 +1,55 @@
+unit_template_asteroid = {
+	name = "Asteroid"
+	template = true
+	animation_set = animations_building
+	neutral_minimap_color = { 255 255 0 }
+	hit_points = 25500
+	draw_level = 30
+	tile_size = { 1 1 }
+	box_size = { 31 31 }
+	sight_range = 1
+	armor = 20
+	missile = missile_none
+	priority = 0
+	type = space
+	starting_resources = 1000
+	num_directions = 1
+	building = false
+	visible_under_fog = true
+	can_harvest = true
+	harvest_from_outside = true
+	sounds = {
+		selected = metal_selected
+	}
+}
+
+unit_asteroid = {
+	name = "Asteroid"
+	parent = unit_template_asteroid
+	subtypes = {
+		unit_copper_asteroid
+	}
+}
+
+unit_copper_asteroid = {
+	name = "Copper Asteroid"
+	parent = unit_template_asteroid
+	image_file = "neutral/buildings/copper_rock_1.png"
+	frame_size = { 43 43 }
+	offset = { 0 -2 }
+	icon = icon_copper_rock
+	given_resource = copper
+	variations = {
+		1 = {
+		}
+		2 = {
+			image_file = "neutral/buildings/copper_rock_2.png"
+		}
+		3 = {
+			image_file = "neutral/buildings/copper_rock_3.png"
+		}
+		4 = {
+			image_file = "neutral/buildings/copper_rock_4.png"
+		}
+	}
+}
