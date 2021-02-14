@@ -1,0 +1,42 @@
+unit_gold_rock = {
+	name = "Gold Rock"
+	parent = unit_template_metal_rock
+	image_file = "neutral/buildings/gold_rock_1.png"
+	frame_size = { 43 43 }
+	icon = icon_gold_rock
+	given_resource = gold
+	starting_resources = { 500 1000 }
+	variations = {
+		1 = {
+			resource_min = 501
+		}
+		2 = {
+			image_file = "neutral/buildings/gold_rock_2.png"
+			resource_min = 501
+		}
+		3 = {
+			image_file = "neutral/buildings/gold_rock_3.png"
+			resource_min = 501
+		}
+		4 = {
+			image_file = "neutral/buildings/gold_rock_4.png"
+			resource_min = 501
+		}
+		small_1 = {
+			image_file = "neutral/buildings/gold_rock_small_1.png"
+			resource_max = 500
+		}
+		small_2 = {
+			image_file = "neutral/buildings/gold_rock_small_2.png"
+			resource_max = 500
+		}
+		small_3 = {
+			image_file = "neutral/buildings/gold_rock_small_3.png"
+			resource_max = 500
+		}
+		small_4 = {
+			image_file = "neutral/buildings/gold_rock_small_4.png"
+			resource_max = 500
+		}
+	}
+}

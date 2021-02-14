@@ -1,0 +1,22 @@
+unit_copper_rock = {
+	name = "Copper Rock"
+	parent = unit_template_metal_rock
+	image_file = "neutral/buildings/copper_rock_1.png"
+	frame_size = { 43 43 }
+	offset = { 0 -2 }
+	icon = icon_copper_rock
+	given_resource = copper
+	variations = {
+		1 = {
+		}
+		2 = {
+			image_file = "neutral/buildings/copper_rock_2.png"
+		}
+		3 = {
+			image_file = "neutral/buildings/copper_rock_3.png"
+		}
+		4 = {
+			image_file = "neutral/buildings/copper_rock_4.png"
+		}
+	}
+}

@@ -1146,13 +1146,13 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 		local rock_type
 		if (RandomNumber == 0) then
 			deposit_type = "unit_gold_deposit"
-			rock_type = "unit-gold-rock"
+			rock_type = "unit_gold_rock"
 		elseif (RandomNumber == 1) then
 			deposit_type = "unit_silver_deposit"
 			rock_type = "unit-silver-rock"
 		elseif (RandomNumber == 2) then
 			deposit_type = "unit_copper_deposit"
-			rock_type = "unit-copper-rock"
+			rock_type = "unit_copper_rock"
 		elseif (RandomNumber >= 3) then
 			deposit_type = "unit_iron_deposit"
 			rock_type = nil
@@ -1218,11 +1218,11 @@ function CreateGoldRocks(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 		RandomNumber = SyncRand(3)
 		local rock_type
 		if (RandomNumber == 0) then
-			rock_type = "unit-gold-rock"
+			rock_type = "unit_gold_rock"
 		elseif (RandomNumber == 1) then
 			rock_type = "unit-silver-rock"
 		elseif (RandomNumber == 2) then
-			rock_type = "unit-copper-rock"
+			rock_type = "unit_copper_rock"
 		end
 		for sub_x=0,(GetUnitTypeData("unit_gold_deposit", "TileWidth") - 1) do
 			for sub_y=0,(GetUnitTypeData("unit_gold_deposit", "TileHeight") - 1) do
@@ -2454,7 +2454,7 @@ function ApplyRawTiles()
 						for sub_y=0,(GetUnitTypeData("unit_copper_deposit", "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 							if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
-								unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {x + sub_x, y + sub_y})
+								unit = CreateUnit("unit_copper_rock", PlayerNumNeutral, {x + sub_x, y + sub_y})
 							end
 						end
 					end
@@ -2463,13 +2463,13 @@ function ApplyRawTiles()
 					local deposit_type
 					if (RandomNumber == 0) then
 						deposit_type = "unit_gold_deposit"
-						rock_type = "unit-gold-rock"
+						rock_type = "unit_gold_rock"
 					elseif (RandomNumber == 1) then
 						deposit_type = "unit_silver_deposit"
 						rock_type = "unit-silver-rock"
 					elseif (RandomNumber == 2) then
 						deposit_type = "unit_copper_deposit"
-						rock_type = "unit-copper-rock"
+						rock_type = "unit_copper_rock"
 					end
 					unit = CreateUnit(deposit_type, PlayerNumNeutral, {x, y})
 					SetResourcesHeld(unit, 50000)
@@ -2879,13 +2879,13 @@ function ApplyRawTiles()
 		end
 		
 		if (Editor.Running == EditorNotRunning) then
-			if ((GetNumUnitsAt(PlayerNumNeutral, "unit-gold-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-copper-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
+			if ((GetNumUnitsAt(PlayerNumNeutral, "unit_gold_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-silver-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
 				-- destroy gold and silver rocks that ended up in inappropriate locations
 				local uncount = 0
 				uncount = GetUnits(PlayerNumNeutral)
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1]) then
-						if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gold-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-copper-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-diamond-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-emerald-rock") then
+						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_gold_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-silver-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit_copper_rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-diamond-rock" or GetUnitVariable(uncount[unit1], "Ident") == "unit-emerald-rock") then
 							if (RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Water" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Rock" or RawTile(GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")) == "Tree") then
 								KillUnitAt(GetUnitVariable(uncount[unit1], "Ident"), PlayerNumNeutral, 1, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 							end
@@ -3889,7 +3889,7 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 				unit = CreateUnit("unit_copper_deposit", PlayerNumNeutral, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 				SetResourcesHeld(unit, 50000)
 				for i = 1, 9 do
-					unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {gold_mine_spawn_point[1] + 1, gold_mine_spawn_point[2] + 1})
+					unit = CreateUnit("unit_copper_rock", PlayerNumNeutral, {gold_mine_spawn_point[1] + 1, gold_mine_spawn_point[2] + 1})
 				end
 			else
 				for sub_x=-2,4 do

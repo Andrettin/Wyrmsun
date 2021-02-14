@@ -1,0 +1,24 @@
+unit_template_metal_rock = {
+	name = "Metal Rock"
+	template = true
+	animation_set = animations_building
+	neutral_minimap_color = { 255 255 0 }
+	hit_points = 25500
+	draw_level = 30
+	tile_size = { 1 1 }
+	box_size = { 31 31 }
+	sight_range = 1
+	armor = 20
+	missile = missile_none
+	priority = 0
+	type = land
+	starting_resources = 1000
+	num_directions = 1
+	building = false
+	visible_under_fog = true
+	can_harvest = true
+	harvest_from_outside = true
+	sounds = {
+		selected = metal_selected
+	}
+}

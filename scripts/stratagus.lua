@@ -856,7 +856,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Gold Rock") == false) then
 			AddTrigger("tip-gold-rock",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gold-rock") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_gold_rock") then
 						return true
 					else
 						return false
@@ -920,7 +920,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Rock") == false) then
 			AddTrigger("tip-copper-rock",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-copper-rock") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_copper_rock") then
 						return true
 					else
 						return false
@@ -2049,9 +2049,9 @@ Units = {
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-water-elemental",
 	"unit-unicorn",
 	"unit-settlement-site",
-	"unit-gold-rock", "unit-gold-mine",
+	"unit-gold-mine",
 	"unit-silver-rock", "unit-silver-mine",
-	"unit-copper-rock", "unit-copper-mine",
+	"unit-copper-mine",
 	"unit-iron-mine",
 	"unit-mithril-mine",
 	"unit-coal-mine",

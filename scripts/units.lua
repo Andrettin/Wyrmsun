@@ -782,83 +782,6 @@ DefineUnitType("unit-emerald-mine", {
 	ButtonKey = "e"
 } )
 
-DefineUnitType("unit-gold-rock", {
-	Name = "Gold Rock",
-	Image = {"file", "neutral/buildings/gold_rock_1.png", "size", {43, 43}},
-	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
-	Animations = "animations-building", Icon = "icon-gold-rock",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"time", 150},
-	HitPoints = 25500,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Armor = 20, Missile = "missile-none",
-	Priority = 0,
---	Corpse = "unit-destroyed-3x3-place",
---	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	StartingResources = {500, 1000},
-	NumDirections = 1,
-	Building = false, VisibleUnderFog = true,
-	GivesResource = "gold", CanHarvest = true,
-	HarvestFromOutside = true,
-	Variations = {
-		{
-			"variation-id", "1",
-			"resource-min", 501
-		},
-		{
-			"variation-id", "2",
-			"resource-min", 501,
-			"file", "neutral/buildings/gold_rock_2.png",
-			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
-		},
-		{
-			"variation-id", "3",
-			"resource-min", 501,
-			"file", "neutral/buildings/gold_rock_3.png",
-			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
-		},
-		{
-			"variation-id", "4",
-			"resource-min", 501,
-			"file", "neutral/buildings/gold_rock_4.png",
-			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
-		},
-		{
-			"variation-id", "small-1",
-			"resource-max", 500,
-			"file", "neutral/buildings/gold_rock_small_1.png",
-			"shadow-file", "neutral/buildings/gold_rock_small_1_shadow.png"
-		},
-		{
-			"variation-id", "small-2",
-			"resource-max", 500,
-			"file", "neutral/buildings/gold_rock_small_2.png",
-			"shadow-file", "neutral/buildings/gold_rock_small_2_shadow.png"
-		},
-		{
-			"variation-id", "small-3",
-			"resource-max", 500,
-			"file", "neutral/buildings/gold_rock_small_3.png",
-			"shadow-file", "neutral/buildings/gold_rock_small_3_shadow.png"
-		},
-		{
-			"variation-id", "small-4",
-			"resource-max", 500,
-			"file", "neutral/buildings/gold_rock_small_4.png",
-			"shadow-file", "neutral/buildings/gold_rock_small_4_shadow.png"
-		}
-	},
-	Sounds = {
-		"selected", "metal-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"dead", "building-destroyed"
-	}
-} )
-
 DefineUnitType("unit-silver-rock", {
 	Name = "Silver Rock",
 	Image = {"file", "neutral/buildings/silver_rock_1.png", "size", {43, 43}},
@@ -898,51 +821,6 @@ DefineUnitType("unit-silver-rock", {
 			"variation-id", "4",
 			"file", "neutral/buildings/silver_rock_4.png",
 			"shadow-file", "neutral/buildings/silver_rock_4_shadow.png"
-		}
-	},
-	Sounds = {
-		"selected", "metal-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"dead", "building-destroyed"
-	}
-} )
-
-DefineUnitType("unit-copper-rock", {
-	Name = "Copper Rock",
-	Image = {"file", "neutral/buildings/copper_rock_1.png", "size", {43, 43}},
-	Animations = "animations-building", Icon = "icon-copper-rock",
-	Offset = {0, -2},
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"time", 150},
-	HitPoints = 25500,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	Armor = 20, Missile = "missile-none",
-	Priority = 0,
---	Corpse = "unit-destroyed-3x3-place",
-	Type = "land",
-	StartingResources = {1000},
-	NumDirections = 1,
-	Building = false, VisibleUnderFog = true,
-	GivesResource = "copper", CanHarvest = true,
-	HarvestFromOutside = true,
-	Variations = {
-		{
-			"variation-id", "1"
-		},
-		{
-			"variation-id", "2",
-			"file", "neutral/buildings/copper_rock_2.png"
-		},
-		{
-			"variation-id", "3",
-			"file", "neutral/buildings/copper_rock_3.png"
-		},
-		{
-			"variation-id", "4",
-			"file", "neutral/buildings/copper_rock_4.png"
 		}
 	},
 	Sounds = {
