@@ -1,0 +1,5 @@
+charon = {
+	name = "Charon"
+	base_unit_type = unit_asteroid
+	orbit_center = pluto
+}
