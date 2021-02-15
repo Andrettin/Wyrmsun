@@ -1,0 +1,7 @@
+sedna = {
+	name = "Sedna"
+	map_template = universe
+	base_unit_type = unit_barren_dwarf_world
+	map_template_orbit = true
+	distance_from_orbit_center_au = 506 #semi-major axis
+}
