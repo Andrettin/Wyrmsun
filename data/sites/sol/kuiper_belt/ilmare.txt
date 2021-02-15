@@ -1,0 +1,5 @@
+ilmare = {
+	name = "Ilmare" #"Ilmarë"
+	base_unit_type = unit_asteroid
+	orbit_center = varda
+}

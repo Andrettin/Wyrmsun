@@ -1,0 +1,7 @@
+varda = {
+	name = "Varda"
+	map_template = sol_system
+	base_unit_type = unit_barren_dwarf_world
+	map_template_orbit = true
+	distance_from_orbit_center_au = 46.110 #semi-major axis
+}
