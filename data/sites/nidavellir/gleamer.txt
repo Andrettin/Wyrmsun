@@ -1,0 +1,7 @@
+gleamer = { #dwarven name for the moon in the Lay of Alvis, here used as the moon of the dwarven homeworld, Nidavellir
+	name = "Gleamer"
+	#map_template = universe
+	map_template_orbit = true
+	#astrocoordinate_reference_subtemplate = nidavellir_space
+	base_unit_type = unit_barren_moon
+}
