@@ -1,0 +1,7 @@
+timeteller = { #elven name for the moon in the Lay of Alvis, here used as the moon of the elven homeworld, Alfheim
+	name = "Timeteller"
+	map_template = alfheim_system
+	map_template_orbit = true
+	astrocoordinate_reference_subtemplate = alfheim_space
+	base_unit_type = unit_barren_moon
+}

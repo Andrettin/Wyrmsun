@@ -1,0 +1,7 @@
+fairwheel = { #elven name for the sun in the Lay of Alvis, here used as the sun of the elven homeworld, Alfheim
+	name = "Fairwheel"
+	map_template = alfheim_system
+	map_template_orbit = true
+	astrocoordinate_reference_subtemplate = alfheim_space
+	base_unit_type = unit_yellow_star
+}
