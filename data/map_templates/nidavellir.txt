@@ -11,3 +11,40 @@ nidavellir = {
 		unit_stone_pile = 16
 	}
 }
+
+nidavellir_space = {
+	name = "Nidavellir"
+	#main_template = universe
+	world = nidavellir
+	size = { 128 128 }
+	subtemplate_top_left_pos = { 0 0 }
+	circle = true
+	base_terrain_type = dry_mud
+	unusable_area_terrain_type = dry_mud
+	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = dry_mud
+	surrounding_overlay_terrain_type = space
+	generated_terrains = {
+		mud = {
+			seed_count = 32
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		flamefood_tree = {
+			seed_count = 32
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 16
+			max_percent = 20
+			target_terrain_type = dirt
+			target_terrain_type = dry_mud
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_iron_deposit = 1
+		unit_mithril_deposit = 1
+	}
+}
