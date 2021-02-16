@@ -38,7 +38,7 @@ nidavellir_space = {
 		rock = {
 			seed_count = 16
 			max_percent = 20
-			target_terrain_type = dirt
+			target_terrain_type = mud
 			target_terrain_type = dry_mud
 		}
 	}

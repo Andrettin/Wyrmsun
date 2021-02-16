@@ -1,0 +1,62 @@
+jotunheim = {
+	name = "Jotunheim"
+	world = jotunheim
+	size = { 984 728 }
+	terrain_image_file = "scripts/map_templates/jotunheim.png"
+	overlay_terrain_image_file = "scripts/map_templates/jotunheim_overlay.png"
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_silver_deposit = 1
+		unit_copper_deposit = 1
+		unit_iron_deposit = 3
+		unit_tree_stump = 4
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}
+
+jotunheim_space = {
+	name = "Jotunheim"
+	main_template = jotunheim_system
+	world = jotunheim
+	size = { 32 32 }
+	subtemplate_top_left_pos = { 10 10 } #so that it is placed in its system map template's center
+	circle = true
+	base_terrain_type = dry_mud
+	unusable_area_terrain_type = dry_mud
+	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = dry_mud
+	surrounding_overlay_terrain_type = space
+	generated_terrains = {
+		mud = {
+			seed_count = 8
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		flamefood_tree = {
+			seed_count = 8
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 4
+			max_percent = 20
+			target_terrain_type = dry_mud
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_copper_deposit = 1
+		unit_iron_deposit = 1
+	}
+}
+
+jotunheim_system = {
+	name = "Jotunheim System"
+	main_template = universe
+	size = { 52 52 }
+	circle = true
+}

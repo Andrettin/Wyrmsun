@@ -1,0 +1,7 @@
+everbright = { #giant/ettin name for the sun in the Lay of Alvis, here used as the sun of the giant/ettin homeworld, Jotunheim
+	name = "Everbright"
+	map_template = jotunheim_system
+	map_template_orbit = true
+	astrocoordinate_reference_subtemplate = jotunheim_space
+	base_unit_type = unit_yellow_star
+}
