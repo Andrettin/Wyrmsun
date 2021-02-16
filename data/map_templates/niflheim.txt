@@ -44,6 +44,6 @@ niflheim_space = {
 	generated_neutral_units = {
 		unit_gold_deposit = 1
 		unit_iron_deposit = 1
-		unit_skeleton_warrior = 16
+		unit_skeleton_warrior = 32
 	}
 }
