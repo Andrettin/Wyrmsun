@@ -1,0 +1,7 @@
+huitzilopochtli = {
+	name = "Huitzilopochtli"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 1.2821028 #semi-major axis
+}
