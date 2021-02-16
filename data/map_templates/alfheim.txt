@@ -29,14 +29,12 @@ alfheim_space = {
 			target_terrain_type = grass
 		}
 		pine_tree = {
-			seed_count = 16
-			expansion_chance = 50
+			seed_count = 32
 			max_percent = 33
 			target_terrain_type = grass
 		}
 		rock = {
 			seed_count = 4
-			expansion_chance = 50
 			max_percent = 20
 			target_terrain_type = dirt
 		}
