@@ -1,0 +1,6 @@
+veles = {
+	name = "Veles"
+	base_unit_type = unit_barren_world
+	orbit_center = stribor
+	distance_from_orbit_center_au = 1.191 #semi-major axis
+}

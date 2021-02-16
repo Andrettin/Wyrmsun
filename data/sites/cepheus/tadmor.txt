@@ -1,0 +1,6 @@
+tadmor_world = {
+	name = "Tadmor"
+	base_unit_type = unit_barren_world
+	orbit_center = errai
+	distance_from_orbit_center_au = 2.05 #semi-major axis
+}

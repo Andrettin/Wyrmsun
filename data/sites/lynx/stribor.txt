@@ -1,0 +1,7 @@
+stribor = {
+	name = "Stribor"
+	map_template = universe
+	astrocoordinate = { 133.4617 33.0568 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 255.1
+	base_unit_type = unit_yellow_white_star #dwarf star
+}

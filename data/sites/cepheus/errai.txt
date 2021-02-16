@@ -1,0 +1,7 @@
+errai = {
+	name = "Errai"
+	map_template = universe
+	astrocoordinate = { -5.1631 77.6323 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 44.9
+	base_unit_type = unit_orange_star #giant star
+}

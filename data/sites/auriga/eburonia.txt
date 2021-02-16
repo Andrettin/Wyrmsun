@@ -1,0 +1,6 @@
+eburonia = {
+	name = "Eburonia"
+	base_unit_type = unit_barren_world
+	orbit_center = nervia
+	distance_from_orbit_center_au = 0.0580 #semi-major axis
+}

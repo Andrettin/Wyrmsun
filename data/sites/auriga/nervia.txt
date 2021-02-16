@@ -1,0 +1,7 @@
+nervia = {
+	name = "Nervia"
+	map_template = universe
+	astrocoordinate = { 102.8772 40.8678 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 144
+	base_unit_type = unit_yellow_star #dwarf star
+}
