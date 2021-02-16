@@ -1,0 +1,7 @@
+embla = {
+	name = "Embla"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 2.3545176 #semi-major axis
+}

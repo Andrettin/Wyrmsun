@@ -1,0 +1,7 @@
+brage = {
+	name = "Brage"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 2.5930571 #semi-major axis
+}
