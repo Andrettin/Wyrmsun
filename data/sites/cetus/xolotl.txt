@@ -1,0 +1,6 @@
+xolotl = {
+	name = "Xolotl" #"Xólotl"
+	base_unit_type = unit_barren_world
+	orbit_center = axolotl
+	distance_from_orbit_center_au = 0.191 #semi-major axis
+}
