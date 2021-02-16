@@ -14,6 +14,8 @@ space = {
 		mud
 		dry_mud
 		desert_sand
+		ice
+		snow
 	}
 	solid_tiles = {
 		13 = 1

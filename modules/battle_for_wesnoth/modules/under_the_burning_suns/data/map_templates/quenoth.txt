@@ -6,6 +6,8 @@ quenoth = {
 	subtemplate_top_left_pos = { 10 10 } #so that it is placed in the Quenoth System's center
 	circle = true
 	clear_terrain = true
-	unusable_area_terrain_type = dirt
+	unusable_area_terrain_type = dry_mud
 	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = dry_mud
+	surrounding_overlay_terrain_type = space
 }

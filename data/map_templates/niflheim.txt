@@ -10,3 +10,40 @@ niflheim = {
 		unit_roaming_fog = 64
 	}
 }
+
+niflheim_space = {
+	name = "Niflheim"
+	main_template = universe
+	#world = niflheim
+	size = { 32 32 }
+	circle = true
+	base_terrain_type = snow
+	unusable_area_terrain_type = ice
+	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = ice
+	surrounding_overlay_terrain_type = space
+	generated_terrains = {
+		ice = {
+			seed_count = 8
+			max_percent = 20
+			target_terrain_type = snow
+		}
+		pine_tree_snow = {
+			seed_count = 4
+			expansion_chance = 50
+			max_percent = 33
+			target_terrain_type = snow
+		}
+		rock_snow = {
+			seed_count = 1
+			expansion_chance = 50
+			max_percent = 20
+			target_terrain_type = snow
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 1
+		unit_iron_deposit = 1
+		unit_skeleton_warrior = 16
+	}
+}
