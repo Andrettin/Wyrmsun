@@ -32,19 +32,20 @@ jotunheim_space = {
 	surrounding_overlay_terrain_type = space
 	generated_terrains = {
 		mud = {
-			seed_count = 8
-			max_percent = 33
+			seed_count = 4
+			max_percent = 10
 			target_terrain_type = dry_mud
 		}
 		flamefood_tree = {
-			seed_count = 8
-			max_percent = 33
+			seed_count = 4
+			max_percent = 20
 			target_terrain_type = dry_mud
 		}
 		rock = {
 			seed_count = 4
 			max_percent = 20
 			target_terrain_type = dry_mud
+			target_terrain_type = mud
 		}
 	}
 	generated_neutral_units = {
