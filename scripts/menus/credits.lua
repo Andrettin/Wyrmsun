@@ -47,6 +47,7 @@ function RunShowCreditsMenu()
 		"  Russell Smith",
 		"  a-detiste",
 		"  Akien",
+		"  bergentroll",
 		"  BeWorld",
 		"  Chris Beck (iceiceice)",
 		"  DinkyDyeAussie",
