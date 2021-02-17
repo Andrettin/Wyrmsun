@@ -15,6 +15,9 @@ neutral_civilization = neutral
 minimap_color_index = 1
 minimap_non_land_territory_alpha = 64
 
+time_resource = time
+wealth_resource = copper
+
 underground_time_of_day = underground
 default_time_of_day_schedule = terran_schedule
 default_season_schedule = terran_schedule

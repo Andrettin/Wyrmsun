@@ -31,12 +31,6 @@ DefineDefaultResourceNames(
 	"time", "copper", "lumber", "oil", "iron", "stone", "coal", "research", "prestige", "gold", "silver", "mithril", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
 )
 
-DefineResource("time", {
-	Name = "Time",
-	DefaultIncome = 0,
-	ActionName = "stop"
-})
-
 DefineResource("gold", {
 	Name = "Gold",
 	DefaultIncome = 100,

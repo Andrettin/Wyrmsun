@@ -1,0 +1,5 @@
+time = {
+	name = "Time"
+	action_name = "stop"
+	default_income = 0
+}
