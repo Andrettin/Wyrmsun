@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which could mistakenly cause under certain circumstances a removed settlement site to be saved (when saving a game) as the settlement head unit for a settlement, instead of the town hall which had been built on top of it.
 - The preferences.txt file is now saved in AppData instead of in the Documents folder.
 - Improved save/load performance and memory usage for player tile exploration.
+- Improved the performance of the database parsing and image scaling.
 
 * Resources
 - Added checks to prevent the stored resource quantity from becoming negative.
