@@ -1,0 +1,10 @@
+proxima_centauri = { #Alpha Centauri C
+	name = "Proxima Centauri"
+	map_template = universe
+	astrocoordinate = { -142.571 -62.6795 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 4.2465 #light-years
+	#orbit_center = rigil_kentaurus
+	#distance_from_orbit_center_au = 8700 #semi-major axis
+	base_unit_type = unit_red_star #dwarf star
+	astrodistance_additive_modifier = 4 #so that it does not end up too close to Earth
+}
