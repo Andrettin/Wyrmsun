@@ -1,0 +1,7 @@
+budovicium_asteroid = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=2524
+	name = "Budovicium"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 3.1147504 #semi-major axis
+}
