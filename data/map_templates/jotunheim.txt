@@ -52,6 +52,8 @@ jotunheim_space = {
 		unit_gold_deposit = 1
 		unit_copper_deposit = 1
 		unit_iron_deposit = 1
+		unit_ettin = 8
+		unit_orc_spearthrower = 8
 	}
 }
 
