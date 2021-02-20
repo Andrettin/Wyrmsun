@@ -1,0 +1,7 @@
+varuna = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=20000
+	name = "Varuna"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 42.7159477 #semi-major axis
+}
