@@ -27,29 +27,32 @@ unit_asteroid = {
 	name = "Asteroid"
 	parent = unit_template_asteroid
 	subtypes = {
-		unit_copper_asteroid
+		unit_iron_asteroid
 	}
 }
 
-unit_copper_asteroid = {
-	name = "Copper Asteroid"
+unit_iron_asteroid = {
+	name = "Iron Asteroid"
 	parent = unit_template_asteroid
-	image_file = "neutral/buildings/copper_rock_1.png"
-	frame_size = { 43 43 }
-	offset = { 0 -2 }
+	image_file = "celestial_bodies/iron_asteroid.png"
+	frame_size = { 32 32 }
 	icon = icon_copper_rock
-	given_resource = copper
+	animation_set = world
+	given_resource = iron
 	variations = {
 		1 = {
 		}
 		2 = {
-			image_file = "neutral/buildings/copper_rock_2.png"
+			animation_set = world_2
 		}
 		3 = {
-			image_file = "neutral/buildings/copper_rock_3.png"
+			animation_set = world_3
 		}
 		4 = {
-			image_file = "neutral/buildings/copper_rock_4.png"
+			animation_set = world_4
+		}
+		5 = {
+			animation_set = world_5
 		}
 	}
 }
