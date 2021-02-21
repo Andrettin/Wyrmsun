@@ -1,14 +1,5 @@
-weldyn = {
-	name = "Weldyn"
-	map_template = earth_30_45_latitude_north
-	geocoordinate = {
-		20.46799068060 #Belgrade's longitude
-		44.42037518220 #Ravenna's latitude
-	}
-}
-
 belgrade += {
-	aliases += weldyn_settlement
+	aliases += weldyn
 	
 	cultural_names = {
 		wesnothian = "Weldyn"
