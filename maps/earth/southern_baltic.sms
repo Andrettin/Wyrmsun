@@ -4,7 +4,7 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
-ApplyMapTemplate("earth", GetCampaignData("heimdalls-progeny", "MapTemplateStartPosX"), GetCampaignData("heimdalls-progeny", "MapTemplateStartPosY"))
+ApplyMapTemplate("earth", 4022, 667)
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 
