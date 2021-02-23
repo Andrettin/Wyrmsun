@@ -1,0 +1,3 @@
+iron_barren_moon = {
+	file = "icons/celestial_bodies/iron_barren_moon.png"
+}
