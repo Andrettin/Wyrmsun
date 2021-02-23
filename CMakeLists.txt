@@ -1,9 +1,20 @@
-project(wyrmsun NONE)
+#     ___
+#    / _/    ___
+#   / /   ——— \ \ ,—,__ _____ ____ ___  _____  __———,——____
+#  | (    | |  \ / / \ || ___)  _ ' _ \(  ___)/ / \ ||  __ \
+#  |  \__/   \_) ) \_) ||(   | ( | | ) )\__ \( (__) || /  ) )
+#   \_____/\____/ \_  / |_\  /_| /_|/_/\_____)\___/\_\_\ /_/
+#                 /__/
+
 cmake_minimum_required(VERSION 3.0)
+project(wyrmsun VERSION 4.1.3 LANGUAGES NONE)
 
 set(BINDIR bin CACHE STRING "Where to install Wyrmsun launch script")
 set(DATADIR share/wyrmsun CACHE STRING "Where to install Wyrmsun data files")
-set(DOCSDIR share/doc/wyrmsun CACHE STRING "Where to install Wyrmsun documentation")
+set(
+  DOCSDIR share/doc/wyrmsun
+  CACHE
+  STRING "Where to install Wyrmsun documentation")
 
 configure_file(linux/wyrmsun.sh.in linux/wyrmsun.sh @ONLY)
 
@@ -28,7 +39,8 @@ install(
 
 install(FILES oaml.defs DESTINATION ${DATADIR})
 
-install(DIRECTORY
+install(
+  DIRECTORY
   data
   fonts
   graphics
