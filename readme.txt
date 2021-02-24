@@ -57,8 +57,12 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.4
 -----------------------------------------------------------------------
 
+* AI
+- Fixed issue which resulted in AI players being able to hire units from any civilization from mercenary camps (no matter the civilization of the mercenary faction itself).
+
 * Maps
 - Fixed freeze/crash when starting the Southern Baltic map.
+- Fixed issue which caused settlement territories to not be generated on certain custom maps.
 
 * Miscellaneous
 - Fixed a potential crash cause when processing triggers.
