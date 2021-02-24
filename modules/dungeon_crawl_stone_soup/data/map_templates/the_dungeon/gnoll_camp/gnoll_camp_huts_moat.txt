@@ -6,7 +6,7 @@ gnoll_camp_huts_moat = {
 	constructed_only = true
 	optional = true
 	#should only appear in areas where werehyena myths existed (i.e. Africa and Persia)
-	min_subtemplate_geocoordinate = { -18 37 }
+	min_subtemplate_geocoordinate = { -18 40 }
 	max_subtemplate_geocoordinate = { 63 -35 }
 	character_units = {
 		1 = unit_gnoll_warrior #gnoll
