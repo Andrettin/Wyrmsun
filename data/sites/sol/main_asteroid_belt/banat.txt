@@ -1,0 +1,7 @@
+banat = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=21663
+	name = "Banat"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 3.0535068 #semi-major axis
+}

@@ -1,0 +1,7 @@
+burgundia = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=374
+	name = "Burgundia"
+	map_template = sol_system
+	base_unit_type = unit_asteroid
+	map_template_orbit = true
+	distance_from_orbit_center_au = 2.7803748 #semi-major axis
+}
