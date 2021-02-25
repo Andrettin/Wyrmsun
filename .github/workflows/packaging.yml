@@ -1,0 +1,63 @@
+---
+name: Create deb packages
+'on':
+  push:
+    tags:
+      v**
+  workflow_dispatch:
+env:
+  BUILD_DIR: ${{ github.workspace }}/build/
+  BUILD_TYPE: Release
+  CMAKE_INSTALL_PREFIX: /usr/
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check code
+        uses: actions/checkout@v2
+      - name: Install Lintian
+        run: sudo apt-get install -y lintian
+      - name: Get release version
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> "$GITHUB_ENV"
+      - name: Set CPU number
+        run: echo "THREADS=$(nproc)" >> "$GITHUB_ENV"
+      - name: Configure CMake
+        run: >-
+          cmake
+          -S "$GITHUB_WORKSPACE"
+          -B "$BUILD_DIR"
+          -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
+          -DCMAKE_INSTALL_PREFIX="$CMAKE_INSTALL_PREFIX"
+      - name: Create package
+        run: >-
+          cmake
+          --build "$BUILD_DIR"
+          --target package
+          --parallel "$THREADS"
+      - name: Get package name
+        run: echo "PACKAGE_NAME=$(ls wyrmsun*.deb)" >> "$GITHUB_ENV"
+        working-directory: ${{ env.BUILD_DIR }}
+      - name: Lint package
+        run: lintian "${BUILD_DIR}/${PACKAGE_NAME}"
+        continue-on-error: true
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: deb packages ${{ github.ref }}
+          draft: true
+          # TODO Add 'body-path:' or 'body:'
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ env.BUILD_DIR }}/${{ env.PACKAGE_NAME }}
+          # Be careful here
+          asset_name: "wyrmsun-${{ env.RELEASE_VERSION }}.deb"
+          asset_content_type: application/vnd.debian.binary-package
