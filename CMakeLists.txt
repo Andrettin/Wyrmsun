@@ -7,57 +7,35 @@
 #                 /__/
 
 cmake_minimum_required(VERSION 3.7.1)
-project(wyrmsun VERSION 4.1.3 LANGUAGES NONE)
+project(wyrmsun VERSION 4.1.5 LANGUAGES NONE)
 
-set(
-  DATA_DIR "share/wyrmsun/"
-  CACHE
-  STRING "Where to install Wyrmsun data files")
-set(
-  ICONS_DIR "share/icons/hicolor/"
-  CACHE
-  STRING "The root of icon theme")
-set(
-  DOC_DIR "share/doc/wyrmsun/"
-  CACHE
-  STRING "Where to install Wyrmsun documentation")
+set(BIN_DIR games CACHE STRING "Where to install the Wyrmsun launch script")
+set(DATA_DIR share/wyrmsun CACHE STRING "Where to install the Wyrmsun data files")
+set(ICONS_DIR share/icons/hicolor CACHE STRING "The root of icon theme")
+set(DOC_DIR share/doc/wyrmsun CACHE STRING "Where to install the Wyrmsun documentation")
 
 configure_file(linux/wyrmsun.sh.in wyrmsun.sh @ONLY)
 
-install(
-  PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/wyrmsun.sh
-  DESTINATION games/
-  RENAME wyrmsun)
-install(FILES linux/wyrmsun.desktop DESTINATION share/applications/)
-install(FILES linux/wyrmsun.appdata.xml DESTINATION share/metainfo/)
-install(
-  FILES graphics/ui/icons/wyrmsun_icon_32.png
-  DESTINATION "${ICONS_DIR}/32x32/apps/"
-  RENAME wyrmsun.png)
-install(
-  FILES graphics/ui/icons/wyrmsun_icon_64.png
-  DESTINATION "${ICONS_DIR}/64x64/apps/"
-  RENAME wyrmsun.png)
-install(
-  FILES graphics/ui/icons/wyrmsun_icon_128.png
-  DESTINATION "${ICONS_DIR}/128x128/apps/"
-  RENAME wyrmsun.png)
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/wyrmsun.sh DESTINATION ${BIN_DIR} RENAME wyrmsun)
+install(FILES linux/wyrmsun.desktop DESTINATION share/applications)
+install(FILES linux/wyrmsun.appdata.xml DESTINATION share/metainfo)
+install(FILES graphics/ui/icons/wyrmsun_icon_32.png DESTINATION ${ICONS_DIR}32x32/apps RENAME wyrmsun.png)
+install(FILES graphics/ui/icons/wyrmsun_icon_64.png DESTINATION ${ICONS_DIR}64x64/apps RENAME wyrmsun.png)
+install(FILES graphics/ui/icons/wyrmsun_icon_128.png DESTINATION ${ICONS_DIR}128x128/apps RENAME wyrmsun.png)
 
-install(FILES oaml.defs DESTINATION ${DATA_DIR})
-
-install(
-  DIRECTORY
-  data
-  fonts
-  graphics
-  interface
-  maps
-  modules
-  music
-  scripts
-  sounds
-  translations
-  DESTINATION ${DATA_DIR})
+install(DIRECTORY
+	data
+	fonts
+	graphics
+	interface
+	maps
+	modules
+	music
+	scripts
+	sounds
+	translations
+	DESTINATION ${DATA_DIR}
+)
 
 install(FILES readme.txt DESTINATION ${DOC_DIR})
 install(DIRECTORY documents DESTINATION ${DOC_DIR})
@@ -67,8 +45,7 @@ install(DIRECTORY documents DESTINATION ${DOC_DIR})
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGING_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
 set(CPACK_PACKAGE_CONTACT "Anton Karmanov <techie@bastardi.net>")
-set(
-  CPACK_PACKAGE_DESCRIPTION
+set(CPACK_PACKAGE_DESCRIPTION
   "Strategy game data files
 Wyrmsun is an open-source real-time strategy game which features elements of
 mythology, history and fiction.
