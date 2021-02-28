@@ -1,2 +1,6 @@
 oceania = {
 }
+
+australia = {
+	superregions = { oceania }
+}

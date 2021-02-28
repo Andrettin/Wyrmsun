@@ -1,2 +1,14 @@
 asia = {
 }
+
+china = {
+	superregions = { asia }
+}
+
+india = {
+	superregions = { asia }
+}
+
+japan = {
+	superregions = { asia }
+}

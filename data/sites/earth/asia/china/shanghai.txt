@@ -1,0 +1,8 @@
+shanghai = {
+	name = "Shanghai"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 121.43650467800 31.21645245260 } #from Natural Earth
+	regions = {
+		china
+	}
+}

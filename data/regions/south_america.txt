@@ -1,3 +1,7 @@
 south_america = {
 	superregions = { america }
 }
+
+brazil = {
+	superregions = { south_america }
+}

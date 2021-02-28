@@ -1,0 +1,8 @@
+brasilia = {
+	name = "Brasilia" #"Brasília"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { -47.91605228840 -15.78334023150 } #from Natural Earth
+	regions = {
+		brazil
+	}
+}

@@ -40,7 +40,7 @@ DefineSite("florianopolis", {
 	},
 	HistoricalBuildings = {
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("laguna", {
@@ -61,7 +61,7 @@ DefineSite("laguna", {
 	HistoricalBuildings = {
 		1654, 0, "town_hall"
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("porto-alegre", {
@@ -82,7 +82,7 @@ DefineSite("porto-alegre", {
 	HistoricalBuildings = {
 		1740, 0, "town_hall"
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("recife", {
@@ -107,7 +107,7 @@ DefineSite("recife", {
 		1536, 0, "town_hall",
 		1828, 0, "university" -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, "Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840", Hispanic American Historical Review, vol. 81, 2001, p. 293.
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("rio-grande", {
@@ -128,7 +128,7 @@ DefineSite("rio-grande", {
 	HistoricalBuildings = {
 		1736, 0, "town_hall"
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("rio-de-janeiro", {
@@ -159,7 +159,7 @@ DefineSite("rio-de-janeiro", {
 		1900, 691565, -- in 1900, the population of the city of Rio de Janeiro was 691,565; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
 		1906, 811444 -- in 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("salvador", {
@@ -180,7 +180,7 @@ DefineSite("salvador", {
 	HistoricalBuildings = {
 		1549, 0, "town_hall"
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })
 
 DefineSite("sao-paulo", {
@@ -203,5 +203,5 @@ DefineSite("sao-paulo", {
 		1827, 0, "university", -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, "Bernardo Pereira de Vasconcelos", p. 66.
 		1904, 0, "railroad" -- the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
 	},
-	Regions = {"america", "south-america"}
+	Regions = {"brazil"}
 })

@@ -1,0 +1,8 @@
+mumbai = {
+	name = "Mumbai"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 72.85698929740 19.01699037570 } #from Natural Earth
+	regions = {
+		india
+	}
+}

@@ -38,5 +38,5 @@ DefineSite("anyang", {
 	HistoricalBuildings = {
 		-1520, 0, "town_hall"
 	},
-	Regions = {"asia"}
+	Regions = {"china"}
 })
