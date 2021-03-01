@@ -17,6 +17,7 @@ unit_template_barren_dwarf_world = {
 unit_barren_dwarf_world = {
 	name = "Barren Dwarf World"
 	parent = unit_template_barren_dwarf_world
+	default_mass = 13030 #Plutonian mass, in zettagrams
 	subtypes = {
 		unit_iron_barren_dwarf_world
 	}

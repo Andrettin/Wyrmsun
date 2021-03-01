@@ -1,5 +1,6 @@
 aegir = {
 	name = "Aegir" #"Ægir"
-	base_unit_type = unit_barren_world #gas giant
+	base_unit_type = unit_gas_giant
 	orbit_center = ran
+	mass_jm = 1.19
 }

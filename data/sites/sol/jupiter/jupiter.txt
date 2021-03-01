@@ -1,7 +1,8 @@
 jupiter = {
 	name = "Jupiter"
 	map_template = sol_system
-	base_unit_type = unit_barren_world
+	base_unit_type = unit_gas_giant
 	map_template_orbit = true
 	distance_from_orbit_center = 778 #778 million kilometers
+	mass_jm = 1 #in Jovian masses
 }

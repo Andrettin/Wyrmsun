@@ -1,0 +1,24 @@
+unit_template_gas_giant = {
+	name = "Gas Giant"
+	parent = unit_template_celestial_body
+	template = true
+	description = "A gas giant, containing rich gas resources."
+	image_file = "celestial_bodies/iron_barren_world.png"
+	frame_size = { 96 96 }
+	icon = iron_barren_world
+	tile_size = { 3 3 }
+	box_size = { 95 95 }
+	neutral_minimap_color = { 128 128 0 }
+	starting_resources = 50000
+	can_harvest = true
+	max_harvesters = 5
+}
+
+unit_gas_giant = {
+	name = "Gas Giant"
+	parent = unit_template_barren_world
+	default_mass = 1898130000 #Jovian mass, in zettagrams
+	subtypes = {
+		unit_iron_barren_world
+	}
+}

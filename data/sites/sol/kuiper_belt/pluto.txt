@@ -4,4 +4,5 @@ pluto = {
 	base_unit_type = unit_barren_dwarf_world
 	map_template_orbit = true
 	distance_from_orbit_center_au = 39.4815 #average; apastron of 49.305 AU AU and periastron of 29.658 AU
+	mass = 13030 #in zettagrams
 }

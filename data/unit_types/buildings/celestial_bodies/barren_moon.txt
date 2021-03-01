@@ -17,6 +17,7 @@ unit_template_barren_moon = {
 unit_barren_moon = {
 	name = "Barren Moon"
 	parent = unit_template_barren_moon
+	default_mass = 73420 #Lunar mass, in zettagrams
 	subtypes = {
 		unit_iron_barren_moon
 	}

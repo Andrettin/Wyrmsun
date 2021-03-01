@@ -17,6 +17,7 @@ unit_template_barren_world = {
 unit_barren_world = {
 	name = "Barren World"
 	parent = unit_template_barren_world
+	default_mass = 641710 #Martian mass, in zettagrams
 	subtypes = {
 		unit_iron_barren_world
 	}

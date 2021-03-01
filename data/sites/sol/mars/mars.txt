@@ -4,4 +4,5 @@ mars = {
 	base_unit_type = unit_barren_world
 	map_template_orbit = true
 	distance_from_orbit_center = 230 #230 million kilometers
+	mass = 641710 #in zettagrams
 }
