@@ -1,6 +1,6 @@
 dimidium = {
 	name = "Dimidium"
-	base_unit_type = unit_barren_world #gas giant
+	base_unit_type = unit_gas_giant
 	orbit_center = helvetios
 	distance_from_orbit_center_au = 0.0527 #average; apastron of 0.0534 AU and periastron of 0.0520
 	mass_jm = 0.46
