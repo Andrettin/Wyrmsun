@@ -1,0 +1,3 @@
+iron_asteroid = {
+	file = "icons/celestial_bodies/iron_asteroid.png"
+}
