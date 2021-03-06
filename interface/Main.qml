@@ -10,4 +10,8 @@ Window {
 	title: qsTr("Wyrmsun")
 	flags: Qt.FramelessWindowHint
 	//visibility: "FullScreen"
+	
+	MainMenu {
+		anchors.fill: parent
+	}
 }
