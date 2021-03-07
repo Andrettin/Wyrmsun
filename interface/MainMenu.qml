@@ -1,20 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-Item {
+MenuBase {
 	id: main_menu
 	anchors.fill: parent
-
-	property real offset_x: (width - 640 * wyrmgus.defines.scale_factor) / 2
-	property real offset_y: (height - 480 * wyrmgus.defines.scale_factor) / 2
+	background: "wyrmsun_sepia"
 	
-	Image {
-		id: background
-		anchors.fill: parent
-		source: "../graphics/backgrounds/wyrmsun_sepia.png"
-		fillMode: Image.PreserveAspectCrop
-	}
-
 	Image {
 		id: logo
 		anchors.horizontalCenter: parent.horizontalCenter
