@@ -21,9 +21,9 @@ Item {
 		id: label
 		text: highlight_hotkey(parent.text, parent.hotkey)
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.horizontalCenterOffset: parent.pressed ? 2 : 0
+		anchors.horizontalCenterOffset: parent.pressed ? 1 * wyrmgus.defines.scale_factor : 0
 		anchors.verticalCenter: parent.verticalCenter
-		anchors.verticalCenterOffset: parent.pressed ? 2 : 0
+		anchors.verticalCenterOffset: parent.pressed ? 1 * wyrmgus.defines.scale_factor : 0
 	}
 	
 	MouseArea {

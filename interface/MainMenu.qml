@@ -34,16 +34,16 @@ MenuBase {
 	NormalText {
 		id: version_text
 		text: "v" + Qt.application.version
+		anchors.right: logo.right
 		anchors.top: logo.bottom
 		anchors.topMargin: -(logo.height / 4)
-		anchors.right: logo.right
 	}
 	
 	LargeButton {
 		id: single_player_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: multiplayer_menu_button.top
-		anchors.bottomMargin: 8
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Single Player Game"
 		hotkey: "s"
 	}
@@ -52,7 +52,7 @@ MenuBase {
 		id: multiplayer_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: achievements_button.top
-		anchors.bottomMargin: 8
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Multiplayer Game"
 		hotkey: "m"
 	}
@@ -61,7 +61,7 @@ MenuBase {
 		id: achievements_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: options_button.top
-		anchors.bottomMargin: 8
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Achievements"
 		hotkey: "a"
 	}
@@ -70,6 +70,7 @@ MenuBase {
 		id: options_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
+		anchors.verticalCenterOffset: height / 2
 		text: "Options"
 		hotkey: "o"
 	}
@@ -78,7 +79,7 @@ MenuBase {
 		id: map_editor_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: options_button.bottom
-		anchors.topMargin: 8
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Map Editor"
 		hotkey: "e"
 	}
@@ -87,7 +88,7 @@ MenuBase {
 		id: mods_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: map_editor_button.bottom
-		anchors.topMargin: 8
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Mods"
 		hotkey: "d"
 	}
@@ -96,7 +97,7 @@ MenuBase {
 		id: encyclopedia_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: mods_button.bottom
-		anchors.topMargin: 8
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
 	}
@@ -105,7 +106,7 @@ MenuBase {
 		id: credits_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: encyclopedia_button.bottom
-		anchors.topMargin: 8
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Credits"
 		hotkey: "i"
 	}
@@ -114,8 +115,16 @@ MenuBase {
 		id: exit_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: credits_button.bottom
-		anchors.topMargin: 8
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Exit"
 		hotkey: "x"
+	}
+	
+	TinyText {
+		id: copyright_text
+		text: "Copyright (c) 2013-2021 by Andrettin"
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 	}
 }
