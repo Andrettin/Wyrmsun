@@ -5,8 +5,6 @@ import QtQuick.Window 2.12
 Window {
 	id: window
 	visible: false
-	width: 640
-	height: 480
 	width: 1680
 	height: 960
 	title: qsTr("Wyrmsun")
