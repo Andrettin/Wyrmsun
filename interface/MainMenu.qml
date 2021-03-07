@@ -47,4 +47,76 @@ MenuBase {
 		text: "Single Player Game"
 		hotkey: "s"
 	}
+	
+	LargeButton {
+		id: multiplayer_menu_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: single_player_menu_button.bottom
+		anchors.topMargin: 8
+		text: "Multiplayer Game"
+		hotkey: "m"
+	}
+	
+	LargeButton {
+		id: achievements_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: multiplayer_menu_button.bottom
+		anchors.topMargin: 8
+		text: "Achievements"
+		hotkey: "a"
+	}
+	
+	LargeButton {
+		id: options_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: achievements_button.bottom
+		anchors.topMargin: 8
+		text: "Options"
+		hotkey: "o"
+	}
+	
+	LargeButton {
+		id: map_editor_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: options_button.bottom
+		anchors.topMargin: 8
+		text: "Map Editor"
+		hotkey: "e"
+	}
+	
+	LargeButton {
+		id: mods_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: map_editor_button.bottom
+		anchors.topMargin: 8
+		text: "Mods"
+		hotkey: "d"
+	}
+	
+	LargeButton {
+		id: encyclopedia_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: mods_button.bottom
+		anchors.topMargin: 8
+		text: "Encyclopedia"
+		hotkey: "c"
+	}
+	
+	LargeButton {
+		id: credits_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: encyclopedia_button.bottom
+		anchors.topMargin: 8
+		text: "Credits"
+		hotkey: "i"
+	}
+	
+	LargeButton {
+		id: exit_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: credits_button.bottom
+		anchors.topMargin: 8
+		text: "Exit"
+		hotkey: "x"
+	}
 }
