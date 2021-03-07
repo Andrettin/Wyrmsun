@@ -42,8 +42,8 @@ MenuBase {
 	LargeButton {
 		id: single_player_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: parent.top
-		anchors.topMargin: offset_y + (104 + 36*1) * wyrmgus.defines.scale_factor
+		anchors.bottom: multiplayer_menu_button.top
+		anchors.bottomMargin: 8
 		text: "Single Player Game"
 		hotkey: "s"
 	}
@@ -51,8 +51,8 @@ MenuBase {
 	LargeButton {
 		id: multiplayer_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: single_player_menu_button.bottom
-		anchors.topMargin: 8
+		anchors.bottom: achievements_button.top
+		anchors.bottomMargin: 8
 		text: "Multiplayer Game"
 		hotkey: "m"
 	}
@@ -60,8 +60,8 @@ MenuBase {
 	LargeButton {
 		id: achievements_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: multiplayer_menu_button.bottom
-		anchors.topMargin: 8
+		anchors.bottom: options_button.top
+		anchors.bottomMargin: 8
 		text: "Achievements"
 		hotkey: "a"
 	}
@@ -69,8 +69,7 @@ MenuBase {
 	LargeButton {
 		id: options_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: achievements_button.bottom
-		anchors.topMargin: 8
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Options"
 		hotkey: "o"
 	}

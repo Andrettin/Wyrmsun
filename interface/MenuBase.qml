@@ -5,8 +5,6 @@ Item {
 	id: menu
 	focus: true
 
-	property real offset_x: (width - 640 * wyrmgus.defines.scale_factor) / 2
-	property real offset_y: (height - 480 * wyrmgus.defines.scale_factor) / 2
 	property string background: "wyrmsun_sepia"
 	
 	Image {
