@@ -38,8 +38,8 @@ Item {
 		}
 	}
 	
-	Keys.onPressed: {
-		on_pressed_key(event)
+	onClicked: {
+		wyrmgus.play_sound("click")
 	}
 	
 	//highlight hotkey in text
