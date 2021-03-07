@@ -15,7 +15,7 @@ Window {
 	Connections {
 		target: wyrmgus
 		onRunningChanged: {
-			if (wyrmgus.running) {
+			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
 				var component = Qt.createComponent("MainMenu.qml");
 				component.createObject(window);
 			}
