@@ -14,7 +14,7 @@ Item {
 		fillMode: Image.PreserveAspectCrop
 	}
 	
-	NormalText {
+	LargeText {
 		id: title_text
 		text: highlight(parent.title)
 		anchors.horizontalCenter: parent.horizontalCenter
