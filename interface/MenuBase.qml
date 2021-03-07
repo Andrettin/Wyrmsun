@@ -5,6 +5,7 @@ Item {
 	id: menu
 	focus: true
 
+	property string title: ""
 	property string background: "wyrmsun_sepia"
 	
 	Image {
@@ -12,7 +13,15 @@ Item {
 		source: "../graphics/backgrounds/" + background + ".png"
 		fillMode: Image.PreserveAspectCrop
 	}
-
+	
+	NormalText {
+		id: title_text
+		text: highlight(parent.title)
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: parent.top
+		anchors.topMargin: 36 * wyrmgus.defines.scale_factor
+	}
+	
 	Keys.onPressed: {
 		for (var i = 0; i < menu.children.length; ++i) {
 			var child_element = menu.children[i]
