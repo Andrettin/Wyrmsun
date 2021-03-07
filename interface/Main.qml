@@ -7,11 +7,20 @@ Window {
 	visible: false
 	width: 640
 	height: 480
+	width: 1680
+	height: 960
 	title: qsTr("Wyrmsun")
 	flags: Qt.FramelessWindowHint
 	//visibility: "FullScreen"
 	
-	MainMenu {
-		anchors.fill: parent
+	
+	Connections {
+		target: wyrmgus
+		onRunningChanged: {
+			if (wyrmgus.running) {
+				var component = Qt.createComponent("MainMenu.qml");
+				component.createObject(window);
+			}
+		}
 	}
 }
