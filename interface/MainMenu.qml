@@ -70,7 +70,7 @@ MenuBase {
 		id: options_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		anchors.verticalCenterOffset: height / 2
+		anchors.verticalCenterOffset: 14 * wyrmgus.defines.scale_factor
 		text: "Options"
 		hotkey: "o"
 	}
