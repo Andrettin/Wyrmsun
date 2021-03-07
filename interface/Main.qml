@@ -34,4 +34,14 @@ Window {
 	function highlight(text) {
 		return "<font color=\"gold\">" + text + "</font>"
 	}
+	
+	//generate a random number
+	function random(n) {
+		return Math.floor(Math.random() * n)
+	}
+	
+	//generate a random boolean value
+	function random_bool() {
+		return random(2) == 1
+	}
 }
