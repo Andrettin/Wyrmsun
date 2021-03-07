@@ -118,6 +118,10 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Exit"
 		hotkey: "x"
+		
+		onClicked: {
+			wyrmgus.exit()
+		}
 	}
 	
 	TinyText {
