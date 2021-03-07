@@ -635,19 +635,6 @@ DefineCivilization("castillian", {
 	Playable = false
 })
 
-DefineCivilization("italian", {
-	Display = "Italian",
-	Visible = false,
-	Group = "latin",
-	ParentCivilization = "latin",
-	Adjective = "Italian",
-	Playable = false,
-	PersonalNames = {
-		"male", "Alessandro",
-		"male", "Giovanni"
-	}
-})
-
 DefineCivilization("portuguese", {
 	Display = "Portuguese",
 	Visible = false,

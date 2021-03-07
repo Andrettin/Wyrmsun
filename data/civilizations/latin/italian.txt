@@ -1,3 +1,33 @@
 italian = {
+	name = "Italian"
+	parent_civilization = latin
+	group = latin
+	visible = false
+	playable = false
+	default_color = green
 	language = italian
+	
+	personal_names = {
+		male = {
+			"Alessandro"
+			"Giovanni"
+			"Michele"
+		}
+		
+		female = {
+			"Carla"
+			"Emilia"
+			"Francesca"
+			"Marta"
+			"Mirella"
+			"Renata"
+			"Sandra"
+			"Silvia"
+			"Simona"
+		}
+	}
+	
+	surnames = {
+		"Palamidese"
+	}
 }
