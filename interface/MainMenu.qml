@@ -46,6 +46,10 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Single Player Game"
 		hotkey: "s"
+		
+		onClicked: {
+			menu_stack.push("SinglePlayerGameMenu.qml")
+		}
 	}
 	
 	LargeButton {
