@@ -3,7 +3,6 @@ import QtQuick.Controls 2.12
 
 MenuBase {
 	id: main_menu
-	anchors.fill: parent
 	background: "wyrmsun_sepia"
 	
 	Image {

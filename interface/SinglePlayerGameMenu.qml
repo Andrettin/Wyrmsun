@@ -3,7 +3,6 @@ import QtQuick.Controls 2.12
 
 MenuBase {
 	id: single_player_game_menu
-	anchors.fill: parent
 	title: "Single Player"
 	
 	LargeButton {
