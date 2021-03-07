@@ -1,0 +1,7 @@
+default = {
+	large_button = {
+		normal_file = "interface/default/button_large_normal.png"
+		pressed_file = "interface/default/button_large_pressed.png"
+		grayed_file = "interface/default/button_large_grayed.png"
+	}
+}
