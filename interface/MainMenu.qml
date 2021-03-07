@@ -54,5 +54,6 @@ Item {
 		anchors.top: parent.top
 		anchors.topMargin: offset_y + (104 + 36*1) * wyrmgus.defines.scale_factor
 		text: "Single Player Game"
+		hotkey: "s"
 	}
 }

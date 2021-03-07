@@ -25,4 +25,9 @@ Window {
 			}
 		}
 	}
+	
+	//highlight text
+	function highlight(text) {
+		return "<font color=\"gold\">" + text + "</font>"
+	}
 }
