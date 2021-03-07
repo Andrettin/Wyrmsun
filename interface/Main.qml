@@ -11,6 +11,10 @@ Window {
 	flags: Qt.FramelessWindowHint
 	//visibility: "FullScreen"
 	
+	FontLoader {
+		id: berenika_font
+		source: "../fonts/berenika.ttf"
+	}
 	
 	Connections {
 		target: wyrmgus

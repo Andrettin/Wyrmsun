@@ -5,8 +5,8 @@ Item {
 	id: main_menu
 	anchors.fill: parent
 
-	property real offset_x: (width - 640 * 2) / 2
-	property real offset_y: (height - 480 * 2) / 2
+	property real offset_x: (width - 640 * wyrmgus.defines.scale_factor) / 2
+	property real offset_y: (height - 480 * wyrmgus.defines.scale_factor) / 2
 	
 	Image {
 		id: background
@@ -44,6 +44,7 @@ Item {
 		id: single_player_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.top
-		anchors.topMargin: offset_y + (104 + 36*1) * 2
+		anchors.topMargin: offset_y + (104 + 36*1) * wyrmgus.defines.scale_factor
+		text: "Single Player Game"
 	}
 }
