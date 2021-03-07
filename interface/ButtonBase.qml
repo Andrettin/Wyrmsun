@@ -11,6 +11,8 @@ Item {
 	property string hotkey: ""
 	property bool hotkey_pressed: false
 	property bool pressed: mouse_area.containsPress || hotkey_pressed
+	
+	signal clicked()
 
 	Image {
 		id: image
@@ -30,6 +32,10 @@ Item {
 		id: mouse_area
 		anchors.fill: parent
 		hoverEnabled: true
+		
+		onClicked: {
+			button.clicked()
+		}
 	}
 	
 	Keys.onPressed: {
@@ -63,6 +69,7 @@ Item {
 		if (button.hotkey != "" && event.text == button.hotkey) {
 			button.hotkey_pressed = false
 			event.accepted = true
+			button.clicked()
 		}
 	}
 }
