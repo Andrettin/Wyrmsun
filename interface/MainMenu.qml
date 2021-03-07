@@ -40,6 +40,14 @@ Item {
 		}
 	}
 	
+	NormalText {
+		id: version_text
+		text: "v" + Qt.application.version
+		anchors.top: logo.bottom
+		anchors.topMargin: -(logo.height / 4)
+		anchors.right: logo.right
+	}
+	
 	LargeButton {
 		id: single_player_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
