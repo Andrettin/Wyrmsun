@@ -20,8 +20,8 @@ Window {
 		target: wyrmgus
 		onRunningChanged: {
 			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
-				var component = Qt.createComponent("MenuStack.qml");
-				component.createObject(window);
+				var component = Qt.createComponent("MenuStack.qml")
+				component.createObject(window)
 			}
 		}
 	}
