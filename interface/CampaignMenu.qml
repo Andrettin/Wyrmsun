@@ -15,7 +15,8 @@ MenuBase {
 		onClicked: {
 			wyrmgus.game.current_campaign = wyrmgus.preferences.selected_campaign
 			wyrmgus.call_lua_command("save_preferences(); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.NoRandomness = wyr.preferences.NoRandomness; GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay; GameSettings.Difficulty = wyr.preferences.Difficulty; RunMap(\"scripts/map_templates/campaign.smp\");")
-			menu_stack.push("MapView.qml")
+			var component = Qt.createComponent("MapView.qml")
+			component.createObject(window)
 		}
 	}
 	
