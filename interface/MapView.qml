@@ -10,6 +10,8 @@ Item {
 	readonly property int tile_size: 32 * wyrmgus.defines.scale_factor
 	property int map_width: 512
 	property int map_height: 512
+	property var tile_data: []
+	property bool tile_data_initialized: false
 	
 	Rectangle {
 		anchors.fill: parent
@@ -30,6 +32,7 @@ Item {
 		contentY: map_overlay.contentY
 		model: GridModel {}
 		delegate: Tile {
+			currentFrame: tile_data_initialized ? map_view.tile_data[column][row].frame : 0
 		}
 	}
 	
@@ -48,5 +51,17 @@ Item {
 			x: 4 * tile_size
 			y: 5 * tile_size
 		}
+	}
+		
+	Component.onCompleted: {
+		for (var x = 0; x < map_width; ++x) {
+			map_view.tile_data.push([])
+			
+			for (var y = 0; y < map_height; ++y) {
+				map_view.tile_data[x].push({"frame": random(3) + 9})
+			}
+		}
+		
+		map_view.tile_data_initialized = true
 	}
 }

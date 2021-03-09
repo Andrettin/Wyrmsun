@@ -14,6 +14,5 @@ AnimatedSprite {
 	frameCount: 120
 	source: "image://tile/space"
 	paused: true
-	currentFrame: random(3) + 9
 	interpolate: false
 }
