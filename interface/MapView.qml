@@ -33,11 +33,7 @@ Item {
 		model: MapGridModel {
 			map_layer: 0
 		}
-		delegate: Tile {
-			frameCount: image_frame_count
-			source: "image://tile/" + image_source
-			currentFrame: frame
-		}
+		delegate: Tile {}
 	}
 	
 	Flickable {

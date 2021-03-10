@@ -10,9 +10,9 @@ AnimatedSprite {
 	implicitHeight: tile_size
 	frameWidth: tile_size
 	frameHeight: tile_size
-	frameCount: 112
-	source: "image://tile/dry_mud"
+	frameCount: 1
+	source: "image://tile/dry_mud/17"
 	paused: true
-	currentFrame: 17
+	currentFrame: 0
 	interpolate: false
 }
