@@ -1,6 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-import grid_model 1.0
+import map_grid_model 1.0
 
 Item {
 	id: map_view
@@ -30,9 +30,13 @@ Item {
 		boundsBehavior: Flickable.StopAtBounds
 		contentX: map_overlay.contentX
 		contentY: map_overlay.contentY
-		model: GridModel {}
+		model: MapGridModel {
+			map_layer: 0
+		}
 		delegate: Tile {
-			currentFrame: tile_data_initialized ? map_view.tile_data[column][row].frame : 0
+			frameCount: image_frame_count
+			source: "image://tile/" + image_source
+			currentFrame: frame
 		}
 	}
 	
