@@ -1,0 +1,34 @@
+flamefood_tree_snow = {
+	name = "Flamefood Tree (Snow)"
+	character = a
+	color = { 128 128 32 }
+	base_terrain_types = { snow }
+	overlay = true
+	image_file = "terrain/flamefood_tree_snow.png"
+	flags = {
+		land
+		forest
+		unpassable
+	}
+	resource = lumber
+	solid_tiles = { 18 }
+	destroyed_tiles = { 16 }
+	transition_tiles = {
+		any = {
+			north = { 2 }
+			south = { 34 }
+			west = { 17 }
+			east = { 19 }
+			northwest_outer = { 1 }
+			northeast_outer = { 3 }
+			southwest_outer = { 33 }
+			southeast_outer = { 35 }
+			northwest_inner = { 10 }
+			northeast_inner = { 11 }
+			southwest_inner = { 26 }
+			southeast_inner = { 27 }
+			northwest_southeast_inner = { 30 }
+			northeast_southwest_inner = { 14 }
+		}
+	}
+}
