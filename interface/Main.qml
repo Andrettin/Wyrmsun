@@ -21,6 +21,12 @@ Window {
 		onRunningChanged: {
 			if (visible && !wyrmgus.parameters.test_run && wyrmgus.running) {
 				var component = Qt.createComponent("MenuStack.qml")
+				
+				if (component.status == Component.Error) {
+					console.error(component.errorString())
+					return
+				}
+				
 				component.createObject(window)
 			}
 		}
@@ -31,6 +37,12 @@ Window {
 		onStarted: {
 			if (visible) {
 				var component = Qt.createComponent("MapView.qml")
+				
+				if (component.status == Component.Error) {
+					console.error(component.errorString())
+					return
+				}
+				
 				component.createObject(window)
 			}
 		}
