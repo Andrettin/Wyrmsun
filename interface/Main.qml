@@ -19,8 +19,18 @@ Window {
 	Connections {
 		target: wyrmgus
 		onRunningChanged: {
-			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
+			if (visible && !wyrmgus.parameters.test_run && wyrmgus.running) {
 				var component = Qt.createComponent("MenuStack.qml")
+				component.createObject(window)
+			}
+		}
+	}
+	
+	Connections {
+		target: wyrmgus.game
+		onStarted: {
+			if (visible) {
+				var component = Qt.createComponent("MapView.qml")
 				component.createObject(window)
 			}
 		}
