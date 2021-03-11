@@ -27,7 +27,7 @@ Item {
 		id: overlay_terrain_image
 		source: overlay_image_source.length > 0 && overlay_transition_image_sources.length == 0 ? "image://tile/" + overlay_image_source : "image://empty/"
 	}
-		
+	
 	Repeater {
 		model: overlay_transition_image_sources
 		
