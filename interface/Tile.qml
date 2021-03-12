@@ -36,4 +36,13 @@ Item {
 			source: "image://tile/" + modelData
 		}
 	}
+	
+	Repeater {
+		model: overlay_transition_elevation_image_sources
+		
+		Image {
+			id: overlay_terrain_transition_elevation_image
+			source: "image://tile/" + modelData
+		}
+	}
 }
