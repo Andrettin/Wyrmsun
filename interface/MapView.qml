@@ -29,7 +29,7 @@ Item {
 		model: MapGridModel {
 			map_layer: 0
 		}
-		delegate: Tile {}
+		delegate: TileView {}
 		
 		Unit {
 			x: 4 * tile_size
