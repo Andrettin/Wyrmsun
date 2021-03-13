@@ -31,7 +31,7 @@ Item {
 		}
 		delegate: TileView {}
 		
-		Unit {
+		UnitView {
 			x: 4 * tile_size
 			y: 5 * tile_size
 			z: 40
