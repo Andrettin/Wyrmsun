@@ -1,18 +1,13 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-AnimatedSprite {
-	id: unit
+Image {
+	id: unit_view
 	
-	readonly property int tile_size: 32 * wyrmgus.defines.scale_factor
+	property variant unit: null
 	
-	implicitWidth: tile_size
-	implicitHeight: tile_size
-	frameWidth: tile_size
-	frameHeight: tile_size
-	frameCount: 1
-	source: "image://tile/dry_mud/17"
-	paused: true
-	currentFrame: 0
-	interpolate: false
+	source: unit ? "image://unit/" + unit.image_source : "image://empty/"
+	x: unit ? unit.tile_x * wyrmgus.defines.scaled_tile_width - (width - (wyrmgus.defines.scaled_tile_width * unit.tile_width)) / 2 : 0
+	y: unit ? unit.tile_y * wyrmgus.defines.scaled_tile_height - (height - wyrmgus.defines.scaled_tile_height * unit.tile_height) / 2 : 0
+	z: 40
 }

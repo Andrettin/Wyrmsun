@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import map_grid_model 1.0
+import unit_list_model 1.0
 
 Item {
 	id: map_view
@@ -31,10 +32,14 @@ Item {
 		}
 		delegate: TileView {}
 		
-		UnitView {
-			x: 4 * tile_size
-			y: 5 * tile_size
-			z: 40
+		Repeater {
+			model: UnitListModel {
+				map_layer: 0
+			}
+			
+			UnitView {
+				unit: model.unit
+			}
 		}
 	}
 
