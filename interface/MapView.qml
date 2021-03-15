@@ -27,6 +27,7 @@ Item {
 		contentWidth: tile_size * map_width
 		contentHeight: tile_size * map_height
 		boundsBehavior: Flickable.StopAtBounds
+		clip: true
 		model: MapGridModel {
 			map_layer: 0
 		}
