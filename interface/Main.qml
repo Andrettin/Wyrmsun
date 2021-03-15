@@ -52,6 +52,12 @@ Window {
 		wyrmgus.exit()
 	}
 	
+	Component.onCompleted: {
+		if (visible) {
+			wyrmgus.qml_window_active = true
+		}
+	}
+	
 	//highlight text
 	function highlight(text) {
 		return "<font color=\"gold\">" + text + "</font>"
