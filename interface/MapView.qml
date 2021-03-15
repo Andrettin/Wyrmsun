@@ -38,7 +38,6 @@ Item {
 			}
 			
 			UnitView {
-				unit: model.unit
 			}
 		}
 	}
