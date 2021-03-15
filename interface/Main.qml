@@ -8,8 +8,7 @@ Window {
 	width: 1680
 	height: 960
 	title: qsTr("Wyrmsun")
-	flags: Qt.FramelessWindowHint
-	//visibility: "FullScreen"
+	//visibility: "Maximized"
 	
 	FontLoader {
 		id: berenika_font
