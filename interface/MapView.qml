@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import frame_buffer_object 1.0
 import map_grid_model 1.0
 import unit_list_model 1.0
 
@@ -17,6 +18,7 @@ Item {
 		color: "black"
 	}
 	
+	/*
 	TableView {
 		id: map
 		anchors.fill: parent
@@ -41,6 +43,11 @@ Item {
 			UnitView {
 			}
 		}
+	}
+	*/
+	
+	FrameBufferObject {
+		anchors.fill: parent
 	}
 
 	Component.onCompleted: {
