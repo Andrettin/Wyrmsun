@@ -61,6 +61,7 @@ Item {
 		anchors.top: parent.top
 		anchors.left: parent.left
 		anchors.right: parent.right
+	}
 
 	Component.onCompleted: {
 		wyrmgus.on_map_view_created()
