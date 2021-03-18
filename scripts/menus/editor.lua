@@ -532,9 +532,9 @@ function RunEditorPlayerProperties()
 	current_player_stone = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Stone, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 7) * get_scale_factor(), 60 * get_scale_factor())
 
 	local function listen()
-		player_properties[current_player:getSelected() + 1].Copper = current_player_copper:getText()
-		player_properties[current_player:getSelected() + 1].Lumber = current_player_lumber:getText()
-		player_properties[current_player:getSelected() + 1].Stone = current_player_stone:getText()
+		player_properties[current_player:getSelected() + 1].Copper = tonumber(current_player_copper:getText())
+		player_properties[current_player:getSelected() + 1].Lumber = tonumber(current_player_lumber:getText())
+		player_properties[current_player:getSelected() + 1].Stone = tonumber(current_player_stone:getText())
 	end
 	local listener = LuaActionListener(listen)
 	menu:addLogicCallback(listener)

@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.5
 -----------------------------------------------------------------------
 
+* Map Editor
+- Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
+
 -----------------------------------------------------------------------
 - 4.1.4
 -----------------------------------------------------------------------
