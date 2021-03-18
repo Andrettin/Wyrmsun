@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 Item {
 	id: menu
-	focus: true
+	focus: wyrmgus.game.running == false
 
 	property string title: ""
 	property string background: "wyrmsun_sepia"
