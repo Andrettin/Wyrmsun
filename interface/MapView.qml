@@ -9,10 +9,6 @@ Item {
 	anchors.fill: parent
 	focus: true
 	
-	readonly property int tile_size: 32 * wyrmgus.defines.scale_factor
-	property int map_width: 512
-	property int map_height: 512
-	
 	Rectangle {
 		anchors.fill: parent
 		color: "black"
@@ -60,6 +56,11 @@ Item {
 			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
 		}
 	}
+	
+	TopBar {
+		anchors.top: parent.top
+		anchors.left: parent.left
+		anchors.right: parent.right
 
 	Component.onCompleted: {
 		wyrmgus.on_map_view_created()
