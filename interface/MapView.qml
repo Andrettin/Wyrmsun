@@ -48,6 +48,17 @@ Item {
 	
 	FrameBufferObject {
 		anchors.fill: parent
+		
+		MouseArea {
+			id: frame_buffer_object_mouse_area
+			anchors.fill: parent
+			hoverEnabled: true
+			acceptedButtons: Qt.AllButtons
+		}
+		
+		Component.onCompleted: {
+			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
+		}
 	}
 
 	Component.onCompleted: {
