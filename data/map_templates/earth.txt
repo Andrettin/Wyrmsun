@@ -57,23 +57,6 @@ earth_space = {
 	unusable_area_overlay_terrain_type = space
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
-	#latitude_scalings = {
-	#	{
-	#		min_degree = 30
-	#		max_degree = 45
-	#		scale = 125
-	#	}
-	#	{
-	#		min_degree = 45
-	#		max_degree = 60
-	#		scale = 150
-	#	}
-	#	{
-	#		min_degree = 60
-	#		max_degree = 75
-	#		scale = 150
-	#	}
-	#}
 }
 
 earth_60_75_latitude_north = {

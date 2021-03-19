@@ -1,0 +1,8 @@
+smitna = {
+	name = "Smitna"
+	unit_type = unit_silver_deposit
+	prefix = upgrade_item_prefix_industrious
+	suffix = upgrade_item_suffix_of_diligence
+	resources_held = 100000
+	background = "Šmitna was a silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was said to be inhabited by kobolds, who would warn the miners of which parts of the mine were unsafe to dig through. In 1509 Šmitna was flooded, resulting in the drowning of 18 miners - according to legend, they had been told not to dig at a certain place by the mine's kobolds, but such warnings went unheeded."
+}

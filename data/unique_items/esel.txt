@@ -1,0 +1,8 @@
+esel = {
+	name = "Esel"
+	unit_type = unit_silver_deposit
+	prefix = upgrade_item_prefix_replenishing
+	suffix = upgrade_item_suffix_of_diligence
+	resources_held = 200000
+	background = "Esel was a very rich silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was legendary for never having flooded, and it was said among the miners that as long as Esel was not filled with water, the silver mining near Kuttenberg would remain strong. In 1540, Esel suddenly began to flood, and by 1554 it was entirely submerged in water. The miners' prophecy turned true: soon after Esel's flood, the silver finds in the Kuttenberg area began to dwindle."
+}
