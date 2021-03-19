@@ -32,13 +32,6 @@ dark = Color(38, 38, 78)
 clear = Color(200, 200, 120)
 black = Color(0, 0, 0)
 
-bckground = "backgrounds/wyrmsun_sepia.png"
-backgroundWidget = ImageWidget(bckground, 1, Video.Width, Video.Height)
-
-wyrmsun_logo = "interface/wyrmsun_logo_" .. Video.Height .. ".png"
---wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
-wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
-
 function panel(n)
 	local panels = {}
 	panels = {
@@ -509,16 +502,14 @@ function WarMenu(title, background, resize)
 
 	menu = MenuScreen()
 
-	if background == nil then
-		bg = backgroundWidget
-	else
+	if background ~= nil then
 		if (resize == nil or resize == true) then
 			bg = ImageWidget(background, 1, Video.Width, Video.Height)
 		else
 			bg = ImageWidget(background, get_scale_factor())
 		end
+		menu:add(bg, 0, 0)
 	end
-	menu:add(bg, 0, 0)
 
 	AddMenuHelpers(menu)
 
@@ -1268,10 +1259,6 @@ function BuildProgramStartMenu()
 
 --	menu:addLabel("v" .. wyrmsun.Version .. "  " .. wyrmsun.Homepage, offx + 320, (Video.Height - 90) + 18*2, Fonts["game"])
 	menu:addLabel(wyrmsun.Copyright, offx + 320 * get_scale_factor(), (Video.Height - 90 * get_scale_factor()) + 18*4 * get_scale_factor(), Fonts["small"])
-
---	wyrmsun_logo_widget:setSize(6197 * 800 / Video.Width / 16, 2456 * 600 / Video.Height / 16)
-	menu:add(wyrmsun_logo_widget, Video.Width / 2 - (wyrmsun_logo_widget:getWidth() / 2), 0)
-	menu:addLabel("v" .. wyrmsun.Version, Video.Width / 2 + (wyrmsun_logo_widget:getWidth() * 7 / 16), wyrmsun_logo_widget:getHeight() * 3 / 4)
 
 	PersistencyUpdates()
 
