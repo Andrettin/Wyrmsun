@@ -8,11 +8,14 @@ Item {
 	id: map_view
 	anchors.fill: parent
 	focus: true
+	z: 2 //place it over the frame buffer object
 	
+	/*
 	Rectangle {
 		anchors.fill: parent
 		color: "black"
 	}
+	*/
 	
 	/*
 	TableView {
@@ -42,26 +45,13 @@ Item {
 	}
 	*/
 	
-	FrameBufferObject {
-		anchors.fill: parent
-		
-		MouseArea {
-			id: frame_buffer_object_mouse_area
-			anchors.fill: parent
-			hoverEnabled: true
-			acceptedButtons: Qt.AllButtons
-		}
-		
-		Component.onCompleted: {
-			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
-		}
-	}
-	
+	/*
 	TopBar {
 		anchors.top: parent.top
 		anchors.left: parent.left
 		anchors.right: parent.right
 	}
+	*/
 
 	Component.onCompleted: {
 		wyrmgus.on_map_view_created()

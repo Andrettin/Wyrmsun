@@ -1,12 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
+import frame_buffer_object 1.0
 
 Window {
 	id: window
 	visible: false
-	width: 1680
-	height: 960
 	title: qsTr("Wyrmsun")
 	//visibility: "Maximized"
 	
@@ -27,6 +26,8 @@ Window {
 				}
 				
 				component.createObject(window)
+				
+				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
 			}
 		}
 	}
@@ -47,6 +48,24 @@ Window {
 		}
 	}
 	
+	MouseArea {
+		id: frame_buffer_object_mouse_area
+		anchors.fill: parent
+		z: -1
+		hoverEnabled: true
+		acceptedButtons: Qt.AllButtons
+	}
+	
+	FrameBufferObject {
+		id: frame_buffer_object
+		anchors.fill: parent
+		z: 1 //place it over the menus
+		
+		Component.onCompleted: {
+			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
+		}
+	}
+		
 	onClosing: {
 		wyrmgus.exit()
 	}
