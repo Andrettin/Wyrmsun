@@ -1257,9 +1257,6 @@ function BuildProgramStartMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
---	menu:addLabel("v" .. wyrmsun.Version .. "  " .. wyrmsun.Homepage, offx + 320, (Video.Height - 90) + 18*2, Fonts["game"])
-	menu:addLabel(wyrmsun.Copyright, offx + 320 * get_scale_factor(), (Video.Height - 90 * get_scale_factor()) + 18*4 * get_scale_factor(), Fonts["small"])
-
 	PersistencyUpdates()
 
 	if (CanAccessFile("wyr/quests.lua")) then

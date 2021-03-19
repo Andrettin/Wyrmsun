@@ -38,7 +38,6 @@ wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = GetStratagusVersion()
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
-wyrmsun.Copyright = "Copyright (c) 2013-2021 by Andrettin"
 
 -------------------------------------------------------------------------------
 --  Config-Part
