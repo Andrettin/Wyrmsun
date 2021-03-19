@@ -1,7 +1,19 @@
-icon_dwarven_coinage = {
+derro_coinage = {
+	file = "gnome/icons/derro_coinage.png"
+}
+
+dwarven_coinage = {
 	file = "icons/technologies/dwarven/coinage.png"
 }
 
-icon_suebi_coinage = {
+gnomish_coinage = {
+	file = "gnome/icons/coinage.png"
+}
+
+goblin_coinage = {
+	file = "goblin/icons/coinage.png"
+}
+
+suebi_coinage = {
 	file = "icons/technologies/suebi/coinage.png"
 }

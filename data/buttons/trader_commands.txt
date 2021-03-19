@@ -1,6 +1,6 @@
 trade_market_suebi = {
 	pos = 5
-	icon = icon_suebi_coinage
+	icon = suebi_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"
@@ -29,7 +29,7 @@ trade_market_suebi = {
 
 trade_dock_suebi = {
 	pos = 5
-	icon = icon_suebi_coinage
+	icon = suebi_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"
@@ -59,7 +59,7 @@ trade_dock_suebi = {
 
 trade_market_dwarven = {
 	pos = 5
-	icon = icon_dwarven_coinage
+	icon = dwarven_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"
@@ -77,7 +77,7 @@ trade_market_dwarven = {
 
 trade_dock_dwarven = {
 	pos = 5
-	icon = icon_dwarven_coinage
+	icon = dwarven_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"
@@ -96,7 +96,7 @@ trade_dock_dwarven = {
 
 trade_market_goblin = {
 	pos = 5
-	icon = icon_goblin_coinage
+	icon = goblin_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"
@@ -116,7 +116,7 @@ trade_market_goblin = {
 
 trade_dock_goblin = {
 	pos = 5
-	icon = icon_goblin_coinage
+	icon = goblin_coinage
 	action = harvest
 	key = t
 	hint = "~!Trade"

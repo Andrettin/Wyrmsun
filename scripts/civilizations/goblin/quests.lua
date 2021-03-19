@@ -86,7 +86,7 @@ DefineQuest("agniss-mysticism", { -- based on the description of Agniss Tenebris
 
 DefineQuest("dremacs-wealth", { -- based on the description of Dremac Paarsins by Jesse Crider
 	Name = "Dremac's Wealth",
-	Icon = "icon-goblin-coinage",
+	Icon = "goblin_coinage",
 	Description = "The wealthy merchant lord Dremac Paarsins seeks to implement a coinage system amongst us, to improve the exchange of goods and services. Doing so will need a significant investment, however.",
 	World = "nidavellir",
 	Civilization = "goblin",

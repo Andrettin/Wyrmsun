@@ -13,18 +13,18 @@ upgrade_coinage = {
 upgrade_dwarven_coinage = {
 	parent = upgrade_coinage
 	civilization = dwarven
-	icon = icon_dwarven_coinage
+	icon = dwarven_coinage
 }
 
 upgrade_goblin_coinage = {
 	parent = upgrade_coinage
 	civilization = goblin
-	icon = icon_goblin_coinage
+	icon = goblin_coinage
 }
 
 upgrade_teuton_coinage = {
 	parent = upgrade_coinage
 	civilization = teutonic
-	icon = icon_suebi_coinage
+	icon = suebi_coinage
 	background = "West Germanic peoples first obtained knowledge of currency throughout their contacts with Celtic tribes and the Romans. Soon afterwards they would adopt the usage of coins, eventually beginning to mint their own."
 }
