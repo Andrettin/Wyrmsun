@@ -180,7 +180,7 @@ DefineUpgrade("upgrade-item-suffix-of-replenishment", {
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 	Name = "of the Serpent",
 	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn", "amulet", "ring"},
+	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn", "trinket", "amulet", "ring"},
 	MagicLevel = 2
 })
 
@@ -258,7 +258,7 @@ DefineUpgrade("upgrade-item-suffix-of-thorns", {
 DefineUpgrade("upgrade-item-suffix-of-trickery", {
 	Name = "of Trickery",
 	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn"},
+	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn", "trinket"},
 	MagicLevel = 2
 })
 
