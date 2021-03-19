@@ -14,6 +14,13 @@ Item {
 		fillMode: Image.PreserveAspectCrop
 	}
 	
+	MouseArea {
+		id: mouse_area
+		anchors.fill: parent
+		hoverEnabled: true
+		acceptedButtons: Qt.AllButtons
+	}
+	
 	LargeText {
 		id: title_text
 		text: highlight(parent.title)
@@ -44,5 +51,9 @@ Item {
 				}
 			}
 		}
+	}
+	
+	Component.onCompleted: {
+		wyrmgus.install_event_filter_on(mouse_area)
 	}
 }
