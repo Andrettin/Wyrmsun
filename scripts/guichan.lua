@@ -1282,9 +1282,6 @@ function BuildProgramStartMenu()
 		function() RunEncyclopediaMenu(); menu:stop(1) end)
 	menu:addFullButton(_("Cred~!its"), "i", offx + 208 * get_scale_factor(), offy + (104 + 36*8) * get_scale_factor(), RunShowCreditsMenu)
 
-	menu:addFullButton(_("E~!xit"), "x", offx + 208 * get_scale_factor(), offy + (104 + 36*9) * get_scale_factor(),
-		function() menu:stop() end)
-
 	return menu:run()
 end
 
