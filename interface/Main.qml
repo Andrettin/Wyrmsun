@@ -5,9 +5,10 @@ import frame_buffer_object 1.0
 
 Window {
 	id: window
-	visible: false
+	visible: true
 	title: qsTr("Wyrmsun")
-	//visibility: "Maximized"
+	visibility: "Maximized"
+	
 	property var menu_stack: null
 	property var map_view_underlay: null
 	property var map_view: null
