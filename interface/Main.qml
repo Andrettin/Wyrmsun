@@ -9,6 +9,7 @@ Window {
 	title: qsTr("Wyrmsun")
 	//visibility: "Maximized"
 	property var menu_stack: null
+	property var map_view_underlay: null
 	property var map_view: null
 	
 	FontLoader {
@@ -38,6 +39,15 @@ Window {
 		target: wyrmgus.game
 		onStarted: {
 			if (visible) {
+				var underlay_component = Qt.createComponent("MapViewUnderlay.qml")
+				
+				if (underlay_component.status == Component.Error) {
+					console.error(underlay_component.errorString())
+					return
+				}
+				
+				map_view_underlay = underlay_component.createObject(window)
+				
 				var component = Qt.createComponent("MapView.qml")
 				
 				if (component.status == Component.Error) {
