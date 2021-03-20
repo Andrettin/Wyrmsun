@@ -20,20 +20,34 @@ Window {
 		source: "../fonts/berenika.ttf"
 	}
 	
+	FontLoader {
+		id: berenika_bold_font
+		source: "../fonts/berenika_bold.ttf"
+	}
+	
 	Connections {
 		target: wyrmgus
 		onRunningChanged: {
 			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
-				var component = Qt.createComponent("MenuStack.qml")
+				var menu_stack_component = Qt.createComponent("MenuStack.qml")
 				
-				if (component.status == Component.Error) {
-					console.error(component.errorString())
+				if (menu_stack_component.status == Component.Error) {
+					console.error(menu_stack_component.errorString())
 					return
 				}
 				
-				menu_stack = component.createObject(window)
+				menu_stack = menu_stack_component.createObject(window)
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
+				
+				var loading_screen_component = Qt.createComponent("LoadingScreen.qml")
+				
+				if (loading_screen_component.status == Component.Error) {
+					console.error(loading_screen_component.errorString())
+					return
+				}
+				
+				loading_screen_component.createObject(window)
 			}
 		}
 	}
@@ -103,5 +117,10 @@ Window {
 	//generate a random boolean value
 	function random_bool() {
 		return random(2) == 1
+	}
+	
+	//get a random element from an array
+	function random_element(arr) {
+		return arr[random(arr.length)]
 	}
 }

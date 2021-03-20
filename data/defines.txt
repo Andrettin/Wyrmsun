@@ -64,3 +64,70 @@ game_sound_set = {
 	rescue = rescue
 	chat_message = click
 }
+
+tips = {
+	"You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by double-clicking on a unit."
+	"The more workers you have collecting resources, the faster your economy will grow."
+	"Building more than one barracks will let you train units faster."
+	"Use your workers to repair damaged buildings."
+	"Explore your surroundings early in the game."
+
+	"Keep all workers working. Use ALT-I to find idle workers."
+	"You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon. CTRL click again to turn off."
+
+	#Shift tips
+	"If you hold the SHIFT key, you can give a unit an order which is executed after it finishes the current one."
+	"You can give waypoints to units if you press the SHIFT key and then right-click for the move command."
+	"You can order a worker to build one building after the other if you hold the SHIFT key while you place the building."
+	"You can build the same building many times if you hold the ALT and SHIFT keys while you place the structures."
+
+	#Interface-related tips
+	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack."
+	"Press TAB to toggle through the minimap modes."
+	"Press Shift-TAB to zoom/unzoom the minimap in larger maps."
+
+	#Unit type-related tips
+	"Unlike the dwarves, humans and goblins have no flying rider unit. Their archers have a bonus against flying units, however."
+	"It is not safe to get close to a goblin war machine."
+	"Spearmen deal extra damage to mounted units."
+	"Organic ranged units can shoot from within towers, strongholds and transport ships, with extra range."
+	"Cavalry units have a charge bonus, dealing extra damage depending on the number of tiles traversed before attacking."
+
+	#Building-related tips
+	"Temples regenerate the health of nearby organic units."
+	"Severely burning buildings keep losing health if left unrepaired."
+	"Build roads between mines and town halls to speed up resource gathering."
+	
+	#Technology-related tips
+	"Researching a Writing upgrade will allow your faction to advance from a tribal one to a polity."
+	
+	#Leveling-related tips
+	"Organic units can level up."
+	"When a unit levels up, an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities."
+	"Persistent heroes will carry over their experience level, items and abilities across scenarios and game modes."
+	
+	#Resource-related tips
+	"Cave walls can be harvested for stone."
+	"You can build gold mines on top of gold deposits."
+	"Silver and gold are converted into copper when delivered, at a rate of 200% and 400%, respectively."
+	"Iron and mithril are converted into copper when delivered, at a rate of 100% and 800%, respectively. In order to harvest them, the Ironworking technology is required."
+	"If a worker unit is stuck between trees or rocks, it will drop the resources it is carrying to be able to harvest more and escape."
+	
+	#fauna-related tips
+	#"Yales are territorial creatures."
+	"Wild gryphons are dangerous predators."
+	"There is a chance animals will escape from destroyed stables or pens."
+	
+	#item-related tips
+	"Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up."
+	"Healing items in a unit's inventory are automatically used if the unit's health is too low."
+	"Persistent heroes can carry items, and the same applies to regular level 3 organic units."
+	"AI buildings and unique units drop items when killed."
+	"The chance a unique unit will drop a magic or unique item depends on its level."
+	#"Magic and unique buildings have a higher chance of dropping magic and unique items."
+
+	"Thieves deal bonus damage when attacking from the back."
+	"Fire damage ignores armor."
+	"Time efficiency bonus makes a building train, research and upgrade faster. If it is a resource building, then harvesting from it will also proceed faster."
+	"Faction bonuses are not cumulative."
+}
