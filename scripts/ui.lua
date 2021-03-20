@@ -122,10 +122,6 @@ if not (ui_loaded_first_time) then
 	end
 end
 
-LoadingBarSetBackgrounds({
-	GetBackground("backgrounds/gnashorn.png"), GetBackground("backgrounds/gryphon.png"), GetBackground("backgrounds/gullinburst.png"), GetBackground("backgrounds/wyrm.png"), GetBackground("backgrounds/yale.png")
-})
-
 --
 --  Define Panels
 --

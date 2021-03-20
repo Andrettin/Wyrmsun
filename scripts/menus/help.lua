@@ -167,8 +167,6 @@ local tips = {
 	"Faction bonuses are not cumulative."
 }
 
-LoadingBarSetTips(tips)
-
 function RunTipsMenu()
   local menu = WarGameMenu(panel(2))
   menu:resize(288 * get_scale_factor(), 256 * get_scale_factor())
