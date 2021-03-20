@@ -5,6 +5,7 @@ import frame_buffer_object 1.0
 
 Window {
 	id: window
+	visible: true
 	title: qsTr("Wyrmsun")
 	visibility: "Maximized"
 	width: 1066
