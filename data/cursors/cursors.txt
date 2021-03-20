@@ -35,7 +35,7 @@ arrow_ne = {
 
 arrow_n = {
 	type = arrow_north
-	file = "cursors/arrow_ne.png"
+	file = "cursors/arrow_n.png"
 	hot_pos = { 12 2 }
 	frame_size = { 24 32 }
 }
