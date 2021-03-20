@@ -10,6 +10,13 @@ Item {
 	focus: true
 	z: 2 //place it over the frame buffer object
 	
+	MouseArea {
+		id: mouse_area
+		anchors.fill: parent
+		hoverEnabled: true
+		acceptedButtons: Qt.AllButtons
+	}
+	
 	/*
 	Rectangle {
 		anchors.fill: parent
@@ -54,6 +61,7 @@ Item {
 	*/
 
 	Component.onCompleted: {
+		wyrmgus.install_event_filter_on(mouse_area)
 		wyrmgus.on_map_view_created()
 	}
 }
