@@ -789,14 +789,6 @@ function RunSinglePlayerGameMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addFullButton(_("Legacy ~!Quests"), "q", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
-		function()
-			RunQuestWorldMenu();
-			if (RunningScenario) then
-				menu:stop()
-			end
-		end
-	)
 	menu:addFullButton(_("C~!ustom Game"), "u", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
 		function()
 			RunSinglePlayerCustomGameMenu()

@@ -28,16 +28,17 @@
 RunningScenario = false
 QuestWorlds = {"~!Earth", "~!Nidavellir"}
 
+legacy_quests_menu = nil
+
 function RunQuestWorldMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	play_menu_music()
 
 	local menu = WarMenu()
+	legacy_quests_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	menu:addLabel(_("~<Legacy Quests~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
 
 	local quest_world_y = 2
 	for i=1, table.getn(QuestWorlds) do
@@ -60,9 +61,6 @@ function RunQuestWorldMenu()
 		quest_world_y = quest_world_y + 1
 	end
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*quest_world_y) * get_scale_factor(),
-		function() menu:stop() end
-	)
 	return menu:run()
 end
 

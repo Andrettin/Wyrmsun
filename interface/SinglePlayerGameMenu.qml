@@ -26,6 +26,11 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Legacy Quests"
 		hotkey: "q"
+		lua_command: "RunQuestWorldMenu(); if (RunningScenario) then single_player_menu:stop() end;"
+		
+		onClicked: {
+			menu_stack.push("LegacyQuestsMenu.qml")
+		}
 	}
 	
 	LargeButton {
