@@ -92,7 +92,6 @@ Window {
 		if (visible) {
 			wyrmgus.qml_window_active = true
 			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
-			wyrmgus.install_event_filter_on(window)
 		}
 	}
 	

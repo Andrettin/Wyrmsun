@@ -55,5 +55,6 @@ Item {
 	
 	Component.onCompleted: {
 		wyrmgus.install_event_filter_on(mouse_area)
+		wyrmgus.install_event_filter_on(menu)
 	}
 }
