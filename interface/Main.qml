@@ -8,6 +8,8 @@ Window {
 	visible: false
 	title: qsTr("Wyrmsun")
 	//visibility: "Maximized"
+	property var menu_stack: null
+	property var map_view: null
 	
 	FontLoader {
 		id: berenika_font
@@ -25,7 +27,7 @@ Window {
 					return
 				}
 				
-				component.createObject(window)
+				menu_stack = component.createObject(window)
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
 			}
@@ -43,7 +45,16 @@ Window {
 					return
 				}
 				
-				component.createObject(window)
+				map_view = component.createObject(window)
+			}
+		}
+	}
+	
+	Connections {
+		target: wyrmgus.game
+		onStopped: {
+			if (visible) {
+				map_view.destroy()
 			}
 		}
 	}
