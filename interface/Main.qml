@@ -82,12 +82,8 @@ Window {
 		id: frame_buffer_object
 		anchors.fill: parent
 		z: 1 //place it over the menus
-		
-		Component.onCompleted: {
-			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
-		}
 	}
-		
+	
 	onClosing: {
 		wyrmgus.exit()
 	}
@@ -95,6 +91,8 @@ Window {
 	Component.onCompleted: {
 		if (visible) {
 			wyrmgus.qml_window_active = true
+			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
+			wyrmgus.install_event_filter_on(window)
 		}
 	}
 	
