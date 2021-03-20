@@ -5,9 +5,10 @@ import frame_buffer_object 1.0
 
 Window {
 	id: window
-	visible: true
 	title: qsTr("Wyrmsun")
 	visibility: "Maximized"
+	width: 1066
+	height: 600
 	
 	property var menu_stack: null
 	property var map_view_underlay: null
@@ -21,7 +22,7 @@ Window {
 	Connections {
 		target: wyrmgus
 		onRunningChanged: {
-			if (visible && !wyrmgus.parameters.test_run && wyrmgus.running) {
+			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
 				var component = Qt.createComponent("MenuStack.qml")
 				
 				if (component.status == Component.Error) {
@@ -39,34 +40,30 @@ Window {
 	Connections {
 		target: wyrmgus.game
 		onStarted: {
-			if (visible) {
-				var underlay_component = Qt.createComponent("MapViewUnderlay.qml")
-				
-				if (underlay_component.status == Component.Error) {
-					console.error(underlay_component.errorString())
-					return
-				}
-				
-				map_view_underlay = underlay_component.createObject(window)
-				
-				var component = Qt.createComponent("MapView.qml")
-				
-				if (component.status == Component.Error) {
-					console.error(component.errorString())
-					return
-				}
-				
-				map_view = component.createObject(window)
+			var underlay_component = Qt.createComponent("MapViewUnderlay.qml")
+			
+			if (underlay_component.status == Component.Error) {
+				console.error(underlay_component.errorString())
+				return
 			}
+			
+			map_view_underlay = underlay_component.createObject(window)
+			
+			var component = Qt.createComponent("MapView.qml")
+			
+			if (component.status == Component.Error) {
+				console.error(component.errorString())
+				return
+			}
+			
+			map_view = component.createObject(window)
 		}
 	}
 	
 	Connections {
 		target: wyrmgus.game
 		onStopped: {
-			if (visible) {
-				map_view.destroy()
-			}
+			map_view.destroy()
 		}
 	}
 	
@@ -89,10 +86,7 @@ Window {
 	}
 	
 	Component.onCompleted: {
-		if (visible) {
-			wyrmgus.qml_window_active = true
-			wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
-		}
+		wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
 	}
 	
 	//highlight text
