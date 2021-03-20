@@ -777,24 +777,18 @@ function RunSelectScenarioMenu(is_mod)
 	menu:run()
 end
 
+single_player_menu = nil
+
 function RunSinglePlayerGameMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	play_menu_music()
 
 	local menu = WarMenu()
+	single_player_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
-	menu:addLabel(_("~<Single Player~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
-	
-	menu:addFullButton(_("~!Scenarios"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
-		function()
-			menu:stop()
-			RunCampaignMenu();
-		end
-	)
-	
 	menu:addFullButton(_("Legacy ~!Quests"), "q", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
 		function()
 			RunQuestWorldMenu();
@@ -819,8 +813,7 @@ function RunSinglePlayerGameMenu()
 	)
 	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
 		function() RunTechTreeMenu(0) end)
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*7) * get_scale_factor(),
-		function() menu:stop() end)
+	
 	return menu:run()
 end
 
@@ -1248,12 +1241,15 @@ function RunSinglePlayerCustomGameMenu()
 	menu:run()
 end
 
+main_menu = nil
+
 function BuildProgramStartMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	play_menu_music()
 
 	local menu = WarMenu()
+	main_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
@@ -1264,8 +1260,6 @@ function BuildProgramStartMenu()
 		SaveQuestCompletion()
 	end
 	
-	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(),
-		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
 --	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3 * get_scale_factor(), -- replays are broken at the moment

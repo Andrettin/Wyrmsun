@@ -45,6 +45,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Single Player Game"
 		hotkey: "s"
+		lua_command: "RunSinglePlayerGameMenu(); main_menu:stop(1);"
 		
 		onClicked: {
 			menu_stack.push("SinglePlayerGameMenu.qml")

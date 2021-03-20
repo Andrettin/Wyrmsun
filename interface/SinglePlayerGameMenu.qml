@@ -12,6 +12,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Scenarios"
 		hotkey: "s"
+		lua_command: "single_player_menu:stop(); RunCampaignMenu();"
 		
 		onClicked: {
 			menu_stack.push("CampaignMenu.qml")
@@ -57,5 +58,6 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: tech_tree_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		lua_command: "single_player_menu:stop();"
 	}
 }

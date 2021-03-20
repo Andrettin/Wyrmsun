@@ -11,6 +11,7 @@ Item {
 	property string hotkey: ""
 	property bool hotkey_pressed: false
 	property bool pressed: mouse_area.containsPress || hotkey_pressed
+	property string lua_command: ""
 	
 	signal clicked()
 
@@ -40,6 +41,10 @@ Item {
 	
 	onClicked: {
 		wyrmgus.play_sound("click")
+		
+		if (lua_command.length > 0) {
+			wyrmgus.call_lua_command(lua_command)
+		}
 	}
 	
 	//highlight hotkey in text

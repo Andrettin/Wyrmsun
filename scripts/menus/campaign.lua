@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+campaign_menu = nil
+
 function RunCampaignMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
@@ -38,11 +40,10 @@ function RunCampaignMenu()
 	local no_randomness
 	local no_time_of_day
 	local menu = WarMenu()
+	campaign_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
-	menu:addLabel(_("~<Scenarios~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
-
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
@@ -160,28 +161,6 @@ function RunCampaignMenu()
 	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
 	
 	UpdateCampaignDescription()
-
-	menu:addFullButton(_("~!Start Scenario"), "s", offx + 208 * get_scale_factor(), offy + (212 + (36 * 4)) * get_scale_factor(),
-		function()
-			save_preferences()
-			RunningScenario = true
-			GetMapInfo("scripts/map_templates/campaign.smp")
-			GameSettings.NoRandomness = wyr.preferences.NoRandomness
-			GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
-			GameSettings.Difficulty = wyr.preferences.Difficulty
-			menu:stop()
-			RunMap("scripts/map_templates/campaign.smp")
-		end
-	)
-	
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 5)) * get_scale_factor(),
-		function()
-			save_preferences()
-			SetCurrentCampaign("")
-			menu:stop();
-			RunSinglePlayerGameMenu()
-		end
-	)
 
 	menu:run()
 end
