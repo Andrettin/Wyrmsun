@@ -786,25 +786,6 @@ function RunSinglePlayerGameMenu()
 
 	local menu = WarMenu()
 	single_player_menu = menu
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	menu:addFullButton(_("C~!ustom Game"), "u", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function()
-			RunSinglePlayerCustomGameMenu()
-			if (RunningScenario) then
-				menu:stop(1)
-			end
-		end
-	)
-	menu:addFullButton(_("~!Load Game"), "l", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(),
-		function()
-			RunLoadGameMenu();
-			menu:stop(1)
-		end
-	)
-	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
-		function() RunTechTreeMenu(0) end)
 	
 	return menu:run()
 end
@@ -1242,8 +1223,6 @@ function BuildProgramStartMenu()
 
 	local menu = WarMenu()
 	main_menu = menu
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
 	PersistencyUpdates()
 
@@ -1252,22 +1231,6 @@ function BuildProgramStartMenu()
 		SaveQuestCompletion()
 	end
 	
-	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
-		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
---	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3 * get_scale_factor(), -- replays are broken at the moment
---		function() RunReplayGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Achievements"), "a", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
-		function() RunAchievementsMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Options"), "o", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function() RunOptionsMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(),
-	function() RunEditorMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Mo~!ds"), "d", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
-		function() RunModsMenu(0); menu:stop(1) end)
-	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36*7) * get_scale_factor(),
-		function() RunEncyclopediaMenu(); menu:stop(1) end)
-	menu:addFullButton(_("Cred~!its"), "i", offx + 208 * get_scale_factor(), offy + (104 + 36*8) * get_scale_factor(), RunShowCreditsMenu)
-
 	return menu:run()
 end
 

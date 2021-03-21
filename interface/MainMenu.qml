@@ -59,6 +59,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Multiplayer Game"
 		hotkey: "m"
+		lua_command: "RunMultiPlayerGameMenu(); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -68,6 +69,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Achievements"
 		hotkey: "a"
+		lua_command: "RunAchievementsMenu(); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -77,6 +79,7 @@ MenuBase {
 		anchors.verticalCenterOffset: 14 * wyrmgus.defines.scale_factor
 		text: "Options"
 		hotkey: "o"
+		lua_command: "RunOptionsMenu(); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -86,6 +89,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Map Editor"
 		hotkey: "e"
+		lua_command: "RunEditorMenu(); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -95,6 +99,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Mods"
 		hotkey: "d"
+		lua_command: "RunModsMenu(0); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -104,6 +109,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
+		lua_command: "RunEncyclopediaMenu(); main_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -113,6 +119,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Credits"
 		hotkey: "i"
+		lua_command: "RunShowCreditsMenu()"
 	}
 	
 	LargeButton {

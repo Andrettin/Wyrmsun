@@ -39,6 +39,7 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Custom Game"
 		hotkey: "u"
+		lua_command: "RunSinglePlayerCustomGameMenu(); if (RunningScenario) then single_player_menu:stop(1) end;"
 	}
 	
 	LargeButton {
@@ -48,6 +49,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Load Game"
 		hotkey: "l"
+		lua_command: "RunLoadGameMenu(); single_player_menu:stop(1);"
 	}
 	
 	LargeButton {
@@ -57,6 +59,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Tech Tree"
 		hotkey: "t"
+		lua_command: "RunTechTreeMenu(0);"
 	}
 	
 	PreviousMenuButton {
