@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - F11 is now the screenshot hotkey.
+- Reworked the game's rendering system and graphical interface to use the Qt Framework.
 
 -----------------------------------------------------------------------
 - 4.1.4
