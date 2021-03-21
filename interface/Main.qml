@@ -78,6 +78,7 @@ Window {
 	Connections {
 		target: wyrmgus.game
 		onStopped: {
+			map_view_underlay.destroy()
 			map_view.destroy()
 		}
 	}
