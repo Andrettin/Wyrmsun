@@ -591,7 +591,6 @@ function RunVideoOptionsMenu()
 	local menu = WarMenu()
 	local offx = (Video.Width - 352 * get_scale_factor()) / 2
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
-	local checkTexture
 	local scaling_checkbox
 	local b
 	local resolution_width_list = {"1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
@@ -710,19 +709,6 @@ function RunVideoOptionsMenu()
 		end
 	)
 	full_screen_dd:setMarked(Video.FullScreen)
-
-	checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16 * get_scale_factor(), offy + (55 + 26*10 + 14) * get_scale_factor(),
-		function()
-			if (checkTexture:isMarked()) then
-				wyr.preferences.MaxOpenGLTexture = 256
-			else
-				wyr.preferences.MaxOpenGLTexture = 0
-			end
-			SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
-			SavePreferences()
-		end
-	)
-	if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
 	scaling_checkbox = menu:addImageCheckBox(_("2x Scale Factor (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()

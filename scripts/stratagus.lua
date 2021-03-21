@@ -1810,7 +1810,6 @@ local defaultPreferences = {
 	GrabMouse = false,              --  Enable/disable grabbing the mouse.
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
-	MaxOpenGLTexture = 256,
 	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
@@ -1869,7 +1868,6 @@ SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(true)
 SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
-SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
