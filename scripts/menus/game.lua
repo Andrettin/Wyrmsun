@@ -24,8 +24,6 @@ function WarGameMenu(background)
   return menu
 end
 
-
-
 function RunGameMenu()
 	local menu = WarGameMenu(panel(1))
 

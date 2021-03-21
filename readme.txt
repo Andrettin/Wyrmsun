@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 
+* User Interface
+- F11 is now the screenshot hotkey.
+
 -----------------------------------------------------------------------
 - 4.1.4
 -----------------------------------------------------------------------

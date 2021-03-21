@@ -20,10 +20,10 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	elseif ((key == "m" and alt) or key == "f10" or key == "backspace") then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunGameMenu()
-	elseif ((key == "s" and alt) or key == "f11") then
+	elseif (key == "s" and alt) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunSaveMenu()
-	elseif ((key == "l" and alt) or key == "f12") then
+	elseif (key == "l" and alt) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunGameLoadGameMenu()
 	elseif (key == "q" and (ctrl or alt)) then
@@ -48,9 +48,9 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
     RunEditorMapProperties()
   elseif (key == "f6") then -- Players property
     RunEditorPlayerProperties()
-  elseif (key == "f11") then -- Save
+  elseif (key == "s" and alt) then -- Save
     RunEditorSaveMenu()
-  elseif (key == "f12") then -- Load
+  elseif (key == "l" and alt) then -- Load
     RunEditorLoadMenu()
   elseif (key == "q" and (ctrl)) then -- Quit to menu
     RunQuitToMenuConfirmMenu()

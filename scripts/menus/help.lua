@@ -38,7 +38,7 @@ local keystrokes = {
   {"+", "- increase game speed"},
   {"-", "- decrease game speed"},
   {"PAUSE", "- pause game"},
-  {"PRINT", "- make screen shot"},
+  {"F11", "- make screen shot"},
   {"ENTER", "- write a message"},
   {"SPACE", "- goto last event"},
   {"TAB", "- toggle minimap mode"},
@@ -59,8 +59,8 @@ local keystrokes = {
   {"F9", "- preferences"},
   {"F10", "- game menu"},
   {"BACKSPACE", "- game menu"},
-  {"F11", "- save game"},
-  {"F12", "- load game"},
+  {"Alt-S", "- save game"},
+  {"Alt-L", "- load game"},
 }
 
 function RunKeystrokeHelpMenu()
