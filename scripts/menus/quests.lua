@@ -33,8 +33,6 @@ legacy_quests_menu = nil
 function RunQuestWorldMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	play_menu_music()
-
 	local menu = WarMenu()
 	legacy_quests_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -66,8 +64,6 @@ end
 
 function RunQuestMenu(world)
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	play_menu_music()
 
 	local no_randomness
 	local no_time_of_day

@@ -47,8 +47,6 @@ function RunGrandStrategyGameSetupMenu()
 
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	play_menu_music()
-
 	local menu = WarMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2

@@ -782,8 +782,6 @@ single_player_menu = nil
 function RunSinglePlayerGameMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	play_menu_music()
-
 	local menu = WarMenu()
 	single_player_menu = menu
 	
@@ -1218,8 +1216,6 @@ main_menu = nil
 
 function BuildProgramStartMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	play_menu_music()
 
 	local menu = WarMenu()
 	main_menu = menu

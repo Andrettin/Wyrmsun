@@ -30,8 +30,6 @@ campaign_menu = nil
 function RunCampaignMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	play_menu_music()
-
 	local campaign_description
 	local highest_completed_difficulty
 	local faction_name

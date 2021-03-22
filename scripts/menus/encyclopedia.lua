@@ -30,10 +30,6 @@ encyclopedia_menu = nil
 function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu()
 	encyclopedia_menu = menu
 	
@@ -41,11 +37,6 @@ function RunEncyclopediaMenu()
 end
 
 function RunEncyclopediaUnitsCivilizationMenu(state)
-
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -189,10 +180,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 end
 
 function RunEncyclopediaUnitsMenu(state, civilization)
-
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -517,10 +504,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				return;
 			end
 		end
-	end
-
-	if (RunningScenario == false) then
-		play_menu_music()
 	end
 
 	local menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name, state)))
@@ -1007,10 +990,6 @@ end
 
 function RunEncyclopediaTextsMenu()
 
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1038,10 +1017,6 @@ function RunEncyclopediaTextsMenu()
 end
 
 function OpenEncyclopediaText(text_identifier, chosen_chapter)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1329,10 +1304,6 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 end
 
 function RunEncyclopediaPlanesMenu()
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1384,10 +1355,6 @@ function RunEncyclopediaPlanesMenu()
 end
 
 function OpenEncyclopediaPlaneEntry(plane)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1478,10 +1445,6 @@ end
 
 function RunEncyclopediaWorldsMenu()
 
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1533,10 +1496,6 @@ function RunEncyclopediaWorldsMenu()
 end
 
 function OpenEncyclopediaWorldEntry(world)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1627,12 +1586,7 @@ function OpenEncyclopediaWorldEntry(world)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaGameConceptsMenu()
-
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-	
+function RunEncyclopediaGameConceptsMenu()	
 	local game_concepts = GameConcepts
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1681,10 +1635,6 @@ function RunEncyclopediaGameConceptsMenu()
 end
 
 function OpenEncyclopediaGameConceptEntry(game_concept_key)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local game_concepts = GameConcepts
 
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1710,10 +1660,6 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 end
 
 function RunEncyclopediaCivilizationsMenu()
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1765,10 +1711,6 @@ function RunEncyclopediaCivilizationsMenu()
 end
 
 function OpenEncyclopediaCivilizationEntry(civilization)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1822,10 +1764,6 @@ function OpenEncyclopediaCivilizationEntry(civilization)
 end
 
 function RunEncyclopediaFactionsCivilizationMenu()
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1884,10 +1822,6 @@ function RunEncyclopediaFactionsCivilizationMenu()
 end
 
 function RunEncyclopediaFactionsMenu(civilization)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -1939,10 +1873,6 @@ function RunEncyclopediaFactionsMenu(civilization)
 end
 
 function OpenEncyclopediaFactionEntry(civilization, faction)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2

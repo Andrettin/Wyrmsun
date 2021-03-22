@@ -26,10 +26,6 @@
 --
 
 function RunFamilyTreeMenu(hero)
-	if (RunningScenario == false) then
-		play_menu_music()
-	end
-
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2

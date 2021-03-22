@@ -4,6 +4,7 @@ import QtQuick.Controls 2.12
 MenuBase {
 	id: encyclopedia_menu
 	title: "Encyclopedia"
+	focus: true //true even if the game is running, so that the encyclopedia can be used in that case
 	
 	LargeButton {
 		id: buildings_button

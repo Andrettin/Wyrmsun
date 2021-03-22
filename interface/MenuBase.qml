@@ -7,6 +7,7 @@ Item {
 
 	property string title: ""
 	property string background: "wyrmsun_sepia"
+	property string music_type: "menu"
 	
 	Image {
 		anchors.fill: parent
@@ -56,5 +57,11 @@ Item {
 	Component.onCompleted: {
 		wyrmgus.install_event_filter_on(mouse_area)
 		wyrmgus.install_event_filter_on(menu)
+	}
+	
+	onFocusChanged: {
+		if (focus && !wyrmgus.game.running) {
+			wyrmgus.play_music(music_type)
+		}
 	}
 }

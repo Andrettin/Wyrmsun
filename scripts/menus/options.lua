@@ -351,8 +351,6 @@ end
 function BuildOptionsMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	play_menu_music()
-
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2

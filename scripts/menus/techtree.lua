@@ -33,8 +33,6 @@ function RunTechTreeMenu(civilization_number)
 
 	if (RunningScenario == false) then
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-		
-		play_menu_music()
 	end
 
 	local menu = WarMenu()
