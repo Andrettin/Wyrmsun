@@ -7,6 +7,7 @@ Item {
 	height: image.height
 	
 	property string button_type: ""
+	property string interface_style: "default"
 	property string text: ""
 	property string hotkey: ""
 	property bool hotkey_pressed: false
@@ -17,7 +18,7 @@ Item {
 
 	Image {
 		id: image
-		source: "image://interface/default/" + parent.button_type + "/" + (parent.pressed ? "pressed" : "normal")
+		source: "image://interface/" + interface_style + "/" + parent.button_type + "/" + (parent.pressed ? "pressed" : "normal")
 	}
 	
 	NormalText {

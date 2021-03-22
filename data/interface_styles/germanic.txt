@@ -5,4 +5,9 @@ germanic = {
 		pressed_file = "interface/germanic/button_large_pressed.png"
 		grayed_file = "interface/germanic/button_large_grayed.png"
 	}
+	small_button = {
+		normal_file = "interface/germanic/button_small_normal.png"
+		pressed_file = "interface/germanic/button_small_pressed.png"
+		grayed_file = "interface/germanic/button_small_grayed.png"
+	}
 }
