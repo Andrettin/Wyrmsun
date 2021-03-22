@@ -110,6 +110,10 @@ MenuBase {
 		text: "Encyclopedia"
 		hotkey: "c"
 		lua_command: "RunEncyclopediaMenu(); main_menu:stop(1);"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaMenu.qml")
+		}
 	}
 	
 	LargeButton {
