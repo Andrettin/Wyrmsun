@@ -12,7 +12,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Scenarios"
 		hotkey: "s"
-		lua_command: "single_player_menu:stop(); RunCampaignMenu();"
+		lua_command: "RunCampaignMenu();"
 		
 		onClicked: {
 			menu_stack.push("CampaignMenu.qml")
@@ -26,7 +26,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Legacy Quests"
 		hotkey: "q"
-		lua_command: "RunQuestWorldMenu(); if (RunningScenario) then single_player_menu:stop() end;"
+		lua_command: "RunQuestWorldMenu();"
 		
 		onClicked: {
 			menu_stack.push("LegacyQuestsMenu.qml")
@@ -39,7 +39,7 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Custom Game"
 		hotkey: "u"
-		lua_command: "RunSinglePlayerCustomGameMenu(); if (RunningScenario) then single_player_menu:stop(1) end;"
+		lua_command: "RunSinglePlayerCustomGameMenu();"
 	}
 	
 	LargeButton {
@@ -49,7 +49,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Load Game"
 		hotkey: "l"
-		lua_command: "RunLoadGameMenu(); single_player_menu:stop(1);"
+		lua_command: "RunLoadGameMenu();"
 	}
 	
 	LargeButton {
@@ -66,6 +66,5 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: tech_tree_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "single_player_menu:stop();"
 	}
 }

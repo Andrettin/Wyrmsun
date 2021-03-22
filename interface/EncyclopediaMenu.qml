@@ -170,6 +170,5 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: planes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "encyclopedia_menu:stop();"
 	}
 }

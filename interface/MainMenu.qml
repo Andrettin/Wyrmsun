@@ -45,7 +45,6 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Single Player Game"
 		hotkey: "s"
-		lua_command: "RunSinglePlayerGameMenu(); main_menu:stop(1);"
 		
 		onClicked: {
 			menu_stack.push("SinglePlayerGameMenu.qml")
@@ -109,7 +108,7 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
-		lua_command: "RunEncyclopediaMenu(); main_menu:stop(1);"
+		lua_command: "Load(\"scripts/game_concepts.lua\");"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaMenu.qml")

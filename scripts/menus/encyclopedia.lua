@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-encyclopedia_menu = nil
-
-function RunEncyclopediaMenu()
-	Load("scripts/game_concepts.lua")
-
-	local menu = WarMenu()
-	encyclopedia_menu = menu
-	
-	menu:run()
-end
-
 function RunEncyclopediaUnitsCivilizationMenu(state)
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2

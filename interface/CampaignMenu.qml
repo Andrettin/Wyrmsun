@@ -18,6 +18,6 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: start_scenario_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "save_preferences(); SetCurrentCampaign(\"\"); campaign_menu:stop(); RunSinglePlayerGameMenu();"
+		lua_command: "save_preferences(); SetCurrentCampaign(\"\"); campaign_menu:stop();"
 	}
 }

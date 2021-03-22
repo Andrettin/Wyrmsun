@@ -777,17 +777,6 @@ function RunSelectScenarioMenu(is_mod)
 	menu:run()
 end
 
-single_player_menu = nil
-
-function RunSinglePlayerGameMenu()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	local menu = WarMenu()
-	single_player_menu = menu
-	
-	return menu:run()
-end
-
 function RunSinglePlayerCustomGameMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	local menu = WarMenu()
