@@ -78,7 +78,10 @@ MenuBase {
 		anchors.verticalCenterOffset: 14 * wyrmgus.defines.scale_factor
 		text: "Options"
 		hotkey: "o"
-		lua_command: "RunOptionsMenu(); main_menu:stop(1);"
+		
+		onClicked: {
+			menu_stack.push("OptionsMenu.qml")
+		}
 	}
 	
 	LargeButton {

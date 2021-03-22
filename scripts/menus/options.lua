@@ -29,42 +29,12 @@
 
 function RunGameVideoOptionsMenu()
 	local menu = WarGameMenu(panel(1))
-	local resolution_width_list = {"1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
-	local resolution_width_dd
-	local resolution_height_list = {"600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080", "1200"}
-	local resolution_height_dd
-	local resolution_width = Video.Width
-	local resolution_height = Video.Height
 	local offx = 0
 	local offy = 0
 	local fullscreen = Video.FullScreen
 	local fullscreen_dd
 
 	menu:addLabel(_("Video Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
-
-	menu:addLabel(_("Resolution Width:"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
-	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
-	function(dd)
-			resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-	end)
-	resolution_width_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	for i = 1,table.getn(resolution_width_list) do
-		if (tonumber(resolution_width_list[i]) == Video.Width) then
-			resolution_width_dd:setSelected(i - 1)
-		end
-	end
-
-	menu:addLabel(_("Resolution Height:"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (34 + 26*2) * get_scale_factor(), Fonts["game"], false)
-	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (55 + 26*2) * get_scale_factor(),
-	function(dd)
-			resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-	end)
-	resolution_height_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	for i = 1,table.getn(resolution_height_list) do
-		if (tonumber(resolution_height_list[i]) == Video.Height) then
-			resolution_height_dd:setSelected(i - 1)
-		end
-	end
 
 	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (90 + 26*2) * get_scale_factor(),
 	function()
@@ -74,12 +44,6 @@ function RunGameVideoOptionsMenu()
 
 	menu:addFullButton("~!OK", "o", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
 	function()
-		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
-			LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
-			SetVideoSize(resolution_width, resolution_height)
-			SavePreferences()
-		end
-
 		if (fullscreen ~= Video.FullScreen) then
 			ToggleFullScreen()
 			wyr.preferences.VideoFullScreen = Video.FullScreen
@@ -348,47 +312,16 @@ function SetVideoSize(width, height)
 	SavePreferences()
 end
 
-function BuildOptionsMenu()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	menu:addLabel(_("~<Options~>"), offx + 320 * get_scale_factor(), offy + (212 - 25 - (36 * 1)) * get_scale_factor())
-	menu:addFullButton(_("~!Gameplay Options"), "g", offx + 208 * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
-		function()
-			RunGameplayOptionsMenu();
-		end
-	)
-	menu:addFullButton(_("~!Video and Audio Options"), "v", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
-		function()
-			RunVideoOptionsMenu()
-			menu:stop(1)
-		end
-	)
-	--[[
-	menu:addFullButton(_("~!Audio Options"), "a", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function()
-			RunAudioOptionsMenu()
-		end
-	)
-	--]]
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function() menu:stop() end
-	)
-	return menu:run()
-end
+gameplay_options_menu = nil
 
 function RunGameplayOptionsMenu()
 	local menu = WarMenu()
+	gameplay_options_menu = menu
 	local offx = (Video.Width - 352 * get_scale_factor()) / 2
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local b
 	local hotkey_setup_list = {_("Default"), _("Position-Based"), _("Position-Based (except Commands)")}
 	local hotkey_setup_dd
-
-	menu:addLabel(_("~<Gameplay Options~>"), offx + 176 * get_scale_factor(), offy + 1 * get_scale_factor())
 
 	--[[
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
@@ -577,53 +510,20 @@ function RunGameplayOptionsMenu()
 	)
 	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
-		SavePreferences()
-		menu:stop()
-	end)
-
 	return menu:run()
 end
 
+video_options_menu = nil
+
 function RunVideoOptionsMenu()
 	local menu = WarMenu()
+	video_options_menu = menu
 	local offx = (Video.Width - 352 * get_scale_factor()) / 2
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local scaling_checkbox
 	local b
-	local resolution_width_list = {"1024", "1066", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
-	local resolution_width_dd
-	local resolution_height_list = {"600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080", "1200"}
-	local resolution_height_dd
-	local resolution_width = Video.Width
-	local resolution_height = Video.Height
 	local fullscreen_dd
 	local fullscreen = Video.FullScreen
-
-	menu:addLabel(_("~<Video and Audio Options~>"), offx + 176 * get_scale_factor(), offy + 1 * get_scale_factor())
-	menu:addLabel(_("Resolution Width:"), offx + 8 * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
-	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8 * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
-	function(dd)
-		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-	end)
-	resolution_width_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	for i = 1,table.getn(resolution_width_list) do
-		if (tonumber(resolution_width_list[i]) == Video.Width) then
-			resolution_width_dd:setSelected(i - 1)
-		end
-	end
-
-	menu:addLabel(_("Resolution Height:"), offx + (16 + 152 + 24) * get_scale_factor(), offy + 34 * get_scale_factor(), Fonts["game"], false)
-	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (16 + 152 + 24) * get_scale_factor(), offy + (55 + 26*0) * get_scale_factor(),
-	function(dd)
-		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-	end)
-	resolution_height_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	for i = 1,table.getn(resolution_height_list) do
-		if (tonumber(resolution_height_list[i]) == Video.Height) then
-			resolution_height_dd:setSelected(i - 1)
-		end
-	end
 
 	-- sound volume options
 	b = Label(_("Sound Effects Volume"))
@@ -719,37 +619,7 @@ function RunVideoOptionsMenu()
 	)
 	scaling_checkbox:setMarked(get_scale_factor_preference() == 2)
 
-	menu:addHalfButton(_("~!OK"), "o", offx + 123 * get_scale_factor(), offy + (55 + 26*12 + 14) * get_scale_factor(), function()
-		wyr.preferences.EffectsVolume = GetEffectsVolume()
-		wyr.preferences.EffectsEnabled = IsEffectsEnabled()
-		wyr.preferences.MusicVolume = GetMusicVolume()
-		wyr.preferences.MusicEnabled = IsMusicEnabled()
-		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
-			SetVideoSize(resolution_width, resolution_height)
-		end
-
-		if (fullscreen ~= Video.FullScreen) then
-			ToggleFullScreen()
-			if (wyr.preferences.VideoFullScreen == Video.FullScreen) then -- if wyr.preferences.VideoFullScreen is equal to Video.FullScreen, then that means the full screen change failed
-				GenericDialog("Full Screen Change Failed", "Full screen mode is not available for the chosen resolution for your monitor.")
-			else
-				wyr.preferences.VideoFullScreen = Video.FullScreen
-			end
-		end
-
-		SavePreferences()
-		save_preferences()
-		menu:stop()
-	end)
-
 	return menu:run()
-end
-
-function RunOptionsMenu()
-  local continue = 1
-  while (continue == 1) do
-    continue = BuildOptionsMenu()
-  end
 end
 
 function RunGameOptionsMenu(previous_menu)
