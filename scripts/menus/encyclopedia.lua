@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+encyclopedia_menu = nil
+
 function RunEncyclopediaMenu()
 	Load("scripts/game_concepts.lua")
 
@@ -32,66 +34,9 @@ function RunEncyclopediaMenu()
 		play_menu_music()
 	end
 
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
+	local menu = WarMenu()
+	encyclopedia_menu = menu
 	
-	menu:addLabel(_("~<Encyclopedia~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
-
-	menu:addFullButton(_("~!Buildings"), "b", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*-1) * get_scale_factor(),
-		function() RunEncyclopediaUnitsCivilizationMenu("buildings") end)
-
-	menu:addFullButton(_("~!Civilizations"), "c", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor(),
-		function() RunEncyclopediaCivilizationsMenu() end)
-
-	menu:addFullButton(_("~!Deities"), "d", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("deities") end)
-
-	menu:addFullButton(_("~!Factions"), "f", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
-		function() RunEncyclopediaFactionsCivilizationMenu() end)
-
-	menu:addFullButton(_("~!Game Concepts"), "g", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
-		function() RunEncyclopediaGameConceptsMenu() end)
-
-	menu:addFullButton(_("~!Heroes"), "h", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function() RunEncyclopediaUnitsCivilizationMenu("heroes") end)
-
-	menu:addFullButton(_("~!Items"), "i", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("items") end)
-
-	menu:addFullButton(_("Magic P~!refixes"), "r", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
-
-	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*7) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
-
-	menu:addFullButton(_("P~!lanes"), "l", offx + (208 + (113 * -1)) * get_scale_factor(), offy + (104 + 36*8) * get_scale_factor(),
-		function() RunEncyclopediaPlanesMenu() end)
-
-	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*-1) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
-
-	menu:addFullButton(_("~!Technologies"), "t", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor(),
-		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
-
-	menu:addFullButton(_("Te~!xts"), "x", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(),
-		function() RunEncyclopediaTextsMenu() end)
-
-	menu:addFullButton(_("U~!niques"), "n", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*2) * get_scale_factor(),
-		function() RunEncyclopediaUnitsMenu("unique_items") end)
-
-	menu:addFullButton(_("~!Units"), "u", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(),
-		function() RunEncyclopediaUnitsCivilizationMenu("units") end)
-
-	menu:addFullButton(_("~!Worlds"), "w", offx + (208 + (113 * 1)) * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(),
-		function() RunEncyclopediaWorldsMenu() end)
-
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function()
-			menu:stop();
-		end
-	)
-
 	menu:run()
 end
 
