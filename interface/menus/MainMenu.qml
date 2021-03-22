@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import ".."
 
 MenuBase {
 	id: main_menu
@@ -26,7 +27,7 @@ MenuBase {
 				}
 			}
 			
-			return "../graphics/interface/wyrmsun_logo_" + best_height + ".png"
+			return "../../graphics/interface/wyrmsun_logo_" + best_height + ".png"
 		}
 	}
 	

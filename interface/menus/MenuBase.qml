@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import ".."
 
 Item {
 	id: menu
@@ -11,7 +12,7 @@ Item {
 	
 	Image {
 		anchors.fill: parent
-		source: "../graphics/backgrounds/" + background + ".png"
+		source: "../../graphics/backgrounds/" + background + ".png"
 		fillMode: Image.PreserveAspectCrop
 	}
 	

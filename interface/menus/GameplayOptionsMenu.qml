@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import ".."
 
 MenuBase {
 	id: gameplay_options_menu

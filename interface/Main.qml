@@ -29,7 +29,7 @@ Window {
 		target: wyrmgus
 		onRunningChanged: {
 			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
-				var menu_stack_component = Qt.createComponent("MenuStack.qml")
+				var menu_stack_component = Qt.createComponent("menus/MenuStack.qml")
 				
 				if (menu_stack_component.status == Component.Error) {
 					console.error(menu_stack_component.errorString())
