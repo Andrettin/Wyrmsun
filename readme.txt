@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 
+* Units
+- Fixed crash which occurred when a ranged unit was garrisoned inside a caravan while near enemies.
+
 * User Interface
 - F11 is now the screenshot hotkey.
 - Reworked the game's rendering system and graphical interface to use the Qt Framework.

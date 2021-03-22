@@ -217,6 +217,7 @@ DefineUnitType("unit-caravan", {
 	Coward = true,
 	RightMouseAction = "harvest",
 	MaxOnBoard = 2,
+	Missile = "missile-none",
 	CanTransport = {"Building", "false", "GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidding "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
 	AttackFromTransporter = true,
 	SaveCargo = true,
