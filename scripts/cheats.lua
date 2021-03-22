@@ -255,6 +255,11 @@ function HandleCheats(str)
 		if (dock_type) then
 			unit = CreateUnit(dock_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
+	elseif (str == "caravan") then
+		local caravan_type = GetFactionClassUnitType("caravan", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (caravan_type) then
+			unit = CreateUnit(caravan_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		end
 	elseif (string.sub(str, 0, 13) == "prefixed item") then
         local string_list = {}
 		local sep = " "
