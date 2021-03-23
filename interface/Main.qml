@@ -7,7 +7,7 @@ Window {
 	id: window
 	visible: true
 	title: qsTr("Wyrmsun")
-	visibility: "Maximized"
+	visibility: Window.Maximized
 	width: 1066
 	height: 600
 	
@@ -29,6 +29,10 @@ Window {
 		target: wyrmgus
 		onRunningChanged: {
 			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
+				if (wyrmgus.preferences.fullscreen) {
+					window.visibility = Window.FullScreen
+				}
+				
 				var menu_stack_component = Qt.createComponent("menus/MenuStack.qml")
 				
 				if (menu_stack_component.status == Component.Error) {

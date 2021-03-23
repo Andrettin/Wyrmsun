@@ -23,9 +23,9 @@ Item {
 		id: loading_tip
 		text: random_element(wyrmgus.defines.tips)
 		anchors.left: parent.left
-		anchors.leftMargin: 8
+		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
 		horizontalAlignment: Text.AlignHCenter
 		wrapMode: Text.WordWrap
@@ -37,9 +37,9 @@ Item {
 		id: loading_message
 		text: wyrmgus.loading_message
 		anchors.left: parent.left
-		anchors.leftMargin: 8
+		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		horizontalAlignment: Text.AlignHCenter
