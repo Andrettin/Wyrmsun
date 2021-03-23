@@ -10,4 +10,10 @@ germanic = {
 		pressed_file = "interface/germanic/button_small_pressed.png"
 		grayed_file = "interface/germanic/button_small_grayed.png"
 	}
+	radio_button = {
+		checked_file = "interface/germanic/radio_normal_selected.png"
+		checked_pressed_file = "interface/germanic/radio_pressed_selected.png"
+		unchecked_file = "interface/germanic/radio_normal_unselected.png"
+		unchecked_pressed_file = "interface/germanic/radio_pressed_unselected.png"
+	}
 }
