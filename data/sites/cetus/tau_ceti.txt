@@ -1,0 +1,7 @@
+tau_ceti = {
+	name = "Tau Ceti"
+	map_template = universe
+	astrocoordinate = { 26.017 -15.9375 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 11.905
+	base_unit_type = unit_yellow_star #dwarf star
+}
