@@ -7,9 +7,9 @@ Window {
 	id: window
 	visible: true
 	title: qsTr("Wyrmsun")
-	visibility: Window.Maximized
-	width: 1066
-	height: 600
+	width: Screen.width
+	height: Screen.height + 1 //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
+	flags: Qt.FramelessWindowHint | Qt.Window
 	
 	property var menu_stack: null
 	property var map_view_underlay: null
