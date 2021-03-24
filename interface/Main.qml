@@ -133,7 +133,7 @@ Window {
 			font.family: berenika_font.name
 			font.pixelSize: 12 * wyrmgus.defines.scale_factor
 			wrapMode: Text.WordWrap
-			width: 256 * wyrmgus.defines.scale_factor
+			width: 512 * wyrmgus.defines.scale_factor
 		}
 	}
 
