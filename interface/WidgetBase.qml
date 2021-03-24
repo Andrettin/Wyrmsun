@@ -8,12 +8,17 @@ Item {
 	property string interface_style: "default"
 	property string text: ""
 	property string hotkey: ""
+	property string tooltip: ""
 	property bool hotkey_pressed: false
 	property bool pressed: mouse_area.containsPress || hotkey_pressed
 	property bool hovered: mouse_area.containsMouse
 	readonly property var image: widget_image
 	
 	signal clicked()
+	
+	ToolTip.visible: mouse_area.containsMouse && tooltip.length > 0
+	ToolTip.delay: 1000
+	ToolTip.text: window.tooltip(tooltip)
 	
 	Image {
 		id: widget_image

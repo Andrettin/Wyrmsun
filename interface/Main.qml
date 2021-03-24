@@ -109,6 +109,39 @@ Window {
 		wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
 	}
 	
+	Item { //tooltips need to be attached to an item
+		//set the shared properties for tooltips
+		ToolTip.toolTip.palette.text: "white"
+		ToolTip.toolTip.font.family: berenika_font.name
+		ToolTip.toolTip.font.pixelSize: 14 * wyrmgus.defines.scale_factor
+		ToolTip.toolTip.contentWidth: tooltip_width_reference_text.contentWidth
+		ToolTip.toolTip.background: Rectangle {
+			color: "black"
+			opacity: 0.90
+			border.color: "gray"
+			border.width: 1
+			radius: 5 * wyrmgus.defines.scale_factor
+		}
+		ToolTip.toolTip.onTextChanged: tooltip_width_reference_text.text = ToolTip.toolTip.text
+
+		Text {
+			id: tooltip_width_reference_text
+			text: ""
+			anchors.top: window.top
+			anchors.left: window.right //place it offscreen, this is for calculating the text width only, it shouldn't be visible
+			anchors.leftMargin: 4
+			font.family: berenika_font.name
+			font.pixelSize: 14 * wyrmgus.defines.scale_factor
+			wrapMode: Text.WordWrap
+			width: 256 * wyrmgus.defines.scale_factor
+		}
+	}
+
+	//format tooltip text
+	function tooltip(text) {
+		return "<font color=\"white\">" + text + "</font>"
+	}
+
 	//highlight text
 	function highlight(text) {
 		return "<font color=\"gold\">" + text + "</font>"
