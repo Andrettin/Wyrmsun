@@ -113,7 +113,7 @@ Window {
 		//set the shared properties for tooltips
 		ToolTip.toolTip.palette.text: "white"
 		ToolTip.toolTip.font.family: berenika_font.name
-		ToolTip.toolTip.font.pixelSize: 14 * wyrmgus.defines.scale_factor
+		ToolTip.toolTip.font.pixelSize: 12 * wyrmgus.defines.scale_factor
 		ToolTip.toolTip.contentWidth: tooltip_width_reference_text.contentWidth
 		ToolTip.toolTip.background: Rectangle {
 			color: "black"
@@ -131,7 +131,7 @@ Window {
 			anchors.left: window.right //place it offscreen, this is for calculating the text width only, it shouldn't be visible
 			anchors.leftMargin: 4
 			font.family: berenika_font.name
-			font.pixelSize: 14 * wyrmgus.defines.scale_factor
+			font.pixelSize: 12 * wyrmgus.defines.scale_factor
 			wrapMode: Text.WordWrap
 			width: 256 * wyrmgus.defines.scale_factor
 		}
