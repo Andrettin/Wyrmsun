@@ -34,12 +34,14 @@ MenuBase {
 				readonly property int button_y: Math.floor(index / Math.floor(button_area.width / width))
 				readonly property int x_offset: (button_area.width - (Math.floor(button_area.width / width) * width)) / 2
 				readonly property int y_offset: (button_area.height - (Math.floor(button_area.height / height) * height)) / 2
+				readonly property string faction_tooltip: model.modelData.faction ? (": " + model.modelData.faction.name) : ""
+				readonly property string civilization_tooltip: model.modelData.civilization ? (" (" + model.modelData.civilization.name + faction_tooltip + ")") : ""
 				
 				visible: model.modelData.icon != null
 				x: button_x * width + x_offset
 				y: button_y * height + y_offset
 				icon: model.modelData.icon.identifier
-				tooltip: model.modelData.name
+				tooltip: model.modelData.name + civilization_tooltip
 			}
 		}
 	}
