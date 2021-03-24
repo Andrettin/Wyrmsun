@@ -42,6 +42,7 @@ MenuBase {
 				y: button_y * height + y_offset
 				icon: model.modelData.icon.identifier
 				tooltip: model.modelData.name + civilization_tooltip
+				lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"units\");"
 			}
 		}
 	}

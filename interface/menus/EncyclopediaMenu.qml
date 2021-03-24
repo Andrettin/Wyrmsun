@@ -154,7 +154,6 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Units"
 		hotkey: "u"
-		lua_command: "RunEncyclopediaUnitsCivilizationMenu(\"units\");"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", { category_name: "Units", entries: wyrmgus.get_unit_encyclopedia_entries() })
