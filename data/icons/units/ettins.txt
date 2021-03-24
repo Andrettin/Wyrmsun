@@ -1,4 +1,3 @@
 icon_ettin = {
 	file = "ettin/icons/ettin.png"
-	frame = 0
 }

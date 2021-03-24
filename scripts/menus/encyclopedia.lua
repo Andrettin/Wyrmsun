@@ -26,7 +26,7 @@
 --
 
 function RunEncyclopediaUnitsCivilizationMenu(state)
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
+	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	

@@ -9,6 +9,7 @@ Item {
 	property string title: ""
 	property string background: "wyrmsun_sepia"
 	property string music_type: "menu"
+	property var title_element: title_text
 	
 	Image {
 		anchors.fill: parent

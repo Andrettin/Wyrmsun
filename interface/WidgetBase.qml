@@ -26,7 +26,7 @@ Item {
 		id: mouse_area
 		anchors.fill: widget_image
 		hoverEnabled: true
-		z: 1 //ensure the mouse area will be on top of any labels added by derived classes
+		z: 2 //ensure the mouse area will be on top of any labels added by derived classes
 		
 		onClicked: {
 			widget.clicked()
