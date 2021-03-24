@@ -38,8 +38,8 @@ MenuBase {
 				visible: model.modelData.icon != null
 				x: button_x * width + x_offset
 				y: button_y * height + y_offset
-				text: model.modelData.name
-				icon: model.modelData.icon ? model.modelData.icon.identifier : ""
+				icon: model.modelData.icon.identifier
+				tooltip: model.modelData.name
 			}
 		}
 	}
