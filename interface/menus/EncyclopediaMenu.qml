@@ -14,7 +14,10 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Buildings"
 		hotkey: "b"
-		lua_command: "RunEncyclopediaUnitsCivilizationMenu(\"buildings\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", { category_name: "Buildings", entries: wyrmgus.get_building_encyclopedia_entries() })
+		}
 	}
 	
 	LargeButton {
