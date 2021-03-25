@@ -5,7 +5,7 @@ ButtonBase {
 	button_type: pressed ? "pressed_icon_frame" : "icon_frame"
 	
 	property string icon: ""
-	property string player_color: "red"
+	property string player_color: "violet"
 	
 	//black rectangle to prevent transparent space from being shown when the button is pressed (and thus the icon moved is shifted)
 	Rectangle {
