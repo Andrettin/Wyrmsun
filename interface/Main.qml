@@ -41,7 +41,7 @@ Window {
 					return
 				}
 				
-				menu_stack = menu_stack_component.createObject(window)
+				menu_stack = menu_stack_component.createObject(viewport)
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
 				
@@ -52,7 +52,7 @@ Window {
 					return
 				}
 				
-				loading_screen_component.createObject(window)
+				loading_screen_component.createObject(viewport)
 			}
 		}
 	}
@@ -67,7 +67,7 @@ Window {
 				return
 			}
 			
-			map_view_underlay = underlay_component.createObject(window)
+			map_view_underlay = underlay_component.createObject(viewport)
 			
 			var component = Qt.createComponent("MapView.qml")
 			
@@ -76,7 +76,7 @@ Window {
 				return
 			}
 			
-			map_view = component.createObject(window)
+			map_view = component.createObject(viewport)
 		}
 	}
 	
@@ -86,28 +86,6 @@ Window {
 			map_view_underlay.destroy()
 			map_view.destroy()
 		}
-	}
-	
-	MouseArea {
-		id: frame_buffer_object_mouse_area
-		anchors.fill: parent
-		z: -1
-		hoverEnabled: true
-		acceptedButtons: Qt.AllButtons
-	}
-	
-	FrameBufferObject {
-		id: frame_buffer_object
-		anchors.fill: parent
-		z: 1 //place it over the menus
-	}
-	
-	onClosing: {
-		wyrmgus.exit()
-	}
-	
-	Component.onCompleted: {
-		wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
 	}
 	
 	Item { //tooltips need to be attached to an item
@@ -128,9 +106,7 @@ Window {
 		Text {
 			id: tooltip_width_reference_text
 			text: ""
-			anchors.top: window.top
-			anchors.left: window.right //place it offscreen, this is for calculating the text width only, it shouldn't be visible
-			anchors.leftMargin: 4
+			x: Screen.width + 4 //place it offscreen, this is for calculating the text width only, it shouldn't be visible
 			font.family: berenika_font.name
 			font.pixelSize: 12 * wyrmgus.defines.scale_factor
 			wrapMode: Text.WordWrap
@@ -138,6 +114,36 @@ Window {
 		}
 	}
 
+	Item {
+		id: viewport
+		anchors.left: window.left
+		anchors.top: window.top
+		width: Screen.width
+		height: Screen.height
+		
+		MouseArea {
+			id: frame_buffer_object_mouse_area
+			anchors.fill: parent
+			z: -1
+			hoverEnabled: true
+			acceptedButtons: Qt.AllButtons
+		}
+		
+		FrameBufferObject {
+			id: frame_buffer_object
+			anchors.fill: parent
+			z: 1 //place it over the menus
+		}
+	}
+	
+	onClosing: {
+		wyrmgus.exit()
+	}
+	
+	Component.onCompleted: {
+		wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
+	}
+	
 	//format tooltip text
 	function tooltip(text) {
 		return "<font color=\"white\">" + text + "</font>"
