@@ -112,30 +112,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	}
 })
 
-DefineCivilization("gnome", {
-	Display = "Gnome",
-	Visible = true,
-	Species = "gnome",
-	Group = "gnomish",
-	ParentCivilization = "dwarf",
-	Language = "gnomish",
-	Adjective = "Gnomish",
-	Playable = false,
-	DefaultColor = "blue",
-	CivilizationUpgrade = "upgrade-gnomish-civilization",
-	ButtonIcons = {
-		"move", "icon-gnomish-boots",
-		"attack", "icon-gnomish-thrusting-sword-1",
-		"patrol", "icon-gnomish-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground",
-		"return-goods", "icon-dwarven-return-goods"
-	},
-	Description = "Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards.",
-	PersonalNames = {
-		"male", "Rubezahl"
-	}
-})
-
 DefineCivilization("kobold", {
 	Display = "Kobold",
 	Visible = true,

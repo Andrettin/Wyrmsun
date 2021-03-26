@@ -1,5 +1,15 @@
 gnome = {
+	name = "Gnomish"
 	aliases += gnomish
+	parent_civilization = dwarven
+	species = gnome
+	group = gnomish
+	language = gnomish
+	visible = true
+	playable = false
+	default_color = blue
+	upgrade = upgrade_gnomish_civilization
+	description = "Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards."
 	
 	unit_sounds = {
 		acknowledge = basic_gnome_voices_acknowledge
@@ -15,5 +25,20 @@ gnome = {
 		copper = basic_gnome_voices_not_enough_gold
 		lumber = basic_gnome_voices_not_enough_lumber
 		stone = basic_gnome_voices_not_enough_stone
+	}
+	
+	button_icons = {
+		move = icon_gnomish_boots
+		stop = icon_goblin_wooden_shield
+		attack = icon_gnomish_thrusting_sword_1
+		patrol = icon_gnomish_patrol_land
+		stand_ground = icon_germanic_stand_ground
+		return_goods = icon_dwarven_return_goods
+	}
+	
+	personal_names = {
+		male = {
+			"Rubezahl"
+		}
 	}
 }
