@@ -48,34 +48,9 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 	end
 	
 	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
-		local units_table = {}
-		if not (state == "items") then
-			units_table = Units
-		else
-			units_table = GetItems()
-		end
+		local units_table = Units
 		for i, unitName in ipairs(units_table) do
-			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
-				if (
-					(
-						GetUnitTypeData(unitName, "Notes") ~= ""
-						or GetUnitTypeData(unitName, "Description") ~= ""
-						or GetUnitTypeData(unitName, "Background") ~= ""
-						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
-					)
-					and string.find(unitName, "template") == nil
-					and GetUnitTypeData(unitName, "Building") == (state == "buildings")
-					and GetUnitTypeData(unitName, "Item") == (state == "items")
-				) then
-					local element_civilization = GetUnitTypeData(unitName, "Civilization")
-					if (element_civilization == "") then
-						element_civilization = "neutral"
-					end
-					if (GetArrayIncludes(civilizations, element_civilization) == false) then
-						table.insert(civilizations, element_civilization)
-					end
-				end
-			elseif (state == "technologies" and string.find(unitName, "unit") == nil) then
+			if (state == "technologies" and string.find(unitName, "unit") == nil) then
 				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
 					local element_civilization = GetUpgradeData(unitName, "Civilization")
 					if (element_civilization == "") then
@@ -177,57 +152,10 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 	local icon_x = 0
 	local icon_y = 0
 	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
-		local units_table = {}
-		if not (state == "items") then
-			units_table = Units
-		else
-			local function compare_items(a, b)
-				if (GetUnitTypeData(a, "ItemSlotId") ~= GetUnitTypeData(b, "ItemSlotId")) then
-					if (GetUnitTypeData(b, "ItemSlotId") == -1 and GetUnitTypeData(a, "ItemSlotId") ~= -1) then
-						return true
-					elseif (GetUnitTypeData(b, "ItemSlotId") ~= -1 and GetUnitTypeData(a, "ItemSlotId") == -1) then
-						return false
-					elseif (GetUnitTypeData(b, "ItemSlotId") ~= -1 and GetUnitTypeData(a, "ItemSlotId") ~= -1) then
-						return GetUnitTypeData(a, "ItemSlotId") < GetUnitTypeData(b, "ItemSlotId")
-					end
-				end
-				
-				if (GetUnitTypeData(a, "ItemClass") ~= GetUnitTypeData(b, "ItemClass")) then
-					return GetUnitTypeData(a, "ItemClass") < GetUnitTypeData(b, "ItemClass")
-				elseif (GetUnitTypeData(a, "Costs", "copper") ~= GetUnitTypeData(b, "Costs", "copper")) then
-					return GetUnitTypeData(a, "Costs", "copper") < GetUnitTypeData(b, "Costs", "copper")
-				else
-					return GetUnitTypeData(a, "Name") < GetUnitTypeData(b, "Name")
-				end
-			end
-			
-			units_table = GetItems()
-			
-			table.sort(units_table, compare_items)
-		end
+		local units_table = Units
+
 		for i, unitName in ipairs(units_table) do
-			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
-				if (
-					(civilization == nil or civilization == GetUnitTypeData(unitName, "Civilization") or (civilization == "neutral" and GetUnitTypeData(unitName, "Civilization") == ""))
-					and (
-						GetUnitTypeData(unitName, "Notes") ~= ""
-						or GetUnitTypeData(unitName, "Description") ~= ""
-						or GetUnitTypeData(unitName, "Background") ~= ""
-						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
-					)
-					and string.find(unitName, "template") == nil
-					and GetUnitTypeData(unitName, "Building") == (state == "buildings")
-					and GetUnitTypeData(unitName, "Item") == (state == "items")
-				) then
-					addEncyclopediaIcon(unitName, state, menu, offx + (23 + 4 + (54 * icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (icon_y + 1))) * get_scale_factor())
-					if (icon_x >= 10) then
-						icon_x = 0
-						icon_y = icon_y + 1
-					else
-						icon_x = icon_x + 1
-					end
-				end
-			elseif (state == "technologies" and string.find(unitName, "unit") == nil and civilization == GetUpgradeData(unitName, "Civilization")) then
+			if (state == "technologies" and string.find(unitName, "unit") == nil and civilization == GetUpgradeData(unitName, "Civilization")) then
 				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
 					addEncyclopediaIcon(unitName, state, menu, offx + (23 + 4 + (54 * icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (icon_y + 1))) * get_scale_factor())
 					if (icon_x >= 10) then
@@ -1966,9 +1894,7 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 	end
 
 	local top_label_string = "~<" .. _("Encyclopedia") .. ": "
-	if (state == "buildings") then
-		top_label_string = top_label_string .. _("Buildings")
-	elseif (state == "civilizations") then
+	if (state == "civilizations") then
 		top_label_string = top_label_string .. _("Civilizations")
 	elseif (state == "deities") then
 		top_label_string = top_label_string .. _("Deities")
@@ -1978,8 +1904,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Game Concepts")
 	elseif (state == "heroes") then
 		top_label_string = top_label_string .. _("Heroes")
-	elseif (state == "items") then
-		top_label_string = top_label_string .. _("Items")
 	elseif (state == "item_prefixes") then
 		top_label_string = top_label_string .. _("Magic Prefixes")
 	elseif (state == "item_suffixes") then
@@ -1994,8 +1918,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Texts")
 	elseif (state == "unique_items") then
 		top_label_string = top_label_string .. _("Uniques")
-	elseif (state == "units") then
-		top_label_string = top_label_string .. _("Units")
 	elseif (state == "worlds") then
 		top_label_string = top_label_string .. _("Worlds")
 	end

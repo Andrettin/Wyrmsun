@@ -81,7 +81,14 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Items"
 		hotkey: "i"
-		lua_command: "RunEncyclopediaUnitsMenu(\"items\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "items",
+				category_name: "Items",
+				entries: wyrmgus.get_item_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
