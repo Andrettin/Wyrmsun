@@ -8,6 +8,7 @@ MenuBase {
 	title: "Encyclopedia: " + category_name
 	
 	property string category_name: ""
+	property string category: ""
 	property var entries: []
 	
 	Flickable {
@@ -43,7 +44,7 @@ MenuBase {
 				icon: model.modelData.icon.identifier
 				player_color: model.modelData.faction ? model.modelData.faction.color.identifier : (model.modelData.civilization ? model.modelData.civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
 				tooltip: model.modelData.name + civilization_tooltip
-				lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"units\");"
+				lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"" + category + "\");"
 			}
 		}
 	}

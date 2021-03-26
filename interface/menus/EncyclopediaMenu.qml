@@ -16,7 +16,11 @@ MenuBase {
 		hotkey: "b"
 		
 		onClicked: {
-			menu_stack.push("EncyclopediaCategoryIconMenu.qml", { category_name: "Buildings", entries: wyrmgus.get_building_encyclopedia_entries() })
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "buildings",
+				category_name: "Buildings",
+				entries: wyrmgus.get_building_encyclopedia_entries()
+			})
 		}
 	}
 	
@@ -159,7 +163,11 @@ MenuBase {
 		hotkey: "u"
 		
 		onClicked: {
-			menu_stack.push("EncyclopediaCategoryIconMenu.qml", { category_name: "Units", entries: wyrmgus.get_unit_encyclopedia_entries() })
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "units",
+				category_name: "Units",
+				entries: wyrmgus.get_unit_encyclopedia_entries()
+			})
 		}
 	}
 	
