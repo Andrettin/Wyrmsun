@@ -41,7 +41,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Deities"
 		hotkey: "d"
-		lua_command: "RunEncyclopediaUnitsMenu(\"deities\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "deities",
+				category_name: "Deities",
+				entries: wyrmgus.get_deity_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {

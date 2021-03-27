@@ -47,7 +47,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		end
 	end
 	
-	if (state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = Units
 		for i, unitName in ipairs(units_table) do
 			if (state == "technologies" and string.find(unitName, "unit") == nil) then
@@ -59,19 +59,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 					if (GetArrayIncludes(civilizations, element_civilization) == false) then
 						table.insert(civilizations, element_civilization)
 					end
-				end
-			end
-		end
-	elseif (state == "deities") then
-		local deities = GetDeities()
-		for i = 1, table.getn(deities) do
-			if (GetDeityData(deities[i], "Icon") ~= "" and (GetDeityData(deities[i], "Description") ~= "" or GetDeityData(deities[i], "Background") ~= "")) then
-				local element_civilization = GetDeityData(deities[i], "Pantheon")
-				if (element_civilization == "") then
-					element_civilization = "neutral"
-				end
-				if (GetArrayIncludes(civilizations, element_civilization) == false) then
-					table.insert(civilizations, element_civilization)
 				end
 			end
 		end
@@ -131,14 +118,13 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 end
 
 function RunEncyclopediaUnitsMenu(state, civilization)
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
+	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = Units
 
 		for i, unitName in ipairs(units_table) do
@@ -182,32 +168,6 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 				break
 			end
 		end
-	elseif (state == "deities") then
-		local deities = GetDeities()
-		
-		local function compare_deity(a,b)
-			if (GetDeityData(a, "Pantheon") ~= GetDeityData(b, "Pantheon")) then
-				return GetDeityData(a, "Pantheon") < GetDeityData(b, "Pantheon")
-			elseif (GetDeityData(a, "Major") ~= GetDeityData(b, "Major")) then
-				return GetDeityData(a, "Major")
-			else
-				return a < b
-			end
-		end
-		
-		table.sort(deities, compare_deity)
-		
-		for i = 1, table.getn(deities) do
-			if (GetDeityData(deities[i], "Icon") ~= "" and (GetDeityData(deities[i], "Description") ~= "" or GetDeityData(deities[i], "Background") ~= "")) then
-				addEncyclopediaIcon(deities[i], state, menu, offx + (23 + 4 + (54 * icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (icon_y + 1))) * get_scale_factor())
-				if (icon_x >= 10) then
-					icon_x = 0
-					icon_y = icon_y + 1
-				else
-					icon_x = icon_x + 1
-				end
-			end
-		end
 	elseif (state == "unique_items") then
 		local unique_items = GetUniqueItems()
 		for i = 1, table.getn(unique_items) do
@@ -241,20 +201,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_string = ""
 	local tooltip_name = ""
 	local tooltip_civilization = ""
-	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = GetIconData(GetUnitTypeData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
-		civilization = GetUnitTypeData(unit_name, "Civilization")
-		faction = GetUnitTypeData(unit_name, "Faction")
-		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
-		if (civilization ~= "" and civilization ~= "neutral") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
-			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
-			end
-			tooltip_civilization = tooltip_civilization .. ")"
-		end
-	elseif (string.find(unit_name, "upgrade") ~= nil) then
+	if (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = GetIconData(GetUpgradeData(unit_name, "Icon"), "File")
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
@@ -270,15 +217,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			if (faction ~= "") then
 				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
 			end
-		end
-	elseif (state == "deities") then
-		encyclopedia_icon = GetIconData(GetDeityData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
-		civilization = ""
-		faction = ""
-		tooltip_name = GetDeityData(unit_name, "Name")
-		if (GetDeityData(unit_name, "Pantheon") ~= "") then
-			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
@@ -1844,8 +1782,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 	local top_label_string = "~<" .. _("Encyclopedia") .. ": "
 	if (state == "civilizations") then
 		top_label_string = top_label_string .. _("Civilizations")
-	elseif (state == "deities") then
-		top_label_string = top_label_string .. _("Deities")
 	elseif (state == "factions") then
 		top_label_string = top_label_string .. _("Factions")
 	elseif (state == "game_concepts") then
