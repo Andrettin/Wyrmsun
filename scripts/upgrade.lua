@@ -68,7 +68,8 @@ DefineUpgrade("upgrade-long-spear", {
 	Description = "With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.",
 	Icon = "icon-long-spear",
 	Weapon = true,
-	Costs = {"time", 200, "copper", 400, "lumber", 400}
+	Costs = {"time", 200, "copper", 400, "lumber", 400},
+	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-pike", {
@@ -78,7 +79,8 @@ DefineUpgrade("upgrade-pike", {
 	Icon = "icon-pike",
 	Weapon = true,
 	Costs = {"time", 250, "copper", 1200, "lumber", 1200},
-	RequirementsString = "Long Spear and Ironworking"
+	RequirementsString = "Long Spear and Ironworking",
+	Item = "unit-pike"
 })
 
 DefineUpgrade("upgrade-bronze-shield", {
