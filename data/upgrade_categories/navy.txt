@@ -1,0 +1,10 @@
+navy = {
+	name = "Navy"
+	rank = category
+}
+
+shipbuilding = {
+	name = "Shipbuilding"
+	rank = subcategory
+	category = navy
+}

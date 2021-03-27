@@ -1,7 +1,9 @@
 masonry = {
 	name = "Masonry"
+	category = construction
 }
 
 architecture = {
 	name = "Architecture"
+	category = construction
 }

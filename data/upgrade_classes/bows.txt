@@ -1,9 +1,11 @@
 composite_bow = {
 	name = "Composite Bow"
+	category = bows
 }
 
 longbow = {
 	name = "Longbow"
+	category = bows
 
 	conditions = {
 		upgrade_class = composite_bow

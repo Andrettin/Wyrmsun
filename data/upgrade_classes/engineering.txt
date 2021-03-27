@@ -1,3 +1,4 @@
 engineering = {
 	name = "Engineering"
+	category = mechanization
 }

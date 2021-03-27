@@ -1,3 +1,4 @@
 philosophy = {
 	name = "Philosophy"
+	category = philosophy
 }

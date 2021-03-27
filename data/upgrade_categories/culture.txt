@@ -1,0 +1,10 @@
+culture = {
+	name = "Culture"
+	rank = category
+}
+
+philosophy = {
+	name = "Philosophy"
+	rank = subcategory
+	category = culture
+}

@@ -1,9 +1,11 @@
 melee_weapon_1 = {
 	name = "Melee Weapon I"
+	category = army
 }
 
 melee_weapon_2 = {
 	name = "Melee Weapon II"
+	category = army
 
 	conditions = {
 		upgrade_class = melee_weapon_1

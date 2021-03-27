@@ -1,11 +1,14 @@
 wood_plow = {
 	name = "Wood Plow"
+	category = farming_equipment
 }
 
 iron_tipped_wood_plow = {
 	name = "Iron-Tipped Wood Plow"
+	category = farming_equipment
 }
 
 iron_plow = {
 	name = "Iron Plow"
+	category = farming_equipment
 }

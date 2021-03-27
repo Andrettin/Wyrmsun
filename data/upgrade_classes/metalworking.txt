@@ -1,3 +1,4 @@
 ironworking = {
 	name = "Ironworking"
+	category = metallurgy
 }

@@ -1,5 +1,6 @@
 coinage = {
 	name = "Coinage"
+	category = commerce
 
 	conditions = {
 		or = {

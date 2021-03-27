@@ -1,0 +1,4 @@
+commerce = {
+	name = "Commerce"
+	rank = category
+}

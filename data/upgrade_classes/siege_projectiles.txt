@@ -1,5 +1,6 @@
 siege_projectile_1 = {
 	name = "Siege Projectile I"
+	category = army
 
 	conditions = {
 		or = {
@@ -12,6 +13,7 @@ siege_projectile_1 = {
 
 siege_projectile_2 = {
 	name = "Siege Projectile II"
+	category = army
 
 	conditions = {
 		or = {

@@ -1,9 +1,11 @@
 sailing = {
 	name = "Sailing"
+	category = shipbuilding
 }
 
 celestial_navigation = {
 	name = "Celestial Navigation"
+	category = navy
 
 	conditions = {
 		upgrade_class = sailing
@@ -12,6 +14,7 @@ celestial_navigation = {
 
 compass = {
 	name = "Compass"
+	category = navy
 
 	conditions = {
 		upgrade_class = celestial_navigation

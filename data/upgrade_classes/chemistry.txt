@@ -1,5 +1,6 @@
 alchemy = {
 	name = "Alchemy"
+	category = chemistry
 
 	conditions = {
 		upgrade_class = philosophy
@@ -10,4 +11,5 @@ alchemy = {
 
 gunpowder = {
 	name = "Gunpowder"
+	category = chemistry
 }

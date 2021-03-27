@@ -1,7 +1,9 @@
 writing = {
 	name = "Writing"
+	category = culture
 }
 
 printing_press = {
 	name = "Printing Press"
+	category = culture
 }

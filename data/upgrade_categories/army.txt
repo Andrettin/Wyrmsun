@@ -1,0 +1,22 @@
+army = {
+	name = "Army"
+	rank = category
+}
+
+bows = {
+	name = "Bows"
+	rank = subcategory
+	category = army
+}
+
+polearms = {
+	name = "Polearms"
+	rank = subcategory
+	category = army
+}
+
+shields = {
+	name = "Shields"
+	rank = subcategory
+	category = army
+}

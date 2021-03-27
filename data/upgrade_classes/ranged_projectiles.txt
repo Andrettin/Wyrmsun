@@ -1,9 +1,11 @@
 ranged_projectile_1 = {
 	name = "Ranged Projectile I"
+	category = army
 }
 
 ranged_projectile_2 = {
 	name = "Ranged Projectile II"
+	category = army
 
 	conditions = {
 		upgrade_class = ranged_projectile_1

@@ -1,0 +1,34 @@
+industry = {
+	name = "Industry"
+	rank = category
+}
+
+chemistry = {
+	name = "Chemistry"
+	rank = subcategory
+	category = industry
+}
+
+construction = {
+	name = "Construction"
+	rank = subcategory
+	category = industry
+}
+
+farming_equipment = {
+	name = "Farming Equipment"
+	rank = subcategory
+	category = industry
+}
+
+mechanization = {
+	name = "Mechanization"
+	rank = subcategory
+	category = industry
+}
+
+metallurgy = {
+	name = "Metallurgy"
+	rank = subcategory
+	category = industry
+}
