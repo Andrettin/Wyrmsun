@@ -31,7 +31,7 @@ vienna = {
 		}
 
 		526 = {
-			owner = bavarian #Bavarian territory in 526 (apparently); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = bavarian_tribe #Bavarian territory in 526 (apparently); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		907 = {
