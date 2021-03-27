@@ -71,7 +71,14 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Heroes"
 		hotkey: "h"
-		lua_command: "RunEncyclopediaUnitsCivilizationMenu(\"heroes\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "heroes",
+				category_name: "Heroes",
+				entries: wyrmgus.get_character_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {

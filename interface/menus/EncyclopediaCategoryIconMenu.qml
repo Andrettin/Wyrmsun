@@ -35,15 +35,17 @@ MenuBase {
 				readonly property int button_y: Math.floor(index / Math.floor(button_area.width / width))
 				readonly property int x_offset: (button_area.width - (Math.floor(button_area.width / width) * width)) / 2
 				readonly property int y_offset: (button_area.height - (Math.floor(button_area.height / height) * height)) / 2
-				readonly property string faction_tooltip: model.modelData.faction ? (": " + model.modelData.faction.name) : ""
+				readonly property var faction: model.modelData.faction ? model.modelData.faction : (model.modelData.default_faction ? model.modelData.default_faction : null)
+				readonly property string faction_tooltip: faction ? (": " + faction.name) : ""
 				readonly property string civilization_tooltip: model.modelData.civilization && model.modelData.civilization !== wyrmgus.defines.neutral_civilization ? (" (" + model.modelData.civilization.name + faction_tooltip + ")") : ""
+				readonly property string name: model.modelData.full_name ? model.modelData.full_name : model.modelData.name
 				
 				visible: model.modelData.icon != null
 				x: button_x * width + x_offset
 				y: button_y * height + y_offset
 				icon: model.modelData.icon.identifier
-				player_color: model.modelData.faction ? model.modelData.faction.color.identifier : (model.modelData.civilization ? model.modelData.civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
-				tooltip: model.modelData.name + civilization_tooltip
+				player_color: faction ? faction.color.identifier : (model.modelData.civilization ? model.modelData.civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
+				tooltip: name + civilization_tooltip
 				lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"" + category + "\");"
 			}
 		}
