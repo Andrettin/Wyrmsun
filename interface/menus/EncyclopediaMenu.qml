@@ -152,7 +152,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Technologies"
 		hotkey: "t"
-		lua_command: "RunEncyclopediaUnitsCivilizationMenu(\"technologies\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "technologies",
+				category_name: "Technologies",
+				entries: wyrmgus.get_technology_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {

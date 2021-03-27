@@ -25,85 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function RunEncyclopediaUnitsCivilizationMenu(state)
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= (600 * get_scale_factor())) then
-		height_offset = 2 -- change this to 0 if the number of civilization entries becomes too large
-	else
-		height_offset = 2
-	end
-
-	local civilizations = {}
-	
-	local function compare_civilization(a, b)
-		if (a ~= b and (a == "neutral" or b == "neutral")) then
-			return a == "neutral"
-		else
-			return a < b
-		end
-	end
-	
-	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes") then
-		local units_table = Units
-		for i, unitName in ipairs(units_table) do
-			if (state == "technologies" and string.find(unitName, "unit") == nil) then
-				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
-					local element_civilization = GetUpgradeData(unitName, "Civilization")
-					if (element_civilization == "") then
-						element_civilization = "neutral"
-					end
-					if (GetArrayIncludes(civilizations, element_civilization) == false) then
-						table.insert(civilizations, element_civilization)
-					end
-				end
-			end
-		end
-	end
-	
-	table.sort(civilizations, compare_civilization)
-	
-	local civilization_adjectives = {}
-	for i = 1, table.getn(civilizations) do
-		if (civilizations[i] == "neutral") then
-			table.insert(civilization_adjectives, "General")
-		else
-			table.insert(civilization_adjectives, GetCivilizationData(civilizations[i], "Adjective"))
-		end
-	end
-
-	local civilization_x = 0
-	if (GetTableSize(civilizations) > 20) then
-		civilization_x = -2
-	elseif (GetTableSize(civilizations) > 10) then
-		civilization_x = -1
-	end
-	local civilization_y = -3
-
-	for i = 1, table.getn(civilizations) do
-		menu:addFullButton(_(civilization_adjectives[i] .. " " .. CapitalizeString(state)), "", offx + (208 + (113 * civilization_x)) * get_scale_factor(), offy + (104 + (36 * (civilization_y + height_offset))) * get_scale_factor(),
-			function() RunEncyclopediaUnitsMenu(state, civilizations[i]); end)
-
-		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < (600 * get_scale_factor()))) then
-			civilization_x = civilization_x + 2
-			civilization_y = -3
-		else
-			civilization_y = civilization_y + 1
-		end
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, state)
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
 function RunEncyclopediaUnitsMenu(state, civilization)
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -111,23 +32,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes") then
-		local units_table = Units
-
-		for i, unitName in ipairs(units_table) do
-			if (state == "technologies" and string.find(unitName, "unit") == nil and civilization == GetUpgradeData(unitName, "Civilization")) then
-				if (GetUpgradeData(unitName, "Description") ~= "" or GetUpgradeData(unitName, "Background") ~= "") then
-					addEncyclopediaIcon(unitName, state, menu, offx + (23 + 4 + (54 * icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (icon_y + 1))) * get_scale_factor())
-					if (icon_x >= 10) then
-						icon_x = 0
-						icon_y = icon_y + 1
-					else
-						icon_x = icon_x + 1
-					end
-				end
-			end
-		end
-	elseif (state == "item_prefixes" or state == "item_suffixes" or state == "runic_suffixes") then
+	if (state == "item_prefixes" or state == "item_suffixes" or state == "runic_suffixes") then
 		local affixes = {}
 		if (state == "item_prefixes") then
 			affixes = GetItemPrefixes()
@@ -1755,8 +1660,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Planes")
 	elseif (state == "runic_suffixes") then
 		top_label_string = top_label_string .. _("Runic Suffixes")
-	elseif (state == "technologies") then
-		top_label_string = top_label_string .. _("Technologies")
 	elseif (state == "texts") then
 		top_label_string = top_label_string .. _("Texts")
 	elseif (state == "worlds") then

@@ -160,7 +160,7 @@ DefineUpgrade("upgrade-printing-press", {
 	Name = "Printing Press",
 	Class = "printing-press",
 	Civilization = "neutral",
-	Description = "The invention of the printing press allowed knowledge to be more quickly and efficiently spread.",
+	--Description = "The invention of the printing press allowed knowledge to be more quickly and efficiently spread.",
 	Icon = "icon-printing-press",
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000},
 	GrandStrategyProductionEfficiencyModifier = {"research", 25}
