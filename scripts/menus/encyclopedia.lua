@@ -47,7 +47,7 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 		end
 	end
 	
-	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes") then
 		local units_table = Units
 		for i, unitName in ipairs(units_table) do
 			if (state == "technologies" and string.find(unitName, "unit") == nil) then
@@ -59,19 +59,6 @@ function RunEncyclopediaUnitsCivilizationMenu(state)
 					if (GetArrayIncludes(civilizations, element_civilization) == false) then
 						table.insert(civilizations, element_civilization)
 					end
-				end
-			end
-		end
-	elseif (state == "unique_items") then
-		local unique_items = GetUniqueItems()
-		for i = 1, table.getn(unique_items) do
-			if (GetUniqueItemData(unique_items[i], "Description") ~= "" or GetUniqueItemData(unique_items[i], "Background") ~= "" or GetUniqueItemData(unique_items[i], "Quote") ~= "") then
-				local element_civilization = GetUnitTypeData(GetUniqueItemData(unique_items[i], "Type"), "Civilization")
-				if (element_civilization == "") then
-					element_civilization = "neutral"
-				end
-				if (GetArrayIncludes(civilizations, element_civilization) == false) then
-					table.insert(civilizations, element_civilization)
 				end
 			end
 		end
@@ -124,7 +111,7 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes") then
 		local units_table = Units
 
 		for i, unitName in ipairs(units_table) do
@@ -168,19 +155,6 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 				break
 			end
 		end
-	elseif (state == "unique_items") then
-		local unique_items = GetUniqueItems()
-		for i = 1, table.getn(unique_items) do
-			if (GetUniqueItemData(unique_items[i], "Description") ~= "" or GetUniqueItemData(unique_items[i], "Background") ~= "" or GetUniqueItemData(unique_items[i], "Quote") ~= "") then
-				addEncyclopediaIcon(unique_items[i], state, menu, offx + (23 + 4 + (54 * icon_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (icon_y + 1))) * get_scale_factor())
-				if (icon_x >= 10) then
-					icon_x = 0
-					icon_y = icon_y + 1
-				else
-					icon_x = icon_x + 1
-				end
-			end
-		end
 	end
 
 	AddTopEncyclopediaLabel(menu, offx, offy, state)
@@ -217,19 +191,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			if (faction ~= "") then
 				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
 			end
-		end
-	elseif (state == "unique_items") then
-		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
-		civilization = ""
-		faction = ""
-		tooltip_name = GetUniqueItemData(unit_name, "Name")
-		if (civilization ~= "" and civilization ~= "neutral") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
-			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
-			end
-			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	end
 	
@@ -1798,8 +1759,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Technologies")
 	elseif (state == "texts") then
 		top_label_string = top_label_string .. _("Texts")
-	elseif (state == "unique_items") then
-		top_label_string = top_label_string .. _("Uniques")
 	elseif (state == "worlds") then
 		top_label_string = top_label_string .. _("Worlds")
 	end

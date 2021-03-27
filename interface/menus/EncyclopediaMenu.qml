@@ -172,7 +172,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Uniques"
 		hotkey: "n"
-		lua_command: "RunEncyclopediaUnitsMenu(\"unique_items\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "unique_items",
+				category_name: "Uniques",
+				entries: wyrmgus.get_unique_item_encyclopedia_entries()
+			})
+		}
 	}
 
 	LargeButton {
