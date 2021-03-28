@@ -35,8 +35,8 @@ rome = {
 			owner = ostrogothia #Rome was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
-		1097 = {
-			owner = papal_states #part of the States of the Church c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		1050 = {
+			owner = papal_states #part of the Patrimony of St. Peter c. 1050; Source: William R. Shepherd, "Historical Atlas", 1911, p. 64.
 		}
 		
 		1303 = {
