@@ -26,6 +26,10 @@ milan = {
 			owner = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
+		1177 = {
+			owner = milan #the city of Milan was a member of the Lombard League in 1177; Source: William R. Shepherd, "Historical Atlas", 1911, p. 72.
+		}
+		
 		1477 = {
 			owner = milan #Milan was a Milanese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		}
