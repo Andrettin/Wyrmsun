@@ -1,6 +1,7 @@
 coinage = {
 	name = "Coinage"
 	category = commerce
+	age = bronze_age
 
 	conditions = {
 		or = {

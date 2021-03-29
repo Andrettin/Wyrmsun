@@ -1,4 +1,5 @@
 ironworking = {
 	name = "Ironworking"
 	category = metallurgy
+	age = iron_age
 }

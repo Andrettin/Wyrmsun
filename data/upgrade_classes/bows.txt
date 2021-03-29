@@ -1,11 +1,13 @@
 composite_bow = {
 	name = "Composite Bow"
 	category = bows
+	age = bronze_age
 }
 
 longbow = {
 	name = "Longbow"
 	category = bows
+	age = iron_age
 
 	conditions = {
 		upgrade_class = composite_bow

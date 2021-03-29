@@ -1,11 +1,13 @@
 sailing = {
 	name = "Sailing"
 	category = shipbuilding
+	age = bronze_age
 }
 
 celestial_navigation = {
 	name = "Celestial Navigation"
-	category = navy
+	category = naval_science
+	age = iron_age
 
 	conditions = {
 		upgrade_class = sailing
@@ -14,7 +16,8 @@ celestial_navigation = {
 
 compass = {
 	name = "Compass"
-	category = navy
+	category = naval_science
+	age = gunpowder_age
 
 	conditions = {
 		upgrade_class = celestial_navigation

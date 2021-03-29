@@ -1,9 +1,11 @@
 writing = {
 	name = "Writing"
 	category = culture
+	age = bronze_age
 }
 
 printing_press = {
 	name = "Printing Press"
 	category = culture
+	age = gunpowder_age
 }

@@ -1,4 +1,5 @@
 mathematics = {
 	name = "Mathematics"
 	category = culture
+	age = iron_age
 }

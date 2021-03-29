@@ -1,7 +1,8 @@
 siege_projectile_1 = {
 	name = "Siege Projectile I"
 	category = army
-
+	age = iron_age
+	
 	conditions = {
 		or = {
 			unit_class = lumber_mill
@@ -14,7 +15,8 @@ siege_projectile_1 = {
 siege_projectile_2 = {
 	name = "Siege Projectile II"
 	category = army
-
+	age = feudal_age
+	
 	conditions = {
 		or = {
 			unit_class = lumber_mill

@@ -1,14 +1,17 @@
 wood_plow = {
 	name = "Wood Plow"
 	category = farming_equipment
+	age = bronze_age
 }
 
 iron_tipped_wood_plow = {
 	name = "Iron-Tipped Wood Plow"
 	category = farming_equipment
+	age = iron_age
 }
 
 iron_plow = {
 	name = "Iron Plow"
 	category = farming_equipment
+	age = feudal_age
 }

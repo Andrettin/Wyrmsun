@@ -1,11 +1,13 @@
 ranged_projectile_1 = {
 	name = "Ranged Projectile I"
 	category = army
+	age = bronze_age
 }
 
 ranged_projectile_2 = {
 	name = "Ranged Projectile II"
 	category = army
+	age = iron_age
 
 	conditions = {
 		upgrade_class = ranged_projectile_1

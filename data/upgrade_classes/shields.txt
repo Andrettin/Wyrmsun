@@ -1,11 +1,13 @@
 bronze_shield = {
 	name = "Bronze Shield"
 	category = shields
+	age = bronze_age
 }
 
 iron_shield = {
 	name = "Iron Shield"
 	category = shields
+	age = iron_age
 
 	conditions = {
 		upgrade_class = bronze_shield

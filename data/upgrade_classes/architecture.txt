@@ -1,9 +1,11 @@
 masonry = {
 	name = "Masonry"
 	category = construction
+	age = bronze_age
 }
 
 architecture = {
 	name = "Architecture"
 	category = construction
+	age = iron_age
 }

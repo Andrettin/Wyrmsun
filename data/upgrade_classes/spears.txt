@@ -1,11 +1,13 @@
 long_spear = {
 	name = "Long Spear"
 	category = polearms
+	age = bronze_age
 }
 
 pike = {
 	name = "Pike"
 	category = polearms
+	age = iron_age
 
 	conditions = {
 		upgrade_class = long_spear

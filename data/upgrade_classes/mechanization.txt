@@ -1,4 +1,5 @@
 steam_engine = {
 	name = "Steam Engine"
 	category = mechanization
+	age = industrial_age
 }

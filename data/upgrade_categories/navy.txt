@@ -3,6 +3,12 @@ navy = {
 	rank = category
 }
 
+naval_science = {
+	name = "Naval Science"
+	rank = subcategory
+	category = navy
+}
+
 shipbuilding = {
 	name = "Shipbuilding"
 	rank = subcategory
