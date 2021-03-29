@@ -1,4 +1,11 @@
 russia = {
+	name = "Russia"
+	adjective = "Russian"
+	civilization = slavic
+	type = polity
+	color = blue
+	default_tier = empire
+
 	history = {
 		1861 = {
 			#serfdom was abolished in Russia in 1861; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 13.

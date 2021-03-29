@@ -9,9 +9,13 @@ kiev = {
 	}
 	
 	history = {
+		1097 = {
+			owner = kievan_rus #part of "Russia" c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
+			building_classes += town_hall
+		}
+		
 		1560 = {
 			owner = lithuania #Kiev was a Lithuanian possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-			building_classes += town_hall
 		}
 		
 		1569 = {

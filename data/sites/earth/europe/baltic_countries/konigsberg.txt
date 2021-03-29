@@ -15,9 +15,13 @@ konigsberg = {
 	}
 	
 	history = {
+		1097 = {
+			owner = prussian_tribe #part of Prussian territory c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
+			building_classes += town_hall
+		}
+		
 		1544 = {
 			owner = prussia
-			building_classes += town_hall
 			building_classes += university #University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		

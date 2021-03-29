@@ -17,5 +17,9 @@ riga = {
 		486 = {
 			owner = estonian_tribe #part of Estonian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
+		
+		1097 = {
+			owner = estonian_tribe #part of Estonian territory c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
+		}
 	}
 }

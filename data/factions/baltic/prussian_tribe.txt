@@ -1,0 +1,7 @@
+prussian_tribe = {
+	name = "Prussian Tribe"
+	adjective = "Prussian"
+	civilization = baltic
+	type = tribe
+	color = brown
+}

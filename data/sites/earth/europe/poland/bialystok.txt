@@ -7,4 +7,11 @@ bialystok = {
 	regions = {
 		poland
 	}
+	
+	history = {
+		1097 = {
+			owner = kievan_rus #part of "Russia" c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
+			building_classes += town_hall
+		}
+	}
 }

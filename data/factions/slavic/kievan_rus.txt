@@ -1,0 +1,7 @@
+kievan_rus = {
+	name = "Kievan Rus"
+	civilization = slavic
+	type = polity
+	color = green
+	default_tier = grand_duchy
+}

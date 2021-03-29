@@ -1,7 +1,7 @@
 bohemia = {
 	name = "Bohemia"
 	adjective = "Bohemian"
-	civilization = slav
+	civilization = slavic
 	type = polity
 	color = red
 	default_tier = duchy
