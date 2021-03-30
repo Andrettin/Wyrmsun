@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 
+* Terrain
+- Added new dry mud and mud decoration tiles.
+
 * Units
 - Fixed crash which occurred when a ranged unit was garrisoned inside a caravan while near enemies.
 
