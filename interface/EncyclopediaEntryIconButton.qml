@@ -1,6 +1,5 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-import ".."
 
 IconButton {
 	readonly property int button_x: index % Math.floor(button_area_item.width / width)

@@ -1,10 +1,9 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-import ".."
 
 LargeButton {
-	readonly property boundary_width: width + 8 * wyrmgus.defines.scale_factor
-	readonly property boundary_height: height + 8 * wyrmgus.defines.scale_factor
+	readonly property int boundary_width: width + 8 * wyrmgus.defines.scale_factor
+	readonly property int boundary_height: height + 8 * wyrmgus.defines.scale_factor
 	readonly property int button_x: index % Math.floor(button_area_item.width / boundary_width)
 	readonly property int button_y: Math.floor(index / Math.floor(button_area_item.width / boundary_width))
 	readonly property int x_offset: (button_area_item.width - (Math.floor(button_area_item.width / boundary_width) * boundary_width)) / 2
