@@ -3,10 +3,10 @@ import QtQuick.Controls 2.12
 import ".."
 
 IconButton {
-	readonly property int button_x: index % Math.floor(button_area.width / width)
-	readonly property int button_y: Math.floor(index / Math.floor(button_area.width / width))
-	readonly property int x_offset: (button_area.width - (Math.floor(button_area.width / width) * width)) / 2
-	readonly property int y_offset: (button_area.height - (Math.floor(button_area.height / height) * height)) / 2
+	readonly property int button_x: index % Math.floor(button_area_item.width / width)
+	readonly property int button_y: Math.floor(index / Math.floor(button_area_item.width / width))
+	readonly property int x_offset: (button_area_item.width - (Math.floor(button_area_item.width / width) * width)) / 2
+	readonly property int y_offset: (button_area_item.height - (Math.floor(button_area_item.height / height) * height)) / 2
 	readonly property var civilization: model.modelData.civilization
 	readonly property var faction: model.modelData.faction ? model.modelData.faction : (model.modelData.default_faction ? model.modelData.default_faction : null)
 	readonly property var pantheon: model.modelData.pantheon
