@@ -1,0 +1,5 @@
+gula = {
+	name = "Gula" #"gluttony" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

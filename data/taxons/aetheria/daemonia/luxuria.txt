@@ -1,0 +1,5 @@
+luxuria = {
+	name = "Luxuria" #"lust" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

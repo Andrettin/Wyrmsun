@@ -1,0 +1,6 @@
+iron_imp = {
+	name = "Iron Imp"
+	supertaxon = ira
+	home_plane = hell
+	sapient = true
+}

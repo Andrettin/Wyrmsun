@@ -1,0 +1,6 @@
+ixthala_demon = {
+	name = "Ixthala Demon"
+	supertaxon = ira
+	home_plane = hell
+	sapient = true
+}

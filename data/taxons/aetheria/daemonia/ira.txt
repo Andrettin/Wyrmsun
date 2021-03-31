@@ -1,0 +1,5 @@
+ira = {
+	name = "Ira" #"wrath" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

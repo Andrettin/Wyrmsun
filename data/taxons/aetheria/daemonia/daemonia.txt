@@ -1,0 +1,6 @@
+daemonia = {
+	name = "Daemonia"
+	common_name = "Demon"
+	rank = kingdom
+	supertaxon = aetheria
+}

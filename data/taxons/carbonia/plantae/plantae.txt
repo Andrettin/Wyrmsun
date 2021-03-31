@@ -2,4 +2,5 @@ plantae = {
 	name = "Plantae"
 	common_name = "Plant"
 	rank = kingdom
+	supertaxon = carbonia
 }

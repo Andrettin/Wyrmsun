@@ -1,0 +1,5 @@
+avaritia = {
+	name = "Avaritia" #"greed" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

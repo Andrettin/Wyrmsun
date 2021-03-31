@@ -1,0 +1,5 @@
+superbia = {
+	name = "Superbia" #"pride" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

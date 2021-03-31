@@ -1,0 +1,6 @@
+succubus = {
+	name = "Succubus"
+	supertaxon = luxuria
+	home_plane = hell
+	sapient = true
+}

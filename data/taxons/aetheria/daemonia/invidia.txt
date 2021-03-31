@@ -1,0 +1,5 @@
+invidia = {
+	name = "Invidia" #"envy" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

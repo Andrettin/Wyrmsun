@@ -1,5 +1,5 @@
 aetheria = { #ethereal beings (that is, ones made of pure magic substance)
 	name = "Aetheria"
 	common_name = "Ethereal"
-	rank = kingdom
+	rank = empire
 }

@@ -57,17 +57,8 @@ DefineSpecies("sylph", {
 	Description = "Sylphs are elf-like creatures who possess a pair of butterfly wings. They serve the Vanir."
 })
 
-DefineSpecies("valkyrie", {
-	Name = "Valkyrie",
-	Supertaxon = "aetheria",
-	HomePlane = "asgard",
-	Sapient = true,
-	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
-})
-
 -- Valkyrie Names:
 -- "Sigrdrifa", -- "Sigrdrífa"; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 80.
 
 Load("scripts/species/ethereal/angel.lua")
-Load("scripts/species/ethereal/demon.lua")
 Load("scripts/species/ethereal/elemental.lua")

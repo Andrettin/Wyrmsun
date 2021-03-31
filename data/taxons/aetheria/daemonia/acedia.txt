@@ -1,0 +1,5 @@
+acedia = {
+	name = "Acedia" #"sloth" in Latin
+	rank = phylum
+	supertaxon = daemonia
+}

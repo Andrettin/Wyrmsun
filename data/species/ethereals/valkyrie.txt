@@ -1,0 +1,7 @@
+valkyrie = {
+	name = "Valkyrie"
+	supertaxon = aetheria
+	home_plane = asgard
+	sapient = true
+	description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
+}
