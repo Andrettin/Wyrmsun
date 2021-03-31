@@ -26,6 +26,11 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
+	if (state == "civilizations") then
+		OpenEncyclopediaCivilizationEntry(unit_name)
+		return;
+	end
+	
 	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
@@ -1202,57 +1207,6 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaCivilizationsMenu()
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= (600 * get_scale_factor())) then
-		height_offset = 2 -- change this to 0 if the number of civilization entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "civilizations", height_offset)
-
-	local potential_civilizations = GetCivilizations()
-	local civilizations = {}
-	
-	for i = 1, table.getn(potential_civilizations) do
-		if (GetCivilizationData(potential_civilizations[i], "Description") ~= "") then
-			table.insert(civilizations, potential_civilizations[i])
-		end
-	end
-	table.sort(civilizations)
-
-	local civilization_x = 0
-	if (GetTableSize(civilizations) > 20) then
-		civilization_x = -2
-	elseif (GetTableSize(civilizations) > 10) then
-		civilization_x = -1
-	end
-	local civilization_y = -3
-
-	for i = 1, table.getn(civilizations) do
-		menu:addFullButton(_(GetCivilizationData(civilizations[i], "Display")), "", offx + (208 + (113 * civilization_x)) * get_scale_factor(), offy + (104 + (36 * (civilization_y + height_offset))) * get_scale_factor(),
-			function() OpenEncyclopediaCivilizationEntry(civilizations[i]); end)
-
-		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < (600 * get_scale_factor()))) then
-			civilization_x = civilization_x + 2
-			civilization_y = -3
-		else
-			civilization_y = civilization_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
 function OpenEncyclopediaCivilizationEntry(civilization)
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -1520,9 +1474,7 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 	end
 
 	local top_label_string = "~<" .. _("Encyclopedia") .. ": "
-	if (state == "civilizations") then
-		top_label_string = top_label_string .. _("Civilizations")
-	elseif (state == "factions") then
+	if (state == "factions") then
 		top_label_string = top_label_string .. _("Factions")
 	elseif (state == "game_concepts") then
 		top_label_string = top_label_string .. _("Game Concepts")

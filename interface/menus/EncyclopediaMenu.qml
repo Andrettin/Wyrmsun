@@ -31,7 +31,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Civilizations"
 		hotkey: "c"
-		lua_command: "RunEncyclopediaCivilizationsMenu();"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryMenu.qml", {
+				category: "civilizations",
+				category_name: "Civilizations",
+				entries: wyrmgus.get_civilization_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
