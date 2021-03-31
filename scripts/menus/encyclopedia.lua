@@ -25,134 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function RunEncyclopediaUnitsMenu(state, civilization)
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	local icon_x = 0
-	local icon_y = 0
-	if (state == "item_prefixes" or state == "item_suffixes" or state == "runic_suffixes") then
-		local affixes = {}
-		if (state == "item_prefixes") then
-			affixes = GetItemPrefixes()
-		elseif (state == "item_suffixes") then
-			affixes = GetItemSuffixes()
-		elseif (state == "runic_suffixes") then
-			affixes = GetRunicSuffixes()
-		end
-		table.sort(affixes)
-		if (GetTableSize(affixes) > 20) then
-			icon_x = -2
-		elseif (GetTableSize(affixes) > 10) then
-			icon_x = -1
-		end
-		icon_y = -1
-		for i, unitName in ipairs(affixes) do
-			addEncyclopediaIcon(unitName, state, menu, offx + (208 + (113 * icon_x)) * get_scale_factor(), offy + (104 + (36 * icon_y)) * get_scale_factor())
-			if (icon_y > 7) then
-				icon_x = icon_x + 2
-				icon_y = -1
-			else
-				icon_y = icon_y + 1
-			end
-			if (i >= 30) then
-				break
-			end
-		end
-	end
-
-	AddTopEncyclopediaLabel(menu, offx, offy, state)
-
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function addEncyclopediaIcon(unit_name, state, menu, x, y)
-	local encyclopedia_icon
-	local encyclopedia_icon_pressed
-	local encyclopedia_icon_disabled
-	local encyclopedia_icon_frame = 0
-	local civilization
-	local faction
-	local tooltip_string = ""
-	local tooltip_name = ""
-	local tooltip_civilization = ""
-	if (string.find(unit_name, "upgrade") ~= nil) then
-		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-			encyclopedia_icon = GetIconData(GetUpgradeData(unit_name, "Icon"), "File")
-			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
-		else
-			encyclopedia_icon = "interface/default/button_large_normal.png"
-			encyclopedia_icon_pressed = "interface/default/button_large_pressed.png"
-			encyclopedia_icon_grayed = "interface/default/button_large_grayed.png"
-		end
-		civilization = GetUpgradeData(unit_name, "Civilization")
-		faction = GetUpgradeData(unit_name, "Faction")
-		tooltip_name = _(GetUpgradeData(unit_name, "Name"))
-		if (civilization ~= "") then
-			if (faction ~= "") then
-				tooltip_civilization = "(" ..  _(GetFactionData(faction, "Name")) .. ")"
-			end
-		end
-	end
-	
-	tooltip_string = tooltip_name
-	if (tooltip_civilization ~= "") then
-		tooltip_string = tooltip_string .. " " .. tooltip_civilization
-	end
-	
-	if not (encyclopedia_icon_pressed) then
-		encyclopedia_icon_pressed = encyclopedia_icon
-	end
-	if not (encyclopedia_icon_disabled) then
-		encyclopedia_icon_disabled = encyclopedia_icon
-	end
-	local b
-	local playercolor
-	local has_icon = (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil)
-	if (has_icon) then
-		if (civilization ~= "" and faction ~= "") then
-			playercolor = GetFactionData(faction, "Color")
-		elseif (civilization ~= "") then
-			playercolor = GetCivilizationData(civilization, "DefaultColor")
-		else
-			playercolor = "gray"
-		end
-		b = PlayerColorImageButton("", playercolor)
-	else
-		b = ImageButton(tooltip_name)
-	end
-	b:setActionCallback(
-		function()
-			PlaySound("click")
-			
-			OpenEncyclopediaUnitEntry(unit_name, state)
-		end
-	)
-	menu:add(b, x, y)
-	b:setNormalImage(encyclopedia_icon)
-	b:setPressedImage(encyclopedia_icon_pressed)
-	b:setDisabledImage(encyclopedia_icon_disabled)
-	if (has_icon) then
-		b:set_frame(encyclopedia_icon_frame)
-	end
-	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	if (has_icon) then
-		b:setIconFrameImage()
-		b:setTooltip(tooltip_string)
-	else
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
-	end
-	return b
-end
-
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
@@ -1652,14 +1526,8 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Factions")
 	elseif (state == "game_concepts") then
 		top_label_string = top_label_string .. _("Game Concepts")
-	elseif (state == "item_prefixes") then
-		top_label_string = top_label_string .. _("Magic Prefixes")
-	elseif (state == "item_suffixes") then
-		top_label_string = top_label_string .. _("Magic Suffixes")
 	elseif (state == "planes") then
 		top_label_string = top_label_string .. _("Planes")
-	elseif (state == "runic_suffixes") then
-		top_label_string = top_label_string .. _("Runic Suffixes")
 	elseif (state == "texts") then
 		top_label_string = top_label_string .. _("Texts")
 	elseif (state == "worlds") then

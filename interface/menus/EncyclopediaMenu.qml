@@ -112,7 +112,14 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Magic Prefixes"
 		hotkey: "r"
-		lua_command: "RunEncyclopediaUnitsMenu(\"item_prefixes\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryMenu.qml", {
+				category: "item_prefixes",
+				category_name: "Magic Prefixes",
+				entries: wyrmgus.get_magic_prefix_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
@@ -122,7 +129,14 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Magic Suffixes"
 		hotkey: "s"
-		lua_command: "RunEncyclopediaUnitsMenu(\"item_suffixes\");"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryMenu.qml", {
+				category: "item_suffixes",
+				category_name: "Magic Suffixes",
+				entries: wyrmgus.get_magic_suffix_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
@@ -136,18 +150,8 @@ MenuBase {
 	}
 	
 	LargeButton {
-		id: runic_suffixes_button
-		anchors.left: units_button.left
-		anchors.bottom: technologies_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		text: "Runic Suffixes"
-		hotkey: "e"
-		lua_command: "RunEncyclopediaUnitsMenu(\"runic_suffixes\");"
-	}
-	
-	LargeButton {
 		id: technologies_button
-		anchors.left: units_button.left
+		anchors.left: worlds_button.left
 		anchors.bottom: texts_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Technologies"
@@ -164,7 +168,7 @@ MenuBase {
 	
 	LargeButton {
 		id: texts_button
-		anchors.left: units_button.left
+		anchors.left: worlds_button.left
 		anchors.bottom: uniques_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Texts"
@@ -174,7 +178,7 @@ MenuBase {
 	
 	LargeButton {
 		id: uniques_button
-		anchors.left: units_button.left
+		anchors.left: worlds_button.left
 		anchors.bottom: units_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Uniques"
@@ -191,9 +195,9 @@ MenuBase {
 
 	LargeButton {
 		id: units_button
-		anchors.left: parent.horizontalCenter
-		anchors.leftMargin: 4
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.left: worlds_button.left
+		anchors.bottom: worlds_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Units"
 		hotkey: "u"
 		
@@ -208,9 +212,9 @@ MenuBase {
 	
 	LargeButton {
 		id: worlds_button
-		anchors.left: units_button.left
-		anchors.top: units_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.left: parent.horizontalCenter
+		anchors.leftMargin: 4
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Worlds"
 		hotkey: "w"
 		lua_command: "RunEncyclopediaWorldsMenu();"
