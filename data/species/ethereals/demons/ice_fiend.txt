@@ -1,0 +1,6 @@
+ice_fiend = {
+	name = "Ice Fiend"
+	supertaxon = daemonia
+	home_plane = hell #could also be present in Niflheim
+	sapient = true
+}

@@ -1,0 +1,6 @@
+smoke_demon = {
+	name = "Smoke Demon"
+	supertaxon = daemonia
+	home_plane = hell
+	sapient = true
+}

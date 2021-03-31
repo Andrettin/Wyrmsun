@@ -1,0 +1,6 @@
+brimstone_fiend = {
+	name = "Brimstone Fiend"
+	supertaxon = daemonia
+	home_plane = hell
+	sapient = true
+}

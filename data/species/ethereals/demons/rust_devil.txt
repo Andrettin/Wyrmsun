@@ -1,0 +1,6 @@
+rust_devil = {
+	name = "Rust Devil"
+	supertaxon = daemonia
+	home_plane = hell
+	sapient = true
+}

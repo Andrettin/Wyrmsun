@@ -1,0 +1,6 @@
+red_devil = {
+	name = "Red Devil"
+	supertaxon = daemonia
+	home_plane = hell
+	sapient = true
+}

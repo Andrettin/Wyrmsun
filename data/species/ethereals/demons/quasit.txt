@@ -1,0 +1,6 @@
+quasit = {
+	name = "Quasit"
+	supertaxon = daemonia
+	home_plane = hell
+	sapient = true
+}
