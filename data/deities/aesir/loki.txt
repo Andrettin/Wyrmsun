@@ -18,7 +18,7 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 	description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir."
 	character = {
 		unit_type = unit_norse_heroic_swordsman
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 		variation = blond_hair
 	}

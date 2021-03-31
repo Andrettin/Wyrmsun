@@ -29,7 +29,7 @@ tyr = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 34-36, 251
 	}
 	character = {
 		unit_type = unit_norse_heroic_swordsman
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 		variation = gray_hair
 	}

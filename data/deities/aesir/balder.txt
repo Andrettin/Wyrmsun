@@ -16,7 +16,7 @@ balder = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Sou
 		anglo_saxon = "Baeldaeg" #"Bældæg"; Anglo-Saxon name for the deity
 	}
 	character = {
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 	}
 	#due to Loki's mischief, he was killed by Hod

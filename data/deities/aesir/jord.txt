@@ -9,7 +9,7 @@ jord = { #mother of Thor by Odin; Source: Kevin Crossley-Holland, "The Norse Myt
 	religions = { paganism }
 	domains = { earth }
 	character = {
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 	}
 }

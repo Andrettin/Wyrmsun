@@ -1037,31 +1037,6 @@ DefineCivilization("aztec", {
 
 -- deity civilizations
 
-DefineCivilization("aesir", {
-	Display = "Aesir",
-	Visible = false,
-	ParentCivilization = "neutral",
-	Species = "einherjar",
-	Language = "old-norse",
-	Adjective = "Aesir",
-	DefaultColor = "blue",
-	Playable = false,
-	ButtonIcons = {
-		"move", "icon-dwarven-boots",
-		"stop", "icon-germanic-wooden-oblong-shield",
-		"attack", "icon-germanic-short-sword",
-		"patrol", "icon-germanic-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground",
-		"return-goods", "icon-germanic-return-goods"
-	},
-	UIFillers = {
-		"interface/germanic/filler_bottom.png", 380, -181,
-		"interface/germanic/resource.png", 0, 0,
-		"interface/germanic/buttonpanel.png", -256, -200,
-		"interface/germanic/infopanel.png", 0, -200
-	}
-})
-
 Load("scripts/factions.lua")
 
 function GetCivilizationID(civilization)

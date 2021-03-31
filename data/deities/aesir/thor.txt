@@ -33,7 +33,7 @@ thor = { #son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder
 	}
 	character = {
 		unit_type = unit_norse_heroic_swordsman
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 		variation = blond_hair
 		trait = upgrade_mighty

@@ -33,7 +33,7 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 	}
 	character = {
 		unit_type = unit_norse_heroic_swordsman
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 		variation = gray_hair
 		trait = upgrade_wise

@@ -22,7 +22,7 @@ frigg = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Sour
 	}
 	#first among the goddesses
 	character = {
-		civilization = aesir
+		civilization = einherjar
 		default_faction = asgard
 	}
 }

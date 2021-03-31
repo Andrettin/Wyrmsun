@@ -34,7 +34,7 @@ hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of O
 	}
 	character = {
 		unit_type = unit_germanic_priest
-		civilization = aesir
+		civilization = einherjar
 		default_faction = hel
 	}
 }

@@ -77,7 +77,7 @@ Load("scripts/civilizations/welsh/factions.lua")
 
 DefineFaction("asgard", {
 	Name = "Asgard",
-	Civilization = "aesir",
+	Civilization = "einherjar",
 	Type = "polity",
 	Color = "blue",
 	DefaultTier = "kingdom",
@@ -86,7 +86,7 @@ DefineFaction("asgard", {
 
 DefineFaction("hel", {
 	Name = "Hel",
-	Civilization = "aesir",
+	Civilization = "einherjar",
 	Type = "polity",
 	Color = "black",
 	DefaultTier = "kingdom",

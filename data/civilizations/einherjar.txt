@@ -1,0 +1,47 @@
+einherjar = {
+	name = "Einherjar"
+	parent_civilization = neutral
+	species = einherjar
+	language = old_norse
+	visible = false
+	playable = false
+	interface = germanic
+	default_color = blue
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_germanic_wooden_oblong_shield
+		attack = icon_germanic_short_sword
+		patrol = icon_germanic_patrol_land
+		stand_ground = icon_germanic_stand_ground
+		return_goods = icon_germanic_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/germanic/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/germanic/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/germanic/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/germanic/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	history = {
+		#give the Aesir/Einherjar iron weapons and armor from the beginning
+		acquired_upgrade_classes += ironworking
+		acquired_upgrades += upgrade_germanic_broad_sword
+		acquired_upgrades += upgrade_teuton_spatha
+		acquired_upgrades += upgrade_germanic_bronze_shield
+		acquired_upgrades += upgrade_teuton_iron_shield
+	}
+}

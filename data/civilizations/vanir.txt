@@ -1,6 +1,6 @@
 vanir = {
 	name = "Vanir"
-	parent_civilization = aesir
+	parent_civilization = einherjar
 	species = einherjar
 	language = elvish
 	visible = false
