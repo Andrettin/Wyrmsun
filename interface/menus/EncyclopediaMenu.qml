@@ -214,7 +214,14 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Worlds"
 		hotkey: "w"
-		lua_command: "RunEncyclopediaWorldsMenu();"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryMenu.qml", {
+				category: "worlds",
+				category_name: "Worlds",
+				entries: wyrmgus.get_world_encyclopedia_entries()
+			})
+		}
 	}
 	
 	PreviousMenuButton {

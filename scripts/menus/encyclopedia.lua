@@ -29,6 +29,9 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	if (state == "civilizations") then
 		OpenEncyclopediaCivilizationEntry(unit_name)
 		return;
+	elseif (state == "worlds") then
+		OpenEncyclopediaWorldEntry(unit_name)
+		return;
 	end
 	
 	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
@@ -851,58 +854,6 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaWorldsMenu()
-
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= (600 * get_scale_factor())) then
-		height_offset = 2 -- change this to 0 if the number of world entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "worlds", 2)
-
-	local potential_worlds = GetWorlds()
-	local worlds = {}
-	
-	for i = 1, table.getn(potential_worlds) do
-		if (GetWorldData(potential_worlds[i], "Description") ~= "") then
-			table.insert(worlds, potential_worlds[i])
-		end
-	end
-	table.sort(worlds)
-
-	local world_x = 0
-	if (GetTableSize(worlds) > 20) then
-		world_x = -2
-	elseif (GetTableSize(worlds) > 10) then
-		world_x = -1
-	end
-	local world_y = -3
-
-	for i=1,table.getn(worlds) do
-		menu:addFullButton(_(GetWorldData(worlds[i], "Name")), "", offx + (208 + (113 * world_x)) * get_scale_factor(), offy + (104 + (36 * (world_y + height_offset))) * get_scale_factor(),
-			function() OpenEncyclopediaWorldEntry(worlds[i]); end)
-
-		if (world_y > 5 or (world_y > 4 and Video.Height < (600 * get_scale_factor()))) then
-			world_x = world_x + 2
-			world_y = -3
-		else
-			world_y = world_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
 function OpenEncyclopediaWorldEntry(world)
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -1337,8 +1288,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Game Concepts")
 	elseif (state == "texts") then
 		top_label_string = top_label_string .. _("Texts")
-	elseif (state == "worlds") then
-		top_label_string = top_label_string .. _("Worlds")
 	end
 	top_label_string = top_label_string .. "~>"
 	menu:addLabel(top_label_string, offx + 320 * get_scale_factor(), offy + (104 + 36 * (-4 + height_offset)) * get_scale_factor(), nil, true)
