@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
+- Fixed issue which caused solid overlay tiles to not be displayed in the editor.
 
 * Terrain
 - Added new dry mud and mud decoration tiles.
@@ -69,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - F11 is now the screenshot hotkey.
 - Reworked the game's rendering system and graphical interface to use the Qt Framework.
+- The game is now always in borderless fullscreen mode, as the new UI framework supports that.
 
 -----------------------------------------------------------------------
 - 4.1.4
