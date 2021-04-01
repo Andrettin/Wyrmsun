@@ -17,7 +17,6 @@ end
 local keystrokes = {
 --  {"Alt-B", "- toggle expand map"},
   {"Alt-C", "- center on selected unit"},
-  {"Alt-F", "- toggle full screen"},
   {"Alt-G", "- toggle grab mouse"},
   {"Alt-H", "- help menu"},
   {"Alt-I", "- find idle worker"},

@@ -27,34 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function RunGameVideoOptionsMenu()
-	local menu = WarGameMenu(panel(1))
-	local offx = 0
-	local offy = 0
-	local fullscreen = Video.FullScreen
-	local fullscreen_dd
-
-	menu:addLabel(_("Video Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
-
-	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + (256 / 2 - (152 / 2)) * get_scale_factor(), offy + (90 + 26*2) * get_scale_factor(),
-	function()
-		fullscreen = full_screen_dd:isMarked()
-	end)
-	full_screen_dd:setMarked(fullscreen)
-
-	menu:addFullButton("~!OK", "o", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
-	function()
-		if (fullscreen ~= Video.FullScreen) then
-			ToggleFullScreen()
-			wyr.preferences.VideoFullScreen = Video.FullScreen
-			SavePreferences()
-		end
-		menu:stop()
-	end)
-
-	menu:run()
-end
-
 function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local b
 
@@ -301,9 +273,6 @@ function SetVideoSize(width, height)
 	CUserInterface:get().MapArea.EndX = width - 1
 	CUserInterface:get().MapArea.EndY = height - (176 * get_scale_factor()) - 1
 	if (Video:ResizeScreen(width, height) == false) then
-		if (Video.FullScreen) then
-			GenericDialog("Resolution Change Failed", "This resolution is not available while in full screen mode for your monitor.")
-		end
 		return
 	end
 	Load("scripts/ui.lua")
@@ -522,8 +491,6 @@ function RunVideoOptionsMenu()
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local scaling_checkbox
 	local b
-	local fullscreen_dd
-	local fullscreen = Video.FullScreen
 
 	-- sound volume options
 	b = Label(_("Sound Effects Volume"))
@@ -601,13 +568,6 @@ function RunVideoOptionsMenu()
 	musiccheckbox:setMarked(IsMusicEnabled())
 	musiccheckbox:adjustSize();
 
-	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
-		function()
-			fullscreen = full_screen_dd:isMarked()
-		end
-	)
-	full_screen_dd:setMarked(Video.FullScreen)
-
 	scaling_checkbox = menu:addImageCheckBox(_("2x Scale Factor (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
 			if (get_scale_factor_preference() == 1) then
@@ -626,20 +586,11 @@ function RunGameOptionsMenu(previous_menu)
 	local menu = WarGameMenu(panel(1))
 
 	menu:addLabel(_("Game Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
-	menu:addFullButton(_("~!Video"), "v", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
-		function()
-			RunGameVideoOptionsMenu()
-			menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-			if (previous_menu ~= nil) then
-				previous_menu:setPosition((Video.Width - previous_menu:getWidth()) / 2, (Video.Height - previous_menu:getHeight()) / 2)
-			end
-		end
-	)
-	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
+	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
 		function() RunGameSoundOptionsMenu() end)
-	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16 * get_scale_factor(), (40 + 36*2) * get_scale_factor(),
+	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
 		function() RunPreferencesMenu() end)
-	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16 * get_scale_factor(), (40 + 36*3) * get_scale_factor(),
+	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16 * get_scale_factor(), (40 + 36*2) * get_scale_factor(),
 		function() RunDiplomacyMenu() end)
 	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
 		function() menu:stop() end)

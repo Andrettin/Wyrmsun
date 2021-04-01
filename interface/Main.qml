@@ -33,10 +33,6 @@ Window {
 				}
 				
 				component.createObject(window)
-
-				if (wyrmgus.preferences.fullscreen) {
-					window.visibility = Window.FullScreen
-				}
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
 			}
