@@ -453,7 +453,7 @@ CUserInterface:get().NetworkDiplomacyButton:SetCallback(function() RunDiplomacyM
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")
-if (GetMapLayer("material-plane", "earth") ~= -1) then
+if (GetMapLayer("earth") ~= -1) then
 	CUserInterface:get().WorldButtons:at(earth_id).X = (16 + (19  * 0)) * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(earth_id).Y = Video.Height - 23 * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(earth_id).Style = FindButtonStyle("world-earth")
@@ -463,7 +463,7 @@ else
 end
 
 local nidavellir_id = GetWorldData("nidavellir", "ID")
-if (GetMapLayer("material-plane", "nidavellir") ~= -1) then
+if (GetMapLayer("nidavellir") ~= -1) then
 	CUserInterface:get().WorldButtons:at(nidavellir_id).X = (16 + (19  * 1)) * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(nidavellir_id).Y = Video.Height - 23 * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(nidavellir_id).Style = FindButtonStyle("world-nidavellir")
@@ -473,7 +473,7 @@ else
 end
 
 local jotunheim_id = GetWorldData("jotunheim", "ID")
-if (GetMapLayer("material-plane", "jotunheim") ~= -1) then
+if (GetMapLayer("jotunheim") ~= -1) then
 	CUserInterface:get().WorldButtons:at(jotunheim_id).X = (16 + (19  * 2)) * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(jotunheim_id).Y = Video.Height - 23 * get_scale_factor()
 	CUserInterface:get().WorldButtons:at(jotunheim_id).Style = FindButtonStyle("world-jotunheim")

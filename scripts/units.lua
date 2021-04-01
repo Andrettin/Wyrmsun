@@ -1264,7 +1264,7 @@ DefineUnitType("unit-portal", {
 	Image = {"file", "neutral/buildings/portal_frame.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/portal.png"},
 	Animations = "animations-portal", Icon = "icon-portal",
-	Description = "Portals establish a link between different worlds or planes, though they are invisible to all but those who have attuned themselves to that which is magical.",
+	Description = "Portals establish a link between different worlds, though they are invisible to all but those who have attuned themselves to that which is magical.",
 	NeutralMinimapColor = {128, 128, 0},
 	Costs = {"time", 150},
 	HitPoints = 0,
@@ -4934,7 +4934,7 @@ DefineUnitType("unit-orc-shaman", {
 DefineUnitType("unit-water-elemental", {
 	Name = "Water Elemental",
 	Parent = "unit-template-unit",
---	Description = "These creatures inhabit the primordial water plane of Nun. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are.",
+--	Description = "These creatures inhabit the primordial water world of Nun. Although in many respects they act like a living being, they seem to be nearly entirely made out of water, putting in doubt just what they really are.",
 --	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-water-elemental",
 	Costs = {"time", 70, "copper", 500, "lumber", 150},

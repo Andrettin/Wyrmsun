@@ -1,7 +1,7 @@
 frey = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 551; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 45.
 	name = "Frey"
 	pantheon = vanir
-	home_plane = vanaheim
+	homeworld = vanaheim
 	major = true
 	gender = male
 	icon = icon_frey

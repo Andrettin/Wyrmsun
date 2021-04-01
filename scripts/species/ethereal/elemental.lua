@@ -53,56 +53,55 @@ DefineSpeciesClass("terra", {
 DefineSpecies("air-elemental", {
 	Name = "Air Elemental",
 	Supertaxon = "aer",
-	HomePlane = "olympus", -- change this to something else?
+	Homeworld = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("djinn", {
 	Name = "Djinn",
 	Supertaxon = "aer",
-	HomePlane = "olympus", -- change this to something else?
+	Homeworld = "olympus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("earth-elemental", {
 	Name = "Earth Elemental",
 	Supertaxon = "terra",
-	HomePlane = "tartarus", -- change this to something else?
+	Homeworld = "tartarus", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("efreet", {
 	Name = "Efreet",
 	Supertaxon = "ignis",
-	HomePlane = "hades", -- change this to something else?
+	Homeworld = "hades", -- change this to something else?
 	Sapient = true
 })
 
 DefineSpecies("fire-elemental", {
 	Name = "Fire Elemental",
 	Supertaxon = "ignis",
-	HomePlane = "muspelheim",
+	Homeworld = "muspelheim",
 	Sapient = true
 })
 
 DefineSpecies("ice-elemental", {
 	Name = "Ice Elemental",
 	Supertaxon = "aqua",
-	HomePlane = "niflheim",
+	Homeworld = "niflheim",
 	Sapient = true
 })
 
 DefineSpecies("phoenix", {
 	Name = "Phoenix",
 	Supertaxon = "ignis",
-	HomePlane = "muspelheim",
-	Sapient = true
+	Homeworld = "muspelheim"
 })
 
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
 	Supertaxon = "aqua",
-	HomePlane = "nun",
+	Homeworld = "nun",
 	Sapient = true
 })
 

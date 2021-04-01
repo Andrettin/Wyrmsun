@@ -1,7 +1,7 @@
 gathaarl = { #from Tyrant, Goblin God of Battle
 	name = "Gathaarl"
 	pantheon = goblin
-	home_plane = niflheim
+	homeworld = niflheim
 	major = true
 	gender = male
 	icon = icon_gathaarl

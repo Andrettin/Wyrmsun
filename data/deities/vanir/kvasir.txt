@@ -1,7 +1,7 @@
 kvasir = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
 	name = "Kvasir"
 	pantheon = vanir
-	home_plane = vanaheim
+	homeworld = vanaheim
 	gender = male
 	icon = icon_kvasir
 	civilizations = {

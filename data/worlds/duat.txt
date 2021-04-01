@@ -1,0 +1,7 @@
+duat = { #Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
+	name = "Duat"
+	description = "Duat is the world where those who believe in the Pharaonic pantheon experience their afterlife."
+	empowered_magic_domains = {
+		life
+	}
+}

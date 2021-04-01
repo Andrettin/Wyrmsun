@@ -1,7 +1,8 @@
-[plane]
-	ident = muspelheim
+muspelheim = {
 	name = "Muspelheim"
 	description = "A primordial realm of flame, Muspelheim is inhabited by fiery creatures."
 	background = "Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos."
-	empowered_magic_domain = fire
-[/plane]
+	empowered_magic_domains = {
+		fire
+	}
+}

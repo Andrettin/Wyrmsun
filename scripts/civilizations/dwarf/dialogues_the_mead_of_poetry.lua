@@ -75,11 +75,11 @@ DefineDialogue("the-mead-of-poetry-fjalar-and-galar-conspire-to-kill-kvasir", {
 		},
 		{
 			"speaker", "character", "fjalar",
-			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a powerful being... a dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that plane, but who has actually seen it? It is said to be a mystical rainbow bridge... We must find it if we are ever to reach Kvasir."
+			"text", "Aye! Then we should gain all his ancient wisdom. To kill such a powerful being... a dangerous feat, but one which shall be extremely rewarding. First, however, we would need to reach Asgard, the realm of the race of gods known as Aesir. Many speak of the gateway to that world, but who has actually seen it? It is said to be a mystical rainbow bridge... We must find it if we are ever to reach Kvasir."
 		},
 		{
 			"speaker", "character", "galar",
-			"text", "Once we are in the divine plane, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath.",
+			"text", "Once we are in the divine world, we must act quickly - if the other deities realize what is happening and intervene as we slay Kvasir, then we shall face untold wrath.",
 			"option-effects", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "the_mead_of_poetry_kill_kvasir")

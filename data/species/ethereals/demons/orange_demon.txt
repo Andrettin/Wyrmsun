@@ -1,6 +1,6 @@
 orange_demon = {
 	name = "Orange Demon"
 	supertaxon = daemonia
-	home_plane = hell
+	homeworld = hell
 	sapient = true
 }

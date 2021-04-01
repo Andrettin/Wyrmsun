@@ -43,7 +43,7 @@ DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the
 
 DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 	Name = "Griknagh",
-	HomePlane = "niflheim",
+	Homeworld = "niflheim",
 	Civilizations = {"troll"},
 	Religions = {"paganism"},
 	Gender = "male",
@@ -52,7 +52,7 @@ DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 
 DefineDeity("mzivult", { -- by Jesse Crider
 	Name = "Mzivult",
-	HomePlane = "niflheim",
+	Homeworld = "niflheim",
 	Civilizations = {"gnome"}, -- Derro deity
 	Religions = {"paganism"},
 	Domains = {"earth", "blood"},

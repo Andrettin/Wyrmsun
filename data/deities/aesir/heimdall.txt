@@ -1,7 +1,7 @@
 heimdall = { #the horn Gjall belongs to him; identified with Rig (the progenitor of the three races of man in Norse mythology); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxvii-xxviii, 244.
 	name = "Heimdall"
 	pantheon = aesir
-	home_plane = asgard
+	homeworld = asgard
 	gender = male
 	icon = icon_heimdall
 	civilizations = {

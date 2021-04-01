@@ -1,0 +1,7 @@
+olympus = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 354.
+	name = "Olympus"
+	description = "The realm of Olympus is the dwelling place of the pantheon of deities ruled by Zeus. Endless feasts succeed one another in the world, nourishing the Olympian gods with ambrosia and nectar. The world's weather is eternally sunny, so that it never winds, rains or snows, and clouds are entirely absent."
+	empowered_magic_domains = {
+		air
+	}
+}

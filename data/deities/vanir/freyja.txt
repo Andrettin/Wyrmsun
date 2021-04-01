@@ -1,7 +1,7 @@
 freyja = { #Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 135; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 46-47.
 	name = "Freyja"
 	pantheon = vanir
-	home_plane = vanaheim
+	homeworld = vanaheim
 	gender = female
 	icon = icon_freyja
 	father = njord

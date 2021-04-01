@@ -33,7 +33,7 @@ DefineDialogue("freys-messenger-skirnirs-feeling", {
 			"text", "Something tells me that my divine master, Fraujaz, is troubled. I should head over to Asgard and see if he needs me."
 		},
 		{
-			"text", "Hint: Skirnir will receive the benefits from sword and shield upgrades you research, no matter on which plane or world he is currently located."
+			"text", "Hint: Skirnir will receive the benefits from sword and shield upgrades you research, no matter on which world he is currently located."
 		}
 	}
 })

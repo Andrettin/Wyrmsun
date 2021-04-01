@@ -1,6 +1,6 @@
 niflheim = {
 	name = "Niflheim"
-	plane = niflheim
+	world = niflheim
 	size = { 256 256 }
 	terrain_image_file = "../scripts/map_templates/niflheim.png"
 	overlay_terrain_image_file = "../scripts/map_templates/niflheim_overlay.png"

@@ -1,7 +1,7 @@
 hel = { #Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 116; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 551; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
 	name = "Hel"
 	pantheon = aesir
-	home_plane = niflheim
+	homeworld = niflheim
 	gender = female
 	icon = icon_hel
 	father = loki

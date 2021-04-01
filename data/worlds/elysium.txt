@@ -1,0 +1,9 @@
+elysium = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 174-175.
+	name = "Elysium"
+	description = "The verdant world of Elysium is where those favored by the deities of the Olympian pantheon go after their death. Afterlife in Elysium is pleasurable, featuring neither toil nor tears."
+	empowered_magic_domains = {
+		earth
+		wood
+		life
+	}
+}

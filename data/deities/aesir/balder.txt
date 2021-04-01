@@ -1,7 +1,7 @@
 balder = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 40.
 	name = "Balder"
 	pantheon = aesir
-	home_plane = asgard
+	homeworld = asgard
 	gender = male
 	father = odin
 	mother = frigg

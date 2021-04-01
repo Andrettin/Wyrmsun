@@ -136,7 +136,7 @@ DefineDialogue("westward_migration_introduction", {
 				function(s)
 					SetPlayerData(trigger_player, "AcceptQuest", "westward_migration")
 					
-					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("material-plane", "earth"))
+					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("earth"))
 					SetUnitVariable(unit, "TTL", 600)
 				end
 			}

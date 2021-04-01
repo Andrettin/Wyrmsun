@@ -1,7 +1,7 @@
 odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	name = "Odin"
 	pantheon = aesir
-	home_plane = asgard
+	homeworld = asgard
 	gender = male
 	icon = icon_odin
 	civilizations = {
@@ -21,7 +21,7 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 		aether
 	}
 	upgrade = upgrade_deity_odin
-	#description = "Odin is the chief deity of the Aesir. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
+	#description = "Odin is the chief deity of the Aesir. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to material worlds. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
 	description = "Odin is the chief deity of the Aesir. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). As Woden, the royal house of Deira claimed him as their ancestor."
 	cultural_names = {
 		anglo_saxon = "Woden"

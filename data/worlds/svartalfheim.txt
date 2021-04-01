@@ -1,5 +1,4 @@
 svartalfheim = {
 	name = "Svartalfheim"
-	plane = material_plane
 	description = "Long ago, a group of elves faced a catastrophal defeat at the hands of others of their kin. Threatened with annihilation, a mighty sorcerer among them opened a temporary portal to an unknown world, to which they could escape. The elves settled there, and adapted to this new, twilight world - which became known as Svartalfheim, the world of the dark elves."
 }

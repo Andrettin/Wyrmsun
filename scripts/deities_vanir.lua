@@ -28,7 +28,7 @@
 DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 7; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 81-82.
 	Name = "Gullveig",
 	Pantheon = "vanir",
-	HomePlane = "vanaheim",
+	Homeworld = "vanaheim",
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Gullveig an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Religions = {"paganism"},
 	Gender = "female",
@@ -39,7 +39,7 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 DefineDeity("nerthus", { -- same etymological root as Njord, likely originally the same deity; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 44, 47.
 	Name = "Nerthus",
 	Pantheon = "vanir", -- since Njord is a part of the Vanir
-	HomePlane = "vanaheim",
+	Homeworld = "vanaheim",
 	Civilizations = {"elf", "suebi", "teuton"}, -- worshipped by the Langobards
 	Religions = {"paganism"},
 	Gender = "female",
@@ -50,7 +50,7 @@ DefineDeity("nerthus", { -- same etymological root as Njord, likely originally t
 DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Name = "Eloh",
 	Pantheon = "vanir", -- since she is an elven deity
-	HomePlane = "vanaheim",
+	Homeworld = "vanaheim",
 	Civilizations = {"elf"},
 	Religions = {"paganism"},
 	Gender = "female",

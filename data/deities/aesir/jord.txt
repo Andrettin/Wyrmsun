@@ -1,7 +1,7 @@
 jord = { #mother of Thor by Odin; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 241-242.
 	name = "Jord" #the name means "Earth"; also known as Fjorgyn
 	pantheon = aesir
-	home_plane = asgard
+	homeworld = asgard
 	gender = female
 	civilizations = {
 		norse

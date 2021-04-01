@@ -1,6 +1,6 @@
 christian_god = {
 	name = "Christian God"
-	home_plane = heaven
+	homeworld = heaven
 	civilizations = {
 		anglo_saxon
 		english

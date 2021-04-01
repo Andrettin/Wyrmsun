@@ -351,8 +351,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		if (GetDeityData(unit_name, "Pantheon") ~= "") then
 			description = description .. _("Pantheon") .. ": " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
 		end
-		if (GetDeityData(unit_name, "HomePlane") ~= "") then
-			description = description .. _("Home Plane") .. ": " .. _(GetPlaneData(GetDeityData(unit_name, "HomePlane"), "Name")) .. "\n\n"
+		if (GetDeityData(unit_name, "Homeworld") ~= "") then
+			description = description .. _("Homeworld") .. ": " .. _(GetWorldData(GetDeityData(unit_name, "Homeworld"), "Name")) .. "\n\n"
 		end
 		description = description .. _("Rank") .. ": "
 		if (GetDeityData(unit_name, "Major")) then
@@ -851,146 +851,6 @@ function OpenEncyclopediaText(text_identifier, chosen_chapter)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaPlanesMenu()
-	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	local height_offset = 2
-	if (Video.Height >= (600 * get_scale_factor())) then
-		height_offset = 2 -- change this to 0 if the number of entries becomes too large
-	else
-		height_offset = 2
-	end
-	
-	AddTopEncyclopediaLabel(menu, offx, offy, "planes", 2)
-
-	local potential_planes = GetPlanes()
-	local planes = {}
-	
-	for i = 1, table.getn(potential_planes) do
-		if (GetPlaneData(potential_planes[i], "Description") ~= "") then
-			table.insert(planes, potential_planes[i])
-		end
-	end
-	table.sort(planes)
-
-	local plane_x = 0
-	if (GetTableSize(planes) > 20) then
-		plane_x = -2
-	elseif (GetTableSize(planes) > 10) then
-		plane_x = -1
-	end
-	local plane_y = -3
-
-	for i=1,table.getn(planes) do
-		menu:addFullButton(_(GetPlaneData(planes[i], "Name")), "", offx + (208 + (113 * plane_x)) * get_scale_factor(), offy + (104 + (36 * (plane_y + height_offset))) * get_scale_factor(),
-			function() OpenEncyclopediaPlaneEntry(planes[i]); end)
-
-		if (plane_y > 5 or (plane_y > 4 and Video.Height < (600 * get_scale_factor()))) then
-			plane_x = plane_x + 2
-			plane_y = -3
-		else
-			plane_y = plane_y + 1
-		end
-	end
-
---	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() menu:stop(); end)
-
-	menu:run()
-end
-
-function OpenEncyclopediaPlaneEntry(plane)
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. _(GetPlaneData(plane, "Name")) .. "~>", offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor(), nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64 * get_scale_factor(), Video.Height - 96 * get_scale_factor())
-	l:setLineWidth(Video.Width - 64 * get_scale_factor())
-	encyclopedia_entry_menu:add(l, 32 * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor())
-	local description = ""
-	
-	local sapient_species_names = GetPlaneData(plane, "NativeSapientSpeciesNames")
-	local fauna_species_names = GetPlaneData(plane, "NativeFaunaSpeciesNames")
-
-	if (table.getn(sapient_species_names) > 0) then
-		description = description .. _("Native Sapients") .. ": "
-		for i = 1, table.getn(sapient_species_names) do
-			description = description .. _(GetPluralForm(sapient_species_names[i]))
-			if (i < table.getn(sapient_species_names)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	if (table.getn(fauna_species_names) > 0) then
-		description = description .. _("Native Fauna") .. ": "
-		for i = 1, table.getn(fauna_species_names) do
-			description = description .. _(GetPluralForm(fauna_species_names[i]))
-			if (i < table.getn(fauna_species_names)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end		
-	
-	if (GetPlaneData(plane, "Description") ~= "") then
-		description = description .. _("Description") .. ": " .. GetPlaneData(plane, "Description")
-	end
-	if (GetPlaneData(plane, "Background") ~= "") then
-		description = description .. "\n\n" .. _("Background") .. ": " .. GetPlaneData(plane, "Background")
-	end
-	l:setCaption(description)
-			
-	-- add buttons of texts related to the subject matter of the entry
-	local chapter_references = 0
-	local texts = GetLiteraryTexts()
-	for i, text_name in ipairs(texts) do
-		local chapters = GetLiteraryTextData(text_name, "Chapters")
-		for j=1, table.getn(chapters) do
-			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
-				chapter_references = chapter_references + 1
-			end
-		end
-	end
-	
-	local chapter_x
-	local chapter_y = 8
-	if (chapter_references == 1) then
-		chapter_x = 0
-	elseif (chapter_references == 2) then
-		chapter_x = -1
-	else
-		chapter_x = -2
-	end
-
-	for i, text_name in ipairs(texts) do
-		local chapters = GetLiteraryTextData(text_name, "Chapters")
-		for j=1, table.getn(chapters) do
-			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
-				if (table.getn(chapters) > 1) then
-					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + (208 + (113 * chapter_x)) * get_scale_factor(), offy + (104 + (36 * chapter_y)) * get_scale_factor(),
-						function() OpenEncyclopediaText(text_name, chapters[j]); end)
-				else
-					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + (208 + (113 * chapter_x)) * get_scale_factor(), offy + (104 + (36 * chapter_y)) * get_scale_factor(),
-						function() OpenEncyclopediaText(text_name); end)
-				end
-				chapter_x = chapter_x + 2
-			end
-		end
-	end
-
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
 function RunEncyclopediaWorldsMenu()
 
 	local menu = WarMenu(nil, GetBackground("backgrounds/wyrm.png"))
@@ -1056,9 +916,6 @@ function OpenEncyclopediaWorldEntry(world)
 	l:setLineWidth(Video.Width - 64 * get_scale_factor())
 	encyclopedia_entry_menu:add(l, 32 * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor())
 	local description = ""
-	if (GetWorldData(world, "Plane") ~= "") then
-		description = _("Plane") .. ": " .. _(GetPlaneData(GetWorldData(world, "Plane"), "Name")) .. "\n\n"
-	end
 
 	local sapient_species_names = GetWorldData(world, "NativeSapientSpeciesNames")
 	local fauna_species_names = GetWorldData(world, "NativeFaunaSpeciesNames")
@@ -1478,8 +1335,6 @@ function AddTopEncyclopediaLabel(menu, offx, offy, state, height_offset)
 		top_label_string = top_label_string .. _("Factions")
 	elseif (state == "game_concepts") then
 		top_label_string = top_label_string .. _("Game Concepts")
-	elseif (state == "planes") then
-		top_label_string = top_label_string .. _("Planes")
 	elseif (state == "texts") then
 		top_label_string = top_label_string .. _("Texts")
 	elseif (state == "worlds") then

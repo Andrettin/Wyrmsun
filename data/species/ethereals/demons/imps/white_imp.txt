@@ -1,6 +1,6 @@
 white_imp = {
 	name = "White Imp"
-	supertaxon = ira
-	home_plane = hell #could also be present in Niflheim
+	supertaxon = invidia
+	homeworld = hell #could also be present in Niflheim
 	sapient = true
 }

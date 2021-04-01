@@ -147,20 +147,10 @@ MenuBase {
 	}
 	
 	LargeButton {
-		id: planes_button
+		id: technologies_button
 		anchors.right: game_concepts_button.right
 		anchors.top: magic_suffixes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		text: "Planes"
-		hotkey: "l"
-		lua_command: "RunEncyclopediaPlanesMenu();"
-	}
-	
-	LargeButton {
-		id: technologies_button
-		anchors.left: worlds_button.left
-		anchors.bottom: texts_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Technologies"
 		hotkey: "t"
 		
@@ -176,8 +166,7 @@ MenuBase {
 	LargeButton {
 		id: texts_button
 		anchors.left: worlds_button.left
-		anchors.bottom: uniques_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.top: buildings_button.top
 		text: "Texts"
 		hotkey: "x"
 		lua_command: "RunEncyclopediaTextsMenu();"
@@ -186,8 +175,8 @@ MenuBase {
 	LargeButton {
 		id: uniques_button
 		anchors.left: worlds_button.left
-		anchors.bottom: units_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.top: texts_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Uniques"
 		hotkey: "n"
 		
@@ -203,8 +192,8 @@ MenuBase {
 	LargeButton {
 		id: units_button
 		anchors.left: worlds_button.left
-		anchors.bottom: worlds_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.top: uniques_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Units"
 		hotkey: "u"
 		
@@ -221,7 +210,8 @@ MenuBase {
 		id: worlds_button
 		anchors.left: parent.horizontalCenter
 		anchors.leftMargin: 4
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: units_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Worlds"
 		hotkey: "w"
 		lua_command: "RunEncyclopediaWorldsMenu();"
@@ -229,7 +219,7 @@ MenuBase {
 	
 	PreviousMenuButton {
 		id: previous_menu_button
-		anchors.top: planes_button.bottom
+		anchors.top: technologies_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 	}
 }

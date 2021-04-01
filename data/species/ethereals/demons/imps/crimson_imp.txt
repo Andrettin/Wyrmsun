@@ -1,6 +1,6 @@
 crimson_imp = {
 	name = "Crimson Imp"
-	supertaxon = ira
-	home_plane = hell
+	supertaxon = invidia
+	homeworld = hell
 	sapient = true
 }

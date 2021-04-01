@@ -92,7 +92,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Eostre",
 	Pantheon = "aesir",
-	HomePlane = "asgard",
+	Homeworld = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
@@ -150,7 +150,7 @@ DefineDeity("hoenir", { -- Long-legged god; indecisive; sent by the Aesir to the
 DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
 	Name = "Hretha",
 	Pantheon = "aesir",
-	HomePlane = "asgard",
+	Homeworld = "asgard",
 	Civilizations = {"anglo-saxon"}, -- Anglo-Saxon goddess
 	Religions = {"paganism"},
 	Gender = "female"
@@ -159,7 +159,7 @@ DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p
 DefineDeity("idun", { -- wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 107-109.
 	Name = "Idun",
 	Pantheon = "aesir",
-	HomePlane = "asgard",
+	Homeworld = "asgard",
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female",
@@ -211,7 +211,7 @@ DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Sou
 DefineDeity("sif", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. xxxi, 48-49, 198-199, 249.
 	Name = "Sif",
 	Pantheon = "aesir",
-	HomePlane = "asgard",
+	Homeworld = "asgard",
 	Civilizations = {"dwarf", "norse"}, -- available for dwarves due to her connection (though small) with them in the Norse myth
 	Religions = {"paganism"},
 	Gender = "female",

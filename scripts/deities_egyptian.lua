@@ -169,7 +169,7 @@ DefineDeity("hehu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
-	HomePlane = "nun",
+	Homeworld = "nun",
 	Domains = {"water"},
 --	Description = "Hehu is a primordial deity of liquid space and of the flood."
 })
@@ -235,7 +235,7 @@ DefineDeity("keku", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
-	HomePlane = "nun",
+	Homeworld = "nun",
 	Domains = {"illusion"},
 --	Description = "Keku is a primordial deity of darkness."
 })
@@ -368,7 +368,7 @@ DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	HomePlane = "nun",
+	Homeworld = "nun",
 	Domains = {"water"},
 --	Description = "Neith is a goddess famed for her arrows. She takes the form of a cow or a fish. She is the mother of Ra."
 })
@@ -398,7 +398,7 @@ DefineDeity("nu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p.
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female", -- correct?
-	HomePlane = "nun",
+	Homeworld = "nun",
 	Domains = {"water"},
 --	Description = "Nu is a primordial water deity."
 })
@@ -419,9 +419,9 @@ DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	HomePlane = "duat",
+	Homeworld = "duat",
 	Domains = {"death", "life"},
---	Description = "Osiris is a god who rules over the underworld plane of Duat. He is a deity royalty, death and fertility, and has the appearance of a mummy. Osiris uses a heqa (a sheepherd's staff) and a nekhekh (a lash). He is the son of Geb and Nut. Osiris was murdered by his brother Seth, but came back to life thanks to the magic of Isis and Neftis."
+--	Description = "Osiris is a god who rules over the underworld world of Duat. He is a deity royalty, death and fertility, and has the appearance of a mummy. Osiris uses a heqa (a sheepherd's staff) and a nekhekh (a lash). He is the son of Geb and Nut. Osiris was murdered by his brother Seth, but came back to life thanks to the magic of Isis and Neftis."
 })
 
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -545,7 +545,7 @@ DefineDeity("tefnut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	HomePlane = "duat", -- she is associated with the atmosphere of the underworld
+	Homeworld = "duat", -- she is associated with the atmosphere of the underworld
 	Domains = {"fire"},
 --	Description = "Tefnut is a goddess associated with flaming destruction. She is the daughter of Atum."
 })
@@ -565,7 +565,7 @@ DefineDeity("tenmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male", -- correct?
-	HomePlane = "nun",
+	Homeworld = "nun",
 --	Description = "Tenmu is a primordial deity of disorder."
 })
 

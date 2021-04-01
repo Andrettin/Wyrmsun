@@ -1,0 +1,9 @@
+hades = { #Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 211-213.
+	name = "Hades"
+	description = "The underworld world of Hades looks much like the underground depths of many mortal worlds. The realm houses the souls of those who believed in the Olympian pantheon during their lives, and who were neither favored enough by the gods to be sent to Elysium, nor cruel enough to be sent to Tartarus. Afterlife in Hades is one of lamentation and sorrow. The world is ruled by the deity of the same name."
+	empowered_magic_domains = {
+		earth
+		fire
+		death
+	}
+}

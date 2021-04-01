@@ -1,6 +1,6 @@
 blizzard_demon = {
 	name = "Blizzard Demon"
 	supertaxon = daemonia
-	home_plane = hell #could also be present in Niflheim
+	homeworld = hell #could also be present in Niflheim
 	sapient = true
 }

@@ -1,6 +1,6 @@
 iron_imp = {
 	name = "Iron Imp"
-	supertaxon = ira
-	home_plane = hell
+	supertaxon = invidia
+	homeworld = hell
 	sapient = true
 }

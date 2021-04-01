@@ -1,7 +1,8 @@
-[plane]
-	ident = hell
+hell = {
 	name = "Hell"
 	description = "Hell is the home to the sadistic creatures known as demons. Though its vicious inhabitants are powerful creatures, they are kept at bay by the forces of Heaven."
-	empowered_magic_domain = blood
-	empowered_magic_domain = fire
-[/plane]
+	empowered_magic_domains = {
+		blood
+		fire
+	}
+}
