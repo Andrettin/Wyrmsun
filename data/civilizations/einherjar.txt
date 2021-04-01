@@ -36,6 +36,13 @@ einherjar = {
 		}
 	}
 	
+	personal_names = {
+		female = {
+			#valkyrie names
+			"Sigrdrifa" #"Sigrdrífa"; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 80.
+		}
+	}
+	
 	history = {
 		#give the Aesir/Einherjar iron weapons and armor from the beginning
 		acquired_upgrade_classes += ironworking
