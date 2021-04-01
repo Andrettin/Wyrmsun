@@ -1,0 +1,6 @@
+elementia = {
+	name = "Elementia"
+	common_name = "Elemental"
+	rank = kingdom
+	supertaxon = aetheria
+}

@@ -1,0 +1,5 @@
+aer = {
+	name = "Aer" #"air" in Latin
+	rank = phylum
+	supertaxon = elementia
+}

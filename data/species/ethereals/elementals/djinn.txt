@@ -1,0 +1,6 @@
+djinn = {
+	name = "Djinn"
+	supertaxon = aer
+	homeworld = olympus #change this to something else?
+	sapient = true
+}

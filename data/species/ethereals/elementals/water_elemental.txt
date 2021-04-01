@@ -1,0 +1,6 @@
+water_elemental = {
+	name = "Water Elemental"
+	supertaxon = aqua
+	homeworld = nun
+	sapient = true
+}

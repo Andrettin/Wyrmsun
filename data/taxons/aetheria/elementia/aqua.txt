@@ -1,0 +1,5 @@
+aqua = {
+	name = "Aqua" #"water" in Latin
+	rank = phylum
+	supertaxon = elementia
+}

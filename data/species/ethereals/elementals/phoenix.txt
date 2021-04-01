@@ -1,0 +1,5 @@
+phoenix = {
+	name = "Phoenix"
+	supertaxon = ignis
+	homeworld = muspelheim
+}

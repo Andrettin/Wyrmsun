@@ -1,0 +1,6 @@
+ice_elemental = {
+	name = "Ice Elemental"
+	supertaxon = aqua
+	homeworld = niflheim
+	sapient = true
+}

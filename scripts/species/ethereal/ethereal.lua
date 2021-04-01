@@ -41,14 +41,6 @@ DefineSpecies("akh-iqer", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Description = "An akh-iqer is a particularly mighty akh, who claims to have achieved perfection."
 })
 
-DefineSpecies("einherjar", {
-	Name = "Einherjar",
-	Supertaxon = "aetheria",
-	Homeworld = "asgard",
-	Sapient = true,
-	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
-})
-
 DefineSpecies("sylph", {
 	Name = "Sylph",
 	Supertaxon = "aetheria",
@@ -58,4 +50,3 @@ DefineSpecies("sylph", {
 })
 
 Load("scripts/species/ethereal/angel.lua")
-Load("scripts/species/ethereal/elemental.lua")

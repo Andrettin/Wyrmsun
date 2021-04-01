@@ -1,0 +1,6 @@
+earth_elemental = {
+	name = "Earth Elemental"
+	supertaxon = terra
+	homeworld = tartarus #change this to something else?
+	sapient = true
+}

@@ -1,0 +1,6 @@
+fire_elemental = {
+	name = "Fire Elemental"
+	supertaxon = ignis
+	homeworld = muspelheim
+	sapient = true
+}

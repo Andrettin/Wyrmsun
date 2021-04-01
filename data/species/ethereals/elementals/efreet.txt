@@ -1,0 +1,6 @@
+efreet = {
+	name = "Efreet"
+	supertaxon = ignis
+	homeworld = hades #change this to something else?
+	sapient = true
+}

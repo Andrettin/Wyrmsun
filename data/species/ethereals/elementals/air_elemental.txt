@@ -1,0 +1,6 @@
+air_elemental = {
+	name = "Air Elemental"
+	supertaxon = aer
+	homeworld = olympus #change this to something else?
+	sapient = true
+}

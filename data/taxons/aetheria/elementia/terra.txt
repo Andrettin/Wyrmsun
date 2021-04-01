@@ -1,0 +1,5 @@
+terra = {
+	name = "Terra" #"earth" in Latin
+	rank = phylum
+	supertaxon = elementia
+}
