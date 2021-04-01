@@ -1,0 +1,5 @@
+hell_hound = {
+	name = "Hell Hound"
+	supertaxon = daemonia
+	homeworld = hell
+}

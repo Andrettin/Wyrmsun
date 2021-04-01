@@ -1,0 +1,5 @@
+hellephant = {
+	name = "Hellephant"
+	supertaxon = daemonia
+	homeworld = hell
+}
