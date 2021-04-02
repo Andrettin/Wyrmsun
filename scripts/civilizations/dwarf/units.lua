@@ -741,7 +741,7 @@ DefineUnitType("unit-dwarven-thane", {
 	Civilization = "dwarf",
 	Description = "Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug.",
 	Quote = "\"There was Modsognir the mightiest made\nOf all the dwarfs, and Durin next;\nMany a likeness of apes they made,\nThe dwarves in the earth, as Durin said.\"\n- Dwarven Traditional Poetry",
-	Background = "In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them.",
+	Background = "In Norse mythology, the dwarven leader Modsognir appears in the <a href='literary_text:voluspo'>Voluspo</a> as one of the first dwarves and the mightiest of them.",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-thane",
 	DefaultEquipment = {
@@ -926,7 +926,7 @@ DefineUnitType("unit-dwarven-scout", {
 	Civilization = "dwarf",
 --	Description = "Dwarven scouts use their lighter armor to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions, or securing important objectives. Outside of battle, they are often used to relay messages between dwarven communities. These scouts were instrumental for pathfinding during the migration of the group of dwarves led by Dvalin, who left the Heart Mountains, passed through swamps, and finally established themselves in a desert.", -- use the latter part of this for the pathfinder
 	Description = "Dwarven scouts use their speed to their advantage, ranging ahead of the main force and reporting back on troop movements and dispositions. Outside of battle, they are often used to relay messages between dwarven communities. However, they pay for their speed with the poorer protection provided by their lighter armor.",
---	Background = "In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
+--	Background = "In Norse mythology, there is a mention in the <a href='literary_text:voluspo'>Voluspo</a> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar.", -- use this for the pathfinder
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-weapon-thrower", Icon = "icon-dwarven-scout",
 	DefaultEquipment = {
@@ -1318,7 +1318,7 @@ DefineUnitType("unit-dwarven-witness", {
 --	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice.",
 	Description = "A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans.",
 	Quote = "\"Might he sang for the gods, and glory for dwarves,\nAnd wisdom for Hroptatyr wise.\"\n- Dwarven Traditional Poetry",
-	Background = "In the ~<Hovamol~>, Thjodrorir was a dwarf who knew a potent magic charm, and Dvalin was a dwarf who was said to have taught the art of runes to his people.",
+	Background = "In the <a href='literary_text:hovamol'>Hovamol</a>, Thjodrorir was a dwarf who knew a potent magic charm, and Dvalin was a dwarf who was said to have taught the art of runes to his people.",
 	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
@@ -1560,7 +1560,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Parent = "unit-template-town-hall",
 	Civilization = "dwarf",
 	Description = "The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr.",
-	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the ~<Voluspo~> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the ~<Svipdagsmol~>.",
+	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the <a href='literary_text:voluspo'>Voluspo</a> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the <a href='literary_text:svipdagsmol'>Svipdagsmol</a>.",
 	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-town-hall",
@@ -2021,7 +2021,7 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	Parent = "unit-template-lumber-mill",
 	Civilization = "dwarf",
 	Description = "Dwarven culture places a great emphasis on handling stone and metal, to the detriment of woodworking. Nevertheless, the lumber mill employs a number of dwarven artisans skilled in woodworking, who strive to improve methods of lumber production and the scouts' throwing axes.",
-	Background = "In Norse mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the ~<Grimnismol~>.",
+	Background = "In Norse mythology, one instance related to dwarven woodwork to be found is the crafting of the ship Skidbladnir and the throwing spear Gungnir by the sons of Ivaldi. Skidbladnir is mentioned in the <a href='literary_text:grimnismol'>Grimnismol</a>.",
 	Image = {"file", "dwarf/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-lumber-mill",
@@ -2063,7 +2063,7 @@ DefineUnitType("unit-dwarven-smithy", {
 	Description = "Smithing is a highly-valued skill in dwarven society, leading many to dedicate themselves to that profession. Dwarven smiths are renowned for their abilities, and their craft attracts many foreign customers. The most prestigious of dwarven metalworkers are the runesmiths.",
 	Quote = "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire",
 	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals.",
---	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the ~<Reginsmol~>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in ~<The Sceptre of Fire~> poem.",
+--	Background = "One of the primary talents of the dwarves in Norse mythology was smithing. In a number of myths, dwarven smiths would craft marvelous artifacts for the gods, and sometimes even for mortals. One example of such an artifact is Mjollnir, the famous hammer of the Norse god Thor, which was made by the dwarves Brokk and Eitri. Another example is the sword Gram, crafted by the dwarf Regin in the <a href='literary_text:reginsmol'>Reginsmol</a>.\n\nRunesmiths feature in the Battle for Wesnoth, and are mentioned in <a href='literary_text:the_sceptre_of_fire'>The Sceptre of Fire</a> poem.",
 	Image = {"file", "dwarf/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-smithy",
@@ -2101,7 +2101,7 @@ DefineUnitType("unit-dwarven-masons-shop", {
 	Parent = "unit-template-masons-shop",
 	Civilization = "dwarf",
 	Description = "Dwarven construction makes heavy use of stone as a material, so that the existence of a mason's shop in a settlement is all the more important.",
-	Background = "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the ~<Voluspo~> they are called \"the masters of the rocks\".",
+	Background = "Dwarves are strongly associated with stone in Norse mythology, making their homes in rocky hills and stony caves. In the <a href='literary_text:voluspo'>Voluspo</a> they are called \"the masters of the rocks\".",
 	Image = {"file", "dwarf/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "dwarf/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-dwarven-masons-shop",
@@ -2466,7 +2466,7 @@ DefineUnitType("unit-dwarven-wall", {
 	Image = {"file", "dwarf/buildings/wall.png", "size", {32, 32}},
 	Icon = "icon-dwarven-wall",
 	Description = "Masters of stonecraft, dwarves erect mighty walls in the protection of their settlements. The fabled gate Thrymgjol, built by the sons of the dwarf Solblindi, is said to provide the strongest protection of all.",
-	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
+	Background = "The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the <a href='literary_text:svipdagsmol'>Svipdagsmol</a> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\".",
 	HitPoints = 250 -- +50 HP
 } )
 

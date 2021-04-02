@@ -36,6 +36,6 @@ upgrade_dwarven_runewriting = {
 	civilization = dwarven
 	icon = icon_norse_runewriting
 	description = "The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market."
-	background = "In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."
+	background = "In the Poetic Edda's <a href='literary_text:hovamol'>Hovamol</a>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."
 	button_key = w
 }
