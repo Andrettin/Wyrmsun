@@ -81,18 +81,3 @@
 
 --Load("scripts/texts/the_ethnology_of_germany.lua")
 Load("scripts/texts/the_poetic_edda.lua")
-
-DefineLiteraryText("the_sceptre_of_fire", {
-	Name = "The ~!Sceptre of Fire",
-	Author = "Joseph Simmons (turin)",
-	Year = 2007,
-	CopyrightNotice = "This text has been released under the GNU General Public License version 2 by its author. See license.txt for more details on the license.",
-	Chapters = {
-		{
-			"name", "The Sceptre of Fire",
-			"text", {
-				"The land of Wesnoth's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\n\nSo now I tell from whence it came -\nThe Fire-sceptre great -\nAnd of the makers of the same,\nTheir tale I now relate..."
-			}
-		}
-	}
-})
