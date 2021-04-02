@@ -53,9 +53,11 @@ Window {
 		return "<font color=\"gold\">" + text + "</font>"
 	}
 	
-	function rich_text(text) {
+	function format_text(text) {
 		var str = text
 		str = str.replace(/\n/g, "<br>")
+		str = str.replace(/~</g, "<font color=\"gold\">")
+		str = str.replace(/~>/g, "</font>")
 		return str
 	}
 	

@@ -29,7 +29,7 @@ MenuBase {
 		NormalText {
 			id: entry_text
 			width: text_area.width
-			text: rich_text(entry.encyclopedia_text)
+			text: format_text(entry.encyclopedia_text)
 			wrapMode: Text.WordWrap
 			textFormat: Text.StyledText
 			linkColor: "#78b5d5"
