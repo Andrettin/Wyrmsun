@@ -169,7 +169,14 @@ MenuBase {
 		anchors.top: buildings_button.top
 		text: "Texts"
 		hotkey: "x"
-		lua_command: "RunEncyclopediaTextsMenu();"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "texts",
+				category_name: "Texts",
+				entries: wyrmgus.get_literary_text_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
