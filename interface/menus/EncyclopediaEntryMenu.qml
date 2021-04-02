@@ -42,6 +42,7 @@ MenuBase {
 			wrapMode: Text.WordWrap
 			textFormat: Text.StyledText
 			linkColor: "#78b5d5"
+			maximumLineCount: 564 //if the number of lines is allowed to become greater than this, then the text becomes a black rectangle
 			
 			onLinkActivated: {
 				menu_stack.push("EncyclopediaEntryMenu.qml", {
