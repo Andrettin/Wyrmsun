@@ -16,7 +16,7 @@ MenuBase {
 		anchors.top: parent.title_element.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		icon: entry.icon ? entry.icon.identifier : ""
-		visible: entry.icon
+		visible: entry.icon ? true : false
 	}
 	
 	Flickable {
@@ -25,8 +25,8 @@ MenuBase {
 		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
-		anchors.top: icon_button.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.top: entry.icon ? icon_button.bottom : parent.title_element.bottom
+		anchors.topMargin: (entry.icon ? 16 : 32) * wyrmgus.defines.scale_factor
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
 		contentWidth: contentItem.childrenRect.width
