@@ -21,4 +21,10 @@ IconButton {
 	player_color: faction ? faction.color.identifier : (civilization ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
 	tooltip: name + civilization_tooltip
 	lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"" + category + "\");"
+	
+	onClicked: {
+		menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
+			entry: model.modelData
+		})
+	}
 }

@@ -27,6 +27,7 @@ MenuBase {
 		contentHeight: contentItem.childrenRect.height
 		boundsBehavior: Flickable.StopAtBounds
 		clip: true
+		ScrollBar.vertical: CustomScrollBar {}
 		
 		Repeater {
 			id: button_table

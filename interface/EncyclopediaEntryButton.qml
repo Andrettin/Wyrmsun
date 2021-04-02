@@ -13,4 +13,10 @@ LargeButton {
 	y: button_y * boundary_height + y_offset
 	text: model.modelData.name
 	lua_command: "OpenEncyclopediaUnitEntry(\"" + model.modelData.identifier + "\", \"" + category + "\");"
+	
+	onClicked: {
+		menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
+			entry: model.modelData
+		})
+	}
 }

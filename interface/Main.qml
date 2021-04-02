@@ -53,6 +53,12 @@ Window {
 		return "<font color=\"gold\">" + text + "</font>"
 	}
 	
+	function rich_text(text) {
+		var str = text
+		str = str.replace(/\n/g, "<br>")
+		return str
+	}
+	
 	//generate a random number
 	function random(n) {
 		return Math.floor(Math.random() * n)
