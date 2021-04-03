@@ -29,7 +29,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	if (state == "civilizations") then
 		OpenEncyclopediaCivilizationEntry(unit_name)
 		return;
-	elseif (state == "texts" or state == "worlds") then
+	elseif (state == "buildings" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
 		return;
 	end
 	
@@ -172,56 +172,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local quote = ""
 	local background = ""
 	if (string.find(unit_name, "unit") ~= nil) then
-		if (GetUnitTypeData(unit_name, "Civilization") ~= "" and GetUnitTypeData(unit_name, "Civilization") ~= "neutral") then
-			civilization = _("Civilization:") .. " " .. _(GetCivilizationData(GetUnitTypeData(unit_name, "Civilization"), "Display")) .. "\n\n"
-			if (GetUnitTypeData(unit_name, "Faction") ~= "") then
-				faction = _("Faction:") .. " " .. _(GetFactionData(GetUnitTypeData(unit_name, "Faction"), "Name")) .. "\n\n"
-			end
-		end
-		if (GetUnitTypeData(unit_name, "Class") ~= "") then
-			unit_type_class = _("Class") .. ": " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "_", " "))) .. "\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Description") ~= "") then
-			description = _("Description") .. ": " .. _(GetUnitTypeData(unit_name, "Description")) .. "\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(GetUnitTypeData(unit_name, "Quote")) .. "\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Notes") ~= "") then
-			notes = _("Notes") .. ": " .. _(GetUnitTypeData(unit_name, "Notes")) .. "\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Item") == false and GetUnitTypeStatsString(unit_name) ~= "") then
-			local costs_string = ""
-			local first_cost = true
-			for i = 1, (MaxCosts - 1) do
-				local resource_name = GetResourceNameById(i)
-				if (GetUnitTypeData(unit_name, "Costs", resource_name) > 0) then
-					if (first_cost) then
-						first_cost = false
-					else
-						costs_string = costs_string .. ", "
-					end
-					costs_string = costs_string .. GetUnitTypeData(unit_name, "Costs", resource_name) .. " " .. CapitalizeString(resource_name)
-				end
-			end
-			if (GetUnitTypeData(unit_name, "Demand") > 0) then
-				if (first_cost) then
-					first_cost = false
-				else
-					costs_string = costs_string .. ", "
-				end
-				costs_string = costs_string .. GetUnitTypeData(unit_name, "Demand") .. " Food"
-			end
-			if (costs_string ~= "") then
-				effects = _("Costs") .. ": " .. costs_string .. ".\n\n"
-			end
-			effects = effects .. _("Stats") .. ": " .. GetUnitTypeStatsString(unit_name) .. ".\n\n"
-		elseif (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
-			effects = _("Effects:") .. " " .. GetItemEffectsString(unit_name) .. ".\n\n"
-		end
-		if (GetUnitTypeData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(GetUnitTypeData(unit_name, "Background")) .. "\n\n"
-		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (GetUpgradeData(unit_name, "Civilization") ~= "" and GetUpgradeData(unit_name, "Civilization") ~= "neutral") then
 			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetUpgradeData(unit_name, "Civilization"), "Display")) .. "\n\n"
