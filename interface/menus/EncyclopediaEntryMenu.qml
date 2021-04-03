@@ -6,10 +6,11 @@ MenuBase {
 	id: encyclopedia_entry_menu
 	focus: true //true even if the game is running, so that the encyclopedia can be used in that case
 	title: entry_name
-	background: entry.encyclopedia_background_file && entry.encyclopedia_background_file.length > 0 ? entry.encyclopedia_background_file : wyrmgus.defines.default_menu_background_file
+	background: entry_background
 	
 	property var entry: null
 	readonly property string entry_name: entry.full_name ? entry.full_name : entry.name
+	readonly property string entry_background: entry.encyclopedia_background_file && entry.encyclopedia_background_file.length > 0 ? entry.encyclopedia_background_file : (entry.civilization && entry.civilization.encyclopedia_background_file.length > 0 ? entry.civilization.encyclopedia_background_file : wyrmgus.defines.default_menu_background_file)
 	
 	IconButton {
 		id: icon_button
