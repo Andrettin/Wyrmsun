@@ -2000,7 +2000,7 @@ Units = {
 	"unit-joruvellir-scout", "unit-joruvellir-pathfinder", "unit-joruvellir-explorer",
 	"unit-joruvellir-yale-rider", "unit-joruvellir-yale-lord",
 	"unit-joruvellir-yale-pen",
-	"upgrade-faction-surghan-mercenaries",
+	"upgrade_faction_surghan_mercenaries",
 	"unit-surghan-mercenary-axefighter", "unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 	"upgrade-faction-acthnic-tribe", "upgrade-faction-derro-tribe", "upgrade-faction-sagan-tribe",
 	"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",

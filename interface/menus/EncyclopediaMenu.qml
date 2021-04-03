@@ -65,7 +65,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Factions"
 		hotkey: "f"
-		lua_command: "RunEncyclopediaFactionsCivilizationMenu();"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "factions",
+				category_name: "Factions",
+				entries: wyrmgus.get_faction_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {
