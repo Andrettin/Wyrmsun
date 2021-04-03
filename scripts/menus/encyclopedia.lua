@@ -26,11 +26,11 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state == "buildings" or state == "civilizations" or state == "deities" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
+	if (state == "buildings" or state == "civilizations" or state == "deities" or state == "heroes" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
 		return;
 	end
 	
-	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
@@ -88,19 +88,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		faction = GetUpgradeData(unit_name, "Faction")
 		tooltip_name = _(GetUpgradeData(unit_name, "Name"))
 		if (civilization ~= "" and civilization ~= "neutral") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
-			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
-			end
-			tooltip_civilization = tooltip_civilization .. ")"
-		end
-	elseif (state == "heroes") then
-		encyclopedia_icon = GetIconData(GetCharacterData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetCharacterData(unit_name, "Icon"), "Frame")
-		civilization = GetCharacterData(unit_name, "Civilization")
-		faction = GetCharacterData(unit_name, "Faction")
-		tooltip_name = GetCharacterData(unit_name, "FullName")
-		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
@@ -202,88 +189,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUpgradeData(unit_name, "Background") ~= "") then
 			background = _("Background") .. ": " .. _(GetUpgradeData(unit_name, "Background")) .. "\n\n"
-		end
-	elseif (state == "heroes") then
-		trigger_hero = unit_name
-	
-		if (GetCharacterData(unit_name, "Civilization") ~= "") then
-			civilization = _("Civilization") .. ": " .. _(GetCivilizationData(GetCharacterData(unit_name, "Civilization"), "Display")) .. "\n\n"
-			if (GetCharacterData(unit_name, "Faction") ~= "") then
-				faction = _("Faction") .. ": " .. _(GetFactionData(GetCharacterData(unit_name, "Faction"), "Name")) .. "\n\n"
-			end
-		end
-		if (GetCharacterData(unit_name, "Type") ~= "") then
-			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
-		end
-		
-		if (GetCharacterData(unit_name, "Father") ~= "") then
-			description = description .. _("Father") .. ": " .. _(GetCharacterData(GetCharacterData(unit_name, "Father"), "Name")) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Mother") ~= "") then
-			description = description .. _("Mother") .. ": " .. _(GetCharacterData(GetCharacterData(unit_name, "Mother"), "Name")) .. "\n\n"
-		end
-		
-		local children = GetCharacterData(unit_name, "Children")
-		if (table.getn(children) > 0) then
-			description = description .. _("Children") .. ": "
-			for i=1,table.getn(children) do
-				description = description .. _(GetCharacterData(children[i], "Name"))
-				if (i < table.getn(children)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		
-		local deities = GetCharacterData(unit_name, "Deities")
-		if (table.getn(deities) > 0) then
-			description = description .. _("Deities") .. ": "
-			for i=1,table.getn(deities) do
-				description = description .. _(GetDeityData(deities[i], "Name"))
-				if (i < table.getn(deities)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		description = description .. "Level: " .. GetCharacterData(unit_name, "Level") .. "\n\n"
-		local abilities = GetCharacterData(unit_name, "Abilities")
-		if (table.getn(abilities) > 0) then
-			local displayed_abilities = {}
-			local displayed_ability_count = {}
-			for i = 1, table.getn(abilities) do
-				local ability_name = _(GetUpgradeData(abilities[i], "Name"))
-				if (GetArrayIncludes(displayed_abilities, ability_name) == false) then
-					table.insert(displayed_abilities, ability_name)
-					table.insert(displayed_ability_count, 1)
-				else
-					displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] = displayed_ability_count[GetElementIndexFromArray(displayed_abilities, ability_name)] + 1
-				end
-			end
-			table.sort(displayed_abilities)
-			description = description .. _("Acquired Abilities") .. ": "
-			for i = 1, table.getn(displayed_abilities) do
-				description = description .. displayed_abilities[i]
-				if (displayed_ability_count[i] > 1) then
-					description = description .. " (x" .. tostring(displayed_ability_count[i]) .. ")"
-				end
-				if (i < table.getn(displayed_abilities)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
---		if (GetCharacterData(unit_name, "BirthDate") ~= "") then
---			description = description .. _("Birth Date") .. ": " .. GetCharacterData(unit_name, "BirthDate") .. "\n\n"
---		end
-		if (GetCharacterData(unit_name, "Description") ~= "") then
-			description = description .. _("Description") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Description"))) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Quote"))) .. "\n\n"
-		end
-		if (GetCharacterData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Background"))) .. "\n\n"
 		end
 	elseif (state == "unique_items") then
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
@@ -593,22 +498,8 @@ function GetCivilizationBackground(civilization)
 end
 
 function GetUnitBackground(unit_name, state)
-	if (string.find(unit_name, "unit") ~= nil) then
-		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
-			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
-		elseif (unit_name == "unit-gryphon") then
-			return "backgrounds/gryphon.png"
-		elseif (unit_name == "unit_wyrm") then
-			return "backgrounds/wyrm.png"
-		elseif (unit_name == "unit-yale") then
-			return "backgrounds/yale.png"
-		end
-	elseif (string.find(unit_name, "upgrade") ~= nil) then
+	if (string.find(unit_name, "upgrade") ~= nil) then
 		return GetCivilizationBackground(GetUpgradeData(unit_name, "Civilization"))
-	elseif (state == "heroes") then
-		if (GetCharacterData(unit_name, "Civilization") ~= "") then
-			return GetCivilizationBackground(GetCharacterData(unit_name, "Civilization"))
-		end
 	end
 	
 	return "backgrounds/wyrm.png"
