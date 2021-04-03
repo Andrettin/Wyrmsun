@@ -1,5 +1,6 @@
 germanic = {
 	group = germanic
+	encyclopedia_background_file = "backgrounds/germanic_victory_sepia.png"
 	
 	unit_sounds = {
 		selected = basic_germanic_voices_selected_group
