@@ -10,12 +10,12 @@ Item {
 	visible: wyrmgus.loading_message.length > 0
 	z: 5 //should be displayed on top of everything
 	
-	property var backgrounds: ["gnashorn", "gryphon", "gullinburst", "wyrm", "yale"]
+	readonly property var backgrounds: wyrmgus.defines.loading_background_files
 	property string background: random_element(backgrounds)
 	
 	Image {
 		anchors.fill: parent
-		source: "../graphics/backgrounds/" + background + ".png"
+		source: "file:///" + background
 		fillMode: Image.PreserveAspectCrop
 	}
 	

@@ -49,6 +49,16 @@ forest_regeneration_threshold = 1200
 #destroyed overlay terrain decay speed, in seconds (0 = disabled)
 destroyed_overlay_terrain_decay_threshold = -1200
 
+default_menu_background_file = "backgrounds/wyrmsun_sepia.png"
+
+loading_background_files = {
+	"backgrounds/gnashorn.png"
+	"backgrounds/gryphon.png"
+	"backgrounds/gullinburst.png"
+	"backgrounds/wyrm.png"
+	"backgrounds/yale.png"
+}
+
 faction_type_upgrades = {
 	polity = upgrade_polity
 	mercenary_company = upgrade_mercenary_company

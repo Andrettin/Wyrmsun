@@ -7,13 +7,13 @@ Item {
 	focus: wyrmgus.game.running == false
 
 	property string title: ""
-	property string background: "wyrmsun_sepia"
+	property string background: wyrmgus.defines.default_menu_background_file
 	property string music_type: "menu"
 	property var title_element: title_text
 	
 	Image {
 		anchors.fill: parent
-		source: "../../graphics/backgrounds/" + background + ".png"
+		source: "file:///" + background
 		fillMode: Image.PreserveAspectCrop
 	}
 	

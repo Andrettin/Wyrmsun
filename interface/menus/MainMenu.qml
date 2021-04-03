@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: main_menu
-	background: "wyrmsun_sepia"
+	background: wyrmgus.defines.default_menu_background_file
 	
 	Image {
 		id: logo
