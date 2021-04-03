@@ -142,10 +142,6 @@ DefinePredependency("unit_dwarven_dock",
 	"or", {"upgrade-gnomish-civilization"}
 )
 
-DefinePredependency("unit-dwarven-gryphon-rider",
-	{"upgrade-dwarven-civilization"}, "or", {"upgrade-gnomish-civilization"}
-)
-
 DefinePredependency("unit_dwarven_miner",
 	{"upgrade-faction-brising-clan", 0, "upgrade-faction-lyr", 0}
 )

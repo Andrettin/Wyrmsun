@@ -35,7 +35,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 	Civilization = "dwarf",
 	PlayerColor = "red",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-barracks") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-gryphon-rider") == 0 and CheckDependency(trigger_player, "unit-dwarven-gryphon-rider")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
+		if (GetPlayerData(trigger_player, "RaceName") == "dwarf" and GetPlayerData(trigger_player, "UnitTypesCount", "unit-dwarven-barracks") > 0 and GetPlayerData(trigger_player, "UnitTypesCount", "unit_dwarven_gryphon_rider") == 0 and CheckDependency(trigger_player, "unit_dwarven_gryphon_rider")) then -- should be made to require Alvis in the future, when he is added as a hero and there are more dwarven quests in general
 			return true
 		end
 		return false
@@ -52,7 +52,7 @@ DefineQuest("the-dripping-hall", { -- based on the lay of Alvis from Norse mytho
 			"objective-type", "build_units",
 			"objective-string", "Train a Gryphon Rider", -- could be changed to exploring a % of the skies? (or unpassable terrain)
 			"quantity", 1,
-			"unit-type", "unit-dwarven-gryphon-rider"
+			"unit-type", "unit_dwarven_gryphon_rider"
 		}
 	}
 })

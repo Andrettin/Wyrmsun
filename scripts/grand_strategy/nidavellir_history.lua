@@ -55,7 +55,7 @@ if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel t
 --	ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands (deaths due to combat with Rugnur's dwarves)
 	SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
-	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
+	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit_dwarven_gryphon_rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
 end
 
 if (GrandStrategyYear >= 29) then
@@ -91,7 +91,7 @@ if (GrandStrategyYear >= 35) then
 	SetProvinceHero("Shorbear Hills", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 	MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- gnomish recruit returns to Untersberg
-	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 0) -- gryphon riders return to the Northern Wastelands
+	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit_dwarven_gryphon_rider", 0) -- gryphon riders return to the Northern Wastelands
 end
 
 if (GrandStrategyYear >= 40) then

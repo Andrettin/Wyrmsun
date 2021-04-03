@@ -247,7 +247,7 @@ AddTrigger("searching-for-the-runecrafter-move-gryphon-riders",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_dwarven_gryphon_rider") then
 				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {8 - 4, 53 - 4}, {8 + 4, 53 + 4})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()
@@ -258,7 +258,7 @@ AddTrigger("searching-for-the-runecrafter-move-gryphon-riders",
 		return false
 	end,
 	function()
-		OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {2, 35}, 0, {8, 53}, 0, "move")
+		OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit_dwarven_gryphon_rider", {2, 35}, 0, {8, 53}, 0, "move")
 		return false
 	end
 )
@@ -269,7 +269,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Gryphon Riders"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_dwarven_gryphon_rider") then
 				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()
@@ -334,7 +334,7 @@ AddTrigger("searching-for-the-runecrafter-gryphon-riders-found",
 											player,
 											{"~!Continue"},
 											{function(s)
-												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, 0, {6, 52}, 0, "move")
+												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit_dwarven_gryphon_rider", {0, 34}, 0, {6, 52}, 0, "move")
 											end}
 										)
 										end},
@@ -371,7 +371,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found-gryphon-rider",
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smithy") then
-						if (GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
+						if (GetNumUnitsAt(i, "unit_dwarven_gryphon_rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then
 							player = i
 							return true
 						end
@@ -412,7 +412,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 				uncount = GetUnits(GetFactionPlayer("Thursagan"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-smithy") then
-						if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit-dwarven-gryphon-rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
+						if ((GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) - GetNumUnitsAt(i, "unit_dwarven_gryphon_rider", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})) > 0) then
 							player = i
 							return true
 						end

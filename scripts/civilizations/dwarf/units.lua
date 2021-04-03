@@ -1420,59 +1420,6 @@ DefineUnitType("unit-dwarven-loremaster", {
 	}
 } )
 
-DefineUnitType("unit-dwarven-gryphon-rider", {
-	Name = "Gryphon Rider",
-	Parent = "unit-template-flying-rider",
-	Civilization = "dwarf",
-	Description = "Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts.",
-	Quote = "\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the Norlund Clan",
-	Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
-	Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
-	DefaultEquipment = {
-		{"weapon", "unit-throwing-axe"},
-		{"boots", "unit-boots"}
-	},
-	Missile = "missile-throwing-axe",
-	FireMissile = "missile-flaming-throwing-axe",
-	BasicDamage = 14,
-	MaxAttackRange = 4,
-	WeaponClasses = {"throwing_axe"},
-	HackDamage = true,
-	ButtonKey = "p",
-	RequirementsString = "Bastion and Lumber Mill",
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-dexterity"},
-	Variations = {
-		{
-			"variation-id", "black-hair-brown-feathers",
-			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
-		},
-		{
-			"variation-id", "brown-hair-blue-feathers",
-			"file", "dwarf/units/gryphon_rider_brown_hair_blue_feathers.png",
-			"icon", "icon-dwarven-gryphon-rider-brown-hair",
-			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
-		},
-		{
-			"variation-id", "gray-hair-brown-feathers",
-			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png",
-			"weight", 1
-		},
-		{
-			"variation-id", "red-hair-gray-feathers",
-			"file", "dwarf/units/gryphon_rider_red_hair_gray_feathers.png",
-			"icon", "icon-dwarven-gryphon-rider-red-hair",
-			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
-		}
-	},
-	Sounds = {
-		"ready", "dwarven-gryphon-rider-ready",
-		"dead", "gryphon-dead"
-	}
-} )
-
 DefineUnitType("unit-dwarven-ballista", {
 	Name = "Ballista",
 	Parent = "unit-template-ballista",

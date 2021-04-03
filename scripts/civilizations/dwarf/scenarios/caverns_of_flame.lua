@@ -267,7 +267,7 @@ AddTrigger("caverns-of-flame-introduction",
 									{"~!Continue"},
 									{function(s)
 									Event(
-										FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
+										FindUnit("unit_dwarven_gryphon_rider", GetFactionPlayer("Norlund Clan")),
 										"My gryphon smells something... probably goblins in this cave!",
 										player,
 										{"~!Continue"},
@@ -775,7 +775,7 @@ AddTrigger("caverns-of-flame-ending",
 			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {MaxMapWidth, MaxMapHeight})
 			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {MaxMapWidth, MaxMapHeight})
 			Event(
-				FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
+				FindUnit("unit_dwarven_gryphon_rider", GetFactionPlayer("Norlund Clan")),
 				"Hm... I'll leave now!",
 				player,
 				{"~!Continue"},

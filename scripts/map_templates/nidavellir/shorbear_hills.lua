@@ -30,7 +30,7 @@
 SetMapTemplateHero("nidavellir", "rugnur", "norlund-clan", {499, 209}, 34, 35)
 SetMapTemplateUnit("nidavellir", "unit-gnomish-duelist", "norlund-clan", {499, 209}, 34, 35) -- Gnomish Envoy
 SetMapTemplateHero("nidavellir", "baglur", "norlund-clan", {499, 209}, 34, 35)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-gryphon-rider", "norlund-clan", {499, 209}, 34, 35) -- Kawn's Gryphon Rider
+SetMapTemplateUnit("nidavellir", "unit_dwarven_gryphon_rider", "norlund-clan", {499, 209}, 34, 35) -- Kawn's Gryphon Rider
 SetMapTemplateHero("nidavellir", "thursagan", "norlund-clan", {499, 209}, 34, 35)
 SetMapTemplateHero("nidavellir", "durstorn", "norlund-clan", {507, 207}, 34, 35)
 SetMapTemplateUnit("nidavellir", "unit-dwarven-pathfinder", "norlund-clan", {507, 207}, 34, 35) -- Noiraran

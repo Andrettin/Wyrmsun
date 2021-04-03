@@ -318,7 +318,7 @@ local NidavellirEvents = {
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
-				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit_dwarven_gryphon_rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
 				GenericDialog("Searching for the Runecrafter", "Upon reaching the area where Thursagan's home is located, a few gryphon riders approached us, offering their help in exchange for aiding them to get rid of the local goblins. After finally finding Thursagan, Rugnur convinced the expert smith to return with him and craft the scepter. Now, Durstorn has sent them to gather materials of the high quality necessary for the scepter in the Eastern Mines.")
@@ -611,7 +611,7 @@ local NidavellirEvents = {
 				SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
 				SetProvinceHero("Caverns of Chaincolt", "Thursagan", 0)
 
-				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit_dwarven_gryphon_rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
 
 				ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- payment for the crafting of the Scepter
 				ChangeFactionResource("gnome", "untersberg", "copper", -10000) -- payment for the crafting of the Scepter

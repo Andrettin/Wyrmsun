@@ -1,0 +1,71 @@
+unit_dwarven_gryphon_rider = {
+	name = "Gryphon Rider"
+	parent = unit_template_flying_rider
+	civilization = dwarven
+	description = "Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts."
+	quote = "\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the Norlund Clan"
+	image_file = "dwarf/units/gryphon_rider.png"
+	frame_size = { 100 100 }
+	animation_set = animations_dwarven_gryphon_rider
+	icon = icon_dwarven_gryphon_rider
+	missile = missile_throwing_axe
+	fire_missile = missile_flaming_throwing_axe
+	button_key = p
+	weapon_classes = { throwing_axe }
+	hack_damage = true
+	basic_damage = 14
+	max_attack_range = 4
+	requirements_string = "Bastion and Lumber Mill"
+	default_equipment = {
+		weapon = unit_throwing_axe
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_throwing_axe
+		unit_sharp_throwing_axe
+		unit_bearded_throwing_axe
+		unit_boots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+		unit_elixir_of_dexterity
+	}
+	variations = {
+		black_hair_brown_feathers = {
+			weight = 4
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+			}
+		}
+		brown_hair_blue_feathers = {
+			image_file = "dwarf/units/gryphon_rider_brown_hair_blue_feathers.png"
+			icon = icon_dwarven_gryphon_rider_brown_hair
+			weight = 4
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+			}
+		}
+		gray_hair_brown_feathers = {
+			image_file = "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png"
+			weight = 1
+		}
+		red_hair_gray_feathers = {
+			image_file = "dwarf/units/gryphon_rider_red_hair_gray_feathers.png"
+			icon = icon_dwarven_gryphon_rider_red_hair
+			weight = 4
+			conditions = {
+				not = {
+					upgrade = upgrade_old
+				}
+			}
+		}
+	}
+	sounds = {
+		ready = dwarven_gryphon_rider_ready
+		dead = gryphon_dead
+	}
+}

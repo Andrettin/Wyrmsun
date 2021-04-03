@@ -288,7 +288,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-dwarven-sentinel",
 		"unit-dwarven-yale-lord",
 		"unit-joruvellir-yale-lord",
-		"unit-dwarven-explorer", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-explorer", "unit_dwarven_gryphon_rider",
 		"unit-joruvellir-explorer",
 		"unit-dwarven-thunderer",
 --		"unit-dwarven-loremaster",

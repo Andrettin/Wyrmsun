@@ -179,7 +179,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit_dwarven_gryphon_rider"},
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
 	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
@@ -187,7 +187,7 @@ DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit_dwarven_gryphon_rider"},
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
 	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
@@ -243,7 +243,7 @@ DefineModifier("upgrade-dwarven-runewriting",
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit-dwarven-gryphon-rider"},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}, {"apply-to", "unit_dwarven_gryphon_rider"},
 	{"apply-to", "unit-joruvellir-scout"}, {"apply-to", "unit-joruvellir-pathfinder"}, {"apply-to", "unit-joruvellir-explorer"},
 	{"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
