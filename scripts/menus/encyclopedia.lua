@@ -26,10 +26,7 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state == "civilizations") then
-		OpenEncyclopediaCivilizationEntry(unit_name)
-		return;
-	elseif (state == "buildings" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
+	if (state == "civilizations" or state == "buildings" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
 		return;
 	end
 	
@@ -513,59 +510,6 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	local description = ""
 	if (game_concepts[game_concept_key].Description ~= nil) then
 		description = _("Description") .. ": " .. game_concepts[game_concept_key].Description
-	end
-	l:setCaption(description)
-			
-	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9)) * get_scale_factor(),
-		function() encyclopedia_entry_menu:stop(); end)
-	encyclopedia_entry_menu:run()
-end
-
-function OpenEncyclopediaCivilizationEntry(civilization)
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	encyclopedia_entry_menu:addLabel("~<" .. GetCivilizationData(civilization, "Display") .. "~>", offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor(), nil, true)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(Video.Width - 64 * get_scale_factor(), Video.Height - 96 * get_scale_factor())
-	l:setLineWidth(Video.Width - 64 * get_scale_factor())
-	encyclopedia_entry_menu:add(l, 32 * get_scale_factor(), offy + (104 + 36*0) * get_scale_factor())
-	local description = ""
-	local develops_from = GetCivilizationData(civilization, "DevelopsFrom")
-	table.sort(develops_from)
-	if (table.getn(develops_from) > 0) then
-		description = description .. "Develops From: "
-		for i=1,table.getn(develops_from) do
-			description = description .. GetCivilizationData(develops_from[i], "Display")
-			if (i < table.getn(develops_from)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	local develops_to = GetCivilizationData(civilization, "DevelopsTo")
-	table.sort(develops_to)
-	if (table.getn(develops_to) > 0) then
-		description = description .. "Develops To: "
-		for i=1,table.getn(develops_to) do
-			description = description .. GetCivilizationData(develops_to[i], "Display")
-			if (i < table.getn(develops_to)) then
-				description = description .. ", "
-			end
-		end
-		description = description .. "\n\n"
-	end
-	if (GetCivilizationData(civilization, "Description") ~= "") then
-		description = description .. _("Description") .. ": " .. _(GetCivilizationData(civilization, "Description")) .. "\n\n"
-	end
-	if (GetCivilizationData(civilization, "Quote") ~= "") then
-		description = description .. _("Quote") .. ": " .. _(GetCivilizationData(civilization, "Quote")) .. "\n\n"
-	end
-	if (GetCivilizationData(civilization, "Background") ~= "") then
-		description = description .. _("Background") .. ": " .. _(GetCivilizationData(civilization, "Background")) .. "\n\n"
 	end
 	l:setCaption(description)
 			
