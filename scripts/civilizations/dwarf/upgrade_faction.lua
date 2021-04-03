@@ -95,7 +95,7 @@ DefineUpgrade("upgrade-faction-lyr", {
 	RequirementsString = "Writing and Masonry"
 })
 
-DefineUpgrade("upgrade-faction-surghan-mercenaries", {
+DefineUpgrade("upgrade_faction_surghan_mercenaries", {
 	Name = "Surghan Mercenaries",
 	EffectsString = "+2 Damage for Axefighters"
 })
@@ -301,15 +301,15 @@ DefineModifier("upgrade-faction-lyr", -- dummy upgrade modifier to trigger the v
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}, {"apply-to", "unit-dwarven-transport-ship"}
 )
 
-DefineModifier("upgrade-faction-surghan-mercenaries",
+DefineModifier("upgrade_faction_surghan_mercenaries",
 	{"apply-to", "unit-dwarven-axefighter"}, {"convert-to", "unit-surghan-mercenary-axefighter"}
 )
 
-DefineModifier("upgrade-faction-surghan-mercenaries",
+DefineModifier("upgrade_faction_surghan_mercenaries",
 	{"apply-to", "unit-dwarven-steelclad"}, {"convert-to", "unit-surghan-mercenary-steelclad"}
 )
 
-DefineModifier("upgrade-faction-surghan-mercenaries",
+DefineModifier("upgrade_faction_surghan_mercenaries",
 	{"apply-to", "unit-dwarven-thane"}, {"convert-to", "unit-surghan-mercenary-thane"}
 )
 

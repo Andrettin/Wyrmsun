@@ -2423,7 +2423,7 @@ Load("scripts/civilizations/dwarf/units_brising.lua")
 DefineUnitType("unit-surghan-mercenary-axefighter", {
 	Parent = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
-	Faction = "surghan-mercenaries",
+	Faction = "surghan_mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
 	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
 	Icon = "icon-surghan-mercenary-axefighter",
@@ -2485,7 +2485,7 @@ DefineUnitType("unit-surghan-mercenary-axefighter", {
 DefineUnitType("unit-surghan-mercenary-steelclad", {
 	Parent = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
-	Faction = "surghan-mercenaries",
+	Faction = "surghan_mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
 	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
 	Icon = "icon-surghan-mercenary-steelclad",
@@ -2542,7 +2542,7 @@ DefineUnitType("unit-surghan-mercenary-steelclad", {
 DefineUnitType("unit-surghan-mercenary-thane", {
 	Parent = "unit-dwarven-thane",
 	Civilization = "dwarf",
-	Faction = "surghan-mercenaries",
+	Faction = "surghan_mercenaries",
 	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
 	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior",
 	Icon = "icon-surghan-mercenary-thane",

@@ -26,11 +26,11 @@
 --
 
 DefinePredependency("unit-dwarven-axefighter",
-	{"upgrade-dwarven-civilization", "upgrade-faction-surghan-mercenaries", 0}
+	{"upgrade-dwarven-civilization", "upgrade_faction_surghan_mercenaries", 0}
 )
 
 DefinePredependency("unit-surghan-mercenary-axefighter",
-	{"upgrade-faction-surghan-mercenaries"}
+	{"upgrade_faction_surghan_mercenaries"}
 )
 
 DefinePredependency("unit-dwarven-guard",

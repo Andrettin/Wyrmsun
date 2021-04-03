@@ -352,17 +352,6 @@ DefineFaction("order-of-loremasters", { -- from Battle for Wesnoth: The Hammer o
 
 -- Mercenary Companies
 
-DefineFaction("surghan-mercenaries", {
-	Name = "Surghan Mercenaries",
-	Civilization = "dwarf",
-	Type = "mercenary_company",
-	Color = "blue",
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-surghan-mercenaries",
-	Description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond.",
-	Quote = "\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"
-})
-
 DefineFaction("yawning-yales", {
 	Name = "Yawning Yales",
 	ParentFaction = "goldhoof_clan", -- Joruvellir
