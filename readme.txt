@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.5
 -----------------------------------------------------------------------
 
+* Factions
+- Fixed the requirements string for the Shadowcharm Clan faction.
+
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 - Fixed issue which caused solid overlay tiles to not be displayed in the editor.

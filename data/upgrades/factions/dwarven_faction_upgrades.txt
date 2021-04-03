@@ -1,0 +1,18 @@
+upgrade_faction_shadowcharm_clan = {
+	name = "Shadowcharm Clan"
+	effects_string = "+2 Evasion for Axefighters"
+	requirements_string = "Temple and Loki"
+	modifier = {
+		evasion = 2
+		points = 10
+		unit_types = {
+			unit_dwarven_axefighter
+			unit_dwarven_steelclad
+			unit_dwarven_thane
+		}
+	}
+	conditions = {
+		unit_type = unit_dwarven_temple
+		upgrade = upgrade_deity_loki
+	}
+}

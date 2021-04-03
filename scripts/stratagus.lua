@@ -1970,7 +1970,7 @@ Units = {
 	"upgrade-faction-burgundy", "upgrade-faction-gothia", "upgrade-faction-ostrogothia", "upgrade-faction-vandalia", "upgrade-faction-visigothia", 
 	"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 	"unit-celt-farm",
-	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shadowcharm-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
+	"upgrade-faction-norlund-clan", "upgrade-faction-oinling-clan", "upgrade-faction-shinsplitter-clan", "upgrade-faction-shorbear-clan", "upgrade-faction-whitesteel-clan", 
 	"upgrade-faction-kal-kartha", "upgrade-faction-knalga",
 	"unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",

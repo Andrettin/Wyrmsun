@@ -104,7 +104,7 @@ DefineFaction("shadowcharm-clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "black",
-	FactionUpgrade = "upgrade-faction-shadowcharm-clan",
+	FactionUpgrade = "upgrade_faction_shadowcharm_clan",
 	Icon = "icon-flag-green-hammer-on-light-purple",
 	DevelopsFrom = {"brising_clan"},
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."

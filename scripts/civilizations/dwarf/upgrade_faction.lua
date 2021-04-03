@@ -53,12 +53,6 @@ DefineUpgrade("upgrade-faction-oinling-clan", {
 	RequirementsString = "Smithy"
 })
 
-DefineUpgrade("upgrade-faction-shadowcharm-clan", {
-	Name = "Shadowcharm Clan",
-	EffectsString = "+2 Evasion for Axefighters",
-	RequirementsString = "War Hall"
-})
-
 DefineUpgrade("upgrade-faction-shinsplitter-clan", {
 	Name = "Shinsplitter Clan",
 	EffectsString = "+3 Damage and -1 Armor for Axefighters",
@@ -215,12 +209,6 @@ DefineModifier("upgrade-faction-oinling-clan",
 	{"apply-to", "unit-dwarven-smithy"}
 )
 
-DefineModifier("upgrade-faction-shadowcharm-clan",
-	{"Evasion", 2},
-	{"Points", 10},
-	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
-)
-
 DefineModifier("upgrade-faction-shinsplitter-clan",
 	{"Armor", -1},
 	{"BasicDamage", 3},
@@ -365,10 +353,6 @@ DefineDependency("upgrade-faction-norlund-clan",
 
 DefineDependency("upgrade-faction-oinling-clan",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
-)
-
-DefineDependency("upgrade-faction-shadowcharm-clan",
-	{"unit-dwarven-temple", "upgrade-deity-loki"}
 )
 
 DefineDependency("upgrade-faction-shinsplitter-clan",
