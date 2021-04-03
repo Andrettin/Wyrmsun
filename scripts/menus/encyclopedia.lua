@@ -26,11 +26,11 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state == "civilizations" or state == "buildings" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
+	if (state == "buildings" or state == "civilizations" or state == "deities" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
 		return;
 	end
 	
-	if (state ~= "heroes" and state ~= "deities" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
@@ -106,15 +106,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
-		end
-	elseif (state == "deities") then
-		encyclopedia_icon = GetIconData(GetDeityData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetDeityData(unit_name, "Icon"), "Frame")
-		civilization = ""
-		faction = ""
-		tooltip_name = GetDeityData(unit_name, "Name")
-		if (GetDeityData(unit_name, "Pantheon") ~= "") then
-			tooltip_civilization = "(" ..  _(GetDeityData(unit_name, "Pantheon")) .. ")"
 		end
 	elseif (state == "unique_items") then
 		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
@@ -293,109 +284,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetCharacterData(unit_name, "Background") ~= "") then
 			background = _("Background") .. ": " .. _(ProcessEventString(GetCharacterData(unit_name, "Background"))) .. "\n\n"
-		end
-	elseif (state == "deities") then
-		local deity_character = GetDeityData(unit_name, "Character")
-		
-		if (GetDeityData(unit_name, "Pantheon") ~= "") then
-			description = description .. _("Pantheon") .. ": " .. _(GetDeityData(unit_name, "Pantheon")) .. "\n\n"
-		end
-		if (GetDeityData(unit_name, "Homeworld") ~= "") then
-			description = description .. _("Homeworld") .. ": " .. _(GetWorldData(GetDeityData(unit_name, "Homeworld"), "Name")) .. "\n\n"
-		end
-		description = description .. _("Rank") .. ": "
-		if (GetDeityData(unit_name, "Major")) then
-			description = description .. _("Major") .. "\n\n"
-		else
-			description = description .. _("Minor") .. "\n\n"
-		end
-		
-		local domains = GetDeityData(unit_name, "Domains")
-		table.sort(domains)
-		if (table.getn(domains) > 0) then
-			description = description .. _("Domains") .. ": "
-			for i=1,table.getn(domains) do
-				description = description .. _(GetMagicDomainData(domains[i], "Name"))
-				if (i < table.getn(domains)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		
-		if (deity_character ~= "") then
-			if (GetCharacterData(deity_character, "Father") ~= "") then
-				description = description .. _("Father") .. ": " .. _(GetCharacterData(GetCharacterData(deity_character, "Father"), "Name")) .. "\n\n"
-			end
-			if (GetCharacterData(deity_character, "Mother") ~= "") then
-				description = description .. _("Mother") .. ": " .. _(GetCharacterData(GetCharacterData(deity_character, "Mother"), "Name")) .. "\n\n"
-			end
-			
-			local children = GetCharacterData(deity_character, "Children")
-			if (table.getn(children) > 0) then
-				description = description .. _("Children") .. ": "
-				for i=1,table.getn(children) do
-					description = description .. _(GetCharacterData(children[i], "Name"))
-					if (i < table.getn(children)) then
-						description = description .. ", "
-					end
-				end
-				description = description .. "\n\n"
-			end
-		end
-		
-		local civilizations = GetDeityData(unit_name, "Civilizations")
-		table.sort(civilizations)
-		if (table.getn(civilizations) > 0) then
-			description = description .. _("Civilizations") .. ": "
-			for i=1,table.getn(civilizations) do
-				description = description .. _(GetCivilizationData(civilizations[i], "Display"))
-				if (i < table.getn(civilizations)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		
-		local alternate_names = {}
-		for i=1,table.getn(civilizations) do
-			if (GetDeityData(unit_name, "CulturalName", civilizations[i]) ~= "" and GetDeityData(unit_name, "CulturalName", civilizations[i]) ~= GetDeityData(unit_name, "Name")) then
-				table.insert(alternate_names, GetDeityData(unit_name, "CulturalName", civilizations[i]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")")
-			end
-		end
-		table.sort(alternate_names)
-		if (table.getn(alternate_names) > 0) then
-			description = description .. _("Alternate Names") .. ": "
-			for i=1,table.getn(alternate_names) do
-				description = description .. _(alternate_names[i])
-				if (i < table.getn(alternate_names)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		
-		local spells = GetDeityData(unit_name, "Spells")
-		table.sort(spells)
-		if (table.getn(spells) > 0) then
-			description = description .. _("Spells") .. ": "
-			for i=1,table.getn(spells) do
-				description = description .. _(GetSpellData(spells[i], "Name"))
-				if (i < table.getn(spells)) then
-					description = description .. ", "
-				end
-			end
-			description = description .. "\n\n"
-		end
-		
-		if (GetDeityData(unit_name, "Description") ~= "") then
-			description = description .. _("Description") .. ": " .. _(GetDeityData(unit_name, "Description")) .. "\n\n"
-		end
-		if (GetDeityData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(GetDeityData(unit_name, "Quote")) .. "\n\n"
-		end
-		if (GetDeityData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(GetDeityData(unit_name, "Background")) .. "\n\n"
 		end
 	elseif (state == "unique_items") then
 		if (GetUniqueItemData(unit_name, "Type") ~= "") then
