@@ -26,11 +26,11 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (state == "buildings" or state == "civilizations" or state == "deities" or state == "factions" or state == "heroes" or state == "items" or state == "texts" or state == "units" or state == "worlds") then
+	if (state == "buildings" or state == "civilizations" or state == "deities" or state == "factions" or state == "heroes" or state == "items" or state == "texts" or state == "unique_items" or state == "units" or state == "worlds") then
 		return;
 	end
 	
-	if (state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
+	if (state ~= "item_prefixes" and state ~= "item_suffixes") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
 				(
@@ -63,20 +63,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local faction
 	local tooltip_name = ""
 	local tooltip_civilization = ""
-	if (string.find(unit_name, "unit") ~= nil) then
-		encyclopedia_icon = GetIconData(GetUnitTypeData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetUnitTypeData(unit_name, "Icon"), "Frame")
-		civilization = GetUnitTypeData(unit_name, "Civilization")
-		faction = GetUnitTypeData(unit_name, "Faction")
-		tooltip_name = _(GetUnitTypeData(unit_name, "Name"))
-		if (civilization ~= "" and civilization ~= "neutral") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
-			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
-			end
-			tooltip_civilization = tooltip_civilization .. ")"
-		end
-	elseif (string.find(unit_name, "upgrade") ~= nil) then
+	if (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = GetIconData(GetUpgradeData(unit_name, "Icon"), "File")
 			encyclopedia_icon_frame = GetIconData(GetUpgradeData(unit_name, "Icon"), "Frame")
@@ -87,19 +74,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		civilization = GetUpgradeData(unit_name, "Civilization")
 		faction = GetUpgradeData(unit_name, "Faction")
 		tooltip_name = _(GetUpgradeData(unit_name, "Name"))
-		if (civilization ~= "" and civilization ~= "neutral") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
-			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(GetFactionData(faction, "Name"))
-			end
-			tooltip_civilization = tooltip_civilization .. ")"
-		end
-	elseif (state == "unique_items") then
-		encyclopedia_icon = GetIconData(GetUniqueItemData(unit_name, "Icon"), "File")
-		encyclopedia_icon_frame = GetIconData(GetUniqueItemData(unit_name, "Icon"), "Frame")
-		civilization = ""
-		faction = ""
-		tooltip_name = GetUniqueItemData(unit_name, "Name")
 		if (civilization ~= "" and civilization ~= "neutral") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
@@ -189,34 +163,6 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 		if (GetUpgradeData(unit_name, "Background") ~= "") then
 			background = _("Background") .. ": " .. _(GetUpgradeData(unit_name, "Background")) .. "\n\n"
-		end
-	elseif (state == "unique_items") then
-		if (GetUniqueItemData(unit_name, "Type") ~= "") then
-			unit_type_type = _("Type") .. ": " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
-		end
-		if (GetUniqueItemData(unit_name, "Set") ~= "") then
-			unit_type_type = unit_type_type .. _("Set") .. ": " .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Name")) .. "\n\n"
-		end
-		if (GetUniqueItemData(unit_name, "Description") ~= "") then
-			description = _("Description") .. ": " .. _(GetUniqueItemData(unit_name, "Description")) .. "\n\n"
-			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description") ~= "") then
-				description = description .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Description")) .. "\n\n"
-			end
-		end
-		if (GetUniqueItemData(unit_name, "MagicLevel") > 0) then
-			effects = _("Magic Level") .. ": " .. GetUniqueItemData(unit_name, "MagicLevel") .. "\n\n"
-		end
-		if (GetUniqueItemEffectsString(unit_name) ~= "") then
-			effects = effects .. _("Effects") .. ": " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
-		end
-		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
-			quote = _("Quote") .. ": " .. _(GetUniqueItemData(unit_name, "Quote")) .. "\n\n"
-		end
-		if (GetUniqueItemData(unit_name, "Background") ~= "") then
-			background = _("Background") .. ": " .. _(GetUniqueItemData(unit_name, "Background")) .. "\n\n"
-			if (GetUniqueItemData(unit_name, "Set") ~= "" and GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background") ~= "") then
-				background = background .. _(GetUpgradeData(GetUniqueItemData(unit_name, "Set"), "Background")) .. "\n\n"
-			end
 		end
 	end
 	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. notes .. effects .. applies_to .. background)
