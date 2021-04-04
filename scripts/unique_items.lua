@@ -96,7 +96,7 @@ DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
 --	Quote = "\"My kin, methinks, is unknown to thee,\nAnd so am I myself;\nSigurd my name, and Sigmund's son,\nWho smote thee thus with the sword.\"\n- <a href='literary_text:fafnismol'>Fafnismol</a> (Sigurd)"
-	Quote = "\"With thy sword between, three nights thou sleepest\nWith her thou winnest for Gunnar's wife.\"\n- Gripisspo (Gripir)"
+	Quote = "\"With thy sword between, three nights thou sleepest\nWith her thou winnest for Gunnar's wife.\"\n- <a href='literary_text:gripisspo'>Gripisspo</a> (Gripir)"
 } )
 
 DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
