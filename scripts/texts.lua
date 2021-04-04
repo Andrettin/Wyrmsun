@@ -67,17 +67,9 @@
 
 					"bound him where he lay. He took from the wall the glittering Sword of Victory and the great Arm-ring which Thjasse-Volund had forged, and then hastened to return by the way he had come. So traversing again the mountains of snow and misty blackness, and escaping the dread perils about him, Svipdag returned with his treasures from the Underworld.\n\nThen without delay did the vengeance-seeking son of Groa open a new campaign against Halfdan. In Asgard it was known that he had secured the dreaded sword which Thjasse-Volund had made so that he might overcome the gods. Mighty Thor seized his iron hammer and went forth to help his son.\n\nGreat was the battle which was waged. Svipdag mowed down his enemies before him, and Halfdan was sorely wounded by an arrow shot from the bow of Orvandel-Egil. Then did Thor press into the midst of the fray, fighting fiercely against the giants, who fell before him until he came against Svipdag. But the hammer which Sindre had made was of no avail against, the young hero, for with the Sword of Victory it was struck by The Shining One and severed from the handle.\n\nWhen Thor was repulsed he fled from the field, and Halfdan went with him.\n\nThus did victory come to Svipdag, and thus was the judgment of the gods defied, for they had placed the workmanship of Sindre's kinsman above that of the sons of Ivalde.\n\nHalfdan died of his wounds, and Thor made haste to Asgard, where the gods awaited the coming of Svipdag with the Sword of Victory, which had been forged so that they might be utterly overcome and Asgard laid waste."
 				}
-			},
-			Svipdagsmol = {
-				Title = "Svipdagsmol",
-				Index = 26,
-				Text = {
-					"",
-				}
-			},
+			}
 		}
 	},
 	--]]
 
---Load("scripts/texts/the_ethnology_of_germany.lua")
 Load("scripts/texts/the_poetic_edda.lua")

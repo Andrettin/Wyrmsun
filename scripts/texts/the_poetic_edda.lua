@@ -26,7 +26,6 @@
 --
 
 DefineLiteraryText("the_poetic_edda", {
-	Name = "The P~!oetic Edda",
 	Chapters = {
 		{
 			"name", "Harbarthsljoth",
