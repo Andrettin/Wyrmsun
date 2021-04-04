@@ -54,7 +54,9 @@ MenuBase {
 		contentHeight: contentItem.childrenRect.height
 		boundsBehavior: Flickable.StopAtBounds
 		clip: true
-		ScrollBar.vertical: CustomScrollBar {}
+		ScrollBar.vertical: ScrollBar {
+			policy: ScrollBar.AsNeeded
+		}
 		
 		NormalText {
 			id: entry_text
