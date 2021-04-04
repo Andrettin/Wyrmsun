@@ -48,7 +48,7 @@ DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-giants",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
-	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
+	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- <a href='literary_text:grimnismol'>Grimnismol</a> (Grimnir)"
 } )
 
 DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
@@ -57,7 +57,7 @@ DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
-	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- Svipdagsmol (Fjolsvith)"
+	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- <a href='literary_text:svipdagsmol'>Svipdagsmol</a> (Fjolsvith)"
 } )
 
 DefineUniqueItem("wolfs-claw", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
@@ -95,7 +95,7 @@ DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
---	Quote = "\"My kin, methinks, is unknown to thee,\nAnd so am I myself;\nSigurd my name, and Sigmund's son,\nWho smote thee thus with the sword.\"\n- Fafnismol (Sigurd)"
+--	Quote = "\"My kin, methinks, is unknown to thee,\nAnd so am I myself;\nSigurd my name, and Sigmund's son,\nWho smote thee thus with the sword.\"\n- <a href='literary_text:fafnismol'>Fafnismol</a> (Sigurd)"
 	Quote = "\"With thy sword between, three nights thou sleepest\nWith her thou winnest for Gunnar's wife.\"\n- Gripisspo (Gripir)"
 } )
 
@@ -105,7 +105,7 @@ DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-perfuration",
 	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
-	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\"\n- Fafnismol"
+	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\"\n- <a href='literary_text:fafnismol'>Fafnismol</a>"
 } )
 
 DefineUniqueItem("rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
@@ -114,7 +114,7 @@ DefineUniqueItem("rithil", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
-	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\"\n- Fafnismol"
+	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\"\n- <a href='literary_text:fafnismol'>Fafnismol</a>"
 } )
 
 DefineUniqueItem("sigrljoma", { -- Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
@@ -182,7 +182,7 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
-	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
+	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- <a href='literary_text:grimnismol'>Grimnismol</a> (Grimnir)"
 } )
 
 -- Armor
@@ -266,7 +266,7 @@ DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
-	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- Reginsmol (Andvari)"
+	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- <a href='literary_text:reginsmol'>Reginsmol</a> (Andvari)"
 } )
 
 DefineUniqueItem("dragons-tongue", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 211.
@@ -321,7 +321,7 @@ DefineUniqueItem("fafnirs-heart", { -- Source: Henry Adams Bellows (transl.), "T
 	Type = "unit-wyrm-heart",
 	Elixir = "upgrade-elixir-fafnirs-heart",
 	Background = "In Norse mythology, the hero Sigurd (identified by scholars with the historical Frankish king Sigibert) cooked the heart of the monster Fafnir, presumably gaining in strength after eating it.",
-	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- Fafnismol"
+	Quote = "\"There sits Sigurd, sprinkled with blood,\nAnd Fafnir's heart with fire he cooks\"\n- <a href='literary_text:fafnismol'>Fafnismol</a>"
 } )
 
 -- Books and Scrolls
@@ -379,7 +379,7 @@ DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 --	Suffix = "upgrade-item-suffix-of-swiftness",
 	Suffix = "upgrade-item-suffix-of-ethereal-vision",
 	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed. Some say that it is capable of travelling between worlds...",
-	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- Grimnismol",
+	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- <a href='literary_text:grimnismol'>Grimnismol</a>",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
 } )
 
