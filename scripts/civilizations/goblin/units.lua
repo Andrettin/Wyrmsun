@@ -241,7 +241,7 @@ DefineUnitType("unit-goblin-spearman", {
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
 	Description = "The spear is a common weapon of choice amongst goblins. It is easy to manufacture, and the spear's length helps keeping larger foes at bay.",
-	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
+	Animations = "animations-goblin-spearman", Icon = "goblin_spearman",
 	DefaultEquipment = {
 		{"weapon", "unit-short-spear"},
 		{"shield", "unit-goblin-wooden-shield"},
