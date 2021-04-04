@@ -5,8 +5,6 @@ import ".."
 StackView {
 	id: menu_stack
 	anchors.fill: parent
-	initialItem: "menus/MainMenu.qml"
-	focus: wyrmgus.game.running == false
 	pushEnter: null
 	pushExit: null
 	popEnter: null

@@ -56,6 +56,8 @@ Item {
 	
 	MenuStack {
 		id: menu_stack
+		initialItem: "menus/MainMenu.qml"
+		focus: wyrmgus.game.running == false
 	}
 	
 	LoadingScreen {

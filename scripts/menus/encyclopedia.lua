@@ -26,33 +26,6 @@
 --
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (true) then
-		return;
-	end
-	
-	if (state ~= "item_prefixes" and state ~= "item_suffixes") then
-		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
-			if (
-				(
-					GetUnitTypeData(unit_name, "Notes") == ""
-					and GetUnitTypeData(unit_name, "Description") == ""
-					and GetUnitTypeData(unit_name, "Background") == ""
-					and (GetUnitTypeData(unit_name, "Item") == false or GetUnitTypeData(unit_name, "Class") == "")
-				)
-			) then
-				if (GetUnitTypeData(unit_name, "Parent") ~= "") then
-					OpenEncyclopediaUnitEntry(GetUnitTypeData(unit_name, "Parent"), state)
-				end
-				
-				return;
-			end
-		elseif (state == "technologies" and string.find(unit_name, "unit") == nil) then
-			if (GetUpgradeData(unit_name, "Description") == "" and CUpgrade:Get(unit_name).Background == "") then
-				return;
-			end
-		end
-	end
-
 	local has_family_tree_button = false
 	if (state == "heroes") then
 		--[[

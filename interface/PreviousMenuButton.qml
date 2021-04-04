@@ -7,6 +7,10 @@ LargeButton {
 	hotkey: "p"
 	
 	onClicked: {
-		menu_stack.pop()
+		if (menu_stack.depth > 1) {
+			menu_stack.pop()
+		} else {
+			menu_stack.destroy()
+		}
 	}
 }

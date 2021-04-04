@@ -10,6 +10,8 @@ Item {
 	focus: wyrmgus.game.running
 	z: 2 //place it over the frame buffer object
 	
+	property var menu_stack: null
+	
 	MouseArea {
 		id: mouse_area
 		anchors.fill: parent
@@ -81,6 +83,23 @@ Item {
 					break
 				}
 			}
+		}
+	}
+	
+	Connections {
+		target: wyrmgus
+		onEncyclopediaEntryOpened: {
+			var menu_stack_component = Qt.createComponent("menus/MenuStack.qml")
+			
+			if (menu_stack_component.status == Component.Error) {
+				console.error(menu_stack_component.errorString())
+				return
+			}
+			
+			map_view.menu_stack = menu_stack_component.createObject(map_view, { focus: true })
+			map_view.menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
+				entry: wyrmgus.get_link_target(link)
+			})
 		}
 	}
 	
