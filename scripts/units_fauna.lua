@@ -620,7 +620,7 @@ DefineUnitType("unit-horse", {
 	Parent = "unit-template-fauna-unit",
 	Species = "horse",
 	Description = "Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes.",
-	Quote = "\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- Grimnismol (Grimnir)", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+	Quote = "\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- <a href='literary_text:grimnismol'>Grimnismol</a> (Grimnir)", -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 	Image = {"file", "neutral/units/horse.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-horse",
 	Strength = 14,
@@ -889,7 +889,7 @@ DefineUnitType("unit-gryphon", {
 	Parent = "unit-template-fauna-unit",
 	Species = "gryphon",
 	Description = "Gryphons dwell in the dwarven homeworld of Nidavellir, predating smaller animals such as yales. Although many gryphons can be seen in the wild, dwarves have been domesticating the beasts for aeons, riding them into battle. The Gryphon Mountain is the greatest nesting area for wild gryphons.",
-	Quote = "\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan",
+	Quote = "\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the <a href='faction:norlund_clan'>Norlund Clan</a>",
 	Image = {"file", "neutral/units/gryphon.png", "size", {100, 100}},
 	Animations = "animations-gryphon", Icon = "icon-gryphon",
 	Strength = 18,

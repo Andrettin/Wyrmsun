@@ -86,7 +86,7 @@ DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse 
 	Prefix = "upgrade-item-prefix-giantsbane",
 	Suffix = "upgrade-item-suffix-of-flame",
 	Background = "In Norse mythology, Frey had a keen, gleamning sword that was particularly powerful against giants.",
-	Quote = "\"Then give me the horse that goes through the dark\nAnd magic flickering flames;\nAnd the sword as well that fights of itself\nAgainst the giants grim.\"\n- Skirnismol (Skirnir)"
+	Quote = "\"Then give me the horse that goes through the dark\nAnd magic flickering flames;\nAnd the sword as well that fights of itself\nAgainst the giants grim.\"\n- <a href='literary_text:skirnismol'>Skirnismol</a> (Skirnir)"
 } )
 
 DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
