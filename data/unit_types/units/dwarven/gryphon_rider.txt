@@ -3,7 +3,7 @@ unit_dwarven_gryphon_rider = {
 	parent = unit_template_flying_rider
 	civilization = dwarven
 	description = "Only a few dwarves are able to bond with the mighty gryphons. Those who do may become gryphon riders, and discover the world of the skies upon the backs of these flying beasts."
-	quote = "\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the Norlund Clan"
+	quote = "\"Ha ha! <a href='unit_type:unit_gryphon'>Gryphons</a> as mounts, that is naught but the stuff of legends! Is there no end to your folly?\"\n- Relgorn, Chieftain of the <a href='faction:norlund_clan'>Norlund Clan</a>"
 	image_file = "dwarf/units/gryphon_rider.png"
 	frame_size = { 100 100 }
 	animation_set = animations_dwarven_gryphon_rider
