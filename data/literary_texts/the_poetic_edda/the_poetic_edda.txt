@@ -9,7 +9,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		grimnismol
 		skirnismol
 		harbarthsljoth
-		#hymiskvitha
+		hymiskvitha
 		#lokasenna
 		#thrymskvitha
 		alvissmol
