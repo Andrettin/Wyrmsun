@@ -253,7 +253,7 @@ DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-latin-centurion",
 		"unit-dwarven-sentinel",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit_goblin_thief", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-elven-swordsman",
 		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
@@ -307,7 +307,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-gothic-horse-lord",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
 --		"unit-gnomish-herbalist",
---		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
+--		"unit_goblin_thief", "unit-goblin-warlord", "unit-goblin-spearman", "unit-goblin-shadowstalker",
 		"unit-goblin-warlord", "unit-goblin-shadowstalker",
 		"unit-goblin-gunpowder-infantry",
 --		"unit-goblin-shaman",
@@ -450,7 +450,7 @@ DefineButton( { Pos = 7, Icon = "icon-puncture",
 		"unit-latin-centurion",
 		"unit-dwarven-sentinel",
 		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-thief", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit_goblin_thief", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-elven-swordsman",
 		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}

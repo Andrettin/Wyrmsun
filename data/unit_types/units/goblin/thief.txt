@@ -1,0 +1,39 @@
+unit_goblin_thief = {
+	name = "Thief"
+	parent = unit_template_thief
+	civilization = goblin
+	description = "With their light build, goblins make excellent thieves. Indeed, many goblins do partake in that profession, causing the malaise of goblin thievery to affect not only the local tribes, but even the dwarven and gnomish countryside. These bandits specialize in delivering fatal blows when a target has its back turned to them, and for such skills they are sometimes hired by enterprising leaders seeking to give their enemies a nasty surprise."
+	image_file = "goblin/units/goblin_thief.png"
+	frame_size = { 72 72 }
+	animation_set = animations_goblin_thief
+	icon = goblin_thief
+	corpse_type = unit_goblin_dead_body
+	button_key = t
+	weapon_classes = { dagger }
+	pierce_damage = true
+	hit_points = 30
+	accuracy = 15
+	evasion = 15
+	day_sight_range_bonus = -1
+	night_sight_range_bonus = 1
+	speed = 11
+	default_equipment = {
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_boots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+	}
+	mana = {
+		enable = true
+		value = 75
+		max = 75
+		increase = 1
+	}
+	sounds = {
+		hit = dagger_attack
+		miss = attack_miss
+	}
+}

@@ -167,7 +167,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 	Description = "Choose Gathaarl as your hero's major deity. +2 Damage for Swordsmen, enables Terror spell for Shamans.",
 	ForUnit = {
 		"unit_goblin_worker",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit_goblin_thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
 		"unit-goblin-gunpowder-infantry",
 		"unit-goblin-shaman"
@@ -181,7 +181,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	Description = "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Shamans.",
 	ForUnit = {
 		"unit_goblin_worker",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
+		"unit_goblin_thief", "unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
 		"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
 		"unit-goblin-gunpowder-infantry",
 		"unit-goblin-shaman"

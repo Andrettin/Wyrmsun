@@ -11,3 +11,7 @@ goblin_worker_christmas_hat = {
 goblin_spearman = {
 	file = "icons/units/goblin/spearman.png"
 }
+
+goblin_thief = {
+	file = "icons/units/goblin/thief.png"
+}

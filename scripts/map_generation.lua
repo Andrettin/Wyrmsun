@@ -4730,7 +4730,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							SecondRandomY = SyncRand(max_y - min_y + 1) + min_y
 							if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 								if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
-									unit = CreateUnit("unit-goblin-thief", 2, {SecondRandomX, SecondRandomY}) -- create thieves
+									unit = CreateUnit("unit_goblin_thief", 2, {SecondRandomX, SecondRandomY}) -- create thieves
 									SetUnitVariable(unit, "Active", false)
 									SecondCount = SecondCount - 1
 								end
@@ -5777,9 +5777,9 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								SetUnitVariable(unit, "Active", false)
 								Count = Count - 1
 							elseif (RandomNumber >= 75) then
-								unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+								unit = OldCreateUnit("unit_goblin_thief", 2, {RandomX, RandomY})
 								SetUnitVariable(unit, "Active", false)
-								unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+								unit = OldCreateUnit("unit_goblin_thief", 2, {RandomX, RandomY})
 								SetUnitVariable(unit, "Active", false)
 								Count = Count - 1
 							end

@@ -45,10 +45,6 @@ DefinePredependency("unit-goblin-war-machine",
 	{"upgrade-goblin-civilization"}
 )
 
-DefinePredependency("unit-goblin-thief",
-	{"upgrade-goblin-civilization"}
-)
-
 DefinePredependency("unit-goblin-glider",
 	{"upgrade-goblin-civilization"}
 )

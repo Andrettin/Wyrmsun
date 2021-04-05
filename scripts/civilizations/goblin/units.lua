@@ -25,12 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---=============================================================================
---	Define unit-types.
---
---	NOTE: Save can generate this table.
---
-
 DefineUnitType("unit-goblin-militia", {
 	Parent = "unit-template-militia",
 	Civilization = "goblin",
@@ -90,39 +84,6 @@ DefineUnitType("unit-goblin-magnate", {
 		"acknowledge", "basic-goblin-voices-acknowledge",
 		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-worker-ready",
-		"help", "basic-goblin-voices-help",
-		"dead", "basic-goblin-voices-dead",
-		"hit", "dagger-attack",
-		"miss", "attack-miss"
-	}
-} )
-
-DefineUnitType("unit-goblin-thief", {
-	Name = "Thief",
-	Parent = "unit-template-thief",
-	Civilization = "goblin",
-	Description = "With their light build, goblins make excellent thieves. Indeed, many goblins do partake in that profession, causing the malaise of goblin thievery to affect not only the local tribes, but even the dwarven and gnomish countryside. These bandits specialize in delivering fatal blows when a target has its back turned to them, and for such skills they are sometimes hired by enterprising leaders seeking to give their enemies a nasty surprise.",
-	Image = {"file", "goblin/units/goblin_thief.png", "size", {72, 72}},
-	Animations = "animations-goblin-thief", Icon = "icon-goblin-thief",
-	DefaultEquipment = {
-		{"boots", "unit-boots"}
-	},
-	HitPoints = 30,
-	Accuracy = 15,
-	Evasion = 15,
-	DaySightRangeBonus = -1,
-	NightSightRangeBonus = 1,
-	Speed = 11,
-	Corpse = "unit-goblin-dead-body",
-	WeaponClasses = {"dagger"},
-	PierceDamage = true,
-	ButtonKey = "t",
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
-	Sounds = {
-		"selected", "basic-goblin-voices-selected-group",
-		"acknowledge", "basic-goblin-voices-acknowledge",
-		"attack", "basic-goblin-voices-attack",
---		"ready", "goblin-worker-ready",
 		"help", "basic-goblin-voices-help",
 		"dead", "basic-goblin-voices-dead",
 		"hit", "dagger-attack",

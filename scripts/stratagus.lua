@@ -2014,7 +2014,7 @@ Units = {
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
 	"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker",
 	"unit-goblin-gunpowder-infantry",
-	"unit-goblin-thief", "unit-goblin-shaman",
+	"unit-goblin-shaman",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-transport-ship", "unit-goblin-warship",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
