@@ -1,0 +1,36 @@
+rock_hell = {
+	name = "Rock (Hell)"
+	overlay = true
+	resource = stone
+	image_file = "terrain/rock.png"
+	hue_rotation = -30
+	flags = {
+		land
+		rock
+		unpassable
+	}
+	base_terrain_types = {
+		mud_hell
+		dry_mud_hell
+	}
+	solid_tiles = { 18 21 24 }
+	destroyed_tiles = { 16 }
+	transition_tiles = {
+		any = {
+			north = { 2 5 8 }
+			south = { 34 37 40 }
+			west = { 17 20 23 }
+			east = { 19 22 25 }
+			northwest_outer = { 1 4 }
+			northeast_outer = { 3 6 }
+			southwest_outer = { 33 36 }
+			southeast_outer = { 35 38 }
+			northwest_inner = { 10 12 }
+			northeast_inner = { 11 13 }
+			southwest_inner = { 26 28 }
+			southeast_inner = { 27 29 }
+			northwest_southeast_inner = { 30 31 }
+			northeast_southwest_inner = { 14 15 }
+		}
+	}
+}

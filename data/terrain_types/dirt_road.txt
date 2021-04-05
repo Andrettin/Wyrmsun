@@ -16,6 +16,8 @@ dirt_road = {
 		dry_mud
 		cave_floor
 		snow
+		dry_mud_hell
+		mud_hell
 	}
 	solid_tiles = { 177 }
 	transition_tiles = {

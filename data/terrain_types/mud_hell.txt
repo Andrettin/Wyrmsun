@@ -1,0 +1,49 @@
+mud_hell = {
+	name = "Mud (Hell)"
+	flags = {
+		land
+		no_building
+		mud
+	}
+	image_file = "terrain/mud.png"
+	hue_rotation = -30
+	inner_border_terrain_types = {
+		cave_floor
+	}
+	outer_border_terrain_types = {
+		mud
+		rockbound_cave_floor
+	}
+	solid_tiles = {
+		17 = 256
+		20 = 256
+		23 = 256
+		13 = 1
+		14 = 1
+		15 = 1
+		29 = 1
+		30 = 1
+		31 = 1
+		45 = 1
+		46 = 1
+		47 = 1
+	}
+	adjacent_transition_tiles = {
+		any = {
+			north = { 33 36 39 }
+			south = { 1 4 7 }
+			west = { 18 21 24 }
+			east = { 16 19 22 }
+			northwest_outer = { 65 67 }
+			northeast_outer = { 64 66 }
+			southwest_outer = { 49 51 }
+			southeast_outer = { 48 50 }
+			northwest_inner = { 34 37 }
+			northeast_inner = { 32 35 }
+			southwest_inner = { 2 5 }
+			southeast_inner = { 0 3 }
+			northwest_southeast_inner = { 80 96 }
+			northeast_southwest_inner = { 81 97 }
+		}
+	}
+}

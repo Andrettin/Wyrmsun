@@ -1,40 +1,29 @@
-dirt = {
-	name = "Dirt"
-	character = d
-	character_aliases = {
-		h #hills
-		B #beach sand
-		z #dark dirt
-	}
-	color = { 192 128 0 }
-	image_file = "terrain/dirt.png"
+dry_mud_hell = {
+	name = "Dry Mud (Hell)"
 	buildable = true
-	flags = {
-		land
-		dirt
-	}
+	image_file = "terrain/dry_mud.png"
+	hue_rotation = -30
+	flags = { land }
 	outer_border_terrain_types = {
+		mud_hell
 		dry_mud
 		mud
-		dry_mud_hell
-		mud_hell
+		cave_floor
+		rockbound_cave_floor
 	}
 	solid_tiles = {
 		17 = 256
 		20 = 256
 		23 = 256
-		#13 = 1
-		#14 = 1
-		#15 = 1
-		#29 = 1
-		#30 = 1
-		#31 = 1
-		#45 = 1
-		#46 = 1
-		#47 = 1
-	}
-	season_image_files = {
-		winter = "terrain/snow.png"
+		13 = 1
+		14 = 1
+		15 = 1
+		29 = 1
+		30 = 1
+		31 = 1
+		45 = 1
+		46 = 1
+		47 = 1
 	}
 	adjacent_transition_tiles = {
 		any = {
@@ -53,9 +42,5 @@ dirt = {
 			northwest_southeast_inner = { 80 96 }
 			northeast_southwest_inner = { 81 97 }
 		}
-	}
-	tile_numbers = {
-		48 49 50 52 53 54 55 56 57 58 59
-		1280 1281 1296 1297 1312 1313 1314 1328 1329 1344 1345 1346 1360 1361 1376 1377 1392 1393 1409 1424 1425 1426 1440 1441 1456 1457 1458 1472 1473 1488 1489
 	}
 }

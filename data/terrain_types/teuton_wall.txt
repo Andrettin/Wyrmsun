@@ -19,6 +19,8 @@ teuton_wall = {
 		cave_floor
 		floor
 		snow
+		dry_mud_hell
+		mud_hell
 	}
 	solid_tiles = { 177 }
 	destroyed_tiles = { 160 }

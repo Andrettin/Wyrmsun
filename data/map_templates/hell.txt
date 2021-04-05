@@ -1,0 +1,34 @@
+hell = {
+	name = "Hell"
+	main_template = universe
+	world = hell
+	size = { 32 32 }
+	circle = true
+	base_terrain_type = dry_mud_hell
+	unusable_area_terrain_type = dry_mud_hell
+	unusable_area_overlay_terrain_type = space
+	surrounding_terrain_type = dry_mud_hell
+	surrounding_overlay_terrain_type = space
+	generated_terrains = {
+		mud_hell = {
+			seed_count = 4
+			max_percent = 10
+			target_terrain_type = dry_mud_hell
+		}
+		#flamefood_tree = {
+		#	seed_count = 4
+		#	max_percent = 20
+		#	target_terrain_type = dry_mud_hell
+		#}
+		rock_hell = {
+			seed_count = 4
+			max_percent = 20
+			target_terrain_type = dry_mud_hell
+			target_terrain_type = mud_hell
+		}
+	}
+	generated_neutral_units = {
+		unit_iron_deposit = 8
+		unit_crimson_imp = 32
+	}
+}

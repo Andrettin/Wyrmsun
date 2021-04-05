@@ -17,6 +17,8 @@ border = {
 		snow
 		ice
 		ford
+		dry_mud_hell
+		mud_hell
 	}
 	solid_tiles = { 17 20 23 }
 	transition_tiles = {
