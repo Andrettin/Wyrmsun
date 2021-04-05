@@ -1,6 +1,6 @@
 unit_crimson_imp = {
 	name = "Crimson Imp"
-	parent = unit_goblin_thief
+	parent = unit_goblin_swordsman #could be a new unit class, "flying infantry", instead of infantry
 	civilization = demonic
 	description = "A small, ugly minor demon. Its fanged maw seems locked in a permanent malign grin, and its horns protrude obscenely from its scaly pate." #from DCSS
 	species = crimson_imp
