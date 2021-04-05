@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.5
 -----------------------------------------------------------------------
 
+* Encyclopedia
+- Added support for encyclopedia entries having links to each other.
+
 * Factions
 - Fixed the requirements string for the Shadowcharm Clan faction.
 
@@ -73,7 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - F11 is now the screenshot hotkey.
 - Reworked the game's rendering system and graphical interface to use the Qt Framework.
-- The game is now always in borderless fullscreen mode, as the new UI framework supports that.
+- The game is now always in borderless fullscreen mode, as the new UI framework supports that. The main purpose of the windowed mode was to allow alt-tabbing seamlessly, which the borderless fullscreen mode also provides. And unlike the old fullscreen functionality, this supports any resolution.
 
 -----------------------------------------------------------------------
 - 4.1.4
