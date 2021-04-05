@@ -7,7 +7,7 @@ import unit_list_model 1.0
 Item {
 	id: map_view
 	anchors.fill: parent
-	focus: wyrmgus.game.running
+	focus: wyrmgus.game.running && menu_stack == null
 	z: 2 //place it over the frame buffer object
 	
 	property var menu_stack: null

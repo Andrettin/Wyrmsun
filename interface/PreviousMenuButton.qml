@@ -10,6 +10,7 @@ LargeButton {
 		if (menu_stack.depth > 1) {
 			menu_stack.pop()
 		} else {
+			map_view.menu_stack = null
 			menu_stack.destroy()
 		}
 	}
