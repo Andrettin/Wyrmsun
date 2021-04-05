@@ -126,6 +126,14 @@ troll_warrior = {
 	}
 }
 
+crimson_imp = {
+	code = imp
+	
+	effects = {
+		create_unit = unit_crimson_imp
+	}
+}
+
 skeleton_warrior = {
 	code = undeath
 	

@@ -1,0 +1,16 @@
+crimson_imp = {
+	file = "icons/units/goblin/thief.png"
+	hue_rotation = -90
+	hue_ignored_colors = {
+		{ 44 24 0 }
+		{ 60 36 4 }
+		{ 72 44 4 }
+		{ 80 48 8 }
+		{ 88 56 12 }
+		{ 96 56 16 }
+		{ 108 76 24 }
+		{ 116 76 28 }
+		{ 156 124 60 }
+		{ 204 168 116 }
+	}
+}

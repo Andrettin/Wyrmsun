@@ -1,0 +1,5 @@
+unit_crimson_imp_dead_body = {
+	name = "Dead Body"
+	parent = unit_goblin_dead_body
+	hue_rotation = -90
+}
