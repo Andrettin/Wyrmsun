@@ -97,7 +97,7 @@ DefineUnitType("unit-goblin-swordsman", {
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Description = "Goblin swordsmen are amongst the most savage of their kind. With weapons in hand, they gleefully hack through their enemies' flesh.",
-	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
+	Animations = "animations-goblin-swordsman", Icon = "goblin_swordsman",
 	DefaultEquipment = {
 		{"weapon", "unit-goblin-short-sword"},
 		{"shield", "unit-goblin-wooden-shield"},
