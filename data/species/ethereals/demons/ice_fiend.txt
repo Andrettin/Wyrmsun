@@ -3,4 +3,7 @@ ice_fiend = {
 	supertaxon = daemonia
 	homeworld = hell #could also be present in Niflheim
 	sapient = true
+	pre_evolutions = {
+		ice_devil
+	}
 }

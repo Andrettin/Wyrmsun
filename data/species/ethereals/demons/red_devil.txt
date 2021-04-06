@@ -3,4 +3,7 @@ red_devil = {
 	supertaxon = daemonia
 	homeworld = hell
 	sapient = true
+	pre_evolutions = {
+		crimson_imp
+	}
 }

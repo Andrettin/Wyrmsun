@@ -3,4 +3,7 @@ rust_devil = {
 	supertaxon = daemonia
 	homeworld = hell
 	sapient = true
+	pre_evolutions = {
+		iron_imp
+	}
 }

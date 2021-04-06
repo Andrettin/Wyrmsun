@@ -3,4 +3,7 @@ orange_demon = {
 	supertaxon = daemonia
 	homeworld = hell
 	sapient = true
+	pre_evolutions = {
+		crimson_imp
+	}
 }

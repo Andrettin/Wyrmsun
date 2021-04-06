@@ -3,4 +3,7 @@ brimstone_fiend = {
 	supertaxon = daemonia
 	homeworld = hell
 	sapient = true
+	pre_evolutions = {
+		red_devil
+	}
 }

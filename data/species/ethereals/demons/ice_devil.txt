@@ -3,4 +3,7 @@ ice_devil = {
 	supertaxon = daemonia
 	homeworld = hell #could also be present in Niflheim
 	sapient = true
+	pre_evolutions = {
+		white_imp
+	}
 }

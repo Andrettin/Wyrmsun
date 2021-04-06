@@ -1,9 +1,9 @@
-smoke_demon = {
-	name = "Smoke Demon"
+shadow_demon = {
+	name = "Shadow Demon"
 	supertaxon = daemonia
 	homeworld = hell
 	sapient = true
 	pre_evolutions = {
-		red_devil
+		shadow_imp
 	}
 }
