@@ -13,7 +13,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		lokasenna
 		#thrymskvitha
 		alvissmol
-		#baldrs_draumar
+		baldrs_draumar
 		rigsthula
 		#hyndluljoth
 		svipdagsmol
