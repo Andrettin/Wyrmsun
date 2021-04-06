@@ -23,7 +23,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		#helgakvitha_hjorvarthssonar
 		#helgakvitha_hundingsbana_i
 		#helgakvitha_hundingsbana_ii
-		#fra_dautha_sinfjotla
+		fra_dautha_sinfjotla
 		gripisspo
 		reginsmol
 		fafnismol
