@@ -11,11 +11,11 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		harbarthsljoth
 		hymiskvitha
 		lokasenna
-		#thrymskvitha
+		thrymskvitha
 		alvissmol
 		baldrs_draumar
 		rigsthula
-		#hyndluljoth
+		hyndluljoth
 		svipdagsmol
 		
 		#lays of the heroes
