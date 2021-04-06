@@ -1,0 +1,19 @@
+workers_day = {
+	name = "Workers' Day"
+	icon = dwarven_miner
+	player_color = red
+	description = "The 1st of May is Workers' Day, held in celebration of laborers worldwide."
+	hint = "Select a [unit_class:town_hall.name] and click on the [unit_class:worker.name] button to train the unit."
+	conditions = {
+		scripted_condition = is_international_workers_day
+	}
+	objectives = {
+		build_units = {
+			unit_class = worker
+			quantity = 5
+		}
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}

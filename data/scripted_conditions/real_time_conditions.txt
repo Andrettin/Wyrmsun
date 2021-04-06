@@ -1,4 +1,12 @@
 is_christmas_season = {
-	real_day = 16
 	real_month = december
+	real_day = 16
+}
+
+is_international_workers_day = {
+	real_month = may
+	real_day = 1
+	not = {
+		real_day = 2
+	}
 }
