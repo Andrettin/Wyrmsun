@@ -31,7 +31,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		#brot_af_sigurtharkvithu
 		#guthrunarkvitha_i
 		#sigurtharkvitha_en_skamma
-		#helreith_brynhildar
+		helreith_brynhildar
 		drap_niflunga
 		#guthrunarkvitha_ii_en_forna
 		#guthrunarkvitha_iii
