@@ -20,7 +20,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		
 		#lays of the heroes
 		volundarkvitha
-		#helgakvitha_hjorvarthssonar
+		helgakvitha_hjorvarthssonar
 		#helgakvitha_hundingsbana_i
 		#helgakvitha_hundingsbana_ii
 		fra_dautha_sinfjotla
