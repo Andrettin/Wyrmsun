@@ -71,5 +71,3 @@
 		}
 	},
 	--]]
-
-Load("scripts/texts/the_poetic_edda.lua")
