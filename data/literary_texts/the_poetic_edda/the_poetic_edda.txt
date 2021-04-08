@@ -37,7 +37,7 @@ the_poetic_edda = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1
 		guthrunarkvitha_iii
 		oddrunargratr
 		#atlakvitha_en_gronlenzka
-		#atlamol_en_gronlenzku
+		atlamol_en_gronlenzku
 		guthrunarhvot
 		hamthesmol
 	}
