@@ -46,7 +46,7 @@ DefineUnitType("unit-kobold-footpad", {
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,
-	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
+	Gender = "none", -- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
@@ -102,7 +102,7 @@ DefineUnitType("unit-kobold-slasher", {
 	HitPoints = 65,
 	Accuracy = 12,
 	Evasion = 12,
-	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
+	Gender = "none", -- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
@@ -157,7 +157,7 @@ DefineUnitType("unit-kobold-champion", {
 	HitPoints = 80,
 	Accuracy = 12,
 	Evasion = 12,
-	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
+	Gender = "none", -- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting_sword"},
