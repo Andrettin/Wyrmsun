@@ -1,0 +1,10 @@
+draconian = {
+	name = "Draconian"
+	parent_civilization = neutral
+	species = draconian
+	group = draconic
+	language = draconic
+	visible = false
+	playable = false
+	default_color = violet
+}

@@ -1,0 +1,11 @@
+draconian = {
+	name = "Draconian"
+	supertaxon = draconidae #should be a genus instead
+	#specific_name = "sapiens"
+	era = holocene
+	#homeworld = ?
+	sapient = true
+	pre_evolutions = {
+		tyrannosaurus_rex #seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	}
+}

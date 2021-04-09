@@ -39,13 +39,12 @@ kobold = {
 	}
 	
 	personal_names = {
-		"Hodeke" #Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
-		"Hoidike" #Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-		"Pumphut" #Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
-		"Shellycoat" #Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
-		
 		male = {
+			"Hodeke" #Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
+			"Hoidike" #Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
+			"Pumphut" #Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 			"Napfhans" #Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
+			"Shellycoat" #Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
 		}
 	}
 }
