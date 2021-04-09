@@ -1,0 +1,4 @@
+molluscoid = {
+	name = "Molluscoid"
+	rank = supergroup
+}

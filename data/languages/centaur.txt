@@ -1,0 +1,3 @@
+centaur = {
+	name = "Centaur"
+}

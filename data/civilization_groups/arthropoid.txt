@@ -1,0 +1,4 @@
+arthropoid = {
+	name = "Arthropoid"
+	rank = supergroup
+}

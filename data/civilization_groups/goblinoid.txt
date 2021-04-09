@@ -1,4 +1,5 @@
 goblinoid = {
 	name = "Goblinoid"
 	rank = group
+	group = ettin
 }

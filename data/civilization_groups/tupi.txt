@@ -1,5 +1,0 @@
-tupi = {
-	name = "Tupi"
-	rank = group
-	species = human
-}

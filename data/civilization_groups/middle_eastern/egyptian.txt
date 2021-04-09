@@ -1,0 +1,5 @@
+egyptian = {
+	name = "Egyptian"
+	rank = group
+	group = middle_eastern
+}

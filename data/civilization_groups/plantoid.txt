@@ -1,0 +1,4 @@
+plantoid = {
+	name = "Plantoid"
+	rank = supergroup
+}

@@ -1,5 +1,0 @@
-altaic = {
-	name = "Altaic"
-	rank = supergroup
-	species = human
-}

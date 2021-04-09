@@ -1,0 +1,10 @@
+minotaur = {
+	name = "Minotaur"
+	parent_civilization = neutral
+	species = minotaur
+	group = mammalian
+	language = minotaur
+	visible = false
+	playable = false
+	default_color = red
+}

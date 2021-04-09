@@ -1,0 +1,7 @@
+minotaur += {
+	personal_names = {
+		male = {
+			"Asterion" #Asterion the Fallen King (unique male minotaur)
+		}
+	}
+}

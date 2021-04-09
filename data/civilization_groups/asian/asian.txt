@@ -1,0 +1,5 @@
+asian = {
+	name = "Asian"
+	rank = supergroup
+	species = human
+}

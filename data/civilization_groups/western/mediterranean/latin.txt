@@ -1,0 +1,5 @@
+latin = {
+	name = "Latin"
+	rank = subgroup
+	group = mediterranean
+}

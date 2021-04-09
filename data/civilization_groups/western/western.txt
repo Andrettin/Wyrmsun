@@ -1,0 +1,5 @@
+western = {
+	name = "Western"
+	rank = supergroup
+	species = human
+}

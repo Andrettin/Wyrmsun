@@ -1,0 +1,5 @@
+uralic = {
+	name = "Uralic"
+	rank = group
+	group = western
+}

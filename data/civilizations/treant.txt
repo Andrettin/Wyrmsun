@@ -1,3 +1,4 @@
 treant = {
 	language = treant
+	group = plantoid
 }

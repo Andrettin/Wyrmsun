@@ -1,0 +1,4 @@
+fungoid = {
+	name = "Fungoid"
+	rank = supergroup
+}

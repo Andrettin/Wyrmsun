@@ -1,0 +1,4 @@
+celestial = {
+	name = "Celestial"
+	rank = supergroup
+}

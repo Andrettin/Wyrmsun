@@ -1,0 +1,5 @@
+tupi = {
+	name = "Tupi"
+	rank = group
+	group = american
+}

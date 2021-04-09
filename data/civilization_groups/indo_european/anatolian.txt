@@ -1,5 +1,0 @@
-anatolian = {
-	name = "Anatolian"
-	rank = group
-	group = indo_european
-}

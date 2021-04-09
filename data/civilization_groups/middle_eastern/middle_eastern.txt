@@ -1,0 +1,5 @@
+middle_eastern = {
+	name = "Middle Eastern"
+	rank = supergroup
+	species = human
+}

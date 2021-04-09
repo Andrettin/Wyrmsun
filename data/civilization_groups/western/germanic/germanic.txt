@@ -1,0 +1,39 @@
+germanic = {
+	name = "Germanic"
+	rank = group
+	group = western
+	
+	history = {
+		-4000 = {
+			#Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+			acquired_upgrade_classes += wood_plow
+		}
+
+		#the prevalence of bronzeworking (compared to copperworking) in Scandinavia began c. 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73.
+		
+		-1100 = {
+			#bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+			acquired_upgrade_classes += bronze_shield
+		}
+		
+		-1000 = {
+			#broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+			acquired_upgrade_classes += melee_weapon_1 #broad sword
+		}
+		
+		-500 = {
+			acquired_upgrade_classes += ironworking
+			acquired_upgrade_classes += iron_shield
+		}
+		
+		180 = {
+			#in the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+			acquired_upgrade_classes += melee_weapon_2 #longsword
+		}
+		
+		1249 = {
+			#the Englishman Roger Bacon wrote about gunpowder in 1249; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 169-170.
+			acquired_upgrade_classes += gunpowder
+		}
+	}	
+}

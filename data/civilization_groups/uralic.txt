@@ -1,5 +1,0 @@
-uralic = {
-	name = "Uralic"
-	rank = supergroup
-	species = human
-}

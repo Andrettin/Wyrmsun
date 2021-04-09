@@ -1,5 +1,0 @@
-turkic = {
-	name = "Turkic"
-	rank = group
-	group = altaic
-}

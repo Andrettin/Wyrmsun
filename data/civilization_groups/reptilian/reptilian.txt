@@ -1,0 +1,4 @@
+reptilian = {
+	name = "Reptilian"
+	rank = supergroup
+}

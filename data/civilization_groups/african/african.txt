@@ -1,0 +1,5 @@
+african = {
+	name = "African"
+	rank = supergroup
+	species = human
+}

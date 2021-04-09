@@ -1,0 +1,5 @@
+levantine = {
+	name = "Levantine"
+	rank = subgroup
+	group = semitic
+}

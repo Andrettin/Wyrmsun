@@ -1,5 +1,0 @@
-hellenic = {
-	name = "Hellenic"
-	rank = group
-	group = indo_european
-}

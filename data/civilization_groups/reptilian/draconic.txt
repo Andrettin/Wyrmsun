@@ -1,0 +1,5 @@
+draconic = {
+	name = "Draconic"
+	rank = group
+	group = reptilian
+}

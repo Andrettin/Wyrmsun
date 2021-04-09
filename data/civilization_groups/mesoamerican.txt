@@ -1,5 +1,0 @@
-mesoamerican = {
-	name = "Mesoamerican"
-	rank = group
-	species = human
-}

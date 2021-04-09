@@ -1,0 +1,5 @@
+old_european = {
+	name = "Old European"
+	rank = group
+	group = western
+}

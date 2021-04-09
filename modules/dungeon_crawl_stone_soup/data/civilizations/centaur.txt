@@ -1,0 +1,5 @@
+centaur += {
+	personal_names = {
+		"Nessos" #Nessos the Markscentaur (unique centaur of undefined gender)
+	}
+}

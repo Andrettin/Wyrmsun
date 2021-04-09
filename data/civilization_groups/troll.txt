@@ -1,4 +1,0 @@
-troll = {
-	name = "Troll"
-	rank = group
-}

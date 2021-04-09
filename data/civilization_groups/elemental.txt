@@ -1,0 +1,4 @@
+elemental = {
+	name = "Elemental"
+	rank = supergroup
+}

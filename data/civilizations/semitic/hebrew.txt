@@ -1,4 +1,4 @@
 hebrew = {
-	group = semitic
+	group = levantine
 	language = hebrew
 }

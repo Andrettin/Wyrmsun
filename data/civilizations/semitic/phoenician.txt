@@ -1,7 +1,7 @@
 phoenician = {
 	name = "Phoenician"
 	parent_civilization = persian
-	group = semitic
+	group = levantine
 	language = phoenician
 	visible = false
 	playable = false

@@ -1,5 +1,0 @@
-sinic = {
-	name = "Sinic"
-	rank = group
-	species = human
-}

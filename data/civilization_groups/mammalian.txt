@@ -1,0 +1,5 @@
+mammalian = {
+	name = "Mammalian"
+	rank = supergroup
+	#mammal sapient civilizations, excluding humanoid ones
+}

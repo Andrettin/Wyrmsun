@@ -1,0 +1,5 @@
+hellenic = {
+	name = "Hellenic"
+	rank = subgroup
+	group = mediterranean
+}

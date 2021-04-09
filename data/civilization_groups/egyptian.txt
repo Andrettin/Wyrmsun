@@ -1,5 +1,0 @@
-egyptian = {
-	name = "Egyptian"
-	rank = group
-	species = human
-}

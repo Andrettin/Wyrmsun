@@ -1,0 +1,10 @@
+centaur = {
+	name = "Centaur"
+	parent_civilization = neutral
+	species = centaur
+	group = mammalian
+	language = centaur
+	visible = false
+	playable = false
+	default_color = white
+}

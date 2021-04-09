@@ -1,0 +1,5 @@
+sinic = {
+	name = "Sinic"
+	rank = group
+	group = asian
+}
