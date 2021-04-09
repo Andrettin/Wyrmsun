@@ -1033,8 +1033,6 @@ DefineCivilization("aztec", {
 	Playable = false
 })
 
--- deity civilizations
-
 Load("scripts/factions.lua")
 
 function GetCivilizationID(civilization)

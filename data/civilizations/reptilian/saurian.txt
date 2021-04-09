@@ -1,0 +1,10 @@
+saurian = {
+	name = "Saurian"
+	parent_civilization = neutral
+	species = saurian
+	group = reptilian
+	language = saurian
+	visible = false
+	playable = false
+	default_color = red
+}
