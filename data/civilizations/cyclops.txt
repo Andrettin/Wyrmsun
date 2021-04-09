@@ -1,0 +1,22 @@
+cyclops = {
+	name = "Cyclops"
+	parent_civilization = neutral
+	species = cyclops
+	group = ettin
+	language = ettin
+	visible = false
+	playable = false
+	default_color = red
+
+	personal_names = {
+		male = {
+			"Arges" #the name means "Vivid"
+			"Brontes" #the name means "Thunderer"
+			"Polyphemus" #the name means "many-voiced"
+			"Steropes" #the name means "Lightner"
+			
+			"Depeghoz" #"Depêghöz"; same as Tepegoz, given by Jacob Grimm in Teutonic Mythology, p. 424
+			"Tepegoz" #ogre with a single eye from Turkic mythology; apparently derived from the Greek Polyphemus myth; "Tepe" means "top, crown of the head" and "Göz" means "eye"
+		}
+	}
+}
