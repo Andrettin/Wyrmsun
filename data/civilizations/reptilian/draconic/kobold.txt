@@ -1,3 +1,48 @@
 kobold = {
+	name = "Kobold"
+	parent_civilization = neutral
+	species = kobold
 	group = draconic
+	language = kobold
+	visible = true
+	playable = false
+	default_color = violet
+	upgrade = upgrade_kobold_civilization
+	description = "Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\"."
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_goblin_wooden_shield
+		attack = icon_gnomish_thrusting_sword_1
+		patrol = icon_goblin_patrol_land
+		stand_ground = icon_goblin_stand_ground
+		return_goods = icon_goblin_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/goblin/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/goblin/resource.png"
+			pos = { 0 0 }
+		}
+		{
+			file = "interface/goblin/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/goblin/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	personal_names = {
+		"Hodeke" #Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
+		"Hoidike" #Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
+		"Napfhans" #Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
+		"Pumphut" #Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
+		"Shellycoat" #Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
+	}
 }

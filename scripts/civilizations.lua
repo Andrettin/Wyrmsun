@@ -112,40 +112,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	}
 })
 
-DefineCivilization("kobold", {
-	Display = "Kobold",
-	Visible = true,
-	Species = "kobold",
-	ParentCivilization = "neutral",
-	Language = "kobold",
-	Adjective = "Kobold",
-	Playable = false,
-	DefaultColor = "violet",
-	CivilizationUpgrade = "upgrade-kobold-civilization",
-	ButtonIcons = {
-		"move", "icon-dwarven-boots",
-		"stop", "icon-goblin-wooden-shield",
-		"attack", "icon-gnomish-thrusting-sword-1",
-		"patrol", "icon-goblin-patrol-land",
-		"stand-ground", "icon-goblin-stand-ground",
-		"return-goods", "icon-goblin-return-goods"
-	},
-	UIFillers = {
-		"interface/goblin/filler_bottom.png", 380, -181,
-		"interface/goblin/resource.png", 0, 0,
-		"interface/goblin/buttonpanel.png", -256, -200,
-		"interface/goblin/infopanel.png", 0, -200
-	},
-	Description = "Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".",
-	PersonalNames = {
-		"Hodeke", -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
-		"Hoidike", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-		"Napfhans", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
-		"Pumphut", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
-		"Shellycoat", -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
-	}
-})
-
 DefineCivilization("teuton", {
 	Adjective = "Teutonic",
 	--[[
