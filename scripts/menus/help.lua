@@ -113,7 +113,6 @@ local tips = {
 	"You can build the same building many times if you hold the ALT and SHIFT keys while you place the structures.",
 
 	-- Interface-related tips
-	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 	"Press TAB to toggle through the minimap modes.",
 	"Press Shift-TAB to zoom/unzoom the minimap in larger maps.",
 
