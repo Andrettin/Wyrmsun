@@ -147,18 +147,6 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
 	ckey:setMarked(CUserInterface:get().ButtonPanel.ShowCommandKey)
 	ckey:adjustSize()
 
-	local mouse_grabbing = {}
-	mouse_grabbing = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16 * get_scale_factor(), offy + (26 * 2) * get_scale_factor(),
-		function()
-			wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
-			SetGrabMouse(wyr.preferences.GrabMouse)
-			SavePreferences()
-		end
-	)
-	mouse_grabbing:setMarked(GetGrabMouse())
-	mouse_grabbing:adjustSize()
-	mouse_grabbing:setTooltip(_("Ensures the mouse will be kept within the game's window"))
-
 	local reverse_mouse_wheel_scrolling = {}
 	reverse_mouse_wheel_scrolling = menu:addImageCheckBox(_("Reverse Mousewheel Scrolling"), offx + 16 * get_scale_factor(), offy + (26 * 3) * get_scale_factor(),
 		function()
@@ -360,22 +348,6 @@ function RunGameplayOptionsMenu()
 	)
 	hotkey_setup_dd:setSize(266 * get_scale_factor(), 20 * get_scale_factor())
 	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
-
-	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16 * get_scale_factor(), offy + (55 + 26*5 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.GrabMouse == false) then
-				wyr.preferences.GrabMouse = true
-			elseif (wyr.preferences.GrabMouse == true) then
-				wyr.preferences.GrabMouse = false
-			end
-			SetGrabMouse(wyr.preferences.GrabMouse)
-			SavePreferences()
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.GrabMouse)
-	b:setTooltip(_("Ensures the mouse will be kept within the game's window"))
 
 	b = menu:addImageCheckBox(_("Show Tips"), offx + 16 * get_scale_factor(), offy + (55 + 26*2 + 14) * get_scale_factor(),
 		function()

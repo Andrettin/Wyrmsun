@@ -1807,7 +1807,6 @@ local defaultPreferences = {
 	FogOfWarOpacity = 128,
 	GameSpeed = 30,
 	GameTranslation = "",
-	GrabMouse = false,              --  Enable/disable grabbing the mouse.
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	MouseScrollSpeed = 1,
@@ -1861,7 +1860,6 @@ SetEffectsVolume(wyr.preferences.EffectsVolume)
 SetFogOfWar(wyr.preferences.FogOfWar)
 SetFogOfWarOpacity(wyr.preferences.FogOfWarOpacity)
 SetGameSpeed(wyr.preferences.GameSpeed)
-SetGrabMouse(wyr.preferences.GrabMouse)
 SetGroupKeys(wyr.preferences.GroupKeys)
 SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)

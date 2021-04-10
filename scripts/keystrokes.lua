@@ -40,7 +40,6 @@ ResetKeystrokeHelp()
 --
 --AddKeystrokeHelp("Alt-B", "- toggle expand map")
 AddKeystrokeHelp("Alt-C", "- center on selected unit")
-AddKeystrokeHelp("Alt-G", "- toggle grab mouse")
 AddKeystrokeHelp("Alt-H", "- help menu")
 AddKeystrokeHelp("Alt-I", "- find idle worker")
 AddKeystrokeHelp("Ctrl-L", "- return to previous map layer")

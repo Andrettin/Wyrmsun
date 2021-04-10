@@ -1257,8 +1257,6 @@ Load("scripts/menus/factions.lua")
 Load("scripts/menus/family_tree.lua")
 Load("scripts/menus/custom_hero.lua")
 
-SetGrabMouse(wyr.preferences.GrabMouse)
-
 LoadData() -- process the data
 
 load_database(false)
