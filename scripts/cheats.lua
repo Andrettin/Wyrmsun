@@ -129,15 +129,6 @@ function HandleCheats(str)
 		for i = 1,table.getn(t) do
 			SetUnitMana(t[i], 255)
 		end
-	elseif (str == "mead of wisdom") then
-		AddMessage("All Technologies Allowed")
-		for i, unitName in ipairs(Units) do
-			for j=0,(PlayerMax - 1) do
-				if (((string.find(unitName, "upgrade") ~= nil and GetUpgradeData(unitName, "Civilization") == GetPlayerData(j, "RaceName")) or (string.find(unitName, "upgrade") == nil and GetUnitTypeData(unitName, "Civilization") == GetPlayerData(j, "RaceName"))) and GetPlayerData(j, "Allow", unitName) ~= "R") then
-					SetPlayerData(j, "Allow", unitName, "A")
-				end
-			end
-		end
 	elseif (str == "colossus of rhodes") then -- acquire all bronze age technologies
 		AddMessage("Acquired Bronze Age Technologies")
 		local bronze_upgrades = {
