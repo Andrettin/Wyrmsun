@@ -28,8 +28,6 @@ local keystrokes = {
   {"Alt-R", "- restart scenario"},
   {"Ctrl-S", "- mute sound"},
   {"Ctrl-T", "- track unit"},
-  {"Alt-V", "- next view port"},
-  {"Ctrl-V", "- previous view port"},
   {"Alt-W", "- select all visible units of the same type as the currently selected one"},
   {"Alt-WW", "- select all units of the same type as the currently selected one"},
   {"Alt-X", "- quit game"},
