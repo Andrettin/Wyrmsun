@@ -3393,7 +3393,7 @@ DefineUnitType("unit-template-spearman", {
 	Class = "spearman",
 	Template = true,
 	Costs = {"time", 50, "copper", 400, "lumber", 100},
-	BasicDamage = 5, -- reduced damage, since it is cheaper, and because it has a bonus against mounted units
+	BasicDamage = 6, -- reduced damage, since it is cheaper, and because it has a bonus against mounted units
 	BonusAgainstMounted = 100,
 	Armor = 1,
 	WeaponClasses = {"spear"},
@@ -3418,7 +3418,7 @@ DefineUnitType("unit-template-veteran-spearman", {
 	Intelligence = 11,
 	Charisma = 11,
 	HitPoints = 75,
-	BasicDamage = 6,
+	BasicDamage = 8,
 	Points = 75,
 	Level = 2,
 	AiDrops = {"unit-horn", "unit-amulet", "unit-ring"}
@@ -3435,7 +3435,7 @@ DefineUnitType("unit-template-heroic-spearman", {
 	Intelligence = 12,
 	Charisma = 12,
 	HitPoints = 90,
-	BasicDamage = 7,
+	BasicDamage = 9,
 	Points = 100,
 	Level = 3,
 	Inventory = true,

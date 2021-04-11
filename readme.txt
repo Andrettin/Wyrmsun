@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed crash which occurred when a ranged unit was garrisoned inside a caravan while near enemies.
+- Increased Spearman damage from 5 to 6.
 
 * User Interface
 - F11 is now the screenshot hotkey.
