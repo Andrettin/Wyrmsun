@@ -1,5 +1,6 @@
 germanic = {
 	group = germanic
+	default_color = orange
 	encyclopedia_background_file = "backgrounds/germanic_victory_sepia.png"
 	
 	unit_sounds = {

@@ -1,4 +1,6 @@
 suebi = {
+	default_color = black
+	
 	unit_sounds = {
 		selected = basic_germanic_voices_selected_group
 		acknowledge = basic_germanic_voices_acknowledge

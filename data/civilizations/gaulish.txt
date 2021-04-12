@@ -1,0 +1,5 @@
+gaul = {
+	aliases += gaulish
+	group = gaulish
+	default_color = black
+}

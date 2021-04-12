@@ -1,4 +1,5 @@
 treant = {
 	language = treant
 	group = plantoid
+	default_color = green
 }

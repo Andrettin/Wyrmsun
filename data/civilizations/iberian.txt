@@ -1,3 +1,4 @@
 iberian = {
 	language = iberian
+	default_color = brown
 }

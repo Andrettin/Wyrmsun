@@ -1,5 +1,6 @@
 goth = {
 	aliases += gothic
+	default_color = black
 	
 	unit_sounds = {
 		selected = basic_germanic_voices_selected_group

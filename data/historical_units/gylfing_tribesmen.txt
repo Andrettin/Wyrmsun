@@ -1,6 +1,6 @@
 gylfing_warriors = {
 	name = "Gylfing Warriors"
-	unit_type = unit_germanic_warrior
+	unit_class = infantry
 	quantity = 3
 	
 	history = {

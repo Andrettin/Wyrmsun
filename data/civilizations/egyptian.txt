@@ -1,3 +1,4 @@
 egyptian = {
 	language = egyptian
+	default_color = yellow
 }

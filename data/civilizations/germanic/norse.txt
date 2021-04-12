@@ -1,4 +1,6 @@
 norse = {
+	default_color = blue
+	
 	unit_sounds = {
 		selected = basic_germanic_voices_selected_group
 		acknowledge = basic_germanic_voices_acknowledge

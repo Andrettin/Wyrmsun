@@ -1,4 +1,6 @@
 latin = {
+	default_color = red
+
 	unit_sounds = {
 		help = basic_english_voices_help
 	}

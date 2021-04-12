@@ -52,7 +52,6 @@ DefineCivilization("germanic", {
 	Language = "proto-germanic",
 	Interface = "germanic",
 	Adjective = "Germanic",
-	DefaultColor = "orange",
 	Calendar = "anglo_saxon_calendar",
 	CivilizationUpgrade = "upgrade-germanic-civilization",
 	ButtonIcons = {
@@ -97,7 +96,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	ParentCivilization = "germanic",
 	Adjective = "Celtic",
 	Playable = false,
-	DefaultColor = "green",
 	CivilizationUpgrade = "upgrade-celtic-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
@@ -329,7 +327,6 @@ DefineCivilization("frankish", {
 	Language = "old-frankish",
 	ParentCivilization = "teuton",
 	Adjective = "Frankish",
-	DefaultColor = "black",
 	CivilizationUpgrade = "upgrade-frankish-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
@@ -357,7 +354,6 @@ DefineCivilization("suebi", {
 	Language = "old-high-german",
 	ParentCivilization = "teuton",
 	Adjective = "Suebi",
-	DefaultColor = "black",
 	CivilizationUpgrade = "upgrade-suebi-civilization",
 	DevelopsFrom = {"germanic"},
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
@@ -366,23 +362,19 @@ DefineCivilization("suebi", {
 DefineCivilization("gaul", {
 	Display = "Gaul",
 	Visible = false,
-	Group = "gaulish",
 	Language = "gaulish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gaul",
-	Playable = false,
-	DefaultColor = "black"
+	Playable = false
 })
 
 DefineCivilization("briton", {
 	Display = "Briton",
 	Visible = false,
-	Group = "brythonic",
 	Language = "british",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Briton",
 	Playable = false,
-	DefaultColor = "red",
 	PersonalNames = {
 		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
 	},
@@ -404,7 +396,6 @@ DefineCivilization("welsh", {
 	ParentCivilization = "briton",
 	Adjective = "Welsh",
 	Playable = false,
-	DefaultColor = "green",
 	PersonalNames = {
 		"female", "Aranrhod", -- daughter of Dôn; Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 143.
 		"female", "Branwen", -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 130.
@@ -458,8 +449,7 @@ DefineCivilization("gael", {
 	Language = "irish",
 	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
 	Adjective = "Gael",
-	Playable = false,
-	DefaultColor = "green"
+	Playable = false
 })
 
 DefineCivilization("latin", {
@@ -470,7 +460,6 @@ DefineCivilization("latin", {
 	ParentCivilization = "teuton",
 	Adjective = "Latin",
 	Playable = false,
-	DefaultColor = "red",
 	CivilizationUpgrade = "upgrade-latin-civilization",
 	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.",
 	UnitSounds = {
@@ -619,7 +608,6 @@ DefineCivilization("goth", {
 	DevelopsFrom = {"germanic"},
 	Currency = "tremissis",
 	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
-	DefaultColor = "black",
 	PersonalNames = {
 		-- Burgundian names
 		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
@@ -745,7 +733,6 @@ DefineCivilization("egyptian", {
 	ParentCivilization = "greek",
 	Adjective = "Egyptian",
 	Playable = false,
-	DefaultColor = "yellow",
 	CivilizationUpgrade = "upgrade-egyptian-civilization",
 	PersonalNames = {
 		"male", "Amenofis", -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
@@ -799,7 +786,6 @@ DefineCivilization("norse", {
 	Language = "old-norse",
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
-	DefaultColor = "blue",
 	DevelopsFrom = {"germanic"},
 	CivilizationUpgrade = "upgrade_norse_civilization",
 	Calendar = "norse_calendar",
@@ -857,8 +843,7 @@ DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, s
 	Group = "old_european",
 	ParentCivilization = "germanic",
 	Adjective = "Iberian",
-	Playable = false,
-	DefaultColor = "brown"
+	Playable = false
 })
 
 DefineCivilization("magyar", {
@@ -917,7 +902,6 @@ DefineCivilization("treant", {
 	ParentCivilization = "neutral",
 	Adjective = "Treant",
 	Playable = false,
-	DefaultColor = "green",
 	PersonalNames = {
 		"male", "Bludebalmen", -- from Battle for Wesnoth
 		"male", "Boladrumbadrum", -- from Battle for Wesnoth
@@ -977,7 +961,7 @@ DefineCivilization("treant", {
 		"male", "Tumtonnongatum", -- from Battle for Wesnoth
 		"male", "Tumtumgamtomtom", -- from Battle for Wesnoth
 		"male", "Wonrunmaldin", -- from Battle for Wesnoth
-		"male", "Wudadoonopl"
+		"male", "Wudadoonopl" -- from Battle for Wesnoth
 	}
 })
 

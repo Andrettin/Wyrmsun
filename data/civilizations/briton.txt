@@ -1,0 +1,4 @@
+briton = {
+	group = brythonic
+	default_color = red
+}

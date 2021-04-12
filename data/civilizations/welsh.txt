@@ -1,0 +1,3 @@
+welsh = {
+	default_color = green
+}

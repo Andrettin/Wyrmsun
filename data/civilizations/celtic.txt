@@ -1,4 +1,5 @@
 celt = {
 	aliases += celtic
 	group = celtic
+	default_color = green
 }
