@@ -12,6 +12,7 @@ LargeButton {
 	x: button_x * boundary_width + x_offset
 	y: button_y * boundary_height + y_offset
 	text: model.modelData.name
+	hotkey: model.modelData.hotkey ? model.modelData.hotkey : ""
 	
 	onClicked: {
 		menu_stack.push("menus/EncyclopediaEntryMenu.qml", {

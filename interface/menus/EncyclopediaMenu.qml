@@ -82,7 +82,14 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Game Concepts"
 		hotkey: "g"
-		lua_command: "RunEncyclopediaGameConceptsMenu();"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryMenu.qml", {
+				category: "game_concepts",
+				category_name: "Game Concepts",
+				entries: wyrmgus.get_game_concept_encyclopedia_entries()
+			})
+		}
 	}
 	
 	LargeButton {

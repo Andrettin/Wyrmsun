@@ -38,6 +38,30 @@ MenuBase {
 		}
 	}
 	
+	Keys.onPressed: {
+		for (var i = 0; i < button_area.contentItem.children.length; ++i) {
+			var child_element = button_area.contentItem.children[i]
+			if (child_element.on_pressed_key) {
+				child_element.on_pressed_key(event)
+				if (event.accepted) {
+					break
+				}
+			}
+		}
+	}
+	
+	Keys.onReleased: {
+		for (var i = 0; i < button_area.contentItem.children.length; ++i) {
+			var child_element = button_area.contentItem.children[i]
+			if (child_element.on_released_key) {
+				child_element.on_released_key(event)
+				if (event.accepted) {
+					break
+				}
+			}
+		}
+	}
+	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom

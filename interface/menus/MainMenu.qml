@@ -112,7 +112,6 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
-		lua_command: "Load(\"scripts/game_concepts.lua\");"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaMenu.qml")
