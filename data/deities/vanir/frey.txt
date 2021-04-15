@@ -4,7 +4,7 @@ frey = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Sourc
 	homeworld = vanaheim
 	major = true
 	gender = male
-	icon = icon_frey
+	icon = frey
 	father = njord
 	civilizations = {
 		elven #Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Frey an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.

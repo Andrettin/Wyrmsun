@@ -3,7 +3,7 @@ freyja = { #Source: Peter Buchholz, "Perspectives for Historical Research in Ger
 	pantheon = vanir
 	homeworld = vanaheim
 	gender = female
-	icon = icon_freyja
+	icon = freyja
 	father = njord
 	civilizations = {
 		elven #Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Frey an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
