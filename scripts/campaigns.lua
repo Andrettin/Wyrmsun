@@ -41,7 +41,7 @@ DefineCampaign("freys-messenger", {
 })
 --]]
 
-DefineCampaign("thors-servant", {
+DefineCampaign("thors_servant", {
 	MapTemplates = {
 		"earth_space", {0, 0}, {384, 384},
 		"jotunheim", {679, 304}, {64, 64}

@@ -25,14 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("thialfi-commanded-to-gotland", {
+DefineDialogue("thialfi_commanded_to_gotland", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
 			"text", "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant")
 					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
 					unit = FindUnit("unit-revealer", trigger_player)
 					if not (unit) then
@@ -134,8 +133,8 @@ DefineDialogue("thors-servant-skidbladnir-destroyed", {
 			"text", "The ship Skidbladnir has been destroyed... there is no way for me to reach the world of the ettins now. I have failed Thunraz.",
 			"option-effects", {
 				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "thors-servant")) then
-						SetPlayerData(trigger_player, "FailQuest", "thors-servant")
+					if (GetPlayerData(trigger_player, "HasQuest", "thors_servant")) then
+						SetPlayerData(trigger_player, "FailQuest", "thors_servant")
 					end
 				end
 			}
@@ -150,8 +149,8 @@ DefineDialogue("thors-servant-geirrod-killed", {
 			"text", "Ha! I have done it, truly. Not without some wounds, but... Thialfi the Giantslayer, now that has a nice ring to it.",
 			"option-effects", {
 				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "thors-servant")) then
-						SetPlayerData(trigger_player, "CompleteQuest", "thors-servant")
+					if (GetPlayerData(trigger_player, "HasQuest", "thors_servant")) then
+						SetPlayerData(trigger_player, "CompleteQuest", "thors_servant")
 					end
 				end
 			}

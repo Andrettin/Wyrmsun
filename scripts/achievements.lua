@@ -41,12 +41,12 @@ DefineAchievement("heimdalls-progeny", {
 	RequiredQuests = {"heimdalls_progeny"}
 })
 
-DefineAchievement("thors-servant", {
+DefineAchievement("thors_servant", {
 	Name = "Thunraz's Servant",
 	Icon = "icon-thor",
 	Description = "Complete the Thunraz's Servant scenario.",
 	PlayerColor = "white",
-	RequiredQuests = {"thors-servant"}
+	RequiredQuests = {"thors_servant"}
 })
 
 DefineAchievement("the-first-marcomannic-war", {

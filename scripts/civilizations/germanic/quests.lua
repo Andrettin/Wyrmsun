@@ -436,12 +436,17 @@ DefineQuest("the-sun-shields", { -- Source: http://en.natmus.dk/historical-knowl
 	}
 })
 
-DefineQuest("thors-servant", {
+DefineQuest("thors_servant", {
 	Name = "Thunraz's Servant",
 	Icon = "icon-thor",
 	World = "earth",
 	Civilization = "germanic",
 	PlayerColor = "white",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
+			CallDialogue("thialfi_commanded_to_gotland", trigger_player)
+		end
+	end,
 	CompletionEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-victory", trigger_player)

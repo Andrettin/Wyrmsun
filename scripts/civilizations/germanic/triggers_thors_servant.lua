@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("thialfi-commanded-to-gotland",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("thialfi", i) ~= nil and GetCurrentCampaign() == "thors_servant") then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		CallDialogue("thialfi-commanded-to-gotland", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
