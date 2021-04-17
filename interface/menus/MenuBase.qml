@@ -22,6 +22,15 @@ Item {
 		anchors.fill: parent
 		hoverEnabled: true
 		acceptedButtons: Qt.AllButtons
+		
+		onClicked: {
+			for (var i = 0; i < menu.children.length; ++i) {
+				var child_element = menu.children[i]
+				if (child_element.on_clicked_outside) {
+					child_element.on_clicked_outside()
+				}
+			}
+		}
 	}
 	
 	LargeText {

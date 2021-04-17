@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 
 Item {
 	id: widget
+	clip: true
 	
 	property string widget_type: ""
 	property string interface_style: "default"
@@ -13,6 +14,7 @@ Item {
 	property bool pressed: mouse_area.containsPress || hotkey_pressed
 	property bool hovered: mouse_area.containsMouse
 	readonly property var image: widget_image
+	readonly property var mouse_area_element: mouse_area
 	
 	signal clicked()
 	
@@ -25,6 +27,7 @@ Item {
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.left: parent.left
 		source: "image://interface/" + interface_style + "/" + parent.widget_type + "/" + (parent.pressed ? "pressed" : "normal")
+		fillMode: Image.Pad
 	}
 	
 	MouseArea {
