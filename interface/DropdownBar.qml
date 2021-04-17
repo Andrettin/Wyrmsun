@@ -4,4 +4,5 @@ import QtQuick.Controls 2.12
 ButtonBase {
 	button_type: "dropdown_bar"
 	pressed: false
+	centered_text: false
 }
