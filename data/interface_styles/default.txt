@@ -1,4 +1,5 @@
 default = {
+	dropdown_bar_file = "interface/dwarven/pulldown_bar_normal.png"
 	large_button = {
 		normal_file = "interface/default/button_large_normal.png"
 		pressed_file = "interface/default/button_large_pressed.png"

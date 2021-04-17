@@ -1,5 +1,6 @@
 germanic = {
 	top_bar_file = "interface/germanic/resource.png"
+	dropdown_bar_file = "interface/germanic/pulldown_bar_normal.png"
 	large_button = {
 		normal_file = "interface/germanic/button_large_normal.png"
 		pressed_file = "interface/germanic/button_large_pressed.png"
