@@ -23,7 +23,7 @@ Item {
 	DropdownBar {
 		id: dropdown_bar
 		width: dropdown.width
-		text: selected_entry_index !== -1 ? get_entry_name(selected_entry_index) : ""
+		text: selected_entry_index !== -1 ? get_entry_name(get_selected_entry()) : ""
 		
 		onClicked: {
 			dropdown.expanded = !dropdown.expanded
@@ -49,7 +49,7 @@ Item {
 			y: dropdown.height * (index + 1)
 			width: dropdown.width
 			visible: dropdown.expanded
-			text: get_entry_name(index)
+			text: get_entry_name(dropdown.entries[index])
 			
 			onClicked: {
 				dropdown.expanded = false
@@ -62,8 +62,16 @@ Item {
 		dropdown.expanded = false
 	}
 	
+	function get_selected_entry() {
+		if (dropdown.selected_entry_index == -1) {
+			return null
+		}
+		
+		return dropdown.entries[dropdown.selected_entry_index]
+	}
+	
 	//override this if the entry list is not a string list
-	function get_entry_name(entry_index) {
-		return dropdown.entries[entry_index]
+	function get_entry_name(entry) {
+		return entry
 	}
 }

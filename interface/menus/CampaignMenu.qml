@@ -6,6 +6,29 @@ MenuBase {
 	id: campaign_menu
 	title: "Scenarios"
 	
+	Dropdown {
+		id: campaign_dropdown
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: parent.title_element.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor * 4
+		width: 250 * wyrmgus.defines.scale_factor
+		entries: wyrmgus.get_available_campaigns()
+		
+		function get_entry_name(entry) {
+			return entry.name
+		}
+		
+		Connections {
+			target: wyrmgus
+			onRunningChanged: {
+				if (!wyrmgus.running) {
+					//refresh the campaign list when a game has ended, as new campaigns may have become available
+					campaign_dropdown.entries = wyrmgus.get_available_campaigns()
+				}
+			}
+		}
+	}
+	
 	LargeButton {
 		id: start_scenario_button
 		anchors.horizontalCenter: parent.horizontalCenter
