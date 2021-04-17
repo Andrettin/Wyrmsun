@@ -16,4 +16,8 @@ default = {
 		unchecked_file = "interface/dwarven/radio_normal_unselected.png"
 		unchecked_pressed_file = "interface/dwarven/radio_pressed_unselected.png"
 	}
+	down_arrow_button = {
+		normal_file = "interface/dwarven/down_arrow_normal.png"
+		pressed_file = "interface/dwarven/down_arrow_pressed.png"
+	}
 }

@@ -17,4 +17,8 @@ germanic = {
 		unchecked_file = "interface/germanic/radio_normal_unselected.png"
 		unchecked_pressed_file = "interface/germanic/radio_pressed_unselected.png"
 	}
+	down_arrow_button = {
+		normal_file = "interface/germanic/down_arrow_normal.png"
+		pressed_file = "interface/germanic/down_arrow_pressed.png"
+	}
 }
