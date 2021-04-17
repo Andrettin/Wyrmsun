@@ -14,8 +14,15 @@ MenuBase {
 		width: 250 * wyrmgus.defines.scale_factor
 		entries: wyrmgus.get_available_campaigns()
 		
-		function get_entry_name(entry) {
-			return entry.name
+		onEntriesChanged: {
+			campaign_dropdown.set_selected_entry(wyrmgus.preferences.selected_campaign)
+		}
+		
+		onSelectedEntryChanged: {
+			if (wyrmgus.preferences.selected_campaign !== campaign_dropdown.selectedEntry) {
+				wyrmgus.preferences.selected_campaign = campaign_dropdown.selectedEntry
+				wyrmgus.preferences.save()
+			}
 		}
 		
 		Connections {
@@ -26,6 +33,10 @@ MenuBase {
 					campaign_dropdown.entries = wyrmgus.get_available_campaigns()
 				}
 			}
+		}
+		
+		function get_entry_name(entry) {
+			return entry.name
 		}
 	}
 	

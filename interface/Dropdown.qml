@@ -8,22 +8,23 @@ Item {
 	
 	property bool expanded: false
 	property var entries: []
-	property int selected_entry_index: -1
+	property int selectedEntryIndex: -1
+	property var selectedEntry: selectedEntryIndex !== -1 ? entries[selectedEntryIndex] : null
 	
 	onEntriesChanged: {
 		if (entries.length > 0) {
-			if (selected_entry_index == -1 || selected_entry_index >= entries.length) {
-				selected_entry_index = 0
+			if (selectedEntryIndex == -1 || selectedEntryIndex >= entries.length) {
+				selectedEntryIndex = 0
 			}
 		} else {
-			selected_entry_index = -1
+			selectedEntryIndex = -1
 		}
 	}
 		
 	DropdownBar {
 		id: dropdown_bar
 		width: dropdown.width
-		text: selected_entry_index !== -1 ? get_entry_name(get_selected_entry()) : ""
+		text: selectedEntry !== null ? get_entry_name(selectedEntry) : ""
 		
 		onClicked: {
 			dropdown.expanded = !dropdown.expanded
@@ -53,7 +54,7 @@ Item {
 			
 			onClicked: {
 				dropdown.expanded = false
-				dropdown.selected_entry_index = index
+				dropdown.selectedEntryIndex = index
 			}
 		}
 	}
@@ -62,16 +63,21 @@ Item {
 		dropdown.expanded = false
 	}
 	
-	function get_selected_entry() {
-		if (dropdown.selected_entry_index == -1) {
-			return null
-		}
-		
-		return dropdown.entries[dropdown.selected_entry_index]
-	}
-	
 	//override this if the entry list is not a string list
 	function get_entry_name(entry) {
 		return entry
+	}
+	
+	function set_selected_entry(chosen_entry) {
+		if (chosen_entry == null) {
+			return
+		}
+		
+		for (var i = 0; i < dropdown.entries.length; ++i) {
+			var entry = dropdown.entries[i]
+			if (entry == chosen_entry) {
+				dropdown.selectedEntryIndex = i
+			}
+		}
 	}
 }
