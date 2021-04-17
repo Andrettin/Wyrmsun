@@ -29,6 +29,11 @@ DefineQuest("the_first_dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-modsognir",
 	PlayerColor = "red",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
+			CallDialogue("a-rocky-home-introduction", trigger_player)
+		end
+	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
 			CallDialogue("campaign-defeat", trigger_player)

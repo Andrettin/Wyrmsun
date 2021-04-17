@@ -43,7 +43,6 @@ DefineDialogue("a-rocky-home-introduction", {
 			"text", "There are many perils laying about. We need to be ready quickly.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the_first_dwarves")
 					SetPlayerData(trigger_player, "AcceptQuest", "a_rocky_home")
 				end
 			}
