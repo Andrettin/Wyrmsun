@@ -36,7 +36,13 @@ MenuBase {
 		}
 		
 		function get_entry_name(entry) {
-			return entry.name
+			var name = entry.name
+			
+			if (entry.quest !== null && !entry.quest.completed) {
+				name += " " + highlight("(!)")
+			}
+			
+			return name
 		}
 	}
 	

@@ -70,7 +70,7 @@ function RunCampaignMenu()
 	)
 	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
-
+	
 	local campaign_dd
 	local potential_campaigns = GetCampaigns()
 	local campaign_ident_list = {}
@@ -100,9 +100,9 @@ function RunCampaignMenu()
 			return a < b
 		end
 	end
-		
+	
 	table.sort(campaign_ident_list, compare_campaign)
-
+	
 	for i=1,table.getn(campaign_ident_list) do
 		local campaign_name = GetCampaignData(campaign_ident_list[i], "Name")
 		if not (GetQuestData(campaign_ident_list[i], "Completed")) then
@@ -113,7 +113,7 @@ function RunCampaignMenu()
 	
 	local function UpdateCampaignDescription()
 			faction_name = _("Faction:").. " " .. _(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name")) .. " (" .. _(GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display")) .. ")"
-	
+			
 			start_year = GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYear")
 			start_date_str = _("Start Year:").. " " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYearString")
 			if (start_year >= 0) then
@@ -121,7 +121,7 @@ function RunCampaignMenu()
 			else
 				start_date_str = start_date_str .. " BC"
 			end
-	
+			
 			highest_completed_difficulty = _("Highest Completed Difficulty: ")
 			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyEasy) then
 				highest_completed_difficulty = highest_completed_difficulty .. _("Easy")
@@ -138,7 +138,6 @@ function RunCampaignMenu()
 			campaign_description:setCaption(faction_name .. "\n\n" .. start_date_str .. "\n\n" .. _("Description: ") .. _(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")) .. "\n\n" .. highest_completed_difficulty)
 			campaign_description:adjustSize()
 	end
-	
 	
 	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*-0.5) * get_scale_factor(),
 		function(dd)
