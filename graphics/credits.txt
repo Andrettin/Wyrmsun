@@ -1939,6 +1939,7 @@
 /graphics/ui/infopanel_frame.png (by Jinn) (licensed under the CC0)
 /graphics/ui/progress_bar.png (by Jinn) (licensed under the CC0)
 /graphics/units/construct/clay_golem.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/units/dwarven/geomancer.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/elven/worker.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/elven/worker_with_gold.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/elven/worker_with_lumber.png (by Kwaliti and Jinn) (licensed under the CC0)
