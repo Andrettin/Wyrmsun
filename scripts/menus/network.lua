@@ -139,9 +139,6 @@ function RunJoiningMapMenu(s)
 	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), function() end)
 	revealmap:setEnabled(true)
 	revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scale_factor(), function() end)
-	no_randomness:setEnabled(true)
-	no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
 	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), function() end)
 	computer_opponents:setEnabled(true)
 	computer_opponents:setMarked(ServerSetupState.Opponents > 0)
@@ -205,8 +202,6 @@ function RunJoiningMapMenu(s)
 		GameSettings.NoFogOfWar = not int2bool(ServerSetupState.FogOfWar)
 		revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
 		GameSettings.RevealMap = ServerSetupState.RevealMap
-		no_randomness:setMarked(int2bool(ServerSetupState.NoRandomness))
-		GameSettings.NoRandomness = int2bool(ServerSetupState.NoRandomness)
 		computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 		resources:setSelected(ServerSetupState.ResourcesOption)
 		GameSettings.Resources = ServerSetupState.ResourcesOption
@@ -361,13 +356,6 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		GameSettings.RevealMap = bool2int(dd:isMarked())
 	end
 	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), revealMapCb)
-	local function no_randomnessCb(dd)
-		ServerSetupState.NoRandomness = bool2int(dd:isMarked())
-		NetworkServerResyncClients()
-		GameSettings.NoRandomness = dd:isMarked()
-	end
-	local no_randomness = menu:addImageCheckBox(_("No Randomness"), sx, sy*3+180 * get_scale_factor(), no_randomnessCb)
-	no_randomness:setMarked(false)
 	
 	ServerSetupState.Opponents = 0
 	local function computer_opponentsCb(dd)

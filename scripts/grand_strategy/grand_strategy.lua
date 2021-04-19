@@ -68,8 +68,6 @@ function RunGrandStrategyGameSetupMenu()
 	local hero_list = {}
 	local automatic_battles
 	local battle_base_building
-	local no_randomness
-	local no_time_of_day
 
 	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
 

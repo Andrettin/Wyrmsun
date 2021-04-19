@@ -1244,11 +1244,7 @@ function DeathExplosion(unit, pixel_x, pixel_y)
 		if (GetUnitVariable(nearby_uncount[unit1], "HitPoints") > 0) then
 			local damage = 6
 			damage = math.floor(damage * (100 - GetUnitVariable(nearby_uncount[unit1], "FireResistance")) / 100)
-			if (GameSettings.NoRandomness) then
-				damage = damage - math.floor(((damage + 2) / 2) / 2) -- if no randomness setting is used, then the damage will always return what would have been the average damage with randomness
-			else
-				damage = damage - SyncRand(math.floor((damage + 2) / 2))
-			end
+			damage = damage - SyncRand(math.floor((damage + 2) / 2))
 			DamageUnit(unit, nearby_uncount[unit1], damage)
 		end
 	end
@@ -1830,8 +1826,6 @@ local defaultPreferences = {
 	Autosave = true,
 	PlayerColorCircle = false,
 	HotkeySetup = 0,
-	NoRandomness = false,
-	NoTimeOfDay = false,
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",

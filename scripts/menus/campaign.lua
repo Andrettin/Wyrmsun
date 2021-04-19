@@ -35,29 +35,11 @@ function RunCampaignMenu()
 	local faction_name
 	local start_year
 	local start_date_str
-	local no_randomness
-	local no_time_of_day
 	local menu = WarMenu()
 	campaign_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),
-		function()
-			wyr.preferences.NoRandomness = no_randomness:isMarked()
-			SavePreferences()
-		end
-	)
-	no_randomness:setMarked(wyr.preferences.NoRandomness)
-	
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480 * get_scale_factor(), offy + (10 + 300 + 3) * get_scale_factor(),
-		function()
-			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
-			SavePreferences()
-		end
-	)
-	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
-		
+			
 	local campaign_dd
 	local potential_campaigns = GetCampaigns()
 	local campaign_ident_list = {}

@@ -65,8 +65,6 @@ end
 function RunQuestMenu(world)
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	local no_randomness
-	local no_time_of_day
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -99,22 +97,6 @@ function RunQuestMenu(world)
 	end
 	
 	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
-
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480 * get_scale_factor(), offy + (10 + 270 + 3) * get_scale_factor(),
-		function()
-			wyr.preferences.NoRandomness = no_randomness:isMarked()
-			SavePreferences()
-		end
-	)
-	no_randomness:setMarked(wyr.preferences.NoRandomness)
-	
-	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 480 * get_scale_factor(), offy + (10 + 300 + 3) * get_scale_factor(),
-		function()
-			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
-			SavePreferences()
-		end
-	)
-	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
 	
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
@@ -241,8 +223,6 @@ function addQuestIcon(quest, menu, x, y)
 								GameSettings.Presets[i-1].Type = PlayerComputer
 							end
 						end
-						GameSettings.NoRandomness = wyr.preferences.NoRandomness
-						GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 						GameSettings.Difficulty = get_difficulty_index()
 						mapname = GetQuestData(quest, "Map")
 						quest_menu:stop()
