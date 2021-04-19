@@ -24,9 +24,8 @@ MenuBase {
 		visible: entry.icon ? true : false
 	}
 	
-	//draw a semi-transparent rectangle behind the text, to make it more readable
-	Rectangle {
-		id: text_background
+	ScrollableTextArea {
+		id: text_area
 		anchors.left: parent.left
 		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
@@ -35,44 +34,7 @@ MenuBase {
 		anchors.topMargin: (entry.icon ? 16 : 32) * wyrmgus.defines.scale_factor
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
-		color: "black"
-		radius: 5
-		opacity: 0.5
-	}
-	
-	Flickable {
-		id: text_area
-		anchors.left: text_background.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
-		anchors.right: text_background.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
-		anchors.top: text_background.top
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		anchors.bottom: text_background.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		contentWidth: contentItem.childrenRect.width
-		contentHeight: contentItem.childrenRect.height
-		boundsBehavior: Flickable.StopAtBounds
-		clip: true
-		ScrollBar.vertical: ScrollBar {
-			policy: ScrollBar.AsNeeded
-		}
-		
-		NormalText {
-			id: entry_text
-			width: text_area.width
-			text: format_text(entry.encyclopedia_text)
-			wrapMode: Text.WordWrap
-			textFormat: Text.StyledText
-			linkColor: "#78b5d5"
-			maximumLineCount: 564 //if the number of lines is allowed to become greater than this, then the text becomes a black rectangle
-			
-			onLinkActivated: {
-				menu_stack.push("EncyclopediaEntryMenu.qml", {
-					entry: wyrmgus.get_link_target(link)
-				})
-			}
-		}
+		text: entry.encyclopedia_text
 	}
 	
 	PreviousMenuButton {
