@@ -5,6 +5,7 @@ Item {
 	id: dropdown
 	width: dropdown_bar.image.width
 	height: dropdown_bar.height
+	z: 1 //the expanded dropdown should be above other elements
 	
 	property bool expanded: false
 	property var entries: []

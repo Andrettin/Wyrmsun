@@ -75,4 +75,29 @@ Window {
 	function random_element(arr) {
 		return arr[random(arr.length)]
 	}
+	
+	//function to format numbers as text
+	function number_string(n) {
+		return n.toLocaleString(Qt.locale("en_US"), 'f', 0)
+	}
+	
+	function year_string(year) {
+		var year_suffix
+		
+		if (year >= 0) {
+			year_suffix = "AD"
+		} else {
+			year_suffix = "BC"
+			year = Math.abs(year - 1) //-1 was needed, as otherwise negative dates were off by one
+		}
+		
+		var year_str
+		if (year >= 10000) {
+			year_str = number_string(year)
+		} else {
+			year_str = year
+		}
+		
+		return year_str + " " + year_suffix
+	}
 }
