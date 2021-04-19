@@ -58,7 +58,7 @@ MenuBase {
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: difficulty_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		text: "Faction: " + campaign.faction.name + " (" + campaign.faction.civilization.name + ")\n\nStart Year: " + year_string(campaign.start_date.getFullYear()) + "\n\nDescription: " + campaign.description + "\n\nHighest Completed Difficulty: " + wyrmgus.get_difficulty_name(campaign.quest ? campaign.quest.highest_completed_difficulty_index : "Unknown")
+		text: "Faction: " + campaign.faction.name + " (" + campaign.faction.civilization.name + ")\n\nStart Year: " + year_string(campaign.start_date.getFullYear()) + "\n\nDescription: " + campaign.description + "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
 	}
 	
 	NormalText {
