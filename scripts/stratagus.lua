@@ -1833,7 +1833,6 @@ local defaultPreferences = {
 	NoRandomness = false,
 	NoTimeOfDay = false,
 	AutomaticBattles = false,
-	Difficulty = DifficultyNormal,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},

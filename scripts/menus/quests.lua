@@ -122,12 +122,12 @@ function RunQuestMenu(world)
 	menu:addLabel(_("Difficulty:"), offx + 244 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
 	difficulty = menu:addDropDown(difficulty_list, offx + 244 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
 		function(dd)
-			wyr.preferences.Difficulty = difficulty:getSelected() + 1
-			SavePreferences()
+			set_difficulty_index(difficulty:getSelected() + 1)
+			save_preferences()
 		end
 	)
 	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	difficulty:setSelected(wyr.preferences.Difficulty - 1)
+	difficulty:setSelected(get_difficulty_index() - 1)
 
 	local custom_heroes = GetCustomHeroes()
 	local hero_list = {}
@@ -243,7 +243,7 @@ function addQuestIcon(quest, menu, x, y)
 						end
 						GameSettings.NoRandomness = wyr.preferences.NoRandomness
 						GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
-						GameSettings.Difficulty = wyr.preferences.Difficulty
+						GameSettings.Difficulty = get_difficulty_index()
 						mapname = GetQuestData(quest, "Map")
 						quest_menu:stop()
 						RunMap(mapname)

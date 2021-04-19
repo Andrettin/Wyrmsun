@@ -57,20 +57,7 @@ function RunCampaignMenu()
 		end
 	)
 	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
-	
-	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
-	local difficulty = nil
-	
-	menu:addLabel(_("Difficulty:"), offx + 244 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 244 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
-		function(dd)
-			wyr.preferences.Difficulty = difficulty:getSelected() + 1
-			SavePreferences()
-		end
-	)
-	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	difficulty:setSelected(wyr.preferences.Difficulty - 1)
-	
+		
 	local campaign_dd
 	local potential_campaigns = GetCampaigns()
 	local campaign_ident_list = {}

@@ -1,6 +1,6 @@
 hell = {
 	name = "Hell"
-	main_template = universe
+	#main_template = universe
 	world = hell
 	size = { 32 32 }
 	circle = true

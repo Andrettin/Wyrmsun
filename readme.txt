@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 - Fixed issue which caused solid overlay tiles to not be displayed in the editor.
 
+* Scenarios
+- Fixed crash which occurred when starting the Thunraz's Servant scenario.
+
 * Terrain
 - Added new dry mud and mud decoration tiles.
 

@@ -46,6 +46,38 @@ MenuBase {
 		}
 	}
 	
+	NormalText {
+		id: difficulty_label
+		text: "Difficulty:"
+		anchors.horizontalCenter: difficulty_dropdown.horizontalCenter
+		anchors.bottom: difficulty_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	Dropdown {
+		id: difficulty_dropdown
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: start_scenario_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * entries.length)
+		width: 100 * wyrmgus.defines.scale_factor
+		entries: wyrmgus.get_difficulties()
+		
+		onEntriesChanged: {
+			set_selected_entry(wyrmgus.preferences.get_difficulty_index())
+		}
+		
+		onSelectedEntryChanged: {
+			if (wyrmgus.preferences.get_difficulty_index() !== selectedEntry) {
+				wyrmgus.preferences.set_difficulty_index(selectedEntry)
+				wyrmgus.preferences.save()
+			}
+		}
+		
+		function get_entry_name(entry) {
+			return wyrmgus.get_difficulty_name(entry)
+		}
+	}
+	
 	LargeButton {
 		id: start_scenario_button
 		anchors.horizontalCenter: parent.horizontalCenter
@@ -53,7 +85,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Scenario"
 		hotkey: "s"
-		lua_command: "save_preferences(); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.NoRandomness = wyr.preferences.NoRandomness; GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay; GameSettings.Difficulty = wyr.preferences.Difficulty; campaign_menu:stop(); RunMap(\"scripts/map_templates/campaign.smp\");"
+		lua_command: "save_preferences(); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.NoRandomness = wyr.preferences.NoRandomness; GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay; GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; campaign_menu:stop(); RunMap(\"scripts/map_templates/campaign.smp\");"
 	}
 	
 	PreviousMenuButton {
