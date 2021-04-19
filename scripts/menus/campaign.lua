@@ -30,11 +30,6 @@ campaign_menu = nil
 function RunCampaignMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-	local campaign_description
-	local highest_completed_difficulty
-	local faction_name
-	local start_year
-	local start_date_str
 	local menu = WarMenu()
 	campaign_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
@@ -80,39 +75,10 @@ function RunCampaignMenu()
 		table.insert(campaign_list, campaign_name)
 	end
 	
-	local function UpdateCampaignDescription()
-			faction_name = _("Faction:").. " " .. _(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Name")) .. " (" .. _(GetCivilizationData(GetFactionData(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Faction"), "Civilization"), "Display")) .. ")"
-			
-			start_year = GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYear")
-			start_date_str = _("Start Year:").. " " .. GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "StartYearString")
-			if (start_year >= 0) then
-				start_date_str = start_date_str .. " AD"
-			else
-				start_date_str = start_date_str .. " BC"
-			end
-			
-			highest_completed_difficulty = _("Highest Completed Difficulty: ")
-			if (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyEasy) then
-				highest_completed_difficulty = highest_completed_difficulty .. _("Easy")
-			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyNormal) then
-				highest_completed_difficulty = highest_completed_difficulty .. _("Normal")
-			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyHard) then
-				highest_completed_difficulty = highest_completed_difficulty .. _("Hard")
-			elseif (GetQuestData(campaign_ident_list[campaign_dd:getSelected() + 1], "HighestCompletedDifficulty") == DifficultyBrutal) then
-				highest_completed_difficulty = highest_completed_difficulty .. _("Brutal")
-			else
-				highest_completed_difficulty = highest_completed_difficulty .. _("None")
-			end
-			
-			campaign_description:setCaption(faction_name .. "\n\n" .. start_date_str .. "\n\n" .. _("Description: ") .. _(GetCampaignData(campaign_ident_list[campaign_dd:getSelected() + 1], "Description")) .. "\n\n" .. highest_completed_difficulty)
-			campaign_description:adjustSize()
-	end
-	
 	campaign_dd = menu:addDropDown(campaign_list, (Video.Width / 2) - (240 / 2) * get_scale_factor(), offy + (104 + 36*-0.5) * get_scale_factor(),
 		function(dd)
 			SetCurrentCampaign(campaign_ident_list[campaign_dd:getSelected() + 1])
 			set_selected_campaign(campaign_ident_list[campaign_dd:getSelected() + 1])
-			UpdateCampaignDescription()
 		end
 	)
 	campaign_dd:setSize(240 * get_scale_factor(), 20 * get_scale_factor())
@@ -124,9 +90,5 @@ function RunCampaignMenu()
 		SetCurrentCampaign(campaign_ident_list[1])
 	end
 	
-	campaign_description = menu:addMultiLineLabel("", ((Video.Width - 640 * get_scale_factor()) / 2) + 32 * get_scale_factor(), offy + (104 + 36*1) * get_scale_factor(), Fonts["game"], false, Video.Width - (Video.Width - 640 * get_scale_factor()) - 64 * get_scale_factor())
-	
-	UpdateCampaignDescription()
-
 	menu:run()
 end
