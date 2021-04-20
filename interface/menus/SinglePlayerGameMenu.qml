@@ -40,6 +40,10 @@ MenuBase {
 		text: "Custom Game"
 		hotkey: "u"
 		lua_command: "RunSinglePlayerCustomGameMenu();"
+		
+		onClicked: {
+			menu_stack.push("CustomGameMenu.qml")
+		}
 	}
 	
 	LargeButton {

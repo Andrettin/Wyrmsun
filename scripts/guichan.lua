@@ -775,9 +775,12 @@ function RunSelectScenarioMenu(is_mod)
 	menu:run()
 end
 
+custom_game_menu = nil
+
 function RunSinglePlayerCustomGameMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	local menu = WarMenu()
+	custom_game_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local d
@@ -872,7 +875,6 @@ function RunSinglePlayerCustomGameMenu()
 	mapl = menu:addLabel(string.sub(mapname, 6), offx + 16 * get_scale_factor(), offy + (360 + 24) * get_scale_factor(), Fonts["game"], false)
 	descriptionl = menu:addLabel("descriptionl", offx + 16 * get_scale_factor(), offy + 360 * get_scale_factor(), Fonts["game"], false)
 
-	menu:addLabel("~<Single Player Game Setup~>", offx + (640/2 + 12) * get_scale_factor(), offy + 72 * get_scale_factor())
 	menu:addFullButton(_("~!Start Game"), "s", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*1) * get_scale_factor(),
 		function()
 			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
@@ -903,12 +905,6 @@ function RunSinglePlayerCustomGameMenu()
 			menu:stop()
 			RunMap(mapname)
 			SetCurrentCustomHero("")
-		end
-	)
-	menu:addFullButton(_("~!Cancel Game"), "c", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*2) * get_scale_factor(),
-		function()
-			SetCurrentCustomHero("")
-			menu:stop()
 		end
 	)
 
