@@ -13,7 +13,6 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Scenarios"
 		hotkey: "s"
-		lua_command: "RunCampaignMenu();"
 		
 		onClicked: {
 			menu_stack.push("CampaignMenu.qml")
