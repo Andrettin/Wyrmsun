@@ -126,29 +126,6 @@ AddTrigger("westward_migration_victory",
 	end
 )
 
-AddTrigger("the_settlement_of_scandinavia_introduction",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (
-				GetPlayerData(i, "TotalNumUnitsConstructed") > 0
-				and GetPlayerData(i, "Faction") == "asa-tribe"
-				and GetFactionExists("ertebolle-tribe", true)
-				and GetFactionExists("gylfing_tribe", true)
-				and GetSiteData("kiel", "MapLayer") ~= -1
-				and GetNumUnitsAt(i, "any", {GetSiteData("kiel", "MapPosX") - 16, GetSiteData("kiel", "MapPosY") - 16}, {GetSiteData("kiel", "MapPosX") + 16, GetSiteData("kiel", "MapPosY") + 16}, GetSiteData("kiel", "MapLayer")) > 0 -- must have units near Kiel
-			) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		CallDialogue("the_settlement_of_scandinavia_introduction", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("northwards-to-the-sea-natives-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do

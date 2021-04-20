@@ -5,4 +5,5 @@ the_settlement_of_scandinavia = {
 	start_date = -2800.7 #start during summer
 	map_templates = { earth_space }
 	required_quests = { westward_migration }
+	quest = the_settlement_of_scandinavia
 }

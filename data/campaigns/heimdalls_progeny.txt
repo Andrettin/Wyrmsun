@@ -4,4 +4,5 @@ heimdalls_progeny = {
 	faction = jarling_tribe
 	start_date = -1600 #the introduction of stronger social differentiation occurred in Scandinavia around 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73. As such, it makes sense to make the Rig myth (in which the different Scandinavian social classes are originated) take place around this time
 	map_templates = { earth_space }
+	quest = heimdalls_progeny
 }

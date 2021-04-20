@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("a-home-in-the-fields-of-sand-introduction",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and i == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function() 
-		CallDialogue("a-home-in-the-fields-of-sand-introduction", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("aurvangling-goblins-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do

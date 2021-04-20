@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("jarl-speaks-of-his-destiny",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetFactionExists("karling-tribe")) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		CallDialogue("jarl-speaks-of-his-destiny", trigger_player)
-		return false
-	end
-)
-
 AddTrigger("jarl-meets-the-thrallings",
 	function()
 		for i=0,(PlayerMax - 2) do

@@ -41,7 +41,6 @@ DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 			"text", "Travel through the Aurvang swamplands? That place is filled with goblins, we must beware...",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "a_home_in_the_fields_of_sand")
 					unit = FindUnit("unit-revealer", trigger_player)
 					if not (unit) then
 						unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY")}, GetSiteData("joruvellir", "MapLayer"))

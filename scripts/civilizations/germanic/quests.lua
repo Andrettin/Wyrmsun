@@ -108,6 +108,11 @@ DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and
 	Icon = "icon-germanic-town-hall",
 	Civilization = "germanic",
 	PlayerColor = "orange",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_settlement_of_scandinavia") then
+			CallDialogue("the_settlement_of_scandinavia_introduction", trigger_player)
+		end
+	end,
 	CompletionEffects = function(s)
 		CallDialogue("the_settlement_of_scandinavia_victory", trigger_player)
 	end,
@@ -265,6 +270,11 @@ DefineQuest("heimdalls_progeny", {
 	Icon = "icon-jarl",
 	Civilization = "germanic",
 	PlayerColor = "yellow",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
+			CallDialogue("jarl-speaks-of-his-destiny", trigger_player)
+		end
+	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
 			CallDialogue("campaign-defeat", trigger_player)

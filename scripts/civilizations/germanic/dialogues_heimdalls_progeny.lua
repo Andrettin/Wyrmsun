@@ -44,7 +44,6 @@ DefineDialogue("jarl-speaks-of-his-destiny", {
 			"text", "The Karlings are diligent farmers, but their archers will be difficult to beat on my own. It will be better to go to the Thrahilings, as they have no familiarity with warfare and will be easier to subjugate if it comes to that. The Karlings dwell to the northwest, while the Thrahilings live to the northeast.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "heimdalls_progeny")
 					SetPlayerData(trigger_player, "AcceptQuest", "jarls-hall")
 				end
 			}

@@ -29,6 +29,11 @@ DefineQuest("a_home_in_the_fields_of_sand", {
 	Name = "A Home in the Fields of Sand",
 	Icon = "icon-joruvellir-scout-black-hair",
 	PlayerColor = "brown",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
+			CallDialogue("a-home-in-the-fields-of-sand-introduction", trigger_player)
+		end
+	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
 			CallDialogue("campaign-defeat", trigger_player)

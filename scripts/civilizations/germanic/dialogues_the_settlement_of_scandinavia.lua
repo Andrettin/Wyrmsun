@@ -217,8 +217,6 @@ DefineDialogue("the_settlement_of_scandinavia_introduction", {
 			"text", "One tribe dwells in this peninsula, to our north, and another beyond the sea, a short distance to our east. Both need to be defeated. First, however, we must build a settlement here and gather our forces.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the_settlement_of_scandinavia")
-					
 					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("aarhus", "MapPosX"), GetSiteData("aarhus", "MapPosY")}, GetSiteData("aarhus", "MapLayer")) -- Aarhus
 					SetUnitVariable(unit, "TTL", 600)
 					
