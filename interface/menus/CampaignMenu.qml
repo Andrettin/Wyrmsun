@@ -64,7 +64,7 @@ MenuBase {
 	NormalText {
 		id: difficulty_label
 		text: "Difficulty:"
-		anchors.horizontalCenter: difficulty_dropdown.horizontalCenter
+		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 	}
