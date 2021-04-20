@@ -11,21 +11,6 @@ anglo_saxon = {
 		germanic
 	}
 	
-	unit_sounds = {
-		selected = basic_english_voices_selected_group
-		acknowledge = basic_english_voices_acknowledge
-		ready = basic_english_voices_ready
-		help = basic_english_voices_help
-	}
-	help_town_sound = basic_english_voices_help_town
-	work_complete_sound = basic_english_voices_work_complete
-	not_enough_resource_sounds = {
-		coal = basic_english_voices_not_enough_coal
-		copper = basic_english_voices_not_enough_copper
-		lumber = basic_english_voices_not_enough_lumber
-		stone = basic_english_voices_not_enough_stone
-	}
-	
 	unit_class_names = {
 		farm = {
 			"Wedone" #Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.

@@ -1,14 +1,4 @@
 goth = {
 	aliases += gothic
 	default_color = black
-	
-	unit_sounds = {
-		selected = basic_germanic_voices_selected_group
-		acknowledge = basic_germanic_voices_acknowledge
-		#attack = basic_germanic_voices_attack
-		ready = basic_germanic_voices_ready
-		help = basic_germanic_voices_help
-	}
-	help_town_sound = basic_germanic_voices_help_town
-	work_complete_sound = basic_germanic_voices_work_complete
 }
