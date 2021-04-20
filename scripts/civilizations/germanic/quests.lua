@@ -30,6 +30,23 @@ DefineQuest("on_the_vanaquisl", {
 	Icon = "icon-germanic-warrior",
 	Civilization = "germanic",
 	PlayerColor = "orange",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on_the_vanaquisl") then
+			local vana_defender_quantity = 0
+			if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
+				vana_defender_quantity = 4
+			elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
+				vana_defender_quantity = 9
+			elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
+				vana_defender_quantity = 18
+			elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
+				vana_defender_quantity = 36
+			end
+			CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
+			CallDialogue("on_the_vanaquisl_introduction", trigger_player)
+			CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
+		end
+	end,
 	CompletionEffects = function(s)
 		CallDialogue("on_the_vanaquisl_victory", trigger_player)
 	end,
@@ -58,6 +75,23 @@ DefineQuest("westward_migration", { -- based on the Ynglinga saga and on the Ind
 	Icon = "germanic_worker",
 	Civilization = "germanic",
 	PlayerColor = "orange",
+	AcceptEffects = function(s)
+		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
+			local gardarike_warrior_quantity = 0
+			if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
+				gardarike_warrior_quantity = 16
+			elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
+				gardarike_warrior_quantity = 48
+			elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
+				gardarike_warrior_quantity = 96
+			elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
+				gardarike_warrior_quantity = 192
+			end
+			CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-warrior", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
+			CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-archer", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
+			CallDialogue("westward_migration_introduction", trigger_player)
+		end
+	end,
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
 			CallDialogue("campaign-defeat", trigger_player)

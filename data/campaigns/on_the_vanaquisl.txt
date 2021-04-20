@@ -3,4 +3,5 @@ on_the_vanaquisl = {
 	description = "Having assembled a great army, the Asa decided to attack the people of Vanaland and take possession of their lands..."
 	faction = asa_tribe
 	start_date = -3000
+	quest = on_the_vanaquisl
 }

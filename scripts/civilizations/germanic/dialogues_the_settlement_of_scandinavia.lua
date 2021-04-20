@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- On the Vanaquisl introduction
+-- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
 DefineDialogue("on_the_vanaquisl_introduction", {
 	Nodes = {
 		{
@@ -32,7 +34,6 @@ DefineDialogue("on_the_vanaquisl_introduction", {
 			"text", "I have won every battle I have taken part in... but they were no more than squabbles compared to the aim I set before myself: the conquest of Vanaland. That country is peopled by a strange group of elf-worshippers... My great army has been assembled, and the time has come to make the river run red with their blood. Their lands shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "on_the_vanaquisl")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana-tribe"))
 				end
 			}
@@ -134,8 +135,6 @@ DefineDialogue("westward_migration_introduction", {
 			"text", "Travelling northwards, we came to this land crossed by a great river. And yet, the priests say that our journey is not yet ended, that the northern land of our destinity is not this one. Settlement here would certainly be difficult, for this area is filled with natives who are as troublesome as they are numerous. We hear of more docile peoples farther to the west, who will be more easily conquered... But before we get there, first we have to pass through the hostile natives around here... this will be a dangerous task.",
 			"option-effects", {
 				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "westward_migration")
-					
 					unit = CreateUnit("unit-revealer", trigger_player, {4369 - EarthStartX + 16, 749 - EarthStartY + 32}, GetMapLayer("earth"))
 					SetUnitVariable(unit, "TTL", 600)
 				end

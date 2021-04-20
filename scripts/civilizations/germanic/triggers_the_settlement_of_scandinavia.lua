@@ -25,36 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- On the Vanaquisl introduction
--- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-AddTrigger("on_the_vanaquisl_introduction",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("vana-tribe", true)) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		local vana_defender_quantity = 0
-		if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
-			vana_defender_quantity = 4
-		elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
-			vana_defender_quantity = 9
-		elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-			vana_defender_quantity = 18
-		elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-			vana_defender_quantity = 36
-		end
-		CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
-		CallDialogue("on_the_vanaquisl_introduction", trigger_player)
-		CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
-		return false
-	end
-)
-
 AddTrigger("on_the_vanaquisl_vana_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
@@ -75,34 +45,6 @@ AddTrigger("on_the_vanaquisl_vana_sighted",
 	end,
 	function()
 		CallDialogue("on_the_vanaquisl_vana_sighted", trigger_player)
-		return false
-	end
-)
-
-AddTrigger("westward_migration_introduction",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "Faction") == "asa-tribe" and GetFactionExists("uralic-tribe", true) and GetCurrentCampaign() == "westward_migration") then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		local gardarike_warrior_quantity = 0
-		if (GameSettings.Difficulty == DifficultyEasy) then -- if difficulty is easy
-			gardarike_warrior_quantity = 16
-		elseif (GameSettings.Difficulty == DifficultyNormal) then -- if difficulty is normal
-			gardarike_warrior_quantity = 48
-		elseif (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-			gardarike_warrior_quantity = 96
-		elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-			gardarike_warrior_quantity = 192
-		end
-		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-warrior", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
-		CreateCreeps(GetFactionPlayer("uralic-tribe"), "unit-germanic-archer", gardarike_warrior_quantity, 4369 - EarthStartX, 643 - EarthStartY, 4547 - EarthStartX, 770 - EarthStartY)
-		CallDialogue("westward_migration_introduction", trigger_player)
 		return false
 	end
 )
