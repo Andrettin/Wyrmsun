@@ -100,13 +100,13 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Scenario"
 		hotkey: "s"
-		lua_command: "save_preferences(); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; campaign_menu:stop(); RunMap(\"scripts/map_templates/campaign.smp\");"
+		lua_command: "SetCurrentCampaign(\"" + wyrmgus.preferences.selected_campaign.identifier + "\"); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; campaign_menu:stop(); RunMap(\"scripts/map_templates/campaign.smp\");"
 	}
 	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "save_preferences(); SetCurrentCampaign(\"\"); campaign_menu:stop();"
+		lua_command: "SetCurrentCampaign(\"\"); campaign_menu:stop();"
 	}
 }
