@@ -554,24 +554,7 @@ DefaultObjectives = {"- Defeat your rivals"}
 -- Define the different menus ----------
 
 function InitGameSettings()
-	GameSettings.NetGameType = 1
-	for i=0,PlayerMax-1 do
-		GameSettings.Presets[i].Race = -1
-		GameSettings.Presets[i].Team = -1
-		GameSettings.Presets[i].Type = -1
-	end
-	GameSettings.Difficulty = DifficultyNormal
-	GameSettings.Resources = -1
-	GameSettings.NumUnits = -1
-	GameSettings.Opponents = -1
-	GameSettings.Terrain = -1
-	GameSettings.GameType = -1
-	GameSettings.NoFogOfWar = false
-	GameSettings.Inside = false
-	GameSettings.RevealMap = 0
-	GameSettings.Tileset = nil
-	GameSettings.TechLevel = NoTechLevel
-	GameSettings.MaxTechLevel = NoTechLevel
+	GameSettings:reset()
 end
 InitGameSettings()
 
@@ -788,9 +771,7 @@ function RunSinglePlayerCustomGameMenu()
 	local scenario
 	local race
 	local faction
-	local resources
 	local opponents
-	local gametype
 	local mapl
 	local descriptionl
 	local tech_level
@@ -806,13 +787,10 @@ function RunSinglePlayerCustomGameMenu()
 	local faction_ident_list = {"Map Default"}
 	local faction_list = {_("Map Default")}
 	local world_list = { }
-	local game_type_list = { }
 	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)"), _("Civilized (Gunpowder)")}
 	local tech_level_enum_list = {NoTechLevel, AgrarianBronzeTechLevel, AgrarianIronTechLevel, CivilizedBronzeTechLevel, CivilizedIronTechLevel, CivilizedGunpowderTechLevel}
 	local max_tech_level_list = {_("Map Default")}
 	local max_tech_level_enum_list = {NoTechLevel}
-	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
-	local difficulty = nil
 	
 	local hero_list = {}
 	
@@ -888,15 +866,15 @@ function RunSinglePlayerCustomGameMenu()
 				local chosen_civilization = civilization_ident_list[race:getSelected() + 1]
 				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
 			end
-			GameSettings.Resources = resources:getSelected()
+			--GameSettings.Resources = resources:getSelected()
 			if (faction:getSelected() == 0) then
 				PlayerFaction = ""
 			else
 				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
 			end
 			GameSettings.Opponents = opponents:getSelected()
-			GameSettings.Difficulty = difficulty:getSelected() + 1
-			GameSettings.GameType = gametype:getSelected() - 1
+			--GameSettings.Difficulty = difficulty:getSelected() + 1
+			--GameSettings.GameType = gametype:getSelected() - 1
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 
@@ -919,16 +897,6 @@ function RunSinglePlayerCustomGameMenu()
 		function(dd) ScenarioChanged() end)
 	scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Difficulty:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
-		function(dd)
-			set_difficulty_index(difficulty:getSelected() + 1)
-			save_preferences()
-		end
-	)
-	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	difficulty:setSelected(get_difficulty_index() - 1)
-
 	menu:addLabel(_("Your Civilization:"), offx + 40 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
 	race = menu:addDropDown(civilization_list, offx + 40 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) CivilizationChanged() end)
@@ -939,21 +907,12 @@ function RunSinglePlayerCustomGameMenu()
 		function(dd) end)
 	faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Resources:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
-	resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
-		function(dd) end)
-	resources:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
 	local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"), _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
 
 	menu:addLabel(_("Opponents:"), offx + 40 * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
 	opponents = menu:addDropDown(opponents_list, offx + 40 * get_scale_factor(), offy + (10 + 240) * get_scale_factor(),
 		function(dd) end)
 	opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-	menu:addLabel(_("Game Type:"), offx + 220 * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
-	gametype = menu:addDropDown(game_type_list, offx + 220 * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) end)
-	gametype:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	menu:addLabel(_("Tech Level:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
 	tech_level = menu:addDropDown(tech_level_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) TechLevelChanged() end)
@@ -1157,12 +1116,6 @@ function RunSinglePlayerCustomGameMenu()
 		end
 		opponents:setList(o)
 		opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-		game_type_list = nil
-		game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
-		gametype:setList(game_type_list)
-		gametype:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-		gametype:setSelected(0)
 	end
 
 	GetMapInfo(mapname)
