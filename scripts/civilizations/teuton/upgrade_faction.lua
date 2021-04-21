@@ -47,8 +47,8 @@ DefineUpgrade("upgrade-faction-frisian-tribe", {
 	RequirementsString = "Ironworking"
 })
 
-DefineUpgrade("upgrade-faction-lombard-tribe", {
-	Name = "Lombard Tribe",
+DefineUpgrade("upgrade_faction_lombard_tribe", {
+	Name = "Lombardic Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
 	RequirementsString = "Ironworking"
 })
@@ -253,7 +253,7 @@ DefineModifier("upgrade-faction-frisian-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-lombard-tribe",
+DefineModifier("upgrade_faction_lombard_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
@@ -442,7 +442,7 @@ DefineDependency("upgrade-faction-frisian-tribe",
 	{"upgrade_ironworking"}
 )
 
-DefineDependency("upgrade-faction-lombard-tribe",
+DefineDependency("upgrade_faction_lombard_tribe",
 	{"upgrade_ironworking"}
 )
 

@@ -42,7 +42,7 @@ DefineUpgrade("upgrade_faction_gepid_tribe", {
 })
 
 DefineUpgrade("upgrade_faction_gothic_tribe", {
-	Name = "Goth Tribe",
+	Name = "Gothic Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
 	RequirementsString = "Ironworking"
 })
@@ -58,7 +58,7 @@ DefineUpgrade("upgrade-faction-lugii-tribe", {
 })
 
 DefineUpgrade("upgrade_faction_ostrogothic_tribe", {
-	Name = "Ostrogoth Tribe",
+	Name = "Ostrogothic Tribe",
 	EffectsString = "+2 Damage for Horse Riders"
 })
 

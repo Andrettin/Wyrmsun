@@ -1916,7 +1916,7 @@ Units = {
 	"upgrade-faction-bavarian-tribe",
 	"upgrade-faction-saxon-tribe", "upgrade-faction-chauci-tribe", "upgrade-faction-cherusci-tribe", "upgrade-faction-varini-tribe",
 	"upgrade-faction-frisian-tribe",
-	"upgrade-faction-lombard-tribe",
+	"upgrade_faction_lombard_tribe",
 	"upgrade-faction-austria", "upgrade-faction-bavaria", "upgrade-faction-carinthia",
 	"upgrade-faction-thuringia",
 	"upgrade-faction-baden", "upgrade-faction-swabia", "upgrade-faction-switzerland", "upgrade-faction-wurtemberg",

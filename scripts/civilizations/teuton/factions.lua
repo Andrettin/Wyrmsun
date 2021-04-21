@@ -73,16 +73,6 @@ DefineFaction("frisian-tribe", {
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
-DefineFaction("lombard-tribe", {
-	Name = "Lombard Tribe",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "green",
-	FactionUpgrade = "upgrade-faction-lombard-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"asa-tribe", "herminone-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
-})
-
 DefineFaction("bavarian-tribe", {
 	Name = "Bavarian Tribe",
 	Civilization = "teuton",
@@ -205,7 +195,7 @@ DefineFaction("lombardy", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-lombardy",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"lombard-tribe"}
+	DevelopsFrom = {"lombard_tribe"}
 })
 
 DefineFaction("magdeburg", {
