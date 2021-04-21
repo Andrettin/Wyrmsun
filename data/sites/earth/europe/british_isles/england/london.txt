@@ -16,7 +16,7 @@ london = {
 	
 	history = {
 		395 = {
-			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = rome #part of the Western Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 			building_classes += town_hall
 		}
 		
