@@ -866,15 +866,12 @@ function RunSinglePlayerCustomGameMenu()
 				local chosen_civilization = civilization_ident_list[race:getSelected() + 1]
 				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
 			end
-			--GameSettings.Resources = resources:getSelected()
 			if (faction:getSelected() == 0) then
 				PlayerFaction = ""
 			else
 				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
 			end
 			GameSettings.Opponents = opponents:getSelected()
-			--GameSettings.Difficulty = difficulty:getSelected() + 1
-			--GameSettings.GameType = gametype:getSelected() - 1
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 
