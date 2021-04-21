@@ -41,7 +41,7 @@ DefineUpgrade("upgrade_faction_gepid_tribe", {
 	EffectsString = "+1 Speed for Swordsmen"
 })
 
-DefineUpgrade("upgrade-faction-goth-tribe", {
+DefineUpgrade("upgrade_faction_gothic_tribe", {
 	Name = "Goth Tribe",
 	EffectsString = "+2 Damage for Swordsmen",
 	RequirementsString = "Ironworking"
@@ -57,7 +57,7 @@ DefineUpgrade("upgrade-faction-lugii-tribe", {
 	EffectsString = "+2 Evasion for Spearmen"
 })
 
-DefineUpgrade("upgrade-faction-ostrogoth-tribe", {
+DefineUpgrade("upgrade_faction_ostrogothic_tribe", {
 	Name = "Ostrogoth Tribe",
 	EffectsString = "+2 Damage for Horse Riders"
 })
@@ -82,8 +82,8 @@ DefineUpgrade("upgrade-faction-vandal-tribe", {
 	EffectsString = "+2 Damage for Archers"
 })
 
-DefineUpgrade("upgrade-faction-visigoth-tribe", {
-	Name = "Visigoth Tribe",
+DefineUpgrade("upgrade_faction_visigothic_tribe", {
+	Name = "Visigothic Tribe",
 	EffectsString = "+1 Speed for Horse Riders"
 })
 
@@ -136,7 +136,7 @@ DefineModifier("upgrade_faction_gepid_tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-goth-tribe",
+DefineModifier("upgrade_faction_gothic_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
@@ -155,7 +155,7 @@ DefineModifier("upgrade-faction-lugii-tribe",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-faction-ostrogoth-tribe",
+DefineModifier("upgrade_faction_ostrogothic_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
@@ -185,7 +185,7 @@ DefineModifier("upgrade-faction-vandal-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-visigoth-tribe",
+DefineModifier("upgrade_faction_visigothic_tribe",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
@@ -225,6 +225,6 @@ DefineDependency("upgrade-faction-burgundian-tribe",
 	{"upgrade_ironworking"}
 )
 
-DefineDependency("upgrade-faction-goth-tribe",
+DefineDependency("upgrade_faction_gothic_tribe",
 	{"upgrade_ironworking"}
 )

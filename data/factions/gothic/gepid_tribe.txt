@@ -7,6 +7,6 @@ gepid_tribe = {
 	faction_upgrade = upgrade_faction_gepid_tribe
 	icon = icon_flag_five_red_birds_on_yellow
 	develops_from = {
-		goth_tribe
+		gothic_tribe
 	}
 }

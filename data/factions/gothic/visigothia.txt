@@ -1,8 +1,24 @@
 visigothia = {
+	name = "Visigothia"
+	adjective = "Visigothic"
+	civilization = gothic
+	type = polity
+	color = pink
+	default_tier = kingdom
+	faction_upgrade = upgrade_faction_visigothia
+	icon = icon_flag_five_orange_birds_on_black
+	develops_from = {
+		visigothic_tribe
+	}
+	
 	history = {
 		#polities must have writing and masonry
 		acquired_upgrade_classes += writing
 		acquired_upgrade_classes += masonry
+		
+		486 = {
+			capital = toulouse
+		}
 		
 		573 = {
 			acquired_upgrade_classes += coinage #Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.

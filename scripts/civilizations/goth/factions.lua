@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("goth-tribe", {
-	Name = "Goth Tribe",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-goth-tribe",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
-})
-
 DefineFaction("bastarnae-tribe", {
 	Name = "Bastarnae Tribe",
 	Civilization = "goth",
@@ -42,7 +32,7 @@ DefineFaction("bastarnae-tribe", {
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-bastarnae-tribe",
 	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("burgundian-tribe", {
@@ -62,7 +52,7 @@ DefineFaction("herulian-tribe", {
 	Color = "green",
 	FactionUpgrade = "upgrade-faction-herulian-tribe",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("lugii-tribe", {
@@ -72,17 +62,7 @@ DefineFaction("lugii-tribe", {
 	Color = "purple",
 	FactionUpgrade = "upgrade-faction-lugii-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"goth-tribe"}
-})
-
-DefineFaction("ostrogoth-tribe", {
-	Name = "Ostrogoth Tribe",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-ostrogoth-tribe",
-	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("rugian-tribe", {
@@ -92,7 +72,7 @@ DefineFaction("rugian-tribe", {
 	Color = "red",
 	FactionUpgrade = "upgrade-faction-rugian-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("silingae-tribe", {
@@ -102,7 +82,7 @@ DefineFaction("silingae-tribe", {
 	Color = "orange",
 	FactionUpgrade = "upgrade-faction-silingae-tribe",
 	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("turcilingian-tribe", {
@@ -112,7 +92,7 @@ DefineFaction("turcilingian-tribe", {
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-turcilingian-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 DefineFaction("vandal-tribe", {
@@ -122,17 +102,7 @@ DefineFaction("vandal-tribe", {
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-vandal-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	DevelopsFrom = {"goth-tribe"}
-})
-
-DefineFaction("visigoth-tribe", {
-	Name = "Visigoth Tribe",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "pink",
-	FactionUpgrade = "upgrade-faction-visigoth-tribe",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"goth-tribe"}
+	DevelopsFrom = {"gothic_tribe"}
 })
 
 -- polities
@@ -159,19 +129,5 @@ DefineFaction("gothia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-gothia",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"goth-tribe", "herulian-tribe"}
-})
-
-DefineFaction("visigothia", {
-	Name = "Visigothia",
-	Civilization = "goth",
-	Type = "polity",
-	Color = "pink",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-visigothia",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"visigoth-tribe"},
-	HistoricalCapitals = {
-		486, "toulouse"
-	}
+	DevelopsFrom = {"gothic_tribe", "herulian-tribe"}
 })

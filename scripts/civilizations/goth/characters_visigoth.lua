@@ -36,7 +36,7 @@ DefineCharacter("athanagild", { -- Visigothic king; Source: Edward G. Fichtner, 
 		"head-of-state", 0, 0, "visigothia"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "visigoth-tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
+		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
 			return true
 		end
 		return false
@@ -56,7 +56,7 @@ DefineCharacter("brunichilde", { -- Source: Edward G. Fichtner, "Sigfrid's Merov
 	-- became Brünhild in the myths
 	-- in the Norse myths, Brynhild requested Gotthorm to kill Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "visigoth-tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
+		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
 			return true
 		end
 		return false
@@ -72,7 +72,7 @@ DefineCharacter("gailswintha", { -- Source: Edward G. Fichtner, "Sigfrid's Merov
 	Deities = {"christian-god"},
 	Father = "athanagild", -- daughter of the Visigothic king Athanagild
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "visigoth-tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
+		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
 			return true
 		end
 		return false
@@ -92,7 +92,7 @@ DefineCharacter("witiza", { -- Source: Archibald R. Lewis, "The Dukes in the Reg
 		"head-of-state", 700, 710, "visigothia" -- Visigothic king, reigning 700-710
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "visigoth-tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
+		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
 			return true
 		end
 		return false

@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Fixed the requirements string for the Shadowcharm Clan faction.
+- Renamed the "Goth Tribe" to "Gothic Tribe", the "Ostrogoth Tribe" to "Ostrogothic Tribe" and the "Visigoth Tribe" to "Visigothic Tribe".
 
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.

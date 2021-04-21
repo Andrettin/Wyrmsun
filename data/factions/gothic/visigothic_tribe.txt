@@ -1,0 +1,12 @@
+visigothic_tribe = {
+	name = "Visigothic Tribe"
+	adjective = "Visigothic"
+	civilization = gothic
+	type = tribe
+	color = pink
+	faction_upgrade = upgrade_faction_visigothic_tribe
+	icon = icon_flag_five_orange_birds_on_black
+	develops_from = {
+		gothic_tribe
+	}
+}

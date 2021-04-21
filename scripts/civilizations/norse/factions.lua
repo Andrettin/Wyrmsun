@@ -45,7 +45,7 @@ DefineFaction("geat-tribe", {
 	Color = "teal",
 	FactionUpgrade = "upgrade-faction-geat-tribe",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"asa-tribe", "goth-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa-tribe", "gothic_tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("gute-tribe", {
@@ -55,7 +55,7 @@ DefineFaction("gute-tribe", {
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-gute-tribe",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"asa-tribe", "goth-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa-tribe", "gothic_tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
