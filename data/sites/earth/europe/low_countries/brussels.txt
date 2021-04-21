@@ -9,9 +9,13 @@ brussels = {
 	}
 	
 	history = {
+		395 = {
+			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 		
 		911 = {

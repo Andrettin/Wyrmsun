@@ -17,9 +17,13 @@ munich = {
 	}
 	
 	history = {
+		395 = {
+			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = rugian_tribe #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 		
 		919 = {

@@ -9,9 +9,13 @@ cluj = {
 	}
 	
 	history = {
+		395 = {
+			owner = visigothic_tribe #part of Visigothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = gepid_tribe #part of Gepid territory in 486 (apparently); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 		
 		1097 = {

@@ -15,11 +15,15 @@ edinburgh = {
 		}
 		
 		80 = {
-			owner = rome #The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rome #the area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		161 = {
 			owner = selgovae_tribe #The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		395 = {
+			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486 = {

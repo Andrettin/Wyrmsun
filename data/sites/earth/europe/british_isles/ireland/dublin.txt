@@ -12,9 +12,13 @@ dublin = {
 	}
 	
 	history = {
+		395 = {
+			owner = scot_tribe #part of Scot territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		802 = {
 			owner = ireland #Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-			building_classes += town_hall
 		}
 		
 		1097 = {

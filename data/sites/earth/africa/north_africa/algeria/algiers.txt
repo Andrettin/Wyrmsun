@@ -13,6 +13,10 @@ algiers = {
 			building_classes += town_hall
 		}
 		
+		395 = {
+			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
 		486 = {
 			owner = vandalia #part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}

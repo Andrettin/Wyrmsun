@@ -33,6 +33,10 @@ aarhus = {
 			owner = jarling_tribe
 		}
 		
+		395 = {
+			owner = jute_tribe #part of Jute territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
 		486 = {
 			owner = jute_tribe #part of Jute territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}

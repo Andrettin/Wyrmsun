@@ -14,6 +14,10 @@ amsterdam = {
 			building_classes += town_hall
 		}
 		
+		395 = {
+			owner = frisian_tribe #part of Frisian territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
 		481 = {
 			owner = frisian_tribe #Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}

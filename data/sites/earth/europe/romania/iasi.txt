@@ -7,4 +7,11 @@ iasi = {
 	regions = {
 		europe
 	}
+	
+	history = {
+		395 = {
+			owner = visigothic_tribe #part of Visigothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+	}
 }

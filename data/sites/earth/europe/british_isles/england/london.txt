@@ -15,9 +15,13 @@ london = {
 	}
 	
 	history = {
+		395 = {
+			owner = rome #part of the Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		410 = {
 			owner = rome #Londinium/London was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-			building_classes += town_hall
 		}
 		
 		604 = {
