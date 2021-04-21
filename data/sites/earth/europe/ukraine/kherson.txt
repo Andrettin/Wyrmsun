@@ -1,0 +1,17 @@
+kherson = {
+	name = "Kherson"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 32.60066488720 46.63253717980 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 178 153 242 }
+	regions = {
+		europe
+	}
+	
+	history = {
+		395 = {
+			owner = ostrogothic_tribe #part of Ostrogothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+	}
+}
