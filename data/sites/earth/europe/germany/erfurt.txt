@@ -12,9 +12,13 @@ erfurt = {
 	}
 	
 	history = {
+		395 = {
+			owner = thuringian_tribe #part of Thuringian territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = thuringian_tribe #part of Thuringian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 	}
 }
