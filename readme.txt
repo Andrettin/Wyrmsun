@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Removed the No Randomness and No Day/Night Cycle options.
+- Fixed crash which occurring when accessing Goblin sound options within a game.
 
 * Scenarios
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.
