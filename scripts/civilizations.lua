@@ -829,16 +829,6 @@ DefineCivilization("magyar", {
 	DevelopsFrom = {"uralic"}
 })
 
-DefineCivilization("persian", {
-	Display = "Persian",
-	Visible = false,
-	Group = "iranian",
-	Language = "avestan",
-	ParentCivilization = "greek",
-	Adjective = "Persian",
-	Playable = false
-})
-
 DefineCivilization("phrygian", {
 	Display = "Phrygian",
 	Visible = false,

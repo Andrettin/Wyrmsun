@@ -1,0 +1,8 @@
+korean = {
+	name = "Korean"
+	parent_civilization = neutral
+	group = asian
+	language = korean
+	visible = false
+	playable = false
+}

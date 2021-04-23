@@ -1,0 +1,8 @@
+scythian = {
+	name = "Scythian"
+	parent_civilization = persian
+	group = iranian
+	language = scythian
+	visible = false
+	playable = false
+}

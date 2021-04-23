@@ -1,0 +1,8 @@
+persian = {
+	name = "Persian"
+	parent_civilization = greek
+	group = iranian
+	language = avestan
+	visible = false
+	playable = false
+}

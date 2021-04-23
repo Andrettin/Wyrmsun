@@ -1,0 +1,8 @@
+hunnic = {
+	name = "Hunnic"
+	parent_civilization = neutral
+	group = asian
+	language = hunnic
+	visible = false
+	playable = false
+}
