@@ -642,6 +642,8 @@
 /graphics/icons/deities/vanir/frey_extra_7.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/icons/deities/vanir/frey_extra_8.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/icons/deities/vanir/frey_extra_9.png (by Exidelo and Jinn) (licensed under the CC0)
+/graphics/icons/deities/vanir/frey_extra_10.png (by Exidelo and Jinn) (licensed under the CC0)
+/graphics/icons/deities/vanir/frey_extra_11.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/icons/deities/heimdall.png (by Jinn) (licensed under the CC0)
 /graphics/icons/deities/hel.png (by Jinn) (licensed under the CC0)
 /graphics/icons/deities/loki.png (by Exidelo and Jinn) (licensed under the CC0)
