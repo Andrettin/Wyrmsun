@@ -542,13 +542,6 @@ DefineLanguageWord("Súvar", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Sun"}
 })
 
-DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "sanskrit",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
-})
-
 DefineLanguageWord("Tákman", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 95.
 	Language = "sanskrit",
 	Type = "noun",
@@ -600,14 +593,6 @@ DefineLanguageWord("Vigraha", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Separation", "Discord", "War"}
-})
-
-DefineLanguageWord("Vṛ́ká", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "sanskrit",
-	Type = "noun",
-	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"},
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Yudh", { -- source gives "yudh-"; Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 2.

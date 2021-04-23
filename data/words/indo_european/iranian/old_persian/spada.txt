@@ -1,0 +1,8 @@
+spada_old_persian = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	name = "Spāda"
+	language = old_persian
+	type = noun
+	meanings = {
+		"Army"
+	}
+}

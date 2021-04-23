@@ -788,13 +788,6 @@ DefineLanguageWord("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Hidden Treasure"}
 })
 
-DefineLanguageWord("Hvîta", { -- source also gives the alternative form "hvitta"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"White", "Light Colored"}, -- source gives the German "weiß, hellfarbig" as the meaning
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"} -- Lehmann gives its reflexes as being derived from this word; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-})
-
 DefineLanguageWord("Isti", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "proto-germanic",
 	Type = "verb",
@@ -1472,21 +1465,6 @@ DefineLanguageWord("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Sorcerer"},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Vulgvî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"},
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Vulhva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
 DefineLanguageWord("Vurma", { -- source also gives the alternative form "Vurmi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

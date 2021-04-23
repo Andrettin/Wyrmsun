@@ -274,13 +274,6 @@ DefineLanguageWord("Kyriakón", { -- Source: D. H. Green, "From Germania to Euro
 	Meanings = {"That which belongs to the Lord", "That House of the Lord", "Church"}
 })
 
-DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
-})
-
 DefineLanguageWord("Légō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.
 	Language = "greek",
 	Type = "verb",

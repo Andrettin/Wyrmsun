@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Askar", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
-	Language = "arabic",
-	Type = "noun",
-	Meanings = {"Army"},
-	DerivesFrom = {"latin", "noun", "Exercitus"}
-})
-
 DefineLanguageWord("Jund", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
 	Language = "arabic", -- source gives "Arab."
 	Type = "noun",

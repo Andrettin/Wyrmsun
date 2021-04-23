@@ -1,0 +1,5 @@
+vulhva = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Vulhva"
+	language = proto_germanic
+	etymon = vlqo
+}

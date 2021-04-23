@@ -117,10 +117,3 @@ DefineLanguageWord("Tauta", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"People"} -- source gives the German "Volk" as the meaning
 })
 
-DefineLanguageWord("Wilks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "latvian",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
-})
-

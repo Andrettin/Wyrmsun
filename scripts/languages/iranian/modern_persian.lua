@@ -37,13 +37,6 @@ DefineLanguageWord("Jang", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Meanings = {"Battle", "War"}
 })
 
-DefineLanguageWord("Sipāh", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
-	Language = "modern-persian",
-	Type = "noun",
-	Meanings = {"Army"},
-	DerivesFrom = {"old-persian", "noun", "Spāda"}
-})
-
 DefineLanguageWord("Sipāhī", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
 	Language = "modern-persian",
 	Type = "noun",

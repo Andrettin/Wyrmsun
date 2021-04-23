@@ -42,9 +42,3 @@ DefineLanguageWord("Partara", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Type = "noun",
 	Meanings = {"Foe", "Battle"} -- the source gives "battle" only as a possible meaning
 })
-
-DefineLanguageWord("Spāda", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
-	Language = "old-persian",
-	Type = "noun",
-	Meanings = {"Army"}
-})

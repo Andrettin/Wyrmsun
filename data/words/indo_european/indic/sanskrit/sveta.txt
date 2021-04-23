@@ -1,0 +1,9 @@
+sveta = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	name = "Śvetá"
+	language = sanskrit
+	type = adjective
+	etymon = kweyt
+	meanings = {
+		"White"
+	}
+}

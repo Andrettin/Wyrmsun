@@ -85,10 +85,6 @@ DefineLanguage("etruscan", {
 	Name = "Etruscan"
 })
 
-DefineLanguage("japanese", {
-	Name = "Japanese"
-})
-
 DefineLanguage("minoan", {
 	Name = "Minoan"
 })
@@ -101,7 +97,6 @@ Load("scripts/languages_celtic.lua")
 Load("scripts/languages_germanic.lua")
 Load("scripts/languages_hellenic.lua")
 Load("scripts/languages_indic.lua")
-Load("scripts/languages_iranian.lua")
 Load("scripts/languages_italic.lua")
 Load("scripts/languages_slavic.lua")
 Load("scripts/languages_baltic.lua")

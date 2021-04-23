@@ -193,12 +193,6 @@ DefineLanguageWord("Krewx", { -- source gives "kr-ew-X-"; Source: Winfred P. Leh
 	Meanings = {}
 })
 
-DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "proto-indo-european",
-	Type = "adjective",
-	Meanings = {}
-})
-
 DefineLanguageWord("Kwneχ", { -- source gives "(s)kw-n-eχ-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european", -- apparently, but not entirely clear from the source
 	Type = "verb", -- correct?
@@ -305,12 +299,6 @@ DefineLanguageWord("Vel", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Language = "proto-indo-european", -- apparently
 	Type = "verb",
 	Meanings = {"Rip"} -- source gives the German "reißen"
-})
-
-DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
 })
 
 DefineLanguageWord("Wékʷos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.9.

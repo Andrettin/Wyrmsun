@@ -1,0 +1,4 @@
+avestan = {
+	name = "Avestan"
+	family = iranian
+}

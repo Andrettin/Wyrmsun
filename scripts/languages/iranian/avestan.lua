@@ -106,13 +106,6 @@ DefineLanguageWord("Spāẟa", { -- Source: Carl D. Buck, "Words for 'Battle,' '
 	Meanings = {"Army", "Host"}
 })
 
-DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "avestan",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
-})
-
 DefineLanguageWord("Ushaçtara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "avestan",
 	Type = "adverb",
@@ -123,13 +116,6 @@ DefineLanguageWord("Vayeiti", { -- Source: Carl D. Buck, "Words for 'Battle,' 'W
 	Language = "avestan",
 	Type = "verb",
 	Meanings = {"Pursue", "Chase", "Drive"}
-})
-
-DefineLanguageWord("Vehrka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
 DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

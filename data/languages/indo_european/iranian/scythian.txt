@@ -1,0 +1,4 @@
+scythian = {
+	name = "Scythian"
+	family = iranian
+}

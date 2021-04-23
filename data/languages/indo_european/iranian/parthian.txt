@@ -1,0 +1,4 @@
+parthian = {
+	name = "Parthian"
+	family = iranian
+}

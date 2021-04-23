@@ -66,11 +66,3 @@ DefineLanguageWord("Tauto", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Land", "Country"} -- source gives the German "Land" as the meaning
 })
-
-DefineLanguageWord("Wilkis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "old-prussian", -- source gives Prussian
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
-})
-

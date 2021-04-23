@@ -1,0 +1,4 @@
+vlqo = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Vl̥qo" #from the root "vel"
+	language = proto_indo_european
+}

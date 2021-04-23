@@ -1,0 +1,9 @@
+exercitus = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 10-11.
+	name = "Exercitus"
+	language = latin
+	type = noun
+	meanings = {
+		"Trained Army"
+		"Training"
+	}
+}

@@ -1,0 +1,11 @@
+hvita = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	name = "Hvîta" #source also gives the alternative form "hvitta"
+	language = proto_germanic
+	type = adjective
+	etymon = kweyt #Lehmann gives its reflexes as being derived from this word; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	meanings = {
+		#source gives the German "weiß, hellfarbig" as the meaning
+		"White"
+		"Light Colored"
+	}
+}

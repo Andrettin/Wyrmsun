@@ -218,12 +218,6 @@ DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Nominative = "Egō"
 })
 
-DefineLanguageWord("Exercitus", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, pp. 10-11.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Trained Army", "Training"}
-})
-
 DefineLanguageWord("Fāgus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
@@ -346,13 +340,6 @@ DefineLanguageWord("Lucta", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Wrestling Match"}
-})
-
-DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
 DefineLanguageWord("Manus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.

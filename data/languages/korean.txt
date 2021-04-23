@@ -1,0 +1,3 @@
+korean = {
+	name = "Korean"
+}

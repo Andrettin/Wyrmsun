@@ -1,5 +1,5 @@
-rika_noun = { #source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	name = "Rîka"
+rika_noun = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	name = "Rîka" #source also gives the alternative form "Rîkia"
 	language = proto_germanic
 	type = noun
 	etymon = reg

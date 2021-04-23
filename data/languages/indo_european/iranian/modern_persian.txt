@@ -1,0 +1,4 @@
+modern_persian = {
+	name = "Modern Persian"
+	family = iranian
+}

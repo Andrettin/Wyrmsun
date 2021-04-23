@@ -1,0 +1,4 @@
+kweyt = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	name = "Ḱweyt" #source gives "Ḱwey-t/d-"
+	language = proto_indo_european
+}

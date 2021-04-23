@@ -1,0 +1,10 @@
+vrka = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Vṛ́ká"
+	language = sanskrit
+	type = noun
+	gender = masculine
+	etymon = vlqo
+	meanings = {
+		"Wolf" #source gives the German "Wolf"
+	}
+}

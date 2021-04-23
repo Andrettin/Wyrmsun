@@ -1,0 +1,7 @@
+vulgvi = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	name = "Vulgvî"
+	language = proto_germanic
+	etymon = vlqo
+	type = noun
+	gender = feminine
+}

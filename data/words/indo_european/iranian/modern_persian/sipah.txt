@@ -1,0 +1,9 @@
+sipah_modern_persian = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 10.
+	name = "Sipāh"
+	language = modern_persian
+	type = noun
+	etymon = spada_old_persian
+	meanings = {
+		"Army"
+	}
+}

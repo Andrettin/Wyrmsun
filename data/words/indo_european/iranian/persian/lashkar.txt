@@ -1,0 +1,6 @@
+lashkar = { #Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
+	name = "Lashkar"
+	language = persian
+	type = noun
+	etymon = askar
+}

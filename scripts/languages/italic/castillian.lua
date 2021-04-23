@@ -55,13 +55,6 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	}
 })
 
-DefineLanguageWord("Ejercito", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 12.
-	Language = "castillian",
-	Type = "noun",
-	Meanings = {"Army"},
-	DerivesFrom = {"latin", "noun", "Exercitus"}
-})
-
 DefineLanguageWord("Guerra", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 8.
 	Language = "castillian",
 	Type = "noun",

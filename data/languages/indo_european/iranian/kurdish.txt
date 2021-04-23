@@ -1,0 +1,4 @@
+kurdish = {
+	name = "Kurdish"
+	family = iranian
+}
