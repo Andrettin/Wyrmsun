@@ -9,5 +9,5 @@ architecture = {
 	name = "Architecture"
 	category = construction
 	age = iron_age
-	tech_tree_parent_upgrade_class = masonry
+	tech_tree_parent_unit_class = university
 }

@@ -42,6 +42,7 @@ watch_tower = {
 
 cannon_tower = {
 	name = "Cannon Tower"
+	tech_tree_parent_upgrade_class = gunpowder
 }
 
 banner = {

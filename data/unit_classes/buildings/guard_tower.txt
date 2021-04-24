@@ -1,5 +1,6 @@
 guard_tower = {
 	name = "Guard Tower"
+	tech_tree_parent_upgrade_class = masonry
 	
 	conditions = {
 		unit_class = lumber_mill

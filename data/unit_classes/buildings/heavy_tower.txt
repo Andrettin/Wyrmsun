@@ -1,5 +1,6 @@
 heavy_tower = {
 	name = "Heavy Tower"
+	tech_tree_parent_upgrade_class = engineering
 	
 	conditions = {
 		unit_class = lumber_mill
