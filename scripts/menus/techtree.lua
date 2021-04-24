@@ -25,13 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-UsingTechTree = false
-
 tech_tree_menu = nil
 
 function RunTechTreeMenu(civilization_number)
-	UsingTechTree = true
-
 	if (RunningScenario == false) then
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
@@ -218,31 +214,31 @@ function RunTechTreeMenu(civilization_number)
 				local tech_icon_x = 0
 				local tech_icon_y = 0
 				local tech_allowed = true
-				if (GetUpgradeData(unitName, "Class") == "melee-weapon-1") then
+				if (GetUpgradeData(unitName, "Class") == "melee_weapon_1") then
 					tech_icon_x = 3
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "melee-weapon-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "melee_weapon_2") then
 					tech_icon_x = 3
 					tech_icon_y = 5
-				elseif (GetUpgradeData(unitName, "Class") == "long-spear") then
+				elseif (GetUpgradeData(unitName, "Class") == "long_spear") then
 					tech_icon_x = 4
 					tech_icon_y = 4
 				elseif (GetUpgradeData(unitName, "Class") == "pike") then
 					tech_icon_x = 4
 					tech_icon_y = 5
-				elseif (GetUpgradeData(unitName, "Class") == "bronze-shield") then
+				elseif (GetUpgradeData(unitName, "Class") == "bronze_shield") then
 					tech_icon_x = 2
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "iron-shield") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron_shield") then
 					tech_icon_x = 2
 					tech_icon_y = 5
-				elseif (GetUpgradeData(unitName, "Class") == "ranged-projectile-1") then
+				elseif (GetUpgradeData(unitName, "Class") == "ranged_projectile_1") then
 					tech_icon_x = 7
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "ranged-projectile-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "ranged_projectile_2") then
 					tech_icon_x = 7
 					tech_icon_y = 5
-				elseif (GetUpgradeData(unitName, "Class") == "composite-bow") then
+				elseif (GetUpgradeData(unitName, "Class") == "composite_bow") then
 					tech_icon_x = 8
 					tech_icon_y = 4
 					if (civilization == "dwarf") then
@@ -254,19 +250,19 @@ function RunTechTreeMenu(civilization_number)
 					if (civilization == "dwarf") then
 						tech_allowed = false
 					end
-				elseif (GetUpgradeData(unitName, "Class") == "siege-projectile-1") then
+				elseif (GetUpgradeData(unitName, "Class") == "siege_projectile_1") then
 					tech_icon_x = 1
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "siege-projectile-2") then
+				elseif (GetUpgradeData(unitName, "Class") == "siege_projectile_2") then
 					tech_icon_x = 1
 					tech_icon_y = 5
-				elseif (GetUpgradeData(unitName, "Class") == "wood-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "wood_plow") then
 					tech_icon_x = 6
 					tech_icon_y = 3
-				elseif (GetUpgradeData(unitName, "Class") == "iron-tipped-wood-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron_tipped_wood_plow") then
 					tech_icon_x = 6
 					tech_icon_y = 4
-				elseif (GetUpgradeData(unitName, "Class") == "iron-plow") then
+				elseif (GetUpgradeData(unitName, "Class") == "iron_plow") then
 					tech_icon_x = 6
 					tech_icon_y = 5
 				elseif (GetUpgradeData(unitName, "Class") == "masonry") then
