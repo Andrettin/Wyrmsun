@@ -1,0 +1,4 @@
+phrygian = {
+	name = "Phrygian"
+	family = indo_european
+}

@@ -1,0 +1,4 @@
+illyrian = {
+	name = "Illyrian"
+	family = indo_european
+}

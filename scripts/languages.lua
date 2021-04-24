@@ -29,22 +29,6 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
-DefineLanguage("illyrian", {
-	Name = "Illyrian"
-})
-
-DefineLanguage("phrygian", {
-	Name = "Phrygian"
-})
-
-DefineLanguage("thracian", {
-	Name = "Thracian"
-})
-
-DefineLanguage("albanian", {
-	Name = "Albanian"
-})
-
 DefineLanguage("old-armenian", {
 	Name = "Old Armenian"
 })
@@ -59,10 +43,6 @@ DefineLanguage("egyptian", {
 
 DefineLanguage("coptic", {
 	Name = "Coptic"
-})
-
-DefineLanguage("arabic", {
-	Name = "Arabic"
 })
 
 DefineLanguage("proto-uralic", {
@@ -87,10 +67,6 @@ DefineLanguage("etruscan", {
 
 DefineLanguage("minoan", {
 	Name = "Minoan"
-})
-
-DefineLanguage("gnomish", {
-	Name = "Gnomish"
 })
 
 Load("scripts/languages_celtic.lua")

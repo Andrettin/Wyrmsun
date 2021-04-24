@@ -1,0 +1,4 @@
+thracian = {
+	name = "Thracian"
+	family = indo_european
+}
