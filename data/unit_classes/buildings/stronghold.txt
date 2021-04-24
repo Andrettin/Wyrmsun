@@ -1,6 +1,7 @@
 stronghold = {
 	name = "Stronghold"
 	town_hall = true
+	tech_tree_parent_unit_class = town_hall
 	
 	conditions = {
 		unit_class = barracks

@@ -1,5 +1,6 @@
 cavalry = {
 	name = "Cavalry"
+	tech_tree_parent_unit_class = stables
 	
 	conditions = {
 		or = {

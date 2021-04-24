@@ -1,6 +1,7 @@
 transport_ship = {
 	name = "Transport Ship"
 	ship = true
+	tech_tree_parent_unit_class = dock
 	
 	conditions = {
 		or = {

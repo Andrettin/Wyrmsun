@@ -1,5 +1,6 @@
 gunpowder_infantry = {
 	name = "Gunpowder Infantry"
+	tech_tree_parent_upgrade_class = gunpowder
 	
 	conditions = {
 		or = {

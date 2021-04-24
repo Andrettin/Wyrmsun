@@ -1,5 +1,6 @@
 flying_rider = {
 	name = "Flying Rider"
+	tech_tree_parent_unit_class = stronghold
 	
 	conditions = {
 		or = {

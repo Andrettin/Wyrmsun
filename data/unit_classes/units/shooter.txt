@@ -1,5 +1,6 @@
 shooter = {
 	name = "Shooter"
+	tech_tree_parent_unit_class = barracks
 	
 	conditions = {
 		or = {

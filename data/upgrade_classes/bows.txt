@@ -2,12 +2,14 @@ composite_bow = {
 	name = "Composite Bow"
 	category = bows
 	age = bronze_age
+	tech_tree_parent_unit_class = lumber_mill
 }
 
 longbow = {
 	name = "Longbow"
 	category = bows
 	age = iron_age
+	tech_tree_parent_upgrade_class = composite_bow
 
 	conditions = {
 		upgrade_class = composite_bow

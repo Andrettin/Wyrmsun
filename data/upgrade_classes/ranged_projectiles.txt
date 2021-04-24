@@ -2,12 +2,14 @@ ranged_projectile_1 = {
 	name = "Ranged Projectile I"
 	category = army
 	age = bronze_age
+	tech_tree_parent_unit_class = lumber_mill
 }
 
 ranged_projectile_2 = {
 	name = "Ranged Projectile II"
 	category = army
 	age = iron_age
+	tech_tree_parent_upgrade_class = ranged_projectile_1
 
 	conditions = {
 		upgrade_class = ranged_projectile_1

@@ -1,5 +1,6 @@
 university = {
 	name = "University"
+	tech_tree_parent_upgrade_class = writing
 	
 	conditions = {
 		upgrade_class = writing

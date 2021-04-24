@@ -1,35 +1,43 @@
 town_hall = {
 	name = "Town Hall"
 	town_hall = true
+	tech_tree_parent_unit_class = worker
 }
 
 fortress = {
 	name = "Fortress"
 	town_hall = true
+	tech_tree_parent_unit_class = fortress
 }
 
 farm = {
 	name = "Farm"
+	tech_tree_parent_unit_class = worker
 }
 
 barracks = {
 	name = "Barracks"
+	tech_tree_parent_unit_class = worker
 }
 
 lumber_mill = {
 	name = "Lumber Mill"
+	tech_tree_parent_unit_class = worker
 }
 
 smithy = {
 	name = "Smithy"
+	tech_tree_parent_unit_class = worker
 }
 
 masons_shop = {
 	name = "Mason's Shop"
+	tech_tree_parent_unit_class = worker
 }
 
 watch_tower = {
 	name = "Watch Tower"
+	tech_tree_parent_unit_class = worker
 }
 
 cannon_tower = {

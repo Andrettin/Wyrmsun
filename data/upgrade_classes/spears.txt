@@ -2,12 +2,14 @@ long_spear = {
 	name = "Long Spear"
 	category = polearms
 	age = bronze_age
+	tech_tree_parent_unit_class = lumber_mill
 }
 
 pike = {
 	name = "Pike"
 	category = polearms
 	age = iron_age
+	tech_tree_parent_upgrade_class = long_spear
 
 	conditions = {
 		upgrade_class = long_spear

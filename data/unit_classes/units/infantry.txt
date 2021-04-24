@@ -4,6 +4,7 @@ militia = {
 
 infantry = {
 	name = "Infantry"
+	tech_tree_parent_unit_class = barracks
 }
 
 veteran_infantry = {
@@ -16,6 +17,7 @@ heroic_infantry = {
 
 spearman = {
 	name = "Spearman"
+	tech_tree_parent_unit_class = barracks
 }
 
 veteran_spearman = {

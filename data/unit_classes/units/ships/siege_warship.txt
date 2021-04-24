@@ -1,6 +1,7 @@
 siege_warship = {
 	name = "Siege Warship"
 	ship = true
+	tech_tree_parent_unit_class = dock
 	
 	conditions = {
 		unit_class = smithy

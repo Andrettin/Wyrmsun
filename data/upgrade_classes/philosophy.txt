@@ -2,4 +2,5 @@ philosophy = {
 	name = "Philosophy"
 	category = philosophy
 	age = iron_age
+	tech_tree_parent_unit_class = university
 }

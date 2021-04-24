@@ -1,5 +1,6 @@
 priest = {
 	name = "Priest"
+	tech_tree_parent_unit_class = temple
 }
 
 veteran_priest = {

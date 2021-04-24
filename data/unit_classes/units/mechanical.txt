@@ -4,4 +4,5 @@ minecart = {
 
 caravan = {
 	name = "Caravan"
+	tech_tree_parent_unit_class = market
 }

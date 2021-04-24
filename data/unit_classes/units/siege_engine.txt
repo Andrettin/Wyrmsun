@@ -1,5 +1,6 @@
 siege_engine = {
 	name = "Siege Engine"
+	tech_tree_parent_upgrade_class = engineering
 	
 	conditions = {
 		or = {

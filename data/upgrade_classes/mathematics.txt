@@ -2,4 +2,5 @@ mathematics = {
 	name = "Mathematics"
 	category = culture
 	age = iron_age
+	tech_tree_parent_unit_class = university
 }

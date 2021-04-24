@@ -2,4 +2,5 @@ ironworking = {
 	name = "Ironworking"
 	category = metallurgy
 	age = iron_age
+	tech_tree_parent_unit_class = smithy
 }

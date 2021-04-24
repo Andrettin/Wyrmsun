@@ -2,6 +2,7 @@ siege_projectile_1 = {
 	name = "Siege Projectile I"
 	category = army
 	age = iron_age
+	tech_tree_parent_unit_class = smithy
 	
 	conditions = {
 		or = {
@@ -16,6 +17,7 @@ siege_projectile_2 = {
 	name = "Siege Projectile II"
 	category = army
 	age = feudal_age
+	tech_tree_parent_upgrade_class = siege_projectile_1
 	
 	conditions = {
 		or = {

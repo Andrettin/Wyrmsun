@@ -2,10 +2,12 @@ masonry = {
 	name = "Masonry"
 	category = construction
 	age = bronze_age
+	tech_tree_parent_unit_class = masons_shop
 }
 
 architecture = {
 	name = "Architecture"
 	category = construction
 	age = iron_age
+	tech_tree_parent_upgrade_class = masonry
 }

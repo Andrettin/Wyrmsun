@@ -2,12 +2,14 @@ melee_weapon_1 = {
 	name = "Melee Weapon I"
 	category = army
 	age = bronze_age
+	tech_tree_parent_unit_class = smithy
 }
 
 melee_weapon_2 = {
 	name = "Melee Weapon II"
 	category = army
 	age = iron_age
+	tech_tree_parent_upgrade_class = melee_weapon_1
 
 	conditions = {
 		upgrade_class = melee_weapon_1

@@ -1,5 +1,6 @@
 stables = {
 	name = "Stables"
+	tech_tree_parent_unit_class = lumber_mill
 	
 	conditions = {
 		unit_class = lumber_mill

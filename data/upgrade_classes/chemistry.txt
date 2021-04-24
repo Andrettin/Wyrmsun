@@ -2,6 +2,7 @@ alchemy = {
 	name = "Alchemy"
 	category = chemistry
 	age = iron_age
+	tech_tree_parent_upgrade_class = philosophy
 
 	conditions = {
 		upgrade_class = philosophy
@@ -14,4 +15,5 @@ gunpowder = {
 	name = "Gunpowder"
 	category = chemistry
 	age = gunpowder_age
+	tech_tree_parent_upgrade_class = alchemy
 }

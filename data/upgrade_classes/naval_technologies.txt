@@ -2,12 +2,14 @@ sailing = {
 	name = "Sailing"
 	category = shipbuilding
 	age = bronze_age
+	tech_tree_parent_unit_class = dock
 }
 
 celestial_navigation = {
 	name = "Celestial Navigation"
 	category = naval_science
 	age = iron_age
+	tech_tree_parent_upgrade_class = sailing
 
 	conditions = {
 		upgrade_class = sailing
@@ -18,6 +20,7 @@ compass = {
 	name = "Compass"
 	category = naval_science
 	age = gunpowder_age
+	tech_tree_parent_upgrade_class = celestial_navigation
 
 	conditions = {
 		upgrade_class = celestial_navigation
