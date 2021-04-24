@@ -7,6 +7,9 @@ Flickable {
 	contentHeight: contentItem.childrenRect.height
 	boundsBehavior: Flickable.StopAtBounds
 	clip: true
+	ScrollBar.horizontal: ScrollBar {
+		policy: ScrollBar.AsNeeded
+	}
 	ScrollBar.vertical: ScrollBar {
 		policy: ScrollBar.AsNeeded
 	}

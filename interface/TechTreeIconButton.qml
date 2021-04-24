@@ -7,4 +7,5 @@ TreeIconButton {
 	
 	button_x: entry_class.tech_tree_x
 	button_y: entry_class.tech_tree_y
+	button_width: entry_class.tech_tree_width
 }

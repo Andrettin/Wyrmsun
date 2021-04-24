@@ -6,20 +6,12 @@ MenuBase {
 	id: tech_tree_menu
 	title: "Tech Tree"
 	
-	NormalText {
-		id: civilization_label
-		text: "Civilization:"
-		anchors.left: civilization_dropdown.left
-		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-	}
-	
 	Dropdown {
 		id: civilization_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: civilization_label.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		width: 100 * wyrmgus.defines.scale_factor
+		anchors.top: parent.title_element.bottom
+		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		width: 125 * wyrmgus.defines.scale_factor
 		entries: wyrmgus.get_playable_civilizations()
 		
 		onSelectedEntryChanged: {
