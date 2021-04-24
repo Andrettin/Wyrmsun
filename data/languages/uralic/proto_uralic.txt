@@ -1,0 +1,4 @@
+proto_uralic = {
+	name = "Proto-Uralic"
+	family = uralic
+}

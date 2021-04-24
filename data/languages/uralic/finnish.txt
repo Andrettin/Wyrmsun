@@ -1,0 +1,4 @@
+finnish = {
+	name = "Finnish"
+	family = uralic
+}

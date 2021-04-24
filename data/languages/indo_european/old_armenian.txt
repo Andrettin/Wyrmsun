@@ -1,0 +1,4 @@
+old_armenian = {
+	name = "Old Armenian"
+	family = indo_european
+}

@@ -29,32 +29,12 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
-DefineLanguage("old-armenian", {
-	Name = "Old Armenian"
-})
-
-DefineLanguage("armenian", {
-	Name = "Armenian"
-})
-
 DefineLanguage("egyptian", {
 	Name = "Egyptian"
 })
 
 DefineLanguage("coptic", {
 	Name = "Coptic"
-})
-
-DefineLanguage("proto-uralic", {
-	Name = "Proto-Uralic"
-})
-
-DefineLanguage("finnish", {
-	Name = "Finnish"
-})
-
-DefineLanguage("turkish", {
-	Name = "Turkish"
 })
 
 DefineLanguage("basque", {
