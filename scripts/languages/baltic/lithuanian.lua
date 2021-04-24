@@ -249,7 +249,7 @@ DefineLanguageWord("Raũdas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 DefineLanguageWord("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "lithuanian",
 	Type = "verb",
-	Meanings = {"Interpret a Sign or Prophesy"}
+	Meanings = {"Interpret a Sign", "Prophesy"}
 })
 
 DefineLanguageWord("Skìltis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 229-230.

@@ -64,6 +64,10 @@ MenuBase {
 		text: "Tech Tree"
 		hotkey: "t"
 		lua_command: "RunTechTreeMenu(0);"
+		
+		onClicked: {
+			menu_stack.push("TechTreeMenu.qml")
+		}
 	}
 	
 	PreviousMenuButton {

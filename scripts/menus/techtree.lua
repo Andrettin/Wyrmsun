@@ -27,8 +27,9 @@
 
 UsingTechTree = false
 
-function RunTechTreeMenu(civilization_number)
+tech_tree_menu = nil
 
+function RunTechTreeMenu(civilization_number)
 	UsingTechTree = true
 
 	if (RunningScenario == false) then
@@ -36,6 +37,7 @@ function RunTechTreeMenu(civilization_number)
 	end
 
 	local menu = WarMenu()
+	tech_tree_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local civilization_dd
@@ -331,9 +333,6 @@ function RunTechTreeMenu(civilization_number)
 		end
 	end
 	
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (104 + (36 * 9.5)) * get_scale_factor(),
-		function() SetPlayerData(GetThisPlayer(), "RaceName", "gnome"); menu:stop(); end)
-
 	menu:run()
 end
 
