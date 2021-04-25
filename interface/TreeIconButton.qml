@@ -12,7 +12,6 @@ IconButton {
 	property int button_y: 0
 	property int button_width: 1 //the width in buttons
 	property bool has_tree_parent: false
-	property bool has_tree_children: false
 	property int parent_button_x: 0
 	property int parent_button_y: 0
 	property int parent_button_width: 1
@@ -31,13 +30,13 @@ IconButton {
 		width: 2 * wyrmgus.defines.scale_factor
 		height: 8 * wyrmgus.defines.scale_factor
 		color: "gray"
-		x: parent.width / 2 - (width / 2)
-		y: parent.height
-		visible: parent.has_tree_children
+		x: parent.parent_x - parent.x + parent.width / 2 - (width / 2)
+		y: parent.parent_y - parent.y + parent.height
+		visible: parent.has_tree_parent
 	}
 	
 	Rectangle {
-		id: vertical_child_line
+		id: child_line
 		width: 2 * wyrmgus.defines.scale_factor
 		height: 8 * wyrmgus.defines.scale_factor
 		color: "gray"
@@ -47,11 +46,11 @@ IconButton {
 	}
 	
 	Rectangle {
-		id: horizontal_child_line
+		id: horizontal_line
 		width: get_base_width() + 2 * wyrmgus.defines.scale_factor
 		height: 2 * wyrmgus.defines.scale_factor
 		color: "gray"
-		x: parent.width / 2 - (vertical_child_line.width / 2) - (parent.x > parent.parent_x ? get_base_width() : 0)
+		x: parent.width / 2 - (child_line.width / 2) - (parent.x > parent.parent_x ? get_base_width() : 0)
 		y: -8 * wyrmgus.defines.scale_factor
 		visible: parent.has_tree_parent && parent.x != parent.parent_x
 		
