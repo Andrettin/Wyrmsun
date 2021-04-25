@@ -2,19 +2,69 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 
 IconButton {
-	readonly property var icon_button_tree: parent.parent
-	readonly property var civilization: model.modelData.civilization ? model.modelData.civilization : (model.modelData.civilization_group ? model.modelData.civilization_group : null)
-	readonly property var faction: model.modelData.faction ? model.modelData.faction : (model.modelData.default_faction ? model.modelData.default_faction : null)
-	readonly property string name: model.modelData.full_name ? model.modelData.full_name : model.modelData.name
+	readonly property var entry: model.modelData
+	readonly property var civilization: entry.civilization ? entry.civilization : (entry.civilization_group ? entry.civilization_group : null)
+	readonly property var faction: entry.faction ? entry.faction : (entry.default_faction ? entry.default_faction : null)
+	readonly property string name: entry.full_name ? entry.full_name : entry.name
 	readonly property int padded_width: width + 8 * wyrmgus.defines.scale_factor * 2
 	readonly property int padded_height: height + 8 * wyrmgus.defines.scale_factor * 2
 	property int button_x: 0
 	property int button_y: 0
 	property int button_width: 1 //the width in buttons
+	property bool has_tree_parent: false
+	property bool has_tree_children: false
+	property int parent_button_x: 0
+	property int parent_button_y: 0
+	property int parent_button_width: 1
+	readonly property int parent_x: parent_button_x * padded_width + (parent_button_width - 1) * padded_width / 2 + 8 * wyrmgus.defines.scale_factor
+	readonly property int parent_y: parent_button_y * padded_height + 8 * wyrmgus.defines.scale_factor
 	
 	x: button_x * padded_width + (button_width - 1) * padded_width / 2 + 8 * wyrmgus.defines.scale_factor
 	y: button_y * padded_height + 8 * wyrmgus.defines.scale_factor
-	icon: model.modelData.icon.identifier
+	icon: entry.icon.identifier
 	player_color: faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
 	tooltip: name
+	clip: false
+	
+	Rectangle {
+		id: parent_line
+		width: 2 * wyrmgus.defines.scale_factor
+		height: 8 * wyrmgus.defines.scale_factor
+		color: "gray"
+		x: parent.width / 2 - (width / 2)
+		y: parent.height
+		visible: parent.has_tree_children
+	}
+	
+	Rectangle {
+		id: vertical_child_line
+		width: 2 * wyrmgus.defines.scale_factor
+		height: 8 * wyrmgus.defines.scale_factor
+		color: "gray"
+		x: parent.width / 2 - (width / 2)
+		y: -height
+		visible: parent.has_tree_parent
+	}
+	
+	Rectangle {
+		id: horizontal_child_line
+		width: get_base_width() + 2 * wyrmgus.defines.scale_factor
+		height: 2 * wyrmgus.defines.scale_factor
+		color: "gray"
+		x: parent.width / 2 - (vertical_child_line.width / 2) - (parent.x > parent.parent_x ? get_base_width() : 0)
+		y: -8 * wyrmgus.defines.scale_factor
+		visible: parent.has_tree_parent && parent.x != parent.parent_x
+		
+		function get_base_width() {
+			if (parent.x < parent.parent_x) {
+				return parent.parent_x - parent.x
+			}
+			
+			if (parent.x > parent.parent_x) {
+				return parent.x - parent.parent_x
+			}
+			
+			return 0
+		}
+	}
 }

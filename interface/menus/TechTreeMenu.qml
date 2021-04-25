@@ -32,8 +32,8 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		entries: civilization_dropdown.selectedEntry.get_tech_tree_entries()
 		icon_button_component: Qt.createComponent("../TechTreeIconButton.qml")
+		entries: civilization_dropdown.selectedEntry.get_tech_tree_entries()
 	}
 	
 	PreviousMenuButton {
