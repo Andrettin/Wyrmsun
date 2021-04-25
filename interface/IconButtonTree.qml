@@ -16,6 +16,7 @@ Flickable {
 	
 	property var entries: []
 	property var icon_button_component: null
+	property string player_color: ""
 	
 	Repeater {
 		model: icon_button_tree.entries

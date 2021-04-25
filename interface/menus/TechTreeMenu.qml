@@ -23,6 +23,7 @@ MenuBase {
 	}
 	
 	IconButtonTree {
+		readonly property var civilization: civilization_dropdown.selectedEntry
 		id: tech_tree
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
@@ -33,7 +34,8 @@ MenuBase {
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		icon_button_component: Qt.createComponent("../TechTreeIconButton.qml")
-		entries: civilization_dropdown.selectedEntry.get_tech_tree_entries()
+		entries: civilization.get_tech_tree_entries()
+		player_color: civilization.default_color ? civilization.default_color.identifier : ""
 	}
 	
 	PreviousMenuButton {

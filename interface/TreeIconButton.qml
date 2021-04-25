@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 
 IconButton {
+	readonly property var tree_item: parent.parent
 	readonly property var entry: model.modelData
 	readonly property var civilization: entry.civilization ? entry.civilization : (entry.civilization_group ? entry.civilization_group : null)
 	readonly property var faction: entry.faction ? entry.faction : (entry.default_faction ? entry.default_faction : null)
@@ -21,7 +22,7 @@ IconButton {
 	x: button_x * padded_width + (button_width - 1) * padded_width / 2 + 8 * wyrmgus.defines.scale_factor
 	y: button_y * padded_height + 8 * wyrmgus.defines.scale_factor
 	icon: entry.icon.identifier
-	player_color: faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
+	player_color: tree_item.player_color.length > 0 ? tree_item.player_color : (faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier))
 	tooltip: name
 	clip: false
 	
