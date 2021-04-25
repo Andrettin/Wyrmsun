@@ -7,7 +7,7 @@ town_hall = {
 fortress = {
 	name = "Fortress"
 	town_hall = true
-	tech_tree_parent_unit_class = fortress
+	tech_tree_parent_unit_class = stronghold
 }
 
 farm = {
