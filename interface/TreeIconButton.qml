@@ -18,6 +18,7 @@ Item {
 	readonly property int parent_x: parent_button_x * width + (parent_button_width - 1) * width / 2 + padding
 	readonly property int parent_y: parent_button_y * height + padding
 	
+	signal clicked()
 	
 	width: icon_button.width + padding * 2
 	height: icon_button.height + padding * 2
@@ -31,6 +32,10 @@ Item {
 		player_color: tree_item.player_color.length > 0 ? tree_item.player_color : (faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier))
 		icon: entry.icon.identifier
 		tooltip: name
+		
+		onClicked: {
+			parent.clicked()
+		}
 	}
 	
 	Rectangle {

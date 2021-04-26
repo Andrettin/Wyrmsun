@@ -13,4 +13,10 @@ TreeIconButton {
 	parent_button_x: entry_parent_class ? entry_parent_class.tech_tree_x : 0
 	parent_button_y: entry_parent_class ? entry_parent_class.tech_tree_y : 0
 	parent_button_width: entry_parent_class ? entry_parent_class.tech_tree_width : 1
+	
+	onClicked: {
+		menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
+			entry: model.modelData
+		})
+	}
 }
