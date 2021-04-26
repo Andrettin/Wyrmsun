@@ -42,6 +42,5 @@ MenuBase {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "tech_tree_menu:stop();"
 	}
 }
