@@ -13,6 +13,7 @@ Item {
 	property bool hotkey_pressed: false
 	property bool pressed: mouse_area.containsPress || hotkey_pressed
 	property bool hovered: mouse_area.containsMouse
+	property bool disabled: false
 	readonly property var image: widget_image
 	readonly property var mouse_area_element: mouse_area
 	
@@ -42,7 +43,11 @@ Item {
 	}
 	
 	onClicked: {
-		wyrmgus.play_sound("click")
+		if (disabled) {
+			wyrmgus.play_sound("placement_error")
+		} else {
+			wyrmgus.play_sound("click")
+		}
 	}
 	
 	//highlight hotkey in text
