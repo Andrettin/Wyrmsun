@@ -16,6 +16,7 @@ the_lombard_league = {
 	required_quests = { the_rise_of_barbarossa }
 	map_templates = { earth_space }
 	quest = the_lombard_league
+	tree_parent = the_rise_of_barbarossa
 }
 
 the_lion_of_saxony = {
@@ -26,4 +27,5 @@ the_lion_of_saxony = {
 	required_quests = { the_lombard_league }
 	map_templates = { earth_space }
 	quest = the_lion_of_saxony
+	tree_parent = the_lombard_league
 }

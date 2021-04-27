@@ -5,4 +5,6 @@ westward_migration = {
 	start_date = -2900.10 #start during autumn
 	required_quests = { on_the_vanaquisl }
 	quest = westward_migration
+	icon = germanic_worker
+	tree_parent = on_the_vanaquisl
 }

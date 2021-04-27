@@ -4,4 +4,5 @@ on_the_vanaquisl = {
 	faction = asa_tribe
 	start_date = -3000
 	quest = on_the_vanaquisl
+	icon = icon_germanic_warrior
 }

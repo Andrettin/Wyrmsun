@@ -6,4 +6,6 @@ the_settlement_of_scandinavia = {
 	map_templates = { earth_space }
 	required_quests = { westward_migration }
 	quest = the_settlement_of_scandinavia
+	icon = icon_germanic_town_hall
+	tree_parent = westward_migration
 }
