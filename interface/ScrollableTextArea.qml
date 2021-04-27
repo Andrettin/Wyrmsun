@@ -43,6 +43,7 @@ Item {
 			maximumLineCount: 564 //if the number of lines is allowed to become greater than this, then the text becomes a black rectangle
 			
 			onLinkActivated: {
+				wyrmgus.play_sound("click")
 				menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
 					entry: wyrmgus.get_link_target(link)
 				})
