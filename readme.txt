@@ -84,9 +84,12 @@ https://github.com/Andrettin/Wyrmsun
 - Increased Spearman damage from 5 to 6.
 
 * User Interface
+- Reworked the main menu to be QML-based.
 - F11 is now the screenshot hotkey.
 - Reworked the game's rendering system and graphical interface to use the Qt Framework.
 - The game is now always in borderless fullscreen mode, as the new UI framework supports that. The main purpose of the windowed mode was to allow alt-tabbing seamlessly, which the borderless fullscreen mode also provides. And unlike the old fullscreen functionality, this supports any resolution.
+- Reworked the tech tree menu.
+- The scenario menu is now depicted as a tree.
 
 -----------------------------------------------------------------------
 - 4.1.4
