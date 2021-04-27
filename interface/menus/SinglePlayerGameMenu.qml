@@ -15,7 +15,7 @@ MenuBase {
 		hotkey: "s"
 		
 		onClicked: {
-			menu_stack.push("CampaignMenu.qml")
+			menu_stack.push("CampaignTreeMenu.qml")
 		}
 	}
 	

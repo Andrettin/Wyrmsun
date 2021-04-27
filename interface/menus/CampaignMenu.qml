@@ -6,55 +6,15 @@ MenuBase {
 	id: campaign_menu
 	title: "Scenarios"
 	
-	Dropdown {
-		id: campaign_dropdown
-		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor * 4
-		width: 250 * wyrmgus.defines.scale_factor
-		entries: wyrmgus.get_available_campaigns()
-		
-		onEntriesChanged: {
-			campaign_dropdown.set_selected_entry(wyrmgus.preferences.selected_campaign)
-		}
-		
-		onSelectedEntryChanged: {
-			if (wyrmgus.preferences.selected_campaign !== campaign_dropdown.selectedEntry) {
-				wyrmgus.preferences.selected_campaign = campaign_dropdown.selectedEntry
-				wyrmgus.preferences.save()
-			}
-		}
-		
-		Connections {
-			target: wyrmgus
-			onRunningChanged: {
-				if (!wyrmgus.running) {
-					//refresh the campaign list when a game has ended, as new campaigns may have become available
-					campaign_dropdown.entries = wyrmgus.get_available_campaigns()
-				}
-			}
-		}
-		
-		function get_entry_name(entry) {
-			var name = entry.name
-			
-			if (entry.quest !== null && !entry.quest.completed) {
-				name += " " + highlight("(!)")
-			}
-			
-			return name
-		}
-	}
+	property var campaign: null
 	
 	ScrollableTextArea {
-		property var campaign: wyrmgus.preferences.selected_campaign
-		
 		id: text_area
 		anchors.left: parent.left
 		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
-		anchors.top: campaign_dropdown.bottom
+		anchors.top: parent.title_element.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: difficulty_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
@@ -100,7 +60,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Scenario"
 		hotkey: "s"
-		lua_command: "SetCurrentCampaign(\"" + wyrmgus.preferences.selected_campaign.identifier + "\"); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; RunMap(\"scripts/map_templates/campaign.smp\");"
+		lua_command: "SetCurrentCampaign(\"" + campaign.identifier + "\"); RunningScenario = true; GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; RunMap(\"scripts/map_templates/campaign.smp\");"
 	}
 	
 	PreviousMenuButton {

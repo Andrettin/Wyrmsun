@@ -6,6 +6,8 @@ ButtonBase {
 	
 	property string icon: ""
 	property string player_color: "violet"
+	property bool grayscale: false
+	property bool transparent: false
 	
 	//black rectangle to prevent transparent space from being shown when the button is pressed (and thus the icon moved is shifted)
 	Rectangle {
@@ -24,6 +26,7 @@ ButtonBase {
 		anchors.horizontalCenterOffset: (pressed ? 1 : 0) * wyrmgus.defines.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.verticalCenterOffset: (pressed ? 1 : 0) * wyrmgus.defines.scale_factor
-		source: icon.length > 0 ? "image://icon/" + icon + "/" + player_color : "image://empty/"
+		source: icon.length > 0 ? "image://icon/" + icon + "/" + player_color + (grayscale ? "/grayscale" : "")  : "image://empty/"
+		opacity: transparent ? 0.25 : 1
 	}
 }

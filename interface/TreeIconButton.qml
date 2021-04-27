@@ -17,6 +17,10 @@ Item {
 	property int parent_button_width: 1
 	readonly property int parent_x: parent_button_x * width + (parent_button_width - 1) * width / 2 + padding
 	readonly property int parent_y: parent_button_y * height + padding
+	property bool tree_line_visible: true
+	property bool grayscale: false
+	property bool transparent: false
+	property bool disabled: false
 	
 	signal clicked()
 	
@@ -29,9 +33,12 @@ Item {
 		id: icon_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		player_color: tree_item.player_color.length > 0 ? tree_item.player_color : (faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier))
+		player_color: tree_item.player_color.length > 0 ? tree_item.player_color : (entry.player_color ? entry.player_color.identifier : (faction ? faction.color.identifier : (civilization && civilization.default_color ? civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)))
 		icon: entry.icon.identifier
 		tooltip: name
+		grayscale: parent.grayscale
+		transparent: parent.transparent
+		disabled: parent.disabled
 		
 		onClicked: {
 			parent.clicked()
@@ -45,7 +52,7 @@ Item {
 		color: "gray"
 		x: parent.parent_x - parent.x + parent.width / 2 - (width / 2)
 		y: parent.parent_y - parent.y + parent.height - padding
-		visible: parent.has_tree_parent
+		visible: parent.has_tree_parent && parent.tree_line_visible
 	}
 	
 	Rectangle {
@@ -55,7 +62,7 @@ Item {
 		color: "gray"
 		x: parent.width / 2 - (width / 2)
 		y: 0
-		visible: parent.has_tree_parent
+		visible: parent.has_tree_parent && parent.tree_line_visible
 	}
 	
 	Rectangle {
@@ -65,7 +72,7 @@ Item {
 		color: "gray"
 		x: parent.width / 2 - (child_line.width / 2) - (parent.x > parent.parent_x ? get_base_width() : 0)
 		y: 0
-		visible: parent.has_tree_parent && parent.x != parent.parent_x
+		visible: parent.has_tree_parent && parent.x != parent.parent_x && parent.tree_line_visible
 		
 		function get_base_width() {
 			if (parent.x < parent.parent_x) {

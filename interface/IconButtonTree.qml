@@ -6,6 +6,7 @@ Flickable {
 	contentWidth: contentItem.childrenRect.width
 	contentHeight: contentItem.childrenRect.height
 	boundsBehavior: Flickable.StopAtBounds
+	leftMargin: contentWidth < width ? ((width - contentWidth) / 2) : 0 //centralize the content horizontally if its width is less than that of the flickable
 	clip: true
 	ScrollBar.horizontal: ScrollBar {
 		policy: ScrollBar.AsNeeded
