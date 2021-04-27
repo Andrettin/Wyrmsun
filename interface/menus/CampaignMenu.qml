@@ -5,8 +5,11 @@ import ".."
 MenuBase {
 	id: campaign_menu
 	title: "Scenarios"
+	background: scenario_background
 	
 	property var campaign: null
+	readonly property var campaign_civilization: campaign.faction.civilization
+	readonly property string scenario_background: campaign_civilization && campaign_civilization.encyclopedia_background_file && campaign_civilization.encyclopedia_background_file.length > 0 ? campaign_civilization.encyclopedia_background_file : wyrmgus.defines.default_menu_background_file
 	
 	ScrollableTextArea {
 		id: text_area
@@ -18,7 +21,7 @@ MenuBase {
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: difficulty_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		text: "Faction: " + campaign.faction.link_string + " (" + campaign.faction.civilization.link_string + ")\n\nStart Year: " + year_string(campaign.start_date.getFullYear()) + "\n\nDescription: " + campaign.description + "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
+		text: "Faction: " + campaign.faction.link_string + " (" + campaign_civilization.link_string + ")\n\nStart Year: " + year_string(campaign.start_date.getFullYear()) + "\n\nDescription: " + campaign.description + "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
 	}
 	
 	NormalText {
