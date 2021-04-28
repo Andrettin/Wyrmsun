@@ -28,7 +28,7 @@ Item {
 			radius: 5 * wyrmgus.defines.scale_factor
 		}
 		ToolTip.toolTip.onTextChanged: tooltip_width_reference_text.text = ToolTip.toolTip.text
-
+		
 		Text {
 			id: tooltip_width_reference_text
 			text: ""

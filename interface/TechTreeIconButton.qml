@@ -5,6 +5,7 @@ TreeIconButton {
 	readonly property var entry: model.modelData
 	readonly property var entry_class: entry.unit_class ? entry.unit_class : (entry.upgrade_class ? entry.upgrade_class : null)
 	readonly property var entry_parent_class: entry_class ? entry_class.tech_tree_parent : null
+	readonly property var entry_parent: entry_class ? tree_item.get_class_entry(entry_parent_class) : null
 	
 	button_x: entry_class.tech_tree_x
 	button_y: entry_class.tech_tree_y
@@ -13,6 +14,7 @@ TreeIconButton {
 	parent_button_x: entry_parent_class ? entry_parent_class.tech_tree_x : 0
 	parent_button_y: entry_parent_class ? entry_parent_class.tech_tree_y : 0
 	parent_button_width: entry_parent_class ? entry_parent_class.tech_tree_width : 1
+	parent_name: entry_parent ? entry_parent.name : ""
 	
 	onClicked: {
 		menu_stack.push("menus/EncyclopediaEntryMenu.qml", {

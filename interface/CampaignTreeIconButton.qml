@@ -12,6 +12,7 @@ TreeIconButton {
 	parent_button_x: entry_parent ? entry_parent.tree_x : 0
 	parent_button_y: entry_parent ? entry_parent.tree_y : 0
 	parent_button_width: entry_parent ? entry_parent.tree_width : 1
+	parent_name: entry_parent ? entry_parent.name : ""
 	tree_line_visible: entry.tree_line_visible
 	grayscale: entry.quest && entry.quest.completed
 	transparent: !entry.available

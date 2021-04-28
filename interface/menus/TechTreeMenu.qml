@@ -23,7 +23,6 @@ MenuBase {
 	}
 	
 	IconButtonTree {
-		readonly property var civilization: civilization_dropdown.selectedEntry
 		id: tech_tree
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
@@ -36,6 +35,24 @@ MenuBase {
 		icon_button_component: Qt.createComponent("../TechTreeIconButton.qml")
 		entries: civilization.get_tech_tree_entries()
 		player_color: civilization.default_color ? civilization.default_color.identifier : ""
+		
+		readonly property var civilization: civilization_dropdown.selectedEntry
+		
+		function get_class_entry(entry_class) {
+			for (var i = 0; i < tech_tree.entries.length; ++i) {
+				var entry = tech_tree.entries[i]
+				
+				if (entry.unit_class && entry.unit_class == entry_class) {
+					return entry
+				}
+				
+				if (entry.upgrade_class && entry.upgrade_class == entry_class) {
+					return entry
+				}
+			}
+			
+			return null
+		}
 	}
 	
 	PreviousMenuButton {
