@@ -13,5 +13,9 @@ bucharest = {
 			owner = getae_tribe #Getae territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
+		
+		200 = {
+			owner = visigothic_tribe #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		}
 	}
 }
