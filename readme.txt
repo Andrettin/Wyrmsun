@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Scenarios
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.
+- Added more predefined settlement territories for the Earth map.
 
 * Terrain
 - Added new dry mud and mud decoration tiles.
