@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 4.1.5
 -----------------------------------------------------------------------
 
+* Buildings
+- Town halls, strongholds, mines and hunting lodges no longer leave a destroyed building "corpse".
+
 * Encyclopedia
 - Added support for encyclopedia entries having links to each other.
 - Updated the literary texts for the encyclopedia, streamlining them (removing footnotes and the "|" character which denoted a caesura/break within a verse).
