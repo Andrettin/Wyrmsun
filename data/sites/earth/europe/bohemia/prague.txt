@@ -34,7 +34,7 @@ prague = {
 		}
 		
 		1003 = {
-			owner = poland #became a part of Poland in 1003; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = poland #became part of Poland in 1003; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1004 = {

@@ -13,9 +13,13 @@ szekesfehervar = {
 	}
 	
 	history = {
+		10 = {
+			owner = rome #became part of the Roman Empire in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
 		395 = {
 			owner = rome #part of the Western Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-			building_classes += town_hall
 		}
 		
 		486 = {

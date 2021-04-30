@@ -19,7 +19,7 @@ edinburgh = {
 		}
 		
 		161 = {
-			owner = selgovae_tribe #The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = selgovae_tribe #the area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
 		395 = {

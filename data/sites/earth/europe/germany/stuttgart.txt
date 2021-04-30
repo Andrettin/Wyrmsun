@@ -22,6 +22,10 @@ stuttgart = {
 			building_classes += town_hall
 		}
 		
+		83 = {
+			owner = rome #became part of the Roman Empire in 83 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
 		486 = {
 			owner = alamanni_tribe #part of Alamanni territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}

@@ -17,7 +17,7 @@ troyes = {
 		}
 		
 		486.12.30 = {
-			owner = francia #Troyes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = francia #Troyes became part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 			building_classes += farm
 		}
 		

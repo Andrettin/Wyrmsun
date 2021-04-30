@@ -15,9 +15,13 @@ zaragoza = {
 	}
 	
 	history = {
+		-197 = {
+			owner = rome #became part of the Roman Empire in (apparently) 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
 		395 = {
 			owner = rome #Saragossa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-			building_classes += town_hall
 			building_classes += temple #Saragossa was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
