@@ -14,4 +14,13 @@ swedish_tribe = {
 		thralling_tribe
 		yngling_tribe
 	}
+	
+	history = {
+		-27 = {
+			#Fiölner/Fjolnir was given as being a son of Yngve/Frey, so it makes sense for his tribe to worship Frey as their major deity
+			acquired_upgrades += upgrade_deity_frey
+			
+			acquired_upgrades += upgrade_deity_freyja #Freyja was the last deity to rule the Swedes in the Ynglinga Saga, so that it makes sense that she is the minor deity chosen by the Yngling-ruled Swedes, specially considering their relationship with Frey
+		}
+	}
 }
