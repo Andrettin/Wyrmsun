@@ -811,7 +811,7 @@ if (GrandStrategyYear >= 83) then
 end
 	
 if (GrandStrategyYear >= 98) then
---	SetProvinceOwner("Sweden", "norse", "swede-tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
+--	SetProvinceOwner("Sweden", "norse", "swedish_tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
 if (GrandStrategyYear >= 142) then

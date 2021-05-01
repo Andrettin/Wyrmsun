@@ -34,7 +34,7 @@ DefineCharacter("svegdir-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "fiolner-yngling",
 	Quote = "\"The dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -48,7 +48,7 @@ DefineCharacter("vanland-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Mother = "vana_of_vanaland",
 	Quote = "\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -62,7 +62,7 @@ DefineCharacter("visbur-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Mother = "drisa",
 	Quote = "\"Have the fire-dogs' fierce tongues yelling\nLapt Visbur's blood on his own hearth?\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 	-- married the daughter of Aud the Rich
 })
@@ -96,7 +96,7 @@ DefineCharacter("domald-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Father = "visbur-yngling",
 	Quote = "\"But Domald dies by bloody arms,\nRaised not by foes in war's alarms,\nRaised by his Swedish liegeman's hand,\nTo bring good seasons to the land.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -109,7 +109,7 @@ DefineCharacter("domar-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Father = "domald-yngling",
 	Quote = "\"I have asked wise men to tell\nWhere Domar rests, and they knew well.\nDomar, on Fyrie's wide-spread ground,\nWas burned, and laid on Yngve's mound.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -125,7 +125,7 @@ DefineCharacter("dyggve-the-brave-yngling", { -- Source: Snorri Sturlson, "Heims
 	Quote = "\"For Loke's daughter in her house\nOf Yngve's race would have a spouse;\nTherefore the fell-one snatched away\nBrave Dyggve from the light of day.\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as brave and mighty
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -140,7 +140,7 @@ DefineCharacter("dag-the-wise-yngling", { -- Source: Snorri Sturlson, "Heimskrin
 	Quote = "\"Varva was ravaged, and the strife\nWas ended when the monarch's life\nWas ended too - the great Dag fell\nBy the hay-fork of a base thrall!\"\n- Thiodolf of Huine",
 	Trait = "upgrade-wise", -- described as wise, brave and mighty
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -154,7 +154,7 @@ DefineCharacter("agne-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Quote = "\"How do ye like her, Agne's men\nThink ye that any chief again\nWill court the fate your chief befell,\nTo ride on wooden horse to hell?\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as powerful, celebrated and expert
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 	-- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
 })
@@ -165,15 +165,15 @@ DefineCharacter("alric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "agne-yngling",
 	Quote = "\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
+		"head-of-state", 0, 0, "swedish_tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "swedish_tribe") then
 			return true
 		end
 		return false
@@ -186,13 +186,13 @@ DefineCharacter("eric-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- horseriding described as being customary for him; king
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "agne-yngling",
 	Quote = "\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	-- Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "swedish_tribe") then
 			return true
 		end
 		return false
@@ -205,16 +205,16 @@ DefineCharacter("alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "alric-yngling",
 	Mother = "dagrid-dagling",
 	Quote = "\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine",
 	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe" -- was king of Sweden together with his brother Yngve, and Alf's son who succeeded them
+		"head-of-state", 0, 0, "swedish_tribe" -- was king of Sweden together with his brother Yngve, and Alf's son who succeeded them
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "swede-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "swedish_tribe") then
 			return true
 		end
 		return false
@@ -240,12 +240,12 @@ DefineCharacter("hugleik-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "alf-yngling",
 	Mother = "bera", -- his mother was presumably Bera, since she was Alf's wife
 	-- described as very greedy
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -258,7 +258,7 @@ DefineCharacter("jorund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Father = "yngve-yngling",
 	Quote = "\"Jorund has travelled far and wide,\nBut the same horse he must bestride\nOn which he made brave Gudlog ride.\nHe too must for a necklace wear\nHagbert's fell noose in middle air.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -283,7 +283,7 @@ DefineCharacter("on-the-old-yngling", { -- Source: Snorri Sturlson, "Heimskringl
 	Trait = "upgrade-cruel", -- described as wise and cruel
 	Quote = "\"In Upsal's town the cruel king\nSlaughtered his sons at Odin's shrine\nSlaughtered his sons with cruel knife,\nTo get from Odin length of life.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
+		"head-of-state", 0, 0, "swedish_tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
 	}
 })
 
@@ -296,7 +296,7 @@ DefineCharacter("egil-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Father = "on-the-old-yngling",
 	Quote = "\"The fair-haired son of Odin's race,\nWho fled before fierce Tunne's face,\nHas perished by the demon-beast\nWho roams the forests of the East.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -310,7 +310,7 @@ DefineCharacter("ottar-vendelcrow-yngling", { -- Source: Snorri Sturlson, "Heims
 	Father = "egil-yngling",
 	Quote = "\"By Danish arms the hero bold,\nOttar the Brave, lies stiff and cold.\nTo Vendel's plain the corpse was borne;\nBy eagles' claws the corpse is torn\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 	-- described as brave
 })
@@ -321,11 +321,11 @@ DefineCharacter("adils-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "ottar-vendelcrow-yngling",
 	Quote = "\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -335,11 +335,11 @@ DefineCharacter("eystein-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "adils-yngling",
 	Quote = "\"The raging tree-devourer fire\nRushed on the monarch its ire;\nFirst fell the castle timbers, then\nThe roof-beams - Eystein's funeral pyre.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -349,11 +349,11 @@ DefineCharacter("yngvar-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "eystein-yngling",
 	Quote = "\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -363,11 +363,11 @@ DefineCharacter("onund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "yngvar-yngling",
 	Quote = "\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 })
 
@@ -378,11 +378,11 @@ DefineCharacter("ingiald-the-evil-adviser-yngling", { -- Source: Snorri Sturlson
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Father = "onund-yngling",
 	Quote = "\"On his own hearth the fire he raised,\nA deed his foemen even praised;\nBy his own hand he perished so,\nAnd life for freedom did forego.\"\n- Thiodolf of Huine",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 	-- married to Gauthild
 })

@@ -1901,7 +1901,7 @@ Units = {
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-temple", "unit-germanic-market",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
-	"upgrade-faction-dane-tribe", "upgrade-faction-geat-tribe", "upgrade-faction-gute-tribe", "upgrade-faction-sitone-tribe", "upgrade-faction-swede-tribe",
+	"upgrade-faction-dane-tribe", "upgrade-faction-geat-tribe", "upgrade-faction-gute-tribe", "upgrade-faction-sitone-tribe", "upgrade_faction_swedish_tribe",
 	"upgrade-faction-denmark", "upgrade-faction-gautland", "upgrade-faction-gotland", "upgrade-faction-norway", "upgrade-faction-sweden",
 	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
 --	"unit-norse-longship",

@@ -47,7 +47,7 @@ DefineCharacter("bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	Faction = "swede-tribe", -- presumably, since her husband is from Sweden
+	Faction = "swedish_tribe", -- presumably, since her husband is from Sweden
 	Quote = "\"A deed of dreadful note I sing,\nHow by false Bera, wicked queen,\nThe murderous brother-hands were seen\nEach raised against a brother's life\"\n- Thiodolf of Huine",
 	-- married to Alf Yngling
 	-- described as agreeable, very brisk and gay, but also false and wicked
@@ -61,7 +61,7 @@ DefineCharacter("hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	-- described as being a murderous combatant
 	HistoricalTitles = {
 		-- was king (of somewhere), and then invaded and conquered Sweden, becoming its king as well
-		"head-of-state", 0, 0, "swede-tribe"
+		"head-of-state", 0, 0, "swedish_tribe"
 	}
 	-- brother of Hagberd
 })
@@ -80,7 +80,7 @@ DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
-	Faction = "swede-tribe",
+	Faction = "swedish_tribe",
 	Trait = "upgrade-mighty", -- described as a powerful combatant
 	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
 	-- brother of Geigad

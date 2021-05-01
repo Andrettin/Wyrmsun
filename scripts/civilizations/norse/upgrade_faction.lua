@@ -49,7 +49,7 @@ DefineUpgrade("upgrade-faction-sitone-tribe", {
 	RequirementsString = "Ironworking"
 })
 
-DefineUpgrade("upgrade-faction-swede-tribe", {
+DefineUpgrade("upgrade_faction_swedish_tribe", {
 	Name = "Swede Tribe",
 	EffectsString = "+2 Damage for Archers",
 	RequirementsString = "Ironworking"
@@ -117,7 +117,7 @@ DefineModifier("upgrade-faction-sitone-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-swede-tribe",
+DefineModifier("upgrade_faction_swedish_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
@@ -179,6 +179,6 @@ DefineDependency("upgrade-faction-sitone-tribe",
 	{"upgrade_ironworking"}
 )
 
-DefineDependency("upgrade-faction-swede-tribe",
+DefineDependency("upgrade_faction_swedish_tribe",
 	{"upgrade_ironworking"}
 )

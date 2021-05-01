@@ -10,7 +10,7 @@ sweden = {
 	icon = icon_flag_yellow_lion_on_cyan
 	develops_from = {
 		sitone_tribe
-		swede_tribe
+		swedish_tribe
 		gautland
 		scania
 	}

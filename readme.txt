@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed the requirements string for the Shadowcharm Clan faction.
 - Renamed the "Goth Tribe" to "Gothic Tribe", the "Ostrogoth Tribe" to "Ostrogothic Tribe" and the "Visigoth Tribe" to "Visigothic Tribe".
+- Renamed the "Swede Tribe" to "Swedish Tribe".
 
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
@@ -80,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.
 - Added more predefined settlement territories for the Earth map.
 - Added starting caravan for the Goldhoof Clan in the A Home in the Fields of Sand scenario.
+- Added the Heimdall's Stones unique building to the new Earth map for the correct start dates.
 
 * Terrain
 - Added new dry mud and mud decoration tiles.

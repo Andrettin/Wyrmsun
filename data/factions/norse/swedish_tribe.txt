@@ -1,0 +1,17 @@
+swedish_tribe = {
+	name = "Swedish Tribe"
+	adjective = "Swedish"
+	civilization = norse
+	type = tribe
+	color = blue
+	faction_upgrade = upgrade_faction_swedish_tribe
+	icon = icon_flag_yellow_lion_on_cyan
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
+	}
+}

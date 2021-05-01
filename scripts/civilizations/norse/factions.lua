@@ -68,16 +68,6 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
-DefineFaction("swede-tribe", {
-	Name = "Swede Tribe",
-	Civilization = "norse",
-	Type = "tribe",
-	Color = "blue",
-	FactionUpgrade = "upgrade-faction-swede-tribe",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe", "yngling-tribe"}
-})
-
 -- Polities
 
 DefineFaction("agder", {
@@ -88,7 +78,7 @@ DefineFaction("agder", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("scania", {
@@ -100,7 +90,7 @@ DefineFaction("scania", {
 	Adjective = "Scanian",
 	FactionUpgrade = "upgrade-faction-denmark",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"dane-tribe", "swede-tribe"}
+	DevelopsFrom = {"dane-tribe", "swedish_tribe"}
 })
 
 DefineFaction("gautland", {
@@ -133,7 +123,7 @@ DefineFaction("halogaland", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("hedmark", {
@@ -144,7 +134,7 @@ DefineFaction("hedmark", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("holmgard", {
@@ -155,7 +145,7 @@ DefineFaction("holmgard", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-sweden",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("hordaland", {
@@ -166,7 +156,7 @@ DefineFaction("hordaland", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("orkney", { -- Earldom of Orkney
@@ -184,7 +174,7 @@ DefineFaction("orkney", { -- Earldom of Orkney
 	},
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("sogn", {
@@ -195,7 +185,7 @@ DefineFaction("sogn", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"}
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("vestfold", {
@@ -206,7 +196,7 @@ DefineFaction("vestfold", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"},
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"},
 	HistoricalDiplomacyStates = {
 		841, "agder", "alliance" -- Halfdan the Black and Olaf Geirstad-Alf, brothers, were apparently friendly or allied since they divided a kingdom between themselves in 841 without war; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	}
@@ -220,7 +210,7 @@ DefineFaction("vingulmark", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"sitone-tribe", "swede-tribe"},
+	DevelopsFrom = {"sitone-tribe", "swedish_tribe"},
 	HistoricalDiplomacyStates = {
 		{841, 9, 1}, "agder", "war" -- Halfdan the Black, king of Agder, attacked Vingulmark with an army in the autumn of 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	}
@@ -244,5 +234,5 @@ DefineFaction("varangian-guard", {
 	Type = "mercenary_company",
 	Color = "red",
 	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-swede-tribe"
+	FactionUpgrade = "upgrade_faction_swedish_tribe"
 })

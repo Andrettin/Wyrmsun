@@ -81,7 +81,7 @@ DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Father = "halfdan",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "scania", -- king of Scania
-		"head-of-state", 0, 0, "swede-tribe" -- conquered Sweden
+		"head-of-state", 0, 0, "swedish_tribe" -- conquered Sweden
 	}
 })
 

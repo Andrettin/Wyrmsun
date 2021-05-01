@@ -10,7 +10,7 @@ norway = {
 	icon = icon_flag_cyan_lion_on_red
 	develops_from = {
 		sitone_tribe
-		swede_tribe
+		swedish_tribe
 		agder
 		halogaland
 		hedmark

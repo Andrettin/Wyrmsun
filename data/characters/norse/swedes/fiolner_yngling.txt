@@ -3,7 +3,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	surname = "Yngling"
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
-	default_faction = swede_tribe
+	default_faction = swedish_tribe
 	gender = male
 	trait = upgrade_mighty #described as powerful
 	quote = "\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"
@@ -13,7 +13,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	}
 	
 	conditions = {
-		faction = swede_tribe
+		faction = swedish_tribe
 	}
 	
 	#king of the Swedes
@@ -23,7 +23,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 		-27 = {
 			#according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 			active = true
-			faction = swede_tribe
+			faction = swedish_tribe
 			location = stockholm
 		}
 		
