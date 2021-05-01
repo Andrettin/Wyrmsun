@@ -1,0 +1,35 @@
+fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 225-227.
+	name = "Fiolner" #"Fiölner"
+	surname = "Yngling"
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swede_tribe
+	gender = male
+	trait = upgrade_mighty #described as powerful
+	quote = "\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swede_tribe
+	}
+	
+	#king of the Swedes
+	#in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black, and given how he is dated to the same time as Augustus
+	
+	history = {
+		-27 = {
+			#according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
+			active = true
+			faction = swede_tribe
+			location = stockholm
+		}
+		
+		4 = {
+			#30 years of reign estimated
+			active = false
+		}
+	}
+}

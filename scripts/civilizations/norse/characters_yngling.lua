@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("fiolner-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 225-227.
-	Name = "Fiolner", -- "Fiölner"
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Trait = "upgrade-mighty", -- described as powerful
-	-- in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black
-	Quote = "\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swede-tribe"
-	}
-})
-
 DefineCharacter("svegdir-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
 	Name = "Svegdir", -- "Svegðir"; as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
 	FamilyName = "Yngling",
