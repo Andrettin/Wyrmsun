@@ -1,0 +1,33 @@
+sigtun = {
+	name = "Sigtun"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 17.7099609375 59.58984375 }
+	cultural_names = {
+		germanic = "Segiztuna" #"Segiztûna" is a tentative rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
+	}
+	regions = {
+		scandinavia
+	}
+	
+	history = {
+		-2800.12.30 = {
+			#in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; the Ynglings were the dynasty founded by Odin's son Yngve, who ruled the Swedish lands
+			owner = yngling_tribe
+			
+			#in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
+			building_classes += temple
+		}
+		
+		-264 = {
+			owner = swede_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		-27 = {
+			owner = swede_tribe
+		}
+		
+		1560 = {
+			owner = sweden #political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}
