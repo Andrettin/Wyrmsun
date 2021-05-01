@@ -53,6 +53,9 @@ DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
 		},
 		{
 			"text", "Hint: Protect your Miners well, for if you lose them there will be no way to complete your objectives."
+		},
+		{
+			"text", "Hint: You can garrison Scouts in your caravan for them to throw axes from inside it. Garrisoning Miners in the caravan, alternatively, will help keep them from harm."
 		}
 	}
 })

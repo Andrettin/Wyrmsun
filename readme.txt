@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.
 - Added more predefined settlement territories for the Earth map.
+- Added starting caravan for the Goldhoof Clan in the A Home in the Fields of Sand scenario.
 
 * Terrain
 - Added new dry mud and mud decoration tiles.
