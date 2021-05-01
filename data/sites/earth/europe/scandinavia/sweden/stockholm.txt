@@ -24,6 +24,11 @@ stockholm = {
 			owner = swede_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
+		-27 = {
+			#according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
+			owner = swede_tribe
+		}
+		
 		1097 = {
 			owner = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}

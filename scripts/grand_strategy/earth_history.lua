@@ -769,11 +769,6 @@ if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquire
 end
 
 if (GrandStrategyYear >= -27) then
-	-- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
---	SetProvinceOwner("Sweden", "norse", "swede-tribe")
---	AcquireFactionTechnologies("germanic", "yngling-tribe", "norse", "swede-tribe")
---	SetProvinceOwner("Scania", "norse", "dane-tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	
 	-- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
