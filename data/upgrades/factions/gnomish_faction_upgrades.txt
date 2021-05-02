@@ -1,0 +1,11 @@
+upgrade_faction_acthnic_tribe = {
+	name = "Acthnic Tribe"
+}
+
+upgrade_faction_derro_tribe = {
+	name = "Derro Tribe"
+}
+
+upgrade_faction_sagan_tribe = {
+	name = "Sagan Tribe"
+}

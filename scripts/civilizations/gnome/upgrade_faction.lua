@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-faction-acthnic-tribe", {
-	Name = "Acthnic Tribe Faction"
-})
-
-DefineUpgrade("upgrade-faction-derro-tribe", {
-	Name = "Derro Tribe Faction"
-})
-
-DefineUpgrade("upgrade-faction-sagan-tribe", {
-	Name = "Sagan Tribe Faction"
-})
-
 DefineModifier("upgrade-faction-acthnic-tribe",
 	{"apply-to", "unit_gnomish_worker"}, {"convert-to", "unit_deep_gnomish_worker"}
 )

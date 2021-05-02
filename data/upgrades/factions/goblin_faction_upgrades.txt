@@ -1,0 +1,85 @@
+upgrade_faction_aelak_tribe = {
+	name = "Aelak Tribe"
+	effects_string = "+1 Damage and +5 HP for Impalers"
+}
+
+upgrade_faction_issudru_tribe = {
+	name = "Issudru Tribe"
+	effects_string = "+1 Damage and +1 Armor for Impalers"
+}
+
+upgrade_faction_mabom_tribe = {
+	name = "Mabom Tribe"
+	effects_string = "+10 HP and +2 Armor for War Machines"
+}
+
+upgrade_faction_sigre_tribe = {
+	name = "Sigre Tribe"
+	effects_string = "-5 HP, +2 Damage and +1 Accuracy for Archers"
+}
+
+upgrade_faction_aurvangling_tribe = {
+	name = "Aurvangling Tribe"
+	effects_string = "+2 Damage for Archers"
+}
+
+upgrade_faction_dreadskull_tribe = {
+	name = "Dreadskull Tribe"
+	effects_string = "+5 HP and +10 Mana for Shamans"
+}
+
+upgrade_faction_khag_tribe = {
+	name = "Khag Tribe"
+	effects_string = "-5 HP and +2 Damage for Impalers"
+}
+
+upgrade_faction_lggi_tribe = {
+	name = "Lggi Tribe"
+	effects_string = "+1 Armor and +1 Evasion for Impalers"
+}
+
+upgrade_faction_prideblade_tribe = {
+	name = "Prideblade Tribe"
+	effects_string = "+2 Damage for Swordsmen"
+}
+
+upgrade_faction_wildfang_tribe = {
+	name = "Wildfang Tribe"
+	effects_string = "+2 Damage for Swordsmen"
+}
+
+upgrade_faction_aurvang = {
+	name = "Aurvang"
+	effects_string = "+2 Damage for Archers"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_driftwood = {
+	name = "Driftwood"
+	effects_string = "+2 Evasion for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_ezmarria = {
+	name = "Ezmarria"
+	effects_string = "+50% Research Speed for Lumber Mills and Fugla Forges"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_myridia = {
+	name = "Myridia"
+	effects_string = "+50% Backstab Bonus for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_stilgar = {
+	name = "Stilgar"
+	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_tenebris = {
+	name = "Tenebris"
+	effects_string = "+5 HP and +10 Mana for Shamans"
+	requirements_string = "Writing and Masonry"
+}
