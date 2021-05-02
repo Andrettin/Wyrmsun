@@ -1,3 +1,31 @@
+upgrade_faction_brising_clan = {
+	name = "Brising Clan"
+	effects_string = "+10 HP for Miners, +1 Damage for Axefighters, +50% Research Speed for Smithies"
+}
+
+upgrade_faction_eikinskjaldi_clan = {
+	name = "Eikinskjaldi Clan"
+	effects_string = "+1 Damage for Yale Riders, +1 Armor for Axefighters"
+}
+
+upgrade_faction_goldhoof_clan = {
+	name = "Goldhoof Clan"
+	effects_string = "+2 Damage for Yale Riders"
+	requirements_string = "Yale Pen"
+}
+
+upgrade_faction_norlund_clan = {
+	name = "Norlund Clan"
+	effects_string = "+1 Damage and +1 Armor for Axefighters"
+	requirements_string = "Smithy and Ironworking"
+}
+
+upgrade_faction_oinling_clan = {
+	name = "Oinling Clan"
+	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
+	requirements_string = "Smithy"
+}
+
 upgrade_faction_shadowcharm_clan = {
 	name = "Shadowcharm Clan"
 	effects_string = "+2 Evasion for Axefighters"
@@ -15,4 +43,56 @@ upgrade_faction_shadowcharm_clan = {
 		unit_type = unit_dwarven_temple
 		upgrade = upgrade_deity_loki
 	}
+}
+
+upgrade_faction_shinsplitter_clan = {
+	name = "Shinsplitter Clan"
+	effects_string = "+3 Damage and -1 Armor for Axefighters"
+	requirements_string = "War Hall and Ironworking"
+}
+
+upgrade_faction_shorbear_clan = {
+	name = "Shorbear Clan"
+	effects_string = "+12 Damage for Ballistas"
+	requirements_string = "Smithy and Ironworking"
+}
+
+upgrade_faction_whitesteel_clan = {
+	name = "Whitesteel Clan"
+	effects_string = "+2 Damage for Guards"
+	requirements_string = "Smithy and Ironworking"
+}
+
+upgrade_faction_joruvellir = {
+	name = "Joruvellir"
+	effects_string = "+1 Damage for Yale Riders and Scouts"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_kal_kartha = {
+	name = "Kal Kartha"
+	effects_string = "-5 HP and +3 Damage for Axefighters"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_knalga = {
+	name = "Knalga"
+	effects_string = "+2 Damage for Axefighters"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_lyr = {
+	name = "Lyr"
+	effects_string = "+10 HP for Miners, +5 Armor for Towers, +50% Research Speed for Smithies"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_surghan_mercenaries = {
+	name = "Surghan Mercenaries"
+	effects_string = "+2 Damage for Axefighters"
+}
+
+upgrade_faction_yawning_yales = {
+	name = "Yawning Yales"
+	effects_string = "+2 Damage for Yale Riders"
 }

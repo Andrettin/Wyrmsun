@@ -1,0 +1,34 @@
+upgrade_faction_asa_tribe = {
+	name = "Asa Tribe"
+	effects_string = "+5 HP and +1 Damage for Eralas"
+}
+
+upgrade_faction_jarling_tribe = {
+	name = "Eraling Tribe"
+	effects_string = "+2 Damage for Eralas"
+}
+
+upgrade_faction_karling_tribe = {
+	name = "Karling Tribe"
+	effects_string = "+1 Food Supply for Farms"
+}
+
+upgrade_faction_skeldung_tribe = {
+	name = "Skeldung Tribe"
+	effects_string = "+1 Damage and +1 Armor for Eralas"
+}
+
+upgrade_faction_thielung_tribe = {
+	name = "Thielung Tribe"
+	effects_string = "+1 Damage and +1 Accuracy for Eralas"
+}
+
+upgrade_faction_thralling_tribe = {
+	name = "Thrahiling Tribe"
+	effects_string = "+5% Lumber Processing for Carpenter's Shops"
+}
+
+upgrade_faction_yngling_tribe = {
+	name = "Yngling Tribe"
+	effects_string = "+2 Damage for Skutans"
+}

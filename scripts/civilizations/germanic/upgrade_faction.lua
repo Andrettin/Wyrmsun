@@ -27,41 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-faction-asa-tribe", {
-	Name = "Asa Tribe",
-	EffectsString = "+5 HP and +1 Damage for Eralas"
-})
-
-DefineUpgrade("upgrade-faction-jarling-tribe", {
-	Name = "Eraling Tribe",
-	EffectsString = "+2 Damage for Eralas"
-})
-
-DefineUpgrade("upgrade-faction-karling-tribe", {
-	Name = "Karling Tribe",
-	EffectsString = "+1 Food Supply for Farms"
-})
-
-DefineUpgrade("upgrade-faction-skeldung-tribe", {
-	Name = "Skeldung Tribe",
-	EffectsString = "+1 Damage and +1 Armor for Eralas"
-})
-
-DefineUpgrade("upgrade-faction-thielung-tribe", {
-	Name = "Thielung Tribe",
-	EffectsString = "+1 Damage and +1 Accuracy for Eralas"
-})
-
-DefineUpgrade("upgrade-faction-thralling-tribe", {
-	Name = "Thrahiling Tribe",
-	EffectsString = "+5% Lumber Processing for Carpenter's Shops"
-})
-
-DefineUpgrade("upgrade-faction-yngling-tribe", {
-	Name = "Yngling Tribe",
-	EffectsString = "+2 Damage for Skutans"
-})
-
 DefineModifier("upgrade-faction-asa-tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
