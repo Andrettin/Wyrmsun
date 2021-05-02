@@ -1,0 +1,11 @@
+upgrade_faction_england = {
+	name = "England"
+	effects_string = "+2 Damage for Archers"
+	requirements_string = "Coinage, Engineering and Christianity, no other Anglo-Saxon or English faction exists"
+}
+
+upgrade_faction_scotland = {
+	name = "Scotland"
+	effects_string = "+2 Damage for Swordsmen"
+	requirements_string = "Coinage, Engineering and Christianity"
+}

@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-faction-england", {
-	Name = "England",
-	EffectsString = "+2 Damage for Archers",
-	RequirementsString = "Coinage, Engineering and Christianity, no other Anglo-Saxon or English faction exists"
-})
-
-DefineUpgrade("upgrade-faction-scotland", {
-	Name = "Scotland",
-	EffectsString = "+2 Damage for Swordsmen",
-	RequirementsString = "Coinage, Engineering and Christianity"
-})
-
 DefineModifier("upgrade-faction-england",
 	{"BasicDamage", 2},
 	{"Points", 10},
