@@ -1,0 +1,59 @@
+upgrade_faction_dane_tribe = {
+	name = "Dane Tribe"
+	effects_string = "+1 Damage and +1 Armor for Swordsmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_geat_tribe = {
+	name = "Geat Tribe"
+	effects_string = "+2 Damage for Swordsmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_gute_tribe = {
+	name = "Gute Tribe"
+	effects_string = "+1 Damage and +1 Accuracy for Swordsmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_sitone_tribe = {
+	name = "Sitone Tribe"
+	effects_string = "+2 Accuracy for Archers"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_swedish_tribe = {
+	name = "Swedish Tribe"
+	effects_string = "+2 Damage for Archers"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_denmark = {
+	name = "Denmark"
+	effects_string = "+1 Damage and +1 Armor for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_gautland = {
+	name = "Gautland"
+	effects_string = "+2 Damage for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_gotland = {
+	name = "Gotland"
+	effects_string = "+1 Damage and +1 Accuracy for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_norway = {
+	name = "Norway"
+	effects_string = "+2 Accuracy for Swordsmen"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_sweden = {
+	name = "Sweden"
+	effects_string = "+2 Damage for Archers"
+	requirements_string = "Writing and Masonry"
+}
