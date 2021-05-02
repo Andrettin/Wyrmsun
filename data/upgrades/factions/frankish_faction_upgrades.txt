@@ -1,0 +1,77 @@
+upgrade_faction_ampsivarii_tribe = {
+	name = "Ampsivarii Tribe"
+	effects_string = "+2 Damage for Kregars"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_batavian_tribe = {
+	name = "Batavian Tribe"
+	effects_string = "+3 Damage, -1 Armor for Kregars"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_chamavi_tribe = {
+	name = "Chamavi Tribe"
+	effects_string = "+2 Accuracy for Kregars"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_chatti_tribe = {
+	name = "Chatti Tribe"
+	effects_string = "+2 Damage for Spearmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_frank_tribe = {
+	name = "Frank Tribe"
+	effects_string = "+1 Damage and +1 Armor for Ritars"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_sugambri_tribe = {
+	name = "Sugambri Tribe"
+	effects_string = "+2 Accuracy for Archers"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_ubii_tribe = {
+	name = "Ubii Tribe"
+	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_austrasia = {
+	name = "Austrasia"
+	effects_string = "+1 Damage and +1 Armor for Ritars"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_burgundia = {
+	name = "Burgundia"
+	effects_string = "+10 HP for Ritars"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_east_francia = {
+	name = "East Francia"
+	effects_string = "+2 Armor for Ritars"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_francia = {
+	name = "Francia"
+	effects_string = "+2 Damage for Ritars"
+	requirements_string = "Writing, Masonry and no other Frankish faction exists"
+}
+
+upgrade_faction_neustria = {
+	name = "Neustria"
+	effects_string = "+1 Accuracy and +1 Armor for Ritars"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_salia = {
+	name = "Salia"
+	effects_string = "+2 Accuracy for Ritars"
+	requirements_string = "Writing and Masonry"
+}
