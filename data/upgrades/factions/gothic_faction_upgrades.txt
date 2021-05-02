@@ -1,0 +1,91 @@
+upgrade_faction_bastarnae_tribe = {
+	name = "Bastarnae Tribe"
+	effects_string = "+3 Damage and -1 Evasion for Swordsmen"
+}
+
+upgrade_faction_burgundian_tribe = {
+	name = "Burgundian Tribe"
+	effects_string = "+10 HP for Swordsmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_gepid_tribe = {
+	name = "Gepid Tribe"
+	effects_string = "+1 Speed for Swordsmen"
+}
+
+upgrade_faction_gothic_tribe = {
+	name = "Gothic Tribe"
+	effects_string = "+2 Damage for Swordsmen"
+	requirements_string = "Ironworking"
+}
+
+upgrade_faction_herulian_tribe = {
+	name = "Herulian Tribe"
+	effects_string = "Disembarkment Bonus for Swordsmen and Spearmen"
+}
+
+upgrade_faction_lugii_tribe = {
+	name = "Lugii Tribe"
+	effects_string = "+2 Evasion for Spearmen"
+}
+
+upgrade_faction_ostrogothic_tribe = {
+	name = "Ostrogothic Tribe"
+	effects_string = "+2 Damage for Horse Riders"
+}
+
+upgrade_faction_rugian_tribe = {
+	name = "Rugian Tribe"
+	effects_string = "+2 Accuracy for Swordsmen"
+}
+
+upgrade_faction_silingae_tribe = {
+	name = "Silingae Tribe"
+	effects_string = "+2 Accuracy for Archers"
+}
+
+upgrade_faction_turcilingian_tribe = {
+	name = "Turcilingian Tribe"
+	effects_string = "+2 Evasion for Archers"
+}
+
+upgrade_faction_vandal_tribe = {
+	name = "Vandal Tribe"
+	effects_string = "+2 Damage for Archers"
+}
+
+upgrade_faction_visigothic_tribe = {
+	name = "Visigothic Tribe"
+	effects_string = "+1 Speed for Horse Riders"
+}
+
+upgrade_faction_burgundy = {
+	name = "Burgundy"
+	effects_string = "+10 HP for Horse Riders"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_gothia = {
+	name = "Gothia"
+	effects_string = "+2 Damage for Horse Riders"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_ostrogothia = {
+	name = "Ostrogothia"
+	effects_string = "+2 Damage for Horse Riders"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_vandalia = {
+	name = "Vandalia"
+	effects_string = "+1 Speed for Cogs"
+	requirements_string = "Writing and Masonry"
+}
+
+upgrade_faction_visigothia = {
+	name = "Visigothia"
+	effects_string = "+1 Speed for Horse Riders"
+	requirements_string = "Writing and Masonry"
+}

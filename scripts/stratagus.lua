@@ -1951,8 +1951,6 @@ Units = {
 	"unit-suebi-swordsman", 
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
-	"upgrade-faction-bastarnae-tribe", "upgrade-faction-burgundian-tribe", "upgrade_faction_gepid_tribe", "upgrade_faction_gothic_tribe", "upgrade-faction-herulian-tribe", "upgrade-faction-lugii-tribe", "upgrade_faction_ostrogothic_tribe", "upgrade-faction-rugian-tribe", "upgrade-faction-silingae-tribe", "upgrade-faction-turcilingian-tribe", "upgrade-faction-vandal-tribe", "upgrade_faction_visigothic_tribe",
-	"upgrade-faction-burgundy", "upgrade-faction-gothia", "upgrade-faction-ostrogothia", "upgrade-faction-vandalia", "upgrade-faction-visigothia", 
 	"unit-gothic-horse-rider", "unit-gothic-horse-lord",
 	"unit-celt-farm",
 	"unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
