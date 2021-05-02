@@ -1,0 +1,19 @@
+thunresdaeg = {
+	name = "Thunresdaeg"
+	icon = icon_thor
+	player_color = blue
+	description = "\"Thunresdæg\" is Thursday in Old English. The name means \"the day of Thor\"."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:temple.name] and click on the Thunor button to worship the deity."
+	conditions = {
+		civilization = anglo_saxon
+		real_day_of_the_week = thursday
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_deity_thor
+		}
+	}
+	completion_effects = {
+		scripted_effect = small_copper_reward
+	}
+}

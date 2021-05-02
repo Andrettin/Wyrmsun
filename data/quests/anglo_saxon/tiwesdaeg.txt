@@ -1,0 +1,19 @@
+tiwesdaeg = {
+	name = "Tiwesdaeg"
+	icon = icon_tyr
+	player_color = blue
+	description = "\"Tiwesdæg\" is Tuesday in Old English. The name means \"the day of Tiw\"."
+	hint = "Select a [civilization:anglo_saxon.class_unit_type:temple.name] and click on the Tiw button to worship the deity."
+	conditions = {
+		civilization = anglo_saxon
+		real_day_of_the_week = tuesday
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_deity_tyr
+		}
+	}
+	completion_effects = {
+		scripted_effect = small_copper_reward
+	}
+}

@@ -1,0 +1,19 @@
+tysdag = {
+	name = "Tysdag"
+	icon = icon_tyr
+	player_color = blue
+	description = "\"Týsdagr\" is Tuesday in Old Norse. The name means \"the day of Tyr\"."
+	hint = "Select a [civilization:norse.class_unit_type:temple.name] and click on the Tyr button to worship the deity."
+	conditions = {
+		civilization = norse
+		real_day_of_the_week = tuesday
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_deity_tyr
+		}
+	}
+	completion_effects = {
+		scripted_effect = small_copper_reward
+	}
+}

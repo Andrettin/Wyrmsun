@@ -77,6 +77,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the No Randomness and No Day/Night Cycle options.
 - Fixed crash which occurring when accessing Goblin sound options within a game.
 
+* Quests
+- Added a couple of side-quests which only occur on certain days of the week in the real world with the objective of acquiring the upgrade of the corresponding deity, for the Norse and Anglo-Saxon civilizations. For instance, the Norse "Tysdag" quest only occurs on a Tuesday, and has the objective of choosing the Tyr deity.
+
 * Scenarios
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.
 - Added more predefined settlement territories for the Earth map.
