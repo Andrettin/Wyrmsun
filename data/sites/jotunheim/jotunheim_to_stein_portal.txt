@@ -1,0 +1,5 @@
+jotunheim_to_stein_portal = {
+	map_template = jotunheim_space
+	#base_unit_type = unit_portal
+	#connection_destination = haapsalu
+}

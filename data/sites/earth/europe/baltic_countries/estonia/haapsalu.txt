@@ -2,6 +2,8 @@ haapsalu = {
 	name = "Haapsalu"
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 23.54138890000 58.94305560000 } #from Natural Earth
+	#base_unit_type = unit_portal #portal to Jotunheim
+	#connection_destination = jotunheim_to_stein_portal
 	cultural_names = {
 		norse = "Stein" #here we identify Haapsalu with the place called Stein mentioned in the Ynglinga saga, said to be in the Estonian coast, and where the Swedish king Yngvar died
 	}
