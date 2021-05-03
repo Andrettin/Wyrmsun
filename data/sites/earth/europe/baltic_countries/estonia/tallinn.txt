@@ -5,7 +5,7 @@ tallinn = {
 	base_unit_type = unit_settlement_site
 	color = { 144 153 229 }
 	cultural_names = {
-		teuton = "Reval"
+		teutonic = "Reval"
 	}
 	regions = {
 		baltic_countries
