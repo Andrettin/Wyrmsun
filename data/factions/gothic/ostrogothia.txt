@@ -5,7 +5,7 @@ ostrogothia = {
 	type = polity
 	color = red
 	default_tier = kingdom
-	faction_upgrade = upgrade_faction_ostrogothia
+	upgrade = upgrade_faction_ostrogothia
 	icon = icon_flag_five_black_birds_on_purple
 	develops_from = {
 		ostrogothic_tribe

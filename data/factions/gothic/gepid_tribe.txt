@@ -4,7 +4,7 @@ gepid_tribe = {
 	civilization = gothic
 	type = tribe
 	color = black
-	faction_upgrade = upgrade_faction_gepid_tribe
+	upgrade = upgrade_faction_gepid_tribe
 	icon = icon_flag_five_red_birds_on_yellow
 	develops_from = {
 		gothic_tribe

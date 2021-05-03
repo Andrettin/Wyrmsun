@@ -6,7 +6,7 @@ westphalia = {
 	color = black
 	default_tier = duchy
 	icon = icon_flag_cyan_lion_on_red
-	faction_upgrade = upgrade_faction_westphalia
+	upgrade = upgrade_faction_westphalia
 	develops_from = {
 		saxon_tribe
 	}

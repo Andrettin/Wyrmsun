@@ -4,7 +4,7 @@ ostrogothic_tribe = {
 	civilization = gothic
 	type = tribe
 	color = red
-	faction_upgrade = upgrade_faction_ostrogothic_tribe
+	upgrade = upgrade_faction_ostrogothic_tribe
 	icon = icon_flag_five_black_birds_on_purple
 	develops_from = {
 		gothic_tribe

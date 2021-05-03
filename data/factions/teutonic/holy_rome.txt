@@ -7,7 +7,7 @@ holy_rome = {
 	default_tier = empire
 	default_capital = frankfurt
 	icon = icon_flag_holy_roman_empire
-	faction_upgrade = upgrade_faction_holy_rome
+	upgrade = upgrade_faction_holy_rome
 	short_name = true
 	develops_from = {
 		#must either be Francia, or one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor, or an electorate

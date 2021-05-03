@@ -4,7 +4,7 @@ lombard_tribe = {
 	civilization = teutonic
 	type = tribe
 	color = green
-	faction_upgrade = upgrade_faction_lombard_tribe
+	upgrade = upgrade_faction_lombard_tribe
 	icon = icon_flag_five_purple_birds_on_green
 	develops_from = {
 		asa_tribe

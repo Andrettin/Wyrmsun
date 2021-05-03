@@ -6,7 +6,7 @@ vandalia = {
 	color = cyan
 	default_tier = kingdom
 	default_capital = carthage
-	faction_upgrade = upgrade_faction_vandalia
+	upgrade = upgrade_faction_vandalia
 	icon = icon_flag_five_blue_birds_on_orange
 	develops_from = {
 		vandal_tribe

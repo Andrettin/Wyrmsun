@@ -6,7 +6,7 @@ norway = {
 	color = blue
 	default_tier = kingdom
 	default_capital = oslo
-	faction_upgrade = upgrade_faction_norway
+	upgrade = upgrade_faction_norway
 	icon = icon_flag_cyan_lion_on_red
 	develops_from = {
 		sitone_tribe

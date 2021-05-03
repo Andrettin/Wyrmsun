@@ -6,7 +6,7 @@ netherlands = {
 	color = orange
 	default_tier = kingdom
 	icon = icon_flag_green_lion_on_orange
-	faction_upgrade = upgrade_faction_netherlands
+	upgrade = upgrade_faction_netherlands
 	definite_article = true
 	develops_from = {
 		ampsivarii_tribe

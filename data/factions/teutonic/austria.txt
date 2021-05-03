@@ -8,7 +8,7 @@ austria = {
 	min_tier = marquisate
 	max_tier = empire
 	icon = icon_flag_old_austria
-	faction_upgrade = upgrade_faction_austria
+	upgrade = upgrade_faction_austria
 	default_capital = vienna
 	develops_from = {
 		bavarian_tribe

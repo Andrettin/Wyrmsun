@@ -6,7 +6,7 @@ denmark = {
 	color = red
 	default_tier = kingdom
 	default_capital = copenhagen
-	faction_upgrade = upgrade_faction_denmark
+	upgrade = upgrade_faction_denmark
 	icon = icon_flag_blue_lion_on_yellow
 	develops_from = {
 		dane_tribe

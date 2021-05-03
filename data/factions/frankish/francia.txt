@@ -6,7 +6,7 @@ francia = {
 	type = polity
 	color = green
 	default_tier = kingdom
-	faction_upgrade = upgrade_faction_francia
+	upgrade = upgrade_faction_francia
 	icon = icon_flag_old_austria
 	develops_from = {
 		frank_tribe

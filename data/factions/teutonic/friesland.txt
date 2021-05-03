@@ -6,7 +6,7 @@ friesland = {
 	color = black
 	default_tier = duchy
 	icon = icon_flag_green_lion_on_orange
-	faction_upgrade = upgrade_faction_friesland
+	upgrade = upgrade_faction_friesland
 	develops_from = {
 		frisian_tribe
 	}

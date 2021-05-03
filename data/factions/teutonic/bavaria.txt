@@ -6,7 +6,7 @@ bavaria = {
 	color = cyan
 	default_tier = duchy #Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	icon = icon_flag_five_white_birds_on_red
-	faction_upgrade = upgrade_faction_bavaria
+	upgrade = upgrade_faction_bavaria
 	develops_from = {
 		bavarian_tribe
 	}

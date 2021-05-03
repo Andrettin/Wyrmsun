@@ -5,7 +5,7 @@ visigothia = {
 	type = polity
 	color = pink
 	default_tier = kingdom
-	faction_upgrade = upgrade_faction_visigothia
+	upgrade = upgrade_faction_visigothia
 	icon = icon_flag_five_orange_birds_on_black
 	develops_from = {
 		visigothic_tribe
