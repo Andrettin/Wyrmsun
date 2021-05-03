@@ -1,0 +1,15 @@
+the_ynglinga_saga = {
+	name = "The Ynglinga Saga"
+	icon = icon_norse_heroic_swordsman
+	player_color = blue
+	description = "Claiming descent from the god Frey, the Ynglings have established themselves as the ruling dynasty of the Swedish tribe. Throughout generations, they shall seek to bring their people to glory, and consolidate their kingdom!"
+	unobtainable = true
+	objectives = {
+		build_units = {
+			unit_class = town_hall
+			settlement = gothenburg
+		}
+		
+		found_faction = sweden
+	}
+}
