@@ -1277,6 +1277,7 @@ DefineUnitType("unit-portal", {
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 --	VisibleUnderFog = true,
 	Indestructible = true,
+	Building = true,
 	Ethereal = true,
 	NonSolid = true,
 	Sounds = {
