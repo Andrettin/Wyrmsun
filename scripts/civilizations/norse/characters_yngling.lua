@@ -25,19 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("svegdir-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
-	Name = "Svegdir", -- "Svegðir"; as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Father = "fiolner-yngling",
-	Quote = "\"The dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-})
-
 DefineCharacter("vanland-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
 	Name = "Vanland",
 	FamilyName = "Yngling",

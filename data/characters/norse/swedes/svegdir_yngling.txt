@@ -1,0 +1,20 @@
+svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
+	name = "Svegdir" #"Svegðir"; as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
+	surname = "Yngling"
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = fiolner_yngling
+	quote = "\"By Durin's dwarven race,\nWho haunt the cliffs and shun day's face,\nThe valiant Svegdir was deceived,\nThe dwarf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Saekmime's hall, where giants dwell.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+}
