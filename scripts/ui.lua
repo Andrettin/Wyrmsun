@@ -1724,6 +1724,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Speed:"), " "), Variable = "Speed", Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {RailSpeedBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Rail Speed Bonus: "), Variable = "RailSpeedBonus", Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {MaxHarvesters = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Max Workers:"), " "), Variable = "MaxHarvesters", Font = PopupDescriptionFont}}
 				},
