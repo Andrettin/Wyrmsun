@@ -165,3 +165,11 @@ christmas_hat = {
 		create_unit = unit_christmas_hat
 	}
 }
+
+minecart = {
+	code = "de re metallica"
+	
+	effects = {
+		create_unit = unit_minecart
+	}
+}

@@ -92,6 +92,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Fixed crash which occurred when a ranged unit was garrisoned inside a caravan while near enemies.
 - Increased Spearman damage from 5 to 6.
+- Minecarts can now move diagonally, and can move outside of railroads with a large speed penalty (-5).
 
 * User Interface
 - Reworked the main menu to be QML-based.

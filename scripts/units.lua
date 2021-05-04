@@ -101,7 +101,7 @@ DefineUnitType("unit-minecart", {
 	Costs = {"time", 60, "copper", 300, "lumber", 300},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Speed = 7,
+	Speed = 2,
 	HitPoints = 110,
 	TileSize = {1, 1}, BoxSize = {42, 42},
 	SightRange = 4,
@@ -114,7 +114,7 @@ DefineUnitType("unit-minecart", {
 	Type = "land",
 	Coward = true,
 	RightMouseAction = "harvest",
-	Rail = true,
+	RailSpeedBonus = 5,
 	RequirementsString = "Engineering",
 	ButtonKey = "c",
 	CanGatherResources = {

@@ -1826,9 +1826,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Trader = "only", UnitTypeType = "naval", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign docks"), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {Rail = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Can only move over railroads"), Font = PopupDescriptionFont}}
-				},
 				{ 	Condition = {TownHall = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Stores Resources"), Font = PopupDescriptionFont}}
 				},
