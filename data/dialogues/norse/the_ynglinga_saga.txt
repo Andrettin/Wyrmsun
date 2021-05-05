@@ -1,0 +1,49 @@
+svegdir_reaches_stein = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+	{
+		speaker = svegdir_yngling
+		text = "Now that was some good ale... and what a marvelous stone I see here... it is as big as a large house!"
+	}
+	{
+		speaker = svegdir_yngling
+		text = "...and there is a dwarf, sitting under it?!"
+	}
+	{
+		speaker_unit_type = unit_dwarven_axefighter
+		text = "Aye. And you are?"
+	}
+	{
+		speaker = svegdir_yngling
+		text = "Svegdir, king of the Swedes and scion of the Ynglings. I made a vow to seek Odin's dwelling in Asgard."
+	}
+	{
+		speaker_unit_type = unit_dwarven_axefighter
+		text = "Then your search has come to an end. There is a bridge between worlds in this place: you need only enter the stone, and you will come out in Asgard. See? There is a hidden entrance, here. It cannot ordinarily be made use of, but over time I have acquired magical skills which allow me to do so."
+	}
+	{
+		text = "Svegdir then ran into the stone, which instantly closed behind him."
+	}
+	{
+		speaker_unit_type = unit_dwarven_axefighter
+		text = "Foolish human! There is a portal here alright, but it leads to the brutal world of Jotunheim... but not to worry, his soul will soon meet Odin as he desired, once the ettins have done away with his body!"
+		
+		option = {
+			effects = {
+				#ideally this would transport Svegdir - with no way back unless he has Ethereal Vision - to Jotunheim, instead of simply removing the character
+				remove_character = svegdir_yngling
+			}
+		}
+	}
+	{
+		text = "By Durin's dwarven race,\nWho haunt the cliffs and shun day's face,\nThe valiant Svegdir was deceived,\nThe dwarf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Saekmime's hall, where giants dwell."
+		#from Thiodolf of Huine's poem
+		#original: "By Diurnir's elfin race,\nWho haunt the cliffs and shun day's face,\nThe valiant Swegdir was deceived,\nThe elf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Sækmime's hall, where giants dwell."
+		#changed Diurnir to Durin since the source says he is the second chief of the dwarves, which likely means he is meant to be Durin (who was the second dwarf after Modsognir)
+		#changed "elfin" and "elf's" to their dwarven counterparts, as in the Ynglinga saga the character is a dwarf, but as often occurs in Norse mythology, dwarves and elves are not clearly distinguished from one another (as dwarves are identified as dark elves) - but here this could cause confusion
+		
+		option = {
+			effects = {
+				complete_quest = svegdirs_journey
+			}
+		}
+	}
+}
