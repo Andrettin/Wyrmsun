@@ -13,11 +13,39 @@ svegdir_reaches_stein = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1
 	}
 	{
 		speaker = svegdir_yngling
-		text = "Svegdir, king of the Swedes and scion of the Ynglings. I made a vow to seek Odin's dwelling in Asgard."
+		text = "I am Svegdir, king of the Swedes and scion of the Ynglings. I made a vow to seek Odin's dwelling in Asgard."
 	}
 	{
 		speaker_unit_type = unit_dwarven_axefighter
 		text = "Then your search has come to an end. There is a bridge between worlds in this place: you need only enter the stone, and you will come out in Asgard. See? There is a hidden entrance, here. It cannot ordinarily be made use of, but over time I have acquired magical skills which allow me to do so."
+		
+		option = {
+			effects = {
+				hidden = {
+					character_unit = {
+						character = svegdir_yngling
+						
+						level_check = {
+							level = 5
+							
+							success = {
+								call_dialogue = svegdir_is_undeceived
+							}
+							
+							failure = {
+								call_dialogue = svegdir_enters_the_stone
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+svegdir_enters_the_stone = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+	{
+		text = "~<*Level Check Failed*~>"
 	}
 	{
 		text = "Svegdir then ran into the stone, which instantly closed behind him."
@@ -39,6 +67,34 @@ svegdir_reaches_stein = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1
 		#original: "By Diurnir's elfin race,\nWho haunt the cliffs and shun day's face,\nThe valiant Swegdir was deceived,\nThe elf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Sækmime's hall, where giants dwell."
 		#changed Diurnir to Durin since the source says he is the second chief of the dwarves, which likely means he is meant to be Durin (who was the second dwarf after Modsognir)
 		#changed "elfin" and "elf's" to their dwarven counterparts, as in the Ynglinga saga the character is a dwarf, but as often occurs in Norse mythology, dwarves and elves are not clearly distinguished from one another (as dwarves are identified as dark elves) - but here this could cause confusion
+		
+		option = {
+			effects = {
+				complete_quest = svegdirs_journey
+			}
+		}
+	}
+}
+
+svegdir_is_undeceived = {
+	{
+		text = "~<*Level Check Succeeded*~>"
+	}
+	{
+		speaker = svegdir_yngling
+		text = "Something is amiss... the dwarf is not telling the whole truth."
+	}
+	{
+		speaker = svegdir_yngling
+		text = "I will gladly enter the stone, dwarf, but only after you."
+	}
+	{
+		speaker_unit_type = unit_dwarven_axefighter
+		text = "Alas, I have no need to travel to the other realm."
+	}
+	{
+		speaker = svegdir_yngling
+		text = "It was a trap, was it not? Prepare to die, creature!"
 		
 		option = {
 			effects = {
