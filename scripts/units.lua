@@ -1961,6 +1961,7 @@ DefineUnitType("unit-glyph", {
 	NonSolid = true,
 	NumDirections = 1,
 	Indestructible = true,
+	Building = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	VisibleUnderFog = true,
 	Variations = {
