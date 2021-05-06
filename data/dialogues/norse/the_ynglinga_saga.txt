@@ -26,7 +26,7 @@ svegdir_reaches_stein = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1
 						character = svegdir_yngling
 						
 						level_check = {
-							level = 5
+							level = 6
 							
 							success = {
 								call_dialogue = svegdir_is_undeceived
