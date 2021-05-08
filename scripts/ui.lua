@@ -138,13 +138,18 @@ local min_damage = Div(
 		),
 		Add(
 			Add(
-				ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+				Add(
+					ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+				),
+				ActiveUnitVar("ShadowDamage")
 			),
 			Add(
 				Add(
 					ActiveUnitVar("AirDamage"), ActiveUnitVar("EarthDamage")
 				),
-				ActiveUnitVar("WaterDamage")
+				Add(
+					ActiveUnitVar("WaterDamage"), ActiveUnitVar("AcidDamage")
+				)
 			)
 		)
 	),
@@ -161,13 +166,18 @@ local max_damage = 	Add(
 	),
 	Add(
 		Add(
-			ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+			Add(
+				ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+			),
+			ActiveUnitVar("ShadowDamage")
 		),
 		Add(
 			Add(
 				ActiveUnitVar("AirDamage"), ActiveUnitVar("EarthDamage")
 			),
-			ActiveUnitVar("WaterDamage")
+			Add(
+				ActiveUnitVar("WaterDamage"), ActiveUnitVar("AcidDamage")
+			)
 		)
 	)
 )
@@ -1122,13 +1132,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
 												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											TypeVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1148,13 +1163,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
 											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										TypeVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1390,13 +1410,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
 												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											TypeVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1416,13 +1441,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
 											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										TypeVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1445,13 +1475,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
 												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											TypeVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1471,13 +1506,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
 											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										TypeVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1500,13 +1540,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
 												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											TypeVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1526,13 +1571,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
 											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										TypeVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1555,13 +1605,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
-												UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											UnitVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1581,13 +1636,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
-											UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										UnitVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1610,13 +1670,18 @@ if not (ui_loaded_first_time) then
 									),
 									Add(
 										Add(
-											UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+											Add(
+												TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+											),
+											TypeVar("ShadowDamage","Value")
 										),
 										Add(
 											Add(
-												UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 											),
-											UnitVar("WaterDamage","Value")
+											Add(
+												TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+											)
 										)
 									)
 								),
@@ -1636,13 +1701,18 @@ if not (ui_loaded_first_time) then
 								),
 								Add(
 									Add(
-										UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										TypeVar("ShadowDamage","Value")
 									),
 									Add(
 										Add(
-											UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
 										),
-										UnitVar("WaterDamage","Value")
+										Add(
+											TypeVar("WaterDamage","Value"), TypeVar("AcidDamage","Value")
+										)
 									)
 								)
 							)
@@ -1702,6 +1772,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {WaterResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Water Resistance: "), Variable = "WaterResistance", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {AcidResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Acid Resistance: "), Variable = "AcidResistance", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ShadowResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Shadow Resistance: "), Variable = "ShadowResistance", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Hack Resistance: "), Variable = "HackResistance", Font = PopupDescriptionFont}}
@@ -1954,6 +2030,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {AcidDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Acid Damage: "), Variable = "AcidDamage", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ShadowDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Shadow Damage: "), Variable = "ShadowDamage", Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = PopupDescriptionFont}}
 				},
@@ -2001,6 +2083,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Water Resistance: +"), String(TypeVar("WaterResistance","Value")), "%"), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {AcidResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Acid Resistance: +"), String(TypeVar("AcidResistance","Value")), "%"), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ShadowResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Shadow Resistance: +"), String(TypeVar("ShadowResistance","Value")), "%"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hack Resistance: +"), String(TypeVar("HackResistance","Value")), "%"), Font = PopupDescriptionFont}}
@@ -2170,6 +2258,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Water Damage: "), Variable = "WaterDamage", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {AcidDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Acid Damage: "), Variable = "AcidDamage", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ShadowDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Shadow Damage: "), Variable = "ShadowDamage", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Thorns Damage: "), Variable = "ThornsDamage", Font = PopupDescriptionFont}}
@@ -2409,6 +2503,32 @@ if not (ui_loaded_first_time) then
 									If(GreaterThan(UnitVar("WaterResistance", "Change"), 0), "+", "")
 								),
 								String(UnitVar("WaterResistance", "Change"))
+							),
+							"%"
+						),
+						Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {AcidResistance = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Acid Resistance: "),
+									If(GreaterThan(UnitVar("AcidResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("AcidResistance", "Change"))
+							),
+							"%"
+						),
+						Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ShadowResistance = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Shadow Resistance: "),
+									If(GreaterThan(UnitVar("ShadowResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("ShadowResistance", "Change"))
 							),
 							"%"
 						),
