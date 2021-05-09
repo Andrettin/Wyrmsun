@@ -1,0 +1,10 @@
+sarajevo = {
+	name = "Sarajevo"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 18.38300166700 43.85002239900 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 58 127 21 }
+	regions = {
+		europe
+	}
+}

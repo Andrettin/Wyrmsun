@@ -33,13 +33,6 @@ DefineWorldMapTile({523, 130}, {
 	}
 })
 
-DefineWorldMapTile({532, 131}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Sarajevo"
-	}
-})
-
 DefineWorldMapTile({534, 135}, {
 	World = "earth",
 	CulturalSettlementNames = {

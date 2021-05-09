@@ -515,7 +515,6 @@ DefineProvince("Bornholm", {
 
 DefineProvince("Bosnia", {
 	World = "earth"
---	SettlementLocation = {532, 131}, -- Sarajevo
 })
 
 DefineProvince("Brandenburg", {
