@@ -72,11 +72,3 @@ DefineWorldMapTile({540, 129}, {
 		"latin", "Viminacium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
-
-DefineWorldMapTile({540, 136}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Scupi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Skopje"
-	}
-})

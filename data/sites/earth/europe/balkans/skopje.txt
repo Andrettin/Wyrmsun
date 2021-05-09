@@ -1,0 +1,16 @@
+skopje = {
+	name = "Skopje"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 21.43346146510 42.00000612290 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 198 161 39 }
+	cultural_names = {
+		latin = "Scupi" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	}
+	cores = {
+		bryges_tribe
+	}
+	regions = {
+		europe
+	}
+}

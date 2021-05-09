@@ -3351,17 +3351,6 @@ DefineProvince("Silesia", {
 	}
 })
 
-DefineProvince("Skopje", {
-	World = "earth",
-	CulturalNames = {
-		"latin", "Scupi"
-	},
---	SettlementLocation = {540, 136}, -- Skopje
-	Claims = {
-		"phrygian", "bryges-tribe"
-	}
-})
-
 DefineProvince("Slovakia", {
 	World = "earth",
 	CulturalNames = {
