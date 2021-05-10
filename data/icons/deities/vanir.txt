@@ -3,5 +3,5 @@ frey = {
 }
 
 freyja = {
-	file = "elf/icons/freyja.png"
+	file = "icons/deities/vanir/freyja.png"
 }
