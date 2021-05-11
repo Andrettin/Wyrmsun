@@ -26,6 +26,15 @@ germanic = {
 			#Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 			acquired_upgrade_classes += wood_plow
 		}
+		
+		-2800.12.30 = {
+			explored_settlements += stockholm
+			explored_settlements += gothenburg
+			explored_settlements += malmo
+			explored_settlements += copenhagen
+			explored_settlements += aarhus
+			explored_settlements += kiel
+		}
 
 		#the prevalence of bronzeworking (compared to copperworking) in Scandinavia began c. 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 73.
 		
