@@ -67,12 +67,6 @@ svegdir_enters_the_stone = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 		#original: "By Diurnir's elfin race,\nWho haunt the cliffs and shun day's face,\nThe valiant Swegdir was deceived,\nThe elf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Sækmime's hall, where giants dwell."
 		#changed Diurnir to Durin since the source says he is the second chief of the dwarves, which likely means he is meant to be Durin (who was the second dwarf after Modsognir)
 		#changed "elfin" and "elf's" to their dwarven counterparts, as in the Ynglinga saga the character is a dwarf, but as often occurs in Norse mythology, dwarves and elves are not clearly distinguished from one another (as dwarves are identified as dark elves) - but here this could cause confusion
-		
-		option = {
-			effects = {
-				complete_quest = svegdirs_journey
-			}
-		}
 	}
 }
 
@@ -95,11 +89,5 @@ svegdir_is_undeceived = {
 	{
 		speaker = svegdir_yngling
 		text = "It was a trap, was it not? Prepare to die, creature!"
-		
-		option = {
-			effects = {
-				complete_quest = svegdirs_journey
-			}
-		}
 	}
 }

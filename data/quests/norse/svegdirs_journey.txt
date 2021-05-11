@@ -3,17 +3,26 @@ svegdirs_journey = {
 	icon = icon_norse_heroic_swordsman
 	player_color = blue
 	description = "The Swedish king Svegdir wishes to undergo a journey in search of a way into Odin's realm, Asgard. Such a portal is rumored to be to the east of Svegdir's homeland."
-	uncompleteable = true
-	conditions = {
-		site_exists = haapsalu #Stein
-	}
-	objective_strings = {
-		"Reach Stein (Haapsalu) with Svegdir"
-	}
 	objectives = {
+		bring_unit_to_site = {
+			character = svegdir_yngling
+			site = haapsalu #Stein
+		}
+		
 		hero_must_survive = svegdir_yngling
 	}
 	completion_effects = {
 		scripted_effect = major_copper_reward
+		
+		hidden = {
+			neutral_player = {
+				create_unit = {
+					unit_type = unit_dwarven_axefighter
+					site = haapsalu #Stein
+				}
+			}
+			
+			call_dialogue = svegdir_reaches_stein
+		}
 	}
 }
