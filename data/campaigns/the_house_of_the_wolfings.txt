@@ -1,0 +1,10 @@
+the_house_of_the_wolfings = {
+	name = "The House of the Wolfings"
+	description = "The House of the Wolfings."
+	faction = ostrogothic_tribe
+	start_date = 200
+	map_templates = { earth_space }
+	quest = the_house_of_the_wolfings
+	icon = icon_gothic_horse_lord_brown_hair
+	hidden = true
+}

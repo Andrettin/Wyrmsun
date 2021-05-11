@@ -1,0 +1,12 @@
+the_house_of_the_wolfings = {
+	name = "The House of the Wolfings"
+	icon = icon_gothic_horse_lord_brown_hair
+	player_color = pink
+	description = "The House of the Wolfings."
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+	#objectives = {
+	#	hero_must_survive = thiudareiks_amelung
+	#}
+}
