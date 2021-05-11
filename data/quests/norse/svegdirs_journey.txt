@@ -3,6 +3,13 @@ svegdirs_journey = {
 	icon = icon_norse_heroic_swordsman
 	player_color = blue
 	description = "The Swedish king Svegdir wishes to undergo a journey in search of a way into Odin's realm, Asgard. Such a portal is rumored to be to the east of Svegdir's homeland."
+	accept_effects = {
+		create_unit = {
+			unit_type = unit_revealer
+			site = haapsalu #Stein
+			ttl = 600
+		}
+	}
 	objectives = {
 		bring_unit_to_site = {
 			character = svegdir_yngling
