@@ -225,4 +225,4 @@ end
 
 CreateCritters(arg)
 
-CreateRoamingFog((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 4096)
+CreateRoamingFog((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096)

@@ -43,15 +43,15 @@ HexTiles = {
 ConvertHexTiles()
 
 -- convert buildable land tiles adjacent to rock tiles into rough land
-for x=0,(CMap:get().Info.MapWidth - 1) do
-	for y=0,(CMap:get().Info.MapHeight - 1) do
+for x=0,(CMap:get():get_info().MapWidth - 1) do
+	for y=0,(CMap:get():get_info().MapHeight - 1) do
 		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 			SetRawTile(x, y, "Rough")
 		end
 	end
 end
 
-AdjustTransitions(0, CMap:get().Info.MapWidth - 1, 0, CMap:get().Info.MapHeight - 1)
+AdjustTransitions(0, CMap:get():get_info().MapWidth - 1, 0, CMap:get():get_info().MapHeight - 1)
 
 -- rectify cave wall pieces which appear too much like separate small blocks
 SetRawTile(3, 23, "Rock")
@@ -240,7 +240,7 @@ SetRawTile(72, 48, "Land")
 SetRawTile(72, 49, "Land")
 
 -- Randomly add a few more trees, as the base map has none
-GenerateTrees((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 512, (CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 32, 0, CMap:get().Info.MapWidth, 0, CMap:get().Info.MapHeight)
+GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 512, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
 
 -- remove trees from the Knalgans' farm area
 for x=43,52 do
@@ -315,9 +315,9 @@ unit = CreateUnit("unit-dwarven-sentry-tower", 3, {47, 48})
 unit = CreateUnit("unit-dwarven-sentry-tower", 3, {51, 48})
 
 if (LoadedGame == false) then
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get().Info.MapWidth - 3, 0, CMap:get().Info.MapHeight - 3, false)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, false)
 
-	CreateNeutralBuildings("unit-hole", (CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 4096, 0, CMap:get().Info.MapWidth - 2, 0, CMap:get().Info.MapHeight - 2, false)
+	CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
 
 	CreateCritters()
 end

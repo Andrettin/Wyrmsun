@@ -52,10 +52,10 @@ ConvertHexTiles()
 
 SetMapBorders("Rock", false)
 
-GenerateRocks(((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 1024), ((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 8), "", 0, CMap:get().Info.MapWidth, 0, CMap:get().Info.MapHeight)
+GenerateRocks(((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024), ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8), "", 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
 
-for x=0,(CMap:get().Info.MapWidth - 1) do
-	for y=0,(CMap:get().Info.MapHeight - 1) do
+for x=0,(CMap:get():get_info().MapWidth - 1) do
+	for y=0,(CMap:get():get_info().MapHeight - 1) do
 		if (RawTile(x, y) == "") then
 			SetRawTile(x, y, "Land")
 		end
@@ -63,8 +63,8 @@ for x=0,(CMap:get().Info.MapWidth - 1) do
 end
 
 -- convert buildable land tiles adjacent to rock tiles into rough land
-for x=0,(CMap:get().Info.MapWidth - 1) do
-	for y=0,(CMap:get().Info.MapHeight - 1) do
+for x=0,(CMap:get():get_info().MapWidth - 1) do
+	for y=0,(CMap:get():get_info().MapHeight - 1) do
 		if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 			SetRawTile(x, y, "Rough")
 		end
@@ -72,9 +72,9 @@ for x=0,(CMap:get().Info.MapWidth - 1) do
 end
 
 -- Randomly add a few more trees, as the base map has none
-GenerateTrees((CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 512, (CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 32, 0, CMap:get().Info.MapWidth, 0, CMap:get().Info.MapHeight)
+GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 512, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
 
-AdjustTransitions(0, CMap:get().Info.MapWidth - 1, 0, CMap:get().Info.MapHeight - 1)
+AdjustTransitions(0, CMap:get():get_info().MapWidth - 1, 0, CMap:get():get_info().MapHeight - 1)
 
 -- rectify hex-conversion derived issues
 SetRawTile(18, 43, "Water")
@@ -157,15 +157,15 @@ else
 end
 
 if (GetCurrentQuest() == "the-treasures-of-svarinshaug") then
-	CreateGoldMines(1, 15000, 0, CMap:get().Info.MapWidth / 2, 0, CMap:get().Info.MapHeight / 2, false, true)
-	CreateGoldMines(1, 15000, 0, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapHeight / 2, CMap:get().Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 5000, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapWidth - 3, CMap:get().Info.MapHeight / 2, CMap:get().Info.MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
-	CreateGoldMines(1, 15000, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapWidth - 3, 0, CMap:get().Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 15000, 0, CMap:get():get_info().MapWidth / 2, 0, CMap:get():get_info().MapHeight / 2, false, true)
+	CreateGoldMines(1, 15000, 0, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapHeight / 2, CMap:get():get_info().MapHeight - 3, false, true)
+	CreateGoldMines(1, 5000, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapWidth - 3, CMap:get():get_info().MapHeight / 2, CMap:get():get_info().MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
+	CreateGoldMines(1, 15000, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight / 2, false, true)
 else
-	CreateGoldMines(1, 50000, 0, CMap:get().Info.MapWidth / 2, 0, CMap:get().Info.MapHeight / 2, false, true)
-	CreateGoldMines(1, 50000, 0, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapHeight / 2, CMap:get().Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 50000, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapWidth - 3, CMap:get().Info.MapHeight / 2, CMap:get().Info.MapHeight - 3, false, true)
-	CreateGoldMines(1, 50000, CMap:get().Info.MapWidth / 2, CMap:get().Info.MapWidth - 3, 0, CMap:get().Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 50000, 0, CMap:get():get_info().MapWidth / 2, 0, CMap:get():get_info().MapHeight / 2, false, true)
+	CreateGoldMines(1, 50000, 0, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapHeight / 2, CMap:get():get_info().MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapWidth - 3, CMap:get():get_info().MapHeight / 2, CMap:get():get_info().MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight / 2, false, true)
 end
 
 -- create a couple of gold rocks on top of the gold deposits
@@ -182,7 +182,7 @@ for unit1 = 1,table.getn(uncount) do
 	end
 end
 
-CreateNeutralBuildings("unit-hole", (CMap:get().Info.MapWidth * CMap:get().Info.MapHeight) / 4096, 0, CMap:get().Info.MapWidth - 2, 0, CMap:get().Info.MapHeight - 2, false)
+CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
 
 CreateCritters()
 

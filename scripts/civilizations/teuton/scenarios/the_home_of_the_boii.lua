@@ -76,7 +76,7 @@ if (LoadedGame == false) then
 	
 	-- create allied Germanic forces
 	-- Vandals (Lugii)
-	local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get().Info.MapHeight - 1)
+	local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
 	SetStartView(2, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-teuton-swordsman", 2, {CPlayer:GetPlayer(2).StartPos.x, CPlayer:GetPlayer(2).StartPos.y})
 	unit = CreateUnit("unit-teuton-swordsman", 2, {CPlayer:GetPlayer(2).StartPos.x, CPlayer:GetPlayer(2).StartPos.y})
@@ -84,7 +84,7 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-teuton-ritter", 2, {CPlayer:GetPlayer(2).StartPos.x, CPlayer:GetPlayer(2).StartPos.y})
 
 	-- Suebi (Semnones)
-	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get().Info.MapHeight - 1)
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
 	SetStartView(3, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-suebi-swordsman", 3, {CPlayer:GetPlayer(3).StartPos.x, CPlayer:GetPlayer(3).StartPos.y})
 	unit = CreateUnit("unit-suebi-swordsman", 3, {CPlayer:GetPlayer(3).StartPos.x, CPlayer:GetPlayer(3).StartPos.y})
@@ -92,7 +92,7 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-teuton-ritter", 3, {CPlayer:GetPlayer(3).StartPos.x, CPlayer:GetPlayer(3).StartPos.y})
 
 	-- Lombards
-	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get().Info.MapHeight - 1)
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
 	SetStartView(4, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-teuton-swordsman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
 	unit = CreateUnit("unit-teuton-swordsman", 4, {CPlayer:GetPlayer(4).StartPos.x, CPlayer:GetPlayer(4).StartPos.y})
