@@ -3,3 +3,4 @@
 DefinePlayerTypes("person","nobody","computer","neutral")
 PresentMap("Fjalar's and Galar's Hall", 1, 64, 64, 1)
 MapWorld = "Nidavellir"
+SetMapWorld("Nidavellir")

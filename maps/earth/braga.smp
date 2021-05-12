@@ -6,6 +6,7 @@ else
 	DefinePlayerTypes("person","person")
 end
 PresentMap("Braga", 1, 128, 96, 1)
+SetMapWorld("Earth")
 MapWorld = "Earth"
 MapAttacker = 0
 MapDefender = 1

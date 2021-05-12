@@ -8,3 +8,4 @@ else
 	PresentMap("Random Archipelago", 2, 64, 64, 1)
 end
 MapWorld = "Random"
+SetMapWorld("Random")

@@ -3,5 +3,6 @@
 DefinePlayerTypes("person", "person", "computer", "computer", "computer", "computer")
 PresentMap("Caverns of Flame", 2, 68, 68, 1)
 MapWorld = "Nidavellir"
+SetMapWorld("Nidavellir")
 MapAttacker = 0
 MapDefender = 4

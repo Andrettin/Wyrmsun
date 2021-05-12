@@ -3,5 +3,6 @@
 DefinePlayerTypes("person","computer","neutral","rescue-passive")
 PresentMap("Northern Wastelands", 1, 56, 71, 1)
 MapWorld = "Nidavellir"
+SetMapWorld("Nidavellir")
 MapSiteType = "Dwarven Outpost"
 WorldMapPosition = {2, 0}

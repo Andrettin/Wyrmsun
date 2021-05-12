@@ -2,4 +2,5 @@
 
 DefinePlayerTypes("person", "person", "person", "person")
 PresentMap("Gardariki", 4, 256, 256, 1)
+SetMapWorld("Earth")
 MapWorld = "Earth"

@@ -3,6 +3,7 @@
 DefinePlayerTypes("person", "computer", "person")
 PresentMap("Tomb of Durahn Eikinskjaldi", 2, 20, 20, 1)
 MapWorld = "Nidavellir"
+SetMapWorld("Nidavellir")
 MapAttacker = 0
 MapDefender = 1
 

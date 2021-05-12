@@ -3,3 +3,4 @@
 DefinePlayerTypes("person","person","person","person")
 PresentMap("Random Valley", 4, 128, 128, 1)
 MapWorld = "Random"
+SetMapWorld("Random")

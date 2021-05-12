@@ -2,4 +2,5 @@
 
 DefinePlayerTypes("person", "person", "person", "person", "person", "person", "person", "person")
 PresentMap("Southern Baltic", 8, 256, 256, 1)
+SetMapWorld("Earth")
 MapWorld = "Earth"

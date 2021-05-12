@@ -2,4 +2,5 @@
 
 DefinePlayerTypes("person","person")
 PresentMap("Annwn", 2, 96, 96, 1)
+SetMapWorld("Alfheim")
 MapWorld = "Alfheim"
