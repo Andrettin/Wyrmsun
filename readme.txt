@@ -85,6 +85,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added more predefined settlement territories for the Earth map.
 - Added starting caravan for the Goldhoof Clan in the A Home in the Fields of Sand scenario.
 - Added the Heimdall's Stones unique building to the new Earth map for the correct start dates.
+- The A Home in the Fields of Sand scenario now starts during summer.
 
 * Terrain
 - Added new dry mud and mud decoration tiles.
