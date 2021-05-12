@@ -42,6 +42,7 @@ MenuBase {
 		lua_command: "RunSinglePlayerCustomGameMenu();"
 		
 		onClicked: {
+			wyrmgus.load_map_infos()
 			menu_stack.push("CustomGameMenu.qml")
 		}
 	}

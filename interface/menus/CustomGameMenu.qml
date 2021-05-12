@@ -87,5 +87,9 @@ MenuBase {
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		lua_command: "SetCurrentCustomHero(\"\"); GameSettings:reset(); custom_game_menu:stop();"
+		
+		onClicked: {
+			wyrmgus.clear_map_infos()
+		}
 	}
 }
