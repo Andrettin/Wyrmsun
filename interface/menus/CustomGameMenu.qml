@@ -7,6 +7,44 @@ MenuBase {
 	title: "Custom Game"
 	
 	NormalText {
+		id: world_label
+		text: "World:"
+		anchors.left: world_dropdown.left
+		anchors.bottom: world_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	Dropdown {
+		id: world_dropdown
+		anchors.right: map_dropdown.left
+		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottom: map_dropdown.bottom
+		width: 150 * wyrmgus.defines.scale_factor
+		entries: wyrmgus.get_map_worlds()
+	}
+	
+	NormalText {
+		id: map_label
+		text: "Map:"
+		anchors.left: map_dropdown.left
+		anchors.bottom: map_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	Dropdown {
+		id: map_dropdown
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: resources_label.top
+		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		width: 150 * wyrmgus.defines.scale_factor
+		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
+		
+		function get_entry_name(entry) {
+			return entry.name
+		}
+	}
+	
+	NormalText {
 		id: difficulty_label
 		text: "Difficulty:"
 		anchors.left: difficulty_dropdown.left
@@ -19,7 +57,7 @@ MenuBase {
 		anchors.left: resources_dropdown.left
 		anchors.bottom: resources_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 100 * wyrmgus.defines.scale_factor
+		width: 150 * wyrmgus.defines.scale_factor
 		entries: wyrmgus.get_difficulties()
 		
 		onEntriesChanged: {
