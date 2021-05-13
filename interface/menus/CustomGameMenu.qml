@@ -6,6 +6,8 @@ MenuBase {
 	id: custom_game_menu
 	title: "Custom Game"
 	
+	property var selected_map: map_dropdown.selectedEntry
+	
 	NormalText {
 		id: world_label
 		text: "World:"
@@ -122,6 +124,15 @@ MenuBase {
 		onSelectedEntryChanged: {
 			wyrmgus.call_lua_command("GameSettings.GameType = " + (game_type_dropdown.selectedEntryIndex - 1) + ";")
 		}
+	}
+	
+	NormalText {
+		id: map_name_label
+		text: "Map: " + (selected_map ? (selected_map.name + " (" + selected_map.map_width + "x" + selected_map.map_height + ")") : "")
+		anchors.left: world_dropdown.left
+		anchors.leftMargin: -32 * wyrmgus.defines.scale_factor
+		anchors.top: game_type_dropdown.bottom
+		anchors.topMargin: 32 * wyrmgus.defines.scale_factor
 	}
 	
 	PreviousMenuButton {

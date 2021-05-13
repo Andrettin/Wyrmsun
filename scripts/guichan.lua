@@ -772,8 +772,6 @@ function RunSinglePlayerCustomGameMenu()
 	local race
 	local faction
 	local opponents
-	local mapl
-	local descriptionl
 	local tech_level
 	local max_tech_level
 	local hero_dd
@@ -849,9 +847,6 @@ function RunSinglePlayerCustomGameMenu()
 	if (custom_map_present) then
 		table.insert(world_list, _("Custom"))
 	end
-
-	mapl = menu:addLabel(string.sub(mapname, 6), offx + 16 * get_scale_factor(), offy + (360 + 24) * get_scale_factor(), Fonts["game"], false)
-	descriptionl = menu:addLabel("descriptionl", offx + 16 * get_scale_factor(), offy + 360 * get_scale_factor(), Fonts["game"], false)
 
 	menu:addFullButton(_("~!Start Game"), "s", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*1) * get_scale_factor(),
 		function()
@@ -969,7 +964,6 @@ function RunSinglePlayerCustomGameMenu()
 				)
 			) then
 				mapname = maps[i]
-				mapl:setCaption(string.sub(mapname, 6))
 			end
 		end
 
@@ -1099,14 +1093,6 @@ function RunSinglePlayerCustomGameMenu()
 	end
 	
 	function MapChanged()
-		mapl:setCaption(string.sub(mapname, 6))
-		mapl:adjustSize()
-
-		local map_description = _("Map:") .. " " .. _(mapinfo.description)
-		descriptionl:setCaption(map_description ..
-			" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
-		descriptionl:adjustSize()
-
 		local o = {}
 		for i=1,mapinfo.nplayers do
 			table.insert(o, opponents_list[i])
