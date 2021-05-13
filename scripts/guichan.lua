@@ -950,7 +950,7 @@ function RunSinglePlayerCustomGameMenu()
 		scenario:setSelected(0)
 		ScenarioChanged()
 	end
-
+	
 	function ScenarioChanged()
 		for i=1,table.getn(maps) do
 			MapWorld = ""
