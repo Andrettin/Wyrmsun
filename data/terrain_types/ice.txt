@@ -2,12 +2,13 @@ ice = {
 	name = "Ice"
 	character = 1
 	color = { 160 160 192 }
+	image_file = "terrain/ice.png"
+	snowy = true
 	flags = {
 		land
 		no_building
 		ice
 	}
-	image_file = "terrain/ice.png"
 	inner_border_terrain_types = {
 		dirt
 		snow

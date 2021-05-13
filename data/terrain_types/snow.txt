@@ -8,6 +8,7 @@ snow = {
 	color = { 255 255 255 }
 	image_file = "terrain/snow.png"
 	buildable = true
+	snowy = true
 	flags = {
 		land
 		snow

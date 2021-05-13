@@ -1,7 +1,6 @@
 is_on_snowy_terrain = {
 	or = {
-		terrain = snow
-		terrain = ice
+		snowy_terrain = true
 		and = {
 			season = winter
 			or = {
