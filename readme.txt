@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Renamed the "Goth Tribe" to "Gothic Tribe", the "Ostrogoth Tribe" to "Ostrogothic Tribe" and the "Visigoth Tribe" to "Visigothic Tribe".
 - Renamed the "Swede Tribe" to "Swedish Tribe".
 
+* Heroes
+- It is no longer possible to start a custom game with a custom hero, they must now be recruited as other heroes are.
+
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 - Fixed issue which caused solid overlay tiles to not be displayed in the editor.

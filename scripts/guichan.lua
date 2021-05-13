@@ -772,7 +772,6 @@ function RunSinglePlayerCustomGameMenu()
 	local opponents
 	local tech_level
 	local max_tech_level
-	local hero_dd
 	MapPersonPlayer = 0
 	PlayerFaction = ""
 
@@ -785,8 +784,6 @@ function RunSinglePlayerCustomGameMenu()
 	local tech_level_enum_list = {NoTechLevel, AgrarianBronzeTechLevel, AgrarianIronTechLevel, CivilizedBronzeTechLevel, CivilizedIronTechLevel, CivilizedGunpowderTechLevel}
 	local max_tech_level_list = {_("Map Default")}
 	local max_tech_level_enum_list = {NoTechLevel}
-	
-	local hero_list = {}
 	
 	RunningScenario = false
 	
@@ -839,14 +836,6 @@ function RunSinglePlayerCustomGameMenu()
 	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 40 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(), function(dd) end)
 	max_tech_level:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
-	menu:addLabel(_("Custom Hero:"), offx + 220 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 220 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
-		function(dd)
-			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
-		end
-	)
-	hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	
 	function CivilizationChanged()
 		faction_ident_list = {"Map Default"}
 		faction_list = {_("Map Default")}
@@ -866,25 +855,6 @@ function RunSinglePlayerCustomGameMenu()
 		faction:setList(faction_list)
 		faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		faction:setSelected(0)
-		
-		hero_list = nil
-		hero_list = {}
-		local custom_heroes = GetCustomHeroes()
-		for i=1,table.getn(custom_heroes) do
-			if (
-				race:getSelected() == 0
-				or GetCustomHeroData(custom_heroes[i], "Civilization") == new_civilization
-				or GetCivilizationData(GetCustomHeroData(custom_heroes[i], "Civilization"), "ParentCivilization") == new_civilization
-				or GetCustomHeroData(custom_heroes[i], "Civilization") == GetCivilizationData(new_civilization, "ParentCivilization")
-			) then
-				table.insert(hero_list, custom_heroes[i])
-			end
-		end
-		table.sort(hero_list)
-		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-		hero_dd:setList(hero_list)
-		hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-		hero_dd:setSelected(table.getn(hero_list) - 1)
 	end
 
 	function TechLevelChanged()
