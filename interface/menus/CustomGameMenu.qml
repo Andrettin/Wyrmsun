@@ -42,7 +42,9 @@ MenuBase {
 		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
 		onSelectedEntryChanged: {
-			wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(selectedEntry.presentation_filepath) + "\");")
+			if (selectedEntry !== null) {
+				wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(selectedEntry.presentation_filepath) + "\");")
+			}
 		}
 		
 		function get_entry_name(entry) {
@@ -133,6 +135,21 @@ MenuBase {
 		anchors.leftMargin: -32 * wyrmgus.defines.scale_factor
 		anchors.top: game_type_dropdown.bottom
 		anchors.topMargin: 32 * wyrmgus.defines.scale_factor
+	}
+	
+	LargeButton {
+		id: start_game_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: previous_menu_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Start Game"
+		hotkey: "s"
+		lua_command: "RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\");"
+		
+		onClicked: {
+			wyrmgus.clear_map_infos()
+			menu_stack.pop()
+		}
 	}
 	
 	PreviousMenuButton {
