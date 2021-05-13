@@ -144,7 +144,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Game"
 		hotkey: "s"
-		lua_command: "RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\");"
+		lua_command: "RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()

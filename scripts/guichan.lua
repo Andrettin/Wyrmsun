@@ -767,8 +767,6 @@ function RunSinglePlayerCustomGameMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local d
-	local world
-	local scenario
 	local race
 	local faction
 	local opponents
@@ -778,13 +776,11 @@ function RunSinglePlayerCustomGameMenu()
 	MapPersonPlayer = 0
 	PlayerFaction = ""
 
-	-- create the scenario and faction lists
-	local scenario_list = {}
+	-- create the civilization and faction lists
 	local civilization_ident_list = {"Map Default"}
 	local civilization_list = {_("Map Default")}
 	local faction_ident_list = {"Map Default"}
 	local faction_list = {_("Map Default")}
-	local world_list = { }
 	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)"), _("Civilized (Gunpowder)")}
 	local tech_level_enum_list = {NoTechLevel, AgrarianBronzeTechLevel, AgrarianIronTechLevel, CivilizedBronzeTechLevel, CivilizedIronTechLevel, CivilizedGunpowderTechLevel}
 	local max_tech_level_list = {_("Map Default")}
@@ -794,60 +790,6 @@ function RunSinglePlayerCustomGameMenu()
 	
 	RunningScenario = false
 	
-	local maps = {}
-
-	local custom_map_present = false
-	for map_directory=1,table.getn(MapDirectories) do
-		-- load the maps
-		local i
-		local f
-		local u = 1
-
-		-- list the subdirectories in the maps folder
-		local dirlist = {}
-		local dirs = ListDirsInDirectory(MapDirectories[map_directory])
-		for i,f in ipairs(dirs) do
-			dirlist[u] = f .. "/"
-			u = u + 1
-		end
-
-		-- get maps in the main maps folder
-		u = table.getn(maps) + 1
-		local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
-		for i,f in ipairs(fileslist) do
-			if (string.find(f, "^.*%.smp%.?g?z?$")) then
-				maps[u] = MapDirectories[map_directory] .. f
-				u = u + 1
-			end
-		end
-
-		-- get maps in subdirectories of the maps folder
-		for j=1,table.getn(dirlist) do
-			fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
-			for i,f in ipairs(fileslist) do
-				if (string.find(f, "^.*%.smp%.?g?z?$")) then
-					maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
-					u = u + 1
-				end
-			end
-		end
-
-		-- build the world list from world references in the maps
-		for i=1,table.getn(maps) do
-			MapWorld = ""
-			GetMapInfo(maps[i])
-			if (MapWorld ~= "" and MapWorld ~= "None" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
-				table.insert(world_list, _(MapWorld))
-			elseif (MapWorld == "") then
-				custom_map_present = true
-			end
-		end
-	end
-	table.sort(world_list)
-	if (custom_map_present) then
-		table.insert(world_list, _("Custom"))
-	end
-
 	menu:addFullButton(_("~!Start Game"), "s", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*1) * get_scale_factor(),
 		function()
 			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
@@ -869,25 +811,8 @@ function RunSinglePlayerCustomGameMenu()
 			GameSettings.Opponents = opponents:getSelected()
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
-
-			RunningScenario = true
-
-			menu:stop()
-			RunMap(mapname)
-			SetCurrentCustomHero("")
 		end
 	)
-
-	menu:addLabel(_("World:"), offx + 40 * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
-	world = menu:addDropDown(world_list, offx + 40 * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
-		function(dd) WorldChanged() end)
-	world:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	world:setSelected(0)
-
-	menu:addLabel(_("Map:"), offx + 220 * get_scale_factor(), offy + ((10 + 120) - 20) * get_scale_factor(), Fonts["game"], false)
-	scenario = menu:addDropDown(scenario_list, offx + 220 * get_scale_factor(), offy + (10 + 120) * get_scale_factor(),
-		function(dd) ScenarioChanged() end)
-	scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	menu:addLabel(_("Your Civilization:"), offx + 40 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
 	race = menu:addDropDown(civilization_list, offx + 40 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
@@ -922,55 +847,6 @@ function RunSinglePlayerCustomGameMenu()
 	)
 	hero_dd:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	
-	function WorldChanged()
-		scenario_list = {}
-
-		for i=1,table.getn(maps) do
-			MapWorld = ""
-			GetMapInfo(maps[i])
-			if (_(MapWorld) == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == _("Custom"))) then
-				if (mapinfo.npersonplayers > 0) then
-					local map_description = _(mapinfo.description)
-					if (map_description == "") then
-						map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
-					end
-					table.insert(scenario_list, map_description)
-				end
-			end
-		end
-
-		table.sort(scenario_list)
-		scenario:setList(scenario_list)
-		scenario:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-		scenario:setSelected(0)
-		ScenarioChanged()
-	end
-	
-	function ScenarioChanged()
-		for i=1,table.getn(maps) do
-			MapWorld = ""
-			GetMapInfo(maps[i])
-			if (
-				(
-					_(mapinfo.description) == scenario_list[scenario:getSelected() + 1]
-					or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
-				)
-				and (
-					_(MapWorld) == world_list[world:getSelected() + 1]
-					or (
-						MapWorld == ""
-						and world_list[world:getSelected() + 1] == _("Custom")
-					)
-				)
-			) then
-				mapname = maps[i]
-			end
-		end
-
-		GetMapInfo(mapname)
-		MapChanged()
-	end
-
 	function CivilizationChanged()
 		faction_ident_list = {"Map Default"}
 		faction_list = {_("Map Default")}
@@ -1100,11 +976,7 @@ function RunSinglePlayerCustomGameMenu()
 		opponents:setList(o)
 		opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	end
-
-	GetMapInfo(mapname)
-	MapChanged()
-
-	WorldChanged()
+	
 	TechLevelChanged()
 
 	menu:run()
