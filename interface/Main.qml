@@ -61,6 +61,15 @@ Window {
 		return str
 	}
 	
+	function escape_string(text) {
+		var str = text
+		str = str.replace(/\\/g, "\\\\")
+		str = str.replace(/\n/g, "\\n")
+		str = str.replace(/\t/g, "\\t")
+		str = str.replace(/\"/g, "\\\"")
+		return str
+	}
+	
 	//generate a random number
 	function random(n) {
 		return Math.floor(Math.random() * n)
