@@ -41,6 +41,10 @@ MenuBase {
 		width: 150 * wyrmgus.defines.scale_factor
 		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
+		onEntriesChanged: {
+			selectedEntryIndex = 0
+		}
+		
 		onSelectedEntryChanged: {
 			if (selectedEntry !== null) {
 				wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(selectedEntry.presentation_filepath) + "\");")
