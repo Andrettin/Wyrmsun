@@ -769,7 +769,6 @@ function RunSinglePlayerCustomGameMenu()
 	local d
 	local race
 	local faction
-	local opponents
 	local tech_level
 	local max_tech_level
 	MapPersonPlayer = 0
@@ -805,7 +804,6 @@ function RunSinglePlayerCustomGameMenu()
 			else
 				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
 			end
-			GameSettings.Opponents = opponents:getSelected()
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 		end
@@ -820,13 +818,6 @@ function RunSinglePlayerCustomGameMenu()
 	faction = menu:addDropDown({_("Map Default")}, offx + 220 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) end)
 	faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-	local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"), _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
-
-	menu:addLabel(_("Opponents:"), offx + 40 * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
-	opponents = menu:addDropDown(opponents_list, offx + 40 * get_scale_factor(), offy + (10 + 240) * get_scale_factor(),
-		function(dd) end)
-	opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	menu:addLabel(_("Tech Level:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
 	tech_level = menu:addDropDown(tech_level_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) TechLevelChanged() end)
@@ -936,15 +927,6 @@ function RunSinglePlayerCustomGameMenu()
 		race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		race:setSelected(0)
 		CivilizationChanged()
-	end
-	
-	function MapChanged()
-		local o = {}
-		for i=1,mapinfo.nplayers do
-			table.insert(o, opponents_list[i])
-		end
-		opponents:setList(o)
-		opponents:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 	end
 	
 	TechLevelChanged()

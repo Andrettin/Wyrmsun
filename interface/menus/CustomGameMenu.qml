@@ -109,6 +109,41 @@ MenuBase {
 	}
 	
 	NormalText {
+		id: opponents_label
+		text: "Opponents:"
+		anchors.left: opponents_dropdown.left
+		anchors.bottom: opponents_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	Dropdown {
+		id: opponents_dropdown
+		anchors.left: world_dropdown.left
+		anchors.top: game_type_dropdown.top
+		width: 150 * wyrmgus.defines.scale_factor
+		entries: get_entries(selected_map)
+		
+		onSelectedEntryChanged: {
+			wyrmgus.call_lua_command("GameSettings.Opponents = " + opponents_dropdown.selectedEntryIndex + ";")
+		}
+		
+		function get_entries(map_info) {
+			var entries = ["Map Default"]
+			var player_count = map_info.player_count - 1 //-1 to account for the human player
+			
+			for (var i = 0; i < player_count; ++i) {
+				if (i == 0) {
+					entries.push("1 Opponent")
+				} else {
+					entries.push((i + 1) + " Opponents")
+				}
+			}
+			
+			return entries
+		}
+	}
+	
+	NormalText {
 		id: game_type_label
 		text: "Game Type:"
 		anchors.left: game_type_dropdown.left
