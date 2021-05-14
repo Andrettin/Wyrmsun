@@ -22,6 +22,7 @@ MenuBase {
 		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: map_dropdown.bottom
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 3
 		entries: wyrmgus.get_map_worlds()
 	}
 	
@@ -39,6 +40,7 @@ MenuBase {
 		anchors.bottom: resources_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 3
 		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
 		onEntriesChanged: {
@@ -66,10 +68,11 @@ MenuBase {
 	
 	Dropdown {
 		id: difficulty_dropdown
-		anchors.left: resources_dropdown.left
-		anchors.bottom: resources_label.top
+		anchors.left: opponents_dropdown.left
+		anchors.bottom: opponents_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 3
 		entries: wyrmgus.get_difficulties()
 		
 		onEntriesChanged: {
@@ -100,11 +103,11 @@ MenuBase {
 	
 	Dropdown {
 		id: resources_dropdown
-		anchors.left: game_type_dropdown.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.left: game_type_dropdown.left
 		anchors.bottom: game_type_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 2
 		entries: ["Map Default", "Low", "Medium", "High"]
 		
 		onSelectedEntryChanged: {
@@ -122,9 +125,11 @@ MenuBase {
 	
 	Dropdown {
 		id: opponents_dropdown
-		anchors.left: world_dropdown.left
-		anchors.top: game_type_dropdown.top
+		anchors.left: game_type_dropdown.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.top: resources_dropdown.top
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 2
 		entries: get_entries(selected_map)
 		
 		onSelectedEntryChanged: {
@@ -160,6 +165,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
 		width: 150 * wyrmgus.defines.scale_factor
+		z: 1
 		entries: ["Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"]
 		
 		onSelectedEntryChanged: {

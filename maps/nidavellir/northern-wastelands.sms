@@ -126,7 +126,7 @@ unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 unit = CreateUnit("unit-copper-rock", PlayerNumNeutral, {15, 53})
 
-if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
+if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and GetThisPlayer() ~= 0) then
 	unit = CreateUnit("unit-dwarven-axefighter", 0, {8, 60})
 	SetUnitVariable(unit, "Character", "rugnur")
 	unit = CreateUnit("unit-dwarven-steelclad", 0, {8, 60})

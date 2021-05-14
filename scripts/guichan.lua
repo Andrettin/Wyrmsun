@@ -768,17 +768,13 @@ function RunSinglePlayerCustomGameMenu()
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	local d
 	local race
-	local faction
 	local tech_level
 	local max_tech_level
 	MapPersonPlayer = 0
-	PlayerFaction = ""
 
-	-- create the civilization and faction lists
+	-- create the civilization list
 	local civilization_ident_list = {"Map Default"}
 	local civilization_list = {_("Map Default")}
-	local faction_ident_list = {"Map Default"}
-	local faction_list = {_("Map Default")}
 	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)"), _("Civilized (Gunpowder)")}
 	local tech_level_enum_list = {NoTechLevel, AgrarianBronzeTechLevel, AgrarianIronTechLevel, CivilizedBronzeTechLevel, CivilizedIronTechLevel, CivilizedGunpowderTechLevel}
 	local max_tech_level_list = {_("Map Default")}
@@ -799,11 +795,6 @@ function RunSinglePlayerCustomGameMenu()
 				local chosen_civilization = civilization_ident_list[race:getSelected() + 1]
 				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
 			end
-			if (faction:getSelected() == 0) then
-				PlayerFaction = ""
-			else
-				PlayerFaction = faction_ident_list[faction:getSelected() + 1]
-			end
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 		end
@@ -811,13 +802,8 @@ function RunSinglePlayerCustomGameMenu()
 
 	menu:addLabel(_("Your Civilization:"), offx + 40 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
 	race = menu:addDropDown(civilization_list, offx + 40 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
-		function(dd) CivilizationChanged() end)
-	race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-	menu:addLabel(_("Your Faction:"), offx + 220 * get_scale_factor(), offy + ((10 + 180) - 20) * get_scale_factor(), Fonts["game"], false)
-	faction = menu:addDropDown({_("Map Default")}, offx + 220 * get_scale_factor(), offy + (10 + 180) * get_scale_factor(),
 		function(dd) end)
-	faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
+	race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 
 	menu:addLabel(_("Tech Level:"), offx + (640 - 224 - 16) * get_scale_factor(), offy + ((10 + 240) - 20) * get_scale_factor(), Fonts["game"], false)
 	tech_level = menu:addDropDown(tech_level_list, offx + (640 - 224 - 16) * get_scale_factor(), offy + (10 + 240) * get_scale_factor(), function(dd) TechLevelChanged() end)
@@ -826,27 +812,6 @@ function RunSinglePlayerCustomGameMenu()
 	menu:addLabel(_("Max Tech Level:"), offx + 40 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
 	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 40 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(), function(dd) end)
 	max_tech_level:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-	function CivilizationChanged()
-		faction_ident_list = {"Map Default"}
-		faction_list = {_("Map Default")}
-		
-		local new_civilization = civilization_ident_list[race:getSelected() + 1]
-		
-		if (race:getSelected() > 0) then
-			for i=1,table.getn(GetFactions(new_civilization)) do
-				if ((GetFactionData(GetFactions(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == AgrarianIronTechLevel)) or (GetFactionData(GetFactions(new_civilization)[i], "Type") == "polity" and (tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedBronzeTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedIronTechLevel or tech_level_enum_list[tech_level:getSelected() + 1] == CivilizedGunpowderTechLevel))) then
-					if (GetFactionData(GetFactions(new_civilization)[i], "Playable")) then
-						table.insert(faction_ident_list, GetFactions(new_civilization)[i])
-						table.insert(faction_list, _(GetFactionData(GetFactions(new_civilization)[i], "Name")))
-					end
-				end
-			end
-		end
-		faction:setList(faction_list)
-		faction:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-		faction:setSelected(0)
-	end
 
 	function TechLevelChanged()
 		max_tech_level_list = {_("Map Default")}
@@ -926,7 +891,6 @@ function RunSinglePlayerCustomGameMenu()
 		race:setList(civilization_list)
 		race:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
 		race:setSelected(0)
-		CivilizationChanged()
 	end
 	
 	TechLevelChanged()
@@ -1023,12 +987,6 @@ function GameStarting()
 		RunTipsMenu()
 	end
 	--]]
-	
-	if (not IsNetworkGame() and GetCurrentQuest() == "" and GetCurrentCampaign() == "") then
-		if (PlayerFaction ~= "") then
-			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
-		end
-	end
 end
 
 if (is_test_run()) then
