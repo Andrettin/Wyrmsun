@@ -146,7 +146,7 @@ MenuBase {
 	
 	Dropdown {
 		id: resources_dropdown
-		anchors.left: game_type_dropdown.left
+		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: game_type_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 150 * wyrmgus.defines.scale_factor
@@ -168,7 +168,7 @@ MenuBase {
 	
 	Dropdown {
 		id: opponents_dropdown
-		anchors.left: game_type_dropdown.right
+		anchors.left: resources_dropdown.right
 		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.top: resources_dropdown.top
 		width: 150 * wyrmgus.defines.scale_factor
@@ -205,7 +205,7 @@ MenuBase {
 	
 	Dropdown {
 		id: game_type_dropdown
-		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.left: civilization_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
 		width: 150 * wyrmgus.defines.scale_factor
 		z: 1
@@ -222,7 +222,7 @@ MenuBase {
 		anchors.left: world_dropdown.left
 		anchors.leftMargin: -32 * wyrmgus.defines.scale_factor
 		anchors.top: game_type_dropdown.bottom
-		anchors.topMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 64 * wyrmgus.defines.scale_factor
 	}
 	
 	LargeButton {
@@ -232,7 +232,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Game"
 		hotkey: "s"
-		lua_command: "GameSettings.Presets[" + selected_map.person_player_index + "].Race = " + civilization_dropdown.civilization_index + "; RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
+		lua_command: "GameSettings.Presets[" + selected_map.person_player_index + "].Race = " + civilization_dropdown.civilization_index + "; RunningScenario = true; RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()
@@ -244,7 +244,7 @@ MenuBase {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "SetCurrentCustomHero(\"\"); GameSettings:reset(); custom_game_menu:stop();"
+		lua_command: "SetCurrentCustomHero(\"\"); GameSettings:reset();"
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()

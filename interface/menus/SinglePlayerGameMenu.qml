@@ -39,7 +39,7 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Custom Game"
 		hotkey: "u"
-		lua_command: "RunSinglePlayerCustomGameMenu();"
+		lua_command: "RunningScenario = false;"
 		
 		onClicked: {
 			wyrmgus.load_map_infos()
