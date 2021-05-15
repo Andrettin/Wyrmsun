@@ -1,5 +1,12 @@
 germanic = {
 	top_bar_file = "interface/germanic/resource.png"
+	panel_files = {
+		1 = "interface/germanic/panel_1.png"
+		2 = "interface/germanic/panel_2.png"
+		3 = "interface/germanic/panel_3.png"
+		4 = "interface/germanic/panel_4.png"
+		5 = "interface/germanic/panel_5.png"
+	}
 	dropdown_bar_file = "interface/germanic/pulldown_bar_normal.png"
 	large_button = {
 		normal_file = "interface/germanic/button_large_normal.png"
