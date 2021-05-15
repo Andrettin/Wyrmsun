@@ -251,6 +251,11 @@ function HandleCheats(str)
 		if (caravan_type) then
 			unit = CreateUnit(caravan_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
 		end
+	elseif (str == "free trade") then
+		local market_type = GetFactionClassUnitType("market", GetPlayerData(GetThisPlayer(), "Faction"))
+		if (market_type) then
+			unit = CreateUnit(market_type, GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		end
 	elseif (string.sub(str, 0, 13) == "prefixed item") then
         local string_list = {}
 		local sep = " "
