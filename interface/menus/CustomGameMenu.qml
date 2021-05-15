@@ -6,7 +6,8 @@ MenuBase {
 	id: custom_game_menu
 	title: "Custom Game"
 	
-	property var selected_map: map_dropdown.selectedEntry
+	readonly property var selected_map: map_dropdown.selectedEntry
+	readonly property int dropdown_width: 150 * wyrmgus.defines.scale_factor
 	
 	NormalText {
 		id: world_label
@@ -21,7 +22,7 @@ MenuBase {
 		anchors.right: map_dropdown.left
 		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: map_dropdown.bottom
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 3
 		entries: wyrmgus.get_map_worlds()
 	}
@@ -39,7 +40,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: resources_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 3
 		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
@@ -71,7 +72,7 @@ MenuBase {
 		anchors.left: opponents_dropdown.left
 		anchors.bottom: opponents_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 3
 		entries: wyrmgus.get_difficulties()
 		
@@ -105,7 +106,7 @@ MenuBase {
 		id: civilization_dropdown
 		anchors.left: world_dropdown.left
 		anchors.top: resources_dropdown.top
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 2
 		entries: get_entries(wyrmgus.get_playable_civilizations())
 		
@@ -149,7 +150,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: game_type_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 2
 		entries: ["Map Default", "Low", "Medium", "High"]
 		
@@ -171,7 +172,7 @@ MenuBase {
 		anchors.left: resources_dropdown.right
 		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.top: resources_dropdown.top
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 2
 		entries: get_entries(selected_map)
 		
@@ -207,7 +208,7 @@ MenuBase {
 		id: game_type_dropdown
 		anchors.left: civilization_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
-		width: 150 * wyrmgus.defines.scale_factor
+		width: custom_game_menu.dropdown_width
 		z: 1
 		entries: ["Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"]
 		
