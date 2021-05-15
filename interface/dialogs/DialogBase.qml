@@ -14,6 +14,7 @@ Popup {
 	
 	property string interface_style: "default"
 	property int panel: 1
+	property string title: ""
 	
 	background: Image {
 		source: "image://interface/" + interface_style + "/panel/" + panel
@@ -25,7 +26,15 @@ Popup {
 		hoverEnabled: true
 		//prevent events from propagating below
 	}
-		
+	
+	LargeText {
+		id: title_text
+		text: dialog.title
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: parent.top
+		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+	}
+	
 	function on_pressed_key(event) {
 		for (var i = 0; i < dialog.contentItem.children.length; ++i) {
 			var child_element = dialog.contentItem.children[i]

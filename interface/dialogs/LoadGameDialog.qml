@@ -5,6 +5,21 @@ import ".."
 DialogBase {
 	id: load_game_dialog
 	panel: 3
+	title: "Load Game"
+	
+	SmallButton {
+		id: load_button
+		anchors.left: parent.left
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		text: "Load"
+		hotkey: "l"
+		
+		onClicked: {
+			load_game_dialog.close()
+		}
+	}
 	
 	SmallButton {
 		id: cancel_button
