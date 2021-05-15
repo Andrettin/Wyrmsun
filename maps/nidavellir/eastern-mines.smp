@@ -2,13 +2,9 @@
 
 if (GetCurrentQuest() == "the-treasures-of-svarinshaug") then
 	DefinePlayerTypes("person")
-elseif (GrandStrategy == false) then
-	DefinePlayerTypes("person", "computer", "computer", "computer")
 else
-	DefinePlayerTypes("person", "person", "person", "person")
+	DefinePlayerTypes("person", "computer", "computer", "computer")
 end
 PresentMap("Eastern Mines", 1, 80, 80, 1)
 MapWorld = "Nidavellir"
 SetMapWorld("Nidavellir")
-MapAttacker = 0
-MapDefender = 1

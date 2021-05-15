@@ -2,13 +2,9 @@
 
 if (GetCurrentQuest() == "the-home-of-the-boii") then
 	DefinePlayerTypes("person", "computer", "rescue-passive", "rescue-passive", "rescue-passive")
-elseif (GrandStrategy == false or GrandStrategyEventMap) then
-	DefinePlayerTypes("person", "computer")
 else
-	DefinePlayerTypes("person", "person")
+	DefinePlayerTypes("person", "computer")
 end
 PresentMap("Prague", 1, 128, 96, 1)
 SetMapWorld("Earth")
 MapWorld = "Earth"
-MapAttacker = 0
-MapDefender = 1

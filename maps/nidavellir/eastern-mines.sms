@@ -185,11 +185,3 @@ end
 CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
 
 CreateCritters()
-
--- in a grand strategy battle, give the defender two guard towers if a stronghold is built
-if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-	if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {56, 48})
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {55, 53})
-	end
-end

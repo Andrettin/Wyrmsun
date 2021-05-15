@@ -6,5 +6,3 @@ MapWorld = "Nidavellir"
 SetMapWorld("Nidavellir")
 MapSiteType = "Dwarven Outpost"
 WorldMapPosition = {4, 2}
-MapAttacker = 1
-MapDefender = 0

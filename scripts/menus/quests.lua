@@ -218,11 +218,6 @@ function addQuestIcon(quest, menu, x, y)
 						RunningScenario = true
 						SetCurrentQuest(quest)
 						GetMapInfo(GetQuestData(quest, "Map"))
-						for i=1,mapinfo.nplayers do
-							if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-								GameSettings.Presets[i-1].Type = PlayerComputer
-							end
-						end
 						GameSettings.Difficulty = get_difficulty_index()
 						mapname = GetQuestData(quest, "Map")
 						quest_menu:stop()

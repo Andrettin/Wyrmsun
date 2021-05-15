@@ -4,7 +4,5 @@ DefinePlayerTypes("person", "computer", "person")
 PresentMap("Tomb of Durahn Eikinskjaldi", 2, 20, 20, 1)
 MapWorld = "Nidavellir"
 SetMapWorld("Nidavellir")
-MapAttacker = 0
-MapDefender = 1
 
 -- map based on the "Tomb of Durahn Oakenshield" dungeon by Dyson Logos, which the author kindly agreed to be released under the GPLv2.

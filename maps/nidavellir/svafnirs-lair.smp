@@ -4,5 +4,3 @@ DefinePlayerTypes("person", "person", "computer", "rescue-passive")
 PresentMap("Svafnir's Lair", 2, 66, 64, 1)
 MapWorld = "Nidavellir"
 SetMapWorld("Nidavellir")
-MapAttacker = 1
-MapDefender = 0

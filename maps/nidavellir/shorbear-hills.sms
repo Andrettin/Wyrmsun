@@ -492,11 +492,3 @@ CreateCritters()
 CreateRoamingFog((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096)
 
 CreateNeutralBuildings("unit-tree-stump", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
-
--- in a grand strategy battle, give the defender two guard towers if a stronghold is built
-if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
-	if (GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)) ~= nil) then
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {29, 29})
-		unit = OldCreateUnit(GetCivilizationClassUnitType("guard-tower", GetProvinceCivilization(AttackedProvince.Name)), MapDefender, {47, 35})
-	end
-end
