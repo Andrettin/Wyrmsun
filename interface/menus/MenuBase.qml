@@ -10,6 +10,7 @@ Item {
 	property string background: wyrmgus.defines.default_menu_background_file
 	property string music_type: "menu"
 	property var title_element: title_text
+	property var popups: []
 	
 	Image {
 		anchors.fill: parent
@@ -42,6 +43,19 @@ Item {
 	}
 	
 	Keys.onPressed: {
+		for (var i = (menu.popups.length - 1); i >= 0; --i) {
+			var popup = menu.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			if (popup.on_pressed_key) {
+				popup.on_pressed_key(event)
+			}
+			
+			return
+		}
+		
 		for (var i = 0; i < menu.children.length; ++i) {
 			var child_element = menu.children[i]
 			if (child_element.on_pressed_key) {
@@ -54,6 +68,19 @@ Item {
 	}
 	
 	Keys.onReleased: {
+		for (var i = (menu.popups.length - 1); i >= 0; --i) {
+			var popup = menu.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			if (popup.on_released_key) {
+				popup.on_released_key(event)
+			}
+			
+			return
+		}
+		
 		for (var i = 0; i < menu.children.length; ++i) {
 			var child_element = menu.children[i]
 			if (child_element.on_released_key) {
