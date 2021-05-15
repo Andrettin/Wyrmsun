@@ -94,6 +94,49 @@ MenuBase {
 	}
 	
 	NormalText {
+		id: civilization_label
+		text: "Your Civilization:"
+		anchors.left: civilization_dropdown.left
+		anchors.bottom: civilization_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	Dropdown {
+		id: civilization_dropdown
+		anchors.left: world_dropdown.left
+		anchors.top: resources_dropdown.top
+		width: 150 * wyrmgus.defines.scale_factor
+		z: 2
+		entries: get_entries(wyrmgus.get_playable_civilizations())
+		
+		readonly property var civilization_index: selectedEntry !== -1 ? selectedEntry.index : -1
+		
+		function get_entries(playable_civilizations) {
+			var entries = [-1]
+			
+			for (var i = 0; i < playable_civilizations.length; ++i) {
+				var civilization = playable_civilizations[i]
+				
+				if (civilization.develops_from_count > 0) {
+					continue
+				}
+				
+				entries.push(civilization)
+			}
+			
+			return entries
+		}
+		
+		function get_entry_name(entry) {
+			if (entry == -1) {
+				return "Map Default"
+			}
+			
+			return entry.name
+		}
+	}
+	
+	NormalText {
 		id: resources_label
 		text: "Resources:"
 		anchors.left: resources_dropdown.left
@@ -189,7 +232,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Game"
 		hotkey: "s"
-		lua_command: "RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
+		lua_command: "GameSettings.Presets[" + selected_map.person_player_index + "].Race = " + civilization_dropdown.civilization_index + "; RunningScenario = true; custom_game_menu:stop(); RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()

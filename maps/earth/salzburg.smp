@@ -1,13 +1,8 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
-	DefinePlayerTypes("computer","nobody","nobody","nobody","person")
-else
-	DefinePlayerTypes("person","nobody","nobody","nobody","person")
-end
+DefinePlayerTypes("computer","nobody","nobody","nobody","person")
 PresentMap("Salzburg", 1, 128, 128, 1)
 SetMapWorld("Earth")
 MapWorld = "Earth"
-MapPersonPlayer = 4
 MapAttacker = 4
 MapDefender = 0

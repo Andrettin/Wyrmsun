@@ -784,17 +784,6 @@ function RunSinglePlayerCustomGameMenu()
 	
 	menu:addFullButton(_("~!Start Game"), "s", offx + (640 - 224 - 16) * get_scale_factor(), offy + (360 + 36*1) * get_scale_factor(),
 		function()
-			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
-				for i=1,mapinfo.nplayers do
-					if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-						GameSettings.Presets[i-1].Type = PlayerComputer
-					end
-				end
-			end
-			if (civilization_ident_list[race:getSelected() + 1] ~= "Map Default") then
-				local chosen_civilization = civilization_ident_list[race:getSelected() + 1]
-				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
-			end
 			GameSettings.TechLevel = tech_level_enum_list[tech_level:getSelected() + 1]
 			GameSettings.MaxTechLevel = max_tech_level_enum_list[max_tech_level:getSelected() + 1]
 		end

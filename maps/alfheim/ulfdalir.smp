@@ -6,4 +6,3 @@ SetMapWorld("Alfheim")
 MapWorld = "Alfheim"
 MapAttacker = 0
 MapDefender = 1
-MapPersonPlayer = 0
