@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import ".."
+import "../dialogs"
 
 MenuBase {
 	id: single_player_game_menu
@@ -74,5 +75,9 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: tech_tree_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	LoadGameDialog {
+		id: load_game_dialog
 	}
 }
