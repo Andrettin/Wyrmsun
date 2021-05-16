@@ -89,6 +89,11 @@ Item {
 	Connections {
 		target: wyrmgus.game
 		onStopped: {
+			if (wyrmgus.game.results !== null) {
+				if (wyrmgus.game.results.victory || wyrmgus.game.results.defeat || wyrmgus.game.results.draw) {
+					menu_stack.push("menus/ResultsMenu.qml")
+				}
+			}
 			map_view_underlay.destroy()
 			map_view.destroy()
 		}

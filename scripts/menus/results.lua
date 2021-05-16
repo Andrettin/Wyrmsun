@@ -1,45 +1,15 @@
-function RunResultsMenu()
-	local background
-	local result
+results_menu = nil
 
+function RunResultsMenu()
 	if (GameResult == GameVictory) then
-		result = "Victory!"
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = GetBackground("backgrounds/yale.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			background = GetBackground("backgrounds/yale.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-			background = GetBackground("backgrounds/wyrm.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-			background = GetBackground("backgrounds/wyrm.png")
-		else
-			background = GetBackground("backgrounds/gryphon.png")
-		end
-		play_victory_music()
 	elseif (GameResult == GameDefeat) then
-		result = "Defeat!"
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = GetBackground("backgrounds/wyrm.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			background = GetBackground("backgrounds/wyrm.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
-			background = GetBackground("backgrounds/yale.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
-			background = GetBackground("backgrounds/yale.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "anglo_saxon" or GetPlayerData(GetThisPlayer(), "RaceName") == "english" or GetPlayerData(GetThisPlayer(), "RaceName") == "frankish" or GetPlayerData(GetThisPlayer(), "RaceName") == "goth" or GetPlayerData(GetThisPlayer(), "RaceName") == "norse" or GetPlayerData(GetThisPlayer(), "RaceName") == "suebi" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-			background = GetBackground("backgrounds/wyrm.png")
-		else
-			background = GetBackground("backgrounds/wyrm.png")
-		end
-		play_defeat_music()
 	elseif (GameResult == GameDraw) then
-		result = "Draw!"
-		background = GetBackground("backgrounds/gullinburst.png")
 	else
 		return -- quit to menu
 	end
 
-	local menu = WarMenu(nil, background)
+	local menu = WarMenu(nil, nil)
+	results_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 
@@ -58,9 +28,6 @@ function RunResultsMenu()
 
 	local line_spacing = (432 * get_scale_factor() - bottom_offset - description_offset) / c
 	local player_name_spacing = 104 * get_scale_factor() / c
-	menu:addLabel(_("Outcome"), offx + 106 * get_scale_factor(), offy + top_offset)
---	menu:addLabel(result, offx + 106, offy + top_offset + 21, Fonts["large-title"])
-	menu:addLabel(_(result), offx + 106 * get_scale_factor(), offy + top_offset + 21 * get_scale_factor(), Fonts["large"])
 
 	menu:addLabel(_("Units"), offx + 50 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
 	menu:addLabel(_("Buildings"), offx + 140 * get_scale_factor(), offy + bottom_offset, Fonts["large"], true)
@@ -119,17 +86,6 @@ function RunResultsMenu()
 			end
 		end
 	end
-
---	menu:addFullButton("~!Save Replay", "s", offx + 150, offy + 440,
---		function() RunSaveReplayMenu() end)
-
---	menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
-	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112 * get_scale_factor(), offy + 440 * get_scale_factor(),
-		function()
-			CleanPlayers()
-			play_menu_music();
-			menu:stop()
-		end)
-
+	
 	menu:run()
 end
