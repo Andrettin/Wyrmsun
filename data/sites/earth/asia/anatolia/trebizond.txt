@@ -1,0 +1,13 @@
+trebizond = {
+	name = "Trebizond"
+	map_template = middle_east_30_45_latitude_north
+	geocoordinate = { 39.71999385450 40.97999086410 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 222 72 233 }
+	cultural_names = {
+		turkish = "Trabzon"
+	}
+	regions = {
+		asia
+	}
+}

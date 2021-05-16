@@ -1,0 +1,10 @@
+tehran = {
+	name = "Tehran"
+	map_template = middle_east_30_45_latitude_north
+	geocoordinate = { 51.42434403360 35.67194276840 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 34 93 191 }
+	regions = {
+		asia
+	}
+}

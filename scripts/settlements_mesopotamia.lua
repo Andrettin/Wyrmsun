@@ -480,27 +480,6 @@ DefineSite("upi", {
 	Regions = {"asia"}
 })
 
-DefineSite("ur", {
-	Name = "Ur",
-	MapTemplate = "earth",
-	Position = {4895, 1345},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"assyrian", "Ur",
-		"babylonian", "Ur"
-	},
-	HistoricalOwners = {
-		-1450, "babylon", -- Ur was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria", -- Ur was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon", -- Ur's area was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "persia" -- Ur's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "town_hall"
-	},
-	Regions = {"asia"}
-})
-
 DefineSite("uruk", {
 	Name = "Uruk",
 	MapTemplate = "earth",
