@@ -1,4 +1,3 @@
-
 function RunResultsMenu()
 	local background
 	local result

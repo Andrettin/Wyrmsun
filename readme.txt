@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which occurring when accessing Goblin sound options within a game.
 - Removed the faction dropdown from the custom game menu, as a faction prompt already comes when starting the game.
 - Removed the tech tree level dropdowns from the custom game menu.
+- Persistent data (e.g. hero levels or quest completion) will no longer be altered if a cheat was used.
 
 * Quests
 - Added a couple of side-quests which only occur on certain days of the week in the real world with the objective of acquiring the upgrade of the corresponding deity, for the Norse and Anglo-Saxon civilizations. For instance, the Norse "Tysdag" quest only occurs on a Tuesday, and has the objective of choosing the Tyr deity.
