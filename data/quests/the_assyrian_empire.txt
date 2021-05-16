@@ -1,0 +1,11 @@
+the_assyrian_empire = {
+	name = "The Assyrian Empire"
+	icon = germanic_worker
+	player_color = brown
+	description = "The Assyrian Empire"
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+	objectives = {
+	}
+}

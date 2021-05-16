@@ -99,28 +99,6 @@ DefineSite("assur", {
 	Regions = {"asia"}
 })
 
-DefineSite("babylon", {
-	Name = "Babylon",
-	MapTemplate = "earth",
-	Position = {4848, 1300},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"assyrian", "Babylon",
-		"babylonian", "Babylon",
-		"persian", "Babylon"
-	},
-	HistoricalOwners = {
-		-1450, "babylon", -- Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-640, "assyria", -- Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "babylon", -- Babylon was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "persia" -- Babylon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "town_hall"
-	},
-	Regions = {"asia"}
-})
-
 DefineSite("borsippa", {
 	Name = "Borsippa",
 	MapTemplate = "earth",

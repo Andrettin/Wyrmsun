@@ -1,0 +1,17 @@
+hasa_plain = {
+	name = "Hasa Plain"
+	terrain_type = dry_grass #plains
+	color = { 88 35 18 }
+}
+
+mesopotamia = {
+	name = "Mesopotamia"
+	terrain_type = grass
+	color = { 57 96 17 }
+}
+
+tihamah = {
+	name = "Tihamah" #"Tihāmah"
+	terrain_type = dry_grass #plains
+	color = { 211 112 91 }
+}

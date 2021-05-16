@@ -1,0 +1,53 @@
+an_nafud_desert = {
+	name = "An Nafud Desert"
+	terrain_type = desert_sand
+	color = { 93 208 217 }
+}
+
+kavir_desert = {
+	name = "Kavir Desert"
+	terrain_type = desert_sand
+	color = { 8 65 64 }
+}
+
+lut_desert = {
+	name = "Lut Desert"
+	terrain_type = desert_sand
+	color = { 224 89 7 }
+}
+
+margo_desert = {
+	name = "Margo Desert"
+	terrain_type = desert_sand
+	color = { 102 59 145 }
+}
+
+negev_desert = {
+	name = "Negev Desert"
+	terrain_type = desert_sand
+	color = { 191 103 214 }
+}
+
+registan_desert = {
+	name = "Registan Desert"
+	terrain_type = desert_sand
+	color = { 139 180 159 }
+}
+
+rub_al_khali = {
+	name = "Rub' al Khali"
+	terrain_type = desert_sand
+	color = { 122 135 3 }
+}
+
+syrian_desert = {
+	name = "Syrian Desert"
+	terrain_type = desert_sand
+	color = { 251 173 108 }
+}
+
+wahiba_sands = {
+	name = "Wahiba Sands"
+	terrain_type = desert_sand
+	color = { 222 119 79 }
+}

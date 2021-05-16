@@ -1,0 +1,10 @@
+the_assyrian_empire = {
+	name = "The Assyrian Empire"
+	description = "The Assyrian Empire"
+	faction = assyria
+	start_date = -640
+	map_templates = { middle_east }
+	quest = the_assyrian_empire
+	icon = germanic_worker
+	hidden = true
+}

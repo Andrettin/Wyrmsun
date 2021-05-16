@@ -1,0 +1,32 @@
+babylon = {
+	name = "Babylon"
+	map_template = middle_east_30_45_latitude_north
+	geocoordinate = { 44.42172237020 32.47213808090 } #from Natural Earth (Al Hillah)
+	base_unit_type = unit_settlement_site
+	color = { 249 223 188 }
+	cultural_names = {
+		arab = "Al Hillah"
+	}
+	regions = {
+		asia
+	}
+	
+	history = {
+		-1450 = {
+			owner = babylon #Babylon was a Babylonian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+			building_classes += town_hall
+		}
+		
+		-640 = {
+			owner = assyria #Babylon was a part of the Assyrian Empire under Assurbanipal (640 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		}
+		
+		-600 = {
+			owner = babylon #Babylon was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+		
+		-500 = {
+			owner = persia #Babylon was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+	}
+}

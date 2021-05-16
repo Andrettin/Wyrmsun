@@ -1,0 +1,5 @@
+levant_coast = {
+	name = "Levant Coast"
+	terrain_type = dirt #coast
+	color = { 203 156 0 }
+}
