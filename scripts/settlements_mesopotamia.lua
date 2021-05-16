@@ -324,26 +324,6 @@ DefineSite("larsam", {
 	Regions = {"asia"}
 })
 
-DefineSite("nineveh", {
-	Name = "Nineveh",
-	MapTemplate = "earth",
-	Position = {4828, 1214},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"assyrian", "Nineveh",
-		"persian", "Nineveh"
-	},
-	HistoricalOwners = {
-		-1450, "assyria", -- Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-		-600, "media", -- Nineveh was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "persia" -- Nineveh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-1450, 0, "town_hall"
-	},
-	Regions = {"asia"}
-})
-
 DefineSite("nippur", {
 	Name = "Nippur",
 	MapTemplate = "earth",

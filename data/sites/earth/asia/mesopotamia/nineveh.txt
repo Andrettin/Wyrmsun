@@ -1,0 +1,28 @@
+nineveh = {
+	name = "Nineveh"
+	map_template = middle_east_30_45_latitude_north
+	geocoordinate = { 43.14500443400 36.34500246080 } #from Natural Earth (Mosul)
+	base_unit_type = unit_settlement_site
+	color = { 44 187 113 }
+	cultural_names = {
+		arab = "Mosul"
+	}
+	regions = {
+		asia
+	}
+	
+	history = {
+		-1450 = {
+			owner = assyria #Nineveh was an Assyrian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+			building_classes += town_hall
+		}
+		
+		-600 = {
+			owner = media #Nineveh was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+		
+		-500 = {
+			owner = persia #Nineveh's area was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+	}
+}

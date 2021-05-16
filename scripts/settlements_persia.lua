@@ -108,25 +108,6 @@ DefineSite("cyropolis", {
 	Regions = {"asia"}
 })
 
-DefineSite("ecbatana", {
-	Name = "Ecbatana",
-	MapTemplate = "earth",
-	Position = {4958, 1246},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"persian", "Ecbatana" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-750, "mede-tribe", -- Ecbatana was part of the territory of the Medes in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-600, "media", -- Ecbatana was part of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-		-500, "persia" -- Ecbatana was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-750, 0, "town_hall"
-	},
-	Regions = {"asia"}
-})
-
 DefineSite("harmozia", {
 	Name = "Harmozia",
 	MapTemplate = "earth",
@@ -157,22 +138,6 @@ DefineSite("pasargadae", {
 	},
 	HistoricalBuildings = {
 		-600, 0, "town_hall"
-	},
-	Regions = {"asia"}
-})
-
-DefineSite("persepolis", {
-	Name = "Persepolis",
-	MapTemplate = "earth",
-	Position = {5040, 1371},
-	CulturalNames = {
-		"persian", "Persepolis"
-	},
-	HistoricalOwners = {
-		-500, "persia" -- Persepolis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-500, 0, "town_hall"
 	},
 	Regions = {"asia"}
 })

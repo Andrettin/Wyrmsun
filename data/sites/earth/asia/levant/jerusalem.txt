@@ -1,0 +1,33 @@
+jerusalem = {
+	name = "Jerusalem"
+	map_template = middle_east_30_45_latitude_north
+	geocoordinate = { 35.20662593460 31.77840781560 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 219 209 210 }
+	regions = {
+		asia
+	}
+	
+	history = {
+		-1250 = {
+			owner = canaanite_tribe #Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+			building_classes += town_hall
+		}
+		
+		-1025 = {
+			owner = israel #Jerusalem was part of the dominions of David and Solomon in the 1025-953 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		}
+		
+		-953 = {
+			owner = judah #Jerusalem was part of the Kingdom of Judah in the 953-722 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
+		}
+		
+		-600 = {
+			owner = babylon #Jerusalem was part of the Chaldean Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+		
+		-500 = {
+			owner = persia #Jerusalem was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+	}
+}
