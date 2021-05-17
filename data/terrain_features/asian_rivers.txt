@@ -1,0 +1,20 @@
+euphrates_river = {
+	name = "Euphrates River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 165 29 48 }
+}
+
+shatt_al_arab_river = {
+	name = "Shatt al-Arab River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 48 237 141 }
+}
+
+tigris_river = {
+	name = "Tigris River"
+	terrain_type = shallow_water
+	major_river = true
+	color = { 100 118 228 }
+}
