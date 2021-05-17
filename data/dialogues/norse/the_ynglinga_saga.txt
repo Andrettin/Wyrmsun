@@ -17,7 +17,7 @@ svegdir_reaches_stein = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1
 	}
 	{
 		speaker_unit_type = unit_dwarven_axefighter
-		text = "Then your search has come to an end. There is a bridge between worlds in this place: you need only enter the stone, and you will come out in Asgard. See? There is a hidden entrance, here. It cannot ordinarily be made use of, but over time I have acquired magical skills which allow me to do so."
+		text = "Then yer search has come to an end. There is a bridge between worlds in this place: ye need only enter the stone, and ye will come out in Asgard. See? There is a hidden entrance, here. It cannot ordinarily be made use of, but over time I have acquired magical skills which allow me to do so."
 		
 		option = {
 			effects = {

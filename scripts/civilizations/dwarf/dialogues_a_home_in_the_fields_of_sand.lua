@@ -25,41 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("a-home-in-the-fields-of-sand-introduction", {
-	Nodes = {
-		{
-			"speaker", "character", "draupnir",
-			"text", "Svarinshaug is filled with dwarves to the brim. When our ancestors first came to these rocky hills, we were few, but since then we have greatly multiplied. My followers! The time has come for us to abandon the land of our forefathers, and settle in a new home."
-		},
-		{
-			"speaker", "unit", "unit-dwarven-witness",
-			"speaker-player", "goldhoof_clan",
-			"text", "Fellow Goldhoof dwarves, Hroptatyr has shown me the way! Beyond the Aurvang swamplands to our southeast lie sprawling fields of sand, named Joruvellir. A harsh place, to be sure, but livable enough, and safe. There shall we found a new realm!"
-		},
-		{
-			"speaker", "character", "eikinskjaldi",
-			"text", "Travel through the Aurvang swamplands? That place is filled with goblins, we must beware...",
-			"option-effects", {
-				function(s)
-					unit = FindUnit("unit-revealer", trigger_player)
-					if not (unit) then
-						unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY")}, GetSiteData("joruvellir", "MapLayer"))
-					end
-					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetSiteData("joruvellir", "MapLayer"))
-					CenterMap(GetSiteData("joruvellir", "MapCenterPosX"), GetSiteData("joruvellir", "MapCenterPosY"))
-				end
-			}
-		},
-		{
-			"text", "Hint: Protect your Miners well, for if you lose them there will be no way to complete your objectives."
-		},
-		{
-			"text", "Hint: You can garrison Scouts in your caravan for them to throw axes from inside it. Garrisoning Miners in the caravan, alternatively, will help keep them from harm."
-		}
-	}
-})
-
 DefineDialogue("aurvangling-goblins-sighted", {
 	Nodes = {
 		{
