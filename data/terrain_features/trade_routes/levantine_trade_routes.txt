@@ -1,0 +1,6 @@
+levantine_route_network = {
+	name = "Levantine Route Network"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 108 254 113 }
+}
