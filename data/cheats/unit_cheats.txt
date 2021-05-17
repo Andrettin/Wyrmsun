@@ -62,6 +62,14 @@ dwarven_transport_ship = {
 	}
 }
 
+dwarven_market = {
+	code = "alberich"
+	
+	effects = {
+		create_unit = unit_dwarven_market
+	}
+}
+
 elven_worker = {
 	code = "worker of the wood"
 	
