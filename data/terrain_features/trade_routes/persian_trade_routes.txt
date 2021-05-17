@@ -1,0 +1,6 @@
+persian_royal_highway = {
+	name = "Persian Royal Highway"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 168 168 24 }
+}
