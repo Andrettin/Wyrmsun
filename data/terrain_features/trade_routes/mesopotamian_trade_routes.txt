@@ -1,0 +1,6 @@
+mesopotamian_route_network = {
+	name = "Mesopotamian Route Network"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 232 226 208 }
+}
