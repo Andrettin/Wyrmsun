@@ -13,5 +13,11 @@ mesopotamian = {
 			#the Sumerian/Babylonian numerical system was developed around 1800 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, p. 82.
 			acquired_upgrade_classes += mathematics
 		}
+		
+		-1450 = {
+			explored_settlements += ur
+			explored_settlements += babylon
+			explored_settlements += nineveh
+		}
 	}
 }

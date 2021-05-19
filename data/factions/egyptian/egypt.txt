@@ -1,0 +1,9 @@
+egypt = {
+	name = "Egypt"
+	civilization = egyptian
+	type = polity
+	color = green
+	default_tier = kingdom
+	default_government_type = monarchy
+	default_capital = memphis
+}

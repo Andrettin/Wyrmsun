@@ -2,4 +2,11 @@ egyptian = {
 	name = "Egyptian"
 	rank = group
 	group = middle_eastern
+	
+	history = {
+		-1450 = {
+			explored_settlements += beirut
+			explored_settlements += jerusalem
+		}
+	}
 }

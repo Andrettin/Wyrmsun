@@ -9,9 +9,13 @@ jerusalem = {
 	}
 	
 	history = {
+		-1450 = {
+			owner = egypt #Egyptian possession about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+			building_classes += town_hall
+		}
+		
 		-1250 = {
 			owner = canaanite_tribe #Jerusalem was part of the territory of the Canaanites in the 1250-1125 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 6-7.
-			building_classes += town_hall
 		}
 		
 		-1025 = {

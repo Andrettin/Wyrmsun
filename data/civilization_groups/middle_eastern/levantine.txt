@@ -2,4 +2,11 @@ levantine = {
 	name = "Levantine"
 	rank = subgroup
 	group = semitic
+	
+	history = {
+		-1450 = {
+			explored_settlements += beirut
+			explored_settlements += jerusalem
+		}
+	}
 }
