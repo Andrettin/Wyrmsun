@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("aelak-tribe", { -- invented by Jesse Crider
+DefineFaction("aelak-tribe", { -- created by Jesse Crider
 	Name = "Aelak Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
@@ -33,7 +33,7 @@ DefineFaction("aelak-tribe", { -- invented by Jesse Crider
 	FactionUpgrade = "upgrade-faction-aelak-tribe"
 })
 
-DefineFaction("issudru-tribe", { -- invented by Jesse Crider
+DefineFaction("issudru-tribe", { -- created by Jesse Crider
 	Name = "Issudru Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
@@ -121,7 +121,7 @@ DefineFaction("lggi-tribe", {
 	}
 })
 
-DefineFaction("mabom-tribe", { -- invented by Jesse Crider
+DefineFaction("mabom-tribe", { -- created by Jesse Crider
 	Name = "Mabom Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
@@ -137,7 +137,7 @@ DefineFaction("prideblade-tribe", {
 	FactionUpgrade = "upgrade-faction-prideblade-tribe"
 })
 
-DefineFaction("sigre-tribe", { -- invented by Jesse Crider
+DefineFaction("sigre-tribe", { -- created by Jesse Crider
 	Name = "Sigre Tribe",
 	Civilization = "goblin",
 	Type = "tribe",
@@ -187,7 +187,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
 
-DefineFaction("ezmarria", { -- invented by Jesse Crider
+DefineFaction("ezmarria", { -- created by Jesse Crider
 	Name = "Ezmarria",
 	Civilization = "goblin",
 	Type = "polity",
@@ -203,7 +203,7 @@ DefineFaction("ezmarria", { -- invented by Jesse Crider
 	Description = "The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglect of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations."
 })
 
-DefineFaction("myridia", { -- invented by Jesse Crider
+DefineFaction("myridia", { -- created by Jesse Crider
 	Name = "Myridia",
 	Civilization = "goblin",
 	Type = "polity",
@@ -219,7 +219,7 @@ DefineFaction("myridia", { -- invented by Jesse Crider
 	Description = "The Myridian Syndicate is known as a conglomerate of merchants and mercenaries of utmost immoral caliber. Many of those who could not pay what they owed the syndicate claim that it is composed of sadistic dark minds, who torment their debtors endlessly until they finally manage to extract payment."
 })
 
-DefineFaction("stilgar", { -- invented by Jesse Crider
+DefineFaction("stilgar", { -- created by Jesse Crider
 	Name = "Stilgar",
 	Civilization = "goblin",
 	Type = "polity",
@@ -235,7 +235,7 @@ DefineFaction("stilgar", { -- invented by Jesse Crider
 	Description = "The Stilgar Syndicate is renowned for its honorable reputation in doing business. They are one of the few goblin syndicates who can be trusted in upholding their end of an agreement."
 })
 
-DefineFaction("tenebris", { -- invented by Jesse Crider
+DefineFaction("tenebris", { -- created by Jesse Crider
 	Name = "Tenebris",
 	Civilization = "goblin",
 	Type = "polity",

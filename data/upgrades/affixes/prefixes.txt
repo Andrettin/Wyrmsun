@@ -1,3 +1,29 @@
+upgrade_prefix_curupiras = {
+	name = "Curupira's"
+	magic_prefix = true
+	magic_level = 6
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 3
+	}
+}
+
 upgrade_prefix_ice = {
 	name = "Ice"
 	magic_prefix = true

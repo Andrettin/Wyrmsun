@@ -259,12 +259,15 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 13) == "prefixed item") then
         local string_list = {}
 		local sep = " "
+		
 		for str in string.gmatch(string.sub(str, 15), "([^"..sep.."]+)") do
 			table.insert(string_list, str)
 		end
 		
-		unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-		SetUnitVariable(unit, "Prefix", string_list[2])
+		if (table.getn(string_list) >= 2) then
+			unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			SetUnitVariable(unit, "Prefix", string_list[2])
+		end
 	elseif (string.sub(str, 0, 13) == "suffixed item") then
         local string_list = {}
 		local sep = " "
@@ -272,8 +275,10 @@ function HandleCheats(str)
 			table.insert(string_list, str)
 		end
 		
-		unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
-		SetUnitVariable(unit, "Suffix", string_list[2])
+		if (table.getn(string_list) >= 2) then
+			unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			SetUnitVariable(unit, "Suffix", string_list[2])
+		end
 	elseif (string.sub(str, 0, 5) == "event") then
 		call_trigger(string.sub(str, 7))
 	elseif (string.sub(str, 0, 7) == "trigger") then
