@@ -70,17 +70,6 @@ function AddLoadGameItems(menu)
 	function() menu:stop() end)
 end
 
-function RunLoadGameMenu()
-	local menu = WarGameMenu(panel(3))
-	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
-	menu:setDrawMenusUnder(true)
-
-	AddLoadGameItems(menu)
-
-	menu.ingame = false
-	menu:run()
-end
-
 function RunGameLoadGameMenu()
 	local menu = WarGameMenu(panel(3))
 	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
@@ -91,4 +80,3 @@ function RunGameLoadGameMenu()
 	menu.ingame = true
 	menu:run(false)
 end
-
