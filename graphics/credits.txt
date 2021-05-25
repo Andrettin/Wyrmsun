@@ -698,6 +698,8 @@
 /graphics/icons/resources/research.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/dwarven/coinage.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/norse/runewriting.png (by Jinn) (licensed under the CC0)
+/graphics/icons/technologies/roman/oil_lamp.png (by Artyom Brullov) (licensed under the CC0)
+/graphics/icons/technologies/roman/oil_lamp_unlit.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/technologies/suebi/coinage.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/aeromancy.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/aethership_sail.png (by Jinn) (licensed under the CC0)

@@ -59,7 +59,7 @@ local sea_funcs = {
 	function() return AiForceRole(0, "defend") end,
 	function() return AiWaitForce(0) end,
 
-	-- get the necessary upgrades for Germanic civilizations to become Teuton
+	-- get the necessary upgrades for Germanic civilizations to become Teutonic
 	function()
 		if (AiGetRace() == "germanic") then
 			return AiNeed(GetAiUnitType("smithy"));
@@ -74,7 +74,7 @@ local sea_funcs = {
 	end,
 	function()
 		if (AiGetRace() == "germanic") then
-			return AiResearch(GetAiUnitType("wood-plow"));
+			return AiResearch(GetAiUnitType("wood_plow"));
 		end
 		return false;
 	end,
@@ -98,7 +98,7 @@ local sea_funcs = {
 	end,
 	function()
 		if (AiGetRace() == "germanic") then
-			return AiWait(GetAiUnitType("wood-plow"));
+			return AiWait(GetAiUnitType("wood_plow"));
 		end
 		return false;
 	end,

@@ -4114,7 +4114,7 @@ DefineUnitType("unit-template-town-hall", {
 	Construction = "town_hall",
 	HitPoints = 1000, -- 1200 with masonry
 	TileSize = {4, 4}, BoxSize = {127, 127},
-	SightRange = 6,
+	SightRange = 5,
 	Armor = 5, Missile = "missile-none",
 	Priority = 35, AnnoyComputerFactor = 45,
 	Points = 200,
@@ -4161,7 +4161,7 @@ DefineUnitType("unit-template-stronghold", {
 	Costs = {"time", 200, "copper", 2000, "lumber", 2100, "stone", 1500},
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
 	HitPoints = 1167, -- 1400 with masonry
-	SightRange = 9,
+	SightRange = 8,
 	BasicDamage = 9,
 	MaxAttackRange = 6,
 	GarrisonedRangeBonus = 1,
@@ -4475,7 +4475,6 @@ DefineUnitType("unit-template-temple", {
 	Construction = "land_building",
 	HitPoints = 584, -- 700 with masonry
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 3,
 	Armor = 5, Missile = "missile-none",
 	Priority = 15, AnnoyComputerFactor = 35,
 	Points = 240,
@@ -4556,7 +4555,7 @@ DefineUnitType("unit-template-watch-tower", {
 	Construction = "land_building",
 	HitPoints = 167, -- 200 with masonry
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 9,
+	SightRange = 8,
 	Armor = 5, Missile = "missile-none",
 	Priority = 55, AnnoyComputerFactor = 50,
 	Points = 95,
@@ -4597,7 +4596,7 @@ DefineUnitType("unit-template-guard-tower", {
 	Construction = "land_building",
 	HitPoints = 217, -- 260 with masonry
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 9,
+	SightRange = 8,
 	Armor = 5,
 	BasicDamage = 9,
 	MaxAttackRange = 6,
@@ -4645,7 +4644,7 @@ DefineUnitType("unit-template-heavy-tower", {
 	Construction = "land_building",
 	HitPoints = 267, -- 320 with masonry
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 9,
+	SightRange = 8,
 	Armor = 5,
 	BasicDamage = 40,
 	MinAttackRange = 2,	MaxAttackRange = 7,

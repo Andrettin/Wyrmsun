@@ -745,7 +745,7 @@ DefineButton( { Pos = 10, Icon = "icon-stone",
 
 -- Researches ---------------------------------------------------------
 
-DefineButton( { Pos = 5, Icon = "icon-wood-plow",
+DefineButton( { Pos = 5, Icon = "icon_wood_plow",
 	Action = "research", Value = "upgrade-wood-plow",
 	Allowed = "check-single-research",
 	Description = "+1 Food supply for farms.",

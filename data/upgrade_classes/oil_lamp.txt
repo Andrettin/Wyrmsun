@@ -1,0 +1,6 @@
+oil_lamp = {
+	name = "Oil Lamp"
+	category = industry
+	age = bronze_age
+	tech_tree_parent_unit_class = market
+}

@@ -104,6 +104,9 @@ https://github.com/Andrettin/Wyrmsun
 - Increased Spearman damage from 5 to 6.
 - Minecarts can now move diagonally, and can move outside of railroads with a large speed penalty (-5).
 
+* Upgrades
+- Added Oil Lamp upgrade (+1 sight range for buildings), researchable at the Market.
+
 * User Interface
 - Reworked the main menu to be QML-based.
 - F11 is now the screenshot hotkey.

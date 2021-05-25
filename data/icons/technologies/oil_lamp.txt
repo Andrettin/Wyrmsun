@@ -1,0 +1,3 @@
+roman_oil_lamp = {
+	file = "icons/technologies/roman/oil_lamp.png"
+}

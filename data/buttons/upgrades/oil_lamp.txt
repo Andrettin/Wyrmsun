@@ -1,0 +1,11 @@
+oil_lamp = {
+	pos = 2
+	action = research_class
+	value = oil_lamp
+	allowed = check_single_research
+	description =  "+1 Sight for buildings."
+	popup = popup_research
+	unit_classes = {
+		market
+	}
+}

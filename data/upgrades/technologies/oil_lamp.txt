@@ -1,0 +1,35 @@
+upgrade_oil_lamp = {
+	name = "Oil Lamp"
+	upgrade_class = oil_lamp
+	civilization = neutral
+	icon = roman_oil_lamp
+	description = "Oil lamps provide light, making it possible to see better at night-time.\n\nEffect: +1 Sight for buildings."
+	button_key = o
+	costs = {
+		time = 200
+		copper = 750
+	}
+	modifier = {
+		sight_range = 1
+		unit_classes = {
+			town_hall
+			stronghold
+			fortress
+			farm
+			barracks
+			lumber_mill
+			smithy
+			masons_shop
+			stables
+			temple
+			market
+			university
+			dock
+			watch_tower
+			guard_tower
+			heavy_tower
+			cannon_tower
+			mercenary_camp
+		}
+	}
+}
