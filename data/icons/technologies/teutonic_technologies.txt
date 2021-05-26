@@ -1,0 +1,3 @@
+furor_teutonicus = {
+	file = "icons/technologies/teutonic/furor_teutonicus.png"
+}

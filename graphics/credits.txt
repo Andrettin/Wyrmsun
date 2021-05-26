@@ -700,6 +700,7 @@
 /graphics/icons/technologies/roman/oil_lamp.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/technologies/roman/oil_lamp_unlit.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/technologies/suebi/coinage.png (by Jinn) (licensed under the CC0)
+/graphics/icons/technologies/teutonic/furor_teutonicus.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/aeromancy.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/aethership_sail.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/architecture.png (by Exidelo and Jinn) (licensed under the CC0)

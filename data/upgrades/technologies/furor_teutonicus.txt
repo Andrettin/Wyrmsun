@@ -1,0 +1,25 @@
+upgrade_furor_teutonicus = {
+	name = "Furor Teutonicus"
+	icon = furor_teutonicus
+	costs = {
+		time = 200
+		copper = 1200
+	}
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_classes = {
+			militia
+			infantry
+			veteran_infantry
+			heroic_infantry
+			spearman
+			veteran_spearman
+			heroic_spearman
+			marine_infantry
+		}
+	}
+	preconditions = {
+		civilization = teutonic
+	}
+}

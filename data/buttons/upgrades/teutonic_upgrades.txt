@@ -1,0 +1,11 @@
+develop_furor_teutonicus = {
+	pos = 11
+	action = research
+	value = upgrade_furor_teutonicus
+	allowed = check_single_research
+	key = f
+	hint = "Develop ~!Furor Teutonicus"
+	description = "+2 Damage for infantry."
+	popup = popup_research
+	unit_classes = { barracks }
+}
