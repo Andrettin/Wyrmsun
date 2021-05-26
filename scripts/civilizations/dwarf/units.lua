@@ -1929,8 +1929,7 @@ DefineUnitType("unit-dwarven-barracks", {
 	Civilization = "dwarf",
 	Description = "The war hall is where dwarves meet to train and hone their axefighting skills. Since early times, dwarves have faced many perils in the dark plains and caves of Nidavellir, such as goblins or hostile dwarven clans. To fight off these menaces, clans gradually developed means of organizing themselves militarily.",
 	Quote = "\"Loud roar the dwarves by the doors of stone,\nThe masters of the rocks: would you know yet more?\"\n- Dwarven Traditional Poetry",
-	Image = {"file", "dwarf/buildings/barracks.png", "size", {96, 96}},
-	Shadow = {"file", "dwarf/buildings/barracks_shadow.png", "size", {96, 96}},
+	Image = {"file", "buildings/dwarven/barracks.png", "size", {96, 96}},
 	Icon = "icon-dwarven-barracks",
 	Costs = {"lumber", 0, "stone", 1350},
 	RepairCosts = {"lumber", 0, "stone", 1},
@@ -1946,7 +1945,7 @@ DefineUnitType("unit-dwarven-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow-winter",
-			"file", "dwarf/buildings/barracks_snow.png",
+			"file", "buildings/dwarven/barracks_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1957,7 +1956,7 @@ DefineUnitType("unit-dwarven-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow",
-			"file", "dwarf/buildings/barracks_snow.png",
+			"file", "buildings/dwarven/barracks_snow.png",
 			"terrain", "snow"
 		}
 	}
