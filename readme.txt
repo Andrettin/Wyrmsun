@@ -107,7 +107,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Oil Lamp upgrade (+1 sight range for buildings), researchable at the Market.
 - Added the Furor Teutonicus upgrade for the Teutonic civilization (+2 Damage for infantry), researchable at the Barracks.
-- Added the House-Burning upgrade for the Norse civilization (+10% Bonus vs. Buildings for infantry), researchable at the Barracks.
+- Added the House-Burning upgrade for the Norse civilization (+20% Bonus vs. Buildings for infantry), researchable at the Barracks.
 
 * User Interface
 - Reworked the main menu to be QML-based.

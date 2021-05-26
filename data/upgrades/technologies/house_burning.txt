@@ -6,7 +6,7 @@ upgrade_house_burning = {
 		copper = 2000
 	}
 	modifier = {
-		bonus_against_buildings = 10
+		bonus_against_buildings = 20
 		points = 10
 		unit_classes = {
 			militia

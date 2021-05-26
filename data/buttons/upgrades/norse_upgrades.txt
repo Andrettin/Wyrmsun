@@ -5,7 +5,7 @@ develop_house_burning = {
 	allowed = check_single_research
 	key = b
 	hint = "Develop House ~!Burning"
-	description = "+10% Bonus vs. Buildings for infantry."
+	description = "+20% Bonus vs. Buildings for infantry."
 	popup = popup_research
 	unit_classes = { barracks }
 }
