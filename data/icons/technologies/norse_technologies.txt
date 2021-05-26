@@ -1,0 +1,3 @@
+house_burning = {
+	file = "icons/technologies/norse/house_burning.png"
+}
