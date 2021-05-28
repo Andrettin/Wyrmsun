@@ -26,41 +26,6 @@
 --
 
 RunningScenario = false
-QuestWorlds = {"~!Earth", "~!Nidavellir"}
-
-legacy_quests_menu = nil
-
-function RunQuestWorldMenu()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	local menu = WarMenu()
-	legacy_quests_menu = menu
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	local quest_world_y = 2
-	for i=1, table.getn(QuestWorlds) do
-		local quest_world_hotkey = ""		
-		if (string.find(QuestWorlds[i], "~!") ~= nil) then
-			quest_world_hotkey = string.sub(string.match(_(QuestWorlds[i]), "~!%a"), 3)
-			quest_world_hotkey = string.lower(quest_world_hotkey)
-		end
-		local quest_world_name = string.gsub(QuestWorlds[i], "~!", "")
-		quest_world_name = string.lower(quest_world_name)
-		
-		menu:addFullButton(_(QuestWorlds[i]), quest_world_hotkey, offx + 208 * get_scale_factor(), offy + (104 + 36*quest_world_y) * get_scale_factor(),
-		function()
-			RunQuestMenu(quest_world_name);
-			if (RunningScenario) then
-				menu:stop()
-			end
-		end)
-		
-		quest_world_y = quest_world_y + 1
-	end
-
-	return menu:run()
-end
 
 function RunQuestMenu(world)
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
