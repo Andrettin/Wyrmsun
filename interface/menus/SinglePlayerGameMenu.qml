@@ -2,7 +2,6 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.3
 import ".."
-import "../dialogs"
 
 MenuBase {
 	id: single_player_game_menu

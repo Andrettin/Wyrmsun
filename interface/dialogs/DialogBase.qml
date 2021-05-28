@@ -15,6 +15,7 @@ Popup {
 	property string interface_style: "default"
 	property int panel: 1
 	property string title: ""
+	readonly property var title_item: title_text
 	
 	background: Image {
 		source: "image://interface/" + interface_style + "/panel/" + panel

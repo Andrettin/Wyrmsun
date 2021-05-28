@@ -69,7 +69,10 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Achievements"
 		hotkey: "a"
-		lua_command: "RunAchievementsMenu(); main_menu:stop(1);"
+		
+		onClicked: {
+			menu_stack.push("AchievementsMenu.qml")
+		}
 	}
 	
 	LargeButton {
