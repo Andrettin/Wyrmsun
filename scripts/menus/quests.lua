@@ -25,16 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-RunningScenario = false
-
 function RunQuestMenu(world)
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	
-	RunningScenario = false
 	
 	menu:addLabel(_("~<Legacy Quests~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
 
@@ -180,7 +176,6 @@ function addQuestIcon(quest, menu, x, y)
 			if (GetQuestData(quest, "Map") ~= "") then
 				quest_menu:addFullButton(_("~!Play Quest"), "p", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
 					function()
-						RunningScenario = true
 						SetCurrentQuest(quest)
 						GetMapInfo(GetQuestData(quest, "Map"))
 						GameSettings.Difficulty = get_difficulty_index()

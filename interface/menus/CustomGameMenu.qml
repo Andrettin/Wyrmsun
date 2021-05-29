@@ -233,7 +233,7 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Start Game"
 		hotkey: "s"
-		lua_command: "GameSettings.Presets[" + selected_map.person_player_index + "].Race = " + civilization_dropdown.civilization_index + "; RunningScenario = true; RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\"); RunningScenario = false;"
+		lua_command: "GameSettings.Presets[" + selected_map.person_player_index + "].Race = " + civilization_dropdown.civilization_index + "; RunMap(\"" + escape_string(selected_map.presentation_filepath) + "\"); SetCurrentCustomHero(\"\");"
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()
