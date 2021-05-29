@@ -5,7 +5,7 @@ kiev = {
 	base_unit_type = unit_settlement_site
 	color = { 250 138 174 }
 	regions = {
-		europe
+		ukraine
 	}
 	
 	history = {

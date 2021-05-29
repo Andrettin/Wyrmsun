@@ -5,6 +5,6 @@ moscow = {
 	base_unit_type = unit_settlement_site
 	color = { 236 226 172 }
 	regions = {
-		europe
+		european_russia
 	}
 }

@@ -1,0 +1,87 @@
+commonwealth_of_independent_states = {
+	history = {
+		-10000 = {
+			population = 200000 #CIS had a population of around 0.2 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-9000 = {
+			population = 200000 #CIS had a population of around 0.2 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-8000 = {
+			population = 400000 #CIS had a population of around 0.4 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-7000 = {
+			population = 500000 #CIS had a population of around 0.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-6000 = {
+			population = 800000 #CIS had a population of around 0.8 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-5000 = {
+			population = 1200000 #CIS had a population of around 1.2 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-4000 = {
+			population = 1800000 #CIS had a population of around 1.8 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-3000 = {
+			population = 2714630 #CIS had a population of c. 2,714,630 in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-2000 = {
+			population = 4100000 #CIS had a population of around 4.1 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-1000 = {
+			population = 6100000 #CIS had a population of around 6.1 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1 = {
+			population = 9200000 #CIS had a population of around 9.2 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		100 = {
+			population = 8622000 #CIS had a population of around 8.622 millions in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		200 = {
+			population = 8100000 #CIS had a population of around 8.1 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		300 = {
+			population = 7700000 #CIS had a population of around 7.7 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		400 = {
+			population = 7400000 #CIS had a population of around 7.4 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		500 = {
+			population = 6900000 #CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1000 = {
+			population = 6692000 #CIS had a population of around 6.692 millions in 1000 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1500 = {
+			population = 15947000 #CIS had a population of around 15.947 millions in 1500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1600 = {
+			population = 19495000 #CIS had a population of around 19.495 millions in 1600 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1700 = {
+			population = 23015000 #CIS had a population of around 23.015 millions in 1700 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1810 = {
+			population = 48232000 #CIS had a population of around 48.232 millions in 1810 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+	}
+}

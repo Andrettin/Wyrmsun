@@ -1,0 +1,6 @@
+byelorussia = {
+	superregions = {
+		europe
+		commonwealth_of_independent_states
+	}
+}

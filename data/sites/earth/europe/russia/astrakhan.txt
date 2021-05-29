@@ -5,6 +5,6 @@ astrakhan = {
 	base_unit_type = unit_settlement_site
 	color = { 235 105 4 }
 	regions = {
-		europe
+		european_russia
 	}
 }

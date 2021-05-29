@@ -5,6 +5,6 @@ perm = {
 	base_unit_type = unit_settlement_site
 	color = { 84 173 248 }
 	regions = {
-		europe
+		european_russia
 	}
 }
