@@ -1,0 +1,13 @@
+england = {
+	superregions = { british_isles }
+	
+	history = {
+		1301 = {
+			population = 4000000 #4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1600 = {
+			population = 5000000 #5 million people lived in England around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+	}
+}

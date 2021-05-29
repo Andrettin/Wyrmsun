@@ -97,7 +97,7 @@ DefineSite("corinth", {
 	Name = "Corinth",
 	MapTemplate = "earth",
 	Position = {4360, 1186},
-	BaseUnitType = "unit_settlement_site",
+	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Corinth"
 	},
@@ -282,7 +282,7 @@ DefineSite("knossos", {
 	Name = "Knossos",
 	MapTemplate = "earth",
 	Position = {4410, 1245},
-	BaseUnitType = "unit_settlement_site",
+	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Knossos",
 		"latin", "Cnossus"
@@ -402,7 +402,7 @@ DefineSite("thebes", {
 	MapTemplate = "earth",
 --	Position = {4369, 1176},
 	Position = {4357, 1170}, -- moved here to give Athens more space
-	BaseUnitType = "unit_settlement_site",
+	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Thebes"
 	},

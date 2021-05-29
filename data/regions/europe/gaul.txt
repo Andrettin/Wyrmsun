@@ -1,0 +1,9 @@
+gaul = {
+	superregions = { europe }
+	
+	history = {
+		-27 = {
+			population = 5000000 #5 million people lived in France at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+	}
+}

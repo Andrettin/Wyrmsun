@@ -1,0 +1,13 @@
+france = {
+	superregions = { europe }
+	
+	history = {
+		1301 = {
+			population = 21000000 #21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1600 = {
+			population = 17000000 #17 million people lived in France around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+	}
+}

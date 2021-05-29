@@ -1,0 +1,42 @@
+europe = {
+}
+
+austria = {
+	superregions = { europe }
+}
+
+baltic_countries = {
+	superregions = { europe }
+}
+
+germany = {
+	superregions = { europe }
+}
+
+iberia = {
+	superregions = { europe }
+}
+
+italy = {
+	superregions = { europe }
+}
+
+low_countries = {
+	superregions = { europe }
+}
+
+belgium = {
+	superregions = { low_countries gaul }
+}
+
+netherlands = {
+	superregions = { low_countries }
+}
+
+poland = {
+	superregions = { europe }
+}
+
+scandinavia = {
+	superregions = { europe }
+}
