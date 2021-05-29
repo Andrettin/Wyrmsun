@@ -17,7 +17,13 @@ latin = {
 		}
 		
 		-218 = {
-			explored_settlements += carthage #Second Punic War
+			#Second Punic War
+			explored_settlements += carthage 
+			explored_settlements += algiers
+			explored_settlements += rabat
+			explored_settlements += seville
+			explored_settlements += valencia
+			explored_settlements += syracuse
 		}
 		
 		-191 = {
