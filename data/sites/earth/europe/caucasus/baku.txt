@@ -5,6 +5,6 @@ baku = {
 	base_unit_type = unit_settlement_site
 	color = { 214 151 87 }
 	regions = {
-		europe
+		azerbaijan
 	}
 }

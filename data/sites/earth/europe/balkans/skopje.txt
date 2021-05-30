@@ -11,7 +11,7 @@ skopje = {
 		bryges_tribe
 	}
 	regions = {
-		europe
+		yugoslavia
 	}
 	
 	history = {

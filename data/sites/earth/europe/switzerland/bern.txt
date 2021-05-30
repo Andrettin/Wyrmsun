@@ -4,7 +4,7 @@ bern = {
 	geocoordinate = { 7.46697546248 46.91668275870 } #from Natural Earth
 	#base_unit_type = unit_settlement_site
 	regions = {
-		europe
+		switzerland
 	}
 	
 	history = {

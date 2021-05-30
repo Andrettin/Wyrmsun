@@ -1,0 +1,3 @@
+hungary = {
+	superregions = { west_and_central_europe }
+}

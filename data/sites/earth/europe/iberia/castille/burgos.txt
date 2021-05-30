@@ -11,7 +11,7 @@ burgos = {
 		latin = "Burgiorum" #Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	}
 	regions = {
-		iberia
+		castille
 	}
 	
 	history = {

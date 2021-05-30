@@ -1,5 +1,5 @@
 gaul = {
-	superregions = { europe }
+	superregions = { west_and_central_europe }
 	
 	history = {
 		-27 = {

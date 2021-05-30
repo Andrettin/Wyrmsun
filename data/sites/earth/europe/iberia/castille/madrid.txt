@@ -5,7 +5,7 @@ madrid = {
 	base_unit_type = unit_settlement_site
 	color = { 124 44 233 }
 	regions = {
-		iberia
+		castille
 	}
 	
 	history = {

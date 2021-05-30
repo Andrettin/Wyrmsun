@@ -5,7 +5,7 @@ cluj = {
 	base_unit_type = unit_settlement_site
 	color = { 147 132 43 }
 	regions = {
-		europe
+		romania
 	}
 	
 	history = {

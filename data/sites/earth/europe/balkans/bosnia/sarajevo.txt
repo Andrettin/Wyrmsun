@@ -5,7 +5,7 @@ sarajevo = {
 	base_unit_type = unit_settlement_site
 	color = { 58 127 21 }
 	regions = {
-		europe
+		bosnia
 	}
 	
 	history = {

@@ -12,7 +12,7 @@ zagreb = {
 		croatia
 	}
 	regions = {
-		europe
+		croatia
 	}
 	
 	history = {

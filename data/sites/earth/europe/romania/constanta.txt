@@ -6,6 +6,6 @@ constanta = {
 		latin = "Tomi" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	}
 	regions = {
-		europe
+		romania
 	}
 }

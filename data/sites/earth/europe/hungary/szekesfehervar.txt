@@ -9,7 +9,7 @@ szekesfehervar = {
 		hungary
 	}
 	regions = {
-		europe
+		hungary
 	}
 	
 	history = {

@@ -9,7 +9,7 @@ pest = {
 		hungary
 	}
 	regions = {
-		europe
+		hungary
 	}
 	
 	history = {

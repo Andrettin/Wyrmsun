@@ -11,7 +11,7 @@ zaragoza = {
 		latin = "Caesaraugusta"
 	}
 	regions = {
-		iberia
+		aragon
 	}
 	
 	history = {

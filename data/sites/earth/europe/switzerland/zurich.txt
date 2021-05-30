@@ -3,6 +3,6 @@ zurich = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 8.55001013046 47.37998781240 } #from Natural Earth
 	regions = {
-		europe
+		switzerland
 	}
 }

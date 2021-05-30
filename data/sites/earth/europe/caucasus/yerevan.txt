@@ -5,6 +5,6 @@ yerevan = {
 	base_unit_type = unit_settlement_site
 	color = { 147 67 163 }
 	regions = {
-		europe
+		armenia
 	}
 }

@@ -3,7 +3,6 @@ jihlava = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 15.58332759470 49.40038128570 } #from Natural Earth
 	regions = {
-		cisleithania
-		czechoslovakia
+		bohemia
 	}
 }

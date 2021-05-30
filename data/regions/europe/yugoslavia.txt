@@ -1,0 +1,15 @@
+yugoslavia = {
+	superregions = { west_and_central_europe }
+}
+
+bosnia = {
+	superregions = { yugoslavia }
+}
+
+croatia = {
+	superregions = { yugoslavia }
+}
+
+serbia = {
+	superregions = { yugoslavia }
+}

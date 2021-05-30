@@ -11,7 +11,7 @@ belgrade = {
 		serbia
 	}
 	regions = {
-		europe
+		serbia
 	}
 	
 	history = {

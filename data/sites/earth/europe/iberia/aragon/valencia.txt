@@ -8,7 +8,7 @@ valencia = {
 		latin = "Valentia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {
-		iberia
+		aragon
 	}
 	
 	history = {

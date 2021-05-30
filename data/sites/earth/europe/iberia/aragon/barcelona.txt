@@ -8,7 +8,7 @@ barcelona = {
 		barcelona
 	}
 	regions = {
-		iberia
+		aragon
 	}
 	
 	history = {

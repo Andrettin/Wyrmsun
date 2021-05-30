@@ -5,7 +5,7 @@ oporto = {
 	base_unit_type = unit_settlement_site
 	color = { 37 113 29 }
 	regions = {
-		iberia
+		portugal
 	}
 	
 	history = {

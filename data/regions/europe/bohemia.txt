@@ -1,0 +1,6 @@
+bohemia = {
+	superregions = {
+		cisleithania
+		czechoslovakia
+	}
+}

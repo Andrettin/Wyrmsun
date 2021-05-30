@@ -1,0 +1,11 @@
+spain = {
+	superregions = { iberia }
+}
+
+aragon = {
+	superregions = { spain }
+}
+
+castille = {
+	superregions = { spain }
+}

@@ -8,7 +8,7 @@ lisbon = {
 		latin = "Olisipo" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 	regions = {
-		iberia
+		portugal
 	}
 	
 	history = {

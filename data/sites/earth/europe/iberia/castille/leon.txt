@@ -8,7 +8,7 @@ leon = {
 		leon
 	}
 	regions = {
-		iberia
+		castille
 	}
 	
 	history = {

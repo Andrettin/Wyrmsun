@@ -1,0 +1,18 @@
+transcaucasus = {
+	superregions = {
+		europe
+		commonwealth_of_independent_states
+	}
+}
+
+armenia = {
+	superregions = { transcaucasus }
+}
+
+azerbaijan = {
+	superregions = { transcaucasus }
+}
+
+georgia = {
+	superregions = { transcaucasus }
+}
