@@ -1,3 +1,8 @@
+aether_workship = {
+	name = "Aether Workship"
+	ship = true
+}
+
 aether_transport_ship = {
 	name = "Aether Transport Ship"
 	ship = true
