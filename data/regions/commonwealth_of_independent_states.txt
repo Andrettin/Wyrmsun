@@ -41,7 +41,7 @@ commonwealth_of_independent_states = {
 		}
 		
 		1 = {
-			population = 9200000 #CIS had a population of around 9.2 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+			population = 9200000 #CIS had a population of around 9.2 millions in 1 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 		}
 		
 		100 = {

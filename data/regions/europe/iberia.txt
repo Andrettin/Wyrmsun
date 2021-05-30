@@ -1,0 +1,17 @@
+iberia = {
+	superregions = { europe }
+	
+	history = {
+		-27 = {
+			population = 6000000 #6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504. p. 504.
+		}
+		
+		1301 = {
+			population = 6000000 #6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1600 = {
+			population = 10000000 #10 million people lived in Spain-Portugal around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+	}
+}

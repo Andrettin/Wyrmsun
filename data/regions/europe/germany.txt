@@ -1,0 +1,25 @@
+germany = {
+	superregions = { europe }
+	
+	history = {
+		1 = {
+			population = 3000000 #Germany had a population of 3,000,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1000 = {
+			population = 3500000 #Germany had a population of 3,500,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1500 = {
+			population = 12000000 #Germany had a population of 12,000,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1600 = {
+			population = 16000000 #Germany had a population of 16,000,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1700 = {
+			population = 15000000 #Germany had a population of 15,000,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+	}
+}

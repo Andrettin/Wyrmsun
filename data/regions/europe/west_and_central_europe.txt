@@ -1,0 +1,89 @@
+west_and_central_europe = {
+	superregions = { europe }
+	
+	history = {	
+		-10000 = {
+			population = 547715 #Non-CIS Europe had a population of c. 547,715 in 10000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-9000 = {
+			population = 800000 #Non-CIS Europe had a population of around 0.8 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-8000 = {
+			population = 1100000 #Non-CIS Europe had a population of around 1.1 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-7000 = {
+			population = 1500000 #Non-CIS Europe had a population of around 1.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-6000 = {
+			population = 2100000 #Non-CIS Europe had a population of around 2.1 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-5000 = {
+			population = 3100000 #Non-CIS Europe had a population of around 3.1 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-4000 = {
+			population = 4400000 #Non-CIS Europe had a population of around 4.4 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-3000 = {
+			population = 6600000 #Non-CIS Europe had a population of around 6.6 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-2000 = {
+			population = 10291347 #Non-CIS Europe had a population of c. 10,291,347 in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-1000 = {
+			population = 16726557 #Non-CIS Europe had a population of c. 16,726,557 in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1 = {
+			population = 29330851 #Non-CIS Europe had a population of c. 29,330,851 in 1 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		100 = {
+			population = 30978986 #Non-CIS Europe had a population of c. 30,978,986 in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		200 = {
+			population = 32600000 #Non-CIS Europe had a population of around 32.6 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		300 = {
+			population = 31200000 #Non-CIS Europe had a population of around 31.2 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		400 = {
+			population = 29700000 #Non-CIS Europe had a population of around 29.7 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		500 = {
+			population = 25900000 #Non-CIS Europe had a population of around 25.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1000 = {
+			population = 32259889 #Non-CIS Europe had a population of c. 32,259,889 in 1000 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1500 = {
+			population = 68422666 #Non-CIS Europe had a population of c. 68,422,666 in 1500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1600 = {
+			population = 86303983 #Non-CIS Europe had a population of c. 86,303,983 in 1600 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1700 = {
+			population = 98182430 #Non-CIS Europe had a population of c. 98,182,430 in 1700 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1810 = {
+			population = 156043717 #Non-CIS Europe had a population of c. 156,043,717 in 1810 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+	}
+}

@@ -11,7 +11,7 @@ konigsberg = {
 		prussia
 	}
 	regions = {
-		europe
+		european_russia
 	}
 	
 	history = {

@@ -1,0 +1,35 @@
+italy = {
+	superregions = { europe }
+	
+	history = {
+		-27 = {
+			population = 14000000 #14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1 = {
+			population = 7000000 #Italy had a population of 7,000,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1000 = {
+			population = 5000000 #Italy had a population of 5,000,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1301 = {
+			population = 11000000 #11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1500 = {
+			population = 10500000 #Italy had a population of 10,500,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1600 = {
+			population = 13100000 #Italy had a population of 13,100,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+			
+			#population = 13000000 #13 million people lived in Italy around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1700 = {
+			population = 13300000 #Italy had a population of 13,300,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+	}
+}

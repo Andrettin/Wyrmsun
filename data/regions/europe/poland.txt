@@ -1,0 +1,27 @@
+poland = {
+	superregions = { europe }
+	
+	history = {
+		1 = {
+			population = 450000 #Poland had a population of 450,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1000 = {
+			population = 1200000 #Poland had a population of 1,200,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1500 = {
+			population = 4000000 #Poland had a population of 4,000,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1600 = {
+			population = 5000000 #Poland had a population of 5,000,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+			
+			#population = 3000000 #3 million people lived in Poland around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+		
+		1700 = {
+			population = 6000000 #Poland had a population of 6,000,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+	}
+}
