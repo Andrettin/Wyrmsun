@@ -31,6 +31,8 @@ inventory_button_level = inventory_level
 cancel_button_level = cancel_level
 town_hall_class = town_hall
 default_population_class = worker
+default_water_population_class = workship
+default_space_population_class = aether_workship
 
 #image files
 icon_frame_file = "ui/icon_frame.png"
