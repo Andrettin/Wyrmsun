@@ -1,0 +1,6 @@
+thrace = {
+	superregions = {
+		europe
+		turkey
+	}
+}

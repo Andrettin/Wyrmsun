@@ -1,0 +1,6 @@
+anatolia = {
+	superregions = {
+		asia
+		turkey
+	}
+}

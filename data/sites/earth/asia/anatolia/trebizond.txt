@@ -8,6 +8,6 @@ trebizond = {
 		turkish = "Trabzon"
 	}
 	regions = {
-		asia
+		anatolia
 	}
 }

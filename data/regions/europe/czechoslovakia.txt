@@ -2,8 +2,26 @@ czechoslovakia = {
 	superregions = { west_and_central_europe }
 	
 	history = {
+		1 = {
+			population = 1000000 #Czechoslovakia had a population of 1,000,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1000 = {
+			population = 1250000 #Czechoslovakia had a population of 1,250,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1500 = {
+			population = 3000000 #Czechoslovakia had a population of 3,000,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
 		1600 = {
-			population = 2000000 #2 million people lived in Czechoslovakia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+			population = 4500000 #Czechoslovakia had a population of 4,500,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+			
+			#population = 2000000 #2 million people lived in Czechoslovakia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		}
+
+		1700 = {
+			population = 4500000 #Czechoslovakia had a population of 4,500,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
 		}
 	}
 }

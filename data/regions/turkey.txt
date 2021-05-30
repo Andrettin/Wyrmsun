@@ -1,0 +1,23 @@
+turkey = {
+	history = {
+		1 = {
+			population = 6100000 #Turkey had a population of 6,100,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1000 = {
+			population = 7300000 #Turkey had a population of 7,300,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1500 = {
+			population = 6300000 #Turkey had a population of 6,300,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1600 = {
+			population = 7900000 #Turkey had a population of 7,900,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+
+		1700 = {
+			population = 8400000 #Turkey had a population of 8,400,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+	}
+}

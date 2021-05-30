@@ -14,7 +14,7 @@ byzantium = {
 		byzantium
 	}
 	regions = {
-		greece
+		thrace
 	}
 	
 	history = {

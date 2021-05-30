@@ -65,6 +65,10 @@ london = {
 			population = 959000 #London had a population of 959,000 in 1801; Source: "Atlas de História Mundial", 2001.
 		}
 		
+		1815 = {
+			population = 1050000 #London had a population of 1,050,000 in 1815; Source: "Gothaischer Hofkalender zum Nutzen und Vergnügen auf das Jahr 1815", 1815, vol. 2, p. 86.
+		}
+		
 		1836 = {
 			building_classes += university #University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		}

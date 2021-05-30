@@ -8,7 +8,7 @@ ancyra = {
 		turkish = "Ankara"
 	}
 	regions = {
-		asia
+		anatolia
 	}
 	
 	history = {
