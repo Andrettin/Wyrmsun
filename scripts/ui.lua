@@ -184,8 +184,8 @@ local max_damage = 	Add(
 
 CUserInterface:get().MapArea.X = 0
 CUserInterface:get().MapArea.Y = 16 * get_scale_factor()
-CUserInterface:get().MapArea.EndX = Video.Width - 1 * get_scale_factor()
-CUserInterface:get().MapArea.EndY = Video.Height + (-176 - 1) * get_scale_factor()
+CUserInterface:get().MapArea.EndX = Video.Width - 1
+CUserInterface:get().MapArea.EndY = Video.Height + (-176 * get_scale_factor()) - 1
 
 CUserInterface:get().InfoPanel.X = 162 * get_scale_factor()
 CUserInterface:get().InfoPanel.Y = Video.Height - 186 * get_scale_factor()
