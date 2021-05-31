@@ -1,0 +1,18 @@
+unit_potion_of_healing = {
+    name = "Potion of Healing"
+    parent = unit_template_item
+    icon = icon_red_potion
+    item_class = potion
+    image_file = "neutral/items/potion_red.png"
+    frame_size = { 16 16 }
+    animation_set = animations_potion
+    hit_point_healing = 45
+    requirements_string = "Alchemy"
+    costs = {
+        time = 50
+        copper = 150
+    }
+    sounds = {
+        used = potion
+    }
+}

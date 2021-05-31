@@ -517,20 +517,6 @@ DefineUnitType("unit-bodkin-arrows", {
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-potion-of-healing", {
-	Name = "Potion of Healing",
-	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
-	Animations = "animations-potion", Icon = "icon-red-potion",
-	ItemClass = "potion",
-	Costs = {"time", 50, "copper", 150},
-	HitPointHealing = 45,
-	RequirementsString = "Alchemy",
-	Sounds = {
-		"used", "potion"
-	} 
-} )
-
 DefineUnitType("unit-elixir-of-dexterity", {
 	Name = "Elixir of Dexterity",
 	Parent = "unit-template-item",
