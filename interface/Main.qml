@@ -34,7 +34,7 @@ Window {
 				
 				component.createObject(window)
 				
-				wyrmgus.call_lua_command("SetVideoSize(" + width + ", " + height + ");")
+				wyrmgus.call_lua_command("SetVideoSize(" + Screen.width + ", " + Screen.height + ");")
 			}
 		}
 	}
