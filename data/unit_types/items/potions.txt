@@ -15,4 +15,7 @@ unit_potion_of_healing = {
     sounds = {
         used = potion
     }
+	conditions = {
+		upgrade_class = alchemy
+	}
 }

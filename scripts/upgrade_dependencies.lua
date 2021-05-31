@@ -119,12 +119,6 @@ DefineDependency("unit-cheese",
 	"or", {"unit-teuton-farm"}
 )
 
-DefineDependency("unit-potion-of-healing",
-	{"upgrade-dwarven-alchemy"},
-	"or", {"upgrade-goblin-alchemy"},
-	"or", {"upgrade-teuton-alchemy"}
-)
-
 DefineDependency("unit-elixir-of-dexterity",
 	{"upgrade-dwarven-alchemy"},
 	"or", {"upgrade-goblin-alchemy"},
