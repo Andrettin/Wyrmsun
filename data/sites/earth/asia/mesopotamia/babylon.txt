@@ -8,7 +8,7 @@ babylon = {
 		arab = "Al Hillah"
 	}
 	regions = {
-		asia
+		mesopotamia
 	}
 	
 	history = {

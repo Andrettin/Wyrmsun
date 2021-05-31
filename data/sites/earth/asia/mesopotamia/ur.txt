@@ -8,7 +8,7 @@ ur = {
 		arab = "An Nasiriyah"
 	}
 	regions = {
-		asia
+		mesopotamia
 	}
 	
 	history = {

@@ -1,4 +1,6 @@
 commonwealth_of_independent_states = {
+	superregions = { soviet_union }
+	
 	history = {
 		-10000 = {
 			population = 200000 #CIS had a population of around 0.2 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html

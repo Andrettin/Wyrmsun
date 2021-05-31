@@ -1,0 +1,6 @@
+levant = {
+	superregions = {
+		asia
+		middle_east
+	}
+}

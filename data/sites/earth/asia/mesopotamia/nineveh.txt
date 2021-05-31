@@ -8,7 +8,7 @@ nineveh = {
 		arab = "Mosul"
 	}
 	regions = {
-		asia
+		mesopotamia
 	}
 	
 	history = {

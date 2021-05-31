@@ -1,0 +1,24 @@
+north_america = {
+	superregions = { america }
+}
+
+caribbean = {
+	superregions = {
+		north_america
+		latin_america_and_the_caribbean
+	}
+}
+
+central_america = {
+	superregions = {
+		north_america
+		latin_america
+	}
+}
+
+mexico = {
+	superregions = {
+		north_america
+		latin_america
+	}
+}

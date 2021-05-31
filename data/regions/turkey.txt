@@ -1,4 +1,6 @@
 turkey = {
+	superregions = { middle_east }
+	
 	history = {
 		1 = {
 			population = 6100000 #Turkey had a population of 6,100,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.

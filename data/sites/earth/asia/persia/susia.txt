@@ -8,6 +8,6 @@ susia = {
 		persian = "Mashhad"
 	}
 	regions = {
-		asia
+		persia
 	}
 }

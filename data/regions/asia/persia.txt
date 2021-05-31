@@ -1,0 +1,6 @@
+persia = {
+	superregions = {
+		asia
+		middle_east
+	}
+}

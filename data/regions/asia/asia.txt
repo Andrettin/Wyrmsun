@@ -1,14 +1,18 @@
 asia = {
 }
 
-china = {
+east_and_south_asia = {
 	superregions = { asia }
+}
+
+china = {
+	superregions = { east_and_south_asia }
 }
 
 india = {
-	superregions = { asia }
+	superregions = { east_and_south_asia }
 }
 
 japan = {
-	superregions = { asia }
+	superregions = { east_and_south_asia }
 }

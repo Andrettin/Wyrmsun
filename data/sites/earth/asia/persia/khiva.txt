@@ -5,6 +5,6 @@ khiva = {
 	base_unit_type = unit_settlement_site
 	color = { 55 112 63 }
 	regions = {
-		asia
+		uzbekistan
 	}
 }

@@ -1,0 +1,6 @@
+mesopotamia = {
+	superregions = {
+		asia
+		middle_east
+	}
+}

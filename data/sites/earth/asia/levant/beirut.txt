@@ -5,7 +5,7 @@ beirut = {
 	base_unit_type = unit_settlement_site
 	color = { 248 141 245 }
 	regions = {
-		asia
+		levant
 	}
 	
 	history = {

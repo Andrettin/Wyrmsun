@@ -1,0 +1,11 @@
+northern_america = { #North America without Mexico, Central America and the Caribbean
+	superregions = { north_america }
+}
+
+canada = {
+	superregions = { northern_america }
+}
+
+united_states = {
+	superregions = { northern_america }
+}

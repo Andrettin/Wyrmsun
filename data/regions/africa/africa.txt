@@ -1,0 +1,23 @@
+africa = {
+	history = {
+		-10000 = {
+			population = 241900 #Africa had a population of c. 241,900 in 10000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-2000 = {
+			population = 6259743 #Africa had a population of c. 6,259,743 in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-1000 = {
+			population = 9263872 #Africa had a population of c. 9,263,872 in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1 = {
+			population = 15185667 #Africa had a population of c. 15,185,667 in 1 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1810 = {
+			population = 86829037 #Africa had a population of c. 86,829,037 in 1810 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+	}
+}

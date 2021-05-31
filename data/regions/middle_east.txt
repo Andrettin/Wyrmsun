@@ -1,0 +1,23 @@
+middle_east = {
+	history = {
+		-10000 = {
+			population = 175775 #the Middle East had a population of c. 175,775 in 10000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-2000 = {
+			population = 7034326 #the Middle East had a population of c. 7,034,326 in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		-1000 = {
+			population = 10146444 #the Middle East had a population of c. 10,146,444 in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1 = {
+			population = 14804643 #the Middle East had a population of c. 14,804,643 in 1 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+		
+		1810 = {
+			population = 24975363 #the Middle East had a population of c. 24,975,363 in 1810 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		}
+	}
+}

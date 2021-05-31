@@ -5,6 +5,6 @@ tehran = {
 	base_unit_type = unit_settlement_site
 	color = { 34 93 191 }
 	regions = {
-		asia
+		persia
 	}
 }

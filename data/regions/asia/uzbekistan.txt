@@ -1,0 +1,6 @@
+uzbekistan = {
+	superregions = {
+		commonwealth_of_independent_states
+		asia
+	}
+}

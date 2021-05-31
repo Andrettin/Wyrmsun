@@ -8,7 +8,7 @@ persepolis = {
 		persian = "Marv Dasht"
 	}
 	regions = {
-		asia
+		persia
 	}
 	
 	history = {

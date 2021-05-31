@@ -1,0 +1,23 @@
+soviet_union = {
+	history = {
+		1 = {
+			population = 3900000 #the territory of the Soviet Union had a population of 3,900,000 in 1 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1000 = {
+			population = 7100000 #the territory of the Soviet Union had a population of 7,100,000 in 1000 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1500 = {
+			population = 16950000 #the territory of the Soviet Union had a population of 16,950,000 in 1500 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1600 = {
+			population = 20700000 #the territory of the Soviet Union had a population of 20,700,000 in 1600 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+		
+		1700 = {
+			population = 26550000 #the territory of the Soviet Union had a population of 26,550,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
+		}
+	}
+}

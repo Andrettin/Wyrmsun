@@ -5,7 +5,7 @@ jerusalem = {
 	base_unit_type = unit_settlement_site
 	color = { 219 209 210 }
 	regions = {
-		asia
+		levant
 	}
 	
 	history = {

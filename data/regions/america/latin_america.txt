@@ -1,0 +1,7 @@
+latin_america_and_the_caribbean = {
+	superregions = { america }
+}
+
+latin_america = {
+	superregions = { latin_america_and_the_caribbean }
+}
