@@ -687,6 +687,7 @@
 /graphics/icons/items/potion_red.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/potion_teal.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/potion_white.png (by Jinn) (licensed under the CC0)
+/graphics/icons/items/potion_yellow.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/royal_crown.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/items/staff.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/vicecomital_crown.png (by Jinn and Exidelo) (licensed under the CC0)
