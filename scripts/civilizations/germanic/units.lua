@@ -613,7 +613,7 @@ DefineUnitType("unit-germanic-priest", {
 	StartingAbilities = {"upgrade-barkskin", "upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-barkskin", "spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-barkskin", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing", "unit_potion_of_mana"},
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",

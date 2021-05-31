@@ -1343,7 +1343,7 @@ DefineUnitType("unit-dwarven-witness", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -1378,7 +1378,7 @@ DefineUnitType("unit-dwarven-annalist", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"
@@ -1413,7 +1413,7 @@ DefineUnitType("unit-dwarven-loremaster", {
 	StartingAbilities = {"upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-inspire", "spell-healing", "spell-precision", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	Sounds = {
 		"hit", "mace-attack",
 		"miss", "attack-miss"

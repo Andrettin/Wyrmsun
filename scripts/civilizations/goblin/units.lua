@@ -383,7 +383,7 @@ DefineUnitType("unit-goblin-shaman", {
 	StartingAbilities = {"upgrade-terror", "upgrade-wither"},
 	CanCastSpell = {"spell-terror", "spell-wither"},
 	AutoCastActive = {"spell-terror", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	HackDamage = true,
 	ButtonKey = "s",
 	Sounds = {

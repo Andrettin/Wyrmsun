@@ -187,7 +187,7 @@ DefineUnitType("unit-gnomish-herbalist", {
 	Corpse = "unit-gnomish-dead-body",
 	CanCastSpell = {"spell-herbal-cure", "spell-portent"},
 	AutoCastActive = {"spell-herbal-cure"},
-	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	HackDamage = true,
 	ButtonPos = 2,
 	ButtonKey = "h",

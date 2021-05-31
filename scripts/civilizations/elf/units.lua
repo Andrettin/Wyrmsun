@@ -93,7 +93,7 @@ DefineUnitType("unit-elven-priest", {
 	StartingAbilities = {"upgrade-healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},
 	Sounds = {
 		"hit", "fist-attack",
 		"miss", "attack-miss"

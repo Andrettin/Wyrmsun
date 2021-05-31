@@ -805,7 +805,7 @@ DefineUnitType("unit-teuton-priest", {
 	StartingAbilities = {"upgrade-barkskin", "upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
 	CanCastSpell = {"spell-barkskin", "spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-barkskin", "spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
-	AiDrops = {"unit-boots", "unit-cheese", "unit_carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit_carrots", "unit-potion-of-healing", "unit_potion_of_mana"},
 	RequirementsString = "Any Deity or Religion",
 	Variations = {
 		{

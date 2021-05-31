@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added "Curupira's" magic prefix for weapons (+3 fire damage).
+- Added Potion of Mana.
 
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
