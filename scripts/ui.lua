@@ -2108,6 +2108,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {ManaRestoration = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mana Restoration: "), Variable = "ManaRestoration", Font = PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -2587,6 +2590,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {ManaRestoration = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mana Restoration: "), Variable = "ManaRestoration", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GatheringBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Gathering Bonus: "), Variable = "GatheringBonus", Font = PopupDescriptionFont}}
