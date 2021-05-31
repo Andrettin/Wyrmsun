@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added "Curupira's" magic prefix for weapons (+3 fire damage).
 - Added Potion of Mana.
+- Made it so the Elixir of Vitality has a purple color (previously it was gray), to make it more distinct from the Elixir of Dexterity (which is black).
 
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
