@@ -1,10 +1,2 @@
 europe = {
 }
-
-austria = {
-	superregions = { west_and_central_europe }
-}
-
-baltic_countries = {
-	superregions = { west_and_central_europe }
-}

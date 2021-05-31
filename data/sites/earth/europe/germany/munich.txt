@@ -33,5 +33,9 @@ munich = {
 		919 = {
 			owner = bavaria #part of the Duchy of Bavaria in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
+		
+		1815 = {
+			population = 66000 #Munich had a population of 66,000 in 1815; Source: "Gothaischer Hofkalender zum Nutzen und Vergnügen auf das Jahr 1815", 1815, vol. 2, p. 87.
+		}
 	}
 }

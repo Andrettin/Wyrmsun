@@ -1,0 +1,11 @@
+the_austro_prussian_war = {
+	name = "The Austro-Prussian War"
+	icon = icon_austrian_musketeer
+	player_color = black
+	description = "The Austro-Prussian War"
+	unobtainable = true
+	uncompleteable = true
+	unfailable = true
+	objectives = {
+	}
+}

@@ -1,0 +1,10 @@
+the_austro_prussian_war = {
+	name = "The Austro-Prussian War"
+	description = "The Austro-Prussian War"
+	faction = prussia
+	start_date = 1866
+	map_templates = { earth_space }
+	quest = the_austro_prussian_war
+	icon = icon_austrian_musketeer
+	hidden = true
+}

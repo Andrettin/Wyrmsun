@@ -22,5 +22,13 @@ frankfurt = {
 		1097 = {
 			owner = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
+		
+		1561 = {
+			population = 15000 #Frankfurt had a population of 15,000 in 1561; Source: Henry Kamen, "The Iron Century", p. 421.
+		}
+		
+		1815 = {
+			population = 37000 #Frankfurt am Main had a population of 37,000 in 1815; Source: "Gothaischer Hofkalender zum Nutzen und Vergnügen auf das Jahr 1815", 1815, vol. 2, p. 84.
+		}
 	}
 }

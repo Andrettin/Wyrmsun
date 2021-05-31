@@ -41,6 +41,8 @@ amsterdam = {
 		
 		1815 = {
 			owner = netherlands #Amsterdam was a part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			
+			population = 201628 #Amsterdam had a population of 201,628 in 1815; Source: "Gothaischer Hofkalender zum Nutzen und Vergnügen auf das Jahr 1815", 1815, vol. 2, p. 81.
 		}
 		
 		1877 = {
