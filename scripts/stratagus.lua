@@ -2010,7 +2010,7 @@ Units = {
 --	"unit-cavern-entrance",
 --	"unit-portal",
 	"unit-road", "unit-railroad",
-	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-potion-of-healing", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality",
+	"unit-carrots", "unit-cheese", "unit-wyrm-heart", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality",
 	"upgrade-shield-wall", "upgrade-svinfylking",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki", "upgrade-deity-heimdall", "upgrade-deity-hel", "upgrade-deity-tyr",
 	"upgrade-deity-gathaarl",

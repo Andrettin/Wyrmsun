@@ -1,0 +1,15 @@
+potion_of_mana = {
+	code = "not enough mana"
+	
+	effects = {
+		create_unit = unit_potion_of_mana
+	}
+}
+
+christmas_hat = {
+	code = "merry christmas"
+	
+	effects = {
+		create_unit = unit_christmas_hat
+	}
+}

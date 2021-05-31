@@ -19,3 +19,24 @@ unit_potion_of_healing = {
 		upgrade_class = alchemy
 	}
 }
+
+unit_potion_of_mana = {
+    name = "Potion of Mana"
+    parent = unit_template_item
+    icon = icon_blue_potion
+    item_class = potion
+    image_file = "neutral/items/potion_blue.png"
+    frame_size = { 16 16 }
+    animation_set = animations_potion
+    mana_restoration = 90
+    requirements_string = "Alchemy"
+    costs = {
+        copper = 150
+    }
+    sounds = {
+        used = potion
+    }
+	conditions = {
+		upgrade_class = alchemy
+	}
+}

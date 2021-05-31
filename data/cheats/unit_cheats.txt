@@ -166,14 +166,6 @@ wyrm = {
 	}
 }
 
-christmas_hat = {
-	code = "merry christmas"
-	
-	effects = {
-		create_unit = unit_christmas_hat
-	}
-}
-
 minecart = {
 	code = "de re metallica"
 	
