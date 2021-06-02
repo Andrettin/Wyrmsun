@@ -6,6 +6,6 @@ jabal_nafusah = {
 
 nile_delta = {
 	name = "Nile Delta"
-	terrain_type = grass #delta
+	terrain_type = dry_grass #delta
 	color = { 41 159 27 }
 }
