@@ -83,6 +83,11 @@ middle_east_30_45_latitude_north = {
 	max_latitude = 45
 	#1.25x latitude scale (compared to the equirectangular projection), about the same as in Mercator for this latitude
 	generated_terrains = {
+		dry_dirt = {
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+			expansion_chance = 66
+		}
 		grass = {
 			seed_count = 1024
 			use_existing_as_seeds = true
