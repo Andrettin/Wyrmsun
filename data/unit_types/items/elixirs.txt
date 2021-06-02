@@ -17,3 +17,63 @@ unit_elixir_of_dexterity = {
 		upgrade_class = alchemy
 	}
 }
+
+unit_elixir_of_intelligence = {
+	name = "Elixir of Intelligence"
+	parent = unit_template_item
+	icon = icon_orange_potion
+	item_class = potion
+	image_file = "neutral/items/potion_orange.png"
+	frame_size = { 16 16 }
+	animation_set = animations_potion
+	elixir = upgrade_elixir_of_intelligence
+	costs = {
+		copper = 150
+	}
+	sounds = {
+		used = potion
+    }
+	conditions = {
+		upgrade_class = alchemy
+	}
+}
+
+unit_elixir_of_strength = {
+	name = "Elixir of Strength"
+	parent = unit_template_item
+	icon = icon_white_potion
+	item_class = potion
+	image_file = "neutral/items/potion_white.png"
+	frame_size = { 16 16 }
+	animation_set = animations_potion
+	elixir = upgrade_elixir_of_strength
+	costs = {
+		copper = 150
+	}
+	sounds = {
+		used = potion
+	}
+	conditions = {
+		upgrade_class = alchemy
+	}
+}
+
+unit_elixir_of_vitality = {
+	name = "Elixir of Vitality"
+	parent = unit_template_item
+	icon = icon_purple_potion
+	item_class = potion
+	image_file = "neutral/items/potion_purple.png"
+	frame_size = { 16 16 }
+	animation_set = animations_potion
+	elixir = upgrade_elixir_of_vitality
+	costs = {
+		copper = 150
+	}
+	sounds = {
+		used = potion
+	}
+	conditions = {
+		upgrade_class = alchemy
+	}
+}

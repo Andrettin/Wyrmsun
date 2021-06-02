@@ -119,24 +119,6 @@ DefineDependency("unit-cheese",
 	"or", {"unit-teuton-farm"}
 )
 
-DefineDependency("unit-elixir-of-intelligence",
-	{"upgrade-dwarven-alchemy"},
-	"or", {"upgrade-goblin-alchemy"},
-	"or", {"upgrade-teuton-alchemy"}
-)
-
-DefineDependency("unit-elixir-of-strength",
-	{"upgrade-dwarven-alchemy"},
-	"or", {"upgrade-goblin-alchemy"},
-	"or", {"upgrade-teuton-alchemy"}
-)
-
-DefineDependency("unit-elixir-of-vitality",
-	{"upgrade-dwarven-alchemy"},
-	"or", {"upgrade-goblin-alchemy"},
-	"or", {"upgrade-teuton-alchemy"}
-)
-
 DefineDependency("unit-short-sword",
 	{"unit-germanic-smithy"},
 	"or", {"unit-norse-smithy"},
