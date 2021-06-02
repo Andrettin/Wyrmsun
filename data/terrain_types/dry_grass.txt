@@ -13,9 +13,6 @@ dry_grass = {
 		dry_mud
 	}
 	solid_tiles = { 17 20 23 }
-	season_image_files = {
-		winter = "terrain/snow.png"
-	}
 	adjacent_transition_tiles = {
 		any = {
 			north = { 33 36 39 }

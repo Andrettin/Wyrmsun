@@ -86,7 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed crash which occurring when accessing Goblin sound options within a game.
 - Removed the faction dropdown from the custom game menu, as a faction prompt already comes when starting the game.
 - Removed the tech tree level dropdowns from the custom game menu.
-- Persistent data (e.g. hero levels or quest completion) will no longer be altered if a cheat was used.
+- Persistent data (e.g. hero levels or quest completion) will no longer be altered during a game if a cheat was used.
 
 * Quests
 - Added a couple of side-quests which only occur on certain days of the week in the real world with the objective of acquiring the upgrade of the corresponding deity, for the Norse and Anglo-Saxon civilizations. For instance, the Norse "Tysdag" quest only occurs on a Tuesday, and has the objective of choosing the Tyr deity.
@@ -100,6 +100,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Added new dry mud and mud decoration tiles.
+- Dry Grass terrain no longer becomes covered in snow during winter.
 
 * Units
 - Fixed crash which occurred when a ranged unit was garrisoned inside a caravan while near enemies.
@@ -114,7 +115,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - Reworked the main menu to be QML-based.
 - F11 is now the screenshot hotkey.
-- Reworked the game's rendering system and graphical interface to use the Qt Framework.
+- Reworked the game's rendering system, graphical interface and input system to use the Qt Framework.
 - The game is now always in borderless fullscreen mode, as the new UI framework supports that. The main purpose of the windowed mode was to allow alt-tabbing seamlessly, which the borderless fullscreen mode also provides. And unlike the old fullscreen functionality, this supports any resolution.
 - Reworked the tech tree menu.
 - The scenario menu is now depicted as a tree.
