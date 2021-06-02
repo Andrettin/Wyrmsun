@@ -13,6 +13,7 @@ road = {
 	}
 	base_terrain_types = {
 		dirt
+		dry_dirt
 		grass
 		semi_dry_grass
 		dry_grass

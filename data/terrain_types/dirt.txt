@@ -14,6 +14,7 @@ dirt = {
 		dirt
 	}
 	outer_border_terrain_types = {
+		dry_dirt
 		dry_mud
 		mud
 		dry_mud_hell

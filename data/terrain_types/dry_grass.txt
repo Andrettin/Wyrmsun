@@ -9,6 +9,7 @@ dry_grass = {
 		grass
 	}
 	outer_border_terrain_types = {
+		dry_dirt
 		dirt
 		dry_mud
 	}

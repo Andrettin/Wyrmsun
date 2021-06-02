@@ -9,6 +9,7 @@ semi_dry_grass = {
 	outer_border_terrain_types = {
 		dry_grass
 		dirt
+		dry_dirt
 		dry_mud
 	}
 	solid_tiles = { 17 20 23 }

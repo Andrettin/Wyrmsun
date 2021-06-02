@@ -15,6 +15,7 @@ grass = {
 		semi_dry_grass
 		dry_grass
 		dirt
+		dry_dirt
 		dry_mud
 	}
 	solid_tiles = { 17 20 23 }

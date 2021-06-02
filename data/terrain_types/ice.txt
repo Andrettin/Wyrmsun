@@ -11,6 +11,7 @@ ice = {
 	}
 	inner_border_terrain_types = {
 		dirt
+		dry_dirt
 		snow
 		mud
 		dry_mud

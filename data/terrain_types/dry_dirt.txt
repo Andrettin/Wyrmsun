@@ -1,25 +1,32 @@
-underground_ford = {
-	name = "Underground Ford"
-	character = O
-	color = { 0 112 224 }
+dry_dirt = {
+	name = "Dry Dirt"
+	image_file = "terrain/dirt.png"
+	buildable = true
+	hue_rotation = 15
 	flags = {
 		land
-		no_building
-		underground
-	}
-	image_file = "terrain/ford.png"
-	inner_border_terrain_types = {
-		snow
-		mud
 		dirt
-		dry_dirt
-		dry_mud
-		desert_sand
-		cave_floor
-		rockbound_cave_floor
-		ice
 	}
-	solid_tiles = { 17 20 23 }
+	outer_border_terrain_types = {
+		dry_mud
+		mud
+		dry_mud_hell
+		mud_hell
+	}
+	solid_tiles = {
+		17 = 256
+		20 = 256
+		23 = 256
+		#13 = 1
+		#14 = 1
+		#15 = 1
+		#29 = 1
+		#30 = 1
+		#31 = 1
+		#45 = 1
+		#46 = 1
+		#47 = 1
+	}
 	adjacent_transition_tiles = {
 		any = {
 			north = { 33 36 39 }

@@ -16,6 +16,7 @@ rock = {
 	}
 	base_terrain_types = {
 		dirt
+		dry_dirt
 		mud
 		dry_mud
 		desert_sand

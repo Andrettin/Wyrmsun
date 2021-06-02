@@ -11,6 +11,7 @@ ford = {
 		snow
 		mud
 		dirt
+		dry_dirt
 		dry_mud
 		desert_sand
 		cave_floor

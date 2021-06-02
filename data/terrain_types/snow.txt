@@ -18,6 +18,7 @@ snow = {
 		semi_dry_grass
 		dry_grass
 		dirt
+		dry_dirt
 		dry_mud
 		mud
 		desert_sand

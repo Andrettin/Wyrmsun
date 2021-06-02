@@ -30,7 +30,7 @@ DefineTerrainType("rockbound-cave-floor", {
 	Character = "b",
 	Color = {128, 128, 160},
 	Flags = {"land", "no-building", "gravel", "underground"},
-	InnerBorderTerrains = {"dirt"},
+	InnerBorderTerrains = {"dirt", "dry_dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
 	SolidTiles = {0, 1, 2}
 })
@@ -41,7 +41,7 @@ DefineTerrainType("cave-floor", {
 	Color = {160, 160, 160},
 	Buildable = true,
 	Flags = {"land", "stone_floor", "underground"},
-	InnerBorderTerrains = {"dirt"},
+	InnerBorderTerrains = {"dirt", "dry_dirt"},
 	OuterBorderTerrains = {"rockbound-cave-floor"},
 	Graphics = "terrain/cave_floor.png",
 	SolidTiles = {17, 20, 23},
@@ -87,7 +87,7 @@ DefineTerrainType("desert-sand", {
 	Character = "e",
 	CharacterAliases = {"E"}, -- dunes/sandy hills
 	Flags = {"land", "no-building", "dirt", "desert"},
-	InnerBorderTerrains = {"dirt", "dry-mud", "cave-floor", "mud"},
+	InnerBorderTerrains = {"dry_dirt", "dirt", "dry-mud", "cave-floor", "mud"},
 	Graphics = "terrain/desert_sand.png",
 	SolidTiles = {17, 20, 23},
 	AdjacentTransitionTiles = {
@@ -129,7 +129,7 @@ DefineTerrainType("desert-sand", {
 DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Color = {32, 32, 0},
-	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "semi_dry_grass", "dry_grass", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "semi_dry_grass", "dry_grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
@@ -559,7 +559,7 @@ DefineTerrainType("cave-wall", {
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
 	Color = {128, 160, 128},
-	BaseTerrainTypes = {"dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",
@@ -643,7 +643,7 @@ DefineTerrainType("fairlimbed-tree", {
 DefineTerrainType("norse-palisade", {
 	Name = "Palisade",
 	Character = "|",
-	BaseTerrainTypes = {"dirt", "grass", "semi_dry_grass", "dry_grass", "dry-mud", "cave-floor", "floor", "snow"},
+	BaseTerrainTypes = {"dirt", "dry_dirt", "grass", "semi_dry_grass", "dry_grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},
 	AllowSingle = true,
