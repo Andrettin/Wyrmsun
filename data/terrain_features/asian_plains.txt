@@ -6,7 +6,7 @@ hasa_plain = {
 
 mesopotamia = {
 	name = "Mesopotamia"
-	terrain_type = grass
+	terrain_type = dry_grass
 	color = { 57 96 17 }
 }
 

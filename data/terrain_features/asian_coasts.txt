@@ -1,5 +1,5 @@
 levant_coast = {
 	name = "Levant Coast"
-	terrain_type = dirt #coast
+	terrain_type = dry_dirt #coast
 	color = { 203 156 0 }
 }
