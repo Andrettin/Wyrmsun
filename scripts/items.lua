@@ -517,19 +517,6 @@ DefineUnitType("unit-bodkin-arrows", {
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-elixir-of-dexterity", {
-	Name = "Elixir of Dexterity",
-	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/potion_black.png", "size", {16, 16}},
-	Animations = "animations-potion", Icon = "icon-black-potion",
-	ItemClass = "potion",
-	Costs = {"copper", 150},
-	Elixir = "upgrade-elixir-of-dexterity",
-	Sounds = {
-		"used", "potion"
-	} 
-} )
-
 DefineUnitType("unit-elixir-of-intelligence", {
 	Name = "Elixir of Intelligence",
 	Parent = "unit-template-item",

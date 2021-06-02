@@ -1,0 +1,19 @@
+unit_elixir_of_dexterity = {
+	name = "Elixir of Dexterity"
+	parent = unit_template_item
+	icon = icon_black_potion
+	item_class = potion
+	image_file = "neutral/items/potion_black.png"
+	frame_size = { 16 16 }
+	animation_set = animations_potion
+	elixir = upgrade_elixir_of_dexterity
+	costs = {
+		copper = 150
+	}
+	sounds = {
+		used = potion
+	}
+	conditions = {
+		upgrade_class = alchemy
+	}
+}
