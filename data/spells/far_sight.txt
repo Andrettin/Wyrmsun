@@ -19,8 +19,4 @@ spell_far_sight = {
 			start_point = target
 		}
 	}
-	cast_conditions = {
-		organic = only
-		barkskin == 0
-	}
 }
