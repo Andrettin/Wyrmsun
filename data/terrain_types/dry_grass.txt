@@ -13,6 +13,9 @@ dry_grass = {
 		dirt
 		dry_mud
 	}
+	intermediate_terrain_types = {
+		desert_sand = dry_dirt
+	}
 	solid_tiles = { 17 20 23 }
 	adjacent_transition_tiles = {
 		any = {
