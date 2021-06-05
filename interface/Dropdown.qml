@@ -49,6 +49,7 @@ ComboBox {
             implicitHeight: contentHeight
             model: dropdown.popup.visible ? dropdown.delegateModel : null
             currentIndex: dropdown.highlightedIndex
+			boundsBehavior: Flickable.StopAtBounds
 
             ScrollIndicator.vertical: ScrollIndicator { }
         }
