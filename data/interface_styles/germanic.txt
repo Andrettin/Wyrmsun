@@ -1,5 +1,7 @@
 germanic = {
 	top_bar_file = "interface/germanic/resource.png"
+	slider_bar_file = "interface/germanic/slider_bar_normal.png"
+	slider_marker_file = "interface/germanic/slider_knob.png"
 	panel_files = {
 		1 = "interface/germanic/panel_1.png"
 		2 = "interface/germanic/panel_2.png"
@@ -23,6 +25,14 @@ germanic = {
 		checked_pressed_file = "interface/germanic/radio_pressed_selected.png"
 		unchecked_file = "interface/germanic/radio_normal_unselected.png"
 		unchecked_pressed_file = "interface/germanic/radio_pressed_unselected.png"
+	}
+	left_arrow_button = {
+		normal_file = "interface/germanic/left_arrow_normal.png"
+		pressed_file = "interface/germanic/left_arrow_pressed.png"
+	}
+	right_arrow_button = {
+		normal_file = "interface/germanic/right_arrow_normal.png"
+		pressed_file = "interface/germanic/right_arrow_pressed.png"
 	}
 	down_arrow_button = {
 		normal_file = "interface/germanic/down_arrow_normal.png"
