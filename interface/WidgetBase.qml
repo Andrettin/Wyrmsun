@@ -23,12 +23,13 @@ Item {
 	ToolTip.delay: 1000
 	ToolTip.text: window.tooltip(tooltip)
 	
-	Image {
+	WidgetImage {
 		id: widget_image
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.left: parent.left
-		source: "image://interface/" + interface_style + "/" + parent.widget_type + "/" + (parent.pressed ? "pressed" : "normal")
-		fillMode: Image.Pad
+		widget_type: widget.widget_type
+		interface_style: widget.interface_style
+		pressed: widget.pressed
 	}
 	
 	MouseArea {

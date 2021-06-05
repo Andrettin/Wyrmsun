@@ -1,72 +1,66 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 
-Item {
+ComboBox {
 	id: dropdown
-	width: dropdown_bar.image.width
-	height: dropdown_bar.height
-	z: 1 //the expanded dropdown should be above other elements
+	hoverEnabled: true
+	displayText: ""
+	height: background_dropdown_bar.height
 	
-	property bool expanded: false
-	property var entries: []
-	property int selectedEntryIndex: -1
-	property var selectedEntry: selectedEntryIndex !== -1 ? entries[selectedEntryIndex] : null
+	property string interface_style: "default"
+	readonly property var selectedEntry: currentIndex !== -1 ? model[currentIndex] : null
 	
-	onEntriesChanged: {
-		if (entries.length > 0) {
-			if (selectedEntryIndex == -1 || selectedEntryIndex >= entries.length) {
-				selectedEntryIndex = 0
-			}
-		} else {
-			selectedEntryIndex = -1
-		}
-	}
-		
-	DropdownBar {
-		id: dropdown_bar
-		width: dropdown.width
+	background: DropdownBar {
+		id: background_dropdown_bar
 		text: selectedEntry !== null ? get_entry_name(selectedEntry) : ""
+		interface_style: dropdown.interface_style
+		highlighted: dropdown.hovered
+		width: dropdown.width
+		implicitHeight: image.height
+	}
+	
+	delegate: ItemDelegate {
+		id: dropdown_delegate
+		width: dropdown.width
+		height: dropdown_bar.image.height
+		padding: 0
+		verticalPadding: 0
+		highlighted: dropdown.highlightedIndex === index
+		hoverEnabled: true
 		
-		onClicked: {
-			dropdown.expanded = !dropdown.expanded
+		contentItem: DropdownBar {
+			id: dropdown_bar
+			text: get_entry_name(modelData)
+			interface_style: dropdown.interface_style
+			highlighted: dropdown_delegate.highlighted && dropdown_delegate.hovered
+			implicitWidth: dropdown.width
+			implicitHeight: image.height
 		}
 	}
 	
-	DownArrowButton {
+    popup: Popup {
+        y: dropdown.height
+        width: dropdown.width
+        implicitHeight: contentItem.implicitHeight
+        padding: 0
+
+        contentItem: ListView {
+            clip: true
+            implicitHeight: contentHeight
+            model: dropdown.popup.visible ? dropdown.delegateModel : null
+            currentIndex: dropdown.highlightedIndex
+
+            ScrollIndicator.vertical: ScrollIndicator { }
+        }
+    }
+	
+	indicator: WidgetImage {
 		id: down_arrow_button
-		anchors.top: parent.top
-		anchors.right: parent.right
-		pressed: mouse_area_element.containsPress || hotkey_pressed || dropdown.expanded
-		
-		onClicked: {
-			dropdown.expanded = !dropdown.expanded
-		}
-	}
-	
-	Repeater {
-		model: dropdown.entries
-			
-		DropdownBar {
-			x: 0
-			y: dropdown.height * (index + 1)
-			width: dropdown.width
-			visible: dropdown.expanded
-			text: get_entry_name(dropdown.entries[index])
-			
-			onClicked: {
-				dropdown.expanded = false
-				dropdown.selectedEntryIndex = index
-			}
-		}
-	}
-	
-	function on_clicked_outside() {
-		dropdown.expanded = false
-	}
-	
-	//override this if the entry list is not a string list
-	function get_entry_name(entry) {
-		return entry
+		anchors.top: dropdown.top
+		anchors.right: dropdown.right
+		widget_type: "down_arrow_button"
+		interface_style: dropdown.interface_style
+		pressed: dropdown.down
 	}
 	
 	function set_selected_entry(chosen_entry) {
@@ -74,11 +68,16 @@ Item {
 			return
 		}
 		
-		for (var i = 0; i < dropdown.entries.length; ++i) {
-			var entry = dropdown.entries[i]
+		for (var i = 0; i < dropdown.model.length; ++i) {
+			var entry = dropdown.model[i]
 			if (entry == chosen_entry) {
-				dropdown.selectedEntryIndex = i
+				dropdown.currentIndex = i
 			}
 		}
+	}
+	
+	//override this if the entry list is not a string list
+	function get_entry_name(entry) {
+		return entry
 	}
 }

@@ -36,11 +36,11 @@ MenuBase {
 		id: difficulty_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: start_scenario_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * entries.length)
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * model.length)
 		width: 100 * wyrmgus.defines.scale_factor
-		entries: wyrmgus.get_difficulties()
+		model: wyrmgus.get_difficulties()
 		
-		onEntriesChanged: {
+		onModelChanged: {
 			set_selected_entry(wyrmgus.preferences.get_difficulty_index())
 		}
 		

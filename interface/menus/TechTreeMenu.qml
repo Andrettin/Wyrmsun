@@ -12,10 +12,7 @@ MenuBase {
 		anchors.top: parent.title_element.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		width: 125 * wyrmgus.defines.scale_factor
-		entries: wyrmgus.get_playable_civilizations()
-		
-		onSelectedEntryChanged: {
-		}
+		model: wyrmgus.get_playable_civilizations()
 		
 		function get_entry_name(entry) {
 			return entry.name

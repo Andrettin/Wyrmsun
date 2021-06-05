@@ -23,8 +23,7 @@ MenuBase {
 		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.bottom: map_dropdown.bottom
 		width: custom_game_menu.dropdown_width
-		z: 3
-		entries: wyrmgus.get_map_worlds()
+		model: wyrmgus.get_map_worlds()
 	}
 	
 	NormalText {
@@ -41,11 +40,10 @@ MenuBase {
 		anchors.bottom: resources_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: custom_game_menu.dropdown_width
-		z: 3
-		entries: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
+		model: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
-		onEntriesChanged: {
-			selectedEntryIndex = 0
+		onModelChanged: {
+			currentIndex = 0
 		}
 		
 		onSelectedEntryChanged: {
@@ -73,10 +71,9 @@ MenuBase {
 		anchors.bottom: opponents_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: custom_game_menu.dropdown_width
-		z: 3
-		entries: wyrmgus.get_difficulties()
+		model: wyrmgus.get_difficulties()
 		
-		onEntriesChanged: {
+		onModelChanged: {
 			set_selected_entry(wyrmgus.preferences.get_difficulty_index())
 		}
 		
@@ -107,8 +104,7 @@ MenuBase {
 		anchors.left: world_dropdown.left
 		anchors.top: resources_dropdown.top
 		width: custom_game_menu.dropdown_width
-		z: 2
-		entries: get_entries(wyrmgus.get_playable_civilizations())
+		model: get_entries(wyrmgus.get_playable_civilizations())
 		
 		readonly property var civilization_index: selectedEntry !== -1 ? selectedEntry.index : -1
 		
@@ -151,11 +147,10 @@ MenuBase {
 		anchors.bottom: game_type_label.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: custom_game_menu.dropdown_width
-		z: 2
-		entries: ["Map Default", "Low", "Medium", "High"]
+		model: ["Map Default", "Low", "Medium", "High"]
 		
 		onSelectedEntryChanged: {
-			wyrmgus.call_lua_command("GameSettings.Resources = " + resources_dropdown.selectedEntryIndex + ";")
+			wyrmgus.call_lua_command("GameSettings.Resources = " + resources_dropdown.currentIndex + ";")
 		}
 	}
 	
@@ -173,11 +168,10 @@ MenuBase {
 		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.top: resources_dropdown.top
 		width: custom_game_menu.dropdown_width
-		z: 2
-		entries: get_entries(selected_map)
+		model: get_entries(selected_map)
 		
 		onSelectedEntryChanged: {
-			wyrmgus.call_lua_command("GameSettings.Opponents = " + opponents_dropdown.selectedEntryIndex + ";")
+			wyrmgus.call_lua_command("GameSettings.Opponents = " + opponents_dropdown.currentIndex + ";")
 		}
 		
 		function get_entries(map_info) {
@@ -209,11 +203,10 @@ MenuBase {
 		anchors.left: civilization_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
 		width: custom_game_menu.dropdown_width
-		z: 1
-		entries: ["Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"]
+		model: ["Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"]
 		
 		onSelectedEntryChanged: {
-			wyrmgus.call_lua_command("GameSettings.GameType = " + (game_type_dropdown.selectedEntryIndex - 1) + ";")
+			wyrmgus.call_lua_command("GameSettings.GameType = " + (game_type_dropdown.currentIndex - 1) + ";")
 		}
 	}
 	
