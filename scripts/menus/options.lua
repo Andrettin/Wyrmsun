@@ -108,10 +108,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
 
   b = menu:addFullButton("~!OK", "o", centerx, bottom + (-11 - 27) * get_scale_factor(),
     function()
-      wyr.preferences.EffectsVolume = GetEffectsVolume()
-      wyr.preferences.EffectsEnabled = IsEffectsEnabled()
-      wyr.preferences.MusicVolume = GetMusicVolume()
-      wyr.preferences.MusicEnabled = IsMusicEnabled()
+	  save_preferences()
       SavePreferences()
       menu:stop()
     end)
@@ -450,106 +447,6 @@ function RunGameplayOptionsMenu()
 		end
 	)
 	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
-
-	return menu:run()
-end
-
-video_options_menu = nil
-
-function RunVideoOptionsMenu()
-	local menu = WarMenu()
-	video_options_menu = menu
-	local offx = (Video.Width - 352 * get_scale_factor()) / 2
-	local offy = (Video.Height - 352 * get_scale_factor()) / 2
-	local scaling_checkbox
-	local b
-
-	-- sound volume options
-	b = Label(_("Sound Effects Volume"))
-	b:setFont(font:Get("game"))
-	b:adjustSize();
-	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 3) * get_scale_factor())
-
-	-- FIXME: disable if effects turned off
-	local soundslider = {}
-	-- slider button to decrease slider value
-	soundslider = menu:addImageLeftSliderButton("", nil, offx + 21 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
-
-	-- slider button to increase slider value
-	soundslider = menu:addImageRightSliderButton("", nil, offx + 213 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
-
-	-- slider itself
-	soundslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(), function() SetEffectsVolume(soundslider:getValue()) end)
-
-	soundslider:setValue(GetEffectsVolume())
-
-	b = Label("min")
-	b:setFont(font:Get("small"))
-	b:adjustSize();
-	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
-
-	b = Label("max")
-	b:setFont(font:Get("small"))
-	b:adjustSize();
-	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 4 + 6) * get_scale_factor())
-
-	local effectscheckbox = {}
-	effectscheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 3.5) * get_scale_factor(),
-		function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
-	effectscheckbox:setMarked(IsEffectsEnabled())
-	effectscheckbox:adjustSize()
-
-	b = Label(_("Music Volume"))
-	b:setFont(font:Get("game"))
-	b:adjustSize();
-	menu:add(b, offx + 16 * get_scale_factor(), offy + (36 * 5) * get_scale_factor())
-
-	-- FIXME: disable if music turned off
-	local musicslider = {}
-	-- slider button to decrease slider value
-	musicslider = menu:addImageLeftSliderButton("", nil, offx + 21 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
-
-	-- slider button to decrease slider value
-	musicslider = menu:addImageRightSliderButton("", nil, offx + 213 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
-
-	-- slider itself
-	musicslider = menu:addImageSlider(0, 255, 172 * get_scale_factor(), 18 * get_scale_factor(), offx + 41 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(), function() SetMusicVolume(musicslider:getValue()) end)
-
-	-- set the value so the game saves it
-	musicslider:setValue(GetMusicVolume())
-
-	b = Label("min")
-	b:setFont(font:Get("small"))
-	b:adjustSize();
-	menu:addCentered(b, offx + 32 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
-
-	b = Label("max")
-	b:setFont(font:Get("small"))
-	b:adjustSize();
-	menu:addCentered(b, offx + 224 * get_scale_factor(), offy + (36 * 6 + 6) * get_scale_factor())
-
-	local musiccheckbox = {}
-	musiccheckbox = menu:addImageCheckBox(_("Enabled"), offx + 240 * get_scale_factor(), offy + (36 * 5.5) * get_scale_factor(),
-		function()
-			SetMusicEnabled(musiccheckbox:isMarked());
-			if (musiccheckbox:isMarked()) then
-				play_menu_music()
-			end
-		end
-	)
-	musiccheckbox:setMarked(IsMusicEnabled())
-	musiccheckbox:adjustSize();
-
-	scaling_checkbox = menu:addImageCheckBox(_("2x Scale Factor (restart required)"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
-		function()
-			if (get_scale_factor_preference() == 1) then
-				set_scale_factor(2)
-			else 
-				set_scale_factor(1)
-			end
-		end
-	)
-	scaling_checkbox:setMarked(get_scale_factor_preference() == 2)
 
 	return menu:run()
 end

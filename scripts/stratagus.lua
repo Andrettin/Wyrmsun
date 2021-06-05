@@ -1795,8 +1795,6 @@ end
 
 local defaultPreferences = {
 	DoubleClickDelayInMs = 300,     --  For the wanted double-click delay (in ms).
-	EffectsEnabled = true,
-	EffectsVolume = 128,
 	EnableKeyboardScrolling = true, --  Enable/disable keyboard scrolling.
 	EnableMouseScrolling = true,    --  Enable/disable mouse scrolling.
 	FogOfWar = true,
@@ -1809,8 +1807,6 @@ local defaultPreferences = {
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
 	KeyScrollSpeed = 1,
-	MusicEnabled = true,
-	MusicVolume = 128,
 	PlayerName = "Player",
 	ShowCommandKey = true,
 	ShowTips = true,
@@ -1835,21 +1831,15 @@ local defaultPreferences = {
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
 
-local function UpdateObsoletePreferences()
-	-- enforce minimum resolution
-	if (wyr.preferences.VideoWidth < 1024) then
-		wyr.preferences.VideoWidth = 1024
-	end
-	if (wyr.preferences.VideoHeight < 600) then
-		wyr.preferences.VideoHeight = 600
-	end
-end
-
-UpdateObsoletePreferences()
-
 SetDoubleClickDelay(wyr.preferences.DoubleClickDelayInMs)
-SetEffectsEnabled(wyr.preferences.EffectsEnabled)
-SetEffectsVolume(wyr.preferences.EffectsVolume)
+if (wyr.preferences.EffectsEnabled ~= nil) then
+	SetEffectsEnabled(wyr.preferences.EffectsEnabled)
+	wyr.preferences.EffectsEnabled = nil
+end
+if (wyr.preferences.EffectsVolume ~= nil) then
+	SetEffectsVolume(wyr.preferences.EffectsVolume)
+	wyr.preferences.EffectsVolume = nil
+end
 SetFogOfWar(wyr.preferences.FogOfWar)
 SetFogOfWarOpacity(wyr.preferences.FogOfWarOpacity)
 SetGameSpeed(wyr.preferences.GameSpeed)
@@ -1863,8 +1853,14 @@ SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
 SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
 SetKeyScrollSpeed(wyr.preferences.KeyScrollSpeed)
-SetMusicEnabled(wyr.preferences.MusicEnabled)
-SetMusicVolume(wyr.preferences.MusicVolume)
+if (wyr.preferences.MusicEnabled ~= nil) then
+	SetMusicEnabled(wyr.preferences.MusicEnabled)
+	wyr.preferences.MusicEnabled = nil
+end
+if (wyr.preferences.MusicVolume ~= nil) then
+	SetMusicVolume(wyr.preferences.MusicVolume)
+	wyr.preferences.MusicVolume = nil
+end
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey

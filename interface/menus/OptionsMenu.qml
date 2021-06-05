@@ -26,7 +26,6 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Video and Audio Options"
 		hotkey: "v"
-		lua_command: "RunVideoOptionsMenu();"
 		
 		onClicked: {
 			menu_stack.push("VideoAndAudioOptionsMenu.qml")
