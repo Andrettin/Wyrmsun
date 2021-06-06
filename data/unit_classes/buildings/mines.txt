@@ -12,6 +12,10 @@ copper_mine = {
 
 iron_mine = {
 	name = "Iron Mine"
+	
+	conditions = {
+		upgrade_class = ironworking
+	}
 }
 
 mithril_mine = {

@@ -1,0 +1,34 @@
+unit_iron_mine = {
+	name = "Iron Mine"
+	parent = unit_template_mine
+	unit_class = iron_mine
+	civilization = neutral
+	description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working metals like copper, silver or gold."
+	notes = "Iron is converted to copper at a 100% ratio."
+	image_file = "buildings/neutral/iron_mine.png"
+	frame_size = { 96 96 }
+	icon = icon_iron_mine
+	costs = {
+		time = 200
+		lumber = 2050
+	}
+	given_resource = iron
+	requirements_string = "Ironworking"
+	button_key = i
+	building_rules_string = "Must be built on top of a Iron Deposit"
+	variations = {
+		iron_mine = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		iron_mine_snow = {
+			image_file = "buildings/neutral/iron_mine_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}

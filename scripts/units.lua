@@ -601,46 +601,8 @@ DefineUnitType("unit-copper-mine", {
 	}
 } )
 
-DefineUnitType("unit-iron-mine", {
-	Name = "Iron Mine",
-	Parent = "unit-template-mine",
-	Class = "iron_mine",
-	Civilization = "neutral",
-	Description = "Iron is a relatively common metal, but working it requires a substantially higher degree of knowledge of metallurgy than working metals like copper, silver or gold.",
-	Notes = "Iron is converted to copper at a 100% ratio.",
-	Image = {"file", "neutral/buildings/iron_mine.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/iron_mine_shadow.png", "size", {96, 96}},
-	LightImage = {"file", "neutral/buildings/iron_mine_light.png"},
-	Icon = "icon-iron-mine",
-	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit_iron_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
-	GivesResource = "iron",
-	BuildingRulesString = "Must be built on top of a Iron Deposit",
-	RequirementsString = "Ironworking",
-	ButtonKey = "i",
-	Variations = {
-		{
-			"variation-id", "iron-mine",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "iron-mine-snow-winter",
-			"file", "buildings/neutral/iron_mine_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "semi_dry_grass",
-			"terrain", "dry_grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "iron-mine-snow",
-			"file", "buildings/neutral/iron_mine_snow.png",
-			"terrain", "snow"
-		}
-	}
+DefineUnitType("unit_iron_mine", {
+	BuildingRules = { "and", { "ontop", { Type = "unit_iron_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } }
 } )
 
 DefineUnitType("unit-mithril-mine", {
@@ -4369,7 +4331,7 @@ DefineUnitType("unit-template-smithy", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_deposit" },
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-iron-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-mithril-mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_coal_deposit" },

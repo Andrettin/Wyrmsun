@@ -26,10 +26,6 @@
 --
 
 -- dependencies for neutral units
-DefineDependency("unit-iron-mine",
-	{"upgrade_ironworking"}
-)
-
 DefineDependency("unit-mithril-mine",
 	{"upgrade_ironworking"}
 )
