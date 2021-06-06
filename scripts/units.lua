@@ -560,45 +560,8 @@ DefineUnitType("unit-silver-mine", {
 	}
 } )
 
-DefineUnitType("unit-copper-mine", {
-	Name = "Copper Mine",
-	Parent = "unit-template-mine",
-	Class = "copper_mine",
-	Civilization = "neutral",
-	Description = "More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze.",
-	Notes = "Copper is the basic unit of currency.",
-	Image = {"file", "neutral/buildings/copper_mine.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/copper_mine_shadow.png", "size", {96, 96}},
-	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
-	Icon = "icon-copper-mine",
-	Costs = {"time", 200, "lumber", 2050},
-	BuildingRules = { "and", { "ontop", { Type = "unit_copper_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } },
-	GivesResource = "copper",
-	ButtonKey = "c",
-	BuildingRulesString = "Must be built on top of a Copper Deposit",
-	Variations = {
-		{
-			"variation-id", "copper-mine",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "copper-mine-snow-winter",
-			"file", "buildings/neutral/copper_mine_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "semi_dry_grass",
-			"terrain", "dry_grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "copper-mine-snow",
-			"file", "buildings/neutral/copper_mine_snow.png",
-			"terrain", "snow"
-		}
-	}
+DefineUnitType("unit_copper_mine", {
+	BuildingRules = { "and", { "ontop", { Type = "unit_copper_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } }
 } )
 
 DefineUnitType("unit_iron_mine", {
@@ -4329,7 +4292,7 @@ DefineUnitType("unit-template-smithy", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_silver_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_deposit" },
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_copper_mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_deposit" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_iron_mine" },
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_mithril_deposit" },

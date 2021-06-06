@@ -1,0 +1,34 @@
+unit_copper_mine = {
+	name = "Copper Mine"
+	parent = unit_template_mine
+	unit_class = copper_mine
+	civilization = neutral
+	description = "More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze."
+	notes = "Copper is the basic unit of currency."
+	image_file = "buildings/neutral/copper_mine.png"
+	frame_size = { 96 96 }
+	icon = icon_copper_mine
+	costs = {
+		time = 200
+		lumber = 2050
+	}
+	given_resource = copper
+	site_name_suffix = "Mine"
+	button_key = c
+	building_rules_string = "Must be built on top of a Copper Deposit"
+	variations = {
+		copper_mine = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		copper_mine_snow = {
+			image_file = "buildings/neutral/copper_mine_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}
