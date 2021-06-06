@@ -568,23 +568,23 @@ DefinePanelContents(
 	},
 	--]]
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 48}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(3, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 59}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(4, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(1, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(2, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 48}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(3, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 59}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(4, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(1, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(2, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 48}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(3, UnitName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(1, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(2, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 48}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(3, UnitName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
-	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
-	{ Pos = {170, 83}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(3, UnitTypeName("Active"), 96 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 72}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(2, UnitTypeName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
+	{ Pos = {168, 83}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(3, UnitTypeName("Active"), 90 * get_scale_factor(), "game"), Centered = true}} },
 	
 	-- Resource Left
 	{ Pos = {9, 103}, Condition = {ShowOpponent = false, GiveResource = "only", Inexhaustible = "false", Build = "false"},
