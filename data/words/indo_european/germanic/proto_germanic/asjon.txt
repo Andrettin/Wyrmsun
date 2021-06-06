@@ -1,0 +1,9 @@
+asjon = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	name = "Asjôn"
+	language = proto_germanic
+	type = noun
+	gender = feminine
+	meanings = {
+		"Forge" #source gives the German "Esse" as the meaning
+	}
+}

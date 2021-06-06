@@ -90,6 +90,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added a couple of side-quests which only occur on certain days of the week in the real world with the objective of acquiring the upgrade of the corresponding deity, for the Norse and Anglo-Saxon civilizations. For instance, the Norse "Tysdag" quest only occurs on a Tuesday, and has the objective of choosing the Tyr deity.
+- Added two side-quests for the Germanic civilization to build smithies.
 
 * Scenarios
 - Fixed crash which occurred when starting the Thunraz's Servant scenario.

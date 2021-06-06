@@ -86,13 +86,6 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1155,13 +1148,6 @@ DefineLanguageWord("Smaiþra", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Artist"}, -- source gives the Latin "artifex"
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
-	Gender = "feminine"
 })
 
 DefineLanguageWord("Smîþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
