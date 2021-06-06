@@ -1,0 +1,9 @@
+huelva = {
+	name = "Huelva"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { -6.92994938295 37.25037355450 } #from Natural Earth
+	base_unit_type = unit_copper_deposit #5x copper deposits nearby; Source: Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	regions = {
+		castille
+	}
+}
