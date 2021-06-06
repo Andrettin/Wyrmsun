@@ -3,7 +3,7 @@ budweis = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 14.46003698590 48.98001934720 } #from Natural Earth
 	cultural_names = {
-		slav = "Budejovice" #Budějovice
+		slavic = "Budejovice" #Budějovice
 	}
 	regions = {
 		bohemia

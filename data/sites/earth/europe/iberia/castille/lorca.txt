@@ -2,7 +2,7 @@ lorca = {
 	name = "Lorca"
 	map_template = earth_30_45_latitude_north
 	geocoordinate = { -1.69851159810 37.68856386210 } #from Natural Earth
-	base_unit_type = unit_copper_deposit #copper deposits nearby; Source: Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+	base_unit_type = unit_copper_deposit #copper deposits nearby; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 	regions = {
 		castille
 	}
