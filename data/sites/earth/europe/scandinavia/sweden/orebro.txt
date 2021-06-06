@@ -1,0 +1,9 @@
+orebro = {
+	name = "Orebro" #"Örebro"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 15.21999059920 59.28034669910 } #from Natural Earth
+	base_unit_type = unit_iron_deposit #iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
+	regions = {
+		scandinavia
+	}
+}
