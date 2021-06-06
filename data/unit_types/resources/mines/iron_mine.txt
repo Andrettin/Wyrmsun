@@ -13,7 +13,6 @@ unit_iron_mine = {
 		lumber = 2050
 	}
 	given_resource = iron
-	site_name_suffix = "Mine"
 	requirements_string = "Ironworking"
 	button_key = i
 	building_rules_string = "Must be built on top of a Iron Deposit"

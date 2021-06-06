@@ -13,7 +13,6 @@ unit_copper_mine = {
 		lumber = 2050
 	}
 	given_resource = copper
-	site_name_suffix = "Mine"
 	button_key = c
 	building_rules_string = "Must be built on top of a Copper Deposit"
 	variations = {
