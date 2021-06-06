@@ -173,7 +173,7 @@ DefineUpgrade("upgrade-mathematics", {
 	Class = "mathematics",
 	Civilization = "neutral",
 	Icon = "icon-mathematics",
-	Description = "The understanding of even a basic level of mathematics has significant benefits for a civilization, particularly in matters such as keeping account of trade.",
+	Description = "The understanding of even a basic level of mathematics has significant benefits for a civilization, particularly in matters such as keeping account of trade.\n\nEffect: -5% Trade Cost for Markets.",
 	RequirementsString = "Writing",
 	Costs = {"time", 250, "copper", 2000}
 })
