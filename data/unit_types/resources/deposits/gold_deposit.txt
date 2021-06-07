@@ -7,7 +7,6 @@ unit_gold_deposit = {
 	frame_size = { 96 96 }
 	icon = icon_gold_deposit
 	given_resource = gold
-	site_name_suffix = "Deposit"
 	variations = {
 		gold_deposit = {
 			conditions = {

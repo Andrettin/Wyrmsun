@@ -1,21 +1,17 @@
 gold_mine = {
 	name = "Gold Mine"
-	site_name_suffix = "Mine"
 }
 
 silver_mine = {
 	name = "Silver Mine"
-	site_name_suffix = "Mine"
 }
 
 copper_mine = {
 	name = "Copper Mine"
-	site_name_suffix = "Mine"
 }
 
 iron_mine = {
 	name = "Iron Mine"
-	site_name_suffix = "Mine"
 	
 	conditions = {
 		upgrade_class = ironworking
@@ -24,20 +20,16 @@ iron_mine = {
 
 mithril_mine = {
 	name = "Mithril Mine"
-	site_name_suffix = "Mine"
 }
 
 coal_mine = {
 	name = "Coal Mine"
-	site_name_suffix = "Mine"
 }
 
 diamond_mine = {
 	name = "Diamond Mine"
-	site_name_suffix = "Mine"
 }
 
 emerald_mine = {
 	name = "Emerald Mine"
-	site_name_suffix = "Mine"
 }

@@ -7,7 +7,6 @@ unit_iron_deposit = {
 	frame_size = { 96 96 }
 	icon = icon_iron_deposit
 	given_resource = iron
-	site_name_suffix = "Deposit"
 	variations = {
 		iron_deposit = {
 			conditions = {

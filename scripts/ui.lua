@@ -1379,11 +1379,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(_("Class:"), " "), TypeClass("Type")), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
-				},
 				{ 	Condition = {SiteName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Site: "), UnitSiteName("Unit")), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}
@@ -2856,11 +2856,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Building = "only", SettlementName = "false", SiteName = "only", ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {Building = "only", SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
-				},
 				{ 	Condition = {Building = "only", SiteName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Site: "), UnitSiteName("Unit")), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {Building = "only", SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}

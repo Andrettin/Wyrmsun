@@ -7,7 +7,6 @@ unit_mithril_deposit = {
 	frame_size = { 96 96 }
 	icon = icon_mithril_deposit
 	given_resource = mithril
-	site_name_suffix = "Deposit"
 	variations = {
 		mithril_deposit = {
 			conditions = {

@@ -7,7 +7,6 @@ unit_coal_deposit = {
 	frame_size = { 96 96 }
 	icon = icon_coal_deposit
 	given_resource = coal
-	site_name_suffix = "Deposit"
 	variations = {
 		coal_deposit = {
 			conditions = {
