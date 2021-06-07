@@ -1760,7 +1760,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 	local uncount = GetUnits(PlayerNumNeutral)
 	for unit1 = 1,table.getn(uncount) do 
 		if (uncount[unit1]) then
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-settlement-site") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_settlement_site") then
 				table.insert(settlement_units, uncount[unit1])
 			end
 		end

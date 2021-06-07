@@ -2101,7 +2101,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	BuildingRulesString = "Cannot be built close to town halls",
 	BuildingRules = {
 		"and", {
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }

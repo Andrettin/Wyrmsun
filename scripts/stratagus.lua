@@ -1992,7 +1992,6 @@ Units = {
 	"unit-wolf",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-water-elemental",
 	"unit-unicorn",
-	"unit-settlement-site",
 	"unit-gold-mine",
 	"unit-silver-mine",
 	"unit-mithril-mine",

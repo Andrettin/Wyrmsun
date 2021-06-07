@@ -339,7 +339,7 @@ DefineUnitType("unit-template-base-deposit", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
@@ -349,53 +349,6 @@ DefineUnitType("unit-template-base-deposit", {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
 --		"ready", "gold-mine-ready",
-		"dead", "building-destroyed"
-	}
-} )
-
-DefineUnitType("unit-settlement-site", {
-	Name = "Settlement Site",
-	Parent = "unit-template-building",
-	Description = "A site which is a prime spot for establishing a settlement.",
-	Image = {"file", "buildings/neutral/settlement_site.png", "size", {128, 128}},
-	Icon = "settlement_site",
-	NeutralMinimapColor = {128, 128, 0},
-	Construction = "land_building_simple",
-	HitPoints = 25500,
-	RepairHp = 4,
-	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
-	TileSize = {4, 4}, BoxSize = {127, 127},
-	Armor = 20, Missile = "missile-none",
-	Priority = 0,
-	Corpse = "unit-destroyed-4x4-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Indestructible = true,
-	Variations = {
-		{
-			"variation-id", "settlement-site",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "settlement-site-snow-winter",
-			"file", "buildings/neutral/settlement_site_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "semi_dry_grass",
-			"terrain", "dry_grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "settlement-site-snow",
-			"file", "buildings/neutral/settlement_site_snow.png",
-			"terrain", "snow"
-		}
-	},
-	Sounds = {
-		"selected", "click",
 		"dead", "building-destroyed"
 	}
 } )
@@ -4065,7 +4018,7 @@ DefineUnitType("unit-template-town-hall", {
 	BuildingRulesString = "Must be built on a Settlement Site",
 	BuildingRules = {
 		"and", {
-			"ontop", { Type = "unit-settlement-site", ReplaceOnDie = true, ReplaceOnBuild = true }
+			"ontop", { Type = "unit_settlement_site", ReplaceOnDie = true, ReplaceOnBuild = true }
 		}
 	},
 	Sounds = {
@@ -4230,7 +4183,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" }
@@ -4282,7 +4235,7 @@ DefineUnitType("unit-template-smithy", {
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-settlement-site" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "town_hall" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "stronghold" },
 			"distance", { Distance = 3, DistanceType = ">", Class = "fortress" },
@@ -5079,4 +5032,4 @@ DefineUnitType("unit-railroad", {
 	}
 } )
 
-SetSettlementSiteUnit("unit-settlement-site")
+SetSettlementSiteUnit("unit_settlement_site")
