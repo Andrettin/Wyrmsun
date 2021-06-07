@@ -216,27 +216,6 @@ DefineSite("bourges", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("brest", {
-	Name = "Brest",
-	MapTemplate = "earth",
-	Position = {3735, 945},
-	CulturalNames = {
-		"celt", "Gesocribate",
-		"french", "Brest", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-		"gaul", "Gesocribate",
-		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Gesocribate was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		526, "francia", -- Brest's area was part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1789, "france" -- Brest was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		161, 0, "farm"
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("cahors", {
 	Name = "Cahors",
 	MapTemplate = "earth",

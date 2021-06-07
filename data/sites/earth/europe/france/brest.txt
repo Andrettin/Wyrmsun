@@ -1,0 +1,29 @@
+brest = {
+	name = "Brest"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { -4.49500756979 48.39044293120 } #from Natural Earth
+	base_unit_type = unit_copper_deposit #tin deposits nearby; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+	cultural_names = {
+		celtic = "Gesocribate"
+		gaul = "Gesocribate"
+		latin = "Gesocribate" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Gesocribate was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		526 = {
+			owner = francia #Brest's area was part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		1789 = {
+			owner = france #Brest was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		}
+	}
+}
