@@ -2,9 +2,11 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import ".."
 
-MenuBase {
+ButtonMenuBase {
 	id: legacy_quests_world_menu
 	title: "Legacy Quests"
+	button_component: Qt.createComponent("../LegacyQuestIconButton.qml")
+	entries: wyrmgus.get_world_quests(world)
 	
 	property string world: ""
 	
