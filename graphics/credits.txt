@@ -1967,7 +1967,7 @@
 /graphics/units/orc/sea_orc.png (by Gregor-Mack) (licensed under the CC0)
 /graphics/units/orc/spearthrower.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/teutonic/kogge_extra_1.png (by Jinn) (licensed under the CC0)
-/graphics/units/teutonic/ship.png (by Jinn) (licensed under the CC0)
+/graphics/units/teutonic/workship.png (by Jinn) (licensed under the CC0)
 /graphics/units/undead/skeleton_warrior.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/aether_transport.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/welsh/icons/longbow.png (by Exidelo) (licensed under the CC0)
