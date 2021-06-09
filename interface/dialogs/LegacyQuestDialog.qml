@@ -18,16 +18,17 @@ DialogBase {
 		player_color: quest && quest.player_color ? quest.player_color.identifier : wyrmgus.defines.neutral_player_color.identifier
 	}
 	
-	NormalText {
+	ScrollableTextArea {
 		id: description_label
 		anchors.top: icon_button.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottom: play_quest_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: quest ? quest.description : ""
-		wrapMode: Text.WordWrap
 	}
 	
 	LargeButton {
