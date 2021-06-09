@@ -25,15 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+quest_world_menu = nil
+
 function RunQuestMenu(world)
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	local menu = WarMenu()
+	quest_world_menu = menu
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
-	menu:addLabel(_("~<Legacy Quests~>"), offx + 320 * get_scale_factor(), offy + (104 + 36*-2) * get_scale_factor())
-
 	local completed_quest_quantity = 0
 	local total_quest_quantity = 0
 	local item_x = 1
@@ -132,13 +133,6 @@ function RunQuestMenu(world)
 
 				confirm:run()
 			end
-		end
-	)
-
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208 * get_scale_factor(), offy + (212 + (36 * 5)) * get_scale_factor(),
-		function()
-			SetCurrentCustomHero("")
-			menu:stop();
 		end
 	)
 

@@ -14,6 +14,12 @@ MenuBase {
 		text: "Earth"
 		hotkey: "e"
 		lua_command: "RunQuestMenu(\"earth\");"
+		
+		onClicked: {
+			menu_stack.push("LegacyQuestsWorldMenu.qml", {
+				world: "earth"
+			})
+		}
 	}
 	
 	LargeButton {
@@ -24,6 +30,12 @@ MenuBase {
 		text: "Nidavellir"
 		hotkey: "n"
 		lua_command: "RunQuestMenu(\"nidavellir\");"
+		
+		onClicked: {
+			menu_stack.push("LegacyQuestsWorldMenu.qml", {
+				world: "nidavellir"
+			})
+		}
 	}
 	
 	PreviousMenuButton {
