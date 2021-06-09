@@ -8,6 +8,7 @@ MenuBase {
 	property var entries: []
 	property var button_component: null
 	readonly property var button_area_item: button_area
+	property var button_area_bottom_anchor: previous_menu_button.top
 	
 	Flickable {
 		id: button_area
@@ -17,7 +18,7 @@ MenuBase {
 		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
 		anchors.top: parent.title_element.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		anchors.bottom: previous_menu_button.top
+		anchors.bottom: button_area_bottom_anchor
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		contentWidth: contentItem.childrenRect.width
 		contentHeight: contentItem.childrenRect.height

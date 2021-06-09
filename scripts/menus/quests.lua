@@ -37,20 +37,11 @@ function RunQuestMenu(world)
 	
 	local completed_quest_quantity = 0
 	local total_quest_quantity = 0
-	local item_x = 1
-	local item_y = 1
 	local quests = GetQuests()
 	for i=1, table.getn(quests) do
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world and GetQuestData(quests[i], "Map") ~= "") then
 			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
-				addQuestIcon(quests[i], menu, offx + (23 + 4 + (54 * item_x)) * get_scale_factor(), offy + (10 + 4 + (46 * (item_y + 1))) * get_scale_factor()) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
-			
-				item_x = item_x + 1
-				if (item_x > 9) then
-					item_x = 1
-					item_y = item_y + 1
-				end
 				if (GetQuestData(quests[i], "Completed")) then
 					completed_quest_quantity = completed_quest_quantity + 1
 				end
@@ -60,19 +51,6 @@ function RunQuestMenu(world)
 	
 	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
 	
-	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
-	local difficulty = nil
-	
-	menu:addLabel(_("Difficulty:"), offx + 244 * get_scale_factor(), offy + ((10 + 300) - 20) * get_scale_factor(), Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 244 * get_scale_factor(), offy + (10 + 300) * get_scale_factor(),
-		function(dd)
-			set_difficulty_index(difficulty:getSelected() + 1)
-			save_preferences()
-		end
-	)
-	difficulty:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-	difficulty:setSelected(get_difficulty_index() - 1)
-
 	local custom_heroes = GetCustomHeroes()
 	local hero_list = {}
 	local hero_name_list = {}
@@ -139,79 +117,49 @@ function RunQuestMenu(world)
 	menu:run()
 end
 
-function addQuestIcon(quest, menu, x, y)
+function ShowQuestDialog(quest)
 	local quest_icon_frame = GetIconData(GetQuestData(quest, "Icon"), "Frame")
 	local questicon
-	local b
 	local is_grayscale = GetQuestData(quest, "Completed")
 	questicon = GetIconData(GetQuestData(quest, "Icon"), "File")
-	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
-	b:setActionCallback(
-		function()
-			PlaySound("click")
-			
-			local quest_menu = WarGameMenu(panel(5))
-			quest_menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
-    		quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176 * get_scale_factor(), 11 * get_scale_factor())
-			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
-			quest_menu_image:set_frame(quest_icon_frame)	
-			quest_menu_image:setGrayscale(is_grayscale)	
-			quest_menu:add(quest_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
+	
+	local quest_menu = WarGameMenu(panel(5))
+	quest_menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
+	quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
+	quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176 * get_scale_factor(), 11 * get_scale_factor())
+	local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
+	quest_menu_image:set_frame(quest_icon_frame)	
+	quest_menu_image:setGrayscale(is_grayscale)	
+	quest_menu:add(quest_menu_image, 153 * get_scale_factor(), 48 * get_scale_factor())
 
-			local l = MultiLineLabel()
-			l:setFont(Fonts["game"])
-			l:setSize(324 * get_scale_factor(), 208 * get_scale_factor())
-			l:setLineWidth(324 * get_scale_factor())
-			quest_menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
-			local quest_description = _(GetQuestData(quest, "Description"))
-			l:setCaption(quest_description)
-			
-			if (GetQuestData(quest, "Map") ~= "") then
-				quest_menu:addFullButton(_("~!Play Quest"), "p", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
-					function()
-						SetCurrentQuest(quest)
-						GetMapInfo(GetQuestData(quest, "Map"))
-						GameSettings.Difficulty = get_difficulty_index()
-						mapname = GetQuestData(quest, "Map")
-						quest_menu:stop()
-						RunMap(mapname)
-						menu:stop()
-						if not (LoadGameFile) then
-							RunQuestMenu(GetQuestData(quest, "World"))
-						end
-					end
-				)
-			end
-			quest_menu:addFullButton(_("~!Close"), "c", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 1) * get_scale_factor(),
-				function()
-					quest_menu:stop()
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(324 * get_scale_factor(), 208 * get_scale_factor())
+	l:setLineWidth(324 * get_scale_factor())
+	quest_menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
+	local quest_description = _(GetQuestData(quest, "Description"))
+	l:setCaption(quest_description)
+	
+	if (GetQuestData(quest, "Map") ~= "") then
+		quest_menu:addFullButton(_("~!Play Quest"), "p", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
+			function()
+				SetCurrentQuest(quest)
+				GetMapInfo(GetQuestData(quest, "Map"))
+				GameSettings.Difficulty = get_difficulty_index()
+				mapname = GetQuestData(quest, "Map")
+				quest_menu:stop()
+				RunMap(mapname)
+				quest_world_menu:stop()
+				if not (LoadGameFile) then
+					RunQuestMenu(GetQuestData(quest, "World"))
 				end
-			)
-			quest_menu:run()
+			end
+		)
+	end
+	quest_menu:addFullButton(_("~!Close"), "c", (176 - (224 / 2)) * get_scale_factor(), (352 - 40 * 1) * get_scale_factor(),
+		function()
+			quest_menu:stop()
 		end
 	)
-	menu:add(b, x, y)
-	b:setNormalImage(questicon)
-	b:setPressedImage(questicon)
-	b:setDisabledImage(questicon)
-	b:set_frame(quest_icon_frame)
-	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	b:setIconFrameImage()
-	b:setGrayscale(is_grayscale)	
-	local tooltip = _(GetQuestData(quest, "Name")) .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
-	if (GetQuestData(quest, "HighestCompletedDifficulty") >= DifficultyEasy) then
-		tooltip = tooltip .. "\nHighest Completed Difficulty: "
-		if (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyEasy) then
-			tooltip = tooltip .. _("Easy")
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyNormal) then
-			tooltip = tooltip .. _("Normal")
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyHard) then
-			tooltip = tooltip .. _("Hard")
-		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == DifficultyBrutal) then
-			tooltip = tooltip .. _("Brutal")
-		end
-	end
-	b:setTooltip(tooltip)
-	return b
+	quest_menu:run()
 end
