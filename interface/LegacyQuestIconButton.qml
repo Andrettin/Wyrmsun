@@ -9,6 +9,7 @@ EntryIconButtonBase {
 	visible: model.modelData.required_quest == null || model.modelData.required_quest.completed
 	
 	onClicked: {
-		wyrmgus.call_lua_command("ShowQuestDialog(\"" + model.modelData.identifier + "\");")
+		legacy_quest_dialog.quest = model.modelData
+		legacy_quest_dialog.open()
 	}
 }

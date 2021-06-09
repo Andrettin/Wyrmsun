@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import ".."
+import "../dialogs"
 
 ButtonMenuBase {
 	id: legacy_quests_world_menu
@@ -56,6 +57,10 @@ ButtonMenuBase {
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		lua_command: "SetCurrentCustomHero(\"\"); quest_world_menu:stop();"
+	}
+	
+	LegacyQuestDialog {
+		id: legacy_quest_dialog
 	}
 	
 	function get_completed_quests_count() {
