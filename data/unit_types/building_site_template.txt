@@ -1,0 +1,23 @@
+unit_template_building_site = {
+	name = "Building Site"
+	parent = unit_template_building
+	template = true
+	neutral_minimap_color = { 128 128 0 }
+	construction = land_building_simple
+	hit_points = 25500
+	repair_hp = 4
+	repair_costs = {
+		copper = 1
+		lumber = 1
+	}
+	armor = 20
+	missile = missile_none
+	priority = 0
+	explode_when_killed = missile_explosion
+	type = land
+	indestructible = true
+	sounds = {
+		selected = click
+		dead = building_destroyed
+	}
+}

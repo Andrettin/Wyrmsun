@@ -1,28 +1,13 @@
 unit_settlement_site = {
 	name = "Settlement Site"
-	parent = unit_template_building
+	parent = unit_template_building_site
 	description = "A site which is a prime spot for establishing a settlement."
 	image_file = "buildings/neutral/settlement_site.png"
 	frame_size = { 128 128 }
 	icon = settlement_site
 	tile_size = { 4 4 }
 	box_size = { 127 127 }
-	neutral_minimap_color = { 128 128 0 }
-	construction = land_building_simple
-	hit_points = 25500
-	repair_hp = 4
-	repair_costs = {
-		copper = 1
-		lumber = 1
-		stone = 1
-	}
-	armor = 20
-	missile = missile_none
-	priority = 0
 	corpse_type = unit_destroyed_4x4_place
-	explode_when_killed = missile_explosion
-	type = land
-	indestructible = true
 	variations = {
 		settlement_site = {
 			conditions = {
@@ -37,9 +22,5 @@ unit_settlement_site = {
 				scripted_condition = is_on_snowy_terrain
 			}
 		}
-	}
-	sounds = {
-		selected = click
-		dead = building_destroyed
 	}
 }
