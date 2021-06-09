@@ -118,7 +118,7 @@ local function RunEditorNewMapMenu()
 			CMap:get():get_info():set_name(mapDescription:getText())
 			CMap:get():get_info().MapWidth = tonumber(mapSizex:getText())
 			CMap:get():get_info().MapHeight = tonumber(mapSizey:getText())
-			CMap:get():get_info().set_presentation_filepath("new_map")
+			CMap:get():get_info():set_presentation_filepath("new_map")
 			if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
 				LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
 			else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
