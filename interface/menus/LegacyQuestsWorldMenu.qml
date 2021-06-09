@@ -12,6 +12,14 @@ ButtonMenuBase {
 	property string world: ""
 	
 	NormalText {
+		id: quests_completed_label
+		text: get_completed_quests_count() + "/" + entries.length + " Quests Completed"
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: difficulty_label.top
+		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
+	}
+	
+	NormalText {
 		id: difficulty_label
 		text: "Difficulty:"
 		anchors.left: difficulty_dropdown.left
@@ -48,5 +56,19 @@ ButtonMenuBase {
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		lua_command: "SetCurrentCustomHero(\"\"); quest_world_menu:stop();"
+	}
+	
+	function get_completed_quests_count() {
+		var count = 0
+		
+		for (var i = 0; i < entries.length; ++i) {
+			var quest = entries[i]
+			
+			if (quest.completed) {
+				count += 1
+			}
+		}
+		
+		return count
 	}
 }

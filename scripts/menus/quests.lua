@@ -35,22 +35,6 @@ function RunQuestMenu(world)
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
 	
-	local completed_quest_quantity = 0
-	local total_quest_quantity = 0
-	local quests = GetQuests()
-	for i=1, table.getn(quests) do
-		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world and GetQuestData(quests[i], "Map") ~= "") then
-			total_quest_quantity = total_quest_quantity + 1
-			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
-				if (GetQuestData(quests[i], "Completed")) then
-					completed_quest_quantity = completed_quest_quantity + 1
-				end
-			end
-		end
-	end
-	
-	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
-	
 	local custom_heroes = GetCustomHeroes()
 	local hero_list = {}
 	local hero_name_list = {}
