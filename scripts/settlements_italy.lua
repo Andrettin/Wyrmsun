@@ -454,24 +454,3 @@ DefineSite("spoletum", {
 	},
 	Regions = {"italy"}
 })
-
-DefineSite("verona", {
-	Name = "Verona",
-	MapTemplate = "earth",
-	Position = {4090, 1014},
-	CulturalNames = {
-		"italian", "Verona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1477, "venice", -- Verona was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "venice", -- Verona was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1815, "austria" -- Verona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		161, 1815, "farm",
-		1815, 0, "guard_tower" -- Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	Regions = {"italy"}
-})

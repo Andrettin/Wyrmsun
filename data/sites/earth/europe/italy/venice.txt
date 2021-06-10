@@ -5,7 +5,7 @@ venice = {
 	base_unit_type = unit_settlement_site
 	color = { 240 155 38 }
 	cultural_names = {
-		#teuton = "Venedig"
+		#teutonic = "Venedig"
 	}
 	regions = {
 		italy

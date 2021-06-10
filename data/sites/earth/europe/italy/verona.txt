@@ -1,0 +1,30 @@
+verona = {
+	name = "Verona"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 10.99001623400 45.44039044100 } #from Natural Earth
+	regions = {
+		italy
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Verona was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			building_classes += farm
+		}
+		
+		1477 = {
+			owner = venice #Verona was a Venetian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner = venice #Verona was a possession of the Venetian Republic about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+		
+		1815 = {
+			owner = austria #Verona was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			
+			building_classes -= farm
+			building_classes += guard_tower #Verona had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}
