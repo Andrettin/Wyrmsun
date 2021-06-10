@@ -72,9 +72,22 @@ MenuBase {
 		}
 	}
 	
+	LargeButton {
+		id: custom_heroes_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: tech_tree_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Custom Heroes"
+		hotkey: "c"
+		
+		onClicked: {
+			menu_stack.push("CustomHeroesMenu.qml")
+		}
+	}
+	
 	PreviousMenuButton {
 		id: previous_menu_button
-		anchors.top: tech_tree_button.bottom
+		anchors.top: custom_heroes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 	}
 	
