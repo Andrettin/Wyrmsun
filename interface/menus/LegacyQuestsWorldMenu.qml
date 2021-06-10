@@ -31,7 +31,7 @@ ButtonMenuBase {
 	Dropdown {
 		id: difficulty_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.bottom: previous_menu_button.top
+		anchors.bottom: previous_menu_button_item.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * model.length)
 		width: 100 * wyrmgus.defines.scale_factor
 		model: wyrmgus.get_difficulties()
@@ -50,13 +50,6 @@ ButtonMenuBase {
 		function get_entry_name(entry) {
 			return wyrmgus.get_difficulty_name(entry)
 		}
-	}
-	
-	PreviousMenuButton {
-		id: previous_menu_button
-		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "SetCurrentCustomHero(\"\"); quest_world_menu:stop();"
 	}
 	
 	LegacyQuestDialog {

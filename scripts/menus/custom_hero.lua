@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function CustomHeroCreationMenu(world, quest_menu)
+function CustomHeroCreationMenu()
 	local menu = WarGameMenu(panel(5))
 	menu:setSize(352 * get_scale_factor(), 352 * get_scale_factor())
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
@@ -35,20 +35,18 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local sizeY = 352 * get_scale_factor()
 
 	local hero_civilization_list = {}
-	if (world == "earth") then
---		table.insert(hero_civilization_list, "Anglo-Saxon")
-		table.insert(hero_civilization_list, "Frankish")
-		table.insert(hero_civilization_list, "Germanic")
---		table.insert(hero_civilization_list, "Goth")
-		table.insert(hero_civilization_list, "Latin")
-		table.insert(hero_civilization_list, "Norse")
-		table.insert(hero_civilization_list, "Suebi")
-		table.insert(hero_civilization_list, "Teuton")
-	elseif (world == "nidavellir") then
-		table.insert(hero_civilization_list, "Dwarf")
-		table.insert(hero_civilization_list, "Gnome")
-		table.insert(hero_civilization_list, "Goblin")
-	end
+--	table.insert(hero_civilization_list, "Anglo-Saxon")
+	table.insert(hero_civilization_list, "Frankish")
+	table.insert(hero_civilization_list, "Germanic")
+--	table.insert(hero_civilization_list, "Goth")
+	table.insert(hero_civilization_list, "Latin")
+	table.insert(hero_civilization_list, "Norse")
+	table.insert(hero_civilization_list, "Suebi")
+	table.insert(hero_civilization_list, "Teuton")
+	table.insert(hero_civilization_list, "Dwarf")
+	table.insert(hero_civilization_list, "Gnome")
+	table.insert(hero_civilization_list, "Goblin")
+
 	local hero_class_ident_list = {}
 	local hero_class_list = {}
 	local trait_ident_list = {}
@@ -196,8 +194,6 @@ function CustomHeroCreationMenu(world, quest_menu)
 				DefineCustomHero(hero_ident, hero_data)
 				SaveCustomHero(hero_ident)
 				menu:stop()
-				quest_menu:stop()
-				RunQuestMenu(world)
 			end
 		end
 	)

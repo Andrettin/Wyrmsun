@@ -13,7 +13,6 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Earth"
 		hotkey: "e"
-		lua_command: "RunQuestMenu(\"earth\");"
 		
 		onClicked: {
 			menu_stack.push("LegacyQuestsWorldMenu.qml", {
@@ -29,7 +28,6 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Nidavellir"
 		hotkey: "n"
-		lua_command: "RunQuestMenu(\"nidavellir\");"
 		
 		onClicked: {
 			menu_stack.push("LegacyQuestsWorldMenu.qml", {

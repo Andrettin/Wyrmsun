@@ -9,10 +9,12 @@ MenuBase {
 	background: entry_background
 	
 	property var entry: null
+	property var text_area_bottom_anchor: previous_menu_button_item.top
 	readonly property string entry_name: entry.full_name ? entry.full_name : entry.name
 	readonly property var entry_civilization: (entry.civilization ? entry.civilization : (entry.civilization_group ? entry.civilization_group : null))
 	readonly property var entry_faction: entry.faction ? entry.faction : (entry.default_faction ? entry.default_faction : null)
 	readonly property string entry_background: entry.encyclopedia_background_file && entry.encyclopedia_background_file.length > 0 ? entry.encyclopedia_background_file : (entry_civilization && entry_civilization.encyclopedia_background_file && entry_civilization.encyclopedia_background_file.length > 0 ? entry_civilization.encyclopedia_background_file : wyrmgus.defines.default_menu_background_file)
+	readonly property var previous_menu_button_item: previous_menu_button
 	
 	IconButton {
 		id: icon_button
@@ -32,7 +34,7 @@ MenuBase {
 		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
 		anchors.top: entry.icon ? icon_button.bottom : parent.title_element.bottom
 		anchors.topMargin: (entry.icon ? 16 : 32) * wyrmgus.defines.scale_factor
-		anchors.bottom: previous_menu_button.top
+		anchors.bottom: text_area_bottom_anchor
 		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
 		text: entry.encyclopedia_text
 	}

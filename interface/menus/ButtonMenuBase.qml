@@ -7,8 +7,9 @@ MenuBase {
 	
 	property var entries: []
 	property var button_component: null
+	property var button_area_bottom_anchor: previous_menu_button_item.top
 	readonly property var button_area_item: button_area
-	property var button_area_bottom_anchor: previous_menu_button.top
+	readonly property var previous_menu_button_item: previous_menu_button
 	
 	Flickable {
 		id: button_area
