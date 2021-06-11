@@ -3,7 +3,7 @@ coinage = {
 	category = commerce
 	age = bronze_age
 	tech_tree_parent_unit_class = stronghold
-
+	
 	conditions = {
 		or = {
 			unit_class = smithy

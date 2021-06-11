@@ -1,0 +1,13 @@
+produce_jewelry = {
+	pos = 9
+	icon = icon_ring
+	action = produce_resource
+	value = jewelry
+	key = j
+	hint = "Produce ~!Jewelry"
+	popup = popup_commands
+	description = "Allows workers to transform Copper into Jewelry in this building."
+	unit_classes = {
+		smithy
+	}
+}

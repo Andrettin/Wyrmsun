@@ -1,0 +1,11 @@
+research_ironworking = {
+	pos = 7
+	action = research_class
+	value = ironworking
+	allowed = check_single_research
+	description =  "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies."
+	popup = popup_research
+	unit_classes = {
+		smithy
+	}
+}

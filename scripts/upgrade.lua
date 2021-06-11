@@ -188,17 +188,6 @@ DefineUpgrade("upgrade-engineering", {
 	Costs = {"time", 250, "copper", 2000, "lumber", 2000}
 })
 
-DefineModifier("upgrade_ironworking",
-	{"improve-production", "iron", 10},
-	{"improve-production", "mithril", 10},
-	{"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
-	{"apply-to", "unit-goblin-smithy"},
-	{"apply-to", "unit-germanic-smithy"},
-	{"apply-to", "unit-latin-smithy"},
-	{"apply-to", "unit-norse-smithy"},
-	{"apply-to", "unit-teuton-smithy"}
-)
-
 DefineModifier("upgrade-mathematics",
 	{"TradeCost", -5},
 	{"apply-to", "unit-dwarven-market"},

@@ -905,28 +905,28 @@ if not (ui_loaded_first_time) then
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				}, 
 				-- Produce Resource
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce_resource", LuxuryResource = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), " is sold automatically if a Market is present"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce-resource"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "produce_resource"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "Prices", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(Concat("Trade Cost: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost"))), "%"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Effective Sell Price: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceSellPrice", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "produce-resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "produce_resource", LuxuryResource = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Demand: ", String(PlayerData(ActiveUnitVar("Player", "Value"), "EffectiveResourceDemand", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				-- Resource Sell

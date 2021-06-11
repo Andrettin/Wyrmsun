@@ -43,26 +43,6 @@ DefineDependency("unit-minecart",
 )
 
 -- dependencies for neutral upgrades
-DefineDependency("upgrade-iron-tipped-wood-plow",
-	{"upgrade-wood-plow", "upgrade_ironworking", "unit-brising-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-dwarven-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-germanic-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-goblin-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-latin-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-norse-smithy"},
-	"or", {"upgrade-wood-plow", "upgrade_ironworking", "unit-teuton-smithy"}
-)
-
-DefineDependency("upgrade-iron-plow",
-	{"upgrade-iron-tipped-wood-plow", "unit-brising-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-dwarven-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-germanic-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-goblin-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-latin-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-norse-smithy"},
-	"or", {"upgrade-iron-tipped-wood-plow", "unit-teuton-smithy"}
-)
-
 DefineDependency("upgrade-mathematics",
 	{"upgrade-dwarven-runewriting"},
 	"or", {"upgrade-writing"}

@@ -654,23 +654,8 @@ DefineButton( { Pos = 15, Level = "buy-item-level",
 
 -- Resource Production ------------------------------------------------
 
-DefineButton( { Pos = 9, Icon = "icon-ring",
-	Action = "produce-resource", Value = "jewelry",
-	Key = "j", Hint = "Produce ~!Jewelry", Popup = "popup_commands",
-	Description = "Allows workers to transform Copper into Jewelry in this building",
-	ForUnit = {
-		"unit-brising-smithy",
-		"unit-dwarven-smithy",
-		"unit-germanic-smithy",
-		"unit-goblin-smithy",
-		"unit-latin-smithy",
-		"unit-norse-smithy",
-		"unit-teuton-smithy"
-	}
-})
-
 DefineButton( { Pos = 13, Icon = "icon-furniture",
-	Action = "produce-resource", Value = "furniture",
+	Action = "produce_resource", Value = "furniture",
 	Key = "f", Hint = "Produce ~!Furniture", Popup = "popup_commands",
 	Description = "Allows workers to transform Lumber into Furniture in this building",
 	ForUnit = {
@@ -683,7 +668,7 @@ DefineButton( { Pos = 13, Icon = "icon-furniture",
 })
 
 DefineButton( { Pos = 1, Icon = "icon-leather",
-	Action = "produce-resource", Value = "leather",
+	Action = "produce_resource", Value = "leather",
 	Key = "l", Hint = "Produce ~!Leather", Popup = "popup_commands",
 	Description = "Allows workers to gather Leather in this building",
 	ForUnit = {
@@ -796,21 +781,6 @@ DefineButton( { Pos = 1, Icon = "icon-masonry",
 		"unit-dwarven-masons-shop",
 		"unit-goblin-masons-shop",
 		"unit-teuton-masons-shop"
-	}
-} )
-
-DefineButton( { Pos = 7, Icon = "anvil",
-	Action = "research", Value = "upgrade_ironworking",
-	Allowed = "check-single-research",
-	Description = "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies.",
-	Key = "i", Hint = "Research ~!Ironworking", Popup = "popup_research",
-	ForUnit = {
-		"unit-dwarven-smithy", "unit-brising-smithy",
-		"unit-germanic-smithy",
-		"unit-goblin-smithy",
-		"unit-latin-smithy",
-		"unit-norse-smithy",
-		"unit-teuton-smithy"
 	}
 } )
 

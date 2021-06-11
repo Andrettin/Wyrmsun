@@ -10,6 +10,12 @@ iron_tipped_wood_plow = {
 	category = farming_equipment
 	age = iron_age
 	tech_tree_parent_upgrade_class = wood_plow
+	
+	conditions = {
+		upgrade_class = wood_plow
+		upgrade_class = ironworking
+		unit_class = smithy
+	}
 }
 
 iron_plow = {
@@ -17,4 +23,9 @@ iron_plow = {
 	category = farming_equipment
 	age = feudal_age
 	tech_tree_parent_upgrade_class = iron_tipped_wood_plow
+	
+	conditions = {
+		upgrade_class = iron_tipped_wood_plow
+		unit_class = smithy
+	}
 }
