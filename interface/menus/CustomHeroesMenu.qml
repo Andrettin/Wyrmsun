@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import ".."
+import "../dialogs"
 
 ButtonMenuBase {
 	id: custom_heroes_menu
@@ -17,5 +18,13 @@ ButtonMenuBase {
 		text: "Create Custom Hero"
 		hotkey: "c"
 		lua_command: "CustomHeroCreationMenu();"
+		
+		onClicked: {
+			create_custom_hero_dialog.open()
+		}
+	}
+	
+	CreateCustomHeroDialog {
+		id: create_custom_hero_dialog
 	}
 }
