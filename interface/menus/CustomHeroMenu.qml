@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import ".."
+import "../dialogs"
 
 EncyclopediaEntryMenu {
 	id: custom_hero_menu
@@ -13,6 +14,14 @@ EncyclopediaEntryMenu {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Delete Custom Hero"
 		hotkey: "d"
-		lua_command: "DeleteCustomHeroMenu(\"" + entry.identifier + "\");"
+		
+		onClicked: {
+			delete_custom_hero_dialog.custom_hero = entry
+			delete_custom_hero_dialog.open()
+		}
+	}
+	
+	DeleteCustomHeroDialog {
+		id: delete_custom_hero_dialog
 	}
 }
