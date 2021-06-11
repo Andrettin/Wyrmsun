@@ -1,0 +1,37 @@
+salzburg = {
+	name = "Salzburg"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 13.04002030300 47.81047833160 } #from Natural Earth
+	cultural_names = {
+		latin = "Iuvavum"
+	}
+	regions = {
+		austria
+		cisleithania
+	}
+	
+	history = {
+		45 = {
+			#Noricum was conquered by the Romans in 15 BC, and a few Celtic settlements were subsequently amalgamated into Iuvavum six decades later; Source: Heinz Dopsch, "Kleine Geschichte Salzburgs: Stadt und Land", 2009, pp. 16-17.
+			owner = rome
+			building_classes += farm
+		}
+		
+		526 = {
+			owner = bavarian_tribe #Salzburg was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		739 = {
+			building_classes -= farm
+			building_classes += temple #Salzburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+		}
+		
+		768 = {
+			#archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1815 = {
+			owner = austria #Salzburg was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

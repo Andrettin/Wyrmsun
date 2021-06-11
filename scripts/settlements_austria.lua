@@ -187,24 +187,6 @@ DefineSite("klagenfurt", {
 	Regions = {"cisleithania", "austria"}
 })
 
-DefineSite("linz", {
-	Name = "Linz",
-	MapTemplate = "earth",
-	Position = {4162, 949},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Linz"
-	},
-	HistoricalOwners = {
-		1477, "austria", -- Linz was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1815, "austria" -- Linz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1477, 0, "town_hall"
-	},
-	Regions = {"cisleithania", "austria"}
-})
-
 DefineSite("ljubljana", {
 	Name = "Ljubljana",
 	MapTemplate = "earth",
@@ -238,28 +220,6 @@ DefineSite("marburg", {
 	},
 	HistoricalBuildings = {
 		1477, 0, "farm"
-	},
-	Regions = {"cisleithania", "austria"}
-})
-
-DefineSite("salzburg", {
-	Name = "Salzburg",
-	MapTemplate = "earth",
-	Position = {4135, 960},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"latin", "Iuvavum",
-		"teuton", "Salzburg"
-	},
-	HistoricalOwners = {
-		45, "rome", -- Noricum was conquered by the Romans in 15 BC, and a few Celtic settlements were subsequently amalgamated into Iuvavum six decades later; Source: Heinz Dopsch, "Kleine Geschichte Salzburgs: Stadt und Land", 2009, pp. 16-17.
-		526, "bavarian-tribe", -- Salzburg was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1815, "austria" -- Salzburg was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		45, 0, "town_hall",
-		739, 0, "temple" -- Salzburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
-		-- archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"cisleithania", "austria"}
 })

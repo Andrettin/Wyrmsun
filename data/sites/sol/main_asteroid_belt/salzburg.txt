@@ -1,4 +1,4 @@
-salzburg = {
+salzburg_asteroid = {
 	name = "Salzburg"
 	map_template = sol_system
 	base_unit_type = unit_asteroid
