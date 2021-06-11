@@ -28,7 +28,7 @@
 AlfheimStartX = 728
 AlfheimStartY = 0
 
-SetMapTemplateUnit("alfheim", "unit-teuton-smithy", "lintanir", {763, 51}) -- smithy in which Volund is set to work in Saevarstad by his enemy king
+SetMapTemplateUnit("alfheim", "unit_elven_smithy", "lintanir", {763, 51}) -- smithy in which Volund is set to work in Saevarstad by his enemy king
 
 SetMapTemplateHero("alfheim", "volund", "ulfdalir", {762, 53})
 

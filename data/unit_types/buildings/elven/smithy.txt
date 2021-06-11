@@ -1,0 +1,18 @@
+unit_elven_smithy = {
+	parent = unit_template_smithy
+	civilization = elven
+	description = "Elves are renowned for their refined smithing craft. Their sharp, lethal swords are specially sought after, as are their shining jewels."
+	image_file = "buildings/elven/smithy.png"
+	frame_size = { 99 95 }
+	icon = elven_smithy
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_spatha
+		unit_hand_cannon
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_kite_shield
+	}
+}

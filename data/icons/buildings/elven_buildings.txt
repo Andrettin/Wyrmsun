@@ -15,3 +15,7 @@ elven_barracks = {
 	file = "icons/buildings/elven/barracks.png"
 	conversible_player_color = teal
 }
+
+elven_smithy = {
+	file = "icons/buildings/elven/smithy.png"
+}

@@ -99,7 +99,8 @@ DefineDependency("unit-short-sword",
 	{"unit-germanic-smithy"},
 	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"},
-	"or", {"unit-latin-smithy"}
+	"or", {"unit-latin-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-broad-sword",
@@ -157,7 +158,8 @@ DefineDependency("unit-hammer",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-runesmiths-hammer",
@@ -172,7 +174,8 @@ DefineDependency("unit-mining-pick",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-short-spear",
@@ -224,14 +227,16 @@ DefineDependency("unit-hand-cannon",
 	"or", {"unit-goblin-smithy", "upgrade_gunpowder"},
 	"or", {"unit-latin-smithy", "upgrade_gunpowder"},
 	"or", {"unit-norse-smithy", "upgrade_gunpowder"},
-	"or", {"unit-teuton-smithy", "upgrade_gunpowder"}
+	"or", {"unit-teuton-smithy", "upgrade_gunpowder"},
+	"or", {"unit_elven_smithy", "upgrade_gunpowder"}
 )
 
 DefineDependency("unit-wooden-shield",
 	{"unit-germanic-smithy"},
 	"or", {"unit-norse-smithy"},
 	"or", {"unit-teuton-smithy"},
-	"or", {"unit-latin-smithy"}
+	"or", {"unit-latin-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-bronze-shield",
@@ -297,7 +302,8 @@ DefineDependency("unit-horn",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-arrows",
@@ -327,7 +333,8 @@ DefineDependency("unit-crown",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-amulet",
@@ -337,7 +344,8 @@ DefineDependency("unit-amulet",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 DefineDependency("unit-ring",
@@ -347,7 +355,8 @@ DefineDependency("unit-ring",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"}
+	"or", {"unit-teuton-smithy"},
+	"or", {"unit_elven_smithy"}
 )
 
 Load("scripts/upgrade_deity_dependencies.lua")

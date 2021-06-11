@@ -31,6 +31,7 @@
 /graphics/buildings/elven/farm_snow.png (by Kwaliti and Exidelo) (licensed under the CC0)
 /graphics/buildings/elven/fortress.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/fortress_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/buildings/elven/smithy.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/buildings/elven/stronghold.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/stronghold_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall.png (by Kwaliti and Jinn) (licensed under the CC0)
