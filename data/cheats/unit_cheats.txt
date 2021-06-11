@@ -6,14 +6,6 @@ latin_legionary = {
 	}
 }
 
-latin_dock = {
-	code = navalia
-	
-	effects = {
-		create_unit = unit_latin_dock
-	}
-}
-
 norse_swordsman = {
 	code = tyr
 	
@@ -59,14 +51,6 @@ dwarven_transport_ship = {
 	
 	effects = {
 		create_unit = unit_dwarven_transport_ship
-	}
-}
-
-dwarven_market = {
-	code = "alberich"
-	
-	effects = {
-		create_unit = unit_dwarven_market
 	}
 }
 

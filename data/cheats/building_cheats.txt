@@ -1,0 +1,23 @@
+dwarven_market = {
+	code = "alberich"
+	
+	effects = {
+		create_unit = unit_dwarven_market
+	}
+}
+
+elven_smithy = {
+	code = wayland
+	
+	effects = {
+		create_unit = unit_elven_smithy
+	}
+}
+
+latin_dock = {
+	code = navalia
+	
+	effects = {
+		create_unit = unit_latin_dock
+	}
+}
