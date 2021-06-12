@@ -174,6 +174,22 @@ DialogBase {
 		hotkey: "t"
 		
 		onClicked: {
+			if (name_text_field.text.length === 0) {
+				error_dialog.text = "The hero's name cannot be empty."
+				error_dialog.open()
+				return
+			} else if (!wyrmgus.is_name_valid_for_custom_hero(name_text_field.text)) {
+				error_dialog.text = "The custom hero's name is invalid."
+				error_dialog.open()
+				return
+			}
+			
+			if (surname_text_field.text.length > 0 && !wyrmgus.is_name_valid_for_custom_hero(surname_text_field.text)) {
+				error_dialog.text = "The custom hero's surname is invalid."
+				error_dialog.open()
+				return
+			}
+			
 			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, variation_identifier)
 			create_custom_hero_dialog.close()
 		}

@@ -98,7 +98,7 @@ Item {
 			map_view.destroy()
 		}
 	}
-
+	
 	Component.onCompleted: {
 		wyrmgus.install_event_filter_on(frame_buffer_object_mouse_area)
 	}

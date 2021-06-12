@@ -26,4 +26,9 @@ ButtonMenuBase {
 	CreateCustomHeroDialog {
 		id: create_custom_hero_dialog
 	}
+	
+	GenericDialog {
+		id: error_dialog
+		title: "Error"
+	}
 }
