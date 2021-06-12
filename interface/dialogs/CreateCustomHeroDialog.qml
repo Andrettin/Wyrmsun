@@ -10,7 +10,9 @@ DialogBase {
 	readonly property var civilization: civilization_dropdown.selectedEntry
 	
 	onCivilizationChanged: {
-		name_text_field.text = civilization.generate_male_personal_name()
+		if (civilization !== null) {
+			name_text_field.text = civilization.generate_male_personal_name()
+		}
 	}
 	
 	NormalText {
