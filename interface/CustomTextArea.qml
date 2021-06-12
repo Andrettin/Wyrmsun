@@ -6,6 +6,7 @@ TextArea {
 	color: "white"
 	font.family: berenika_font.name
 	font.pixelSize: 12 * wyrmgus.defines.scale_factor
+	wrapMode: TextEdit.WordWrap
 	
 	background: Rectangle {
 		id: text_background
