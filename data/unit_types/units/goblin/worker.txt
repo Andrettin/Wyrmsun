@@ -71,6 +71,7 @@ unit_goblin_worker = {
 	}
 	variations = {
 		bald = {
+			name = "Bald"
 			conditions = {
 				not = {
 					equipment = unit_christmas_hat
@@ -87,6 +88,7 @@ unit_goblin_worker = {
 			}
 		}
 		spiky_hair = {
+			name = "Spiky Hair"
 			image_file = "goblin/units/goblin_worker_spiky_hair.png"
 			resource_loaded_image_files = {
 				gold = "goblin/units/goblin_worker_with_gold_spiky_hair.png"

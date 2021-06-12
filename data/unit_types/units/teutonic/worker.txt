@@ -72,6 +72,7 @@ unit_teuton_worker = {
 	}
 	variations = {
 		brown_hair = {
+			name = "Brown Hair"
 			conditions = {
 				not = {
 					equipment = unit_christmas_hat

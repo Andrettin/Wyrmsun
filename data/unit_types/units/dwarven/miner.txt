@@ -77,6 +77,7 @@ unit_dwarven_miner = {
 	}
 	variations = {
 		brown_hair = {
+			name = "Brown Hair"
 			conditions = {
 				not = {
 					equipment = unit_christmas_hat
