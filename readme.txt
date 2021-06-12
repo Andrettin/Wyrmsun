@@ -120,6 +120,7 @@ https://github.com/Andrettin/Wyrmsun
 - The game is now always in borderless fullscreen mode, as the new UI framework supports that. The main purpose of the windowed mode was to allow alt-tabbing seamlessly, which the borderless fullscreen mode also provides. And unlike the old fullscreen functionality, this supports any resolution.
 - Reworked the tech tree menu.
 - The scenario menu is now depicted as a tree.
+- Added a submenu for managing custom heroes, and made it possible to add a description to them.
 
 -----------------------------------------------------------------------
 - 4.1.4
