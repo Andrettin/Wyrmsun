@@ -8,6 +8,8 @@ DialogBase {
 	title: "Create Custom Hero"
 	
 	readonly property var civilization: civilization_dropdown.selectedEntry
+	readonly property var unit_type: unit_type_dropdown.selectedEntry
+	readonly property var trait: trait_dropdown.selectedEntry
 	
 	onCivilizationChanged: {
 		if (civilization !== null) {
@@ -119,6 +121,20 @@ DialogBase {
 		text: "Trait:"
 	}
 	
+	Dropdown {
+		id: trait_dropdown
+		anchors.verticalCenter: trait_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.right: parent.right
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		model: unit_type !== null ? unit_type.traits : []
+		
+		function get_entry_name(entry) {
+			return entry.name + ": " + entry.get_upgrade_effects_qstring()
+		}
+	}
+	
 	NormalText {
 		id: variation_label
 		anchors.top: trait_label.bottom
@@ -138,6 +154,7 @@ DialogBase {
 		hotkey: "t"
 		
 		onClicked: {
+			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, "")
 			create_custom_hero_dialog.close()
 		}
 	}

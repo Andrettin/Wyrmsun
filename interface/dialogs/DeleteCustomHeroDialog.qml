@@ -25,10 +25,11 @@ DialogBase {
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		text: "Yes"
 		hotkey: "y"
-		lua_command: custom_hero ? "DeleteCustomHero(\"" + custom_hero.identifier + "\");" : ""
 		
 		onClicked: {
+			wyrmgus.delete_custom_hero(custom_hero)
 			delete_custom_hero_dialog.close()
+			menu_stack.pop()
 		}
 	}
 	

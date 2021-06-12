@@ -7,7 +7,7 @@ ButtonMenuBase {
 	id: custom_heroes_menu
 	title: "Custom Heroes"
 	button_component: Qt.createComponent("../CustomHeroIconButton.qml")
-	entries: wyrmgus.get_custom_heroes()
+	entries: wyrmgus.custom_heroes
 	button_area_bottom_anchor: create_custom_hero_button.top
 	
 	LargeButton {
@@ -17,7 +17,6 @@ ButtonMenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Create Custom Hero"
 		hotkey: "c"
-		lua_command: "CustomHeroCreationMenu();"
 		
 		onClicked: {
 			create_custom_hero_dialog.open()
