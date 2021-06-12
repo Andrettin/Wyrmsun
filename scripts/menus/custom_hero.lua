@@ -29,31 +29,6 @@ function CustomHeroCreationMenu()
 	local menu = WarGameMenu(panel(5))	
 	local sizeX = 352 * get_scale_factor()
 
-	local variation_list = {}
-	local variation
-	
-	local function ClassChanged()
-		variation_list = nil
-		variation_list = {}
-		local variation_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Variations")
-		if (table.getn(GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "LayerVariations", "hair")) > 0) then
-			variation_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "LayerVariations", "hair")
-		end
-		
-		for i=1,table.getn(variation_ident_list) do
-			table.insert(variation_list, FullyCapitalizeString(string.gsub(variation_ident_list[i], "-", " ")))
-		end
-		table.sort(variation_list)
-		variation:setList(variation_list)
-		variation:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
-		variation:setSelected(0)
-	end
-	
-	menu:addLabel(_("Variation:"), 10 * get_scale_factor(), (14 + 36 * 6) * get_scale_factor(), Fonts["game"], false)
-	variation = menu:addDropDown(variation_list, (sizeX / 2) + (-60 - 10) * get_scale_factor(), (11 + 36 * 6) * get_scale_factor(), function(dd) end)
-	variation:setSize(236 * get_scale_factor(), 20 * get_scale_factor())
-	variation:setSelected(0)
-	
 	menu:addHalfButton(_("Crea~!te"), "t", (20 + 48) * get_scale_factor(), (352 - 40 * 2) * get_scale_factor(),
 		function()
 			if (hero_name:getText() == "") then
@@ -61,10 +36,6 @@ function CustomHeroCreationMenu()
 			elseif (IsNameValidForCustomHero(hero_name:getText(), hero_family_name:getText()) == false) then
 				GenericDialog("Error", "The custom hero's name is invalid.")
 			else
-				local hero_data = {}
-				if (table.getn(variation_list) > 0) then
-					hero_data.HairVariation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
-				end
 				DefineCustomHero(hero_ident, hero_data)
 				menu:stop()
 			end

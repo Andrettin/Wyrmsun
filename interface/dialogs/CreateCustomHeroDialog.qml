@@ -10,6 +10,8 @@ DialogBase {
 	readonly property var civilization: civilization_dropdown.selectedEntry
 	readonly property var unit_type: unit_type_dropdown.selectedEntry
 	readonly property var trait: trait_dropdown.selectedEntry
+	readonly property var variation: variation_dropdown.selectedEntry
+	readonly property var variation_identifier: variation !== null ? variation.identifier : ""
 	
 	onCivilizationChanged: {
 		if (civilization !== null) {
@@ -144,6 +146,24 @@ DialogBase {
 		text: "Variation:"
 	}
 	
+	Dropdown {
+		id: variation_dropdown
+		anchors.verticalCenter: variation_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.right: parent.right
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		model: unit_type !== null ? unit_type.get_custom_hero_variations_qvariant_list() : []
+		
+		function get_entry_name(entry) {
+			if (entry.name.length > 0) {
+				return entry.name
+			}
+			
+			return entry.identifier
+		}
+	}
+	
 	SmallButton {
 		id: create_button
 		anchors.left: parent.left
@@ -154,7 +174,7 @@ DialogBase {
 		hotkey: "t"
 		
 		onClicked: {
-			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, "")
+			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, variation_identifier)
 			create_custom_hero_dialog.close()
 		}
 	}
