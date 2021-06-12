@@ -19,6 +19,14 @@ default = {
 		pressed_file = "interface/default/button_small_pressed.png"
 		grayed_file = "interface/default/button_small_grayed.png"
 	}
+	thin_button = {
+		normal_file = "interface/default/button_thin_medium_normal.png"
+		pressed_file = "interface/default/button_thin_medium_normal.png"
+	}
+	small_thin_button = {
+		normal_file = "interface/default/button_thin_small_normal.png"
+		pressed_file = "interface/default/button_thin_small_pressed.png"
+	}
 	radio_button = {
 		checked_file = "interface/dwarven/radio_normal_selected.png"
 		checked_pressed_file = "interface/dwarven/radio_pressed_selected.png"
