@@ -1,0 +1,22 @@
+rostock = {
+	name = "Rostock"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 12.14999710960 54.07038047190 } #from Natural Earth
+	cores = {
+		germany
+		mecklenburg
+	}
+	regions = {
+		germany
+	}
+	
+	history = {
+		1419 = {
+			building_classes += university #University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1815 = {
+			owner = mecklenburg #Rostock was part of the Grand Duchy of Mecklenburg-Schwerin in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

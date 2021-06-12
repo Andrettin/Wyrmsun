@@ -1,0 +1,13 @@
+schwerin = {
+	name = "Schwerin"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 11.41669861050 53.63330407740 } #from Natural Earth
+	base_unit_type = unit_gold_deposit #amber deposits nearby; Source: "Atlas de História Mundial", 2001, p. 89.
+	cores = {
+		germany #Schwerin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Schwerin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	regions = {
+		germany
+	}
+}

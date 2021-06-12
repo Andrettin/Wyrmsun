@@ -404,27 +404,6 @@ DefineSite("regensburg", {
 	Regions = {"germany"}
 })
 
-DefineSite("rostock", {
-	Name = "Rostock",
-	MapTemplate = "earth",
-	Position = {4126, 817},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Rostock"
-	},
-	Cores = {
-		"germany",
-		"mecklenburg"
-	},
-	HistoricalOwners = {
-		1815, "mecklenburg" -- Rostock was part of the Grand Duchy of Mecklenburg-Schwerin in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1419, 0, "university" -- University founded in Rostock in 1419; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("scheidungen", {
 	Name = "Scheidungen",
 	MapTemplate = "earth",
@@ -437,24 +416,6 @@ DefineSite("scheidungen", {
 	},
 	HistoricalBuildings = {
 		526, 0, "farm"
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("schwerin", {
-	Name = "Schwerin",
-	MapTemplate = "earth",
-	Position = {4093, 827},
-	CulturalNames = {
-		"teuton", "Schwerin"
-	},
-	Cores = {
-		"germany", -- Schwerin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Schwerin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
 	},
 	Regions = {"germany"}
 })
