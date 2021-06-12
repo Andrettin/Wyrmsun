@@ -18,7 +18,7 @@ DialogBase {
 	NormalText {
 		id: name_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Name:"
@@ -49,7 +49,7 @@ DialogBase {
 	NormalText {
 		id: surname_label
 		anchors.top: name_label.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Surname:"
@@ -67,7 +67,7 @@ DialogBase {
 	NormalText {
 		id: civilization_label
 		anchors.top: surname_label.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Civilization:"
@@ -85,6 +85,47 @@ DialogBase {
 		function get_entry_name(entry) {
 			return entry.name
 		}
+	}
+	
+	NormalText {
+		id: unit_type_label
+		anchors.top: civilization_label.bottom
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.left: parent.left
+		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Unit Type:"
+	}
+	
+	Dropdown {
+		id: unit_type_dropdown
+		anchors.verticalCenter: unit_type_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.right: parent.right
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		model: civilization !== null ? civilization.get_custom_hero_unit_types() : []
+		
+		function get_entry_name(entry) {
+			return entry.name
+		}
+	}
+	
+	NormalText {
+		id: trait_label
+		anchors.top: unit_type_label.bottom
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.left: parent.left
+		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Trait:"
+	}
+	
+	NormalText {
+		id: variation_label
+		anchors.top: trait_label.bottom
+		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.left: parent.left
+		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Variation:"
 	}
 	
 	SmallButton {
