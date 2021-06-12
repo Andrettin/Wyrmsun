@@ -27,9 +27,23 @@ DialogBase {
 	CustomTextField {
 		id: name_text_field
 		anchors.verticalCenter: name_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.right: generate_name_button.left
+		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+	}
+	
+	SmallButton {
+		id: generate_name_button
+		anchors.verticalCenter: name_label.verticalCenter
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
-		width: 224 * wyrmgus.defines.scale_factor
+		text: "Generate"
+		hotkey: "g"
+		
+		onClicked: {
+			name_text_field.text = civilization.generate_male_personal_name()
+		}
 	}
 	
 	NormalText {
@@ -44,9 +58,10 @@ DialogBase {
 	CustomTextField {
 		id: surname_text_field
 		anchors.verticalCenter: surname_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
-		width: 224 * wyrmgus.defines.scale_factor
 	}
 	
 	NormalText {
@@ -61,9 +76,10 @@ DialogBase {
 	Dropdown {
 		id: civilization_dropdown
 		anchors.verticalCenter: civilization_label.verticalCenter
+		anchors.left: civilization_label.right
+		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
-		width: 224 * wyrmgus.defines.scale_factor
 		model: wyrmgus.get_playable_civilizations()
 		
 		function get_entry_name(entry) {
