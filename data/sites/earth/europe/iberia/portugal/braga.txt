@@ -1,0 +1,26 @@
+braga = {
+	name = "Braga"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { -8.42133121890 41.55499452620 } #from Natural Earth
+	cultural_names = {
+		roman = "Bracara" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+	regions = {
+		portugal
+	}
+	
+	history = {
+		-138 = {
+			owner = rome #Bracara was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += farm
+		}
+		
+		486 = {
+			owner = galicia #Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1150 = {
+			owner = portugal #Braga was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
+		}
+	}
+}

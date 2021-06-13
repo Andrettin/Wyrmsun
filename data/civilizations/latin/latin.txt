@@ -1,3 +1,4 @@
 latin = {
+	aliases += roman
 	default_color = red
 }

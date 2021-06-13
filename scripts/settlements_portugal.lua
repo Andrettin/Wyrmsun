@@ -25,46 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("braga", {
-	Name = "Braga",
-	MapTemplate = "earth",
-	Position = {3651, 1096},
-	CulturalNames = {
-		"latin", "Bracara", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"portuguese", "Braga"
-	},
-	HistoricalOwners = {
-		-138, "rome", -- Bracara was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "galicia", -- Braga was a part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1150, "portugal" -- Braga was a part of the Kingdom of Portugal in 1150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
-	},
-	HistoricalBuildings = {
-		-138, 1560, "town_hall",
-		1560, 0, "farm"
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("coimbra", {
-	Name = "Coimbra",
-	MapTemplate = "earth",
-	Position = {3639, 1133},
-	CulturalNames = {
-		"latin", "Bracara", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"portuguese", "Coimbra"
-	},
-	HistoricalOwners = {
-		486, "galicia", -- Coimbra was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1064, "portugal" -- Coimbra was acquired by the Kingdom of Portugal in 1064 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
-	},
-	HistoricalBuildings = {
-		486, 1308, "farm",
-		1308, 0, "university", -- University founded in Coimbra in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- University moved permanently from Lisbon to Coimbra in 1537; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("tres-minas", {
 	Name = "Tres Minas",
 	MapTemplate = "earth",
