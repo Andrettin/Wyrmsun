@@ -1,0 +1,109 @@
+worker = {
+	code = "work work"
+	
+	effects = {
+		create_unit = {
+			unit_class = worker
+		}
+	}
+}
+
+infantry = {
+	code = "shield wall"
+	
+	effects = {
+		create_unit = {
+			unit_class = infantry
+		}
+	}
+}
+
+veteran_infantry = {
+	code = swordskill
+	
+	effects = {
+		create_unit = {
+			unit_class = veteran_infantry
+		}
+	}
+}
+
+shooter = {
+	code = artemis
+	
+	effects = {
+		create_unit = {
+			unit_class = shooter
+		}
+	}
+}
+
+gunpowder_infantry = {
+	code = "fire and steel"
+	
+	effects = {
+		create_unit = {
+			unit_class = gunpowder_infantry
+		}
+	}
+}
+
+priest = {
+	code = piety
+	
+	effects = {
+		create_unit = {
+			unit_class = priest
+		}
+	}
+}
+
+caravan = {
+	code = caravan
+	
+	effects = {
+		create_unit = {
+			unit_class = caravan
+		}
+	}
+}
+
+siege_engine = {
+	code = archimedes
+	
+	effects = {
+		create_unit = {
+			unit_class = siege_engine
+		}
+	}
+}
+
+transport_ship = {
+	code = ahoy
+	
+	effects = {
+		create_unit = {
+			unit_class = transport_ship
+		}
+	}
+}
+
+siege_warship = {
+	code = skidbladnir
+	
+	effects = {
+		create_unit = {
+			unit_class = siege_warship
+		}
+	}
+}
+
+aether_transport_ship = {
+	code = phlogiston
+	
+	effects = {
+		create_unit = {
+			unit_class = aether_transport_ship
+		}
+	}
+}

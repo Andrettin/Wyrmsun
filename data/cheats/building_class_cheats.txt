@@ -1,0 +1,19 @@
+market = {
+	code = "free trade"
+	
+	effects = {
+		create_unit = {
+			unit_class = market
+		}
+	}
+}
+
+dock = {
+	code = "safe harbor"
+	
+	effects = {
+		create_unit = {
+			unit_class = dock
+		}
+	}
+}
