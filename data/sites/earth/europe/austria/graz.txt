@@ -1,0 +1,27 @@
+graz = {
+	name = "Graz" #from the same Slavic root as "Grad"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 15.41000484080 47.07775819810 } #from Natural Earth
+	regions = {
+		austria
+		cisleithania
+	}
+	
+	history = {
+		1477 = {
+			owner = austria #Gratz was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1560 = {
+			owner = austria #Gratz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1585 = {
+			building_classes += university #University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1815 = {
+			owner = austria #Graz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

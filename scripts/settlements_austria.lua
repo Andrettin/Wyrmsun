@@ -131,26 +131,6 @@ DefineSite("gossensass", {
 	Regions = {"cisleithania", "austria"}
 })
 
-DefineSite("graz", {
-	Name = "Graz",
-	MapTemplate = "earth",
-	Position = {4190, 981},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Graz" -- from the same Slavic root as "Grad"
-	},
-	HistoricalOwners = {
-		1477, "austria", -- Gratz was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1560, "austria", -- Gratz was a part of the Habsburg monarchy in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-		1815, "austria" -- Graz was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1477, 0, "town_hall",
-		1585, 0, "university" -- University founded in Graz in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"cisleithania", "austria"}
-})
-
 DefineSite("innsbruck", {
 	Name = "Innsbruck",
 	MapTemplate = "earth",
