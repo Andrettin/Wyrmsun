@@ -11,8 +11,7 @@ vienna = {
 		#teuton = "Wien"
 	}
 	regions = {
-		austria
-		cisleithania
+		lower_austria
 	}
 	
 	history = {

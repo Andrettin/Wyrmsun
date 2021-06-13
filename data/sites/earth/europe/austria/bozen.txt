@@ -7,7 +7,6 @@ bozen = {
 		italian = "Bolzano"
 	}
 	regions = {
-		austria
-		cisleithania
+		south_tyrol
 	}
 }

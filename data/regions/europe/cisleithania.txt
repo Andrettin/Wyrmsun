@@ -1,5 +1,5 @@
 cisleithania = {
-	superregions = { europe }
+	superregions = { imperial_austria }
 	
 	history = {
 		1851 = {

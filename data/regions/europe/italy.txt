@@ -1,4 +1,4 @@
-italy = {
+italy = { #the territory of modern Italy
 	superregions = { west_and_central_europe }
 	
 	history = {

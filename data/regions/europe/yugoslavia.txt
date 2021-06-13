@@ -13,3 +13,7 @@ croatia = {
 serbia = {
 	superregions = { yugoslavia }
 }
+
+slovenia = {
+	superregions = { yugoslavia }
+}

@@ -1,3 +1,17 @@
-hungary = {
-	superregions = { west_and_central_europe }
+hungary = { #the territory of modern Hungary
+	superregions = {
+		west_and_central_europe
+		royal_hungary
+	}
+}
+
+royal_hungary = { #the territory of the 19th century Kingdom of Hungary
+	superregions = { imperial_austria }
+}
+
+burgenland = {
+	superregions = {
+		austria
+		royal_hungary
+	}
 }

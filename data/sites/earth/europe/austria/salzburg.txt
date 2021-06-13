@@ -6,8 +6,7 @@ salzburg = {
 		latin = "Iuvavum"
 	}
 	regions = {
-		austria
-		cisleithania
+		salzburg
 	}
 	
 	history = {

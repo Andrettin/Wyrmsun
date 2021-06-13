@@ -1,4 +1,8 @@
-austria = {
+imperial_austria = { #the territory of Empire of Austria between 1866-1908 (that is, from the loss of Venetia to the annexation of Bosnia)
+	superregions = { europe }
+}
+
+austria = { #the territory of the modern Republic of Austria
 	superregions = { west_and_central_europe }
 	
 	history = {
@@ -21,5 +25,81 @@ austria = {
 		1700 = {
 			population = 2500000 #Austria had a population of 2,500,000 in 1700 AD; Source: Angus Maddison, "Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD", 2010.
 		}
+	}
+}
+
+lower_austria = {
+	superregions = {
+		austria
+		cisleithania
+	}
+}
+
+upper_austria = {
+	superregions = {
+		austria
+		cisleithania
+	}
+}
+
+carinthia = {
+	superregions = {
+		austria
+		cisleithania
+	}
+}
+
+carniola = {
+	superregions = {
+		cisleithania
+		slovenia
+	}
+}
+
+salzburg = {
+	superregions = {
+		austria
+		cisleithania
+	}
+}
+
+styria = {
+	superregions = {
+		cisleithania
+	}
+}
+
+lower_styria = {
+	superregions = {
+		styria
+		austria
+	}
+}
+
+upper_styria = {
+	superregions = {
+		styria
+		slovenia
+	}
+}
+
+tyrol = {
+	superregions = {
+		austria
+		cisleithania
+	}
+}
+
+south_tyrol = {
+	superregions = {
+		cisleithania
+		italy
+	}
+}
+
+vorarlberg = {
+	superregions = {
+		austria
+		cisleithania
 	}
 }

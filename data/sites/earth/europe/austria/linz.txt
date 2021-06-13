@@ -3,8 +3,7 @@ linz = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 14.28878128930 48.31923280750 } #from Natural Earth
 	regions = {
-		austria
-		cisleithania
+		upper_austria
 	}
 	
 	history = {

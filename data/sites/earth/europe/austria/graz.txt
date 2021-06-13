@@ -3,8 +3,7 @@ graz = {
 	map_template = earth_45_60_latitude_north
 	geocoordinate = { 15.41000484080 47.07775819810 } #from Natural Earth
 	regions = {
-		austria
-		cisleithania
+		lower_styria
 	}
 	
 	history = {

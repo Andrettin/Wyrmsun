@@ -38,7 +38,7 @@ DefineSite("adelsberg", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"carniola"}
 })
 
 DefineSite("bruck", {
@@ -54,7 +54,7 @@ DefineSite("bruck", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"lower_styria"}
 })
 
 DefineSite("carnuntum", {
@@ -76,7 +76,7 @@ DefineSite("carnuntum", {
 	HistoricalUnits = {
 		170, 171, "unit-teuton-swordsman", 20000, "rome" -- a Roman army numbering 20,000 was stationed near Carnuntum in 170 AD, when it was defeated by the Marcomanni and Quadi; Source: "Ancient Warfare VII.6", 2013, p. 29.
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"lower_austria"}
 })
 
 DefineSite("cilli", {
@@ -92,7 +92,7 @@ DefineSite("cilli", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"upper_styria"}
 })
 
 DefineSite("gastein", {
@@ -108,7 +108,7 @@ DefineSite("gastein", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"salzburg"}
 })
 
 DefineSite("gossensass", {
@@ -128,7 +128,7 @@ DefineSite("gossensass", {
 	HistoricalResources = {
 		0, 0, "unit_silver_deposit", 0
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"south_tyrol"}
 })
 
 DefineSite("innsbruck", {
@@ -146,7 +146,7 @@ DefineSite("innsbruck", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"tyrol"}
 })
 
 DefineSite("klagenfurt", {
@@ -164,7 +164,7 @@ DefineSite("klagenfurt", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"carinthia"}
 })
 
 DefineSite("ljubljana", {
@@ -184,7 +184,7 @@ DefineSite("ljubljana", {
 	HistoricalBuildings = {
 		1477, 0, "town_hall"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"carniola"}
 })
 
 DefineSite("marburg", {
@@ -201,7 +201,7 @@ DefineSite("marburg", {
 	HistoricalBuildings = {
 		1477, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"upper_styria"}
 })
 
 DefineSite("villach", {
@@ -217,6 +217,6 @@ DefineSite("villach", {
 	HistoricalBuildings = {
 		1815, 0, "farm"
 	},
-	Regions = {"cisleithania", "austria"}
+	Regions = {"carinthia"}
 })
 

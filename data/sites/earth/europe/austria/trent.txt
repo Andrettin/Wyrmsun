@@ -6,8 +6,7 @@ trent = {
 		italian = "Trento"
 	}
 	regions = {
-		austria
-		cisleithania
+		south_tyrol
 	}
 	
 	history = {
