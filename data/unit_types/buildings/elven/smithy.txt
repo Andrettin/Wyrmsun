@@ -5,6 +5,8 @@ unit_elven_smithy = {
 	image_file = "buildings/elven/smithy.png"
 	frame_size = { 99 95 }
 	icon = elven_smithy
+	construction = land_building
+	animation_set = animations_building
 	ai_drops = {
 		unit_short_sword
 		unit_broad_sword
