@@ -25,40 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefinePredependency("unit-germanic-town-hall",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefinePredependency("unit-germanic-farm",
-	{"upgrade-germanic-civilization"}
-)
-
-DefinePredependency("unit-germanic-barracks",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefinePredependency("unit-germanic-carpenters-shop",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefinePredependency("unit-germanic-smithy",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefinePredependency("unit-germanic-temple",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
-DefinePredependency("unit-germanic-market",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
-)
-
 DefineDependency("unit-germanic-priest",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-frey"}
-)
-
-DefinePredependency("unit_germanic_dock",
-	{"upgrade-germanic-civilization"}, "or", {"upgrade-celtic-civilization"}
 )
 
 DefineDependency("upgrade_teutonic_civilization",
