@@ -1,5 +1,5 @@
-middle_eastern = {
-	name = "Middle Eastern"
+near_eastern = {
+	name = "Near Eastern"
 	rank = supergroup
 	species = human
 }

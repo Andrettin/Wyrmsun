@@ -1,7 +1,7 @@
 egyptian = {
 	name = "Egyptian"
 	rank = group
-	group = middle_eastern
+	group = near_eastern
 	
 	history = {
 		-1450 = {

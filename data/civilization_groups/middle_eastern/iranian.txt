@@ -1,7 +1,7 @@
 iranian = {
 	name = "Iranian"
 	rank = group
-	group = middle_eastern
+	group = near_eastern
 	
 	history = {
 		-4000 = {
