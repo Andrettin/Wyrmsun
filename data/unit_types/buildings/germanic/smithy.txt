@@ -1,0 +1,32 @@
+unit_germanic_smithy = {
+	parent = unit_template_smithy
+	civilization = germanic
+	description = "It is in these smithies that Germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."
+	image_file = "buildings/germanic/smithy.png"
+	frame_size = { 96 96 }
+	icon = icon_germanic_smithy
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_wooden_shield
+		unit_bronze_shield
+	}
+	variations = {
+		smithy = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		smithy_snow = {
+			image_file = "buildings/germanic/smithy_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+	sounds = {
+		help = basic_germanic_voices_help_town
+	}
+}

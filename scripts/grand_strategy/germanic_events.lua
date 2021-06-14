@@ -242,7 +242,7 @@ local GermanicEvents = {
 			if (
 				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -265,7 +265,7 @@ local GermanicEvents = {
 			if (
 				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
 				and SyncRand(100) < 1
 			) then
 				return true
@@ -311,7 +311,7 @@ local GermanicEvents = {
 			if (
 				GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit-germanic-smithy") -- Jutland must have a smithy
+				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
 				and GetFactionTechnology(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield")
 			) then
 				return true

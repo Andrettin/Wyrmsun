@@ -32,7 +32,7 @@ DefineButton( { Pos = 1, Icon = "icon-germanic-broad-sword",
 	Allowed = "check-single-research",
 	Key = "w", Hint = "Research Broad S~!word", Popup = "popup_research",
 	Description = "+2 Damage for swordwielders. Allows Broad Swords to be sold at the Market.",
-	ForUnit = {"unit-germanic-smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_germanic_smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
 DefineButton( { Pos = 3, Icon = "icon-germanic-bronze-shield",
@@ -40,7 +40,7 @@ DefineButton( { Pos = 3, Icon = "icon-germanic-bronze-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Bronze ~!Shield", Popup = "popup_research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Bronze Shields to be sold at the Market.",
-	ForUnit = {"unit-germanic-smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_germanic_smithy", "unit-norse-smithy", "unit-teuton-smithy", "unit-latin-smithy"}
 })
 
 DefineButton( { Pos = 1, Icon = "icon-long-spear",

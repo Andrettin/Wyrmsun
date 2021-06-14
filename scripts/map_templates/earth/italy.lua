@@ -64,13 +64,13 @@ SetMapTemplateUnit("earth", "unit-latin-farm", "mycenae", {4214, 1143}, -1350, -
 SetMapTemplateUnit("earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1150, -950)
 
 -- Castellaro del Vhò
-SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+SetMapTemplateUnit("earth", "unit_germanic_smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Fiavè
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Frattesina
-SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
+SetMapTemplateUnit("earth", "unit_germanic_smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
 
 -- Mercurago
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.

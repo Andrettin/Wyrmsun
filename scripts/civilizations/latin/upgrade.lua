@@ -54,7 +54,7 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-latin-smithy"}
+	{"apply-to", "unit_germanic_smithy"}, {"convert-to", "unit-latin-smithy"}
 )
 
 DefineModifier("upgrade-latin-civilization",

@@ -480,7 +480,7 @@ function StandardTriggers()
 					if (
 						table.getn(GetSelectedUnits()) > 0
 						and (
-							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-germanic-smithy"
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_germanic_smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-latin-smithy"
@@ -1894,7 +1894,7 @@ Units = {
 	"unit-germanic-priest",
 	"unit-germanic-transport-ship",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
-	"unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-germanic-temple", "unit-germanic-market",
+	"unit-germanic-carpenters-shop", "unit-germanic-temple", "unit-germanic-market",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",

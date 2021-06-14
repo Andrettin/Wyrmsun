@@ -800,43 +800,6 @@ DefineUnitType("unit-germanic-carpenters-shop", {
 	}
 } )
 
-DefineUnitType("unit-germanic-smithy", {
-	Name = "Smithy",
-	Parent = "unit-template-smithy",
-	Civilization = "germanic",
-	Description = "It is in these smithies that Germanic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
-	Image = {"file", "germanic/buildings/smithy.png", "size", {96, 96}},
-	Shadow = {"file", "germanic/buildings/smithy_shadow.png", "size", {96, 96}},
-	Icon = "icon-germanic-smithy",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield"},
-	Variations = {
-		{
-			"variation-id", "smithy",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "smithy-snow-winter",
-			"file", "germanic/buildings/smithy_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "semi_dry_grass",
-			"terrain", "dry_grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "smithy-snow",
-			"file", "germanic/buildings/smithy_snow.png",
-			"terrain", "snow"
-		}
-	},
-	Sounds = {
-		"help", "basic-germanic-voices-help-town"
-	}
-})
-
 DefineUnitType("unit-germanic-temple", {
 	Name = "Temple",
 	Parent = "unit-template-temple",

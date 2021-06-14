@@ -1,4 +1,4 @@
-oil_lamp = {
+research_oil_lamp = {
 	pos = 2
 	action = research_class
 	value = oil_lamp

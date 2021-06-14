@@ -42,7 +42,7 @@ DefineModifier("upgrade-anglo-saxon-civilization",
 )
 
 DefineModifier("upgrade-anglo-saxon-civilization",
-	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
+	{"apply-to", "unit_germanic_smithy"}, {"convert-to", "unit-teuton-smithy"}
 )
 
 DefineModifier("upgrade-anglo-saxon-civilization",

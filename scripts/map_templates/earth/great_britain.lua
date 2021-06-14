@@ -35,7 +35,7 @@ SetMapTemplateTileLabel("earth", "The Weald", {3843, 886})
 SetMapTemplateUnit("earth", "unit-celt-farm", "celtic-cimmerian-tribe", {3835, 851}, -2500, -900) -- a ditched field system was used during 2500-900 BC at Fengate; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 67.
 
 -- Runnymede (Surrey)
-SetMapTemplateUnit("earth", "unit-germanic-smithy", "celtic-cimmerian-tribe", {3826, 878}, -2200, -700) -- concentrated metalworking activity existed in the high status settlement at Runnymede (in Surrey) during the Bronze Age of the British Isles (c. 2200-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 54-55.
+SetMapTemplateUnit("earth", "unit_germanic_smithy", "celtic-cimmerian-tribe", {3826, 878}, -2200, -700) -- concentrated metalworking activity existed in the high status settlement at Runnymede (in Surrey) during the Bronze Age of the British Isles (c. 2200-700 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 54-55.
 
 -- Stonehenge (Wiltshire)
 -- the Stonehenge (in Wiltshire, England) experienced its first construction phase in c. 2950-2900 BC, during which the site was used for rituals; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 61-62.

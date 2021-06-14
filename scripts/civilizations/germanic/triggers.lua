@@ -31,7 +31,7 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit_germanic_smithy") >= 1) then
 				trigger_player = i
 				return true
 			end
@@ -64,7 +64,7 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 			return false
 		end
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(10) == 0 and GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit_germanic_smithy") >= 1) then
 				trigger_player = i
 				return true
 			end

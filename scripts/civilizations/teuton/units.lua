@@ -1209,15 +1209,13 @@ DefineUnitType("unit-teuton-smithy", {
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
 	Description = "It is in these smithies that Teutonic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle.",
-	Image = {"file", "teuton/buildings/smithy.png", "size", {96, 96}},
-	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
+	Image = {"file", "buildings/teutonic/smithy.png", "size", {96, 96}},
 	Icon = "icon-teuton-smithy",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
 	Variations = {
 		{
 			"variation-id", "smithy",
-			"file", "germanic/buildings/smithy.png",
-			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"file", "buildings/germanic/smithy.png",
 			"icon", "icon-germanic-smithy",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain-forbidden", "snow",
@@ -1225,8 +1223,7 @@ DefineUnitType("unit-teuton-smithy", {
 		},
 		{
 			"variation-id", "smithy-snow-winter",
-			"file", "germanic/buildings/smithy_snow.png",
-			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"file", "buildings/germanic/smithy_snow.png",
 			"icon", "icon-germanic-smithy",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "dirt",
@@ -1239,8 +1236,7 @@ DefineUnitType("unit-teuton-smithy", {
 		},
 		{
 			"variation-id", "smithy-snow",
-			"file", "germanic/buildings/smithy_snow.png",
-			"shadow-file", "germanic/buildings/smithy_shadow.png",
+			"file", "buildings/germanic/smithy_snow.png",
 			"icon", "icon-germanic-smithy",
 			"upgrade-forbidden", "upgrade-masonry",
 			"terrain", "snow"
