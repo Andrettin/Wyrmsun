@@ -488,7 +488,7 @@ DefineUniqueItem("ungelt", {
 
 DefineUniqueItem("rott", {
 	Name = "Rott",
-	Type = "unit-teuton-smithy",
+	Type = "unit_teutonic_smithy",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Rott ironmonger's shop was located in Prague."

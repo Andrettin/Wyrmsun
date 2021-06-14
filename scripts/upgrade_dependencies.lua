@@ -98,7 +98,7 @@ DefineDependency("unit-cheese",
 DefineDependency("unit-short-sword",
 	{"unit_germanic_smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit_elven_smithy"}
 )
@@ -106,18 +106,18 @@ DefineDependency("unit-short-sword",
 DefineDependency("unit-broad-sword",
 	{"unit_germanic_smithy", "upgrade-germanic-broad-sword"},
 	"or", {"unit-norse-smithy", "upgrade-germanic-broad-sword"},
-	"or", {"unit-teuton-smithy", "upgrade-germanic-broad-sword"},
+	"or", {"unit_teutonic_smithy", "upgrade-germanic-broad-sword"},
 	"or", {"unit-latin-smithy", "upgrade-germanic-broad-sword"}
 )
 
 DefineDependency("unit-spatha",
 	{"unit-norse-smithy", "upgrade-teuton-spatha"},
-	"or", {"unit-teuton-smithy", "upgrade-teuton-spatha"},
+	"or", {"unit_teutonic_smithy", "upgrade-teuton-spatha"},
 	"or", {"unit-latin-smithy", "upgrade-teuton-spatha"}
 )
 
 DefineDependency("unit-frankish-spatha",
-	{"unit-teuton-smithy", "upgrade-frank-spatha"}
+	{"unit_teutonic_smithy", "upgrade-frank-spatha"}
 )
 
 DefineDependency("unit-goblin-short-sword",
@@ -158,7 +158,7 @@ DefineDependency("unit-hammer",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 
@@ -174,7 +174,7 @@ DefineDependency("unit-mining-pick",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 
@@ -227,14 +227,14 @@ DefineDependency("unit-hand-cannon",
 	"or", {"unit-goblin-smithy", "upgrade_gunpowder"},
 	"or", {"unit-latin-smithy", "upgrade_gunpowder"},
 	"or", {"unit-norse-smithy", "upgrade_gunpowder"},
-	"or", {"unit-teuton-smithy", "upgrade_gunpowder"},
+	"or", {"unit_teutonic_smithy", "upgrade_gunpowder"},
 	"or", {"unit_elven_smithy", "upgrade_gunpowder"}
 )
 
 DefineDependency("unit-wooden-shield",
 	{"unit_germanic_smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit_elven_smithy"}
 )
@@ -242,12 +242,12 @@ DefineDependency("unit-wooden-shield",
 DefineDependency("unit-bronze-shield",
 	{"unit_germanic_smithy", "upgrade-germanic-bronze-shield"},
 	"or", {"unit-norse-smithy", "upgrade-germanic-bronze-shield"},
-	"or", {"unit-teuton-smithy", "upgrade-germanic-bronze-shield"},
+	"or", {"unit_teutonic_smithy", "upgrade-germanic-bronze-shield"},
 	"or", {"unit-latin-smithy", "upgrade-germanic-bronze-shield"}
 )
 
 DefineDependency("unit-iron-shield",
-	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"},
+	{"unit_teutonic_smithy", "upgrade-teuton-iron-shield"},
 	"or", {"unit-norse-smithy", "upgrade-teuton-iron-shield"},
 	"or", {"unit-latin-smithy", "upgrade-teuton-iron-shield"}
 )
@@ -265,7 +265,7 @@ DefineDependency("unit-goblin-embossed-shield",
 )
 
 DefineDependency("unit-kite-shield",
-	{"unit-teuton-smithy", "upgrade-teuton-iron-shield"},
+	{"unit_teutonic_smithy", "upgrade-teuton-iron-shield"},
 	"or", {"unit-norse-smithy", "upgrade-teuton-iron-shield"}
 )
 
@@ -302,7 +302,7 @@ DefineDependency("unit-horn",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 
@@ -333,7 +333,7 @@ DefineDependency("unit-crown",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 
@@ -344,7 +344,7 @@ DefineDependency("unit-amulet",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 
@@ -355,7 +355,7 @@ DefineDependency("unit-ring",
 	"or", {"unit-goblin-smithy"},
 	"or", {"unit-latin-smithy"},
 	"or", {"unit-norse-smithy"},
-	"or", {"unit-teuton-smithy"},
+	"or", {"unit_teutonic_smithy"},
 	"or", {"unit_elven_smithy"}
 )
 

@@ -152,7 +152,7 @@ DefineModifier("upgrade-teuton-coinage",
 	{"improve-production", "copper", 10},
 	{"improve-production", "silver", 10},
 	{"improve-production", "gold", 10},
-	{"apply-to", "unit-teuton-smithy"},
+	{"apply-to", "unit_teutonic_smithy"},
 	{"apply-to", "unit-latin-smithy"},
 	{"apply-to", "unit-norse-smithy"}
 )
@@ -194,7 +194,7 @@ DefineModifier("upgrade_teutonic_civilization",
 )
 
 DefineModifier("upgrade_teutonic_civilization",
-	{"apply-to", "unit_germanic_smithy"}, {"convert-to", "unit-teuton-smithy"}
+	{"apply-to", "unit_germanic_smithy"}, {"convert-to", "unit_teutonic_smithy"}
 )
 
 DefineModifier("upgrade_teutonic_civilization",

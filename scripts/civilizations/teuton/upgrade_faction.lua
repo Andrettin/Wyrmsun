@@ -181,7 +181,7 @@ DefineModifier("upgrade-faction-netherlands",
 	{"improve-production", "copper", 5},
 	{"improve-production", "silver", 5},
 	{"improve-production", "gold", 5},
-	{"apply-to", "unit-teuton-smithy"}
+	{"apply-to", "unit_teutonic_smithy"}
 )
 
 DefineModifier("upgrade-faction-overijssel",

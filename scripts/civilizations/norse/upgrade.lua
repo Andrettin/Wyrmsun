@@ -62,7 +62,7 @@ DefineModifier("upgrade_norse_civilization",
 )
 
 DefineModifier("upgrade_norse_civilization",
-	{"apply-to", "unit-teuton-smithy"}, {"convert-to", "unit-norse-smithy"}
+	{"apply-to", "unit_teutonic_smithy"}, {"convert-to", "unit-norse-smithy"}
 )
 
 DefineModifier("upgrade_norse_civilization",

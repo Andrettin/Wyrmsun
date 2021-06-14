@@ -482,7 +482,7 @@ function StandardTriggers()
 						and (
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_germanic_smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-smithy"
-							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-smithy"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_teutonic_smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-latin-smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-smithy"
@@ -1918,7 +1918,7 @@ Units = {
 	"unit-norse-longship",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",
 	"unit-teuton-farm", "unit-teuton-barracks",
-	"unit-teuton-lumber-mill", "unit-teuton-smithy", "unit-teuton-masons-shop",
+	"unit-teuton-lumber-mill", "unit-teuton-masons-shop",
 	"unit-teuton-stables", "unit-teuton-temple", "unit-teuton-market", "unit-teuton-university",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower", "unit-teuton-catapult-tower",
 	"unit-teuton-wall",

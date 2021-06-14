@@ -1,0 +1,56 @@
+unit_teutonic_smithy = {
+	parent = unit_template_smithy
+	civilization = teutonic
+	description = "It is in these smithies that Teutonic craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."
+	image_file = "buildings/teutonic/smithy.png"
+	frame_size = { 96 96 }
+	icon = icon_teuton_smithy
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_spatha
+		unit_frankish_spatha
+		unit_hand_cannon
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_kite_shield
+	}
+	variations = {
+		smithy = {
+			image_file = "buildings/germanic/smithy.png"
+			conditions = {
+				not = {
+					upgrade_class = masonry
+				}
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		smithy_snow = {
+			image_file = "buildings/germanic/smithy_snow.png"
+			conditions = {
+				not = {
+					upgrade_class = masonry
+				}
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+		smithy = {
+			conditions = {
+				upgrade_class = masonry
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		smithy_snow = {
+			image_file = "buildings/teutonic/smithy_snow.png"
+			conditions = {
+				upgrade_class = masonry
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}

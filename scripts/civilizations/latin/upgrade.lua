@@ -58,7 +58,7 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-teuton-smithy"}, {"convert-to", "unit-latin-smithy"}
+	{"apply-to", "unit_teutonic_smithy"}, {"convert-to", "unit-latin-smithy"}
 )
 
 DefineModifier("upgrade-latin-civilization",

@@ -70,7 +70,7 @@ DefineButton( { Pos = 2, Icon = "icon-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = "Research S~!patha", Popup = "popup_research",
 	Description = "+2 Damage for swordwielders. Allows Spathas to be sold at the Market.",
-	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_teutonic_smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 4, Icon = "saxon_iron_shield",
@@ -78,7 +78,7 @@ DefineButton( { Pos = 4, Icon = "saxon_iron_shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = "Research Iron ~!Shield", Popup = "popup_research",
 	Description = "+2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market.",
-	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_teutonic_smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 5, Icon = "icon-catapult-projectile-2",
@@ -86,7 +86,7 @@ DefineButton( { Pos = 5, Icon = "icon-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Granite ~!Catapult Projectile", Popup = "popup_research",
 	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
-	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_teutonic_smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 6, Icon = "icon-catapult-projectile-3",
@@ -94,7 +94,7 @@ DefineButton( { Pos = 6, Icon = "icon-catapult-projectile-3",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Research Metal ~!Catapult Projectile", Popup = "popup_research",
 	Description = "+12 Damage for Catapults, +5 Damage for Longships.",
-	ForUnit = {"unit-teuton-smithy", "unit-norse-smithy", "unit-latin-smithy"}
+	ForUnit = {"unit_teutonic_smithy", "unit-norse-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 2, Icon = "icon-pike",
