@@ -128,7 +128,10 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Credits"
 		hotkey: "i"
-		lua_command: "RunShowCreditsMenu()"
+		
+		onClicked: {
+			menu_stack.push("CreditsMenu.qml")
+		}
 	}
 	
 	LargeButton {
