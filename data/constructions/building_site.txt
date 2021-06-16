@@ -1,0 +1,53 @@
+building_site = {
+	image_file = "buildings/sites/building_construction_site.png"
+	frame_size = { 96 96 }
+	frames = {
+		{
+			percent = 0
+			image_type = construction
+			frame = 0
+		}
+		{
+			percent = 16
+			image_type = construction
+			frame = 1
+		}
+		{
+			percent = 33
+			image_type = construction
+			frame = 2
+		}
+		{
+			percent = 50
+			image_type = main
+			frame = 1
+		}
+	}
+}
+
+building_site_active = {
+	image_file = "buildings/sites/building_construction_site.png"
+	frame_size = { 96 96 }
+	frames = {
+		{
+			percent = 0
+			image_type = construction
+			frame = 0
+		}
+		{
+			percent = 16
+			image_type = construction
+			frame = 1
+		}
+		{
+			percent = 33
+			image_type = construction
+			frame = 2
+		}
+		{
+			percent = 50
+			image_type = main
+			frame = 2
+		}
+	}
+}

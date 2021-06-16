@@ -1,0 +1,11 @@
+unit_building_site = {
+	name = "Building Site"
+	parent = unit_template_building_site
+	#description = "A prime location for constructing a building."
+	image_file = "buildings/sites/building_site.png"
+	frame_size = { 96 96 }
+	icon = settlement_site
+	tile_size = { 3 3 }
+	box_size = { 95 95 }
+	corpse_type = unit_destroyed_3x3_place
+}
