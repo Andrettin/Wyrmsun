@@ -624,7 +624,8 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 			"objective-string", "Destroy the Hlesings",
 			"faction", "hlesing-tribe"
 		}
-	}
+	},
+	Competitive = true
 })
 
 DefineQuest("slay_geirrod", {
