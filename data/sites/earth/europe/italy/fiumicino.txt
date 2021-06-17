@@ -1,0 +1,8 @@
+fiumicino = {
+	name = "Fiumicino"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { 12.23545347 41.75583333 } #from Natural Earth (ports)
+	regions = {
+		italy
+	}
+}
