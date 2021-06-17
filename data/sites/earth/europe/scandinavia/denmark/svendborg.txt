@@ -1,0 +1,8 @@
+svendborg = {
+	name = "Svendborg"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 10.61665401070 55.07042278960 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+}

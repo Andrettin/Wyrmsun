@@ -1,0 +1,8 @@
+odense = {
+	name = "Odense"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 10.38333491890 55.40037680980 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+}

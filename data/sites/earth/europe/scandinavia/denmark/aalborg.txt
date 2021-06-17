@@ -1,0 +1,8 @@
+aalborg = {
+	name = "Aalborg"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 9.91659338241 57.03371380530 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+}

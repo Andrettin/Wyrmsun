@@ -1,0 +1,8 @@
+roskilde = {
+	name = "Roskilde"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { 12.08333451200 55.64997397780 } #from Natural Earth
+	regions = {
+		scandinavia
+	}
+}

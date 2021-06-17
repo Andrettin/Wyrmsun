@@ -6,7 +6,7 @@ flensburg = {
 		angle_tribe
 	}
 	regions = {
-		scandinavia
+		germany
 	}
 	
 	history = {
