@@ -3,4 +3,8 @@ engineering = {
 	category = mechanization
 	age = iron_age
 	tech_tree_parent_unit_class = university
+	
+	conditions = {
+		unit_class = university #necessary to make the tech tree be displayed properly
+	}
 }

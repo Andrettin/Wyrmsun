@@ -22,12 +22,6 @@ compass = {
 	age = gunpowder_age
 	tech_tree_parent_upgrade_class = celestial_navigation
 	
-	preconditions = {
-		not = {
-			civilization = germanic
-		}
-	}
-	
 	conditions = {
 		upgrade_class = celestial_navigation
 		upgrade_class = engineering
