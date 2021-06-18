@@ -2,7 +2,7 @@ novgorod = {
 	name = "Novgorod"
 	civilization = slavic
 	type = polity
-	color = brown
+	color = burgundy
 	default_tier = duchy
 	default_government_type = republic
 }
