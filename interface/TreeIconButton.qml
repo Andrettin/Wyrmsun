@@ -82,10 +82,10 @@ Item {
 	Rectangle {
 		id: child_line
 		width: 2 * wyrmgus.defines.scale_factor
-		height: vertical_padding + (parent.parent_button_y == parent.button_y && parent_line.height < 0 ? parent_line.height : 0)
+		height: vertical_padding + (parent.x == parent.parent_x && parent_line.height < 0 ? parent_line.height : 0)
 		color: "gray"
 		x: parent.width / 2 - (width / 2)
-		y: 0 - (parent.parent_button_y == parent.button_y && parent_line.height < 0 ? parent_line.height : 0)
+		y: 0 - (parent.x == parent.parent_x && parent_line.height < 0 ? parent_line.height : 0)
 		visible: parent.has_tree_parent && parent.tree_line_visible
 	}
 	
