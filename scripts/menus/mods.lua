@@ -354,17 +354,3 @@ function SortModList(mod_list)
 	
 	return mod_list
 end
-
-function ReloadMods() -- used after the editor runs, to reload mods made in the map editor
-	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			DisableMod(wyr.preferences.EnabledMods[i])
-		end
-	end
-
-	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			Load(wyr.preferences.EnabledMods[i])
-		end
-	end
-end

@@ -83,7 +83,7 @@ function GetUnitGraphics()
 end
 
 --  Menu for new map to edit
-local function RunEditorNewMapMenu()
+function RunEditorNewMapMenu()
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -132,16 +132,14 @@ local function RunEditorNewMapMenu()
 			end
 			menu:stop()
 			StartEditor(nil, false)
-			ReloadMods()
-			RunEditorMenu()
 		end
 	end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); RunEditorMenu() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); end)
 	return menu:run()
 end
 
 -- Menu for loading map to edit
-local function RunEditorLoadMapMenu(is_mod)
+function RunEditorLoadMapMenu()
 	local menu = WarMenu()
 	local offx = (Video.Width - 640 * get_scale_factor()) / 2
 	local offy = (Video.Height - 480 * get_scale_factor()) / 2
@@ -153,32 +151,17 @@ local function RunEditorLoadMapMenu(is_mod)
 	
 	-- update label content
 	local function MapChanged()
-		if not (is_mod) then
-			labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
-			labelDescription:adjustSize()
+		labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
+		labelDescription:adjustSize()
 
-			labelMapName:setCaption(_("File:") .. " " .. string.sub(mapname, 6))
-			labelMapName:adjustSize()
+		labelMapName:setCaption(_("File:") .. " " .. string.sub(mapname, 6))
+		labelMapName:adjustSize()
 		
-			labelNbPlayer:setCaption(_("Players:") .. " " .. mapinfo.nplayers)
-			labelNbPlayer:adjustSize()
+		labelNbPlayer:setCaption(_("Players:") .. " " .. mapinfo.nplayers)
+		labelNbPlayer:adjustSize()
 
-			labelMapSize:setCaption(_("Size:") .. " " .. mapinfo.w .. " x " .. mapinfo.h)
-			labelMapSize:adjustSize()
-		else
-			if (modname ~= "") then
-				labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
-				labelDescription:adjustSize()
-
-				labelMapName:setCaption(_("File:") .. " " .. string.sub(modname, 6))
-				edit_button:setEnabled(true)
-			else
-				labelDescription:setCaption("")
-				labelMapName:setCaption("")
-				edit_button:setEnabled(false)
-			end
-			labelMapName:adjustSize()
-		end
+		labelMapSize:setCaption(_("Size:") .. " " .. mapinfo.w .. " x " .. mapinfo.h)
+		labelMapSize:adjustSize()
 	end
 
 	labelDescription = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
@@ -186,83 +169,30 @@ local function RunEditorLoadMapMenu(is_mod)
 	labelNbPlayer = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
 	labelMapSize = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
 
-	local select_button_string
-	if not (is_mod) then
-		select_button_string = _("~!Select Map")
-	else
-		select_button_string = _("~!Select Mod")
-	end
+	local select_button_string = _("~!Select Map")
 	menu:addFullButton(select_button_string, "s", offx + 208 * get_scale_factor(), offy + (104 + 36 * 4) * get_scale_factor(),
 		function()
-			if not (is_mod) then
-				local oldmapname = mapname
-				RunSelectScenarioMenu(is_mod)
-				if (mapname ~= oldmapname) then
-					GetMapInfo(mapname)
-					MapChanged()
-				end
-			else
-				local oldmapname = modname
-				RunSelectScenarioMenu(is_mod)
-				if (modname ~= oldmapname and modname ~= "") then
-					GetMapInfo(modname)
-					MapChanged()
-				end
+			local oldmapname = mapname
+			RunSelectScenarioMenu()
+			if (mapname ~= oldmapname) then
+				GetMapInfo(mapname)
+				MapChanged()
 			end
 		end)
 
-	if not (is_mod) then
-		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function()
-			menu:stop();
-			StartEditor(mapname, false);
-			ReloadMods();
-			RunEditorMenu()
-		end)
-	else
-		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function() menu:stop();
-			CMap:get():get_info().MapWidth = 32
-			CMap:get():get_info().MapHeight = 32
-			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
-			DisableMod(tostring(string.gsub(modname, ".smp", ".sms"))) -- to prevent a mod's changes being applied twice if it is both active and is the mod currently being loaded
-			StartEditor(modname, true);
-			ReloadMods();
-			RunEditorMenu()
-		end)
-	end
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); RunEditorMenu() end)
+	edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function()
+		menu:stop();
+		StartEditor(mapname, false);
+	end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); end)
 
-	if not (is_mod) then
-		GetMapInfo(mapname)
-	else
-		if (modname ~= "") then
-			GetMapInfo(modname)
-		end
-	end
+	GetMapInfo(mapname)
 	MapChanged()
-	return menu:run()
-end
-
--- root of the editor menu
-function RunEditorMenu()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-
-	menu:addLabel(_("~<Map Editor~>"), offx + 320 * get_scale_factor(), offy + (212 - 25) * get_scale_factor())
-	local buttonNewMap =
-	menu:addFullButton(_("~!New Map"), "n", offx + 208 * get_scale_factor(), offy + (104 + 36*3) * get_scale_factor(), function() RunEditorNewMapMenu(); menu:stop() end)
-	menu:addFullButton(_("~!Load Map"), "l", offx + 208 * get_scale_factor(), offy + (104 + 36*4) * get_scale_factor(), function() RunEditorLoadMapMenu(false); menu:stop() end)
-	menu:addFullButton(_("Load ~!Mod"), "m", offx + 208 * get_scale_factor(), offy + (104 + 36*5) * get_scale_factor(), function() RunEditorLoadMapMenu(true); menu:stop() end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36*6) * get_scale_factor(), function() menu:stop() end)
 	return menu:run()
 end
 
 function RunEditorSaveMap(browser, name, menu, save_as_mod)
 	local saved = EditorSaveMap(browser.path .. name, save_as_mod)
-
-	ReloadMods() -- reload mods, in case an activated mod is being overwritten
 	
 	if (saved == -1) then
 		local confirm = WarGameMenu(panel(3))
@@ -398,7 +328,6 @@ function RunEditorLoadMenu()
 --  if (buttonStatut == 1) then
 --    EditorLoadMap(mapname)
 --    StartEditor(mapname, false)
---	  ReloadMods()
 --  end
 --]]
 end

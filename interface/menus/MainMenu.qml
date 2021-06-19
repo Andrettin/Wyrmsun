@@ -95,7 +95,10 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Map Editor"
 		hotkey: "e"
-		lua_command: "RunEditorMenu(); main_menu:stop(1);"
+		
+		onClicked: {
+			menu_stack.push("MapEditorMenu.qml")
+		}
 	}
 	
 	LargeButton {

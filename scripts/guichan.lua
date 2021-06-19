@@ -684,29 +684,17 @@ function GetMapInfo(mapname)
 	PresentMap = OldPresentMap
 end
 
-function RunSelectScenarioMenu(is_mod)
+function RunSelectScenarioMenu()
 	buttonStatut = 0
 	local menu = WarGameMenu(panel(5))
 	menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
 	menu:setDrawMenusUnder(true)
 
 	local browser
-	if not (is_mod) then
-		menu:addLabel(_("Select Map"), 176 * get_scale_factor(), 8 * get_scale_factor())
+	menu:addLabel(_("Select Map"), 176 * get_scale_factor(), 8 * get_scale_factor())
 		
-		browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
-			24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), mapname)
-	else
-		menu:addLabel(_("Select Mod"), 176 * get_scale_factor(), 8 * get_scale_factor())
-
-		if (modname ~= "") then
-			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), modname)
-		else
-			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor())
-		end
-	end
+	browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
+		24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), mapname)
 
 
 	local l = menu:addLabel(browser:getSelectedItem(), 24 * get_scale_factor(), 208 * get_scale_factor(), Fonts["game"], false)
@@ -725,33 +713,27 @@ function RunSelectScenarioMenu(is_mod)
 				return
 			end
 			buttonStatut = 1
-			if not (is_mod) then
-				mapname = browser.path .. cap
-			else
-				modname = browser.path .. cap
-			end
+			mapname = browser.path .. cap
 			menu:stop()
 		end)
 	menu:addHalfButton(_("~!Cancel"), "c", 198 * get_scale_factor(), 318 * get_scale_factor(),
 		function() buttonStatut = 2; menu:stop() end)
 	
-	if not (is_mod) then
-		local sortByCheckBox
-		sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) * get_scale_factor() / 2, (352 - 16 - 27 - 25) * get_scale_factor(),
-		function()
-			wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
-			SavePreferences()
+	local sortByCheckBox
+	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) * get_scale_factor() / 2, (352 - 16 - 27 - 25) * get_scale_factor(),
+	function()
+		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+		SavePreferences()
 
-			if (wyr.preferences.SortSaveGamesByTime) then
-				browser:sortByTime()
-			else
-				browser:sortByName()
-			end
-		end)
-		sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
 		if (wyr.preferences.SortSaveGamesByTime) then
 			browser:sortByTime()
+		else
+			browser:sortByName()
 		end
+	end)
+	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
+	if (wyr.preferences.SortSaveGamesByTime) then
+		browser:sortByTime()
 	end
 	
 	menu:run()

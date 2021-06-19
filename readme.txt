@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Fixed crash which occurred when pressing the "OK" button in the player properties dialog.
 - Fixed issue which caused solid overlay tiles to not be displayed in the editor.
+- Removed the old mod creation tools from the map editor, due to the amount of maintenance they required, as well as their reliance on outdated parts of the engine. A mod creation user interface may come back in some form in the future.
 
 * Miscellaneous
 - Removed the No Randomness and No Day/Night Cycle options.
