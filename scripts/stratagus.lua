@@ -44,12 +44,6 @@ wyrmsun.Licence = "GPL 2.0"
 -------------------------------------------------------------------------------
 
 MapDirectories = {"maps/"}
-ModDirectories = {"mods/"}
-
-if (table.getn(ListDirsInDirectory("../../workshop/content/370070/")) > 0) then
-	table.insert(ModDirectories, "../../workshop/content/370070/")
-end
-
 
 LoadedGame = false
 
