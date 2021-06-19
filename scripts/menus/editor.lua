@@ -123,7 +123,7 @@ function RunEditorSaveMenu()
 	t = menu:addTextInputField("map.smp",
 		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
 
-	browser = menu:addBrowser(MapDirectories[1], ".smp$",
+	browser = menu:addBrowser(get_user_maps_path(), ".smp$",
 		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 
 	local function cb(s)
