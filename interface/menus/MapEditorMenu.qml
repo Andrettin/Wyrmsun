@@ -10,8 +10,7 @@ MenuBase {
 	LargeButton {
 		id: new_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.bottom: load_map_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "New Map"
 		hotkey: "n"
 		
@@ -23,10 +22,10 @@ MenuBase {
 	LargeButton {
 		id: load_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: new_map_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Load Map"
 		hotkey: "l"
-		lua_command: "RunEditorLoadMapMenu();"
 		
 		onClicked: {
 			menu_stack.push("LoadMapMenu.qml")

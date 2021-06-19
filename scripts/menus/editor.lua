@@ -80,56 +80,6 @@ function GetUnitGraphics()
 	return unit_graphics_list
 end
 
--- Menu for loading map to edit
-function RunEditorLoadMapMenu()
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	local labelMapName
-	local labelDescription
-	local labelNbPlayer
-	local labelMapSize
-	local edit_button
-	
-	-- update label content
-	local function MapChanged()
-		labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
-		labelDescription:adjustSize()
-		
-		labelMapName:setCaption(_("File:") .. " " .. string.sub(mapname, 6))
-		labelMapName:adjustSize()
-		
-		labelNbPlayer:setCaption(_("Players:") .. " " .. mapinfo.nplayers)
-		labelNbPlayer:adjustSize()
-		
-		labelMapSize:setCaption(_("Size:") .. " " .. mapinfo.w .. " x " .. mapinfo.h)
-		labelMapSize:adjustSize()
-	end
-	
-	labelDescription = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
-	labelMapName = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
-	labelNbPlayer = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
-	labelMapSize = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
-	
-	menu:addFullButton(_("~!Select Map"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36 * 4) * get_scale_factor(),
-		function()
-			local oldmapname = mapname
-			if (mapname ~= oldmapname) then
-				GetMapInfo(mapname)
-				MapChanged()
-			end
-		end)
-	
-	edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function()
-		menu:stop();
-		StartEditor(mapname, false);
-	end)
-	
-	GetMapInfo(mapname)
-	MapChanged()
-	return menu:run()
-end
-
 function RunEditorSaveMap(browser, name, menu, save_as_mod)
 	local saved = EditorSaveMap(browser.path .. name, save_as_mod)
 	
