@@ -89,6 +89,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the tech tree level dropdowns from the custom game menu.
 - Persistent data (e.g. hero levels or quest completion) will no longer be altered during a game if a cheat was used.
 
+* Mods
+- Removed the mods submenu, as it only supported mods in an old format.
+
 * Quests
 - Added a couple of side-quests which only occur on certain days of the week in the real world with the objective of acquiring the upgrade of the corresponding deity, for the Norse and Anglo-Saxon civilizations. For instance, the Norse "Tysdag" quest only occurs on a Tuesday, and has the objective of choosing the Tyr deity.
 - Added two side-quests for the Germanic civilization to build smithies.

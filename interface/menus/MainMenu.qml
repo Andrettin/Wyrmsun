@@ -65,8 +65,7 @@ MenuBase {
 	LargeButton {
 		id: achievements_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.bottom: options_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Achievements"
 		hotkey: "a"
 		
@@ -78,8 +77,8 @@ MenuBase {
 	LargeButton {
 		id: options_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.verticalCenter: parent.verticalCenter
-		anchors.verticalCenterOffset: 14 * wyrmgus.defines.scale_factor
+		anchors.top: achievements_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Options"
 		hotkey: "o"
 		
@@ -102,19 +101,9 @@ MenuBase {
 	}
 	
 	LargeButton {
-		id: mods_button
-		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: map_editor_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		text: "Mods"
-		hotkey: "d"
-		lua_command: "RunModsMenu(0); main_menu:stop(1);"
-	}
-	
-	LargeButton {
 		id: encyclopedia_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: mods_button.bottom
+		anchors.top: map_editor_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
