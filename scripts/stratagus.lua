@@ -1427,14 +1427,7 @@ function PersistencyUpdates()
 		wyr.preferences.TechnologyAcquired = nil
 		SavePreferences()
 	end
-	
-	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if not (CanAccessFile(wyr.preferences.EnabledMods[i])) then
-			wyr.preferences.EnabledMods[i] = nil
-		end
-		SavePreferences()
-	end
-	
+		
 	if (wyr.preferences.Heroes ~= nil) then
 		for key, value in pairs(wyr.preferences.Heroes) do
 			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")
@@ -1539,35 +1532,6 @@ function LoadData()
 		CMod:SetCurrentModPath("dlcs/" .. f .. "/")
 		if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
 			LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
-		end
-	end
-	
-	for i = 1, table.getn(wyr.preferences.EnabledMods) do
-		if not (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
-			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
-			Load(wyr.preferences.EnabledMods[i] .. "info.lua")
-			
-			local has_required_dependencies = true
-			if (ModDependencies ~= nil) then
-				for j = 1, table.getn(ModDependencies) do
-					local has_dependency = false
-					for k = 1, table.getn(wyr.preferences.EnabledMods) do
-						if (string.find(wyr.preferences.EnabledMods[k], "/" .. ModDependencies[j] .. "/", - (string.len(ModDependencies[j]) + 2))) then
-							has_dependency = true
-							break
-						end
-					end
-					if (has_dependency == false) then
-						has_required_dependencies = false
-						break
-					end
-				end
-			end
-			if (has_required_dependencies) then
-				if (CanAccessFile(CMod:GetCurrentModPath() .. "data/")) then
-					LoadDataDirectories(CMod:GetCurrentModPath() .. "data/")
-				end
-			end
 		end
 	end
 	
@@ -1826,7 +1790,6 @@ local defaultPreferences = {
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
-	EnabledMods = {},
 	SortSaveGamesByTime = false
 }
 

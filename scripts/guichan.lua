@@ -739,7 +739,6 @@ load_database(false)
 
 -- load DLCs and mods now
 LoadDLCs()
-LoadMods()
 
 Load("scripts/language_words.lua")
 Load("scripts/map_template_data.lua")

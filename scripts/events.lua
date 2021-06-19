@@ -28,17 +28,6 @@
 function EventTriggers()
 	Load("scripts/triggers.lua")
 
-	-- load a triggers.lua file in an enabled mod, if present
-	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms") == nil) then
-			CMod:SetCurrentModPath(wyr.preferences.EnabledMods[i])
-			if (CanAccessFile(CMod:GetCurrentModPath() .. "scripts/triggers.lua")) then
-				Load(CMod:GetCurrentModPath() .. "scripts/triggers.lua")
-			end
-			CMod:SetCurrentModPath("")
-		end
-	end
-
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
