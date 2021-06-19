@@ -761,12 +761,12 @@ main_menu = nil
 
 function BuildProgramStartMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-
+	
 	local menu = WarMenu()
 	main_menu = menu
-
+	
 	PersistencyUpdates()
-
+	
 	if (CanAccessFile("wyr/quests.lua")) then
 		Load("wyr/quests.lua") -- load the quests here, so that the achievement unlocked dialogs can appear properly
 		SaveQuestCompletion()
@@ -848,16 +848,8 @@ if (is_test_run()) then
 	return
 end
 
-if (Editor.Running == EditorCommandLine) then
-	if (CliMapName and CliMapName ~= "") then
-		StartEditor(CliMapName, false)
-	else
-		RunEditorMenu()
-	end
+if (CliMapName and CliMapName ~= "") then
+	RunMap(CliMapName)
 else
-	if (CliMapName and CliMapName ~= "") then
-		RunMap(CliMapName)
-	else
-		RunProgramStartMenu()
-	end
+	RunProgramStartMenu()
 end

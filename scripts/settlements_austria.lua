@@ -219,4 +219,3 @@ DefineSite("villach", {
 	},
 	Regions = {"carinthia"}
 })
-
