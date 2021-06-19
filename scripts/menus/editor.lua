@@ -95,39 +95,36 @@ function RunEditorLoadMapMenu()
 	local function MapChanged()
 		labelDescription:setCaption(_("Name:") .. " " .. _(mapinfo.description))
 		labelDescription:adjustSize()
-
+		
 		labelMapName:setCaption(_("File:") .. " " .. string.sub(mapname, 6))
 		labelMapName:adjustSize()
 		
 		labelNbPlayer:setCaption(_("Players:") .. " " .. mapinfo.nplayers)
 		labelNbPlayer:adjustSize()
-
+		
 		labelMapSize:setCaption(_("Size:") .. " " .. mapinfo.w .. " x " .. mapinfo.h)
 		labelMapSize:adjustSize()
 	end
-
+	
 	labelDescription = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
 	labelMapName = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 36 * 1) * get_scale_factor(), Fonts["game"], false)
 	labelNbPlayer = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
 	labelMapSize = menu:addLabel("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
-
-	local select_button_string = _("~!Select Map")
-	menu:addFullButton(select_button_string, "s", offx + 208 * get_scale_factor(), offy + (104 + 36 * 4) * get_scale_factor(),
+	
+	menu:addFullButton(_("~!Select Map"), "s", offx + 208 * get_scale_factor(), offy + (104 + 36 * 4) * get_scale_factor(),
 		function()
 			local oldmapname = mapname
-			RunSelectScenarioMenu()
 			if (mapname ~= oldmapname) then
 				GetMapInfo(mapname)
 				MapChanged()
 			end
 		end)
-
+	
 	edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(), function()
 		menu:stop();
 		StartEditor(mapname, false);
 	end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); end)
-
+	
 	GetMapInfo(mapname)
 	MapChanged()
 	return menu:run()
@@ -258,20 +255,6 @@ function RunEditorSaveMenu(save_as_mod)
 	end
 
 	menu:run(false)
-end
-
---
---  Load a other map to edit.
---
-function RunEditorLoadMenu()
--- TODO : fill this function correctly
---[[
---  RunSelectScenarioMenu()
---  if (buttonStatut == 1) then
---    EditorLoadMap(mapname)
---    StartEditor(mapname, false)
---  end
---]]
 end
 
 --
@@ -746,8 +729,6 @@ function RunInEditorMenu()
 	menu:addLabel(_("Editor Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
 	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(false); end)
---	local buttonEditorLoad = -- To be removed when enabled.
---	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
 	menu:addFullButton(_("Save as ~!Mod"), "m", 16 * get_scale_factor(), (40 + 35 * 1) * get_scale_factor(), function() RunEditorSaveMenu(true); end)
 	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16 * get_scale_factor(), (40 + 35 * 2) * get_scale_factor(), RunEditorMapProperties)
 	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(), RunEditorPlayerProperties)

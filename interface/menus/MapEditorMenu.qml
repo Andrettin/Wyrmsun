@@ -27,6 +27,10 @@ MenuBase {
 		text: "Load Map"
 		hotkey: "l"
 		lua_command: "RunEditorLoadMapMenu();"
+		
+		onClicked: {
+			menu_stack.push("LoadMapMenu.qml")
+		}
 	}
 	
 	PreviousMenuButton {

@@ -47,8 +47,6 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
     RunEditorPlayerProperties()
   elseif (key == "s" and alt) then -- Save
     RunEditorSaveMenu()
-  elseif (key == "l" and alt) then -- Load
-    RunEditorLoadMenu()
   elseif (key == "q" and (ctrl)) then -- Quit to menu
     RunQuitToMenuConfirmMenu()
   elseif (key == "x" and (ctrl or alt)) then -- Exit

@@ -684,61 +684,6 @@ function GetMapInfo(mapname)
 	PresentMap = OldPresentMap
 end
 
-function RunSelectScenarioMenu()
-	buttonStatut = 0
-	local menu = WarGameMenu(panel(5))
-	menu:resize(352 * get_scale_factor(), 352 * get_scale_factor())
-	menu:setDrawMenusUnder(true)
-
-	local browser
-	menu:addLabel(_("Select Map"), 176 * get_scale_factor(), 8 * get_scale_factor())
-		
-	browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
-		24 * get_scale_factor(), 88 * get_scale_factor(), 300 * get_scale_factor(), 108 * get_scale_factor(), mapname)
-
-
-	local l = menu:addLabel(browser:getSelectedItem(), 24 * get_scale_factor(), 208 * get_scale_factor(), Fonts["game"], false)
-
-	local function cb(s)
-		l:setCaption(browser:getSelectedItem())
-		l:adjustSize()
-	end
-	browser:setActionCallback(cb)
-
-	menu:addHalfButton(_("~!OK"), "o", 48 * get_scale_factor(), 318 * get_scale_factor(),
-		function()
-			local cap = l:getCaption()
-
-			if (browser:getSelected() < 0) then
-				return
-			end
-			buttonStatut = 1
-			mapname = browser.path .. cap
-			menu:stop()
-		end)
-	menu:addHalfButton(_("~!Cancel"), "c", 198 * get_scale_factor(), 318 * get_scale_factor(),
-		function() buttonStatut = 2; menu:stop() end)
-	
-	local sortByCheckBox
-	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) * get_scale_factor() / 2, (352 - 16 - 27 - 25) * get_scale_factor(),
-	function()
-		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
-		SavePreferences()
-
-		if (wyr.preferences.SortSaveGamesByTime) then
-			browser:sortByTime()
-		else
-			browser:sortByName()
-		end
-	end)
-	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
-	if (wyr.preferences.SortSaveGamesByTime) then
-		browser:sortByTime()
-	end
-	
-	menu:run()
-end
-
 main_menu = nil
 
 function BuildProgramStartMenu()
