@@ -14,7 +14,10 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "New Map"
 		hotkey: "n"
-		lua_command: "RunEditorNewMapMenu();"
+		
+		onClicked: {
+			menu_stack.push("NewMapMenu.qml")
+		}
 	}
 	
 	LargeButton {

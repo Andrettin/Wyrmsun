@@ -1,6 +1,4 @@
 
-editor_tilesets = { "cave", "conifer_forest_summer", "conifer_forest_autumn", "dungeon", "fairlimbed_forest", "swamp"}
-
 function GetUnitGraphics()
 	local unit_graphics_list = {}
 
@@ -80,62 +78,6 @@ function GetUnitGraphics()
 	end
 	
 	return unit_graphics_list
-end
-
---  Menu for new map to edit
-function RunEditorNewMapMenu()
-	local menu = WarMenu()
-	local offx = (Video.Width - 640 * get_scale_factor()) / 2
-	local offy = (Video.Height - 480 * get_scale_factor()) / 2
-	local tilesets = editor_tilesets
-
-	menu:addLabel(_("Map Description:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 0) * get_scale_factor(), Fonts["game"], false)
-	local mapDescription = menu:addTextInputField("", offx + 208 * get_scale_factor(), offy + (104 + 32 * 1) * get_scale_factor(), 200 * get_scale_factor())
-	menu:addLabel(_("Terrain:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), Fonts["game"], false)
-	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 2) * get_scale_factor(), function() end)
-	dropDownTileset:setSize(152 * get_scale_factor(), 20 * get_scale_factor())
-
-	menu:addLabel(_("Width:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), Fonts["game"], false)
-	local mapSizex = menu:addTextInputField(128, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 3) * get_scale_factor(), 60 * get_scale_factor())
-	menu:addLabel(_("Height:"), offx + 208 * get_scale_factor(), offy + (104 + 32 * 4) * get_scale_factor(), Fonts["game"], false)
-	local mapSizey = menu:addTextInputField(128, offx + (208 + 60) * get_scale_factor(), offy + (104 + 32 * 4) * get_scale_factor(), 60 * get_scale_factor())
-
-	menu:addFullButton(_("~!New Map"), "n", offx + 208 * get_scale_factor(), offy + (104 + 36 * 5) * get_scale_factor(),
-	function()
-		if (tonumber(mapSizex:getText()) == nil) then
-			GenericDialog("Error", "The map width must be a number.")
-		elseif (tonumber(mapSizey:getText()) == nil) then
-			GenericDialog("Error", "The map height must be a number.")
-		elseif (tonumber(mapSizex:getText()) < 32) then
-			GenericDialog("Error", "The map width must be at least 32.")
-		elseif (tonumber(mapSizey:getText()) < 32) then
-			GenericDialog("Error", "The map height must be at least 32.")
-		elseif (tonumber(mapSizex:getText()) > MaxMapWidth) then
-			GenericDialog("Error", "The map width must be at most " .. MaxMapWidth .. ".")
-		elseif (tonumber(mapSizey:getText()) > MaxMapHeight) then
-			GenericDialog("Error", "The map height must be at most " .. MaxMapHeight .. ".")
-		else
-			CMap:get():get_info():set_name(mapDescription:getText())
-			CMap:get():get_info().MapWidth = tonumber(mapSizex:getText())
-			CMap:get():get_info().MapHeight = tonumber(mapSizey:getText())
-			CMap:get():get_info():set_presentation_filepath("new_map")
-			if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-				LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-			else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
-				for i=1,table.getn(wyr.preferences.EnabledMods) do
-					local mod_path = wyr.preferences.EnabledMods[i]
-					if (CanAccessFile(mod_path .. "scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-						LoadTileModels(mod_path .. "scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-						break
-					end
-				end
-			end
-			menu:stop()
-			StartEditor(nil, false)
-		end
-	end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208 * get_scale_factor(), offy + (104 + 36 * 6) * get_scale_factor(), function() menu:stop(1); end)
-	return menu:run()
 end
 
 -- Menu for loading map to edit
