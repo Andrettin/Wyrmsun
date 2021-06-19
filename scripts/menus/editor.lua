@@ -80,26 +80,18 @@ function GetUnitGraphics()
 	return unit_graphics_list
 end
 
-function RunEditorSaveMap(browser, name, menu, save_as_mod)
-	local saved = EditorSaveMap(browser.path .. name, save_as_mod)
+function RunEditorSaveMap(browser, name, menu)
+	local saved = EditorSaveMap(browser.path .. name)
 	
 	if (saved == -1) then
 		local confirm = WarGameMenu(panel(3))
 		confirm:resize(300 * get_scale_factor(), 120 * get_scale_factor())
-		if not (save_as_mod) then
-			confirm:addLabel("Cannot save map to file:", 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
-		else
-			confirm:addLabel("Cannot save mod to file:", 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
-		end
+		confirm:addLabel("Cannot save map to file:", 300 / 2 * get_scale_factor(), 11 * get_scale_factor())
 		confirm:addLabel(browser.path .. name, 300 / 2 * get_scale_factor(), 31 * get_scale_factor())
 		confirm:addHalfButton(_("~!OK"), "o", 1 * (300 / 3) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(), function() confirm:stop() end)
 		confirm:run(false)
 	else
-		if not (save_as_mod) then
-			CUserInterface:get().StatusLine:Set("Saved map to: " .. browser.path .. name)
-		else
-			CUserInterface:get().StatusLine:Set("Saved mod to: " .. browser.path .. name)
-		end
+		CUserInterface:get().StatusLine:Set("Saved map to: " .. browser.path .. name)
 		menu:stop()
 	end
 end
@@ -107,46 +99,32 @@ end
 --
 --  Save map from the editor
 --
-function RunEditorSaveMenu(save_as_mod)
-	if not (save_as_mod) then
-		local map_has_person_player = false
-		for i = 0,(PlayerMax - 2) do
-			if (CMap:get():get_info().PlayerType[i] == 5) then
-				map_has_person_player = true
-				break
-			end
+function RunEditorSaveMenu()
+	local map_has_person_player = false
+	for i = 0,(PlayerMax - 2) do
+		if (CMap:get():get_info().PlayerType[i] == 5) then
+			map_has_person_player = true
+			break
 		end
-		if not (map_has_person_player) then
-			GenericDialog(_("Error"), _("A map needs to have at least one person player."))
-			return
-		end
+	end
+	if not (map_has_person_player) then
+		GenericDialog(_("Error"), _("A map needs to have at least one person player."))
+		return
 	end
 	
 	local menu = WarGameMenu(panel(3))
 
 	menu:resize(384 * get_scale_factor(), 256 * get_scale_factor())
 
-	if not (save_as_mod) then
-		menu:addLabel(_("Save Map"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
-	else
-		menu:addLabel(_("Save as Mod"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
-	end
+	menu:addLabel(_("Save Map"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
 
 	local t
 	local browser
-	if not (save_as_mod) then
-		t = menu:addTextInputField("map.smp",
-			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
+	t = menu:addTextInputField("map.smp",
+		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
 
-		browser = menu:addBrowser(MapDirectories[1], ".smp$",
-			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
-	else
-		t = menu:addTextInputField("mod.smp",
-			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
-
-		browser = menu:addBrowser(ModDirectories[1], ".smp$",
-			(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
-	end
+	browser = menu:addBrowser(MapDirectories[1], ".smp$",
+		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 
 	local function cb(s)
 		t:setText(browser:getSelectedItem())
@@ -178,12 +156,12 @@ function RunEditorSaveMenu(save_as_mod)
 			confirm:addHalfButton(_("~!Yes"), "y", (1 * (300 / 3) - 90) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(),
 			function()
 				confirm:stop()
-				RunEditorSaveMap(browser, name, menu, save_as_mod)
+				RunEditorSaveMap(browser, name, menu)
 			end)
 			confirm:addHalfButton(_("~!No"), "n", (3 * (300 / 3) - 116) * get_scale_factor(), (120 - 16 - 27) * get_scale_factor(), function() confirm:stop() end)
 			confirm:run(false)
 		else
-			RunEditorSaveMap(browser, name, menu, save_as_mod)
+			RunEditorSaveMap(browser, name, menu)
 		end
 	end)
 	
@@ -678,17 +656,16 @@ function RunInEditorMenu()
 
 	menu:addLabel(_("Editor Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(false); end)
-	menu:addFullButton(_("Save as ~!Mod"), "m", 16 * get_scale_factor(), (40 + 35 * 1) * get_scale_factor(), function() RunEditorSaveMenu(true); end)
-	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16 * get_scale_factor(), (40 + 35 * 2) * get_scale_factor(), RunEditorMapProperties)
-	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(), RunEditorPlayerProperties)
-	menu:addFullButton(_("Custom ~!Data"), "d", 16 * get_scale_factor(), (40 + 35 * 4) * get_scale_factor(), RunEditorCustomDataProperties)
+	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(); end)
+	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16 * get_scale_factor(), (40 + 35 * 1) * get_scale_factor(), RunEditorMapProperties)
+	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16 * get_scale_factor(), (40 + 35 * 2) * get_scale_factor(), RunEditorPlayerProperties)
+	menu:addFullButton(_("Custom ~!Data"), "d", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(), RunEditorCustomDataProperties)
 
 --	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
-	menu:addFullButton(_("E~!xit to Menu"), "x", 16 * get_scale_factor(), (40 + 35 * 5) * get_scale_factor(),
+	menu:addFullButton(_("E~!xit to Menu"), "x", 16 * get_scale_factor(), (40 + 35 * 4) * get_scale_factor(),
 		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
-	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 6) * get_scale_factor(),
+	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 5) * get_scale_factor(),
 		function() menu:stop() end)
 
 	menu:run(false)

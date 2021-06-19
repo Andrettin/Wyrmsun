@@ -114,7 +114,7 @@ MenuBase {
 				return
 			}
 			
-			wyrmgus.call_lua_command("CMap:get():get_info():set_name(\"" + map_description_text_field.text + "\"); CMap:get():get_info().MapWidth = " + width + "; CMap:get():get_info().MapHeight = " + height + "; LoadTileModels(\"scripts/tilesets/conifer_forest_summer.lua\"); CMap:get():get_info():set_presentation_filepath(\"new_map\"); StartEditor(nil, false);")
+			wyrmgus.call_lua_command("CMap:get():get_info():set_name(\"" + map_description_text_field.text + "\"); CMap:get():get_info().MapWidth = " + width + "; CMap:get():get_info().MapHeight = " + height + "; LoadTileModels(\"scripts/tilesets/conifer_forest_summer.lua\"); CMap:get():get_info():set_presentation_filepath(\"new_map\"); StartEditor(nil);")
 		}
 	}
 	

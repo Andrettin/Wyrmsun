@@ -63,7 +63,7 @@ MenuBase {
 		hotkey: "e"
 		
 		onClicked: {
-			wyrmgus.call_lua_command("StartEditor(\"" + escape_string(load_map_menu.selected_map.presentation_filepath) + "\", false);")
+			wyrmgus.call_lua_command("StartEditor(\"" + escape_string(load_map_menu.selected_map.presentation_filepath) + "\");")
 		}
 	}
 	
