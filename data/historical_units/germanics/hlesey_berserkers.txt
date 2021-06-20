@@ -1,5 +1,6 @@
 hlesey_berserkers = { #in Norse mythology, Thor (accompanied by Thialfi) slew a group of "brides of the berserkers" at Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	unit_type = unit_germanic_archer #so that passing ships can be attacked
+	ai_active = false
 	
 	history = {
 		-1101 = {
