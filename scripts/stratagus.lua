@@ -1452,15 +1452,6 @@ function PersistencyUpdates()
 		wyr.preferences.GrandStrategySaveGames = nil
 		SavePreferences()
 	end
-		
-	if (wyr.preferences.ShowOrders ~= nil) then
-		if (wyr.preferences.ShowOrders == 2) then
-			wyr.preferences.ShowPathlines = true
-			Preference.ShowPathlines = wyr.preferences.ShowPathlines
-		end
-		wyr.preferences.ShowOrders = nil
-		SavePreferences()
-	end
 	
 	local last_version = tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", "")))
 	
@@ -1762,7 +1753,6 @@ local defaultPreferences = {
 	VideoHeight = 600,
 	VideoWidth = 1066,
 	ShowMessages = true,
-	ShowPathlines = false,
 	Language = "English",
 	ShowResourceBar = false,
 	ShowHeroSymbol = false,
@@ -1809,7 +1799,6 @@ SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameT
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
-Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
 if (wyr.preferences.Autosave) then
 	Preference.AutosaveMinutes = 5

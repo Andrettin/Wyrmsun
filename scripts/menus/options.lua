@@ -379,20 +379,6 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.Autosave)
 
-	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16 * get_scale_factor(), offy + (55 + 26*6 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.ShowPathlines == false) then
-				wyr.preferences.ShowPathlines = true
-			else
-				wyr.preferences.ShowPathlines = false
-			end
-			Preference.ShowPathlines = wyr.preferences.ShowPathlines
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.ShowPathlines)
-
 	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16 * get_scale_factor(), offy + (55 + 26*7 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowMessages) then
