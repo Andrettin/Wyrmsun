@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - It is no longer possible to start a custom game with a custom hero, they must now be recruited as other heroes are.
+- Updated the hero symbol icon to use a frame, to make it more visible on the map.
 
 * Items
 - Added "Curupira's" magic prefix for weapons (+3 fire damage).

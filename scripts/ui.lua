@@ -78,7 +78,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-wither", File = "ui/status_effects/wither.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-hero", File = "interface/icons/star.png", Offset = {1, 1}, Size = {14, 9}})
+	DefineSprites({Name = "sprite-hero", File = "ui/status_effects/star.png", Offset = {1, 1}, Size = {16, 16}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
@@ -109,7 +109,7 @@ if not (ui_loaded_first_time) then
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 
-	DefineDecorations({Index = "Hero", HeroSymbol = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true, Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
+	DefineDecorations({Index = "Hero", HeroSymbol = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true, Offset = {0, 0}, Method = {"static-sprite", {"sprite-hero", 0}}})
 end
 
 --
