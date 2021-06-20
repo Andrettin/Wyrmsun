@@ -281,4 +281,3 @@ function RunGameOptionsMenu(previous_menu)
 
 	menu:run(false)
 end
-
