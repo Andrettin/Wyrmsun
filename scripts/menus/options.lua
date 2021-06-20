@@ -379,20 +379,6 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.Autosave)
 
-	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16 * get_scale_factor(), offy + (55 + 26*7 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.ShowMessages) then
-				wyr.preferences.ShowMessages = false
-			else
-				wyr.preferences.ShowMessages = true
-			end
-			Preference.ShowMessages = wyr.preferences.ShowMessages
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
-
 	return menu:run()
 end
 

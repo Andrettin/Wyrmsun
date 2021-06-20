@@ -1752,7 +1752,6 @@ local defaultPreferences = {
 	TipNumber = 0,
 	VideoHeight = 600,
 	VideoWidth = 1066,
-	ShowMessages = true,
 	Language = "English",
 	ShowResourceBar = false,
 	ShowHeroSymbol = false,
@@ -1799,7 +1798,6 @@ SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameT
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
-Preference.ShowMessages = wyr.preferences.ShowMessages
 if (wyr.preferences.Autosave) then
 	Preference.AutosaveMinutes = 5
 else

@@ -17,7 +17,7 @@ MenuBase {
 	Dropdown {
 		id: hotkey_setup_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.bottom: show_pathlines_radio_button.top
+		anchors.bottom: show_messages_radio_button.top
 		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 250 * wyrmgus.defines.scale_factor
 		model: wyrmgus.get_hotkey_setups()
@@ -34,6 +34,19 @@ MenuBase {
 		
 		function get_entry_name(entry) {
 			return wyrmgus.get_hotkey_setup_name(entry)
+		}
+	}
+	
+	RadioImageButton {
+		id: show_messages_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.bottom: show_pathlines_radio_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Show Messages"
+		checked: wyrmgus.preferences.show_messages
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.show_messages = checked
 		}
 	}
 	
