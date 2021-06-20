@@ -1755,7 +1755,6 @@ local defaultPreferences = {
 	Language = "English",
 	ShowResourceBar = false,
 	ShowHeroSymbol = false,
-	Autosave = true,
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
@@ -1797,12 +1796,6 @@ end
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
-
-if (wyr.preferences.Autosave) then
-	Preference.AutosaveMinutes = 5
-else
-	Preference.AutosaveMinutes = 0
-end
 
 if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()

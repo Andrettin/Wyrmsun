@@ -363,22 +363,7 @@ function RunGameplayOptionsMenu()
 		end
 	)
 	b:setMarked(wyr.preferences.ShowHeroSymbol)
-
-	b = menu:addImageCheckBox(_("Autosave"), offx + 16 * get_scale_factor(), offy + (55 + 26*4 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.Autosave == false) then
-				wyr.preferences.Autosave = true
-				Preference.AutosaveMinutes = 5
-			else
-				wyr.preferences.Autosave = false
-				Preference.AutosaveMinutes = 0
-			end
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.Autosave)
-
+	
 	return menu:run()
 end
 
