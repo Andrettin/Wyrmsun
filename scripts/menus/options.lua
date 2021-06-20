@@ -347,20 +347,6 @@ function RunGameplayOptionsMenu()
 	)
 	b:setMarked(wyr.preferences.ShowResourceBar)
 
-	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16 * get_scale_factor(), offy + (55 + 26*8 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.PlayerColorCircle == false) then
-				wyr.preferences.PlayerColorCircle = true
-			else
-				wyr.preferences.PlayerColorCircle = false
-			end
-			Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.PlayerColorCircle)
-
 	b = menu:addImageCheckBox(_("Show Hero Symbol"), offx + 16 * get_scale_factor(), offy + (55 + 26*9 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowHeroSymbol == false) then -- sort of ugly way to set the preferences for this, should fix later

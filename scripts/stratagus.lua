@@ -1767,7 +1767,6 @@ local defaultPreferences = {
 	ShowResourceBar = false,
 	ShowHeroSymbol = false,
 	Autosave = true,
-	PlayerColorCircle = false,
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
@@ -1817,7 +1816,6 @@ if (wyr.preferences.Autosave) then
 else
 	Preference.AutosaveMinutes = 0
 end
-Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
