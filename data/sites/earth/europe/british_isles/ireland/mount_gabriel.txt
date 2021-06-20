@@ -1,0 +1,22 @@
+mount_gabriel = {
+	name = "Mount Gabriel"
+	map_template = earth_45_60_latitude_north
+	geocoordinate = { -9.5365 51.55 }
+	base_unit_type = unit_copper_deposit #copper deposits at Mount Gabriel in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+	regions = {
+		ireland
+	}
+	
+	history = {
+		-2200 = {
+			#copper mines at Mount Gabriel were operational during the Early Bronze Age of the British Isles (c. 2200-1650 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
+			owner = celtic_cimmerian_tribe
+			building_classes += copper_mine
+		}
+		
+		-1650 = {
+			owner = none
+			building_classes -= copper_mine
+		}
+	}
+}

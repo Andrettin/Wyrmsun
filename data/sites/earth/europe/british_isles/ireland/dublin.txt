@@ -8,7 +8,7 @@ dublin = {
 		celt = "Eblana" #or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 	regions = {
-		british_isles
+		ireland
 	}
 	
 	history = {

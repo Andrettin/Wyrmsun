@@ -9,6 +9,14 @@ british_isles = {
 	}
 }
 
+great_britain = {
+	superregions = { british_isles }
+}
+
 scotland = {
+	superregions = { great_britain }
+}
+
+ireland = {
 	superregions = { british_isles }
 }

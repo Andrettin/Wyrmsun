@@ -1,5 +1,5 @@
 england = {
-	superregions = { british_isles }
+	superregions = { great_britain }
 	
 	history = {
 		1301 = {
