@@ -332,19 +332,6 @@ function RunGameplayOptionsMenu()
 	end
 	--]]
 
-	b = menu:addImageCheckBox(_("Show Tips"), offx + 16 * get_scale_factor(), offy + (55 + 26*2 + 14) * get_scale_factor(),
-		function()
-			if (wyr.preferences.ShowTips == false) then
-				wyr.preferences.ShowTips = true
-			else
-				wyr.preferences.ShowTips = false
-			end
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.ShowTips)
-
 	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16 * get_scale_factor(), offy + (55 + 26*3 + 14) * get_scale_factor(),
 		function()
 			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, should fix later

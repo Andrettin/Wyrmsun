@@ -17,8 +17,8 @@ MenuBase {
 	Dropdown {
 		id: hotkey_setup_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.bottom: ok_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottom: show_tips_radio_button.top
+		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
 		width: 250 * wyrmgus.defines.scale_factor
 		model: wyrmgus.get_hotkey_setups()
 		
@@ -29,12 +29,24 @@ MenuBase {
 		onSelectedEntryChanged: {
 			if (wyrmgus.preferences.get_hotkey_setup_index() !== selectedEntry) {
 				wyrmgus.preferences.set_hotkey_setup_index(selectedEntry)
-				wyrmgus.preferences.save()
 			}
 		}
 		
 		function get_entry_name(entry) {
 			return wyrmgus.get_hotkey_setup_name(entry)
+		}
+	}
+	
+	RadioImageButton {
+		id: show_tips_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.bottom: ok_button.top
+		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		text: "Show Tips"
+		checked: wyrmgus.preferences.show_tips
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.show_tips = checked
 		}
 	}
 	
@@ -47,6 +59,7 @@ MenuBase {
 		lua_command: "SavePreferences(); gameplay_options_menu:stop();"
 		
 		onClicked: {
+			wyrmgus.preferences.save()
 			menu_stack.pop()
 		}
 	}

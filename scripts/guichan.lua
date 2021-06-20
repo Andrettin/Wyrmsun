@@ -763,7 +763,7 @@ function GameStarting()
 	play_map_music()
 	
 	--[[
-	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
+	if (is_show_tips_enabled() and not IsReplayGame() and not IsNetworkGame()) then
 		SetGamePaused(true)
 		RunTipsMenu()
 	end

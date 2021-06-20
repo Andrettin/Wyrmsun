@@ -319,7 +319,7 @@ function StandardTriggers()
 	local RandomNumber = 0
 
 	-- Tips
-	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
+	if (is_show_tips_enabled() and not IsReplayGame() and not IsNetworkGame()) then
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then
 			AddTrigger("tip-level-up",
 				function()
@@ -1757,7 +1757,6 @@ local defaultPreferences = {
 	KeyScrollSpeed = 1,
 	PlayerName = "Player",
 	ShowCommandKey = true,
-	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
 	VideoHeight = 600,

@@ -511,7 +511,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(bandit_player, "allied", second_bandit_player)
 												SetDiplomacy(second_bandit_player, "allied", bandit_player)
 												KillUnitAt("unit-revealer", player, 2, {0, 0}, {MaxMapWidth, MaxMapHeight})
-												if (wyr.preferences.ShowTips and not IsReplayGame()) then
+												if (is_show_tips_enabled() and not IsReplayGame()) then
 													Tip("", "Your enemies in this scenario are more resourceful than you - it is better to quickly assemble troops to escort the caravans, as the enemy is likely to eventually overwhelm you.")
 												end
 											end}

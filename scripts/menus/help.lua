@@ -197,14 +197,6 @@ function RunTipsMenu()
   end
   l:updateCaption()
 
-  local showtips = {}
-  showtips = menu:addImageCheckBox(_("Show tips when starting"), 14 * get_scale_factor(), (256 - 75) * get_scale_factor(),
-    function()
-      wyr.preferences.ShowTips = showtips:isMarked()
-      SavePreferences()
-    end)
-  showtips:setMarked(wyr.preferences.ShowTips)
-
   menu:addHalfButton(_("~!Next Tip"), "n", 14 * get_scale_factor(), (256 - 40) * get_scale_factor(),
     function() l:nextTip(); l:updateCaption() end)
   menu:addHalfButton(_("~!Close"), "c", 168 * get_scale_factor(), (256 - 40) * get_scale_factor(),
