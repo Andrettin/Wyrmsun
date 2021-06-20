@@ -6,6 +6,7 @@ WidgetBase {
 	width: image.width + 4 * wyrmgus.defines.scale_factor + label.width
 	height: Math.max(image.height, label.height)
 	widget_type: "radio_button/" + (checked ? "checked" : "unchecked")
+	mouse_area_anchor_source: radio_button
 	
 	property bool checked: false
 	

@@ -15,7 +15,8 @@ Item {
 	property bool hovered: mouse_area.containsMouse
 	property bool disabled: false
 	readonly property var image: widget_image
-	readonly property var mouse_area_element: mouse_area
+	readonly property var mouse_area_item: mouse_area
+	property var mouse_area_anchor_source: widget_image
 	
 	signal clicked()
 	
@@ -34,7 +35,7 @@ Item {
 	
 	MouseArea {
 		id: mouse_area
-		anchors.fill: widget_image
+		anchors.fill: mouse_area_anchor_source
 		hoverEnabled: true
 		z: 2 //ensure the mouse area will be on top of any labels added by derived classes
 		
