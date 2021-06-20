@@ -274,8 +274,6 @@ function RunGameplayOptionsMenu()
 	local offx = (Video.Width - 352 * get_scale_factor()) / 2
 	local offy = (Video.Height - 352 * get_scale_factor()) / 2
 	local b
-	local hotkey_setup_list = {_("Default"), _("Position-Based"), _("Position-Based (except Commands)")}
-	local hotkey_setup_dd
 
 	--[[
 	menu:addLabel(_("Language:"), offx + 8, offy + 34 + 26*0, Fonts["game"], false)
@@ -333,18 +331,6 @@ function RunGameplayOptionsMenu()
 		language_list:setSelected(6)
 	end
 	--]]
-
-	menu:addLabel(_("Hotkey Setup:"), offx + 8 * get_scale_factor(), offy + (34 + 26*1) * get_scale_factor(), Fonts["game"], false)
-	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8 * get_scale_factor(), offy + (55 + 26*1) * get_scale_factor(),
-		function(dd)
-			wyr.preferences.HotkeySetup = hotkey_setup_dd:getSelected()
-			Preference.HotkeySetup = wyr.preferences.HotkeySetup
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	hotkey_setup_dd:setSize(266 * get_scale_factor(), 20 * get_scale_factor())
-	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
 
 	b = menu:addImageCheckBox(_("Show Tips"), offx + 16 * get_scale_factor(), offy + (55 + 26*2 + 14) * get_scale_factor(),
 		function()

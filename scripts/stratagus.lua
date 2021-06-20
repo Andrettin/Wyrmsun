@@ -1462,17 +1462,6 @@ function PersistencyUpdates()
 		SavePreferences()
 	end
 	
-	if (wyr.preferences.ButtonHotKeysByPosition ~= nil) then
-		if (wyr.preferences.ButtonHotKeysByPosition == true) then
-			wyr.preferences.HotkeySetup = 1
-		else
-			wyr.preferences.HotkeySetup = 0
-		end
-		wyr.preferences.ButtonHotKeysByPosition = nil
-		Preference.HotkeySetup = wyr.preferences.HotkeySetup
-		SavePreferences()
-	end
-	
 	local last_version = tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", "")))
 	
 	if (last_version < 354 and wyr.preferences.GameSpeed == 60) then -- fix to wrong default game speed before version 3.5.4
@@ -1780,7 +1769,6 @@ local defaultPreferences = {
 	ShowHeroSymbol = false,
 	Autosave = true,
 	PlayerColorCircle = false,
-	HotkeySetup = 0,
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
@@ -1831,7 +1819,6 @@ else
 	Preference.AutosaveMinutes = 0
 end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
-Preference.HotkeySetup = wyr.preferences.HotkeySetup
 
 if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
