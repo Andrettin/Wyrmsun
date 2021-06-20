@@ -79,37 +79,37 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-dehydration", File = "ui/status_effects/dehydration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-hero", File = "ui/status_effects/star.png", Offset = {1, 1}, Size = {16, 16}})
-
-	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
-	DefineDecorations({Index = "Infusion", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-infusion", 0}}})
-	DefineDecorations({Index = "Blessing", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-blessing", 0}}})
-	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
-	DefineDecorations({Index = "Precision", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-precision", 0}}})
-	DefineDecorations({Index = "Slow", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
-	DefineDecorations({Index = "Barkskin", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 0}, Method = {"static-sprite", {"sprite-barkskin", 0}}})
-	DefineDecorations({Index = "Stun", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-stun", 0}}})
-	DefineDecorations({Index = "Bleeding", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-bleeding", 0}}})
-	DefineDecorations({Index = "Regeneration", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
-	DefineDecorations({Index = "Terror", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
-	DefineDecorations({Index = "Wither", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-wither", 0}}})
-	DefineDecorations({Index = "Dehydration", ShowOpponent = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-dehydration", 0}}})
-	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
-
-	DefineDecorations({Index = "Hero", HeroSymbol = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true, Offset = {0, 0}, Method = {"static-sprite", {"sprite-hero", 0}}})
+	
+	DefineDecorations({Index = "Hero", HeroSymbol = true, StatusEffect = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true, Method = {"static-sprite", {"sprite-hero", 0}}})
+	DefineDecorations({Index = "LevelUp", StatusEffect = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-level-up", 0}}})
+	
+	DefineDecorations({Index = "Leadership", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-leadership", 0}}})
+	DefineDecorations({Index = "Infusion", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-infusion", 0}}})
+	DefineDecorations({Index = "Blessing", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-blessing", 0}}})
+	DefineDecorations({Index = "Inspire", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-inspire", 0}}})
+	DefineDecorations({Index = "Precision", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-precision", 0}}})
+	DefineDecorations({Index = "Slow", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-slow", 0}}})
+	DefineDecorations({Index = "Barkskin", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-barkskin", 0}}})
+	DefineDecorations({Index = "Stun", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-stun", 0}}})
+	DefineDecorations({Index = "Bleeding", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-bleeding", 0}}})
+	DefineDecorations({Index = "Regeneration", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-regeneration", 0}}})
+	DefineDecorations({Index = "Terror", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-terror", 0}}})
+	DefineDecorations({Index = "Wither", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-wither", 0}}})
+	DefineDecorations({Index = "Dehydration", StatusEffect = true, ShowOpponent = true, ShowWhenMax = true,
+	  Method = {"static-sprite", {"sprite-dehydration", 0}}})
 end
 
 --
