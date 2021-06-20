@@ -13,7 +13,6 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Gameplay Options"
 		hotkey: "g"
-		lua_command: "RunGameplayOptionsMenu();"
 		
 		onClicked: {
 			menu_stack.push("GameplayOptionsMenu.qml")

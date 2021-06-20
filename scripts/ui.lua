@@ -61,11 +61,7 @@ if not (ui_loaded_first_time) then
 		DefineDecorations({Index = "Research", ShowWhenNull = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		DefineDecorations({Index = "Training", ShowWhenNull = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		DefineDecorations({Index = "UpgradeTo", ShowWhenNull = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-		if (wyr.preferences.ShowResourceBar) then -- sort of ugly way to set the preferences for this, should fix later
-			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = false, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-		else
-			DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideAllied = true, HideNeutral = true, HideSelf = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-		end
+		DefineDecorations({Index = "GiveResource", MinValue = 1000, ResourceBar = true, ShowWhenMax = true, HideAllied = false, HideNeutral = false, HideSelf = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 		DefineDecorations({Index = "CarryResource", HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
 	end
 	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {16, 16}})
@@ -113,13 +109,7 @@ if not (ui_loaded_first_time) then
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 
-	if (wyr.preferences.ShowHeroSymbol) then -- sort of ugly way to set the preferences for this, should fix later
-		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true,
-		  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
-	else
-		DefineDecorations({Index = "Hero", ShowOpponent = false, HideAllied = true, HideNeutral = true, HideSelf = true, ShowWhenMax = true,
-		  Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
-	end
+	DefineDecorations({Index = "Hero", HeroSymbol = true, ShowOpponent = false, HideAllied = true, HideNeutral = true, ShowWhenMax = true, Offset = {0, -9}, Method = {"static-sprite", {"sprite-hero", 0}}})
 end
 
 --

@@ -40,13 +40,26 @@ MenuBase {
 	RadioImageButton {
 		id: autosave_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_messages_radio_button.top
+		anchors.bottom: show_hero_symbol_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Autosave"
 		checked: wyrmgus.preferences.autosave
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.autosave = checked
+		}
+	}
+	
+	RadioImageButton {
+		id: show_hero_symbol_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.bottom: show_messages_radio_button.top
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Show Hero Symbol"
+		checked: wyrmgus.preferences.hero_symbol
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.hero_symbol = checked
 		}
 	}
 	
@@ -66,8 +79,7 @@ MenuBase {
 	RadioImageButton {
 		id: show_pathlines_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_player_color_circle_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Show Pathlines"
 		checked: wyrmgus.preferences.pathlines
 		
@@ -79,8 +91,8 @@ MenuBase {
 	RadioImageButton {
 		id: show_player_color_circle_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_tips_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.top: show_pathlines_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Show Player Color Circle"
 		checked: wyrmgus.preferences.player_color_circle
 		
@@ -90,10 +102,23 @@ MenuBase {
 	}
 	
 	RadioImageButton {
+		id: show_resource_bar_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.top: show_player_color_circle_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Show Resource Bar"
+		checked: wyrmgus.preferences.resource_bar
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.resource_bar = checked
+		}
+	}
+	
+	RadioImageButton {
 		id: show_tips_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: ok_button.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.top: show_resource_bar_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Show Tips"
 		checked: wyrmgus.preferences.show_tips
 		
@@ -105,10 +130,10 @@ MenuBase {
 	SmallButton {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: show_tips_radio_button.bottom
+		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		text: "OK"
 		hotkey: "o"
-		lua_command: "SavePreferences(); gameplay_options_menu:stop();"
 		
 		onClicked: {
 			wyrmgus.preferences.save()
