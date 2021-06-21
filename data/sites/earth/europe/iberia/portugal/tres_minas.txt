@@ -1,0 +1,22 @@
+tres_minas = {
+	name = "Tres Minas" #"Três Minas"
+	map_template = earth_30_45_latitude_north
+	geocoordinate = { -7.5180833333333 41.481138888889 } #from Natural Earth
+	base_unit_type = unit_gold_deposit #gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
+	regions = {
+		portugal
+	}
+	
+	history = {
+		1 = {
+			#Três Minas was the location of a Roman gold mine in the 1st century AD; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
+			owner = rome
+			building_classes += gold_mine
+		}
+		
+		100 = {
+			owner = none
+			building_classes -= gold_mine
+		}
+	}
+}
