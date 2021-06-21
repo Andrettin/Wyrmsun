@@ -59,7 +59,11 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Multiplayer Game"
 		hotkey: "m"
-		lua_command: "RunMultiPlayerGameMenu(); main_menu:stop(1);"
+		lua_command: "InitGameSettings(); InitNetwork1();"
+		
+		onClicked: {
+			menu_stack.push("MultiplayerGameMenu.qml")
+		}
 	}
 	
 	LargeButton {

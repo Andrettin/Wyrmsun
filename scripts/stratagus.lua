@@ -1746,7 +1746,6 @@ local defaultPreferences = {
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
 	KeyScrollSpeed = 1,
-	PlayerName = "Player",
 	ShowCommandKey = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
@@ -1777,7 +1776,6 @@ SetGroupKeys(wyr.preferences.GroupKeys)
 SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(true)
-SetLocalPlayerName("") -- Andrettin: in single-player games the local player shouldn't use his nick
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)

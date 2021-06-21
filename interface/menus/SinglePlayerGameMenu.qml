@@ -5,7 +5,7 @@ import ".."
 
 MenuBase {
 	id: single_player_game_menu
-	title: "Single Player"
+	title: "Single Player Game"
 	
 	LargeButton {
 		id: scenarios_button
