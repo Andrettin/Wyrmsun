@@ -47,13 +47,15 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Create Game"
 		hotkey: "c"
-		lua_command: "RunCreateMultiGameMenu();"
 		
 		onClicked: {
 			if (wyrmgus.preferences.local_player_name !== nickname_text_field.text) {
 				wyrmgus.preferences.local_player_name = nickname_text_field.text
 				wyrmgus.preferences.save()
 			}
+			
+			wyrmgus.load_map_infos()
+			menu_stack.push("CreateMultiplayerGameMenu.qml")
 		}
 	}
 	
