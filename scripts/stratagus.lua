@@ -43,8 +43,6 @@ wyrmsun.Licence = "GPL 2.0"
 --  Config-Part
 -------------------------------------------------------------------------------
 
-MapDirectories = {"maps/"}
-
 LoadedGame = false
 
 InitFuncs = {}
