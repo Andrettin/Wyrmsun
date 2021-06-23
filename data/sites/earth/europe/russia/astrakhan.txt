@@ -1,6 +1,6 @@
 astrakhan = {
 	name = "Astrakhan"
-	map_template = middle_east_45_60_latitude_north
+	map_template = near_east
 	geocoordinate = { 48.05498897180 46.34865541490 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 235 105 4 }

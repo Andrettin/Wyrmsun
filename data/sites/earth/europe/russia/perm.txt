@@ -1,6 +1,6 @@
 perm = {
 	name = "Perm"
-	map_template = middle_east_45_60_latitude_north
+	map_template = near_east
 	geocoordinate = { 56.24999263390 57.99995973630 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 84 173 248 }

@@ -1,6 +1,6 @@
 ecbatana = {
 	name = "Ecbatana"
-	map_template = middle_east_30_45_latitude_north
+	map_template = near_east
 	geocoordinate = { 48.51501257200 34.79602724100 } #from Natural Earth (Hamadan)
 	base_unit_type = unit_settlement_site
 	color = { 13 189 6 }

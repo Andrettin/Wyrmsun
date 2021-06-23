@@ -1,6 +1,6 @@
 babylon = {
 	name = "Babylon"
-	map_template = middle_east_30_45_latitude_north
+	map_template = near_east
 	geocoordinate = { 44.42172237020 32.47213808090 } #from Natural Earth (Al Hillah)
 	base_unit_type = unit_settlement_site
 	color = { 249 223 188 }

@@ -1,6 +1,6 @@
 persepolis = {
 	name = "Persepolis"
-	map_template = middle_east_30_45_latitude_north
+	map_template = near_east
 	geocoordinate = { 52.82146805710 29.80144838360 } #from Natural Earth (Marv Dasht)
 	base_unit_type = unit_settlement_site
 	color = { 221 129 128 }

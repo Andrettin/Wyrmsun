@@ -1,6 +1,6 @@
 jerusalem = {
 	name = "Jerusalem"
-	map_template = middle_east_30_45_latitude_north
+	map_template = near_east
 	geocoordinate = { 35.20662593460 31.77840781560 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 219 209 210 }

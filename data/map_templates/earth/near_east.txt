@@ -1,0 +1,60 @@
+near_east = {
+	name = "Near East"
+	world = earth
+	size = { 256 256 }
+	base_terrain_type = dirt
+	map_projection = mercator
+	min_longitude = 34
+	max_longitude = 64
+	min_latitude = 30
+	max_latitude = 52.5
+	terrain_image_file = "earth/near_east.png"
+	overlay_terrain_image_file = "earth/near_east_overlay.png"
+	trade_route_image_file = "earth/near_east_trade_routes.png"
+	generated_terrains = {
+		dry_dirt = {
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+			expansion_chance = 65
+		}
+		grass = {
+			seed_count = 1024
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+		}
+		pine_tree = {
+			seed_count = 128
+			max_percent = 20
+			target_terrain_type = grass
+		}
+		pine_tree_snow = {
+			seed_count = 16
+			max_percent = 20
+			target_terrain_type = snow
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 2
+		unit_silver_deposit = 2
+		unit_copper_deposit = 2
+		unit_iron_deposit = 6
+		unit_tree_stump = 16
+		unit_bee = 64
+		unit_fly = 64
+		unit_bug = 64
+		unit_worm = 64
+		unit_snail = 64
+		unit_slug = 64
+		unit_frog = 64
+		unit_bird = 64
+		unit_crow = 64
+		unit_rat = 64
+		unit_goat = 32
+		unit_wolf = 32
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}

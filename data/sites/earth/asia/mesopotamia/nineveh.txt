@@ -1,6 +1,6 @@
 nineveh = {
 	name = "Nineveh"
-	map_template = middle_east_30_45_latitude_north
+	map_template = near_east
 	geocoordinate = { 43.14500443400 36.34500246080 } #from Natural Earth (Mosul)
 	base_unit_type = unit_settlement_site
 	color = { 44 187 113 }
