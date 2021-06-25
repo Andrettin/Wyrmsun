@@ -27,7 +27,7 @@
 
 DefineSite("agad", {
 	Name = "Agad",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4841, 1290},
 	CulturalNames = {
 		"babylonian", "Agad"
@@ -46,7 +46,7 @@ DefineSite("agad", {
 
 DefineSite("amida", {
 	Name = "Amida",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4709, 1188},
 	CulturalNames = {
 		"assyrian", "Amida"
@@ -64,7 +64,7 @@ DefineSite("amida", {
 
 DefineSite("arbela", {
 	Name = "Arbela",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4841, 1224},
 	CulturalNames = {
 		"assyrian", "Arbela",
@@ -83,7 +83,7 @@ DefineSite("arbela", {
 
 DefineSite("assur", {
 	Name = "Assur",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4823, 1233},
 	CulturalNames = {
 		"assyrian", "Assur"
@@ -101,7 +101,7 @@ DefineSite("assur", {
 
 DefineSite("borsippa", {
 	Name = "Borsippa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4842, 1300},
 	CulturalNames = {
 		"assyrian", "Borsippa",
@@ -121,7 +121,7 @@ DefineSite("borsippa", {
 
 DefineSite("calchu", {
 	Name = "Calchu",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4825, 1224},
 	CulturalNames = {
 		"assyrian", "Calchu"
@@ -139,7 +139,7 @@ DefineSite("calchu", {
 
 DefineSite("circesium", {
 	Name = "Circesium",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4752, 1245},
 	CulturalNames = {
 		"babylonian", "Circesium"
@@ -156,7 +156,7 @@ DefineSite("circesium", {
 
 DefineSite("dur-ilu", {
 	Name = "Dur-Ilu",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4919, 1323},
 	CulturalNames = {
 		"assyrian", "Dur-Ilu"
@@ -174,7 +174,7 @@ DefineSite("dur-ilu", {
 
 DefineSite("dur-kurigalzu", {
 	Name = "Dur-Kurigalzu",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4853, 1294},
 	CulturalNames = {
 		"babylonian", "Dur-Kurigalzu"
@@ -193,7 +193,7 @@ DefineSite("dur-kurigalzu", {
 
 DefineSite("dur-sharukin", {
 	Name = "Dur-Sharukin",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4829, 1208},
 	CulturalNames = {
 		"assyrian", "Dur-Sharukin"
@@ -211,7 +211,7 @@ DefineSite("dur-sharukin", {
 
 DefineSite("eridu", {
 	Name = "Eridu",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4902, 1343},
 	CulturalNames = {
 		"assyrian", "Eridu",
@@ -231,7 +231,7 @@ DefineSite("eridu", {
 
 DefineSite("haran", {
 	Name = "Haran",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4726, 1205},
 	CulturalNames = {
 		"assyrian", "Haran"
@@ -249,7 +249,7 @@ DefineSite("haran", {
 
 DefineSite("holwan", {
 	Name = "Holwan",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4924, 1261},
 	CulturalNames = {
 		"assyrian", "Holwan"
@@ -267,7 +267,7 @@ DefineSite("holwan", {
 
 DefineSite("kutha", {
 	Name = "Kutha",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4847, 1297},
 	CulturalNames = {
 		"babylonian", "Kutha"
@@ -286,7 +286,7 @@ DefineSite("kutha", {
 
 DefineSite("lagash", {
 	Name = "Lagash",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4891, 1326},
 	CulturalNames = {
 		"assyrian", "Lagash",
@@ -306,7 +306,7 @@ DefineSite("lagash", {
 
 DefineSite("larsam", {
 	Name = "Larsam",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4883, 1336},
 	CulturalNames = {
 		"assyrian", "Larsam",
@@ -326,7 +326,7 @@ DefineSite("larsam", {
 
 DefineSite("nippur", {
 	Name = "Nippur",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4865, 1311},
 	CulturalNames = {
 		"assyrian", "Nippur",
@@ -346,7 +346,7 @@ DefineSite("nippur", {
 
 DefineSite("nisibis", {
 	Name = "Nisibis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4788, 1204},
 	CulturalNames = {
 		"assyrian", "Nisibis"
@@ -364,7 +364,7 @@ DefineSite("nisibis", {
 
 DefineSite("reseph", {
 	Name = "Reseph",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4722, 1238},
 	CulturalNames = {
 		"hebrew", "Reseph"
@@ -383,7 +383,7 @@ DefineSite("reseph", {
 
 DefineSite("shinpurla", {
 	Name = "Shinpurla",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4902, 1334},
 	CulturalNames = {
 		"babylonian", "Shinpurla"
@@ -402,7 +402,7 @@ DefineSite("shinpurla", {
 
 DefineSite("sippar", {
 	Name = "Sippar",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4835, 1286},
 	CulturalNames = {
 		"babylonian", "Sippar"
@@ -421,7 +421,7 @@ DefineSite("sippar", {
 
 DefineSite("tadmor", {
 	Name = "Tadmor",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4709, 1256},
 	CulturalNames = {
 		"assyrian", "Tadmor",
@@ -441,7 +441,7 @@ DefineSite("tadmor", {
 
 DefineSite("thapsacus", {
 	Name = "Thapsacus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4709, 1231},
 	CulturalNames = {
 		"babylonian", "Thapsacus",
@@ -462,7 +462,7 @@ DefineSite("thapsacus", {
 
 DefineSite("upi", {
 	Name = "Upi",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4848, 1271},
 	CulturalNames = {
 		"assyrian", "Upi",
@@ -482,7 +482,7 @@ DefineSite("upi", {
 
 DefineSite("uruk", {
 	Name = "Uruk",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4879, 1333},
 	CulturalNames = {
 		"assyrian", "Uruk",

@@ -27,7 +27,7 @@
 
 DefineSite("amathus", {
 	Name = "Amathus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4594, 1257},
 	CulturalNames = {
 		"phoenician", "Amathus"
@@ -43,7 +43,7 @@ DefineSite("amathus", {
 
 DefineSite("citium", {
 	Name = "Citium",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4604, 1252},
 	CulturalNames = {
 		"phoenician", "Citium"

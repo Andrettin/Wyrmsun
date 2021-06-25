@@ -27,7 +27,7 @@
 
 DefineSite("bratislava", {
 	Name = "Bratislava",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4227, 950},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -51,7 +51,7 @@ DefineSite("bratislava", {
 
 DefineSite("kremnica", {
 	Name = "Kremnica",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4275, 935},
 	CulturalNames = {
 		"magyar", "Körmöczbanya", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.

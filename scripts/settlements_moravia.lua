@@ -27,7 +27,7 @@
 
 DefineSite("brunn", {
 	Name = "Brno",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4206, 936},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -48,7 +48,7 @@ DefineSite("brunn", {
 
 DefineSite("doubravnik", {
 	Name = "Doubravnik",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4212, 924},
 	CulturalNames = {
 		"slav", "Doubravnik" -- "Doubravník"
@@ -64,7 +64,7 @@ DefineSite("doubravnik", {
 
 DefineSite("velehrad", {
 	Name = "Velehrad",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4234, 931},
 	CulturalNames = {
 		"slav", "Velehrad"

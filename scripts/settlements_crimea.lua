@@ -27,7 +27,7 @@
 
 DefineSite("simferopol", {
 	Name = "Simferopol",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4615, 1024},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

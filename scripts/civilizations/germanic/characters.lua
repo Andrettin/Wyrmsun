@@ -550,7 +550,7 @@ DefineCharacter("erala", {
 	StartDate = -1600,
 	Deities = {"odin", "heimdall"},
 	HistoricalLocations = {
-		-1600, "earth", "vejle"
+		-1600, "old_earth", "vejle"
 	}
 })
 

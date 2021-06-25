@@ -27,7 +27,7 @@
 
 DefineSite("roma-gotland", {
 	Name = "Roma",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4259, 739},
 	CulturalNames = {
 		"norse", "Roma"
@@ -43,7 +43,7 @@ DefineSite("roma-gotland", {
 
 DefineSite("torsburgen", {
 	Name = "Torsburgen",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4265, 741},
 	CulturalNames = {
 		"norse", "Torsburgen"

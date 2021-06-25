@@ -27,7 +27,7 @@
 
 DefineSite("akko", {
 	Name = "Akko",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4638, 1299},
 	CulturalNames = {
 		"phoenician", "Akko"
@@ -45,7 +45,7 @@ DefineSite("akko", {
 
 DefineSite("aphek", {
 	Name = "Aphek",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4653, 1301},
 	CulturalNames = {
 		"hebrew", "Aphek"
@@ -64,7 +64,7 @@ DefineSite("aphek", {
 
 DefineSite("aroer", {
 	Name = "Aroer",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4655, 1331},
 	CulturalNames = {
 		"hebrew", "Aroer"
@@ -83,7 +83,7 @@ DefineSite("aroer", {
 
 DefineSite("arpad", {
 	Name = "Arpad",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4683, 1216},
 	CulturalNames = {
 		"assyrian", "Arpad"
@@ -101,7 +101,7 @@ DefineSite("arpad", {
 
 DefineSite("arvad", {
 	Name = "Arvad",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4657, 1255},
 	CulturalNames = {
 		"phoenician", "Arvad"
@@ -119,7 +119,7 @@ DefineSite("arvad", {
 
 DefineSite("ascalon", {
 	Name = "Ascalon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4626, 1328},
 	CulturalNames = {
 		"hebrew", "Ascalon"
@@ -140,7 +140,7 @@ DefineSite("ascalon", {
 
 DefineSite("baalbec", {
 	Name = "Baalbec",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4665, 1273},
 	CulturalNames = {
 		"hittite", "Baalbec"
@@ -160,7 +160,7 @@ DefineSite("baalbec", {
 
 DefineSite("beersheba", {
 	Name = "Beersheba",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4630, 1338},
 	CulturalNames = {
 		"hebrew", "Beersheba"
@@ -179,7 +179,7 @@ DefineSite("beersheba", {
 
 DefineSite("berothai", {
 	Name = "Berothai",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4649, 1277},
 	CulturalNames = {
 		"phoenician", "Berothai"
@@ -197,7 +197,7 @@ DefineSite("berothai", {
 
 DefineSite("bethel", {
 	Name = "Bethel",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4642, 1322},
 	CulturalNames = {
 		"hebrew", "Bethel"
@@ -216,7 +216,7 @@ DefineSite("bethel", {
 
 DefineSite("bethshean", {
 	Name = "Bethshean",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4646, 1309},
 	CulturalNames = {
 		"hebrew", "Bethshean"
@@ -235,7 +235,7 @@ DefineSite("bethshean", {
 
 DefineSite("biblah", {
 	Name = "Biblah",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4671, 1264},
 	CulturalNames = {
 		"hebrew", "Biblah"
@@ -254,7 +254,7 @@ DefineSite("biblah", {
 
 DefineSite("bosrah", {
 	Name = "Bosrah",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4667, 1310},
 	CulturalNames = {
 		"hebrew", "Bosrah"
@@ -273,7 +273,7 @@ DefineSite("bosrah", {
 
 DefineSite("byblos", {
 	Name = "Byblos",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4652, 1272},
 	CulturalNames = {
 		"phoenician", "Gebal" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -292,7 +292,7 @@ DefineSite("byblos", {
 
 DefineSite("carchemish", {
 	Name = "Carchemish",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4704, 1209},
 	CulturalNames = {
 		"assyrian", "Carchemish",
@@ -313,7 +313,7 @@ DefineSite("carchemish", {
 
 DefineSite("damascus", {
 	Name = "Damascus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4666, 1279},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -339,7 +339,7 @@ DefineSite("damascus", {
 
 DefineSite("dan", {
 	Name = "Dan",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4651, 1290},
 	CulturalNames = {
 		"hebrew", "Dan"
@@ -359,7 +359,7 @@ DefineSite("dan", {
 
 DefineSite("dor", {
 	Name = "Dor",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4635, 1307},
 	CulturalNames = {
 		"hebrew", "Dor",
@@ -380,7 +380,7 @@ DefineSite("dor", {
 
 DefineSite("ekron", {
 	Name = "Ekron",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4630, 1326},
 	CulturalNames = {
 		"hebrew", "Ekron"
@@ -399,7 +399,7 @@ DefineSite("ekron", {
 
 DefineSite("elath", {
 	Name = "Elath",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4637, 1375},
 	CulturalNames = {
 		"assyrian", "Elath",
@@ -418,7 +418,7 @@ DefineSite("elath", {
 
 DefineSite("ezion-geber", {
 	Name = "Ezion-Geber",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4638, 1369},
 	CulturalNames = {
 		"assyrian", "Ezion-Geber",
@@ -437,7 +437,7 @@ DefineSite("ezion-geber", {
 
 DefineSite("gaza", {
 	Name = "Gaza",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4621, 1334},
 	CulturalNames = {
 		"assyrian", "Gaza",
@@ -462,7 +462,7 @@ DefineSite("gaza", {
 
 DefineSite("gilboa", {
 	Name = "Gilboa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4645, 1311},
 	CulturalNames = {
 		"hebrew", "Gilboa"
@@ -482,7 +482,7 @@ DefineSite("gilboa", {
 
 DefineSite("gilgal", {
 	Name = "Gilgal",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4647, 1323},
 	CulturalNames = {
 		"hebrew", "Gilgal"
@@ -501,7 +501,7 @@ DefineSite("gilgal", {
 
 DefineSite("hamath", {
 	Name = "Hamath",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4674, 1244},
 	CulturalNames = {
 		"assyrian", "Hamath",
@@ -523,7 +523,7 @@ DefineSite("hamath", {
 
 DefineSite("hazor", {
 	Name = "Hazor",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4628, 1325},
 	CulturalNames = {
 		"hebrew", "Hazor"
@@ -543,7 +543,7 @@ DefineSite("hazor", {
 
 DefineSite("hebron", {
 	Name = "Hebron",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4638, 1330},
 	CulturalNames = {
 		"hebrew", "Hebron"
@@ -564,7 +564,7 @@ DefineSite("hebron", {
 
 DefineSite("heshbon", {
 	Name = "Heshbon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4655, 1325},
 	CulturalNames = {
 		"hebrew", "Heshbon"
@@ -583,7 +583,7 @@ DefineSite("heshbon", {
 
 DefineSite("jabesh", {
 	Name = "Jabesh",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4654, 1315},
 	CulturalNames = {
 		"hebrew", "Jabesh"
@@ -603,7 +603,7 @@ DefineSite("jabesh", {
 
 DefineSite("jericho", {
 	Name = "Jericho",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4647, 1322},
 	CulturalNames = {
 		"hebrew", "Jericho"
@@ -625,7 +625,7 @@ DefineSite("jericho", {
 
 DefineSite("jezreel", {
 	Name = "Jezreel",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4649, 1310},
 	CulturalNames = {
 		"hebrew", "Jezreel"
@@ -644,7 +644,7 @@ DefineSite("jezreel", {
 
 DefineSite("joppa", {
 	Name = "Joppa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4630, 1320},
 	CulturalNames = {
 		"assyrian", "Joppa",
@@ -667,7 +667,7 @@ DefineSite("joppa", {
 
 DefineSite("kadesh", {
 	Name = "Kadesh",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4667, 1264},
 	CulturalNames = {
 		"egyptian", "Kadesh"
@@ -687,7 +687,7 @@ DefineSite("kadesh", {
 
 DefineSite("kadesh-barnea", {
 	Name = "Kadesh Barnea",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4630, 1359},
 	CulturalNames = {
 		"hebrew", "Kadesh Barnea"
@@ -704,7 +704,7 @@ DefineSite("kadesh-barnea", {
 
 DefineSite("kadesh-naphtali", {
 	Name = "Kadesh Naphtali",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4649, 1293},
 	CulturalNames = {
 		"hebrew", "Kadesh Naphtali"
@@ -724,7 +724,7 @@ DefineSite("kadesh-naphtali", {
 
 DefineSite("khatmar", {
 	Name = "Khatmar",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4693, 1223},
 	CulturalNames = {
 		"assyrian", "Khatmar"
@@ -742,7 +742,7 @@ DefineSite("khatmar", {
 
 DefineSite("megiddo", {
 	Name = "Megiddo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4639, 1305},
 	CulturalNames = {
 		"assyrian", "Megiddo",
@@ -767,7 +767,7 @@ DefineSite("megiddo", {
 
 DefineSite("samaria", {
 	Name = "Samaria",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4643, 1317},
 	CulturalNames = {
 		"assyrian", "Samaria",
@@ -787,7 +787,7 @@ DefineSite("samaria", {
 
 DefineSite("selah", {
 	Name = "Selah",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4645, 1358},
 	CulturalNames = {
 		"assyrian", "Selah",
@@ -806,7 +806,7 @@ DefineSite("selah", {
 
 DefineSite("shechem", {
 	Name = "Shechem",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4643, 1313},
 	CulturalNames = {
 		"hebrew", "Shechem",
@@ -828,7 +828,7 @@ DefineSite("shechem", {
 
 DefineSite("shiloh", {
 	Name = "Shiloh",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4640, 1321},
 	CulturalNames = {
 		"hebrew", "Shiloh"
@@ -850,7 +850,7 @@ DefineSite("shiloh", {
 
 DefineSite("shunem", {
 	Name = "Shunem",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4649, 1306},
 	CulturalNames = {
 		"hebrew", "Shunem"
@@ -869,7 +869,7 @@ DefineSite("shunem", {
 
 DefineSite("sidon", {
 	Name = "Sidon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4648, 1279},
 	CulturalNames = {
 		"phoenician", "Sidon"
@@ -888,7 +888,7 @@ DefineSite("sidon", {
 
 DefineSite("tyre", {
 	Name = "Tyre",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4642, 1291},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

@@ -27,7 +27,7 @@
 
 DefineSite("cadiz", {
 	Name = "Cadiz",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3699, 1218},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -49,7 +49,7 @@ DefineSite("cadiz", {
 
 DefineSite("calahorra", {
 	Name = "Calahorra",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3798, 1088},
 	CulturalNames = {
 		"castillian", "Calahorra"
@@ -67,7 +67,7 @@ DefineSite("calahorra", {
 
 DefineSite("cartagena", {
 	Name = "New Carthage",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3816, 1191},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -90,7 +90,7 @@ DefineSite("cartagena", {
 
 DefineSite("cordoba", {
 	Name = "Cordoba",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3730, 1183},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -111,7 +111,7 @@ DefineSite("cordoba", {
 
 DefineSite("gerona", {
 	Name = "Gerona",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3902, 1093},
 	CulturalNames = {
 		"castillian", "Gerona"
@@ -130,7 +130,7 @@ DefineSite("gerona", {
 
 DefineSite("granada", {
 	Name = "Granada",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3758, 1201},
 	CulturalNames = {
 		"castillian", "Granada"
@@ -147,7 +147,7 @@ DefineSite("granada", {
 
 DefineSite("lerida", {
 	Name = "Lerida",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3854, 1110},
 	CulturalNames = {
 		"castillian", "Lerida" -- "Lérida"
@@ -164,7 +164,7 @@ DefineSite("lerida", {
 
 DefineSite("malaga", {
 	Name = "Malaga",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3739, 1211},
 	CulturalNames = {
 		"castillian", "Malaga", -- "Málaga"; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
@@ -183,7 +183,7 @@ DefineSite("malaga", {
 
 DefineSite("merida", {
 	Name = "Merida",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3688, 1167},
 	CulturalNames = {
 		"castillian", "Merida", -- "Mérida"
@@ -202,7 +202,7 @@ DefineSite("merida", {
 
 DefineSite("munda", {
 	Name = "Munda",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3731, 1193},
 	CulturalNames = {
 		"latin", "Munda"
@@ -220,7 +220,7 @@ DefineSite("munda", {
 
 DefineSite("murcia", {
 	Name = "Murcia",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3812, 1186},
 	CulturalNames = {
 		"castillian", "Murcia"
@@ -238,7 +238,7 @@ DefineSite("murcia", {
 
 DefineSite("orihuela", {
 	Name = "Orihuela",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3819, 1184},
 	CulturalNames = {
 		"castillian", "Orihuela"
@@ -256,7 +256,7 @@ DefineSite("orihuela", {
 
 DefineSite("saguntum", {
 	Name = "Saguntum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3831, 1144},
 	CulturalNames = {
 		"latin", "Saguntum",
@@ -276,7 +276,7 @@ DefineSite("saguntum", {
 
 DefineSite("tarragona", {
 	Name = "Tarragona",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3881, 1108},
 	CulturalNames = {
 		"castillian", "Tarragona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
@@ -296,7 +296,7 @@ DefineSite("tarragona", {
 
 DefineSite("toledo", {
 	Name = "Toledo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3756, 1139},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -317,7 +317,7 @@ DefineSite("toledo", {
 
 DefineSite("tortosa", {
 	Name = "Tortosa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3855, 1120},
 	CulturalNames = {
 		"castillian", "Tortosa",

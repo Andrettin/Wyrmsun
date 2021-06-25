@@ -27,7 +27,7 @@
 
 DefineSite("armagh", {
 	Name = "Armagh",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3691, 810},
 	CulturalNames = {
 		"gael", "Armagh",
@@ -44,7 +44,7 @@ DefineSite("armagh", {
 
 DefineSite("waterford", {
 	Name = "Waterford",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3678, 858},
 	CulturalNames = {
 		"english", "Waterford"

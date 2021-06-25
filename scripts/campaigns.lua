@@ -55,7 +55,7 @@ DefineCampaign("the-home-of-the-boii", {
 	Faction = "marcomanni-tribe",
 	StartYear = -9,
 	MapTemplates = {
-		"earth", {4064, 881}, {256, 256}
+		"old_earth", {4064, 881}, {256, 256}
 	}
 })
 --]]
@@ -77,7 +77,7 @@ DefineCampaign("the-first-marcomannic-war", {
 	Faction = "marcomanni-tribe",
 	StartYear = 170, -- beginning of the First Marcomannic War
 	MapTemplates = {
-		"earth", {4064, 881}, {256, 256}
+		"old_earth", {4064, 881}, {256, 256}
 	}
 })
 --]]
@@ -89,7 +89,7 @@ DefineCampaign("moving-into-galicia", {
 	Faction = "rome",
 	StartYear = 411,
 	MapTemplates = {
-		"earth", {3616, 975}, {256, 256}
+		"old_earth", {3616, 975}, {256, 256}
 	}
 })
 
@@ -100,7 +100,7 @@ DefineCampaign("the-founding-of-francia", {
 --	StartYear = 481,
 	StartYear = 486,
 	MapTemplates = {
-		"earth", {3780, 852}, {256, 256}
+		"old_earth", {3780, 852}, {256, 256}
 	}
 })
 
@@ -120,7 +120,7 @@ DefineCampaign("sigiberts-struggle", {
 	Faction = "austrasia",
 	StartYear = 561, -- Sigibert's reign in his lands begins
 	MapTemplates = {
-		"earth", {3780, 852}, {256, 256}
+		"old_earth", {3780, 852}, {256, 256}
 	}
 })
 
@@ -140,7 +140,7 @@ DefineCampaign("the-heirs-return", {
 	Faction = "deira",
 	StartYear = 616,
 	MapTemplates = {
-		"earth", {3627, 695}, {256, 256}
+		"old_earth", {3627, 695}, {256, 256}
 	}
 })
 
@@ -150,7 +150,7 @@ DefineCampaign("the-fall-of-mercia", {
 	Faction = "wessex",
 	StartYear = 825,
 	MapTemplates = {
-		"earth", {3627, 695}, {256, 256}
+		"old_earth", {3627, 695}, {256, 256}
 	}
 })
 
@@ -160,7 +160,7 @@ DefineCampaign("halfdan-the-black", {
 	Faction = "agder",
 	StartYear = 841,
 	MapTemplates = {
-		"earth", {3944, 622}, {256, 256}
+		"old_earth", {3944, 622}, {256, 256}
 	}
 })
 --]]

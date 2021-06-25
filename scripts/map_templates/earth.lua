@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---SetMapTemplateLayerConnector("earth", "unit-portal", {-1, -1}, "asgard")
+--SetMapTemplateLayerConnector("old_earth", "unit-portal", {-1, -1}, "asgard")
 
 EarthStartX = 4022
 EarthStartY = 667

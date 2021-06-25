@@ -27,7 +27,7 @@
 
 DefineSite("fiume", {
 	Name = "Fiume",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4171, 1015},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -49,7 +49,7 @@ DefineSite("fiume", {
 
 DefineSite("narona", {
 	Name = "Narona",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4242, 1068},
 	CulturalNames = {
 		"latin", "Narona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.

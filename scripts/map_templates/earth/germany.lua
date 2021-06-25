@@ -32,4 +32,4 @@
 -- in c. 1900 BC a barrow was built at Leubingen (in Saxo-Thuringia in central Germany); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 23.
 
 -- Paderborn
---SetMapTemplateLayerConnector("earth", "unit-portal", {4033, 873}, "nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.
+--SetMapTemplateLayerConnector("old_earth", "unit-portal", {4033, 873}, "nidavellir") -- Gnitaheith (where Fafnir dwelled) has been identified with a real location south of Paderborn, so place a portal to Nidavellir there; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 343.

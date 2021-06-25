@@ -27,7 +27,7 @@
 
 DefineSite("duisburg", {
 	Name = "Duisburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3944, 890},
 	HistoricalOwners = {
 		481, "frank-tribe", -- Duisbury's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -43,7 +43,7 @@ DefineSite("duisburg", {
 
 DefineSite("echternach", {
 	Name = "Echternach",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3967, 911},
 	CulturalNames = {
 		"teuton", "Echternach"
@@ -63,7 +63,7 @@ DefineSite("echternach", {
 
 DefineSite("tongres", {
 	Name = "Tongres",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3966, 884},
 	CulturalNames = {
 		"celt", "Aduatuca",
@@ -85,7 +85,7 @@ DefineSite("tongres", {
 
 DefineSite("tournai", {
 	Name = "Tournai",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3918, 896},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

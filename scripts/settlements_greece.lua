@@ -27,7 +27,7 @@
 
 DefineSite("aghia-irini", {
 	Name = "Aghia Irini",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4393, 1191},
 	CulturalNames = {
 		"greek", "Aghia Irini"
@@ -46,7 +46,7 @@ DefineSite("aghia-irini", {
 
 DefineSite("amyclae", {
 	Name = "Amyclae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4348, 1206},
 	CulturalNames = {
 		"greek", "Amyclae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -62,7 +62,7 @@ DefineSite("amyclae", {
 
 DefineSite("aphidnae", {
 	Name = "Aphidnae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4382, 1179},
 	CulturalNames = {
 		"greek", "Aphidnae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -79,7 +79,7 @@ DefineSite("aphidnae", {
 
 DefineSite("argos", {
 	Name = "Argos",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4357, 1191},
 	CulturalNames = {
 		"greek", "Argos"
@@ -95,7 +95,7 @@ DefineSite("argos", {
 
 DefineSite("corinth", {
 	Name = "Corinth",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4360, 1186},
 	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -115,7 +115,7 @@ DefineSite("corinth", {
 
 DefineSite("coulas", {
 	Name = "Coulas",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4366, 1172},
 	CulturalNames = {
 		"greek", "Coulas" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -131,7 +131,7 @@ DefineSite("coulas", {
 
 DefineSite("delos", {
 	Name = "Delos",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4414, 1197},
 	CulturalNames = {
 		"greek", "Delos"
@@ -150,7 +150,7 @@ DefineSite("delos", {
 
 DefineSite("delphi", {
 	Name = "Delphi",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4352, 1172},
 	CulturalNames = {
 		"greek", "Delphi" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -166,7 +166,7 @@ DefineSite("delphi", {
 
 DefineSite("dicte", {
 	Name = "Dicte",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4420, 1247},
 	CulturalNames = {
 		"greek", "Dicte" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -182,7 +182,7 @@ DefineSite("dicte", {
 
 DefineSite("eleusis", {
 	Name = "Eleusis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4374, 1181},
 	CulturalNames = {
 		"greek", "Eleusis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -199,7 +199,7 @@ DefineSite("eleusis", {
 
 DefineSite("epidaurus", {
 	Name = "Epidaurus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4366, 1190},
 	CulturalNames = {
 		"greek", "Epidaurus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -216,7 +216,7 @@ DefineSite("epidaurus", {
 
 DefineSite("gerenia", {
 	Name = "Gerenia",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4344, 1206},
 	CulturalNames = {
 		"greek", "Gerenia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -232,7 +232,7 @@ DefineSite("gerenia", {
 
 DefineSite("ialysus", {
 	Name = "Ialysus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4480, 1220},
 	CulturalNames = {
 		"greek", "Ialysus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -248,7 +248,7 @@ DefineSite("ialysus", {
 
 DefineSite("iolcus", {
 	Name = "Iolcus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4363, 1150},
 	CulturalNames = {
 		"greek", "Iolcus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -264,7 +264,7 @@ DefineSite("iolcus", {
 
 DefineSite("itanus", {
 	Name = "Itanus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4437, 1247},
 	CulturalNames = {
 		"greek", "Itanus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -280,7 +280,7 @@ DefineSite("itanus", {
 
 DefineSite("knossos", {
 	Name = "Knossos",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4410, 1245},
 	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -298,7 +298,7 @@ DefineSite("knossos", {
 
 DefineSite("krisa", {
 	Name = "Krisa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4351, 1172},
 	CulturalNames = {
 		"greek", "Krisa"
@@ -315,7 +315,7 @@ DefineSite("krisa", {
 
 DefineSite("mycenae", {
 	Name = "Mycenae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4358, 1188},
 	CulturalNames = {
 		"greek", "Mycenae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -332,7 +332,7 @@ DefineSite("mycenae", {
 
 DefineSite("orchomenus", {
 	Name = "Orchomenus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4360, 1172},
 	CulturalNames = {
 		"greek", "Orchomenus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -348,7 +348,7 @@ DefineSite("orchomenus", {
 
 DefineSite("pagasae", {
 	Name = "Pagasae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4361, 1152},
 	CulturalNames = {
 		"greek", "Pagasae" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -364,7 +364,7 @@ DefineSite("pagasae", {
 
 DefineSite("phylakopi", {
 	Name = "Phylakopi",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4396, 1212},
 	CulturalNames = {
 		"greek", "Phylakopi"
@@ -383,7 +383,7 @@ DefineSite("phylakopi", {
 
 DefineSite("sicyon", {
 	Name = "Sicyon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4356, 1183},
 	CulturalNames = {
 		"greek", "Sicyon"
@@ -399,7 +399,7 @@ DefineSite("sicyon", {
 
 DefineSite("thebes", {
 	Name = "Thebes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 --	Position = {4369, 1176},
 	Position = {4357, 1170}, -- moved here to give Athens more space
 	--BaseUnitType = "unit_settlement_site",
@@ -418,7 +418,7 @@ DefineSite("thebes", {
 
 DefineSite("tiryns", {
 	Name = "Tiryns",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4359, 1191},
 	CulturalNames = {
 		"greek", "Tiryns" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.

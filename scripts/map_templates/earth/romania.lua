@@ -26,7 +26,7 @@
 --
 
 -- Otomani
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4349, 970}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Otomani, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("old_earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4349, 970}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Otomani, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
 
 -- Sălacea
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4346, 969}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Sălacea, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.
+SetMapTemplateUnit("old_earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {4346, 969}, -1700, -1500) -- a fortified hilltop settlement existed c. 1700-1500 BC in Sălacea, belonging to the Otomani-Füzesabony culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 31.

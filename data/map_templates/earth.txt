@@ -1,4 +1,4 @@
-earth = {
+old_earth = {
 	name = "Earth"
 	world = earth
 	size = { 8192 4096 }
@@ -48,86 +48,16 @@ earth_space = {
 	world = earth
 	size = { 384 384 }
 	subtemplate_top_left_pos = { 16 16 }
+	base_terrain_type = dirt
 	min_longitude = -11
 	max_longitude = 34
 	min_latitude = 30
-	max_latitude = 62.5
+	max_latitude = 62
 	#circle = true
 	unusable_area_terrain_type = dirt
 	unusable_area_overlay_terrain_type = space
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
-}
-
-earth_60_75_latitude_north = {
-	name = "Earth"
-	main_template = earth_space
-	world = earth
-	size = { 384 32 }
-	subtemplate_top_left_pos = { 0 0 }
-	base_terrain_type = dirt
-	terrain_image_file = "earth/earth_60_75_latitude_north.png"
-	overlay_terrain_image_file = "earth/earth_60_75_latitude_north_overlay.png"
-	territory_image_file = "earth/earth_60_75_latitude_north_territories.png"
-	min_longitude = -11
-	max_longitude = 34
-	min_latitude = 60
-	max_latitude = 62.5
-	#1.5x latitude scale
-	generated_terrains = {
-		grass = {
-			seed_count = 128
-			use_existing_as_seeds = true
-			target_terrain_type = dirt
-		}
-		pine_tree = {
-			seed_count = 16
-			max_percent = 20
-			target_terrain_type = grass
-		}
-	}
-	generated_neutral_units = {
-		unit_tree_stump = 2
-		unit_bee = 8
-		unit_fly = 8
-		unit_bug = 8
-		unit_worm = 8
-		unit_snail = 8
-		unit_slug = 8
-		unit_frog = 8
-		unit_bird = 8
-		unit_crow = 8
-		unit_rat = 8
-		unit_goat = 4
-		unit_boar = 4
-		unit_horse = 2
-		unit_wolf = 4
-		unit_germanic_warrior = 8
-		unit_germanic_archer = 8
-	}
-	player_location_generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_wood_pile = 16
-		unit_stone_pile = 8
-	}
-}
-
-earth_45_60_latitude_north = {
-	name = "Earth"
-	main_template = earth_space
-	world = earth
-	size = { 384 192 }
-	subtemplate_top_left_pos = { 0 32 }
-	base_terrain_type = dirt
-	terrain_image_file = "earth/earth_45_60_latitude_north.png"
-	overlay_terrain_image_file = "earth/earth_45_60_latitude_north_overlay.png"
-	trade_route_image_file = "earth/earth_45_60_latitude_north_trade_routes.png"
-	territory_image_file = "earth/earth_45_60_latitude_north_territories.png"
-	min_longitude = -11
-	max_longitude = 34
-	min_latitude = 45
-	max_latitude = 60
-	#1.5x latitude scale (compared to the equirectangular projection), about the same as in Mercator for this latitude
 	generated_terrains = {
 		grass = {
 			seed_count = 1024
@@ -170,12 +100,65 @@ earth_45_60_latitude_north = {
 	}
 }
 
+earth_60_75_latitude_north = {
+	name = "Earth"
+	world = earth
+	size = { 384 32 }
+	base_terrain_type = dirt
+	terrain_image_file = "earth/earth_60_75_latitude_north.png"
+	overlay_terrain_image_file = "earth/earth_60_75_latitude_north_overlay.png"
+	territory_image_file = "earth/earth_60_75_latitude_north_territories.png"
+	min_longitude = -11
+	max_longitude = 34
+	min_latitude = 60
+	max_latitude = 62.5
+	#1.5x latitude scale
+	generated_neutral_units = {
+		unit_tree_stump = 2
+		unit_bee = 8
+		unit_fly = 8
+		unit_bug = 8
+		unit_worm = 8
+		unit_snail = 8
+		unit_slug = 8
+		unit_frog = 8
+		unit_bird = 8
+		unit_crow = 8
+		unit_rat = 8
+		unit_goat = 4
+		unit_boar = 4
+		unit_horse = 2
+		unit_wolf = 4
+		unit_germanic_warrior = 8
+		unit_germanic_archer = 8
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}
+
+earth_45_60_latitude_north = {
+	name = "Earth"
+	world = earth
+	size = { 384 192 }
+	base_terrain_type = dirt
+	terrain_image_file = "earth/earth_45_60_latitude_north.png"
+	overlay_terrain_image_file = "earth/earth_45_60_latitude_north_overlay.png"
+	trade_route_image_file = "earth/earth_45_60_latitude_north_trade_routes.png"
+	territory_image_file = "earth/earth_45_60_latitude_north_territories.png"
+	min_longitude = -11
+	max_longitude = 34
+	min_latitude = 45
+	max_latitude = 60
+	#1.5x latitude scale (compared to the equirectangular projection), about the same as in Mercator for this latitude
+}
+
 earth_30_45_latitude_north = {
 	name = "Earth"
-	main_template = earth_space
 	world = earth
 	size = { 384 160 }
-	subtemplate_top_left_pos = { 0 224 }
 	base_terrain_type = dirt
 	terrain_image_file = "earth/earth_30_45_latitude_north.png"
 	overlay_terrain_image_file = "earth/earth_30_45_latitude_north_overlay.png"

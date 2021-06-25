@@ -505,7 +505,7 @@ DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heim
 		"head-of-state", 824, 0, "vestfold"
 	},
 	HistoricalLocations = {
-		824, "earth", "tonsberg"
+		824, "old_earth", "tonsberg"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "vestfold" or GetPlayerData(trigger_player, "Faction") == "norway") then
@@ -535,7 +535,7 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 		"head-of-state", 841, 863, "agder"
 	},
 	HistoricalLocations = {
-		841, "earth", "arendal" -- became king of Agder in 841, and Arendal seems like a reasonably good location to place him
+		841, "old_earth", "arendal" -- became king of Agder in 841, and Arendal seems like a reasonably good location to place him
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "agder" or GetPlayerData(trigger_player, "Faction") == "norway") then

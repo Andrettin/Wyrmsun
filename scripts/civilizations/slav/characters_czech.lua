@@ -47,7 +47,7 @@ DefineCharacter("agnes-premyslovna", { -- Source: Alena Ježková, "77 Prague Le
 	Father = "otakar-i-premysl", -- youngest daughter of the Czech king Přemysl Otakar I
 	StartDate = 1231, -- founded the St. Agnes' Cloister (in Prague) in 1231, and became its mother superior
 	HistoricalLocations = {
---		1231, "earth", "prague"
+--		1231, "old_earth", "prague"
 	}
 })
 

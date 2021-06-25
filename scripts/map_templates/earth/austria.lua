@@ -26,18 +26,18 @@
 --
 
 -- Salzburg / Iuvavum
-SetMapTemplateUnit("earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-smithy", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
-SetMapTemplateUnit("earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-lumber-mill", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-smithy", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-guard-tower", "rome", {4135, 960}, 170, 171) -- some buildings for Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-teuton-swordsman", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario
+SetMapTemplateUnit("old_earth", "unit-latin-javelineer", "rome", {4135, 960}, 170, 171) -- troops to defend Iuvavum for The First Marcomannic War scenario

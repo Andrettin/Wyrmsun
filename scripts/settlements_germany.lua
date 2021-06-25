@@ -27,7 +27,7 @@
 
 DefineSite("augsburg", {
 	Name = "Augsburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4090, 942},
 	CulturalNames = {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
@@ -51,7 +51,7 @@ DefineSite("augsburg", {
 
 DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	Name = "Bernstorf",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4104, 946},
 	CulturalNames = {
 		"teuton", "Bernstorf"
@@ -68,7 +68,7 @@ DefineSite("bernstorf", { -- Bernstorf, Bavaria
 
 DefineSite("bremen", {
 	Name = "Bremen",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4044, 841},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -93,7 +93,7 @@ DefineSite("bremen", {
 
 DefineSite("eichstatt", {
 	Name = "Eichstatt",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4092, 926},
 	CulturalNames = {
 		"teuton", "Eichstatt" -- "Eichstätt"
@@ -109,7 +109,7 @@ DefineSite("eichstatt", {
 
 DefineSite("eining", {
 	Name = "Eining",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4104, 936},
 	CulturalNames = {
 		"teuton", "Eining"
@@ -126,7 +126,7 @@ DefineSite("eining", {
 
 DefineSite("eresburg", {
 	Name = "Eresburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4043, 879},
 	CulturalNames = {
 		"frankish", "Eresburg",
@@ -144,7 +144,7 @@ DefineSite("eresburg", {
 
 DefineSite("freising", {
 	Name = "Freising",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4114, 947},
 	CulturalNames = {
 		"teuton", "Freising"
@@ -160,7 +160,7 @@ DefineSite("freising", {
 
 DefineSite("fulda", {
 	Name = "Fulda",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4058, 895},
 	CulturalNames = {
 		"teuton", "Fulda"
@@ -180,7 +180,7 @@ DefineSite("fulda", {
 
 DefineSite("konnenberg", {
 	Name = "Konnenberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4045, 857},
 	CulturalNames = {
 		"teuton", "Konnenberg"
@@ -196,7 +196,7 @@ DefineSite("konnenberg", {
 
 DefineSite("konstanz", {
 	Name = "Konstanz",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4051, 965},
 	CulturalNames = {
 		"teuton", "Konstanz"
@@ -217,7 +217,7 @@ DefineSite("konstanz", {
 
 DefineSite("magdeburg", {
 	Name = "Magdeburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4104, 861},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -243,7 +243,7 @@ DefineSite("magdeburg", {
 
 DefineSite("mainz", {
 	Name = "Mainz",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4022, 913},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -277,7 +277,7 @@ DefineSite("mainz", {
 
 DefineSite("mittelberg", {
 	Name = "Mittelberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4101, 882},
 	CulturalNames = {
 		"teuton", "Mittelberg"
@@ -294,7 +294,7 @@ DefineSite("mittelberg", {
 
 DefineSite("munster", {
 	Name = "Munster",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3992, 865},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -318,7 +318,7 @@ DefineSite("munster", {
 
 DefineSite("nuremberg", {
 	Name = "Nuremberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4087, 930},
 	CulturalNames = {
 		"teuton", "Nuremberg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -339,7 +339,7 @@ DefineSite("nuremberg", {
 
 DefineSite("paderborn", {
 	Name = "Paderborn",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4033, 873},
 	CulturalNames = {
 		"teuton", "Paderborn"
@@ -356,7 +356,7 @@ DefineSite("paderborn", {
 
 DefineSite("passau", {
 	Name = "Passau",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4149, 945},
 	CulturalNames = {
 		"teuton", "Passau"
@@ -373,7 +373,7 @@ DefineSite("passau", {
 
 DefineSite("regensburg", {
 	Name = "Regensburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4116, 932},
 	CulturalNames = {
 		"latin", "Regina Castra",
@@ -406,7 +406,7 @@ DefineSite("regensburg", {
 
 DefineSite("scheidungen", {
 	Name = "Scheidungen",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4107, 873},
 	CulturalNames = {
 		"teuton", "Scheidungen"
@@ -422,7 +422,7 @@ DefineSite("scheidungen", {
 
 DefineSite("straubing", {
 	Name = "Straubing",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4124, 934},
 	CulturalNames = {
 		"teuton", "Straubing" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -445,7 +445,7 @@ DefineSite("straubing", {
 
 DefineSite("syburg", {
 	Name = "Syburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4019, 876},
 	CulturalNames = {
 		"frankish", "Syburg",
@@ -463,7 +463,7 @@ DefineSite("syburg", {
 
 DefineSite("tauberbischofsheim", {
 	Name = "Tauberbischofsheim",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4044, 922},
 	CulturalNames = {
 		"teuton", "Tauberbischofsheim"
@@ -480,7 +480,7 @@ DefineSite("tauberbischofsheim", {
 
 DefineSite("trier", {
 	Name = "Trier",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3993, 917},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -509,7 +509,7 @@ DefineSite("trier", {
 
 DefineSite("worms", {
 	Name = "Worms",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4026, 922},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -538,7 +538,7 @@ DefineSite("worms", {
 
 DefineSite("zulpich", {
 	Name = "Zulpich",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3996, 896},
 	CulturalNames = {
 		"teuton", "Zulpich" -- "Zülpich"

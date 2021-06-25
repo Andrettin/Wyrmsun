@@ -27,7 +27,7 @@
 
 DefineSite("amiens", {
 	Name = "Amiens",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3888, 913},
 	CulturalNames = {
 		"celt", "Samarobriva",
@@ -50,7 +50,7 @@ DefineSite("amiens", {
 
 DefineSite("antibes", {
 	Name = "Antibes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3995, 1056},
 	CulturalNames = {
 		"frankish", "Antipolis",
@@ -68,7 +68,7 @@ DefineSite("antibes", {
 
 DefineSite("arles", {
 	Name = "Arles",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3948, 1053},
 	CulturalNames = {
 		"frankish", "Arelatum",
@@ -89,7 +89,7 @@ DefineSite("arles", {
 
 DefineSite("autun", {
 	Name = "Autun",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3933, 981},
 	CulturalNames = {
 		"frankish", "Augustodunum",
@@ -109,7 +109,7 @@ DefineSite("autun", {
 
 DefineSite("avignon", {
 	Name = "Avignon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3952, 1045},
 	CulturalNames = {
 		"frankish", "Avinio",
@@ -128,7 +128,7 @@ DefineSite("avignon", {
 
 DefineSite("besancon", {
 	Name = "Besancon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3977, 978},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -160,7 +160,7 @@ DefineSite("besancon", {
 
 DefineSite("bordeaux", {
 	Name = "Bordeaux",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3826, 1029},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -191,7 +191,7 @@ DefineSite("bordeaux", {
 
 DefineSite("bourges", {
 	Name = "Bourges",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3894, 975},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -218,7 +218,7 @@ DefineSite("bourges", {
 
 DefineSite("cahors", {
 	Name = "Cahors",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3875, 1033},
 	CulturalNames = {
 		"french", "Cahors"
@@ -237,7 +237,7 @@ DefineSite("cahors", {
 
 DefineSite("cambrai", {
 	Name = "Cambrai",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3917, 903},
 	CulturalNames = {
 		"french", "Cambrai"
@@ -259,7 +259,7 @@ DefineSite("cambrai", {
 
 DefineSite("chalons", {
 	Name = "Chalons",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3947, 941},
 	CulturalNames = {
 		"french", "Chalons" -- "Châlons"
@@ -278,7 +278,7 @@ DefineSite("chalons", {
 
 DefineSite("clermont-ferrand", {
 	Name = "Clermont-Ferrand",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3909, 1006},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -305,7 +305,7 @@ DefineSite("clermont-ferrand", {
 
 DefineSite("embrun", {
 	Name = "Embrun",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3985, 1033},
 	CulturalNames = {
 		"french", "Embrun"
@@ -323,7 +323,7 @@ DefineSite("embrun", {
 
 DefineSite("ferrieres", {
 	Name = "Ferrieres",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3898, 956},
 	CulturalNames = {
 		"french", "Ferrieres" -- "Ferrières"
@@ -340,7 +340,7 @@ DefineSite("ferrieres", {
 
 DefineSite("grenoble", {
 	Name = "Grenoble",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3969, 1018},
 	CulturalNames = {
 		"french", "Grenoble"
@@ -359,7 +359,7 @@ DefineSite("grenoble", {
 
 DefineSite("langres", {
 	Name = "Langres",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3958, 963},
 	CulturalNames = {
 		"frankish", "Lingones",
@@ -378,7 +378,7 @@ DefineSite("langres", {
 
 DefineSite("lyon", {
 	Name = "Lyon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3947, 1006},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -406,7 +406,7 @@ DefineSite("lyon", {
 
 DefineSite("metz", {
 	Name = "Metz",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3981, 931},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -432,7 +432,7 @@ DefineSite("metz", {
 
 DefineSite("molsheim", {
 	Name = "Molsheim",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4010, 948},
 	CulturalNames = {
 		"teuton", "Molsheim"
@@ -449,7 +449,7 @@ DefineSite("molsheim", {
 
 DefineSite("montpellier", {
 	Name = "Montpellier",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3924, 1054},
 	CulturalNames = {
 		"french", "Montpellier"
@@ -466,7 +466,7 @@ DefineSite("montpellier", {
 
 DefineSite("nantes", {
 	Name = "Nantes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3804, 972},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -489,7 +489,7 @@ DefineSite("nantes", {
 
 DefineSite("narbonne", {
 	Name = "Narbonne",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3913, 1062},
 	CulturalNames = {
 		"frankish", "Namnetes",
@@ -510,7 +510,7 @@ DefineSite("narbonne", {
 
 DefineSite("nice", {
 	Name = "Nice",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4006, 1051},
 	CulturalNames = {
 		"celt", "Nicaea",
@@ -536,7 +536,7 @@ DefineSite("nice", {
 
 DefineSite("orleans", {
 	Name = "Orleans",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3884, 961},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -558,7 +558,7 @@ DefineSite("orleans", {
 
 DefineSite("perpignan", {
 	Name = "Perpignan",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3907, 1077},
 	CulturalNames = {
 		"french", "Perpignan"
@@ -576,7 +576,7 @@ DefineSite("perpignan", {
 
 DefineSite("poitiers", {
 	Name = "Poitiers",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3845, 990},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -601,7 +601,7 @@ DefineSite("poitiers", {
 
 DefineSite("reims", {
 	Name = "Reims",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3930, 926},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -629,7 +629,7 @@ DefineSite("reims", {
 
 DefineSite("rodez", {
 	Name = "Rodez",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3895, 1030},
 	CulturalNames = {
 		"frankish", "Ruthenis",
@@ -648,7 +648,7 @@ DefineSite("rodez", {
 
 DefineSite("rouen", {
 	Name = "Rouen",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3871, 926},
 	CulturalNames = {
 		"frankish", "Rotomagus",
@@ -669,7 +669,7 @@ DefineSite("rouen", {
 
 DefineSite("sens", {
 	Name = "Sens",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3911, 958},
 	CulturalNames = {
 		"frankish", "Senonae",
@@ -690,7 +690,7 @@ DefineSite("sens", {
 
 DefineSite("soissons", {
 	Name = "Soissons",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3915, 923},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -712,7 +712,7 @@ DefineSite("soissons", {
 
 DefineSite("strassburg", {
 	Name = "Strasbourg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4010, 945},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -753,7 +753,7 @@ DefineSite("strassburg", {
 
 DefineSite("toul", {
 	Name = "Toul",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3969, 948},
 	CulturalNames = {
 		"french", "Toul"
@@ -773,7 +773,7 @@ DefineSite("toul", {
 
 DefineSite("toulon", {
 	Name = "Toulon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3974, 1065},
 	CulturalNames = {
 		"frankish", "Tolo",
@@ -791,7 +791,7 @@ DefineSite("toulon", {
 
 DefineSite("tours", {
 	Name = "Tours",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3857, 971},
 	CulturalNames = {
 		"frankish", "Turones",
@@ -816,7 +816,7 @@ DefineSite("tours", {
 
 DefineSite("uzes", {
 	Name = "Uzes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3941, 1044},
 	CulturalNames = {
 		"frankish", "Ucetia",
@@ -834,7 +834,7 @@ DefineSite("uzes", {
 
 DefineSite("valence", {
 	Name = "Valence",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3952, 1026},
 	CulturalNames = {
 		"frankish", "Valentia",
@@ -854,7 +854,7 @@ DefineSite("valence", {
 
 DefineSite("verdun", {
 	Name = "Verdun",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3957, 927},
 	CulturalNames = {
 		"french", "Verdun"
@@ -877,7 +877,7 @@ DefineSite("verdun", {
 
 DefineSite("vienne", {
 	Name = "Vienne",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3959, 1012},
 	CulturalNames = {
 		"french", "Vienne"

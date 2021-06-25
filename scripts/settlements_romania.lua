@@ -27,7 +27,7 @@
 
 DefineSite("apulum", {
 	Name = "Apulum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4374, 1001},
 	CulturalNames = {
 		"latin", "Apulum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -45,7 +45,7 @@ DefineSite("apulum", {
 
 DefineSite("temesvar", {
 	Name = "Temesvar",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4318, 1011},
 	BaseUnitType = "unit_settlement_site",
 	HistoricalOwners = {

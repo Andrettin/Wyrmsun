@@ -27,7 +27,7 @@
 
 DefineSite("buda", {
 	Name = "Buda",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4268, 966},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

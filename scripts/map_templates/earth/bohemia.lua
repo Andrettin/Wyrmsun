@@ -25,9 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("earth", "unit-teuton-stables", "quadi-tribe", {4234, 931}, 180) -- horse breeding in 180 AD; Source: "Atlas de História Mundial", 2001, p. 89.
+SetMapTemplateUnit("old_earth", "unit-teuton-stables", "quadi-tribe", {4234, 931}, 180) -- horse breeding in 180 AD; Source: "Atlas de História Mundial", 2001, p. 89.
 
 -- Prague
-SetMapTemplateHero("earth", "marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
-SetMapTemplateHero("earth", "catualda", "marcomanni-tribe", {4169, 908}, 19, 20) -- Catualda deposed Marbod in 19 AD
-SetMapTemplateHero("earth", "ballomar", "marcomanni-tribe", {4169, 908}, 167, 172) -- Ballomar was Marcomannic chieftain in 167, when he tried unsuccessfully to negotiate lands for his people to settle with the Romans, in exchange for military service; after the war which began in 170, Ballomar surrendered to the Romans in 172; Source: "Ancient Warfare VII.6", 2013, pp. 32-33.
+SetMapTemplateHero("old_earth", "marbod", "marcomanni-tribe", {4169, 908}, -9, 19) -- Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC; Marbod deposed in 19 AD
+SetMapTemplateHero("old_earth", "catualda", "marcomanni-tribe", {4169, 908}, 19, 20) -- Catualda deposed Marbod in 19 AD
+SetMapTemplateHero("old_earth", "ballomar", "marcomanni-tribe", {4169, 908}, 167, 172) -- Ballomar was Marcomannic chieftain in 167, when he tried unsuccessfully to negotiate lands for his people to settle with the Romans, in exchange for military service; after the war which began in 170, Ballomar surrendered to the Romans in 172; Source: "Ancient Warfare VII.6", 2013, pp. 32-33.

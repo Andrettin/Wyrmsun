@@ -1133,7 +1133,7 @@ DefineCharacter("swithberht", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	-- partook in a mission to Frisia
 	Deities = {"christian-god"},
 	HistoricalLocations = {
-		692, "earth", "wijk-bij-duurstede"
+		692, "old_earth", "wijk-bij-duurstede"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria" or GetPlayerData(trigger_player, "Faction") == "englaland") then
@@ -1640,7 +1640,7 @@ DefineCharacter("aethelberht-of-york", { -- Source: Frank Stenton, "Anglo-Saxon 
 	DeathDate = 780, -- resigned as archbishop in 780
 	Deities = {"christian-god"},
 	HistoricalLocations = {
-		767, "earth", "york"
+		767, "old_earth", "york"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1662,7 +1662,7 @@ DefineCharacter("alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	-- received the greater abbey of St. Martin at Tours from Charlemagne in 796
 	DeathDate = 804, -- died in 804
 	HistoricalLocations = {
-		767, "earth", "york"
+		767, "old_earth", "york"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1820,7 +1820,7 @@ DefineCharacter("sigulf-of-ferrieres", { -- Source: Frank Stenton, "Anglo-Saxon 
 	Deities = {"christian-god"},
 	StartDate = 804, -- succeeded Alcuin to the abbey of Ferrières when he died in 804
 	HistoricalLocations = {
-		804, "earth", "ferrieres"
+		804, "old_earth", "ferrieres"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then
@@ -1839,7 +1839,7 @@ DefineCharacter("frithugisl", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Deities = {"christian-god"},
 	StartDate = 804, -- succeeded Alcuin to the greater abbey of St. Martin at Tours when he died in 804
 	HistoricalLocations = {
-		804, "earth", "tours"
+		804, "old_earth", "tours"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "northumbria") then -- Alcuin's place of origin

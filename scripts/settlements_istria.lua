@@ -27,7 +27,7 @@
 
 DefineSite("gradisca", {
 	Name = "Gradisca",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4147, 1004},
 	CulturalNames = {
 		"teuton", "Gradisca"
@@ -43,7 +43,7 @@ DefineSite("gradisca", {
 
 DefineSite("gorz", {
 	Name = "Gorz",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4151, 1003},
 	CulturalNames = {
 		"teuton", "Gorz" -- "Görz"
@@ -59,7 +59,7 @@ DefineSite("gorz", {
 
 DefineSite("pola", {
 	Name = "Pola",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4155, 1027},
 	CulturalNames = {
 		"teuton", "Pola"
@@ -77,7 +77,7 @@ DefineSite("pola", {
 
 DefineSite("trieste", {
 	Name = "Trieste",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4154, 1009},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

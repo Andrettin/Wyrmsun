@@ -27,7 +27,7 @@
 
 DefineSite("arendal", {
 	Name = "Arendal",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4048, 708},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -48,7 +48,7 @@ DefineSite("arendal", {
 
 DefineSite("gjerstad", {
 	Name = "Gjerstad",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4069, 702},
 	CulturalNames = {
 		"norse", "Geirstadir" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
@@ -68,7 +68,7 @@ DefineSite("gjerstad", {
 
 DefineSite("hamar", {
 	Name = "Hamar",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4089, 666},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -90,7 +90,7 @@ DefineSite("hamar", {
 
 DefineSite("hermansverk", {
 	Name = "Hermansverk",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3981, 653},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -111,7 +111,7 @@ DefineSite("hermansverk", {
 
 DefineSite("tonsberg", {
 	Name = "Tonsberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4074, 698},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

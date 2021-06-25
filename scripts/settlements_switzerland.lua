@@ -27,7 +27,7 @@
 
 DefineSite("geneva", {
 	Name = "Geneva",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3982, 997},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -48,7 +48,7 @@ DefineSite("geneva", {
 
 DefineSite("martigny", {
 	Name = "Martigny",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3996, 999},
 	CulturalNames = {
 		"french", "Martigny"
@@ -67,7 +67,7 @@ DefineSite("martigny", {
 
 DefineSite("vindonissa", {
 	Name = "Vindonissa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4029, 969},
 	CulturalNames = {
 		"french", "Martigny"

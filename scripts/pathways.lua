@@ -25,33 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplatePathway("earth", "railroad", "linz", "budweis", 1832) -- Linz-Budweiser Pferdeeisenbahn commissioned in 1832; Source: Hans Peter Hye, "Die Wende zur Industrie- und Wissensgesselschaft", 2010, p. 23.
+SetMapTemplatePathway("old_earth", "railroad", "linz", "budweis", 1832) -- Linz-Budweiser Pferdeeisenbahn commissioned in 1832; Source: Hans Peter Hye, "Die Wende zur Industrie- und Wissensgesselschaft", 2010, p. 23.
 
-SetMapTemplatePathway("earth", "railroad", "vienna", "brunn", {1839, 7, 7}) -- first trains from Vienna arrived in Brno on 1839.7.7; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
+SetMapTemplatePathway("old_earth", "railroad", "vienna", "brunn", {1839, 7, 7}) -- first trains from Vienna arrived in Brno on 1839.7.7; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 183.
 
-SetMapTemplatePathway("earth", "railroad", "olmutz", "prague", 1845) -- Olomouc-Prague State Railroad Company opened for business in 1845; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
+SetMapTemplatePathway("old_earth", "railroad", "olmutz", "prague", 1845) -- Olomouc-Prague State Railroad Company opened for business in 1845; Source: Chad Bryant, "Into an Uncertain Future: Railroads and Vorm‰rz Liberalism in Brno, Vienna, and Prague", 2009, p. 187.
 
-SetMapTemplatePathway("earth", "railroad", "vienna", "trieste", 1857) -- Vienna-Trieste railroad built in 1857; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 465.
+SetMapTemplatePathway("old_earth", "railroad", "vienna", "trieste", 1857) -- Vienna-Trieste railroad built in 1857; Source: Ivan Erceg, "Auﬂenhandel der Nordadriatischen Seest‰dte als Faktor im Entstehen der kapitalistischen Beziehungen in ÷sterreich im 18. und 19. Jahrhundert", 1968, p. 465.
 
 -- Roman roads in Britain about 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-SetMapTemplatePathway("earth", "road", "exeter", "bath", 410)
-SetMapTemplatePathway("earth", "road", "bath", "cirencester", 410)
-SetMapTemplatePathway("earth", "road", "cirencester", "gloucester", 410)
-SetMapTemplatePathway("earth", "road", "cirencester", "speen", 410)
-SetMapTemplatePathway("earth", "road", "speen", "silchester", 410)
-SetMapTemplatePathway("earth", "road", "dorchester", "vindogladia", 410)
-SetMapTemplatePathway("earth", "road", "vindogladia", "old-sarum", 410)
-SetMapTemplatePathway("earth", "road", "old-sarum", "silchester", 410)
-SetMapTemplatePathway("earth", "road", "silchester", "bitterne", 410)
-SetMapTemplatePathway("earth", "road", "bitterne", "chichester", 410)
-SetMapTemplatePathway("earth", "road", "silchester", "london", 410)
-SetMapTemplatePathway("earth", "road", "london", "rochester", 410)
-SetMapTemplatePathway("earth", "road", "rochester", "canterbury", 410)
-SetMapTemplatePathway("earth", "road", "canterbury", "richborough", 410)
-SetMapTemplatePathway("earth", "road", "canterbury", "dover", 410)
-SetMapTemplatePathway("earth", "road", "london", "colchester", 410)
-SetMapTemplatePathway("earth", "road", "colchester", "cambridge", 410)
-SetMapTemplatePathway("earth", "road", "cambridge", "durolipons", 410)
-SetMapTemplatePathway("earth", "road", "london", "durolipons", 410)
-SetMapTemplatePathway("earth", "road", "london", "saint-albans", 410)
-SetMapTemplatePathway("earth", "road", "leicester", "lincoln", 410)
+SetMapTemplatePathway("old_earth", "road", "exeter", "bath", 410)
+SetMapTemplatePathway("old_earth", "road", "bath", "cirencester", 410)
+SetMapTemplatePathway("old_earth", "road", "cirencester", "gloucester", 410)
+SetMapTemplatePathway("old_earth", "road", "cirencester", "speen", 410)
+SetMapTemplatePathway("old_earth", "road", "speen", "silchester", 410)
+SetMapTemplatePathway("old_earth", "road", "dorchester", "vindogladia", 410)
+SetMapTemplatePathway("old_earth", "road", "vindogladia", "old-sarum", 410)
+SetMapTemplatePathway("old_earth", "road", "old-sarum", "silchester", 410)
+SetMapTemplatePathway("old_earth", "road", "silchester", "bitterne", 410)
+SetMapTemplatePathway("old_earth", "road", "bitterne", "chichester", 410)
+SetMapTemplatePathway("old_earth", "road", "silchester", "london", 410)
+SetMapTemplatePathway("old_earth", "road", "london", "rochester", 410)
+SetMapTemplatePathway("old_earth", "road", "rochester", "canterbury", 410)
+SetMapTemplatePathway("old_earth", "road", "canterbury", "richborough", 410)
+SetMapTemplatePathway("old_earth", "road", "canterbury", "dover", 410)
+SetMapTemplatePathway("old_earth", "road", "london", "colchester", 410)
+SetMapTemplatePathway("old_earth", "road", "colchester", "cambridge", 410)
+SetMapTemplatePathway("old_earth", "road", "cambridge", "durolipons", 410)
+SetMapTemplatePathway("old_earth", "road", "london", "durolipons", 410)
+SetMapTemplatePathway("old_earth", "road", "london", "saint-albans", 410)
+SetMapTemplatePathway("old_earth", "road", "leicester", "lincoln", 410)

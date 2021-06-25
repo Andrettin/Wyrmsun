@@ -27,7 +27,7 @@
 
 DefineSite("franeker", {
 	Name = "Franeker",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3966, 837},
 	CulturalNames = {
 --		"dutch", "Franeker"
@@ -44,7 +44,7 @@ DefineSite("franeker", {
 
 DefineSite("leeuwarden", {
 	Name = "Leeuwarden",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3968, 837},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -66,7 +66,7 @@ DefineSite("leeuwarden", {
 
 DefineSite("wijk-bij-duurstede", {
 	Name = "Wijk bij Duurstede",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3959, 866},
 	CulturalNames = {
 --		"dutch", "Wijk bij Duurstede"

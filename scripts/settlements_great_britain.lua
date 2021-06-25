@@ -27,7 +27,7 @@
 
 DefineSite("amesbury", {
 	Name = "Amesbury",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3798, 883},
 	CulturalNames = {
 		"anglo-saxon", "Ambresbyrig", -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -45,7 +45,7 @@ DefineSite("amesbury", {
 
 DefineSite("athelney", {
 	Name = "Athelney",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3774, 887},
 	CulturalNames = {
 		"anglo-saxon", "Aethelingaig", -- "Æthelingaig"; Old English name of Athelney; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -63,7 +63,7 @@ DefineSite("athelney", {
 
 DefineSite("bamburgh", {
 	Name = "Bamburgh",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3800, 784},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -85,7 +85,7 @@ DefineSite("bamburgh", {
 
 DefineSite("bath", {
 	Name = "Bath",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3781, 879},
 	CulturalNames = {
 		"anglo-saxon", "Bathum", -- Old English name of Bath; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -107,7 +107,7 @@ DefineSite("bath", {
 
 DefineSite("bitterne", {
 	Name = "Bitterne",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3810, 889},
 	CulturalNames = {
 		"briton", "Clausentum",
@@ -128,7 +128,7 @@ DefineSite("bitterne", {
 
 DefineSite("brancaster", {
 	Name = "Brancaster",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3853, 843},
 	CulturalNames = {
 		"briton", "Branodunum",
@@ -149,7 +149,7 @@ DefineSite("brancaster", {
 
 DefineSite("bristol", {
 	Name = "Bristol",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3782, 878},
 	CulturalNames = {
 		"anglo-saxon", "Brycgstow", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -168,7 +168,7 @@ DefineSite("bristol", {
 
 DefineSite("cambridge", {
 	Name = "Cambridge",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3845, 861},
 	CulturalNames = {
 		"anglo-saxon", "Grantanbrycg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -191,7 +191,7 @@ DefineSite("cambridge", {
 
 DefineSite("canterbury", {
 	Name = "Canterbury",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3866, 880},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -215,7 +215,7 @@ DefineSite("canterbury", {
 
 DefineSite("carlisle", {
 	Name = "Carlisle",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3773, 800},
 	CulturalNames = {
 		"anglo-saxon", "Luel", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -237,7 +237,7 @@ DefineSite("carlisle", {
 
 DefineSite("castor-near-norwich", {
 	Name = "Castor near Norwich",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3868, 850},
 	CulturalNames = {
 		"briton", "Venta Icenorum",
@@ -258,7 +258,7 @@ DefineSite("castor-near-norwich", {
 
 DefineSite("chester", {
 	Name = "Chester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3774, 837},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -281,7 +281,7 @@ DefineSite("chester", {
 
 DefineSite("chichester", {
 	Name = "Chichester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3821, 890},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -304,7 +304,7 @@ DefineSite("chichester", {
 
 DefineSite("cirencester", {
 	Name = "Cirencester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3796, 874},
 	CulturalNames = {
 		"anglo-saxon", "Cirenceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -326,7 +326,7 @@ DefineSite("cirencester", {
 
 DefineSite("colchester", {
 	Name = "Colchester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3860, 866},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -349,7 +349,7 @@ DefineSite("colchester", {
 
 DefineSite("corbridge", {
 	Name = "Corbridge",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3794, 797},
 	CulturalNames = {
 		"anglo-saxon", "Corebricg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -374,7 +374,7 @@ DefineSite("corbridge", {
 
 DefineSite("deorham", {
 	Name = "Deorham",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3781, 877},
 	CulturalNames = {
 		"english", "Deorham"
@@ -391,7 +391,7 @@ DefineSite("deorham", {
 
 DefineSite("dorchester", {
 	Name = "Dorchester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3785, 894},
 	CulturalNames = {
 		"anglo-saxon", "Dornwaraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -413,7 +413,7 @@ DefineSite("dorchester", {
 
 DefineSite("dover", {
 	Name = "Dover",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3866, 884},
 	CulturalNames = {
 		"anglo-saxon", "Dofras", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -435,7 +435,7 @@ DefineSite("dover", {
 
 DefineSite("dunwich", {
 	Name = "Dunwich",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3874, 859},
 	CulturalNames = {
 		"anglo-saxon", "Dommocceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -454,7 +454,7 @@ DefineSite("dunwich", {
 
 DefineSite("durham", {
 	Name = "Durham",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3806, 802},
 	CulturalNames = {
 		"anglo-saxon", "Dunholm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -473,7 +473,7 @@ DefineSite("durham", {
 
 DefineSite("durolipons", {
 	Name = "Durolipons",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3838, 859},
 	CulturalNames = {
 		"briton", "Durolipons",
@@ -493,7 +493,7 @@ DefineSite("durolipons", {
 
 DefineSite("exeter", {
 	Name = "Exeter",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3759, 893},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -516,7 +516,7 @@ DefineSite("exeter", {
 
 DefineSite("farnham", {
 	Name = "Farnham",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3821, 883},
 	CulturalNames = {
 		"anglo-saxon", "Fearnhamm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -535,7 +535,7 @@ DefineSite("farnham", {
 
 DefineSite("glasgow", {
 	Name = "Glasgow",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3741, 777},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -556,7 +556,7 @@ DefineSite("glasgow", {
 
 DefineSite("glastonbury", {
 	Name = "Glastonbury",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3778, 884},
 	CulturalNames = {
 		"english", "Glastonbury"
@@ -573,7 +573,7 @@ DefineSite("glastonbury", {
 
 DefineSite("gloucester", {
 	Name = "Gloucester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3784, 874},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -596,7 +596,7 @@ DefineSite("gloucester", {
 
 DefineSite("goodmanham", {
 	Name = "Goodmanham",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3825, 820},
 	CulturalNames = {
 		"anglo-saxon", "Godmunddingaham", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -614,7 +614,7 @@ DefineSite("goodmanham", {
 
 DefineSite("hastings", {
 	Name = "Hastings",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3859, 887},
 	CulturalNames = {
 		"anglo-saxon", "Haestingaceaster", -- "Hæstingaceaster"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -632,7 +632,7 @@ DefineSite("hastings", {
 
 DefineSite("heathfield", {
 	Name = "Heathfield",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3821, 827},
 	CulturalNames = {
 		"english", "Heathfield"
@@ -649,7 +649,7 @@ DefineSite("heathfield", {
 
 DefineSite("hereford", {
 	Name = "Hereford",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3775, 863},
 	CulturalNames = {
 		"english", "Hereford"
@@ -667,7 +667,7 @@ DefineSite("hereford", {
 
 DefineSite("hexham", {
 	Name = "Hexham",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3791, 798},
 	CulturalNames = {
 		"anglo-saxon", "Hagustaldesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -686,7 +686,7 @@ DefineSite("hexham", {
 
 DefineSite("jarrow", {
 	Name = "Jarrow",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3807, 797},
 	CulturalNames = {
 		"anglo-saxon", "Gyruum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -706,7 +706,7 @@ DefineSite("jarrow", {
 
 DefineSite("kingston", {
 	Name = "Kingston",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3838, 878},
 	CulturalNames = {
 		"english", "Kingston"
@@ -723,7 +723,7 @@ DefineSite("kingston", {
 
 DefineSite("leicester", {
 	Name = "Leicester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3815, 850},
 	CulturalNames = {
 		"anglo-saxon", "Ligoraceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -746,7 +746,7 @@ DefineSite("leicester", {
 
 DefineSite("lincoln", {
 	Name = "Lincoln",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3825, 837},
 	CulturalNames = {
 		"anglo-saxon", "Lindcylene", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -772,7 +772,7 @@ DefineSite("lincoln", {
 
 DefineSite("leeds", {
 	Name = "Leeds",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3804, 822},
 	CulturalNames = {
 		"anglo-saxon", "Loidis", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -791,7 +791,7 @@ DefineSite("leeds", {
 
 DefineSite("lichfield", {
 	Name = "Lichfield",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3797, 849},
 	CulturalNames = {
 		"anglo-saxon", "Liccidfeld", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -810,7 +810,7 @@ DefineSite("lichfield", {
 
 DefineSite("malmesbury", {
 	Name = "Malmesbury",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3794, 879},
 	CulturalNames = {
 		"anglo-saxon", "Maeldubesburg", -- "Mældubesburg"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -829,7 +829,7 @@ DefineSite("malmesbury", {
 
 DefineSite("nursling", {
 	Name = "Nursling",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3808, 889},
 	CulturalNames = {
 		"english", "Nursling"
@@ -847,7 +847,7 @@ DefineSite("nursling", {
 
 DefineSite("ockley", {
 	Name = "Ockley",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3836, 883},
 	CulturalNames = {
 		"english", "Ockley"
@@ -864,7 +864,7 @@ DefineSite("ockley", {
 
 DefineSite("old-sarum", {
 	Name = "Old Sarum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3798, 885},
 	CulturalNames = {
 		"briton", "Sorbiodunum",
@@ -885,7 +885,7 @@ DefineSite("old-sarum", {
 
 DefineSite("oundle", {
 	Name = "Oundle",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3816, 854},
 	CulturalNames = {
 		"english", "Oundle"
@@ -903,7 +903,7 @@ DefineSite("oundle", {
 
 DefineSite("pevensey", {
 	Name = "Pevensey",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3848, 889},
 	CulturalNames = {
 		"anglo-saxon", "Pefenesea", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -925,7 +925,7 @@ DefineSite("pevensey", {
 
 DefineSite("reading", {
 	Name = "Reading",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3817, 876},
 	CulturalNames = {
 		"anglo-saxon", "Readingum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -943,7 +943,7 @@ DefineSite("reading", {
 
 DefineSite("reculver", {
 	Name = "Reculver",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3868, 879},
 	CulturalNames = {
 		"anglo-saxon", "Reculf", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -967,7 +967,7 @@ DefineSite("reculver", {
 
 DefineSite("richborough", {
 	Name = "Richborough",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3870, 881},
 	CulturalNames = {
 		"briton", "Rutupiae",
@@ -988,7 +988,7 @@ DefineSite("richborough", {
 
 DefineSite("ripon", {
 	Name = "Ripon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3828, 816},
 	CulturalNames = {
 		"anglo-saxon", "Hrypum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -1008,7 +1008,7 @@ DefineSite("ripon", {
 
 DefineSite("rochester", {
 	Name = "Rochester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3850, 879},
 	CulturalNames = {
 		"anglo-saxon", "Hrofesceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -1031,7 +1031,7 @@ DefineSite("rochester", {
 
 DefineSite("saint-albans", {
 	Name = "St. Albans",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3832, 870},
 	CulturalNames = {
 		"anglo-saxon", "Sanctae Albanes", -- "Sanctæ Albanes"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -1053,7 +1053,7 @@ DefineSite("saint-albans", {
 
 DefineSite("salisbury", {
 	Name = "Salisbury",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3799, 886},
 	CulturalNames = {
 		"anglo-saxon", "Searoburg", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -1074,7 +1074,7 @@ DefineSite("salisbury", {
 
 DefineSite("sherborne", {
 	Name = "Sherborne",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3783, 891},
 	CulturalNames = {
 		"anglo-saxon", "Scireburnan", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -1092,7 +1092,7 @@ DefineSite("sherborne", {
 
 DefineSite("silchester", {
 	Name = "Silchester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3814, 878},
 	CulturalNames = {
 		"briton", "Calleva",
@@ -1113,7 +1113,7 @@ DefineSite("silchester", {
 
 DefineSite("sitomagus", {
 	Name = "Sitomagus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3875, 857},
 	CulturalNames = {
 		"briton", "Sitomagus",
@@ -1133,7 +1133,7 @@ DefineSite("sitomagus", {
 
 DefineSite("southampton", {
 	Name = "Southampton",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3808, 888},
 	CulturalNames = {
 		"english", "Southampton"
@@ -1150,7 +1150,7 @@ DefineSite("southampton", {
 
 DefineSite("speen", {
 	Name = "Speen",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3809, 877},
 	CulturalNames = {
 		"briton", "Spinae",
@@ -1171,7 +1171,7 @@ DefineSite("speen", {
 
 DefineSite("vindogladia", {
 	Name = "Vindogladia",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3794, 889},
 	CulturalNames = {
 		"briton", "Vindogladia",
@@ -1191,7 +1191,7 @@ DefineSite("vindogladia", {
 
 DefineSite("wearmouth", {
 	Name = "Wearmouth",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3807, 799},
 	CulturalNames = {
 		"english", "Wearmouth"
@@ -1209,7 +1209,7 @@ DefineSite("wearmouth", {
 
 DefineSite("whitby", {
 	Name = "Whitby",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3825, 809},
 	CulturalNames = {
 		"anglo-saxon", "Streonaeshalch", -- "Streonæshalch"; on page 123 Stenton gives "Streoneshalh" instead; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
@@ -1227,7 +1227,7 @@ DefineSite("whitby", {
 
 DefineSite("whithorn", {
 	Name = "Whithorn",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3739, 802},
 	CulturalNames = {
 		"anglo-saxon", "Hwitern", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
@@ -1246,7 +1246,7 @@ DefineSite("whithorn", {
 
 DefineSite("wilton", {
 	Name = "Wilton",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3796, 885},
 	CulturalNames = {
 		"anglo-saxon", "Wiltun", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
@@ -1264,7 +1264,7 @@ DefineSite("wilton", {
 
 DefineSite("winchester", {
 	Name = "Winchester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3810, 885},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -1288,7 +1288,7 @@ DefineSite("winchester", {
 
 DefineSite("winwaedsfield", {
 	Name = "Winwaedsfield",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3803, 820},
 	CulturalNames = {
 		"anglo-saxon", "Winwaedsfield",
@@ -1306,7 +1306,7 @@ DefineSite("winwaedsfield", {
 
 DefineSite("worcester", {
 	Name = "Worcester",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3788, 861},
 	CulturalNames = {
 		"anglo-saxon", "Weogornaceaster", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.

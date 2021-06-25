@@ -27,7 +27,7 @@
 
 DefineSite("amisus", {
 	Name = "Amisus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4663, 1106},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -46,7 +46,7 @@ DefineSite("amisus", {
 
 DefineSite("milid", {
 	Name = "Milid",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4711, 1172},
 	CulturalNames = {
 		"assyrian", "Milid"
@@ -63,7 +63,7 @@ DefineSite("milid", {
 
 DefineSite("phaselis", {
 	Name = "Phaselis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4534, 1216},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -82,7 +82,7 @@ DefineSite("phaselis", {
 
 DefineSite("sinope", {
 	Name = "Sinope",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4637, 1092},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -102,7 +102,7 @@ DefineSite("sinope", {
 
 DefineSite("tarsus", {
 	Name = "Tarsus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4632, 1208},
 	CulturalNames = {
 		"assyrian", "Tarsus",

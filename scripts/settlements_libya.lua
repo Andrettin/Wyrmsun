@@ -27,7 +27,7 @@
 
 DefineSite("ammonium", {
 	Name = "Ammonium",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4431, 1385},
 	CulturalNames = {
 		"persian", "Ammonium"
@@ -43,7 +43,7 @@ DefineSite("ammonium", {
 
 DefineSite("barca", {
 	Name = "Barca",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4332, 1306},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

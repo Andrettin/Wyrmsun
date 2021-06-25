@@ -227,7 +227,7 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 		"head-of-state", 824, 0, "vingulmark"
 	},
 	HistoricalLocations = {
-		824, "earth", "oslo"
+		824, "old_earth", "oslo"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
@@ -246,7 +246,7 @@ DefineCharacter("hysing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla
 	Father = "gandalf-of-vingulmark",
 	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
-		841, "earth", "oslo"
+		841, "old_earth", "oslo"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
@@ -265,7 +265,7 @@ DefineCharacter("helsing-gandalfson", { -- Source: Snorri Sturlson, "Heimskringl
 	Father = "gandalf-of-vingulmark",
 	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
-		841, "earth", "oslo"
+		841, "old_earth", "oslo"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
@@ -284,7 +284,7 @@ DefineCharacter("hake-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "gandalf-of-vingulmark",
 	StartDate = 841, -- was alive during king Halfdan the Black's reign in Agder
 	HistoricalLocations = {
-		841, "earth", "oslo"
+		841, "old_earth", "oslo"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "vingulmark") then
@@ -325,7 +325,7 @@ DefineCharacter("sigtryg-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 		"head-of-state", 841, 0, "hedmark"
 	},
 	HistoricalLocations = {
-		841, "earth", "hamar"
+		841, "old_earth", "hamar"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
@@ -348,7 +348,7 @@ DefineCharacter("eystein-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 		"head-of-state", 0, 0, "hedmark"
 	},
 	HistoricalLocations = {
-		841, "earth", "hamar"
+		841, "old_earth", "hamar"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
@@ -366,7 +366,7 @@ DefineCharacter("gudbrand", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Faction = "hedmark", -- was either allied or subject to king Eystein of Hedmark
 	StartDate = 841, -- was hersir of his valley during Halfdan the Black's reign
 	HistoricalLocations = {
-		841, "earth", "hamar"
+		841, "old_earth", "hamar"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
@@ -385,7 +385,7 @@ DefineCharacter("guttorm-gudbrandson", { -- Source: Snorri Sturlson, "Heimskring
 	Father = "gudbrand",
 	StartDate = 841, -- fought against Halfdan the Black during the latter's reign
 	HistoricalLocations = {
-		841, "earth", "hamar"
+		841, "old_earth", "hamar"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
@@ -405,7 +405,7 @@ DefineCharacter("halvard-skalk", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Faction = "hedmark", -- relation of king Eystein of Hedmark
 	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
-		841, "earth", "hamar"
+		841, "old_earth", "hamar"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "hedmark") then
@@ -427,7 +427,7 @@ DefineCharacter("harald-goldbeard", { -- Source: Snorri Sturlson, "Heimskringla"
 		"head-of-state", 841, 0, "sogn"
 	},
 	HistoricalLocations = {
-		841, "earth", "hermansverk"
+		841, "old_earth", "hermansverk"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "sogn") then
@@ -446,7 +446,7 @@ DefineCharacter("ragnhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Father = "harald-goldbeard",
 	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
-		841, "earth", "hermansverk"
+		841, "old_earth", "hermansverk"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "sogn") then
@@ -465,7 +465,7 @@ DefineCharacter("atle-the-small", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Faction = "agder", -- friend of king Halfdan the Black
 	StartDate = 841, -- was earl during Halfdan the Black's reign
 	HistoricalLocations = {
-		841, "earth", "arendal"
+		841, "old_earth", "arendal"
 		-- set to administrate Sogn for Halfdan the Black after the latter took possession of that kingdom
 	},
 	Conditions = function(s)
@@ -486,7 +486,7 @@ DefineCharacter("olver-the-wise", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Trait = "upgrade-wise",
 	StartDate = 841, -- was alive during Halfdan the Black's reign
 	HistoricalLocations = {
-		841, "earth", "arendal"
+		841, "old_earth", "arendal"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "agder") then

@@ -27,7 +27,7 @@
 
 DefineSite("asuncion", {
 	Name = "Asuncion",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2527, 2634},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -49,7 +49,7 @@ DefineSite("asuncion", {
 
 DefineSite("bahia-blanca", {
 	Name = "Bahia Blanca",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2418, 2928},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -69,7 +69,7 @@ DefineSite("bahia-blanca", {
 
 DefineSite("buenos-aires", {
 	Name = "Buenos Aires",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2510, 2835},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -91,7 +91,7 @@ DefineSite("buenos-aires", {
 
 DefineSite("corrientes", {
 	Name = "Corrientes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2501, 2673},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -112,7 +112,7 @@ DefineSite("corrientes", {
 
 DefineSite("montevideo", {
 	Name = "Montevideo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2561, 2842},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -135,7 +135,7 @@ DefineSite("montevideo", {
 
 DefineSite("santa-fe", {
 	Name = "Santa Fe",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2457, 2768},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

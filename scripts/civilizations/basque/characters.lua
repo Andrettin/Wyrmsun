@@ -38,7 +38,7 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 		"head-of-state", 0, 0, "gylfing_tribe"
 	},
 	HistoricalLocations = {
-		-2800, "earth", "malmo"
+		-2800, "old_earth", "malmo"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "gylfing_tribe") then

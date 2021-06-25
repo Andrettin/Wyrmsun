@@ -27,7 +27,7 @@
 
 DefineSite("anyang", {
 	Name = "Anyang",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {6460, 1237},
 	CulturalNames = {
 		"chinese", "Anyang"

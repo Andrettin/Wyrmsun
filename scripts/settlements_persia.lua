@@ -27,7 +27,7 @@
 
 DefineSite("arachotus", {
 	Name = "Arachotus",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5328, 1314},
 	CulturalNames = {
 		"persian", "Arachotus"
@@ -44,7 +44,7 @@ DefineSite("arachotus", {
 
 DefineSite("bactra", {
 	Name = "Bactra",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5358, 1209},
 	CulturalNames = {
 		"persian", "Bactra"
@@ -61,7 +61,7 @@ DefineSite("bactra", {
 
 DefineSite("bagistana", {
 	Name = "Bagistana",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4918, 1277},
 	CulturalNames = {
 		"persian", "Bagistana"
@@ -77,7 +77,7 @@ DefineSite("bagistana", {
 
 DefineSite("cazaca", {
 	Name = "Cazaca",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4901, 1209},
 	CulturalNames = {
 		"persian", "Cazaca"
@@ -94,7 +94,7 @@ DefineSite("cazaca", {
 
 DefineSite("cyropolis", {
 	Name = "Cyropolis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5395, 1153},
 	CulturalNames = {
 		"persian", "Cyropolis"
@@ -110,7 +110,7 @@ DefineSite("cyropolis", {
 
 DefineSite("harmozia", {
 	Name = "Harmozia",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5124, 1429},
 	CulturalNames = {
 		"persian", "Harmozia"
@@ -127,7 +127,7 @@ DefineSite("harmozia", {
 
 DefineSite("pasargadae", {
 	Name = "Pasargadae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5085, 1386},
 	CulturalNames = {
 		"persian", "Pasargadae"
@@ -144,7 +144,7 @@ DefineSite("pasargadae", {
 
 DefineSite("rhagae", {
 	Name = "Rhagae",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5018, 1237},
 	CulturalNames = {
 		"persian", "Rhagae"
@@ -161,7 +161,7 @@ DefineSite("rhagae", {
 
 DefineSite("susa", {
 	Name = "Susa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4935, 1313},
 	CulturalNames = {
 		"assyrian", "Susa",
@@ -181,7 +181,7 @@ DefineSite("susa", {
 
 DefineSite("tarua", {
 	Name = "Tarua",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {5106, 1405},
 	CulturalNames = {
 		"persian", "Tarua"

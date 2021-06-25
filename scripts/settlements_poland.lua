@@ -27,7 +27,7 @@
 
 DefineSite("gniezno", {
 	Name = "Gniezno",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4248, 853},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -47,7 +47,7 @@ DefineSite("gniezno", {
 
 DefineSite("kolberg", {
 	Name = "Kolberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4223, 806},
 	CulturalNames = {
 		"teuton", "Kolberg"
@@ -68,7 +68,7 @@ DefineSite("kolberg", {
 
 DefineSite("poznan", {
 	Name = "Poznan",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4225, 855},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

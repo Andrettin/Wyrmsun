@@ -27,14 +27,14 @@
 
 DefineSite("carthage-old-earth-map", { -- so that it appears in the Italy custom map
 	Name = "Carthage",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4071, 1209},
 	BaseUnitType = "unit_settlement_site"
 })
 
 DefineSite("utica", {
 	Name = "Utica",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4070, 1205},
 	CulturalNames = {
 		"phoenician", "Utica"

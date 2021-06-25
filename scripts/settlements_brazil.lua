@@ -27,7 +27,7 @@
 
 DefineSite("florianopolis", {
 	Name = "Florianopolis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2732, 2674}, -- is actually in the island of Santa Catharina, but there's not enough space there for a settlement
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -45,7 +45,7 @@ DefineSite("florianopolis", {
 
 DefineSite("laguna", {
 	Name = "Laguna",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2664, 2756},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -66,7 +66,7 @@ DefineSite("laguna", {
 
 DefineSite("porto-alegre", {
 	Name = "Porto Alegre",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2675, 2733},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -87,7 +87,7 @@ DefineSite("porto-alegre", {
 
 DefineSite("recife", {
 	Name = "Recife",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {3046, 2224},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -112,7 +112,7 @@ DefineSite("recife", {
 
 DefineSite("rio-grande", {
 	Name = "Rio Grande",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2652, 2779},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -133,7 +133,7 @@ DefineSite("rio-grande", {
 
 DefineSite("rio-de-janeiro", {
 	Name = "Rio de Janeiro",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2856, 2569},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -164,7 +164,7 @@ DefineSite("rio-de-janeiro", {
 
 DefineSite("salvador", {
 	Name = "Salvador",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2964, 2343},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -185,7 +185,7 @@ DefineSite("salvador", {
 
 DefineSite("sao-paulo", {
 	Name = "Sao Paulo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {2752, 2583},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {

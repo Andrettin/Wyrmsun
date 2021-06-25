@@ -26,5 +26,5 @@
 --
 
 -- Haughey's Fort (County Armagh)
-SetMapTemplateUnit("earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {3688, 811}, -1100, -900) -- Haughey's Fort, a hillfort, was occupied between c. 1100 and 900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 58.
+SetMapTemplateUnit("old_earth", "unit-teuton-watch-tower", "celtic-cimmerian-tribe", {3688, 811}, -1100, -900) -- Haughey's Fort, a hillfort, was occupied between c. 1100 and 900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 58.
 

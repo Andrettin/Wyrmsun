@@ -27,21 +27,21 @@
 
 DefineSite("milan-old-earth-map", { -- so that it appears in the Italy custom map
 	Name = "Milan",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4049, 1013},
 	BaseUnitType = "unit_settlement_site"
 })
 	
 DefineSite("rome-old-earth-map", { -- so that it appears in the Italy custom map
 	Name = "Rome",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4126, 1096},
 	BaseUnitType = "unit_settlement_site"
 })
 
 DefineSite("aleria", {
 	Name = "Aleria",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4055, 1090},
 	CulturalNames = {
 		"greek", "Alalia",
@@ -59,7 +59,7 @@ DefineSite("aleria", {
 
 DefineSite("aquileia", {
 	Name = "Aquileia",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4143, 1004},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -77,7 +77,7 @@ DefineSite("aquileia", {
 
 DefineSite("ariminum", {
 	Name = "Ariminum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4123, 1044},
 	CulturalNames = {
 		"italian", "Rimini", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
@@ -95,7 +95,7 @@ DefineSite("ariminum", {
 
 DefineSite("bologna", {
 	Name = "Bologna",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4096, 1034},
 	CulturalNames = {
 		"italian", "Bologna",
@@ -115,7 +115,7 @@ DefineSite("bologna", {
 
 DefineSite("brindisi", {
 	Name = "Brindisi",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4245, 1123},
 	CulturalNames = {
 		"italian", "Brindisi",
@@ -134,7 +134,7 @@ DefineSite("brindisi", {
 
 DefineSite("cosa", {
 	Name = "Cosa",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4095, 1081},
 	CulturalNames = {
 		"latin", "Cosa" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -151,7 +151,7 @@ DefineSite("cosa", {
 
 DefineSite("cremona", {
 	Name = "Cremona",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4067, 1021},
 	CulturalNames = {
 		"italian", "Cremona",
@@ -172,7 +172,7 @@ DefineSite("cremona", {
 
 DefineSite("firmum", {
 	Name = "Firmum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4151, 1064},
 	CulturalNames = {
 		"italian", "Fermo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
@@ -190,7 +190,7 @@ DefineSite("firmum", {
 
 DefineSite("florence", {
 	Name = "Florence",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4095, 1054},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -212,7 +212,7 @@ DefineSite("florence", {
 
 DefineSite("hatria", {
 	Name = "Hatria",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4156, 1076},
 	CulturalNames = {
 		"italian", "Atri", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
@@ -230,7 +230,7 @@ DefineSite("hatria", {
 
 DefineSite("luni-sul-mignone", {
 	Name = "Luni sul Mignone",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4111, 1087},
 	CulturalNames = {
 		"italian", "Luni sul Mignone"
@@ -247,7 +247,7 @@ DefineSite("luni-sul-mignone", {
 
 DefineSite("modena", {
 	Name = "Modena",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4089, 1032},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -268,7 +268,7 @@ DefineSite("modena", {
 
 DefineSite("naples", {
 	Name = "Naples",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4163, 1116},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -291,7 +291,7 @@ DefineSite("naples", {
 
 DefineSite("novum-castrum", {
 	Name = "Novum Castrum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4154, 1070},
 	CulturalNames = {
 		"latin", "Novum Castrum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -308,7 +308,7 @@ DefineSite("novum-castrum", {
 
 DefineSite("oderzo", {
 	Name = "Oderzo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4122, 1005},
 	CulturalNames = {
 		"italian", "Oderzo", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -325,7 +325,7 @@ DefineSite("oderzo", {
 
 DefineSite("paestum", {
 	Name = "Paestum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4181, 1127},
 	CulturalNames = {
 		"latin", "Paestum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -341,7 +341,7 @@ DefineSite("paestum", {
 
 DefineSite("palermo", {
 	Name = "Palermo",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4141, 1181},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -364,7 +364,7 @@ DefineSite("palermo", {
 
 DefineSite("piacenza", {
 	Name = "Piacenza",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4056, 1028},
 	CulturalNames = {
 		"italian", "Piacenza",
@@ -385,7 +385,7 @@ DefineSite("piacenza", {
 
 DefineSite("poggiomarino", {
 	Name = "Poggiomarino",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4170, 1119},
 	CulturalNames = {
 		"italian", "Poggiomarino"
@@ -402,7 +402,7 @@ DefineSite("poggiomarino", {
 
 DefineSite("ravenna", {
 	Name = "Ravenna",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4114, 1035},
 	CulturalNames = {
 		"italian", "Ravenna",
@@ -423,7 +423,7 @@ DefineSite("ravenna", {
 
 DefineSite("sena-gallica", {
 	Name = "Sena Gallica",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4138, 1052},
 	CulturalNames = {
 		"italian", "Sinigaglia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
@@ -441,7 +441,7 @@ DefineSite("sena-gallica", {
 
 DefineSite("spoletum", {
 	Name = "Spoletum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4127, 1074},
 	CulturalNames = {
 		"latin", "Spoletum" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.

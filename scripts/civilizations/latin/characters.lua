@@ -104,7 +104,7 @@ DefineCharacter("syagrius", { -- Source: William R. Shepherd, "Historical Atlas"
 	StartDate = 486, -- was ruling his "kingdom" in 486
 	DeathDate = {486, 12, 30}, -- lost the "kingdom" to the Franks in 486
 	HistoricalLocations = {
-		486, "earth", "soissons"
+		486, "old_earth", "soissons"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "rome") then

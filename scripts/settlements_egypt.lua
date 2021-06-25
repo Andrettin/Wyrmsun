@@ -27,7 +27,7 @@
 
 DefineSite("abu-simbel", {
 	Name = "Abu Simbel",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4554, 1542},
 	CulturalNames = {
 		"egyptian", "Abu Simbel"
@@ -43,7 +43,7 @@ DefineSite("abu-simbel", {
 
 DefineSite("abydos", {
 	Name = "Abydos",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4565, 1456},
 	CulturalNames = {
 		"egyptian", "Abydos"
@@ -62,7 +62,7 @@ DefineSite("abydos", {
 
 DefineSite("heliopolis", {
 	Name = "Heliopolis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4554, 1362},
 	CulturalNames = {
 		"assyrian", "Heliopolis",
@@ -82,7 +82,7 @@ DefineSite("heliopolis", {
 
 DefineSite("karnak", {
 	Name = "Karnak",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4588, 1460},
 	CulturalNames = {
 		"egyptian", "Karnak"
@@ -101,7 +101,7 @@ DefineSite("karnak", {
 
 DefineSite("memphis", {
 	Name = "Memphis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4546, 1363},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -125,7 +125,7 @@ DefineSite("memphis", {
 
 DefineSite("momemphis", {
 	Name = "Momemphis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4543, 1350},
 	CulturalNames = {
 		"egyptian", "Momemphis"
@@ -142,7 +142,7 @@ DefineSite("momemphis", {
 
 DefineSite("napata", {
 	Name = "Napata",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4564, 1624},
 	CulturalNames = {
 		"egyptian", "Napata"
@@ -158,7 +158,7 @@ DefineSite("napata", {
 
 DefineSite("pelusium", {
 	Name = "Pelusium",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4579, 1340},
 	CulturalNames = {
 		"egyptian", "Pelusium",
@@ -176,7 +176,7 @@ DefineSite("pelusium", {
 
 DefineSite("sais", {
 	Name = "Sais",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4540, 1340},
 	CulturalNames = {
 		"assyrian", "Sais",
@@ -197,7 +197,7 @@ DefineSite("sais", {
 
 DefineSite("syene", {
 	Name = "Syene",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4589, 1498},
 	CulturalNames = {
 		"assyrian", "Syene",
@@ -218,7 +218,7 @@ DefineSite("syene", {
 
 DefineSite("tanis", {
 	Name = "Tanis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4566, 1342},
 	CulturalNames = {
 		"assyrian", "Tanis",
@@ -238,7 +238,7 @@ DefineSite("tanis", {
 
 DefineSite("tentyris", {
 	Name = "Tentyris",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4581, 1456},
 	CulturalNames = {
 		"egyptian", "Tentyris"
@@ -257,7 +257,7 @@ DefineSite("tentyris", {
 
 DefineSite("thebes-egypt", {
 	Name = "Thebes",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4582, 1466},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -280,7 +280,7 @@ DefineSite("thebes-egypt", {
 
 DefineSite("this", {
 	Name = "This",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4563, 1450},
 	CulturalNames = {
 		"egyptian", "This"

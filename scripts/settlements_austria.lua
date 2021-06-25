@@ -27,7 +27,7 @@
 
 DefineSite("adelsberg", {
 	Name = "Adelsberg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4163, 1005},
 	CulturalNames = {
 		"teuton", "Adelsberg"
@@ -43,7 +43,7 @@ DefineSite("adelsberg", {
 
 DefineSite("bruck", {
 	Name = "Bruck",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4183, 972},
 	CulturalNames = {
 		"teuton", "Bruck"
@@ -59,7 +59,7 @@ DefineSite("bruck", {
 
 DefineSite("carnuntum", {
 	Name = "Carnuntum",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4224, 955},
 	CulturalNames = {
 		"latin", "Carnuntum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -81,7 +81,7 @@ DefineSite("carnuntum", {
 
 DefineSite("cilli", {
 	Name = "Cilli",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4183, 997},
 	CulturalNames = {
 		"teuton", "Cilli"
@@ -97,7 +97,7 @@ DefineSite("cilli", {
 
 DefineSite("gastein", {
 	Name = "Gastein",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4135, 977},
 	CulturalNames = {
 		"teuton", "Gastein"
@@ -113,7 +113,7 @@ DefineSite("gastein", {
 
 DefineSite("gossensass", {
 	Name = "Gossensass",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4095, 983},
 	CulturalNames = {
 		"teuton", "Gossensass"
@@ -133,7 +133,7 @@ DefineSite("gossensass", {
 
 DefineSite("innsbruck", {
 	Name = "Innsbruck",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4102, 972},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -151,7 +151,7 @@ DefineSite("innsbruck", {
 
 DefineSite("klagenfurt", {
 	Name = "Klagenfurt",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4166, 987},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -169,7 +169,7 @@ DefineSite("klagenfurt", {
 
 DefineSite("ljubljana", {
 	Name = "Ljubljana",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4170, 1000},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -189,7 +189,7 @@ DefineSite("ljubljana", {
 
 DefineSite("marburg", {
 	Name = "Marburg",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4213, 988},
 	CulturalNames = {
 		"teuton", "Marburg"
@@ -206,7 +206,7 @@ DefineSite("marburg", {
 
 DefineSite("villach", {
 	Name = "Villach",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4155, 988},
 	CulturalNames = {
 		"teuton", "Villach"

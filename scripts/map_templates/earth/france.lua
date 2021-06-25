@@ -32,10 +32,10 @@
 -- University founded in Molsheim in 1618. Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 
 -- Orléans / Aurehani
-SetMapTemplateHero("earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
+SetMapTemplateHero("old_earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
 
 -- Reims / Durocortorum
-SetMapTemplateHero("earth", "sigibert", "austrasia", {3930, 926}, 561, 575)
+SetMapTemplateHero("old_earth", "sigibert", "austrasia", {3930, 926}, 561, 575)
 
 -- Tournai / Tornacum
-SetMapTemplateHero("earth", "chilperich", "salia", {3917, 896}, 561, 584)
+SetMapTemplateHero("old_earth", "chilperich", "salia", {3917, 896}, 561, 584)

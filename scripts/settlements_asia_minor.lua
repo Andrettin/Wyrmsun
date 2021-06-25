@@ -27,7 +27,7 @@
 
 DefineSite("calchedon", {
 	Name = "Calchedon",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4502, 1114},
 	CulturalNames = {
 		"persian", "Calchedon"
@@ -43,7 +43,7 @@ DefineSite("calchedon", {
 
 DefineSite("dascylium", {
 	Name = "Dascylium",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4495, 1129},
 	CulturalNames = {
 		"persian", "Dascylium"
@@ -59,7 +59,7 @@ DefineSite("dascylium", {
 
 DefineSite("sardis", {
 	Name = "Sardis",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4474, 1170},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
@@ -78,7 +78,7 @@ DefineSite("sardis", {
 
 DefineSite("troy", {
 	Name = "Troy",
-	MapTemplate = "earth",
+	MapTemplate = "old_earth",
 	Position = {4437, 1140},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
