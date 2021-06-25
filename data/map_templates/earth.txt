@@ -42,7 +42,7 @@ old_earth = {
 	}
 }
 
-earth_space = {
+earth = {
 	name = "Earth"
 	#main_template = sol_system
 	world = earth
