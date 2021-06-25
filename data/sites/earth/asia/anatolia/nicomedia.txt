@@ -1,0 +1,13 @@
+nicomedia = {
+	name = "Nicomedia"
+	map_template = near_east
+	geocoordinate = { 29.93061722690 40.77602398590 } #from Natural Earth (İzmit)
+	base_unit_type = unit_settlement_site
+	color = { 10 116 94 }
+	cultural_names = {
+		turkish = "Izmit" #"İzmit"
+	}
+	regions = {
+		anatolia
+	}
+}
