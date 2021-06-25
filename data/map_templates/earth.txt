@@ -65,12 +65,12 @@ earth = {
 	surrounding_overlay_terrain_type = space
 	generated_terrains = {
 		grass = {
-			seed_count = 1024
+			seed_count = 2048
 			use_existing_as_seeds = true
 			target_terrain_type = dirt
 		}
 		pine_tree = {
-			seed_count = 128
+			seed_count = 256
 			max_percent = 20
 			target_terrain_type = grass
 		}
