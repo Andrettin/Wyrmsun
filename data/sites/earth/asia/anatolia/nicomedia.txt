@@ -1,6 +1,6 @@
 nicomedia = {
 	name = "Nicomedia"
-	map_template = near_east
+	map_template = earth
 	geocoordinate = { 29.93061722690 40.77602398590 } #from Natural Earth (İzmit)
 	base_unit_type = unit_settlement_site
 	color = { 10 116 94 }

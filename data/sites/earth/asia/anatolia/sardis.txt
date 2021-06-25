@@ -1,0 +1,21 @@
+sardis = {
+	name = "Sardis"
+	map_template = earth
+	geocoordinate = { 28.040278 38.488333 }
+	base_unit_type = unit_settlement_site
+	color = { 109 81 55 }
+	regions = {
+		anatolia
+	}
+	
+	history = {
+		-750 = {
+			owner = lydia #Sardis was a part of the Lydian Kingdom in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+			building_classes += town_hall
+		}
+		
+		-500 = {
+			owner = persia #Sardis was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		}
+	}
+}
