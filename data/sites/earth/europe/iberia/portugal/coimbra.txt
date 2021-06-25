@@ -1,6 +1,6 @@
 coimbra = {
 	name = "Coimbra"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { -8.41668033999 40.20037436830 } #from Natural Earth
 	regions = {
 		portugal

@@ -1,6 +1,6 @@
 salzburg = {
 	name = "Salzburg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 13.04002030300 47.81047833160 } #from Natural Earth
 	cultural_names = {
 		latin = "Iuvavum"

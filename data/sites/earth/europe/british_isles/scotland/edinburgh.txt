@@ -1,6 +1,6 @@
 edinburgh = {
 	name = "Edinburgh"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { -3.21909061829 55.94832785960 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 69 96 76 }

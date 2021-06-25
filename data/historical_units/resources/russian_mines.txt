@@ -4,7 +4,7 @@ russian_silver_deposit = { #Silver deposits; Source: "Philip's International Sch
 	history = {
 		active = true
 		location = {
-			map_template = earth_30_45_latitude_north
+			map_template = earth
 			geocoordinate = { 45.4833984375 44.8681640625 }
 		}
 	}

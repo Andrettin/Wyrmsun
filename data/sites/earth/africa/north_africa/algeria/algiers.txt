@@ -1,6 +1,6 @@
 algiers = {
 	name = "Algiers"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 3.05055252952 36.76306479800 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	regions = {

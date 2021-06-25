@@ -1,6 +1,6 @@
 gnoll_camp_huts_moat = {
 	name = "Gnoll Camp Huts (Moat)"
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	size = { 22 24 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_huts_moat.map"
 	constructed_only = true

@@ -1,6 +1,6 @@
 penzance = {
 	name = "Penzance"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { -5.55003361146 50.13372153630 } #from Natural Earth
 	base_unit_type = unit_copper_deposit #tin deposits nearby; Source: "Atlas de História Mundial", 2001, p. 41.
 	regions = {

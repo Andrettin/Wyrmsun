@@ -1,6 +1,6 @@
 falun = {
 	name = "Falun"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 15.64700455370 60.61300203560 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #3x iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 	regions = {

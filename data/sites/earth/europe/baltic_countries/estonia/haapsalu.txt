@@ -1,6 +1,6 @@
 haapsalu = {
 	name = "Haapsalu"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 23.54138890000 58.94305560000 } #from Natural Earth
 	base_unit_type = unit_glyph #to mark the site
 	#base_unit_type = unit_portal #portal to Jotunheim

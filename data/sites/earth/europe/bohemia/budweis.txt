@@ -1,6 +1,6 @@
 budweis = {
 	name = "Budweis"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 14.46003698590 48.98001934720 } #from Natural Earth
 	cultural_names = {
 		slavic = "Budejovice" #Budějovice

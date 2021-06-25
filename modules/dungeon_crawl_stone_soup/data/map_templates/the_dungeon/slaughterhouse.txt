@@ -1,6 +1,6 @@
 slaughterhouse = {
 	name = "Slaughterhouse"
-	main_template = earth_45_60_latitude_north
+	main_template = earth
 	size = { 20 19 }
 	overlay_terrain_file = "the_dungeon/slaughterhouse.map"
 	constructed_only = true

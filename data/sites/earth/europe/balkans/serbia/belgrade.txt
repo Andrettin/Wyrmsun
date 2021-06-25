@@ -1,6 +1,6 @@
 belgrade = {
 	name = "Belgrade"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 20.46799068060 44.81864544580 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 63 55 164 }

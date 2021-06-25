@@ -1,6 +1,6 @@
 aarhus = {
 	name = "Aarhus"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 10.21068395860 56.15720399890 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 174 209 177 }

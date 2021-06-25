@@ -1,6 +1,6 @@
 rostock = {
 	name = "Rostock"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 12.14999710960 54.07038047190 } #from Natural Earth
 	cores = {
 		germany

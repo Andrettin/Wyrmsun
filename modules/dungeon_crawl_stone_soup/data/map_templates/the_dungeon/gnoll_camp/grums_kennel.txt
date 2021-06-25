@@ -1,6 +1,6 @@
 grums_kennel = {
 	name = "Grum's Kennel"
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	size = { 12 15 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/grums_kennel.map"
 	constructed_only = true

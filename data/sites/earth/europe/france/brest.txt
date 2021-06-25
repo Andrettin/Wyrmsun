@@ -1,6 +1,6 @@
 brest = {
 	name = "Brest"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { -4.49500756979 48.39044293120 } #from Natural Earth
 	base_unit_type = unit_copper_deposit #tin deposits nearby; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 	cultural_names = {

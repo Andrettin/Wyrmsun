@@ -1,6 +1,6 @@
 vienna = {
 	name = "Vienna"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 16.36663895540 48.20001527820 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 42 3 128 }

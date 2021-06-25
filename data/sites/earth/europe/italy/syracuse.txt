@@ -1,6 +1,6 @@
 syracuse = {
 	name = "Syracuse"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 15.28996048860 37.07035870260 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 100 246 40 }

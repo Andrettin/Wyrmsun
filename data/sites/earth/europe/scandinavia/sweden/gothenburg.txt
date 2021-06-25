@@ -1,6 +1,6 @@
 gothenburg = {
 	name = "Gothenburg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 12.00003210310 57.75000083330 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 188 201 246 }

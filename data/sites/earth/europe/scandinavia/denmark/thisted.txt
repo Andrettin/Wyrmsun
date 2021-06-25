@@ -1,6 +1,6 @@
 thisted = {
 	name = "Thisted"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 8.692167256 56.95277778 } #from Natural Earth (ports)
 	regions = {
 		scandinavia

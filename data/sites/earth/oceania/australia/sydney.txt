@@ -1,6 +1,6 @@
 sydney = {
 	name = "Sydney"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 151.18517980900 -33.92001096720 } #from Natural Earth
 	regions = {
 		australia

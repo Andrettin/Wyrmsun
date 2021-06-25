@@ -1,6 +1,6 @@
 karlstad = {
 	name = "Karlstad"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 13.49994055040 59.36713726720 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #5x iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 	regions = {

@@ -1,6 +1,6 @@
 gnoll_camp_medium_01 = {
 	name = "Gnoll Camp (Medium)"
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	size = { 24 16 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_medium_01.map"
 	constructed_only = true

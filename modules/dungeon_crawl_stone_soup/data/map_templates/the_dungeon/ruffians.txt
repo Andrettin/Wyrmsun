@@ -1,6 +1,6 @@
 ruffians = { #minmay_ruffians
 	name = "Ruffians"
-	main_template = earth_45_60_latitude_north
+	main_template = earth
 	size = { 9 7 }
 	overlay_terrain_file = "the_dungeon/ruffians.map"
 	constructed_only = true

@@ -1,6 +1,6 @@
 viborg = {
 	name = "Viborg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 9.39998408879 56.43333701490 } #from Natural Earth
 	regions = {
 		scandinavia

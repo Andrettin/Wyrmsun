@@ -1,6 +1,6 @@
 new_york = {
 	name = "New York"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { -73.98001692880 40.74997906400 } #from Natural Earth
 	regions = {
 		united_states

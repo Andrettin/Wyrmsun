@@ -1,6 +1,6 @@
 gnoll_camp_mini_sergeant = {
 	name = "Gnoll Camp (Sergeant)"
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	size = { 15 10 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_mini_sergeant.map"
 	constructed_only = true

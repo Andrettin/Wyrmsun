@@ -1,6 +1,6 @@
 jihlava = {
 	name = "Jihlava"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 15.58332759470 49.40038128570 } #from Natural Earth
 	regions = {
 		bohemia

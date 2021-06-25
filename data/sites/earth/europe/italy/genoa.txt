@@ -1,6 +1,6 @@
 genoa = {
 	name = "Genoa"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 8.93003861353 44.40998821930 } #from Natural Earth
 	cultural_names = {
 		latin = "Genua" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

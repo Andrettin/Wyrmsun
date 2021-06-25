@@ -1,6 +1,6 @@
 vejle = {
 	name = "Vejle"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 9.53499649845 55.70900102840 } #from Natural Earth
 	regions = {
 		scandinavia

@@ -1,6 +1,6 @@
 vastervik = {
 	name = "Vastervik" #Västervik
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 16.65194346 57.75583333 } #from Natural Earth
 	regions = {
 		scandinavia

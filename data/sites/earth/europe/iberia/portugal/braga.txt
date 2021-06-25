@@ -1,6 +1,6 @@
 braga = {
 	name = "Braga"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { -8.42133121890 41.55499452620 } #from Natural Earth
 	cultural_names = {
 		roman = "Bracara" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.

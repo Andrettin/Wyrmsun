@@ -1,6 +1,6 @@
 olmutz = {
 	name = "Olmutz" #"Olmütz"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 17.24999588900 49.63003135080 } #from Natural Earth
 	cultural_names = {
 		slavic = "Olomouc"

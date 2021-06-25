@@ -1,6 +1,6 @@
 aussig = {
 	name = "Aussig"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 14.08100455440 50.66299816220 } #from Natural Earth
 	base_unit_type = unit_copper_deposit #tin deposits nearby; Source: "Atlas de História Mundial", 2001, p. 41.
 	cultural_names = {

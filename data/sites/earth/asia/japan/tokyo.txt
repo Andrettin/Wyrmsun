@@ -1,6 +1,6 @@
 tokyo = {
 	name = "Tokyo"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 139.75140742900 35.68501690580 } #from Natural Earth
 	regions = {
 		japan

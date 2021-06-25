@@ -1,6 +1,6 @@
 byzantium = {
 	name = "Byzantium"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	#geocoordinate = { 29.01000158560 41.10499615380 } #from Natural Earth
 	#geocoordinate = { 28.819549308789298 40.977838817779705 } #Atatürk Hava Limani Airport, from Natural Earth
 	pos = { 331 37 } #to make it appear in Thrace rather than Anatolia

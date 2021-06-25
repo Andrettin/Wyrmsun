@@ -1,6 +1,6 @@
 vasteras = {
 	name = "Vasteras" #"Västerås"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 16.54001338570 59.63001527820 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #2x iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 	regions = {

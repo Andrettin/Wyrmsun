@@ -1,6 +1,6 @@
 cavepeople = { #erik_cavepeople
 	name = "Cavepeople"
-	main_template = earth_45_60_latitude_north
+	main_template = earth
 	size = { 40 21 }
 	overlay_terrain_file = "the_dungeon/cavepeople.map"
 	constructed_only = true

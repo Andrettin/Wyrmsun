@@ -1,6 +1,6 @@
 ross_island = {
 	name = "Ross Island"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { -9.537 52.038 }
 	base_unit_type = unit_copper_deposit #copper deposits at Ross Island in southwest Ireland; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 54.
 	regions = {

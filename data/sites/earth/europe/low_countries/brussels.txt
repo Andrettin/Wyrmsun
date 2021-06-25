@@ -1,6 +1,6 @@
 brussels = {
 	name = "Brussels"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 4.33331660830 50.83331707670 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 95 134 74 }

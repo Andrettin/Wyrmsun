@@ -1,6 +1,6 @@
 esbjerg = {
 	name = "Esbjerg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 8.45001623397 55.46703940750 } #from Natural Earth
 	regions = {
 		scandinavia

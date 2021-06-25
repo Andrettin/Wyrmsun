@@ -1,6 +1,6 @@
 karlsruhe = {
 	name = "Karlsruhe"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 8.39999344751 48.99999228830 } #from Natural Earth
 	cores = {
 		baden

@@ -1,6 +1,6 @@
 iasi = {
 	name = "Iasi" #Iași
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 27.57494706090 47.16834698390 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 251 88 106 }

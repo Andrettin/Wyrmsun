@@ -1,6 +1,6 @@
 cyrene = {
 	name = "Cyrene"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 21.86216914740 32.82813702290 } #from Natural Earth (Shahhat)
 	base_unit_type = unit_settlement_site
 	cultural_names = {

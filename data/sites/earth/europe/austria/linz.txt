@@ -1,6 +1,6 @@
 linz = {
 	name = "Linz"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 14.28878128930 48.31923280750 } #from Natural Earth
 	regions = {
 		upper_austria

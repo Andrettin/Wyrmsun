@@ -1,6 +1,6 @@
 danzig = {
 	name = "Danzig"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 18.64004024120 54.35997519850 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 248 144 8 }

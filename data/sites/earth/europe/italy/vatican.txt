@@ -1,6 +1,6 @@
 vatican = {
 	name = "Vatican"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 12.44780838890 41.90001222640 } #from Natural Earth
 	regions = {
 		italy

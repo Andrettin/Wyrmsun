@@ -1,6 +1,6 @@
 verona = {
 	name = "Verona"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 10.99001623400 45.44039044100 } #from Natural Earth
 	regions = {
 		italy

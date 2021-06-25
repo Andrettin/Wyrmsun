@@ -1,6 +1,6 @@
 trent = {
 	name = "Trent"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 11.11998246120 46.08042889310 } #from Natural Earth
 	cultural_names = {
 		italian = "Trento"

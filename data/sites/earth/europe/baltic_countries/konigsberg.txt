@@ -1,6 +1,6 @@
 konigsberg = {
 	name = "Konigsberg" #"Königsberg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 20.49734289420 54.70000612300 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 72 145 47 }

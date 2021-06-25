@@ -1,6 +1,6 @@
 salerno = {
 	name = "Salerno"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { 14.76994055040 40.68039674790 } #from Natural Earth
 	regions = {
 		italy

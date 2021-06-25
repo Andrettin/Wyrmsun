@@ -1,6 +1,6 @@
 kirovohrad = {
 	name = "Kirovohrad"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 32.26029414750 48.50405356760 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #iron deposits nearby; Source: "Philip's International School Atlas", 2006, p. 59.
 	regions = {

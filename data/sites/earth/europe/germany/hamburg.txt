@@ -1,6 +1,6 @@
 hamburg = {
 	name = "Hamburg"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 9.99999914413 53.55002463690 } #from Natural Earth
 	cores = {
 		saxon_tribe

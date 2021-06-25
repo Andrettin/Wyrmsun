@@ -4,7 +4,7 @@ spanish_tin_deposit = { #Tin deposits; Source: "Atlas de História Mundial", 200
 	history = {
 		active = true
 		location = {
-			map_template = earth_30_45_latitude_north
+			map_template = earth
 			geocoordinate = { -6.3720703125 42.5830078125 }
 		}
 	}

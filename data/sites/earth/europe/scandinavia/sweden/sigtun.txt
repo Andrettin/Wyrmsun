@@ -1,6 +1,6 @@
 sigtun = {
 	name = "Sigtun"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 17.7099609375 59.58984375 }
 	cultural_names = {
 		germanic = "Segiztuna" #"Segiztûna" is a tentative rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia

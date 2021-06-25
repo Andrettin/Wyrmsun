@@ -1,6 +1,6 @@
 valencia = {
 	name = "Valencia" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { -0.40001204569 39.48501751610 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 179 252 129 }

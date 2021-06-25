@@ -1,6 +1,6 @@
 madrid = {
 	name = "Madrid"
-	map_template = earth_30_45_latitude_north
+	map_template = earth
 	geocoordinate = { -3.68335168600 40.40002626450 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 124 44 233 }

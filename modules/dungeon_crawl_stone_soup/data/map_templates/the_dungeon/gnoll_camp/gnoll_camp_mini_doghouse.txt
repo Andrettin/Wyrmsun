@@ -1,6 +1,6 @@
 gnoll_camp_mini_doghouse = {
 	name = "Gnoll Camp Doghouse"
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	size = { 12 9 }
 	overlay_terrain_file = "the_dungeon/gnoll_camp/gnoll_camp_mini_doghouse.map"
 	constructed_only = true

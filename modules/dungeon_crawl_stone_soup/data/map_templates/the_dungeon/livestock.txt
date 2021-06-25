@@ -1,6 +1,6 @@
 livestock = { #grunt_livestock
 	name = "Livestock"
-	main_template = earth_45_60_latitude_north
+	main_template = earth
 	#D:7-14
 	size = { 8 7 }
 	overlay_terrain_file = "the_dungeon/livestock.map"

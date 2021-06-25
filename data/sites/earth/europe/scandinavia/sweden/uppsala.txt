@@ -1,6 +1,6 @@
 uppsala = {
 	name = "Uppsala"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 17.63999792350 59.86005291660 } #from Natural Earth
 	regions = {
 		scandinavia

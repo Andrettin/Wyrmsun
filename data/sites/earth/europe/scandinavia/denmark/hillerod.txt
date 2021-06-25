@@ -1,6 +1,6 @@
 hillerod = {
 	name = "Hillerod" #"Hillerød"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 12.31669853590 55.93329906940 } #from Natural Earth
 	regions = {
 		scandinavia

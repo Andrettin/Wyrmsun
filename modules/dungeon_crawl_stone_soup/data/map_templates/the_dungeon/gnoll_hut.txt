@@ -1,6 +1,6 @@
 gnoll_hut = {
 	name = "Gnoll Hut" #cheibrodos_gnoll_hut
-	main_template = earth_30_45_latitude_north
+	main_template = earth
 	#D:2-5
 	size = { 7 7 }
 	overlay_terrain_file = "the_dungeon/gnoll_hut.map"

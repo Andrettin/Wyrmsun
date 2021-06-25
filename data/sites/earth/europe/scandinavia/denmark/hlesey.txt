@@ -1,6 +1,6 @@
 hlesey = {
 	name = "Hlesey"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 11.5 57.25 }
 	regions = {
 		scandinavia

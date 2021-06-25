@@ -1,6 +1,6 @@
 graz = {
 	name = "Graz" #from the same Slavic root as "Grad"
-	map_template = earth_45_60_latitude_north
+	map_template = earth
 	geocoordinate = { 15.41000484080 47.07775819810 } #from Natural Earth
 	regions = {
 		lower_styria
