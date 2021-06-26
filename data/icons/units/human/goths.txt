@@ -1,0 +1,3 @@
+gothic_swordsman = {
+	file = "icons/units/human/gothic/swordsman.png"
+}

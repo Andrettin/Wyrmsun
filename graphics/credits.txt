@@ -754,6 +754,7 @@
 /graphics/icons/units/goblin/worker.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/hobgoblin/warrior.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/human/germanic/worker.png (by Exidelo and Jinn) (licensed under the CC0)
+/graphics/icons/units/human/gothic/swordsman.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/units/human/alchemist.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/troll/worker.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/undead/skeleton.png (by Jinn) (licensed under the CC0)
