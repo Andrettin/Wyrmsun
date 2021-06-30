@@ -9,4 +9,14 @@ deer = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 		heteroprox_moralesi
 		procervulus_dichotomus
 	}
+	specimen_names = {
+		male = {
+			"Dain" #"Dáinn"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 56.
+			"Duneyr" #"Duneyrr"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 67.
+			"Durathror" #"Duraþrór"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 67.
+			"Dvalar" #"Dvalarr"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 67.
+			"Dvalin" #"Dvalinn"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 67.
+			"Eikthyrnir" #"Eikþyrnir"; stag from Norse mythology; Source: Rudolf Simek, "Dictionary of Northern Mythology", 1993, p. 70.
+		}
+	}
 }
