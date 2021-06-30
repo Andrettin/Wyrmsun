@@ -1,0 +1,5 @@
+heteroprox = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
+	name = "Heteroprox"
+	rank = genus
+	supertaxon = cervidae
+}

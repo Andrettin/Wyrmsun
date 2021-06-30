@@ -1,0 +1,23 @@
+heteroprox_moralesi = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
+	name = "Heteroprox" #Heteroprox moralesi
+	supertaxon = heteroprox
+	specific_name = "moralesi"
+	era = miocene #Middle Miocene
+	homeworld = earth
+	pre_evolutions = {
+		diacodexis
+	}
+	native_terrain_types = {
+		#this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	
+	#80cm shoulder height
+	#lived in Spain
+	#had large upper canine teeth
+}

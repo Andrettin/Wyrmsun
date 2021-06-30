@@ -200,5 +200,4 @@ DefineSpecies("hippopotamus", {
 })
 
 Load("scripts/species/mammal/artiodactyl/bovid.lua")
-Load("scripts/species/mammal/artiodactyl/cervid.lua")
 Load("scripts/species/mammal/artiodactyl/suid.lua")

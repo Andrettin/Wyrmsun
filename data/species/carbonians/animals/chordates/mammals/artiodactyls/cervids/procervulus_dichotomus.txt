@@ -1,0 +1,22 @@
+procervulus_dichotomus = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 62-63.
+	name = "Procervulus" #Procervulus dichotomus
+	supertaxon = procervulus
+	specific_name = "dichotomus"
+	era = miocene #Middle Miocene
+	homeworld = earth
+	pre_evolutions = {
+		diacodexis
+	}
+	native_terrain_types = {
+		#this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	
+	#55cm shoulder height
+	#lived in Europe
+}

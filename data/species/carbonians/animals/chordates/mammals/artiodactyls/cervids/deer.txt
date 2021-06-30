@@ -1,0 +1,12 @@
+deer = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180695
+	name = "Deer" #Red Deer
+	supertaxon = cervus
+	specific_name = "elaphus"
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		#earlier cervids
+		heteroprox_moralesi
+		procervulus_dichotomus
+	}
+}
