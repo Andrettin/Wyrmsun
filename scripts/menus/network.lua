@@ -120,7 +120,6 @@ function RunJoiningMapMenu(s)
 	local state
 	local d
 
-
 	menu = WarMenu(_("Joining Game: Map"))
 
 	menu:writeLargeText(_("Map"), sx, sy*3)
@@ -324,6 +323,8 @@ function RunJoinIpMenu()
 	menu:run()
 end
 
+server_multi_game_menu = nil
+
 function RunServerMultiGameMenu(map, description, numplayers)
 	local menu
 	local sx = Video.Width / 20
@@ -333,29 +334,22 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local difficulty_label
 	local d
 
-	menu = WarMenu(_("Create Multiplayer game"))
-
-	menu:writeLargeText(_("Map"), sx, sy*3)
-	menu:writeText(_("Name:"), sx, sy*3+30 * get_scale_factor())
-	descr = menu:writeText(description, sx+70 * get_scale_factor(), sy*3+30 * get_scale_factor())
-	menu:writeText(_("File:"), sx, sy*3+50 * get_scale_factor())
-	maptext = menu:writeText(string.sub(map, 6), sx+70 * get_scale_factor(), sy*3+50 * get_scale_factor())
-	menu:writeText(_("Players:"), sx, sy*3+70 * get_scale_factor())
-	players = menu:writeText(numplayers, sx+70 * get_scale_factor(), sy*3+70 * get_scale_factor())
+	menu = WarMenu(nil)
+	server_multi_game_menu = menu
 
 	local function fowCb(dd)
 		ServerSetupState.FogOfWar = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.NoFogOfWar = not dd:isMarked()
 	end
-	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), fowCb)
+	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+150 * get_scale_factor(), fowCb)
 	fow:setMarked(true)
 	local function revealMapCb(dd)
 		ServerSetupState.RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.RevealMap = bool2int(dd:isMarked())
 	end
-	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), revealMapCb)
+	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+180 * get_scale_factor(), revealMapCb)
 	
 	ServerSetupState.Opponents = 0
 	local function computer_opponentsCb(dd)
@@ -371,9 +365,9 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), computer_opponentsCb)
 	computer_opponents:setMarked(false)
 
-	menu:writeText(_("Civilization:"), sx, sy*11)
+	menu:writeText(_("Civilization:"), sx, sy*11+25 * get_scale_factor())
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-	d = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11,
+	d = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11+25 * get_scale_factor(),
 		function(dd)
 			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
 				local chosen_civilization = civilization_list[dd:getSelected() + 1]
@@ -440,9 +434,6 @@ function RunServerMultiGameMenu(map, description, numplayers)
 
 	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
 	menu:addLogicCallback(listener)
-
-	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scale_factor(), Video.Height - 100 * get_scale_factor(),
-		function() InitGameSettings(); menu:stop() end)
 
 	menu:run()
 end
