@@ -852,29 +852,6 @@ DefineSite("valence", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("verdun", {
-	Name = "Verdun",
-	MapTemplate = "old_earth",
-	Position = {3957, 927},
-	CulturalNames = {
-		"french", "Verdun"
-	},
-	Cores = {
-		"france"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Verdun was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "frank-tribe", -- Verdun's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Verdun's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia", -- Verdun's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1648, "france" -- Verdun was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalBuildings = {
-		395, 0, "temple" -- Verdun was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("vienne", {
 	Name = "Vienne",
 	MapTemplate = "old_earth",
