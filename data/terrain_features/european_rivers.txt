@@ -46,6 +46,16 @@ guadiana_river = {
 	}
 }
 
+meuse_river = {
+	name = "Meuse River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 218 134 30 }
+	cultural_names = {
+		teutonic = "Maas River"
+	}
+}
+
 minho_river = {
 	name = "Minho River"
 	terrain_type = shallow_water
