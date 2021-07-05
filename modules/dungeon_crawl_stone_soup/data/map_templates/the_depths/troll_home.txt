@@ -1,0 +1,50 @@
+troll_home = {
+	name = "Troll Home" #grated_community_mu_troll_home
+	main_template = earth
+	size = { 7 8 }
+	overlay_terrain_file = "the_depths/troll_home.map"
+	constructed_only = true
+	optional = true
+	#should only appear in areas where troll myths existed (i.e. northern Europe)
+	min_subtemplate_geocoordinate = { -5 70 }
+	max_subtemplate_geocoordinate = { 40 50 }
+	character_units = {
+		1 = {
+			unit_types = {
+				unit_troll_warrior = 1 #iron troll
+				unit_troll_warrior = 1 #deep troll
+			}
+		}
+	}
+	character_substitutions = {
+		#character conversions
+		{
+			source_character = ~ #floor
+			target_character = 0
+		}
+		{
+			source_character = "=" #floor
+			target_character = 0
+		}
+		{
+			source_character = "#" #fog machine
+			target_character = 0
+		}
+		{
+			source_characters = { . " " }
+			target_character = 0
+		}
+		{
+			source_character = +
+			target_character = 0
+		}
+		{
+			source_character = c
+			target_character = ~
+		}
+	}
+	
+	history = {
+		active = true
+	}
+}
