@@ -87,11 +87,6 @@ DefineQuest("westward_migration", { -- based on the Ynglinga saga and on the Ind
 			CallDialogue("westward_migration_introduction", trigger_player)
 		end
 	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
 	ObjectiveStrings = {"Bring a Bura to the southwestern edge of the map", "Wodanaz must survive"},
 	HeroesMustSurvive = {"voden"},
 	Uncompleteable = true,
