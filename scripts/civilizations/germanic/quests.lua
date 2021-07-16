@@ -50,11 +50,6 @@ DefineQuest("on_the_vanaquisl", {
 	CompletionEffects = function(s)
 		CallDialogue("on_the_vanaquisl_victory", trigger_player)
 	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on_the_vanaquisl") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
 	ObjectiveStrings = {"Wodanaz must survive"},
 	Objectives = {
 		{
@@ -115,11 +110,6 @@ DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and
 	end,
 	CompletionEffects = function(s)
 		CallDialogue("the_settlement_of_scandinavia_victory", trigger_player)
-	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_settlement_of_scandinavia") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
 	end,
 	ObjectiveStrings = {"Wodanaz must survive"},
 	Objectives = {
@@ -273,11 +263,6 @@ DefineQuest("heimdalls_progeny", {
 	AcceptEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
 			CallDialogue("jarl-speaks-of-his-destiny", trigger_player)
-		end
-	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
-			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
 	ObjectiveStrings = {"Conquer all of your home peninsula", "Erala must survive"},
@@ -489,16 +474,6 @@ DefineQuest("thors_servant", {
 	AcceptEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("thialfi_commanded_to_gotland", trigger_player)
-		end
-	end,
-	CompletionEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-victory", trigger_player)
-		end
-	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-defeat", trigger_player)
 		end
 	end,
 	ObjectiveStrings = {"Fulfill Thunraz's wishes", "Thialfi must survive"},

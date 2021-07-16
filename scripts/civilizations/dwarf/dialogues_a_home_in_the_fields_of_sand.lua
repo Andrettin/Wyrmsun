@@ -65,9 +65,6 @@ DefineDialogue("joruvellir-hall-completed", {
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "a_home_in_the_fields_of_sand")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
-							CallDialogue("campaign-victory", trigger_player)
-						end
 						SetPlayerData(trigger_player, "CompleteQuest", "a_home_in_the_fields_of_sand")
 					end
 				end

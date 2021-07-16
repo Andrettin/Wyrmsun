@@ -34,11 +34,6 @@ DefineQuest("a_home_in_the_fields_of_sand", {
 			CallDialogue("a-home-in-the-fields-of-sand-introduction", trigger_player)
 		end
 	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "a_home_in_the_fields_of_sand") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
 	ObjectiveStrings = {"Build a Mead Hall in Joruvellir", "Draupnir must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,

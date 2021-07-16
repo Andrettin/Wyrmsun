@@ -196,9 +196,6 @@ DefineDialogue("westward_migration_victory", {
 			"text", "Our people has been safely led across these hostile lands. Onwards to a new realm!",
 			"option-effects", {
 				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "westward_migration") then
-						CallDialogue("campaign-victory", trigger_player)
-					end
 					SetPlayerData(trigger_player, "CompleteQuest", "westward_migration")
 				end
 			}

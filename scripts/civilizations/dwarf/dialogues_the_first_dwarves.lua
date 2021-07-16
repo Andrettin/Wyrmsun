@@ -171,9 +171,6 @@ DefineDialogue("modsognirs-clan-destroys-the-grafvitnings", {
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "the_first_dwarves")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
-							CallDialogue("campaign-victory", trigger_player)
-						end
 						SetPlayerData(trigger_player, "CompleteQuest", "the_first_dwarves")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "the-slaying-of-grafvitnir")

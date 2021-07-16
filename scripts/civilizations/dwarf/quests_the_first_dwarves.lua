@@ -34,11 +34,6 @@ DefineQuest("the_first_dwarves", {
 			CallDialogue("a-rocky-home-introduction", trigger_player)
 		end
 	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_first_dwarves") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
 	ObjectiveStrings = {"Overcome Svarinshaug's perils", "Modsognir must survive", "Durin must survive"},
 	Uncompleteable = true,
 	Unobtainable = true,
