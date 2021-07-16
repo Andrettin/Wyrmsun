@@ -218,6 +218,8 @@ function HandleCheats(str)
 		call_trigger(string.sub(str, 7))
 	elseif (string.sub(str, 0, 7) == "trigger") then
 		call_trigger(string.sub(str, 9))
+	elseif (string.sub(str, 0, 8) == "dialogue") then
+		CallDialogue(string.sub(str, 10), GetThisPlayer())
 	else
 		return false
 	end
