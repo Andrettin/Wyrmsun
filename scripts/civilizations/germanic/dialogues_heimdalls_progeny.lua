@@ -409,9 +409,6 @@ DefineDialogue("jarl-conquers-jutland", {
 			"option-effects", {
 				function(s)
 					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls_progeny")) then
-						if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "heimdalls_progeny") then
-							CallDialogue("campaign-victory", trigger_player)
-						end
 						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls_progeny")
 					end
 					SetPlayerData(trigger_player, "CompleteQuest", "neutralize-the-hersings")
