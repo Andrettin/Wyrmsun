@@ -47,9 +47,8 @@ DialogBase {
 			
 			wyrmgus.network_manager.init_client_connect()
 			
-			wyrmgus.call_lua_command("RunJoiningGameMenu(\"" + server_address + "\");")
-			
-			join_game_dialog.close()
+			join_game_connecting_dialog.server_address = server_address
+			join_game_connecting_dialog.open()
 		}
 	}
 	

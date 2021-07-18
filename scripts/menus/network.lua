@@ -239,61 +239,6 @@ function RunJoiningMapMenu(s)
 	menu:run()
 end
 
-function RunJoiningGameMenu(server_address, s)
-  local menu = WarMenu(nil, panel(4), false)
-  menu:setSize(288 * get_scale_factor(), 128 * get_scale_factor())
-  menu:setPosition((Video.Width - 288 * get_scale_factor()) / 2, (Video.Height - 128 * get_scale_factor()) / 2)
-  menu:setDrawMenusUnder(true)
-
-  menu:addLabel(_("Connecting to") .. " " .. server_address, 144 * get_scale_factor(), 11 * get_scale_factor())
-
-  local percent = 0
-
-  local sb = StatBoxWidget(258 * get_scale_factor(), 30 * get_scale_factor())
-  sb:setCaption(_("Connecting..."))
-  sb:setPercent(percent)
-  menu:add(sb, 15 * get_scale_factor(), 38 * get_scale_factor())
-  sb:setBackgroundColor(dark)
-
-  local function checkconnection()
-    NetworkProcessClientRequest()
-    percent = percent + 100 / (24 * GetGameSpeed()) -- 24 seconds * fps
-    sb:setPercent(percent)
-    local state = GetNetworkState()
-    -- FIXME: do not use numbers
-    if (state == 3) then -- ccs_mapinfo
-      -- got ICMMap => load map
-      RunJoiningMapMenu()
-      menu:stop(0)
-    elseif (state == 4) then -- ccs_badmap
-      ErrorMenu(_("Map not available"))
-      menu:stop(1)
-    elseif (state == 10) then -- ccs_unreachable
-      ErrorMenu("Cannot reach server")
-      menu:stop(1)
-    elseif (state == 12) then -- ccs_nofreeslots
-      ErrorMenu(_("Server is full"))
-      menu:stop(1)
-    elseif (state == 13) then -- ccs_serverquits
-      ErrorMenu(_("Server gone"))
-      menu:stop(1)
-    elseif (state == 16) then -- ccs_incompatibleengine
-      ErrorMenu(_("Incompatible engine version"))
-      menu:stop(1)
-    elseif (state == 17) then -- ccs_incompatiblenetwork
-      ErrorMenu(_("Incompatible network version"))
-      menu:stop(1)
-    end
-  end
-  local listener = LuaActionListener(checkconnection)
-  menu:addLogicCallback(listener)
-
-  menu:addHalfButton(_("Cancel (~<Esc~>)"), "escape", 92 * get_scale_factor(), 80 * get_scale_factor(),
-    function() menu:stop(1) end)
-
-  return menu:run()
-end
-
 server_multi_game_menu = nil
 
 function RunServerMultiGameMenu(map, description, numplayers)

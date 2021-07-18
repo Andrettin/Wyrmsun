@@ -72,6 +72,10 @@ MenuBase {
 		id: join_game_dialog
 	}
 	
+	JoinGameConnectingDialog {
+		id: join_game_connecting_dialog
+	}
+	
 	GenericDialog {
 		id: error_dialog
 		title: "Error"
