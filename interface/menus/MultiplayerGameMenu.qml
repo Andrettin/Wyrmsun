@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.3
 import ".."
+import "../dialogs"
 
 MenuBase {
 	id: multiplayer_game_menu
@@ -30,13 +31,14 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Join Game"
 		hotkey: "j"
-		lua_command: "RunJoinIpMenu();"
 		
 		onClicked: {
 			if (wyrmgus.preferences.local_player_name !== nickname_text_field.text) {
 				wyrmgus.preferences.local_player_name = nickname_text_field.text
 				wyrmgus.preferences.save()
 			}
+			
+			join_game_dialog.open()
 		}
 	}
 	
@@ -64,5 +66,14 @@ MenuBase {
 		anchors.top: create_game_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		lua_command: "ExitNetwork1();"
+	}
+	
+	JoinGameDialog {
+		id: join_game_dialog
+	}
+	
+	GenericDialog {
+		id: error_dialog
+		title: "Error"
 	}
 }

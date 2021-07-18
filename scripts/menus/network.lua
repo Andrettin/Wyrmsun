@@ -294,35 +294,6 @@ function RunJoiningGameMenu(server_address, s)
   return menu:run()
 end
 
-function RunJoinIpMenu()
-	local menu = WarMenu(nil, panel(4), false)
-	menu:setSize(288 * get_scale_factor(), 128 * get_scale_factor())
-	menu:setPosition((Video.Width - 288 * get_scale_factor()) / 2, (Video.Height - 128 * get_scale_factor()) / 2)
-	menu:setDrawMenusUnder(true)
-
-	menu:addLabel(_("Enter server IP-address:"), 144 * get_scale_factor(), 11 * get_scale_factor())
-	local server = menu:addTextInputField("localhost", 40 * get_scale_factor(), 38 * get_scale_factor(), 212 * get_scale_factor())
-
-	menu:addHalfButton("~!OK", "o", 24 * get_scale_factor(), 80 * get_scale_factor(),
-		function(s)
-			-- FIXME: allow port ("localhost:1234")
-			if (NetworkSetupServerAddress(server:getText()) ~= 0) then
-				ErrorMenu("Invalid address")
-				return
-			end
-			NetworkInitClientConnect()
-			if (RunJoiningGameMenu(server:getText()) ~= 0) then
-				-- connect failed, don't leave this menu
-				return
-			end
-			menu:stop()
-		end
-	)
-	menu:addHalfButton(_("~!Cancel"), "c", 154 * get_scale_factor(), 80 * get_scale_factor(), function() menu:stop() end)
-
-	menu:run()
-end
-
 server_multi_game_menu = nil
 
 function RunServerMultiGameMenu(map, description, numplayers)
