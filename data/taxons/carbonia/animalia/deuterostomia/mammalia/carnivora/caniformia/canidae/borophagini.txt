@@ -1,0 +1,5 @@
+borophagini = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83322
+	name = "Borophagini"
+	rank = tribe
+	supertaxon = borophaginae
+}

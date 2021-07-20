@@ -1,6 +1,6 @@
-osteoborus = {
+osteoborus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41196
 	name = "Osteoborus"
-	supertaxon = canidae
+	supertaxon = borophagina
 	era = pliocene #Late Miocene and Early Pliocene
 	homeworld = earth
 	pre_evolutions = {
