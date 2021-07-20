@@ -1,10 +1,11 @@
 plesiadapis = {
 	name = "Plesiadapis"
 	supertaxon = primates
+	era = paleocene
 	homeworld = earth
 	pre_evolutions = {
 		alphadon
-		leptictidium
+		#leptictidium #too late to be an ancestor of Plesiadapis
 		zalambdalestes
 	}
 }

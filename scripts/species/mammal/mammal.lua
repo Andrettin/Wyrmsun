@@ -199,16 +199,6 @@ DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	-- scansorial insectivore
 })
 
-DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
-	Name = "Leptictidium",
-	Genus = "leptictidium",
-	Species = "auderiense", -- type species of the Leptictidium genus
-	Homeworld = "earth",
-	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "eocene"
-	-- scansorial insectivore
-})
-
 DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
 	Name = "Megazostrodon",
 	Genus = "megazostrodon",

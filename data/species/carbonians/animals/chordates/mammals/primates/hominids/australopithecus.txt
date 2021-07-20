@@ -1,7 +1,8 @@
-australopithecus = {
+australopithecus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83051
 	name = "Australopithecus"
 	supertaxon = australopithecus
-	specific_name = "afarensis" #the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
+	specific_name = "afarensis" #the Australopithecus afarensis is also known as Praeanthropus africanus
+	era = pliocene
 	homeworld = earth
 	pre_evolutions = {
 		dryopithecus

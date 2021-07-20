@@ -1,0 +1,11 @@
+leptictidium = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
+	name = "Leptictidium"
+	supertaxon = leptictidium
+	specific_name = "auderiense" #type species of the Leptictidium genus
+	era = eocene
+	homeworld = earth
+	pre_evolutions = {
+		adelobasileus_cromptoni #possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	}
+	#scansorial insectivore
+}

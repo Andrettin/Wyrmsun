@@ -1,6 +1,7 @@
 dryopithecus = {
 	name = "Dryopithecus"
 	supertaxon = primates
+	era = miocene
 	homeworld = earth
 	pre_evolutions = {
 		plesiadapis

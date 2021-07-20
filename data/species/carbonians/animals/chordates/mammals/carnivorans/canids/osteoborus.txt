@@ -1,6 +1,7 @@
 osteoborus = {
 	name = "Osteoborus"
 	supertaxon = canidae
+	era = pliocene #Late Miocene and Early Pliocene
 	homeworld = earth
 	pre_evolutions = {
 		amphicyon_giganteus
