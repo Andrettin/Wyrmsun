@@ -1,6 +1,7 @@
 frog = {
 	name = "Frog"
 	supertaxon = amphibia
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		peltobatrachus

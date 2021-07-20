@@ -1,6 +1,7 @@
 chicken = {
 	name = "Chicken"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		ichthyornis

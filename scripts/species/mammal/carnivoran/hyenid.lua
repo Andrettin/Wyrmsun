@@ -58,4 +58,3 @@ DefineSpecies("gnoll", {
 	EvolvesFrom = {"protictitherium-crassum"}, -- common ancestor with hyenas
 	Sapient = true
 })
-

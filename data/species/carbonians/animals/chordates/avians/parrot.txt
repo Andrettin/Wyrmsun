@@ -1,6 +1,7 @@
 parrot = {
 	name = "Parrot"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		hoatzin

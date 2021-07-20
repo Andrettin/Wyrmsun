@@ -1,6 +1,7 @@
 pelican = {
 	name = "Pelican"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		ichthyornis

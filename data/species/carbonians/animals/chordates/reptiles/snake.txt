@@ -1,6 +1,7 @@
 snake = {
 	name = "Snake"
 	supertaxon = reptilia
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		petrolacosaurus

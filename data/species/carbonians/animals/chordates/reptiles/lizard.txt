@@ -1,6 +1,7 @@
 lizard = {
 	name = "Lizard"
 	supertaxon = reptilia
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		petrolacosaurus

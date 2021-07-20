@@ -1,6 +1,7 @@
 duck = {
 	name = "Duck"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		ichthyornis

@@ -1,6 +1,7 @@
 salamander = {
 	name = "Salamander"
 	supertaxon = amphibia
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		peltobatrachus

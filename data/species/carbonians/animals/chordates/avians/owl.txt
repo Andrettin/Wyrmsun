@@ -1,6 +1,7 @@
 owl = {
 	name = "Owl"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		ichthyornis

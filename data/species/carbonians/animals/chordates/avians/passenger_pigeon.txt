@@ -1,6 +1,7 @@
 passenger_pigeon = {
 	name = "Passenger Pigeon"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		hoatzin

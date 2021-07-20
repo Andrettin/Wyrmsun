@@ -1,6 +1,7 @@
 bug = {
 	name = "Bug"
 	supertaxon = insecta
+	era = holocene
 	homeworld = earth
 	native_terrain_types = {
 		grass #correct?

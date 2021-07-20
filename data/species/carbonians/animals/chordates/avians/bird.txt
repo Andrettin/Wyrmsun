@@ -1,6 +1,7 @@
 bird = {
 	name = "Bird"
 	supertaxon = aves
+	era = holocene
 	homeworld = earth
 	pre_evolutions = {
 		ichthyornis #seems sensible, given the songbird is set to descend from this
