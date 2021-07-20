@@ -1,6 +1,6 @@
-dryopithecus = {
+dryopithecus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40893
 	name = "Dryopithecus"
-	supertaxon = primates
+	supertaxon = dryopithecus
 	era = miocene
 	homeworld = earth
 	pre_evolutions = {

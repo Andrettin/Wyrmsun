@@ -1,0 +1,5 @@
+plesiadapidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40733
+	name = "Plesiadapidae"
+	rank = family
+	supertaxon = plesiadapoidea
+}

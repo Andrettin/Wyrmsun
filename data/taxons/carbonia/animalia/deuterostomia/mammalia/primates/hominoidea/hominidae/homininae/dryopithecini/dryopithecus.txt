@@ -1,0 +1,5 @@
+dryopithecus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=133720
+	name = "Dryopithecus"
+	rank = genus
+	supertaxon = dryopithecini
+}

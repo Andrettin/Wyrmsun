@@ -1,0 +1,5 @@
+dryopithecini = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=133720
+	name = "Dryopithecini"
+	rank = tribe
+	supertaxon = homininae
+}

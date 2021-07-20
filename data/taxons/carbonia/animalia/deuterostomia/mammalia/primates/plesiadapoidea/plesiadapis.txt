@@ -1,0 +1,5 @@
+plesiadapis = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40738
+	name = "Plesiadapis"
+	rank = genus
+	supertaxon = plesiadapidae
+}

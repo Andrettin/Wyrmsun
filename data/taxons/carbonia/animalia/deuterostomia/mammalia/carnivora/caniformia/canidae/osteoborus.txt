@@ -1,0 +1,5 @@
+osteoborus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41196
+	name = "Osteoborus"
+	rank = genus
+	supertaxon = borophagina
+}

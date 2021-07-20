@@ -1,6 +1,6 @@
-plesiadapis = {
+plesiadapis = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40738
 	name = "Plesiadapis"
-	supertaxon = primates
+	supertaxon = plesiadapis
 	era = paleocene
 	homeworld = earth
 	pre_evolutions = {
