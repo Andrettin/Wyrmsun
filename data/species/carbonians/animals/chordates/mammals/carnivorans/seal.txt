@@ -1,0 +1,10 @@
+seal = {
+	name = "Seal"
+	supertaxon = carnivora
+	era = holocene
+	homeworld = earth
+	native_terrain_types = {
+		snow
+		ice
+	}
+}

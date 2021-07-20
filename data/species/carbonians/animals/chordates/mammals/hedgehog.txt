@@ -1,0 +1,9 @@
+hedgehog = {
+	name = "Hedgehog"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		zalambdalestes
+	}
+}

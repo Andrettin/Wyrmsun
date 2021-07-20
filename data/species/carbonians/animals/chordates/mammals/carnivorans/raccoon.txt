@@ -1,0 +1,12 @@
+raccoon = {
+	name = "Raccoon"
+	supertaxon = carnivora
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		amphicyon_giganteus
+		amphicyon_major
+		hemicyon_sansaniense
+		miacis
+	}
+}

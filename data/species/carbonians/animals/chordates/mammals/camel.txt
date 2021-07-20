@@ -1,0 +1,9 @@
+camel = {
+	name = "Camel"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		poebrodon
+	}
+}

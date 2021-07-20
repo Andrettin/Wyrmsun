@@ -1,0 +1,10 @@
+koala = {
+	name = "Koala"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		marsupial_mouse
+		possum
+	}
+}

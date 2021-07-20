@@ -240,32 +240,11 @@ DefineSpecies("chriacus", {
 	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
-DefineSpecies("marsupial-mouse", {
-	Name = "Marsupial Mouse",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"}
-})
-
 DefineSpecies("miacis", {
 	Name = "Miacis",
 	Supertaxon = "mammalia",
 	Homeworld = "earth",
 	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
-})
-
-DefineSpecies("possum", {
-	Name = "Possum",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"}
-})
-
-DefineSpecies("rabbit", {
-	Name = "Rabbit",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}
 })
 
 DefineSpecies("thylacoleo", {
@@ -282,36 +261,8 @@ DefineSpecies("thylacinus", {
 	EvolvesFrom = {"thylacoleo"}
 })
 
-DefineSpecies("weasel", {
-	Name = "Weasel",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"miacis"}
-})
-
-DefineSpecies("kangaroo", {
-	Name = "Kangaroo",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"}
-})
-
-DefineSpecies("koala", {
-	Name = "Koala",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"}
-})
-
 DefineSpecies("procoptodon", {
 	Name = "Procoptodon",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"marsupial-mouse", "possum"}
-})
-
-DefineSpecies("wombat", {
-	Name = "Wombat",
 	Supertaxon = "mammalia",
 	Homeworld = "earth",
 	EvolvesFrom = {"marsupial-mouse", "possum"}
@@ -401,21 +352,6 @@ DefineSpecies("poebrodon", {
 	EvolvesFrom = {"chriacus", "hyopsodus"}
 })
 
-DefineSpecies("camel", {
-	Name = "Camel",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"poebrodon"}
-})
-
-DefineSpecies("bat", {
-	Name = "Bat",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	Terrains = {"cave-floor", "rockbound-cave-floor"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"}
-})
-
 DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
 	Supertaxon = "mammalia",
@@ -446,13 +382,6 @@ DefineSpecies("metacheiromys", {
 	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
 })
 
-DefineSpecies("armadillo", {
-	Name = "Armadillo",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"}
-})
-
 DefineSpecies("glyptotherium", {
 	Name = "Glyptotherium",
 	Supertaxon = "mammalia",
@@ -460,22 +389,8 @@ DefineSpecies("glyptotherium", {
 	EvolvesFrom = {"metacheiromys"}
 })
 
-DefineSpecies("hedgehog", {
-	Name = "Hedgehog",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"zalambdalestes"}
-})
-
 DefineSpecies("megatherium", {
 	Name = "Megatherium",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"metacheiromys"}
-})
-
-DefineSpecies("sloth", {
-	Name = "Sloth",
 	Supertaxon = "mammalia",
 	Homeworld = "earth",
 	EvolvesFrom = {"metacheiromys"}
@@ -486,13 +401,6 @@ DefineSpecies("steropodon", {
 	Supertaxon = "mammalia",
 	Homeworld = "earth",
 	EvolvesFrom = {"megazostrodon"}
-})
-
-DefineSpecies("platypus", {
-	Name = "Platypus",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"steropodon"}
 })
 
 DefineSpecies("uintathere", {

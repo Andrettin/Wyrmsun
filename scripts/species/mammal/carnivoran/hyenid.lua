@@ -43,18 +43,3 @@ DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge 
 	-- lived in Eurasia
 	-- a large proportion of its diet was carrion, but also hunted small prey like rodents and lagomorphs
 })
-
-DefineSpecies("hyena", {
-	Name = "Hyena",
-	Supertaxon = "hyaenidae",
-	Homeworld = "earth",
-	EvolvesFrom = {"protictitherium-crassum"} -- earlier hyenid
-})
-
-DefineSpecies("gnoll", {
-	Name = "Gnoll",
-	Supertaxon = "hyaenidae",
-	Homeworld = "alfheim",
-	EvolvesFrom = {"protictitherium-crassum"}, -- common ancestor with hyenas
-	Sapient = true
-})

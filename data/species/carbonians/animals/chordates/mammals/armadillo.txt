@@ -1,0 +1,9 @@
+armadillo = {
+	name = "Armadillo"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		metacheiromys
+	}
+}

@@ -1,0 +1,11 @@
+possum = {
+	name = "Possum"
+	supertaxon = mammalia
+	era = pleistocene
+	homeworld = earth
+	pre_evolutions = {
+		alphadon
+		crusafontia
+		megazostrodon
+	}
+}

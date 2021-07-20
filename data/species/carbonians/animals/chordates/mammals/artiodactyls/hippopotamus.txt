@@ -1,0 +1,9 @@
+hippopotamus = {
+	name = "Hippopotamus"
+	supertaxon = artiodactyla
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		helohyus
+	}
+}

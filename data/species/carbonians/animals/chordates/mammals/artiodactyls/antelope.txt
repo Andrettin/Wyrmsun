@@ -1,0 +1,9 @@
+antelope = {
+	name = "Antelope"
+	supertaxon = artiodactyla
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		ilingoceros
+	}
+}

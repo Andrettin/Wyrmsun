@@ -1,0 +1,11 @@
+marsupial_mouse = {
+	name = "Marsupial Mouse"
+	supertaxon = mammalia
+	era = pleistocene
+	homeworld = earth
+	pre_evolutions = {
+		alphadon
+		crusafontia
+		megazostrodon
+	}
+}

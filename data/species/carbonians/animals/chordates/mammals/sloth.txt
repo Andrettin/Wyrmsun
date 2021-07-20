@@ -1,0 +1,9 @@
+sloth = {
+	name = "Sloth"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		metacheiromys
+	}
+}

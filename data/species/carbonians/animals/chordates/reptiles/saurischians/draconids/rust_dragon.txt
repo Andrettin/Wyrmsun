@@ -1,0 +1,10 @@
+rust_dragon = {
+	name = "Rust Dragon"
+	supertaxon = draco
+	specific_name = "ferrugo"
+	era = holocene
+	homeworld = jotunheim
+	pre_evolutions = {
+		tyrannosaurus_rex #seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	}
+}

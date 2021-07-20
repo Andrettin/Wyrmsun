@@ -1,0 +1,9 @@
+platypus = {
+	name = "Platypus"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		steropodon
+	}
+}

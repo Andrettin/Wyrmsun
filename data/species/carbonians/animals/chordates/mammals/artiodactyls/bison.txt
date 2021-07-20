@@ -1,0 +1,9 @@
+bison = {
+	name = "Bison"
+	supertaxon = artiodactyla
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		ilingoceros
+	}
+}

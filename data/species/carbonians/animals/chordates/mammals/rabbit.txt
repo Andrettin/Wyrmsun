@@ -1,0 +1,11 @@
+rabbit = {
+	name = "Rabbit"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+	}
+}

@@ -1,0 +1,10 @@
+bronze_dragon = {
+	name = "Bronze Dragon"
+	supertaxon = draco
+	specific_name = "aeneolus" #"aeneolus" means "bronze" in Latin
+	era = holocene
+	homeworld = jotunheim
+	pre_evolutions = {
+		tyrannosaurus_rex #seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	}
+}

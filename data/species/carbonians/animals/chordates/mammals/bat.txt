@@ -1,0 +1,16 @@
+bat = {
+	name = "Bat"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		leptictidium
+		zalambdalestes
+	}
+	native_terrain_types = {
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+		grass #correct?
+		dirt #correct?
+	}
+}

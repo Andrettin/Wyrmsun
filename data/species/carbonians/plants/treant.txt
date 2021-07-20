@@ -1,0 +1,10 @@
+treant = {
+	name = "Treant"
+	supertaxon = plantae
+	era = holocene
+	homeworld = alfheim
+	sapient = true #sapient tree-like being
+	native_terrain_types = {
+		grass
+	}
+}

@@ -1,0 +1,9 @@
+giraffe = {
+	name = "Giraffe"
+	supertaxon = artiodactyla
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		diacodexis
+	}
+}

@@ -1,0 +1,9 @@
+weasel = {
+	name = "Weasel"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		miacis
+	}
+}

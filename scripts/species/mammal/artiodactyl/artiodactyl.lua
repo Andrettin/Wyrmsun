@@ -171,33 +171,5 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	-- lived in Spain
 })
 
-DefineSpecies("antelope", {
-	Name = "Antelope",
-	Supertaxon = "artiodactyla",
-	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"}
-})
-
-DefineSpecies("bison", {
-	Name = "Bison",
-	Supertaxon = "artiodactyla",
-	Homeworld = "earth",
-	EvolvesFrom = {"ilingoceros"}
-})
-
-DefineSpecies("giraffe", {
-	Name = "Giraffe",
-	Supertaxon = "artiodactyla",
-	Homeworld = "earth",
-	EvolvesFrom = {"diacodexis"}
-})
-
-DefineSpecies("hippopotamus", {
-	Name = "Hippopotamus",
-	Supertaxon = "artiodactyla",
-	Homeworld = "earth",
-	EvolvesFrom = {"helohyus"}
-})
-
 Load("scripts/species/mammal/artiodactyl/bovid.lua")
 Load("scripts/species/mammal/artiodactyl/suid.lua")

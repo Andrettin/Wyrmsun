@@ -1,0 +1,9 @@
+elephant = {
+	name = "Elephant"
+	supertaxon = proboscidea
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		phiomia
+	}
+}
