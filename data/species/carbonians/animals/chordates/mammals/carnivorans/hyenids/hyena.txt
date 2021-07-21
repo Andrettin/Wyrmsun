@@ -4,6 +4,6 @@ hyena = {
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {
-		protictitherium_crassum #earlier hyenid
+		protictitherium #earlier hyenid
 	}
 }

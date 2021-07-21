@@ -85,13 +85,12 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 })
 
 Load("scripts/species/mammal/carnivoran/amphicyonid.lua")
-Load("scripts/species/mammal/carnivoran/ursid.lua")
 
 DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
 	Supertaxon = "carnivora",
 	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"}
+	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon", "miacis"}
 })
 
 DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
@@ -107,4 +106,3 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 Load("scripts/species/mammal/carnivoran/ailurid.lua")
 Load("scripts/species/mammal/carnivoran/felid.lua")
-Load("scripts/species/mammal/carnivoran/hyenid.lua")

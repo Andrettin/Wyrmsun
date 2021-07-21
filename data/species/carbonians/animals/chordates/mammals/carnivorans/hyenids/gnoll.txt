@@ -5,6 +5,6 @@ gnoll = {
 	homeworld = alfheim
 	sapient = true
 	pre_evolutions = {
-		protictitherium_crassum #common ancestor with hyenas
+		protictitherium #common ancestor with hyenas
 	}
 }

@@ -1,0 +1,29 @@
+protictitherium = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39.
+	name = "Protictitherium" #Protictitherium crassum
+	specific_name = "crassum"
+	supertaxon = protictitherium
+	era = miocene #Middle and Upper Miocene
+	homeworld = earth
+	native_terrain_types = { #this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	#pre_evolutions = {
+	#	amphicyon
+	#	hemicyon
+	#	miacis
+	#}
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+		miacis
+	}
+	#30 cm tall up to the shoulder
+	#lived in Eurasia
+	#a large proportion of its diet was carrion, but also hunted small prey like rodents and lagomorphs
+}

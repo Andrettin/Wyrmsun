@@ -1,0 +1,16 @@
+blood_bat = {
+	name = "Blood Bat"
+	supertaxon = mammalia
+	era = holocene
+	homeworld = nidavellir
+	pre_evolutions = {
+		leptictidium #has a common ancestor with bats
+		zalambdalestes #has a common ancestor with bats
+	}
+	native_terrain_types = {
+		cave_floor #correct?
+		rockbound_cave_floor #correct?
+		dry_mud #correct?
+		mud #correct?
+	}
+}

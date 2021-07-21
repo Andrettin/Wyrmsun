@@ -6,7 +6,7 @@ osteoborus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41
 	pre_evolutions = {
 		amphicyon_giganteus
 		amphicyon_major
-		hemicyon_sansaniense
+		hemicyon
 		miacis
 	}
 }

@@ -1,0 +1,22 @@
+hemicyon = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 44-45.
+	name = "Hemicyon" #Hemicyon sansaniense
+	supertaxon = hemicyon
+	specific_name = "sansaniense"
+	era = miocene #Middle Miocene
+	homeworld = earth
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+	}
+	native_terrain_types = { #this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	#90 cm shoulder height
+	#inhabited Eurasia
+}

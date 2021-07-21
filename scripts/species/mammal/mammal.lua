@@ -352,22 +352,6 @@ DefineSpecies("poebrodon", {
 	EvolvesFrom = {"chriacus", "hyopsodus"}
 })
 
-DefineSpecies("blood-bat", {
-	Name = "Blood Bat",
-	Supertaxon = "mammalia",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"} -- has a common ancestor with bats
-})
-
-DefineSpecies("dread-bat", {
-	Name = "Dread Bat",
-	Supertaxon = "mammalia",
-	Homeworld = "nidavellir",
-	Terrains = {"cave-floor", "rockbound-cave-floor", "dry-mud", "mud"}, -- correct?
-	EvolvesFrom = {"leptictidium", "zalambdalestes"} -- has a common ancestor with bats
-})
-
 DefineSpecies("hyaenodon", {
 	Name = "Hyaenodon",
 	Supertaxon = "mammalia",

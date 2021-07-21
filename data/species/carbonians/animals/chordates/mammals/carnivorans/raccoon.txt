@@ -6,7 +6,7 @@ raccoon = {
 	pre_evolutions = {
 		amphicyon_giganteus
 		amphicyon_major
-		hemicyon_sansaniense
+		hemicyon
 		miacis
 	}
 }
