@@ -1,0 +1,5 @@
+acanthostegidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36962
+	name = "Acanthostegidae"
+	rank = family
+	supertaxon = ichthyostegalia
+}

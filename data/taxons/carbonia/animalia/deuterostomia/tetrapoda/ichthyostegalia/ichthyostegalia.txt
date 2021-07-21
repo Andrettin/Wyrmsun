@@ -1,0 +1,5 @@
+ichthyostegalia = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36961
+	name = "Ichthyostegalia"
+	rank = suborder
+	supertaxon = tetrapoda
+}

@@ -1,0 +1,5 @@
+acanthostega = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36963
+	name = "Acanthostega"
+	rank = genus
+	supertaxon = acanthostegidae
+}

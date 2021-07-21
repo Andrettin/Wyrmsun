@@ -1,6 +1,5 @@
 rhipidistian_fish = {
 	name = "Rhipidistian Fish"
 	supertaxon = chordata
-	era = holocene
 	homeworld = earth
 }
