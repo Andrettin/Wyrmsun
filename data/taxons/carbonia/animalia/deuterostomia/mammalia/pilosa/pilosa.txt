@@ -1,0 +1,5 @@
+pilosa = { #Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Pilosa
+	name = "Pilosa"
+	rank = order
+	supertaxon = mammalia
+}

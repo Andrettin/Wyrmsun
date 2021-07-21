@@ -85,11 +85,6 @@ DefineSpeciesOrder("pholidota", { -- Source: Mauricio Antón and Jorge Morales, 
 	Class = "mammalia"
 })
 
-DefineSpeciesOrder("pilosa", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Pilosa
-	Name = "Pilosa",
-	Class = "mammalia"
-})
-
 DefineSpeciesOrder("scandentia", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Scandentia",
 	Class = "mammalia"
@@ -140,11 +135,6 @@ DefineSpeciesFamily("pseudorhyncocyonidae", { -- Source: http://fossilworks.org/
 	Order = "leptictida"
 })
 
-DefineSpeciesFamily("zalambdalestidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40215 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=103552
-	Name = "Zalambdalestidae",
-	Order = "pilosa"
-})
-
 DefineSpeciesGenus("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
 	Name = "Alphadon",
 	Family = "alphadontidae"
@@ -175,11 +165,6 @@ DefineSpeciesGenus("repenomamus", { -- Source: http://fossilworks.org/bridge.pl?
 	Family = "gobiconodontidae"
 })
 
-DefineSpeciesGenus("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
-	Name = "Zalambdalestes",
-	Family = "zalambdalestidae"
-})
-
 DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
 	Name = "Alphadon",
 	Genus = "alphadon",
@@ -207,16 +192,6 @@ DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=t
 	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "jurassic"
 	-- scansorial insectivore
-})
-
-DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
-	Name = "Zalambdalestes",
-	Genus = "zalambdalestes",
-	Species = "lechei", -- type species of the Zalambdalestes genus
-	Homeworld = "earth",
-	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Era = "cretaceous"
-	-- ground-dwelling insectivore
 })
 
 DefineSpecies("borhyaena", {

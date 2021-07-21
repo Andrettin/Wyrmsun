@@ -1,0 +1,10 @@
+ichthyostega = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36965
+	name = "Ichthyostega"
+	supertaxon = ichthyostega
+	specific_name = "stensioi" #type species
+	era = devonian
+	homeworld = earth
+	pre_evolutions = {
+		rhipidistian_fish
+	}
+}

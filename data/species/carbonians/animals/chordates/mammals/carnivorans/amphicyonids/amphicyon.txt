@@ -1,0 +1,31 @@
+amphicyon = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 42-43.
+	name = "Amphicyon"
+	specific_name = "major"
+	supertaxon = amphicyon
+	era = miocene #Amphicyon giganteus: Middle Miocene; Amphicyon major: Middle and Upper Miocene
+	homeworld = earth
+	native_terrain_types = { #Amphicyon major lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+	}
+	
+	#Amphicyon giganteus:
+	#weighted more than 200 kg
+	#inhabited Eurasia
+	
+	#Amphicyon major:
+	#90 cm shoulder height
+	#about the same size as a brown bear
+	#was primarily a hunter, but also ate carrion
+	#lived in environments with a lot of vegetation, but not in dense woodlands
+	#inhabited Eurasia
+

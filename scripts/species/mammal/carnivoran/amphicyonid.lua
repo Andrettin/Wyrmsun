@@ -25,42 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesGenus("daphoenodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
-	Name = "Daphoenodon",
-	Family = "amphicyonidae"
-})
-
-DefineSpeciesGenus("magericyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 43.
-	Name = "Magericyon",
-	Family = "amphicyonidae"
-})
-
-DefineSpecies("amphicyon-giganteus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
-	Name = "Giant Amphicyon", -- Amphicyon giganteus
-	Genus = "amphicyon",
-	Species = "giganteus",
-	Homeworld = "earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene" -- Middle Miocene
-	-- weighted more than 200 kg
-	-- inhabited Eurasia
-})
-
-DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 42-43.
-	Name = "Amphicyon", -- Amphicyon major
-	Genus = "amphicyon",
-	Species = "major",
-	Homeworld = "earth",
-	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene" -- Middle and Upper Miocene
-	-- 90 cm shoulder height
-	-- about the same size as a brown bear
-	-- was primarily a hunter, but also ate carrion
-	-- lived in environments with a lot of vegetation, but not in dense woodlands
-	-- inhabited Eurasia
-})
-
 DefineSpecies("daphoenodon-superbus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 42.
 	Name = "Daphoenodon", -- Daphoenodon superbus
 	Genus = "daphoenodon",

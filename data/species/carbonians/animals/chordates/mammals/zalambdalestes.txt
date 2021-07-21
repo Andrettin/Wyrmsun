@@ -1,0 +1,11 @@
+zalambdalestes = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40217
+	name = "Zalambdalestes"
+	supertaxon = zalambdalestes
+	specific_name = "lechei"
+	era = cretaceous
+	homeworld = earth
+	pre_evolutions = {
+		adelobasileus_cromptoni #possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	}
+	#ground-dwelling insectivore
+}

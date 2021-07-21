@@ -1,0 +1,5 @@
+ichthyostega = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36965
+	name = "Ichthyostega"
+	rank = genus
+	supertaxon = ichthyostegidae
+}

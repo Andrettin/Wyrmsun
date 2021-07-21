@@ -90,18 +90,7 @@ DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
 	Supertaxon = "carnivora",
 	Homeworld = "earth",
-	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon", "miacis"}
-})
-
-DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
-	Name = "Nimravus",
-	Genus = "nimravus",
-	Homeworld = "earth",
---	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
---	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
-	EvolvesFrom = {"alphadon", "zalambdalestes", "miacis"},
-	Era = "eocene"
-	-- ground dwelling carnivore
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"}
 })
 
 Load("scripts/species/mammal/carnivoran/ailurid.lua")

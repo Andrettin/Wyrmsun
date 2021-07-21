@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("ichthyostega", {
-	Name = "Ichthyostega",
-	Supertaxon = "amphibia",
-	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian_fish"}
-})
-
 DefineSpecies("tulerpeton", {
 	Name = "Tulerpeton",
 	Supertaxon = "amphibia",

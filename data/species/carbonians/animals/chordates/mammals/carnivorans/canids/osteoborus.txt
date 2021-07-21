@@ -4,8 +4,7 @@ osteoborus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41
 	era = pliocene #Late Miocene and Early Pliocene
 	homeworld = earth
 	pre_evolutions = {
-		amphicyon_giganteus
-		amphicyon_major
+		amphicyon
 		hemicyon
 		miacis
 	}

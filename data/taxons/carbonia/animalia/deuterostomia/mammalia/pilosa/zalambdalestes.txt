@@ -1,0 +1,5 @@
+zalambdalestes = { #Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
+	name = "Zalambdalestes"
+	rank = genus
+	supertaxon = zalambdalestidae
+}

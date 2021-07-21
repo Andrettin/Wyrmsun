@@ -1,0 +1,5 @@
+ichthyostegidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=36964
+	name = "Ichthyostegidae"
+	rank = family
+	supertaxon = ichthyostegalia #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=1017289
+}

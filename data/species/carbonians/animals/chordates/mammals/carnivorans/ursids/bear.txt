@@ -4,8 +4,7 @@ bear = {
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {
-		amphicyon_giganteus
-		amphicyon_major
+		amphicyon
 		hemicyon
 		miacis
 	}
