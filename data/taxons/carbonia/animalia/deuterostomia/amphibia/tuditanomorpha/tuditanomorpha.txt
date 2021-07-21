@@ -1,0 +1,5 @@
+tuditanomorpha = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37279
+	name = "Tuditanomorpha"
+	rank = suborder
+	supertaxon = amphibia
+}

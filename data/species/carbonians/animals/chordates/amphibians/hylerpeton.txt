@@ -1,0 +1,10 @@
+hylerpeton = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37297
+	name = "Hylerpeton"
+	supertaxon = hylerpeton
+	specific_name = "dawsoni" #type species
+	era = carboniferous
+	homeworld = earth
+	pre_evolutions = {
+		rhipidistian_fish
+	}
+}

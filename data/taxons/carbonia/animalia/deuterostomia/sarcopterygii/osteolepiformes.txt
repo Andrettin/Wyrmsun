@@ -1,0 +1,5 @@
+osteolepiformes = { #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=12292
+	name = "Osteolepiformes"
+	rank = order
+	supertaxon = sarcopterygii
+}

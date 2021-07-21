@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("elginerpeton", {
-	Name = "Elginerpeton",
-	Supertaxon = "amphibia",
-	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian_fish"}
-})
-
-DefineSpecies("hylerpeton", {
-	Name = "Hylerpeton",
-	Supertaxon = "amphibia",
-	Homeworld = "earth",
-	EvolvesFrom = {"rhipidistian_fish"}
-})
-
 DefineSpecies("ichthyostega", {
 	Name = "Ichthyostega",
 	Supertaxon = "amphibia",

@@ -1,0 +1,5 @@
+elginerpeton = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=242708
+	name = "Elginerpeton"
+	rank = genus
+	supertaxon = elginerpetontidae
+}

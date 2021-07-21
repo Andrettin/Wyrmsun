@@ -1,0 +1,6 @@
+sarcopterygii = { #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=1531
+	name = "Sarcopterygii"
+	common_name = "Sarcopterygian"
+	rank = class
+	supertaxon = vertebrata
+}

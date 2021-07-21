@@ -1,0 +1,10 @@
+elginerpeton = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=242708
+	name = "Elginerpeton"
+	supertaxon = elginerpeton
+	specific_name = "pancheni" #type species
+	era = devonian
+	homeworld = earth
+	pre_evolutions = {
+		rhipidistian_fish
+	}
+}

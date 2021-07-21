@@ -1,0 +1,5 @@
+gymnarthridae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37293
+	name = "Gymnarthridae"
+	rank = family
+	supertaxon = tuditanomorpha
+}

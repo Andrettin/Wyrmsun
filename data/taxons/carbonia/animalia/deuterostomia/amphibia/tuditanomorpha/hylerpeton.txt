@@ -1,0 +1,5 @@
+hylerpeton = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37297
+	name = "Hylerpeton"
+	rank = genus
+	supertaxon = gymnarthridae
+}
