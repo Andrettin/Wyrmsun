@@ -80,13 +80,6 @@ DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morale
 	Family = "palaeomerycidae"
 })
 
-DefineSpecies("diacodexis", {
-	Name = "Diacodexis",
-	Supertaxon = "artiodactyla",
-	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"}
-})
-
 DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
 	Name = "Helohyus",
 	Genus = "helohyus",

@@ -208,20 +208,6 @@ DefineSpecies("thylacosmilus", {
 	EvolvesFrom = {"borhyaena"}
 })
 
-DefineSpecies("chriacus", {
-	Name = "Chriacus",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
-})
-
-DefineSpecies("miacis", {
-	Name = "Miacis",
-	Supertaxon = "mammalia",
-	Homeworld = "earth",
-	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"}
-})
-
 DefineSpecies("thylacoleo", {
 	Name = "Thylacoleo",
 	Supertaxon = "mammalia",

@@ -1,0 +1,6 @@
+arctocyonidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42198
+	name = "Arctocyonidae"
+	common_name = "Arctocyonid"
+	rank = family
+	supertaxon = eutheria
+}

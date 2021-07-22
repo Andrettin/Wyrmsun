@@ -1,0 +1,11 @@
+diacodexis = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42313
+	name = "Diacodexis"
+	supertaxon = diacodexis
+	era = eocene
+	homeworld = earth
+	pre_evolutions = {
+		chriacus
+		hyopsodus
+		phenacodus
+	}
+}

@@ -1,0 +1,5 @@
+proailurus = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 46.
+	name = "Proailurus"
+	rank = genus
+	supertaxon = felidae
+}

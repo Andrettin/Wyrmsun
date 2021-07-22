@@ -1,0 +1,5 @@
+chriacus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42203
+	name = "Chriacus"
+	rank = genus
+	supertaxon = arctocyonidae
+}

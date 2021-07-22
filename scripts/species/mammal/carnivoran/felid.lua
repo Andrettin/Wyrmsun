@@ -25,29 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesGenus("proailurus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 46.
-	Name = "Proailurus",
-	Family = "felidae"
-})
-
-DefineSpecies("proailurus-lemanensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 46.
-	Name = "Proailurus", -- Proailurus lemanensis
-	Genus = "proailurus",
-	Species = "lemanensis",
-	Homeworld = "earth",
-	EvolvesFrom = {"nimravus"}, -- earlier feliform
-	Era = "oligocene" -- Upper Oligocene
-	-- first known felid
-	-- had the size of a small lynx
-})
-
 DefineSpecies("felis-attica", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 46-47.
 	Name = "Felis", -- Felis attica
 	Genus = "felis",
 	Species = "attica",
 	Homeworld = "earth",
 	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	},
 	Era = "miocene" -- Upper Miocene
 	-- 35 cm shoulder height
 	-- lived in Eurasia
@@ -60,7 +47,10 @@ DefineSpecies("machairodus-aphanistus", { -- Source: Mauricio Antón and Jorge M
 	Species = "aphanistus",
 	Homeworld = "earth",
 	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	},
 	Era = "miocene" -- Upper Miocene
 	-- 100 cm shoulder height
 	-- lived in Eurasia and Africa
@@ -75,7 +65,10 @@ DefineSpecies("pristinosmilus-ogygia", { -- Source: Mauricio Antón and Jorge Mo
 	Species = "ogygia",
 	Homeworld = "earth",
 	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	},
 	Era = "miocene" -- Upper Miocene
 	-- 60 cm shoulder height
 	-- lived in Eurasia
@@ -89,7 +82,10 @@ DefineSpecies("pseudaelurus-quadridentatus", { -- Source: Mauricio Antón and Jo
 	Genus = "pseudaelurus",
 	Species = "quadridentatus",
 	Homeworld = "earth",
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	},
 	Era = "miocene" -- Middle Miocene
 	-- first known machairodontine
 	-- lived in Europe
@@ -103,7 +99,10 @@ DefineSpecies("schizaelurus-lorteti", { -- Source: Mauricio Antón and Jorge Mor
 	Species = "lorteti",
 	Homeworld = "earth",
 	Terrains = {"grass", "semi_dry_grass", "dry_grass", "dirt", "dry-mud", "mud"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"proailurus-lemanensis"}, -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	},
 	Era = "miocene" -- Middle Miocene
 	-- had the size of a lynx
 	-- 45 cm shoulder height
@@ -124,7 +123,10 @@ DefineSpecies("sabertooth", {
 	Name = "Sabertooth",
 	Supertaxon = "felidae",
 	Homeworld = "earth",
-	EvolvesFrom = {"proailurus-lemanensis"} -- earlier felid
+	EvolvesFrom = {
+		"nimravus", -- earlier feliform
+		"proailurus" -- earlier felid
+	}
 })
 
 DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805

@@ -30,7 +30,8 @@ DefineSpecies("eritherium-azzouzorum", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "eritherium",
 	Species = "azzouzorum",
 	Homeworld = "earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
+--	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes", "hyopsodus", "phenacodus"},
 	Era = "paleocene"
 	-- first known proboscid
 	-- lived in Africa

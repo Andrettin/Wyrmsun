@@ -1,0 +1,20 @@
+proailurus = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 46.
+	name = "Proailurus" #Proailurus lemanensis
+	supertaxon = proailurus
+	specific_name = lemanensis
+	era = oligocene #Upper Oligocene
+	homeworld = earth
+	#pre_evolutions = {
+	#	amphicyon
+	#	hemicyon
+	#	miacis
+	#}
+	pre_evolutions = {
+		alphadon
+		leptictidium
+		zalambdalestes
+		miacis
+	}
+	#first known felid
+	#had the size of a small lynx
+}

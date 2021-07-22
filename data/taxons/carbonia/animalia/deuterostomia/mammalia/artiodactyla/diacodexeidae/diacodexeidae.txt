@@ -1,0 +1,5 @@
+diacodexeidae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=135248
+	name = "Diacodexeidae"
+	rank = family
+	supertaxon = artiodactyla
+}

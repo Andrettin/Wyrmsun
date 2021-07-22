@@ -1,0 +1,11 @@
+miacis = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40979
+	name = "Miacis"
+	supertaxon = miacis
+	era = eocene
+	homeworld = earth
+	pre_evolutions = {
+		crusafontia
+		megazostrodon
+		zalambdalestes
+	}
+}

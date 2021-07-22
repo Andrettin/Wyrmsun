@@ -1,0 +1,5 @@
+miacoidea = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40970
+	name = "Miacoidea"
+	rank = superfamily
+	supertaxon = carnivora
+}
