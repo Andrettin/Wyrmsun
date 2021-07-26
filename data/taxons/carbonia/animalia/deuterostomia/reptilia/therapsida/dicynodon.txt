@@ -1,0 +1,5 @@
+dicynodon = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39019
+	name = "Dicynodon"
+	rank = genus
+	supertaxon = dicynodontidae #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=1374931
+}

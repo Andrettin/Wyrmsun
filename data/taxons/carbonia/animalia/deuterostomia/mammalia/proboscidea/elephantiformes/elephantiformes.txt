@@ -1,0 +1,5 @@
+elephantiformes = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67858
+	name = "Elephantiformes"
+	rank = suborder
+	supertaxon = proboscidea
+}

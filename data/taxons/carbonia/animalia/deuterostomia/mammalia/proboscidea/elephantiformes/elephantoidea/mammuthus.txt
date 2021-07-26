@@ -1,0 +1,5 @@
+mammuthus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43266
+	name = "Mammuthus"
+	rank = genus
+	supertaxon = elephantini
+}

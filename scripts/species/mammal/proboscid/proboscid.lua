@@ -48,13 +48,6 @@ DefineSpecies("numidotherium-koholense", { -- Source: Mauricio Antón and Jorge 
 	-- weighted more than 200 kg
 })
 
-DefineSpecies("phiomia", {
-	Name = "Phiomia",
-	Supertaxon = "proboscidea",
-	Homeworld = "earth",
-	EvolvesFrom = {"eritherium-azzouzorum"} -- earlier proboscid
-})
-
 DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 50-51.
 	Name = "Gomphotherium", -- Gomphotherium angustidens
 	Genus = "gomphotherium",
@@ -81,13 +74,6 @@ DefineSpecies("tetralophodon-longirostris", { -- Source: Mauricio Antón and Jor
 	-- 3m shoulder height
 	-- lived in Eurasia and Africa
 	-- had teeth adapted to a fibrous diet
-})
-
-DefineSpecies("mammoth", {
-	Name = "Mammoth",
-	Supertaxon = "proboscidea",
-	Homeworld = "earth",
-	EvolvesFrom = {"phiomia"}
 })
 
 DefineSpecies("platybeledon", {

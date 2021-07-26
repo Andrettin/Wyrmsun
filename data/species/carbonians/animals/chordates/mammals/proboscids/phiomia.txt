@@ -1,0 +1,9 @@
+phiomia = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43252
+	name = "Phiomia"
+	supertaxon = phiomia
+	era = oligocene
+	homeworld = earth
+	pre_evolutions = {
+		eritherium_azzouzorum #earlier proboscid
+	}
+}

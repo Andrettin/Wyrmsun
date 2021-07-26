@@ -1,0 +1,5 @@
+elephantoidea = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67859
+	name = "Elephantoidea"
+	rank = superfamily
+	supertaxon = elephantiformes
+}

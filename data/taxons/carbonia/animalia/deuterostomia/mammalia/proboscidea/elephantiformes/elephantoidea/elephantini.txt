@@ -1,0 +1,5 @@
+elephantini = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=157625
+	name = "Elephantini"
+	rank = tribe
+	supertaxon = elephantinae
+}

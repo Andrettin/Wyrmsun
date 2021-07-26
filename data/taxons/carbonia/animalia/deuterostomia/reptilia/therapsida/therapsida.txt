@@ -1,0 +1,6 @@
+therapsida = { #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=11523
+	name = "Therapsida"
+	common_name = "Therapsid"
+	rank = order
+	supertaxon = reptilia
+}

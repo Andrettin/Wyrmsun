@@ -268,13 +268,6 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	-- ground dwelling carnivore
 })
 
-DefineSpecies("dicynodon", {
-	Name = "Dicynodon",
-	Supertaxon = "reptilia",
-	Homeworld = "earth",
-	EvolvesFrom = {"edaphosaurus", "petrolacosaurus", "sphenacodon", "thadeosaurus"}
-})
-
 DefineSpecies("dimetrodon", {
 	Name = "Dimetrodon",
 	Supertaxon = "reptilia",

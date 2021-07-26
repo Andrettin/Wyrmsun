@@ -1,0 +1,5 @@
+dicynodontidae = { #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=116205
+	name = "Dicynodontidae"
+	rank = family
+	supertaxon = therapsida
+}

@@ -1,0 +1,5 @@
+elephantinae = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=157623
+	name = "Elephantinae"
+	rank = subfamily
+	supertaxon = elephantidae
+}
