@@ -1981,6 +1981,7 @@
 /graphics/units/teutonic/workship.png (by Jinn) (licensed under the CC0)
 /graphics/units/undead/skeleton_warrior.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/aether_transport.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/units/aether_warship.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/welsh/icons/longbow.png (by Exidelo) (licensed under the CC0)
 /graphics/welsh/icons/longbow_2.png (by Exidelo) (licensed under the CC0)
 /graphics/welsh/icons/longbow_3.png (by Exidelo) (licensed under the CC0)
