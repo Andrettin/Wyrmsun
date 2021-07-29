@@ -40,20 +40,6 @@ DefineSpeciesGenus("haliaeetus", { -- Source: http://www.itis.gov/servlet/Single
 	Family = "accipitridae"
 })
 
-DefineSpecies("archaeopteryx", {
-	Name = "Archaeopteryx",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"}
-})
-
-DefineSpecies("gallimimus", {
-	Name = "Gallimimus",
-	Supertaxon = "aves",
-	Homeworld = "earth",
-	EvolvesFrom = {"compsognathus", "deinonychus"}
-})
-
 DefineSpecies("ichthyornis", {
 	Name = "Ichthyornis",
 	Supertaxon = "aves",

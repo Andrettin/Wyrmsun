@@ -1,0 +1,5 @@
+gallimimus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=38547
+	name = "Gallimimus"
+	rank = genus
+	supertaxon = ornithomimidae
+}

@@ -1,0 +1,5 @@
+ornithomimosauria = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=192947
+	name = "Ornithomimosauria"
+	rank = infraorder
+	supertaxon = reptilia
+}

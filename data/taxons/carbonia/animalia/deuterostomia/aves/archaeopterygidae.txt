@@ -1,0 +1,5 @@
+archaeopterygidae = { #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=100762
+	name = "Archaeopterygidae"
+	rank = family
+	supertaxon = archaeopterygiformes
+}

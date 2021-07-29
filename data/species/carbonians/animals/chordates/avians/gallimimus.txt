@@ -1,0 +1,10 @@
+gallimimus = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=38547
+	name = "Gallimimus"
+	supertaxon = gallimimus
+	era = cretaceous
+	homeworld = earth
+	pre_evolutions = {
+		compsognathus
+		deinonychus
+	}
+}

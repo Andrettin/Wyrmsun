@@ -1,0 +1,11 @@
+archaeopteryx = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39240
+	name = "Archaeopteryx"
+	supertaxon = archaeopteryx
+	era = jurassic
+	homeworld = earth
+	pre_evolutions = {
+		compsognathus
+		deinonychus
+		saltopus
+	}
+}

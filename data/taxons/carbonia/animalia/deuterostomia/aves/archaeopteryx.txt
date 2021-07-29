@@ -1,0 +1,5 @@
+archaeopteryx = { #Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39240
+	name = "Archaeopteryx"
+	rank = genus
+	supertaxon = archaeopterygidae #Source: https://www.irmng.org/aphia.php?p=taxdetails&id=1061651
+}
