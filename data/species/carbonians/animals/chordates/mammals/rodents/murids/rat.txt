@@ -5,7 +5,7 @@ rat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TS
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {
-		megacricetodon_collongensis #earlier rodent
+		megacricetodon #earlier rodent
 	}
 	native_terrain_types = {
 		grass #correct?

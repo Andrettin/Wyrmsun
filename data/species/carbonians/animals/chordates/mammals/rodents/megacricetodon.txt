@@ -1,0 +1,23 @@
+megacricetodon = { #Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37.
+	name = "Megacricetodon"
+	supertaxon = megacricetodon
+	specific_name = "collongensis"
+	era = miocene #Middle Miocene
+	homeworld = earth
+	pre_evolutions = {
+		ischyromys #earlier rodent
+	}
+	native_terrain_types = {
+		#this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+		grass
+		semi_dry_grass
+		dry_grass
+		dirt
+		dry_mud
+		mud
+	}
+	
+	#had an omnivore diet with a high proportion of insects
+	#lived in Europe
+	#had a length of 8-13 cm
+}

@@ -4,6 +4,6 @@ mouse = {
 	era = holocene
 	homeworld = earth
 	pre_evolutions = {
-		megacricetodon_collongensis #earlier rodent
+		megacricetodon #earlier rodent
 	}
 }

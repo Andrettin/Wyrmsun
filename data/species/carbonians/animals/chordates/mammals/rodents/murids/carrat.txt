@@ -10,6 +10,6 @@ carrat = { #rodent with the morphology akin to that of a canid; goblins keep thi
 		mud #correct?
 	}
 	pre_evolutions = {
-		megacricetodon_collongensis #shares a common ancestor with rats
+		megacricetodon #shares a common ancestor with rats
 	}
 }
