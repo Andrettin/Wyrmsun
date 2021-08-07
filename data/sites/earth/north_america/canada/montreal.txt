@@ -1,6 +1,6 @@
 montreal = {
 	name = "Montreal"
-	map_template = north_america_45_60_latitude_north
+	map_template = north_america
 	geocoordinate = { -73.58329695810 45.49999920560 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	regions = {

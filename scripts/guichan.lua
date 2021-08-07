@@ -757,7 +757,7 @@ LoadingPersistentHeroes = false
 
 initialize_database()
 
---pack_image_folder("C:/Wyrmsun/models/units/hobgoblin/warrior/Sprites")
+--pack_image_folder("C:/Wyrmsun/models/units/aether_workship/Sprites")
 
 function GameStarting()
 	play_map_music()

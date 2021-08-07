@@ -1,6 +1,6 @@
 st_johns = {
 	name = "St. John's"
-	map_template = north_america_45_60_latitude_north
+	map_template = north_america
 	#geocoordinate = { -52.68100691890 47.58498821930 } #from Natural Earth
 	pos = { 374 163 } #so that it doesn't block the tiles to its east
 	base_unit_type = unit_settlement_site

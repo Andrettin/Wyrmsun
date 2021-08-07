@@ -1,83 +1,15 @@
 north_america = {
 	name = "North America"
 	world = earth
-	size = { 384 384 }
-	min_longitude = -11
-	max_longitude = 34
+	size = { 256 256 }
+	base_terrain_type = dirt
+	map_projection = mercator
+	min_longitude = -82
+	max_longitude = -52
 	min_latitude = 30
-	max_latitude = 62.5
-}
-
-north_america_60_75_latitude_north = {
-	name = "North America"
-	main_template = north_america
-	world = earth
-	size = { 384 32 }
-	subtemplate_top_left_pos = { 0 0 }
-	base_terrain_type = dirt
-	terrain_image_file = "earth/north_america_60_75_latitude_north.png"
-	overlay_terrain_image_file = "earth/north_america_60_75_latitude_north_overlay.png"
-	#territory_image_file = "earth/north_america_60_75_latitude_north_territories.png"
-	min_longitude = -97
-	max_longitude = -52
-	min_latitude = 60
-	max_latitude = 62.5
-	#1.5x latitude scale
-	generated_terrains = {
-		grass = {
-			seed_count = 128
-			use_existing_as_seeds = true
-			target_terrain_type = dirt
-		}
-		pine_tree = {
-			seed_count = 4
-			max_percent = 20
-			target_terrain_type = grass
-		}
-		pine_tree_snow = {
-			seed_count = 16
-			max_percent = 20
-			target_terrain_type = snow
-		}
-	}
-	generated_neutral_units = {
-		unit_iron_deposit = 1
-		unit_tree_stump = 2
-		unit_bee = 8
-		unit_fly = 8
-		unit_bug = 8
-		unit_worm = 8
-		unit_snail = 8
-		unit_slug = 8
-		unit_frog = 8
-		unit_bird = 8
-		unit_crow = 8
-		unit_rat = 8
-		unit_goat = 4
-		unit_wolf = 4
-	}
-	player_location_generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_wood_pile = 16
-		unit_stone_pile = 8
-	}
-}
-
-north_america_45_60_latitude_north = {
-	name = "North America"
-	main_template = north_america
-	world = earth
-	size = { 384 192 }
-	subtemplate_top_left_pos = { 0 32 }
-	base_terrain_type = dirt
-	terrain_image_file = "earth/north_america_45_60_latitude_north.png"
-	overlay_terrain_image_file = "earth/north_america_45_60_latitude_north_overlay.png"
-	#territory_image_file = "earth/north_america_45_60_latitude_north_territories.png"
-	min_longitude = -97
-	max_longitude = -52
-	min_latitude = 45
-	max_latitude = 60
-	#1.5x latitude scale (compared to the equirectangular projection), about the same as in Mercator for this latitude
+	max_latitude = 52
+	terrain_image_file = "earth/north_america.png"
+	overlay_terrain_image_file = "earth/north_america_overlay.png"
 	generated_terrains = {
 		grass = {
 			seed_count = 1024
@@ -91,64 +23,6 @@ north_america_45_60_latitude_north = {
 		}
 		pine_tree_snow = {
 			seed_count = 256
-			max_percent = 20
-			target_terrain_type = snow
-		}
-	}
-	generated_neutral_units = {
-		unit_gold_deposit = 2
-		unit_silver_deposit = 2
-		unit_copper_deposit = 2
-		unit_iron_deposit = 6
-		unit_tree_stump = 16
-		unit_bee = 64
-		unit_fly = 64
-		unit_bug = 64
-		unit_worm = 64
-		unit_snail = 64
-		unit_slug = 64
-		unit_frog = 64
-		unit_bird = 64
-		unit_crow = 64
-		unit_rat = 64
-		unit_goat = 32
-		unit_wolf = 32
-	}
-	player_location_generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_wood_pile = 16
-		unit_stone_pile = 8
-	}
-}
-
-north_america_30_45_latitude_north = {
-	name = "North America"
-	main_template = north_america
-	world = earth
-	size = { 384 160 }
-	subtemplate_top_left_pos = { 0 224 }
-	base_terrain_type = dirt
-	terrain_image_file = "earth/north_america_30_45_latitude_north.png"
-	overlay_terrain_image_file = "earth/north_america_30_45_latitude_north_overlay.png"
-	#territory_image_file = "earth/north_america_30_45_latitude_north_territories.png"
-	min_longitude = -97
-	max_longitude = -52
-	min_latitude = 30
-	max_latitude = 45
-	#1.25x latitude scale (compared to the equirectangular projection), about the same as in Mercator for this latitude
-	generated_terrains = {
-		grass = {
-			seed_count = 1024
-			use_existing_as_seeds = true
-			target_terrain_type = dirt
-		}
-		pine_tree = {
-			seed_count = 128
-			max_percent = 20
-			target_terrain_type = grass
-		}
-		pine_tree_snow = {
-			seed_count = 16
 			max_percent = 20
 			target_terrain_type = snow
 		}

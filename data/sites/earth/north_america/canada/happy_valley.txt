@@ -1,6 +1,6 @@
 happy_valley = {
 	name = "Happy Valley"
-	map_template = north_america_45_60_latitude_north
+	map_template = north_america
 	geocoordinate = { -60.29999922850 53.29998821930 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	regions = {
