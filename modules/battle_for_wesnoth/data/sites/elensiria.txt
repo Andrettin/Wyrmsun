@@ -9,13 +9,12 @@ helsinki += { #Elensiria is identified with Helsinki as Finland (which was an el
 		years_wesnoth = {
 			19 = {
 				owner = lintanir
-				building_classes += barracks #had capability to train warriors
-				building_classes += smithy #Karrag was already reviving the art of runesmithing in 550 YW
+				building_classes += town_hall
 			}
 			
 			2000 = {
-				building_classes -= barracks
-				building_classes -= smithy
+				owner = none
+				building_classes -= town_hall
 			}
 		}
 	}
