@@ -415,49 +415,6 @@ function AddMenuHelpers(menu)
 		return b
 	end
   
-  function menu:addRadioButton(caption, group, x, y, callback)
-    local b = RadioButton(caption, group)
-    b:setBaseColor(dark)
-    b:setForegroundColor(clear)
-    b:setBackgroundColor(dark)
-    b:setActionCallback(
-		function()
-			PlaySound("click")
-			callback()
-		end
-	)
-    self:add(b, x, y)
-    return b
-  end
-
-	function menu:addImageRadioButton(caption, group, x, y, callback)
-		local b = ImageRadioButton(caption, group)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
-		local g_radio_off
-		local g_radio_off2
-		local g_radio_on
-		local g_radio_on2
-		g_radio_off = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_unselected.png"
-		g_radio_off2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_unselected.png"
-		g_radio_on = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_normal_selected.png"
-		g_radio_on2 = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/radio_pressed_selected.png"
-		b:setUncheckedNormalImage(g_radio_off)
-		b:setUncheckedPressedImage(g_radio_off2)
-		b:setCheckedNormalImage(g_radio_on)
-		b:setCheckedPressedImage(g_radio_on2)
-		b:setFont(Fonts["game"])
-		b:setActionCallback(
-			function()
-				PlaySound("click")
-				callback()
-			end
-		)
-		self:add(b, x, y)
-		return b
-	end
-  
 	function menu:addDropDown(list, x, y, callback)
 		local dd = ImageDropDownWidget()
 		dd:setFont(Fonts["game"])
