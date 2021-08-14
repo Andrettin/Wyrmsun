@@ -1,4 +1,4 @@
-tallinn += {
+lvov += {
 	aliases += kal_kartha
 	
 	cultural_names = {
@@ -10,11 +10,13 @@ tallinn += {
 		years_wesnoth = {
 			550 = {
 				owner = kal_kartha
+				building_classes += town_hall
 				building_classes += barracks #had capability to train warriors
 				building_classes += smithy #Karrag was already reviving the art of runesmithing in 550 YW
 			}
 			
-			2000 = {
+			3000 = {
+				building_classes -= town_hall
 				building_classes -= barracks
 				building_classes -= smithy
 			}

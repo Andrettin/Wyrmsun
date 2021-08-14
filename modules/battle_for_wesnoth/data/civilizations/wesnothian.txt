@@ -1,10 +1,11 @@
 wesnothian = {
 	name = "Wesnothian"
 	parent_civilization = anglo_saxon
+	group = western
+	language = old_english
 	visible = false
 	playable = false
 	default_color = blue
-	language = old_english
 	
 	personal_names = {
 		male = {

@@ -1,0 +1,21 @@
+prague += {
+	aliases += knalga
+	
+	cultural_names = {
+		dwarven = "Knalga"
+	}
+	cores += knalga
+	
+	history = {
+		years_wesnoth = {
+			400 = {
+				owner = knalga
+				building_classes += town_hall
+			}
+			
+			3000 = {
+				building_classes -= town_hall
+			}
+		}
+	}
+}

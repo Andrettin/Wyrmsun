@@ -8,11 +8,12 @@ helsinki += { #Elensiria is identified with Helsinki as Finland (which was an el
 	history = {
 		years_wesnoth = {
 			19 = {
+				#Lintanir existed in 19 YW, so presumably Elensiria was settled as well
 				owner = lintanir
 				building_classes += town_hall
 			}
 			
-			2000 = {
+			3000 = {
 				owner = none
 				building_classes -= town_hall
 			}

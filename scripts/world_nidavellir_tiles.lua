@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({32, 14}, {
-	World = "nidavellir",
-	CulturalSettlementNames = {
-		"dwarf", "Knalga"
-	}
-})
-
 DefineWorldMapTile({50, 13}, {
 	World = "nidavellir",
 	CulturalSettlementNames = {
