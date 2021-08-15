@@ -5,6 +5,7 @@ the_rise_of_barbarossa = {
 	start_date = 1152
 	map_templates = { earth }
 	quest = the_rise_of_barbarossa
+	icon = icon_flag_holy_roman_empire
 	hidden = true
 }
 
@@ -16,7 +17,9 @@ the_lombard_league = {
 	required_quests = { the_rise_of_barbarossa }
 	map_templates = { earth }
 	quest = the_lombard_league
+	icon = icon_flag_holy_roman_empire
 	tree_parent = the_rise_of_barbarossa
+	hidden = true
 }
 
 the_lion_of_saxony = {
@@ -27,5 +30,7 @@ the_lion_of_saxony = {
 	required_quests = { the_lombard_league }
 	map_templates = { earth }
 	quest = the_lion_of_saxony
+	icon = icon_flag_holy_roman_empire
 	tree_parent = the_lombard_league
+	hidden = true
 }
