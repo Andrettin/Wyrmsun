@@ -1,0 +1,20 @@
+wesnoth = {
+	name = "Wesnoth"
+	adjective = "Wesnothian"
+	civilization = wesnothian
+	type = polity
+	color = blue
+	default_tier = kingdom
+	default_capital = weldyn
+	icon = icon_flag_old_austria
+	#upgrade = upgrade_faction_wesnoth
+	
+	history = {
+		years_wesnoth = {
+			1 = {
+				acquired_upgrade_classes += masonry
+				acquired_upgrade_classes += writing
+			}
+		}
+	}
+}

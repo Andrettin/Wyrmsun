@@ -1,4 +1,36 @@
 knalga = {
+	name = "Knalga"
+	adjective = "Knalgan"
+	civilization = dwarven
+	type = polity
+	color = red
+	default_tier = barony
+	default_capital = knalga
+	icon = icon_flag_silver_hammer_on_red
+	upgrade = upgrade_faction_knalga
+	develops_from = {
+		norlund_clan
+		oinling_clan
+		shinsplitter_clan
+		shorbear_clan
+		whitesteel_clan
+	}
+	title_names = {
+		monarchy = {
+			barony = "Lordship"
+		}
+	}
+	character_title_names = {
+		head_of_state = {
+			monarchy = {
+				barony = {
+					male = "Lord"
+					female = "Lady"
+				}
+			}
+		}
+	}
+	
 	history = {
 		400 = {
 			#polities require writing

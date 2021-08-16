@@ -4,4 +4,18 @@ belgrade += {
 	cultural_names = {
 		wesnothian = "Weldyn"
 	}
+	cores += wesnoth
+	
+	history = {
+		years_wesnoth = {
+			1 = {
+				owner = wesnoth
+				building_classes += town_hall
+			}
+			
+			3000 = {
+				building_classes -= town_hall
+			}
+		}
+	}
 }

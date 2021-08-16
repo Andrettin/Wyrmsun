@@ -4,8 +4,8 @@ surghan_mercenaries = {
 	type = mercenary_company
 	color = blue
 	default_tier = duchy
-	upgrade = upgrade_faction_surghan_mercenaries
 	icon = icon_flag_green_hammer_on_blue
+	upgrade = upgrade_faction_surghan_mercenaries
 	description = "These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond."
 	quote = "\"It must be one of those Surghan mercenaries. I'll bet those <a href='faction:shinsplitter_clan'>Shinsplitters</a> have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- <a href='character:baglur'>Baglur</a>, Retired <a href='faction:norlund_clan'>Norlund</a> Warrior"
 }

@@ -295,27 +295,6 @@ DefineFaction("kal_kartha", {
 	}
 })
 
-DefineFaction("knalga", {
-	Name = "Knalga",
-	Civilization = "dwarf",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "barony",
-	FactionUpgrade = "upgrade-faction-knalga",
-	Icon = "icon-flag-silver-hammer-on-red",
-	DevelopsFrom = {"norlund-clan", "oinling-clan", "shinsplitter-clan", "shorbear-clan", "whitesteel-clan"},
-	Titles = {
-		"monarchy", "barony", "Lordship"
-	},
-	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
-	},
-	HistoricalCapitals = {
-		400, "knalga"
-	}
-})
-
 DefineFaction("lyr", {
 	Name = "Lyr",
 	Civilization = "dwarf",
