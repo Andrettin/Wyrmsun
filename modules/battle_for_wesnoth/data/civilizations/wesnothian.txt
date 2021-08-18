@@ -923,4 +923,15 @@ wesnothian = {
 			"Ysyssa"
 		}
 	}
+	
+	history = {
+		years_wesnoth = {
+			1 = {
+				#Wesnoth founded in 1 YW
+				acquired_upgrade_classes += masonry
+				acquired_upgrade_classes += writing
+				explored_settlements += weldyn
+			}
+		}
+	}
 }
