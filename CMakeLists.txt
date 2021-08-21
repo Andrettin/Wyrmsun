@@ -19,9 +19,9 @@ configure_file(linux/wyrmsun.sh.in wyrmsun.sh @ONLY)
 install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/wyrmsun.sh DESTINATION ${BIN_DIR} RENAME wyrmsun)
 install(FILES linux/wyrmsun.desktop DESTINATION share/applications)
 install(FILES linux/wyrmsun.appdata.xml DESTINATION share/metainfo)
-install(FILES graphics/ui/icons/wyrmsun_icon_32.png DESTINATION ${ICONS_DIR}32x32/apps RENAME wyrmsun.png)
-install(FILES graphics/ui/icons/wyrmsun_icon_64.png DESTINATION ${ICONS_DIR}64x64/apps RENAME wyrmsun.png)
-install(FILES graphics/ui/icons/wyrmsun_icon_128.png DESTINATION ${ICONS_DIR}128x128/apps RENAME wyrmsun.png)
+install(FILES graphics/interface/icons/wyrmsun_icon_32.png DESTINATION ${ICONS_DIR}/32x32/apps RENAME wyrmsun.png)
+install(FILES graphics/interface/icons/wyrmsun_icon_64.png DESTINATION ${ICONS_DIR}/64x64/apps RENAME wyrmsun.png)
+install(FILES graphics/interface/icons/wyrmsun_icon_128.png DESTINATION ${ICONS_DIR}/128x128/apps RENAME wyrmsun.png)
 
 install(DIRECTORY
 	data
