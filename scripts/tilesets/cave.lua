@@ -163,5 +163,4 @@ DefineTileset("name", "Cave",
 
 BuildTilesetTables()
 
-Load("scripts/scripts.lua")
 GameSettings.Inside = true

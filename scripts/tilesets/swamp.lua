@@ -194,6 +194,3 @@ DefineTileset("name", "Swamp",
   })
 
 BuildTilesetTables()
-
-Load("scripts/scripts.lua")
-

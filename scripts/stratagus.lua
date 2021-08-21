@@ -147,14 +147,6 @@ Load("scripts/resources.lua")
 
 -------------------------------------------------------------------------------
 
---  If color-cycle-all is off (#f) only the tileset palette is color cycled.
--- Otherwise (#t) all palettes are color cycled.
-SetColorCycleAll(false)
-ClearAllColorCyclingRange()
-AddColorCyclingRange(38, 47) -- water
-
--------------------------------------------------------------------------------
-
 --  Edit next to increase the speed, for debugging.
 
 --  Decrease the mining time by this factor.

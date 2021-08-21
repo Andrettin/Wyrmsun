@@ -201,5 +201,3 @@ DefineTileset("name", "Conifer Forest (Summer)",
 )
 
 BuildTilesetTables()
-
-Load("scripts/scripts.lua")

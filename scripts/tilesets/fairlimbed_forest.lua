@@ -201,6 +201,3 @@ DefineTileset("name", "Fairlimbed Forest",
 )
 
 BuildTilesetTables()
-
-Load("scripts/scripts.lua")
-
