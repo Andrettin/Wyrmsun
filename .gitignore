@@ -33,8 +33,8 @@ Qt5QuickControls2.dll
 Qt5QuickTemplates2.dll
 Qt5Widgets.dll
 screen*.png
-SDL.dll
-SDL_mixer.dll
+SDL2.dll
+SDL2_mixer.dll
 smpeg.dll
 stderr.txt
 stdout.txt
