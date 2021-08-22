@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - Updated the SDL library to SDL2, version 2.0.16.
 - Updated the SDL_mixer library to SDL2_mixer, version 2.0.4.
 - Fixed issue with the save game functionality.
+- Fixed issue with loading a saved game from within a game.
 
 -----------------------------------------------------------------------
 - 5.0.0
