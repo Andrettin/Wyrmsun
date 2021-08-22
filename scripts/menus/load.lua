@@ -17,8 +17,6 @@ function LoadGame(s)
 		end
 	end
 
-	RunResultsMenu()
-
 	SetCurrentCampaign("")
 	SetCurrentQuest("")
 	

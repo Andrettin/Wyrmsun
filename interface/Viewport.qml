@@ -92,6 +92,7 @@ Item {
 			if (wyrmgus.game.results !== null) {
 				if (wyrmgus.game.results.victory || wyrmgus.game.results.defeat || wyrmgus.game.results.draw) {
 					menu_stack.push("menus/ResultsMenu.qml")
+					wyrmgus.call_lua_command("RunResultsMenu();")
 				}
 			}
 			map_view_underlay.destroy()

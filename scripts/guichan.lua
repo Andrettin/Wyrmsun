@@ -549,7 +549,6 @@ function RunMap(map, objective, fow, revealmap)
 			loop = false
 		end
 	end
-	RunResultsMenu(s)
 
 	InitGameSettings()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
