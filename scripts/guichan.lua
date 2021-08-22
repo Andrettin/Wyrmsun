@@ -517,11 +517,7 @@ InitGameSettings()
 
 function RunMap(map, objective, fow, revealmap)
 	if (LoadedGame == false) then
-		for key, value in pairs(CustomPlayerData) do
-			for i=1,table.getn(CustomPlayerData[key].Objectives) do
-				table.remove(CustomPlayerData[key].Objectives, i)
-			end
-		end
+		ClearPlayerDataObjectives()
 
 		if objective == nil then
 			for key, value in pairs(CustomPlayerData) do
@@ -658,17 +654,11 @@ function BuildProgramStartMenu()
 	return menu:run()
 end
 
-LoadGameFile = nil
-
 function RunProgramStartMenu()
 	local continue = 1
 
 	while continue == 1 do
-		if (LoadGameFile ~= nil) then
-			LoadGame(LoadGameFile)
-		else
-			continue = BuildProgramStartMenu(menu)
-		end
+		continue = BuildProgramStartMenu(menu)
 	end
 end
 

@@ -103,7 +103,7 @@ MenuBase {
 		onAccepted: {
 			var filepath = load_game_dialog.fileUrl.toString()
 			filepath = filepath.substr(8, filepath.length - 8) //remove the "file:///" from the file path
-			wyrmgus.call_lua_command("LoadGame(\"" + filepath + "\")")
+			wyrmgus.load_game(filepath)
 		}
 	}
 }

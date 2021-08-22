@@ -1,28 +1,3 @@
-function LoadGame(s)
-	LoadGameFile = nil
-	local loop = true
-	
-	for key, value in pairs(CustomPlayerData) do
-		for i = 1, table.getn(CustomPlayerData[key].Objectives) do
-			table.remove(CustomPlayerData[key].Objectives, i)
-		end
-	end
-
-	while (loop) do
-		InitGameVariables()
-		LoadedGame = true
-		StartSavedGame(s)
-		if (GameResult ~= GameRestart) then
-			loop = false
-		end
-	end
-
-	SetCurrentCampaign("")
-	SetCurrentQuest("")
-	
-	InitGameSettings()
-end
-
 function AddLoadGameItems(menu)
 	menu:addLabel(_("Load Game"), 384 / 2 * get_scale_factor(), 11 * get_scale_factor())
 	local browser = menu:addBrowser("~save", "^.*%.sav%.?g?z?$",
@@ -37,7 +12,7 @@ function AddLoadGameItems(menu)
 			GenericDialog("Error", "The file no longer exists.")
 			return;
 		end
-		LoadGameFile = "~save/" .. browser:getSelectedItem()
+		set_load_game_file("~save/" .. browser:getSelectedItem())
 		if (menu.ingame) then
 			StopGame(GameNoResult)
 			menu:stopAll()

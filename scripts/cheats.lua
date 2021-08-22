@@ -27,7 +27,6 @@
 
 InitFuncs:add(function()
 	speedcheat = false
-	godcheat = false
 end)
 
 function HandleCheats(str)
@@ -115,12 +114,10 @@ function HandleCheats(str)
 	elseif (str == "fenrir") then
 		KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {MaxMapWidth, MaxMapHeight})
 	elseif (str == "hroptatyr") then
-		if (godcheat) then
-			godcheat = false
+		if (GetGodMode() == true) then
 			SetGodMode(false)
 			AddMessage("God Mode Off")
 		else
-			godcheat = true
 			SetGodMode(true)
 			AddMessage("God Mode On")
 		end
