@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.0.1
 -----------------------------------------------------------------------
 
+* Maps
+- Updated the territory setup for the Tyrol area for the Earth map (scenario mode).
+
 * Miscellaneous
 - Updated the SDL library to SDL2, version 2.0.16.
 - Updated the SDL_mixer library to SDL2_mixer, version 2.0.4.
