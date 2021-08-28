@@ -1,0 +1,14 @@
+polar_bear = {
+	name = "Polar Bear"
+	supertaxon = ursidae
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		amphicyon
+		hemicyon
+		miacis
+	}
+	native_terrain_types = {
+		snow
+	}
+}

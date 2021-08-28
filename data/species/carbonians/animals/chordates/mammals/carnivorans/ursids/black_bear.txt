@@ -1,5 +1,5 @@
-bear = {
-	name = "Bear"
+black_bear = {
+	name = "Black Bear"
 	supertaxon = ursidae
 	era = holocene
 	homeworld = earth
@@ -7,5 +7,9 @@ bear = {
 		amphicyon
 		hemicyon
 		miacis
+	}
+	native_terrain_types = {
+		grass
+		dirt
 	}
 }

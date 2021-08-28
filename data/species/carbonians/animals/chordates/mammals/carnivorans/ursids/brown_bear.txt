@@ -1,0 +1,15 @@
+brown_bear = {
+	name = "Brown Bear"
+	supertaxon = ursidae
+	era = holocene
+	homeworld = earth
+	pre_evolutions = {
+		amphicyon
+		hemicyon
+		miacis
+	}
+	native_terrain_types = {
+		grass
+		dirt
+	}
+}
