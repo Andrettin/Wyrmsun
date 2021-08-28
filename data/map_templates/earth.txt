@@ -95,6 +95,7 @@ earth = {
 		unit_boar = 32
 		unit_horse = 16
 		unit_wolf = 32
+		unit_brown_bear = 16
 		unit_germanic_warrior = 64
 		unit_germanic_archer = 64
 	}

@@ -525,6 +525,12 @@ UnitDeathEleventhFrameBegin = {
 	"unbreakable end", "wait 1",
 }
 
+UnitLongDeathEleventhFrameBegin = { -- longer wait after the final death frame, for units without a corpse
+	"unbreakable begin",
+	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 200", "frame 60",
+	"unbreakable end", "wait 1",
+}
+
 UnitDeathTwelfthFrameBegin = {
 	"unbreakable begin",
 	"frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100", "frame 65",
@@ -624,6 +630,13 @@ DefineAnimations("animations_gnoll_warrior", {
 	Move = UnitMoveFourFramesNoIdle,
 	Attack = UnitMeleeAttackFiveFrames,
 	Death = UnitDeathEleventhFrameBegin
+})
+
+DefineAnimations("animations_bear", {
+	Still = UnitStill,
+	Move = UnitMoveFourFramesNoIdle,
+	Attack = UnitMeleeAttackFiveFrames,
+	Death = UnitLongDeathEleventhFrameBegin
 })
 
 DefineAnimations("animations-orc-spearthrower", {

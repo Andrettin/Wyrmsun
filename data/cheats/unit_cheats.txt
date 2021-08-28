@@ -157,3 +157,21 @@ minecart = {
 		create_unit = unit_minecart
 	}
 }
+
+bear = {
+	code = "bear with me"
+	
+	effects = {
+		random_list = {
+			1 = {
+				create_unit = unit_brown_bear
+			}
+			1 = {
+				create_unit = unit_black_bear
+			}
+			1 = {
+				create_unit = unit_polar_bear
+			}
+		}
+	}
+}

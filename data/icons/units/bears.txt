@@ -1,0 +1,11 @@
+black_bear = {
+	file = "icons/units/fauna/black_bear.png"
+}
+
+brown_bear = {
+	file = "icons/units/fauna/brown_bear.png"
+}
+
+polar_bear = {
+	file = "icons/units/fauna/polar_bear.png"
+}
