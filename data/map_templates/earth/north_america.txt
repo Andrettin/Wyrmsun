@@ -45,6 +45,9 @@ north_america = {
 		unit_rat = 64
 		unit_goat = 32
 		unit_wolf = 32
+		unit_black_bear = 16
+		unit_brown_bear = 4
+		unit_polar_bear = 4
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
