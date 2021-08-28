@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added Brown Bear, Black Bear and Polar Bear unit types. Brown bears are now generated in the Earth/Europe scenario map.
 
+* User Interface
+- Fixed issue which caused some dropdowns to gain keyboard focus when clicked.
+
 -----------------------------------------------------------------------
 - 5.0.1
 -----------------------------------------------------------------------

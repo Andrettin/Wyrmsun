@@ -6,6 +6,7 @@ ComboBox {
 	hoverEnabled: true
 	displayText: ""
 	height: background_dropdown_bar.height
+	focusPolicy: Qt.NoFocus
 	
 	property string interface_style: "default"
 	readonly property var selectedEntry: currentIndex !== -1 ? model[currentIndex] : null
