@@ -8,7 +8,7 @@ end
 
 ApplyCampaignMap(GetCurrentCampaign())
 
-EarthStartX = GetMapTemplateData("earth", "CurrentStartPosX")
-EarthStartY = GetMapTemplateData("earth", "CurrentStartPosY")
+EarthStartX = GetMapTemplateData("old_earth", "CurrentStartPosX")
+EarthStartY = GetMapTemplateData("old_earth", "CurrentStartPosY")
 
 SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
