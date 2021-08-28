@@ -64,8 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Brown Bear, Black Bear and Polar Bear unit types. Brown bears are now generated in the Earth/Europe scenario map.
 
 * User Interface
-- Fixed issue which caused some dropdowns to gain keyboard focus when clicked.
-- Fixed issue which caused some text fields to not lose keyboard focus when clicked away from.
+- Fixed issue which caused dropdowns to gain keyboard focus when clicked.
+- Fixed issue which caused text fields to not lose keyboard focus when clicked away from.
+- Fixed issue which caused key events to be propagated to buttons even though a text field had focus.
 
 -----------------------------------------------------------------------
 - 5.0.1
