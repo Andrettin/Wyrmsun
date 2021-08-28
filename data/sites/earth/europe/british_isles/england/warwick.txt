@@ -1,0 +1,8 @@
+warwick = {
+	name = "Warwick"
+	map_template = earth
+	geocoordinate = { -1.59 52.28 }
+	regions = {
+		england
+	}
+}
