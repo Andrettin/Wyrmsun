@@ -28,6 +28,21 @@ Popup {
 		//prevent events from propagating below
 	}
 	
+	Pane {
+		id: pane
+		anchors.fill: parent
+		focusPolicy: Qt.ClickFocus
+		background: null
+		
+		Keys.onPressed: {
+			dialog.on_pressed_key(event)
+		}
+		
+		Keys.onReleased: {
+			dialog.on_released_key(event)
+		}
+	}
+	
 	LargeText {
 		id: title_text
 		text: dialog.title

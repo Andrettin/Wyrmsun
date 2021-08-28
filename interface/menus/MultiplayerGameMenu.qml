@@ -8,6 +8,12 @@ MenuBase {
 	id: multiplayer_game_menu
 	title: "Multiplayer Game"
 	
+	Pane {
+		anchors.fill: parent
+		focusPolicy: Qt.ClickFocus
+		background: null
+	}
+	
 	NormalText {
 		id: nickname_label
 		anchors.bottom: nickname_text_field.top

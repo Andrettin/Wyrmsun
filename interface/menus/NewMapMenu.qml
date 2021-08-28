@@ -8,6 +8,12 @@ MenuBase {
 	id: new_map_menu
 	title: "Map Editor"
 	
+	Pane {
+		anchors.fill: parent
+		focusPolicy: Qt.ClickFocus
+		background: null
+	}
+	
 	NormalText {
 		id: map_description_label
 		anchors.bottom: map_description_text_field.top

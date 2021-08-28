@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Fixed issue which caused some dropdowns to gain keyboard focus when clicked.
+- Fixed issue which caused some text fields to not lose keyboard focus when clicked away from.
 
 -----------------------------------------------------------------------
 - 5.0.1
