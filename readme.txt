@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.0.2
 -----------------------------------------------------------------------
 
+* Maps
+- Removed the obsolete Svarinshaug custom map.
+
 * Scenarios
 - Fixed issue which caused some of the Western Migration triggers to not work properly.
 

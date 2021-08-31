@@ -1,6 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person", "person", "person", "person")
-PresentMap("Svarinshaug", 4, 256, 256, 1)
-MapWorld = "Nidavellir"
-SetMapWorld("Nidavellir")
