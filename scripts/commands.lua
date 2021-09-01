@@ -60,7 +60,7 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
 end
 
 function HandlewarCommandKey(key, ctrl, alt, shift)
-  if (Editor.Running == EditorNotRunning) then
+  if (CEditor:get():is_running() == false) then
     return HandleIngameCommandKey(key, ctrl, alt, shift)
   else
     return HandleIneditorCommandKey(key, ctrl, alt, shift)

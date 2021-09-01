@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      editor.lua - Editor configuration and functions.
---
 --      (c) Copyright 2002-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -31,4 +29,4 @@
 SetEditorSelectIcon("icon-germanic-patrol-land")
 SetEditorUnitsIcon("icon-germanic-warrior")
 
-Editor.UnitTypes:clear()
+CEditor:get().UnitTypes:clear()

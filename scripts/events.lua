@@ -605,7 +605,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 	end
 	
 	
-	if (GameRunning or Editor.Running ~= EditorNotRunning) then
+	if (GameRunning or CEditor:get():is_running()) then
 		menu = WarGameMenu(panel(1))
 	else
 		menu = WarGrandStrategyGameMenu(panel(1))
@@ -661,7 +661,7 @@ function GenericDialog(title, message, tooltip, icon, player_color, frame)
 		{0, 0}
 	)	
 	
-	if (GameRunning or Editor.Running ~= EditorNotRunning) then
+	if (GameRunning or CEditor:get():is_running()) then
 		menu:run(false)
 	else
 		menu:run()

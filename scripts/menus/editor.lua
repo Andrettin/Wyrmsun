@@ -315,7 +315,7 @@ function RunInEditorMenu()
 --	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
 	menu:addFullButton(_("E~!xit to Menu"), "x", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(),
-		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
+		function() CEditor:get():set_running(false); menu:stopAll(); end)
 	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 4) * get_scale_factor(),
 		function() menu:stop() end)
 

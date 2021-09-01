@@ -2412,7 +2412,7 @@ function ApplyRawTiles()
 	if (LoadedGame == false) then
 		local RandomNumber = 0
 
-		if (Editor.Running == EditorNotRunning) then
+		if (CEditor:get():is_running() == false) then
 			if (GetNumUnitsAt(PlayerNumNeutral, "unit-mushroom-patch", {0, 0}, {MaxMapWidth, MaxMapHeight}) >= 1) then
 				-- destroy mushrooms that ended up in inappropriate locations
 				local uncount = 0
@@ -2878,7 +2878,7 @@ function ApplyRawTiles()
 			end
 		end
 		
-		if (Editor.Running == EditorNotRunning) then
+		if (CEditor:get():is_running() == false) then
 			if ((GetNumUnitsAt(PlayerNumNeutral, "unit_gold_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_silver_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit_copper_rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-diamond-rock", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(PlayerNumNeutral, "unit-emerald-rock", {0, 0}, {MaxMapWidth, MaxMapHeight})) >= 1) then
 				-- destroy gold and silver rocks that ended up in inappropriate locations
 				local uncount = 0
