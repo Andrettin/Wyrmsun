@@ -28,6 +28,10 @@ germanic = {
 		normal_file = "interface/germanic/button_thin_small_normal.png"
 		pressed_file = "interface/germanic/button_thin_small_pressed.png"
 	}
+	thinnest_button = {
+		normal_file = "interface/germanic/button_thinnest_medium_normal.png"
+		pressed_file = "interface/germanic/button_thinnest_medium_pressed.png"
+	}
 	radio_button = {
 		checked_file = "interface/germanic/radio_normal_selected.png"
 		checked_pressed_file = "interface/germanic/radio_pressed_selected.png"
