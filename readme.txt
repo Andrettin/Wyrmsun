@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Removed the obsolete Svarinshaug custom map.
+- Fixed issue which caused maps in the user map folder to not appear the Custom Game menu.
 
 * Scenarios
 - Fixed issue which caused some of the Western Migration triggers to not work properly.
