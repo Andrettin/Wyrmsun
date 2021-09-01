@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the obsolete Svarinshaug custom map.
 - Fixed issue which caused maps in the user map folder to not appear the Custom Game menu.
 
+* Miscellaneous
+- Saved games are now stored in [AppData]/Wyrmsun/save, instead of in the game's directory.
+
 * Scenarios
 - Fixed issue which caused some of the Western Migration triggers to not work properly.
 
