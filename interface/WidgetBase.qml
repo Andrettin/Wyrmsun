@@ -76,6 +76,10 @@ Item {
 	}
 	
 	function on_released_key(event) {
+		if (event.isAutoRepeat) {
+			return
+		}
+		
 		if (widget.hotkey != "" && event_matches_hotkey(event)) {
 			widget.hotkey_pressed = false
 			event.accepted = true
