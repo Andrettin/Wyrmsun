@@ -35,13 +35,13 @@ DefineButtonStyle("main-dwarf", {
 	TextAlign = "Center",
 	TextPos = {50 * get_scale_factor(), 0},
 	Default = {
-		File = "interface/dwarven/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinnest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "interface/dwarven/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinnest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51 * get_scale_factor(), 1 * get_scale_factor()},
 	},
@@ -75,13 +75,13 @@ DefineButtonStyle("main-germanic", {
 	TextAlign = "Center",
 	TextPos = {50 * get_scale_factor(), 0},
 	Default = {
-		File = "interface/germanic/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/germanic/button_thinnest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "interface/germanic/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/germanic/button_thinnest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51 * get_scale_factor(), 1 * get_scale_factor()},
 	},
@@ -115,13 +115,13 @@ DefineButtonStyle("main-gnome", {
 	TextAlign = "Center",
 	TextPos = {50 * get_scale_factor(), 0},
 	Default = {
-		File = "interface/dwarven/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinnest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "interface/dwarven/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/dwarven/button_thinnest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51 * get_scale_factor(), 1 * get_scale_factor()},
 	},
@@ -155,13 +155,13 @@ DefineButtonStyle("main-goblin", {
 	TextAlign = "Center",
 	TextPos = {50 * get_scale_factor(), 0},
 	Default = {
-		File = "interface/goblin/button_thinest_medium_normal.png", Size = {99, 13}, Frame = 0,
+		File = "interface/goblin/button_thinnest_medium_normal.png", Size = {99, 13}, Frame = 0,
 	},
 	Hover = {
 		TextNormalColor = "yellow",
 	},
 	Clicked = {
-		File = "interface/goblin/button_thinest_medium_pressed.png", Size = {99, 13}, Frame = 0,
+		File = "interface/goblin/button_thinnest_medium_pressed.png", Size = {99, 13}, Frame = 0,
 		TextNormalColor = "yellow",
 		TextPos = {51 * get_scale_factor(), 1 * get_scale_factor()},
 	},
