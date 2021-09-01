@@ -69,17 +69,29 @@ Item {
 	}
 	
 	function on_pressed_key(event) {
-		if (widget.hotkey != "" && event.text == widget.hotkey) {
+		if (widget.hotkey != "" && event_matches_hotkey(event)) {
 			widget.hotkey_pressed = true
 			event.accepted = true
 		}
 	}
 	
 	function on_released_key(event) {
-		if (widget.hotkey != "" && event.text == widget.hotkey) {
+		if (widget.hotkey != "" && event_matches_hotkey(event)) {
 			widget.hotkey_pressed = false
 			event.accepted = true
 			widget.clicked()
 		}
+	}
+	
+	function event_matches_hotkey(event) {
+		if (event.text == widget.hotkey) {
+			return true
+		} else if (widget.hotkey.startsWith("f")) {
+			if (widget.hotkey == "f10" && event.key == Qt.Key_F10) {
+				return true
+			}
+		}
+		
+		return false
 	}
 }
