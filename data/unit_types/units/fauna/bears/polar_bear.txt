@@ -2,6 +2,7 @@ unit_polar_bear = {
 	name = "Polar Bear"
 	parent = unit_template_bear
 	species = polar_bear
+	description = "Bears are dangerous, imposing animals."
 	image_file = "units/fauna/bears/polar_bear.png"
 	frame_size = { 104 104 }
 	offset = { 0 4 }
