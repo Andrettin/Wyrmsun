@@ -5,7 +5,7 @@ ogre = {
 	group = ettin
 	visible = false
 	playable = false
-	interface = goblin
+	interface_style = goblin
 	default_color = red
 	language = ogre
 	

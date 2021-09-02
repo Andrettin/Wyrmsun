@@ -5,7 +5,7 @@ einherjar = {
 	language = old_norse
 	visible = false
 	playable = false
-	interface = germanic
+	interface_style = germanic
 	default_color = blue
 	
 	button_icons = {

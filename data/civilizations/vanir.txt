@@ -5,6 +5,6 @@ vanir = {
 	language = elvish
 	visible = false
 	playable = false
-	interface = germanic
+	interface_style = germanic
 	default_color = teal
 }

@@ -6,7 +6,7 @@ gnoll = {
 	language = gnoll
 	visible = false
 	playable = false
-	interface = goblin
+	interface_style = goblin
 	default_color = yellow
 	upgrade = upgrade_gnoll_civilization
 	

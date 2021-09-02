@@ -6,7 +6,7 @@ demonic = {
 	language = demonic
 	visible = false
 	playable = false
-	interface = goblin
+	interface_style = goblin
 	default_color = red
 	
 	work_complete_sound = basic_goblin_voices_work_complete

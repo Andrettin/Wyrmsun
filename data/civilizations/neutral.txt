@@ -2,7 +2,7 @@ neutral = {
 	name = "Neutral"
 	visible = false
 	playable = false
-	interface = dwarven
+	interface_style = dwarven
 	default_color = gray
 	
 	button_icons = {

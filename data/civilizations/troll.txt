@@ -6,7 +6,7 @@ troll = {
 	language = troll
 	visible = false
 	playable = false
-	interface = goblin
+	interface_style = goblin
 	default_color = green
 	upgrade = upgrade_troll_civilization
 	
