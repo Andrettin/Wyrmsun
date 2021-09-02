@@ -61,7 +61,27 @@ Item {
 		anchors.right: parent.right
 	}
 	*/
-
+	
+	ThinnestButton {
+		id: menu_button
+		anchors.left: parent.left
+		anchors.leftMargin: 26 * wyrmgus.defines.scale_factor
+		anchors.top: parent.top
+		anchors.topMargin: 1 * wyrmgus.defines.scale_factor
+		text: "Menu (F10)"
+		hotkey: "f10"
+		interface_style: wyrmgus.current_interface_style.identifier
+		
+		onClicked: {
+			if (wyrmgus.map_editor.running) {
+				wyrmgus.call_lua_command("RunInEditorMenu();")
+			} else {
+				wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
+				wyrmgus.call_lua_command("RunGameMenu();")
+			}
+		}
+	}
+	
 	Keys.onPressed: {
 		for (var i = 0; i < map_view.children.length; ++i) {
 			var child_element = map_view.children[i]

@@ -435,15 +435,6 @@ CUserInterface:get().AgePanel.TextY = 1 * get_scale_factor()
 CUserInterface:get().MenuButton.X = 26 * get_scale_factor()
 CUserInterface:get().MenuButton.Y = 1 * get_scale_factor()
 CUserInterface:get().MenuButton.Text = "Menu (~<F10~>)"
-CUserInterface:get().MenuButton:SetCallback(
-	function()
-		if (CEditor:get():is_running() == false) then
-			RunGameMenu()
-		else
-			RunInEditorMenu()
-		end
-	end
-)
 
 CUserInterface:get().NetworkDiplomacyButton.X = Video.Width + (-99 - 26) * get_scale_factor()
 CUserInterface:get().NetworkDiplomacyButton.Y = 1 * get_scale_factor()
