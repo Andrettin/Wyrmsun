@@ -1,0 +1,52 @@
+dwarven = {
+	dropdown_bar_file = "interface/dwarven/pulldown_bar_normal.png"
+	slider_bar_file = "interface/dwarven/slider_bar_normal.png"
+	slider_marker_file = "interface/dwarven/slider_knob.png"
+	panel_files = {
+		1 = "interface/dwarven/panel_1.png"
+		2 = "interface/dwarven/panel_2.png"
+		3 = "interface/dwarven/panel_3.png"
+		4 = "interface/dwarven/panel_4.png"
+		5 = "interface/dwarven/panel_5.png"
+	}
+	large_button = {
+		normal_file = "interface/dwarven/button_large_normal.png"
+		pressed_file = "interface/dwarven/button_large_pressed.png"
+		grayed_file = "interface/dwarven/button_large_grayed.png"
+	}
+	small_button = {
+		normal_file = "interface/dwarven/button_small_normal.png"
+		pressed_file = "interface/dwarven/button_small_pressed.png"
+		grayed_file = "interface/dwarven/button_small_grayed.png"
+	}
+	thin_button = {
+		normal_file = "interface/dwarven/button_thin_medium_normal.png"
+		pressed_file = "interface/dwarven/button_thin_medium_normal.png"
+	}
+	small_thin_button = {
+		normal_file = "interface/dwarven/button_thin_small_normal.png"
+		pressed_file = "interface/dwarven/button_thin_small_pressed.png"
+	}
+	thinnest_button = {
+		normal_file = "interface/dwarven/button_thinnest_medium_normal.png"
+		pressed_file = "interface/dwarven/button_thinnest_medium_pressed.png"
+	}
+	radio_button = {
+		checked_file = "interface/dwarven/radio_normal_selected.png"
+		checked_pressed_file = "interface/dwarven/radio_pressed_selected.png"
+		unchecked_file = "interface/dwarven/radio_normal_unselected.png"
+		unchecked_pressed_file = "interface/dwarven/radio_pressed_unselected.png"
+	}
+	left_arrow_button = {
+		normal_file = "interface/dwarven/left_arrow_normal.png"
+		pressed_file = "interface/dwarven/left_arrow_pressed.png"
+	}
+	right_arrow_button = {
+		normal_file = "interface/dwarven/right_arrow_normal.png"
+		pressed_file = "interface/dwarven/right_arrow_pressed.png"
+	}
+	down_arrow_button = {
+		normal_file = "interface/dwarven/down_arrow_normal.png"
+		pressed_file = "interface/dwarven/down_arrow_pressed.png"
+	}
+}
