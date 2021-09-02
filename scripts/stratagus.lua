@@ -305,7 +305,7 @@ function SinglePlayerTriggers()
 		
 	LoadedGame = false
 
-	LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName")) -- reload the UI at start, so that all map layer buttons appear correctly
+	Load("scripts/ui.lua") -- reload the UI at start, so that all map layer buttons appear correctly
 end
 
 function StandardTriggers()

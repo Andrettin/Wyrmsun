@@ -111,7 +111,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		end
 		
 		if (player == GetThisPlayer()) then
-			LoadCivilizationUI(arg1)
+			Load("scripts/ui.lua")
 		end
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
@@ -125,15 +125,6 @@ function SetPlayerData(player, data, arg1, arg2)
 	end
 
 	OldSetPlayerData(player, data, arg1, arg2)
-end
-
-function LoadCivilizationUI(civilization)
-	Load("scripts/ui.lua")
-	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"
-	
-	if (CanAccessFile(ui_file)) then
-		Load(ui_file)
-	end
 end
 
 if (OldDefinePlayerTypes == nil) then

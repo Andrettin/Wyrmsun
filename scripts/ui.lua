@@ -432,15 +432,6 @@ CUserInterface:get().AgePanel.TextY = 1 * get_scale_factor()
 --CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
 --CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
 
-CUserInterface:get().MenuButton.X = 26 * get_scale_factor()
-CUserInterface:get().MenuButton.Y = 1 * get_scale_factor()
-CUserInterface:get().MenuButton.Text = "Menu (~<F10~>)"
-
-CUserInterface:get().NetworkDiplomacyButton.X = Video.Width + (-99 - 26) * get_scale_factor()
-CUserInterface:get().NetworkDiplomacyButton.Y = 1 * get_scale_factor()
-CUserInterface:get().NetworkDiplomacyButton.Text = "Diplomacy"
-CUserInterface:get().NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
-
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")
@@ -472,35 +463,6 @@ else
 	CUserInterface:get().WorldButtons:at(jotunheim_id).X = -1
 	CUserInterface:get().WorldButtons:at(jotunheim_id).Y = -1
 end
-
-Load("scripts/civilizations/anglo_saxon/ui.lua")
-Load("scripts/civilizations/basque/ui.lua")
-Load("scripts/civilizations/celt/ui.lua")
-Load("scripts/civilizations/dwarf/ui.lua")
-Load("scripts/civilizations/elf/ui.lua")
-Load("scripts/civilizations/english/ui.lua")
-Load("scripts/civilizations/etruscan/ui.lua")
-Load("scripts/civilizations/frankish/ui.lua")
-Load("scripts/civilizations/germanic/ui.lua")
-Load("scripts/civilizations/gnome/ui.lua")
-Load("scripts/civilizations/goblin/ui.lua")
-Load("scripts/civilizations/goth/ui.lua")
-Load("scripts/civilizations/greek/ui.lua")
-Load("scripts/civilizations/illyrian/ui.lua")
-Load("scripts/civilizations/kobold/ui.lua")
-Load("scripts/civilizations/latin/ui.lua")
-Load("scripts/civilizations/minoan/ui.lua")
-Load("scripts/civilizations/norse/ui.lua")
-Load("scripts/civilizations/persian/ui.lua")
-Load("scripts/civilizations/phoenician/ui.lua")
-Load("scripts/civilizations/phrygian/ui.lua")
-Load("scripts/civilizations/slav/ui.lua")
-Load("scripts/civilizations/suebi/ui.lua")
-Load("scripts/civilizations/teuton/ui.lua")
-Load("scripts/civilizations/thracian/ui.lua")
-Load("scripts/civilizations/troll/ui.lua")
-
-
 
 local info_panel_x = CUserInterface:get().InfoPanel.X
 local info_panel_y = CUserInterface:get().InfoPanel.Y
