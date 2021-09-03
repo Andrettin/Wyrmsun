@@ -24,8 +24,15 @@ function WarGameMenu(background)
   return menu
 end
 
+game_menu = nil
+
 function RunGameMenu()
+	if (game_menu ~= nil) then
+		return;
+	end
+	
 	local menu = WarGameMenu(panel(1))
+	game_menu = menu
 
 	menu:addLabel(_("Game Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
@@ -46,7 +53,7 @@ function RunGameMenu()
 	menu:addFullButton(_("~!End Mission"), "e", 16 * get_scale_factor(), (40 + 34*4) * get_scale_factor(),
 		function() RunEndScenarioMenu() end)
 	menu:addFullButton(_("Return to Game (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 34*5) * get_scale_factor(),
-		function() menu:stop() end)
+		function() game_menu = nil; menu:stop(); end)
 
 	menu:run(false)
 end

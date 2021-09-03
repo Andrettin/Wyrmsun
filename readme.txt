@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Fixed issue which caused some of the Western Migration triggers to not work properly.
 
+* Terrain
+- The dry mud transition graphics have been updated.
+
 * Units
 - Added Brown Bear, Black Bear and Polar Bear unit types. Brown bears are now generated in the Earth/Europe scenario map.
 

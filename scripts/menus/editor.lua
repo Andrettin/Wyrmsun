@@ -300,11 +300,18 @@ function RunEditorMapProperties()
 	menu:run(false)
 end
 
+editor_menu = nil
+
 --
 --  Main menu in editor.
 --
 function RunInEditorMenu()
+	if (editor_menu ~= nil) then
+		return;
+	end
+	
 	local menu = WarGameMenu(panel(1))
+	editor_menu = menu
 
 	menu:addLabel(_("Editor Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
@@ -317,7 +324,7 @@ function RunInEditorMenu()
 	menu:addFullButton(_("E~!xit to Menu"), "x", 16 * get_scale_factor(), (40 + 35 * 3) * get_scale_factor(),
 		function() CEditor:get():set_running(false); menu:stopAll(); end)
 	menu:addFullButton(_("Return to Editor (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 35 * 4) * get_scale_factor(),
-		function() menu:stop() end)
+		function() editor_menu = nil; menu:stop(); end)
 
 	menu:run(false)
 end
