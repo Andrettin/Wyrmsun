@@ -92,7 +92,6 @@ DialogBase {
 		interface_style: game_menu_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("game_menu:stop(); game_menu = nil;")
 			game_menu_dialog.close()
 		}
 	}

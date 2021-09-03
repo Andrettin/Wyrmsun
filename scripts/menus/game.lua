@@ -23,38 +23,3 @@ function WarGameMenu(background)
 
   return menu
 end
-
-game_menu = nil
-
-function RunGameMenu()
-	if (game_menu ~= nil) then
-		return;
-	end
-	
-	local menu = WarGameMenu(panel(1))
-	game_menu = menu
-
-	menu:addLabel(_("Game Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
-
-	menu:addFullButton(_("Options (~<F5~>)"), "f5", 16 * get_scale_factor(), 40 * get_scale_factor(),
-		function()
-		RunGameOptionsMenu(menu)
-	end)
-	menu:addFullButton(_("Help (~<F1~>)"), "f1", 16 * get_scale_factor(), (40 + 34*1) * get_scale_factor(),
-		function() RunHelpMenu() end)
-	local b = menu:addFullButton(_("Save (~<F11~>)"), "f11", 16 * get_scale_factor(), (40 + 34*2) * get_scale_factor(),
-		function() RunSaveMenu() end
-	)
- 
-	b = menu:addFullButton(_("Load (~<F12~>)"), "f12", 16 * get_scale_factor(), (40 + 34*3) * get_scale_factor(),
-		function() RunGameLoadGameMenu() end
-	)
-	
-	menu:addFullButton(_("~!End Mission"), "e", 16 * get_scale_factor(), (40 + 34*4) * get_scale_factor(),
-		function() RunEndScenarioMenu() end)
-	menu:addFullButton(_("Return to Game (~<Esc~>)"), "escape", 16 * get_scale_factor(), (40 + 34*5) * get_scale_factor(),
-		function() game_menu = nil; menu:stop(); end)
-
-	menu:run(false)
-end
-

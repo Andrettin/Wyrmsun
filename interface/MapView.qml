@@ -80,7 +80,6 @@ Item {
 				wyrmgus.call_lua_command("RunInEditorMenu();")
 			} else {
 				game_menu_dialog.open()
-				wyrmgus.call_lua_command("RunGameMenu();")
 			}
 		}
 	}
@@ -142,6 +141,14 @@ Item {
 					return
 				}
 			}
+		}
+		
+		switch (event.key) {
+			case Qt.Key_F5:
+				options_dialog.open()
+				break
+			default:
+				break
 		}
 	}
 	

@@ -265,19 +265,3 @@ function SetVideoSize(width, height)
 	wyr.preferences.VideoHeight = Video.Height
 	SavePreferences()
 end
-
-function RunGameOptionsMenu(previous_menu)
-	local menu = WarGameMenu(panel(1))
-
-	menu:addLabel(_("Game Options"), 128 * get_scale_factor(), 11 * get_scale_factor())
-	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
-		function() RunGameSoundOptionsMenu() end)
-	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
-		function() RunPreferencesMenu() end)
-	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16 * get_scale_factor(), (40 + 36*2) * get_scale_factor(),
-		function() RunDiplomacyMenu() end)
-	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", (128 - (224 / 2)) * get_scale_factor(), (288 - 40) * get_scale_factor(),
-		function() menu:stop() end)
-
-	menu:run(false)
-end
