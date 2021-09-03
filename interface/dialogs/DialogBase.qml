@@ -52,6 +52,17 @@ Popup {
 	}
 	
 	onClosed: {
+		//when closing, give focus to another visible popup with the same parent, if any
+		for (var i = (parent.popups.length - 1); i >= 0; --i) {
+			var popup = parent.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			popup.forceActiveFocus()
+			return
+		}
+		
 		parent.forceActiveFocus()
 	}
 	
