@@ -90,9 +90,75 @@ Item {
 	function event_matches_hotkey(event) {
 		if (event.text == widget.hotkey) {
 			return true
-		} else if (widget.hotkey.startsWith("f")) {
-			if (widget.hotkey == "f10" && event.key == Qt.Key_F10) {
-				return true
+		} else if (widget.hotkey.length > 0) {
+			switch (event.key) {
+				case Qt.Key_F1:
+					if (widget.hotkey == "f1") {
+						return true
+					}
+					break
+				case Qt.Key_F2:
+					if (widget.hotkey == "f2") {
+						return true
+					}
+					break
+				case Qt.Key_F3:
+					if (widget.hotkey == "f3") {
+						return true
+					}
+					break
+				case Qt.Key_F4:
+					if (widget.hotkey == "f4") {
+						return true
+					}
+					break
+				case Qt.Key_F5:
+					if (widget.hotkey == "f5") {
+						return true
+					}
+					break
+				case Qt.Key_F6:
+					if (widget.hotkey == "f6") {
+						return true
+					}
+					break
+				case Qt.Key_F7:
+					if (widget.hotkey == "f7") {
+						return true
+					}
+					break
+				case Qt.Key_F8:
+					if (widget.hotkey == "f8") {
+						return true
+					}
+					break
+				case Qt.Key_F9:
+					if (widget.hotkey == "f9") {
+						return true
+					}
+					break
+				case Qt.Key_F10:
+					if (widget.hotkey == "f10") {
+						return true
+					}
+					break
+				case Qt.Key_F11:
+					if (widget.hotkey == "f11") {
+						return true
+					}
+					break
+				case Qt.Key_F12:
+					if (widget.hotkey == "f12") {
+						return true
+					}
+					break
+				case Qt.Key_Escape:
+					if (widget.hotkey == "esc") {
+						return true
+					}
+					break
+				default:
+					break
 			}
 		}
 		
