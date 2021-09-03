@@ -94,6 +94,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	SoundOptionsDialog {
+		id: sound_options_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	Keys.onPressed: {
 		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
 			var popup = map_view.popups[i]
@@ -146,6 +151,9 @@ Item {
 		switch (event.key) {
 			case Qt.Key_F5:
 				options_dialog.open()
+				break
+			case Qt.Key_F7:
+				sound_options_dialog.open()
 				break
 			default:
 				break

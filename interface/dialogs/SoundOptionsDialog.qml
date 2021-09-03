@@ -1,11 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
-import QtQuick.Window 2.12
 import ".."
 
-MenuBase {
-	id: video_and_audio_options_menu
-	title: "Video and Audio Options"
+DialogBase {
+	id: sound_options_dialog
+	panel: 5
+	title: "Sound Options"
 	
 	NormalText {
 		id: sound_effects_volume_label
@@ -24,6 +24,7 @@ MenuBase {
 		to: 255
 		value: wyrmgus.preferences.sound_effects_volume
 		step_size: 25.5
+		interface_style: sound_options_dialog.interface_style
 		
 		onValueChanged: {
 			wyrmgus.preferences.sound_effects_volume = value
@@ -37,6 +38,7 @@ MenuBase {
 		anchors.verticalCenter: sound_effects_volume_slider.verticalCenter
 		text: "Enabled"
 		checked: wyrmgus.preferences.sound_effects_enabled
+		interface_style: sound_options_dialog.interface_style
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.sound_effects_enabled = checked
@@ -76,6 +78,7 @@ MenuBase {
 		to: 255
 		value: wyrmgus.preferences.music_volume
 		step_size: 25.5
+		interface_style: sound_options_dialog.interface_style
 		
 		onValueChanged: {
 			wyrmgus.preferences.music_volume = value
@@ -89,6 +92,7 @@ MenuBase {
 		anchors.verticalCenter: music_volume_slider.verticalCenter
 		text: "Enabled"
 		checked: wyrmgus.preferences.music_enabled
+		interface_style: sound_options_dialog.interface_style
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.music_enabled = checked
@@ -111,34 +115,18 @@ MenuBase {
 		anchors.right: music_volume_slider.right
 	}
 	
-	RadioImageButton {
-		id: scale_factor_radio_button
-		anchors.left: music_volume_slider.left
-		anchors.top: music_volume_min_label.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
-		text: "2x Scale Factor (restart required)"
-		checked: wyrmgus.preferences.scale_factor > 1
-		
-		onCheckedChanged: {
-			if (checked) {
-				wyrmgus.preferences.scale_factor = 2
-			} else {
-				wyrmgus.preferences.scale_factor = 1
-			}
-		}
-	}
-	
-	SmallButton {
-		id: ok_button
+	LargeButton {
+		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: scale_factor_radio_button.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
-		text: "OK"
-		hotkey: "o"
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		text: "Previous Menu (Esc)"
+		hotkey: "esc"
+		interface_style: sound_options_dialog.interface_style
 		
 		onClicked: {
 			wyrmgus.preferences.save()
-			menu_stack.pop()
+			sound_options_dialog.close()
 		}
 	}
 }

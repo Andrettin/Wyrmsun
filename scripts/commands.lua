@@ -2,9 +2,6 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	if ((key == "h" and (ctrl or alt)) or key == "f1") then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunHelpMenu()
-	elseif (key == "f7") then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunGameSoundOptionsMenu()
 	elseif (key == "f8") then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunPreferencesMenu()
