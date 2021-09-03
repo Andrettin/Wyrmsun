@@ -42,6 +42,7 @@ Item {
 	LeftArrowButton {
 		id: left_arrow_button
 		anchors.right: slider.left
+		interface_style: custom_slider.interface_style
 		
 		onClicked: {
 			slider.value = Math.max(slider.value - step_size, custom_slider.from)
@@ -51,6 +52,7 @@ Item {
 	RightArrowButton {
 		id: right_arrow_button
 		anchors.left: slider.right
+		interface_style: custom_slider.interface_style
 		
 		onClicked: {
 			slider.value = Math.min(slider.value + step_size, custom_slider.to)
