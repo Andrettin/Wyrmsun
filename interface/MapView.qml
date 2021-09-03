@@ -88,7 +88,11 @@ Item {
 	GameMenuDialog {
 		id: game_menu_dialog
 		interface_style: wyrmgus.current_interface_style.identifier
-		opacity: 0.5
+	}
+	
+	OptionsDialog {
+		id: options_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
 	Keys.onPressed: {
@@ -110,7 +114,7 @@ Item {
 			if (child_element.on_pressed_key) {
 				child_element.on_pressed_key(event)
 				if (event.accepted) {
-					break
+					return
 				}
 			}
 		}
@@ -135,7 +139,7 @@ Item {
 			if (child_element.on_released_key) {
 				child_element.on_released_key(event)
 				if (event.accepted) {
-					break
+					return
 				}
 			}
 		}
