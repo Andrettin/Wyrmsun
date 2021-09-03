@@ -63,6 +63,7 @@ DialogBase {
 		
 		onClicked: {
 			options_dialog.close()
+			game_menu_dialog.opacity = 1
 		}
 	}
 }

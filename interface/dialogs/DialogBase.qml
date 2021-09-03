@@ -51,19 +51,18 @@ Popup {
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 	}
 	
-	onClosed: {
-		//when closing, give focus to another visible popup with the same parent, if any
-		for (var i = (parent.popups.length - 1); i >= 0; --i) {
-			var popup = parent.popups[i]
-			if (!popup.visible) {
-				continue
-			}
-			
-			popup.forceActiveFocus()
-			return
+	onOpened: {
+		if (parent.on_popup_opened) {
+			parent.on_popup_opened()
 		}
+	}
+	
+	onClosed: {
+		give_up_focus()
 		
-		parent.forceActiveFocus()
+		if (parent.on_popup_closed) {
+			parent.on_popup_closed()
+		}
 	}
 	
 	function on_pressed_key(event) {
@@ -90,6 +89,21 @@ Popup {
 				}
 			}
 		}
+	}
+		
+	function give_up_focus() {
+		//when closing, give focus to another visible popup with the same parent, if any; else, give focus to the parent
+		for (var i = (parent.popups.length - 1); i >= 0; --i) {
+			var popup = parent.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			popup.forceActiveFocus()
+			return
+		}
+		
+		parent.forceActiveFocus()
 	}
 	
 	Component.onCompleted: {

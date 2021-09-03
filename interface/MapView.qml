@@ -13,6 +13,7 @@ Item {
 	
 	property var menu_stack: null
 	property var popups: []
+	property int active_popup_count: 0
 	
 	MouseArea {
 		id: mouse_area
@@ -78,7 +79,6 @@ Item {
 			if (wyrmgus.map_editor.running) {
 				wyrmgus.call_lua_command("RunInEditorMenu();")
 			} else {
-				wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
 				game_menu_dialog.open()
 				wyrmgus.call_lua_command("RunGameMenu();")
 			}
@@ -166,5 +166,21 @@ Item {
 		wyrmgus.install_event_filter_on(mouse_area)
 		wyrmgus.install_event_filter_on(map_view)
 		wyrmgus.on_map_view_created()
+	}
+	
+	function on_popup_opened() {
+		++map_view.active_popup_count
+		
+		if (map_view.active_popup_count == 1 && !wyrmgus.map_editor.running) {
+			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
+		}
+	}
+	
+	function on_popup_closed() {
+		--map_view.active_popup_count
+		
+		if (map_view.active_popup_count == 0 && !wyrmgus.map_editor.running) {
+			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(false); end")
+		}
 	}
 }
