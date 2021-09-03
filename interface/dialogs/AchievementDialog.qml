@@ -31,7 +31,7 @@ DialogBase {
 	}
 	
 	LargeButton {
-		id: cancel_button
+		id: close_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor

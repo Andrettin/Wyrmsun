@@ -51,6 +51,10 @@ Popup {
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 	}
 	
+	onClosed: {
+		parent.forceActiveFocus()
+	}
+	
 	function on_pressed_key(event) {
 		for (var i = 0; i < dialog.contentItem.children.length; ++i) {
 			var child_element = dialog.contentItem.children[i]
