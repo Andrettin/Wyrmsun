@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 import frame_buffer_object 1.0
 import map_grid_model 1.0
 import unit_list_model 1.0
+import "./dialogs"
 
 Item {
 	id: map_view
@@ -11,6 +12,7 @@ Item {
 	z: 2 //place it over the frame buffer object
 	
 	property var menu_stack: null
+	property var popups: []
 	
 	MouseArea {
 		id: mouse_area
@@ -77,12 +79,32 @@ Item {
 				wyrmgus.call_lua_command("RunInEditorMenu();")
 			} else {
 				wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
+				game_menu_dialog.open()
 				wyrmgus.call_lua_command("RunGameMenu();")
 			}
 		}
 	}
 	
+	GameMenuDialog {
+		id: game_menu_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+		opacity: 0.5
+	}
+	
 	Keys.onPressed: {
+		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
+			var popup = map_view.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			if (popup.on_pressed_key) {
+				popup.on_pressed_key(event)
+			}
+			
+			return
+		}
+		
 		for (var i = 0; i < map_view.children.length; ++i) {
 			var child_element = map_view.children[i]
 			if (child_element.on_pressed_key) {
@@ -95,6 +117,19 @@ Item {
 	}
 	
 	Keys.onReleased: {
+		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
+			var popup = map_view.popups[i]
+			if (!popup.visible) {
+				continue
+			}
+			
+			if (popup.on_released_key) {
+				popup.on_released_key(event)
+			}
+			
+			return
+		}
+		
 		for (var i = 0; i < map_view.children.length; ++i) {
 			var child_element = map_view.children[i]
 			if (child_element.on_released_key) {
