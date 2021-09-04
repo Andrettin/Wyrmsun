@@ -1,3 +1,4 @@
+default_interface_style = default
 small_font = small
 game_font = game
 default_font_color = white
