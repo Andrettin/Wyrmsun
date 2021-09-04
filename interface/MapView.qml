@@ -211,6 +211,7 @@ Item {
 		
 		if (map_view.active_popup_count == 1 && !wyrmgus.map_editor.running) {
 			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
+			wyrmgus.game.on_modal_dialog_opened()
 		}
 	}
 	
@@ -219,6 +220,7 @@ Item {
 		
 		if (map_view.active_popup_count == 0 && !wyrmgus.map_editor.running) {
 			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(false); end")
+			wyrmgus.game.on_modal_dialog_closed()
 		}
 	}
 	
