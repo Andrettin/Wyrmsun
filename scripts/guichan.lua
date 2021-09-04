@@ -707,13 +707,6 @@ initialize_database()
 
 function GameStarting()
 	play_map_music()
-	
-	--[[
-	if (is_show_tips_enabled() and not IsReplayGame() and not IsNetworkGame()) then
-		SetGamePaused(true)
-		RunTipsMenu()
-	end
-	--]]
 end
 
 if (is_test_run()) then

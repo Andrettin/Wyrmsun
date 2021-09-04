@@ -8,7 +8,7 @@ import "./dialogs"
 Item {
 	id: map_view
 	anchors.fill: parent
-	focus: wyrmgus.game.running && menu_stack == null
+	focus: wyrmgus.game.running && menu_stack === null
 	z: 2 //place it over the frame buffer object
 	
 	property var menu_stack: null
@@ -99,6 +99,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	HelpDialog {
+		id: help_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	Keys.onPressed: {
 		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
 			var popup = map_view.popups[i]
@@ -149,6 +154,14 @@ Item {
 		}
 		
 		switch (event.key) {
+			case Qt.Key_H:
+				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+					help_dialog.open()
+				}
+				break
+			case Qt.Key_F1:
+				help_dialog.open()
+				break
 			case Qt.Key_F5:
 				options_dialog.open()
 				break
@@ -163,17 +176,9 @@ Item {
 	Connections {
 		target: wyrmgus
 		onEncyclopediaEntryOpened: {
-			var menu_stack_component = Qt.createComponent("menus/MenuStack.qml")
-			
-			if (menu_stack_component.status == Component.Error) {
-				console.error(menu_stack_component.errorString())
-				return
-			}
-			
-			map_view.menu_stack = menu_stack_component.createObject(map_view, { focus: true })
-			map_view.menu_stack.push("menus/EncyclopediaEntryMenu.qml", {
+			map_view.create_menu(["menus/EncyclopediaEntryMenu.qml", {
 				entry: wyrmgus.get_link_target(link)
-			})
+			}])
 		}
 	}
 	
@@ -183,7 +188,25 @@ Item {
 		wyrmgus.on_map_view_created()
 	}
 	
-	function on_popup_opened() {
+	function create_menu(menu_array) {
+		var menu_stack_component = Qt.createComponent("menus/MenuStack.qml")
+		
+		if (menu_stack_component.status == Component.Error) {
+			console.error(menu_stack_component.errorString())
+			return
+		}
+		
+		map_view.menu_stack = menu_stack_component.createObject(map_view, { focus: true })
+		map_view.menu_stack.push(menu_array)
+		increment_active_popup_count()
+	}
+	
+	function on_menu_stack_destroyed() {
+		map_view.menu_stack = null
+		decrement_active_popup_count()
+	}
+	
+	function increment_active_popup_count() {
 		++map_view.active_popup_count
 		
 		if (map_view.active_popup_count == 1 && !wyrmgus.map_editor.running) {
@@ -191,11 +214,19 @@ Item {
 		}
 	}
 	
-	function on_popup_closed() {
+	function decrement_active_popup_count() {
 		--map_view.active_popup_count
 		
 		if (map_view.active_popup_count == 0 && !wyrmgus.map_editor.running) {
 			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(false); end")
 		}
+	}
+	
+	function on_popup_opened() {
+		increment_active_popup_count()
+	}
+	
+	function on_popup_closed() {
+		decrement_active_popup_count()
 	}
 }

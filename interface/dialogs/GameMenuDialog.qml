@@ -6,6 +6,7 @@ DialogBase {
 	id: game_menu_dialog
 	panel: 1
 	title: "Game Menu"
+	enabled: map_view.menu_stack === null
 	
 	LargeButton {
 		id: options_button
@@ -32,7 +33,7 @@ DialogBase {
 		interface_style: game_menu_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunHelpMenu();")
+			help_dialog.open()
 			game_menu_dialog.opacity = 0
 		}
 	}

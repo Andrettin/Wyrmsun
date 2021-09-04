@@ -1,19 +1,3 @@
-function RunHelpMenu()
-  local menu = WarGameMenu(panel(1))
-
-  menu:addLabel(_("Help Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
-  menu:addFullButton(_("En~!cyclopedia"), "c", 16 * get_scale_factor(), (40 + 36*0) * get_scale_factor(),
-    function() RunEncyclopediaMenu() end)
-  menu:addFullButton(_("~!Hotkeys"), "h", 16 * get_scale_factor(), (40 + 36*1) * get_scale_factor(),
-    function() RunKeystrokeHelpMenu() end)
---  menu:addFullButton("~!Tips", "t", 16, 40 + 36*1,
---    function() RunTipsMenu() end)
-  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", (128 - (224 / 2)) * get_scale_factor(), 248 * get_scale_factor(),
-    function() menu:stop() end)
-
-  menu:run(false)
-end
-
 local keystrokes = {
 --  {"Alt-B", "- toggle expand map"},
   {"Alt-C", "- center on selected unit"},
@@ -161,47 +145,3 @@ local tips = {
 	"Time efficiency bonus makes a building train, research and upgrade faster. If it is a resource building, then harvesting from it will also proceed faster.",
 	"Faction bonuses are not cumulative."
 }
-
-function RunTipsMenu()
-  local menu = WarGameMenu(panel(2))
-  menu:resize(288 * get_scale_factor(), 256 * get_scale_factor())
-
-  menu:addLabel(_("Tips"), 144 * get_scale_factor(), 11 * get_scale_factor())
-
-  local l = MultiLineLabel()
-  l:setFont(Fonts["game"])
-  l:setSize(260 * get_scale_factor(), 128 * get_scale_factor())
-  l:setLineWidth(260 * get_scale_factor())
-  menu:add(l, 14 * get_scale_factor(), 35 * get_scale_factor())
-
-  function l:prevTip()
-    wyr.preferences.TipNumber = wyr.preferences.TipNumber - 1
-    if (wyr.preferences.TipNumber < 1) then
-      wyr.preferences.TipNumber = table.getn(tips)
-    end
-    SavePreferences()
-  end
-  function l:nextTip()
-    wyr.preferences.TipNumber = wyr.preferences.TipNumber + 1
-    if (wyr.preferences.TipNumber > table.getn(tips)) then
-      wyr.preferences.TipNumber = 1
-    end
-    SavePreferences()
-  end
-  function l:updateCaption()
-    self:setCaption(tips[wyr.preferences.TipNumber])
-  end
-
-  if (wyr.preferences.TipNumber == 0) then
-    l:nextTip()
-  end
-  l:updateCaption()
-
-  menu:addHalfButton(_("~!Next Tip"), "n", 14 * get_scale_factor(), (256 - 40) * get_scale_factor(),
-    function() l:nextTip(); l:updateCaption() end)
-  menu:addHalfButton(_("~!Close"), "c", 168 * get_scale_factor(), (256 - 40) * get_scale_factor(),
-    function() l:nextTip(); menu:stop() end)
-
-  menu:run(false)
-end
-

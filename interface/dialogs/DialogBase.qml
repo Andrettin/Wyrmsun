@@ -58,7 +58,7 @@ Popup {
 	}
 	
 	onClosed: {
-		give_up_focus()
+		dialog.give_up_focus()
 		
 		if (parent.on_popup_closed) {
 			parent.on_popup_closed()

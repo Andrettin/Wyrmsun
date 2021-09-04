@@ -10,7 +10,10 @@ LargeButton {
 		if (menu_stack.depth > 1) {
 			menu_stack.pop()
 		} else {
-			map_view.menu_stack = null
+			if (map_view.menu_stack !== null) {
+				map_view.on_menu_stack_destroyed()
+			}
+			
 			menu_stack.destroy()
 		}
 	}
