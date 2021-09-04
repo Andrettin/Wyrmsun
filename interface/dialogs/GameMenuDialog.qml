@@ -43,8 +43,8 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: help_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
-		text: "Save (F11)"
-		hotkey: "f11"
+		text: "Save"
+		hotkey: "s"
 		interface_style: game_menu_dialog.interface_style
 		
 		onClicked: {

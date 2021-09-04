@@ -315,7 +315,7 @@ function RunInEditorMenu()
 
 	menu:addLabel(_("Editor Menu"), 128 * get_scale_factor(), 11 * get_scale_factor())
 
-	menu:addFullButton(_("Save Map (~<F11~>)"), "f11", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(); end)
+	menu:addFullButton(_("~!Save Map"), "s", 16 * get_scale_factor(), 40 * get_scale_factor(), function() RunEditorSaveMenu(); end)
 	menu:addFullButton(_("Map Properties (~<F5~>)"), "f5", 16 * get_scale_factor(), (40 + 35 * 1) * get_scale_factor(), RunEditorMapProperties)
 	menu:addFullButton(_("Player Properties (~<F6~>)"), "f6", 16 * get_scale_factor(), (40 + 35 * 2) * get_scale_factor(), RunEditorPlayerProperties)
 
