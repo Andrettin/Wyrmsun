@@ -104,6 +104,22 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	LoadGameDialog {
+		id: load_game_dialog
+	
+		onVisibleChanged: {
+			if (visible) {
+				map_view.on_popup_opened()
+			} else {
+				map_view.on_popup_closed()
+				
+				if (game_menu_dialog.visible) {
+					game_menu_dialog.close()
+				}
+			}
+		}
+	}
+	
 	Keys.onPressed: {
 		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
 			var popup = map_view.popups[i]
@@ -157,6 +173,11 @@ Item {
 			case Qt.Key_H:
 				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
 					help_dialog.open()
+				}
+				break
+			case Qt.Key_L:
+				if (event.modifiers & Qt.AltModifier) {
+					load_game_dialog.open()
 				}
 				break
 			case Qt.Key_F1:

@@ -8,9 +8,6 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	elseif (key == "s" and alt) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunSaveMenu()
-	elseif (key == "l" and alt) then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunGameLoadGameMenu()
 	elseif (key == "q" and (ctrl or alt)) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunQuitToMenuConfirmMenu()

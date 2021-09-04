@@ -1,37 +1,20 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Dialogs 1.3
 import ".."
 
-DialogBase {
+FileDialog {
 	id: load_game_dialog
-	panel: 3
 	title: "Load Game"
+	defaultSuffix: ".sav.gz"
+	folder: "file:///" + wyrmgus.save_path
+	nameFilters: ["Stratagus Save Files (*.sav.gz *.sav)"]
+	selectExisting: true
+	sidebarVisible: false
 	
-	SmallButton {
-		id: load_button
-		anchors.left: parent.left
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
-		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		text: "Load"
-		hotkey: "l"
-		
-		onClicked: {
-			load_game_dialog.close()
-		}
-	}
-	
-	SmallButton {
-		id: cancel_button
-		anchors.right: parent.right
-		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
-		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		text: "Cancel"
-		hotkey: "c"
-		
-		onClicked: {
-			load_game_dialog.close()
-		}
+	onAccepted: {
+		var filepath = load_game_dialog.fileUrl.toString()
+		filepath = filepath.substr(8, filepath.length - 8) //remove the "file:///" from the file path
+		wyrmgus.load_game(filepath)
 	}
 }

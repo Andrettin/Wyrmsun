@@ -662,7 +662,6 @@ function RunProgramStartMenu()
 	end
 end
 
-Load("scripts/menus/load.lua")
 Load("scripts/menus/save.lua")
 Load("scripts/menus/replay.lua")
 Load("scripts/menus/options.lua")
