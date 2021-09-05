@@ -112,10 +112,12 @@ Item {
 				map_view.on_popup_opened()
 			} else {
 				map_view.on_popup_closed()
-				
-				if (game_menu_dialog.visible) {
-					game_menu_dialog.close()
-				}
+			}
+		}
+		
+		onAccepted: {
+			if (game_menu_dialog.visible) {
+				game_menu_dialog.close()
 			}
 		}
 	}
@@ -128,10 +130,12 @@ Item {
 				map_view.on_popup_opened()
 			} else {
 				map_view.on_popup_closed()
-				
-				if (game_menu_dialog.visible) {
-					game_menu_dialog.close()
-				}
+			}
+		}
+		
+		onAccepted: {
+			if (game_menu_dialog.visible) {
+				game_menu_dialog.close()
 			}
 		}
 	}
