@@ -48,8 +48,7 @@ DialogBase {
 		interface_style: game_menu_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunSaveMenu();")
-			game_menu_dialog.opacity = 0
+			save_game_dialog.open()
 		}
 	}
 	

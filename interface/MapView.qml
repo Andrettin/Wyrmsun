@@ -104,6 +104,22 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	SaveGameDialog {
+		id: save_game_dialog
+	
+		onVisibleChanged: {
+			if (visible) {
+				map_view.on_popup_opened()
+			} else {
+				map_view.on_popup_closed()
+				
+				if (game_menu_dialog.visible) {
+					game_menu_dialog.close()
+				}
+			}
+		}
+	}
+	
 	LoadGameDialog {
 		id: load_game_dialog
 	
@@ -232,6 +248,13 @@ Item {
 				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
 					if (!wyrmgus.game.multiplayer && !wyrmgus.map_editor.running) {
 						restart_mission_confirm_dialog.open()
+					}
+				}
+				break
+			case Qt.Key_S:
+				if (event.modifiers & Qt.AltModifier) {
+					if (!wyrmgus.map_editor.running) {
+						save_game_dialog.open()
 					}
 				}
 				break

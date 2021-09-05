@@ -5,9 +5,6 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	elseif (key == "f9") then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunDiplomacyMenu()
-	elseif (key == "s" and alt) then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunSaveMenu()
 	else
 		return false
 	end
