@@ -11,9 +11,6 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	elseif (key == "q" and (ctrl or alt)) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunQuitToMenuConfirmMenu()
-	elseif (key == "r" and (ctrl or alt)) then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunRestartConfirmMenu()
 	elseif (key == "x" and (ctrl or alt)) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunExitConfirmMenu()

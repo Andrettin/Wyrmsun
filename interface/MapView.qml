@@ -104,11 +104,6 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
-	EndMissionDialog {
-		id: end_mission_dialog
-		interface_style: wyrmgus.current_interface_style.identifier
-	}
-	
 	LoadGameDialog {
 		id: load_game_dialog
 	
@@ -122,6 +117,22 @@ Item {
 					game_menu_dialog.close()
 				}
 			}
+		}
+	}
+	
+	EndMissionDialog {
+		id: end_mission_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
+	ConfirmDialog {
+		id: restart_mission_confirm_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+		
+		onConfirmed: {
+			wyrmgus.call_lua_command("StopGame(GameRestart);")
+			end_mission_dialog.close()
+			game_menu_dialog.close()
 		}
 	}
 	
@@ -174,28 +185,37 @@ Item {
 			}
 		}
 		
-		switch (event.key) {
-			case Qt.Key_H:
-				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+		if (!wyrmgus.map_editor.running) {
+			switch (event.key) {
+				case Qt.Key_H:
+					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+						help_dialog.open()
+					}
+					break
+				case Qt.Key_L:
+					if (event.modifiers & Qt.AltModifier) {
+						load_game_dialog.open()
+					}
+					break
+				case Qt.Key_R:
+					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+						if (!wyrmgus.game.multiplayer) {
+							restart_mission_confirm_dialog.open()
+						}
+					}
+					break
+				case Qt.Key_F1:
 					help_dialog.open()
-				}
-				break
-			case Qt.Key_L:
-				if (event.modifiers & Qt.AltModifier) {
-					load_game_dialog.open()
-				}
-				break
-			case Qt.Key_F1:
-				help_dialog.open()
-				break
-			case Qt.Key_F5:
-				options_dialog.open()
-				break
-			case Qt.Key_F7:
-				sound_options_dialog.open()
-				break
-			default:
-				break
+					break
+				case Qt.Key_F5:
+					options_dialog.open()
+					break
+				case Qt.Key_F7:
+					sound_options_dialog.open()
+					break
+				default:
+					break
+			}
 		}
 	}
 	

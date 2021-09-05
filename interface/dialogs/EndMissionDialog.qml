@@ -18,8 +18,7 @@ DialogBase {
 		enabled: !wyrmgus.game.multiplayer
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunRestartConfirmMenu();")
-			end_mission_dialog.opacity = 0
+			restart_mission_confirm_dialog.open()
 		}
 	}
 	
