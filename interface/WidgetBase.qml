@@ -31,6 +31,7 @@ Item {
 		widget_type: widget.widget_type
 		interface_style: widget.interface_style
 		pressed: widget.pressed
+		grayed: !widget.enabled
 	}
 	
 	MouseArea {

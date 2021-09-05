@@ -20,8 +20,9 @@ WidgetBase {
 		anchors.leftMargin: parent.centered_text ? 0 : 8 * wyrmgus.defines.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.verticalCenterOffset: parent.pressed ? 1 * wyrmgus.defines.scale_factor : 0
-		text: parent.hovered ? highlight(parent.text) : highlight_hotkey(parent.text, parent.hotkey)
+		text: parent.enabled ? (parent.hovered ? highlight(parent.text) : highlight_hotkey(parent.text, parent.hotkey)) : parent.text
 		font.pixelSize: text_font_size
+		color: parent.enabled ? "white" : "gray"
 	}
 	
 	onClicked: {
