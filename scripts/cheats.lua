@@ -217,6 +217,10 @@ function HandleCheats(str)
 		call_trigger(string.sub(str, 9))
 	elseif (string.sub(str, 0, 8) == "dialogue") then
 		CallDialogue(string.sub(str, 10), GetThisPlayer())
+	elseif (string.sub(str, 0, 4) == "hero") then
+		local character = string.sub(str, 6)
+		unit = CreateUnit(GetCharacterData(character, "Type"), GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		SetUnitVariable(unit, "Character", character)
 	else
 		return false
 	end
