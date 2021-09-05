@@ -104,6 +104,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	EndMissionDialog {
+		id: end_mission_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	LoadGameDialog {
 		id: load_game_dialog
 	

@@ -68,7 +68,7 @@ DialogBase {
 	}
 	
 	LargeButton {
-		id: end_scenario_button
+		id: end_mission_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: load_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
@@ -77,7 +77,7 @@ DialogBase {
 		interface_style: game_menu_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunEndScenarioMenu();")
+			end_mission_dialog.open()
 			game_menu_dialog.opacity = 0
 		}
 	}
@@ -85,7 +85,7 @@ DialogBase {
 	LargeButton {
 		id: return_to_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: end_scenario_button.bottom
+		anchors.top: end_mission_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Return to Game (Esc)"
 		hotkey: "esc"
