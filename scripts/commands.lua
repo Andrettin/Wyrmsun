@@ -8,9 +8,6 @@ local function HandleIngameCommandKey(key, ctrl, alt, shift)
 	elseif (key == "s" and alt) then
 		if (not IsNetworkGame()) then SetGamePaused(true) end
 		RunSaveMenu()
-	elseif (key == "x" and (ctrl or alt)) then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunExitConfirmMenu()
 	else
 		return false
 	end
@@ -24,8 +21,6 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
     RunEditorPlayerProperties()
   elseif (key == "s" and alt) then -- Save
     RunEditorSaveMenu()
-  elseif (key == "x" and (ctrl or alt)) then -- Exit
-    RunExitConfirmMenu()
   else
     return false
   end

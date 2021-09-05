@@ -78,7 +78,6 @@ DialogBase {
 		
 		onClicked: {
 			end_mission_dialog.open()
-			game_menu_dialog.opacity = 0
 		}
 	}
 	

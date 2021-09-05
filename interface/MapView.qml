@@ -141,7 +141,19 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 		
 		onConfirmed: {
-			wyrmgus.call_lua_command("StopGame(GameQuitToMenu); CEditor:get():set_running(false);")
+			wyrmgus.call_lua_command("StopGame(GameQuitToMenu);")
+			wyrmgus.map_editor.running = false
+			end_mission_dialog.close()
+			game_menu_dialog.close()
+		}
+	}
+	
+	ConfirmDialog {
+		id: exit_to_desktop_confirm_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+		
+		onConfirmed: {
+			window.close()
 			end_mission_dialog.close()
 			game_menu_dialog.close()
 		}
@@ -221,6 +233,11 @@ Item {
 					if (!wyrmgus.game.multiplayer && !wyrmgus.map_editor.running) {
 						restart_mission_confirm_dialog.open()
 					}
+				}
+				break
+			case Qt.Key_X:
+				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+					exit_to_desktop_confirm_dialog.open()
 				}
 				break
 			case Qt.Key_F1:

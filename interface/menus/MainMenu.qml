@@ -139,7 +139,7 @@ MenuBase {
 		hotkey: "x"
 		
 		onClicked: {
-			wyrmgus.exit()
+			window.close()
 		}
 	}
 	

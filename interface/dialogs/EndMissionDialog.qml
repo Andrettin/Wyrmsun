@@ -46,8 +46,7 @@ DialogBase {
 		interface_style: end_mission_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunExitConfirmMenu();")
-			end_mission_dialog.opacity = 0
+			exit_to_desktop_confirm_dialog.open()
 		}
 	}
 	
@@ -62,7 +61,6 @@ DialogBase {
 		
 		onClicked: {
 			end_mission_dialog.close()
-			game_menu_dialog.opacity = 1
 		}
 	}
 }
