@@ -376,7 +376,6 @@ function EditUnitProperties()
 		table.insert(display_work_list, tostring(string.gsub(work_list[i], "upgrade%-work%-", "")))
 	end
 	
-	
 	local unit_trait
 	local unit_prefix
 	local unit_prefix_label

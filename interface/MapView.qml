@@ -196,42 +196,50 @@ Item {
 			}
 		}
 		
-		if (!wyrmgus.map_editor.running) {
-			switch (event.key) {
-				case Qt.Key_H:
-					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+		switch (event.key) {
+			case Qt.Key_H:
+				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+					if (!wyrmgus.map_editor.running) {
 						help_dialog.open()
 					}
-					break
-				case Qt.Key_L:
-					if (event.modifiers & Qt.AltModifier) {
+				}
+				break
+			case Qt.Key_L:
+				if (event.modifiers & Qt.AltModifier) {
+					if (!wyrmgus.map_editor.running) {
 						load_game_dialog.open()
 					}
-					break
-				case Qt.Key_Q:
-					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
-						quit_mission_confirm_dialog.open()
+				}
+				break
+			case Qt.Key_Q:
+				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+					quit_mission_confirm_dialog.open()
+				}
+				break
+			case Qt.Key_R:
+				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+					if (!wyrmgus.game.multiplayer && !wyrmgus.map_editor.running) {
+						restart_mission_confirm_dialog.open()
 					}
-					break
-				case Qt.Key_R:
-					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
-						if (!wyrmgus.game.multiplayer) {
-							restart_mission_confirm_dialog.open()
-						}
-					}
-					break
-				case Qt.Key_F1:
+				}
+				break
+			case Qt.Key_F1:
+				if (!wyrmgus.map_editor.running) {
 					help_dialog.open()
-					break
-				case Qt.Key_F5:
+				}
+				break
+			case Qt.Key_F5:
+				if (!wyrmgus.map_editor.running) {
 					options_dialog.open()
-					break
-				case Qt.Key_F7:
+				}
+				break
+			case Qt.Key_F7:
+				if (!wyrmgus.map_editor.running) {
 					sound_options_dialog.open()
-					break
-				default:
-					break
-			}
+				}
+				break
+			default:
+				break
 		}
 	}
 	
