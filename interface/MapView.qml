@@ -136,6 +136,17 @@ Item {
 		}
 	}
 	
+	ConfirmDialog {
+		id: quit_mission_confirm_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+		
+		onConfirmed: {
+			wyrmgus.call_lua_command("StopGame(GameQuitToMenu); CEditor:get():set_running(false);")
+			end_mission_dialog.close()
+			game_menu_dialog.close()
+		}
+	}
+	
 	Keys.onPressed: {
 		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
 			var popup = map_view.popups[i]
@@ -195,6 +206,11 @@ Item {
 				case Qt.Key_L:
 					if (event.modifiers & Qt.AltModifier) {
 						load_game_dialog.open()
+					}
+					break
+				case Qt.Key_Q:
+					if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+						quit_mission_confirm_dialog.open()
 					}
 					break
 				case Qt.Key_R:

@@ -32,8 +32,7 @@ DialogBase {
 		interface_style: end_mission_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunQuitToMenuConfirmMenu();")
-			end_mission_dialog.opacity = 0
+			quit_mission_confirm_dialog.open()
 		}
 	}
 	
