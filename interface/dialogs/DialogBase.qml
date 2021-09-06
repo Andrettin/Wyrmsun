@@ -53,7 +53,7 @@ Popup {
 	
 	onOpened: {
 		if (parent.on_popup_opened) {
-			parent.on_popup_opened()
+			parent.on_popup_opened(dialog)
 		}
 	}
 	
@@ -61,7 +61,7 @@ Popup {
 		dialog.give_up_focus()
 		
 		if (parent.on_popup_closed) {
-			parent.on_popup_closed()
+			parent.on_popup_closed(dialog)
 		}
 	}
 	
@@ -92,18 +92,11 @@ Popup {
 	}
 		
 	function give_up_focus() {
-		//when closing, give focus to another visible popup with the same parent, if any; else, give focus to the parent
-		for (var i = (parent.popups.length - 1); i >= 0; --i) {
-			var popup = parent.popups[i]
-			if (!popup.visible) {
-				continue
-			}
-			
-			popup.forceActiveFocus()
-			return
-		}
-		
 		parent.forceActiveFocus()
+	}
+	
+	function receive_focus() {
+		pane.forceActiveFocus()
 	}
 	
 	Component.onCompleted: {

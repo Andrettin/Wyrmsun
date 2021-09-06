@@ -13,6 +13,7 @@ Item {
 	
 	property var menu_stack: null
 	property var popups: []
+	property var active_popups: []
 	property int active_popup_count: 0
 	
 	MouseArea {
@@ -109,9 +110,9 @@ Item {
 	
 		onVisibleChanged: {
 			if (visible) {
-				map_view.on_popup_opened()
+				map_view.on_popup_opened(save_game_dialog)
 			} else {
-				map_view.on_popup_closed()
+				map_view.on_popup_closed(save_game_dialog)
 			}
 		}
 		
@@ -127,9 +128,9 @@ Item {
 	
 		onVisibleChanged: {
 			if (visible) {
-				map_view.on_popup_opened()
+				map_view.on_popup_opened(load_game_dialog)
 			} else {
-				map_view.on_popup_closed()
+				map_view.on_popup_closed(load_game_dialog)
 			}
 		}
 		
@@ -338,11 +339,31 @@ Item {
 		}
 	}
 	
-	function on_popup_opened() {
-		increment_active_popup_count()
+	function on_popup_opened(popup) {
+		map_view.increment_active_popup_count()
+		
+		map_view.active_popups.push(popup)
+		
+		if (popup.receive_focus) {
+			popup.receive_focus()
+		}
 	}
 	
-	function on_popup_closed() {
+	function on_popup_closed(popup) {
 		decrement_active_popup_count()
+		
+		const popup_index = map_view.active_popups.indexOf(popup);
+		if (popup_index != -1) {
+			map_view.active_popups.splice(popup_index, 1)
+		}
+		
+		//when a popup is closed, give focus to another active popup, if any
+		for (var i = (map_view.active_popups.length - 1); i >= 0; --i) {
+			var popup = map_view.active_popups[i]
+			if (popup.receive_focus) {
+				popup.receive_focus()
+			}
+			break
+		}
 	}
 }
