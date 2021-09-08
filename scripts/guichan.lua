@@ -45,10 +45,6 @@ function panel(n)
 end
 
 function AddMenuHelpers(menu)
-  function menu:addCentered(widget, x, y)
-    self:add(widget, x - widget:getWidth() / 2, y)
-  end
-
   function menu:addLabel(text, x, y, font, center)
     local label = Label(text)
     if (font == nil) then font = Fonts["large"] end
@@ -57,22 +53,6 @@ function AddMenuHelpers(menu)
     if (center == nil or center == true) then -- center text by default
       x = x - label:getWidth() / 2
     end
-    self:add(label, x, y)
-
-    return label
-  end
-
-  function menu:addMultiLineLabel(text, x, y, font, center, line_width)
-    local label = MultiLineLabel(text)
-    if (font == nil) then font = Fonts["large"] end
-    label:setFont(font)
-    if (center == nil or center == true) then -- center text by default
-		label:setAlignment(MultiLineLabel.CENTER)
-	else
-		label:setAlignment(MultiLineLabel.LEFT)
-    end
-	label:setLineWidth(line_width)
-    label:adjustSize()
     self:add(label, x, y)
 
     return label
@@ -319,17 +299,6 @@ function AddMenuHelpers(menu)
     end
 
     return bq
-  end
-
-  function menu:addCheckBox(caption, x, y, callback)
-    local b = CheckBox(caption)
-    b:setBaseColor(clear)
-    b:setForegroundColor(clear)
-    b:setBackgroundColor(dark)
-	if (callback ~= nil) then b:setActionCallback(function(s) PlaySound("click"); callback(b, s) end) end
-    b:setFont(Fonts["game"])
-    self:add(b, x, y)
-    return b
   end
 
 	function menu:addImageCheckBox(caption, x, y, callback) -- DinkyDyeAussie's new function
@@ -604,7 +573,6 @@ function RunProgramStartMenu()
 end
 
 Load("scripts/menus/save.lua")
-Load("scripts/menus/replay.lua")
 Load("scripts/menus/options.lua")
 Load("scripts/menus/editor.lua")
 Load("scripts/menus/game.lua")
