@@ -31,8 +31,7 @@ DialogBase {
 		interface_style: options_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunPreferencesMenu();")
-			options_dialog.opacity = 0
+			preferences_dialog.open()
 		}
 	}
 	

@@ -172,65 +172,6 @@ function AddMenuHelpers(menu)
 		return b
 	end
 
-  function menu:addSlider(min, max, w, h, x, y, callback)
-    local b = Slider(min, max)
-    b:setBaseColor(dark)
-    b:setForegroundColor(clear)
-    b:setBackgroundColor(clear)
-    b:setSize(w, h)
-    b:setActionCallback(function(s) callback(b, s) end)
-    self:add(b, x, y)
-    return b
-  end
-
-	function menu:addImageLeftSliderButton(caption, hotkey, x, y, callback)
-		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
-		local g_lslider_n
-		local g_lslider_p
-		g_lslider_n = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_normal.png"
-		g_lslider_p = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/left_arrow_pressed.png"
-		b:setNormalImage(g_lslider_n)
-		b:setPressedImage(g_lslider_p)
-		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
-		b:setBorderSize(0)
-		return b
-	end
-  
-	function menu:addImageSlider(min, max, w, h, x, y, callback)
-		local b = ImageSlider(min, max)
-		-- New Slider Functions
-		local g_marker
-		local g_slider
-		g_marker = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_knob.png"
-		g_slider = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/slider_bar_normal.png"
-		b:setMarkerImage(g_marker)
-		b:setBackgroundImage(g_slider)
-		b:setSize(w, h)
-		b:setActionCallback(function(s) callback(b, s) end)
-		self:add(b, x, y)
-		b:setBorderSize(0)
-		return b
-	end
-  
-	function menu:addImageRightSliderButton(caption, hotkey, x, y, callback)
-		local b = self:addImageButton(caption, hotkey, x, y, callback)
-		b:setBaseColor(Color(0,0,0,0))
-		b:setForegroundColor(Color(0,0,0,0))
-		b:setBackgroundColor(Color(0,0,0,0))
-		local g_rslider_n
-		local g_rslider_p
-		g_rslider_n = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_normal.png"
-		g_rslider_p = "interface/" .. GetCivilizationData(GetPlayerData(GetThisPlayer(), "RaceName"), "Interface") .. "/right_arrow_pressed.png"
-		b:setNormalImage(g_rslider_n)
-		b:setPressedImage(g_rslider_p)
-		b:setSize(20 * get_scale_factor(), 19 * get_scale_factor())
-		b:setBorderSize(0)
-		return b
-	end
-
   function menu:addListBox(x, y, w, h, list)
     local bq = ListBoxWidget(w, h)
     bq:setList(list)

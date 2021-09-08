@@ -100,6 +100,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	PreferencesDialog {
+		id: preferences_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	HelpDialog {
 		id: help_dialog
 		interface_style: wyrmgus.current_interface_style.identifier
@@ -281,6 +286,11 @@ Item {
 			case Qt.Key_F7:
 				if (!wyrmgus.map_editor.running) {
 					sound_options_dialog.open()
+				}
+				break
+			case Qt.Key_F8:
+				if (!wyrmgus.map_editor.running) {
+					preferences_dialog.open()
 				}
 				break
 			default:

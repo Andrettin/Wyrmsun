@@ -54,11 +54,49 @@ DialogBase {
 		}
 	}
 	
+	LabeledSlider {
+		id: mouse_scroll_speed_slider
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: game_speed_slider.bottom
+		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		text: "Mouse Scroll Speed"
+		min_text: "slow"
+		max_text: "fast"
+		from: 1
+		to: 10
+		value: wyrmgus.preferences.mouse_scroll_speed
+		step_size: 1
+		interface_style: preferences_dialog.interface_style
+		
+		onValueChanged: {
+			wyrmgus.preferences.mouse_scroll_speed = value
+		}
+	}
+	
+	LabeledSlider {
+		id: key_scroll_speed_slider
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: mouse_scroll_speed_slider.bottom
+		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		text: "Key Scroll Speed"
+		min_text: "slow"
+		max_text: "fast"
+		from: 1
+		to: 10
+		value: wyrmgus.preferences.key_scroll_speed
+		step_size: 1
+		interface_style: preferences_dialog.interface_style
+		
+		onValueChanged: {
+			wyrmgus.preferences.key_scroll_speed = value
+		}
+	}
+	
 	LargeButton {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: game_speed_slider.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: preferences_dialog.interface_style

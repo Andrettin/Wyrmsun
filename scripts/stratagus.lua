@@ -1448,12 +1448,6 @@ function PersistencyUpdates()
 	
 	local last_version = tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", "")))
 	
-	if (last_version < 354 and wyr.preferences.GameSpeed == 60) then -- fix to wrong default game speed before version 3.5.4
-		wyr.preferences.GameSpeed = 30
-		SetGameSpeed(wyr.preferences.GameSpeed)
-		SavePreferences()
-	end
-	
 	if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
 		wyr.preferences.LastVersionPlayed = wyrmsun.Version
 		SavePreferences()
@@ -1731,15 +1725,11 @@ local defaultPreferences = {
 	EnableMouseScrolling = true,    --  Enable/disable mouse scrolling.
 	FogOfWar = true,
 	FogOfWarOpacity = 128,
-	GameSpeed = 30,
 	GameTranslation = "",
 	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
-	MouseScrollSpeed = 1,
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
-	KeyScrollSpeed = 1,
-	ShowCommandKey = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
 	VideoHeight = 600,
@@ -1764,16 +1754,13 @@ if (wyr.preferences.EffectsVolume ~= nil) then
 end
 SetFogOfWar(wyr.preferences.FogOfWar)
 SetFogOfWarOpacity(wyr.preferences.FogOfWarOpacity)
-SetGameSpeed(wyr.preferences.GameSpeed)
 SetGroupKeys(wyr.preferences.GroupKeys)
 SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(true)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
-SetMouseScrollSpeed(wyr.preferences.MouseScrollSpeed)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
 SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
-SetKeyScrollSpeed(wyr.preferences.KeyScrollSpeed)
 if (wyr.preferences.MusicEnabled ~= nil) then
 	SetMusicEnabled(wyr.preferences.MusicEnabled)
 	wyr.preferences.MusicEnabled = nil
@@ -1784,7 +1771,6 @@ if (wyr.preferences.MusicVolume ~= nil) then
 end
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
-CUserInterface:get().ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 if not (CanAccessFile("preferences.lua")) then
 	SavePreferences()
