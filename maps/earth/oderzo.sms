@@ -37,7 +37,7 @@ end
 
 if (LoadedGame == false) then
 	-- create rafts in the nearest coast tile to the Roman settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y)
+	local nearest_coast = FindNearestTerrainFlagTile("coast", GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY"))
 	if (nearest_coast ~= nil) then
 		unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
 	end

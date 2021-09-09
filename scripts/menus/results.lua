@@ -44,9 +44,9 @@ function RunResultsMenu()
 			local name = _(GetPlayerData(i, "Name"))
 			if (CPlayer:GetThisPlayer().Index == i) then
 				name = name .. " - " .. _("You")
-			elseif (CPlayer:GetThisPlayer():IsAllied(CPlayer:GetPlayer(i))) then
+			elseif (CPlayer:GetThisPlayer():IsAllied(i)) then
 				name = name .. " - " .. _("Ally")
-			elseif (CPlayer:GetThisPlayer():IsEnemy(CPlayer:GetPlayer(i))) then
+			elseif (CPlayer:GetThisPlayer():IsEnemy(i)) then
 				name = name .. " - " .. _("Enemy")
 			else
 				name = name .. " - " .. _("Neutral")

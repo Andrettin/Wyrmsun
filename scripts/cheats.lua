@@ -197,7 +197,7 @@ function HandleCheats(str)
 		end
 		
 		if (table.getn(string_list) >= 2) then
-			unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(string_list[1], PlayerNumNeutral, {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 			SetUnitVariable(unit, "Prefix", string_list[2])
 		end
 	elseif (string.sub(str, 0, 13) == "suffixed item") then
@@ -208,7 +208,7 @@ function HandleCheats(str)
 		end
 		
 		if (table.getn(string_list) >= 2) then
-			unit = CreateUnit(string_list[1], PlayerNumNeutral, {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+			unit = CreateUnit(string_list[1], PlayerNumNeutral, {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 			SetUnitVariable(unit, "Suffix", string_list[2])
 		end
 	elseif (string.sub(str, 0, 5) == "event") then
@@ -219,7 +219,7 @@ function HandleCheats(str)
 		CallDialogue(string.sub(str, 10), GetThisPlayer())
 	elseif (string.sub(str, 0, 4) == "hero") then
 		local character = string.sub(str, 6)
-		unit = CreateUnit(GetCharacterData(character, "Type"), GetThisPlayer(), {CPlayer:GetPlayer(GetThisPlayer()).StartPos.x, CPlayer:GetPlayer(GetThisPlayer()).StartPos.y})
+		unit = CreateUnit(GetCharacterData(character, "Type"), GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		SetUnitVariable(unit, "Character", character)
 	else
 		return false

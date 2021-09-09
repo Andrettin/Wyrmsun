@@ -41,18 +41,18 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Faction", "rome")
 	SetPlayerData(1, "Allow", "upgrade-masonry", "R")
 	
-	unit = CreateUnit("unit-teuton-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-teuton-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-teuton-swordsman", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-teuton-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-teuton-archer", 0, {CPlayer:GetPlayer(0).StartPos.x, CPlayer:GetPlayer(0).StartPos.y})
+	unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 		
-	unit = CreateUnit("unit-latin-javelineer", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-latin-javelineer", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-latin-javelineer", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-latin-javelineer", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-teuton-catapult", 1, {CPlayer:GetPlayer(1).StartPos.x, CPlayer:GetPlayer(1).StartPos.y})
+	unit = CreateUnit("unit-teuton-catapult", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 	SetUnitVariable(unit, "Active", false)
 end
 
