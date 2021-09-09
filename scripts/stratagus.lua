@@ -1190,7 +1190,7 @@ end
 function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and (CPlayer:GetPlayer(player):IsAllied(i) == false or CPlayer:GetPlayer(i):IsAllied(player) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity") and GetPlayerData(player, "HasContactWith", i)) then
+		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and (GetPlayerData(player, "IsAllied", i) == false or GetPlayerData(i, "IsAllied", player) == false) and (GetPlayerData(i, "Faction") == "" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "tribe" or GetFactionData(GetPlayerData(i, "Faction"), "Type") == "polity") and GetPlayerData(player, "HasContactWith", i)) then
 			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit_copper_mine") - GetPlayerData(i, "UnitTypesCount", "unit-diamond-mine") - GetPlayerData(i, "UnitTypesCount", "unit-emerald-mine") - GetPlayerData(i, "UnitTypesCount", "unit-yale-hunting-lodge")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then
@@ -1207,7 +1207,7 @@ end
 function GetNumAllies(player)
 	local ally_count = 0
 	for i=0,(PlayerMax - 2) do
-		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and CPlayer:GetPlayer(player):IsAllied(i) and CPlayer:GetPlayer(i):IsAllied(player)) then
+		if (player ~= i and (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) and GetPlayerData(player, "IsAllied", i) and GetPlayerData(i, "IsAllied", player)) then
 			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
 				ally_count = ally_count + 1
 			end
