@@ -105,6 +105,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	DiplomacyDialog {
+		id: diplomacy_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	HelpDialog {
 		id: help_dialog
 		interface_style: wyrmgus.current_interface_style.identifier
