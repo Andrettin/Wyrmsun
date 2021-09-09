@@ -3081,7 +3081,7 @@ end
 
 function FindUnusedPlayerSlot()
 	for i=0,(PlayerMax - 2) do
-		if (CPlayer:GetPlayer(i).Type == PlayerNobody) then
+		if (GetPlayerData(i, "Type") == PlayerNobody) then
 			return i
 		end
 	end
@@ -6072,7 +6072,7 @@ end
 function CreatePlayerForFaction(faction, init_ai)
 	local faction_player = FindUnusedPlayerSlot()
 	if (faction_player ~= -1) then
-		CPlayer:GetPlayer(faction_player).Type = PlayerComputer				
+		SetPlayerData(faction_player, "Type", PlayerComputer)
 		SetPlayerData(faction_player, "RaceName", GetFactionData(faction, "Civilization"))
 		SetPlayerData(faction_player, "Faction", faction)
 		if (init_ai) then

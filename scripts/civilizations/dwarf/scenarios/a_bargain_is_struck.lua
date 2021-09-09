@@ -346,7 +346,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 									SetDiplomacy(gnomish_monarch_player, "enemy", player)
 									SetDiplomacy(player, "enemy", gnomish_monarch_player)
 
-									CPlayer:GetPlayer(GetFactionPlayer("Shinsplitter Clan")).Type = PlayerNeutral
+									SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Type", PlayerNeutral)
 
 									KillUnitAt("unit-revealer", player, 1, {0, 0}, {MaxMapWidth, MaxMapHeight})
 								end}
@@ -453,7 +453,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 												SetDiplomacy(player, "enemy", bandit_player)
 
 												local second_bandit_player = FindUnusedPlayerSlot()
-												CPlayer:GetPlayer(second_bandit_player).Type = PlayerComputer
+												SetPlayerData(second_bandit_player, "Type", PlayerComputer)
 
 												unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
 												SetUnitVariable(unit, "Active", false)

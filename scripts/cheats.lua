@@ -136,7 +136,7 @@ function HandleCheats(str)
 		}
 		for i, unitName in ipairs(bronze_upgrades) do
 			for j=0,PlayerMax - 2 do
-				if (CPlayer:GetPlayer(j).Type ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
+				if (GetPlayerData(j, "Type") ~= PlayerNobody and unitName == GetFactionClassUnitType(GetUpgradeData(unitName, "Class"), GetPlayerData(j, "Faction"))) then
 					SetPlayerData(j, "Allow", unitName, "R")
 				end
 			end
@@ -187,7 +187,7 @@ function HandleCheats(str)
 		ChangeCurrentMapLayer(tonumber(string.sub(str, 9)))
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
-		AddMessage("Player " .. message_player .. " has " .. CPlayer:GetPlayer(message_player).NumBuildingsUnderConstruction .. " under construction buildings.")
+		AddMessage("Player " .. message_player .. " has " .. GetPlayerData(message_player, "NumBuildingsUnderConstruction") .. " under construction buildings.")
 	elseif (string.sub(str, 0, 13) == "prefixed item") then
         local string_list = {}
 		local sep = " "
