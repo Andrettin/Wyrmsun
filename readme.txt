@@ -60,6 +60,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Removed the obsolete Svarinshaug custom map.
 - Fixed issue which caused maps in the user map folder to not appear the Custom Game menu.
+- Removed the Aquitania custom map.
 
 * Miscellaneous
 - Saved games are now stored in [AppData]/Wyrmsun/save, instead of in the game's directory.
