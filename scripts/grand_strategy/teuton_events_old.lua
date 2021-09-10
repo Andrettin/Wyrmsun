@@ -199,7 +199,6 @@ local TeutonEvents = {
 			function(s)
 				DeclareWar(EventFaction.Name, "rome")
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni-tribe" and wyr.preferences.AutomaticBattles == false) then
-					GameSettings.Presets[0].Type = PlayerComputer
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/salzburg.smp")
 					SetCurrentQuest("the-sack-of-iuvavum")

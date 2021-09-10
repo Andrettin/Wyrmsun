@@ -655,7 +655,7 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		local near_starting_location = false
 		for i=0,(PlayerMax - 2) do
-			if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+			if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 				if (math.abs(GetPlayerData(i, "StartPosX") - RandomX) < 4 and math.abs(GetPlayerData(i, "StartPosY") - RandomY) < 4) then
 					near_starting_location = true
 				end
@@ -1769,7 +1769,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 	-- create player units
 	local symmetric_starting_location = {0, 0}
 	for i=0,(PlayerMax - 2) do
-		if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			local faction_type = "tribe"
 			if (GameSettings.TechLevel == CivilizedGunpowderTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel) then
 				faction_type = "polity"
@@ -1810,9 +1810,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
-				CMap:get():get_info().PlayerType[i] = PlayerNobody
+				SetPlayerData(i, "Type", PlayerNobody)
 			else
-				if (CMap:get():get_info().PlayerType[i] ~= PlayerNobody) then
+				if (GetPlayerData(i, "Type") ~= PlayerNobody) then
 					if (player_civilizations ~= nil and player_civilizations[i + 1] ~= nil) then
 						SetPlayerData(i, "RaceName", player_civilizations[i + 1])
 					else
@@ -1884,7 +1884,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 						starting_point_found = false
 					end
 					for j=0,(PlayerMax - 2) do
-						if (j < i and (CMap:get():get_info().PlayerType[j] == PlayerPerson or CMap:get():get_info().PlayerType[j] == PlayerComputer)) then
+						if (j < i and (GetPlayerData(j, "Type") == PlayerPerson or GetPlayerData(j, "Type") == PlayerComputer)) then
 							if (math.abs(player_spawn_point[1] - GetPlayerData(j, "StartPosX")) < 32 and math.abs(player_spawn_point[2] - GetPlayerData(j, "StartPosY")) < 32) then -- shouldn't start too close to another player
 								starting_point_found = false
 							end
@@ -1915,7 +1915,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 					WhileCount = WhileCount + 1
 				end
 				
-				if (CMap:get():get_info().PlayerType[i] ~= PlayerNobody) then
+				if (GetPlayerData(i, "Type") ~= PlayerNobody) then
 					SetStartView(i, player_spawn_point[1], player_spawn_point[2])
 
 					if (no_raw_tile) then
@@ -2313,7 +2313,7 @@ function GenerateRandomMap(arg)
 
 		if (arg.WorkerQuantity) then
 			for i=0,(PlayerMax - 2) do
-				if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+				if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 					for j=1,arg.WorkerQuantity do
 						unit = CreateUnit("unit_germanic_worker", i, {GetPlayerData(i, "StartPosX"), GetPlayerData(i, "StartPosY")})
 					end
@@ -2322,7 +2322,7 @@ function GenerateRandomMap(arg)
 		end
 
 		for i=0,(PlayerMax - 2) do
-			if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+			if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 				if (GetPlayerData(i, "RaceName") == "dwarf") then
 					CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
 					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
@@ -4017,7 +4017,7 @@ function GenerateValley(direction, lake_quantity)
 	CreateDecorations()	
 
 	for i=0,(PlayerMax - 2) do
-		if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			unit = CreateUnit("unit_germanic_worker", i, {GetPlayerData(i, "StartPosX"), GetPlayerData(i, "StartPosY")})
 			unit = CreateUnit("unit_germanic_worker", i, {GetPlayerData(i, "StartPosX"), GetPlayerData(i, "StartPosY")})
 			unit = CreateUnit("unit_germanic_worker", i, {GetPlayerData(i, "StartPosX"), GetPlayerData(i, "StartPosY")})
@@ -4037,7 +4037,7 @@ function GenerateValley(direction, lake_quantity)
 	CreateCritters()
 
 	for i=0,(PlayerMax - 2) do
-		if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			if (GetPlayerData(i, "RaceName") == "dwarf") then
 				CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
 				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
@@ -5571,7 +5571,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 
 			-- create player 2's units
 			Count = 1
-			if (CMap:get():get_info().PlayerType[1] == PlayerNobody) then
+			if (GetPlayerData(1, "Type") == PlayerNobody) then
 				Count = 0
 			end
 			WhileCount = 0
@@ -5983,7 +5983,7 @@ function GenerateCave(town_halls, symmetric)
 	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 
 	for i=0,(PlayerMax - 2) do
-		if (CMap:get():get_info().PlayerType[i] == PlayerPerson or CMap:get():get_info().PlayerType[i] == PlayerComputer) then
+		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			for j=1,5 do
 				unit = CreateUnit("unit_germanic_worker", i, {GetPlayerData(i, "StartPosX"), GetPlayerData(i, "StartPosY")})
 			end

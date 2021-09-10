@@ -178,9 +178,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("norlund-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[1].Type = PlayerComputer
-				GameSettings.Presets[2].Type = PlayerComputer
-
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
 				SetCurrentQuest("a-bargain-is-struck")
@@ -212,9 +209,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[0].Type = PlayerComputer
-				GameSettings.Presets[1].Type = PlayerComputer
-
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
 				SetCurrentQuest("a-bargain-is-struck")
@@ -246,8 +240,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("norlund-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[1].Type = PlayerComputer
-
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
 				SetCurrentQuest("closing-the-gates")
@@ -275,8 +267,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[0].Type = PlayerComputer
-
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
 				SetCurrentQuest("closing-the-gates")
@@ -437,8 +427,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[0].Type = PlayerComputer
-				GameSettings.Presets[1].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
 				SetCurrentQuest("hills-of-the-shorbear-clan")
@@ -467,8 +455,6 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
 			if ("shorbear-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
-				GameSettings.Presets[0].Type = PlayerComputer
-				GameSettings.Presets[2].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
 				SetCurrentQuest("hills-of-the-shorbear-clan")
@@ -555,7 +541,6 @@ local NidavellirEvents = {
 		OptionEffects = {function(s)
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
-				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
 				SetCurrentQuest("the-wyrm")
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
@@ -640,7 +625,6 @@ local NidavellirEvents = {
 		OptionEffects = {function(s)
 			if ("shinsplitter-clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
-				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
 				SetCurrentQuest("caverns-of-flame")
 				RunMap("maps/nidavellir/caverns-of-flame.smp")

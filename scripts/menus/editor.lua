@@ -20,7 +20,7 @@ end
 function RunEditorSaveMenu()
 	local map_has_person_player = false
 	for i = 0,(PlayerMax - 2) do
-		if (CMap:get():get_info().PlayerType[i] == 5) then
+		if (GetPlayerData(i, "Type") == 5) then
 			map_has_person_player = true
 			break
 		end
@@ -124,7 +124,7 @@ function RunEditorPlayerProperties()
 --	for i = 1,(PlayerMax - 1) do
 	for i = 1,(16 - 1) do -- allow only 16 players in the editor
 		player_properties[i] = {}
-		player_properties[i]["Type"] = CMap:get():get_info().PlayerType[i-1] - 2
+		player_properties[i]["Type"] = GetPlayerData(i-1, "Type") - 2
 		player_properties[i]["Civilization"] = GetPlayerData(i-1, "RaceName")
 		player_properties[i]["Faction"] = GetPlayerData(i-1, "Faction")
 		player_properties[i]["AI"] = 0
@@ -245,7 +245,7 @@ function RunEditorPlayerProperties()
 		function()
 			for i = 0,(PlayerMax - 2) do
 				if (i < table.getn(player_properties)) then
-					CMap:get():get_info().PlayerType[i] = player_properties[i + 1].Type + 2
+					SetPlayerData(i, "Type", player_properties[i + 1].Type + 2)
 					SetPlayerData(i, "RaceName", player_properties[i + 1].Civilization)
 					SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
 					SetPlayerData(i, "AiName", ais[player_properties[i + 1].AI + 1])
