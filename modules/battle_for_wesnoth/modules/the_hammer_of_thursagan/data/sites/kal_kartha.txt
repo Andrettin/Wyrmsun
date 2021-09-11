@@ -16,6 +16,7 @@ lvov += {
 			}
 			
 			3000 = {
+				owner = none
 				building_classes -= town_hall
 				building_classes -= barracks
 				building_classes -= smithy

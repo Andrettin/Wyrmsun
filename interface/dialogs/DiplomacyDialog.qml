@@ -96,7 +96,7 @@ DialogBase {
 			
 			for (var i = 0; i < list.length; ++i) {
 				var player = list[i]
-				if (player !== wyrmgus.this_player && player.active) {
+				if (player !== wyrmgus.this_player && player.active && player.alive) {
 					new_list.push(player)
 				}
 			}

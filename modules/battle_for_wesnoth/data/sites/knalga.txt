@@ -14,6 +14,7 @@ prague += {
 			}
 			
 			3000 = {
+				owner = none
 				building_classes -= town_hall
 			}
 		}
