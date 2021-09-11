@@ -19,7 +19,6 @@ DialogBase {
 		
 		onClicked: {
 			options_dialog.open()
-			game_menu_dialog.opacity = 0
 		}
 	}
 	

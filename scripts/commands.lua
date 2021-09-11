@@ -1,13 +1,3 @@
-local function HandleIngameCommandKey(key, ctrl, alt, shift)
-	if (key == "f9") then
-		if (not IsNetworkGame()) then SetGamePaused(true) end
-		RunDiplomacyMenu()
-	else
-		return false
-	end
-	return true
-end
-
 local function HandleIneditorCommandKey(key, ctrl, alt, shift)
   if (key == "f5") then -- Map property
     RunEditorMapProperties()
@@ -24,11 +14,11 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
 end
 
 function HandlewarCommandKey(key, ctrl, alt, shift)
-  if (CEditor:get():is_running() == false) then
-    return HandleIngameCommandKey(key, ctrl, alt, shift)
-  else
-    return HandleIneditorCommandKey(key, ctrl, alt, shift)
-  end
+	if (CEditor:get():is_running()) then
+		return HandleIneditorCommandKey(key, ctrl, alt, shift)
+	else
+		return false
+	end
 end
 
 HandleCommandKey = HandlewarCommandKey

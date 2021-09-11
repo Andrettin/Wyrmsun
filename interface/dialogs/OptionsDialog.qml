@@ -45,8 +45,7 @@ DialogBase {
 		interface_style: options_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunDiplomacyMenu();")
-			options_dialog.opacity = 0
+			diplomacy_dialog.open()
 		}
 	}
 	
@@ -61,7 +60,6 @@ DialogBase {
 		
 		onClicked: {
 			options_dialog.close()
-			game_menu_dialog.opacity = 1
 		}
 	}
 }

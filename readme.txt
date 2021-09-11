@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused dropdowns to gain keyboard focus when clicked.
 - Fixed issue which caused text fields to not lose keyboard focus when clicked away from.
 - Fixed issue which caused key events to be propagated to buttons even though a text field had focus.
+- Reworked the in-game menu to be QML-based.
 
 -----------------------------------------------------------------------
 - 5.0.1

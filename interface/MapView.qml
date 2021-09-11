@@ -298,6 +298,11 @@ Item {
 					preferences_dialog.open()
 				}
 				break
+			case Qt.Key_F9:
+				if (!wyrmgus.map_editor.running) {
+					diplomacy_dialog.open()
+				}
+				break
 			default:
 				break
 		}
