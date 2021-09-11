@@ -12,7 +12,7 @@ DialogBase {
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.right: enemy_label.left
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
 		text: "Allied"
 	}
 	
@@ -21,7 +21,7 @@ DialogBase {
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		anchors.right: shared_vision_label.left
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
 		text: "Enemy"
 	}
 	
@@ -61,8 +61,28 @@ DialogBase {
 			}
 			
 			RadioImageButton {
+				id: allied_radio_button
+				x: allied_label.x - parent.parent.x + allied_label.width / 2 - width / 2 //place at the horizontal center of the label
+				anchors.verticalCenter: parent.verticalCenter
+				interface_style: diplomacy_dialog.interface_style
+				
+				onCheckedChanged: {
+				}
+			}
+			
+			RadioImageButton {
+				id: enemy_radio_button
+				x: enemy_label.x - parent.parent.x + enemy_label.width / 2 - width / 2 //place at the horizontal center of the label
+				anchors.verticalCenter: parent.verticalCenter
+				interface_style: diplomacy_dialog.interface_style
+				
+				onCheckedChanged: {
+				}
+			}
+			
+			RadioImageButton {
 				id: shared_vision_radio_button
-				anchors.right: parent.right
+				x: shared_vision_label.x - parent.parent.x + shared_vision_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
 				interface_style: diplomacy_dialog.interface_style
 				
