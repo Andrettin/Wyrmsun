@@ -24,7 +24,7 @@ Item {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: sound_effects_radio_button
 		anchors.left: sound_effects_volume_slider.right
 		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor

@@ -20,7 +20,7 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: scale_factor_radio_button
 		anchors.left: music_slider.left
 		anchors.top: music_slider.bottom

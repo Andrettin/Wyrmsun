@@ -7,7 +7,7 @@ DialogBase {
 	panel: 5
 	title: "Preferences"
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_hotkeys_radio_button
 		anchors.left: game_speed_slider.left
 		anchors.top: title_item.bottom
@@ -21,7 +21,7 @@ DialogBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: reverse_mousewheel_scrolling_radio_button
 		anchors.left: game_speed_slider.left
 		anchors.top: show_hotkeys_radio_button.bottom

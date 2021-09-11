@@ -37,7 +37,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: autosave_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_hero_symbol_radio_button.top
@@ -50,7 +50,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_hero_symbol_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_messages_radio_button.top
@@ -63,7 +63,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_messages_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_pathlines_radio_button.top
@@ -76,7 +76,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_pathlines_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
@@ -88,7 +88,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_player_color_circle_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_pathlines_radio_button.bottom
@@ -101,7 +101,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_resource_bar_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_player_color_circle_radio_button.bottom
@@ -114,7 +114,7 @@ MenuBase {
 		}
 	}
 	
-	RadioImageButton {
+	LabeledRadioImageButton {
 		id: show_tips_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_resource_bar_radio_button.bottom
