@@ -21,9 +21,22 @@ DialogBase {
 		bottomMargin: 0
 		boundsBehavior: Flickable.StopAtBounds
 		clip: true
-		model: ["Knalga", "Kal Kartha", "Lyr", "Shorbear Clan"]
+		model: filter_list(wyrmgus.non_neutral_players)
 		delegate: NormalText {
-			text: modelData
+			text: modelData.name
+		}
+		
+		function filter_list(list) {
+			var new_list = []
+			
+			for (var i = 0; i < list.length; ++i) {
+				var player = list[i]
+				if (player !== wyrmgus.this_player && player.active) {
+					new_list.push(player)
+				}
+			}
+			
+			return new_list
 		}
 	}
 	
