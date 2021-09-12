@@ -65,7 +65,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus.game
-		onStarted: {
+		function onStarted() {
 			var underlay_component = Qt.createComponent("MapViewUnderlay.qml")
 			
 			if (underlay_component.status == Component.Error) {
@@ -88,7 +88,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus.game
-		onStopped: {
+		function onStopped() {
 			if (wyrmgus.game.results !== null) {
 				if (wyrmgus.game.results.victory || wyrmgus.game.results.defeat || wyrmgus.game.results.draw) {
 					menu_stack.push("menus/ResultsMenu.qml")

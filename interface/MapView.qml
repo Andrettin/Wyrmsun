@@ -310,7 +310,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus
-		onEncyclopediaEntryOpened: {
+		function onEncyclopediaEntryOpened(link) {
 			map_view.create_menu(["menus/EncyclopediaEntryMenu.qml", {
 				entry: wyrmgus.get_link_target(link)
 			}])

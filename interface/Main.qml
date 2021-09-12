@@ -23,7 +23,7 @@ Window {
 	
 	Connections {
 		target: wyrmgus
-		onRunningChanged: {
+		function onRunningChanged() {
 			if (!wyrmgus.parameters.test_run && wyrmgus.running) {
 				var component = Qt.createComponent("Viewport.qml")
 				

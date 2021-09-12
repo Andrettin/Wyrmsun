@@ -123,7 +123,7 @@ DialogBase {
 			Connections {
 				target: wyrmgus.this_player
 				
-				onDiplomatic_stances_changed: {
+				function onDiplomatic_stances_changed() {
 					allied_radio_button.checked = wyrmgus.this_player.has_allied_stance_with_sync(modelData)
 					enemy_radio_button.checked = wyrmgus.this_player.has_enemy_stance_with_sync(modelData)
 				}
@@ -132,7 +132,7 @@ DialogBase {
 			Connections {
 				target: wyrmgus.this_player
 				
-				onShared_vision_changed: {
+				function onShared_vision_changed() {
 					shared_vision_radio_button.checked = wyrmgus.this_player.has_shared_vision_with_sync(modelData)
 				}
 			}
