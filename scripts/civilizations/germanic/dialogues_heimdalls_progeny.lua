@@ -55,7 +55,7 @@ DefineDialogue("jarl-meets-the-thrallings", {
 	Nodes = {
 		{
 			"speaker", "character", "thrahila",
-			"text", "Who are you and what do you want with me and his sons?"
+			"text", "Who are you and what do you want with me and my sons?"
 		},
 		{
 			"speaker", "character", "erala",
