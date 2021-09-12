@@ -100,6 +100,7 @@ Popup {
 	}
 	
 	Component.onCompleted: {
+		wyrmgus.install_event_filter_on(pane)
 		parent.popups.push(dialog)
 	}
 }
