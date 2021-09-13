@@ -16,6 +16,7 @@ Popup {
 	property int panel: 1
 	property string title: ""
 	readonly property var title_item: title_text
+	property bool open_when_menu_is_closed: false
 	
 	background: Image {
 		source: "image://interface/" + interface_style + "/panel/" + panel

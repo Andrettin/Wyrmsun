@@ -249,5 +249,19 @@ MenuBase {
 		id: previous_menu_button
 		anchors.top: technologies_button.bottom
 		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		
+		onClicked: {
+			if (map_view) {
+				if (game_menu_dialog.open_when_menu_is_closed) {
+					game_menu_dialog.open_when_menu_is_closed = false
+					game_menu_dialog.open()
+				}
+				
+				if (help_dialog.open_when_menu_is_closed) {
+					help_dialog.open_when_menu_is_closed = false
+					help_dialog.open()
+				}
+			}
+		}
 	}
 }

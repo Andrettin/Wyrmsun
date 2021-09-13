@@ -17,9 +17,13 @@ DialogBase {
 		interface_style: help_dialog.interface_style
 		
 		onClicked: {
-			map_view.create_menu(["menus/EncyclopediaMenu.qml"])
-			game_menu_dialog.close()
+			if (game_menu_dialog.opened) {
+				game_menu_dialog.open_when_menu_is_closed = true
+				game_menu_dialog.close()
+			}
+			help_dialog.open_when_menu_is_closed = true
 			help_dialog.close()
+			map_view.create_menu(["menus/EncyclopediaMenu.qml"])
 		}
 	}
 	
