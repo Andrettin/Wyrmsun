@@ -18,7 +18,6 @@ DialogBase {
 		
 		onClicked: {
 			map_view.create_menu(["menus/EncyclopediaMenu.qml"])
-			game_menu_dialog.opacity = 1
 			game_menu_dialog.close()
 			help_dialog.close()
 		}
@@ -34,8 +33,7 @@ DialogBase {
 		interface_style: help_dialog.interface_style
 		
 		onClicked: {
-			wyrmgus.call_lua_command("RunKeystrokeHelpMenu();")
-			help_dialog.opacity = 0
+			hotkeys_dialog.open()
 		}
 	}
 	
@@ -50,7 +48,6 @@ DialogBase {
 		
 		onClicked: {
 			help_dialog.close()
-			game_menu_dialog.opacity = 1
 		}
 	}
 }

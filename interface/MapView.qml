@@ -115,6 +115,11 @@ Item {
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	
+	HotkeysDialog {
+		id: hotkeys_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	SaveGameDialog {
 		id: save_game_dialog
 	
@@ -254,6 +259,13 @@ Item {
 					}
 				}
 				break
+			case Qt.Key_M:
+				if (event.modifiers & Qt.AltModifier) {
+					if (!wyrmgus.map_editor.running) {
+						game_menu_dialog.open()
+					}
+				}
+				break
 			case Qt.Key_Q:
 				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
 					quit_mission_confirm_dialog.open()
@@ -301,6 +313,11 @@ Item {
 			case Qt.Key_F9:
 				if (!wyrmgus.map_editor.running) {
 					diplomacy_dialog.open()
+				}
+				break
+			case Qt.Key_Backspace:
+				if (!wyrmgus.map_editor.running) {
+					game_menu_dialog.open()
 				}
 				break
 			default:

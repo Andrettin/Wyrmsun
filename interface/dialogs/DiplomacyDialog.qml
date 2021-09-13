@@ -50,7 +50,6 @@ DialogBase {
 		clip: true
 		model: filter_list(wyrmgus.non_neutral_players)
 		delegate: Item {
-			width: parent.width - diplomacy_list.leftMargin - diplomacy_list.rightMargin
 			height: Math.max(player_label.height, shared_vision_radio_button.height)
 			
 			NormalText {

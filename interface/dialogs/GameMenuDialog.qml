@@ -33,7 +33,6 @@ DialogBase {
 		
 		onClicked: {
 			help_dialog.open()
-			game_menu_dialog.opacity = 0
 		}
 	}
 	
