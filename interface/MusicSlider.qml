@@ -32,6 +32,7 @@ Item {
 		anchors.topMargin: music_volume_slider.slider_item.y + (music_radio_button.height / 2) - (music_volume_slider.slider_item.height / 2)
 		text: "Enabled"
 		checked: wyrmgus.preferences.music_enabled
+		interface_style: sound_effects_slider.interface_style
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.music_enabled = checked

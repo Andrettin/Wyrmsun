@@ -32,6 +32,7 @@ Item {
 		anchors.topMargin: sound_effects_volume_slider.slider_item.y + (sound_effects_radio_button.height / 2) - (sound_effects_volume_slider.slider_item.height / 2)
 		text: "Enabled"
 		checked: wyrmgus.preferences.sound_effects_enabled
+		interface_style: sound_effects_slider.interface_style
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.sound_effects_enabled = checked
