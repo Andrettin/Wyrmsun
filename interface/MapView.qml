@@ -234,6 +234,24 @@ Item {
 			return
 		}
 		
+		if (wyrmgus.game.console_active) {
+			switch (event.key) {
+				case Qt.Key_F1:
+				case Qt.Key_F2:
+				case Qt.Key_F3:
+				case Qt.Key_F4:
+				case Qt.Key_F5:
+				case Qt.Key_F6:
+				case Qt.Key_F7:
+				case Qt.Key_F8:
+				case Qt.Key_F9:
+				case Qt.Key_F10:
+					break
+				default:
+					return
+			}
+		}
+		
 		for (var i = 0; i < map_view.children.length; ++i) {
 			var child_element = map_view.children[i]
 			if (child_element.on_released_key) {
