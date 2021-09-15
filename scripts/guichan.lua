@@ -409,13 +409,6 @@ Widget:setGlobalFont(Fonts["large"])
 
 
 DefaultObjectives = {"- Defeat your rivals"}
---for i=0,(PlayerMax - 2) do
---	for key, value in pairs(CustomPlayerData) do
---		if (CustomPlayerData[key].Number == i) then
---			CustomPlayerData[key].Objectives = DefaultObjectives
---		end
---	end
---end
 
 
 -- Define the different menus ----------
@@ -424,44 +417,6 @@ function InitGameSettings()
 	GameSettings:reset()
 end
 InitGameSettings()
-
-function RunMap(map, objective, fow, revealmap)
-	if (LoadedGame == false) then
-		ClearPlayerDataObjectives()
-
-		if objective == nil then
-			for key, value in pairs(CustomPlayerData) do
-				CustomPlayerData[key].Objectives = DefaultObjectives
-			end
-		else
-			for key, value in pairs(CustomPlayerData) do
-				CustomPlayerData[key].Objectives = objective
-			end
-		end
-	end
-	local loop = true
-	while (loop) do
-		play_loading_music()
-
-		InitGameVariables()
-		if fow ~= nil then
-			SetFogOfWar(fow)
-		end
-		if revealmap == true then
-			RevealMap()
-		end
-		StartMap(map, true)
-		if GameResult ~= GameRestart then
-			loop = false
-		end
-	end
-
-	InitGameSettings()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	
-	SetCurrentCampaign("")
-	SetCurrentQuest("")
-end
 
 mapname = "maps/random/random-map-swamp.smp"
 modname = ""
@@ -618,8 +573,4 @@ if (is_test_run()) then
 	return
 end
 
-if (CliMapName and CliMapName ~= "") then
-	RunMap(CliMapName)
-else
-	RunProgramStartMenu()
-end
+RunProgramStartMenu()

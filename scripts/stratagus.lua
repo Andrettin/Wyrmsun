@@ -211,6 +211,12 @@ DefineVariables(
 --  Default triggers for single player
 --    (FIXME: must be combined with game types)
 
+function SetDefaultPlayerDataObjectives()
+	for key, value in pairs(CustomPlayerData) do
+		CustomPlayerData[key].Objectives = DefaultObjectives
+	end
+end
+
 function ClearPlayerDataObjectives()
 	for key, value in pairs(CustomPlayerData) do
 		for i = 1, table.getn(CustomPlayerData[key].Objectives) do
@@ -218,7 +224,6 @@ function ClearPlayerDataObjectives()
 		end
 	end
 end
-
 
 function SinglePlayerTriggers()
 	AddTrigger("default-defeat",

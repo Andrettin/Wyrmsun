@@ -110,7 +110,6 @@ function addPlayersList(menu, numplayers)
   return updatePlayers
 end
 
-
 function RunJoiningMapMenu(s)
 	local menu
 	local listener

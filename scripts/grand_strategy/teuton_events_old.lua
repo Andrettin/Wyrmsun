@@ -81,11 +81,6 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebi_tribe" and wyr.preferences.AutomaticBattles == false) then
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/earth/belfort.smp")
-					SetCurrentQuest("the-battle-of-magetobria")
-					RunMap("maps/earth/belfort.smp")
-					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Alsace, "suebi_tribe")
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
@@ -131,11 +126,6 @@ local TeutonEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebi_tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.marcomanni_tribe
 					SetPlayerFaction("teuton", "marcomanni-tribe")
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/earth/prague.smp")
-					SetCurrentQuest("the-home-of-the-boii")
-					RunMap("maps/earth/prague.smp")
-					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
 						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
@@ -199,11 +189,6 @@ local TeutonEvents = {
 			function(s)
 				DeclareWar(EventFaction.Name, "rome")
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni-tribe" and wyr.preferences.AutomaticBattles == false) then
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/earth/salzburg.smp")
-					SetCurrentQuest("the-sack-of-iuvavum")
-					RunMap("maps/earth/salzburg.smp")
-					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
 					end
@@ -239,14 +224,8 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni-tribe" and wyr.preferences.AutomaticBattles == false) then
-					GrandStrategyEventMap = true
-					GetMapInfo("maps/earth/oderzo.smp")
-					SetCurrentQuest("the-razing-of-opitergium")
-					RunMap("maps/earth/oderzo.smp")
-					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
-					elseif (GameResult == GameDefeat) then
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
