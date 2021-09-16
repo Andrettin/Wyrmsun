@@ -19,7 +19,20 @@ ice = {
 		cave_floor
 		rockbound_cave_floor
 	}
-	solid_tiles = { 17 20 23 }
+	solid_tiles = {
+		17 = 256
+		20 = 256
+		23 = 256
+		13 = 1
+		14 = 1
+		15 = 1
+		29 = 1
+		30 = 1
+		31 = 1
+		45 = 1
+		46 = 1
+		47 = 1
+	}
 	adjacent_transition_tiles = {
 		any = {
 			north = { 33 36 39 }
