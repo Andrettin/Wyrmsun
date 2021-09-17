@@ -114,7 +114,7 @@ function RunEditorPlayerProperties()
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_("Player Properties"), sizeX / 2, 11 * get_scale_factor())
 
-	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
+	local types = {"neutral", "nobody", "computer", "person", "rescue_passive", "rescue_active"}
 	local civilization_names = GetCivilizations(true)
 	local faction_list = {}
 	local ais = { "passive", "land-attack", "northern-wastelands-goblins", "sea-attack" }

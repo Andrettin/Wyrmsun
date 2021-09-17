@@ -487,7 +487,7 @@ function GetMapInfo(mapname)
 
 	function PresentMap(description, nplayers, w, h, id)
 		mapinfo.description = description
-		-- nplayers includes rescue-passive and rescue-active
+		-- nplayers includes rescue_passive and rescue_active
 		-- calculate the real nplayers in DefinePlayerTypes
 		--mapinfo.nplayers = nplayers
 		mapinfo.w = w

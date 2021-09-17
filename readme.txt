@@ -57,6 +57,12 @@ https://github.com/Andrettin/Wyrmsun
 - 5.1.1
 -----------------------------------------------------------------------
 
+* Maps
+- Fixed a crash when loading the map infos, when starting the Custom Game menu.
+
+* Miscellaneous
+- Fixed issue with getting a player's type (e.g. person, computer) through Lua, which caused problems with triggers.
+
 * Terrain
 - The snow transition graphics have been updated.
 - Added new snow decoration tiles.
