@@ -1740,11 +1740,8 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BluntResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {Transport = "only", Building = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Transport = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = PopupDescriptionFont}}
-				},
-				{ 	Condition = {Transport = "only", Building = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {GarrisonedRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Garrisoned Range Bonus: +"), String(TypeVar("GarrisonedRangeBonus", "Value"))), Font = PopupDescriptionFont}}
