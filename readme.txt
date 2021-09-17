@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Fixed a crash when loading the map infos, when starting the Custom Game menu.
+- Fixed issue when saving a game for a map which had multiple map layers, resulting in a crash when that game was loaded.
 
 * Miscellaneous
 - Fixed issue with getting a player's type (e.g. person, computer) through Lua, which caused problems with triggers.
