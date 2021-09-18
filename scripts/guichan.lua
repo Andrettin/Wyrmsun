@@ -514,7 +514,10 @@ function BuildProgramStartMenu()
 	if (CanAccessFile("wyr/quests.lua")) then
 		Load("wyr/quests.lua") -- load the quests here, so that the achievement unlocked dialogs can appear properly
 		SaveQuestCompletion()
+		save_achievements()
 	end
+	
+	check_achievements() -- check achievements here, so that the achievement unlocked dialogs can appear properly
 	
 	return menu:run()
 end
