@@ -2,7 +2,9 @@ pine_tree_snow = {
 	name = "Pine Tree (Snow)"
 	character = !
 	color = { 64 128 64 }
-	base_terrain_types = { snow }
+	base_terrain_types = {
+		snow
+	}
 	overlay = true
 	image_file = "terrain/pine_tree_snow.png"
 	flags = {

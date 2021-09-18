@@ -1,6 +1,7 @@
 road = {
 	name = "Road"
 	character = _
+	color = { 139 69 19 }
 	overlay = true
 	pathway = true
 	allow_single = true
