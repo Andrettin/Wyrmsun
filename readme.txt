@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.1.2
 -----------------------------------------------------------------------
 
+* Quests
+- Quest completion data is now stored in [AppData]/Wyrmsun/quests.txt, instead of in the game's directory.
+
 -----------------------------------------------------------------------
 - 5.1.1
 -----------------------------------------------------------------------
