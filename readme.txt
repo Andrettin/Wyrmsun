@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which could cause a settlement with no minimap color to be picked for settlement site generation in random maps.
 - Removed the obsolete Gardariki, Italy, Southern Baltic and Tanais custom maps.
 
+* Miscellaneous
+- Fixed issue which could cause player data to not be cleared properly after a game.
+
 * Quests
 - Quest completion data is now stored in [AppData]/Wyrmsun/quests.txt, instead of in the game's directory.
 - Achievement data is now stored in [AppData]/Wyrmsun/achievements.txt, instead of in the game's directory.
