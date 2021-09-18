@@ -19,6 +19,8 @@ space = {
 		snow
 		dry_mud_hell
 		mud_hell
+		cave_floor
+		rockbound_cave_floor
 	}
 	solid_tiles = {
 		13 = 1
