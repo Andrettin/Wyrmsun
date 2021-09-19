@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.1.2
 -----------------------------------------------------------------------
 
+* Map Editor
+- Setting a tile's terrain in the editor will now remove any units on it which are incompatible with the new terrain. Previously, they would be bumped to the nearest valid tile.
+
 * Maps
 - Fixed issue which could cause a settlement with no minimap color to be picked for settlement site generation in random maps.
 - Removed the obsolete Gardariki, Italy, Southern Baltic and Tanais custom maps.
