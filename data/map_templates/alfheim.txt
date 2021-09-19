@@ -44,6 +44,7 @@ alfheim_space = {
 		unit_gold_deposit = 1
 		unit_iron_deposit = 1
 		unit_tree_stump = 2
+		unit_elven_swordsman = 32
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
