@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Achievement data is now stored in [AppData]/Wyrmsun/achievements.txt, instead of in the game's directory.
 - Fixed crash which occurred during the introductory dialogue of the A Bargain is Struck legacy quest.
 
+* Terrain
+- Fixed issue which caused forest regeneration to not trigger.
+
 -----------------------------------------------------------------------
 - 5.1.1
 -----------------------------------------------------------------------
