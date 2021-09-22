@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which could cause player data to not be cleared properly after a game.
+- Fixed visibility issue which could occur when destroying cave walls during a game.
 
 * Quests
 - Quest completion data is now stored in [AppData]/Wyrmsun/quests.txt, instead of in the game's directory.
