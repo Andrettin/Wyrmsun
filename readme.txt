@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed visibility issue which could occur when destroying cave walls during a game.
 - Reworked how the minimap keeps track of unexplored/fog of war areas, improving performance (specially on larger maps).
 
+* Pathfinding
+- Fixed a pathfinding issue involving land/fly-low units.
+
 * Quests
 - Quest completion data is now stored in [AppData]/Wyrmsun/quests.txt, instead of in the game's directory.
 - Achievement data is now stored in [AppData]/Wyrmsun/achievements.txt, instead of in the game's directory.
