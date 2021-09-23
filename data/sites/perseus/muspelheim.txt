@@ -4,6 +4,5 @@ muspelheim = {
 	right_ascension = 2.12.31.478
 	declination = 51.7787
 	astrodistance = 1030
-	astrodistance_additive_modifier = -100 #reduced the astrodistance, so that it will be applied on a 512x512 map
 	base_unit_type = unit_yellow_star #dwarf star
 }
