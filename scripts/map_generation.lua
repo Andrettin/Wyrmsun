@@ -1463,7 +1463,7 @@ function CreateCritters(arg)
 				and GetUnitTypeData(unit_type_list[i], "Fauna")
 				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetWorldData(GetSpeciesData(species, "Homeworld"), "Name"))
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
-				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
+				and (GetUnitTypeData(unit_type_list[i], "Domain") ~= "air" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
 				and (GetSpeciesData(species, "Prehistoric") == false or (GetCurrentQuest() == "" and GetCurrentCampaign() == ""))
 			) then
@@ -1507,11 +1507,11 @@ function CreateCritters(arg)
 						if not (
 							(
 								(
-									GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "land") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false
+									GetUnitTypeData(critter_unit_type, "Domain") == "land" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "land") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false
 								)
-								or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "water") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
-								or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
-								or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "air-unpassable") == false)
+								or (GetUnitTypeData(critter_unit_type, "Domain") == "water" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "water") and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
+								or (GetUnitTypeData(critter_unit_type, "Domain") == "air_low" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "unpassable") == false)
+								or (GetUnitTypeData(critter_unit_type, "Domain") == "air" and GetTileTerrainHasFlag(RandomX + sub_x, RandomY + sub_y, "air-unpassable") == false)
 							)
 							and (GetArrayIncludes(critter_terrains[chosen_critter], GetTileTerrainName(RandomX + sub_x, RandomY + sub_y)) or GetArrayIncludes(GetSpeciesData(GetUnitTypeData(critter_unit_type, "Species"), "Terrains"), GetTileTerrainName(RandomX + sub_x, RandomY + sub_y)))
 						) then

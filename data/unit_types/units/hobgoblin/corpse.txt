@@ -13,7 +13,7 @@ unit_hobgoblin_dead_body = {
 	sight_range = 1
 	missile = missile_none
 	priority = 0
-	type = land
+	domain = land
 	vanishes = true
 	detritus = true
 }

@@ -36,7 +36,7 @@ DefineUnitType("unit-template-item", {
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	Missile = "missile-none",
 	Priority = 0,
-	Type = "land",
+	Domain = "land",
 	NumDirections = 1,
 	Item = true,
 	ButtonPopup = "popup_item",

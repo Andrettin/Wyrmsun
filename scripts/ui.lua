@@ -1845,10 +1845,10 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {EtherealVision = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Ethereal Vision", Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {Trader = "only", UnitTypeType = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Trader = "only", UnitDomain = "land", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign markets"), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {Trader = "only", UnitTypeType = "naval", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Trader = "only", UnitDomain = "water", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Trades with foreign docks"), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {TownHall = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",

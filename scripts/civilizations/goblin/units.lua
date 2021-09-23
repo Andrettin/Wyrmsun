@@ -446,7 +446,7 @@ DefineUnitType("unit-goblin-glider", {
 	Priority = 40,
 	Points = 40,
 	Demand = 1,
-	Type = "fly",
+	Domain = "air",
 --	Corpse = "unit-goblin-dead-body",
 	RightMouseAction = "move",
 	DetectCloak = true,
@@ -687,7 +687,6 @@ DefineUnitType("unit-goblin-wall", {
 	Description = "Goblin stonecrafters build sturdy walls, masses of stone that fortify their settlements from enemy attack."
 } )
 
-
 DefineUnitType("unit-goblin-banner", {
 	Name = "Banner",
 	Civilization = "goblin",
@@ -705,7 +704,7 @@ DefineUnitType("unit-goblin-banner", {
 	SightRange = 1,
 	Missile = "missile-none",
 	Priority = 0,
-	Type = "land",
+	Domain = "land",
 	VisibleUnderFog = true,
 	Building = true,
 	BuilderOutside = true,

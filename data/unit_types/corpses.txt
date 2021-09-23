@@ -12,7 +12,7 @@ unit_gnoll_dead_body = {
 	sight_range = 1
 	missile = missile_none
 	priority = 0
-	type = land
+	domain = land
 	vanishes = true
 	detritus = true
 	variations = {
@@ -38,7 +38,7 @@ unit_orc_dead_body = {
 	sight_range = 1
 	missile = missile_none
 	priority = 0
-	type = land
+	domain = land
 	vanishes = true
 	detritus = true
 }
