@@ -4,6 +4,7 @@ cave_floor = {
 	color = { 160 160 160 }
 	image_file = "terrain/cave_floor.png"
 	buildable = true
+	allow_single = true
 	flags = {
 		land
 		stone_floor

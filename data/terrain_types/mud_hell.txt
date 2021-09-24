@@ -6,6 +6,7 @@ mud_hell = {
 		mud
 	}
 	image_file = "terrain/mud.png"
+	allow_single = true
 	hue_rotation = -30
 	inner_border_terrain_types = {
 		cave_floor

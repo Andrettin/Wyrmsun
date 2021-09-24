@@ -6,8 +6,9 @@ dry_mud = {
 		H #dry hills
 	}
 	color = { 128 64 0 }
-	buildable = true
 	image_file = "terrain/dry_mud.png"
+	buildable = true
+	allow_single = true
 	flags = { land }
 	outer_border_terrain_types = {
 		mud

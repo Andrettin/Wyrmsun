@@ -1,7 +1,8 @@
 dry_mud_hell = {
 	name = "Dry Mud (Hell)"
-	buildable = true
 	image_file = "terrain/dry_mud.png"
+	buildable = true
+	allow_single = true
 	hue_rotation = -30
 	flags = { land }
 	outer_border_terrain_types = {

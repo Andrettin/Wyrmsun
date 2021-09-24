@@ -32,7 +32,8 @@ DefineTerrainType("rockbound-cave-floor", {
 	Flags = {"land", "no-building", "gravel", "underground"},
 	InnerBorderTerrains = {"dirt", "dry_dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
-	SolidTiles = {0, 1, 2}
+	SolidTiles = {0, 1, 2},
+	AllowSingle = true
 })
 
 DefineTerrainType("chasm", {

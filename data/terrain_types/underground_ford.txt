@@ -2,12 +2,13 @@ underground_ford = {
 	name = "Underground Ford"
 	character = O
 	color = { 0 112 224 }
+	image_file = "terrain/ford.png"
+	allow_single = true
 	flags = {
 		land
 		no_building
 		underground
 	}
-	image_file = "terrain/ford.png"
 	inner_border_terrain_types = {
 		snow
 		mud

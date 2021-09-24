@@ -9,6 +9,7 @@ snow = {
 	image_file = "terrain/snow.png"
 	buildable = true
 	snowy = true
+	allow_single = true
 	flags = {
 		land
 		snow

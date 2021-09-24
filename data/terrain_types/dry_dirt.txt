@@ -2,6 +2,7 @@ dry_dirt = {
 	name = "Dry Dirt"
 	image_file = "terrain/dirt.png"
 	buildable = true
+	allow_single = true
 	hue_rotation = 5
 	flags = {
 		land

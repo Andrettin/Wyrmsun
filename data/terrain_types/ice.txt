@@ -4,6 +4,7 @@ ice = {
 	color = { 160 160 192 }
 	image_file = "terrain/ice.png"
 	snowy = true
+	allow_single = true
 	flags = {
 		land
 		no_building

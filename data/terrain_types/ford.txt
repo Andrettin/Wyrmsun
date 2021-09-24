@@ -3,6 +3,7 @@ ford = {
 	character = o
 	color = { 0 128 192 }
 	image_file = "terrain/ford.png"
+	allow_single = true
 	flags = {
 		land
 		no_building

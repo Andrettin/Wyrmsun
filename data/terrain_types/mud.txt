@@ -5,12 +5,13 @@ mud = {
 		M #swamp water reed
 	}
 	color = { 192 64 64 }
+	image_file = "terrain/mud.png"
+	allow_single = true
 	flags = {
 		land
 		no_building
 		mud
 	}
-	image_file = "terrain/mud.png"
 	inner_border_terrain_types = {
 		cave_floor
 	}
