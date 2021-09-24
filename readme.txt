@@ -82,6 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 - The cave floor, desert sand and ford transition graphics have been updated.
 - Added new cave floor, desert sand and ford decoration tiles.
 
+* User Interface
+- Improved the performance of the code which identifies which unit is currently under the cursor.
+
 -----------------------------------------------------------------------
 - 5.1.1
 -----------------------------------------------------------------------
