@@ -1,22 +1,23 @@
-ford = {
-	name = "Ford"
-	character = o
-	color = { 0 128 192 }
-	image_file = "terrain/ford.png"
+desert_sand = {
+	name = "Desert Sand"
+	character = e
+	character_aliases = {
+		E #dunes/sandy hills
+	}
+	color = { 255 255 0 }
+	image_file = "terrain/desert_sand.png"
 	flags = {
 		land
 		no_building
+		dirt
+		desert
 	}
 	inner_border_terrain_types = {
-		snow
-		mud
-		dirt
 		dry_dirt
+		dirt
 		dry_mud
-		desert_sand
 		cave_floor
-		rockbound_cave_floor
-		ice
+		mud
 	}
 	solid_tiles = {
 		17 = 256

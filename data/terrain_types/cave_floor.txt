@@ -1,22 +1,20 @@
-ford = {
-	name = "Ford"
-	character = o
-	color = { 0 128 192 }
-	image_file = "terrain/ford.png"
+cave_floor = {
+	name = "Cave Floor"
+	character = c
+	color = { 160 160 160 }
+	image_file = "terrain/cave_floor.png"
+	buildable = true
 	flags = {
 		land
-		no_building
+		stone_floor
+		underground
 	}
 	inner_border_terrain_types = {
-		snow
-		mud
 		dirt
 		dry_dirt
-		dry_mud
-		desert_sand
-		cave_floor
+	}
+	outer_border_terrain_types = {
 		rockbound_cave_floor
-		ice
 	}
 	solid_tiles = {
 		17 = 256

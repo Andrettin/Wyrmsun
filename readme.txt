@@ -79,6 +79,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Terrain
 - Fixed issue which caused forest regeneration to not trigger.
+- The cave floor, desert sand and ford transition graphics have been updated.
+- Added new cave floor, desert sand and ford decoration tiles.
 
 -----------------------------------------------------------------------
 - 5.1.1
