@@ -75,7 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Quest completion data is now stored in [AppData]/Wyrmsun/quests.txt, instead of in the game's directory.
 - Achievement data is now stored in [AppData]/Wyrmsun/achievements.txt, instead of in the game's directory.
-- Fixed crash which occurred during the introductory dialogue of the A Bargain is Struck legacy quest.
+- Fixed crash which occurred when Lua scripts tried to create a new player during a game, which occurred e.g. for the introductory dialogue of the A Bargain is Struck legacy quest.
 
 * Terrain
 - Fixed issue which caused forest regeneration to not trigger.
