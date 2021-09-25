@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - Setting a tile's terrain in the editor will now remove any units on it which are incompatible with the new terrain. Previously, they would be bumped to the nearest valid tile.
+- Fixed issue which caused hue-rotated terrain to not show up with the correct color in the map editor's tile selection menu.
 
 * Maps
 - Fixed issue which could cause a settlement with no minimap color to be picked for settlement site generation in random maps.
