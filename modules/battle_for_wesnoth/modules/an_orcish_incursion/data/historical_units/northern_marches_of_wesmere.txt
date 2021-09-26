@@ -1,0 +1,15 @@
+northern_marches_of_wesmere_troll_leader = { #Urugha
+	unit_type = unit_troll_warrior #Orc Warrior
+	
+	history = {
+		years_wesnoth = {
+			8 = {
+				active = true
+				location = {
+					map_template = northern_marches_of_wesmere
+					pos = { 4 3 }
+				}
+			}
+		}
+	}
+}

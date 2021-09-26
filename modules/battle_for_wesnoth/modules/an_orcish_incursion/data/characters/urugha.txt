@@ -1,0 +1,7 @@
+urugha = {
+	name = "Urugha"
+	unit_type = unit_orc_spearthrower #Orc Warrior
+	civilization = orc
+	gender = male
+	base_level = 2 #Orc Warrior
+}

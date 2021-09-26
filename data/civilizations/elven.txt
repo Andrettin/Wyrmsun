@@ -258,7 +258,6 @@ elf = {
 			"Eoworfildor" #from Battle for Wesnoth
 			"Eowowyn" #"Eowówyn"; from Battle for Wesnoth
 			"Eowylas" #from Battle for Wesnoth
-			"Erlornas"
 			"Fadriendel" #from Battle for Wesnoth
 			"Fandel" #from Battle for Wesnoth
 			"Farandir" #from Battle for Wesnoth
@@ -376,7 +375,6 @@ elf = {
 			"Linduilas" #from Battle for Wesnoth
 			"Lomadrieril" #"Lómadrieril"; from Battle for Wesnoth
 			"Lomarand" #"Lómarand"; from Battle for Wesnoth
-			"Lomarfel"
 			"Lomariand" #"Lómariand"; from Battle for Wesnoth
 			"Lomebrilad" #"Lómebrilad"; from Battle for Wesnoth
 			"Lomebrind" #"Lómebrind"; from Battle for Wesnoth

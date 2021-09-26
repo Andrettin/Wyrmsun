@@ -1,0 +1,19 @@
+lomarfel = {
+	name = "Lomarfel"
+	unit_type = unit_elven_swordsman
+	civilization = elven
+	gender = male
+	base_level = 2 #Elven Rider
+	
+	history = {
+		years_wesnoth = {
+			8 = {
+				active = true
+				location = {
+					map_template = northern_marches_of_wesmere
+					pos = { 15 18 }
+				}
+			}
+		}
+	}
+}

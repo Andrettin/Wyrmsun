@@ -1,0 +1,19 @@
+erlornas = {
+	name = "Erlornas"
+	unit_type = unit_elven_swordsman
+	civilization = elven
+	gender = male
+	base_level = 3 #Elven Lord
+	
+	history = {
+		years_wesnoth = {
+			8 = {
+				active = true
+				location = {
+					map_template = northern_marches_of_wesmere
+					pos = { 16 17 }
+				}
+			}
+		}
+	}
+}
