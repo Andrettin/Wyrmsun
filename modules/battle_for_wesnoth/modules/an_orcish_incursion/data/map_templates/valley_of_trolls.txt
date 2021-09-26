@@ -1,0 +1,6 @@
+valley_of_trolls = {
+	name = "Valley of Trolls"
+	main_template = alfheim_space
+	size = { 22 22 }
+	terrain_file = "valley_of_trolls.wes"
+}

@@ -3,4 +3,5 @@ northern_marches_of_wesmere = {
 	main_template = alfheim_space
 	size = { 22 22 }
 	terrain_file = "northern_marches_of_wesmere.wes"
+	optional = true
 }

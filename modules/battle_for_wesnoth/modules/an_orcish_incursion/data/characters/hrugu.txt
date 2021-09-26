@@ -1,0 +1,19 @@
+hrugu = {
+	name = "Hrugu"
+	unit_type = unit_troll_warrior
+	civilization = troll
+	gender = male
+	base_level = 2 #Troll Warrior
+	
+	history = {
+		years_wesnoth = {
+			8 = {
+				active = true
+				location = {
+					map_template = valley_of_trolls
+					pos = { 18 3 }
+				}
+			}
+		}
+	}
+}

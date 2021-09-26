@@ -91,7 +91,7 @@ troll = {
 			"Tuh" #from Battle for Wesnoth
 			"Tuk Ruh" #from Battle for Wesnoth
 			"Ugg" #from Battle for Wesnoth
-			"Üh" #from Battle for Wesnoth
+			"Uh" #"Üh"; from Battle for Wesnoth
 			"Urg" #from Battle for Wesnoth
 			"Urgh" #from Battle for Wesnoth
 			"Urk" #from Battle for Wesnoth

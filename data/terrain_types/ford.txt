@@ -86,6 +86,6 @@ ford = {
 	}
 	wesnoth_strings = {
 		Bw/ #Wooden Bridge
-		Bw\\ #Wooden Bridge
+		Bw\ #Wooden Bridge
 	}
 }
