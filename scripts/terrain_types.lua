@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineTerrainType("rockbound-cave-floor", {
-	Name = "Rockbound Cave Floor",
-	Character = "b",
-	Color = {128, 128, 160},
-	Flags = {"land", "no-building", "gravel", "underground"},
-	InnerBorderTerrains = {"dirt", "dry_dirt"},
-	Graphics = "terrain/rockbound_cave_floor.png",
-	SolidTiles = {0, 1, 2},
-	AllowSingle = true
-})
-
 DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Color = {32, 32, 0},
@@ -420,49 +409,6 @@ DefineTerrainType("dungeon-wall", {
 		"any", "southeast-outer-northwest-inner", 36,
 		"any", "southeast-outer-northwest-inner", 39,
 		"any", "southeast-outer-northwest-inner", 42
-	}
-})
-
-DefineTerrainType("cave-wall", {
-	Name = "Cave Wall",
-	Character = "v",
-	Color = {32, 32, 32},
-	BaseTerrainTypes = {"rockbound-cave-floor", "cave-floor"},
-	Overlay = true,
-	Flags = {"land", "rock", "unpassable", "air-unpassable"},
-	Graphics = "terrain/cave_wall.png",
-	Resource = "stone",
-	SolidTiles = {18},
-	DestroyedTiles = {16},
-	TransitionTiles = {
-		"any", "north", 2,
-		"any", "north", 5,
-		"any", "north", 8,
-		"any", "south", 34,
-		"any", "south", 37,
-		"any", "south", 40,
-		"any", "west", 17,
-		"any", "west", 20,
-		"any", "west", 23,
-		"any", "east", 19,
-		"any", "east", 22,
-		"any", "east", 25,
-		"any", "northwest-outer", 1,
-		"any", "northwest-outer", 4,
-		"any", "northeast-outer", 3,
-		"any", "northeast-outer", 6,
-		"any", "southwest-outer", 33,
-		"any", "southwest-outer", 36,
-		"any", "southeast-outer", 35,
-		"any", "southeast-outer", 38,
-		"any", "northwest-inner", 10,
-		"any", "northeast-inner", 11,
-		"any", "southwest-inner", 26,
-		"any", "southeast-inner", 27,
-		"any", "northwest-southeast-inner", 30,
-		"any", "northwest-southeast-inner", 31,
-		"any", "northeast-southwest-inner", 14,
-		"any", "northeast-southwest-inner", 15
 	}
 })
 

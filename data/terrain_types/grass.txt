@@ -48,5 +48,6 @@ grass = {
 	}
 	wesnoth_strings = {
 		Gg
+		Gll #Leaf Litter
 	}
 }

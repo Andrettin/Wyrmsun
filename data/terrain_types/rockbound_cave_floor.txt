@@ -1,0 +1,21 @@
+rockbound_cave_floor = {
+	name = "Rockbound Cave Floor"
+	character = b
+	color = { 128 128 160 }
+	image_file = "terrain/rockbound_cave_floor.png"
+	allow_single = true
+	flags = {
+		land
+		no_building
+		gravel
+		underground
+	}
+	inner_border_terrain_types = {
+		dirt
+		dry_dirt
+	}
+	solid_tiles = { 0 1 2 }
+	wesnoth_strings = {
+		Uh
+	}
+}

@@ -35,4 +35,7 @@ dry_grass = {
 			northeast_southwest_inner = { 81 97 }
 		}
 	}
+	wesnoth_strings = {
+		Gd #Dry Grass
+	}
 }

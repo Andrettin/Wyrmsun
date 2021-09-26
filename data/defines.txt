@@ -147,11 +147,18 @@ tips = {
 }
 
 ignored_wesnoth_terrain_strings = {
-	Ce
-	Cv
-	Efm
-	Es
-	Ke
-	Kv
-	Ve
+	Ce #Encampment
+	Cte #Troll Encampment
+	Cv #Elven Castle
+	Edb #Remains
+	Edt #Trash
+	Efm #Mixed Flowers
+	Em #Small Mushrooms
+	Es #Stones
+	Ke #Encampment Keep
+	Kte #Troll Encampment Keep
+	Kv #Elven Castle Keep
+	Vc #Hut
+	Ve #Elven Village
+	Vo #Orcish Village
 }

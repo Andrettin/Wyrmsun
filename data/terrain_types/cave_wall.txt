@@ -1,0 +1,41 @@
+cave_wall = {
+	name = "Cave Wall"
+	character = v
+	color = { 32 32 32 }
+	overlay = true
+	resource = stone
+	image_file = "terrain/cave_wall.png"
+	flags = {
+		land
+		rock
+		unpassable
+		air_unpassable
+	}
+	base_terrain_types = {
+		rockbound_cave_floor
+		cave_floor
+	}
+	solid_tiles = { 18 }
+	destroyed_tiles = { 16 }
+	transition_tiles = {
+		any = {
+			north = { 2 5 8 }
+			south = { 34 37 40 }
+			west = { 17 20 23 }
+			east = { 19 22 25 }
+			northwest_outer = { 1 4 }
+			northeast_outer = { 3 6 }
+			southwest_outer = { 33 36 }
+			southeast_outer = { 35 38 }
+			northwest_inner = { 10 }
+			northeast_inner = { 11 }
+			southwest_inner = { 26 }
+			southeast_inner = { 27 }
+			northwest_southeast_inner = { 30 31 }
+			northeast_southwest_inner = { 14 15 }
+		}
+	}
+	wesnoth_strings = {
+		Xu
+	}
+}

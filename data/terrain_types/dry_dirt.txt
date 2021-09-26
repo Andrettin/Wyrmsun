@@ -1,5 +1,6 @@
 dry_dirt = {
 	name = "Dry Dirt"
+	color = { 189 183 107 }
 	image_file = "terrain/dirt.png"
 	buildable = true
 	allow_single = true
@@ -78,5 +79,8 @@ dry_dirt = {
 			southwest_outer_northeast_inner = { 144 }
 			southeast_outer_northwest_inner = { 146 }
 		}
+	}
+	wesnoth_strings = {
+		Hhd #Dry Hills
 	}
 }

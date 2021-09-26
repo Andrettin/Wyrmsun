@@ -82,4 +82,7 @@ cave_floor = {
 			southeast_outer_northwest_inner = { 146 }
 		}
 	}
+	wesnoth_strings = {
+		Uu
+	}
 }
