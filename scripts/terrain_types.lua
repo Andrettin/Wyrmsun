@@ -553,6 +553,7 @@ DefineTerrainType("fairlimbed-tree", {
 DefineTerrainType("norse-palisade", {
 	Name = "Palisade",
 	Character = "|",
+	Color = {218, 160, 109},
 	BaseTerrainTypes = {"dirt", "dry_dirt", "grass", "semi_dry_grass", "dry_grass", "dry-mud", "cave-floor", "floor", "snow"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable"},

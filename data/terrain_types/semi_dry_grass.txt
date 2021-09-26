@@ -1,5 +1,6 @@
 semi_dry_grass = {
 	name = "Semi-Dry Grass"
+	color = { 154 205 50 }
 	image_file = "terrain/semi_dry_grass.png"
 	buildable = true
 	flags = {
@@ -36,5 +37,8 @@ semi_dry_grass = {
 			northwest_southeast_inner = { 80 96 }
 			northeast_southwest_inner = { 81 97 }
 		}
+	}
+	wesnoth_strings = {
+		Gs
 	}
 }

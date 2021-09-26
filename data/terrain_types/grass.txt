@@ -46,4 +46,7 @@ grass = {
 	tile_numbers = {
 		80 81 82 84 85 86 87 88 89 90 91 92 93 94 95
 	}
+	wesnoth_strings = {
+		Gg
+	}
 }

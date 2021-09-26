@@ -145,3 +145,13 @@ tips = {
 	"Time efficiency bonus makes a building train, research and upgrade faster. If it is a resource building, then harvesting from it will also proceed faster."
 	"Faction bonuses are not cumulative."
 }
+
+ignored_wesnoth_terrain_strings = {
+	Ce
+	Cv
+	Efm
+	Es
+	Ke
+	Kv
+	Ve
+}

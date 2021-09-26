@@ -18,38 +18,16 @@ alfheim_space = {
 	size = { 64 64 }
 	subtemplate_top_left_pos = { 10 10 } #so that it is placed in its system map template's center
 	circle = true
-	base_terrain_type = grass
+	clear_terrain = true
 	unusable_area_terrain_type = dirt
 	unusable_area_overlay_terrain_type = space
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
-	generated_terrains = {
-		dirt = {
-			seed_count = 4
-			max_percent = 20
-			target_terrain_type = grass
-		}
-		pine_tree = {
-			seed_count = 32
-			max_percent = 33
-			target_terrain_type = grass
-		}
-		rock = {
-			seed_count = 4
-			max_percent = 20
-			target_terrain_type = dirt
-		}
-	}
 	generated_neutral_units = {
 		unit_gold_deposit = 1
 		unit_iron_deposit = 1
 		unit_tree_stump = 2
 		unit_elven_swordsman = 32
-	}
-	player_location_generated_neutral_units = {
-		unit_copper_deposit = 1
-		unit_wood_pile = 16
-		unit_stone_pile = 8
 	}
 }
 

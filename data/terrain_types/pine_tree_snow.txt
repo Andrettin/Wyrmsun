@@ -33,4 +33,7 @@ pine_tree_snow = {
 			northeast_southwest_inner = { 14 }
 		}
 	}
+	wesnoth_strings = {
+		Fdw #Winter Deciduous Forest
+	}
 }
