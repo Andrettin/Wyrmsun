@@ -3,6 +3,6 @@ aethermaw = { #Source: "Battle for Wesnoth"
 	main_template = universe
 	world = aethermaw
 	size = { 51 42 }
-	terrain_image_file = "aethermaw.png"
+	terrain_file = "aethermaw.png"
 	optional = true
 }
