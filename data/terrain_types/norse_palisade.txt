@@ -1,0 +1,79 @@
+norse_palisade = {
+	name = "Palisade"
+	color = { 218 160 109 }
+	character = |
+	overlay = true
+	allow_single = true
+	image_file = "terrain/norse_wooden_wall.png"
+	flags = {
+		land
+		wall
+		unpassable
+	}
+	base_terrain_types = {
+		dirt
+		dry_dirt
+		grass
+		semi_dry_grass
+		dry_grass
+		dry_mud
+		cave_floor
+		floor
+		snow
+		dry_mud_hell
+		mud_hell
+	}
+	solid_tiles = { 177 }
+	destroyed_tiles = { 160 }
+	transition_tiles = {
+		any = {
+			north = { 208 }
+			south = { 224 }
+			west = { 209 }
+			east = { 225 }
+			northwest_outer = { 112 }
+			northeast_outer = { 114 }
+			southwest_outer = { 144 }
+			southeast_outer = { 146 }
+			northwest_inner = { 177 }
+			northeast_inner = { 177 }
+			southwest_inner = { 177 }
+			southeast_inner = { 177 }
+			northwest_southeast_inner = { 177 }
+			northeast_southwest_inner = { 177 }
+			
+			single = { 129 }
+			north_single = { 161 }
+			south_single = { 193 }
+			west_single = { 176 }
+			east_single = { 178 }
+			north_south = { 113 145 }
+			west_east = { 128 130 }
+			northwest_northeast_southwest_southeast_inner = { 177 }
+			northwest_northeast_inner = { 177 }
+			southwest_southeast_inner = { 177 }
+			northwest_southwest_inner = { 177 }
+			northeast_southeast_inner = { 177 }
+			northwest_northeast_southwest_inner = { 177 }
+			northwest_northeast_southeast_inner = { 177 }
+			northwest_southwest_southeast_inner = { 177 }
+			northeast_southwest_southeast_inner = { 177 }
+			north_southwest_inner_southeast_inner = { 208 }
+			north_southwest_inner = { 208 }
+			north_southeast_inner = { 208 }
+			south_northwest_inner_northeast_inner = { 224 }
+			south_northwest_inner = { 224 }
+			south_northeast_inner = { 224 }
+			west_northeast_inner_southeast_inner = { 209 }
+			west_northeast_inner = { 209 }
+			west_southeast_inner = { 209 }
+			east_northwest_inner_southwest_inner = { 225 }
+			east_northwest_inner = { 225 }
+			east_southwest_inner = { 225 }
+			northwest_outer_southeast_inner = { 112 }
+			northeast_outer_southwest_inner = { 114 }
+			southwest_outer_northeast_inner = { 144 }
+			southeast_outer_northwest_inner = { 146 }
+		}
+	}
+}
