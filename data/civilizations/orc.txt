@@ -10,9 +10,9 @@ orc = {
 	language = orcish
 	
 	unit_sounds = {
-		selected = basic_orc_voices_selected
-		acknowledge = basic_orc_voices_selected
-		ready = basic_orc_voices_selected
+		selected = orc_selected
+		acknowledge = orc_selected
+		ready = orc_selected
 		dead = orc_dead
 	}
 	
