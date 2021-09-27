@@ -1,0 +1,17 @@
+ogre_selected = {
+	files = {
+		"units/ogre/ogre-hit-1.ogg"
+		"units/ogre/ogre-hit-2.ogg"
+		"units/ogre/ogre-hit-3.ogg"
+		"units/ogre/ogre-hit-4.ogg"
+	}
+}
+
+ogre_dead = {
+	range = 32
+	files = {
+		"units/ogre/ogre-die-1.ogg"
+		"units/ogre/ogre-die-2.ogg"
+		"units/ogre/ogre-die-3.ogg"
+	}
+}
