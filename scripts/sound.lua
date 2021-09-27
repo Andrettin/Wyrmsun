@@ -918,7 +918,6 @@ SetSoundRange("wolf-dead", 32)
 Load("scripts/civilizations/english/sound.lua")
 Load("scripts/civilizations/greek/sound.lua")
 Load("scripts/civilizations/latin/sound.lua")
-Load("scripts/civilizations/orc/sound.lua")
 
 --	Define sounds used by the game
 --
