@@ -2,6 +2,7 @@ lomarfel = {
 	name = "Lomarfel"
 	unit_type = unit_elven_swordsman
 	civilization = elven
+	default_faction = wesmere
 	gender = male
 	base_level = 2 #Elven Rider
 	

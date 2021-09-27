@@ -1,0 +1,14 @@
+an_orcish_incursion = {
+	name = "A Troll Incursion"
+	#description = "Defend the forests of the elves against the first orcs to reach the Great Continent, learning valuable tactics as you do so." #original
+	description = "Defend the forests of the elves against a brutal troll invasion."
+	faction = wesmere
+	start_date = 8
+	start_date_calendar = years_wesnoth
+	map_templates = { universe }
+	required_map_templates = { northern_marches_of_wesmere }
+	quest = an_orcish_incursion
+	icon = icon_troll_warrior
+	player_color = red
+	hidden = true
+}

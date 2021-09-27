@@ -3,4 +3,5 @@ valley_of_trolls = {
 	main_template = alfheim_space
 	size = { 22 22 }
 	terrain_file = "valley_of_trolls.wes"
+	optional = true
 }

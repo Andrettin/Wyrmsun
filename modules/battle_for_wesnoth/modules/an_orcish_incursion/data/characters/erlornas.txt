@@ -2,6 +2,7 @@ erlornas = {
 	name = "Erlornas"
 	unit_type = unit_elven_swordsman
 	civilization = elven
+	default_faction = wesmere
 	gender = male
 	base_level = 3 #Elven Lord
 	
