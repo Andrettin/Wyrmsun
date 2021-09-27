@@ -4,4 +4,9 @@ valley_of_trolls = {
 	size = { 22 22 }
 	terrain_file = "valley_of_trolls.wes"
 	optional = true
+	
+	terrain_substitutions = {
+		norse_palisade = dry_grass
+		goblin_wall = cave_floor
+	}
 }

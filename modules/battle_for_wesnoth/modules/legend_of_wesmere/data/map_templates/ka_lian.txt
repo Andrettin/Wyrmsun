@@ -5,4 +5,26 @@ ka_lian = {
 	size = { 62 62 }
 	terrain_file = "ka_lian.wes"
 	optional = true
+	
+	terrain_substitutions = {
+		gray_shallow_water = shallow_water
+		mud = dirt
+		dry_dirt = dirt
+		semi_dry_grass = grass
+		dry_grass = grass
+		road = dirt
+		teutonic_wall = grass
+	}
+	
+	tile_terrains = {
+		31 = {
+			31 = grass
+		}
+	}
+	
+	overlay_tile_terrains = {
+		31 = {
+			31 = none #remove shallow water tile at the Ka'lian island, to allow the placement of a settlement site there
+		}
+	}
 }

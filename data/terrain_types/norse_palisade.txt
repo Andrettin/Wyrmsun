@@ -76,4 +76,8 @@ norse_palisade = {
 			southeast_outer_northwest_inner = { 146 }
 		}
 	}
+	wesnoth_strings = {
+		Ce #Encampment
+		Ke #Encampment Keep
+	}
 }

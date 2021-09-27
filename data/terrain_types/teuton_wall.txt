@@ -1,4 +1,5 @@
 teuton_wall = {
+	aliases += teutonic_wall
 	name = "Wall"
 	color = { 160 144 144 }
 	character = /
@@ -79,5 +80,9 @@ teuton_wall = {
 	tile_numbers = {
 		176
 		2048 2064 2080 2096 2112 2113 2128 2144 2160 2176 2192 2193 2208 2224 2240 2256
+	}
+	wesnoth_strings = {
+		Cv #Elven Castle
+		Kv #Elven Castle Keep
 	}
 }

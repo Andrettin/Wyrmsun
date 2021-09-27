@@ -4,4 +4,9 @@ northern_marches_of_wesmere = {
 	size = { 22 22 }
 	terrain_file = "northern_marches_of_wesmere.wes"
 	optional = true
+	
+	terrain_substitutions = {
+		norse_palisade = dirt
+		teutonic_wall = grass
+	}
 }

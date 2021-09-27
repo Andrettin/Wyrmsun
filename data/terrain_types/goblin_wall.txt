@@ -80,4 +80,8 @@ goblin_wall = {
 		160
 		2304 2320 2336 2352 2368 2369 2384 2416 2432 2448 2449 2480 2512
 	}
+	wesnoth_strings = {
+		Cte #Troll Encampment
+		Kte #Troll Encampment Keep
+	}
 }

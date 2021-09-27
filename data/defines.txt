@@ -147,9 +147,6 @@ tips = {
 }
 
 ignored_wesnoth_terrain_strings = {
-	Ce #Encampment
-	Cte #Troll Encampment
-	Cv #Elven Castle
 	Edb #Remains
 	Edt #Trash
 	Efm #Mixed Flowers
@@ -159,9 +156,6 @@ ignored_wesnoth_terrain_strings = {
 	Ewf #Flowering Water Lilies
 	Ewl #Water Lilies
 	Gvs #Farmland
-	Ke #Encampment Keep
-	Kte #Troll Encampment Keep
-	Kv #Elven Castle Keep
 	Uf #Mushroom Grove
 	Vc #Hut
 	Ve #Elven Village
