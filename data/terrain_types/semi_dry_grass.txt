@@ -15,6 +15,10 @@ semi_dry_grass = {
 	}
 	intermediate_terrain_types = {
 		desert_sand = dry_dirt
+		cave_floor = dirt
+		rockbound_cave_floor = dirt
+		mud = dirt
+		ford = dirt
 	}
 	solid_tiles = { 17 20 23 }
 	season_image_files = {
