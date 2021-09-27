@@ -1,4 +1,5 @@
 troll_dead = {
+	range = 32
 	files = {
 		"troll/basic_voices/troll-die-1.wav"
 		"troll/basic_voices/troll-die-2.wav"

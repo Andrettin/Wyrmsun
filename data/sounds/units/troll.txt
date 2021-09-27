@@ -1,0 +1,8 @@
+troll_selected = {
+	files = {
+		"units/troll/troll-hit-1.ogg"
+		"units/troll/troll-hit-2.ogg"
+		"units/troll/troll-hit-3.ogg"
+		"units/troll/troll-hit-4.ogg"
+	}
+}

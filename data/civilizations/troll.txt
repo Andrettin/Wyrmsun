@@ -10,6 +10,13 @@ troll = {
 	default_color = green
 	upgrade = upgrade_troll_civilization
 	
+	unit_sounds = {
+		selected = troll_selected
+		acknowledge = troll_selected
+		ready = troll_selected
+		dead = troll_dead
+	}
+	
 	button_icons = {
 		move = icon_dwarven_boots
 		stop = icon_goblin_wooden_shield
