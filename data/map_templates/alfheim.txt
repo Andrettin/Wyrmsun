@@ -15,7 +15,7 @@ alfheim_space = {
 	name = "Alfheim"
 	main_template = alfheim_system
 	world = alfheim
-	size = { 64 64 }
+	size = { 68 68 }
 	subtemplate_top_left_pos = { 10 10 } #so that it is placed in its system map template's center
 	circle = true
 	clear_terrain = true
@@ -34,6 +34,6 @@ alfheim_space = {
 alfheim_system = {
 	name = "Alfheim System"
 	main_template = universe
-	size = { 84 84 }
+	size = { 88 88 }
 	circle = true
 }

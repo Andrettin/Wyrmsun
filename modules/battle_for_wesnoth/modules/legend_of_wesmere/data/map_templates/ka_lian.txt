@@ -4,7 +4,9 @@ ka_lian = {
 	main_template = alfheim_space
 	size = { 62 62 }
 	terrain_file = "ka_lian.wes"
-	optional = true
+	start_pos = { 23 24 }
+	end_pos = { 39 40 }
+	min_subtemplate_y = 34
 	
 	terrain_substitutions = {
 		gray_shallow_water = shallow_water

@@ -6,7 +6,10 @@ an_orcish_incursion = {
 	start_date = 8
 	start_date_calendar = years_wesnoth
 	map_templates = { universe }
-	required_map_templates = { northern_marches_of_wesmere }
+	required_map_templates = {
+		northern_marches_of_wesmere
+		valley_of_trolls
+	}
 	quest = an_orcish_incursion
 	icon = icon_troll_warrior
 	player_color = red
