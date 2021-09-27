@@ -9,6 +9,13 @@ ogre = {
 	default_color = red
 	language = ogre
 	
+	unit_sounds = {
+		selected = ogre_selected
+		acknowledge = ogre_selected
+		ready = ogre_selected
+		dead = ogre_dead
+	}
+	
 	button_icons = {
 		move = icon_dwarven_boots
 		stop = icon_goblin_wooden_shield

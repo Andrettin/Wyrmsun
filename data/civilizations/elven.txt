@@ -14,6 +14,9 @@ elf = {
 	background = "The elves of Wyrmsun incorporate elements of both the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore."
 	
 	unit_sounds = {
+		selected = elf_selected
+		acknowledge = elf_selected
+		ready = elf_selected
 		dead = basic_human_voices_dead
 	}
 	

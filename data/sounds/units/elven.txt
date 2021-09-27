@@ -1,0 +1,6 @@
+elf_selected = {
+	files = {
+		"units/elven/elf-hit-1.ogg"
+		"units/elven/elf-hit-2.ogg"
+	}
+}
