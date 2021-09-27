@@ -6,3 +6,12 @@ troll_selected = {
 		"units/troll/troll-hit-4.ogg"
 	}
 }
+
+troll_dead = {
+	range = 32
+	files = {
+		"units/troll/troll-die-1.wav"
+		"units/troll/troll-die-2.wav"
+		"units/troll/troll-die-3.wav"
+	}
+}
