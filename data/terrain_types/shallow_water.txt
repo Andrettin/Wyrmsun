@@ -81,5 +81,8 @@ shallow_water = {
 	}
 	wesnoth_strings = {
 		Ww
+		Wo #Medium Deep Water
+		Wwr #Medium Coastal Reef
+		Wwt #Tropical Shallow Water
 	}
 }

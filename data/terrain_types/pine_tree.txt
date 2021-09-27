@@ -54,5 +54,7 @@ pine_tree = {
 		Fp
 		Fds #Summer Deciduous Forest
 		Fet #Great Tree
+		Fmf #Fall Mixed Forest
+		Fms #Summer Mixed Forest
 	}
 }

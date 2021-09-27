@@ -81,6 +81,7 @@ dry_dirt = {
 		}
 	}
 	wesnoth_strings = {
+		Rd
 		Hhd #Dry Hills
 	}
 }

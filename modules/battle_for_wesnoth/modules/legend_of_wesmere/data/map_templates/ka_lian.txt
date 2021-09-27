@@ -1,0 +1,8 @@
+ka_lian = {
+	name = "Ka'lian"
+	clear_terrain = true
+	main_template = alfheim_space
+	size = { 62 62 }
+	terrain_file = "ka_lian.wes"
+	optional = true
+}

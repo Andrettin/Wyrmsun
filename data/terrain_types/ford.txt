@@ -85,7 +85,12 @@ ford = {
 		}
 	}
 	wesnoth_strings = {
-		Bw/ #Wooden Bridge
+		Wwf
+		Bsb| #Basic Stone Bridge
+		Bsb\ #Basic Stone Bridge
+		Bsb/ #Basic Stone Bridge
+		Bw| #Wooden Bridge
 		Bw\ #Wooden Bridge
+		Bw/ #Wooden Bridge
 	}
 }

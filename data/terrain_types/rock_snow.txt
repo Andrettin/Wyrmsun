@@ -33,4 +33,7 @@ rock_snow = {
 			northeast_southwest_inner = { 14 15 }
 		}
 	}
+	wesnoth_strings = {
+		Ms #Snowy Mountains
+	}
 }

@@ -50,5 +50,6 @@ rock = {
 	}
 	wesnoth_strings = {
 		Mm #Regular Mountains
+		Md #Dry Mountains
 	}
 }

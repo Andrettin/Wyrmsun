@@ -76,4 +76,9 @@ road = {
 			southeast_outer_northwest_inner = { 146 }
 		}
 	}
+	wesnoth_strings = {
+		Rp #Overgrown Cobbles
+		Rr #Regular Cobbles
+		Rrc #Clean Gray Cobbles
+	}
 }
