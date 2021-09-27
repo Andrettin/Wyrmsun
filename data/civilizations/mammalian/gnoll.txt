@@ -11,9 +11,12 @@ gnoll = {
 	upgrade = upgrade_gnoll_civilization
 	
 	unit_sounds = {
-		dead = basic_orc_voices_dead
+		selected = wolf_growl
+		acknowledge = wolf_growl
+		ready = wolf_growl
+		dead = orc_dead
 	}
-
+	
 	button_icons = {
 		move = icon_dwarven_boots
 		stop = icon_goblin_wooden_shield

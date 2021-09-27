@@ -13,7 +13,7 @@ orc = {
 		selected = basic_orc_voices_selected
 		acknowledge = basic_orc_voices_selected
 		ready = basic_orc_voices_selected
-		dead = basic_orc_voices_dead
+		dead = orc_dead
 	}
 	
 	button_icons = {

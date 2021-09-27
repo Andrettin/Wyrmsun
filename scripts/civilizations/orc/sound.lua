@@ -79,9 +79,3 @@ MakeSound("basic-orc-voices-selected", {
 	"orc/basic_voices/Orc_50.wav"
 })
 
-MakeSound("basic-orc-voices-dead", {
-	"orc/basic_voices/orc-die-1.wav",
-	"orc/basic_voices/orc-die-2.wav",
-	"orc/basic_voices/orc-die-3.wav"
-})
-SetSoundRange("basic-orc-voices-dead", 32)

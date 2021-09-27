@@ -1,0 +1,8 @@
+orc_dead = {
+	range = 32
+	files = {
+		"units/orc/orc-die-1.wav"
+		"units/orc/orc-die-2.wav"
+		"units/orc/orc-die-3.wav"
+	}
+}
