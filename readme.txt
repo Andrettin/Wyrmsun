@@ -85,6 +85,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Improved the performance of the code which identifies which unit is currently under the cursor.
+- Fixed key input issue which could cause command panel buttons without hotkeys to be triggered in a seemingly random fashion.
 
 -----------------------------------------------------------------------
 - 5.1.1
