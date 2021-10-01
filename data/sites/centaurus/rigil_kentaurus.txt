@@ -4,5 +4,5 @@ rigil_kentaurus = { #Alpha Centauri A
 	astrocoordinate = { -140.0979 -60.834 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 4.37 #light-years
 	base_unit_type = unit_yellow_star #dwarf star
-	astrodistance_additive_modifier = 4 #so that it (or its satellites) does not end up too close to Earth
+	astrodistance_additive_modifier = 4 #so that it does not end up too close to Earth
 }
