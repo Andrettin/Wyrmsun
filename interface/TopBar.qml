@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 
 Item {
 	id: top_bar
+	height: image.height
 	
 	property string interface_style: "germanic"
 	
