@@ -9,7 +9,7 @@ ka_lian = {
 	
 	history = {
 		years_wesnoth = {
-			1 = {
+			8 = {
 				owner = wesmere
 				building_classes += town_hall
 			}
