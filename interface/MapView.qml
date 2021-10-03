@@ -58,14 +58,6 @@ Item {
 	}
 	*/
 	
-	/*
-	TopBar {
-		anchors.top: parent.top
-		anchors.left: parent.left
-		anchors.right: parent.right
-	}
-	*/
-	
 	ThinnestButton {
 		id: menu_button
 		anchors.left: parent.left
@@ -84,6 +76,14 @@ Item {
 			}
 		}
 	}
+	
+	/*
+	TopBar {
+		anchors.top: parent.top
+		anchors.left: parent.left
+		anchors.right: parent.right
+	}
+	*/
 	
 	GameMenuDialog {
 		id: game_menu_dialog
