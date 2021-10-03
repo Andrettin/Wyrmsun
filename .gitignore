@@ -48,8 +48,5 @@ linux_readme.txt
 *.lnk
 
 ## Steam Workshop Mod Uploader
-CSteamworks.dll
-ModCreator.exe
 steam_api.dll
 steam_appid.txt
-Steamworks.NET.dll
