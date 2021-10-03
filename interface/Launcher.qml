@@ -8,6 +8,10 @@ Window {
 	title: qsTr("Wyrmsun Launcher")
 	width: 696
 	height: 364
+	minimumWidth: width
+	maximumWidth: width
+	minimumHeight: height
+	maximumHeight: height
 	color: "black"
 	
 	readonly property int scale_factor: 2
