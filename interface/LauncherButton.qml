@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtMultimedia 5.15
 
 Item {
 	id: button
@@ -52,11 +53,21 @@ Item {
 		}
 	}
 	
+	SoundEffect {
+		id: clicked_sound
+		source: "../sounds/interface/click.wav"
+	}
+	
+	SoundEffect {
+		id: error_sound
+		source: "../sounds/interface/placement_error.wav"
+	}
+	
 	onClicked: {
 		if (disabled) {
-			//wyrmgus.play_sound("placement_error")
+			error_sound.play()
 		} else {
-			//wyrmgus.play_sound("click")
+			clicked_sound.play()
 		}
 	}
 	
