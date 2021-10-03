@@ -8,6 +8,7 @@ Text {
 	font.family: berenika_font.name
 	
 	property int shadow_offset: 0
+	property int scale_factor: wyrmgus.defines.scale_factor
 	
 	layer.enabled: true
 	layer.effect: DropShadow {
