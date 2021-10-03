@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which could cause player data to not be cleared properly after a game.
 - Fixed visibility issue which could occur when destroying cave walls during a game.
 - Reworked how the minimap keeps track of unexplored/fog of war areas, improving performance (specially on larger maps).
+- The Steam launcher has been rewritten in C++, with QML being used for the UI. In order to prevent issues if both the launcher and Wyrmsun try to access the file in which persistent achievement data is contained at the same time, the launcher now only checks just before and just after the game runs.
 
 * Pathfinding
 - Fixed a pathfinding issue involving land/fly-low units.
