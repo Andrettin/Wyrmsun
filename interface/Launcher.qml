@@ -41,12 +41,9 @@ Window {
 			anchors.rightMargin: 8 * scale_factor
 			text: "Start"
 			hotkey: "s"
-			enabled: !process_started
-			
-			property bool process_started: false
 			
 			onClicked: {
-				process_started = true
+				enabled = false
 				process_manager.start()
 			}
 		}
