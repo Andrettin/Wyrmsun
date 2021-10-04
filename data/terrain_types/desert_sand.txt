@@ -6,6 +6,7 @@ desert_sand = {
 	}
 	color = { 255 255 0 }
 	image_file = "terrain/desert_sand.png"
+	allow_single = true
 	flags = {
 		land
 		no_building
