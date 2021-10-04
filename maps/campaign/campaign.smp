@@ -2,4 +2,3 @@
 
 DefinePlayerTypes("person")
 PresentMap("Earth", 1, GetCampaignData(GetCurrentCampaign(), "MapWidth"), GetCampaignData(GetCurrentCampaign(), "MapHeight"), 1)
-MapWorld = "Earth"

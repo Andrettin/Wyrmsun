@@ -65,8 +65,8 @@ MenuBase {
 		hotkey: "s"
 		
 		onClicked: {
-			wyrmgus.call_lua_command("SetCurrentCampaign(\"" + campaign.identifier + "\"); GetMapInfo(\"scripts/map_templates/campaign.smp\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + ";")
-			wyrmgus.game.run_map_async("scripts/map_templates/campaign.smp")
+			wyrmgus.call_lua_command("GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + ";")
+			wyrmgus.game.run_campaign_async(campaign)
 		}
 	}
 	
@@ -74,6 +74,5 @@ MenuBase {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		lua_command: "SetCurrentCampaign(\"\");"
 	}
 }

@@ -1,10 +1,6 @@
 -- Stratagus Map Setup
 
-if (SyncRand(2) == 0) then
-	LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
-else
-	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
-end
+LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
 
 ApplyCampaignMap(GetCurrentCampaign())
 
