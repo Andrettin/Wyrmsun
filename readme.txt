@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.1
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed an issue which caused gathering workers to lose their resource unit assignment when loading a saved game.
+
 -----------------------------------------------------------------------
 - 5.2.0
 -----------------------------------------------------------------------
