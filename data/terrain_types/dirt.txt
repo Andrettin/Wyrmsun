@@ -9,7 +9,7 @@ dirt = {
 	color = { 192 128 0 }
 	image_file = "terrain/dirt.png"
 	buildable = true
-	allow_single = true
+	#allow_single = true
 	flags = {
 		land
 		dirt
