@@ -60,6 +60,10 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed an issue which caused gathering workers to lose their resource unit assignment when loading a saved game.
 
+* Terrain
+- The grass transition graphics have been updated.
+- Added new grass decoration tiles.
+
 -----------------------------------------------------------------------
 - 5.2.0
 -----------------------------------------------------------------------
