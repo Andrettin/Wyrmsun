@@ -1,0 +1,17 @@
+southern_jutland = {
+	name = "Southern Jutland"
+	main_template = earth_random
+	size = { 350 350 }
+	terrain_file = "earth/scandinavia.png"
+	start_pos = { 37 283 }
+	end_pos = { 76 304 }
+	optional = true
+	south_of = northern_jutland
+	west_of = sjaelland
+	west_of = scania
+	west_of = southern_italy
+	west_of = sicily
+	west_of = svealand
+	north_of = southern_italy
+	north_of = sicily
+}

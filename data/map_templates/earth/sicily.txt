@@ -1,0 +1,17 @@
+sicily = {
+	name = "Sicily"
+	main_template = earth_random
+	size = { 350 350 }
+	terrain_file = "earth/italy.png"
+	start_pos = { 167 241 }
+	end_pos = { 216 271 }
+	optional = true
+	west_of = southern_italy
+	east_of = southern_jutland
+	east_of = northern_jutland
+	south_of = southern_jutland
+	south_of = northern_jutland
+	south_of = sjaelland
+	south_of = svealand
+	south_of = scania
+}

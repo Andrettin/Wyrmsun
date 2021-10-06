@@ -1,0 +1,15 @@
+scania = {
+	name = "Scania"
+	main_template = earth_random
+	size = { 350 350 }
+	terrain_file = "earth/scandinavia.png"
+	start_pos = { 103 276 }
+	end_pos = { 151 306 }
+	optional = true
+	south_of = svealand
+	north_of = southern_italy
+	north_of = sicily
+	east_of = sjaelland
+	east_of = northern_jutland
+	east_of = southern_jutland
+}
