@@ -13,8 +13,6 @@ FileDialog {
 	sidebarVisible: false
 	
 	onAccepted: {
-		var filepath = load_game_dialog.fileUrl.toString()
-		filepath = filepath.substr(8, filepath.length - 8) //remove the "file:///" from the file path
-		wyrmgus.load_game(filepath)
+		wyrmgus.load_game(load_game_dialog.fileUrl)
 	}
 }

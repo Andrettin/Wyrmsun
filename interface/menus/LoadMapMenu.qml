@@ -77,18 +77,16 @@ MenuBase {
 		id: select_map_dialog
 		title: "Select Map"
 		defaultSuffix: ".smp.gz"
-		folder: "file:///" + wyrmgus.user_maps_path
+		folder: "file:" + wyrmgus.user_maps_path
 		nameFilters: ["Stratagus Map Presentation Files (*.smp.gz *.smp)"]
 		selectExisting: true
 		sidebarVisible: false
 		
 		onAccepted: {
-			var filepath = select_map_dialog.fileUrl.toString()
-			filepath = filepath.substr(8, filepath.length - 8) //remove the "file:///" from the file path
 			wyrmgus.clear_map_infos()
-			wyrmgus.load_map_info(filepath)
+			wyrmgus.load_map_info(select_map_dialog.fileUrl)
 			load_map_menu.selected_map = wyrmgus.get_map_infos()[0]
-			wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(filepath) + "\");")
+			wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(load_map_menu.selected_map.presentation_filepath) + "\");")
 		}
 	}
 }
