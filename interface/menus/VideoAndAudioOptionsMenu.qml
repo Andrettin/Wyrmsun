@@ -26,13 +26,13 @@ MenuBase {
 		anchors.top: music_slider.bottom
 		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
 		text: "2x Scale Factor (restart required)"
-		checked: wyrmgus.preferences.scale_factor > 1
+		checked: wyrmgus.preferences.scale_factor_string === "2"
 		
 		onCheckedChanged: {
 			if (checked) {
-				wyrmgus.preferences.scale_factor = 2
+				wyrmgus.preferences.scale_factor_string = "2"
 			} else {
-				wyrmgus.preferences.scale_factor = 1
+				wyrmgus.preferences.scale_factor_string = "1"
 			}
 		}
 	}

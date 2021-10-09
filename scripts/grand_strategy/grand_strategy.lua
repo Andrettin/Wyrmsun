@@ -363,7 +363,7 @@ function WarGrandStrategyGameMenu(background)
 		menu:setOpaque(true)
 		menu:setBaseColor(dark)
 	else
-		local bg = ImageWidget(background, get_scale_factor())
+		local bg = ImageWidget(background)
 		menu:add(bg, 0, 0)
 	end
 
@@ -539,16 +539,6 @@ function GrandStrategyEvent(faction, event)
 			end
 		end
 		l:setCaption(event_description)
-
-		if (event_icon ~= nil) then
-			local b = ImageWidget(event_icon, get_scale_factor())
-			menu:add(b, 153, 48)
-		end
-
-		if (event_image ~= nil) then
-			local b = ImageWidget(event_image, get_scale_factor())
-			menu:add(b, 0, 0)
-		end
 
 		local event_options
 		local event_option_conditions = nil

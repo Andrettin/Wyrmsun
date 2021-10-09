@@ -5,7 +5,7 @@ function WarGameMenu(background)
     menu:setOpaque(true)
     menu:setBaseColor(dark)
   else
-    local bg = ImageWidget(background, get_scale_factor())
+    local bg = ImageWidget(background)
     menu:add(bg, 0, 0)
   end
 

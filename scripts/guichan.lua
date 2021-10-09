@@ -373,7 +373,7 @@ function WarMenu(title, background, resize)
 		if (resize == nil or resize == true) then
 			bg = ImageWidget(background, 1, Video.Width, Video.Height)
 		else
-			bg = ImageWidget(background, get_scale_factor())
+			bg = ImageWidget(background)
 		end
 		menu:add(bg, 0, 0)
 	end
