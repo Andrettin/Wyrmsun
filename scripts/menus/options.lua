@@ -28,8 +28,6 @@
 --
 
 function SetVideoSize(width, height)
-	CUserInterface:get().MapArea.EndX = width - 1
-	CUserInterface:get().MapArea.EndY = height - (176 * get_scale_factor()) - 1
 	if (Video:ResizeScreen(width, height) == false) then
 		return
 	end

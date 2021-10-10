@@ -16,6 +16,9 @@ neutral_civilization = neutral
 minimap_color_index = 1
 minimap_non_land_territory_alpha = 64
 
+map_area_top_margin = 16
+map_area_bottom_margin = 176
+
 time_resource = time
 wealth_resource = copper
 

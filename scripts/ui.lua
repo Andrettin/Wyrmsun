@@ -172,11 +172,6 @@ local max_damage = 	Add(
 	)
 )
 
-CUserInterface:get().MapArea.X = 0
-CUserInterface:get().MapArea.Y = 16 * get_scale_factor()
-CUserInterface:get().MapArea.EndX = Video.Width - 1
-CUserInterface:get().MapArea.EndY = Video.Height + (-176 * get_scale_factor()) - 1
-
 CUserInterface:get().InfoPanel.X = 162 * get_scale_factor()
 CUserInterface:get().InfoPanel.Y = Video.Height - 186 * get_scale_factor()
 
@@ -312,7 +307,7 @@ for i = 1, 12 do
 	CUserInterface:get().HeroUnitButtons:push_back(b)
 	hero_button_y = hero_button_y + 1
 	
-	if (((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) * get_scale_factor()) >= CUserInterface:get().MapArea.EndY) then
+	if (((16 + 12 + (38 * (2 + hero_button_y)) + (24 * (2 + hero_button_y)) + 38) * get_scale_factor()) >= CUserInterface:get().MapArea:get_bottom()) then
 		hero_button_x = hero_button_x + 1
 		hero_button_y = 0
 	end
