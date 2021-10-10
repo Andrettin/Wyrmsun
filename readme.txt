@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 - Changing the scale factor no longer requires restarting the game.
 
 * User Interface
-- Fixed a crash which could occur in the mouse handling code.
+- Fixed a crash which could occur during a game in the mouse handling code.
 
 -----------------------------------------------------------------------
 - 5.2.1
