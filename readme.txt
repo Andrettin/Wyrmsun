@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for the 1.5x scale factor.
 - Changing the scale factor no longer requires restarting the game.
 
+* User Interface
+- Fixed a crash which could occur in the mouse handling code.
+
 -----------------------------------------------------------------------
 - 5.2.1
 -----------------------------------------------------------------------
