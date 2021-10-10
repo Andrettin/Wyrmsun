@@ -15,7 +15,7 @@ ButtonMenuBase {
 		text: get_completed_quests_count() + "/" + entries.length + " Quests Completed"
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: difficulty_label.top
-		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 32 * wyrmgus.scale_factor
 	}
 	
 	NormalText {
@@ -23,15 +23,15 @@ ButtonMenuBase {
 		text: "Difficulty:"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: difficulty_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button_item.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * model.length)
-		width: 100 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor + (height * model.length)
+		width: 100 * wyrmgus.scale_factor
 		model: wyrmgus.get_difficulties()
 		
 		onModelChanged: {

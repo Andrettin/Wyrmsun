@@ -18,14 +18,14 @@ Item {
 		//set the shared properties for tooltips
 		ToolTip.toolTip.palette.text: "white"
 		ToolTip.toolTip.font.family: berenika_font.name
-		ToolTip.toolTip.font.pixelSize: 12 * wyrmgus.defines.scale_factor
+		ToolTip.toolTip.font.pixelSize: 12 * wyrmgus.scale_factor
 		ToolTip.toolTip.contentWidth: tooltip_width_reference_text.contentWidth
 		ToolTip.toolTip.background: Rectangle {
 			color: "black"
 			opacity: 0.90
 			border.color: "gray"
 			border.width: 1
-			radius: 5 * wyrmgus.defines.scale_factor
+			radius: 5 * wyrmgus.scale_factor
 		}
 		ToolTip.toolTip.onTextChanged: tooltip_width_reference_text.text = ToolTip.toolTip.text
 		
@@ -34,9 +34,9 @@ Item {
 			text: ""
 			x: Screen.width + 4 //place it offscreen, this is for calculating the text width only, it shouldn't be visible
 			font.family: berenika_font.name
-			font.pixelSize: 12 * wyrmgus.defines.scale_factor
+			font.pixelSize: 12 * wyrmgus.scale_factor
 			wrapMode: Text.WordWrap
-			width: 512 * wyrmgus.defines.scale_factor
+			width: 512 * wyrmgus.scale_factor
 		}
 	}
 	

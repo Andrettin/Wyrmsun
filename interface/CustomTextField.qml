@@ -5,7 +5,7 @@ TextField {
 	id: custom_text_field
 	color: "white"
 	font.family: berenika_font.name
-	font.pixelSize: 12 * wyrmgus.defines.scale_factor
+	font.pixelSize: 12 * wyrmgus.scale_factor
 	
 	background: Rectangle {
 		id: text_background

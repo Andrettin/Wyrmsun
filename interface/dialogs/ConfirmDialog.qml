@@ -13,7 +13,7 @@ DialogBase {
 		id: yes_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.verticalCenter
-		anchors.bottomMargin: 4 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 4 * wyrmgus.scale_factor
 		text: "Yes"
 		hotkey: "y"
 		interface_style: confirm_dialog.interface_style
@@ -28,7 +28,7 @@ DialogBase {
 		id: no_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.verticalCenter
-		anchors.topMargin: 4 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 4 * wyrmgus.scale_factor
 		text: "No"
 		hotkey: "n"
 		interface_style: confirm_dialog.interface_style

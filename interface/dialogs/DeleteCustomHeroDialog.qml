@@ -12,7 +12,7 @@ DialogBase {
 	NormalText {
 		id: description_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
 		text: "Are you sure? This cannot be undone."
 	}
@@ -20,9 +20,9 @@ DialogBase {
 	SmallButton {
 		id: yes_button
 		anchors.left: parent.left
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: "Yes"
 		hotkey: "y"
 		
@@ -36,9 +36,9 @@ DialogBase {
 	SmallButton {
 		id: no_button
 		anchors.right: parent.right
-		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: "No"
 		hotkey: "n"
 		

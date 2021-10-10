@@ -12,7 +12,7 @@ MenuBase {
 	LargeText {
 		id: map_label
 		anchors.bottom: name_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: "Map"
 	}
@@ -20,7 +20,7 @@ MenuBase {
 	NormalText {
 		id: name_label
 		anchors.bottom: file_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: "Name: " + selected_map.name
 	}
@@ -28,7 +28,7 @@ MenuBase {
 	NormalText {
 		id: file_label
 		anchors.bottom: players_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: "File: " + selected_map.presentation_filepath
 	}
@@ -36,7 +36,7 @@ MenuBase {
 	NormalText {
 		id: players_label
 		anchors.bottom: map_size_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: "Players: " + selected_map.player_count
 	}
@@ -44,18 +44,18 @@ MenuBase {
 	NormalText {
 		id: map_size_label
 		//anchors.bottom: previous_menu_button.top
-		//anchors.bottomMargin: 64 * wyrmgus.defines.scale_factor
+		//anchors.bottomMargin: 64 * wyrmgus.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
-		anchors.verticalCenterOffset: -64 * wyrmgus.defines.scale_factor
+		anchors.verticalCenterOffset: -64 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 64 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 64 * wyrmgus.scale_factor
 		text: "Size: " + selected_map.map_width + "x" + selected_map.map_height
 	}
 	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		lua_command: "InitGameSettings(); server_multi_game_menu:stop();"
 	}
 }

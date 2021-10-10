@@ -11,7 +11,7 @@ MenuBase {
 		id: buildings_button
 		anchors.right: game_concepts_button.right
 		anchors.bottom: civilizations_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Buildings"
 		hotkey: "b"
 		
@@ -28,7 +28,7 @@ MenuBase {
 		id: civilizations_button
 		anchors.right: game_concepts_button.right
 		anchors.bottom: deities_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Civilizations"
 		hotkey: "c"
 		
@@ -45,7 +45,7 @@ MenuBase {
 		id: deities_button
 		anchors.right: game_concepts_button.right
 		anchors.bottom: factions_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Deities"
 		hotkey: "d"
 		
@@ -62,7 +62,7 @@ MenuBase {
 		id: factions_button
 		anchors.right: game_concepts_button.right
 		anchors.bottom: game_concepts_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Factions"
 		hotkey: "f"
 		
@@ -96,7 +96,7 @@ MenuBase {
 		id: heroes_button
 		anchors.right: game_concepts_button.right
 		anchors.top: game_concepts_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Heroes"
 		hotkey: "h"
 		
@@ -113,7 +113,7 @@ MenuBase {
 		id: items_button
 		anchors.right: game_concepts_button.right
 		anchors.top: heroes_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Items"
 		hotkey: "i"
 		
@@ -130,7 +130,7 @@ MenuBase {
 		id: magic_prefixes_button
 		anchors.right: game_concepts_button.right
 		anchors.top: items_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Magic Prefixes"
 		hotkey: "r"
 		
@@ -147,7 +147,7 @@ MenuBase {
 		id: magic_suffixes_button
 		anchors.right: game_concepts_button.right
 		anchors.top: magic_prefixes_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Magic Suffixes"
 		hotkey: "s"
 		
@@ -164,7 +164,7 @@ MenuBase {
 		id: technologies_button
 		anchors.right: game_concepts_button.right
 		anchors.top: magic_suffixes_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Technologies"
 		hotkey: "t"
 		
@@ -197,7 +197,7 @@ MenuBase {
 		id: uniques_button
 		anchors.left: worlds_button.left
 		anchors.top: texts_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Uniques"
 		hotkey: "n"
 		
@@ -214,7 +214,7 @@ MenuBase {
 		id: units_button
 		anchors.left: worlds_button.left
 		anchors.top: uniques_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Units"
 		hotkey: "u"
 		
@@ -232,7 +232,7 @@ MenuBase {
 		anchors.left: parent.horizontalCenter
 		anchors.leftMargin: 4
 		anchors.top: units_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Worlds"
 		hotkey: "w"
 		
@@ -248,7 +248,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: technologies_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		
 		onClicked: {
 			if (map_view) {

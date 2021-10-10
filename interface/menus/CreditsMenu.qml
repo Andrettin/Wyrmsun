@@ -10,21 +10,21 @@ MenuBase {
 	Item {
 		id: text_area
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 32 * wyrmgus.scale_factor
 		clip: true
 		
 		NormalText {
 			id: credits_text
 			anchors.left: parent.left
-			anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+			anchors.leftMargin: 8 * wyrmgus.scale_factor
 			anchors.right: parent.right
-			anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+			anchors.rightMargin: 8 * wyrmgus.scale_factor
 			horizontalAlignment: Text.AlignHCenter
 			text: format_text(highlight("Wyrmsun Design and Maintenance\n\n")
 				+ "Andrettin\n"
@@ -271,6 +271,6 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 }

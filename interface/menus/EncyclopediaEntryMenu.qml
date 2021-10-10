@@ -20,7 +20,7 @@ MenuBase {
 		id: icon_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		icon: entry.icon ? entry.icon.identifier : ""
 		player_color: entry_faction ? entry_faction.color.identifier : (entry_civilization && entry_civilization.default_color ? entry_civilization.default_color.identifier : wyrmgus.defines.neutral_player_color.identifier)
 		visible: entry.icon ? true : false
@@ -29,19 +29,19 @@ MenuBase {
 	ScrollableTextArea {
 		id: text_area
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.top: entry.icon ? icon_button.bottom : parent.title_element.bottom
-		anchors.topMargin: (entry.icon ? 16 : 32) * wyrmgus.defines.scale_factor
+		anchors.topMargin: (entry.icon ? 16 : 32) * wyrmgus.scale_factor
 		anchors.bottom: text_area_bottom_anchor
-		anchors.bottomMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 32 * wyrmgus.scale_factor
 		text: entry.encyclopedia_text
 	}
 	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 }

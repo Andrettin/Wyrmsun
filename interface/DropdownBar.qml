@@ -34,7 +34,7 @@ Item {
 		id: label
 		text: parent.highlighted ? highlight(parent.text) : parent.text
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
 	}
 }

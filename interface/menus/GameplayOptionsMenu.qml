@@ -11,15 +11,15 @@ MenuBase {
 		text: "Hotkey Setup:"
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: hotkey_setup_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: hotkey_setup_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: autosave_radio_button.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 250 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
+		width: 250 * wyrmgus.scale_factor
 		model: wyrmgus.get_hotkey_setups()
 		
 		onModelChanged: {
@@ -41,7 +41,7 @@ MenuBase {
 		id: autosave_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_hero_symbol_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Autosave"
 		checked: wyrmgus.preferences.autosave
 		
@@ -54,7 +54,7 @@ MenuBase {
 		id: show_hero_symbol_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_messages_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Show Hero Symbol"
 		checked: wyrmgus.preferences.hero_symbol
 		
@@ -67,7 +67,7 @@ MenuBase {
 		id: show_messages_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_pathlines_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Show Messages"
 		checked: wyrmgus.preferences.show_messages
 		
@@ -92,7 +92,7 @@ MenuBase {
 		id: show_player_color_circle_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_pathlines_radio_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Show Player Color Circle"
 		checked: wyrmgus.preferences.player_color_circle
 		
@@ -105,7 +105,7 @@ MenuBase {
 		id: show_resource_bar_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_player_color_circle_radio_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Show Resource Bar"
 		checked: wyrmgus.preferences.resource_bar
 		
@@ -118,7 +118,7 @@ MenuBase {
 		id: show_tips_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_resource_bar_radio_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Show Tips"
 		checked: wyrmgus.preferences.show_tips
 		
@@ -131,7 +131,7 @@ MenuBase {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: show_tips_radio_button.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"
 		

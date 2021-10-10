@@ -22,9 +22,9 @@ DialogBase {
 	NormalText {
 		id: name_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Name:"
 	}
 	
@@ -32,16 +32,16 @@ DialogBase {
 		id: name_text_field
 		anchors.verticalCenter: name_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: generate_name_button.left
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	SmallButton {
 		id: generate_name_button
 		anchors.verticalCenter: name_label.verticalCenter
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		text: "Generate"
 		hotkey: "g"
 		
@@ -53,9 +53,9 @@ DialogBase {
 	NormalText {
 		id: surname_label
 		anchors.top: name_label.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Surname:"
 	}
 	
@@ -63,17 +63,17 @@ DialogBase {
 		id: surname_text_field
 		anchors.verticalCenter: surname_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	NormalText {
 		id: civilization_label
 		anchors.top: surname_label.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Civilization:"
 	}
 	
@@ -81,9 +81,9 @@ DialogBase {
 		id: civilization_dropdown
 		anchors.verticalCenter: civilization_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		model: wyrmgus.get_playable_civilizations()
 		
 		function get_entry_name(entry) {
@@ -94,9 +94,9 @@ DialogBase {
 	NormalText {
 		id: unit_type_label
 		anchors.top: civilization_label.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Unit Type:"
 	}
 	
@@ -104,9 +104,9 @@ DialogBase {
 		id: unit_type_dropdown
 		anchors.verticalCenter: unit_type_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		model: civilization !== null ? civilization.get_custom_hero_unit_types() : []
 		
 		function get_entry_name(entry) {
@@ -117,9 +117,9 @@ DialogBase {
 	NormalText {
 		id: trait_label
 		anchors.top: unit_type_label.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Trait:"
 	}
 	
@@ -127,9 +127,9 @@ DialogBase {
 		id: trait_dropdown
 		anchors.verticalCenter: trait_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		model: unit_type !== null ? unit_type.traits : []
 		
 		function get_entry_name(entry) {
@@ -140,9 +140,9 @@ DialogBase {
 	NormalText {
 		id: variation_label
 		anchors.top: trait_label.bottom
-		anchors.topMargin: 24 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		text: "Variation:"
 	}
 	
@@ -150,9 +150,9 @@ DialogBase {
 		id: variation_dropdown
 		anchors.verticalCenter: variation_label.verticalCenter
 		anchors.left: civilization_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		model: unit_type !== null ? unit_type.get_custom_hero_variations_qvariant_list() : []
 		
 		function get_entry_name(entry) {
@@ -167,9 +167,9 @@ DialogBase {
 	SmallButton {
 		id: create_button
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: "Create"
 		hotkey: "t"
 		
@@ -198,9 +198,9 @@ DialogBase {
 	SmallButton {
 		id: cancel_button
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: "Cancel"
 		hotkey: "c"
 		

@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 Item {
 	id: sound_effects_slider
-	width: sound_effects_volume_slider.width + 8 * wyrmgus.defines.scale_factor + sound_effects_radio_button.width
+	width: sound_effects_volume_slider.width + 8 * wyrmgus.scale_factor + sound_effects_radio_button.width
 	height: sound_effects_volume_slider.height
 	
 	property string interface_style: "default"
@@ -27,7 +27,7 @@ Item {
 	LabeledRadioImageButton {
 		id: sound_effects_radio_button
 		anchors.left: sound_effects_volume_slider.right
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.top: sound_effects_volume_slider.top
 		anchors.topMargin: sound_effects_volume_slider.slider_item.y + (sound_effects_radio_button.height / 2) - (sound_effects_volume_slider.slider_item.height / 2)
 		text: "Enabled"

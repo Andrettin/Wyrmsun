@@ -4,7 +4,7 @@ import QtQuick.Controls 2.12
 Item {
 	id: tile
 	
-	readonly property int tile_size: 32 * wyrmgus.defines.scale_factor
+	readonly property int tile_size: 32 * wyrmgus.scale_factor
 	
 	implicitWidth: tile_size
 	implicitHeight: tile_size

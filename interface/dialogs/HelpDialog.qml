@@ -11,7 +11,7 @@ DialogBase {
 		id: encyclopedia_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "Encyclopedia"
 		hotkey: "c"
 		interface_style: help_dialog.interface_style
@@ -31,7 +31,7 @@ DialogBase {
 		id: hotkeys_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: encyclopedia_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Hotkeys"
 		hotkey: "h"
 		interface_style: help_dialog.interface_style
@@ -45,7 +45,7 @@ DialogBase {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: hotkeys_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: help_dialog.interface_style

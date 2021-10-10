@@ -12,7 +12,7 @@ MenuBase {
 	NormalText {
 		id: name_label
 		anchors.bottom: file_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: selected_map !== null ? ("Name: " + selected_map.name) : ""
 	}
@@ -20,7 +20,7 @@ MenuBase {
 	NormalText {
 		id: file_label
 		anchors.bottom: players_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: selected_map !== null ? ("File: " + selected_map.presentation_filepath) : ""
 	}
@@ -28,7 +28,7 @@ MenuBase {
 	NormalText {
 		id: players_label
 		anchors.bottom: map_size_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
 		text: selected_map !== null ? ("Players: " + selected_map.player_count) : ""
 	}
@@ -36,9 +36,9 @@ MenuBase {
 	NormalText {
 		id: map_size_label
 		anchors.bottom: create_game_button.top
-		anchors.bottomMargin: 64 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 64 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 64 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 64 * wyrmgus.scale_factor
 		text: selected_map !== null ? ("Size: " + selected_map.map_width + "x" + selected_map.map_height) : ""
 	}
 	
@@ -47,15 +47,15 @@ MenuBase {
 		text: "World:"
 		anchors.left: world_dropdown.left
 		anchors.bottom: world_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: world_dropdown
 		anchors.horizontalCenter: map_dropdown.horizontalCenter
 		anchors.bottom: map_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 150 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
+		width: 150 * wyrmgus.scale_factor
 		model: wyrmgus.get_map_worlds()
 	}
 	
@@ -64,7 +64,7 @@ MenuBase {
 		text: "Map:"
 		anchors.left: map_dropdown.left
 		anchors.bottom: map_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
@@ -72,8 +72,8 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.horizontalCenterOffset: parent.width / 8
 		anchors.bottom: create_game_button.top
-		anchors.bottomMargin: 64 * wyrmgus.defines.scale_factor
-		width: 150 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 64 * wyrmgus.scale_factor
+		width: 150 * wyrmgus.scale_factor
 		model: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
 		onModelChanged: {
@@ -109,7 +109,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: create_game_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		
 		onClicked: {
 			wyrmgus.clear_map_infos()

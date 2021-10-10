@@ -14,13 +14,13 @@ MenuBase {
 	ScrollableTextArea {
 		id: text_area
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: difficulty_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: "Faction: " + campaign.faction.link_string + " (" + campaign_civilization.link_string + ")\n\nStart Year: " + year_string(campaign.start_date.getFullYear()) + "\n\nDescription: " + campaign.description + "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
 	}
 	
@@ -29,15 +29,15 @@ MenuBase {
 		text: "Difficulty:"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: difficulty_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: start_scenario_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor + (height * model.length)
-		width: 100 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor + (height * model.length)
+		width: 100 * wyrmgus.scale_factor
 		model: wyrmgus.get_difficulties()
 		
 		onModelChanged: {
@@ -60,7 +60,7 @@ MenuBase {
 		id: start_scenario_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Start Scenario"
 		hotkey: "s"
 		
@@ -73,6 +73,6 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 }

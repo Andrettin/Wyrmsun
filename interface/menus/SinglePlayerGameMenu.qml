@@ -11,7 +11,7 @@ MenuBase {
 		id: scenarios_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: legacy_quests_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Scenarios"
 		hotkey: "s"
 		
@@ -24,7 +24,7 @@ MenuBase {
 		id: legacy_quests_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: custom_game_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Legacy Quests"
 		hotkey: "q"
 		
@@ -50,7 +50,7 @@ MenuBase {
 		id: load_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: custom_game_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Load Game"
 		hotkey: "l"
 		
@@ -63,7 +63,7 @@ MenuBase {
 		id: tech_tree_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: load_game_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Tech Tree"
 		hotkey: "t"
 		
@@ -76,7 +76,7 @@ MenuBase {
 		id: custom_heroes_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: tech_tree_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Custom Heroes"
 		hotkey: "c"
 		
@@ -88,7 +88,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: custom_heroes_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	LoadGameDialog {

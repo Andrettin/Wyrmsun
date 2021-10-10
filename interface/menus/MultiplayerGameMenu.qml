@@ -17,7 +17,7 @@ MenuBase {
 	NormalText {
 		id: nickname_label
 		anchors.bottom: nickname_text_field.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: join_game_button.left
 		text: "Nickname:"
 	}
@@ -25,7 +25,7 @@ MenuBase {
 	CustomTextField {
 		id: nickname_text_field
 		anchors.bottom: join_game_button.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: join_game_button.left
 		anchors.right: join_game_button.right
 		text: wyrmgus.preferences.local_player_name
@@ -52,7 +52,7 @@ MenuBase {
 		id: create_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: join_game_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Create Game"
 		hotkey: "c"
 		
@@ -70,7 +70,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: create_game_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		lua_command: "ExitNetwork1();"
 	}
 	

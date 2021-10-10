@@ -5,7 +5,7 @@ TextArea {
 	id: custom_text_area
 	color: "white"
 	font.family: berenika_font.name
-	font.pixelSize: 12 * wyrmgus.defines.scale_factor
+	font.pixelSize: 12 * wyrmgus.scale_factor
 	wrapMode: TextEdit.WordWrap
 	
 	background: Rectangle {

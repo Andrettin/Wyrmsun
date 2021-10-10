@@ -11,7 +11,7 @@ DialogBase {
 		id: restart_mission_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "Restart Mission"
 		hotkey: "r"
 		interface_style: end_mission_dialog.interface_style
@@ -26,7 +26,7 @@ DialogBase {
 		id: quit_mission_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: restart_mission_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Quit Mission"
 		hotkey: "q"
 		interface_style: end_mission_dialog.interface_style
@@ -40,7 +40,7 @@ DialogBase {
 		id: exit_to_desktop_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: quit_mission_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Exit to Desktop"
 		hotkey: "x"
 		interface_style: end_mission_dialog.interface_style
@@ -54,7 +54,7 @@ DialogBase {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: exit_to_desktop_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: end_mission_dialog.interface_style

@@ -9,7 +9,7 @@ DialogBase {
 	NormalText {
 		id: description_label
 		anchors.top: parent.top
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
 		text: "Enter server IP-address:"
 	}
@@ -17,20 +17,20 @@ DialogBase {
 	CustomTextField {
 		id: ip_text_field
 		anchors.top: description_label.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		text: "localhost"
 	}
 	
 	SmallButton {
 		id: ok_button
 		anchors.left: parent.left
-		anchors.leftMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"
 		
@@ -55,9 +55,9 @@ DialogBase {
 	SmallButton {
 		id: cancel_button
 		anchors.right: parent.right
-		anchors.rightMargin: 32 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Cancel"
 		hotkey: "c"
 		

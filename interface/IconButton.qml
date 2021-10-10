@@ -23,9 +23,9 @@ ButtonBase {
 		id: icon_image
 		z: -1 //behind the frame image
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.horizontalCenterOffset: (pressed ? 1 : 0) * wyrmgus.defines.scale_factor
+		anchors.horizontalCenterOffset: (pressed ? 1 : 0) * wyrmgus.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
-		anchors.verticalCenterOffset: (pressed ? 1 : 0) * wyrmgus.defines.scale_factor
+		anchors.verticalCenterOffset: (pressed ? 1 : 0) * wyrmgus.scale_factor
 		source: icon.length > 0 ? "image://icon/" + icon + "/" + player_color + (grayscale ? "/grayscale" : "")  : "image://empty/"
 		opacity: transparent ? 0.25 : 1
 	}

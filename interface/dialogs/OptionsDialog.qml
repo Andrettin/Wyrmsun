@@ -11,7 +11,7 @@ DialogBase {
 		id: sound_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "Sound (F7)"
 		hotkey: "f7"
 		interface_style: options_dialog.interface_style
@@ -25,7 +25,7 @@ DialogBase {
 		id: preferences_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: sound_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Preferences (F8)"
 		hotkey: "f8"
 		interface_style: options_dialog.interface_style
@@ -39,7 +39,7 @@ DialogBase {
 		id: diplomacy_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: preferences_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Diplomacy (F9)"
 		hotkey: "f9"
 		interface_style: options_dialog.interface_style
@@ -53,7 +53,7 @@ DialogBase {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: diplomacy_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: options_dialog.interface_style

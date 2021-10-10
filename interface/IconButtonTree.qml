@@ -4,7 +4,7 @@ import QtQuick.Controls 2.12
 Flickable {
 	id: icon_button_tree
 	contentWidth: contentItem.childrenRect.width
-	contentHeight: contentItem.childrenRect.height + 8 * wyrmgus.defines.scale_factor //the extra padding is to ensure there is enough space to display the text of the bottom-most button
+	contentHeight: contentItem.childrenRect.height + 8 * wyrmgus.scale_factor //the extra padding is to ensure there is enough space to display the text of the bottom-most button
 	boundsBehavior: Flickable.StopAtBounds
 	leftMargin: contentWidth < width ? ((width - contentWidth) / 2) : 0 //centralize the content horizontally if its width is less than that of the flickable
 	clip: true

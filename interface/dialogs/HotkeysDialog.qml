@@ -10,13 +10,13 @@ DialogBase {
 	Rectangle {
 		id: text_background
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		color: "black"
 		radius: 5
 		opacity: 0.5
@@ -25,13 +25,13 @@ DialogBase {
 	ListView {
 		id: hotkey_list
 		anchors.left: text_background.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: text_background.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.top: text_background.top
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: text_background.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		leftMargin: 0
 		rightMargin: 0
 		topMargin: 0
@@ -97,7 +97,7 @@ DialogBase {
 				id: hotkey_description_label
 				text: modelData[1]
 				anchors.left: parent.left
-				anchors.leftMargin: 84 * wyrmgus.defines.scale_factor
+				anchors.leftMargin: 84 * wyrmgus.scale_factor
 				anchors.verticalCenter: parent.verticalCenter
 			}
 		}
@@ -107,7 +107,7 @@ DialogBase {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: hotkeys_dialog.interface_style

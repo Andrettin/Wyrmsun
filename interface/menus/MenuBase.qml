@@ -39,7 +39,7 @@ Item {
 		text: highlight(parent.title)
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.top
-		anchors.topMargin: 36 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 36 * wyrmgus.scale_factor
 	}
 	
 	Keys.onPressed: {

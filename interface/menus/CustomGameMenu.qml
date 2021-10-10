@@ -7,20 +7,20 @@ MenuBase {
 	title: "Custom Game"
 	
 	readonly property var selected_map: map_dropdown.selectedEntry
-	readonly property int dropdown_width: 150 * wyrmgus.defines.scale_factor
+	readonly property int dropdown_width: 150 * wyrmgus.scale_factor
 	
 	NormalText {
 		id: world_label
 		text: "World:"
 		anchors.left: world_dropdown.left
 		anchors.bottom: world_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: world_dropdown
 		anchors.right: map_dropdown.left
-		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: map_dropdown.bottom
 		width: custom_game_menu.dropdown_width
 		model: wyrmgus.get_map_worlds()
@@ -31,14 +31,14 @@ MenuBase {
 		text: "Map:"
 		anchors.left: map_dropdown.left
 		anchors.bottom: map_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: map_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: resources_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: custom_game_menu.dropdown_width
 		model: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
@@ -62,14 +62,14 @@ MenuBase {
 		text: "Difficulty:"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: difficulty_dropdown
 		anchors.left: opponents_dropdown.left
 		anchors.bottom: opponents_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: custom_game_menu.dropdown_width
 		model: wyrmgus.get_difficulties()
 		
@@ -96,7 +96,7 @@ MenuBase {
 		text: "Your Civilization:"
 		anchors.left: civilization_dropdown.left
 		anchors.bottom: civilization_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
@@ -138,14 +138,14 @@ MenuBase {
 		text: "Resources:"
 		anchors.left: resources_dropdown.left
 		anchors.bottom: resources_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: resources_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: game_type_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: custom_game_menu.dropdown_width
 		model: ["Map Default", "Low", "Medium", "High"]
 		
@@ -159,13 +159,13 @@ MenuBase {
 		text: "Opponents:"
 		anchors.left: opponents_dropdown.left
 		anchors.bottom: opponents_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: opponents_dropdown
 		anchors.left: resources_dropdown.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.top: resources_dropdown.top
 		width: custom_game_menu.dropdown_width
 		model: get_entries(selected_map)
@@ -195,7 +195,7 @@ MenuBase {
 		text: "Game Type:"
 		anchors.left: game_type_dropdown.left
 		anchors.bottom: game_type_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
@@ -214,16 +214,16 @@ MenuBase {
 		id: map_name_label
 		text: "Map: " + (selected_map ? (selected_map.name + " (" + selected_map.map_width + "x" + selected_map.map_height + ")") : "")
 		anchors.left: world_dropdown.left
-		anchors.leftMargin: -32 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: -32 * wyrmgus.scale_factor
 		anchors.top: game_type_dropdown.bottom
-		anchors.topMargin: 64 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 64 * wyrmgus.scale_factor
 	}
 	
 	LargeButton {
 		id: start_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Start Game"
 		hotkey: "s"
 		
@@ -238,7 +238,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		lua_command: "GameSettings:reset();"
 		
 		onClicked: {

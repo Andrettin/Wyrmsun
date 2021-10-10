@@ -11,14 +11,14 @@ DialogBase {
 	NormalText {
 		id: connecting_label
 		anchors.top: parent.top
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
 		text: "Connecting to " + server_address + "..."
 	}
 	
 	BusyIndicator {
 		anchors.top: connecting_label.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
 		Component.onCompleted: {
 			contentItem.pen = "lightgray"
@@ -30,7 +30,7 @@ DialogBase {
 		id: cancel_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Cancel"
 		hotkey: "c"
 		

@@ -18,13 +18,13 @@ Item {
 	Flickable {
 		id: text_area
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.top: parent.top
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		contentWidth: contentItem.childrenRect.width
 		contentHeight: contentItem.childrenRect.height
 		boundsBehavior: Flickable.StopAtBounds

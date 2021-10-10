@@ -10,8 +10,8 @@ MenuBase {
 		id: civilization_dropdown
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.title_element.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
-		width: 125 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
+		width: 125 * wyrmgus.scale_factor
 		model: wyrmgus.get_playable_civilizations()
 		
 		function get_entry_name(entry) {
@@ -22,13 +22,13 @@ MenuBase {
 	IconButtonTree {
 		id: tech_tree
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.top: civilization_dropdown.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		icon_button_component: Qt.createComponent("../TechTreeIconButton.qml")
 		entries: civilization.get_tech_tree_entries()
 		player_color: civilization.default_color ? civilization.default_color.identifier : ""
@@ -55,6 +55,6 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 }

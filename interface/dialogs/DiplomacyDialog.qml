@@ -10,27 +10,27 @@ DialogBase {
 	NormalText {
 		id: allied_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: enemy_label.left
-		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		text: "Allied"
 	}
 	
 	NormalText {
 		id: enemy_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: shared_vision_label.left
-		anchors.rightMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		text: "Enemy"
 	}
 	
 	NormalText {
 		id: shared_vision_label
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		text: "Shared Vision"
 	}
 	
@@ -39,11 +39,11 @@ DialogBase {
 		anchors.left: parent.left
 		anchors.right: parent.right
 		anchors.top: allied_label.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: previous_menu_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
-		leftMargin: 8 * wyrmgus.defines.scale_factor
-		rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		leftMargin: 8 * wyrmgus.scale_factor
+		rightMargin: 8 * wyrmgus.scale_factor
 		topMargin: 0
 		bottomMargin: 0
 		boundsBehavior: Flickable.StopAtBounds
@@ -155,7 +155,7 @@ DialogBase {
 		id: previous_menu_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Previous Menu (Esc)"
 		hotkey: "esc"
 		interface_style: diplomacy_dialog.interface_style

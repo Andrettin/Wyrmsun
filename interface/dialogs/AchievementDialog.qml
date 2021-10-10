@@ -13,7 +13,7 @@ DialogBase {
 		id: icon_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		icon: achievement ? (achievement.icon ? achievement.icon.identifier : "") : ""
 		player_color: achievement ? (achievement.player_color ? achievement.player_color.identifier : wyrmgus.defines.neutral_player_color.identifier) : wyrmgus.defines.neutral_player_color.identifier
 	}
@@ -21,11 +21,11 @@ DialogBase {
 	NormalText {
 		id: description_label
 		anchors.top: icon_button.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.left: parent.left
-		anchors.leftMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
-		anchors.rightMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		text: achievement ? (achievement.description + (achievement.progress_max > 0 ? ("\n\nProgress: " + achievement.progress + "/" + achievement.progress_max) : "")) : ""
 		wrapMode: Text.WordWrap
 	}
@@ -34,7 +34,7 @@ DialogBase {
 		id: close_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Close"
 		hotkey: "c"
 		

@@ -17,7 +17,7 @@ MenuBase {
 	NormalText {
 		id: map_description_label
 		anchors.bottom: map_description_text_field.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
 		text: "Map Description:"
 	}
@@ -25,7 +25,7 @@ MenuBase {
 	CustomTextField {
 		id: map_description_text_field
 		anchors.bottom: width_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
 		anchors.right: create_map_button.right
 	}
@@ -33,7 +33,7 @@ MenuBase {
 	NormalText {
 		id: width_label
 		anchors.bottom: height_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
 		text: "Width:"
 	}
@@ -42,8 +42,8 @@ MenuBase {
 		id: width_text_field
 		anchors.verticalCenter: width_label.verticalCenter
 		anchors.left: width_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
-		width: 64 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
+		width: 64 * wyrmgus.scale_factor
 		text: "128"
 		validator: IntValidator {
 			bottom: 32
@@ -54,7 +54,7 @@ MenuBase {
 	NormalText {
 		id: height_label
 		anchors.bottom: create_map_button.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
 		text: "Height:"
 	}
@@ -63,8 +63,8 @@ MenuBase {
 		id: height_text_field
 		anchors.verticalCenter: height_label.verticalCenter
 		anchors.left: width_label.right
-		anchors.leftMargin: 16 * wyrmgus.defines.scale_factor
-		width: 64 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 16 * wyrmgus.scale_factor
+		width: 64 * wyrmgus.scale_factor
 		text: "128"
 		validator: IntValidator {
 			bottom: 32
@@ -128,7 +128,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: create_map_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	GenericDialog {

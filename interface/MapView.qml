@@ -61,9 +61,9 @@ Item {
 	ThinnestButton {
 		id: menu_button
 		anchors.left: parent.left
-		anchors.leftMargin: 26 * wyrmgus.defines.scale_factor
+		anchors.leftMargin: 26 * wyrmgus.scale_factor
 		anchors.top: parent.top
-		anchors.topMargin: 1 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 1 * wyrmgus.scale_factor
 		text: "Menu (F10)"
 		hotkey: "f10"
 		interface_style: wyrmgus.current_interface_style.identifier

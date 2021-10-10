@@ -13,7 +13,7 @@ MenuBase {
 	NormalText {
 		id: name_label
 		anchors.bottom: file_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: select_map_button.left
 		text: selected_map !== null ? ("Name: " + selected_map.name) : ""
 	}
@@ -21,7 +21,7 @@ MenuBase {
 	NormalText {
 		id: file_label
 		anchors.bottom: players_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: select_map_button.left
 		text: selected_map !== null ? ("File: " + selected_map.presentation_filepath) : ""
 	}
@@ -29,7 +29,7 @@ MenuBase {
 	NormalText {
 		id: players_label
 		anchors.bottom: map_size_label.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: select_map_button.left
 		text: selected_map !== null ? ("Players: " + selected_map.player_count) : ""
 	}
@@ -37,7 +37,7 @@ MenuBase {
 	NormalText {
 		id: map_size_label
 		anchors.bottom: select_map_button.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: select_map_button.left
 		text: selected_map !== null ? ("Size: " + selected_map.map_width + "x" + selected_map.map_height) : ""
 	}
@@ -58,7 +58,7 @@ MenuBase {
 		id: edit_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: select_map_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Edit Map"
 		hotkey: "e"
 		
@@ -70,7 +70,7 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: edit_map_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	FileDialog {

@@ -10,7 +10,7 @@ MenuBase {
 		id: gameplay_options_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: video_and_audio_options_button.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Gameplay Options"
 		hotkey: "g"
 		
@@ -34,6 +34,6 @@ MenuBase {
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.top: video_and_audio_options_button.bottom
-		anchors.topMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 	}
 }
