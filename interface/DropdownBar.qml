@@ -14,8 +14,20 @@ Item {
 		id: bar_image
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.left: parent.left
-		source: "image://interface/" + interface_style + "/dropdown_bar"
+		source: reloading ? "image://empty/" : "image://interface/" + interface_style + "/dropdown_bar"
 		fillMode: Image.Pad
+		cache: false
+		
+		property bool reloading: false
+		
+		Connections {
+			target: wyrmgus
+			
+			function onScale_factor_changed() {
+				bar_image.reloading = true
+				bar_image.reloading = false
+			}
+		}
 	}
 	
 	NormalText {

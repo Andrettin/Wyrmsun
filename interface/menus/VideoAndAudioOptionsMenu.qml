@@ -9,18 +9,18 @@ MenuBase {
 	
 	NormalText {
 		id: scale_factor_label
-		text: "Scale Factor (restart required):"
+		text: "Scale Factor:"
 		anchors.left: scale_factor_dropdown.left
 		anchors.bottom: scale_factor_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
 	
 	Dropdown {
 		id: scale_factor_dropdown
 		anchors.left: sound_effects_slider.left
 		anchors.bottom: sound_effects_slider.top
-		anchors.bottomMargin: 16 * wyrmgus.defines.scale_factor
-		width: 55 * wyrmgus.defines.scale_factor
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
+		width: 55 * wyrmgus.scale_factor
 		model: ["1x", "1.5x", "2x"]
 		
 		onModelChanged: {
@@ -42,14 +42,14 @@ MenuBase {
 		id: music_slider
 		anchors.left: sound_effects_slider.left
 		anchors.top: sound_effects_slider.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 	}
 	
 	SmallButton {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: music_slider.bottom
-		anchors.topMargin: 16 * wyrmgus.defines.scale_factor
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"
 		
