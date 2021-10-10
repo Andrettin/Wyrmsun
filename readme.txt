@@ -58,7 +58,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Miscellaneous
-- Added support for a 1.5x scale factor.
+- Added support for the 1.5x scale factor.
+- Changing the scale factor no longer requires restarting the game.
 
 -----------------------------------------------------------------------
 - 5.2.1

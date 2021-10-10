@@ -14,7 +14,7 @@ Window {
 	maximumHeight: height
 	color: "black"
 	
-	readonly property int scale_factor: 2
+	readonly property real scale_factor: 2
 	
 	FontLoader {
 		id: berenika_font
