@@ -221,6 +221,10 @@ function HandleCheats(str)
 		local character = string.sub(str, 6)
 		unit = CreateUnit(GetCharacterData(character, "Type"), GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 		SetUnitVariable(unit, "Character", character)
+	elseif (string.sub(str, 0, 6) == "unique") then
+		local unique = string.sub(str, 8)
+		unit = CreateUnit(GetUniqueItemData(unique, "Type"), GetThisPlayer(), {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
+		SetUnitVariable(unit, "Unique", unique)
 	else
 		return false
 	end
