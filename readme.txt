@@ -57,6 +57,10 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.3
 -----------------------------------------------------------------------
 
+* Terrain
+- The dry grass and semi-dry grass transition graphics have been updated.
+- Added new dry grass and semi-dry grass decoration tiles.
+
 -----------------------------------------------------------------------
 - 5.2.2
 -----------------------------------------------------------------------
