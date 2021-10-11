@@ -60,9 +60,10 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Added support for the 1.5x scale factor.
 - Changing the scale factor no longer requires restarting the game.
+- Fixed an issue which could cause saving a game to fail.
 
 * Units
-- Fixed a crash related to a unit possessing ethereal vision due to a bonus, e.g. like the unique ship Skidbladnir does.
+- Fixed a crash related to a unit possessing ethereal vision due to a bonus, like e.g. the unique ship Skidbladnir does.
 
 * User Interface
 - Fixed a crash which could occur during a game in the mouse handling code.
