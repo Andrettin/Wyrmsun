@@ -35,6 +35,8 @@ Window {
 				component.createObject(window)
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + Screen.width + ", " + Screen.height + ");")
+				
+				//wyrmgus.crop_image_frames("C:/Wyrmsun/graphics/units/elven/worker.png", Qt.size(116, 116), Qt.size(72, 72))
 			}
 		}
 	}
