@@ -1,0 +1,35 @@
+winchester = {
+	name = "Winchester"
+	map_template = earth
+	geocoordinate = { -1.3086111111111 51.063333333333 }
+	base_unit_type = unit_settlement_site
+	color = { 115 174 46 }
+	cultural_names = {
+		anglo_saxon = "Wintanceaster" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 734.
+		briton = "Verita Belgarum"
+		celt = "Verita Belgarum"
+		latin = "Verita Belgarum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #Verita Belgarum/Winchester was a part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += town_hall
+		}
+		
+		660 = {
+			building_classes += temple #Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
+		}
+		
+		802 = {
+			owner = wessex #Winchester was a part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #Winchester's area was a part of England in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

@@ -1,0 +1,8 @@
+tamworth = {
+	name = "Tamworth"
+	map_template = earth
+	geocoordinate = { -1.695 52.633 }
+	regions = {
+		england
+	}
+}
