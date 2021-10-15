@@ -91,15 +91,6 @@ DefineTerrainFeature("pennines", { -- Source: "Philip's International School Atl
 	TerrainType = "rock" -- mountains
 })
 
-DefineTerrainFeature("sherwood-forest", {
-	Name = "Sherwood Forest",
-	TerrainType = "pine-tree",
-	Color = {0, 136, 0},
-	CulturalNames = {
-		"anglo-saxon", "Scirwudu" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
-})
-
 DefineTerrainFeature("selwood", {
 	Name = "Selwood",
 	TerrainType = "pine-tree",
@@ -129,15 +120,6 @@ DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historic
 	Color = {0, 176, 208},
 	CulturalNames = {
 		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
-})
-
-DefineTerrainFeature("the-weald", {
-	Name = "The Weald",
-	TerrainType = "pine-tree", -- The Weald was a forest, but of what kind?
-	Color = {0, 144, 0},
-	CulturalNames = {
-		"anglo-saxon", "Andredesweald" -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 

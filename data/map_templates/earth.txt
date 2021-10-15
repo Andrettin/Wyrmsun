@@ -71,6 +71,7 @@ earth = {
 		}
 		pine_tree = {
 			seed_count = 256
+			use_existing_as_seeds = true
 			max_percent = 20
 			target_terrain_type = grass
 		}

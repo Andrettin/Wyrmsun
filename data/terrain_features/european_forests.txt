@@ -1,0 +1,17 @@
+sherwood_forest = {
+	name = "Sherwood Forest"
+	terrain_type = pine_tree
+	color = { 0 136 0 }
+	cultural_names = {
+		anglo_saxon = "Scirwudu" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+	}
+}
+
+the_weald = {
+	name = "The Weald"
+	terrain_type = pine_tree #The Weald was a forest, but of what kind?
+	color = { 0 144 0 }
+	cultural_names = {
+		anglo_saxon = "Andredesweald" #Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	}
+}
