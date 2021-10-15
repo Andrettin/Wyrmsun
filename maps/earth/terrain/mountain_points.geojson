@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "mountain_points",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "terrain_feature": "corno_grande" }, "geometry": { "type": "Point", "coordinates": [ 13.565833333333, 42.469166666667 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_amaro" }, "geometry": { "type": "Point", "coordinates": [ 14.0859108, 42.0863319 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_velino" }, "geometry": { "type": "Point", "coordinates": [ 13.366666666667, 42.15 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_vettore" }, "geometry": { "type": "Point", "coordinates": [ 13.266666666667, 42.816666666667 ] } }
+]
+}

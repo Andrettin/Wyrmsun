@@ -6,8 +6,13 @@ alps = {
 
 apennine_mountains = {
 	name = "Apennine Mountains"
+	aliases += corno_grande
+	aliases += monte_amaro
+	aliases += monte_velino
+	aliases += monte_vettore
 	terrain_type = rock #mountains
 	color = { 221 52 229 }
+	terrain_generation_seed = true
 }
 
 ardennes = {

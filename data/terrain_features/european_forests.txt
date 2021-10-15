@@ -45,6 +45,13 @@ the_weald = {
 	}
 }
 
+vienna_woods = {
+	name = "Vienna Woods"
+	terrain_type = pine_tree
+	color = { 35 140 52 }
+	terrain_generation_seed = true
+}
+
 wychwood_forest = {
 	name = "Wychwood Forest"
 	terrain_type = pine_tree

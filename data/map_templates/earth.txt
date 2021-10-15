@@ -75,6 +75,11 @@ earth = {
 			max_percent = 20
 			target_terrain_type = grass
 		}
+		rock = {
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+			target_terrain_type = grass
+		}
 	}
 	generated_neutral_units = {
 		unit_gold_deposit = 2

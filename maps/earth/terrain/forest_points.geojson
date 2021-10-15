@@ -9,6 +9,7 @@
 { "type": "Feature", "properties": { "terrain_feature": "morfe_forest" }, "geometry": { "type": "Point", "coordinates": [ -2.346, 52.523 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "wyre_forest" }, "geometry": { "type": "Point", "coordinates": [ -2.3686111111111, 52.385 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "wychwood_forest" }, "geometry": { "type": "Point", "coordinates": [ -1.513, 51.851 ] } },
-{ "type": "Feature", "properties": { "terrain_feature": "black_forest" }, "geometry": { "type": "Point", "coordinates": [ 8.15, 48.3 ] } }
+{ "type": "Feature", "properties": { "terrain_feature": "black_forest" }, "geometry": { "type": "Point", "coordinates": [ 8.15, 48.3 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "vienna_woods" }, "geometry": { "type": "Point", "coordinates": [ 15.91194, 48.08722 ] } }
 ]
 }
