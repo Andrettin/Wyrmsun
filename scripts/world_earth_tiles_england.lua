@@ -115,21 +115,6 @@ DefineWorldMapTile({475, 104}, {
 	}
 })
 
-DefineWorldMapTile({475, 106}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"english", "england", "Tamworth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-	}
-})
-
-DefineWorldMapTile({475, 109}, {
-	World = "earth",
-	FactionCulturalTerrainNames = {
-		"Hills", "anglo-saxon", "angle-tribe", "Æscesdun", -- Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Hills", "english", "england", "Berkshire Downs"
-	}
-})
-
 DefineWorldMapTile({476, 109}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {

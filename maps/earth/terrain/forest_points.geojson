@@ -4,6 +4,11 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "terrain_feature": "the_weald" }, "geometry": { "type": "Point", "coordinates": [ 0.4, 51 ] } },
-{ "type": "Feature", "properties": { "terrain_feature": "sherwood_forest" }, "geometry": { "type": "Point", "coordinates": [ -1.0727611111111, 53.204469444444 ] } }
+{ "type": "Feature", "properties": { "terrain_feature": "sherwood_forest" }, "geometry": { "type": "Point", "coordinates": [ -1.0727611111111, 53.204469444444 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "bromswold_forest" }, "geometry": { "type": "Point", "coordinates": [ -0.543, 52.2787 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "morfe_forest" }, "geometry": { "type": "Point", "coordinates": [ -2.346, 52.523 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "wyre_forest" }, "geometry": { "type": "Point", "coordinates": [ -2.3686111111111, 52.385 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "wychwood_forest" }, "geometry": { "type": "Point", "coordinates": [ -1.513, 51.851 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "black_forest" }, "geometry": { "type": "Point", "coordinates": [ 8.15, 48.3 ] } }
 ]
 }

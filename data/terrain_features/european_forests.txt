@@ -1,3 +1,27 @@
+black_forest = {
+	name = "Black Forest"
+	terrain_type = pine_tree
+	color = { 4 84 11 }
+}
+
+bromswold_forest = {
+	name = "Bromswold Forest"
+	terrain_type = pine_tree
+	color = { 0 120 0 }
+	cultural_names = {
+		anglo_saxon = "Bruneswald" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	}
+}
+
+morfe_forest = {
+	name = "Morfe Forest"
+	terrain_type = pine_tree
+	color = { 220 38 161 }
+	cultural_names = {
+		anglo_saxon = "Moerheb" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+	}
+}
+
 sherwood_forest = {
 	name = "Sherwood Forest"
 	terrain_type = pine_tree
@@ -13,5 +37,23 @@ the_weald = {
 	color = { 0 144 0 }
 	cultural_names = {
 		anglo_saxon = "Andredesweald" #Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	}
+}
+
+wychwood_forest = {
+	name = "Wychwood Forest"
+	terrain_type = pine_tree
+	color = { 6 105 93 }
+	cultural_names = {
+		anglo_saxon = "Hwiccawudu" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+	}
+}
+
+wyre_forest = {
+	name = "Wyre Forest"
+	terrain_type = pine_tree
+	color = { 66 171 130 }
+	cultural_names = {
+		anglo_saxon = "Weogorenaleag" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 }

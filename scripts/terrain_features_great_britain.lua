@@ -34,20 +34,10 @@ DefineTerrainFeature("avon-river", {
 })
 
 DefineTerrainFeature("berkshire-downs", {
---	Name = "Berkshire Downs",
-	Name = "Aescesdun",
+	Name = "Berkshire Downs",
 	TerrainType = "rock", -- hills
 	CulturalNames = {
 		"anglo-saxon", "Aescesdun" -- "Æscesdun"; Old English name of the Berkshire Downs; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-	}
-})
-
-DefineTerrainFeature("bromswold-forest", {
-	Name = "Bromswold Forest",
-	TerrainType = "pine-tree",
-	Color = {0, 120, 0},
-	CulturalNames = {
-		"anglo-saxon", "Bruneswald" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -67,14 +57,6 @@ DefineTerrainFeature("kinver-forest", {
 	TerrainType = "pine-tree",
 	CulturalNames = {
 		"anglo-saxon", "Cynibre" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-	}
-})
-
-DefineTerrainFeature("morfe-forest", {
-	Name = "Morfe Forest",
-	TerrainType = "pine-tree",
-	CulturalNames = {
-		"anglo-saxon", "Moerheb" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
 })
 
@@ -120,21 +102,5 @@ DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historic
 	Color = {0, 176, 208},
 	CulturalNames = {
 		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
-})
-
-DefineTerrainFeature("wyre-forest", {
-	Name = "Wyre Forest",
-	TerrainType = "pine-tree",
-	CulturalNames = {
-		"anglo-saxon", "Weogorenaleag" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
-})
-
-DefineTerrainFeature("wychwood-forest", {
-	Name = "Wychwood Forest",
-	TerrainType = "pine-tree",
-	CulturalNames = {
-		"anglo-saxon", "Hwiccawudu" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 	}
 })
