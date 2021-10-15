@@ -144,16 +144,6 @@ DefineCampaign("the-heirs-return", {
 	}
 })
 
-DefineCampaign("the-fall-of-mercia", {
-	Name = "The Fall of Mercia",
-	Description = "For decades has Mercia enjoyed supremacy in England. Sensing an opportunity, king Egbert of Wessex desires to strike hard and fast into Mercian territory, and break their overlordship over the other southern English kingdoms forever.",
-	Faction = "wessex",
-	StartYear = 825,
-	MapTemplates = {
-		"old_earth", {3627, 695}, {256, 256}
-	}
-})
-
 DefineCampaign("halfdan-the-black", {
 	Name = "Halfdan the Black",
 	Description = "When Halfdan the Black was but a year old, his father was murdered and his mother forced to flee to her father's kingdom of Agder. Now eighteen years old, Halfdan has succeeded his grandfather to that realm...",

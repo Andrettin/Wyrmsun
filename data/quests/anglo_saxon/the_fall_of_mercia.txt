@@ -1,0 +1,11 @@
+the_fall_of_mercia = {
+	name = "The Fall of Mercia"
+	icon = icon_veteran_saxon_swordsman
+	player_color = red
+	description = "For decades has Mercia enjoyed supremacy in England. Sensing an opportunity, king Egbert of Wessex desires to strike hard and fast into Mercian territory, and break their overlordship over the other southern English kingdoms forever."
+	unobtainable = true
+	objectives = {
+		#destroy_faction = mercia
+		found_faction = england
+	}
+}
