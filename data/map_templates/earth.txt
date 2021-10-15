@@ -64,6 +64,10 @@ earth = {
 	surrounding_terrain_type = dirt
 	surrounding_overlay_terrain_type = space
 	generated_terrains = {
+		rock = {
+			use_existing_as_seeds = true
+			target_terrain_type = dirt
+		}
 		grass = {
 			seed_count = 2048
 			use_existing_as_seeds = true
@@ -73,11 +77,6 @@ earth = {
 			seed_count = 256
 			use_existing_as_seeds = true
 			max_percent = 20
-			target_terrain_type = grass
-		}
-		rock = {
-			use_existing_as_seeds = true
-			target_terrain_type = dirt
 			target_terrain_type = grass
 		}
 	}

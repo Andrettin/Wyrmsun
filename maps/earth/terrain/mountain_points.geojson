@@ -5,6 +5,11 @@
 "features": [
 { "type": "Feature", "properties": { "terrain_feature": "corno_grande" }, "geometry": { "type": "Point", "coordinates": [ 13.565833333333, 42.469166666667 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "monte_amaro" }, "geometry": { "type": "Point", "coordinates": [ 14.0859108, 42.0863319 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_cimone" }, "geometry": { "type": "Point", "coordinates": [ 10.701388888889, 44.193888888889 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_cusna" }, "geometry": { "type": "Point", "coordinates": [ 10.3912, 44.2883 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_meta" }, "geometry": { "type": "Point", "coordinates": [ 13.936944444444, 41.690555555556 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_sibilla" }, "geometry": { "type": "Point", "coordinates": [ 13.26194444, 42.9 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "monte_terminillo" }, "geometry": { "type": "Point", "coordinates": [ 12.99732, 42.47327 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "monte_velino" }, "geometry": { "type": "Point", "coordinates": [ 13.366666666667, 42.15 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "monte_vettore" }, "geometry": { "type": "Point", "coordinates": [ 13.266666666667, 42.816666666667 ] } }
 ]
