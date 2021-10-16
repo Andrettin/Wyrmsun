@@ -46,12 +46,6 @@ DefineTerrainFeature("dee-river", { -- Source: William R. Shepherd, "Historical 
 	TerrainType = "shallow-water"
 })
 
-DefineTerrainFeature("great-ouse-river", {
-	Name = "Great Ouse River",
-	TerrainType = "shallow-water",
-	Color = {0, 160, 208}
-})
-
 DefineTerrainFeature("kinver-forest", {
 	Name = "Kinver Forest",
 	TerrainType = "pine-tree",
@@ -64,7 +58,7 @@ DefineTerrainFeature("orwell-river", {
 	Name = "Orwell River",
 	TerrainType = "shallow-water",
 	CulturalNames = {
-		"anglo-saxon", "Arwe River" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "Arwe River" -- Old English name of the Orwell River; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
 })
 
@@ -82,25 +76,7 @@ DefineTerrainFeature("selwood", {
 	}
 })
 
-DefineTerrainFeature("severn-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	Name = "Severn River",
-	TerrainType = "shallow-water",
-	Color = {0, 144, 208},
-	CulturalNames = {
-		"anglo-saxon", "Saefern River" -- "Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
-})
-
 DefineTerrainFeature("snowdon", { -- Source: "Philip's International School Atlas", 2006, p. 64.
 	Name = "Snowdon",
 	TerrainType = "rock" -- mountain
-})
-
-DefineTerrainFeature("thames-river", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	Name = "Thames River",
-	TerrainType = "shallow-water",
-	Color = {0, 176, 208},
-	CulturalNames = {
-		"anglo-saxon", "Temes River" -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
-	}
 })

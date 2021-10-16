@@ -36,6 +36,14 @@ elbe_river = {
 	}
 }
 
+great_ouse_river = {
+	name = "Great Ouse River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 0 160 208 }
+	hidden = true
+}
+
 guadiana_river = {
 	name = "Guadiana River"
 	terrain_type = shallow_water
@@ -87,6 +95,17 @@ rhine_river = {
 	}
 }
 
+severn_river = {
+	name = "Severn River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 0 144 208 }
+	hidden = true
+	cultural_names = {
+		anglo_saxon = "Saefern River" #"Sæfern"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+	}
+}
+
 st_george_branch = {
 	name = "St. George Branch"
 	terrain_type = shallow_water
@@ -101,11 +120,29 @@ sulina_branch = {
 	color = { 98 125 77 }
 }
 
-tagus_river = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+tagus_river = {
 	name = "Tagus River"
 	terrain_type = shallow_water
 	minor_river = true
 	color = { 200 55 246 }
+}
+
+thames_river = {
+	name = "Thames River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 0 176 208 }
+	cultural_names = {
+		anglo_saxon = "Temes River" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+	}
+}
+
+trent_river = {
+	name = "Trent River"
+	terrain_type = shallow_water
+	minor_river = true
+	color = { 116 168 203 }
+	hidden = true
 }
 
 waal_river = {
