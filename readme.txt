@@ -59,7 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Added Naples settlement site to the Earth map, along with predefined territory for it.
-- Added the Aemilian Way route terrain feature to the Earth map.
+- Added the Aemilian Way and Appian Way route terrain features to the Earth map.
 
 * Terrain
 - The dry grass and semi-dry grass transition graphics have been updated.
