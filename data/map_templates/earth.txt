@@ -65,7 +65,6 @@ earth = {
 	surrounding_overlay_terrain_type = space
 	generated_terrains = {
 		rock = {
-			expansion_chance = 45
 			use_existing_as_seeds = true
 			target_terrain_type = dirt
 		}

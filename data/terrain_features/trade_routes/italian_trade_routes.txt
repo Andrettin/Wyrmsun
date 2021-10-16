@@ -1,3 +1,10 @@
+aemilian_way = {
+	name = "Aemilian Way"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 2 80 57 }
+}
+
 cassian_way = {
 	name = "Cassian Way"
 	terrain_type = dirt_road
