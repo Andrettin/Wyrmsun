@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.3
 -----------------------------------------------------------------------
 
+* Maps
+- Added Naples settlement site to the Earth map, along with predefined territory for it.
+
 * Terrain
 - The dry grass and semi-dry grass transition graphics have been updated.
 - Added new dry grass and semi-dry grass decoration tiles.

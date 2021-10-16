@@ -266,29 +266,6 @@ DefineSite("modena", {
 	Regions = {"italy"}
 })
 
-DefineSite("naples", {
-	Name = "Naples",
-	MapTemplate = "old_earth",
-	Position = {4163, 1116},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"greek", "Neapolis",
-		"italian", "Naples",
-		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-264, "rome", -- Neapolis/Naples was a part of Roman territory in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1204, "sicily", -- Naples was a part of the Kingdom of the Two Sicilies c. 1204; Source: William R. Shepherd, "Historical Atlas", 1911, p. 73.
-		1494, "sicily", -- Naples was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1560, "spain" -- Naples was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall",
-		1224, 0, "university" -- University founded in Naples in 1224; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("novum-castrum", {
 	Name = "Novum Castrum",
 	MapTemplate = "old_earth",
