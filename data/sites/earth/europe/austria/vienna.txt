@@ -33,6 +33,10 @@ vienna = {
 			owner = bavarian_tribe #Bavarian territory in 526 (apparently); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
+		814 = {
+			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		907 = {
 			owner = hungary #Hungarian possession from 907; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 			building_classes += town_hall

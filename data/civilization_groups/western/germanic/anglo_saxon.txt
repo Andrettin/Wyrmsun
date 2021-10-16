@@ -21,6 +21,12 @@ anglo_saxon = {
 	}
 	
 	history = {
+		600 = {
+			explored_settlements += london
+			explored_settlements += winchester
+			explored_settlements += york
+		}
+		
 		664 = {
 			#Christianity was predominant in England in 664; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 128.
 			acquired_upgrades += upgrade_deity_christian_god
