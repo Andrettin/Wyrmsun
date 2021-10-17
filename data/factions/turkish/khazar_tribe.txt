@@ -1,0 +1,7 @@
+khazar_tribe = {
+	name = "Khazar Tribe"
+	adjective = "Khazar"
+	civilization = turkish
+	type = tribe
+	color = pink
+}

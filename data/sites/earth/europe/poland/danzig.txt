@@ -12,9 +12,13 @@ danzig = {
 	}
 	
 	history = {
+		814 = {
+			owner = polish_tribe #part of Slavic territory c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+			building_classes += town_hall
+		}
+		
 		1560 = {
 			owner = poland #Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-			building_classes += town_hall
 		}
 		
 		1569 = {

@@ -1,0 +1,7 @@
+avar_tribe = {
+	name = "Avar Tribe"
+	adjective = "Avar"
+	civilization = turkish
+	type = tribe
+	color = orange
+}

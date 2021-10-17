@@ -1,0 +1,8 @@
+polish_tribe = {
+	name = "Polish Tribe"
+	adjective = "Polish"
+	civilization = slavic
+	type = tribe
+	color = red
+	icon = icon_flag_five_white_birds_on_red
+}
