@@ -9,8 +9,7 @@ norway = {
 	upgrade = upgrade_faction_norway
 	icon = icon_flag_cyan_lion_on_red
 	develops_from = {
-		sitone_tribe
-		swedish_tribe
+		norwegian_tribe
 		agder
 		halogaland
 		hedmark

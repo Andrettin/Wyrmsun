@@ -89,14 +89,6 @@ DefineModifier("upgrade-faction-gotland",
 	{"apply-to", "unit-norse-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-norway",
-	{"Accuracy", 2},
-	{"Points", 10},
-	{"apply-to", "unit-norse-swordsman"},
-	{"apply-to", "unit-norse-veteran-swordsman"},
-	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-sweden",
 	{"BasicDamage", 2},
 	{"Points", 10},

@@ -1,0 +1,17 @@
+norwegian_tribe = {
+	name = "Norwegian Tribe"
+	adjective = "Norwegian"
+	civilization = norse
+	type = tribe
+	color = blue
+	upgrade = upgrade_faction_norwegian_tribe
+	icon = icon_flag_cyan_lion_on_red
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
+	}
+}
