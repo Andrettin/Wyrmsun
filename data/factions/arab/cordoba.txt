@@ -1,0 +1,7 @@
+cordoba = {
+	name = "Cordoba"
+	civilization = arab
+	type = polity
+	color = pink
+	default_tier = duchy #emirate
+}

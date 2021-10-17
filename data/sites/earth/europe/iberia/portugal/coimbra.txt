@@ -12,6 +12,10 @@ coimbra = {
 			building_classes += farm
 		}
 		
+		814 = {
+			owner = cordoba #part of the Ommiad Emirate of Cordoba c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1064 = {
 			owner = portugal #Coimbra was acquired by the Kingdom of Portugal in 1064 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 82.
 		}

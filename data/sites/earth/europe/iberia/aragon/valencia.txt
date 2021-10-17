@@ -25,6 +25,10 @@ valencia = {
 			owner = visigothia #part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
+		814 = {
+			owner = cordoba #part of the Ommiad Emirate of Cordoba c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1097 = {
 			owner = morocco #part of the dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}

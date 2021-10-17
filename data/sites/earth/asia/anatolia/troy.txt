@@ -25,5 +25,9 @@ troy = {
 		-500 = {
 			owner = ionia #Greece at the time of the war with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		}
+		
+		814 = {
+			owner = byzantium #part of the Byzantine Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
 	}
 }

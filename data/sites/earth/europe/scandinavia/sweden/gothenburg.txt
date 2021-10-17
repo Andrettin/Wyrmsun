@@ -28,7 +28,11 @@ gothenburg = {
 		161 = {
 			owner = swedish_tribe #the area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
-
+		
+		814 = {
+			owner = denmark #part of the Danish Kingdom c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1097 = {
 			owner = sweden #part of the Kingdom of Sweden c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}

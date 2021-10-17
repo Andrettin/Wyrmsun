@@ -21,6 +21,10 @@ venice = {
 			owner = rome #Venice's area was acquired by Rome in 222 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
+		814 = {
+			owner = byzantium #part of the Byzantine Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1050 = {
 			owner = venice #part of the Venetian Republic c. 1050; Source: William R. Shepherd, "Historical Atlas", 1911, p. 64.
 		}

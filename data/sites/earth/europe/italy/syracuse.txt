@@ -17,6 +17,10 @@ syracuse = {
 			building_classes += town_hall
 		}
 		
+		814 = {
+			owner = byzantium #part of the Byzantine Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1061 = {
 			owner = sicily #conquered by the Normans between 1061 and 1091; Source: William R. Shepherd, "Historical Atlas", 1911, p. 64.
 		}

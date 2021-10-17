@@ -22,6 +22,10 @@ oporto = {
 			owner = galicia #part of Suebic Galicia in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
+		814 = {
+			owner = asturias #part of the Kingdom of Asturias c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1094 = {
 			owner = portugal #part of the County of Portugal from 1094; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}

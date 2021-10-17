@@ -20,5 +20,9 @@ frederikshavn = {
 			building_classes -= farm
 			building_classes += farm #a longhouse existed in Store Tyrrestrup (Vendsyssel) in the period II of the Nordic Bronze Age (1500-1300 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 73-74.
 		}
+		
+		-1300 = {
+			building_classes -= farm
+		}
 	}
 }

@@ -1,0 +1,7 @@
+asturias = {
+	name = "Asturias"
+	civilization = castillian
+	type = polity
+	color = green
+	default_tier = kingdom
+}

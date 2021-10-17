@@ -30,6 +30,15 @@ kiel = {
 			building_classes += watch_tower
 		}
 		
+		-1599 = {
+			building_classes -= farm
+			building_classes -= farm
+			building_classes -= farm
+			building_classes -= lumber_mill
+			building_classes -= watch_tower
+			building_classes -= watch_tower
+		}
+		
 		-264 = {
 			owner = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
