@@ -1,0 +1,16 @@
+wilzian_tribe = {
+	name = "Wilzian Tribe"
+	adjective = "Wilzian"
+	civilization = slavic
+	type = tribe
+	color = yellow
+	
+	history = {
+		814 = {
+			diplomacy_state = {
+				faction = francia #tributary to the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+				state = vassal
+			}
+		}
+	}
+}

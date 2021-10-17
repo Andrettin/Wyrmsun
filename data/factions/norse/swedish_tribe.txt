@@ -4,6 +4,7 @@ swedish_tribe = {
 	civilization = norse
 	type = tribe
 	color = blue
+	default_capital = stockholm
 	upgrade = upgrade_faction_swedish_tribe
 	icon = icon_flag_yellow_lion_on_cyan
 	develops_from = {

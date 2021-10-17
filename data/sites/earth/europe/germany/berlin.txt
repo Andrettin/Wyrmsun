@@ -24,6 +24,10 @@ berlin = {
 			owner = suebi_tribe #part of Suebic territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
+		814 = {
+			owner = wilzian_tribe #part of Wilzian territory c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1648 = {
 			owner = brandenburg #Berlin was a Brandenburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}

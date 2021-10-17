@@ -28,6 +28,10 @@ prague = {
 			owner = bavarian_tribe #Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
+		814 = {
+			owner = bohemia #part of Bohemia c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		919 = {
 			owner = bohemia #part of the Duchy of Bohemia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}

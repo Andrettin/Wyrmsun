@@ -18,6 +18,10 @@ genoa = {
 			building_classes += dock
 		}
 		
+		814 = {
+			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1097 = {
 			owner = italy #part of Italy c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}

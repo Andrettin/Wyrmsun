@@ -28,7 +28,11 @@ zagreb = {
 		486 = {
 			owner = ostrogothia #part of the dominions of the Ostrogoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
-
+		
+		814 = {
+			owner = croatia #part of Croatia c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
 		1097 = {
 			owner = croatia #part of the Kingdom of Croatia c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
