@@ -61,7 +61,7 @@ DialogBase {
 			
 			RadioImageButton {
 				id: allied_radio_button
-				x: allied_label.x - parent.parent.x + allied_label.width / 2 - width / 2 //place at the horizontal center of the label
+				x: allied_label.x - diplomacy_list.contentItem.x + allied_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
 				checked: wyrmgus.this_player.has_allied_stance_with_sync(modelData)
 				interface_style: diplomacy_dialog.interface_style
@@ -81,7 +81,7 @@ DialogBase {
 			
 			RadioImageButton {
 				id: enemy_radio_button
-				x: enemy_label.x - parent.parent.x + enemy_label.width / 2 - width / 2 //place at the horizontal center of the label
+				x: enemy_label.x - diplomacy_list.contentItem.x + enemy_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
 				checked: wyrmgus.this_player.has_enemy_stance_with_sync(modelData)
 				interface_style: diplomacy_dialog.interface_style
@@ -101,7 +101,7 @@ DialogBase {
 			
 			RadioImageButton {
 				id: shared_vision_radio_button
-				x: shared_vision_label.x - parent.parent.x + shared_vision_label.width / 2 - width / 2 //place at the horizontal center of the label
+				x: shared_vision_label.x - diplomacy_list.contentItem.x + shared_vision_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
 				checked: wyrmgus.this_player.has_shared_vision_with_sync(modelData)
 				interface_style: diplomacy_dialog.interface_style
