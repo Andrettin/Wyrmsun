@@ -1,0 +1,7 @@
+arabia = {
+	name = "Arabia"
+	civilization = arab
+	type = polity
+	color = green
+	default_tier = empire
+}

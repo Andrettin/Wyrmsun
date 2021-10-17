@@ -1,0 +1,16 @@
+algeria = {
+	name = "Algeria"
+	civilization = arab
+	type = polity
+	color = green
+	default_tier = kingdom
+	
+	history = {
+		814 = {
+			diplomacy_state = {
+				faction = arabia #the Dominion of the Aghlabids was part of the Califate of the Abbassids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+				state = vassal
+			}
+		}
+	}
+}

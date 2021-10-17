@@ -4,4 +4,13 @@ morocco = {
 	type = polity
 	color = red
 	default_tier = kingdom
+	
+	history = {
+		814 = {
+			diplomacy_state = {
+				faction = arabia #the Dominion of the Idrisids was part of the Califate of the Abbassids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+				state = vassal
+			}
+		}
+	}
 }

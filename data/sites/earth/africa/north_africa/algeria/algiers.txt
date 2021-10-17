@@ -30,5 +30,9 @@ algiers = {
 		486 = {
 			owner = vandalia #part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
+		
+		814 = {
+			owner = algeria #part of the Dominion of the Aghlabids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
 	}
 }
