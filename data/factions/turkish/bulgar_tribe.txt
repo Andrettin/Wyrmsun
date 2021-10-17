@@ -1,0 +1,7 @@
+bulgar_tribe = {
+	name = "Bulgar Tribe"
+	adjective = "Bulgar"
+	civilization = turkish
+	type = tribe
+	color = brown
+}

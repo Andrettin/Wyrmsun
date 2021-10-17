@@ -17,5 +17,9 @@ bucharest = {
 		200 = {
 			owner = visigothic_tribe #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
+		
+		814 = {
+			owner = bulgar_tribe #part of Bulgar territory c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
 	}
 }

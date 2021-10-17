@@ -17,5 +17,9 @@ kherson = {
 		395 = {
 			owner = ostrogothic_tribe #part of Ostrogothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
+		
+		814 = {
+			owner = magyar_tribe #part of Magyar territory c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
 	}
 }
