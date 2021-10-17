@@ -1,0 +1,17 @@
+croatia = {
+	name = "Croatia"
+	adjective = "Croatian"
+	civilization = slavic
+	type = polity
+	color = blue
+	default_tier = kingdom
+	
+	history = {
+		814 = {
+			diplomacy_state = {
+				faction = francia #tributary to the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+				state = vassal
+			}
+		}
+	}
+}

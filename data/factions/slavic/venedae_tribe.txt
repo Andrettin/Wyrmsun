@@ -1,0 +1,7 @@
+venedae_tribe = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	name = "Venedae Tribe"
+	adjective = "Venedae"
+	civilization = slavic
+	type = tribe
+	color = yellow
+}

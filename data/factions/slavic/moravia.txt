@@ -1,0 +1,8 @@
+moravia = {
+	name = "Moravia"
+	adjective = "Moravian"
+	civilization = slavic
+	type = polity
+	color = brown
+	default_tier = duchy
+}

@@ -7,10 +7,29 @@ bohemia = {
 	default_tier = duchy
 	
 	history = {
-		1039 = {
+		814 = {
 			diplomacy_state = {
-				faction = hungary #Duke Břetislav I of Bohemia made an alliance with King Peter of Hungary in 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
-				state = alliance
+				faction = francia #tributary to the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+				state = vassal
+			}
+		}
+		
+		874 = {
+			diplomacy_state = {
+				faction = moravia #the Bohemian duke Bořivoj recognized the overlorship of Svatopluk of Moravia in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+				state = vassal
+			}
+		}
+		
+		895 = {
+			diplomacy_state = {
+				faction = moravia #the sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895, abandoning Moravian suzerainty; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+				state = peace
+			}
+			
+			diplomacy_state = {
+				faction = holy_rome
+				state = vassal
 			}
 		}
 		
@@ -34,6 +53,13 @@ bohemia = {
 			diplomacy_state = {
 				faction = holy_rome #Bohemia became a vassal of the Holy Roman Empire again in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
 				state = vassal
+			}
+		}
+		
+		1039 = {
+			diplomacy_state = {
+				faction = hungary #Duke Břetislav I of Bohemia made an alliance with King Peter of Hungary in 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
+				state = alliance
 			}
 		}
 		

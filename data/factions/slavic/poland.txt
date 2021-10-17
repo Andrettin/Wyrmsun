@@ -1,0 +1,9 @@
+poland = {
+	name = "Poland"
+	adjective = "Polish"
+	civilization = slavic
+	type = polity
+	color = red
+	default_tier = kingdom
+	icon = icon_flag_five_white_birds_on_red
+}

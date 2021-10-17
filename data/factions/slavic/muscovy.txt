@@ -1,0 +1,22 @@
+muscovy = {
+	name = "Muscovy"
+	civilization = slavic
+	type = polity
+	color = red
+	default_tier = duchy
+	title_names = {
+		monarchy = {
+			duchy = "Principality"
+		}
+	}
+	character_title_names = {
+		head_of_state = {
+			monarchy = {
+				duchy = {
+					male = "Prince"
+					female = "Princess"
+				}
+			}
+		}
+	}
+}

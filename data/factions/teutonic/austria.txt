@@ -34,6 +34,7 @@ austria = {
 			monarchy = "Education Director" #Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 		}
 	}
+	
 	#ship_names = {
 		#"Achilles" #steamship; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 38.
 		#"Adler" #imperial yacht; Source: Peter Schubert, "Krieg auf der Donau: Die Geschichte der k.u.k. Donauflotille", p. 30.

@@ -1,0 +1,7 @@
+budini_tribe = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	name = "Budini Tribe"
+	adjective = "Budini"
+	civilization = slavic #accurate?
+	type = tribe
+	color = blue
+}
