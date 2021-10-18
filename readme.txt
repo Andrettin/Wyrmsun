@@ -57,11 +57,15 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.3
 -----------------------------------------------------------------------
 
+* AI
+- Fixed issue which caused the AI to potentially declare war on the owner of a hidden ownership unit (such as the Goblin Thief) when attacking it.
+
 * Maps
 - Added Naples settlement site to the Earth map, along with predefined territory for it.
 - Added the Aemilian Way and Appian Way route terrain features to the Earth map.
 - Added the Thames river to the Earth map.
 - Fixed an issue which caused a freeze when starting a dungeon map.
+- Improved settlement site placement for the Earth map, to prevent them from being adjacent to tiles that are blocked off (leading e.g. to blocked workers).
 
 * Quests
 - Fixed an issue which caused the minimap to not be updated properly for shared vision (if applicable) at the start of legacy quests.
