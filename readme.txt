@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - The dry grass and semi-dry grass transition graphics have been updated.
 - Added new dry grass and semi-dry grass decoration tiles.
+- Fixed issue which caused a crash if two wall tiles were being built at the same time while adjacent to each other.
 
 * Upgrades
 - Fixed a crash which could occur when selecting a building which had a button to research an upgrade class if its player had no upgrade for that class.
