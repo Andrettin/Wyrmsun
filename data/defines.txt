@@ -28,6 +28,8 @@ default_season_schedule = terran_schedule
 
 default_map_projection = equirectangular
 
+ford_terrain_type = ford
+
 border_image_file = "terrain/border.png"
 border_frame_size = { 32 32 }
 border_transition_tiles = {
