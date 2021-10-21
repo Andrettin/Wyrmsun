@@ -9,8 +9,10 @@ Window {
 	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
 	height: wyrmgus.preferences.fullscreen ? Screen.height + 1 : wyrmgus.preferences.window_height //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
 	flags: wyrmgus.preferences.fullscreen ? (Qt.FramelessWindowHint | Qt.Window) : (Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint)
-	minimumWidth: get_minimum_window_width(wyrmgus.scale_factor)
-	minimumHeight: get_minimum_window_height(wyrmgus.scale_factor)
+	minimumWidth: (wyrmgus.preferences.fullscreen || wyrmgus.preferences.window_maximized) ? 1 : wyrmgus.preferences.window_width
+	minimumHeight: (wyrmgus.preferences.fullscreen || wyrmgus.preferences.window_maximized) ? 1 : wyrmgus.preferences.window_height
+	maximumWidth: (wyrmgus.preferences.fullscreen || wyrmgus.preferences.window_maximized) ? 9999 : wyrmgus.preferences.window_width
+	maximumHeight: (wyrmgus.preferences.fullscreen || wyrmgus.preferences.window_maximized) ? 9999 : wyrmgus.preferences.window_height
 	color: "black"
 	
 	FontLoader {
@@ -45,30 +47,6 @@ Window {
 				window.visible = true
 				
 				//wyrmgus.crop_image_frames("C:/Wyrmsun/graphics/units/undead/skeleton_warrior.png", Qt.size(116, 116), Qt.size(72, 72))
-			}
-		}
-	}
-	
-	onWidthChanged: {
-		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_width !== window.width) {
-			wyrmgus.preferences.window_width = window.width
-			//wyrmgus.preferences.save()
-		}
-	}
-	
-	onHeightChanged: {
-		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_height !== window.height) {
-			wyrmgus.preferences.window_height = window.height
-			//wyrmgus.preferences.save()
-		}
-	}
-	
-	onVisibilityChanged: {
-		if (window.visible && !wyrmgus.preferences.fullscreen) {
-			var is_maximized = (window.visibility === Window.Maximized)
-			if (wyrmgus.preferences.window_maximized !== is_maximized) {
-				wyrmgus.preferences.window_maximized = is_maximized
-				//wyrmgus.preferences.save()
 			}
 		}
 	}

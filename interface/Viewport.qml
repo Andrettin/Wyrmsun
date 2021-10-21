@@ -8,8 +8,8 @@ Item {
 	id: viewport
 	anchors.left: window.left
 	anchors.top: window.top
-	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
-	height: wyrmgus.preferences.fullscreen ? Screen.height : wyrmgus.preferences.window_height
+	width: wyrmgus.preferences.fullscreen ? Screen.width : window.width
+	height: wyrmgus.preferences.fullscreen ? Screen.height : window.height
 	
 	property var map_view_underlay: null
 	property var map_view: null

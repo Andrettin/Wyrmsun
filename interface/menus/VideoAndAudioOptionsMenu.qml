@@ -73,17 +73,23 @@ MenuBase {
 			}
 			
 			if (selectedEntry == "Maximized") {
-				if (!wyrmgus.preferences.window_maximized) {
+				wyrmgus.preferences.window_maximized = true
+				
+				if (window.visibility !== Window.Maximized) {
 					window.showMaximized()
 				}
 			} else {
-				if (wyrmgus.preferences.window_maximized) {
+				wyrmgus.preferences.window_maximized = false
+				
+				if (window.visibility === Window.Maximized) {
 					window.showNormal()
 				}
 				
 				var size_array = selectedEntry.split("x")
-				window.width = size_array[0]
-				window.height = size_array[1]
+				wyrmgus.preferences.window_width = size_array[0]
+				wyrmgus.preferences.window_height = size_array[1]
+				window.width = wyrmgus.preferences.window_width
+				window.height = wyrmgus.preferences.window_height
 			}
 		}
 		
@@ -168,6 +174,7 @@ MenuBase {
 				window.y = 0
 			} else {
 				window.showMaximized()
+				window_size_dropdown.set_selected_entry("Maximized")
 			}
 		}
 	}
