@@ -4,7 +4,7 @@ import QtQuick.Window 2.12
 
 Window {
 	id: window
-	visible: true
+	visible: false
 	title: qsTr("Wyrmsun")
 	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
 	height: wyrmgus.preferences.fullscreen ? Screen.height + 1 : wyrmgus.preferences.window_height //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
@@ -38,26 +38,43 @@ Window {
 				
 				wyrmgus.call_lua_command("SetVideoSize(" + viewport.width + ", " + viewport.height + ");")
 				
+				if (!wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_maximized) {
+					window.showMaximized()
+				}
+				
+				window.visible = true
+				
 				//wyrmgus.crop_image_frames("C:/Wyrmsun/graphics/units/undead/skeleton_warrior.png", Qt.size(116, 116), Qt.size(72, 72))
 			}
 		}
 	}
 	
 	onWidthChanged: {
-		if (!wyrmgus.preferences.fullscreen) {
+		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_width !== window.width) {
 			wyrmgus.preferences.window_width = window.width
 			wyrmgus.preferences.save()
 		}
 	}
 	
 	onHeightChanged: {
-		if (!wyrmgus.preferences.fullscreen) {
+		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_height !== window.height) {
 			wyrmgus.preferences.window_height = window.height
 			wyrmgus.preferences.save()
 		}
 	}
 	
+	onVisibilityChanged: {
+		if (window.visible && !wyrmgus.preferences.fullscreen) {
+			var is_maximized = (window.visibility === Window.Maximized)
+			if (wyrmgus.preferences.window_maximized !== is_maximized) {
+				wyrmgus.preferences.window_maximized = is_maximized
+				wyrmgus.preferences.save()
+			}
+		}
+	}
+	
 	onClosing: {
+		window.visible = false
 		wyrmgus.exit()
 	}
 	
