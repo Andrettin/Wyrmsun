@@ -407,7 +407,7 @@ Item {
 	function on_popup_closed(popup) {
 		decrement_active_popup_count()
 		
-		const popup_index = map_view.active_popups.indexOf(popup);
+		const popup_index = map_view.active_popups.indexOf(popup)
 		if (popup_index != -1) {
 			map_view.active_popups.splice(popup_index, 1)
 		}

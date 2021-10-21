@@ -8,9 +8,9 @@ Window {
 	title: qsTr("Wyrmsun")
 	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
 	height: wyrmgus.preferences.fullscreen ? Screen.height + 1 : wyrmgus.preferences.window_height //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
-	minimumWidth: 640 * wyrmgus.scale_factor
-	minimumHeight: 600
-	flags: wyrmgus.preferences.fullscreen ? (Qt.FramelessWindowHint | Qt.Window) : (Qt.Window)
+	flags: wyrmgus.preferences.fullscreen ? (Qt.FramelessWindowHint | Qt.Window) : (Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowSystemMenuHint | Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint)
+	minimumWidth: get_minimum_window_width(wyrmgus.scale_factor)
+	minimumHeight: get_minimum_window_height(wyrmgus.scale_factor)
 	color: "black"
 	
 	FontLoader {
@@ -52,14 +52,14 @@ Window {
 	onWidthChanged: {
 		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_width !== window.width) {
 			wyrmgus.preferences.window_width = window.width
-			wyrmgus.preferences.save()
+			//wyrmgus.preferences.save()
 		}
 	}
 	
 	onHeightChanged: {
 		if (window.visible && !wyrmgus.preferences.fullscreen && wyrmgus.preferences.window_height !== window.height) {
 			wyrmgus.preferences.window_height = window.height
-			wyrmgus.preferences.save()
+			//wyrmgus.preferences.save()
 		}
 	}
 	
@@ -68,7 +68,7 @@ Window {
 			var is_maximized = (window.visibility === Window.Maximized)
 			if (wyrmgus.preferences.window_maximized !== is_maximized) {
 				wyrmgus.preferences.window_maximized = is_maximized
-				wyrmgus.preferences.save()
+				//wyrmgus.preferences.save()
 			}
 		}
 	}
@@ -143,5 +143,25 @@ Window {
 		}
 		
 		return year_str + " " + year_suffix
+	}
+	
+	function get_minimum_window_width(scale_factor) {
+		if (scale_factor >= 2) {
+			return 1600
+		} else if (scale_factor >= 1.5) {
+			return 1024
+		} else {
+			return 800
+		}
+	}
+	
+	function get_minimum_window_height(scale_factor) {
+		if (scale_factor >= 2) {
+			return 864
+		} else if (scale_factor >= 1.5) {
+			return 768
+		} else {
+			return 600
+		}
 	}
 }

@@ -18,7 +18,7 @@ MenuBase {
 	Dropdown {
 		id: scale_factor_dropdown
 		anchors.left: sound_effects_slider.left
-		anchors.bottom: sound_effects_slider.top
+		anchors.bottom: wyrmgus.preferences.fullscreen ? sound_effects_slider.top : window_size_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: 55 * wyrmgus.scale_factor
 		model: ["1x", "1.5x", "2x"]
@@ -29,6 +29,110 @@ MenuBase {
 		
 		onSelectedEntryChanged: {
 			wyrmgus.preferences.scale_factor_string = selectedEntry.substring(0, selectedEntry.length - 1)
+		}
+	}
+	
+	NormalText {
+		id: window_size_label
+		text: "Window Size:"
+		anchors.left: window_size_dropdown.left
+		anchors.bottom: window_size_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		visible: !wyrmgus.preferences.fullscreen
+	}
+	
+	Dropdown {
+		id: window_size_dropdown
+		anchors.left: sound_effects_slider.left
+		anchors.bottom: sound_effects_slider.top
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
+		width: 100 * wyrmgus.scale_factor
+		model: get_entries(wyrmgus.scale_factor)
+		visible: !wyrmgus.preferences.fullscreen
+		
+		property bool updating_entries: false
+		
+		onModelChanged: {
+			updating_entries = false
+			
+			if (wyrmgus.preferences.window_maximized) {
+				set_selected_entry("Maximized")
+			} else {
+				var window_size_str = wyrmgus.preferences.window_width + "x" + wyrmgus.preferences.window_height
+				if (window_size_dropdown.model.indexOf(window_size_str) !== -1) {
+					set_selected_entry(window_size_str)
+				} else {
+					window_size_dropdown.currentIndex = 0
+				}
+			}
+		}
+		
+		onSelectedEntryChanged: {
+			if (updating_entries) {
+				return
+			}
+			
+			if (selectedEntry == "Maximized") {
+				if (!wyrmgus.preferences.window_maximized) {
+					window.showMaximized()
+				}
+			} else {
+				if (wyrmgus.preferences.window_maximized) {
+					window.showNormal()
+				}
+				
+				var size_array = selectedEntry.split("x")
+				window.width = size_array[0]
+				window.height = size_array[1]
+			}
+		}
+		
+		function get_entries(scale_factor) {
+			updating_entries = true
+			
+			var entries = []
+			
+			var potential_entries = [
+				"800x600",
+				"1024x768",
+				"1152x864",
+				"1280x600",
+				"1280x720",
+				"1280x768",
+				"1280x800",
+				"1280x960",
+				"1280x1024",
+				"1360x768",
+				"1366x768",
+				"1400x1050",
+				"1440x900",
+				"1600x900",
+				"1680x1050",
+				"1920x1080"
+			]
+			
+			var minimum_width = get_minimum_window_width(scale_factor)
+			var minimum_height = get_minimum_window_height(scale_factor)
+			
+			for (var i = 0; i < potential_entries.length; ++i) {
+				var potential_entry = potential_entries[i]
+				
+				var size_array = potential_entry.split("x")
+				
+				if (size_array[0] < minimum_width) {
+					continue
+				}
+				
+				if (size_array[1] < minimum_height) {
+					continue
+				}
+				
+				entries.push(potential_entry)
+			}
+			
+			entries.push("Maximized")
+			
+			return entries
 		}
 	}
 	
@@ -45,10 +149,33 @@ MenuBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 	}
 	
+	LabeledRadioImageButton {
+		id: fullscreen_radio_button
+		anchors.left: music_slider.left
+		anchors.top: music_slider.bottom
+		anchors.topMargin: 16 * wyrmgus.scale_factor
+		text: "Fullscreen"
+		checked: wyrmgus.preferences.fullscreen
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.fullscreen = checked
+			
+			if (wyrmgus.preferences.fullscreen) {
+				window.showNormal()
+				window.width = Screen.width
+				window.height = Screen.height + 1 //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
+				window.x = 0
+				window.y = 0
+			} else {
+				window.showMaximized()
+			}
+		}
+	}
+	
 	SmallButton {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: music_slider.bottom
+		anchors.top: fullscreen_radio_button.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"
