@@ -6,9 +6,11 @@ Window {
 	id: window
 	visible: true
 	title: qsTr("Wyrmsun")
-	width: Screen.width
-	height: Screen.height + 1 //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
-	flags: Qt.FramelessWindowHint | Qt.Window
+	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
+	height: wyrmgus.preferences.fullscreen ? Screen.height + 1 : wyrmgus.preferences.window_height //it needs to be +1 otherwise it becomes (non-borderless) fullscreen automatically
+	minimumWidth: 640 * wyrmgus.scale_factor
+	minimumHeight: 600
+	flags: wyrmgus.preferences.fullscreen ? (Qt.FramelessWindowHint | Qt.Window) : (Qt.Window)
 	color: "black"
 	
 	FontLoader {
@@ -40,7 +42,21 @@ Window {
 			}
 		}
 	}
-		
+	
+	onWidthChanged: {
+		if (!wyrmgus.preferences.fullscreen) {
+			wyrmgus.preferences.window_width = window.width
+			wyrmgus.preferences.save()
+		}
+	}
+	
+	onHeightChanged: {
+		if (!wyrmgus.preferences.fullscreen) {
+			wyrmgus.preferences.window_height = window.height
+			wyrmgus.preferences.save()
+		}
+	}
+	
 	onClosing: {
 		wyrmgus.exit()
 	}

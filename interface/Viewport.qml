@@ -8,11 +8,19 @@ Item {
 	id: viewport
 	anchors.left: window.left
 	anchors.top: window.top
-	width: Screen.width
-	height: Screen.height
+	width: wyrmgus.preferences.fullscreen ? Screen.width : wyrmgus.preferences.window_width
+	height: wyrmgus.preferences.fullscreen ? Screen.height : wyrmgus.preferences.window_height
 	
 	property var map_view_underlay: null
 	property var map_view: null
+	
+	onWidthChanged: {
+		wyrmgus.call_lua_command("SetVideoSize(" + viewport.width + ", " + viewport.height + ");")
+	}
+	
+	onHeightChanged: {
+		wyrmgus.call_lua_command("SetVideoSize(" + viewport.width + ", " + viewport.height + ");")
+	}
 	
 	Item { //tooltips need to be attached to an item
 		//set the shared properties for tooltips
