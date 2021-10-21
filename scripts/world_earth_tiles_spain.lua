@@ -42,30 +42,10 @@ DefineWorldMapTile({463, 132}, {
 	}
 })
 
-DefineWorldMapTile({464, 134}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Castra Legionis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "León" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-	}
-})
-
 DefineWorldMapTile({464, 141}, {
 	World = "earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "castillian", "spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69.
-	}
-})
-
-DefineWorldMapTile({469, 141}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Complutum"
-	},
-	FactionCulturalSettlementNames = {
-		"castillian", "spain", "Madrid"
 	}
 })
 

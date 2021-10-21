@@ -39,13 +39,6 @@ DefineWorldMapTile({557, 147}, {
 	}
 })
 
-DefineWorldMapTile({565, 140}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Nicomedia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineWorldMapTile({565, 152}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -57,13 +50,6 @@ DefineWorldMapTile({572, 156}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
-DefineWorldMapTile({580, 161}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"latin", "Tyrus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 

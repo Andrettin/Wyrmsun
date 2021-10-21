@@ -75,20 +75,6 @@ DefineWorldMapTile({512, 73}, {
 	}
 })
 
-DefineWorldMapTile({515, 97}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"norse", "Copenhagen"
-	}
-})
-
-DefineWorldMapTile({518, 86}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"norse", "Karlstad"
-	}
-})
-
 DefineWorldMapTile({521, 64}, {
 	World = "earth",
 	CulturalSettlementNames = {

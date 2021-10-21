@@ -46,35 +46,6 @@ DefineWorldMapTile({521, 153}, {
 	}
 })
 
-DefineWorldMapTile({538, 107}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Warsaw"
-	}
-})
-
-DefineWorldMapTile({543, 110}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Lublin"
-	}
-})
-
-DefineWorldMapTile({547, 114}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Lvov",
-		"teuton", "Lemberg"
-	}
-})
-
-DefineWorldMapTile({552, 100}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		-- Lithuanian name: "Vilnius"
-	}
-})
-
 DefineWorldMapTile({552, 119}, {
 	World = "earth",
 	CulturalSettlementNames = {
@@ -82,30 +53,9 @@ DefineWorldMapTile({552, 119}, {
 	}
 })
 
-DefineWorldMapTile({559, 102}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Minsk"
-	}
-})
-
 DefineWorldMapTile({562, 122}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"slav", "Kishinev"
-	}
-})
-
-DefineWorldMapTile({587, 97}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Moscow"
-	}
-})
-
-DefineWorldMapTile({618, 124}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"slav", "russia", "Astrakhan"
 	}
 })

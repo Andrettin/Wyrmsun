@@ -31,6 +31,7 @@ DefineSite("simferopol", {
 	Position = {4615, 1024},
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
+		"greek", "Heraclea Chersonesus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 		"slav", "Simferopol"
 	},
 	Regions = {"europe"}

@@ -893,6 +893,7 @@ DefineSite("tyre", {
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"babylonian", "Tyre",
+		-- "latin", "Tyrus", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"persian", "Tyre",
 		"phoenician", "Zor" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	},

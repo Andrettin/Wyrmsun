@@ -53,21 +53,6 @@ DefineWorldMapTile({570, 122}, {
 	}
 })
 
-DefineWorldMapTile({572, 123}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"slav", "Kherson"
-	}
-})
-
-DefineWorldMapTile({576, 128}, {
-	World = "earth",
-	CulturalSettlementNames = {
-		"greek", "Heraclea Chersonesus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		"slav", "Simferopol"
-	}
-})
-
 DefineWorldMapTile({583, 127}, {
 	World = "earth",
 	CulturalSettlementNames = {

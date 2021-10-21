@@ -7,6 +7,9 @@ leon = {
 	cores = {
 		leon
 	}
+	cultural_names = {
+		latin = "Castra Legionis" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
 	regions = {
 		castille
 	}

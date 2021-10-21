@@ -4,6 +4,9 @@ madrid = {
 	geocoordinate = { -3.68335168600 40.40002626450 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 124 44 233 }
+	cultural_names = {
+		latin = "Complutum"
+	}
 	regions = {
 		castille
 	}
