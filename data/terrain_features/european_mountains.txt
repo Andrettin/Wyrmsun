@@ -1,7 +1,17 @@
 alps = {
 	name = "Alps"
+	aliases += finsteraarhorn
+	aliases += grossglockner
+	aliases += grossvenediger
+	aliases += matterhorn
+	aliases += mont_blanc
+	aliases += monte_rosa
+	aliases += ortler
+	aliases += weisshorn
+	aliases += wildspitze
 	terrain_type = rock #mountains
 	color = { 125 252 71 }
+	terrain_generation_seed = true
 }
 
 apennine_mountains = {
