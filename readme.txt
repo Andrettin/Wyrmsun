@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.4
 -----------------------------------------------------------------------
 
+* Terrain
+- Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
+
 * User Interface
 - (Re-)Added windowed mode support.
 
