@@ -4,6 +4,9 @@ athens = {
 	geocoordinate = { 23.73332108430 37.98332623190 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 102 220 253 }
+	cultural_names = {
+		#latin = "Athenae" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
 	regions = {
 		greece
 	}

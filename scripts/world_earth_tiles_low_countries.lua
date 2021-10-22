@@ -29,9 +29,6 @@ DefineWorldMapTile({492, 111}, {
 	World = "earth",
 	CulturalSettlementNames = {
 		"latin", "Aduatuca"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "netherlands", "Brussels"
 	}
 })
 

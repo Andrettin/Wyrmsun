@@ -100,6 +100,7 @@ DefineSite("corinth", {
 	--BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"greek", "Corinth"
+		-- "latin", "Corinthus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalOwners = {
 		-1450, "mycenae", -- Corinth's area was a part of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.

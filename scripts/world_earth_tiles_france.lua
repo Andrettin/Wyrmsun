@@ -52,11 +52,3 @@ DefineWorldMapTile({496, 126}, {
 		"french", "france", "Chambéry"
 	}
 })
-
-DefineWorldMapTile({496, 128}, {
-	World = "earth",
-	FactionCulturalSettlementNames = {
-		"french", "france", "Grenoble" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	}
-})
-
