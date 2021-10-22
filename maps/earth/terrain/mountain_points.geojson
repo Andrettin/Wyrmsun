@@ -3,10 +3,14 @@
 "name": "mountain_points",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
+{ "type": "Feature", "properties": { "terrain_feature": "brec_de_chambeyron" }, "geometry": { "type": "Point", "coordinates": [ 6.85277778, 44.52694444 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "corno_grande" }, "geometry": { "type": "Point", "coordinates": [ 13.565833333333, 42.469166666667 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "dom" }, "geometry": { "type": "Point", "coordinates": [ 7.8566666666667, 46.094444444444 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "finsteraarhorn" }, "geometry": { "type": "Point", "coordinates": [ 8.1260277777778, 46.537472222222 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "grand_combin" }, "geometry": { "type": "Point", "coordinates": [ 7.2991666666667, 45.9375 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "grossglockner" }, "geometry": { "type": "Point", "coordinates": [ 12.69385, 47.074528 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "grossvenediger" }, "geometry": { "type": "Point", "coordinates": [ 12.346389, 47.108889 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "levanna_centrale" }, "geometry": { "type": "Point", "coordinates": [ 7.17195, 45.41055 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "matterhorn" }, "geometry": { "type": "Point", "coordinates": [ 7.6588888888889, 45.976388888889 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "mont_blanc" }, "geometry": { "type": "Point", "coordinates": [ 6.865, 45.833611111111 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "monte_amaro" }, "geometry": { "type": "Point", "coordinates": [ 14.0859108, 42.0863319 ] } },
@@ -19,7 +23,10 @@
 { "type": "Feature", "properties": { "terrain_feature": "monte_velino" }, "geometry": { "type": "Point", "coordinates": [ 13.366666666667, 42.15 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "monte_vettore" }, "geometry": { "type": "Point", "coordinates": [ 13.266666666667, 42.816666666667 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "ortler" }, "geometry": { "type": "Point", "coordinates": [ 10.545, 46.508888888889 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "rheinwaldhorn" }, "geometry": { "type": "Point", "coordinates": [ 9.04, 46.493611111111 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "triglav" }, "geometry": { "type": "Point", "coordinates": [ 13.836667, 46.378333 ] } },
 { "type": "Feature", "properties": { "terrain_feature": "weisshorn" }, "geometry": { "type": "Point", "coordinates": [ 7.7161111111111, 46.101666666667 ] } },
-{ "type": "Feature", "properties": { "terrain_feature": "wildspitze" }, "geometry": { "type": "Point", "coordinates": [ 10.867222222222, 46.885277777778 ] } }
+{ "type": "Feature", "properties": { "terrain_feature": "wildspitze" }, "geometry": { "type": "Point", "coordinates": [ 10.867222222222, 46.885277777778 ] } },
+{ "type": "Feature", "properties": { "terrain_feature": "zugspitze" }, "geometry": { "type": "Point", "coordinates": [ 10.986314, 47.421217 ] } }
 ]
 }
