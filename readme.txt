@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.4
 -----------------------------------------------------------------------
 
+* Maps
+- Reworked the Alps for the Earth map.
+
 * Terrain
 - Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
 
