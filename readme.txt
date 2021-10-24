@@ -57,8 +57,14 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.4
 -----------------------------------------------------------------------
 
+* AI
+- Improved the performance of AI resource gathering.
+
 * Maps
 - Reworked the Alps for the Earth map.
+
+* Pathfinding
+- Improved the performance of the algorithm used by units to find a depot to return resources to.
 
 * Terrain
 - Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
