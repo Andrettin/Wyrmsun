@@ -21,7 +21,7 @@ MenuBase {
 		anchors.bottom: wyrmgus.preferences.fullscreen ? sound_effects_slider.top : window_size_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: 55 * wyrmgus.scale_factor
-		model: ["1x", "1.5x", "2x"]
+		model: ["1x", "1.5x", "1.7x", "2x"]
 		
 		onModelChanged: {
 			set_selected_entry(wyrmgus.preferences.scale_factor_string + "x")
@@ -68,7 +68,7 @@ MenuBase {
 		}
 		
 		onSelectedEntryChanged: {
-			if (updating_entries) {
+			if (updating_entries || !visible) {
 				return
 			}
 			
