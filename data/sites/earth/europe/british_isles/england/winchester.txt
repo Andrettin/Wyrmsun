@@ -10,6 +10,11 @@ winchester = {
 		celt = "Verita Belgarum"
 		latin = "Verita Belgarum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
+	cores = {
+		englaland
+		england
+		wessex
+	}
 	regions = {
 		england
 	}

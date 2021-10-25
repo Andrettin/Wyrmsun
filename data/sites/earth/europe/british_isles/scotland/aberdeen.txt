@@ -1,0 +1,29 @@
+aberdeen = {
+	name = "Aberdeen"
+	map_template = earth
+	geocoordinate = { -2.07998702128 57.17039796870 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 159 222 240 }
+	regions = {
+		scotland
+	}
+	
+	history = {
+		395 = {
+			owner = pict_tribe #part of Pictish territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += town_hall
+		}
+		
+		802 = {
+			owner = scotland #became part of Scotland in 843; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1097 = {
+			owner = scotland #part of the Kingdom of Scotland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1560 = {
+			owner = scotland #part of Scotland c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

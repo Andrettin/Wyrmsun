@@ -10,6 +10,10 @@ london = {
 		celt = "Londinium"
 		latin = "Londinium" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
+	cores = {
+		englaland
+		england
+	}
 	regions = {
 		england
 	}

@@ -2,7 +2,29 @@ tamworth = {
 	name = "Tamworth"
 	map_template = earth
 	geocoordinate = { -1.695 52.633 }
+	base_unit_type = unit_settlement_site
+	color = { 46 74 230 }
+	cores = {
+		englaland
+		england
+		mercia
+	}
 	regions = {
 		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += town_hall
+		}
+		
+		802 = {
+			owner = mercia #part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
 	}
 }
