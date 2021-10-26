@@ -1,10 +1,57 @@
-shorbear_hills = { #from Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
+shorbear_hills = {
 	name = "Shorbear Hills"
 	main_template = nidavellir
 	size = { 42 40 }
-	terrain_file = "shorbear_hills.png"
-	overlay_terrain_file = "shorbear_hills_overlay.png"
+	terrain_file = "shorbear_hills.wes"
 	subtemplate_top_left_pos = { 128 72 }
+	terrain_substitutions = {
+		cave_floor = dry_mud
+		cave_wall = rock
+		dirt = dry_mud
+		dry_dirt = dry_mud
+		dwarven_wall = dry_mud
+		grass = dry_mud
+		ice = mud
+		pine_tree = flamefood_tree
+		pine_tree_snow = flamefood_tree
+		rock_snow = rock
+		semi_dry_grass = dry_mud
+		snow = dry_mud
+	}
+	default_base_terrains = {
+		rock = dry_mud
+		shallow_water = mud
+	}
+	tile_terrains = {
+		19 = {
+			19 = mud
+		}
+		20 = {
+			20 = mud
+			28 = mud
+		}
+		21 = {
+			26 = mud
+		}
+		22 = {
+			32 = mud
+		}
+	}
+	overlay_tile_terrains = {
+		19 = {
+			19 = shallow_water
+		}
+		20 = {
+			20 = shallow_water
+			28 = shallow_water
+		}
+		21 = {
+			26 = shallow_water
+		}
+		22 = {
+			32 = shallow_water
+		}
+	}
 	generated_neutral_units = {
 		unit_gold_deposit = 1
 		unit_iron_deposit = 1

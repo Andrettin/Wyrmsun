@@ -61,8 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of AI resource gathering.
 
 * Maps
-- Reworked the Alps for the Earth map.
-- Added Tamworth and Aberdeen settlement sites for the Earth map, and updated settlement territories in Britain accordingly.
+- Reworked the Alps for the scenario Earth map.
+- Added Tamworth and Aberdeen settlement sites for the scenario Earth map, and updated settlement territories in Britain accordingly.
+- Reworked the Shorbear Hills submap for the scenario Nidavellir map.
 
 * Pathfinding
 - Improved the performance of the algorithm used by units to find a depot to return resources to.

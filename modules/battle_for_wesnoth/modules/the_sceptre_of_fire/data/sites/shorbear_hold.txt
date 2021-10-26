@@ -1,0 +1,28 @@
+shorbear_hold = {
+	name = "Shorbear Hold"
+	map_template = shorbear_hills
+	#pos = { 19 17 }
+	pos = { 19 15 }
+	base_unit_type = unit_settlement_site
+	cores = {
+		shorbear_clan
+	}
+	
+	history = {
+		years_wesnoth = {
+			25 = {
+				owner = shorbear_clan
+				building_classes += stronghold
+				#unique = shorbear_hold
+			}
+			
+			35 = {
+				owner = norlund_clan
+			}
+			
+			40 = {
+				owner = none
+			}
+		}
+	}
+}
