@@ -42,7 +42,7 @@ london = {
 		}
 		
 		802 = {
-			owner = middlesex #London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			#owner = middlesex #London was a part of Middlesex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		}
 		
 		1097 = {

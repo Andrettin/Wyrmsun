@@ -19,4 +19,34 @@ denmark = {
 			}
 		}
 	}
+	
+	history = {
+		865 = {
+			diplomacy_state = {
+				faction = northumbria
+				state = war
+			}
+		}
+		
+		865 = {
+			diplomacy_state = {
+				faction = essex
+				state = war
+			}
+		}
+		
+		865 = {
+			diplomacy_state = {
+				faction = wessex
+				state = war
+			}
+		}
+		
+		865 = {
+			diplomacy_state = {
+				faction = mercia
+				state = war
+			}
+		}
+	}
 }
