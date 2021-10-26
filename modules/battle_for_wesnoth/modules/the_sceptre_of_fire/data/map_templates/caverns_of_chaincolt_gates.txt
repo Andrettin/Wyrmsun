@@ -2,9 +2,98 @@ caverns_of_chaincolt_gates = {
 	name = "Caverns of Chaincolt Gates"
 	main_template = nidavellir
 	size = { 34 30 }
-	terrain_file = "caverns_of_chaincolt_gates.map"
-	overlay_terrain_file = "caverns_of_chaincolt_gates_overlay.map"
+	terrain_file = "caverns_of_chaincolt_gates.wes"
 	subtemplate_top_left_pos = { 8 80 }
+	terrain_substitutions = {
+		dry_dirt = dry_mud
+		dry_grass = dry_mud
+		dwarven_wall = cave_floor
+		gray_shallow_water = shallow_water
+		ice = mud
+		pine_tree = flamefood_tree
+		pine_tree_snow = flamefood_tree
+		road = cave_floor
+		rock_snow = rock
+		snow = dry_mud
+	}
+	default_base_terrains = {
+		road = cave_floor
+		rock = dry_mud
+		shallow_water = mud
+	}
+	tile_terrains = {
+		0 = {
+			24 = dry_mud
+			25 = dry_mud
+		}
+		1 = {
+			23 = dry_mud
+			24 = dry_mud
+			25 = dry_mud
+		}
+		2 = {
+			22 = dry_mud
+			23 = dry_mud
+		}
+		3 = {
+			22 = dry_mud
+			23 = dry_mud
+		}
+		4 = {
+			21 = dry_mud
+			22 = dry_mud
+		}
+		5 = {
+			21 = dry_mud
+			22 = dry_mud
+		}
+		6 = {
+			20 = dry_mud
+			21 = dry_mud
+			22 = dry_mud
+			23 = dry_mud
+		}
+		7 = {
+			18 = dry_mud
+			19 = dry_mud
+			20 = dry_mud
+			21 = dry_mud
+			22 = dry_mud
+			23 = dry_mud
+			24 = dry_mud
+		}
+		8 = {
+			16 = dry_mud
+			17 = dry_mud
+			18 = dry_mud
+			19 = dry_mud
+			20 = dry_mud
+			22 = dry_mud
+			23 = dry_mud
+		}
+		9 = {
+			15 = dry_mud
+			16 = dry_mud
+			17 = dry_mud
+			18 = dry_mud
+		}
+		10 = {
+			14 = dry_mud
+			15 = dry_mud
+			16 = dry_mud
+		}
+		11 = {
+			15 = dry_mud
+			16 = dry_mud
+		}
+		12 = {
+			15 = dry_mud
+			16 = dry_mud
+		}
+		13 = {
+			16 = dry_mud
+		}
+	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
 		unit_wood_pile = 16

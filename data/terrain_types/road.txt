@@ -80,5 +80,6 @@ road = {
 		Rp #Overgrown Cobbles
 		Rr #Regular Cobbles
 		Rrc #Clean Gray Cobbles
+		Ur #Cave Path
 	}
 }

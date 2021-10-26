@@ -37,5 +37,6 @@ cave_wall = {
 	}
 	wesnoth_strings = {
 		Xu
+		Xuc #Mine Wall
 	}
 }

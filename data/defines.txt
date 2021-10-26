@@ -208,6 +208,7 @@ ignored_wesnoth_terrain_strings = {
 	Edb #Remains
 	Edt #Trash
 	Efm #Mixed Flowers
+	Efs #Sconce
 	Em #Small Mushrooms
 	Emf #Mushroom Farm
 	Es #Stones
@@ -228,6 +229,7 @@ ignored_wesnoth_terrain_strings = {
 	Vhs #Swamp Village
 	Vm #Merfolk Village
 	Vo #Orcish Village
+	Vu #Cave Village
 	Vud #Dwarven Village
 	Xm #Impassable (Mountains)
 }
