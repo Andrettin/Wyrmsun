@@ -72,5 +72,6 @@ cave_floor = {
 	}
 	wesnoth_strings = {
 		Uu
+		Urb #Dark Flagstones
 	}
 }

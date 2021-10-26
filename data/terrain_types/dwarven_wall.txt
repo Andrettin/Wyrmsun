@@ -76,4 +76,12 @@ dwarven_wall = {
 			southeast_outer_northwest_inner = { 146 }
 		}
 	}
+	wesnoth_strings = {
+		Cf #Dwarven Castle
+		Cfa #Winter Dwarven Castle
+		Cud #Dwarven Underground Castle
+		Kf #Dwarven Castle Keep
+		Kfa #Winter Dwarven Keep
+		Kud #Dwarven Underground Keep
+	}
 }
