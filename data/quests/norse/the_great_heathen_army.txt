@@ -9,5 +9,13 @@ the_great_heathen_army = {
 			unit_class = town_hall
 			settlement = york
 		}
+		build_units = {
+			unit_class = town_hall
+			settlement = tamworth
+		}
+		build_units = {
+			unit_class = town_hall
+			settlement = london
+		}
 	}
 }

@@ -7,6 +7,7 @@ scandinavian = {
 		865 = {
 			explored_settlements += london
 			explored_settlements += winchester
+			explored_settlements += tamworth
 			explored_settlements += york
 			explored_settlements += edinburgh
 			explored_settlements += dublin
