@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Terrain
 - Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
 
+* Units
+- Increased the transport capacity of transport ships from 3 to 6.
+
 * User Interface
 - (Re-)Added windowed mode support.
 

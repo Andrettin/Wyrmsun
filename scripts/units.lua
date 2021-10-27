@@ -3914,7 +3914,7 @@ DefineUnitType("unit-template-transport-ship", {
 	Costs = {"time", 70, "copper", 600, "lumber", 2100},
 	Speed = 8,
 	HitPoints = 150,
-	MaxOnBoard = 3,
+	MaxOnBoard = 6,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 4,
 	Armor = 5,
