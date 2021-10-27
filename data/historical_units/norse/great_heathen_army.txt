@@ -1,0 +1,33 @@
+great_heathen_army_transports = {
+	unit_class = transport_ship
+	quantity = 2
+	
+	history = {
+		865 = {
+			active = true
+			faction = denmark
+			location = aarhus
+		}
+		
+		865.12 = {
+			active = false
+		}
+	}
+}
+
+great_heathen_army_warship = {
+	unit_class = siege_warship
+	quantity = 1
+
+	history = {
+		865 = {
+			active = true
+			faction = denmark
+			location = aarhus
+		}
+		
+		865.12 = {
+			active = false
+		}
+	}
+}
