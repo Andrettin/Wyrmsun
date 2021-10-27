@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Reworked the Alps for the Earth scenario map.
-- Added Tamworth and Aberdeen settlement sites for the Earth scenario map, and updated settlement territories in Britain accordingly.
+- Added the Tamworth and Aberdeen settlement sites for the Earth scenario map, and updated settlement territories in Britain accordingly.
 - Updated the Caverns of Chaincolt Gates and Shorbear Hills submaps for the Nidavellir scenario map.
 
 * Pathfinding

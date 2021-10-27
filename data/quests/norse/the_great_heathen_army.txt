@@ -5,6 +5,7 @@ the_great_heathen_army = {
 	description = "Ragnar Lodbrok is dead. During a raid on English shores, the great Viking was captured by the King of Northumbria, Aella, and thrown into a snake pit to his death. The blood of his sons boils with fury at the fate of their father, as they swear revenge. Finally, Ragnar's sons resolve to take a great army to England, and teach the Anglo-Saxons a lesson that they will forever remember."
 	unobtainable = true
 	objectives = {
+		destroy_hero = aella
 		build_units = {
 			unit_class = town_hall
 			settlement = york

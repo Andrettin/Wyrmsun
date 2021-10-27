@@ -1,0 +1,27 @@
+halfdan_ragnarsson = {
+	name = "Halfdan"
+	surname = "Ragnarsson"
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = denmark
+	gender = male
+	deities = {
+		odin
+		tyr
+	}
+	
+	conditions = {
+		faction = denmark
+	}
+	
+	history = {
+		865 = {
+			active = true
+			location = copenhagen
+		}
+		
+		865.12 = {
+			active = false
+		}
+	}
+}

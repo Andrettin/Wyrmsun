@@ -1,0 +1,23 @@
+aella = {
+	name = "Aella"
+	unit_type = unit_teuton_heroic_swordsman
+	civilization = anglo_saxon
+	default_faction = northumbria
+	gender = male
+	deities = { christian_god }
+	
+	conditions = {
+		faction = northumbria
+	}
+	
+	history = {
+		865 = {
+			active = true
+			location = york
+		}
+		
+		865.12 = {
+			active = false
+		}
+	}
+}
