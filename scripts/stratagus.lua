@@ -195,7 +195,6 @@ SetAllPlayersTotalUnitLimit(400)
 
 DefineVariables(
 	"Variation", {Enable = true},
-	"Slow", {Max = 1000, Value = 0, Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},

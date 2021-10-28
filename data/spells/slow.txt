@@ -10,7 +10,7 @@ spell_slow = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_slow_ability
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			slow = 1000
 			haste = 0
 		}
@@ -21,7 +21,9 @@ spell_slow = {
 	}
 	cast_conditions = {
 		building = false
-		slow == 0
+		status_effects = {
+			slow == 0
+		}
 	}
 	autocast = {
 		range = 6

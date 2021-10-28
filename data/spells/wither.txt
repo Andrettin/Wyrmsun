@@ -9,7 +9,7 @@ spell_wither = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_wither
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			wither = 1000
 			blessing = 0
 			inspire = 0
@@ -21,7 +21,9 @@ spell_wither = {
 	}
 	cast_conditions = {
 		organic = only
-		wither == 0
+		status_effects = {
+			wither == 0
+		}
 	}
 	autocast = {
 		range = 6

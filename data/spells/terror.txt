@@ -9,7 +9,7 @@ spell_terror = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_terror
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			terror = 200
 		}
 		spawn_missile = {
@@ -19,7 +19,9 @@ spell_terror = {
 	}
 	cast_conditions = {
 		organic = only
-		terror == 0
+		status_effects = {
+			terror == 0
+		}
 	}
 	autocast = {
 		range = 6

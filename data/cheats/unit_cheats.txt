@@ -38,6 +38,14 @@ dwarven_axefighter = {
 	}
 }
 
+dwarven_runesmith = {
+	code = thursagan
+	
+	effects = {
+		create_unit = unit_dwarven_runesmith
+	}
+}
+
 dwarven_gryphon_rider = {
 	code = vingethor
 	

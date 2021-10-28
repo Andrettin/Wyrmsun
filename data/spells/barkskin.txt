@@ -10,7 +10,7 @@ spell_barkskin = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_barkskin
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			barkskin = 1000
 		}
 		spawn_missile = {
@@ -20,7 +20,9 @@ spell_barkskin = {
 	}
 	cast_conditions = {
 		organic = only
-		barkskin == 0
+		status_effects = {
+			barkskin == 0
+		}
 	}
 	autocast = {
 		range = 6

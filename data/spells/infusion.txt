@@ -5,7 +5,7 @@ spell_infusion = {
 	target = unit
 	sound_when_cast = magic_holy
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			infusion = 1000
 		}
 		spawn_missile = {
@@ -14,7 +14,9 @@ spell_infusion = {
 		}
 	}
 	cast_conditions = {
-		infusion == 0
+		status_effects = {
+			infusion == 0
+		}
 	}
 	autocast = {
 		range = 6

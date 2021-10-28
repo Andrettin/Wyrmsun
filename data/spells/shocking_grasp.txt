@@ -8,7 +8,7 @@ spell_shocking_grasp = {
 	target = unit
 	dependency_upgrade = upgrade_shocking_grasp
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			stun = 200
 		}
 		spawn_missile = {
@@ -30,7 +30,9 @@ spell_shocking_grasp = {
 		cast_conditions = {
 			coward = false
 			opponent = only
-			stun == 0
+			status_effects = {
+				stun == 0
+			}
 		}
 	}
 	ai_cast = {
@@ -39,7 +41,9 @@ spell_shocking_grasp = {
 		cast_conditions = {
 			coward = false
 			opponent = only
-			stun == 0
+			status_effects = {
+				stun == 0
+			}
 		}
 	}
 }

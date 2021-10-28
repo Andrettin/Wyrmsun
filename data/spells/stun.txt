@@ -5,7 +5,7 @@ spell_stun = {
 	target = unit
 	dependency_upgrade = upgrade_stun
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			stun = 200
 		}
 		spawn_missile = {
@@ -28,7 +28,9 @@ spell_stun = {
 		cast_conditions = {
 			coward = false
 			opponent = only
-			stun == 0
+			status_effects = {
+				stun == 0
+			}
 		}
 	}
 	ai_cast = {
@@ -37,7 +39,9 @@ spell_stun = {
 		cast_conditions = {
 			coward = false
 			opponent = only
-			stun == 0
+			status_effects = {
+				stun == 0
+			}
 		}
 	}
 }

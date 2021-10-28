@@ -9,7 +9,7 @@ spell_precision = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_precision
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			precision = 1000
 		}
 		spawn_missile = {
@@ -19,7 +19,9 @@ spell_precision = {
 	}
 	cast_conditions = {
 		organic = only
-		precision == 0
+		status_effects = {
+			precision == 0
+		}
 	}
 	autocast = {
 		range = 6

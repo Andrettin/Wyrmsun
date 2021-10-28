@@ -6,7 +6,7 @@ spell_blessing = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_blessing
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			blessing = 1000
 			wither = 0
 		}
@@ -17,7 +17,9 @@ spell_blessing = {
 	}
 	cast_conditions = {
 		organic = only
-		blessing == 0
+		status_effects = {
+			blessing == 0
+		}
 	}
 	autocast = {
 		range = 6

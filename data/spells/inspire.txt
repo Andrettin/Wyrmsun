@@ -9,7 +9,7 @@ spell_inspire = {
 	sound_when_cast = magic_holy
 	dependency_upgrade = upgrade_inspire
 	actions = {
-		adjust_variable = {
+		apply_status_effects = {
 			inspire = 1000
 			wither = 0
 		}
@@ -20,7 +20,9 @@ spell_inspire = {
 	}
 	cast_conditions = {
 		organic = only
-		inspire == 0
+		status_effects = {
+			inspire == 0
+		}
 	}
 	autocast = {
 		range = 6
@@ -28,7 +30,9 @@ spell_inspire = {
 		cast_conditions = {
 			coward = false
 			alliance = only
-			blessing == 0
+			status_effects = {
+				blessing == 0
+			}
 		}
 	}
 	ai_cast = {
@@ -37,7 +41,9 @@ spell_inspire = {
 		cast_conditions = {
 			coward = false
 			alliance = only
-			blessing == 0
+			status_effects = {
+				blessing == 0
+			}
 		}
 	}
 }
