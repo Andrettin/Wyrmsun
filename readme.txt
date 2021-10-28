@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 * Pathfinding
 - Improved the performance of the algorithm used by units to find a depot to return resources to.
 
+* Status Effects
+- Reworked the status effect code in the game's engine to improve performance and make it simpler to add new status effects in the future.
+
 * Terrain
 - Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
 
