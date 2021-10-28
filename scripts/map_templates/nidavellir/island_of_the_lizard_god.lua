@@ -44,10 +44,5 @@ SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafv
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {110, 52})
 SetMapTemplateUnit("island-of-the-lizard-god", "unit-goblin-guard-tower", "grafvolling-tribe", {120, 63})
 
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 92})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 93})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 94})
-SetMapTemplateUnit("island-of-the-lizard-god", "unit-raft", "", {74, 95})
-
 Load("scripts/map_templates/nidavellir/island_of_the_lizard_god/crucible_of_steel.lua")
 Load("scripts/map_templates/nidavellir/island_of_the_lizard_god/mount_sacrifice.lua")

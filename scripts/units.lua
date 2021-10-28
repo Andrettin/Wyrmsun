@@ -2222,26 +2222,6 @@ DefineUnitType("unit-troll-dead-body", {
 --	Vanishes = true,
 --	Sounds = {} } )
 
-DefineUnitType("unit-raft", {
-	Name = "Raft",
-	Image = {"file", "neutral/units/raft.png", "size", {72, 72}},
-	Animations = "animations-raft", Icon = "icon-raft",
-	NeutralMinimapColor = {128, 128, 0},
-	HitPoints = 15,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {42, 42},
-	SightRange = 1,
-	Missile = "missile-none",
-	Priority = 0,
-	Domain = "water",
-	Bridge = true,
-	VisibleUnderFog = true,
-	Sounds = {
-		"selected", "click",
-		"dead", "ship-destroyed"
-	} 
-} )
-
 DefineUnitType("unit-scepter-of-fire", {
 	Name = "Scepter of Fire",
 	Image = {"file", "neutral/items/scepter.png", "size", {32, 32}},

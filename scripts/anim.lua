@@ -1713,23 +1713,6 @@ DefineAnimations("animations-roaming-fog", {
 	}
 })
 
-DefineAnimations("animations-raft", {
-	Still = BuildingStill,
-	Move = {
-		"unbreakable begin",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
-		"frame 0", "move 2", "wait 1", "frame 0", "move 2",
-		"unbreakable end", "wait 1",
-	},
-	Death = BuildingStill,
-})
-
 MinecartMining = {
 	"frame 0", "wait 4", "frame 5", "wait 5",
 	"frame 0", "wait 5", "frame 5", "wait 5",

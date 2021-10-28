@@ -40,17 +40,6 @@ if (LoadedGame == false) then
 	})
 end
 
--- create rafts in the bottom-left margin of the river, in case the river bridge has been consumed by water
-local nearest_coast = FindNearestTerrainFlagTile("coast", 48, 80)
-if (nearest_coast ~= nil) then
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-end
-
 CreateGoldMines(1, 50000, 0, CMap:get():get_info().MapWidth - 3, math.floor(CMap:get():get_info().MapHeight * 3 / 4), CMap:get():get_info().MapHeight - 3, false, true)
 if (LoadedGame == false) then
 	SetUnitVariable(unit, "Unique", "the-wedding-veil")

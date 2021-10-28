@@ -42,11 +42,3 @@ end
 local town_units = {"unit-teuton-archer", "unit-teuton-archer", "unit-teuton-catapult"}
 
 local invader_units = {"unit-teuton-swordsman", "unit-teuton-swordsman", "unit-teuton-archer"}
-
-if (LoadedGame == false) then
-	-- create raft in the nearest coast tile to the Bavarian settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY"))
-	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", PlayerNumNeutral, nearest_coast)
-	end
-end

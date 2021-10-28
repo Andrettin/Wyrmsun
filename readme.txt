@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Increased the transport capacity of transport ships from 3 to 6.
+- Removed rafts, as they required a substantial amount of special code for them to be maintained in the engine, and they were barely used in the game.
 
 * User Interface
 - (Re-)Added windowed mode support.

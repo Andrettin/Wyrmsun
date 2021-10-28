@@ -1395,7 +1395,6 @@
 /graphics/neutral/units/horse_brown_skin_tan_hair_blue_eyes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/horse_brown_skin_tan_hair_brown_eyes.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/human_corpse.png (by Jinn) (licensed under the CC0)
-/graphics/neutral/units/raft.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/rat.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/rat_black_fur.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/neutral/units/rat_light_gray_fur.png (by b_o) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

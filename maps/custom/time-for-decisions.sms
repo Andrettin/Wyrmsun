@@ -16483,6 +16483,3 @@ unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {22, 61})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {19, 48})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {22, 19})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {95, 70})
-
-unit = CreateUnit("unit-raft", PlayerNumNeutral, {57, 32})
-unit = CreateUnit("unit-raft", PlayerNumNeutral, {70, 95})

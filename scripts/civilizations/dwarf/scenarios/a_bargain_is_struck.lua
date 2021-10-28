@@ -30,10 +30,6 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-lumber-mill", "F")
 	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-sentry-tower", "F")
 	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-stronghold", "F")
-	
-	if (GameSettings.Difficulty <= DifficultyNormal) then -- if the difficulty is normal or lower, add a raft
-		unit = CreateUnit("unit-raft", PlayerNumNeutral, {14, 32})
-	end
 end
 
 -- A Bargain is Struck initial dialogue
