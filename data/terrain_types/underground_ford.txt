@@ -5,7 +5,7 @@ underground_ford = {
 	image_file = "terrain/ford.png"
 	allow_single = true
 	flags = {
-		land
+		ford
 		no_building
 		underground
 	}
