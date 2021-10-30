@@ -1,0 +1,34 @@
+cambridge = {
+	name = "Cambridge"
+	map_template = earth
+	geocoordinate = { 0.11662308615 52.20039125480 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Grantanbrycg" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		briton = "Camboricum"
+		celtic = "Camboricum"
+		latin = "Camboricum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #Camboricum/Cambridge was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += farm
+		}
+		
+		802 = {
+			owner = mercia #Camboricum's area was part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1250 = {
+			building_classes -= farm
+			building_classes += university #University existent in Cambridge in 1250; Source: "Atlas de História Mundial", p. 144.
+		}
+		
+		1560 = {
+			owner = england #Cambridge was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

@@ -1,0 +1,22 @@
+reading = {
+	name = "Reading"
+	map_template = earth
+	geocoordinate = { -0.98002832173 51.46997072260 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Readingum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		802 = {
+			owner = wessex #Reading was part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += farm
+		}
+		
+		1560 = {
+			owner = england #Reading's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

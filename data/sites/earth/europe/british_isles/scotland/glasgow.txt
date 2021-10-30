@@ -1,0 +1,30 @@
+glasgow = {
+	name = "Glasgow"
+	map_template = earth
+	geocoordinate = { -4.25070723613 55.87440472320 } #from Natural Earth
+	regions = {
+		scotland
+	}
+	
+	history = {
+		-27 = {
+			owner = damnii_tribe #Glasgow's area was territory of the Damnii (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		}
+		
+		80 = {
+			owner = rome #Glasgow's area was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		802 = {
+			owner = strathclyde #Glasgow's area was part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1450 = {
+			building_classes += university #University founded in Glasgow in 1450; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1560 = {
+			owner = scotland #Glasgow was part of Scotland in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

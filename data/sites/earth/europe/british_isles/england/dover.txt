@@ -1,0 +1,30 @@
+dover = {
+	name = "Dover"
+	map_template = earth
+	geocoordinate = { 1.30001338563 51.13371217760 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Dofras" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		briton = "Dubrae"
+		celtic = "Dubrae"
+		latin = "Dubrae" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #Dubrae/Dover was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += farm
+		}
+		
+		802 = {
+			#owner = kent #Dover was part of Kent c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			owner = wessex
+		}
+		
+		1560 = {
+			owner = england #Dover was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

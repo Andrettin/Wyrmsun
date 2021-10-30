@@ -7,7 +7,7 @@ london = {
 	cultural_names = {
 		anglo_saxon = "Lunden" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Londinium"
-		celt = "Londinium"
+		celtic = "Londinium"
 		latin = "Londinium" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
 	cores = {

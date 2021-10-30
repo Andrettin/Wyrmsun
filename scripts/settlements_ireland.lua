@@ -41,19 +41,3 @@ DefineSite("armagh", {
 	},
 	Regions = {"british-isles"}
 })
-
-DefineSite("waterford", {
-	Name = "Waterford",
-	MapTemplate = "old_earth",
-	Position = {3678, 858},
-	CulturalNames = {
-		"english", "Waterford"
-	},
-	HistoricalOwners = {
-		802, "ireland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-	},
-	HistoricalBuildings = {
-		802, 0, "farm"
-	},
-	Regions = {"british-isles"}
-})

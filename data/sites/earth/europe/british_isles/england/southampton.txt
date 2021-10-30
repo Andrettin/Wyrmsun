@@ -1,0 +1,19 @@
+southampton = {
+	name = "Southampton"
+	map_template = earth
+	geocoordinate = { -1.39997684875 50.90003135080 } #from Natural Earth
+	regions = {
+		england
+	}
+	
+	history = {
+		802 = {
+			owner = wessex #Southampton was part of Wessex c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += farm
+		}
+		
+		1560 = {
+			owner = england #Southampton's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

@@ -5,7 +5,7 @@ dublin = {
 	base_unit_type = unit_settlement_site
 	color = { 98 64 38 }
 	cultural_names = {
-		celt = "Eblana" #or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		celtic = "Eblana" #or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 	regions = {
 		ireland
@@ -18,11 +18,11 @@ dublin = {
 		}
 		
 		802 = {
-			owner = ireland #Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			owner = ireland #part of Ireland c. 802; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		}
 		
 		1097 = {
-			owner = ireland #part of the Ireland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+			owner = ireland #part of Ireland c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 		
 		1312 = {

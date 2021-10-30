@@ -1,0 +1,27 @@
+bristol = {
+	name = "Bristol"
+	map_template = earth
+	geocoordinate = { -2.58331547180 51.44999778150 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Brycgstow" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		802 = {
+			owner = mercia #Bristol was part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += farm
+		}
+		
+		1560 = {
+			owner = england #Bristol's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1909 = {
+			building_classes -= farm
+			building_classes += university #University founded in Bristol in 1909; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

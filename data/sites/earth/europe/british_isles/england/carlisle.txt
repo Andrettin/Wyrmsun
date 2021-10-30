@@ -1,0 +1,29 @@
+carlisle = {
+	name = "Carlisle"
+	map_template = earth
+	geocoordinate = { -2.92998681783 54.87999513660 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Luel" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		briton = "Luguvallium"
+		celtic = "Luguvallium"
+		latin = "Luguvallium" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #Luguvallium was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += farm
+		}
+		
+		802 = {
+			owner = strathclyde #Carlisle was part of Strathclyde c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #Carlisle was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

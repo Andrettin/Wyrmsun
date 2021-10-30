@@ -1,0 +1,27 @@
+leeds = {
+	name = "Leeds"
+	map_template = earth
+	geocoordinate = { -1.58001753886 53.83000754710 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Loidis" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		802 = {
+			owner = northumbria #Loidis was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += farm
+		}
+		
+		1560 = {
+			owner = england #Leeds' area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1904 = {
+			building_classes -= farm
+			building_classes += university #University founded in Leeds in 1904; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

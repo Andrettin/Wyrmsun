@@ -1,0 +1,29 @@
+bath = {
+	name = "Bath"
+	map_template = earth
+	geocoordinate = { -2.35002221822 51.38374859530 } #from Natural Earth
+	cultural_names = {
+		anglo_saxon = "Bathum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		briton = "Aquae Solis"
+		celtic = "Aquae Solis"
+		latin = "Aquae Solis" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		410 = {
+			owner = rome #Aquae Solis/Bath was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
+			building_classes += farm
+		}
+		
+		802 = {
+			owner = mercia #Bath was part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #Bath's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

@@ -1,0 +1,15 @@
+waterford = {
+	name = "Waterford"
+	map_template = earth
+	geocoordinate = { -7.11192793927 52.25829469720 } #from Natural Earth
+	regions = {
+		ireland
+	}
+	
+	history = {
+		802 = {
+			owner = ireland #Waterford was part of Ireland c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+			building_classes += farm
+		}
+	}
+}
