@@ -1,0 +1,22 @@
+the_house_of_seven_fathers = { #based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
+	name = "The House of Seven Fathers"
+	icon = icon_norse_farm
+	player_color = red
+	competitive = true
+	description = "A gray-haired old man desires to build an imposing farm for his family, promising good rewards to those who help him build it."
+	hint = "Select a worker, press the Build Structure button and then click on the Build Farm button to build the structure required for this quest."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		build_units = {
+			unit_class = farm
+		}
+	}
+	completion_effects = {
+		last_created_unit = {
+			unique = the_house_of_seven_fathers
+		}
+		copper += 500
+	}
+}
