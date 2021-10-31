@@ -141,30 +141,6 @@ DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and
 	Unobtainable = true
 })
 
-DefineQuest("the-great-temple-at-upsal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
-	Name = "The Great Temple", -- the great temple built by Freyr (Yngve) in the Ynglinga saga in Upsal
-	Icon = "icon-germanic-temple",
-	Description = "My chieftain, we should buy a new, great temple for our people near Stukkahulma. Not only will it give them a new place of worship, but the wise priests it will host shall help us with tax collection.",
-	World = "earth",
-	Civilization = "germanic",
-	PlayerColor = "blue",
-	CompletionEffects = function(s)
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2000)
-	end,
-	Rewards = "+2000 Copper",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Temple button to build the structure required for this quest. Make sure it is closer to Stukkahulma's Chieftain's Hall than to that of another settlement.",
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Temple in Stukkahulma",
-			"quantity", 1,
-			"unit-type", "unit-germanic-temple",
-			"settlement", "stockholm"
-		}
-	},
-	Competitive = true
-})
-
 DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
 	Name = "The Good Seasons", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-farm",

@@ -146,7 +146,7 @@ DefineQuest("the-house-of-seven-fathers", { -- based on the "The Seventh Father 
 			"objective-type", "build_units",
 			"objective-string", "Build a Farm",
 			"quantity", 1,
-			"unit-class", "farm"
+			"unit-type", "unit-norse-farm"
 		}
 	},
 	Competitive = true
