@@ -30,6 +30,7 @@ germanic = {
 		-2800.12.30 = {
 			explored_settlements += stockholm
 			explored_settlements += gothenburg
+			explored_settlements += linkoping
 			explored_settlements += malmo
 			explored_settlements += copenhagen
 			explored_settlements += aarhus

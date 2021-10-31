@@ -9,7 +9,10 @@ the_ynglinga_saga = {
 			unit_class = town_hall
 			settlement = gothenburg
 		}
-		
+		build_units = {
+			unit_class = town_hall
+			settlement = linkoping
+		}
 		found_faction = sweden
 	}
 }
