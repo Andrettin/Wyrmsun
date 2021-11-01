@@ -24,10 +24,10 @@ DialogBase {
 		}
 	}
 	
-	NormalText {
+	ScrollableTextArea {
 		id: faction_text_label
 		anchors.top: faction_dropdown.bottom
-		anchors.topMargin: 24 * wyrmgus.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: ok_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: parent.left
@@ -35,7 +35,6 @@ DialogBase {
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		text: selected_faction ? format_text("Default Color: " + selected_faction.color.name + (selected_faction.upgrade ? ("\n\nEffects: " + selected_faction.upgrade.effects_string) : "")) : ""
-		wrapMode: Text.WordWrap
 	}
 	
 	LargeButton {
