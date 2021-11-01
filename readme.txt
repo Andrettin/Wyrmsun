@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - (Re-)Added windowed mode support.
+- Reworked the faction choice dialog.
 
 -----------------------------------------------------------------------
 - 5.2.3
