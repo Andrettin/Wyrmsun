@@ -195,6 +195,11 @@ Item {
 		}
 	}
 	
+	FactionChoiceDialog {
+		id: faction_choice_dialog
+		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
 	Keys.onPressed: {
 		for (var i = (map_view.popups.length - 1); i >= 0; --i) {
 			var popup = map_view.popups[i]
@@ -349,6 +354,14 @@ Item {
 			map_view.create_menu(["menus/EncyclopediaEntryMenu.qml", {
 				entry: wyrmgus.get_link_target(link)
 			}])
+		}
+	}
+	
+	Connections {
+		target: wyrmgus
+		function onFactionChoiceDialogOpened(potential_factions) {
+			faction_choice_dialog.factions = potential_factions
+			faction_choice_dialog.open()
 		}
 	}
 	

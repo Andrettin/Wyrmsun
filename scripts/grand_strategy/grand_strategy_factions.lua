@@ -31,73 +31,7 @@ function LoadFactions(world)
 	Factions = nil
 	Factions = {}
 
-	local EarthFactions = {
-		-- Germanic tribes
-		asa_tribe = {
-			Name = "asa-tribe",
-			Civilization = "germanic",
-			Copper = 3000,
-			Commodities = {
-				Lumber = 1500, -- half of the copper value
-				Stone = 1500 -- half of the copper value
-			}
-		},
-		-- Latin polities
-		rome = {
-			Name = "rome",
-			Civilization = "latin",
-			Copper = 5000
-		},
-		-- Non-Playable Tribes
-		gylfing_tribe = {
-			Name = "gylfing_tribe",
-			Civilization = "basque",
-			Copper = 5000,
-			Commodities = {
-				Lumber = 2500, -- half of the copper value
-				Stone = 2500 -- half of the copper value
-			}
-		},
-		vana_tribe = {
-			Name = "vana-tribe",
-			Civilization = "celt",
-			Copper = 5000,
-			Commodities = {
-				Lumber = 2500, -- half of the copper value
-				Stone = 2500 -- half of the copper value
-			}
-		}
-	}
-	
 	local NidavellirFactions = {
-		untersberg = {
-			Name = "untersberg",
-			Civilization = "gnome",
-			Copper = 7500,
-			Commodities = {
-				Lumber = 3750, -- half of the copper value
-				Stone = 3750 -- half of the copper value
-			}
-		},
-		-- Dwarven clans
-		norlund_clan = {
-			Name = "norlund-clan",
-			Civilization = "dwarf",
-			Copper = 3000,
-			Commodities = {
-				Lumber = 1500, -- half of the copper value
-				Stone = 1500 -- half of the copper value
-			}
-		},
-		shinsplitter_clan = {
-			Name = "shinsplitter-clan",
-			Civilization = "dwarf",
-			Copper = 7500,
-			Commodities = {
-				Lumber = 3750, -- half of the copper value
-				Stone = 3750 -- half of the copper value
-			}
-		},
 		shorbear_clan = {
 			Name = "shorbear-clan",
 			Civilization = "dwarf",
@@ -105,25 +39,6 @@ function LoadFactions(world)
 			Commodities = {
 				Lumber = 4500, -- half of the copper value
 				Stone = 4500 -- half of the copper value
-			}
-		},
-		-- Goblin tribes
-		khag_tribe = {
-			Name = "khag-tribe",
-			Civilization = "goblin",
-			Copper = 750,
-			Commodities = {
-				Lumber = 375, -- half of the copper value
-				Stone = 375 -- half of the copper value
-			}
-		},
-		lggi_tribe = {
-			Name = "lggi-tribe",
-			Civilization = "goblin",
-			Copper = 2700,
-			Commodities = {
-				Lumber = 1350, -- half of the copper value
-				Stone = 1350 -- half of the copper value
 			}
 		}
 	}

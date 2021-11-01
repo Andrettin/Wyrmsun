@@ -8,6 +8,7 @@ DialogBase {
 	title: "Choose Your Faction"
 	
 	property var factions: []
+	readonly property var selected_faction: faction_dropdown.selectedEntry
 	
 	Dropdown {
 		id: faction_dropdown
@@ -23,6 +24,20 @@ DialogBase {
 		}
 	}
 	
+	NormalText {
+		id: faction_text_label
+		anchors.top: faction_dropdown.bottom
+		anchors.topMargin: 24 * wyrmgus.scale_factor
+		anchors.bottom: ok_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		anchors.left: parent.left
+		anchors.leftMargin: 8 * wyrmgus.scale_factor
+		anchors.right: parent.right
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
+		text: selected_faction ? format_text("Default Color: " + selected_faction.color.name + (selected_faction.upgrade ? ("\n\nEffects: " + selected_faction.upgrade.effects_string) : "")) : ""
+		wrapMode: Text.WordWrap
+	}
+	
 	LargeButton {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
@@ -33,6 +48,7 @@ DialogBase {
 		interface_style: faction_choice_dialog.interface_style
 		
 		onClicked: {
+			wyrmgus.this_player.set_faction_async(faction_choice_dialog.selected_faction)
 			faction_choice_dialog.close()
 		}
 	}
