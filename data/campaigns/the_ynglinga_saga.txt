@@ -4,9 +4,9 @@ the_ynglinga_saga = {
 	faction = swedish_tribe
 	start_date = -27 #according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 	map_templates = { earth }
-	required_quests = { the_settlement_of_scandinavia }
 	quest = the_ynglinga_saga
 	icon = icon_norse_heroic_swordsman
 	tree_parent = the_settlement_of_scandinavia
+	tree_line_visible = false
 	hidden = true
 }
