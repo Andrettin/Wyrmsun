@@ -150,6 +150,14 @@ clay_golem = {
 	}
 }
 
+gryphon = {
+	code = kawn
+	
+	effects = {
+		create_unit = unit_gryphon
+	}
+}
+
 wyrm = {
 	code = nidhogg
 	
