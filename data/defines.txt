@@ -146,37 +146,38 @@ tips = {
 	"Keep all workers working. Use ALT-I to find idle workers."
 	"You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon. CTRL click again to turn off."
 
-	#Shift tips
+	#shift tips
 	"If you hold the SHIFT key, you can give a unit an order which is executed after it finishes the current one."
 	"You can give waypoints to units if you press the SHIFT key and then right-click for the move command."
 	"You can order a worker to build one building after the other if you hold the SHIFT key while you place the building."
 	"You can build the same building many times if you hold the ALT and SHIFT keys while you place the structures."
 
-	#Interface-related tips
+	#interface-related tips
 	"Press TAB to toggle through the minimap modes."
 	"Press Shift-TAB to zoom/unzoom the minimap in larger maps."
 
-	#Unit type-related tips
+	#unit type-related tips
 	"Unlike the dwarves, humans and goblins have no flying rider unit. Their archers have a bonus against flying units, however."
 	"It is not safe to get close to a goblin war machine."
 	"Spearmen deal extra damage to mounted units."
 	"Organic ranged units can shoot from within towers, strongholds and transport ships, with extra range."
 	"Cavalry units have a charge bonus, dealing extra damage depending on the number of tiles traversed before attacking."
+	"Melee air units can be targeted as if they were on land if they are attacking land units."
 
-	#Building-related tips
+	#building-related tips
 	"Temples regenerate the health of nearby organic units."
 	"Severely burning buildings keep losing health if left unrepaired."
 	"Build roads between mines and town halls to speed up resource gathering."
 	
-	#Technology-related tips
+	#technology-related tips
 	"Researching a Writing upgrade will allow your faction to advance from a tribal one to a polity."
 	
-	#Leveling-related tips
+	#leveling-related tips
 	"Organic units can level up."
 	"When a unit levels up, an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities."
 	"Persistent heroes will carry over their experience level, items and abilities across scenarios and game modes."
 	
-	#Resource-related tips
+	#resource-related tips
 	"Cave walls can be harvested for stone."
 	"You can build gold mines on top of gold deposits."
 	"Silver and gold are converted into copper when delivered, at a rate of 200% and 400%, respectively."
