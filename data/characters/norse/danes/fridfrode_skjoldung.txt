@@ -1,0 +1,30 @@
+fridfrode_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
+	name = "Fridfrode"
+	surname = "Skjoldung" #presumably
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = dane_tribe
+	gender = male
+	
+	conditions = {
+		faction = dane_tribe
+	}
+	
+	#ruled in Leidre, being presumably king over the Danes
+	#he was a friend of Fiölner's
+	#described as brave
+	
+	history = {
+		-27 = {
+			#contemporary with Fiölner
+			active = true
+			faction = dane_tribe
+			location = malmo
+		}
+		
+		4 = {
+			#30 years of reign estimated
+			active = false
+		}
+	}
+}

@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("fridfrode-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
-	Name = "Fridfrode",
-	FamilyName = "Skjoldung", -- presumably
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	-- ruled in Leidre
-	-- he was a friend of Fiölner's
-	-- described as brave
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
-	}
-})
-
 DefineCharacter("beow-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 2017, pp. 3, 5.
 	Name = "Beow", -- name in Old English
 	FamilyName = "Skjoldung", -- Scylding
