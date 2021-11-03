@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - (Re-)Added windowed mode support.
 - Reworked the faction choice dialog.
+- Fixed the PageDown and PageUp hotkeys not working for command buttons.
 
 -----------------------------------------------------------------------
 - 5.2.3
