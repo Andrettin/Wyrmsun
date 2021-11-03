@@ -62,8 +62,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Removed the "Swift" magic prefix for weapons, as it had the same name as the "Swift" prefix for boots, and the same effect as the "Accurate" prefix for weapons. Persistent items with the affix will now have the "Accurate" prefix instead.
-- Added the "Freezing" magic prefix for weapons (+2 cold damage). The "Ice" prefix now gives +3 cold damage (previously it was +2), and the "Glacial" prefix now provides +4 cold damage (previously +3).
-- Added the "of Electrocution" magic suffix for weapons (+2 lightning damage). The "of the Storm" suffix now gives +3 lightning damage (previously it was +2).
+- Added "Freezing" magic prefix for weapons (+2 cold damage). The "Ice" prefix now gives +3 cold damage (previously it was +2), and the "Glacial" prefix now provides +4 cold damage (previously +3).
+- Added "of Shock" (+1 lightning damage and "of Electrocution" (+3 lightning damage) magic suffixes for weapons. The "of Lightning" suffix now gives +2 lightning damage (previously it was +1), and the "of the Storm" suffix now provides +4 lightning damage (previously +2).
+- The "Storm" magic prefix now gives +4 lightning damage (previously +2), for consistency with the "of the Storm" suffix.
+- Added "Lightning" magic prefix for weapons (+2 lightning damage).
 
 * Maps
 - Reworked the Alps for the Earth scenario map.

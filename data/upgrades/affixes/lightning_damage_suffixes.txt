@@ -1,6 +1,5 @@
-upgrade_suffix_of_lightning = {
-	name = "of Lightning"
-	aliases += upgrade_item_suffix_of_lightning
+upgrade_suffix_of_shock = {
+	name = "of Shock"
 	magic_suffix = true
 	magic_level = 2
 	affixed_item_classes = {
@@ -16,6 +15,9 @@ upgrade_suffix_of_lightning = {
 		throwing_axe
 		thrusting_sword
 	}
+	incompatible_affixes = {
+		upgrade_prefix_shocking
+	}
 	
 	conditions = {
 		upgrade = upgrade_magic_domain_lightning
@@ -26,10 +28,41 @@ upgrade_suffix_of_lightning = {
 	}
 }
 
+upgrade_suffix_of_lightning = {
+	name = "of Lightning"
+	aliases += upgrade_item_suffix_of_lightning
+	magic_suffix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_lightning
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_lightning
+	}
+	
+	modifier = {
+		lightning_damage = 2
+	}
+}
+
 upgrade_suffix_of_electrocution = {
 	name = "of Electrocution"
 	magic_suffix = true
-	magic_level = 4
+	magic_level = 6
 	affixed_item_classes = {
 		arrows
 		axe
@@ -49,7 +82,7 @@ upgrade_suffix_of_electrocution = {
 	}
 	
 	modifier = {
-		lightning_damage = 2
+		lightning_damage = 3
 	}
 }
 
@@ -57,7 +90,7 @@ upgrade_suffix_of_the_storm = {
 	name = "of the Storm"
 	aliases += upgrade_item_suffix_of_the_storm
 	magic_suffix = true
-	magic_level = 6
+	magic_level = 8
 	affixed_item_classes = {
 		arrows
 		axe
@@ -80,6 +113,6 @@ upgrade_suffix_of_the_storm = {
 	}
 	
 	modifier = {
-		lightning_damage = 3
+		lightning_damage = 4
 	}
 }
