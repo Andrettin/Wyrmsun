@@ -4,6 +4,7 @@ horse = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=
 	specific_name = "caballus"
 	era = holocene
 	homeworld = earth
+	ecological_niche = grazer
 	pre_evolutions = {
 		anchitherium_cursor #earlier equid
 		hipparion_primigenium #earlier equid

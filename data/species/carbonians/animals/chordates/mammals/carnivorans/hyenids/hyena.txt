@@ -3,6 +3,7 @@ hyena = {
 	supertaxon = hyaenidae
 	era = holocene
 	homeworld = earth
+	ecological_niche = scavenger
 	pre_evolutions = {
 		protictitherium #earlier hyenid
 	}

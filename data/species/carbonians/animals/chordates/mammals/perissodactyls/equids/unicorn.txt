@@ -3,6 +3,7 @@ unicorn = {
 	supertaxon = unicornis
 	era = holocene
 	homeworld = alfheim
+	ecological_niche = grazer
 	pre_evolutions = {
 		anchitherium_cursor #earlier equid
 		hipparion_primigenium #earlier equid

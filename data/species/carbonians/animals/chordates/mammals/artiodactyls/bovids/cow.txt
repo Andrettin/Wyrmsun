@@ -4,6 +4,7 @@ cow = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TS
 	specific_name = "taurus"
 	era = holocene
 	homeworld = earth
+	ecological_niche = grazer
 	pre_evolutions = {
 		ilingoceros #shares a common ancestor with the bison
 	}

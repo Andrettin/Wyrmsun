@@ -4,6 +4,7 @@ goat = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 	specific_name = "hircus"
 	era = holocene
 	homeworld = earth
+	ecological_niche = browser
 	pre_evolutions = {
 		aragoral #oldest member of the Caprinae subfamily
 	}

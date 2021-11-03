@@ -3,6 +3,7 @@ wolf = {
 	supertaxon = canidae
 	era = holocene
 	homeworld = earth
+	ecological_niche = predator
 	pre_evolutions = {
 		osteoborus
 	}

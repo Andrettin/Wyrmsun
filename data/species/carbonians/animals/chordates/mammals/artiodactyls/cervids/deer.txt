@@ -4,6 +4,7 @@ deer = { #Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=T
 	specific_name = "elaphus"
 	era = holocene
 	homeworld = earth
+	ecological_niche = browser
 	pre_evolutions = {
 		#earlier cervids
 		heteroprox_moralesi

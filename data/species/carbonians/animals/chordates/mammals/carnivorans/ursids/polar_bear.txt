@@ -3,6 +3,7 @@ polar_bear = {
 	supertaxon = ursidae
 	era = holocene
 	homeworld = earth
+	ecological_niche = predator
 	pre_evolutions = {
 		amphicyon
 		hemicyon

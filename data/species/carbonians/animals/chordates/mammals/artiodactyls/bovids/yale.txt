@@ -3,6 +3,7 @@ yale = {
 	supertaxon = eale
 	era = holocene
 	homeworld = nidavellir
+	ecological_niche = grazer #like sheep, but could be browsers like goats instead
 	pre_evolutions = {
 		aragoral #oldest member of the Caprinae subfamily
 	}
