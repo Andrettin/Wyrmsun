@@ -1,0 +1,105 @@
+upgrade_prefix_cold = { #example: Cold Blade (from Wesnoth)
+	name = "Cold"
+	aliases += upgrade_item_prefix_cold
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_ice
+	}
+	
+	modifier = {
+		cold_damage = 1
+	}
+}
+
+upgrade_prefix_freezing = {
+	name = "Freezing"
+	magic_prefix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_ice
+	}
+	
+	modifier = {
+		cold_damage = 2
+	}
+}
+
+upgrade_prefix_glacial = {
+	name = "Glacial"
+	aliases += upgrade_item_prefix_glacial
+	magic_prefix = true
+	magic_level = 8
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_ice
+	}
+	
+	modifier = {
+		cold_damage = 4
+	}
+}
+
+upgrade_prefix_ice = {
+	name = "Ice"
+	magic_prefix = true
+	magic_level = 6
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_ice
+	}
+	
+	modifier = {
+		cold_damage = 3
+	}
+}

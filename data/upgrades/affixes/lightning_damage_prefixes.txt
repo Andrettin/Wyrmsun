@@ -1,0 +1,53 @@
+upgrade_prefix_shocking = {
+	name = "Shocking"
+	aliases += upgrade_item_prefix_shocking
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_lightning
+	}
+	
+	modifier = {
+		lightning_damage = 1
+	}
+}
+
+upgrade_prefix_storm = { #example: Storm Trident (from Wesnoth)
+	name = "Storm"
+	aliases += upgrade_item_prefix_storm
+	magic_prefix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_lightning
+	}
+	
+	modifier = {
+		lightning_damage = 2
+	}
+}

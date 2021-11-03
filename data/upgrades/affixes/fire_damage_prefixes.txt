@@ -1,0 +1,91 @@
+upgrade_prefix_curupiras = {
+	name = "Curupira's"
+	magic_prefix = true
+	magic_level = 6
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 3
+	}
+}
+
+upgrade_prefix_fiery = {
+	name = "Fiery"
+	aliases += upgrade_item_prefix_fiery
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+		amulet #so that Brisingamen can drop
+		ring #so that Draupnir can drop
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_magic_domain_fire
+			upgrade_class = alchemy
+		}
+	}
+	
+	modifier = {
+		fire_damage = 1
+	}
+}
+
+upgrade_prefix_flaming = { #example: Flaming Sword (from Wesnoth)
+	name = "Flaming"
+	aliases += upgrade_item_prefix_flaming
+	magic_prefix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+		amulet #so that Brisingamen can drop
+		ring #so that Draupnir can drop
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_magic_domain_fire
+			upgrade_class = alchemy
+		}
+	}
+	
+	modifier = {
+		fire_damage = 2
+	}
+}

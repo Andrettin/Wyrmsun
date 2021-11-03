@@ -105,13 +105,6 @@ DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	MagicLevel = 4
 })
 
-DefineUpgrade("upgrade-item-suffix-of-lightning", {
-	Name = "of Lightning",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-suffix-of-the-night", {
 	Name = "of the Night",
 	MagicSuffix = true,
@@ -200,14 +193,6 @@ DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from 
 	MagicSuffix = true,
 	ItemAffix = {"boots", "amulet", "ring"},
 	MagicLevel = 2
-})
-
-DefineUpgrade("upgrade-item-suffix-of-the-storm", {
-	Name = "of the Storm",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	IncompatibleAffixes = {"upgrade-item-prefix-storm"},
-	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strength (from Wesnoth)
@@ -312,10 +297,6 @@ DefineModifier("upgrade-item-suffix-of-the-jinn",
 	{"AirDamage", 2}
 )
 
-DefineModifier("upgrade-item-suffix-of-lightning",
-	{"LightningDamage", 1}
-)
-
 DefineModifier("upgrade-item-suffix-of-the-night",
 	{"NightSightRangeBonus", 1}
 )
@@ -367,10 +348,6 @@ DefineModifier("upgrade-item-suffix-of-the-snigill",
 
 DefineModifier("upgrade-item-suffix-of-speed",
 	{"Speed", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-the-storm",
-	{"LightningDamage", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-strength",
@@ -446,10 +423,6 @@ DefineDependency("upgrade-item-suffix-of-the-jinn",
 	{"upgrade-magic-domain-air"}
 )
 
-DefineDependency("upgrade-item-suffix-of-lightning",
-	{"upgrade-magic-domain-lightning"}
-)
-
 DefineDependency("upgrade-item-suffix-of-the-night",
 	{"upgrade-magic-domain-moon"}
 )
@@ -500,10 +473,6 @@ DefineDependency("upgrade-item-suffix-of-the-snigill",
 
 DefineDependency("upgrade-item-suffix-of-speed",
 	{"upgrade-magic-domain-air"}, "or", {"upgrade-magic-domain-lightning"}
-)
-
-DefineDependency("upgrade-item-suffix-of-the-storm",
-	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-strength",

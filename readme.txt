@@ -60,6 +60,11 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Improved the performance of AI resource gathering.
 
+* Items
+- Removed the "Swift" magic prefix for weapons, as it had the same name as the "Swift" prefix for boots, and the same effect as the "Accurate" prefix for weapons. Persistent items with the affix will now have the "Accurate" prefix instead.
+- Added the "Freezing" magic prefix for weapons (+2 cold damage). The "Ice" prefix now gives +3 cold damage (previously it was +2), and the "Glacial" prefix now provides +4 cold damage (previously +3).
+- Added the "of Electrocution" magic suffix for weapons (+2 lightning damage). The "of the Storm" suffix now gives +3 lightning damage (previously it was +2).
+
 * Maps
 - Reworked the Alps for the Earth scenario map.
 - Added the Aberdeen, Linkoping and Tamworth settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.

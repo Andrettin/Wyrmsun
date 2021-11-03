@@ -39,13 +39,6 @@ DefineUpgrade("upgrade-item-prefix-chopping", {
 	MagicLevel = 1
 })
 
-DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
-	Name = "Cold",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-prefix-cruel", {
 	Name = "Cruel",
 	MagicPrefix = true,
@@ -78,13 +71,6 @@ DefineUpgrade("upgrade-item-prefix-giants", {
 	MagicPrefix = true,
 	ItemAffix = {"arrows", "axe", "bow", "dagger", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
 	MagicLevel = 3
-})
-
-DefineUpgrade("upgrade-item-prefix-glacial", {
-	Name = "Glacial",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 6
 })
 
 DefineUpgrade("upgrade-item-prefix-impaling", {
@@ -141,20 +127,6 @@ DefineUpgrade("upgrade-item-prefix-sawing", {
 	MagicLevel = 3
 })
 
-DefineUpgrade("upgrade-item-prefix-shocking", {
-	Name = "Shocking",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 2
-})
-
-DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
-	Name = "Storm",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 4
-})
-
 DefineUpgrade("upgrade-item-prefix-sturdy", {
 	Name = "Sturdy",
 	MagicPrefix = true,
@@ -198,10 +170,6 @@ DefineModifier("upgrade-item-prefix-chopping",
 	{"LumberGatheringBonus", 1}
 )
 
-DefineModifier("upgrade-item-prefix-cold",
-	{"ColdDamage", 1}
-)
-
 DefineModifier("upgrade-item-prefix-cruel",
 	{"BasicDamage", 1}
 )
@@ -220,10 +188,6 @@ DefineModifier("upgrade-item-prefix-frail",
 
 DefineModifier("upgrade-item-prefix-giants",
 	{"BasicDamage", 3}
-)
-
-DefineModifier("upgrade-item-prefix-glacial",
-	{"ColdDamage", 3}
 )
 
 DefineModifier("upgrade-item-prefix-impaling",
@@ -259,14 +223,6 @@ DefineModifier("upgrade-item-prefix-sawing",
 	{"FurnitureGatheringBonus", 1}
 )
 
-DefineModifier("upgrade-item-prefix-shocking",
-	{"LightningDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-storm",
-	{"LightningDamage", 2}
-)
-
 DefineModifier("upgrade-item-prefix-sturdy",
 	{"Armor", 1}
 )
@@ -288,10 +244,6 @@ DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
 )
 
-DefineDependency("upgrade-item-prefix-cold",
-	{"upgrade-magic-domain-ice"}
-)
-
 DefineDependency("upgrade-item-prefix-cruel",
 	{"upgrade-magic-domain-blood"}, "or", {"upgrade-magic-domain-death"}
 )
@@ -306,10 +258,6 @@ DefineDependency("upgrade-item-prefix-extinguishing",
 
 DefineDependency("upgrade-item-prefix-giants",
 	{"upgrade-magic-domain-earth"}
-)
-
-DefineDependency("upgrade-item-prefix-glacial",
-	{"upgrade-magic-domain-ice"}
 )
 
 DefineDependency("upgrade-item-prefix-impaling",
@@ -334,14 +282,6 @@ DefineDependency("upgrade-item-prefix-quenching",
 
 DefineDependency("upgrade-item-prefix-replenishing",
 	{"upgrade-magic-domain-life"}
-)
-
-DefineDependency("upgrade-item-prefix-shocking",
-	{"upgrade-magic-domain-lightning"}
-)
-
-DefineDependency("upgrade-item-prefix-storm",
-	{"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-prefix-vicious",

@@ -1,0 +1,63 @@
+upgrade_suffix_of_fire = {
+	name = "of Fire"
+	aliases += upgrade_item_suffix_of_fire
+	magic_suffix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_fiery
+		upgrade_prefix_flaming
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 1
+	}
+}
+
+upgrade_suffix_of_flame = {
+	name = "of Flame"
+	aliases += upgrade_item_suffix_of_flame
+	magic_suffix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_fiery
+		upgrade_prefix_flaming
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 2
+	}
+}
