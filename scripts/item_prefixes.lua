@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-item-prefix-accurate", {
-	Name = "Accurate",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn"},
-	MagicLevel = 1
-})
-
 DefineUpgrade("upgrade-item-prefix-chiseling", {
 	Name = "Chiseling",
 	MagicPrefix = true,
@@ -73,20 +66,6 @@ DefineUpgrade("upgrade-item-prefix-extinguishing", {
 	MagicLevel = 3
 })
 
-DefineUpgrade("upgrade-item-prefix-fiery", {
-	Name = "Fiery",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn", "amulet", "ring"}, -- so that Brisingamen and Draupnir can drop
-	MagicLevel = 2
-})
-
-DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
-	Name = "Flaming",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn", "amulet", "ring"}, -- so that Brisingamen and Draupnir can drop
-	MagicLevel = 4
-})
-
 DefineUpgrade("upgrade-item-prefix-frail", {
 	Name = "Frail",
 	MagicPrefix = true,
@@ -99,13 +78,6 @@ DefineUpgrade("upgrade-item-prefix-giants", {
 	MagicPrefix = true,
 	ItemAffix = {"arrows", "axe", "bow", "dagger", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
 	MagicLevel = 3
-})
-
-DefineUpgrade("upgrade-item-prefix-giantsbane", {
-	Name = "Giantsbane",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 2
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
@@ -190,20 +162,6 @@ DefineUpgrade("upgrade-item-prefix-sturdy", {
 	MagicLevel = 1
 })
 
-DefineUpgrade("upgrade-item-prefix-swift", {
-	Name = "Swift",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 1
-})
-
-DefineUpgrade("upgrade-item-prefix-swift-boots", {
-	Name = "Swift",
-	MagicPrefix = true,
-	ItemAffix = {"boots", "amulet", "ring", "horn"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = "Vicious",
 	MagicPrefix = true,
@@ -232,10 +190,6 @@ DefineUpgrade("upgrade-item-prefix-wounding", {
 	MagicLevel = 2
 })
 
-DefineModifier("upgrade-item-prefix-accurate",
-	{"Accuracy", 1}
-)
-
 DefineModifier("upgrade-item-prefix-chiseling",
 	{"StoneGatheringBonus", 1}
 )
@@ -260,24 +214,12 @@ DefineModifier("upgrade-item-prefix-extinguishing",
 	{"FireResistance", 30}
 )
 
-DefineModifier("upgrade-item-prefix-fiery",
-	{"FireDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-flaming",
-	{"FireDamage", 2}
-)
-
 DefineModifier("upgrade-item-prefix-frail",
 	{"Armor", -2}
 )
 
 DefineModifier("upgrade-item-prefix-giants",
 	{"BasicDamage", 3}
-)
-
-DefineModifier("upgrade-item-prefix-giantsbane",
-	{"BonusAgainstGiants", 50}
 )
 
 DefineModifier("upgrade-item-prefix-glacial",
@@ -329,14 +271,6 @@ DefineModifier("upgrade-item-prefix-sturdy",
 	{"Armor", 1}
 )
 
-DefineModifier("upgrade-item-prefix-swift",
-	{"Accuracy", 1}
-)
-
-DefineModifier("upgrade-item-prefix-swift-boots",
-	{"Speed", 1}
-)
-
 DefineModifier("upgrade-item-prefix-vicious",
 	{"BasicDamage", 2}
 )
@@ -370,20 +304,8 @@ DefineDependency("upgrade-item-prefix-extinguishing",
 	{"upgrade-magic-domain-water"}, "or", {"upgrade-magic-domain-fire"}
 )
 
-DefineDependency("upgrade-item-prefix-fiery",
-	{"upgrade-magic-domain-fire"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
-)
-
-DefineDependency("upgrade-item-prefix-flaming",
-	{"upgrade-magic-domain-fire"}, "or", {"upgrade-dwarven-alchemy"}, "or", {"upgrade-goblin-alchemy"}, "or", {"upgrade-teuton-alchemy"}
-)
-
 DefineDependency("upgrade-item-prefix-giants",
 	{"upgrade-magic-domain-earth"}
-)
-
-DefineDependency("upgrade-item-prefix-giantsbane",
-	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}
 )
 
 DefineDependency("upgrade-item-prefix-glacial",

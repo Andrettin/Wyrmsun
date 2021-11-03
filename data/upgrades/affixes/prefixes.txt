@@ -1,3 +1,28 @@
+upgrade_prefix_accurate = {
+	name = "Accurate"
+	aliases += upgrade_item_prefix_accurate
+	aliases += upgrade_item_prefix_swift
+	magic_prefix = true
+	magic_level = 1
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+	}
+	
+	modifier = {
+		accuracy = 1
+	}
+}
+
 upgrade_prefix_curupiras = {
 	name = "Curupira's"
 	magic_prefix = true
@@ -24,6 +49,102 @@ upgrade_prefix_curupiras = {
 	}
 }
 
+upgrade_prefix_fiery = {
+	name = "Fiery"
+	aliases += upgrade_item_prefix_fiery
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+		amulet #so that Brisingamen can drop
+		ring #so that Draupnir can drop
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_magic_domain_fire
+			upgrade_class = alchemy
+		}
+	}
+	
+	modifier = {
+		fire_damage = 1
+	}
+}
+
+upgrade_prefix_flaming = { #example: Flaming Sword (from Wesnoth)
+	name = "Flaming"
+	aliases += upgrade_item_prefix_flaming
+	magic_prefix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+		amulet #so that Brisingamen can drop
+		ring #so that Draupnir can drop
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_magic_domain_fire
+			upgrade_class = alchemy
+		}
+	}
+	
+	modifier = {
+		fire_damage = 2
+	}
+}
+
+upgrade_prefix_giantsbane = {
+	name = "Giantsbane"
+	aliases += upgrade_item_prefix_giantsbane
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_deity_odin
+			upgrade = upgrade_deity_thor
+		}
+	}
+	
+	modifier = {
+		bonus_against_giants = 50
+	}
+}
+
 upgrade_prefix_ice = {
 	name = "Ice"
 	magic_prefix = true
@@ -47,5 +168,22 @@ upgrade_prefix_ice = {
 	
 	modifier = {
 		cold_damage = 2
+	}
+}
+
+upgrade_prefix_swift = {
+	name = "Swift"
+	aliases += upgrade_item_prefix_swift_boots
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		horn
+		boots
+		amulet
+		ring
+	}
+	
+	modifier = {
+		speed = 1
 	}
 }

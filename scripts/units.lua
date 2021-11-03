@@ -3914,7 +3914,7 @@ DefineUnitType("unit-template-transport-ship", {
 	Trader = true,
 	ButtonKey = "t",
 	RequirementsString = "Lumber Mill",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_item_prefix_frail", "upgrade_item_prefix_impregnable", "upgrade_item_prefix_sturdy", "upgrade_item_prefix_vulnerable", "upgrade_item_suffix_of_frailty", "upgrade_item_suffix_of_slowness", "upgrade_item_suffix_of_speed", "upgrade_item_suffix_of_swiftness", "upgrade_item_suffix_of_vulnerability"},
 	CanGatherResources = {
 		{
 			"resource-id", "trade",

@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-item-suffix-of-accuracy", {
-	Name = "of Accuracy",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "bow", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn"},
-	IncompatibleAffixes = {"upgrade-item-prefix-accurate"},
-	MagicLevel = 1
-})
-
 DefineUpgrade("upgrade-item-suffix-of-the-beaver", {
 	Name = "of the Beaver",
 	MagicSuffix = true,
@@ -95,22 +87,6 @@ DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 	ItemAffix = {"armor", "cloak", "shield", "helmet"},
 	IncompatibleAffixes = {"upgrade-item-prefix-extinguishing"},
 	MagicLevel = 3
-})
-
-DefineUpgrade("upgrade-item-suffix-of-fire", {
-	Name = "of Fire",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	IncompatibleAffixes = {"upgrade-item-prefix-fiery", "upgrade-item-prefix-flaming"},
-	MagicLevel = 2
-})
-
-DefineUpgrade("upgrade-item-suffix-of-flame", {
-	Name = "of Flame",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	IncompatibleAffixes = {"upgrade-item-prefix-fiery", "upgrade-item-prefix-flaming"},
-	MagicLevel = 4
 })
 
 DefineUpgrade("upgrade-item-suffix-of-frailty", {
@@ -241,13 +217,6 @@ DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strengt
 	MagicLevel = 2
 })
 
-DefineUpgrade("upgrade-item-suffix-of-swiftness", {
-	Name = "of Swiftness",
-	MagicSuffix = true,
-	ItemAffix = {"horn", "boots", "amulet", "ring"},
-	MagicLevel = 3
-})
-
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
 	Name = "of Thorns",
 	MagicSuffix = true,
@@ -299,10 +268,6 @@ DefineUpgrade("upgrade-item-suffix-of-the-woodpecker", {
 	MagicLevel = 2
 })
 
-DefineModifier("upgrade-item-suffix-of-accuracy",
-	{"Accuracy", 1}
-)
-
 DefineModifier("upgrade-item-suffix-of-the-beaver",
 	{"LumberGatheringBonus", 3}
 )
@@ -337,14 +302,6 @@ DefineModifier("upgrade-item-suffix-of-ethereal-vision",
 
 DefineModifier("upgrade-item-suffix-of-extinguishment",
 	{"FireResistance", 30}
-)
-
-DefineModifier("upgrade-item-suffix-of-fire",
-	{"FireDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-flame",
-	{"FireDamage", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-frailty",
@@ -420,11 +377,6 @@ DefineModifier("upgrade-item-suffix-of-strength",
 	{"BasicDamage", 2}
 )
 
-DefineModifier("upgrade-item-suffix-of-swiftness",
-	{"Evasion", 1},
-	{"Speed", 1}
-)
-
 DefineModifier("upgrade-item-suffix-of-thorns",
 	{"ThornsDamage", 1}
 )
@@ -452,10 +404,6 @@ DefineModifier("upgrade-item-suffix-of-the-wolf",
 
 DefineModifier("upgrade-item-suffix-of-the-woodpecker",
 	{"LumberGatheringBonus", 2}
-)
-
-DefineDependency("upgrade-item-suffix-of-accuracy",
-	{"upgrade-magic-domain-air"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-beaver",
@@ -492,14 +440,6 @@ DefineDependency("upgrade-item-suffix-of-ethereal-vision",
 
 DefineDependency("upgrade-item-suffix-of-extinguishment",
 	{"upgrade-magic-domain-water"}, "or", {"upgrade-magic-domain-fire"}
-)
-
-DefineDependency("upgrade-item-suffix-of-fire",
-	{"upgrade-magic-domain-fire"}
-)
-
-DefineDependency("upgrade-item-suffix-of-flame",
-	{"upgrade-magic-domain-fire"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-jinn",
@@ -568,10 +508,6 @@ DefineDependency("upgrade-item-suffix-of-the-storm",
 
 DefineDependency("upgrade-item-suffix-of-strength",
 	{"upgrade-magic-domain-earth"}
-)
-
-DefineDependency("upgrade-item-suffix-of-swiftness",
-	{"upgrade-magic-domain-air"}, "or", {"upgrade-magic-domain-lightning"}
 )
 
 DefineDependency("upgrade-item-suffix-of-thorns",

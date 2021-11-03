@@ -1,3 +1,35 @@
+upgrade_suffix_of_accuracy = {
+	name = "of Accuracy"
+	aliases += upgrade_item_suffix_of_accuracy
+	magic_suffix = true
+	magic_level = 1
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+		horn
+	}
+	incompatible_affixes = {
+		upgrade_prefix_accurate
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_air
+	}
+	
+	modifier = {
+		accuracy = 1
+	}
+}
+
 upgrade_suffix_of_elvenkind = {
 	name = "of Elvenkind"
 	magic_suffix = true
@@ -16,6 +48,70 @@ upgrade_suffix_of_elvenkind = {
 	modifier = {
 		evasion = 2
 		#should also increase stealth
+	}
+}
+
+upgrade_suffix_of_fire = {
+	name = "of Fire"
+	aliases += upgrade_item_suffix_of_fire
+	magic_suffix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_fiery
+		upgrade_prefix_flaming
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 1
+	}
+}
+
+upgrade_suffix_of_flame = {
+	name = "of Flame"
+	aliases += upgrade_item_suffix_of_flame
+	magic_suffix = true
+	magic_level = 4
+	affixed_item_classes = {
+		arrows
+		axe
+		bow
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_fiery
+		upgrade_prefix_flaming
+	}
+	
+	conditions = {
+		upgrade = upgrade_magic_domain_fire
+	}
+	
+	modifier = {
+		fire_damage = 2
 	}
 }
 
@@ -58,5 +154,33 @@ upgrade_suffix_of_protection = {
 	
 	modifier = {
 		armor = 1
+	}
+}
+
+upgrade_suffix_of_swiftness = {
+	name = "of Swiftness"
+	aliases += upgrade_item_suffix_of_swiftness
+	magic_suffix = true
+	magic_level = 3
+	affixed_item_classes = {
+		horn
+		boots
+		amulet
+		ring
+	}
+	incompatible_affixes = {
+		upgrade_prefix_swift
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_magic_domain_air
+			upgrade = upgrade_magic_domain_lightning
+		}
+	}
+	
+	modifier = {
+		speed = 1
+		evasion = 1
 	}
 }

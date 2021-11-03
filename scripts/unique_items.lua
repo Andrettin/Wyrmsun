@@ -83,8 +83,8 @@ DefineUniqueItem("dragons-tail", { -- Source: Richard Hinckley Allen, "Star-Name
 DefineUniqueItem("freys-sword", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 55-57; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 110, 114-115.
 	Name = "Frey's Sword",
 	Type = "unit-spatha",
-	Prefix = "upgrade-item-prefix-giantsbane",
-	Suffix = "upgrade-item-suffix-of-flame",
+	Prefix = "upgrade_prefix_giantsbane",
+	Suffix = "upgrade_suffix_of_flame",
 	Background = "In Norse mythology, Frey had a keen, gleamning sword that was particularly powerful against giants.",
 	Quote = "\"Then give me the horse that goes through the dark\nAnd magic flickering flames;\nAnd the sword as well that fights of itself\nAgainst the giants grim.\"\n- <a href='literary_text:skirnismol'>Skirnismol</a> (Skirnir)"
 } )
@@ -111,7 +111,7 @@ DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 DefineUniqueItem("rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
 	Name = "Rithil",
 	Type = "unit-spatha",
-	Prefix = "upgrade-item-prefix-swift",
+	Prefix = "upgrade_prefix_accurate",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
 	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\"\n- <a href='literary_text:fafnismol'>Fafnismol</a>"
@@ -121,7 +121,7 @@ DefineUniqueItem("sigrljoma", { -- Source: Paul Beekman Taylor, "Searoniðas: Ol
 	Name = "Sigrljoma", -- "Sigrljóma"
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
-	Suffix = "upgrade-item-suffix-of-fire",
+	Suffix = "upgrade_suffix_of_fire",
 	Background = "In Norse mythology, Sigrljóma (\"Battle-Light\") was the magic sword which Högni used to combat Sörli the Strong."
 } )
 
@@ -138,7 +138,7 @@ DefineUniqueItem("mjollnir", {
 DefineUniqueItem("the-hammer-of-thursagan", {
 	Name = "The Hammer of Thursagan",
 	Type = "unit-runesmiths-hammer",
-	Prefix = "upgrade-item-prefix-flaming",
+	Prefix = "upgrade_prefix_flaming",
 	Suffix = "upgrade-item-suffix-of-victory",
 --	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\"\n- Angarthing"
 	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\"\n- Angarthing"
@@ -219,7 +219,7 @@ DefineUniqueItem("the-iron-crown-of-lombardy", {
 DefineUniqueItem("alsvids-hooves", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 778.
 	Name = "Alsvid's Hooves", -- source gives "Hoof of Alsvinn" instead, but also mentions it being a sun horse, so that it is probably the same as Alsviðr
 	Type = "unit-boots",
-	Prefix = "upgrade-item-prefix-swift-boots",
+	Prefix = "upgrade_prefix_swift",
 	Suffix = "upgrade-item-suffix-of-speed",
 	Set = "upgrade-item-set-the-sun-horses",
 	Description = "These boots are named after a star, and are said to derive power from it.",
@@ -243,8 +243,8 @@ DefineUniqueItem("arvaks-ear", { -- Source: Richard Cleasby and Gudbrand Vigfuss
 DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
 	Name = "Brisingamen",
 	Type = "unit-amulet",
-	Prefix = "upgrade-item-prefix-flaming",
-	Suffix = "upgrade-item-suffix-of-swiftness",
+	Prefix = "upgrade_prefix_flaming",
+	Suffix = "upgrade_suffix_of_swiftness",
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
 	Quote = "\"The dwelling great of the dwarves was shaken,\nAnd burst was the mighty Brisings' necklace.\"\n- Dwarven Traditional Poetry"
 } )
@@ -272,8 +272,8 @@ DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 DefineUniqueItem("dragons-tongue", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 211.
 	Name = "Dragon's Tongue",
 	Type = "unit-ring",
-	Prefix = "upgrade-item-prefix-fiery",
-	Suffix = "upgrade-item-suffix-of-fire",
+	Prefix = "upgrade_prefix_fiery",
+	Suffix = "upgrade_suffix_of_fire",
 	Set = "upgrade-item-set-the-dragons-stars",
 	Description = "This ring is named after the seventh star in the constellation of Draco, and is said to derive power from it."
 } )
@@ -281,7 +281,7 @@ DefineUniqueItem("dragons-tongue", { -- Source: Richard Hinckley Allen, "Star-Na
 DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
 	Name = "Draupnir",
 	Type = "unit-ring",
-	Prefix = "upgrade-item-prefix-flaming",
+	Prefix = "upgrade_prefix_flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
@@ -290,7 +290,7 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 DefineUniqueItem("volunds-ring", { -- Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 75-76.
 	Name = "Volund's Ring",
 	Type = "unit-ring",
-	Prefix = "upgrade-item-prefix-swift-boots",
+	Prefix = "upgrade_prefix_swift",
 	Suffix = "upgrade-item-suffix-of-speed",
 	Description = "The legendary elven smith Volund crafted this wondrous magic ring, and gave it to his wife. The ring was later stolen by an enemy king, who gave it to his daughter."
 } )
@@ -301,15 +301,15 @@ DefineUniqueItem("gjall", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Name = "Gjall",
 	Type = "unit-horn",
 	Prefix = "upgrade-item-prefix-jinns",
-	Suffix = "upgrade-item-suffix-of-swiftness",
+	Suffix = "upgrade_suffix_of_swiftness",
 	Background = "In Norse mythology, Gjall (\"the Ringing Horn\") was the horn of the god Heimdall, which was heard in all nine worlds when soared."
 } )
 
 DefineUniqueItem("hlewagastizs-horn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
 	Name = "Hlewagastiz's Horn",
 	Type = "unit-horn",
-	Prefix = "upgrade-item-prefix-accurate",
-	Suffix = "upgrade-item-suffix-of-accuracy",
+	Prefix = "upgrade_prefix_accurate",
+	Suffix = "upgrade_suffix_of_accuracy",
 	Background = "In the early 5th century, a horn was made and engraved with runes detailing the name of its maker, Hlewagastiz.",
 	Quote = "\"I, Hlewagastiz of the wood, made the horn.\""
 } )
@@ -375,8 +375,8 @@ DefineUniqueItem("shorbear-hold", {
 DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	Name = "Skidbladnir",
 	Type = "unit-dwarven-transport-ship",
-	Prefix = "upgrade-item-prefix-swift-boots",
---	Suffix = "upgrade-item-suffix-of-swiftness",
+	Prefix = "upgrade_prefix_swift",
+--	Suffix = "upgrade_suffix_of_swiftness",
 	Suffix = "upgrade-item-suffix-of-ethereal-vision",
 	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed. Some say that it is capable of travelling between worlds...",
 	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- <a href='literary_text:grimnismol'>Grimnismol</a>",
