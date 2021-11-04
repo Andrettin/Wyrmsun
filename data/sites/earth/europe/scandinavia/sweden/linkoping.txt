@@ -22,6 +22,10 @@ linkoping = {
 			owner = gothic_tribe #Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
+		-27 = {
+			owner = geat_tribe
+		}
+		
 		814 = {
 			owner = swedish_tribe #part of the territory of the Swedes c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
