@@ -107,7 +107,7 @@ DefineCharacter("dyggve-the-brave-yngling", { -- Source: Snorri Sturlson, "Heims
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Father = "domald-yngling",
+	Father = "domar-yngling",
 	Mother = "drott-skjoldung",
 	Quote = "\"For Loke's daughter in her house\nOf Yngve's race would have a spouse;\nTherefore the fell-one snatched away\nBrave Dyggve from the light of day.\"\n- Thiodolf of Huine",
 	Trait = "upgrade-mighty", -- described as brave and mighty
@@ -302,78 +302,6 @@ DefineCharacter("ottar-vendelcrow-yngling", { -- Source: Snorri Sturlson, "Heims
 	-- described as brave
 })
 
-DefineCharacter("adils-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 243-245.
-	Name = "Adils",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "ottar-vendelcrow-yngling",
-	Quote = "\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-})
-
-DefineCharacter("eystein-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
-	Name = "Eystein",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "adils-yngling",
-	Quote = "\"The raging tree-devourer fire\nRushed on the monarch its ire;\nFirst fell the castle timbers, then\nThe roof-beams - Eystein's funeral pyre.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-})
-
-DefineCharacter("yngvar-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 246-247.
-	Name = "Yngvar",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "eystein-yngling",
-	Quote = "\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-})
-
-DefineCharacter("onund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
-	Name = "Onund",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "yngvar-yngling",
-	Quote = "\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-})
-
-DefineCharacter("ingiald-the-evil-adviser-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-254.
-	Name = "Ingiald",
-	ExtraName = "the Evil-Adviser",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "onund-yngling",
-	Quote = "\"On his own hearth the fire he raised,\nA deed his foemen even praised;\nBy his own hand he perished so,\nAnd life for freedom did forego.\"\n- Thiodolf of Huine",
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe"
-	}
-	-- married to Gauthild
-})
-
 DefineCharacter("aasa-the-evil-adviser-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
 	Name = "Aasa",
 	ExtraName = "the Evil-Adviser",
@@ -467,23 +395,6 @@ DefineCharacter("halfdan-the-mild-yngling", { -- Source: Snorri Sturlson, "Heims
 	Quote = "\"By Hel's summons, a great king\nWas called away to Odin's Thing:\nKing Halfdan, he who dwelt of late\nAt Holtar, must obey grim Fate.\"\n- Thiodolf of Huine"
 	-- married to Hlif, daughter of King Dag of Westmor
 	-- his chief house was Holtar (in Vestfold, Norway)
-})
-
-DefineCharacter("gudrod-the-magnificent-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260, 262.
-	Name = "Gudrod",
-	ExtraName = "the Magnificent", -- also knowns as "the Hunter"
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	-- his father ruled over Vestfold
-	Father = "halfdan-the-mild-yngling",
-	Mother = "hlif", -- presumably, since Hlif was married to Halfdan
-	-- died murdered by a man under the orders of his wife Aasa
-	DeathDate = 824, -- Halfdan the Black was one year old when Gudrod died
-	Quote = "\"Gudrod is gone to his long rest,\nDespite of all his haughty pride,\nA traitor's spear has pierced his side\"\n- Thiodolf of Huine"
-	-- married to Alfhild, and after her death married Aasa (daughter of Harald Redbeard)
-	-- described as proud
 })
 
 DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-261.

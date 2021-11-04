@@ -6,6 +6,8 @@ svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	default_faction = swedish_tribe
 	gender = male
 	father = fiolner_yngling
+	start_year = 8
+	end_year = 42
 	quote = "\"By Durin's dwarven race,\nWho haunt the cliffs and shun day's face,\nThe valiant Svegdir was deceived,\nThe dwarf's false words the king believed.\nThe dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell,\nIn Saekmime's hall, where giants dwell.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
@@ -17,4 +19,17 @@ svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	}
 	
 	#king of the Swedes
+	
+	history = {
+		8 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		42 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
 }

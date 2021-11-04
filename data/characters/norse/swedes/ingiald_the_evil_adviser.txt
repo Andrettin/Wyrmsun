@@ -1,0 +1,37 @@
+ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-254.
+	name = "Ingiald"
+	surname = "the Evil-Adviser"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = onund_yngling
+	start_year = 654
+	end_year = 688
+	quote = "\"On his own hearth the fire he raised,\nA deed his foemen even praised;\nBy his own hand he perished so,\nAnd life for freedom did forego.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+	#married to Gauthild
+	
+	history = {
+		654 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		688 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

@@ -1,0 +1,36 @@
+yngvar_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 246-247.
+	name = "Yngvar"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = eystein_yngling
+	start_year = 586
+	end_year = 620
+	quote = "\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+	
+	history = {
+		586 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		620 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

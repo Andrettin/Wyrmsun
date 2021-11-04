@@ -1,0 +1,36 @@
+adils_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 243-245.
+	name = "Adils"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = ottar_vendelcrow_yngling
+	start_year = 518
+	end_year = 552
+	quote = "\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+	
+	history = {
+		518 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		552 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

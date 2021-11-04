@@ -6,6 +6,8 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	default_faction = swedish_tribe
 	gender = male
 	trait = upgrade_mighty #described as powerful
+	start_year = -27
+	end_year = 8
 	quote = "\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
@@ -27,8 +29,8 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 			location = stockholm
 		}
 		
-		4 = {
-			#30 years of reign estimated
+		8 = {
+			#34 average years estimated between each Yngling generation
 			active = false
 		}
 	}

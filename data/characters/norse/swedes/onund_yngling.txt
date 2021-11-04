@@ -1,0 +1,36 @@
+onund_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
+	name = "Onund"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = yngvar_yngling
+	start_year = 620
+	end_year = 654
+	quote = "\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+	
+	history = {
+		620 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		654 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

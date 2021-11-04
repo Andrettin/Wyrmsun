@@ -1,0 +1,36 @@
+gudrod_the_magnificent_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260, 262.
+	name = "Gudrod"
+	surname = "the Magnificent" #also known as "the Hunter"
+	#dynasty = yngling
+	unit_type = unit_norse_swordsman
+	civilization = norse
+	default_faction = vestfold
+	gender = male
+	father = halfdan_the_mild_yngling
+	mother = hlif #presumably, since Hlif was married to Halfdan
+	start_year = 790 #34 average years estimated between each Yngling generation
+	end_year = 824
+	quote = "\"Gudrod is gone to his long rest,\nDespite of all his haughty pride,\nA traitor's spear has pierced his side\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		or = {
+			faction = vestfold
+			faction = swedish_tribe
+		}
+	}
+	
+	#his father ruled over Vestfold
+	#married to Alfhild, and after her death married Aasa (daughter of Harald Redbeard)
+	#described as proud
+	
+	history = {
+		824 = {
+			#died murdered by a man under the orders of his wife Aasa
+			active = false #Halfdan the Black was one year old when Gudrod died, which would place his death in 824
+		}
+	}
+}

@@ -1,0 +1,36 @@
+eystein_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
+	name = "Eystein"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = adils_yngling
+	start_year = 552
+	end_year = 586
+	quote = "\"The raging tree-devourer fire\nRushed on the monarch its ire;\nFirst fell the castle timbers, then\nThe roof-beams - Eystein's funeral pyre.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#king of the Swedes
+	
+	history = {
+		552 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		586 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}
