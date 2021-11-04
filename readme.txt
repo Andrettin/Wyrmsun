@@ -75,6 +75,9 @@ https://github.com/Andrettin/Wyrmsun
 * Pathfinding
 - Improved the performance of the algorithm used by units to find a depot to return resources to.
 
+* Scenarios
+- The current year is now displayed at the top bar for scenarios. An in-game year passes for each real minute. The in-game year has no effect other than limiting some hero recruitment choices.
+
 * Status Effects
 - Reworked the status effect code in the game's engine to improve performance and make it simpler to add new status effects in the future.
 

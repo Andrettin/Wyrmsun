@@ -424,8 +424,8 @@ CUserInterface:get().AgePanel.IconY = 0
 CUserInterface:get().AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
 CUserInterface:get().AgePanel.TextY = 1 * get_scale_factor()
 
---CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
---CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
+CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
+CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
 
 -- World Map Layer Buttons
 
