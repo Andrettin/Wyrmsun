@@ -34,7 +34,7 @@ DefineCharacter("beow-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 2017
 	Faction = "dane-tribe",
 	-- Beow is Scyld's son and successor, and father of Healfdene in Beowulf; since Healfdene/Halfdan has different ancestry in the Heimskringla, here we put Beow as the father of Rig (the earliest person in Halfdan's genealogy in the Heimskringla) and as a descendant of Skjöldr/Scyld
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -47,7 +47,7 @@ DefineCharacter("rig-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Faction = "dane-tribe",
 	Father = "beow-skjoldung", -- Beow is Scyld's son and successor, and father of Healfdene in Beowulf; since Healfdene/Halfdan has different ancestry in the Heimskringla, here we put Beow as the father of Rig (the earliest person in Halfdan's genealogy in the Heimskringla) and as a descendant of Skjöldr/Scyld
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -60,7 +60,7 @@ DefineCharacter("daup-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Faction = "dane-tribe",
 	Father = "rig-skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -73,7 +73,7 @@ DefineCharacter("dan-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heimsk
 	Civilization = "norse",
 	Father = "daup-skjoldung", -- presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -96,7 +96,7 @@ DefineCharacter("halfdan-the-old-skjoldung", { -- Source: Henry Adams Bellows (t
 	Civilization = "norse",
 	Faction = "dane-tribe",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe" -- Danish king
+		"ruler", 0, 0, "dane-tribe" -- Danish king
 	}
 })
 
@@ -131,7 +131,7 @@ DefineCharacter("dag-the-great", { -- Source: Henry Adams Bellows (transl.), "Th
 	Father = "halfdan-the-old-skjoldung",
 	Mother = "almveig", -- presumably, since she was married to Halfdan the Old
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe" -- said to be a king in the Ynglinga Saga, and his ancestor was king of Denmark
+		"ruler", 0, 0, "dane-tribe" -- said to be a king in the Ynglinga Saga, and his ancestor was king of Denmark
 	}
 })
 
@@ -241,7 +241,7 @@ DefineCharacter("frode-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heim
 	Civilization = "norse",
 	Father = "dan-mikillati-skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 	-- described as peace-loving
 })
@@ -256,7 +256,7 @@ DefineCharacter("halfdan-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla
 	Father = "frode-mikillati-skjoldung", -- as given by the Heimskringla
 	-- in Beowulf, he was the son and successor of the Danish king Beow; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe" -- ruled jointly with his brother Fridleif
+		"ruler", 0, 0, "dane-tribe" -- ruled jointly with his brother Fridleif
 	}
 	-- described as a great warrior
 })
@@ -269,7 +269,7 @@ DefineCharacter("fridleif-skjoldung", { -- Source: Snorri Sturlson, "Heimskringl
 	Civilization = "norse",
 	Father = "frode-mikillati-skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe" -- ruled jointly with his brother Halfdan
+		"ruler", 0, 0, "dane-tribe" -- ruled jointly with his brother Halfdan
 	}
 	-- described as a great warrior
 })
@@ -283,7 +283,7 @@ DefineCharacter("ole-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskr
 	Civilization = "norse",
 	Father = "fridleif-skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe" -- ruled over the Swedes at Upsal for 25 years
+		"ruler", 0, 0, "swedish_tribe" -- ruled over the Swedes at Upsal for 25 years
 	}
 	-- was killed by Starkad the Old (probably the same as the Starkod the Old previously mentioned)
 })
@@ -297,7 +297,7 @@ DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heims
 	Civilization = "norse",
 	-- helped Egil Yngling to defeat Tunne's forces
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -328,7 +328,7 @@ DefineCharacter("heorogar-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 
 	Faction = "dane-tribe",
 	Father = "halfdan-skjoldung", -- eldest son of the Danish king Healfdene
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -341,7 +341,7 @@ DefineCharacter("hrothgar-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 
 	Faction = "dane-tribe",
 	Father = "halfdan-skjoldung", -- second son of the Danish king Healfdene
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -357,7 +357,7 @@ DefineCharacter("helge-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "halfdan-skjoldung", -- king Halfdan of Denmark was his father in the Heimskringla
 	-- in Beowulf, he is the third son of the Danish king Healfdene; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -371,7 +371,7 @@ DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskrin
 	Faction = "dane-tribe",
 	Father = "helge-skjoldung",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "dane-tribe"
+		"ruler", 0, 0, "dane-tribe"
 	}
 })
 
@@ -383,8 +383,8 @@ DefineCharacter("margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Faction = "denmark",
 	StartDate = 1387, -- the three northern crowns devolved to her in 1387 AD
 	HistoricalTitles = {
-		"head-of-state", 1387, 0, "denmark", -- the three northern crowns devolved to her in 1387 AD
-		"head-of-state", 1387, 0, "sweden",
-		"head-of-state", 1387, 0, "norway"
+		"ruler", 1387, 0, "denmark", -- the three northern crowns devolved to her in 1387 AD
+		"ruler", 1387, 0, "sweden",
+		"ruler", 1387, 0, "norway"
 	}
 })

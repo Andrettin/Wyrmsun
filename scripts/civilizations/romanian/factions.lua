@@ -35,8 +35,8 @@ DefineFaction("moldavia", {
 		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Prince",
-		"head-of-state", "female", "monarchy", "duchy", "Princess"
+		"ruler", "male", "monarchy", "duchy", "Prince",
+		"ruler", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -58,8 +58,8 @@ DefineFaction("transylvania", {
 		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Prince",
-		"head-of-state", "female", "monarchy", "duchy", "Princess"
+		"ruler", "male", "monarchy", "duchy", "Prince",
+		"ruler", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -73,7 +73,7 @@ DefineFaction("wallachia", {
 		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Prince",
-		"head-of-state", "female", "monarchy", "duchy", "Princess"
+		"ruler", "male", "monarchy", "duchy", "Prince",
+		"ruler", "female", "monarchy", "duchy", "Princess"
 	}
 })

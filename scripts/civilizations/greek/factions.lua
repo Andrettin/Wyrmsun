@@ -55,8 +55,8 @@ DefineFaction("argos", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	}
 })
 
@@ -72,8 +72,8 @@ DefineFaction("athens", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-450, "argos", "alliance", -- Argos was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
@@ -101,8 +101,8 @@ DefineFaction("corinth", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-431, "athens", "war" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -156,8 +156,8 @@ DefineFaction("mycenae", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalCapitals = {
 		-1450, "mycenae" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
@@ -175,8 +175,8 @@ DefineFaction("sparta", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-431, "corinth", "alliance", -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
@@ -195,8 +195,8 @@ DefineFaction("thebes", {
 		"republic", "county", "City-State"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "county", "Archon",
-		"head-of-state", "none", "republic", "county", "Archon"
+		"ruler", "none", "monarchy", "county", "Archon",
+		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
 		-450, "athens", "alliance", -- Thebes was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.

@@ -19,13 +19,12 @@ yngvar_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 2
 		faction = swedish_tribe
 	}
 	
-	#king of the Swedes
-	
 	history = {
 		586 = {
 			active = true
 			faction = swedish_tribe
 			location = stockholm
+			title = ruler #king of the Swedes
 		}
 		
 		620 = {

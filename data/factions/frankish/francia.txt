@@ -12,9 +12,9 @@ francia = {
 		frank_tribe
 	}
 	character_title_names = {
-		head_of_government = {
-			monarchy = "Mayor of the Palace" #Source: "Medieval Warfare V.2", 2013, p. 7.
-		}
+		#head_of_government = {
+		#	monarchy = "Mayor of the Palace" #Source: "Medieval Warfare V.2", 2013, p. 7.
+		#}
 	}
 	conditions = {
 		not = {

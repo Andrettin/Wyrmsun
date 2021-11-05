@@ -169,8 +169,8 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"monarchy", "duchy", "Earldom"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Earl",
-		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
+		"ruler", "male", "monarchy", "duchy", "Earl",
+		"ruler", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-cyan-lion-on-red",

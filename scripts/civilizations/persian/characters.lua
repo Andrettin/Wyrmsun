@@ -33,6 +33,6 @@ DefineCharacter("vologaeses", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Faction = "parthia",
 	StartDate = 165,
 	HistoricalTitles = {
-		"head-of-state", 165, 0, "parthia" -- was Parthian king (as Vologaeses IV) when he made a peace with the Romans (apparently) in 165
+		"ruler", 165, 0, "parthia" -- was Parthian king (as Vologaeses IV) when he made a peace with the Romans (apparently) in 165
 	}
 })

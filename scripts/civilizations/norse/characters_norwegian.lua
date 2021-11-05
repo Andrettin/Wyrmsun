@@ -33,7 +33,7 @@ DefineCharacter("gudlog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	-- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
 	Quote = "\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
+		"ruler", 0, 0, "halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
 	}
 })
 
@@ -44,7 +44,7 @@ DefineCharacter("gylog", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	Father = "gudlog",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "halogaland"
+		"ruler", 0, 0, "halogaland"
 	}
 })
 
@@ -56,7 +56,7 @@ DefineCharacter("godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Faction = "halogaland",
 	-- Adils Yngling sent Godgest the horse Raven as a gift
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "halogaland"
+		"ruler", 0, 0, "halogaland"
 	}
 })
 
@@ -78,7 +78,7 @@ DefineCharacter("solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Father = "hogne-of-niardo",
 	-- Solve slew Adils Yngling by burning
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "swedish_tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
+		"ruler", 0, 0, "swedish_tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
 		-- Solve had dominions in Jutland, but from the source it is not clear if he ruled over all of Jutland, or only a portion of it
 	}
 })
@@ -224,7 +224,7 @@ DefineCharacter("gandalf-of-vingulmark", { -- Source: Snorri Sturlson, "Heimskri
 	Father = "alfgeir",
 	StartDate = 824, -- became king of Vingulmark when Gudrod Yngling died
 	HistoricalTitles = {
-		"head-of-state", 824, 0, "vingulmark"
+		"ruler", 824, 0, "vingulmark"
 	},
 	HistoricalLocations = {
 		824, "old_earth", "oslo"
@@ -322,7 +322,7 @@ DefineCharacter("sigtryg-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 	Father = "eystein-the-great",
 	StartDate = 841, -- was king with residence in Hedmark during Halfdan the Black's reign in Agder
 	HistoricalTitles = {
-		"head-of-state", 841, 0, "hedmark"
+		"ruler", 841, 0, "hedmark"
 	},
 	HistoricalLocations = {
 		841, "old_earth", "hamar"
@@ -345,7 +345,7 @@ DefineCharacter("eystein-eysteinson", { -- Source: Snorri Sturlson, "Heimskringl
 	-- became king of Hedmark after Halfdan the Black killed his brother Sigtryg
 	StartDate = 841,
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "hedmark"
+		"ruler", 0, 0, "hedmark"
 	},
 	HistoricalLocations = {
 		841, "old_earth", "hamar"
@@ -424,7 +424,7 @@ DefineCharacter("harald-goldbeard", { -- Source: Snorri Sturlson, "Heimskringla"
 	Faction = "sogn",
 	StartDate = 841, -- was king in Sogn during Halfdan the Black's reign in Agder
 	HistoricalTitles = {
-		"head-of-state", 841, 0, "sogn"
+		"ruler", 841, 0, "sogn"
 	},
 	HistoricalLocations = {
 		841, "old_earth", "hermansverk"
@@ -709,7 +709,7 @@ DefineCharacter("swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	StartDate = 1177, -- reign began
 	DeathDate = 1203, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1177, 1203, "norway"
+		"ruler", 1177, 1203, "norway"
 	}
 })
 
@@ -722,7 +722,7 @@ DefineCharacter("magnus-the-saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Faction = "orkney",
 	DeathDate = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalTitles = {
-		"head-of-state", 0, 1129, "orkney"
+		"ruler", 0, 1129, "orkney"
 	}
 })
 
@@ -743,7 +743,7 @@ DefineCharacter("kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	StartDate = 1129, -- was made Earl of Orkney
 	Father = "koll",
 	HistoricalTitles = {
-		"head-of-state", 1129, 0, "orkney"
+		"ruler", 1129, 0, "orkney"
 	}
 })
 
@@ -754,7 +754,7 @@ DefineCharacter("hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	Faction = "norway",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+		"ruler", 0, 0, "norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
 })
 
@@ -767,7 +767,7 @@ DefineCharacter("hakon-hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	StartDate = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "hakon",
 	HistoricalTitles = {
-		"head-of-state", 1261, 0, "norway"
+		"ruler", 1261, 0, "norway"
 	}
 })
 

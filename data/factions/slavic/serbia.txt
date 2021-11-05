@@ -11,7 +11,7 @@ serbia = {
 		}
 	}
 	character_title_names = {
-		head_of_state = {
+		ruler = {
 			monarchy = {
 				duchy = {
 					male = "Prince"

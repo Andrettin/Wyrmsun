@@ -61,7 +61,7 @@ DefineCharacter("hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	-- described as being a murderous combatant
 	HistoricalTitles = {
 		-- was king (of somewhere), and then invaded and conquered Sweden, becoming its king as well
-		"head-of-state", 0, 0, "swedish_tribe"
+		"ruler", 0, 0, "swedish_tribe"
 	}
 	-- brother of Hagberd
 })
@@ -212,7 +212,7 @@ DefineCharacter("algaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Faction = "geat-tribe",
 	Father = "gautrek-the-mild",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "geat-tribe" -- was a king - apparently of Got(a?)land
+		"ruler", 0, 0, "geat-tribe" -- was a king - apparently of Got(a?)land
 	}
 })
 
@@ -504,7 +504,7 @@ DefineCharacter("ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Civilization = "norse",
 	Faction = "sweden",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "sweden" -- king of Sweden
+		"ruler", 0, 0, "sweden" -- king of Sweden
 	}
 })
 

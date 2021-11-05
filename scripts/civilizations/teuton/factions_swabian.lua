@@ -50,7 +50,7 @@ DefineFaction("switzerland", {
 		"republic", "kingdom", "Confederation"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "republic", "kingdom", "Chancellor"
+		"ruler", "none", "republic", "kingdom", "Chancellor"
 	}
 })
 

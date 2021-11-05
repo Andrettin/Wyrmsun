@@ -34,7 +34,7 @@ DefineCharacter("otakar-i-premysl", { -- Source: James Westfall Thompson, "Medie
 	StartDate = 1198, -- reign began
 	DeathDate = 1230, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 1198, 1230, "bohemia" -- king of Bohemia in 1198-1230
+		"ruler", 1198, 1230, "bohemia" -- king of Bohemia in 1198-1230
 	}
 })
 
@@ -59,7 +59,7 @@ DefineCharacter("charles", { -- Source: Alena Ježková, "77 Prague Legends", 20
 	StartDate = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
 	DeathDate = 1378, -- Charles IV was on his deathbed in November 1378, in Prague Castle
 	HistoricalTitles = {
-		"head-of-state", 0, 1378, "bohemia"
+		"ruler", 0, 1378, "bohemia"
 	}
 })
 

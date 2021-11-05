@@ -110,8 +110,8 @@ DefineFaction("brandenburg", {
 		"monarchy", "duchy", "Margravate"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Margrave",
-		"head-of-state", "female", "monarchy", "duchy", "Margrave" -- correct?
+		"ruler", "male", "monarchy", "duchy", "Margrave",
+		"ruler", "female", "monarchy", "duchy", "Margrave" -- correct?
 	}
 })
 
@@ -150,7 +150,7 @@ DefineFaction("cologne", {
 		"theocracy", "duchy", "Archbishopric"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "theocracy", "duchy", "Archbishop"
+		"ruler", "none", "theocracy", "duchy", "Archbishop"
 	}
 })
 
@@ -180,7 +180,7 @@ DefineFaction("hesse", {
 		"monarchy", "duchy", "Landgraviate"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "duchy", "Landgrave"
+		"ruler", "none", "monarchy", "duchy", "Landgrave"
 	},
 	HistoricalTiers = {
 		1815, "grand_duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -211,7 +211,7 @@ DefineFaction("magdeburg", {
 		"theocracy", "duchy", "Archbishopric"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "theocracy", "duchy", "Archbishop"
+		"ruler", "none", "theocracy", "duchy", "Archbishop"
 	},
 	HistoricalGovernmentTypes = {
 		1547, "theocracy" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
@@ -256,7 +256,7 @@ DefineFaction("thuringia", {
 		"monarchy", "duchy", "Landgraviate"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "duchy", "Landgrave"
+		"ruler", "none", "monarchy", "duchy", "Landgrave"
 	}
 })
 

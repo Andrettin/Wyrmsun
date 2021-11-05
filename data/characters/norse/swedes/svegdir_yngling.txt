@@ -18,13 +18,12 @@ svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 		faction = swedish_tribe
 	}
 	
-	#king of the Swedes
-	
 	history = {
 		8 = {
 			active = true
 			faction = swedish_tribe
 			location = stockholm
+			title = ruler #king of the Swedes
 		}
 		
 		42 = {

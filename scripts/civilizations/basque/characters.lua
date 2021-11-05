@@ -35,7 +35,7 @@ DefineCharacter("gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	DeathDate = {-2800, 12, 30},
 	Level = 3, -- chieftain/king
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "gylfing_tribe"
+		"ruler", 0, 0, "gylfing_tribe"
 	},
 	HistoricalLocations = {
 		-2800, "old_earth", "malmo"

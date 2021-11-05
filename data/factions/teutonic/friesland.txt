@@ -16,7 +16,7 @@ friesland = {
 		}
 	}
 	character_title_names = {
-		head_of_state = {
+		ruler = {
 			monarchy = {
 				barony = {
 					male = "Lord"

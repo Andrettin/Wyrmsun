@@ -35,7 +35,7 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	DeathDate = 376, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 0, 376, "ostrogothic_tribe"
+		"ruler", 0, 376, "ostrogothic_tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
@@ -73,7 +73,7 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	DeathDate = 472, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 453, 472, "ostrogothic_tribe"
+		"ruler", 453, 472, "ostrogothic_tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
@@ -94,7 +94,7 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	DeathDate = 474, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 472, 474, "ostrogothic_tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+		"ruler", 472, 474, "ostrogothic_tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then

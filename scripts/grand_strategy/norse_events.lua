@@ -35,8 +35,8 @@ local NorseEvents = {
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
 				and (GetFactionProvinceCount(Factions.dane_tribe) > 0 or GetFactionProvinceCount(Factions.denmark) > 0)
-				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Fiolner Yngling"
-				and GetFactionMinister("norse", "dane-tribe", "head-of-state") == "Fridfrode Skjoldung"
+				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Fiolner Yngling"
+				and GetFactionMinister("norse", "dane-tribe", "ruler") == "Fridfrode Skjoldung"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -47,7 +47,7 @@ local NorseEvents = {
 		Options = {"~!Oh no!"},
 		OptionEffects = {
 			function(s)
-				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Swegder Yngling")
+				SetFactionMinister("norse", EventFaction.Name, "ruler", "Swegder Yngling")
 				KillGrandStrategyHero("Fiolner Yngling")
 			end
 		},
@@ -59,7 +59,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
-				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
+				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Swegder Yngling"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -81,7 +81,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
-				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
+				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Swegder Yngling"
 				and SyncRand(100) < 50
 			) then
 				return true
@@ -96,7 +96,7 @@ local NorseEvents = {
 		OptionEffects = {
 			function(s)
 				SetProvinceHero("Sweden", "vana_of_vanaland", 4)
-				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Vanland Yngling")
+				SetFactionMinister("norse", EventFaction.Name, "ruler", "Vanland Yngling")
 				KillGrandStrategyHero("Swegder Yngling")
 			end
 		},
@@ -108,7 +108,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
-				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
+				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -130,7 +130,7 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
-				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
+				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then
 				return true
@@ -144,7 +144,7 @@ local NorseEvents = {
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Visbur Yngling")
+				SetFactionMinister("norse", EventFaction.Name, "ruler", "Visbur Yngling")
 				KillGrandStrategyHero("Vanland Yngling")
 			end
 		},

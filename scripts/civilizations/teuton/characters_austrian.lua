@@ -89,9 +89,6 @@ DefineCharacter("leopold-hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	StartDate = 1818, -- born
 	DeathDate = 1891, -- died
 	Deities = {"christian-god"},
-	HistoricalTitles = {
-		"education-minister", 0, 0, "austria"
-	}
 	-- Knight (Ritter) of Artha
 })
 
@@ -129,7 +126,7 @@ DefineCharacter("von-pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	StartDate = 1848, -- became Minister-President of Austria in 1848
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-government", 1848, 1848, "austria" -- was Minister-President of Austria during 1848
+		"chancellor", 1848, 1848, "austria" -- was Minister-President of Austria during 1848
 	}
 })
 
@@ -143,7 +140,7 @@ DefineCharacter("franz-joseph-von-habsburg", { -- Source: Waltraud Heindl, "Jose
 	StartDate = 1830, -- born (became Emperor in 1848, when he was 18 years old)
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 1848, 0, "austria" -- became Emperor of Austria in 1848
+		"ruler", 1848, 0, "austria" -- became Emperor of Austria in 1848
 	}
 })
 
@@ -171,7 +168,7 @@ DefineCharacter("franz-seraph-stadion", { -- Source: Waltraud Heindl, "Josephini
 	DeathDate = 1853, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"interior-minister", 1848, 1849, "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1848
+		--"interior-minister", 1848, 1849, "austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1848
 	}
 	-- count (of where?)
 })
@@ -187,7 +184,7 @@ DefineCharacter("alexander-von-bach", { -- Source: Waltraud Heindl, "Josephinisc
 	DeathDate = 1893, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"interior-minister", 1849, 1859, "austria" -- became Interior Minister (Innenminister) of Austria on 15.08.1849, and ceased that function in 1859
+		--"interior-minister", 1849, 1859, "austria" -- became Interior Minister (Innenminister) of Austria on 15.08.1849, and ceased that function in 1859
 	}
 })
 
@@ -215,7 +212,7 @@ DefineCharacter("anton-hye-von-glunek", { -- Source: Waltraud Heindl, "Josephini
 	StartDate = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"justice-minister", 1867, 1867, "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
+		--"justice-minister", 1867, 1867, "austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
 	}
 })
 
@@ -229,7 +226,7 @@ DefineCharacter("adolph-pratobevera-von-wiesborn",  { -- Source: Waltraud Heindl
 	StartDate = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"justice-minister", 1861, 1862, "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
+		--"justice-minister", 1861, 1862, "austria" -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
 	}
 	-- had the reputation of being a freethinker
 })

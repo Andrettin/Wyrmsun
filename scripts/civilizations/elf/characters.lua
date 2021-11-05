@@ -33,7 +33,7 @@ DefineCharacter("arawn", { -- Arawn was king of the otherworld Annwn in Welsh le
 	Faction = "annwn",
 	Trait = "upgrade-wise",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "annwn" -- king of Annwn
+		"ruler", 0, 0, "annwn" -- king of Annwn
 	}
 	-- wore gray-brown clothing when hunting, along with a hunting horn hanging over his neck
 })

@@ -33,7 +33,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "asa-tribe"
-				and GetFactionMinister("germanic", "asa-tribe", "head-of-state") == "Lorikus"
+				and GetFactionMinister("germanic", "asa-tribe", "ruler") == "Lorikus"
 --				and FactionHasHero("germanic", "asa-tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
@@ -61,7 +61,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "asa-tribe"
-				and GetFactionMinister("germanic", "asa-tribe", "head-of-state") == "Lorikus"
+				and GetFactionMinister("germanic", "asa-tribe", "ruler") == "Lorikus"
 --				and FactionHasHero("germanic", "asa-tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
@@ -80,7 +80,7 @@ local GermanicEvents = {
 					"asa-tribe",
 					{"~!OK"},
 					{function(s)
-						SetFactionMinister("germanic", "asa-tribe", "head-of-state", "Tror")
+						SetFactionMinister("germanic", "asa-tribe", "ruler", "Tror")
 						KillGrandStrategyHero("Lorikus")
 					end}
 				)
@@ -168,7 +168,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "asa-tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
-				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Voden"
+				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "ruler") == "Voden"
 				and GrandStrategyHeroIsAlive("Skeldu")
 			) then
 				return true
@@ -190,7 +190,7 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
-				SetFactionMinister("germanic", "skeldung-tribe", "head-of-state", "Skeldu")
+				SetFactionMinister("germanic", "skeldung-tribe", "ruler", "Skeldu")
 			end,
 			function(s)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
@@ -204,7 +204,7 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
-				SetFactionMinister("germanic", "skeldung-tribe", "head-of-state", "Skeldu")
+				SetFactionMinister("germanic", "skeldung-tribe", "ruler", "Skeldu")
 				GrandStrategyFaction = Factions.skeldung_tribe
 				SetPlayerFaction("germanic", "skeldung-tribe")
 			end
@@ -218,7 +218,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "asa-tribe"
 				and GetProvinceOwner("Sweden") == EventFaction.Name
-				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Yngve"
+				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "ruler") == "Yngve"
 			) then
 				return true
 			else

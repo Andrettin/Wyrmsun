@@ -34,7 +34,7 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathDate = 411,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 0, 411, "burgundian-tribe"
+		"ruler", 0, 411, "burgundian-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
@@ -73,7 +73,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Mother = "grimhild",
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+		"ruler", 411, 437, "burgundy" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	},
 	-- became Gunnar/Gunther in the myths; as given by Fichtner
 	Conditions = function(s)
@@ -242,7 +242,7 @@ DefineCharacter("gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	Mother = "glaumvor", -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 437, 474, "burgundy"
+		"ruler", 437, 474, "burgundy"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
@@ -264,7 +264,7 @@ DefineCharacter("chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Deities = {"christian-god"},
 	-- brother of Gundobad according to Fichtner (though that author gives his name as "Chilperich" instead); Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	HistoricalTitles = {
-		"head-of-state", 474, 480, "burgundy"
+		"ruler", 474, 480, "burgundy"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
@@ -322,7 +322,7 @@ DefineCharacter("gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "gundioc", -- was Chilperic's brother, so presumably a child of Gundioc's
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 480, 516, "burgundy"
+		"ruler", 480, 516, "burgundy"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
@@ -375,7 +375,7 @@ DefineCharacter("sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 20
 	Father = "gundobad", -- son of Gundobad; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 516, 523, "burgundy" -- reigned from 516 to 523
+		"ruler", 516, 523, "burgundy" -- reigned from 516 to 523
 	},
 	-- became Sigmund (father of Sigurd) in the myths; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
 	Conditions = function(s)
@@ -398,7 +398,7 @@ DefineCharacter("gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Father = "sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 523, 534, "burgundy"
+		"ruler", 523, 534, "burgundy"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then

@@ -140,7 +140,7 @@ DefineCharacter("desiderius", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	StartDate = 772, -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 772, 0, "lombardy" -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
+		"ruler", 772, 0, "lombardy" -- was king of the Lombards in 772, when Carloman the Younger Carolingian's wife fled to his court
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lombardy") then

@@ -35,7 +35,7 @@ DefineCharacter("pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	DeathDate = 40, -- last we hear of him
 	Quote = "\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg",
 	HistoricalTitles = {
-		"head-of-state", -1, 40, "untersberg"
+		"ruler", -1, 40, "untersberg"
 	},
 	HistoricalLocations = {
 		25, "nidavellir", "pypos-camp"
@@ -56,7 +56,7 @@ DefineCharacter("bimbam", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 	Faction = "untersberg",
 	HairVariation = "blond-hair", -- had a yellow beard
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "untersberg" -- Bimbam I of Untersberg
+--		"ruler", 0, 0, "untersberg" -- Bimbam I of Untersberg
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "untersberg" or GetPlayerData(trigger_player, "Faction") == "sagan-tribe") then -- Bimbam belonged to the Sagan tribe of Untersberg (since his characteristics in the Among the Gnomes story, like being able to elongate himself, fit with what is described of the Sagans)
@@ -123,7 +123,7 @@ DefineCharacter("clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, 
 	Civilization = "gnome",
 	Trait = "upgrade-quick", -- robust and very quick
 	HistoricalTitles = {
---		"war-minister", 0, 0, "untersberg" -- commanding general of the army of Untersberg
+--		"marshal", 0, 0, "untersberg" -- commanding general of the army of Untersberg
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "untersberg") then

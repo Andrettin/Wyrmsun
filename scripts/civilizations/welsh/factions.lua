@@ -46,8 +46,8 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "duchy", "Prince",
-		"head-of-state", "female", "monarchy", "duchy", "Princess"
+		"ruler", "male", "monarchy", "duchy", "Prince",
+		"ruler", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -69,8 +69,8 @@ DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 		"monarchy", "barony", "Lordship"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
+		"ruler", "male", "monarchy", "barony", "Lord",
+		"ruler", "female", "monarchy", "barony", "Lady"
 	}
 })
 

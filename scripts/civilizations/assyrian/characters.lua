@@ -32,7 +32,7 @@ DefineCharacter("sargon-ii-of-assyria", { -- Source: William R. Shepherd, "Histo
 	Civilization = "assyrian",
 	StartDate = -720,
 	HistoricalTitles = {
-		"head-of-state", -720, 0, "assyria" -- was Assyrian ruler in 720 BC
+		"ruler", -720, 0, "assyria" -- was Assyrian ruler in 720 BC
 	}
 })
 
@@ -43,6 +43,6 @@ DefineCharacter("assurbanipal-of-assyria", { -- Source: William R. Shepherd, "Hi
 	Civilization = "assyrian",
 	StartDate = -640,
 	HistoricalTitles = {
-		"head-of-state", -640, 0, "assyria" -- was Assyrian ruler in 640 BC
+		"ruler", -640, 0, "assyria" -- was Assyrian ruler in 640 BC
 	}
 })

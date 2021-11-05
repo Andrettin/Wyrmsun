@@ -34,7 +34,7 @@ DefineCharacter("tshar-lggi", { -- from Battle for Wesnoth: Descent into Darknes
 	Faction = "lggi-tribe",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "lggi-tribe"
+--		"ruler", 0, 0, "lggi-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "lggi-tribe") then
@@ -54,7 +54,7 @@ DefineCharacter("fal-khag", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Faction = "khag-tribe",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "khag-tribe"
+--		"ruler", 0, 0, "khag-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
@@ -138,7 +138,7 @@ DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 --	Icon = "icon-agniss",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "tenebris"
+--		"ruler", 0, 0, "tenebris"
 	}
 })
 
@@ -155,7 +155,7 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Icon = "icon-dremac-paarsins",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "myridia"
+--		"ruler", 0, 0, "myridia"
 	}
 })
 
@@ -172,7 +172,7 @@ DefineCharacter("ioun-stilgar", { -- invented by Jesse Crider
 	Icon = "icon-ioun",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "stilgar"
+--		"ruler", 0, 0, "stilgar"
 	}
 })
 
@@ -189,7 +189,7 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Icon = "icon-orza-chahax",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"head-of-state", 0, 0, "ezmarria"
+--		"ruler", 0, 0, "ezmarria"
 	}
 })
 

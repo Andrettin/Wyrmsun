@@ -19,7 +19,6 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 		faction = swedish_tribe
 	}
 	
-	#king of the Swedes
 	#married to Gauthild
 	
 	history = {
@@ -27,6 +26,7 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 			active = true
 			faction = swedish_tribe
 			location = stockholm
+			title = ruler #king of the Swedes
 		}
 		
 		688 = {

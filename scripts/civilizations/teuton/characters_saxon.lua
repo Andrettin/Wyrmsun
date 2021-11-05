@@ -34,7 +34,7 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "saxon-tribe" -- was king of "Saxonland"
+		"ruler", 0, 0, "saxon-tribe" -- was king of "Saxonland"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
@@ -126,8 +126,8 @@ DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	DeathDate = 936, -- reign ended
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 919, 936, "holy-rome",
-		"head-of-state", 919, 936, "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
+		"ruler", 919, 936, "holy-rome",
+		"ruler", 919, 936, "saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
 	}
 })
 --]]

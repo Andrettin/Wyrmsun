@@ -18,7 +18,6 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 		faction = swedish_tribe
 	}
 	
-	#king of the Swedes
 	#in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black, and given how he is dated to the same time as Augustus
 	
 	history = {
@@ -27,6 +26,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 			active = true
 			faction = swedish_tribe
 			location = stockholm
+			title = ruler #king of the Swedes
 		}
 		
 		8 = {

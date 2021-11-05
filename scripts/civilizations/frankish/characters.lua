@@ -388,7 +388,7 @@ DefineCharacter("ebroin-of-neustria", { -- Source: Archibald R. Lewis, "The Duke
 	Faction = "neustria",
 	DeathDate = 675, -- ceased to be mayor of the palace of Neustria
 	HistoricalTitles = {
-		"head-of-government", 0, 675, "neustria" -- Mayor of the Palace of Neustria until 675
+		"chancellor", 0, 675, "neustria" -- Mayor of the Palace of Neustria until 675
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "neustria") then
@@ -409,7 +409,7 @@ DefineCharacter("pepin-of-herstal", { -- Source: "Medieval Warfare V.2", 2013, p
 	-- won the battle of Tertry, in 687, and as a result enjoyed supremacy in all of Francia; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 166.
 	DeathDate = 714, -- died in 714; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 167.
 	HistoricalTitles = {
-		"head-of-government", 675, 714, "austrasia" -- became Mayor of the Palace of Austrasia in 675
+		"chancellor", 675, 714, "austrasia" -- became Mayor of the Palace of Austrasia in 675
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "austrasia") then
@@ -473,7 +473,7 @@ DefineCharacter("charles-martel", { -- Charles Martel; Source: "Medieval Warfare
 	StartDate = 718,
 	DeathDate = 741, -- died in 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
 	HistoricalTitles = {
-		"head-of-government", 718, 741, "francia" -- became Mayor of the Palace of Francia in 718
+		"chancellor", 718, 741, "francia" -- became Mayor of the Palace of Francia in 718
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then
@@ -509,7 +509,7 @@ DefineCharacter("pepin-the-short", { -- Source: "Medieval Warfare V.2", 2013, p.
 	StartDate = 751,
 	DeathDate = 768, -- died in 768
 	HistoricalTitles = {
-		"head-of-state", 751, 768, "francia" -- became king of the Franks in 751; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.
+		"ruler", 751, 768, "francia" -- became king of the Franks in 751; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 170.
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "francia") then

@@ -209,10 +209,10 @@ DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of
 		"monarchy", "duchy", "Principality"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady",
-		"head-of-state", "male", "monarchy", "duchy", "Prince",
-		"head-of-state", "female", "monarchy", "duchy", "Princess"
+		"ruler", "male", "monarchy", "barony", "Lord",
+		"ruler", "female", "monarchy", "barony", "Lady",
+		"ruler", "male", "monarchy", "duchy", "Prince",
+		"ruler", "female", "monarchy", "duchy", "Princess"
 	},
 	HistoricalCapitals = {
 		400, "joruvellir"
@@ -232,8 +232,8 @@ DefineFaction("kal_kartha", {
 		"monarchy", "barony", "Lordship"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
+		"ruler", "male", "monarchy", "barony", "Lord",
+		"ruler", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
 		400, "kal_kartha"
@@ -311,8 +311,8 @@ DefineFaction("lyr", {
 		"monarchy", "barony", "Lordship"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
+		"ruler", "male", "monarchy", "barony", "Lord",
+		"ruler", "female", "monarchy", "barony", "Lady"
 	},
 	HistoricalCapitals = {
 		400, "lyr"

@@ -88,8 +88,8 @@ DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 189
 	Color = "blue", -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
 	DefaultTier = "kingdom",
 	MinisterTitles = {
-		"head-of-government", "none", "none", "none", "Grand Chancellor", -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
-		"education-minister", "none", "none", "none", "Superintendent of Public Schools" -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
+		"chancellor", "none", "none", "none", "Grand Chancellor" -- the grand chancellor was the head of government, apparently; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
+		--"education-minister", "none", "none", "none", "Superintendent of Public Schools" -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
 	},
 	HistoricalCapitals = {
 		-25000, "gnana"

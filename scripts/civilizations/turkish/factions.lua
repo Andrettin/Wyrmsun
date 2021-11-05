@@ -37,7 +37,7 @@ DefineFaction("crimea", {
 		"monarchy", "kingdom", "Khanate"
 	},
 	MinisterTitles = {
-		"head-of-state", "none", "monarchy", "kingdom", "Khan"
+		"ruler", "none", "monarchy", "kingdom", "Khan"
 	}
 })
 

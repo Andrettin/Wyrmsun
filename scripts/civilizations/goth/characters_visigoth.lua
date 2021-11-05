@@ -33,7 +33,7 @@ DefineCharacter("athanagild", { -- Visigothic king; Source: Edward G. Fichtner, 
 	Faction = "visigothia",
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "visigothia"
+		"ruler", 0, 0, "visigothia"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then
@@ -89,7 +89,7 @@ DefineCharacter("witiza", { -- Source: Archibald R. Lewis, "The Dukes in the Reg
 	StartDate = 700, -- reign began
 	DeathDate = 710, -- reign ended
 	HistoricalTitles = {
-		"head-of-state", 700, 710, "visigothia" -- Visigothic king, reigning 700-710
+		"ruler", 700, 710, "visigothia" -- Visigothic king, reigning 700-710
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "visigothic_tribe" or GetPlayerData(trigger_player, "Faction") == "visigothia") then

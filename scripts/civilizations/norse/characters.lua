@@ -57,7 +57,7 @@ DefineCharacter("gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Faction = "scania",
 	-- lived during the reign of Ingiald the Evil-Adviser over Sweden
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "scania" -- king of Scania
+		"ruler", 0, 0, "scania" -- king of Scania
 	}
 	-- married Aasa Yngling
 })
@@ -80,8 +80,8 @@ DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Faction = "scania",
 	Father = "halfdan",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "scania", -- king of Scania
-		"head-of-state", 0, 0, "swedish_tribe" -- conquered Sweden
+		"ruler", 0, 0, "scania", -- king of Scania
+		"ruler", 0, 0, "swedish_tribe" -- conquered Sweden
 	}
 })
 
@@ -193,7 +193,7 @@ DefineCharacter("hrolf-the-old", { -- Source: Henry Adams Bellows (transl.), "Th
 	Faction = "gautland",
 	Father = "gautrek",
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "gautland"
+		"ruler", 0, 0, "gautland"
 	}
 })
 

@@ -39,7 +39,7 @@ DefineCharacter("marbod", {
 	DeathDate = 19, -- Marbod deposed in 19 AD; this should be the year of his death instead
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"head-of-state", -9, 19, "marcomanni-tribe"
+		"ruler", -9, 19, "marcomanni-tribe"
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
@@ -57,7 +57,7 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 	Faction = "marcomanni-tribe",
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"head-of-state", 19, 0, "marcomanni-tribe" -- deposed Marbod in 19 AD
+		"ruler", 19, 0, "marcomanni-tribe" -- deposed Marbod in 19 AD
 	},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "marcomanni-tribe") then
