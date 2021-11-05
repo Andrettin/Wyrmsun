@@ -45,56 +45,6 @@ DefineCharacter("ond-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	-- his mother was the daughter of Aud the Rich
 })
 
-DefineCharacter("alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
-	Name = "Alf",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "alric-yngling",
-	Mother = "dagrid-dagling",
-	Quote = "\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine",
-	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
-	HistoricalTitles = {
-		"ruler", 0, 0, "swedish_tribe" -- was king of Sweden together with his brother Yngve, and Alf's son who succeeded them
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "swedish_tribe") then
-			return true
-		end
-		return false
-	end
-	-- married Bera
-})
-
-DefineCharacter("yngve-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
-	Name = "Yngve",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Father = "alric-yngling",
-	Quote = "\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine",
-	Trait = "upgrade-strong" -- described as a great warrior, handsome expert in all exercises, strong and very sharp in battle, generous and full or mirth
-	-- was king of Sweden together with his brother Alf, but it was Alf's son who succeeded them
-})
-
-DefineCharacter("hugleik-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
-	Name = "Hugleik",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Father = "alf-yngling",
-	Mother = "bera", -- his mother was presumably Bera, since she was Alf's wife
-	-- described as very greedy
-	HistoricalTitles = {
-		"ruler", 0, 0, "swedish_tribe"
-	}
-})
-
 DefineCharacter("jorund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
 	Name = "Jorund",
 	FamilyName = "Yngling",
@@ -106,16 +56,6 @@ DefineCharacter("jorund-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	HistoricalTitles = {
 		"ruler", 0, 0, "swedish_tribe"
 	}
-})
-
-DefineCharacter("eric-yngveson-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 237.
-	Name = "Eric",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	Father = "yngve-yngling",
-	Quote = "\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller"
 })
 
 DefineCharacter("on-the-old-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 239-240.
@@ -238,22 +178,6 @@ DefineCharacter("gudrod-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	-- his father ruled over Hedemark
 	Father = "halfdan-huitbein-yngling",
 	Mother = "asa"
-})
-
-DefineCharacter("halfdan-the-mild-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
-	Name = "Halfdan",
-	ExtraName = "the Mild", -- also knowns as "the Bad Entertainer"
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	-- his father ruled over Vestfold
-	Father = "eystein-halfdanson-yngling",
-	Mother = "hilde", -- presumably, since Hilde was married to Eystein
-	Trait = "upgrade-generous", -- described as generous, and as a great warrior
-	Quote = "\"By Hel's summons, a great king\nWas called away to Odin's Thing:\nKing Halfdan, he who dwelt of late\nAt Holtar, must obey grim Fate.\"\n- Thiodolf of Huine"
-	-- married to Hlif, daughter of King Dag of Westmor
-	-- his chief house was Holtar (in Vestfold, Norway)
 })
 
 DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-261.

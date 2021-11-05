@@ -1,0 +1,37 @@
+hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	name = "Hugleik"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = alf_yngling
+	mother = bera #his mother was presumably Bera, since she was Alf's wife
+	start_year = 348
+	end_year = 382
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#described as very greedy
+	
+	history = {
+		348 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #was king of Sweden together with his brother Yngve, but it was Alf's son who succeeded them, suggesting that Alf was the primary ruler
+		}
+		
+		382 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

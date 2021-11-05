@@ -1,0 +1,39 @@
+alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
+	name = "Alf"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = alric_yngling
+	mother = dagrid_dagling
+	trait = upgrade_harsh #described as silent, harsh, unfriendly and wretched
+	start_year = 314
+	end_year = 348
+	quote = "\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#married Bera
+	
+	history = {
+		314 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #was king of Sweden together with his brother Yngve, but it was Alf's son who succeeded them, suggesting that Alf was the primary ruler
+		}
+		
+		348 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

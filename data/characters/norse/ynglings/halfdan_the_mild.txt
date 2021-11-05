@@ -1,0 +1,30 @@
+halfdan_the_mild_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	name = "Halfdan"
+	surname = "the Mild" #also known as "the Bad Entertainer"
+	#dynasty = yngling
+	unit_type = unit_norse_swordsman
+	civilization = norse
+	default_faction = vestfold
+	gender = male
+	father = eystein_halfdanson_yngling
+	mother = hilde #presumably, since Hilde was married to Eystein
+	trait = upgrade_generous #described as generous, and as a great warrior
+	start_year = 756
+	end_year = 790 #34 average years estimated between each Yngling generation
+	quote = "\"By Hel's summons, a great king\nWas called away to Odin's Thing:\nKing Halfdan, he who dwelt of late\nAt Holtar, must obey grim Fate.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		or = {
+			faction = vestfold
+			faction = swedish_tribe
+		}
+	}
+	
+	#his father ruled over Vestfold
+	#married to Hlif, daughter of King Dag of Westmor
+	#his chief house was Holtar (in Vestfold, Norway)
+}

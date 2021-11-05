@@ -1,0 +1,34 @@
+eric_yngveson_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 237.
+	name = "Eric"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = yngve_yngling
+	start_year = 348
+	end_year = 382
+	quote = "\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		348 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+		}
+		
+		382 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}
