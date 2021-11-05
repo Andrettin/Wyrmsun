@@ -1,0 +1,36 @@
+dag_the_wise_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233.
+	name = "Dag"
+	surname = "the Wise"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = dyggve_the_brave_yngling
+	trait = upgrade_wise #described as wise, brave and mighty
+	start_year = 212
+	end_year = 246
+	quote = "\"Varva was ravaged, and the strife\nWas ended when the monarch's life\nWas ended too - the great Dag fell\nBy the hay-fork of a base thrall!\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		212 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #king of the Swedes
+		}
+		
+		246 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

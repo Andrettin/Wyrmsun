@@ -1,0 +1,37 @@
+dyggve_the_brave_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 230-231.
+	name = "Dyggve"
+	surname = "the Brave"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = domar_yngling
+	mother = drott_skjoldung
+	trait = upgrade_mighty #described as brave and mighty
+	start_year = 178
+	end_year = 212
+	quote = "\"For Loke's daughter in her house\nOf Yngve's race would have a spouse;\nTherefore the fell-one snatched away\nBrave Dyggve from the light of day.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		178 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #king of the Swedes
+		}
+		
+		212 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

@@ -1,0 +1,36 @@
+vanland_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+	name = "Vanland"
+	surname = "Yngling"
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = svegdir_yngling
+	mother = vana_of_vanaland
+	start_year = 42
+	end_year = 76
+	quote = "\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		42 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #king of the Swedes
+		}
+		
+		76 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}
+

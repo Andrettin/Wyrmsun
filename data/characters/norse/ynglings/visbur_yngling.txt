@@ -1,0 +1,37 @@
+visbur_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 228-229.
+	name = "Visbur"
+	surname = "Yngling"
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = vanland_yngling
+	mother = drisa
+	start_year = 76
+	end_year = 110
+	quote = "\"Have the fire-dogs' fierce tongues yelling\nLapt Visbur's blood on his own hearth?\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#married the daughter of Aud the Rich
+	
+	history = {
+		76 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #king of the Swedes
+		}
+		
+		110 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

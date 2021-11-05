@@ -1,0 +1,38 @@
+agne_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233-234.
+	name = "Agne"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = dag_the_wise_yngling
+	trait = upgrade_mighty #described as powerful, celebrated and expert
+	start_year = 246
+	end_year = 280
+	quote = "\"How do ye like her, Agne's men\nThink ye that any chief again\nWill court the fate your chief befell,\nTo ride on wooden horse to hell?\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
+	
+	history = {
+		246 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #king of the Swedes
+		}
+		
+		280 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

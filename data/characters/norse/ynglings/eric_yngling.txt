@@ -1,0 +1,36 @@
+eric_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
+	name = "Eric"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_teuton_knight_lord #horseriding described as being customary for him; king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = agne_yngling
+	trait = upgrade_mighty #described as powerful and expert at all feats of arms
+	start_year = 280
+	end_year = 314
+	quote = "\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine",
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		280 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			#Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death, suggesting that Alric was the primary ruler
+		}
+		
+		314 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}
