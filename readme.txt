@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "of Shock" (+1 lightning damage and "of Electrocution" (+3 lightning damage) magic suffixes for weapons. The "of Lightning" suffix now gives +2 lightning damage (previously it was +1), and the "of the Storm" suffix now provides +4 lightning damage (previously +2).
 - The "Storm" magic prefix now gives +4 lightning damage (previously +2), for consistency with the "of the Storm" suffix.
 - Added "Lightning" magic prefix for weapons (+2 lightning damage).
+- Fixed issue which prevented items from being generated with both a magic prefix and a suffix.
 
 * Maps
 - Reworked the Alps for the Earth scenario map.
