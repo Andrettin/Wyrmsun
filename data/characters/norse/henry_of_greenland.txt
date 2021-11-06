@@ -1,0 +1,13 @@
+henry_of_greenland = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	name = "Henry"
+	surname = "of Greenland" #to differentiate him
+	unit_type = unit_teuton_priest
+	civilization = norse #presumably
+	gender = male
+	start_year = 1389 #appointed Bishop of Greenland in 1389
+	deities = {
+		christian_god
+	}
+	
+	#appointed Bishop of Greenland, but never arrived there
+}

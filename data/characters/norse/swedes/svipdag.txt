@@ -1,0 +1,13 @@
+svipdag = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	name = "Svipdag"
+	unit_type = unit_norse_swordsman
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	trait = upgrade_mighty #described as a powerful combatant
+	start_year = 348 #contemporary of Hugleik of Sweden
+	end_year = 382
+	
+	#came to the assistance of king Hugleik of Sweden when he was attacked by Hake
+	#brother of Geigad
+}

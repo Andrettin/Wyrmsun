@@ -345,16 +345,6 @@ DefineCharacter("alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	DeathDate = 1378 -- died in Greenland
 })
 
-DefineCharacter("henry-of-greenland", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
-	Name = "Henry", -- appointed Bishop of Greenland, but never arrived there
-	ExtraName = "of Greenland", -- to differentiate him
-	Gender = "male",
-	Type = "unit-teuton-priest",
-	Civilization = "norse", -- presumably
-	Deities = {"christian-god"},
-	StartDate = 1389 -- appointed Bishop of Greenland
-})
-
 DefineCharacter("askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Askil", -- appointed Bishop of Greenland to succeed Henry in case he was dead; never reached Greenland
 	Gender = "male",

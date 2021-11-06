@@ -75,27 +75,6 @@ DefineCharacter("hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	-- brother of Hake
 })
 
-DefineCharacter("svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
-	Name = "Svipdag",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	Faction = "swedish_tribe",
-	Trait = "upgrade-mighty", -- described as a powerful combatant
-	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
-	-- brother of Geigad
-})
-
-DefineCharacter("geigad", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
-	Name = "Geigad",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	Trait = "upgrade-mighty", -- described as a powerful combatant
-	-- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
-	-- brother of Svipdag
-})
-
 DefineCharacter("starkod-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Starkod",
 	ExtraName = "the Old",
