@@ -69,6 +69,7 @@ Window {
 	function format_text(text) {
 		var str = text
 		str = str.replace(/\n/g, "<br>")
+		str = str.replace(/\t/g, "<font color=\"transparent\">aaaa</font>") //whitespaces are ignored after a <br>
 		str = str.replace(/~</g, "<font color=\"gold\">")
 		str = str.replace(/~>/g, "</font>")
 		return str
