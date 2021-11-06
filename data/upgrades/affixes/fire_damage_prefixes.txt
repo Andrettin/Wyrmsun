@@ -16,7 +16,7 @@ upgrade_prefix_curupiras = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_fire
+		upgrade = upgrade_deity_domain_fire
 	}
 	
 	modifier = {
@@ -47,7 +47,7 @@ upgrade_prefix_fiery = {
 	
 	conditions = {
 		or = {
-			upgrade = upgrade_magic_domain_fire
+			upgrade = upgrade_deity_domain_fire
 			upgrade_class = alchemy
 		}
 	}
@@ -80,7 +80,7 @@ upgrade_prefix_flaming = { #example: Flaming Sword (from Wesnoth)
 	
 	conditions = {
 		or = {
-			upgrade = upgrade_magic_domain_fire
+			upgrade = upgrade_deity_domain_fire
 			upgrade_class = alchemy
 		}
 	}

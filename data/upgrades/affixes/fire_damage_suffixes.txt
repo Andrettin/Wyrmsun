@@ -22,7 +22,7 @@ upgrade_suffix_of_fire = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_fire
+		upgrade = upgrade_deity_domain_fire
 	}
 	
 	modifier = {
@@ -54,7 +54,7 @@ upgrade_suffix_of_flame = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_fire
+		upgrade = upgrade_deity_domain_fire
 	}
 	
 	modifier = {

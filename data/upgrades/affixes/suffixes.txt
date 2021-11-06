@@ -22,7 +22,7 @@ upgrade_suffix_of_accuracy = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_air
+		upgrade = upgrade_deity_domain_air
 	}
 	
 	modifier = {
@@ -61,9 +61,9 @@ upgrade_suffix_of_natural_armor = {
 	
 	conditions = {
 		or = {
-			upgrade = upgrade_magic_domain_earth
-			upgrade = upgrade_magic_domain_life
-			upgrade = upgrade_magic_domain_metal
+			upgrade = upgrade_deity_domain_earth
+			upgrade = upgrade_deity_domain_life
+			upgrade = upgrade_deity_domain_metal
 		}
 	}
 	
@@ -82,9 +82,9 @@ upgrade_suffix_of_protection = {
 	
 	conditions = {
 		or = {
-			upgrade = upgrade_magic_domain_earth
-			upgrade = upgrade_magic_domain_life
-			upgrade = upgrade_magic_domain_metal
+			upgrade = upgrade_deity_domain_earth
+			upgrade = upgrade_deity_domain_life
+			upgrade = upgrade_deity_domain_metal
 		}
 	}
 	
@@ -110,8 +110,8 @@ upgrade_suffix_of_swiftness = {
 	
 	conditions = {
 		or = {
-			upgrade = upgrade_magic_domain_air
-			upgrade = upgrade_magic_domain_lightning
+			upgrade = upgrade_deity_domain_air
+			upgrade = upgrade_deity_domain_lightning
 		}
 	}
 	

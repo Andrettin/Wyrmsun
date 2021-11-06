@@ -17,7 +17,7 @@ upgrade_prefix_shocking = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {
@@ -43,7 +43,7 @@ upgrade_prefix_lightning = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {
@@ -70,7 +70,7 @@ upgrade_prefix_storm = { #example: Storm Trident (from Wesnoth)
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {

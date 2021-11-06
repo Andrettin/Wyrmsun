@@ -17,7 +17,7 @@ upgrade_prefix_cold = { #example: Cold Blade (from Wesnoth)
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_ice
+		upgrade = upgrade_deity_domain_ice
 	}
 	
 	modifier = {
@@ -43,7 +43,7 @@ upgrade_prefix_freezing = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_ice
+		upgrade = upgrade_deity_domain_ice
 	}
 	
 	modifier = {
@@ -70,7 +70,7 @@ upgrade_prefix_glacial = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_ice
+		upgrade = upgrade_deity_domain_ice
 	}
 	
 	modifier = {
@@ -96,7 +96,7 @@ upgrade_prefix_ice = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_ice
+		upgrade = upgrade_deity_domain_ice
 	}
 	
 	modifier = {

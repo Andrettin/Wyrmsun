@@ -20,7 +20,7 @@ upgrade_suffix_of_shock = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {
@@ -51,7 +51,7 @@ upgrade_suffix_of_lightning = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {
@@ -78,7 +78,7 @@ upgrade_suffix_of_electrocution = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {
@@ -109,7 +109,7 @@ upgrade_suffix_of_the_storm = {
 	}
 	
 	conditions = {
-		upgrade = upgrade_magic_domain_lightning
+		upgrade = upgrade_deity_domain_lightning
 	}
 	
 	modifier = {

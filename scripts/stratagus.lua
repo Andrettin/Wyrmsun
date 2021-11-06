@@ -1892,9 +1892,7 @@ Units = {
 	"upgrade-shield-wall", "upgrade-svinfylking",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki", "upgrade-deity-heimdall", "upgrade-deity-hel", "upgrade-deity-tyr",
 	"upgrade-deity-gathaarl",
-	"upgrade-deity-christian-god",
-	"upgrade-magic-domain-air", "upgrade-magic-domain-earth", "upgrade-magic-domain-fire", "upgrade-magic-domain-water", "upgrade-magic-domain-aether", "upgrade-magic-domain-metal", "upgrade-magic-domain-wood", "upgrade-magic-domain-ice", "upgrade-magic-domain-lightning", "upgrade-magic-domain-death", "upgrade-magic-domain-life", "upgrade-magic-domain-sun", "upgrade-magic-domain-moon",
-	"upgrade-magic-domain-illusion", "upgrade-magic-domain-transmutation"
+	"upgrade-deity-christian-god"
 }
 
 Load("scripts/dlc_file_equivalencies.lua")
