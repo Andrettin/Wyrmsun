@@ -1788,7 +1788,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 			if (HasCivilizationAvailableFactions("frankish") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "frankish")
 			end
-			if (HasCivilizationAvailableFactions("germanic") and (GameSettings.TechLevel == "" or GameSettings.TechLevel == AgrarianBronzeTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if (HasCivilizationAvailableFactions("germanic") and (GameSettings.TechLevel == NoTechLevel or GameSettings.TechLevel == AgrarianBronzeTechLevel or GameSettings.TechLevel == CivilizedBronzeTechLevel)) then
 				table.insert(possible_civilizations, "germanic")
 			end
 			if (HasCivilizationAvailableFactions("goth") and (GameSettings.TechLevel == AgrarianIronTechLevel or GameSettings.TechLevel == CivilizedIronTechLevel)) then -- allow germanic humans in elven forests since there is no elven civilization yet
