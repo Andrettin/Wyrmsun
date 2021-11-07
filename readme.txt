@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Lightning" magic prefix for weapons (+2 lightning damage).
 - Fixed issue which prevented items from being generated with both a magic prefix and a suffix.
 
+* Map Editor
+- Fixed issue which prevented players from being added to a map with the editor.
+
 * Maps
 - Reworked the Alps for the Earth scenario map.
 - Added the Aberdeen, Linkoping and Tamworth settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
