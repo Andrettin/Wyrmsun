@@ -5,4 +5,5 @@ sewer_kobold_camp = {
 	terrain_file = "the_sewers/sewer_kobold_camp.png"
 	overlay_terrain_file = "the_sewers/sewer_kobold_camp_overlay.png"
 	optional = true
+	clear_path_to_other_subtemplates = true
 }

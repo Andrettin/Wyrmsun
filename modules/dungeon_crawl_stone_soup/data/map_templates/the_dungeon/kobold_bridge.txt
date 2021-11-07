@@ -5,4 +5,5 @@ kobold_bridge = { #minmay_kobold_bridge
 	terrain_file = "the_dungeon/kobold_bridge.map"
 	overlay_terrain_file = "the_dungeon/kobold_bridge_overlay.map"
 	optional = true
+	clear_path_to_other_subtemplates = true
 }

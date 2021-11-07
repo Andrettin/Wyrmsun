@@ -5,4 +5,5 @@ kobold_water_treatment_center = {
 	terrain_file = "the_sewers/kobold_water_treatment_center.map"
 	overlay_terrain_file = "the_sewers/kobold_water_treatment_center_overlay.map"
 	optional = true
+	clear_path_to_other_subtemplates = true
 }

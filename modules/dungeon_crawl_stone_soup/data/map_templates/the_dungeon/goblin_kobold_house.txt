@@ -5,4 +5,5 @@ goblin_kobold_house = { #minmay_goblin_kobold_house
 	terrain_file = "the_dungeon/goblin_kobold_house.map"
 	overlay_terrain_file = "the_dungeon/goblin_kobold_house_overlay.map"
 	optional = true
+	clear_path_to_other_subtemplates = true
 }
