@@ -72,7 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 - Reworked the Alps for the Earth scenario map.
 - Added the Aberdeen, Linkoping and Tamworth settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
 - Updated the Caverns of Chaincolt Gates and Shorbear Hills submaps for the Nidavellir scenario map.
-- Fixed issue which caused the Germanic civilization to not be chosen as a random one for custom maps.
+- Fixed issue which caused the Germanic civilization to not be chosen as a random one for custom game maps.
 
 * Pathfinding
 - Improved the performance of the algorithm used by units to find a depot to return resources to.
@@ -91,6 +91,7 @@ https://github.com/Andrettin/Wyrmsun
 - Removed rafts, as they required a substantial amount of special code for them to be maintained in the engine, and they were barely used in the game.
 - Melee air units (such as Gryphons) can now be attacked as if they were on land if they are attacking land units.
 - Fixed a potential crash related to unit resource-gathering.
+- Fixed crash which occurred when right-clicking a unique unit's portrait (e.g. that of the Esel silver deposit) to go to its encyclopedia entry.
 
 * User Interface
 - (Re-)Added windowed mode support.
