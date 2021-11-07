@@ -13,6 +13,7 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 	major = true
 	domains = {
 		illusion
+		fire #so that fire-related affixes can spawn
 	}
 	upgrade = upgrade_deity_loki
 	description = "Loki is a trickster god. Though attractive and cunning, he is often causing trouble for the other Aesir."

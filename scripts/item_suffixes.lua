@@ -61,13 +61,6 @@ DefineUpgrade("upgrade-item-suffix-of-the-colossus", {
 	MagicLevel = 2
 })
 
-DefineUpgrade("upgrade-item-suffix-of-the-day", {
-	Name = "of the Day",
-	MagicSuffix = true,
-	ItemAffix = {"helmet", "amulet", "ring"},
-	MagicLevel = 1
-})
-
 DefineUpgrade("upgrade-item-suffix-of-diligence", {
 	Name = "of Diligence",
 	MagicSuffix = true,
@@ -103,13 +96,6 @@ DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword", "horn"},
 	IncompatibleAffixes = {"upgrade-item-prefix-jinns"},
 	MagicLevel = 4
-})
-
-DefineUpgrade("upgrade-item-suffix-of-the-night", {
-	Name = "of the Night",
-	MagicSuffix = true,
-	ItemAffix = {"helmet", "amulet", "ring"},
-	MagicLevel = 1
 })
 
 DefineUpgrade("upgrade-item-suffix-of-perfuration", {
@@ -238,14 +224,6 @@ DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
 	MagicLevel = 1
 })
 
-DefineUpgrade("upgrade-item-suffix-of-the-wolf", {
-	Name = "of the Wolf",
-	MagicSuffix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	IncompatibleAffixes = {"upgrade-item-prefix-wolfs"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-suffix-of-the-woodpecker", {
 	Name = "of the Woodpecker",
 	MagicSuffix = true,
@@ -273,10 +251,6 @@ DefineModifier("upgrade-item-suffix-of-the-colossus",
 	{"Armor", 2}
 )
 
-DefineModifier("upgrade-item-suffix-of-the-day",
-	{"DaySightRangeBonus", 1}
-)
-
 DefineModifier("upgrade-item-suffix-of-diligence",
 	{"TimeEfficiencyBonus", 10}
 )
@@ -295,10 +269,6 @@ DefineModifier("upgrade-item-suffix-of-frailty",
 
 DefineModifier("upgrade-item-suffix-of-the-jinn",
 	{"AirDamage", 2}
-)
-
-DefineModifier("upgrade-item-suffix-of-the-night",
-	{"NightSightRangeBonus", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-perfuration",
@@ -374,11 +344,6 @@ DefineModifier("upgrade-item-suffix-of-vulnerability",
 	{"Armor", -1}
 )
 
-DefineModifier("upgrade-item-suffix-of-the-wolf",
-	{"Accuracy", 1},
-	{"BasicDamage", 1}
-)
-
 DefineModifier("upgrade-item-suffix-of-the-woodpecker",
 	{"LumberGatheringBonus", 2}
 )
@@ -403,10 +368,6 @@ DefineDependency("upgrade-item-suffix-of-the-colossus",
 	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}
 )
 
-DefineDependency("upgrade-item-suffix-of-the-day",
-	{"upgrade-deity-domain-sun"}
-)
-
 DefineDependency("upgrade-item-suffix-of-diligence",
 	{"upgrade-deity-domain-earth"}, "or", {"upgrade-deity-domain-metal"}
 )
@@ -421,10 +382,6 @@ DefineDependency("upgrade-item-suffix-of-extinguishment",
 
 DefineDependency("upgrade-item-suffix-of-the-jinn",
 	{"upgrade-deity-domain-air"}
-)
-
-DefineDependency("upgrade-item-suffix-of-the-night",
-	{"upgrade-deity-domain-moon"}
 )
 
 DefineDependency("upgrade-item-suffix-of-perfuration",
@@ -493,10 +450,6 @@ DefineDependency("upgrade-item-suffix-of-victory",
 
 DefineDependency("upgrade-item-suffix-of-vision",
 	{"upgrade-deity-domain-air"}
-)
-
-DefineDependency("upgrade-item-suffix-of-the-wolf",
-	{"upgrade-deity-domain-moon"}
 )
 
 DefineDependency("upgrade-item-suffix-of-the-woodpecker",

@@ -148,13 +148,6 @@ DefineUpgrade("upgrade-item-prefix-vulnerable", {
 	MagicLevel = 1
 })
 
-DefineUpgrade("upgrade-item-prefix-wolfs", {
-	Name = "Wolf's",
-	MagicPrefix = true,
-	ItemAffix = {"arrows", "axe", "dagger", "gun", "javelin", "mace", "spear", "sword", "throwing_axe", "thrusting_sword"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = "Wounding",
 	MagicPrefix = true,
@@ -235,11 +228,6 @@ DefineModifier("upgrade-item-prefix-vulnerable",
 	{"Armor", -1}
 )
 
-DefineModifier("upgrade-item-prefix-wolfs",
-	{"Accuracy", 1},
-	{"BasicDamage", 1}
-)
-
 DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
 )
@@ -286,10 +274,6 @@ DefineDependency("upgrade-item-prefix-replenishing",
 
 DefineDependency("upgrade-item-prefix-vicious",
 	{"upgrade-deity-domain-blood"}
-)
-
-DefineDependency("upgrade-item-prefix-wolfs",
-	{"upgrade-deity-domain-moon"}
 )
 
 local item_prefixes = GetItemPrefixes()

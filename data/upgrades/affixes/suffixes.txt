@@ -30,6 +30,29 @@ upgrade_suffix_of_accuracy = {
 	}
 }
 
+upgrade_suffix_of_the_day = {
+	name = "of the Day"
+	aliases += upgrade_item_suffix_of_the_day
+	magic_suffix = true
+	magic_level = 1
+	affixed_item_classes = {
+		helmet
+		amulet
+		ring
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_deity_domain_sun
+			upgrade = upgrade_deity_domain_divination #so that it can spawn with the current deities
+		}
+	}
+	
+	modifier = {
+		day_sight_range_bonus = 1
+	}
+}
+
 upgrade_suffix_of_elvenkind = {
 	name = "of Elvenkind"
 	magic_suffix = true
@@ -69,6 +92,29 @@ upgrade_suffix_of_natural_armor = {
 	
 	modifier = {
 		armor = 1
+	}
+}
+
+upgrade_suffix_of_the_night = {
+	name = "of the Night"
+	aliases += upgrade_item_suffix_of_the_night
+	magic_suffix = true
+	magic_level = 1
+	affixed_item_classes = {
+		helmet
+		amulet
+		ring
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_deity_domain_moon
+			upgrade = upgrade_deity_domain_divination #so that it can spawn with the current deities
+		}
+	}
+	
+	modifier = {
+		night_sight_range_bonus = 1
 	}
 }
 
@@ -118,5 +164,39 @@ upgrade_suffix_of_swiftness = {
 	modifier = {
 		speed = 1
 		evasion = 1
+	}
+}
+
+upgrade_suffix_of_the_wolf = {
+	name = "of the Wolf"
+	aliases += upgrade_item_suffix_of_the_wolf
+	magic_suffix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	incompatible_affixes = {
+		upgrade_prefix_wolfs
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_deity_domain_moon
+			upgrade = upgrade_deity_domain_divination #so that it can spawn with the current deities
+		}
+	}
+	
+	modifier = {
+		accuracy = 1
+		basic_damage = 1
 	}
 }

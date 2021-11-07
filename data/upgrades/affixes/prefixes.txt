@@ -69,3 +69,34 @@ upgrade_prefix_swift = {
 		speed = 1
 	}
 }
+
+upgrade_prefix_wolfs = {
+	name = "Wolf's"
+	aliases += upgrade_item_prefix_wolfs
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		arrows
+		axe
+		dagger
+		gun
+		javelin
+		mace
+		spear
+		sword
+		throwing_axe
+		thrusting_sword
+	}
+	
+	conditions = {
+		or = {
+			upgrade = upgrade_deity_domain_moon
+			upgrade = upgrade_deity_domain_blood
+		}
+	}
+	
+	modifier = {
+		accuracy = 1
+		basic_damage = 1
+	}
+}
