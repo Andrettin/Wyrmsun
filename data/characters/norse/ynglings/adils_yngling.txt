@@ -7,8 +7,8 @@ adils_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 24
 	default_faction = swedish_tribe
 	gender = male
 	father = ottar_vendelcrow_yngling
-	start_year = 518
-	end_year = 552
+	start_year = 484
+	end_year = 518
 	quote = "\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
@@ -20,14 +20,14 @@ adils_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 24
 	}
 	
 	history = {
-		518 = {
+		484 = {
 			active = true
 			faction = swedish_tribe
 			location = stockholm
 			title = ruler #king of the Swedes
 		}
 		
-		552 = {
+		518 = {
 			#34 average years estimated between each Yngling generation
 			active = false
 		}

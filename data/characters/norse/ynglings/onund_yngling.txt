@@ -7,8 +7,8 @@ onund_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 24
 	default_faction = swedish_tribe
 	gender = male
 	father = yngvar_yngling
-	start_year = 620
-	end_year = 654
+	start_year = 586
+	end_year = 620
 	quote = "\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
@@ -20,14 +20,14 @@ onund_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 24
 	}
 	
 	history = {
-		620 = {
+		586 = {
 			active = true
 			faction = swedish_tribe
 			location = stockholm
 			title = ruler #king of the Swedes
 		}
 		
-		654 = {
+		620 = {
 			#34 average years estimated between each Yngling generation
 			active = false
 		}

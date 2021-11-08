@@ -7,8 +7,8 @@ yngvar_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 2
 	default_faction = swedish_tribe
 	gender = male
 	father = eystein_yngling
-	start_year = 586
-	end_year = 620
+	start_year = 552
+	end_year = 586
 	quote = "\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
@@ -20,14 +20,14 @@ yngvar_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 2
 	}
 	
 	history = {
-		586 = {
+		552 = {
 			active = true
 			faction = swedish_tribe
 			location = stockholm
 			title = ruler #king of the Swedes
 		}
 		
-		620 = {
+		586 = {
 			#34 average years estimated between each Yngling generation
 			active = false
 		}
