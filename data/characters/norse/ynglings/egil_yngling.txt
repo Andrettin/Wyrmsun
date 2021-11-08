@@ -1,0 +1,35 @@
+egil_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 240-241.
+	name = "Egil"
+	surname = "Yngling"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = on_the_old_yngling
+	start_year = 416
+	end_year = 450
+	quote = "\"The fair-haired son of Odin's race,\nWho fled before fierce Tunne's face,\nHas perished by the demon-beast\nWho roams the forests of the East.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		416 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler
+		}
+		
+		450 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

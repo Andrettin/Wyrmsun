@@ -1,0 +1,36 @@
+on_the_old_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 239-240.
+	name = "On" #also known as Ane
+	surname = "the Old"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = jorund_yngling
+	trait = upgrade_cruel #described as wise and cruel
+	start_year = 382
+	end_year = 416
+	quote = "\"In Upsal's town the cruel king\nSlaughtered his sons at Odin's shrine\nSlaughtered his sons with cruel knife,\nTo get from Odin length of life.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	history = {
+		382 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler #ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
+		}
+		
+		416 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}

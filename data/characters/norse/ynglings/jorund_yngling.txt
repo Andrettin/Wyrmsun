@@ -1,15 +1,15 @@
-hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
-	name = "Hugleik"
+jorund_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
+	name = "Jorund"
 	surname = "Yngling"
 	#dynasty = yngling
-	unit_type = unit_norse_heroic_swordsman
+	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = swedish_tribe
 	gender = male
-	father = alf_yngling
-	mother = bera #his mother was presumably Bera, since she was Alf's wife
+	father = yngve_yngling
 	start_year = 348
 	end_year = 382
+	quote = "\"Jorund has travelled far and wide,\nBut the same horse he must bestride\nOn which he made brave Gudlog ride.\nHe too must for a necklace wear\nHagbert's fell noose in middle air.\"\n- Thiodolf of Huine"
 	deities = {
 		frey
 		freyja
@@ -18,8 +18,6 @@ hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 2
 	conditions = {
 		faction = swedish_tribe
 	}
-	
-	#described as very greedy
 	
 	history = {
 		348 = {

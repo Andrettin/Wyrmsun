@@ -1,0 +1,37 @@
+ottar_vendelcrow_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 242-243.
+	name = "Ottar"
+	surname = "Vendelcrow" #nickname because of the manner of his death
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = swedish_tribe
+	gender = male
+	father = egil_yngling
+	start_year = 450
+	end_year = 484
+	quote = "\"By Danish arms the hero bold,\nOttar the Brave, lies stiff and cold.\nTo Vendel's plain the corpse was borne;\nBy eagles' claws the corpse is torn\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		faction = swedish_tribe
+	}
+	
+	#described as brave
+	
+	history = {
+		450 = {
+			active = true
+			faction = swedish_tribe
+			location = stockholm
+			title = ruler
+		}
+		
+		484 = {
+			#34 average years estimated between each Yngling generation
+			active = false
+		}
+	}
+}
