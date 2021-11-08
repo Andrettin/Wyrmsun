@@ -1,0 +1,21 @@
+eystein_halfdanson_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
+	name = "Eystein"
+	surname = "Halfdanson" #to differentiate him from the other Eystein Yngling
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	gender = male
+	father = halfdan_huitbein_yngling
+	mother = asa
+	start_year = 722
+	end_year = 756 #34 average years estimated between each Yngling generation
+	quote = "\"Grim Hel, clutched his soul away;\nAnd now where Vodle's ocean bay\nReceives the ice-cold stream, the grave\nOf Eystein stands, the good, the brave!\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	#his father ruled over Hedemark
+	#became king in Raumarige and Westfold after his father's death
+	#married to Hilde, daughter of Eric Agnarson
+}

@@ -1,0 +1,21 @@
+halfdan_huitbein_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255-257.
+	name = "Halfdan"
+	surname = "Huitbein"
+	#dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman
+	civilization = norse
+	gender = male
+	father = olaf_treefeller_yngling
+	mother = solveig
+	start_year = 688
+	end_year = 722 #34 average years estimated between each Yngling generation
+	quote = "\"Halfdan, esteemed by friends and foes,\nReceives at last life's deep repose:\nThe aged man at last, though late,\nYielded in Thoten to stern fate.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	#(apparently) from Vermeland
+	#ruled over Hedemark, and conquered Thoten, Hadeland and much of Westfold
+	#married to Asa
+}

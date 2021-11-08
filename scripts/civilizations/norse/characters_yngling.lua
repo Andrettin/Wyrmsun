@@ -57,20 +57,6 @@ DefineCharacter("aasa-the-evil-adviser-yngling", { -- Source: Snorri Sturlson, "
 	-- married Gudrod (king of Scania)
 })
 
-DefineCharacter("olaf-treefeller-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-256.
-	Name = "Olaf",
-	ExtraName = "Treefeller",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	Father = "ingiald-the-evil-adviser-yngling",
-	Mother = "gauthild",
-	Quote = "\"The temple wolf, by the lake shores,\nThe corpse of Olaf now devours.\nThe clearer of forests died\nAt Odin's shrine by the lake side.\"\n- Thiodolf of Huine", -- "temple wolf" in this instance means the fire which burned Olaf's body
-	-- his foster-father was Bove, who lived in West Gotland
-	-- married to Solveig
-})
-
 DefineCharacter("ingiald-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255, 257.
 	Name = "Ingiald",
 	FamilyName = "Yngling",
@@ -81,36 +67,6 @@ DefineCharacter("ingiald-yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Father = "olaf-treefeller-yngling",
 	Mother = "solveig"
 	-- king of Værmeland (after his death his possessions went to his brother Halfdan)
-})
-
-DefineCharacter("halfdan-huitbein-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255-257.
-	Name = "Halfdan",
-	ExtraName = "Huitbein",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	-- (apparently) from Vermeland
-	Father = "olaf-treefeller-yngling",
-	Mother = "solveig",
-	Quote = "\"Halfdan, esteemed by friends and foes,\nReceives at last life's deep repose:\nThe aged man at last, though late,\nYielded in Thoten to stern fate.\"\n- Thiodolf of Huine"
-	-- ruled over Hedemark, and conquered Thoten, Hadeland and much of Westfold
-	-- married to Asa
-})
-
-DefineCharacter("eystein-halfdanson-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
-	Name = "Eystein",
-	ExtraName = "Halfdanson", -- to differentiate him from the other Eystein Yngling
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	-- his father ruled over Hedemark
-	Father = "halfdan-huitbein-yngling",
-	Mother = "asa",
-	Quote = "\"Grim Hel, clutched his soul away;\nAnd now where Vodle's ocean bay\nReceives the ice-cold stream, the grave\nOf Eystein stands, the good, the brave!\"\n- Thiodolf of Huine"
-	-- became king in Raumarige and Westfold after his father's death
-	-- married to Hilde, daughter of Eric Agnarson
 })
 
 DefineCharacter("gudrod-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.

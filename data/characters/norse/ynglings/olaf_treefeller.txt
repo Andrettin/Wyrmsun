@@ -1,0 +1,20 @@
+olaf_treefeller_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-256.
+	name = "Olaf"
+	surname = "Treefeller"
+	#dynasty = yngling
+	unit_type = unit_norse_swordsman
+	civilization = norse
+	gender = male
+	father = ingiald_the_evil_adviser_yngling
+	mother = gauthild
+	start_year = 654
+	end_year = 688 #34 average years estimated between each Yngling generation
+	quote = "\"The temple wolf, by the lake shores,\nThe corpse of Olaf now devours.\nThe clearer of forests died\nAt Odin's shrine by the lake side.\"\n- Thiodolf of Huine" #"temple wolf" in this instance means the fire which burned Olaf's body
+	deities = {
+		frey
+		freyja
+	}
+	
+	#his foster-father was Bove, who lived in West Gotland
+	#married to Solveig
+}
