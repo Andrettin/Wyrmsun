@@ -1,0 +1,28 @@
+modsognir = { #one of the earliest dwarven leaders
+	name = "Modsognir"
+	unit_type = unit_dwarven_steelclad
+	civilization = dwarven
+	default_faction = brising_clan
+	gender = male
+	icon = icon_modsognir
+	trait = upgrade_mighty
+	variation = brown_hair
+	description = "The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."
+	background = "In Norse mythology, Modsognir appears in the <a href='literary_text:voluspo'>Voluspo</a> as the first and mightiest of the dwarves."
+	deities = { #deities that seem sensible for this character to worship
+		odin
+		tyr
+	}
+	forbidden_upgrades = {
+		unit_dwarven_yale_rider
+	}
+	
+	history = {
+		-25000 = {
+			active = true
+			faction = brising_clan
+			location = svarinshaug
+			title = ruler
+		}
+	}
+}
