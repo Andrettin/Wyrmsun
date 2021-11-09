@@ -30,7 +30,6 @@
 local NorseEvents = {
 	FredfrodesFeast = { -- Source: Snorri Sturlson, "Heimskringla", 1844, pp. 226-227.
 		Name = "Fredfrode's Feast",
-		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fiolner in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
@@ -43,15 +42,7 @@ local NorseEvents = {
 			else
 				return false
 			end
-		end,
-		Options = {"~!Oh no!"},
-		OptionEffects = {
-			function(s)
-				SetFactionMinister("norse", EventFaction.Name, "ruler", "Swegder Yngling")
-				KillGrandStrategyHero("Fiolner Yngling")
-			end
-		},
-		OptionTooltips = {"Fiolner Yngling dies"}
+		end
 	},
 	SwegdesJourney = { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 227.
 		Name = "Swegde's Journey",
@@ -99,8 +90,7 @@ local NorseEvents = {
 				SetFactionMinister("norse", EventFaction.Name, "ruler", "Vanland Yngling")
 				KillGrandStrategyHero("Swegder Yngling")
 			end
-		},
-		OptionTooltips = {"Swegder Yngling dies"}
+		}
 	},
 	TheWinterAbode = { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 228.
 		Name = "The Winter Abode",

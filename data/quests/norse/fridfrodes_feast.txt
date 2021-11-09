@@ -1,0 +1,38 @@
+fridfrodes_feast = { #Source: Snorri Sturlson, "Heimskringla", 1844, pp. 226-227.
+	name = "Fridfrode's Feast"
+	icon = icon_food
+	player_color = red
+	competitive = true
+	description = "The chieftain of the Danes, Fridfrode, has invited Fiolner to a great feast in his abode. Shall we accept the invitation?"
+	conditions = {
+		any_other_player = {
+			or = {
+				faction = dane_tribe
+				faction = denmark
+			}
+			character = fridfrode_skjoldung
+		}
+	}
+	objectives = {
+		bring_unit_to_site = {
+			character = fiolner_yngling
+			site = malmo
+		}
+		
+		hero_must_survive = fiolner_yngling
+	}
+	accept_effects = {
+		create_unit = {
+			unit_type = unit_revealer
+			site = malmo
+			ttl = 600
+		}
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+		
+		hidden = {
+			call_dialogue = fridfrodes_feast
+		}
+	}
+}

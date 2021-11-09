@@ -1,0 +1,67 @@
+fridfrodes_feast = { #Source: Snorri Sturlson, "Heimskringla", 1844, pp. 226-227.
+	{
+		speaker = fiolner_yngling
+		text = "Fridfrode, my friend, at last we meet again!"
+	}
+	{
+		speaker = fridfrode_skjoldung
+		text = "Fiolner, welcome to my home!"
+	}
+	{
+		text = "Frode had a large house, in which there was a great vessel many ells high, and put together of great pieces of timber; and this vessel stood in a lower room. Above it was a loft, in the floor of which was an opening through which liquor was poured into this vessel. The vessel was full of mead, which was excessively strong."
+	}
+	{
+		text = "In the evening Fioner, with his attendants, was taken into the adjoining loft to sleep. In the night he went out to the gallery outside to seek the privy of the house, and he was very sleepy, and exceedingly drunk. As he came back to his room he went along the gallery to the door of another loft, went into it, and his foot slipped..."
+		
+		option = {
+			effects = {
+				hidden = {
+					character_unit = {
+						character = fiolner_yngling
+						
+						level_check = {
+							level = 3
+							
+							success = {
+								call_dialogue = fiolner_survives
+							}
+							
+							failure = {
+								call_dialogue = fiolner_falls_into_the_vessel
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fiolner_falls_into_the_vessel = { #Source: Snorri Sturlson, "Heimskringla", 1844, p. 227.
+	{
+		text = "~<*Level Check Failed*~>"
+	}
+	{
+		text = "...and Fiolner fell into the vessel of mead, and was drowned."
+		
+		option = {
+			effects = {
+				kill_character = fiolner_yngling
+			}
+		}
+	}
+	{
+		text = "In Frode's hall the fearful word,\nThe death-foreboding sound was heard:\nThe cry of fey denouncing doom,\nWas heard at night in Frode's home.\nAnd when brave Frode came, he found\nSweden's dark chief, Fiolner, drowned.\nIn Frode's mansion drowned was he,\nDrowned in a waveless, windless sea."
+		#changed "Swithiod" to "Sweden"
+		#from Thiodolf of Huine's poem
+	}
+}
+
+fiolner_survives = { #Source: Snorri Sturlson, "Heimskringla", 1844, p. 227.
+	{
+		text = "~<*Level Check Succeeded*~>"
+	}
+	{
+		text = "...but Fiolner caught his balance. And just in time, he soon realized, as he had almost fallen into the vessel of mead and drowned."
+	}
+}
