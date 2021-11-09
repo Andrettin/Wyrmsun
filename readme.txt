@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed issue which prevented players from founding a faction of the same type as their current one.
 
+* Heroes
+- Modsognir and Durin can now only be recruited by the Brising Clan.
+
 * Items
 - Removed the "Swift" magic prefix for weapons, as it had the same name as the "Swift" prefix for boots, and the same effect as the "Accurate" prefix for weapons. Persistent items with the affix will now have the "Accurate" prefix instead.
 - Added "Freezing" magic prefix for weapons (+2 cold damage). The "Ice" prefix now gives +3 cold damage (previously it was +2), and the "Glacial" prefix now provides +4 cold damage (previously +3).

@@ -17,6 +17,10 @@ modsognir = { #one of the earliest dwarven leaders
 		unit_dwarven_yale_rider
 	}
 	
+	conditions = {
+		faction = brising_clan
+	}
+	
 	history = {
 		-25000 = {
 			active = true

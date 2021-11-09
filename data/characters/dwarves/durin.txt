@@ -17,6 +17,10 @@ durin = { #possibly the same as the Diurnir mentioned in the Ynglinga saga; Sour
 		unit_dwarven_yale_rider
 	}
 	
+	conditions = {
+		faction = brising_clan
+	}
+	
 	history = {
 		-25000 = {
 			active = true
