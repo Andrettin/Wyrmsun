@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - The "Storm" magic prefix now gives +4 lightning damage (previously +2), for consistency with the "of the Storm" suffix.
 - Added "Lightning" magic prefix for weapons (+2 lightning damage).
 - Fixed issue which prevented items from being generated with both a magic prefix and a suffix.
+- Fixed crash which could occur when a scroll was used.
 
 * Map Editor
 - Fixed issue which prevented players from being added to a map with the editor.
