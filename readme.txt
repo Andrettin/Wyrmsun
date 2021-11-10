@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Improved the performance of AI resource gathering.
 
+* Buildings
+- Markets now display how many seconds it will take until their inventory refreshes in their interface.
+
 * Factions
 - Fixed issue which prevented players from founding a faction of the same type as their current one.
 

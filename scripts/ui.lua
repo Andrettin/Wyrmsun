@@ -605,8 +605,16 @@ DefinePanelContents(
 	{ Pos = {9, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Trade Cost:"}}
 	},
-	{ Pos = {115, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {161, 103}, Condition = {ShowOpponent = false, TradeCost = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(String(PlayerData(ActiveUnitVar("Player", "Value"), "TradeCost")), "%")}}
+	},
+	
+	-- Inventory Refresh Seconds
+	{ Pos = {9, 116}, Condition = {ShowOpponent = false, HideNeutral = true, Market = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = "Inventory Refresh In:"}}
+	},
+	{ Pos = {161, 116}, Condition = {ShowOpponent = false, HideNeutral = true, Market = "only", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = Concat(String(function() return (1800 - (GameCycle % 1800)) / 30 end), "s")}}
 	},
 	
 	-- Construction
