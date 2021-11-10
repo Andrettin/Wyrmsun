@@ -1,7 +1,7 @@
 gull = {
 	name = "[word:gull_old_norse.name.normalized]"
 	icon = icon_gold
-	player_color = red
+	player_color = blue
 	description = "\"[word:gull_old_norse.name.normalized]\" means \"[word:gull_old_norse.meanings.1.lowered]\" in Old Norse. Gold is an extremely valuable metal to mine."
 	hint = "Select a [civilization:norse.class_unit_type:worker.name] and right-click on a gold deposit to build a gold mine and gather from it. Gold can also be mined by right-clicking on a gold rock."
 	conditions = {

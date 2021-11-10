@@ -87,6 +87,9 @@ https://github.com/Andrettin/Wyrmsun
 * Pathfinding
 - Improved the performance of the algorithm used by units to find a depot to return resources to.
 
+* Quests
+- Added side-quests for gathering copper and building a smithy for the Norse.
+
 * Scenarios
 - The current year is now displayed at the top bar for scenarios. An in-game year passes for each real minute. The in-game year has no effect other than limiting some hero recruitment choices.
 

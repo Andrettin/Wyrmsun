@@ -1,0 +1,18 @@
+smidja = {
+	name = "[word:smidja.name.normalized]"
+	icon = icon_norse_smithy
+	player_color = blue
+	description = "\"[word:smidja.name.normalized]\" means \"[word:smidja.meanings.1.lowered]\" in Old Norse. Building a [civilization:norse.class_unit_type:smithy.name.lowered] allows for the development of improved metal weapons, armor and tools."
+	hint = "Select a [civilization:norse.class_unit_type:worker.name], press the Build Structure button and then click on the [civilization:norse.class_unit_type:smithy.name] button to build the structure. The [civilization:norse.class_unit_type:smithy.name] serves as a location to which copper and other metals can be delivered."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		build_units = {
+			unit_class = smithy
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

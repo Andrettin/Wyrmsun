@@ -1,0 +1,19 @@
+eir = {
+	name = "[word:eir.name.normalized]"
+	icon = icon_copper_mine
+	player_color = blue
+	description = "\"[word:eir.name.normalized]\" means \"[word:eir.meanings.1.lowered]\" or \"[word:eir.meanings.2.lowered]\" in Old Norse. Copper is the most basic currency metal, and it can also be used for the creation of weapons, armor and tools."
+	hint = "Select a [civilization:norse.class_unit_type:worker.name] and right-click on a copper deposit to build a copper mine and gather from it. Copper can also be mined by right-clicking on a copper rock."
+	conditions = {
+		civilization = norse
+	}
+	objectives = {
+		gather_resource = {
+			resource = copper
+			quantity = 1000
+		}
+	}
+	completion_effects = {
+		scripted_effect = minor_copper_reward
+	}
+}

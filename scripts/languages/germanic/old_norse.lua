@@ -448,14 +448,6 @@ DefineLanguageWord("Einn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "numeral", "Aynos"}
 })
 
-DefineLanguageWord("Eir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Ore", "Copper"}, -- source gives the German "Erz, Kupfer" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
-	Gender = "neuter"
-})
-
 DefineLanguageWord("Eldast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-norse",
 	Type = "verb",
@@ -1454,13 +1446,6 @@ DefineLanguageWord("Slag", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,
 	Language = "old-norse",
 	Type = "noun", -- correct?
 	Meanings = {"Blow", "Slaughter", "Fight"}
-})
-
-DefineLanguageWord("Smiđja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
 })
 
 DefineLanguageWord("Smiđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
