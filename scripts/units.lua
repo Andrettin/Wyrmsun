@@ -105,7 +105,6 @@ DefineUnitType("unit-minecart", {
 	HitPoints = 110,
 	TileSize = {1, 1}, BoxSize = {42, 42},
 	SightRange = 4,
-	AutoRepairRange = 4,
 	MaxAttackRange = 1,
 	Priority = 55,
 	Points = 50,
