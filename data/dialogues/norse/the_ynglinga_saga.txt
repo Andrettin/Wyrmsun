@@ -1,0 +1,5 @@
+the_ynglinga_saga_introduction = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 225-226.
+	{
+		text = "In the far north, the god Frey was also called by another name, Yngve; and this name was considered long after in Sweden as a name of honor, so that the scions of the house which claimed descent from him were called the Ynglings. Fiolner, one such Yngling, came to rule over the Swedish domains, seeking to bring it to greatness, amassing power and wealth..."
+	}
+}

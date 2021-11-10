@@ -2,7 +2,7 @@ the_ynglinga_saga = {
 	name = "The Ynglinga Saga"
 	icon = icon_norse_heroic_swordsman
 	player_color = blue
-	description = "Claiming descent from the god Frey, the Ynglings have established themselves as the ruling dynasty of the Swedish tribe. Throughout generations, they shall seek to bring their people to glory, and consolidate their kingdom!"
+	description = "Claiming descent from the god Frey, the Ynglings have established themselves as the ruling dynasty of the Swedes. Throughout generations, they shall seek to bring their people to glory, and consolidate their kingdom!"
 	unobtainable = true
 	objectives = {
 		build_units = {
@@ -14,5 +14,8 @@ the_ynglinga_saga = {
 			settlement = linkoping
 		}
 		found_faction = sweden
+	}
+	accept_effects = {
+		call_dialogue = the_ynglinga_saga_introduction
 	}
 }
