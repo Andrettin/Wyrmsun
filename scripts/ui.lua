@@ -634,26 +634,34 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "only", Build = "false", Supply = "only", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
-	{ Pos = {9, 103}, More = {"Text", _("Processing")} },
-	{ Pos = {9, 116}, More = { "Text", {Text = _("Copper:")}}},
-	{ Pos = {115, 116}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
+	{ Pos = {9, 103}, More = { "Text", {Text = _("Copper Processing:")}}},
+	{ Pos = {150, 103}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100)))),
 										""))}}
     },
-	{ Pos = {9, 130}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},
-	{ Pos = {115, 130}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber Processing:")}}},
+	{ Pos = {150, 116}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
-	{ Pos = {9, 144}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = _("Stone:")}}},
-	{ Pos = {115, 144}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
+	{ Pos = {9, 130}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = _("Stone Processing:")}}},
+	{ Pos = {150, 130}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
     },
---	{ Pos = {84, 134}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
+	
+	-- Quest/Hero Refresh Seconds
+	{ Pos = {9, 144}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = "Quest/Hero Refresh In:"}}
+	},
+	{ Pos = {170, 144}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+		More = {"Text", {Text = Concat(String(function() return (1800 - (GameCycle % 1800)) / 30 end), "s")}}
+	},
+	
+--	{ Pos = {84, 144}, Condition = {OilImprove = "only"}, More = { "Text", {Text = Concat("Oil: 100", 
 --									If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100),
 --										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "oil"), 100)))),
 --										"" ))}}
@@ -666,30 +674,26 @@ DefinePanelContents(
   Pos = {info_panel_x, info_panel_y}, DefaultFont = "game",
   Condition = {ShowOpponent = false, HideNeutral = true, TownHall = "false", Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
   Contents = {
-	{ Pos = {9, 103}, Condition = {MetalImprove = "only"}, More = {"Text", _("Processing")} },
-	{ Pos = {9, 103}, Condition = {LumberImprove = "only"}, More = {"Text", _("Processing")} },
-	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = {"Text", _("Processing")} },
---	{ Pos = {9, 103}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
-	{ Pos = {9, 116}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Copper:")}}},
-	{ Pos = {115, 116}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+	{ Pos = {9, 103}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Copper Processing:")}}},
+	{ Pos = {150, 103}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "copper"), 100)))),
 										"" ))}}
     },
-	{ Pos = {9, 130}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Iron:")}}},
-	{ Pos = {115, 130}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+	{ Pos = {9, 116}, Condition = {MetalImprove = "only"}, More = {"Text", {Text = _("Iron Processing:")}}},
+	{ Pos = {150, 116}, Condition = {MetalImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "iron"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "iron"), 100)))),
 										"" ))}}
     },
-	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber:")}}},
-	{ Pos = {115, 116}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
+	{ Pos = {9, 103}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = _("Lumber Processing:")}}},
+	{ Pos = {150, 103}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
-	{ Pos = {9, 116}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = _("Stone:")}}},
-	{ Pos = {115, 116}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
+	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = _("Stone Processing:")}}},
+	{ Pos = {150, 103}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
