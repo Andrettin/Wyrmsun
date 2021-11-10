@@ -14,6 +14,10 @@ the_ynglinga_saga = {
 			settlement = linkoping
 		}
 		found_faction = sweden
+		have_resource = {
+			resource = copper
+			quantity = 50000
+		}
 	}
 	accept_effects = {
 		call_dialogue = the_ynglinga_saga_introduction
