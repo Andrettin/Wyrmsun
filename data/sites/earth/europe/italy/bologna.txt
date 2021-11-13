@@ -1,0 +1,31 @@
+bologna = {
+	name = "Bologna"
+	map_template = earth
+	geocoordinate = { 11.34002070990 44.50042197580 } #from Natural Earth
+	cultural_names = {
+		latin = "Bononia" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	}
+	regions = {
+		italy
+	}
+	
+	history = {
+		-189 = {
+			owner = rome #Bononia founded as a colony in 189 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+			building_classes += farm
+		}
+		
+		1250 = {
+			building_classes -= farm
+			building_classes += university #University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+		
+		1477 = {
+			owner = papal_states #Bologna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner = papal_states #Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+	}
+}

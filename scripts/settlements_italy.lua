@@ -93,26 +93,6 @@ DefineSite("ariminum", {
 	Regions = {"italy"}
 })
 
-DefineSite("bologna", {
-	Name = "Bologna",
-	MapTemplate = "old_earth",
-	Position = {4096, 1034},
-	CulturalNames = {
-		"italian", "Bologna",
-		"latin", "Bononia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-	},
-	HistoricalOwners = {
-		-189, "rome", -- Bononia founded as a colony in 189 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		1477, "papal-states", -- Bologna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "papal-states" -- Bologna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		-189, 1250, "farm",
-		1250, 0, "university" -- University existent in Bologna in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("brindisi", {
 	Name = "Brindisi",
 	MapTemplate = "old_earth",
@@ -335,27 +315,6 @@ DefineSite("palermo", {
 	HistoricalBuildings = {
 		-550, 0, "town_hall",
 		1394, 0, "university" -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"italy"}
-})
-
-DefineSite("piacenza", {
-	Name = "Piacenza",
-	MapTemplate = "old_earth",
-	Position = {4056, 1028},
-	CulturalNames = {
-		"italian", "Piacenza",
-		"latin", "Placentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-	},
-	HistoricalOwners = {
-		-218, "rome", -- Placentia founded as a colony in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		1494, "milan", -- Placentia was a possession of the Duchy of Milan about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1815, "parma", -- Placentia was a possession of the Duchy of Parma in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		1860, "sardinia" -- Placentia became a possession of Sardinia in 1860; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-218, 1248, "farm",
-		1248, 0, "university" -- University founded in Piacenza in 1248; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"italy"}
 })
