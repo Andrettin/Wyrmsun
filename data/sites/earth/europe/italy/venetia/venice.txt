@@ -8,7 +8,7 @@ venice = {
 		#teutonic = "Venedig"
 	}
 	regions = {
-		italy
+		venetia
 	}
 	
 	history = {

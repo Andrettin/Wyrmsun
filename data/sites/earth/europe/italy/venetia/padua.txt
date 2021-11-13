@@ -1,0 +1,14 @@
+padua = {
+	name = "Padua"
+	map_template = earth
+	geocoordinate = { 11.877777777778 45.406388888889 }
+	regions = {
+		venetia
+	}
+	
+	history = {
+		1222 = {
+			building_classes += university #University founded in Padua in 1222; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

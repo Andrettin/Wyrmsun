@@ -1,0 +1,14 @@
+ferrara = {
+	name = "Ferrara"
+	map_template = earth
+	geocoordinate = { 11.60992671580 44.85042645170 } #from Natural Earth
+	regions = {
+		italy
+	}
+	
+	history = {
+		1391 = {
+			building_classes += university #University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

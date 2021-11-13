@@ -1,0 +1,14 @@
+lucca = {
+	name = "Lucca"
+	map_template = earth
+	geocoordinate = { 10.516666666667 43.85 }
+	regions = {
+		tuscany
+	}
+	
+	history = {
+		1369 = {
+			building_classes += university #University founded in Lucca in 1369; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+	}
+}

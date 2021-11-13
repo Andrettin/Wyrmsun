@@ -1,0 +1,14 @@
+messina = {
+	name = "Messina"
+	map_template = earth
+	geocoordinate = { 15.54999629580 38.20047060040 } #from Natural Earth
+	regions = {
+		sicily
+	}
+	
+	history = {
+		1548 = {
+			building_classes += university #University founded in Messina in 1548; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

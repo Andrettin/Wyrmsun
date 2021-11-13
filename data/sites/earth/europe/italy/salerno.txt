@@ -5,4 +5,10 @@ salerno = {
 	regions = {
 		italy
 	}
+	
+	history = {
+		1250 = {
+			building_classes += university #University existent in Salerno in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+	}
 }

@@ -33,3 +33,31 @@ italy = { #the territory of modern Italy
 		}
 	}
 }
+
+lombardy = {
+	superregions = { italy }
+}
+
+modena = {
+	superregions = { italy }
+}
+
+piedmont = {
+	superregions = { italy }
+}
+
+sardinia = {
+	superregions = { italy }
+}
+
+sicily = {
+	superregions = { italy }
+}
+
+tuscany = {
+	superregions = { italy }
+}
+
+venetia = {
+	superregions = { italy }
+}

@@ -9,7 +9,7 @@ milan = {
 		#teuton = "Mailand"
 	}
 	regions = {
-		italy
+		lombardy
 	}
 	
 	history = {

@@ -1,0 +1,14 @@
+treviso = {
+	name = "Treviso"
+	map_template = earth
+	geocoordinate = { 12.24001745470 45.67001466780 } #from Natural Earth
+	regions = {
+		venetia
+	}
+	
+	history = {
+		1318 = {
+			building_classes += university #University founded in Treviso in 1318; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

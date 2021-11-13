@@ -1,0 +1,14 @@
+pisa = {
+	name = "Pisa"
+	map_template = earth
+	geocoordinate = { 10.40002640650 43.72046958320 } #from Natural Earth
+	regions = {
+		tuscany
+	}
+	
+	history = {
+		1348 = {
+			building_classes += university #University founded in Pisa in 1348; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

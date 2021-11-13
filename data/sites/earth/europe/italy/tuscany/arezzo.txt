@@ -1,0 +1,14 @@
+arezzo = {
+	name = "Arezzo"
+	map_template = earth
+	geocoordinate = { 11.87497513700 43.46172568670 } #from Natural Earth
+	regions = {
+		tuscany
+	}
+	
+	history = {
+		1215 = {
+			building_classes += university #University founded in Arezzo in 1215; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

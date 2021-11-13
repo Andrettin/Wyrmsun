@@ -1,0 +1,14 @@
+vercelli = {
+	name = "Vercelli"
+	map_template = earth
+	geocoordinate = { 8.4166666666667 45.316666666667 }
+	regions = {
+		piedmont
+	}
+	
+	history = {
+		1228 = {
+			building_classes += university #University founded in Vercelli in 1228; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

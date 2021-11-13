@@ -1,0 +1,14 @@
+perugia = {
+	name = "Perugia"
+	map_template = earth
+	geocoordinate = { 12.38998246120 43.11037762360 } #from Natural Earth
+	regions = {
+		italy
+	}
+	
+	history = {
+		1308 = {
+			building_classes += university #University founded in Perugia in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

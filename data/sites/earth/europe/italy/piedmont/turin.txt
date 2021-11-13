@@ -1,0 +1,14 @@
+turin = {
+	name = "Turin"
+	map_template = earth
+	geocoordinate = { 7.66996048853 45.07038718570 } #from Natural Earth
+	regions = {
+		piedmont
+	}
+	
+	history = {
+		1405 = {
+			building_classes += university #University founded in Turin in 1405; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

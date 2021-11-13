@@ -1,0 +1,14 @@
+macerata = {
+	name = "Macerata"
+	map_template = earth
+	geocoordinate = { 13.453333333333333 43.30027777777778 }
+	regions = {
+		italy
+	}
+	
+	history = {
+		1540 = {
+			building_classes += university #University founded in Macerata in 1540; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

@@ -25,20 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("milan-old-earth-map", { -- so that it appears in the Italy custom map
-	Name = "Milan",
-	MapTemplate = "old_earth",
-	Position = {4049, 1013},
-	BaseUnitType = "unit_settlement_site"
-})
-	
-DefineSite("rome-old-earth-map", { -- so that it appears in the Italy custom map
-	Name = "Rome",
-	MapTemplate = "old_earth",
-	Position = {4126, 1096},
-	BaseUnitType = "unit_settlement_site"
-})
-
 DefineSite("aleria", {
 	Name = "Aleria",
 	MapTemplate = "old_earth",
@@ -243,7 +229,7 @@ DefineSite("modena", {
 	HistoricalBuildings = {
 		-218, 0, "town_hall"
 	},
-	Regions = {"italy"}
+	Regions = {"modena"}
 })
 
 DefineSite("novum-castrum", {
@@ -292,29 +278,6 @@ DefineSite("paestum", {
 	},
 	HistoricalBuildings = {
 		-273, 1494, "farm"
-	},
-	Regions = {"italy"}
-})
-
-DefineSite("palermo", {
-	Name = "Palermo",
-	MapTemplate = "old_earth",
-	Position = {4141, 1181},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"greek", "Panormus",
-		"italian", "Palermo",
-		"latin", "Panormus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
-	},
-	HistoricalOwners = {
-		-550, "phoenicia", -- Panormus was a Phoenician settlement c. 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		-241, "rome", -- Palermo's area was acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1494, "sicily", -- Palermo was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1560, "spain" -- Palermo was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-550, 0, "town_hall",
-		1394, 0, "university" -- University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"italy"}
 })

@@ -1,0 +1,14 @@
+reggio = {
+	name = "Reggio"
+	map_template = earth
+	geocoordinate = { 10.633333333333 44.7 }
+	regions = {
+		modena
+	}
+	
+	history = {
+		1250 = {
+			building_classes += university #University existent in Reggio in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+	}
+}

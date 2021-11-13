@@ -2470,9 +2470,6 @@ DefineProvince("Mercia", {
 DefineProvince("Modena", {
 	World = "earth",
 --	SettlementLocation = {511, 129}, -- Modena
-	HistoricalModifiers = {
-		1250, "upgrade-university", true -- University existent in Reggio in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-	}
 })
 
 DefineProvince("Moldavia", {
@@ -2596,9 +2593,6 @@ DefineProvince("Naples", {
 --	SettlementLocation = {520, 139}, -- Naples
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Monte Cassino during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1250, "upgrade-university", true -- University existent in Salerno in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 	}
 })
 
@@ -2986,15 +2980,6 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	}
 })
 
-DefineProvince("Piedmont", {
-	World = "earth",
---	SettlementLocation = {502, 127}, -- Turin
-	HistoricalModifiers = {
-		1228, "upgrade-university", true, -- University founded in Vercelli in 1228; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1405, "upgrade-university", true -- University founded in Turin in 1405; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	}
-})
-
 DefineProvince("Poitou", {
 	World = "earth",
 	FactionCulturalNames = {
@@ -3145,10 +3130,6 @@ DefineProvince("Romagna", {
 	CulturalNames = {
 		"gaul", "Cispadane Gaul",
 		"latin", "Cispadane Gaul"
-	},
---	SettlementLocation = {512, 129}, -- Bologna
-	HistoricalModifiers = {
-		1391, "upgrade-university", true -- University founded in Ferrara in 1391; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -3553,14 +3534,12 @@ DefineProvince("Switzerland", {
 
 DefineProvince("Syracuse", {
 	World = "earth",
---	SettlementLocation = {522, 150}, -- Syracuse
 	Claims = {
 		"latin", "sicel-tribe"
 --		"italian", "sicily"
 	},
 	HistoricalOwners = {
 		-500, "latin", "sicel-tribe", -- Situation of Italy in (apparently) 500 BC; Sicily was inhabited by the Elymians, Sicanians and Sicels; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		-241, "latin", "rome", -- Sicily acquired by Rome in 241 BC; the city of Syracuse was acquired only in 212 BC, but the overwhelming majority of the eastern side of the island was acquired in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "ostrogothic_tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		1061, "italian", "sicily", -- Robert Guiscard invaded Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -3570,10 +3549,6 @@ DefineProvince("Syracuse", {
 	},
 	HistoricalClaims = {
 		-241, "latin", "rome"
-	},
-	HistoricalModifiers = {
-		1444, "upgrade-university", true, -- University founded in Catania in 1444; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1548, "upgrade-university", true -- University founded in Messina in 1548; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -3685,11 +3660,6 @@ DefineProvince("Tuscany", {
 	Claims = {
 		"etruscan", "etruscan-tribe",
 		"etruscan", "etruria"
-	},
-	HistoricalModifiers = {
-		1215, "upgrade-university", true, -- University founded in Arezzo in 1215; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1348, "upgrade-university", true, -- University founded in Pisa in 1348; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1369, "upgrade-university", true -- University founded in Lucca in 1369; Source: "Atlas de História Mundial", 2001, p. 144.
 	}
 })
 
@@ -3788,16 +3758,11 @@ DefineProvince("Umbria", {
 	CulturalNames = {
 		"latin", "Umbria"
 	},
---	SettlementLocation = {515, 134}, -- Perugia
 	Claims = {
 		"latin", "aequian-tribe",
 		"latin", "picentian-tribe",
 		"latin", "sabine-tribe",
 		"latin", "umbrian-tribe"
-	},
-	HistoricalModifiers = {
-		1308, "upgrade-university", true, -- University founded in Perugia in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1540, "upgrade-university", true -- University founded in Macerata in 1540; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -3919,9 +3884,6 @@ DefineProvince("Venetia", {
 		-500, "latin"
 	},
 	HistoricalModifiers = {
-		1204, "upgrade-university", true, -- University founded in Vicenza in 1204; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1222, "upgrade-university", true, -- University founded in Padua in 1222; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1318, "upgrade-university", true, -- University founded in Treviso in 1318; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1353, "upgrade-university", true -- University founded in Cividale in 1353; Source: "Atlas de História Mundial", 2001, p. 144.
 	}
 })

@@ -1,0 +1,36 @@
+palermo = {
+	name = "Palermo"
+	map_template = earth
+	geocoordinate = { 13.35002722030 38.12502300930 } #from Natural Earth
+	cultural_names = {
+		greek = "Panormus"
+		latin = "Panormus" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
+	}
+	regions = {
+		sicily
+	}
+	
+	history = {
+		-550 = {
+			owner = phoenicia #Panormus was a Phoenician settlement c. 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+			building_classes += farm
+		}
+		
+		-241 = {
+			owner = rome #Palermo's area was acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		1394 = {
+			building_classes -= farm
+			building_classes += university #University founded in Palermo in 1394; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1494 = {
+			owner = sicily #Palermo was part of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+		
+		1560 = {
+			owner = spain #Palermo was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+	}
+}
