@@ -16,7 +16,10 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 	}
 	
 	conditions = {
-		faction = swedish_tribe
+		or = {
+			faction = swedish_tribe
+			faction = sweden
+		}
 	}
 	
 	#married to Gauthild

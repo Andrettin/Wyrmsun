@@ -18,7 +18,10 @@ alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-
 	}
 	
 	conditions = {
-		faction = swedish_tribe
+		or = {
+			faction = swedish_tribe
+			faction = sweden
+		}
 	}
 	
 	#married Bera

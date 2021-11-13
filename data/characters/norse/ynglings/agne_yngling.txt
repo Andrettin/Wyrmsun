@@ -17,7 +17,10 @@ agne_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233
 	}
 	
 	conditions = {
-		faction = swedish_tribe
+		or = {
+			faction = swedish_tribe
+			faction = sweden
+		}
 	}
 	
 	#Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden

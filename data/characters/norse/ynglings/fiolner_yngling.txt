@@ -15,7 +15,10 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	}
 	
 	conditions = {
-		faction = swedish_tribe
+		or = {
+			faction = swedish_tribe
+			faction = sweden
+		}
 	}
 	
 	#in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black, and given how he is dated to the same time as Augustus
