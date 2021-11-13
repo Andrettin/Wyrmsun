@@ -5,6 +5,7 @@ dyggve_the_brave_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = swedish_tribe
+	home_settlement = stockholm
 	gender = male
 	father = domar_yngling
 	mother = drott_skjoldung

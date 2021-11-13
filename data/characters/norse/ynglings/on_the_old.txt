@@ -5,6 +5,7 @@ on_the_old_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = swedish_tribe
+	home_settlement = stockholm
 	gender = male
 	father = jorund_yngling
 	trait = upgrade_cruel #described as wise and cruel

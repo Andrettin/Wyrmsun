@@ -5,6 +5,7 @@ alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	default_faction = swedish_tribe
+	home_settlement = stockholm
 	gender = male
 	father = alric_yngling
 	mother = dagrid_dagling

@@ -5,6 +5,7 @@ egil_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 240
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = swedish_tribe
+	home_settlement = stockholm
 	gender = male
 	father = on_the_old_yngling
 	start_year = 416

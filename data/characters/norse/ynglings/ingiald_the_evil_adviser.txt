@@ -5,6 +5,7 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	default_faction = swedish_tribe
+	home_settlement = stockholm
 	gender = male
 	father = onund_yngling
 	start_year = 620
