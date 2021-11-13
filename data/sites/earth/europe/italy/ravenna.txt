@@ -1,0 +1,32 @@
+ravenna = {
+	name = "Ravenna"
+	map_template = earth
+	geocoordinate = { 12.22001867540 44.42037518220 } #from Natural Earth
+	regions = {
+		italy
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			building_classes += farm
+		}
+		
+		526 = {
+			owner = ostrogothia #Ravenna was part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		768 = {
+			building_classes -= farm
+			building_classes += temple #Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1477 = {
+			owner = papal_states #Ravenna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner = papal_states #Ravenna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+	}
+}

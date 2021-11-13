@@ -377,27 +377,6 @@ DefineSite("poggiomarino", {
 	Regions = {"italy"}
 })
 
-DefineSite("ravenna", {
-	Name = "Ravenna",
-	MapTemplate = "old_earth",
-	Position = {4114, 1035},
-	CulturalNames = {
-		"italian", "Ravenna",
-		"latin", "Ravenna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		526, "ostrogothia", -- Ravenna was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1477, "papal-states", -- Ravenna was a Papal possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "papal-states" -- Ravenna was a Papal possession about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		161, 768, "farm",
-		768, 0, "temple" -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("sena-gallica", {
 	Name = "Sena Gallica",
 	MapTemplate = "old_earth",
