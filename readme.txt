@@ -105,7 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 - Decoration tiles can no longer appear under terrain transition graphics (e.g. a dirt rock appearing under grass).
 
 * Units
-- Increased the transport capacity of transport ships from 3 to 6.
+- Increased the transport capacity of transport ships from 3 to 4.
 - Removed rafts, as they required a substantial amount of special code for them to be maintained in the engine, and they were barely used in the game.
 - Melee air units (such as Gryphons) can now be attacked as if they were on land if they are attacking land units.
 - Fixed a potential crash related to unit resource-gathering.
