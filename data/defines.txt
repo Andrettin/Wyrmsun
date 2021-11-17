@@ -102,6 +102,10 @@ food_icon = food
 score_icon = score
 mana_icon = mana
 
+default_cycles_per_year = 1800 #1 year per minute
+cycles_per_year_after = { #cycles per year once a certain year has been reached
+}
+
 #forest regeneration speed, in seconds (0 = disabled)
 forest_regeneration_threshold = 1200
 
