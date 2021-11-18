@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.
+- Added new border graphics (by Jinn).
 
 -----------------------------------------------------------------------
 - 5.2.4

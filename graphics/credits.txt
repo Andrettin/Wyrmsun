@@ -1488,6 +1488,7 @@
 /graphics/terrain/overland/plains.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/overland/scrub_forest.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/border.png (by Jinn) (licensed under the CC0)
+/graphics/terrain/border_old.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/cave_floor.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/cave_wall.png (by Jinn) (licensed under the CC0)
 /graphics/terrain/cliff.png (by Jinn) (licensed under the CC0)
