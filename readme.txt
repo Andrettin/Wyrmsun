@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.5
 -----------------------------------------------------------------------
 
+* Buildings
+- Universities can now only be built on top of "Building Site" locations.
+
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.
 

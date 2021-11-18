@@ -4389,6 +4389,8 @@ DefineUnitType("unit-template-university", {
 	ResourceDemand = {"jewelry", 4, "furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
 	ButtonKey = "u",
+	BuildingRules = { "and", { "ontop", { Type = "unit_building_site", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRulesString = "Must be built on top of a Building Site",
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit_potion_of_mana", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
