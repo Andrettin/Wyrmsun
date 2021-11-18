@@ -104,6 +104,14 @@ mana_icon = mana
 
 default_cycles_per_year = 1800 #1 year per minute
 cycles_per_year_after = { #cycles per year once a certain year has been reached
+	-50000 = 18
+	-4000 = 45
+	-1000 = 72
+	500 = 90
+	1000 = 180
+	1500 = 360
+	1800 = 900
+	1900 = 1800
 }
 
 #forest regeneration speed, in seconds (0 = disabled)
