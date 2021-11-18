@@ -2,6 +2,7 @@ rostock = {
 	name = "Rostock"
 	map_template = earth
 	geocoordinate = { 12.14999710960 54.07038047190 } #from Natural Earth
+	base_unit_type = unit_building_site
 	cores = {
 		germany
 		mecklenburg

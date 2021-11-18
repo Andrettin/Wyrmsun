@@ -2,6 +2,7 @@ messina = {
 	name = "Messina"
 	map_template = earth
 	geocoordinate = { 15.54999629580 38.20047060040 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		sicily
 	}

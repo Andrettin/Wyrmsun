@@ -35,7 +35,7 @@ oporto = {
 		}
 		
 		1911 = {
-			building_classes += university #University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+			#building_classes += university #University founded in Oporto in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		}
 	}
 }

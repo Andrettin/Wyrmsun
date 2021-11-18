@@ -2,6 +2,7 @@ vicenza = {
 	name = "Vicenza"
 	map_template = earth
 	geocoordinate = { 11.55 45.55 }
+	base_unit_type = unit_building_site
 	regions = {
 		venetia
 	}

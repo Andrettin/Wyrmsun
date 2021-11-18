@@ -2,6 +2,7 @@ padua = {
 	name = "Padua"
 	map_template = earth
 	geocoordinate = { 11.877777777778 45.406388888889 }
+	base_unit_type = unit_building_site
 	regions = {
 		venetia
 	}

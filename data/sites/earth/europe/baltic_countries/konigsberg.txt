@@ -22,7 +22,7 @@ konigsberg = {
 		
 		1544 = {
 			owner = prussia
-			building_classes += university #University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			#building_classes += university #University founded in Königsberg in 1544; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		
 		1560 = {

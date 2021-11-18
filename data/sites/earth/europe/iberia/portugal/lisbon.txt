@@ -38,7 +38,7 @@ lisbon = {
 		}
 		
 		1911 = {
-			building_classes += university #University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+			#building_classes += university #University founded in Lisbon in 1911; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		}
 	}
 }

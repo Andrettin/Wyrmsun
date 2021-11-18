@@ -2,6 +2,7 @@ turin = {
 	name = "Turin"
 	map_template = earth
 	geocoordinate = { 7.66996048853 45.07038718570 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		piedmont
 	}

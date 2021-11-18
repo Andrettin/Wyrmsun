@@ -2,6 +2,7 @@ lucca = {
 	name = "Lucca"
 	map_template = earth
 	geocoordinate = { 10.516666666667 43.85 }
+	base_unit_type = unit_building_site
 	regions = {
 		tuscany
 	}

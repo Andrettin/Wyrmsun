@@ -74,7 +74,7 @@ london = {
 		}
 		
 		1836 = {
-			building_classes += university #University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+			#building_classes += university #University founded in London in 1836; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		}
 	}
 }

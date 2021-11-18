@@ -50,7 +50,7 @@ amsterdam = {
 		}
 		
 		1877 = {
-			building_classes += university #State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+			#building_classes += university #State university founded in Amsterdam in 1877; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 		}
 		
 		1905 = {

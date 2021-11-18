@@ -38,7 +38,7 @@ barcelona = {
 		}
 		
 		1430 = {
-			building_classes += university #University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144.
+			#building_classes += university #University founded in Barcelona in 1430; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: "Atlas de História Mundial", 2001, p. 144.
 		}
 		
 		1560 = {

@@ -26,7 +26,7 @@ dublin = {
 		}
 		
 		1312 = {
-			building_classes += university #University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
+			#building_classes += university #University founded in Dublin in 1312; Source: "Atlas de História Mundial", p. 144.
 		}
 	}
 }

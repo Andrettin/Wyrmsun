@@ -2,6 +2,7 @@ coimbra = {
 	name = "Coimbra"
 	map_template = earth
 	geocoordinate = { -8.41668033999 40.20037436830 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		portugal
 	}
@@ -9,7 +10,6 @@ coimbra = {
 	history = {
 		486 = {
 			owner = galicia #Coimbra was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += farm
 		}
 		
 		814 = {
@@ -21,7 +21,6 @@ coimbra = {
 		}
 		
 		1308 = {
-			building_classes -= farm
 			building_classes += university #University founded in Coimbra in 1308; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		

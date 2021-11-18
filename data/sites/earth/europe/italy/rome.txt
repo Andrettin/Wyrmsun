@@ -44,7 +44,7 @@ rome = {
 		}
 		
 		1303 = {
-			building_classes += university #University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+			#building_classes += university #University founded in Rome in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		
 		1494 = {

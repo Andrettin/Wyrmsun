@@ -2,6 +2,7 @@ reggio = {
 	name = "Reggio"
 	map_template = earth
 	geocoordinate = { 10.633333333333 44.7 }
+	base_unit_type = unit_building_site
 	regions = {
 		modena
 	}

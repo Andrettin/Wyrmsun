@@ -43,7 +43,7 @@ edinburgh = {
 		}
 		
 		1582 = {
-			building_classes += university #University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			#building_classes += university #University founded in Edinburgh in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 	}
 }

@@ -2,6 +2,7 @@ macerata = {
 	name = "Macerata"
 	map_template = earth
 	geocoordinate = { 13.453333333333333 43.30027777777778 }
+	base_unit_type = unit_building_site
 	regions = {
 		italy
 	}

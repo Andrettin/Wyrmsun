@@ -50,7 +50,7 @@ zagreb = {
 		}
 		
 		1874 = {
-			building_classes += university #University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
+			#building_classes += university #University founded in Zagreb in 1874; Source: A.J.P. Taylor, "The Habsburg Monarchy, 1809-1918", 1964, p. 203.
 		}
 	}
 }

@@ -2,6 +2,7 @@ cambridge = {
 	name = "Cambridge"
 	map_template = earth
 	geocoordinate = { 0.11662308615 52.20039125480 } #from Natural Earth
+	base_unit_type = unit_building_site
 	cultural_names = {
 		anglo_saxon = "Grantanbrycg" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Camboricum"
@@ -15,7 +16,6 @@ cambridge = {
 	history = {
 		410 = {
 			owner = rome #Camboricum/Cambridge was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-			building_classes += farm
 		}
 		
 		802 = {
@@ -23,7 +23,6 @@ cambridge = {
 		}
 		
 		1250 = {
-			building_classes -= farm
 			building_classes += university #University existent in Cambridge in 1250; Source: "Atlas de História Mundial", p. 144.
 		}
 		

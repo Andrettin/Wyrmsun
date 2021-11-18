@@ -2,6 +2,7 @@ vercelli = {
 	name = "Vercelli"
 	map_template = earth
 	geocoordinate = { 8.4166666666667 45.316666666667 }
+	base_unit_type = unit_building_site
 	regions = {
 		piedmont
 	}

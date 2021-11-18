@@ -27,7 +27,7 @@ krakow = {
 		}
 		
 		1364 = {
-			building_classes += university #University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+			#building_classes += university #University founded in Krakow in 1364; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		
 		1560 = {

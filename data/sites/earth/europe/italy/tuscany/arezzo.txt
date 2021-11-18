@@ -2,6 +2,7 @@ arezzo = {
 	name = "Arezzo"
 	map_template = earth
 	geocoordinate = { 11.87497513700 43.46172568670 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		tuscany
 	}
