@@ -2,7 +2,14 @@ oxford = {
 	name = "Oxford"
 	map_template = earth
 	geocoordinate = { -1.24998600402 51.77041749990 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		england
+	}
+	
+	history = {
+		1250 = {
+			building_classes += university #University existent in Oxford in 1250; Source: "Atlas de História Mundial", p. 144.
+		}
 	}
 }

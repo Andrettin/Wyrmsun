@@ -29,7 +29,7 @@ olmutz = {
 		
 		1815 = {
 			owner = austria #Olmütz was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-			#building_classes += guard_tower #Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			building_classes += guard_tower #Olmütz had a fortress in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

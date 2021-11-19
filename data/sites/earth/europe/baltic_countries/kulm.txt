@@ -1,0 +1,18 @@
+kulm = {
+	name = "Kulm"
+	map_template = earth
+	geocoordinate = { 18.42605 53.34917 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		slavic = "Chelmno" #"Chełmno"; Polish
+	}
+	regions = {
+		poland
+	}
+	
+	history = {
+		1366 = {
+			building_classes += university #University founded in Kulm in 1366; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+	}
+}
