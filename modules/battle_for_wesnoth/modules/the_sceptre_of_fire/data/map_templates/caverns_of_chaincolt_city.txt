@@ -7,6 +7,7 @@ caverns_of_chaincolt_city = {
 	subtemplate_top_left_pos = { 46 93 }
 	generated_neutral_units = {
 		unit_gold_deposit = 1
+		unit_building_site = 1
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1

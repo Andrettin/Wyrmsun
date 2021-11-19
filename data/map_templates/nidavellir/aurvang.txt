@@ -1,0 +1,39 @@
+aurvang = {
+	name = "Aurvang"
+	main_template = nidavellir
+	size = { 32 32 }
+	base_terrain_type = mud
+	adjacent_template = joruvellir
+	north_of = joruvellir
+	generated_terrains = {
+		dry_mud = {
+			seed_count = 12
+			target_terrain_type = mud
+		}
+		flamefood_tree = {
+			seed_count = 4
+			expansion_chance = 45
+			max_percent = 25
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 4
+			expansion_chance = 45
+			max_percent = 25
+			target_terrain_type = dry_mud
+			target_terrain_type = mud
+		}
+	}
+	generated_neutral_units = {
+		unit_copper_deposit = 1 #tin
+		unit_building_site = 1
+		unit_tree_stump = 2
+		unit_snigill = 8
+		unit_slime = 4
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}

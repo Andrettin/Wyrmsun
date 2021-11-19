@@ -1,0 +1,45 @@
+andvaris_falls = {
+	name = "Andvari's Falls"
+	main_template = nidavellir
+	size = { 32 32 }
+	base_terrain_type = dry_mud
+	generated_terrains = {
+		mud = {
+			seed_count = 12
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		shallow_water = {
+			seed_count = 12
+			max_percent = 33
+			target_terrain_type = dry_mud
+			target_terrain_type = mud
+		}
+		flamefood_tree = {
+			seed_count = 4
+			expansion_chance = 45
+			max_percent = 20
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 2
+			expansion_chance = 45
+			max_percent = 20
+			target_terrain_type = dry_mud
+			target_terrain_type = mud
+		}
+	}
+	generated_neutral_units = {
+		unit_iron_deposit = 1
+		unit_gold_deposit = 1 #gold deposit for Andvari's clan
+		unit_yale_cave = 1
+		unit_building_site = 1
+		unit_tree_stump = 1
+		unit_snigill = 8
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}

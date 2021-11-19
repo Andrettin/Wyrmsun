@@ -1,0 +1,36 @@
+joruvellir = {
+	name = "Joruvellir"
+	main_template = nidavellir
+	size = { 32 32 }
+	base_terrain_type = dry_mud
+	generated_terrains = {
+		desert_sand = {
+			seed_count = 8
+			max_percent = 33
+			target_terrain_type = dry_mud
+		}
+		flamefood_tree = {
+			seed_count = 4
+			expansion_chance = 45
+			max_percent = 25
+			target_terrain_type = dry_mud
+		}
+		rock = {
+			seed_count = 4
+			expansion_chance = 45
+			max_percent = 25
+			target_terrain_type = dry_mud
+		}
+	}
+	generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_gold_deposit = 1
+		unit_yale_cave = 2
+		unit_building_site = 1
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}

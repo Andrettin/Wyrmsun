@@ -1,0 +1,30 @@
+acthna = {
+	name = "Acthna"
+	main_template = nidavellir
+	adjacent_template = untersberg
+	size = { 32 32 }
+	base_terrain_type = cave_floor
+	generated_terrains = {
+		rockbound_cave_floor = {
+			seed_count = 16
+			target_terrain_type = cave_floor
+		}
+		cave_wall = {
+			seed_count = 4
+			target_terrain_type = cave_floor
+			target_terrain_type = rockbound_cave_floor
+		}
+	}
+	generated_neutral_units = {
+		unit_silver_deposit = 1
+		unit_iron_deposit = 1
+		unit_building_site = 1
+		unit_wood_pile = 64
+		unit_snigill = 8
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+}
