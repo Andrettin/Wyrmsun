@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.
 - Added new border graphics (by Jinn).
+- Fixed issue with textures to being reset properly when changing the scale mode without restarting.
 
 -----------------------------------------------------------------------
 - 5.2.4

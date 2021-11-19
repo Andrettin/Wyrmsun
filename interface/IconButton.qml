@@ -28,5 +28,6 @@ ButtonBase {
 		anchors.verticalCenterOffset: (pressed ? 1 : 0) * wyrmgus.scale_factor
 		source: icon.length > 0 ? "image://icon/" + icon + "/" + player_color + (grayscale ? "/grayscale" : "")  : "image://empty/"
 		opacity: transparent ? 0.25 : 1
+		cache: false
 	}
 }

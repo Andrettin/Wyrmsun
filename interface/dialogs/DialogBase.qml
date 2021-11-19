@@ -21,6 +21,7 @@ Popup {
 	background: Image {
 		source: "image://interface/" + interface_style + "/panel/" + panel
 		fillMode: Image.Pad
+		cache: false
 	}
 	
 	MouseArea {

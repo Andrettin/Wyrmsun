@@ -13,6 +13,7 @@ Item {
 		anchors.right: parent.right
 		source: "image://interface/" + interface_style + "/top_bar"
 		fillMode: Image.PreserveAspectCrop
+		cache: false
 	}
 	
 	NormalText {
@@ -28,6 +29,7 @@ Item {
 		anchors.leftMargin: 20
 		anchors.top: parent.top
 		source: "image://resource_icon/copper"
+		cache: false
 	}
 	
 	Image {
@@ -36,6 +38,7 @@ Item {
 		anchors.leftMargin: 20
 		anchors.top: parent.top
 		source: "image://resource_icon/lumber"
+		cache: false
 	}
 	
 	Image {
@@ -44,5 +47,6 @@ Item {
 		anchors.leftMargin: 20
 		anchors.top: parent.top
 		source: "image://resource_icon/stone"
+		cache: false
 	}
 }
