@@ -32,6 +32,7 @@ ford_terrain_type = ford
 
 border_image_file = "terrain/border.png"
 border_frame_size = { 64 64 }
+border_opacity = 255
 border_transition_tiles = {
 	north = { 1 }
 	south = { 33 }
