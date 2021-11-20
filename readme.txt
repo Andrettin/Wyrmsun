@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Universities can now only be built on top of "Building Site" locations.
 
+* Maps
+- For the Earth map, Vienna's territory north of the Danube now belongs to the Prague settlement.
+
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.
 - Added new border graphics (by Jinn).

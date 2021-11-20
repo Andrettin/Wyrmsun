@@ -50,6 +50,7 @@ vienna_woods = {
 	terrain_type = pine_tree
 	color = { 35 140 52 }
 	terrain_generation_seed = true
+	hidden = true
 }
 
 wychwood_forest = {
