@@ -1,3 +1,7 @@
+building_site = {
+	file = "icons/buildings/sites/building_site.png"
+}
+
 settlement_site = {
 	file = "icons/buildings/neutral/settlement_site.png"
 }
