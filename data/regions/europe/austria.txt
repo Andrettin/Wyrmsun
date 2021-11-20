@@ -35,6 +35,12 @@ lower_austria = {
 	}
 }
 
+vienna = {
+	superregions = {
+		lower_austria
+	}
+}
+
 upper_austria = {
 	superregions = {
 		austria

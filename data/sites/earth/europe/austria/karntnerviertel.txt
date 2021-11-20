@@ -1,0 +1,9 @@
+karntnerviertel = { #historical quarter of the first district of Vienna
+	name = "Karntnerviertel" #"Kärntnerviertel"
+	map_template = earth
+	geocoordinate = { 16.373256 48.208427 } #Stephansdom
+	#base_unit_type = unit_major_building_site
+	regions = {
+		vienna
+	}
+}

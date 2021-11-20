@@ -8,10 +8,10 @@ vienna = {
 		celt = "Vindobona"
 		gaul = "Vindobona"
 		latin = "Vindobona" #Source: "Ancient Warfare VII.6", 2013, p. 7.
-		#teuton = "Wien"
+		#teutonic = "Wien"
 	}
 	regions = {
-		lower_austria
+		vienna
 	}
 	
 	history = {
