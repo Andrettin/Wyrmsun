@@ -1,0 +1,50 @@
+lyon = {
+	name = "Lyon"
+	map_template = earth
+	geocoordinate = { 4.83003047549 45.77000856430 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		celtic = "Lugdunum"
+		frankish = "Lugdunum"
+		gaul = "Lugdunum"
+		latin = "Lugdunum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		395 = {
+			building_classes += temple #Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = burgundy #Lyons was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner = burgundy #Lyons was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		561 = {
+			owner = burgundia #Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		768 = {
+			#Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1330 = {
+			building_classes += university #University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1789 = {
+			owner = france #Lyons was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		}
+	}
+}

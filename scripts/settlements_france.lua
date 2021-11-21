@@ -126,25 +126,6 @@ DefineSite("avignon", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("cahors", {
-	Name = "Cahors",
-	MapTemplate = "old_earth",
-	Position = {3875, 1033},
-	CulturalNames = {
-		"french", "Cahors"
-	},
-	Cores = {
-		"france"
-	},
-	HistoricalOwners = {
-		1560, "france" -- Cahors' area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1332, 0, "university" -- University founded in Cahors in 1332; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("cambrai", {
 	Name = "Cambrai",
 	MapTemplate = "old_earth",
@@ -248,25 +229,6 @@ DefineSite("ferrieres", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("grenoble", {
-	Name = "Grenoble",
-	MapTemplate = "old_earth",
-	Position = {3969, 1018},
-	CulturalNames = {
-		"french", "Grenoble"
-	},
-	HistoricalOwners = {
-		486, "burgundy", -- Grenoble's area was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia", -- Grenoble's area went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Grenoble was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		1339, 0, "university" -- University founded in Grenoble in 1339; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("langres", {
 	Name = "Langres",
 	MapTemplate = "old_earth",
@@ -282,34 +244,6 @@ DefineSite("langres", {
 	},
 	HistoricalBuildings = {
 		486, 0, "farm"
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("lyon", {
-	Name = "Lyon",
-	MapTemplate = "old_earth",
-	Position = {3947, 1006},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"celt", "Lugdunum",
-		"frankish", "Lugdunum",
-		"french", "Lyon",
-		"gaul", "Lugdunum",
-		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Lugdunum was a Roman provincial capital in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		481, "burgundy", -- Lyons was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "burgundy", -- Lyons was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia", -- Lugdunum went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Lyons was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		161, 0, "town_hall",
-		395, 0, "temple", -- Lyon was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1330, 0, "university" -- University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"france", "gaul"}
 })
