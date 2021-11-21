@@ -68,6 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added new border graphics (by Jinn).
 - Fixed issue with textures to being reset properly when changing the scale mode without restarting.
 
+* Status Effects
+- The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
+
 -----------------------------------------------------------------------
 - 5.2.4
 -----------------------------------------------------------------------
