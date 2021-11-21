@@ -1,0 +1,15 @@
+sheffield = {
+	name = "Sheffield"
+	map_template = earth
+	geocoordinate = { -1.49999658345 53.36667665520 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		england
+	}
+	
+	history = {
+		1905 = {
+			building_classes += university #University founded in Sheffield in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

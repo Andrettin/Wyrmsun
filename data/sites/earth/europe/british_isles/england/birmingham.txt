@@ -1,0 +1,15 @@
+birmingham = {
+	name = "Birmingham"
+	map_template = earth
+	geocoordinate = { -1.91999678690 52.47497397780 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		england
+	}
+	
+	history = {
+		1900 = {
+			building_classes += university #University founded in Birmingham in 1900; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

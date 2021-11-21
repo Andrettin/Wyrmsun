@@ -1,0 +1,15 @@
+st_andrews = {
+	name = "St. Andrews"
+	map_template = earth
+	geocoordinate = { -2.7988888888889 56.338888888889 }
+	base_unit_type = unit_building_site
+	regions = {
+		scotland
+	}
+	
+	history = {
+		1413 = {
+			building_classes += university #University founded in St. Andrews in 1413; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

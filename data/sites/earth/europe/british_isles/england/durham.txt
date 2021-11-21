@@ -1,0 +1,26 @@
+durham = {
+	name = "Durham"
+	map_template = earth
+	geocoordinate = { -1.5666666666667 54.783333333333 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		anglo_saxon = "Dunholm" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		802 = {
+			owner = northumbria #Durham was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #Durham's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1832 = {
+			building_classes += university #University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}

@@ -321,25 +321,6 @@ DefineSite("dunwich", {
 	Regions = {"england"}
 })
 
-DefineSite("durham", {
-	Name = "Durham",
-	MapTemplate = "old_earth",
-	Position = {3806, 802},
-	CulturalNames = {
-		"anglo-saxon", "Dunholm", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"english", "Durham" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	},
-	HistoricalOwners = {
-		802, "northumbria", -- Durham was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-		1560, "england" -- Durham's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		802, 1832, "farm",
-		1832, 0, "university" -- University founded in Durham in 1832; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
-	Regions = {"england"}
-})
-
 DefineSite("durolipons", {
 	Name = "Durolipons",
 	MapTemplate = "old_earth",

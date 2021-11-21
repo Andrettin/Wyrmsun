@@ -1,0 +1,15 @@
+manchester = {
+	name = "Manchester"
+	map_template = earth
+	geocoordinate = { -2.24798710266 53.50041526190 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		england
+	}
+	
+	history = {
+		1851 = {
+			building_classes += university #University founded in Manchester in 1851; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
+		}
+	}
+}
