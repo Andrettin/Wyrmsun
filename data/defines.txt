@@ -105,9 +105,9 @@ mana_icon = mana
 
 default_cycles_per_year = 1800 #1 year per minute
 cycles_per_year_after = { #cycles per year once a certain year has been reached
-	-50000 = 18
+	-50000 = 15
 	-4000 = 45
-	-1000 = 72
+	-1000 = 75
 	500 = 90
 	1000 = 180
 	1500 = 360
