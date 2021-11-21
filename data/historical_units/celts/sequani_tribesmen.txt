@@ -1,0 +1,35 @@
+#some troops to defend against the Suebi, if necessary
+
+sequani_warriors = {
+	unit_type = unit_teuton_swordsman
+	quantity = 6
+	
+	history = {
+		-71 = {
+			active = true
+			faction = sequani_tribe
+			location = besancon
+		}
+		
+		-61 = {
+			active = false
+		}
+	}
+}
+
+sequani_archers = {
+	unit_type = unit_teuton_archer
+	quantity = 3
+	
+	history = {
+		-71 = {
+			active = true
+			faction = sequani_tribe
+			location = besancon
+		}
+		
+		-61 = {
+			active = false
+		}
+	}
+}

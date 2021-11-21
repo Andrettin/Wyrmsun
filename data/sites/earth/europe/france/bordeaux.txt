@@ -1,0 +1,57 @@
+bordeaux = {
+	name = "Bordeaux"
+	map_template = earth
+	geocoordinate = { -0.59501306294 44.85001304020 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		celtic = "Burdigala"
+		frankish = "Burdegala"
+		gaul = "Burdigala"
+		latin = "Burdigala" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Burdigala was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		395 = {
+			owner = rome #Bordeaux was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += temple #Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = visigothia #Bordeaux was a Visigothic possession in the 481-507 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner = visigothia #Bordeaux was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		526 = {
+			owner = francia #Bordeaux's area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		561 = {
+			owner = neustria #Burdegala went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		768 = {
+			#Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1441 = {
+			building_classes += university #University founded in Bordeaux in 1441; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1789 = {
+			owner = france #Bordeaux was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+			
+			#Parlement or conseil souverain, chambre des comptes, court of admiralty and prévôt des maréchaux existent in Bordeaux in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+		}
+	}
+}
