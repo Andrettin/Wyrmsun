@@ -1167,6 +1167,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HydratingAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Hydrating Aura", Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {AuraRangeBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Aura Range Bonus: "), Variable = "AuraRangeBonus", Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {EtherealVision = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Ethereal Vision", Font = PopupDescriptionFont}}
 				},
@@ -1848,6 +1851,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HydratingAura = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Hydrating Aura", Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {AuraRangeBonus = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Aura Range Bonus: "), Variable = "AuraRangeBonus", Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {EtherealVision = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = "Ethereal Vision", Font = PopupDescriptionFont}}
