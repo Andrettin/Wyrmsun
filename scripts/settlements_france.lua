@@ -274,23 +274,6 @@ DefineSite("metz", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("molsheim", {
-	Name = "Molsheim",
-	MapTemplate = "old_earth",
-	Position = {4010, 948},
-	CulturalNames = {
-		"teuton", "Molsheim"
-	},
-	HistoricalOwners = {
-		919, "holy-rome", -- Molsheim's area was a part of the duchy of Swabia within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1789, "france" -- Molsheim's area was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		1618, 0, "university" -- University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("montpellier", {
 	Name = "Montpellier",
 	MapTemplate = "old_earth",
@@ -304,29 +287,6 @@ DefineSite("montpellier", {
 	HistoricalBuildings = {
 		1250, 0, "university" -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		-- Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("nantes", {
-	Name = "Nantes",
-	MapTemplate = "old_earth",
-	Position = {3804, 972},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"frankish", "Namnetes",
-		"french", "Nantes"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Nantes was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Nantes became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "neustria", -- Namnetes went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Nantes was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple", -- Nantes was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1460, 0, "university" -- University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	},
 	Regions = {"france", "gaul"}
 })
@@ -374,28 +334,6 @@ DefineSite("nice", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Nicaea was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("orleans", {
-	Name = "Orleans",
-	MapTemplate = "old_earth",
-	Position = {3884, 961},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"frankish", "Aurehani",
-		"french", "Orleans" -- "Orléans"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Orléans' area was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Orleans became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia", -- Chlothar (Frankish king) died in 561, and Orléans/Aurehani went to his son Gunthram; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22.
-		1789, "france" -- Orléans was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		1305, 0, "university" -- University founded in Orléans in 1305; Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"france", "gaul"}
 })

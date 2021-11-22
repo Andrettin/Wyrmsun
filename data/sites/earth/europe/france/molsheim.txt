@@ -1,0 +1,24 @@
+molsheim = {
+	name = "Molsheim"
+	map_template = earth
+	geocoordinate = { 7.4922222222222 48.542777777778 }
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		919 = {
+			owner = holy_rome #Molsheim's area was a part of the duchy of Swabia within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1618 = {
+			building_classes += university #University founded in Molsheim in 1618; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1789 = {
+			owner = france #Molsheim's area was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		}
+	}
+}
