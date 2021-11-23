@@ -1,0 +1,26 @@
+perpignan = {
+	name = "Perpignan"
+	map_template = earth
+	geocoordinate = { 2.89996740582 42.69998923650 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1349 = {
+			building_classes += university #University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1560 = {
+			owner = spain #Perpignan was a part of the Kingdom of Spain in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1789 = {
+			owner = france #Perpignan was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+			
+			#Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+		}
+	}
+}

@@ -274,23 +274,6 @@ DefineSite("metz", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("montpellier", {
-	Name = "Montpellier",
-	MapTemplate = "old_earth",
-	Position = {3924, 1054},
-	CulturalNames = {
-		"french", "Montpellier"
-	},
-	HistoricalOwners = {
-		1560, "france" -- Montpellier's area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1250, 0, "university" -- University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
-		-- Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("narbonne", {
 	Name = "Narbonne",
 	MapTemplate = "old_earth",
@@ -334,24 +317,6 @@ DefineSite("nice", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Nicaea was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("perpignan", {
-	Name = "Perpignan",
-	MapTemplate = "old_earth",
-	Position = {3907, 1077},
-	CulturalNames = {
-		"french", "Perpignan"
-	},
-	HistoricalOwners = {
-		1560, "spain", -- Perpignan was a part of the Kingdom of Spain in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-		1789, "france" -- Perpignan was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		1349, 0, "university" -- University founded in Perpignan in 1349; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- Parlement or conseil souverain and prévôt des maréchaux existent in Perpignan in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"france", "gaul"}
 })

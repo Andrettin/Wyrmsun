@@ -1,0 +1,24 @@
+montpellier = {
+	name = "Montpellier"
+	map_template = earth
+	geocoordinate = { 3.86998571637 43.61039878240 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1250 = {
+			building_classes += university #University existent in Montpellier in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
+		}
+		
+		1560 = {
+			owner = france #Montpellier's area was a part of the Kingdom of France in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1789 = {
+			#Cour des aides and chief court of the salt tax existent in Montpellier in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
+		}
+	}
+}
