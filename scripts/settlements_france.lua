@@ -107,25 +107,6 @@ DefineSite("autun", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("avignon", {
-	Name = "Avignon",
-	MapTemplate = "old_earth",
-	Position = {3952, 1045},
-	CulturalNames = {
-		"frankish", "Avinio",
-		"french", "Avignon"
-	},
-	HistoricalOwners = {
-		561, "austrasia", -- Avinio went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "papal-states" -- Avignon was a Papal possession in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		561, 1303, "farm",
-		1303, 0, "university" -- University founded in Avignon in 1303; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("cambrai", {
 	Name = "Cambrai",
 	MapTemplate = "old_earth",
@@ -317,59 +298,6 @@ DefineSite("nice", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Nicaea was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("poitiers", {
-	Name = "Poitiers",
-	MapTemplate = "old_earth",
-	Position = {3845, 990},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"frankish", "Pictavis",
-		"french", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalOwners = {
-		395, "rome", -- Poitiers was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "visigothia", -- Poitiers was a Visigothic possession in the 481-507 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "visigothia", -- Poitiers was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		526, "francia", -- Poitiers' area was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "neustria", -- Pictavis went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Poitiers was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple", -- Poitiers was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		1431, 0, "university" -- University founded in Poitiers in 1431; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("reims", {
-	Name = "Reims",
-	MapTemplate = "old_earth",
-	Position = {3930, 926},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"celt", "Durocortorum",
-		"frankish", "Remi",
-		"french", "Reims",
-		"gaul", "Durocortorum",
-		"latin", "Durocortorum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-50, "rome", -- Durocortorum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		{486, 12, 30}, "francia", -- Reims became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		526, "francia", -- Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "austrasia", -- Chlothar (Frankish king) died in 561, and Reims/Remi went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Reims was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		-50, 0, "town_hall",
-		395, 0, "temple", -- Reims was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1547, 0, "university" -- University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"france", "gaul"}
 })
@@ -575,26 +503,6 @@ DefineSite("uzes", {
 	},
 	HistoricalBuildings = {
 		561, 0, "farm"
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("valence", {
-	Name = "Valence",
-	MapTemplate = "old_earth",
-	Position = {3952, 1026},
-	CulturalNames = {
-		"frankish", "Valentia",
-		"french", "Valence"
-	},
-	HistoricalOwners = {
-		561, "burgundia", -- Valentia went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Valence was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		561, 1459, "farm",
-		1459, 0, "university" -- University founded in Valence in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- Chief court of the salt tax existent in Valence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	},
 	Regions = {"france", "gaul"}
 })

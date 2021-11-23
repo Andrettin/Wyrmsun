@@ -1,0 +1,50 @@
+reims = {
+	name = "Reims"
+	map_template = earth
+	geocoordinate = { 4.02997595075 49.25039044100 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		celtic = "Durocortorum"
+		frankish = "Remi"
+		gaul = "Durocortorum"
+		latin = "Durocortorum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		-50 = {
+			owner = rome #Durocortorum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		395 = {
+			building_classes += temple #Reims was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		486.12.30 = {
+			owner = francia #Reims became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		526 = {
+			owner = francia #Reims was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		561 = {
+			owner = austrasia #Chlothar (Frankish king) died in 561, and Reims/Remi went to his son Sigibert, becoming his capital; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 328; Gregory of Tours, "History of the Franks", IV.22; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		768 = {
+			#Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1547 = {
+			building_classes += university #University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1789 = {
+			owner = france #Reims was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		}
+	}
+}
