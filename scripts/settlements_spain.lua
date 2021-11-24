@@ -88,27 +88,6 @@ DefineSite("cartagena", {
 	Regions = {"iberia"}
 })
 
-DefineSite("cordoba", {
-	Name = "Cordoba",
-	MapTemplate = "old_earth",
-	Position = {3730, 1183},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Cordoba",
-		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-197, "rome", -- Corduba was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Cordova was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Cordova was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-197, 1572, "farm",
-		1572, 0, "university" -- Minor university founded in Cordoba in 1572; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("gerona", {
 	Name = "Gerona",
 	MapTemplate = "old_earth",
@@ -124,23 +103,6 @@ DefineSite("gerona", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Gerona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("granada", {
-	Name = "Granada",
-	MapTemplate = "old_earth",
-	Position = {3758, 1201},
-	CulturalNames = {
-		"castillian", "Granada"
-	},
-	HistoricalOwners = {
-		1492, "castille", -- Granada became a part of the Kingdom of Castille in 1492; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		1560, "spain" -- Granada was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1526, 0, "university" -- University founded in Granada in 1526 (as given by Martínez Ruiz and Maqueda, The Cambridge Modern History Atlas gives 1531 instead), containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"iberia"}
 })
@@ -218,24 +180,6 @@ DefineSite("munda", {
 	Regions = {"iberia"}
 })
 
-DefineSite("murcia", {
-	Name = "Murcia",
-	MapTemplate = "old_earth",
-	Position = {3812, 1186},
-	CulturalNames = {
-		"castillian", "Murcia"
-	},
-	HistoricalOwners = {
-		1212, "castille", -- Murcia was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		1560, "spain" -- Murcia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1614, 1806, "university" -- Minor university founded in Murcia in 1614; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		-- Minor university abolished in Murcia in 1806; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("orihuela", {
 	Name = "Orihuela",
 	MapTemplate = "old_earth",
@@ -290,27 +234,6 @@ DefineSite("tarragona", {
 	HistoricalBuildings = {
 		-201, 395, "farm",
 		395, 0, "temple" -- Tarragona was the seat of an archbishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("toledo", {
-	Name = "Toledo",
-	MapTemplate = "old_earth",
-	Position = {3756, 1139},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Toledo", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-197, "rome", -- Toletum was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Toledo was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Toledo was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-197, 0, "town_hall",
-		1474, 1807, "university" -- Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 	},
 	Regions = {"iberia"}
 })

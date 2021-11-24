@@ -1,0 +1,27 @@
+murcia = {
+	name = "Murcia"
+	map_template = earth
+	geocoordinate = { -1.12996749003 37.97999310210 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		castille
+	}
+	
+	history = {
+		1212 = {
+			owner = castille #Murcia was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1560 = {
+			owner = spain #Murcia was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1614 = {
+			building_classes += university #Minor university founded in Murcia in 1614; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+		
+		1806 = {
+			building_classes -= university #Minor university abolished in Murcia in 1806; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+	}
+}

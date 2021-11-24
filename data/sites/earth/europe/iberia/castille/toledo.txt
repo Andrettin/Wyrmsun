@@ -1,0 +1,34 @@
+toledo = {
+	name = "Toledo"
+	map_template = earth
+	geocoordinate = { -4.01671635071 39.86703554180 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		latin = "Toletum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		castille
+	}
+	
+	history = {
+		-197 = {
+			owner = rome #Toletum was acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		486 = {
+			owner = visigothia #Toledo was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1474 = {
+			building_classes += university #Minor university founded in Toledo in 1474; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+		
+		1560 = {
+			owner = spain #Toledo was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1807 = {
+			building_classes -= university #Minor university abolished in Toledo in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+	}
+}

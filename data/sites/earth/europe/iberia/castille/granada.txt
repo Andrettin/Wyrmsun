@@ -1,0 +1,24 @@
+granada = {
+	name = "Granada"
+	map_template = earth
+	geocoordinate = { -3.58501143535 37.16497825020 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		castille
+	}
+	
+	history = {
+		1492 = {
+			owner = castille #Granada became a part of the Kingdom of Castille in 1492; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1526 = {
+			building_classes += university #University founded in Granada in 1526, containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+			#The Cambridge Modern History Atlas gives 1531 as the university's foundation date instead); Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+		
+		1560 = {
+			owner = spain #Granada was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}
