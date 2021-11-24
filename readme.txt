@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Universities can now only be built on top of "Building Site" locations.
+- Building sites, mineral deposits and the like now display to which settlement they belong in their tooltip.
 
 * Maps
 - For the Earth map, Vienna's territory north of the Danube now belongs to the Prague settlement.
