@@ -1,0 +1,19 @@
+paderborn = {
+	name = "Paderborn"
+	map_template = earth
+	geocoordinate = { 8.766666666666667 51.71666666666667 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		919 = {
+			owner = saxony #Paderborn was a part of the Duchy of Saxony (within the Holy Roman Empire) in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1614 = {
+			building_classes += university #University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

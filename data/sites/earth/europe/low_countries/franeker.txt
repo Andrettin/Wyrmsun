@@ -1,0 +1,20 @@
+franeker = {
+	name = "Franeker"
+	map_template = earth
+	geocoordinate = { 5.54 53.1875 }
+	base_unit_type = unit_building_site
+	regions = {
+		netherlands
+	}
+	
+	history = {
+		486 = {
+			owner = frisian_tribe #Franeker's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1585 = {
+			owner = netherlands
+			building_classes += university #University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

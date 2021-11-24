@@ -1,0 +1,49 @@
+trier = {
+	name = "Trier"
+	map_template = earth
+	geocoordinate = { 6.6413888888889 49.756666666667 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		frankish = "Treveri"
+		french = "Treves" #"Trèves"
+	}
+	cores = {
+		germany #Trier was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Trier was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	regions = {
+		gaul
+		germany
+	}
+	
+	history = {
+		395 = {
+			owner = rome #Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += temple #Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = frank_tribe #Trèves was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner = francia #Treves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		561 = {
+			owner = austrasia #Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		768 = {
+			#Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		}
+		
+		1454 = {
+			building_classes += university #University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1815 = {
+			owner = prussia #Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

@@ -25,23 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("franeker", {
-	Name = "Franeker",
-	MapTemplate = "old_earth",
-	Position = {3966, 837},
-	CulturalNames = {
---		"dutch", "Franeker"
-	},
-	HistoricalOwners = {
-		486, "frisian-tribe", -- Franeker's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1585, "netherlands"
-	},
-	HistoricalBuildings = {
-		1585, 0, "university" -- University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-	},
-	Regions = {"netherlands"}
-})
-
 DefineSite("leeuwarden", {
 	Name = "Leeuwarden",
 	MapTemplate = "old_earth",

@@ -241,40 +241,6 @@ DefineSite("magdeburg", {
 	Regions = {"germany"}
 })
 
-DefineSite("mainz", {
-	Name = "Mainz",
-	MapTemplate = "old_earth",
-	Position = {4022, 913},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"french", "Mayence",
-		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Mainz"
-	},
-	Cores = {
-		"germany", -- Mainz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Mainz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		-50, "rome", -- Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		481, "alamanni-tribe", -- Mayence was an Alamannic possession in the 481-496 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "alamanni-tribe", -- Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		526, "francia", -- Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "austrasia", -- Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1815, "hesse" -- Mayence was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-50, 161, "town_hall",
-		161, 0, "stronghold", -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 0, "barracks",
-		395, 0, "temple", -- Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- in 747 Wynfrith/Boniface settled the seat of his archbishopric at Mainz; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
-		1476, 0, "university" -- University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		-- Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	Regions = {"gaul", "germany"}
-})
-
 DefineSite("mittelberg", {
 	Name = "Mittelberg",
 	MapTemplate = "old_earth",
@@ -333,23 +299,6 @@ DefineSite("nuremberg", {
 	},
 	HistoricalBuildings = {
 		161, 0, "farm"
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("paderborn", {
-	Name = "Paderborn",
-	MapTemplate = "old_earth",
-	Position = {4033, 873},
-	CulturalNames = {
-		"teuton", "Paderborn"
-	},
-	HistoricalOwners = {
-		919, "saxony" -- Paderborn was a part of the Duchy of Saxony (within the Holy Roman Empire) in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	},
-	HistoricalBuildings = {
-		919, 1614, "farm",
-		1614, 0, "university" -- University founded in Paderborn in 1614; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	},
 	Regions = {"germany"}
 })
@@ -476,35 +425,6 @@ DefineSite("tauberbischofsheim", {
 		754, 0, "temple" -- the abbey of Tauberbischofsheim existed as of 754; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 173.
 	},
 	Regions = {"germany"}
-})
-
-DefineSite("trier", {
-	Name = "Trier",
-	MapTemplate = "old_earth",
-	Position = {3993, 917},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"french", "Treves", -- "Trèves"
-		"teuton", "Trier"
-	},
-	Cores = {
-		"germany", -- Trier was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Trier was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalOwners = {
-		395, "rome", -- Trèves was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "frank-tribe", -- Trèves was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Treves was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia", -- Treveri went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1815, "prussia" -- Trier was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple", -- Trèves was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		1454, 0, "university" -- University founded in Trier in 1454; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-	},
-	Regions = {"gaul", "germany"}
 })
 
 DefineSite("worms", {

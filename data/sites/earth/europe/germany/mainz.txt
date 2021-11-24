@@ -1,0 +1,62 @@
+mainz = {
+	name = "Mainz"
+	map_template = earth
+	geocoordinate = { 8.27321915550 49.98247245500 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		french = "Mayence"
+		latin = "Mogontiacum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	cores = {
+		germany #Mainz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		holy_rome #Mainz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	}
+	regions = {
+		gaul
+		germany
+	}
+	
+	history = {
+		-50 = {
+			owner = rome #Mogontiacum was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		161 = {
+			building_classes += barracks #Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		395 = {
+			building_classes += temple #Mayence was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = alamanni_tribe #Mayence was an Alamannic possession in the 481-496 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner = alamanni_tribe #Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		526 = {
+			owner = francia #Mayence was a part of the Kingdom of the Franks in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		561 = {
+			owner = austrasia #Mogontiacum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		747 = {
+			#in 747 Wynfrith/Boniface settled the seat of his archbishopric at Mainz; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+		}
+		
+		1476 = {
+			building_classes += university #University founded in Mainz in 1476; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+		
+		1815 = {
+			owner = hesse #Mayence was a possession of the Grand Duchy of Hesse in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			
+			#Mayence possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}
