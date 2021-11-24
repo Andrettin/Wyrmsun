@@ -1,0 +1,16 @@
+dole = {
+	name = "Dole" #"Dôle"
+	map_template = earth
+	geocoordinate = { 5.4897222222222 47.092222222222 }
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1422 = {
+			building_classes += university #University founded in Dôle in 1422; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

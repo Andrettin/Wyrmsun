@@ -1,0 +1,16 @@
+aix_en_provence = {
+	name = "Aix-en-Provence"
+	map_template = earth
+	geocoordinate = { 5.44999263370 43.51999086410 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1409 = {
+			building_classes += university #University founded in Aix-en-Provence in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

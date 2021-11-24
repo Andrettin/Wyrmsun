@@ -1,0 +1,16 @@
+douai = {
+	name = "Douai"
+	map_template = earth
+	geocoordinate = { 3.0791666666667 50.370833333333 }
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1582 = {
+			building_classes += university #University founded in Douai in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

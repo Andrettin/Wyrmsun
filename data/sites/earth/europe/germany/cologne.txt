@@ -54,15 +54,13 @@ cologne = {
 		}
 		
 		1388 = {
-			#University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-			#building_classes += university
+			#building_classes += university #University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		
 		1815 = {
 			owner = prussia #Cologne was a possession of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 			
-			#Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-			building_classes += stronghold
+			building_classes += stronghold #Cologne possessed a fortress in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
 	}
 }

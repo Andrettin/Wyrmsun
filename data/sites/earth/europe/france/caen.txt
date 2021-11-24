@@ -1,0 +1,16 @@
+caen = {
+	name = "Caen"
+	map_template = earth
+	geocoordinate = { -0.34998925923 49.18375368150 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		1437 = {
+			building_classes += university #University founded in Caen in 1437; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

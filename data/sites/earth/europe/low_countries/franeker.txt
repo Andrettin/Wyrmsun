@@ -13,8 +13,8 @@ franeker = {
 		}
 		
 		1585 = {
-			owner = netherlands
 			building_classes += university #University founded in Franeker in 1585; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			owner = netherlands
 		}
 	}
 }

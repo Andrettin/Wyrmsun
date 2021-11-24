@@ -32,5 +32,9 @@ cluj = {
 		1097 = {
 			owner = hungary #part of the Kingdom of Hungary c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
+		
+		1580 = {
+			#building_classes += university #University founded in Klausenburg in 1580; Source: "The Cambridge Modern History Atlas", p. 9.
+		}
 	}
 }

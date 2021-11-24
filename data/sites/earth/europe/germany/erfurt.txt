@@ -24,5 +24,9 @@ erfurt = {
 		814 = {
 			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
+		
+		1379 = {
+			#building_classes += university #University founded in Erfurt in 1379; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
 	}
 }

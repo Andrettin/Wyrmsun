@@ -43,5 +43,9 @@ copenhagen = {
 		919 = {
 			owner = denmark #political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
+		
+		1478 = {
+			#building_classes += university #University founded in Copenhagen in 1478; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
 	}
 }
