@@ -1,0 +1,34 @@
+tortosa = {
+	name = "Tortosa"
+	map_template = earth
+	geocoordinate = { 0.52111111111111 40.8125 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		latin = "Dertosa"
+	}
+	regions = {
+		aragon
+	}
+	
+	history = {
+		-201 = {
+			owner = rome #Dertosa was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		486 = {
+			owner = visigothia #Tortosa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1560 = {
+			owner = spain #Tortosa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1645 = {
+			building_classes += university #Minor university founded in Tortosa in 1645; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+		
+		1717 = {
+			building_classes -= university #Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+	}
+}

@@ -107,23 +107,6 @@ DefineSite("gerona", {
 	Regions = {"iberia"}
 })
 
-DefineSite("lerida", {
-	Name = "Lerida",
-	MapTemplate = "old_earth",
-	Position = {3854, 1110},
-	CulturalNames = {
-		"castillian", "Lerida" -- "Lérida"
-	},
-	HistoricalOwners = {
-		1212, "aragon", -- Lérida was a part of the Principality of Catalonia within the Crown of Aragon in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		1560, "spain" -- Lérida was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1300, 0, "university" -- Major university founded in Lerida in 1300; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("malaga", {
 	Name = "Malaga",
 	MapTemplate = "old_earth",
@@ -180,24 +163,6 @@ DefineSite("munda", {
 	Regions = {"iberia"}
 })
 
-DefineSite("orihuela", {
-	Name = "Orihuela",
-	MapTemplate = "old_earth",
-	Position = {3819, 1184},
-	CulturalNames = {
-		"castillian", "Orihuela"
-	},
-	HistoricalOwners = {
-		1212, "castille", -- Orihuela was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		1560, "spain" -- Orihuela's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		1552, 1807, "university" -- Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		-- Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("saguntum", {
 	Name = "Saguntum",
 	MapTemplate = "old_earth",
@@ -234,27 +199,6 @@ DefineSite("tarragona", {
 	HistoricalBuildings = {
 		-201, 395, "farm",
 		395, 0, "temple" -- Tarragona was the seat of an archbishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("tortosa", {
-	Name = "Tortosa",
-	MapTemplate = "old_earth",
-	Position = {3855, 1120},
-	CulturalNames = {
-		"castillian", "Tortosa",
-		"latin", "Dertosa"
-	},
-	HistoricalOwners = {
-		-201, "rome", -- Dertosa was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Tortosa was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Tortosa was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-201, 1645, "farm",
-		1645, 1717, "university", -- Minor university founded in Tortosa in 1645; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225. Minor university in Tortosa abolished in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-		1717, 0, "farm"
 	},
 	Regions = {"iberia"}
 })

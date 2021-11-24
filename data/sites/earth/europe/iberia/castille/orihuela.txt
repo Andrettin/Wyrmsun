@@ -1,0 +1,27 @@
+orihuela = {
+	name = "Orihuela"
+	map_template = earth
+	geocoordinate = { -0.94694444444444 38.085555555556 }
+	base_unit_type = unit_building_site
+	regions = {
+		castille
+	}
+	
+	history = {
+		1212 = {
+			owner = castille #Orihuela was a part of the Kingdom of Castille and León (and dependencies) in the 1212-1492 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+		}
+		
+		1552 = {
+			building_classes += university #Minor university founded in Orihuela in 1552; Source: "The Cambridge Modern History Atlas", 1912, p. 9; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+		
+		1560 = {
+			owner = spain #Orihuela's area was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+		
+		1807 = {
+			building_classes -= university #Minor university abolished in Orihuela in 1807; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+		}
+	}
+}
