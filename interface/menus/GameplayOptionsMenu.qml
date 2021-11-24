@@ -127,10 +127,23 @@ MenuBase {
 		}
 	}
 	
+	LabeledRadioImageButton {
+		id: show_water_borders_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.top: show_tips_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
+		text: "Show Water Borders"
+		checked: wyrmgus.preferences.show_water_borders
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.show_water_borders = checked
+		}
+	}
+	
 	SmallButton {
 		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: show_tips_radio_button.bottom
+		anchors.top: show_water_borders_radio_button.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"

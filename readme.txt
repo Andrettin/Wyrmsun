@@ -68,7 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - The current year now changes more quickly in earlier eras.
 - Added new border graphics (by Jinn).
 - Fixed issue with textures to being reset properly when changing the scale mode without restarting.
-- Borders are no longer shown on water.
+- Borders being shown on water is now optional (off by default).
 
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
