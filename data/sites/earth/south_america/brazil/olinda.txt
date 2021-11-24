@@ -1,0 +1,15 @@
+olinda = {
+	name = "Olinda"
+	map_template = earth
+	geocoordinate = { -34.84995060380 -7.99999102899 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		brazil
+	}
+	
+	history = {
+		1828 = {
+			building_classes += university #Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, "Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840", Hispanic American Historical Review, vol. 81, 2001, p. 293.
+		}
+	}
+}

@@ -1,0 +1,28 @@
+asuncion = {
+	name = "Asuncion" #"Asunción"
+	map_template = earth
+	geocoordinate = { -57.64150516930 -25.29640297570 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 27 3 40 }
+	cores = {
+		paraguay
+	}
+	regions = {
+		paraguay
+	}
+	
+	history = {
+		1536 = {
+			owner = spain #Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+			building_classes += town_hall
+		}
+		
+		1776 = {
+			#building_classes += university #College or seminary founded in Asuncion in 1776. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
+		}
+		
+		1811 = {
+			owner = paraguay #Paraguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		}
+	}
+}

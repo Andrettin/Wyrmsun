@@ -1,0 +1,32 @@
+sao_paulo = {
+	name = "Sao Paulo" #"São Paulo"
+	map_template = earth
+	geocoordinate = { -46.62501998040 -23.55867958700 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 229 193 37 }
+	cores = {
+		brazil
+	}
+	regions = {
+		brazil
+	}
+	
+	history = {
+		1532 = {
+			owner = portugal #São Paulo was founded in 1532/1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+			building_classes += town_hall
+		}
+		
+		1822 = {
+			owner = brazil #Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		}
+		
+		1827 = {
+			#building_classes += university #Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, "Bernardo Pereira de Vasconcelos", p. 66.
+		}
+		
+		1904 = {
+			pathway_class = railroad #the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
+		}
+	}
+}

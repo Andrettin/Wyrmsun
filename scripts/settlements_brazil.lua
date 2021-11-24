@@ -104,8 +104,7 @@ DefineSite("recife", {
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
 	HistoricalBuildings = {
-		1536, 0, "town_hall",
-		1828, 0, "university" -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, "Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840", Hispanic American Historical Review, vol. 81, 2001, p. 293.
+		1536, 0, "town_hall"
 	},
 	Regions = {"brazil"}
 })
@@ -131,37 +130,6 @@ DefineSite("rio-grande", {
 	Regions = {"brazil"}
 })
 
-DefineSite("rio-de-janeiro", {
-	Name = "Rio de Janeiro",
-	MapTemplate = "old_earth",
-	Position = {2856, 2569},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"french", "Henriville",
-		"portuguese", "Rio de Janeiro"
-	},
-	Cores = {
-		"brazil"
-	},
-	HistoricalOwners = {
-		1567, "portugal", -- Rio de Janeiro was founded by the Portuguese in 1516/1567; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
-		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-	},
-	HistoricalBuildings = {
-		1567, 0, "town_hall",
-		1810, 0, "barracks", -- Academia Real Militar founded in Rio de Janeiro in 1810. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 440.
-		1859, 0, "railroad", -- the "Companhia de Carris de Ferro da Cidade a Boavista" tramway company obtained its concession in Rio de Janeiro in 1856, and began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
-		1862, 0, "university" -- Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
-	},
-	HistoricalPopulation = {
-		1872, 274972, -- in 1872, the population of the city of Rio de Janeiro was 274,972; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		1890, 522651, -- in 1890, the population of the city of Rio de Janeiro was 522,651; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		1900, 691565, -- in 1900, the population of the city of Rio de Janeiro was 691,565; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-		1906, 811444 -- in 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
-	},
-	Regions = {"brazil"}
-})
-
 DefineSite("salvador", {
 	Name = "Salvador",
 	MapTemplate = "old_earth",
@@ -179,29 +147,6 @@ DefineSite("salvador", {
 	},
 	HistoricalBuildings = {
 		1549, 0, "town_hall"
-	},
-	Regions = {"brazil"}
-})
-
-DefineSite("sao-paulo", {
-	Name = "Sao Paulo",
-	MapTemplate = "old_earth",
-	Position = {2752, 2583},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"portuguese", "Sao Paulo" -- "São Paulo"
-	},
-	Cores = {
-		"brazil"
-	},
-	HistoricalOwners = {
-		1532, "portugal", -- São Paulo was founded in 1532/1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-	},
-	HistoricalBuildings = {
-		1532, 0, "town_hall",
-		1827, 0, "university", -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, "Bernardo Pereira de Vasconcelos", p. 66.
-		1904, 0, "railroad" -- the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
 	},
 	Regions = {"brazil"}
 })

@@ -1,0 +1,15 @@
+la_plata = {
+	superregions = { south_america }
+}
+
+argentina = {
+	superregions = { la_plata }
+}
+
+paraguay = {
+	superregions = { la_plata }
+}
+
+uruguay = {
+	superregions = { la_plata }
+}

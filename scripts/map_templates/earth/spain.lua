@@ -28,17 +28,6 @@
 -- Baena
 -- University founded in Baena in 1553. Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 
--- Granada
--- University founded in Granada in 1531. Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-
--- Murcia
--- Minor university founded in Murcia in 1614. Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
--- Minor university abolished in Murcia in 1806. Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-
--- Orihuela
--- Minor university founded in Orihuela in 1552. Source: "The Cambridge Modern History Atlas", 1912, p. 9 and Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
--- University abolished in Orihuela in 1807. Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-
 -- Osuna
 -- Minor university founded in Osuna in 1548. Source: "The Cambridge Modern History Atlas", 1912, p. 9 and Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 -- University abolished in Osuna in 1807. Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.

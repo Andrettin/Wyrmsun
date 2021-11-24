@@ -1,0 +1,55 @@
+rio_de_janeiro = {
+	name = "Rio de Janeiro"
+	map_template = earth
+	geocoordinate = { -43.22502079420 -22.92502317420 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 22 84 37 }
+	cultural_names = {
+		french = "Henriville"
+	}
+	cores = {
+		brazil
+	}
+	regions = {
+		brazil
+	}
+	
+	history = {
+		1567 = {
+			owner = portugal #Rio de Janeiro was founded by the Portuguese in 1516/1567; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
+			building_classes += town_hall
+		}
+		
+		1810 = {
+			building_classes += barracks #Academia Real Militar founded in Rio de Janeiro in 1810. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 440.
+		}
+		
+		1822 = {
+			owner = brazil #Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		}
+		
+		1859 = {
+			pathway_class = railroad #the "Companhia de Carris de Ferro da Cidade a Boavista" tramway company obtained its concession in Rio de Janeiro in 1856, and began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
+		}
+		
+		1862 = {
+			#building_classes += university #Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
+		}
+		
+		1872 = {
+			population = 274972 #in 1872, the population of the city of Rio de Janeiro was 274,972; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
+		}
+		
+		1890 = {
+			population = 522651 #in 1890, the population of the city of Rio de Janeiro was 522,651; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
+		}
+		
+		1900 = {
+			population = 691565 #in 1900, the population of the city of Rio de Janeiro was 691,565; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
+		}
+		
+		1906 = {
+			population = 811444 #in 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
+		}
+	}
+}

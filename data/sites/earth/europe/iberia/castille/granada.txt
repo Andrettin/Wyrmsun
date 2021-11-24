@@ -14,7 +14,7 @@ granada = {
 		
 		1526 = {
 			building_classes += university #University founded in Granada in 1526, containing law studies; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
-			#The Cambridge Modern History Atlas gives 1531 as the university's foundation date instead); Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			#The Cambridge Modern History Atlas gives 1531 as the university's foundation date instead; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		
 		1560 = {

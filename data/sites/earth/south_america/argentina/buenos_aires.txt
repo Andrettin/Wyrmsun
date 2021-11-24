@@ -1,0 +1,28 @@
+buenos_aires = {
+	name = "Buenos Aires"
+	map_template = earth
+	geocoordinate = { -58.39753137370 -34.60250160850 } #from Natural Earth
+	base_unit_type = unit_settlement_site
+	color = { 42 76 237 }
+	cores = {
+		argentina
+	}
+	regions = {
+		argentina
+	}
+	
+	history = {
+		1535 = {
+			owner = spain #Buenos Ayres was founded by the Spanish in 1535/1580; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
+			building_classes += town_hall
+		}
+		
+		1784 = {
+			#building_classes += university #College or seminary founded in Buenos Aires in 1784. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
+		}
+		
+		1810 = {
+			owner = argentina #Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
+		}
+	}
+}

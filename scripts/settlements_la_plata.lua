@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("asuncion", {
-	Name = "Asuncion",
-	MapTemplate = "old_earth",
-	Position = {2527, 2634},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Asuncion" -- "Asunción"
-	},
-	Cores = {
-		"paraguay"
-	},
-	HistoricalOwners = {
-		1536, "spain", -- Asunción was founded in 1536; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-		1811, "paraguay" -- Paraguay became independent in 1811; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-	},
-	HistoricalBuildings = {
-		1536, 0, "town_hall",
-		1776, 0, "university" -- College or seminary founded in Asuncion in 1776. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
-	},
-	Regions = {"america", "south-america"}
-})
-
 DefineSite("bahia-blanca", {
 	Name = "Bahia Blanca",
 	MapTemplate = "old_earth",
@@ -63,28 +41,6 @@ DefineSite("bahia-blanca", {
 	},
 	HistoricalBuildings = {
 		1863, 0, "town_hall"
-	},
-	Regions = {"america", "south-america"}
-})
-
-DefineSite("buenos-aires", {
-	Name = "Buenos Aires",
-	MapTemplate = "old_earth",
-	Position = {2510, 2835},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Buenos Aires"
-	},
-	Cores = {
-		"argentina"
-	},
-	HistoricalOwners = {
-		1535, "spain", -- Buenos Ayres was founded by the Spanish in 1535/1580; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110.
-		1810, "argentina" -- Argentina became independent in 1810/1816; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
-	},
-	HistoricalBuildings = {
-		1535, 0, "town_hall",
-		1784, 0, "university" -- College or seminary founded in Buenos Aires in 1784. Source: Enrique Martínez Ruiz; Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 226.
 	},
 	Regions = {"america", "south-america"}
 })

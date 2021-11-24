@@ -28,9 +28,6 @@
 -- Colmar
 -- Parlement or conseil souverain existent in Colmar in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 
--- Molsheim
--- University founded in Molsheim in 1618. Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-
 -- Orléans / Aurehani
 SetMapTemplateHero("old_earth", "gunthram", "burgundia", {3884, 961}, 561, 592)
 
