@@ -1,0 +1,15 @@
+freiburg = {
+	name = "Freiburg"
+	map_template = earth
+	geocoordinate = { 7.86994828149 48.00041505850 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1455 = {
+			building_classes += university #University founded in Freiburg in 1455; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

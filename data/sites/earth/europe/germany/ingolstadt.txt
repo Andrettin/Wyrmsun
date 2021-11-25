@@ -1,0 +1,15 @@
+ingolstadt = {
+	name = "Ingolstadt"
+	map_template = earth
+	geocoordinate = { 11.44998815780 48.77041973780 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1459 = {
+			building_classes += university #University founded in Ingolstadt in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

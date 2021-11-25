@@ -1,0 +1,15 @@
+heidelberg = {
+	name = "Heidelberg"
+	map_template = earth
+	geocoordinate = { 8.69997513697 49.41999249180 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1385 = {
+			building_classes += university #University founded in Heidelberg in 1385; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

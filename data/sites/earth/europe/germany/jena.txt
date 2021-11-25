@@ -1,0 +1,15 @@
+jena = {
+	name = "Jena"
+	map_template = earth
+	geocoordinate = { 11.58000606150 50.93044293120 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1557 = {
+			building_classes += university #University founded in Jena in 1557; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

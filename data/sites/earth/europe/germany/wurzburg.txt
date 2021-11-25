@@ -1,0 +1,15 @@
+wurzburg = {
+	name = "Wurzburg" #"Würzburg"
+	map_template = earth
+	geocoordinate = { 9.95002803411 49.80043438630 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1402 = {
+			building_classes += university #University founded in Wurzburg in 1402; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

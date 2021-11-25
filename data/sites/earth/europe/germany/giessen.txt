@@ -1,0 +1,15 @@
+giessen = {
+	name = "Giessen"
+	map_template = earth
+	geocoordinate = { 8.65000402694 50.58371990870 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1607 = {
+			building_classes += university #University founded in Giessen in 1607; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
+	}
+}

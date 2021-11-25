@@ -1,0 +1,15 @@
+leipzig = {
+	name = "Leipzig"
+	map_template = earth
+	geocoordinate = { 12.40998124050 51.33540529290 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		1409 = {
+			building_classes += university #University founded in Leipzig in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}
