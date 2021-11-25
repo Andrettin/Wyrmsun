@@ -1,0 +1,18 @@
+pecs = {
+	name = "Pecs" #"Pécs"
+	map_template = earth
+	geocoordinate = { 18.22001419950 46.08042889310 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		teutonic = "Funfkirchen" #"Fünfkirchen"
+	}
+	regions = {
+		hungary
+	}
+	
+	history = {
+		1367 = {
+			building_classes += university #University founded in Pécs/Fünfkirchen in 1367; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
+	}
+}

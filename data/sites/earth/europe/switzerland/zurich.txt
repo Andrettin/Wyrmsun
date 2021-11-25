@@ -2,7 +2,14 @@ zurich = {
 	name = "Zurich" #"Zürich"
 	map_template = earth
 	geocoordinate = { 8.55001013046 47.37998781240 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		switzerland
+	}
+	
+	history = {
+		1521 = {
+			building_classes += university #University founded in Zurich in 1521; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		}
 	}
 }

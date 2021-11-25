@@ -292,10 +292,6 @@ DefineProvince("Baden", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Peter during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Reichenau during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1385, "upgrade-university", true, -- University founded in Heidelberg in 1385; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1455, "upgrade-university", true -- University founded in Freiburg in 1455; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -337,9 +333,6 @@ DefineProvince("Bavaria", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Niederaltaich during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Wessobrunn during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-	},
-	HistoricalModifiers = {
-		1459, "upgrade-university", true -- University founded in Ingolstadt in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -1331,7 +1324,6 @@ DefineProvince("France", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Denis during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Angers in 1250; Source: "Atlas de História Mundial", 2001, p. 144.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, cour des aides, cambre des comptes, court of admiralty, cour des monnaies, prévôt des maréchaux and chief court of the salt tax existent in Paris in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Soissons in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nevers in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -1377,7 +1369,6 @@ DefineProvince("Franche Comte", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1422, "upgrade-university", true, -- University founded in Dôle in 1422; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Besançon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	}
 })
@@ -1417,9 +1408,6 @@ DefineProvince("Franconia", {
 		-264, "teuton",
 		-27, "celt",
 		161, "teuton"
-	},
-	HistoricalModifiers = {
-		1402, "upgrade-university", true -- University founded in Wurzburg in 1402; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -1660,8 +1648,7 @@ DefineProvince("Hesse", {
 		768, "unit-teuton-stronghold", true -- Fort existent in Büraburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1527, "upgrade-university", true, -- University founded in Marburg in 1527; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
-		1607, "upgrade-university", true -- University founded in Giessen in 1607; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+		1527, "upgrade-university", true -- University founded in Marburg in 1527; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -1690,10 +1677,6 @@ DefineProvince("Highland Scotland", {
 	},
 	HistoricalCultures = {
 		-27, "celt"
-	},
-	HistoricalModifiers = {
-		1413, "upgrade-university", true, -- University founded in St. Andrews in 1413; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1494, "upgrade-university", true -- University founded in Aberdeen in 1494; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -2456,12 +2439,6 @@ DefineProvince("Mercia", {
 		-27, "celt",
 		526, "teuton"
 	},
-	HistoricalModifiers = {
-		1250, "upgrade-university", true, -- University existent in Oxford in 1250; Source: "Atlas de História Mundial", p. 144.
-		1851, "upgrade-university", true, -- University founded in Manchester in 1851; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-		1900, "upgrade-university", true, -- University founded in Birmingham in 1900; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-		1903, "upgrade-university", true -- University founded in Liverpool in 1903; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
-	},
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Deva in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
@@ -2656,7 +2633,6 @@ DefineProvince("Normandy", {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Wandrille during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1437, "upgrade-university", true, -- University founded in Caen in 1437; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, cambre des comptes, court of admiralty, prévôt des maréchaux and chief court of the salt tax existent in Rouen in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Alençon in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax and prévôt des maréchaux existent in Caen in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -2930,9 +2906,6 @@ DefineProvince("Pannonia", {
 	},
 	HistoricalSettlementBuildings = {
 		850, "unit-teuton-temple", true -- in 850 Archbishop Liutpram consecrated the first church built at Moosburg (on the Platten See, in Lower Pannonia); Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
-	},
-	HistoricalModifiers = {
-		1367, "upgrade-university", true -- University founded in Fünfkirchen in 1367; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 
@@ -2971,7 +2944,6 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Corbie during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1582, "upgrade-university", true, -- University founded in Douai in 1582; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Amiens in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Abbeville in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain existent in Arras in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
@@ -3024,9 +2996,6 @@ DefineProvince("Pomerelia", {
 	HistoricalCultures = {
 		-264, "goth",
 		200, ""
-	},
-	HistoricalModifiers = {
-		1366, "upgrade-university", true -- University founded in Kulm in 1366; Source: "Atlas de História Mundial", 2001, p. 144.
 	}
 })
 
@@ -3064,7 +3033,6 @@ DefineProvince("Provence", {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Aix during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
-		1409, "upgrade-university", true, -- University founded in Aix-en-Provence in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, court of admiralty, chief court of the salt tax and prévôt des maréchaux existent in Aix-en-Provence in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
 	}
 })
@@ -3528,7 +3496,6 @@ DefineProvince("Switzerland", {
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Geneva in 1365; Source: "Atlas de História Mundial", p. 144.
 		1459, "upgrade-university", true, -- University founded in Basel in 1459; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1521, "upgrade-university", true -- University founded in Zurich in 1521; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -3589,10 +3556,6 @@ DefineProvince("Thuringia", {
 	},
 	HistoricalCultures = {
 		-264, "teuton"
-	},
-	HistoricalModifiers = {
-		1379, "upgrade-university", true, -- University founded in Erfurt in 1379; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		1557, "upgrade-university", true -- University founded in Jena in 1557; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -3644,9 +3607,6 @@ DefineProvince("Transylvania", {
 	},
 	HistoricalSettlementBuildings = {
 		161, "unit-latin-barracks", true -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalModifiers = {
-		1580, "upgrade-university", true, -- University founded in Cluj in 1580; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 	}
 })
 
@@ -3835,7 +3795,6 @@ DefineProvince("Upper Saxony", {
 		874, "slav" -- The land between the Upper Elbe and the Saale was inhabited by the Sorbs in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	},
 	HistoricalModifiers = {
-		1409, "upgrade-university", true, -- University founded in Leipzig in 1409; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 --		1846, "upgrade-college", true -- Bergakademie Freiberg existent in Chemnitz in 1846; Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 443.
 	}
 })
@@ -4144,9 +4103,6 @@ DefineProvince("York", {
 	HistoricalCultures = {
 		-264, "briton",
 		500, "teuton"
-	},
-	HistoricalModifiers = {
-		1905, "upgrade-university", true -- University founded in Sheffield in 1905; Source: David Thomson, "Europe Since Napoleon", 1966, p. 449.
 	}
 })
 
@@ -4183,9 +4139,6 @@ DefineProvince("Zealand", {
 		-2800, "germanic",
 		-27, "goth",
 		526, "norse"
-	},
-	HistoricalModifiers = {
-		1478, "upgrade-university", true -- University founded in Copenhagen in 1478; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 	}
 })
 

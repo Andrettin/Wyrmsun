@@ -69,9 +69,6 @@ DefineSite("vindonissa", {
 	Name = "Vindonissa",
 	MapTemplate = "old_earth",
 	Position = {4029, 969},
-	CulturalNames = {
-		"french", "Martigny"
-	},
 	HistoricalOwners = {
 		395, "rome", -- Vindonissa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		481, "alamanni-tribe", -- Vindonissa's area was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
