@@ -5,6 +5,7 @@ oslo = {
 	base_unit_type = unit_settlement_site
 	color = { 211 128 27 }
 	cores = {
+		norwegian_tribe
 		norway
 		vingulmark
 	}
