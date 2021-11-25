@@ -5,7 +5,7 @@ munich = {
 	base_unit_type = unit_settlement_site
 	color = { 53 10 147 }
 	cultural_names = {
-		#teuton = "München"
+		#teutonic = "München"
 	}
 	cores = {
 		bavarian_tribe
@@ -13,7 +13,7 @@ munich = {
 		holy_rome
 	}
 	regions = {
-		germany
+		bavaria
 	}
 	
 	history = {

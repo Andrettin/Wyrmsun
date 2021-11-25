@@ -4,7 +4,7 @@ wurzburg = {
 	geocoordinate = { 9.95002803411 49.80043438630 }
 	base_unit_type = unit_building_site
 	regions = {
-		germany
+		bavaria
 	}
 	
 	history = {

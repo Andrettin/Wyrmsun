@@ -4,7 +4,7 @@ freiburg = {
 	geocoordinate = { 7.86994828149 48.00041505850 }
 	base_unit_type = unit_building_site
 	regions = {
-		germany
+		baden
 	}
 	
 	history = {

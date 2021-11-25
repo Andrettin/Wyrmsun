@@ -13,7 +13,7 @@ trier = {
 	}
 	regions = {
 		gaul
-		germany
+		rhineland
 	}
 	
 	history = {

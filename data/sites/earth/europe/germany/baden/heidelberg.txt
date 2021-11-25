@@ -4,7 +4,7 @@ heidelberg = {
 	geocoordinate = { 8.69997513697 49.41999249180 }
 	base_unit_type = unit_building_site
 	regions = {
-		germany
+		baden
 	}
 	
 	history = {

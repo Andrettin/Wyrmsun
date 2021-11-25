@@ -8,6 +8,6 @@ schwerin = {
 		holy_rome #Schwerin was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	}
 	regions = {
-		germany
+		mecklenburg
 	}
 }

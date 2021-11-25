@@ -11,7 +11,7 @@ berlin = {
 		germany #Berlin was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 	regions = {
-		germany
+		brandenburg
 	}
 	
 	history = {

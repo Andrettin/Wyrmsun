@@ -8,7 +8,7 @@ rostock = {
 		mecklenburg
 	}
 	regions = {
-		germany
+		mecklenburg
 	}
 	
 	history = {

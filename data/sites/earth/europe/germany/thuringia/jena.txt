@@ -4,7 +4,7 @@ jena = {
 	geocoordinate = { 11.58000606150 50.93044293120 }
 	base_unit_type = unit_building_site
 	regions = {
-		germany
+		thuringia
 	}
 	
 	history = {

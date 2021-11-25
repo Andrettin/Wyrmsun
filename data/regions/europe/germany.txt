@@ -23,3 +23,31 @@ germany = {
 		}
 	}
 }
+
+baden = {
+	superregions = { germany }
+}
+
+bavaria = {
+	superregions = { germany }
+}
+
+brandenburg = {
+	superregions = { germany }
+}
+
+mecklenburg = {
+	superregions = { germany }
+}
+
+rhineland = {
+	superregions = { germany }
+}
+
+thuringia = {
+	superregions = { germany }
+}
+
+wurtemberg = {
+	superregions = { germany }
+}

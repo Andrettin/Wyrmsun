@@ -4,7 +4,7 @@ ingolstadt = {
 	geocoordinate = { 11.44998815780 48.77041973780 }
 	base_unit_type = unit_building_site
 	regions = {
-		germany
+		bavaria
 	}
 	
 	history = {

@@ -14,7 +14,7 @@ cologne = {
 	}
 	regions = {
 		gaul
-		germany
+		rhineland
 	}
 	
 	history = {

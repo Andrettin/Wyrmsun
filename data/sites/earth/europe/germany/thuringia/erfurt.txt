@@ -8,7 +8,7 @@ erfurt = {
 		germany
 	}
 	regions = {
-		germany
+		thuringia
 	}
 	
 	history = {

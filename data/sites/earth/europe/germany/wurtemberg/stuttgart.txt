@@ -10,7 +10,7 @@ stuttgart = {
 		holy_rome
 	}
 	regions = {
-		germany
+		wurtemberg
 	}
 	
 	history = {
