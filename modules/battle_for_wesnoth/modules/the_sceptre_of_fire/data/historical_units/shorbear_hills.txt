@@ -1,0 +1,11 @@
+shorbear_hills_building_site = {
+	unit_type = unit_building_site
+	
+	history = {
+		active = true
+		location = {
+			map_template = shorbear_hills
+			pos = { 16 15 }
+		}
+	}
+}

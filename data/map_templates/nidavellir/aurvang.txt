@@ -26,7 +26,7 @@ aurvang = {
 	}
 	generated_neutral_units = {
 		unit_copper_deposit = 1 #tin
-		unit_building_site = 1
+		unit_building_site = 2
 		unit_tree_stump = 2
 		unit_snigill = 8
 		unit_slime = 4

@@ -1,0 +1,11 @@
+caverns_of_chaincolt_city_building_site = {
+	unit_type = unit_building_site
+	
+	history = {
+		active = true
+		location = {
+			map_template = caverns_of_chaincolt_city
+			pos = { 11 4 }
+		}
+	}
+}
