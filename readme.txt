@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.2.5
 -----------------------------------------------------------------------
 
+* AI
+- The AI will now declare war on a player if it has a quest to build a town hall on a settlement owned by that player.
+
 * Buildings
 - Temples and universities can now only be built on top of "Building Site" locations.
 - Building sites, mineral deposits and the like now display to which settlement they belong in their tooltip.
