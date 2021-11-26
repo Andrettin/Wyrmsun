@@ -111,26 +111,6 @@ DefineSite("gastein", {
 	Regions = {"salzburg"}
 })
 
-DefineSite("gossensass", {
-	Name = "Gossensass",
-	MapTemplate = "old_earth",
-	Position = {4095, 983},
-	CulturalNames = {
-		"teuton", "Gossensass"
-	},
-	HistoricalOwners = {
-		1427, "austria"
-	},
-	HistoricalBuildings = {
-		1427, 0, "silver-mine", -- the silver-lead mine Gossensass was in existence in 1427; and in c. 1480 it had railways within it; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 16.
-		1480, 0, "railroad"
-	},
-	HistoricalResources = {
-		0, 0, "unit_silver_deposit", 0
-	},
-	Regions = {"south_tyrol"}
-})
-
 DefineSite("innsbruck", {
 	Name = "Innsbruck",
 	MapTemplate = "old_earth",
