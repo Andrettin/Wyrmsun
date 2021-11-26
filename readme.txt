@@ -66,12 +66,12 @@ https://github.com/Andrettin/Wyrmsun
 - When a building location is being chosen, tiles are now overlaid with their owner's color.
 
 * Maps
-- For the Earth map, Vienna's territory north of the Danube now belongs to the Prague settlement.
+- Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
 
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.
 - Added new border graphics (by Jinn).
-- Fixed issue with textures to being reset properly when changing the scale mode without restarting.
+- Fixed issue with textures not being reset properly when changing the scale mode without restarting.
 - Borders being shown on water is now optional (off by default).
 - If the preferences file cannot be parsed, then the default values for the preferences are used, instead of the game exiting.
 
