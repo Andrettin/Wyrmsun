@@ -154,17 +154,17 @@ sewer_kobold_camp_river_rat_5 = { #rat / river rat
 	}
 }
 
-sewer_kobold_camp_altar = {
-	unit_type = unit_goblin_temple
-
-	history = {
-		active = true
-		location = {
-			map_template = sewer_kobold_camp
-			pos = { 2 30 }
-		}
-	}
-}
+#sewer_kobold_camp_altar = {
+#	unit_type = unit_goblin_temple
+#
+#	history = {
+#		active = true
+#		location = {
+#			map_template = sewer_kobold_camp
+#			pos = { 2 30 }
+#		}
+#	}
+#}
 
 sewer_kobold_camp_potion_of_healing_1 = { #potion of curing / potion of heal wounds
 	unit_type = unit_potion_of_healing
