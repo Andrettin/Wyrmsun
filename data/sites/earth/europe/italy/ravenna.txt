@@ -2,6 +2,7 @@ ravenna = {
 	name = "Ravenna"
 	map_template = earth
 	geocoordinate = { 12.22001867540 44.42037518220 } #from Natural Earth
+	base_unit_type = unit_building_site
 	regions = {
 		italy
 	}
@@ -9,7 +10,6 @@ ravenna = {
 	history = {
 		161 = {
 			owner = rome #Ravenna was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-			building_classes += farm
 		}
 		
 		526 = {
@@ -17,7 +17,6 @@ ravenna = {
 		}
 		
 		768 = {
-			building_classes -= farm
 			building_classes += temple #Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		}
 		

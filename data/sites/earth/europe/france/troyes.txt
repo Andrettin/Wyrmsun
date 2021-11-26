@@ -2,6 +2,7 @@ troyes = {
 	name = "Troyes" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	map_template = earth
 	geocoordinate = { 4.08335770531 48.34039430650 } #from Natural Earth
+	base_unit_type = unit_building_site
 	color = { 151 186 207 }
 	cultural_names = {
 		frankish = "Trecae"
@@ -18,7 +19,6 @@ troyes = {
 		
 		486.12.30 = {
 			owner = francia #Troyes became part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += farm
 		}
 		
 		561 = {
@@ -28,7 +28,6 @@ troyes = {
 		782 = {
 			owner = francia
 			building_classes += temple #Alcuin moved from England to the court of Charlemagne in 782, and received the abbey of St. Lupus at Troyes; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 188-189.
-			building_classes -= farm
 		}
 		
 		1097 = {

@@ -40,7 +40,7 @@ lyon = {
 		}
 		
 		1330 = {
-			building_classes += university #University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			#building_classes += university #University founded in Lyon in 1330; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		
 		1789 = {

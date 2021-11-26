@@ -2,6 +2,7 @@ leicester = {
 	name = "Leicester"
 	map_template = earth
 	geocoordinate = { -1.13324894348 52.62997743640 } #from Natural Earth
+	base_unit_type = unit_building_site
 	cultural_names = {
 		anglo_saxon = "Ligoraceaster" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Ratae"
@@ -15,11 +16,9 @@ leicester = {
 	history = {
 		410 = {
 			owner = rome #Ratae/Leicester was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-			building_classes += farm
 		}
 		
 		737 = {
-			building_classes -= farm
 			building_classes += temple #diocese of Leicester permanently founded in 737 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 134, 146.
 		}
 		

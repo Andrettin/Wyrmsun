@@ -19,7 +19,7 @@ milan = {
 		}
 		
 		768 = {
-			building_classes += temple #Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+			#building_classes += temple #Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		}
 		
 		814 = {

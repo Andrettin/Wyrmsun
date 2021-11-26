@@ -47,7 +47,7 @@ york = {
 		}
 		
 		735 = {
-			building_classes += temple #archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
+			#building_classes += temple #archbishopric of York permanently instituted in 735 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 109, 133.
 		}
 		
 		1097 = {

@@ -23,7 +23,7 @@ marseilles = {
 		}
 
 		395 = {
-			building_classes += temple #Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			#building_classes += temple #Marseilles was a part of the Roman Empire and was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		480 = {

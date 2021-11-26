@@ -18,7 +18,7 @@ barcelona = {
 		}
 		
 		395 = {
-			building_classes += temple #Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			#building_classes += temple #Barcelona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		481 = {

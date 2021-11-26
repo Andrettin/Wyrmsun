@@ -26,7 +26,7 @@ nantes = {
 		}
 		
 		1460 = {
-			building_classes += university #University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+			#building_classes += university #University founded in Nantes in 1460; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 		
 		1789 = {

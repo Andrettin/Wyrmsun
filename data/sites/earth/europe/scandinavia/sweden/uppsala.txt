@@ -14,6 +14,7 @@ uppsala = {
 		}
 		
 		1477 = {
+			building_classes -= temple
 			building_classes += university #University founded in Uppsala in 1477; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 	}

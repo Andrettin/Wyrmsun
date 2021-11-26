@@ -2,6 +2,7 @@ verdun = {
 	name = "Verdun"
 	map_template = earth
 	geocoordinate = { 5.3827777777778 49.159722222222 }
+	base_unit_type = unit_building_site
 	cores = {
 		france
 	}

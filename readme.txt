@@ -58,8 +58,9 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Universities can now only be built on top of "Building Site" locations.
+- Temples and universities can now only be built on top of "Building Site" locations.
 - Building sites, mineral deposits and the like now display to which settlement they belong in their tooltip.
+- When a building location is being chosen, tiles are now overlaid with their owner's color.
 
 * Maps
 - For the Earth map, Vienna's territory north of the Danube now belongs to the Prague settlement.
@@ -69,7 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added new border graphics (by Jinn).
 - Fixed issue with textures to being reset properly when changing the scale mode without restarting.
 - Borders being shown on water is now optional (off by default).
-- When a building location is being chosen, tiles are now overlaid with their owner's color.
+- If the preferences file cannot be parsed, then the default values for the preferences are used, instead of the game exiting.
 
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).

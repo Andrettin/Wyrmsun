@@ -1,0 +1,9 @@
+simrishamn = {
+	name = "Simrishamn"
+	map_template = earth
+	geocoordinate = { 14.347881242183 55.550793241987 }
+	base_unit_type = unit_building_site
+	regions = {
+		scandinavia
+	}
+}

@@ -1,8 +1,0 @@
-vitemolla = {
-	name = "Vitemolla" #"Vitemölla"
-	map_template = earth
-	geocoordinate = { 14.1064453125 55.72265625 }
-	regions = {
-		scandinavia
-	}
-}

@@ -26,7 +26,7 @@ winchester = {
 		}
 		
 		660 = {
-			building_classes += temple #Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
+			#building_classes += temple #Winchester was a bishopric as of c. 660; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 122.
 		}
 		
 		802 = {

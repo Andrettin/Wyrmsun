@@ -40,7 +40,7 @@ reims = {
 		}
 		
 		1547 = {
-			building_classes += university #University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
+			#building_classes += university #University founded in Reims in 1547; Source: "The Cambridge Modern History Atlas", 1912, p. 9.
 		}
 		
 		1789 = {
