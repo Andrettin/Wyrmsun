@@ -1,0 +1,22 @@
+the_viceroyalty_of_norway = {
+	name = "The Viceroyalty of Norway"
+	icon = icon_norse_town_hall
+	player_color = blue
+	description = "With our rule over the Swedish lands consolidated, the time has come for a more ambitious undertaking: to subjugate Norway."
+	conditions = {
+		faction = sweden
+		settlement = stockholm
+		settlement = gothenburg
+		settlement = linkoping
+		settlement = malmo
+		not = {
+			settlement = oslo
+		}
+	}
+	objectives = {
+		have_settlement = oslo
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
