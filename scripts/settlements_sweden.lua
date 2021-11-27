@@ -25,22 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("roma-gotland", {
-	Name = "Roma",
-	MapTemplate = "old_earth",
-	Position = {4259, 739},
-	CulturalNames = {
-		"norse", "Roma"
-	},
-	HistoricalOwners = {
-		{1164, 9, 9}, "cistercian-order"
-	},
-	HistoricalBuildings = {
-		{1164, 9, 9}, 0, "temple", "cistercian-order" -- a Cistercian monastery, the Beata Maria de Gutnalia, was established on September 9th of 1164 at Roma; Source: "Guta Saga: The History of the Gotlanders", 1999, p. xlvii.
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("torsburgen", {
 	Name = "Torsburgen",
 	MapTemplate = "old_earth",
