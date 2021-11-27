@@ -8,30 +8,12 @@ ariovistus_ambition = {
 		call_dialogue = ariovistus_enters_gaul
 	}
 	objectives = {
-		build_units = {
-			unit_class = town_hall
-			settlement = dijon
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = cologne
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = paris
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = brussels
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = toulouse
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = marseilles
-		}
+		have_settlement = dijon
+		have_settlement = cologne
+		have_settlement = paris
+		have_settlement = brussels
+		have_settlement = toulouse
+		have_settlement = marseilles
 		hero_must_survive = ariovistus
 	}
 	completion_effects = {

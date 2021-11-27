@@ -5,14 +5,8 @@ the_ynglinga_saga = {
 	description = "Claiming descent from the god Frey, the Ynglings have established themselves as the ruling dynasty of the Swedes. Throughout generations, they shall seek to bring their people to glory, and consolidate their kingdom!"
 	unobtainable = true
 	objectives = {
-		build_units = {
-			unit_class = town_hall
-			settlement = gothenburg
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = linkoping
-		}
+		have_settlement = gothenburg
+		have_settlement = linkoping
 		found_faction = sweden
 		have_resource = {
 			resource = copper

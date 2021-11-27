@@ -6,17 +6,8 @@ the_great_heathen_army = {
 	unobtainable = true
 	objectives = {
 		destroy_hero = aella
-		build_units = {
-			unit_class = town_hall
-			settlement = york
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = tamworth
-		}
-		build_units = {
-			unit_class = town_hall
-			settlement = london
-		}
+		have_settlement = york
+		have_settlement = tamworth
+		have_settlement = london
 	}
 }
