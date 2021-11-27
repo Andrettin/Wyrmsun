@@ -1,0 +1,20 @@
+the_scanian_dominion = {
+	name = "The Scanian Dominion"
+	icon = icon_norse_town_hall
+	player_color = blue
+	description = "The Scanian lands on our southern border are ripe for conquest. Controlling them is of vital importance to allow our ships to pass unimpeded through the Sound."
+	conditions = {
+		faction = sweden
+		settlement = gothenburg
+		settlement = linkoping
+		not = {
+			settlement = malmo
+		}
+	}
+	objectives = {
+		have_settlement = malmo
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
