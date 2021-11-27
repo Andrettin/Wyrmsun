@@ -17,6 +17,6 @@ the_house_of_seven_fathers = { #based on the "The Seventh Father of the House" N
 		last_created_unit = {
 			unique = the_house_of_seven_fathers
 		}
-		copper += 500
+		scripted_effect = minor_copper_reward
 	}
 }

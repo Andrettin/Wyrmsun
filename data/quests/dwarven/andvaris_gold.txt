@@ -1,0 +1,28 @@
+andvaris_gold = {
+	name = "Andvari's Gold"
+	icon = icon_ring
+	player_color = yellow
+	competitive = true
+	description = "Andvari, the son of Oin, is now the leader of their clan. Lately we have discovered that he keeps quite a bit of gold hidden... Some notables are suggesting a raid against Andvari's holding to add his gold to our treasury."
+	objectives = {
+		destroy_units = {
+			unit_types = {
+				unit_dwarven_town_hall
+				unit_dwarven_stronghold
+			}
+			settlement = andvaris_falls
+		}
+	}
+	accept_effects = {
+		create_unit = { #show the location of Andvari's holding
+			unit_type = unit_revealer
+			site = andvaris_falls
+			ttl = 600
+		}
+	}
+	completion_effects = {
+		copper += 10000
+		call_dialogue = andvaris_gold_is_ours
+	}
+}
+

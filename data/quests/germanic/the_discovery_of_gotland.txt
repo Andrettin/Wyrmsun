@@ -1,0 +1,16 @@
+the_discovery_of_gotland = {
+	name = "The Discovery of Gotland"
+	icon = icon_germanic_transport_ship
+	player_color = white
+	competitive = true
+	unobtainable = true
+	objectives = {
+		build_units = {
+			unit_class = town_hall
+			settlement = visby
+		}
+	}
+	completion_effects = {
+		call_dialogue = thialfi_settles_gotland
+	}
+}

@@ -1,0 +1,20 @@
+thors_servant_thors_temple = {
+	name = "Thunraz's Temple"
+	icon = icon_germanic_temple
+	player_color = white
+	competitive = true
+	unobtainable = true
+	unfailable = true #to prevent the mission failing due to a lack of a Carpenter's Shop
+	objectives = {
+		build_units = {
+			unit_class = temple
+			settlement = visby
+		}
+		research_upgrade = {
+			upgrade = upgrade_deity_thor
+		}
+	}
+	completion_effects = {
+		call_dialogue = thors_servant_temple_complete
+	}
+}

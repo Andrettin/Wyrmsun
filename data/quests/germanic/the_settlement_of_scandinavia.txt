@@ -1,0 +1,19 @@
+the_settlement_of_scandinavia = { #based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
+	name = "The Settlement of Scandinavia"
+	icon = icon_germanic_town_hall
+	player_color = orange
+	unobtainable = true
+	objectives = {
+		have_settlement = aarhus
+		have_settlement = copenhagen
+		have_settlement = malmo
+		have_settlement = stockholm
+		hero_must_survive = voden
+	}
+	accept_effects = {
+		call_dialogue = the_settlement_of_scandinavia_introduction
+	}
+	completion_effects = {
+		call_dialogue = the_settlement_of_scandinavia_victory
+	}
+}

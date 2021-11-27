@@ -1,0 +1,24 @@
+heimdalls_stones = {
+	name = "Haimadala's Stones"
+	icon = icon_germanic_temple
+	player_color = yellow
+	competitive = true
+	description = "Our priests declare that the environs of Malmo would be a particularly auspicious location for building a temple dedicated to the god Haimadala, and urge you to begin its construction."
+	hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest."
+	conditions = {
+		upgrade = upgrade_deity_heimdall
+		unique_can_drop = heimdalls_stones
+	}
+	objectives = {
+		build_units = {
+			unit_type = unit_germanic_temple
+			settlement = malmo
+		}
+	}
+	completion_effects = {
+		last_created_unit = {
+			unique = heimdalls_stones
+		}
+		scripted_effect = minor_copper_reward
+	}
+}

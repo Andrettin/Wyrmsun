@@ -93,54 +93,6 @@ DefineQuest("westward_migration", { -- based on the Ynglinga saga and on the Ind
 	Unobtainable = true
 })
 
-DefineQuest("the_settlement_of_scandinavia", { -- based on the Ynglinga saga and on the Indo-European migration according to the Kurgan hypothesis
-	Name = "The Settlement of Scandinavia",
-	Icon = "icon-germanic-town-hall",
-	Civilization = "germanic",
-	PlayerColor = "orange",
-	AcceptEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "the_settlement_of_scandinavia") then
-			CallDialogue("the_settlement_of_scandinavia_introduction", trigger_player)
-		end
-	end,
-	CompletionEffects = function(s)
-		CallDialogue("the_settlement_of_scandinavia_victory", trigger_player)
-	end,
-	ObjectiveStrings = {"Wodanaz must survive"},
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Ahvoosa (Aarhus)",
-			"quantity", 1,
-			"unit-class", "town_hall",
-			"settlement", "aarhus"
-		},
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Copenhagen",
-			"quantity", 1,
-			"unit-class", "town_hall",
-			"settlement", "copenhagen"
-		},
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Malmo",
-			"quantity", 1,
-			"unit-class", "town_hall",
-			"settlement", "malmo"
-		},
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Stukkahulma (Stockholm)",
-			"quantity", 1,
-			"unit-class", "town_hall",
-			"settlement", "stockholm"
-		}
-	},
-	HeroesMustSurvive = {"voden"},
-	Unobtainable = true
-})
-
 DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 225.
 	Name = "The Good Seasons", -- the Swedes believed their chieftain Yngve (identified with Freyr) provided them good seasons
 	Icon = "icon-germanic-farm",
@@ -321,37 +273,6 @@ DefineQuest("temple-to-heimdall", {
 	}
 })
 
-DefineQuest("heimdalls-stones", {
-	Name = "Haimadala's Stones",
-	Icon = "icon-germanic-temple",
-	Description = "Our priests declare that the environs of Malmo would be a particularly auspicious location for building a temple dedicated to the god Haimadala, and urge you to begin its construction.",
-	PlayerColor = "yellow",
-	Conditions = function(s)
-		if (
-			GetUniqueItemData("heimdalls-stones", "CanDrop")
-			and GetPlayerData(trigger_player, "Allow", "upgrade-deity-heimdall") == "R"
-		) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetUnitVariable(FindUnit("unit-germanic-temple", trigger_player, false, true, "malmo"), "Unique", "heimdalls-stones")
-	end,
-	Rewards = "The Temple will become the Haimadala's Stones unique building",
-	Hint = "Select a Bura, press the Build Structure button and then click on the Build Temple button to build the structure required for this quest.",
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Temple in Malmo",
-			"quantity", 1,
-			"unit-type", "unit-germanic-temple",
-			"settlement", "malmo"
-		}
-	},
-	Competitive = true
-})
-
 DefineQuest("journey-to-heimdalls-stones", {
 	Name = "Journey to Haimadala's Stones",
 	Icon = "icon-germanic-temple",
@@ -453,10 +374,7 @@ DefineQuest("thors_servant", {
 	Unobtainable = true
 })
 
-DefineQuest("the-discovery-of-gotland", {
-	Name = "The Discovery of Gotland",
-	Icon = "icon-germanic-transport-ship",
-	PlayerColor = "white",
+DefineQuest("the_discovery_of_gotland", {
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
@@ -473,25 +391,10 @@ DefineQuest("the-discovery-of-gotland", {
 				end
 			end
 		end
-		CallDialogue("thialfi-settles-gotland", trigger_player)
-	end,
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Chieftain's Hall in Gotland",
-			"quantity", 1,
-			"unit-type", "unit-germanic-town-hall",
-			"settlement", "visby"
-		}
-	},
-	Unobtainable = true,
-	Competitive = true
+	end
 })
 
-DefineQuest("thors-servant-thors-temple", {
-	Name = "Thunraz's Temple",
-	Icon = "icon-germanic-temple",
-	PlayerColor = "white",
+DefineQuest("thors_servant_thors_temple", {
 	FailEffects = function(s)
 		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
 			CallDialogue("campaign-defeat", trigger_player)
@@ -508,25 +411,7 @@ DefineQuest("thors-servant-thors-temple", {
 				end
 			end
 		end
-		CallDialogue("thors-servant-temple-complete", trigger_player)
-	end,
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Temple in Gotland",
-			"quantity", 1,
-			"unit-class", "temple",
-			"settlement", "visby"
-		},
-		{
-			"objective-type", "research_upgrade",
-			"objective-string", "Worship Thunraz",
-			"upgrade", "upgrade-deity-thor"
-		}
-	},
-	Unobtainable = true,
-	Unfailable = true, -- to prevent the mission failing due to a lack of a Carpenter's Shop
-	Competitive = true
+	end
 })
 
 DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.

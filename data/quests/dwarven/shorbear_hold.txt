@@ -1,0 +1,24 @@
+shorbear_hold = {
+	name = "Shorbear Hold"
+	icon = icon_dwarven_stronghold
+	player_color = blue
+	competitive = true
+	description = "The Shorbear Hold is a highly defensive location, due to the narrow passages that grant access to it. Nevertheless, we cannot rely on nature alone for its protection. Our builders suggest constructing a Bastion there, to make it truly impregnable."
+	hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion."
+	conditions = {
+		civilization = dwarven
+		unique_can_drop = shorbear_hold
+	}
+	objectives = {
+		build_units = {
+			unit_type = unit_dwarven_stronghold
+			settlement = shorbear_hold
+		}
+	}
+	completion_effects = {
+		last_created_unit = {
+			unique = shorbear_hold
+		}
+		scripted_effect = minor_copper_reward
+	}
+}

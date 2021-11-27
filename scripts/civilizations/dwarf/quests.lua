@@ -215,34 +215,6 @@ DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
 	Unobtainable = true
 })
 
-DefineQuest("shorbear-hold", {
-	Name = "Shorbear Hold",
-	Icon = "icon-dwarven-stronghold",
-	Description = "The Shorbear Hold is a highly defensive location, due to the narrow passages that grant access to it. Nevertheless, we cannot rely on nature alone for its protection. Our builders suggest constructing a Bastion there, to make it truly impregnable.",
-	PlayerColor = "blue",
-	Conditions = function(s)
-		if (GetUniqueItemData("shorbear-hold", "CanDrop")) then
-			return true
-		end
-		return false
-	end,
-	CompletionEffects = function(s)
-		SetUnitVariable(FindUnit("unit-dwarven-stronghold", trigger_player, false, true, "shorbear-hold"), "Unique", "shorbear-hold")
-	end,
-	Rewards = "The Bastion will become the Shorbear Hold unique building",
-	Hint = "Select the Mead Hall of the Shorbear Hold settlement and then click on the Upgrade to Bastion button to transform it into a bastion.",
-	Objectives = {
-		{
-			"objective-type", "build_units",
-			"objective-string", "Build a Bastion for the Shorbear Hold",
-			"quantity", 1,
-			"unit-type", "unit-dwarven-stronghold",
-			"settlement", "shorbear-hold"
-		}
-	},
-	Competitive = true
-})
-
 DefineQuest("a-bargain-is-struck", {
 	Name = "A Bargain is Struck",
 	Icon = "icon-rugnur",
@@ -391,11 +363,8 @@ DefineQuest("mushroom-fields", { -- inspired by the dialogue in Battle for Wesno
 	}
 })
 
-DefineQuest("andvaris-gold", {
-	Name = "Andvari's Gold",
-	Icon = "icon-ring",
-	Description = "Andvari, the son of Oin, is now the leader of their clan. Lately we have discovered that he keeps quite a bit of gold hidden... Some notables are suggesting a raid against Andvari's holding to add his gold to our treasury.",
-	PlayerColor = "yellow",
+DefineQuest("andvaris_gold", {
+	Rewards = "+10,000 Copper, Magic Ring",
 	Conditions = function(s)
 		if (
 			GetFactionExists("oinling-clan", true) -- Andvari's clan must exist
@@ -405,14 +374,8 @@ DefineQuest("andvaris-gold", {
 		end
 		return false
 	end,
-	AcceptEffects = function(s)
-		local oinling_player = GetFactionPlayer("oinling-clan")
-		unit = CreateUnit("unit-revealer", trigger_player, {GetPlayerData(oinling_player, "StartPosX"), GetPlayerData(oinling_player, "StartPosY")}, GetMapLayer("nidavellir")) -- show the location of Andvari's holding
-		SetUnitVariable(unit, "TTL", 600)
-	end,
 	CompletionEffects = function(s)
 		local oinling_player = GetFactionPlayer("oinling-clan")
-		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 10000)
 		unit = CreateUnit("unit-ring", PlayerNumNeutral, {GetPlayerData(oinling_player, "StartPosX"), GetPlayerData(oinling_player, "StartPosY")}, GetSiteData("andvaris-falls", "MapLayer"))
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")
@@ -422,20 +385,7 @@ DefineQuest("andvaris-gold", {
 		SetUnitVariable(unit, "Identified", false)
 		unit = CreateUnit("unit-revealer", trigger_player, {GetPlayerData(oinling_player, "StartPosX"), GetPlayerData(oinling_player, "StartPosY")}, GetMapLayer("nidavellir")) -- show the location of the ring
 		SetUnitVariable(unit, "TTL", 600)
-		CallDialogue("andvaris-gold-is-ours", trigger_player)
-	end,
-	Rewards = "+10,000 Copper, Magic Ring",
-	Objectives = {
-		{
-			"objective-type", "destroy_units",
-			"objective-string", "Destroy the Oinling Clan's Mead Hall",
-			"quantity", 1,
-			"settlement", "andvaris-falls",
-			"unit-type", "unit-dwarven-town-hall",
-			"unit-type", "unit-dwarven-stronghold"
-		}
-	},
-	Competitive = true
+	end
 })
 
 DefineQuest("island-of-the-lizard-god", {
