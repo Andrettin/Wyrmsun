@@ -65,7 +65,6 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Temples and universities can now only be built on top of "Building Site" locations.
 - Building sites, mineral deposits and the like now display to which settlement they belong in their tooltip.
-- When a building location is being chosen, tiles are now overlaid with their owner's color.
 
 * Maps
 - Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
