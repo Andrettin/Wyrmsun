@@ -29,6 +29,10 @@ pressburg = {
 			owner = lombard_tribe #Bratislava's area was Lombardic territory in 526 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
+		533 = {
+			owner = avar_tribe #part of Avar territory in the 533-600 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
 		919 = {
 			owner = hungary #Presburg was a part of the kingdom of Hungary in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}

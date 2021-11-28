@@ -1,0 +1,23 @@
+the_principality_of_nitra = {
+	name = "The Principality of Nitra"
+	icon = icon_norse_town_hall
+	player_color = red
+	description = "Our nobility clamors for us to expand our rule to all of the Moravian lands - including the territory of Nitra, to our east."
+	conditions = {
+		civilization = slavic
+		or = {
+			faction = bohemia
+			faction = moravia
+		}
+		settlement = prague
+		not = {
+			settlement = pressburg
+		}
+	}
+	objectives = {
+		have_settlement = pressburg
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
