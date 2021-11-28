@@ -1,0 +1,36 @@
+the_unification_of_scandinavia = {
+	name = "The Unification of Scandinavia"
+	icon = icon_norse_town_hall
+	player_color = blue
+	description = "Most of Scandinavia already stands under our rule. Should we but take the rest of it, Scandinavia will finally be one!"
+	conditions = {
+		or = {
+			#must either be Sweden or Denmark, have consolidated the respective historic lands, and have taken over Norway
+			and = {
+				faction = sweden
+				settlement = stockholm
+				settlement = gothenburg
+				settlement = linkoping
+			}
+			and = {
+				faction = denmark
+				settlement = copenhagen
+				settlement = aarhus
+			}
+		}
+		settlement = malmo
+		settlement = oslo
+	}
+	objectives = {
+		have_settlement = stockholm
+		have_settlement = gothenburg
+		have_settlement = linkoping
+		have_settlement = copenhagen
+		have_settlement = aarhus
+		have_settlement = malmo
+		have_settlement = oslo
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
