@@ -1,21 +1,31 @@
 the_unification_of_scandinavia = {
 	name = "The Unification of Scandinavia"
 	icon = icon_norse_town_hall
-	player_color = blue
+	player_color = red
 	description = "Most of Scandinavia already stands under our rule. Should we but take the rest of it, Scandinavia will finally be one!"
 	conditions = {
+		civilization = norse
 		or = {
 			#must either be Sweden or Denmark, have consolidated the respective historic lands, and have taken over Norway
-			and = {
-				faction = sweden
-				settlement = stockholm
-				settlement = gothenburg
-				settlement = linkoping
-			}
+			#and = { #disabled for Sweden for now, since under the AI it will lack the ability to complete the mission, as the AI doesn't transport workers across landmasses
+			#	faction = sweden
+			#	settlement = stockholm
+			#	settlement = gothenburg
+			#	settlement = linkoping
+			#	not = {
+			#		settlement = copenhagen
+			#		settlement = aarhus
+			#	}
+			#}
 			and = {
 				faction = denmark
 				settlement = copenhagen
 				settlement = aarhus
+				not = {
+					settlement = stockholm
+					settlement = gothenburg
+					settlement = linkoping
+				}
 			}
 		}
 		settlement = malmo

@@ -4,6 +4,7 @@ the_viceroyalty_of_norway = {
 	player_color = blue
 	description = "With our rule over the [player.faction.adjective] lands consolidated, the time has come for a more ambitious undertaking: to subjugate Norway."
 	conditions = {
+		civilization = norse
 		or = {
 			#must either be Sweden and possess the historic Swedish lands plus Scania, or be Denmark and possess the historic Danish lands (including Scania)
 			and = {
