@@ -19,7 +19,7 @@ MenuBase {
 	
 	Dropdown {
 		id: world_dropdown
-		anchors.right: map_dropdown.left
+		anchors.right: resources_dropdown.left
 		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: map_dropdown.bottom
 		width: custom_game_menu.dropdown_width
@@ -36,10 +36,10 @@ MenuBase {
 	
 	Dropdown {
 		id: map_dropdown
-		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.left: resources_dropdown.left
 		anchors.bottom: resources_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		width: custom_game_menu.dropdown_width
+		width: custom_game_menu.dropdown_width * 2
 		model: wyrmgus.get_map_infos(world_dropdown.selectedEntry ? world_dropdown.selectedEntry : "Custom")
 		
 		onModelChanged: {
@@ -54,40 +54,6 @@ MenuBase {
 		
 		function get_entry_name(entry) {
 			return entry.name
-		}
-	}
-	
-	NormalText {
-		id: difficulty_label
-		text: "Difficulty:"
-		anchors.left: difficulty_dropdown.left
-		anchors.bottom: difficulty_dropdown.top
-		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-	}
-	
-	Dropdown {
-		id: difficulty_dropdown
-		anchors.left: opponents_dropdown.left
-		anchors.bottom: opponents_label.top
-		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		width: custom_game_menu.dropdown_width
-		model: wyrmgus.get_difficulties()
-		
-		onModelChanged: {
-			set_selected_entry(wyrmgus.preferences.get_difficulty_index())
-		}
-		
-		onSelectedEntryChanged: {
-			if (wyrmgus.preferences.get_difficulty_index() !== selectedEntry) {
-				wyrmgus.preferences.set_difficulty_index(selectedEntry)
-				wyrmgus.preferences.save()
-				
-				wyrmgus.call_lua_command("GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + ";")
-			}
-		}
-		
-		function get_entry_name(entry) {
-			return wyrmgus.get_difficulty_name(entry)
 		}
 	}
 	
@@ -209,7 +175,39 @@ MenuBase {
 			wyrmgus.call_lua_command("GameSettings.GameType = " + (game_type_dropdown.currentIndex - 1) + ";")
 		}
 	}
+	NormalText {
+		id: difficulty_label
+		text: "Difficulty:"
+		anchors.left: difficulty_dropdown.left
+		anchors.bottom: difficulty_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+	}
 	
+	Dropdown {
+		id: difficulty_dropdown
+		anchors.left: resources_dropdown.left
+		anchors.top: game_type_dropdown.top
+		width: custom_game_menu.dropdown_width
+		model: wyrmgus.get_difficulties()
+		
+		onModelChanged: {
+			set_selected_entry(wyrmgus.preferences.get_difficulty_index())
+		}
+		
+		onSelectedEntryChanged: {
+			if (wyrmgus.preferences.get_difficulty_index() !== selectedEntry) {
+				wyrmgus.preferences.set_difficulty_index(selectedEntry)
+				wyrmgus.preferences.save()
+				
+				wyrmgus.call_lua_command("GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + ";")
+			}
+		}
+		
+		function get_entry_name(entry) {
+			return wyrmgus.get_difficulty_name(entry)
+		}
+	}
+		
 	NormalText {
 		id: map_name_label
 		text: "Map: " + (selected_map ? (selected_map.name + " (" + selected_map.map_width + "x" + selected_map.map_height + ")") : "")

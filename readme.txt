@@ -79,6 +79,9 @@ https://github.com/Andrettin/Wyrmsun
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
 
+* User Interface
+- Increased the width of the map dropdown for the custom game menu, as some map names were too long for it.
+
 -----------------------------------------------------------------------
 - 5.2.4
 -----------------------------------------------------------------------
