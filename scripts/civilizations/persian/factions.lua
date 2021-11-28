@@ -27,6 +27,7 @@
 
 DefineFaction("abasgi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Abasgi Tribe",
+	Adjective = "Abasgi",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "blue"
@@ -34,6 +35,7 @@ DefineFaction("abasgi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("alan-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Alan Tribe",
+	Adjective = "Alan",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "purple"
@@ -41,6 +43,7 @@ DefineFaction("alan-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("alazone-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Alazone Tribe",
+	Adjective = "Alazone",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "orange"
@@ -48,6 +51,7 @@ DefineFaction("alazone-tribe", { -- Source: William R. Shepherd, "Historical Atl
 
 DefineFaction("aorsi-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Aorsi Tribe",
+	Adjective = "Aorsi",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "violet"
@@ -55,6 +59,7 @@ DefineFaction("aorsi-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 
 DefineFaction("heniochi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Heniochi Tribe",
+	Adjective = "Heniochi",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "violet"
@@ -62,6 +67,7 @@ DefineFaction("heniochi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7
 
 DefineFaction("iazyge-tribe", {
 	Name = "Iazyge Tribe",
+	Adjective = "Iazyge",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "violet",
@@ -73,6 +79,7 @@ DefineFaction("iazyge-tribe", {
 
 DefineFaction("mede-tribe", {
 	Name = "Mede Tribe",
+	Adjective = "Mede",
 	Civilization = "persian",
 	Type = "tribe",
 	Color = "brown"
@@ -80,6 +87,7 @@ DefineFaction("mede-tribe", {
 
 DefineFaction("navari-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Navari Tribe",
+	Adjective = "Navari",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "blue"
@@ -87,6 +95,7 @@ DefineFaction("navari-tribe", { -- Source: William R. Shepherd, "Historical Atla
 
 DefineFaction("roxolani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Roxolani Tribe",
+	Adjective = "Roxolani",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "red"
@@ -94,6 +103,7 @@ DefineFaction("roxolani-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("sarmatian-tribe", {
 	Name = "Sarmatian Tribe",
+	Adjective = "Sarmatian",
 	Civilization = "persian",
 	Type = "tribe",
 	Color = "red"
@@ -101,6 +111,7 @@ DefineFaction("sarmatian-tribe", {
 
 DefineFaction("scythian-tribe", {
 	Name = "Scythian Tribe",
+	Adjective = "Scythian",
 	Civilization = "persian",
 	Type = "tribe",
 	Color = "green"
@@ -108,6 +119,7 @@ DefineFaction("scythian-tribe", {
 
 DefineFaction("sindi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Sindi Tribe",
+	Adjective = "Sindi",
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "white"
@@ -115,6 +127,7 @@ DefineFaction("sindi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("media", {
 	Name = "Media",
+	Adjective = "Median",
 	Civilization = "persian",
 	Type = "polity",
 	Color = "yellow",
@@ -126,6 +139,7 @@ DefineFaction("media", {
 
 DefineFaction("parthia", {
 	Name = "Parthia",
+	Adjective = "Parthian",
 	Civilization = "persian",
 	Type = "polity",
 	Color = "purple",
@@ -141,6 +155,7 @@ DefineFaction("parthia", {
 
 DefineFaction("persia", {
 	Name = "Persia",
+	Adjective = "Persian",
 	Civilization = "persian",
 	Type = "polity",
 	Color = "yellow",
@@ -154,6 +169,7 @@ DefineFaction("persia", {
 
 DefineFaction("agraei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Agraei Tribe",
+	Adjective = "Agraei",
 	Civilization = "persian", -- should be Arabic?
 	Type = "tribe",
 	Color = "yellow",
@@ -162,6 +178,7 @@ DefineFaction("agraei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("arab-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Arab Tribe",
+	Adjective = "Arab",
 	Civilization = "persian", -- should be Arabic
 	Type = "tribe",
 	Color = "green",
@@ -170,6 +187,7 @@ DefineFaction("arab-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("gaetuli-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Gaetuli Tribe",
+	Adjective = "Gaetuli",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
 	Color = "black",
@@ -178,6 +196,7 @@ DefineFaction("gaetuli-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("garamantes-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Garamantes Tribe",
+	Adjective = "Garamantes",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
 	Color = "yellow",
@@ -186,6 +205,7 @@ DefineFaction("garamantes-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p.
 
 DefineFaction("mauri-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Mauri Tribe",
+	Adjective = "Mauri",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
 	Color = "green",
@@ -194,6 +214,7 @@ DefineFaction("mauri-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 
 DefineFaction("musulamii-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Musulamii Tribe",
+	Adjective = "Musulamii",
 	Civilization = "persian", -- should be Berber?
 	Type = "tribe",
 	Color = "brown",
@@ -202,6 +223,7 @@ DefineFaction("musulamii-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 
 
 DefineFaction("nabataei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Name = "Nabataei Tribe",
+	Adjective = "Nabataei",
 	Civilization = "persian", -- should be Arabic?
 	Type = "tribe",
 	Color = "black",

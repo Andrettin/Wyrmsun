@@ -35,6 +35,7 @@ DefineFaction("illyrian-tribe", {
 
 DefineFaction("taulantii-tribe", {
 	Name = "Taulantii Tribe",
+	Adjective = "Taulantii",
 	Civilization = "illyrian",
 	Type = "tribe",
 	Color = "blue"

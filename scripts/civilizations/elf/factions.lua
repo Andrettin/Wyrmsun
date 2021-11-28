@@ -27,6 +27,7 @@
 
 DefineFaction("annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
 	Name = "Annwn",
+	Adjective = "Annwn",
 	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
 	Type = "polity",
 	Color = "brown",
@@ -36,6 +37,7 @@ DefineFaction("annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der 
 
 DefineFaction("lintanir", {
 	Name = "Lintanir",
+	Adjective = "Lintanir",
 	Civilization = "elf",
 	Type = "polity",
 	Color = "red",
@@ -44,6 +46,7 @@ DefineFaction("lintanir", {
 
 DefineFaction("ulfdalir", {
 	Name = "Ulfdalir",
+	Adjective = "Ulfdalir",
 	Civilization = "elf",
 	Type = "polity",
 	Color = "black",
@@ -53,6 +56,7 @@ DefineFaction("ulfdalir", {
 
 DefineFaction("wesmere", {
 	Name = "Wesmere",
+	Adjective = "Wesmerean",
 	Civilization = "elf",
 	Type = "polity",
 	Color = "green",
@@ -63,6 +67,7 @@ DefineFaction("wesmere", {
 
 DefineFaction("bloodleaf-company", {
 	Name = "Bloodleaf Company",
+	Adjective = "Bloodleaf",
 	Civilization = "elf",
 	Type = "mercenary_company",
 	Color = "red",

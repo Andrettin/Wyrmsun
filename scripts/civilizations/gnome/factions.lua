@@ -27,6 +27,7 @@
 
 DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 158.
 	Name = "Acthnic Tribe",
+	Adjective = "Acthnic",
 	Civilization = "gnome",
 	Type = "tribe",
 	Color = "red",
@@ -36,6 +37,7 @@ DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 
 DefineFaction("cubital-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 157-158.
 	Name = "Cubital Tribe",
+	Adjective = "Cubital",
 	Civilization = "gnome",
 	Type = "tribe",
 	Color = "brown",
@@ -44,6 +46,7 @@ DefineFaction("cubital-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 
 DefineFaction("derro-tribe", {
 	Name = "Derro Tribe",
+	Adjective = "Derro",
 	Civilization = "gnome",
 	Type = "tribe",
 	Color = "black",
@@ -54,6 +57,7 @@ DefineFaction("derro-tribe", {
 
 DefineFaction("sagan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 159.
 	Name = "Sagan Tribe",
+	Adjective = "Sagan",
 	Civilization = "gnome",
 	Type = "tribe",
 	Color = "green",
@@ -63,6 +67,7 @@ DefineFaction("sagan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 18
 
 DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 156-157.
 	Name = "Vulcan Tribe",
+	Adjective = "Vulcan",
 	Civilization = "gnome",
 	Type = "tribe",
 	Color = "yellow",
@@ -71,6 +76,7 @@ DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1
 
 DefineFaction("acthna", {
 	Name = "Acthna",
+	Adjective = "Acthnic",
 	ParentFaction = "acthnic-tribe",
 	Civilization = "gnome",
 	Type = "polity",
@@ -83,6 +89,7 @@ DefineFaction("acthna", {
 
 DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
 	Name = "Untersberg",
+	Adjective = "Untersbergian",
 	Civilization = "gnome",
 	Type = "polity",
 	Color = "blue", -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.

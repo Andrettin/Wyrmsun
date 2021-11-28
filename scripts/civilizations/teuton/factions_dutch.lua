@@ -27,6 +27,7 @@
 
 DefineFaction("brabant", {
 	Name = "Brabant",
+	Adjective = "Brabant",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "cyan",
@@ -38,6 +39,7 @@ DefineFaction("brabant", {
 
 DefineFaction("drenthe", {
 	Name = "Drenthe",
+	Adjective = "Drenthe",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "cyan",
@@ -49,6 +51,7 @@ DefineFaction("drenthe", {
 
 DefineFaction("holland", {
 	Name = "Holland",
+	Adjective = "Hollander",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "red",
@@ -60,6 +63,7 @@ DefineFaction("holland", {
 
 DefineFaction("overijssel", {
 	Name = "Overijssel",
+	Adjective = "Overijssel",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "pink",

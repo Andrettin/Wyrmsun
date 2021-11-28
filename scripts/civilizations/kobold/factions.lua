@@ -27,6 +27,7 @@
 
 DefineFaction("fafning-tribe", {
 	Name = "Fafning Tribe",
+	Adjective = "Fafning",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "purple",
@@ -35,6 +36,7 @@ DefineFaction("fafning-tribe", {
 
 DefineFaction("goinling-tribe", {
 	Name = "Goinling Tribe",
+	Adjective = "Goinling",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "white",
@@ -43,6 +45,7 @@ DefineFaction("goinling-tribe", {
 
 DefineFaction("grabakling-tribe", {
 	Name = "Grabakling Tribe",
+	Adjective = "Grabakling",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "white",
@@ -51,6 +54,7 @@ DefineFaction("grabakling-tribe", {
 
 DefineFaction("grafvitning-tribe", {
 	Name = "Grafvitning Tribe",
+	Adjective = "Grafvitning",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "black",
@@ -59,6 +63,7 @@ DefineFaction("grafvitning-tribe", {
 
 DefineFaction("grafvolling-tribe", {
 	Name = "Grafvolling Tribe",
+	Adjective = "Grafvolling",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "red",
@@ -71,6 +76,7 @@ DefineFaction("grafvolling-tribe", {
 
 DefineFaction("moinling-tribe", {
 	Name = "Moinling Tribe",
+	Adjective = "Moinling",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "orange",
@@ -79,6 +85,7 @@ DefineFaction("moinling-tribe", {
 
 DefineFaction("ofning-tribe", {
 	Name = "Ofning Tribe",
+	Adjective = "Ofning",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "violet",
@@ -87,6 +94,7 @@ DefineFaction("ofning-tribe", {
 
 DefineFaction("shellscale-tribe", {
 	Name = "Shellscale Tribe",
+	Adjective = "Shellscale",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "blue"
@@ -94,6 +102,7 @@ DefineFaction("shellscale-tribe", {
 
 DefineFaction("svafning-tribe", {
 	Name = "Svafning Tribe",
+	Adjective = "Svafning",
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "blue",
@@ -104,6 +113,7 @@ DefineFaction("svafning-tribe", {
 
 DefineFaction("sellscale-company", {
 	Name = "Sellscale Company",
+	Adjective = "Sellscale",
 	Civilization = "kobold",
 	Type = "mercenary_company",
 	Color = "black",

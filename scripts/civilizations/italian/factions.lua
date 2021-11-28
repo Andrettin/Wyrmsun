@@ -27,6 +27,7 @@
 
 DefineFaction("florence", {
 	Name = "Florence",
+	Adjective = "Florentian",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "orange",
@@ -36,6 +37,7 @@ DefineFaction("florence", {
 
 DefineFaction("genoa", {
 	Name = "Genoa",
+	Adjective = "Genoan",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "green",
@@ -45,6 +47,7 @@ DefineFaction("genoa", {
 
 DefineFaction("milan", {
 	Name = "Milan",
+	Adjective = "Milanese",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "orange",
@@ -53,6 +56,7 @@ DefineFaction("milan", {
 
 DefineFaction("modena", {
 	Name = "Modena",
+	Adjective = "Modenese",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "yellow",
@@ -61,6 +65,7 @@ DefineFaction("modena", {
 
 DefineFaction("parma", {
 	Name = "Parma",
+	Adjective = "Parmesan",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "green",
@@ -69,6 +74,7 @@ DefineFaction("parma", {
 
 DefineFaction("sardinia", {
 	Name = "Sardinia",
+	Adjective = "Sardinian",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "yellow",
@@ -86,6 +92,7 @@ DefineFaction("savoy", {
 
 DefineFaction("sicily", {
 	Name = "Sicily",
+	Adjective = "Sicilian",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "green",
@@ -94,6 +101,7 @@ DefineFaction("sicily", {
 
 DefineFaction("siena", {
 	Name = "Siena",
+	Adjective = "Senese",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "green",
@@ -102,6 +110,7 @@ DefineFaction("siena", {
 
 DefineFaction("tuscany", {
 	Name = "Tuscany",
+	Adjective = "Tuscan",
 	Civilization = "italian",
 	Type = "polity",
 	Color = "orange",

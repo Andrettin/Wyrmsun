@@ -27,6 +27,7 @@
 
 DefineFaction("asa-tribe", {
 	Name = "Asa Tribe",
+	Adjective = "Asa",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "orange",
@@ -45,6 +46,7 @@ DefineFaction("asa-tribe", {
 
 DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Herminone Tribe",
+	Adjective = "Herminone",
 	Civilization = "germanic",
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
@@ -54,6 +56,7 @@ DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest G
 
 DefineFaction("hersing-tribe", {
 	Name = "Hersing Tribe",
+	Adjective = "Hersing",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "white",
@@ -69,6 +72,7 @@ DefineFaction("hersing-tribe", {
 
 DefineFaction("hlesing-tribe", {
 	Name = "Hlesing Tribe",
+	Adjective = "Hlesing",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "black",
@@ -79,6 +83,7 @@ DefineFaction("hlesing-tribe", {
 
 DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Ingaevone Tribe",
+	Adjective = "Ingaevone",
 	Civilization = "germanic",
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
@@ -89,6 +94,7 @@ DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest G
 
 DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Istaevone Tribe",
+	Adjective = "Istaevone",
 	Civilization = "germanic",
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
@@ -98,6 +104,7 @@ DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest G
 
 DefineFaction("jarling-tribe", {
 	Name = "Eraling Tribe",
+	Adjective = "Eraling",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "yellow",
@@ -110,6 +117,7 @@ DefineFaction("jarling-tribe", {
 
 DefineFaction("karling-tribe", {
 	Name = "Karling Tribe",
+	Adjective = "Karling",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "brown",
@@ -125,6 +133,7 @@ DefineFaction("karling-tribe", {
 
 DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Skeldung Tribe",
+	Adjective = "Skeldung",
 	Civilization = "germanic",
 	ParentFaction = "asa-tribe",
 	Type = "tribe",
@@ -134,6 +143,7 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 
 DefineFaction("thielung-tribe", {
 	Name = "Thielung Tribe",
+	Adjective = "Thielung",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "white",
@@ -143,6 +153,7 @@ DefineFaction("thielung-tribe", {
 
 DefineFaction("thralling-tribe", {
 	Name = "Thrahiling Tribe",
+	Adjective = "Thrahiling",
 	Civilization = "germanic",
 	Type = "tribe",
 	Color = "black",
@@ -158,6 +169,7 @@ DefineFaction("thralling-tribe", {
 
 DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Name = "Yngling Tribe",
+	Adjective = "Yngling",
 	Civilization = "germanic",
 	ParentFaction = "asa-tribe",
 	Type = "tribe",

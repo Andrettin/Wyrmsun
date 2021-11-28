@@ -27,6 +27,7 @@
 
 DefineFaction("baden", {
 	Name = "Baden",
+	Adjective = "Badenian",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "black",
@@ -39,6 +40,7 @@ DefineFaction("baden", {
 
 DefineFaction("switzerland", {
 	Name = "Switzerland",
+	Adjective = "Swiss",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "red",
@@ -56,6 +58,7 @@ DefineFaction("switzerland", {
 
 DefineFaction("wurtemberg", {
 	Name = "Wurtemberg",
+	Adjective = "Wurtembergian",
 	Civilization = "teuton",
 	ParentFaction = "swabia",
 	Type = "polity",

@@ -27,6 +27,7 @@
 
 DefineFaction("brazil", {
 	Name = "Brazil",
+	Adjective = "Brazilian",
 	Civilization = "portuguese",
 	Type = "polity",
 	Color = "green",

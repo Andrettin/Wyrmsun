@@ -27,6 +27,7 @@
 
 DefineFaction("hatti", {
 	Name = "Hatti",
+	Adjective = "Hittite",
 	Civilization = "hittite",
 	Type = "polity",
 	Color = "green",
@@ -35,6 +36,7 @@ DefineFaction("hatti", {
 
 DefineFaction("lydia", {
 	Name = "Lydia",
+	Adjective = "Lydian",
 	Civilization = "hittite",
 	Type = "polity",
 	Color = "teal",
@@ -46,6 +48,7 @@ DefineFaction("lydia", {
 
 DefineFaction("troy", {
 	Name = "Troy",
+	Adjective = "Trojan",
 	Civilization = "hittite",
 	Type = "polity",
 	Color = "red",

@@ -29,6 +29,7 @@
 
 DefineFaction("crimea", {
 	Name = "Crimea",
+	Adjective = "Crimean",
 	Civilization = "turkish",
 	Type = "polity",
 	Color = "brown",
@@ -43,6 +44,7 @@ DefineFaction("crimea", {
 
 DefineFaction("turkey", {
 	Name = "Turkey",
+	Adjective = "Turkish",
 	Civilization = "turkish",
 	Type = "polity",
 	Color = "brown",

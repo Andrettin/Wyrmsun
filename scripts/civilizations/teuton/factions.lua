@@ -27,6 +27,7 @@
 
 DefineFaction("saxon-tribe", {
 	Name = "Saxon Tribe",
+	Adjective = "Saxon",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "pink",
@@ -45,6 +46,7 @@ DefineFaction("saxon-tribe", {
 
 DefineFaction("chauci-tribe", {
 	Name = "Chauci Tribe",
+	Adjective = "Chauci",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "black",
@@ -55,6 +57,7 @@ DefineFaction("chauci-tribe", {
 
 DefineFaction("cherusci-tribe", {
 	Name = "Cherusci Tribe",
+	Adjective = "Cherusci",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "teal",
@@ -65,6 +68,7 @@ DefineFaction("cherusci-tribe", {
 
 DefineFaction("frisian-tribe", {
 	Name = "Frisian Tribe",
+	Adjective = "Frisian",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "violet",
@@ -75,6 +79,7 @@ DefineFaction("frisian-tribe", {
 
 DefineFaction("bavarian-tribe", {
 	Name = "Bavarian Tribe",
+	Adjective = "Bavarian",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "cyan",
@@ -86,6 +91,7 @@ DefineFaction("bavarian-tribe", {
 
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
+	Adjective = "Varini",
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "brown",
@@ -117,6 +123,7 @@ DefineFaction("brandenburg", {
 
 DefineFaction("bremen", {
 	Name = "Bremen",
+	Adjective = "Bremer",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "black",
@@ -128,6 +135,7 @@ DefineFaction("bremen", {
 
 DefineFaction("brunswick", {
 	Name = "Brunswick",
+	Adjective = "Brunswick",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "green",
@@ -139,6 +147,7 @@ DefineFaction("brunswick", {
 
 DefineFaction("cologne", {
 	Name = "Cologne",
+	Adjective = "Cologne",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "white",
@@ -156,6 +165,7 @@ DefineFaction("cologne", {
 
 DefineFaction("franconia", { -- represents the German region, so it uses base Teuton elements, rather than Frankish ones
 	Name = "Franconia",
+	Adjective = "Franconian",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "blue",
@@ -189,6 +199,7 @@ DefineFaction("hesse", {
 
 DefineFaction("lombardy", {
 	Name = "Lombardy",
+	Adjective = "Lombard",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "green",
@@ -200,6 +211,7 @@ DefineFaction("lombardy", {
 
 DefineFaction("magdeburg", {
 	Name = "Magdeburg",
+	Adjective = "Magdeburgian",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "black",
@@ -220,6 +232,7 @@ DefineFaction("magdeburg", {
 
 DefineFaction("mecklenburg", {
 	Name = "Mecklenburg",
+	Adjective = "Mecklenburgian",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "brown",

@@ -1,0 +1,7 @@
+aestui_tribe = {
+	name = "Aestui Tribe" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	adjective = "Aestui"
+	civilization = baltic #correct?
+	type = tribe
+	color = green
+}

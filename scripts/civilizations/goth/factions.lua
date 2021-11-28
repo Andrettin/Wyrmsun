@@ -27,6 +27,7 @@
 
 DefineFaction("bastarnae-tribe", {
 	Name = "Bastarnae Tribe",
+	Adjective = "Bastarnae",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "blue",
@@ -37,6 +38,7 @@ DefineFaction("bastarnae-tribe", {
 
 DefineFaction("burgundian-tribe", {
 	Name = "Burgundian Tribe",
+	Adjective = "Burgundian",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "brown",
@@ -47,6 +49,7 @@ DefineFaction("burgundian-tribe", {
 
 DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
+	Adjective = "Herulian",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "green",
@@ -57,6 +60,7 @@ DefineFaction("herulian-tribe", {
 
 DefineFaction("lugii-tribe", {
 	Name = "Lugii Tribe",
+	Adjective = "Lugii",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "purple",
@@ -67,6 +71,7 @@ DefineFaction("lugii-tribe", {
 
 DefineFaction("rugian-tribe", {
 	Name = "Rugian Tribe",
+	Adjective = "Rugian",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "red",
@@ -77,6 +82,7 @@ DefineFaction("rugian-tribe", {
 
 DefineFaction("silingae-tribe", {
 	Name = "Silingae Tribe",
+	Adjective = "Silingae",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "orange",
@@ -87,6 +93,7 @@ DefineFaction("silingae-tribe", {
 
 DefineFaction("turcilingian-tribe", {
 	Name = "Turcilingian Tribe",
+	Adjective = "Turcilingian",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "blue",
@@ -97,6 +104,7 @@ DefineFaction("turcilingian-tribe", {
 
 DefineFaction("vandal-tribe", {
 	Name = "Vandal Tribe",
+	Adjective = "Vandal",
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "cyan",
@@ -123,6 +131,7 @@ DefineFaction("burgundy", {
 
 DefineFaction("gothia", {
 	Name = "Gothia",
+	Adjective = "Gothic",
 	Civilization = "goth",
 	Type = "polity",
 	Color = "red",

@@ -27,6 +27,7 @@
 
 DefineFaction("moldavia", {
 	Name = "Moldavia",
+	Adjective = "Moldavian",
 	Civilization = "romanian",
 	Type = "polity",
 	Color = "brown",
@@ -42,6 +43,7 @@ DefineFaction("moldavia", {
 
 DefineFaction("romania", {
 	Name = "Romania",
+	Adjective = "Romanian",
 	Civilization = "romanian",
 	Type = "polity",
 	Color = "yellow",
@@ -50,6 +52,7 @@ DefineFaction("romania", {
 
 DefineFaction("transylvania", {
 	Name = "Transylvania",
+	Adjective = "Transylvanian",
 	Civilization = "romanian",
 	Type = "polity",
 	Color = "cyan",
@@ -65,6 +68,7 @@ DefineFaction("transylvania", {
 
 DefineFaction("wallachia", {
 	Name = "Wallachia",
+	Adjective = "Wallachian",
 	Civilization = "romanian",
 	Type = "polity",
 	Color = "brown",

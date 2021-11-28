@@ -27,6 +27,7 @@
 
 DefineFaction("blackeye-clan", {
 	Name = "Blackeye Clan",
+	Adjective = "Blackeye",
 	Civilization = "orc",
 	Type = "tribe",
 	Color = "black"
@@ -34,6 +35,7 @@ DefineFaction("blackeye-clan", {
 
 DefineFaction("bloody-sword-clan", {
 	Name = "Bloody Sword Clan",
+	Adjective = "Bloody Sword",
 	Civilization = "orc",
 	Type = "tribe",
 	Color = "red"

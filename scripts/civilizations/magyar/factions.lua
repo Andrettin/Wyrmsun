@@ -27,6 +27,7 @@
 
 DefineFaction("magyar-tribe", {
 	Name = "Magyar Tribe",
+	Adjective = "Magyar",
 	Civilization = "magyar",
 	Type = "tribe",
 	Color = "green"
@@ -34,6 +35,7 @@ DefineFaction("magyar-tribe", {
 
 DefineFaction("hungary", {
 	Name = "Hungary",
+	Adjective = "Hungarian",
 	Civilization = "magyar",
 	Type = "polity",
 	Color = "green",

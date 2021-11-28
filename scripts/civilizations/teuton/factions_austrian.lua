@@ -27,6 +27,7 @@
 
 DefineFaction("carinthia", {
 	Name = "Carinthia", -- "Kärnten"
+	Adjective = "Carinthian",
 	Civilization = "teuton",
 	Type = "polity",
 	Color = "brown",
@@ -40,6 +41,7 @@ DefineFaction("carinthia", {
 
 DefineFaction("kaiserliche-privilegierte-orientalische-kompagnie", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	Name = "Privileged Imperial Oriental Company",
+	Adjective = "Imperial Oriental",
 	Civilization = "teuton",
 	Type = "trading_company",
 	Color = "white",
@@ -52,6 +54,7 @@ DefineFaction("kaiserliche-privilegierte-orientalische-kompagnie", { -- Source: 
 
 DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 477.
 	Name = "Main Commercial Company of Trieste and Fiume",
+	Adjective = "Main Commercial Triestan",
 	Civilization = "teuton",
 	Type = "trading_company",
 	Color = "white",
@@ -64,6 +67,7 @@ DefineFaction("haubt-handlungs-compagnie-von-triest-und-fiume", { -- Source: Iva
 
 DefineFaction("temisvarer-privilegierte-handelskompagnie", { -- Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, pp. 477-478.
 	Name = "Privileged Temesvaran Trading Company",
+	Adjective = "Temesvaran",
 	Civilization = "teuton",
 	Type = "trading_company",
 	Color = "white",

@@ -27,6 +27,7 @@
 
 DefineFaction("cauci-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Cauci Tribe",
+	Adjective = "Cauci",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
 	Color = "yellow"
@@ -34,6 +35,7 @@ DefineFaction("cauci-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 
 DefineFaction("darini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Darini Tribe",
+	Adjective = "Darini",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
 	Color = "brown"
@@ -41,6 +43,7 @@ DefineFaction("darini-tribe", { -- Source: William R. Shepherd, "Historical Atla
 
 DefineFaction("gangani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Gangani Tribe",
+	Adjective = "Gangani",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
 	Color = "black"
@@ -48,6 +51,7 @@ DefineFaction("gangani-tribe", { -- Source: William R. Shepherd, "Historical Atl
 
 DefineFaction("hibernii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Hibernii Tribe",
+	Adjective = "Hibernii",
 	Civilization = "gael", -- correct?
 	Type = "tribe",
 	Color = "green"
@@ -55,6 +59,7 @@ DefineFaction("hibernii-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("scot-tribe", {
 	Name = "Scot Tribe",
+	Adjective = "Scottish",
 	Civilization = "gael",
 	Type = "tribe",
 	Color = "brown"
@@ -64,6 +69,7 @@ DefineFaction("scot-tribe", {
 
 DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 	Name = "Argyll",
+	Adjective = "Argyll",
 	Civilization = "gael", -- founded by Irish settlers
 	Type = "polity",
 	Color = "purple",
@@ -72,6 +78,7 @@ DefineFaction("argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 
 DefineFaction("dalriada", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	Name = "Dalriada",
+	Adjective = "Dalriadan",
 	Civilization = "gael", -- Scottish kingdom
 	Type = "polity",
 	Color = "brown",
@@ -80,6 +87,7 @@ DefineFaction("dalriada", { -- Source: William R. Shepherd, "Historical Atlas", 
 
 DefineFaction("ireland", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	Name = "Ireland",
+	Adjective = "Irish",
 	Civilization = "gael",
 	Type = "polity",
 	Color = "brown",
@@ -88,6 +96,7 @@ DefineFaction("ireland", { -- Source: William R. Shepherd, "Historical Atlas", 1
 
 DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Name = "Meath",
+	Adjective = "Meath",
 	Civilization = "gael", -- it was an Irish kingdom
 	Type = "polity",
 	Color = "red",
@@ -96,6 +105,7 @@ DefineFaction("meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 
 DefineFaction("scotland-celtic", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	Name = "Scotland",
+	Adjective = "Scottish",
 	Civilization = "gael",
 	Type = "polity",
 	Color = "brown",

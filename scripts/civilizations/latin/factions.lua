@@ -29,6 +29,7 @@
 
 DefineFaction("aequian-tribe", {
 	Name = "Aequian Tribe",
+	Adjective = "Aequian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "teal"
@@ -36,6 +37,7 @@ DefineFaction("aequian-tribe", {
 
 DefineFaction("elymian-tribe", {
 	Name = "Elymian Tribe",
+	Adjective = "Elymian",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Color = "yellow"
@@ -43,6 +45,7 @@ DefineFaction("elymian-tribe", {
 
 DefineFaction("frentanian-tribe", {
 	Name = "Frentanian Tribe",
+	Adjective = "Frentanian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "orange"
@@ -50,6 +53,7 @@ DefineFaction("frentanian-tribe", {
 
 DefineFaction("iapygian-tribe", {
 	Name = "Iapygian Tribe",
+	Adjective = "Iapygian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "teal"
@@ -57,6 +61,7 @@ DefineFaction("iapygian-tribe", {
 
 DefineFaction("latin-tribe", {
 	Name = "Latin Tribe",
+	Adjective = "Latin",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "red",
@@ -65,6 +70,7 @@ DefineFaction("latin-tribe", {
 
 DefineFaction("marsian-tribe", {
 	Name = "Marsian Tribe",
+	Adjective = "Marsian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "brown"
@@ -72,6 +78,7 @@ DefineFaction("marsian-tribe", {
 
 DefineFaction("messapian-tribe", {
 	Name = "Messapian Tribe",
+	Adjective = "Messapian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "green"
@@ -79,6 +86,7 @@ DefineFaction("messapian-tribe", {
 
 DefineFaction("oenotrian-tribe", {
 	Name = "Oenotrian Tribe",
+	Adjective = "Oenotrian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "blue"
@@ -86,6 +94,7 @@ DefineFaction("oenotrian-tribe", {
 
 DefineFaction("picentian-tribe", {
 	Name = "Picentian Tribe",
+	Adjective = "Picentian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "green"
@@ -93,6 +102,7 @@ DefineFaction("picentian-tribe", {
 
 DefineFaction("sabellian-tribe", {
 	Name = "Sabellian Tribe",
+	Adjective = "Sabellian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "white"
@@ -100,6 +110,7 @@ DefineFaction("sabellian-tribe", {
 
 DefineFaction("sabine-tribe", {
 	Name = "Sabine Tribe",
+	Adjective = "Sabine",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "blue"
@@ -107,6 +118,7 @@ DefineFaction("sabine-tribe", {
 
 DefineFaction("samnite-tribe", {
 	Name = "Samnite Tribe",
+	Adjective = "Samnite",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "yellow"
@@ -114,6 +126,7 @@ DefineFaction("samnite-tribe", {
 
 DefineFaction("sicanian-tribe", {
 	Name = "Sicanian Tribe",
+	Adjective = "Sicanian",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Color = "yellow"
@@ -121,6 +134,7 @@ DefineFaction("sicanian-tribe", {
 
 DefineFaction("sicel-tribe", {
 	Name = "Sicel Tribe",
+	Adjective = "Sicel",
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
 	Color = "red"
@@ -128,6 +142,7 @@ DefineFaction("sicel-tribe", {
 
 DefineFaction("umbrian-tribe", {
 	Name = "Umbrian Tribe",
+	Adjective = "Umbrian",
 	Civilization = "latin",
 	Type = "tribe",
 	Color = "pink"
@@ -135,6 +150,7 @@ DefineFaction("umbrian-tribe", {
 
 DefineFaction("venetian-tribe", {
 	Name = "Venetian Tribe",
+	Adjective = "Venetian",
 	Civilization = "latin", -- is not correct, but they could be reasonably close to justify it for game purposes
 	Type = "tribe",
 	Color = "teal"
@@ -144,6 +160,7 @@ DefineFaction("venetian-tribe", {
 
 DefineFaction("mamertines", {
 	Name = "Mamertines",
+	Adjective = "Mamertines",
 	Civilization = "latin",
 	Type = "mercenary_company",
 	Color = "red",

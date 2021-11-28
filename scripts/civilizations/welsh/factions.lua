@@ -29,6 +29,7 @@
 
 DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Name = "Deheubarth",
+	Adjective = "Deheubarth",
 	Civilization = "welsh", -- it was a Welsh kingdom
 	Type = "polity",
 	Color = "black",
@@ -37,6 +38,7 @@ DefineFaction("deheubarth", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 
 DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 9, 117.
 	Name = "Dyfed",
+	Adjective = "Dyfed",
 	Civilization = "welsh",
 	Type = "polity",
 	Color = "red",
@@ -53,6 +55,7 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 
 DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Name = "Elmet",
+	Adjective = "Elmet",
 	Civilization = "welsh",
 	Type = "polity",
 	Color = "teal",
@@ -61,6 +64,7 @@ DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 
 DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
 	Name = "Gwent Is Coed",
+	Adjective = "Gwent Is Coed",
 	Civilization = "welsh", -- it was a Welsh lordship
 	Type = "polity",
 	Color = "green",
@@ -76,6 +80,7 @@ DefineFaction("gwent-is-coed", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 
 DefineFaction("gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Name = "Gwynedd",
+	Adjective = "Gwynedd",
 	Civilization = "welsh",
 	Type = "polity",
 	Color = "blue",
@@ -84,6 +89,7 @@ DefineFaction("gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 
 DefineFaction("powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	Name = "Powys",
+	Adjective = "Powys",
 	Civilization = "welsh",
 	Type = "polity",
 	Color = "green",

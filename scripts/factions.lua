@@ -26,8 +26,6 @@
 --
 
 Load("scripts/civilizations/assyrian/factions.lua")
-Load("scripts/civilizations/babylonian/factions.lua")
-Load("scripts/civilizations/baltic/factions.lua")
 Load("scripts/civilizations/basque/factions.lua")
 Load("scripts/civilizations/briton/factions.lua")
 Load("scripts/civilizations/castillian/factions.lua")
@@ -74,6 +72,7 @@ Load("scripts/civilizations/welsh/factions.lua")
 
 DefineFaction("asgard", {
 	Name = "Asgard",
+	Adjective = "Asgardian",
 	Civilization = "einherjar",
 	Type = "polity",
 	Color = "blue",
@@ -83,6 +82,7 @@ DefineFaction("asgard", {
 
 DefineFaction("hel", {
 	Name = "Hel",
+	Adjective = "Hel",
 	Civilization = "einherjar",
 	Type = "polity",
 	Color = "black",

@@ -27,6 +27,7 @@
 
 DefineFaction("oretanian-tribe", {
 	Name = "Oretanian Tribe",
+	Adjective = "Oretanian",
 	Civilization = "iberian",
 	Type = "tribe",
 	Color = "black"
@@ -34,6 +35,7 @@ DefineFaction("oretanian-tribe", {
 
 DefineFaction("turdetanian-tribe", {
 	Name = "Turdetanian Tribe",
+	Adjective = "Turdetanian",
 	Civilization = "iberian",
 	Type = "tribe",
 	Color = "brown"

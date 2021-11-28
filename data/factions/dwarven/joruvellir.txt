@@ -1,5 +1,5 @@
 joruvellir = {
-	adjective = "Joruvellirian"
+	adjective = "Joruvellir"
 	
 	history = {
 		400 = {

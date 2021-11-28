@@ -27,6 +27,7 @@
 
 DefineFaction("china", {
 	Name = "China",
+	Adjective = "Chinese",
 	Civilization = "chinese",
 	Type = "polity",
 	Color = "yellow",

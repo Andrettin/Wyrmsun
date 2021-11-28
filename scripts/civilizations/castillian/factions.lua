@@ -27,6 +27,7 @@
 
 DefineFaction("argentina", {
 	Name = "Argentina",
+	Adjective = "Argentinian",
 	Civilization = "castillian",
 	Type = "polity",
 	Color = "cyan",
@@ -35,6 +36,7 @@ DefineFaction("argentina", {
 
 DefineFaction("paraguay", {
 	Name = "Paraguay",
+	Adjective = "Paraguayan",
 	Civilization = "castillian",
 	Type = "polity",
 	Color = "blue",
@@ -43,6 +45,7 @@ DefineFaction("paraguay", {
 
 DefineFaction("spain", {
 	Name = "Spain",
+	Adjective = "Spanish",
 	Civilization = "castillian",
 	Type = "polity",
 	Color = "yellow",
@@ -51,6 +54,7 @@ DefineFaction("spain", {
 
 DefineFaction("uruguay", {
 	Name = "Uruguay",
+	Adjective = "Uruguayan",
 	Civilization = "castillian",
 	Type = "polity",
 	Color = "cyan",
@@ -61,6 +65,7 @@ DefineFaction("uruguay", {
 
 DefineFaction("jesuit-order", {
 	Name = "Jesuit Order",
+	Adjective = "Jesuit",
 	Civilization = "castillian",
 	Type = "holy_order",
 	Color = "black",

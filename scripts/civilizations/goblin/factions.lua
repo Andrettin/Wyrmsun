@@ -27,6 +27,7 @@
 
 DefineFaction("aelak-tribe", { -- created by Jesse Crider
 	Name = "Aelak Tribe",
+	Adjective = "Aelak",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "red",
@@ -35,6 +36,7 @@ DefineFaction("aelak-tribe", { -- created by Jesse Crider
 
 DefineFaction("issudru-tribe", { -- created by Jesse Crider
 	Name = "Issudru Tribe",
+	Adjective = "Issudru",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "black",
@@ -43,6 +45,7 @@ DefineFaction("issudru-tribe", { -- created by Jesse Crider
 
 DefineFaction("aurvangling-tribe", {
 	Name = "Aurvangling Tribe",
+	Adjective = "Aurvangling",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "teal",
@@ -52,6 +55,7 @@ DefineFaction("aurvangling-tribe", {
 
 DefineFaction("dreadskull-tribe", {
 	Name = "Dreadskull Tribe",
+	Adjective = "Dreadskull",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "black",
@@ -61,6 +65,7 @@ DefineFaction("dreadskull-tribe", {
 
 DefineFaction("khag-tribe", {
 	Name = "Khag Tribe",
+	Adjective = "Khag",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "brown",
@@ -91,6 +96,7 @@ DefineFaction("khag-tribe", {
 
 DefineFaction("lggi-tribe", {
 	Name = "Lggi Tribe",
+	Adjective = "Lggi",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "violet",
@@ -123,6 +129,7 @@ DefineFaction("lggi-tribe", {
 
 DefineFaction("mabom-tribe", { -- created by Jesse Crider
 	Name = "Mabom Tribe",
+	Adjective = "Mabom",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "purple",
@@ -131,6 +138,7 @@ DefineFaction("mabom-tribe", { -- created by Jesse Crider
 
 DefineFaction("prideblade-tribe", {
 	Name = "Prideblade Tribe",
+	Adjective = "Prideblade",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "white",
@@ -139,6 +147,7 @@ DefineFaction("prideblade-tribe", {
 
 DefineFaction("sigre-tribe", { -- created by Jesse Crider
 	Name = "Sigre Tribe",
+	Adjective = "Sigre",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "yellow",
@@ -147,6 +156,7 @@ DefineFaction("sigre-tribe", { -- created by Jesse Crider
 
 DefineFaction("wildfang-tribe", {
 	Name = "Wildfang Tribe",
+	Adjective = "Wildfang",
 	Civilization = "goblin",
 	Type = "tribe",
 	Color = "red",
@@ -156,6 +166,7 @@ DefineFaction("wildfang-tribe", {
 
 DefineFaction("aurvang", {
 	Name = "Aurvang",
+	Adjective = "Aurvangling",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "teal",
@@ -175,6 +186,7 @@ DefineFaction("aurvang", {
 
 DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
+	Adjective = "Driftwood",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "brown",
@@ -189,6 +201,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 
 DefineFaction("ezmarria", { -- created by Jesse Crider
 	Name = "Ezmarria",
+	Adjective = "Ezmarrian",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "white",
@@ -205,6 +218,7 @@ DefineFaction("ezmarria", { -- created by Jesse Crider
 
 DefineFaction("myridia", { -- created by Jesse Crider
 	Name = "Myridia",
+	Adjective = "Myridian",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "cyan",
@@ -221,6 +235,7 @@ DefineFaction("myridia", { -- created by Jesse Crider
 
 DefineFaction("stilgar", { -- created by Jesse Crider
 	Name = "Stilgar",
+	Adjective = "Stilgar",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "blue",
@@ -237,6 +252,7 @@ DefineFaction("stilgar", { -- created by Jesse Crider
 
 DefineFaction("tenebris", { -- created by Jesse Crider
 	Name = "Tenebris",
+	Adjective = "Tenebris",
 	Civilization = "goblin",
 	Type = "polity",
 	Color = "black",
@@ -255,6 +271,7 @@ DefineFaction("tenebris", { -- created by Jesse Crider
 
 DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Greenskin Cartel", -- in the original adventure, the "Ape Cartel", formed by gorillas who had drunk intelligence potions
+	Adjective = "Greenskin",
 	Civilization = "goblin",
 	Type = "mercenary_company",
 	Color = "green",
@@ -264,6 +281,7 @@ DefineFaction("ape-cartel", { -- from Will Doyle's "Island of the Lizard God"
 
 DefineFaction("skulking-swords", {
 	Name = "Skulking Swords",
+	Adjective = "Skulking Sword",
 	Civilization = "goblin",
 	Type = "mercenary_company",
 	Color = "black",

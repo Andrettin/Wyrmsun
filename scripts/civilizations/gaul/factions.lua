@@ -27,6 +27,7 @@
 
 DefineFaction("aedui-tribe", {
 	Name = "Aedui Tribe",
+	Adjective = "Aedui",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "green"
@@ -34,6 +35,7 @@ DefineFaction("aedui-tribe", {
 
 DefineFaction("arverni-tribe", {
 	Name = "Arverni Tribe",
+	Adjective = "Arverni",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "blue",
@@ -44,6 +46,7 @@ DefineFaction("arverni-tribe", {
 
 DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Caerasi Tribe",
+	Adjective = "Caesari",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "white"
@@ -51,6 +54,7 @@ DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 
 DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Condrusi Tribe",
+	Adjective = "Condrusi",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "brown"
@@ -58,6 +62,7 @@ DefineFaction("condrusi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 
 DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 	Name = "Eburones Tribe",
+	Adjective = "Eburones",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "yellow",
@@ -69,6 +74,7 @@ DefineFaction("eburones-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 
 DefineFaction("helvetii-tribe", {
 	Name = "Helvetii Tribe",
+	Adjective = "Helvetii",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "violet" -- another color, perhaps?
@@ -76,6 +82,7 @@ DefineFaction("helvetii-tribe", {
 
 DefineFaction("ligurian-tribe", {
 	Name = "Ligurian Tribe",
+	Adjective = "Ligurian",
 	Civilization = "gaul", -- were they really Celts?
 	Type = "tribe",
 	Color = "green"
@@ -83,6 +90,7 @@ DefineFaction("ligurian-tribe", {
 
 DefineFaction("menapii-tribe", {
 	Name = "Menapii Tribe",
+	Adjective = "Menapii",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "yellow"
@@ -90,6 +98,7 @@ DefineFaction("menapii-tribe", {
 
 DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
 	Name = "Nervii Tribe",
+	Adjective = "Nervii",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "orange"
@@ -97,6 +106,7 @@ DefineFaction("nervii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germ
 
 DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Poemanni Tribe",
+	Adjective = "Poemanni",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "red"
@@ -104,6 +114,7 @@ DefineFaction("poemanni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 
 DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Segni Tribe",
+	Adjective = "Segni",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "blue"
@@ -111,6 +122,7 @@ DefineFaction("segni-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germa
 
 DefineFaction("sequani-tribe", {
 	Name = "Sequani Tribe",
+	Adjective = "Sequani",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "pink",
@@ -122,6 +134,7 @@ DefineFaction("sequani-tribe", {
 
 DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Treviri Tribe",
+	Adjective = "Treviri",
 	Civilization = "gaul", -- a Belgic tribe
 	Type = "tribe",
 	Color = "green",
@@ -133,6 +146,7 @@ DefineFaction("treviri-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 
 DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	Name = "Tribocci Tribe",
+	Adjective = "Tribocci",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "green"
@@ -140,6 +154,7 @@ DefineFaction("tribocci-tribe", { -- Source: H. H. Howorth, "The Ethnology of Ge
 
 DefineFaction("turone-tribe", {
 	Name = "Turone Tribe",
+	Adjective = "Turone",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "cyan"
@@ -149,6 +164,7 @@ DefineFaction("turone-tribe", {
 
 DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Astures Tribe",
+	Adjective = "Astures",
 	Civilization = "gaul", -- correct?
 	Type = "tribe",
 	Color = "brown"
@@ -156,6 +172,7 @@ DefineFaction("astures-tribe", { -- Tribes in Europe between 264 BC and 180 AD; 
 
 DefineFaction("boii-tribe", {
 	Name = "Boii Tribe",
+	Adjective = "Boii",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "brown"
@@ -163,6 +180,7 @@ DefineFaction("boii-tribe", {
 
 DefineFaction("cantabri-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Cantabri Tribe",
+	Adjective = "Cantabri",
 	Civilization = "gaul", -- correct?
 	Type = "tribe",
 	Color = "orange"
@@ -170,6 +188,7 @@ DefineFaction("cantabri-tribe", { -- Tribes in Europe between 264 BC and 180 AD;
 
 DefineFaction("cotini-tribe", {
 	Name = "Cotini Tribe",
+	Adjective = "Cotini",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "teal"
@@ -177,6 +196,7 @@ DefineFaction("cotini-tribe", {
 
 DefineFaction("norici-tribe", {
 	Name = "Norici Tribe",
+	Adjective = "Norici",
 	Civilization = "gaul",
 	Type = "tribe",
 	Color = "white" -- another color, perhaps?

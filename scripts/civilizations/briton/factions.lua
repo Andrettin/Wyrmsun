@@ -27,6 +27,7 @@
 
 DefineFaction("belgae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Belgae Tribe",
+	Adjective = "Belgae",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "purple"
@@ -34,6 +35,7 @@ DefineFaction("belgae-tribe", { -- Source: William R. Shepherd, "Historical Atla
 
 DefineFaction("brigantes-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Brigantes Tribe",
+	Adjective = "Brigantes",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "pink"
@@ -41,6 +43,7 @@ DefineFaction("brigantes-tribe", { -- Tribes in Europe between 264 BC and 180 AD
 
 DefineFaction("caledonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Caledonii Tribe",
+	Adjective = "Caledonii",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "brown"
@@ -48,6 +51,7 @@ DefineFaction("caledonii-tribe", { -- Source: William R. Shepherd, "Historical A
 
 DefineFaction("cantii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Cantii Tribe",
+	Adjective = "Cantii",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "brown"
@@ -55,6 +59,7 @@ DefineFaction("cantii-tribe", { -- Source: William R. Shepherd, "Historical Atla
 
 DefineFaction("coritani-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Coritani Tribe",
+	Adjective = "Coritani",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "yellow"
@@ -62,6 +67,7 @@ DefineFaction("coritani-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("damnii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Damnii Tribe",
+	Adjective = "Damnii",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "pink"
@@ -69,6 +75,7 @@ DefineFaction("damnii-tribe", { -- Source: William R. Shepherd, "Historical Atla
 
 DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	Name = "Demetae Tribe",
+	Adjective = "Demetae",
 	Civilization = "briton",
 	Type = "tribe",
 	-- the Demetae gave origin to Dyfed, which was a Welsh principality
@@ -77,6 +84,7 @@ DefineFaction("demetae-tribe", { -- Source: Bernhard Maier (trans.), "Das Sagenb
 
 DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Dumnonii Tribe",
+	Adjective = "Dumnonii",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "violet"
@@ -84,6 +92,7 @@ DefineFaction("dumnonii-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("iceni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Iceni Tribe",
+	Adjective = "Iceni",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "cyan"
@@ -91,6 +100,7 @@ DefineFaction("iceni-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 
 DefineFaction("ordovices-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Ordovices Tribe",
+	Adjective = "Ordovices",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "pink"
@@ -98,6 +108,7 @@ DefineFaction("ordovices-tribe", { -- Source: William R. Shepherd, "Historical A
 
 DefineFaction("otalini-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Otalini Tribe",
+	Adjective = "Otalini",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "purple"
@@ -105,6 +116,7 @@ DefineFaction("otalini-tribe", { -- Source: William R. Shepherd, "Historical Atl
 
 DefineFaction("pict-tribe", {
 	Name = "Pict Tribe",
+	Adjective = "Pict",
 	Civilization = "briton",
 	Type = "tribe",
 	Color = "cyan"
@@ -112,6 +124,7 @@ DefineFaction("pict-tribe", {
 
 DefineFaction("regni-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Regni Tribe",
+	Adjective = "Regni",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "green"
@@ -119,6 +132,7 @@ DefineFaction("regni-tribe", { -- Source: William R. Shepherd, "Historical Atlas
 
 DefineFaction("selgovae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Selgovae Tribe",
+	Adjective = "Selgovae",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "white"
@@ -126,6 +140,7 @@ DefineFaction("selgovae-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("sovantae-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Sovantae Tribe",
+	Adjective = "Sovantae",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "blue"
@@ -133,6 +148,7 @@ DefineFaction("sovantae-tribe", { -- Source: William R. Shepherd, "Historical At
 
 DefineFaction("silures-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Silures Tribe",
+	Adjective = "Silures",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "red"
@@ -140,6 +156,7 @@ DefineFaction("silures-tribe", { -- Source: William R. Shepherd, "Historical Atl
 
 DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Name = "Trinobantes Tribe",
+	Adjective = "Trinobantes",
 	Civilization = "briton", -- correct?
 	Type = "tribe",
 	Color = "orange"
@@ -149,6 +166,7 @@ DefineFaction("trinobantes-tribe", { -- Source: William R. Shepherd, "Historical
 
 DefineFaction("pictland", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	Name = "Pictland",
+	Adjective = "Pict",
 	Civilization = "briton",
 	Type = "polity",
 	Color = "black",
@@ -157,6 +175,7 @@ DefineFaction("pictland", { -- Source: William R. Shepherd, "Historical Atlas", 
 
 DefineFaction("strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
 	Name = "Strathclyde",
+	Adjective = "Strathclydian",
 	Civilization = "briton",
 	Type = "polity",
 	Color = "brown",

@@ -29,6 +29,7 @@
 
 DefineFaction("chaoni-tribe", {
 	Name = "Chaoni Tribe",
+	Adjective = "Chaoni",
 	Civilization = "greek",
 	Type = "tribe",
 	Color = "yellow"
@@ -36,6 +37,7 @@ DefineFaction("chaoni-tribe", {
 
 DefineFaction("dolopes-tribe", {
 	Name = "Dolopes Tribe",
+	Adjective = "Dolopes",
 	Civilization = "greek",
 	Type = "tribe",
 	Color = "green"
@@ -83,6 +85,7 @@ DefineFaction("athens", {
 
 DefineFaction("cimmerian-bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Cimmerian Bosphorus",
+	Adjective = "Bosphorean",
 	Civilization = "greek", -- accurate?
 	Type = "polity",
 	Color = "green",
@@ -111,6 +114,7 @@ DefineFaction("corinth", {
 
 DefineFaction("epirus", {
 	Name = "Epirus",
+	Adjective = "Epirote",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "yellow",
@@ -120,6 +124,7 @@ DefineFaction("epirus", {
 
 DefineFaction("ionia", {
 	Name = "Ionia",
+	Adjective = "Ionian",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "black",
@@ -128,6 +133,7 @@ DefineFaction("ionia", {
 
 DefineFaction("krete", {
 	Name = "Krete",
+	Adjective = "Cretan",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "yellow",
@@ -136,6 +142,7 @@ DefineFaction("krete", {
 
 DefineFaction("macedon", {
 	Name = "Macedon",
+	Adjective = "Macedonian",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "brown",
@@ -166,6 +173,7 @@ DefineFaction("mycenae", {
 
 DefineFaction("sparta", {
 	Name = "Sparta",
+	Adjective = "Spartan",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "brown",
@@ -186,6 +194,7 @@ DefineFaction("sparta", {
 
 DefineFaction("thebes", {
 	Name = "Thebes",
+	Adjective = "Theban",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "blue",
@@ -207,6 +216,7 @@ DefineFaction("thebes", {
 
 DefineFaction("thrace", {
 	Name = "Thrace",
+	Adjective = "Thracian",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "orange",
@@ -217,6 +227,7 @@ DefineFaction("thrace", {
 
 DefineFaction("armenia", {
 	Name = "Armenia",
+	Adjective = "Armenian",
 	Civilization = "greek",
 	Type = "polity",
 	Color = "brown",

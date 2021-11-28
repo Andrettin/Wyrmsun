@@ -29,6 +29,7 @@
 
 DefineFaction("dane-tribe", {
 	Name = "Dane Tribe",
+	Adjective = "Danish",
 	Civilization = "norse",
 	Type = "tribe",
 	Color = "red",
@@ -40,6 +41,7 @@ DefineFaction("dane-tribe", {
 
 DefineFaction("geat-tribe", {
 	Name = "Geat Tribe",
+	Adjective = "Geat",
 	Civilization = "norse",
 	Type = "tribe",
 	Color = "teal",
@@ -50,6 +52,7 @@ DefineFaction("geat-tribe", {
 
 DefineFaction("gute-tribe", {
 	Name = "Gute Tribe",
+	Adjective = "Gute",
 	Civilization = "norse",
 	Type = "tribe",
 	Color = "cyan",
@@ -60,6 +63,7 @@ DefineFaction("gute-tribe", {
 
 DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Name = "Sitone Tribe",
+	Adjective = "Sitone",
 	Civilization = "norse", -- correct?
 	Type = "tribe",
 	Color = "brown",
@@ -72,6 +76,7 @@ DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 
 DefineFaction("agder", {
 	Name = "Agder",
+	Adjective = "Agder",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "red",
@@ -95,6 +100,7 @@ DefineFaction("scania", {
 
 DefineFaction("gautland", {
 	Name = "Gautland",
+	Adjective = "Geat",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "teal",
@@ -106,6 +112,7 @@ DefineFaction("gautland", {
 
 DefineFaction("gotland", {
 	Name = "Gotland",
+	Adjective = "Gute",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "cyan",
@@ -117,6 +124,7 @@ DefineFaction("gotland", {
 
 DefineFaction("halogaland", {
 	Name = "Halogaland",
+	Adjective = "Halogaland",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "purple",
@@ -128,6 +136,7 @@ DefineFaction("halogaland", {
 
 DefineFaction("hedmark", {
 	Name = "Hedmark",
+	Adjective = "Hedmark",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "green",
@@ -139,6 +148,7 @@ DefineFaction("hedmark", {
 
 DefineFaction("holmgard", {
 	Name = "Holmgard",
+	Adjective = "Holmgard",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "blue",
@@ -150,6 +160,7 @@ DefineFaction("holmgard", {
 
 DefineFaction("hordaland", {
 	Name = "Hordaland",
+	Adjective = "Hordaland",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "cyan",
@@ -161,6 +172,7 @@ DefineFaction("hordaland", {
 
 DefineFaction("orkney", { -- Earldom of Orkney
 	Name = "Orkney",
+	Adjective = "Orkney",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "yellow",
@@ -179,6 +191,7 @@ DefineFaction("orkney", { -- Earldom of Orkney
 
 DefineFaction("sogn", {
 	Name = "Sogn",
+	Adjective = "Sogn",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "blue",
@@ -190,6 +203,7 @@ DefineFaction("sogn", {
 
 DefineFaction("vestfold", {
 	Name = "Vestfold",
+	Adjective = "Vestfold",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "red",
@@ -204,6 +218,7 @@ DefineFaction("vestfold", {
 
 DefineFaction("vingulmark", {
 	Name = "Vingulmark",
+	Adjective = "Vingulmark",
 	Civilization = "norse",
 	Type = "polity",
 	Color = "red",
@@ -220,6 +235,7 @@ DefineFaction("vingulmark", {
 
 DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 94.
 	Name = "Jomsvikings",
+	Adjective = "Jomsviking",
 	Civilization = "norse",
 	Type = "mercenary_company",
 	Color = "blue",
@@ -230,6 +246,7 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 
 DefineFaction("varangian-guard", {
 	Name = "Varangian Guard",
+	Adjective = "Varangian",
 	Civilization = "norse",
 	Type = "mercenary_company",
 	Color = "red",

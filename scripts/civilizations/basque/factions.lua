@@ -27,6 +27,7 @@
 
 DefineFaction("maglemose-tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Name = "Maglemose Tribe",
+	Adjective = "Maglemose",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "red"
@@ -34,6 +35,7 @@ DefineFaction("maglemose-tribe", { -- Scandinavian pre-Indo-Europeans are very u
 
 DefineFaction("kongemose-tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Name = "Kongemose Tribe",
+	Adjective = "Kongemose",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "red"
@@ -42,6 +44,7 @@ DefineFaction("kongemose-tribe", { -- based on the Kongemose culture of Zealand 
 
 DefineFaction("ertebolle-tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Name = "Ertebolle Tribe",
+	Adjective = "Ertebolle",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "red"
@@ -65,6 +68,7 @@ DefineFaction("gylfing_tribe", { -- Scandinavian pre-Indo-Europeans are very unl
 
 DefineFaction("cardialware-tribe", {
 	Name = "Cardialware Tribe",
+	Adjective = "Cardialware",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "yellow"
@@ -72,6 +76,7 @@ DefineFaction("cardialware-tribe", {
 
 DefineFaction("bellbeaker-tribe", {
 	Name = "Bellbeaker Tribe",
+	Adjective = "Bellbeaker",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "green"
@@ -79,6 +84,7 @@ DefineFaction("bellbeaker-tribe", {
 
 DefineFaction("linearware-tribe", {
 	Name = "Linearware Tribe",
+	Adjective = "Linearware",
 	Civilization = "basque",
 	Type = "tribe",
 	Color = "yellow"
@@ -86,6 +92,7 @@ DefineFaction("linearware-tribe", {
 
 DefineFaction("sauveterrian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
 	Name = "Sauveterrian Tribe",
+	Adjective = "Sauveterrian",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
 	Color = "brown"
@@ -93,6 +100,7 @@ DefineFaction("sauveterrian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 
 
 DefineFaction("castelnovian-tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
 	Name = "Castelnovian Tribe",
+	Adjective = "Castelnovian",
 	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
 	Type = "tribe",
 	Color = "white"

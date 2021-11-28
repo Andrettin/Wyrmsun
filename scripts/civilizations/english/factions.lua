@@ -27,6 +27,7 @@
 
 DefineFaction("scotland", {
 	Name = "Scotland",
+	Adjective = "Scottish",
 	Civilization = "english",
 	Type = "polity",
 	Color = "blue",

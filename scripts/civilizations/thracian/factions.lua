@@ -27,6 +27,7 @@
 
 DefineFaction("apsinthii-tribe", {
 	Name = "Apsinthii Tribe",
+	Adjective = "Apsinthii",
 	Civilization = "thracian",
 	Type = "tribe",
 	Color = "purple"
@@ -34,6 +35,7 @@ DefineFaction("apsinthii-tribe", {
 
 DefineFaction("carpi-tribe", {
 	Name = "Carpi Tribe",
+	Adjective = "Carpi",
 	Civilization = "thracian", -- accurate?
 	Type = "tribe",
 	Color = "blue"
@@ -41,6 +43,7 @@ DefineFaction("carpi-tribe", {
 
 DefineFaction("costoboci-tribe", {
 	Name = "Costoboci Tribe",
+	Adjective = "Costoboci",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
 	Color = "red"
@@ -48,6 +51,7 @@ DefineFaction("costoboci-tribe", {
 
 DefineFaction("daci-tribe", {
 	Name = "Daci Tribe",
+	Adjective = "Daci",
 	Civilization = "thracian", -- correct?
 	Type = "tribe",
 	Color = "violet"
@@ -55,6 +59,7 @@ DefineFaction("daci-tribe", {
 
 DefineFaction("edoni-tribe", {
 	Name = "Edoni Tribe",
+	Adjective = "Edoni",
 	Civilization = "thracian",
 	Type = "tribe",
 	Color = "white"
@@ -62,6 +67,7 @@ DefineFaction("edoni-tribe", {
 
 DefineFaction("getae-tribe", {
 	Name = "Getae Tribe",
+	Adjective = "Getae",
 	Civilization = "thracian",
 	Type = "tribe",
 	Color = "teal"
@@ -69,6 +75,7 @@ DefineFaction("getae-tribe", {
 
 DefineFaction("odomanti-tribe", {
 	Name = "Odomanti Tribe",
+	Adjective = "Odomanti",
 	Civilization = "thracian", -- were they really Thracian?
 	Type = "tribe",
 	Color = "black"
@@ -76,6 +83,7 @@ DefineFaction("odomanti-tribe", {
 
 DefineFaction("odrysae-tribe", {
 	Name = "Odrysae Tribe",
+	Adjective = "Odrysae",
 	Civilization = "thracian",
 	Type = "tribe",
 	Color = "red"
@@ -83,6 +91,7 @@ DefineFaction("odrysae-tribe", {
 
 DefineFaction("triballi-tribe", {
 	Name = "Triballi Tribe",
+	Adjective = "Triballi",
 	Civilization = "thracian",
 	Type = "tribe",
 	Color = "green"

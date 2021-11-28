@@ -1,0 +1,9 @@
+babylon = {
+	name = "Babylon"
+	adjective = "Babylonian"
+	civilization = babylonian
+	type = polity
+	color = red
+	default_tier = kingdom
+	default_capital = babylon
+}

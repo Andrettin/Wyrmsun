@@ -27,6 +27,7 @@
 
 DefineFaction("alamanni-tribe", {
 	Name = "Alamanni Tribe",
+	Adjective = "Alamanni",
 	Civilization = "suebi",
 	Type = "tribe",
 	Color = "blue",
@@ -37,6 +38,7 @@ DefineFaction("alamanni-tribe", {
 
 DefineFaction("buri-tribe", {
 	Name = "Buri Tribe",
+	Adjective = "Buri",
 	Civilization = "suebi", -- accurate?
 	ParentFaction = "suebi_tribe", -- accurate?
 	Type = "tribe",
@@ -48,6 +50,7 @@ DefineFaction("buri-tribe", {
 
 DefineFaction("hermunduri-tribe", {
 	Name = "Hermunduri Tribe",
+	Adjective = "Hermunduri",
 	Civilization = "suebi", -- accurate?
 	Type = "tribe",
 	Color = "blue",
@@ -62,6 +65,7 @@ DefineFaction("hermunduri-tribe", {
 
 DefineFaction("marcomanni-tribe", {
 	Name = "Marcomanni Tribe",
+	Adjective = "Marcomanni",
 	Civilization = "suebi",
 	Type = "tribe",
 	Color = "orange", -- change to a better one?
@@ -80,6 +84,7 @@ DefineFaction("marcomanni-tribe", {
 
 DefineFaction("quadi-tribe", {
 	Name = "Quadi Tribe",
+	Adjective = "Quadi",
 	Civilization = "suebi",
 	ParentFaction = "marcomanni-tribe",
 	Type = "tribe",
@@ -100,6 +105,7 @@ DefineFaction("quadi-tribe", {
 
 DefineFaction("semnone-tribe", {
 	Name = "Semnone Tribe",
+	Adjective = "Semnone",
 	Civilization = "suebi",
 	Type = "tribe",
 	Color = "brown",
@@ -110,6 +116,7 @@ DefineFaction("semnone-tribe", {
 
 DefineFaction("thuringian-tribe", {
 	Name = "Thuringian Tribe",
+	Adjective = "Thuringian",
 	Civilization = "suebi",
 	Type = "tribe",
 	Color = "green",
@@ -120,6 +127,7 @@ DefineFaction("thuringian-tribe", {
 
 DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Name = "Galicia",
+	Adjective = "Galician",
 	Civilization = "suebi",
 	Type = "polity",
 	Color = "black",

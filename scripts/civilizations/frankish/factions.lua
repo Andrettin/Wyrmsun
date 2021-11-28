@@ -27,6 +27,7 @@
 
 DefineFaction("ampsivarii-tribe", {
 	Name = "Ampsivarii Tribe",
+	Adjective = "Ampsivarii",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Color = "cyan",
@@ -37,6 +38,7 @@ DefineFaction("ampsivarii-tribe", {
 
 DefineFaction("batavian-tribe", {
 	Name = "Batavian Tribe",
+	Adjective = "Batavian",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Color = "orange",
@@ -47,6 +49,7 @@ DefineFaction("batavian-tribe", {
 
 DefineFaction("chamavi-tribe", {
 	Name = "Chamavi Tribe",
+	Adjective = "Chamavi",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Color = "pink",
@@ -57,6 +60,7 @@ DefineFaction("chamavi-tribe", {
 
 DefineFaction("chatti-tribe", {
 	Name = "Chatti Tribe",
+	Adjective = "Chatti",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Color = "yellow",
@@ -67,6 +71,7 @@ DefineFaction("chatti-tribe", {
 
 DefineFaction("sugambri-tribe", {
 	Name = "Sugambri Tribe",
+	Adjective = "Sugambri",
 	Civilization = "frankish", -- accurate?
 	Type = "tribe",
 	Color = "black",
@@ -77,6 +82,7 @@ DefineFaction("sugambri-tribe", {
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
 	Name = "Ubii Tribe",
+	Adjective = "Ubii",
 	Civilization = "frankish",
 	Type = "tribe",
 	Color = "purple",
@@ -88,6 +94,7 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 
 DefineFaction("frank-tribe", {
 	Name = "Frank Tribe",
+	Adjective = "Frankish",
 	Civilization = "frankish",
 	Type = "tribe",
 	Color = "green",
@@ -103,6 +110,7 @@ DefineFaction("frank-tribe", {
 
 DefineFaction("austrasia", {
 	Name = "Austrasia",
+	Adjective = "Austrasian",
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
@@ -122,6 +130,7 @@ DefineFaction("austrasia", {
 
 DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	Name = "East Francia",
+	Adjective = "East Frankish",
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
@@ -143,6 +152,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 
 DefineFaction("neustria", {
 	Name = "Neustria",
+	Adjective = "Neustrian",
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
@@ -162,6 +172,7 @@ DefineFaction("neustria", {
 
 DefineFaction("salia", {
 	Name = "Salia",
+	Adjective = "Salian",
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",
@@ -178,6 +189,7 @@ DefineFaction("salia", {
 
 DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused with the original Kingdom of the Burgundians - an East Germanic people - or the French region)
 	Name = "Burgundia",
+	Adjective = "Burgundian",
 	Civilization = "frankish",
 	ParentFaction = "francia",
 	Type = "polity",

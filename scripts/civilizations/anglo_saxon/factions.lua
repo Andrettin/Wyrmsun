@@ -27,6 +27,7 @@
 
 DefineFaction("angle-tribe", {
 	Name = "Angle Tribe",
+	Adjective = "Angle",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "white",
@@ -37,6 +38,7 @@ DefineFaction("angle-tribe", {
 
 DefineFaction("avione-tribe", {
 	Name = "Avione Tribe",
+	Adjective = "Avione",
 	Civilization = "anglo-saxon", -- accurate?
 	Type = "tribe",
 	Color = "white",
@@ -47,6 +49,7 @@ DefineFaction("avione-tribe", {
 
 DefineFaction("charude-tribe", {
 	Name = "Charude Tribe",
+	Adjective = "Charude",
 	Civilization = "anglo-saxon", -- accurate?
 	Type = "tribe",
 	Color = "purple",
@@ -57,6 +60,7 @@ DefineFaction("charude-tribe", {
 
 DefineFaction("jute-tribe", {
 	Name = "Jute Tribe",
+	Adjective = "Jute",
 	Civilization = "anglo-saxon", -- accurate?
 	Type = "tribe",
 	Color = "red",
@@ -67,6 +71,7 @@ DefineFaction("jute-tribe", {
 
 DefineFaction("teuton-tribe", {
 	Name = "Teuton Tribe",
+	Adjective = "Teuton",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "orange",
@@ -77,6 +82,7 @@ DefineFaction("teuton-tribe", {
 
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Bernice Tribe",
+	Adjective = "Bernice",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "brown",
@@ -88,6 +94,7 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 
 DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
 	Name = "Cantware Tribe",
+	Adjective = "Cantware",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "cyan",
@@ -99,6 +106,7 @@ DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England
 
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Dere Tribe",
+	Adjective = "Dere",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "blue",
@@ -110,6 +118,7 @@ DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	Name = "Gumeninga Tribe",
+	Adjective = "Gumeninga",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "brown",
@@ -121,6 +130,7 @@ DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Englan
 
 DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
 	Name = "Lindisfaran Tribe",
+	Adjective = "Lindisfaran",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "purple",
@@ -132,6 +142,7 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 
 DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
 	Name = "Mierce Tribe",
+	Adjective = "Mierce",
 	Civilization = "anglo-saxon",
 	Type = "tribe",
 	Color = "white",
@@ -143,6 +154,7 @@ DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England",
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Bernicia",
+	Adjective = "Bernician",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "brown",
@@ -155,6 +167,7 @@ DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 
 DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Deira",
+	Adjective = "Deiran",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "blue",
@@ -167,6 +180,7 @@ DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 
 DefineFaction("east-anglia", {
 	Name = "East Anglia",
+	Adjective = "East Anglian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "pink",
@@ -179,6 +193,7 @@ DefineFaction("east-anglia", {
 
 DefineFaction("essex", {
 	Name = "Essex",
+	Adjective = "Essexian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "purple",
@@ -191,6 +206,7 @@ DefineFaction("essex", {
 
 DefineFaction("jutland", {
 	Name = "Jutland",
+	Adjective = "Jutish",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "red",
@@ -214,6 +230,7 @@ DefineFaction("kent", {
 
 DefineFaction("mercia", {
 	Name = "Mercia",
+	Adjective = "Mercian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "white",
@@ -226,6 +243,7 @@ DefineFaction("mercia", {
 
 DefineFaction("middle-anglia", {
 	Name = "Middle Anglia",
+	Adjective = "Middle Anglian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "violet",
@@ -238,6 +256,7 @@ DefineFaction("middle-anglia", {
 
 DefineFaction("middlesex", {
 	Name = "Middlesex",
+	Adjective = "Middlesexian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "blue",
@@ -261,6 +280,7 @@ DefineFaction("sussex", {
 
 DefineFaction("wessex", {
 	Name = "Wessex",
+	Adjective = "Wessexian",
 	Civilization = "anglo-saxon",
 	Type = "polity",
 	Color = "red",

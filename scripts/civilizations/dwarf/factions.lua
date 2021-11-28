@@ -66,6 +66,7 @@ DefineFaction("goldhoof_clan", {
 
 DefineFaction("eikinskjaldi-clan", {
 	Name = "Eikinskjaldi Clan",
+	Adjective = "Eikinskjaldi",
 	Civilization = "dwarf",
 	ParentFaction = "goldhoof_clan",
 	Type = "tribe",
@@ -79,6 +80,7 @@ DefineFaction("eikinskjaldi-clan", {
 
 DefineFaction("norlund-clan", {
 	Name = "Norlund Clan",
+	Adjective = "Norlund",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "red",
@@ -90,6 +92,7 @@ DefineFaction("norlund-clan", {
 
 DefineFaction("oinling-clan", {
 	Name = "Oinling Clan",
+	Adjective = "Oinling",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "yellow",
@@ -101,6 +104,7 @@ DefineFaction("oinling-clan", {
 
 DefineFaction("shadowcharm-clan", {
 	Name = "Shadowcharm Clan",
+	Adjective = "Shadowcharm",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "black",
@@ -112,6 +116,7 @@ DefineFaction("shadowcharm-clan", {
 
 DefineFaction("shinsplitter-clan", {
 	Name = "Shinsplitter Clan",
+	Adjective = "Shinsplitter",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "green",
@@ -123,6 +128,7 @@ DefineFaction("shinsplitter-clan", {
 
 DefineFaction("shorbear-clan", {
 	Name = "Shorbear Clan",
+	Adjective = "Shorbear",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "blue",
@@ -182,6 +188,7 @@ DefineFaction("shorbear-clan", {
 
 DefineFaction("whitesteel-clan", {
 	Name = "Whitesteel Clan",
+	Adjective = "Whitesteel",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "white",
@@ -323,6 +330,7 @@ DefineFaction("lyr", {
 
 DefineFaction("order-of-loremasters", { -- from Battle for Wesnoth: The Hammer of Thursagan
 	Name = "Order of Loremasters",
+	Adjective = "Loremaster",
 	Civilization = "dwarf",
 	Type = "holy_order", -- should be a non-religious order of sages instead
 	Color = "white",
@@ -333,6 +341,7 @@ DefineFaction("order-of-loremasters", { -- from Battle for Wesnoth: The Hammer o
 
 DefineFaction("yawning-yales", {
 	Name = "Yawning Yales",
+	Adjective = "Yawning Yale",
 	ParentFaction = "goldhoof_clan", -- Joruvellir
 	Civilization = "dwarf",
 	Type = "mercenary_company",

@@ -27,6 +27,7 @@
 
 DefineFaction("uralic-tribe", {
 	Name = "Uralic Tribe",
+	Adjective = "Uralic",
 	Civilization = "uralic",
 	Type = "tribe",
 	Color = "teal"

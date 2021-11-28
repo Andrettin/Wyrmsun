@@ -27,6 +27,7 @@
 
 DefineFaction("bryges-tribe", {
 	Name = "Bryges Tribe",
+	Adjective = "Bryges",
 	Civilization = "phrygian",
 	Type = "tribe",
 	Color = "violet"

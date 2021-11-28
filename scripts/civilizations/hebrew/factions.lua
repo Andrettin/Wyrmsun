@@ -27,6 +27,7 @@
 
 DefineFaction("aramaean-tribe", {
 	Name = "Aramaean Tribe",
+	Adjective = "Aramaean",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
 	Color = "black",
@@ -35,6 +36,7 @@ DefineFaction("aramaean-tribe", {
 
 DefineFaction("asher-tribe", {
 	Name = "Asher Tribe",
+	Adjective = "Asher",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -43,6 +45,7 @@ DefineFaction("asher-tribe", {
 
 DefineFaction("benjamin-tribe", {
 	Name = "Benjamin Tribe",
+	Adjective = "Benjamin",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -51,6 +54,7 @@ DefineFaction("benjamin-tribe", {
 
 DefineFaction("ephraim-tribe", {
 	Name = "Ephraim Tribe",
+	Adjective = "Ephraim",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -59,6 +63,7 @@ DefineFaction("ephraim-tribe", {
 
 DefineFaction("gad-tribe", {
 	Name = "Gad Tribe",
+	Adjective = "Gad",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -67,6 +72,7 @@ DefineFaction("gad-tribe", {
 
 DefineFaction("issachar-tribe", {
 	Name = "Issachar Tribe",
+	Adjective = "Issachar",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -75,6 +81,7 @@ DefineFaction("issachar-tribe", {
 
 DefineFaction("judah-tribe", {
 	Name = "Judah Tribe",
+	Adjective = "Judah",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -83,6 +90,7 @@ DefineFaction("judah-tribe", {
 
 DefineFaction("kenite-tribe", {
 	Name = "Kenite Tribe",
+	Adjective = "Kenite",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
 	Color = "green",
@@ -91,6 +99,7 @@ DefineFaction("kenite-tribe", {
 
 DefineFaction("manasseh-tribe", {
 	Name = "Manasseh Tribe",
+	Adjective = "Manasseh",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -99,6 +108,7 @@ DefineFaction("manasseh-tribe", {
 
 DefineFaction("naphtali-tribe", {
 	Name = "Naphtali Tribe",
+	Adjective = "Naphtali",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -107,6 +117,7 @@ DefineFaction("naphtali-tribe", {
 
 DefineFaction("philistine-tribe", {
 	Name = "Philistine Tribe",
+	Adjective = "Philistine",
 	Civilization = "hebrew", -- not quite accurate, should change to something more appropriate
 	Type = "tribe",
 	Color = "green",
@@ -115,6 +126,7 @@ DefineFaction("philistine-tribe", {
 
 DefineFaction("reuben-tribe", {
 	Name = "Reuben Tribe",
+	Adjective = "Reuben",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -123,6 +135,7 @@ DefineFaction("reuben-tribe", {
 
 DefineFaction("simeon-tribe", {
 	Name = "Simeon Tribe",
+	Adjective = "Simeon",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -131,6 +144,7 @@ DefineFaction("simeon-tribe", {
 
 DefineFaction("zebulon-tribe", {
 	Name = "Zebulon Tribe",
+	Adjective = "Zebulon",
 	Civilization = "hebrew",
 	Type = "tribe",
 	Color = "orange",
@@ -139,6 +153,7 @@ DefineFaction("zebulon-tribe", {
 
 DefineFaction("israel", {
 	Name = "Israel",
+	Adjective = "Israelite",
 	Civilization = "hebrew",
 	Type = "polity",
 	Color = "yellow",
@@ -147,6 +162,7 @@ DefineFaction("israel", {
 
 DefineFaction("judah", {
 	Name = "Judah",
+	Adjective = "Judaean",
 	Civilization = "hebrew",
 	Type = "polity",
 	Color = "blue",

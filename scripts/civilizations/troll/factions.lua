@@ -27,6 +27,7 @@
 
 DefineFaction("ironwood", { -- area where trolls lived in the Norse myths
 	Name = "Ironwood",
+	Adjective = "Ironwood",
 	Civilization = "troll",
 	Type = "tribe",
 	Color = "black",

@@ -27,6 +27,7 @@
 
 DefineFaction("geirrodung-clan", {
 	Name = "Geirrodung Clan",
+	Adjective = "Geirrodung",
 	Civilization = "ettin",
 	Type = "tribe",
 	Color = "red",
@@ -43,6 +44,7 @@ DefineFaction("geirrodung-clan", {
 
 DefineFaction("greedstone-company", {
 	Name = "Greedstone Company",
+	Adjective = "Greedstone",
 	Civilization = "ettin",
 	Type = "mercenary_company",
 	Color = "yellow",
