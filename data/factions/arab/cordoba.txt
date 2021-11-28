@@ -1,5 +1,6 @@
 cordoba = {
 	name = "Cordoba"
+	adjective = "Cordoban"
 	civilization = arab
 	type = polity
 	color = pink

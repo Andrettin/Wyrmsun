@@ -1,4 +1,6 @@
 brising_clan = {
+	adjective = "Brising"
+	
 	history = {
 		-3000 = {
 			#acquired_upgrades += upgrade_deity_odin

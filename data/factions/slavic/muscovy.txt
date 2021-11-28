@@ -1,5 +1,6 @@
 muscovy = {
 	name = "Muscovy"
+	adjective = "Muscovite"
 	civilization = slavic
 	type = polity
 	color = red

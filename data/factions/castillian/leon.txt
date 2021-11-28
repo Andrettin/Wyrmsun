@@ -1,5 +1,6 @@
 leon = {
 	name = "Leon" #"León"
+	adjective = "Leonese"
 	civilization = castillian
 	type = polity
 	color = red

@@ -1,5 +1,6 @@
 rome = {
 	name = "Rome"
+	adjective = "Roman"
 	civilization = latin
 	type = polity
 	color = red

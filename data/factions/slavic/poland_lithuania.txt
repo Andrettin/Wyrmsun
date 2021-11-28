@@ -1,6 +1,6 @@
 poland_lithuania = {
 	name = "Poland-Lithuania"
-	adjective = "Polish"
+	adjective = "Polish-Lithuanian"
 	civilization = slavic
 	type = polity
 	color = red

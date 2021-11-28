@@ -1,5 +1,6 @@
 barcelona = {
 	name = "Barcelona"
+	adjective = "Barcelonian"
 	civilization = castillian
 	type = polity
 	color = yellow

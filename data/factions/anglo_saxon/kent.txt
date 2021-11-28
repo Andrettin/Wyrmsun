@@ -1,4 +1,6 @@
 kent = {
+	adjective = "Kentish"
+	
 	history = {
 		597 = {
 			#king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.

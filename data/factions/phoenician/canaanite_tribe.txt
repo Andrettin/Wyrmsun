@@ -1,5 +1,6 @@
 canaanite_tribe = {
 	name = "Canaanite Tribe"
+	adjective = "Canaanite"
 	civilization = phoenician #correct?
 	type = tribe
 	color = red

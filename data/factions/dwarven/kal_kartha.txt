@@ -1,4 +1,6 @@
 kal_kartha = {
+	adjective = "Kal Karthan"
+	
 	history = {
 		400 = {
 			#polities require writing

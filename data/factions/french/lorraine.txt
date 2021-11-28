@@ -1,5 +1,6 @@
 lorraine = {
 	name = "Lorraine"
+	adjective = "Lorrainer"
 	civilization = french
 	type = polity
 	color = yellow

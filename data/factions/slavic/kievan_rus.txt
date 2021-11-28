@@ -1,5 +1,6 @@
 kievan_rus = {
 	name = "Kievan Rus"
+	adjective = "Kievan"
 	civilization = slavic
 	type = polity
 	color = green

@@ -1,4 +1,6 @@
 sussex = {
+	adjective = "Sussexian"
+	
 	history = {
 		686 = {
 			#king Æthelwalh of the South Saxons had been converted to Christianity by 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 138.

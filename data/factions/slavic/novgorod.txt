@@ -1,5 +1,6 @@
 novgorod = {
 	name = "Novgorod"
+	adjective = "Novgorodian"
 	civilization = slavic
 	type = polity
 	color = burgundy

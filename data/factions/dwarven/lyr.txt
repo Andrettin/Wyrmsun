@@ -1,4 +1,6 @@
 lyr = {
+	adjective = "Lyran"
+	
 	history = {
 		400 = {
 			#polities require writing

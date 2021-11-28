@@ -1,5 +1,6 @@
 byzantium = {
 	name = "Byzantium"
+	adjective = "Byzantine"
 	civilization = greek
 	type = polity
 	color = purple

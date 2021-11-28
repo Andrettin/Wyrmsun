@@ -1,5 +1,6 @@
 surghan_mercenaries = {
 	name = "Surghan Mercenaries"
+	adjective = "Surghan"
 	civilization = dwarven
 	type = mercenary_company
 	color = blue

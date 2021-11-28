@@ -1,5 +1,6 @@
 carthage = {
 	name = "Carthage"
+	adjective = "Carthaginian"
 	civilization = phoenician
 	type = polity
 	color = black

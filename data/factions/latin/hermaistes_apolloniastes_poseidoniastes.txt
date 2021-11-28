@@ -1,5 +1,6 @@
 hermaistes_apolloniastes_poseidoniastes = { #Source: Tenney Frank, "Mercantilism and Rome's Foreign Policy", 1913, p. 243.
 	name = "Hermaistes" #"Hermaistes, Apolloniastes, Poseidoniastes"
+	adjective = "Hermaistes"
 	civilization = latin
 	type = holy_order
 	color = red

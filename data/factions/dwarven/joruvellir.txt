@@ -1,4 +1,6 @@
 joruvellir = {
+	adjective = "Joruvellirian"
+	
 	history = {
 		400 = {
 			#polities require writing

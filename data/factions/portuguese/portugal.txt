@@ -1,5 +1,6 @@
 portugal = {
 	name = "Portugal"
+	adjective = "Portuguese"
 	civilization = portuguese
 	type = polity
 	color = green

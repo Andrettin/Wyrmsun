@@ -1,5 +1,6 @@
 egypt = {
 	name = "Egypt"
+	adjective = "Egyptian"
 	civilization = egyptian
 	type = polity
 	color = green

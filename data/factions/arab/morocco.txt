@@ -1,5 +1,6 @@
 morocco = {
 	name = "Morocco"
+	adjective = "Moroccan"
 	civilization = arab
 	type = polity
 	color = red

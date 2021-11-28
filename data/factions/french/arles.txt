@@ -1,5 +1,6 @@
 arles = {
 	name = "Arles"
+	adjective = "Arlesian"
 	civilization = french
 	type = polity
 	color = cyan

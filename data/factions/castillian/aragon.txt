@@ -1,5 +1,6 @@
 aragon = {
 	name = "Aragon"
+	adjective = "Aragonese"
 	civilization = castillian
 	type = polity
 	color = purple

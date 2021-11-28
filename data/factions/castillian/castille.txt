@@ -1,5 +1,6 @@
 castille = {
 	name = "Castille"
+	adjective = "Castillian"
 	civilization = castillian
 	type = polity
 	color = yellow

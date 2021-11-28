@@ -1,5 +1,6 @@
 asturias = {
 	name = "Asturias"
+	adjective = "Asturian"
 	civilization = castillian
 	type = polity
 	color = green

@@ -1,4 +1,6 @@
 gylfing_tribe = {
+	adjective = "Gylfing"
+	
 	history = {
 		-3600 = {
 			#Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.

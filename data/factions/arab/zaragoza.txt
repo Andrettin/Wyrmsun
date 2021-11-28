@@ -1,5 +1,6 @@
 zaragoza = {
 	name = "Zaragoza"
+	adjective = "Zaragozan"
 	civilization = arab
 	type = polity
 	color = black

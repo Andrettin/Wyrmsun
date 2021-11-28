@@ -1,5 +1,6 @@
 bourgogne = {
 	name = "Bourgogne"
+	adjective = "Bourguignon"
 	civilization = french
 	type = polity
 	color = blue

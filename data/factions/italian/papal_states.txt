@@ -1,5 +1,6 @@
 papal_states = {
 	name = "Papal States"
+	adjective = "Papal"
 	civilization = italian
 	type = polity
 	color = brown
