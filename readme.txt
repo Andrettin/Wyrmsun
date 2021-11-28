@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Increased the width of the map dropdown for the custom game menu, as some map names were too long for it.
+- Items sold at the market now have a blue border if they are magic, and orange if they are unique.
 
 -----------------------------------------------------------------------
 - 5.2.4

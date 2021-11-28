@@ -345,7 +345,6 @@ AddButtonPanelButton(185, 140)
 
 CUserInterface:get().ButtonPanel.X = Video.Width - 243 * get_scale_factor()
 CUserInterface:get().ButtonPanel.Y = Video.Height - 186 * get_scale_factor()
-CUserInterface:get().ButtonPanel.AutoCastBorderColorRGB = CColor(0, 0, 252)
 
 CUserInterface:get():get_minimap().X = 17 * get_scale_factor()
 CUserInterface:get():get_minimap().Y = Video.Height - 156 * get_scale_factor()

@@ -195,21 +195,12 @@ DefineButtonStyle("icon", {
 	TextAlign = "Right",
 	TextPos = {46 * get_scale_factor(), 26 * get_scale_factor()},
 	Default = {
-		Border = {
-			Color = {0, 0, 0}, Size = 1,
-		},
 	},
 	Hover = {
-		TextNormalColor = "yellow",
-		Border = {
-			Color = {128, 128, 128}, Size = 0,
-		},
+		TextNormalColor = "yellow"
 	},
 	Clicked = {
-		TextNormalColor = "yellow",
-		Border = {
-			Color = {128, 128, 128}, Size = 0,
-		},
+		TextNormalColor = "yellow"
 	},
 })
 
