@@ -76,6 +76,9 @@ https://github.com/Andrettin/Wyrmsun
 - Borders being shown on water is now optional (off by default).
 - If the preferences file cannot be parsed, then the default values for the preferences are used, instead of the game exiting.
 
+* Quests
+- Fixed issue which caused the initial dialogue to not trigger properly for the Mead of Wisdom legacy quest.
+
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
 

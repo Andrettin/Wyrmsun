@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+local fjalar_and_galar_player = 2
+
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "brising_clan")
 	SetPlayerData(2, "Name", "Fjalar and Galar")
@@ -117,8 +119,8 @@ AddTrigger("the-mead-of-wisdom-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Brising Clan") and PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") == false) then
-			player = GetFactionPlayer("Brising Clan")
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") == false) then
+			player = GetThisPlayer()
 			return true
 		end
 		return false
@@ -158,7 +160,7 @@ AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 	function()
 		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
+			uncount = GetUnits(fjalar_and_galar_player)
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
 					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
@@ -175,7 +177,7 @@ AddTrigger("the-mead-of-wisdom-fjalar-and-galar-found",
 		local fjalar = nil
 		local galar = nil
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Fjalar and Galar"))
+		uncount = GetUnits(fjalar_and_galar_player)
 		for unit1 = 1,table.getn(uncount) do 
 			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and string.find(GetUnitVariable(uncount[unit1], "Name"), "Fjalar")) then
 				fjalar = uncount[unit1]
@@ -233,7 +235,7 @@ AddTrigger("the-mead-of-wisdom-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-steelclad") < 1 and GetPlayerData(GetFactionPlayer("Fjalar and Galar"), "UnitTypesCount", "unit-dwarven-thane") < 1) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") and GetPlayerData(fjalar_and_galar_player, "UnitTypesCount", "unit-dwarven-steelclad") < 1 and GetPlayerData(fjalar_and_galar_player, "UnitTypesCount", "unit-dwarven-thane") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
