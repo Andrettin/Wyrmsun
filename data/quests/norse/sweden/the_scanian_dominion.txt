@@ -5,6 +5,7 @@ the_scanian_dominion = {
 	description = "The Scanian lands on our southern border are ripe for conquest. Controlling them is of vital importance to allow our ships to pass unimpeded through the Sound."
 	conditions = {
 		faction = sweden
+		settlement = stockholm
 		settlement = gothenburg
 		settlement = linkoping
 		not = {

@@ -1,0 +1,23 @@
+the_dominion_of_livonia = {
+	name = "The Dominion of Livonia"
+	icon = icon_norse_town_hall
+	player_color = blue
+	description = "With Estonia firmly under our control, we may use it as a base for further expansion to the south, to Livonia."
+	conditions = {
+		faction = sweden
+		settlement = stockholm
+		settlement = gothenburg
+		settlement = linkoping
+		settlement = helsinki
+		settlement = tallinn
+		not = {
+			settlement = riga
+		}
+	}
+	objectives = {
+		have_settlement = riga
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
