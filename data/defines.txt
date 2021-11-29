@@ -19,7 +19,7 @@ minimap_non_land_territory_alpha = 64
 selected_border_color = { 0 252 0 }
 autocast_border_color = { 0 0 252 }
 magic_item_border_color = { 0 0 252 }
-unique_item_border_color = { 248 140 20 }
+unique_item_border_color = { 189 141 0 }
 
 map_area_top_margin = 16
 map_area_bottom_margin = 176
