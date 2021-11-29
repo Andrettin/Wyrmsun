@@ -17,6 +17,10 @@ pressburg = {
 			building_classes += town_hall
 		}
 		
+		-27 = {
+			owner = none
+		}
+		
 		-9 = {
 			owner = quadi_tribe #if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		}
