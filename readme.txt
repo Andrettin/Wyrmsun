@@ -61,6 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI will now declare war on a player if it has a quest to own a settlement possessed by that player.
 - The AI will now continuously check if it can build a town hall in the desired settlement if it has a quest to own a given settlement.
 - The AI will now only build town halls on settlements with territory adjacent to their own. It will still build a town hall on a quest objective settlement, even if it is farther away.
+- The AI can now transport workers to other landmasses to build settlements.
 
 * Buildings
 - Temples and universities can now only be built on top of "Building Site" locations.
