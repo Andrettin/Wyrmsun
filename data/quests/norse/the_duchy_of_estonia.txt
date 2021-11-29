@@ -4,11 +4,23 @@ the_duchy_of_estonia = {
 	player_color = red
 	description = "The Estonian lands are a prime target for us to expand across the Baltic, and strenghten our position in that sea."
 	conditions = {
-		faction = denmark
-		#must control the historic Danish lands in the Baltic, i.e. Sjaelland and Scania, as well as Jutland (which also provides a settlement in the same landmass as Tallinn)
-		settlement = copenhagen
-		settlement = malmo
-		settlement = aarhus
+		or = {
+			and = {
+				faction = denmark
+				#must control the historic Danish lands in the Baltic, i.e. Sjaelland and Scania, as well as Jutland (which also provides a settlement in the same landmass as Tallinn)
+				settlement = copenhagen
+				settlement = malmo
+				settlement = aarhus
+			}
+			and = {
+				faction = sweden
+				#must control the core Swedish lands, plus Finland (which is what Sweden historically controlled when it took over Estonia
+				settlement = stockholm
+				settlement = gothenburg
+				settlement = linkoping
+				settlement = helsinki
+			}
+		}
 		not = {
 			settlement = tallinn
 		}

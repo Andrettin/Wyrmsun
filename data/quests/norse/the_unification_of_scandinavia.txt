@@ -7,16 +7,16 @@ the_unification_of_scandinavia = {
 		civilization = norse
 		or = {
 			#must either be Sweden or Denmark, have consolidated the respective historic lands, and have taken over Norway
-			#and = { #disabled for Sweden for now, since under the AI it will lack the ability to complete the mission, as the AI doesn't transport workers across landmasses
-			#	faction = sweden
-			#	settlement = stockholm
-			#	settlement = gothenburg
-			#	settlement = linkoping
-			#	not = {
-			#		settlement = copenhagen
-			#		settlement = aarhus
-			#	}
-			#}
+			and = {
+				faction = sweden
+				settlement = stockholm
+				settlement = gothenburg
+				settlement = linkoping
+				not = {
+					settlement = copenhagen
+					settlement = aarhus
+				}
+			}
 			and = {
 				faction = denmark
 				settlement = copenhagen
