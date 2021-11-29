@@ -1,0 +1,22 @@
+the_dominion_of_pomerania = {
+	name = "The Dominion of Pomerania"
+	icon = icon_norse_town_hall
+	player_color = blue
+	description = "Now that our rule is solidly established in Scania, we must look to the south, across the sea. There lies Pomerania, the conquest of which would open the door for greater influence in the affairs of the Continent."
+	conditions = {
+		faction = sweden
+		settlement = stockholm
+		settlement = gothenburg
+		settlement = linkoping
+		settlement = malmo
+		not = {
+			settlement = stettin
+		}
+	}
+	objectives = {
+		have_settlement = stettin
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
