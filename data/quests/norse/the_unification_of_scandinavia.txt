@@ -15,12 +15,14 @@ the_unification_of_scandinavia = {
 				not = {
 					settlement = copenhagen
 					settlement = aarhus
+					settlement = kiel
 				}
 			}
 			and = {
 				faction = denmark
 				settlement = copenhagen
 				settlement = aarhus
+				settlement = kiel
 				not = {
 					settlement = stockholm
 					settlement = gothenburg
@@ -39,6 +41,7 @@ the_unification_of_scandinavia = {
 		have_settlement = aarhus
 		have_settlement = malmo
 		have_settlement = oslo
+		have_settlement = kiel
 	}
 	completion_effects = {
 		scripted_effect = major_copper_reward

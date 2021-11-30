@@ -1,0 +1,54 @@
+dominium_maris_baltici = {
+	name = "Dominium Maris Baltici"
+	icon = icon_norse_dock
+	player_color = blue
+	description = "Throughout the years, we have gained control of much of the Baltic Sea. With the conquest of a few more territories, we will eliminate the remaining competition, establishing our dominion over the entirety of that sea."
+	conditions = {
+		civilization = norse
+		or = {
+			#must either be Sweden or Denmark, and have acquired the respective historical Baltic lands
+			and = {
+				faction = sweden
+				settlement = stockholm
+				settlement = linkoping
+				settlement = helsinki
+				settlement = riga
+				settlement = stettin
+				not = {
+					settlement = copenhagen
+					settlement = kiel
+				}
+			}
+			and = {
+				faction = denmark
+				settlement = copenhagen
+				settlement = kiel
+				not = {
+					settlement = stockholm
+					settlement = linkoping
+					settlement = helsinki
+					settlement = riga
+					settlement = stettin
+				}
+			}
+		}
+		settlement = malmo
+		settlement = visby
+		settlement = tallinn
+	}
+	objectives = {
+		have_settlement = stockholm
+		have_settlement = linkoping
+		have_settlement = copenhagen
+		have_settlement = malmo
+		have_settlement = kiel
+		have_settlement = visby
+		have_settlement = helsinki
+		have_settlement = tallinn
+		have_settlement = riga
+		have_settlement = stettin
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
