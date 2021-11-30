@@ -37,4 +37,67 @@ western = {
 		lumber = basic_english_voices_not_enough_lumber
 		stone = basic_english_voices_not_enough_stone
 	}
+	
+	history = {
+		1097 = {
+			explored_settlements += vienna
+			explored_settlements += munich
+			explored_settlements += stuttgart
+			explored_settlements += cologne
+			explored_settlements += frankfurt
+			explored_settlements += hanover
+			explored_settlements += erfurt
+			explored_settlements += berlin
+			explored_settlements += kiel
+			explored_settlements += amsterdam
+			explored_settlements += brussels
+			explored_settlements += prague
+			explored_settlements += marseilles
+			
+			explored_settlements += milan
+			explored_settlements += venice
+			explored_settlements += rome
+			explored_settlements += naples
+			explored_settlements += syracuse
+			explored_settlements += cagliari
+			
+			explored_settlements += paris
+			explored_settlements += dijon
+			explored_settlements += toulouse
+			
+			explored_settlements += london
+			explored_settlements += winchester
+			explored_settlements += tamworth
+			explored_settlements += york
+			explored_settlements += edinburgh
+			explored_settlements += aberdeen
+			explored_settlements += dublin
+			
+			explored_settlements += warsaw
+			explored_settlements += krakow
+			explored_settlements += danzig
+			explored_settlements += stettin
+			
+			explored_settlements += pest
+			explored_settlements += szekesfehervar
+			explored_settlements += pressburg
+			explored_settlements += cluj
+			
+			explored_settlements += zagreb
+			
+			explored_settlements += barcelona
+			explored_settlements += leon
+			explored_settlements += burgos
+			explored_settlements += oporto
+			
+			explored_settlements += stockholm
+			explored_settlements += gothenburg
+			explored_settlements += linkoping
+			explored_settlements += malmo
+			explored_settlements += copenhagen
+			explored_settlements += aarhus
+			explored_settlements += visby
+			explored_settlements += oslo
+		}
+	}
 }
