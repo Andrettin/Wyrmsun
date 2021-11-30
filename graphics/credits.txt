@@ -674,6 +674,7 @@
 /graphics/icons/deities/thor_extra_4.png (by Exidelo and Jinn) (licensed under the CC0)
 /graphics/icons/deities/tyr.png (by Jinn) (licensed under the CC0)
 /graphics/icons/flags/goblin/flag_white_skull_on_black.png (by Jinn and Exidelo) (licensed under the CC0)
+/graphics/icons/flags/norse/flag_raven.png (by Jinn) (licensed under the CC0)
 /graphics/icons/flags/teutonic/flag_holy_roman_empire.png (by Jinn) (licensed under the CC0)
 /graphics/icons/government_types/republic.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/items/brazilian/royal_scepter.png (by Artyom Brullov) (licensed under the CC0)
