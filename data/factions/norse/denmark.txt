@@ -9,13 +9,13 @@ denmark = {
 	upgrade = upgrade_faction_denmark
 	icon = icon_flag_blue_lion_on_yellow
 	develops_from = {
-		dane_tribe
+		danish_tribe
 		scania
 	}
 	conditions = {
 		not = {
 			any_other_player = {
-				faction = dane_tribe
+				faction = danish_tribe
 			}
 		}
 	}

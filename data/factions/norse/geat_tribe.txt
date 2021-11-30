@@ -1,0 +1,20 @@
+geat_tribe = {
+	name = "Geat Tribe"
+	adjective = "Geat"
+	civilization = norse
+	type = tribe
+	color = teal
+	default_capital = gothenburg
+	upgrade = upgrade_faction_geat_tribe
+	icon = flag_violet_raven_on_teal
+	develops_from = {
+		asa_tribe
+		gothic_tribe
+		hersing_tribe
+		hlesing_tribe
+		jarling_tribe
+		karling_tribe
+		thielung_tribe
+		thralling_tribe
+	}
+}

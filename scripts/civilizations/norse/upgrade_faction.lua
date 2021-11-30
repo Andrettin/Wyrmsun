@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-dane-tribe",
+DefineModifier("upgrade_faction_danish_tribe",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
@@ -95,7 +95,7 @@ DefineModifier("upgrade-faction-sweden",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineDependency("upgrade-faction-dane-tribe",
+DefineDependency("upgrade_faction_danish_tribe",
 	{"upgrade_ironworking"}
 )
 

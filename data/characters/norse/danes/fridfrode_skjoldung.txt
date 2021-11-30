@@ -3,11 +3,11 @@ fridfrode_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, 
 	surname = "Skjoldung" #presumably
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
-	default_faction = dane_tribe
+	default_faction = danish_tribe
 	gender = male
 	
 	conditions = {
-		faction = dane_tribe
+		faction = danish_tribe
 	}
 	
 	#ruled in Leidre, being presumably king over the Danes
@@ -18,7 +18,7 @@ fridfrode_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, 
 		-27 = {
 			#contemporary with Fiölner
 			active = true
-			faction = dane_tribe
+			faction = danish_tribe
 			location = malmo
 		}
 		

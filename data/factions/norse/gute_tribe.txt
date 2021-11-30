@@ -1,0 +1,20 @@
+gute_tribe = {
+	name = "Gute Tribe"
+	adjective = "Gute"
+	civilization = norse
+	type = tribe
+	color = cyan
+	default_capital = visby
+	upgrade = upgrade_faction_gute_tribe
+	icon = flag_black_raven_on_green
+	develops_from = {
+		asa_tribe
+		gothic_tribe
+		hersing_tribe
+		hlesing_tribe
+		jarling_tribe
+		karling_tribe
+		thielung_tribe
+		thralling_tribe
+	}
+}

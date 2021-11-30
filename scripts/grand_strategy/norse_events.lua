@@ -33,9 +33,9 @@ local NorseEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
-				and (GetFactionProvinceCount(Factions.dane_tribe) > 0 or GetFactionProvinceCount(Factions.denmark) > 0)
+				and (GetFactionProvinceCount(Factions.danish_tribe) > 0 or GetFactionProvinceCount(Factions.denmark) > 0)
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Fiolner Yngling"
-				and GetFactionMinister("norse", "dane-tribe", "ruler") == "Fridfrode Skjoldung"
+				and GetFactionMinister("norse", "danish_tribe", "ruler") == "Fridfrode Skjoldung"
 				and SyncRand(100) < 10
 			) then
 				return true

@@ -1,0 +1,17 @@
+sitone_tribe = { #Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	name = "Sitone Tribe"
+	adjective = "Sitone"
+	civilization = norse #correct?
+	type = tribe
+	color = brown
+	upgrade = upgrade_faction_sitone_tribe
+	icon = flag_brown_raven_on_white
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
+	}
+}

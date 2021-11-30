@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Temples and universities can now only be built on top of "Building Site" locations.
 - Building sites, mineral deposits and the like now display to which settlement they belong in their tooltip.
 
+* Factions
+- Added Norse raven flag icons, and updated some Norse factions to use them as their icons.
+
 * Maps
 - Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
 

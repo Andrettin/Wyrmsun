@@ -1873,7 +1873,7 @@ DefineProvince("Jutland", {
 --	SettlementLocation = {508, 96}, -- Aarhus
 	Claims = {
 		"germanic", "skeldung-tribe",
-		"norse", "dane-tribe",
+		"norse", "danish_tribe",
 		"anglo-saxon", "charude-tribe",
 		"anglo-saxon", "jute-tribe",
 		"anglo-saxon", "teuton-tribe"
@@ -3204,7 +3204,7 @@ DefineProvince("Scania", {
 		"basque", "ertebolle-tribe",
 		"basque", "gylfing_tribe",
 		"basque", "kongemose-tribe",
-		"norse", "dane-tribe",
+		"norse", "danish_tribe",
 		"norse", "scania"
 	},
 	HistoricalOwners = {
@@ -3215,7 +3215,7 @@ DefineProvince("Scania", {
 		-2770, "germanic", "yngling-tribe", -- estimated date
 		-264, "", "", -- remove the Proto-Germanics
 		161, "norse", "swedish_tribe", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		526, "norse", "dane-tribe", -- Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "norse", "danish_tribe", -- Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "norse", "denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -4119,7 +4119,7 @@ DefineProvince("Zealand", {
 		"basque", "kongemose-tribe",
 		"germanic", "skeldung-tribe",
 		"goth", "herulian-tribe",
-		"norse", "dane-tribe"
+		"norse", "danish_tribe"
 	},
 	HistoricalOwners = {
 		-9000, "basque", "maglemose-tribe", -- Maglemose culture arose in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
@@ -4131,7 +4131,7 @@ DefineProvince("Zealand", {
 		-- Corded Ware culture (neolithic) ends in Zealand in 2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 		-264, "", "", -- remove Proto-Germanics
 		-27, "goth", "herulian-tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		526, "norse", "dane-tribe", -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "norse", "danish_tribe", -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "norse", "denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {

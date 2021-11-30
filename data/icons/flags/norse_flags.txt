@@ -1,0 +1,29 @@
+flag_blue_raven_on_yellow = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 0
+}
+
+flag_brown_raven_on_white = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 1
+}
+
+flag_violet_raven_on_teal = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 2
+}
+
+flag_red_raven_on_brown = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 3
+}
+
+flag_black_raven_on_white = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 4
+}
+
+flag_black_raven_on_green = {
+	file = "icons/flags/norse/flag_raven.png"
+	frame = 5
+}

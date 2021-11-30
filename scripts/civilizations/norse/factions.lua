@@ -25,53 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Tribes
-
-DefineFaction("dane-tribe", {
-	Name = "Dane Tribe",
-	Adjective = "Danish",
-	Civilization = "norse",
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-dane-tribe",
-	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thralling-tribe"}
-	-- Danes were in Scania and Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-})
-
-DefineFaction("geat-tribe", {
-	Name = "Geat Tribe",
-	Adjective = "Geat",
-	Civilization = "norse",
-	Type = "tribe",
-	Color = "teal",
-	FactionUpgrade = "upgrade-faction-geat-tribe",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"asa-tribe", "gothic_tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
-})
-
-DefineFaction("gute-tribe", {
-	Name = "Gute Tribe",
-	Adjective = "Gute",
-	Civilization = "norse",
-	Type = "tribe",
-	Color = "cyan",
-	FactionUpgrade = "upgrade-faction-gute-tribe",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"asa-tribe", "gothic_tribe", "hersing-tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
-})
-
-DefineFaction("sitone-tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	Name = "Sitone Tribe",
-	Adjective = "Sitone",
-	Civilization = "norse", -- correct?
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-sitone-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe", "yngling-tribe"}
-})
-
 -- Polities
 
 DefineFaction("agder", {
@@ -95,7 +48,7 @@ DefineFaction("scania", {
 	Adjective = "Scanian",
 	FactionUpgrade = "upgrade-faction-denmark",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"dane-tribe", "swedish_tribe"}
+	DevelopsFrom = {"danish_tribe", "swedish_tribe"}
 })
 
 DefineFaction("gautland", {
@@ -240,7 +193,7 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Type = "mercenary_company",
 	Color = "blue",
 	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-dane-tribe",
+	FactionUpgrade = "upgrade_faction_danish_tribe",
 	Description = "The Jomsvikings were a group of warriors and pirates based in Jomsburg."
 })
 

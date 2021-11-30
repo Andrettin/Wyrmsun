@@ -1,4 +1,4 @@
-upgrade_faction_dane_tribe = {
+upgrade_faction_danish_tribe = {
 	name = "Dane Tribe"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
 	requirements_string = "Ironworking"

@@ -1,0 +1,19 @@
+danish_tribe = {
+	name = "Danish Tribe"
+	adjective = "Danish"
+	civilization = norse
+	type = tribe
+	color = red
+	default_capital = copenhagen
+	upgrade = upgrade_faction_danish_tribe
+	icon = flag_black_raven_on_white
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		hlesing_tribe
+		jarling_tribe
+		karling_tribe
+		skeldung_tribe
+		thralling_tribe
+	}
+}

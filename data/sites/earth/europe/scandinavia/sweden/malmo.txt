@@ -31,7 +31,7 @@ malmo = {
 		
 		-27 = {
 			#the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in Scania later on (so presumably this would be their dwelling place previously as well)
-			owner = dane_tribe
+			owner = danish_tribe
 		}
 		
 		161 = {
@@ -43,11 +43,11 @@ malmo = {
 		}
 		
 		486 = {
-			owner = dane_tribe #part of Danish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = danish_tribe #part of Danish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		526 = {
-			owner = dane_tribe #Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = danish_tribe #Danes were in Scania in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		814 = {

@@ -5,7 +5,7 @@ norwegian_tribe = {
 	type = tribe
 	color = blue
 	upgrade = upgrade_faction_norwegian_tribe
-	icon = icon_flag_cyan_lion_on_red
+	icon = flag_red_raven_on_brown
 	develops_from = {
 		asa_tribe
 		hersing_tribe
