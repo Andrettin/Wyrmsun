@@ -34,5 +34,9 @@ algiers = {
 		814 = {
 			owner = algeria #part of the Dominion of the Aghlabids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
+		
+		1097 = {
+			owner = morocco #part of the Dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
 	}
 }

@@ -1,0 +1,18 @@
+misr = {
+	name = "Misr" #Arabic Egypt
+	adjective = "Misri"
+	civilization = arab
+	type = polity
+	color = green
+	default_tier = kingdom
+	
+	history = {
+		969 = {
+			tier = empire #the Caliphate of Cairo was founded on 969; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
+		1171 = {
+			tier = kingdom #the Caliphate of Cairo was abolished on 1171; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+	}
+}

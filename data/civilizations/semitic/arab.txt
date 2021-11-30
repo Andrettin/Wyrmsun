@@ -11,6 +11,7 @@ arab = {
 	title_names = {
 		monarchy = {
 			duchy = "Emirate"
+			empire = "Caliphate"
 		}
 	}
 	
@@ -21,6 +22,11 @@ arab = {
 					duchy = {
 						male = "Emir"
 						female = "Emira"
+					}
+					
+					empire = {
+						male = "Caliph"
+						female = "Calipha"
 					}
 				}
 			}

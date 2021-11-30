@@ -41,6 +41,10 @@ zaragoza = {
 			owner = zaragoza #part of the Emirate of Zaragoza in 1037; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
 		
+		1097 = {
+			owner = morocco #part of the Dominions of the Almoravids c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1474 = {
 			#building_classes += university #University founded in Zaragoza in 1474; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}

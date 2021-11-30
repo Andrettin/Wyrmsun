@@ -26,7 +26,11 @@ alexandria = {
 		}
 		
 		814 = {
-			owner = arabia #part of the Califate of the Abbassids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+			owner = arabia #part of the Caliphate of the Abbassids c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
+		1097 = {
+			owner = misr #part of the Caliphate of Cairo c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
 	}
 }
