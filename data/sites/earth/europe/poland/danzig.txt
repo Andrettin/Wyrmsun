@@ -17,6 +17,14 @@ danzig = {
 			building_classes += town_hall
 		}
 		
+		919 = {
+			owner = pomerania #part of Pomerania in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1097 = {
+			owner = pomerania #part of the Duchy of Pomerania c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1560 = {
 			owner = poland #Dantzic was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}

@@ -29,6 +29,10 @@ stettin = {
 			owner = wilzian_tribe #part of Wilzian territory c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
 		
+		1097 = {
+			owner = pomerania #part of the Duchy of Pomerania c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1648 = {
 			owner = sweden #Stettin was a Swedish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}

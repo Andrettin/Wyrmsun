@@ -255,24 +255,6 @@ DefineFaction("prussia", {
 	DevelopsFrom = {"brandenburg"}
 })
 
-DefineFaction("thuringia", {
-	Name = "Thuringia",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "pink",
-	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
-	FactionUpgrade = "upgrade-faction-thuringia",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	Adjective = "Thuringian",
-	DevelopsFrom = {"thuringian-tribe"},
-	Titles = {
-		"monarchy", "duchy", "Landgraviate"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "duchy", "Landgrave"
-	}
-})
-
 Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")

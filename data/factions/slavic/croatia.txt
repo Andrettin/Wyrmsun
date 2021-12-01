@@ -13,5 +13,12 @@ croatia = {
 				state = vassal
 			}
 		}
+		
+		1097 = {
+			diplomacy_state = {
+				faction = francia #independent c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+				state = peace
+			}
+		}
 	}
 }

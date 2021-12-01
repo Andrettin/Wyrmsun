@@ -6,4 +6,10 @@ poland = {
 	color = red
 	default_tier = kingdom
 	icon = icon_flag_five_white_birds_on_red
+	
+	history = {
+		1025 = {
+			tier = kingdom #Poland became a kingdom in 1025; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+	}
 }

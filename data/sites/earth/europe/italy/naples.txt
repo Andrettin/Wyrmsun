@@ -18,6 +18,10 @@ naples = {
 			building_classes += town_hall
 		}
 		
+		1000 = {
+			owner = byzantium #part of the Byzantine Empire c. 1000; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 58-59.
+		}
+		
 		1204 = {
 			owner = sicily #Naples was a part of the Kingdom of the Two Sicilies c. 1204; Source: William R. Shepherd, "Historical Atlas", 1911, p. 73.
 		}

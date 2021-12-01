@@ -41,6 +41,10 @@ besancon = {
 			#Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		}
 		
+		1000 = {
+			owner = arles #part of the Kingdom of Burgundy c. 1000; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 58-59.
+		}
+		
 		1485 = {
 			#building_classes += university #University founded in Besançon in 1485; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}

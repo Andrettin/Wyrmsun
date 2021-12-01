@@ -33,6 +33,16 @@ verdun = {
 			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
 		
+		911 = {
+			#owner = lorraine #part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = france
+		}
+		
+		959 = {
+			#owner = lorraine #part of the Duchy of Upper Lorraine from 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = france
+		}
+		
 		1648 = {
 			owner = france #Verdun was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}

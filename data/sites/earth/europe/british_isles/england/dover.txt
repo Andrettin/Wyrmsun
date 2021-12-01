@@ -23,6 +23,10 @@ dover = {
 			owner = wessex
 		}
 		
+		1097 = {
+			owner = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1560 = {
 			owner = england #Dover was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}

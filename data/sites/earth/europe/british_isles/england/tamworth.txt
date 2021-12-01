@@ -23,6 +23,10 @@ tamworth = {
 			owner = mercia #part of Mercia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		}
 		
+		1097 = {
+			owner = england #part of the Kingdom of England c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
+		}
+		
 		1560 = {
 			owner = england #part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}

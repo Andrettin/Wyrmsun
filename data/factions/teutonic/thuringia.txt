@@ -1,0 +1,34 @@
+thuringia = {
+	name = "Thuringia"
+	adjective = "Thuringian"
+	civilization = teutonic
+	type = polity
+	color = pink
+	default_tier = duchy #Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	icon = icon_flag_yellow_lion_on_cyan
+	upgrade = upgrade_faction_thuringia
+	develops_from = {
+		thuringian_tribe
+	}
+	title_names = {
+		monarchy = {
+			duchy = "Landgraviate"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				duchy = "Landgrave"
+			}
+		}
+	}
+	
+	history = {
+		919 = {
+			diplomacy_state = {
+				faction = holy_rome #part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				state = vassal
+			}
+		}
+	}
+}

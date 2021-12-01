@@ -1,0 +1,9 @@
+pomerania = {
+	name = "Pomerania"
+	adjective = "Pomeranian"
+	civilization = slavic
+	type = polity
+	color = red
+	default_tier = duchy
+	icon = icon_flag_red_lion_on_green
+}

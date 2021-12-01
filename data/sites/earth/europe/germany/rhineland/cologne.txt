@@ -53,6 +53,14 @@ cologne = {
 			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
 		
+		911 = {
+			owner = lorraine #part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		959 = {
+			owner = lorraine #part of the Duchy of Lower Lorraine from 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
 		1388 = {
 			#building_classes += university #University founded in Cologne in 1388; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
