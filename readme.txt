@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 - The AI will now continuously check if it can build a town hall in the desired settlement if it has a quest to own a given settlement.
 - The AI will now only build town halls on settlements with territory adjacent to their own. It will still build a town hall on a quest objective settlement, even if it is farther away.
 - The AI can now transport workers to other landmasses to build settlements.
+- In the Scenario mode, the AI will now set its diplomatic stance from enemy to neutral with players which also have that stance towards them, and if the other player is stronger militarily than they are.
 
 * Buildings
 - Temples and universities can now only be built on top of "Building Site" locations.
