@@ -9,25 +9,35 @@ unit_teuton_dock = {
 	variations = {
 		dock = {
 			image_file = "buildings/germanic/dock.png"
-			conditions = {
+			icon = icon_germanic_dock
+			player_conditions = {
 				not = {
 					upgrade_class = masonry
+				}
+			}
+			unit_conditions = {
+				not = {
 					scripted_condition = is_on_snowy_terrain
 				}
 			}
 		}
 		dock_snow = {
 			image_file = "buildings/germanic/dock_snow.png"
-			conditions = {
+			icon = icon_germanic_dock
+			player_conditions = {
 				not = {
 					upgrade_class = masonry
 				}
+			}
+			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
 		}
 		dock = {
-			conditions = {
+			player_conditions = {
 				upgrade_class = masonry
+			}
+			unit_conditions = {
 				not = {
 					scripted_condition = is_on_snowy_terrain
 				}
@@ -35,8 +45,10 @@ unit_teuton_dock = {
 		}
 		dock_snow = {
 			image_file = "buildings/teutonic/dock_snow.png"
-			conditions = {
+			player_conditions = {
 				upgrade_class = masonry
+			}
+			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
 		}

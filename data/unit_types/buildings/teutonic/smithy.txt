@@ -19,10 +19,13 @@ unit_teutonic_smithy = {
 	variations = {
 		smithy = {
 			image_file = "buildings/germanic/smithy.png"
-			conditions = {
+			icon = icon_germanic_smithy
+			player_conditions = {
 				not = {
 					upgrade_class = masonry
 				}
+			}
+			unit_conditions = {
 				not = {
 					scripted_condition = is_on_snowy_terrain
 				}
@@ -30,16 +33,21 @@ unit_teutonic_smithy = {
 		}
 		smithy_snow = {
 			image_file = "buildings/germanic/smithy_snow.png"
-			conditions = {
+			icon = icon_germanic_smithy
+			player_conditions = {
 				not = {
 					upgrade_class = masonry
 				}
+			}
+			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
 		}
 		smithy = {
-			conditions = {
+			player_conditions = {
 				upgrade_class = masonry
+			}
+			unit_conditions = {
 				not = {
 					scripted_condition = is_on_snowy_terrain
 				}
@@ -47,8 +55,10 @@ unit_teutonic_smithy = {
 		}
 		smithy_snow = {
 			image_file = "buildings/teutonic/smithy_snow.png"
-			conditions = {
+			player_conditions = {
 				upgrade_class = masonry
+			}
+			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
 		}
