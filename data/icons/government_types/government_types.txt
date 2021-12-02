@@ -1,0 +1,3 @@
+republic = {
+	file = "icons/government_types/republic.png"
+}

@@ -1,0 +1,3 @@
+brazilian_royal_scepter = {
+	file = "icons/items/brazilian/royal_scepter.png"
+}

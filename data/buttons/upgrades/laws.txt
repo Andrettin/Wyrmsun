@@ -1,5 +1,39 @@
-enact_free_workers = {
+establish_monarchy = {
 	pos = 1
+	level = enact_law_level
+	action = research
+	value = upgrade_monarchy
+	allowed = check_single_research
+	key = m
+	hint = "Establish ~!Monarchy"
+	description = "-25% cavalry cost. Removes Republic."
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+establish_republic = {
+	pos = 2
+	level = enact_law_level
+	action = research
+	value = upgrade_republic
+	allowed = check_single_research
+	key = r
+	hint = "Establish ~!Republic"
+	description = "+10% Copper, Silver and Gold processing bonus for Smithies. Removes Monarchy."
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+enact_free_workers = {
+	pos = 5
 	level = enact_law_level
 	action = research
 	value = upgrade_free_workers
@@ -16,7 +50,7 @@ enact_free_workers = {
 }
 
 enact_serfdom = {
-	pos = 2
+	pos = 6
 	level = enact_law_level
 	action = research
 	value = upgrade_serfdom

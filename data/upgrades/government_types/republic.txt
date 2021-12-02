@@ -1,0 +1,32 @@
+upgrade_republic = {
+	name = "Republic"
+	government_type = republic
+	icon = republic
+	#description = ".\n\nEffect: +10% Copper, Silver and Gold processing bonus for Smithies."
+	costs = {
+		time = 250
+		copper = 4500
+	}
+	requirements_string = "Writing"
+	modifier = {
+		processing_bonus = {
+			copper = 10
+			silver = 10
+			gold = 10
+		}
+		unit_classes = {
+			smithy
+		}
+	}
+	modifier = {
+		removed_upgrades = {
+			upgrade_monarchy
+		}
+	}
+	preconditions = {
+		upgrade = upgrade_polity
+	}
+	conditions = {
+		upgrade_class = writing
+	}
+}

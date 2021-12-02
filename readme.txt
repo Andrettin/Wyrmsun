@@ -86,6 +86,10 @@ https://github.com/Andrettin/Wyrmsun
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
 
+* Upgrades
+- Added the Monarchy government type upgrade (-25% cavalry cost) (only available for polities).
+- Added the Republic government type upgrade (+10% Copper/Silver/Gold processing bonus) (only available for polities).
+
 * User Interface
 - Increased the width of the map dropdown for the custom game menu, as some map names were too long for it.
 - Items sold at the market now have a colored border if they are magic or unique.
