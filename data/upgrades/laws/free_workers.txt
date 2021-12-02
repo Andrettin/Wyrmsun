@@ -24,7 +24,7 @@ upgrade_free_workers = {
 		goblin = 200
 	}
 	modifier = {
-		remove_upgrades = {
+		removed_upgrades = {
 			upgrade_serfdom
 		}
 	}

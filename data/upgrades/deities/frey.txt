@@ -13,7 +13,7 @@ upgrade_deity_frey = {
 		}
 	}
 	modifier = {
-		remove_upgrades = {
+		removed_upgrades = {
 			upgrade_deity_odin
 			upgrade_deity_thor
 			upgrade_deity_loki
