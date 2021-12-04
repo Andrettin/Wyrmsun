@@ -10,6 +10,16 @@ upgrade_serfdom = {
 	conditions = {
 		unit_class = stronghold
 	}
+	ai_priority = {
+		base_value = 100
+		
+		modifier = {
+			factor = 2
+			
+			civilization_group = western
+			#could be phased out if enlightenment philosophy has been researched
+		}
+	}
 	modifier = {
 		costs = {
 			copper = -100
