@@ -1,0 +1,42 @@
+upgrade_deity_christian_god = {
+	#name = "Christian God"
+	name = "Christianity"
+	icon = icon_christianity
+	requirements_string = "Writing"
+	costs = {
+		time = 250
+		copper = 3000
+	}
+	conditions = {
+		upgrade_class = writing
+	}
+	modifier = {
+		hit_points = 10
+		mana = 20
+		points = 20
+		unit_types = {
+			unit_teuton_priest
+		}
+	}
+	modifier = {
+		removed_upgrades = {
+			upgrade_deity_apollo
+			upgrade_deity_hermes
+			upgrade_deity_poseidon
+			upgrade_deity_odin
+			upgrade_deity_thor
+			upgrade_deity_loki
+			upgrade_deity_frey
+			upgrade_deity_freyja
+			upgrade_deity_heimdall
+			upgrade_deity_hel
+			upgrade_deity_tyr
+		}
+	}
+	modifier = { #dummy upgrade modifier to change variation
+		unit_types = {
+			unit_teuton_priest
+			unit_teuton_temple
+		}
+	}
+}

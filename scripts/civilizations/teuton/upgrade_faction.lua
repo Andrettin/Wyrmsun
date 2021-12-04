@@ -250,15 +250,15 @@ DefineDependency("upgrade-faction-saxon-tribe",
 )
 
 DefineDependency("upgrade-faction-cologne",
-	{"unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"unit-teuton-temple", "upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-faction-holy-rome", -- must be Christian
-	{"upgrade-deity-christian-god"}
+	{"upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-faction-magdeburg",
-	{"unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"unit-teuton-temple", "upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-faction-netherlands",

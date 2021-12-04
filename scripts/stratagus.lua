@@ -1891,8 +1891,7 @@ Units = {
 	"unit-carrots", "unit-cheese", "unit-wyrm-heart",
 	"upgrade-shield-wall", "upgrade-svinfylking",
 	"upgrade-deity-odin", "upgrade-deity-thor", "upgrade-deity-loki", "upgrade-deity-heimdall", "upgrade-deity-hel", "upgrade-deity-tyr",
-	"upgrade-deity-gathaarl",
-	"upgrade-deity-christian-god"
+	"upgrade-deity-gathaarl"
 }
 
 Load("scripts/dlc_file_equivalencies.lua")

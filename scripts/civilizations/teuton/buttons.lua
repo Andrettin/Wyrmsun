@@ -124,7 +124,7 @@ DefineButton( { Pos = 5, Icon = "icon-cauldron",
 -- Deities ----------------------------------------------------------
 
 DefineButton( { Pos = 5, Icon = "icon-christianity",
-	Action = "research", Value = "upgrade-deity-christian-god",
+	Action = "research", Value = "upgrade_deity_christian_god",
 	Allowed = "check-single-research",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup_research",
 	Description = "Choose Christianity as your religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Allows new magic affixes for items sold at the Market. Incompatible with any pagan deities.",
@@ -209,7 +209,7 @@ DefineButton( { Pos = 12, Icon = "icon-hel",
 })
 
 DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon-christianity",
-	Action = "learn-ability", Value = "upgrade-deity-christian-god",
+	Action = "learn-ability", Value = "upgrade_deity_christian_god",
 	Key = "c", Hint = "Convert to ~!Christianity", Popup = "popup_learn_ability",
 	Description = "Choose Christianity as your hero's religion. +10 HP, +20 Mana and enables Healing and Blessing spells for Clerics. Incompatible with any pagan deities.",
 	ForUnit = {

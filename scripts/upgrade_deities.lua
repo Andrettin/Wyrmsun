@@ -30,11 +30,6 @@
 -- Christianity
 
 DefineUpgrade("upgrade-deity-christian-god", {
---	Name = "Christian God",
-	Name = "Christianity",
-	Icon = "icon-christianity",
-	Costs = {"time", 250, "copper", 3000},
-	RequirementsString = "Writing",
 	CivilizationPriorities = {
 		"anglo-saxon", 200,
 		"english", 200,

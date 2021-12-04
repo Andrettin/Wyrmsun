@@ -718,17 +718,17 @@ DefineDependency("upgrade-work-nigon-wyrta-galdor",
 )
 
 DefineDependency("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
-	{"upgrade-deity-christian-god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-english-civilization", "unit-teuton-temple"}
+	{"upgrade_deity_christian_god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-english-civilization", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-sidgaldor",
-	{"upgrade-deity-christian-god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-english-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-frankish-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-suebi-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade_teutonic_civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-gothic-civilization", "unit-teuton-temple"}
+	{"upgrade_deity_christian_god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-english-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade_teutonic_civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-gothic-civilization", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-aelfadle",
@@ -804,21 +804,21 @@ DefineDependency("upgrade-work-wid-blodrene-of-nosu",
 )
 
 DefineDependency("upgrade-work-wid-ceapes-lyre", -- not available for fictional civilizations, since their worlds don't have cattle; requires a farm because the charm would only have reason to be available if livestock is kept
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"}
 )
 
 DefineDependency("upgrade-work-wid-ceapes-theofende", -- not available for fictional civilizations, since their worlds don't have cattle; requires a farm because the charm would only have reason to be available if livestock is kept
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"}
 )
 
 DefineDependency("upgrade-work-wid-corn",
@@ -870,12 +870,12 @@ DefineDependency("upgrade-work-wid-da-blacan-blegene",
 )
 
 DefineDependency("upgrade-work-wid-deofolseocnesse",
-	{"upgrade-deity-christian-god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-english-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-frankish-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-suebi-civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade_teutonic_civilization", "unit-teuton-temple"},
-	"or", {"upgrade-deity-christian-god", "upgrade-gothic-civilization", "unit-teuton-temple"}
+	{"upgrade_deity_christian_god", "upgrade-anglo-saxon-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-english-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-frankish-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-suebi-civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade_teutonic_civilization", "unit-teuton-temple"},
+	"or", {"upgrade_deity_christian_god", "upgrade-gothic-civilization", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-dweorg", -- not available for dwarves, since it is an anti-dwarven spell which implies dwarves to be another sort of being
@@ -924,12 +924,12 @@ DefineDependency("upgrade-work-wid-faerstice",
 )
 
 DefineDependency("upgrade-work-wid-feondes-costunge",
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-feos-lyre", -- not available for fictional civilizations, since their worlds don't have cattle; requires a farm because the charm would only have reason to be available if livestock is kept
@@ -942,21 +942,21 @@ DefineDependency("upgrade-work-wid-feos-lyre", -- not available for fictional ci
 )
 
 DefineDependency("upgrade-work-wid-feos-nimunge", -- not available for fictional civilizations, since their worlds don't have ; requires a farm because the charm would only have reason to be available if livestock is kept
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple", "unit-teuton-farm"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple", "unit-teuton-farm"}
 )
 
 DefineDependency("upgrade-work-wid-fleogendan-attre", -- has a Latin passage mentioning God
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-fleogendum-attre",
@@ -984,12 +984,12 @@ DefineDependency("upgrade-work-wid-heafodece",
 )
 
 DefineDependency("upgrade-work-wid-hors-oman",
-	{"upgrade-anglo-saxon-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-english-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-frankish-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-suebi-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade_teutonic_civilization", "upgrade-deity-christian-god", "unit-teuton-temple"},
-	"or", {"upgrade-gothic-civilization", "upgrade-deity-christian-god", "unit-teuton-temple"}
+	{"upgrade-anglo-saxon-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-english-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-frankish-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-suebi-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade_teutonic_civilization", "upgrade_deity_christian_god", "unit-teuton-temple"},
+	"or", {"upgrade-gothic-civilization", "upgrade_deity_christian_god", "unit-teuton-temple"}
 )
 
 DefineDependency("upgrade-work-wid-hors-wreccunge", -- not available for fictional civilizations, since their worlds don't have horses; requires a stables because the charm would only have reason to be available if stables are kept
@@ -1026,12 +1026,12 @@ DefineDependency("upgrade-work-wid-laetbyrde",
 )
 
 DefineDependency("upgrade-work-wid-lenctenadle", -- contains a passage in Latin mentioning God
-	{"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-anglo-saxon-civilization"},
-	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-english-civilization"},
-	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-frankish-civilization"},
-	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-suebi-civilization"},
-	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade_teutonic_civilization"},
-	"or", {"upgrade-deity-christian-god", "unit-teuton-temple", "upgrade-gothic-civilization"}
+	{"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade-anglo-saxon-civilization"},
+	"or", {"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade-english-civilization"},
+	"or", {"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade-frankish-civilization"},
+	"or", {"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade-suebi-civilization"},
+	"or", {"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade_teutonic_civilization"},
+	"or", {"upgrade_deity_christian_god", "unit-teuton-temple", "upgrade-gothic-civilization"}
 )
 
 DefineDependency("upgrade-work-wid-lenctenadle-2",
@@ -1059,12 +1059,12 @@ DefineDependency("upgrade-work-wid-leodrunan",
 )
 
 DefineDependency("upgrade-work-wid-lidwaerce",
-	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-english-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade_teutonic_civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-english-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade_teutonic_civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-work-wid-maran",
@@ -1179,12 +1179,12 @@ DefineDependency("upgrade-work-wid-todece",
 )
 
 DefineDependency("upgrade-work-wid-uncudum-swyle",
-	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-english-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade_teutonic_civilization", "unit-teuton-temple", "upgrade-deity-christian-god"},
-	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "upgrade-deity-christian-god"}
+	{"upgrade-anglo-saxon-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-english-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-frankish-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-suebi-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade_teutonic_civilization", "unit-teuton-temple", "upgrade_deity_christian_god"},
+	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-work-wid-utsiht",

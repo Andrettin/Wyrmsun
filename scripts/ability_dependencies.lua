@@ -26,7 +26,7 @@
 --
 
 DefineDependency("upgrade-blessing",
-	{"upgrade-deity-christian-god"}
+	{"upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-deadly-precision",
@@ -38,7 +38,7 @@ DefineDependency("upgrade-far-sight",
 )
 
 DefineDependency("upgrade-healing",
-	{"upgrade-deity-christian-god"}
+	{"upgrade_deity_christian_god"}
 )
 
 DefineDependency("upgrade-inspire",

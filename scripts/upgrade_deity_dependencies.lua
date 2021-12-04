@@ -25,10 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDependency("upgrade-deity-christian-god",
-	{"upgrade-writing"}
-)
-
 DefinePredependency("upgrade-deity-heimdall",
 	{"upgrade-germanic-civilization"}, "or", {"upgrade-anglo-saxon-civilization"}, "or", {"upgrade_norse_civilization"}
 )

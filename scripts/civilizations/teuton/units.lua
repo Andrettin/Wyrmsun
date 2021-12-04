@@ -816,7 +816,7 @@ DefineUnitType("unit-teuton-priest", {
 	Variations = {
 		{
 			"variation-id", "cleric",
-			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-required", "upgrade_deity_christian_god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
 			"upgrade-forbidden", "upgrade-deity-loki",
@@ -828,7 +828,7 @@ DefineUnitType("unit-teuton-priest", {
 			"icon", "icon-germanic-priest",
 			"type-name", "Gudjan",
 			"button-key", "g",
-			"upgrade-forbidden", "upgrade-deity-christian-god"
+			"upgrade-forbidden", "upgrade_deity_christian_god"
 		}
 	},
 	Sounds = {
@@ -1360,7 +1360,7 @@ DefineUnitType("unit-teuton-temple", {
 	Variations = {
 		{
 			"variation-id", "church",
-			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-required", "upgrade_deity_christian_god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
 			"upgrade-forbidden", "upgrade-deity-loki",
@@ -1371,7 +1371,7 @@ DefineUnitType("unit-teuton-temple", {
 		{
 			"variation-id", "church-snow-winter",
 			"file", "buildings/teutonic/church_snow.png",
-			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-required", "upgrade_deity_christian_god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
 			"upgrade-forbidden", "upgrade-deity-loki",
@@ -1387,7 +1387,7 @@ DefineUnitType("unit-teuton-temple", {
 		{
 			"variation-id", "church-snow",
 			"file", "buildings/teutonic/church_snow.png",
-			"upgrade-required", "upgrade-deity-christian-god",
+			"upgrade-required", "upgrade_deity_christian_god",
 			"upgrade-forbidden", "upgrade-deity-odin",
 			"upgrade-forbidden", "upgrade-deity-thor",
 			"upgrade-forbidden", "upgrade-deity-loki",
@@ -1401,7 +1401,7 @@ DefineUnitType("unit-teuton-temple", {
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
 			"button-key", "p",
-			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade_deity_christian_god",
 			"terrain-forbidden", "snow",
 			"forbidden-season", "winter"
 		},
@@ -1412,7 +1412,7 @@ DefineUnitType("unit-teuton-temple", {
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
 			"button-key", "p",
-			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade_deity_christian_god",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -1428,7 +1428,7 @@ DefineUnitType("unit-teuton-temple", {
 			"icon", "icon-germanic-temple",
 			"type-name", "Temple",
 			"button-key", "p",
-			"upgrade-forbidden", "upgrade-deity-christian-god",
+			"upgrade-forbidden", "upgrade_deity_christian_god",
 			"terrain", "snow"
 		},
 	},

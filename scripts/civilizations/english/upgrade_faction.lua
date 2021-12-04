@@ -38,9 +38,9 @@ DefineModifier("upgrade-faction-scotland",
 )
 
 DefineDependency("upgrade-faction-england",
-	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}, "or", {"upgrade-english-civilization"}
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade_deity_christian_god"}, "or", {"upgrade-english-civilization"}
 )
 
 DefineDependency("upgrade-faction-scotland",
-	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade-deity-christian-god"}, "or", {"upgrade-english-civilization"}
+	{"upgrade-teuton-coinage", "upgrade-engineering", "upgrade_deity_christian_god"}, "or", {"upgrade-english-civilization"}
 )
