@@ -29,18 +29,7 @@ DefineUpgrade("upgrade-shield-wall", {
 	Name = "Shield Wall",
 	Icon = "icon-shield-wall",
 	Costs = {"time", 250, "copper", 2400},
-	Description = "The shield wall is a rectangular infantry formation in which soldiers hold their shields up for mutual protection.\n\nEffects: +2 Armor for infantry.",
-	CivilizationPriorities = {
-		"anglo-saxon", 200,
-		"dwarf", 200,
-		"english", 200,
-		"frankish", 200,
-		"germanic", 200,
-		"goblin", 200,
-		"goth", 200,
-		"suebi", 200,
-		"teuton", 200
-	}
+	Description = "The shield wall is a rectangular infantry formation in which soldiers hold their shields up for mutual protection.\n\nEffects: +2 Armor for infantry."
 })
 
 DefineUpgrade("upgrade-svinfylking", {

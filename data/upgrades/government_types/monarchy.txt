@@ -3,22 +3,34 @@ upgrade_monarchy = {
 	government_type = monarchy
 	icon = brazilian_royal_scepter
 	#description = ".\n\nEffect: -25% cavalry cost."
+	requirements_string = "Writing"
 	costs = {
 		time = 250
 		copper = 4500
 	}
-	requirements_string = "Writing"
-	civilization_priorities = {
-		anglo_saxon = 200
-		dwarven = 200
-		english = 200
-		frankish = 200
-		germanic = 200
-		gothic = 200
-		norse = 200
-		slavic = 200
-		suebi = 200
-		teutonic = 200
+	preconditions = {
+		upgrade = upgrade_polity
+	}
+	conditions = {
+		upgrade_class = writing
+	}
+	ai_priority = {
+		base_value = 100
+		
+		modifier = {
+			factor = 2
+			
+			or = {
+				and = {
+					civilization_group = western
+					not = {
+						civilization = italian
+					}
+				}
+				civilization = dwarven
+				civilization = elven
+			}
+		}
 	}
 	modifier = {
 		cavalry_cost_modifier = -25
@@ -27,11 +39,5 @@ upgrade_monarchy = {
 		removed_upgrades = {
 			upgrade_republic
 		}
-	}
-	preconditions = {
-		upgrade = upgrade_polity
-	}
-	conditions = {
-		upgrade_class = writing
 	}
 }

@@ -2,20 +2,13 @@ upgrade_serfdom = {
 	name = "Serfdom"
 	icon = icon_serfdom
 	#description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate."
+	requirements_string = "Stronghold/Bastion"
 	costs = {
 		time = 200
 		copper = 1200
 	}
-	requirements_string = "Stronghold/Bastion"
-	civilization_priorities = {
-		anglo_saxon = 200
-		english = 200
-		frankish = 200
-		gothic = 200
-		norse = 200
-		slavic = 200
-		suebi = 200
-		teutonic = 200
+	conditions = {
+		unit_class = stronghold
 	}
 	modifier = {
 		costs = {
@@ -40,8 +33,5 @@ upgrade_serfdom = {
 		removed_upgrades = {
 			upgrade_free_workers
 		}
-	}
-	conditions = {
-		unit_class = stronghold
 	}
 }

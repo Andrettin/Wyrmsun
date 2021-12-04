@@ -3,11 +3,17 @@ upgrade_republic = {
 	government_type = republic
 	icon = republic
 	#description = ".\n\nEffect: +10% Copper, Silver and Gold processing bonus for Smithies."
+	requirements_string = "Writing"
 	costs = {
 		time = 250
 		copper = 4500
 	}
-	requirements_string = "Writing"
+	preconditions = {
+		upgrade = upgrade_polity
+	}
+	conditions = {
+		upgrade_class = writing
+	}
 	modifier = {
 		processing_bonus = {
 			copper = 10
@@ -22,11 +28,5 @@ upgrade_republic = {
 		removed_upgrades = {
 			upgrade_monarchy
 		}
-	}
-	preconditions = {
-		upgrade = upgrade_polity
-	}
-	conditions = {
-		upgrade_class = writing
 	}
 }

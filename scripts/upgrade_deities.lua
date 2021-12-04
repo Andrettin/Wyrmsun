@@ -29,38 +29,18 @@
 
 -- Christianity
 
-DefineUpgrade("upgrade-deity-christian-god", {
-	CivilizationPriorities = {
-		"anglo-saxon", 200,
-		"english", 200,
-		"frankish", 200,
-		"goth", 200,
-		"suebi", 200,
-		"teuton", 200
-	}
-})
-
 -- Aesir Deities
 
 DefineUpgrade("upgrade-deity-odin", {
 	Name = "Odin",
 	Icon = "icon-odin",
-	Costs = {"time", 200, "copper", 1500},
-	FactionPriorities = {
-		"dere-tribe", 150,
-		"skeldung-tribe", 200,
-		"deira", 150
-	}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-thor", {
 	Name = "Thor",
 	Icon = "icon-thor",
-	Costs = {"time", 200, "copper", 1500},
-	FactionPriorities = {
-		"hlesing-tribe", 50,
-		"thielung-tribe", 200
-	}
+	Costs = {"time", 200, "copper", 1500}
 })
 
 DefineUpgrade("upgrade-deity-loki", {
@@ -73,40 +53,21 @@ DefineUpgrade("upgrade-deity-heimdall", {
 	Name = "Heimdall",
 	Icon = "icon-heimdall",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin, Thor or Loki",
-	FactionPriorities = {
-		"hersing-tribe", 125,
-		"jarling-tribe", 200,
-		"karling-tribe", 200,
-		"thralling-tribe", 200
-	}
+	RequirementsString = "Odin, Thor or Loki"
 })
 
 DefineUpgrade("upgrade-deity-hel", {
 	Name = "Hel",
 	Icon = "icon-hel",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin, Thor, Loki or Gathaarl",
-	FactionPriorities = {
-		"kal_kartha", 200
-	}
+	RequirementsString = "Odin, Thor, Loki or Gathaarl"
 })
 
 DefineUpgrade("upgrade-deity-tyr", {
 	Name = "Tyr",
 	Icon = "icon-tyr",
 	Costs = {"time", 200, "copper", 1500},
-	RequirementsString = "Odin, Thor or Loki",
-	CivilizationPriorities = {
-		"anglo-saxon", 150,
-		"dwarf", 150,
-		"english", 150,
-		"frankish", 150,
-		"germanic", 150,
-		"goth", 150,
-		"suebi", 150,
-		"teuton", 150
-	}
+	RequirementsString = "Odin, Thor or Loki"
 })
 
 -- Goblin Deities
@@ -138,22 +99,6 @@ DefineUpgrade("upgrade-deity-poseidon", {
 })
 
 -- Modifiers
-
-DefineModifier("upgrade-deity-christian-god",
-	{"HitPoints", 10},
-	{"Mana", 20},
-	{"Points", 20},
-	{"apply-to", "unit-teuton-priest"}
-)
-
-DefineModifier("upgrade-deity-christian-god",
-	{"remove-upgrade", "upgrade-deity-apollo"}, {"remove-upgrade", "upgrade-deity-hermes"}, {"remove-upgrade", "upgrade-deity-poseidon"},
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade-deity-heimdall"}, {"remove-upgrade", "upgrade-deity-hel"}, {"remove-upgrade", "upgrade-deity-tyr"}
-)
-
-DefineModifier("upgrade-deity-christian-god", -- dummy upgrade modifier to change variation
-	{"apply-to", "unit-teuton-priest"}, {"apply-to", "unit-teuton-temple"}
-)
 
 DefineModifier("upgrade-deity-gathaarl",
 	{"BasicDamage", 2},
@@ -209,7 +154,7 @@ DefineModifier("upgrade-deity-odin",
 )
 
 DefineModifier("upgrade-deity-odin",
-	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade_deity_christian_god"}
 )
 
 DefineModifier("upgrade-deity-odin", -- dummy upgrade modifier to change starting abilities/variations
@@ -220,7 +165,7 @@ DefineModifier("upgrade-deity-odin", -- dummy upgrade modifier to change startin
 )
 
 DefineModifier("upgrade-deity-poseidon",
-	{"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade_deity_christian_god"}
 )
 
 DefineModifier("upgrade-deity-thor",
@@ -236,7 +181,7 @@ DefineModifier("upgrade-deity-thor",
 )
 
 DefineModifier("upgrade-deity-thor",
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-loki"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade_deity_christian_god"}
 )
 
 DefineModifier("upgrade-deity-thor", -- dummy upgrade modifier to change starting abilities/variations
@@ -254,7 +199,7 @@ DefineModifier("upgrade-deity-loki",
 )
 
 DefineModifier("upgrade-deity-loki",
-	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade-deity-christian-god"}
+	{"remove-upgrade", "upgrade-deity-odin"}, {"remove-upgrade", "upgrade-deity-thor"}, {"remove-upgrade", "upgrade-deity-frey"}, {"remove-upgrade", "upgrade-deity-freyja"}, {"remove-upgrade", "upgrade_deity_christian_god"}
 )
 
 DefineModifier("upgrade-deity-loki", -- dummy upgrade modifier to change starting abilities/variations

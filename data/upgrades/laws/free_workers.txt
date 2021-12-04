@@ -17,11 +17,17 @@ upgrade_free_workers = {
 		master_smith
 		grandmaster_smith
 	}
-	civilization_priorities = {
-		dwarven = 200
-		elven = 200
-		germanic = 200
-		goblin = 200
+	ai_priority = {
+		base_value = 100
+		
+		modifier = {
+			factor = 2
+			
+			or = {
+				civilization = dwarven
+				civilization = elven
+			}
+		}
 	}
 	modifier = {
 		removed_upgrades = {

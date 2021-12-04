@@ -10,6 +10,15 @@ upgrade_deity_christian_god = {
 	conditions = {
 		upgrade_class = writing
 	}
+	ai_priority = {
+		base_value = 100
+		
+		modifier = {
+			factor = 2
+			
+			civilization_group = western
+		}
+	}
 	modifier = {
 		hit_points = 10
 		mana = 20
