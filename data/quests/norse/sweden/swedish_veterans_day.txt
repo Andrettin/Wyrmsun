@@ -1,0 +1,27 @@
+swedish_veterans_day = {
+	name = "Swedish Veterans' Day"
+	icon = icon_norse_veteran_swordsman
+	player_color = blue
+	description = "The 29th of May is Veteran's Day in Sweden."
+	hint = "Select a [civilization:norse.class_unit_type:barracks.name] and click on the [civilization:norse.class_unit_type:infantry.name] button to train the unit."
+	conditions = {
+		or = {
+			faction = swedish_tribe
+			faction = sweden
+		}
+		real_month = may
+		real_day = 29
+		not = {
+			real_day = 30
+		}
+	}
+	objectives = {
+		build_units = {
+			unit_class = infantry
+			quantity = 5
+		}
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
