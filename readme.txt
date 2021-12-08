@@ -70,6 +70,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Added Norse raven flag icons, and updated some Norse factions to use them as their icons.
 
+* Heroes
+- Fixed issue which caused custom heroes items which were saved as equipped to start out unequipped when using them in a game.
+
 * Maps
 - Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
 
