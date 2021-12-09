@@ -87,6 +87,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed issue which caused the initial dialogue to not trigger properly for the Mead of Wisdom legacy quest.
 
+* Scenarios
+- Kobolds now spawn at longer intervals in the Nidavellir scenarios.
+
 * Status Effects
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
 

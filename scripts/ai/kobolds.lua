@@ -40,7 +40,7 @@ local kobold_funcs = {
 	
 	function() return (GetPlayerData(AiPlayer(), "TotalNumUnitsConstructed") == 0) end, -- if the tribe no longer has any units, stop spawning new ones
 	
-	function() return ((ai_call_counter[AiPlayer()] % 50) ~= 0) end, -- add a little delay between spawnings
+	function() return ((ai_call_counter[AiPlayer()] % 240) ~= 0) end, -- add a little delay between spawnings
 
 	function()
 		stratagus.gameData.AIState.index[AiPlayer() + 1] = 0; -- repeat loop
@@ -54,7 +54,7 @@ function AiKobolds()
 	end
 	
 	ai_call_counter[AiPlayer()] = ai_call_counter[AiPlayer()] + 1
-	if (GameSettings.Difficulty == DifficultyEasy and (ai_call_counter[AiPlayer()] % 50) ~= 0) then -- on easy difficulty, the AI is slower to do things
+	if (GameSettings.Difficulty == DifficultyEasy and (ai_call_counter[AiPlayer()] % 240) ~= 0) then -- on easy difficulty, the AI is slower to do things
 		return;
 	end
 	

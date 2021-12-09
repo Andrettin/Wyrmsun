@@ -150,7 +150,7 @@ AddTrigger("grafvitning-kobolds-attack-modsognirs-clan",
 AddTrigger("modsognirs-clan-kills-a-kobold",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil and GetPlayerData(i, "UnitTypeKills", "unit-kobold-footpad") >= 1) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("modsognir", i) ~= nil and FindHero("durin", i) ~= nil and GetPlayerData(i, "UnitTypeKills", "unit-kobold-footpad") >= 1 and GetFactionExists("grafvitning-tribe") and (GetPlayerData(GetFactionPlayer("grafvitning-tribe"), "IsEnemy", i) or GetPlayerData(i, "IsEnemy", GetFactionPlayer("grafvitning-tribe")))) then
 				trigger_player = i
 				return true
 			end
