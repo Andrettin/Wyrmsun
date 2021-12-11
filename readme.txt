@@ -90,6 +90,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Fixed issue which caused the initial dialogue to not trigger properly for the Mead of Wisdom legacy quest.
+- Added side-quests for Denmark and Sweden to conquer areas in Scandinavia and around the Baltic.
+- Added side-quests for the Swedish Tribe and Sweden, for certain Swedish real-world festivities (e.g. Gustavus Adolphus Day). These only trigger when it is the corresponding day in the real world.
+- Added side-quests for Denmark related to Danish historical serfdom laws.
 
 * Scenarios
 - Kobolds now spawn at longer intervals in the Nidavellir scenarios.

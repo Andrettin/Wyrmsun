@@ -1,0 +1,18 @@
+stavnsbandet = { #Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	name = "Stavnsbandet"
+	icon = serfdom
+	player_color = red
+	description = "The great landowners in our realm are proposing a law known as the Stavnsbandet, which will restrict the movement rights of the male population. This law is also intended to make it easier to assess potential recruits for our army."
+	hint = "Select a [civilization:norse.class_unit_type:town_hall.name], click on the Enact a Law button, and finally click on the Serfdom button to acquire the upgrade."
+	conditions = {
+		faction = denmark
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_serfdom
+		}
+	}
+	completion_effects = {
+		scripted_effect = medium_copper_reward
+	}
+}

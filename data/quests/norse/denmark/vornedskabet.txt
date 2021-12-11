@@ -1,0 +1,18 @@
+vornedskabet = { #Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+	name = "Vornedskabet"
+	icon = serfdom
+	player_color = red
+	description = "Our aristocracy is requesting the passage of a piece of legislation called the Vornedskabet, restricting the movement rights of the peasantry."
+	hint = "Select a [civilization:norse.class_unit_type:town_hall.name], click on the Enact a Law button, and finally click on the Serfdom button to acquire the upgrade."
+	conditions = {
+		faction = denmark
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_serfdom
+		}
+	}
+	completion_effects = {
+		scripted_effect = medium_copper_reward
+	}
+}

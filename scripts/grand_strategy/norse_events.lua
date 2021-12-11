@@ -287,30 +287,6 @@ local NorseEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	Vornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
-		Name = "Vornedskabet",
-		Description = "Movement restrictions, or vornedskabet, have been introduced on the serfs of the island of Zealand.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "denmark"
-				and GetProvinceOwner("Zealand") == EventFaction.Name
-				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
-				-- should only trigger after a technology for the appropriate time period has been researched
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", 500)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
-			end
-		},
-		OptionTooltips = {"+500 Copper\n-5 Research"}
-	},
 	NoblesAcquireLegalJurisdictionPrivilege = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "Nobles Acquire Legal Jurisdiction Privilege",
 		Description = "The Danish nobility has managed to acquire the right of legal jurisdiction over their villagers.",
@@ -358,30 +334,5 @@ local NorseEvents = {
 			end
 		},
 		OptionTooltips = {"+5 Research"}
-	},
-	Stavnsbandet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
-		Name = "Stavnsbandet",
-		Description = "The stavnsbandet, which consists of movement restrictions for the male population, has been introduced for military reasons. It will hurt our economy, however.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "denmark"
-				and GetProvinceOwner("Zealand") == EventFaction.Name
-				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
-				and GetProvinceSettlementBuilding("Zealand", "unit-norse-barracks")
-				-- should only trigger after a technology for the appropriate time period has been researched
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "copper", -300)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -2)
-			end
-		},
-		OptionTooltips = {"-300 Copper\n-2 Research"}
 	}
 }
