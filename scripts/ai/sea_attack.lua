@@ -145,13 +145,6 @@ local sea_funcs = {
 	function() return AiResearch(GetAiUnitType("coinage")) end, -- research coinage to improve copper/silver/gold processing
 	function() return AiResearch(GetAiUnitType("writing")) end, -- research writing to become a polity
 
-	function() -- certain civilizations acquire serfdom when it becomes available
-		if (AiGetRace() == "teuton" or AiGetRace() == "anglo_saxon" or AiGetRace() == "english" or AiGetRace() == "frankish" or AiGetRace() == "suebi" or AiGetRace() == "goth" or AiGetRace() == "norse") then
-			return AiResearch("upgrade-serfdom");
-		end
-		return false;
-	end,
-	
 --	function() return AiSet(AiTanker(), 3) end,
 --	function() return AiForce(1, {AiSubmarine(), 3}) end,
 --	function() return AiWaitForce(1) end,  -- wait until attack force is ready

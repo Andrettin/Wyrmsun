@@ -1,6 +1,6 @@
 upgrade_serfdom = {
 	name = "Serfdom"
-	icon = icon_serfdom
+	icon = serfdom
 	#description = ".\n\nEffect: -25% worker cost, -1 worker gathering rate."
 	requirements_string = "Stronghold/Bastion"
 	costs = {

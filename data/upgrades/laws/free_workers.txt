@@ -1,6 +1,6 @@
 upgrade_free_workers = {
 	name = "Free Workers"
-	icon = icon_labor
+	icon = labor
 	#description = ".\n\nEffect: +25% worker cost, +25% worker gathering rates."
 	costs = {
 		time = 200

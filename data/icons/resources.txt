@@ -6,7 +6,7 @@ icon_gold = {
 	file = "icons/resources/gold.png"
 }
 
-icon_labor = {
+labor = {
 	file = "icons/resources/labor.png"
 }
 

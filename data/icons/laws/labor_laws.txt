@@ -1,0 +1,3 @@
+serfdom = {
+	file = "icons/laws/serfdom.png"
+}
