@@ -86,7 +86,7 @@ DefineUpgrade("upgrade-item-suffix-of-frailty", {
 	Name = "of Frailty",
 	MagicSuffix = true,
 	ItemAffix = {"armor", "cloak", "shield", "helmet", "amulet", "ring", "horn"},
-	IncompatibleAffixes = {"upgrade-item-prefix-frail"},
+	IncompatibleAffixes = {"upgrade_prefix_frail"},
 	MagicLevel = 2
 })
 

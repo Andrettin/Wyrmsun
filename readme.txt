@@ -74,6 +74,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Fixed issue which caused custom heroes items which were saved as equipped to start out unequipped when using them in a game.
 
+* Items
+- Added the "Rusty" magic prefix for armor (-1 armor).
+
 * Maps
 - Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
 

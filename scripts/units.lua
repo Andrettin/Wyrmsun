@@ -335,7 +335,7 @@ DefineUnitType("unit-template-base-deposit", {
 	ExplodeWhenKilled = "missile-explosion",
 	Domain = "land",
 	StartingResources = {50000},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
@@ -374,7 +374,7 @@ DefineUnitType("unit-template-base-mine", {
 	MaxHarvesters = 10,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -3991,7 +3991,7 @@ DefineUnitType("unit-template-town-hall", {
 	ButtonPos = 1,
 	ButtonKey = "h",
 	ResourceDemand = {"jewelry", 5, "furniture", 5, "leather", 5},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	BuildingRulesString = "Must be built on a Settlement Site",
@@ -4078,7 +4078,7 @@ DefineUnitType("unit-template-farm", {
 	ButtonPos = 2,
 	ButtonKey = "f",
 	ResourceDemand = {"furniture", 1, "leather", 1},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "farm-selected",
 --		"acknowledge", "farm-acknowledge",
@@ -4117,7 +4117,7 @@ DefineUnitType("unit-template-barracks", {
 	ButtonKey = "b",
 	ResourceDemand = {"furniture", 3, "leather", 3},
 	AiDrops = {"unit-club"},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "barracks-selected",
 --		"acknowledge", "barracks-acknowledge",
@@ -4159,7 +4159,7 @@ DefineUnitType("unit-template-lumber-mill", {
 	ButtonKey = "l",
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
@@ -4211,7 +4211,7 @@ DefineUnitType("unit-template-smithy", {
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-crown", "unit-amulet", "unit-ring"},
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	BuildingRulesString = "Cannot be built close to town halls or mines",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit_settlement_site" },
@@ -4275,7 +4275,7 @@ DefineUnitType("unit-template-masons-shop", {
 	BurnDamageRate = 1,
 	ButtonKey = "n",
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "storehouse-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -4311,7 +4311,7 @@ DefineUnitType("unit-template-stables", {
 	ButtonKey = "e",
 	ResourceDemand = {"furniture", 1, "leather", 3},
 	RequirementsString = "Lumber Mill",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "stables-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
@@ -4351,7 +4351,7 @@ DefineUnitType("unit-template-temple", {
 	RequirementsString = "Lumber Mill",
 	BuildingRules = { "and", { "ontop", { Type = "unit_building_site", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	BuildingRulesString = "Must be built on top of a Building Site",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit_potion_of_mana", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
@@ -4391,7 +4391,7 @@ DefineUnitType("unit-template-university", {
 	ButtonKey = "u",
 	BuildingRules = { "and", { "ontop", { Type = "unit_building_site", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	BuildingRulesString = "Must be built on top of a Building Site",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-potion-of-healing", "unit_potion_of_mana", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
 	Sounds = {
@@ -4433,7 +4433,7 @@ DefineUnitType("unit-template-watch-tower", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	ButtonKey = "t",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
@@ -4480,7 +4480,7 @@ DefineUnitType("unit-template-guard-tower", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RequirementsString = "Lumber Mill and Masonry",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
@@ -4522,7 +4522,7 @@ DefineUnitType("unit-template-heavy-tower", {
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RequirementsString = "Lumber Mill, Smithy, Engineering and Masonry",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "tower-selected",
 --		"acknowledge", "dwarven-sentry-tower-acknowledge",
@@ -4587,7 +4587,7 @@ DefineUnitType("unit-template-market", {
 	ResourceDemand = {"jewelry", 3, "furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other markets",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	SoldUnits = {"unit-hammer", "unit-mining-pick", "unit-club", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-hand-cannon", "unit-horn", "unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring", "unit-scroll", "unit-book", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana", "unit-elixir-of-dexterity", "unit-elixir-of-intelligence", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	AiDrops = {"unit-christmas-hat", "unit-crown", "unit-amulet", "unit-ring"},
 	DropSpells = {"spell-detachment", "spell-forgetfulness", "spell-retraining"},
@@ -4639,7 +4639,7 @@ DefineUnitType("unit-template-dock", {
 	ResourceDemand = {"jewelry", 3, "furniture", 3, "leather", 3},
 	RequirementsString = "Lumber Mill",
 	BuildingRulesString = "Cannot be built close to other docks",
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	BuildingRules = {
 		"and", {
 			"distance", { Distance = 3, DistanceType = ">", Class = "dock" }
@@ -4886,7 +4886,7 @@ DefineUnitType("unit-mercenary-camp", {
 		"unit-slavic-swordsman", 4,
 		"unit-troll-warrior", 2
 	},
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Variations = {
 		{
 			"variation-id", "mercenary-camp",

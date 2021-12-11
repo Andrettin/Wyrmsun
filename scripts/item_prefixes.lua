@@ -59,13 +59,6 @@ DefineUpgrade("upgrade-item-prefix-extinguishing", {
 	MagicLevel = 3
 })
 
-DefineUpgrade("upgrade-item-prefix-frail", {
-	Name = "Frail",
-	MagicPrefix = true,
-	ItemAffix = {"armor", "cloak", "shield", "helmet"},
-	MagicLevel = 2
-})
-
 DefineUpgrade("upgrade-item-prefix-giants", {
 	Name = "Giant's",
 	MagicPrefix = true,
@@ -173,10 +166,6 @@ DefineModifier("upgrade-item-prefix-dwindling",
 
 DefineModifier("upgrade-item-prefix-extinguishing",
 	{"FireResistance", 30}
-)
-
-DefineModifier("upgrade-item-prefix-frail",
-	{"Armor", -2}
 )
 
 DefineModifier("upgrade-item-prefix-giants",

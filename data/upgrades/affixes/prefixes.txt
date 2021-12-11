@@ -23,6 +23,23 @@ upgrade_prefix_accurate = {
 	}
 }
 
+upgrade_prefix_frail = {
+	name = "Frail"
+	aliases += upgrade_item_prefix_frail
+	magic_prefix = true
+	magic_level = 2
+	affixed_item_classes = {
+		armor
+		cloak
+		shield
+		helmet
+	}
+	
+	modifier = {
+		armor = -2
+	}
+}
+
 upgrade_prefix_giantsbane = {
 	name = "Giantsbane"
 	aliases += upgrade_item_prefix_giantsbane
@@ -50,6 +67,21 @@ upgrade_prefix_giantsbane = {
 	
 	modifier = {
 		bonus_against_giants = 50
+	}
+}
+
+upgrade_prefix_rusty = {
+	name = "Rusty"
+	magic_prefix = true
+	magic_level = 1
+	affixed_item_classes = {
+		armor
+		shield
+		helmet
+	}
+	
+	modifier = {
+		armor = -1
 	}
 }
 
