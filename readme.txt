@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Updated Earth map settlement territories so that less settlements have territory on both sides of a major river.
+- Added the Baltic Route Network route terrain feature to the Earth map.
 
 * Miscellaneous
 - The current year now changes more quickly in earlier eras.

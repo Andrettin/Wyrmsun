@@ -1,0 +1,6 @@
+baltic_route_network = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 98-99.
+	name = "Baltic Route Network"
+	terrain_type = dirt_road
+	trade_route = true
+	color = { 129 163 211 }
+}
