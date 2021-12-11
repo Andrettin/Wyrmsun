@@ -517,8 +517,6 @@ function BuildProgramStartMenu()
 		save_achievements()
 	end
 	
-	check_achievements() -- check achievements here, so that the achievement unlocked dialogs can appear properly
-	
 	return menu:run()
 end
 
