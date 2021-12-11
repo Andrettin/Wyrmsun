@@ -435,7 +435,7 @@ local TeutonEvents = {
 		Description = "Charles Darwin has published a work entitled On the Origin of Species by Means of Natural Selection, in which he proposes that living organisms are the result of a long process of natural evolution.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
+				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lies
 				and GetProvinceCivilization("Essex") == "english"
 			) then
 				return true
@@ -501,7 +501,7 @@ local TeutonEvents = {
 	},
 	ArchivFuerAnthropologie = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 18.
 		Name = "Archiv für Anthropologie",
-		Description = "The journal Archiv für Anthropologie has been founded in Germany, preoccuping itself with research on prehistory..",
+		Description = "The journal Archiv für Anthropologie has been founded in Germany, preoccuping itself with research on prehistory.",
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Brandenburg") == EventFaction.Name -- where was it actually founded? Brandenburg set here since Berlin was Germany's capital

@@ -30,26 +30,10 @@ Defender = ""
 GrandStrategyEventMap = false
 EventFaction = nil
 EventProvince = nil
-SecondEventProvince = nil
-GrandStrategyWorld = ""
 
 function EndTurn()
-	-- AI moves
-	for key, value in pairs(Factions) do
-		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key]) > 0) then
-			AIDoTurn(Factions[key])
-		end
-	end
-
 	DoGrandStrategyTurn()
 
-	-- AI diplomacy
-	for key, value in pairs(Factions) do
-		if (Factions[key] ~= GrandStrategyFaction and GetFactionProvinceCount(Factions[key]) > 0) then
-			AIDoDiplomacy(Factions[key])
-		end
-	end
-	
 	-- if AI has responded to a peace offer of the human player, send a message telling the result
 	if (GrandStrategyFaction ~= nil) then
 		for key, value in pairs(Factions) do
@@ -114,16 +98,6 @@ function GetFactionProvinceCount(faction)
 	end
 end
 
-function GetFactionProvinceCountPreGame(faction)
-	local province_count = 0
-	for key, value in pairs(WorldMapProvinces) do
-		if (GetProvinceOwner(WorldMapProvinces[key].Name) == faction) then
-			province_count = province_count + 1
-		end
-	end
-	return province_count
-end
-
 function FactionHasTechnologyType(faction, technology_type)
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade") ~= nil) then
@@ -144,128 +118,8 @@ function FactionHasBorderWith(faction, faction_to)
 	return false
 end
 
-function FactionBordersCulture(faction, civilization)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (ProvinceBordersCulture(WorldMapProvinces[key], civilization)) then
-			return true
-		end
-	end
-	return false
-end
-
-function FactionHasSecondaryBorderWith(faction, faction_to)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
-			if (WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
-				for j=1,table.getn(WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
-						return true
-					end
-				end
-			elseif (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
-				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
-						return true
-					end
-				end
-			end
-		end
-	end
-	return false
-end
-
-function FactionHasSecondaryBorderThroughWaterWith(faction, faction_to)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		for i=1,table.getn(WorldMapProvinces[key].BorderProvinces) do
-			if (WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]] ~= nil) then
-				for j=1,table.getn(WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces) do
-					if (WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceOwner(WorldMapProvinces[WorldMapWaterProvinces[WorldMapProvinces[key].BorderProvinces[i]].BorderProvinces[j]].Name) == faction_to.Name) then
-						return true
-					end
-				end
-			end
-		end
-	end
-	return false
-end
-
 function ProvinceHasBorderWith(province, province_to)
 	return ProvinceBordersProvince(province.Name, province_to.Name)
-end
-
-function ProvinceBordersCulture(province, civilization)
-	for i=1,table.getn(province.BorderProvinces) do
-		if (WorldMapProvinces[province.BorderProvinces[i]] ~= nil and GetProvinceCivilization(WorldMapProvinces[province.BorderProvinces[i]].Name) == civilization) then
-			return true
-		elseif (WorldMapWaterProvinces[province.BorderProvinces[i]] ~= nil) then -- also check secondary borders through water, so that culture can spread to islands
-			for j=1,table.getn(WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces) do
-				if (WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]] ~= nil and GetProvinceCivilization(WorldMapProvinces[WorldMapWaterProvinces[province.BorderProvinces[i]].BorderProvinces[j]].Name) == civilization) then
-					return true
-				end
-			end
-		end
-	end
-
-	return false
-end
-
-function FactionHasCoast(faction)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (WorldMapProvinces[key].Coastal) then
-			return true
-		end
-	end
-	return false
-end
-
-function FactionHasCulture(faction, civilization)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (GetProvinceCivilization(WorldMapProvinces[key].Name) == civilization) then
-			return true
-		end
-	end
-	return false
-end
-
-function AIDoTurn(ai_faction)
-	AIConsiderOffers(ai_faction)
-end
-
-function AIDoDiplomacy(ai_faction)
-	if (AtPeace(ai_faction)) then -- if at peace, see if there are any suitable targets to declare war on
-		for province_i, key in ipairs(ai_faction.OwnedProvinces) do
-			for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-				if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[second_key].Name, "Water") == false and CanDeclareWar(ai_faction, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)))) then
-					if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
-						if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name)).Civilization, GetProvinceOwner(WorldMapProvinces[second_key].Name)) ~= "war" and (GetFactionMilitaryScore(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[second_key].Name))) * 4) < GetFactionMilitaryScore(ai_faction)) then -- only attack if military score is at least four times greater of that of the faction to be attacked
-							DeclareWar(ai_faction.Name, GetProvinceOwner(WorldMapProvinces[second_key].Name))
-						end
-					end
-				end
-			end
-		end
-	end
-	for key, value in pairs(Factions) do
-		if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, Factions[key].Civilization, Factions[key].Name) == "war" and FactionHasBorderWith(ai_faction, Factions[key]) == false) then
-			if (FactionHasSecondaryBorderWith(ai_faction, Factions[key]) == false) then
-				OfferPeace(ai_faction.Name, Factions[key].Name)
-			end
-		end
-	end
-end
-
-function AIConsiderOffers(ai_faction)
-	for key, value in pairs(Factions) do
-		if (GetFactionDiplomacyState(ai_faction.Civilization, ai_faction.Name, Factions[key].Civilization, Factions[key].Name) == "war" and GetFactionDiplomacyStateProposal(Factions[key].Civilization, Factions[key].Name, ai_faction.Civilization, ai_faction.Name) == "peace") then
-			if (round(GetFactionMilitaryScore(ai_faction) * 3 / 2) < GetFactionMilitaryScore(Factions[key])) then -- accept peace if enemy's forces are 50% greater than own forces
-				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
-			elseif (FactionHasBorderWith(ai_faction, Factions[key]) == false and FactionHasSecondaryBorderThroughWaterWith(ai_faction, Factions[key]) == false) then -- accept peace if has no borders with enemy any longer (since ships aren't implemented yet)
-				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, true)
-			else
-				RespondPeaceOffer(Factions[key].Name, ai_faction.Name, false)
-			end
-		end
-	end
 end
 
 function GetFactionMilitaryScore(faction)
@@ -344,16 +198,6 @@ function RespondPeaceOffer(faction_from, faction_to, accept)
 	if (faction_from ~= GrandStrategyFaction.Name) then
 		SetFactionDiplomacyStateProposal(GetFactionFromName(faction_from).Civilization, faction_from, GetFactionFromName(faction_to).Civilization, faction_to, "")
 	end
-end
-
-function AtPeace(faction)
-	for key, value in pairs(Factions) do
-		if (GetFactionDiplomacyState(faction.Civilization, faction.Name, Factions[key].Civilization, Factions[key].Name) == "war") then
-			return false
-		end
-	end
-
-	return true
 end
 
 function WarGrandStrategyGameMenu(background)
@@ -626,26 +470,5 @@ function GrandStrategyEvent(faction, event)
 				end
 			end
 		end
-	end
-end
-
-function CanDeclareWar(faction_from, faction_to)
-	if (FactionHasBorderWith(faction_from, faction_to) == false and (FactionHasCoast(faction_from) and FactionHasCoast(faction_to)) == false) then
-		return false
-	end
-	if (GetFactionResource(faction_from.Civilization, faction_from.Name, "prestige") < 0) then
-		return false
-	end
-	return true
-end
-
-function GetYearString(year)
-	local year_label = "AD"
-	local negative_year_label = "BC"
-
-	if (year >= 0) then
-		return year .. " " .. year_label
-	else
-		return (year * -1) .. " " .. negative_year_label
 	end
 end
