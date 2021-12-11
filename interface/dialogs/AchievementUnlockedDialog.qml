@@ -38,6 +38,7 @@ DialogBase {
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Close"
 		hotkey: "c"
+		interface_style: achievement_dialog.interface_style
 		
 		onClicked: {
 			achievement_dialog.close()
