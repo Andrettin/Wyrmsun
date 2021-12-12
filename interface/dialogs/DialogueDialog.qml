@@ -28,8 +28,8 @@ DialogBase {
 	
 	ScrollableTextArea {
 		id: text_label
-		anchors.top: icon_button.bottom
-		anchors.topMargin: 8 * wyrmgus.scale_factor
+		anchors.top: icon_button.visible ? icon_button.bottom : title_item.bottom
+		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
