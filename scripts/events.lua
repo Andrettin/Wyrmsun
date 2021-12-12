@@ -256,126 +256,6 @@ function EventTriggers()
 	end
 end
 
-function ProcessEventString(event_string)
-	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED") ~= nil) then
-		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("He"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("She"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN_CAPITALIZED", _("It"))
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN") ~= nil) then
-		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("he"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("she"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_PERSONAL_PRONOUN", _("it"))
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN") ~= nil) then
-		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("his"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("her"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_POSSESSIVE_PRONOUN", _("its"))
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN") ~= nil) then
-		if (GetCharacterData(trigger_hero, "Gender") == "male") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("him"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "female") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("her"))
-		elseif (GetCharacterData(trigger_hero, "Gender") == "asexual") then
-			event_string = string.gsub(event_string, "TRIGGER_HERO_OBLIQUE_PRONOUN", _("it"))
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_MAJOR_DEITY") ~= nil) then
-		local hero_deities = GetCharacterData(trigger_hero, "Deities")
-		for i = 1,table.getn(hero_deities) do
-			if (GetDeityData(hero_deities[i], "Major")) then
-				local deity_name = ""
-				if (GetCharacterData(trigger_hero, "Civilization") ~= "") then
-					deity_name = GetDeityData(hero_deities[i], "CulturalName", GetCharacterData(trigger_hero, "Civilization"))
-				end
-				if (deity_name == "") then
-					deity_name = GetDeityData(hero_deities[i], "Name")
-				end
-				event_string = string.gsub(event_string, "TRIGGER_HERO_MAJOR_DEITY", deity_name)
-				break
-			end
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1_GOD_GODDESS") ~= nil) then
-		local hero_deities = GetCharacterData(trigger_hero, "Deities")
-		for i = 1,table.getn(hero_deities) do
-			if (GetDeityData(hero_deities[i], "Major") == false) then
-				local god_goddess = ""
-				if (GetDeityData(hero_deities[i], "Gender") == "female") then
-					god_goddess = _("Goddess")
-				else
-					god_goddess = _("God")
-				end
-				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_GOD_GODDESS", god_goddess)
-				break
-			end
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1") ~= nil) then
-		local hero_deities = GetCharacterData(trigger_hero, "Deities")
-		for i = 1,table.getn(hero_deities) do
-			if (GetDeityData(hero_deities[i], "Major") == false) then
-				local deity_domains = GetDeityData(hero_deities[i], "Domains")
-				for j = 1,table.getn(deity_domains) do
-					event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1_DOMAIN_1", GetMagicDomainData(deity_domains[j], "Name"))
-					break
-				end
-				break
-			end
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO_MINOR_DEITY_1") ~= nil) then
-		local hero_deities = GetCharacterData(trigger_hero, "Deities")
-		for i = 1,table.getn(hero_deities) do
-			if (GetDeityData(hero_deities[i], "Major") == false) then
-				local deity_name = ""
-				if (GetCharacterData(trigger_hero, "Civilization") ~= "") then
-					deity_name = GetDeityData(hero_deities[i], "CulturalName", GetCharacterData(trigger_hero, "Civilization"))
-				end
-				if (deity_name == "") then
-					deity_name = GetDeityData(hero_deities[i], "Name")
-				end
-				event_string = string.gsub(event_string, "TRIGGER_HERO_MINOR_DEITY_1", deity_name)
-				break
-			end
-		end
-	end
-	if (string.find(event_string, "TRIGGER_HERO") ~= nil) then
-		event_string = string.gsub(event_string, "TRIGGER_HERO", GetCharacterData(trigger_hero, "Name"))
-	end
-	
-	if (string.find(event_string, "RULER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "RULER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "ruler", "male")))
-	end
-
-	if (string.find(event_string, "CHANCELLOR_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "CHANCELLOR_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "chancellor", "male")))
-	end
-
-	if (string.find(event_string, "MARSHAL_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "MARSHAL_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "marshal", "male")))
-	end
-
-	if (string.find(event_string, "TREASURER_TITLE") ~= nil) then
-		event_string = string.gsub(event_string, "TREASURER_TITLE", _(GetPlayerData(trigger_player, "CharacterTitle", "treasurer", "male")))
-	end
-
-	return event_string
-end
-
 function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically, arg)
 	if not (arg) then
 		arg = {}
@@ -431,7 +311,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			menu:add(l, 14 * get_scale_factor(), 112 * get_scale_factor())
 		end
 		
-		l:setCaption(ProcessEventString(_(event_description)))
+		l:setCaption(_(event_description))
 
 		local b
 		if (type(speaker) == "number") then
@@ -473,7 +353,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			)
 			
 			if (arg.OptionTooltips ~= nil) then
-				option_b:setTooltip(ProcessEventString(_(arg.OptionTooltips[i])))
+				option_b:setTooltip(_(arg.OptionTooltips[i]))
 			end
 		end
 		
