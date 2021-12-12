@@ -14,6 +14,7 @@ DialogBase {
 	property var options: []
 	property var option_hotkeys: []
 	property var option_tooltips: []
+	property int unit_number: -1
 	
 	IconButton {
 		id: icon_button
@@ -58,7 +59,7 @@ DialogBase {
 				interface_style: dialogue_dialog.interface_style
 				
 				onClicked: {
-					dialogue.call_node_option_effect_sync(node_index, index)
+					dialogue.call_node_option_effect_sync(node_index, index, unit_number)
 					close_timer.start() //use a timer so that this will happen after any subsequent dialogue nodes have been shown
 				}
 			}

@@ -368,7 +368,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus
-		function onDialogueNodeCalled(dialogue, node_index, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips) {
+		function onDialogueNodeCalled(dialogue, node_index, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips, unit_number) {
 			if (dialogue_component.status == Component.Error) {
 				console.error(dialogue_component.errorString())
 				return
@@ -384,8 +384,10 @@ Item {
 				options: options,
 				option_hotkeys: option_hotkeys,
 				option_tooltips: option_tooltips,
+				unit_number: unit_number,
 				interface_style: wyrmgus.current_interface_style.identifier
 			})
+			
 			dialogue_dialog.open()
 		}
 	}
