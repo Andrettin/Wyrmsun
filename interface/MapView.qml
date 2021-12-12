@@ -15,6 +15,7 @@ Item {
 	property var popups: []
 	property var active_popups: []
 	property int active_popup_count: 0
+	readonly property var dialogue_component: Qt.createComponent("dialogs/DialogueDialog.qml")
 	
 	MouseArea {
 		id: mouse_area
@@ -362,6 +363,30 @@ Item {
 		function onFactionChoiceDialogOpened(potential_factions) {
 			faction_choice_dialog.factions = potential_factions
 			faction_choice_dialog.open()
+		}
+	}
+	
+	Connections {
+		target: wyrmgus
+		function onDialogueNodeCalled(dialogue, node_index, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips) {
+			if (dialogue_component.status == Component.Error) {
+				console.error(dialogue_component.errorString())
+				return
+			}
+			
+			var dialogue_dialog = dialogue_component.createObject(map_view, {
+				dialogue: dialogue,
+				node_index: node_index,
+				title: title_str,
+				text: text,
+				icon: icon_identifier,
+				player_color: player_color_identifier,
+				options: options,
+				option_hotkeys: option_hotkeys,
+				option_tooltips: option_tooltips,
+				interface_style: wyrmgus.current_interface_style.identifier
+			})
+			dialogue_dialog.open()
 		}
 	}
 	

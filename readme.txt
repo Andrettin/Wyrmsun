@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 - Increased the width of the map dropdown for the custom game menu, as some map names were too long for it.
 - Items sold at the market now have a colored border if they are magic or unique.
 - Reworked the achievement unlocked dialog.
+- Reworked the dialog for most dialogues.
 
 -----------------------------------------------------------------------
 - 5.2.4
