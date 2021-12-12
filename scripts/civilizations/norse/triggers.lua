@@ -169,8 +169,6 @@ AddTrigger("the-house-of-seven-fathers",
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Character") ~= "" and GetUnitVariable(uncount[unit1], "CustomCharacter") == false and GetPlayerData(GetUnitVariable(the_house_of_seven_fathers, "Player"), "IsEnemy", GetUnitVariable(uncount[unit1], "Player")) == false) then -- for now only allowed for non-custom heroes, for code reasons
 					trigger_player = GetUnitVariable(uncount[unit1], "Player")
-					second_trigger_player = GetUnitVariable(the_house_of_seven_fathers, "Player")
-					trigger_hero = GetUnitVariable(uncount[unit1], "Character")
 					trigger_unit = uncount[unit1]
 					return true
 				end
@@ -179,8 +177,7 @@ AddTrigger("the-house-of-seven-fathers",
 		return false
 	end,
 	function()
-		CallDialogue("the-house-of-seven-fathers", trigger_player)
+		CallDialogue("the_house_of_seven_fathers", trigger_player, trigger_unit)
 		return false
 	end
 )
-

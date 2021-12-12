@@ -1,0 +1,54 @@
+the_house_of_seven_fathers = { #based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
+	{
+		text = "Weary of [unit.possessive_pronoun] travels, [unit.name] comes to a finely-built farm and wonders whether [unit.personal_pronoun] could spend the night. [unit.capitalized_personal_pronoun] sees a gray-haired, bearded old man chopping wood close to the farm. Greeting him as the father of the house, [unit.simple_name] asks him whether [unit.personal_pronoun] could receive lodging for the night. The man answers [unit.oblique_pronoun] that he is not the father of the house, and that [unit.simple_name] should go to the kitchen and ask his father."
+	}
+	{
+		text = "[unit.simple_name] enters the kitchen, and sees a man older than the first by the fireside. [unit.capitalized_personal_pronoun] makes the same inquiry to the old man, who answers that he is not the father of the house either, and that the traveller should ask his father, who is in the parlor."
+	}
+	{
+		text = "Entering the parlor, [unit.simple_name] finds an even older man sitting by the table, trembling from the cold. [unit.capitalized_personal_pronoun] asks the man if [unit.personal_pronoun] could sleep in the house for the night, as [unit.personal_pronoun] is weary of travelling. The old man puts away the big book he is reading and answers [unit.simple_name] that he is not the father of the house, and tells [unit.oblique_pronoun] to speak to his father, who is sitting on the wooden bench."
+		conditions = {
+			unique_unit = {
+				unique = the_house_of_seven_fathers
+				
+				upgrade_class = writing
+			}
+		}
+	}
+	{
+		text = "Entering the parlor, [unit.simple_name] finds an even older man sitting by the table, trembling from the cold. [unit.capitalized_personal_pronoun] asks the man if [unit.personal_pronoun] could sleep in the house for the night, as [unit.personal_pronoun] is weary of travelling. The old man answers [unit.simple_name] that he is not the father of the house, and tells [unit.oblique_pronoun] to speak to his father, who is sitting on the wooden bench."
+		conditions = {
+			unique_unit = {
+				unique = the_house_of_seven_fathers
+				
+				not = {
+					upgrade_class = writing
+				}
+			}
+		}
+	}
+	{
+		#text = "Going to the bench, [unit.simple_name] finds a yet older man, all curled up and smoking a pipe, with trembling hands. [unit.simple_name] gently asks to stay for the night, but the man answers [unit.oblique_pronoun] that he is not the father of the house, and that the traveller should talk to his father, who lies on the bed." #the story can happen in the game before tobacco arrived in Europe, so leave out him smoking a pipe
+		text = "Going to the bench, [unit.simple_name] finds a yet older man, all curled up and with trembling hands. [unit.simple_name] gently asks to stay for the night, but the man answers [unit.oblique_pronoun] that he is also not the father of the house, and that the traveller should talk to his father, who lies on the bed."
+	}
+	{
+		text = "On the bed lies a very old man, to whom [unit.simple_name] asks whether he is allowed to spend the night in the house. The old man is almost completely still, with the exception of his large, lively eyes. He tells [unit.simple_name] that he is not the father of the house either, and that [unit.personal_pronoun] should speak to his father, who is in the cradle."
+	}
+	{
+		text = "[unit.simple_name] goes over to the cradle, and looks at the small, extremely aged man who lies in it. The traveller hears the man lightly coughing, and then inquires whether [unit.personal_pronoun] may be lodged in the house for the day, as [unit.personal_pronoun] is tired from [unit.possessive_pronoun] journeys. The old man takes a long time to answer, and then says that he is also not the father of the house, and tells [unit.oblique_pronoun] to talk to his father, who is in the horn hanging on the wall."
+	}
+	{
+		text = "The traveller looks at the wall, and after a moment finds the horn. When [unit.personal_pronoun] looks inside to see the horn's dweller, [unit.personal_pronoun] discovers a tiny ancient man, so decrepit that he seems barely human. Scared, [unit.simple_name] shouts at the old man, asking him whether [unit.personal_pronoun] is allowed to sleep in the house. The father of the house tells [unit.simple_name] that [unit.personal_pronoun] may spend the night, affectionately calling [unit.oblique_pronoun] \"little one\"."
+		option = {
+			name = "An interesting experience"
+			tooltip = "+100 XP and restored HP and mana for [unit.name]"
+			effects = {
+				current_unit = {
+					experience += 100
+					restore_hp_percent = 100
+					restore_mana_percent = 100
+				}
+			}
+		}
+	}
+}
