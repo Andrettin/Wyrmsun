@@ -54,6 +54,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 5.3.1
+-----------------------------------------------------------------------
+
+* Buildings
+- Fixed crash which occurred when placing a building, if the building's center tile were beyond the end of the map.
+
+-----------------------------------------------------------------------
 - 5.3.0
 -----------------------------------------------------------------------
 
@@ -69,7 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - Building sites, mineral deposits and the like now display to which settlement's territory they belong in their tooltip.
 
 * Factions
-- Added Norse raven flag icons, and updated some Norse factions to use them as their icons.
+- Added Norse raven flag icons (by Jinn), and updated some Norse factions to use them as their icons.
 
 * Heroes
 - Fixed issue which caused custom heroes items which were saved as equipped to start out unequipped when using them in a game.
@@ -101,8 +108,8 @@ https://github.com/Andrettin/Wyrmsun
 - The duration of harmful status effect is now reduced semi-randomly depending on the levels of the caster and the target (if both are organic units).
 
 * Upgrades
-- Added the Monarchy government type upgrade (-25% cavalry cost) (only available for polities).
-- Added the Republic government type upgrade (+10% Copper/Silver/Gold processing bonus) (only available for polities).
+- Added the Monarchy government type upgrade (-25% cavalry cost) (only available for polities) (icon by Brullov).
+- Added the Republic government type upgrade (+10% Copper/Silver/Gold processing bonus) (only available for polities) (icon by Brullov).
 
 * User Interface
 - Increased the width of the map dropdown for the custom game menu, as some map names were too long for it.

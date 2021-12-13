@@ -7,7 +7,7 @@
 #                 /__/
 
 cmake_minimum_required(VERSION 3.7.1)
-project(wyrmsun VERSION 5.3.0 LANGUAGES NONE)
+project(wyrmsun VERSION 5.3.1 LANGUAGES NONE)
 
 set(BIN_DIR games CACHE STRING "Where to install the Wyrmsun launch script")
 set(DATA_DIR share/wyrmsun CACHE STRING "Where to install the Wyrmsun data files")
