@@ -2862,6 +2862,18 @@ if not (ui_loaded_first_time) then
 						end
 					),
 					Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {Item = "only", ItemUsable = "only", ButtonAction = "unit"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Item = "only", ItemUsable = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Usable"), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {Item = "only", ItemEquippable = "only", ButtonAction = "unit"}, Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Item = "only", ItemEquippable = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Equippable"), Font = PopupDescriptionFont}}
 				}
 		}	
 	})

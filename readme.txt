@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed crash which occurred when placing a building, if the building's center tile were beyond the end of the map.
 
+* Items
+- The tooltip for an item being hovered over on the map will now display whether it is usable or equippable by the selected unit, if there is a single unit selected.
+
 -----------------------------------------------------------------------
 - 5.3.0
 -----------------------------------------------------------------------
