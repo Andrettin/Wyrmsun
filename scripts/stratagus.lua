@@ -1733,11 +1733,9 @@ CompleteMissingValues(wyr.preferences, defaultPreferences)
 
 SetDoubleClickDelay(wyr.preferences.DoubleClickDelayInMs)
 if (wyr.preferences.EffectsEnabled ~= nil) then
-	SetEffectsEnabled(wyr.preferences.EffectsEnabled)
 	wyr.preferences.EffectsEnabled = nil
 end
 if (wyr.preferences.EffectsVolume ~= nil) then
-	SetEffectsVolume(wyr.preferences.EffectsVolume)
 	wyr.preferences.EffectsVolume = nil
 end
 SetFogOfWar(wyr.preferences.FogOfWar)
@@ -1750,11 +1748,9 @@ SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
 SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
 if (wyr.preferences.MusicEnabled ~= nil) then
-	SetMusicEnabled(wyr.preferences.MusicEnabled)
 	wyr.preferences.MusicEnabled = nil
 end
 if (wyr.preferences.MusicVolume ~= nil) then
-	SetMusicVolume(wyr.preferences.MusicVolume)
 	wyr.preferences.MusicVolume = nil
 end
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
