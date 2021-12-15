@@ -565,10 +565,6 @@ initialize_database()
 
 --pack_image_folder("C:/Wyrmsun/models/units/aether_workship/Sprites")
 
-function GameStarting()
-	play_map_music()
-end
-
 if (is_test_run()) then
 	return
 end
