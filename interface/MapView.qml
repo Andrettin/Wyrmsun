@@ -291,7 +291,7 @@ Item {
 				}
 				break
 			case Qt.Key_Q:
-				if ((event.modifiers & Qt.ControlModifier) || (event.modifiers & Qt.AltModifier)) {
+				if ((event.modifiers & Qt.ControlModifier)) {
 					quit_mission_confirm_dialog.open()
 				}
 				break

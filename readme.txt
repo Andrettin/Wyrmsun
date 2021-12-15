@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - The tooltip for an item being hovered over on the map will now display whether it is usable or equippable by the selected unit, if there is a single unit selected.
 
+* User Interface
+- The Alt+Q hotkey now correctly only selects the player's army, instead of bringing up the quit to menu dialog as well.
+
 -----------------------------------------------------------------------
 - 5.3.0
 -----------------------------------------------------------------------
