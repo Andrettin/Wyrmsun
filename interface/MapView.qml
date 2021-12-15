@@ -16,6 +16,8 @@ Item {
 	property var active_popups: []
 	property int active_popup_count: 0
 	readonly property var dialogue_component: Qt.createComponent("dialogs/DialogueDialog.qml")
+	readonly property var quest_completed_dialog_component: Qt.createComponent("dialogs/QuestCompletedDialog.qml")
+	readonly property var quest_failed_dialog_component: Qt.createComponent("dialogs/QuestFailedDialog.qml")
 	
 	MouseArea {
 		id: mouse_area
@@ -351,23 +353,18 @@ Item {
 	
 	Connections {
 		target: wyrmgus
+		
 		function onEncyclopediaEntryOpened(link) {
 			map_view.create_menu(["menus/EncyclopediaEntryMenu.qml", {
 				entry: wyrmgus.get_link_target(link)
 			}])
 		}
-	}
-	
-	Connections {
-		target: wyrmgus
+		
 		function onFactionChoiceDialogOpened(potential_factions) {
 			faction_choice_dialog.factions = potential_factions
 			faction_choice_dialog.open()
 		}
-	}
-	
-	Connections {
-		target: wyrmgus
+		
 		function onDialogueNodeCalled(dialogue, node_index, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips, unit_number) {
 			if (dialogue_component.status == Component.Error) {
 				console.error(dialogue_component.errorString())
@@ -389,6 +386,36 @@ Item {
 			})
 			
 			dialogue_dialog.open()
+		}
+		
+		function onQuestCompletedDialogOpened(quest, rewards_string) {
+			if (quest_completed_dialog_component.status == Component.Error) {
+				console.error(quest_completed_dialog_component.errorString())
+				return
+			}
+			
+			var quest_dialog = quest_completed_dialog_component.createObject(map_view, {
+				quest: quest,
+				rewards_string: rewards_string,
+				interface_style: wyrmgus.current_interface_style.identifier
+			})
+			
+			quest_dialog.open()
+		}
+		
+		function onQuestFailedDialogOpened(quest, failure_reason_string) {
+			if (quest_failed_dialog_component.status == Component.Error) {
+				console.error(quest_failed_dialog_component.errorString())
+				return
+			}
+			
+			var quest_dialog = quest_failed_dialog_component.createObject(map_view, {
+				quest: quest,
+				failure_reason_string: failure_reason_string,
+				interface_style: wyrmgus.current_interface_style.identifier
+			})
+			
+			quest_dialog.open()
 		}
 	}
 	

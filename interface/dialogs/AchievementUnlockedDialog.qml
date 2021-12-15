@@ -15,7 +15,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		icon: achievement ? (achievement.icon ? achievement.icon.identifier : "") : ""
+		icon: achievement && achievement.icon ? achievement.icon.identifier : ""
 		player_color: achievement && achievement.player_color ? achievement.player_color.identifier : wyrmgus.defines.neutral_player_color.identifier
 	}
 	
@@ -32,12 +32,12 @@ DialogBase {
 	}
 	
 	LargeButton {
-		id: close_button
+		id: ok_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Close"
-		hotkey: "c"
+		text: "OK"
+		hotkey: "o"
 		interface_style: achievement_dialog.interface_style
 		
 		onClicked: {

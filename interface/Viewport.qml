@@ -73,6 +73,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus.game
+		
 		function onStarted() {
 			var underlay_component = Qt.createComponent("MapViewUnderlay.qml")
 			
@@ -92,10 +93,7 @@ Item {
 			
 			map_view = component.createObject(viewport)
 		}
-	}
-	
-	Connections {
-		target: wyrmgus.game
+		
 		function onStopped() {
 			if (wyrmgus.game.results !== null) {
 				if (wyrmgus.game.results.victory || wyrmgus.game.results.defeat || wyrmgus.game.results.draw) {
@@ -110,6 +108,7 @@ Item {
 	
 	Connections {
 		target: wyrmgus
+		
 		function onAchievementUnlockedDialogOpened(achievement) {
 			var component = Qt.createComponent("dialogs/AchievementUnlockedDialog.qml")
 			

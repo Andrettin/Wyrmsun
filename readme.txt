@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - The Alt+Q hotkey now correctly only selects the player's army, instead of bringing up the quit to menu dialog as well.
+- Reworked the quest completed and quest failed dialogs.
 
 -----------------------------------------------------------------------
 - 5.3.0
