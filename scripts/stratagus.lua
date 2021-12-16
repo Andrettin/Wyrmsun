@@ -1700,6 +1700,11 @@ local function CompleteMissingValues(table, defaultTable)
 	for key, defaultValue in pairs(defaultTable) do
 		if table[key] == nil then table[key] = defaultValue end
 	end
+	
+	-- remove values which aren't in the default table
+	for key, value in pairs(table) do
+		if defaultTable[key] == nil then table[key] = nil end
+	end
 end
 
 wyr = {preferences = {}}
