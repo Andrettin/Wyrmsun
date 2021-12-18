@@ -1,7 +1,6 @@
 siohtago = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	name = "Siohtago"
 	language = old_high_german
-	etymon = dag_proto_germanic
 	compound_elements = {
 		tago
 	}

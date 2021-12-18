@@ -2,7 +2,6 @@ eindagi = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spra
 	name = "Eindagi"
 	language = old_norse
 	type = noun
-	etymon = dag_proto_germanic
 	meanings = {
 		#source gives the German "bestimmter Tag, Termin" as the meaning
 		"Certain Day"
