@@ -1,0 +1,4 @@
+caveo = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Caveo"
+	language = latin
+}

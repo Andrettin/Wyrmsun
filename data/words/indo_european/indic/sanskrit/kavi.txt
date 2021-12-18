@@ -1,0 +1,8 @@
+kavi = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Kaví"
+	language = sanskrit
+	type = noun
+	meanings = {
+		"Sage" #source gives the German "Weiser"
+	}
+}

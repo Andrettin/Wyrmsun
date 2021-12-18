@@ -1,0 +1,10 @@
+cuja_old_church_slavonic = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Čuja" #source also gives the alternative form "čuti"
+	language = old_church_slavonic
+	type = verb
+	meanings = {
+		#source gives the German "erkennen, merken"
+		"Recognize"
+		"Notice"
+	}
+}

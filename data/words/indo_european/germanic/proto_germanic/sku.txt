@@ -1,0 +1,9 @@
+sku = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Sku"
+	language = proto_germanic
+	type = verb
+	etymon = ku_proto_indo_european
+	meanings = {
+		"Look" #source gives the German "schauen"
+	}
+}

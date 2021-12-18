@@ -1,0 +1,8 @@
+a_kuvate = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Â-Kuvate"
+	language = sanskrit
+	type = adjective
+	meanings = {
+		"Intended" #source gives the German "beabsichtet"
+	}
+}
