@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed crash which occurred when placing a building, if the building's center tile were beyond the end of the map.
 
+* Encyclopedia
+- Names of characters, buildings and units can now link to the entry of the respective word. For instance, clicking on the link on Thrahila's name will result in the encyclopedia entry for the corresponding Proto-Germanic word being displayed. Word entries provide information such as the language to which the word pertains, as well as its meaning, and other characteristics.
+
 * Items
 - The tooltip for an item being hovered over on the map will now display whether it is usable or equippable by the selected unit, if there is a single unit selected.
 

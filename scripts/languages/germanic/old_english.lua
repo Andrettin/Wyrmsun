@@ -1940,13 +1940,6 @@ DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop";
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Þræ̂l", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Servant", "Serf"}, -- source gives the German "Knecht, der Unfreie" as the meaning
-	DerivesFrom = {"old-norse", "noun", "Þræll"} -- a loanword from Old Norse, according to Fick
-})
-
 DefineLanguageWord("Þrȳþ", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
 	Language = "old-english",
 	Type = "noun",

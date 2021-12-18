@@ -1,0 +1,5 @@
+dagi = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	name = "Dagi" #source gives "-dagi"; suffix used in compounds
+	language = old_norse
+	etymon = dag_proto_germanic
+}

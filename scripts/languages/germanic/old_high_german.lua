@@ -1661,14 +1661,6 @@ DefineLanguageWord("Tagên", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
-DefineLanguageWord("Tago", { -- source gives "-tago"; suffix used in compounds; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Dag"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Tāju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1988,16 +1980,6 @@ DefineLanguageWord("Muntboro", { -- Source: August Fick and Alf Torp, "Wortschat
 	CompoundElements = {
 		"prefix", "old-high-german", "noun", "Munt", -- presumably
 --		"suffix", -- ?
-	}
-})
-
-DefineLanguageWord("Siohtago", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {},
-	CompoundElements = {
---		"prefix", -- ?
-		"suffix", "old-high-german", "noun", "Tago"
 	}
 })
 

@@ -384,13 +384,6 @@ DefineLanguageWord("Daga", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
-DefineLanguageWord("Dagi", { -- source gives "-dagi"; suffix used in compounds; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "old-norse",
-	Type = "noun", -- correct?
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Dag"}
-})
-
 DefineLanguageWord("Dalr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 87.
 	Language = "old-norse",
 	Type = "noun",
@@ -1568,14 +1561,6 @@ DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter" -- as given by Fick
 })
 
-DefineLanguageWord("Þræll", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Servant", "Serf"}, -- source gives the German "Knecht, der Unfreie" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Þrahila"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-norse",
 	Type = "adjective",
@@ -1809,16 +1794,6 @@ DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss 
 --		"suffix", "old-norse", "noun", "Nari" -- need to add this as a word
 	},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Eindagi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Certain Day", "Appointment"}, -- source gives the German "bestimmter Tag, Termin" as the meaning
-	CompoundElements = {
---		"prefix", -- ?
-		"suffix", "old-norse", "noun", "Dagi"
-	}
 })
 
 DefineLanguageWord("Hermađr", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War,' 'Army,' and 'Soldier'", 1919, p. 15.
