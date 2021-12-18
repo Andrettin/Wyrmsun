@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Auras are now only applied if the unit which provides the aura isn't garrisoned in a building/unit.
+- Mugging no longer takes resources from the target unit's player.
 
 * User Interface
 - The Alt+Q hotkey now correctly only selects the player's army, instead of bringing up the quit to menu dialog as well.
