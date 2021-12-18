@@ -1,0 +1,13 @@
+sconi = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Scôni"
+	language = old_high_german
+	type = adjective
+	etymon = skaunia
+	meanings = {
+		#source gives the German "hell, glänzend, herrlich, schön"
+		"Bright"
+		"Shiny"
+		"Wonderful"
+		"Beautiful"
+	}
+}

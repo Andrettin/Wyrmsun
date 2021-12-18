@@ -1,0 +1,9 @@
+sciene = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Scíene"
+	language = old_english
+	type = adjective
+	etymon = skaunia
+	meanings = {
+		"Beautiful" #source gives the German "schön"
+	}
+}

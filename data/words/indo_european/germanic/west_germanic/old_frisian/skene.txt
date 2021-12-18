@@ -1,0 +1,9 @@
+skene = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Skêne"
+	language = old_frisian
+	type = adjective
+	etymon = skaunia
+	meanings = {
+		"Beautiful" #source gives the German "schön"
+	}
+}

@@ -1,0 +1,9 @@
+schon = {
+	name = "Schön"
+	language = high_german
+	type = adjective
+	etymon = schoene #presumably
+	meanings = {
+		"Beautiful"
+	}
+}

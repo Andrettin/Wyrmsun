@@ -1,0 +1,9 @@
+skyn = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	name = "Skyn"
+	language = old_norse
+	type = noun
+	gender = feminine
+	meanings = {
+		"Understanding" #source gives the German "Verständnis"
+	}
+}
