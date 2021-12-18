@@ -1719,12 +1719,10 @@ local defaultPreferences = {
 	FogOfWar = true,
 	FogOfWarOpacity = 128,
 	GameTranslation = "",
-	GroupKeys = "0123456789`",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
 	StratagusTranslation = "",
-	TipNumber = 0,
 	VideoHeight = 600,
 	VideoWidth = 1066,
 	Language = "English",
@@ -1737,27 +1735,14 @@ local defaultPreferences = {
 CompleteMissingValues(wyr.preferences, defaultPreferences)
 
 SetDoubleClickDelay(wyr.preferences.DoubleClickDelayInMs)
-if (wyr.preferences.EffectsEnabled ~= nil) then
-	wyr.preferences.EffectsEnabled = nil
-end
-if (wyr.preferences.EffectsVolume ~= nil) then
-	wyr.preferences.EffectsVolume = nil
-end
 SetFogOfWar(wyr.preferences.FogOfWar)
 SetFogOfWarOpacity(wyr.preferences.FogOfWarOpacity)
-SetGroupKeys(wyr.preferences.GroupKeys)
 SetHoldClickDelay(wyr.preferences.HoldClickDelayInMs)
 SetKeyScroll(wyr.preferences.EnableKeyboardScrolling)
 SetLeaveStops(true)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
 SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
-if (wyr.preferences.MusicEnabled ~= nil) then
-	wyr.preferences.MusicEnabled = nil
-end
-if (wyr.preferences.MusicVolume ~= nil) then
-	wyr.preferences.MusicVolume = nil
-end
 SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 
