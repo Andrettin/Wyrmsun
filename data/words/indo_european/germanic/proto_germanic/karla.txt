@@ -1,0 +1,11 @@
+karla = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
+	name = "Karla" #source gives "kar(a)la"; source also gives the alternative form "ker(a)la"
+	language = proto_germanic
+	type = noun
+	gender = masculine
+	meanings = {
+		#source gives the German "alter Mann, reifer Mann" as the meaning
+		"Old Man"
+		"Mature Man"
+	}
+}

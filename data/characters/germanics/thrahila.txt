@@ -1,5 +1,5 @@
 thrahila = {
-	name = "Thrahila" #Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
+	name_word = thrahila #Proto-Germanic rendering of "Thrall", the ancestor of the class of thralls in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 19-20.
 	unit_type = unit_germanic_worker
 	civilization = germanic
 	default_faction = thralling_tribe

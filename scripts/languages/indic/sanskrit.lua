@@ -145,13 +145,6 @@ DefineLanguageWord("Çvā", { -- Source: Carl D. Buck, "Words for 'Battle,' 'War
 	Meanings = {"Swell"}
 })
 
-DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "sanskrit",
-	Type = "noun",
-	Meanings = {"Heat"},
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
-})
-
 DefineLanguageWord("Dáhati", { -- given the meaning, this is presumably the third person singular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "sanskrit",
 	Type = "verb",

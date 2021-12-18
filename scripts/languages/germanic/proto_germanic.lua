@@ -343,14 +343,6 @@ DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Nominative = "Χwat"
 })
 
-DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the alternative form "dagan" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Day"}, -- Fick gives the German "Tag" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}, -- as given by Lehmann
-	Gender = "masculine" -- as given by Fick
-})
-
 DefineLanguageWord("Dala", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 87.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -788,13 +780,6 @@ DefineLanguageWord("Isti", { -- this is the singular first person present; Sourc
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Isti"
 	}
-})
-
-DefineLanguageWord("Karla", { -- source gives "kar(a)la"; source also gives the alternative form "ker(a)la"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 29.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Old Man", "Mature Man"}, -- source gives the German "alter Mann, reifer Mann" as the meaning
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Kenþa", { -- source also gives the alternative form "kenda"; also a participle passive meaning (in German) "geboren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
@@ -1319,13 +1304,6 @@ DefineLanguageWord("Þingsaz", { -- Source: Peter Buchholz, "Perspectives for Hi
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Protector of the Thing"}
-})
-
-DefineLanguageWord("Þrahila", { -- source also gives the alternative form "þregila"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 101.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Servant"}, -- source gives the German "Diener, Knecht" as the meaning
-	Gender = "masculine"
 })
 
 DefineLanguageWord("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.

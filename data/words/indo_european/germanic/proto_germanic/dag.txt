@@ -1,0 +1,10 @@
+dag_proto_germanic = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	name = "Dag" #Lehmann gives "dag-"; Fick gives "daga" and the alternative form "dagan" instead
+	language = proto_germanic
+	type = noun
+	gender = masculine #as given by Fick
+	etymon = dhagh #as given by Lehmann
+	meanings = {
+		"Day" #Fick gives the German "Tag" as the meaning
+	}
+}

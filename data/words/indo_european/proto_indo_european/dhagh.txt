@@ -1,0 +1,4 @@
+dhagh = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	name = "Dhagh"
+	language = proto_indo_european
+}

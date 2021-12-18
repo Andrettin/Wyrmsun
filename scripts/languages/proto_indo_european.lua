@@ -97,12 +97,6 @@ DefineLanguageWord("Deγ", { -- source also gives the alternative form "dō"; So
 	Meanings = {"Give"}
 })
 
-DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Dheʔ", { -- source also gives the alternative form "dhē"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "noun",

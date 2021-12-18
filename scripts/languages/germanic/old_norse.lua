@@ -391,17 +391,6 @@ DefineLanguageWord("Dagi", { -- source gives "-dagi"; suffix used in compounds; 
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
-DefineLanguageWord("Dagr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Dag"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "no-case", "Dag" -- presumably (assuming the "-r" ending here is the nominative ending)
-	}
-})
-
 DefineLanguageWord("Dalr", { -- Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 87.
 	Language = "old-norse",
 	Type = "noun",
