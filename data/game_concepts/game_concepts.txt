@@ -103,11 +103,6 @@ mugging = {
 	hotkey = "u"
 }
 
-no_randomness = {
-	name = "No Randomness"
-	description = "In the No Randomness mode, damage does not randomly vary. There is also no random chance to miss attacks, with accuracy providing a bonus to damage instead, and evasion to armor. Furthermore, traits for non-hero units have no effect."
-}
-
 trade = {
 	name = "Trade"
 	description = "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as jewelry and furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."
@@ -116,6 +111,6 @@ trade = {
 
 traits = {
 	name = "Traits"
-	description = "Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage"
+	description = "Each organic unit has an individual personality or physical trait assigned to it, which affects its stats."
 	hotkey = "i"
 }
