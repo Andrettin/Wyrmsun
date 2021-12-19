@@ -17,6 +17,90 @@ learn_bow_mastery = {
 	}
 }
 
+learn_mace_mastery = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	icon = mace_mastery
+	action = learn_ability
+	value = upgrade_mace_mastery
+	key = m
+	hint = "Learn ~!Mace Mastery"
+	popup = popup_learn_ability
+	description = "Mace Mastery is a passive ability that increases damage with maces by 2."
+	unit_classes = {
+		expert_miner
+		grandmaster_smith
+	}
+	unit_types = {
+		unit_dwarven_loremaster
+		unit_gnoll_warrior
+		unit_hobgoblin_warrior
+		unit_troll_warrior
+	}
+}
+
+learn_sword_mastery_bronze = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	icon = icon_sword_mastery_bronze
+	action = learn_ability
+	value = upgrade_sword_mastery
+	key = w
+	hint = "Learn S~!word Mastery"
+	popup = popup_learn_ability
+	description = "Sword Mastery is a passive ability that increases damage with swords by 2."
+	unit_types = {
+		unit_deep_gnomish_master_at_arms
+		unit_derro_shadowguard
+		unit_elven_swordsman
+		unit_germanic_chieftain
+		unit_frank_heroic_swordsman
+		unit_frank_knight_lord
+		unit_gnomish_master_at_arms
+		unit_goblin_warlord
+		unit_gothic_horse_lord
+		unit_kobold_champion
+		unit_latin_centurion
+		unit_norse_heroic_swordsman
+		unit_teuton_heroic_swordsman
+		unit_teuton_knight_lord
+		unit_western_footman
+	}
+}
+
+learn_sword_mastery = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	icon = icon_sword_mastery
+	action = learn_ability
+	value = upgrade_sword_mastery
+	key = w
+	hint = "Learn S~!word Mastery"
+	popup = popup_learn_ability
+	description = "Sword Mastery is a passive ability that increases damage with swords by 2."
+	preconditions = {
+		upgrade_class = melee_weapon_2 #(Iron) Longsword
+	}
+	allow_arg = upgrade_teuton_spatha
+	unit_types = {
+		unit_deep_gnomish_master_at_arms
+		unit_derro_shadowguard
+		unit_elven_swordsman
+		unit_germanic_chieftain
+		unit_frank_heroic_swordsman
+		unit_frank_knight_lord
+		unit_gnomish_master_at_arms
+		unit_goblin_warlord
+		unit_gothic_horse_lord
+		unit_kobold_champion
+		unit_latin_centurion
+		unit_norse_heroic_swordsman
+		unit_teuton_heroic_swordsman
+		unit_teuton_knight_lord
+		unit_western_footman
+	}
+}
+
 learn_throwing_mastery = {
 	pos = 1
 	level = choose_individual_upgrade_level
@@ -63,12 +147,15 @@ learn_critical_strike = {
 		unit_frank_spearman
 		unit_germanic_spearman
 		unit_germanic_archer
+		unit_gnoll_warrior
 		unit_goblin_spearman
+		unit_hobgoblin_warrior
 		unit_latin_javelineer
 		unit_orc_spearthrower
 		unit_teuton_archer
 		unit_teuton_spearman
 		unit_troll_warrior
+		unit_western_footman
 		unit_wolf
 		unit_wyrm
 		unit_bat
@@ -103,12 +190,15 @@ learn_deadly_precision = {
 		unit_frank_spearman
 		unit_germanic_spearman
 		unit_germanic_archer
+		unit_gnoll_warrior
 		unit_goblin_spearman
+		unit_hobgoblin_warrior
 		unit_latin_javelineer
 		unit_orc_spearthrower
 		unit_teuton_archer
 		unit_teuton_spearman
 		unit_troll_warrior
+		unit_western_footman
 		unit_wolf
 		unit_wyrm
 		unit_bat
@@ -142,12 +232,15 @@ learn_eagle_eye = {
 		unit_frank_spearman
 		unit_germanic_spearman
 		unit_germanic_archer
+		unit_gnoll_warrior
 		unit_goblin_spearman
+		unit_hobgoblin_warrior
 		unit_latin_javelineer
 		unit_orc_spearthrower
 		unit_teuton_archer
 		unit_teuton_spearman
 		unit_troll_warrior
+		unit_western_footman
 		unit_wolf
 		unit_wyrm
 		unit_gryphon
@@ -181,6 +274,31 @@ learn_scouting = {
 	}
 }
 
+learn_stun = {
+	pos = 5
+	level = choose_individual_upgrade_level
+	icon = icon_stun
+	action = learn_ability
+	value = upgrade_stun
+	key = u
+	hint = "Learn St~!un"
+	popup = popup_learn_ability
+	description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments."
+	unit_classes = {
+		grandmaster_smith
+		heroic_infantry
+		heroic_cavalry
+	}
+	unit_types = {
+		unit_elven_swordsman
+		unit_ettin
+		unit_gnoll_warrior
+		unit_hobgoblin_warrior
+		unit_troll_warrior
+		unit_western_footman
+	}
+}
+
 learn_precise_shot = {
 	pos = 6
 	level = choose_individual_upgrade_level
@@ -201,6 +319,64 @@ learn_precise_shot = {
 		unit_latin_javelineer
 		unit_orc_spearthrower
 		unit_teuton_archer
+	}
+}
+
+learn_puncture = {
+	pos = 6
+	level = choose_individual_upgrade_level
+	icon = icon_puncture
+	action = learn_ability
+	value = upgrade_puncture
+	key = r
+	hint = "Learn Punctu~!re"
+	popup = popup_learn_ability
+	description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks."
+	unit_classes = {
+		heroic_spearman
+	}
+	unit_types = {
+		unit_deep_gnomish_master_at_arms
+		unit_derro_shadowguard
+		unit_elven_swordsman
+		unit_frank_heroic_swordsman
+		unit_frank_spearman
+		unit_germanic_chieftain
+		unit_germanic_spearman
+		unit_gnomish_master_at_arms
+		unit_goblin_spearman
+		unit_goblin_thief
+		unit_goblin_warlord
+		unit_latin_centurion
+		unit_norse_heroic_swordsman
+		unit_teuton_heroic_swordsman
+		unit_teuton_spearman
+		unit_western_footman
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+		unit_wolf
+		unit_wyrm
+	}
+}
+
+learn_leadership = {
+	pos = 7
+	level = choose_individual_upgrade_level
+	icon = icon_leadership
+	action = learn_ability
+	value = upgrade_leadership
+	key = l
+	hint = "Learn ~!Leadership Aura"
+	popup = popup_learn_ability
+	description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%."
+	unit_classes = {
+		heroic_infantry
+		heroic_cavalry
+	}
+	unit_types = {
+		unit_ettin
+		unit_western_footman
 	}
 }
 
@@ -241,10 +417,12 @@ learn_toughness = {
 		unit_germanic_priest
 		unit_germanic_spearman
 		unit_germanic_worker
+		unit_gnoll_warrior
 		unit_gnomish_worker
 		unit_goblin_shaman
 		unit_goblin_spearman
 		unit_goblin_worker
+		unit_hobgoblin_warrior
 		unit_latin_javelineer
 		unit_orc_spearthrower
 		unit_teuton_archer
@@ -252,6 +430,7 @@ learn_toughness = {
 		unit_teuton_spearman
 		unit_teuton_worker
 		unit_troll_warrior
+		unit_western_footman
 		unit_wolf
 		unit_wyrm
 		unit_gryphon

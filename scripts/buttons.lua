@@ -125,17 +125,6 @@ DefineButton( { Pos = 16, Icon = "icon-cancel",
 
 -- Level-Up Upgrades ------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "mace_mastery",
-	Action = "learn-ability", Value = "upgrade-mace-mastery",
-	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup_learn_ability",
-	Description = "Mace Mastery is a passive ability that increases damage with maces by 2.",
-	ForUnit = {
-		"unit-dwarven-expert-miner", "unit-brising-expert-miner", "unit-dwarven-arcanister",
-		"unit-dwarven-loremaster",
-		"unit-troll-warrior"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gun-mastery",
 	Action = "learn-ability", Value = "upgrade-gun-mastery",
 	Key = "g", Hint = "Learn ~!Gun Mastery", Popup = "popup_learn_ability",
@@ -159,51 +148,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 	}
 } )
 
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery-bronze",
-	Action = "learn-ability", Value = "upgrade-sword-mastery",
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
-	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
-	ForUnit = {
-		"unit-germanic-chieftain",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-latin-centurion",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-warlord",
-		"unit-kobold-champion",
-		"unit-elven-swordsman"
-	}
-} )
-
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery",
-	Action = "learn-ability", Value = "upgrade-sword-mastery",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
-	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
-	ForUnit = {
-		"unit-germanic-chieftain",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-teuton-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-latin-centurion",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-warlord",
-		"unit-kobold-champion",
-		"unit-elven-swordsman"
-	}
-} )
-
-DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-sword-mastery",
-	Action = "learn-ability", Value = "upgrade-sword-mastery",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-frank-spatha"},
-	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup_learn_ability",
-	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
-	ForUnit = {
-		"unit-frank-heroic-swordsman", "unit-frank-knight-lord"
-	}
-} )
-
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-spear-mastery",
 	Action = "learn-ability", Value = "upgrade-spear-mastery",
 	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup_learn_ability",
@@ -212,68 +156,6 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon
 		"unit-dwarven-sentinel",
 		"unit-goblin-spearman",
 		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman"
-	}
-} )
-
-DefineButton( { Pos = 5, Level = "choose-individual-upgrade-level", Icon = "icon-stun",
-	Action = "learn-ability", Value = "upgrade-stun",
-	Key = "u", Hint = "Learn St~!un", Popup = "popup_learn_ability",
-	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments.",
-	ForUnit = {
-		"unit-dwarven-arcanister",
-		"unit-dwarven-thane",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-surghan-mercenary-thane",
-		"unit-elven-swordsman",
-		"unit-germanic-chieftain",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-latin-centurion",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-warlord",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-elven-swordsman",
-		"unit-troll-warrior"
-	}
-} )
-
-DefineButton( { Pos = 6, Level = "choose-individual-upgrade-level", Icon = "icon-puncture",
-	Action = "learn-ability", Value = "upgrade-puncture",
-	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup_learn_ability",
-	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
-	ForUnit = {
-		"unit-germanic-chieftain", "unit-germanic-spearman",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-teuton-spearman", "unit-frank-spearman",
-		"unit-latin-centurion",
-		"unit-dwarven-sentinel",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit_goblin_thief", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-elven-swordsman",
-		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
-	}
-} )
-
-DefineButton( { Pos = 7, Level = "choose-individual-upgrade-level", Icon = "icon-leadership",
-	Action = "learn-ability", Value = "upgrade-leadership",
-	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup_learn_ability",
-	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%.",
-	ForUnit = {
-		"unit-dwarven-thane",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-surghan-mercenary-thane",
-		"unit-germanic-chieftain",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
-		"unit-latin-centurion",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
-		"unit-ettin"
 	}
 } )
 
@@ -413,46 +295,6 @@ DefineButton( { Pos = 5, Icon = "icon-precision",
 		"unit-teuton-priest",
 		"unit-elven-priest",
 		"unit-dwarven-witness", "unit-dwarven-annalist", "unit-dwarven-loremaster"
-	}
-})
-
-DefineButton( { Pos = 6, Icon = "icon-stun",
-	Action = "cast-spell", Value = "spell-stun",
-	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments",
-	Key = "n", Hint = "Stu~!n", Popup = "popup_commands",
-	ForUnit = {
-		"unit-dwarven-thane",
-		"unit-dwarven-yale-lord",
-		"unit-joruvellir-yale-lord",
-		"unit-surghan-mercenary-thane",
-		"unit-elven-swordsman",
-		"unit-germanic-chieftain",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-knight-lord", "unit-frank-knight-lord",
-		"unit-gothic-horse-lord",
-		"unit-latin-centurion",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit-goblin-warlord",
-		"unit-kobold-champion",
-		"unit-ettin",
-		"unit-troll-warrior"
-	}
-})
-
-DefineButton( { Pos = 7, Icon = "icon-puncture",
-	Action = "cast-spell", Value = "spell-puncture",
-	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks",
-	Key = "r", Hint = "Punctu~!re", Popup = "popup_commands",
-	ForUnit = {
-		"unit-germanic-chieftain", "unit-germanic-spearman",
-		"unit-norse-heroic-swordsman",
-		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-latin-centurion",
-		"unit-dwarven-sentinel",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-derro-shadowguard",
-		"unit_goblin_thief", "unit-goblin-warlord", "unit-goblin-spearman",
-		"unit-elven-swordsman",
-		"unit-wolf", "unit_wyrm", "unit-bat", "unit-blood-bat", "unit-dread-bat"
 	}
 })
 

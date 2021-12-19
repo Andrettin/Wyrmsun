@@ -1,16 +1,18 @@
-cast_infusion = {
-	pos = 6
-	icon = icon_infusion
+cast_shocking_grasp = {
+	pos = 4
+	icon = icon_shocking_grasp
 	action = cast_spell
-	value = spell_infusion
-	key = f
-	hint = "In~!fusion"
+	value = spell_shocking_grasp
+	key = k
+	hint = "Shoc~!king Grasp"
 	popup = popup_commands
-	description = "Increases the arcane damage of a unit by 4."
+	description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds."
 	unit_types = {
-		unit_dwarven_runesmith
-		unit_dwarven_runemaster
-		unit_dwarven_arcanister
+		unit_germanic_priest
+		unit_teuton_priest
+		unit_dwarven_witness
+		unit_dwarven_annalist
+		unit_dwarven_loremaster
 	}
 }
 
@@ -29,6 +31,22 @@ cast_inspire = {
 		unit_dwarven_witness
 		unit_dwarven_annalist
 		unit_dwarven_loremaster
+	}
+}
+
+cast_infusion = {
+	pos = 6
+	icon = icon_infusion
+	action = cast_spell
+	value = spell_infusion
+	key = f
+	hint = "In~!fusion"
+	popup = popup_commands
+	description = "Increases the arcane damage of a unit by 4."
+	unit_types = {
+		unit_dwarven_runesmith
+		unit_dwarven_runemaster
+		unit_dwarven_arcanister
 	}
 }
 
@@ -54,20 +72,63 @@ cast_precise_shot = {
 	}
 }
 
-cast_shocking_grasp = {
-	pos = 4
-	icon = icon_shocking_grasp
+cast_stun = {
+	pos = 6
+	icon = icon_stun
 	action = cast_spell
-	value = spell_shocking_grasp
-	key = k
-	hint = "Shoc~!king Grasp"
+	value = spell_stun
+	key = n
+	hint = "Stu~!n"
 	popup = popup_commands
-	description = "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds."
+	description = "Does a stunning attack on a target, leaving it paralyzed for a few moments."
+	unit_classes = {
+		grandmaster_smith
+		heroic_infantry
+		heroic_cavalry
+	}
 	unit_types = {
-		unit_germanic_priest
-		unit_teuton_priest
-		unit_dwarven_witness
-		unit_dwarven_annalist
-		unit_dwarven_loremaster
+		unit_elven_swordsman
+		unit_ettin
+		unit_gnoll_warrior
+		unit_hobgoblin_warrior
+		unit_troll_warrior
+		unit_western_footman
+	}
+}
+
+cast_puncture = {
+	pos = 7
+	icon = icon_puncture
+	action = cast_spell
+	value = spell_puncture
+	key = r
+	hint = "Punctu~!re"
+	popup = popup_commands
+	description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks."
+	unit_classes = {
+		heroic_spearman
+	}
+	unit_types = {
+		unit_deep_gnomish_master_at_arms
+		unit_derro_shadowguard
+		unit_elven_swordsman
+		unit_frank_heroic_swordsman
+		unit_frank_spearman
+		unit_germanic_chieftain
+		unit_germanic_spearman
+		unit_gnomish_master_at_arms
+		unit_goblin_spearman
+		unit_goblin_thief
+		unit_goblin_warlord
+		unit_latin_centurion
+		unit_norse_heroic_swordsman
+		unit_teuton_heroic_swordsman
+		unit_teuton_spearman
+		unit_western_footman
+		unit_bat
+		unit_blood_bat
+		unit_dread_bat
+		unit_wolf
+		unit_wyrm
 	}
 }
