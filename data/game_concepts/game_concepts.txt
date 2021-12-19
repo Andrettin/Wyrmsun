@@ -99,7 +99,7 @@ mercenaries = {
 
 mugging = {
 	name = "Mugging"
-	description = "Whenever a unit with Mugging does damage to another unit, the mugging unit's player will gain resources. The obtained resources are a portion of the mugged unit's costs, based on the Mugging percentage and how much of the unit's maximum HP the damage dealt is. The other player also loses resources when this occurs."
+	description = "Whenever a unit with Mugging does damage to another unit, the mugging unit's player will gain resources. The obtained resources are a portion of the mugged unit's costs, based on the Mugging percentage and how much of the unit's maximum HP the damage dealt is."
 	hotkey = "u"
 }
 

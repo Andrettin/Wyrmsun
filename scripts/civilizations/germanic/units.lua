@@ -401,7 +401,7 @@ DefineUnitType("unit-germanic-spearman", {
 	Civilization = "germanic",
 	Class = "none", -- because the unit is not ready for being playable
 --	Description = "Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly.",
-	Quote = "\"Soon grew up the sons of Jarl,\nBeasts they tamed, and bucklers rounded,\nShafts they fashioned, and spears they shook.\"\n- <a href='literary_text:rigsthula'>Rigsthula</a>",
+--	Quote = "\"Soon grew up the sons of Jarl,\nBeasts they tamed, and bucklers rounded,\nShafts they fashioned, and spears they shook.\"\n- <a href='literary_text:rigsthula'>Rigsthula</a>",
 --	Background = "\"Erala\" is the Proto-Germanic word for \"warrior\".",
 	Image = {"file", "human/units/body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/shadow.png", "size", {72, 72}},
