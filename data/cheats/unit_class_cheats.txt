@@ -48,6 +48,16 @@ gunpowder_infantry = {
 	}
 }
 
+cavalry = {
+	code = charge
+	
+	effects = {
+		create_unit = {
+			unit_class = cavalry
+		}
+	}
+}
+
 priest = {
 	code = piety
 	
