@@ -4,7 +4,7 @@ karla = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprach
 	type = noun
 	gender = masculine
 	meanings = {
-		#source gives the German "alter Mann, reifer Mann" as the meaning
+		#source gives the German "alter Mann, reifer Mann"
 		"Old Man"
 		"Mature Man"
 	}

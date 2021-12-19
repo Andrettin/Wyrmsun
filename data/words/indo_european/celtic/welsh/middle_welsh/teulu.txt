@@ -3,7 +3,7 @@ teulu_middle_welsh = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Wali
 	language = middle_welsh
 	type = noun
 	meanings = {
-		#source gives the German "Haus-Schar", "Haushalt" and "Leibwache" as the meaning
+		#source gives the German "Haus-Schar", "Haushalt" and "Leibwache"
 		"House Throng"
 		"Household"
 		"Bodyguard"

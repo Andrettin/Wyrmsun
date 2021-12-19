@@ -1,0 +1,14 @@
+bura = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+	name = "Bûra"
+	anglicized_name = "Bura"
+	language = proto_germanic
+	type = noun
+	gender = neuter #alternatively also masculine
+	meanings = {
+		#source gives the German "Bauer, Gemach, Vorratshaus"
+		"Farmer"
+		"Peasant"
+		"Chamber"
+		"Storehouse"
+	}
+}

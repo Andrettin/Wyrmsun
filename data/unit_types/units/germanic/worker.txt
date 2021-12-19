@@ -1,10 +1,9 @@
 unit_germanic_worker = {
-	name = "Bura" #Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Knecht" or "Thrall"
+	name_word = bura #Bûra = "Bauer" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick; another possibility of a name is "Theva", "Thrahila" or "Thregila", all of which mean "Servant" or "Thrall"
 	parent = unit_template_worker
 	civilization = germanic
 	description = "Hardworking and robust, buras are the lifeblood of Germanic society, tending the fields and performing most of the manual labor required."
 	quote = "\"He began to grow, and to gain in strength,\nOxen he ruled, and plows made ready,\nHouses he built, and barns he fashioned,\nCarts he made, and the plow he managed.\"\n- <a href='literary_text:rigsthula'>Rigsthula</a>"
-	background = "\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."
 	image_file = "germanic/units/worker.png"
 	frame_size = { 72 72 }
 	animation_set = animations_worker

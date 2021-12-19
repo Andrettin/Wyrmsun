@@ -1,0 +1,10 @@
+bower = {
+	name = "Bower"
+	language = english
+	type = noun
+	gender = neuter
+	etymon = bur_old_english #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+	meanings = {
+		"Bower"
+	}
+}

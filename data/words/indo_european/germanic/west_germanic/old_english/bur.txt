@@ -1,0 +1,12 @@
+bur_old_english = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+	name = "Bûr"
+	language = old_english
+	type = noun
+	gender = masculine
+	etymon = bura
+	meanings = {
+		#source gives the German "Hütte, Zimmer"
+		"Hut"
+		"Room"
+	}
+}

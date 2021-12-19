@@ -4,6 +4,6 @@ nord_old_norse_adverb = { #source also gives the alternative form "Norđr"; Sour
 	type = adverb
 	etymon = nurtha_adverb
 	meanings = {
-		"Northward" #source gives the German "nordwärts" as the meaning
+		"Northward" #source gives the German "nordwärts"
 	}
 }

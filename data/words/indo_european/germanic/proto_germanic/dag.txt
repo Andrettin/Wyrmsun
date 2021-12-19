@@ -5,6 +5,6 @@ dag_proto_germanic = { #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic
 	gender = masculine #as given by Fick
 	etymon = dhagh #as given by Lehmann
 	meanings = {
-		"Day" #Fick gives the German "Tag" as the meaning
+		"Day" #Fick gives the German "Tag"
 	}
 }

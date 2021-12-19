@@ -5,6 +5,6 @@ sten_old_saxon = { #Source: August Fick and Alf Torp, "Wortschatz der Germanisch
 	gender = masculine
 	etymon = staynas
 	meanings = {
-		"Stone" #source (apparently) gives the German "Stein" as the meaning
+		"Stone" #source (apparently) gives the German "Stein"
 	}
 }

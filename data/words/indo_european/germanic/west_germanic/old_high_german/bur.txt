@@ -1,0 +1,12 @@
+bur_old_high_german = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+	name = "Bûr" #source also gives the alternative form "pûr"
+	language = old_high_german
+	type = noun
+	gender = masculine
+	etymon = bura
+	meanings = {
+		#source gives the German "Haus, Käfig"
+		"House"
+		"Cage"
+	}
+}

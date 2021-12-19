@@ -3,6 +3,6 @@ austa_adverb = { #source also gives the alternative form "Austra"; Source: Augus
 	language = proto_germanic
 	type = adverb
 	meanings = {
-		"To the East" #source gives the German "nach Osten hin" as the meaning
+		"To the East" #source gives the German "nach Osten hin"
 	}
 }

@@ -5,7 +5,7 @@ eir = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprachei
 	gender = neuter
 	etymon = aiza
 	meanings = {
-		#source gives the German "Erz, Kupfer" as the meaning
+		#source gives the German "Erz, Kupfer"
 		"Ore"
 		"Copper"
 	}

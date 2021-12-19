@@ -6,6 +6,6 @@ dagr = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprache
 	gender = masculine
 	etymon = dag_proto_germanic
 	meanings = {
-		"Day" #source apparently gives the German "Tag" as the meaning
+		"Day" #source apparently gives the German "Tag"
 	}
 }

@@ -4,7 +4,7 @@ haima_noun = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic
 	type = noun
 	gender = masculine #as given by both Kroonen and Fick
 	meanings = {
-		#as given by both Kroonen and Fick; Fick gives the German "Dorf, Heim, Heimat" as the meaning
+		#as given by both Kroonen and Fick; Fick gives the German "Dorf, Heim, Heimat"
 		"Village"
 		"Home"
 	}

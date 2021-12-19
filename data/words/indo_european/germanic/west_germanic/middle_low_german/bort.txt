@@ -5,7 +5,7 @@ bort_middle_low_german = { #Source: August Fick and Alf Torp, "Wortschatz der Ge
 	gender = neuter #as given by the TLFi
 	etymon = bord_1_old_saxon #as given by the TLFi and Fick
 	meanings = {
-		#the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Tisch"
+		#the TLFi gives the French "planche, table"; Fick gives the German "Tisch"
 		"Board"
 		"Table"
 	}

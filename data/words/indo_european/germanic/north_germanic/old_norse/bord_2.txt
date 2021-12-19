@@ -4,7 +4,7 @@ bord_2_old_norse = { #Source: http://www.cnrtl.fr/definition/bord
 	type = noun
 	etymon = bhrdho
 	meanings = {
-		#source gives the French "bord, arête; bord de navire" as the meaning
+		#source gives the French "bord, arête; bord de navire"
 		"Edge"
 		"Ridge"
 		"Edge of a Ship"

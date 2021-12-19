@@ -5,6 +5,6 @@ austr_noun = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen S
 	gender = neuter
 	etymon = austa_noun
 	meanings = {
-		"East" #source gives the German "Osten" as the meaning
+		"East" #source gives the German "Osten"
 	}
 }

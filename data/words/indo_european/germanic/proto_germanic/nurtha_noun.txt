@@ -3,6 +3,6 @@ nurtha_noun = { #source also gives the alternative form "Nurþra"; Source: Augus
 	language = proto_germanic
 	type = noun
 	meanings = {
-		"North" #source gives the German "Nord" as the meaning
+		"North" #source gives the German "Nord"
 	}
 }

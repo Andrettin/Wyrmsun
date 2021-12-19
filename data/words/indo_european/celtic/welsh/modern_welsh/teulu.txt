@@ -4,7 +4,7 @@ teulu_modern_welsh = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Wali
 	type = noun
 	etymon = teulu_middle_welsh
 	meanings = {
-		#source gives the German "Familie" as the meaning
+		#source gives the German "Familie"
 		"Family"
 	}
 }

@@ -5,6 +5,6 @@ nord_old_norse_noun = { #source also gives the alternative form "Norđr"; Source
 	gender = neuter
 	etymon = nurtha_noun
 	meanings = {
-		"North" #source gives the German "Nord" as the meaning
+		"North" #source gives the German "Nord"
 	}
 }

@@ -5,7 +5,7 @@ bord_1_old_frankish = { #Source: http://www.cnrtl.fr/definition/B%F6rde
 	gender = neuter
 	etymon = burda #the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives this word's cognates as deriving from Proto-Germanic "burda"
 	meanings = {
-		"Board" #source gives the French "planche" as the meaning
+		"Board" #source gives the French "planche"
 	}
 	#plural nominative: "Borda"
 }

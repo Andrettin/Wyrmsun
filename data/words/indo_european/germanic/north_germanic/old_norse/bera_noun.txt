@@ -5,6 +5,6 @@ bera_old_norse_noun = { #source also gives alternative form "Birna"; Source: Aug
 	gender = feminine
 	etymon = beron #presumably from Proto-Germanic "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
 	meanings = {
-		"Female Bear" #source gives the German "Bärin" as the meaning
+		"Female Bear" #source gives the German "Bärin"
 	}
 }

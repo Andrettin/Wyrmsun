@@ -3,6 +3,6 @@ suntha_adverb = { #source also gives the alternative form "Sunþra"; Source: Aug
 	language = proto_germanic
 	type = adverb
 	meanings = {
-		"Southward" #source gives the German "südwärts" as the meaning
+		"Southward" #source gives the German "südwärts"
 	}
 }

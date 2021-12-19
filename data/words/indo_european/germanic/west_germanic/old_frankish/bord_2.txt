@@ -4,6 +4,6 @@ bord_2_old_frankish = { #Source: http://www.cnrtl.fr/definition/bord
 	type = noun
 	etymon = bhrdho
 	meanings = {
-		"Edge of a Vessel" #source gives the French "bord d'un vaisseau" as the meaning
+		"Edge of a Vessel" #source gives the French "bord d'un vaisseau"
 	}
 }

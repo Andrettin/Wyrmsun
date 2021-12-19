@@ -4,6 +4,6 @@ asjon = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprach
 	type = noun
 	gender = feminine
 	meanings = {
-		"Forge" #source gives the German "Esse" as the meaning
+		"Forge" #source gives the German "Esse"
 	}
 }

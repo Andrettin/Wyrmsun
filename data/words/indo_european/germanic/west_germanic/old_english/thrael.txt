@@ -4,7 +4,7 @@ thrael = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprac
 	type = noun
 	etymon = thraell #a loanword from Old Norse, according to Fick
 	meanings = {
-		#source gives the German "Knecht, der Unfreie" as the meaning
+		#source gives the German "Knecht, der Unfreie"
 		"Servant"
 		"Serf"
 	}

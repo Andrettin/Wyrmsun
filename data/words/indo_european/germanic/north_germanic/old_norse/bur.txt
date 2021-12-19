@@ -1,0 +1,12 @@
+bur_old_norse = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
+	name = "Bûr"
+	language = old_norse
+	type = noun
+	gender = neuter
+	etymon = bura
+	meanings = {
+		#source gives the German "Vorratshaus, Frauengemach"
+		"Storehouse"
+		"Women's Chamber"
+	}
+}

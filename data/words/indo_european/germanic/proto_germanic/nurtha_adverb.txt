@@ -3,6 +3,6 @@ nurtha_adverb = { #source also gives the alternative form "Nurþra"; Source: Aug
 	language = proto_germanic
 	type = adverb
 	meanings = {
-		"Northward" #source gives the German "nördlich" as the meaning, and since it is given as an adverb, "northward" seems like the best translation to English
+		"Northward" #source gives the German "nördlich", and since it is given as an adverb, "northward" seems like the best translation to English
 	}
 }

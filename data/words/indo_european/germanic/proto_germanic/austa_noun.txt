@@ -3,6 +3,6 @@ austa_noun = { #source also gives the alternative form "Austra"; Source: August 
 	language = proto_germanic
 	type = noun
 	meanings = {
-		"East" #source gives the German "Osten" as the meaning
+		"East" #source gives the German "Osten"
 	}
 }

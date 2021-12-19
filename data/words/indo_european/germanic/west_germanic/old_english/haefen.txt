@@ -5,6 +5,6 @@ haefen = { #Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2
 	gender = feminine #as given by both sources
 	etymon = habano #as given by both sources
 	meanings = {
-		"Harbor" #as given by both sources (Fick apparently gives the German "Hafen" as the meaning)
+		"Harbor" #as given by both sources (Fick apparently gives the German "Hafen")
 	}
 }

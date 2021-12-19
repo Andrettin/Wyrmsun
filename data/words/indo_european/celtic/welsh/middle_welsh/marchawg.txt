@@ -3,7 +3,7 @@ marchawg = { #Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Ke
 	language = middle_welsh
 	type = noun
 	meanings = {
-		#source gives the German "Reiter" and "Ritter" as the meaning
+		#source gives the German "Reiter" and "Ritter"
 		"Rider"
 		"Knight"
 	}

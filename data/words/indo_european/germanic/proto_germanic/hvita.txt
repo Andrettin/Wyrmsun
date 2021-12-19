@@ -4,7 +4,7 @@ hvita = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen Sprach
 	type = adjective
 	etymon = kweyt #Lehmann gives its reflexes as being derived from this word; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	meanings = {
-		#source gives the German "weiß, hellfarbig" as the meaning
+		#source gives the German "weiß, hellfarbig"
 		"White"
 		"Light Colored"
 	}

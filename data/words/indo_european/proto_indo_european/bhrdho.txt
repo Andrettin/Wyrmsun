@@ -3,6 +3,6 @@ bhrdho = { #Fick gives "bher(e)dh" instead; Source: August Fick and Alf Torp, "W
 	language = proto_indo_european
 	type = noun
 	meanings = {
-		"Board" #source gives the French "planche" as the meaning
+		"Board" #source gives the French "planche"
 	}
 }

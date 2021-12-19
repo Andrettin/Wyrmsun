@@ -4,6 +4,6 @@ sudr_adverb = { #Source: August Fick and Alf Torp, "Wortschatz der Germanischen 
 	type = adverb
 	etymon = suntha_adverb
 	meanings = {
-		"Southward" #source gives the German "südwärts" as the meaning
+		"Southward" #source gives the German "südwärts"
 	}
 }

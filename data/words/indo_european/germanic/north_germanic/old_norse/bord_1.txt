@@ -5,7 +5,7 @@ bord_1_old_norse = { #Fick gives "borđ" instead; Source: August Fick and Alf To
 	gender = neuter #as given by the TLFi
 	etymon = burda #as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
 	meanings = {
-		#the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Brett, Tisch"
+		#the TLFi gives the French "planche, table"; Fick gives the German "Brett, Tisch"
 		"Board"
 		"Table"
 	}

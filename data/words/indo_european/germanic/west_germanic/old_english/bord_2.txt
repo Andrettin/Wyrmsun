@@ -5,7 +5,7 @@ bord_2_old_english = { #Source: http://www.cnrtl.fr/definition/bord
 	gender = neuter #as given by the TLFi and Fick
 	etymon = bhrdho
 	meanings = {
-		#source gives the French "bord, arête; bord de navire" as the meaning
+		#source gives the French "bord, arête; bord de navire"
 		"Edge"
 		"Ridge"
 		"Edge of a Ship"
