@@ -1,0 +1,33 @@
+unit_western_footman = {
+	name = "Footman"
+	parent = unit_template_infantry
+	#civilization_group = western
+	description = "Well-trained and well-equipped, these men-at-arms are a force to be reckoned with."
+	image_file = "units/western/footman.png"
+	frame_size = { 72 72 }
+	offset = { 0 -3 }
+	animation_set = footman
+	icon = icon_long_swordsman
+	button_key = f
+	weapon_classes = { sword }
+	hack_damage = true
+	ai_drops = {
+		unit_boots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+	}
+	default_equipment = {
+		boots = unit_boots
+	}
+	mana = {
+		enable = true
+		value = 75
+		max = 75
+		increase = 1
+	}
+	sounds = {
+		hit = sword_attack
+		miss = attack_miss
+	}
+}

@@ -1989,6 +1989,7 @@
 /graphics/units/teutonic/kogge_extra_1.png (by Jinn) (licensed under the CC0)
 /graphics/units/teutonic/workship.png (by Jinn) (licensed under the CC0)
 /graphics/units/undead/skeleton_warrior.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/units/western/footman.png (by Gregor-Mack and Jinn) (licensed under the CC0)
 /graphics/units/aether_transport.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/aether_warship.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/units/aether_workship.png (by Kwaliti and Jinn) (licensed under the CC0)

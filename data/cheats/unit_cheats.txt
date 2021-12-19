@@ -1,3 +1,11 @@
+western_footman = {
+	code = footman
+	
+	effects = {
+		create_unit = unit_western_footman
+	}
+}
+
 latin_legionary = {
 	code = marius
 	
