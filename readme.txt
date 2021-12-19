@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - The tooltip for an item being hovered over on the map will now display whether it is usable or equippable by the selected unit, if there is a single unit selected.
 
+* Miscellaneous
+- Added updated border graphics.
+
 * Units
 - Auras are now only applied if the unit which provides the aura isn't garrisoned in a building/unit.
 - Mugging no longer takes resources from the target unit's player.
