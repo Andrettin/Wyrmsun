@@ -42,7 +42,8 @@ Window {
 		}
 		
 		LauncherButton {
-			anchors.bottom: parent.bottom
+			id: start_button
+			anchors.bottom: upload_mod_button.top
 			anchors.bottomMargin: 8 * scale_factor
 			anchors.right: parent.right
 			anchors.rightMargin: 8 * scale_factor
@@ -52,6 +53,37 @@ Window {
 			onClicked: {
 				enabled = false
 				process_manager.start()
+			}
+		}
+		
+		LauncherButton {
+			id: upload_mod_button
+			anchors.bottom: parent.bottom
+			anchors.bottomMargin: 8 * scale_factor
+			anchors.right: parent.right
+			anchors.rightMargin: 8 * scale_factor
+			text: "Upload Mod"
+			hotkey: "m"
+			
+			onClicked: {
+				upload_mod_dialog.open()
+			}
+		}
+		
+		FileDialog {
+			id: upload_mod_dialog
+			title: "Upload Mod"
+			selectExisting: true
+			selectFolder: true
+			sidebarVisible: false
+			
+			onAccepted: {
+				var error_message = mod_manager.upload_mod(upload_mod_dialog.fileUrl)
+				
+				if (error_message.length > 0) {
+					error_dialog.text = error_message
+					error_dialog.open()
+				}
 			}
 		}
 		
