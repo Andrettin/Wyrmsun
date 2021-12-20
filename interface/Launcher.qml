@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Dialogs 1.3
 import QtQuick.Window 2.12
+import "./dialogs"
 
 Window {
 	id: window
@@ -15,6 +17,7 @@ Window {
 	color: "black"
 	
 	readonly property real scale_factor: 2
+	readonly property string scale_factor_suffix: (scale_factor > 1 ? ("_" + scale_factor + "x") : "")
 	
 	FontLoader {
 		id: berenika_font
@@ -52,6 +55,11 @@ Window {
 			}
 		}
 		
+		LauncherGenericDialog {
+			id: error_dialog
+			title: "Error"
+		}
+		
 		Keys.onPressed: {
 			for (var i = 0; i < viewport.children.length; ++i) {
 				var child_element = viewport.children[i]
@@ -76,11 +84,11 @@ Window {
 			}
 		}
 	}
-
+	
 	function tooltip(text) {
 		return "<font color=\"white\">" + text + "</font>"
 	}
-
+	
 	function highlight(text) {
 		return "<font color=\"gold\">" + text + "</font>"
 	}

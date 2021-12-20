@@ -12,14 +12,13 @@ Popup {
 	focus: false
 	closePolicy: Popup.NoAutoClose
 	
-	property string interface_style: "default"
-	property int panel: 1
+	property int panel: 4
 	property string title: ""
 	readonly property var title_item: title_text
-	property bool open_when_menu_is_closed: false
+	property string text: ""
 	
 	background: Image {
-		source: "image://interface/" + interface_style + "/panel/" + panel
+		source: "../../graphics/interface/dwarven/panel_" + panel + scale_factor_suffix + ".png"
 		fillMode: Image.Pad
 		cache: false
 	}
@@ -44,27 +43,44 @@ Popup {
 			dialog.on_released_key(event)
 		}
 	}
-	
+		
 	LargeText {
 		id: title_text
 		text: dialog.title
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.top
-		anchors.topMargin: 16 * wyrmgus.scale_factor
+		anchors.topMargin: 16 * scale_factor
+		scale_factor: window.scale_factor
+	}
+
+	LauncherScrollableTextArea {
+		id: text_label
+		anchors.top: title_item.bottom
+		anchors.topMargin: 16 * scale_factor
+		anchors.left: parent.left
+		anchors.leftMargin: 8 * scale_factor
+		anchors.right: parent.right
+		anchors.rightMargin: 8 * scale_factor
+		anchors.bottom: ok_button.top
+		anchors.bottomMargin: 8 * scale_factor
+		text: dialog.text
 	}
 	
-	onOpened: {
-		if (parent.on_popup_opened) {
-			parent.on_popup_opened(dialog)
+	LauncherButton {
+		id: ok_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 8 * scale_factor
+		text: "OK"
+		hotkey: "o"
+		
+		onClicked: {
+			dialog.close()
 		}
 	}
 	
 	onClosed: {
 		dialog.give_up_focus()
-		
-		if (parent.on_popup_closed) {
-			parent.on_popup_closed(dialog)
-		}
 	}
 	
 	function on_pressed_key(event) {
@@ -99,10 +115,5 @@ Popup {
 	
 	function receive_focus() {
 		pane.forceActiveFocus()
-	}
-	
-	Component.onCompleted: {
-		wyrmgus.install_event_filter_on(pane)
-		parent.popups.push(dialog)
 	}
 }

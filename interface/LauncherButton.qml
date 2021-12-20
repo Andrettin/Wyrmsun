@@ -25,7 +25,7 @@ Item {
 		id: image
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.left: parent.left
-		source: "../graphics/interface/default/button_large_" + (grayed ? "grayed" : (pressed ? "pressed" : "normal")) + (scale_factor > 1 ? ("_" + scale_factor + "x") : "") + ".png"
+		source: "../graphics/interface/default/button_large_" + (grayed ? "grayed" : (pressed ? "pressed" : "normal")) + scale_factor_suffix + ".png"
 		fillMode: Image.Pad
 		
 		readonly property bool pressed: button.pressed
