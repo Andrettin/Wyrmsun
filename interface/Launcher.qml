@@ -44,7 +44,7 @@ Window {
 		LauncherButton {
 			id: start_button
 			anchors.bottom: upload_mod_button.top
-			anchors.bottomMargin: 8 * scale_factor
+			anchors.bottomMargin: 4 * scale_factor
 			anchors.right: parent.right
 			anchors.rightMargin: 8 * scale_factor
 			text: "Start"
@@ -59,7 +59,7 @@ Window {
 		LauncherButton {
 			id: upload_mod_button
 			anchors.bottom: parent.bottom
-			anchors.bottomMargin: 8 * scale_factor
+			anchors.bottomMargin: 4 * scale_factor
 			anchors.right: parent.right
 			anchors.rightMargin: 8 * scale_factor
 			text: "Upload Mod"
