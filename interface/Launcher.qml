@@ -83,13 +83,49 @@ Window {
 				if (error_message.length > 0) {
 					error_dialog.text = error_message
 					error_dialog.open()
+					return
 				}
+				
+				//if the process takes a second or longer, show the progress dialog
+				progress_dialog.text = "Uploading mod..."
+				progress_dialog_timer.start()
 			}
+		}
+		
+		LauncherGenericDialog {
+			id: progress_dialog
+			title: "Progress"
 		}
 		
 		LauncherGenericDialog {
 			id: error_dialog
 			title: "Error"
+		}
+		
+		Timer {
+			id: progress_dialog_timer
+			interval: 1000
+			onTriggered: {
+				progress_dialog.open()
+			}
+		}
+		
+		Connections {
+			target: mod_manager
+			
+			function onItemCreated(published_file_id) {
+				progress_dialog_timer.stop()
+				progress_dialog.close()
+			}
+			
+			function onItemCreationFailed(error_message) {
+				progress_dialog_timer.stop()
+				
+				error_dialog.text = error_message
+				error_dialog.open()
+				
+				progress_dialog.close()
+			}
 		}
 		
 		Keys.onPressed: {
