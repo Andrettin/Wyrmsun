@@ -1,9 +1,24 @@
+beautiful_statuette = {
+	type = player_trigger
+	conditions = {
+		unit_class = smithy
+		random = 0.0001
+	}
+	effects = {
+		random_unit_of_class = {
+			unit_class = smithy
+			
+			call_dialogue = beautiful_statuette
+		}
+	}
+}
+
 brawl_at_the_barracks = {
 	type = player_trigger
 	conditions = {
 		unit_class = barracks
 		unit_class = town_hall #require a town hall so that the player does not go below the quantity of resources necessary to build one if they started without it
-		#random = 0.0001
+		random = 0.0001
 	}
 	effects = {
 		random_unit_of_class = {
@@ -25,6 +40,21 @@ giant_mushroom_grown = {
 			unit_type = unit_dwarven_mushroom_farm
 			
 			call_dialogue = giant_mushroom_grown
+		}
+	}
+}
+
+splendid_table = {
+	type = player_trigger
+	conditions = {
+		unit_class = lumber_mill
+		random = 0.0001
+	}
+	effects = {
+		random_unit_of_class = {
+			unit_class = lumber_mill
+			
+			call_dialogue = splendid_table
 		}
 	}
 }

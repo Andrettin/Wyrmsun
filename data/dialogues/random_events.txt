@@ -1,3 +1,17 @@
+beautiful_statuette = {
+	{
+		title = "Beautiful Statuette"
+		text = "One of our master bronzesmiths at [unit.name] has made a beautiful statuette! The striking masterpiece has caught the eyes of many, and will fetch a good price."
+		option = {
+			name = "Marvelous!"
+			hotkey = m
+			effects = {
+				copper += 500
+			}
+		}
+	}
+}
+
 bountiful_harvest = {
 	trigger = {
 		conditions = {
@@ -50,6 +64,20 @@ giant_mushroom_grown = { #this is here rather than in a dwarven-specific file be
 			hotkey = n
 			effects = {
 				copper += 150
+			}
+		}
+	}
+}
+
+splendid_table = {
+	{
+		title = "Splendid Table"
+		text = One of our master carpenters at [unit.name] has crafted a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price."
+		option = {
+			name = "Marvelous!"
+			hotkey = m
+			effects = {
+				copper += 250
 			}
 		}
 	}
