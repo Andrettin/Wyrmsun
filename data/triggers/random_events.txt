@@ -1,0 +1,14 @@
+giant_mushroom_grown = {
+	type = player_trigger
+	conditions = {
+		unit_type = unit_dwarven_mushroom_farm
+		random = 0.0001
+	}
+	effects = {
+		random_unit_of_type = {
+			unit_type = unit_dwarven_mushroom_farm
+			
+			call_dialogue = giant_mushroom_grown
+		}
+	}
+}
