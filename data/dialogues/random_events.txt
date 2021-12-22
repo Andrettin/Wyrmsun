@@ -72,7 +72,7 @@ giant_mushroom_grown = { #this is here rather than in a dwarven-specific file be
 splendid_table = {
 	{
 		title = "Splendid Table"
-		text = One of our master carpenters at [unit.name] has crafted a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price."
+		text = "One of our master carpenters at [unit.name] has crafted a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price."
 		option = {
 			name = "Marvelous!"
 			hotkey = m
