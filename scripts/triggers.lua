@@ -25,40 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("bountiful-harvest",
-	function()
-		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
-			return false
-		end
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("farm", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("farm", GetPlayerData(i, "Faction"))) >= 1) then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		local copper_quantity = GetPlayerData(trigger_player, "UnitTypesCount", GetFactionClassUnitType("farm", GetPlayerData(trigger_player, "Faction"))) * 100
-		Event(
-			"Bountiful Harvest",
-			"The harvest this year has been exceptionally plentiful, rejoice! Our farmers are bringing their abundant surplus to market and selling it for a profit.",
-			trigger_player,
-			{"E~!xcellent!"},
-			{function(s)
-				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + copper_quantity)
-			end},
-			nil,
-			nil,
-			false,
-			{
-				OptionTooltips = {"+" .. copper_quantity .. " Copper"}
-			}
-		)
-		return true
-	end
-)
-
 AddTrigger("giant-mushroom-grown", -- this is here rather than in a dwarven triggers.lua file because in the future other civilizations could have mushroom farms
 	function()
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
