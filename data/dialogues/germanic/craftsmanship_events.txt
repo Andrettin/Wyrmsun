@@ -1,0 +1,43 @@
+the_curved_swords = { #Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
+	trigger = {
+		only_once = true
+		conditions = {
+			civilization = germanic
+			unit_class = smithy
+			random = 0.01
+		}
+	}
+	{
+		title = "The Curved Swords"
+		text = "One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords serve to embellish ceremonies and bring prestige to their bearer."
+		option = {
+			name = "Marvelous!"
+			hotkey = m
+			effects = {
+				copper += 500
+			}
+		}
+	}
+}
+
+the_sun_chariot = { #Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+	trigger = {
+		only_once = true
+		conditions = {
+			civilization = germanic
+			unit_class = smithy
+			random = 0.01
+		}
+	}
+	{
+		title = "The Sun Chariot"
+		text = "One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky."
+		option = {
+			name = "Inspiring!"
+			hotkey = i
+			effects = {
+				copper += 500
+			}
+		}
+	}
+}
