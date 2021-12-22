@@ -1,6 +1,7 @@
 the_house_of_seven_fathers = { #based on the "The Seventh Father of the House" Norwegian folktale; Source: Peter Christen Asbjørnsen and Jørgen Moe, "Norwegian Folktales", 1960, pp. 13-14.
 	{
 		icon = icon_norse_farm
+		player_color = red
 		text = "Weary of [unit.possessive_pronoun] travels, [unit.name] comes to a finely-built farm and wonders whether [unit.personal_pronoun] could spend the night. [unit.capitalized_personal_pronoun] sees a gray-haired, bearded old man chopping wood close to the farm. Greeting him as the father of the house, [unit.simple_name] asks him whether [unit.personal_pronoun] could receive lodging for the night. The man answers [unit.oblique_pronoun] that he is not the father of the house, and that [unit.simple_name] should go to the kitchen and ask his father."
 	}
 	{
