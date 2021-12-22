@@ -156,7 +156,7 @@ AddTrigger("splendid-table",
 		local lumber_mill = FindUnitOfClass("lumber_mill", trigger_player, true)
 		Event(
 			"Splendid Table",
-			"One of our master carpenters at " .. GetUnitVariable(lumber_mill, "Name") .. " has created a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price.",
+			"One of our master carpenters at " .. GetUnitVariable(lumber_mill, "Name") .. " has crafted a most splendid table! The beautiful piece of furniture has impressed many, and will fetch a good price.",
 			trigger_player,
 			{"~!Marvelous!"},
 			{function(s)

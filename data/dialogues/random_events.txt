@@ -7,11 +7,12 @@ bountiful_harvest = {
 	}
 	{
 		title = "Bountiful Harvest"
+		icon = serfdom
 		text = "The harvest this year has been exceptionally plentiful, rejoice! Our farmers are bringing their abundant surplus to market and selling it for a profit."
 		option = {
 			name = "Excellent!"
 			hotkey = x
-			tooltip = "+100 Copper per Farm"
+			tooltip = "+100 ~<Copper~> per Farm"
 			effects = {
 				any_unit_of_class = {
 					unit_class = farm
