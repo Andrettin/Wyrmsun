@@ -207,41 +207,6 @@ AddTrigger("beautiful-statuette",
 	end
 )
 
-AddTrigger("brawl-at-the-barracks",
-	function()
-		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked (and 1% for each player it is checked for, for a chance of 0.01% for a player who matches the conditions
-			return false
-		end
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and SyncRand(100) == 0 and GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction")) ~= nil and GetPlayerData(i, "UnitTypesCount", GetFactionClassUnitType("barracks", GetPlayerData(i, "Faction"))) >= 1 and GetPlayerData(i, "NumTownHalls") > 0) then -- require a town hall so that the player does not go below the quantity of resources necessary to build one if they started without it
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		local barracks = FindUnitOfClass("barracks", trigger_player, true)
-		Event(
-			"Brawl at the Barracks",
-			"A brawl broke out amongst our recruits-in-training at " .. GetUnitVariable(barracks, "Name") .. "! It all began when one of them made an unfortunate joke, leading to another getting offended, and soon punches were thrown. The local commander has informed us that they will need funds to repair the resulting damage, as well as lumber for new furniture to replace what was broken during the fight.", -- could add the name of the specific barracks where this happened in the future, when barrackses receive proper names
-			trigger_player,
-			{"~!Damn fools..."},
-			{function(s)
-				SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") - 250)
-				SetPlayerData(trigger_player, "Resources", "lumber", GetPlayerData(trigger_player, "Resources", "lumber") - 250)
-			end},
-			nil,
-			nil,
-			false,
-			{
-				OptionTooltips = {"-250 Copper, -250 Lumber"}
-			}
-		)
-		return true
-	end
-)
-
 Load("scripts/civilizations/dwarf/triggers.lua")
 Load("scripts/civilizations/elf/triggers.lua")
 Load("scripts/civilizations/frankish/triggers.lua")

@@ -25,6 +25,21 @@ bountiful_harvest = {
 	}
 }
 
+brawl_at_the_barracks = {
+	{
+		title = "Brawl at the Barracks"
+		text = "A brawl has broken out amongst our recruits-in-training at [unit.name]! It all began when one of them made an unfortunate joke, leading to another getting offended, and soon punches were thrown. The local commander has informed us that they will need funds to repair the resulting damage, as well as lumber for new furniture to replace what was broken during the fight."
+		option = {
+			name = "Damn fools..."
+			hotkey = d
+			effects = {
+				copper -= 250
+				lumber -= 250
+			}
+		}
+	}
+}
+
 giant_mushroom_grown = { #this is here rather than in a dwarven-specific file because in the future other civilizations could have mushroom farms
 	{
 		title = "Giant Mushroom Grown"
