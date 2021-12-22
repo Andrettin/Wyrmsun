@@ -55,7 +55,7 @@ DialogBase {
 				id: option_button
 				text: model.modelData
 				hotkey: option_hotkeys[index]
-				tooltip: option_tooltips[index]
+				tooltip: format_text(option_tooltips[index])
 				interface_style: dialogue_dialog.interface_style
 				
 				onClicked: {
