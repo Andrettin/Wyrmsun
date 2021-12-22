@@ -19,7 +19,7 @@ DialogBase {
 	IconButton {
 		id: icon_button
 		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: title_item.bottom
+		anchors.top: title.length > 0 ? title_item.bottom : parent.top
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		icon: dialogue_dialog.icon
 		player_color: dialogue_dialog.player_color
