@@ -95,6 +95,7 @@ Window {
 		LauncherGenericDialog {
 			id: progress_dialog
 			title: "Progress"
+			closable: false
 		}
 		
 		LauncherGenericDialog {
@@ -105,6 +106,7 @@ Window {
 		Timer {
 			id: progress_dialog_timer
 			interval: 1000
+			repeat: false
 			onTriggered: {
 				progress_dialog.open()
 			}
@@ -113,12 +115,12 @@ Window {
 		Connections {
 			target: mod_manager
 			
-			function onItemCreated(published_file_id) {
+			function onModUploadCompleted() {
 				progress_dialog_timer.stop()
 				progress_dialog.close()
 			}
 			
-			function onItemCreationFailed(error_message) {
+			function onModUploadFailed(error_message) {
 				progress_dialog_timer.stop()
 				
 				error_dialog.text = error_message

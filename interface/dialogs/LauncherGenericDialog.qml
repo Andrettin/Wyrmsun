@@ -16,6 +16,7 @@ Popup {
 	property string title: ""
 	readonly property var title_item: title_text
 	property string text: ""
+	property bool closable: true
 	
 	background: Image {
 		source: "../../graphics/interface/dwarven/panel_" + panel + scale_factor_suffix + ".png"
@@ -61,7 +62,7 @@ Popup {
 		anchors.leftMargin: 8 * scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * scale_factor
-		anchors.bottom: ok_button.top
+		anchors.bottom: closable ? ok_button.top : parent.bottom
 		anchors.bottomMargin: 8 * scale_factor
 		text: dialog.text
 	}
@@ -73,6 +74,8 @@ Popup {
 		anchors.bottomMargin: 8 * scale_factor
 		text: "OK"
 		hotkey: "o"
+		visible: closable
+		enabled: closable
 		
 		onClicked: {
 			dialog.close()
