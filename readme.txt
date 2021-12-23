@@ -69,7 +69,10 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Added building sites to some of the legacy quest maps.
 
-* Miscellaneous
+* Modding
+- Added support for uploading mods from the launcher.
+
+* Terrain
 - Added updated border graphics.
 
 * Units
