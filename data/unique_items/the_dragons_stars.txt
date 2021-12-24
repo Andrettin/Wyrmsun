@@ -1,0 +1,44 @@
+dragons_tail = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 206-207.
+	name = "Dragon's Tail"
+	unit_type = unit_spatha
+	prefix = upgrade_item_prefix_wounding
+	suffix = upgrade_item_suffix_of_slaughter
+	set = upgrade_item_set_the_dragons_stars
+	description = "This sword is named after the first star in the constellation of Draco, and is said to derive power from it."
+}
+
+dragons_jaw = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 211-212.
+	name = "Dragon's Jaw"
+	unit_type = unit_iron_shield
+	prefix = upgrade_item_prefix_sturdy
+	suffix = upgrade_item_suffix_of_thorns
+	set = upgrade_item_set_the_dragons_stars
+	description = "This shield is named after the eighth star in the constellation of Draco, and is said to derive power from it."
+}
+
+dragons_head = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 207-209.
+	name = "Dragon's Head"
+	unit_type = unit_crown
+	prefix = upgrade_item_prefix_impregnable
+	suffix = upgrade_item_suffix_of_regeneration
+	set = upgrade_item_set_the_dragons_stars
+	description = "This helmet is named after the third star in the constellation of Draco, and is said to derive power from it."
+}
+
+dragons_eye = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 207.
+	name = "Dragon's Eye"
+	unit_type = unit_amulet
+	prefix = upgrade_item_prefix_vicious
+	suffix = upgrade_item_suffix_of_vision
+	set = upgrade_item_set_the_dragons_stars
+	description = "This amulet is named after the second star in the constellation of Draco, and is said to derive power from it."
+}
+
+dragons_tongue = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, p. 211.
+	name = "Dragon's Tongue"
+	unit_type = unit_ring
+	prefix = upgrade_prefix_fiery
+	suffix = upgrade_suffix_of_fire
+	set = upgrade_item_set_the_dragons_stars
+	description = "This ring is named after the seventh star in the constellation of Draco, and is said to derive power from it."
+}
