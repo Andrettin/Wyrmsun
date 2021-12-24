@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.2
 -----------------------------------------------------------------------
 
+* Factions
+- Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
+
 * Upgrades
 - Added Chevauchée upgrade for the English civilization. This upgrade makes cavalry units acquire resources when they damage enemy buildings.
 
