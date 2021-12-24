@@ -1,0 +1,26 @@
+upgrade_chevauchee = {
+	name = "Chevauchée"
+	upgrade_class = raiding
+	civilization = english
+	icon = chevauchee
+	description = "Chevauchée is the practice of performing a cavalry raid against the enemy, usually to weaken their economic base.\n\nEffect: +50% Raiding for cavalry."
+	costs = {
+		time = 250
+		copper = 2400
+	}
+	preconditions = {
+		civilization = english
+	}
+	modifier = {
+		raiding = 50
+		points = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			desert_cavalry
+			heroic_desert_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}

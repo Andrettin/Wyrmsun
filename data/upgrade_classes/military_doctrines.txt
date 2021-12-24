@@ -1,0 +1,6 @@
+raiding = {
+	name = "Raiding"
+	category = army
+	age = iron_age
+	tech_tree_parent_unit_class = barracks
+}

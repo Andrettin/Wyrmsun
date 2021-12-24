@@ -21,3 +21,15 @@ develop_svinfylking = {
 	popup = popup_research
 	unit_classes = { barracks }
 }
+
+develop_chevauchee = {
+	pos = 11
+	action = research
+	value = upgrade_chevauchee
+	allowed = check_single_research
+	key = c
+	hint = "Develop ~!Chevauchée"
+	description = "+50% Raiding for cavalry."
+	popup = popup_research
+	unit_classes = { barracks }
+}

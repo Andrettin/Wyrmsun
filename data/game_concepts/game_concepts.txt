@@ -97,10 +97,10 @@ mercenaries = {
 	hotkey = "c"
 }
 
-mugging = {
-	name = "Mugging"
-	description = "Whenever a unit with Mugging does damage to another unit, the mugging unit's player will gain resources. The obtained resources are a portion of the mugged unit's costs, based on the Mugging percentage and how much of the unit's maximum HP the damage dealt is."
-	hotkey = "u"
+raiding_mugging = {
+	name = "Raiding/Mugging"
+	description = "Whenever a unit with Raiding does damage to a building, the raiding unit's player will gain resources. The obtained resources are a portion of the raided building's costs, based on the Raiding percentage and how much of the building's maximum HP the damage dealt is. Mugging works similarly, but against units rather than buildings."
+	hotkey = r
 }
 
 trade = {

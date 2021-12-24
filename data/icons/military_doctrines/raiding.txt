@@ -1,0 +1,3 @@
+chevauchee = {
+	file = "icons/military_doctrines/chevauchee.png"
+}

@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.2
 -----------------------------------------------------------------------
 
+* Upgrades
+- Added Chevauchée upgrade for the English civilization. This upgrade makes cavalry units acquire resources when they damage enemy buildings.
+
 -----------------------------------------------------------------------
 - 5.3.1
 -----------------------------------------------------------------------
