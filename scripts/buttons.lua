@@ -509,7 +509,7 @@ DefineButton( { Pos = 13, Icon = "icon-furniture",
 	}
 })
 
-DefineButton( { Pos = 1, Icon = "icon-leather",
+DefineButton( { Pos = 13, Icon = "icon-leather",
 	Action = "produce_resource", Value = "leather",
 	Key = "l", Hint = "Produce ~!Leather", Popup = "popup_commands",
 	Description = "Allows workers to gather Leather in this building",

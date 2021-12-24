@@ -1,0 +1,11 @@
+develop_mount_breed = {
+	pos = 1
+	action = research_class
+	value = mount_breed
+	allowed = check_single_research
+	description =  "+10 HP for cavalry."
+	popup = popup_research
+	unit_classes = {
+		stables
+	}
+}

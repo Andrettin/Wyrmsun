@@ -1,0 +1,6 @@
+mount_breed = {
+	name = "Mount Breed"
+	category = army
+	age = bronze_age
+	tech_tree_parent_unit_class = stables
+}
