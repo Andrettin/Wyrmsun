@@ -2670,8 +2670,11 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {FactionUpgrade = "false", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {FactionUpgrade = "only", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Requirements: "), FactionRequirementsString("Faction")), Font = PopupDescriptionFont}}
 				},
 				-- Already Acquired
 				{ 	Margin = {1, 1}, Condition = {UpgradeResearched = "only"},
