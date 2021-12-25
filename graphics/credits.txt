@@ -1021,6 +1021,7 @@
 /graphics/interface/wyrmsun_logo.png (by Jinn) (licensed under the CC0)
 /graphics/interface/wyrmsun_logo_monochromatic.png (by Jinn) (licensed under the CC0)
 /graphics/items/neutral/belt.png (by Exidelo) (licensed under the CC0)
+/graphics/items/helmet.png (by Exidelo) (licensed under the CC0)
 /graphics/items/meat.png (by Jinn) (licensed under the CC0)
 /graphics/items/phlogiston_vial.png (by Jinn) (licensed under the CC0)
 /graphics/items/staff.png (by Jinn) (licensed under the CC0)
