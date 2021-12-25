@@ -63,29 +63,39 @@ upgrade_faction_visigothic_tribe = {
 upgrade_faction_burgundy = {
 	name = "Burgundy"
 	effects_string = "+10 HP for Horse Riders"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_gothia = {
 	name = "Gothia"
 	effects_string = "+2 Damage for Horse Riders"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_ostrogothia = {
 	name = "Ostrogothia"
 	effects_string = "+2 Damage for Horse Riders"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_vandalia = {
 	name = "Vandalia"
 	effects_string = "+1 Speed for Cogs"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_visigothia = {
 	name = "Visigothia"
 	effects_string = "+1 Speed for Horse Riders"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }

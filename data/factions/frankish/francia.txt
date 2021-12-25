@@ -17,6 +17,7 @@ francia = {
 		#}
 	}
 	conditions = {
+		upgrade_class = writing
 		not = {
 			any_other_player = {
 				civilization = frankish

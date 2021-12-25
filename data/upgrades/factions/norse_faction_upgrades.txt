@@ -49,25 +49,33 @@ upgrade_faction_swedish_tribe = {
 upgrade_faction_denmark = {
 	name = "Denmark"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_gautland = {
 	name = "Gautland"
 	effects_string = "+2 Damage for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_gotland = {
 	name = "Gotland"
 	effects_string = "+1 Damage and +1 Accuracy for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_norway = {
 	name = "Norway"
 	effects_string = "+2 Accuracy for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 	modifier = {
 		accuracy = 2
 		points = 10
@@ -82,5 +90,7 @@ upgrade_faction_norway = {
 upgrade_faction_sweden = {
 	name = "Sweden"
 	effects_string = "+2 Damage for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }

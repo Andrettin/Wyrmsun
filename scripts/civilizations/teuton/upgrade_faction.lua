@@ -248,23 +248,3 @@ DefineDependency("upgrade_faction_lombard_tribe",
 DefineDependency("upgrade-faction-saxon-tribe",
 	{"upgrade_ironworking"}
 )
-
-DefineDependency("upgrade-faction-cologne",
-	{"unit-teuton-temple", "upgrade_deity_christian_god"}
-)
-
-DefineDependency("upgrade-faction-holy-rome", -- must be Christian
-	{"upgrade_deity_christian_god"}
-)
-
-DefineDependency("upgrade-faction-magdeburg",
-	{"unit-teuton-temple", "upgrade_deity_christian_god"}
-)
-
-DefineDependency("upgrade-faction-netherlands",
-	{"upgrade-gunpowder"}
-)
-
-DefineDependency("upgrade-faction-prussia",
-	{"unit-teuton-stronghold", "unit-teuton-barracks"}
-)

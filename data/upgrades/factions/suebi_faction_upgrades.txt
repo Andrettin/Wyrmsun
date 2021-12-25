@@ -42,5 +42,7 @@ upgrade_faction_thuringian_tribe = {
 upgrade_faction_galicia = {
 	name = "Galicia"
 	effects_string = "+2 Damage for Kregars"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }

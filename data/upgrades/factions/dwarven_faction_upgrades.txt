@@ -66,25 +66,34 @@ upgrade_faction_whitesteel_clan = {
 upgrade_faction_joruvellir = {
 	name = "Joruvellir"
 	effects_string = "+1 Damage for Yale Riders and Scouts"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
+
 }
 
 upgrade_faction_kal_kartha = {
 	name = "Kal Kartha"
 	effects_string = "-5 HP and +3 Damage for Axefighters"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_knalga = {
 	name = "Knalga"
 	effects_string = "+2 Damage for Axefighters"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_lyr = {
 	name = "Lyr"
 	effects_string = "+10 HP for Miners, +5 Armor for Towers, +50% Research Speed for Smithies"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_surghan_mercenaries = {

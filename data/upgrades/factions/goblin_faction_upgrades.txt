@@ -51,35 +51,47 @@ upgrade_faction_wildfang_tribe = {
 upgrade_faction_aurvang = {
 	name = "Aurvang"
 	effects_string = "+2 Damage for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_driftwood = {
 	name = "Driftwood"
 	effects_string = "+2 Evasion for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_ezmarria = {
 	name = "Ezmarria"
 	effects_string = "+50% Research Speed for Lumber Mills and Fugla Forges"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_myridia = {
 	name = "Myridia"
 	effects_string = "+50% Backstab Bonus for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_stilgar = {
 	name = "Stilgar"
 	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_tenebris = {
 	name = "Tenebris"
 	effects_string = "+5 HP and +10 Mana for Shamans"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }

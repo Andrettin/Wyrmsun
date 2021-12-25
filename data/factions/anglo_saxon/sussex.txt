@@ -1,5 +1,8 @@
 sussex = {
 	adjective = "Sussexian"
+	conditions = {
+		upgrade_class = writing
+	}
 	
 	history = {
 		686 = {

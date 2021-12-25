@@ -24,6 +24,8 @@ netherlands = {
 		salia
 	}
 	conditions = {
+		upgrade_class = writing
+		upgrade_class = gunpowder
 		not = {
 			any_other_player = {
 				or = {

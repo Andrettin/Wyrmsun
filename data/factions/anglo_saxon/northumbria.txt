@@ -13,6 +13,7 @@ northumbria = {
 		deira
 	}
 	conditions = {
+		unit_type = unit_teuton_temple
 		not = {
 			any_other_player = {
 				or = {

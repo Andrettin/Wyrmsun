@@ -1,5 +1,8 @@
 kent = {
 	adjective = "Kentish"
+	conditions = {
+		upgrade_class = writing
+	}
 	
 	history = {
 		597 = {

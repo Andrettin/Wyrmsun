@@ -40,161 +40,215 @@ upgrade_faction_varini_tribe = {
 upgrade_faction_austria = {
 	name = "Austria"
 	effects_string = "+1 Speed for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_baden = {
 	name = "Baden"
 	effects_string = "+2 Evasion for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_bavaria = {
 	name = "Bavaria"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_brabant = {
 	name = "Brabant"
 	effects_string = "+2 Armor for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_brandenburg = {
 	name = "Brandenburg"
 	effects_string = "+5% Lumber Processing for Lumber Mills"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_bremen = {
 	name = "Bremen"
 	effects_string = "+2 Armor for Cogs"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_brunswick = {
 	name = "Brunswick"
 	effects_string = "+10 HP for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_carinthia = {
 	name = "Carinthia"
 	effects_string = "+10 HP for Clerics"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_cologne = {
 	name = "Cologne"
 	effects_string = "+30 Mana for Clerics"
-	requirements_string = "Writing, Masonry, Church and Christianity"
+	conditions = {
+		upgrade_class = writing
+		unit_type = unit_teuton_temple
+		upgrade = upgrade_deity_christian_god
+	}
 }
 
 upgrade_faction_drenthe = {
 	name = "Drenthe"
 	effects_string = "+2 Accuracy for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_franconia = {
 	name = "Franconia"
 	effects_string = "+10 HP for Knights"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_friesland = {
 	name = "Friesland"
 	effects_string = "+2 Food Supply for Docks"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_hesse = {
 	name = "Hesse"
 	effects_string = "+2 Damage for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_holland = {
 	name = "Holland"
 	effects_string = "+2 Food Supply for Docks"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_holy_rome = {
 	name = "Holy Rome"
 	effects_string = "+2 Armor for Knights"
-	requirements_string = "Writing, Masonry, Christianity, no other Frankish, Suebi or Teutonic faction exists, no other faction is Rome"
 }
 
 upgrade_faction_lombardy = {
 	name = "Lombardy"
 	effects_string = "+2 Damage for Knights"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_magdeburg = {
 	name = "Magdeburg"
 	effects_string = "+30 Mana for Clerics"
-	requirements_string = "Writing, Masonry, Church and Christianity"
+	conditions = {
+		upgrade_class = writing
+		unit_type = unit_teuton_temple
+		upgrade = upgrade_deity_christian_god
+	}
 }
 
 upgrade_faction_mecklenburg = {
 	name = "Mecklenburg"
 	effects_string = "+2 Armor for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_netherlands = {
 	name = "Netherlands"
 	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
-	requirements_string = "Writing, Masonry, Gunpowder, no other faction is Brabant, Drenthe, Holland or Overijssel"
 }
 
 upgrade_faction_overijssel = {
 	name = "Overijssel"
 	effects_string = "+2 Accuracy for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_prussia = {
 	name = "Prussia"
 	effects_string = "+2 Damage for Knights"
-	requirements_string = "Writing, Masonry, Burg and Barracks"
+	conditions = {
+		upgrade_class = writing
+		unit_type = unit_teuton_stronghold
+		unit_type = unit_teuton_barracks
+	}
 }
 
 upgrade_faction_saxony = {
 	name = "Saxony"
 	effects_string = "+5 HP and +1 Damage for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_swabia = {
 	name = "Swabia"
 	effects_string = "+10 HP for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_switzerland = {
 	name = "Switzerland"
 	effects_string = "+2 Damage for Spearmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_thuringia = {
 	name = "Thuringia"
 	effects_string = "+2 Damage for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_westphalia = {
 	name = "Westphalia"
 	effects_string = "+2 Accuracy for Archers"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }
 
 upgrade_faction_wurtemberg = {
 	name = "Wurtemberg"
 	effects_string = "+2 Armor for Swordsmen"
-	requirements_string = "Writing and Masonry"
+	conditions = {
+		upgrade_class = writing
+	}
 }

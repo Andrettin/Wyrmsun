@@ -22,6 +22,8 @@ holy_rome = {
 		swabia
 	}
 	conditions = {
+		upgrade_class = writing
+		upgrade = upgrade_deity_christian_god
 		not = {
 			any_other_player = {
 				or = {
