@@ -1,11 +1,12 @@
-develop_mount_breed = {
+research_skynborg_yale = {
 	pos = 1
-	action = research_class
-	value = mount_breed
+	action = research
+	value = upgrade_skynborg_yale
 	allowed = check_single_research
-	description =  "+10 HP for cavalry."
+	description =  "+10 HP for Yale Riders."
 	popup = popup_research
-	unit_classes = {
-		stables
+	unit_types = {
+		unit_dwarven_yale_pen
+		unit_joruvellir_yale_pen
 	}
 }
