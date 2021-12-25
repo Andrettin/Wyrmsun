@@ -1,0 +1,3 @@
+hut = {
+	file = "icons/buildings/hut.png"
+}

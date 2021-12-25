@@ -1,3 +1,7 @@
 republic = {
 	file = "icons/government_types/republic.png"
 }
+
+tribe = {
+	file = "icons/government_types/tribe.png"
+}

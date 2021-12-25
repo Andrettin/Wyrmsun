@@ -1,12 +1,29 @@
-establish_monarchy = {
+establish_tribe = {
 	pos = 1
+	level = enact_law_level
+	action = research
+	value = upgrade_tribe
+	allowed = check_single_research
+	key = t
+	hint = "Establish ~!Tribe"
+	description = "-10% infantry cost."
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+establish_monarchy = {
+	pos = 2
 	level = enact_law_level
 	action = research
 	value = upgrade_monarchy
 	allowed = check_single_research
 	key = m
 	hint = "Establish ~!Monarchy"
-	description = "-25% cavalry cost. Removes Republic."
+	description = "-25% cavalry cost. Removes Tribe and Republic."
 	popup = popup_research
 	unit_classes = {
 		town_hall
@@ -16,14 +33,14 @@ establish_monarchy = {
 }
 
 establish_republic = {
-	pos = 2
+	pos = 3
 	level = enact_law_level
 	action = research
 	value = upgrade_republic
 	allowed = check_single_research
 	key = r
 	hint = "Establish ~!Republic"
-	description = "+10% Copper, Silver and Gold processing bonus for Smithies. Removes Monarchy."
+	description = "+10% Copper, Silver and Gold processing bonus for Smithies. Removes Tribe and Monarchy."
 	popup = popup_research
 	unit_classes = {
 		town_hall

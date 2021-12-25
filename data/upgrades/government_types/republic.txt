@@ -9,7 +9,7 @@ upgrade_republic = {
 		copper = 4500
 	}
 	preconditions = {
-		upgrade = upgrade_polity
+		faction_type = polity
 	}
 	conditions = {
 		upgrade_class = writing
@@ -27,6 +27,7 @@ upgrade_republic = {
 	modifier = {
 		removed_upgrades = {
 			upgrade_monarchy
+			upgrade_tribe
 		}
 	}
 }

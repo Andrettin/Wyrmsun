@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Chevauchée upgrade for the English civilization (researchable at the Barracks). This upgrade makes cavalry units acquire resources when they damage enemy buildings.
 - Added Skynborg Yale upgrade for the Dwarven civilization (researchable at the Yale Pen). This upgrade increases cavalry HP.
+- Added the Tribe government type upgrade (-10% infantry cost).
 
 -----------------------------------------------------------------------
 - 5.3.1

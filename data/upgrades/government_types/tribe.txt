@@ -1,0 +1,34 @@
+upgrade_tribe = {
+	name = "Tribe"
+	government_type = tribe
+	icon = tribe
+	#description = ".\n\nEffect: -10% infantry cost."
+	costs = {
+		time = 200
+		copper = 1400
+	}
+	preconditions = {
+		or = {
+			faction_type = tribe
+			faction_type = polity
+		}
+		
+		#cannot go back to being a tribe after establishing a more advanced form of government
+		not = {
+			upgrade = upgrade_monarchy
+			upgrade = upgrade_republic
+		}
+	}
+	ai_priority = {
+		base_value = 50 #has to have a lower priority than more advanced government forms, so that the latter will be picked to replace it
+	}
+	modifier = {
+		infantry_cost_modifier = -10
+	}
+	modifier = {
+		removed_upgrades = {
+			upgrade_monarchy
+			upgrade_republic
+		}
+	}
+}
