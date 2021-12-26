@@ -38,9 +38,9 @@ function HandleCheats(str)
 		for i = 0, (PlayerMax - 2) do
 			SetPlayerData(i, "Resources", "copper", GetPlayerData(i, "Resources", "copper") + 12000)
 			SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 10000)
-			SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
+			--SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
 			SetPlayerData(i, "Resources", "stone", GetPlayerData(i, "Resources", "stone") + 10000)
-			SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
+			--SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
 		end
 		AddMessage("Resources increased!")
 	elseif (str == "showpath") then -- reveals the map only to person players

@@ -5,48 +5,85 @@ Item {
 	id: top_bar
 	height: image.height
 	
-	property string interface_style: "germanic"
+	property string interface_style: "default"
 	
 	Image {
 		id: image
 		anchors.left: parent.left
-		anchors.right: parent.right
 		source: "image://interface/" + interface_style + "/top_bar"
 		fillMode: Image.PreserveAspectCrop
 		cache: false
+		clip: true
 	}
 	
-	NormalText {
-		id: text
-		text: "Test"
+	ThinnestButton {
+		id: menu_button
 		anchors.left: parent.left
+		anchors.leftMargin: 26 * wyrmgus.scale_factor
 		anchors.top: parent.top
+		anchors.topMargin: 1 * wyrmgus.scale_factor
+		text: "Menu (F10)"
+		hotkey: "f10"
+		interface_style: parent.interface_style
+		
+		onClicked: {
+			if (wyrmgus.map_editor.running) {
+				wyrmgus.call_lua_command("RunInEditorMenu();")
+			} else {
+				game_menu_dialog.open()
+			}
+		}
 	}
 	
-	Image {
-		id: copper_resource_icon
-		anchors.left: text.right
-		anchors.leftMargin: 20
-		anchors.top: parent.top
-		source: "image://resource_icon/copper"
-		cache: false
+	Repeater {
+		model: wyrmgus.main_resources
+		
+		Image {
+			id: resource_icon
+			anchors.left: top_bar.left
+			anchors.leftMargin: (154 + (75 * index)) * wyrmgus.scale_factor
+			anchors.top: top_bar.top
+			source: "image://resource_icon/" + model.modelData.icon.identifier
+			cache: false
+			visible: !wyrmgus.map_editor.running
+		}
 	}
 	
-	Image {
-		id: lumber_resource_icon
-		anchors.left: copper_resource_icon.right
-		anchors.leftMargin: 20
-		anchors.top: parent.top
-		source: "image://resource_icon/lumber"
-		cache: false
+	Repeater {
+		model: wyrmgus.main_resources
+		
+		SmallText {
+			id: resource_label
+			anchors.left: top_bar.left
+			anchors.leftMargin: (154 + (75 * index) + 18) * wyrmgus.scale_factor
+			anchors.top: top_bar.top
+			anchors.topMargin: 1 * wyrmgus.scale_factor
+			text: number_string(wyrmgus.this_player.get_resource_sync(model.modelData))
+			visible: !wyrmgus.map_editor.running
+			
+			Connections {
+				target: wyrmgus.this_player
+				
+				function onResource_stored_changed(resource_index, amount) {
+					if (resource_index == model.modelData.index) {
+						resource_label.text = number_string(amount)
+					}
+				}
+			}
+		}
 	}
 	
-	Image {
-		id: stone_resource_icon
-		anchors.left: lumber_resource_icon.right
-		anchors.leftMargin: 20
-		anchors.top: parent.top
-		source: "image://resource_icon/stone"
-		cache: false
+	Repeater {
+		model: wyrmgus.this_player.current_special_resources
+		
+		Image {
+			id: resource_icon
+			anchors.left: top_bar.left
+			anchors.leftMargin: (154 + (75 * 3) + (Math.min(18, 72 / wyrmgus.this_player.current_special_resources.length) * index)) * wyrmgus.scale_factor
+			anchors.top: top_bar.top
+			source: "image://resource_icon/" + model.modelData.icon.identifier
+			cache: false
+			visible: !wyrmgus.map_editor.running
+		}
 	}
 }
