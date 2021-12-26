@@ -11,17 +11,4 @@ england = {
 	develops_from = {
 		englaland
 	}
-	conditions = {
-		not = {
-			any_other_player = {
-				or = {
-					civilization = anglo_saxon
-					civilization = english
-				}
-				not = {
-					faction = scotland
-				}
-			}
-		}
-	}
 }

@@ -113,7 +113,6 @@ upgrade_faction_east_anglia = {
 upgrade_faction_englaland = {
 	name = "Englaland"
 	effects_string = "+2 Damage for Archers"
-	requirements_string = "No other Anglo-Saxon or English faction exists"
 }
 
 upgrade_faction_essex = {

@@ -22,16 +22,6 @@ englaland = {
 		wessex
 	}
 	conditions = {
-		not = {
-			any_other_player = {
-				or = {
-					civilization = anglo_saxon
-					civilization = english
-				}
-				not = {
-					faction = scotland
-				}
-			}
-		}
+		scripted_condition = is_civilized
 	}
 }
