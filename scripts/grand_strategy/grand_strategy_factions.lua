@@ -33,7 +33,7 @@ function LoadFactions(world)
 
 	local NidavellirFactions = {
 		shorbear_clan = {
-			Name = "shorbear-clan",
+			Name = "shorbear_clan",
 			Civilization = "dwarf",
 			Copper = 9000, -- 300 / 20 * 600 (base value divided by 20, the usual level 1 Wesnoth unit gold cost, and multiplied by 600, the basic military unit copper cost in Wyrmsun)
 			Commodities = {

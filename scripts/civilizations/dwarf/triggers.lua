@@ -50,7 +50,7 @@ AddTrigger("oin-leaves",
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
 			return false
 		end
-		if (GetFactionExists("oinling-clan")) then
+		if (GetFactionExists("oinling_clan")) then
 			return false
 		end
 		if ( -- if Andvari's Falls are empty, but there are certain dwarven structures within a certain range of it
@@ -71,7 +71,7 @@ AddTrigger("oin-leaves",
 		return false
 	end,
 	function()
-		local oinling_player = CreatePlayerForFaction("oinling-clan", true)
+		local oinling_player = CreatePlayerForFaction("oinling_clan", true)
 		if (oinling_player == -1) then
 			return false
 		end

@@ -5,6 +5,7 @@ knalga = {
 	type = polity
 	color = red
 	default_tier = barony
+	max_tier = empire
 	default_capital = knalga
 	icon = icon_flag_silver_hammer_on_red
 	upgrade = upgrade_faction_knalga

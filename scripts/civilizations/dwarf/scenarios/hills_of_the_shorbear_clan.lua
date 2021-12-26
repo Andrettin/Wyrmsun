@@ -73,7 +73,7 @@ AddTrigger("hills-of-the-shorbear-clan-gnomish-envoy-dies",
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false
@@ -352,7 +352,7 @@ AddTrigger("hills-of-the-shorbear-clan-introduction",
 																																AddPlayerObjective(GetFactionPlayer("Shorbear Clan"), "- Defeat the Norlunds")
 																																--[[
 																																if (GrandStrategy) then
-																																	SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shorbear-clan", "war")
+																																	SetFactionDiplomacyState("dwarf", "norlund_clan", "dwarf", "shorbear_clan", "war")
 																																end
 																																--]]
 																															end}
@@ -1188,10 +1188,10 @@ AddTrigger("hills-of-the-shorbear-clan-shinsplitter-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- copper gained from the ruby's sale
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "norlund-clan", "copper", -10000)
-					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- copper gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund_clan", "copper", -10000)
+					SetFactionDiplomacyState("dwarf", "norlund_clan", "dwarf", "shinsplitter_clan", "peace")
 				end
 				ActionVictory()
 			end}
@@ -1221,10 +1221,10 @@ AddTrigger("hills-of-the-shorbear-clan-shorbear-victory",
 			{"~!Continue"},
 			{function(s)
 				if (GrandStrategyEventMap) then
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- copper gained from the ruby's sale
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- gained the silver via peace treaty with the Norlunds
-					ChangeFactionResource("dwarf", "norlund-clan", "copper", -10000)
-					SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- copper gained from the ruby's sale
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- gained the silver via peace treaty with the Norlunds
+					ChangeFactionResource("dwarf", "norlund_clan", "copper", -10000)
+					SetFactionDiplomacyState("dwarf", "norlund_clan", "dwarf", "shinsplitter_clan", "peace")
 				end
 				ActionVictory()
 			end}

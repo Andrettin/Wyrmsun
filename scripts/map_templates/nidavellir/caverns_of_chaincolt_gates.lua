@@ -26,10 +26,10 @@
 --
 
 --[[
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {460, 226}, 25)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {464, 228}, 25)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {462, 224}, 25)
-SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund-clan", {465, 226}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund_clan", {460, 226}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund_clan", {464, 228}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund_clan", {462, 224}, 25)
+SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-guard", "norlund_clan", {465, 226}, 25)
 
 SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {456, 216}, 25, {25, 12, 30})
 SetMapTemplateUnit("nidavellir-underground", "unit-goblin-swordsman", "khag-tribe", {456, 216}, 25, {25, 12, 30})

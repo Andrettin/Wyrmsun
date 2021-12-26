@@ -47,7 +47,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "Intruders... did ye come to feed our volcano?"
 		},
 		{
@@ -57,7 +57,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		-- there could be a level check here to see if the Whitesteel ghosts attack the dwarves or not
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "Ha! Yer eyes tell ye true. Neither living nor truly dead, we guard the ruined forge of our clan. Be thankful yer not a kobold, or else ye would already be swimming in the lava!"
 			
 		},
@@ -67,7 +67,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "Yer a noisy bunch, aren't ye?"
 		},
 		{
@@ -76,7 +76,7 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "A seaworthy ship, in this island? Ha! The kobolds here only possess small boats, ye won't get far with that. Driftwood is formed by shipwrecks and lost sailors or their descendants. They do not stay here by choice. Us dwarves, however... we used to have ships to do some trade with the mainland. But don't go thinking I would just give one to ye."
 		},
 		{
@@ -85,17 +85,17 @@ DefineDialogue("island-of-the-lizard-god-whitesteel-ghosts-found", {
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "My clan lived in this volcano in days past, forging tools and weapons with the high-quality ores found here. But we are no more. We had everything we needed here to survive, and even have some measure of comfort. The kobolds left us mostly alone. Well, they did then, at least. But that changed when they used some vile sorcery to summon forth that monster, the wyrm. It made its lair near the volcano, and began preying on our clan. When we fought back, that was all that was needed for the kobolds to try to root us out. They besieged our volcanic fortress, cutting us off from the surface."
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "A mastersmith among us crafted a wondrous spear and imbued it with wyrmslaying magics. A runesmith, he called himself. And he claimed to know the arts of Thursagan, some legendary mainland smith. Me and some other warriors swore a sacred oath to guard this Spear of Wyrms until the kobolds' monster was dead. We never had the chance - the kobolds breached our defenses, and I was cut down myself by a group of them... As I succumbed, the pain went away, but I remained. It seems that the Spear's magic worked to keep this pale shadow of my former self guarding it, as I once swore. The kobolds looted our corpses, though they never got to the Spear's secret resting place. They did get the required key, but they never found out how to use it. The kobolds likely still have it somewhere in their lair on Mount Sacrifice, on the island's eastern shore."
 		},
 		{
 			"speaker", "unit", "unit-dwarven-axefighter", -- should be a dwarven ghost
-			"speaker-player", "whitesteel-clan",
+			"speaker-player", "whitesteel_clan",
 			"text", "What do I want, ye ask? What I want is vengeance. Kill the kobold king for what was done to us. What I want is freedom. Slay the wyrm, so that the Spear may finally let me rest."
 		},
 		-- if the wyrm and the kobold king are already dead

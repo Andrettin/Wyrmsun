@@ -1,5 +1,6 @@
 brising_clan = {
 	adjective = "Brising"
+	default_tier = county #clan
 	
 	history = {
 		-3000 = {

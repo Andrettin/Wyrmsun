@@ -77,7 +77,7 @@ DefineProvince("Caverns of Chaincolt", {
 		"dwarf", "Caverns of Chaincolt"
 	},
 	Claims = {
-		"dwarf", "norlund-clan",
+		"dwarf", "norlund_clan",
 		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {
@@ -145,10 +145,10 @@ DefineProvince("Highbrook Pass", {
 		"dwarf", "Highbrook Pass"
 	},
 	HistoricalOwners = {
-		500, "dwarf", "shinsplitter-clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
+		500, "dwarf", "shinsplitter_clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
 	},
 	HistoricalClaims = {
-		500, "dwarf", "shinsplitter-clan"
+		500, "dwarf", "shinsplitter_clan"
 	},
 	HistoricalSettlementBuildings = {
 		535, "unit-dwarven-barracks", true -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
@@ -161,7 +161,7 @@ DefineProvince("Joruvellir", {
 		"dwarf", "Joruvellir"
 	},
 	Claims = {
-		"dwarf", "eikinskjaldi-clan",
+		"dwarf", "eikinskjaldi_clan",
 		"dwarf", "joruvellir"
 	}
 })
@@ -214,7 +214,7 @@ DefineProvince("Shorbear Hills", {
 		"dwarf", "Shorbear Hills"
 	},
 	Claims = {
-		"dwarf", "shorbear-clan",
+		"dwarf", "shorbear_clan",
 		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {
@@ -231,7 +231,7 @@ DefineProvince("Southern Tunnels", {
 		"dwarf", "Southern Tunnels"
 	},
 	Claims = {
-		"dwarf", "shinsplitter-clan",
+		"dwarf", "shinsplitter_clan",
 		"dwarf", "knalga"
 	},
 	HistoricalSettlementBuildings = {

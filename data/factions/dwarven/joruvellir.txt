@@ -1,7 +1,42 @@
-joruvellir = {
+joruvellir = { #from Norse mythology, "Joruvellir" = "Fields of Sand"
+	name = "Joruvellir"
 	adjective = "Joruvellir"
+	civilization = dwarven
+	parent_faction = goldhoof_clan
+	type = polity
+	color = brown
+	default_tier = duchy
+	max_tier = empire
+	default_capital = joruvellir
+	icon = icon_flag_joruvellir
+	upgrade = upgrade_faction_joruvellir
+	description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug."
+	develops_from = {
+		eikinskjaldi_clan
+		goldhoof_clan
+	}
 	conditions = {
 		scripted_condition = is_civilized
+	}
+	title_names = {
+		monarchy = {
+			barony = "Lordship"
+			duchy = "Principality"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				barony = {
+					male = "Lord"
+					female = "Lady"
+				}
+				duchy = {
+					male = "Prince"
+					female = "Princess"
+				}
+			}
+		}
 	}
 	
 	history = {

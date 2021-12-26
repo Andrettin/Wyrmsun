@@ -1,0 +1,3 @@
+oinling_clan = {
+	default_tier = county #clan
+}

@@ -73,7 +73,7 @@ AddTrigger("searching-for-the-runecrafter-gnomish-envoy-dies",
 		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 		end
 		return false

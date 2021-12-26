@@ -1,5 +1,6 @@
 goldhoof_clan = {
 	adjective = "Goldhoof"
+	default_tier = county #clan
 	
 	history = {
 		-2800 = {

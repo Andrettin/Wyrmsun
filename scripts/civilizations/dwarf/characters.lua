@@ -30,7 +30,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a thief
 	Civilization = "dwarf",
-	Faction = "shadowcharm-clan",
+	Faction = "shadowcharm_clan",
 	Description = "The greedy Fjalar is joint chieftain of the Shadowcharm Clan together with his brother Galar. He is adept at deception and stealth.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
@@ -38,7 +38,7 @@ DefineCharacter("fjalar", { -- dwarf from Norse mythology who, with the help of 
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"loki", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
+		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm_clan") then
 			return true
 		end
 		return false
@@ -50,7 +50,7 @@ DefineCharacter("galar", { -- dwarf from Norse mythology who, with the help of h
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be an alchemist
 	Civilization = "dwarf",
-	Faction = "shadowcharm-clan",
+	Faction = "shadowcharm_clan",
 	Description = "The envious Galar is joint chieftain of the Shadowcharm Clan together with his brother Fjalar. He is known for his thieving skills and his dabbling in magic.",
 	HairVariation = "brown-hair",
 	Trait = "upgrade-cruel",
@@ -58,7 +58,7 @@ DefineCharacter("galar", { -- dwarf from Norse mythology who, with the help of h
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"loki", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm-clan") then
+		if (GetPlayerData(trigger_player, "Faction") == "shadowcharm_clan") then
 			return true
 		end
 		return false
@@ -78,7 +78,7 @@ DefineCharacter("thjodrorir", { -- dwarf from Norse mythology; Source: Kevin Cro
 	-- worships deities: Hroptatyr (Odin) and Delling
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") ~= "shadowcharm-clan") then
+		if (GetPlayerData(trigger_player, "Faction") ~= "shadowcharm_clan") then
 			return true
 		end
 		return false
@@ -233,13 +233,13 @@ DefineCharacter("andvari", {
 	Gender = "male",
 	Type = "unit-dwarven-runemaster",
 	Civilization = "dwarf",
-	Faction = "oinling-clan",
+	Faction = "oinling_clan",
 	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
 	Trait = "upgrade-ambitious",
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "oinling-clan") then
+		if (GetPlayerData(trigger_player, "Faction") == "oinling_clan") then
 			return true
 		end
 		return false

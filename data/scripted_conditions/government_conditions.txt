@@ -1,5 +1,9 @@
 is_civilized = {
 	or = {
+		and = {
+			faction_type = tribe
+			upgrade_class = writing
+		}
 		government_type = monarchy
 		government_type = republic
 	}

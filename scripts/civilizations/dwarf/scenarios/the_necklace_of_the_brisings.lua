@@ -29,7 +29,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 2000)
 	SetPlayerData(0, "Resources", "stone", 3000)
-	SetPlayerData(1, "Faction", "shinsplitter-clan")
+	SetPlayerData(1, "Faction", "shinsplitter_clan")
 	SetPlayerData(1, "Name", "Bandits")
 	SetPlayerData(1, "Resources", "copper", 5000)
 	SetPlayerData(1, "Resources", "lumber", 2000)

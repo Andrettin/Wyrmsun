@@ -29,7 +29,7 @@
 DefineCampaign("the-mead-of-poetry", {
 	Name = "The Mead of Poetry",
 	Description = "The dwarven brothers Fjalar and Galar conspire to kill the wise god Kvasir and brew his blood into a powerful mead.",
-	Faction = "shadowcharm-clan",
+	Faction = "shadowcharm_clan",
 	StartYear = -2800
 })
 
@@ -64,7 +64,7 @@ DefineCampaign("the-home-of-the-boii", {
 DefineCampaign("the-scepter-of-fire", {
 	Name = "The Scepter of Fire",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile forces, can they survive for long?",
-	Faction = "norlund-clan",
+	Faction = "norlund_clan",
 	StartYear = 25,
 	MapTemplates = {
 		"nidavellir", {0, 0}, {256, 256}

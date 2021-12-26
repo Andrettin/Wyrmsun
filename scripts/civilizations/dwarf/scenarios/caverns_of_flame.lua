@@ -28,7 +28,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(1, "Faction", "shinsplitter-clan")
+	SetPlayerData(1, "Faction", "shinsplitter_clan")
 	
 	-- create extra defensive troops for the goblins
 	unit = CreateUnit("unit-goblin-spearman", 2, {GetPlayerData(2, "StartPosX"), GetPlayerData(2, "StartPosY")})
@@ -811,10 +811,10 @@ AddTrigger("caverns-of-flame-ending",
 									{"~!Continue"},
 									{function(s)
 									if (GrandStrategy) then
-										ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000)
+										ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000)
 										ChangeFactionResource("gnome", "untersberg", "copper", -10000)
-										SetFactionDiplomacyState("dwarf", "norlund-clan", "dwarf", "shinsplitter-clan", "peace")
-										ChangeFactionResource("dwarf", "norlund-clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
+										SetFactionDiplomacyState("dwarf", "norlund_clan", "dwarf", "shinsplitter_clan", "peace")
+										ChangeFactionResource("dwarf", "norlund_clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 									end
 									Event(
 										"",

@@ -102,8 +102,8 @@ DefineSite("rugnurs-outpost", { -- from Battle for Wesnoth: The Sceptre of Fire 
 	MapTemplate = "nidavellir",
 	Position = {465, 239},
 	HistoricalOwners = {
-		25, "norlund-clan", -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
-		{25, 12, 30}, "shinsplitter-clan" -- conquered during 25 by the Shinsplitters
+		25, "norlund_clan", -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills
+		{25, 12, 30}, "shinsplitter_clan" -- conquered during 25 by the Shinsplitters
 	},
 	HistoricalBuildings = {
 	--	25, 0, "watch_tower"

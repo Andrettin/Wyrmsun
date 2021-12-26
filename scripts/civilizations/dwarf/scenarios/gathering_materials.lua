@@ -30,7 +30,7 @@
 -- based on the Gathering Materials scenario of the Sceptre of Fire campaign from Battle for Wesnoth
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "norlund-clan")
+	SetPlayerData(0, "Faction", "norlund_clan")
 	
 	SetDiplomacy(0, "enemy", 1)
 	SetDiplomacy(0, "enemy", 2)
@@ -300,7 +300,7 @@ AddTrigger("gathering-materials-introduction",
 			for i=0, (PlayerMax - 2) do
 				if (
 					GetPlayerData(i, "RaceName") == "dwarf"
-					and (GetPlayerData(i, "Faction") == "norlund-clan" or GetPlayerData(i, "Faction") == "shinsplitter-clan" or GetPlayerData(i, "Faction") == "knalga")
+					and (GetPlayerData(i, "Faction") == "norlund_clan" or GetPlayerData(i, "Faction") == "shinsplitter_clan" or GetPlayerData(i, "Faction") == "knalga")
 					and GetPlayerData(i, "Name") ~= "Shinsplitter Clan"
 					and FindHero("rugnur", i) ~= nil
 					and FindHero("baglur", i) ~= nil
@@ -689,8 +689,8 @@ AddTrigger("gathering-materials-coal-collected",
 																																							{function(s)
 																																								RemovePlayerObjective(player, "- Collect 10000 copper and 20000 coal")
 																																								if (GrandStrategy) then
-																																									--ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000)
-																																									ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
+																																									--ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000)
+																																									ChangeFactionResource("dwarf", "norlund_clan", "coal", 20000)
 																																								end
 																																								if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									ActionVictory()
@@ -1010,8 +1010,8 @@ AddTrigger("gathering-materials-resources-collected",
 																																				{function(s)
 																																					RemovePlayerObjective(player, "- Collect 10000 copper and 20000 coal")
 																																					if (GrandStrategy) then
-																																						--ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000)
-																																						ChangeFactionResource("dwarf", "norlund-clan", "coal", 20000)
+																																						--ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000)
+																																						ChangeFactionResource("dwarf", "norlund_clan", "coal", 20000)
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						ActionVictory()

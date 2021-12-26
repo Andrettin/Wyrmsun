@@ -1,7 +1,111 @@
 kal_kartha = {
+	name = "Kal Kartha"
 	adjective = "Kal Karthan"
+	civilization = dwarven
+	type = polity
+	color = black
+	default_tier = barony
+	max_tier = empire
+	default_capital = kal_kartha
+	icon = icon_flag_red_hammer_on_silver
+	upgrade = upgrade_faction_kal_kartha
+	develops_from = {
+		oinling_clan
+		shadowcharm_clan
+		shinsplitter_clan
+		shorbear_clan
+		whitesteel_clan
+	}
 	conditions = {
 		scripted_condition = is_civilized
+	}
+	title_names = {
+		monarchy = {
+			barony = "Lordship"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				barony = {
+					male = "Lord"
+					female = "Lady"
+				}
+			}
+		}
+	}
+	force_templates = {
+		{ #from Battle for Wesnoth: The Hammer of Thursagan (The Siege of Kal Kartha)
+			force_type = land
+			priority = 120
+			units = {
+				infantry = 2
+				gunpowder_infantry = 1
+			}
+		}
+		{ #from Battle for Wesnoth: The Hammer of Thursagan (The Court of Karrag)
+			force_type = land
+			priority = 120
+			units = {
+				infantry = 2 #a fighter and an ulfserker
+				gunpowder_infantry = 1
+			}
+		}
+		{ #from Battle for Wesnoth: The Hammer of Thursagan (The Underlevels)
+			force_type = land
+			priority = 120
+			units = {
+				infantry = 1
+				spearman = 1
+				gunpowder_infantry = 1
+			}
+		}
+		{
+			force_type = land
+			priority = 110
+			units = {
+				infantry = 2
+				shooter = 1
+			}
+		}
+		{
+			force_type = land
+			priority = 110
+			units = {
+				infantry = 1
+				spearman = 1
+				shooter = 1
+			}
+		}
+		{
+			force_type = land
+			priority = 100
+			units = {
+				infantry = 2
+			}
+		}
+		{
+			force_type = land
+			priority = 100
+			units = {
+				infantry = 1
+				spearman = 1
+			}
+		}
+		{
+			force_type = naval
+			priority = 100
+			units = {
+				siege_warship = 1
+			}
+		}
+		{
+			force_type = air
+			priority = 100
+			units = {
+				flying_rider = 1
+			}
+		}
 	}
 	
 	history = {

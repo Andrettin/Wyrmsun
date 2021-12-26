@@ -1,7 +1,39 @@
 lyr = {
+	name = "Lyr"
 	adjective = "Lyran"
+	civilization = dwarven
+	parent_faction = brising_clan
+	type = polity
+	color = green
+	default_tier = barony
+	max_tier = duchy
+	#default_capital = lyr
+	icon = icon_flag_yellow_hammer_on_purple
+	upgrade = upgrade_faction_lyr
+	description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan."
+	background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse."
+	develops_from = {
+		brising_clan
+		oinling_clan
+		whitesteel_clan
+	}
 	conditions = {
 		scripted_condition = is_civilized
+	}
+	title_names = {
+		monarchy = {
+			barony = "Lordship"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				barony = {
+					male = "Lord"
+					female = "Lady"
+				}
+			}
+		}
 	}
 	
 	history = {

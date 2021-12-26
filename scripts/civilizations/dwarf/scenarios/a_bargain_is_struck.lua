@@ -26,10 +26,10 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-smithy", "F")
-	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-lumber-mill", "F")
-	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-sentry-tower", "F")
-	SetPlayerData(GetFactionPlayer("shinsplitter-clan"), "Allow", "unit-dwarven-stronghold", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter_clan"), "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter_clan"), "Allow", "unit-dwarven-lumber-mill", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter_clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+	SetPlayerData(GetFactionPlayer("shinsplitter_clan"), "Allow", "unit-dwarven-stronghold", "F")
 end
 
 -- A Bargain is Struck initial dialogue
@@ -596,7 +596,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 									ActionDefeat()
 								end
 								if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-									ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
+									ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 								end
 							end
 							if (player == GetThisPlayer()) then
@@ -663,7 +663,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 							ActionDefeat()
 						end
 						if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-							ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
+							ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 						end
 					end
 					if (player == GetThisPlayer()) then
@@ -732,7 +732,7 @@ AddTrigger("a-bargain-is-struck-quest-completion",
 				ActionDefeat()
 			end
 			if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
-				ChangeFactionResource("dwarf", "norlund-clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
+				ChangeFactionResource("dwarf", "norlund_clan", "copper", 10000) -- 5000 silver, and for our purposes silver is considered to be worth 200% of copper
 			end
 		end
 		if (player == GetThisPlayer()) then
@@ -840,7 +840,7 @@ AddTrigger("a-bargain-is-struck-raiders-victory",
 	function() 
 		if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 			if (GrandStrategy) then
-				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 			end
 			ActionVictory()
 		end
@@ -865,11 +865,11 @@ AddTrigger("a-bargain-is-struck-rugnur-dies",
 			ActionDefeat()
 			if (GrandStrategy) then
 				if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 				end
 				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-					ChangeFactionResource("dwarf", "norlund-clan", "copper", -10000)
-					ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000)
+					ChangeFactionResource("dwarf", "norlund_clan", "copper", -10000)
+					ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000)
 				end
 			end
 		end
@@ -892,7 +892,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-dies",
 	function()
 		ActionDefeat()
 		if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-			ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+			ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 		end
 		return false
 	end
@@ -918,7 +918,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-dies",
 --		if (mapinfo.description == "Chaincolt Foothills") then
 --			ActionDefeat()
 --			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
---				ChangeFactionResource("dwarf", "shinsplitter-clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+--				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 --			end
 --		end
 --		return false

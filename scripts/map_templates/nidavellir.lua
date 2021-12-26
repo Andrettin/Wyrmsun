@@ -25,9 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-town-hall", "shadowcharm-clan", {-1, -1})
---SetMapTemplateHero("nidavellir-underground", "fjalar", "shadowcharm-clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
---SetMapTemplateHero("nidavellir-underground", "galar", "shadowcharm-clan", {-1, -1}, -2800, -2799)
+--SetMapTemplateUnit("nidavellir-underground", "unit-dwarven-town-hall", "shadowcharm_clan", {-1, -1})
+--SetMapTemplateHero("nidavellir-underground", "fjalar", "shadowcharm_clan", {-1, -1}, -2800, -2799) -- Fjalar's and Galar's campaign begins in 2800 BC
+--SetMapTemplateHero("nidavellir-underground", "galar", "shadowcharm_clan", {-1, -1}, -2800, -2799)
 
 --SetMapTemplateLayerConnector("nidavellir", "unit-portal", {-1, -1}, "asgard")
 --SetMapTemplateLayerConnector("nidavellir-underground", "unit-portal", {-1, -1}, "earth")

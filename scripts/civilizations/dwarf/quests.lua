@@ -367,7 +367,7 @@ DefineQuest("andvaris_gold", {
 	Rewards = "+10,000 Copper, Magic Ring",
 	Conditions = function(s)
 		if (
-			GetFactionExists("oinling-clan", true) -- Andvari's clan must exist
+			GetFactionExists("oinling_clan", true) -- Andvari's clan must exist
 			and GetNumUnitsAt(trigger_player, "any", {GetSiteData("andvaris-falls", "MapCenterPosX") - 256, GetSiteData("andvaris-falls", "MapCenterPosY") - 256}, {GetSiteData("andvaris-falls", "MapCenterPosX") + 256, GetSiteData("andvaris-falls", "MapCenterPosY") + 256}, GetSiteData("andvaris-falls", "MapLayer")) > 0 -- the player must be within a certain distance of Andvari's holding
 		) then
 			return true
@@ -375,7 +375,7 @@ DefineQuest("andvaris_gold", {
 		return false
 	end,
 	CompletionEffects = function(s)
-		local oinling_player = GetFactionPlayer("oinling-clan")
+		local oinling_player = GetFactionPlayer("oinling_clan")
 		unit = CreateUnit("unit-ring", PlayerNumNeutral, {GetPlayerData(oinling_player, "StartPosX"), GetPlayerData(oinling_player, "StartPosY")}, GetSiteData("andvaris-falls", "MapLayer"))
 		if (GetUniqueItemData("andvaranaut", "CanDrop")) then
 			SetUnitVariable(unit, "Unique", "andvaranaut")

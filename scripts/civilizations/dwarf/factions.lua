@@ -64,45 +64,45 @@ DefineFaction("goldhoof_clan", {
 	Description = "The Goldhoofs are an ancient clan, who split off from the other dwarves in Svarinshaug to migrate to Joruvellir. There, they gave rise to a multitude of desert dwarven clans, which eventually would unify into the Principality of Joruvellir."
 })
 
-DefineFaction("eikinskjaldi-clan", {
+DefineFaction("eikinskjaldi_clan", {
 	Name = "Eikinskjaldi Clan",
 	Adjective = "Eikinskjaldi",
 	Civilization = "dwarf",
 	ParentFaction = "goldhoof_clan",
 	Type = "tribe",
 	Color = "brown",
-	FactionUpgrade = "upgrade-faction-eikinskjaldi-clan",
+	FactionUpgrade = "upgrade_faction_eikinskjaldi_clan",
 	Icon = "icon-flag-light-blue-hammer-on-orange",
 	DevelopsFrom = {"goldhoof_clan"},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
 
-DefineFaction("norlund-clan", {
+DefineFaction("norlund_clan", {
 	Name = "Norlund Clan",
 	Adjective = "Norlund",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "red",
-	FactionUpgrade = "upgrade-faction-norlund-clan",
+	FactionUpgrade = "upgrade_faction_norlund_clan",
 	Icon = "icon-flag-black-hammer-on-orange",
 	DevelopsFrom = {"brising_clan"},
 	Description = "The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."
 })
 
-DefineFaction("oinling-clan", {
+DefineFaction("oinling_clan", {
 	Name = "Oinling Clan",
 	Adjective = "Oinling",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "yellow",
-	FactionUpgrade = "upgrade-faction-oinling-clan",
+	FactionUpgrade = "upgrade_faction_oinling_clan",
 	Icon = "icon-flag-blue-hammer-on-yellow",
 	DevelopsFrom = {"brising_clan"},
 	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
 })
 
-DefineFaction("shadowcharm-clan", {
+DefineFaction("shadowcharm_clan", {
 	Name = "Shadowcharm Clan",
 	Adjective = "Shadowcharm",
 	Civilization = "dwarf",
@@ -114,25 +114,25 @@ DefineFaction("shadowcharm-clan", {
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."
 })
 
-DefineFaction("shinsplitter-clan", {
+DefineFaction("shinsplitter_clan", {
 	Name = "Shinsplitter Clan",
 	Adjective = "Shinsplitter",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "green",
-	FactionUpgrade = "upgrade-faction-shinsplitter-clan",
+	FactionUpgrade = "upgrade_faction_shinsplitter_clan",
 	Icon = "icon-flag-cyan-hammer-on-green",
 	DevelopsFrom = {"brising_clan"},
 	Description = "The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."
 })
 
-DefineFaction("shorbear-clan", {
+DefineFaction("shorbear_clan", {
 	Name = "Shorbear Clan",
 	Adjective = "Shorbear",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "blue",
-	FactionUpgrade = "upgrade-faction-shorbear-clan",
+	FactionUpgrade = "upgrade_faction_shorbear_clan",
 	Icon = "icon-flag-green-hammer-on-blue",
 	DevelopsFrom = {"brising_clan"},
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
@@ -186,144 +186,16 @@ DefineFaction("shorbear-clan", {
 	}
 })
 
-DefineFaction("whitesteel-clan", {
+DefineFaction("whitesteel_clan", {
 	Name = "Whitesteel Clan",
 	Adjective = "Whitesteel",
 	Civilization = "dwarf",
 	Type = "tribe",
 	Color = "white",
-	FactionUpgrade = "upgrade-faction-whitesteel-clan",
+	FactionUpgrade = "upgrade_faction_whitesteel_clan",
 	Icon = "icon-flag-red-hammer-on-silver",
-	DevelopsFrom = {"brising_clan", "norlund-clan", "shorbear-clan"},
+	DevelopsFrom = {"brising_clan", "norlund_clan", "shorbear_clan"},
 --	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
-})
-
--- Polities
-
-DefineFaction("joruvellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand"
-	Name = "Joruvellir",
-	ParentFaction = "goldhoof_clan",
-	Civilization = "dwarf",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-joruvellir",
-	Icon = "icon-flag-joruvellir",
-	DevelopsFrom = {"eikinskjaldi-clan", "goldhoof_clan"},
-	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
-	Titles = {
-		"monarchy", "barony", "Lordship",
-		"monarchy", "duchy", "Principality"
-	},
-	MinisterTitles = {
-		"ruler", "male", "monarchy", "barony", "Lord",
-		"ruler", "female", "monarchy", "barony", "Lady",
-		"ruler", "male", "monarchy", "duchy", "Prince",
-		"ruler", "female", "monarchy", "duchy", "Princess"
-	},
-	HistoricalCapitals = {
-		400, "joruvellir"
-	}
-})
-
-DefineFaction("kal_kartha", {
-	Name = "Kal Kartha",
-	Civilization = "dwarf",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "barony",
-	FactionUpgrade = "upgrade-faction-kal-kartha",
-	Icon = "icon-flag-red-hammer-on-silver",
-	DevelopsFrom = {"oinling-clan", "shadowcharm-clan", "shinsplitter-clan", "shorbear-clan", "whitesteel-clan"},
-	Titles = {
-		"monarchy", "barony", "Lordship"
-	},
-	MinisterTitles = {
-		"ruler", "male", "monarchy", "barony", "Lord",
-		"ruler", "female", "monarchy", "barony", "Lady"
-	},
-	HistoricalCapitals = {
-		400, "kal_kartha"
-	},
-	ForceTemplates = {
-		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Siege of Kal Kartha)
-			"force-type", "land",
-			"priority", 120,
-			"unit-class", "infantry", 2,
-			"unit-class", "gunpowder_infantry", 1
-		},
-		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Court of Karrag)
-			"force-type", "land",
-			"priority", 120,
-			"unit-class", "infantry", 2, -- a fighter and an ulfserker
-			"unit-class", "gunpowder_infantry", 1
-		},
-		{ -- from Battle for Wesnoth: The Hammer of Thursagan (The Underlevels)
-			"force-type", "land",
-			"priority", 120,
-			"unit-class", "infantry", 1,
-			"unit-class", "spearman", 1,
-			"unit-class", "gunpowder_infantry", 1
-		},
-		{
-			"force-type", "land",
-			"priority", 110,
-			"unit-class", "infantry", 2,
-			"unit-class", "shooter", 1
-		},
-		{
-			"force-type", "land",
-			"priority", 110,
-			"unit-class", "infantry", 1,
-			"unit-class", "spearman", 1,
-			"unit-class", "shooter", 1
-		},
-		{
-			"force-type", "land",
-			"priority", 100,
-			"unit-class", "infantry", 2
-		},
-		{
-			"force-type", "land",
-			"priority", 100,
-			"unit-class", "infantry", 1,
-			"unit-class", "spearman", 1
-		},
-		{
-			"force-type", "naval",
-			"priority", 100,
-			"unit-class", "siege_warship", 1
-		},
-		{
-			"force-type", "air",
-			"priority", 100,
-			"unit-class", "flying_rider", 1
-		}
-	}
-})
-
-DefineFaction("lyr", {
-	Name = "Lyr",
-	Civilization = "dwarf",
-	Type = "polity",
-	ParentFaction = "brising_clan",
-	Color = "green",
-	DefaultTier = "barony",
-	FactionUpgrade = "upgrade-faction-lyr",
-	Icon = "icon-flag-yellow-hammer-on-purple",
-	DevelopsFrom = {"brising_clan", "oinling-clan", "whitesteel-clan"},
-	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
-	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",
-	Titles = {
-		"monarchy", "barony", "Lordship"
-	},
-	MinisterTitles = {
-		"ruler", "male", "monarchy", "barony", "Lord",
-		"ruler", "female", "monarchy", "barony", "Lady"
-	},
-	HistoricalCapitals = {
-		400, "lyr"
-	}
 })
 
 -- Holy Orders

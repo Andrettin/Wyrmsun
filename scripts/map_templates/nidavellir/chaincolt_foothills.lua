@@ -25,8 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("nidavellir", "unit-dwarven-guard-tower", "shinsplitter-clan", {462, 264}, 25)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "shinsplitter-clan", {462, 264}, 25) -- Glildur
+SetMapTemplateUnit("nidavellir", "unit-dwarven-guard-tower", "shinsplitter_clan", {462, 264}, 25)
+SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "shinsplitter_clan", {462, 264}, 25) -- Glildur
 
 -- Road present in 25, as seen in Battle for Wesnoth: The Sceptre of Fire (A Bargain is Struck)
 SetMapTemplateTileTerrain("nidavellir", "road", {437, 267}, 25)

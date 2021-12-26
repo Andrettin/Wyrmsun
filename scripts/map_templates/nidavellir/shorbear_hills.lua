@@ -27,11 +27,11 @@
 
 -- From Battle for Wesnoth: The Sceptre of Fire (Hills of the Shorbear Clan, Towards the Caves)
 
-SetMapTemplateHero("nidavellir", "rugnur", "norlund-clan", {499, 209}, 34, 35)
-SetMapTemplateUnit("nidavellir", "unit-gnomish-duelist", "norlund-clan", {499, 209}, 34, 35) -- Gnomish Envoy
-SetMapTemplateHero("nidavellir", "baglur", "norlund-clan", {499, 209}, 34, 35)
-SetMapTemplateUnit("nidavellir", "unit_dwarven_gryphon_rider", "norlund-clan", {499, 209}, 34, 35) -- Kawn's Gryphon Rider
-SetMapTemplateHero("nidavellir", "thursagan", "norlund-clan", {499, 209}, 34, 35)
-SetMapTemplateHero("nidavellir", "durstorn", "norlund-clan", {507, 207}, 34, 35)
-SetMapTemplateUnit("nidavellir", "unit-dwarven-pathfinder", "norlund-clan", {507, 207}, 34, 35) -- Noiraran
-SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "norlund-clan", {507, 207}, 34, 35) -- Kuhnar
+SetMapTemplateHero("nidavellir", "rugnur", "norlund_clan", {499, 209}, 34, 35)
+SetMapTemplateUnit("nidavellir", "unit-gnomish-duelist", "norlund_clan", {499, 209}, 34, 35) -- Gnomish Envoy
+SetMapTemplateHero("nidavellir", "baglur", "norlund_clan", {499, 209}, 34, 35)
+SetMapTemplateUnit("nidavellir", "unit_dwarven_gryphon_rider", "norlund_clan", {499, 209}, 34, 35) -- Kawn's Gryphon Rider
+SetMapTemplateHero("nidavellir", "thursagan", "norlund_clan", {499, 209}, 34, 35)
+SetMapTemplateHero("nidavellir", "durstorn", "norlund_clan", {507, 207}, 34, 35)
+SetMapTemplateUnit("nidavellir", "unit-dwarven-pathfinder", "norlund_clan", {507, 207}, 34, 35) -- Noiraran
+SetMapTemplateUnit("nidavellir", "unit-dwarven-steelclad", "norlund_clan", {507, 207}, 34, 35) -- Kuhnar
