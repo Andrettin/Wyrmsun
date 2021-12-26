@@ -14,8 +14,32 @@ copper = {
 	file = "ui/resources/copper.png"
 }
 
+fabric = {
+	file = "ui/resources/fabric.png"
+}
+
+fish = {
+	file = "ui/resources/fish.png"
+}
+
+fuel = {
+	file = "ui/resources/fuel.png"
+}
+
+furniture = {
+	file = "ui/resources/furniture.png"
+}
+
+grain = {
+	file = "ui/resources/grain.png"
+}
+
 iron = {
 	file = "ui/resources/iron.png"
+}
+
+leather = {
+	file = "ui/resources/leather.png"
 }
 
 leadership = {
@@ -44,4 +68,12 @@ silver = {
 
 stone = {
 	file = "ui/resources/stone.png"
+}
+
+timber = {
+	file = "ui/resources/timber.png"
+}
+
+wool = {
+	file = "ui/resources/wool.png"
 }
