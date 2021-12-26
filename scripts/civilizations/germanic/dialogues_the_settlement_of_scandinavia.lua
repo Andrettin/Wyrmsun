@@ -112,14 +112,7 @@ DefineDialogue("on_the_vanaquisl_victory", {
 		},
 		{
 			"speaker", "character", "voden",
-			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!",
-			"option-effects", {
-				function(s)
-					if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "on_the_vanaquisl") then
-						CallDialogue("campaign-victory", trigger_player)
-					end
-				end
-			}
+			"text", "We ravaged Vanaland and pillaged its wealth. Victory is ours!"
 		}
 	}
 })
