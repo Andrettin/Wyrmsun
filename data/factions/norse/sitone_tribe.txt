@@ -14,4 +14,7 @@ sitone_tribe = { #Tribes in Europe between 264 BC and 180 AD; Source: William R.
 		thralling_tribe
 		yngling_tribe
 	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

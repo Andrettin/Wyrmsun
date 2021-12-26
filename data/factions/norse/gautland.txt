@@ -1,11 +1,12 @@
-geat_tribe = {
-	name = "Geat Tribe"
+gautland = {
+	name = "Gautland"
 	adjective = "Geat"
 	civilization = norse
-	type = tribe
+	type = polity
 	color = teal
+	default_tier = kingdom
 	default_capital = gothenburg
-	upgrade = upgrade_faction_geat_tribe
+	upgrade = upgrade_faction_gautland
 	icon = flag_violet_raven_on_teal
 	develops_from = {
 		asa_tribe
@@ -16,5 +17,14 @@ geat_tribe = {
 		karling_tribe
 		thielung_tribe
 		thralling_tribe
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-27 = {
+			government_type = tribe
+		}
 	}
 }

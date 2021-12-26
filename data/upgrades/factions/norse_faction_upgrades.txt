@@ -1,13 +1,13 @@
-upgrade_faction_geat_tribe = {
-	name = "Geat Tribe"
-	effects_string = "+2 Damage for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_sitone_tribe = {
 	name = "Sitone Tribe"
 	effects_string = "+2 Accuracy for Archers"
-	requirements_string = "Ironworking"
+	modifier = {
+		accuracy = 2
+		points = 10
+		unit_types = {
+			unit_teuton_archer
+		}
+	}
 }
 
 upgrade_faction_denmark = {
@@ -28,8 +28,14 @@ upgrade_faction_denmark = {
 upgrade_faction_gautland = {
 	name = "Gautland"
 	effects_string = "+2 Damage for Swordsmen"
-	conditions = {
-		upgrade_class = writing
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_types = {
+			unit_norse_swordsman
+			unit_norse_veteran_swordsman
+			unit_norse_heroic_swordsman
+		}
 	}
 }
 

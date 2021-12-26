@@ -188,10 +188,10 @@ DefineCharacter("algaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
-	Faction = "geat-tribe",
+	Faction = "gautland",
 	Father = "gautrek-the-mild",
 	HistoricalTitles = {
-		"ruler", 0, 0, "geat-tribe" -- was a king - apparently of Got(a?)land
+		"ruler", 0, 0, "gautland" -- was a king - apparently of Got(a?)land
 	}
 })
 

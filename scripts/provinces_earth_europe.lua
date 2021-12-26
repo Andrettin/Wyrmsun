@@ -1530,7 +1530,7 @@ DefineProvince("Gotaland", {
 --	SettlementLocation = {513, 91}, -- Gothenburg
 	Claims = {
 		"goth", "gothic_tribe",
-		"norse", "geat-tribe"
+		"norse", "gautland"
 	},
 	HistoricalOwners = {
 		-2800, "germanic", "asa-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 

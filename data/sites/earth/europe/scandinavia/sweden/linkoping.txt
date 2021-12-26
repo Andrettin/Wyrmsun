@@ -6,7 +6,7 @@ linkoping = {
 	color = { 208 38 163 }
 	cores = {
 		#gothic_tribe
-		geat_tribe
+		gautland
 	}
 	regions = {
 		scandinavia
@@ -23,7 +23,7 @@ linkoping = {
 		}
 		
 		-27 = {
-			owner = geat_tribe
+			owner = gautland
 		}
 		
 		814 = {

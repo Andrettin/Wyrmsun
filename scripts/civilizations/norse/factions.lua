@@ -38,18 +38,6 @@ DefineFaction("agder", {
 	Icon = "icon-flag-five-red-birds-on-yellow"
 })
 
-DefineFaction("gautland", {
-	Name = "Gautland",
-	Adjective = "Geat",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "teal",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-gautland",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"geat-tribe"}
-})
-
 DefineFaction("halogaland", {
 	Name = "Halogaland",
 	Adjective = "Halogaland",
