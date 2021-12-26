@@ -3,4 +3,5 @@ leadership = {
 	icon = leadership
 	action_name = "gain"
 	default_income = 100
+	special = true
 }

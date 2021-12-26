@@ -3,4 +3,5 @@ research = {
 	icon = research
 	action_name = "produce"
 	default_income = 100
+	special = true
 }

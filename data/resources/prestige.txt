@@ -3,4 +3,5 @@ prestige = {
 	icon = prestige
 	action_name = "gain"
 	default_income = 100
+	special = true
 }

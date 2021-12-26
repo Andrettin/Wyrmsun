@@ -5,4 +5,5 @@ oil = {
 	default_income = 100
 	base_price = 100
 	default_amount = 50000
+	special = true
 }
