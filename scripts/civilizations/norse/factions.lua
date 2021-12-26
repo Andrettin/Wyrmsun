@@ -63,18 +63,6 @@ DefineFaction("gautland", {
 	DevelopsFrom = {"geat-tribe"}
 })
 
-DefineFaction("gotland", {
-	Name = "Gotland",
-	Adjective = "Gute",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "cyan",
-	DefaultTier = "duchy", -- correct?
-	FactionUpgrade = "upgrade-faction-gotland",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"gute-tribe"}
-})
-
 DefineFaction("halogaland", {
 	Name = "Halogaland",
 	Adjective = "Halogaland",

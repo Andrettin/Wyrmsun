@@ -1,11 +1,12 @@
-gute_tribe = {
-	name = "Gute Tribe"
+gotland = {
+	name = "Gotland"
 	adjective = "Gute"
 	civilization = norse
-	type = tribe
+	type = polity
 	color = cyan
+	default_tier = duchy #correct?
 	default_capital = visby
-	upgrade = upgrade_faction_gute_tribe
+	upgrade = upgrade_faction_gotland
 	icon = flag_black_raven_on_green
 	develops_from = {
 		asa_tribe
@@ -16,5 +17,8 @@ gute_tribe = {
 		karling_tribe
 		thielung_tribe
 		thralling_tribe
+	}
+	conditions = {
+		upgrade_class = ironworking
 	}
 }

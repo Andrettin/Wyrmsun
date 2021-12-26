@@ -5,7 +5,7 @@ visby = {
 	base_unit_type = unit_settlement_site
 	color = { 152 171 212 }
 	cores = {
-		gute_tribe
+		gotland
 	}
 	regions = {
 		scandinavia

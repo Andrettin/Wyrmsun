@@ -59,6 +59,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
+- Merged the Gute Tribe faction into the Gotland one, and made the latter no longer require Writing.
 
 * Pathfinding
 - Fixed depot-finding issue for workers which could happen under specific circumstances.
@@ -66,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Chevauchée upgrade for the English civilization (researchable at the Barracks). This upgrade makes cavalry units acquire resources when they damage enemy buildings.
 - Added Skynborg Yale upgrade for the Dwarven civilization (researchable at the Yale Pen). This upgrade increases cavalry HP.
-- Added the Tribe government type upgrade (-10% infantry cost).
+- Added the Tribe government type upgrade (-10% infantry cost). Tribal factions are locked to this government type, while polities can switch from it to Monarchy or Republic. Players with the Tribe government type will have a name like e.g. "Gute Tribe", even if they are polities.
 
 -----------------------------------------------------------------------
 - 5.3.1

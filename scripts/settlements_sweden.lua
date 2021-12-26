@@ -33,7 +33,7 @@ DefineSite("torsburgen", {
 		"norse", "Torsburgen"
 	},
 	HistoricalOwners = {
-		300, "gute-tribe"
+		300, "gotland"
 	},
 	HistoricalBuildings = {
 		300, 1100, "watch_tower" -- the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.

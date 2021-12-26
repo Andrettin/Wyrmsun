@@ -42,15 +42,6 @@ DefineModifier("upgrade-faction-geat-tribe",
 	{"apply-to", "unit-norse-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-gute-tribe",
-	{"BasicDamage", 1},
-	{"Accuracy", 1},
-	{"Points", 10},
-	{"apply-to", "unit-norse-swordsman"},
-	{"apply-to", "unit-norse-veteran-swordsman"},
-	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-sitone-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
@@ -80,15 +71,6 @@ DefineModifier("upgrade-faction-gautland",
 	{"apply-to", "unit-norse-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-gotland",
-	{"BasicDamage", 1},
-	{"Accuracy", 1},
-	{"Points", 10},
-	{"apply-to", "unit-norse-swordsman"},
-	{"apply-to", "unit-norse-veteran-swordsman"},
-	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-sweden",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -100,10 +82,6 @@ DefineDependency("upgrade_faction_danish_tribe",
 )
 
 DefineDependency("upgrade-faction-geat-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-gute-tribe",
 	{"upgrade_ironworking"}
 )
 

@@ -10,12 +10,6 @@ upgrade_faction_geat_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_gute_tribe = {
-	name = "Gute Tribe"
-	effects_string = "+1 Damage and +1 Accuracy for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_norwegian_tribe = {
 	name = "Norwegian Tribe"
 	effects_string = "+2 Accuracy for Swordsmen"
@@ -65,8 +59,15 @@ upgrade_faction_gautland = {
 upgrade_faction_gotland = {
 	name = "Gotland"
 	effects_string = "+1 Damage and +1 Accuracy for Swordsmen"
-	conditions = {
-		upgrade_class = writing
+	modifier = {
+		basic_damage = 1
+		accuracy = 1
+		points = 10
+		unit_types = {
+			unit_norse_swordsman
+			unit_norse_veteran_swordsman
+			unit_norse_heroic_swordsman
+		}
 	}
 }
 
