@@ -34,9 +34,8 @@ DefineFaction("agder", {
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-five-red-birds-on-yellow"
 })
 
 DefineFaction("gautland", {
@@ -58,9 +57,8 @@ DefineFaction("halogaland", {
 	Type = "polity",
 	Color = "purple",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-five-red-birds-on-yellow"
 })
 
 DefineFaction("hedmark", {
@@ -70,9 +68,8 @@ DefineFaction("hedmark", {
 	Type = "polity",
 	Color = "green",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("hordaland", {
@@ -82,9 +79,8 @@ DefineFaction("hordaland", {
 	Type = "polity",
 	Color = "cyan",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-five-orange-birds-on-black"
 })
 
 DefineFaction("orkney", { -- Earldom of Orkney
@@ -101,9 +97,8 @@ DefineFaction("orkney", { -- Earldom of Orkney
 		"ruler", "male", "monarchy", "duchy", "Earl",
 		"ruler", "female", "monarchy", "duchy", "Earl" -- correct?
 	},
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-cyan-lion-on-red"
 })
 
 DefineFaction("sogn", {
@@ -113,9 +108,8 @@ DefineFaction("sogn", {
 	Type = "polity",
 	Color = "blue",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"norwegian_tribe"}
+	FactionUpgrade = "upgrade_faction_norway",
+	Icon = "icon-flag-yellow-lion-on-cyan"
 })
 
 DefineFaction("vestfold", {
@@ -125,9 +119,8 @@ DefineFaction("vestfold", {
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
+	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"norwegian_tribe"},
 	HistoricalDiplomacyStates = {
 		841, "agder", "alliance" -- Halfdan the Black and Olaf Geirstad-Alf, brothers, were apparently friendly or allied since they divided a kingdom between themselves in 841 without war; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	}
@@ -140,9 +133,8 @@ DefineFaction("vingulmark", {
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-norway",
+	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"norwegian_tribe"},
 	HistoricalDiplomacyStates = {
 		{841, 9, 1}, "agder", "war" -- Halfdan the Black, king of Agder, attacked Vingulmark with an army in the autumn of 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	}

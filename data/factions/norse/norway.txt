@@ -7,9 +7,14 @@ norway = {
 	default_tier = kingdom
 	default_capital = oslo
 	upgrade = upgrade_faction_norway
-	icon = icon_flag_cyan_lion_on_red
+	icon = flag_red_raven_on_brown
 	develops_from = {
-		norwegian_tribe
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
 		agder
 		halogaland
 		hedmark
@@ -20,18 +25,12 @@ norway = {
 		vingulmark
 	}
 	conditions = {
-		not = {
-			any_other_player = {
-				or = {
-					faction = agder
-					faction = halogaland
-					faction = hedmark
-					faction = hordaland
-					faction = sogn
-					faction = vestfold
-					faction = vingulmark
-				}
-			}
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		814 = {
+			government_type = tribe
 		}
 	}
 }

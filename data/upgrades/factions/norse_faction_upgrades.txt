@@ -10,24 +10,6 @@ upgrade_faction_geat_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_norwegian_tribe = {
-	name = "Norwegian Tribe"
-	effects_string = "+2 Accuracy for Swordsmen"
-	requirements_string = "Ironworking"
-	modifier = {
-		accuracy = 2
-		points = 10
-		unit_types = {
-			unit_norse_swordsman
-			unit_norse_veteran_swordsman
-			unit_norse_heroic_swordsman
-		}
-	}
-	conditions = {
-		upgrade_class = ironworking
-	}
-}
-
 upgrade_faction_sitone_tribe = {
 	name = "Sitone Tribe"
 	effects_string = "+2 Accuracy for Archers"
@@ -68,9 +50,6 @@ upgrade_faction_gotland = {
 upgrade_faction_norway = {
 	name = "Norway"
 	effects_string = "+2 Accuracy for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 	modifier = {
 		accuracy = 2
 		points = 10

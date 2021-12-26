@@ -5,7 +5,6 @@ oslo = {
 	base_unit_type = unit_settlement_site
 	color = { 211 128 27 }
 	cores = {
-		norwegian_tribe
 		norway
 		vingulmark
 	}
@@ -15,7 +14,7 @@ oslo = {
 	
 	history = {
 		814 = {
-			owner = norwegian_tribe #part of the territory of the "Northmen" c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+			owner = norway #part of the territory of the "Northmen" c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}
 		
 		824 = {
