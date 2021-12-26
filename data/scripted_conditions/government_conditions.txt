@@ -1,0 +1,6 @@
+is_civilized = {
+	or = {
+		government_type = monarchy
+		government_type = republic
+	}
+}

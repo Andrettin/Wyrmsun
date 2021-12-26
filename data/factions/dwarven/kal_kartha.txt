@@ -1,5 +1,8 @@
 kal_kartha = {
 	adjective = "Kal Karthan"
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	
 	history = {
 		400 = {

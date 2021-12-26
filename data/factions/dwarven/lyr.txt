@@ -1,5 +1,8 @@
 lyr = {
 	adjective = "Lyran"
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	
 	history = {
 		400 = {

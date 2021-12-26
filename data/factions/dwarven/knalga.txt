@@ -15,6 +15,9 @@ knalga = {
 		shorbear_clan
 		whitesteel_clan
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	title_names = {
 		monarchy = {
 			barony = "Lordship"

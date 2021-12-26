@@ -15,8 +15,8 @@ upgrade_tribe = {
 		
 		#cannot go back to being a tribe after establishing a more advanced form of government
 		not = {
-			upgrade = upgrade_monarchy
-			upgrade = upgrade_republic
+			government_type = monarchy
+			government_type = republic
 		}
 	}
 	ai_priority = {

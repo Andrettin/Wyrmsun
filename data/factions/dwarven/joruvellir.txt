@@ -1,5 +1,8 @@
 joruvellir = {
 	adjective = "Joruvellir"
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	
 	history = {
 		400 = {
