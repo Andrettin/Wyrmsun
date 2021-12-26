@@ -6,10 +6,7 @@ fridfrodes_feast = { #Source: Snorri Sturlson, "Heimskringla", 1844, pp. 226-227
 	description = "The chieftain of the Danes, Fridfrode, has invited Fiolner to a great feast in his abode. Shall we accept the invitation?"
 	conditions = {
 		any_other_player = {
-			or = {
-				faction = danish_tribe
-				faction = denmark
-			}
+			faction = denmark
 			character = fridfrode_skjoldung
 		}
 	}

@@ -1,9 +1,3 @@
-upgrade_faction_danish_tribe = {
-	name = "Dane Tribe"
-	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_geat_tribe = {
 	name = "Geat Tribe"
 	effects_string = "+2 Damage for Swordsmen"
@@ -19,8 +13,15 @@ upgrade_faction_sitone_tribe = {
 upgrade_faction_denmark = {
 	name = "Denmark"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
+	modifier = {
+		basic_damage = 1
+		armor = 1
+		points = 10
+		unit_types = {
+			unit_norse_swordsman
+			unit_norse_veteran_swordsman
+			unit_norse_heroic_swordsman
+		}
 	}
 }
 

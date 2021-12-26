@@ -25,15 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade_faction_danish_tribe",
-	{"BasicDamage", 1},
-	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-norse-swordsman"},
-	{"apply-to", "unit-norse-veteran-swordsman"},
-	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-geat-tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -48,25 +39,12 @@ DefineModifier("upgrade-faction-sitone-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-denmark",
-	{"BasicDamage", 1},
-	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-norse-swordsman"},
-	{"apply-to", "unit-norse-veteran-swordsman"},
-	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-gautland",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-norse-swordsman"},
 	{"apply-to", "unit-norse-veteran-swordsman"},
 	{"apply-to", "unit-norse-heroic-swordsman"}
-)
-
-DefineDependency("upgrade_faction_danish_tribe",
-	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade-faction-geat-tribe",

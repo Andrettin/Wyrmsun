@@ -34,5 +34,9 @@ sweden = {
 			
 			acquired_upgrades += upgrade_deity_freyja #Freyja was the last deity to rule the Swedes in the Ynglinga Saga, so that it makes sense that she is the minor deity chosen by the Yngling-ruled Swedes, specially considering their relationship with Frey
 		}
+		
+		1097 = {
+			government_type = monarchy
+		}
 	}
 }

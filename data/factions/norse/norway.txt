@@ -32,5 +32,9 @@ norway = {
 		814 = {
 			government_type = tribe
 		}
+		
+		1097 = {
+			government_type = monarchy
+		}
 	}
 }

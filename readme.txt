@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 - Merged the Gute Tribe faction into the Gotland one, and made the latter no longer require Writing.
 - Merged the Swedish Tribe faction into the Sweden one, and made the latter no longer require Writing.
 - Merged the Norwegian Tribe faction into the Norway one, and made the latter no longer require Writing.
+- Merged the Danish Tribe faction into the Denmark one, and made the latter no longer require Writing.
 
 * Pathfinding
 - Fixed depot-finding issue for workers which could happen under specific circumstances.

@@ -149,7 +149,7 @@ DefineFaction("jomsvikings", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Type = "mercenary_company",
 	Color = "blue",
 	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade_faction_danish_tribe",
+	FactionUpgrade = "upgrade_faction_denmark",
 	Description = "The Jomsvikings were a group of warriors and pirates based in Jomsburg."
 })
 

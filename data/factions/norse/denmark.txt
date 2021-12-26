@@ -7,20 +7,30 @@ denmark = {
 	default_tier = kingdom
 	default_capital = copenhagen
 	upgrade = upgrade_faction_denmark
-	icon = icon_flag_blue_lion_on_yellow
+	icon = flag_black_raven_on_white
 	develops_from = {
-		danish_tribe
+		asa_tribe
+		hersing_tribe
+		hlesing_tribe
+		jarling_tribe
+		karling_tribe
+		skeldung_tribe
+		thralling_tribe
 		scania
 	}
 	conditions = {
-		not = {
-			any_other_player = {
-				faction = danish_tribe
-			}
-		}
+		upgrade_class = ironworking
 	}
 	
 	history = {
+		-27 = {
+			government_type = tribe
+		}
+		
+		814 = {
+			government_type = monarchy
+		}
+		
 		865 = {
 			diplomacy_state = {
 				faction = northumbria

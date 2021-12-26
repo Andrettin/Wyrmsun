@@ -8,7 +8,7 @@ copenhagen = {
 		#norse = "København"
 	}
 	cores = {
-		danish_tribe
+		denmark
 	}
 	regions = {
 		scandinavia
@@ -29,11 +29,11 @@ copenhagen = {
 		}
 		
 		486 = {
-			owner = danish_tribe #part of Danish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = denmark #part of Danish territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		526 = {
-			owner = danish_tribe #Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = denmark #Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		814 = {

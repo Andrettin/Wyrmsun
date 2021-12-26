@@ -11,11 +11,12 @@ scania = {
 	develops_from = {
 		asa_tribe
 		hersing_tribe
+		hlesing_tribe
 		jarling_tribe
 		karling_tribe
+		skeldung_tribe
 		thralling_tribe
 		yngling_tribe
-		danish_tribe
 	}
 	conditions = {
 		upgrade_class = writing
