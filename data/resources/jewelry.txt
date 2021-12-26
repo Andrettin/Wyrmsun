@@ -1,0 +1,9 @@
+jewelry = {
+	name = "Jewelry"
+	action_name = "produce"
+	default_income = 100
+	base_price = 200
+	demand_elasticity = 200
+	input_resource = copper
+	luxury = true
+}

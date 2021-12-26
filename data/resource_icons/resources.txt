@@ -30,6 +30,10 @@ furniture = {
 	file = "ui/resources/furniture.png"
 }
 
+gold = {
+	file = "ui/resources/gold.png"
+}
+
 grain = {
 	file = "ui/resources/grain.png"
 }

@@ -1,0 +1,10 @@
+furniture = {
+	name = "Furniture"
+	icon = furniture
+	action_name = "produce"
+	default_income = 100
+	base_price = 200
+	demand_elasticity = 125
+	input_resource = lumber
+	luxury = true
+}

@@ -94,31 +94,3 @@ DefineResource("limestone", {
 	Hidden = true,
 	DefaultAmount = 10000
 })
-
-DefineResource("jewelry", {
-	Name = "Jewelry",
-	LuxuryResource = true,
-	DefaultIncome = 100,
-	BasePrice = 200,
-	InputResource = "copper",
-	DemandElasticity = 200,
-	ActionName = "produce"
-})
-
-DefineResource("furniture", {
-	Name = "Furniture",
-	LuxuryResource = true,
-	DefaultIncome = 100,
-	BasePrice = 200,
-	InputResource = "lumber",
-	DemandElasticity = 125,
-	ActionName = "produce"
-})
-
-DefineResource("leather", {
-	Name = "Leather",
-	LuxuryResource = true,
-	DefaultIncome = 100,
-	BasePrice = 100,
-	ActionName = "gather"
-})

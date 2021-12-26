@@ -1,0 +1,8 @@
+leather = {
+	name = "Leather"
+	icon = leather
+	action_name = "gather"
+	default_income = 100
+	base_price = 100
+	luxury = true
+}
