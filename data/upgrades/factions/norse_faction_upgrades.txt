@@ -34,12 +34,6 @@ upgrade_faction_sitone_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_swedish_tribe = {
-	name = "Swedish Tribe"
-	effects_string = "+2 Damage for Archers"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_denmark = {
 	name = "Denmark"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
@@ -91,7 +85,11 @@ upgrade_faction_norway = {
 upgrade_faction_sweden = {
 	name = "Sweden"
 	effects_string = "+2 Damage for Archers"
-	conditions = {
-		upgrade_class = writing
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_types = {
+			unit_teuton_archer
+		}
 	}
 }

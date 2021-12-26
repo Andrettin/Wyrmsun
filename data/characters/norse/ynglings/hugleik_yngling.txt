@@ -4,7 +4,7 @@ hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 2
 	#dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = alf_yngling
@@ -17,10 +17,7 @@ hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 2
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	#described as very greedy
@@ -28,7 +25,7 @@ hugleik_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 2
 	history = {
 		348 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler
 		}

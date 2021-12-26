@@ -283,7 +283,7 @@ DefineCharacter("ole-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskr
 	Civilization = "norse",
 	Father = "fridleif-skjoldung",
 	HistoricalTitles = {
-		"ruler", 0, 0, "swedish_tribe" -- ruled over the Swedes at Upsal for 25 years
+		"ruler", 0, 0, "sweden" -- ruled over the Swedes at Upsal for 25 years
 	}
 	-- was killed by Starkad the Old (probably the same as the Starkod the Old previously mentioned)
 })

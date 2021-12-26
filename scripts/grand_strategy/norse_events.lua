@@ -32,7 +32,7 @@ local NorseEvents = {
 		Name = "Fredfrode's Feast",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
+				EventFaction.Name == "sweden"
 				and (GetFactionProvinceCount(Factions.danish_tribe) > 0 or GetFactionProvinceCount(Factions.denmark) > 0)
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Fiolner Yngling"
 				and GetFactionMinister("norse", "danish_tribe", "ruler") == "Fridfrode Skjoldung"
@@ -49,7 +49,7 @@ local NorseEvents = {
 		Description = "Our chieftain Swegde has gone on a journey to find Odin and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
+				EventFaction.Name == "sweden"
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Swegder Yngling"
 				and SyncRand(100) < 10
 			) then
@@ -71,7 +71,7 @@ local NorseEvents = {
 		Description = "After several years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanland. He did not manage to find Odin, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Odin to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
+				EventFaction.Name == "sweden"
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Swegder Yngling"
 				and SyncRand(100) < 50
 			) then
@@ -97,7 +97,7 @@ local NorseEvents = {
 		Description = "Our chieftain Vanland has taken up his winter abode in Finland with Snio the Old, marrying his daughter Drisa. When spring came, Vanland set out to Sweden, promising to Drisa that he would return within three years.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
+				EventFaction.Name == "sweden"
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then
@@ -119,7 +119,7 @@ local NorseEvents = {
 		Description = "Vanland did not keep his promise. Even after many years had passed, he hadn't returned to Drisa's embrace... She sent the son she had with Vanland, Visbur, to Sweden, and then bribed the witch Hulda to charm Vanland into returning to Finland, or to kill him. Vanland felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
 		Conditions = function(s)
 			if (
-				(EventFaction.Name == "swedish_tribe" or EventFaction.Name == "sweden")
+				EventFaction.Name == "sweden"
 				and GetFactionMinister("norse", EventFaction.Name, "ruler") == "Vanland Yngling"
 				and SyncRand(100) < 10
 			) then

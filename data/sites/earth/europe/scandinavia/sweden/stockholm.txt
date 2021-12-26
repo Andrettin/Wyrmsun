@@ -8,7 +8,7 @@ stockholm = {
 		germanic = "Stukkahulma" #tentative rendering of "Stockholm" in Proto-Germanic
 	}
 	cores = {
-		swedish_tribe
+		sweden
 	}
 	regions = {
 		scandinavia
@@ -21,12 +21,12 @@ stockholm = {
 		}
 		
 		-264 = {
-			owner = swedish_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = sweden #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		-27 = {
 			#according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
-			owner = swedish_tribe
+			owner = sweden
 		}
 		
 		1097 = {

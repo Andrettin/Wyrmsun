@@ -48,12 +48,6 @@ DefineModifier("upgrade-faction-sitone-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade_faction_swedish_tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
 DefineModifier("upgrade-faction-denmark",
 	{"BasicDamage", 1},
 	{"Armor", 1},
@@ -71,12 +65,6 @@ DefineModifier("upgrade-faction-gautland",
 	{"apply-to", "unit-norse-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-sweden",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
 DefineDependency("upgrade_faction_danish_tribe",
 	{"upgrade_ironworking"}
 )
@@ -86,9 +74,5 @@ DefineDependency("upgrade-faction-geat-tribe",
 )
 
 DefineDependency("upgrade-faction-sitone-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade_faction_swedish_tribe",
 	{"upgrade_ironworking"}
 )

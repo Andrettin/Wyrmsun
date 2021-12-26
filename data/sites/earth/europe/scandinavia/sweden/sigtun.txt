@@ -20,11 +20,11 @@ sigtun = {
 		}
 		
 		-264 = {
-			owner = swedish_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = sweden #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		-27 = {
-			owner = swedish_tribe
+			owner = sweden
 		}
 		
 		1560 = {

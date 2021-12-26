@@ -3,7 +3,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	surname = "Yngling"
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	trait = upgrade_mighty #described as powerful
@@ -16,10 +16,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	#in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black, and given how he is dated to the same time as Augustus
@@ -28,7 +25,7 @@ fiolner_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 		-27 = {
 			#according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #king of the Swedes
 		}

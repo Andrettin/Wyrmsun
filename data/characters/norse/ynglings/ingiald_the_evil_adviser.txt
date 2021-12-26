@@ -4,7 +4,7 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 	#dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = onund_yngling
@@ -17,10 +17,7 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	#married to Gauthild
@@ -28,7 +25,7 @@ ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1
 	history = {
 		620 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #king of the Swedes
 		}

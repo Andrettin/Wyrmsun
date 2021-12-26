@@ -20,7 +20,6 @@ halfdan_the_mild_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	conditions = {
 		or = {
 			faction = vestfold
-			faction = swedish_tribe
 			faction = sweden
 		}
 	}

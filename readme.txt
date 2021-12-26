@@ -60,6 +60,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
 - Merged the Gute Tribe faction into the Gotland one, and made the latter no longer require Writing.
+- Merged the Swedish Tribe faction into the Sweden one, and made the latter no longer require Writing.
 
 * Pathfinding
 - Fixed depot-finding issue for workers which could happen under specific circumstances.

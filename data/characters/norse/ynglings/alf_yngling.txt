@@ -4,7 +4,7 @@ alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-
 	#dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = alric_yngling
@@ -19,10 +19,7 @@ alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	#married Bera
@@ -30,7 +27,7 @@ alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-
 	history = {
 		314 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #was king of Sweden together with his brother Yngve, but it was Alf's son who succeeded them, suggesting that Alf was the primary ruler
 		}

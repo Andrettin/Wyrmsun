@@ -4,7 +4,7 @@ on_the_old_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p
 	#dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = jorund_yngling
@@ -18,16 +18,13 @@ on_the_old_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	history = {
 		382 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
 		}

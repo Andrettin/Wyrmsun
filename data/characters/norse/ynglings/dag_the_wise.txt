@@ -4,7 +4,7 @@ dag_the_wise_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1,
 	#dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = dyggve_the_brave_yngling
@@ -18,16 +18,13 @@ dag_the_wise_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1,
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	history = {
 		212 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #king of the Swedes
 		}

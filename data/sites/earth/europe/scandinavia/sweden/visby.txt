@@ -13,7 +13,7 @@ visby = {
 	
 	history = {
 		814 = {
-			owner = swedish_tribe #part of the territory of the Swedes c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+			owner = sweden #part of the territory of the Swedes c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 			building_classes += town_hall
 		}
 		

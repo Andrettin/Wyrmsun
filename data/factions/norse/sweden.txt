@@ -7,11 +7,30 @@ sweden = {
 	default_tier = kingdom
 	default_capital = stockholm
 	upgrade = upgrade_faction_sweden
-	icon = icon_flag_yellow_lion_on_cyan
+	icon = flag_blue_raven_on_yellow
 	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
 		sitone_tribe
-		swedish_tribe
 		gautland
 		scania
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-27 = {
+			#Fiölner/Fjolnir was given as being a son of Yngve/Frey, so it makes sense for his tribe to worship Frey as their major deity
+			acquired_upgrades += upgrade_deity_frey
+			
+			acquired_upgrades += upgrade_deity_freyja #Freyja was the last deity to rule the Swedes in the Ynglinga Saga, so that it makes sense that she is the minor deity chosen by the Yngling-ruled Swedes, specially considering their relationship with Frey
+			
+			government_type = tribe
+		}
 	}
 }

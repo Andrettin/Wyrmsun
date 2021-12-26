@@ -5,10 +5,7 @@ gustavus_adolphus_day = {
 	description = "The 6th of November is Gustavus Adolphus Day in Sweden, celebrating the famous king who led the country's rise to great power status."
 	hint = "Select a [civilization:norse.class_unit_type:town_hall.name], click on the Enact a Law button, and finally click on the Monarchy button to acquire the upgrade."
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 		real_month = november
 		real_day = 6
 		not = {

@@ -5,10 +5,7 @@ swedish_veterans_day = {
 	description = "The 29th of May is Veteran's Day in Sweden."
 	hint = "Select a [civilization:norse.class_unit_type:barracks.name] and click on the [civilization:norse.class_unit_type:infantry.name] button to train the unit."
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 		real_month = may
 		real_day = 29
 		not = {

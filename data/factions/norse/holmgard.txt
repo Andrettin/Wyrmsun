@@ -1,0 +1,22 @@
+holmgard = {
+	name = "Holmgard"
+	adjective = "Holmgard"
+	civilization = norse
+	type = polity
+	color = blue
+	default_tier = kingdom
+	upgrade = upgrade_faction_sweden
+	icon = icon_flag_five_black_birds_on_purple
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
+		sitone_tribe
+	}
+	conditions = {
+		upgrade_class = writing
+	}
+}

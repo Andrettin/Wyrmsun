@@ -39,18 +39,6 @@ DefineFaction("agder", {
 	DevelopsFrom = {"norwegian_tribe"}
 })
 
-DefineFaction("scania", {
-	Name = "Scania",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom",
-	Adjective = "Scanian",
-	FactionUpgrade = "upgrade-faction-denmark",
-	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"danish_tribe", "swedish_tribe"}
-})
-
 DefineFaction("gautland", {
 	Name = "Gautland",
 	Adjective = "Geat",
@@ -85,18 +73,6 @@ DefineFaction("hedmark", {
 	FactionUpgrade = "upgrade-faction-norway",
 	Icon = "icon-flag-five-purple-birds-on-green",
 	DevelopsFrom = {"norwegian_tribe"}
-})
-
-DefineFaction("holmgard", {
-	Name = "Holmgard",
-	Adjective = "Holmgard",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-sweden",
-	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"sitone-tribe", "swedish_tribe"}
 })
 
 DefineFaction("hordaland", {
@@ -192,5 +168,5 @@ DefineFaction("varangian-guard", {
 	Type = "mercenary_company",
 	Color = "red",
 	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade_faction_swedish_tribe"
+	FactionUpgrade = "upgrade_faction_sweden"
 })

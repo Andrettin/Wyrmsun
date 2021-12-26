@@ -30,7 +30,7 @@ gothenburg = {
 		}
 		
 		161 = {
-			owner = swedish_tribe #the area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = sweden #the area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
 		814 = {

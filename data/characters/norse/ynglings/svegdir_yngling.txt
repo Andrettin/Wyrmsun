@@ -3,7 +3,7 @@ svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	surname = "Yngling"
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = fiolner_yngling
@@ -16,16 +16,13 @@ svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	history = {
 		8 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			title = ruler #king of the Swedes
 		}

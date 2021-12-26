@@ -78,7 +78,7 @@ DefineCharacter("solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Father = "hogne-of-niardo",
 	-- Solve slew Adils Yngling by burning
 	HistoricalTitles = {
-		"ruler", 0, 0, "swedish_tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
+		"ruler", 0, 0, "sweden" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
 		-- Solve had dominions in Jutland, but from the source it is not clear if he ruled over all of Jutland, or only a portion of it
 	}
 })

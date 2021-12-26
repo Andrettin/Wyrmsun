@@ -1,0 +1,23 @@
+scania = {
+	name = "Scania"
+	adjective = "Scanian"
+	civilization = norse
+	type = polity
+	color = green
+	default_tier = duchy
+	default_capital = malmo
+	upgrade = upgrade_faction_denmark
+	icon = icon_flag_habsburg
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		jarling_tribe
+		karling_tribe
+		thralling_tribe
+		yngling_tribe
+		danish_tribe
+	}
+	conditions = {
+		upgrade_class = writing
+	}
+}

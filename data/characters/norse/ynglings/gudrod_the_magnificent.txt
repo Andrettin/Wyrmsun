@@ -19,7 +19,6 @@ gudrod_the_magnificent_yngling = { #Source: Snorri Sturlson, "Heimskringla", 184
 	conditions = {
 		or = {
 			faction = vestfold
-			faction = swedish_tribe
 			faction = sweden
 		}
 	}

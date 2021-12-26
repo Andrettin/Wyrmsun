@@ -4,7 +4,7 @@ eric_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
 	#dynasty = yngling
 	unit_type = unit_teuton_knight_lord #horseriding described as being customary for him; king
 	civilization = norse
-	default_faction = swedish_tribe
+	default_faction = sweden
 	home_settlement = stockholm
 	gender = male
 	father = agne_yngling
@@ -18,16 +18,13 @@ eric_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
 	}
 	
 	conditions = {
-		or = {
-			faction = swedish_tribe
-			faction = sweden
-		}
+		faction = sweden
 	}
 	
 	history = {
 		280 = {
 			active = true
-			faction = swedish_tribe
+			faction = sweden
 			location = stockholm
 			#Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death, suggesting that Alric was the primary ruler
 		}
