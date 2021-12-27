@@ -356,62 +356,6 @@ CUserInterface:get().StatusLine.TextY = Video.Height + (2 - 16) * get_scale_fact
 CUserInterface:get().StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
 CUserInterface:get().StatusLine.Font = Fonts["game"]
 
--- copper
-CUserInterface:get().Resources[1].IconX = (154 + (75 * 0)) * get_scale_factor()
-CUserInterface:get().Resources[1].IconY = 0
-CUserInterface:get().Resources[1].TextX = (154 + (75 * 0) + 18) * get_scale_factor()
-CUserInterface:get().Resources[1].TextY = 1 * get_scale_factor()
-
--- lumber
-CUserInterface:get().Resources[2].IconX = (154 + (75 * 1)) * get_scale_factor()
-CUserInterface:get().Resources[2].IconY = 0
-CUserInterface:get().Resources[2].TextX = (154 + (75 * 1) + 18) * get_scale_factor()
-CUserInterface:get().Resources[2].TextY = 1 * get_scale_factor()
-
--- stone
-CUserInterface:get().Resources[5].IconX = (154 + (75 * 2)) * get_scale_factor()
-CUserInterface:get().Resources[5].IconY = 0
-CUserInterface:get().Resources[5].TextX = (154 + (75 * 2) + 18) * get_scale_factor()
-CUserInterface:get().Resources[5].TextY = 1 * get_scale_factor()
-
--- oil
---CUserInterface:get().Resources[3].IconX = (154 + 150) * get_scale_factor()
---CUserInterface:get().Resources[3].IconY = 0
---CUserInterface:get().Resources[3].TextX = (154 + 150 + 18) * get_scale_factor()
---CUserInterface:get().Resources[3].TextY = 1 * get_scale_factor()
-
-if (GetCurrentQuest() == "gathering-materials") then
-	-- coal
-	CUserInterface:get().Resources[6].IconX = (154 + (75 * 3)) * get_scale_factor()
-	CUserInterface:get().Resources[6].IconY = 0
-	CUserInterface:get().Resources[6].TextX = (154 + (75 * 3) + 18) * get_scale_factor()
-	CUserInterface:get().Resources[6].TextY = 1 * get_scale_factor()
-else
-	-- Hide Coal (should not show up in normal scenarios)
-	CUserInterface:get().Resources[6].IconX = -1
-	CUserInterface:get().Resources[6].IconY = -1
-	CUserInterface:get().Resources[6].TextX = -1
-	CUserInterface:get().Resources[6].TextY = -1
-end
-
--- food
-CUserInterface:get().Resources[FoodCost].IconX = Video.Width + (-138) * get_scale_factor()
-CUserInterface:get().Resources[FoodCost].IconY = 0
-CUserInterface:get().Resources[FoodCost].TextX = Video.Width + (-138 + 18) * get_scale_factor()
-CUserInterface:get().Resources[FoodCost].TextY = 1
-
--- score
-CUserInterface:get().Resources[ScoreCost].IconX = Video.Width + (-68) * get_scale_factor()
-CUserInterface:get().Resources[ScoreCost].IconY = 0
-CUserInterface:get().Resources[ScoreCost].TextX = Video.Width + (-68 + 18) * get_scale_factor()
-CUserInterface:get().Resources[ScoreCost].TextY = 1
-
--- mana
-CUserInterface:get().Resources[ManaResCost].IconX = -1
-CUserInterface:get().Resources[ManaResCost].IconY = -1
-CUserInterface:get().Resources[ManaResCost].TextX = -1
-CUserInterface:get().Resources[ManaResCost].TextY = -1
-
 CUserInterface:get().TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
 CUserInterface:get().TimeOfDayPanel.IconY = 0
 
