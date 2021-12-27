@@ -24,15 +24,5 @@ holy_rome = {
 	conditions = {
 		government_type = monarchy
 		upgrade = upgrade_deity_christian_god
-		not = {
-			any_other_player = {
-				or = {
-					civilization = teutonic
-					civilization = frankish
-					civilization = suebi
-					faction = rome
-				}
-			}
-		}
 	}
 }
