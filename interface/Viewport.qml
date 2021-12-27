@@ -23,6 +23,10 @@ Item {
 	}
 	
 	Item { //tooltips need to be attached to an item
+		id: tooltip_manager
+		
+		property int tooltip_y_override: 0
+		
 		//set the shared properties for tooltips
 		ToolTip.toolTip.palette.text: "white"
 		ToolTip.toolTip.font.family: berenika_font.name
@@ -35,7 +39,15 @@ Item {
 			border.width: 1
 			radius: 5 * wyrmgus.scale_factor
 		}
-		ToolTip.toolTip.onTextChanged: tooltip_width_reference_text.text = ToolTip.toolTip.text
+		ToolTip.toolTip.onTextChanged: {
+			tooltip_width_reference_text.text = ToolTip.toolTip.text
+		}
+		ToolTip.toolTip.onOpened: {
+			if (tooltip_manager.tooltip_y_override !== 0) {
+				ToolTip.toolTip.y = tooltip_manager.tooltip_y_override
+				tooltip_manager.tooltip_y_override = 0
+			}
+		}
 		
 		Text {
 			id: tooltip_width_reference_text

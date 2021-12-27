@@ -38,35 +38,58 @@ Item {
 	Repeater {
 		model: wyrmgus.main_resources
 		
-		Image {
-			id: resource_icon
+		Item {
+			id: resource_item
 			anchors.left: top_bar.left
 			anchors.leftMargin: (154 + (75 * index)) * wyrmgus.scale_factor
 			anchors.top: top_bar.top
-			source: "image://resource_icon/" + model.modelData.icon.identifier
-			cache: false
+			width: resource_label.x + resource_label.width
+			height: resource_icon.height
 			visible: !wyrmgus.map_editor.running
-		}
-	}
-	
-	Repeater {
-		model: wyrmgus.main_resources
-		
-		SmallText {
-			id: resource_label
-			anchors.left: top_bar.left
-			anchors.leftMargin: (154 + (75 * index) + 18) * wyrmgus.scale_factor
-			anchors.top: top_bar.top
-			anchors.topMargin: 1 * wyrmgus.scale_factor
-			text: number_string(wyrmgus.this_player.get_resource_sync(model.modelData))
-			visible: !wyrmgus.map_editor.running
+			ToolTip.visible: resource_mouse_area.containsMouse && tooltip.length > 0
+			ToolTip.delay: 1000
+			ToolTip.text: window.tooltip(tooltip)
+			
+			property string tooltip: model.modelData.name
+			property int resource_stored: wyrmgus.this_player.get_resource_sync(model.modelData)
+			
+			MouseArea {
+				id: resource_mouse_area
+				anchors.fill: resource_item
+				hoverEnabled: true
+				onEntered: {
+					//display the tooltip further down so that the cursor isn't on top of it
+					tooltip_manager.tooltip_y_override = 40 * wyrmgus.scale_factor
+				}
+				onExited: {
+					tooltip_manager.tooltip_y_override = 0
+				}
+			}
+			
+			Image {
+				id: resource_icon
+				anchors.left: parent.left
+				anchors.top: parent.top
+				source: "image://resource_icon/" + model.modelData.icon.identifier
+				cache: false
+			}
+			
+			SmallText {
+				id: resource_label
+				anchors.left: resource_icon.right
+				anchors.leftMargin: 4 * wyrmgus.scale_factor
+				anchors.top: parent.top
+				anchors.topMargin: 1 * wyrmgus.scale_factor
+				text: number_string(resource_item.resource_stored)
+				
+			}
 			
 			Connections {
 				target: wyrmgus.this_player
 				
 				function onResource_stored_changed(resource_index, amount) {
 					if (resource_index == model.modelData.index) {
-						resource_label.text = number_string(amount)
+						resource_item.resource_stored = amount
 					}
 				}
 			}
@@ -84,6 +107,18 @@ Item {
 			source: "image://resource_icon/" + model.modelData.icon.identifier
 			cache: false
 			visible: !wyrmgus.map_editor.running
+		}
+	}
+	
+	function on_released_key(event) {
+		for (var i = 0; i < top_bar.children.length; ++i) {
+			var child_element = top_bar.children[i]
+			if (child_element.on_released_key) {
+				child_element.on_released_key(event)
+				if (event.accepted) {
+					return
+				}
+			}
 		}
 	}
 }
