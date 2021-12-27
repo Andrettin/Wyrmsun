@@ -18,7 +18,8 @@ Image {
 	property string children_processing_bonus_string: wyrmgus.this_player.get_children_processing_bonus_string_sync(resource)
 	property int price: wyrmgus.this_player.get_price_sync(resource)
 	property int effective_sell_price: wyrmgus.this_player.get_effective_resource_sell_price_sync(resource)
-	property int demand: wyrmgus.this_player.get_resource_demand_sync(resource)
+	property int effective_buy_price: wyrmgus.this_player.get_effective_resource_buy_price_sync(resource)
+	property int effective_demand: wyrmgus.this_player.get_effective_resource_demand_sync(resource)
 	
 	property string tooltip: format_text(resource.name + "\n" + small_text(
 		(resource.luxury ? "\nLuxury Resource" : "")
@@ -29,7 +30,8 @@ Image {
 		+ (resource !== wyrmgus.defines.wealth_resource ? "\nPrice: " + number_string(price) : "")
 		+ (resource !== wyrmgus.defines.wealth_resource ? "\nTrade Cost: " + wyrmgus.this_player.trade_cost + "%" : "")
 		+ (resource !== wyrmgus.defines.wealth_resource ? "\nEffective Sell Price: " + number_string(effective_sell_price) : "")
-		+ (resource.luxury ? "\nDemand: " + number_string(demand) : "")
+		+ (resource !== wyrmgus.defines.wealth_resource && resource.luxury === false ? "\nEffective Buy Price: " + number_string(effective_buy_price) : "")
+		+ (resource.luxury ? "\nDemand: " + number_string(effective_demand) : "")
 	))
 	
 	MouseArea {
@@ -72,13 +74,20 @@ Image {
 			}
 		}
 		
-		function onTrade_cost_changed() {
-			resource_icon.effective_sell_price = wyrmgus.this_player.get_effective_resource_sell_price_sync(resource)
+		function onEffective_buy_price_changed(resource_index, price) {
+			if (resource_index == resource.index) {
+				resource_icon.effective_buy_price = price
+			}
 		}
 		
-		function onResource_demand_changed(resource_index, demand) {
+		function onTrade_cost_changed() {
+			resource_icon.effective_sell_price = wyrmgus.this_player.get_effective_resource_sell_price_sync(resource)
+			resource_icon.effective_buy_price = wyrmgus.this_player.get_effective_resource_buy_price_sync(resource)
+		}
+		
+		function onEffective_resource_demand_changed(resource_index, demand) {
 			if (resource_index == resource.index) {
-				resource_icon.demand = demand
+				resource_icon.effective_demand = demand
 			}
 		}
 	}

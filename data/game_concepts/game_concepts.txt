@@ -93,7 +93,7 @@ laws = {
 
 luxury_resources = {
 	name = "Luxury Resources"
-	description = "Luxury resources are sold automatically if a market is present. Constructing buildings increases demand for luxury resources. The more demand there is for them relative to the amount being offered on the market, the higher their prices will rise."
+	description = "Luxury resources are sold automatically if a market is present. Constructing buildings increases demand for luxury resources. The more demand there is for them relative to the amount being offered on the market, the higher their prices will rise. Luxury resource sales are also affected by trade cost."
 }
 
 mercenaries = {
