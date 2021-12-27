@@ -46,13 +46,9 @@ Item {
 			width: resource_label.x + resource_label.width
 			height: resource_icon.height
 			visible: !wyrmgus.map_editor.running
-			ToolTip.visible: resource_mouse_area.containsMouse && tooltip.length > 0
+			ToolTip.visible: resource_mouse_area.containsMouse && resource_icon.tooltip.length > 0
 			ToolTip.delay: 1000
-			ToolTip.text: tooltip
-			
-			property int resource_stored: wyrmgus.this_player.get_resource_sync(model.modelData)
-			readonly property string conversion_rates_string: model.modelData.conversion_rates_string
-			property string tooltip: format_text(model.modelData.name + "\n\n" + small_text("Stored: " + resource_stored + (conversion_rates_string.length > 0 ? "\n" : "") + conversion_rates_string))
+			ToolTip.text: resource_icon.tooltip
 			
 			MouseArea {
 				id: resource_mouse_area
@@ -67,12 +63,11 @@ Item {
 				}
 			}
 			
-			Image {
+			ResourceIcon {
 				id: resource_icon
 				anchors.left: parent.left
 				anchors.top: parent.top
-				source: "image://resource_icon/" + model.modelData.icon.identifier
-				cache: false
+				resource: model.modelData
 			}
 			
 			SmallText {
@@ -81,18 +76,16 @@ Item {
 				anchors.leftMargin: 4 * wyrmgus.scale_factor
 				anchors.top: parent.top
 				anchors.topMargin: 1 * wyrmgus.scale_factor
-				text: number_string(resource_item.resource_stored)
+				text: stored_resource_label_string(resource_icon.resource_stored)
 				
 			}
 			
-			Connections {
-				target: wyrmgus.this_player
-				
-				function onResource_stored_changed(resource_index, amount) {
-					if (resource_index == model.modelData.index) {
-						resource_item.resource_stored = amount
-					}
+			function stored_resource_label_string(amount) {
+				if (amount >= 1000000) {
+					return number_string(amount / 1000) + "k"
 				}
+				
+				return number_string(amount)
 			}
 		}
 	}
@@ -100,14 +93,12 @@ Item {
 	Repeater {
 		model: wyrmgus.this_player.current_special_resources
 		
-		Image {
+		ResourceIcon {
 			id: resource_icon
 			anchors.left: top_bar.left
 			anchors.leftMargin: (154 + (75 * 3) + (Math.min(18, 72 / wyrmgus.this_player.current_special_resources.length) * index)) * wyrmgus.scale_factor
 			anchors.top: top_bar.top
-			source: "image://resource_icon/" + model.modelData.icon.identifier
-			cache: false
-			visible: !wyrmgus.map_editor.running
+			resource: model.modelData
 		}
 	}
 	

@@ -2926,12 +2926,6 @@ if not (ui_loaded_first_time) then
 					Font = PopupDescriptionFont}}
 			},
 			--]]
-			{ 	Condition = {ChildResources = "only"}, HighlightColor = "yellow",
-				More = {"Text", {Text = ResourceConversionRates("Resource"), Font = PopupDescriptionFont}}
-			},
-			{ 	Condition = {ImproveIncomes = "only"}, HighlightColor = "yellow",
-				More = {"Text", {Text = ResourceImproveIncomes("Resource"), Font = PopupDescriptionFont}}
-			},
 		}	
 	})
 	
