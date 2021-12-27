@@ -50,8 +50,9 @@ Item {
 			ToolTip.delay: 1000
 			ToolTip.text: tooltip
 			
-			property string tooltip: model.modelData.name
 			property int resource_stored: wyrmgus.this_player.get_resource_sync(model.modelData)
+			readonly property string conversion_rates_string: model.modelData.conversion_rates_string
+			property string tooltip: format_text(model.modelData.name + "\n\n" + small_text("Stored: " + resource_stored + (conversion_rates_string.length > 0 ? "\n" : "") + conversion_rates_string))
 			
 			MouseArea {
 				id: resource_mouse_area

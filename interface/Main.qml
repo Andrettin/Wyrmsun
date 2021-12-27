@@ -70,6 +70,14 @@ Window {
 		return str
 	}
 	
+	function font_size_text(text, font_size) {
+		return "<span style='font-size: " + font_size + "px;'>" + text + "</span>"
+	}
+	
+	function small_text(text) {
+		return font_size_text(text, 10 * wyrmgus.scale_factor)
+	}
+	
 	function escape_string(text) {
 		var str = text
 		str = str.replace(/\\/g, "\\\\")
