@@ -91,6 +91,11 @@ laws = {
 	hotkey = "l"
 }
 
+luxury_resources = {
+	name = "Luxury Resources"
+	description = "Luxury resources are sold automatically if a market is present. Constructing buildings increases demand for luxury resources. The more demand there is for them relative to the amount being offered on the market, the higher their prices will rise."
+}
+
 mercenaries = {
 	name = "Mercenaries"
 	description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."

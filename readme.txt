@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.2
 -----------------------------------------------------------------------
 
+* Encyclopedia
+- Added entry for the "Luxury Resources" game concept.
+
 * Factions
 - Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
 - Merged the Danish, Norwegian, Geat, Gute and Swedish Tribe factions into their polity counterparts (i.e. Denmark, etc.), and made the latter no longer require Writing.
