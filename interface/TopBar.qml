@@ -48,7 +48,7 @@ Item {
 			visible: !wyrmgus.map_editor.running
 			ToolTip.visible: resource_mouse_area.containsMouse && tooltip.length > 0
 			ToolTip.delay: 1000
-			ToolTip.text: window.tooltip(tooltip)
+			ToolTip.text: tooltip
 			
 			property string tooltip: model.modelData.name
 			property int resource_stored: wyrmgus.this_player.get_resource_sync(model.modelData)

@@ -19,7 +19,7 @@ Item {
 	
 	ToolTip.visible: mouse_area.containsMouse && tooltip.length > 0
 	ToolTip.delay: 1000
-	ToolTip.text: window.tooltip(tooltip)
+	ToolTip.text: tooltip
 	
 	Image {
 		id: image

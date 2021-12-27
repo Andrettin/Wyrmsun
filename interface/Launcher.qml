@@ -155,10 +155,6 @@ Window {
 		}
 	}
 	
-	function tooltip(text) {
-		return "<font color=\"white\">" + text + "</font>"
-	}
-	
 	function highlight(text) {
 		return "<font color=\"gold\">" + text + "</font>"
 	}

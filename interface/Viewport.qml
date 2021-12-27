@@ -28,10 +28,9 @@ Item {
 		property int tooltip_y_override: 0
 		
 		//set the shared properties for tooltips
-		ToolTip.toolTip.palette.text: "white"
+		ToolTip.toolTip.palette.toolTipText: "white"
 		ToolTip.toolTip.font.family: berenika_font.name
 		ToolTip.toolTip.font.pixelSize: 12 * wyrmgus.scale_factor
-		ToolTip.toolTip.contentWidth: tooltip_width_reference_text.contentWidth
 		ToolTip.toolTip.background: Rectangle {
 			color: "black"
 			opacity: 0.90
@@ -39,24 +38,19 @@ Item {
 			border.width: 1
 			radius: 5 * wyrmgus.scale_factor
 		}
-		ToolTip.toolTip.onTextChanged: {
-			tooltip_width_reference_text.text = ToolTip.toolTip.text
+		ToolTip.toolTip.contentItem: Text {
+			text: ToolTip.toolTip.text
+			font: ToolTip.toolTip.font
+			wrapMode: Text.WordWrap
+			color: ToolTip.toolTip.palette.toolTipText
+			textFormat: Text.RichText
+			width: Math.min(contentWidth, 512 * wyrmgus.scale_factor)
 		}
 		ToolTip.toolTip.onOpened: {
 			if (tooltip_manager.tooltip_y_override !== 0) {
 				ToolTip.toolTip.y = tooltip_manager.tooltip_y_override
 				tooltip_manager.tooltip_y_override = 0
 			}
-		}
-		
-		Text {
-			id: tooltip_width_reference_text
-			text: ""
-			x: Screen.width + 4 //place it offscreen, this is for calculating the text width only, it shouldn't be visible
-			font.family: berenika_font.name
-			font.pixelSize: 12 * wyrmgus.scale_factor
-			wrapMode: Text.WordWrap
-			width: 512 * wyrmgus.scale_factor
 		}
 	}
 	
