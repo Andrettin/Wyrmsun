@@ -85,6 +85,7 @@ Item {
 		anchors.top: parent.top
 		anchors.left: parent.left
 		anchors.right: parent.right
+		interface_style: wyrmgus.current_interface_style.identifier
 	}
 	*/
 	

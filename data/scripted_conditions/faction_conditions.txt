@@ -31,3 +31,7 @@ is_dutch_faction = {
 		faction = overijssel
 	}
 }
+
+is_monarchical_faction = { #factions that can only be monarchies
+	faction = holy_rome
+}

@@ -10,6 +10,9 @@ upgrade_republic = {
 	}
 	preconditions = {
 		faction_type = polity
+		not = {
+			scripted_condition = is_monarchical_faction
+		}
 	}
 	conditions = {
 		upgrade_class = writing

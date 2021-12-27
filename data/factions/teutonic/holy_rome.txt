@@ -22,7 +22,7 @@ holy_rome = {
 		swabia
 	}
 	conditions = {
-		upgrade_class = writing
+		government_type = monarchy
 		upgrade = upgrade_deity_christian_god
 		not = {
 			any_other_player = {
