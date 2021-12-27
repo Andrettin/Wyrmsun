@@ -2907,15 +2907,6 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = PopupDescriptionFont,
 		Contents = {
-			{	HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
-			}, 
-			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
-			},
-			{ 	TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = Concat(ResourceName("Resource"), Concat(" Stored: ", String(PlayerData(GetThisPlayer(), "Resources", ResourceIdent("Resource"))))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
-			},
 			--[[
 			{ 	Condition = {ButtonValue = "copper", ResearchedUpgradeClass = "coinage"}, HighlightColor = "yellow",
 				More = {"Text", {Text = Concat(_("Currency: "),

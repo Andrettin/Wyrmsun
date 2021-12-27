@@ -16,12 +16,20 @@ Image {
 	property int processing_bonus: wyrmgus.this_player.get_processing_bonus_sync(resource)
 	readonly property string conversion_rates_string: resource.conversion_rates_string
 	property string children_processing_bonus_string: wyrmgus.this_player.get_children_processing_bonus_string_sync(resource)
+	property int price: wyrmgus.this_player.get_price_sync(resource)
+	property int effective_sell_price: wyrmgus.this_player.get_effective_resource_sell_price_sync(resource)
+	property int demand: wyrmgus.this_player.get_resource_demand_sync(resource)
 	
 	property string tooltip: format_text(resource.name + "\n" + small_text(
-		((resource_stored > 0 || resource.luxury === false) ? "\nStored: " + number_string(resource_stored) : "")
+		(resource.luxury ? "\nLuxury Resource" : "")
+		+ ((resource_stored > 0 || resource.luxury === false) ? "\nStored: " + number_string(resource_stored) : "")
 		+ (conversion_rates_string.length > 0 ? "\n" : "") + conversion_rates_string
 		+ (processing_bonus > 0 ? ("\nProcessing Bonus: +" + processing_bonus + "%") : "")
 		+ (children_processing_bonus_string.length > 0 ? "\n" : "") + children_processing_bonus_string
+		+ (resource !== wyrmgus.defines.wealth_resource ? "\nPrice: " + number_string(price) : "")
+		+ (resource !== wyrmgus.defines.wealth_resource ? "\nTrade Cost: " + wyrmgus.this_player.trade_cost + "%" : "")
+		+ (resource !== wyrmgus.defines.wealth_resource ? "\nEffective Sell Price: " + number_string(effective_sell_price) : "")
+		+ (resource.luxury ? "\nDemand: " + number_string(demand) : "")
 	))
 	
 	MouseArea {
@@ -52,9 +60,25 @@ Image {
 			}
 		}
 		
-		function onResource_children_processing_bonus_string_changed(resource_index, str) {
+		function onPrice_changed(resource_index, price) {
 			if (resource_index == resource.index) {
-				resource_icon.children_processing_bonus_string = str
+				resource_icon.price = price
+			}
+		}
+		
+		function onEffective_sell_price_changed(resource_index, price) {
+			if (resource_index == resource.index) {
+				resource_icon.effective_sell_price = price
+			}
+		}
+		
+		function onTrade_cost_changed() {
+			resource_icon.effective_sell_price = wyrmgus.this_player.get_effective_resource_sell_price_sync(resource)
+		}
+		
+		function onResource_demand_changed(resource_index, demand) {
+			if (resource_index == resource.index) {
+				resource_icon.demand = demand
 			}
 		}
 	}
