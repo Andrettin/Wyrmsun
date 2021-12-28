@@ -184,7 +184,7 @@ DefineCharacter("maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 })
 
 DefineCharacter("dutigern", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
-	Name = "dutigern", -- a British king who fought against king Ida of Bernicia
+	Name = "Dutigern", -- a British king who fought against king Ida of Bernicia
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh"
