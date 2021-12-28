@@ -102,6 +102,24 @@ Item {
 	}
 	
 	ResourceIconBase {
+		id: time_of_day_icon
+		anchors.left: top_bar.left
+		anchors.leftMargin: (154 + (75 * 4)) * wyrmgus.scale_factor
+		anchors.top: top_bar.top
+		icon: wyrmgus.current_time_of_day ? wyrmgus.current_time_of_day.icon.identifier : ""
+		tooltip: wyrmgus.current_time_of_day ? wyrmgus.current_time_of_day.name : ""
+	}
+	
+	ResourceIconBase {
+		id: season_icon
+		anchors.left: time_of_day_icon.right
+		anchors.leftMargin: 4 * wyrmgus.scale_factor
+		anchors.top: top_bar.top
+		icon: wyrmgus.current_season ? wyrmgus.current_season.icon.identifier : ""
+		tooltip: wyrmgus.current_season ? wyrmgus.current_season.name : ""
+	}
+	
+	ResourceIconBase {
 		id: age_icon
 		anchors.left: top_bar.left
 		anchors.leftMargin: (154 + (75 * 5)) * wyrmgus.scale_factor

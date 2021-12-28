@@ -356,12 +356,6 @@ CUserInterface:get().StatusLine.TextY = Video.Height + (2 - 16) * get_scale_fact
 CUserInterface:get().StatusLine.Width = Video.Width + (-16 - 2 - 176) * get_scale_factor()
 CUserInterface:get().StatusLine.Font = Fonts["game"]
 
-CUserInterface:get().TimeOfDayPanel.IconX = (154 + (75 * 4) + (18 * 0)) * get_scale_factor()
-CUserInterface:get().TimeOfDayPanel.IconY = 0
-
-CUserInterface:get().SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
-CUserInterface:get().SeasonPanel.IconY = 0
-
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")

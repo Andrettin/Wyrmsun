@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Skynborg Yale upgrade for the Dwarven civilization (researchable at the Yale Pen). This upgrade increases cavalry HP.
 - Added the Tribe government type upgrade (-10% infantry cost). Tribal factions are locked to this government type, while polities can switch from it to Monarchy or Republic. Players with the Tribe government type will have a name like e.g. "Gute Tribe", even if they are polities.
 
+* User Interface
+- Reworked the top bar of the in-game interface.
+
 -----------------------------------------------------------------------
 - 5.3.1
 -----------------------------------------------------------------------
