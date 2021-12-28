@@ -64,7 +64,6 @@ DefineCivilization("germanic", {
 	},
 	UIFillers = {
 		"interface/germanic/filler_bottom.png", 380, -181,
-		"interface/germanic/resource.png", 0, 0,
 		"interface/germanic/buttonpanel.png", -256, -200,
 		"interface/germanic/infopanel.png", 0, -200
 	},
@@ -341,7 +340,6 @@ DefineCivilization("frankish", {
 	--]]
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"interface/germanic/resource.png", 0, 0,
 		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
 	}

@@ -23,10 +23,6 @@ einherjar = {
 			pos = { 380 -181 }
 		}
 		{
-			file = "interface/germanic/resource.png"
-			pos = { 0 0 }
-		}
-		{
 			file = "interface/germanic/buttonpanel.png"
 			pos = { -256 -200 }
 		}

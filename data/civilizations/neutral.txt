@@ -20,10 +20,6 @@ neutral = {
 			pos = { 380 -181 }
 		}
 		{
-			file = "interface/dwarven/resource.png"
-			pos = { 0 0 }
-		}
-		{
 			file = "interface/dwarven/buttonpanel.png"
 			pos = { -256 -200 }
 		}

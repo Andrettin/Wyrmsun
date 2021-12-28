@@ -31,10 +31,6 @@ ogre = {
 			pos = { 380 -181 }
 		}
 		{
-			file = "interface/goblin/resource.png"
-			pos = { 0 0 }
-		}
-		{
 			file = "interface/goblin/buttonpanel.png"
 			pos = { -256 -200 }
 		}
