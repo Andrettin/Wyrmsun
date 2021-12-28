@@ -116,6 +116,17 @@ Item {
 		anchors.top: top_bar.top
 		anchors.topMargin: 1 * wyrmgus.scale_factor
 		text: wyrmgus.this_player.age ? wyrmgus.this_player.age.name : ""
+		visible: !wyrmgus.map_editor.running
+	}
+	
+	SmallText {
+		id: current_year_label
+		anchors.left: top_bar.left
+		anchors.leftMargin: (154 + (75 * 7)) * wyrmgus.scale_factor
+		anchors.top: top_bar.top
+		anchors.topMargin: 1 * wyrmgus.scale_factor
+		text: year_string(wyrmgus.game.current_year)
+		visible: !wyrmgus.map_editor.running && wyrmgus.game.current_campaign !== null
 	}
 	
 	Item {

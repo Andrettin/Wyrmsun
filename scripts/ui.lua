@@ -362,9 +362,6 @@ CUserInterface:get().TimeOfDayPanel.IconY = 0
 CUserInterface:get().SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
 CUserInterface:get().SeasonPanel.IconY = 0
 
-CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
-CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
-
 -- World Map Layer Buttons
 
 local earth_id = GetWorldData("earth", "ID")

@@ -107,6 +107,16 @@ Window {
 		return n.toLocaleString(Qt.locale("en_US"), 'f', 0)
 	}
 	
+	function date_year_string(date) {
+		var year = date.getUTCFullYear()
+		
+		if (year < 0) {
+			year = year - 1 //-1 is needed, as otherwise negative dates are off by one
+		}
+		
+		return year_string(year)
+	}
+	
 	function year_string(year) {
 		var year_suffix
 		
@@ -114,7 +124,7 @@ Window {
 			year_suffix = "AD"
 		} else {
 			year_suffix = "BC"
-			year = Math.abs(year - 1) //-1 was needed, as otherwise negative dates were off by one
+			year = Math.abs(year)
 		}
 		
 		var year_str
