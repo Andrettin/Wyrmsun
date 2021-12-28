@@ -101,6 +101,23 @@ Item {
 		}
 	}
 	
+	ResourceIconBase {
+		id: age_icon
+		anchors.left: top_bar.left
+		anchors.leftMargin: (154 + (75 * 5)) * wyrmgus.scale_factor
+		anchors.top: top_bar.top
+		icon: wyrmgus.this_player.age ? wyrmgus.this_player.age.icon.identifier : ""
+	}
+	
+	SmallText {
+		id: age_label
+		anchors.left: age_icon.right
+		anchors.leftMargin: 4 * wyrmgus.scale_factor
+		anchors.top: top_bar.top
+		anchors.topMargin: 1 * wyrmgus.scale_factor
+		text: wyrmgus.this_player.age ? wyrmgus.this_player.age.name : ""
+	}
+	
 	Item {
 		id: food_item
 		anchors.left: top_bar.right

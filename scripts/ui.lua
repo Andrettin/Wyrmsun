@@ -362,11 +362,6 @@ CUserInterface:get().TimeOfDayPanel.IconY = 0
 CUserInterface:get().SeasonPanel.IconX = (154 + (75 * 4) + (18 * 1)) * get_scale_factor()
 CUserInterface:get().SeasonPanel.IconY = 0
 
-CUserInterface:get().AgePanel.IconX = (154 + (75 * 5)) * get_scale_factor()
-CUserInterface:get().AgePanel.IconY = 0
-CUserInterface:get().AgePanel.TextX = (154 + (75 * 5) + 18) * get_scale_factor()
-CUserInterface:get().AgePanel.TextY = 1 * get_scale_factor()
-
 CUserInterface:get().DatePanel.TextX = (154 + (75 * 7)) * get_scale_factor()
 CUserInterface:get().DatePanel.TextY = 1 * get_scale_factor()
 
@@ -2861,25 +2856,6 @@ if not (ui_loaded_first_time) then
 					Font = PopupDescriptionFont}}
 			},
 			--]]
-		}	
-	})
-	
-	DefinePopup({
-		Ident = "popup_food",
-		BackgroundColor = PopupBackgroundColor,
-		BorderColor = PopupBorderColor,
-		MinWidth = 128,
-		DefaultFont = PopupDescriptionFont,
-		Contents = {
-			{	HighlightColor = "yellow",
-				More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
-			}, 
-			{ 	Margin = {1, 1},
-				More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
-			},
-			{ 	TextColor = "white", HighlightColor = "yellow",
-				More = {"Text", {Text = Concat("Population: ", String(PlayerData(GetThisPlayer(), "Population"))), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
-			}
 		}	
 	})
 	

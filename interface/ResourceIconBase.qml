@@ -17,6 +17,8 @@ Image {
 		id: mouse_area
 		anchors.fill: resource_icon
 		hoverEnabled: true
+		visible: resource_icon.tooltip.length > 0
+		enabled: resource_icon.tooltip.length > 0
 		onEntered: {
 			//display the tooltip further down so that the cursor isn't on top of it
 			tooltip_manager.tooltip_y_override = 40 * wyrmgus.scale_factor
