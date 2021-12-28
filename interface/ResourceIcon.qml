@@ -10,8 +10,8 @@ ResourceIconBase {
 		+ (conversion_rates_string.length > 0 ? "\n" : "") + conversion_rates_string
 		+ (processing_bonus > 0 ? ("\nProcessing Bonus: +" + processing_bonus + "%") : "")
 		+ (children_processing_bonus_string.length > 0 ? "\n" : "") + children_processing_bonus_string
-		+ (resource !== wyrmgus.defines.wealth_resource ? "\nSell Price: " + number_string(effective_sell_price) : "")
-		+ (resource !== wyrmgus.defines.wealth_resource && resource.luxury === false ? "\nBuy Price: " + number_string(effective_buy_price) : "")
+		+ (resource !== wyrmgus.defines.wealth_resource && (resource.main || resource.luxury) ? "\nSell Price: " + number_string(effective_sell_price) : "")
+		+ (resource !== wyrmgus.defines.wealth_resource && resource.luxury === false && resource.special === false ? "\nBuy Price: " + number_string(effective_buy_price) : "")
 		+ (resource.luxury ? "\nDemand: " + number_string(effective_demand) : "")
 	))
 	

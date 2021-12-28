@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Pathfinding
 - Fixed depot-finding issue for workers which could happen under specific circumstances.
 
+* Units
+- Fixed issue with a unit's experience value potentially becoming incorrect if there were other friendly units capable of gaining experience around it.
+
 * Upgrades
 - Added Chevauchée upgrade for the English civilization (researchable at the Barracks). This upgrade makes cavalry units acquire resources when they damage enemy buildings.
 - Added Skynborg Yale upgrade for the Dwarven civilization (researchable at the Yale Pen). This upgrade increases cavalry HP.
