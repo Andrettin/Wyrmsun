@@ -1,5 +1,6 @@
 goblin = {
 	top_bar_file = "interface/goblin/resource.png"
+	dropdown_bar_file = "interface/goblin/pulldown_bar_normal.png"
 	slider_bar_file = "interface/goblin/slider_bar_normal.png"
 	slider_marker_file = "interface/goblin/slider_knob.png"
 	panel_files = {
@@ -9,7 +10,6 @@ goblin = {
 		4 = "interface/goblin/panel_4.png"
 		5 = "interface/goblin/panel_5.png"
 	}
-	dropdown_bar_file = "interface/goblin/pulldown_bar_normal.png"
 	large_button = {
 		normal_file = "interface/goblin/button_large_normal.png"
 		pressed_file = "interface/goblin/button_large_pressed.png"
