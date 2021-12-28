@@ -62,10 +62,24 @@ Item {
 	*/
 	
 	TopBar {
+		id: top_bar
 		anchors.top: parent.top
 		anchors.left: parent.left
 		anchors.right: parent.right
 		interface_style: wyrmgus.current_interface_style.identifier
+	}
+	
+	LargeText {
+		id: paused_label
+		text: "Paused"
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.verticalCenter: top_bar.bottom
+		anchors.verticalCenterOffset: (parent.height - (wyrmgus.defines.map_area_top_margin + wyrmgus.defines.map_area_bottom_margin) * wyrmgus.scale_factor) / 2
+		horizontalAlignment: Text.AlignHCenter
+		wrapMode: Text.WordWrap
+		font.pixelSize: 32 * wyrmgus.scale_factor
+		font.bold: true
+		visible: wyrmgus.game.paused
 	}
 	
 	GameMenuDialog {
@@ -427,7 +441,9 @@ Item {
 		++map_view.active_popup_count
 		
 		if (map_view.active_popup_count == 1 && !wyrmgus.map_editor.running) {
-			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(true); end")
+			if (!wyrmgus.game.multiplayer) {
+				wyrmgus.paused = true
+			}
 			wyrmgus.modal_dialog_open = true
 		}
 	}
@@ -436,7 +452,9 @@ Item {
 		--map_view.active_popup_count
 		
 		if (map_view.active_popup_count == 0 && !wyrmgus.map_editor.running) {
-			wyrmgus.call_lua_command("if (not IsNetworkGame()) then SetGamePaused(false); end")
+			if (!wyrmgus.game.multiplayer) {
+				wyrmgus.paused = false
+			}
 			wyrmgus.modal_dialog_open = false
 		}
 	}

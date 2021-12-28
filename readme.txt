@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * User Interface
 - Reworked the top bar of the in-game interface.
+- A large "Paused" text label is now shown over the map when the game is paused.
 
 -----------------------------------------------------------------------
 - 5.3.1
