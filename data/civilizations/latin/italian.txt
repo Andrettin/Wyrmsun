@@ -12,12 +12,14 @@ italian = {
 			"Alessandro"
 			"Giovanni"
 			"Michele"
+			"Paolo"
 		}
 		
 		female = {
 			"Carla"
 			"Emilia"
 			"Francesca"
+			"Luisa"
 			"Marta"
 			"Mirella"
 			"Renata"

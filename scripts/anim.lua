@@ -1649,15 +1649,15 @@ DefineAnimations("animations-door", {
 	Still = {
 		"if-var v.HitPoints.Percent <= 50 damaged_50",
 		"if-var v.HitPoints.Percent <= 75 damaged_25",
-		"frame 0", "wait 4", "frame 0", "goto end",
-		"label damaged_50", "frame 2", "wait 4", "frame 2", "goto end",
-		"label damaged_25", "frame 1", "wait 4", "frame 1", "goto end",
+		"exact-frame 0", "wait 4", "exact-frame 0", "goto end",
+		"label damaged_50", "exact-frame 2", "wait 4", "exact-frame 2", "goto end",
+		"label damaged_25", "exact-frame 1", "wait 4", "exact-frame 1", "goto end",
 		"label end", "wait 1",
 	},
 	Death = {"unbreakable begin",
-	"frame 3", "wait 3", "frame 4",
-	"label loop", 
-	"wait 100", "frame 4", "goto loop",
+	"exact-frame 3", "wait 3", "exact-frame 4",
+	"label loop",
+	"wait 100", "exact-frame 4", "goto loop",
 	"unbreakable end", "wait 1",}
 })
 
@@ -1678,7 +1678,7 @@ DefineAnimations("animations-alchemy-bench", {
 DefineAnimations("animations-trap", {
 	Still = BuildingStill,
 	Death = {"unbreakable begin",
-		"frame 0", "wait 5", "frame 1", "wait 2", "frame 2", "wait 100", "frame 2",
+		"exact-frame 0", "wait 5", "exact-frame 1", "wait 2", "exact-frame 2", "wait 100", "exact-frame 2",
 		"unbreakable end", "wait 1",
 	}
 })
