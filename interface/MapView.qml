@@ -61,33 +61,12 @@ Item {
 	}
 	*/
 	
-	ThinnestButton {
-		id: menu_button
-		anchors.left: parent.left
-		anchors.leftMargin: 26 * wyrmgus.scale_factor
-		anchors.top: parent.top
-		anchors.topMargin: 1 * wyrmgus.scale_factor
-		text: "Menu (F10)"
-		hotkey: "f10"
-		interface_style: wyrmgus.current_interface_style.identifier
-		
-		onClicked: {
-			if (wyrmgus.map_editor.running) {
-				wyrmgus.call_lua_command("RunInEditorMenu();")
-			} else {
-				game_menu_dialog.open()
-			}
-		}
-	}
-	
-	/*
 	TopBar {
 		anchors.top: parent.top
 		anchors.left: parent.left
 		anchors.right: parent.right
 		interface_style: wyrmgus.current_interface_style.identifier
 	}
-	*/
 	
 	GameMenuDialog {
 		id: game_menu_dialog
