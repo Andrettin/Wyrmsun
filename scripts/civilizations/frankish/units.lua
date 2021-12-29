@@ -672,7 +672,7 @@ DefineUnitType("unit-frank-horseman", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	ButtonKey = "t",
 	Corpse = "unit-human-dead-body",
 	RequirementsString = "Smithy and Stables",
@@ -710,7 +710,7 @@ DefineUnitType("unit-frank-knight-lord", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-frankish-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",

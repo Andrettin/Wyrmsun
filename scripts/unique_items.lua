@@ -171,7 +171,7 @@ DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineUniqueItem("hippopotamus-head", { -- Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 205, 208.
 	Name = "Hippopotamus' Head",
-	Type = "unit-crown",
+	Type = "unit_helmet",
 	Prefix = "upgrade-item-prefix-sturdy",
 	Suffix = "upgrade-item-suffix-of-strength",
 	Description = "This helmet is named after a star in the Egyptian constellation of the Hippopotamus, and is said to derive power from it."
@@ -179,7 +179,7 @@ DefineUniqueItem("hippopotamus-head", { -- Source: Richard Hinckley Allen, "Star
 
 DefineUniqueItem("the-iron-crown-of-lombardy", {
 	Name = "The Iron Crown of Lombardy",
-	Type = "unit-crown",
+	Type = "unit_crown",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-the-colossus",
 	Description = "This crown is a relic of the Lombardic kingdom."

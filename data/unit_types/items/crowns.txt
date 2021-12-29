@@ -1,0 +1,15 @@
+unit_crown = {
+	name = "Crown"
+	parent = unit_template_item
+	icon = royal_crown
+	item_class = helmet
+	image_file = "neutral/items/crown.png"
+	frame_size = { 32 32 }
+	armor = 1
+	costs = {
+		copper = 400
+	}
+	conditions = {
+		unit_class = smithy
+	}
+}

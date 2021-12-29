@@ -326,17 +326,6 @@ DefineDependency("unit-bodkin-arrows",
 	"or", {"unit-teuton-lumber-mill", "upgrade-teuton-bodkin-arrow"}
 )
 
-DefineDependency("unit-crown",
-	{"unit-brising-smithy"},
-	"or", {"unit-dwarven-smithy"},
-	"or", {"unit_germanic_smithy"},
-	"or", {"unit-goblin-smithy"},
-	"or", {"unit-latin-smithy"},
-	"or", {"unit-norse-smithy"},
-	"or", {"unit_teutonic_smithy"},
-	"or", {"unit_elven_smithy"}
-)
-
 DefineDependency("unit-amulet",
 	{"unit-brising-smithy"},
 	"or", {"unit-dwarven-smithy"},

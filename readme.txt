@@ -65,6 +65,9 @@ https://github.com/Andrettin/Wyrmsun
 - Merged the Danish, Norwegian, Geat, Gute and Swedish Tribe factions into their polity counterparts (i.e. Denmark, etc.), and made the latter no longer require Writing.
 - The Holy Roman Empire now requires Monarchy, and cannot switch to being a Republic.
 
+* Items
+- Added Helmet (+1 armor) and Knightly Helmet (+2 armor) items.
+
 * Maps
 - Building Sites are now generated for the On the Vanaquisl and Westward Migration scenario maps.
 

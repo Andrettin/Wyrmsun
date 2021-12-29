@@ -426,16 +426,6 @@ DefineUnitType("unit-horn", {
 	ItemClass = "horn"
 } )
 
-DefineUnitType("unit-crown", {
-	Name = "Crown",
-	Parent = "unit-template-item",
-	Costs = {"copper", 400},
-	Image = {"file", "neutral/items/crown.png", "size", {32, 32}},
-	Icon = "royal_crown",
-	ItemClass = "helmet",
-	Armor = 1
-} )
-
 DefineUnitType("unit-boots", {
 	Name = "Boots",
 	Parent = "unit-template-item",

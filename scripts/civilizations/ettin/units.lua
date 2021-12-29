@@ -59,7 +59,7 @@ DefineUnitType("unit-ettin", {
 	Giant = true,
 	Inventory = true,
 	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
-	AiDrops = {"unit-crown", "unit-boots", "unit-horn", "unit-amulet", "unit-ring", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
+	AiDrops = {"unit_helmet", "unit_crown", "unit-boots", "unit-horn", "unit-amulet", "unit-ring", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength", "unit-elixir-of-vitality"},
 	Sounds = {
 		"hit", "fist-attack",
 		"miss", "attack-miss"

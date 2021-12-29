@@ -1,0 +1,13 @@
+helmet = {
+	file = "icons/items/helmet.png"
+	frame = 0
+}
+
+helmet_2 = {
+	file = "icons/items/helmet.png"
+	frame = 1
+}
+
+knightly_helmet = {
+	file = "icons/items/knightly_helmet.png"
+}

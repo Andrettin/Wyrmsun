@@ -1,0 +1,40 @@
+unit_helmet = {
+	name = "Helmet"
+	parent = unit_template_item
+	icon = helmet
+	item_class = helmet
+	image_file = "items/helmet.png"
+	frame_size = { 16 16 }
+	armor = 1
+	costs = {
+		copper = 100
+	}
+	variations = {
+		helmet = {
+		}
+		helmet_2 = {
+			icon = helmet_2
+		}
+	}
+	conditions = {
+		unit_class = smithy
+	}
+}
+
+unit_knightly_helmet = {
+	name = "Knightly Helmet"
+	parent = unit_template_item
+	icon = knightly_helmet
+	item_class = helmet
+	image_file = "items/helmet.png"
+	frame_size = { 16 16 }
+	armor = 2
+	costs = {
+		copper = 200
+	}
+	conditions = {
+		unit_class = smithy
+		unit_class = stables
+		upgrade_class = ironworking
+	}
+}

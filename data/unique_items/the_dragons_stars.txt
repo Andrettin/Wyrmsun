@@ -18,7 +18,7 @@ dragons_jaw = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings"
 
 dragons_head = { #Source: Richard Hinckley Allen, "Star-Names and their Meanings", 1874, pp. 207-209.
 	name = "Dragon's Head"
-	unit_type = unit_crown
+	unit_type = unit_helmet
 	prefix = upgrade_item_prefix_impregnable
 	suffix = upgrade_item_suffix_of_regeneration
 	set = upgrade_item_set_the_dragons_stars

@@ -15,6 +15,7 @@ unit_teutonic_smithy = {
 		unit_bronze_shield
 		unit_iron_shield
 		unit_kite_shield
+		unit_knightly_helmet
 	}
 	variations = {
 		smithy = {

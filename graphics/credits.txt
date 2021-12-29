@@ -692,6 +692,7 @@
 /graphics/icons/items/ducal_crown.png (by Jinn and Exidelo) (licensed under the CC0)
 /graphics/icons/items/grand_ducal_crown.png (by Jinn and Exidelo) (licensed under the CC0)
 /graphics/icons/items/heater_shield.png (by Jinn) (licensed under the CC0)
+/graphics/icons/items/helmet.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/items/imperial_crown.png (by Jinn and Exidelo) (licensed under the CC0)
 /graphics/icons/items/knightly_helmet.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/items/marquisal_crown.png (by Jinn and Exidelo) (licensed under the CC0)

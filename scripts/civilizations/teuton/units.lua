@@ -740,7 +740,7 @@ DefineUnitType("unit-teuton-ritter", {
 	InvertedSoutheastArms = true,
 	ButtonKey = "k",
 	RequirementsString = "Smithy and Stables",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
@@ -779,7 +779,7 @@ DefineUnitType("unit-teuton-knight-lord", {
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing", "unit-elixir-of-strength"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 --		"selected", "basic-teuton-voices-selected-group",
@@ -969,7 +969,7 @@ DefineUnitType("unit-teuton-stronghold", {
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	DropSpells = {"spell-anglo-saxon-allegiance", "spell-frank-allegiance", "spell-goth-allegiance", "spell-suebi-allegiance", "spell-teuton-allegiance"},
 	Variations = {
 		{
@@ -1079,7 +1079,7 @@ DefineUnitType("unit-teuton-barracks", {
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	Variations = {
 		{
 			"variation-id", "barracks",
@@ -1445,7 +1445,7 @@ DefineUnitType("unit-teuton-market", {
 	Shadow = {"file", "teuton/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-market",
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
-	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
+	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-pilum"},
 	Variations = {
 		{
 			"variation-id", "market",
