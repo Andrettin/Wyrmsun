@@ -42,6 +42,10 @@ iron = {
 	file = "ui/resources/iron.png"
 }
 
+jewelry = {
+	file = "resource_icons/jewelry.png"
+}
+
 leather = {
 	file = "ui/resources/leather.png"
 }

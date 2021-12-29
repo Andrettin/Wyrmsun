@@ -1479,6 +1479,7 @@
 /graphics/orc/icons/shaman.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/spearthrower.png (by Jinn) (licensed under the CC0)
 /graphics/orc/icons/warrior.png (by Jinn) (licensed under the CC0)
+/graphics/resource_icons/jewelry.png (by Exidelo) (licensed under the CC0)
 /graphics/resource_icons/phlogiston.png (by Jinn) (licensed under the CC0)
 /graphics/resource_icons/phlogiston_vial.png (by Jinn) (licensed under the CC0)
 /graphics/russian/icons/warrior_varangian_era.png (by Jinn) (licensed under the CC0)

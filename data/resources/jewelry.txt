@@ -1,5 +1,6 @@
 jewelry = {
 	name = "Jewelry"
+	icon = jewelry
 	action_name = "produce"
 	default_income = 100
 	base_price = 200
