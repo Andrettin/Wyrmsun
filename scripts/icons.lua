@@ -494,12 +494,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-raft",
-	Size = {46, 38},
-	File = "neutral/icons/raft.png"
-})
-
-DefineIcon({
 	Name = "icon-caravan",
 	Size = {46, 38},
 	File = "neutral/icons/caravan.png"
@@ -767,18 +761,6 @@ DefineIcon({
 	Name = "icon-emerald-rock",
 	Size = {46, 38},
 	File = "neutral/icons/emerald_rock.png"
-})
-
-DefineIcon({
-	Name = "icon-wood-pile",
-	Size = {46, 38},
-	File = "neutral/icons/wood_pile.png"
-})
-
-DefineIcon({
-	Name = "icon-stone-pile",
-	Size = {46, 38},
-	File = "neutral/icons/stone_pile.png"
 })
 
 DefineIcon({

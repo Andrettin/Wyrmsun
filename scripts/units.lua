@@ -756,7 +756,7 @@ DefineUnitType("unit-emerald-rock", {
 DefineUnitType("unit-wood-pile", {
 	Name = "Wood Pile",
 	Image = {"file", "neutral/buildings/wood_pile_1.png", "size", {43, 43}},
-	Animations = "animations-building", Icon = "icon-wood-pile",
+	Animations = "animations-building", Icon = "icon_lumber",
 	NeutralMinimapColor = {165, 42, 42},
 	Costs = {"time", 150},
 	HitPoints = 25500,
@@ -800,7 +800,7 @@ DefineUnitType("unit-wood-pile", {
 DefineUnitType("unit-stone-pile", {
 	Name = "Stone Pile",
 	Image = {"file", "neutral/buildings/stone_pile.png", "size", {43, 43}},
-	Animations = "animations-decoration", Icon = "icon-stone-pile",
+	Animations = "animations-decoration", Icon = "icon_stone",
 	NeutralMinimapColor = {92, 92, 92},
 	Costs = {"time", 150},
 	HitPoints = 25500,
