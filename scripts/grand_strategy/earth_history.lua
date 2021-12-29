@@ -901,8 +901,8 @@ end
 
 if (GrandStrategyYear >= 450) then
 	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceOwner("Palatinate", "frankish", "frank-tribe")
-	SetProvinceOwner("Lower Rhine", "frankish", "frank-tribe")
+	SetProvinceOwner("Palatinate", "frankish", "francia")
+	SetProvinceOwner("Lower Rhine", "frankish", "francia")
 end
 
 if (GrandStrategyYear >= 451) then

@@ -464,7 +464,7 @@ DefineSite("zulpich", {
 		"teuton", "Zulpich" -- "Zülpich"
 	},
 	HistoricalOwners = {
-		481, "frank-tribe", -- Zülpich's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "francia", -- Zülpich's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Zülpich was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1815, "prussia" -- Zülpich's area was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},

@@ -118,7 +118,7 @@ DefineSite("cambrai", {
 		"france"
 	},
 	HistoricalOwners = {
-		481, "frank-tribe", -- Cambray's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "francia", -- Cambray's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Cambray was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "spain", -- Cambray was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1668, "france" -- Cambray became a French possession in 1668-1679; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
@@ -243,7 +243,7 @@ DefineSite("metz", {
 	},
 	HistoricalOwners = {
 		395, "rome", -- Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "frank-tribe", -- Metz was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "francia", -- Metz was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Metz was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1648, "france" -- Metz was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
@@ -435,7 +435,7 @@ DefineSite("toul", {
 	},
 	HistoricalOwners = {
 		395, "rome", -- Toul was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "frank-tribe", -- Toul's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "francia", -- Toul's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Toul's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia", -- Toul's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1789, "france" -- Toul was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.

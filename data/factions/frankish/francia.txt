@@ -2,14 +2,19 @@ francia = {
 	name = "Francia"
 	adjective = "Frankish"
 	civilization = frankish
-	parent_faction = frank_tribe
 	type = polity
 	color = green
 	default_tier = kingdom
 	upgrade = upgrade_faction_francia
 	icon = icon_flag_old_austria
+	description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe."
 	develops_from = {
-		frank_tribe
+		ampsivarii_tribe
+		batavian_tribe
+		chamavi_tribe
+		chatti_tribe
+		sugambri_tribe
+		ubii_tribe
 	}
 	character_title_names = {
 		#head_of_government = {
@@ -17,23 +22,23 @@ francia = {
 		#}
 	}
 	conditions = {
-		upgrade_class = writing
-		not = {
-			any_other_player = {
-				civilization = frankish
-			}
-		}
+		upgrade_class = ironworking
 	}
 	
 	history = {
-		#polities must have writing and masonry
-		acquired_upgrade_classes += writing
-		acquired_upgrade_classes += masonry
+		481 = {
+			#capital = tournai
+			government_type = tribe
+		}
 		
 		486 = {
 			#capital = tournai
+			
+			government_type = monarchy
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
 		}
-	
+		
 		565 = {
 			#Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 			acquired_upgrade_classes += coinage

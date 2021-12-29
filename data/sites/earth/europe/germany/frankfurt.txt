@@ -5,7 +5,7 @@ frankfurt = {
 	base_unit_type = unit_settlement_site
 	color = { 22 220 110 }
 	cores = {
-		frank_tribe
+		francia
 		germany
 		holy_rome
 	}

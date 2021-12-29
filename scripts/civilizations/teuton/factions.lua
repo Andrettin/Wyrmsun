@@ -154,26 +154,13 @@ DefineFaction("cologne", {
 	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
 	FactionUpgrade = "upgrade-faction-cologne",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"frank-tribe", "ubii-tribe"},
+	DevelopsFrom = {"ubii-tribe"},
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
 	},
 	MinisterTitles = {
 		"ruler", "none", "theocracy", "duchy", "Archbishop"
 	}
-})
-
-DefineFaction("franconia", { -- represents the German region, so it uses base Teuton elements, rather than Frankish ones
-	Name = "Franconia",
-	Adjective = "Franconian",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	FactionUpgrade = "upgrade-faction-franconia",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	Adjective = "Franconian",
-	DevelopsFrom = {"frank-tribe"}
 })
 
 DefineFaction("hesse", {
@@ -185,7 +172,7 @@ DefineFaction("hesse", {
 	FactionUpgrade = "upgrade-faction-hesse",
 	Icon = "icon-flag-cyan-lion-on-red",
 	Adjective = "Hessian",
-	DevelopsFrom = {"frank-tribe", "ubii-tribe"},
+	DevelopsFrom = {"ubii-tribe"},
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
 	},

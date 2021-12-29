@@ -362,8 +362,7 @@ DefineProvince("Belgium", {
 		"latin", "Belgica"
 	},
 	FactionCulturalNames = {
-		"frankish", "francia", "Austrasia",
-		"frankish", "frank-tribe", "Austrasia"
+		"frankish", "francia", "Austrasia"
 	},
 --	SettlementLocation = {492, 111}, -- Brussels
 	Claims = {
@@ -371,7 +370,7 @@ DefineProvince("Belgium", {
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		450, "frankish", "francia", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -1303,8 +1302,7 @@ DefineProvince("France", {
 	World = "earth",
 	FactionCulturalNames = {
 		"french", "france", "France",
-		"frankish", "francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
-		"frankish", "frank-tribe", "Neustria"
+		"frankish", "francia", "Neustria" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
 	},
 --	SettlementLocation = {486, 117}, -- Paris
 	Claims = {
@@ -1379,7 +1377,7 @@ DefineProvince("Franconia", {
 		"teuton", "Franconia"
 	},
 	FactionCulturalNames = {
-		"frankish", "frank-tribe", "Franconia",
+		"frankish", "francia", "Franconia",
 		"teuton", "netherlands", "Franconia"
 	},
 --	SettlementLocation = {508, 114}, -- Würzburg
@@ -1719,14 +1717,14 @@ DefineProvince("Holland", {
 --	SettlementLocation = {493, 107}, -- Amsterdam
 	Claims = {
 		"frankish", "batavian-tribe",
-		"frankish", "frank-tribe",
+		"frankish", "francia",
 		"teuton", "holland",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-264, "frankish", "batavian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		150, "frankish", "frank-tribe", -- Franks were the people settled in the Gelderland and in the German Lower Rhine in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		150, "frankish", "francia", -- Franks were the people settled in the Gelderland and in the German Lower Rhine in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		450, "", "", -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		526, "teuton", "frisian-tribe", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		734, "frankish", "francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -2043,7 +2041,7 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 		-54, "gaul", "eburones-tribe", -- The Eburones lived largely between the Maas and the Rhine in 54 BC (both the modern cities of Tongres and Spa were in their territory), when they entered conflict with the Romans; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
 		-51, "", "", -- Caesar's Roman forces ravaged the Eburones' land, nigh annihilating them; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 226.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		450, "frankish", "francia", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome" -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -2263,7 +2261,7 @@ DefineProvince("Luxemburg", {
 	},
 	HistoricalOwners = {
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "frankish", "frank-tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		450, "frankish", "francia", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Duchy of Upper Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

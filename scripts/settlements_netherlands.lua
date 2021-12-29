@@ -55,7 +55,7 @@ DefineSite("wijk-bij-duurstede", {
 --		"dutch", "Wijk bij Duurstede"
 	},
 	HistoricalOwners = {
-		481, "frank-tribe", -- Wijk bij Duurstede's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "francia", -- Wijk bij Duurstede's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Wijk bij Duurstede's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		692, "northumbria",
 		695, "francia", -- by 695 Pippin, who de facto ruled Francia, had taken the mission under his wing; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 166-167.

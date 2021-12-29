@@ -34,7 +34,7 @@ DefineFaction("brabant", {
 	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	FactionUpgrade = "upgrade-faction-brabant",
 	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"frank-tribe"}
+	DevelopsFrom = {"batavian-tribe"}
 })
 
 DefineFaction("drenthe", {
@@ -46,7 +46,7 @@ DefineFaction("drenthe", {
 	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	FactionUpgrade = "upgrade-faction-drenthe",
 	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"frank-tribe", "ampsivarii-tribe"}
+	DevelopsFrom = {"ampsivarii-tribe"}
 })
 
 DefineFaction("holland", {
@@ -58,7 +58,7 @@ DefineFaction("holland", {
 	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	FactionUpgrade = "upgrade-faction-holland",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"frank-tribe", "batavian-tribe"}
+	DevelopsFrom = {"batavian-tribe"}
 })
 
 DefineFaction("overijssel", {
@@ -70,5 +70,5 @@ DefineFaction("overijssel", {
 	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	FactionUpgrade = "upgrade-faction-overijssel",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"frank-tribe", "chamavi-tribe"}
+	DevelopsFrom = {"chamavi-tribe"}
 })

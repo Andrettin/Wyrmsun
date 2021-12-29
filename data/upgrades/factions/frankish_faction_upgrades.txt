@@ -22,12 +22,6 @@ upgrade_faction_chatti_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_frank_tribe = {
-	name = "Frank Tribe"
-	effects_string = "+1 Damage and +1 Armor for Ritars"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_sugambri_tribe = {
 	name = "Sugambri Tribe"
 	effects_string = "+2 Accuracy for Archers"
@@ -66,7 +60,16 @@ upgrade_faction_east_francia = {
 
 upgrade_faction_francia = {
 	name = "Francia"
-	effects_string = "+2 Damage for Ritars"
+	effects_string = "+1 Damage and +1 Armor for Ritars"
+	modifier = {
+		basic_damage = 1
+		armor = 1
+		points = 10
+		unit_types = {
+			unit_frank_horseman
+			unit_frank_knight_lord
+		}
+	}
 }
 
 upgrade_faction_neustria = {

@@ -30,9 +30,9 @@ DefineCharacter("volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Gender = "male",
 	Type = "unit-frank-heroic-swordsman",
 	Civilization = "frankish",
-	Faction = "frank-tribe",
+	Faction = "francia",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
 		end
 		return false
@@ -44,9 +44,9 @@ DefineCharacter("chlodio", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- chieftain/king
 	Civilization = "frankish",
-	Faction = "frank-tribe",
+	Faction = "francia",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
 		end
 		return false
@@ -59,11 +59,11 @@ DefineCharacter("merovech", { -- Source: "Medieval Warfare V.2", 2013, p. 6.
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- chieftain/king
 	Civilization = "frankish",
-	Faction = "frank-tribe",
+	Faction = "francia",
 	Description = "Merovech was a Frankish chieftain renowned for being the ancestor of the Merovingian dynasty.", -- king of the Franks, but what he ruled was more of a tribal territory than an established polity
 	Father = "chlodio",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
 		end
 		return false
@@ -82,11 +82,10 @@ DefineCharacter("chlodwig", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	StartDate = 481, -- his reign began in 481
 	DeathDate = 511, -- died in 511
 	HistoricalFactions = {
-		481, "frank-tribe",
-		{486, 12, 30}, "francia"
+		481, "francia"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frank-tribe" or GetPlayerData(trigger_player, "Faction") == "francia") then
+		if (GetPlayerData(trigger_player, "Faction") == "francia") then
 			return true
 		end
 		return false

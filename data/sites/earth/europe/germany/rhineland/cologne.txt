@@ -36,7 +36,7 @@ cologne = {
 		}
 		
 		481 = {
-			owner = frank_tribe #Cologne was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+			owner = francia #Cologne was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}
 		
 		486 = {

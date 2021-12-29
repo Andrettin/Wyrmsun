@@ -92,22 +92,6 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	DevelopsFrom = {"asa-tribe", "hersing-tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
-DefineFaction("frank-tribe", {
-	Name = "Frank Tribe",
-	Adjective = "Frankish",
-	Civilization = "frankish",
-	Type = "tribe",
-	Color = "green",
-	FactionUpgrade = "upgrade-faction-frank-tribe",
-	Icon = "icon-flag-old-austria",
-	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
-	Adjective = "Frankish",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe", "ubii-tribe"},
-	HistoricalCapitals = {
-		481, "tournai"
-	}
-})
-
 DefineFaction("austrasia", {
 	Name = "Austrasia",
 	Adjective = "Austrasian",
@@ -118,7 +102,7 @@ DefineFaction("austrasia", {
 	DefaultTier = "kingdom", -- correct?
 	FactionUpgrade = "upgrade-faction-austrasia",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		--"head-of-government", "none", "monarchy", "none", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -138,7 +122,7 @@ DefineFaction("east-francia", { -- Source: James Westfall Thompson, "Medieval Ge
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-east-francia",
 	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	-- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	--[[
@@ -160,7 +144,7 @@ DefineFaction("neustria", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-neustria",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	MinisterTitles = {
 		--"head-of-government", "none", "monarchy", "none", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
@@ -180,7 +164,7 @@ DefineFaction("salia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-salia",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	HistoricalCapitals = {
 		0, "soissons"
@@ -197,7 +181,7 @@ DefineFaction("burgundia", { -- Frankish kingdom of Burgundy (not to be confused
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-burgundia",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "frank-tribe", "sugambri-tribe"},
+	DevelopsFrom = {"ampsivarii-tribe", "batavian-tribe", "chamavi-tribe", "chatti-tribe", "sugambri-tribe"},
 	DevelopsTo = {"francia"},
 	HistoricalCapitals = {
 		0, "orleans"

@@ -383,19 +383,19 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Sigi"},
 		OptionEffects = {
 			function(s)
-				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "francia")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "francia")
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe", "war")
+				AcquireProvince(WorldMapProvinces.Holland, "francia")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "francia")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "francia", "war")
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Holland, "frank-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "frank-tribe")
+				AcquireProvince(WorldMapProvinces.Holland, "francia")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.frank_tribe.Civilization, "francia")
 				GrandStrategyFaction = Factions.frank_tribe
-				SetPlayerFaction(Factions.frank_tribe.Civilization, "frank-tribe")
+				SetPlayerFaction(Factions.frank_tribe.Civilization, "francia")
 			end
 		}
 	},

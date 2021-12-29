@@ -13,7 +13,6 @@ netherlands = {
 		batavian_tribe
 		chamavi_tribe
 		chatti_tribe
-		frank_tribe
 		sugambri_tribe
 		austrasia
 		brabant

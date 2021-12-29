@@ -50,13 +50,6 @@ DefineModifier("upgrade-faction-chatti-tribe",
 	{"apply-to", "unit-frank-spearman"}
 )
 
-DefineModifier("upgrade-faction-frank-tribe",
-	{"BasicDamage", 1},
-	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
 DefineModifier("upgrade-faction-sugambri-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
@@ -89,12 +82,6 @@ DefineModifier("upgrade-faction-east-francia",
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
 
-DefineModifier("upgrade-faction-francia",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
-)
-
 DefineModifier("upgrade-faction-neustria",
 	{"Accuracy", 1},
 	{"Armor", 1},
@@ -121,10 +108,6 @@ DefineDependency("upgrade-faction-chamavi-tribe",
 )
 
 DefineDependency("upgrade-faction-chatti-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-frank-tribe",
 	{"upgrade_ironworking"}
 )
 
