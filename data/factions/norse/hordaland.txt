@@ -1,10 +1,5 @@
 hordaland = {
 	develops_from = {
-		asa_tribe
-		hersing_tribe
-		jarling_tribe
-		karling_tribe
-		thralling_tribe
 		yngling_tribe
 	}
 	conditions = {
