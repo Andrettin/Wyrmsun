@@ -79,7 +79,7 @@ Item {
 		wrapMode: Text.WordWrap
 		font.pixelSize: 32 * wyrmgus.scale_factor
 		font.bold: true
-		visible: wyrmgus.game.paused
+		visible: wyrmgus.game.paused && !wyrmgus.lua_dialog_open
 	}
 	
 	GameMenuDialog {
