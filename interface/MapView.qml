@@ -79,7 +79,7 @@ Item {
 		wrapMode: Text.WordWrap
 		font.pixelSize: 32 * wyrmgus.scale_factor
 		font.bold: true
-		visible: wyrmgus.game.paused && !wyrmgus.lua_dialog_open
+		visible: wyrmgus.game.paused && !wyrmgus.lua_dialog_open && map_view.active_popup_count == 0
 	}
 	
 	GameMenuDialog {
@@ -438,25 +438,32 @@ Item {
 	}
 	
 	function increment_active_popup_count() {
-		++map_view.active_popup_count
+		var updated_active_popup_count = map_view.active_popup_count
+		++updated_active_popup_count
 		
-		if (map_view.active_popup_count == 1 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_count == 1 && !wyrmgus.map_editor.running) {
 			if (!wyrmgus.game.multiplayer) {
-				wyrmgus.paused = true
+				wyrmgus.game.paused = true
 			}
 			wyrmgus.modal_dialog_open = true
 		}
+		
+		//the map view's active popup count must be updated only afterwards, so that the "Paused" label doesn't appear for just an instant
+		map_view.active_popup_count = updated_active_popup_count
 	}
 	
 	function decrement_active_popup_count() {
-		--map_view.active_popup_count
+		var updated_active_popup_count = map_view.active_popup_count
+		--updated_active_popup_count
 		
-		if (map_view.active_popup_count == 0 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_count == 0 && !wyrmgus.map_editor.running) {
 			if (!wyrmgus.game.multiplayer) {
-				wyrmgus.paused = false
+				wyrmgus.game.paused = false
 			}
 			wyrmgus.modal_dialog_open = false
 		}
+		
+		map_view.active_popup_count = updated_active_popup_count
 	}
 	
 	function on_popup_opened(popup) {
