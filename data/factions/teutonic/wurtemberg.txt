@@ -2,4 +2,7 @@ wurtemberg = {
 	core_settlements = {
 		stuttgart
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

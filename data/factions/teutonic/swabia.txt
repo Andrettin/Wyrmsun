@@ -11,6 +11,9 @@ swabia = {
 		alamanni_tribe
 		suebi_tribe
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	
 	history = {
 		919 = {

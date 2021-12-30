@@ -110,7 +110,6 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 })
 
 DefineCivilization("teuton", {
-	Adjective = "Teutonic",
 	--[[
 	SettlementNames = {
 		"Altsohl",

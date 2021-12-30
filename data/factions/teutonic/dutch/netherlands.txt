@@ -26,7 +26,7 @@ netherlands = {
 		amsterdam
 	}
 	conditions = {
-		upgrade_class = writing
+		scripted_condition = is_civilized
 		upgrade_class = gunpowder
 	}
 	#settlement_names = {

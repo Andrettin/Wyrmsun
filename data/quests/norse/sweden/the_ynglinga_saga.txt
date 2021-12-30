@@ -7,7 +7,6 @@ the_ynglinga_saga = {
 	objectives = {
 		have_settlement = gothenburg
 		have_settlement = linkoping
-		found_faction = sweden
 		have_resource = {
 			resource = copper
 			quantity = 50000

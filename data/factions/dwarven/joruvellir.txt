@@ -19,7 +19,7 @@ joruvellir = { #from Norse mythology, "Joruvellir" = "Fields of Sand"
 		joruvellir
 	}
 	conditions = {
-		scripted_condition = is_civilized
+		scripted_condition = is_civilized_or_has_prerequisites
 	}
 	title_names = {
 		monarchy = {

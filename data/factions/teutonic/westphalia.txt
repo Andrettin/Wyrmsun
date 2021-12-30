@@ -10,4 +10,7 @@ westphalia = {
 	develops_from = {
 		saxon_tribe
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

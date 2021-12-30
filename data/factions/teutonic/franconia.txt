@@ -15,4 +15,7 @@ franconia = { #represents the German region, so it uses base Teuton elements, ra
 		sugambri_tribe
 		ubii_tribe
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

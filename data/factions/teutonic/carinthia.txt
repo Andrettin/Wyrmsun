@@ -5,4 +5,7 @@ carinthia = {
 		quadi_tribe
 		buri_tribe
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

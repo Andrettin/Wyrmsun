@@ -2,4 +2,7 @@ brunswick = {
 	core_settlements = {
 		hanover
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

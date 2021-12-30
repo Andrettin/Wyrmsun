@@ -16,6 +16,12 @@ austria = {
 		quadi_tribe
 		buri_tribe
 	}
+	core_settlements = {
+		vienna
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	title_names = {
 		monarchy = {
 			grand_duchy = "Archduchy"

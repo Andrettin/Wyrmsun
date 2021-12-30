@@ -1,9 +1,16 @@
-is_civilized = {
+is_civilized_or_has_prerequisites = {
 	or = {
 		and = {
 			faction_type = tribe
 			upgrade_class = writing
 		}
+		government_type = monarchy
+		government_type = republic
+	}
+}
+
+is_civilized = {
+	or = {
 		government_type = monarchy
 		government_type = republic
 	}

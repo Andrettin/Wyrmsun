@@ -2,4 +2,9 @@ prussia = {
 	core_settlements = {
 		konigsberg
 	}
+	conditions = {
+		scripted_condition = is_civilized
+		unit_type = unit_teuton_stronghold
+		unit_type = unit_teuton_barracks
+	}
 }

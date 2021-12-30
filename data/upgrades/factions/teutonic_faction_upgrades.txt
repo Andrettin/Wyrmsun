@@ -34,9 +34,6 @@ upgrade_faction_varini_tribe = {
 upgrade_faction_austria = {
 	name = "Austria"
 	effects_string = "+1 Speed for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_baden = {
@@ -73,9 +70,6 @@ upgrade_faction_brabant = {
 upgrade_faction_brandenburg = {
 	name = "Brandenburg"
 	effects_string = "+5% Lumber Processing for Lumber Mills"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_bremen = {
@@ -89,17 +83,11 @@ upgrade_faction_bremen = {
 upgrade_faction_brunswick = {
 	name = "Brunswick"
 	effects_string = "+10 HP for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_carinthia = {
 	name = "Carinthia"
 	effects_string = "+10 HP for Clerics"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_cologne = {
@@ -123,9 +111,6 @@ upgrade_faction_drenthe = {
 upgrade_faction_franconia = {
 	name = "Franconia"
 	effects_string = "+10 HP for Knights"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_friesland = {
@@ -199,11 +184,6 @@ upgrade_faction_overijssel = {
 upgrade_faction_prussia = {
 	name = "Prussia"
 	effects_string = "+2 Damage for Knights"
-	conditions = {
-		upgrade_class = writing
-		unit_type = unit_teuton_stronghold
-		unit_type = unit_teuton_barracks
-	}
 }
 
 upgrade_faction_saxony = {
@@ -217,9 +197,6 @@ upgrade_faction_saxony = {
 upgrade_faction_swabia = {
 	name = "Swabia"
 	effects_string = "+10 HP for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_switzerland = {
@@ -241,15 +218,9 @@ upgrade_faction_thuringia = {
 upgrade_faction_westphalia = {
 	name = "Westphalia"
 	effects_string = "+2 Accuracy for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_wurtemberg = {
 	name = "Wurtemberg"
 	effects_string = "+2 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }

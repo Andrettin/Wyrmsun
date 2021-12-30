@@ -1,6 +1,7 @@
 teuton = {
 	name = "Teuton"
 	aliases += teutonic
+	adjective = "Teutonic"
 	parent_civilization = germanic
 	group = continental_west_germanic
 	language = high_german
@@ -10,6 +11,8 @@ teuton = {
 	description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\"."
 	develops_from = {
 		germanic
+		frankish
+		suebi
 	}
 	
 	unit_sounds = {

@@ -2,4 +2,7 @@ brandenburg = {
 	core_settlements = {
 		berlin
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

@@ -31,14 +31,6 @@ germany = {
 		stuttgart
 	}
 	conditions = {
-		not = {
-			any_other_player = {
-				or = {
-					civilization = teutonic
-					civilization = frankish
-					civilization = suebi
-				}
-			}
-		}
+		scripted_condition = is_civilized
 	}
 }
