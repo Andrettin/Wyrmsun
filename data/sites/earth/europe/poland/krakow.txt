@@ -4,9 +4,6 @@ krakow = {
 	geocoordinate = { 19.96001135120 50.05997926750 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 14 205 65 }
-	cores = {
-		poland
-	}
 	regions = {
 		cisleithania
 		poland

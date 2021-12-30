@@ -18,6 +18,9 @@ gotland = {
 		thielung_tribe
 		thralling_tribe
 	}
+	core_settlements = {
+		visby
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

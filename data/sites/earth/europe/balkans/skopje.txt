@@ -7,9 +7,6 @@ skopje = {
 	cultural_names = {
 		latin = "Scupi" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	}
-	cores = {
-		bryges_tribe
-	}
 	regions = {
 		yugoslavia
 	}

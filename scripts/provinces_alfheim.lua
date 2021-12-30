@@ -61,13 +61,3 @@ DefineProvince("Ulfdalir", {
 		"elf", "ulfdalir"
 	}
 })
-
-DefineProvince("Wesmere", { -- from Wesnoth
-	World = "alfheim",
-	CulturalNames = {
-		"elf", "Wesmere"
-	},
-	Claims = {
-		"elf", "wesmere"
-	}
-})

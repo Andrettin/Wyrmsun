@@ -54,22 +54,6 @@ DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest G
 	FactionUpgrade = "upgrade-faction-skeldung-tribe"
 })
 
-DefineFaction("hersing-tribe", {
-	Name = "Hersing Tribe",
-	Adjective = "Hersing",
-	Civilization = "germanic",
-	Type = "tribe",
-	Color = "white",
-	FactionUpgrade = "upgrade-faction-skeldung-tribe",
-	DefaultAI = "passive",
-	Background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl.",
-	HistoricalResources = {
-		-3000, "copper", 0,
-		-3000, "lumber", 0,
-		-3000, "stone", 0,
-	}
-})
-
 DefineFaction("hlesing-tribe", {
 	Name = "Hlesing Tribe",
 	Adjective = "Hlesing",

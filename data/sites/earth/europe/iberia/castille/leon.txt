@@ -4,9 +4,6 @@ leon = {
 	geocoordinate = { -5.57000655254 42.57997072250 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 201 142 117 }
-	cores = {
-		leon
-	}
 	cultural_names = {
 		latin = "Castra Legionis" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

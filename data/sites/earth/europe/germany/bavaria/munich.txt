@@ -7,11 +7,6 @@ munich = {
 	cultural_names = {
 		#teutonic = "München"
 	}
-	cores = {
-		bavarian_tribe
-		germany
-		holy_rome
-	}
 	regions = {
 		bavaria
 	}

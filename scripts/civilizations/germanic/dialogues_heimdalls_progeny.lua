@@ -289,7 +289,7 @@ DefineDialogue("jarl-meets-the-hersings", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "hersing-tribe",
+			"speaker-player", "hersing_tribe",
 			"text", "Welcome to the lands of the chieftain Hersir. What do you desire with us?",
 			"options", {"Seek an alliance", "Threaten them"},
 			"option-effects", {
@@ -329,7 +329,7 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "hersing-tribe",
+			"speaker-player", "hersing_tribe",
 			"text", "That will be a great honor for our chieftain."
 		},
 		{
@@ -337,10 +337,10 @@ DefineDialogue("jarl-forges-an-alliance-with-the-hersings", {
 			"text", "Then let us rejoice and feast together!",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "allied", GetFactionPlayer("hersing-tribe"))
-					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "allied", trigger_player)
-					SetSharedVision(trigger_player, true, GetFactionPlayer("hersing-tribe"))
-					SetSharedVision(GetFactionPlayer("hersing-tribe"), true, trigger_player)
+					SetDiplomacy(trigger_player, "allied", GetFactionPlayer("hersing_tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing_tribe"), "allied", trigger_player)
+					SetSharedVision(trigger_player, true, GetFactionPlayer("hersing_tribe"))
+					SetSharedVision(GetFactionPlayer("hersing_tribe"), true, trigger_player)
 					if (GetPlayerData(trigger_player, "HasQuest", "heimdalls_progeny")) then
 						SetPlayerData(trigger_player, "CompleteQuest", "heimdalls_progeny")
 					end
@@ -358,7 +358,7 @@ DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "hersing-tribe",
+			"speaker-player", "hersing_tribe",
 			"text", "That would shame our tribe. You are not worthy."
 		},
 		{
@@ -366,10 +366,10 @@ DefineDialogue("jarl-fails-to-ally-with-the-hersings", {
 			"text", "What did you say?! I shall stain your lands with your own blood!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")}, GetPlayerData(trigger_player, "StartMapLayer"))
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing_tribe"), {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")}, GetPlayerData(trigger_player, "StartMapLayer"))
 					SetUnitVariable(unit, "TTL", 600)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
-					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing_tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing_tribe"), "enemy", trigger_player)
 				end
 			}
 		}
@@ -384,14 +384,14 @@ DefineDialogue("jarl-threatens-the-hersings", {
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "hersing-tribe",
+			"speaker-player", "hersing_tribe",
 			"text", "We greet you into our village, and you dare threaten us?! Prepare to die!",
 			"option-effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing-tribe"), {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")}, GetPlayerData(trigger_player, "StartMapLayer"))
+					unit = CreateUnit("unit-revealer", GetFactionPlayer("hersing_tribe"), {GetPlayerData(trigger_player, "StartPosX"), GetPlayerData(trigger_player, "StartPosY")}, GetPlayerData(trigger_player, "StartMapLayer"))
 					SetUnitVariable(unit, "TTL", 600)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing-tribe"))
-					SetDiplomacy(GetFactionPlayer("hersing-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hersing_tribe"))
+					SetDiplomacy(GetFactionPlayer("hersing_tribe"), "enemy", trigger_player)
 				end
 			}
 		}

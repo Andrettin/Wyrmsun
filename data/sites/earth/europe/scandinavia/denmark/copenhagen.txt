@@ -7,9 +7,6 @@ copenhagen = {
 	cultural_names = {
 		#norse = "København"
 	}
-	cores = {
-		denmark
-	}
 	regions = {
 		scandinavia
 	}

@@ -1,0 +1,5 @@
+brandenburg = {
+	core_settlements = {
+		berlin
+	}
+}

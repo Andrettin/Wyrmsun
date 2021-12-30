@@ -5,9 +5,6 @@ genoa = {
 	cultural_names = {
 		latin = "Genua" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
-	cores = {
-		genoa
-	}
 	regions = {
 		italy
 	}

@@ -1,0 +1,5 @@
+wessex = {
+	core_settlements = {
+		winchester
+	}
+}

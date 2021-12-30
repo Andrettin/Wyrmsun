@@ -21,6 +21,15 @@ holy_rome = {
 		saxony
 		swabia
 	}
+	core_settlements = {
+		cologne
+		erfurt
+		frankfurt
+		hanover
+		kiel
+		munich
+		stuttgart
+	}
 	conditions = {
 		government_type = monarchy
 		upgrade = upgrade_deity_christian_god

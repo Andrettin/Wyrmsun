@@ -454,7 +454,7 @@ DefineProvince("Bohemia", {
 		"teuton", "Bohemia" -- Böhmen
 	},
 	FactionCulturalNames = {
-		"suebi", "marcomanni-tribe", "Marcomannia",
+		"suebi", "marcomanni_tribe", "Marcomannia",
 		"suebi", "suebi_tribe", "Marcomannia"
 	},
 --	SettlementLocation = {520, 113}, -- Prague
@@ -462,13 +462,13 @@ DefineProvince("Bohemia", {
 		"basque", "linearware-tribe",
 		"gaul", "boii-tribe",
 		"slav", "bohemia",
-		"suebi", "marcomanni-tribe",
+		"suebi", "marcomanni_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-400, "gaul", "boii-tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
-		-9, "suebi", "marcomanni-tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
+		-9, "suebi", "marcomanni_tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 		526, "teuton", "bavarian-tribe", -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		788, "slav", "bohemia", -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		919, "teuton", "holy-rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -515,19 +515,19 @@ DefineProvince("Brandenburg", {
 		"teuton", "Brandenburg"
 	},
 	FactionCulturalNames = {
-		"suebi", "semnone-tribe", "Semnonia",
+		"suebi", "semnone_tribe", "Semnonia",
 		"suebi", "suebi_tribe", "Semnonia"
 	},
 --	SettlementLocation = {518, 106}, -- Berlin
 	Claims = {
-		"suebi", "semnone-tribe",
+		"suebi", "semnone_tribe",
 		"suebi", "suebi_tribe",
 		"teuton", "brandenburg"
 	},
 	HistoricalOwners = {
-		-264, "suebi", "semnone-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "suebi", "semnone_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-71, "suebi", "suebi_tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
-		161, "suebi", "semnone-tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "semnone_tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -975,7 +975,7 @@ DefineProvince("Dauphiny", {
 DefineProvince("Devon", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Devon",
+		"anglo-saxon", "angle_tribe", "Devon",
 		"english", "england", "Devon"
 	},
 --	SettlementLocation = {470, 111}, -- Exeter
@@ -1098,7 +1098,7 @@ DefineProvince("Durham", {
 	},
 	HistoricalOwners = {
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "anglo-saxon", "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1148,7 +1148,7 @@ DefineProvince("East Anglia", {
 	HistoricalOwners = {
 		-27, "briton", "iceni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		616, "anglo-saxon", "east-anglia", -- we have notice that Rædwald was king of East Anglia then; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1204,7 +1204,7 @@ DefineProvince("Epirus", {
 DefineProvince("Essex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Essex",
+		"anglo-saxon", "angle_tribe", "Essex",
 		"english", "england", "Essex"
 	},
 --	SettlementLocation = {480, 109}, -- London
@@ -1687,12 +1687,12 @@ DefineProvince("Hither Pomerania", {
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"goth", "rugian-tribe",
-		"suebi", "semnone-tribe"
+		"suebi", "semnone_tribe"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "goth", "rugian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "semnone-tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "semnone_tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1648, "norse", "sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalCultures = {
@@ -1799,7 +1799,7 @@ DefineProvince("Hungary", {
 		-264, "persian", "iazyge-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --		161, "goth", "vandal-tribe", -- Parts of northern Hungary were inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "persian", "iazyge-tribe", -- The area was inhabited by the Iazyges in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		896, "magyar", "magyar-tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
+		896, "magyar", "magyar_tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
 		919, "magyar", "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1866,23 +1866,23 @@ DefineProvince("Jutland", {
 		"norse", "Jutland"
 	},
 	FactionCulturalNames = {
-		"anglo-saxon", "jute-tribe", "Jutland"
+		"anglo-saxon", "jute_tribe", "Jutland"
 	},
 --	SettlementLocation = {508, 96}, -- Aarhus
 	Claims = {
 		"germanic", "skeldung-tribe",
 		"norse", "denmark",
-		"anglo-saxon", "charude-tribe",
-		"anglo-saxon", "jute-tribe",
-		"anglo-saxon", "teuton-tribe"
+		"anglo-saxon", "charude_tribe",
+		"anglo-saxon", "jute_tribe",
+		"anglo-saxon", "teuton_tribe"
 	},
 	HistoricalOwners = {
 		-5800, "basque", "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 		-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) begins being irregularly occupied at around 5400 BC; wild boars were hunted for their meat; pine martens and otters were hunted for their fur; the site was generally occupied between Fall and early Spring; Ringkloster may have been occupied by Ertebolle foragers, who would pass the remnant of the year at the coast; it may also have been inhabited by a people distinct from the coast-inhabitants; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 		-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) ceases being irregularly occupied at around 3550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 		-2800, "germanic", "skeldung-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-		-27, "anglo-saxon", "charude-tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "anglo-saxon", "teuton-tribe", -- The area was inhabited by the Teutones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-27, "anglo-saxon", "charude_tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "anglo-saxon", "teuton_tribe", -- The area was inhabited by the Teutones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "norse", "denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -1899,7 +1899,7 @@ DefineProvince("Jutland", {
 DefineProvince("Kent", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Kent",
+		"anglo-saxon", "angle_tribe", "Kent",
 		"english", "england", "Kent"
 	},
 --	SettlementLocation = {483, 110}, -- Dover
@@ -1910,7 +1910,7 @@ DefineProvince("Kent", {
 	HistoricalOwners = {
 		-27, "briton", "cantii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "jute-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "jute_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2083,7 +2083,7 @@ DefineProvince("Lincoln", {
 	HistoricalOwners = {
 		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "anglo-saxon", "middle-anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		656, "anglo-saxon", "northumbria", -- After the murder of Peada in 656, Middle Anglia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		657, "anglo-saxon", "mercia", -- Wulfhere proclaimed Mercian king in 657, ending Northumbrian dominion (apparently from the source not only in Mercia but also in Middle Anglia); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -2411,7 +2411,7 @@ DefineProvince("Mecklenburg", {
 DefineProvince("Mercia", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Mercia",
+		"anglo-saxon", "angle_tribe", "Mercia",
 		"english", "england", "Mercia"
 	},
 --	SettlementLocation = {475, 106}, -- Tamworth
@@ -2422,7 +2422,7 @@ DefineProvince("Mercia", {
 	HistoricalOwners = {
 		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		632, "anglo-saxon", "mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
 		654, "anglo-saxon", "middle-anglia", -- Peada, king of the Middle Angles, ruled over the Mercian lands south of the Trent after Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		656, "anglo-saxon", "northumbria", -- After the murder of Peada in 656, Mercia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -2503,7 +2503,7 @@ DefineProvince("Moravia", {
 		830, "slav", "moravia", -- Mojmír was duke of Moravia 830-846; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
 		869, "frankish", "east-francia", -- Moravia conquered by East Francia in 869; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 		871, "slav", "moravia", -- Moravia rose against East Frankish domination in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
-		906, "magyar", "magyar-tribe", -- Magyars conquered Moravia in 906; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
+		906, "magyar", "magyar_tribe", -- Magyars conquered Moravia in 906; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
 		1003, "slav", "poland", -- Moravia conquered by Poland in 1003; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		1030, "slav", "bohemia", -- Moravia acquired by Boleslav I of Bohemia in 1030; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -2698,7 +2698,7 @@ DefineProvince("North Trondelag", {
 DefineProvince("Northumberland", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Bernicia",
+		"anglo-saxon", "angle_tribe", "Bernicia",
 		"english", "england", "Northumberland"
 	},
 --	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -3233,12 +3233,12 @@ DefineProvince("Schleswig", {
 	},
 --	SettlementLocation = {506, 100}, -- Flensburg
 	Claims = {
-		"anglo-saxon", "angle-tribe",
+		"anglo-saxon", "angle_tribe",
 		"anglo-saxon", "avione-tribe"
 	},
 	HistoricalOwners = {
-		-264, "anglo-saxon", "angle-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "anglo-saxon", "angle-tribe", -- The area was inhabited by the Anglii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-264, "anglo-saxon", "angle_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "anglo-saxon", "angle_tribe", -- The area was inhabited by the Anglii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "norse", "denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -3286,7 +3286,7 @@ DefineProvince("Silesia", {
 	},
 	HistoricalOwners = {
 		-264, "goth", "silingae-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "marcomanni-tribe", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "marcomanni_tribe", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "slav", "poland", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1740, "teuton", "brandenburg" -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
@@ -3335,7 +3335,7 @@ DefineProvince("Slovakia", {
 DefineProvince("Somerset", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Somerset",
+		"anglo-saxon", "angle_tribe", "Somerset",
 		"english", "england", "Somerset"
 	},
 --	SettlementLocation = {473, 110}, -- Wells
@@ -3428,7 +3428,7 @@ DefineProvince("Styria", {
 DefineProvince("Sussex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Sussex",
+		"anglo-saxon", "angle_tribe", "Sussex",
 		"english", "england", "Sussex"
 	},
 --	SettlementLocation = {480, 111}, -- Newhaven
@@ -3954,7 +3954,7 @@ DefineProvince("Wallachia", {
 DefineProvince("Wessex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Wessex",
+		"anglo-saxon", "angle_tribe", "Wessex",
 		"english", "england", "Wessex"
 	},
 --	SettlementLocation = {476, 110}, -- Winchester
@@ -4075,7 +4075,7 @@ DefineProvince("Wurtemberg", {
 DefineProvince("York", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle-tribe", "Deira",
+		"anglo-saxon", "angle_tribe", "Deira",
 		"english", "england", "York"
 	},
 	Claims = {

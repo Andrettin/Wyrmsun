@@ -4,11 +4,6 @@ stuttgart = {
 	geocoordinate = { 9.19999629582 48.77997987780 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 192 202 36 }
-	cores = {
-		wurtemberg
-		germany
-		holy_rome
-	}
 	regions = {
 		wurtemberg
 	}

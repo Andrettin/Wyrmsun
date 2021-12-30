@@ -1,0 +1,5 @@
+mercia = {
+	core_settlements = {
+		tamworth
+	}
+}

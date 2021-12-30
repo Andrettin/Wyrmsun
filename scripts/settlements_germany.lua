@@ -33,10 +33,6 @@ DefineSite("augsburg", {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Augsburg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
-	Cores = {
-		"germany", -- Augsburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Augsburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
 	HistoricalOwners = {
 		170, "rome", -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		172, "",
@@ -74,12 +70,10 @@ DefineSite("bremen", {
 	CulturalNames = {
 		"teuton", "Bremen"
 	},
-	Cores = {
-		"chauci-tribe",
-		"bremen",
-		"germany", -- Bremen was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Bremen was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
+	--Cores = {
+	--	"chauci-tribe",
+	--	"bremen"
+	--},
 	HistoricalOwners = {
 		-264, "chauci-tribe", -- Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "saxon-tribe" -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -165,10 +159,6 @@ DefineSite("fulda", {
 	CulturalNames = {
 		"teuton", "Fulda"
 	},
-	Cores = {
-		"germany", -- Fulda was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Fulda was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
 	HistoricalOwners = {
 		526, "thuringian-tribe", -- Fulda's area was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
@@ -201,10 +191,6 @@ DefineSite("konstanz", {
 	CulturalNames = {
 		"teuton", "Konstanz"
 	},
-	Cores = {
-		"germany", -- Konstanz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Konstanz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
 	HistoricalOwners = {
 		561, "austrasia", -- Constantia went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 		1815, "baden" -- Constance was a possession of the Grand Duchy of Baden in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
@@ -223,12 +209,10 @@ DefineSite("magdeburg", {
 	CulturalNames = {
 		"teuton", "Magdeburg"
 	},
-	Cores = {
-		"cherusci-tribe",
-		"germany", -- Magdeburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"magdeburg",
-		"holy-rome" -- Magdeburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
+	--Cores = {
+	--	"cherusci-tribe",
+	--	"magdeburg"
+	--},
 	HistoricalOwners = {
 		-264, "cherusci-tribe", -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1648, "magdeburg", -- Magdeburg was a Magdeburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
@@ -266,11 +250,9 @@ DefineSite("munster", {
 	CulturalNames = {
 		"teuton", "Munster" -- "Münster"
 	},
-	Cores = {
-		"germany", -- Münster was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome", -- Münster was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	--Cores = {
 --		"westphalia"
-	},
+	--},
 	HistoricalOwners = {
 		-264, "sugambri-tribe", -- Münster's area was territory of the Sugambri in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		481, "saxon-tribe", -- Münster's area was territory of the Saxons in the 481-804 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -288,10 +270,6 @@ DefineSite("nuremberg", {
 	Position = {4087, 930},
 	CulturalNames = {
 		"teuton", "Nuremberg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	Cores = {
-		"germany", -- Nuremberg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Nuremberg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		161, "hermunduri-tribe", -- the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -328,10 +306,6 @@ DefineSite("regensburg", {
 		"latin", "Regina Castra",
 		"teuton", "Regensburg"
 		-- Ratisbon
-	},
-	Cores = {
-		"germany", -- Regensburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Regensburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalOwners = {
 		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
@@ -435,10 +409,6 @@ DefineSite("worms", {
 	CulturalNames = {
 		"latin", "Borbetomagus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Worms"
-	},
-	Cores = {
-		"germany",
-		"holy-rome"
 	},
 	HistoricalOwners = {
 		395, "rome", -- Worms was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

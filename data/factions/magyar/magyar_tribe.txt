@@ -1,0 +1,12 @@
+magyar_tribe = {
+	name = "Magyar Tribe"
+	adjective = "Magyar"
+	civilization = magyar
+	type = tribe
+	color = green
+	default_tier = duchy
+	core_settlements = {
+		pest
+		szekesfehervar
+	}
+}

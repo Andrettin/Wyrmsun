@@ -1,0 +1,5 @@
+brunswick = {
+	core_settlements = {
+		hanover
+	}
+}

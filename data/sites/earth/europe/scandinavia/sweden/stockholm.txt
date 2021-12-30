@@ -7,9 +7,6 @@ stockholm = {
 	cultural_names = {
 		germanic = "Stukkahulma" #tentative rendering of "Stockholm" in Proto-Germanic
 	}
-	cores = {
-		sweden
-	}
 	regions = {
 		scandinavia
 	}

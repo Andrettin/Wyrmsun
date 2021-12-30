@@ -7,9 +7,6 @@ belgrade = {
 	cultural_names = {
 		latin = "Singidunum" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	}
-	cores = {
-		serbia
-	}
 	regions = {
 		serbia
 	}

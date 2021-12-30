@@ -10,11 +10,6 @@ york = {
 		celt = "Eboracum"
 		latin = "Eboracum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
-	cores = {
-		englaland
-		england
-		northumbria
-	}
 	regions = {
 		england
 	}

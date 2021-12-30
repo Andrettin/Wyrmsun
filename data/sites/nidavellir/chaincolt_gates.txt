@@ -2,7 +2,6 @@ chaincolt_gates = { #from Battle for Wesnoth: The Sceptre of Fire (Closing the G
 	name = "Chaincolt Gates"
 	map_template = caverns_of_chaincolt_gates
 	pos = { 22 12 }
-	#cores = { norlund_clan }
 	
 	history = {
 		years_wesnoth = {
@@ -19,7 +18,6 @@ chaincolt_gates_outpost = { #from Battle for Wesnoth: The Sceptre of Fire (Closi
 	map_template = caverns_of_chaincolt_gates
 	#pos = { 7 23 }
 	pos = { 7 22 } #moved to here, as otherwise the impassable terrain would be in its place
-	#cores = { norlund_clan }
 	
 	history = {
 		years_wesnoth = {

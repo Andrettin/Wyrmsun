@@ -31,12 +31,10 @@ DefineProvince("Acthna", {
 		"gnome", "Acthna"
 	},
 	Claims = {
-		"gnome", "acthnic-tribe",
-		"gnome", "acthna",
 		"gnome", "untersberg"
 	},
 	HistoricalOwners = {
-		-25000, "gnome", "acthnic-tribe", -- maybe should be later?
+		-25000, "gnome", "acthnic_tribe", -- maybe should be later?
 		1, "gnome", "acthna" -- maybe should be at another date?
 	},
 	HistoricalCultures = {

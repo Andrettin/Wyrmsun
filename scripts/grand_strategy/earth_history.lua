@@ -559,7 +559,7 @@ if (GrandStrategyYear >= -431) then
 	SetProvinceOwner("Bulgaria", "thracian", "odrysae-tribe")
 	SetProvinceCivilization("Bulgaria", "thracian")
 	
-	SetProvinceOwner("Skopje", "phrygian", "bryges-tribe")
+	SetProvinceOwner("Skopje", "phrygian", "bryges_tribe")
 	SetProvinceCivilization("Skopje", "phrygian")
 
 	SetFactionDiplomacyState("greek", "athens", "greek", "sparta", "war")

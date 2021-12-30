@@ -34,7 +34,7 @@
 DefineUnitType("unit-deep-gnomish-recruit", {
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
-	Faction = "acthnic-tribe",
+	Faction = "acthnic_tribe",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_red_hair.png", "size", {72, 72}},
 	Icon = "icon-deep-gnomish-recruit-red-hair",
 	DaySightRangeBonus = -1,
@@ -67,7 +67,7 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 DefineUnitType("unit-deep-gnomish-duelist", {
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
-	Faction = "acthnic-tribe",
+	Faction = "acthnic_tribe",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_red_hair.png", "size", {72, 72}},
 	Icon = "icon-deep-gnomish-duelist-red-hair",
 	DaySightRangeBonus = -1,
@@ -100,7 +100,7 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
-	Faction = "acthnic-tribe",
+	Faction = "acthnic_tribe",
 	Image = {"file", "gnome/units/deep_gnomish_recruit_red_hair.png", "size", {72, 72}},
 	Icon = "icon-deep-gnomish-master-at-arms-red-hair",
 	DaySightRangeBonus = -1,
@@ -133,7 +133,7 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 DefineUnitType("unit-deep-gnomish-herbalist", {
 	Parent = "unit-gnomish-herbalist",
 	Civilization = "gnome",
-	Faction = "acthnic-tribe",
+	Faction = "acthnic_tribe",
 	Image = {"file", "gnome/units/deep_gnomish_herbalist_gray_hair.png", "size", {72, 72}},
 	Icon = "icon-deep-gnomish-herbalist-gray-hair",
 	DaySightRangeBonus = -1,

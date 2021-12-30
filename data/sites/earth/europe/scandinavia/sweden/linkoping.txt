@@ -4,10 +4,6 @@ linkoping = {
 	geocoordinate = { 15.62993973660 58.41001222650 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 208 38 163 }
-	cores = {
-		#gothic_tribe
-		gautland
-	}
 	regions = {
 		scandinavia
 	}

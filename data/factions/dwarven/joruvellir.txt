@@ -15,6 +15,9 @@ joruvellir = { #from Norse mythology, "Joruvellir" = "Fields of Sand"
 		eikinskjaldi_clan
 		goldhoof_clan
 	}
+	core_settlements = {
+		joruvellir
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

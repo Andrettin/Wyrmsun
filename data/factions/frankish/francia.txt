@@ -21,6 +21,9 @@ francia = {
 		#	monarchy = "Mayor of the Palace" #Source: "Medieval Warfare V.2", 2013, p. 7.
 		#}
 	}
+	core_settlements = {
+		frankfurt
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

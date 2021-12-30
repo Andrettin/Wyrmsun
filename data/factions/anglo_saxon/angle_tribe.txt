@@ -1,0 +1,24 @@
+angle_tribe = {
+	name = "Angle Tribe"
+	adjective = "Angle"
+	civilization = anglo_saxon
+	type = tribe
+	color = white
+	default_tier = duchy
+	upgrade = upgrade_faction_angle_tribe
+	icon = icon_flag_green_lion_on_purple
+	develops_from = {
+		asa_tribe
+		hersing_tribe
+		hlesing_tribe
+		ingaevone_tribe
+		jarling_tribe
+		karling_tribe
+		skeldung_tribe
+		thielung_tribe
+		thralling_tribe
+	}
+	core_settlements = {
+		aarhus #Angeln
+	}
+}

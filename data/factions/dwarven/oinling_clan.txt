@@ -1,3 +1,6 @@
 oinling_clan = {
 	default_tier = county #clan
+	core_settlements = {
+		andvaris_falls
+	}
 }

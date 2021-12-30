@@ -32,9 +32,9 @@ DefineSite("eljudnir", { -- Hel's hall in Norse mythology; Source: Kevin Crossle
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 	},
-	Cores = {
-		"hel"
-	},
+--	Cores = {
+--		"hel"
+--	},
 	HistoricalOwners = {
 --		-30000, "hel"
 	},

@@ -3,9 +3,6 @@ ka_lian = {
 	map_template = ka_lian
 	pos = { 31 30 }
 	base_unit_type = unit_settlement_site
-	cores = {
-		wesmere
-	}
 	
 	history = {
 		years_wesnoth = {

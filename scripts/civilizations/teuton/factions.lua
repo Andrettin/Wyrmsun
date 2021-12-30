@@ -33,7 +33,7 @@ DefineFaction("saxon-tribe", {
 	Color = "pink",
 	FactionUpgrade = "upgrade-faction-saxon-tribe",
 	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
+	DevelopsFrom = {"asa-tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
 	DevelopsTo = {"gumeninga-tribe", "essex", "middlesex", "sussex", "wessex"},
 	--[[
 	SettlementNames = {
@@ -74,7 +74,7 @@ DefineFaction("frisian-tribe", {
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-frisian-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa-tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("bavarian-tribe", {
@@ -85,7 +85,7 @@ DefineFaction("bavarian-tribe", {
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-bavarian-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"marcomanni-tribe", "quadi-tribe", "buri-tribe"}, -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe
+	DevelopsFrom = {"marcomanni_tribe", "quadi-tribe", "buri-tribe"}, -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe
 	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
 })
 

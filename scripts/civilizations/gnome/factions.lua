@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("acthnic-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 158.
-	Name = "Acthnic Tribe",
-	Adjective = "Acthnic",
-	Civilization = "gnome",
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-acthnic-tribe",
-	Description = "The Acthnic tribe lives deep underground, near the subterranean fires of their homelands. They're known for being dangerous and reckless, occasionally entering the territory of derros or goblins without invitation. Their sages are well-versed in the mysteries of lightning, but above all they are masters of the flame."
-})
-
 DefineFaction("cubital-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 157-158.
 	Name = "Cubital Tribe",
 	Adjective = "Cubital",
@@ -72,19 +62,6 @@ DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1
 	Type = "tribe",
 	Color = "yellow",
 	Description = "The Vulcans excel at mining and metallurgy. The tribe's sages are believed to possess power over fire and thunder."
-})
-
-DefineFaction("acthna", {
-	Name = "Acthna",
-	Adjective = "Acthnic",
-	ParentFaction = "acthnic-tribe",
-	Civilization = "gnome",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "duchy",
-	HistoricalCapitals = {
-		-25000, "acthna"
-	}
 })
 
 DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.

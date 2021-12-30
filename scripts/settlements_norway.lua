@@ -33,10 +33,9 @@ DefineSite("arendal", {
 	CulturalNames = {
 		"norse", "Arendal"
 	},
-	Cores = {
-		"agder",
-		"norway"
-	},
+	--Cores = {
+	--	"agder"
+	--},
 	HistoricalOwners = {
 		841, "agder" -- Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
@@ -53,10 +52,9 @@ DefineSite("gjerstad", {
 	CulturalNames = {
 		"norse", "Geirstadir" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
 	},
-	Cores = {
-		"norway",
-		"vestfold"
-	},
+	--Cores = {
+	--	"vestfold"
+	--},
 	HistoricalOwners = {
 		824, "vestfold" -- Geirstadir was the main residence of king Olaf of Vestfold; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
@@ -74,10 +72,9 @@ DefineSite("hamar", {
 	CulturalNames = {
 		"norse", "Hamar"
 	},
-	Cores = {
-		"hedmark",
-		"norway"
-	},
+	--Cores = {
+	--	"hedmark"
+	--},
 	HistoricalOwners = {
 		841, "hedmark", -- the kingdom of Hedmark was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 262-263.
 		1560, "denmark" -- Hamar's area was a Danish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
@@ -96,10 +93,9 @@ DefineSite("hermansverk", {
 	CulturalNames = {
 		"norse", "Hermansverk"
 	},
-	Cores = {
-		"norway",
-		"sogn"
-	},
+	--Cores = {
+	--	"sogn"
+	--},
 	HistoricalOwners = {
 		841, "sogn", -- the kingdom of Sogn was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
 	},
@@ -117,10 +113,9 @@ DefineSite("tonsberg", {
 	CulturalNames = {
 		"norse", "Tonsberg" -- "Tønsberg"
 	},
-	Cores = {
-		"norway",
-		"vestfold"
-	},
+	--Cores = {
+	--	"vestfold"
+	--},
 	HistoricalOwners = {
 		841, "vestfold" -- the kingdom of Vestfold was in existence when Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},

@@ -7,9 +7,6 @@ rio_de_janeiro = {
 	cultural_names = {
 		french = "Henriville"
 	}
-	cores = {
-		brazil
-	}
 	regions = {
 		brazil
 	}

@@ -33,9 +33,6 @@ DefineSite("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: 
 	CulturalNames = {
 		"ettin", "Geirrod's Hall"
 	},
-	Cores = {
-		"geirrodung-clan"
-	},
 	HistoricalOwners = {
 		-1101, "geirrodung-clan" -- should be present for Thialfi's scenario
 	},

@@ -20,6 +20,16 @@ germany = {
 		saxony
 		swabia
 	}
+	core_settlements = {
+		berlin
+		cologne
+		erfurt
+		frankfurt
+		hanover
+		kiel
+		munich
+		stuttgart
+	}
 	conditions = {
 		not = {
 			any_other_player = {

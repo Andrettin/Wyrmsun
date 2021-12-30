@@ -16,6 +16,9 @@ holmgard = {
 		yngling_tribe
 		sitone_tribe
 	}
+	core_settlements = {
+		novgorod
+	}
 	conditions = {
 		upgrade_class = writing
 	}

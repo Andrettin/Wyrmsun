@@ -47,9 +47,9 @@ DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	CulturalNames = {
 		"goblin", "Driftwood" -- in the original, it is a town run by a cartel of intelligent apes
 	},
-	Cores = {
-		"driftwood"
-	},
+--	Cores = {
+--		"driftwood"
+--	},
 	HistoricalOwners = {
 		600, "driftwood"
 	},

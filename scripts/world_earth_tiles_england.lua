@@ -35,7 +35,7 @@ DefineWorldMapTile({465, 113}, {
 DefineWorldMapTile({468, 110}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Bardanstapol", -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Bardanstapol", -- Old English name of Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Barnstaple"
 	}
 })
@@ -50,7 +50,7 @@ DefineWorldMapTile({468, 112}, {
 DefineWorldMapTile({471, 105}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Bancornaburg", -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Bancornaburg", -- Old English name of Bangor on Dee; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Bangor on Dee"
 	}
 })
@@ -58,7 +58,7 @@ DefineWorldMapTile({471, 105}, {
 DefineWorldMapTile({472, 110}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Alre", -- Old English name of Aller; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Alre", -- Old English name of Aller; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Aller"
 	}
 })
@@ -66,7 +66,7 @@ DefineWorldMapTile({472, 110}, {
 DefineWorldMapTile({472, 111}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Abbodesbyrig", -- Old English name of Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Abbotsbury"
 	}
 })
@@ -95,7 +95,7 @@ DefineWorldMapTile({474, 109}, {
 DefineWorldMapTile({474, 111}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Baddanbyrig", -- Old English name of the Badbury Rings; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Damerham"
 	}
 })
@@ -110,7 +110,7 @@ DefineWorldMapTile({475, 99}, {
 DefineWorldMapTile({475, 104}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Badecanwiellon", -- Old English name of Bakewell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Badecanwiellon", -- Old English name of Bakewell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Bakewell"
 	}
 })
@@ -118,8 +118,8 @@ DefineWorldMapTile({475, 104}, {
 DefineWorldMapTile({476, 109}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Abbandun", -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "angle-tribe", "Bænesingtun", -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Abbandun", -- Old English name of Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Bænesingtun", -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Abingdon",
 		"english", "england", "Bensington"
 	}
@@ -128,8 +128,8 @@ DefineWorldMapTile({476, 109}, {
 DefineWorldMapTile({476, 110}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "angle-tribe", "Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Basengum", -- Old English name of Basing; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Basing",
 		"english", "england", "Andover"
 	}
@@ -138,7 +138,7 @@ DefineWorldMapTile({476, 110}, {
 DefineWorldMapTile({477, 108}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Ægelesburg", -- Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Ægelesburg", -- Old English name of Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Aylesbury"
 	}
 })
@@ -153,7 +153,7 @@ DefineWorldMapTile({478, 102}, {
 DefineWorldMapTile({479, 109}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Gumeninga Hearh", -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+		"anglo-saxon", "angle_tribe", "Gumeninga Hearh", -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"english", "england", "Harrow on the Hill"
 	}
 })
@@ -168,8 +168,8 @@ DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atl
 DefineWorldMapTile({481, 109}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Assandun", -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"anglo-saxon", "angle-tribe", "Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Assandun", -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Beamfleot", -- Old English name of Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Ashingdon",
 		"english", "england", "Benfleet"
 	}
@@ -178,7 +178,7 @@ DefineWorldMapTile({481, 109}, {
 DefineWorldMapTile({481, 110}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Ægelesford", -- Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Ægelesford", -- Old English name of Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Aylesford"
 	}
 })
@@ -186,7 +186,7 @@ DefineWorldMapTile({481, 110}, {
 DefineWorldMapTile({482, 110}, {
 	World = "earth",
 	FactionCulturalSettlementNames = {
-		"anglo-saxon", "angle-tribe", "Apuldre", -- Old English name of Appledore; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"anglo-saxon", "angle_tribe", "Apuldre", -- Old English name of Appledore; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"english", "england", "Appledore"
 	}
 })

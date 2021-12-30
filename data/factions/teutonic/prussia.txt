@@ -1,0 +1,5 @@
+prussia = {
+	core_settlements = {
+		konigsberg
+	}
+}

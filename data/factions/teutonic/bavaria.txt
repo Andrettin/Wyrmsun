@@ -10,6 +10,9 @@ bavaria = {
 	develops_from = {
 		bavarian_tribe
 	}
+	core_settlements = {
+		munich
+	}
 	
 	history = {
 		784 = {

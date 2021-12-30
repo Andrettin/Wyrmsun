@@ -1,0 +1,6 @@
+brazil = {
+	core_settlements = {
+		rio_de_janeiro
+		sao_paulo
+	}
+}

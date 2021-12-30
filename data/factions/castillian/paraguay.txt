@@ -1,0 +1,5 @@
+paraguay = {
+	core_settlements = {
+		asuncion
+	}
+}

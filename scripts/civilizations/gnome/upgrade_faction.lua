@@ -25,23 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-acthnic-tribe",
+DefineModifier("upgrade_faction_acthnic_tribe",
 	{"apply-to", "unit_gnomish_worker"}, {"convert-to", "unit_deep_gnomish_worker"}
 )
 
-DefineModifier("upgrade-faction-acthnic-tribe",
+DefineModifier("upgrade_faction_acthnic_tribe",
 	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-deep-gnomish-recruit"}
 )
 
-DefineModifier("upgrade-faction-acthnic-tribe",
+DefineModifier("upgrade_faction_acthnic_tribe",
 	{"apply-to", "unit-gnomish-duelist"}, {"convert-to", "unit-deep-gnomish-duelist"}
 )
 
-DefineModifier("upgrade-faction-acthnic-tribe",
+DefineModifier("upgrade_faction_acthnic_tribe",
 	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-deep-gnomish-master-at-arms"}
 )
 
-DefineModifier("upgrade-faction-acthnic-tribe",
+DefineModifier("upgrade_faction_acthnic_tribe",
 	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-deep-gnomish-herbalist"}
 )
 

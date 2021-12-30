@@ -9,9 +9,6 @@ byzantium = {
 		latin = "Constantinople"
 		turkish = "Istanbul"
 	}
-	cores = {
-		byzantium
-	}
 	regions = {
 		thrace
 	}

@@ -3,9 +3,6 @@ cahors = {
 	map_template = earth
 	geocoordinate = { 1.4405555555556 44.4475 }
 	base_unit_type = unit_building_site
-	cores = {
-		france
-	}
 	regions = {
 		france
 		gaul

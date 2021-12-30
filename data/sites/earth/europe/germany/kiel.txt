@@ -4,12 +4,6 @@ kiel = {
 	geocoordinate = { 10.13001704780 54.33039044100 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 101 97 115 }
-	cores = {
-		hersing_tribe
-		teuton_tribe
-		germany #Kiel was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		holy_rome #Kiel was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	}
 	regions = {
 		germany
 	}

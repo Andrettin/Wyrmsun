@@ -4,9 +4,6 @@ erfurt = {
 	geocoordinate = { 11.02996211610 50.97005291660 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 102 126 172 }
-	cores = {
-		germany
-	}
 	regions = {
 		thuringia
 	}

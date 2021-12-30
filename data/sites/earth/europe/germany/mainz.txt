@@ -7,10 +7,6 @@ mainz = {
 		french = "Mayence"
 		latin = "Mogontiacum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
-	cores = {
-		germany #Mainz was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		holy_rome #Mainz was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	}
 	regions = {
 		gaul
 		germany

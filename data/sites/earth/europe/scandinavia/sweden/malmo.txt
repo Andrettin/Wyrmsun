@@ -4,9 +4,6 @@ malmo = {
 	geocoordinate = { 13.03330236680 55.58333721830 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 226 61 40 }
-	cores = {
-		scania
-	}
 	regions = {
 		scandinavia
 	}

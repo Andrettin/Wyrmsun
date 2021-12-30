@@ -33,9 +33,6 @@ DefineSite("bahia-blanca", {
 	CulturalNames = {
 		"castillian", "Bahia Blanca"
 	},
-	Cores = {
-		"argentina"
-	},
 	HistoricalOwners = {
 		1863, "argentina" -- Bahia Blanca was founded in 1863; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 	},
@@ -52,9 +49,6 @@ DefineSite("corrientes", {
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Corrientes"
-	},
-	Cores = {
-		"argentina"
 	},
 	HistoricalOwners = {
 		1588, "spain", -- Corrientes was founded in 1588; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -74,9 +68,9 @@ DefineSite("montevideo", {
 	CulturalNames = {
 		"castillian", "Montevideo"
 	},
-	Cores = {
-		"uruguay"
-	},
+	--Cores = {
+	--	"uruguay"
+	--},
 	HistoricalOwners = {
 		1723, "spain", -- Montevideo was founded in 1723; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1814, "uruguay", -- Uruguay became independent of Spain in 1814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -96,9 +90,6 @@ DefineSite("santa-fe", {
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"castillian", "Santa Fe" -- "Santa Fé"
-	},
-	Cores = {
-		"argentina"
 	},
 	HistoricalOwners = {
 		1573, "spain", -- Santa Fé was founded in 1573; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.

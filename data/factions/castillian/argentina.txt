@@ -1,0 +1,5 @@
+argentina = {
+	core_settlements = {
+		buenos_aires
+	}
+}

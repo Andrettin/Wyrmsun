@@ -7,10 +7,6 @@ aarhus = {
 	cultural_names = {
 		germanic = "Ahvoosa" #tentative rendering of "Aarhus" in Proto-Germanic
 	}
-	cores = {
-		charude_tribe
-		jute_tribe
-	}
 	regions = {
 		scandinavia
 	}

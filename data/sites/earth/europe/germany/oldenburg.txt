@@ -2,10 +2,6 @@ oldenburg = {
 	name = "Oldenburg"
 	map_template = earth
 	geocoordinate = { 8.22000443384 53.12999859530 } #from Natural Earth
-	cores = {
-		germany #Oldenburg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		holy_rome #Oldenburg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	}
 	regions = {
 		germany
 	}

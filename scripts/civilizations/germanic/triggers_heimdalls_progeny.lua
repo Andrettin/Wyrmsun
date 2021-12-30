@@ -114,7 +114,7 @@ AddTrigger("jarl-desires-karling-subjugation",
 AddTrigger("jarl-considers-the-hersings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and (GetFactionExists("karling-tribe") == false or GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") == 0) and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("hersing-tribe") and GetPlayerData(GetFactionPlayer("hersing-tribe"), "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and (GetFactionExists("karling-tribe") == false or GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") == 0) and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("hersing_tribe") and GetPlayerData(GetFactionPlayer("hersing_tribe"), "TotalNumUnits") > 0) then
 				trigger_player = i
 				return true
 			end
@@ -130,9 +130,9 @@ AddTrigger("jarl-considers-the-hersings",
 AddTrigger("jarl-meets-the-hersings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("hersing-tribe") and GetPlayerData(i, "HasQuest", "heimdalls_progeny") and GetPlayerData(i, "HasQuest", "neutralize-the-hersings")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("hersing_tribe") and GetPlayerData(i, "HasQuest", "heimdalls_progeny") and GetPlayerData(i, "HasQuest", "neutralize-the-hersings")) then
 				local erala_hero_unit = FindHero("erala", i)
-				if (GetNumUnitsAt(GetFactionPlayer("hersing-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0 and GetPlayerData(GetFactionPlayer("hersing-tribe"), "IsEnemy", i) == false) then
+				if (GetNumUnitsAt(GetFactionPlayer("hersing_tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0 and GetPlayerData(GetFactionPlayer("hersing_tribe"), "IsEnemy", i) == false) then
 					trigger_player = i
 					return true
 				end

@@ -7,9 +7,6 @@ konigsberg = {
 	cultural_names = {
 		#slav = "Kaliningrad" #Russian
 	}
-	cores = {
-		prussia
-	}
 	regions = {
 		european_russia
 	}

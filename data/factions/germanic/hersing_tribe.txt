@@ -1,0 +1,24 @@
+hersing_tribe = {
+	name = "Hersing Tribe"
+	adjective = "Hersing"
+	civilization = germanic
+	type = tribe
+	color = white
+	default_tier = duchy
+	upgrade = upgrade_faction_skeldung_tribe
+	default_ai = passive
+	background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
+	core_settlements = {
+		kiel
+	}
+	
+	history = {
+		-3000 = {
+			resources = {
+				copper = 0
+				lumber = 0
+				stone = 0
+			}
+		}
+	}
+}

@@ -114,9 +114,6 @@ DefineSite("cambrai", {
 	CulturalNames = {
 		"french", "Cambrai"
 	},
-	Cores = {
-		"france"
-	},
 	HistoricalOwners = {
 		481, "francia", -- Cambray's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		{486, 12, 30}, "francia", -- Cambray was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -237,9 +234,6 @@ DefineSite("metz", {
 	CulturalNames = {
 		"frankish", "Mettis",
 		"french", "Metz"
-	},
-	Cores = {
-		"france"
 	},
 	HistoricalOwners = {
 		395, "rome", -- Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.

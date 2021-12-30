@@ -4,9 +4,6 @@ sao_paulo = {
 	geocoordinate = { -46.62501998040 -23.55867958700 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 229 193 37 }
-	cores = {
-		brazil
-	}
 	regions = {
 		brazil
 	}

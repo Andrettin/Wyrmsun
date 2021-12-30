@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("angle-tribe", {
-	Name = "Angle Tribe",
-	Adjective = "Angle",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "white",
-	FactionUpgrade = "upgrade-faction-angle-tribe",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"}
-})
-
 DefineFaction("avione-tribe", {
 	Name = "Avione Tribe",
 	Adjective = "Avione",
@@ -44,40 +33,7 @@ DefineFaction("avione-tribe", {
 	Color = "white",
 	FactionUpgrade = "upgrade-faction-avione-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"angle-tribe"}
-})
-
-DefineFaction("charude-tribe", {
-	Name = "Charude Tribe",
-	Adjective = "Charude",
-	Civilization = "anglo-saxon", -- accurate?
-	Type = "tribe",
-	Color = "purple",
-	FactionUpgrade = "upgrade-faction-charude-tribe",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"angle-tribe"}
-})
-
-DefineFaction("jute-tribe", {
-	Name = "Jute Tribe",
-	Adjective = "Jute",
-	Civilization = "anglo-saxon", -- accurate?
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-jute-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"},
-})
-
-DefineFaction("teuton-tribe", {
-	Name = "Teuton Tribe",
-	Adjective = "Teuton",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "orange",
-	FactionUpgrade = "upgrade-faction-teuton-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing-tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe"}
+	DevelopsFrom = {"angle_tribe"}
 })
 
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -89,7 +45,7 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	FactionUpgrade = "upgrade-faction-bernice-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
@@ -101,7 +57,7 @@ DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England
 	FactionUpgrade = "upgrade-faction-cantware-tribe",
 	Icon = "icon-flag-old-austria",
 	Description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\".",
-	DevelopsFrom = {"jute-tribe"}
+	DevelopsFrom = {"jute_tribe"}
 })
 
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -113,7 +69,7 @@ DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	FactionUpgrade = "upgrade-faction-dere-tribe",
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
@@ -137,7 +93,7 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	FactionUpgrade = "upgrade-faction-lindisfaran-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
 	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber.",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
@@ -149,7 +105,7 @@ DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	FactionUpgrade = "upgrade-faction-mierce-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
 	Description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory.",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -188,7 +144,7 @@ DefineFaction("east-anglia", {
 	FactionUpgrade = "upgrade-faction-east-anglia",
 	Icon = "icon-flag-five-orange-birds-on-black",
 	Description = "",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("essex", {
@@ -213,7 +169,7 @@ DefineFaction("jutland", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-jutland",
 	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"jute-tribe", "teuton-tribe"}
+	DevelopsFrom = {"jute_tribe", "teuton_tribe"}
 })
 
 DefineFaction("kent", {
@@ -251,7 +207,7 @@ DefineFaction("middle-anglia", {
 	FactionUpgrade = "upgrade-faction-middle-anglia",
 	Icon = "icon-flag-five-purple-birds-on-green",
 	Description = "",
-	DevelopsFrom = {"angle-tribe", "avione-tribe", "charude-tribe"}
+	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
 })
 
 DefineFaction("middlesex", {

@@ -4,9 +4,6 @@ visby = {
 	geocoordinate = { 18.30000931670 57.63365134600 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 152 171 212 }
-	cores = {
-		gotland
-	}
 	regions = {
 		scandinavia
 	}

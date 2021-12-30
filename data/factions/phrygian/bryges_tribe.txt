@@ -1,0 +1,11 @@
+bryges_tribe = {
+	name = "Bryges Tribe"
+	adjective = "Bryges"
+	civilization = phrygian
+	type = tribe
+	color = violet
+	default_tier = duchy
+	core_settlements = {
+		skopje
+	}
+}

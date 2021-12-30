@@ -52,10 +52,6 @@ DefineSite("kolberg", {
 	CulturalNames = {
 		"teuton", "Kolberg"
 	},
-	Cores = {
-		"germany", -- Kolberg was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		"holy-rome" -- Kolberg was part of the Holy Roman Empire about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
 	HistoricalOwners = {
 		1648, "brandenburg", -- Kolberg became a Brandenburgian possession in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		1815, "prussia" -- Kolberg was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.

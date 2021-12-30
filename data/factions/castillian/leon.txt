@@ -5,4 +5,7 @@ leon = {
 	type = polity
 	color = red
 	default_tier = kingdom
+	core_settlements = {
+		leon
+	}
 }

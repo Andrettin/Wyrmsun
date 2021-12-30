@@ -4,11 +4,6 @@ tamworth = {
 	geocoordinate = { -1.695 52.633 }
 	base_unit_type = unit_settlement_site
 	color = { 46 74 230 }
-	cores = {
-		englaland
-		england
-		mercia
-	}
 	regions = {
 		england
 	}

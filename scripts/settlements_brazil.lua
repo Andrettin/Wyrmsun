@@ -33,13 +33,6 @@ DefineSite("florianopolis", {
 	CulturalNames = {
 		"portuguese", "Florianopolis" -- Florianopolis/Desterro
 	},
-	Cores = {
-		"brazil"
-	},
-	HistoricalOwners = {
-	},
-	HistoricalBuildings = {
-	},
 	Regions = {"brazil"}
 })
 
@@ -50,9 +43,6 @@ DefineSite("laguna", {
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Laguna"
-	},
-	Cores = {
-		"brazil"
 	},
 	HistoricalOwners = {
 		1654, "portugal", -- Laguna was founded in 1654; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -72,9 +62,6 @@ DefineSite("porto-alegre", {
 	CulturalNames = {
 		"portuguese", "Porto Alegre"
 	},
-	Cores = {
-		"brazil"
-	},
 	HistoricalOwners = {
 		1740, "portugal", -- Porto Alegre was founded in 1740; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -93,9 +80,6 @@ DefineSite("recife", {
 	CulturalNames = {
 --		"dutch", "Mauritsstad", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 128.
 		"portuguese", "Recife"
-	},
-	Cores = {
-		"brazil"
 	},
 	HistoricalOwners = {
 		1536, "portugal", -- Recife was founded in 1536/1561; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -117,9 +101,6 @@ DefineSite("rio-grande", {
 	CulturalNames = {
 		"portuguese", "Rio Grande"
 	},
-	Cores = {
-		"brazil"
-	},
 	HistoricalOwners = {
 		1736, "portugal", -- Rio Grande/S. Pedro was founded in 1736; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
 		1822, "brazil" -- Brazil became independent in 1822; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 214-215.
@@ -137,9 +118,6 @@ DefineSite("salvador", {
 	BaseUnitType = "unit_settlement_site",
 	CulturalNames = {
 		"portuguese", "Salvador"
-	},
-	Cores = {
-		"brazil"
 	},
 	HistoricalOwners = {
 		1549, "portugal", -- Salvador was founded by the Portuguese in 1549; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 107-110, 214-215.

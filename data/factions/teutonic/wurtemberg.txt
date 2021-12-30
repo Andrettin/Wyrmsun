@@ -1,0 +1,5 @@
+wurtemberg = {
+	core_settlements = {
+		stuttgart
+	}
+}

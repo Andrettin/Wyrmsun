@@ -1,6 +1,9 @@
 brising_clan = {
 	adjective = "Brising"
 	default_tier = county #clan
+	core_settlements = {
+		svarinshaug
+	}
 	
 	history = {
 		-3000 = {

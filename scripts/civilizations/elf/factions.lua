@@ -54,15 +54,6 @@ DefineFaction("ulfdalir", {
 	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
 })
 
-DefineFaction("wesmere", {
-	Name = "Wesmere",
-	Adjective = "Wesmerean",
-	Civilization = "elf",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom"
-})
-
 -- Mercenary Companies
 
 DefineFaction("bloodleaf-company", {

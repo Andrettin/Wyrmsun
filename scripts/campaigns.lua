@@ -52,7 +52,7 @@ DefineCampaign("thors_servant", {
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.",
-	Faction = "marcomanni-tribe",
+	Faction = "marcomanni_tribe",
 	StartYear = -9,
 	MapTemplates = {
 		"old_earth", {4064, 881}, {256, 256}
@@ -74,7 +74,7 @@ DefineCampaign("the-scepter-of-fire", {
 DefineCampaign("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
 	Description = "Under the leadership of Ballomar, the Marcomanni wage war with the mighty Roman Empire.",
-	Faction = "marcomanni-tribe",
+	Faction = "marcomanni_tribe",
 	StartYear = 170, -- beginning of the First Marcomannic War
 	MapTemplates = {
 		"old_earth", {4064, 881}, {256, 256}

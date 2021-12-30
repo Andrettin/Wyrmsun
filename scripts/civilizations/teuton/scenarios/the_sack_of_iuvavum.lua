@@ -32,7 +32,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "stone", 1000)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetAiType(0, "land-attack")
-	SetPlayerData(4, "Faction", "marcomanni-tribe")
+	SetPlayerData(4, "Faction", "marcomanni_tribe")
 	SetPlayerData(4, "Resources", "copper", 2000)
 	SetPlayerData(4, "Resources", "lumber", 2000)
 	SetPlayerData(4, "Resources", "stone", 1000)

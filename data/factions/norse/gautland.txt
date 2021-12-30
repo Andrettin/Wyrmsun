@@ -18,6 +18,10 @@ gautland = {
 		thielung_tribe
 		thralling_tribe
 	}
+	core_settlements = {
+		gothenburg
+		linkoping
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

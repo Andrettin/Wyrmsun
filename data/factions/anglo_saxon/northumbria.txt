@@ -12,6 +12,9 @@ northumbria = {
 		bernicia
 		deira
 	}
+	core_settlements = {
+		york
+	}
 	conditions = {
 		unit_type = unit_teuton_temple
 		not = {

@@ -4,12 +4,6 @@ hanover = {
 	geocoordinate = { 9.71665726588 52.36697023430 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 15 78 106 }
-	cores = {
-		lombard_tribe
-		brunswick
-		germany #Hanover was part of the Germanic Confederation in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-		holy_rome 
-	}
 	regions = {
 		germany
 	}

@@ -4,9 +4,6 @@ burgos = {
 	geocoordinate = { -3.67996687968 42.35039817210 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 0 85 46 }
-	cores = {
-		castille
-	}
 	cultural_names = {
 		latin = "Burgiorum" #Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	}

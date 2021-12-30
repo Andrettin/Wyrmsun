@@ -18,6 +18,9 @@ denmark = {
 		thralling_tribe
 		scania
 	}
+	core_settlements = {
+		copenhagen
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

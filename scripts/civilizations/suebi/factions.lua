@@ -63,30 +63,11 @@ DefineFaction("hermunduri-tribe", {
 	}
 })
 
-DefineFaction("marcomanni-tribe", {
-	Name = "Marcomanni Tribe",
-	Adjective = "Marcomanni",
-	Civilization = "suebi",
-	Type = "tribe",
-	Color = "orange", -- change to a better one?
-	FactionUpgrade = "upgrade-faction-marcomanni-tribe",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"suebi_tribe"},
-	Description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".",
-	HistoricalDiplomacyStates = {
-		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "hermunduri-tribe", "alliance",
-		172, "rome", "peace", -- in 172 the Romans forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
-		177, "rome", "war", -- the Marcomanni entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
-		177, "rome", "peace" -- in (apparently) 177 the Romans again forced the Marcomanni to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
-	}
-})
-
 DefineFaction("quadi-tribe", {
 	Name = "Quadi Tribe",
 	Adjective = "Quadi",
 	Civilization = "suebi",
-	ParentFaction = "marcomanni-tribe",
+	ParentFaction = "marcomanni_tribe",
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
@@ -94,24 +75,13 @@ DefineFaction("quadi-tribe", {
 	DevelopsFrom = {"suebi_tribe"}, -- the Quadi were a Suebic tribe
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "marcomanni-tribe", "alliance",
+		170, "marcomanni_tribe", "alliance",
 		171, "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
 		173, "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		174, "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		177, "rome", "war", -- the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		179, "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
-})
-
-DefineFaction("semnone-tribe", {
-	Name = "Semnone Tribe",
-	Adjective = "Semnone",
-	Civilization = "suebi",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-semnone-tribe",
-	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"suebi_tribe"}
 })
 
 DefineFaction("thuringian-tribe", {
@@ -134,5 +104,5 @@ DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-galicia",
 	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"suebi_tribe", "semnone-tribe", "marcomanni-tribe", "quadi-tribe", "buri-tribe"}
+	DevelopsFrom = {"suebi_tribe", "semnone_tribe", "marcomanni_tribe", "quadi-tribe", "buri-tribe"}
 })

@@ -11,4 +11,10 @@ england = {
 	develops_from = {
 		englaland
 	}
+	core_settlements = {
+		london
+		tamworth
+		winchester
+		york
+	}
 }

@@ -7,10 +7,6 @@ gothenburg = {
 	cultural_names = {
 		#norse = "Goteborg" #"Göteborg"
 	}
-	cores = {
-		#gothic_tribe
-		gautland
-	}
 	regions = {
 		scandinavia
 	}

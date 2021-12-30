@@ -4,9 +4,6 @@ buenos_aires = {
 	geocoordinate = { -58.39753137370 -34.60250160850 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 42 76 237 }
-	cores = {
-		argentina
-	}
 	regions = {
 		argentina
 	}

@@ -117,28 +117,28 @@ local TeutonEvents = {
 		Options = {"~!OK", "Play as the ~!Marcomanni"},
 		OptionEffects = {
 			function(s)
-				AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
+				AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni_tribe")
 				SetProvinceHero("Bohemia", "Marbod", 2)
-				AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
+				AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni_tribe")
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebi_tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.marcomanni_tribe
-					SetPlayerFaction("teuton", "marcomanni-tribe")
+					SetPlayerFaction("teuton", "marcomanni_tribe")
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
-						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
+						AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni_tribe")
+						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni_tribe")
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi_tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni-tribe")
+					AcquireProvince(WorldMapProvinces.Bohemia, "marcomanni_tribe")
 					SetProvinceHero("Bohemia", "Marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
-					AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni-tribe")
+					AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomanni_tribe.Civilization, "marcomanni_tribe")
 
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GrandStrategyFaction = Factions.marcomanni_tribe
-						SetPlayerFaction("teuton", "marcomanni-tribe")
+						SetPlayerFaction("teuton", "marcomanni_tribe")
 						GenericDialog("The Home of the Boii", "The Boii's capital has become naught but a burning ruin. On its ashes we shall build our own settlement of Bubienum, the center of our new Marcomannic kingdom!")
 					end
 				end
@@ -150,8 +150,8 @@ local TeutonEvents = {
 		Description = "Catualda, a Marcomanni noble who had been expelled from our lands by Marbod, has returned to Bohemia with an army behind him, yearning for revenge. The tribe's notables made a compact with him, making the deposition of Marbod a foregone conclusion.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "marcomanni-tribe"
-				and GetFactionMinister("teuton", "marcomanni-tribe", "ruler") == "Marbod"
+				EventFaction.Name == "marcomanni_tribe"
+				and GetFactionMinister("teuton", "marcomanni_tribe", "ruler") == "Marbod"
 			) then
 				return true
 			else
@@ -174,9 +174,9 @@ local TeutonEvents = {
 		Description = "Our chieftain Ballomar has obtained the agreement of more than a dozen Germanic tribes to invade the Roman Empire. Shall we go through with this plan?",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "marcomanni-tribe"
+				EventFaction.Name == "marcomanni_tribe"
 				and GetProvinceOwner("Salzburg") == "rome"
-				and GetProvinceOwner("Bohemia") == "marcomanni-tribe"
+				and GetProvinceOwner("Bohemia") == "marcomanni_tribe"
 			) then
 				return true
 			else
@@ -188,12 +188,12 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				DeclareWar(EventFaction.Name, "rome")
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni-tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni_tribe" and wyr.preferences.AutomaticBattles == false) then
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
+						AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni_tribe")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni-tribe")
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni_tribe" or wyr.preferences.AutomaticBattles)) then
+					AcquireProvince(WorldMapProvinces.Salzburg, "marcomanni_tribe")
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
 					end
@@ -211,9 +211,9 @@ local TeutonEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "marcomanni-tribe"
+				EventFaction.Name == "marcomanni_tribe"
 				and GetProvinceOwner("Venetia") == "rome"
-				and GetProvinceOwner("Carinthia") == "marcomanni-tribe"
+				and GetProvinceOwner("Carinthia") == "marcomanni_tribe"
 			) then
 				return true
 			else
@@ -223,12 +223,12 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni-tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomanni_tribe" and wyr.preferences.AutomaticBattles == false) then
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
+						AcquireProvince(WorldMapProvinces.Venetia, "marcomanni_tribe")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni-tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Venetia, "marcomanni-tribe")
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomanni_tribe" or wyr.preferences.AutomaticBattles)) then
+					AcquireProvince(WorldMapProvinces.Venetia, "marcomanni_tribe")
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
 					end

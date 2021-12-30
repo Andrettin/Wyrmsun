@@ -1,0 +1,16 @@
+semnone_tribe = {
+	name = "Semnone Tribe"
+	adjective = "Semnone"
+	civilization = suebi
+	type = tribe
+	color = brown
+	default_tier = duchy
+	upgrade = upgrade_faction_semnone_tribe
+	icon = icon_flag_green_lion_on_purple
+	develops_from = {
+		suebi_tribe
+	}
+	core_settlements = {
+		berlin
+	}
+}

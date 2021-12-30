@@ -4,9 +4,6 @@ zaragoza = {
 	geocoordinate = { -0.88998213846 41.65000164700 } #from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 202 26 200 }
-	cores = {
-		aragon
-	}
 	cultural_names = {
 		latin = "Caesaraugusta"
 	}

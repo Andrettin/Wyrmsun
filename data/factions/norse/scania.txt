@@ -18,6 +18,9 @@ scania = {
 		thralling_tribe
 		yngling_tribe
 	}
+	core_settlements = {
+		malmo
+	}
 	conditions = {
 		upgrade_class = writing
 	}

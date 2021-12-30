@@ -16,6 +16,9 @@ suebi_tribe = {
 		karling_tribe
 		thralling_tribe
 	}
+	core_settlements = {
+		berlin
+	}
 	
 	history = {
 		-71 = {

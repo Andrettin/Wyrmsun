@@ -6,4 +6,7 @@ byzantium = {
 	color = purple
 	default_tier = empire
 	default_capital = byzantium
+	core_settlements = {
+		byzantium
+	}
 }

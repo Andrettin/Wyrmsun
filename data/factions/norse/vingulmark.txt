@@ -2,6 +2,9 @@ vingulmark = {
 	develops_from = {
 		yngling_tribe
 	}
+	core_settlements = {
+		oslo
+	}
 	conditions = {
 		upgrade_class = writing
 	}

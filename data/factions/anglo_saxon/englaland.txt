@@ -21,6 +21,12 @@ englaland = {
 		sussex
 		wessex
 	}
+	core_settlements = {
+		london
+		tamworth
+		winchester
+		york
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

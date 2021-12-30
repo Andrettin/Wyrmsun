@@ -140,11 +140,11 @@ DefineSpell("spell-acthnic-allegiance",
 	"condition", {
 		"Organic", "only",
 		"Building", "false",
-		"faction-equivalent", "acthnic-tribe"
+		"faction-equivalent", "acthnic_tribe"
 	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"polymorph", "civilization", "gnome", "faction", "acthnic-tribe"}
+		{"polymorph", "civilization", "gnome", "faction", "acthnic_tribe"}
 	},
 	"item-spell", "scroll",
 	"sound-when-cast", "magic-holy"

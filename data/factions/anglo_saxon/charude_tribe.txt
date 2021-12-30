@@ -1,0 +1,16 @@
+charude_tribe = {
+	name = "Charude Tribe"
+	adjective = "Charude"
+	civilization = anglo_saxon #accurate?
+	type = tribe
+	color = purple
+	default_tier = duchy
+	upgrade = upgrade_faction_charude_tribe
+	icon = icon_flag_five_orange_birds_on_black
+	develops_from = {
+		angle_tribe
+	}
+	core_settlements = {
+		aarhus
+	}
+}

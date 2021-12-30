@@ -5,4 +5,7 @@ barcelona = {
 	type = polity
 	color = yellow
 	default_tier = county
+	core_settlements = {
+		barcelona
+	}
 }

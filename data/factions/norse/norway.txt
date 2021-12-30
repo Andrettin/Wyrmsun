@@ -24,6 +24,9 @@ norway = {
 		vestfold
 		vingulmark
 	}
+	core_settlements = {
+		oslo
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

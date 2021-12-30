@@ -19,6 +19,9 @@ sweden = {
 		gautland
 		scania
 	}
+	core_settlements = {
+		stockholm
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

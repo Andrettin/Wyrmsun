@@ -4,10 +4,6 @@ pest = {
 	geocoordinate = { 19.08332067740 47.50000632640 } #Budapest; from Natural Earth
 	base_unit_type = unit_settlement_site
 	color = { 57 174 209 }
-	cores = {
-		magyar_tribe
-		hungary
-	}
 	regions = {
 		hungary
 	}

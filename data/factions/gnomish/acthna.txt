@@ -1,0 +1,13 @@
+acthna = {
+	name = "Acthna"
+	adjective = "Acthnic"
+	civilization = gnomish
+	parent_faction = acthnic_tribe
+	type = polity
+	color = red
+	default_tier = duchy
+	default_capital = acthna
+	core_settlements = {
+		acthna
+	}
+}

@@ -1,0 +1,5 @@
+shorbear_clan += {
+	core_settlements = {
+		shorbear_hold
+	}
+}

@@ -1,0 +1,13 @@
+acthnic_tribe = { #Source: Franz Hartmann, "Among the Gnomes", 1895, p. 158.
+	name = "Acthnic Tribe"
+	adjective = "Acthnic"
+	civilization = gnomish
+	type = tribe
+	color = red
+	default_tier = duchy
+	upgrade = upgrade_faction_acthnic_tribe
+	description = "The Acthnic tribe lives deep underground, near the subterranean fires of their homelands. They're known for being dangerous and reckless, occasionally entering the territory of derros or goblins without invitation. Their sages are well-versed in the mysteries of lightning, but above all they are masters of the flame."
+	core_settlements = {
+		acthna
+	}
+}

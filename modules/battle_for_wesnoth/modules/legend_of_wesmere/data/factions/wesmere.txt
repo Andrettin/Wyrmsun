@@ -1,0 +1,11 @@
+wesmere = {
+	name = "Wesmere"
+	adjective = "Wesmerean"
+	civilization = elven
+	type = polity
+	color = green
+	default_tier = kingdom
+	core_settlements = {
+		ka_lian
+	}
+}
