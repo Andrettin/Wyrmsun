@@ -1,7 +1,4 @@
 hedmark = {
-	develops_from = {
-		yngling_tribe
-	}
 	conditions = {
 		upgrade_class = writing
 	}

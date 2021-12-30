@@ -33,6 +33,5 @@ DefineFaction("scotland", {
 	Color = "blue",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-scotland",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"bernicia", "northumbria"}
+	Icon = "icon-flag-old-austria"
 })

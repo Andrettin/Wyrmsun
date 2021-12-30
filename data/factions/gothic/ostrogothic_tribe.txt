@@ -6,7 +6,4 @@ ostrogothic_tribe = {
 	color = red
 	upgrade = upgrade_faction_ostrogothic_tribe
 	icon = icon_flag_five_black_birds_on_purple
-	develops_from = {
-		gothic_tribe
-	}
 }

@@ -8,11 +8,6 @@ aurvang = {
 	default_government_type = monarchy
 	upgrade = upgrade_faction_aurvang
 	icon = icon_flag_orange_skull_on_teal
-	develops_from = {
-		aurvangling_tribe
-		dreadskull_tribe
-		lggi_tribe
-	}
 	core_settlements = {
 		aurvang
 	}

@@ -32,8 +32,7 @@ DefineFaction("avione-tribe", {
 	Type = "tribe",
 	Color = "white",
 	FactionUpgrade = "upgrade-faction-avione-tribe",
-	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"angle_tribe"}
+	Icon = "icon-flag-five-white-birds-on-red"
 })
 
 DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -44,8 +43,7 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-bernice-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
 
 DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
@@ -56,8 +54,7 @@ DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-cantware-tribe",
 	Icon = "icon-flag-old-austria",
-	Description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\".",
-	DevelopsFrom = {"jute_tribe"}
+	Description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\"."
 })
 
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -68,8 +65,7 @@ DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-dere-tribe",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
 })
 
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
@@ -92,8 +88,7 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Color = "purple",
 	FactionUpgrade = "upgrade-faction-lindisfaran-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
-	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber.",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
 })
 
 DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
@@ -104,8 +99,7 @@ DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Color = "white",
 	FactionUpgrade = "upgrade-faction-mierce-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory.",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory."
 })
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -117,8 +111,7 @@ DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-bernicia",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
-	DevelopsFrom = {"bernice-tribe"}
+	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
 })
 
 DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -130,8 +123,7 @@ DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-deira",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
-	DevelopsFrom = {"dere-tribe", "lindisfaran-tribe"}
+	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
 })
 
 DefineFaction("east-anglia", {
@@ -142,9 +134,7 @@ DefineFaction("east-anglia", {
 	Color = "pink",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-east-anglia",
-	Icon = "icon-flag-five-orange-birds-on-black",
-	Description = "",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Icon = "icon-flag-five-orange-birds-on-black"
 })
 
 DefineFaction("essex", {
@@ -155,9 +145,7 @@ DefineFaction("essex", {
 	Color = "purple",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-essex",
-	Icon = "icon-flag-five-white-birds-on-red",
-	Description = "",
-	DevelopsFrom = {"gumeninga-tribe"}
+	Icon = "icon-flag-five-white-birds-on-red"
 })
 
 DefineFaction("jutland", {
@@ -168,8 +156,7 @@ DefineFaction("jutland", {
 	Color = "red",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-jutland",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"jute_tribe", "teuton_tribe"}
+	Icon = "icon-flag-cyan-lion-on-red"
 })
 
 DefineFaction("kent", {
@@ -180,8 +167,7 @@ DefineFaction("kent", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-kent",
 	Description = "",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"cantware-tribe"}
+	Icon = "icon-flag-old-austria"
 })
 
 DefineFaction("mercia", {
@@ -193,8 +179,7 @@ DefineFaction("mercia", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-mercia",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England.",
-	DevelopsFrom = {"mierce-tribe", "lindisfaran-tribe"}
+	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England."
 })
 
 DefineFaction("middle-anglia", {
@@ -205,9 +190,7 @@ DefineFaction("middle-anglia", {
 	Color = "violet",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-middle-anglia",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	Description = "",
-	DevelopsFrom = {"angle_tribe", "avione-tribe", "charude_tribe"}
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("middlesex", {
@@ -218,9 +201,7 @@ DefineFaction("middlesex", {
 	Color = "blue",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-middlesex",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	Description = "",
-	DevelopsFrom = {"gumeninga-tribe"}
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("sussex", {

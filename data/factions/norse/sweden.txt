@@ -9,17 +9,6 @@ sweden = {
 	default_capital = stockholm
 	upgrade = upgrade_faction_sweden
 	icon = flag_blue_raven_on_yellow
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		jarling_tribe
-		karling_tribe
-		thralling_tribe
-		yngling_tribe
-		sitone_tribe
-		gautland
-		scania
-	}
 	core_settlements = {
 		stockholm
 	}

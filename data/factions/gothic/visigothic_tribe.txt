@@ -6,7 +6,4 @@ visigothic_tribe = {
 	color = pink
 	upgrade = upgrade_faction_visigothic_tribe
 	icon = icon_flag_five_orange_birds_on_black
-	develops_from = {
-		gothic_tribe
-	}
 }

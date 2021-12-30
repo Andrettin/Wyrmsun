@@ -10,12 +10,6 @@ austria = {
 	icon = icon_flag_old_austria
 	upgrade = upgrade_faction_austria
 	default_capital = vienna
-	develops_from = {
-		#similar as for Bavaria
-		marcomanni_tribe
-		quadi_tribe
-		buri_tribe
-	}
 	core_settlements = {
 		vienna
 	}

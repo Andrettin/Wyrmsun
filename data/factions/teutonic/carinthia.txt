@@ -1,10 +1,4 @@
 carinthia = {
-	develops_from = {
-		#similar as for Bavaria
-		marcomanni_tribe
-		quadi_tribe
-		buri_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

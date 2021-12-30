@@ -5,11 +5,9 @@ rome = {
 	type = polity
 	color = red
 	default_tier = kingdom
+	max_tier = empire
 	default_government_type = republic
 	default_capital = rome
-	develops_from = {
-		latin_tribe
-	}
 	
 	history = {
 		#polities must have writing

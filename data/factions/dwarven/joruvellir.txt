@@ -11,10 +11,6 @@ joruvellir = { #from Norse mythology, "Joruvellir" = "Fields of Sand"
 	icon = icon_flag_joruvellir
 	upgrade = upgrade_faction_joruvellir
 	description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug."
-	develops_from = {
-		eikinskjaldi_clan
-		goldhoof_clan
-	}
 	core_settlements = {
 		joruvellir
 	}

@@ -7,9 +7,6 @@ mecklenburg = {
 	default_tier = grand_duchy
 	icon = icon_flag_blue_lion_on_yellow
 	upgrade = upgrade_faction_mecklenburg
-	develops_from = {
-		varini_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

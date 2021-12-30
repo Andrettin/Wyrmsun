@@ -74,6 +74,5 @@ DefineFaction("crete", { -- Minoans
 	Civilization = "minoan",
 	Type = "polity",
 	Color = "yellow",
-	DefaultTier = "kingdom",
-	DevelopsFrom = {"minoan-tribe"}
+	DefaultTier = "kingdom"
 })

@@ -32,8 +32,7 @@ DefineFaction("alamanni-tribe", {
 	Type = "tribe",
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-alamanni-tribe",
-	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"suebi_tribe"}
+	Icon = "icon-flag-blue-lion-on-yellow"
 })
 
 DefineFaction("buri-tribe", {
@@ -44,8 +43,7 @@ DefineFaction("buri-tribe", {
 	Type = "tribe",
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-buri-tribe",
-	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"suebi_tribe"}
+	Icon = "icon-flag-red-lion-on-green"
 })
 
 DefineFaction("hermunduri-tribe", {
@@ -56,7 +54,6 @@ DefineFaction("hermunduri-tribe", {
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
 	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"suebi_tribe"},
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
@@ -72,7 +69,6 @@ DefineFaction("quadi-tribe", {
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"suebi_tribe"}, -- the Quadi were a Suebic tribe
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		170, "marcomanni_tribe", "alliance",
@@ -92,6 +88,5 @@ DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Color = "black",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-galicia",
-	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"suebi_tribe", "semnone_tribe", "marcomanni_tribe", "quadi-tribe", "buri-tribe"}
+	Icon = "icon-flag-green-lion-on-purple"
 })

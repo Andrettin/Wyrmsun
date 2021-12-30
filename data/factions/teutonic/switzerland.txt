@@ -7,10 +7,6 @@ switzerland = {
 	default_tier = kingdom
 	icon = icon_flag_red_lion_on_green
 	upgrade = upgrade_faction_switzerland
-	develops_from = {
-		alamanni_tribe
-		suebi_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

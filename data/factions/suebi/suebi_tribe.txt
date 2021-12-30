@@ -8,14 +8,6 @@ suebi_tribe = {
 	upgrade = upgrade_faction_suebi_tribe
 	icon = icon_flag_green_lion_on_purple
 	description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
-	develops_from = {
-		asa_tribe
-		herminone_tribe
-		hersing_tribe
-		jarling_tribe
-		karling_tribe
-		thralling_tribe
-	}
 	core_settlements = {
 		berlin
 	}

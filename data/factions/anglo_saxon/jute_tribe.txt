@@ -7,17 +7,6 @@ jute_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_jute_tribe
 	icon = icon_flag_five_purple_birds_on_green
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		hlesing_tribe
-		ingaevone_tribe
-		jarling_tribe
-		karling_tribe
-		skeldung_tribe
-		thielung_tribe
-		thralling_tribe
-	}
 	core_settlements = {
 		aarhus
 	}

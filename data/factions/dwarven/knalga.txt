@@ -9,13 +9,6 @@ knalga = {
 	default_capital = knalga
 	icon = icon_flag_silver_hammer_on_red
 	upgrade = upgrade_faction_knalga
-	develops_from = {
-		norlund_clan
-		oinling_clan
-		shinsplitter_clan
-		shorbear_clan
-		whitesteel_clan
-	}
 	conditions = {
 		scripted_condition = is_civilized_or_has_prerequisites
 	}

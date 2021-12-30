@@ -9,13 +9,6 @@ kal_kartha = {
 	default_capital = kal_kartha
 	icon = icon_flag_red_hammer_on_silver
 	upgrade = upgrade_faction_kal_kartha
-	develops_from = {
-		oinling_clan
-		shadowcharm_clan
-		shinsplitter_clan
-		shorbear_clan
-		whitesteel_clan
-	}
 	conditions = {
 		scripted_condition = is_civilized_or_has_prerequisites
 	}

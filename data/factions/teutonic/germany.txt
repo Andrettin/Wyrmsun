@@ -8,18 +8,6 @@ germany = {
 	icon = icon_flag_five_orange_birds_on_black
 	upgrade = upgrade_faction_holy_rome
 	short_name = true
-	develops_from = {
-		#must either be one of the stem duchies, or a crownland that gave origin to a Holy Roman Emperor or German king/emperor, or an electorate
-		austria
-		bavaria
-		brandenburg
-		cologne
-		franconia
-		hesse
-		prussia
-		saxony
-		swabia
-	}
 	core_settlements = {
 		berlin
 		cologne

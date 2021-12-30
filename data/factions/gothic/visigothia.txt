@@ -7,9 +7,6 @@ visigothia = {
 	default_tier = kingdom
 	upgrade = upgrade_faction_visigothia
 	icon = icon_flag_five_orange_birds_on_black
-	develops_from = {
-		visigothic_tribe
-	}
 	
 	history = {
 		#polities must have writing and masonry

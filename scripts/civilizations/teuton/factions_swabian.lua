@@ -34,6 +34,5 @@ DefineFaction("wurtemberg", {
 	Color = "red",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-wurtemberg",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"}
+	Icon = "icon-flag-cyan-lion-on-red"
 })

@@ -8,16 +8,6 @@ gautland = {
 	default_capital = gothenburg
 	upgrade = upgrade_faction_gautland
 	icon = flag_violet_raven_on_teal
-	develops_from = {
-		asa_tribe
-		gothic_tribe
-		hersing_tribe
-		hlesing_tribe
-		jarling_tribe
-		karling_tribe
-		thielung_tribe
-		thralling_tribe
-	}
 	core_settlements = {
 		gothenburg
 		linkoping

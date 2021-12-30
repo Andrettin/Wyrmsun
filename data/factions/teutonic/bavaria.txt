@@ -8,12 +8,6 @@ bavaria = {
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_bavaria
 	description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
-	develops_from = {
-		#must be the Marcomanni or a closely related tribe to found Bavaria
-		marcomanni_tribe
-		quadi_tribe
-		buri_tribe
-	}
 	core_settlements = {
 		munich
 	}

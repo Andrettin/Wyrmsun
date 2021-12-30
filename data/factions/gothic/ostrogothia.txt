@@ -7,11 +7,6 @@ ostrogothia = {
 	default_tier = kingdom
 	upgrade = upgrade_faction_ostrogothia
 	icon = icon_flag_five_black_birds_on_purple
-	develops_from = {
-		ostrogothic_tribe
-		bastarnae_tribe
-		gepid_tribe
-	}
 	
 	history = {
 		#polities must have writing and masonry

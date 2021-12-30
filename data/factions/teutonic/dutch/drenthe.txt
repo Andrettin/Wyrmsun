@@ -7,9 +7,6 @@ drenthe = {
 	default_tier = county #Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_drenthe
-	develops_from = {
-		ampsivarii_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

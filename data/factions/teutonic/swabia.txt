@@ -7,10 +7,6 @@ swabia = {
 	default_tier = duchy #Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	icon = icon_flag_blue_lion_on_yellow
 	upgrade = upgrade_faction_swabia
-	develops_from = {
-		alamanni_tribe
-		suebi_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

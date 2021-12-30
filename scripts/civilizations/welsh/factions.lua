@@ -43,7 +43,6 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 	Type = "polity",
 	Color = "red",
 	DefaultTier = "duchy",
-	DevelopsFrom = {"demetae-tribe"}, -- the Demetae gave origin to Dyfed
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	},
@@ -51,6 +50,8 @@ DefineFaction("dyfed", { -- Welsh kingdom; Source: Bernhard Maier (trans.), "Das
 		"ruler", "male", "monarchy", "duchy", "Prince",
 		"ruler", "female", "monarchy", "duchy", "Princess"
 	}
+	
+	-- the Demetae gave origin to Dyfed
 })
 
 DefineFaction("elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.

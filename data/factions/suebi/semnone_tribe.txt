@@ -7,9 +7,6 @@ semnone_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_semnone_tribe
 	icon = icon_flag_green_lion_on_purple
-	develops_from = {
-		suebi_tribe
-	}
 	core_settlements = {
 		berlin
 	}

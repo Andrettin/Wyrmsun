@@ -7,17 +7,6 @@ teuton_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_teuton_tribe
 	icon = icon_flag_five_red_birds_on_yellow
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		hlesing_tribe
-		ingaevone_tribe
-		jarling_tribe
-		karling_tribe
-		skeldung_tribe
-		thielung_tribe
-		thralling_tribe
-	}
 	core_settlements = {
 		kiel
 	}

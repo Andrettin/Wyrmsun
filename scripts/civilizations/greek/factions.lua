@@ -118,8 +118,7 @@ DefineFaction("epirus", {
 	Civilization = "greek",
 	Type = "polity",
 	Color = "yellow",
-	DefaultTier = "kingdom",
-	DevelopsFrom = {"chaoni-tribe"}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("ionia", {

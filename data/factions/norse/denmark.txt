@@ -9,16 +9,6 @@ denmark = {
 	default_capital = copenhagen
 	upgrade = upgrade_faction_denmark
 	icon = flag_black_raven_on_white
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		hlesing_tribe
-		jarling_tribe
-		karling_tribe
-		skeldung_tribe
-		thralling_tribe
-		scania
-	}
 	core_settlements = {
 		copenhagen
 	}

@@ -8,19 +8,6 @@ englaland = {
 	default_capital = london
 	upgrade = upgrade_faction_englaland
 	icon = icon_flag_cyan_lion_on_red
-	develops_from = {
-		bernicia
-		deira
-		east_anglia
-		essex
-		kent
-		mercia
-		middle_anglia
-		middlesex
-		northumbria
-		sussex
-		wessex
-	}
 	core_settlements = {
 		london
 		tamworth

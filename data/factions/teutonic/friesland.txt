@@ -7,9 +7,6 @@ friesland = {
 	default_tier = duchy
 	icon = icon_flag_green_lion_on_orange
 	upgrade = upgrade_faction_friesland
-	develops_from = {
-		frisian_tribe
-	}
 	title_names = {
 		monarchy = {
 			barony = "Lordship"

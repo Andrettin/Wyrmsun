@@ -6,15 +6,4 @@ gothic_tribe = {
 	color = red
 	upgrade = upgrade_faction_gothic_tribe
 	icon = icon_flag_yellow_lion_on_cyan
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		hlesing_tribe
-		jarling_tribe
-		karling_tribe
-		skeldung_tribe
-		thielung_tribe
-		thralling_tribe
-		yngling_tribe
-	}
 }

@@ -50,7 +50,6 @@ DefineFaction("goldhoof_clan", {
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-goldhoof-clan",
 	Icon = "icon-flag-golden-yale-skull-on-green",
-	DevelopsFrom = {"brising_clan"},
 	ButtonIcons = {
 		"stop", "icon-joruvellir-shield"
 	},
@@ -71,7 +70,6 @@ DefineFaction("eikinskjaldi_clan", {
 	Color = "brown",
 	FactionUpgrade = "upgrade_faction_eikinskjaldi_clan",
 	Icon = "icon-flag-light-blue-hammer-on-orange",
-	DevelopsFrom = {"goldhoof_clan"},
 	Description = "The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.",
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
@@ -84,7 +82,6 @@ DefineFaction("norlund_clan", {
 	Color = "red",
 	FactionUpgrade = "upgrade_faction_norlund_clan",
 	Icon = "icon-flag-black-hammer-on-orange",
-	DevelopsFrom = {"brising_clan"},
 	Description = "The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."
 })
 
@@ -96,7 +93,6 @@ DefineFaction("oinling_clan", {
 	Color = "yellow",
 	FactionUpgrade = "upgrade_faction_oinling_clan",
 	Icon = "icon-flag-blue-hammer-on-yellow",
-	DevelopsFrom = {"brising_clan"},
 	Description = "Oin's kin are known for their love of gold, and their skill in hoarding it."
 })
 
@@ -108,7 +104,6 @@ DefineFaction("shadowcharm_clan", {
 	Color = "black",
 	FactionUpgrade = "upgrade_faction_shadowcharm_clan",
 	Icon = "icon-flag-green-hammer-on-light-purple",
-	DevelopsFrom = {"brising_clan"},
 	Description = "The Shadowcharm clan is known for its skilled exercise in subtlety. Foes of this clan may well find themselves assassinated by a seemingly-loyal subordinate."
 })
 
@@ -120,7 +115,6 @@ DefineFaction("shinsplitter_clan", {
 	Color = "green",
 	FactionUpgrade = "upgrade_faction_shinsplitter_clan",
 	Icon = "icon-flag-cyan-hammer-on-green",
-	DevelopsFrom = {"brising_clan"},
 	Description = "The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."
 })
 
@@ -132,7 +126,6 @@ DefineFaction("shorbear_clan", {
 	Color = "blue",
 	FactionUpgrade = "upgrade_faction_shorbear_clan",
 	Icon = "icon-flag-green-hammer-on-blue",
-	DevelopsFrom = {"brising_clan"},
 	Description = "Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears make their homes in the hills. They are known as excellent crafters of tools.",
 	ForceTemplates = {
 		{
@@ -192,7 +185,6 @@ DefineFaction("whitesteel_clan", {
 	Color = "white",
 	FactionUpgrade = "upgrade_faction_whitesteel_clan",
 	Icon = "icon-flag-red-hammer-on-silver",
-	DevelopsFrom = {"brising_clan", "norlund_clan", "shorbear_clan"},
 --	Description = "Attracted by tales of mithril deposits, a group of dwarves established an outpost in a distant kobold island. Enjoying a lucrative trade with the merchant ships who made call at their port, the dwarves established themselves permanently in the island, eventually calling themselves the Whitesteel clan."
 })
 

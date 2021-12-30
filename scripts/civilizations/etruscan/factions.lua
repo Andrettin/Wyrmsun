@@ -39,6 +39,5 @@ DefineFaction("etruria", {
 	Type = "polity",
 	Color = "yellow",
 	DefaultTier = "kingdom",
-	DevelopsFrom = {"etruscan-tribe"},
 	Adjective = "Etruscan"
 })

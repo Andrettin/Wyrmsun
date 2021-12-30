@@ -6,14 +6,6 @@ lombard_tribe = {
 	color = green
 	upgrade = upgrade_faction_lombard_tribe
 	icon = icon_flag_five_purple_birds_on_green
-	develops_from = {
-		asa_tribe
-		herminone_tribe
-		hersing_tribe
-		jarling_tribe
-		karling_tribe
-		thralling_tribe
-	}
 	core_settlements = {
 		hanover
 	}

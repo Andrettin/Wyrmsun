@@ -5,9 +5,6 @@ hungary = {
 	type = polity
 	color = green
 	default_tier = kingdom
-	develops_from = {
-		magyar_tribe
-	}
 	core_settlements = {
 		pest
 		szekesfehervar

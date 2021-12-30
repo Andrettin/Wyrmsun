@@ -8,20 +8,6 @@ netherlands = {
 	icon = icon_flag_green_lion_on_orange
 	upgrade = upgrade_faction_netherlands
 	definite_article = true
-	develops_from = {
-		ampsivarii_tribe
-		batavian_tribe
-		chamavi_tribe
-		chatti_tribe
-		sugambri_tribe
-		austrasia
-		brabant
-		drenthe
-		friesland
-		holland
-		overijssel
-		salia
-	}
 	core_settlements = {
 		amsterdam
 	}

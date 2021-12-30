@@ -32,8 +32,7 @@ DefineFaction("bastarnae-tribe", {
 	Type = "tribe",
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-bastarnae-tribe",
-	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-blue-lion-on-yellow"
 })
 
 DefineFaction("burgundian-tribe", {
@@ -43,8 +42,7 @@ DefineFaction("burgundian-tribe", {
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-burgundian-tribe",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
+	Icon = "icon-flag-old-austria"
 })
 
 DefineFaction("herulian-tribe", {
@@ -54,8 +52,7 @@ DefineFaction("herulian-tribe", {
 	Type = "tribe",
 	Color = "green",
 	FactionUpgrade = "upgrade-faction-herulian-tribe",
-	Icon = "icon-flag-cyan-lion-on-red",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-cyan-lion-on-red"
 })
 
 DefineFaction("lugii-tribe", {
@@ -65,8 +62,7 @@ DefineFaction("lugii-tribe", {
 	Type = "tribe",
 	Color = "purple",
 	FactionUpgrade = "upgrade-faction-lugii-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("rugian-tribe", {
@@ -76,8 +72,7 @@ DefineFaction("rugian-tribe", {
 	Type = "tribe",
 	Color = "red",
 	FactionUpgrade = "upgrade-faction-rugian-tribe",
-	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-five-white-birds-on-red"
 })
 
 DefineFaction("silingae-tribe", {
@@ -87,8 +82,7 @@ DefineFaction("silingae-tribe", {
 	Type = "tribe",
 	Color = "orange",
 	FactionUpgrade = "upgrade-faction-silingae-tribe",
-	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-green-lion-on-purple"
 })
 
 DefineFaction("turcilingian-tribe", {
@@ -98,8 +92,7 @@ DefineFaction("turcilingian-tribe", {
 	Type = "tribe",
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-turcilingian-tribe",
-	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-green-lion-on-orange"
 })
 
 DefineFaction("vandal-tribe", {
@@ -109,8 +102,7 @@ DefineFaction("vandal-tribe", {
 	Type = "tribe",
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-vandal-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	DevelopsFrom = {"gothic_tribe"}
+	Icon = "icon-flag-five-blue-birds-on-orange"
 })
 
 -- polities
@@ -123,7 +115,6 @@ DefineFaction("burgundy", {
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-burgundy",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"burgundian-tribe"},
 	HistoricalCapitals = {
 		411, "worms" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	}
@@ -137,6 +128,5 @@ DefineFaction("gothia", {
 	Color = "red",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-gothia",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"gothic_tribe", "herulian-tribe"}
+	Icon = "icon-flag-yellow-lion-on-cyan"
 })

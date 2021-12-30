@@ -32,8 +32,7 @@ DefineFaction("chauci-tribe", {
 	Type = "tribe",
 	Color = "black",
 	FactionUpgrade = "upgrade-faction-chauci-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"saxony"}
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("cherusci-tribe", {
@@ -43,8 +42,7 @@ DefineFaction("cherusci-tribe", {
 	Type = "tribe",
 	Color = "teal",
 	FactionUpgrade = "upgrade-faction-cherusci-tribe",
-	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"saxony"}
+	Icon = "icon-flag-green-lion-on-purple"
 })
 
 DefineFaction("frisian-tribe", {
@@ -54,8 +52,7 @@ DefineFaction("frisian-tribe", {
 	Type = "tribe",
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-frisian-tribe",
-	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
+	Icon = "icon-flag-green-lion-on-orange"
 })
 
 DefineFaction("varini-tribe", {
@@ -65,8 +62,7 @@ DefineFaction("varini-tribe", {
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-varini-tribe",
-	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"saxony"}
+	Icon = "icon-flag-green-lion-on-orange"
 })
 
 -- Teuton polities
@@ -80,7 +76,6 @@ DefineFaction("brandenburg", {
 	FactionUpgrade = "upgrade-faction-brandenburg",
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	Adjective = "Brandenburgian",
-	DevelopsFrom = {"saxony"},
 	Titles = {
 		"monarchy", "duchy", "Margravate"
 	},
@@ -98,8 +93,7 @@ DefineFaction("brunswick", {
 	Color = "green",
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-brunswick",
-	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"saxony", "cherusci-tribe"}
+	Icon = "icon-flag-old-austria"
 })
 
 DefineFaction("lombardy", {
@@ -110,8 +104,7 @@ DefineFaction("lombardy", {
 	Color = "green",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-lombardy",
-	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"lombard_tribe"}
+	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
 DefineFaction("prussia", {
@@ -123,8 +116,7 @@ DefineFaction("prussia", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-prussia",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	Adjective = "Prussian",
-	DevelopsFrom = {"brandenburg"}
+	Adjective = "Prussian"
 })
 
 Load("scripts/civilizations/teuton/factions_austrian.lua")

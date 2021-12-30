@@ -8,9 +8,6 @@ marcomanni_tribe = {
 	upgrade = upgrade_faction_marcomanni_tribe
 	icon = icon_flag_cyan_lion_on_red
 	description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."
-	develops_from = {
-		suebi_tribe
-	}
 	core_settlements = {
 		prague
 	}

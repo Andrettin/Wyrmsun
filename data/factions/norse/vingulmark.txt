@@ -1,7 +1,4 @@
 vingulmark = {
-	develops_from = {
-		yngling_tribe
-	}
 	core_settlements = {
 		oslo
 	}

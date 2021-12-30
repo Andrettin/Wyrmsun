@@ -8,16 +8,6 @@ scania = {
 	default_capital = malmo
 	upgrade = upgrade_faction_denmark
 	icon = icon_flag_habsburg
-	develops_from = {
-		asa_tribe
-		hersing_tribe
-		hlesing_tribe
-		jarling_tribe
-		karling_tribe
-		skeldung_tribe
-		thralling_tribe
-		yngling_tribe
-	}
 	core_settlements = {
 		malmo
 	}

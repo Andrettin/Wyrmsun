@@ -8,13 +8,6 @@ vandalia = {
 	default_capital = carthage
 	upgrade = upgrade_faction_vandalia
 	icon = icon_flag_five_blue_birds_on_orange
-	develops_from = {
-		vandal_tribe
-		lugii_tribe
-		rugian_tribe
-		silingae_tribe
-		turcilingian_tribe
-	}
 	
 	history = {
 		#polities must have writing and masonry
