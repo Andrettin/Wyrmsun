@@ -22,19 +22,12 @@ netherlands = {
 		overijssel
 		salia
 	}
+	core_settlements = {
+		amsterdam
+	}
 	conditions = {
 		upgrade_class = writing
 		upgrade_class = gunpowder
-		not = {
-			any_other_player = {
-				or = {
-					faction = brabant
-					faction = drenthe
-					faction = holland
-					faction = overijssel
-				}
-			}
-		}
 	}
 	#settlement_names = {
 	#	"'s-Hertogenbosch",
