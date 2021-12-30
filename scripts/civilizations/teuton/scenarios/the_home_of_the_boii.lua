@@ -33,7 +33,7 @@ if (LoadedGame == false) then
 	SetPlayerData(3, "RaceName", "suebi")
 	SetPlayerData(3, "Faction", "suebi_tribe")
 	SetPlayerData(4, "RaceName", "teuton")
-	SetPlayerData(4, "Faction", "lombard_tribe")
+	SetPlayerData(4, "Faction", "lombardy")
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)

@@ -1,0 +1,22 @@
+lombardy = {
+	name = "Lombardy"
+	adjective = "Lombard"
+	civilization = teutonic
+	type = polity
+	color = green
+	default_tier = kingdom
+	icon = icon_flag_five_purple_birds_on_green
+	upgrade = upgrade_faction_lombardy
+	core_settlements = {
+		hanover
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

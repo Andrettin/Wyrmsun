@@ -16,7 +16,7 @@ oldenburg = {
 		}
 		
 		161 = {
-			owner = lombard_tribe #the area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = lombardy #the area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
 		919 = {

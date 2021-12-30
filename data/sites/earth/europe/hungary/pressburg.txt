@@ -30,7 +30,7 @@ pressburg = {
 		}
 		
 		526 = {
-			owner = lombard_tribe #Bratislava's area was Lombardic territory in 526 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = lombardy #Bratislava's area was Lombardic territory in 526 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		533 = {

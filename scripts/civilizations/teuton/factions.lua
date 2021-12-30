@@ -86,17 +86,6 @@ DefineFaction("brunswick", {
 	Icon = "icon-flag-old-austria"
 })
 
-DefineFaction("lombardy", {
-	Name = "Lombardy",
-	Adjective = "Lombard",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-lombardy",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
 DefineFaction("prussia", {
 	Name = "Prussia", -- "Preussen"
 	Civilization = "teuton",

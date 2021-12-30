@@ -8,12 +8,6 @@ upgrade_faction_cherusci_tribe = {
 	effects_string = "+5 HP and +1 Damage for Spearmen"
 }
 
-upgrade_faction_lombard_tribe = {
-	name = "Lombard Tribe"
-	effects_string = "+2 Damage for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_varini_tribe = {
 	name = "Varini Tribe"
 	effects_string = "+10 HP for Swordsmen"
@@ -107,9 +101,6 @@ upgrade_faction_holy_rome = {
 upgrade_faction_lombardy = {
 	name = "Lombardy"
 	effects_string = "+2 Damage for Knights"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_magdeburg = {

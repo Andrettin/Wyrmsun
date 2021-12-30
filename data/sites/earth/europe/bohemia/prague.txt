@@ -18,7 +18,7 @@ prague = {
 		}
 		
 		395 = {
-			owner = lombard_tribe #part of Lombard territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = lombardy #part of Lombard territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		526 = {
