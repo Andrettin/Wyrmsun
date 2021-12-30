@@ -8,7 +8,13 @@ thuringia = {
 	icon = icon_flag_yellow_lion_on_cyan
 	upgrade = upgrade_faction_thuringia
 	develops_from = {
-		thuringian_tribe
+		hermunduri_tribe
+	}
+	core_settlements = {
+		erfurt
+	}
+	conditions = {
+		upgrade_class = ironworking
 	}
 	title_names = {
 		monarchy = {
@@ -24,7 +30,13 @@ thuringia = {
 	}
 	
 	history = {
+		395 = {
+			government_type = tribe
+		}
+		
 		919 = {
+			government_type = monarchy
+			
 			diplomacy_state = {
 				faction = holy_rome #part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 				state = vassal

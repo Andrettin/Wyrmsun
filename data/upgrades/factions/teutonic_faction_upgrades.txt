@@ -173,9 +173,6 @@ upgrade_faction_switzerland = {
 upgrade_faction_thuringia = {
 	name = "Thuringia"
 	effects_string = "+2 Damage for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_westphalia = {

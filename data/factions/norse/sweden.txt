@@ -5,6 +5,7 @@ sweden = {
 	type = polity
 	color = blue
 	default_tier = kingdom
+	min_tier = duchy #tribe
 	default_capital = stockholm
 	upgrade = upgrade_faction_sweden
 	icon = flag_blue_raven_on_yellow

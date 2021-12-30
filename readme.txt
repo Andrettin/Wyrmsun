@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
-- Merged the Bavarian, Danish, Frankish, Norwegian, Geat, Gute and Swedish Tribe factions into their polity counterparts (i.e. Denmark, etc.), and made the latter no longer require Writing.
+- Merged the Bavarian, Danish, Frankish, Geat, Gute, Norwegian, Swedish and Thuringian Tribe factions into their polity counterparts (i.e. Denmark, etc.), and made the latter no longer require Writing.
 - The Holy Roman Empire now requires Monarchy, and cannot switch to being a Republic.
 
 * Items

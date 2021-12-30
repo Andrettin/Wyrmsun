@@ -69,12 +69,6 @@ DefineModifier("upgrade-faction-suebi-tribe",
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-thuringian-tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
 DefineModifier("upgrade-faction-galicia",
 	{"BasicDamage", 2},
 	{"Points", 10},

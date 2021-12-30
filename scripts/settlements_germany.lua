@@ -93,7 +93,7 @@ DefineSite("eichstatt", {
 		"teuton", "Eichstatt" -- "Eichstätt"
 	},
 	HistoricalOwners = {
-		526, "thuringian-tribe", -- Eichstätt's area was a Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "thuringia", -- Eichstätt's area was a Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
 		741, 0, "temple" -- the bishopric of Eichstätt existed as of 741; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 175.
@@ -160,7 +160,7 @@ DefineSite("fulda", {
 		"teuton", "Fulda"
 	},
 	HistoricalOwners = {
-		526, "thuringian-tribe", -- Fulda's area was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "thuringia", -- Fulda's area was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
 		744, 0, "temple" -- the abbey of Fulda was founded on 744 by Boniface; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 172.
@@ -335,7 +335,7 @@ DefineSite("scheidungen", {
 		"teuton", "Scheidungen"
 	},
 	HistoricalOwners = {
-		526, "thuringian-tribe" -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "thuringia" -- Scheidungen was in Thuringian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	},
 	HistoricalBuildings = {
 		526, 0, "farm"

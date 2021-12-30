@@ -37,4 +37,3 @@ DefineFaction("wurtemberg", {
 	Icon = "icon-flag-cyan-lion-on-red",
 	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"}
 })
-

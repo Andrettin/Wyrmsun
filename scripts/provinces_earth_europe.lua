@@ -1380,7 +1380,7 @@ DefineProvince("Franconia", {
 		"basque", "linearware-tribe",
 		"gaul", "turone-tribe",
 		"suebi", "hermunduri-tribe",
-		"suebi", "thuringian-tribe",
+		"teuton", "thuringia",
 		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"
 	},
@@ -1389,7 +1389,7 @@ DefineProvince("Franconia", {
 		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-27, "gaul", "turone-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		161, "suebi", "hermunduri-tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		507, "suebi", "thuringian-tribe", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		507, "teuton", "thuringia", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		531, "frankish", "francia", -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},

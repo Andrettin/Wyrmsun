@@ -84,17 +84,6 @@ DefineFaction("quadi-tribe", {
 	}
 })
 
-DefineFaction("thuringian-tribe", {
-	Name = "Thuringian Tribe",
-	Adjective = "Thuringian",
-	Civilization = "suebi",
-	Type = "tribe",
-	Color = "green",
-	FactionUpgrade = "upgrade-faction-thuringian-tribe",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	DevelopsFrom = {"hermunduri-tribe"}
-})
-
 DefineFaction("galicia", { -- Suebi kingdom of Galicia
 	Name = "Galicia",
 	Adjective = "Galician",

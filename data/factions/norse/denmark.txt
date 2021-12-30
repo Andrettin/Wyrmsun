@@ -5,6 +5,7 @@ denmark = {
 	type = polity
 	color = red
 	default_tier = kingdom
+	min_tier = duchy #tribe
 	default_capital = copenhagen
 	upgrade = upgrade_faction_denmark
 	icon = flag_black_raven_on_white

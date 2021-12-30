@@ -34,11 +34,6 @@ upgrade_faction_suebi_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_thuringian_tribe = {
-	name = "Thuringian Tribe"
-	effects_string = "+2 Damage for Archers"
-}
-
 upgrade_faction_galicia = {
 	name = "Galicia"
 	effects_string = "+2 Damage for Kregars"
