@@ -25,30 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("asa-tribe", {
-	Name = "Asa Tribe",
-	Adjective = "Asa",
-	Civilization = "germanic",
-	Type = "tribe",
-	Color = "orange",
-	FactionUpgrade = "upgrade-faction-asa-tribe",
-	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
-	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
-	HistoricalResources = {
-		-2900, "copper", 0, -- Westward Migration scenario
-		-2900, "lumber", 0, -- Westward Migration scenario
-		-2900, "stone", 0, -- Westward Migration scenario
-		-2800, "copper", 2500, -- The Settlement of Scandinavia scenario
-		-2800, "lumber", 2500, -- The Settlement of Scandinavia scenario
-		-2800, "stone", 2500 -- The Settlement of Scandinavia scenario
-	}
-})
-
 DefineFaction("herminone-tribe", { -- according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
 	Name = "Herminone Tribe",
 	Adjective = "Herminone",
 	Civilization = "germanic",
-	ParentFaction = "asa-tribe",
+	ParentFaction = "asa_tribe",
 	Type = "tribe",
 	Color = "green",
 	FactionUpgrade = "upgrade-faction-skeldung-tribe"
@@ -69,7 +50,7 @@ DefineFaction("ingaevone-tribe", { -- according to Tacitus one of the earliest G
 	Name = "Ingaevone Tribe",
 	Adjective = "Ingaevone",
 	Civilization = "germanic",
-	ParentFaction = "asa-tribe",
+	ParentFaction = "asa_tribe",
 	Type = "tribe",
 	Color = "white",
 	FactionUpgrade = "upgrade-faction-yngling-tribe"
@@ -80,10 +61,10 @@ DefineFaction("istaevone-tribe", { -- according to Tacitus one of the earliest G
 	Name = "Istaevone Tribe",
 	Adjective = "Istaevone",
 	Civilization = "germanic",
-	ParentFaction = "asa-tribe",
+	ParentFaction = "asa_tribe",
 	Type = "tribe",
 	Color = "black",
-	FactionUpgrade = "upgrade-faction-asa-tribe"
+	FactionUpgrade = "upgrade_faction_asa_tribe"
 })
 
 DefineFaction("jarling-tribe", {
@@ -119,7 +100,7 @@ DefineFaction("skeldung-tribe", { -- Skjoldung in the original Norse sagas, here
 	Name = "Skeldung Tribe",
 	Adjective = "Skeldung",
 	Civilization = "germanic",
-	ParentFaction = "asa-tribe",
+	ParentFaction = "asa_tribe",
 	Type = "tribe",
 	Color = "red",
 	FactionUpgrade = "upgrade-faction-skeldung-tribe"
@@ -155,7 +136,7 @@ DefineFaction("yngling-tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	Name = "Yngling Tribe",
 	Adjective = "Yngling",
 	Civilization = "germanic",
-	ParentFaction = "asa-tribe",
+	ParentFaction = "asa_tribe",
 	Type = "tribe",
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-yngling-tribe",

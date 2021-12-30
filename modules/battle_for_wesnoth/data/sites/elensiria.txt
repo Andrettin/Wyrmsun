@@ -3,7 +3,6 @@ helsinki += { #Elensiria is identified with Helsinki as Finland (which was an el
 	cultural_names = {
 		elven = "Elensiria"
 	}
-	cores += lintanir
 	
 	history = {
 		years_wesnoth = {

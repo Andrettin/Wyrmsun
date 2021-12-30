@@ -4,7 +4,6 @@ prague += {
 	cultural_names = {
 		dwarven = "Knalga"
 	}
-	cores += knalga
 	
 	history = {
 		years_wesnoth = {

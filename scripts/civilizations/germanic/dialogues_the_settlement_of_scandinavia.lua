@@ -34,7 +34,7 @@ DefineDialogue("on_the_vanaquisl_introduction", {
 			"text", "I have won every battle I have taken part in... but they were no more than squabbles compared to the aim I set before myself: the conquest of Vanaland. That country is peopled by a strange group of elf-worshippers... My great army has been assembled, and the time has come to make the river run red with their blood. Their lands shall be taken into our possession, providing our tribesfolk with the lands we much need to prosper. Onward to victory!",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana-tribe"))
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("vana_tribe"))
 				end
 			}
 		},
@@ -52,7 +52,7 @@ DefineDialogue("asa-raid", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "vana-tribe",
+			"speaker-player", "vana_tribe",
 			"text", "The Asa people are coming with a large force to raid us, prepare our defenses!",
 			"options", {"Defend our homeland!"}
 		}
@@ -72,7 +72,7 @@ DefineDialogue("on_the_vanaquisl_vana_sighted", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "vana-tribe",
+			"speaker-player", "vana_tribe",
 			"text", "The Asa! What are you here for?"
 		},
 		{
@@ -81,7 +81,7 @@ DefineDialogue("on_the_vanaquisl_vana_sighted", {
 		},
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "vana-tribe",
+			"speaker-player", "vana_tribe",
 			"text", "You shall have our homelands... as your burial grounds. For the Vanir!"
 		}
 	}
@@ -91,19 +91,19 @@ DefineDialogue("on_the_vanaquisl_victory", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-germanic-warrior",
-			"speaker-player", "vana-tribe",
+			"speaker-player", "vana_tribe",
 			"text", "What is this disturbance in our home?",
 			"conditions", function(s)
-				return (FindUnit("unit-germanic-warrior", GetFactionPlayer("vana-tribe")) ~= nil)
+				return (FindUnit("unit-germanic-warrior", GetFactionPlayer("vana_tribe")) ~= nil)
 			end,
 			"option-effects", {
 				function(s)
 					local asa_warrior = FindUnit("unit-germanic-warrior", trigger_player)
 					if (asa_warrior) then
-						local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
+						local uncount = GetUnits(GetFactionPlayer("vana_tribe"))
 						for unit1 = 1,table.getn(uncount) do 
 							if (GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
-								OrderUnit(GetFactionPlayer("vana-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, GetUnitVariable(asa_warrior, "MapLayer"), "attack")
+								OrderUnit(GetFactionPlayer("vana_tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(asa_warrior,"PosX"), GetUnitVariable(asa_warrior,"PosY")}, GetUnitVariable(asa_warrior, "MapLayer"), "attack")
 							end
 						end
 					end

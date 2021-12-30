@@ -1,0 +1,42 @@
+khag_tribe = {
+	name = "Khag Tribe"
+	adjective = "Khag"
+	civilization = goblin
+	type = tribe
+	color = brown
+	default_tier = duchy
+	upgrade = upgrade_faction_khag_tribe
+	core_settlements = {
+		khag
+	}
+	force_templates = {
+		{ #from Battle for Wesnoth: Liberty (The Raid)
+			force_type = land
+			priority = 110
+			units = {
+				cavalry = 4
+			}
+		}
+		{
+			force_type = land
+			priority = 100
+			units = {
+				infantry = 4
+			}
+		}
+		{
+			force_type = naval
+			priority = 100
+			units = {
+				siege_warship = 1
+			}
+		}
+		{
+			force_type = air
+			priority = 100
+			units = {
+				flying_rider = 1
+			}
+		}
+	}
+}

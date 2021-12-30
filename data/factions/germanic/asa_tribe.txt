@@ -1,0 +1,34 @@
+asa_tribe = {
+	name = "Asa Tribe"
+	adjective = "Asa"
+	civilization = germanic
+	type = tribe
+	color = orange
+	default_tier = duchy
+	upgrade = upgrade_faction_asa_tribe
+	description = "The Asa are the legendary progenitors of the Germanic peoples."
+	background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
+	core_settlements = {
+		azov
+	}
+	
+	history = {
+		-2900 = {
+			#Westward Migration scenario
+			resources = {
+				copper = 0
+				lumber = 0
+				stone = 0
+			}
+		}
+		
+		-2800 = {
+			#The Settlement of Scandinavia scenario
+			resources = {
+				copper = 2500
+				lumber = 2500
+				stone = 2500
+			}
+		}
+	}
+}

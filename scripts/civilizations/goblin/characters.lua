@@ -51,13 +51,13 @@ DefineCharacter("fal-khag", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Gender = "male",
 	Type = "unit-goblin-warlord", -- Goblin Pillager
 	Civilization = "goblin",
-	Faction = "khag-tribe",
+	Faction = "khag_tribe",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"ruler", 0, 0, "khag-tribe"
+--		"ruler", 0, 0, "khag_tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "khag_tribe") then
 			return true
 		end
 		return false
@@ -70,10 +70,10 @@ DefineCharacter("gatrakh", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Gender = "male",
 	Type = "unit-goblin-warlord", -- Goblin Pillager
 	Civilization = "goblin",
-	Faction = "khag-tribe",
+	Faction = "khag_tribe",
 	Deities = {"gathaarl", "hel"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "khag_tribe") then
 			return true
 		end
 		return false
@@ -85,10 +85,10 @@ DefineCharacter("thurg", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Gender = "male",
 	Type = "unit-goblin-warlord", -- Goblin Pillager
 	Civilization = "goblin",
-	Faction = "khag-tribe",
+	Faction = "khag_tribe",
 	Deities = {"gathaarl", "hel"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "khag_tribe") then
 			return true
 		end
 		return false
@@ -100,10 +100,10 @@ DefineCharacter("krung", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Gender = "male",
 	Type = "unit-goblin-warlord", -- Goblin Pillager
 	Civilization = "goblin",
-	Faction = "khag-tribe",
+	Faction = "khag_tribe",
 	Deities = {"gathaarl", "hel"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "khag_tribe") then
 			return true
 		end
 		return false
@@ -115,10 +115,10 @@ DefineCharacter("gorokh", { -- from Battle for Wesnoth: Liberty (The Raid)
 	Gender = "male",
 	Type = "unit-goblin-barbarian", -- Wolf Rider
 	Civilization = "goblin",
-	Faction = "khag-tribe",
+	Faction = "khag_tribe",
 	Deities = {"gathaarl", "hel"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "khag-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "khag_tribe") then
 			return true
 		end
 		return false

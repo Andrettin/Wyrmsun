@@ -1,0 +1,18 @@
+untersberg = { #Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
+	name = "Untersberg"
+	adjective = "Untersbergian"
+	civilization = gnomish
+	type = polity
+	color = blue #the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
+	default_tier = kingdom
+	default_capital = gnana
+	core_settlements = {
+		gnana
+	}
+	character_title_names = {
+		chancellor = "Grand Chancellor" #the grand chancellor was the head of government, apparently; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
+		#education_minister = "Superintendent of Public Schools" #Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
+	}
+	
+	#Untersberg had an "Order of the Bullfrog" in Among the Gnomes (should be changed to an animal which exists in Nidavellir); Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
+}

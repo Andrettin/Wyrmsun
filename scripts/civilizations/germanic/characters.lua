@@ -34,7 +34,7 @@ DefineCharacter("lorikus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	DeathDate = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000, -3000 + 12, "asa-tribe"
+		"ruler", -3000, -3000 + 12, "asa_tribe"
 	}
 })
 
@@ -69,7 +69,7 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Mother = "troan",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12, -3000 + 12 + 10, "asa-tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
+		"ruler", -3000 + 12, -3000 + 12 + 10, "asa_tribe" -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
 	}
 })
 
@@ -83,7 +83,7 @@ DefineCharacter("loridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Father = "tror",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 1), -3000 + 12 + (10 * 2), "asa_tribe"
 	}
 })
 
@@ -97,7 +97,7 @@ DefineCharacter("einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Father = "loridi",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 2), -3000 + 12 + (10 * 3), "asa_tribe"
 	}
 })
 
@@ -111,7 +111,7 @@ DefineCharacter("vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Father = "einridi",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 3), -3000 + 12 + (10 * 4), "asa_tribe"
 	}
 })
 
@@ -125,7 +125,7 @@ DefineCharacter("vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Father = "vingethor",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 4), -3000 + 12 + (10 * 5), "asa_tribe"
 	}
 })
 
@@ -139,7 +139,7 @@ DefineCharacter("moda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Father = "vingener",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 5), -3000 + 12 + (10 * 6), "asa_tribe"
 	}
 })
 
@@ -153,7 +153,7 @@ DefineCharacter("magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Father = "moda",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 6), -3000 + 12 + (10 * 7), "asa_tribe"
 	}
 })
 
@@ -167,7 +167,7 @@ DefineCharacter("seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Father = "magan",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 7), -3000 + 12 + (10 * 8), "asa_tribe"
 	}
 })
 
@@ -181,7 +181,7 @@ DefineCharacter("bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Father = "seskef",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 8), -3000 + 12 + (10 * 9), "asa_tribe"
 	}
 })
 
@@ -195,7 +195,7 @@ DefineCharacter("athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Father = "bedvig",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 9), -3000 + 12 + (10 * 10), "asa_tribe"
 	}
 })
 
@@ -209,7 +209,7 @@ DefineCharacter("itermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Father = "athra",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 10), -3000 + 12 + (10 * 11), "asa_tribe"
 	}
 })
 
@@ -223,7 +223,7 @@ DefineCharacter("heremod", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Father = "itermann",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 11), -3000 + 12 + (10 * 12), "asa_tribe"
 	}
 })
 
@@ -237,7 +237,7 @@ DefineCharacter("skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Father = "heremod",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 12), -3000 + 12 + (10 * 13), "asa_tribe"
 	}
 })
 
@@ -251,7 +251,7 @@ DefineCharacter("bjaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Father = "skjaldun",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 13), -3000 + 12 + (10 * 14), "asa_tribe"
 	}
 })
 
@@ -265,7 +265,7 @@ DefineCharacter("jat", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 
 	Father = "bjaf",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 14), -3000 + 12 + (10 * 15), "asa_tribe"
 	}
 })
 
@@ -279,7 +279,7 @@ DefineCharacter("gudawulfa", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Father = "jat",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 15), -3000 + 12 + (10 * 16), "asa_tribe"
 	}
 })
 
@@ -293,7 +293,7 @@ DefineCharacter("finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Father = "gudawulfa",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 16), -3000 + 12 + (10 * 17), "asa_tribe"
 	}
 })
 
@@ -307,7 +307,7 @@ DefineCharacter("friallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Father = "finn",
 	Deities = {"thor", "tyr"},
 	HistoricalTitles = {
-		"ruler", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "asa-tribe"
+		"ruler", -3000 + 12 + (10 * 17), -3000 + 12 + (10 * 18), "asa_tribe"
 	}
 })
 
@@ -336,7 +336,7 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 		"ruler", -2800 + (30 * 1), -2800 + (30 * 2), "yngling-tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "asa-tribe" or GetPlayerData(trigger_player, "Faction") == "yngling-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "yngling-tribe") then
 			return true
 		end
 		return false
@@ -499,7 +499,7 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 		"ruler", -2800, -2800 + (30 * 2), "skeldung-tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "asa-tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
 			return true
 		end
 		return false

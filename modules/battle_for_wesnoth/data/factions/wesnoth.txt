@@ -8,4 +8,7 @@ wesnoth = {
 	default_capital = weldyn
 	icon = icon_flag_old_austria
 	#upgrade = upgrade_faction_wesnoth
+	core_settlements = {
+		weldyn
+	}
 }

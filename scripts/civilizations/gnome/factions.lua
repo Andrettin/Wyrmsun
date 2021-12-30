@@ -63,20 +63,3 @@ DefineFaction("vulcan-tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 1
 	Color = "yellow",
 	Description = "The Vulcans excel at mining and metallurgy. The tribe's sages are believed to possess power over fire and thunder."
 })
-
-DefineFaction("untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
-	Name = "Untersberg",
-	Adjective = "Untersbergian",
-	Civilization = "gnome",
-	Type = "polity",
-	Color = "blue", -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
-	DefaultTier = "kingdom",
-	MinisterTitles = {
-		"chancellor", "none", "none", "none", "Grand Chancellor" -- the grand chancellor was the head of government, apparently; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
-		--"education-minister", "none", "none", "none", "Superintendent of Public Schools" -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
-	},
-	HistoricalCapitals = {
-		-25000, "gnana"
-	}
-	-- Untersberg had an "Order of the Bullfrog" in Among the Gnomes (should be changed to an animal which exists in Nidavellir); Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
-})

@@ -27,7 +27,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-asa-tribe",
+DefineModifier("upgrade_faction_asa_tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},

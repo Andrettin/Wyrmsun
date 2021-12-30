@@ -203,12 +203,12 @@ DefineProvince("Astrakhan", {
 	},
 --	SettlementLocation = {618, 124}, -- Astrakhan
 	Claims = {
-		"germanic", "asa-tribe",
+		"germanic", "asa_tribe",
 		"persian", "aorsi-tribe",
 		"persian", "sarmatian-tribe"
 	},
 	HistoricalOwners = {
-		-3000, "germanic", "asa-tribe",
+		-3000, "germanic", "asa_tribe",
 		-2800, "", "", -- Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia at this date
 		-336, "persian", "sarmatian-tribe", -- Macedonian Empire (and environs) in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 		-264, "persian", "aorsi-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1020,11 +1020,11 @@ DefineProvince("Don", {
 		"greek", "Tanais"
 	},
 	FactionCulturalNames = {
-		"celt", "vana-tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
+		"celt", "vana_tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
 --	SettlementLocation = {592, 121}, -- Rostov-on-Don
 	Claims = {
-		"celt", "vana-tribe"
+		"celt", "vana_tribe"
 	},
 	HistoricalOwners = {
 		161, "persian", "sarmatian-tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -1531,14 +1531,14 @@ DefineProvince("Gotaland", {
 		"norse", "gautland"
 	},
 	HistoricalOwners = {
-		-2800, "germanic", "asa-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2800, "germanic", "asa_tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "yngling-tribe", -- estimated date
 		-325, "goth", "gothic_tribe", -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		161, "norse", "sweden", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "norse", "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
-		-2800, "germanic", "asa-tribe"
+		-2800, "germanic", "asa_tribe"
 	},
 	HistoricalCultures = {
 		-2800, "germanic",
@@ -3209,7 +3209,7 @@ DefineProvince("Scania", {
 		-7000, "basque", "kongemose-tribe", -- Kongemose culture present in Scania c. 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 185.
 		-5800, "basque", "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 		-3000, "basque", "gylfing_tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
-		-2800, "germanic", "asa-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2800, "germanic", "asa_tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "yngling-tribe", -- estimated date
 		-264, "", "", -- remove the Proto-Germanics
 		161, "norse", "sweden", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -3217,7 +3217,7 @@ DefineProvince("Scania", {
 		1560, "norse", "denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
-		-2800, "germanic", "asa-tribe"
+		-2800, "germanic", "asa_tribe"
 	},
 	HistoricalCultures = {
 		-5800, "basque",
@@ -3459,13 +3459,13 @@ DefineProvince("Sweden", {
 		"norse", "sweden"
 	},
 	HistoricalOwners = {
-		-2800, "germanic", "asa-tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2800, "germanic", "asa_tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "yngling-tribe", -- estimated date
 		-264, "norse", "sweden", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "norse", "sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
-		-2800, "germanic", "asa-tribe"
+		-2800, "germanic", "asa_tribe"
 	},
 	HistoricalCultures = {
 		-2800, "germanic",

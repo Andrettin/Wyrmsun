@@ -4,7 +4,6 @@ belgrade += {
 	cultural_names = {
 		wesnothian = "Weldyn"
 	}
-	cores += wesnoth
 	
 	history = {
 		years_wesnoth = {

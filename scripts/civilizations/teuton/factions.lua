@@ -33,7 +33,7 @@ DefineFaction("saxon-tribe", {
 	Color = "pink",
 	FactionUpgrade = "upgrade-faction-saxon-tribe",
 	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
 	DevelopsTo = {"gumeninga-tribe", "essex", "middlesex", "sussex", "wessex"},
 	--[[
 	SettlementNames = {
@@ -74,7 +74,7 @@ DefineFaction("frisian-tribe", {
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-frisian-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
 DefineFaction("bavarian-tribe", {

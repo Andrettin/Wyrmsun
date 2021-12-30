@@ -44,7 +44,7 @@ DefineFaction("burgundian-tribe", {
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-burgundian-tribe",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "jarling-tribe", "karling-tribe", "skeldung-tribe", "thielung-tribe", "thralling-tribe", "yngling-tribe"}
 })
 
 DefineFaction("herulian-tribe", {

@@ -1,0 +1,5 @@
+lintanir = {
+	core_settlements = {
+		elensiria
+	}
+}

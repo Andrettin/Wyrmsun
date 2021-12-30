@@ -29,12 +29,12 @@ DefineDialogue("aurvangling-goblins-sighted", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit-goblin-archer",
-			"speaker-player", "aurvangling-tribe",
+			"speaker-player", "aurvangling_tribe",
 			"text", "What are dwarves doing in Aurvang? They must have come to despoil our homes, attack!",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("aurvangling-tribe"))
-					SetDiplomacy(GetFactionPlayer("aurvangling-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("aurvangling_tribe"))
+					SetDiplomacy(GetFactionPlayer("aurvangling_tribe"), "enemy", trigger_player)
 				end
 			}
 		}

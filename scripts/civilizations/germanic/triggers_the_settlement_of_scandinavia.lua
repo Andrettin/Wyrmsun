@@ -28,8 +28,8 @@
 AddTrigger("on_the_vanaquisl_vana_sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("voden", i) ~= nil and GetFactionExists("vana-tribe") and GetPlayerData(i, "HasQuest", "on_the_vanaquisl")) then
-				local uncount = GetUnits(GetFactionPlayer("vana-tribe"))
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("voden", i) ~= nil and GetFactionExists("vana_tribe") and GetPlayerData(i, "HasQuest", "on_the_vanaquisl")) then
+				local uncount = GetUnits(GetFactionPlayer("vana_tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Ident") == "unit-germanic-warrior") then
 						local unit_quantity = GetNumUnitsAt(i, "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3}, GetUnitVariable(uncount[unit1], "MapLayer"))

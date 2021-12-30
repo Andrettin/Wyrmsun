@@ -33,7 +33,7 @@ DefineFaction("ampsivarii-tribe", {
 	Color = "cyan",
 	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("batavian-tribe", {
@@ -44,7 +44,7 @@ DefineFaction("batavian-tribe", {
 	Color = "orange",
 	FactionUpgrade = "upgrade-faction-batavian-tribe",
 	Icon = "icon-flag-five-blue-birds-on-orange",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("chamavi-tribe", {
@@ -55,7 +55,7 @@ DefineFaction("chamavi-tribe", {
 	Color = "pink",
 	FactionUpgrade = "upgrade-faction-chamavi-tribe",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("chatti-tribe", {
@@ -66,7 +66,7 @@ DefineFaction("chatti-tribe", {
 	Color = "yellow",
 	FactionUpgrade = "upgrade-faction-chatti-tribe",
 	Icon = "icon-flag-five-red-birds-on-yellow",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("sugambri-tribe", {
@@ -77,7 +77,7 @@ DefineFaction("sugambri-tribe", {
 	Color = "black",
 	FactionUpgrade = "upgrade-faction-sugambri-tribe",
 	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
@@ -89,7 +89,7 @@ DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of German
 	FactionUpgrade = "upgrade-faction-ubii-tribe",
 	Icon = "icon-flag-habsburg",
 	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti.",
-	DevelopsFrom = {"asa-tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
+	DevelopsFrom = {"asa_tribe", "hersing_tribe", "istaevone-tribe", "jarling-tribe", "karling-tribe", "thralling-tribe"}
 })
 
 DefineFaction("austrasia", {

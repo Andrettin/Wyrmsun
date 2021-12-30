@@ -28,9 +28,9 @@
 AddTrigger("aurvangling-goblins-sighted",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "dwarf" and GetFactionExists("aurvangling-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "RaceName") == "dwarf" and GetFactionExists("aurvangling_tribe")) then
 				local uncount = 0
-				uncount = GetUnits(GetFactionPlayer("aurvangling-tribe"))
+				uncount = GetUnits(GetFactionPlayer("aurvangling_tribe"))
 				for unit1 = 1,table.getn(uncount) do 
 					if (
 						uncount[unit1]

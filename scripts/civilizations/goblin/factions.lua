@@ -43,16 +43,6 @@ DefineFaction("issudru-tribe", { -- created by Jesse Crider
 	FactionUpgrade = "upgrade-faction-issudru-tribe"
 })
 
-DefineFaction("aurvangling-tribe", {
-	Name = "Aurvangling Tribe",
-	Adjective = "Aurvangling",
-	Civilization = "goblin",
-	Type = "tribe",
-	Color = "teal",
-	FactionUpgrade = "upgrade-faction-aurvangling-tribe",
-	Description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
-})
-
 DefineFaction("dreadskull-tribe", {
 	Name = "Dreadskull Tribe",
 	Adjective = "Dreadskull",
@@ -61,37 +51,6 @@ DefineFaction("dreadskull-tribe", {
 	Color = "black",
 	FactionUpgrade = "upgrade-faction-dreadskull-tribe",
 	Description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
-})
-
-DefineFaction("khag-tribe", {
-	Name = "Khag Tribe",
-	Adjective = "Khag",
-	Civilization = "goblin",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-khag-tribe",
-	ForceTemplates = {
-		{ -- from Battle for Wesnoth: Liberty (The Raid)
-			"force-type", "land",
-			"priority", 110,
-			"unit-class", "cavalry", 4
-		},
-		{
-			"force-type", "land",
-			"priority", 100,
-			"unit-class", "infantry", 4
-		},
-		{
-			"force-type", "naval",
-			"priority", 100,
-			"unit-class", "siege_warship", 1
-		},
-		{
-			"force-type", "air",
-			"priority", 100,
-			"unit-class", "flying_rider", 1
-		}
-	}
 })
 
 DefineFaction("lggi-tribe", {
@@ -164,26 +123,6 @@ DefineFaction("wildfang-tribe", {
 	Description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
 })
 
-DefineFaction("aurvang", {
-	Name = "Aurvang",
-	Adjective = "Aurvangling",
-	Civilization = "goblin",
-	Type = "polity",
-	Color = "teal",
-	DefaultTier = "duchy",
-	DefaultGovernmentType = "monarchy",
-	FactionUpgrade = "upgrade-faction-aurvang",
-	Icon = "icon-flag-orange-skull-on-teal",
-	DevelopsFrom = {"aurvangling-tribe", "dreadskull-tribe", "lggi-tribe"},
-	Titles = {
-		"monarchy", "duchy", "Principality"
-	},
-	MinisterTitles = {
-		"ruler", "male", "monarchy", "duchy", "Prince",
-		"ruler", "female", "monarchy", "duchy", "Princess"
-	}
-})
-
 DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	Name = "Driftwood",
 	Adjective = "Driftwood",
@@ -195,7 +134,7 @@ DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
 	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
 	FactionUpgrade = "upgrade-faction-driftwood",
 	Icon = "icon-flag-red-skull-on-yellow",
-	DevelopsFrom = {"aelak-tribe", "aurvangling-tribe", "dreadskull-tribe", "issudru-tribe", "khag-tribe", "lggi-tribe", "mabom-tribe", "sigre-tribe"},
+	DevelopsFrom = {"aelak-tribe", "aurvangling_tribe", "dreadskull-tribe", "issudru-tribe", "khag_tribe", "lggi-tribe", "mabom-tribe", "sigre-tribe"},
 	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
 })
 
@@ -243,7 +182,7 @@ DefineFaction("stilgar", { -- created by Jesse Crider
 	DefaultGovernmentType = "republic",
 	FactionUpgrade = "upgrade-faction-stilgar",
 	Icon = "icon-flag-purple-skull-on-green",
-	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "khag-tribe", "prideblade-tribe", "wildfang-tribe"},
+	DevelopsFrom = {"aelak-tribe", "issudru-tribe", "mabom-tribe", "sigre-tribe", "khag_tribe", "prideblade-tribe", "wildfang-tribe"},
 	Titles = {
 		"republic", "duchy", "Syndicate"
 	},

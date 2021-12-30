@@ -126,7 +126,7 @@ DefineProvince("Heartfangs", {
 		"dwarf", "Heartfangs"
 	},
 	Claims = {
-		"goblin", "khag-tribe"
+		"goblin", "khag_tribe"
 	}
 })
 

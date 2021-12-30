@@ -77,7 +77,7 @@ function LoadProvinces(world)
 		},
 		Heartfangs = {
 			Name = "Heartfangs",
-			Owner = "khag-tribe",
+			Owner = "khag_tribe",
 			Civilization = "goblin",
 			Units = {
 				unit_goblin_spearman = 5 -- Fal Khag, Gatrakh, Thurg, Krung, Gorokh (should all be cavalry)

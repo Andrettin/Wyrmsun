@@ -1,0 +1,14 @@
+aurvangling_tribe = {
+	name = "Aurvangling Tribe"
+	adjective = "Aurvangling"
+	civilization = goblin
+	type = tribe
+	color = teal
+	default_tier = duchy
+	upgrade = upgrade_faction_aurvangling_tribe
+	icon = icon_flag_orange_skull_on_teal
+	description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
+	core_settlements = {
+		aurvang
+	}
+}

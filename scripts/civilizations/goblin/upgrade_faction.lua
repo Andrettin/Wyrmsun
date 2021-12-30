@@ -27,7 +27,7 @@ DefineModifier("upgrade-faction-sigre-tribe",
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
-DefineModifier("upgrade-faction-aurvangling-tribe",
+DefineModifier("upgrade_faction_aurvangling_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
@@ -40,7 +40,7 @@ DefineModifier("upgrade-faction-dreadskull-tribe",
 	{"apply-to", "unit-goblin-shaman"}
 )
 
-DefineModifier("upgrade-faction-khag-tribe",
+DefineModifier("upgrade_faction_khag_tribe",
 	{"BasicDamage", 2},
 	{"HitPoints", -5},
 	{"Points", 10},

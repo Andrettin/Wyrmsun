@@ -42,9 +42,9 @@ DefineQuest("on_the_vanaquisl", {
 			elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
 				vana_defender_quantity = 36
 			end
-			CreateCreeps(GetFactionPlayer("vana-tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
+			CreateCreeps(GetFactionPlayer("vana_tribe"), "unit-germanic-warrior", vana_defender_quantity, 4732 - EarthStartX, 935 - EarthStartY, 4782 - EarthStartX, 964 - EarthStartY)
 			CallDialogue("on_the_vanaquisl_introduction", trigger_player)
-			CallDialogue("asa-raid", GetFactionPlayer("vana-tribe"))
+			CallDialogue("asa-raid", GetFactionPlayer("vana_tribe"))
 		end
 	end,
 	CompletionEffects = function(s)
@@ -57,7 +57,7 @@ DefineQuest("on_the_vanaquisl", {
 			"objective-string", "Destroy Vanaland's Chieftain's Hall",
 			"quantity", 1,
 			"unit-type", "unit-germanic-town-hall",
-			"faction", "vana-tribe"
+			"faction", "vana_tribe"
 		}
 	},
 	HeroesMustSurvive = {"voden"},
@@ -101,7 +101,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
---		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa-tribe") then
+--		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa_tribe") then
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_germanic_worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then -- allow for all Germanic tribes for now, since they don't have quests
 			return true
 		end

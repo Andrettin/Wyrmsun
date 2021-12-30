@@ -32,9 +32,9 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "asa-tribe"
-				and GetFactionMinister("germanic", "asa-tribe", "ruler") == "Lorikus"
---				and FactionHasHero("germanic", "asa-tribe", "Tror")
+				and EventFaction.Name == "asa_tribe"
+				and GetFactionMinister("germanic", "asa_tribe", "ruler") == "Lorikus"
+--				and FactionHasHero("germanic", "asa_tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -60,9 +60,9 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and EventFaction.Name == "asa-tribe"
-				and GetFactionMinister("germanic", "asa-tribe", "ruler") == "Lorikus"
---				and FactionHasHero("germanic", "asa-tribe", "Tror")
+				and EventFaction.Name == "asa_tribe"
+				and GetFactionMinister("germanic", "asa_tribe", "ruler") == "Lorikus"
+--				and FactionHasHero("germanic", "asa_tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -77,10 +77,10 @@ local GermanicEvents = {
 				Event(
 					"Tror",
 					"My grandfather was a king beyond these lands... And though my family has been disgraced, we were born to rule!",
-					"asa-tribe",
+					"asa_tribe",
 					{"~!OK"},
 					{function(s)
-						SetFactionMinister("germanic", "asa-tribe", "ruler", "Tror")
+						SetFactionMinister("germanic", "asa_tribe", "ruler", "Tror")
 						KillGrandStrategyHero("Lorikus")
 					end}
 				)
@@ -117,7 +117,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
+				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
@@ -143,7 +143,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "asa-tribe" or EventFaction.Name == "yngling-tribe")
+				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling-tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
@@ -166,7 +166,7 @@ local GermanicEvents = {
 		Description = "Our chieftain Voden has granted our newly-conquered lands to the south to his younger son, Skeldu.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "asa-tribe"
+				EventFaction.Name == "asa_tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
 				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "ruler") == "Voden"
 				and GrandStrategyHeroIsAlive("Skeldu")
@@ -216,7 +216,7 @@ local GermanicEvents = {
 		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "asa-tribe"
+				EventFaction.Name == "asa_tribe"
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "ruler") == "Yngve"
 			) then

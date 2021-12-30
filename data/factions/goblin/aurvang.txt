@@ -1,0 +1,34 @@
+aurvang = {
+	name = "Aurvang"
+	adjective = "Aurvangling"
+	civilization = goblin
+	type = polity
+	color = teal
+	default_tier = duchy
+	default_government_type = monarchy
+	upgrade = upgrade_faction_aurvang
+	icon = icon_flag_orange_skull_on_teal
+	develops_from = {
+		aurvangling_tribe
+		dreadskull_tribe
+		lggi_tribe
+	}
+	core_settlements = {
+		aurvang
+	}
+	title_names = {
+		monarchy = {
+			duchy = "Principality"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				duchy = {
+					male = "Prince"
+					female = "Princess"
+				}
+			}
+		}
+	}
+}
