@@ -33,8 +33,7 @@ DefineFaction("carinthia", {
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-carinthia",
 	Icon = "icon-flag-five-orange-birds-on-black",
-	DefaultTier = "duchy", -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DevelopsFrom = {"bavarian-tribe"}
+	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
 -- Trading Companies

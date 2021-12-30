@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-bavarian-tribe",
-	{"Armor", 1},
-	{"BasicDamage", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-chauci-tribe",
 	{"HitPoints", 10},
 	{"Points", 10},
@@ -75,13 +68,6 @@ DefineModifier("upgrade-faction-austria",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-bavaria",
-	{"Armor", 1},
-	{"BasicDamage", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade-faction-baden",
@@ -231,10 +217,6 @@ DefineModifier("upgrade-faction-wurtemberg",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineDependency("upgrade-faction-bavarian-tribe",
-	{"upgrade-teuton-spatha", "upgrade-teuton-iron-shield"} -- needs more advanced technology than the others (as the Bavarians are from the early Middle Ages)
 )
 
 DefineDependency("upgrade-faction-frisian-tribe",

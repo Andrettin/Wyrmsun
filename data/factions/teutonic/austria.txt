@@ -11,7 +11,10 @@ austria = {
 	upgrade = upgrade_faction_austria
 	default_capital = vienna
 	develops_from = {
-		bavarian_tribe
+		#similar as for Bavaria
+		marcomanni_tribe
+		quadi_tribe
+		buri_tribe
 	}
 	title_names = {
 		monarchy = {

@@ -77,18 +77,6 @@ DefineFaction("frisian-tribe", {
 	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"}
 })
 
-DefineFaction("bavarian-tribe", {
-	Name = "Bavarian Tribe",
-	Adjective = "Bavarian",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "cyan",
-	FactionUpgrade = "upgrade-faction-bavarian-tribe",
-	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"marcomanni_tribe", "quadi-tribe", "buri-tribe"}, -- must be the Marcomanni or a closely related tribe to found the Bavarian Tribe
-	Description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
-})
-
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Adjective = "Varini",

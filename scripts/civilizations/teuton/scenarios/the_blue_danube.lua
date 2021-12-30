@@ -37,7 +37,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
 	
-	SetPlayerData(0, "Faction", "bavarian-tribe")
+	SetPlayerData(0, "Faction", "bavaria")
 	SetPlayerData(1, "Faction", "rome")
 	SetPlayerData(1, "Allow", "upgrade-masonry", "R")
 	

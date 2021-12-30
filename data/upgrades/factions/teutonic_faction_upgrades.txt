@@ -1,9 +1,3 @@
-upgrade_faction_bavarian_tribe = {
-	name = "Bavarian Tribe"
-	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	requirements_string = "Spatha and Iron Shield"
-}
-
 upgrade_faction_chauci_tribe = {
 	name = "Chauci Tribe"
 	effects_string = "+10 HP for Spearmen"
@@ -56,8 +50,15 @@ upgrade_faction_baden = {
 upgrade_faction_bavaria = {
 	name = "Bavaria"
 	effects_string = "+1 Damage and +1 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
+	modifier = {
+		basic_damage = 1
+		armor = 1
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
 	}
 }
 

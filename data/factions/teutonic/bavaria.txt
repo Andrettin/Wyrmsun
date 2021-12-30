@@ -1,21 +1,36 @@
 bavaria = {
 	name = "Bavaria" #"Bayern"
 	adjective = "Bavarian"
-	civilization = teuton
+	civilization = teutonic
 	type = polity
 	color = cyan
 	default_tier = duchy #Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_bavaria
+	description = "The early Bavarians were a West Germanic people who traced their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."
 	develops_from = {
-		bavarian_tribe
+		#must be the Marcomanni or a closely related tribe to found Bavaria
+		marcomanni_tribe
+		quadi_tribe
+		buri_tribe
 	}
 	core_settlements = {
 		munich
 	}
+	conditions = {
+		#needs early medieval technology
+		upgrade = upgrade_teuton_spatha
+		upgrade = upgrade_teuton_iron_shield
+	}
 	
 	history = {
+		526 = {
+			government_type = tribe
+		}
+		
 		784 = {
+			government_type = monarchy
+			
 			diplomacy_state = {
 				faction = francia #Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
 				state = war

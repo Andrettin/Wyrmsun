@@ -22,7 +22,7 @@ prague = {
 		}
 		
 		526 = {
-			owner = bavarian_tribe #Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+			owner = bavaria #Bohemia was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		}
 		
 		814 = {
