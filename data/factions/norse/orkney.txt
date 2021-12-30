@@ -1,5 +1,5 @@
 orkney = {
 	conditions = {
-		upgrade_class = writing
+		scripted_condition = is_civilized
 	}
 }

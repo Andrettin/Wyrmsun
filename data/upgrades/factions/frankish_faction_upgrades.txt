@@ -37,25 +37,16 @@ upgrade_faction_ubii_tribe = {
 upgrade_faction_austrasia = {
 	name = "Austrasia"
 	effects_string = "+1 Damage and +1 Armor for Ritars"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_burgundia = {
 	name = "Burgundia"
 	effects_string = "+10 HP for Ritars"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_east_francia = {
 	name = "East Francia"
 	effects_string = "+2 Armor for Ritars"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_francia = {
@@ -75,15 +66,9 @@ upgrade_faction_francia = {
 upgrade_faction_neustria = {
 	name = "Neustria"
 	effects_string = "+1 Accuracy and +1 Armor for Ritars"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_salia = {
 	name = "Salia"
 	effects_string = "+2 Accuracy for Ritars"
-	conditions = {
-		upgrade_class = writing
-	}
 }

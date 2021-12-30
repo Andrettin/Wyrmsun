@@ -1,4 +1,4 @@
-sogn = {
+burgundia = {
 	conditions = {
 		scripted_condition = is_civilized
 	}

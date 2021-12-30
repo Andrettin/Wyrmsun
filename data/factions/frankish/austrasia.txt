@@ -1,4 +1,4 @@
-sogn = {
+austrasia = {
 	conditions = {
 		scripted_condition = is_civilized
 	}
