@@ -25,25 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("saxon-tribe", {
-	Name = "Saxon Tribe",
-	Adjective = "Saxon",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "pink",
-	FactionUpgrade = "upgrade-faction-saxon-tribe",
-	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"asa_tribe", "hersing_tribe", "hlesing-tribe", "ingaevone-tribe", "jarling-tribe", "karling-tribe", "thielung-tribe", "thralling-tribe"},
-	DevelopsTo = {"gumeninga-tribe", "essex", "middlesex", "sussex", "wessex"},
-	--[[
-	SettlementNames = {
-		"Hardego", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
-		"Hohsingo", -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
-		"Suabengo" -- one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
-	}
-	--]]
-})
-
 DefineFaction("chauci-tribe", {
 	Name = "Chauci Tribe",
 	Adjective = "Chauci",
@@ -52,7 +33,7 @@ DefineFaction("chauci-tribe", {
 	Color = "black",
 	FactionUpgrade = "upgrade-faction-chauci-tribe",
 	Icon = "icon-flag-five-purple-birds-on-green",
-	DevelopsFrom = {"saxon-tribe"}
+	DevelopsFrom = {"saxony"}
 })
 
 DefineFaction("cherusci-tribe", {
@@ -63,7 +44,7 @@ DefineFaction("cherusci-tribe", {
 	Color = "teal",
 	FactionUpgrade = "upgrade-faction-cherusci-tribe",
 	Icon = "icon-flag-green-lion-on-purple",
-	DevelopsFrom = {"saxon-tribe"}
+	DevelopsFrom = {"saxony"}
 })
 
 DefineFaction("frisian-tribe", {
@@ -85,7 +66,7 @@ DefineFaction("varini-tribe", {
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-varini-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
-	DevelopsFrom = {"saxon-tribe"}
+	DevelopsFrom = {"saxony"}
 })
 
 -- Teuton polities
@@ -99,7 +80,7 @@ DefineFaction("brandenburg", {
 	FactionUpgrade = "upgrade-faction-brandenburg",
 	Icon = "icon-flag-five-red-birds-on-yellow",
 	Adjective = "Brandenburgian",
-	DevelopsFrom = {"saxon-tribe"},
+	DevelopsFrom = {"saxony"},
 	Titles = {
 		"monarchy", "duchy", "Margravate"
 	},
@@ -118,7 +99,7 @@ DefineFaction("brunswick", {
 	DefaultTier = "duchy",
 	FactionUpgrade = "upgrade-faction-brunswick",
 	Icon = "icon-flag-old-austria",
-	DevelopsFrom = {"saxon-tribe", "cherusci-tribe"}
+	DevelopsFrom = {"saxony", "cherusci-tribe"}
 })
 
 DefineFaction("lombardy", {

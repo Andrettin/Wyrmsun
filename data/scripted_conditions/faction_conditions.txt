@@ -9,7 +9,6 @@ is_saxon_faction = {
 	or = {
 		faction = chauci_tribe
 		faction = cherusci_tribe
-		faction = saxon_tribe
 		faction = varini_tribe
 		faction = brandenburg
 		faction = bremen

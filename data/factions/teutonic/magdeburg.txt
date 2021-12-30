@@ -8,7 +8,6 @@ magdeburg = {
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_magdeburg
 	develops_from = {
-		saxon_tribe
 		cherusci_tribe
 	}
 	conditions = {

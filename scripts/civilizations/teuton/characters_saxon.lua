@@ -30,14 +30,14 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "teuton",
-	Faction = "saxon-tribe", -- was from "Saxonland"
+	Faction = "saxony", -- was from "Saxonland"
 	-- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", 0, 0, "saxon-tribe" -- was king of "Saxonland"
+		"ruler", 0, 0, "saxony" -- was king of "Saxonland"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
 		end
 		return false
@@ -51,10 +51,10 @@ DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
-	Faction = "saxon-tribe", -- was from "Saxonland"
+	Faction = "saxony", -- was from "Saxonland"
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
 		end
 		return false
@@ -67,14 +67,14 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
-	Faction = "saxon-tribe", -- was from "Saxonland"
+	Faction = "saxony", -- was from "Saxonland"
 	Father = "helge-skjoldung", 
 	Mother = "alof-the-great", 
 	Children = {"rolf-krake-skjoldung"},
 	Trait = "upgrade-intelligent", -- described as intelligent, as speaking well and being in all respects well behaved
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
 		end
 		return false
@@ -88,12 +88,12 @@ DefineCharacter("widukind", { -- Saxon leader who resisted Charlemagne's forces 
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
-	Faction = "saxon-tribe",
+	Faction = "saxony",
 	StartDate = 772,
 	-- led a Saxon rising in 782; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "saxon-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "saxony") then
 			return true
 		end
 		return false

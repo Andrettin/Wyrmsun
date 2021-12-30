@@ -9,7 +9,7 @@ lubeck = {
 	
 	history = {
 		-264 = {
-			owner = saxon_tribe #Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = saxony #Lübeck's area was territory of the Saxons in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		1097 = {

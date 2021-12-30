@@ -8,7 +8,6 @@ saxony = {
 	icon = icon_flag_red_lion_on_green
 	upgrade = upgrade_faction_saxony
 	develops_from = {
-		saxon_tribe
 		cherusci_tribe
 		varini_tribe
 		brandenburg
@@ -17,9 +16,31 @@ saxony = {
 		magdeburg
 		mecklenburg
 	}
+	develops_to = {
+		gumeninga_tribe
+		essex
+		middlesex
+		sussex
+		wessex
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	#settlement_names = {
+	#	"Hardego" #one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
+	#	"Hohsingo" #one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
+	#	"Suabengo" #one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.
+	#}
 	
 	history = {
+		-264 = {
+			government_type = tribe
+		}
+		
 		919 = {
+			government_type = monarchy
+			
 			diplomacy_state = {
 				faction = holy_rome #duchy within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 				state = vassal

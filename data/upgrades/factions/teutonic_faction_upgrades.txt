@@ -20,12 +20,6 @@ upgrade_faction_lombard_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_saxon_tribe = {
-	name = "Saxon Tribe"
-	effects_string = "+5 HP and +1 Damage for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_varini_tribe = {
 	name = "Varini Tribe"
 	effects_string = "+10 HP for Swordsmen"
@@ -155,9 +149,6 @@ upgrade_faction_prussia = {
 upgrade_faction_saxony = {
 	name = "Saxony"
 	effects_string = "+5 HP and +1 Damage for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_swabia = {

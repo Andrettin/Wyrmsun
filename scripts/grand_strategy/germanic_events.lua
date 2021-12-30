@@ -346,21 +346,21 @@ local GermanicEvents = {
 		Options = {"~!OK", "This means ~!war!", "Play as ~!Beldeg"},
 		OptionEffects = {
 			function(s)
-				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxony")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxony")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxony")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxony")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
-				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe", "war")
+				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxony", "war")
 			end,
 			function(s)
-				AcquireProvince(WorldMapProvinces.Westphalia, "saxon-tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxon-tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "saxony")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.saxon_tribe.Civilization, "saxony")
 				GrandStrategyFaction = Factions.saxon_tribe
-				SetPlayerFaction(Factions.saxon_tribe.Civilization, "saxon-tribe")
+				SetPlayerFaction(Factions.saxon_tribe.Civilization, "saxony")
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}

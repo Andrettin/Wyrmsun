@@ -7,9 +7,6 @@ westphalia = {
 	default_tier = duchy
 	icon = icon_flag_cyan_lion_on_red
 	upgrade = upgrade_faction_westphalia
-	develops_from = {
-		saxon_tribe
-	}
 	conditions = {
 		scripted_condition = is_civilized
 	}
