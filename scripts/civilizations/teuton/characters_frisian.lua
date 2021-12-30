@@ -30,14 +30,14 @@ DefineCharacter("radbod", { -- Frisian ruler defeated by Charles Martel in 718; 
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
-	Faction = "frisian-tribe",
+	Faction = "friesland",
 	StartDate = 704,
 	HistoricalTitles = {
-		"ruler", 704, 0, "frisian-tribe" -- king of the Frisians as of 716; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
+		"ruler", 704, 0, "friesland" -- king of the Frisians as of 716; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 168.
 	},
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "friesland") then
 			return true
 		end
 		return false
@@ -49,10 +49,10 @@ DefineCharacter("bubo", { -- Frisian ruler defeated by Charles Martel in 736; So
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "teuton",
-	Faction = "frisian-tribe",
+	Faction = "friesland",
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "friesland") then
 			return true
 		end
 		return false
@@ -68,7 +68,7 @@ DefineCharacter("liudger", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Deities = {"christian-god"},
 	-- became the first bishop of Münster
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "frisian-tribe" or GetPlayerData(trigger_player, "Faction") == "friesland") then
+		if (GetPlayerData(trigger_player, "Faction") == "friesland") then
 			return true
 		end
 		return false

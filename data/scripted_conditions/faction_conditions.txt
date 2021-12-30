@@ -1,8 +1,5 @@
 is_frisian_faction = {
-	or = {
-		faction = frisian_tribe
-		faction = friesland
-	}
+	faction = friesland
 }
 
 is_saxon_faction = {

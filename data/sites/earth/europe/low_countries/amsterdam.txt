@@ -15,15 +15,15 @@ amsterdam = {
 		}
 		
 		395 = {
-			owner = frisian_tribe #part of Frisian territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = friesland #part of Frisian territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		481 = {
-			owner = frisian_tribe #Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+			owner = friesland #Amsterdam's area was territory of the Frisians in the 481-734 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}
 		
 		486 = {
-			owner = frisian_tribe #part of Frisian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = friesland #part of Frisian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

@@ -1066,7 +1066,7 @@ DefineProvince("Drenthe", {
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-27, "frankish", "ampsivarii-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "teuton", "frisian-tribe", -- Drenthe owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "teuton", "friesland", -- Drenthe owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -1163,18 +1163,18 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		"teuton", "East Friesland"
 	},
 	FactionCulturalNames = {
-		"teuton", "frisian-tribe", "East Friesland",
+		"teuton", "friesland", "East Friesland",
 		"teuton", "netherlands", "East Friesland"
 	},
 --	SettlementLocation = {500, 104}, -- Emden
 	Claims = {
 		"basque", "funnelbeaker-tribe",
-		"teuton", "frisian-tribe",
+		"teuton", "friesland",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "teuton", "frisian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "teuton", "friesland", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "chauci-tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -1410,21 +1410,20 @@ DefineProvince("Friesland", {
 		"teuton", "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 	FactionCulturalNames = {
-		"teuton", "frisian-tribe", "Frisia",
+		"teuton", "friesland", "Frisia",
 		"teuton", "netherlands", "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 --	SettlementLocation = {496, 104}, -- Leeuwarden
 	Claims = {
 		"basque", "funnelbeaker-tribe",
-		"teuton", "frisian-tribe",
 		"teuton", "friesland",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "teuton", "frisian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "teuton", "frisian-tribe", -- Friesland owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-264, "teuton", "friesland", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "friesland", -- Friesland owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		734, "frankish", "francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -1721,7 +1720,7 @@ DefineProvince("Holland", {
 		-264, "frankish", "batavian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		150, "frankish", "francia", -- Franks were the people settled in the Gelderland and in the German Lower Rhine in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		450, "", "", -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-		526, "teuton", "frisian-tribe", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "teuton", "friesland", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		734, "frankish", "francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

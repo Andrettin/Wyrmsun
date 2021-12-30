@@ -38,13 +38,6 @@ DefineModifier("upgrade-faction-cherusci-tribe",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-faction-frisian-tribe",
-	{"Armor", 1},
-	{"HitPoints", 5},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade_faction_lombard_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -210,10 +203,6 @@ DefineModifier("upgrade-faction-wurtemberg",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineDependency("upgrade-faction-frisian-tribe",
-	{"upgrade_ironworking"}
 )
 
 DefineDependency("upgrade_faction_lombard_tribe",

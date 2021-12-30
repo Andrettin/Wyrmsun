@@ -7,6 +7,12 @@ friesland = {
 	default_tier = duchy
 	icon = icon_flag_green_lion_on_orange
 	upgrade = upgrade_faction_friesland
+	core_settlements = {
+		amsterdam
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 	title_names = {
 		monarchy = {
 			barony = "Lordship"
@@ -24,7 +30,13 @@ friesland = {
 	}
 	
 	history = {
+		-264 = {
+			government_type = tribe
+		}
+		
 		919 = {
+			government_type = monarchy
+			
 			diplomacy_state = {
 				faction = holy_rome #part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 				state = vassal

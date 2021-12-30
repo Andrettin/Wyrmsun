@@ -8,12 +8,6 @@ upgrade_faction_cherusci_tribe = {
 	effects_string = "+5 HP and +1 Damage for Spearmen"
 }
 
-upgrade_faction_frisian_tribe = {
-	name = "Frisian Tribe"
-	effects_string = "+5 HP and +1 Armor for Swordsmen"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_lombard_tribe = {
 	name = "Lombard Tribe"
 	effects_string = "+2 Damage for Swordsmen"
@@ -93,9 +87,6 @@ upgrade_faction_franconia = {
 upgrade_faction_friesland = {
 	name = "Friesland"
 	effects_string = "+2 Food Supply for Docks"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_hesse = {

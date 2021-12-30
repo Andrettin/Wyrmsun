@@ -34,8 +34,8 @@ DefineSite("leeuwarden", {
 --		"dutch", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 	HistoricalOwners = {
-		-264, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "frisian-tribe", -- Leeuwarden's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		-264, "friesland", -- Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "friesland", -- Leeuwarden's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "spain", -- Leeuwarden's area was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		1648, "netherlands", -- Leeuwarden's area was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		-- Leeuwarden's area ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
