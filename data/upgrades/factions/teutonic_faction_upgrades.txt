@@ -39,9 +39,6 @@ upgrade_faction_austria = {
 upgrade_faction_baden = {
 	name = "Baden"
 	effects_string = "+2 Evasion for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_bavaria = {
@@ -62,9 +59,6 @@ upgrade_faction_bavaria = {
 upgrade_faction_brabant = {
 	name = "Brabant"
 	effects_string = "+2 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_brandenburg = {
@@ -75,9 +69,6 @@ upgrade_faction_brandenburg = {
 upgrade_faction_bremen = {
 	name = "Bremen"
 	effects_string = "+2 Armor for Cogs"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_brunswick = {
@@ -93,19 +84,11 @@ upgrade_faction_carinthia = {
 upgrade_faction_cologne = {
 	name = "Cologne"
 	effects_string = "+30 Mana for Clerics"
-	conditions = {
-		upgrade_class = writing
-		unit_type = unit_teuton_temple
-		upgrade = upgrade_deity_christian_god
-	}
 }
 
 upgrade_faction_drenthe = {
 	name = "Drenthe"
 	effects_string = "+2 Accuracy for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_franconia = {
@@ -124,17 +107,11 @@ upgrade_faction_friesland = {
 upgrade_faction_hesse = {
 	name = "Hesse"
 	effects_string = "+2 Damage for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_holland = {
 	name = "Holland"
 	effects_string = "+2 Food Supply for Docks"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_holy_rome = {
@@ -153,19 +130,11 @@ upgrade_faction_lombardy = {
 upgrade_faction_magdeburg = {
 	name = "Magdeburg"
 	effects_string = "+30 Mana for Clerics"
-	conditions = {
-		upgrade_class = writing
-		unit_type = unit_teuton_temple
-		upgrade = upgrade_deity_christian_god
-	}
 }
 
 upgrade_faction_mecklenburg = {
 	name = "Mecklenburg"
 	effects_string = "+2 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_netherlands = {
@@ -176,9 +145,6 @@ upgrade_faction_netherlands = {
 upgrade_faction_overijssel = {
 	name = "Overijssel"
 	effects_string = "+2 Accuracy for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_prussia = {
@@ -202,9 +168,6 @@ upgrade_faction_swabia = {
 upgrade_faction_switzerland = {
 	name = "Switzerland"
 	effects_string = "+2 Damage for Spearmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_thuringia = {

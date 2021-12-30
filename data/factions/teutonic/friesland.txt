@@ -1,7 +1,7 @@
 friesland = {
 	name = "Friesland"
 	adjective = "Frisian"
-	civilization = teuton
+	civilization = teutonic
 	type = polity
 	color = black
 	default_tier = duchy

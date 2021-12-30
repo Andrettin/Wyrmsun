@@ -25,37 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("baden", {
-	Name = "Baden",
-	Adjective = "Badenian",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "grand_duchy",
-	FactionUpgrade = "upgrade-faction-baden",
-	Icon = "icon-flag-habsburg",
-	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"}
-	
-})
-
-DefineFaction("switzerland", {
-	Name = "Switzerland",
-	Adjective = "Swiss",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-switzerland",
-	Icon = "icon-flag-red-lion-on-green",
-	DevelopsFrom = {"alamanni-tribe", "suebi_tribe"},
-	Titles = {
-		"republic", "kingdom", "Confederation"
-	},
-	MinisterTitles = {
-		"ruler", "none", "republic", "kingdom", "Chancellor"
-	}
-})
-
 DefineFaction("wurtemberg", {
 	Name = "Wurtemberg",
 	Adjective = "Wurtembergian",

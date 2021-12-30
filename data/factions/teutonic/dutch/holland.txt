@@ -1,0 +1,19 @@
+holland = {
+	name = "Holland"
+	adjective = "Hollander"
+	civilization = teutonic
+	type = polity
+	color = orange
+	default_tier = county #Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	icon = icon_flag_habsburg
+	upgrade = upgrade_faction_holland
+	develops_from = {
+		batavian_tribe
+	}
+	core_settlements = {
+		amsterdam
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+}

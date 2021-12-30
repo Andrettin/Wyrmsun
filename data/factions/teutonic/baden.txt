@@ -1,0 +1,17 @@
+baden = {
+	name = "Baden"
+	adjective = "Badenian"
+	civilization = teutonic
+	type = polity
+	color = black
+	default_tier = grand_duchy
+	icon = icon_flag_habsburg
+	upgrade = upgrade_faction_baden
+	develops_from = {
+		alamanni_tribe
+		suebi_tribe
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+}

@@ -1,0 +1,29 @@
+switzerland = {
+	name = "Switzerland"
+	adjective = "Swiss"
+	civilization = teutonic
+	type = polity
+	color = red
+	default_tier = kingdom
+	icon = icon_flag_red_lion_on_green
+	upgrade = upgrade_faction_switzerland
+	develops_from = {
+		alamanni_tribe
+		suebi_tribe
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+	title_names = {
+		republic = {
+			kingdom = "Confederation"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			republic = {
+				kingdom = "Chancellor"
+			}
+		}
+	}
+}

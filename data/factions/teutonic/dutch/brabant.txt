@@ -1,0 +1,16 @@
+brabant = {
+	name = "Brabant"
+	adjective = "Brabantian"
+	civilization = teutonic
+	type = polity
+	color = cyan
+	default_tier = duchy #Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	icon = icon_flag_yellow_lion_on_cyan
+	upgrade = upgrade_faction_brabant
+	develops_from = {
+		batavian_tribe
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+}

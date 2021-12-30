@@ -1,0 +1,37 @@
+hesse = {
+	name = "Hesse"
+	adjective = "Hessian"
+	civilization = teutonic
+	type = polity
+	color = black
+	default_tier = duchy #Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	icon = icon_flag_cyan_lion_on_red
+	upgrade = upgrade_faction_hesse
+	develops_from = {
+		ubii_tribe
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+	title_names = {
+		monarchy = {
+			duchy = "Landgraviate"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			monarchy = {
+				duchy = {
+					male = "Landgrave"
+					female = "Landgravine"
+				}
+			}
+		}
+	}
+	
+	history = {
+		1815 = {
+			tier = grand_duchy #Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

@@ -109,18 +109,6 @@ DefineFaction("brandenburg", {
 	}
 })
 
-DefineFaction("bremen", {
-	Name = "Bremen",
-	Adjective = "Bremer",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-bremen",
-	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"saxon-tribe", "chauci-tribe"}
-})
-
 DefineFaction("brunswick", {
 	Name = "Brunswick",
 	Adjective = "Brunswick",
@@ -133,45 +121,6 @@ DefineFaction("brunswick", {
 	DevelopsFrom = {"saxon-tribe", "cherusci-tribe"}
 })
 
-DefineFaction("cologne", {
-	Name = "Cologne",
-	Adjective = "Cologne",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "white",
-	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
-	FactionUpgrade = "upgrade-faction-cologne",
-	Icon = "icon-flag-five-black-birds-on-purple",
-	DevelopsFrom = {"ubii-tribe"},
-	Titles = {
-		"theocracy", "duchy", "Archbishopric"
-	},
-	MinisterTitles = {
-		"ruler", "none", "theocracy", "duchy", "Archbishop"
-	}
-})
-
-DefineFaction("hesse", {
-	Name = "Hesse",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	FactionUpgrade = "upgrade-faction-hesse",
-	Icon = "icon-flag-cyan-lion-on-red",
-	Adjective = "Hessian",
-	DevelopsFrom = {"ubii-tribe"},
-	Titles = {
-		"monarchy", "duchy", "Landgraviate"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "duchy", "Landgrave"
-	},
-	HistoricalTiers = {
-		1815, "grand_duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	}
-})
-
 DefineFaction("lombardy", {
 	Name = "Lombardy",
 	Adjective = "Lombard",
@@ -182,39 +131,6 @@ DefineFaction("lombardy", {
 	FactionUpgrade = "upgrade-faction-lombardy",
 	Icon = "icon-flag-five-purple-birds-on-green",
 	DevelopsFrom = {"lombard_tribe"}
-})
-
-DefineFaction("magdeburg", {
-	Name = "Magdeburg",
-	Adjective = "Magdeburgian",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "duchy", -- Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
-	FactionUpgrade = "upgrade-faction-magdeburg",
-	Icon = "icon-flag-five-white-birds-on-red",
-	DevelopsFrom = {"saxon-tribe", "cherusci-tribe"},
-	Titles = {
-		"theocracy", "duchy", "Archbishopric"
-	},
-	MinisterTitles = {
-		"ruler", "none", "theocracy", "duchy", "Archbishop"
-	},
-	HistoricalGovernmentTypes = {
-		1547, "theocracy" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
-	}
-})
-
-DefineFaction("mecklenburg", {
-	Name = "Mecklenburg",
-	Adjective = "Mecklenburgian",
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "grand_duchy",
-	FactionUpgrade = "upgrade-faction-mecklenburg",
-	Icon = "icon-flag-blue-lion-on-yellow",
-	DevelopsFrom = {"saxon-tribe", "varini-tribe"}
 })
 
 DefineFaction("prussia", {
@@ -231,5 +147,4 @@ DefineFaction("prussia", {
 })
 
 Load("scripts/civilizations/teuton/factions_austrian.lua")
-Load("scripts/civilizations/teuton/factions_dutch.lua")
 Load("scripts/civilizations/teuton/factions_swabian.lua")

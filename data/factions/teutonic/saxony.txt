@@ -1,7 +1,7 @@
 saxony = {
 	name = "Saxony" #"Sachsen"
 	adjective = "Saxon"
-	civilization = teuton
+	civilization = teutonic
 	type = polity
 	color = pink
 	default_tier = duchy #Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.

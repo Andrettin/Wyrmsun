@@ -1,0 +1,30 @@
+cologne = {
+	name = "Cologne"
+	adjective = "Colognian"
+	civilization = teutonic
+	type = polity
+	color = white
+	default_tier = duchy #Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	icon = icon_flag_five_black_birds_on_purple
+	upgrade = upgrade_faction_cologne
+	develops_from = {
+		ubii_tribe
+	}
+	conditions = {
+		scripted_condition = is_civilized
+		unit_type = unit_teuton_temple
+		upgrade = upgrade_deity_christian_god
+	}
+	title_names = {
+		theocracy = {
+			duchy = "Archbishopric"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			theocracy = {
+				duchy = "Archbishop"
+			}
+		}
+	}
+}

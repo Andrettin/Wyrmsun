@@ -1,7 +1,7 @@
 austria = {
 	name = "Austria"
 	adjective = "Austrian"
-	civilization = teuton
+	civilization = teutonic
 	type = polity
 	color = white
 	default_tier = duchy
