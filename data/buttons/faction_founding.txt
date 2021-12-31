@@ -350,8 +350,177 @@ found_faction_27 = {
 }
 
 found_faction_28 = {
+	pos = 1
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_29 = {
+	pos = 2
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_30 = {
+	pos = 3
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_31 = {
+	pos = 4
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_32 = {
+	pos = 5
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_33 = {
+	pos = 6
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_34 = {
+	pos = 7
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_35 = {
+	pos = 8
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_36 = {
+	pos = 9
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_37 = {
+	pos = 10
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_38 = {
+	pos = 11
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_39 = {
+	pos = 12
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_40 = {
+	pos = 13
+	level = found_faction_level_3
+	action = faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
+found_faction_41 = {
 	pos = 14
-	level = found_faction_level_2
+	level = found_faction_level_3
 	action = faction
 	value = -1
 	popup = popup_research
