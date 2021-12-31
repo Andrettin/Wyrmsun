@@ -44,17 +44,6 @@ DefineModifier("upgrade-faction-bernice-tribe",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-faction-cantware-tribe",
-	{"ResearchSpeedBonus", 10},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-teuton-barracks"},
-	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit_teutonic_smithy"},
---	{"apply-to", "unit-teuton-stables"},
---	{"apply-to", "unit-teuton-market"},
-	{"apply-to", "unit-teuton-temple"}, {"apply-to", "unit-teuton-university"}
---	{"apply-to", "unit_teuton_dock"}
-)
-
 DefineModifier("upgrade_faction_charude_tribe",
 	{"Armor", 2},
 	{"Points", 10},
@@ -73,19 +62,8 @@ DefineModifier("upgrade-faction-gumeninga-tribe",
 	{"apply-to", "unit-teuton-priest"}
 )
 
-DefineModifier("upgrade_faction_jute_tribe",
-	{"Supply", 2},
-	{"apply-to", "unit_teuton_dock"}
-)
-
 DefineModifier("upgrade-faction-lindisfaran-tribe",
 	{"Accuracy", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-mierce-tribe",
-	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )

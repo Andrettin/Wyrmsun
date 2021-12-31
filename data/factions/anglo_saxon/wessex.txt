@@ -1,5 +1,17 @@
 wessex = {
+	name = "Wessex"
+	adjective = "Wessexian"
+	civilization = anglo_saxon
+	type = polity
+	color = red
+	default_tier = kingdom
+	default_capital = winchester
+	icon = icon_flag_cyan_lion_on_red
+	upgrade = upgrade_faction_wessex
 	core_settlements = {
 		winchester
+	}
+	conditions = {
+		scripted_condition = is_civilized
 	}
 }

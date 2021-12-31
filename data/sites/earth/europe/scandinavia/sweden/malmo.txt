@@ -36,7 +36,7 @@ malmo = {
 		}
 		
 		395 = {
-			owner = jute_tribe #part of Jute territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = jutland #part of Jute territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486 = {

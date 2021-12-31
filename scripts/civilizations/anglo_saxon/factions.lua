@@ -46,17 +46,6 @@ DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
 
-DefineFaction("cantware-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
-	Name = "Cantware Tribe",
-	Adjective = "Cantware",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "cyan",
-	FactionUpgrade = "upgrade-faction-cantware-tribe",
-	Icon = "icon-flag-old-austria",
-	Description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\"."
-})
-
 DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Name = "Dere Tribe",
 	Adjective = "Dere",
@@ -89,17 +78,6 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	FactionUpgrade = "upgrade-faction-lindisfaran-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
 	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
-})
-
-DefineFaction("mierce-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
-	Name = "Mierce Tribe",
-	Adjective = "Mierce",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "white",
-	FactionUpgrade = "upgrade-faction-mierce-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory."
 })
 
 DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -148,40 +126,6 @@ DefineFaction("essex", {
 	Icon = "icon-flag-five-white-birds-on-red"
 })
 
-DefineFaction("jutland", {
-	Name = "Jutland",
-	Adjective = "Jutish",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "duchy",
-	FactionUpgrade = "upgrade-faction-jutland",
-	Icon = "icon-flag-cyan-lion-on-red"
-})
-
-DefineFaction("kent", {
-	Name = "Kent",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "cyan",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-kent",
-	Description = "",
-	Icon = "icon-flag-old-austria"
-})
-
-DefineFaction("mercia", {
-	Name = "Mercia",
-	Adjective = "Mercian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "white",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-mercia",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "Mercia was an Anglo-Saxon kingdom in the central parts of England."
-})
-
 DefineFaction("middle-anglia", {
 	Name = "Middle Anglia",
 	Adjective = "Middle Anglian",
@@ -213,19 +157,4 @@ DefineFaction("sussex", {
 	FactionUpgrade = "upgrade-faction-sussex",
 	Icon = "icon-flag-yellow-lion-on-cyan",
 	Description = ""
-})
-
-DefineFaction("wessex", {
-	Name = "Wessex",
-	Adjective = "Wessexian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-wessex",
-	Icon = "icon-flag-cyan-lion-on-red",
-	Description = "",
-	HistoricalCapitals = {
-		0, "winchester"
-	}
 })

@@ -1,11 +1,22 @@
 kent = {
+	name = "Kent"
 	adjective = "Kentish"
+	civilization = anglo_saxon
+	type = polity
+	color = cyan
+	default_tier = kingdom
+	upgrade = upgrade_faction_kent
+	icon = icon_flag_old_austria
+	description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\"." #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
 	conditions = {
-		upgrade_class = writing
+		upgrade = upgrade_teuton_spatha
+		upgrade = upgrade_teuton_iron_shield
 	}
 	
 	history = {
 		597 = {
+			government_type = monarchy
+			
 			#king Æthelberht of Kent converted to Christianity in 597 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 105-106.
 			acquired_upgrades += upgrade_deity_christian_god
 		}

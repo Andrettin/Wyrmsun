@@ -1860,14 +1860,14 @@ DefineProvince("Jutland", {
 		"norse", "Jutland"
 	},
 	FactionCulturalNames = {
-		"anglo-saxon", "jute_tribe", "Jutland"
+		"anglo-saxon", "jutland", "Jutland"
 	},
 --	SettlementLocation = {508, 96}, -- Aarhus
 	Claims = {
 		"germanic", "skeldung_tribe",
 		"norse", "denmark",
 		"anglo-saxon", "charude_tribe",
-		"anglo-saxon", "jute_tribe",
+		"anglo-saxon", "jutland",
 		"anglo-saxon", "teuton_tribe"
 	},
 	HistoricalOwners = {
@@ -1904,7 +1904,7 @@ DefineProvince("Kent", {
 	HistoricalOwners = {
 		-27, "briton", "cantii-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "jute_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "jutland", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {

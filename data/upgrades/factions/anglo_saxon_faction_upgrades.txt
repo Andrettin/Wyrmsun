@@ -20,15 +20,6 @@ upgrade_faction_bernice_tribe = {
 	}
 }
 
-upgrade_faction_cantware_tribe = {
-	name = "Cantware Tribe"
-	effects_string = "+10% Research Speed for buildings"
-	conditions = {
-		upgrade = upgrade_teuton_spatha
-		upgrade = upgrade_teuton_iron_shield
-	}
-}
-
 upgrade_faction_charude_tribe = {
 	name = "Charude Tribe"
 	effects_string = "+2 Armor for Archers"
@@ -52,26 +43,9 @@ upgrade_faction_gumeninga_tribe = {
 	}
 }
 
-upgrade_faction_jute_tribe = {
-	name = "Jute Tribe"
-	effects_string = "+2 Food Supply for Docks"
-	conditions = {
-		upgrade_class = ironworking
-	}
-}
-
 upgrade_faction_lindisfaran_tribe = {
 	name = "Lindisfaran Tribe"
 	effects_string = "+2 Accuracy for Swordsmen"
-	conditions = {
-		upgrade = upgrade_teuton_spatha
-		upgrade = upgrade_teuton_iron_shield
-	}
-}
-
-upgrade_faction_mierce_tribe = {
-	name = "Mierce Tribe"
-	effects_string = "+2 Armor for Swordsmen"
 	conditions = {
 		upgrade = upgrade_teuton_spatha
 		upgrade = upgrade_teuton_iron_shield
@@ -126,9 +100,6 @@ upgrade_faction_essex = {
 upgrade_faction_jutland = {
 	name = "Jutland"
 	effects_string = "+2 Food Supply for Docks"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_kent = {
@@ -139,9 +110,6 @@ upgrade_faction_kent = {
 upgrade_faction_mercia = {
 	name = "Mercia"
 	effects_string = "+2 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_middle_anglia = {
@@ -173,7 +141,4 @@ upgrade_faction_sussex = {
 upgrade_faction_wessex = {
 	name = "Wessex"
 	effects_string = "+2 Damage for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
