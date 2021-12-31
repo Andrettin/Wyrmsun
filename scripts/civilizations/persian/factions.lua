@@ -125,46 +125,6 @@ DefineFaction("sindi-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Color = "white"
 })
 
-DefineFaction("media", {
-	Name = "Media",
-	Adjective = "Median",
-	Civilization = "persian",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom",
-	HistoricalCapitals = {
-		-600, "ecbatana" -- Ecbatana was the capital of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	}
-})
-
-DefineFaction("parthia", {
-	Name = "Parthia",
-	Adjective = "Parthian",
-	Civilization = "persian",
-	Type = "polity",
-	Color = "purple",
-	DefaultTier = "kingdom",
-	HistoricalCapitals = {
---		161, "Mesopotamia" -- Ctesiphon was the capital of Parthia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalDiplomacyStates = {
-		161, "armenia", "war", -- in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
-		161, "rome", "war"
-	}
-})
-
-DefineFaction("persia", {
-	Name = "Persia",
-	Adjective = "Persian",
-	Civilization = "persian",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom",
-	HistoricalCapitals = {
-		0, "persepolis"
-	}
-})
-
 -- Non-Playable
 
 DefineFaction("agraei-tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.

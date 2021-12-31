@@ -1,0 +1,28 @@
+parthia = {
+	name = "Parthia"
+	adjective = "Parthian"
+	civilization = persian
+	type = polity
+	color = purple
+	default_tier = kingdom
+	default_capital = babylon #Ctesiphon was the capital of Parthia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	core_settlements = {
+		babylon
+	}
+	
+	history = {
+		161.10 = {
+			#in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+			
+			diplomacy_state = {
+				faction = armenia
+				state = war
+			}
+			
+			diplomacy_state = {
+				faction = rome
+				state = war
+			}
+		}
+	}
+}

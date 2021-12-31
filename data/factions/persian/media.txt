@@ -1,0 +1,12 @@
+media = {
+	name = "Media"
+	adjective = "Median"
+	civilization = persian
+	type = polity
+	color = yellow
+	default_tier = kingdom
+	default_capital = ecbatana #Ecbatana was the capital of the Median Empire about 600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+	core_settlements = {
+		ecbatana
+	}
+}

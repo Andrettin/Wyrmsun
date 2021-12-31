@@ -1,0 +1,12 @@
+persia = {
+	name = "Persia"
+	adjective = "Persian"
+	civilization = persian
+	type = polity
+	color = yellow
+	default_tier = kingdom
+	default_capital = persepolis
+	core_settlements = {
+		persepolis
+	}
+}
