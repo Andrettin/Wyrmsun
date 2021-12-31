@@ -15,7 +15,7 @@ bucharest = {
 		}
 		
 		200 = {
-			owner = visigothic_tribe #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+			owner = visigothia #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
 		814 = {

@@ -30,14 +30,14 @@ DefineCharacter("gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Gender = "male",
 	Type = "unit-gothic-horse-lord",
 	Civilization = "goth",
-	Faction = "burgundian-tribe",
+	Faction = "burgundy",
 	DeathDate = 411,
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 0, 411, "burgundian-tribe"
+		"ruler", 0, 411, "burgundy"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -49,10 +49,10 @@ DefineCharacter("grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	Faction = "burgundian-tribe",
+	Faction = "burgundy",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -77,7 +77,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	},
 	-- became Gunnar/Gunther in the myths; as given by Fichtner
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -92,7 +92,7 @@ DefineCharacter("glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Faction = "burgundy",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -109,7 +109,7 @@ DefineCharacter("gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Mother = "grimhild",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -125,7 +125,7 @@ DefineCharacter("sarwa", { -- the Sörli of Norse mythology; Sörli is a reflex 
 	Mother = "gudrun", -- son of Gudrun
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -142,7 +142,7 @@ DefineCharacter("hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Mother = "grimhild",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -158,7 +158,7 @@ DefineCharacter("kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -173,7 +173,7 @@ DefineCharacter("orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Faction = "burgundy",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false
@@ -223,7 +223,7 @@ DefineCharacter("gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Mother = "grimhild",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "burgundian-tribe" or GetPlayerData(trigger_player, "Faction") == "burgundy") then
+		if (GetPlayerData(trigger_player, "Faction") == "burgundy") then
 			return true
 		end
 		return false

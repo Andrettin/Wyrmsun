@@ -1,9 +1,0 @@
-gothic_tribe = {
-	name = "Gothic Tribe"
-	adjective = "Gothic"
-	civilization = gothic
-	type = tribe
-	color = red
-	upgrade = upgrade_faction_gothic_tribe
-	icon = icon_flag_yellow_lion_on_cyan
-}

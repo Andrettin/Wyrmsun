@@ -13,12 +13,12 @@ cluj = {
 	
 	history = {
 		200 = {
-			owner = visigothic_tribe #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+			owner = visigothia #became Visigothic territory c. 200; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 			building_classes += town_hall
 		}
 		
 		395 = {
-			owner = visigothic_tribe #part of Visigothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = visigothia #part of Visigothic territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486 = {

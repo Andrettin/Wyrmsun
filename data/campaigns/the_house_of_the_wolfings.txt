@@ -1,7 +1,7 @@
 the_house_of_the_wolfings = {
 	name = "The House of the Wolfings"
 	description = "The House of the Wolfings."
-	faction = ostrogothic_tribe
+	faction = ostrogothia
 	start_date = 200
 	map_templates = { earth }
 	quest = the_house_of_the_wolfings

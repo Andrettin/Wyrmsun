@@ -5,16 +5,23 @@ ostrogothia = {
 	type = polity
 	color = red
 	default_tier = kingdom
-	upgrade = upgrade_faction_ostrogothia
 	icon = icon_flag_five_black_birds_on_purple
+	upgrade = upgrade_faction_ostrogothia
+	conditions = {
+		upgrade_class = ironworking
+	}
 	
 	history = {
-		#polities must have writing and masonry
-		acquired_upgrade_classes += writing
-		acquired_upgrade_classes += masonry
+		200 = {
+			government_type = tribe
+		}
 		
 		486 = {
 			capital = szekesfehervar #Pannonia
+			
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
+			government_type = monarchy
 		}
 	}
 }

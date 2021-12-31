@@ -30,15 +30,15 @@ DefineCharacter("airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
 	DeathDate = 376, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 0, 376, "ostrogothic_tribe"
+		"ruler", 0, 376, "ostrogothia"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false
@@ -51,11 +51,11 @@ DefineCharacter("frithareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	Father = "airmanareiks",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false
@@ -68,15 +68,15 @@ DefineCharacter("walamer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	StartDate = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathDate = 472, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 453, 472, "ostrogothic_tribe"
+		"ruler", 453, 472, "ostrogothia"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false
@@ -89,15 +89,15 @@ DefineCharacter("theodemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	StartDate = 472,
 	DeathDate = 474, -- died
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 472, 474, "ostrogothic_tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+		"ruler", 472, 474, "ostrogothia" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false
@@ -110,10 +110,10 @@ DefineCharacter("widemer-amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false
@@ -126,10 +126,10 @@ DefineCharacter("vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "ostrogothic_tribe",
+	Faction = "ostrogothia",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "ostrogothic_tribe" or GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
+		if (GetPlayerData(trigger_player, "Faction") == "ostrogothia") then
 			return true
 		end
 		return false

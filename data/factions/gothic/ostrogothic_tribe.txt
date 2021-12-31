@@ -1,9 +1,0 @@
-ostrogothic_tribe = {
-	name = "Ostrogothic Tribe"
-	adjective = "Ostrogothic"
-	civilization = gothic
-	type = tribe
-	color = red
-	upgrade = upgrade_faction_ostrogothic_tribe
-	icon = icon_flag_five_black_birds_on_purple
-}

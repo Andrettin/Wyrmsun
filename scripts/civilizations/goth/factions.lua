@@ -35,16 +35,6 @@ DefineFaction("bastarnae-tribe", {
 	Icon = "icon-flag-blue-lion-on-yellow"
 })
 
-DefineFaction("burgundian-tribe", {
-	Name = "Burgundian Tribe",
-	Adjective = "Burgundian",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-burgundian-tribe",
-	Icon = "icon-flag-old-austria"
-})
-
 DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
 	Adjective = "Herulian",
@@ -93,40 +83,4 @@ DefineFaction("turcilingian-tribe", {
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-turcilingian-tribe",
 	Icon = "icon-flag-green-lion-on-orange"
-})
-
-DefineFaction("vandal-tribe", {
-	Name = "Vandal Tribe",
-	Adjective = "Vandal",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "cyan",
-	FactionUpgrade = "upgrade-faction-vandal-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange"
-})
-
--- polities
-
-DefineFaction("burgundy", {
-	Name = "Burgundy",
-	Civilization = "goth",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-burgundy",
-	Icon = "icon-flag-old-austria",
-	HistoricalCapitals = {
-		411, "worms" -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
-	}
-})
-
-DefineFaction("gothia", {
-	Name = "Gothia",
-	Adjective = "Gothic",
-	Civilization = "goth",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-gothia",
-	Icon = "icon-flag-yellow-lion-on-cyan"
 })

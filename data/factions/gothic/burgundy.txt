@@ -1,9 +1,28 @@
 burgundy = {
+	name = "Burgundy"
 	adjective = "Burgundian"
+	civilization = gothic
+	type = polity
+	color = brown
+	default_tier = kingdom
+	#default_capital = worms
+	icon = icon_flag_old_austria
+	upgrade = upgrade_faction_burgundy
+	conditions = {
+		upgrade_class = ironworking
+	}
 	
 	history = {
-		#polities must have writing and masonry
-		acquired_upgrade_classes += writing
-		acquired_upgrade_classes += masonry
+		-264 = {
+			government_type = tribe
+		}
+		
+		411 = {
+			#Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+			
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
+			government_type = monarchy
+		}
 	}
 }

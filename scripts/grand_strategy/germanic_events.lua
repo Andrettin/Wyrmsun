@@ -94,7 +94,7 @@ local GermanicEvents = {
 		Description = "The notable Dag has been declared our chieftain.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "gothic_tribe"
+				EventFaction.Name == "gothia"
 			) then
 				return true
 			else

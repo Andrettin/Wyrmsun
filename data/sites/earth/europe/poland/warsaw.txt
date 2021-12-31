@@ -10,7 +10,7 @@ warsaw = {
 	
 	history = {
 		-264 = {
-			owner = vandal_tribe #Vandal territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = vandalia #Vandal territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 

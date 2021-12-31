@@ -12,10 +12,7 @@ thiudareiks_amelung = { #Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietr
 	}
 	
 	conditions = {
-		or = {
-			faction = ostrogothic_tribe
-			faction = ostrogothia
-		}
+		faction = ostrogothia
 	}
 	
 	history = {
@@ -24,11 +21,10 @@ thiudareiks_amelung = { #Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietr
 		474 = {
 			#in 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 			active = true
-			faction = ostrogothic_tribe
+			faction = ostrogothia
 		}
 		
 		486 = {
-			faction = ostrogothia
 			location = szekesfehervar #Pannonia
 		}
 		

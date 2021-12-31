@@ -6,12 +6,21 @@ vandalia = {
 	color = cyan
 	default_tier = kingdom
 	default_capital = carthage
-	upgrade = upgrade_faction_vandalia
 	icon = icon_flag_five_blue_birds_on_orange
+	upgrade = upgrade_faction_vandalia
+	conditions = {
+		upgrade_class = ironworking
+	}
 	
 	history = {
-		#polities must have writing and masonry
-		acquired_upgrade_classes += writing
-		acquired_upgrade_classes += masonry
+		-264 = {
+			government_type = tribe
+		}
+		
+		486 = {
+			acquired_upgrade_classes += writing
+			acquired_upgrade_classes += masonry
+			government_type = monarchy
+		}
 	}
 }

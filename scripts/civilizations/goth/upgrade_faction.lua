@@ -32,20 +32,8 @@ DefineModifier("upgrade-faction-bastarnae-tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-burgundian-tribe",
-	{"HitPoints", 10},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade_faction_gepid_tribe",
 	{"Speed", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade_faction_gothic_tribe",
-	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
@@ -61,12 +49,6 @@ DefineModifier("upgrade-faction-lugii-tribe",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-spearman"}
-)
-
-DefineModifier("upgrade_faction_ostrogothic_tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
 )
 
 DefineModifier("upgrade-faction-rugian-tribe",
@@ -85,18 +67,6 @@ DefineModifier("upgrade-faction-turcilingian-tribe",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-vandal-tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade_faction_visigothic_tribe",
-	{"Speed", 1},
-	{"Points", 10},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
 )
 
 DefineModifier("upgrade-faction-burgundy",
@@ -127,12 +97,4 @@ DefineModifier("upgrade-faction-visigothia",
 	{"Speed", 1},
 	{"Points", 10},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
-)
-
-DefineDependency("upgrade-faction-burgundian-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade_faction_gothic_tribe",
-	{"upgrade_ironworking"}
 )

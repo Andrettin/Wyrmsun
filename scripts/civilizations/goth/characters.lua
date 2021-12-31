@@ -30,7 +30,7 @@ DefineCharacter("hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
-	Faction = "gothic_tribe",
+	Faction = "gothia",
 	Deities = {"odin", "tyr"}
 })
 
@@ -39,7 +39,7 @@ DefineCharacter("agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "gothic_tribe",
+	Faction = "gothia",
 	Father = "hraudung",
 	Deities = {"odin", "hel"}
 })
@@ -49,7 +49,7 @@ DefineCharacter("geirrod", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "gothic_tribe",
+	Faction = "gothia",
 	Trait = "upgrade-cruel", -- was a cruel, tyrannical ruler; had sudden fits of anger; nevertheless, was generous and welcoming of guests
 	Father = "hraudung",
 	Deities = {"odin", "tyr"}
@@ -60,7 +60,7 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
-	Faction = "gothic_tribe",
+	Faction = "gothia",
 	Trait = "upgrade-compassionate", -- when Grimnir (Odin in disguise) suffered, Agnar suffered with him; gave Grimnir a horn with drink
 	Father = "geirrod",
 	Deities = {"odin", "tyr"}

@@ -646,13 +646,13 @@ if (GrandStrategyYear >= -264) then
 	
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	
-	SetProvinceOwner("Prussia", "goth", "gothic_tribe")
+	SetProvinceOwner("Prussia", "goth", "gothia")
 	SetProvinceCivilization("Prussia", "goth")
-	AddProvinceClaim("Prussia", "goth", "gothic_tribe")
+	AddProvinceClaim("Prussia", "goth", "gothia")
 	
-	SetProvinceOwner("Posen", "goth", "burgundian-tribe")
+	SetProvinceOwner("Posen", "goth", "burgundy")
 	SetProvinceCivilization("Posen", "goth")
-	AddProvinceClaim("Posen", "goth", "burgundian-tribe")	
+	AddProvinceClaim("Posen", "goth", "burgundy")	
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -856,8 +856,8 @@ end
 
 if (GrandStrategyYear >= 397) then
 	-- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Croatia", "goth", "visigothic_tribe")
-	SetProvinceOwner("Bosnia", "goth", "visigothic_tribe")
+	SetProvinceOwner("Croatia", "goth", "visigothia")
+	SetProvinceOwner("Bosnia", "goth", "visigothia")
 end
 
 if (GrandStrategyYear >= 400) then
@@ -866,7 +866,7 @@ end
 
 if (GrandStrategyYear >= 406) then
 	-- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD; the initial quantity of Burgundians was c. 80,000; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91, 93.
-	SetProvinceOwner("Palatinate", "goth", "burgundian-tribe")
+	SetProvinceOwner("Palatinate", "goth", "burgundy")
 end
 
 if (GrandStrategyYear >= 411) then
@@ -917,7 +917,7 @@ end
 
 if (GrandStrategyYear >= 474) then
 	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	SetProvinceOwner("Macedonia", "goth", "ostrogothic_tribe")
+	SetProvinceOwner("Macedonia", "goth", "ostrogothia")
 end
 
 if (GrandStrategyYear >= 481) then
@@ -944,8 +944,8 @@ end
 if (GrandStrategyYear >= 488) then
 	-- Ostrogoths commissioned by the Eastern Roman Emperor in 488 to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
 	SetProvinceOwner("Macedonia", "latin", "rome")
-	SetProvinceOwner("Bulgaria", "goth", "ostrogothic_tribe") -- Lower Moesia
-	SetProvinceOwner("Skopje", "goth", "ostrogothic_tribe") -- Upper Moesia
+	SetProvinceOwner("Bulgaria", "goth", "ostrogothia") -- Lower Moesia
+	SetProvinceOwner("Skopje", "goth", "ostrogothia") -- Upper Moesia
 end
 
 if (GrandStrategyYear >= 489) then
@@ -958,9 +958,9 @@ if (GrandStrategyYear >= 493) then
 	-- Odoacer held out against Theoderic for 2 years entrenched in Ravenna, but in 493 AD the fortress fell; the terms of the surrender foresaw leaving the defenders alive, but later Theoderic suspected a plot of theirs against his life and put them (including Odoacer) to death; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9.
 	
 	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Naples", "goth", "ostrogothic_tribe")
-	SetProvinceOwner("Umbria", "goth", "ostrogothic_tribe")
-	SetProvinceOwner("Abruzzo", "goth", "ostrogothic_tribe")
+	SetProvinceOwner("Naples", "goth", "ostrogothia")
+	SetProvinceOwner("Umbria", "goth", "ostrogothia")
+	SetProvinceOwner("Abruzzo", "goth", "ostrogothia")
 end
 
 if (GrandStrategyYear >= 500) then
@@ -978,9 +978,9 @@ if (GrandStrategyYear >= 506) then
 end
 
 if (GrandStrategyYear >= 507) then -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Carniola", "goth", "ostrogothic_tribe")
-	SetProvinceOwner("Croatia", "goth", "ostrogothic_tribe")
-	SetProvinceOwner("Bosnia", "goth", "ostrogothic_tribe")
+	SetProvinceOwner("Carniola", "goth", "ostrogothia")
+	SetProvinceOwner("Croatia", "goth", "ostrogothia")
+	SetProvinceOwner("Bosnia", "goth", "ostrogothia")
 end
 
 if (GrandStrategyYear >= 517) then

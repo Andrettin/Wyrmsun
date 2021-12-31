@@ -1,0 +1,19 @@
+gothia = {
+	name = "Gothia"
+	adjective = "Gothic"
+	civilization = gothic
+	type = polity
+	color = red
+	default_tier = kingdom
+	icon = icon_flag_yellow_lion_on_cyan
+	upgrade = upgrade_faction_gothia
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-325 = {
+			government_type = tribe
+		}
+	}
+}
