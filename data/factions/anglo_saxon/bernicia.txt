@@ -1,0 +1,28 @@
+bernicia = { #Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
+	name = "Bernicia"
+	adjective = "Bernician"
+	civilization = anglo_saxon
+	type = polity
+	color = brown
+	default_tier = kingdom
+	icon = icon_flag_five_blue_birds_on_orange
+	upgrade = upgrade_faction_bernicia
+	description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories. Bernicia was the name of the kingdom which they founded."
+	core_settlements = {
+		york
+	}
+	conditions = {
+		upgrade = upgrade_teuton_spatha
+		upgrade = upgrade_teuton_iron_shield
+	}
+	
+	history = {
+		526 = {
+			government_type = tribe
+		}
+		
+		547 = {
+			government_type = monarchy #the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
+		}
+	}
+}

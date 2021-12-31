@@ -2697,14 +2697,14 @@ DefineProvince("Northumberland", {
 	},
 --	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	Claims = {
-		"anglo-saxon", "bernice-tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		"anglo-saxon", "bernicia", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"english", "england",
 		"anglo-saxon", "northumbria"
 	},
 	HistoricalOwners = {
 		80, "latin", "rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "briton", "selgovae-tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		526, "anglo-saxon", "bernice-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "bernicia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "anglo-saxon", "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; in 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 		654, "anglo-saxon", "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -4074,7 +4074,7 @@ DefineProvince("York", {
 	},
 	Claims = {
 		"briton", "brigantes-tribe",
-		"anglo-saxon", "dere-tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		"anglo-saxon", "deira", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"english", "england",
 		"anglo-saxon", "northumbria"
 	},
@@ -4083,7 +4083,7 @@ DefineProvince("York", {
 		-- Occupation of the Star Carr site (in North Yorkshire, England) occurred from c. 8700 BC to c. 8400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 154.
 		-264, "briton", "brigantes-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		500, "anglo-saxon", "dere-tribe", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		500, "anglo-saxon", "deira", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "anglo-saxon", "bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 		654, "anglo-saxon", "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

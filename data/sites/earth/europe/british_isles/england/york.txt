@@ -30,7 +30,7 @@ york = {
 		}
 		
 		500 = {
-			owner = dere_tribe #the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+			owner = deira #the Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		}
 		
 		588 = {

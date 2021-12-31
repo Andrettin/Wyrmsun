@@ -37,21 +37,8 @@ DefineModifier("upgrade-faction-avione-tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-bernice-tribe",
-	{"DisembarkmentBonus", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
-	{"apply-to", "unit-teuton-spearman"}
-)
-
 DefineModifier("upgrade_faction_charude_tribe",
 	{"Armor", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-dere-tribe",
-	{"DisembarkmentBonus", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )

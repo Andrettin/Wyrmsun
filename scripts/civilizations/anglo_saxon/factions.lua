@@ -35,28 +35,6 @@ DefineFaction("avione-tribe", {
 	Icon = "icon-flag-five-white-birds-on-red"
 })
 
-DefineFaction("bernice-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	Name = "Bernice Tribe",
-	Adjective = "Bernice",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-bernice-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
-})
-
-DefineFaction("dere-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	Name = "Dere Tribe",
-	Adjective = "Dere",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "blue",
-	FactionUpgrade = "upgrade-faction-dere-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
-})
-
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	Name = "Gumeninga Tribe",
 	Adjective = "Gumeninga",
@@ -78,30 +56,6 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	FactionUpgrade = "upgrade-faction-lindisfaran-tribe",
 	Icon = "icon-flag-five-white-birds-on-red",
 	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
-})
-
-DefineFaction("bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
-	Name = "Bernicia",
-	Adjective = "Bernician",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-bernicia",
-	Icon = "icon-flag-five-blue-birds-on-orange",
-	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
-})
-
-DefineFaction("deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
-	Name = "Deira",
-	Adjective = "Deiran",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-deira",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
 })
 
 DefineFaction("east-anglia", {

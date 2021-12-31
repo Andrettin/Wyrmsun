@@ -71,7 +71,7 @@ DefineSite("bamburgh", {
 		"english", "Bamburgh" -- as given by Stenton; Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 	},
 	HistoricalOwners = {
-		526, "bernice-tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "bernicia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; by 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		802, "northumbria", -- Bamborough was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
@@ -251,7 +251,7 @@ DefineSite("corbridge", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Corstopitum was part of the Roman empire c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		526, "bernice-tribe", -- Corbridge's area was Anglo-Saxon territory in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "bernicia", -- Corbridge's area was Anglo-Saxon territory in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "bernicia", -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 		654, "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		802, "northumbria", -- Corbridge's area was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.

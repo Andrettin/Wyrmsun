@@ -11,27 +11,9 @@ upgrade_faction_avione_tribe = {
 	effects_string = "+2 Damage for Archers"
 }
 
-upgrade_faction_bernice_tribe = {
-	name = "Bernice Tribe"
-	effects_string = "Disembarkment Bonus for Swordsmen and Spearmen"
-	conditions = {
-		upgrade = upgrade_teuton_spatha
-		upgrade = upgrade_teuton_iron_shield
-	}
-}
-
 upgrade_faction_charude_tribe = {
 	name = "Charude Tribe"
 	effects_string = "+2 Armor for Archers"
-}
-
-upgrade_faction_dere_tribe = {
-	name = "Dere Tribe"
-	effects_string = "Disembarkment Bonus for Archers"
-	conditions = {
-		upgrade = upgrade_teuton_spatha
-		upgrade = upgrade_teuton_iron_shield
-	}
 }
 
 upgrade_faction_gumeninga_tribe = {
@@ -63,17 +45,11 @@ upgrade_faction_teuton_tribe = {
 upgrade_faction_bernicia = {
 	name = "Bernicia"
 	effects_string = "+1 Damage, +1 Accuracy for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_deira = {
 	name = "Deira"
 	effects_string = "+1 Damage, +1 Accuracy for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_east_anglia = {
