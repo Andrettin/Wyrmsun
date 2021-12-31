@@ -202,7 +202,7 @@ DefineProvince("Peaceful Valley", {
 		"goblin", "Peaceful Valley"
 	},
 	Claims = {
-		"goblin", "lggi-tribe"
+		"goblin", "lggi_tribe"
 	}
 })
 

@@ -1,28 +1,27 @@
-khag_tribe = {
-	name = "Khag Tribe"
-	adjective = "Khag"
+lggi_tribe = {
+	name = "Lggi Tribe"
+	adjective = "Lggi"
 	civilization = goblin
 	type = tribe
-	color = brown
+	color = violet
 	default_tier = duchy #tribe
-	icon = icon_flag_brown_skull_on_red
-	upgrade = upgrade_faction_khag_tribe
-	core_settlements = {
-		khag
-	}
+	icon = icon_flag_green_skull_on_purple
+	upgrade = upgrade_faction_lggi_tribe
 	force_templates = {
-		{ #from Battle for Wesnoth: Liberty (The Raid)
+		{ #from Battle for Wesnoth: Descent into Darkness (Peaceful Valley)
 			force_type = land
 			priority = 110
 			units = {
-				cavalry = 4
+				cavalry = 1
+				spearman = 1
 			}
 		}
 		{
 			force_type = land
 			priority = 100
 			units = {
-				infantry = 4
+				infantry = 1
+				spearman = 1
 			}
 		}
 		{

@@ -1,25 +1,25 @@
-DefineModifier("upgrade-faction-aelak-tribe",
+DefineModifier("upgrade_faction_aelak_tribe",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}
 )
 
-DefineModifier("upgrade-faction-issudru-tribe",
+DefineModifier("upgrade_faction_issudru_tribe",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}
 )
 
-DefineModifier("upgrade-faction-mabom-tribe",
+DefineModifier("upgrade_faction_mabom_tribe",
 	{"Armor", 2},
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-war-machine"}
 )
 
-DefineModifier("upgrade-faction-sigre-tribe",
+DefineModifier("upgrade_faction_sigre_tribe",
 	{"BasicDamage", 2},
 	{"Accuracy", 1},
 	{"HitPoints", -5},
@@ -33,7 +33,7 @@ DefineModifier("upgrade_faction_aurvangling_tribe",
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
-DefineModifier("upgrade-faction-dreadskull-tribe",
+DefineModifier("upgrade_faction_dreadskull_tribe",
 	{"HitPoints", 5},
 	{"Mana", 10},
 	{"Points", 10},
@@ -47,21 +47,21 @@ DefineModifier("upgrade_faction_khag_tribe",
 	{"apply-to", "unit-goblin-spearman"}
 )
 
-DefineModifier("upgrade-faction-lggi-tribe",
+DefineModifier("upgrade_faction_lggi_tribe",
 	{"Armor", 1},
 	{"Evasion", 1},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-spearman"}
 )
 
-DefineModifier("upgrade-faction-prideblade-tribe",
+DefineModifier("upgrade_faction_prideblade_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-militia"}, 
 	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
 )
 
-DefineModifier("upgrade-faction-wildfang-tribe",
+DefineModifier("upgrade_faction_wildfang_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-goblin-militia"}, 

@@ -1,0 +1,11 @@
+wildfang_tribe = {
+	name = "Wildfang Tribe"
+	adjective = "Wildfang"
+	civilization = goblin
+	type = tribe
+	color = red
+	default_tier = duchy #tribe
+	icon = icon_flag_brown_skull_on_red
+	upgrade = upgrade_faction_wildfang_tribe
+	description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
+}

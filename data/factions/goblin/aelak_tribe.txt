@@ -1,0 +1,10 @@
+aelak_tribe = { #created by Jesse Crider
+	name = "Aelak Tribe"
+	adjective = "Aelak"
+	civilization = goblin
+	type = tribe
+	color = red
+	default_tier = duchy #tribe
+	icon = icon_flag_brown_skull_on_red
+	upgrade = upgrade_faction_aelak_tribe
+}

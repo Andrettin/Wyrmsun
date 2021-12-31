@@ -25,4 +25,4 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "dreadskull-tribe", {688, 302})
+SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "dreadskull_tribe", {688, 302})

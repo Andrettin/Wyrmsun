@@ -33,4 +33,4 @@ DefineMapTemplate("knalgan-marches", { -- from Battle for Wesnoth: The Hammer of
 	SubtemplatePosition = {532, 216}
 })
 
-SetMapTemplateUnit("knalgan-marches", "unit-goblin-town-hall", "prideblade-tribe", {21, 21}, 550)
+SetMapTemplateUnit("knalgan-marches", "unit-goblin-town-hall", "prideblade_tribe", {21, 21}, 550)

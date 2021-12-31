@@ -132,7 +132,7 @@ function LoadProvinces(world)
 		},
 		PeacefulValley = {
 			Name = "Peaceful Valley",
-			Owner = "lggi-tribe",
+			Owner = "lggi_tribe",
 			Civilization = "goblin",
 			Units = {
 				unit_goblin_spearman = 14 -- 13 is the quantity of villages in Peaceful Valley map (each can generate 0-2 goblin spearmen) + T'shar Lggi himself

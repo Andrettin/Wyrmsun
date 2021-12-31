@@ -32,7 +32,7 @@ DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name
 	Position = {669, 296}, -- because of the mud tiles in its former position
 	BaseUnitType = "unit_settlement_site",
 	HistoricalOwners = {
-		-3000, "dreadskull-tribe"
+		-3000, "dreadskull_tribe"
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"
@@ -77,7 +77,7 @@ DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe 
 		"goblin", "Lggi"
 	},
 	HistoricalOwners = {
-		-3000, "lggi-tribe"
+		-3000, "lggi_tribe"
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"
@@ -116,7 +116,7 @@ DefineSite("wildfang", { -- Wildfang tribe settlement site; this is the name of 
 	Position = {613, 208},
 	BaseUnitType = "unit_settlement_site",
 	HistoricalOwners = {
-		-3000, "wildfang-tribe"
+		-3000, "wildfang_tribe"
 	},
 	HistoricalBuildings = {
 		-3000, 0, "town_hall"

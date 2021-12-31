@@ -1,0 +1,10 @@
+mabom_tribe = { #created by Jesse Crider
+	name = "Mabom Tribe"
+	adjective = "Mabom"
+	civilization = goblin
+	type = tribe
+	color = purple
+	default_tier = duchy #tribe
+	icon = icon_flag_green_skull_on_purple
+	upgrade = upgrade_faction_mabom_tribe
+}

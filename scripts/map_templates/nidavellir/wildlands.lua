@@ -27,6 +27,6 @@
 
 -- from Battle for Wesnoth: The Hammer of Thursagan (Invaders)
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang-tribe", {505, 199})
+SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang_tribe", {505, 199})
 
-SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang-tribe", {607, 220})
+SetMapTemplateUnit("nidavellir", "unit-goblin-watch-tower", "wildfang_tribe", {607, 220})

@@ -1,0 +1,10 @@
+sigre_tribe = { #created by Jesse Crider
+	name = "Sigre Tribe"
+	adjective = "Sigre"
+	civilization = goblin
+	type = tribe
+	color = yellow
+	default_tier = duchy #tribe
+	icon = icon_flag_red_skull_on_yellow
+	upgrade = upgrade_faction_sigre_tribe
+}

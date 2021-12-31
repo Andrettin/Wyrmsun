@@ -31,13 +31,13 @@ DefineCharacter("tshar-lggi", { -- from Battle for Wesnoth: Descent into Darknes
 	Gender = "male",
 	Type = "unit-goblin-warlord", -- Goblin Knight
 	Civilization = "goblin",
-	Faction = "lggi-tribe",
+	Faction = "lggi_tribe",
 	Deities = {"gathaarl", "hel"},
 	HistoricalTitles = {
---		"ruler", 0, 0, "lggi-tribe"
+--		"ruler", 0, 0, "lggi_tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "lggi-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "lggi_tribe") then
 			return true
 		end
 		return false
