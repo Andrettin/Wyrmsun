@@ -1,0 +1,16 @@
+essex = {
+	name = "Essex"
+	adjective = "Essexian"
+	civilization = anglo_saxon
+	type = polity
+	color = purple
+	default_tier = kingdom
+	upgrade = upgrade_faction_essex
+	icon = icon_flag_five_white_birds_on_red
+	core_settlements = {
+		london
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+}

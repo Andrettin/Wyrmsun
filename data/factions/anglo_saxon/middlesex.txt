@@ -1,0 +1,16 @@
+middlesex = {
+	name = "Middlesex"
+	adjective = "Middlesexian"
+	civilization = anglo_saxon
+	type = polity
+	color = blue
+	default_tier = kingdom
+	upgrade = upgrade_faction_middlesex
+	icon = icon_flag_five_purple_birds_on_green
+	core_settlements = {
+		london
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+}

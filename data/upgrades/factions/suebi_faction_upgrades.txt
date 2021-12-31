@@ -31,7 +31,6 @@ upgrade_faction_semnone_tribe = {
 upgrade_faction_suebi_tribe = {
 	name = "Suebi Tribe"
 	effects_string = "+2 Evasion for Kregars"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_galicia = {

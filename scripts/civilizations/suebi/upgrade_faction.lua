@@ -74,7 +74,3 @@ DefineModifier("upgrade-faction-galicia",
 	{"Points", 10},
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
-
-DefineDependency("upgrade-faction-suebi-tribe",
-	{"upgrade_ironworking"}
-)

@@ -10,4 +10,7 @@ charude_tribe = {
 	core_settlements = {
 		aarhus
 	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

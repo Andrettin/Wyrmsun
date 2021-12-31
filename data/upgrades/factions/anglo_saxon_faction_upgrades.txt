@@ -56,7 +56,7 @@ upgrade_faction_east_anglia = {
 	name = "East Anglia"
 	effects_string = "+2 Accuracy for Swordsmen"
 	conditions = {
-		upgrade_class = writing
+		upgrade_class = ironworking
 	}
 }
 
@@ -68,9 +68,6 @@ upgrade_faction_englaland = {
 upgrade_faction_essex = {
 	name = "Essex"
 	effects_string = "+2 Accuracy for Archers"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_jutland = {
@@ -92,16 +89,13 @@ upgrade_faction_middle_anglia = {
 	name = "Middle Anglia"
 	effects_string = "-1 Damage, +3 Armor for Swordsmen"
 	conditions = {
-		upgrade_class = writing
+		upgrade_class = ironworking
 	}
 }
 
 upgrade_faction_middlesex = {
 	name = "Middlesex"
 	effects_string = "-5% Trade Cost for Markets"
-	conditions = {
-		upgrade_class = writing
-	}
 }
 
 upgrade_faction_northumbria = {

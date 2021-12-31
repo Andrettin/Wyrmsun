@@ -69,17 +69,6 @@ DefineFaction("east-anglia", {
 	Icon = "icon-flag-five-orange-birds-on-black"
 })
 
-DefineFaction("essex", {
-	Name = "Essex",
-	Adjective = "Essexian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "purple",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-essex",
-	Icon = "icon-flag-five-white-birds-on-red"
-})
-
 DefineFaction("middle-anglia", {
 	Name = "Middle Anglia",
 	Adjective = "Middle Anglian",
@@ -88,17 +77,6 @@ DefineFaction("middle-anglia", {
 	Color = "violet",
 	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade-faction-middle-anglia",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
-DefineFaction("middlesex", {
-	Name = "Middlesex",
-	Adjective = "Middlesexian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-middlesex",
 	Icon = "icon-flag-five-purple-birds-on-green"
 })
 

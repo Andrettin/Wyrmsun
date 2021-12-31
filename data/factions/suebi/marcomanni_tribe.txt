@@ -11,6 +11,9 @@ marcomanni_tribe = {
 	core_settlements = {
 		prague
 	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 	
 	history = {
 		170 = {

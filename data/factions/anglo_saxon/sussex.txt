@@ -1,7 +1,7 @@
 sussex = {
 	adjective = "Sussexian"
 	conditions = {
-		upgrade_class = writing
+		upgrade_class = ironworking
 	}
 	
 	history = {
