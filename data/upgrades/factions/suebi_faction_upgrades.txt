@@ -37,7 +37,4 @@ upgrade_faction_suebi_tribe = {
 upgrade_faction_galicia = {
 	name = "Galicia"
 	effects_string = "+2 Damage for Kregars"
-	conditions = {
-		upgrade_class = writing
-	}
 }

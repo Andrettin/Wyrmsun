@@ -1,0 +1,16 @@
+galicia = { #Suebi kingdom of Galicia
+	name = "Galicia"
+	adjective = "Galician"
+	civilization = suebi
+	type = polity
+	color = black
+	default_tier = kingdom
+	upgrade = upgrade_faction_galicia
+	icon = icon_flag_green_lion_on_purple
+	core_settlements = {
+		oporto
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
+}

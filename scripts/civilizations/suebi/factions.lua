@@ -79,14 +79,3 @@ DefineFaction("quadi-tribe", {
 		179, "rome", "peace" -- in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
 	}
 })
-
-DefineFaction("galicia", { -- Suebi kingdom of Galicia
-	Name = "Galicia",
-	Adjective = "Galician",
-	Civilization = "suebi",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-galicia",
-	Icon = "icon-flag-green-lion-on-purple"
-})
