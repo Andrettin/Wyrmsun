@@ -58,28 +58,6 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
 })
 
-DefineFaction("east-anglia", {
-	Name = "East Anglia",
-	Adjective = "East Anglian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "pink",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-east-anglia",
-	Icon = "icon-flag-five-orange-birds-on-black"
-})
-
-DefineFaction("middle-anglia", {
-	Name = "Middle Anglia",
-	Adjective = "Middle Anglian",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "violet",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-middle-anglia",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
 DefineFaction("sussex", {
 	Name = "Sussex",
 	Civilization = "anglo-saxon",

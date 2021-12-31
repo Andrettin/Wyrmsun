@@ -1,0 +1,16 @@
+middle_anglia = {
+	name = "Middle Anglia"
+	adjective = "Middle Anglian"
+	civilization = anglo_saxon
+	type = polity
+	color = violet
+	default_tier = kingdom
+	upgrade = upgrade_faction_middle_anglia
+	icon = icon_flag_five_purple_birds_on_green
+	core_settlements = {
+		tamworth
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+}

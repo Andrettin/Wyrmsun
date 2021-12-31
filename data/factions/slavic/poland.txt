@@ -6,6 +6,10 @@ poland = {
 	color = red
 	default_tier = kingdom
 	icon = icon_flag_five_white_birds_on_red
+	core_settlements = {
+		lublin
+		warsaw
+	}
 	
 	history = {
 		1025 = {

@@ -1,5 +1,8 @@
 sussex = {
 	adjective = "Sussexian"
+	core_settlements = {
+		winchester
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

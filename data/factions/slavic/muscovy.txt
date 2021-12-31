@@ -5,6 +5,9 @@ muscovy = {
 	type = polity
 	color = red
 	default_tier = duchy
+	core_settlements = {
+		moscow
+	}
 	title_names = {
 		monarchy = {
 			duchy = "Principality"

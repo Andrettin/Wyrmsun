@@ -5,6 +5,13 @@ russia = {
 	type = polity
 	color = blue
 	default_tier = empire
+	core_settlements = {
+		moscow
+		novgorod
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 
 	history = {
 		1861 = {

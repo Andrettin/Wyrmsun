@@ -175,14 +175,14 @@ DefineCharacter("raedwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
-	Faction = "east-anglia",
+	Faction = "east_anglia",
 	StartDate = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", 616, 0, "east-anglia" -- king of East Anglia
+		"ruler", 616, 0, "east_anglia" -- king of East Anglia
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "east-anglia") then
+		if (GetPlayerData(trigger_player, "Faction") == "east_anglia") then
 			return true
 		end
 		return false
@@ -607,15 +607,15 @@ DefineCharacter("aethelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
-	Faction = "east-anglia",
+	Faction = "east_anglia",
 	StartDate = 654,
 	DeathDate = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 654, 654, "east-anglia" -- king of East Anglia; in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
+		"ruler", 654, 654, "east_anglia" -- king of East Anglia; in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "east-anglia") then
+		if (GetPlayerData(trigger_player, "Faction") == "east_anglia") then
 			return true
 		end
 		return false
@@ -688,17 +688,17 @@ DefineCharacter("peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- king
 	Civilization = "anglo-saxon",
-	Faction = "middle-anglia",
+	Faction = "middle_anglia",
 	Father = "penda",
 	StartDate = 653, -- was ruling the Middle Angles in 653 when he was baptized
 	DeathDate = 656, -- murdered in the spring of 656
 	Deities = {"christian-god"},
 	HistoricalTitles = {
-		"ruler", 654, 656, "middle-anglia"
+		"ruler", 654, 656, "middle_anglia"
 	},
 	-- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "middle-anglia") then
+		if (GetPlayerData(trigger_player, "Faction") == "middle_anglia") then
 			return true
 		end
 		return false

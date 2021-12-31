@@ -6,4 +6,15 @@ poland_lithuania = {
 	color = red
 	default_tier = kingdom
 	icon = icon_flag_five_white_birds_on_red
+	core_settlements = {
+		bialystok
+		krakow
+		lvov
+		lublin
+		vilnius
+		warsaw
+	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

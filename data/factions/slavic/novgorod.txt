@@ -6,4 +6,7 @@ novgorod = {
 	color = burgundy
 	default_tier = duchy
 	default_government_type = republic
+	core_settlements = {
+		novgorod
+	}
 }

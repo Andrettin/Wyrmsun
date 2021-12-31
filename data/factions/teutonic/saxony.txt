@@ -7,6 +7,9 @@ saxony = {
 	default_tier = duchy #Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	icon = icon_flag_red_lion_on_green
 	upgrade = upgrade_faction_saxony
+	core_settlements = {
+		kiel
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

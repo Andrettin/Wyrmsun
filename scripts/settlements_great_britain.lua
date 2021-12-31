@@ -116,7 +116,7 @@ DefineSite("brancaster", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Branodunum/Brancaster was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia", -- Branodunum's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east_anglia", -- Branodunum's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Branodunum's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
@@ -161,7 +161,7 @@ DefineSite("castor-near-norwich", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Venta Icenorum/Castor near Norwich was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia", -- Venta Icenorum's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east_anglia", -- Venta Icenorum's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Venta Icenorum's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
@@ -311,8 +311,8 @@ DefineSite("dunwich", {
 		"english", "Dunwich"
 	},
 	HistoricalOwners = {
-		672, "east-anglia",
-		802, "east-anglia", -- Dunwich's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		672, "east_anglia",
+		802, "east_anglia", -- Dunwich's area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Dunwich's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {
@@ -868,7 +868,7 @@ DefineSite("sitomagus", {
 	},
 	HistoricalOwners = {
 		410, "rome", -- Sitomagus was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
-		802, "east-anglia", -- Sitomagus' area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		802, "east_anglia", -- Sitomagus' area was part of East Anglia c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 		1560, "england" -- Sitomagus' area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalBuildings = {

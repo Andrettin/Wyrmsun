@@ -5,4 +5,7 @@ moravia = {
 	type = polity
 	color = brown
 	default_tier = duchy
+	core_settlements = {
+		prague
+	}
 }

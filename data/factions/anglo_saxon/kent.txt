@@ -8,6 +8,9 @@ kent = {
 	upgrade = upgrade_faction_kent
 	icon = icon_flag_old_austria
 	description = "The Cantware were a Jutish people who established themselves in southeastern England. Their name means \"men of Kent\"." #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
+	core_settlements = {
+		winchester
+	}
 	conditions = {
 		upgrade = upgrade_teuton_spatha
 		upgrade = upgrade_teuton_iron_shield

@@ -55,9 +55,6 @@ upgrade_faction_deira = {
 upgrade_faction_east_anglia = {
 	name = "East Anglia"
 	effects_string = "+2 Accuracy for Swordsmen"
-	conditions = {
-		upgrade_class = ironworking
-	}
 }
 
 upgrade_faction_englaland = {
@@ -88,9 +85,6 @@ upgrade_faction_mercia = {
 upgrade_faction_middle_anglia = {
 	name = "Middle Anglia"
 	effects_string = "-1 Damage, +3 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = ironworking
-	}
 }
 
 upgrade_faction_middlesex = {

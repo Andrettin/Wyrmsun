@@ -6,4 +6,7 @@ pomerania = {
 	color = red
 	default_tier = duchy
 	icon = icon_flag_red_lion_on_green
+	core_settlements = {
+		stettin
+	}
 }

@@ -10,7 +10,10 @@ italian = {
 	personal_names = {
 		male = {
 			"Alessandro"
+			"Carlo"
+			"Francesco"
 			"Giovanni"
+			"Mario"
 			"Michele"
 			"Paolo"
 		}
@@ -19,7 +22,11 @@ italian = {
 			"Carla"
 			"Emilia"
 			"Francesca"
+			"Gianna"
+			"Laura"
 			"Luisa"
+			"Maria"
+			"Marisa"
 			"Marta"
 			"Mirella"
 			"Renata"

@@ -5,6 +5,9 @@ bohemia = {
 	type = polity
 	color = red
 	default_tier = duchy
+	core_settlements = {
+		prague
+	}
 	
 	history = {
 		814 = {

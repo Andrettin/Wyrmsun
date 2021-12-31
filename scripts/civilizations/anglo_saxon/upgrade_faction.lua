@@ -76,7 +76,7 @@ DefineModifier("upgrade-faction-deira",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-east-anglia",
+DefineModifier("upgrade_faction_east_anglia",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
@@ -116,7 +116,7 @@ DefineModifier("upgrade-faction-mercia",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-middle-anglia",
+DefineModifier("upgrade_faction_middle_anglia",
 	{"Armor", 3},
 	{"BasicDamage", -1},
 	{"Points", 10},
