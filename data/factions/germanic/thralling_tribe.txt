@@ -1,0 +1,22 @@
+thralling_tribe = {
+	name = "Thrahiling Tribe"
+	adjective = "Thrahiling"
+	civilization = germanic
+	type = tribe
+	color = black
+	default_tier = duchy #tribe
+	icon = flag_black_raven_on_white
+	upgrade = upgrade_faction_thralling_tribe
+	default_ai = passive
+	background = "In Norse mythology, Thrall (rendered in Proto-Germanic as Thrahila) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of thralls."
+	
+	history = {
+		-3000 = {
+			resources = {
+				copper = 0
+				lumber = 0
+				stone = 0
+			}
+		}
+	}
+}

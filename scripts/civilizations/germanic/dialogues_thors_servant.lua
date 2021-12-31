@@ -74,8 +74,8 @@ DefineDialogue("thors-servant-temple-complete", {
 					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("hlesey", "MapPosX"), GetSiteData("hlesey", "MapPosY")}, GetSiteData("hlesey", "MapLayer"))
 					SetUnitVariable(unit, "TTL", 600)
 					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing-tribe"))
-					SetDiplomacy(GetFactionPlayer("hlesing-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing_tribe"))
+					SetDiplomacy(GetFactionPlayer("hlesing_tribe"), "enemy", trigger_player)
 				end
 			}
 		}

@@ -70,14 +70,14 @@ DefineDialogue("jarl-meets-the-thrallings", {
 			"text", "You dare refuse me?! Then speak to my sword!",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("thralling-tribe"))
-					SetDiplomacy(GetFactionPlayer("thralling-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("thralling_tribe"))
+					SetDiplomacy(GetFactionPlayer("thralling_tribe"), "enemy", trigger_player)
 					local erala_hero_unit = FindHero("erala", trigger_player)
 					local attacker_count = 0
-					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
+					local uncount = GetUnits(GetFactionPlayer("thralling_tribe"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_germanic_worker") then
-							OrderUnit(GetFactionPlayer("thralling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
+							OrderUnit(GetFactionPlayer("thralling_tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 							attacker_count = attacker_count + 1
 							if (attacker_count >= 2) then
 								break
@@ -94,7 +94,7 @@ DefineDialogue("thrallings-subjugated", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit_germanic_worker",
-			"speaker-player", "thralling-tribe",
+			"speaker-player", "thralling_tribe",
 			"text", "Please, have mercy!"
 		},
 		{
@@ -103,11 +103,11 @@ DefineDialogue("thrallings-subjugated", {
 		},
 		{
 			"speaker", "unit", "unit_germanic_worker",
-			"speaker-player", "thralling-tribe",
+			"speaker-player", "thralling_tribe",
 			"text", "We are yours to command.",
 			"option-effects", {
 				function(s)
-					local uncount = GetUnits(GetFactionPlayer("thralling-tribe"))
+					local uncount = GetUnits(GetFactionPlayer("thralling_tribe"))
 					for unit1 = 1,table.getn(uncount) do
 						-- stop Eraling units from attacking the unit
 						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
@@ -171,13 +171,13 @@ DefineDialogue("jarl-attacks-the-karlings", {
 			"text", "The Karlings shall never be slaves!",
 			"option-effects", {
 				function(s)
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("karling-tribe"))
-					SetDiplomacy(GetFactionPlayer("karling-tribe"), "enemy", trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("karling_tribe"))
+					SetDiplomacy(GetFactionPlayer("karling_tribe"), "enemy", trigger_player)
 					local erala_hero_unit = FindHero("erala", trigger_player)
-					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
+					local uncount = GetUnits(GetFactionPlayer("karling_tribe"))
 					for unit1 = 1,table.getn(uncount) do 
 						if (GetUnitVariable(uncount[unit1], "Ident") == "unit_germanic_worker") then
-							OrderUnit(GetFactionPlayer("karling-tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
+							OrderUnit(GetFactionPlayer("karling_tribe"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")}, GetUnitVariable(uncount[unit1], "MapLayer"), {GetUnitVariable(erala_hero_unit, "PosX"), GetUnitVariable(erala_hero_unit, "PosY")}, GetUnitVariable(erala_hero_unit, "MapLayer"), "attack")
 						end
 					end
 					SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 2500)
@@ -191,7 +191,7 @@ DefineDialogue("karlings-subjugated", {
 	Nodes = {
 		{
 			"speaker", "unit", "unit_germanic_worker",
-			"speaker-player", "karling-tribe",
+			"speaker-player", "karling_tribe",
 			"text", "Enough of this bloodshed! Mercy!"
 		},
 		{
@@ -200,7 +200,7 @@ DefineDialogue("karlings-subjugated", {
 		},
 		{
 			"speaker", "unit", "unit_germanic_worker",
-			"speaker-player", "karling-tribe",
+			"speaker-player", "karling_tribe",
 			"text", "We shall. But only if our personal freedom is guaranteed, otherwise we would rather die."
 		},
 		{
@@ -208,7 +208,7 @@ DefineDialogue("karlings-subjugated", {
 			"text", "Very well.",
 			"option-effects", {
 				function(s)
-					local uncount = GetUnits(GetFactionPlayer("karling-tribe"))
+					local uncount = GetUnits(GetFactionPlayer("karling_tribe"))
 					for unit1 = 1,table.getn(uncount) do
 						-- stop Eraling units from attacking the unit
 						local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)

@@ -1,0 +1,12 @@
+hlesing_tribe = {
+	name = "Hlesing Tribe"
+	adjective = "Hlesing"
+	civilization = germanic
+	type = tribe
+	color = black
+	default_tier = duchy #tribe
+	icon = flag_black_raven_on_white
+	upgrade = upgrade_faction_jarling_tribe
+	default_ai = passive
+	background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
+}

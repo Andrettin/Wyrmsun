@@ -101,7 +101,7 @@ DefineQuest("the-good-seasons", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "germanic",
 	PlayerColor = "blue",
 	Conditions = function(s)
---		if (GetPlayerData(trigger_player, "Faction") == "yngling-tribe" or GetPlayerData(trigger_player, "Faction") == "asa_tribe") then
+--		if (GetPlayerData(trigger_player, "Faction") == "yngling_tribe" or GetPlayerData(trigger_player, "Faction") == "asa_tribe") then
 		if (GetPlayerData(trigger_player, "RaceName") == "germanic" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_germanic_worker") > 0 and CheckDependency(trigger_player, "unit-germanic-farm")) then -- allow for all Germanic tribes for now, since they don't have quests
 			return true
 		end
@@ -248,7 +248,7 @@ DefineQuest("temple-to-heimdall", {
 	Description = "Our tribe's chieftain traces descent from the god Haimadala. We would do well to build a temple honoring the mighty deity.",
 	PlayerColor = "yellow",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "jarling-tribe" or GetPlayerData(trigger_player, "Faction") == "karling-tribe" or GetPlayerData(trigger_player, "Faction") == "thralling-tribe") then -- must belong to one of the three factions whose progenitor is a son of Heimdall in the Rigsthula: the Jarlings/Eralings, Karlings and Thrallings/Thrahilings
+		if (GetPlayerData(trigger_player, "Faction") == "jarling_tribe" or GetPlayerData(trigger_player, "Faction") == "karling_tribe" or GetPlayerData(trigger_player, "Faction") == "thralling_tribe") then -- must belong to one of the three factions whose progenitor is a son of Heimdall in the Rigsthula: the Jarlings/Eralings, Karlings and Thrallings/Thrahilings
 			return true
 		end
 		return false
@@ -453,7 +453,7 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		{
 			"objective-type", "destroy_faction",
 			"objective-string", "Destroy the Hlesings",
-			"faction", "hlesing-tribe"
+			"faction", "hlesing_tribe"
 		}
 	},
 	Competitive = true

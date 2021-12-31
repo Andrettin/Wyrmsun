@@ -1,0 +1,10 @@
+herminone_tribe = { #according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
+	name = "Herminone Tribe"
+	adjective = "Herminone"
+	civilization = germanic
+	type = tribe
+	color = green
+	default_tier = duchy #tribe
+	icon = flag_black_raven_on_green
+	upgrade = upgrade_faction_skeldung_tribe
+}

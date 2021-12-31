@@ -1,0 +1,10 @@
+istaevone_tribe = { #according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
+	name = "Istaevone Tribe"
+	adjective = "Istaevone"
+	civilization = germanic
+	type = tribe
+	color = black
+	default_tier = duchy #tribe
+	icon = flag_black_raven_on_white
+	upgrade = upgrade_faction_asa_tribe
+}

@@ -28,9 +28,9 @@
 AddTrigger("jarl-meets-the-thrallings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and FindHero("thrahila") ~= nil and GetFactionExists("thralling-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and FindHero("thrahila") ~= nil and GetFactionExists("thralling_tribe")) then
 				local erala_hero_unit = FindHero("erala", i)
-				if (GetNumUnitsAt(GetFactionPlayer("thralling-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0) then
+				if (GetNumUnitsAt(GetFactionPlayer("thralling_tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0) then
 					trigger_player = i
 					return true
 				end
@@ -47,7 +47,7 @@ AddTrigger("jarl-meets-the-thrallings",
 AddTrigger("thrallings-subjugated",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("thralling-tribe") and GetPlayerData(GetFactionPlayer("thralling-tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("thralling_tribe") and GetPlayerData(GetFactionPlayer("thralling_tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
 				trigger_player = i
 				return true
 			end
@@ -63,9 +63,9 @@ AddTrigger("thrallings-subjugated",
 AddTrigger("jarl-meets-the-karlings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and FindHero("karla") ~= nil and GetFactionExists("karling-tribe")) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and FindHero("karla") ~= nil and GetFactionExists("karling_tribe")) then
 				local erala_hero_unit = FindHero("erala", i)
-				if (GetNumUnitsAt(GetFactionPlayer("karling-tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0) then
+				if (GetNumUnitsAt(GetFactionPlayer("karling_tribe"), "units", {GetUnitVariable(erala_hero_unit, "PosX") - 3, GetUnitVariable(erala_hero_unit, "PosY") - 3}, {GetUnitVariable(erala_hero_unit, "PosX") + 3, GetUnitVariable(erala_hero_unit, "PosY") + 3}, GetUnitVariable(erala_hero_unit, "MapLayer")) > 0) then
 					trigger_player = i
 					return true
 				end
@@ -82,7 +82,7 @@ AddTrigger("jarl-meets-the-karlings",
 AddTrigger("karlings-subjugated",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit-germanic-archer") == 0 and GetPlayerData(GetFactionPlayer("karling-tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetFactionExists("karling_tribe") and GetPlayerData(GetFactionPlayer("karling_tribe"), "UnitTypesCount", "unit-germanic-archer") == 0 and GetPlayerData(GetFactionPlayer("karling_tribe"), "UnitTypesCount", "unit_germanic_worker") <= 3) then
 				trigger_player = i
 				return true
 			end
@@ -98,7 +98,7 @@ AddTrigger("karlings-subjugated",
 AddTrigger("jarl-desires-karling-subjugation",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("karling-tribe") and GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("karling_tribe") and GetPlayerData(GetFactionPlayer("karling_tribe"), "TotalNumUnits") > 0) then
 				trigger_player = i
 				return true
 			end
@@ -114,7 +114,7 @@ AddTrigger("jarl-desires-karling-subjugation",
 AddTrigger("jarl-considers-the-hersings",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and (GetFactionExists("karling-tribe") == false or GetPlayerData(GetFactionPlayer("karling-tribe"), "TotalNumUnits") == 0) and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("hersing_tribe") and GetPlayerData(GetFactionPlayer("hersing_tribe"), "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil and GetPlayerData(i, "NumTownHalls") > 0 and (GetFactionExists("karling_tribe") == false or GetPlayerData(GetFactionPlayer("karling_tribe"), "TotalNumUnits") == 0) and GetPlayerData(i, "CompletedQuest", "jarls-retainers") and GetFactionExists("hersing_tribe") and GetPlayerData(GetFactionPlayer("hersing_tribe"), "TotalNumUnits") > 0) then
 				trigger_player = i
 				return true
 			end
@@ -152,8 +152,8 @@ AddTrigger("jarl-conquers-jutland",
 			if (
 				GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("erala", i) ~= nil
 				and GetPlayerData(i, "HasQuest", "heimdalls_progeny")
-				and GetFactionExists("thralling-tribe", true) == false
-				and GetFactionExists("karling-tribe", true) == false
+				and GetFactionExists("thralling_tribe", true) == false
+				and GetFactionExists("karling_tribe", true) == false
 				and GetUnitVariable(GetSiteData("aarhus", "SiteUnit"), "Player") == i
 				and (GetUnitVariable(GetSiteData("kiel", "SiteUnit"), "Player") == i or GetUnitVariable(GetSiteData("kiel", "SiteUnit"), "Player") == PlayerNumNeutral)
 			) then

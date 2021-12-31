@@ -36,7 +36,7 @@ DefineModifier("upgrade_faction_asa_tribe",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-faction-jarling-tribe",
+DefineModifier("upgrade_faction_jarling_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"},
@@ -44,12 +44,12 @@ DefineModifier("upgrade-faction-jarling-tribe",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-faction-karling-tribe",
+DefineModifier("upgrade_faction_karling_tribe",
 	{"Supply", 1},
 	{"apply-to", "unit-germanic-farm"}
 )
 
-DefineModifier("upgrade-faction-skeldung-tribe",
+DefineModifier("upgrade_faction_skeldung_tribe",
 	{"BasicDamage", 1},
 	{"Armor", 1},
 	{"Points", 10},
@@ -58,7 +58,7 @@ DefineModifier("upgrade-faction-skeldung-tribe",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-faction-thielung-tribe",
+DefineModifier("upgrade_faction_thielung_tribe",
 	{"BasicDamage", 1},
 	{"Accuracy", 1},
 	{"Points", 10},
@@ -67,12 +67,12 @@ DefineModifier("upgrade-faction-thielung-tribe",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade-faction-thralling-tribe",
+DefineModifier("upgrade_faction_thralling_tribe",
 	{"improve-production", "lumber", 5},
 	{"apply-to", "unit-germanic-carpenters-shop"}
 )
 
-DefineModifier("upgrade-faction-yngling-tribe",
+DefineModifier("upgrade_faction_yngling_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}

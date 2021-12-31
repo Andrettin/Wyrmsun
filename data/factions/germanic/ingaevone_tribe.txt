@@ -1,0 +1,12 @@
+ingaevone_tribe = { #according to Tacitus one of the earliest Germanic tribes; Source: Tacitus, "The Germany and the Agricola of Tacitus", 1897, section 2.
+	name = "Ingaevone Tribe"
+	adjective = "Ingaevone"
+	civilization = germanic
+	type = tribe
+	color = white
+	default_tier = duchy #tribe
+	icon = flag_black_raven_on_white
+	upgrade = upgrade_faction_yngling_tribe
+	
+	#lived near the sea
+}

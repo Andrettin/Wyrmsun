@@ -1,0 +1,22 @@
+karling_tribe = {
+	name = "Karling Tribe"
+	adjective = "Karling"
+	civilization = germanic
+	type = tribe
+	color = brown
+	default_tier = duchy #tribe
+	icon = flag_red_raven_on_brown
+	upgrade = upgrade_faction_karling_tribe
+	default_ai = passive
+	background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
+	
+	history = {
+		-3000 = {
+			resources = {
+				copper = 0
+				lumber = 0
+				stone = 0
+			}
+		}
+	}
+}

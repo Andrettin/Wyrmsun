@@ -30,7 +30,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		if (SyncRand(100) ~= 0) then -- 1% chance this will trigger every time it is checked
 			return false
 		end
-		if (GetFactionExists("hlesing-tribe")) then
+		if (GetFactionExists("hlesing_tribe")) then
 			return false
 		end
 		if ( -- if Hlesey is empty, but there are certain Germanic structures within a certain range of it
@@ -44,7 +44,7 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		return false
 	end,
 	function()
-		local hlesing_player = CreatePlayerForFaction("hlesing-tribe")
+		local hlesing_player = CreatePlayerForFaction("hlesing_tribe")
 		if (hlesing_player == -1) then
 			return false
 		end

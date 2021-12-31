@@ -5,6 +5,7 @@ khag_tribe = {
 	type = tribe
 	color = brown
 	default_tier = duchy
+	icon = icon_flag_brown_skull_on_red
 	upgrade = upgrade_faction_khag_tribe
 	core_settlements = {
 		khag

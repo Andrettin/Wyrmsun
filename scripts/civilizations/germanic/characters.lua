@@ -333,10 +333,10 @@ DefineCharacter("yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	Mother = "frigida", -- presumably, since she was Vóden's wife
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", -2800 + (30 * 1), -2800 + (30 * 2), "yngling-tribe"
+		"ruler", -2800 + (30 * 1), -2800 + (30 * 2), "yngling_tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "yngling-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "yngling_tribe") then
 			return true
 		end
 		return false
@@ -496,10 +496,10 @@ DefineCharacter("skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Mother = "frigida", -- presumably, since she was Vóden's wife
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", -2800, -2800 + (30 * 2), "skeldung-tribe"
+		"ruler", -2800, -2800 + (30 * 2), "skeldung_tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "asa_tribe" or GetPlayerData(trigger_player, "Faction") == "skeldung_tribe") then
 			return true
 		end
 		return false
@@ -513,14 +513,14 @@ DefineCharacter("fridleifr-skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "skeldung-tribe",
+	Faction = "skeldung_tribe",
 	Father = "skeldu",
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", 0, 0, "skeldung-tribe"
+		"ruler", 0, 0, "skeldung_tribe"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "skeldung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "skeldung_tribe") then
 			return true
 		end
 		return false
@@ -542,7 +542,7 @@ DefineCharacter("erala", {
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
-	Faction = "jarling-tribe",
+	Faction = "jarling_tribe",
 	Description = "The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself.",
 	Icon = "icon-jarl",
 	HairVariation = "blond-hair",
@@ -567,7 +567,7 @@ DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A 
 	Gender = "female",
 	Type = "unit_germanic_worker",
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Father = "egill",
 	Deities = {"thor", "tyr"}
 	-- Thor's servant in Norse mythology
@@ -578,12 +578,12 @@ DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Background = "In the Guta Saga, Hafthi was the son of Thieluar, and the first to settle the island of Gotland after his father discovered it.",
 	Father = "thialfi",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
 			return true
 		end
 		return false
@@ -596,11 +596,11 @@ DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotl
 	Gender = "female",
 	Type = "unit_germanic_worker",
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Background = "In the Guta Saga, Huitastierna was the wife of Hafthi, and together they were the first to settle the island of Gotland.",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
 			return true
 		end
 		return false
@@ -613,13 +613,13 @@ DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders",
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Background = "In the Guta Saga, Guti was the eldest son of Hafthi and Huitastierna, and he inherited the northern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
 			return true
 		end
 		return false
@@ -631,13 +631,13 @@ DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Background = "In the Guta Saga, Graip was the second son of Hafthi and Huitastierna, and he inherited the middle third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
 			return true
 		end
 		return false
@@ -649,13 +649,13 @@ DefineCharacter("gunfiaun", { -- Source: "Guta Saga: The History of the Gotlande
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung-tribe",
+	Faction = "thielung_tribe",
 	Background = "In the Guta Saga, Gunfiaun was the youngest son of Hafthi and Huitastierna, and he inherited the southern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung-tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
 			return true
 		end
 		return false

@@ -117,7 +117,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling-tribe")
+				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling_tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
@@ -143,7 +143,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling-tribe")
+				and (EventFaction.Name == "asa_tribe" or EventFaction.Name == "yngling_tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
@@ -180,33 +180,33 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "skeldung_tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "skeldung-tribe")
+					AddProvinceClaim("Jutland", "germanic", "skeldung_tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "skeldung-tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "skeldung_tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
+					AddProvinceClaim("Zealand", "germanic", "skeldung_tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
-				SetFactionMinister("germanic", "skeldung-tribe", "ruler", "Skeldu")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung_tribe")
+				SetFactionMinister("germanic", "skeldung_tribe", "ruler", "Skeldu")
 			end,
 			function(s)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "skeldung-tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "skeldung_tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "skeldung-tribe")
+					AddProvinceClaim("Jutland", "germanic", "skeldung_tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "skeldung-tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "skeldung_tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "skeldung-tribe")
+					AddProvinceClaim("Zealand", "germanic", "skeldung_tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung-tribe")
-				SetFactionMinister("germanic", "skeldung-tribe", "ruler", "Skeldu")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "skeldung_tribe")
+				SetFactionMinister("germanic", "skeldung_tribe", "ruler", "Skeldu")
 				GrandStrategyFaction = Factions.skeldung_tribe
-				SetPlayerFaction("germanic", "skeldung-tribe")
+				SetPlayerFaction("germanic", "skeldung_tribe")
 			end
 		},
 		OptionTooltips = {"Skeldung Tribe acquires our lands beyond the sea", "Skeldung Tribe acquires our lands beyond the sea, play as the Skeldung Tribe"}
