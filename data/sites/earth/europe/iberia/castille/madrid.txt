@@ -32,5 +32,9 @@ madrid = {
 		1097 = {
 			owner = castille #part of the Kingdom of Castille c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 		}
+		
+		1560 = {
+			owner = spain #part of the Kingdom of Spain c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
 	}
 }

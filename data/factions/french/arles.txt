@@ -6,6 +6,9 @@ arles = {
 	color = cyan
 	default_tier = kingdom
 	default_capital = marseilles #Arles
+	core_settlements = {
+		marseilles
+	}
 	
 	history = {
 		933 = {

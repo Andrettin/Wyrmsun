@@ -7,6 +7,9 @@ baden = {
 	default_tier = grand_duchy
 	icon = icon_flag_habsburg
 	upgrade = upgrade_faction_baden
+	core_settlements = {
+		stuttgart
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

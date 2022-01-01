@@ -32,5 +32,9 @@ leon = {
 		910 = {
 			owner = leon #part of the Kingdom of León in 910; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 		}
+		
+		1560 = {
+			owner = spain #part of the Kingdom of Spain c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
 	}
 }

@@ -6,4 +6,7 @@ bourgogne = {
 	color = blue
 	default_tier = duchy
 	default_capital = dijon
+	core_settlements = {
+		dijon
+	}
 }

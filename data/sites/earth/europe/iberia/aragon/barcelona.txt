@@ -43,7 +43,7 @@ barcelona = {
 		}
 		
 		1717 = {
-			building_classes -= university #University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
+			#building_classes -= university #University abolished in Barcelona in 1717; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		}
 	}
 }

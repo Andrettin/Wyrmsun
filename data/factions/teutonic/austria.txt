@@ -83,6 +83,11 @@ austria = {
 		
 		1815 = {
 			tier = empire #Political situation in Central Europe, 1815-1866 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			
+			diplomacy_state = {
+				faction = holy_rome
+				state = peace
+			}
 		}
 		
 		#04.03.1849: new constitution; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.

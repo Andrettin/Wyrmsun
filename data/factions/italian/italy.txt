@@ -6,12 +6,26 @@ italy = {
 	color = green
 	default_tier = kingdom
 	default_capital = rome
+	core_settlements = {
+		cagliari
+		milan
+		naples
+		rome
+		syracuse
+	}
 	
 	history = {
 		1097 = {
 			diplomacy_state = {
 				faction = holy_rome #part of the Holy Roman Empire c. 1097; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 66-67.
 				state = vassal
+			}
+		}
+		
+		1861 = {
+			diplomacy_state = {
+				faction = holy_rome
+				state = peace
 			}
 		}
 	}

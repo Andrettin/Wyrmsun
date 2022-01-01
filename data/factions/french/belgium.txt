@@ -6,4 +6,7 @@ belgium = {
 	color = yellow
 	default_tier = kingdom
 	default_capital = brussels
+	core_settlements = {
+		brussels
+	}
 }

@@ -58,5 +58,9 @@ malmo = {
 		1560 = {
 			owner = denmark #Malmo was a part of Denmark in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		}
+		
+		1815 = {
+			owner = sweden #part of the Kingdom of Sweden in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
 	}
 }

@@ -57,5 +57,9 @@ milan = {
 		1859 = {
 			owner = sardinia #Milan became a possession of Sardinia in 1859; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
+		
+		1861 = {
+			owner = italy #became part of the Kingdom of Italy in 1861; Source: William R. Shepherd, "Historical Atlas", 1911, p. 161.
+		}
 	}
 }
