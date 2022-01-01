@@ -1,0 +1,29 @@
+macedon = {
+	name = "Macedon"
+	adjective = "Macedonian"
+	civilization = greek
+	type = polity
+	color = brown
+	default_tier = kingdom
+	core_settlements = {
+		athens
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-431 = {
+			#Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+			diplomacy_state = {
+				faction = athens
+				state = war
+			}
+			
+			diplomacy_state = {
+				faction = sparta
+				state = alliance
+			}
+		}
+	}
+}

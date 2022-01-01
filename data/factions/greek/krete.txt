@@ -1,0 +1,14 @@
+krete = {
+	name = "Krete"
+	adjective = "Cretan"
+	civilization = greek
+	type = polity
+	color = yellow
+	default_tier = kingdom
+	core_settlements = {
+		athens
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+}

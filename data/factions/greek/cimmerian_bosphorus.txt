@@ -1,0 +1,11 @@
+cimmerian_bosphorus = { #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	name = "Cimmerian Bosphorus"
+	adjective = "Bosphorean"
+	civilization = greek #accurate?
+	type = polity
+	color = green
+	default_tier = kingdom #Kingdom of the Cimmerian Bosphorus
+	core_settlements = {
+		kherson
+	}
+}

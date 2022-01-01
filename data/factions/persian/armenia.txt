@@ -1,0 +1,12 @@
+armenia = {
+	name = "Armenia"
+	adjective = "Armenian"
+	civilization = persian
+	type = polity
+	color = brown
+	default_tier = kingdom
+	default_capital = yerevan #Vagharshapat was the capital of (apparently) Armenia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	core_settlements = {
+		yerevan
+	}
+}

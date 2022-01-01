@@ -1,0 +1,11 @@
+thrace = {
+	name = "Thrace"
+	adjective = "Thracian"
+	civilization = greek
+	type = polity
+	color = orange
+	default_tier = kingdom
+	core_settlements = {
+		byzantium
+	}
+}

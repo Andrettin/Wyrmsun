@@ -4,4 +4,7 @@ fenni_tribe = { #Tribes in Europe between 264 BC and 180 AD; Source: William R. 
 	civilization = finnish #correct?
 	type = tribe
 	color = green
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

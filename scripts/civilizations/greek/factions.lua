@@ -83,15 +83,6 @@ DefineFaction("athens", {
 	}
 })
 
-DefineFaction("cimmerian-bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	Name = "Cimmerian Bosphorus",
-	Adjective = "Bosphorean",
-	Civilization = "greek", -- accurate?
-	Type = "polity",
-	Color = "green",
-	DefaultTier = "kingdom" -- Kingdom of the Cimmerian Bosphorus
-})
-
 DefineFaction("corinth", {
 	Name = "Corinth",
 	Civilization = "greek",
@@ -112,64 +103,6 @@ DefineFaction("corinth", {
 	}
 })
 
-DefineFaction("epirus", {
-	Name = "Epirus",
-	Adjective = "Epirote",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("ionia", {
-	Name = "Ionia",
-	Adjective = "Ionian",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("krete", {
-	Name = "Krete",
-	Adjective = "Cretan",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "yellow",
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("macedon", {
-	Name = "Macedon",
-	Adjective = "Macedonian",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "kingdom",
-	HistoricalDiplomacyStates = {
-		-431, "athens", "war" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
-	}
-})
-
-DefineFaction("mycenae", {
-	Name = "Mycenae",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "orange",
-	DefaultTier = "county",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	},
-	HistoricalCapitals = {
-		-1450, "mycenae" -- Mycenae was the center of the Mycenaean civilization about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-	}
-})
-
 DefineFaction("sparta", {
 	Name = "Sparta",
 	Adjective = "Spartan",
@@ -186,8 +119,7 @@ DefineFaction("sparta", {
 		"ruler", "none", "republic", "county", "Archon"
 	},
 	HistoricalDiplomacyStates = {
-		-431, "corinth", "alliance", -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
-		-431, "macedon", "alliance" -- Macedon was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
+		-431, "corinth", "alliance" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
 	}
 })
 
@@ -210,29 +142,5 @@ DefineFaction("thebes", {
 		-450, "athens", "alliance", -- Thebes was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-431, "sparta", "alliance", -- Thebes was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
 		-431, "athens", "war"
-	}
-})
-
-DefineFaction("thrace", {
-	Name = "Thrace",
-	Adjective = "Thracian",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "orange",
-	DefaultTier = "kingdom"
-})
-
--- Non-Playable
-
-DefineFaction("armenia", {
-	Name = "Armenia",
-	Adjective = "Armenian",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "kingdom",
-	Playable = false,
-	HistoricalCapitals = {
---		161, "Armenia" -- Vagharshapat was the capital of (apparently) Armenia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
