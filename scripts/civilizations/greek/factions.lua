@@ -51,15 +51,7 @@ DefineFaction("argos", {
 	Type = "polity",
 	Color = "green",
 	DefaultTier = "county",
-	Adjective = "Argoan",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	}
+	Adjective = "Argoan"
 })
 
 DefineFaction("athens", {
@@ -69,37 +61,9 @@ DefineFaction("athens", {
 	Color = "red",
 	DefaultTier = "county",
 	Adjective = "Athenian",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	},
 	HistoricalDiplomacyStates = {
 		-450, "argos", "alliance", -- Argos was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-431, "argos", "peace" -- Argos was neutral in the beginning of the Peloponnesian War in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
-	}
-})
-
-DefineFaction("corinth", {
-	Name = "Corinth",
-	Civilization = "greek",
-	Type = "polity",
-	Color = "black",
-	DefaultTier = "county",
-	Adjective = "Corinthian",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	},
-	HistoricalDiplomacyStates = {
-		-431, "athens", "war" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
 	}
 })
 
@@ -109,18 +73,7 @@ DefineFaction("sparta", {
 	Civilization = "greek",
 	Type = "polity",
 	Color = "brown",
-	DefaultTier = "county",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	},
-	HistoricalDiplomacyStates = {
-		-431, "corinth", "alliance" -- Corinth was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
-	}
+	DefaultTier = "county"
 })
 
 DefineFaction("thebes", {
@@ -130,14 +83,6 @@ DefineFaction("thebes", {
 	Type = "polity",
 	Color = "blue",
 	DefaultTier = "county",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	},
-	MinisterTitles = {
-		"ruler", "none", "monarchy", "county", "Archon",
-		"ruler", "none", "republic", "county", "Archon"
-	},
 	HistoricalDiplomacyStates = {
 		-450, "athens", "alliance", -- Thebes was allied with Athens as of c. 450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 		-431, "sparta", "alliance", -- Thebes was allied with Sparta against Athens in 431 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.
