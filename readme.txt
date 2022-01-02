@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Building Sites are now generated for the On the Vanaquisl and Westward Migration scenario maps.
+- Buildings are now always placed entirely within a settlement's territory on start.
 
 * Pathfinding
 - Fixed depot-finding issue for workers which could happen under specific circumstances.
