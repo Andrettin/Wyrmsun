@@ -10,6 +10,9 @@ upgrade_monarchy = {
 	}
 	preconditions = {
 		faction_type = polity
+		not = {
+			civilization = goblin #forbid for goblins for now, since they have no cavalry
+		}
 	}
 	conditions = {
 		upgrade_class = writing
