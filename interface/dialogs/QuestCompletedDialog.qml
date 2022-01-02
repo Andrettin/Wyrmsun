@@ -29,7 +29,7 @@ DialogBase {
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: ok_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: quest ? ("You have completed the " + quest.name + " quest!\n\nRewards:\n" + rewards_string) : ""
+		text: quest ? ("You have completed the " + quest.name + " quest!" + (rewards_string.length > 0 ? "\n\nRewards:\n" + rewards_string : "")) : ""
 	}
 	
 	LargeButton {
