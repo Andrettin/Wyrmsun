@@ -136,7 +136,6 @@ DefineUnitType("unit-norse-town-hall", {
 	Civilization = "norse",
 	Description = "Built by mighty chieftains, these halls serve as the center of Norse settlements.",
 	Image = {"file", "norse/buildings/town_hall.png", "size", {128, 128}},
-	Shadow = {"file", "norse/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-norse-town-hall",
 	ButtonKey = "h",
 	AiDrops = {"unit-boots"},
@@ -152,7 +151,6 @@ DefineUnitType("unit-norse-farm", {
 	Civilization = "norse",
 	Description = "Farms are essential for supporting a settlement's population.",
 	Image = {"file", "norse/buildings/farm.png", "size", {64, 64}},
-	Shadow = {"file", "norse/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-norse-farm",
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
@@ -165,7 +163,6 @@ DefineUnitType("unit-norse-barracks", {
 	Civilization = "norse",
 	Description = "In this structure Norse warriors are trained for battle.",
 	Image = {"file", "norse/buildings/barracks.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-barracks",
 	ButtonKey = "w",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
@@ -180,7 +177,6 @@ DefineUnitType("unit-norse-lumber-mill", {
 	Civilization = "norse",
 	Description = "A lumber mill provides a settlement with more advanced methods for processing timber, and it is also in this structure where woodworkers seek to improve arrows and construction techniques.",
 	Image = {"file", "norse/buildings/lumber_mill.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Animations = "animations-active-building",
 	Icon = "icon-norse-lumber-mill",
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-composite-bow", "unit-longbow", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
@@ -194,7 +190,6 @@ DefineUnitType("unit-norse-smithy", {
 	Civilization = "norse",
 	Description = "Norse smiths work in these structures to produce swords and other war-gear that warriors bring into battle..",
 	Image = {"file", "norse/buildings/smithy.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-smithy",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-hand-cannon", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet"},
 	Sounds = {
@@ -208,7 +203,6 @@ DefineUnitType("unit-norse-temple", {
 	Civilization = "norse",
 	Description = "Within Norse temples the worship of their gods is conducted, as are their traditional rituals.",
 	Image = {"file", "norse/buildings/temple.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-norse-temple",
 	RequirementsString = "Lumber Mill",
 	Sounds = {
@@ -221,7 +215,6 @@ DefineUnitType("unit-norse-market", {
 	Civilization = "norse",
 	Description = "Norse traders are active throughout the North and Baltic Seas, bringing a varied assortment of goods to market.",
 	Image = {"file", "norse/buildings/market.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/market_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-norse-market",
 	RequirementsString = "Lumber Mill",
 	SoldUnits = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit_knightly_helmet", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
@@ -236,7 +229,6 @@ DefineUnitType("unit-norse-watch-tower", {
 	Civilization = "norse",
 	Description = "Sentinels in these wooden towers keep watch to see whether enemies approach.",
 	Image = {"file", "norse/buildings/watch_tower.png", "size", {64, 64}},
-	Shadow = {"file", "norse/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-norse-watch-tower",
 	Sounds = {
 --		"help", "basic-norse-voices-help-town"
@@ -249,7 +241,6 @@ DefineUnitType("unit-norse-dock", {
 	Civilization = "norse",
 	Description = "The Norse are a seafaring people par excellence. Their skilled shipwrights take great pride in the elegant ships they construct, and which sail to a myriad shores.",
 	Image = {"file", "norse/buildings/dock.png", "size", {96, 96}},
-	Shadow = {"file", "norse/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-norse-dock",
 	RequirementsString = "Lumber Mill",
 	Sounds = {
