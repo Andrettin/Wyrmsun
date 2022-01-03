@@ -108,11 +108,6 @@ wyrmsun.extensions = true
 
 --  Edit this to enable/disable the training queues.
 SetTrainingQueue(true)
---SetTrainingQueue(false)
-
---  Edit this to enable/disable building capture.
---SetBuildingCapture(true)
-SetBuildingCapture(false)
 
 --  Edit this to enable/disable the reveal of the attacker.
 --SetRevealAttacker(true)
