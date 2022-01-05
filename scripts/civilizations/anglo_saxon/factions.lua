@@ -47,14 +47,3 @@ DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Icon = "icon-flag-five-white-birds-on-red",
 	Description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
 })
-
-DefineFaction("sussex", {
-	Name = "Sussex",
-	Civilization = "anglo-saxon",
-	Type = "polity",
-	Color = "blue",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-sussex",
-	Icon = "icon-flag-yellow-lion-on-cyan",
-	Description = ""
-})

@@ -1,5 +1,14 @@
 sussex = {
+	name = "Sussex"
 	adjective = "Sussexian"
+	civilization = anglo_saxon
+	type = polity
+	color = blue
+	default_tier = grand_duchy #petty kingdom
+	min_tier = county #ealdormanry
+	default_capital = york
+	upgrade = upgrade_faction_sussex
+	icon = icon_flag_yellow_lion_on_cyan
 	core_settlements = {
 		winchester
 	}

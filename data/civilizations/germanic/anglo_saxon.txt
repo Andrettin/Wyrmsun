@@ -10,6 +10,28 @@ anglo_saxon = {
 	develops_from = {
 		germanic
 	}
+	title_names = {
+		monarchy = {
+			county = "Ealdormanry"
+			grand_duchy = "Petty Kingdom"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			polity = {
+				monarchy = {
+					county = {
+						male = "Ealdorman"
+						female = "Ealdorwoman"
+					}
+					grand_duchy = {
+						male = "Petty King"
+						female = "Petty Queen"
+					}
+				}
+			}
+		}
+	}
 	
 	unit_class_names = {
 		farm = {
