@@ -1,0 +1,23 @@
+teutonia = {
+	name = "Teutonia"
+	adjective = "Teutonic"
+	civilization = anglo_saxon
+	type = polity
+	color = orange
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_teutonia
+	icon = icon_flag_five_red_birds_on_yellow
+	core_settlements = {
+		kiel
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

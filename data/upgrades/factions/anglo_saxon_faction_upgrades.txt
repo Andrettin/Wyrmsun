@@ -1,16 +1,3 @@
-upgrade_faction_angle_tribe = {
-	name = "Angle Tribe"
-	effects_string = "+2 Damage for Swordsmen"
-	conditions = {
-		upgrade_class = ironworking
-	}
-}
-
-upgrade_faction_avione_tribe = {
-	name = "Avione Tribe"
-	effects_string = "+2 Damage for Archers"
-}
-
 upgrade_faction_charude_tribe = {
 	name = "Charude Tribe"
 	effects_string = "+2 Armor for Archers"
@@ -34,11 +21,29 @@ upgrade_faction_lindisfaran_tribe = {
 	}
 }
 
-upgrade_faction_teuton_tribe = {
-	name = "Teuton Tribe"
-	effects_string = "+3 Damage, -1 Armor for Swordsmen"
-	conditions = {
-		upgrade_class = ironworking
+upgrade_faction_anglia = {
+	name = "Anglia"
+	effects_string = "+2 Damage for Swordsmen"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
+}
+
+upgrade_faction_avionia = {
+	name = "Avionia"
+	effects_string = "+2 Damage for Archers"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_types = {
+			unit_teuton_archer
+		}
 	}
 }
 
@@ -100,6 +105,21 @@ upgrade_faction_northumbria = {
 upgrade_faction_sussex = {
 	name = "Sussex"
 	effects_string = "+10 HP for Archers"
+}
+
+upgrade_faction_teutonia = {
+	name = "Teutonia"
+	effects_string = "+3 Damage, -1 Armor for Swordsmen"
+	modifier = {
+		basic_damage = 3
+		armor = -1
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
 }
 
 upgrade_faction_wessex = {

@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade_faction_angle_tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-avione-tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
 DefineModifier("upgrade_faction_charude_tribe",
 	{"Armor", 2},
 	{"Points", 10},
@@ -51,13 +39,6 @@ DefineModifier("upgrade-faction-gumeninga-tribe",
 
 DefineModifier("upgrade-faction-lindisfaran-tribe",
 	{"Accuracy", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade_faction_teuton_tribe",
-	{"BasicDamage", 3},
-	{"Armor", -1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )

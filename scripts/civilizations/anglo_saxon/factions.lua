@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("avione-tribe", {
-	Name = "Avione Tribe",
-	Adjective = "Avione",
-	Civilization = "anglo-saxon", -- accurate?
-	Type = "tribe",
-	Color = "white",
-	FactionUpgrade = "upgrade-faction-avione-tribe",
-	Icon = "icon-flag-five-white-birds-on-red"
-})
-
 DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 	Name = "Gumeninga Tribe",
 	Adjective = "Gumeninga",

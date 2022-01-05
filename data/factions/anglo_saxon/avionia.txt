@@ -1,0 +1,23 @@
+avionia = {
+	name = "Avionia"
+	adjective = "Avionian"
+	civilization = anglo_saxon #accurate?
+	type = polity
+	color = white
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_avionia
+	icon = icon_flag_five_white_birds_on_red
+	core_settlements = {
+		aarhus
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

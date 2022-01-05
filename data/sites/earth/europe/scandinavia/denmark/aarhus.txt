@@ -29,6 +29,10 @@ aarhus = {
 			owner = jarling_tribe
 		}
 		
+		-264 = {
+			owner = anglia
+		}
+		
 		395 = {
 			owner = jutland #part of Jute territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}

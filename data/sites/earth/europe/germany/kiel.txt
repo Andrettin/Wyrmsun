@@ -34,15 +34,15 @@ kiel = {
 		}
 		
 		-264 = {
-			owner = teuton_tribe #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = teutonia #Kiel's area was territory of the Teutones in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		395 = {
-			owner = angle_tribe #part of Angle territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			owner = anglia #part of Angle territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		486 = {
-			owner = angle_tribe #part of Angle territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = anglia #part of Angle territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

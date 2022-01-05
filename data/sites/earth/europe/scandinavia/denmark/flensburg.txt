@@ -8,7 +8,7 @@ flensburg = {
 	
 	history = {
 		-264 = {
-			owner = angle_tribe #tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = anglia #tribes in Europe between 264 BC and 180 AD (Schleswig was inhabited by the Angles); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += farm
 		}
 		

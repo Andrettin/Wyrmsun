@@ -970,7 +970,7 @@ DefineProvince("Dauphiny", {
 DefineProvince("Devon", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Devon",
+		"anglo-saxon", "anglia", "Devon",
 		"english", "england", "Devon"
 	},
 --	SettlementLocation = {470, 111}, -- Exeter
@@ -1093,7 +1093,7 @@ DefineProvince("Durham", {
 	},
 	HistoricalOwners = {
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "anglia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "anglo-saxon", "northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1143,7 +1143,7 @@ DefineProvince("East Anglia", {
 	HistoricalOwners = {
 		-27, "briton", "iceni-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "anglia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		616, "anglo-saxon", "east_anglia", -- we have notice that Rædwald was king of East Anglia then; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
 		1560, "english", "england" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -1199,7 +1199,7 @@ DefineProvince("Epirus", {
 DefineProvince("Essex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Essex",
+		"anglo-saxon", "anglia", "Essex",
 		"english", "england", "Essex"
 	},
 --	SettlementLocation = {480, 109}, -- London
@@ -1868,7 +1868,7 @@ DefineProvince("Jutland", {
 		"norse", "denmark",
 		"anglo-saxon", "charude_tribe",
 		"anglo-saxon", "jutland",
-		"anglo-saxon", "teuton_tribe"
+		"anglo-saxon", "teutonia"
 	},
 	HistoricalOwners = {
 		-5800, "basque", "ertebolle-tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
@@ -1876,7 +1876,7 @@ DefineProvince("Jutland", {
 		-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) ceases being irregularly occupied at around 3550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 		-2800, "germanic", "skeldung_tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
 		-27, "anglo-saxon", "charude_tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		161, "anglo-saxon", "teuton_tribe", -- The area was inhabited by the Teutones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "anglo-saxon", "teutonia", -- The area was inhabited by the Teutones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "norse", "denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -1893,7 +1893,7 @@ DefineProvince("Jutland", {
 DefineProvince("Kent", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Kent",
+		"anglo-saxon", "anglia", "Kent",
 		"english", "england", "Kent"
 	},
 --	SettlementLocation = {483, 110}, -- Dover
@@ -2077,7 +2077,7 @@ DefineProvince("Lincoln", {
 	HistoricalOwners = {
 		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "anglia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "anglo-saxon", "middle_anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		656, "anglo-saxon", "northumbria", -- After the murder of Peada in 656, Middle Anglia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		657, "anglo-saxon", "mercia", -- Wulfhere proclaimed Mercian king in 657, ending Northumbrian dominion (apparently from the source not only in Mercia but also in Middle Anglia); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -2405,7 +2405,7 @@ DefineProvince("Mecklenburg", {
 DefineProvince("Mercia", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Mercia",
+		"anglo-saxon", "anglia", "Mercia",
 		"english", "england", "Mercia"
 	},
 --	SettlementLocation = {475, 106}, -- Tamworth
@@ -2416,7 +2416,7 @@ DefineProvince("Mercia", {
 	HistoricalOwners = {
 		-27, "briton", "coritani-tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "anglo-saxon", "angle_tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		526, "anglo-saxon", "anglia", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		632, "anglo-saxon", "mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
 		654, "anglo-saxon", "middle_anglia", -- Peada, king of the Middle Angles, ruled over the Mercian lands south of the Trent after Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		656, "anglo-saxon", "northumbria", -- After the murder of Peada in 656, Mercia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -2692,7 +2692,7 @@ DefineProvince("North Trondelag", {
 DefineProvince("Northumberland", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Bernicia",
+		"anglo-saxon", "anglia", "Bernicia",
 		"english", "england", "Northumberland"
 	},
 --	SettlementLocation = {475, 98}, -- Bamburgh; was the chief stronghold of the Bernice people, who lived in the region; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -3227,12 +3227,12 @@ DefineProvince("Schleswig", {
 	},
 --	SettlementLocation = {506, 100}, -- Flensburg
 	Claims = {
-		"anglo-saxon", "angle_tribe",
-		"anglo-saxon", "avione-tribe"
+		"anglo-saxon", "anglia",
+		"anglo-saxon", "avionia"
 	},
 	HistoricalOwners = {
-		-264, "anglo-saxon", "angle_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "anglo-saxon", "angle_tribe", -- The area was inhabited by the Anglii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-264, "anglo-saxon", "anglia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "anglo-saxon", "anglia", -- The area was inhabited by the Anglii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "norse", "denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -3329,7 +3329,7 @@ DefineProvince("Slovakia", {
 DefineProvince("Somerset", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Somerset",
+		"anglo-saxon", "anglia", "Somerset",
 		"english", "england", "Somerset"
 	},
 --	SettlementLocation = {473, 110}, -- Wells
@@ -3422,7 +3422,7 @@ DefineProvince("Styria", {
 DefineProvince("Sussex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Sussex",
+		"anglo-saxon", "anglia", "Sussex",
 		"english", "england", "Sussex"
 	},
 --	SettlementLocation = {480, 111}, -- Newhaven
@@ -3948,7 +3948,7 @@ DefineProvince("Wallachia", {
 DefineProvince("Wessex", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Wessex",
+		"anglo-saxon", "anglia", "Wessex",
 		"english", "england", "Wessex"
 	},
 --	SettlementLocation = {476, 110}, -- Winchester
@@ -4069,7 +4069,7 @@ DefineProvince("Wurtemberg", {
 DefineProvince("York", {
 	World = "earth",
 	FactionCulturalNames = {
-		"anglo-saxon", "angle_tribe", "Deira",
+		"anglo-saxon", "anglia", "Deira",
 		"english", "england", "York"
 	},
 	Claims = {
