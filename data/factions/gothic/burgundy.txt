@@ -8,6 +8,9 @@ burgundy = {
 	#default_capital = worms
 	icon = icon_flag_old_austria
 	upgrade = upgrade_faction_burgundy
+	core_settlements = {
+		malmo #Bornholm
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

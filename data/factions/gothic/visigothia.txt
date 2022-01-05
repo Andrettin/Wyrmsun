@@ -7,6 +7,10 @@ visigothia = {
 	default_tier = kingdom
 	icon = icon_flag_five_orange_birds_on_black
 	upgrade = upgrade_faction_visigothia
+	core_settlements = {
+		bucharest
+		iasi
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

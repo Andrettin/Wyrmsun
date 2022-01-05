@@ -7,6 +7,9 @@ ostrogothia = {
 	default_tier = kingdom
 	icon = icon_flag_five_black_birds_on_purple
 	upgrade = upgrade_faction_ostrogothia
+	core_settlements = {
+		kherson
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

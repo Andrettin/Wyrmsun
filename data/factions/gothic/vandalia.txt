@@ -8,6 +8,9 @@ vandalia = {
 	default_capital = carthage
 	icon = icon_flag_five_blue_birds_on_orange
 	upgrade = upgrade_faction_vandalia
+	core_settlements = {
+		stettin
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}

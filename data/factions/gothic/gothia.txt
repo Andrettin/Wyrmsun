@@ -7,6 +7,9 @@ gothia = {
 	default_tier = kingdom
 	icon = icon_flag_yellow_lion_on_cyan
 	upgrade = upgrade_faction_gothia
+	core_settlements = {
+		danzig
+	}
 	conditions = {
 		upgrade_class = ironworking
 	}
