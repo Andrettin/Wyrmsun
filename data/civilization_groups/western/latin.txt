@@ -1,9 +1,14 @@
 latin = {
 	name = "Latin"
-	rank = subgroup
-	group = mediterranean
+	rank = group
+	group = western
 	
 	history = {
+		-4000 = {
+			#Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+			acquired_upgrade_classes += wood_plow
+		}
+		
 		-750 = {
 			explored_settlements += rome #Latins present in Latium by 750-625 BC, and Rome was in existence as well; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 		}

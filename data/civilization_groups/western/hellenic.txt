@@ -1,7 +1,7 @@
 hellenic = {
 	name = "Hellenic"
-	rank = subgroup
-	group = mediterranean
+	rank = group
+	group = western
 	
 	unit_sounds = {
 		selected = basic_greek_voices_selected_group
@@ -19,5 +19,12 @@ hellenic = {
 		copper = basic_english_voices_not_enough_copper
 		lumber = basic_english_voices_not_enough_lumber
 		stone = basic_english_voices_not_enough_stone
+	}
+	
+	history = {
+		-4000 = {
+			#Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+			acquired_upgrade_classes += wood_plow
+		}
 	}
 }
