@@ -1,5 +1,0 @@
-continental_west_germanic = {
-	name = "Continental West Germanic"
-	rank = subgroup
-	group = germanic
-}

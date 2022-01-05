@@ -30,7 +30,7 @@ DefineCivilization("dutch", { -- information for later use
 	Display = "Dutch",
 	Playable = false,
 	Visible = true,
-	Group = "continental_west_germanic",
+	Group = "west_germanic",
 	ParentCivilization = "teuton",
 	Language = "dutch",
 	Adjective = "Dutch",
@@ -321,7 +321,7 @@ DefineCivilization("english", {
 DefineCivilization("frankish", {
 	Display = "Frankish",
 	Visible = true,
-	Group = "continental_west_germanic",
+	Group = "west_germanic",
 	Language = "old-frankish",
 	ParentCivilization = "teuton",
 	Adjective = "Frankish",
@@ -347,7 +347,7 @@ DefineCivilization("frankish", {
 DefineCivilization("suebi", {
 	Display = "Suebi",
 	Visible = true,
-	Group = "continental_west_germanic",
+	Group = "west_germanic",
 	Language = "old-high-german",
 	ParentCivilization = "teuton",
 	Adjective = "Suebi",
