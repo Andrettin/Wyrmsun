@@ -5,4 +5,10 @@ lithuania = {
 	type = polity
 	color = red
 	default_tier = grand_duchy
+	core_settlements = {
+		vilnius
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

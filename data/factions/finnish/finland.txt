@@ -8,4 +8,7 @@ finland = {
 	core_settlements = {
 		helsinki
 	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 }
