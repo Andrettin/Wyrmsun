@@ -13,12 +13,12 @@ stettin = {
 	
 	history = {
 		-264 = {
-			owner = rugian_tribe #Rugian territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = rugia #Rugian territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 
 		486 = {
-			owner = rugian_tribe #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = rugia #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

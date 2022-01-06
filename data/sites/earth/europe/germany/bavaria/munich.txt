@@ -22,7 +22,7 @@ munich = {
 		}
 		
 		486 = {
-			owner = rugian_tribe #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = rugia #part of Rugian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

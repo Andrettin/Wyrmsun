@@ -1259,12 +1259,12 @@ DefineProvince("Farther Pomerania", {
 	},
 --	SettlementLocation = {523, 102}, -- Kolberg
 	Claims = {
-		"goth", "rugian-tribe",
+		"goth", "rugia",
 		"goth", "turcilingian-tribe"
 	},
 	HistoricalOwners = {
 		-264, "goth", "turcilingian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "goth", "rugian-tribe", -- The area was inhabited by the Rugii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "goth", "rugia", -- The area was inhabited by the Rugii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1648, "teuton", "brandenburg" -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
 	},
 	HistoricalCultures = {
@@ -1680,12 +1680,12 @@ DefineProvince("Hither Pomerania", {
 --	SettlementLocation = {521, 103}, -- Stettin
 	Claims = {
 		"basque", "funnelbeaker-tribe",
-		"goth", "rugian-tribe",
+		"goth", "rugia",
 		"suebi", "semnone_tribe"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "goth", "rugian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "goth", "rugia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "suebi", "semnone_tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1648, "norse", "sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},

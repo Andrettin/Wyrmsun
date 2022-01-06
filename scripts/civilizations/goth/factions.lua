@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("rugian-tribe", {
-	Name = "Rugian Tribe",
-	Adjective = "Rugian",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "red",
-	FactionUpgrade = "upgrade-faction-rugian-tribe",
-	Icon = "icon-flag-five-white-birds-on-red"
-})
-
 DefineFaction("silingae-tribe", {
 	Name = "Silingae Tribe",
 	Adjective = "Silingae",

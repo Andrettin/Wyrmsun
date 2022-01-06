@@ -1,0 +1,23 @@
+rugia = {
+	name = "Rugia"
+	adjective = "Rugian"
+	civilization = gothic
+	type = polity
+	color = red
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_rugia
+	icon = icon_flag_five_white_birds_on_red
+	core_settlements = {
+		stettin
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}
