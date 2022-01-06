@@ -13,7 +13,7 @@ prague = {
 	
 	history = {
 		-9 = {
-			owner = marcomanni_tribe #Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
+			owner = marcomannia #Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
 			building_classes += town_hall
 		}
 		

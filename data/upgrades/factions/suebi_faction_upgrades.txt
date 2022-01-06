@@ -13,11 +13,6 @@ upgrade_faction_hermunduri_tribe = {
 	effects_string = "+1 Damage, +5 HP for Kregars"
 }
 
-upgrade_faction_marcomanni_tribe = {
-	name = "Marcomanni Tribe"
-	effects_string = "+2 Accuracy for Kregars"
-}
-
 upgrade_faction_quadi_tribe = {
 	name = "Quadi Tribe"
 	effects_string = "+2 Armor for Kregars"
@@ -36,4 +31,18 @@ upgrade_faction_suebi_tribe = {
 upgrade_faction_galicia = {
 	name = "Galicia"
 	effects_string = "+2 Damage for Kregars"
+}
+
+upgrade_faction_marcomannia = {
+	name = "Marcomannia"
+	effects_string = "+2 Accuracy for Kregars"
+	modifier = {
+		accuracy = 2
+		points = 10
+		unit_types = {
+			unit_suebi_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
 }

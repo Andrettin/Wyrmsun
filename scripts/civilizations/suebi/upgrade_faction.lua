@@ -44,12 +44,6 @@ DefineModifier("upgrade-faction-hermunduri-tribe",
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade_faction_marcomanni_tribe",
-	{"Accuracy", 2},
-	{"Points", 10},
-	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-quadi-tribe",
 	{"Armor", 2},
 	{"Points", 10},

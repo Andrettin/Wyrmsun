@@ -1,11 +1,12 @@
-marcomanni_tribe = {
-	name = "Marcomanni Tribe"
+marcomannia = {
+	name = "Marcomannia"
 	adjective = "Marcomanni"
 	civilization = suebi
-	type = tribe
+	type = polity
 	color = orange #change to a better one?
 	default_tier = duchy
-	upgrade = upgrade_faction_marcomanni_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_marcomannia
 	icon = icon_flag_cyan_lion_on_red
 	description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."
 	core_settlements = {
@@ -16,6 +17,10 @@ marcomanni_tribe = {
 	}
 	
 	history = {
+		-9 = {
+			government_type = tribe
+		}
+		
 		170 = {
 			#in 170 a coalition led by the Marcomanni (which included the Quadi and the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 			

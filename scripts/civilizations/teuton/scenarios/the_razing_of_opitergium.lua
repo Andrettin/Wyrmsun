@@ -40,7 +40,7 @@ if (LoadedGame == false) then
 
 	local rome_player = GetFactionPlayer("Rome")
 	SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
-	SetPlayerData(0, "Faction", "marcomanni_tribe")
+	SetPlayerData(0, "Faction", "marcomannia")
 
 --	unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")}) -- add Ballomar here later
 
@@ -92,8 +92,8 @@ AddTrigger("the-razing-of-opitergium-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("marcomanni_tribe") and PlayerHasObjective(GetFactionPlayer("marcomanni_tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("rome"), "TotalNumUnitsConstructed") <= 0) then
-			player = GetFactionPlayer("marcomanni_tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("rome"), "TotalNumUnitsConstructed") <= 0) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false

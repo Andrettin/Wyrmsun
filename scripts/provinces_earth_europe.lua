@@ -449,7 +449,7 @@ DefineProvince("Bohemia", {
 		"teuton", "Bohemia" -- Böhmen
 	},
 	FactionCulturalNames = {
-		"suebi", "marcomanni_tribe", "Marcomannia",
+		"suebi", "marcomannia", "Marcomannia",
 		"suebi", "suebi_tribe", "Marcomannia"
 	},
 --	SettlementLocation = {520, 113}, -- Prague
@@ -457,13 +457,13 @@ DefineProvince("Bohemia", {
 		"basque", "linearware-tribe",
 		"gaul", "boii-tribe",
 		"slav", "bohemia",
-		"suebi", "marcomanni_tribe",
+		"suebi", "marcomannia",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-400, "gaul", "boii-tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
-		-9, "suebi", "marcomanni_tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
+		-9, "suebi", "marcomannia", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 		526, "teuton", "bavaria", -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		788, "slav", "bohemia", -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		919, "teuton", "holy-rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -3280,7 +3280,7 @@ DefineProvince("Silesia", {
 	},
 	HistoricalOwners = {
 		-264, "goth", "silingae-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "marcomanni_tribe", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "marcomannia", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "slav", "poland", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1740, "teuton", "brandenburg" -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.

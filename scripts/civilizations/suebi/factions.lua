@@ -64,14 +64,14 @@ DefineFaction("quadi-tribe", {
 	Name = "Quadi Tribe",
 	Adjective = "Quadi",
 	Civilization = "suebi",
-	ParentFaction = "marcomanni_tribe",
+	ParentFaction = "marcomannia",
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
 	Icon = "icon-flag-green-lion-on-orange",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
-		170, "marcomanni_tribe", "alliance",
+		170, "marcomannia", "alliance",
 		171, "rome", "peace", -- in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
 		173, "rome", "war", -- the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
 		174, "rome", "peace", -- in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.

@@ -30,7 +30,7 @@ DefineCharacter("marbod", {
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain/king
 	Civilization = "suebi",
-	Faction = "marcomanni_tribe",
+	Faction = "marcomannia",
 	Trait = "upgrade-keen",
 	HairVariation = "blond-hair",
 	Description = "A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time.",
@@ -39,10 +39,10 @@ DefineCharacter("marbod", {
 	DeathDate = 19, -- Marbod deposed in 19 AD; this should be the year of his death instead
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", -9, 19, "marcomanni_tribe"
+		"ruler", -9, 19, "marcomannia"
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "marcomanni_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "marcomannia") then
 			return true
 		end
 		return false
@@ -54,13 +54,13 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 	Gender = "male",
 	Type = "unit-teuton-veteran-swordsman", -- noble
 	Civilization = "suebi",
-	Faction = "marcomanni_tribe",
+	Faction = "marcomannia",
 	Deities = {"odin", "tyr"},
 	HistoricalTitles = {
-		"ruler", 19, 0, "marcomanni_tribe" -- deposed Marbod in 19 AD
+		"ruler", 19, 0, "marcomannia" -- deposed Marbod in 19 AD
 	},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "marcomanni_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "marcomannia") then
 			return true
 		end
 		return false
@@ -72,13 +72,13 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "suebi",
-	Faction = "marcomanni_tribe",
+	Faction = "marcomannia",
 	Trait = "upgrade-intelligent",
 	HairVariation = "brown-hair",
 	Deities = {"odin", "tyr"},
 	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "marcomanni_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "marcomannia") then
 			return true
 		end
 		return false
