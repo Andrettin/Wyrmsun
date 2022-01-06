@@ -4,12 +4,6 @@ upgrade_faction_ampsivarii_tribe = {
 	requirements_string = "Ironworking"
 }
 
-upgrade_faction_batavian_tribe = {
-	name = "Batavian Tribe"
-	effects_string = "+3 Damage, -1 Armor for Kregars"
-	requirements_string = "Ironworking"
-}
-
 upgrade_faction_chamavi_tribe = {
 	name = "Chamavi Tribe"
 	effects_string = "+2 Accuracy for Kregars"
@@ -37,6 +31,22 @@ upgrade_faction_ubii_tribe = {
 upgrade_faction_austrasia = {
 	name = "Austrasia"
 	effects_string = "+1 Damage and +1 Armor for Ritars"
+}
+
+upgrade_faction_batavia = {
+	name = "Batavia"
+	effects_string = "+3 Damage, -1 Armor for Kregars"
+	requirements_string = "Ironworking"
+	modifier = {
+		basic_damage = 3
+		armor = -1
+		points = 10
+		unit_types = {
+			unit_frank_swordsman
+			unit_frank_veteran_swordsman
+			unit_frank_heroic_swordsman
+		}
+	}
 }
 
 upgrade_faction_burgundia = {

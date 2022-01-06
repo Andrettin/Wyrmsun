@@ -1705,19 +1705,19 @@ DefineProvince("Holland", {
 		"latin", "Batavia"
 	},
 	FactionCulturalNames = {
-		"frankish", "batavian-tribe", "Batavia",
+		"frankish", "batavia", "Batavia",
 		"teuton", "netherlands", "Holland"
 	},
 --	SettlementLocation = {493, 107}, -- Amsterdam
 	Claims = {
-		"frankish", "batavian-tribe",
+		"frankish", "batavia",
 		"frankish", "francia",
 		"teuton", "holland",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "frankish", "batavian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "frankish", "batavia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		150, "frankish", "francia", -- Franks were the people settled in the Gelderland and in the German Lower Rhine in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		450, "", "", -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		526, "teuton", "friesland", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.

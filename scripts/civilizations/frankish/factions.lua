@@ -35,16 +35,6 @@ DefineFaction("ampsivarii-tribe", {
 	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
-DefineFaction("batavian-tribe", {
-	Name = "Batavian Tribe",
-	Adjective = "Batavian",
-	Civilization = "frankish", -- accurate?
-	Type = "tribe",
-	Color = "orange",
-	FactionUpgrade = "upgrade-faction-batavian-tribe",
-	Icon = "icon-flag-five-blue-birds-on-orange"
-})
-
 DefineFaction("chamavi-tribe", {
 	Name = "Chamavi Tribe",
 	Adjective = "Chamavi",

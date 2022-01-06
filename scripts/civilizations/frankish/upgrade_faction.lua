@@ -31,13 +31,6 @@ DefineModifier("upgrade-faction-ampsivarii-tribe",
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-batavian-tribe",
-	{"BasicDamage", 3},
-	{"Armor", -1},
-	{"Points", 10},
-	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-chamavi-tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
@@ -96,10 +89,6 @@ DefineModifier("upgrade-faction-salia",
 )
 
 DefineDependency("upgrade-faction-ampsivarii-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-batavian-tribe",
 	{"upgrade_ironworking"}
 )
 
