@@ -21,5 +21,9 @@ riga = {
 		1097 = {
 			owner = estonian_tribe #part of Estonian territory c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
 		}
+		
+		1721 = {
+			owner = russia #became part of Russia in 1721; Source: William R. Shepherd, "Historical Atlas", 1911, p. 133.
+		}
 	}
 }

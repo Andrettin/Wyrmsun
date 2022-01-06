@@ -20,5 +20,9 @@ helsinki = {
 		1560 = {
 			owner = sweden #Helsingfors was a Swedish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
+		
+		1808 = {
+			owner = russia #became part of Russia in 1808; Source: William R. Shepherd, "Historical Atlas", 1911, p. 152.
+		}
 	}
 }

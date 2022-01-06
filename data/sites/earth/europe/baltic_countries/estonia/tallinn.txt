@@ -28,5 +28,9 @@ tallinn = {
 		1561 = {
 			owner = sweden #Reval became a Swedish possession in 1561; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
 		}
+		
+		1721 = {
+			owner = russia #became part of Russia in 1721; Source: William R. Shepherd, "Historical Atlas", 1911, p. 133.
+		}
 	}
 }

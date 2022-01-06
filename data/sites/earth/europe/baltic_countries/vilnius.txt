@@ -18,6 +18,10 @@ vilnius = {
 			owner = lithuania #part of Lithuania c. 1097; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 66-67.
 		}
 		
+		1772 = {
+			owner = russia #became part of Russia in 1772; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 138-139.
+		}
+		
 		1815 = {
 			owner = russia #part of the Russian Empire in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 		}
