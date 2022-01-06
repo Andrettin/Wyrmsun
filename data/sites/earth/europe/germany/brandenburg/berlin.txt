@@ -10,7 +10,7 @@ berlin = {
 	
 	history = {
 		-264 = {
-			owner = semnone_tribe #Berlin's area was territory of the Sueves/Semnones in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = semnonia #Berlin's area was territory of the Sueves/Semnones in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			building_classes += town_hall
 		}
 		

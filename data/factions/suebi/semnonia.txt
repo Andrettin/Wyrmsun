@@ -1,16 +1,23 @@
-semnone_tribe = {
-	name = "Semnone Tribe"
+semnonia = {
+	name = "Semnonia"
 	adjective = "Semnone"
 	civilization = suebi
-	type = tribe
+	type = polity
 	color = brown
 	default_tier = duchy
-	upgrade = upgrade_faction_semnone_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_semnonia
 	icon = icon_flag_green_lion_on_purple
 	core_settlements = {
 		berlin
 	}
 	conditions = {
 		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
 	}
 }

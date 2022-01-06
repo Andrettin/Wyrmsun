@@ -18,11 +18,6 @@ upgrade_faction_quadi_tribe = {
 	effects_string = "+2 Armor for Kregars"
 }
 
-upgrade_faction_semnone_tribe = {
-	name = "Semnone Tribe"
-	effects_string = "+1 Damage, +1 Armor for Kregars"
-}
-
 upgrade_faction_suebi_tribe = {
 	name = "Suebi Tribe"
 	effects_string = "+2 Evasion for Kregars"
@@ -38,6 +33,21 @@ upgrade_faction_marcomannia = {
 	effects_string = "+2 Accuracy for Kregars"
 	modifier = {
 		accuracy = 2
+		points = 10
+		unit_types = {
+			unit_suebi_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
+}
+
+upgrade_faction_semnonia = {
+	name = "Semnonia"
+	effects_string = "+1 Damage, +1 Armor for Kregars"
+	modifier = {
+		basic_damage = 1
+		armor = 1
 		points = 10
 		unit_types = {
 			unit_suebi_swordsman

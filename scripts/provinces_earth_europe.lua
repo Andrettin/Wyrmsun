@@ -510,19 +510,19 @@ DefineProvince("Brandenburg", {
 		"teuton", "Brandenburg"
 	},
 	FactionCulturalNames = {
-		"suebi", "semnone_tribe", "Semnonia",
+		"suebi", "semnonia", "Semnonia",
 		"suebi", "suebi_tribe", "Semnonia"
 	},
 --	SettlementLocation = {518, 106}, -- Berlin
 	Claims = {
-		"suebi", "semnone_tribe",
+		"suebi", "semnonia",
 		"suebi", "suebi_tribe",
 		"teuton", "brandenburg"
 	},
 	HistoricalOwners = {
-		-264, "suebi", "semnone_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "suebi", "semnonia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-71, "suebi", "suebi_tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
-		161, "suebi", "semnone_tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "semnonia", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -1681,12 +1681,12 @@ DefineProvince("Hither Pomerania", {
 	Claims = {
 		"basque", "funnelbeaker-tribe",
 		"goth", "rugia",
-		"suebi", "semnone_tribe"
+		"suebi", "semnonia"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "goth", "rugia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "semnone_tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "semnonia", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1648, "norse", "sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
 	HistoricalCultures = {
