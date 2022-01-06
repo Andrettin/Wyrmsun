@@ -1,0 +1,23 @@
+herulia = {
+	name = "Herulia"
+	adjective = "Herulian"
+	civilization = gothic
+	type = polity
+	color = green
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_herulia
+	icon = icon_flag_cyan_lion_on_red
+	core_settlements = {
+		copenhagen
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

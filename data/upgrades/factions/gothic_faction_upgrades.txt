@@ -3,11 +3,6 @@ upgrade_faction_gepid_tribe = {
 	effects_string = "+1 Speed for Swordsmen"
 }
 
-upgrade_faction_herulian_tribe = {
-	name = "Herulian Tribe"
-	effects_string = "Disembarkment Bonus for Swordsmen and Spearmen"
-}
-
 upgrade_faction_lugii_tribe = {
 	name = "Lugii Tribe"
 	effects_string = "+2 Evasion for Spearmen"
@@ -51,6 +46,21 @@ upgrade_faction_burgundy = {
 upgrade_faction_gothia = {
 	name = "Gothia"
 	effects_string = "+2 Damage for Horse Riders"
+}
+
+upgrade_faction_herulia = {
+	name = "Herulia"
+	effects_string = "Disembarkment Bonus for Swordsmen and Spearmen"
+	modifier = {
+		disembarkment_bonus = 1
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+			unit_teuton_spearman
+		}
+	}
 }
 
 upgrade_faction_ostrogothia = {

@@ -4110,7 +4110,7 @@ DefineProvince("Zealand", {
 		"basque", "maglemose-tribe",
 		"basque", "kongemose-tribe",
 		"germanic", "skeldung_tribe",
-		"goth", "herulian-tribe",
+		"goth", "herulia",
 		"norse", "denmark"
 	},
 	HistoricalOwners = {
@@ -4122,7 +4122,7 @@ DefineProvince("Zealand", {
 		-2800, "germanic", "skeldung_tribe", -- Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 		-- Corded Ware culture (neolithic) ends in Zealand in 2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 		-264, "", "", -- remove Proto-Germanics
-		-27, "goth", "herulian-tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "goth", "herulia", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		526, "norse", "denmark", -- Danes were in Zealand in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "norse", "denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},

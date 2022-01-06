@@ -31,13 +31,6 @@ DefineModifier("upgrade_faction_gepid_tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-herulian-tribe",
-	{"DisembarkmentBonus", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
-	{"apply-to", "unit-teuton-spearman"}
-)
-
 DefineModifier("upgrade-faction-lugii-tribe",
 	{"Evasion", 2},
 	{"Points", 10},

@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("herulian-tribe", {
-	Name = "Herulian Tribe",
-	Adjective = "Herulian",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "green",
-	FactionUpgrade = "upgrade-faction-herulian-tribe",
-	Icon = "icon-flag-cyan-lion-on-red"
-})
-
 DefineFaction("lugii-tribe", {
 	Name = "Lugii Tribe",
 	Adjective = "Lugii",

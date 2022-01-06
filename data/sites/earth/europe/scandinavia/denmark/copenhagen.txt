@@ -22,7 +22,7 @@ copenhagen = {
 		}
 		
 		-27 = {
-			owner = herulian_tribe #political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+			owner = herulia #political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		}
 		
 		486 = {
