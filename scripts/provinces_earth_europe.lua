@@ -3275,7 +3275,7 @@ DefineProvince("Silesia", {
 	},
 --	SettlementLocation = {526, 110}, -- Breslau
 	Claims = {
-		"goth", "lugii-tribe",
+		"goth", "lugia",
 		"goth", "silingae-tribe"
 	},
 	HistoricalOwners = {

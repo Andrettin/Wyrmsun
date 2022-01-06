@@ -1,0 +1,23 @@
+lugia = {
+	name = "Lugia"
+	adjective = "Lugian"
+	civilization = gothic
+	type = polity
+	color = purple
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_lugia
+	icon = icon_flag_five_purple_birds_on_green
+	core_settlements = {
+		krakow
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

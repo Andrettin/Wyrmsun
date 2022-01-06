@@ -3,11 +3,6 @@ upgrade_faction_gepid_tribe = {
 	effects_string = "+1 Speed for Swordsmen"
 }
 
-upgrade_faction_lugii_tribe = {
-	name = "Lugii Tribe"
-	effects_string = "+2 Evasion for Spearmen"
-}
-
 upgrade_faction_rugian_tribe = {
 	name = "Rugian Tribe"
 	effects_string = "+2 Accuracy for Swordsmen"
@@ -58,6 +53,18 @@ upgrade_faction_herulia = {
 			unit_teuton_swordsman
 			unit_teuton_veteran_swordsman
 			unit_teuton_heroic_swordsman
+			unit_teuton_spearman
+		}
+	}
+}
+
+upgrade_faction_lugia = {
+	name = "Lugia"
+	effects_string = "+2 Evasion for Spearmen"
+	modifier = {
+		evasion = 2
+		points = 10
+		unit_types = {
 			unit_teuton_spearman
 		}
 	}

@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("lugii-tribe", {
-	Name = "Lugii Tribe",
-	Adjective = "Lugii",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "purple",
-	FactionUpgrade = "upgrade-faction-lugii-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
 DefineFaction("rugian-tribe", {
 	Name = "Rugian Tribe",
 	Adjective = "Rugian",

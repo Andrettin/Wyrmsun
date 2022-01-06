@@ -63,7 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed issue with polity names in custom games if they hadn't acquired a government type upgrade yet (e.g. East Anglia would be called " of East Anglia").
 - Merged the Bavarian, Bernice, Burgundian, Cantware, Danish, Dere, Frankish, Frisian, Geat, Gute, Jutish, Lombard, Mierce, Norwegian, Ostrogothic, Saxon, Swedish, Thuringian, Vandal and Visigothic Tribe factions into their polity counterparts (i.e. Bavaria, Denmark, etc.), and made the latter no longer require Writing.
-- Added the Anglia, Avionia, Bastarnia, Batavia, Herulia and Teutonia polity factions, replacing their tribal counterparts.
+- Added the Anglia, Avionia, Bastarnia, Batavia, Herulia, Lugia and Teutonia polity factions, replacing their tribal counterparts.
 - The Holy Roman Empire now requires Monarchy, and cannot switch to being a Republic.
 - The list of foundable factions is now dynamically-generated according to certain rules, instead of being predefined for each faction.
 
