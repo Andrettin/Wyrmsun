@@ -1,0 +1,29 @@
+north_sea = {
+	name = "North Sea"
+	adjective = "North Sea"
+	civilization = norse
+	type = polity
+	color = red
+	default_tier = empire
+	default_government_type = monarchy
+	default_capital = copenhagen
+	upgrade = upgrade_faction_north_sea
+	icon = flag_black_raven_on_white
+	definite_article = true
+	short_name = true
+	background = "The personal union achieved by Norse kings encompassing Denmark, Norway and England is termed the North Sea Empire by historians. This faction represents a further, hypothetical, step in the union of those kingdoms, so that they would form a single, imperial realm."
+	core_settlements = {
+		copenhagen
+		aarhus
+		malmo
+		oslo
+		london
+		winchester
+		tamworth
+		york
+	}
+	conditions = {
+		upgrade_class = ironworking
+		scripted_condition = is_civilized
+	}
+}

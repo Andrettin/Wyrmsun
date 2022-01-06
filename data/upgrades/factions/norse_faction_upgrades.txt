@@ -54,6 +54,18 @@ upgrade_faction_gotland = {
 	}
 }
 
+upgrade_faction_north_sea = {
+	name = "North Sea"
+	effects_string = "+1 Speed for Longships"
+	modifier = {
+		speed = 1
+		points = 10
+		unit_types = {
+			unit_norse_longship
+		}
+	}
+}
+
 upgrade_faction_norway = {
 	name = "Norway"
 	effects_string = "+2 Accuracy for Swordsmen"

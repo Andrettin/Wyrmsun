@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Anglia, Avionia, Bastarnia, Batavia, Herulia, Lugia, Marcomannia, Rugia, Semnonia and Teutonia polity factions, replacing their tribal counterparts.
 - The Holy Roman Empire now requires Monarchy, and cannot switch to being a Republic.
 - The list of foundable factions is now dynamically-generated according to certain rules, instead of being predefined for each faction.
+- Added the North Sea Empire faction for the Norse civilization (+1 speed for Longships).
 
 * Items
 - Added Helmet (+1 armor) and Knightly Helmet (+2 armor) items.
