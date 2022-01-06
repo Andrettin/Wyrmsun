@@ -1,0 +1,23 @@
+bastarnia = {
+	name = "Bastarnia"
+	adjective = "Bastarnae"
+	civilization = gothic
+	type = polity
+	color = blue
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_bastarnia
+	icon = icon_flag_blue_lion_on_yellow
+	core_settlements = {
+		lvov
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

@@ -1,8 +1,3 @@
-upgrade_faction_bastarnae_tribe = {
-	name = "Bastarnae Tribe"
-	effects_string = "+3 Damage and -1 Evasion for Swordsmen"
-}
-
 upgrade_faction_gepid_tribe = {
 	name = "Gepid Tribe"
 	effects_string = "+1 Speed for Swordsmen"
@@ -31,6 +26,21 @@ upgrade_faction_silingae_tribe = {
 upgrade_faction_turcilingian_tribe = {
 	name = "Turcilingian Tribe"
 	effects_string = "+2 Evasion for Archers"
+}
+
+upgrade_faction_bastarnia = {
+	name = "Bastarnia"
+	effects_string = "+3 Damage and -1 Evasion for Swordsmen"
+	modifier = {
+		basic_damage = 3
+		evasion = -1
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
 }
 
 upgrade_faction_burgundy = {

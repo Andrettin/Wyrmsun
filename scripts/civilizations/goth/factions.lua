@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("bastarnae-tribe", {
-	Name = "Bastarnae Tribe",
-	Adjective = "Bastarnae",
-	Civilization = "goth",
-	Type = "tribe",
-	Color = "blue",
-	FactionUpgrade = "upgrade-faction-bastarnae-tribe",
-	Icon = "icon-flag-blue-lion-on-yellow"
-})
-
 DefineFaction("herulian-tribe", {
 	Name = "Herulian Tribe",
 	Adjective = "Herulian",

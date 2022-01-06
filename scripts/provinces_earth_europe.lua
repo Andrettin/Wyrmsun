@@ -403,13 +403,13 @@ DefineProvince("Bessarabia", {
 	World = "earth",
 --	SettlementLocation = {562, 122}, -- Kishinev
 	Claims = {
-		"goth", "bastarnae-tribe"
+		"goth", "bastarnia"
 --		"romanian", "moldavia"
 	},
 	HistoricalOwners = {
 		-336, "persian", "scythian-tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		-264, "goth", "bastarnae-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "goth", "bastarnae-tribe", -- The area was inhabited by the Bastarnae (and the Costoboci to the north) in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-264, "goth", "bastarnia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "bastarnia", -- The area was inhabited by the Bastarnae (and the Costoboci to the north) in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		200, "goth", "visigothia", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		1560, "romanian", "moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -1445,13 +1445,13 @@ DefineProvince("Galicia", {
 	},
 --	SettlementLocation = {547, 114}, -- Lvov / Lemberg
 	Claims = {
-		"goth", "bastarnae-tribe",
+		"goth", "bastarnia",
 		"goth", "gepid_tribe",
 		"slav", "poland",
 		"suebi", "buri-tribe"
 	},
 	HistoricalOwners = {
-		-264, "goth", "bastarnae-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "goth", "bastarnia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "suebi", "buri-tribe", -- The area was inhabited by the Buri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "slav", "poland" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -2726,12 +2726,12 @@ DefineProvince("Odeska", {
 	},
 --	SettlementLocation = {567, 123}, -- Odesa
 	Claims = {
-		"goth", "bastarnae-tribe",
+		"goth", "bastarnia",
 		"persian", "scythian-tribe"
 	},
 	HistoricalOwners = {
 		-336, "persian", "scythian-tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		161, "goth", "bastarnae-tribe", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "goth", "bastarnia", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "turkish", "turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -3846,12 +3846,12 @@ DefineProvince("Vinnytska", {
 	},
 --	SettlementLocation = {561, 116}, -- Vinnytsya
 	Claims = {
-		"goth", "bastarnae-tribe",
+		"goth", "bastarnia",
 		"persian", "navari-tribe"
 	},
 	HistoricalOwners = {
 		-264, "persian", "navari-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "goth", "bastarnae-tribe", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "goth", "bastarnia", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "slav", "poland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {

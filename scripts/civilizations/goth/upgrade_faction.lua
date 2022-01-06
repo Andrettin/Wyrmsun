@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-bastarnae-tribe",
-	{"BasicDamage", 3},
-	{"Evasion", -1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade_faction_gepid_tribe",
 	{"Speed", 1},
 	{"Points", 10},
