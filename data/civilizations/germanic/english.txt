@@ -9,6 +9,22 @@ english = {
 	develops_from = {
 		anglo_saxon
 	}
+	title_names = {
+		monarchy = {
+			county = "Earldom"
+		}
+	}
+	character_title_names = {
+		ruler = {
+			polity = {
+				monarchy = {
+					county = {
+						male = "Earl"
+					}
+				}
+			}
+		}
+	}
 	
 	personal_names = {
 		male = {
