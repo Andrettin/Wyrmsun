@@ -10,9 +10,6 @@ thuringia = {
 	core_settlements = {
 		erfurt
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	title_names = {
 		monarchy = {
 			duchy = "Landgraviate"

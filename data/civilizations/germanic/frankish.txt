@@ -1,3 +1,6 @@
 frankish = {
 	default_color = blue
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

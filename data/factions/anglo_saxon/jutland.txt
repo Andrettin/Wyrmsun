@@ -10,9 +10,6 @@ jutland = {
 	core_settlements = {
 		aarhus
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		395 = {

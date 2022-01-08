@@ -12,9 +12,6 @@ marcomannia = {
 	core_settlements = {
 		prague
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-9 = {

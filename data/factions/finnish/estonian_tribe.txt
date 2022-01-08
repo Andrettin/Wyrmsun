@@ -4,7 +4,4 @@ estonian_tribe = {
 	civilization = finnish #Estonian
 	type = tribe
 	color = blue
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

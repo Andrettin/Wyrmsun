@@ -11,9 +11,6 @@ teutonia = {
 	core_settlements = {
 		kiel
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

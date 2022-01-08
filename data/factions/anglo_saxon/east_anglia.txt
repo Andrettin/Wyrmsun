@@ -11,7 +11,4 @@ east_anglia = {
 	core_settlements = {
 		london
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

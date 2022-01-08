@@ -11,9 +11,6 @@ visigothia = {
 		bucharest
 		iasi
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		200 = {

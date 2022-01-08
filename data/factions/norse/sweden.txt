@@ -12,9 +12,6 @@ sweden = {
 	core_settlements = {
 		stockholm
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

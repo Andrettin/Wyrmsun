@@ -7,7 +7,4 @@ sitone_tribe = { #Tribes in Europe between 264 BC and 180 AD; Source: William R.
 	default_tier = duchy #tribe
 	upgrade = upgrade_faction_sitone_tribe
 	icon = flag_brown_raven_on_white
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

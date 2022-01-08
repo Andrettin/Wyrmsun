@@ -11,9 +11,6 @@ norway = {
 	core_settlements = {
 		oslo
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		814 = {

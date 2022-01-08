@@ -11,7 +11,4 @@ gotland = {
 	core_settlements = {
 		visby
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

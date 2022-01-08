@@ -10,7 +10,4 @@ middle_anglia = {
 	core_settlements = {
 		tamworth
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

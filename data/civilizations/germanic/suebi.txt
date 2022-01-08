@@ -1,3 +1,6 @@
 suebi = {
 	default_color = black
+	conditions = {
+		upgrade_class = ironworking
+	}
 }

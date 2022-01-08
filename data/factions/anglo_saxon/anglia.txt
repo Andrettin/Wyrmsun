@@ -11,9 +11,6 @@ anglia = {
 	core_settlements = {
 		aarhus #Angeln
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

@@ -11,9 +11,6 @@ burgundy = {
 	core_settlements = {
 		malmo #Bornholm
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

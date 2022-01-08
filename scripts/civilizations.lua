@@ -705,17 +705,6 @@ DefineCivilization("uralic", {
 	Playable = false
 })
 
-DefineCivilization("finnish", {
-	Display = "Finnish",
-	Visible = false,
-	Group = "uralic",
-	Language = "finnish",
-	ParentCivilization = "norse",
-	Adjective = "Finnish",
-	Playable = false,
-	DevelopsFrom = {"uralic"}
-})
-
 DefineCivilization("iberian", { -- the Iberian-speaking cultures of antiquity, such as the Oretanians
 	Display = "Iberian",
 	Visible = false,

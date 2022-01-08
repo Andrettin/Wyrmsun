@@ -12,9 +12,6 @@ denmark = {
 	core_settlements = {
 		copenhagen
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-27 = {

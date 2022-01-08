@@ -11,9 +11,6 @@ bastarnia = {
 	core_settlements = {
 		lvov
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

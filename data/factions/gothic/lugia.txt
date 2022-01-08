@@ -11,9 +11,6 @@ lugia = {
 	core_settlements = {
 		krakow
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

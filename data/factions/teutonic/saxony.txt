@@ -10,9 +10,6 @@ saxony = {
 	core_settlements = {
 		kiel
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	#settlement_names = {
 	#	"Hardego" #one of the pagi in Eastphalia in 852; Source: James Westfall Thompson, "The Early History of the Saxons as a Field for the Study of German Social Origins", 1926, p. 610.

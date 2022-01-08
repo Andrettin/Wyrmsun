@@ -10,6 +10,9 @@ anglo_saxon = {
 	develops_from = {
 		germanic
 	}
+	conditions = {
+		upgrade_class = ironworking
+	}
 	title_names = {
 		monarchy = {
 			county = "Ealdormanry"

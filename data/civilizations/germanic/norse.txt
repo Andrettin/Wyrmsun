@@ -1,5 +1,8 @@
 norse = {
 	default_color = blue
+	conditions = {
+		upgrade_class = ironworking
+	}
 	
 	ship_names = {
 		"Ringhorn" #Balder's ship in Norse mythology in which he was cremated; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.

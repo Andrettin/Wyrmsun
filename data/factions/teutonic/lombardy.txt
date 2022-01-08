@@ -10,9 +10,6 @@ lombardy = {
 	core_settlements = {
 		hanover
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-264 = {

@@ -12,9 +12,6 @@ sussex = {
 	core_settlements = {
 		winchester
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		686 = {

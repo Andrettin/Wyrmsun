@@ -10,7 +10,4 @@ middlesex = {
 	core_settlements = {
 		london
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 }

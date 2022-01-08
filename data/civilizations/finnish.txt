@@ -1,0 +1,14 @@
+finnish = {
+	name = "Finnish"
+	parent_civilization = norse
+	group = uralic
+	language = finnish
+	visible = false
+	playable = false
+	develops_from = {
+		uralic
+	}
+	conditions = {
+		upgrade_class = ironworking
+	}
+}

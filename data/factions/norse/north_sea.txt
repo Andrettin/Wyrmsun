@@ -23,7 +23,6 @@ north_sea = {
 		york
 	}
 	conditions = {
-		upgrade_class = ironworking
 		scripted_condition = is_civilized
 	}
 }

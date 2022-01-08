@@ -10,9 +10,6 @@ friesland = {
 	core_settlements = {
 		amsterdam
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	title_names = {
 		monarchy = {
 			barony = "Lordship"

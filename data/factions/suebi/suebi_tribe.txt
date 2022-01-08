@@ -11,9 +11,6 @@ suebi_tribe = {
 	core_settlements = {
 		berlin
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-71 = {

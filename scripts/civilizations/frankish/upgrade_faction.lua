@@ -87,23 +87,3 @@ DefineModifier("upgrade-faction-salia",
 	{"Points", 10},
 	{"apply-to", "unit-frank-horseman"}, {"apply-to", "unit-frank-knight-lord"}
 )
-
-DefineDependency("upgrade-faction-ampsivarii-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-chamavi-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-chatti-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-sugambri-tribe",
-	{"upgrade_ironworking"}
-)
-
-DefineDependency("upgrade-faction-ubii-tribe",
-	{"upgrade_ironworking"}
-)

@@ -1,31 +1,26 @@
 upgrade_faction_ampsivarii_tribe = {
 	name = "Ampsivarii Tribe"
 	effects_string = "+2 Damage for Kregars"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_chamavi_tribe = {
 	name = "Chamavi Tribe"
 	effects_string = "+2 Accuracy for Kregars"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_chatti_tribe = {
 	name = "Chatti Tribe"
 	effects_string = "+2 Damage for Spearmen"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_sugambri_tribe = {
 	name = "Sugambri Tribe"
 	effects_string = "+2 Accuracy for Archers"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_ubii_tribe = {
 	name = "Ubii Tribe"
 	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
-	requirements_string = "Ironworking"
 }
 
 upgrade_faction_austrasia = {
@@ -36,7 +31,6 @@ upgrade_faction_austrasia = {
 upgrade_faction_batavia = {
 	name = "Batavia"
 	effects_string = "+3 Damage, -1 Armor for Kregars"
-	requirements_string = "Ironworking"
 	modifier = {
 		basic_damage = 3
 		armor = -1

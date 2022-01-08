@@ -12,9 +12,6 @@ gautland = {
 		gothenburg
 		linkoping
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	
 	history = {
 		-27 = {

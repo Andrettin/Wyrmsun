@@ -12,9 +12,6 @@ francia = {
 	core_settlements = {
 		frankfurt
 	}
-	conditions = {
-		upgrade_class = ironworking
-	}
 	character_title_names = {
 		#head_of_government = {
 		#	monarchy = "Mayor of the Palace" #Source: "Medieval Warfare V.2", 2013, p. 7.
