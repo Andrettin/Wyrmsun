@@ -18,16 +18,17 @@ DialogBase {
 		player_color: achievement ? (achievement.player_color ? achievement.player_color.identifier : wyrmgus.defines.neutral_player_color.identifier) : wyrmgus.defines.neutral_player_color.identifier
 	}
 	
-	NormalText {
+	ScrollableTextArea {
 		id: description_label
 		anchors.top: icon_button.bottom
-		anchors.topMargin: 16 * wyrmgus.scale_factor
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
+		anchors.bottom: close_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: achievement ? (achievement.description + (achievement.progress_max > 0 ? ("\n\nProgress: " + achievement.progress + "/" + achievement.progress_max) : "")) : ""
-		wrapMode: Text.WordWrap
 	}
 	
 	LargeButton {

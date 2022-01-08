@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.3
 -----------------------------------------------------------------------
 
+* User Interface
+- The achievement and achievement unlocked dialogs now have a semi-transparent background beneath their text.
+
 -----------------------------------------------------------------------
 - 5.3.2
 -----------------------------------------------------------------------
