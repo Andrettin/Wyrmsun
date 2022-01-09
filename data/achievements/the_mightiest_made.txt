@@ -7,4 +7,7 @@ the_mightiest_made = {
 	character_level = 10
 	tree_parent = the_first_dwarves
 	tree_line_visible = false
+	reward_abilities = {
+		upgrade_toughness
+	}
 }

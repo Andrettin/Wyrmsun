@@ -61,6 +61,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Paragon, Legend and Demigod achievements can now be acquired by leveling up any character, not just custom heroes.
 - The achievement and achievement unlocked dialogs now have a semi-transparent background beneath their text.
 - Achievements are now displayed in a tree in the achievements menu.
+- Added support for achievements to grant bonus abilities to characters.
+- The "The Mightiest Made" achievement now grants one free level of the Toughness ability to Modsognir.
 
 -----------------------------------------------------------------------
 - 5.3.2
