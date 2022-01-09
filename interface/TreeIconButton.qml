@@ -99,15 +99,20 @@ Item {
 		visible: parent.has_tree_parent && parent.x != parent.parent_x && parent.tree_line_visible
 		
 		function get_base_width() {
+			var base_width = 0
+			
 			if (parent.x < parent.parent_x) {
-				return parent.parent_x - parent.x
+				base_width = parent.parent_x - parent.x
+			} else if (parent.x > parent.parent_x) {
+				base_width = parent.x - parent.parent_x
 			}
 			
-			if (parent.x > parent.parent_x) {
-				return parent.x - parent.parent_x
+			if (parent_text_height > vertical_padding) {
+				base_width -= parent_text_height_reference.contentWidth / 2
+				base_width -= 2 * wyrmgus.scale_factor
 			}
 			
-			return 0
+			return base_width
 		}
 	}
 }
