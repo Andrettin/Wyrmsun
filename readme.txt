@@ -59,9 +59,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Achievements
 - The Paragon, Legend and Demigod achievements can now be acquired by leveling up any character, not just custom heroes.
-
-* User Interface
 - The achievement and achievement unlocked dialogs now have a semi-transparent background beneath their text.
+- Achievements are now displayed in a tree in the achievements menu.
 
 -----------------------------------------------------------------------
 - 5.3.2

@@ -3,11 +3,11 @@ import QtQuick.Controls 2.12
 import ".."
 import "../dialogs"
 
-ButtonMenuBase {
+ButtonTreeMenuBase {
 	id: achievements_menu
 	title: "Achievements"
-	button_component: Qt.createComponent("../AchievementIconButton.qml")
 	entries: wyrmgus.get_achievements()
+	icon_button_component: Qt.createComponent("../AchievementTreeIconButton.qml")
 	
 	readonly property var achievement_dialog_item: achievement_dialog
 	
