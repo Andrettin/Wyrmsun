@@ -29,7 +29,11 @@ DialogBase {
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: ok_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: achievement ? ("You have unlocked the " + achievement.name + " achievement.") : ""
+		text: achievement ?
+			("You have unlocked the " + achievement.name + " achievement."
+				+ (achievement.rewards_string.length > 0 ? ("\n\nRewards: " + achievement.rewards_string) : "")
+			)
+			: ""
 	}
 	
 	LargeButton {

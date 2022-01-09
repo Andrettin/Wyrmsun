@@ -28,7 +28,12 @@ DialogBase {
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: close_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: achievement ? (achievement.description + (achievement.progress_max > 0 ? ("\n\nProgress: " + achievement.progress + "/" + achievement.progress_max) : "")) : ""
+		text: achievement ?
+			(achievement.description
+				+ (achievement.progress_max > 0 ? ("\n\nProgress: " + achievement.progress + "/" + achievement.progress_max) : "")
+				+ (achievement.rewards_string.length > 0 ? ("\n\nRewards: " + achievement.rewards_string) : "")
+			)
+			: ""
 	}
 	
 	LargeButton {
