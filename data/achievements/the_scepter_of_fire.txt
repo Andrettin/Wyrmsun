@@ -1,0 +1,17 @@
+the_scepter_of_fire = {
+	name = "The Scepter of Fire"
+	icon = icon_thursagan
+	description = "Complete the A Bargain is Struck, Closing the Gates, Searching for the Runecrafter, Gathering Materials, Hills of the Shorbear Clan, The Wyrm and Caverns of Flame missions."
+	player_color = red
+	required_quests = {
+		a_bargain_is_struck
+		closing_the_gates
+		searching_for_the_runecrafter
+		gathering_materials
+		hills_of_the_shorbear_clan
+		the_wyrm
+		caverns_of_flame
+	}
+	tree_parent = the_first_dwarves
+	tree_line_visible = false
+}

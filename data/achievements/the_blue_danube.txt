@@ -1,0 +1,10 @@
+the_blue_danube = {
+	name = "The Blue Danube"
+	icon = icon_saxon_swordsman
+	description = "Complete the The Blue Danube mission."
+	player_color = cyan
+	required_quests = {
+		the_blue_danube
+	}
+	tree_parent = the_first_marcomannic_war
+}

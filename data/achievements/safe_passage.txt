@@ -1,0 +1,10 @@
+safe_passage = {
+	name = "Safe Passage"
+	icon = icon_dwarven_steelclad
+	description = "Destroy the raiders during the A Bargain is Struck quest on Hard difficulty or higher."
+	player_color = green
+	unobtainable = true #it is obtainable only through a trigger
+	difficulty = hard
+	tree_parent = the_scepter_of_fire
+	tree_line_visible = false
+}

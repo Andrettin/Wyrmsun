@@ -1,0 +1,11 @@
+the_settlement_of_scandinavia = {
+	name = "The Settlement of Scandinavia"
+	icon = icon_germanic_warrior
+	description = "Complete the On the Vanaquisl, Westward Migration and The Settlement of Scandinavia scenarios."
+	player_color = orange
+	required_quests = {
+		on_the_vanaquisl
+		westward_migration
+		the_settlement_of_scandinavia
+	}
+}

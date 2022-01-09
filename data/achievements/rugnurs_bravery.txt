@@ -1,0 +1,10 @@
+rugnurs_bravery = {
+	name = "Rugnur's Bravery"
+	icon = icon_rugnur_older
+	description = "Upgrade Rugnur to a Stonelord."
+	player_color = red
+	character = rugnur
+	character_type = unit_dwarven_thane
+	tree_parent = the_scepter_of_fire
+	tree_line_visible = false
+}

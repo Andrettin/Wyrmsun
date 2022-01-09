@@ -1,0 +1,9 @@
+the_first_dwarves = {
+	name = "The First Dwarves"
+	icon = icon_brising_miner
+	description = "Complete the The First Dwarves scenario."
+	player_color = red
+	required_quests = {
+		the_first_dwarves
+	}
+}

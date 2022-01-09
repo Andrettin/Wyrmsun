@@ -1,0 +1,12 @@
+the_first_marcomannic_war = {
+	name = "The First Marcomannic War"
+	icon = icon_suebi_swordsman
+	description = "Complete the The Sack of Iuvavum and The Razing of Opitergium missions."
+	player_color = orange
+	required_quests = {
+		the_sack_of_iuvavum
+		the_razing_of_opitergium
+	}
+	tree_parent = the_settlement_of_scandinavia
+	tree_line_visible = false
+}

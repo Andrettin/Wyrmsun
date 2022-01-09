@@ -1,0 +1,14 @@
+the_treasures_of_svarinshaug = {
+	name = "The Treasures of Svarinshaug"
+	icon = icon_dwarven_runemaster
+	description = "Complete the The Mastersmith Brothers, The Ring of Riches, The Thunder Hammer and The Magnificent Spear quests."
+	player_color = red
+	required_quests = {
+		#don't require "The Sleek Ship" here since players are unlikely to build a dock in the dwarven scenarios
+		the_mastersmith_brothers
+		the_thunder_hammer
+		the_magnificent_spear
+	}
+	tree_parent = the_first_dwarves
+	tree_line_visible = false
+}

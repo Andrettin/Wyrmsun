@@ -1,0 +1,14 @@
+the_lay_of_alvis = {
+	name = "The Lay of Alvis"
+	icon = icon_dwarven_loremaster
+	description = "Complete the The Dripping Hall, The Deep, The Burner and The Weaver of Dreams quests."
+	player_color = red
+	required_quests = {
+		the_dripping_hall
+		the_deep
+		the_burner
+		the_weaver_of_dreams
+	}
+	tree_parent = the_first_dwarves
+	tree_line_visible = false
+}

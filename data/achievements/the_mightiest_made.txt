@@ -1,0 +1,10 @@
+the_mightiest_made = {
+	name = "The Mightiest Made"
+	icon = icon_modsognir
+	description = "Reach level 10 with Modsognir."
+	player_color = red
+	character = modsognir
+	character_level = 10
+	tree_parent = the_first_dwarves
+	tree_line_visible = false
+}

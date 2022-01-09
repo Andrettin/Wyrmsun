@@ -1,0 +1,11 @@
+heimdalls_progeny = {
+	name = "Haimadala's Progeny"
+	icon = icon_jarl
+	description = "Complete the Haimadala's Progeny scenario."
+	player_color = yellow
+	required_quests = {
+		heimdalls_progeny
+	}
+	tree_parent = the_settlement_of_scandinavia
+	tree_line_visible = false
+}

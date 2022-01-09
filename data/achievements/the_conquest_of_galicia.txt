@@ -1,0 +1,10 @@
+the_conquest_of_galicia = {
+	name = "The Conquest of Galicia"
+	icon = icon_teuton_spatha
+	description = "Complete the Moving into Galicia mission."
+	player_color = black
+	required_quests = {
+		moving_into_galicia
+	}
+	tree_parent = the_first_marcomannic_war
+}
