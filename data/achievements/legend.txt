@@ -1,0 +1,6 @@
+legend = {
+	name = "Legend"
+	icon = icon_leadership
+	description = "Reach level 20 with any character."
+	character_level = 20
+}

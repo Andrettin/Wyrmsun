@@ -1,0 +1,6 @@
+demigod = {
+	name = "Demigod"
+	icon = icon_axe_mastery
+	description = "Reach level 100 with any character."
+	character_level = 100
+}

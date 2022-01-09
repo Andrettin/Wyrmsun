@@ -153,24 +153,3 @@ DefineAchievement("deep-lore", {
 	Description = "Read all dwarven literary works (with any custom hero)."
 })
 --]]
-
-DefineAchievement("paragon", {
-	Name = "Paragon",
-	Icon = "icon-level-up",
-	Description = "Reach level 10 with any custom hero.",
-	CharacterLevel = 10
-})
-
-DefineAchievement("legend", {
-	Name = "Legend",
-	Icon = "icon-leadership",
-	Description = "Reach level 20 with any custom hero.",
-	CharacterLevel = 20
-})
-
-DefineAchievement("demigod", {
-	Name = "Demigod",
-	Icon = "icon-axe-mastery",
-	Description = "Reach level 100 with any custom hero.",
-	CharacterLevel = 100
-})
