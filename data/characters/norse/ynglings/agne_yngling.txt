@@ -1,7 +1,7 @@
 agne_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233-234.
 	name = "Agne"
 	surname = "Yngling"
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = sweden
@@ -19,6 +19,7 @@ agne_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233
 	
 	conditions = {
 		faction = sweden
+		dynasty = yngling
 	}
 	
 	#Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden

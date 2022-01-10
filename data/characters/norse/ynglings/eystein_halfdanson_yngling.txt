@@ -1,7 +1,7 @@
 eystein_halfdanson_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	name = "Eystein"
 	surname = "Halfdanson" #to differentiate him from the other Eystein Yngling
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	gender = male
@@ -13,6 +13,10 @@ eystein_halfdanson_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, v
 	deities = {
 		frey
 		freyja
+	}
+	
+	conditions = {
+		dynasty = yngling
 	}
 	
 	#his father ruled over Hedemark

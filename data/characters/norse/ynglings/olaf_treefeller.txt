@@ -1,7 +1,7 @@
 olaf_treefeller_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-256.
 	name = "Olaf"
 	surname = "Treefeller"
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_swordsman
 	civilization = norse
 	gender = male
@@ -13,6 +13,10 @@ olaf_treefeller_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	deities = {
 		frey
 		freyja
+	}
+	
+	conditions = {
+		dynasty = yngling
 	}
 	
 	#his foster-father was Bove, who lived in West Gotland

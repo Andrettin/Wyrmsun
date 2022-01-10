@@ -1,6 +1,7 @@
 vanland_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
 	name = "Vanland"
 	surname = "Yngling"
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = sweden
@@ -18,6 +19,7 @@ vanland_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 
 	
 	conditions = {
 		faction = sweden
+		dynasty = yngling
 	}
 	
 	history = {

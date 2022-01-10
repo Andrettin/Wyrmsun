@@ -1,6 +1,7 @@
 visbur_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 228-229.
 	name = "Visbur"
 	surname = "Yngling"
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = sweden
@@ -18,6 +19,7 @@ visbur_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 2
 	
 	conditions = {
 		faction = sweden
+		dynasty = yngling
 	}
 	
 	#married the daughter of Aud the Rich

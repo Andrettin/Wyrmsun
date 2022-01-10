@@ -1,7 +1,7 @@
 ottar_vendelcrow_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 242-243.
 	name = "Ottar"
 	surname = "Vendelcrow" #nickname because of the manner of his death
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = sweden
@@ -18,6 +18,7 @@ ottar_vendelcrow_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	
 	conditions = {
 		faction = sweden
+		dynasty = yngling
 	}
 	
 	#described as brave

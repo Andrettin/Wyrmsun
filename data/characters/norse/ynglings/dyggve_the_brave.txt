@@ -1,7 +1,7 @@
 dyggve_the_brave_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 230-231.
 	name = "Dyggve"
 	surname = "the Brave"
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
 	default_faction = sweden
@@ -20,6 +20,7 @@ dyggve_the_brave_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	
 	conditions = {
 		faction = sweden
+		dynasty = yngling
 	}
 	
 	history = {

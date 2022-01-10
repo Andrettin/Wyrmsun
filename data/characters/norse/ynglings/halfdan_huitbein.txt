@@ -1,7 +1,7 @@
 halfdan_huitbein_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255-257.
 	name = "Halfdan"
 	surname = "Huitbein"
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	gender = male
@@ -13,6 +13,10 @@ halfdan_huitbein_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	deities = {
 		frey
 		freyja
+	}
+	
+	conditions = {
+		dynasty = yngling
 	}
 	
 	#(apparently) from Vermeland

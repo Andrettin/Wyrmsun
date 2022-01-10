@@ -1,7 +1,7 @@
 halfdan_the_mild_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	name = "Halfdan"
 	surname = "the Mild" #also known as "the Bad Entertainer"
-	#dynasty = yngling
+	dynasty = yngling
 	unit_type = unit_norse_swordsman
 	civilization = norse
 	default_faction = vestfold
@@ -22,6 +22,7 @@ halfdan_the_mild_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol
 			faction = vestfold
 			faction = sweden
 		}
+		dynasty = yngling
 	}
 	
 	#his father ruled over Vestfold
