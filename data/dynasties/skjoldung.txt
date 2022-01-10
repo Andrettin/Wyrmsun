@@ -4,6 +4,6 @@ skjoldung = {
 		skeldung_tribe
 		denmark
 	}
-	icon = flag_blue_raven_on_yellow
+	icon = flag_black_raven_on_white
 	upgrade = upgrade_skjoldung_dynasty
 }

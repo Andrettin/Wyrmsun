@@ -1,0 +1,11 @@
+habsburg = {
+	name = "Habsburg"
+	factions = {
+		austria
+		carinthia
+		germany
+		holy_rome
+	}
+	icon = icon_flag_habsburg
+	upgrade = upgrade_habsburg_dynasty
+}

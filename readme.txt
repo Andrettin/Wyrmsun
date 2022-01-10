@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Factions can now have dynasty upgrades. Only one dynasty upgrade may be active at a time, and which dynasties are available depends on the faction. Only tribes and monarchies may have a dynasty.
 - Added the Yngling dynasty for the Yngling Tribe, Norway, Sweden and Vestfold (+1 food for Farms).
 - Added the Skjoldung dynasty for the Skeldung Tribe and Denmark (+2 armor for infantry).
+- Added the Habsburg dynasty for Austria, Carinthia, Germany and the Holy Roman Empire (+10 HP for cavalry).
 
 -----------------------------------------------------------------------
 - 5.3.2

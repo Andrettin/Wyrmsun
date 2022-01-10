@@ -1,0 +1,15 @@
+upgrade_habsburg_dynasty = {
+	name = "Habsburg Dynasty"
+	parent = upgrade_dynasty
+	effects_string = "+10 HP for cavalry"
+	modifier = {
+		hit_points = 10
+		points = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}
