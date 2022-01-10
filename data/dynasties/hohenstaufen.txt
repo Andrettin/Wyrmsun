@@ -1,0 +1,10 @@
+hohenstaufen = {
+	name = "Hohenstaufen"
+	factions = {
+		germany
+		holy_rome
+		swabia
+	}
+	icon = icon_flag_blue_lion_on_yellow
+	upgrade = upgrade_hohenstaufen_dynasty
+}

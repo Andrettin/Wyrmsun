@@ -13,3 +13,19 @@ upgrade_habsburg_dynasty = {
 		}
 	}
 }
+
+upgrade_hohenstaufen_dynasty = {
+	name = "Hohenstaufen Dynasty"
+	parent = upgrade_dynasty
+	effects_string = "+2 armor for cavalry"
+	modifier = {
+		armor = 2
+		points = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}

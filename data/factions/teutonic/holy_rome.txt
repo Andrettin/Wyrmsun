@@ -5,6 +5,7 @@ holy_rome = {
 	type = polity
 	color = yellow
 	default_tier = empire
+	default_government_type = monarchy
 	default_capital = frankfurt
 	icon = icon_flag_holy_roman_empire
 	upgrade = upgrade_faction_holy_rome
@@ -21,5 +22,11 @@ holy_rome = {
 	conditions = {
 		government_type = monarchy
 		upgrade = upgrade_deity_christian_god
+	}
+	
+	history = {
+		1152 = {
+			dynasty = hohenstaufen
+		}
 	}
 }

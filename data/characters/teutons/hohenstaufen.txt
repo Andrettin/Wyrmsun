@@ -1,7 +1,7 @@
 friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, pp. 35, 903.
 	name = "Friedrich"
 	surname = "Barbarossa" #byname
-	#belonged to the Hohenstaufen dynasty
+	dynasty = hohenstaufen
 	unit_type = unit_teuton_knight_lord
 	civilization = teuton
 	default_faction = holy_rome

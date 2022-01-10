@@ -16,6 +16,7 @@ denmark = {
 	history = {
 		-27 = {
 			government_type = tribe
+			dynasty = skjoldung
 		}
 		
 		814 = {
