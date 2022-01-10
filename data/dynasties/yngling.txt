@@ -1,0 +1,11 @@
+yngling = {
+	name = "Yngling"
+	factions = {
+		yngling_tribe
+		sweden
+		norway
+		vestfold
+	}
+	icon = flag_blue_raven_on_yellow
+	upgrade = upgrade_yngling_dynasty
+}

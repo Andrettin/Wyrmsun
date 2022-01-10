@@ -1,0 +1,29 @@
+upgrade_skjoldung_dynasty = {
+	name = "Skjoldung Dynasty"
+	parent = upgrade_dynasty
+	effects_string = "+2 Armor for infantry"
+	modifier = {
+		armor = 2
+		points = 10
+		unit_classes = {
+			infantry
+			veteran_infantry
+			heroic_infantry
+			spearman
+			veteran_spearman
+			heroic_spearman
+		}
+	}
+}
+
+upgrade_yngling_dynasty = {
+	name = "Yngling Dynasty"
+	parent = upgrade_dynasty
+	effects_string = "+1 Food supply for farms"
+	modifier = {
+		supply = 1
+		unit_classes = {
+			farm
+		}
+	}
+}

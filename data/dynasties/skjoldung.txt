@@ -1,0 +1,9 @@
+skjoldung = {
+	name = "Skjoldung" #Skjöldung
+	factions = {
+		skeldung_tribe
+		denmark
+	}
+	icon = flag_blue_raven_on_yellow
+	upgrade = upgrade_skjoldung_dynasty
+}

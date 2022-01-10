@@ -64,6 +64,11 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for achievements to grant bonus abilities to characters.
 - The "The Mightiest Made" achievement now grants one free level of the Toughness ability to Modsognir.
 
+* Dynasties
+- Factions can now have dynasty upgrades. Only one dynasty upgrade may be active at a time, and which dynasties are available depends on the faction. Only tribes and monarchies may have a dynasty.
+- Added the Yngling dynasty for the Yngling Tribe, Norway, Sweden and Vestfold (+1 food for Farms).
+- Added the Skjoldung dynasty for the Skeldung Tribe and Denmark (+2 armor for infantry).
+
 -----------------------------------------------------------------------
 - 5.3.2
 -----------------------------------------------------------------------
