@@ -1,0 +1,9 @@
+amelung = {
+	name = "Amelung"
+	factions = {
+		gothia
+		ostrogothia
+	}
+	icon = icon_flag_five_black_birds_on_purple
+	upgrade = upgrade_amelung_dynasty
+}

@@ -1,0 +1,15 @@
+upgrade_amelung_dynasty = {
+	name = "Amelung Dynasty"
+	parent = upgrade_dynasty
+	effects_string = "+2 Damage for cavalry"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}

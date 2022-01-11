@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Skjoldung dynasty for the Skeldung Tribe and Denmark (+2 armor for infantry).
 - Added the Habsburg dynasty for Austria, Carinthia, Germany and the Holy Roman Empire (+10 HP for cavalry).
 - Added the Hohenstaufen dynasty for Germany, the Holy Roman Empire and Swabia (+2 armor for cavalry).
+- Added the Amelung dynasty for Gothia and Ostrogothia (+2 damage for cavalry).
 
 -----------------------------------------------------------------------
 - 5.3.2
