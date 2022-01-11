@@ -183,7 +183,7 @@ DefineUnitType("unit-minecart", {
 		}
 	},
 	Sounds = {
-		"selected", "gold-mine-selected",
+		"ready", "minecart",
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
 		"step-gravel", "step-gravel",

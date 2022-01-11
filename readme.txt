@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Hohenstaufen dynasty for Germany, the Holy Roman Empire and Swabia (+2 armor for cavalry).
 - Added the Amelung dynasty for Gothia and Ostrogothia (+2 damage for cavalry).
 
+* Units
+- Added Minecart sound (used when a Minecart is created) (sound by the Flare team)).
+
 -----------------------------------------------------------------------
 - 5.3.2
 -----------------------------------------------------------------------
