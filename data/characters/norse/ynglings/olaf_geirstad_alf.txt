@@ -1,0 +1,42 @@
+olaf_geirstad_alf_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-261.
+	name = "Olaf"
+	surname = "Geirstad-Alf"
+	dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = vestfold #king of Vestfold
+	gender = male
+	father = gudrod_the_magnificent_yngling
+	mother = alfhild
+	trait = upgrade_strong #described as remarkably handsome, very strong and large of growth
+	start_year = 824 #date his father died, and thus when his reign over Vestfold began
+	end_year = 854 #start date + 30 years
+	quote = "\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine"
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		or = {
+			faction = vestfold
+			faction = norway
+		}
+		dynasty = yngling
+	}
+	
+	#Olaf was 20 years old when his father Gudrod died, so he would have been born in 804
+	
+	history = {
+		824 = {
+			#active = true
+			#faction = vestfold
+			#location = tonsberg
+			#title = ruler
+		}
+		
+		854 = {
+			active = false
+		}
+	}
+}

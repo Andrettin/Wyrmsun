@@ -1,6 +1,5 @@
 eric_yngveson_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 237.
 	name = "Eric"
-	surname = "Yngling"
 	dynasty = yngling
 	unit_type = unit_norse_swordsman
 	civilization = norse

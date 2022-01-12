@@ -1,6 +1,5 @@
 onund_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
 	name = "Onund"
-	surname = "Yngling"
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse

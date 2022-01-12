@@ -1,7 +1,6 @@
 thiudareiks_amelung = { #Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
 	#king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
 	name = "Thiudareiks" #"Þiudareiks"; tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
-	surname = "Amelung"
 	dynasty = amelung
 	unit_type = unit_gothic_horse_lord #king
 	civilization = gothic

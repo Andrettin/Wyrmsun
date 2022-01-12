@@ -1,6 +1,5 @@
 svegdir_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
 	name = "Svegdir" #"Svegðir"; as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
-	surname = "Yngling"
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse

@@ -1,6 +1,5 @@
 eric_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
 	name = "Eric"
-	surname = "Yngling"
 	dynasty = yngling
 	unit_type = unit_teuton_knight_lord #horseriding described as being customary for him; king
 	civilization = norse

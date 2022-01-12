@@ -1,0 +1,25 @@
+rognvald_mountain_high_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
+	name = "Rognvald"
+	surname = "Mountain-High"
+	dynasty = yngling
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = vestfold #his father ruled over Vestfold
+	gender = male
+	father = olaf_geirstad_alf_yngling
+	trait = upgrade_strong #seems sensible, given the nickname
+	start_year = 854 #father's start date + 30 years
+	quote = "\"Rognvald, who knew so well to guide\nThe wild sea-horses through the tide:\nThe 'Mountain-high' was the proud name\nBy which the king was known to fame.\"\n- Thiodolf of Huine" #"wild sea-horses" means ships
+	deities = {
+		frey
+		freyja
+	}
+	
+	conditions = {
+		or = {
+			faction = vestfold
+			faction = norway
+		}
+		dynasty = yngling
+	}
+}

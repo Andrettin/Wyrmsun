@@ -80,35 +80,6 @@ DefineCharacter("gudrod-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Mother = "asa"
 })
 
-DefineCharacter("olaf-geirstad-alf-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-261.
-	Name = "Olaf",
-	ExtraName = "Geirstad-Alf",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman", -- king
-	Civilization = "norse",
-	Faction = "vestfold",
-	-- king of Vestfold
-	Father = "gudrod-the-magnificent-yngling",
-	Mother = "alfhild",
-	Trait = "upgrade-strong", -- described as remarkably handsome, very strong and large of growth
-	Quote = "\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine",
-	-- Olaf was 20 years old when his father Gudrod died, so he would have been born in 804
-	StartDate = 824, -- date his father died, and thus when his reign over Vestfold began
-	HistoricalTitles = {
-		"ruler", 824, 0, "vestfold"
-	},
-	HistoricalLocations = {
-		824, "old_earth", "tonsberg"
-	},
-	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "vestfold" or GetPlayerData(trigger_player, "Faction") == "norway") then
-			return true
-		end
-		return false
-	end
-})
-
 DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-262.
 	Name = "Halfdan",
 	ExtraName = "the Black",
@@ -138,16 +109,3 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 		return false
 	end
 })
-
-DefineCharacter("rognvald-mountain-high-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
-	Name = "Rognvald",
-	ExtraName = "Mountain-High",
-	FamilyName = "Yngling",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "norse",
-	-- his father ruled over Vestfold
-	Father = "olaf-geirstad-alf-yngling",
-	Quote = "\"Rognvald, who knew so well to guide\nThe wild sea-horses through the tide:\nThe 'Mountain-high' was the proud name\nBy which the king was known to fame.\"\n- Thiodolf of Huine" -- "wild sea-horses" means ships
-})
-
