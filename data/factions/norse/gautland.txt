@@ -5,6 +5,7 @@ gautland = {
 	type = polity
 	color = teal
 	default_tier = kingdom
+	min_tier = duchy #tribe
 	default_capital = gothenburg
 	upgrade = upgrade_faction_gautland
 	icon = flag_violet_raven_on_teal
