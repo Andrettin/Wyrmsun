@@ -1,6 +1,7 @@
 paragon = {
 	name = "Paragon"
 	icon = icon_level_up
+	player_color = red
 	description = "Reach level 10 with any character."
 	character_level = 10
 }

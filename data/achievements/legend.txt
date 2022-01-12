@@ -1,6 +1,7 @@
 legend = {
 	name = "Legend"
 	icon = icon_leadership
+	player_color = red
 	description = "Reach level 20 with any character."
 	character_level = 20
 	tree_parent = paragon
