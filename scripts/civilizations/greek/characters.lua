@@ -37,7 +37,7 @@ DefineCharacter("strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany,
 
 DefineCharacter("galen-of-pergamon", { -- Source: "Ancient Warfare VII.6", 2013, p. 10.
 	Name = "Galen",
-	ExtraName = "of Pergamon",
+	Surname = "of Pergamon",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- personal physician of the Roman emperor Marcus Aurelius; he also wrote literary works
 	Civilization = "greek", -- his mother tongue was Greek
@@ -70,10 +70,9 @@ DefineCharacter("theodore", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 
 DefineCharacter("constantine-pogonatus", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 137.
 	Name = "Constantine",
-	ExtraName = "Pogonatus",
+	Surname = "Pogonatus",
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- emperor
 	Civilization = "greek",
 	StartDate = 678 -- Emperor of the Eastern Roman Empire as of 678
 })
-

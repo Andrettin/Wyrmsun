@@ -1,0 +1,17 @@
+dan_mikillati_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
+	name = "Dan"
+	surname = "Mikillati"
+	dynasty = skjoldung
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = denmark
+	gender = male
+	father = daup_skjoldung #presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
+	
+	conditions = {
+		faction = denmark
+		dynasty = skjoldung
+	}
+	
+	#king of Denmark
+}

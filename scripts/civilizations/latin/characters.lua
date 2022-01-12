@@ -37,7 +37,7 @@ DefineCharacter("julius-caesar", { -- Source: Heiko Steuer, "Warrior bands, war 
 
 DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 	Name = "Marcus",
-	ExtraName = "Aurelius",
+	Surname = "Aurelius",
 	Gender = "male",
 	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
@@ -56,7 +56,7 @@ DefineCharacter("marcus-aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 
 DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
 	Name = "Lucius",
-	ExtraName = "Verus",
+	Surname = "Verus",
 	Gender = "male",
 	Type = "unit-latin-centurion", -- emperor
 	Civilization = "latin",
@@ -70,7 +70,7 @@ DefineCharacter("lucius-verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 
 
 DefineCharacter("furius-victorinus", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
 	Name = "Furius",
-	ExtraName = "Victorinus",
+	Surname = "Victorinus",
 	Gender = "male",
 	Type = "unit-latin-centurion", -- Praetorian prefect
 	Civilization = "latin",
@@ -79,7 +79,7 @@ DefineCharacter("furius-victorinus", { -- Source: "Ancient Warfare VII.6", 2013,
 
 DefineCharacter("marcus-claudius-fronto", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
 	Name = "Marcus", -- given in the source as "M. Claudius Fronto"
-	ExtraName = "Claudius Fronto", -- given in the source as "M. Claudius Fronto"
+	Surname = "Claudius Fronto", -- given in the source as "M. Claudius Fronto"
 	Gender = "male",
 	Type = "unit-latin-centurion", -- senior officer
 	Civilization = "latin",
@@ -88,7 +88,7 @@ DefineCharacter("marcus-claudius-fronto", { -- Source: "Ancient Warfare VII.6", 
 
 DefineCharacter("tiberius-claudius-pompeianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 28.
 	Name = "Tiberius",
-	ExtraName = "Claudius Pompeianus",
+	Surname = "Claudius Pompeianus",
 	Gender = "male",
 	Type = "unit-latin-centurion", -- general
 	Civilization = "latin",

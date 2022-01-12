@@ -45,7 +45,7 @@ DefineCharacter("pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 
 DefineCharacter("hefeydd-the-old", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 20.
 	Name = "Hefeydd",
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh"
@@ -77,7 +77,7 @@ DefineCharacter("gwawl", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 
 DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
 	Name = "Teyrnon",
-	ExtraName = "Twryf Liant",
+	Surname = "Twryf Liant",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
@@ -89,7 +89,7 @@ DefineCharacter("teyrnon-twryf-liant", { -- Source: Bernhard Maier (trans.), "Da
 
 DefineCharacter("pendaran-dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
 	Name = "Pendaran",
-	ExtraName = "Dyfed",
+	Surname = "Dyfed",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
@@ -125,7 +125,7 @@ DefineCharacter("pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 
 DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Casnar",
-	ExtraName = "Wledig",
+	Surname = "Wledig",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh"
@@ -133,7 +133,7 @@ DefineCharacter("casnar-wledig", { -- Source: Bernhard Maier (trans.), "Das Sage
 
 DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Gloyw",
-	ExtraName = "Wallt Lydan",
+	Surname = "Wallt Lydan",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",
@@ -142,7 +142,7 @@ DefineCharacter("gloyw-wallt-lydan", { -- Source: Bernhard Maier (trans.), "Das 
 
 DefineCharacter("gwyn-gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
 	Name = "Gwyn",
-	ExtraName = "Gohoyw",
+	Surname = "Gohoyw",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "welsh",

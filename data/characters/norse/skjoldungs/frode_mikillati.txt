@@ -1,0 +1,18 @@
+frode_mikillati_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+	name = "Frode"
+	surname = "Mikillati"
+	dynasty = skjoldung
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = denmark
+	gender = male
+	father = dan_mikillati_skjoldung
+	
+	conditions = {
+		faction = denmark
+		dynasty = skjoldung
+	}
+	
+	#king of Denmark
+	#described as peace-loving
+}

@@ -399,7 +399,7 @@ DefineCharacter("ebroin-of-neustria", { -- Source: Archibald R. Lewis, "The Duke
 
 DefineCharacter("pepin-of-herstal", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Pepin",
-	ExtraName = "of Herstal",
+	Surname = "of Herstal",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace of Austrasia
 	Civilization = "frankish",
@@ -464,7 +464,7 @@ DefineCharacter("theoderic-iv-of-francia", { -- king of the Franks as Theoderic 
 
 DefineCharacter("charles-martel", { -- Charles Martel; Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Karl", -- correct in Old Frankish?
-	ExtraName = "Martel",
+	Surname = "Martel",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- Mayor of the Palace
 	Civilization = "frankish",
@@ -498,7 +498,7 @@ DefineCharacter("childebrand", { -- Frankish duke; uncle of Pepin the Short; Sou
 
 DefineCharacter("pepin-the-short", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Name = "Pepin",
-	ExtraName = "the Short",
+	Epithet = "the_short",
 --	FamilyName = "Karling",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- king
@@ -552,7 +552,7 @@ DefineCharacter("carloman-karling", { -- Source: "Medieval Warfare V.2", 2013, p
 
 DefineCharacter("charlemagne", { -- Charles the Great, or Charlemagne; succeeded his father together with Carloman in 768 as king of the Franks, and became sole ruler of the Franks in 771; died of illness on 28 January 814 at Aachen at 66 years old; Source: "Medieval Warfare V.2", 2013, pp. 7-9.
 	Name = "Karl", -- correct in Old Frankish?
-	ExtraName = "the Great",
+	Epithet = "the_great",
 --	FamilyName = "Karling",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- emperor/king
@@ -599,7 +599,7 @@ DefineCharacter("drogo-karling", { -- son of Carloman and grandson of Charles Ma
 
 DefineCharacter("louis-the-pious", { -- Louis the Pious, son of Charlemagne; made co-emperor with his father in 813 (the Old Frankish form of "Louis" should be used instead); Source: "Medieval Warfare V.2", 2013, p. 9.
 	Name = "Chlodwig", -- correct? both French "Louis" and German "Ludwig" sound too modern, given his time period
-	ExtraName = "the Pious",
+	Epithet = "the_pious",
 	Gender = "male",
 	Type = "unit-frank-knight-lord", -- emperor
 	Civilization = "frankish",

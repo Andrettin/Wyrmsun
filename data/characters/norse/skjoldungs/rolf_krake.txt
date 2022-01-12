@@ -1,0 +1,17 @@
+rolf_krake_skjoldung = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
+	name = "Rolf"
+	surname = "Krake"
+	dynasty = skjoldung
+	unit_type = unit_norse_heroic_swordsman #king
+	civilization = norse
+	default_faction = denmark
+	gender = male
+	father = helge_skjoldung
+	
+	conditions = {
+		faction = denmark
+		dynasty = skjoldung
+	}
+	
+	#king of Denmark
+}

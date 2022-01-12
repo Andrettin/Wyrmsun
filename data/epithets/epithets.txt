@@ -1,0 +1,290 @@
+goldbeard = {
+	name = "Goldbeard"
+	weight = 0 #only generate when we can check for hair-color variations
+}
+
+redbeard = {
+	name = "Redbeard"
+	weight = 0 #only generate when we can check for hair-color variations
+}
+
+the_black = {
+	name = "the Black"
+	weight = 0 #only generate when we can check for hair-color variations
+}
+
+the_blessed = {
+	name = "the Blessed"
+	conditions = {
+		trait = upgrade_pious
+	}
+}
+
+the_blind = {
+	name = "the Blind"
+	weight = 0
+}
+
+the_bulwark = {
+	name = "the Bulwark"
+	conditions = {
+		trait = upgrade_resilient
+	}
+}
+
+the_bold = {
+	name = "the Bold"
+	conditions = {
+		or = {
+			trait = upgrade_ambitious
+			trait = upgrade_reckless
+		}
+	}
+}
+
+the_butcher = {
+	name = "the Butcher"
+	conditions = {
+		trait = upgrade_vicious
+	}
+}
+
+the_clever = {
+	name = "the Clever"
+	conditions = {
+		trait = upgrade_intelligent
+	}
+}
+
+the_cruel = {
+	name = "the Cruel"
+	conditions = {
+		trait = upgrade_cruel
+	}
+}
+
+the_dim = {
+	name = "the Dim"
+	conditions = {
+		trait = upgrade_dim
+	}
+}
+
+the_evil_adviser = {
+	name = "the Evil-Adviser"
+	conditions = {
+		or = {
+			trait = upgrade_cruel
+			trait = upgrade_harsh
+			trait = upgrade_vicious
+		}
+	}
+}
+
+the_gaper = {
+	name = "the Gaper"
+	conditions = {
+		or = {
+			trait = upgrade_dim #stares blankly out of dimness
+			trait = upgrade_keen #has good sight
+		}
+	}
+}
+
+the_generous = {
+	name = "the Generous"
+	conditions = {
+		trait = upgrade_generous
+	}
+}
+
+the_good = {
+	name = "the Good"
+	conditions = {
+		or = {
+			trait = upgrade_compassionate
+			trait = upgrade_dutiful
+			trait = upgrade_generous
+			trait = upgrade_pious
+		}
+	}
+}
+
+the_great = {
+	name = "the Great"
+	weight = 0 #don't generate it as a random epithet
+}
+
+the_hardy = {
+	name = "the Hardy"
+	conditions = {
+		trait = upgrade_resilient
+	}
+}
+
+the_harsh = {
+	name = "the Harsh"
+	conditions = {
+		trait = upgrade_harsh
+	}
+}
+
+the_iron_shield = {
+	name = "the Iron Shield"
+	conditions = {
+		civilization = norse
+		trait = upgrade_resilient
+	}
+}
+
+the_mighty = {
+	name = "the Mighty"
+	conditions = {
+		trait = upgrade_mighty
+	}
+}
+
+the_mild = {
+	name = "the Mild"
+	conditions = {
+		trait = upgrade_compassionate
+	}
+}
+
+the_old = {
+	name = "the Old"
+	conditions = {
+		trait = upgrade_old
+	}
+}
+
+the_pious = {
+	name = "the Pious"
+	conditions = {
+		trait = upgrade_pious
+	}
+}
+
+the_profound = {
+	name = "the Profound"
+	conditions = {
+		or = {
+			trait = upgrade_intelligent
+			trait = upgrade_genius
+			trait = upgrade_wise
+		}
+	}
+}
+
+the_quick = {
+	name = "the Quick"
+	conditions = {
+		trait = upgrade_quick
+	}
+}
+
+the_reckless = {
+	name = "the Reckless"
+	conditions = {
+		trait = upgrade_reckless
+	}
+}
+
+the_red = {
+	name = "the Red"
+	weight = 0 #only generate when we can check for hair-color variations
+}
+
+the_rich = {
+	name = "the Rich"
+	weight = 0 #don't generate it as a random epithet
+}
+
+the_ring_giver = {
+	name = "the Ring-Giver"
+	conditions = {
+		civilization_group = germanic
+		trait = upgrade_generous
+	}
+}
+
+the_sage = {
+	name = "the Sage"
+	conditions = {
+		trait = upgrade_wise
+	}
+}
+
+the_saint = {
+	name = "the Saint"
+	weight = 0 #don't generate it as a random epithet
+	conditions = {
+		trait = upgrade_pious
+	}
+}
+
+the_severe = {
+	name = "the Severe"
+	conditions = {
+		or = {
+			trait = upgrade_dutiful
+			trait = upgrade_harsh
+		}
+	}
+}
+
+the_short = {
+	name = "the Short"
+	weight = 0 #don't generate it as a random epithet
+}
+
+the_slow = {
+	name = "the Slow"
+	conditions = {
+		trait = upgrade_slow
+	}
+}
+
+the_small = {
+	name = "the Small"
+	weight = 0 #don't generate it as a random epithet
+}
+
+the_strong = {
+	name = "the Strong"
+	conditions = {
+		trait = upgrade_strong
+	}
+}
+
+the_vicious = {
+	name = "the Vicious"
+	conditions = {
+		trait = upgrade_vicious
+	}
+}
+
+the_weak = {
+	name = "the Weak"
+	conditions = {
+		trait = upgrade_weak
+	}
+}
+
+the_wise = {
+	name = "the Wise"
+	conditions = {
+		trait = upgrade_wise
+	}
+}
+
+war_tooth = {
+	name = "War-Tooth"
+	conditions = {
+		civilization = norse
+		or = {
+			trait = upgrade_mighty
+			trait = upgrade_strong
+		}
+	}
+}

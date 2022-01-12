@@ -27,7 +27,7 @@
 
 DefineCharacter("aedan-mac-gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
-	ExtraName = "mac Gabrain",
+	Surname = "mac Gabrain",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "gael",
@@ -69,7 +69,7 @@ DefineCharacter("finan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 
 DefineCharacter("bruide-mac-beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
 	Name = "Bruide",
-	ExtraName = "mac Beli";
+	Surname = "mac Beli";
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "gael",

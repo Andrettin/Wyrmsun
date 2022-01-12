@@ -47,7 +47,7 @@ DefineCharacter("geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844,
 
 DefineCharacter("alof-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 244.
 	Name = "Alof",
-	ExtraName = "the Great",
+	Epithet = "the_great",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
@@ -118,7 +118,7 @@ DefineCharacter("gottschalk", { -- 9th century Saxon monk; Source: James Westfal
 --[[
 DefineCharacter("henry-of-saxony", { -- Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, pp. 166-167.
 	Name = "Henry",
-	ExtraName = "of Saxony", -- to differentiate him
+	Surname = "of Saxony", -- to differentiate him
 	Gender = "male",
 	Type = "unit-teuton-knight-lord", -- noble, and during his reign horses were made a main element of the Saxon military; duke
 	Civilization = "teuton",

@@ -73,7 +73,7 @@ DefineCharacter("halfdan", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("ivar-vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 254-255.
 	Name = "Ivar",
-	ExtraName = "Vidfadme",
+	Surname = "Vidfadme",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -95,7 +95,7 @@ DefineCharacter("sigtryg", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("agnar-sigtrygson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Agnar",
-	ExtraName = "Sigtrygson", -- to differentiate him from the other Agnar
+	Surname = "Sigtrygson", -- to differentiate him from the other Agnar
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -115,7 +115,7 @@ DefineCharacter("skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("dag-of-westmor", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	Name = "Dag",
-	ExtraName = "of Westmor", -- to differentiate him
+	Surname = "of Westmor", -- to differentiate him
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -152,7 +152,7 @@ DefineCharacter("randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("sigurd-ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Sigurd",
-	ExtraName = "Ring",
+	Surname = "Ring",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse", -- correct?
@@ -169,8 +169,8 @@ DefineCharacter("skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 
 DefineCharacter("helgi-hundingsbane-ylfing", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Helgi",
-	ExtraName = "Hundingsbane",
-	FamilyName = "Ylfing",
+	Surname = "Hundingsbane",
+	--FamilyName = "Ylfing",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse"
@@ -184,22 +184,9 @@ DefineCharacter("gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	-- his son was king of Gautland
 })
 
-DefineCharacter("hrolf-the-old", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
-	Name = "Hrolf", -- King Hrolf Gautreksson of Gautland, also known as Hrolf the Old
-	ExtraName = "the Old",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "gautland",
-	Father = "gautrek",
-	HistoricalTitles = {
-		"ruler", 0, 0, "gautland"
-	}
-})
-
 DefineCharacter("gunnar-the-bulwark", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Gunnar",
-	ExtraName = "the Bulwark",
+	Epithet = "the_bulwark",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -216,7 +203,7 @@ DefineCharacter("thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poet
 
 DefineCharacter("grim-the-hardy", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Grim",
-	ExtraName = "the Hardy",
+	Epithet = "the_hardy",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -226,7 +213,7 @@ DefineCharacter("grim-the-hardy", { -- Source: Henry Adams Bellows (transl.), "T
 
 DefineCharacter("thorir-the-iron-shield", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Thorir",
-	ExtraName = "the Iron-Shield",
+	Epithet = "the_iron_shield",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -235,7 +222,7 @@ DefineCharacter("thorir-the-iron-shield", { -- Source: Henry Adams Bellows (tran
 
 DefineCharacter("ulf-the-gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Ulf",
-	ExtraName = "the Gaper",
+	Epithet = "the_gaper",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -260,16 +247,16 @@ DefineCharacter("horvir", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 
 DefineCharacter("eric-red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
 	Name = "Eric",
-	ExtraName = "Red",
+	Epithet = "the_red",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
-	StartDate = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
+	StartDate = 986 -- in the Spring of 986 Eric the Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
 })
 
 DefineCharacter("heriulf-bardson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
 	Name = "Heriulf",
-	ExtraName = "Bardson",
+	Surname = "Bardson",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -317,7 +304,7 @@ DefineCharacter("arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("sturla-thordarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 188.
 	Name = "Sturla",
-	ExtraName = "Thordarson",
+	Surname = "Thordarson",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- he was a Godar (a function which was originally both priest and judge, but eventually became more and more only the latter)
 	Civilization = "norse"
@@ -326,7 +313,7 @@ DefineCharacter("sturla-thordarson", { -- Source: Snorri Sturlson, "Heimskringla
 
 DefineCharacter("snorri-sturlson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 12, 188, 192, 195-196, 198-199; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
 	Name = "Snorri",
-	ExtraName = "Sturlson",
+	Surname = "Sturlson",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- since his father was a Godar and that was a hereditary position; was a learned man in a number of old legends and mythologies
 	Civilization = "norse",
@@ -374,7 +361,7 @@ DefineCharacter("endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("magnus-eyolfson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
 	Name = "Magnus",
-	ExtraName = "Eyolfson",
+	Surname = "Eyolfson",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- correct?

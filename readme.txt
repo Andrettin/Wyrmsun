@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Minecart sound (used when a Minecart is created) (sound by the Flare team).
+- Reworked how the epithet assignment to units work, to allow for more complex conditions.
 
 -----------------------------------------------------------------------
 - 5.3.2

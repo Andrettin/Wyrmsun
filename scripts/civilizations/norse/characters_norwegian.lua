@@ -62,7 +62,7 @@ DefineCharacter("godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("hogne-of-niardo", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
 	Name = "Hogne",
-	ExtraName = "of Niardö",
+	Surname = "of Niardö",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -85,7 +85,7 @@ DefineCharacter("solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 
 DefineCharacter("solve-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
 	Name = "Solve",
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -94,7 +94,7 @@ DefineCharacter("solve-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("solve-solvesson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
 	Name = "Solve",
-	ExtraName = "Solvesson",
+	Surname = "Solvesson",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -104,7 +104,7 @@ DefineCharacter("solve-solvesson", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("halfdan-guldtand", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
 	Name = "Halfdan",
-	ExtraName = "Guldtand",
+	Surname = "Guldtand",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -124,7 +124,7 @@ DefineCharacter("solveig", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("eystein-the-severe", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
 	Name = "Eystein",
-	ExtraName = "the Severe",
+	Epithet = "the_severe",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
@@ -143,7 +143,7 @@ DefineCharacter("asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 
 DefineCharacter("eric-agnarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Eric",
-	ExtraName = "Agnarson", -- to differentiate him
+	Surname = "Agnarson", -- to differentiate him
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -180,7 +180,7 @@ DefineCharacter("alfhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("harald-redbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
 	Name = "Harald",
-	ExtraName = "Redbeard",
+	Epithet = "redbeard",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -296,7 +296,7 @@ DefineCharacter("hake-gandalfson", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("eystein-the-great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
 	Name = "Eystein",
-	ExtraName = "the Great",
+	Epithet = "the_great",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
@@ -398,7 +398,7 @@ DefineCharacter("guttorm-gudbrandson", { -- Source: Snorri Sturlson, "Heimskring
 
 DefineCharacter("halvard-skalk", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 263.
 	Name = "Halvard",
-	ExtraName = "Skalk",
+	Surname = "Skalk",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -417,7 +417,7 @@ DefineCharacter("halvard-skalk", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("harald-goldbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
 	Name = "Harald",
-	ExtraName = "Goldbeard",
+	Epithet = "goldbeard",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman", -- king in Sogn
 	Civilization = "norse",
@@ -458,7 +458,7 @@ DefineCharacter("ragnhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 
 DefineCharacter("atle-the-small", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
 	Name = "Atle",
-	ExtraName = "the Small",
+	Epithet = "the_small",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman", -- earl
 	Civilization = "norse",
@@ -478,7 +478,7 @@ DefineCharacter("atle-the-small", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("olver-the-wise", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 264-265.
 	Name = "Olver",
-	ExtraName = "the Wise",
+	Epithet = "the_wise",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -498,7 +498,7 @@ DefineCharacter("olver-the-wise", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("thiodolf-of-huine", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227, 261.
 	Name = "Thiodolf",
-	ExtraName = "of Huine",
+	Surname = "of Huine",
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse",
@@ -508,7 +508,7 @@ DefineCharacter("thiodolf-of-huine", { -- Source: Snorri Sturlson, "Heimskringla
 
 DefineCharacter("svan-the-red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Svan",
-	ExtraName = "the Red",
+	Epithet = "the_red",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse"
@@ -535,7 +535,7 @@ DefineCharacter("ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 
 DefineCharacter("alf-the-old", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Alf",
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -578,7 +578,7 @@ DefineCharacter("klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineCharacter("ketil-hortha-kari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Ketil", -- married to Hildigun; the semi-mythical Ketil Hortha-Kari, ancestor of many Icelandic families
-	ExtraName = "Hortha-Kari",
+	Surname = "Hortha-Kari",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -715,7 +715,7 @@ DefineCharacter("swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 
 DefineCharacter("magnus-the-saint", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 125, 128.
 	Name = "Magnus", -- Earl (presumably) of Orkney, his sister was married to Koll; in his youth carried the dishes to the royal table
-	ExtraName = "the Saint",
+	Epithet = "the_saint",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",

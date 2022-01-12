@@ -25,14 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("snio-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
-	Name = "Snio",
-	ExtraName = "the Old",
-	Gender = "male",
-	Type = "unit-norse-swordsman",
-	Civilization = "finnish" -- presumably
-})
-
 DefineCharacter("drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Drisa",
 	Gender = "female",

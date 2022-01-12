@@ -898,7 +898,7 @@ DefineCharacter("ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 
 DefineCharacter("benedict-biscop", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 184-185.
 	Name = "Benedict",
-	ExtraName = "Biscop",
+	Surname = "Biscop",
 	Gender = "male",
 	Type = "unit-teuton-priest", -- founder of monasteries
 	Civilization = "anglo-saxon",
@@ -1952,7 +1952,7 @@ DefineCharacter("ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 
 DefineCharacter("nicolas-breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
-	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort
+	Surname = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "anglo-saxon", -- English?

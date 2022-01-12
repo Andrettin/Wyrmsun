@@ -36,7 +36,7 @@ DefineCharacter("vana_of_vanaland", { -- Source: Snorri Sturlson, "Heimskringla"
 
 DefineCharacter("aud-the-rich", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 229.
 	Name = "Aud",
-	ExtraName = "the Rich",
+	Epithet = "the_rich",
 	Gender = "female", -- presumably, since another character named "Aud" was a female
 	Type = "unit-teuton-archer",
 	Civilization = "norse"
@@ -77,7 +77,7 @@ DefineCharacter("hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("starkod-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
 	Name = "Starkod",
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -95,7 +95,7 @@ DefineCharacter("tunne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 
 DefineCharacter("ali-of-the-uplands", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 	Name = "Ali",
-	ExtraName = "of the Uplands",
+	Surname = "of the Uplands",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
@@ -130,7 +130,7 @@ DefineCharacter("agnar-yngvarson", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("svipdag-the-blind", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 248, 253.
 	Name = "Svipdag",
-	ExtraName = "the Blind",
+	Epithet = "the_blind",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse"
@@ -151,7 +151,7 @@ DefineCharacter("gautvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 
 DefineCharacter("olaf-skygne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
 	Name = "Olaf",
-	ExtraName = "Skygne",
+	Surname = "Skygne",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -176,7 +176,7 @@ DefineCharacter("gaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 
 DefineCharacter("gautrek-the-mild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
 	Name = "Gautrek",
-	ExtraName = "the Mild",
+	Epithet = "the_mild",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -317,7 +317,7 @@ DefineCharacter("bove", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 
 DefineCharacter("savre-flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
 	Name = "Savre",
-	ExtraName = "Flettir",
+	Surname = "Flettir",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -469,7 +469,7 @@ DefineCharacter("haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 
 DefineCharacter("hrorek-the-ring-giver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Hrorek", -- also known as Hrörek; was killed by his father-in-law Ivar
-	ExtraName = "the Ring Giver", -- or "Ring-Giver"
+	Epithet = "the_ring_giver",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse"
@@ -489,7 +489,7 @@ DefineCharacter("ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 
 DefineCharacter("aud-the-profound", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Aud", -- wife of Hrorek the Ring Giver; after her father Ivar killed her husband, she fled with her son Harald to Russia and married King Rathbard
-	ExtraName = "the Profound",
+	Epithet = "the_profound",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -500,7 +500,7 @@ DefineCharacter("aud-the-profound", { -- Source: Kevin Crossley-Holland, "The No
 
 DefineCharacter("harald-war-tooth", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Harald", -- had a warring career in Norway; died in Bravalla-field at the hands of his nephew, Sigurd Ring (son of Randver)
-	ExtraName = "War Tooth", -- or "Battle-Tooth"
+	Epithet = "war_tooth", -- or "Battle-Tooth"
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",
@@ -508,4 +508,3 @@ DefineCharacter("harald-war-tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Father = "hrorek-the-ring-giver",
 	Mother = "aud-the-profound"
 })
-

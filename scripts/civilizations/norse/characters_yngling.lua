@@ -47,7 +47,7 @@ DefineCharacter("ond-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 
 DefineCharacter("aasa-the-evil-adviser-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
 	Name = "Aasa",
-	ExtraName = "the Evil-Adviser",
+	Epithet = "the_evil_adviser",
 	FamilyName = "Yngling",
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -82,7 +82,7 @@ DefineCharacter("gudrod-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-262.
 	Name = "Halfdan",
-	ExtraName = "the Black",
+	Epithet = "the_black",
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman", -- king

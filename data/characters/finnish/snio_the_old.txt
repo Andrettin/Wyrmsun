@@ -1,0 +1,7 @@
+snio_the_old = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+	name = "Snio"
+	epithet = the_old
+	unit_type = unit_norse_swordsman
+	civilization = finnish #presumably
+	gender = male
+}

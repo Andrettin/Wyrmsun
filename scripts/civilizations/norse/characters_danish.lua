@@ -64,19 +64,6 @@ DefineCharacter("daup-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 
 	}
 })
 
-DefineCharacter("dan-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
-	Name = "Dan",
-	ExtraName = "Mikillati",
-	FamilyName = "Skjoldung",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Father = "daup-skjoldung", -- presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
-	HistoricalTitles = {
-		"ruler", 0, 0, "denmark"
-	}
-})
-
 DefineCharacter("drott-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
 	Name = "Drott",
 	FamilyName = "Skjoldung",
@@ -89,7 +76,7 @@ DefineCharacter("drott-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 
 DefineCharacter("halfdan-the-old-skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223.
 	Name = "Halfdan", -- mythical king of Denmark; had an ice-cold sword; was strengthened by king Eymund of Holmgarth and slew Sigtrygg with the ice-cold sword; married Eymund's daughter Almveig
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	FamilyName = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
@@ -123,7 +110,7 @@ DefineCharacter("ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 
 DefineCharacter("dag-the-great", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
 	Name = "Dag", -- ancestor of the Daglings; married to Thora
-	ExtraName = "the Great",
+	Epithet = "the_great",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse",
@@ -211,7 +198,7 @@ DefineCharacter("jofurmar-dagling", { -- Source: Henry Adams Bellows (transl.), 
 
 DefineCharacter("alf-the-old-dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Alf", -- apparently isn't the same Alf the Old who is father of Instein, since they have different fathers themselves
-	ExtraName = "the Old",
+	Epithet = "the_old",
 	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-norse-swordsman",
@@ -230,20 +217,6 @@ DefineCharacter("dagrid-dagling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Faction = "denmark", -- presumably, since her father's father was a Danish king
 	Father = "dag-the-great",
 	Mother = "thora" -- presumably, since Dag was her father and Thora was the mother of his other children
-})
-
-DefineCharacter("frode-mikillati-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
-	Name = "Frode",
-	ExtraName = "Mikillati",
-	FamilyName = "Skjoldung",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Father = "dan-mikillati-skjoldung",
-	HistoricalTitles = {
-		"ruler", 0, 0, "denmark"
-	}
-	-- described as peace-loving
 })
 
 DefineCharacter("halfdan-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
@@ -276,7 +249,7 @@ DefineCharacter("fridleif-skjoldung", { -- Source: Snorri Sturlson, "Heimskringl
 
 DefineCharacter("ole-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
 	Name = "Ole",
-	ExtraName = "the Bold",
+	Epithet = "the_bold",
 	FamilyName = "Skjoldung",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
@@ -290,7 +263,7 @@ DefineCharacter("ole-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskr
 
 DefineCharacter("frode-the-bold-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 241-243.
 	Name = "Frode",
-	ExtraName = "the Bold",
+	Epithet = "the_bold",
 	FamilyName = "Skjoldung",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
@@ -348,7 +321,7 @@ DefineCharacter("hrothgar-skjoldung", { -- Source: Stephen Mitchell, "Beowulf", 
 DefineCharacter("helge-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
 	Name = "Helge",
 	-- called "Halga the Good" in Beowulf; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
-	ExtraName = "the Good",
+	Epithet = "the_good",
 	FamilyName = "Skjoldung",
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
@@ -356,20 +329,6 @@ DefineCharacter("helge-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla",
 	Faction = "denmark",
 	Father = "halfdan-skjoldung", -- king Halfdan of Denmark was his father in the Heimskringla
 	-- in Beowulf, he is the third son of the Danish king Healfdene; Source: Stephen Mitchell, "Beowulf", 2017, p. 5.
-	HistoricalTitles = {
-		"ruler", 0, 0, "denmark"
-	}
-})
-
-DefineCharacter("rolf-krake-skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
-	Name = "Rolf",
-	ExtraName = "Krake",
-	FamilyName = "Skjoldung",
-	Gender = "male",
-	Type = "unit-norse-heroic-swordsman",
-	Civilization = "norse",
-	Faction = "denmark",
-	Father = "helge-skjoldung",
 	HistoricalTitles = {
 		"ruler", 0, 0, "denmark"
 	}
