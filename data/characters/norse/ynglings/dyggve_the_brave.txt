@@ -1,6 +1,6 @@
 dyggve_the_brave_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 230-231.
 	name = "Dyggve"
-	surname = "the Brave"
+	epithet = the_brave
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse

@@ -1,6 +1,6 @@
 dag_the_wise_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233.
 	name_word = dagr
-	surname = "the Wise"
+	epithet = the_wise
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse

@@ -1,6 +1,6 @@
 ivar_the_boneless = {
 	name = "Ivar"
-	surname = "the Boneless"
+	epithet = the_boneless
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	default_faction = denmark

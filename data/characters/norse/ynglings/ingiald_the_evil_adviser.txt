@@ -1,6 +1,6 @@
 ingiald_the_evil_adviser_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-254.
 	name = "Ingiald"
-	surname = "the Evil-Adviser"
+	epithet = the_evil_adviser
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse

@@ -25,6 +25,11 @@ the_blind = {
 	weight = 0
 }
 
+the_boneless = {
+	name = "the Boneless"
+	weight = 0
+}
+
 the_bulwark = {
 	name = "the Bulwark"
 	conditions = {
@@ -34,6 +39,16 @@ the_bulwark = {
 
 the_bold = {
 	name = "the Bold"
+	conditions = {
+		or = {
+			trait = upgrade_ambitious
+			trait = upgrade_reckless
+		}
+	}
+}
+
+the_brave = {
+	name = "the Brave"
 	conditions = {
 		or = {
 			trait = upgrade_ambitious
@@ -73,6 +88,7 @@ the_dim = {
 the_evil_adviser = {
 	name = "the Evil-Adviser"
 	conditions = {
+		civilization = norse
 		or = {
 			trait = upgrade_cruel
 			trait = upgrade_harsh
@@ -135,6 +151,11 @@ the_iron_shield = {
 		civilization = norse
 		trait = upgrade_resilient
 	}
+}
+
+the_magnificent = {
+	name = "the Magnificent"
+	weight = 0
 }
 
 the_mighty = {

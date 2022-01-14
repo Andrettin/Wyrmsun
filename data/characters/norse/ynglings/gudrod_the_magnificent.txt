@@ -1,6 +1,6 @@
 gudrod_the_magnificent_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260, 262.
 	name = "Gudrod"
-	surname = "the Magnificent" #also known as "the Hunter"
+	epithet = the_magnificent #also known as "the Hunter"
 	dynasty = yngling
 	unit_type = unit_norse_swordsman
 	civilization = norse

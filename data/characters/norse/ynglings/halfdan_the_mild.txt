@@ -1,6 +1,6 @@
 halfdan_the_mild_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
 	name = "Halfdan"
-	surname = "the Mild" #also known as "the Bad Entertainer"
+	epithet = the_mild #also known as "the Bad Entertainer"
 	dynasty = yngling
 	unit_type = unit_norse_swordsman
 	civilization = norse
