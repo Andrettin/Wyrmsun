@@ -3,6 +3,17 @@ goldbeard = {
 	weight = 0 #only generate when we can check for hair-color variations
 }
 
+mountain_high = {
+	name = "Mountain-High"
+	conditions = {
+		civilization = norse
+		or = {
+			trait = upgrade_strong
+			trait = upgrade_mighty
+		}
+	}
+}
+
 redbeard = {
 	name = "Redbeard"
 	weight = 0 #only generate when we can check for hair-color variations

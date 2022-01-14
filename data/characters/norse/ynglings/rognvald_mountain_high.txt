@@ -1,6 +1,6 @@
 rognvald_mountain_high_yngling = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
 	name = "Rognvald"
-	surname = "Mountain-High"
+	epithet = mountain_high
 	dynasty = yngling
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
