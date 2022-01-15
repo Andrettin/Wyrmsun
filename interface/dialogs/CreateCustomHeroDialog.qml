@@ -16,6 +16,8 @@ DialogBase {
 	onCivilizationChanged: {
 		if (civilization !== null) {
 			name_text_field.text = civilization.generate_male_personal_name()
+			//surname_text_field.text = civilization.generate_male_surname()
+			surname_text_field.text = "" //don't automatically generate a surname yet, since many civilizations don't have a large enough surname list
 		}
 	}
 	
@@ -64,8 +66,20 @@ DialogBase {
 		anchors.verticalCenter: surname_label.verticalCenter
 		anchors.left: civilization_label.right
 		anchors.leftMargin: 16 * wyrmgus.scale_factor
+		anchors.right: generate_surname_button.left
+		anchors.rightMargin: 8 * wyrmgus.scale_factor
+	}
+	
+	SmallButton {
+		id: generate_surname_button
+		anchors.verticalCenter: surname_label.verticalCenter
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
+		text: "Generate"
+		
+		onClicked: {
+			surname_text_field.text = civilization.generate_male_surname()
+		}
 	}
 	
 	NormalText {
