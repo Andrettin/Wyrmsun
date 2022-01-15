@@ -94,7 +94,7 @@ DefineCharacter("solve-the-old", { -- Source: Snorri Sturlson, "Heimskringla", 1
 
 DefineCharacter("solve-solvesson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
 	Name = "Solve",
-	Surname = "Solvesson",
+	Surname = "Solveson", -- "Solvesson"
 	Gender = "male",
 	Type = "unit-norse-swordsman",
 	Civilization = "norse",

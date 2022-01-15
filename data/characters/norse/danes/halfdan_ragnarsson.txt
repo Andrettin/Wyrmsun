@@ -1,6 +1,6 @@
 halfdan_ragnarsson = {
 	name = "Halfdan"
-	surname = "Ragnarsson"
+	surname = "Ragnarson" #"Ragnarsson"
 	unit_type = unit_norse_heroic_swordsman
 	civilization = norse
 	default_faction = denmark

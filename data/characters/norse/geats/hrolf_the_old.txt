@@ -1,6 +1,6 @@
 hrolf_the_old = { #Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	name = "Hrolf" #King Hrolf Gautreksson of Gautland, also known as Hrolf the Old
-	surname = "Gautreksson"
+	surname = "Gautrekson" #"Gautreksson"
 	epithet = the_old
 	unit_type = unit_norse_heroic_swordsman #king
 	civilization = norse
