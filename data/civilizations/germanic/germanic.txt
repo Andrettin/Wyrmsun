@@ -1,5 +1,65 @@
 germanic = {
+	name = "Germanic"
+	parent_civilization = neutral
 	group = germanic
+	language = proto_germanic
+	visible = true
+	interface_style = germanic
 	default_color = orange
+	upgrade = upgrade_germanic_civilization
 	encyclopedia_background_file = "backgrounds/germanic_victory_sepia.png"
+	description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking."
+	
+	button_icons = {
+		move = icon_dwarven_boots
+		stop = icon_germanic_wooden_oblong_shield
+		attack = icon_germanic_short_sword
+		patrol = icon_germanic_patrol_land
+		stand_ground = icon_germanic_stand_ground
+		return_goods = icon_germanic_return_goods
+	}
+	
+	ui_fillers = {
+		{
+			file = "interface/germanic/filler_bottom.png"
+			pos = { 380 -181 }
+		}
+		{
+			file = "interface/germanic/buttonpanel.png"
+			pos = { -256 -200 }
+		}
+		{
+			file = "interface/germanic/infopanel.png"
+			pos = { 0 -200 }
+		}
+	}
+	
+	personal_names = {
+		male = {
+			"Aban" #Proto-Germanic rendering of "Afi", Karl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
+			"Fader" #Proto-Germanic rendering of "Fathir", Jarl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
+			"Godagaz" #correct?
+			"Hadulaikaz" #correct?
+			"Hagustaldaz" #correct?
+			"Hlewagastiz" #Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
+			"Holtagastiz" #correct?
+			"Theudariks" #correct?
+			"Wagigaz" #correct?
+			"Wiwaz" #correct?
+			"Woduridaz" #correct?
+		}
+		
+		female = {
+			"Ammon" #Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
+			"Moder" #Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
+		}
+	}
+
+	surnames = {
+		"Holtijaz" #from the Gallehus horn
+	}
+	
+	#province_names = {
+	#	"Ansulanda" #rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
+	#}
 }

@@ -46,46 +46,7 @@ DefineCivilization("dutch", { -- information for later use
 --]]
 
 DefineCivilization("germanic", {
-	Display = "Germanic",
-	Visible = true,
-	ParentCivilization = "neutral",
-	Language = "proto-germanic",
-	Interface = "germanic",
-	Adjective = "Germanic",
-	Calendar = "anglo_saxon_calendar",
-	CivilizationUpgrade = "upgrade-germanic-civilization",
-	ButtonIcons = {
-		"move", "icon-dwarven-boots",
-		"stop", "icon-germanic-wooden-oblong-shield",
-		"attack", "icon-germanic-short-sword",
-		"patrol", "icon-germanic-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground",
-		"return-goods", "icon-germanic-return-goods"
-	},
-	UIFillers = {
-		"interface/germanic/filler_bottom.png", 380, -181,
-		"interface/germanic/buttonpanel.png", -256, -200,
-		"interface/germanic/infopanel.png", 0, -200
-	},
-	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking.",
-	PersonalNames = {
-		"female", "Ammon", -- Proto-Germanic rendering of "Amma", Karl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21.
-		"female", "Moder", -- Proto-Germanic rendering of "Mothir", Jarl's mother in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
-		"male", "Aban", -- Proto-Germanic rendering of "Afi", Karl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 21; Source: Guus Kroonen, "Etymological Dictionary of Proto-Germanic", 2013, p. 1.
-		"male", "Fader", -- Proto-Germanic rendering of "Fathir", Jarl's (presumed) father in the Song of Rig; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 22.
-		"male", "Godagaz", -- correct?
-		"male", "Hadulaikaz", -- correct?
-		"male", "Hagustaldaz", -- correct?
-		"male", "Hlewagastiz", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.2.
-		"male", "Holtagastiz", -- correct?
-		"male", "Theudariks", -- correct?
-		"male", "Wagigaz", -- correct?
-		"male", "Wiwaz", -- correct?
-		"male", "Woduridaz" -- correct?
-	},
-	ProvinceNames = {
-		"Ansulanda", -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
-	}
+	Calendar = "anglo_saxon_calendar"
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
