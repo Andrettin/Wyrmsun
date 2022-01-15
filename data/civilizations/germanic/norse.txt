@@ -1,11 +1,38 @@
 norse = {
+	name = "Norse"
+	parent_civilization = teutonic
+	group = scandinavian
+	language = old_norse
+	visible = true
 	default_color = blue
+	upgrade = upgrade_norse_civilization
+	description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean."
+	develops_from = {
+		germanic
+	}
 	conditions = {
 		upgrade_class = ironworking
+	}
+	
+	personal_names = {
+		male = {
+			"Biari" #Old Swedish name; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+			"Hathuwulf" #Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
+			"Lytir" #male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
+		}
 	}
 	
 	ship_names = {
 		"Ringhorn" #Balder's ship in Norse mythology in which he was cremated; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 155, 249.
 		"Skrauti" #dragon ship which appears in the Norse saga of Sörli the Strong; Sörli might be Norse himself, but the source does not mention his actual origins; the name means "precious thing"; Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, p. 119.
 	}
+	
+	#settlement_names = {
+	#	"Hals" #Danish
+	#	"Sorgenfri" #Danish
+	#}
+	
+	#province_names = {
+	#	"Gardarike"
+	#}
 }

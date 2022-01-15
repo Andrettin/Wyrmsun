@@ -659,30 +659,7 @@ DefineCivilization("minoan", {
 })
 
 DefineCivilization("norse", {
-	Display = "Norse",
-	Visible = true,
-	Group = "scandinavian",
-	Language = "old-norse",
-	ParentCivilization = "teuton",
-	Adjective = "Norse",
-	DevelopsFrom = {"germanic"},
-	CivilizationUpgrade = "upgrade_norse_civilization",
-	Calendar = "norse_calendar",
-	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.",
-	PersonalNames = {
-		"male", "Biari", -- Old Swedish name; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-		"male", "Hathuwulf", -- Hathuwulf is a chieftain whose name appeared in a runestone at Stentoften in Blekinge; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 118.
-		"male", "Lytir" -- male name which means "lot-reader" or "speaker of truth"; Source: Anders Andrén, "Behind Heathendom: Archaeological Studies of Old Norse Religion", 2005, p. 119.
-	},
-	--[[
-	SettlementNames = {
-		"Hals", -- Danish
-		"Sorgenfri" -- Danish
-	},
-	--]]
-	ProvinceNames = {
-		"Gardarike"
-	}
+	Calendar = "norse_calendar"
 })
 
 DefineCivilization("baltic", {
