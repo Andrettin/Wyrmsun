@@ -10,8 +10,8 @@ DialogBase {
 	readonly property var civilization: civilization_dropdown.selectedEntry
 	readonly property var unit_type: unit_type_dropdown.selectedEntry
 	readonly property var trait: trait_dropdown.selectedEntry
-	readonly property var variation: variation_dropdown.selectedEntry
-	readonly property var variation_identifier: variation !== null ? variation.identifier : ""
+	readonly property var hair_color_tag: hair_color_dropdown.selectedEntry
+	readonly property var hair_color_tag_identifier: hair_color_tag !== null ? hair_color_tag.identifier : ""
 	
 	onCivilizationChanged: {
 		if (civilization !== null) {
@@ -152,22 +152,22 @@ DialogBase {
 	}
 	
 	NormalText {
-		id: variation_label
+		id: hair_color_label
 		anchors.top: trait_label.bottom
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Variation:"
+		text: "Hair Color:"
 	}
 	
 	Dropdown {
-		id: variation_dropdown
-		anchors.verticalCenter: variation_label.verticalCenter
+		id: hair_color_dropdown
+		anchors.verticalCenter: hair_color_label.verticalCenter
 		anchors.left: civilization_label.right
 		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
-		model: unit_type !== null ? unit_type.get_custom_hero_variations_qvariant_list() : []
+		model: unit_type !== null ? unit_type.get_custom_hero_hair_color_tags_qvariant_list() : []
 		
 		function get_entry_name(entry) {
 			if (entry.name.length > 0) {
@@ -204,7 +204,7 @@ DialogBase {
 				return
 			}
 			
-			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, variation_identifier)
+			wyrmgus.create_custom_hero(name_text_field.text, surname_text_field.text, civilization, unit_type, trait, hair_color_tag_identifier)
 			create_custom_hero_dialog.close()
 		}
 	}

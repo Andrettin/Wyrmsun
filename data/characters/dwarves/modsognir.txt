@@ -6,7 +6,7 @@ modsognir = { #one of the earliest dwarven leaders
 	gender = male
 	icon = icon_modsognir
 	trait = upgrade_mighty
-	variation = brown_hair
+	variation_tags = { brown_hair }
 	description = "The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."
 	background = "In Norse mythology, Modsognir appears in the <a href='literary_text:voluspo'>Voluspo</a> as the first and mightiest of the dwarves."
 	deities = { #deities that seem sensible for this character to worship

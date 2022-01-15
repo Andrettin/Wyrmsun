@@ -33,13 +33,15 @@ DefineUnitType("unit-gnomish-recruit", {
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-recruit-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		}
 	},
 	Sounds = {
@@ -78,13 +80,15 @@ DefineUnitType("unit-gnomish-duelist", {
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-duelist-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		}
 	},
 	Sounds = {
@@ -124,13 +128,15 @@ DefineUnitType("unit-gnomish-master-at-arms", {
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-master-at-arms-gray-hair",
 			"file", "gnome/units/gnomish_recruit_gray_hair.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		}
 	},
 	Sounds = {

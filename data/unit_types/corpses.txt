@@ -17,9 +17,11 @@ unit_gnoll_dead_body = {
 	detritus = true
 	variations = {
 		light_fur = {
+			tags = { light_brown_fur }
 		}
 		dark_fur = {
 			image_file = "units/gnoll/corpse_dark_fur.png"
+			tags = { brown_fur }
 		}
 	}
 }

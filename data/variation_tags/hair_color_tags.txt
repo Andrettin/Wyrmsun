@@ -1,0 +1,39 @@
+black_hair = {
+	name = "Black Hair"
+	hair_color = true
+}
+
+blond_hair = {
+	name = "Blond Hair"
+	hair_color = true
+}
+
+brown_hair = {
+	name = "Brown Hair"
+	hair_color = true
+}
+
+gray_hair = {
+	name = "Gray Hair"
+	hair_color = true
+}
+
+green_hair = {
+	name = "Green Hair"
+	hair_color = true
+}
+
+green_blond_hair = {
+	name = "Green-Blond Hair"
+	hair_color = true
+}
+
+orange_hair = {
+	name = "Orange Hair"
+	hair_color = true
+}
+
+red_hair = {
+	name = "Red Hair"
+	hair_color = true
+}

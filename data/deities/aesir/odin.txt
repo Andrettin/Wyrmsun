@@ -36,7 +36,7 @@ odin = { #known as Allfather, the Terrible One, One-eyed, Father of Battle; Sour
 		unit_type = unit_norse_heroic_swordsman
 		civilization = einherjar
 		default_faction = asgard
-		variation = gray_hair
+		variation_tags = { gray_hair }
 		trait = upgrade_wise
 		base_level = 79
 	}

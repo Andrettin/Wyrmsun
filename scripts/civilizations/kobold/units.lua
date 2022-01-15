@@ -56,23 +56,28 @@ DefineUnitType("unit-kobold-footpad", {
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
-			"variation-id", "brown-scales"
+			"variation-id", "brown-scales",
+			"tag", "brown_scales"
 		},
 		{
 			"variation-id", "blue-scales",
-			"file", "kobold/units/kobold_footpad_blue_scales.png"
+			"file", "kobold/units/kobold_footpad_blue_scales.png",
+			"tag", "blue_scales"
 		},
 		{
 			"variation-id", "purple-scales",
-			"file", "kobold/units/kobold_footpad_purple_scales.png"
+			"file", "kobold/units/kobold_footpad_purple_scales.png",
+			"tag", "purple_scales"
 		},
 		{
 			"variation-id", "red-scales",
-			"file", "kobold/units/kobold_footpad_red_scales.png"
+			"file", "kobold/units/kobold_footpad_red_scales.png",
+			"tag", "red_scales"
 		},
 		{
 			"variation-id", "yellow-scales",
-			"file", "kobold/units/kobold_footpad_yellow_scales.png"
+			"file", "kobold/units/kobold_footpad_yellow_scales.png",
+			"tag", "yellow_scales"
 		}
 	},
 	Sounds = {
@@ -111,23 +116,28 @@ DefineUnitType("unit-kobold-slasher", {
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
-			"variation-id", "brown-scales"
+			"variation-id", "brown-scales",
+			"tag", "brown_scales"
 		},
 		{
 			"variation-id", "blue-scales",
-			"file", "kobold/units/kobold_footpad_blue_scales.png"
+			"file", "kobold/units/kobold_footpad_blue_scales.png",
+			"tag", "blue_scales"
 		},
 		{
 			"variation-id", "purple-scales",
-			"file", "kobold/units/kobold_footpad_purple_scales.png"
+			"file", "kobold/units/kobold_footpad_purple_scales.png",
+			"tag", "purple_scales"
 		},
 		{
 			"variation-id", "red-scales",
-			"file", "kobold/units/kobold_footpad_red_scales.png"
+			"file", "kobold/units/kobold_footpad_red_scales.png",
+			"tag", "red_scales"
 		},
 		{
 			"variation-id", "yellow-scales",
-			"file", "kobold/units/kobold_footpad_yellow_scales.png"
+			"file", "kobold/units/kobold_footpad_yellow_scales.png",
+			"tag", "yellow_scales"
 		}
 	},
 	Sounds = {
@@ -166,23 +176,28 @@ DefineUnitType("unit-kobold-champion", {
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
-			"variation-id", "brown-scales"
+			"variation-id", "brown-scales",
+			"tag", "brown_scales"
 		},
 		{
 			"variation-id", "blue-scales",
-			"file", "kobold/units/kobold_footpad_blue_scales.png"
+			"file", "kobold/units/kobold_footpad_blue_scales.png",
+			"tag", "blue_scales"
 		},
 		{
 			"variation-id", "purple-scales",
-			"file", "kobold/units/kobold_footpad_purple_scales.png"
+			"file", "kobold/units/kobold_footpad_purple_scales.png",
+			"tag", "purple_scales"
 		},
 		{
 			"variation-id", "red-scales",
-			"file", "kobold/units/kobold_footpad_red_scales.png"
+			"file", "kobold/units/kobold_footpad_red_scales.png",
+			"tag", "red_scales"
 		},
 		{
 			"variation-id", "yellow-scales",
-			"file", "kobold/units/kobold_footpad_yellow_scales.png"
+			"file", "kobold/units/kobold_footpad_yellow_scales.png",
+			"tag", "yellow_scales"
 		}
 	},
 	Sounds = {

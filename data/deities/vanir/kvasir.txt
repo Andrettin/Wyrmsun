@@ -15,7 +15,7 @@ kvasir = { #Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 8.
 		unit_type = unit_elven_priest
 		civilization = vanir
 		default_faction = asgard
-		variation = gray_hair
+		variation_tags = { gray_hair }
 		trait = upgrade_wise
 		base_level = 25
 	}

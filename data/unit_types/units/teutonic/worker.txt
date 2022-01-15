@@ -73,6 +73,7 @@ unit_teuton_worker = {
 	variations = {
 		brown_hair = {
 			name = "Brown Hair"
+			tags = { brown_hair }
 			conditions = {
 				not = {
 					equipment = unit_christmas_hat
@@ -81,6 +82,7 @@ unit_teuton_worker = {
 		}
 		brown_hair_christmas_hat = {
 			icon = germanic_worker_christmas_hat
+			tags = { brown_hair }
 			conditions = {
 				or = {
 					scripted_condition = is_christmas_season

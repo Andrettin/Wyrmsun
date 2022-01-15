@@ -21,6 +21,6 @@ loki = { #son of two giants; attractive, mischief-making and ambivalent god; kno
 		unit_type = unit_norse_heroic_swordsman
 		civilization = einherjar
 		default_faction = asgard
-		variation = blond_hair
+		variation_tags = { blond_hair }
 	}
 }

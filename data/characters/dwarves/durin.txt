@@ -6,7 +6,7 @@ durin = { #possibly the same as the Diurnir mentioned in the Ynglinga saga; Sour
 	gender = male
 	icon = icon_durin
 	trait = upgrade_dextrous
-	variation = brown_hair
+	variation_tags = { brown_hair }
 	description = "Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."
 	background = "In Norse mythology, Durin appears in the <a href='literary_text:voluspo'>Voluspo</a> as one of the first dwarves and the deputy of Modsognir."
 	deities = { #deities that seem sensible for this character to worship

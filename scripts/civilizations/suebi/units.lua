@@ -70,7 +70,8 @@ DefineUnitType("unit-suebi-swordsman", {
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit_meat", "unit-potion-of-healing"},
 	Variations = {
 		{
-			"variation-id", "blond-hair"
+			"variation-id", "blond-hair",
+			"tag", "blond_hair"
 		},
 		{
 			"layer", "left-arm",

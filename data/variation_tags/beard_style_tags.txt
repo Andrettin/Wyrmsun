@@ -1,0 +1,11 @@
+beardless = {
+	name = "Beardless"
+}
+
+braided_beard = {
+	name = "Braided Beard"
+}
+
+short_beard = {
+	name = "Short Beard"
+}

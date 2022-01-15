@@ -69,6 +69,7 @@ unit_gnomish_worker = {
 	}
 	variations = {
 		blond_hair = {
+			tags = { blond_hair }
 			conditions = {
 				not = {
 					upgrade = upgrade_old
@@ -78,6 +79,7 @@ unit_gnomish_worker = {
 		}
 		blond_hair_christmas_hat = {
 			icon = gnomish_worker_christmas_hat
+			tags = { blond_hair }
 			conditions = {
 				not = {
 					upgrade = upgrade_old
@@ -91,6 +93,7 @@ unit_gnomish_worker = {
 		gray_hair = {
 			image_file = "gnome/units/gnomish_worker_gray_hair.png"
 			icon = gnomish_worker_gray_hair
+			tags = { gray_hair }
 			resource_loaded_image_files = {
 				gold = "gnome/units/gnomish_worker_with_gold_gray_hair.png"
 				silver = "gnome/units/gnomish_worker_with_gold_gray_hair.png"

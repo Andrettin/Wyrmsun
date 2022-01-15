@@ -1,0 +1,9 @@
+brown_fur = {
+	name = "Brown Fur"
+	hair_color = true
+}
+
+light_brown_fur = {
+	name = "Light Brown Fur"
+	hair_color = true
+}

@@ -60,7 +60,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -70,7 +71,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -80,7 +82,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -89,7 +92,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"icon", "icon-germanic-warrior-gray-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -99,7 +103,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -107,7 +112,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -116,7 +122,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -125,7 +132,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -133,7 +141,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"icon", "icon-germanic-warrior-gray-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -142,7 +151,8 @@ DefineUnitType("unit-germanic-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		}
 	},
 	Sounds = {
@@ -182,7 +192,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -191,7 +202,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -200,7 +212,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -208,7 +221,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"icon", "icon-germanic-veteran-warrior-gray-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -217,7 +231,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -225,7 +240,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -234,7 +250,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -243,7 +260,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -251,7 +269,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"icon", "icon-germanic-veteran-warrior-gray-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -260,7 +279,8 @@ DefineUnitType("unit-germanic-veteran-warrior", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		}
 	},
 	Sounds = {
@@ -302,7 +322,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -311,7 +332,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -320,7 +342,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -328,7 +351,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"icon", "icon-germanic-chieftain-gray-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -337,7 +361,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-class-not-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -345,7 +370,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -354,7 +380,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 1
+			"weight", 1,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "brown-hair",
@@ -363,7 +390,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "gray-hair",
@@ -371,7 +399,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"icon", "icon-germanic-chieftain-gray-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 2
+			"weight", 2,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -380,7 +409,8 @@ DefineUnitType("unit-germanic-chieftain", {
 			"upgrade-forbidden", "upgrade-old",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"item-class-equipped", "shield",
-			"weight", 8
+			"weight", 8,
+			"tag", "red_hair"
 		}
 	},
 	Sounds = {
@@ -431,30 +461,35 @@ DefineUnitType("unit-germanic-spearman", {
 		{
 			"layer", "hair",
 			"variation-id", "brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "brown_hair"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "black-hair",
 			"layer-file", "hair", "human/units/black_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "black_hair"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "blond_hair"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"tag", "gray_hair"
 		},
 		{
 			"layer", "hair",
 			"variation-id", "red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "red_hair"
 		},
 		{
 			"layer", "left-arm",
@@ -572,14 +607,16 @@ DefineUnitType("unit-germanic-archer", {
 			"variation-id", "red-hair",
 			"name", "Red Hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"name", "Gray Hair",
 			"layer-file", "hair", "human/units/gray_hair_archer.png",
 			"icon", "icon-germanic-archer-gray-hair",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -587,7 +624,8 @@ DefineUnitType("unit-germanic-archer", {
 			"layer-file", "hair", "human/units/blond_hair_archer.png",
 			"icon", "icon-germanic-archer-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		}
 	},
 	Sounds = {

@@ -15,11 +15,13 @@ DefineUnitType("unit-goblin-militia", {
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-boots", "unit-cheese", "unit_meat"},
 	Variations = {
 		{
-			"variation-id", "bald"
+			"variation-id", "bald",
+			"tag", "bald"
 		},
 		{
 			"variation-id", "spiky-hair",
-			"file", "goblin/units/goblin_worker_spiky_hair.png"
+			"file", "goblin/units/goblin_worker_spiky_hair.png",
+			"tag", "spiky_hair"
 		}
 	},
 	Sounds = {

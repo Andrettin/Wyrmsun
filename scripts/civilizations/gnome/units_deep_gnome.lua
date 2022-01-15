@@ -15,24 +15,28 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-recruit-blond-hair",
-			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png",
+			"tag", "green_blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-deep-gnomish-recruit-gray-hair",
-			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png",
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "green-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-recruit-green-hair",
-			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_green_hair.png",
+			"tag", "green_hair"
 		}
 	}
 } )
@@ -48,24 +52,28 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-duelist-blond-hair",
-			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png",
+			"tag", "green_blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-deep-gnomish-duelist-gray-hair",
-			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png",
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "green-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-duelist-green-hair",
-			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_green_hair.png",
+			"tag", "green_hair"
 		}
 	}
 } )
@@ -81,24 +89,28 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"tag", "red_hair"
 		},
 		{
 			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-master-at-arms-blond-hair",
-			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_blond_hair.png",
+			"tag", "green_blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-deep-gnomish-master-at-arms-gray-hair",
-			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_gray_hair.png",
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "green-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-master-at-arms-green-hair",
-			"file", "gnome/units/deep_gnomish_recruit_green_hair.png"
+			"file", "gnome/units/deep_gnomish_recruit_green_hair.png",
+			"tag", "green_hair"
 		}
 	}
 } )
@@ -113,25 +125,29 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 	NightSightRangeBonus = 1,
 	Variations = {
 		{
-			"variation-id", "gray-hair"
+			"variation-id", "gray-hair",
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "green-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-blond-hair",
-			"file", "gnome/units/deep_gnomish_herbalist_blond_hair.png"
+			"file", "gnome/units/deep_gnomish_herbalist_blond_hair.png",
+			"tag", "green_blond_hair"
 		},
 		{
 			"variation-id", "green-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-green-hair",
-			"file", "gnome/units/deep_gnomish_herbalist_green_hair.png"
+			"file", "gnome/units/deep_gnomish_herbalist_green_hair.png",
+			"tag", "green_hair"
 		},
 		{
 			"variation-id", "red-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"icon", "icon-deep-gnomish-herbalist-red-hair",
-			"file", "gnome/units/deep_gnomish_herbalist_red_hair.png"
+			"file", "gnome/units/deep_gnomish_herbalist_red_hair.png",
+			"tag", "red_hair"
 		}
 	}
 } )

@@ -5,7 +5,7 @@ karla = {
 	default_faction = karling_tribe
 	gender = male
 	trait = upgrade_intelligent
-	variation = brown_hair #described as brown-haired in the myths
+	variation_tags = { brown_hair } #described as brown-haired in the myths
 	ai_active = false
 	deities = {
 		odin

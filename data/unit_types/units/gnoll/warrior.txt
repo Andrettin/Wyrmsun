@@ -29,16 +29,20 @@ unit_gnoll_warrior = {
 	}
 	variations = {
 		light_fur = {
+			tags = { light_brown_fur }
 		}
 		light_fur = {
 			icon = gnoll_warrior_2
+			tags = { light_brown_fur }
 		}
 		dark_fur = {
 			image_file = "units/gnoll/warrior_dark_fur.png"
+			tags = { brown_fur }
 		}
 		dark_fur = {
 			icon = gnoll_warrior_2
 			image_file = "units/gnoll/warrior_dark_fur.png"
+			tags = { brown_fur }
 		}
 	}
 	sounds = {

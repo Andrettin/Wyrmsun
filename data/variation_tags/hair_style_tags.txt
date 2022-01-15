@@ -1,0 +1,7 @@
+bald = {
+	name = "Bald"
+}
+
+spiky_hair = {
+	name = "Spiky Hair"
+}

@@ -69,7 +69,8 @@ DefineUnitType("unit-frank-swordsman", {
 			"variation-id", "brown-hair",
 			"name", "Brown Hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -77,14 +78,16 @@ DefineUnitType("unit-frank-swordsman", {
 			"icon", "icon-frank-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"name", "Gray Hair",
 			"icon", "icon-frank-swordsman-gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -92,7 +95,8 @@ DefineUnitType("unit-frank-swordsman", {
 			"icon", "icon-frank-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "red_hair"
 		},
 		{
 			"layer", "left-arm",
@@ -228,27 +232,31 @@ DefineUnitType("unit-frank-veteran-swordsman", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-frank-veteran-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-veteran-swordsman-gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
 			"icon", "icon-frank-veteran-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "red_hair"
 		},
 		{
 			"layer", "left-arm",
@@ -386,27 +394,31 @@ DefineUnitType("unit-frank-heroic-swordsman", {
 		{
 			"variation-id", "brown-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "blond-hair",
 			"icon", "icon-frank-heroic-swordsman-blond-hair",
 			"layer-file", "hair", "human/units/blond_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-frank-heroic-swordsman-gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
 			"icon", "icon-frank-heroic-swordsman-red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "red_hair"
 		},
 		{
 			"layer", "left-arm",
@@ -542,7 +554,8 @@ DefineUnitType("unit-frank-spearman", {
 			"variation-id", "brown-hair",
 			"name", "Brown Hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "brown_hair"
 		},
 		{
 			"variation-id", "black-hair",
@@ -550,7 +563,8 @@ DefineUnitType("unit-frank-spearman", {
 			"layer-file", "hair", "human/units/black_hair_warrior_no_beard.png",
 			"icon", "icon-frank-scara-black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 2
+			"weight", 2,
+			"tag", "black_hair"
 		},
 		{
 			"variation-id", "blond-hair",
@@ -558,14 +572,16 @@ DefineUnitType("unit-frank-spearman", {
 			"layer-file", "hair", "human/units/blond_hair_warrior_no_beard.png",
 			"icon", "icon-frank-scara-blond-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "blond_hair"
 		},
 		{
 			"variation-id", "gray-hair",
 			"name", "Gray Hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior_no_beard.png",
 			"icon", "icon-frank-scara-gray-hair",
-			"weight", 1
+			"weight", 1,
+			"tag", "gray_hair"
 		},
 		{
 			"variation-id", "red-hair",
@@ -573,7 +589,8 @@ DefineUnitType("unit-frank-spearman", {
 			"layer-file", "hair", "human/units/red_hair_warrior_no_beard.png",
 			"icon", "icon-frank-scara-red-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"weight", 4
+			"weight", 4,
+			"tag", "red_hair"
 		},
 		{
 			"layer", "left-arm",

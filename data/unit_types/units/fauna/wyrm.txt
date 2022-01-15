@@ -49,26 +49,32 @@ unit_wyrm = {
 	}
 	variations = {
 		green_scales = {
+			tags = { green_scales }
 		}
 		blue_scales = {
 			image_file = "neutral/units/wyrm_blue_scales.png"
 			icon = icon_wyrm_blue_scales
+			tags = { blue_scales }
 		}
 		cyan_scales = {
 			image_file = "neutral/units/wyrm_cyan_scales.png"
 			icon = icon_wyrm_cyan_scales
+			tags = { cyan_scales }
 		}
 		purple_scales = {
 			image_file = "neutral/units/wyrm_purple_scales.png"
 			icon = icon_wyrm_purple_scales
+			tags = { purple_scales }
 		}
 		red_scales = {
 			image_file = "neutral/units/wyrm_red_scales.png"
 			icon = icon_wyrm_red_scales
+			tags = { red_scales }
 		}
 		yellow_scales = {
 			image_file = "neutral/units/wyrm_yellow_scales.png"
 			icon = icon_wyrm_yellow_scales
+			tags = { yellow_scales }
 		}
 	}
 	sounds = {

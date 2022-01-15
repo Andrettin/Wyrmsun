@@ -1,0 +1,15 @@
+mount_brown_fur = {
+	name = "Mount Brown Fur"
+}
+
+mount_gray_fur = {
+	name = "Mount Gray Fur"
+}
+
+mount_gray_brown_fur = {
+	name = "Mount Gray-Brown Fur"
+}
+
+mount_white_fur = {
+	name = "Mount White Fur"
+}

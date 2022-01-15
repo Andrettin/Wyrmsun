@@ -55,6 +55,7 @@ unit_derro_worker = {
 	}
 	variations = {
 		gray_hair = {
+			tags = { gray_hair }
 			conditions = {
 				not = {
 					equipment = unit_christmas_hat
@@ -63,6 +64,7 @@ unit_derro_worker = {
 		}
 		gray_hair_christmas_hat = {
 			icon = derro_worker_christmas_hat
+			tags = { gray_hair }
 			conditions = {
 				or = {
 					scripted_condition = is_christmas_season

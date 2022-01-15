@@ -1,0 +1,34 @@
+blue_scales = {
+	name = "Blue Scales"
+	hair_color = true
+}
+
+brown_scales = {
+	name = "Brown Scales"
+	hair_color = true
+}
+
+cyan_scales = {
+	name = "Cyan Scales"
+	hair_color = true
+}
+
+green_scales = {
+	name = "Green Scales"
+	hair_color = true
+}
+
+purple_scales = {
+	name = "Purple Scales"
+	hair_color = true
+}
+
+red_scales = {
+	name = "Red Scales"
+	hair_color = true
+}
+
+yellow_scales = {
+	name = "Yellow Scales"
+	hair_color = true
+}
