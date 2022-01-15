@@ -47,6 +47,21 @@ english = {
 		}
 	}
 	
+	surnames = {
+		"Adams"
+		"Baker"
+		"Brown"
+		"Harris"
+		"Jackson"
+		"Johnson"
+		"Jones"
+		"Robinson"
+		"Shepherd"
+		"Smith"
+		"Taylor"
+		"Williams"
+	}
+	
 	unit_class_names = {
 		farm = {
 			"Blackfield"

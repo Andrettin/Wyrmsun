@@ -69,6 +69,7 @@ teuton = {
 			"David"
 			"Eduard"
 			"Ernst"
+			"Eugen"
 			"Fabian"
 			"Ferdinand"
 			"Franz"
@@ -129,7 +130,17 @@ teuton = {
 	}
 	
 	surnames = {
+		"Bauer"
+		"Braun"
+		"Fischer"
 		"Muhlhausen" #"Mühlhausen"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 104.
+		"Muller" #"Müller"
+		"Pichler"
+		"Schmidt"
+		"Schwarz"
+		"Wagner"
+		"Winkler"
+		"Zimmermann"
 	}
 	
 	history = {

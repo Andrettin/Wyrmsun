@@ -37,6 +37,7 @@ italian = {
 	}
 	
 	surnames = {
+		"Lombardi"
 		"Palamidese"
 	}
 }
