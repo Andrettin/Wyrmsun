@@ -1,0 +1,43 @@
+blackbeard = {
+	name = "Blackbeard"
+	conditions = {
+		variation_tag = black_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
+}
+
+goldbeard = {
+	name = "Goldbeard"
+	conditions = {
+		variation_tag = blond_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
+}
+
+redbeard = {
+	name = "Redbeard"
+	conditions = {
+		variation_tag = red_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
+}
+
+the_black = {
+	name = "the Black"
+	conditions = {
+		variation_tag = black_hair
+	}
+}
+
+the_red = {
+	name = "the Red"
+	conditions = {
+		variation_tag = red_hair
+	}
+}
