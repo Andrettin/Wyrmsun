@@ -66,10 +66,12 @@ DialogBase {
 		anchors.verticalCenter: surname_label.verticalCenter
 		anchors.left: civilization_label.right
 		anchors.leftMargin: 16 * wyrmgus.scale_factor
-		anchors.right: generate_surname_button.left
+		//anchors.right: generate_surname_button.left
+		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
 	}
 	
+	/*
 	SmallButton {
 		id: generate_surname_button
 		anchors.verticalCenter: surname_label.verticalCenter
@@ -81,6 +83,7 @@ DialogBase {
 			surname_text_field.text = civilization.generate_male_surname()
 		}
 	}
+	*/
 	
 	NormalText {
 		id: civilization_label

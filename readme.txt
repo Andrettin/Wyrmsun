@@ -57,9 +57,6 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.4
 -----------------------------------------------------------------------
 
-* Heroes
-- Added button to generate a surname for custom heroes.
-
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
 
