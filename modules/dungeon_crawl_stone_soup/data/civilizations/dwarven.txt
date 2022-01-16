@@ -1,0 +1,11 @@
+dwarven += {
+	personal_names = {
+		male = {
+			"Jorgrun" #Jorgrun Earthshaker (unique male dwarf)
+		}
+	}
+	
+	surnames = {
+		"Earthshaker"
+	}
+}
