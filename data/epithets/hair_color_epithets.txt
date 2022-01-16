@@ -1,3 +1,14 @@
+barbarossa = {
+	name = "Barbarossa"
+	conditions = {
+		civilization = italian
+		variation_tag = red_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
+}
+
 blackbeard = {
 	name = "Blackbeard"
 	conditions = {
