@@ -1,6 +1,21 @@
+blackbeard = {
+	name = "Blackbeard"
+	conditions = {
+		variation_tag = black_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
+}
+
 goldbeard = {
 	name = "Goldbeard"
-	weight = 0 #only generate when we can check for hair-color variations
+	conditions = {
+		variation_tag = blond_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
 }
 
 mountain_high = {
@@ -16,12 +31,19 @@ mountain_high = {
 
 redbeard = {
 	name = "Redbeard"
-	weight = 0 #only generate when we can check for hair-color variations
+	conditions = {
+		variation_tag = red_hair
+		not = {
+			variation_tag = beardless
+		}
+	}
 }
 
 the_black = {
 	name = "the Black"
-	weight = 0 #only generate when we can check for hair-color variations
+	conditions = {
+		variation_tag = black_hair
+	}
 }
 
 the_blessed = {
@@ -224,7 +246,9 @@ the_reckless = {
 
 the_red = {
 	name = "the Red"
-	weight = 0 #only generate when we can check for hair-color variations
+	conditions = {
+		variation_tag = red_hair
+	}
 }
 
 the_rich = {
