@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.4
 -----------------------------------------------------------------------
 
+* AI
+- Minor improvement to the performance of AI force management.
+
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
 
