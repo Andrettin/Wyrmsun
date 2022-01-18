@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Minor improvement to the performance of AI force management.
 
+* Pathfinding
+- Improved A* node insertion performance.
+
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
 
