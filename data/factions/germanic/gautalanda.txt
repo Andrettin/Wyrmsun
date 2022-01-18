@@ -1,0 +1,15 @@
+gautalanda = { #Proto-Germanic predecessors of the Goths, Geats and Gutes
+	name = "Gautalanda"
+	adjective = "Gautaz"
+	civilization = germanic
+	type = polity
+	color = white
+	default_tier = duchy #tribe
+	default_government_type = tribe
+	icon = flag_black_raven_on_white
+	upgrade = upgrade_faction_gautalanda
+	core_settlements = {
+		gothenburg
+		linkoping
+	}
+}

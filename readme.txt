@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Minor improvement to the performance of AI force management.
 
+* Factions
+- Renamed the Thielung Tribe to Gautalanda, and made it a polity.
+
 * Pathfinding
 - Improved A* node insertion performance.
 

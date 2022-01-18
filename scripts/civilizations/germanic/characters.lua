@@ -567,7 +567,7 @@ DefineCharacter("roskva", { -- Source: Carolyne Larrington, "The Norse Myths: A 
 	Gender = "female",
 	Type = "unit_germanic_worker",
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Father = "egill",
 	Deities = {"thor", "tyr"}
 	-- Thor's servant in Norse mythology
@@ -578,12 +578,12 @@ DefineCharacter("hafthi", { -- Source: "Guta Saga: The History of the Gotlanders
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Background = "In the Guta Saga, Hafthi was the son of Thieluar, and the first to settle the island of Gotland after his father discovered it.",
 	Father = "thialfi",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gautalanda") then
 			return true
 		end
 		return false
@@ -596,11 +596,11 @@ DefineCharacter("huitastierna", { -- Source: "Guta Saga: The History of the Gotl
 	Gender = "female",
 	Type = "unit_germanic_worker",
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Background = "In the Guta Saga, Huitastierna was the wife of Hafthi, and together they were the first to settle the island of Gotland.",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gautalanda") then
 			return true
 		end
 		return false
@@ -613,13 +613,13 @@ DefineCharacter("guti", { -- Source: "Guta Saga: The History of the Gotlanders",
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Background = "In the Guta Saga, Guti was the eldest son of Hafthi and Huitastierna, and he inherited the northern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gautalanda") then
 			return true
 		end
 		return false
@@ -631,13 +631,13 @@ DefineCharacter("graipr", { -- Source: "Guta Saga: The History of the Gotlanders
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Background = "In the Guta Saga, Graip was the second son of Hafthi and Huitastierna, and he inherited the middle third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gautalanda") then
 			return true
 		end
 		return false
@@ -649,13 +649,13 @@ DefineCharacter("gunfiaun", { -- Source: "Guta Saga: The History of the Gotlande
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Faction = "thielung_tribe",
+	Faction = "gautalanda",
 	Background = "In the Guta Saga, Gunfiaun was the youngest son of Hafthi and Huitastierna, and he inherited the southern third of the island of Gotland from them.",
 	Father = "hafthi",
 	Mother = "huitastierna",
 	Deities = {"thor", "tyr"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "thielung_tribe") then
+		if (GetPlayerData(trigger_player, "Faction") == "gautalanda") then
 			return true
 		end
 		return false

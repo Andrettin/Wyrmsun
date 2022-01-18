@@ -2,7 +2,7 @@ thialfi = {
 	name = "Thialfi" #Thor's servant in Norse mythology; associated by several scholars with Þieluar, the discoverer of Gotland; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xvii-xviii, 3; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, p. 111.
 	unit_type = unit_germanic_warrior
 	civilization = germanic
-	default_faction = thielung_tribe
+	default_faction = gautalanda
 	gender = male
 	father = egill
 	trait = upgrade_quick
@@ -13,7 +13,7 @@ thialfi = {
 	}
 	
 	conditions = {
-		faction = thielung_tribe
+		faction = gautalanda
 	}
 	
 	history = {

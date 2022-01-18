@@ -5,7 +5,7 @@ thielung_workers = {
 	history = {
 		-1101 = {
 			active = true
-			faction = thielung_tribe
+			faction = gautalanda
 			location = vastervik
 		}
 		
@@ -21,7 +21,7 @@ thielung_transport_ship = {
 	history = {
 		-1101 = {
 			active = true
-			faction = thielung_tribe
+			faction = gautalanda
 			location = vastervik
 		}
 		
@@ -37,7 +37,7 @@ thielung_revealer = {
 	history = {
 		-1101 = {
 			active = true
-			faction = thielung_tribe
+			faction = gautalanda
 			location = visby
 		}
 		

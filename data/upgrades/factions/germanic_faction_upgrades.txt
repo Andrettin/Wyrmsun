@@ -18,11 +18,6 @@ upgrade_faction_skeldung_tribe = {
 	effects_string = "+1 Damage and +1 Armor for Eralas"
 }
 
-upgrade_faction_thielung_tribe = {
-	name = "Thielung Tribe"
-	effects_string = "+1 Damage and +1 Accuracy for Eralas"
-}
-
 upgrade_faction_thralling_tribe = {
 	name = "Thrahiling Tribe"
 	effects_string = "+5% Lumber Processing for Carpenter's Shops"
@@ -31,4 +26,19 @@ upgrade_faction_thralling_tribe = {
 upgrade_faction_yngling_tribe = {
 	name = "Yngling Tribe"
 	effects_string = "+2 Damage for Skutans"
+}
+
+upgrade_faction_gautalanda = {
+	name = "Gautalanda"
+	effects_string = "+1 Damage and +1 Accuracy for Eralas"
+	modifier = {
+		basic_damage = 1
+		accuracy = 1
+		points = 10
+		unit_types = {
+			unit_germanic_warrior
+			unit_germanic_veteran_warrior
+			unit_germanic_chieftain
+		}
+	}
 }

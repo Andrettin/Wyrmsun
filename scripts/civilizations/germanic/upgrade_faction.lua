@@ -58,15 +58,6 @@ DefineModifier("upgrade_faction_skeldung_tribe",
 	{"apply-to", "unit-germanic-chieftain"}
 )
 
-DefineModifier("upgrade_faction_thielung_tribe",
-	{"BasicDamage", 1},
-	{"Accuracy", 1},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"},
-	{"apply-to", "unit-germanic-veteran-warrior"},
-	{"apply-to", "unit-germanic-chieftain"}
-)
-
 DefineModifier("upgrade_faction_thralling_tribe",
 	{"improve-production", "lumber", 5},
 	{"apply-to", "unit-germanic-carpenters-shop"}
