@@ -1,0 +1,18 @@
+the_gutasaga = {
+	name = "The Gutasaga"
+	aliases += thors_servant
+	icon = icon_germanic_transport_ship
+	player_color = white
+	unobtainable = true
+	objectives = {
+		have_settlement = visby
+		research_upgrade = {
+			upgrade = upgrade_deity_thor
+		}
+		have_settlement = danzig
+		found_faction = gotland
+	}
+	accept_effects = {
+		call_dialogue = thialfi_commanded_to_gotland
+	}
+}

@@ -41,13 +41,6 @@ DefineCampaign("freys-messenger", {
 })
 --]]
 
-DefineCampaign("thors_servant", {
-	MapTemplates = {
-		"earth", {0, 0}, {384, 384},
-		"jotunheim", {679, 304}, {64, 64}
-	}
-})
-
 --[[
 DefineCampaign("the-home-of-the-boii", {
 	Name = "The Home of the Boii",

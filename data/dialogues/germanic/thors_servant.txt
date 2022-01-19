@@ -1,0 +1,38 @@
+thialfi_commanded_to_gotland = {
+	{
+		speaker = thialfi
+		text = "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle."
+		option = {
+			effects = {
+				accept_quest = the_discovery_of_gotland
+				
+				hidden = {
+					create_unit = {
+						unit_type = unit_revealer
+						site = visby
+						ttl = 600
+					}
+				}
+			}
+		}
+	}
+}
+
+thialfi_settles_gotland = {
+	{
+		speaker = thialfi
+		text = "At last, my hall is complete. But it is not enough. I am pledged to Thunraz, and if this is my dwelling, then there must also be a temple to the god on this island."
+		option = {
+			effects = {
+				accept_quest = thors_servant_thors_temple
+			}
+		}
+	}
+}
+
+thors_servant_temple_complete = {
+	{
+		speaker = thialfi
+		text = "The temple to Thunraz is finished. The god's might shall now protect this island."
+	}
+}

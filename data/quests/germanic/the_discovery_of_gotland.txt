@@ -12,5 +12,6 @@ the_discovery_of_gotland = {
 	}
 	completion_effects = {
 		call_dialogue = thialfi_settles_gotland
+		scripted_effect = major_copper_reward
 	}
 }

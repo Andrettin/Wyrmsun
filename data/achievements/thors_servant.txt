@@ -1,10 +1,10 @@
 thors_servant = {
 	name = "Thunraz's Servant"
 	icon = icon_thor
-	description = "Complete the Thunraz's Servant scenario."
+	description = "Complete the The Gutasaga scenario."
 	player_color = white
 	required_quests = {
-		thors_servant
+		the_gutasaga
 	}
 	tree_parent = the_settlement_of_scandinavia
 	tree_line_visible = false

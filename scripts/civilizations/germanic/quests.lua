@@ -329,63 +329,6 @@ DefineQuest("neutralize-the-hersings", {
 	Unfailable = true
 })
 
-DefineQuest("thors_servant", {
-	Name = "Thunraz's Servant",
-	Icon = "icon-thor",
-	World = "earth",
-	Civilization = "germanic",
-	PlayerColor = "white",
-	AcceptEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("thialfi_commanded_to_gotland", trigger_player)
-		end
-	end,
-	ObjectiveStrings = {"Fulfill Thunraz's wishes", "Thialfi must survive"},
-	HeroesMustSurvive = {"thialfi"},
-	Uncompleteable = true,
-	Unobtainable = true
-})
-
-DefineQuest("the_discovery_of_gotland", {
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
-	CompletionEffects = function(s)
-		if (GetCurrentCampaign() == "thors_servant") then
-			local thialfi_unit = FindHero("thialfi", trigger_player)
-			if (thialfi_unit) then
-				while (GetUnitVariable(thialfi_unit, "Level") < 2) do
-					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required)
-				end
-			end
-		end
-	end
-})
-
-DefineQuest("thors_servant_thors_temple", {
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
-	CompletionEffects = function(s)
-		if (GetCurrentCampaign() == "thors_servant") then
-			local thialfi_unit = FindHero("thialfi", trigger_player)
-			if (thialfi_unit) then
-				while (GetUnitVariable(thialfi_unit, "Level") < 3) do
-					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required)
-				end
-			end
-		end
-	end
-})
-
 DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	Name = "Slay the Wild Folk at Hlesey",
 	Icon = "icon-germanic-warrior",
@@ -401,22 +344,9 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		end
 		return false
 	end,
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end,
 	CompletionEffects = function(s)
 		SetPlayerData(trigger_player, "Resources", "copper", GetPlayerData(trigger_player, "Resources", "copper") + 1500)
 		if (GetCurrentCampaign() == "thors_servant") then
-			local thialfi_unit = FindHero("thialfi", trigger_player)
-			if (thialfi_unit) then
-				while (GetUnitVariable(thialfi_unit, "Level") < 4) do
-					local xp_required = GetUnitVariable(thialfi_unit, "XPRequired")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required, "Max")
-					SetUnitVariable(thialfi_unit, "Xp", xp_required)
-				end
-			end
 			CallDialogue("thors-servant-berserker-brides-killed", trigger_player)
 		end
 	end,
@@ -429,12 +359,4 @@ DefineQuest("slay-the-berserker-brides-at-hlesey", { -- Source: Kevin Crossley-H
 		}
 	},
 	Competitive = true
-})
-
-DefineQuest("slay_geirrod", {
-	FailEffects = function(s)
-		if (trigger_player == GetThisPlayer() and GetCurrentCampaign() == "thors_servant") then
-			CallDialogue("campaign-defeat", trigger_player)
-		end
-	end
 })

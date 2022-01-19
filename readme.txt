@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Pathfinding
 - Improved A* node insertion performance.
 
+* Scenarios
+- Reworked the Thunraz's Servant scenario. It is now called "The Gutasaga", and the overall objectives have been changed as well.
+
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
 

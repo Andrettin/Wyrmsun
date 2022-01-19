@@ -66,19 +66,3 @@ AddTrigger("berserker-brides-arrive-on-hlesey", -- Source: Kevin Crossley-Hollan
 		return false
 	end
 )
-
-AddTrigger("thors-servant-skidbladnir-destroyed",
-	function()
-		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and GetPlayerData(i, "HasQuest", "slay_geirrod") and GetUniqueItemData("skidbladnir", "CanDrop") and GetCurrentCampaign() == "thors_servant") then
-				trigger_player = i
-				return true
-			end
-		end
-		return false
-	end,
-	function()
-		CallDialogue("thors-servant-skidbladnir-destroyed", trigger_player)
-		return false
-	end
-)

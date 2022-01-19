@@ -16,5 +16,6 @@ thors_servant_thors_temple = {
 	}
 	completion_effects = {
 		call_dialogue = thors_servant_temple_complete
+		scripted_effect = major_copper_reward
 	}
 }

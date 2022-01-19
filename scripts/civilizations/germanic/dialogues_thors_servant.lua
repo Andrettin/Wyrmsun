@@ -25,42 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("thialfi_commanded_to_gotland", {
-	Nodes = {
-		{
-			"speaker", "character", "thialfi",
-			"text", "My master, the god Thunraz, has revealed to me the existence of an island to the east. I am to establish my hearth there, bringing human life to the isle.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "the-discovery-of-gotland")
-					unit = FindUnit("unit-revealer", trigger_player)
-					if not (unit) then
-						unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("visby", "MapPosX"), GetSiteData("visby", "MapPosY")}, GetSiteData("visby", "MapLayer"))
-					end
-					SetUnitVariable(unit, "TTL", 600)
-					ChangeCurrentMapLayer(GetSiteData("visby", "MapLayer"))
-					CenterMap(GetSiteData("visby", "MapPosX"), GetSiteData("visby", "MapPosY"))
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("thialfi-settles-gotland", {
-	Nodes = {
-		{
-			"speaker", "character", "thialfi",
-			"text", "At last, my hall is complete. But it is not enough. I am pledged to Thunraz, and if this is my dwelling, then there must also be a temple to the god on this island.",
-			"option-effects", {
-				function(s)
-					SetPlayerData(trigger_player, "AcceptQuest", "thors-servant-thors-temple")
-				end
-			}
-		}
-	}
-})
-
-DefineDialogue("thors-servant-temple-complete", {
+--[[
+DefineDialogue("thors_servant_temple_complete", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
@@ -69,11 +35,11 @@ DefineDialogue("thors-servant-temple-complete", {
 		{
 			"speaker", "character", "thialfi",
 			"text", "The priests of Thunraz I invited to take charge of the new temple have told me that a group of wild berserkers are living in the island of Hlesey. They attack the passing ships, and must be rooted out to restore safety to that sea passage. The island lies far to the west, beyond the great chain of isles where the Skeldungs dwell.",
-			"option-effects", {
+			"option_effects", {
 				function(s)
-					unit = CreateUnit("unit-revealer", trigger_player, {GetSiteData("hlesey", "MapPosX"), GetSiteData("hlesey", "MapPosY")}, GetSiteData("hlesey", "MapLayer"))
+					unit = CreateUnit("unit_revealer", trigger_player, {GetSiteData("hlesey", "MapPosX"), GetSiteData("hlesey", "MapPosY")}, GetSiteData("hlesey", "MapLayer"))
 					SetUnitVariable(unit, "TTL", 600)
-					SetPlayerData(trigger_player, "AcceptQuest", "slay-the-berserker-brides-at-hlesey")
+					SetPlayerData(trigger_player, "AcceptQuest", "slay_the_berserker_brides_at_hlesey")
 					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("hlesing_tribe"))
 					SetDiplomacy(GetFactionPlayer("hlesing_tribe"), "enemy", trigger_player)
 				end
@@ -81,6 +47,7 @@ DefineDialogue("thors-servant-temple-complete", {
 		}
 	}
 })
+--]]
 
 DefineDialogue("berserker-brides-arrive-on-hlesey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 119.
 	Nodes = {
@@ -95,7 +62,7 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 		{
 			"speaker", "character", "thialfi",
 			"text", "How foolish those wild folk were, to think they could attack ships without fearing revenge."
-		},
+		} --[[,
 		{
 			"speaker", "character", "thialfi",
 			"text", "The priests have brought me something exquisite... a true beauty, she is."
@@ -123,6 +90,7 @@ DefineDialogue("thors-servant-berserker-brides-killed", {
 		{
 			"text", "Hint: If you find Geirrod to be more than a match for you, don't hesitate to flee aboard your ship back to Earth. The ettins cannot follow you back to your homeworld, allowing you to recover and regroup before staging a new attack."
 		}
+		--]]
 	}
 })
 
@@ -130,14 +98,7 @@ DefineDialogue("thors-servant-skidbladnir-destroyed", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
-			"text", "The ship Skidbladnir has been destroyed... there is no way for me to reach the world of the ettins now. I have failed Thunraz.",
-			"option-effects", {
-				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "thors_servant")) then
-						SetPlayerData(trigger_player, "FailQuest", "thors_servant")
-					end
-				end
-			}
+			"text", "The ship Skidbladnir has been destroyed... there is no way for me to reach the world of the ettins now. I have failed Thunraz."
 		}
 	}
 })
@@ -146,14 +107,7 @@ DefineDialogue("thors-servant-geirrod-killed", {
 	Nodes = {
 		{
 			"speaker", "character", "thialfi",
-			"text", "Ha! I have done it, truly. Not without some wounds, but... Thialfi the Giantslayer, now that has a nice ring to it.",
-			"option-effects", {
-				function(s)
-					if (GetPlayerData(trigger_player, "HasQuest", "thors_servant")) then
-						SetPlayerData(trigger_player, "CompleteQuest", "thors_servant")
-					end
-				end
-			}
+			"text", "Ha! I have done it, truly. Not without some wounds, but... Thialfi the Giantslayer, now that has a nice ring to it."
 		}
 	}
 })
