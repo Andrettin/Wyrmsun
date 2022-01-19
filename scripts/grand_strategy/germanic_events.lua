@@ -304,29 +304,6 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	TheSunShields = { -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-		Name = "The Sun Shields",
-		Description = "Our artisans have learned the craft of making circular bronze shields from the Celtic peoples to our south. These shields are often made to symbolize the sun and the cycle of the seasons.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Jutland") == EventFaction.Name
-				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
-				and GetFactionTechnology(EventFaction.Civilization, EventFaction.Name, "upgrade-germanic-bronze-shield")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!Marvelous!"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
 	--[[
 	BeldegsLands = { -- Beldeg (Baldr), the first legendary ruler of Westphalia (in the sagas he became ruler of Westphalia even before the conquest of Scandinavia, but here we make him later, belonging to the time of the germanic expansion to Westphalia); Source: "The Prose Edda", Snorri Sturlson, 1916, pp. 7-8.
 		Name = "Beldeg's Lands",

@@ -429,10 +429,6 @@ if (GrandStrategyYear >= -1190) then
 	SetProvinceOwner("Thessaly", "", "")
 end
 
-if (GrandStrategyYear >= -1100) then 
-	GrandStrategyEvents.TheSunShields = nil -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-end
-
 if (GrandStrategyYear >= -1000) then
 	-- Widespread accretion of fine-grained floodpain alluvium in Northern European lowland rivers after 1000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
 end

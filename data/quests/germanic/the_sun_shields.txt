@@ -1,0 +1,21 @@
+the_sun_shields = { #Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+	name = "The Sun Shields"
+	icon = icon_germanic_bronze_shield
+	player_color = orange
+	description = "A group of artisans has come to you with plans to produce circular bronze shields, embellished with details symbolizing the sun and the cycle of the seasons. However, they require investments in order to bring those plans to fruition."
+	hint = "Select a [civilization:germanic.class_unit_type:smithy.name] and click on the [civilization:germanic.class_upgrade:bronze_shield.name] button to research the upgrade. [civilization:germanic.class_upgrade:bronze_shield.name] increases the armor of your melee units."
+	conditions = {
+		civilization = germanic
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade_class = bronze_shield
+		}
+	}
+	completion_effects = {
+		copper += 1000
+		lumber += 500
+	}
+	
+	#the historical shields were produced in Jutland
+}
