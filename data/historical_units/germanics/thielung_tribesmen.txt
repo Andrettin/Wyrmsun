@@ -3,13 +3,13 @@ thielung_workers = {
 	quantity = 2
 	
 	history = {
-		-1101 = {
+		-1100 = {
 			active = true
 			faction = gautalanda
 			location = vastervik
 		}
 		
-		-1100 = {
+		-1100.12.30 = {
 			active = false
 		}
 	}
@@ -19,13 +19,13 @@ thielung_transport_ship = {
 	unit_type = unit_germanic_transport_ship
 	
 	history = {
-		-1101 = {
+		-1100 = {
 			active = true
 			faction = gautalanda
 			location = vastervik
 		}
 		
-		-1100 = {
+		-1100.12.30 = {
 			active = false
 		}
 	}
@@ -35,13 +35,13 @@ thielung_revealer = {
 	unit_type = unit_revealer
 	
 	history = {
-		-1101 = {
+		-1100 = {
 			active = true
 			faction = gautalanda
 			location = visby
 		}
 		
-		-1100 = {
+		-1100.12.30 = {
 			active = false
 		}
 	}

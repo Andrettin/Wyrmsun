@@ -34,10 +34,10 @@ DefineSite("geirrods-hall", { -- Source: Carolyne Larrington, "The Norse Myths: 
 		"ettin", "Geirrod's Hall"
 	},
 	HistoricalOwners = {
-		-1101, "geirrodung-clan" -- should be present for Thialfi's scenario
+		-1100, "geirrodung-clan" -- should be present for Thialfi's scenario
 	},
 	HistoricalBuildings = {
-		-1101, 0, "town_hall"
+		-1100, 0, "town_hall"
 	},
 	Regions = {}
 })

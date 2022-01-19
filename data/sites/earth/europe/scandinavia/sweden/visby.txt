@@ -9,9 +9,13 @@ visby = {
 	}
 	
 	history = {
+		-1100.12.30 = {
+			owner = gautalanda #1100 BC was the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+			building_classes += town_hall
+		}
+		
 		814 = {
 			owner = sweden #part of the territory of the Swedes c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
-			building_classes += town_hall
 		}
 		
 		1097 = {

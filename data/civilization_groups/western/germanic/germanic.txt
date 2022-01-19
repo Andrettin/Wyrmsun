@@ -44,6 +44,10 @@ germanic = {
 			acquired_upgrade_classes += bronze_shield
 		}
 		
+		-1100.12.30 = {
+			explored_settlements += visby
+		}
+		
 		-1000 = {
 			#broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
 			acquired_upgrade_classes += melee_weapon_1 #broad sword

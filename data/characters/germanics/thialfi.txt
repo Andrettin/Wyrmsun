@@ -17,13 +17,13 @@ thialfi = {
 	}
 	
 	history = {
-		-1101 = {
-			#in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey just before 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
+		-1100 = {
+			#in the Guta saga, Thieluar was Gotland's discoverer, here we place his journey at 1100 BC since that's the first occupation of Gotland (by presumably pre-Germanic or Germanic speakers) we have found through research so far
 			active = true
 			location = vastervik
 		}
 		
-		-1100 = {
+		-1100.12.30 = {
 			active = false
 		}
 	}
