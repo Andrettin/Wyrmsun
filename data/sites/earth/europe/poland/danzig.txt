@@ -5,7 +5,8 @@ danzig = {
 	base_unit_type = unit_settlement_site
 	color = { 248 144 8 }
 	cultural_names = {
-		slav = "Gdansk" #"Gdańsk"
+		latin = "Gedania"
+		slavic = "Gdansk" #"Gdańsk"
 	}
 	regions = {
 		poland

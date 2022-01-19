@@ -35,4 +35,19 @@ thors_servant_temple_complete = {
 		speaker = thialfi
 		text = "The temple to Thunraz is finished. The god's might shall now protect this island."
 	}
+	{
+		speaker = thialfi
+		text = "Our people are prospering in the island, and multiplying... Soon we will need to settle new lands, or else the island will become overpopulated. I have heard rumors of fertile coastlands near a river, across the sea, to the south..."
+		option = {
+			effects = {
+				hidden = {
+					create_unit = {
+						unit_type = unit_revealer
+						site = danzig
+						ttl = 600
+					}
+				}
+			}
+		}
+	}
 }
