@@ -1,5 +1,26 @@
 vestfold = {
+	name = "Vestfold"
+	adjective = "Vestfold"
+	civilization = norse
+	type = polity
+	color = red
+	default_tier = duchy #petty kingdom
+	default_capital = oslo
+	upgrade = upgrade_faction_norway
+	icon = icon_flag_five_red_birds_on_yellow
+	core_settlements = {
+		oslo
+	}
 	conditions = {
 		scripted_condition = is_civilized
+	}
+	history = {
+		841 = {
+			#Halfdan the Black and Olaf Geirstad-Alf, brothers, were apparently friendly or allied since they divided a kingdom between themselves in 841 without war; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+			diplomacy_state = {
+				faction = agder
+				state = alliance
+			}
+		}
 	}
 }

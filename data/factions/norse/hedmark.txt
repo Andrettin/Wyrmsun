@@ -1,4 +1,5 @@
 hedmark = {
+	default_tier = duchy #petty kingdom
 	conditions = {
 		scripted_condition = is_civilized
 	}

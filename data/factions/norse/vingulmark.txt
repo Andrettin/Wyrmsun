@@ -1,4 +1,5 @@
 vingulmark = {
+	default_tier = duchy #petty kingdom
 	core_settlements = {
 		oslo
 	}

@@ -33,7 +33,6 @@ DefineFaction("agder", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "red",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-five-red-birds-on-yellow"
 })
@@ -44,7 +43,6 @@ DefineFaction("halogaland", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "purple",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-five-red-birds-on-yellow"
 })
@@ -55,7 +53,6 @@ DefineFaction("hedmark", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "green",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-five-purple-birds-on-green"
 })
@@ -66,7 +63,6 @@ DefineFaction("hordaland", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "cyan",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-five-orange-birds-on-black"
 })
@@ -95,23 +91,8 @@ DefineFaction("sogn", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "blue",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-yellow-lion-on-cyan"
-})
-
-DefineFaction("vestfold", {
-	Name = "Vestfold",
-	Adjective = "Vestfold",
-	Civilization = "norse",
-	Type = "polity",
-	Color = "red",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade_faction_norway",
-	Icon = "icon-flag-five-red-birds-on-yellow",
-	HistoricalDiplomacyStates = {
-		841, "agder", "alliance" -- Halfdan the Black and Olaf Geirstad-Alf, brothers, were apparently friendly or allied since they divided a kingdom between themselves in 841 without war; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
-	}
 })
 
 DefineFaction("vingulmark", {
@@ -120,7 +101,6 @@ DefineFaction("vingulmark", {
 	Civilization = "norse",
 	Type = "polity",
 	Color = "red",
-	DefaultTier = "kingdom",
 	FactionUpgrade = "upgrade_faction_norway",
 	Icon = "icon-flag-habsburg",
 	HistoricalDiplomacyStates = {
