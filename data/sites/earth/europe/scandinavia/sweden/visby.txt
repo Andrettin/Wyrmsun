@@ -14,6 +14,10 @@ visby = {
 			building_classes += town_hall
 		}
 		
+		-27 = {
+			owner = gotland
+		}
+		
 		814 = {
 			owner = sweden #part of the territory of the Swedes c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
 		}

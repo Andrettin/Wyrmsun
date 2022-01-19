@@ -11,4 +11,10 @@ gotland = {
 	core_settlements = {
 		visby
 	}
+	
+	history = {
+		-27 = {
+			government_type = tribe
+		}
+	}
 }
