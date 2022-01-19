@@ -14,7 +14,7 @@ linkoping = {
 			building_classes += town_hall
 		}
 		
-		-1101 = {
+		-1600 = {
 			owner = gautalanda
 		}
 		
