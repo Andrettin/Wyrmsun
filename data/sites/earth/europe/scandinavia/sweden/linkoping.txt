@@ -14,8 +14,8 @@ linkoping = {
 			building_classes += town_hall
 		}
 		
-		-325 = {
-			owner = gothia #Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		-1101 = {
+			owner = gautalanda
 		}
 		
 		-27 = {
