@@ -10,6 +10,10 @@ heimdalls_stones = {
 			location = simrishamn #Vitemölla is a part of the Simrishamn municipality
 		}
 		
+		-1600 = {
+			faction = skeldung_tribe
+		}
+		
 		-500 = {
 			active = false
 		}
