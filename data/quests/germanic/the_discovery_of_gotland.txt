@@ -5,6 +5,10 @@ the_discovery_of_gotland = {
 	competitive = true
 	unobtainable = true
 	objectives = {
+		bring_unit_to_site = {
+			character = thialfi
+			site = visby
+		}
 		build_units = {
 			unit_class = town_hall
 			settlement = visby

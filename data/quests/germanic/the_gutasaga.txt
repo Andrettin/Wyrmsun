@@ -5,6 +5,10 @@ the_gutasaga = {
 	player_color = white
 	unobtainable = true
 	objectives = {
+		bring_unit_to_site = {
+			character = thialfi
+			site = visby
+		}
 		have_settlement = visby
 		research_upgrade = {
 			upgrade = upgrade_deity_thor
