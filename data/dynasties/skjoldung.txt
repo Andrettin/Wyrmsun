@@ -6,4 +6,5 @@ skjoldung = {
 	}
 	icon = flag_black_raven_on_white
 	upgrade = upgrade_skjoldung_dynasty
+	description = "The Skjöldungs were a Danish dynasty founded by the legendary king Skjöldr."
 }

@@ -8,4 +8,5 @@ yngling = {
 	}
 	icon = flag_blue_raven_on_yellow
 	upgrade = upgrade_yngling_dynasty
+	description = "The Ynglings are a legendary Swedish dynasty, said to be descended from the god Yngve-Frey."
 }

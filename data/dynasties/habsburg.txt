@@ -8,4 +8,5 @@ habsburg = {
 	}
 	icon = icon_flag_habsburg
 	upgrade = upgrade_habsburg_dynasty
+	description = "The Habsburgs rose to prominence in the late Middle Ages. As dukes of Austria and then Holy Roman Emperors, they became one of Europe's principal dynasties.\n\nBy the 16th century, they came to rule over Spain, the Netherlands, much of Italy and most of the New World. Though by the 17th century they faced decline, the Habsburgs remained a powerful dynasty up to the 20th century."
 }

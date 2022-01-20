@@ -6,4 +6,5 @@ amelung = {
 	}
 	icon = icon_flag_five_black_birds_on_purple
 	upgrade = upgrade_amelung_dynasty
+	description = "The Amelungs were a powerful Gothic house. Theodoric the Great, perhaps the most famous Goth, was an Amelung."
 }

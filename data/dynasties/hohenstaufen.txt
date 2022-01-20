@@ -7,4 +7,5 @@ hohenstaufen = {
 	}
 	icon = icon_flag_blue_lion_on_yellow
 	upgrade = upgrade_hohenstaufen_dynasty
+	description = "The Hohenstaufens stem from Swabia, of which they were dukes. Some of the most notable Holy Roman Emperors were Hohenstaufens, such as Frederick Barbarossa. Their supporters in Italy were known as Ghibellines, a name which originates from Waiblingen, a Hohenstaufen possession."
 }
