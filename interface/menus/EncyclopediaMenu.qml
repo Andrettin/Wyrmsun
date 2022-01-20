@@ -44,7 +44,7 @@ MenuBase {
 	LargeButton {
 		id: deities_button
 		anchors.right: game_concepts_button.right
-		anchors.bottom: factions_button.top
+		anchors.bottom: dynasties_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Deities"
 		hotkey: "d"
@@ -59,10 +59,26 @@ MenuBase {
 	}
 	
 	LargeButton {
+		id: dynasties_button
+		anchors.right: game_concepts_button.right
+		anchors.bottom: factions_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		text: "Dynasties"
+		hotkey: "y"
+		
+		onClicked: {
+			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
+				category: "dynasties",
+				category_name: "Dynasties",
+				entries: wyrmgus.get_dynasty_encyclopedia_entries()
+			})
+		}
+	}
+	
+	LargeButton {
 		id: factions_button
 		anchors.right: game_concepts_button.right
-		anchors.bottom: game_concepts_button.top
-		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Factions"
 		hotkey: "f"
 		
@@ -79,7 +95,8 @@ MenuBase {
 		id: game_concepts_button
 		anchors.right: parent.horizontalCenter
 		anchors.rightMargin: 4
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: factions_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Game Concepts"
 		hotkey: "g"
 		
@@ -162,9 +179,8 @@ MenuBase {
 	
 	LargeButton {
 		id: technologies_button
-		anchors.right: game_concepts_button.right
-		anchors.top: magic_suffixes_button.bottom
-		anchors.topMargin: 8 * wyrmgus.scale_factor
+		anchors.left: worlds_button.left
+		anchors.top: buildings_button.top
 		text: "Technologies"
 		hotkey: "t"
 		
@@ -180,7 +196,8 @@ MenuBase {
 	LargeButton {
 		id: texts_button
 		anchors.left: worlds_button.left
-		anchors.top: buildings_button.top
+		anchors.top: technologies_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Texts"
 		hotkey: "x"
 		
@@ -247,7 +264,7 @@ MenuBase {
 	
 	PreviousMenuButton {
 		id: previous_menu_button
-		anchors.top: technologies_button.bottom
+		anchors.top: magic_suffixes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
 		
 		onClicked: {
