@@ -9,7 +9,8 @@ MenuBase {
 	background: entry_background
 	
 	property var entry: null
-	property var text_area_bottom_anchor: previous_menu_button_item.top
+	readonly property var is_dynasty: entry && entry.class_name === "wyrmgus::dynasty" ? true : false
+	property var text_area_bottom_anchor: dynastic_tree_button.visible ? dynastic_tree_button.top : previous_menu_button_item.top
 	readonly property string entry_name: entry.full_name ? entry.full_name : entry.name
 	readonly property var entry_civilization: (entry.civilization ? entry.civilization : (entry.civilization_group ? entry.civilization_group : null))
 	readonly property var entry_faction: entry.faction ? entry.faction : (entry.default_faction ? entry.default_faction : null)
@@ -37,6 +38,22 @@ MenuBase {
 		anchors.bottom: text_area_bottom_anchor
 		anchors.bottomMargin: 32 * wyrmgus.scale_factor
 		text: entry.encyclopedia_text
+	}
+	
+	LargeButton {
+		id: dynastic_tree_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: previous_menu_button_item.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		text: "Dynastic Tree"
+		hotkey: "d"
+		visible: is_dynasty && entry.dynastic_tree_characters.length > 0
+		
+		onClicked: {
+			menu_stack.push("DynasticTreeMenu.qml", {
+				dynasty: entry
+			})
+		}
 	}
 	
 	PreviousMenuButton {

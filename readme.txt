@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - Minor improvement to the performance of AI force management.
 
+* Encyclopedia
+- Added Dynasties encyclopedia category. Dynasty encyclopedia entries have a button for displaying the dynastic character tree for it.
+
 * Factions
 - Renamed the Thielung Tribe to Gautalanda, and made it a polity.
 
