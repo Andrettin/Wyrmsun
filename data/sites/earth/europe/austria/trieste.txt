@@ -1,0 +1,49 @@
+trieste = {
+	name = "Trieste"
+	map_template = earth
+	geocoordinate = { 13.80002559270 45.65037762360 } #from Natural Earth
+	cultural_names = {
+		latin = "Tergeste" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		teutonic = "Triest"
+	}
+	regions = {
+		cisleithania
+		italy
+	}
+	
+	history = {
+		-27 = {
+			owner = rome #Tergeste existed and was in Roman possession at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		}
+		
+		1477 = {
+			owner = austria #Trieste was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1719 = {
+			owner = austria #Trieste was a possession of Karl VI of the Holy Roman Empire (ruler of Austria) in 1719; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 464.
+			
+			building_classes += dock #Karl VI of the Holy Roman Empire made Trieste a free port ("Freihafen") in 1719; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 464.
+		}
+		
+		1758 = {
+			population = 6424 #Trieste's population was 6,424 in 1758; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
+		}
+		
+		1800 = {
+			population = 20900 #Trieste's population was 20,900 in 1800; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
+		}
+		
+		1818 = {
+			population = 33510 #Trieste's population was 33,510 in 1818; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
+		}
+		
+		1838 = {
+			population = 54387 #Trieste's population was 54,387 in 1838; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
+		}
+		
+		1853 = {
+			population = 60860 #Trieste's population was 60,860 in 1853; Source: Ivan Erceg, "Außenhandel der Nordadriatischen Seestädte als Faktor im Entstehen der kapitalistischen Beziehungen in Österreich im 18. und 19. Jahrhundert", 1968, p. 466.
+		}
+	}
+}
