@@ -2750,6 +2750,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Building = "only", SettlementName = "only", SiteName = "false", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {Population = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Population: "), UnitPopulation("Unit")), Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {Building = "only", UnitTypeClass = "dock", CanActiveHarvest = true, ButtonAction = "unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
