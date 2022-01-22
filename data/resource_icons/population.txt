@@ -1,0 +1,3 @@
+population = {
+	file = "resource_icons/population.png"
+}
