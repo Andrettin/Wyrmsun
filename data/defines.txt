@@ -95,6 +95,7 @@ cancel_button_level = cancel_level
 town_hall_class = town_hall
 population_enabled = false
 population_growth_per_food = 1000
+population_resource_icon = population
 default_population_class = worker
 default_water_population_class = workship
 default_space_population_class = aether_workship
