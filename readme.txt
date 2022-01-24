@@ -75,6 +75,9 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
 
+* Upgrades
+- Coinage is now researched at the Market, and requires having either Monarchy or Republic.
+
 -----------------------------------------------------------------------
 - 5.3.3
 -----------------------------------------------------------------------

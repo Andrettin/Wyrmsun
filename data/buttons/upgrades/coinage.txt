@@ -6,7 +6,6 @@ research_coinage = {
 	description =  "+10% Copper, Silver and Gold Processing Bonus for Smithies. -5% Trade Cost for Markets."
 	popup = popup_research
 	unit_classes = {
-		stronghold
-		fortress
+		market
 	}
 }
