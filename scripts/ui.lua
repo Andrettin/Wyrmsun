@@ -1267,6 +1267,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {HomeSettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Home Settlement: "), UnitHomeSettlementName("Unit")), Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}
 				},
