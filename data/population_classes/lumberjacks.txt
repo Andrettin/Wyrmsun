@@ -1,0 +1,13 @@
+skilled_lumberjacks = {
+	name = "Skilled Lumberjacks"
+	production_efficiency = {
+		lumber = 200
+	}
+}
+
+expert_lumberjacks = {
+	name = "Expert Lumberjacks"
+	production_efficiency = {
+		lumber = 400
+	}
+}

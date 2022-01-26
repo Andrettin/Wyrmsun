@@ -1,0 +1,20 @@
+apprentice_carpenters = {
+	name = "Apprentice Carpenters"
+	production_efficiency = {
+		furniture = 200
+	}
+}
+
+journeyman_carpenters = {
+	name = "Journeyman Carpenters"
+	production_efficiency = {
+		furniture = 400
+	}
+}
+
+master_carpenters = {
+	name = "Master Carpenters"
+	production_efficiency = {
+		furniture = 800
+	}
+}

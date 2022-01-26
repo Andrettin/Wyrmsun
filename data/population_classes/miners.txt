@@ -1,0 +1,23 @@
+skilled_miners = {
+	name = "Skilled Miners"
+	production_efficiency = {
+		copper = 200
+		silver = 200
+		gold = 200
+		iron = 200
+		mithril = 200
+		coal = 200
+	}
+}
+
+expert_miners = {
+	name = "Expert Miners"
+	production_efficiency = {
+		copper = 400
+		silver = 400
+		gold = 400
+		iron = 400
+		mithril = 400
+		coal = 400
+	}
+}

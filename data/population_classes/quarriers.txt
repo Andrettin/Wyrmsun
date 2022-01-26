@@ -1,0 +1,13 @@
+skilled_quarriers = {
+	name = "Skilled Quarriers"
+	production_efficiency = {
+		stone = 200
+	}
+}
+
+expert_quarriers = {
+	name = "Expert Quarriers"
+	production_efficiency = {
+		stone = 400
+	}
+}

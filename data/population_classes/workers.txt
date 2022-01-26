@@ -1,0 +1,3 @@
+workers = { #basic population class, used to recruit workers and for production
+	name = "Workers"
+}

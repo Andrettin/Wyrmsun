@@ -1,0 +1,3 @@
+sailors = { #used for ships
+	name = "Sailors"
+}

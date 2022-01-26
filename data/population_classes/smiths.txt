@@ -1,0 +1,20 @@
+apprentice_smiths = {
+	name = "Apprentice Smiths"
+	production_efficiency = {
+		jewelry = 200
+	}
+}
+
+journeyman_smiths = {
+	name = "Journeyman Smiths"
+	production_efficiency = {
+		jewelry = 400
+	}
+}
+
+master_smiths = {
+	name = "Master Smiths"
+	production_efficiency = {
+		jewelry = 800
+	}
+}

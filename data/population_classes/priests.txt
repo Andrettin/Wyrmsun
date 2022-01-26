@@ -1,0 +1,3 @@
+priests = { #used to recruit priest units
+	name = "Priests"
+}
