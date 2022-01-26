@@ -1,0 +1,42 @@
+dwarven_miners = {
+	name = "Miners"
+	population_class = workers
+	civilization = dwarven
+	icon = dwarven_miner
+	production_efficiency = {
+		copper = 125
+		silver = 125
+		gold = 125
+		iron = 125
+		mithril = 125
+		coal = 125
+	}
+}
+
+dwarven_skilled_miners = {
+	name = "Skilled Miners"
+	population_class = skilled_miners
+	civilization = dwarven
+	icon = icon_dwarven_skilled_miner
+}
+
+dwarven_expert_miners = {
+	name = "Expert Miners"
+	population_class = expert_miners
+	civilization = dwarven
+	icon = icon_dwarven_expert_miner
+}
+
+dwarven_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = dwarven
+	icon = icon_dwarven_axefighter
+}
+
+dwarven_priests = {
+	name = "Priests"
+	population_class = priests
+	civilization = dwarven
+	icon = icon_dwarven_witness
+}

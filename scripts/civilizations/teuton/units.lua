@@ -810,7 +810,7 @@ DefineUnitType("unit-teuton-priest", {
 	Name = "Cleric",
 	Parent = "unit-template-priest",
 	Civilization = "teuton",
-	Description = "Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques.",
+	Description = "Teutonic clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques.",
 	Image = {"file", "teuton/units/cleric.png", "size", {72, 72}},
 	Animations = "animations-spellcaster-new",
 	Icon = "icon-frankish-cleric",

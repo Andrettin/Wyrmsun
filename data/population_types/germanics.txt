@@ -1,0 +1,20 @@
+germanic_workers = {
+	name = "Workers"
+	population_class = workers
+	civilization_group = western
+	icon = germanic_worker
+}
+
+germanic_warriors = {
+	name = "Warriors"
+	population_class = soldiers
+	civilization = germanic
+	icon = icon_germanic_warrior
+}
+
+germanic_priests = {
+	name = "Priests"
+	population_class = priests
+	civilization = germanic
+	icon = icon_germanic_priest
+}

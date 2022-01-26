@@ -1,0 +1,20 @@
+gnomish_workers = {
+	name = "Workers"
+	population_class = workers
+	civilization = gnomish
+	icon = gnomish_worker
+}
+
+gnomish_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = gnomish
+	icon = icon_gnomish_recruit
+}
+
+gnomish_priests = {
+	name = "Priests"
+	population_class = priests
+	civilization = gnomish
+	icon = icon_gnomish_herbalist
+}

@@ -1,0 +1,20 @@
+goblin_workers = {
+	name = "Workers"
+	population_class = workers
+	civilization = goblin
+	icon = goblin_worker
+}
+
+goblin_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = goblin
+	icon = goblin_swordsman
+}
+
+goblin_shamans = {
+	name = "Shamans"
+	population_class = priests
+	civilization = goblin
+	icon = icon_goblin_shaman
+}

@@ -1,0 +1,13 @@
+elven_workers = {
+	name = "Workers"
+	population_class = workers
+	civilization = elven
+	icon = elven_worker
+}
+
+elven_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = elven
+	icon = icon_elven_swordsman
+}

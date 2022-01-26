@@ -1,0 +1,6 @@
+teutonic_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization_group = western
+	icon = icon_saxon_swordsman
+}

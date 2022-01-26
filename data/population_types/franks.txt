@@ -1,0 +1,13 @@
+frankish_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = frankish
+	icon = icon_frank_swordsman_brown_hair
+}
+
+frankish_clergymen = {
+	name = "Clergymen"
+	population_class = priests
+	civilization_group = western
+	icon = icon_frankish_cleric
+}

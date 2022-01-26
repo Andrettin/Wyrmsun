@@ -1,0 +1,6 @@
+norse_soldiers = {
+	name = "Soldiers"
+	population_class = soldiers
+	civilization = norse
+	icon = icon_norse_swordsman
+}
