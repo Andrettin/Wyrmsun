@@ -74,6 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Made it so the "Blackbeard", "Goldbeard", "Redbeard", "the Black" and "the Red" epithets can be generated for units with the respective hair colors.
+- Fixed issue with doors often not being properly destroyed in dungeon maps (doors would often remain in their last damaged frame, and the attacking unit would keep attacking the door, despite it already having been destroyed).
 
 * Upgrades
 - Coinage is now researched at the Market, and requires having either Monarchy or Republic.
