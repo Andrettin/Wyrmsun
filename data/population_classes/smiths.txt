@@ -1,5 +1,8 @@
 apprentice_smiths = {
 	name = "Apprentice Smiths"
+	promotion_targets = {
+		journeyman_smiths
+	}
 	production_efficiency = {
 		jewelry = 200
 	}
@@ -7,6 +10,9 @@ apprentice_smiths = {
 
 journeyman_smiths = {
 	name = "Journeyman Smiths"
+	promotion_targets = {
+		master_smiths
+	}
 	production_efficiency = {
 		jewelry = 400
 	}

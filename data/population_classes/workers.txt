@@ -1,3 +1,13 @@
 workers = { #basic population class, used to recruit workers and for production
 	name = "Workers"
+	promotion_targets = {
+		sailors
+		soldiers
+		skilled_lumberjacks
+		skilled_miners
+		skilled_quarriers
+		apprentice_carpenters
+		apprentice_smiths
+		priests
+	}
 }

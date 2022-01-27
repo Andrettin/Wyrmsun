@@ -1,5 +1,8 @@
 skilled_lumberjacks = {
 	name = "Skilled Lumberjacks"
+	promotion_targets = {
+		expert_lumberjacks
+	}
 	production_efficiency = {
 		lumber = 200
 	}

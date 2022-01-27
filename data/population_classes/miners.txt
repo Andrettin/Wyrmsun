@@ -1,5 +1,8 @@
 skilled_miners = {
 	name = "Skilled Miners"
+	promotion_targets = {
+		expert_miners
+	}
 	production_efficiency = {
 		copper = 200
 		silver = 200

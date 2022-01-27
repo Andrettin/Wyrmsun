@@ -1,5 +1,8 @@
 apprentice_carpenters = {
 	name = "Apprentice Carpenters"
+	promotion_targets = {
+		journeyman_carpenters
+	}
 	production_efficiency = {
 		furniture = 200
 	}
@@ -7,6 +10,9 @@ apprentice_carpenters = {
 
 journeyman_carpenters = {
 	name = "Journeyman Carpenters"
+	promotion_targets = {
+		master_carpenters
+	}
 	production_efficiency = {
 		furniture = 400
 	}

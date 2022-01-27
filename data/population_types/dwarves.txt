@@ -27,6 +27,20 @@ dwarven_expert_miners = {
 	icon = icon_dwarven_expert_miner
 }
 
+#dwarven_journeyman_smiths = {
+#	name = "Journeyman Smiths"
+#	population_class = journeyman_smiths
+#	civilization = dwarven
+#	icon = icon_dwarven_runesmith
+#}
+
+#dwarven_master_smiths = {
+#	name = "Master Smiths"
+#	population_class = master_smiths
+#	civilization = dwarven
+#	icon = icon_dwarven_runemaster
+#}
+
 dwarven_soldiers = {
 	name = "Soldiers"
 	population_class = soldiers

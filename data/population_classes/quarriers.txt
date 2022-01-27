@@ -1,5 +1,8 @@
 skilled_quarriers = {
 	name = "Skilled Quarriers"
+	promotion_targets = {
+		expert_quarriers
+	}
 	production_efficiency = {
 		stone = 200
 	}
