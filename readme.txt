@@ -66,8 +66,14 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Renamed the Thielung Tribe to Gautalanda, and made it a polity.
 
+* Map Editor
+- Fixed crash when hovering over a unit with the mouse in the map editor.
+
 * Pathfinding
 - Improved A* node insertion performance.
+
+* Preferences
+- Fixed potential freeze issue which could occur if the game were started without a preferences file having been loaded (in such a case e.g. clicking on the "Custom Game" button would freeze the game).
 
 * Scenarios
 - Reworked the Thunraz's Servant scenario. It is now called "The Gutasaga", and the overall objectives have been changed as well.
