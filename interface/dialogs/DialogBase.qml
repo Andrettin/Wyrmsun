@@ -11,6 +11,7 @@ Popup {
 	dim: false
 	focus: false
 	closePolicy: Popup.NoAutoClose
+	clip: true
 	
 	property string interface_style: "default"
 	property int panel: 1
