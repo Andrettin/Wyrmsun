@@ -18,6 +18,7 @@ Item {
 	readonly property var dialogue_component: Qt.createComponent("dialogs/DialogueDialog.qml")
 	readonly property var quest_completed_dialog_component: Qt.createComponent("dialogs/QuestCompletedDialog.qml")
 	readonly property var quest_failed_dialog_component: Qt.createComponent("dialogs/QuestFailedDialog.qml")
+	readonly property var population_dialog_component: Qt.createComponent("dialogs/PopulationDialog.qml")
 	
 	MouseArea {
 		id: mouse_area
@@ -410,6 +411,21 @@ Item {
 			})
 			
 			quest_dialog.open()
+		}
+		
+		function onPopulation_dialog_opened(settlement_game_data, population_units) {
+			if (population_dialog_component.status == Component.Error) {
+				console.error(population_dialog_component.errorString())
+				return
+			}
+			
+			var population_dialog = population_dialog_component.createObject(map_view, {
+				settlement_game_data: settlement_game_data,
+				population_units: population_units,
+				interface_style: wyrmgus.current_interface_style.identifier
+			})
+			
+			population_dialog.open()
 		}
 	}
 	

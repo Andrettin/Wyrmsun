@@ -1,3 +1,17 @@
+show_population = {
+	pos = 4
+	icon = icon_toughness
+	action = show_population
+	key = p
+	hint = "Show ~!Population"
+	popup = popup_commands
+	unit_classes = {
+		town_hall
+		stronghold
+		fortress
+	}
+}
+
 choose_a_quest = {
 	pos = 5
 	icon = quest
