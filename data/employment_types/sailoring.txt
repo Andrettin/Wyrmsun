@@ -1,4 +1,5 @@
 sailoring = {
+	name = "Sailoring"
 	employees = {
 		sailors
 	}

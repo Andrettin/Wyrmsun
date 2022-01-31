@@ -37,6 +37,14 @@ DialogBase {
 		text: "Population"
 	}
 	
+	NormalText {
+		id: employment_label
+		anchors.top: population_type_label.top
+		anchors.left: population_label.left
+		anchors.leftMargin: 88 * wyrmgus.scale_factor
+		text: "Employment"
+	}
+	
 	ListView {
 		id: population_unit_list
 		anchors.left: parent.left
@@ -73,6 +81,12 @@ DialogBase {
 			NormalText {
 				text: number_string(modelData.population)
 				x: population_label.x - population_unit_list.contentItem.x - population_unit_list.x + population_label.width - width
+				anchors.verticalCenter: parent.verticalCenter
+			}
+			
+			NormalText {
+				text: modelData.employment_type ? modelData.employment_type.name : "Unemployed"
+				x: employment_label.x - population_unit_list.contentItem.x - population_unit_list.x
 				anchors.verticalCenter: parent.verticalCenter
 			}
 		}
