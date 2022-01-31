@@ -30,8 +30,7 @@ DialogBase {
 	
 	NormalText {
 		id: population_label
-		anchors.top: title_item.bottom
-		anchors.topMargin: 16 * wyrmgus.scale_factor
+		anchors.top: population_type_label.top
 		anchors.left: population_type_label.left
 		anchors.leftMargin: 72 * wyrmgus.scale_factor
 		text: "Population"
@@ -66,13 +65,13 @@ DialogBase {
 			
 			NormalText {
 				text: modelData.type.name
-				x: population_type_label.x - population_unit_list.contentItem.x
+				x: population_type_label.x - population_unit_list.contentItem.x - population_unit_list.x
 				anchors.verticalCenter: parent.verticalCenter
 			}
 			
 			NormalText {
 				text: number_string(modelData.population)
-				x: population_label.x - population_unit_list.contentItem.x
+				x: population_label.x - population_unit_list.contentItem.x - population_unit_list.x + population_label.width - width
 				anchors.verticalCenter: parent.verticalCenter
 			}
 		}
