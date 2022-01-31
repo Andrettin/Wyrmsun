@@ -1,6 +1,7 @@
 workers = { #basic population class, used to recruit workers and for production
 	name = "Workers"
 	growable = true
+	unemployment = true
 	promotion_targets = {
 		sailors
 		soldiers
