@@ -1,0 +1,5 @@
+sailoring = {
+	employees = {
+		sailors
+	}
+}

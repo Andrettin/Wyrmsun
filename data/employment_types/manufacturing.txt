@@ -1,0 +1,21 @@
+furniture_making = {
+	output_resource = furniture
+	input_resource = lumber
+	employees = {
+		workers
+		apprentice_carpenters
+		journeyman_carpenters
+		master_carpenters
+	}
+}
+
+jewelsmithing = {
+	output_resource = jewelry
+	input_resource = copper
+	employees = {
+		workers
+		apprentice_smiths
+		journeyman_smiths
+		master_smiths
+	}
+}
