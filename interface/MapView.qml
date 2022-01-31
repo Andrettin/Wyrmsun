@@ -14,7 +14,7 @@ Item {
 	property var menu_stack: null
 	property var popups: []
 	property var active_popups: []
-	property int active_popup_count: 0
+	property int active_popup_pause_count: 0
 	readonly property var dialogue_component: Qt.createComponent("dialogs/DialogueDialog.qml")
 	readonly property var quest_completed_dialog_component: Qt.createComponent("dialogs/QuestCompletedDialog.qml")
 	readonly property var quest_failed_dialog_component: Qt.createComponent("dialogs/QuestFailedDialog.qml")
@@ -80,7 +80,7 @@ Item {
 		wrapMode: Text.WordWrap
 		font.pixelSize: 32 * wyrmgus.scale_factor
 		font.bold: true
-		visible: wyrmgus.game.paused && !wyrmgus.lua_dialog_open && map_view.active_popup_count == 0
+		visible: wyrmgus.game.paused && !wyrmgus.lua_dialog_open && map_view.active_popup_pause_count == 0
 	}
 	
 	GameMenuDialog {
@@ -445,19 +445,19 @@ Item {
 		
 		map_view.menu_stack = menu_stack_component.createObject(map_view, { focus: true })
 		map_view.menu_stack.push(menu_array)
-		increment_active_popup_count()
+		increment_active_popup_pause_count()
 	}
 	
 	function on_menu_stack_destroyed() {
 		map_view.menu_stack = null
-		decrement_active_popup_count()
+		decrement_active_popup_pause_count()
 	}
 	
-	function increment_active_popup_count() {
-		var updated_active_popup_count = map_view.active_popup_count
-		++updated_active_popup_count
+	function increment_active_popup_pause_count() {
+		var updated_active_popup_pause_count = map_view.active_popup_pause_count
+		++updated_active_popup_pause_count
 		
-		if (updated_active_popup_count == 1 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_pause_count == 1 && !wyrmgus.map_editor.running) {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = true
 			}
@@ -465,25 +465,27 @@ Item {
 		}
 		
 		//the map view's active popup count must be updated only afterwards, so that the "Paused" label doesn't appear for just an instant
-		map_view.active_popup_count = updated_active_popup_count
+		map_view.active_popup_pause_count = updated_active_popup_pause_count
 	}
 	
-	function decrement_active_popup_count() {
-		var updated_active_popup_count = map_view.active_popup_count
-		--updated_active_popup_count
+	function decrement_active_popup_pause_count() {
+		var updated_active_popup_pause_count = map_view.active_popup_pause_count
+		--updated_active_popup_pause_count
 		
-		if (updated_active_popup_count == 0 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_pause_count == 0 && !wyrmgus.map_editor.running) {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = false
 			}
 			wyrmgus.modal_dialog_open = false
 		}
 		
-		map_view.active_popup_count = updated_active_popup_count
+		map_view.active_popup_pause_count = updated_active_popup_pause_count
 	}
 	
 	function on_popup_opened(popup) {
-		map_view.increment_active_popup_count()
+		if (popup.pause_game) {
+			map_view.increment_active_popup_pause_count()
+		}
 		
 		map_view.active_popups.push(popup)
 		
@@ -493,7 +495,9 @@ Item {
 	}
 	
 	function on_popup_closed(popup) {
-		decrement_active_popup_count()
+		if (popup.pause_game) {
+			decrement_active_popup_pause_count()
+		}
 		
 		const popup_index = map_view.active_popups.indexOf(popup)
 		if (popup_index != -1) {

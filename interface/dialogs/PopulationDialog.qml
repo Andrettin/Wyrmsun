@@ -6,6 +6,7 @@ DialogBase {
 	id: population_dialog
 	panel: 5
 	title: "Population"
+	pause_game: false
 	
 	property var settlement_game_data: null
 	property var population_units: []

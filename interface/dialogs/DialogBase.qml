@@ -18,6 +18,7 @@ Popup {
 	property string title: ""
 	readonly property var title_item: title_text
 	property bool open_when_menu_is_closed: false
+	property bool pause_game: true
 	
 	background: Image {
 		source: "image://interface/" + interface_style + "/panel/" + panel
