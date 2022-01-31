@@ -446,11 +446,13 @@ Item {
 		map_view.menu_stack = menu_stack_component.createObject(map_view, { focus: true })
 		map_view.menu_stack.push(menu_array)
 		increment_active_popup_pause_count()
+		update_modal_dialog_open()
 	}
 	
 	function on_menu_stack_destroyed() {
 		map_view.menu_stack = null
 		decrement_active_popup_pause_count()
+		update_modal_dialog_open()
 	}
 	
 	function increment_active_popup_pause_count() {
@@ -461,7 +463,6 @@ Item {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = true
 			}
-			wyrmgus.modal_dialog_open = true
 		}
 		
 		//the map view's active popup count must be updated only afterwards, so that the "Paused" label doesn't appear for just an instant
@@ -476,7 +477,6 @@ Item {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = false
 			}
-			wyrmgus.modal_dialog_open = false
 		}
 		
 		map_view.active_popup_pause_count = updated_active_popup_pause_count
@@ -488,6 +488,8 @@ Item {
 		}
 		
 		map_view.active_popups.push(popup)
+		
+		update_modal_dialog_open()
 		
 		if (popup.receive_focus) {
 			popup.receive_focus()
@@ -504,6 +506,8 @@ Item {
 			map_view.active_popups.splice(popup_index, 1)
 		}
 		
+		update_modal_dialog_open()
+		
 		//when a popup is closed, give focus to another active popup, if any
 		for (var i = (map_view.active_popups.length - 1); i >= 0; --i) {
 			var popup = map_view.active_popups[i]
@@ -512,5 +516,9 @@ Item {
 			}
 			break
 		}
+	}
+	
+	function update_modal_dialog_open() {
+		wyrmgus.modal_dialog_open = map_view.active_popups.length > 0 || map_view.menu_stack !== null
 	}
 }
