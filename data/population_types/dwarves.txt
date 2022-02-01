@@ -10,6 +10,8 @@ dwarven_miners = {
 		iron = 125
 		mithril = 125
 		coal = 125
+		lumber = 75
+		furniture = 75
 	}
 }
 
