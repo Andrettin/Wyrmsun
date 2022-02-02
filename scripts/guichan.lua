@@ -537,7 +537,6 @@ Load("scripts/menus/results.lua")
 Load("scripts/menus/network.lua")
 Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
-Load("scripts/menus/family_tree.lua")
 
 LoadData() -- process the data
 
